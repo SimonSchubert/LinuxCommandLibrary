@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Linux Command Bibliotheca</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="system_info">Information</string>
+    <string name="system_control">System control</string>
+    <string name="audio_video">Video/Audio</string>
+    <string name="search_for_command">search for command</string>
+
+    <item name="ID" type="id" />
+</resources>

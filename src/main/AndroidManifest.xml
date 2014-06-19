@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.inspiredandroid.linuxcommandbibliotheca" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <activity
+            android:name=".CommandBibliothecaActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.inspiredandroid.linuxcommandbibliotheca.CommandBibliothecaActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

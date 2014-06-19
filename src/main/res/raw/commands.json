@@ -1,0 +1,162 @@
+[
+  {
+    "category":0,
+    "command":"ifconfig -a",
+        "iconResource":"icon_info_interface",
+    "desc":"interfaces(eth,wlan..)"
+  },
+  {
+    "category":0,
+        "iconResource":"icon_info_memory",
+    "command":"cat /proc/meminfo",
+    "desc":"memory information"
+  },
+  {
+    "compatibility": [{
+        "system":1,
+        "version":0
+        }],
+    "category":1,
+    "iconResource":"icon_lock_screen",
+    "command":"gnome-screensaver-command -l",
+    "desc":"lock screensaver"
+  },
+  {
+    "compatibility": [{
+        "system":1,
+        "version":0
+        }],
+    "category":1,
+    "iconResource":"icon_unlock_screen",
+    "command":"gnome-screensaver-command -a",
+    "desc":"unlock screensaver"
+  },
+     {
+       "compatibility": [{
+           "system":2,
+           "version":0
+           }],
+       "category":1,
+        "iconResource":"icon_lock_screen",
+       "command":"dbus-send --type=method_call --dest=org.freedesktop.ScreenSaver /ScreenSaver org.freedesktop.ScreenSaver.Lock",
+       "desc":"lock screensaver"
+     },
+     {
+       "compatibility": [{
+           "system":2,
+           "version":0
+           }],
+       "category":1,
+        "iconResource":"icon_unlock_screen",
+       "command":"dbus-send --type=method_call --dest=org.freedesktop.ScreenSaver /ScreenSaver org.freedesktop.ScreenSaver.SetActive boolean:false",
+       "desc":"unlock screensaver"
+     },
+  {
+    "category":0,
+        "iconResource":"icon_info_linux",
+    "command":"cat /proc/version",
+    "desc":"info"
+  },
+  {
+    "category":0,
+        "iconResource":"icon_info_devices",
+    "command":"lspci",
+    "desc":"pci devices"
+  },
+  {
+    "category":0,
+        "iconResource":"icon_info_usb",
+    "command":"lsusb",
+    "desc":"usb devices"
+  },
+  {
+    "category":0,
+    "command":"lsblk",
+        "iconResource":"icon_info_devices",
+    "desc":"block devices list"
+  },
+  {
+    "category":0,
+    "iconResource":"icon_info_ip",
+    "command":"curl ifconfig.me",
+    "desc":"external ip"
+  },
+  {
+    "category":1,
+        "iconResource":"icon_restart",
+    "command":"sudo reboot",
+    "desc":"reboot system"
+  },
+  {
+    "category":1,
+        "iconResource":"icon_shutdown",
+    "command":"sudo poweroff",
+    "desc":"shutdown system"
+  },
+  {
+    "category":1,
+        "iconResource":"icon_shutdown",
+    "command":"sudo shutdown -h 18:45 \"Server is going down for maintenance\"",
+    "desc":"timed shutdown "
+  },
+  {
+    "category":0,
+    "iconResource":"icon_info_ssh",
+    "command":"ssh -V",
+    "desc":"SSH client version"
+  },
+  {
+    "category":0,
+    "iconResource":"icon_info_uptime",
+    "command":"uptime",
+    "desc":"uptime of machine"
+  },
+  {
+    "category":0,
+    "iconResource":"icon_info_storage",
+    "command":"df -k",
+    "desc":"disk usage"
+  },
+  {
+    "category":0,
+    "iconResource":"icon_info_bootlog",
+    "command":"car /var/log/boot.log",
+    "desc":"show bootlog"
+  },
+  {
+    "category":2,
+        "iconResource":"icon_desktop",
+    "command":"export DISPLAY=:0; import -window root screenURC.png",
+    "desc":"take screenshot of desktop and send to phone"
+  },
+     {
+       "category":2,
+        "iconResource":"icon_camera",
+       "command":"uvccapture -d/dev/video0 -oscreenURC.png -m",
+       "desc":"take webcam photo and send to phone"
+     },
+        {
+          "category":1,
+          "command":"sudo service bluetooth stop",
+        "iconResource":"icon_stop_bluetooth",
+          "desc":"stop bluetooth"
+        },
+           {
+             "category":1,
+             "command":"sudo service bluetooth start",
+             "iconResource":"icon_start_bluetooth",
+             "desc":"start bluetooth"
+           },
+           {
+             "category":1,
+             "command":"nmcli nm wifi off",
+             "iconResource":"icon_stop_wifi",
+             "desc":"stop wifi"
+           },
+                       {
+                         "category":1,
+                         "command":"nmcli nm wifi on",
+                         "iconResource":"icon_start_wifi",
+                         "desc":"start wifi"
+                       }
+]
