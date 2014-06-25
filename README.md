@@ -1,14 +1,17 @@
-##Linux Command Biblotheca for Android
+##Linux Command Bibliotheca for Android
+This library provides a bunch of useful Linux commands.
+
+![enter image description here][1]
 
 ###Usage
-start activity
+start library
 
-            Intent intent = new Intent("com.inspiredandroid.linuxcommandbibliotheca.CommandBibliothecaActivity");
-        startActivityForResult(intent, REQ_PICK_COMMAND);
+    Intent intent = new Intent("com.inspiredandroid.linuxcommandbibliotheca.CommandBibliothecaActivity");
+    startActivityForResult(intent, REQ_PICK_COMMAND);
 
 fetch result
 
-        @Override
+    @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == Activity.RESULT_OK) {
@@ -28,16 +31,6 @@ fetch result
 
 ###License
 
-If you use Linux Command Bibliotheca code in your application you should inform the author about it ( email: sschubert89[at]gmail[dot]com ) like this:
-
-> Subject: LCB usage notification Text: I use Linux Command Bibliotheca
-> in <application_name> - http://link_to_google_play. I [allow | don't
-> allow] to mention my app in section "Applications using Linux Command
-> Bibliotheca" on GitHub. 
-
-Also I'll be grateful if you mention Linux Command Bibliotheca in application UI with string "Linux Command Bibliotheca, Simon Schubert" (e.g. in some "About" section).
-
-
 > Licensed under the Apache License, Version 2.0 (the "License"); you
 > may not use this file except in compliance with the License. You may
 > obtain a copy of the License at
@@ -49,3 +42,6 @@ Also I'll be grateful if you mention Linux Command Bibliotheca in application UI
 > WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
 > implied. See the License for the specific language governing
 > permissions and limitations under the Licen
+
+
+  [1]: https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/screen-1.png
