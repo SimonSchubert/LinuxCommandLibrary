@@ -1,7 +1,9 @@
 package com.inspiredandroid.linuxcommandbibliotheca.fragments;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -15,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ExpandableListView;
+import android.widget.ImageButton;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -32,7 +35,7 @@ import java.util.List;
 /**
  * Created by simon on 13.06.14.
  */
-public class BibliothecaFragment extends Fragment {
+public class BibliothecaFragment extends Fragment implements View.OnClickListener {
 
     CommandsExpandableListAdapter adapter;
     ArrayList<ArrayList<CommandModel>> childs = new ArrayList<ArrayList<CommandModel>>();
@@ -67,11 +70,76 @@ public class BibliothecaFragment extends Fragment {
             }
         }
 
-        ExpandableListView list = (ExpandableListView) view.findViewById(R.id.expandableListView);
-
+        // init list adapter
         adapter = new CommandsExpandableListAdapter(getActivity(), group, childs);
-        list.setAdapter(adapter);
 
+
+        initViews(view);
+
+        return view;
+    }
+
+
+    @Override
+    public void onClick(View view) {
+        if(view.getId() == R.id.btnFilter) {
+            showFilterDialog();
+        }
+    }
+
+    ArrayList mSelectedItems;
+    private void showFilterDialog() {
+
+        String[] items = new String[]{"Gnome", "KDE"};
+
+        mSelectedItems = new ArrayList();  // Where we track the selected items
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        // Set the dialog title
+        builder.setTitle("Filter")
+                // Specify the list array, the items to be selected by default (null for none),
+                // and the listener through which to receive callbacks when items are selected
+                .setMultiChoiceItems(items, null,
+                        new DialogInterface.OnMultiChoiceClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which,
+                                                boolean isChecked) {
+                                if (isChecked) {
+                                    // If the user checked the item, add it to the selected items
+                                    mSelectedItems.add(which);
+                                } else if (mSelectedItems.contains(which)) {
+                                    // Else, if the item is already in the array, remove it
+                                    mSelectedItems.remove(Integer.valueOf(which));
+                                }
+                            }
+                        }
+                )
+                        // Set the action buttons
+                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int id) {
+                        // User clicked OK, so save the mSelectedItems results somewhere
+                        // or return them to the component that opened the dialog
+
+                    }
+                })
+                .setNegativeButton("Reset", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int id) {
+
+                    }
+                });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
+    /**
+     *
+     * @param view
+     */
+    private void initViews(View view) {
+
+        ExpandableListView list = (ExpandableListView) view.findViewById(R.id.expandableListView);
+        list.setAdapter(adapter);
         list.setOnChildClickListener( new ExpandableListView.OnChildClickListener() {
             @Override
             public boolean onChildClick(ExpandableListView expandableListView, View view, int i, int i2, long l) {
@@ -112,7 +180,9 @@ public class BibliothecaFragment extends Fragment {
             }
         });
 
-        return view;
+        ImageButton btnFilter = (ImageButton) view.findViewById(R.id.btnFilter);
+        btnFilter.setVisibility(View.GONE);
+        btnFilter.setOnClickListener(this);
     }
 
     /**
@@ -189,4 +259,5 @@ public class BibliothecaFragment extends Fragment {
         }
         return outputStream.toString();
     }
+
 }
