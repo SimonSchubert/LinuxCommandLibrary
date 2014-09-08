@@ -132,7 +132,7 @@
 {
 "category":2,
 "iconResource":"icon_webcam",
-"command":"uvccapture -d/dev/video0 -oscreenURC.png -m",
+"command":"uvccapture -d/dev/video0 -oscreenURC.jpg -m",
 "desc":"Take webcam photo and send to phone."
 },
 {
@@ -182,5 +182,11 @@
 "command":"play /usr/share/sounds/alsa/Noise.wav",
 "iconResource":"icon_music",
 "desc":"Play sound file in mp3 or wav format."
-}
+},
+ {
+ "category":1,
+ "command":"xset dpms force off",
+ "iconResource":"icon_lock_screen",
+ "desc":"To turn off monitor. To turn on, simply press a key, or move mouse/mousepad."
+ }
 ]

@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.inspiredandroid.linuxcommandbibliotheca.R;
@@ -21,6 +22,13 @@ public class CommandsExpandableListAdapter extends BaseExpandableListAdapter {
     private Activity mContext;
     private ArrayList<ArrayList<CommandModel>> mChild;
     private ArrayList<String> mGroup;
+
+    public final static int GROUP_INFO = 0;
+    public final static int GROUP_SYSTEM_CONTROL = 1;
+    public final static int GROUP_AUDIO_VIDEO = 2;
+    public final static int GROUP_COMMANDLINEFU = 3;
+
+    boolean isLoading = false;
  
     public CommandsExpandableListAdapter(Activity context, ArrayList<String> group, ArrayList<ArrayList<CommandModel>> child) {
         this.mContext = context;
@@ -31,7 +39,19 @@ public class CommandsExpandableListAdapter extends BaseExpandableListAdapter {
     public CommandModel getChild(int groupPosition, int childPosition) {
         return mChild.get(groupPosition).get(childPosition);
     }
- 
+
+    // enable loading view
+    public void setLoading() {
+        isLoading = true;
+        notifyDataSetChanged();
+    }
+
+    // disable loading view
+    public void setLoadingFinished() {
+        isLoading = false;
+        notifyDataSetChanged();
+    }
+
     public long getChildId(int groupPosition, int childPosition) {
         return childPosition;
     }
@@ -39,10 +59,18 @@ public class CommandsExpandableListAdapter extends BaseExpandableListAdapter {
     public View getChildView(final int groupPosition, final int childPosition,
             boolean isLastChild, View convertView, ViewGroup parent) {
 
+        // check if is loading
+        if(isLoading && groupPosition == GROUP_COMMANDLINEFU && childPosition == mChild.get(GROUP_COMMANDLINEFU).size()) {
+            ProgressBar pbLoading = new ProgressBar(mContext);
+            pbLoading.setPadding(0,10,0,10);
+            pbLoading.setTag(null);
+            return pbLoading;
+        }
+
         CommandModel command =  getChild(groupPosition, childPosition);
         CommandViewHolder holder;
  
-        if (convertView == null) {
+        if (convertView == null || convertView.getTag() == null) {
             LayoutInflater inflater = mContext.getLayoutInflater();
             convertView = inflater.inflate(R.layout.cell_command_child, parent, false);
 
@@ -92,6 +120,9 @@ public class CommandsExpandableListAdapter extends BaseExpandableListAdapter {
     }
  
     public int getChildrenCount(int groupPosition) {
+        if(isLoading && groupPosition == GROUP_COMMANDLINEFU) {
+            return mChild.get(groupPosition).size() + 1;
+        }
         return mChild.get(groupPosition).size();
     }
  
@@ -135,6 +166,11 @@ public class CommandsExpandableListAdapter extends BaseExpandableListAdapter {
     public void updateEntries(ArrayList<String> groups, ArrayList<ArrayList<CommandModel>> child ) {
         mGroup = groups;
         mChild = child;
+        notifyDataSetChanged();
+    }
+
+    public void addEntries(int group, ArrayList<CommandModel> commands) {
+        mChild.get(group).addAll(commands);
         notifyDataSetChanged();
     }
 }
