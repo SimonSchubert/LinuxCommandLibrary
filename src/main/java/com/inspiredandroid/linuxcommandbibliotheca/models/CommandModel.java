@@ -12,6 +12,13 @@ public class CommandModel implements Serializable{
     private String iconBase64 = "";
     private ArrayList<CommandCompatibilityModel> compatibility = new ArrayList<CommandCompatibilityModel>();
 
+    public CommandModel(String command, String desc) {
+        this.desc = desc;
+        this.command = command;
+        this.iconResource = "icon_linux";
+        compatibility = new ArrayList<CommandCompatibilityModel>();
+    }
+
     public int getCategory() {
         return category;
     }
@@ -33,6 +40,9 @@ public class CommandModel implements Serializable{
     }
 
     public ArrayList<CommandCompatibilityModel> getCompatibility() {
+        if(compatibility == null) {
+            return new ArrayList<CommandCompatibilityModel>();
+        }
         return compatibility;
     }
 
