@@ -1,6 +1,8 @@
 ##Linux Command Bibliotheca for Android
 This library provides a bunch of useful Linux commands.
 
+Download from Play Store https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca
+
 ![enter image description here][1]
 
 ###Usage
@@ -14,17 +16,10 @@ fetch result
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == Activity.RESULT_OK) {
-            switch (requestCode) {
-                case REQ_PICK_COMMAND:
-                    try {
-                        CommandModel commandModel = (CommandModel) data.getSerializableExtra(CommandBibliothecaActivity.EXTRA_COMMAND);
-                        String command = commandModel.getCommand();
-
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                    break;
+        if(requestCode == REQ_PICK_COMMAND) {
+	        if (resultCode == Activity.RESULT_OK) {
+		        String command = data.getStringExtra(CommandBibliothecaActivity.EXTRA_COMMAND);  
+				String base64Icon = data.getStringExtra(CommandBibliothecaActivity.EXTRA_ICON);
             }
         }
     }
