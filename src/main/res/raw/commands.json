@@ -1,192 +1,284 @@
 [
 {
 "category":0,
-"command":"ifconfig -a",
 "iconResource":"icon_info_interface",
-"desc":"Print interfaces(eth,wlan..)."
+"desc":0,
+"commands": [{
+    "compatibility": [{
+    "system":1,
+    "version":0
+    }],
+    "command":"HZ=`awk '/\\\\#define HZ/ {print $3}' /usr/include/asm-generic/param.h`; NUMCPUS=`grep ^proc /proc/cpuinfo | wc -l`; FIRST=`cat /proc/stat | awk '/^cpu / {print $5}'`; sleep 1; SECOND=`cat /proc/stat | awk '/^cpu / {print $5}'`; USED=`echo 4 k 100 $SECOND $FIRST - $NUMCPUS $HZ \\\\* / 100 \\\\* - p | dc`; echo ${USED}"
+    },{
+    "command":"NUMCPUS=`grep ^proc /proc/cpuinfo | wc -l`; FIRST=`cat /proc/stat | awk '/^cpu / {print $5}'`; sleep 1; SECOND=`cat /proc/stat | awk '/^cpu / {print $5}'`; USED=`echo 2 k 100 $SECOND $FIRST - $NUMCPUS / - p | dc`; echo ${USED}%"
+}]
+},
+{
+"category":0,
+"iconResource":"icon_info_interface",
+"desc":1,
+"commands": [{
+    "command": "max=$(grep 'last full capacity:' /proc/acpi/battery/BAT1/info|awk '{print $4}') ; current=$(grep 'remaining capacity:' /proc/acpi/battery/BAT1/state|awk '{print $3}'); percent=$(expr $current'00' / $max ); echo -e $percent"
+    },{
+    "command": "upower -i $(upower -e | grep BAT) | grep --color=never -E percentage|xargs|cut -d' ' -f2|sed s/%//"
+    },{
+    "command": "cat /sys/class/power_supply/BAT1/uevent | awk '/POWER_SUPPLY_CAPACITY/ {print $1}' | sed 's/POWER_SUPPLY_CAPACITY=//'"
+}]
+},
+{
+"category":0,
+"iconResource":"icon_info_interface",
+"desc":2,
+"commands": [{
+    "command": "hciconfig -a | awk '/BD Address:/ {print $3}'"
+}]
+},
+{
+"category":0,
+"iconResource":"icon_info_interface",
+"desc":3,
+"commands": [{
+ "command": "hciconfig -a | awk '/Name:/ {print $2}'"
+}]
+},
+{
+"category":0,
+"iconResource":"icon_info_interface",
+"desc":4,
+"commands": [{
+  "command": "ifconfig -a"
+}]
 },
 {
 "category":0,
 "iconResource":"icon_info_memory",
-"command":"cat /proc/meminfo",
-"desc":"Print memory information."
+"desc":5,
+"commands": [{
+ "command": "cat /proc/meminfo"
+}]
 },
 {
-"compatibility": [{
-"system":1,
-"version":0
-}],
 "category":1,
 "iconResource":"icon_lock_screen",
-"command":"gnome-screensaver-command -l",
-"desc":"Lock screensaver."
+"desc":6,
+"commands": [{
+    "compatibility": [{
+    "system":1,
+    "version":0
+    }],
+    "command": "gnome-screensaver-command -l"
+},{
+    "compatibility": [{
+    "system":2,
+    "version":0
+    }],
+    "command":"dbus-send --type=method_call --dest=org.freedesktop.ScreenSaver /ScreenSaver org.freedesktop.ScreenSaver.Lock"
+}]
 },
 {
-"compatibility": [{
-"system":1,
-"version":0
-}],
 "category":1,
 "iconResource":"icon_unlock_screen",
-"command":"gnome-screensaver-command -a",
-"desc":"Unlock screensaver."
-},
-{
-"compatibility": [{
-"system":2,
-"version":0
-}],
-"category":1,
-"iconResource":"icon_lock_screen",
-"command":"dbus-send --type=method_call --dest=org.freedesktop.ScreenSaver /ScreenSaver org.freedesktop.ScreenSaver.Lock",
-"desc":"Lock screensaver."
-},
-{
-"compatibility": [{
-"system":2,
-"version":0
-}],
-"category":1,
-"iconResource":"icon_unlock_screen",
-"command":"dbus-send --type=method_call --dest=org.freedesktop.ScreenSaver /ScreenSaver org.freedesktop.ScreenSaver.SetActive boolean:false",
-"desc":"Unlock screensaver."
+"desc":7,
+"commands": [{
+    "compatibility": [{
+    "system":1,
+    "version":0
+    }],
+    "command": "gnome-screensaver-command -a"
+},{
+    "compatibility": [{
+    "system":2,
+    "version":0
+    }],
+    "command":"dbus-send --type=method_call --dest=org.freedesktop.ScreenSaver /ScreenSaver org.freedesktop.ScreenSaver.SetActive boolean:false"
+}]
 },
 {
 "category":0,
 "iconResource":"icon_info_linux",
-"command":"cat /proc/version",
-"desc":"Print info about linux system."
+"desc":8,
+"commands": [{
+"command": "cat /proc/version"
+}]
 },
 {
 "category":0,
 "iconResource":"icon_info_devices",
-"command":"lspci",
-"desc":"Print PCI devices."
+"desc":9,
+"commands": [{
+"command": "lspci"
+}]
 },
 {
 "category":0,
 "iconResource":"icon_info_usb",
-"command":"lsusb",
-"desc":"Print USB devices."
+"desc":10,
+"commands": [{
+"command": "lsusb"
+}]
 },
 {
 "category":0,
-"command":"lsblk",
 "iconResource":"icon_info_devices",
-"desc":"Print all block devices (except RAM disks) in a tree-like format."
+"desc":11,
+"commands": [{
+    "command": "lsblk"
+    }]
 },
 {
 "category":0,
 "iconResource":"icon_info_ip",
-"command":"curl ifconfig.me",
-"desc":"Print external ip."
+"desc":12,
+"commands": [{
+    "command": "curl ifconfig.me"
+    },{
+    "command": "dig +short myip.opendns.com @resolver1.opendns.com"
+    },{
+    "command": "netcat icanhazip.com 80 <<< $'GET / HTTP/1.1\nHost: icanhazip.com\n\n' | tail -n1"
+    }]
 },
 {
 "category":1,
 "iconResource":"icon_restart",
-"command":"sudo reboot",
-"desc":"Reboot system."
+"desc":13,
+"commands": [{
+    "command": "sudo reboot"
+    },{
+    "command": "sudo shutdown -r"
+    }]
 },
 {
 "category":1,
 "iconResource":"icon_shutdown",
-"command":"sudo poweroff",
-"desc":"Shutdown system."
+"desc":14,
+"commands": [{
+"command": "sudo poweroff"
+},{
+"command": "sudo shutdown -h now"
+},{
+"command": "sudo reboot -p"
+}]
 },
 {
 "category":1,
 "iconResource":"icon_shutdown",
-"command":"sudo shutdown -h 18:45 \"Server is going down for maintenance\"",
-"desc":"Shutdown system at specific time."
+"desc":15,
+"commands": [{
+"command": "sudo shutdown -h 18:45 \"Server is going down for maintenance\""
+}]
 },
 {
 "category":0,
 "iconResource":"icon_info_ssh",
-"command":"ssh -V",
-"desc":"Print SSH client version."
+"desc":16,
+"commands": [{
+"command": "ssh -V"
+}]
 },
 {
 "category":0,
 "iconResource":"icon_info_uptime",
-"command":"uptime",
-"desc":"Print uptime of machine."
+"desc":17,
+"commands": [{
+"command": "uptime"
+}]
 },
 {
 "category":0,
 "iconResource":"icon_info_storage",
-"command":"df -k",
-"desc":"Print disk usage info."
+"desc":18,
+"commands": [{
+"command": "df -k"
+}]
 },
 {
 "category":0,
 "iconResource":"icon_info_bootlog",
-"command":"car /var/log/boot.log",
-"desc":"Print bootlog info."
+"desc":19,
+"commands": [{
+"command": "cat /var/log/boot.log"
+}]
 },
 {
 "category":2,
 "iconResource":"icon_desktop",
-"command":"export DISPLAY=:0; import -window root screenURC.png",
-"desc":"Take screenshot of desktop and send to phone."
+"desc":20,
+"commands": [{
+"command": "export DISPLAY=:0; import -window root screenURC.png"
+}]
 },
 {
 "category":2,
 "iconResource":"icon_webcam",
-"command":"uvccapture -d/dev/video0 -oscreenURC.jpg -m",
-"desc":"Take webcam photo and send to phone."
+"desc":21,
+"commands": [{
+"command": "uvccapture -d/dev/video0 -oscreenURC.jpg -m"
+}]
 },
 {
 "category":1,
-"command":"sudo service bluetooth stop",
 "iconResource":"icon_stop_bluetooth",
-"desc":"Stop bluetooth service."
+"desc":22,
+"commands": [{
+"command": "sudo service bluetooth stop"
+}]
 },
 {
 "category":1,
-"command":"sudo service bluetooth start",
 "iconResource":"icon_start_bluetooth",
-"desc":"Start bluetooth service."
+"desc":23,
+"commands": [{
+"command": "sudo service bluetooth start"
+}]
 },
 {
 "category":1,
-"command":"nmcli nm wifi off",
 "iconResource":"icon_stop_wifi",
-"desc":"Stop wifi service."
+"desc":24,
+"commands": [{
+"command": "nmcli nm wifi off"
+}]
 },
 {
 "category":1,
-"command":"nmcli nm wifi on",
 "iconResource":"icon_start_wifi",
-"desc":"Start wifi service."
-},
- {
- "category":2,
- "command":"spd-say \"Either you leave this area or I'm forced to kill you\"",
- "iconResource":"icon_bullhorn",
- "desc":"Play text by computer voice."
- },
-{
-"category":2,
-"command":"aplay /usr/share/sounds/alsa/Noise.wav",
-"iconResource":"icon_music",
-"desc":"Play sound file in wav format."
+"desc":25,
+"commands": [{
+"command": "nmcli nm wifi on"
+}]
 },
 {
 "category":2,
-"command":"beep",
-"iconResource":"icon_music",
-"desc":"The classical way to play a beep sound through the PC speakers. However this will not work in all cases, in many systems PC speakers are completely disabled."
+"iconResource":"icon_bullhorn",
+"desc":26,
+"commands": [{
+"command": "spd-say \"Either you leave this area or I'm forced to kill you\""
+}]
 },
 {
 "category":2,
-"command":"play /usr/share/sounds/alsa/Noise.wav",
 "iconResource":"icon_music",
-"desc":"Play sound file in mp3 or wav format."
+"desc":27,
+"commands": [{
+    "command": "aplay /usr/share/sounds/alsa/Noise.wav"
+    },{
+    "command":"play /usr/share/sounds/alsa/Noise.wav"
+    }]
 },
- {
- "category":1,
- "command":"xset dpms force off",
- "iconResource":"icon_lock_screen",
- "desc":"To turn off monitor. To turn on, simply press a key, or move mouse/mousepad."
- }
+{
+"category":2,
+"iconResource":"icon_music",
+"desc":28,
+"commands": [{
+"command": "beep"
+}]
+},
+{
+"category":1,
+"iconResource":"icon_lock_screen",
+"desc":29,
+"commands": [{
+"command": "xset dpms force off"
+}]
+}
 ]

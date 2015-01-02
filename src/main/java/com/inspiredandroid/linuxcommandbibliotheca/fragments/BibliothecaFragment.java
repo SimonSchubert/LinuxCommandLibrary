@@ -2,9 +2,11 @@ package com.inspiredandroid.linuxcommandbibliotheca.fragments;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -26,8 +28,9 @@ import com.inspiredandroid.linuxcommandbibliotheca.adapter.CommandsExpandableLis
 import com.inspiredandroid.linuxcommandbibliotheca.asnytasks.FetchCommandlineFuCommandsAsync;
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.FetchedCommandlineFuCommands;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
+import com.inspiredandroid.linuxcommandbibliotheca.models.CommandChildModel;
+import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandLineFuModel;
-import com.inspiredandroid.linuxcommandbibliotheca.models.CommandModel;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -42,7 +45,7 @@ public class BibliothecaFragment extends Fragment implements View.OnClickListene
     ExpandableListView list;
     CommandsExpandableListAdapter adapter;
 
-    ArrayList<ArrayList<CommandModel>> childs = new ArrayList<ArrayList<CommandModel>>();
+    ArrayList<ArrayList<CommandGroupModel>> childs = new ArrayList<ArrayList<CommandGroupModel>>();
     ArrayList<String> group = new ArrayList<String>();
 
     FetchCommandlineFuCommandsAsync async;
@@ -65,6 +68,17 @@ public class BibliothecaFragment extends Fragment implements View.OnClickListene
     public void onClick(View view) {
         if (view.getId() == R.id.btnFilter) {
             showFilterDialog();
+        } else if(view.getId() == R.id.ivAdd) {
+            handleAddClick();
+        }
+    }
+
+    private void handleAddClick() {
+        final String appPackageName = "com.inspiredandroid.linuxcontrolcenter";
+        try {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+        } catch (android.content.ActivityNotFoundException anfe) {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
         }
     }
 
@@ -90,23 +104,23 @@ public class BibliothecaFragment extends Fragment implements View.OnClickListene
     private void initAdapter() {
         // command categories
         group.add(getString(R.string.system_info));
-        childs.add(new ArrayList<CommandModel>());
+        childs.add(new ArrayList<CommandGroupModel>());
         group.add(getString(R.string.system_control));
-        childs.add(new ArrayList<CommandModel>());
+        childs.add(new ArrayList<CommandGroupModel>());
         group.add(getString(R.string.audio_video));
-        childs.add(new ArrayList<CommandModel>());
+        childs.add(new ArrayList<CommandGroupModel>());
         group.add("http://www.commandlinefu.com/");
-        childs.add(new ArrayList<CommandModel>());
+        childs.add(new ArrayList<CommandGroupModel>());
 
         // get raw commands file
         InputStream inputStream = getResources().openRawResource(R.raw.commands);
 
         // convert file to arraylist
-        ArrayList<CommandModel> commandsAll = new Gson().fromJson(Utils.readTextFile(inputStream), new TypeToken<List<CommandModel>>() {
+        ArrayList<CommandGroupModel> commandsAll = new Gson().fromJson(Utils.readTextFile(inputStream), new TypeToken<List<CommandGroupModel>>() {
         }.getType());
 
         // sort commands by category
-        for (CommandModel command : commandsAll) {
+        for (CommandGroupModel command : commandsAll) {
             if (command.getCategory() == 0) {
                 childs.get(CommandsExpandableListAdapter.GROUP_INFO).add(command);
             } else if (command.getCategory() == 1) {
@@ -131,21 +145,41 @@ public class BibliothecaFragment extends Fragment implements View.OnClickListene
             @Override
             public boolean onChildClick(ExpandableListView expandableListView, View view, int i, int i2, long l) {
 
-                CommandModel commandModel = (CommandModel) view.getTag(R.id.ID);
+                final CommandGroupModel commandGroupModel = (CommandGroupModel) view.getTag(R.id.ID);
                 Context context = view.getContext();
 
-                String iconBase64 = Utils.getBase64StringByResourceName(context, commandModel.getIconResource());
-                commandModel.setIconBase64(iconBase64);
+                String iconBase64 = Utils.getBase64StringByResourceName(context, commandGroupModel.getIconResource());
+                commandGroupModel.setIconBase64(iconBase64);
 
-                Intent data = new Intent();
-                data.putExtra(CommandBibliothecaActivity.EXTRA_COMMAND, commandModel);
+                int size = commandGroupModel.getCommands().size();
+                if(size > 1) {
+                    // returnResult(data);
+                    CharSequence[] commands = new CharSequence[size];
+                    for (int x = 0; x < size; x++) {
+                        CommandChildModel child = commandGroupModel.getCommands().get(x);
+                        commands[x] = child.getCommand();
+                    }
 
-                returnResult(data);
+                    AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                    builder.setTitle("Choose command")
+                            .setItems(commands, new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
 
-                return false;
+                                    handleCommandClick(commandGroupModel, which);
+                                }
+                            });
+                    Dialog dialog = builder.create();
+                    dialog.show();
+                } else {
+                    handleCommandClick(commandGroupModel, 0);
+                }
+
+                return true;
             }
         });
         list.setOnScrollListener(this);
+
+        view.findViewById(R.id.ivAdd).setOnClickListener(this);
 
         etSearch = (EditText) view.findViewById(R.id.etSearch);
         etSearch.addTextChangedListener(new TextWatcher() {
@@ -173,6 +207,20 @@ public class BibliothecaFragment extends Fragment implements View.OnClickListene
         ImageButton btnFilter = (ImageButton) view.findViewById(R.id.btnFilter);
         btnFilter.setVisibility(View.GONE);
         btnFilter.setOnClickListener(this);
+    }
+
+    private void handleCommandClick(CommandGroupModel commandGroupModel, int position) {
+        /*
+        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+        sharingIntent.setType("text/plain");
+        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, commandGroupModel.getCommands().get(position).getCommand());
+        startActivity(Intent.createChooser(sharingIntent, getResources().getString(R.string.send_command)));
+        */
+        Intent data = new Intent();
+        data.putExtra(CommandBibliothecaActivity.EXTRA_COMMAND, commandGroupModel.getCommands().get(position).getCommand());
+        data.putExtra(CommandBibliothecaActivity.EXTRA_ICON, commandGroupModel.getIconBase64());
+
+        returnResult(data);
     }
 
     /**
@@ -249,13 +297,13 @@ public class BibliothecaFragment extends Fragment implements View.OnClickListene
      * @param query
      */
     private void search(String query) {
-        ArrayList<ArrayList<CommandModel>> entries = new ArrayList<ArrayList<CommandModel>>();
+        ArrayList<ArrayList<CommandGroupModel>> entries = new ArrayList<ArrayList<CommandGroupModel>>();
         // loop through all groups
-        for (ArrayList<CommandModel> childGroup : childs) {
-            ArrayList<CommandModel> newChildGroup = new ArrayList<CommandModel>();
-            for (CommandModel child : childGroup) {
+        for (ArrayList<CommandGroupModel> childGroup : childs) {
+            ArrayList<CommandGroupModel> newChildGroup = new ArrayList<CommandGroupModel>();
+            for (CommandGroupModel child : childGroup) {
                 // check if command OR description contains query
-                if (child.getCommand().toLowerCase().contains(query.toLowerCase()) || child.getDesc().toLowerCase().contains(query.toLowerCase())) {
+                if (child.getDesc(getActivity()).toLowerCase().contains(query.toLowerCase())) {
                     newChildGroup.add(child);
                 }
             }
@@ -277,10 +325,10 @@ public class BibliothecaFragment extends Fragment implements View.OnClickListene
 
     @Override
     public void onFetchedCommandlineFuCommands(ArrayList<CommandLineFuModel> commandLineFuModels) {
-        ArrayList<CommandModel> commands = new ArrayList<CommandModel>();
+        ArrayList<CommandGroupModel> commands = new ArrayList<CommandGroupModel>();
         // convert commandlinefu json models to linux command bibliotheca
         for (CommandLineFuModel command : commandLineFuModels) {
-            commands.add(new CommandModel(command.getCommand(), command.getSummary()));
+            commands.add(new CommandGroupModel(command.getCommand(), command.getSummary()));
         }
         adapter.addEntries(CommandsExpandableListAdapter.GROUP_COMMANDLINEFU, commands);
         adapter.setLoadingFinished();

@@ -7,15 +7,15 @@
 
     <TextView
         android:id="@+id/tvGroupTitle"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:paddingLeft="25dp"
+        android:paddingStart="25dp"
         android:layout_weight="1" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1"
+        android:text=""
         android:id="@+id/tvGroupSize" />
 
 </LinearLayout>

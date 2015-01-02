@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandCompatibilityModel;
-import com.inspiredandroid.linuxcommandbibliotheca.models.CommandModel;
+import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel;
 import com.inspiredandroid.linuxcommandbibliotheca.viewholder.CommandViewHolder;
 
 import java.util.ArrayList;
@@ -20,7 +20,7 @@ import java.util.ArrayList;
 public class CommandsExpandableListAdapter extends BaseExpandableListAdapter {
  
     private Activity mContext;
-    private ArrayList<ArrayList<CommandModel>> mChild;
+    private ArrayList<ArrayList<CommandGroupModel>> mChild;
     private ArrayList<String> mGroup;
 
     public final static int GROUP_INFO = 0;
@@ -30,13 +30,13 @@ public class CommandsExpandableListAdapter extends BaseExpandableListAdapter {
 
     boolean isLoading = false;
  
-    public CommandsExpandableListAdapter(Activity context, ArrayList<String> group, ArrayList<ArrayList<CommandModel>> child) {
+    public CommandsExpandableListAdapter(Activity context, ArrayList<String> group, ArrayList<ArrayList<CommandGroupModel>> child) {
         this.mContext = context;
         this.mChild = child;
         this.mGroup = group;
     }
  
-    public CommandModel getChild(int groupPosition, int childPosition) {
+    public CommandGroupModel getChild(int groupPosition, int childPosition) {
         return mChild.get(groupPosition).get(childPosition);
     }
 
@@ -67,7 +67,7 @@ public class CommandsExpandableListAdapter extends BaseExpandableListAdapter {
             return pbLoading;
         }
 
-        CommandModel command =  getChild(groupPosition, childPosition);
+        CommandGroupModel command =  getChild(groupPosition, childPosition);
         CommandViewHolder holder;
  
         if (convertView == null || convertView.getTag() == null) {
@@ -75,21 +75,21 @@ public class CommandsExpandableListAdapter extends BaseExpandableListAdapter {
             convertView = inflater.inflate(R.layout.cell_command_child, parent, false);
 
             holder = new CommandViewHolder();
-            holder.command = (TextView) convertView.findViewById(R.id.laptop);
             holder.desc = (TextView) convertView.findViewById(R.id.desc);
             holder.icon = (ImageView) convertView.findViewById(R.id.ivIcon);
-            holder.compatibility = (LinearLayout) convertView.findViewById(R.id.llCommandCompatibilityInfo);
 
             convertView.setTag(holder);
         } else {
             holder = (CommandViewHolder) convertView.getTag();
         }
  
-        holder.command.setText(command.getCommand());
-        holder.desc.setText(command.getDesc());
+        //holder.command.setText(command.getCommand());//
 
-        holder.compatibility.removeAllViews();
+        holder.desc.setText(command.getDesc(mContext));
 
+//      holder.compatibility.removeAllViews();
+
+        /*
         for(CommandCompatibilityModel mode : command.getCompatibility()) {
             ImageView ivIcon = new ImageView(mContext);
             ivIcon.setMaxWidth(30);
@@ -105,6 +105,7 @@ public class CommandsExpandableListAdapter extends BaseExpandableListAdapter {
 
             holder.compatibility.addView(ivIcon);
         }
+        */
 
         if(!"".equals(command.getIconResource())) {
             int drawableResourceId = mContext.getResources().getIdentifier(command.getIconResource(), "drawable", mContext.getPackageName());
@@ -163,13 +164,13 @@ public class CommandsExpandableListAdapter extends BaseExpandableListAdapter {
         return true;
     }
 
-    public void updateEntries(ArrayList<String> groups, ArrayList<ArrayList<CommandModel>> child ) {
+    public void updateEntries(ArrayList<String> groups, ArrayList<ArrayList<CommandGroupModel>> child ) {
         mGroup = groups;
         mChild = child;
         notifyDataSetChanged();
     }
 
-    public void addEntries(int group, ArrayList<CommandModel> commands) {
+    public void addEntries(int group, ArrayList<CommandGroupModel> commands) {
         mChild.get(group).addAll(commands);
         notifyDataSetChanged();
     }
