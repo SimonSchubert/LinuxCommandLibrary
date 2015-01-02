@@ -8,8 +8,6 @@ import android.widget.TextView;
  * Created by simon on 15.06.14.
  */
 public class CommandViewHolder {
-    public TextView command;
     public TextView desc;
     public ImageView icon;
-    public LinearLayout compatibility;
 }

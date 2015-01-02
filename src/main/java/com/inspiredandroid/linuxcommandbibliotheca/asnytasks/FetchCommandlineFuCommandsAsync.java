@@ -41,7 +41,7 @@ public class FetchCommandlineFuCommandsAsync extends AsyncTask<String, String, A
 
         try {
             HttpClient httpClient = new DefaultHttpClient();
-            HttpPost httpPost = new HttpPost("http://www.commandlinefu.com/commands/browse/sort-by-votes/json/"+mPage*25);
+            HttpPost httpPost = new HttpPost("http://www.commandlinefu.com/commands/browse/sort-by-votes/json/" + mPage*25); //NON-NLS
             HttpResponse response = httpClient.execute(httpPost);
             HttpEntity entity = response.getEntity();
 
