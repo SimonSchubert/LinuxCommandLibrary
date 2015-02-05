@@ -1,6 +1,7 @@
 package com.inspiredandroid.linuxcommandbibliotheca.misc;
 
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Base64;
@@ -53,4 +54,20 @@ public class Utils {
         return outputStream.toString();
     }
 
+    /**
+     * Check if app is installed
+     * @param packageName
+     * @return
+     */
+    public static boolean isAppInstalled(Context context, String packageName) {
+        PackageManager pm = context.getPackageManager();
+        boolean installed = false;
+        try {
+            pm.getPackageInfo(packageName, PackageManager.GET_ACTIVITIES);
+            installed = true;
+        } catch (PackageManager.NameNotFoundException e) {
+            installed = false;
+        }
+        return installed;
+    }
 }

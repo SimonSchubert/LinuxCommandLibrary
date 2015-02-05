@@ -9,7 +9,7 @@ import java.util.ArrayList;
  */
 public interface FetchedCommandlineFuCommands {
     /**
-     * if zero commands got fetched the list is empty but never null
+     * If zero commands got fetched the list is empty but never null
      * @param commandLineFuModels
      */
     public abstract void onFetchedCommandlineFuCommands(ArrayList<CommandLineFuModel> commandLineFuModels);
