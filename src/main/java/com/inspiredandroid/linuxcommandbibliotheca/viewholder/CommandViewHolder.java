@@ -1,7 +1,6 @@
 package com.inspiredandroid.linuxcommandbibliotheca.viewholder;
 
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 /**

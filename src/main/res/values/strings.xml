@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Linux Command Library</string>
+    <string name="app_lcl_name">Linux Command Library</string>
+    <string name="command">Command</string>
+    <string name="scripts">Scripts (%d)</string>
+    <string name="commands">Commands (%d)</string>
 
     <string name="action_settings">Settings</string>
     <string name="system_info">Information</string>
@@ -28,8 +31,8 @@
     <string name="desc_print_uptime">Print uptime of machine.</string>
     <string name="desc_print_deisk_info">Print disk usage info.</string>
     <string name="desc_print_bootlog_info">Print bootlog info.</string>
-    <string name="desc_take_screenshot">Take screenshot of desktop and send to phone.</string>
-    <string name="desc_take_webcame_photo">Take webcam photo and send to phone.</string>
+    <string name="desc_take_screenshot">Take screenshot of the desktop.</string>
+    <string name="desc_take_webcame_photo">Take webcam photo.</string>
     <string name="desc_stop_bluetooth">Stop bluetooth service.</string>
     <string name="desc_start_bluetooth">Start bluetooth service.</string>
     <string name="desc_stop_wifi">Stop wifi service.</string>
@@ -38,7 +41,7 @@
     <string name="desc_play_audio_file">Play sound file in wav format.</string>
     <string name="desc_play_beep">The classical way to play a beep sound through the PC speakers. However this will not work in all cases, in many systems PC speakers are completely disabled.</string>
     <string name="desc_turn_off_monitor">Turn off monitor. To turn on, simply press a key, or move the mouse.</string>
-    <string name="send_command">Send command to...</string>
+    <string name="send_command">Send command to…</string>
 
     <item name="ID" type="id" />
 </resources>

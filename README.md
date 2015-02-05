@@ -4,6 +4,8 @@ This library provides a bunch of useful Linux commands.
 Download from Play Store https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca
 
 ![enter image description here][1]
+![enter image description here][2]
+![enter image description here][3]
 
 ###Usage
 start library
@@ -24,8 +26,13 @@ fetch result
         }
     }
 
+###Man pages database
+Here is the bash script that I used to generate the man pages database:
+https://gist.github.com/SimonSchubert/6f0715610cb37f4fda12
+
 ###Thanks to
-http://www.commandlinefu.com/ for using their API
+http://www.commandlinefu.com/
+https://github.com/jgilfelt/android-sqlite-asset-helper
 
 ###License
 
@@ -43,3 +50,5 @@ http://www.commandlinefu.com/ for using their API
 
 
   [1]: https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/screen-1.png
+  [2]: https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/screen-2.png
+  [3]: https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/screen-3.png
