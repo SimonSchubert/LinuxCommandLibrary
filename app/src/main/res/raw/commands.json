@@ -1,0 +1,284 @@
+[
+{
+"category":0,
+"iconResource":"icon_info_interface",
+"desc":0,
+"commands": [{
+    "compatibility": [{
+    "system":1,
+    "version":0
+    }],
+    "command":"HZ=`awk '/\\\\#define HZ/ {print $3}' /usr/include/asm-generic/param.h`; NUMCPUS=`grep ^proc /proc/cpuinfo | wc -l`; FIRST=`cat /proc/stat | awk '/^cpu / {print $5}'`; sleep 1; SECOND=`cat /proc/stat | awk '/^cpu / {print $5}'`; USED=`echo 4 k 100 $SECOND $FIRST - $NUMCPUS $HZ \\\\* / 100 \\\\* - p | dc`; echo ${USED}"
+    },{
+    "command":"NUMCPUS=`grep ^proc /proc/cpuinfo | wc -l`; FIRST=`cat /proc/stat | awk '/^cpu / {print $5}'`; sleep 1; SECOND=`cat /proc/stat | awk '/^cpu / {print $5}'`; USED=`echo 2 k 100 $SECOND $FIRST - $NUMCPUS / - p | dc`; echo ${USED}%"
+}]
+},
+{
+"category":0,
+"iconResource":"icon_info_interface",
+"desc":1,
+"commands": [{
+    "command": "max=$(grep 'last full capacity:' /proc/acpi/battery/BAT1/info|awk '{print $4}') ; current=$(grep 'remaining capacity:' /proc/acpi/battery/BAT1/state|awk '{print $3}'); percent=$(expr $current'00' / $max ); echo -e $percent"
+    },{
+    "command": "upower -i $(upower -e | grep BAT) | grep --color=never -E percentage|xargs|cut -d' ' -f2|sed s/%//"
+    },{
+    "command": "cat /sys/class/power_supply/BAT1/uevent | awk '/POWER_SUPPLY_CAPACITY/ {print $1}' | sed 's/POWER_SUPPLY_CAPACITY=//'"
+}]
+},
+{
+"category":0,
+"iconResource":"icon_info_interface",
+"desc":2,
+"commands": [{
+    "command": "hciconfig -a | awk '/BD Address:/ {print $3}'"
+}]
+},
+{
+"category":0,
+"iconResource":"icon_info_interface",
+"desc":3,
+"commands": [{
+ "command": "hciconfig -a | awk '/Name:/ {print $2}'"
+}]
+},
+{
+"category":0,
+"iconResource":"icon_info_interface",
+"desc":4,
+"commands": [{
+  "command": "ifconfig -a"
+}]
+},
+{
+"category":0,
+"iconResource":"icon_info_memory",
+"desc":5,
+"commands": [{
+ "command": "cat /proc/meminfo"
+}]
+},
+{
+"category":1,
+"iconResource":"icon_lock_screen",
+"desc":6,
+"commands": [{
+    "compatibility": [{
+    "system":1,
+    "version":0
+    }],
+    "command": "gnome-screensaver-command -l"
+},{
+    "compatibility": [{
+    "system":2,
+    "version":0
+    }],
+    "command":"dbus-send --type=method_call --dest=org.freedesktop.ScreenSaver /ScreenSaver org.freedesktop.ScreenSaver.Lock"
+}]
+},
+{
+"category":1,
+"iconResource":"icon_unlock_screen",
+"desc":7,
+"commands": [{
+    "compatibility": [{
+    "system":1,
+    "version":0
+    }],
+    "command": "gnome-screensaver-command -a"
+},{
+    "compatibility": [{
+    "system":2,
+    "version":0
+    }],
+    "command":"dbus-send --type=method_call --dest=org.freedesktop.ScreenSaver /ScreenSaver org.freedesktop.ScreenSaver.SetActive boolean:false"
+}]
+},
+{
+"category":0,
+"iconResource":"icon_info_linux",
+"desc":8,
+"commands": [{
+"command": "cat /proc/version"
+}]
+},
+{
+"category":0,
+"iconResource":"icon_info_devices",
+"desc":9,
+"commands": [{
+"command": "lspci"
+}]
+},
+{
+"category":0,
+"iconResource":"icon_info_usb",
+"desc":10,
+"commands": [{
+"command": "lsusb"
+}]
+},
+{
+"category":0,
+"iconResource":"icon_info_devices",
+"desc":11,
+"commands": [{
+    "command": "lsblk"
+    }]
+},
+{
+"category":0,
+"iconResource":"icon_info_ip",
+"desc":12,
+"commands": [{
+    "command": "curl ifconfig.me"
+    },{
+    "command": "dig +short myip.opendns.com @resolver1.opendns.com"
+    },{
+    "command": "netcat icanhazip.com 80 <<< $'GET / HTTP/1.1\nHost: icanhazip.com\n\n' | tail -n1"
+    }]
+},
+{
+"category":1,
+"iconResource":"icon_restart",
+"desc":13,
+"commands": [{
+    "command": "sudo reboot"
+    },{
+    "command": "sudo shutdown -r"
+    }]
+},
+{
+"category":1,
+"iconResource":"icon_shutdown",
+"desc":14,
+"commands": [{
+"command": "sudo poweroff"
+},{
+"command": "sudo shutdown -h now"
+},{
+"command": "sudo reboot -p"
+}]
+},
+{
+"category":1,
+"iconResource":"icon_shutdown",
+"desc":15,
+"commands": [{
+"command": "sudo shutdown -h 18:45 \"Server is going down for maintenance\""
+}]
+},
+{
+"category":0,
+"iconResource":"icon_info_ssh",
+"desc":16,
+"commands": [{
+"command": "ssh -V"
+}]
+},
+{
+"category":0,
+"iconResource":"icon_info_uptime",
+"desc":17,
+"commands": [{
+"command": "uptime"
+}]
+},
+{
+"category":0,
+"iconResource":"icon_info_storage",
+"desc":18,
+"commands": [{
+"command": "df -k"
+}]
+},
+{
+"category":0,
+"iconResource":"icon_info_bootlog",
+"desc":19,
+"commands": [{
+"command": "cat /var/log/boot.log"
+}]
+},
+{
+"category":2,
+"iconResource":"icon_desktop",
+"desc":20,
+"commands": [{
+"command": "export DISPLAY=:0; import -window root screenURC.png"
+}]
+},
+{
+"category":2,
+"iconResource":"icon_webcam",
+"desc":21,
+"commands": [{
+"command": "uvccapture -d/dev/video0 -oscreenURC.jpg -m"
+}]
+},
+{
+"category":1,
+"iconResource":"icon_stop_bluetooth",
+"desc":22,
+"commands": [{
+"command": "sudo service bluetooth stop"
+}]
+},
+{
+"category":1,
+"iconResource":"icon_start_bluetooth",
+"desc":23,
+"commands": [{
+"command": "sudo service bluetooth start"
+}]
+},
+{
+"category":1,
+"iconResource":"icon_stop_wifi",
+"desc":24,
+"commands": [{
+"command": "nmcli nm wifi off"
+}]
+},
+{
+"category":1,
+"iconResource":"icon_start_wifi",
+"desc":25,
+"commands": [{
+"command": "nmcli nm wifi on"
+}]
+},
+{
+"category":2,
+"iconResource":"icon_bullhorn",
+"desc":26,
+"commands": [{
+"command": "spd-say \"Either you leave this area or I'm forced to kill you\""
+}]
+},
+{
+"category":2,
+"iconResource":"icon_music",
+"desc":27,
+"commands": [{
+    "command": "aplay /usr/share/sounds/alsa/Noise.wav"
+    },{
+    "command":"play /usr/share/sounds/alsa/Noise.wav"
+    }]
+},
+{
+"category":2,
+"iconResource":"icon_music",
+"desc":28,
+"commands": [{
+"command": "beep"
+}]
+},
+{
+"category":1,
+"iconResource":"icon_lock_screen",
+"desc":29,
+"commands": [{
+"command": "xset dpms force off"
+}]
+}
+]
