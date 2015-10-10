@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#424242">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:id="@+id/btnFilter"
+            android:layout_gravity="end"
+            android:src="@drawable/icon_filter"
+            android:scaleType="centerCrop" />
+    </LinearLayout>
+
+    <ExpandableListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/fragment_scripts_elv"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="300dp"
+        android:id="@+id/fragment_scipts_iv_ad"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/add"
+        android:adjustViewBounds="true"/>
+
+</LinearLayout>
