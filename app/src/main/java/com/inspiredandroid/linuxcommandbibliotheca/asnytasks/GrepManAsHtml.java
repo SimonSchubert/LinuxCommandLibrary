@@ -2,12 +2,11 @@ package com.inspiredandroid.linuxcommandbibliotheca.asnytasks;
 
 import android.content.Context;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.text.Html;
 import android.text.Spanned;
 
-import com.inspiredandroid.linuxcommandbibliotheca.interfaces.GrapManAsHtmlInterface;
+import com.inspiredandroid.linuxcommandbibliotheca.interfaces.ConvertManFromHtmlToSpannableInterface;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandsDBTableModel;
 import com.inspiredandroid.linuxcommandbibliotheca.sql.CommandsDbHelper;
 
@@ -16,11 +15,11 @@ import com.inspiredandroid.linuxcommandbibliotheca.sql.CommandsDbHelper;
  */
 public class GrepManAsHtml extends AsyncTask<String, Spanned, Spanned> {
 
-    GrapManAsHtmlInterface callback;
+    ConvertManFromHtmlToSpannableInterface callback;
     Context context;
     long id;
 
-    public GrepManAsHtml(Context context, long id, GrapManAsHtmlInterface callback)
+    public GrepManAsHtml(Context context, long id, ConvertManFromHtmlToSpannableInterface callback)
     {
         this.context = context;
         this.id = id;
@@ -32,8 +31,7 @@ public class GrepManAsHtml extends AsyncTask<String, Spanned, Spanned> {
     {
         // Init cursor
         CommandsDbHelper mDbHelper = new CommandsDbHelper(context);
-        SQLiteDatabase db = mDbHelper.getReadableDatabase();
-        Cursor c = db.rawQuery("SELECT * FROM "+ CommandsDBTableModel.TABLE_COMMANDS +" WHERE "+ CommandsDBTableModel.COL_ID +" = " + id, null);
+        Cursor c = mDbHelper.getCommandFromId(id);
 
         // Get description
         c.moveToFirst();

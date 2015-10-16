@@ -10,6 +10,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.inspiredandroid.linuxcommandbibliotheca.R;
+import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel;
 
 import java.util.ArrayList;
@@ -86,7 +87,7 @@ public class ScriptsExpandableListAdapter extends BaseExpandableListAdapter {
 
         //holder.command.setText(command.getCommand());//
 
-        holder.desc.setText(CommandsAdapter.highlight(mContext, mQuery, command.getDesc(mContext)));
+        holder.desc.setText(Utils.highlight(mContext, mQuery, command.getDesc(mContext)));
 
 //      holder.compatibility.removeAllViews();
 

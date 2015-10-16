@@ -3,9 +3,9 @@
 
     <string name="app_lcl_name">Linux Command Library</string>
     <string name="command">Command</string>
-    <string name="scripts">Scripts (%d)</string>
-    <string name="commands">Commands (%d)</string>
-    <string name="tip">Tip (%d)</string>
+    <string name="fragment_bibliotheca_scripts">Scripts (%d)</string>
+    <string name="fragment_bibliotheca_commands">Commands (%d)</string>
+    <string name="tip">Tips + Quiz</string>
 
     <string name="action_settings">Settings</string>
     <string name="system_info">Information</string>
@@ -43,6 +43,134 @@
     <string name="desc_play_beep">The classical way to play a beep sound through the PC speakers. However this will not work in all cases, in many systems PC speakers are completely disabled.</string>
     <string name="desc_turn_off_monitor">Turn off monitor. To turn on, simply press a key, or move the mouse.</string>
     <string name="send_command">Send command to…</string>
+    <string name="quiz">Quiz</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 
-    <item name="ID" type="id" />
+    <!-- Fragment Quiz -->
+    <string name="fragment_quiz_quit_dialog_text">Do you really want to quit the Quiz?</string>
+    <string name="fragment_quiz_counter">%1$s / %2$s</string>
+    <string name="fragment_quiz_result">%s%%</string>
+    <string name="fragment_quiz_question">\"%s\"</string>
+    <string name="fragment_quiz_congratulation">Congratulation</string>
+    <string name="fragment_quiz_again">Again</string>
+    <string name="fragment_tips_do_the_test">Test and train your Linux cmd skills.</string>
+    <string name="fragment_tips_start_quiz">Start Quiz</string>
+
+    <string-array name="default_codetextview_cmmands">
+    </string-array>
+
+    <string name="fragment_tips_clear_code">" $ clear "</string>
+    <string-array name="fragment_tips_clear_code_array">
+        <item>clear</item>
+    </string-array>
+
+    <string name="fragment_tips_history_code">" $ history "</string>
+    <string-array name="fragment_tips_history_code_array">
+        <item>history</item>
+    </string-array>
+
+    <string name="fragment_tips_tv_special_characters_code_star">" $ find ex*.txt "</string>
+    <string-array name="fragment_tips_special_characters_code_star_array">
+        <item>find</item>
+    </string-array>
+
+    <string name="fragment_tips_background_code">" $ cowsay &amp; "</string>
+    <string-array name="fragment_tips_background_code_array">
+        <item>cowsay</item>
+    </string-array>
+
+    <string name="fragment_tips_pipe_code">" $ fortune | cowsay "</string>
+    <string-array name="fragment_tips_pipe_code_array">
+        <item>fortune</item>
+        <item>cowsay</item>
+    </string-array>
+
+    <string name="fragment_tips_special_characters_code_questionmark">" $ find ex?mple.txt "</string>
+    <string-array name="fragment_tips_special_characters_code_questionmark_array">
+        <item>find</item>
+    </string-array>
+
+    <string name="fragment_tips_special_characters_code_square_brackets">" $ find ex[abc]mple.txt "</string>
+    <string-array name="fragment_tips_special_characters_code_square_brackets_array">
+        <item>find</item>
+    </string-array>
+
+    <string name="fragment_tips_special_characters_code_brackets">" $ pwd &amp;&amp; (cd /etc) &amp;&amp; pwd "</string>
+    <string-array name="fragment_tips_special_characters_code_brackets_array">
+        <item>pwd</item>
+        <item>cd</item>
+    </string-array>
+
+    <string name="fragment_tips_special_characters_code_semicolon">" $ echo Hi ; uname "</string>
+    <string-array name="fragment_tips_special_characters_code_semicolon_array">
+        <item>echo</item>
+        <item>uname</item>
+    </string-array>
+
+    <string name="fragment_tips_special_characters_code_single_quote">" $ find \'(echo abc)\'* "</string>
+    <string-array name="fragment_tips_special_characters_code_single_quote_array">
+        <item>find</item>
+        <item>echo</item>
+    </string-array>
+
+    <string name="fragment_tips_special_characters_code_backquote">" $ echo `uname` "</string>
+    <string-array name="fragment_tips_special_characters_code_backquote_array">
+        <item>echo</item>
+        <item>uname</item>
+    </string-array>
+
+    <string name="fragment_tips_special_characters_code_double_quote">" $ cd \"untitled folder\" "</string>
+    <string-array name="fragment_tips_special_characters_code_double_quote_array">
+        <item>cd</item>
+    </string-array>
+
+    <string name="fragment_tips_special_characters_code_double_amp">" $ ping localhost -c 1 &amp;&amp; cowsay great "</string>
+    <string-array name="fragment_tips_special_characters_code_double_amp_array">
+        <item>ping</item>
+        <item>cowsay</item>
+    </string-array>
+
+    <string name="fragment_tips_tv_special_characters_code_double_pipe">" $ ping \"not.reachable\" -c 1 || cowsay sorry "</string>
+    <string-array name="fragment_tips_special_characters_code_double_pipe_array">
+        <item>ping</item>
+        <item>cowsay</item>
+    </string-array>
+
+    <string name="fragment_tips_special_characters_code_excelationmark">" $ sudo !! "</string>
+    <string-array name="fragment_tips_special_characters_code_excelationmark_array">
+        <item>sudo</item>
+    </string-array>
+
+    <string name="fragment_tips_special_characters_code_substitution">" $ ls *.png "</string>
+    <string-array name="fragment_tips_special_characters_code_substitution_array">
+        <item>ls</item>
+    </string-array>
+
+    <string name="fragment_tips_special_characters_code_comment">" $ whatis xdotool # hint: has sth todo with X11 "</string>
+    <string-array name="fragment_tips_special_characters_code_comment_array">
+        <item>whatis</item>
+        <item>xdotool</item>
+    </string-array>
+
+    <string name="fragment_tips_redirection_code_greater">" $ echo \"Write output to file\" &gt; example.txt "</string>
+    <string-array name="fragment_tips_redirection_code_greater_array">
+        <item>echo</item>
+    </string-array>
+
+    <string name="fragment_tips_redirection_code_double_greater">" $ echo \"Append this to file\" &gt;&gt; example.txt "</string>
+    <string-array name="fragment_tips_redirection_code_double_greater_array">
+        <item>echo</item>
+    </string-array>
+
+    <string name="fragment_tips_redirection_code_smaller">" $ cowsay &lt; example.txt "</string>
+    <string-array name="fragment_tips_redirection_code_smaller_array">
+        <item>cowsay</item>
+    </string-array>
+
+    <item name="ID" type="id"/>
+
+    <string name="fragment_datanase_loading_craftin_database">Crafting Database</string>
+    <string name="fragment_datanase_loading_failed_craftin_database">Couldn\'t craft database</string>
+
 </resources>

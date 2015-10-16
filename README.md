@@ -6,6 +6,8 @@ Download from Play Store https://play.google.com/store/apps/details?id=com.inspi
 ![enter image description here][1]
 ![enter image description here][2]
 ![enter image description here][3]
+![enter image description here][4]
+![enter image description here][5]
 
 ###Usage
 start library
@@ -31,6 +33,7 @@ Here is the bash script that I used to generate the man pages database:
 https://gist.github.com/SimonSchubert/6f0715610cb37f4fda12
 
 ###Thanks to
+http://letsgokoyo.com/ - Icons, Tux images
 http://www.commandlinefu.com/
 https://github.com/jgilfelt/android-sqlite-asset-helper
 
@@ -52,3 +55,5 @@ https://github.com/jgilfelt/android-sqlite-asset-helper
   [1]: https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/screen-1.png
   [2]: https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/screen-2.png
   [3]: https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/screen-3.png
+  [3]: https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/screen-4.png
+  [3]: https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/screen-5.png

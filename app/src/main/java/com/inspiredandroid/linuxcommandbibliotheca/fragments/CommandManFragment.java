@@ -6,18 +6,17 @@ import android.text.Spanned;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
 import android.widget.TextView;
 
 import com.inspiredandroid.linuxcommandbibliotheca.CommandManActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.asnytasks.GrepManAsHtml;
-import com.inspiredandroid.linuxcommandbibliotheca.interfaces.GrapManAsHtmlInterface;
+import com.inspiredandroid.linuxcommandbibliotheca.interfaces.ConvertManFromHtmlToSpannableInterface;
 
 /**
  * Created by Simon Schubert
  */
-public class CommandManFragment extends Fragment implements GrapManAsHtmlInterface {
+public class CommandManFragment extends Fragment implements ConvertManFromHtmlToSpannableInterface {
 
     TextView tvDescription;
     GrepManAsHtml asyncTask;
