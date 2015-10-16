@@ -1,10 +1,36 @@
 <resources>
 
-    <style name="AppTheme" parent="AppTheme.Base"/>
+    <style name="LibAppTheme" parent="LibAppTheme.Base"/>
 
-    <style name="AppTheme.Base" parent="Theme.AppCompat">
-        <item name="colorPrimary">@color/primary</item>
-        <item name="colorPrimaryDark">@color/primary_dark</item>
+    <style name="LibAppTheme.Base" parent="Theme.AppCompat">
+        <item name="colorPrimary">@color/ab_primary</item>
+        <item name="colorPrimaryDark">@color/ab_primary_dark</item>
+    </style>
+
+    <style name="TextMedium" parent="LibAppTheme">
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <style name="TextNormal" parent="LibAppTheme">
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:textColor">#c3c3c3</item>
+    </style>
+
+    <style name="TextCode" parent="LibAppTheme">
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">#010101</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:textIsSelectable">true</item>
+        <item name="android:layout_marginLeft">8dp</item>
     </style>
 
 </resources>

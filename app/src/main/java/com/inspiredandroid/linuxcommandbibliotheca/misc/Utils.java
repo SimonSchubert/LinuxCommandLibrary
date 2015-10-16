@@ -4,11 +4,19 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.support.v4.content.ContextCompat;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.util.Base64;
+
+import com.inspiredandroid.linuxcommandbibliotheca.R;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.text.Normalizer;
+import java.util.ArrayList;
 
 /**
  * Created by simon on 08.09.14.
@@ -76,5 +84,59 @@ public class Utils {
             installed = false;
         }
         return installed;
+    }
+
+    /**
+     * Clone string array list
+     * @param dogList
+     * @return
+     */
+    public static ArrayList<String> cloneList(ArrayList<String> dogList) {
+        if(dogList == null) {
+            return null;
+        }
+        ArrayList<String> clonedList = new ArrayList<>(dogList.size());
+        for (String dog : dogList) {
+            clonedList.add(dog);
+        }
+        return clonedList;
+    }
+
+    /**
+     * Highlight the the appereance of search inside originalText
+     * @param context
+     * @param search
+     * @param originalText
+     * @return
+     */
+    public static CharSequence highlight(Context context, String search, String originalText)
+    {
+        if (search.isEmpty() || originalText.isEmpty()) {
+            return originalText;
+        }
+
+        // ignore case and accents
+        // the same thing should have been done for the search text
+        String normalizedText = Normalizer.normalize(originalText, Normalizer.Form.NFD).replaceAll("\\p{InCombiningDiacriticalMarks}+", "").toLowerCase();
+
+        int start = normalizedText.indexOf(search);
+        if (start < 0) {
+            // not found, nothing to to
+            return originalText;
+        } else {
+            // highlight each appearance in the original text
+            // while searching in normalized text
+            Spannable highlighted = new SpannableString(originalText);
+            while (start >= 0) {
+                int spanStart = Math.min(start, originalText.length());
+                int spanEnd = Math.min(start + search.length(), originalText.length());
+
+                highlighted.setSpan(new ForegroundColorSpan(ContextCompat.getColor(context, R.color.ab_primary_dark)), spanStart, spanEnd, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+                start = normalizedText.indexOf(search, spanEnd);
+            }
+
+            return highlighted;
+        }
     }
 }

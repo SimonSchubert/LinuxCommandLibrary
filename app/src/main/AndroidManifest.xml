@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
           package="com.inspiredandroid.linuxcommandbibliotheca"
           android:installLocation="preferExternal">
 
@@ -7,17 +8,16 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_lcl_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/LibAppTheme"
+        android:exported="true"
+        tools:replace="android:icon">
         <activity
             android:name=".CommandBibliothecaActivity"
             android:label="@string/app_lcl_name"
+            android:theme="@style/LibAppTheme"
             android:windowSoftInputMode="stateHidden">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
             <intent-filter>
                 <action android:name="com.inspiredandroid.linuxcommandbibliotheca.CommandBibliothecaActivity" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -28,7 +28,14 @@
 
         <activity
             android:name=".CommandManActivity"
+            android:theme="@style/LibAppTheme"
             android:label="@string/command">
+        </activity>
+
+        <activity
+            android:name=".QuizActivity"
+            android:theme="@style/LibAppTheme"
+            android:label="@string/quiz">
         </activity>
 
     </application>

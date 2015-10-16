@@ -35,12 +35,12 @@ import android.view.ViewConfiguration;
 
 /**
  * PagerTabStrip is an interactive indicator of the current, next,
- * and previous pages of a {@link ViewPager}. It is intended to be used as a
+ * and previous pages of a {@link android.support.v4.view.ViewPager}. It is intended to be used as a
  * child view of a ViewPager widget in your XML layout.
  * Add it as a child of a ViewPager in your layout file and set its
  * android:layout_gravity to TOP or BOTTOM to pin it to the top or bottom
  * of the ViewPager. The title from each page is supplied by the method
- * {@link PagerAdapter#getPageTitle(int)} in the adapter supplied to
+ * {@link android.support.v4.view.PagerAdapter#getPageTitle(int)} in the adapter supplied to
  * the ViewPager.
  * <p/>
  * <p>For a non-interactive indicator, see {@link PagerTitleStripV22}.</p>

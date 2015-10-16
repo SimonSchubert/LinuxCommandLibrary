@@ -44,11 +44,12 @@ public class BibliothecaFragment extends Fragment {
     {
         // Get total commands count
         CommandsDbHelper mDbHelper = new CommandsDbHelper(getActivity());
-        int commandsCount = mDbHelper.getCount();
+        int commandsCount = mDbHelper.getCommandsCount();
 
         // Set PagerTitleStrip titles
-        String[] titles = new String[]{String.format(getString(R.string.commands), commandsCount),
-                String.format(getString(R.string.scripts), 30)};
+        String[] titles = new String[]{String.format(getString(R.string.fragment_bibliotheca_commands), commandsCount),
+                String.format(getString(R.string.fragment_bibliotheca_scripts), 30),
+                getString(R.string.tip)};
 
         // Init viewpager adapter
         adapter = new ScreenSlidePagerAdapter(getChildFragmentManager(), titles);
@@ -74,8 +75,10 @@ public class BibliothecaFragment extends Fragment {
             switch (position) {
                 case 0:
                     return new CommandsFragment();
-                default:
+                case 1:
                     return new ScriptsFragment();
+                default:
+                    return new TipFragment();
             }
         }
 

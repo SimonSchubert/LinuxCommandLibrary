@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.FetchedCommandlineFuCommandsInterface;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandLineFuModel;
@@ -51,12 +52,13 @@ public class FetchCommandlineFuCommandsAsync extends AsyncTask<String, String, A
                 }.getType());
             }
 
-        } catch (IOException e) {
+        } catch (IOException | JsonSyntaxException e) {
             e.printStackTrace();
         }
         if (commandLineFuModels == null) {
             commandLineFuModels = new ArrayList<>();
         }
+
         return commandLineFuModels;
     }
 
