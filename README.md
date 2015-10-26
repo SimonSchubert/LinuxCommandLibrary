@@ -34,7 +34,9 @@ https://gist.github.com/SimonSchubert/6f0715610cb37f4fda12
 
 ###Thanks to
 http://letsgokoyo.com/ - Icons, Tux images
+
 http://www.commandlinefu.com/
+
 https://github.com/jgilfelt/android-sqlite-asset-helper
 
 ###License
@@ -55,5 +57,5 @@ https://github.com/jgilfelt/android-sqlite-asset-helper
   [1]: https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/screen-1.png
   [2]: https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/screen-2.png
   [3]: https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/screen-3.png
-  [3]: https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/screen-4.png
-  [3]: https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/screen-5.png
+  [4]: https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/screen-4.png
+  [5]: https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/screen-5.png
