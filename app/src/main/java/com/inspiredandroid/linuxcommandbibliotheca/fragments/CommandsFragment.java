@@ -4,7 +4,6 @@ import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -25,7 +24,6 @@ import android.widget.ListView;
 import com.inspiredandroid.linuxcommandbibliotheca.CommandManActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.CommandsAdapter;
-import com.inspiredandroid.linuxcommandbibliotheca.models.CommandsDBTableModel;
 import com.inspiredandroid.linuxcommandbibliotheca.sql.CommandsDbHelper;
 
 import java.text.Normalizer;
@@ -37,7 +35,11 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
 
     CommandsAdapter adapter;
     ListView list;
-    SQLiteDatabase db;
+    CommandsDbHelper mDbHelper;
+
+    public CommandsFragment()
+    {
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -46,8 +48,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
 
         setHasOptionsMenu(true);
 
-        CommandsDbHelper mDbHelper = new CommandsDbHelper(getActivity());
-        db = mDbHelper.getReadableDatabase();
+        mDbHelper = new CommandsDbHelper(getActivity());
 
         createAdapter();
     }
@@ -121,6 +122,14 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
         }
     }
 
+    @Override
+    public void onDestroy()
+    {
+        super.onDestroy();
+
+        mDbHelper.close();
+    }
+
     private void startCommandManActivity(long id)
     {
         Intent intent = new Intent(getActivity(), CommandManActivity.class);
@@ -132,11 +141,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
 
     private void createAdapter()
     {
-        // Init Cursor
-        Cursor c = db.rawQuery("SELECT * FROM " + CommandsDBTableModel.TABLE_COMMANDS + " ORDER BY "+ CommandsDBTableModel.COL_NAME +" COLLATE NOCASE ASC", null);
-
-        // Init Adapter
-        adapter = new CommandsAdapter(getActivity(), R.layout.row_command_child, c, true);
+        adapter = new CommandsAdapter(getActivity(), R.layout.row_command_child, mDbHelper.getAllCommands(), true);
     }
 
     /**
@@ -144,11 +149,8 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
      */
     private void resetSearchResults()
     {
-        // Init Cursor
-        Cursor c = db.rawQuery("SELECT * FROM " + CommandsDBTableModel.TABLE_COMMANDS + " ORDER BY "+ CommandsDBTableModel.COL_NAME +" COLLATE NOCASE ASC", null);
-
         // Update adapter
-        adapter.updateCursor(c, "");
+        adapter.updateCursor(mDbHelper.getAllCommands(), "");
     }
 
     /**
@@ -158,13 +160,8 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
      */
     private void search(String query)
     {
-        // Init Cursor
-        Cursor c = db.rawQuery("Select * from " + CommandsDBTableModel.TABLE_COMMANDS + " WHERE " + CommandsDBTableModel.COL_NAME + " LIKE '%" + query + "%' "+
-                "ORDER BY " + CommandsDBTableModel.COL_NAME + " = '" + query + "' DESC,"+
-                CommandsDBTableModel.COL_NAME + " LIKE '" + query + "%' DESC", null);
-
         // Update adapter
-        adapter.updateCursor(c, query);
+        adapter.updateCursor(mDbHelper.searchCommands(query), query);
     }
 
     @Override
@@ -175,9 +172,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
             @Override
             public Cursor loadInBackground()
             {
-                Cursor c = db.rawQuery("SELECT * FROM " + CommandsDBTableModel.TABLE_COMMANDS + " ORDER BY " + CommandsDBTableModel.COL_NAME + " COLLATE NOCASE ASC", null);
-                // You can use any query that returns a cursor.
-                return c;
+                return mDbHelper.getAllCommands();
             }
         };
     }

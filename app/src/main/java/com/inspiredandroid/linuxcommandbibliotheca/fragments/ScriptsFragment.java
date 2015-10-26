@@ -29,7 +29,7 @@ import com.google.gson.reflect.TypeToken;
 import com.inspiredandroid.linuxcommandbibliotheca.CommandBibliothecaActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.ScriptsExpandableListAdapter;
-import com.inspiredandroid.linuxcommandbibliotheca.asnytasks.FetchCommandlineFuCommandsAsync;
+import com.inspiredandroid.linuxcommandbibliotheca.asnytasks.FetchCommandlineFuCommandsAsyncTask;
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.FetchedCommandlineFuCommandsInterface;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandChildModel;
@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by simon on 13.06.14.
+ * Created by Simon Schubert
  */
 public class ScriptsFragment extends Fragment implements View.OnClickListener, FetchedCommandlineFuCommandsInterface, AbsListView.OnScrollListener, ExpandableListView.OnChildClickListener {
 
@@ -51,11 +51,15 @@ public class ScriptsFragment extends Fragment implements View.OnClickListener, F
     ArrayList<ArrayList<CommandGroupModel>> childs = new ArrayList<>();
     ArrayList<String> group = new ArrayList<>();
 
-    FetchCommandlineFuCommandsAsync async;
+    FetchCommandlineFuCommandsAsyncTask async;
     int fetchedCommandlineFuPages = 0;
 
     boolean isSearching = false;
     ArrayList mSelectedItems;
+
+    public ScriptsFragment()
+    {
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -64,7 +68,7 @@ public class ScriptsFragment extends Fragment implements View.OnClickListener, F
 
         setHasOptionsMenu(true);
 
-        createAdapter();
+        adapter = createAdapter();
     }
 
     @Override
@@ -189,7 +193,7 @@ public class ScriptsFragment extends Fragment implements View.OnClickListener, F
         }
     }
 
-    private void createAdapter()
+    private ScriptsExpandableListAdapter createAdapter()
     {
         // command categories
         group.add(getString(R.string.system_info));
@@ -219,8 +223,7 @@ public class ScriptsFragment extends Fragment implements View.OnClickListener, F
             }
         }
 
-        // init list adapter
-        adapter = new ScriptsExpandableListAdapter(getActivity(), group, childs);
+        return new ScriptsExpandableListAdapter(getActivity(), group, childs);
     }
 
     private void handleCommandClick(CommandGroupModel commandGroupModel, int position)
@@ -249,7 +252,7 @@ public class ScriptsFragment extends Fragment implements View.OnClickListener, F
         if (async == null
                 || async.getStatus() == AsyncTask.Status.FINISHED) {
             adapter.setLoading();
-            async = new FetchCommandlineFuCommandsAsync(
+            async = new FetchCommandlineFuCommandsAsyncTask(
                     getActivity(), this, fetchedCommandlineFuPages);
             async.execute();
             fetchedCommandlineFuPages++;

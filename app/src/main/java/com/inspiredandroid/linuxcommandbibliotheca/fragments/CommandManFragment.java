@@ -1,7 +1,6 @@
 package com.inspiredandroid.linuxcommandbibliotheca.fragments;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.text.Spanned;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,16 +9,31 @@ import android.widget.TextView;
 
 import com.inspiredandroid.linuxcommandbibliotheca.CommandManActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
-import com.inspiredandroid.linuxcommandbibliotheca.asnytasks.GrepManAsHtml;
+import com.inspiredandroid.linuxcommandbibliotheca.asnytasks.GrepManAsHtmlAsyncTask;
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.ConvertManFromHtmlToSpannableInterface;
 
 /**
  * Created by Simon Schubert
  */
-public class CommandManFragment extends Fragment implements ConvertManFromHtmlToSpannableInterface {
+public class CommandManFragment extends SuperFragment implements ConvertManFromHtmlToSpannableInterface {
 
     TextView tvDescription;
-    GrepManAsHtml asyncTask;
+    GrepManAsHtmlAsyncTask asyncTask;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+
+        // Get unique command id
+        Bundle b = getArguments();
+        long id = b.getLong(CommandManActivity.EXTRA_COMMAND_ID);
+
+        // load async
+        asyncTask = new GrepManAsHtmlAsyncTask(getActivity(), id, this);
+        asyncTasks.add(asyncTask);
+        asyncTask.execute();
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -32,29 +46,7 @@ public class CommandManFragment extends Fragment implements ConvertManFromHtmlTo
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
-        super.onCreate(savedInstanceState);
-
-        // Get unique command id
-        Bundle b = getArguments();
-        long id = b.getLong(CommandManActivity.EXTRA_COMMAND_ID);
-
-        // load async
-        asyncTask = new GrepManAsHtml(getActivity(), id, this);
-        asyncTask.execute();
-    }
-
-    @Override
-    public void onPause()
-    {
-        super.onPause();
-
-        asyncTask.cancel(true);
-    }
-
-    @Override
-    public void onHtmlGraped(Spanned spannable)
+    public void onConvertedHtmlToSpannable(Spanned spannable)
     {
         tvDescription.setText(spannable);
     }

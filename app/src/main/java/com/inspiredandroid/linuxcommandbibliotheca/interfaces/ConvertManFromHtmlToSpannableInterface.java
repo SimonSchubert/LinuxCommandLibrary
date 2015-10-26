@@ -3,13 +3,12 @@ package com.inspiredandroid.linuxcommandbibliotheca.interfaces;
 import android.text.Spanned;
 
 /**
- * Created by simon on 08.09.14.
+ * Created by Simon Schubert
  */
 public interface ConvertManFromHtmlToSpannableInterface {
 
     /**
-     *
      * @param spannable
      */
-    void onHtmlGraped(Spanned spannable);
+    void onConvertedHtmlToSpannable(Spanned spannable);
 }

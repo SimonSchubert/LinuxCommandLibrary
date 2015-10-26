@@ -15,6 +15,9 @@ import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel;
 
 import java.util.ArrayList;
 
+/**
+ * Created by Simon Schubert
+ */
 public class ScriptsExpandableListAdapter extends BaseExpandableListAdapter {
 
     public final static int GROUP_INFO = 0;
@@ -85,29 +88,8 @@ public class ScriptsExpandableListAdapter extends BaseExpandableListAdapter {
             holder = (CommandViewHolder) convertView.getTag();
         }
 
-        //holder.command.setText(command.getCommand());//
+        holder.desc.setText(Utils.highlightQueryInsideText(mContext, mQuery, command.getDesc(mContext)));
 
-        holder.desc.setText(Utils.highlight(mContext, mQuery, command.getDesc(mContext)));
-
-//      holder.compatibility.removeAllViews();
-
-        /*
-        for(CommandCompatibilityModel mode : command.getCompatibility()) {
-            ImageView ivIcon = new ImageView(mContext);
-            ivIcon.setMaxWidth(30);
-            ivIcon.setAdjustViewBounds(true);
-
-            if(mode.getSystem() == 0) {
-                ivIcon.setImageResource(R.drawable.icon_linux);
-            } else if(mode.getSystem() == 1) {
-                ivIcon.setImageResource(R.drawable.icon_gnome);
-            } else if(mode.getSystem() == 2) {
-                ivIcon.setImageResource(R.drawable.icon_kde);
-            }
-
-            holder.compatibility.addView(ivIcon);
-        }
-        */
 
         if (!"".equals(command.getIconResource())) {
             int drawableResourceId = mContext.getResources().getIdentifier(command.getIconResource(), "drawable", mContext.getPackageName());

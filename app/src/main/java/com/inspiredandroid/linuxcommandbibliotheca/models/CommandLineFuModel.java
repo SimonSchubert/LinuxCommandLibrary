@@ -1,7 +1,7 @@
 package com.inspiredandroid.linuxcommandbibliotheca.models;
 
 /**
- * Created by simon on 08.09.14.
+ * Created by Simon Schubert
  */
 public class CommandLineFuModel {
     int id;

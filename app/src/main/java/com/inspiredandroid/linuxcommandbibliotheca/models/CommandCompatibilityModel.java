@@ -3,7 +3,7 @@ package com.inspiredandroid.linuxcommandbibliotheca.models;
 import java.io.Serializable;
 
 /**
- * Created by simon on 14.06.14.
+ * Created by Simon Schubert
  */
 public class CommandCompatibilityModel implements Serializable {
 

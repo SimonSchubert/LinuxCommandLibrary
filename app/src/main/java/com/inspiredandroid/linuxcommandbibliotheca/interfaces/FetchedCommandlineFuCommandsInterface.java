@@ -5,11 +5,11 @@ import com.inspiredandroid.linuxcommandbibliotheca.models.CommandLineFuModel;
 import java.util.ArrayList;
 
 /**
- * Created by simon on 08.09.14.
+ * Created by Simon Schubert
  */
 public interface FetchedCommandlineFuCommandsInterface {
     /**
-     * @param commandLineFuModels
+     * @param commandLineFuModels list of commands from commandlinefu
      */
     void onFetchedCommandlineFuCommands(ArrayList<CommandLineFuModel> commandLineFuModels);
 }

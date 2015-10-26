@@ -28,7 +28,7 @@ public class CommandsAdapter extends ResourceCursorAdapter {
     {
         String name = cursor.getString(cursor.getColumnIndex(CommandsDBTableModel.COL_NAME));
         TextView tvName = (TextView) view.findViewById(R.id.row_command_child_tv_title);
-        tvName.setText(Utils.highlight(mContext, query, name));
+        tvName.setText(Utils.highlightQueryInsideText(mContext, query, name));
 
         String description = cursor.getString(cursor.getColumnIndex(CommandsDBTableModel.COL_DESCRIPTION));
         TextView tvDescription = (TextView) view.findViewById(R.id.row_command_child_tv_desc);
@@ -41,12 +41,13 @@ public class CommandsAdapter extends ResourceCursorAdapter {
 
     /**
      * Get section icon
+     *
      * @param section
      * @return
      */
     private int getSectionImageResource(int section)
     {
-        switch(section) {
+        switch (section) {
             case CommandsDBTableModel.SCTION_GAMES:
                 return R.drawable.icon_section_game;
             case CommandsDBTableModel.SCTION_SYSTEMADMINANDDEAMON:
@@ -63,6 +64,7 @@ public class CommandsAdapter extends ResourceCursorAdapter {
 
     /**
      * Swaps cursor and save query for search result highlighting
+     *
      * @param c
      * @param query
      */

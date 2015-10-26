@@ -3,7 +3,7 @@ package com.inspiredandroid.linuxcommandbibliotheca.models;
 import java.util.ArrayList;
 
 /**
- * Created by simon on 1/2/15.
+ * Created by Simon Schubert
  */
 public class CommandChildModel {
 

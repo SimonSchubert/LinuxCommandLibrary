@@ -20,6 +20,11 @@ public class BibliothecaFragment extends Fragment {
 
     ScreenSlidePagerAdapter adapter;
 
+    public BibliothecaFragment()
+    {
+
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
@@ -45,6 +50,7 @@ public class BibliothecaFragment extends Fragment {
         // Get total commands count
         CommandsDbHelper mDbHelper = new CommandsDbHelper(getActivity());
         int commandsCount = mDbHelper.getCommandsCount();
+        mDbHelper.close();
 
         // Set PagerTitleStrip titles
         String[] titles = new String[]{String.format(getString(R.string.fragment_bibliotheca_commands), commandsCount),
