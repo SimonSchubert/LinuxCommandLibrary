@@ -7,6 +7,9 @@ import com.inspiredandroid.linuxcommandbibliotheca.R;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+/**
+ * Created by Simon Schubert
+ */
 public class CommandGroupModel implements Serializable {
 
     private int category = 0;

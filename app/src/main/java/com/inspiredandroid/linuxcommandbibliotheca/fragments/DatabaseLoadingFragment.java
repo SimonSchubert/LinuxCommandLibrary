@@ -8,11 +8,13 @@ import android.view.ViewGroup;
 
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 
+/**
+ * Created by Simon Schubert
+ */
 public class DatabaseLoadingFragment extends Fragment {
 
     public DatabaseLoadingFragment()
     {
-        // Required empty public constructor
     }
 
     @Override

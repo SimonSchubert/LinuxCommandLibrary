@@ -19,7 +19,7 @@ import java.text.Normalizer;
 import java.util.ArrayList;
 
 /**
- * Created by simon on 08.09.14.
+ * Created by Simon Schubert
  */
 public class Utils {
 
@@ -88,11 +88,13 @@ public class Utils {
 
     /**
      * Clone string array list
+     *
      * @param dogList
      * @return
      */
-    public static ArrayList<String> cloneList(ArrayList<String> dogList) {
-        if(dogList == null) {
+    public static ArrayList<String> cloneList(ArrayList<String> dogList)
+    {
+        if (dogList == null) {
             return null;
         }
         ArrayList<String> clonedList = new ArrayList<>(dogList.size());
@@ -103,15 +105,16 @@ public class Utils {
     }
 
     /**
-     * Highlight the the appereance of search inside originalText
+     * Highlight the the appearance of search query inside originalText
+     *
      * @param context
-     * @param search
+     * @param query
      * @param originalText
      * @return
      */
-    public static CharSequence highlight(Context context, String search, String originalText)
+    public static CharSequence highlightQueryInsideText(Context context, String query, String originalText)
     {
-        if (search.isEmpty() || originalText.isEmpty()) {
+        if (query.isEmpty() || originalText.isEmpty()) {
             return originalText;
         }
 
@@ -119,21 +122,21 @@ public class Utils {
         // the same thing should have been done for the search text
         String normalizedText = Normalizer.normalize(originalText, Normalizer.Form.NFD).replaceAll("\\p{InCombiningDiacriticalMarks}+", "").toLowerCase();
 
-        int start = normalizedText.indexOf(search);
+        int start = normalizedText.indexOf(query);
         if (start < 0) {
             // not found, nothing to to
             return originalText;
         } else {
-            // highlight each appearance in the original text
+            // highlightQueryInsideText each appearance in the original text
             // while searching in normalized text
             Spannable highlighted = new SpannableString(originalText);
             while (start >= 0) {
                 int spanStart = Math.min(start, originalText.length());
-                int spanEnd = Math.min(start + search.length(), originalText.length());
+                int spanEnd = Math.min(start + query.length(), originalText.length());
 
                 highlighted.setSpan(new ForegroundColorSpan(ContextCompat.getColor(context, R.color.ab_primary_dark)), spanStart, spanEnd, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
-                start = normalizedText.indexOf(search, spanEnd);
+                start = normalizedText.indexOf(query, spanEnd);
             }
 
             return highlighted;

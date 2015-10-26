@@ -1,14 +1,17 @@
 package com.inspiredandroid.linuxcommandbibliotheca.interfaces;
 
-import com.inspiredandroid.linuxcommandbibliotheca.models.CommandLineFuModel;
-
-import java.util.ArrayList;
-
 /**
- * Created by simon on 08.09.14.
+ * Created by Simon Schubert
  */
 public interface CraftDatabaseInterface {
 
+    /**
+     * Successfully created the database
+     */
     void onSuccessCraftingDatabase();
+
+    /**
+     * Failed to create database
+     */
     void onFailedCraftingDatabase();
 }

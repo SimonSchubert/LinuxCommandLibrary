@@ -1,7 +1,7 @@
 package com.inspiredandroid.linuxcommandbibliotheca.models;
 
 /**
- * Created by simon on 2/5/15.
+ * Created by Simon Schubert
  */
 public class CommandsDBTableModel {
 

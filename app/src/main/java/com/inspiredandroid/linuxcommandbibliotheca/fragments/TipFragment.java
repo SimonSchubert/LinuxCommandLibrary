@@ -15,6 +15,10 @@ import com.inspiredandroid.linuxcommandbibliotheca.R;
  */
 public class TipFragment extends Fragment implements View.OnClickListener {
 
+    public TipFragment()
+    {
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
@@ -28,7 +32,7 @@ public class TipFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v)
     {
-        if(v.getId() == R.id.fragment_tips_btn_quiz) {
+        if (v.getId() == R.id.fragment_tips_btn_quiz) {
             startActivity(new Intent(getContext(), QuizActivity.class));
         }
     }

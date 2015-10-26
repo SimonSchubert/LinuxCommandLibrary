@@ -16,6 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.inspiredandroid.linuxcommandbibliotheca.R;
+import com.inspiredandroid.linuxcommandbibliotheca.fragments.dialogs.QuizPreviousResultDialogFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandsDBTableModel;
 import com.inspiredandroid.linuxcommandbibliotheca.sql.CommandsDbHelper;
@@ -54,6 +55,20 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     // list of used question cmmands
     ArrayList<String> usedCommands;
 
+    CommandsDbHelper databaseHelper;
+
+    public QuizFragment()
+    {
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+
+        databaseHelper = new CommandsDbHelper(getContext());
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
@@ -83,8 +98,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
         ivWrong.setVisibility(View.GONE);
         btnInfo = (ImageButton) view.findViewById(R.id.fragment_quiz_btn_info);
 
-        if(savedInstanceState == null)
-        {
+        if (savedInstanceState == null) {
             initQuiz();
             firstRound();
         } else {
@@ -96,7 +110,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
             lastAnswers = savedInstanceState.getStringArrayList("lastAnswers");
             usedCommands = savedInstanceState.getStringArrayList("usedCommands");
 
-            if(answerCounter == maxAnswerCount) {
+            if (answerCounter == maxAnswerCount) {
                 tvQuestion.setVisibility(View.INVISIBLE);
                 llButtons.setVisibility(View.INVISIBLE);
                 llCongratulation.setVisibility(View.VISIBLE);
@@ -153,10 +167,19 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
         }
     }
 
+    @Override
+    public void onDestroy()
+    {
+        super.onDestroy();
+
+        databaseHelper.close();
+    }
+
     /**
      * Initialize/reset variables
      */
-    private void initQuiz() {
+    private void initQuiz()
+    {
         usedCommands = new ArrayList<>();
         currentCorrectAnswerId = -1;
         answerCounter = -1;
@@ -167,7 +190,8 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     /**
      * The first round has a different animation cycle
      */
-    private void firstRound() {
+    private void firstRound()
+    {
         nextRound();
 
         fillQuestionTextView();
@@ -267,7 +291,8 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     /**
      * Animate results
      */
-    private void startFinishAnimation() {
+    private void startFinishAnimation()
+    {
         llCongratulation.setVisibility(View.VISIBLE);
 
         Animation scaleAnimation = AnimationUtils.loadAnimation(getContext(), R.anim.scale_up);
@@ -295,7 +320,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
      */
     private void updateNextRoundDataAndAnimate()
     {
-        if(answerCounter == maxAnswerCount) {
+        if (answerCounter == maxAnswerCount) {
 
             fillResultView();
             startFinishAnimation();
@@ -311,8 +336,8 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
 
     private void fillResultView()
     {
-        float percentage = (float)correctAnswerCounter / (float)maxAnswerCount * 100f;
-        tvPercentage.setText(String.format(getString(R.string.fragment_quiz_result), (int)percentage));
+        float percentage = (float) correctAnswerCounter / (float) maxAnswerCount * 100f;
+        tvPercentage.setText(String.format(getString(R.string.fragment_quiz_result), (int) percentage));
 
         tvCounter.setVisibility(View.GONE);
     }
@@ -351,13 +376,13 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
 
     /**
      * Get answers from database
+     *
      * @param count size of string array list size
      * @return
      */
     private ArrayList<String> getAnswers(int count)
     {
-        CommandsDbHelper helper = new CommandsDbHelper(getContext());
-        Cursor c = helper.getQuiz(20, usedCommands);
+        Cursor c = databaseHelper.getQuiz(20, usedCommands);
 
         ArrayList<String> commands = new ArrayList<>();
         while (c.moveToNext()) {
@@ -380,7 +405,8 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     /**
      * Set answers button text
      */
-    private void fillAnswerButtonViews() {
+    private void fillAnswerButtonViews()
+    {
         for (int i = 0; i < currentAnswers.size(); i++) {
             String command = currentAnswers.get(i);
             btnAnswers.get(i).setText(command);
@@ -393,18 +419,18 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     private void fillQuestionTextView()
     {
         String randomQuestionCommand = currentAnswers.get(currentCorrectAnswerId);
-        tvQuestion.setText(String.format(getString(R.string.fragment_quiz_question),getQuestionText(randomQuestionCommand)));
+        tvQuestion.setText(String.format(getString(R.string.fragment_quiz_question), getQuestionText(randomQuestionCommand)));
     }
 
     /**
      * Fetch question description by cmd name from database
+     *
      * @param command
      * @return
      */
     private String getQuestionText(String command)
     {
-        CommandsDbHelper helper = new CommandsDbHelper(getContext());
-        Cursor c2 = helper.getQuizCommandFromName(command);
+        Cursor c2 = databaseHelper.getQuizCommandFromName(command);
         c2.moveToFirst();
 
         String question = c2.getString(c2.getColumnIndex(CommandsDBTableModel.COL_DESCRIPTION));

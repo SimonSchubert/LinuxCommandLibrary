@@ -17,6 +17,13 @@ import android.widget.TextView;
 import com.inspiredandroid.linuxcommandbibliotheca.CommandManActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 
+/**
+ * Created by Simon Schubert
+ * <p>
+ * This View makes it very easy to highlightQueryInsideText defined commands in an normal textview. Define the
+ * commands which should be highlighted in an string array and link it in the layout resource as
+ * "command".
+ */
 public class CodeTextView extends TextView {
 
     public CodeTextView(Context context, AttributeSet attrs)
@@ -28,14 +35,22 @@ public class CodeTextView extends TextView {
         String[] commands = context.getResources().getStringArray(resID);
         ta.recycle();
 
-        if(isInEditMode())
+        if (isInEditMode()) {
             return;
+        }
 
         setText(createSpannable(getText().toString(), commands));
         setMovementMethod(LinkMovementMethod.getInstance());
         setHighlightColor(Color.TRANSPARENT);
     }
 
+    /**
+     * Highlights commands of the text and make them clickable
+     *
+     * @param text     spannable content
+     * @param commands list of commands to highlightQueryInsideText
+     * @return
+     */
     private SpannableString createSpannable(String text, String[] commands)
     {
         SpannableString ss = new SpannableString(text);
@@ -43,7 +58,7 @@ public class CodeTextView extends TextView {
         for (final String command : commands) {
 
             int indexStart = 0;
-            while(text.indexOf(command, indexStart) != -1) {
+            while (text.indexOf(command, indexStart) != -1) {
 
                 indexStart = text.indexOf(command, indexStart);
                 int indexEnd = indexStart + command.length();
@@ -70,6 +85,11 @@ public class CodeTextView extends TextView {
         return ss;
     }
 
+    /**
+     * Show manual page
+     *
+     * @param command
+     */
     private void startCommandManActivity(String command)
     {
         Intent intent = new Intent(getContext(), CommandManActivity.class);
