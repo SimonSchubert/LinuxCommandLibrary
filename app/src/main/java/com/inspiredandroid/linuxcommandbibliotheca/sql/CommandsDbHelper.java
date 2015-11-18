@@ -10,6 +10,7 @@ import java.util.ArrayList;
 
 /**
  * Created by Simon Schubert
+ * TODO: replace with realm(?)
  */
 public class CommandsDbHelper extends SQLiteAssetHelper {
 

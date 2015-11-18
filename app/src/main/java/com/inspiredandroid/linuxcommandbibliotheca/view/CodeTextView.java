@@ -19,7 +19,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.R;
 
 /**
  * Created by Simon Schubert
- * <p>
+ * <p/>
  * This View makes it very easy to highlightQueryInsideText defined commands in an normal textview. Define the
  * commands which should be highlighted in an string array and link it in the layout resource as
  * "command".

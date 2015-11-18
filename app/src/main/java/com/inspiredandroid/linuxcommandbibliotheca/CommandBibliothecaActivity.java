@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
 
 import com.inspiredandroid.linuxcommandbibliotheca.asnytasks.LoadDatabaseAsyncTask;
@@ -14,7 +15,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.interfaces.CraftDatabaseInter
 
 /**
  * Created by Simon Schubert
- * <p>
+ * <p/>
  * This Activity just holds the BibliothecaFragment
  */
 public class CommandBibliothecaActivity extends BaseActivity implements CraftDatabaseInterface {
@@ -29,6 +30,9 @@ public class CommandBibliothecaActivity extends BaseActivity implements CraftDat
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_commands);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         showLoadingFragment();
 

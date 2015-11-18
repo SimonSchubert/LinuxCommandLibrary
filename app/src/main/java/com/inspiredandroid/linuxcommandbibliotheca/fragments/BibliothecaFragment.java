@@ -1,6 +1,7 @@
 package com.inspiredandroid.linuxcommandbibliotheca.fragments;
 
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -19,6 +20,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.sql.CommandsDbHelper;
 public class BibliothecaFragment extends Fragment {
 
     ScreenSlidePagerAdapter adapter;
+    ViewPager mPager;
 
     public BibliothecaFragment()
     {
@@ -38,27 +40,48 @@ public class BibliothecaFragment extends Fragment {
     {
         View view = inflater.inflate(R.layout.fragment_bibliotheca, container, false);
 
+        // Get total commands count
+        CommandsDbHelper mDbHelper = new CommandsDbHelper(getActivity());
+        int commandsCount = mDbHelper.getCommandsCount();
+        mDbHelper.close();
+
+        TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tab_layout);
+        tabLayout.addTab(tabLayout.newTab().setText(String.format(getString(R.string.fragment_bibliotheca_commands), commandsCount)));
+        tabLayout.addTab(tabLayout.newTab().setText(String.format(getString(R.string.fragment_bibliotheca_scripts), 30)));
+        tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.tip)));
+        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+
         // Init viewpager
-        ViewPager mPager = (ViewPager) view.findViewById(R.id.fragment_bibliotheca_pager);
+        mPager = (ViewPager) view.findViewById(R.id.fragment_bibliotheca_pager);
         mPager.setAdapter(adapter);
+        mPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab)
+            {
+                mPager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab)
+            {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab)
+            {
+
+            }
+        });
 
         return view;
     }
 
     private void createAdapter()
     {
-        // Get total commands count
-        CommandsDbHelper mDbHelper = new CommandsDbHelper(getActivity());
-        int commandsCount = mDbHelper.getCommandsCount();
-        mDbHelper.close();
-
-        // Set PagerTitleStrip titles
-        String[] titles = new String[]{String.format(getString(R.string.fragment_bibliotheca_commands), commandsCount),
-                String.format(getString(R.string.fragment_bibliotheca_scripts), 30),
-                getString(R.string.tip)};
-
         // Init viewpager adapter
-        adapter = new ScreenSlidePagerAdapter(getChildFragmentManager(), titles);
+        adapter = new ScreenSlidePagerAdapter(getChildFragmentManager());
     }
 
     /**
@@ -66,13 +89,9 @@ public class BibliothecaFragment extends Fragment {
      */
     private class ScreenSlidePagerAdapter extends FragmentPagerAdapter {
 
-        // Titles for PagerTitleStrip
-        private String[] titles;
-
-        public ScreenSlidePagerAdapter(FragmentManager fm, String[] titles)
+        public ScreenSlidePagerAdapter(FragmentManager fm)
         {
             super(fm);
-            this.titles = titles;
         }
 
         @Override
@@ -91,19 +110,13 @@ public class BibliothecaFragment extends Fragment {
         @Override
         public int getCount()
         {
-            return titles.length;
+            return 3;
         }
 
         @Override
         public int getItemPosition(Object object)
         {
             return PagerAdapter.POSITION_NONE;
-        }
-
-        @Override
-        public CharSequence getPageTitle(int position)
-        {
-            return titles[position];
         }
     }
 }
