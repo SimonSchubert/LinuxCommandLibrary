@@ -7,12 +7,14 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.QuizFragment;
 
 /**
  * Created by Simon Schubert
- * <p>
+ * <p/>
  * This Activity just holds the CommandManFragment
  */
 public class QuizActivity extends BaseActivity {
@@ -21,7 +23,14 @@ public class QuizActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_command_man);
+        setContentView(R.layout.activity_quiz);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        assert getSupportActionBar() != null;
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         if (savedInstanceState == null) {
             Fragment fragment = new QuizFragment();
@@ -40,6 +49,20 @@ public class QuizActivity extends BaseActivity {
         showQuitDialog();
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                this.finish();
+        }
+
+        return (super.onOptionsItemSelected(item));
+    }
+
+    /**
+     *
+     */
     private void showQuitDialog()
     {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);

@@ -1,38 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#424242">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#424242"
+              android:orientation="vertical">
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnFilter"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:id="@+id/btnFilter"
             android:layout_gravity="end"
-            android:src="@drawable/icon_filter"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_filter"/>
     </LinearLayout>
 
     <ExpandableListView
+        android:id="@+id/fragment_scripts_elv"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:id="@+id/fragment_scripts_elv"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="1" />
+        android:layout_weight="1"/>
 
     <ImageView
+        android:id="@+id/fragment_scipts_iv_ad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:maxWidth="300dp"
-        android:id="@+id/fragment_scipts_iv_ad"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/add"
-        android:adjustViewBounds="true"/>
+        android:adjustViewBounds="true"
+        android:maxWidth="300dp"
+        android:src="@drawable/add"/>
 
 </LinearLayout>

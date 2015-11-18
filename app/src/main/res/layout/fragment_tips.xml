@@ -11,27 +11,27 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/fragment_tips_do_the_test"
-            android:id="@+id/textView2"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="22dp"/>
+            android:layout_marginTop="22dp"
+            android:text="@string/fragment_tips_do_the_test"/>
 
         <Button
+            android:id="@+id/fragment_tips_btn_quiz"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/fragment_tips_start_quiz"
-            android:id="@+id/fragment_tips_btn_quiz"
-            android:layout_gravity="center_horizontal"/>
+            android:layout_gravity="center_horizontal"
+            android:text="@string/fragment_tips_start_quiz"/>
 
         <TextView
             android:id="@+id/textView"
             style="@style/TextMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Clear the terminal screen"
-            android:layout_marginTop="22dp"/>
+            android:layout_marginTop="22dp"
+            android:text="Clear the terminal screen"/>
 
         <TextView
             style="@style/TextNormal"
@@ -40,11 +40,11 @@
             android:text="Use the clear command or press Ctrl+L on your keyboard."/>
 
         <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
-            custom:commands="@array/fragment_tips_clear_code_array"
             style="@style/TextCode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/fragment_tips_clear_code"/>
+            android:text="@string/fragment_tips_clear_code"
+            custom:commands="@array/fragment_tips_clear_code_array"/>
 
         <TextView
             style="@style/TextMedium"
@@ -59,11 +59,11 @@
             android:text="Use the history command or open the history file in vim $HISTFILE or any other text editor."/>
 
         <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
-            custom:commands="@array/fragment_tips_history_code_array"
             style="@style/TextCode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/fragment_tips_history_code"/>
+            android:text="@string/fragment_tips_history_code"
+            custom:commands="@array/fragment_tips_history_code_array"/>
 
         <TextView
             style="@style/TextMedium"
@@ -492,12 +492,12 @@
                     android:layout_column="1">
 
                     <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
-                        custom:commands="@array/fragment_tips_pipe_code_array"
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
-                        android:text="@string/fragment_tips_pipe_code"/>
+                        android:text="@string/fragment_tips_pipe_code"
+                        custom:commands="@array/fragment_tips_pipe_code_array"/>
                 </LinearLayout>
             </TableRow>
 
@@ -526,12 +526,12 @@
                     android:layout_column="1">
 
                     <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
-                        custom:commands="@array/fragment_tips_background_code_array"
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
-                        android:text="@string/fragment_tips_background_code"/>
+                        android:text="@string/fragment_tips_background_code"
+                        custom:commands="@array/fragment_tips_background_code_array"/>
 
                 </LinearLayout>
             </TableRow>

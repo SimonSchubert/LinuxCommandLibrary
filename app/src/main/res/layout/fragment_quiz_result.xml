@@ -4,105 +4,105 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-<LinearLayout
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content">
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingBottom="12dp"
-        android:paddingLeft="12dp"
-        android:paddingRight="12dp"
-        android:paddingTop="12dp">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingBottom="12dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="12dp">
 
-            <TextView
-                android:id="@+id/fragment_quiz_result_tv_question"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"
                 android:gravity="center"
-                android:text="New Text"
-                android:textSize="22sp"/>
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/fragment_quiz_result_tv_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="New Text"
+                    android:textSize="22sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/fragment_quiz_result_btn_answer1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18sp"
+                    android:text="New Button"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:id="@+id/fragment_quiz_result_tv_answer1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="New Text"/>
+
+                <Button
+                    android:id="@+id/fragment_quiz_result_btn_answer2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="New Button"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:id="@+id/fragment_quiz_result_tv_answer2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="New Text"/>
+
+                <Button
+                    android:id="@+id/fragment_quiz_result_btn_answer3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="New Button"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:id="@+id/fragment_quiz_result_tv_answer3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="New Text"/>
+
+                <Button
+                    android:id="@+id/fragment_quiz_result_btn_answer4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="New Button"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:id="@+id/fragment_quiz_result_tv_answer4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=""/>
+            </LinearLayout>
+
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/fragment_quiz_result_btn_answer1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="18sp"
-                android:text="New Button"
-                android:textColor="@android:color/white"/>
-
-            <TextView
-                android:id="@+id/fragment_quiz_result_tv_answer1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="New Text"/>
-
-            <Button
-                android:id="@+id/fragment_quiz_result_btn_answer2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
-                android:text="New Button"
-                android:textColor="@android:color/white"/>
-
-            <TextView
-                android:id="@+id/fragment_quiz_result_tv_answer2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="New Text"/>
-
-            <Button
-                android:id="@+id/fragment_quiz_result_btn_answer3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
-                android:text="New Button"
-                android:textColor="@android:color/white"/>
-
-            <TextView
-                android:id="@+id/fragment_quiz_result_tv_answer3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="New Text"/>
-
-            <Button
-                android:id="@+id/fragment_quiz_result_btn_answer4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
-                android:text="New Button"
-                android:textColor="@android:color/white"/>
-
-            <TextView
-                android:id="@+id/fragment_quiz_result_tv_answer4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text=""/>
-        </LinearLayout>
-
     </LinearLayout>
-</LinearLayout>
-    </ScrollView>
+</ScrollView>
