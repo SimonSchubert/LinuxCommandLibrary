@@ -28,7 +28,7 @@ public class QuizPreviousResultDialogFragment extends DialogFragment implements 
     private final static String EXTRA_KEY_ANSWERS = "EXTRA_KEY_ANSWERS";
     private final static String EXTRA_KEY_CORRECT_ANSWER_ID = "EXTRA_KEY_CORRECT_ANSWER_ID";
 
-    // list of answers
+    // list of commands
     ArrayList<String> answers;
     // correct answer id
     int correctAnswerId;

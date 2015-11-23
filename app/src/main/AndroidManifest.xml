@@ -30,6 +30,15 @@
 
             <meta-data android:name="android.app.searchable"
                        android:resource="@xml/searchable" />
+            <intent-filter android:label="View Linux tips">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "http://recipe-app.com/recipes" -->
+                <data android:scheme="http"
+                      android:host="linux.schubert-simon.de"
+                      android:pathPrefix="/tips" />
+            </intent-filter>
         </activity>
 
         <activity
@@ -50,8 +59,12 @@
         <activity
             android:name=".QuizActivity"
             android:theme="@style/LibAppTheme"
-            android:label="@string/quiz">
-        </activity>
+            android:label="@string/quiz" />
+
+        <activity
+            android:name=".AboutActivity"
+            android:theme="@style/LibAppTheme"
+            android:label="@string/about" />
 
     </application>
 

@@ -1,8 +1,6 @@
 package com.inspiredandroid.linuxcommandbibliotheca.fragments;
 
-import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -26,10 +24,11 @@ import android.widget.ImageButton;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.inspiredandroid.linuxcommandbibliotheca.CommandBibliothecaActivity;
+import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.ScriptsExpandableListAdapter;
 import com.inspiredandroid.linuxcommandbibliotheca.asnytasks.FetchCommandlineFuCommandsAsyncTask;
+import com.inspiredandroid.linuxcommandbibliotheca.fragments.dialogs.ScriptDetailDialogFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.FetchedCommandlineFuCommandsInterface;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandChildModel;
@@ -110,7 +109,7 @@ public class ScriptsFragment extends Fragment implements View.OnClickListener, F
         if (view.getId() == R.id.btnFilter) {
             showFilterDialog();
         } else if (view.getId() == R.id.fragment_scipts_iv_ad) {
-            handleAddClick();
+            handleAdClick();
         }
     }
 
@@ -163,7 +162,23 @@ public class ScriptsFragment extends Fragment implements View.OnClickListener, F
         }
     }
 
-    private void handleAddClick()
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        if (item.getItemId() == R.id.about) {
+            startAboutFragment();
+            return true;
+        }
+        return false;
+    }
+
+    private void startAboutFragment()
+    {
+        Intent intent = new Intent(getContext(), AboutActivity.class);
+        startActivity(intent);
+    }
+
+    private void handleAdClick()
     {
         final String appPackageName = Utils.PACKAGE_LINUXREMOTE;
         try {
@@ -224,23 +239,6 @@ public class ScriptsFragment extends Fragment implements View.OnClickListener, F
         }
 
         return new ScriptsExpandableListAdapter(getActivity(), group, childs);
-    }
-
-    private void handleCommandClick(CommandGroupModel commandGroupModel, int position)
-    {
-        if (getActivity().getCallingActivity() != null) {
-            Intent data = new Intent();
-            data.putExtra(CommandBibliothecaActivity.EXTRA_COMMAND, commandGroupModel.getCommands().get(position).getCommand());
-            data.putExtra(CommandBibliothecaActivity.EXTRA_ICON, commandGroupModel.getIconBase64());
-
-            returnResult(data);
-        } else {
-            Intent i = new Intent(Intent.ACTION_SEND);
-            i.setType("text/plain");
-            i.putExtra(android.content.Intent.EXTRA_TEXT, commandGroupModel.getCommands().get(position).getCommand());
-
-            startActivity(i);
-        }
     }
 
     /**
@@ -339,22 +337,10 @@ public class ScriptsFragment extends Fragment implements View.OnClickListener, F
         isSearching = true;
     }
 
-    /**
-     *
-     */
-    private void returnResult(Intent data)
-    {
-        Activity activity = getActivity();
-        if (activity != null) {
-            activity.setResult(Activity.RESULT_OK, data);
-            activity.finish();
-        }
-    }
-
     @Override
     public void onFetchedCommandlineFuCommands(ArrayList<CommandLineFuModel> commandLineFuModels)
     {
-        ArrayList<CommandGroupModel> commands = new ArrayList<CommandGroupModel>();
+        ArrayList<CommandGroupModel> commands = new ArrayList<>();
         // convert commandlinefu json models to linux command bibliotheca
         for (CommandLineFuModel command : commandLineFuModels) {
             commands.add(new CommandGroupModel(command.getCommand(), command.getSummary()));
@@ -366,35 +352,18 @@ public class ScriptsFragment extends Fragment implements View.OnClickListener, F
     @Override
     public boolean onChildClick(ExpandableListView parent, View view, int groupPosition, int childPosition, long id)
     {
-        final CommandGroupModel commandGroupModel = (CommandGroupModel) view.getTag(R.id.ID);
-        Context context = view.getContext();
+        CommandGroupModel commandGroupModel = (CommandGroupModel) view.getTag(R.id.ID);
 
-        String iconBase64 = Utils.getBase64StringByResourceName(context, commandGroupModel.getIconResource());
+        String iconBase64 = Utils.getBase64StringByResourceName(getContext(), commandGroupModel.getIconResource());
         commandGroupModel.setIconBase64(iconBase64);
 
-        int size = commandGroupModel.getCommands().size();
-        if (size > 1) {
-            // returnResult(data);
-            CharSequence[] commands = new CharSequence[size];
-            for (int x = 0; x < size; x++) {
-                CommandChildModel child = commandGroupModel.getCommands().get(x);
-                commands[x] = child.getCommand();
-            }
-
-            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-            builder.setTitle("Choose command")
-                    .setItems(commands, new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which)
-                        {
-
-                            handleCommandClick(commandGroupModel, which);
-                        }
-                    });
-            Dialog dialog = builder.create();
-            dialog.show();
-        } else {
-            handleCommandClick(commandGroupModel, 0);
+        ArrayList<String> commands = new ArrayList<>();
+        for (CommandChildModel commandChild : commandGroupModel.getCommands()) {
+            commands.add(commandChild.getCommand());
         }
+
+        ScriptDetailDialogFragment fragment = ScriptDetailDialogFragment.getInstance(commands, commandGroupModel.getDesc(getContext()));
+        fragment.show(getChildFragmentManager(), ScriptDetailDialogFragment.class.getName());
 
         return true;
     }

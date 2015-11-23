@@ -21,6 +21,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.CommandManActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.CommandsAdapter;
@@ -123,6 +124,16 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
     }
 
     @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        if (item.getItemId() == R.id.about) {
+            startAboutFragment();
+            return true;
+        }
+        return false;
+    }
+
+    @Override
     public void onDestroy()
     {
         super.onDestroy();
@@ -132,10 +143,16 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
 
     private void startCommandManActivity(long id)
     {
-        Intent intent = new Intent(getActivity(), CommandManActivity.class);
+        Intent intent = new Intent(getContext(), CommandManActivity.class);
         Bundle b = new Bundle();
         b.putLong(CommandManActivity.EXTRA_COMMAND_ID, id);
         intent.putExtras(b);
+        startActivity(intent);
+    }
+
+    private void startAboutFragment()
+    {
+        Intent intent = new Intent(getContext(), AboutActivity.class);
         startActivity(intent);
     }
 

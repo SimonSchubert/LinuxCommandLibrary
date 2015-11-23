@@ -65,6 +65,11 @@
         <item>clear</item>
     </string-array>
 
+    <string name="fragment_tips_reset_code">" $ reset "</string>
+    <string-array name="fragment_tips_reset_code_array">
+        <item>reset</item>
+    </string-array>
+
     <string name="fragment_tips_history_code">" $ history "</string>
     <string-array name="fragment_tips_history_code_array">
         <item>history</item>
@@ -172,5 +177,7 @@
 
     <string name="fragment_datanase_loading_craftin_database">Crafting Database</string>
     <string name="fragment_datanase_loading_failed_craftin_database">Couldn\'t craft database</string>
+    <string name="about">About</string>
+    <string name="fragment_scriptdescription_share_command">share command</string>
 
 </resources>

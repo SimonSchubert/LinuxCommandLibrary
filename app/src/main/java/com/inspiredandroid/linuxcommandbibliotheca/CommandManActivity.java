@@ -27,6 +27,7 @@ public class CommandManActivity extends BaseActivity implements CraftDatabaseInt
 
     public final static String EXTRA_COMMAND_ID = "EXTRA_COMMAND_ID"; //NON-NLS
     public final static String EXTRA_COMMAND_NAME = "EXTRA_COMMAND_NAME"; //NON-NLS
+    public final static String EXTRA_COMMAND_CATEGORY = "EXTRA_COMMAND_CATEGORY"; //NON-NLS
 
     LoadDatabaseAsyncTask asyncTask;
 
@@ -75,8 +76,13 @@ public class CommandManActivity extends BaseActivity implements CraftDatabaseInt
         Intent intent = getIntent();
 
         Bundle b = intent.getExtras();
-        long id = b.getLong(EXTRA_COMMAND_ID, -1);
-        String name = b.getString(EXTRA_COMMAND_NAME);
+        long id = -1;
+        String name = null;
+
+        if (b != null) {
+            id = b.getLong(EXTRA_COMMAND_ID, -1);
+            name = b.getString(EXTRA_COMMAND_NAME);
+        }
 
         if (id != -1) {
             // id is set
@@ -138,14 +144,15 @@ public class CommandManActivity extends BaseActivity implements CraftDatabaseInt
         c.moveToFirst();
         // Get command name
         String name = c.getString(c.getColumnIndex(CommandsDBTableModel.COL_NAME)).toUpperCase();
+        int category = c.getInt(c.getColumnIndex(CommandsDBTableModel.COL_CATEGORY));
         c.close();
 
         mDbHelper.close();
 
-        showManFragment(name, id);
+        showManFragment(name, id, category);
     }
 
-    private void showManFragment(String name, long id)
+    private void showManFragment(String name, long id, int category)
     {
         // Set command name as actionbar title
         setTitle(name);
@@ -155,6 +162,8 @@ public class CommandManActivity extends BaseActivity implements CraftDatabaseInt
         // Add unique command ID for fragment
         Bundle bundle = new Bundle();
         bundle.putLong(EXTRA_COMMAND_ID, id);
+        bundle.putString(EXTRA_COMMAND_NAME, name);
+        bundle.putInt(EXTRA_COMMAND_CATEGORY, category);
         fragment.setArguments(bundle);
 
         FragmentManager fragmentManager = getSupportFragmentManager();

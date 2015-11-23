@@ -8,7 +8,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
 
         <TextView
             android:id="@+id/textView2"
@@ -31,13 +32,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="22dp"
-            android:text="Clear the terminal screen"/>
+            android:text="Clear and reset the terminal"/>
 
         <TextView
             style="@style/TextNormal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Use the clear command or press Ctrl+L on your keyboard."/>
+            android:text="To clear the terminal use the command below or press Ctrl+L on your keyboard."/>
 
         <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
             style="@style/TextCode"
@@ -45,6 +46,20 @@
             android:layout_height="wrap_content"
             android:text="@string/fragment_tips_clear_code"
             custom:commands="@array/fragment_tips_clear_code_array"/>
+
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/TextNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="If you screw up the screen by e.g. accidentally reading a binary file with with cat or less you might reinitialisation the terminal with the reset command."/>
+
+        <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+            style="@style/TextCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_tips_reset_code"
+            custom:commands="@array/fragment_tips_reset_code_array"/>
 
         <TextView
             style="@style/TextMedium"
@@ -105,7 +120,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="\"
+                    android:text="\\"
                     android:textStyle="bold"/>
 
                 <TextView
@@ -478,7 +493,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Pipes allow you to send the output of a command to another command. "
+                    android:text="Pipes allow you to send the output of a command to another command."
                     />
             </TableRow>
 
@@ -747,7 +762,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="turns the line into a comment; the line is not processed in any way."/>
+                    android:text="Turns the line into a comment; the line is not processed in any way."/>
             </TableRow>
 
             <TableRow
@@ -811,7 +826,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="send output to file (overwriting and destroying whatever is in the file already)."/>
+                    android:text="send output to file (overwriting and destroying whatever is in the file already)"/>
             </TableRow>
 
 
@@ -847,7 +862,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="append output to file."/>
+                    android:text="append output to file"/>
             </TableRow>
 
             <TableRow
@@ -882,7 +897,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="take input from file."/>
+                    android:text="take input from file"/>
             </TableRow>
 
             <TableRow

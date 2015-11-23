@@ -29,17 +29,6 @@
                 android:text=""
                 android:textSize="18sp"/>
 
-            <TextView
-                android:id="@+id/fragment_quiz_tv_counter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="false"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:background="@drawable/score_corner"
-                android:text=""
-                android:textSize="32sp"/>
-
             <ImageButton
                 android:id="@+id/fragment_quiz_btn_info"
                 android:layout_width="60dp"
@@ -55,68 +44,61 @@
 
         </RelativeLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:id="@+id/fragment_quiz_rl_buttons"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.5"
             android:gravity="center_horizontal"
-            android:orientation="vertical">
+            >
 
-            <RelativeLayout
+            <Button
+                android:id="@+id/fragment_quiz_btn_answer1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="false"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="3dp"
+                android:minWidth="115dp"
+                android:text=""/>
 
-                <Button
-                    android:id="@+id/fragment_quiz_btn_answer1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="false"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="false"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="3dp"
-                    android:layout_marginRight="3dp"
-                    android:minWidth="115dp"
-                    android:text=""/>
+            <Button
+                android:id="@+id/fragment_quiz_btn_answer2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="false"
+                android:layout_marginLeft="3dp"
+                android:layout_toEndOf="@+id/fragment_quiz_btn_answer1"
+                android:layout_toRightOf="@+id/fragment_quiz_btn_answer1"
+                android:minWidth="115dp"
+                android:text=""/>
 
-                <Button
-                    android:id="@+id/fragment_quiz_btn_answer2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="false"
-                    android:layout_marginLeft="3dp"
-                    android:layout_toEndOf="@+id/fragment_quiz_btn_answer1"
-                    android:layout_toRightOf="@+id/fragment_quiz_btn_answer1"
-                    android:minWidth="115dp"
-                    android:text=""/>
+            <Button
+                android:id="@+id/fragment_quiz_btn_answer3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/fragment_quiz_btn_answer1"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="3dp"
+                android:minWidth="115dp"
+                android:text=""/>
 
-                <Button
-                    android:id="@+id/fragment_quiz_btn_answer3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="false"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/fragment_quiz_btn_answer1"
-                    android:layout_marginRight="3dp"
-                    android:layout_marginTop="3dp"
-                    android:minWidth="115dp"
-                    android:text=""/>
-
-                <Button
-                    android:id="@+id/fragment_quiz_btn_answer4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/fragment_quiz_btn_answer3"
-                    android:layout_marginLeft="3dp"
-                    android:layout_toEndOf="@+id/fragment_quiz_btn_answer3"
-                    android:layout_toRightOf="@+id/fragment_quiz_btn_answer3"
-                    android:minWidth="115dp"
-                    android:text=""/>
-            </RelativeLayout>
-        </LinearLayout>
+            <Button
+                android:id="@+id/fragment_quiz_btn_answer4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/fragment_quiz_btn_answer3"
+                android:layout_marginLeft="3dp"
+                android:layout_toEndOf="@+id/fragment_quiz_btn_answer3"
+                android:layout_toRightOf="@+id/fragment_quiz_btn_answer3"
+                android:minWidth="115dp"
+                android:text=""/>
+        </RelativeLayout>
 
     </LinearLayout>
 

@@ -4,6 +4,12 @@
       tools:context=".MainActivity">
 
     <item
+        android:id="@+id/about"
+        android:icon="@android:drawable/ic_dialog_info"
+        android:title="@string/about"
+        />
+
+    <item
         android:id="@+id/search"
         android:hint="@string/search_for_command"
         android:icon="@android:drawable/ic_menu_search"
