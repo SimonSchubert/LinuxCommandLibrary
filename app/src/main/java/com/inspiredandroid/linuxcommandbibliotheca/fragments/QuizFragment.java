@@ -13,8 +13,10 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.inspiredandroid.linuxcommandbibliotheca.QuizActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.dialogs.QuizPreviousResultDialogFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
@@ -30,12 +32,11 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
 
     // views
     TextView tvQuestion;
-    TextView tvCounter;
     TextView tvPercentage;
     ImageView ivCorrect;
     ImageView ivWrong;
     ImageButton btnInfo;
-    LinearLayout llButtons;
+    RelativeLayout rlButtons;
     LinearLayout llCongratulation;
     ArrayList<TextView> btnAnswers = new ArrayList<>();
 
@@ -75,9 +76,8 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
         View view = inflater.inflate(R.layout.fragment_quiz, container, false);
 
         tvQuestion = (TextView) view.findViewById(R.id.fragment_quiz_tv_question);
-        llButtons = (LinearLayout) view.findViewById(R.id.fragment_quiz_rl_buttons);
+        rlButtons = (RelativeLayout) view.findViewById(R.id.fragment_quiz_rl_buttons);
         llCongratulation = (LinearLayout) view.findViewById(R.id.fragment_quiz_ll_congratulation);
-        tvCounter = (TextView) view.findViewById(R.id.fragment_quiz_tv_counter);
         tvPercentage = (TextView) view.findViewById(R.id.fragment_quiz_tv_percentage);
 
         int[] ANSWERS = new int[]{R.id.fragment_quiz_btn_answer1,
@@ -112,7 +112,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
 
             if (answerCounter == maxAnswerCount) {
                 tvQuestion.setVisibility(View.INVISIBLE);
-                llButtons.setVisibility(View.INVISIBLE);
+                rlButtons.setVisibility(View.INVISIBLE);
                 llCongratulation.setVisibility(View.VISIBLE);
                 fillResultView();
             } else {
@@ -184,7 +184,6 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
         currentCorrectAnswerId = -1;
         answerCounter = -1;
         correctAnswerCounter = 0;
-        tvCounter.setVisibility(View.VISIBLE);
     }
 
     /**
@@ -198,9 +197,9 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
         fillAnswerButtonViews();
         updateCounter();
 
-        llButtons.setVisibility(View.VISIBLE);
+        rlButtons.setVisibility(View.VISIBLE);
         tvQuestion.setVisibility(View.VISIBLE);
-        llButtons.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.from_left_to_center));
+        rlButtons.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.from_left_to_center));
         tvQuestion.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.from_right_to_center));
     }
 
@@ -211,7 +210,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     {
         FragmentManager fragmentManager = getChildFragmentManager();
         QuizPreviousResultDialogFragment newFragment = QuizPreviousResultDialogFragment.getInstance(lastAnswers, lastCorrectAnswerId);
-        newFragment.show(fragmentManager, "dialog");
+        newFragment.show(fragmentManager, QuizPreviousResultDialogFragment.class.getName());
     }
 
     /**
@@ -330,7 +329,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
             updateCounter();
 
             tvQuestion.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.from_right_to_center));
-            llButtons.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.from_left_to_center));
+            rlButtons.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.from_left_to_center));
         }
     }
 
@@ -338,13 +337,11 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     {
         float percentage = (float) correctAnswerCounter / (float) maxAnswerCount * 100f;
         tvPercentage.setText(String.format(getString(R.string.fragment_quiz_result), (int) percentage));
-
-        tvCounter.setVisibility(View.GONE);
     }
 
     private void updateCounter()
     {
-        tvCounter.setText(String.format(getString(R.string.fragment_quiz_counter), (answerCounter + 1), maxAnswerCount));
+        ((QuizActivity) getActivity()).tvCounter.setText(String.format(getString(R.string.fragment_quiz_counter), (answerCounter + 1), maxAnswerCount));
     }
 
     /**
@@ -445,7 +442,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
      */
     private void startCurtainAnimations()
     {
-        llButtons.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.from_center_to_bottom));
+        rlButtons.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.from_center_to_bottom));
         tvQuestion.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.from_center_to_top));
     }
 }

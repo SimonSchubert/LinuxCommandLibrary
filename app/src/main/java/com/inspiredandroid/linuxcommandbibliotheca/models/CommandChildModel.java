@@ -18,7 +18,7 @@ public class CommandChildModel {
     public ArrayList<CommandCompatibilityModel> getCompatibility()
     {
         if (compatibility == null) {
-            return new ArrayList<CommandCompatibilityModel>();
+            return new ArrayList<>();
         }
         return compatibility;
     }

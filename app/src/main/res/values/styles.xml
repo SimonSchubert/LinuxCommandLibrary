@@ -33,4 +33,16 @@
         <item name="android:layout_marginLeft">8dp</item>
     </style>
 
+    <style name="LicenseMedium">
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+    </style>
+
+    <style name="LicenseLarge">
+        <item name="android:textSize">22sp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+    </style>
+
 </resources>

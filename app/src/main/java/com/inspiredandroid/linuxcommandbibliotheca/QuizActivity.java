@@ -9,6 +9,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.QuizFragment;
 
@@ -19,6 +20,8 @@ import com.inspiredandroid.linuxcommandbibliotheca.fragments.QuizFragment;
  */
 public class QuizActivity extends BaseActivity {
 
+    public TextView tvCounter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -27,6 +30,8 @@ public class QuizActivity extends BaseActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        tvCounter = (TextView) findViewById(R.id.activity_quiz_tv_counter);
 
         assert getSupportActionBar() != null;
 
@@ -81,4 +86,6 @@ public class QuizActivity extends BaseActivity {
         Dialog dialog = builder.create();
         dialog.show();
     }
+
+
 }

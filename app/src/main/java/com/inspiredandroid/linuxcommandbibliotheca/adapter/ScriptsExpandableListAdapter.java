@@ -42,68 +42,75 @@ public class ScriptsExpandableListAdapter extends BaseExpandableListAdapter {
         return mChild.get(groupPosition).get(childPosition);
     }
 
-    // enable loading view
-    public void setLoading()
-    {
-        isLoading = true;
-        notifyDataSetChanged();
-    }
-
-    // disable loading view
-    public void setLoadingFinished()
-    {
-        isLoading = false;
-        notifyDataSetChanged();
-    }
-
+    @Override
     public long getChildId(int groupPosition, int childPosition)
     {
         return childPosition;
     }
 
+    @Override
+    public int getChildTypeCount()
+    {
+        return 2;
+    }
+
+    @Override
+    public int getChildType(int groupPosition, int childPosition)
+    {
+        return isLoading && groupPosition == GROUP_COMMANDLINEFU && childPosition == mChild.get(GROUP_COMMANDLINEFU).size() ? 1 : 0;
+    }
+
+    @Override
     public View getChildView(final int groupPosition, final int childPosition,
                              boolean isLastChild, View convertView, ViewGroup parent)
     {
-        // check if is loading
-        if (isLoading && groupPosition == GROUP_COMMANDLINEFU && childPosition == mChild.get(GROUP_COMMANDLINEFU).size()) {
-            ProgressBar pbLoading = new ProgressBar(mContext);
-            pbLoading.setPadding(0, 10, 0, 10);
+        if (getChildType(groupPosition, childPosition) == 1) {
+
+            // show the loading
+            LayoutInflater inflater = mContext.getLayoutInflater();
+            ProgressBar pbLoading = (ProgressBar) inflater.inflate(R.layout.row_script_loading_child, parent, false);
             pbLoading.setTag(null);
             return pbLoading;
-        }
 
-        CommandGroupModel command = getChild(groupPosition, childPosition);
-        CommandViewHolder holder;
-
-        if (convertView == null || convertView.getTag() == null) {
-            LayoutInflater inflater = mContext.getLayoutInflater();
-            convertView = inflater.inflate(R.layout.row_script_child, parent, false);
-
-            holder = new CommandViewHolder();
-            holder.desc = (TextView) convertView.findViewById(R.id.row_script_child_tv_title);
-            holder.icon = (ImageView) convertView.findViewById(R.id.row_script_child_iv_icon);
-
-            convertView.setTag(holder);
         } else {
-            holder = (CommandViewHolder) convertView.getTag();
+
+            CommandGroupModel command = getChild(groupPosition, childPosition);
+            CommandViewHolder holder;
+
+            if (convertView == null) {
+                LayoutInflater inflater = mContext.getLayoutInflater();
+                convertView = inflater.inflate(R.layout.row_script_child, parent, false);
+
+                holder = new CommandViewHolder();
+                holder.desc = (TextView) convertView.findViewById(R.id.row_script_child_tv_title);
+                holder.icon = (ImageView) convertView.findViewById(R.id.row_script_child_iv_icon);
+
+                convertView.setTag(holder);
+            } else {
+                holder = (CommandViewHolder) convertView.getTag();
+            }
+
+            holder.desc.setText(Utils.highlightQueryInsideText(mContext, mQuery, command.getDesc(mContext)));
+            holder.icon.setImageResource(getCommandIconResource(command));
+
+            convertView.setTag(R.id.ID, command);
+
+            return convertView;
         }
-
-        holder.desc.setText(Utils.highlightQueryInsideText(mContext, mQuery, command.getDesc(mContext)));
-
-
-        if (!"".equals(command.getIconResource())) {
-            int drawableResourceId = mContext.getResources().getIdentifier(command.getIconResource(), "drawable", mContext.getPackageName());
-
-            holder.icon.setImageResource(drawableResourceId);
-        } else {
-            holder.icon.setImageResource(R.drawable.icon_linux);
-        }
-
-        convertView.setTag(R.id.ID, command);
-
-        return convertView;
     }
 
+    /**
+     * Get icon, in case there is no icon set: return the default tux icon
+     *
+     * @param command
+     * @return
+     */
+    private int getCommandIconResource(CommandGroupModel command)
+    {
+        return command.getIconResource().isEmpty() ? R.drawable.icon_linux : mContext.getResources().getIdentifier(command.getIconResource(), "drawable", mContext.getPackageName());
+    }
+
+    @Override
     public int getChildrenCount(int groupPosition)
     {
         if (isLoading && groupPosition == GROUP_COMMANDLINEFU) {
@@ -112,44 +119,57 @@ public class ScriptsExpandableListAdapter extends BaseExpandableListAdapter {
         return mChild.get(groupPosition).size();
     }
 
+    @Override
     public Object getGroup(int groupPosition)
     {
         return mGroup.get(groupPosition);
     }
 
+    @Override
     public int getGroupCount()
     {
         return mGroup.size();
     }
 
+    @Override
     public long getGroupId(int groupPosition)
     {
         return groupPosition;
     }
 
+    @Override
     public View getGroupView(int groupPosition, boolean isExpanded,
                              View convertView, ViewGroup parent)
     {
         String laptopName = (String) getGroup(groupPosition);
+        CommandGroupViewHolder holder;
+
         if (convertView == null) {
             LayoutInflater inflater = mContext.getLayoutInflater();
-            convertView = inflater.inflate(R.layout.row_command_group,
-                    parent, false);
-        }
-        TextView tvTitle = (TextView) convertView.findViewById(R.id.row_command_group_tv_title);
-        tvTitle.setText(laptopName);
+            convertView = inflater.inflate(R.layout.row_command_group, parent, false);
 
-        TextView tvSize = (TextView) convertView.findViewById(R.id.row_command_group_tv_size);
-        tvSize.setText(String.valueOf(mChild.get(groupPosition).size()));
+            holder = new CommandGroupViewHolder();
+            holder.title = (TextView) convertView.findViewById(R.id.row_command_group_tv_title);
+            holder.size = (TextView) convertView.findViewById(R.id.row_command_group_tv_size);
+
+            convertView.setTag(holder);
+        } else {
+            holder = (CommandGroupViewHolder) convertView.getTag();
+        }
+
+        holder.title.setText(laptopName);
+        holder.size.setText(String.valueOf(mChild.get(groupPosition).size()));
 
         return convertView;
     }
 
+    @Override
     public boolean hasStableIds()
     {
         return true;
     }
 
+    @Override
     public boolean isChildSelectable(int groupPosition, int childPosition)
     {
         return true;
@@ -169,8 +189,31 @@ public class ScriptsExpandableListAdapter extends BaseExpandableListAdapter {
         notifyDataSetChanged();
     }
 
+    /**
+     * enable loading view
+     */
+    public void setLoading()
+    {
+        isLoading = true;
+        notifyDataSetChanged();
+    }
+
+    /**
+     * disable loading view
+     */
+    public void setLoadingFinished()
+    {
+        isLoading = false;
+        notifyDataSetChanged();
+    }
+
     public class CommandViewHolder {
         public TextView desc;
         public ImageView icon;
+    }
+
+    public class CommandGroupViewHolder {
+        public TextView title;
+        public TextView size;
     }
 }

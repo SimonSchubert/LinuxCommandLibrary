@@ -1,5 +1,6 @@
 package com.inspiredandroid.linuxcommandbibliotheca.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -25,6 +26,13 @@ public class BibliothecaFragment extends Fragment {
     public BibliothecaFragment()
     {
 
+    }
+
+    private boolean showTipsFragment(Intent intent)
+    {
+        String action = intent.getAction();
+        String data = intent.getDataString();
+        return Intent.ACTION_VIEW.equals(action) && data != null;
     }
 
     @Override
@@ -74,6 +82,10 @@ public class BibliothecaFragment extends Fragment {
 
             }
         });
+
+        if (showTipsFragment(getActivity().getIntent())) {
+            mPager.setCurrentItem(2);
+        }
 
         return view;
     }
