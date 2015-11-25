@@ -12,8 +12,7 @@ import android.widget.TextView;
 
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.CommandDetailAdapter;
-
-import java.util.ArrayList;
+import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel;
 
 /**
  * Created by Simon Schubert
@@ -21,18 +20,15 @@ import java.util.ArrayList;
 public class ScriptDetailDialogFragment extends DialogFragment {
 
     private final static String EXTRA_KEY_COMMANDS = "EXTRA_KEY_COMMANDS";
-    private final static String EXTRA_KEY_DESCRIPTION = "EXTRA_KEY_DESCRIPTION";
 
-    ArrayList<String> commands;
-    String description;
+    CommandGroupModel commandGroupModel;
 
-    public static ScriptDetailDialogFragment getInstance(ArrayList<String> commands, String description)
+    public static ScriptDetailDialogFragment getInstance(CommandGroupModel group)
     {
         ScriptDetailDialogFragment fragment = new ScriptDetailDialogFragment();
 
         Bundle arguments = new Bundle();
-        arguments.putStringArrayList(EXTRA_KEY_COMMANDS, commands);
-        arguments.putString(EXTRA_KEY_DESCRIPTION, description);
+        arguments.putSerializable(EXTRA_KEY_COMMANDS, group);
         fragment.setArguments(arguments);
 
         return fragment;
@@ -48,10 +44,11 @@ public class ScriptDetailDialogFragment extends DialogFragment {
     {
         View view = inflater.inflate(R.layout.fragment_scriptdetail, container, false);
 
-        commands = getArguments().getStringArrayList(EXTRA_KEY_COMMANDS);
-        description = getArguments().getString(EXTRA_KEY_DESCRIPTION);
+        commandGroupModel = (CommandGroupModel) getArguments().getSerializable(EXTRA_KEY_COMMANDS);
 
-        CommandDetailAdapter adapter = new CommandDetailAdapter(getActivity(), commands);
+        String description = commandGroupModel.getDesc(getContext());
+
+        CommandDetailAdapter adapter = new CommandDetailAdapter(getActivity(), commandGroupModel);
         ListView listView = (ListView) view.findViewById(R.id.fragment_scriptdetail_lv_list);
         listView.setAdapter(adapter);
 

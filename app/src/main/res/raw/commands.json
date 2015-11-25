@@ -11,10 +11,62 @@
             "version": 0
           }
         ],
-        "command": "HZ=`awk '/\\\\#define HZ/ {print $3}' /usr/include/asm-generic/param.h`; NUMCPUS=`grep ^proc /proc/cpuinfo | wc -l`; FIRST=`cat /proc/stat | awk '/^cpu / {print $5}'`; sleep 1; SECOND=`cat /proc/stat | awk '/^cpu / {print $5}'`; USED=`echo 4 k 100 $SECOND $FIRST - $NUMCPUS $HZ \\\\* / 100 \\\\* - p | dc`; echo ${USED}"
+        "command": "HZ=`awk '/\\\\#define HZ/ {print $3}' /usr/include/asm-generic/param.h`; NUMCPUS=`grep ^proc /proc/cpuinfo | wc -l`; FIRST=`cat /proc/stat | awk '/^cpu / {print $5}'`; sleep 1; SECOND=`cat /proc/stat | awk '/^cpu / {print $5}'`; USED=`echo 4 k 100 $SECOND $FIRST - $NUMCPUS $HZ \\\\* / 100 \\\\* - p | dc`; echo ${USED}",
+        "mans": [
+          {
+            "man": "awk"
+          },
+          {
+            "man": "print"
+          },
+          {
+            "man": "grep"
+          },
+          {
+            "man": "wc"
+          },
+          {
+            "man": "cat"
+          },
+          {
+            "man": "sleep"
+          },
+          {
+            "man": "echo"
+          },
+          {
+            "man": "dc"
+          }
+        ]
       },
       {
-        "command": "NUMCPUS=`grep ^proc /proc/cpuinfo | wc -l`; FIRST=`cat /proc/stat | awk '/^cpu / {print $5}'`; sleep 1; SECOND=`cat /proc/stat | awk '/^cpu / {print $5}'`; USED=`echo 2 k 100 $SECOND $FIRST - $NUMCPUS / - p | dc`; echo ${USED}%"
+        "command": "NUMCPUS=`grep ^proc /proc/cpuinfo | wc -l`; FIRST=`cat /proc/stat | awk '/^cpu / {print $5}'`; sleep 1; SECOND=`cat /proc/stat | awk '/^cpu / {print $5}'`; USED=`echo 2 k 100 $SECOND $FIRST - $NUMCPUS / - p | dc`; echo ${USED}%",
+        "mans": [
+          {
+            "man": "grep"
+          },
+          {
+            "man": "wc"
+          },
+          {
+            "man": "cat"
+          },
+          {
+            "man": "awk"
+          },
+          {
+            "man": "sleep"
+          },
+          {
+            "man": "print"
+          },
+          {
+            "man": "echo"
+          },
+          {
+            "man": "dc"
+          }
+        ]
       }
     ]
   },
@@ -24,13 +76,61 @@
     "desc": 1,
     "commands": [
       {
-        "command": "max=$(grep 'last full capacity:' /proc/acpi/battery/BAT1/info|awk '{print $4}') ; current=$(grep 'remaining capacity:' /proc/acpi/battery/BAT1/state|awk '{print $3}'); percent=$(expr $current'00' / $max ); echo -e $percent"
+        "command": "max=$(grep 'last full capacity:' /proc/acpi/battery/BAT1/info|awk '{print $4}') ; current=$(grep 'remaining capacity:' /proc/acpi/battery/BAT1/state|awk '{print $3}'); percent=$(expr $current'00' / $max ); echo -e $percent",
+        "mans": [
+          {
+            "man": "grep"
+          },
+          {
+            "man": "awk"
+          },
+          {
+            "man": "print"
+          },
+          {
+            "man": "expr"
+          },
+          {
+            "man": "echo"
+          }
+        ]
       },
       {
-        "command": "upower -i $(upower -e | grep BAT) | grep --color=never -E percentage|xargs|cut -d' ' -f2|sed s/%//"
+        "command": "upower -i $(upower -e | grep BAT) | grep --color=never -E percentage|xargs|cut -d' ' -f2|sed s/%//",
+        "mans": [
+          {
+            "man": "upower"
+          },
+          {
+            "man": "grep"
+          },
+          {
+            "man": "xargs"
+          },
+          {
+            "man": "cut"
+          },
+          {
+            "man": "sed"
+          }
+        ]
       },
       {
-        "command": "cat /sys/class/power_supply/BAT1/uevent | awk '/POWER_SUPPLY_CAPACITY/ {print $1}' | sed 's/POWER_SUPPLY_CAPACITY=//'"
+        "command": "cat /sys/class/power_supply/BAT1/uevent | awk '/POWER_SUPPLY_CAPACITY/ {print $1}' | sed 's/POWER_SUPPLY_CAPACITY=//'",
+        "mans": [
+          {
+            "man": "cat"
+          },
+          {
+            "man": "awk"
+          },
+          {
+            "man": "print"
+          },
+          {
+            "man": "sed"
+          }
+        ]
       }
     ]
   },
@@ -40,7 +140,18 @@
     "desc": 2,
     "commands": [
       {
-        "command": "hciconfig -a | awk '/BD Address:/ {print $3}'"
+        "command": "hciconfig -a | awk '/BD Address:/ {print $3}'",
+        "mans": [
+          {
+            "man": "hciconfig"
+          },
+          {
+            "man": "awk"
+          },
+          {
+            "man": "print"
+          }
+        ]
       }
     ]
   },
@@ -50,7 +161,18 @@
     "desc": 3,
     "commands": [
       {
-        "command": "hciconfig -a | awk '/Name:/ {print $2}'"
+        "command": "hciconfig -a | awk '/Name:/ {print $2}'",
+        "mans": [
+          {
+            "man": "hciconfig"
+          },
+          {
+            "man": "awk"
+          },
+          {
+            "man": "print"
+          }
+        ]
       }
     ]
   },
@@ -60,7 +182,12 @@
     "desc": 4,
     "commands": [
       {
-        "command": "ifconfig -a"
+        "command": "ifconfig -a",
+        "mans": [
+          {
+            "man": "ifconfig"
+          }
+        ]
       }
     ]
   },
@@ -70,7 +197,12 @@
     "desc": 5,
     "commands": [
       {
-        "command": "cat /proc/meminfo"
+        "command": "cat /proc/meminfo",
+        "mans": [
+          {
+            "man": "cat"
+          }
+        ]
       }
     ]
   },
@@ -86,7 +218,12 @@
             "version": 0
           }
         ],
-        "command": "gnome-screensaver-command -l"
+        "command": "gnome-screensaver-command -l",
+        "mans": [
+          {
+            "man": "gnome-screensaver-command"
+          }
+        ]
       },
       {
         "compatibility": [
@@ -95,7 +232,12 @@
             "version": 0
           }
         ],
-        "command": "dbus-send --type=method_call --dest=org.freedesktop.ScreenSaver /ScreenSaver org.freedesktop.ScreenSaver.Lock"
+        "command": "dbus-send --type=method_call --dest=org.freedesktop.ScreenSaver /ScreenSaver org.freedesktop.ScreenSaver.Lock",
+        "mans": [
+          {
+            "man": "dbus-send"
+          }
+        ]
       }
     ]
   },
@@ -111,7 +253,12 @@
             "version": 0
           }
         ],
-        "command": "gnome-screensaver-command -a"
+        "command": "gnome-screensaver-command -a",
+        "mans": [
+          {
+            "man": "gnome-screensaver-command"
+          }
+        ]
       },
       {
         "compatibility": [
@@ -120,7 +267,12 @@
             "version": 0
           }
         ],
-        "command": "dbus-send --type=method_call --dest=org.freedesktop.ScreenSaver /ScreenSaver org.freedesktop.ScreenSaver.SetActive boolean:false"
+        "command": "dbus-send --type=method_call --dest=org.freedesktop.ScreenSaver /ScreenSaver org.freedesktop.ScreenSaver.SetActive boolean:false",
+        "mans": [
+          {
+            "man": "dbus-send"
+          }
+        ]
       }
     ]
   },
@@ -130,7 +282,12 @@
     "desc": 8,
     "commands": [
       {
-        "command": "cat /proc/version"
+        "command": "cat /proc/version",
+        "mans": [
+          {
+            "man": "cat"
+          }
+        ]
       }
     ]
   },
@@ -140,7 +297,12 @@
     "desc": 9,
     "commands": [
       {
-        "command": "lspci"
+        "command": "lspci",
+        "mans": [
+          {
+            "man": "lspci"
+          }
+        ]
       }
     ]
   },
@@ -150,7 +312,12 @@
     "desc": 10,
     "commands": [
       {
-        "command": "lsusb"
+        "command": "lsusb",
+        "mans": [
+          {
+            "man": "lsusb"
+          }
+        ]
       }
     ]
   },
@@ -160,7 +327,12 @@
     "desc": 11,
     "commands": [
       {
-        "command": "lsblk"
+        "command": "lsblk",
+        "mans": [
+          {
+            "man": "lsblk"
+          }
+        ]
       }
     ]
   },
@@ -170,13 +342,31 @@
     "desc": 12,
     "commands": [
       {
-        "command": "curl ifconfig.me"
+        "command": "curl ifconfig.me",
+        "mans": [
+          {
+            "man": "curl"
+          }
+        ]
       },
       {
-        "command": "dig +short myip.opendns.com @resolver1.opendns.com"
+        "command": "dig +short myip.opendns.com @resolver1.opendns.com",
+        "mans": [
+          {
+            "man": "dig"
+          }
+        ]
       },
       {
-        "command": "netcat icanhazip.com 80 <<< $'GET / HTTP/1.1\nHost: icanhazip.com\n\n' | tail -n1"
+        "command": "netcat icanhazip.com 80 <<< $'GET / HTTP/1.1\nHost: icanhazip.com\n\n' | tail -n1",
+        "mans": [
+          {
+            "man": "netcat"
+          },
+          {
+            "man": "netcat"
+          }
+        ]
       }
     ]
   },
@@ -186,10 +376,20 @@
     "desc": 13,
     "commands": [
       {
-        "command": "sudo reboot"
+        "command": "sudo reboot",
+        "mans": [
+          {
+            "man": "reboot"
+          }
+        ]
       },
       {
-        "command": "sudo shutdown -r"
+        "command": "sudo shutdown -r",
+        "mans": [
+          {
+            "man": "shutdown"
+          }
+        ]
       }
     ]
   },
@@ -199,13 +399,28 @@
     "desc": 14,
     "commands": [
       {
-        "command": "sudo poweroff"
+        "command": "sudo poweroff",
+        "mans": [
+          {
+            "man": "poweroff"
+          }
+        ]
       },
       {
-        "command": "sudo shutdown -h now"
+        "command": "sudo shutdown -h now",
+        "mans": [
+          {
+            "man": "shutdown"
+          }
+        ]
       },
       {
-        "command": "sudo reboot -p"
+        "command": "sudo reboot -p",
+        "mans": [
+          {
+            "man": "reboot"
+          }
+        ]
       }
     ]
   },
@@ -215,7 +430,12 @@
     "desc": 15,
     "commands": [
       {
-        "command": "sudo shutdown -h 18:45 \"Server is going down for maintenance\""
+        "command": "sudo shutdown -h 18:45 \"Server is going down for maintenance\"",
+        "mans": [
+          {
+            "man": "shutdown"
+          }
+        ]
       }
     ]
   },
@@ -225,7 +445,12 @@
     "desc": 16,
     "commands": [
       {
-        "command": "ssh -V"
+        "command": "ssh -V",
+        "mans": [
+          {
+            "man": "ssh"
+          }
+        ]
       }
     ]
   },
@@ -235,7 +460,12 @@
     "desc": 17,
     "commands": [
       {
-        "command": "uptime"
+        "command": "uptime",
+        "mans": [
+          {
+            "man": "uptime"
+          }
+        ]
       }
     ]
   },
@@ -245,7 +475,12 @@
     "desc": 18,
     "commands": [
       {
-        "command": "df -k"
+        "command": "df -k",
+        "mans": [
+          {
+            "man": "df"
+          }
+        ]
       }
     ]
   },
@@ -255,7 +490,12 @@
     "desc": 19,
     "commands": [
       {
-        "command": "cat /var/log/boot.log"
+        "command": "cat /var/log/boot.log",
+        "mans": [
+          {
+            "man": "cat"
+          }
+        ]
       }
     ]
   },
@@ -265,7 +505,15 @@
     "desc": 20,
     "commands": [
       {
-        "command": "export DISPLAY=:0; import -window root screenURC.png"
+        "command": "export DISPLAY=:0; import -window root screenURC.png",
+        "mans": [
+          {
+            "man": "export"
+          },
+          {
+            "man": "import"
+          }
+        ]
       }
     ]
   },
@@ -275,7 +523,12 @@
     "desc": 21,
     "commands": [
       {
-        "command": "uvccapture -d/dev/video0 -oscreenURC.jpg -m"
+        "command": "uvccapture -d/dev/video0 -oscreenURC.jpg -m",
+        "mans": [
+          {
+            "man": "uvccapture"
+          }
+        ]
       }
     ]
   },
@@ -285,7 +538,12 @@
     "desc": 22,
     "commands": [
       {
-        "command": "sudo service bluetooth stop"
+        "command": "sudo service bluetooth stop",
+        "mans": [
+          {
+            "man": "service"
+          }
+        ]
       }
     ]
   },
@@ -295,7 +553,12 @@
     "desc": 23,
     "commands": [
       {
-        "command": "sudo service bluetooth start"
+        "command": "sudo service bluetooth start",
+        "mans": [
+          {
+            "man": "service"
+          }
+        ]
       }
     ]
   },
@@ -305,7 +568,12 @@
     "desc": 24,
     "commands": [
       {
-        "command": "nmcli nm wifi off"
+        "command": "nmcli nm wifi off",
+        "mans": [
+          {
+            "man": "nmcli"
+          }
+        ]
       }
     ]
   },
@@ -315,7 +583,12 @@
     "desc": 25,
     "commands": [
       {
-        "command": "nmcli nm wifi on"
+        "command": "nmcli nm wifi on",
+        "mans": [
+          {
+            "man": "nmcli"
+          }
+        ]
       }
     ]
   },
@@ -325,7 +598,12 @@
     "desc": 26,
     "commands": [
       {
-        "command": "spd-say \"Either you leave this area or I'm forced to kill you\""
+        "command": "spd-say \"Either you leave this area or I'm forced to kill you\"",
+        "mans": [
+          {
+            "man": "spd-say"
+          }
+        ]
       }
     ]
   },
@@ -335,10 +613,20 @@
     "desc": 27,
     "commands": [
       {
-        "command": "aplay /usr/share/sounds/alsa/Noise.wav"
+        "command": "aplay /usr/share/sounds/alsa/Noise.wav",
+        "mans": [
+          {
+            "man": "aplay"
+          }
+        ]
       },
       {
-        "command": "play /usr/share/sounds/alsa/Noise.wav"
+        "command": "play /usr/share/sounds/alsa/Noise.wav",
+        "mans": [
+          {
+            "man": "play"
+          }
+        ]
       }
     ]
   },
@@ -348,7 +636,12 @@
     "desc": 28,
     "commands": [
       {
-        "command": "beep"
+        "command": "beep",
+        "mans": [
+          {
+            "man": "beep"
+          }
+        ]
       }
     ]
   },
@@ -358,7 +651,12 @@
     "desc": 29,
     "commands": [
       {
-        "command": "xset dpms force off"
+        "command": "xset dpms force off",
+        "mans": [
+          {
+            "man": "xset"
+          }
+        ]
       }
     ]
   }

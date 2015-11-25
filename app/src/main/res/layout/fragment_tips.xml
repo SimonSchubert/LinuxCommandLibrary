@@ -634,7 +634,8 @@
                     android:text="&lt; &gt;"
                     android:textStyle="bold"/>
 
-                <TextView
+                <com.inspiredandroid.linuxcommandbibliotheca.view.ClickableTextView
+                    android:id="@+id/fragment_tips_tv_link_to_redirection"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="These symbols are used for redirection; see below."/>
@@ -793,6 +794,7 @@
             android:text="Don't confuse shell special characters with special characters in regular expressions. Regular expressions must be protected from the shell by enclosing them in single quotes."/>
 
         <TextView
+            android:id="@+id/fragment_tips_tv_redirection"
             style="@style/TextMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -810,8 +812,8 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:measureWithLargestChild="false"
-            android:shrinkColumns="1">
+            android:shrinkColumns="1"
+            >
 
             <TableRow
                 android:layout_width="match_parent"
@@ -919,8 +921,8 @@
             </TableRow>
 
             <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="6dp">
 
                 <TextView
@@ -933,6 +935,26 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="send error messages to file (overwriting). (This means that errors can be directed separately from normal output.)"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <LinearLayout
+                    android:layout_column="1">
+
+                    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+                        android:id="@+id/fragment_tips_tv_redirection_code_error_output"
+                        style="@style/TextCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:text="@string/fragment_tips_redirection_code_error_output"
+                        custom:commands="@array/fragment_tips_redirection_code_error_output_array"
+                        />
+                </LinearLayout>
             </TableRow>
 
         </TableLayout>

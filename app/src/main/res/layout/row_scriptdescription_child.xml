@@ -6,7 +6,7 @@
               android:orientation="horizontal"
               android:padding="10dp">
 
-    <TextView
+    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
         android:id="@+id/row_scriptdescription_child_tv_description"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

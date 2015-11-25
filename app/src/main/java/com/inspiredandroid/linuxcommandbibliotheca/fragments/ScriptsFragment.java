@@ -5,11 +5,11 @@ import android.app.SearchManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.widget.SearchView;
 import android.view.LayoutInflater;
@@ -31,9 +31,9 @@ import com.inspiredandroid.linuxcommandbibliotheca.asnytasks.FetchCommandlineFuC
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.dialogs.ScriptDetailDialogFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.FetchedCommandlineFuCommandsInterface;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
-import com.inspiredandroid.linuxcommandbibliotheca.models.CommandChildModel;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandLineFuModel;
+import com.inspiredandroid.linuxcommandbibliotheca.sql.CommandsDbHelper;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -42,7 +42,7 @@ import java.util.List;
 /**
  * Created by Simon Schubert
  */
-public class ScriptsFragment extends Fragment implements View.OnClickListener, FetchedCommandlineFuCommandsInterface, AbsListView.OnScrollListener, ExpandableListView.OnChildClickListener {
+public class ScriptsFragment extends SuperFragment implements View.OnClickListener, FetchedCommandlineFuCommandsInterface, AbsListView.OnScrollListener, ExpandableListView.OnChildClickListener {
 
     ExpandableListView list;
     ScriptsExpandableListAdapter adapter;
@@ -166,26 +166,10 @@ public class ScriptsFragment extends Fragment implements View.OnClickListener, F
     public boolean onOptionsItemSelected(MenuItem item)
     {
         if (item.getItemId() == R.id.about) {
-            startAboutFragment();
+            startAboutActivity();
             return true;
         }
         return false;
-    }
-
-    private void startAboutFragment()
-    {
-        Intent intent = new Intent(getContext(), AboutActivity.class);
-        startActivity(intent);
-    }
-
-    private void handleAdClick()
-    {
-        final String appPackageName = Utils.PACKAGE_LINUXREMOTE;
-        try {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
-        } catch (android.content.ActivityNotFoundException anfe) {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
-        }
     }
 
     @Override
@@ -208,6 +192,29 @@ public class ScriptsFragment extends Fragment implements View.OnClickListener, F
         }
     }
 
+    private void startAboutActivity()
+    {
+        Intent intent = new Intent(getContext(), AboutActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * Open native play store or alternatively the web browser
+     */
+    private void handleAdClick()
+    {
+        final String appPackageName = Utils.PACKAGE_LINUXREMOTE;
+        try {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+        } catch (android.content.ActivityNotFoundException anfe) {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+        }
+    }
+
+    /**
+     *
+     * @return
+     */
     private ScriptsExpandableListAdapter createAdapter()
     {
         // command categories
@@ -252,11 +259,15 @@ public class ScriptsFragment extends Fragment implements View.OnClickListener, F
             adapter.setLoading();
             async = new FetchCommandlineFuCommandsAsyncTask(
                     getActivity(), this, fetchedCommandlineFuPages);
+            asyncTasks.add(async);
             async.execute();
             fetchedCommandlineFuPages++;
         }
     }
 
+    /**
+     * TODO: do it
+     */
     private void showFilterDialog()
     {
         String[] items = new String[]{"Gnome", "KDE"};
@@ -316,7 +327,7 @@ public class ScriptsFragment extends Fragment implements View.OnClickListener, F
     /**
      * search for query in all commands and update adapter
      *
-     * @param query
+     * @param query search query
      */
     private void search(String query)
     {
@@ -337,13 +348,40 @@ public class ScriptsFragment extends Fragment implements View.OnClickListener, F
         isSearching = true;
     }
 
+    /**
+     * Split the sentence/script into single words/commands and check if the command exists in the
+     * database
+     * @param sentence the scripts
+     * @return list of commands which exists in the database
+     */
+    private ArrayList<String> getManPages(String sentence)
+    {
+        String[] words = sentence.split("\\s+");
+        for (int i = 0; i < words.length; i++) {
+            words[i] = words[i].replaceAll("[^\\w]", "");
+        }
+        ArrayList<String> mans = new ArrayList<>();
+        for (String word : words) {
+            CommandsDbHelper helper = new CommandsDbHelper(getContext());
+            Cursor c = helper.getCommandFromName(word);
+            if (c.getCount() > 0) {
+                mans.add(word);
+            }
+        }
+        return mans;
+    }
+
     @Override
     public void onFetchedCommandlineFuCommands(ArrayList<CommandLineFuModel> commandLineFuModels)
     {
+        if(!isAdded()) {
+            return;
+        }
+
         ArrayList<CommandGroupModel> commands = new ArrayList<>();
-        // convert commandlinefu json models to linux command bibliotheca
-        for (CommandLineFuModel command : commandLineFuModels) {
-            commands.add(new CommandGroupModel(command.getCommand(), command.getSummary()));
+        // convert commandlinefu json models to linux command bibliotheca models
+        for (CommandLineFuModel commandLineFuModel : commandLineFuModels) {
+            commands.add(new CommandGroupModel(commandLineFuModel.getCommand(), commandLineFuModel.getSummary(), getManPages(commandLineFuModel.getCommand())));
         }
         adapter.addEntries(ScriptsExpandableListAdapter.GROUP_COMMANDLINEFU, commands);
         adapter.setLoadingFinished();
@@ -354,15 +392,7 @@ public class ScriptsFragment extends Fragment implements View.OnClickListener, F
     {
         CommandGroupModel commandGroupModel = (CommandGroupModel) view.getTag(R.id.ID);
 
-        String iconBase64 = Utils.getBase64StringByResourceName(getContext(), commandGroupModel.getIconResource());
-        commandGroupModel.setIconBase64(iconBase64);
-
-        ArrayList<String> commands = new ArrayList<>();
-        for (CommandChildModel commandChild : commandGroupModel.getCommands()) {
-            commands.add(commandChild.getCommand());
-        }
-
-        ScriptDetailDialogFragment fragment = ScriptDetailDialogFragment.getInstance(commands, commandGroupModel.getDesc(getContext()));
+        ScriptDetailDialogFragment fragment = ScriptDetailDialogFragment.getInstance(commandGroupModel);
         fragment.show(getChildFragmentManager(), ScriptDetailDialogFragment.class.getName());
 
         return true;

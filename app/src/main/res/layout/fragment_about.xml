@@ -35,7 +35,7 @@
             android:id="@+id/textView25"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="This project was originally part of another project called &apos;Home Remote Control&apos;. It&apos;s a highly customizable Linux remote control. Rating up both projects automatically effects in me spending time in improving both projects. Because higher rating = more users = higher interest in improving the projects."/>
+            android:text="This project was originally part of another project called &apos;Home Remote Control&apos;. It&apos;s a highly customizable Linux remote control. Rating up both projects automatically effects in me spending time in improving both projects. Because higher rating = more users = higher interest in improving the projects. Thanks."/>
 
         <TextView
             android:id="@+id/textView26"

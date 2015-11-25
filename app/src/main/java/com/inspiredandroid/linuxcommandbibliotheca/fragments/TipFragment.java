@@ -9,16 +9,23 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ScrollView;
+import android.widget.TextView;
 
 import com.google.android.gms.appindexing.Action;
 import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.QuizActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
+import com.inspiredandroid.linuxcommandbibliotheca.interfaces.ClickInterface;
+import com.inspiredandroid.linuxcommandbibliotheca.view.ClickableTextView;
 
 /**
  * Created by Simon Schubert
  */
 public class TipFragment extends AppIndexFragment implements View.OnClickListener {
+
+    ScrollView view;
+    TextView tvRedirection;
 
     public TipFragment()
     {
@@ -49,9 +56,19 @@ public class TipFragment extends AppIndexFragment implements View.OnClickListene
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
-        View view = inflater.inflate(R.layout.fragment_tips, container, false);
+        view = (ScrollView) inflater.inflate(R.layout.fragment_tips, container, false);
 
         view.findViewById(R.id.fragment_tips_btn_quiz).setOnClickListener(this);
+        tvRedirection = (TextView) view.findViewById(R.id.fragment_tips_tv_redirection);
+        ClickableTextView tvLinkToRedirection = (ClickableTextView) view.findViewById(R.id.fragment_tips_tv_link_to_redirection);
+        tvLinkToRedirection.setClickableWord("below");
+        tvLinkToRedirection.setClickInterface(new ClickInterface() {
+            @Override
+            public void onClick()
+            {
+                scrollToRedirectionView();
+            }
+        });
 
         return view;
     }
@@ -74,15 +91,26 @@ public class TipFragment extends AppIndexFragment implements View.OnClickListene
     public boolean onOptionsItemSelected(MenuItem item)
     {
         if (item.getItemId() == R.id.about) {
-            startAboutFragment();
+            startAboutActivity();
             return true;
         }
         return false;
     }
 
-    private void startAboutFragment()
+    private void startAboutActivity()
     {
         Intent intent = new Intent(getContext(), AboutActivity.class);
         startActivity(intent);
+    }
+
+    private void scrollToRedirectionView()
+    {
+        view.post(new Runnable() {
+            @Override
+            public void run()
+            {
+                view.scrollTo(0, tvRedirection.getBottom());
+            }
+        });
     }
 }
