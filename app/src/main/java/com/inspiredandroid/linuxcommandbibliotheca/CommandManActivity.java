@@ -21,15 +21,16 @@ import com.inspiredandroid.linuxcommandbibliotheca.sql.CommandsDbHelper;
 /**
  * Created by Simon Schubert
  * <p/>
- * This Activity just holds the CommandManFragment
+ * This Activity tries to get a command based on different opening types and starts a
+ * CommandManFragment if successfully fetched or finishes immediately
  */
-public class CommandManActivity extends BaseActivity implements CraftDatabaseInterface {
+public class CommandManActivity extends LoadingBaseActivity {
 
     public final static String EXTRA_COMMAND_ID = "EXTRA_COMMAND_ID"; //NON-NLS
     public final static String EXTRA_COMMAND_NAME = "EXTRA_COMMAND_NAME"; //NON-NLS
     public final static String EXTRA_COMMAND_CATEGORY = "EXTRA_COMMAND_CATEGORY"; //NON-NLS
 
-    LoadDatabaseAsyncTask asyncTask;
+    final static int INVALID = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -45,19 +46,6 @@ public class CommandManActivity extends BaseActivity implements CraftDatabaseInt
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         showLoadingFragment();
-
-        asyncTask = new LoadDatabaseAsyncTask(this, this);
-        asyncTask.execute();
-    }
-
-    @Override
-    protected void onDestroy()
-    {
-        super.onDestroy();
-
-        if (isTaskRunning()) {
-            asyncTask.cancel(true);
-        }
     }
 
     @Override
@@ -71,20 +59,18 @@ public class CommandManActivity extends BaseActivity implements CraftDatabaseInt
         return (super.onOptionsItemSelected(item));
     }
 
+    /**
+     * Start man fragment based on the intent data
+     */
     private void handleIntent()
     {
         Intent intent = getIntent();
-
         Bundle b = intent.getExtras();
-        long id = -1;
-        String name = null;
 
-        if (b != null) {
-            id = b.getLong(EXTRA_COMMAND_ID, -1);
-            name = b.getString(EXTRA_COMMAND_NAME);
-        }
+        long id = b!= null ? b.getLong(EXTRA_COMMAND_ID, INVALID) : INVALID;
+        String name = b != null ? b.getString(EXTRA_COMMAND_NAME) : null;
 
-        if (id != -1) {
+        if (id != INVALID) {
             // id is set
             showManFragmentById(id);
         } else if (name != null) {
@@ -105,18 +91,8 @@ public class CommandManActivity extends BaseActivity implements CraftDatabaseInt
     }
 
     /**
-     * Check if asynctask is not null and already running
-     *
-     * @return
-     */
-    private boolean isTaskRunning()
-    {
-        return (asyncTask != null) && (asyncTask.getStatus() == AsyncTask.Status.RUNNING);
-    }
-
-    /**
-     * @param name
-     * @return
+     * @param name name of the command
+     * @return unique command id
      */
     private long getIdByCommandName(String name)
     {
@@ -124,7 +100,10 @@ public class CommandManActivity extends BaseActivity implements CraftDatabaseInt
 
         Cursor c = mDbHelper.getCommandFromName(name);
         c.moveToFirst();
-        long id = c.getLong(c.getColumnIndex(CommandsDBTableModel.COL_ID));
+        long id = INVALID;
+        if (c.getCount() > 0) {
+            id = c.getLong(c.getColumnIndex(CommandsDBTableModel.COL_ID));
+        }
         c.close();
 
         mDbHelper.close();
@@ -132,17 +111,22 @@ public class CommandManActivity extends BaseActivity implements CraftDatabaseInt
         return id;
     }
 
+    /**
+     * Find command name and category by id. If id is INVALID then stop and finish activity
+     *
+     * @param id unique id of command
+     */
     private void showManFragmentById(long id)
     {
-        if (id == -1) {
+        if (id == INVALID) {
             finish();
+            return;
         }
 
         CommandsDbHelper mDbHelper = new CommandsDbHelper(this);
 
         Cursor c = mDbHelper.getCommandFromId(id);
         c.moveToFirst();
-        // Get command name
         String name = c.getString(c.getColumnIndex(CommandsDBTableModel.COL_NAME)).toUpperCase();
         int category = c.getInt(c.getColumnIndex(CommandsDBTableModel.COL_CATEGORY));
         c.close();
@@ -152,6 +136,12 @@ public class CommandManActivity extends BaseActivity implements CraftDatabaseInt
         showManFragment(name, id, category);
     }
 
+    /**
+     *
+     * @param name command name
+     * @param id unique command id
+     * @param category command category
+     */
     private void showManFragment(String name, long id, int category)
     {
         // Set command name as actionbar title
@@ -173,6 +163,9 @@ public class CommandManActivity extends BaseActivity implements CraftDatabaseInt
         fragmentTransaction.commit();
     }
 
+    /**
+     *
+     */
     private void showLoadingFragment()
     {
         setTitle(R.string.app_lcl_name);

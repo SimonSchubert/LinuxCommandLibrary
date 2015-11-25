@@ -87,5 +87,4 @@ public class QuizActivity extends BaseActivity {
         dialog.show();
     }
 
-
 }

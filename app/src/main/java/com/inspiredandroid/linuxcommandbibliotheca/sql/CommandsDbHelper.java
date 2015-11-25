@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class CommandsDbHelper extends SQLiteAssetHelper {
 
     // Update database version after update/schema change
-    public static final int DATABASE_VERSION = 2;
+    public static final int DATABASE_VERSION = 3;
     public static final String DATABASE_NAME = "commands.db";
 
     public CommandsDbHelper(Context context)

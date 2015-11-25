@@ -19,11 +19,11 @@ public class CommandGroupModel implements Serializable {
     private String descStr;
     private ArrayList<CommandChildModel> commands = new ArrayList<>();
 
-    public CommandGroupModel(String command, String desc)
+    public CommandGroupModel(String command, String desc, ArrayList<String> mans)
     {
         this.descStr = desc;
         this.iconResource = "icon_linux";  //NON-NLS
-        commands.add(new CommandChildModel(command));
+        commands.add(new CommandChildModel(command, mans));
     }
 
     public int getCategory()

@@ -18,12 +18,10 @@ import com.inspiredandroid.linuxcommandbibliotheca.interfaces.CraftDatabaseInter
  * <p/>
  * This Activity just holds the BibliothecaFragment
  */
-public class CommandBibliothecaActivity extends BaseActivity implements CraftDatabaseInterface {
+public class CommandBibliothecaActivity extends LoadingBaseActivity {
 
     public final static String EXTRA_COMMAND = "extra_command"; //NON-NLS
     public static final String EXTRA_ICON = "extra_icon"; //NON-NLS
-
-    LoadDatabaseAsyncTask asyncTask;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -40,21 +38,9 @@ public class CommandBibliothecaActivity extends BaseActivity implements CraftDat
         asyncTask.execute();
     }
 
-    @Override
-    protected void onDestroy()
-    {
-        super.onDestroy();
-
-        if (isTaskRunning()) {
-            asyncTask.cancel(true);
-        }
-    }
-
-    private boolean isTaskRunning()
-    {
-        return (asyncTask != null) && (asyncTask.getStatus() == AsyncTask.Status.RUNNING);
-    }
-
+    /**
+     *
+     */
     private void showBibliothecaFragment()
     {
         Fragment fragment = new BibliothecaFragment();
@@ -65,6 +51,9 @@ public class CommandBibliothecaActivity extends BaseActivity implements CraftDat
         fragmentTransaction.commit();
     }
 
+    /**
+     *
+     */
     private void showLoadingFragment()
     {
         Fragment fragment = new DatabaseLoadingFragment();

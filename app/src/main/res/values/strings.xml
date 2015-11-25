@@ -173,6 +173,11 @@
         <item>cowsay</item>
     </string-array>
 
+    <string name="fragment_tips_redirection_code_error_output">" $ rm -vf folder1 file1 > out.txt 2> err.txt "</string>
+    <string-array name="fragment_tips_redirection_code_error_output_array">
+        <item>rm</item>
+    </string-array>
+
     <item name="ID" type="id"/>
 
     <string name="fragment_datanase_loading_craftin_database">Crafting Database</string>
