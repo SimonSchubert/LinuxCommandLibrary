@@ -35,7 +35,6 @@ public abstract class LoadingBaseActivity extends AppCompatActivity implements C
     }
 
     /**
-     *
      * @return true if asynctask is not null and already running
      */
     private boolean isTaskRunning()

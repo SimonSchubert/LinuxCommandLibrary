@@ -1,6 +1,5 @@
 package com.inspiredandroid.linuxcommandbibliotheca;
 
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -11,7 +10,6 @@ import android.widget.Toast;
 import com.inspiredandroid.linuxcommandbibliotheca.asnytasks.LoadDatabaseAsyncTask;
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.BibliothecaFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.DatabaseLoadingFragment;
-import com.inspiredandroid.linuxcommandbibliotheca.interfaces.CraftDatabaseInterface;
 
 /**
  * Created by Simon Schubert

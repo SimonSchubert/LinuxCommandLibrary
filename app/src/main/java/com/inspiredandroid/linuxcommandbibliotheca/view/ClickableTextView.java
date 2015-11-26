@@ -45,8 +45,7 @@ public class ClickableTextView extends TextView {
      */
     public static void addClickableSpanToPhrases(SpannableString ss, String text, String phrase, final ClickInterface clickInterface)
     {
-
-        // would end in endless lopp
+        // would end in endless loop
         if (phrase.isEmpty()) {
             return;
         }

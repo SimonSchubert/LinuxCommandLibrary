@@ -2,7 +2,6 @@ package com.inspiredandroid.linuxcommandbibliotheca;
 
 import android.content.Intent;
 import android.database.Cursor;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -11,10 +10,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.inspiredandroid.linuxcommandbibliotheca.asnytasks.LoadDatabaseAsyncTask;
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.CommandManFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.DatabaseLoadingFragment;
-import com.inspiredandroid.linuxcommandbibliotheca.interfaces.CraftDatabaseInterface;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandsDBTableModel;
 import com.inspiredandroid.linuxcommandbibliotheca.sql.CommandsDbHelper;
 
@@ -67,7 +64,7 @@ public class CommandManActivity extends LoadingBaseActivity {
         Intent intent = getIntent();
         Bundle b = intent.getExtras();
 
-        long id = b!= null ? b.getLong(EXTRA_COMMAND_ID, INVALID) : INVALID;
+        long id = b != null ? b.getLong(EXTRA_COMMAND_ID, INVALID) : INVALID;
         String name = b != null ? b.getString(EXTRA_COMMAND_NAME) : null;
 
         if (id != INVALID) {
@@ -137,9 +134,8 @@ public class CommandManActivity extends LoadingBaseActivity {
     }
 
     /**
-     *
-     * @param name command name
-     * @param id unique command id
+     * @param name     command name
+     * @param id       unique command id
      * @param category command category
      */
     private void showManFragment(String name, long id, int category)
