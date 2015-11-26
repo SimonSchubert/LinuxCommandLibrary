@@ -212,7 +212,6 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
     }
 
     /**
-     *
      * @return
      */
     private ScriptsExpandableListAdapter createAdapter()
@@ -351,6 +350,7 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
     /**
      * Split the sentence/script into single words/commands and check if the command exists in the
      * database
+     *
      * @param sentence the scripts
      * @return list of commands which exists in the database
      */
@@ -374,7 +374,7 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
     @Override
     public void onFetchedCommandlineFuCommands(ArrayList<CommandLineFuModel> commandLineFuModels)
     {
-        if(!isAdded()) {
+        if (!isAdded()) {
             return;
         }
 
