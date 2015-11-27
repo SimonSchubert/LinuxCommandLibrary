@@ -2,18 +2,21 @@ package com.inspiredandroid.linuxcommandbibliotheca.fragments;
 
 import android.app.SearchManager;
 import android.content.Context;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.widget.SearchView;
 import android.text.Spanned;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ExpandableListView;
 import android.widget.ImageButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -21,9 +24,11 @@ import android.widget.TextView;
 import com.google.android.gms.appindexing.Action;
 import com.inspiredandroid.linuxcommandbibliotheca.CommandManActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
+import com.inspiredandroid.linuxcommandbibliotheca.adapter.ManExpandableListAdapter;
 import com.inspiredandroid.linuxcommandbibliotheca.asnytasks.GrepManAsHtmlAsyncTask;
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.ConvertManFromHtmlToSpannableInterface;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
+import com.inspiredandroid.linuxcommandbibliotheca.sql.CommandsDbHelper;
 
 import java.text.Normalizer;
 import java.util.ArrayList;
@@ -33,10 +38,9 @@ import java.util.ArrayList;
  */
 public class CommandManFragment extends AppIndexFragment implements ConvertManFromHtmlToSpannableInterface, View.OnClickListener {
 
-    ScrollView scrollView;
-    TextView tvDescription;
-    GrepManAsHtmlAsyncTask asyncTask;
+    ExpandableListView lv;
     String name;
+    long id;
     int category;
     int indexesPosition;
     String query;
@@ -68,14 +72,9 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
 
         // Get unique command id
         Bundle b = getArguments();
-        long id = b.getLong(CommandManActivity.EXTRA_COMMAND_ID);
+        id = b.getLong(CommandManActivity.EXTRA_COMMAND_ID);
         name = b.getString(CommandManActivity.EXTRA_COMMAND_NAME);
         category = b.getInt(CommandManActivity.EXTRA_COMMAND_CATEGORY);
-
-        // load async
-        asyncTask = new GrepManAsHtmlAsyncTask(getActivity(), id, this);
-        asyncTasks.add(asyncTask);
-        asyncTask.execute();
     }
 
     @Override
@@ -83,8 +82,23 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
     {
         View view = inflater.inflate(R.layout.fragment_command_man, container, false);
 
-        scrollView = (ScrollView) view.findViewById(R.id.fragment_command_man_sv);
-        tvDescription = (TextView) view.findViewById(R.id.fragment_command_man_tv);
+        lv = (ExpandableListView) view.findViewById(R.id.fraggment_commandman_elv);
+
+        CommandsDbHelper helper = new CommandsDbHelper(getContext());
+
+        Cursor c = helper.getCommandPagesFromId(id);
+
+        ArrayList<String> groups = new ArrayList<>();
+        ArrayList<String> child = new ArrayList<>();
+        while(c.moveToNext()) {
+            String title = c.getString(c.getColumnIndex("title"));
+            String page = c.getString(c.getColumnIndex("page"));
+            groups.add(title);
+            child.add(page);
+        }
+
+        ManExpandableListAdapter adapter = new ManExpandableListAdapter(getActivity(), groups, child);
+        lv.setAdapter(adapter);
 
         btnUp = (ImageButton) view.findViewById(R.id.fragment_command_man_btn_up);
         btnUp.setOnClickListener(this);
@@ -148,8 +162,8 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
      */
     private void resetSearchResults()
     {
-        String text = tvDescription.getText().toString();
-        tvDescription.setText(text);
+        // String text = tvDescription.getText().toString();
+        // tvDescription.setText(text);
 
         hideButton();
     }
@@ -161,6 +175,7 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
      */
     private void search(String q)
     {
+        /*
         String normalizedText = Normalizer.normalize(tvDescription.getText().toString(), Normalizer.Form.NFD).replaceAll("\\p{InCombiningDiacriticalMarks}+", "").toLowerCase();
 
         // (re)init global variables
@@ -186,7 +201,8 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
         }
 
         // highlight occurs
-        tvDescription.setText(Utils.highlightQueryInsideText(getContext(), query, tvDescription.getText().toString()));
+        // tvDescription.setText(Utils.highlightQueryInsideText(getContext(), query, tvDescription.getText().toString()));
+        */
     }
 
     /**
@@ -196,10 +212,12 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
      */
     private void scrollToPosition(int index)
     {
+        /*
         int line = tvDescription.getLayout().getLineForOffset(index);
         int lineHeight = tvDescription.getLayout().getHeight() / tvDescription.getLayout().getLineCount();
         int position = line * lineHeight;
         scrollView.scrollTo(0, position);
+        */
     }
 
     /**
@@ -247,7 +265,7 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
     @Override
     public void onConvertedHtmlToSpannable(Spanned spannable)
     {
-        tvDescription.setText(spannable);
+
     }
 
     @Override

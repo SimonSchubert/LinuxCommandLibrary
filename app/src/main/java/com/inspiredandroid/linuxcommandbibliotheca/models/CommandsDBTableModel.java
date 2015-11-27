@@ -6,6 +6,7 @@ package com.inspiredandroid.linuxcommandbibliotheca.models;
 public class CommandsDBTableModel {
 
     public final static String TABLE_COMMANDS = "commands"; //NON-NLS
+    public final static String TABLE_COMMANDPAGES = "commandpages"; //NON-NLS
     public final static String TABLE_QUIZ = "quiz"; //NON-NLS
 
     public final static String COL_ID = "_id"; //NON-NLS

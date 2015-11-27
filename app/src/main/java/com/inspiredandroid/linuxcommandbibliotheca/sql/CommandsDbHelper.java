@@ -88,6 +88,27 @@ public class CommandsDbHelper extends SQLiteAssetHelper {
     }
 
     /**
+     * Fetch command from unique id
+     *
+     * @param id unique id
+     * @return
+     */
+    public Cursor getCommandPagesFromId(long id)
+    {
+        return getReadableDatabase().rawQuery("SELECT * FROM " + CommandsDBTableModel.TABLE_COMMANDPAGES + " WHERE commandid = " + id, null);
+    }
+
+    /**
+     * Fetch command page
+     *
+     * @return
+     */
+    public Cursor getAllCommandPages()
+    {
+        return getReadableDatabase().rawQuery("SELECT * FROM " + CommandsDBTableModel.TABLE_COMMANDPAGES , null);
+    }
+
+    /**
      * @param difficulty maximum difficulty
      * @param commands   list of commands which shouldn't be fetched because they were already used in the quiz session
      * @return
