@@ -141,7 +141,7 @@ public class ScriptsExpandableListAdapter extends BaseExpandableListAdapter {
     public View getGroupView(int groupPosition, boolean isExpanded,
                              View convertView, ViewGroup parent)
     {
-        String laptopName = (String) getGroup(groupPosition);
+        String title = (String) getGroup(groupPosition);
         CommandGroupViewHolder holder;
 
         if (convertView == null) {
@@ -157,7 +157,7 @@ public class ScriptsExpandableListAdapter extends BaseExpandableListAdapter {
             holder = (CommandGroupViewHolder) convertView.getTag();
         }
 
-        holder.title.setText(laptopName);
+        holder.title.setText(title);
         holder.size.setText(String.valueOf(mChild.get(groupPosition).size()));
 
         return convertView;

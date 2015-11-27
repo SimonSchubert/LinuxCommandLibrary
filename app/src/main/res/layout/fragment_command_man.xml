@@ -3,24 +3,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-    <ScrollView
-        android:id="@+id/fragment_command_man_sv"
+
+    <ExpandableListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/fragment_command_man_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:autoLink="web|email"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingTop="10dp"
-            android:text=""
-            android:textIsSelectable="true"/>
-
-    </ScrollView>
+        android:id="@+id/fraggment_commandman_elv"/>
 
     <ImageButton
         android:layout_width="wrap_content"
