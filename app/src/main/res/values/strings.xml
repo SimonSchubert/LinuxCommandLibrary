@@ -184,5 +184,6 @@
     <string name="fragment_datanase_loading_failed_craftin_database">Couldn\'t craft database</string>
     <string name="about">About</string>
     <string name="fragment_scriptdescription_share_command">share command</string>
+    <string name="bookmark">bookmark</string>
 
 </resources>

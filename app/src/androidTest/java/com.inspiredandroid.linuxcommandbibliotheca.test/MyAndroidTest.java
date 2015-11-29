@@ -60,127 +60,11 @@ public class MyAndroidTest extends AndroidTestCase {
         helper.close();
     }
 
-
-    public void testRemoveUnnecessaryHtmlTags()
-    {
-        CommandsDbHelper helper = new CommandsDbHelper(mContext);
-
-        Cursor c = helper.getAllCommandPages();
-
-        while (c.moveToNext()) {
-
-            String title = c.getString(c.getColumnIndex("title"));
-            String page = c.getString(c.getColumnIndex("page"));
-            String id = c.getString(c.getColumnIndex("id"));
-
-            page = page.replaceAll("(?i)<font[^>]*>", "");
-            page = page.replaceAll("(?i)</font[^>]*>", "");
-            page = page.replaceAll("(?i)<table[^>]*>", "");
-            page = page.replaceAll("(?i)</table[^>]*>", "");
-            page = page.replaceAll("(?i)<tr[^>]*>", "");
-            page = page.replaceAll("(?i)</tr[^>]*>", "");
-            page = page.replaceAll("(?i)<td[^>]*>", "");
-            page = page.replaceAll("(?i)</td[^>]*>", "");
-            page = page.replaceAll("(?i)<body[^>]*>", "");
-            page = page.replaceAll("(?i)</body[^>]*>", "");
-            page = page.replaceAll("(?i)<html[^>]*>", "");
-            page = page.replaceAll("(?i)</html[^>]*>", "");
-            page = page.replaceAll("(?i)<hr[^>]*>", "");
-
-            // remove style='..'
-            page = page.replaceAll("(?i) style='[^>]*'", "");
-
-            // remove 2 or more spaces
-            page = page.replaceAll(" +", " ");
-
-
-            page = page.trim();
-            title = title.trim();
-
-
-            ContentValues newValues = new ContentValues();
-            newValues.put("page", page);
-            newValues.put("title", title);
-
-            helper.getWritableDatabase().update("commandpages", newValues, "id=" + id, null);
-        }
-
-
-        exportDB();
-    }
-
-    /**
-     * Loop thought all man pages and split by "<h2>" html tag. The tag is standard used as an
-     * optical divider in man pages
-     */
-    public void deactivatedtestSplitManPagesIntoSubpages() {
-        CommandsDbHelper helper = new CommandsDbHelper(mContext);
-
-        Cursor c = helper.getAllCommands();
-
-        String missingOnes = "";
-
-        while(c.moveToNext()) {
-            String manpage = c.getString(c.getColumnIndex(CommandsDBTableModel.COL_MANPAGE));
-            String name = c.getString(c.getColumnIndex(CommandsDBTableModel.COL_NAME));
-            String id = c.getString(c.getColumnIndex(CommandsDBTableModel.COL_ID));
-
-            String d = "<h2>";
-            String[] subpages = manpage.split(d);
-
-            if(subpages.length > 1) {
-                // first method seam to work
-                for (int i = 1; i < subpages.length; i++) {
-                    String subsubpage = subpages[i];
-
-                    String d2 = "</h2>";
-                    String[] phrases = subsubpage.split(d2);
-                    if (phrases.length > 0) {
-                        String title = phrases[0].split("<a")[0];
-                        String man = phrases[1];
-
-                        String sql = "INSERT INTO commandpages (commandid, title, page) VALUES (\""+id+"\",\""+title+"\",\""+man+"\")";
-                        helper.getWritableDatabase().execSQL(sql);
-
-                        ContentValues newValues = new ContentValues();
-                        newValues.put("manpage", "");
-
-                        helper.getWritableDatabase().update("commands", newValues, "_id=" + id, null);
-                    }
-                }
-            }
-        }
-
-        assertTrue("not enought sub pages for " + missingOnes, missingOnes.isEmpty());
-    }
-
-    private void exportDB(){
-        String SAMPLE_DB_NAME = "commands.db";
-        File sd = Environment.getExternalStorageDirectory();
-        File data = Environment.getDataDirectory();
-        FileChannel source;
-        FileChannel destination;
-        String currentDBPath = "/data/"+ "com.inspiredandroid.linuxcommandbibliotheca" +"/databases/"+SAMPLE_DB_NAME;
-
-        File currentDB = new File(data, currentDBPath);
-        File backupDB = new File(sd, SAMPLE_DB_NAME);
-
-        try {
-            source = new FileInputStream(currentDB).getChannel();
-            destination = new FileOutputStream(backupDB).getChannel();
-            destination.transferFrom(source, 0, source.size());
-            source.close();
-            destination.close();
-        } catch(IOException e) {
-            e.printStackTrace();
-        }
-    }
-
     /**
      * Go thought all the man pages links of the scripts fragment
      * @throws Exception
      */
-    public void t2estScriptManPageLinks() throws Exception
+    public void testScriptManPageLinks() throws Exception
     {
         InputStream inputStream = getContext().getResources().openRawResource(R.raw.commands);
 
@@ -203,7 +87,7 @@ public class MyAndroidTest extends AndroidTestCase {
      * Go thought all the man pages links of the tips fragment
      * @throws Exception
      */
-    public void t2estTipsManPageLinks() throws Exception
+    public void testTipsManPageLinks() throws Exception
     {
         final int[] IDS = new int[] {
                 R.array.fragment_tips_background_code_array,

@@ -25,6 +25,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.CommandManActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.CommandsAdapter;
+import com.inspiredandroid.linuxcommandbibliotheca.sql.BookmarkManager;
 import com.inspiredandroid.linuxcommandbibliotheca.sql.CommandsDbHelper;
 
 import java.text.Normalizer;
@@ -141,6 +142,16 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
         mDbHelper.close();
     }
 
+    @Override
+    public void onResume()
+    {
+        super.onResume();
+
+        if(BookmarkManager.hasBookmarkChanged(getContext())) {
+            resetSearchResults();
+        }
+    }
+
     private void startCommandManActivity(long id)
     {
         Intent intent = new Intent(getContext(), CommandManActivity.class);
@@ -158,7 +169,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
 
     private void createAdapter()
     {
-        adapter = new CommandsAdapter(getActivity(), R.layout.row_command_child, mDbHelper.getAllCommands(), true);
+        adapter = new CommandsAdapter(getActivity(), R.layout.row_command_child, mDbHelper.getAllCommands(BookmarkManager.getBookmarkIdsChain(getContext())), true);
     }
 
     /**
@@ -167,7 +178,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
     private void resetSearchResults()
     {
         // Update adapter
-        adapter.updateCursor(mDbHelper.getAllCommands(), "");
+        adapter.updateCursor(mDbHelper.getAllCommands(BookmarkManager.getBookmarkIdsChain(getContext())), "");
     }
 
     /**
@@ -189,7 +200,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
             @Override
             public Cursor loadInBackground()
             {
-                return mDbHelper.getAllCommands();
+                return mDbHelper.getAllCommands(BookmarkManager.getBookmarkIdsChain(getContext()));
             }
         };
     }
