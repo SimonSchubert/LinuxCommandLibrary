@@ -2,6 +2,8 @@ package com.inspiredandroid.linuxcommandbibliotheca.adapter;
 
 import android.content.Context;
 import android.database.Cursor;
+import android.graphics.Color;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.ResourceCursorAdapter;
 import android.view.View;
 import android.widget.ImageView;
@@ -10,6 +12,7 @@ import android.widget.TextView;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandsDBTableModel;
+import com.inspiredandroid.linuxcommandbibliotheca.sql.BookmarkManager;
 
 /**
  * Created by Simon Schubert
@@ -37,6 +40,14 @@ public class CommandsAdapter extends ResourceCursorAdapter {
         int section = cursor.getInt(cursor.getColumnIndex(CommandsDBTableModel.COL_CATEGORY));
         ImageView ivIcon = (ImageView) view.findViewById(R.id.row_command_child_iv_icon);
         ivIcon.setImageResource(getSectionImageResource(section));
+
+        // mark bookmark
+        long id = cursor.getLong(cursor.getColumnIndex(CommandsDBTableModel.COL_ID));
+        if(BookmarkManager.hasBookmark(mContext, id)) {
+            ivIcon.setColorFilter(ContextCompat.getColor(context, R.color.ab_primary));
+        } else {
+            ivIcon.clearColorFilter();
+        }
     }
 
     /**

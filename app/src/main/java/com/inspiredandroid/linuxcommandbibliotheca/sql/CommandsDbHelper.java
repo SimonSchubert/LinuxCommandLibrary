@@ -44,9 +44,10 @@ public class CommandsDbHelper extends SQLiteAssetHelper {
      *
      * @return
      */
-    public Cursor getAllCommands()
+    public Cursor getAllCommands(String bookmarks)
     {
-        return getReadableDatabase().rawQuery("SELECT * FROM " + CommandsDBTableModel.TABLE_COMMANDS + " ORDER BY " + CommandsDBTableModel.COL_NAME + " COLLATE NOCASE ASC", null);
+        return getReadableDatabase().rawQuery("SELECT * FROM " + CommandsDBTableModel.TABLE_COMMANDS + " ORDER BY case when " + CommandsDBTableModel.COL_ID + " in (" + bookmarks + ") then -1 else " + CommandsDBTableModel.COL_NAME + " COLLATE NOCASE end", null);
+        // return getReadableDatabase().rawQuery("SELECT * FROM " + CommandsDBTableModel.TABLE_COMMANDS + " ORDER BY " + CommandsDBTableModel.COL_NAME + " COLLATE NOCASE ASC", null);
     }
 
     /**

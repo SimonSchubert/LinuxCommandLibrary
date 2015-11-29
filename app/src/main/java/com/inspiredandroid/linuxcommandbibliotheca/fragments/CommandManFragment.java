@@ -8,8 +8,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.widget.SearchView;
-import android.text.Spanned;
-import android.util.Log;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -18,19 +17,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
 import android.widget.ImageButton;
-import android.widget.ScrollView;
-import android.widget.TextView;
 
 import com.google.android.gms.appindexing.Action;
 import com.inspiredandroid.linuxcommandbibliotheca.CommandManActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.ManExpandableListAdapter;
-import com.inspiredandroid.linuxcommandbibliotheca.asnytasks.GrepManAsHtmlAsyncTask;
+import com.inspiredandroid.linuxcommandbibliotheca.asnytasks.SearchManAsyncTask;
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.ConvertManFromHtmlToSpannableInterface;
-import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
+import com.inspiredandroid.linuxcommandbibliotheca.sql.BookmarkManager;
 import com.inspiredandroid.linuxcommandbibliotheca.sql.CommandsDbHelper;
 
-import java.text.Normalizer;
 import java.util.ArrayList;
 
 /**
@@ -39,6 +35,7 @@ import java.util.ArrayList;
 public class CommandManFragment extends AppIndexFragment implements ConvertManFromHtmlToSpannableInterface, View.OnClickListener {
 
     ExpandableListView lv;
+    ManExpandableListAdapter adapter;
     String name;
     long id;
     int category;
@@ -75,6 +72,8 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
         id = b.getLong(CommandManActivity.EXTRA_COMMAND_ID);
         name = b.getString(CommandManActivity.EXTRA_COMMAND_NAME);
         category = b.getInt(CommandManActivity.EXTRA_COMMAND_CATEGORY);
+
+        adapter = createAdapter();
     }
 
     @Override
@@ -83,21 +82,6 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
         View view = inflater.inflate(R.layout.fragment_command_man, container, false);
 
         lv = (ExpandableListView) view.findViewById(R.id.fraggment_commandman_elv);
-
-        CommandsDbHelper helper = new CommandsDbHelper(getContext());
-
-        Cursor c = helper.getCommandPagesFromId(id);
-
-        ArrayList<String> groups = new ArrayList<>();
-        ArrayList<String> child = new ArrayList<>();
-        while(c.moveToNext()) {
-            String title = c.getString(c.getColumnIndex("title"));
-            String page = c.getString(c.getColumnIndex("page"));
-            groups.add(title);
-            child.add(page);
-        }
-
-        ManExpandableListAdapter adapter = new ManExpandableListAdapter(getActivity(), groups, child);
         lv.setAdapter(adapter);
 
         btnUp = (ImageButton) view.findViewById(R.id.fragment_command_man_btn_up);
@@ -155,6 +139,84 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
                 }
             });
         }
+
+        MenuItem bookmarkItem = menu.findItem(R.id.bookmark);
+        bookmarkItem.setIcon(BookmarkManager.hasBookmark(getContext(), id) ? android.R.drawable.ic_menu_revert : android.R.drawable.ic_menu_save);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        if (item.getItemId() == R.id.bookmark) {
+            toogleBookmarkState();
+            getActivity().supportInvalidateOptionsMenu();
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * Split String every partitionSize character
+     * @param string
+     * @param partitionSize
+     * @return
+     */
+    private static ArrayList<String> getParts(String string, int partitionSize) {
+        ArrayList<String> parts = new ArrayList<>();
+        int len = string.length();
+        for (int i=0; i<len; i+=partitionSize)
+        {
+            parts.add(string.substring(i, Math.min(len, i + partitionSize)));
+        }
+        return parts;
+    }
+
+    /**
+     * Split long page text into child list views
+     * @return
+     */
+    private ManExpandableListAdapter createAdapter() {
+        CommandsDbHelper helper = new CommandsDbHelper(getContext());
+
+        Cursor c = helper.getCommandPagesFromId(id);
+
+        ArrayList<String> groups = new ArrayList<>();
+        ArrayList<ArrayList<CharSequence>>  child = new ArrayList<>();
+        while(c.moveToNext()) {
+            String title = c.getString(c.getColumnIndex("title"));
+            String page = c.getString(c.getColumnIndex("page"));
+            groups.add(title);
+
+            CharSequence chars = Html.fromHtml(page);
+
+            ArrayList<CharSequence> pageSplit = new ArrayList<>();
+            String[] tmp = chars.toString().split("\\r?\\n");
+            for(String tmpSplit : tmp) {
+                if(tmpSplit.length()<600) {
+                    if(!tmpSplit.isEmpty()) {
+                        pageSplit.add(tmpSplit);
+                    }
+                } else {
+                    pageSplit.addAll(getParts(tmpSplit, 600));
+                }
+            }
+            child.add(pageSplit);
+        }
+
+        c.close();
+
+        helper.close();
+
+        return new ManExpandableListAdapter(getActivity(), groups, child);
+    }
+
+    private void toogleBookmarkState()
+    {
+        if(BookmarkManager.hasBookmark(getContext(), id)) {
+            BookmarkManager.removeBookmark(getContext(), id);
+        } else {
+            BookmarkManager.addBookmark(getContext(), id);
+        }
     }
 
     /**
@@ -162,8 +224,9 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
      */
     private void resetSearchResults()
     {
-        // String text = tvDescription.getText().toString();
-        // tvDescription.setText(text);
+        SearchManAsyncTask async = new SearchManAsyncTask(getContext(), "", adapter.mChild, this);
+        asyncTasks.add(async);
+        async.execute();
 
         hideButton();
     }
@@ -175,23 +238,10 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
      */
     private void search(String q)
     {
+        SearchManAsyncTask async = new SearchManAsyncTask(getContext(), q, adapter.mChild, this);
+        asyncTasks.add(async);
+        async.execute();
         /*
-        String normalizedText = Normalizer.normalize(tvDescription.getText().toString(), Normalizer.Form.NFD).replaceAll("\\p{InCombiningDiacriticalMarks}+", "").toLowerCase();
-
-        // (re)init global variables
-        indexes.clear();
-        indexesPosition = 0;
-        query = q;
-        int indexStart = 0;
-
-        // find all indexes
-        while (normalizedText.indexOf(q, indexStart) != -1) {
-
-            indexStart = normalizedText.indexOf(q, indexStart);
-            indexes.add(indexStart);
-            indexStart++;
-        }
-
         // jump to first occur
         if (indexes.size() > 0) {
             showButton();
@@ -201,7 +251,7 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
         }
 
         // highlight occurs
-        // tvDescription.setText(Utils.highlightQueryInsideText(getContext(), query, tvDescription.getText().toString()));
+        tvDescription.setText(Utils.highlightQueryInsideText(getContext(), query, tvDescription.getText().toString()));
         */
     }
 
@@ -263,9 +313,10 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
     }
 
     @Override
-    public void onConvertedHtmlToSpannable(Spanned spannable)
+    public void onConvertedHtmlToSpannable(ArrayList<ArrayList<CharSequence>> spannable)
     {
-
+        adapter.mChild = spannable;
+        adapter.notifyDataSetChanged();
     }
 
     @Override

@@ -60,8 +60,8 @@ public class TipFragment extends AppIndexFragment implements View.OnClickListene
 
         view.findViewById(R.id.fragment_tips_btn_quiz).setOnClickListener(this);
         tvRedirection = (TextView) view.findViewById(R.id.fragment_tips_tv_redirection);
+
         ClickableTextView tvLinkToRedirection = (ClickableTextView) view.findViewById(R.id.fragment_tips_tv_link_to_redirection);
-        tvLinkToRedirection.setClickableWord("below");
         tvLinkToRedirection.setClickInterface(new ClickInterface() {
             @Override
             public void onClick()
@@ -69,6 +69,7 @@ public class TipFragment extends AppIndexFragment implements View.OnClickListene
                 scrollToRedirectionView();
             }
         });
+        tvLinkToRedirection.setClickableWord("below");
 
         return view;
     }

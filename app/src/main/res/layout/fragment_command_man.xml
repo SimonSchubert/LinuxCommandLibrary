@@ -7,7 +7,8 @@
     <ExpandableListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/fraggment_commandman_elv"/>
+        android:id="@+id/fraggment_commandman_elv"
+        android:divider="@null"/>
 
     <ImageButton
         android:layout_width="wrap_content"

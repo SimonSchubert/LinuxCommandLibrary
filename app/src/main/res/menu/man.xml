@@ -10,4 +10,11 @@
         android:title="@string/search_for_command"
         app:actionViewClass="android.support.v7.widget.SearchView"
         app:showAsAction="collapseActionView|ifRoom"/>
+
+    <item
+        android:id="@+id/bookmark"
+        android:hint="@string/bookmark"
+        android:icon="@android:drawable/ic_menu_save"
+        android:title="@string/bookmark"
+        app:showAsAction="ifRoom"/>
 </menu>

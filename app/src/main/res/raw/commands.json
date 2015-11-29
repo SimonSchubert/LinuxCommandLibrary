@@ -364,7 +364,7 @@
             "man": "netcat"
           },
           {
-            "man": "netcat"
+            "man": "tail"
           }
         ]
       }
