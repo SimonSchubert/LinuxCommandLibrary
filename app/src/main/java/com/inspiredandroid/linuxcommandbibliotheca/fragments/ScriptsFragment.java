@@ -257,7 +257,7 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
                 || async.getStatus() == AsyncTask.Status.FINISHED) {
             adapter.setLoading();
             async = new FetchCommandlineFuCommandsAsyncTask(
-                    getActivity(), this, fetchedCommandlineFuPages);
+                    getContext(), this, fetchedCommandlineFuPages);
             asyncTasks.add(async);
             async.execute();
             fetchedCommandlineFuPages++;
@@ -347,42 +347,13 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
         isSearching = true;
     }
 
-    /**
-     * Split the sentence/script into single words/commands and check if the command exists in the
-     * database
-     *
-     * @param sentence the scripts
-     * @return list of commands which exists in the database
-     */
-    private ArrayList<String> getManPages(String sentence)
-    {
-        String[] words = sentence.split("\\s+");
-        for (int i = 0; i < words.length; i++) {
-            words[i] = words[i].replaceAll("[^\\w]", "");
-        }
-        ArrayList<String> mans = new ArrayList<>();
-        for (String word : words) {
-            CommandsDbHelper helper = new CommandsDbHelper(getContext());
-            Cursor c = helper.getCommandFromName(word);
-            if (c.getCount() > 0) {
-                mans.add(word);
-            }
-        }
-        return mans;
-    }
-
     @Override
-    public void onFetchedCommandlineFuCommands(ArrayList<CommandLineFuModel> commandLineFuModels)
+    public void onFetchedCommandlineFuCommands(ArrayList<CommandGroupModel> commands)
     {
         if (!isAdded()) {
             return;
         }
 
-        ArrayList<CommandGroupModel> commands = new ArrayList<>();
-        // convert commandlinefu json models to linux command bibliotheca models
-        for (CommandLineFuModel commandLineFuModel : commandLineFuModels) {
-            commands.add(new CommandGroupModel(commandLineFuModel.getCommand(), commandLineFuModel.getSummary(), getManPages(commandLineFuModel.getCommand())));
-        }
         adapter.addEntries(ScriptsExpandableListAdapter.GROUP_COMMANDLINEFU, commands);
         adapter.setLoadingFinished();
     }

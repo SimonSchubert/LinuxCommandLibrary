@@ -153,7 +153,7 @@ public class ManExpandableListAdapter extends BaseExpandableListAdapter {
         CommandsDbHelper helper = new CommandsDbHelper(mContext);
 
         // match "command(category)" e.g: gzip(1)
-        Pattern p = Pattern.compile("[[:word:]]+\\s?\\(\\w\\)");
+        Pattern p = Pattern.compile("[[:graph:]]+\\s?\\(\\w\\)");
         Matcher m = p.matcher(description);
 
         // loop results and add if command exists in db
