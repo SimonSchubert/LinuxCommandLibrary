@@ -10,6 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:paddingStart="25dp"/>
+        android:paddingStart="25dp"
+        android:paddingLeft="25dp"/>
 
 </LinearLayout>

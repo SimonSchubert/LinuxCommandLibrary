@@ -14,14 +14,12 @@
 
     <TextView
         android:id="@+id/row_script_child_tv_title"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:layout_weight="1"
+        android:layout_marginLeft="25dp"
         android:ellipsize="end"
         android:lines="1"
-        android:maxLines="2"
-        android:text=""
         android:textSize="16sp"
         android:textStyle="bold"/>
 

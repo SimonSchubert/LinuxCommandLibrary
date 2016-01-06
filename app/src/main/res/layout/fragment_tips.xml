@@ -38,7 +38,9 @@
             style="@style/TextNormal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="To clear the terminal use the command below or press Ctrl+L on your keyboard."/>
+            android:textDirection="anyRtl"
+            android:text="To clear the terminal use the command below or press Ctrl+L on your keyboard."
+            />
 
         <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
             style="@style/TextCode"
@@ -79,6 +81,45 @@
             android:layout_height="wrap_content"
             android:text="@string/fragment_tips_history_code"
             custom:commands="@array/fragment_tips_history_code_array"/>
+
+        <TextView
+            style="@style/TextMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Close a frozen window/application"/>
+
+        <TextView
+            style="@style/TextNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Execute the command and click on the frozen window."/>
+
+        <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+            style="@style/TextCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_tips_xkill_code"
+            custom:commands="@array/fragment_tips_xkill_code_array"/>
+
+        <TextView
+            style="@style/TextNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Or find the process id of an application and kill it."/>
+
+        <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+            style="@style/TextCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_tips_ps_code"
+            custom:commands="@array/fragment_tips_ps_code_array"/>
+
+        <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+            style="@style/TextCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_tips_killps_code"
+            custom:commands="@array/fragment_tips_killps_code_array"/>
 
         <TextView
             style="@style/TextMedium"

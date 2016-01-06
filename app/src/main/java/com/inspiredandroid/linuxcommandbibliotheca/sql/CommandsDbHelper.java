@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class CommandsDbHelper extends SQLiteAssetHelper {
 
     // Update database version after update/schema change
-    public static final int DATABASE_VERSION = 3;
+    public static final int DATABASE_VERSION = 4;
     public static final String DATABASE_NAME = "commands.db";
 
     public CommandsDbHelper(Context context)
@@ -114,10 +114,10 @@ public class CommandsDbHelper extends SQLiteAssetHelper {
      * @param commands   list of commands which shouldn't be fetched because they were already used in the quiz session
      * @return
      */
-    public Cursor getQuiz(int difficulty, ArrayList<String> commands)
+    public Cursor getQuiz(int difficulty, ArrayList<String> commands, int type)
     {
         String wherePart = CommandsDBTableModel.COL_NAME + " NOT LIKE ";
-        String whereClause = " AND ";
+        String whereClause = " AND type = "+type+" AND ";
         for (String command : commands) {
             whereClause += wherePart + "'" + command + "' AND ";
         }

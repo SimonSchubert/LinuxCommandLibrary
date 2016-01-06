@@ -7,15 +7,18 @@
 
     <TextView
         android:id="@+id/row_command_group_tv_title"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:paddingStart="25dp"/>
+        android:paddingStart="25dp"
+        android:paddingLeft="25dp"
+        android:text="asd"/>
 
     <TextView
         android:id="@+id/row_command_group_tv_size"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""/>
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:text="asd"/>
 
 </LinearLayout>
