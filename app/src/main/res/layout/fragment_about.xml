@@ -11,6 +11,59 @@
         android:paddingLeft="10dp"
         android:paddingRight="10dp">
 
+
+        <TextView
+            style="@style/LicenseLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other projects"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fragment_about_btn_remote"
+                    android:src="@drawable/ic_remote"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home Remote Control"
+                    android:id="@+id/textView28"
+                    android:maxWidth="120dp"
+                    android:gravity="center_horizontal"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fragment_about_btn_orcgenocide"
+                    android:src="@drawable/ic_org_genocide"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Orc Genocide"
+                    android:gravity="center_horizontal"/>
+            </LinearLayout>
+        </LinearLayout>
+
         <TextView
             android:id="@+id/textView23"
             style="@style/LicenseLarge"
@@ -30,19 +83,6 @@
             android:layout_height="wrap_content"
             android:autoLink="web"
             android:text="https://github.com/SimonSchubert/LinuxCommandBibliotheca"/>
-
-        <TextView
-            android:id="@+id/textView25"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="This project was originally part of another project called &apos;Home Remote Control&apos;. It&apos;s a highly customizable Linux remote control. Rating up both projects automatically effects in me spending time in improving both projects. Because higher rating = more users = higher interest in improving the projects. Thanks."/>
-
-        <TextView
-            android:id="@+id/textView26"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:autoLink="web"
-            android:text="https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcontrolcenter"/>
 
         <TextView
             android:id="@+id/textView21"

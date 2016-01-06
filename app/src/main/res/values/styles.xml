@@ -31,6 +31,7 @@
         <item name="android:layout_marginBottom">2dp</item>
         <item name="android:textIsSelectable">true</item>
         <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginStart">8dp</item>
     </style>
 
     <style name="LicenseMedium">

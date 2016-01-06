@@ -75,6 +75,11 @@
         <item>history</item>
     </string-array>
 
+    <string name="fragment_tips_xkill_code">" $ xkill "</string>
+    <string-array name="fragment_tips_xkill_code_array">
+        <item>xkill</item>
+    </string-array>
+
     <string name="fragment_tips_tv_special_characters_code_star">" $ find ex*.txt "</string>
     <string-array name="fragment_tips_special_characters_code_star_array">
         <item>find</item>
@@ -89,6 +94,17 @@
     <string-array name="fragment_tips_pipe_code_array">
         <item>fortune</item>
         <item>cowsay</item>
+    </string-array>
+
+    <string name="fragment_tips_ps_code">" $ ps ax | grep firefox "</string>
+    <string-array name="fragment_tips_ps_code_array">
+        <item>ps</item>
+        <item>grep</item>
+    </string-array>
+
+    <string name="fragment_tips_killps_code">" $ kill [processID] "</string>
+    <string-array name="fragment_tips_killps_code_array">
+        <item>kill</item>
     </string-array>
 
     <string name="fragment_tips_special_characters_code_questionmark">" $ find ex?mple.txt "</string>
@@ -178,6 +194,7 @@
         <item>rm</item>
     </string-array>
 
+
     <item name="ID" type="id"/>
 
     <string name="fragment_datanase_loading_craftin_database">Crafting Database</string>
@@ -185,5 +202,7 @@
     <string name="about">About</string>
     <string name="fragment_scriptdescription_share_command">share command</string>
     <string name="bookmark">bookmark</string>
+    <string name="fragment_quiz_help">Help</string>
+    <string name="fragment_quiz_give_up">Give up</string>
 
 </resources>

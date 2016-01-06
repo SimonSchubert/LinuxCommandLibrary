@@ -17,7 +17,6 @@
             android:gravity="center"
             android:orientation="vertical">
 
-
             <TextView
                 android:id="@+id/fragment_quiz_tv_question"
                 android:layout_width="match_parent"
@@ -37,6 +36,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:background="@null"
                 android:scaleType="centerCrop"
@@ -52,40 +52,41 @@
             android:gravity="center_horizontal"
             >
 
+
             <Button
                 android:id="@+id/fragment_quiz_btn_answer1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="false"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="false"
-                android:layout_centerHorizontal="true"
                 android:layout_marginBottom="3dp"
                 android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 android:minWidth="115dp"
-                android:text=""/>
+                android:textAllCaps="false"
+                android:text=""
+                />
 
             <Button
                 android:id="@+id/fragment_quiz_btn_answer2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="false"
                 android:layout_marginLeft="3dp"
+                android:layout_marginStart="3dp"
                 android:layout_toEndOf="@+id/fragment_quiz_btn_answer1"
                 android:layout_toRightOf="@+id/fragment_quiz_btn_answer1"
                 android:minWidth="115dp"
+                android:textAllCaps="false"
                 android:text=""/>
 
             <Button
                 android:id="@+id/fragment_quiz_btn_answer3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="false"
-                android:layout_alignParentStart="true"
                 android:layout_below="@+id/fragment_quiz_btn_answer1"
                 android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
                 android:layout_marginTop="3dp"
                 android:minWidth="115dp"
+                android:textAllCaps="false"
                 android:text=""/>
 
             <Button
@@ -94,10 +95,46 @@
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/fragment_quiz_btn_answer3"
                 android:layout_marginLeft="3dp"
+                android:layout_marginStart="3dp"
                 android:layout_toEndOf="@+id/fragment_quiz_btn_answer3"
                 android:layout_toRightOf="@+id/fragment_quiz_btn_answer3"
                 android:minWidth="115dp"
+                android:textAllCaps="false"
                 android:text=""/>
+
+
+            <EditText
+                android:id="@+id/fragment_quiz_et_alesson"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:inputType="textNoSuggestions"
+                />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fragment_quiz_et_alesson"
+                android:layout_alignRight="@+id/fragment_quiz_et_alesson"
+                android:layout_alignEnd="@+id/fragment_quiz_et_alesson"
+                android:layout_alignLeft="@+id/fragment_quiz_et_alesson"
+                android:layout_alignStart="@+id/fragment_quiz_et_alesson"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fragment_quiz_help"
+                    android:id="@+id/fragment_quiz_btn_help"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fragment_quiz_give_up"
+                    android:id="@+id/fragment_quiz_btn_giveup"/>
+            </LinearLayout>
+
         </RelativeLayout>
 
     </LinearLayout>

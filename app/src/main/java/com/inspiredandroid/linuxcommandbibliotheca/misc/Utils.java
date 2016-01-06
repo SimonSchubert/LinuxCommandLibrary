@@ -25,6 +25,7 @@ public class Utils {
 
     public final static String PACKAGE_LINUXREMOTE = "com.inspiredandroid.linuxcontrolcenter";
     public final static String PACKAGE_LINUXREMOTE_PRO = "com.inspiredandroid.linuxcontrolcenterpro";
+    public static final String PACKAGE_ORCGENOCIDE = "com.inspiredandroid.orcgenocide";
 
     /**
      * @param context
@@ -89,16 +90,16 @@ public class Utils {
     /**
      * Clone string array list
      *
-     * @param dogList
+     * @param list
      * @return
      */
-    public static ArrayList<String> cloneList(ArrayList<String> dogList)
+    public static ArrayList<String> cloneList(ArrayList<String> list)
     {
-        if (dogList == null) {
+        if (list == null) {
             return null;
         }
-        ArrayList<String> clonedList = new ArrayList<>(dogList.size());
-        for (String dog : dogList) {
+        ArrayList<String> clonedList = new ArrayList<>(list.size());
+        for (String dog : list) {
             clonedList.add(dog);
         }
         return clonedList;
