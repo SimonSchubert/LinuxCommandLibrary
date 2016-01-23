@@ -20,7 +20,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.fragments.QuizFragment;
  */
 public class QuizActivity extends BaseActivity {
 
-    public TextView tvCounter;
+    private TextView mTvCounter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -31,7 +31,7 @@ public class QuizActivity extends BaseActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        tvCounter = (TextView) findViewById(R.id.activity_quiz_tv_counter);
+        mTvCounter = (TextView) findViewById(R.id.activity_quiz_tv_counter);
 
         assert getSupportActionBar() != null;
 
@@ -87,4 +87,8 @@ public class QuizActivity extends BaseActivity {
         dialog.show();
     }
 
+    public void setCounterText(String format)
+    {
+        mTvCounter.setText(format);
+    }
 }

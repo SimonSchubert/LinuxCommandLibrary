@@ -1,8 +1,9 @@
 [
   {
+    "id": 0,
     "category": 0,
     "iconResource": "icon_info_interface",
-    "desc": 0,
+    "desc": 30,
     "commands": [
       {
         "compatibility": [
@@ -71,6 +72,7 @@
     ]
   },
   {
+    "id": 1,
     "category": 0,
     "iconResource": "icon_info_interface",
     "desc": 1,
@@ -135,6 +137,7 @@
     ]
   },
   {
+    "id": 2,
     "category": 0,
     "iconResource": "icon_info_interface",
     "desc": 2,
@@ -156,6 +159,7 @@
     ]
   },
   {
+    "id": 3,
     "category": 0,
     "iconResource": "icon_info_interface",
     "desc": 3,
@@ -177,6 +181,7 @@
     ]
   },
   {
+    "id": 4,
     "category": 0,
     "iconResource": "icon_info_interface",
     "desc": 4,
@@ -192,6 +197,7 @@
     ]
   },
   {
+    "id": 5,
     "category": 0,
     "iconResource": "icon_info_memory",
     "desc": 5,
@@ -207,6 +213,7 @@
     ]
   },
   {
+    "id": 6,
     "category": 1,
     "iconResource": "icon_lock_screen",
     "desc": 6,
@@ -242,6 +249,7 @@
     ]
   },
   {
+    "id": 7,
     "category": 1,
     "iconResource": "icon_unlock_screen",
     "desc": 7,
@@ -277,6 +285,7 @@
     ]
   },
   {
+    "id": 8,
     "category": 0,
     "iconResource": "icon_info_linux",
     "desc": 8,
@@ -292,6 +301,7 @@
     ]
   },
   {
+    "id": 9,
     "category": 0,
     "iconResource": "icon_info_devices",
     "desc": 9,
@@ -307,6 +317,7 @@
     ]
   },
   {
+    "id": 10,
     "category": 0,
     "iconResource": "icon_info_usb",
     "desc": 10,
@@ -322,6 +333,7 @@
     ]
   },
   {
+    "id": 11,
     "category": 0,
     "iconResource": "icon_info_devices",
     "desc": 11,
@@ -337,6 +349,7 @@
     ]
   },
   {
+    "id": 12,
     "category": 0,
     "iconResource": "icon_info_ip",
     "desc": 12,
@@ -371,6 +384,7 @@
     ]
   },
   {
+    "id": 13,
     "category": 1,
     "iconResource": "icon_restart",
     "desc": 13,
@@ -394,6 +408,7 @@
     ]
   },
   {
+    "id": 14,
     "category": 1,
     "iconResource": "icon_shutdown",
     "desc": 14,
@@ -425,6 +440,7 @@
     ]
   },
   {
+    "id": 15,
     "category": 1,
     "iconResource": "icon_shutdown",
     "desc": 15,
@@ -440,6 +456,7 @@
     ]
   },
   {
+    "id": 16,
     "category": 0,
     "iconResource": "icon_info_ssh",
     "desc": 16,
@@ -455,6 +472,7 @@
     ]
   },
   {
+    "id": 17,
     "category": 0,
     "iconResource": "icon_info_uptime",
     "desc": 17,
@@ -470,6 +488,7 @@
     ]
   },
   {
+    "id": 18,
     "category": 0,
     "iconResource": "icon_info_storage",
     "desc": 18,
@@ -485,6 +504,7 @@
     ]
   },
   {
+    "id": 19,
     "category": 0,
     "iconResource": "icon_info_bootlog",
     "desc": 19,
@@ -500,6 +520,7 @@
     ]
   },
   {
+    "id": 20,
     "category": 2,
     "iconResource": "icon_desktop",
     "desc": 20,
@@ -518,6 +539,7 @@
     ]
   },
   {
+    "id": 21,
     "category": 2,
     "iconResource": "icon_webcam",
     "desc": 21,
@@ -533,6 +555,7 @@
     ]
   },
   {
+    "id": 22,
     "category": 1,
     "iconResource": "icon_stop_bluetooth",
     "desc": 22,
@@ -548,6 +571,7 @@
     ]
   },
   {
+    "id": 23,
     "category": 1,
     "iconResource": "icon_start_bluetooth",
     "desc": 23,
@@ -563,6 +587,7 @@
     ]
   },
   {
+    "id": 24,
     "category": 1,
     "iconResource": "icon_stop_wifi",
     "desc": 24,
@@ -578,6 +603,7 @@
     ]
   },
   {
+    "id": 25,
     "category": 1,
     "iconResource": "icon_start_wifi",
     "desc": 25,
@@ -593,6 +619,7 @@
     ]
   },
   {
+    "id": 26,
     "category": 2,
     "iconResource": "icon_bullhorn",
     "desc": 26,
@@ -608,6 +635,7 @@
     ]
   },
   {
+    "id": 27,
     "category": 2,
     "iconResource": "icon_music",
     "desc": 27,
@@ -631,6 +659,7 @@
     ]
   },
   {
+    "id": 28,
     "category": 2,
     "iconResource": "icon_music",
     "desc": 28,
@@ -646,6 +675,7 @@
     ]
   },
   {
+    "id": 29,
     "category": 1,
     "iconResource": "icon_lock_screen",
     "desc": 29,

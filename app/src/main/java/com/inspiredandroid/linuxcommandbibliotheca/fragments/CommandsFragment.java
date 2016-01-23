@@ -35,9 +35,8 @@ import java.text.Normalizer;
  */
 public class CommandsFragment extends Fragment implements AdapterView.OnItemClickListener, LoaderManager.LoaderCallbacks<Cursor> {
 
-    CommandsAdapter adapter;
-    ListView list;
-    CommandsDbHelper mDbHelper;
+    private CommandsAdapter mAdapter;
+    private CommandsDbHelper mDbHelper;
 
     public CommandsFragment()
     {
@@ -60,10 +59,10 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
     {
         View view = inflater.inflate(R.layout.fragment_commands, container, false);
 
-        // Init list view
-        list = (ListView) view.findViewById(R.id.fragment_commands_lv);
-        list.setAdapter(adapter);
-        list.setOnItemClickListener(this);
+        // Init mList view
+        ListView mList = (ListView) view.findViewById(R.id.fragment_commands_lv);
+        mList.setAdapter(mAdapter);
+        mList.setOnItemClickListener(this);
 
         return view;
     }
@@ -147,7 +146,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
     {
         super.onResume();
 
-        if(BookmarkManager.hasBookmarkChanged(getContext())) {
+        if (BookmarkManager.hasBookmarkChanged(getContext())) {
             resetSearchResults();
         }
     }
@@ -169,27 +168,27 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
 
     private void createAdapter()
     {
-        adapter = new CommandsAdapter(getActivity(), R.layout.row_command_child, mDbHelper.getAllCommands(BookmarkManager.getBookmarkIdsChain(getContext())), true);
+        mAdapter = new CommandsAdapter(getActivity(), R.layout.row_command_child, mDbHelper.getAllCommands(BookmarkManager.getBookmarkIdsChain(getContext())), true);
     }
 
     /**
-     * reset adapter entries
+     * reset mAdapter entries
      */
     private void resetSearchResults()
     {
-        // Update adapter
-        adapter.updateCursor(mDbHelper.getAllCommands(BookmarkManager.getBookmarkIdsChain(getContext())), "");
+        // Update mAdapter
+        mAdapter.updateCursor(mDbHelper.getAllCommands(BookmarkManager.getBookmarkIdsChain(getContext())), "");
     }
 
     /**
-     * search for query in all commands and update adapter
+     * search for query in all commands and update mAdapter
      *
      * @param query
      */
     private void search(String query)
     {
-        // Update adapter
-        adapter.updateCursor(mDbHelper.searchCommands(query), query);
+        // Update mAdapter
+        mAdapter.updateCursor(mDbHelper.searchCommands(query), query);
     }
 
     @Override
@@ -211,7 +210,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
         // The asynchronous load is complete and the data
         // is now available for use. Only now can we associate
         // the queried Cursor with the SimpleCursorAdapter.
-        adapter.updateCursor(data, "");
+        mAdapter.updateCursor(data, "");
     }
 
     @Override
@@ -220,6 +219,6 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
         // For whatever reason, the Loader's data is now unavailable.
         // Remove any references to the old data by replacing it with
         // a null Cursor.
-        adapter.updateCursor(null, "");
+        mAdapter.updateCursor(null, "");
     }
 }

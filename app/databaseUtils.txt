@@ -82,7 +82,7 @@
                         ContentValues newValues = new ContentValues();
                         newValues.put("manpage", "");
 
-                        helper.getWritableDatabase().update("commands", newValues, "_id=" + id, null);
+                        helper.getWritableDatabase().update("mCommands", newValues, "_id=" + id, null);
                     }
                 }
             }
@@ -92,7 +92,7 @@
     }
 
     private void exportDB(){
-        String SAMPLE_DB_NAME = "commands.db";
+        String SAMPLE_DB_NAME = "mCommands.db";
         File sd = Environment.getExternalStorageDirectory();
         File data = Environment.getDataDirectory();
         FileChannel source;

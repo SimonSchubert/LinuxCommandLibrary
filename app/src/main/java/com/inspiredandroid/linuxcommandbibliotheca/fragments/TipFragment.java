@@ -24,8 +24,8 @@ import com.inspiredandroid.linuxcommandbibliotheca.view.ClickableTextView;
  */
 public class TipFragment extends AppIndexFragment implements View.OnClickListener {
 
-    ScrollView view;
-    TextView tvRedirection;
+    private ScrollView mView;
+    private TextView mTvRedirection;
 
     public TipFragment()
     {
@@ -56,12 +56,12 @@ public class TipFragment extends AppIndexFragment implements View.OnClickListene
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
-        view = (ScrollView) inflater.inflate(R.layout.fragment_tips, container, false);
+        mView = (ScrollView) inflater.inflate(R.layout.fragment_tips, container, false);
 
-        view.findViewById(R.id.fragment_tips_btn_quiz).setOnClickListener(this);
-        tvRedirection = (TextView) view.findViewById(R.id.fragment_tips_tv_redirection);
+        mView.findViewById(R.id.fragment_tips_btn_quiz).setOnClickListener(this);
+        mTvRedirection = (TextView) mView.findViewById(R.id.fragment_tips_tv_redirection);
 
-        ClickableTextView tvLinkToRedirection = (ClickableTextView) view.findViewById(R.id.fragment_tips_tv_link_to_redirection);
+        ClickableTextView tvLinkToRedirection = (ClickableTextView) mView.findViewById(R.id.fragment_tips_tv_link_to_redirection);
         tvLinkToRedirection.setClickInterface(new ClickInterface() {
             @Override
             public void onClick()
@@ -71,7 +71,7 @@ public class TipFragment extends AppIndexFragment implements View.OnClickListene
         });
         tvLinkToRedirection.setClickableWord("below");
 
-        return view;
+        return mView;
     }
 
     @Override
@@ -106,11 +106,11 @@ public class TipFragment extends AppIndexFragment implements View.OnClickListene
 
     private void scrollToRedirectionView()
     {
-        view.post(new Runnable() {
+        mView.post(new Runnable() {
             @Override
             public void run()
             {
-                view.scrollTo(0, tvRedirection.getBottom());
+                mView.scrollTo(0, mTvRedirection.getBottom());
             }
         });
     }

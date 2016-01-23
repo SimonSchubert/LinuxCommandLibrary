@@ -29,11 +29,11 @@ public class QuizPreviousResultDialogFragment extends DialogFragment implements 
     private final static String EXTRA_KEY_CORRECT_ANSWER_ID = "EXTRA_KEY_CORRECT_ANSWER_ID";
 
     // list of commandGroupModel
-    ArrayList<String> answers;
+    ArrayList<String> mAnswers;
     // correct answer id
-    int correctAnswerId;
+    int mCorrectAnswerId;
     // database
-    CommandsDbHelper databaseHelper;
+    CommandsDbHelper mDatabaseHelper;
 
     public static QuizPreviousResultDialogFragment getInstance(ArrayList<String> answers, int correctAnswer)
     {
@@ -52,7 +52,7 @@ public class QuizPreviousResultDialogFragment extends DialogFragment implements 
     {
         super.onCreate(savedInstanceState);
 
-        databaseHelper = new CommandsDbHelper(getContext());
+        mDatabaseHelper = new CommandsDbHelper(getContext());
     }
 
     /**
@@ -66,8 +66,8 @@ public class QuizPreviousResultDialogFragment extends DialogFragment implements 
         // Inflate the layout to use as dialog or embedded fragment
         View view = inflater.inflate(R.layout.fragment_quiz_result, container, false);
 
-        answers = getArguments().getStringArrayList(EXTRA_KEY_ANSWERS);
-        correctAnswerId = getArguments().getInt(EXTRA_KEY_CORRECT_ANSWER_ID);
+        mAnswers = getArguments().getStringArrayList(EXTRA_KEY_ANSWERS);
+        mCorrectAnswerId = getArguments().getInt(EXTRA_KEY_CORRECT_ANSWER_ID);
 
 
         int[] CLICKABLES = new int[]{R.id.fragment_quiz_result_btn_answer1, R.id.fragment_quiz_result_btn_answer2,
@@ -78,19 +78,19 @@ public class QuizPreviousResultDialogFragment extends DialogFragment implements 
 
             Button btnAnswer = (Button) view.findViewById(id);
             btnAnswer.setOnClickListener(this);
-            btnAnswer.setText(answers.get(i));
-            if (i == correctAnswerId) {
+            btnAnswer.setText(mAnswers.get(i));
+            if (i == mCorrectAnswerId) {
                 btnAnswer.getBackground().setColorFilter(0xFF8DCF67, PorterDuff.Mode.MULTIPLY);
             }
         }
 
 
-        setCommandDescriptionForTextView(view, R.id.fragment_quiz_result_tv_answer1, answers.get(0));
-        setCommandDescriptionForTextView(view, R.id.fragment_quiz_result_tv_answer2, answers.get(1));
-        setCommandDescriptionForTextView(view, R.id.fragment_quiz_result_tv_answer3, answers.get(2));
-        setCommandDescriptionForTextView(view, R.id.fragment_quiz_result_tv_answer4, answers.get(3));
+        setCommandDescriptionForTextView(view, R.id.fragment_quiz_result_tv_answer1, mAnswers.get(0));
+        setCommandDescriptionForTextView(view, R.id.fragment_quiz_result_tv_answer2, mAnswers.get(1));
+        setCommandDescriptionForTextView(view, R.id.fragment_quiz_result_tv_answer3, mAnswers.get(2));
+        setCommandDescriptionForTextView(view, R.id.fragment_quiz_result_tv_answer4, mAnswers.get(3));
 
-        setQuestionTextView(view, R.id.fragment_quiz_result_tv_question, answers.get(correctAnswerId));
+        setQuestionTextView(view, R.id.fragment_quiz_result_tv_question, mAnswers.get(mCorrectAnswerId));
 
         return view;
     }
@@ -115,7 +115,7 @@ public class QuizPreviousResultDialogFragment extends DialogFragment implements 
     {
         super.onDestroy();
 
-        databaseHelper.close();
+        mDatabaseHelper.close();
     }
 
     @Override
@@ -144,7 +144,7 @@ public class QuizPreviousResultDialogFragment extends DialogFragment implements 
      */
     private void setCommandDescriptionForTextView(View view, int id, String command)
     {
-        Cursor c2 = databaseHelper.getQuizCommandFromName(command);
+        Cursor c2 = mDatabaseHelper.getQuizCommandFromName(command);
         c2.moveToFirst();
 
         String description = c2.getString(c2.getColumnIndex(CommandsDBTableModel.COL_DESCRIPTION));
@@ -160,7 +160,7 @@ public class QuizPreviousResultDialogFragment extends DialogFragment implements 
      */
     private void setQuestionTextView(View view, int id, String command)
     {
-        Cursor c2 = databaseHelper.getQuizCommandFromName(command);
+        Cursor c2 = mDatabaseHelper.getQuizCommandFromName(command);
         c2.moveToFirst();
 
         String question = c2.getString(c2.getColumnIndex(CommandsDBTableModel.COL_DESCRIPTION));

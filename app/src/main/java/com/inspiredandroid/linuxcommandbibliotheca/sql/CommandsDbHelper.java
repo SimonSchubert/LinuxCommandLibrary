@@ -106,7 +106,7 @@ public class CommandsDbHelper extends SQLiteAssetHelper {
      */
     public Cursor getAllCommandPages()
     {
-        return getReadableDatabase().rawQuery("SELECT * FROM " + CommandsDBTableModel.TABLE_COMMANDPAGES , null);
+        return getReadableDatabase().rawQuery("SELECT * FROM " + CommandsDBTableModel.TABLE_COMMANDPAGES, null);
     }
 
     /**
@@ -117,7 +117,7 @@ public class CommandsDbHelper extends SQLiteAssetHelper {
     public Cursor getQuiz(int difficulty, ArrayList<String> commands, int type)
     {
         String wherePart = CommandsDBTableModel.COL_NAME + " NOT LIKE ";
-        String whereClause = " AND type = "+type+" AND ";
+        String whereClause = " AND type = " + type + " AND ";
         for (String command : commands) {
             whereClause += wherePart + "'" + command + "' AND ";
         }

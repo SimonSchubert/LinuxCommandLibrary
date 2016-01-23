@@ -1,7 +1,5 @@
 package com.inspiredandroid.linuxcommandbibliotheca.interfaces;
 
-import android.text.Spanned;
-
 import java.util.ArrayList;
 
 /**

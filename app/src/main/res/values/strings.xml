@@ -57,7 +57,7 @@
     <string name="fragment_tips_do_the_test">Test and train your Linux cmd skills.</string>
     <string name="fragment_tips_start_quiz">Start Quiz</string>
 
-    <string-array name="default_codetextview_cmmands">
+    <string-array name="default_codetextview_commands">
     </string-array>
 
     <string name="fragment_tips_clear_code">" $ clear "</string>

@@ -10,7 +10,7 @@ import java.util.ArrayList;
  */
 public class SuperFragment extends Fragment {
 
-    ArrayList<AsyncTask> asyncTasks = new ArrayList<>();
+    private ArrayList<AsyncTask> mAsyncTasks = new ArrayList<>();
 
     @Override
     public void onPause()
@@ -24,10 +24,15 @@ public class SuperFragment extends Fragment {
      */
     public void cancelAsyncTasks()
     {
-        for (AsyncTask task : asyncTasks) {
+        for (AsyncTask task : mAsyncTasks) {
             if (task != null) {
                 task.cancel(true);
             }
         }
+    }
+
+    public void addAsyncTask(AsyncTask asyncTask)
+    {
+        mAsyncTasks.add(asyncTask);
     }
 }

@@ -21,7 +21,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.interfaces.ClickInterface;
  */
 public class ClickableTextView extends TextView {
 
-    ClickInterface clickInterface;
+    private ClickInterface mClickInterface;
 
     public ClickableTextView(Context context, AttributeSet attrs)
     {
@@ -94,7 +94,7 @@ public class ClickableTextView extends TextView {
      */
     public void setClickInterface(ClickInterface clickInterface)
     {
-        this.clickInterface = clickInterface;
+        this.mClickInterface = clickInterface;
     }
 
     /**
@@ -108,7 +108,7 @@ public class ClickableTextView extends TextView {
     {
         SpannableString ss = new SpannableString(text);
 
-        ClickableTextView.addClickableSpanToPhrases(ss, text, word, clickInterface);
+        ClickableTextView.addClickableSpanToPhrases(ss, text, word, mClickInterface);
 
         return ss;
     }

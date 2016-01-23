@@ -17,21 +17,21 @@ import com.inspiredandroid.linuxcommandbibliotheca.interfaces.ClickInterface;
 /**
  * Created by Simon Schubert
  * <p/>
- * This View makes it very easy to highlightQueryInsideText defined commands in an normal textview. Define the
- * commands which should be highlighted in an string array and link it in the layout resource as
+ * This View makes it very easy to highlightQueryInsideText defined mCommands in an normal textview. Define the
+ * mCommands which should be highlighted in an string array and link it in the layout resource as
  * "command".
  */
 public class CodeTextView extends TextView {
 
-    String[] commands;
+    private String[] mCommands;
 
     public CodeTextView(Context context, AttributeSet attrs)
     {
         super(context, attrs);
 
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.CodeTextView);
-        int resID = ta.getResourceId(R.styleable.CodeTextView_commands, R.array.default_codetextview_cmmands);
-        commands = context.getResources().getStringArray(resID);
+        int resID = ta.getResourceId(R.styleable.CodeTextView_commands, R.array.default_codetextview_commands);
+        mCommands = context.getResources().getStringArray(resID);
         ta.recycle();
 
         if (isInEditMode()) {
@@ -44,29 +44,29 @@ public class CodeTextView extends TextView {
     }
 
     /**
-     * Set clickable man pages(commands)
+     * Set clickable man pages(mCommands)
      *
-     * @param commands
+     * @param mCommands
      */
-    public void setCommands(String[] commands)
+    public void setCommands(String[] mCommands)
     {
-        this.commands = commands;
+        this.mCommands = mCommands;
         updateLinks();
     }
 
     /**
-     * Mark man pages(commands) clickable
+     * Mark man pages(mCommands) clickable
      */
     private void updateLinks()
     {
-        setText(createSpannable(getText().toString(), commands));
+        setText(createSpannable(getText().toString(), mCommands));
     }
 
     /**
-     * Highlights commands of the text and make them clickable
+     * Highlights mCommands of the text and make them clickable
      *
      * @param text     spannable content
-     * @param commands list of commands to highlightQueryInsideText
+     * @param commands list of mCommands to highlightQueryInsideText
      * @return
      */
     private SpannableString createSpannable(String text, String[] commands)

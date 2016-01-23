@@ -119,7 +119,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
             @Override
             public void afterTextChanged(Editable s)
             {
-                if(s.toString().equals(data.lesson.answer)) {
+                if (s.toString().equals(data.lesson.answer)) {
                     etLesson.setEnabled(false);
 
                     new Handler().postDelayed(new Runnable() {
@@ -180,7 +180,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
         if (v.getId() == R.id.fragment_quiz_btn_help) {
             startCommandManActivity(data.lesson.command);
         } else if (v.getId() == R.id.fragment_quiz_btn_giveup) {
-           etLesson.setText(data.lesson.answer);
+            etLesson.setText(data.lesson.answer);
         } else if (v.getId() == R.id.fragment_quiz_btn_info) {
             showLastQuestionInfoDialog();
         } else if (v.getId() == R.id.fragment_quiz_btn_again) {
@@ -392,7 +392,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
 
     private void updateCounter()
     {
-        ((QuizActivity) getActivity()).tvCounter.setText(String.format(getString(R.string.fragment_quiz_counter), (data.answerCounter + 1), data.maxAnswerCount));
+        ((QuizActivity) getActivity()).setCounterText(String.format(getString(R.string.fragment_quiz_counter), (data.answerCounter + 1), data.maxAnswerCount));
     }
 
     /**
@@ -412,16 +412,17 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
         getQuizData(questionType);
     }
 
-    private void getQuizData(int questionType) {
+    private void getQuizData(int questionType)
+    {
         data.questionType = questionType;
-        if(questionType == 0) {
+        if (questionType == 0) {
             // define a random correct answer
             data.currentAnswers = getAnswers(btnAnswers.size());
             data.currentCorrectAnswerId = (int) (Math.random() * data.currentAnswers.size());
             data.usedCommandIds.add(data.currentAnswers.get(data.currentCorrectAnswerId));
         } else {
             data.lesson = getLesson();
-            if(data.lesson != null) {
+            if (data.lesson != null) {
                 data.usedCommandIds.add(data.lesson.command);
             }
         }
@@ -432,7 +433,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
      */
     private void setInfoButtonVisibility()
     {
-        if(data.questionType == 0 && data.answerCounter != data.maxAnswerCount) {
+        if (data.questionType == 0 && data.answerCounter != data.maxAnswerCount) {
             btnInfo.setVisibility(View.VISIBLE);
         } else {
             btnInfo.setVisibility(View.GONE);
@@ -440,16 +441,16 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     }
 
     /**
-     *
      * @return
      */
-    private LessonData getLesson() {
+    private LessonData getLesson()
+    {
 
         Cursor c = databaseHelper.getQuiz(20, data.usedCommandIds, 1);
 
         LessonData data = new LessonData();
 
-        int randomId = (int) (Math.random()*c.getCount());
+        int randomId = (int) (Math.random() * c.getCount());
 
         if (c.moveToPosition(randomId)) {
             data.command = c.getString(c.getColumnIndex(CommandsDBTableModel.COL_NAME));
@@ -469,7 +470,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     /**
      * Get answers from database
      *
-     * @param count size of string array list size
+     * @param count size of string array mList size
      * @return
      */
     private ArrayList<String> getAnswers(int count)
@@ -499,20 +500,20 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
      */
     private void fillAnswerViews()
     {
-        if(data.questionType == 0) {
+        if (data.questionType == 0) {
             for (int i = 0; i < data.currentAnswers.size(); i++) {
                 String command = data.currentAnswers.get(i);
                 btnAnswers.get(i).setText(command);
             }
             etLesson.setVisibility(View.GONE);
-            for(Button btn : btnAnswers) {
+            for (Button btn : btnAnswers) {
                 btn.setVisibility(View.VISIBLE);
             }
             btnHelp.setVisibility(View.GONE);
             btnGiveUp.setVisibility(View.GONE);
         } else {
             etLesson.setVisibility(View.VISIBLE);
-            for(Button btn : btnAnswers) {
+            for (Button btn : btnAnswers) {
                 btn.setVisibility(View.GONE);
             }
             btnHelp.setVisibility(View.VISIBLE);
@@ -531,7 +532,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     private void fillQuestionTextView()
     {
         String question;
-        if(data.questionType == 0) {
+        if (data.questionType == 0) {
             question = getQuestionText(data.currentAnswers.get(data.currentCorrectAnswerId));
         } else {
             question = data.lesson.question;
@@ -540,7 +541,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     }
 
     /**
-     * Fetch question description by cmd name from database
+     * Fetch question description by cmd mName from database
      *
      * @param command
      * @return

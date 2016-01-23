@@ -1,5 +1,5 @@
 ##Linux Command Bibliotheca for Android
-The app delivers you thousands of manual pages of Linux terminal commands, a bunch of useful one-line scripts, general terminal tips and a Linux quiz.
+The app delivers you thousands of manual pages of Linux terminal mCommands, a bunch of useful one-line scripts, general terminal tips and a Linux quiz.
 
 Download from Play Store https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca
 

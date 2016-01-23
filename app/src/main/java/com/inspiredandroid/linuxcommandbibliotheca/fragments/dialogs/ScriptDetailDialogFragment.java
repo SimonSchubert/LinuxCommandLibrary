@@ -14,24 +14,34 @@ import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.CommandDetailAdapter;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel;
 
+import io.realm.Realm;
+
 /**
  * Created by Simon Schubert
  */
 public class ScriptDetailDialogFragment extends DialogFragment {
 
-    private final static String EXTRA_KEY_COMMANDS = "EXTRA_KEY_COMMANDS";
+    private final static String EXTRA_KEY_ID = "EXTRA_KEY_ID";
 
-    CommandGroupModel commandGroupModel;
+    private Realm mRealm;
 
     public static ScriptDetailDialogFragment getInstance(CommandGroupModel group)
     {
         ScriptDetailDialogFragment fragment = new ScriptDetailDialogFragment();
 
         Bundle arguments = new Bundle();
-        arguments.putSerializable(EXTRA_KEY_COMMANDS, group);
+        arguments.putInt(EXTRA_KEY_ID, group.getId());
         fragment.setArguments(arguments);
 
         return fragment;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+
+        mRealm = Realm.getInstance(getContext());
     }
 
     /**
@@ -44,9 +54,10 @@ public class ScriptDetailDialogFragment extends DialogFragment {
     {
         View view = inflater.inflate(R.layout.fragment_scriptdetail, container, false);
 
-        commandGroupModel = (CommandGroupModel) getArguments().getSerializable(EXTRA_KEY_COMMANDS);
+        int id = getArguments().getInt(EXTRA_KEY_ID, -1);
 
-        String description = commandGroupModel.getDesc(getContext());
+        CommandGroupModel commandGroupModel = mRealm.where(CommandGroupModel.class).equalTo("id", id).findFirst();
+        String description = CommandGroupModel.getDescString(commandGroupModel, getContext());
 
         CommandDetailAdapter adapter = new CommandDetailAdapter(getActivity(), commandGroupModel);
         ListView listView = (ListView) view.findViewById(R.id.fragment_scriptdetail_lv_list);
@@ -73,4 +84,11 @@ public class ScriptDetailDialogFragment extends DialogFragment {
         return dialog;
     }
 
+    @Override
+    public void onDestroy()
+    {
+        super.onDestroy();
+
+        mRealm.close();
+    }
 }

@@ -13,15 +13,15 @@ import com.inspiredandroid.linuxcommandbibliotheca.interfaces.CraftDatabaseInter
  */
 public abstract class LoadingBaseActivity extends AppCompatActivity implements CraftDatabaseInterface {
 
-    LoadDatabaseAsyncTask asyncTask;
+    LoadDatabaseAsyncTask mAsyncTask;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
 
-        asyncTask = new LoadDatabaseAsyncTask(this, this);
-        asyncTask.execute();
+        mAsyncTask = new LoadDatabaseAsyncTask(this, this);
+        mAsyncTask.execute();
     }
 
     @Override
@@ -30,7 +30,7 @@ public abstract class LoadingBaseActivity extends AppCompatActivity implements C
         super.onDestroy();
 
         if (isTaskRunning()) {
-            asyncTask.cancel(true);
+            mAsyncTask.cancel(true);
         }
     }
 
@@ -39,7 +39,7 @@ public abstract class LoadingBaseActivity extends AppCompatActivity implements C
      */
     private boolean isTaskRunning()
     {
-        return (asyncTask != null) && (asyncTask.getStatus() == AsyncTask.Status.RUNNING);
+        return (mAsyncTask != null) && (mAsyncTask.getStatus() == AsyncTask.Status.RUNNING);
     }
 
     @Override
