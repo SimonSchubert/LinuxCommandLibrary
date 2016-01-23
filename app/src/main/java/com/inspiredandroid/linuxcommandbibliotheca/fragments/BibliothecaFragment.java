@@ -20,8 +20,8 @@ import com.inspiredandroid.linuxcommandbibliotheca.sql.CommandsDbHelper;
  */
 public class BibliothecaFragment extends Fragment {
 
-    ScreenSlidePagerAdapter adapter;
-    ViewPager mPager;
+    private ScreenSlidePagerAdapter mAdapter;
+    private ViewPager mPager;
 
     public BibliothecaFragment()
     {
@@ -61,7 +61,7 @@ public class BibliothecaFragment extends Fragment {
 
         // Init viewpager
         mPager = (ViewPager) view.findViewById(R.id.fragment_bibliotheca_pager);
-        mPager.setAdapter(adapter);
+        mPager.setAdapter(mAdapter);
         mPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -92,12 +92,12 @@ public class BibliothecaFragment extends Fragment {
 
     private void createAdapter()
     {
-        // Init viewpager adapter
-        adapter = new ScreenSlidePagerAdapter(getChildFragmentManager());
+        // Init viewpager mAdapter
+        mAdapter = new ScreenSlidePagerAdapter(getChildFragmentManager());
     }
 
     /**
-     * A simple pager adapter that represents the ScriptsFragment, CommandsFragment and TipsFragment
+     * A simple pager mAdapter that represents the ScriptsFragment, CommandsFragment and TipsFragment
      */
     private class ScreenSlidePagerAdapter extends FragmentPagerAdapter {
 

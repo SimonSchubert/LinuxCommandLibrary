@@ -2,20 +2,13 @@ package com.inspiredandroid.linuxcommandbibliotheca.adapter;
 
 import android.app.Activity;
 import android.database.Cursor;
-import android.text.Html;
-import android.text.SpannableStringBuilder;
-import android.text.Spanned;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.inspiredandroid.linuxcommandbibliotheca.R;
-import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
-import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel;
 import com.inspiredandroid.linuxcommandbibliotheca.sql.CommandsDbHelper;
 import com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView;
 
@@ -28,8 +21,8 @@ import java.util.regex.Pattern;
  */
 public class ManExpandableListAdapter extends BaseExpandableListAdapter {
 
-    private Activity mContext;
     public ArrayList<ArrayList<CharSequence>> mChild;
+    private Activity mContext;
     private ArrayList<String> mGroup;
 
     public ManExpandableListAdapter(Activity context, ArrayList<String> group, ArrayList<ArrayList<CharSequence>> child)
@@ -71,7 +64,7 @@ public class ManExpandableListAdapter extends BaseExpandableListAdapter {
 
         holder.desc.setText(description);
 
-        if(getGroup(groupPosition).toString().toUpperCase().equals("SEE ALSO")) {
+        if (getGroup(groupPosition).toString().toUpperCase().equals("SEE ALSO")) {
             holder.desc.setCommands(extractCommandsFromDescription(description.toString()));
         }
 
@@ -146,10 +139,12 @@ public class ManExpandableListAdapter extends BaseExpandableListAdapter {
 
     /**
      * Search for commands and return list of commands which exist in database
+     *
      * @param description
      * @return
      */
-    private String[] extractCommandsFromDescription(String description) {
+    private String[] extractCommandsFromDescription(String description)
+    {
         CommandsDbHelper helper = new CommandsDbHelper(mContext);
 
         // match "command(category)" e.g: gzip(1)
@@ -158,10 +153,10 @@ public class ManExpandableListAdapter extends BaseExpandableListAdapter {
 
         // loop results and add if command exists in db
         ArrayList<String> tmp = new ArrayList<>();
-        while(m.find()) {
-            String extractedCommand = m.group(0).substring(0, m.group(0).length()-3).trim();
+        while (m.find()) {
+            String extractedCommand = m.group(0).substring(0, m.group(0).length() - 3).trim();
             Cursor c = helper.getCommandFromName(extractedCommand);
-            if(c.getCount()>0) {
+            if (c.getCount() > 0) {
                 tmp.add(extractedCommand);
             }
             c.close();
@@ -169,7 +164,7 @@ public class ManExpandableListAdapter extends BaseExpandableListAdapter {
 
         // convert String[] to ArrayList
         String[] commands = new String[tmp.size()];
-        for(int i = 0; i < tmp.size(); i++) {
+        for (int i = 0; i < tmp.size(); i++) {
             String cmd = tmp.get(i);
             commands[i] = cmd;
         }

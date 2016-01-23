@@ -14,6 +14,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Simon Schubert
@@ -24,8 +25,8 @@ public class ScriptsExpandableListAdapter extends BaseExpandableListAdapter {
     public final static int GROUP_SYSTEM_CONTROL = 1;
     public final static int GROUP_AUDIO_VIDEO = 2;
     public final static int GROUP_COMMANDLINEFU = 3;
-    boolean isLoading = false;
-    String mQuery = "";
+    private boolean isLoading = false;
+    private String mQuery = "";
     private Activity mContext;
     private ArrayList<ArrayList<CommandGroupModel>> mChild;
     private ArrayList<String> mGroup;
@@ -90,7 +91,7 @@ public class ScriptsExpandableListAdapter extends BaseExpandableListAdapter {
                 holder = (CommandViewHolder) convertView.getTag();
             }
 
-            holder.desc.setText(Utils.highlightQueryInsideText(mContext, mQuery, command.getDesc(mContext)));
+            holder.desc.setText(Utils.highlightQueryInsideText(mContext, mQuery, CommandGroupModel.getDescString(command, mContext)));
             holder.icon.setImageResource(getCommandIconResource(command));
 
             convertView.setTag(R.id.ID, command);
@@ -107,7 +108,7 @@ public class ScriptsExpandableListAdapter extends BaseExpandableListAdapter {
      */
     private int getCommandIconResource(CommandGroupModel command)
     {
-        return command.getIconResource().isEmpty() ? R.drawable.icon_linux : mContext.getResources().getIdentifier(command.getIconResource(), "drawable", mContext.getPackageName());
+        return command.getIconResource() == null ? R.drawable.icon_linux : mContext.getResources().getIdentifier(command.getIconResource(), "drawable", mContext.getPackageName());
     }
 
     @Override
@@ -183,8 +184,9 @@ public class ScriptsExpandableListAdapter extends BaseExpandableListAdapter {
         notifyDataSetChanged();
     }
 
-    public void addEntries(int group, ArrayList<CommandGroupModel> commands)
+    public void updateEntries(int group, List<CommandGroupModel> commands)
     {
+        mChild.get(group).clear();
         mChild.get(group).addAll(commands);
         notifyDataSetChanged();
     }

@@ -4,11 +4,11 @@ package com.inspiredandroid.linuxcommandbibliotheca.models;
  * Created by Simon Schubert
  */
 public class CommandLineFuModel {
-    int id;
-    String command;
-    String summary;
-    int votes;
-    String url;
+    private int id;
+    private String command;
+    private String summary;
+    private int votes;
+    private String url;
 
     public String getCommand()
     {
@@ -18,5 +18,15 @@ public class CommandLineFuModel {
     public String getSummary()
     {
         return summary;
+    }
+
+    public int getId()
+    {
+        return id;
+    }
+
+    public int getVotes()
+    {
+        return votes;
     }
 }

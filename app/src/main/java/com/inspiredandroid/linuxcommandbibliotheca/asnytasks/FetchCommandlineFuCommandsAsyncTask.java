@@ -7,12 +7,17 @@ import android.os.AsyncTask;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
+import com.inspiredandroid.linuxcommandbibliotheca.adapter.ScriptsExpandableListAdapter;
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.FetchedCommandlineFuCommandsInterface;
+import com.inspiredandroid.linuxcommandbibliotheca.models.CommandChildModel;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandLineFuModel;
 import com.inspiredandroid.linuxcommandbibliotheca.sql.CommandsDbHelper;
 
 import org.apache.commons.io.IOUtils;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
@@ -22,15 +27,17 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.realm.Realm;
+
 /**
  * Created by Simon Schubert
  */
 public class FetchCommandlineFuCommandsAsyncTask extends AsyncTask<String, String, ArrayList<CommandGroupModel>> {
 
-    Context mContext;
-    FetchedCommandlineFuCommandsInterface mCallback;
-    int mPage;
-    CommandsDbHelper helper;
+    private Context mContext;
+    private FetchedCommandlineFuCommandsInterface mCallback;
+    private int mPage;
+    private CommandsDbHelper mHelper;
 
     public FetchCommandlineFuCommandsAsyncTask(Context _context, FetchedCommandlineFuCommandsInterface _callback, int _page)
     {
@@ -62,15 +69,49 @@ public class FetchCommandlineFuCommandsAsyncTask extends AsyncTask<String, Strin
             commandLineFuModels = new ArrayList<>();
         }
 
-        helper = new CommandsDbHelper(mContext);
-        ArrayList<CommandGroupModel> commands = new ArrayList<>();
+        mHelper = new CommandsDbHelper(mContext);
+        Realm realm = Realm.getInstance(mContext);
+
+        realm.beginTransaction();
+
         // convert commandlinefu json models to linux command bibliotheca models
         for (CommandLineFuModel commandLineFuModel : commandLineFuModels) {
-            commands.add(new CommandGroupModel(commandLineFuModel.getCommand(), commandLineFuModel.getSummary(), getManPages(commandLineFuModel.getCommand())));
-        }
-        helper.close();
 
-        return commands;
+            JSONObject json = new JSONObject();
+            try {
+                json.put("id", commandLineFuModel.getId()+10000);
+                json.put("category", ScriptsExpandableListAdapter.GROUP_COMMANDLINEFU);
+                json.put("descStr", commandLineFuModel.getSummary());
+                json.put("votes", commandLineFuModel.getVotes());
+
+                JSONObject json2 = new JSONObject();
+                json2.put("command", commandLineFuModel.getCommand());
+
+                JSONArray jsonMans = new JSONArray();
+                ArrayList<String> mans = getManPages(commandLineFuModel.getCommand());
+                for(String man : mans) {
+                    JSONObject jsonMan = new JSONObject();
+                    jsonMan.put("man", man);
+                    jsonMans.put(jsonMan);
+                }
+                json2.put("mans", jsonMans);
+
+                JSONArray jsonCommands = new JSONArray();
+                jsonCommands.put(json2);
+
+                json.put("commands", jsonCommands);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            realm.createOrUpdateObjectFromJson(CommandGroupModel.class, json);
+            //commands.add(new CommandGroupModel(commandLineFuModel.getCommand(), commandLineFuModel.getSummary(), ));
+        }
+        realm.commitTransaction();
+
+        mHelper.close();
+        realm.close();
+
+        return null;
     }
 
     @Override
@@ -96,7 +137,7 @@ public class FetchCommandlineFuCommandsAsyncTask extends AsyncTask<String, Strin
         }
         ArrayList<String> mans = new ArrayList<>();
         for (String word : words) {
-            Cursor c = helper.getCommandFromName(word);
+            Cursor c = mHelper.getCommandFromName(word);
             if (c.getCount() > 0) {
                 mans.add(word);
             }

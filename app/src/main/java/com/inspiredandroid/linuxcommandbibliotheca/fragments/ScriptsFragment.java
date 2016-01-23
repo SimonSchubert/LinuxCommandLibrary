@@ -5,7 +5,6 @@ import android.app.SearchManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -22,8 +21,6 @@ import android.widget.AbsListView;
 import android.widget.ExpandableListView;
 import android.widget.ImageButton;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.ScriptsExpandableListAdapter;
@@ -32,29 +29,29 @@ import com.inspiredandroid.linuxcommandbibliotheca.fragments.dialogs.ScriptDetai
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.FetchedCommandlineFuCommandsInterface;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel;
-import com.inspiredandroid.linuxcommandbibliotheca.models.CommandLineFuModel;
-import com.inspiredandroid.linuxcommandbibliotheca.sql.CommandsDbHelper;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.List;
+
+import io.realm.Realm;
+import io.realm.RealmResults;
+import io.realm.Sort;
 
 /**
  * Created by Simon Schubert
  */
 public class ScriptsFragment extends SuperFragment implements View.OnClickListener, FetchedCommandlineFuCommandsInterface, AbsListView.OnScrollListener, ExpandableListView.OnChildClickListener {
 
-    ExpandableListView list;
-    ScriptsExpandableListAdapter adapter;
-
-    ArrayList<ArrayList<CommandGroupModel>> childs = new ArrayList<>();
-    ArrayList<String> group = new ArrayList<>();
-
-    FetchCommandlineFuCommandsAsyncTask async;
-    int fetchedCommandlineFuPages = 0;
-
-    boolean isSearching = false;
-    ArrayList mSelectedItems;
+    private ArrayList<ArrayList<CommandGroupModel>> mChilds = new ArrayList<>();
+    private ArrayList<String> mGroup = new ArrayList<>();
+    private FetchCommandlineFuCommandsAsyncTask mAsync;
+    private boolean mIsSearching = false;
+    private ArrayList mSelectedItems;
+    private int mFetchedCommandlineFuPages = 0;
+    private Realm mRealm;
+    private ExpandableListView mList;
+    private ScriptsExpandableListAdapter mAdapter;
 
     public ScriptsFragment()
     {
@@ -67,7 +64,11 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
 
         setHasOptionsMenu(true);
 
-        adapter = createAdapter();
+        mRealm = Realm.getInstance(getContext());
+
+        mAdapter = createAdapter();
+
+        mFetchedCommandlineFuPages = mRealm.where(CommandGroupModel.class).equalTo("category", ScriptsExpandableListAdapter.GROUP_COMMANDLINEFU).findAll().size()/25;
     }
 
     @Override
@@ -76,10 +77,10 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
         View view = inflater.inflate(R.layout.fragment_scripts, container, false);
 
         // init listview
-        list = (ExpandableListView) view.findViewById(R.id.fragment_scripts_elv);
-        list.setAdapter(adapter);
-        list.setOnChildClickListener(this);
-        list.setOnScrollListener(this);
+        mList = (ExpandableListView) view.findViewById(R.id.fragment_scripts_elv);
+        mList.setAdapter(mAdapter);
+        mList.setOnChildClickListener(this);
+        mList.setOnScrollListener(this);
 
         // Hide ads if remote is already installed
         if (Utils.isAppInstalled(getActivity(), Utils.PACKAGE_LINUXREMOTE) || Utils.isAppInstalled(getActivity(), Utils.PACKAGE_LINUXREMOTE_PRO)) {
@@ -182,8 +183,8 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
     public void onScroll(AbsListView view, int firstVisibleItem,
                          int visibleItemCount, int totalItemCount)
     {
-        // check if commandlineFu group is expanded AND user is currently not searching
-        if (list.isGroupExpanded(ScriptsExpandableListAdapter.GROUP_COMMANDLINEFU) && !isSearching) {
+        // check if commandlineFu mGroup is expanded AND user is currently not searching
+        if (mList.isGroupExpanded(ScriptsExpandableListAdapter.GROUP_COMMANDLINEFU) && !mIsSearching) {
 
             // check if is last item
             if (firstVisibleItem + visibleItemCount == totalItemCount) {
@@ -205,9 +206,9 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
     {
         final String appPackageName = Utils.PACKAGE_LINUXREMOTE;
         try {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?mId=" + appPackageName)));
         } catch (android.content.ActivityNotFoundException anfe) {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?mId=" + appPackageName)));
         }
     }
 
@@ -216,35 +217,45 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
      */
     private ScriptsExpandableListAdapter createAdapter()
     {
-        // command categories
-        group.add(getString(R.string.system_info));
-        childs.add(new ArrayList<CommandGroupModel>());
-        group.add(getString(R.string.system_control));
-        childs.add(new ArrayList<CommandGroupModel>());
-        group.add(getString(R.string.audio_video));
-        childs.add(new ArrayList<CommandGroupModel>());
-        group.add("http://www.commandlinefu.com/");
-        childs.add(new ArrayList<CommandGroupModel>());
-
         // get raw commands file
         InputStream inputStream = getResources().openRawResource(R.raw.commands);
 
         // convert file to arraylist
-        ArrayList<CommandGroupModel> commandsAll = new Gson().fromJson(Utils.readTextFile(inputStream), new TypeToken<List<CommandGroupModel>>() {
-        }.getType());
+        try {
+            mRealm.beginTransaction();
+            mRealm.createOrUpdateAllFromJson(CommandGroupModel.class, inputStream);
+            mRealm.commitTransaction();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-        // sort commands by category
+        RealmResults<CommandGroupModel> commandsAll = mRealm.where(CommandGroupModel.class).findAll();
+        commandsAll.sort("votes", Sort.DESCENDING);
+
+        // command categories
+        mGroup.add(getString(R.string.system_info));
+        mChilds.add(new ArrayList<CommandGroupModel>());
+        mGroup.add(getString(R.string.system_control));
+        mChilds.add(new ArrayList<CommandGroupModel>());
+        mGroup.add(getString(R.string.audio_video));
+        mChilds.add(new ArrayList<CommandGroupModel>());
+        mGroup.add("http://www.commandlinefu.com/");
+        mChilds.add(new ArrayList<CommandGroupModel>());
+
+        // sort commands by mCategory
         for (CommandGroupModel command : commandsAll) {
-            if (command.getCategory() == 0) {
-                childs.get(ScriptsExpandableListAdapter.GROUP_INFO).add(command);
-            } else if (command.getCategory() == 1) {
-                childs.get(ScriptsExpandableListAdapter.GROUP_SYSTEM_CONTROL).add(command);
-            } else if (command.getCategory() == 2) {
-                childs.get(ScriptsExpandableListAdapter.GROUP_AUDIO_VIDEO).add(command);
+            if (command.getCategory() == ScriptsExpandableListAdapter.GROUP_INFO) {
+                mChilds.get(ScriptsExpandableListAdapter.GROUP_INFO).add(command);
+            } else if (command.getCategory() == ScriptsExpandableListAdapter.GROUP_SYSTEM_CONTROL) {
+                mChilds.get(ScriptsExpandableListAdapter.GROUP_SYSTEM_CONTROL).add(command);
+            } else if (command.getCategory() == ScriptsExpandableListAdapter.GROUP_AUDIO_VIDEO) {
+                mChilds.get(ScriptsExpandableListAdapter.GROUP_AUDIO_VIDEO).add(command);
+            } else if (command.getCategory() == ScriptsExpandableListAdapter.GROUP_COMMANDLINEFU) {
+                mChilds.get(ScriptsExpandableListAdapter.GROUP_COMMANDLINEFU).add(command);
             }
         }
 
-        return new ScriptsExpandableListAdapter(getActivity(), group, childs);
+        return new ScriptsExpandableListAdapter(getActivity(), mGroup, mChilds);
     }
 
     /**
@@ -253,14 +264,14 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
     private void fetchCommandsFromCommandlineFu()
     {
         // check if is not already fetching
-        if (async == null
-                || async.getStatus() == AsyncTask.Status.FINISHED) {
-            adapter.setLoading();
-            async = new FetchCommandlineFuCommandsAsyncTask(
-                    getContext(), this, fetchedCommandlineFuPages);
-            asyncTasks.add(async);
-            async.execute();
-            fetchedCommandlineFuPages++;
+        if (mAsync == null
+                || mAsync.getStatus() == AsyncTask.Status.FINISHED) {
+            mAdapter.setLoading();
+            mAsync = new FetchCommandlineFuCommandsAsyncTask(
+                    getContext(), this, mFetchedCommandlineFuPages);
+            addAsyncTask(mAsync);
+            mAsync.execute();
+            mFetchedCommandlineFuPages++;
         }
     }
 
@@ -275,7 +286,7 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         // Set the dialog title
         builder.setTitle("Filter")
-                // Specify the list array, the items to be selected by default (null for none),
+                // Specify the mList array, the items to be selected by default (null for none),
                 // and the listener through which to receive callbacks when items are selected
                 .setMultiChoiceItems(items, null,
                         new DialogInterface.OnMultiChoiceClickListener() {
@@ -315,16 +326,16 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
     }
 
     /**
-     * reset adapter entries
+     * reset mAdapter entries
      */
     private void resetSearchResults()
     {
-        adapter.updateEntries("", group, childs);
-        isSearching = false;
+        mAdapter.updateEntries("", mGroup, mChilds);
+        mIsSearching = false;
     }
 
     /**
-     * search for query in all commands and update adapter
+     * search for query in all commands and update mAdapter
      *
      * @param query search query
      */
@@ -332,19 +343,19 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
     {
         ArrayList<ArrayList<CommandGroupModel>> entries = new ArrayList<>();
         // loop through all groups
-        for (ArrayList<CommandGroupModel> childGroup : childs) {
+        for (ArrayList<CommandGroupModel> childGroup : mChilds) {
             ArrayList<CommandGroupModel> newChildGroup = new ArrayList<>();
             for (CommandGroupModel child : childGroup) {
                 // check if command OR description contains query
-                if (child.getDesc(getActivity()).toLowerCase().contains(query.toLowerCase())) {
+                if (CommandGroupModel.getDescString(child, getActivity()).toLowerCase().contains(query.toLowerCase())) {
                     newChildGroup.add(child);
                 }
             }
             entries.add(newChildGroup);
         }
-        adapter.updateEntries(query, group, entries);
+        mAdapter.updateEntries(query, mGroup, entries);
 
-        isSearching = true;
+        mIsSearching = true;
     }
 
     @Override
@@ -354,8 +365,11 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
             return;
         }
 
-        adapter.addEntries(ScriptsExpandableListAdapter.GROUP_COMMANDLINEFU, commands);
-        adapter.setLoadingFinished();
+        RealmResults<CommandGroupModel> commandsAll = mRealm.where(CommandGroupModel.class).equalTo("category", ScriptsExpandableListAdapter.GROUP_COMMANDLINEFU).findAll();
+        commandsAll.sort("votes", Sort.DESCENDING);
+
+        mAdapter.updateEntries(ScriptsExpandableListAdapter.GROUP_COMMANDLINEFU, commandsAll);
+        mAdapter.setLoadingFinished();
     }
 
     @Override

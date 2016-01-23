@@ -1,23 +1,36 @@
 package com.inspiredandroid.linuxcommandbibliotheca.models;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 
-import java.io.Serializable;
 import java.util.ArrayList;
+
+import io.realm.RealmList;
+import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 
 /**
  * Created by Simon Schubert
  */
-public class CommandGroupModel implements Serializable {
+public class CommandGroupModel extends RealmObject {
 
-    private int category = 0;
-    private int desc = -1;
-    private String iconResource = "";
-    private String iconBase64 = "";
+    @PrimaryKey
+    private int id;
+
+    private int category;
+    private int desc;
+    private String iconResource;
+    private String iconBase64;
     private String descStr;
-    private ArrayList<CommandChildModel> commands = new ArrayList<>();
+    private int votes;
+    private RealmList<CommandChildModel> commands;
+
+    public CommandGroupModel()
+    {
+
+    }
 
     public CommandGroupModel(String command, String desc, ArrayList<String> mans)
     {
@@ -26,26 +39,19 @@ public class CommandGroupModel implements Serializable {
         commands.add(new CommandChildModel(command, mans));
     }
 
-    public int getCategory()
+    public static String getDescString(CommandGroupModel model, Context context)
     {
-        return category;
-    }
-
-    public String getDesc(Context context)
-    {
-        int resId = getDescResourceId();
+        int resId = getDescResourceId(model);
         if (resId != -1) {
             return context.getResources().getString(resId);
         } else {
-            return descStr;
+            return model.getDescStr();
         }
     }
 
-    public int getDescResourceId()
+    public static int getDescResourceId(CommandGroupModel model)
     {
-        switch (desc) {
-            case 0:
-                return R.string.desc_get_cpu_usage;
+        switch (model.getDesc()) {
             case 1:
                 return R.string.desc_battery_usage;
             case 2:
@@ -104,8 +110,60 @@ public class CommandGroupModel implements Serializable {
                 return R.string.desc_play_beep;
             case 29:
                 return R.string.desc_turn_off_monitor;
+            case 30:
+                return R.string.desc_get_cpu_usage;
         }
         return -1;
+    }
+
+    public int getVotes()
+    {
+        return votes;
+    }
+
+    public void setVotes(int votes)
+    {
+        this.votes = votes;
+    }
+
+    public int getId()
+    {
+        return id;
+    }
+
+    public void setId(int id)
+    {
+        this.id = id;
+    }
+
+    public int getCategory()
+    {
+        return category;
+    }
+
+    public void setCategory(int category)
+    {
+        this.category = category;
+    }
+
+    public int getDesc()
+    {
+        return desc;
+    }
+
+    public void setDesc(int desc)
+    {
+        this.desc = desc;
+    }
+
+    public String getDescStr()
+    {
+        return descStr;
+    }
+
+    public void setDescStr(String descStr)
+    {
+        this.descStr = descStr;
     }
 
     public String getIconBase64()
@@ -123,13 +181,18 @@ public class CommandGroupModel implements Serializable {
         return iconResource;
     }
 
-    public void addCommand(CommandChildModel childModel)
+    public void setIconResource(String iconResource)
     {
-        commands.add(childModel);
+        this.iconResource = iconResource;
     }
 
-    public ArrayList<CommandChildModel> getCommands()
+    public RealmList<CommandChildModel> getCommands()
     {
         return commands;
+    }
+
+    public void setCommands(RealmList<CommandChildModel> commands)
+    {
+        this.commands = commands;
     }
 }

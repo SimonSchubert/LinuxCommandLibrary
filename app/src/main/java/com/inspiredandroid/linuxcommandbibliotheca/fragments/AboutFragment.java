@@ -16,7 +16,6 @@ import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
  */
 public class AboutFragment extends Fragment implements View.OnClickListener {
 
-
     public AboutFragment()
     {
 
@@ -36,10 +35,10 @@ public class AboutFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v)
     {
-        if(v.getId() == R.id.fragment_about_btn_orcgenocide) {
+        if (v.getId() == R.id.fragment_about_btn_orcgenocide) {
             final String appPackageName = Utils.PACKAGE_ORCGENOCIDE;
             showAppInMarket(appPackageName);
-        } else if(v.getId() == R.id.fragment_about_btn_remote) {
+        } else if (v.getId() == R.id.fragment_about_btn_remote) {
             final String appPackageName = Utils.PACKAGE_LINUXREMOTE;
             showAppInMarket(appPackageName);
         }
@@ -47,13 +46,15 @@ public class AboutFragment extends Fragment implements View.OnClickListener {
 
     /**
      * Show app in the Play Store. If Play Store is not installed, show it in the browser instead.
-     * @param appPackageName package name
+     *
+     * @param appPackageName package mName
      */
-    private void showAppInMarket(final String appPackageName) {
+    private void showAppInMarket(final String appPackageName)
+    {
         try {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?mId=" + appPackageName)));
         } catch (android.content.ActivityNotFoundException e) {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?mId=" + appPackageName)));
         }
     }
 }

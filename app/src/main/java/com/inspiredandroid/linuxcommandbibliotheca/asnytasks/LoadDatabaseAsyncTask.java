@@ -10,6 +10,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.sql.CommandsDbHelper;
  * Created by Simon Schubert
  */
 public class LoadDatabaseAsyncTask extends AsyncTask<Boolean, Void, Boolean> {
+
     Context mContext;
     CraftDatabaseInterface mCallback;
 

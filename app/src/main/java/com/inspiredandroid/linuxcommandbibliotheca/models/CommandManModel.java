@@ -1,13 +1,18 @@
 package com.inspiredandroid.linuxcommandbibliotheca.models;
 
-import java.io.Serializable;
+import io.realm.RealmObject;
 
 /**
  * Created by Simon Schubert
  */
-public class CommandManModel implements Serializable {
+public class CommandManModel extends RealmObject {
 
     private String man;
+
+    public CommandManModel()
+    {
+
+    }
 
     public CommandManModel(String man)
     {
@@ -17,5 +22,10 @@ public class CommandManModel implements Serializable {
     public String getMan()
     {
         return man;
+    }
+
+    public void setMan(String man)
+    {
+        this.man = man;
     }
 }

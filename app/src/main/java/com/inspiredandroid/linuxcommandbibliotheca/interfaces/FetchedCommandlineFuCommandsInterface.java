@@ -1,7 +1,6 @@
 package com.inspiredandroid.linuxcommandbibliotheca.interfaces;
 
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel;
-import com.inspiredandroid.linuxcommandbibliotheca.models.CommandLineFuModel;
 
 import java.util.ArrayList;
 

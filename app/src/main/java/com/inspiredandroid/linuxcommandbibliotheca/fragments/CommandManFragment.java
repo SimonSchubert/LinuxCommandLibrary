@@ -34,22 +34,39 @@ import java.util.ArrayList;
  */
 public class CommandManFragment extends AppIndexFragment implements ConvertManFromHtmlToSpannableInterface, View.OnClickListener {
 
-    ExpandableListView lv;
-    ManExpandableListAdapter adapter;
-    String name;
-    long id;
-    int category;
-    int indexesPosition;
+    ExpandableListView mList;
+    ManExpandableListAdapter mAdapter;
+    String mName;
+    long mId;
+    int mCategory;
+    int mIndexesPosition;
     String query;
     ImageButton btnUp;
     ImageButton btnDown;
 
     ArrayList<Integer> indexes = new ArrayList<>();
 
+    /**
+     * Split String every partitionSize character
+     *
+     * @param string
+     * @param partitionSize
+     * @return
+     */
+    private static ArrayList<String> getParts(String string, int partitionSize)
+    {
+        ArrayList<String> parts = new ArrayList<>();
+        int len = string.length();
+        for (int i = 0; i < len; i += partitionSize) {
+            parts.add(string.substring(i, Math.min(len, i + partitionSize)));
+        }
+        return parts;
+    }
+
     @Override
     public String getAppIndexingTitle()
     {
-        return name + "(" + category + ") man page";
+        return mName + "(" + mCategory + ") man page";
     }
 
     @Override
@@ -67,13 +84,13 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
 
         setHasOptionsMenu(true);
 
-        // Get unique command id
+        // Get unique command mId
         Bundle b = getArguments();
-        id = b.getLong(CommandManActivity.EXTRA_COMMAND_ID);
-        name = b.getString(CommandManActivity.EXTRA_COMMAND_NAME);
-        category = b.getInt(CommandManActivity.EXTRA_COMMAND_CATEGORY);
+        mId = b.getLong(CommandManActivity.EXTRA_COMMAND_ID);
+        mName = b.getString(CommandManActivity.EXTRA_COMMAND_NAME);
+        mCategory = b.getInt(CommandManActivity.EXTRA_COMMAND_CATEGORY);
 
-        adapter = createAdapter();
+        mAdapter = createAdapter();
     }
 
     @Override
@@ -81,8 +98,8 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
     {
         View view = inflater.inflate(R.layout.fragment_command_man, container, false);
 
-        lv = (ExpandableListView) view.findViewById(R.id.fraggment_commandman_elv);
-        lv.setAdapter(adapter);
+        mList = (ExpandableListView) view.findViewById(R.id.fraggment_commandman_elv);
+        mList.setAdapter(mAdapter);
 
         btnUp = (ImageButton) view.findViewById(R.id.fragment_command_man_btn_up);
         btnUp.setOnClickListener(this);
@@ -141,7 +158,7 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
         }
 
         MenuItem bookmarkItem = menu.findItem(R.id.bookmark);
-        bookmarkItem.setIcon(BookmarkManager.hasBookmark(getContext(), id) ? android.R.drawable.ic_menu_revert : android.R.drawable.ic_menu_save);
+        bookmarkItem.setIcon(BookmarkManager.hasBookmark(getContext(), mId) ? android.R.drawable.ic_menu_revert : android.R.drawable.ic_menu_save);
     }
 
     @Override
@@ -156,33 +173,19 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
     }
 
     /**
-     * Split String every partitionSize character
-     * @param string
-     * @param partitionSize
+     * Split long page text into child mList views
+     *
      * @return
      */
-    private static ArrayList<String> getParts(String string, int partitionSize) {
-        ArrayList<String> parts = new ArrayList<>();
-        int len = string.length();
-        for (int i=0; i<len; i+=partitionSize)
-        {
-            parts.add(string.substring(i, Math.min(len, i + partitionSize)));
-        }
-        return parts;
-    }
-
-    /**
-     * Split long page text into child list views
-     * @return
-     */
-    private ManExpandableListAdapter createAdapter() {
+    private ManExpandableListAdapter createAdapter()
+    {
         CommandsDbHelper helper = new CommandsDbHelper(getContext());
 
-        Cursor c = helper.getCommandPagesFromId(id);
+        Cursor c = helper.getCommandPagesFromId(mId);
 
         ArrayList<String> groups = new ArrayList<>();
-        ArrayList<ArrayList<CharSequence>>  child = new ArrayList<>();
-        while(c.moveToNext()) {
+        ArrayList<ArrayList<CharSequence>> child = new ArrayList<>();
+        while (c.moveToNext()) {
             String title = c.getString(c.getColumnIndex("title"));
             String page = c.getString(c.getColumnIndex("page"));
             groups.add(title);
@@ -191,9 +194,9 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
 
             ArrayList<CharSequence> pageSplit = new ArrayList<>();
             String[] tmp = chars.toString().split("\\r?\\n");
-            for(String tmpSplit : tmp) {
-                if(tmpSplit.length()<600) {
-                    if(!tmpSplit.isEmpty()) {
+            for (String tmpSplit : tmp) {
+                if (tmpSplit.length() < 600) {
+                    if (!tmpSplit.isEmpty()) {
                         pageSplit.add(tmpSplit);
                     }
                 } else {
@@ -212,10 +215,10 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
 
     private void toogleBookmarkState()
     {
-        if(BookmarkManager.hasBookmark(getContext(), id)) {
-            BookmarkManager.removeBookmark(getContext(), id);
+        if (BookmarkManager.hasBookmark(getContext(), mId)) {
+            BookmarkManager.removeBookmark(getContext(), mId);
         } else {
-            BookmarkManager.addBookmark(getContext(), id);
+            BookmarkManager.addBookmark(getContext(), mId);
         }
     }
 
@@ -224,8 +227,8 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
      */
     private void resetSearchResults()
     {
-        SearchManAsyncTask async = new SearchManAsyncTask(getContext(), "", adapter.mChild, this);
-        asyncTasks.add(async);
+        SearchManAsyncTask async = new SearchManAsyncTask(getContext(), "", mAdapter.mChild, this);
+        addAsyncTask(async);
         async.execute();
 
         hideButton();
@@ -238,14 +241,14 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
      */
     private void search(String q)
     {
-        SearchManAsyncTask async = new SearchManAsyncTask(getContext(), q, adapter.mChild, this);
-        asyncTasks.add(async);
+        SearchManAsyncTask async = new SearchManAsyncTask(getContext(), q, mAdapter.mChild, this);
+        addAsyncTask(async);
         async.execute();
         /*
         // jump to first occur
         if (indexes.size() > 0) {
             showButton();
-            scrollToPosition(indexes.get(indexesPosition));
+            scrollToPosition(indexes.get(mIndexesPosition));
         } else {
             hideButton();
         }
@@ -293,11 +296,11 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
      */
     private void jumpToNextPosition()
     {
-        indexesPosition--;
-        if (indexesPosition < 0) {
-            indexesPosition = indexes.size() - 1;
+        mIndexesPosition--;
+        if (mIndexesPosition < 0) {
+            mIndexesPosition = indexes.size() - 1;
         }
-        scrollToPosition(indexes.get(indexesPosition));
+        scrollToPosition(indexes.get(mIndexesPosition));
     }
 
     /**
@@ -305,18 +308,18 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
      */
     private void jumpToPreviousPosition()
     {
-        indexesPosition++;
-        if (indexesPosition >= indexes.size()) {
-            indexesPosition = 0;
+        mIndexesPosition++;
+        if (mIndexesPosition >= indexes.size()) {
+            mIndexesPosition = 0;
         }
-        scrollToPosition(indexes.get(indexesPosition));
+        scrollToPosition(indexes.get(mIndexesPosition));
     }
 
     @Override
     public void onConvertedHtmlToSpannable(ArrayList<ArrayList<CharSequence>> spannable)
     {
-        adapter.mChild = spannable;
-        adapter.notifyDataSetChanged();
+        mAdapter.mChild = spannable;
+        mAdapter.notifyDataSetChanged();
     }
 
     @Override

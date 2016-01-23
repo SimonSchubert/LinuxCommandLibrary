@@ -32,8 +32,8 @@ public class CommandBibliothecaActivity extends LoadingBaseActivity {
 
         showLoadingFragment();
 
-        asyncTask = new LoadDatabaseAsyncTask(this, this);
-        asyncTask.execute();
+        mAsyncTask = new LoadDatabaseAsyncTask(this, this);
+        mAsyncTask.execute();
     }
 
     /**

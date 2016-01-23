@@ -16,14 +16,16 @@ public class BookmarkManager {
 
     /**
      * get arraylist of ids
+     *
      * @param context
      * @return
      */
-    public static ArrayList<Long> getBookmarkIds(Context context) {
+    public static ArrayList<Long> getBookmarkIds(Context context)
+    {
         String[] bookmarkIds = getBookmarkIdsChain(context).split(",");
         ArrayList<Long> ids = new ArrayList<>();
-        for(String id : bookmarkIds) {
-            if(!id.isEmpty()) {
+        for (String id : bookmarkIds) {
+            if (!id.isEmpty()) {
                 ids.add(Long.valueOf(id));
             }
         }
@@ -32,13 +34,15 @@ public class BookmarkManager {
 
     /**
      * get list of ids divided by commas
+     *
      * @param context
      * @return
      */
-    public static String getBookmarkIdsChain(Context context) {
+    public static String getBookmarkIdsChain(Context context)
+    {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         String bookmarksChain = prefs.getString(KEY_BOOKMARKS, "");
-        if(!bookmarksChain.isEmpty()) {
+        if (!bookmarksChain.isEmpty()) {
             bookmarksChain = bookmarksChain.substring(1);
         }
         return bookmarksChain;
@@ -46,6 +50,7 @@ public class BookmarkManager {
 
     /**
      * add id to bookmark list
+     *
      * @param context
      * @param id
      */
@@ -60,6 +65,7 @@ public class BookmarkManager {
 
     /**
      * is id bookmarked
+     *
      * @param context
      * @param id
      * @return
@@ -71,6 +77,7 @@ public class BookmarkManager {
 
     /**
      * remove id from list
+     *
      * @param context
      * @param id
      */
@@ -82,7 +89,7 @@ public class BookmarkManager {
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         String bookmarksChain = "";
-        for(Long bookmark : bookmarksIds) {
+        for (Long bookmark : bookmarksIds) {
             bookmarksChain += "," + bookmark;
         }
         prefs.edit().putString(KEY_BOOKMARKS, bookmarksChain).apply();
@@ -92,15 +99,18 @@ public class BookmarkManager {
 
     /**
      * Set a flag for the list view that the content has changed
+     *
      * @param context
      */
-    private static void bookmarkHasChanged(Context context) {
+    private static void bookmarkHasChanged(Context context)
+    {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         prefs.edit().putBoolean(KEY_BOOKMARKCHANGED, true).apply();
     }
 
     /**
      * Reads the flag if bookmark has changed, automatically resets flag
+     *
      * @param context
      * @return
      */

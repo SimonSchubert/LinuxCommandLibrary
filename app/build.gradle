@@ -1,7 +1,14 @@
 apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
 
-repositories {
-    mavenCentral()
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath "io.realm:realm-gradle-plugin:0.87.2"
+    }
 }
 
 android {
@@ -12,7 +19,7 @@ android {
     defaultConfig {
         minSdkVersion 9
         targetSdkVersion 23
-        versionCode 17
+        versionCode 18
         versionName "1.4.2"
     }
 

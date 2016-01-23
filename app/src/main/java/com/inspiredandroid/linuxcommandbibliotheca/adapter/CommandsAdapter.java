@@ -2,7 +2,6 @@ package com.inspiredandroid.linuxcommandbibliotheca.adapter;
 
 import android.content.Context;
 import android.database.Cursor;
-import android.graphics.Color;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.ResourceCursorAdapter;
 import android.view.View;
@@ -43,7 +42,7 @@ public class CommandsAdapter extends ResourceCursorAdapter {
 
         // mark bookmark
         long id = cursor.getLong(cursor.getColumnIndex(CommandsDBTableModel.COL_ID));
-        if(BookmarkManager.hasBookmark(mContext, id)) {
+        if (BookmarkManager.hasBookmark(mContext, id)) {
             ivIcon.setColorFilter(ContextCompat.getColor(context, R.color.ab_primary));
         } else {
             ivIcon.clearColorFilter();

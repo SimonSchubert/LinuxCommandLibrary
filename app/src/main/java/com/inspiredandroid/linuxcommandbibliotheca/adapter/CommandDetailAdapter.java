@@ -20,25 +20,25 @@ import com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView;
  */
 public class CommandDetailAdapter extends BaseAdapter {
 
-    CommandGroupModel commandGroupModel;
-    Context context;
+    private CommandGroupModel mCommandGroupModel;
+    private Context mContext;
 
     public CommandDetailAdapter(Context context, CommandGroupModel commandGroupModel)
     {
-        this.context = context;
-        this.commandGroupModel = commandGroupModel;
+        this.mContext = context;
+        this.mCommandGroupModel = commandGroupModel;
     }
 
     @Override
     public int getCount()
     {
-        return commandGroupModel.getCommands().size();
+        return mCommandGroupModel.getCommands().size();
     }
 
     @Override
     public CommandChildModel getItem(int position)
     {
-        return commandGroupModel.getCommands().get(position);
+        return mCommandGroupModel.getCommands().get(position);
     }
 
     @Override
@@ -54,7 +54,7 @@ public class CommandDetailAdapter extends BaseAdapter {
         CommandViewHolder holder;
 
         if (convertView == null) {
-            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.row_scriptdescription_child, parent, false);
 
             holder = new CommandViewHolder();
@@ -67,7 +67,7 @@ public class CommandDetailAdapter extends BaseAdapter {
         }
 
         holder.command.setText(command.getCommand());
-        holder.command.setCommands(command.getMans());
+        holder.command.setCommands(CommandChildModel.getMans(command));
         holder.share.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
@@ -86,7 +86,7 @@ public class CommandDetailAdapter extends BaseAdapter {
      */
     private void handleCommandClick(CommandChildModel command)
     {
-        if (((Activity) context).getCallingActivity() != null) {
+        if (((Activity) mContext).getCallingActivity() != null) {
             returnResult(command);
         } else {
             shareCommand(command);
@@ -104,7 +104,7 @@ public class CommandDetailAdapter extends BaseAdapter {
         i.setType("text/plain");
         i.putExtra(android.content.Intent.EXTRA_TEXT, command.getCommand());
 
-        context.startActivity(i);
+        mContext.startActivity(i);
     }
 
     /**
@@ -116,10 +116,10 @@ public class CommandDetailAdapter extends BaseAdapter {
     {
         Intent data = new Intent();
         data.putExtra(CommandBibliothecaActivity.EXTRA_COMMAND, command.getCommand());
-        data.putExtra(CommandBibliothecaActivity.EXTRA_ICON, commandGroupModel.getIconBase64());
+        data.putExtra(CommandBibliothecaActivity.EXTRA_ICON, mCommandGroupModel.getIconBase64());
 
-        ((Activity) context).setResult(Activity.RESULT_OK, data);
-        ((Activity) context).finish();
+        ((Activity) mContext).setResult(Activity.RESULT_OK, data);
+        ((Activity) mContext).finish();
     }
 
     public class CommandViewHolder {

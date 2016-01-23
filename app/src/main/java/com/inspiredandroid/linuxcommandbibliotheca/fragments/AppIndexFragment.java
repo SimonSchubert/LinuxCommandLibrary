@@ -47,7 +47,6 @@ public abstract class AppIndexFragment extends SuperFragment {
     @Override
     public void onStop()
     {
-
         AppIndex.AppIndexApi.end(mClient, getAppIndexingAction());
         mClient.disconnect();
 
