@@ -1,0 +1,36 @@
+Applications Memory Usage (kB):
+Uptime: 17446792 Realtime: 26543815
+
+** MEMINFO in pid 17976 [com.inspiredandroid.linuxcommandbibliotheca] **
+                         Shared  Private     Heap     Heap     Heap
+                   Pss    Dirty    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------
+       Native        0        0        0     9588     7657     1930
+       Dalvik      650       40      568     6860     5022     1838
+       Cursor        0        0        0                           
+       Ashmem        0        0        0                           
+    Other dev        4       40        0                           
+     .so mmap     1027       28      668                           
+    .jar mmap        0        0        0                           
+    .apk mmap        0        0        0                           
+    .ttf mmap        0        0        0                           
+    .dex mmap        0        0        0                           
+   Other mmap      283        0       16                           
+      Unknown     4566        0     4452                           
+        TOTAL     6530      108     5704    16448    12679     3768
+ 
+ Objects
+               Views:       72         ViewRootImpl:        1
+         AppContexts:        3           Activities:        1
+              Assets:        3        AssetManagers:        3
+       Local Binders:        6        Proxy Binders:       14
+    Death Recipients:        0
+     OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:     1935
+  PAGECACHE_OVERFLOW:     1778          MALLOC_SIZE:       62
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         1    29778             32         1/17/2  /data/data/com.inspiredandroid.linuxcommandbibliotheca/databases/commands.db
