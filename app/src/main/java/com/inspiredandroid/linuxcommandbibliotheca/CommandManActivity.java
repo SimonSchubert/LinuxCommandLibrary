@@ -12,8 +12,11 @@ import android.widget.Toast;
 
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.CommandManFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.DatabaseLoadingFragment;
+import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandsDBTableModel;
 import com.inspiredandroid.linuxcommandbibliotheca.sql.CommandsDbHelper;
+
+import io.realm.Realm;
 
 /**
  * Created by Simon Schubert
@@ -93,17 +96,13 @@ public class CommandManActivity extends LoadingBaseActivity {
      */
     private long getIdByCommandName(String name)
     {
-        CommandsDbHelper mDbHelper = new CommandsDbHelper(this);
-
-        Cursor c = mDbHelper.getCommandFromName(name);
-        c.moveToFirst();
+        Realm realm = Realm.getInstance(this);
+        Command command = realm.where(Command.class).equalTo("name", name).findFirst();
         long id = INVALID;
-        if (c.getCount() > 0) {
-            id = c.getLong(c.getColumnIndex(CommandsDBTableModel.COL_ID));
+        if (command != null) {
+            id = command.getId();
         }
-        c.close();
-
-        mDbHelper.close();
+        realm.close();
 
         return id;
     }
@@ -120,15 +119,13 @@ public class CommandManActivity extends LoadingBaseActivity {
             return;
         }
 
-        CommandsDbHelper mDbHelper = new CommandsDbHelper(this);
+        Realm realm = Realm.getInstance(this);
 
-        Cursor c = mDbHelper.getCommandFromId(id);
-        c.moveToFirst();
-        String name = c.getString(c.getColumnIndex(CommandsDBTableModel.COL_NAME)).toUpperCase();
-        int category = c.getInt(c.getColumnIndex(CommandsDBTableModel.COL_CATEGORY));
-        c.close();
+        Command command = realm.where(Command.class).equalTo("id", id).findFirst();
+        String name = command.getName().toUpperCase();
+        int category = command.getId();
 
-        mDbHelper.close();
+        realm.close();
 
         showManFragment(name, id, category);
     }

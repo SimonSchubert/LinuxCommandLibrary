@@ -9,6 +9,7 @@ import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.ScriptsExpandableListAdapter;
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.FetchedCommandlineFuCommandsInterface;
+import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandChildModel;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandLineFuModel;
@@ -37,7 +38,6 @@ public class FetchCommandlineFuCommandsAsyncTask extends AsyncTask<String, Strin
     private Context mContext;
     private FetchedCommandlineFuCommandsInterface mCallback;
     private int mPage;
-    private CommandsDbHelper mHelper;
 
     public FetchCommandlineFuCommandsAsyncTask(Context _context, FetchedCommandlineFuCommandsInterface _callback, int _page)
     {
@@ -69,7 +69,6 @@ public class FetchCommandlineFuCommandsAsyncTask extends AsyncTask<String, Strin
             commandLineFuModels = new ArrayList<>();
         }
 
-        mHelper = new CommandsDbHelper(mContext);
         Realm realm = Realm.getInstance(mContext);
 
         realm.beginTransaction();
@@ -88,7 +87,7 @@ public class FetchCommandlineFuCommandsAsyncTask extends AsyncTask<String, Strin
                 json2.put("command", commandLineFuModel.getCommand());
 
                 JSONArray jsonMans = new JSONArray();
-                ArrayList<String> mans = getManPages(commandLineFuModel.getCommand());
+                ArrayList<String> mans = getManPages(realm, commandLineFuModel.getCommand());
                 for(String man : mans) {
                     JSONObject jsonMan = new JSONObject();
                     jsonMan.put("man", man);
@@ -104,11 +103,9 @@ public class FetchCommandlineFuCommandsAsyncTask extends AsyncTask<String, Strin
                 e.printStackTrace();
             }
             realm.createOrUpdateObjectFromJson(CommandGroupModel.class, json);
-            //commands.add(new CommandGroupModel(commandLineFuModel.getCommand(), commandLineFuModel.getSummary(), ));
         }
         realm.commitTransaction();
 
-        mHelper.close();
         realm.close();
 
         return null;
@@ -129,7 +126,7 @@ public class FetchCommandlineFuCommandsAsyncTask extends AsyncTask<String, Strin
      * @param sentence the scripts
      * @return list of commands which exists in the database
      */
-    private ArrayList<String> getManPages(String sentence)
+    private ArrayList<String> getManPages(Realm realm, String sentence)
     {
         String[] words = sentence.split("\\s+");
         for (int i = 0; i < words.length; i++) {
@@ -137,11 +134,10 @@ public class FetchCommandlineFuCommandsAsyncTask extends AsyncTask<String, Strin
         }
         ArrayList<String> mans = new ArrayList<>();
         for (String word : words) {
-            Cursor c = mHelper.getCommandFromName(word);
-            if (c.getCount() > 0) {
+            Command command = realm.where(Command.class).equalTo("name", word).findFirst();
+            if (command != null) {
                 mans.add(word);
             }
-            c.close();
         }
         return mans;
     }

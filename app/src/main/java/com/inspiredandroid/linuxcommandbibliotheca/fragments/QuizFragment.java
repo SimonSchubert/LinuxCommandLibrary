@@ -30,9 +30,13 @@ import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandsDBTableModel;
 import com.inspiredandroid.linuxcommandbibliotheca.models.DataHolder;
 import com.inspiredandroid.linuxcommandbibliotheca.models.LessonData;
+import com.inspiredandroid.linuxcommandbibliotheca.models.Quiz;
 import com.inspiredandroid.linuxcommandbibliotheca.sql.CommandsDbHelper;
 
 import java.util.ArrayList;
+
+import io.realm.Realm;
+import io.realm.RealmResults;
 
 /**
  * Created by Simon Schubert
@@ -54,7 +58,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
 
     DataHolder data;
 
-    CommandsDbHelper databaseHelper;
+    Realm mRealm;
 
     public QuizFragment()
     {
@@ -65,7 +69,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     {
         super.onCreate(savedInstanceState);
 
-        databaseHelper = new CommandsDbHelper(getContext());
+        mRealm = Realm.getInstance(getContext());
     }
 
     @Override
@@ -209,7 +213,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     {
         super.onDestroy();
 
-        databaseHelper.close();
+        mRealm.close();
     }
 
     /**
@@ -445,24 +449,22 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
      */
     private LessonData getLesson()
     {
-
-        Cursor c = databaseHelper.getQuiz(20, data.usedCommandIds, 1);
+        RealmResults<Quiz> lesson = mRealm.where(Quiz.class).equalTo("type", 1).findAll();
+        //Cursor c = databaseHelper.getQuiz(20, data.usedCommandIds, 1);
 
         LessonData data = new LessonData();
 
-        int randomId = (int) (Math.random() * c.getCount());
+        int randomId = (int) (Math.random() * lesson.size());
 
-        if (c.moveToPosition(randomId)) {
-            data.command = c.getString(c.getColumnIndex(CommandsDBTableModel.COL_NAME));
-            data.question = c.getString(c.getColumnIndex(CommandsDBTableModel.COL_DESCRIPTION));
-            data.answer = c.getString(c.getColumnIndex("extra"));
+        Quiz quiz = lesson.get(randomId);
+        if (quiz != null) {
+            data.command = quiz.getName();
+            data.question = quiz.getDescription();
+            data.answer = quiz.getExtra();
         } else {
             getQuizData(0);
-            c.close();
             return null;
         }
-
-        c.close();
 
         return data;
     }
@@ -475,18 +477,12 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
      */
     private ArrayList<String> getAnswers(int count)
     {
-        Cursor c = databaseHelper.getQuiz(20, data.usedCommandIds, 0);
-
-        ArrayList<String> commands = new ArrayList<>();
-        while (c.moveToNext()) {
-            commands.add(c.getString(c.getColumnIndex(CommandsDBTableModel.COL_NAME)));
-        }
-
-        c.close();
+        RealmResults<Quiz> lesson = mRealm.where(Quiz.class).equalTo("type", 0).findAll();
+        //Cursor c = databaseHelper.getQuiz(20, data.usedCommandIds, 0);
 
         ArrayList<String> possibilities = new ArrayList<>();
         while (possibilities.size() < count) {
-            String randomPossibility = commands.get((int) (Math.random() * commands.size()));
+            String randomPossibility = lesson.get((int) (Math.random() * lesson.size())).getName();
             if (!possibilities.contains(randomPossibility)) {
                 possibilities.add(randomPossibility);
             }
@@ -548,14 +544,9 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
      */
     private String getQuestionText(String command)
     {
-        Cursor c2 = databaseHelper.getQuizCommandFromName(command);
-        c2.moveToFirst();
+        Quiz quiz = mRealm.where(Quiz.class).equalTo("name", command).findFirst();
 
-        String question = c2.getString(c2.getColumnIndex(CommandsDBTableModel.COL_DESCRIPTION));
-
-        c2.close();
-
-        return question;
+        return quiz.getDescription();
     }
 
     /**

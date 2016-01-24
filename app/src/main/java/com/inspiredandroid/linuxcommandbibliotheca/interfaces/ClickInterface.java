@@ -6,7 +6,7 @@ package com.inspiredandroid.linuxcommandbibliotheca.interfaces;
 public interface ClickInterface {
 
     /**
-     * Clciked
+     * Clicked
      */
     void onClick();
 }

@@ -24,10 +24,14 @@ import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.ManExpandableListAdapter;
 import com.inspiredandroid.linuxcommandbibliotheca.asnytasks.SearchManAsyncTask;
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.ConvertManFromHtmlToSpannableInterface;
+import com.inspiredandroid.linuxcommandbibliotheca.models.CommandPage;
 import com.inspiredandroid.linuxcommandbibliotheca.sql.BookmarkManager;
 import com.inspiredandroid.linuxcommandbibliotheca.sql.CommandsDbHelper;
 
 import java.util.ArrayList;
+
+import io.realm.Realm;
+import io.realm.RealmResults;
 
 /**
  * Created by Simon Schubert
@@ -36,6 +40,7 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
 
     ExpandableListView mList;
     ManExpandableListAdapter mAdapter;
+    Realm mRealm;
     String mName;
     long mId;
     int mCategory;
@@ -90,6 +95,8 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
         mName = b.getString(CommandManActivity.EXTRA_COMMAND_NAME);
         mCategory = b.getInt(CommandManActivity.EXTRA_COMMAND_CATEGORY);
 
+        mRealm = Realm.getInstance(getContext());
+
         mAdapter = createAdapter();
     }
 
@@ -107,6 +114,14 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
         btnDown.setOnClickListener(this);
 
         return view;
+    }
+
+    @Override
+    public void onDestroy()
+    {
+        super.onDestroy();
+
+        mRealm.close();
     }
 
     @Override
@@ -179,18 +194,15 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
      */
     private ManExpandableListAdapter createAdapter()
     {
-        CommandsDbHelper helper = new CommandsDbHelper(getContext());
-
-        Cursor c = helper.getCommandPagesFromId(mId);
+        RealmResults<CommandPage> pages = mRealm.where(CommandPage.class).equalTo("commandid", mId).findAll();
 
         ArrayList<String> groups = new ArrayList<>();
         ArrayList<ArrayList<CharSequence>> child = new ArrayList<>();
-        while (c.moveToNext()) {
-            String title = c.getString(c.getColumnIndex("title"));
-            String page = c.getString(c.getColumnIndex("page"));
-            groups.add(title);
+        for (CommandPage page : pages) {
 
-            CharSequence chars = Html.fromHtml(page);
+            groups.add(page.getTitle());
+
+            CharSequence chars = Html.fromHtml(page.getPage());
 
             ArrayList<CharSequence> pageSplit = new ArrayList<>();
             String[] tmp = chars.toString().split("\\r?\\n");
@@ -205,10 +217,6 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
             }
             child.add(pageSplit);
         }
-
-        c.close();
-
-        helper.close();
 
         return new ManExpandableListAdapter(getActivity(), groups, child);
     }

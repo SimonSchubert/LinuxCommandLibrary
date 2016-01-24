@@ -16,9 +16,12 @@ import android.widget.TextView;
 import com.inspiredandroid.linuxcommandbibliotheca.CommandManActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandsDBTableModel;
+import com.inspiredandroid.linuxcommandbibliotheca.models.Quiz;
 import com.inspiredandroid.linuxcommandbibliotheca.sql.CommandsDbHelper;
 
 import java.util.ArrayList;
+
+import io.realm.Realm;
 
 /**
  * Created by Simon Schubert
@@ -33,7 +36,7 @@ public class QuizPreviousResultDialogFragment extends DialogFragment implements 
     // correct answer id
     int mCorrectAnswerId;
     // database
-    CommandsDbHelper mDatabaseHelper;
+    Realm mRealm;
 
     public static QuizPreviousResultDialogFragment getInstance(ArrayList<String> answers, int correctAnswer)
     {
@@ -52,7 +55,7 @@ public class QuizPreviousResultDialogFragment extends DialogFragment implements 
     {
         super.onCreate(savedInstanceState);
 
-        mDatabaseHelper = new CommandsDbHelper(getContext());
+        mRealm = Realm.getInstance(getActivity());
     }
 
     /**
@@ -115,7 +118,7 @@ public class QuizPreviousResultDialogFragment extends DialogFragment implements 
     {
         super.onDestroy();
 
-        mDatabaseHelper.close();
+        mRealm.close();
     }
 
     @Override
@@ -144,13 +147,8 @@ public class QuizPreviousResultDialogFragment extends DialogFragment implements 
      */
     private void setCommandDescriptionForTextView(View view, int id, String command)
     {
-        Cursor c2 = mDatabaseHelper.getQuizCommandFromName(command);
-        c2.moveToFirst();
-
-        String description = c2.getString(c2.getColumnIndex(CommandsDBTableModel.COL_DESCRIPTION));
-        ((TextView) view.findViewById(id)).setText(description);
-
-        c2.close();
+        Quiz quiz = mRealm.where(Quiz.class).equalTo("name", command).findFirst();
+        ((TextView) view.findViewById(id)).setText(quiz.getDescription());
     }
 
     /**
@@ -160,11 +158,7 @@ public class QuizPreviousResultDialogFragment extends DialogFragment implements 
      */
     private void setQuestionTextView(View view, int id, String command)
     {
-        Cursor c2 = mDatabaseHelper.getQuizCommandFromName(command);
-        c2.moveToFirst();
-
-        String question = c2.getString(c2.getColumnIndex(CommandsDBTableModel.COL_DESCRIPTION));
-        ((TextView) view.findViewById(id)).setText(String.format(getString(R.string.fragment_quiz_question), question));
-        c2.close();
+        Quiz quiz = mRealm.where(Quiz.class).equalTo("name", command).findFirst();
+        ((TextView) view.findViewById(id)).setText(String.format(getString(R.string.fragment_quiz_question), quiz.getDescription()));
     }
 }

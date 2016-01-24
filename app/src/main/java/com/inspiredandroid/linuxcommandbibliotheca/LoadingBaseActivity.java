@@ -8,6 +8,11 @@ import android.support.v7.app.AppCompatActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.asnytasks.LoadDatabaseAsyncTask;
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.CraftDatabaseInterface;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
 /**
  * Created by Simon Schubert.
  */
@@ -23,6 +28,7 @@ public abstract class LoadingBaseActivity extends AppCompatActivity implements C
         mAsyncTask = new LoadDatabaseAsyncTask(this, this);
         mAsyncTask.execute();
     }
+
 
     @Override
     protected void onDestroy()

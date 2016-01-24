@@ -13,7 +13,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.inspiredandroid.linuxcommandbibliotheca.R;
+import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
 import com.inspiredandroid.linuxcommandbibliotheca.sql.CommandsDbHelper;
+
+import io.realm.Realm;
 
 /**
  * Created by Simon Schubert
@@ -49,9 +52,8 @@ public class BibliothecaFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_bibliotheca, container, false);
 
         // Get total commands count
-        CommandsDbHelper mDbHelper = new CommandsDbHelper(getActivity());
-        int commandsCount = mDbHelper.getCommandsCount();
-        mDbHelper.close();
+        Realm realm = Realm.getInstance(getContext());
+        long commandsCount = realm.where(Command.class).count();
 
         TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tab_layout);
         tabLayout.addTab(tabLayout.newTab().setText(String.format(getString(R.string.fragment_bibliotheca_commands), commandsCount)));

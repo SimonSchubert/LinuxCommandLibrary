@@ -1,5 +1,6 @@
 package com.inspiredandroid.linuxcommandbibliotheca;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -10,6 +11,10 @@ import android.widget.Toast;
 import com.inspiredandroid.linuxcommandbibliotheca.asnytasks.LoadDatabaseAsyncTask;
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.BibliothecaFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.DatabaseLoadingFragment;
+
+import java.io.File;
+
+import io.realm.Realm;
 
 /**
  * Created by Simon Schubert
@@ -32,8 +37,13 @@ public class CommandBibliothecaActivity extends LoadingBaseActivity {
 
         showLoadingFragment();
 
-        mAsyncTask = new LoadDatabaseAsyncTask(this, this);
-        mAsyncTask.execute();
+        File file = new File(getFilesDir()+"/"+Realm.DEFAULT_REALM_NAME);
+        if(file.exists()) {
+            showBibliothecaFragment();
+        } else {
+            mAsyncTask = new LoadDatabaseAsyncTask(this, this);
+            mAsyncTask.execute();
+        }
     }
 
     /**
