@@ -1,7 +1,6 @@
 package com.inspiredandroid.linuxcommandbibliotheca.fragments;
 
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -27,11 +26,9 @@ import com.inspiredandroid.linuxcommandbibliotheca.QuizActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.dialogs.QuizPreviousResultDialogFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
-import com.inspiredandroid.linuxcommandbibliotheca.models.CommandsDBTableModel;
 import com.inspiredandroid.linuxcommandbibliotheca.models.DataHolder;
 import com.inspiredandroid.linuxcommandbibliotheca.models.LessonData;
 import com.inspiredandroid.linuxcommandbibliotheca.models.Quiz;
-import com.inspiredandroid.linuxcommandbibliotheca.sql.CommandsDbHelper;
 
 import java.util.ArrayList;
 
@@ -44,21 +41,21 @@ import io.realm.RealmResults;
 public class QuizFragment extends Fragment implements View.OnClickListener {
 
     // views
-    TextView tvQuestion;
-    TextView tvPercentage;
-    ImageView ivCorrect;
-    ImageView ivWrong;
-    ImageButton btnInfo;
-    RelativeLayout rlButtons;
-    LinearLayout llCongratulation;
-    ArrayList<Button> btnAnswers = new ArrayList<>();
-    EditText etLesson;
-    Button btnHelp;
-    Button btnGiveUp;
+    private TextView mTvQuestion;
+    private TextView mTvPercentage;
+    private ImageView mIvCorrect;
+    private ImageView mIvWrong;
+    private ImageButton mBtnInfo;
+    private RelativeLayout mRlButtons;
+    private LinearLayout mLlCongratulation;
+    private ArrayList<Button> mBtnAnswers = new ArrayList<>();
+    private EditText mEtLesson;
+    private Button mBtnHelp;
+    private Button mBtnGiveUp;
 
-    DataHolder data;
+    private DataHolder mData;
 
-    Realm mRealm;
+    private Realm mRealm;
 
     public QuizFragment()
     {
@@ -77,10 +74,10 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     {
         View view = inflater.inflate(R.layout.fragment_quiz, container, false);
 
-        tvQuestion = (TextView) view.findViewById(R.id.fragment_quiz_tv_question);
-        rlButtons = (RelativeLayout) view.findViewById(R.id.fragment_quiz_rl_buttons);
-        llCongratulation = (LinearLayout) view.findViewById(R.id.fragment_quiz_ll_congratulation);
-        tvPercentage = (TextView) view.findViewById(R.id.fragment_quiz_tv_percentage);
+        mTvQuestion = (TextView) view.findViewById(R.id.fragment_quiz_tv_question);
+        mRlButtons = (RelativeLayout) view.findViewById(R.id.fragment_quiz_rl_buttons);
+        mLlCongratulation = (LinearLayout) view.findViewById(R.id.fragment_quiz_ll_congratulation);
+        mTvPercentage = (TextView) view.findViewById(R.id.fragment_quiz_tv_percentage);
 
         int[] ANSWERS = new int[]{R.id.fragment_quiz_btn_answer1,
                 R.id.fragment_quiz_btn_answer2,
@@ -89,7 +86,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
 
         for (int id : ANSWERS) {
             view.findViewById(id).setOnClickListener(this);
-            btnAnswers.add((Button) view.findViewById(id));
+            mBtnAnswers.add((Button) view.findViewById(id));
         }
 
 
@@ -99,15 +96,15 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
         view.findViewById(R.id.fragment_quiz_btn_giveup).setOnClickListener(this);
 
 
-        ivCorrect = (ImageView) view.findViewById(R.id.fragment_quiz_iv_correct);
-        ivCorrect.setVisibility(View.GONE);
-        ivWrong = (ImageView) view.findViewById(R.id.fragment_quiz_iv_wrong);
-        ivWrong.setVisibility(View.GONE);
-        btnInfo = (ImageButton) view.findViewById(R.id.fragment_quiz_btn_info);
-        etLesson = (EditText) view.findViewById(R.id.fragment_quiz_et_alesson);
-        btnHelp = (Button) view.findViewById(R.id.fragment_quiz_btn_help);
-        btnGiveUp = (Button) view.findViewById(R.id.fragment_quiz_btn_giveup);
-        etLesson.addTextChangedListener(new TextWatcher() {
+        mIvCorrect = (ImageView) view.findViewById(R.id.fragment_quiz_iv_correct);
+        mIvCorrect.setVisibility(View.GONE);
+        mIvWrong = (ImageView) view.findViewById(R.id.fragment_quiz_iv_wrong);
+        mIvWrong.setVisibility(View.GONE);
+        mBtnInfo = (ImageButton) view.findViewById(R.id.fragment_quiz_btn_info);
+        mEtLesson = (EditText) view.findViewById(R.id.fragment_quiz_et_alesson);
+        mBtnHelp = (Button) view.findViewById(R.id.fragment_quiz_btn_help);
+        mBtnGiveUp = (Button) view.findViewById(R.id.fragment_quiz_btn_giveup);
+        mEtLesson.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after)
             {
@@ -123,8 +120,8 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
             @Override
             public void afterTextChanged(Editable s)
             {
-                if (s.toString().equals(data.lesson.answer)) {
-                    etLesson.setEnabled(false);
+                if (s.toString().equals(mData.lesson.answer)) {
+                    mEtLesson.setEnabled(false);
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
@@ -132,10 +129,10 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
                         {
                             startCurtainAnimations();
 
-                            if (data.lesson.failed) {
-                                startCorrectAnimation();
-                            } else {
+                            if (mData.lesson.failed) {
                                 startWrongAnimation();
+                            } else {
+                                startCorrectAnimation();
                             }
 
                             nextRound();
@@ -145,18 +142,18 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
             }
         });
 
-        data = new DataHolder();
+        mData = new DataHolder();
 
         if (savedInstanceState == null) {
             initQuiz();
             firstRound();
         } else {
-            data = (DataHolder) savedInstanceState.getSerializable("data");
+            mData = (DataHolder) savedInstanceState.getSerializable("data");
 
-            if (data.answerCounter == data.maxAnswerCount) {
-                tvQuestion.setVisibility(View.INVISIBLE);
-                rlButtons.setVisibility(View.INVISIBLE);
-                llCongratulation.setVisibility(View.VISIBLE);
+            if (mData.answerCounter == mData.maxAnswerCount) {
+                mTvQuestion.setVisibility(View.INVISIBLE);
+                mRlButtons.setVisibility(View.INVISIBLE);
+                mLlCongratulation.setVisibility(View.VISIBLE);
                 fillResultView();
             } else {
                 fillQuestionTextView();
@@ -173,7 +170,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onSaveInstanceState(Bundle outState)
     {
-        outState.putSerializable("data", data);
+        outState.putSerializable("data", mData);
 
         super.onSaveInstanceState(outState);
     }
@@ -182,22 +179,23 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v)
     {
         if (v.getId() == R.id.fragment_quiz_btn_help) {
-            startCommandManActivity(data.lesson.command);
+            startCommandManActivity(mData.lesson.command);
         } else if (v.getId() == R.id.fragment_quiz_btn_giveup) {
-            etLesson.setText(data.lesson.answer);
+            mData.lesson.failed = true;
+            mEtLesson.setText(mData.lesson.answer);
         } else if (v.getId() == R.id.fragment_quiz_btn_info) {
             showLastQuestionInfoDialog();
         } else if (v.getId() == R.id.fragment_quiz_btn_again) {
-            llCongratulation.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.scale_down));
+            mLlCongratulation.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.scale_down));
             initQuiz();
             firstRound();
         } else {
-            for (int i = 0; i < btnAnswers.size(); i++) {
-                TextView tvAnswer = btnAnswers.get(i);
+            for (int i = 0; i < mBtnAnswers.size(); i++) {
+                TextView tvAnswer = mBtnAnswers.get(i);
                 if (tvAnswer.getId() == v.getId()) {
                     startCurtainAnimations();
-                    if (i == data.currentCorrectAnswerId) {
-                        data.correctAnswerCounter++;
+                    if (i == mData.currentCorrectAnswerId) {
+                        mData.correctAnswerCounter++;
                         startCorrectAnimation();
                     } else {
                         startWrongAnimation();
@@ -235,10 +233,10 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
      */
     private void initQuiz()
     {
-        data.usedCommandIds = new ArrayList<>();
-        data.currentCorrectAnswerId = -1;
-        data.answerCounter = -1;
-        data.correctAnswerCounter = 0;
+        mData.usedCommandIds = new ArrayList<>();
+        mData.currentCorrectAnswerId = -1;
+        mData.answerCounter = -1;
+        mData.correctAnswerCounter = 0;
     }
 
     /**
@@ -252,10 +250,10 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
         fillAnswerViews();
         updateCounter();
 
-        rlButtons.setVisibility(View.VISIBLE);
-        tvQuestion.setVisibility(View.VISIBLE);
-        rlButtons.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.from_left_to_center));
-        tvQuestion.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.from_right_to_center));
+        mRlButtons.setVisibility(View.VISIBLE);
+        mTvQuestion.setVisibility(View.VISIBLE);
+        mRlButtons.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.from_left_to_center));
+        mTvQuestion.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.from_right_to_center));
     }
 
     /**
@@ -264,7 +262,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     private void showLastQuestionInfoDialog()
     {
         FragmentManager fragmentManager = getChildFragmentManager();
-        QuizPreviousResultDialogFragment newFragment = QuizPreviousResultDialogFragment.getInstance(data.lastAnswers, data.lastCorrectAnswerId);
+        QuizPreviousResultDialogFragment newFragment = QuizPreviousResultDialogFragment.getInstance(mData.lastAnswers, mData.lastCorrectAnswerId);
         newFragment.show(fragmentManager, QuizPreviousResultDialogFragment.class.getName());
     }
 
@@ -273,7 +271,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
      */
     private void startWrongAnimation()
     {
-        ivWrong.setVisibility(View.VISIBLE);
+        mIvWrong.setVisibility(View.VISIBLE);
 
         Animation scaleAnimation = AnimationUtils.loadAnimation(getContext(), R.anim.scale_up);
         scaleAnimation.setAnimationListener(new Animation.AnimationListener() {
@@ -291,7 +289,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
                     public void run()
                     {
                         updateNextRoundDataAndAnimate();
-                        ivWrong.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.scale_down));
+                        mIvWrong.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.scale_down));
                     }
                 }, 200);
             }
@@ -302,7 +300,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
 
             }
         });
-        ivWrong.startAnimation(scaleAnimation);
+        mIvWrong.startAnimation(scaleAnimation);
     }
 
     /**
@@ -310,7 +308,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
      */
     private void startCorrectAnimation()
     {
-        ivCorrect.setVisibility(View.VISIBLE);
+        mIvCorrect.setVisibility(View.VISIBLE);
 
         Animation scaleAnimation = AnimationUtils.loadAnimation(getContext(), R.anim.scale_up);
         scaleAnimation.setAnimationListener(new Animation.AnimationListener() {
@@ -328,7 +326,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
                     public void run()
                     {
                         updateNextRoundDataAndAnimate();
-                        ivCorrect.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.scale_down));
+                        mIvCorrect.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.scale_down));
                     }
                 }, 700);
             }
@@ -339,7 +337,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
 
             }
         });
-        ivCorrect.startAnimation(scaleAnimation);
+        mIvCorrect.startAnimation(scaleAnimation);
     }
 
     /**
@@ -347,7 +345,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
      */
     private void startFinishAnimation()
     {
-        llCongratulation.setVisibility(View.VISIBLE);
+        mLlCongratulation.setVisibility(View.VISIBLE);
 
         Animation scaleAnimation = AnimationUtils.loadAnimation(getContext(), R.anim.scale_up);
         scaleAnimation.setAnimationListener(new Animation.AnimationListener() {
@@ -366,7 +364,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
             {
             }
         });
-        llCongratulation.startAnimation(scaleAnimation);
+        mLlCongratulation.startAnimation(scaleAnimation);
     }
 
     /**
@@ -374,7 +372,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
      */
     private void updateNextRoundDataAndAnimate()
     {
-        if (data.answerCounter == data.maxAnswerCount) {
+        if (mData.answerCounter == mData.maxAnswerCount) {
 
             fillResultView();
             startFinishAnimation();
@@ -383,20 +381,20 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
             fillAnswerViews();
             updateCounter();
 
-            tvQuestion.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.from_right_to_center));
-            rlButtons.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.from_left_to_center));
+            mTvQuestion.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.from_right_to_center));
+            mRlButtons.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.from_left_to_center));
         }
     }
 
     private void fillResultView()
     {
-        float percentage = (float) data.correctAnswerCounter / (float) data.maxAnswerCount * 100f;
-        tvPercentage.setText(String.format(getString(R.string.fragment_quiz_result), (int) percentage));
+        float percentage = (float) mData.correctAnswerCounter / (float) mData.maxAnswerCount * 100f;
+        mTvPercentage.setText(String.format(getString(R.string.fragment_quiz_result), (int) percentage));
     }
 
     private void updateCounter()
     {
-        ((QuizActivity) getActivity()).setCounterText(String.format(getString(R.string.fragment_quiz_counter), (data.answerCounter + 1), data.maxAnswerCount));
+        ((QuizActivity) getActivity()).setCounterText(String.format(getString(R.string.fragment_quiz_counter), (mData.answerCounter + 1), mData.maxAnswerCount));
     }
 
     /**
@@ -406,10 +404,10 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     {
         setInfoButtonVisibility();
 
-        data.answerCounter++;
+        mData.answerCounter++;
 
-        data.lastAnswers = Utils.cloneList(data.currentAnswers);
-        data.lastCorrectAnswerId = data.currentCorrectAnswerId;
+        mData.lastAnswers = Utils.cloneList(mData.currentAnswers);
+        mData.lastCorrectAnswerId = mData.currentCorrectAnswerId;
 
         int questionType = Math.random() < 0.5f ? 0 : 1;
 
@@ -418,16 +416,16 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
 
     private void getQuizData(int questionType)
     {
-        data.questionType = questionType;
+        mData.questionType = questionType;
         if (questionType == 0) {
             // define a random correct answer
-            data.currentAnswers = getAnswers(btnAnswers.size());
-            data.currentCorrectAnswerId = (int) (Math.random() * data.currentAnswers.size());
-            data.usedCommandIds.add(data.currentAnswers.get(data.currentCorrectAnswerId));
+            mData.currentAnswers = getAnswers(mBtnAnswers.size());
+            mData.currentCorrectAnswerId = (int) (Math.random() * mData.currentAnswers.size());
+            mData.usedCommandIds.add(mData.currentAnswers.get(mData.currentCorrectAnswerId));
         } else {
-            data.lesson = getLesson();
-            if (data.lesson != null) {
-                data.usedCommandIds.add(data.lesson.command);
+            mData.lesson = getLesson();
+            if (mData.lesson != null) {
+                mData.usedCommandIds.add(mData.lesson.command);
             }
         }
     }
@@ -437,10 +435,10 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
      */
     private void setInfoButtonVisibility()
     {
-        if (data.questionType == 0 && data.answerCounter != data.maxAnswerCount) {
-            btnInfo.setVisibility(View.VISIBLE);
+        if (mData.questionType == 0 && mData.answerCounter != mData.maxAnswerCount) {
+            mBtnInfo.setVisibility(View.VISIBLE);
         } else {
-            btnInfo.setVisibility(View.GONE);
+            mBtnInfo.setVisibility(View.GONE);
         }
     }
 
@@ -450,7 +448,9 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     private LessonData getLesson()
     {
         RealmResults<Quiz> lesson = mRealm.where(Quiz.class).equalTo("type", 1).findAll();
-        //Cursor c = databaseHelper.getQuiz(20, data.usedCommandIds, 1);
+        for(String id : mData.usedCommandIds) {
+            lesson.where().notEqualTo("name", id);
+        }
 
         LessonData data = new LessonData();
 
@@ -461,6 +461,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
             data.command = quiz.getName();
             data.question = quiz.getDescription();
             data.answer = quiz.getExtra();
+            data.failed = false;
         } else {
             getQuizData(0);
             return null;
@@ -478,7 +479,9 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     private ArrayList<String> getAnswers(int count)
     {
         RealmResults<Quiz> lesson = mRealm.where(Quiz.class).equalTo("type", 0).findAll();
-        //Cursor c = databaseHelper.getQuiz(20, data.usedCommandIds, 0);
+        for(String id : mData.usedCommandIds) {
+            lesson.where().notEqualTo("name", id);
+        }
 
         ArrayList<String> possibilities = new ArrayList<>();
         while (possibilities.size() < count) {
@@ -496,29 +499,29 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
      */
     private void fillAnswerViews()
     {
-        if (data.questionType == 0) {
-            for (int i = 0; i < data.currentAnswers.size(); i++) {
-                String command = data.currentAnswers.get(i);
-                btnAnswers.get(i).setText(command);
+        if (mData.questionType == 0) {
+            for (int i = 0; i < mData.currentAnswers.size(); i++) {
+                String command = mData.currentAnswers.get(i);
+                mBtnAnswers.get(i).setText(command);
             }
-            etLesson.setVisibility(View.GONE);
-            for (Button btn : btnAnswers) {
+            mEtLesson.setVisibility(View.GONE);
+            for (Button btn : mBtnAnswers) {
                 btn.setVisibility(View.VISIBLE);
             }
-            btnHelp.setVisibility(View.GONE);
-            btnGiveUp.setVisibility(View.GONE);
+            mBtnHelp.setVisibility(View.GONE);
+            mBtnGiveUp.setVisibility(View.GONE);
         } else {
-            etLesson.setVisibility(View.VISIBLE);
-            for (Button btn : btnAnswers) {
+            mEtLesson.setVisibility(View.VISIBLE);
+            for (Button btn : mBtnAnswers) {
                 btn.setVisibility(View.GONE);
             }
-            btnHelp.setVisibility(View.VISIBLE);
-            btnGiveUp.setVisibility(View.VISIBLE);
+            mBtnHelp.setVisibility(View.VISIBLE);
+            mBtnGiveUp.setVisibility(View.VISIBLE);
 
-            etLesson.setText(data.lesson.command + " ");
-            int position = etLesson.length();
-            etLesson.setSelection(position);
-            etLesson.setEnabled(true);
+            mEtLesson.setText(mData.lesson.command + " ");
+            int position = mEtLesson.length();
+            mEtLesson.setSelection(position);
+            mEtLesson.setEnabled(true);
         }
     }
 
@@ -528,12 +531,12 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     private void fillQuestionTextView()
     {
         String question;
-        if (data.questionType == 0) {
-            question = getQuestionText(data.currentAnswers.get(data.currentCorrectAnswerId));
+        if (mData.questionType == 0) {
+            question = getQuestionText(mData.currentAnswers.get(mData.currentCorrectAnswerId));
         } else {
-            question = data.lesson.question;
+            question = mData.lesson.question;
         }
-        tvQuestion.setText(String.format(getString(R.string.fragment_quiz_question), question));
+        mTvQuestion.setText(String.format(getString(R.string.fragment_quiz_question), question));
     }
 
     /**
@@ -554,7 +557,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
      */
     private void startCurtainAnimations()
     {
-        rlButtons.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.from_center_to_bottom));
-        tvQuestion.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.from_center_to_top));
+        mRlButtons.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.from_center_to_bottom));
+        mTvQuestion.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.from_center_to_top));
     }
 }

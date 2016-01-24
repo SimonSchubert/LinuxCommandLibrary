@@ -52,9 +52,9 @@ public class AboutFragment extends Fragment implements View.OnClickListener {
     private void showAppInMarket(final String appPackageName)
     {
         try {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?mId=" + appPackageName)));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
         } catch (android.content.ActivityNotFoundException e) {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?mId=" + appPackageName)));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
         }
     }
 }
