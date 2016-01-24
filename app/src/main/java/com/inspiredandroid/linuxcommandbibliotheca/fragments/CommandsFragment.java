@@ -25,18 +25,26 @@ import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.CommandManActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.CommandsAdapter;
+import com.inspiredandroid.linuxcommandbibliotheca.adapter.MyAdapter;
+import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
+import com.inspiredandroid.linuxcommandbibliotheca.models.CommandPage;
+import com.inspiredandroid.linuxcommandbibliotheca.models.CommandsDBTableModel;
+import com.inspiredandroid.linuxcommandbibliotheca.models.Quiz;
 import com.inspiredandroid.linuxcommandbibliotheca.sql.BookmarkManager;
 import com.inspiredandroid.linuxcommandbibliotheca.sql.CommandsDbHelper;
 
 import java.text.Normalizer;
 
+import io.realm.Realm;
+import io.realm.RealmResults;
+
 /**
  * Created by Simon Schubert.
  */
-public class CommandsFragment extends Fragment implements AdapterView.OnItemClickListener, LoaderManager.LoaderCallbacks<Cursor> {
+public class CommandsFragment extends Fragment implements AdapterView.OnItemClickListener {
 
-    private CommandsAdapter mAdapter;
-    private CommandsDbHelper mDbHelper;
+    private MyAdapter mAdapter;
+    private Realm mRealm;
 
     public CommandsFragment()
     {
@@ -49,7 +57,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
 
         setHasOptionsMenu(true);
 
-        mDbHelper = new CommandsDbHelper(getActivity());
+        mRealm = Realm.getInstance(getContext());
 
         createAdapter();
     }
@@ -138,7 +146,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
     {
         super.onDestroy();
 
-        mDbHelper.close();
+        mRealm.close();
     }
 
     @Override
@@ -168,7 +176,51 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
 
     private void createAdapter()
     {
-        mAdapter = new CommandsAdapter(getActivity(), R.layout.row_command_child, mDbHelper.getAllCommands(BookmarkManager.getBookmarkIdsChain(getContext())), true);
+        /*
+        mRealm.beginTransaction();
+        mRealm.clear(Command.class);
+
+        Cursor c = mDbHelper.getAllCommands("");
+
+        while (c.moveToNext()) {
+            Command command = mRealm.createObject(Command.class);
+            command.setId(c.getInt(c.getColumnIndex(CommandsDBTableModel.COL_ID)));
+            command.setCategory(c.getInt(c.getColumnIndex(CommandsDBTableModel.COL_CATEGORY)));
+            command.setDescription(c.getString(c.getColumnIndex(CommandsDBTableModel.COL_DESCRIPTION)));
+            command.setName(c.getString(c.getColumnIndex(CommandsDBTableModel.COL_NAME)));
+            mRealm.copyToRealm(command);
+        }
+
+        Cursor c2 = mDbHelper.getAllCommandPages();
+
+        while (c2.moveToNext()) {
+            CommandPage command = mRealm.createObject(CommandPage.class);
+            command.setId(c2.getInt(c2.getColumnIndex("id")));
+            command.setCommandid(c2.getInt(c2.getColumnIndex("commandid")));
+            command.setPage(c2.getString(c2.getColumnIndex("page")));
+            command.setTitle(c2.getString(c2.getColumnIndex("title")));
+            mRealm.copyToRealm(command);
+        }
+
+        Cursor c3 = mDbHelper.getAllQuiz();
+
+        while (c3.moveToNext()) {
+            Quiz command = mRealm.createObject(Quiz.class);
+            command.setId(c3.getInt(c3.getColumnIndex("_id")));
+            command.setName(c3.getString(c3.getColumnIndex("name")));
+            command.setDifficulty(c3.getInt(c3.getColumnIndex("difficulty")));
+            command.setDescription(c3.getString(c3.getColumnIndex("description")));
+            command.setType(c3.getInt(c3.getColumnIndex("type")));
+            command.setExtra(c3.getString(c3.getColumnIndex("extra")));
+            mRealm.copyToRealm(command);
+        }
+
+        mRealm.commitTransaction();
+        */
+
+        mAdapter = new MyAdapter(getContext(), mRealm.where(Command.class).findAll(), false);
+
+        // mAdapter = new CommandsAdapter(getActivity(), R.layout.row_command_child, mDbHelper.getAllCommands(BookmarkManager.getBookmarkIdsChain(getContext())), true);
     }
 
     /**
@@ -176,8 +228,8 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
      */
     private void resetSearchResults()
     {
-        // Update mAdapter
-        mAdapter.updateCursor(mDbHelper.getAllCommands(BookmarkManager.getBookmarkIdsChain(getContext())), "");
+        mAdapter.updateRealmResults(mRealm.where(Command.class).findAll());
+        mAdapter.setSearchQuery("");
     }
 
     /**
@@ -187,38 +239,9 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
      */
     private void search(String query)
     {
-        // Update mAdapter
-        mAdapter.updateCursor(mDbHelper.searchCommands(query), query);
+        RealmResults<Command> commands = mRealm.where(Command.class).contains("name", query).findAll();
+        mAdapter.updateRealmResults(commands);
+        mAdapter.setSearchQuery(query);
     }
 
-    @Override
-    public Loader<Cursor> onCreateLoader(int id, Bundle args)
-    {
-        // Create a new CursorLoader with the following query parameters.
-        return new CursorLoader(getActivity(), null, null, null, null, null) {
-            @Override
-            public Cursor loadInBackground()
-            {
-                return mDbHelper.getAllCommands(BookmarkManager.getBookmarkIdsChain(getContext()));
-            }
-        };
-    }
-
-    @Override
-    public void onLoadFinished(Loader<Cursor> loader, Cursor data)
-    {
-        // The asynchronous load is complete and the data
-        // is now available for use. Only now can we associate
-        // the queried Cursor with the SimpleCursorAdapter.
-        mAdapter.updateCursor(data, "");
-    }
-
-    @Override
-    public void onLoaderReset(Loader<Cursor> loader)
-    {
-        // For whatever reason, the Loader's data is now unavailable.
-        // Remove any references to the old data by replacing it with
-        // a null Cursor.
-        mAdapter.updateCursor(null, "");
-    }
 }

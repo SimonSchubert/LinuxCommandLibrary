@@ -11,6 +11,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
+import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandChildModel;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandsDBTableModel;
@@ -24,6 +25,8 @@ import java.io.InputStream;
 import java.nio.channels.FileChannel;
 import java.util.ArrayList;
 import java.util.List;
+
+import io.realm.Realm;
 
 
 /**
@@ -55,9 +58,7 @@ public class MyAndroidTest extends AndroidTestCase {
      */
     public void testCraftManDatabase() throws Exception
     {
-        CommandsDbHelper helper = new CommandsDbHelper(mContext);
-        helper.getReadableDatabase();
-        helper.close();
+
     }
 
     /**
@@ -130,18 +131,17 @@ public class MyAndroidTest extends AndroidTestCase {
      * @param missingCommands
      * @param mans
      */
-    private void addMissingMansToList(ArrayList<String> missingCommands, String[] mans)
+    private void addMissingMansToList(List<String> missingCommands, List<String> mans)
     {
-        CommandsDbHelper helper = new CommandsDbHelper(mContext);
+        Realm realm = Realm.getInstance(getContext());
         for(String man : mans) {
-            Cursor c = helper.getCommandFromName(man);
-            if(c.getCount() == 0) {
+            Command command = realm.where(Command.class).equalTo("name", man).findFirst();
+            if(command == null) {
                 if(!missingCommands.contains(man)) {
                     missingCommands.add(man);
                 }
             }
         }
-        helper.close();
     }
 
     /**

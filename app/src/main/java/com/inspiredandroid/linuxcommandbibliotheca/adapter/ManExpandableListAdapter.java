@@ -9,12 +9,15 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
 import com.inspiredandroid.linuxcommandbibliotheca.R;
+import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
 import com.inspiredandroid.linuxcommandbibliotheca.sql.CommandsDbHelper;
 import com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView;
 
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import io.realm.Realm;
 
 /**
  * Created by Simon Schubert
@@ -145,7 +148,7 @@ public class ManExpandableListAdapter extends BaseExpandableListAdapter {
      */
     private String[] extractCommandsFromDescription(String description)
     {
-        CommandsDbHelper helper = new CommandsDbHelper(mContext);
+        Realm realm = Realm.getInstance(mContext);
 
         // match "command(category)" e.g: gzip(1)
         Pattern p = Pattern.compile("[[:graph:]]+\\s?\\(\\w\\)");
@@ -155,11 +158,10 @@ public class ManExpandableListAdapter extends BaseExpandableListAdapter {
         ArrayList<String> tmp = new ArrayList<>();
         while (m.find()) {
             String extractedCommand = m.group(0).substring(0, m.group(0).length() - 3).trim();
-            Cursor c = helper.getCommandFromName(extractedCommand);
-            if (c.getCount() > 0) {
+            Command command = realm.where(Command.class).equalTo("name", extractedCommand).findFirst();
+            if (command != null) {
                 tmp.add(extractedCommand);
             }
-            c.close();
         }
 
         // convert String[] to ArrayList
@@ -169,7 +171,7 @@ public class ManExpandableListAdapter extends BaseExpandableListAdapter {
             commands[i] = cmd;
         }
 
-        helper.close();
+        realm.close();
 
         return commands;
     }
