@@ -64,7 +64,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mRealm = Realm.getInstance(getContext());
+        mRealm = Realm.getDefaultInstance();
     }
 
     @Override

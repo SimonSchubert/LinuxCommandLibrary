@@ -16,6 +16,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
 
 import io.realm.Realm;
+import io.realm.RealmConfiguration;
 
 /**
  * Created by Simon Schubert
@@ -47,8 +48,9 @@ public class BibliothecaFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_bibliotheca, container, false);
 
         // Get total commands count
-        Realm realm = Realm.getInstance(getContext());
+        Realm realm = Realm.getDefaultInstance();
         long commandsCount = realm.where(Command.class).count();
+        realm.close();
 
         TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tab_layout);
         tabLayout.addTab(tabLayout.newTab().setText(String.format(getString(R.string.fragment_bibliotheca_commands), commandsCount)));

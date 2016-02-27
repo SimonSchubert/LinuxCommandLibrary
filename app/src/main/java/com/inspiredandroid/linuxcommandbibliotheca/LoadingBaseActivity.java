@@ -13,16 +13,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.interfaces.CraftDatabaseInter
  */
 public abstract class LoadingBaseActivity extends AppCompatActivity implements CraftDatabaseInterface {
 
-    LoadDatabaseAsyncTask mAsyncTask;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        mAsyncTask = new LoadDatabaseAsyncTask(this, this);
-        mAsyncTask.execute();
-    }
-
+    protected LoadDatabaseAsyncTask mAsyncTask;
 
     @Override
     protected void onDestroy() {

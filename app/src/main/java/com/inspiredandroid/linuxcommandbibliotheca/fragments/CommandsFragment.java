@@ -48,7 +48,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
 
         setHasOptionsMenu(true);
 
-        mRealm = Realm.getInstance(getContext());
+        mRealm = Realm.getDefaultInstance();
 
         createAdapter();
     }
