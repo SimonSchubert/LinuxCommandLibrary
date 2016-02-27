@@ -50,9 +50,6 @@ public class BibliothecaFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_bibliotheca, container, false);
 
-        File file = new File(getContext().getFilesDir() + "/" + Constants.REALM_DATABASE);
-        Log.e("TAG", "2 new db exists: " + file.exists());
-
         // Get total commands count
         Realm realm = Realm.getDefaultInstance();
         long commandsCount = realm.where(Command.class).count();

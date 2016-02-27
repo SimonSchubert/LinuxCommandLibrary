@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.widget.SearchView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -186,6 +187,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
         results.add(mRealm.where(Command.class).equalTo(Command.NAME, query).findAll());
         results.add(mRealm.where(Command.class).beginsWith(Command.NAME, query).notEqualTo(Command.NAME, query).findAll());
         results.add(mRealm.where(Command.class).contains(Command.NAME, query).not().beginsWith(Command.NAME, query).notEqualTo(Command.NAME, query).findAll());
+        results.add(mRealm.where(Command.class).contains(Command.DESCRIPTION, query).findAll());
 
         mAdapter.updateRealmResults(results);
         mAdapter.setSearchQuery(query);

@@ -26,6 +26,7 @@ public class AboutFragment extends Fragment implements View.OnClickListener {
 
         view.findViewById(R.id.fragment_about_btn_orcgenocide).setOnClickListener(this);
         view.findViewById(R.id.fragment_about_btn_remote).setOnClickListener(this);
+        view.findViewById(R.id.fragment_about_btn_burger).setOnClickListener(this);
 
         return view;
     }
@@ -37,6 +38,9 @@ public class AboutFragment extends Fragment implements View.OnClickListener {
             showAppInMarket(appPackageName);
         } else if (v.getId() == R.id.fragment_about_btn_remote) {
             final String appPackageName = Utils.PACKAGE_LINUXREMOTE;
+            showAppInMarket(appPackageName);
+        } else if (v.getId() == R.id.fragment_about_btn_burger) {
+            final String appPackageName = Utils.PACKAGE_BURGER;
             showAppInMarket(appPackageName);
         }
     }

@@ -62,6 +62,26 @@
                     android:gravity="center_horizontal"
                     android:text="Orc Genocide" />
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/fragment_about_btn_burger"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_burger" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:maxWidth="120dp"
+                    android:text="Berlin Burger Map" />
+            </LinearLayout>
         </LinearLayout>
 
         <TextView

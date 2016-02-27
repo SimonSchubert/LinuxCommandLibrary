@@ -23,6 +23,7 @@ import java.util.ArrayList;
  */
 public class Utils {
 
+    public final static String PACKAGE_BURGER = "com.inspiredandroid.stopandroll";
     public final static String PACKAGE_LINUXREMOTE = "com.inspiredandroid.linuxcontrolcenter";
     public final static String PACKAGE_LINUXREMOTE_PRO = "com.inspiredandroid.linuxcontrolcenterpro";
     public static final String PACKAGE_ORCGENOCIDE = "com.inspiredandroid.orcgenocide";
