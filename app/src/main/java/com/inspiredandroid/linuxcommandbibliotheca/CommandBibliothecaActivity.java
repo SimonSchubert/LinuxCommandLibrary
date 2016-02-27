@@ -5,20 +5,14 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.widget.Toast;
 
-import com.inspiredandroid.linuxcommandbibliotheca.asnytasks.LoadDatabaseAsyncTask;
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.BibliothecaFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.DatabaseLoadingFragment;
 
-import java.io.File;
-
-import io.realm.Realm;
-
 /**
  * Created by Simon Schubert
- * <p>
+ * <p/>
  * This Activity just holds the BibliothecaFragment
  */
 public class CommandBibliothecaActivity extends LoadingBaseActivity {
@@ -35,14 +29,6 @@ public class CommandBibliothecaActivity extends LoadingBaseActivity {
         setSupportActionBar(toolbar);
 
         showLoadingFragment();
-
-        File file = new File(getFilesDir() + "/" + Constants.REALM_DATABASE);
-        if (file.exists()) {
-            showBibliothecaFragment();
-        } else {
-            mAsyncTask = new LoadDatabaseAsyncTask(this, this);
-            mAsyncTask.execute();
-        }
     }
 
     /**

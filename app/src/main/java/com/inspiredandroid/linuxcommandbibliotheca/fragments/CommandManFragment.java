@@ -36,18 +36,16 @@ import io.realm.RealmResults;
  */
 public class CommandManFragment extends AppIndexFragment implements ConvertManFromHtmlToSpannableInterface, View.OnClickListener {
 
-    ExpandableListView mList;
-    ManExpandableListAdapter mAdapter;
-    Realm mRealm;
-    String mName;
-    long mId;
-    int mCategory;
-    int mIndexesPosition;
-    String query;
-    ImageButton btnUp;
-    ImageButton btnDown;
-
-    ArrayList<Integer> indexes = new ArrayList<>();
+    private ExpandableListView mList;
+    private ManExpandableListAdapter mAdapter;
+    private Realm mRealm;
+    private String mName;
+    private long mId;
+    private int mCategory;
+    private int mIndexesPosition;
+    private ImageButton btnUp;
+    private ImageButton btnDown;
+    private ArrayList<Integer> indexes = new ArrayList<>();
 
     /**
      * Split String every partitionSize character
@@ -179,7 +177,7 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
      * @return
      */
     private ManExpandableListAdapter createAdapter() {
-        RealmResults<CommandPage> pages = mRealm.where(CommandPage.class).equalTo("commandid", mId).findAll();
+        RealmResults<CommandPage> pages = mRealm.where(CommandPage.class).equalTo(CommandPage.COMMANDID, mId).findAll();
 
         ArrayList<String> groups = new ArrayList<>();
         ArrayList<ArrayList<CharSequence>> child = new ArrayList<>();
@@ -234,18 +232,6 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
         SearchManAsyncTask async = new SearchManAsyncTask(getContext(), q, mAdapter.mChild, this);
         addAsyncTask(async);
         async.execute();
-        /*
-        // jump to first occur
-        if (indexes.size() > 0) {
-            showButton();
-            scrollToPosition(indexes.get(mIndexesPosition));
-        } else {
-            hideButton();
-        }
-
-        // highlight occurs
-        tvDescription.setText(Utils.highlightQueryInsideText(getContext(), query, tvDescription.getText().toString()));
-        */
     }
 
     /**

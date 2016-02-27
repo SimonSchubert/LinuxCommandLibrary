@@ -7,7 +7,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath "io.realm:realm-gradle-plugin:0.87.2"
+        classpath "io.realm:realm-gradle-plugin:0.87.5"
     }
 }
 

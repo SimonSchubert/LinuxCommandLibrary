@@ -1,6 +1,5 @@
 package com.inspiredandroid.linuxcommandbibliotheca;
 
-
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +13,14 @@ import com.inspiredandroid.linuxcommandbibliotheca.interfaces.CraftDatabaseInter
 public abstract class LoadingBaseActivity extends AppCompatActivity implements CraftDatabaseInterface {
 
     protected LoadDatabaseAsyncTask mAsyncTask;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        mAsyncTask = new LoadDatabaseAsyncTask(this, this);
+        mAsyncTask.execute();
+    }
 
     @Override
     protected void onDestroy() {

@@ -6,6 +6,8 @@ import io.realm.RealmObject;
  * Created by simon on 24.01.16.
  */
 public class CommandPage extends RealmObject {
+    public static final String COMMANDID = "commandid";
+
     private int id;
     private int commandid;
     private String page;
