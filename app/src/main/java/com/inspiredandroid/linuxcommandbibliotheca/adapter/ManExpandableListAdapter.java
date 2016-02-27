@@ -133,7 +133,7 @@ public class ManExpandableListAdapter extends BaseExpandableListAdapter {
      * @return
      */
     private String[] extractCommandsFromDescription(String description) {
-        Realm realm = Realm.getInstance(mContext);
+        Realm realm = Realm.getDefaultInstance();
 
         // match "command(category)" e.g: gzip(1)
         Pattern p = Pattern.compile("[[:graph:]]+\\s?\\(\\w\\)");

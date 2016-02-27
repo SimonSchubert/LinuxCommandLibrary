@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.inspiredandroid.linuxcommandbibliotheca.asnytasks.LoadDatabaseAsyncTask;
@@ -35,7 +36,7 @@ public class CommandBibliothecaActivity extends LoadingBaseActivity {
 
         showLoadingFragment();
 
-        File file = new File(getFilesDir() + "/" + Realm.DEFAULT_REALM_NAME);
+        File file = new File(getFilesDir() + "/" + Constants.REALM_DATABASE);
         if (file.exists()) {
             showBibliothecaFragment();
         } else {

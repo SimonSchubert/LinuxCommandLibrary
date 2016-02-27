@@ -133,7 +133,7 @@ public class MyAndroidTest extends AndroidTestCase {
      */
     private void addMissingMansToList(List<String> missingCommands, List<String> mans)
     {
-        Realm realm = Realm.getInstance(getContext());
+        Realm realm = Realm.getDefaultInstance();
         for(String man : mans) {
             Command command = realm.where(Command.class).equalTo("name", man).findFirst();
             if(command == null) {
@@ -142,6 +142,7 @@ public class MyAndroidTest extends AndroidTestCase {
                 }
             }
         }
+        realm.close();
     }
 
     /**

@@ -64,7 +64,7 @@ public class FetchCommandlineFuCommandsAsyncTask extends AsyncTask<String, Strin
             commandLineFuModels = new ArrayList<>();
         }
 
-        Realm realm = Realm.getInstance(mContext);
+        Realm realm = Realm.getDefaultInstance();
 
         realm.beginTransaction();
 

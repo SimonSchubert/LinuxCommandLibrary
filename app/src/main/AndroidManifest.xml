@@ -13,6 +13,7 @@
         android:theme="@style/LibAppTheme"
         android:exported="true"
         android:supportsRtl="true"
+        android:name=".MyApp"
         tools:replace="android:icon">
         <activity
             android:name=".CommandBibliothecaActivity"

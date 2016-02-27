@@ -27,8 +27,6 @@ public class AboutActivity extends BaseActivity {
         assert getSupportActionBar() != null;
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        showAboutFragment();
     }
 
     @Override
@@ -39,14 +37,5 @@ public class AboutActivity extends BaseActivity {
         }
 
         return (super.onOptionsItemSelected(item));
-    }
-
-    private void showAboutFragment() {
-        Fragment fragment = new AboutFragment();
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-        fragmentTransaction.replace(R.id.fragment_container, fragment);
-        fragmentTransaction.commit();
     }
 }

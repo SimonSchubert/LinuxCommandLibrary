@@ -60,7 +60,7 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
 
         setHasOptionsMenu(true);
 
-        mRealm = Realm.getInstance(getContext());
+        mRealm = Realm.getDefaultInstance();
 
         mAdapter = createAdapter();
 

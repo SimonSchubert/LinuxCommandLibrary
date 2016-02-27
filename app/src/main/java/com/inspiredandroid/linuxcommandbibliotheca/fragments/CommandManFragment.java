@@ -89,7 +89,7 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
         mName = b.getString(CommandManActivity.EXTRA_COMMAND_NAME);
         mCategory = b.getInt(CommandManActivity.EXTRA_COMMAND_CATEGORY);
 
-        mRealm = Realm.getInstance(getContext());
+        mRealm = Realm.getDefaultInstance();
 
         mAdapter = createAdapter();
     }
