@@ -16,7 +16,6 @@ import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
 
 import io.realm.Realm;
-import io.realm.RealmConfiguration;
 
 /**
  * Created by Simon Schubert
@@ -40,7 +39,7 @@ public class BibliothecaFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        createAdapter();
+        mAdapter = new ScreenSlidePagerAdapter(getChildFragmentManager());
     }
 
     @Override
@@ -84,11 +83,6 @@ public class BibliothecaFragment extends Fragment {
         }
 
         return view;
-    }
-
-    private void createAdapter() {
-        // Init viewpager mAdapter
-        mAdapter = new ScreenSlidePagerAdapter(getChildFragmentManager());
     }
 
     /**

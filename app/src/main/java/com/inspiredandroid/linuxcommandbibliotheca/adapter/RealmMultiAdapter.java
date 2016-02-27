@@ -11,17 +11,17 @@ import io.realm.RealmResults;
 
 public abstract class RealmMultiAdapter<T extends RealmObject> extends BaseAdapter {
 
-    protected LayoutInflater inflater;
-    protected List<RealmResults<T>> realmResults;
-    protected Context context;
+    protected LayoutInflater mInflater;
+    protected List<RealmResults<T>> mRealmResults;
+    protected Context mContext;
 
     public RealmMultiAdapter(Context context, List<RealmResults<T>> realmResults, boolean automaticUpdate) {
         if (context == null) {
             throw new IllegalArgumentException("Context cannot be null");
         }
-        this.context = context;
-        this.realmResults = realmResults;
-        this.inflater = LayoutInflater.from(context);
+        mContext = context;
+        mRealmResults = realmResults;
+        mInflater = LayoutInflater.from(context);
     }
 
     /**
@@ -31,11 +31,11 @@ public abstract class RealmMultiAdapter<T extends RealmObject> extends BaseAdapt
      */
     @Override
     public int getCount() {
-        if (realmResults == null) {
+        if (mRealmResults == null) {
             return 0;
         }
         int count = 0;
-        for (RealmResults<T> realmResult : realmResults) {
+        for (RealmResults<T> realmResult : mRealmResults) {
             count += realmResult.size();
         }
         return count;
@@ -49,11 +49,11 @@ public abstract class RealmMultiAdapter<T extends RealmObject> extends BaseAdapt
      */
     @Override
     public T getItem(int i) {
-        if (realmResults == null || realmResults.size() == 0) {
+        if (mRealmResults == null || mRealmResults.size() == 0) {
             return null;
         }
         int count = 0;
-        for (RealmResults<T> realmResult : realmResults) {
+        for (RealmResults<T> realmResult : mRealmResults) {
             if (i < realmResult.size() + count) {
                 return realmResult.get(i - count);
             }
@@ -83,7 +83,7 @@ public abstract class RealmMultiAdapter<T extends RealmObject> extends BaseAdapt
      */
     public void updateRealmResults(List<RealmResults<T>> queryResults) {
 
-        this.realmResults = queryResults;
+        this.mRealmResults = queryResults;
         notifyDataSetChanged();
     }
 }

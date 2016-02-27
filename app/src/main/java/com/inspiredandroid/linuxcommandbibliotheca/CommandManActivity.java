@@ -17,7 +17,7 @@ import io.realm.Realm;
 
 /**
  * Created by Simon Schubert
- * <p>
+ * <p/>
  * This Activity tries to get a command based on different opening types and starts a
  * CommandManFragment if successfully fetched or finishes immediately
  */

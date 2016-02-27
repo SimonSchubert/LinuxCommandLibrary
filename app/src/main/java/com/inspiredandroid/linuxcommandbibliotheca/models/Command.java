@@ -6,6 +6,9 @@ import io.realm.RealmObject;
  * Created by simon on 24.01.16.
  */
 public class Command extends RealmObject {
+    public final static String ID = "id";
+    public final static String NAME = "name";
+
     private int id;
     private int category;
     private String name;

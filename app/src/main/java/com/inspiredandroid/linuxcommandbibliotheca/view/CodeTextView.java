@@ -16,7 +16,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.interfaces.ClickInterface;
 
 /**
  * Created by Simon Schubert
- * <p>
+ * <p/>
  * This View makes it very easy to highlightQueryInsideText defined mCommands in an normal textview. Define the
  * mCommands which should be highlighted in an string array and link it in the layout resource as
  * "command".

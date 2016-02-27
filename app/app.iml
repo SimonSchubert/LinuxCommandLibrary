@@ -77,7 +77,7 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/8.4.0/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/jars" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/io.realm/realm-android-library/0.87.2/jars" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/io.realm/realm-android-library/0.87.5/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifests" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/pre-dexed" />
@@ -94,8 +94,8 @@
     <orderEntry type="library" exported="" name="recyclerview-v7-23.1.1" level="project" />
     <orderEntry type="library" exported="" name="gson-2.4" level="project" />
     <orderEntry type="library" exported="" name="support-v4-23.1.1" level="project" />
-    <orderEntry type="library" exported="" name="realm-android-library-0.87.2" level="project" />
-    <orderEntry type="library" exported="" name="realm-annotations-0.87.2" level="project" />
+    <orderEntry type="library" exported="" name="realm-annotations-0.87.5" level="project" />
+    <orderEntry type="library" exported="" name="realm-android-library-0.87.5" level="project" />
     <orderEntry type="library" exported="" name="play-services-base-8.4.0" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-23.1.1" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-23.1.1" level="project" />

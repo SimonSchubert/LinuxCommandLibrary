@@ -7,14 +7,11 @@ import android.util.Log;
 import com.inspiredandroid.linuxcommandbibliotheca.Constants;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.CraftDatabaseInterface;
-import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-
-import io.realm.Realm;
 
 /**
  * Created by Simon Schubert
@@ -37,6 +34,13 @@ public class LoadDatabaseAsyncTask extends AsyncTask<Boolean, Void, Boolean> {
 
     @Override
     protected Boolean doInBackground(Boolean... contexts) {
+
+
+        File oldDatabase = mContext.getDatabasePath("commands.db");
+        Log.e("TAG", "old db exists: " + oldDatabase.exists());
+        if(oldDatabase.exists()) {
+            oldDatabase.delete();
+        }
 
         File file = new File(mContext.getFilesDir() + "/" + Constants.REALM_DATABASE);
         if (!file.exists()) {
