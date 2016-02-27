@@ -13,20 +13,17 @@ import com.inspiredandroid.linuxcommandbibliotheca.R;
  */
 public class DatabaseLoadingFragment extends Fragment {
 
-    public DatabaseLoadingFragment()
-    {
+    public DatabaseLoadingFragment() {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState)
-    {
+                             Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_database_loading, container, false);
     }
 

@@ -1,7 +1,6 @@
 package com.inspiredandroid.linuxcommandbibliotheca.models;
 
 import android.content.Context;
-import android.util.Log;
 
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 
@@ -27,20 +26,17 @@ public class CommandGroupModel extends RealmObject {
     private int votes;
     private RealmList<CommandChildModel> commands;
 
-    public CommandGroupModel()
-    {
+    public CommandGroupModel() {
 
     }
 
-    public CommandGroupModel(String command, String desc, ArrayList<String> mans)
-    {
+    public CommandGroupModel(String command, String desc, ArrayList<String> mans) {
         this.descStr = desc;
         this.iconResource = "icon_linux";  //NON-NLS
         commands.add(new CommandChildModel(command, mans));
     }
 
-    public static String getDescString(CommandGroupModel model, Context context)
-    {
+    public static String getDescString(CommandGroupModel model, Context context) {
         int resId = getDescResourceId(model);
         if (resId != -1) {
             return context.getResources().getString(resId);
@@ -49,8 +45,7 @@ public class CommandGroupModel extends RealmObject {
         }
     }
 
-    public static int getDescResourceId(CommandGroupModel model)
-    {
+    public static int getDescResourceId(CommandGroupModel model) {
         switch (model.getDesc()) {
             case 1:
                 return R.string.desc_battery_usage;
@@ -116,83 +111,67 @@ public class CommandGroupModel extends RealmObject {
         return -1;
     }
 
-    public int getVotes()
-    {
+    public int getVotes() {
         return votes;
     }
 
-    public void setVotes(int votes)
-    {
+    public void setVotes(int votes) {
         this.votes = votes;
     }
 
-    public int getId()
-    {
+    public int getId() {
         return id;
     }
 
-    public void setId(int id)
-    {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public int getCategory()
-    {
+    public int getCategory() {
         return category;
     }
 
-    public void setCategory(int category)
-    {
+    public void setCategory(int category) {
         this.category = category;
     }
 
-    public int getDesc()
-    {
+    public int getDesc() {
         return desc;
     }
 
-    public void setDesc(int desc)
-    {
+    public void setDesc(int desc) {
         this.desc = desc;
     }
 
-    public String getDescStr()
-    {
+    public String getDescStr() {
         return descStr;
     }
 
-    public void setDescStr(String descStr)
-    {
+    public void setDescStr(String descStr) {
         this.descStr = descStr;
     }
 
-    public String getIconBase64()
-    {
+    public String getIconBase64() {
         return iconBase64;
     }
 
-    public void setIconBase64(String value)
-    {
+    public void setIconBase64(String value) {
         iconBase64 = value;
     }
 
-    public String getIconResource()
-    {
+    public String getIconResource() {
         return iconResource;
     }
 
-    public void setIconResource(String iconResource)
-    {
+    public void setIconResource(String iconResource) {
         this.iconResource = iconResource;
     }
 
-    public RealmList<CommandChildModel> getCommands()
-    {
+    public RealmList<CommandChildModel> getCommands() {
         return commands;
     }
 
-    public void setCommands(RealmList<CommandChildModel> commands)
-    {
+    public void setCommands(RealmList<CommandChildModel> commands) {
         this.commands = commands;
     }
 }

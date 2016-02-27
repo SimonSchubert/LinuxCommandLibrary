@@ -30,8 +30,6 @@ import com.inspiredandroid.linuxcommandbibliotheca.interfaces.FetchedCommandline
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 
 import io.realm.Realm;
@@ -53,13 +51,11 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
     private ExpandableListView mList;
     private ScriptsExpandableListAdapter mAdapter;
 
-    public ScriptsFragment()
-    {
+    public ScriptsFragment() {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setHasOptionsMenu(true);
@@ -68,12 +64,11 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
 
         mAdapter = createAdapter();
 
-        mFetchedCommandlineFuPages = mRealm.where(CommandGroupModel.class).equalTo("category", ScriptsExpandableListAdapter.GROUP_COMMANDLINEFU).findAll().size()/25;
+        mFetchedCommandlineFuPages = mRealm.where(CommandGroupModel.class).equalTo("category", ScriptsExpandableListAdapter.GROUP_COMMANDLINEFU).findAll().size() / 25;
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-    {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_scripts, container, false);
 
         // init listview
@@ -97,16 +92,12 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
     }
 
     @Override
-    public void onViewCreated(View view, Bundle savedInstanceState)
-    {
+    public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        fetchCommandsFromCommandlineFu();
     }
 
     @Override
-    public void onClick(View view)
-    {
+    public void onClick(View view) {
         if (view.getId() == R.id.btnFilter) {
             showFilterDialog();
         } else if (view.getId() == R.id.fragment_scipts_iv_ad) {
@@ -115,8 +106,7 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
     }
 
     @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater)
-    {
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.main, menu);
 
         // Associate searchable configuration with the SearchView
@@ -130,14 +120,12 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
             searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
 
                 @Override
-                public boolean onQueryTextSubmit(String s)
-                {
+                public boolean onQueryTextSubmit(String s) {
                     return false;
                 }
 
                 @Override
-                public boolean onQueryTextChange(String query)
-                {
+                public boolean onQueryTextChange(String query) {
                     if (query.length() > 0) {
                         search(query);
                     } else {
@@ -148,14 +136,12 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
             });
             MenuItemCompat.setOnActionExpandListener(item, new MenuItemCompat.OnActionExpandListener() {
                 @Override
-                public boolean onMenuItemActionExpand(MenuItem item)
-                {
+                public boolean onMenuItemActionExpand(MenuItem item) {
                     return true;
                 }
 
                 @Override
-                public boolean onMenuItemActionCollapse(MenuItem item)
-                {
+                public boolean onMenuItemActionCollapse(MenuItem item) {
                     resetSearchResults();
                     return true;
                 }
@@ -164,8 +150,7 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
+    public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.about) {
             startAboutActivity();
             return true;
@@ -174,15 +159,13 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
     }
 
     @Override
-    public void onScrollStateChanged(AbsListView absListView, int i)
-    {
+    public void onScrollStateChanged(AbsListView absListView, int i) {
 
     }
 
     @Override
     public void onScroll(AbsListView view, int firstVisibleItem,
-                         int visibleItemCount, int totalItemCount)
-    {
+                         int visibleItemCount, int totalItemCount) {
         // check if commandlineFu mGroup is expanded AND user is currently not searching
         if (mList.isGroupExpanded(ScriptsExpandableListAdapter.GROUP_COMMANDLINEFU) && !mIsSearching) {
 
@@ -193,8 +176,7 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
         }
     }
 
-    private void startAboutActivity()
-    {
+    private void startAboutActivity() {
         Intent intent = new Intent(getContext(), AboutActivity.class);
         startActivity(intent);
     }
@@ -202,8 +184,7 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
     /**
      * Open native play store or alternatively the web browser
      */
-    private void handleAdClick()
-    {
+    private void handleAdClick() {
         final String appPackageName = Utils.PACKAGE_LINUXREMOTE;
         try {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?mId=" + appPackageName)));
@@ -215,8 +196,8 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
     /**
      * @return
      */
-    private ScriptsExpandableListAdapter createAdapter()
-    {
+    private ScriptsExpandableListAdapter createAdapter() {
+        /*
         // get raw commands file
         InputStream inputStream = getResources().openRawResource(R.raw.commands);
 
@@ -228,6 +209,7 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
         } catch (IOException e) {
             e.printStackTrace();
         }
+        */
 
         RealmResults<CommandGroupModel> commandsAll = mRealm.where(CommandGroupModel.class).findAll();
         commandsAll.sort("votes", Sort.DESCENDING);
@@ -261,8 +243,7 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
     /**
      * fetch next page(25 items)
      */
-    private void fetchCommandsFromCommandlineFu()
-    {
+    private void fetchCommandsFromCommandlineFu() {
         // check if is not already fetching
         if (mAsync == null
                 || mAsync.getStatus() == AsyncTask.Status.FINISHED) {
@@ -278,8 +259,7 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
     /**
      * TODO: do it
      */
-    private void showFilterDialog()
-    {
+    private void showFilterDialog() {
         String[] items = new String[]{"Gnome", "KDE"};
 
         mSelectedItems = new ArrayList();  // Where we track the selected items
@@ -292,8 +272,7 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
                         new DialogInterface.OnMultiChoiceClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which,
-                                                boolean isChecked)
-                            {
+                                                boolean isChecked) {
                                 if (isChecked) {
                                     // If the user checked the item, add it to the selected items
                                     mSelectedItems.add(which);
@@ -307,8 +286,7 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
                         // Set the action buttons
                 .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(DialogInterface dialog, int id)
-                    {
+                    public void onClick(DialogInterface dialog, int id) {
                         // User clicked OK, so save the mSelectedItems results somewhere
                         // or return them to the component that opened the dialog
 
@@ -316,8 +294,7 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
                 })
                 .setNegativeButton("Reset", new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(DialogInterface dialog, int id)
-                    {
+                    public void onClick(DialogInterface dialog, int id) {
 
                     }
                 });
@@ -328,8 +305,7 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
     /**
      * reset mAdapter entries
      */
-    private void resetSearchResults()
-    {
+    private void resetSearchResults() {
         mAdapter.updateEntries("", mGroup, mChilds);
         mIsSearching = false;
     }
@@ -339,8 +315,7 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
      *
      * @param query search query
      */
-    private void search(String query)
-    {
+    private void search(String query) {
         ArrayList<ArrayList<CommandGroupModel>> entries = new ArrayList<>();
         // loop through all groups
         for (ArrayList<CommandGroupModel> childGroup : mChilds) {
@@ -359,8 +334,7 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
     }
 
     @Override
-    public void onFetchedCommandlineFuCommands(ArrayList<CommandGroupModel> commands)
-    {
+    public void onFetchedCommandlineFuCommands(ArrayList<CommandGroupModel> commands) {
         if (!isAdded()) {
             return;
         }
@@ -373,8 +347,7 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
     }
 
     @Override
-    public boolean onChildClick(ExpandableListView parent, View view, int groupPosition, int childPosition, long id)
-    {
+    public boolean onChildClick(ExpandableListView parent, View view, int groupPosition, int childPosition, long id) {
         CommandGroupModel commandGroupModel = (CommandGroupModel) view.getTag(R.id.ID);
 
         ScriptDetailDialogFragment fragment = ScriptDetailDialogFragment.getInstance(commandGroupModel);

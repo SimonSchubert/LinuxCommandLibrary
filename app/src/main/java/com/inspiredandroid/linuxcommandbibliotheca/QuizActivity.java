@@ -15,7 +15,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.fragments.QuizFragment;
 
 /**
  * Created by Simon Schubert
- * <p/>
+ * <p>
  * This Activity just holds the CommandManFragment
  */
 public class QuizActivity extends BaseActivity {
@@ -23,8 +23,7 @@ public class QuizActivity extends BaseActivity {
     private TextView mTvCounter;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
@@ -49,14 +48,12 @@ public class QuizActivity extends BaseActivity {
     }
 
     @Override
-    public void onBackPressed()
-    {
+    public void onBackPressed() {
         showQuitDialog();
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
+    public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
                 this.finish();
@@ -68,27 +65,23 @@ public class QuizActivity extends BaseActivity {
     /**
      *
      */
-    private void showQuitDialog()
-    {
+    private void showQuitDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage(R.string.fragment_quiz_quit_dialog_text)
                 .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id)
-                    {
+                    public void onClick(DialogInterface dialog, int id) {
                         QuizActivity.this.finish();
                     }
                 })
                 .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id)
-                    {
+                    public void onClick(DialogInterface dialog, int id) {
                     }
                 });
         Dialog dialog = builder.create();
         dialog.show();
     }
 
-    public void setCounterText(String format)
-    {
+    public void setCounterText(String format) {
         mTvCounter.setText(format);
     }
 }

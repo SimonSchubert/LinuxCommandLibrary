@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:custom="http://schemas.android.com/apk/res-auto"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,14 +17,14 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="22dp"
-            android:text="@string/fragment_tips_do_the_test"/>
+            android:text="@string/fragment_tips_do_the_test" />
 
         <Button
             android:id="@+id/fragment_tips_btn_quiz"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="@string/fragment_tips_start_quiz"/>
+            android:text="@string/fragment_tips_start_quiz" />
 
         <TextView
             android:id="@+id/textView"
@@ -32,119 +32,118 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="22dp"
-            android:text="Clear and reset the terminal"/>
+            android:text="Clear and reset the terminal" />
 
         <TextView
             style="@style/TextNormal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textDirection="anyRtl"
             android:text="To clear the terminal use the command below or press Ctrl+L on your keyboard."
-            />
+            android:textDirection="anyRtl" />
 
         <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
             style="@style/TextCode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/fragment_tips_clear_code"
-            custom:commands="@array/fragment_tips_clear_code_array"/>
+            custom:commands="@array/fragment_tips_clear_code_array" />
 
         <TextView
             android:id="@+id/textView3"
             style="@style/TextNormal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="If you screw up the screen by e.g. accidentally reading a binary file with with cat or less you might reinitialisation the terminal with the reset command."/>
+            android:text="If you screw up the screen by e.g. accidentally reading a binary file with with cat or less you might reinitialisation the terminal with the reset command." />
 
         <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
             style="@style/TextCode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/fragment_tips_reset_code"
-            custom:commands="@array/fragment_tips_reset_code_array"/>
+            custom:commands="@array/fragment_tips_reset_code_array" />
 
         <TextView
             style="@style/TextMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="List of recent commands"/>
+            android:text="List of recent commands" />
 
         <TextView
             style="@style/TextNormal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Use the history command or open the history file in vim $HISTFILE or any other text editor."/>
+            android:text="Use the history command or open the history file in vim $HISTFILE or any other text editor." />
 
         <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
             style="@style/TextCode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/fragment_tips_history_code"
-            custom:commands="@array/fragment_tips_history_code_array"/>
+            custom:commands="@array/fragment_tips_history_code_array" />
 
         <TextView
             style="@style/TextMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Close a frozen window/application"/>
+            android:text="Close a frozen window/application" />
 
         <TextView
             style="@style/TextNormal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Execute the command and click on the frozen window."/>
+            android:text="Execute the command and click on the frozen window." />
 
         <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
             style="@style/TextCode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/fragment_tips_xkill_code"
-            custom:commands="@array/fragment_tips_xkill_code_array"/>
+            custom:commands="@array/fragment_tips_xkill_code_array" />
 
         <TextView
             style="@style/TextNormal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Or find the process id of an application and kill it."/>
+            android:text="Or find the process id of an application and kill it." />
 
         <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
             style="@style/TextCode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/fragment_tips_ps_code"
-            custom:commands="@array/fragment_tips_ps_code_array"/>
+            custom:commands="@array/fragment_tips_ps_code_array" />
 
         <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
             style="@style/TextCode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/fragment_tips_killps_code"
-            custom:commands="@array/fragment_tips_killps_code_array"/>
+            custom:commands="@array/fragment_tips_killps_code_array" />
 
         <TextView
             style="@style/TextMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tab Completion"/>
+            android:text="Tab Completion" />
 
         <TextView
             android:id="@+id/textView10"
             style="@style/TextNormal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="This might save you a lot of time. If you e.g. want to delete a file with a very long name you can type the first few characters of the name and press TAB to auto complete the name. If there are more then one possibilities and you press TAB twice you get a list of all possibilities."/>
+            android:text="This might save you a lot of time. If you e.g. want to delete a file with a very long name you can type the first few characters of the name and press TAB to auto complete the name. If there are more then one possibilities and you press TAB twice you get a list of all possibilities." />
 
         <TextView
             style="@style/TextMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Special characters in commands"/>
+            android:text="Special characters in commands" />
 
         <TextView
             style="@style/TextNormal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Shell special characters are interpreted by the shell as soon as it is given the command. For example, if you type ls *.bak, the shell translates *.bak to the list of all files in the current directory whose names end in .bak. The ls command never sees the asterisk. So if you want to search for files which actually have an asterisk in their names, you have to escape the asterisk to stop the shell from interpreting it."/>
+            android:text="Shell special characters are interpreted by the shell as soon as it is given the command. For example, if you type ls *.bak, the shell translates *.bak to the list of all files in the current directory whose names end in .bak. The ls command never sees the asterisk. So if you want to search for files which actually have an asterisk in their names, you have to escape the asterisk to stop the shell from interpreting it." />
 
         <TableLayout
             android:layout_width="match_parent"
@@ -162,13 +161,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="\\"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="escapes itself and other specials"
-                    />
+                    android:text="escapes itself and other specials" />
             </TableRow>
 
             <TableRow
@@ -180,12 +178,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="*"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="stands for anything (including nothing)"/>
+                    android:text="stands for anything (including nothing)" />
             </TableRow>
 
             <TableRow
@@ -200,7 +198,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
                         android:text="@string/fragment_tips_tv_special_characters_code_star"
-                        custom:commands="@array/fragment_tips_special_characters_code_star_array"/>
+                        custom:commands="@array/fragment_tips_special_characters_code_star_array" />
                 </LinearLayout>
             </TableRow>
 
@@ -213,12 +211,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="\?"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="stands for any single character"/>
+                    android:text="stands for any single character" />
             </TableRow>
 
             <TableRow
@@ -236,7 +234,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
                         android:text="@string/fragment_tips_special_characters_code_questionmark"
-                        custom:commands="@array/fragment_tips_special_characters_code_questionmark_array"/>
+                        custom:commands="@array/fragment_tips_special_characters_code_questionmark_array" />
                 </LinearLayout>
             </TableRow>
 
@@ -249,12 +247,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="[ ]"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="encloses patterns for matching a single character"/>
+                    android:text="encloses patterns for matching a single character" />
             </TableRow>
 
             <TableRow
@@ -272,7 +270,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
                         android:text="@string/fragment_tips_special_characters_code_square_brackets"
-                        custom:commands="@array/fragment_tips_special_characters_code_square_brackets_array"/>
+                        custom:commands="@array/fragment_tips_special_characters_code_square_brackets_array" />
                 </LinearLayout>
             </TableRow>
 
@@ -285,12 +283,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="( )"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="runs the contents of the parentheses in a sub-shell"/>
+                    android:text="runs the contents of the parentheses in a sub-shell" />
             </TableRow>
 
             <TableRow
@@ -309,7 +307,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
                         android:text="@string/fragment_tips_special_characters_code_brackets"
-                        custom:commands="@array/fragment_tips_special_characters_code_brackets_array"/>
+                        custom:commands="@array/fragment_tips_special_characters_code_brackets_array" />
 
                     <TextView
                         android:id="@+id/textView5"
@@ -318,7 +316,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
                         android:text="/home/simon"
-                        android:textStyle="italic"/>
+                        android:textStyle="italic" />
 
                     <TextView
                         android:id="@+id/textView6"
@@ -327,7 +325,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
                         android:text="/home/simon"
-                        android:textStyle="italic"/>
+                        android:textStyle="italic" />
 
                 </LinearLayout>
             </TableRow>
@@ -341,12 +339,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=";"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="terminates a command pipeline - use it to separate commands on a single line"/>
+                    android:text="terminates a command pipeline - use it to separate commands on a single line" />
             </TableRow>
 
             <TableRow
@@ -366,7 +364,7 @@
                         android:layout_column="1"
                         android:layout_marginLeft="0dp"
                         android:text="@string/fragment_tips_special_characters_code_semicolon"
-                        custom:commands="@array/fragment_tips_special_characters_code_semicolon_array"/>
+                        custom:commands="@array/fragment_tips_special_characters_code_semicolon_array" />
 
                     <TextView
                         android:id="@+id/textView7"
@@ -376,7 +374,7 @@
                         android:layout_column="1"
                         android:layout_marginLeft="0dp"
                         android:text="Hi"
-                        android:textStyle="italic"/>
+                        android:textStyle="italic" />
 
                     <TextView
                         android:id="@+id/textView8"
@@ -386,7 +384,7 @@
                         android:layout_column="1"
                         android:layout_marginLeft="0dp"
                         android:text="Linux"
-                        android:textStyle="italic"/>
+                        android:textStyle="italic" />
                 </LinearLayout>
             </TableRow>
 
@@ -399,12 +397,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="\' \'"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="The contents of the single quotes are passed to the command without any interpretation."/>
+                    android:text="The contents of the single quotes are passed to the command without any interpretation." />
             </TableRow>
 
             <TableRow
@@ -423,7 +421,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
                         android:text="@string/fragment_tips_special_characters_code_single_quote"
-                        custom:commands="@array/fragment_tips_special_characters_code_single_quote_array"/>
+                        custom:commands="@array/fragment_tips_special_characters_code_single_quote_array" />
 
                     <TextView
                         android:id="@+id/textView11"
@@ -432,7 +430,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
                         android:text="(echo abc).txt"
-                        android:textStyle="italic"/>
+                        android:textStyle="italic" />
                 </LinearLayout>
             </TableRow>
 
@@ -445,12 +443,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="\` \`"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="The contents of the backquotes are run as a command and its output is used as part of this command"/>
+                    android:text="The contents of the backquotes are run as a command and its output is used as part of this command" />
             </TableRow>
 
             <TableRow
@@ -469,7 +467,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
                         android:text="@string/fragment_tips_special_characters_code_backquote"
-                        custom:commands="@array/fragment_tips_special_characters_code_backquote_array"/>
+                        custom:commands="@array/fragment_tips_special_characters_code_backquote_array" />
 
                     <TextView
                         android:id="@+id/textView9"
@@ -478,7 +476,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
                         android:text="Linux"
-                        android:textStyle="italic"/>
+                        android:textStyle="italic" />
 
                 </LinearLayout>
             </TableRow>
@@ -492,13 +490,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="&quot; &quot;"
-                    android:textStyle="bold"
-                    />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="The contents of the quotes are treated as one argument; any specials inside the quotes, except for $ and ``, are left uninterpreted."/>
+                    android:text="The contents of the quotes are treated as one argument; any specials inside the quotes, except for $ and ``, are left uninterpreted." />
             </TableRow>
 
             <TableRow
@@ -516,7 +513,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
                         android:text="@string/fragment_tips_special_characters_code_double_quote"
-                        custom:commands="@array/fragment_tips_special_characters_code_double_quote_array"/>
+                        custom:commands="@array/fragment_tips_special_characters_code_double_quote_array" />
                 </LinearLayout>
             </TableRow>
 
@@ -529,13 +526,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="|"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Pipes allow you to send the output of a command to another command."
-                    />
+                    android:text="Pipes allow you to send the output of a command to another command." />
             </TableRow>
 
             <TableRow
@@ -553,7 +549,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
                         android:text="@string/fragment_tips_pipe_code"
-                        custom:commands="@array/fragment_tips_pipe_code_array"/>
+                        custom:commands="@array/fragment_tips_pipe_code_array" />
                 </LinearLayout>
             </TableRow>
 
@@ -566,20 +562,19 @@
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:text="&amp;"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Run a command in the background."/>
+                    android:text="Run a command in the background." />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <LinearLayout
-                    android:layout_column="1">
+                <LinearLayout android:layout_column="1">
 
                     <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
                         style="@style/TextCode"
@@ -587,7 +582,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
                         android:text="@string/fragment_tips_background_code"
-                        custom:commands="@array/fragment_tips_background_code_array"/>
+                        custom:commands="@array/fragment_tips_background_code_array" />
 
                 </LinearLayout>
             </TableRow>
@@ -601,12 +596,12 @@
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:text="&amp;&amp;"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Only execute the second command if the first one was successful."/>
+                    android:text="Only execute the second command if the first one was successful." />
             </TableRow>
 
             <TableRow
@@ -624,7 +619,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
                         android:text="@string/fragment_tips_special_characters_code_double_amp"
-                        custom:commands="@array/fragment_tips_special_characters_code_double_amp_array"/>
+                        custom:commands="@array/fragment_tips_special_characters_code_double_amp_array" />
                 </LinearLayout>
             </TableRow>
 
@@ -637,12 +632,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="||"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Only execute the second command if the first one was unsuccessful."/>
+                    android:text="Only execute the second command if the first one was unsuccessful." />
             </TableRow>
 
             <TableRow
@@ -660,7 +655,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
                         android:text="@string/fragment_tips_tv_special_characters_code_double_pipe"
-                        custom:commands="@array/fragment_tips_special_characters_code_double_pipe_array"/>
+                        custom:commands="@array/fragment_tips_special_characters_code_double_pipe_array" />
                 </LinearLayout>
             </TableRow>
 
@@ -673,13 +668,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="&lt; &gt;"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <com.inspiredandroid.linuxcommandbibliotheca.view.ClickableTextView
                     android:id="@+id/fragment_tips_tv_link_to_redirection"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="These symbols are used for redirection; see below."/>
+                    android:text="These symbols are used for redirection; see below." />
             </TableRow>
 
             <TableRow
@@ -691,12 +686,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="!"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="If ! is immediately followed by a character other than =, it begins a history substitution; if it is followed by a space it negates the return code of the following command pipeline."/>
+                    android:text="If ! is immediately followed by a character other than =, it begins a history substitution; if it is followed by a space it negates the return code of the following command pipeline." />
             </TableRow>
 
             <TableRow
@@ -714,7 +709,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
                         android:text="@string/fragment_tips_special_characters_code_excelationmark"
-                        custom:commands="@array/fragment_tips_special_characters_code_excelationmark_array"/>
+                        custom:commands="@array/fragment_tips_special_characters_code_excelationmark_array" />
                 </LinearLayout>
             </TableRow>
 
@@ -727,12 +722,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="^"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Quick history substitution, changing one string to another."/>
+                    android:text="Quick history substitution, changing one string to another." />
             </TableRow>
 
             <TableRow
@@ -751,7 +746,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
                         android:text="@string/fragment_tips_special_characters_code_substitution"
-                        custom:commands="@array/fragment_tips_special_characters_code_substitution_array"/>
+                        custom:commands="@array/fragment_tips_special_characters_code_substitution_array" />
 
                     <TextView
                         android:id="@+id/textView13"
@@ -760,7 +755,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
                         android:text="icon.png"
-                        android:textStyle="italic"/>
+                        android:textStyle="italic" />
 
                     <TextView
                         android:id="@+id/textView14"
@@ -768,7 +763,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
-                        android:text=" $ ^png^xcf^"/>
+                        android:text=" $ ^png^xcf^" />
 
                     <TextView
                         android:id="@+id/textView15"
@@ -777,7 +772,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
                         android:text="ls *.xcf"
-                        android:textStyle="italic"/>
+                        android:textStyle="italic" />
 
                     <TextView
                         android:id="@+id/textView16"
@@ -786,7 +781,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
                         android:text="icon.xcf"
-                        android:textStyle="italic"/>
+                        android:textStyle="italic" />
                 </LinearLayout>
             </TableRow>
 
@@ -799,12 +794,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="#"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Turns the line into a comment; the line is not processed in any way."/>
+                    android:text="Turns the line into a comment; the line is not processed in any way." />
             </TableRow>
 
             <TableRow
@@ -823,7 +818,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
                         android:text="@string/fragment_tips_special_characters_code_comment"
-                        custom:commands="@array/fragment_tips_special_characters_code_comment_array"/>
+                        custom:commands="@array/fragment_tips_special_characters_code_comment_array" />
                 </LinearLayout>
             </TableRow>
         </TableLayout>
@@ -832,20 +827,20 @@
             style="@style/TextNormal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Don't confuse shell special characters with special characters in regular expressions. Regular expressions must be protected from the shell by enclosing them in single quotes."/>
+            android:text="Don't confuse shell special characters with special characters in regular expressions. Regular expressions must be protected from the shell by enclosing them in single quotes." />
 
         <TextView
             android:id="@+id/fragment_tips_tv_redirection"
             style="@style/TextMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Redirection"/>
+            android:text="Redirection" />
 
         <TextView
             style="@style/TextNormal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="You can redirect standard input, output and error by adding these sequences after a command."/>
+            android:text="You can redirect standard input, output and error by adding these sequences after a command." />
 
         <TableLayout
             android:layout_width="match_parent"
@@ -853,8 +848,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:shrinkColumns="1"
-            >
+            android:shrinkColumns="1">
 
             <TableRow
                 android:layout_width="match_parent"
@@ -864,12 +858,12 @@
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:text=">"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="send output to file (overwriting and destroying whatever is in the file already)"/>
+                    android:text="send output to file (overwriting and destroying whatever is in the file already)" />
             </TableRow>
 
 
@@ -877,8 +871,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <LinearLayout
-                    android:layout_column="1">
+                <LinearLayout android:layout_column="1">
 
                     <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
                         android:id="@+id/fragment_tips_tv_redirection_code_greater"
@@ -887,7 +880,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
                         android:text="@string/fragment_tips_redirection_code_greater"
-                        custom:commands="@array/fragment_tips_redirection_code_greater_array"/>
+                        custom:commands="@array/fragment_tips_redirection_code_greater_array" />
                 </LinearLayout>
             </TableRow>
 
@@ -900,20 +893,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=">>"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="append output to file"/>
+                    android:text="append output to file" />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <LinearLayout
-                    android:layout_column="1">
+                <LinearLayout android:layout_column="1">
 
                     <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
                         android:id="@+id/fragment_tips_tv_redirection_code_double_greater"
@@ -922,7 +914,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
                         android:text="@string/fragment_tips_redirection_code_double_greater"
-                        custom:commands="@array/fragment_tips_redirection_code_double_greater_array"/>
+                        custom:commands="@array/fragment_tips_redirection_code_double_greater_array" />
                 </LinearLayout>
             </TableRow>
 
@@ -935,20 +927,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="&lt;"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="take input from file"/>
+                    android:text="take input from file" />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <LinearLayout
-                    android:layout_column="1">
+                <LinearLayout android:layout_column="1">
 
                     <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
                         android:id="@+id/fragment_tips_tv_redirection_code_smaller"
@@ -957,7 +948,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
                         android:text="@string/fragment_tips_redirection_code_smaller"
-                        custom:commands="@array/fragment_tips_redirection_code_smaller_array"/>
+                        custom:commands="@array/fragment_tips_redirection_code_smaller_array" />
                 </LinearLayout>
             </TableRow>
 
@@ -970,21 +961,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2>"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="send error messages to file (overwriting). (This means that errors can be directed separately from normal output.)"/>
+                    android:text="send error messages to file (overwriting). (This means that errors can be directed separately from normal output.)" />
             </TableRow>
 
             <TableRow
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                >
+                android:layout_height="wrap_content">
 
-                <LinearLayout
-                    android:layout_column="1">
+                <LinearLayout android:layout_column="1">
 
                     <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
                         android:id="@+id/fragment_tips_tv_redirection_code_error_output"
@@ -993,8 +982,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
                         android:text="@string/fragment_tips_redirection_code_error_output"
-                        custom:commands="@array/fragment_tips_redirection_code_error_output_array"
-                        />
+                        custom:commands="@array/fragment_tips_redirection_code_error_output_array" />
                 </LinearLayout>
             </TableRow>
 

@@ -1,7 +1,6 @@
 package com.inspiredandroid.linuxcommandbibliotheca;
 
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -13,14 +12,12 @@ import android.widget.Toast;
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.CommandManFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.DatabaseLoadingFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
-import com.inspiredandroid.linuxcommandbibliotheca.models.CommandsDBTableModel;
-import com.inspiredandroid.linuxcommandbibliotheca.sql.CommandsDbHelper;
 
 import io.realm.Realm;
 
 /**
  * Created by Simon Schubert
- * <p/>
+ * <p>
  * This Activity tries to get a command based on different opening types and starts a
  * CommandManFragment if successfully fetched or finishes immediately
  */
@@ -33,8 +30,7 @@ public class CommandManActivity extends LoadingBaseActivity {
     final static int INVALID = -1;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_command_man);
 
@@ -49,8 +45,7 @@ public class CommandManActivity extends LoadingBaseActivity {
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
+    public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
                 this.finish();
@@ -62,8 +57,7 @@ public class CommandManActivity extends LoadingBaseActivity {
     /**
      * Start man fragment based on the intent data
      */
-    private void handleIntent()
-    {
+    private void handleIntent() {
         Intent intent = getIntent();
         Bundle b = intent.getExtras();
 
@@ -94,8 +88,7 @@ public class CommandManActivity extends LoadingBaseActivity {
      * @param name name of the command
      * @return unique command id
      */
-    private long getIdByCommandName(String name)
-    {
+    private long getIdByCommandName(String name) {
         Realm realm = Realm.getInstance(this);
         Command command = realm.where(Command.class).equalTo("name", name).findFirst();
         long id = INVALID;
@@ -112,8 +105,7 @@ public class CommandManActivity extends LoadingBaseActivity {
      *
      * @param id unique id of command
      */
-    private void showManFragmentById(long id)
-    {
+    private void showManFragmentById(long id) {
         if (id == INVALID) {
             finish();
             return;
@@ -135,8 +127,7 @@ public class CommandManActivity extends LoadingBaseActivity {
      * @param id       unique command id
      * @param category command category
      */
-    private void showManFragment(String name, long id, int category)
-    {
+    private void showManFragment(String name, long id, int category) {
         // Set command name as actionbar title
         setTitle(name);
 
@@ -159,8 +150,7 @@ public class CommandManActivity extends LoadingBaseActivity {
     /**
      *
      */
-    private void showLoadingFragment()
-    {
+    private void showLoadingFragment() {
         setTitle(R.string.app_lcl_name);
 
         Fragment fragment = new DatabaseLoadingFragment();
@@ -172,14 +162,12 @@ public class CommandManActivity extends LoadingBaseActivity {
     }
 
     @Override
-    public void onSuccessCraftingDatabase()
-    {
+    public void onSuccessCraftingDatabase() {
         handleIntent();
     }
 
     @Override
-    public void onFailedCraftingDatabase()
-    {
+    public void onFailedCraftingDatabase() {
         Toast.makeText(getBaseContext(), R.string.fragment_datanase_loading_failed_craftin_database, Toast.LENGTH_LONG).show();
     }
 }

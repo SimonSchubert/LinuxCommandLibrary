@@ -14,7 +14,6 @@ import android.view.ViewGroup;
 
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
-import com.inspiredandroid.linuxcommandbibliotheca.sql.CommandsDbHelper;
 
 import io.realm.Realm;
 
@@ -26,29 +25,25 @@ public class BibliothecaFragment extends Fragment {
     private ScreenSlidePagerAdapter mAdapter;
     private ViewPager mPager;
 
-    public BibliothecaFragment()
-    {
+    public BibliothecaFragment() {
 
     }
 
-    private boolean showTipsFragment(Intent intent)
-    {
+    private boolean showTipsFragment(Intent intent) {
         String action = intent.getAction();
         String data = intent.getDataString();
         return Intent.ACTION_VIEW.equals(action) && data != null;
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         createAdapter();
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-    {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_bibliotheca, container, false);
 
         // Get total commands count
@@ -67,20 +62,17 @@ public class BibliothecaFragment extends Fragment {
         mPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
-            public void onTabSelected(TabLayout.Tab tab)
-            {
+            public void onTabSelected(TabLayout.Tab tab) {
                 mPager.setCurrentItem(tab.getPosition());
             }
 
             @Override
-            public void onTabUnselected(TabLayout.Tab tab)
-            {
+            public void onTabUnselected(TabLayout.Tab tab) {
 
             }
 
             @Override
-            public void onTabReselected(TabLayout.Tab tab)
-            {
+            public void onTabReselected(TabLayout.Tab tab) {
 
             }
         });
@@ -92,8 +84,7 @@ public class BibliothecaFragment extends Fragment {
         return view;
     }
 
-    private void createAdapter()
-    {
+    private void createAdapter() {
         // Init viewpager mAdapter
         mAdapter = new ScreenSlidePagerAdapter(getChildFragmentManager());
     }
@@ -103,14 +94,12 @@ public class BibliothecaFragment extends Fragment {
      */
     private class ScreenSlidePagerAdapter extends FragmentPagerAdapter {
 
-        public ScreenSlidePagerAdapter(FragmentManager fm)
-        {
+        public ScreenSlidePagerAdapter(FragmentManager fm) {
             super(fm);
         }
 
         @Override
-        public Fragment getItem(int position)
-        {
+        public Fragment getItem(int position) {
             switch (position) {
                 case 0:
                     return new CommandsFragment();
@@ -122,14 +111,12 @@ public class BibliothecaFragment extends Fragment {
         }
 
         @Override
-        public int getCount()
-        {
+        public int getCount() {
             return 3;
         }
 
         @Override
-        public int getItemPosition(Object object)
-        {
+        public int getItemPosition(Object object) {
             return PagerAdapter.POSITION_NONE;
         }
     }

@@ -16,14 +16,12 @@ import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
  */
 public class AboutFragment extends Fragment implements View.OnClickListener {
 
-    public AboutFragment()
-    {
+    public AboutFragment() {
 
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-    {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_about, container, false);
 
         view.findViewById(R.id.fragment_about_btn_orcgenocide).setOnClickListener(this);
@@ -33,8 +31,7 @@ public class AboutFragment extends Fragment implements View.OnClickListener {
     }
 
     @Override
-    public void onClick(View v)
-    {
+    public void onClick(View v) {
         if (v.getId() == R.id.fragment_about_btn_orcgenocide) {
             final String appPackageName = Utils.PACKAGE_ORCGENOCIDE;
             showAppInMarket(appPackageName);
@@ -49,8 +46,7 @@ public class AboutFragment extends Fragment implements View.OnClickListener {
      *
      * @param appPackageName package mName
      */
-    private void showAppInMarket(final String appPackageName)
-    {
+    private void showAppInMarket(final String appPackageName) {
         try {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
         } catch (android.content.ActivityNotFoundException e) {

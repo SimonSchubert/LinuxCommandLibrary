@@ -2,7 +2,7 @@
 <resources>
 
     <declare-styleable name="CodeTextView">
-        <attr name="commands" format="reference"/>
+        <attr name="commands" format="reference" />
     </declare-styleable>
 
 </resources>

@@ -31,40 +31,34 @@ public class ScriptsExpandableListAdapter extends BaseExpandableListAdapter {
     private ArrayList<ArrayList<CommandGroupModel>> mChild;
     private ArrayList<String> mGroup;
 
-    public ScriptsExpandableListAdapter(Activity context, ArrayList<String> group, ArrayList<ArrayList<CommandGroupModel>> child)
-    {
+    public ScriptsExpandableListAdapter(Activity context, ArrayList<String> group, ArrayList<ArrayList<CommandGroupModel>> child) {
         this.mContext = context;
         this.mChild = child;
         this.mGroup = group;
     }
 
-    public CommandGroupModel getChild(int groupPosition, int childPosition)
-    {
+    public CommandGroupModel getChild(int groupPosition, int childPosition) {
         return mChild.get(groupPosition).get(childPosition);
     }
 
     @Override
-    public long getChildId(int groupPosition, int childPosition)
-    {
+    public long getChildId(int groupPosition, int childPosition) {
         return childPosition;
     }
 
     @Override
-    public int getChildTypeCount()
-    {
+    public int getChildTypeCount() {
         return 2;
     }
 
     @Override
-    public int getChildType(int groupPosition, int childPosition)
-    {
+    public int getChildType(int groupPosition, int childPosition) {
         return isLoading && groupPosition == GROUP_COMMANDLINEFU && childPosition == mChild.get(GROUP_COMMANDLINEFU).size() ? 1 : 0;
     }
 
     @Override
     public View getChildView(final int groupPosition, final int childPosition,
-                             boolean isLastChild, View convertView, ViewGroup parent)
-    {
+                             boolean isLastChild, View convertView, ViewGroup parent) {
         if (getChildType(groupPosition, childPosition) == 1) {
 
             // show the loading
@@ -106,14 +100,12 @@ public class ScriptsExpandableListAdapter extends BaseExpandableListAdapter {
      * @param command
      * @return
      */
-    private int getCommandIconResource(CommandGroupModel command)
-    {
+    private int getCommandIconResource(CommandGroupModel command) {
         return command.getIconResource() == null ? R.drawable.icon_linux : mContext.getResources().getIdentifier(command.getIconResource(), "drawable", mContext.getPackageName());
     }
 
     @Override
-    public int getChildrenCount(int groupPosition)
-    {
+    public int getChildrenCount(int groupPosition) {
         if (isLoading && groupPosition == GROUP_COMMANDLINEFU) {
             return mChild.get(groupPosition).size() + 1;
         }
@@ -121,27 +113,23 @@ public class ScriptsExpandableListAdapter extends BaseExpandableListAdapter {
     }
 
     @Override
-    public Object getGroup(int groupPosition)
-    {
+    public Object getGroup(int groupPosition) {
         return mGroup.get(groupPosition);
     }
 
     @Override
-    public int getGroupCount()
-    {
+    public int getGroupCount() {
         return mGroup.size();
     }
 
     @Override
-    public long getGroupId(int groupPosition)
-    {
+    public long getGroupId(int groupPosition) {
         return groupPosition;
     }
 
     @Override
     public View getGroupView(int groupPosition, boolean isExpanded,
-                             View convertView, ViewGroup parent)
-    {
+                             View convertView, ViewGroup parent) {
         String title = (String) getGroup(groupPosition);
         CommandGroupViewHolder holder;
 
@@ -165,27 +153,23 @@ public class ScriptsExpandableListAdapter extends BaseExpandableListAdapter {
     }
 
     @Override
-    public boolean hasStableIds()
-    {
+    public boolean hasStableIds() {
         return true;
     }
 
     @Override
-    public boolean isChildSelectable(int groupPosition, int childPosition)
-    {
+    public boolean isChildSelectable(int groupPosition, int childPosition) {
         return true;
     }
 
-    public void updateEntries(String query, ArrayList<String> groups, ArrayList<ArrayList<CommandGroupModel>> child)
-    {
+    public void updateEntries(String query, ArrayList<String> groups, ArrayList<ArrayList<CommandGroupModel>> child) {
         mQuery = query;
         mGroup = groups;
         mChild = child;
         notifyDataSetChanged();
     }
 
-    public void updateEntries(int group, List<CommandGroupModel> commands)
-    {
+    public void updateEntries(int group, List<CommandGroupModel> commands) {
         mChild.get(group).clear();
         mChild.get(group).addAll(commands);
         notifyDataSetChanged();
@@ -194,8 +178,7 @@ public class ScriptsExpandableListAdapter extends BaseExpandableListAdapter {
     /**
      * enable loading view
      */
-    public void setLoading()
-    {
+    public void setLoading() {
         isLoading = true;
         notifyDataSetChanged();
     }
@@ -203,8 +186,7 @@ public class ScriptsExpandableListAdapter extends BaseExpandableListAdapter {
     /**
      * disable loading view
      */
-    public void setLoadingFinished()
-    {
+    public void setLoadingFinished() {
         isLoading = false;
         notifyDataSetChanged();
     }

@@ -13,8 +13,7 @@ public class SuperFragment extends Fragment {
     private ArrayList<AsyncTask> mAsyncTasks = new ArrayList<>();
 
     @Override
-    public void onPause()
-    {
+    public void onPause() {
         super.onPause();
         cancelAsyncTasks();
     }
@@ -22,8 +21,7 @@ public class SuperFragment extends Fragment {
     /**
      * cancel all asynctasks
      */
-    public void cancelAsyncTasks()
-    {
+    public void cancelAsyncTasks() {
         for (AsyncTask task : mAsyncTasks) {
             if (task != null) {
                 task.cancel(true);
@@ -31,8 +29,7 @@ public class SuperFragment extends Fragment {
         }
     }
 
-    public void addAsyncTask(AsyncTask asyncTask)
-    {
+    public void addAsyncTask(AsyncTask asyncTask) {
         mAsyncTasks.add(asyncTask);
     }
 }

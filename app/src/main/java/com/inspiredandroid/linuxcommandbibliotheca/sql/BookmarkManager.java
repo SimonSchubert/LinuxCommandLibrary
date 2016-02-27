@@ -20,8 +20,7 @@ public class BookmarkManager {
      * @param context
      * @return
      */
-    public static ArrayList<Long> getBookmarkIds(Context context)
-    {
+    public static ArrayList<Long> getBookmarkIds(Context context) {
         String[] bookmarkIds = getBookmarkIdsChain(context).split(",");
         ArrayList<Long> ids = new ArrayList<>();
         for (String id : bookmarkIds) {
@@ -38,8 +37,7 @@ public class BookmarkManager {
      * @param context
      * @return
      */
-    public static String getBookmarkIdsChain(Context context)
-    {
+    public static String getBookmarkIdsChain(Context context) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         String bookmarksChain = prefs.getString(KEY_BOOKMARKS, "");
         if (!bookmarksChain.isEmpty()) {
@@ -54,8 +52,7 @@ public class BookmarkManager {
      * @param context
      * @param id
      */
-    public static void addBookmark(Context context, long id)
-    {
+    public static void addBookmark(Context context, long id) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         String bookmarksChain = prefs.getString(KEY_BOOKMARKS, "");
         bookmarksChain += "," + id;
@@ -70,8 +67,7 @@ public class BookmarkManager {
      * @param id
      * @return
      */
-    public static boolean hasBookmark(Context context, long id)
-    {
+    public static boolean hasBookmark(Context context, long id) {
         return getBookmarkIds(context).contains(id);
     }
 
@@ -81,8 +77,7 @@ public class BookmarkManager {
      * @param context
      * @param id
      */
-    public static void removeBookmark(Context context, long id)
-    {
+    public static void removeBookmark(Context context, long id) {
         ArrayList<Long> bookmarksIds = getBookmarkIds(context);
 
         bookmarksIds.remove(id);
@@ -102,8 +97,7 @@ public class BookmarkManager {
      *
      * @param context
      */
-    private static void bookmarkHasChanged(Context context)
-    {
+    private static void bookmarkHasChanged(Context context) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         prefs.edit().putBoolean(KEY_BOOKMARKCHANGED, true).apply();
     }
@@ -114,8 +108,7 @@ public class BookmarkManager {
      * @param context
      * @return
      */
-    public static boolean hasBookmarkChanged(Context context)
-    {
+    public static boolean hasBookmarkChanged(Context context) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         boolean changed = prefs.getBoolean(KEY_BOOKMARKCHANGED, false);
         prefs.edit().putBoolean(KEY_BOOKMARKCHANGED, false).apply();

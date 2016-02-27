@@ -10,23 +10,19 @@ public class CommandLineFuModel {
     private int votes;
     private String url;
 
-    public String getCommand()
-    {
+    public String getCommand() {
         return command;
     }
 
-    public String getSummary()
-    {
+    public String getSummary() {
         return summary;
     }
 
-    public int getId()
-    {
+    public int getId() {
         return id;
     }
 
-    public int getVotes()
-    {
+    public int getVotes() {
         return votes;
     }
 }

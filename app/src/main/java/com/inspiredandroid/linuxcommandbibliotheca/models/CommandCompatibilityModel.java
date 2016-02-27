@@ -10,28 +10,23 @@ public class CommandCompatibilityModel extends RealmObject {
     private int system = 0;
     private int version = 0;
 
-    public CommandCompatibilityModel()
-    {
+    public CommandCompatibilityModel() {
 
     }
 
-    public int getSystem()
-    {
+    public int getSystem() {
         return system;
     }
 
-    public void setSystem(int system)
-    {
+    public void setSystem(int system) {
         this.system = system;
     }
 
-    public int getVersion()
-    {
+    public int getVersion() {
         return version;
     }
 
-    public void setVersion(int version)
-    {
+    public void setVersion(int version) {
         this.version = version;
     }
 }

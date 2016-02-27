@@ -25,8 +25,7 @@ public class ScriptDetailDialogFragment extends DialogFragment {
 
     private Realm mRealm;
 
-    public static ScriptDetailDialogFragment getInstance(CommandGroupModel group)
-    {
+    public static ScriptDetailDialogFragment getInstance(CommandGroupModel group) {
         ScriptDetailDialogFragment fragment = new ScriptDetailDialogFragment();
 
         Bundle arguments = new Bundle();
@@ -37,8 +36,7 @@ public class ScriptDetailDialogFragment extends DialogFragment {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         mRealm = Realm.getInstance(getContext());
@@ -50,8 +48,7 @@ public class ScriptDetailDialogFragment extends DialogFragment {
      */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState)
-    {
+                             Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_scriptdetail, container, false);
 
         int id = getArguments().getInt(EXTRA_KEY_ID, -1);
@@ -73,8 +70,7 @@ public class ScriptDetailDialogFragment extends DialogFragment {
      * The system calls this only when creating the layout in a dialog.
      */
     @Override
-    public Dialog onCreateDialog(Bundle savedInstanceState)
-    {
+    public Dialog onCreateDialog(Bundle savedInstanceState) {
         // The only reason you might override this method when using onCreateView() is
         // to modify any dialog characteristics. For example, the dialog includes a
         // title by default, but your custom layout might not need it. So here you can
@@ -85,8 +81,7 @@ public class ScriptDetailDialogFragment extends DialogFragment {
     }
 
     @Override
-    public void onDestroy()
-    {
+    public void onDestroy() {
         super.onDestroy();
 
         mRealm.close();

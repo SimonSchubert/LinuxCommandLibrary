@@ -2,7 +2,6 @@ package com.inspiredandroid.linuxcommandbibliotheca.fragments.dialogs;
 
 import android.app.Dialog;
 import android.content.Intent;
-import android.database.Cursor;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
@@ -15,9 +14,7 @@ import android.widget.TextView;
 
 import com.inspiredandroid.linuxcommandbibliotheca.CommandManActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
-import com.inspiredandroid.linuxcommandbibliotheca.models.CommandsDBTableModel;
 import com.inspiredandroid.linuxcommandbibliotheca.models.Quiz;
-import com.inspiredandroid.linuxcommandbibliotheca.sql.CommandsDbHelper;
 
 import java.util.ArrayList;
 
@@ -38,8 +35,7 @@ public class QuizPreviousResultDialogFragment extends DialogFragment implements 
     // database
     Realm mRealm;
 
-    public static QuizPreviousResultDialogFragment getInstance(ArrayList<String> answers, int correctAnswer)
-    {
+    public static QuizPreviousResultDialogFragment getInstance(ArrayList<String> answers, int correctAnswer) {
         QuizPreviousResultDialogFragment fragment = new QuizPreviousResultDialogFragment();
 
         Bundle arguments = new Bundle();
@@ -51,8 +47,7 @@ public class QuizPreviousResultDialogFragment extends DialogFragment implements 
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         mRealm = Realm.getInstance(getActivity());
@@ -64,8 +59,7 @@ public class QuizPreviousResultDialogFragment extends DialogFragment implements 
      */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState)
-    {
+                             Bundle savedInstanceState) {
         // Inflate the layout to use as dialog or embedded fragment
         View view = inflater.inflate(R.layout.fragment_quiz_result, container, false);
 
@@ -102,8 +96,7 @@ public class QuizPreviousResultDialogFragment extends DialogFragment implements 
      * The system calls this only when creating the layout in a dialog.
      */
     @Override
-    public Dialog onCreateDialog(Bundle savedInstanceState)
-    {
+    public Dialog onCreateDialog(Bundle savedInstanceState) {
         // The only reason you might override this method when using onCreateView() is
         // to modify any dialog characteristics. For example, the dialog includes a
         // title by default, but your custom layout might not need it. So here you can
@@ -114,16 +107,14 @@ public class QuizPreviousResultDialogFragment extends DialogFragment implements 
     }
 
     @Override
-    public void onDestroy()
-    {
+    public void onDestroy() {
         super.onDestroy();
 
         mRealm.close();
     }
 
     @Override
-    public void onClick(View v)
-    {
+    public void onClick(View v) {
         String command = ((TextView) v).getText().toString();
         startCommandManActivity(command);
     }
@@ -131,8 +122,7 @@ public class QuizPreviousResultDialogFragment extends DialogFragment implements 
     /**
      * @param command
      */
-    private void startCommandManActivity(String command)
-    {
+    private void startCommandManActivity(String command) {
         Intent intent = new Intent(getActivity(), CommandManActivity.class);
         Bundle b = new Bundle();
         b.putString(CommandManActivity.EXTRA_COMMAND_NAME, command);
@@ -145,8 +135,7 @@ public class QuizPreviousResultDialogFragment extends DialogFragment implements 
      * @param id
      * @param command
      */
-    private void setCommandDescriptionForTextView(View view, int id, String command)
-    {
+    private void setCommandDescriptionForTextView(View view, int id, String command) {
         Quiz quiz = mRealm.where(Quiz.class).equalTo("name", command).findFirst();
         ((TextView) view.findViewById(id)).setText(quiz.getDescription());
     }
@@ -156,8 +145,7 @@ public class QuizPreviousResultDialogFragment extends DialogFragment implements 
      * @param id
      * @param command
      */
-    private void setQuestionTextView(View view, int id, String command)
-    {
+    private void setQuestionTextView(View view, int id, String command) {
         Quiz quiz = mRealm.where(Quiz.class).equalTo("name", command).findFirst();
         ((TextView) view.findViewById(id)).setText(String.format(getString(R.string.fragment_quiz_question), quiz.getDescription()));
     }

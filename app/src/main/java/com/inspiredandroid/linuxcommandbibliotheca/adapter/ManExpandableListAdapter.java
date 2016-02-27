@@ -1,7 +1,6 @@
 package com.inspiredandroid.linuxcommandbibliotheca.adapter;
 
 import android.app.Activity;
-import android.database.Cursor;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +9,6 @@ import android.widget.TextView;
 
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
-import com.inspiredandroid.linuxcommandbibliotheca.sql.CommandsDbHelper;
 import com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView;
 
 import java.util.ArrayList;
@@ -28,28 +26,24 @@ public class ManExpandableListAdapter extends BaseExpandableListAdapter {
     private Activity mContext;
     private ArrayList<String> mGroup;
 
-    public ManExpandableListAdapter(Activity context, ArrayList<String> group, ArrayList<ArrayList<CharSequence>> child)
-    {
+    public ManExpandableListAdapter(Activity context, ArrayList<String> group, ArrayList<ArrayList<CharSequence>> child) {
         this.mContext = context;
         this.mChild = child;
         this.mGroup = group;
     }
 
-    public CharSequence getChild(int groupPosition, int childPosition)
-    {
+    public CharSequence getChild(int groupPosition, int childPosition) {
         return mChild.get(groupPosition).get(childPosition);
     }
 
     @Override
-    public long getChildId(int groupPosition, int childPosition)
-    {
+    public long getChildId(int groupPosition, int childPosition) {
         return childPosition;
     }
 
     @Override
     public View getChildView(final int groupPosition, final int childPosition,
-                             boolean isLastChild, View convertView, ViewGroup parent)
-    {
+                             boolean isLastChild, View convertView, ViewGroup parent) {
         CharSequence description = getChild(groupPosition, childPosition);
         CommandViewHolder holder;
 
@@ -75,33 +69,28 @@ public class ManExpandableListAdapter extends BaseExpandableListAdapter {
     }
 
     @Override
-    public int getChildrenCount(int groupPosition)
-    {
+    public int getChildrenCount(int groupPosition) {
         return mChild.get(groupPosition).size();
     }
 
     @Override
-    public Object getGroup(int groupPosition)
-    {
+    public Object getGroup(int groupPosition) {
         return mGroup.get(groupPosition);
     }
 
     @Override
-    public int getGroupCount()
-    {
+    public int getGroupCount() {
         return mGroup.size();
     }
 
     @Override
-    public long getGroupId(int groupPosition)
-    {
+    public long getGroupId(int groupPosition) {
         return groupPosition;
     }
 
     @Override
     public View getGroupView(int groupPosition, boolean isExpanded,
-                             View convertView, ViewGroup parent)
-    {
+                             View convertView, ViewGroup parent) {
         String title = (String) getGroup(groupPosition);
         CommandGroupViewHolder holder;
 
@@ -123,20 +112,17 @@ public class ManExpandableListAdapter extends BaseExpandableListAdapter {
     }
 
     @Override
-    public boolean hasStableIds()
-    {
+    public boolean hasStableIds() {
         return true;
     }
 
     @Override
-    public boolean isChildSelectable(int groupPosition, int childPosition)
-    {
+    public boolean isChildSelectable(int groupPosition, int childPosition) {
         return true;
     }
 
     @Override
-    public boolean areAllItemsEnabled()
-    {
+    public boolean areAllItemsEnabled() {
         return false;
     }
 
@@ -146,8 +132,7 @@ public class ManExpandableListAdapter extends BaseExpandableListAdapter {
      * @param description
      * @return
      */
-    private String[] extractCommandsFromDescription(String description)
-    {
+    private String[] extractCommandsFromDescription(String description) {
         Realm realm = Realm.getInstance(mContext);
 
         // match "command(category)" e.g: gzip(1)
