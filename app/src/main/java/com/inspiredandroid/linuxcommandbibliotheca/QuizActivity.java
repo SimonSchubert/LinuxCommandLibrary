@@ -15,7 +15,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.fragments.QuizFragment;
 
 /**
  * Created by Simon Schubert
- * <p>
+ * <p/>
  * This Activity just holds the CommandManFragment
  */
 public class QuizActivity extends BaseActivity {

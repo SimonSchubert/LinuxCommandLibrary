@@ -48,7 +48,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
 
         setHasOptionsMenu(true);
 
-        mRealm = Realm.getInstance(getContext());
+        mRealm = Realm.getDefaultInstance();
 
         createAdapter();
     }
@@ -154,63 +154,26 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
     }
 
     private void createAdapter() {
-        /*
-        mRealm.beginTransaction();
-        mRealm.clear(Command.class);
-
-        Cursor c = mDbHelper.getAllCommands("");
-
-        while (c.moveToNext()) {
-            Command command = mRealm.createObject(Command.class);
-            command.setId(c.getInt(c.getColumnIndex(CommandsDBTableModel.COL_ID)));
-            command.setCategory(c.getInt(c.getColumnIndex(CommandsDBTableModel.COL_CATEGORY)));
-            command.setDescription(c.getString(c.getColumnIndex(CommandsDBTableModel.COL_DESCRIPTION)));
-            command.setName(c.getString(c.getColumnIndex(CommandsDBTableModel.COL_NAME)));
-            mRealm.copyToRealm(command);
-        }
-
-        Cursor c2 = mDbHelper.getAllCommandPages();
-
-        while (c2.moveToNext()) {
-            CommandPage command = mRealm.createObject(CommandPage.class);
-            command.setId(c2.getInt(c2.getColumnIndex("id")));
-            command.setCommandid(c2.getInt(c2.getColumnIndex("commandid")));
-            command.setPage(c2.getString(c2.getColumnIndex("page")));
-            command.setTitle(c2.getString(c2.getColumnIndex("title")));
-            mRealm.copyToRealm(command);
-        }
-
-        Cursor c3 = mDbHelper.getAllQuiz();
-
-        while (c3.moveToNext()) {
-            Quiz command = mRealm.createObject(Quiz.class);
-            command.setId(c3.getInt(c3.getColumnIndex("_id")));
-            command.setName(c3.getString(c3.getColumnIndex("name")));
-            command.setDifficulty(c3.getInt(c3.getColumnIndex("difficulty")));
-            command.setDescription(c3.getString(c3.getColumnIndex("description")));
-            command.setType(c3.getInt(c3.getColumnIndex("type")));
-            command.setExtra(c3.getString(c3.getColumnIndex("extra")));
-            mRealm.copyToRealm(command);
-        }
-
-        mRealm.commitTransaction();
-        */
-
-        List<RealmResults<Command>> results = new ArrayList<>();
-        results.add(mRealm.where(Command.class).findAll());
-        mAdapter = new CommandsAdapter(getContext(), results, false);
-
-        // mAdapter = new CommandsAdapter(getActivity(), R.layout.row_command_child, mDbHelper.getAllCommands(BookmarkManager.getBookmarkIdsChain(getContext())), true);
+        mAdapter = new CommandsAdapter(getContext(), getAllCommands(), false);
     }
 
     /**
      * reset mAdapter entries
      */
     private void resetSearchResults() {
-        List<RealmResults<Command>> results = new ArrayList<>();
-        results.add(mRealm.where(Command.class).findAll());
-        mAdapter.updateRealmResults(results);
+        mAdapter.updateRealmResults(getAllCommands());
         mAdapter.setSearchQuery("");
+        mAdapter.updateBookmarkIds();
+    }
+
+    private List<RealmResults<Command>> getAllCommands() {
+        List<RealmResults<Command>> results = new ArrayList<>();
+        List<Long> ids = BookmarkManager.getBookmarkIds(getContext());
+        for(long id : ids) {
+            results.add(mRealm.where(Command.class).equalTo(Command.ID, id).findAll());
+        }
+        results.add(mRealm.where(Command.class).findAll());
+        return results;
     }
 
     /**
@@ -220,9 +183,9 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
      */
     private void search(String query) {
         List<RealmResults<Command>> results = new ArrayList<>();
-        results.add(mRealm.where(Command.class).equalTo("name", query).findAll());
-        results.add(mRealm.where(Command.class).beginsWith("name", query).notEqualTo("name", query).findAll());
-        results.add(mRealm.where(Command.class).contains("name", query).not().beginsWith("name", query).notEqualTo("name", query).findAll());
+        results.add(mRealm.where(Command.class).equalTo(Command.NAME, query).findAll());
+        results.add(mRealm.where(Command.class).beginsWith(Command.NAME, query).notEqualTo(Command.NAME, query).findAll());
+        results.add(mRealm.where(Command.class).contains(Command.NAME, query).not().beginsWith(Command.NAME, query).notEqualTo(Command.NAME, query).findAll());
 
         mAdapter.updateRealmResults(results);
         mAdapter.setSearchQuery(query);

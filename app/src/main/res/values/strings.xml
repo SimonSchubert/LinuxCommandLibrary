@@ -11,7 +11,6 @@
     <string name="system_info">Information</string>
     <string name="system_control">System control</string>
     <string name="audio_video">Video/Audio</string>
-    <string name="search_for_command">search for command</string>
     <string name="desc_get_cpu_usage">Print CPU usage in percentage.</string>
     <string name="desc_battery_usage">Print remaining Laptop battery in percentage.</string>
     <string name="desc_bluetooth_mac">Print Bluetooth MAC address.</string>
@@ -199,8 +198,9 @@
     <string name="fragment_datanase_loading_craftin_database">Crafting Database</string>
     <string name="fragment_datanase_loading_failed_craftin_database">Couldn\'t craft database</string>
     <string name="about">About</string>
-    <string name="fragment_scriptdescription_share_command">share command</string>
-    <string name="bookmark">bookmark</string>
+    <string name="fragment_scriptdescription_share_command">Share command</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="search_for_command">Search for command</string>
     <string name="fragment_quiz_help">Help</string>
     <string name="fragment_quiz_give_up">Give up</string>
 

@@ -39,7 +39,7 @@ public class ScriptDetailDialogFragment extends DialogFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mRealm = Realm.getInstance(getContext());
+        mRealm = Realm.getDefaultInstance();
     }
 
     /**

@@ -112,3 +112,45 @@
             e.printStackTrace();
         }
     }
+
+        /*
+        mRealm.beginTransaction();
+        mRealm.clear(Command.class);
+
+        Cursor c = mDbHelper.getAllCommands("");
+
+        while (c.moveToNext()) {
+            Command command = mRealm.createObject(Command.class);
+            command.setId(c.getInt(c.getColumnIndex(CommandsDBTableModel.COL_ID)));
+            command.setCategory(c.getInt(c.getColumnIndex(CommandsDBTableModel.COL_CATEGORY)));
+            command.setDescription(c.getString(c.getColumnIndex(CommandsDBTableModel.COL_DESCRIPTION)));
+            command.setName(c.getString(c.getColumnIndex(CommandsDBTableModel.COL_NAME)));
+            mRealm.copyToRealm(command);
+        }
+
+        Cursor c2 = mDbHelper.getAllCommandPages();
+
+        while (c2.moveToNext()) {
+            CommandPage command = mRealm.createObject(CommandPage.class);
+            command.setId(c2.getInt(c2.getColumnIndex("id")));
+            command.setCommandid(c2.getInt(c2.getColumnIndex("commandid")));
+            command.setPage(c2.getString(c2.getColumnIndex("page")));
+            command.setTitle(c2.getString(c2.getColumnIndex("title")));
+            mRealm.copyToRealm(command);
+        }
+
+        Cursor c3 = mDbHelper.getAllQuiz();
+
+        while (c3.moveToNext()) {
+            Quiz command = mRealm.createObject(Quiz.class);
+            command.setId(c3.getInt(c3.getColumnIndex("_id")));
+            command.setName(c3.getString(c3.getColumnIndex("name")));
+            command.setDifficulty(c3.getInt(c3.getColumnIndex("difficulty")));
+            command.setDescription(c3.getString(c3.getColumnIndex("description")));
+            command.setType(c3.getInt(c3.getColumnIndex("type")));
+            command.setExtra(c3.getString(c3.getColumnIndex("extra")));
+            mRealm.copyToRealm(command);
+        }
+
+        mRealm.commitTransaction();
+        */

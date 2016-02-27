@@ -50,7 +50,7 @@ public class QuizPreviousResultDialogFragment extends DialogFragment implements 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mRealm = Realm.getInstance(getActivity());
+        mRealm = Realm.getDefaultInstance();
     }
 
     /**

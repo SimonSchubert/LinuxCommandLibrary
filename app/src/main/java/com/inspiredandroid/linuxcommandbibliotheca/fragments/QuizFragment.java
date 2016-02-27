@@ -7,7 +7,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -64,7 +63,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mRealm = Realm.getInstance(getContext());
+        mRealm = Realm.getDefaultInstance();
     }
 
     @Override
@@ -208,8 +207,6 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
      * @param command
      */
     private void startCommandManActivity(String command) {
-        Log.e("TAG", "start: " + command);
-
         Intent intent = new Intent(getActivity(), CommandManActivity.class);
         Bundle b = new Bundle();
         b.putString(CommandManActivity.EXTRA_COMMAND_NAME, command);

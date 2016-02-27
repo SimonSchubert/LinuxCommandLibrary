@@ -1,11 +1,6 @@
 package com.inspiredandroid.linuxcommandbibliotheca.test;
 
-import android.content.ContentValues;
-import android.database.Cursor;
-import android.os.Environment;
 import android.test.AndroidTestCase;
-import android.util.Log;
-import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -14,15 +9,8 @@ import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandChildModel;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel;
-import com.inspiredandroid.linuxcommandbibliotheca.models.CommandsDBTableModel;
-import com.inspiredandroid.linuxcommandbibliotheca.sql.CommandsDbHelper;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.InputStream;
-import java.nio.channels.FileChannel;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,56 +29,31 @@ import io.realm.Realm;
 public class MyAndroidTest extends AndroidTestCase {
 
     @Override
-    protected void setUp() throws Exception
-    {
+    protected void setUp() throws Exception {
         super.setUp();
     }
 
     @Override
-    protected void tearDown() throws Exception
-    {
+    protected void tearDown() throws Exception {
         super.tearDown();
     }
 
     /**
      * Test if database crafting works
+     *
      * @throws Exception
      */
-    public void testCraftManDatabase() throws Exception
-    {
+    public void testCraftManDatabase() throws Exception {
 
-    }
-
-    /**
-     * Go thought all the man pages links of the scripts fragment
-     * @throws Exception
-     */
-    public void testScriptManPageLinks() throws Exception
-    {
-        InputStream inputStream = getContext().getResources().openRawResource(R.raw.commands);
-
-        ArrayList<CommandGroupModel> commandsAll = new Gson().fromJson(Utils.readTextFile(inputStream), new TypeToken<List<CommandGroupModel>>() {
-        }.getType());
-
-        ArrayList<String> missingCommands = new ArrayList<>();
-        for(CommandGroupModel group : commandsAll) {
-            for(CommandChildModel commands : group.getCommands()) {
-                addMissingMansToList(missingCommands, commands.getMans());
-            }
-        }
-
-        String missing = getReadableMissingCommands(missingCommands);
-
-        assertTrue("man pages not found: " + missing, missing.isEmpty());
     }
 
     /**
      * Go thought all the man pages links of the tips fragment
+     *
      * @throws Exception
      */
-    public void testTipsManPageLinks() throws Exception
-    {
-        final int[] IDS = new int[] {
+    public void testTipsManPageLinks() throws Exception {
+        final int[] IDS = new int[]{
                 R.array.fragment_tips_background_code_array,
                 R.array.fragment_tips_clear_code_array,
                 R.array.fragment_tips_history_code_array,
@@ -116,7 +79,7 @@ public class MyAndroidTest extends AndroidTestCase {
         };
 
         ArrayList<String> missingCommands = new ArrayList<>();
-        for(int id : IDS) {
+        for (int id : IDS) {
             String[] array = getContext().getResources().getStringArray(id);
             addMissingMansToList(missingCommands, array);
         }
@@ -128,31 +91,32 @@ public class MyAndroidTest extends AndroidTestCase {
 
     /**
      * Loop thought man pages and add to list if not found in database and not already in list
+     *
      * @param missingCommands
      * @param mans
      */
-    private void addMissingMansToList(List<String> missingCommands, List<String> mans)
-    {
-        Realm realm = Realm.getInstance(getContext());
-        for(String man : mans) {
+    private void addMissingMansToList(List<String> missingCommands, String[] mans) {
+        Realm realm = Realm.getDefaultInstance();
+        for (String man : mans) {
             Command command = realm.where(Command.class).equalTo("name", man).findFirst();
-            if(command == null) {
-                if(!missingCommands.contains(man)) {
+            if (command == null) {
+                if (!missingCommands.contains(man)) {
                     missingCommands.add(man);
                 }
             }
         }
+        realm.close();
     }
 
     /**
      * convert arraylist to human readable output
+     *
      * @param missingCommands
      * @return
      */
-    private String getReadableMissingCommands(ArrayList<String> missingCommands)
-    {
+    private String getReadableMissingCommands(ArrayList<String> missingCommands) {
         String missing = "";
-        for(String m : missingCommands) {
+        for (String m : missingCommands) {
             missing += m + " ";
         }
         return missing;

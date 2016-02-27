@@ -39,7 +39,7 @@ public class BibliothecaFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        createAdapter();
+        mAdapter = new ScreenSlidePagerAdapter(getChildFragmentManager());
     }
 
     @Override
@@ -47,8 +47,9 @@ public class BibliothecaFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_bibliotheca, container, false);
 
         // Get total commands count
-        Realm realm = Realm.getInstance(getContext());
+        Realm realm = Realm.getDefaultInstance();
         long commandsCount = realm.where(Command.class).count();
+        realm.close();
 
         TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tab_layout);
         tabLayout.addTab(tabLayout.newTab().setText(String.format(getString(R.string.fragment_bibliotheca_commands), commandsCount)));
@@ -82,11 +83,6 @@ public class BibliothecaFragment extends Fragment {
         }
 
         return view;
-    }
-
-    private void createAdapter() {
-        // Init viewpager mAdapter
-        mAdapter = new ScreenSlidePagerAdapter(getChildFragmentManager());
     }
 
     /**
