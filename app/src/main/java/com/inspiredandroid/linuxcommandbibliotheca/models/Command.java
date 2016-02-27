@@ -8,6 +8,7 @@ import io.realm.RealmObject;
 public class Command extends RealmObject {
     public final static String ID = "id";
     public final static String NAME = "name";
+    public final static String DESCRIPTION = "description";
 
     private int id;
     private int category;

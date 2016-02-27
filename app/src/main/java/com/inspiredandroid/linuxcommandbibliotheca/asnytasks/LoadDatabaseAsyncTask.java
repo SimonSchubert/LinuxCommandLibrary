@@ -36,13 +36,11 @@ public class LoadDatabaseAsyncTask extends AsyncTask<Boolean, Void, Boolean> {
     protected Boolean doInBackground(Boolean... contexts) {
 
         File oldDatabase = mContext.getDatabasePath("commands.db");
-        Log.e("TAG", "old db exists: " + oldDatabase.exists());
         if(oldDatabase.exists()) {
             oldDatabase.delete();
         }
 
         File file = new File(mContext.getFilesDir() + "/" + Constants.REALM_DATABASE);
-        Log.e("TAG", "new db exists: " + file.exists());
         if (!file.exists()) {
             try {
                 copyBundledRealmFile(mContext.getResources().openRawResource(R.raw.realm), Constants.REALM_DATABASE);
