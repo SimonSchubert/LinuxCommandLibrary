@@ -8,12 +8,16 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.inspiredandroid.linuxcommandbibliotheca.Constants;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
+
+import java.io.File;
 
 import io.realm.Realm;
 
@@ -45,6 +49,9 @@ public class BibliothecaFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_bibliotheca, container, false);
+
+        File file = new File(getContext().getFilesDir() + "/" + Constants.REALM_DATABASE);
+        Log.e("TAG", "2 new db exists: " + file.exists());
 
         // Get total commands count
         Realm realm = Realm.getDefaultInstance();
