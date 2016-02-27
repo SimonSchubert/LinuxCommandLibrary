@@ -16,13 +16,13 @@ public class SearchManAsyncTask extends AsyncTask<String, ArrayList<ArrayList<Ch
     private ConvertManFromHtmlToSpannableInterface mCallback;
     private Context mContext;
     private ArrayList<ArrayList<CharSequence>> mChildren;
-    private String query;
+    private String mQuery;
 
     public SearchManAsyncTask(Context context, String query, ArrayList<ArrayList<CharSequence>> children, ConvertManFromHtmlToSpannableInterface callback) {
-        this.mContext = context;
-        this.mChildren = children;
-        this.mCallback = callback;
-        this.query = query;
+        mContext = context;
+        mChildren = children;
+        mCallback = callback;
+        mQuery = query;
     }
 
     @Override
@@ -47,7 +47,7 @@ public class SearchManAsyncTask extends AsyncTask<String, ArrayList<ArrayList<Ch
                 //    indexStart++;
                 //}
 
-                children.set(i, Utils.highlightQueryInsideText(mContext, query, chld.toString()));
+                children.set(i, Utils.highlightQueryInsideText(mContext, mQuery, chld.toString()));
             }
         }
 
