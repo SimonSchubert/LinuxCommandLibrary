@@ -1,7 +1,6 @@
 package com.inspiredandroid.linuxcommandbibliotheca.asnytasks;
 
 import android.content.Context;
-import android.database.Cursor;
 import android.os.AsyncTask;
 
 import com.google.gson.Gson;
@@ -10,10 +9,8 @@ import com.google.gson.reflect.TypeToken;
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.ScriptsExpandableListAdapter;
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.FetchedCommandlineFuCommandsInterface;
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
-import com.inspiredandroid.linuxcommandbibliotheca.models.CommandChildModel;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandLineFuModel;
-import com.inspiredandroid.linuxcommandbibliotheca.sql.CommandsDbHelper;
 
 import org.apache.commons.io.IOUtils;
 import org.json.JSONArray;
@@ -39,16 +36,14 @@ public class FetchCommandlineFuCommandsAsyncTask extends AsyncTask<String, Strin
     private FetchedCommandlineFuCommandsInterface mCallback;
     private int mPage;
 
-    public FetchCommandlineFuCommandsAsyncTask(Context _context, FetchedCommandlineFuCommandsInterface _callback, int _page)
-    {
+    public FetchCommandlineFuCommandsAsyncTask(Context _context, FetchedCommandlineFuCommandsInterface _callback, int _page) {
         mContext = _context;
         mCallback = _callback;
         mPage = _page;
     }
 
     @Override
-    protected ArrayList<CommandGroupModel> doInBackground(String... strings)
-    {
+    protected ArrayList<CommandGroupModel> doInBackground(String... strings) {
         ArrayList<CommandLineFuModel> commandLineFuModels = null;
 
         try {
@@ -78,7 +73,7 @@ public class FetchCommandlineFuCommandsAsyncTask extends AsyncTask<String, Strin
 
             JSONObject json = new JSONObject();
             try {
-                json.put("id", commandLineFuModel.getId()+10000);
+                json.put("id", commandLineFuModel.getId() + 10000);
                 json.put("category", ScriptsExpandableListAdapter.GROUP_COMMANDLINEFU);
                 json.put("descStr", commandLineFuModel.getSummary());
                 json.put("votes", commandLineFuModel.getVotes());
@@ -88,7 +83,7 @@ public class FetchCommandlineFuCommandsAsyncTask extends AsyncTask<String, Strin
 
                 JSONArray jsonMans = new JSONArray();
                 ArrayList<String> mans = getManPages(realm, commandLineFuModel.getCommand());
-                for(String man : mans) {
+                for (String man : mans) {
                     JSONObject jsonMan = new JSONObject();
                     jsonMan.put("man", man);
                     jsonMans.put(jsonMan);
@@ -112,8 +107,7 @@ public class FetchCommandlineFuCommandsAsyncTask extends AsyncTask<String, Strin
     }
 
     @Override
-    protected void onPostExecute(ArrayList<CommandGroupModel> commandLineFuModels)
-    {
+    protected void onPostExecute(ArrayList<CommandGroupModel> commandLineFuModels) {
         super.onPostExecute(commandLineFuModels);
 
         mCallback.onFetchedCommandlineFuCommands(commandLineFuModels);
@@ -126,8 +120,7 @@ public class FetchCommandlineFuCommandsAsyncTask extends AsyncTask<String, Strin
      * @param sentence the scripts
      * @return list of commands which exists in the database
      */
-    private ArrayList<String> getManPages(Realm realm, String sentence)
-    {
+    private ArrayList<String> getManPages(Realm realm, String sentence) {
         String[] words = sentence.split("\\s+");
         for (int i = 0; i < words.length; i++) {
             words[i] = words[i].replaceAll("[^\\w]", "");

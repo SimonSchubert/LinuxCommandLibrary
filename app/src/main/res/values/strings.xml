@@ -57,8 +57,7 @@
     <string name="fragment_tips_do_the_test">Test and train your Linux cmd skills.</string>
     <string name="fragment_tips_start_quiz">Start Quiz</string>
 
-    <string-array name="default_codetextview_commands">
-    </string-array>
+    <string-array name="default_codetextview_commands"></string-array>
 
     <string name="fragment_tips_clear_code">" $ clear "</string>
     <string-array name="fragment_tips_clear_code_array">
@@ -195,7 +194,7 @@
     </string-array>
 
 
-    <item name="ID" type="id"/>
+    <item name="ID" type="id" />
 
     <string name="fragment_datanase_loading_craftin_database">Crafting Database</string>
     <string name="fragment_datanase_loading_failed_craftin_database">Couldn\'t craft database</string>

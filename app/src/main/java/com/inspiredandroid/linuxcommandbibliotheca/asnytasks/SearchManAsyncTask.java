@@ -18,8 +18,7 @@ public class SearchManAsyncTask extends AsyncTask<String, ArrayList<ArrayList<Ch
     private ArrayList<ArrayList<CharSequence>> mChildren;
     private String query;
 
-    public SearchManAsyncTask(Context context, String query, ArrayList<ArrayList<CharSequence>> children, ConvertManFromHtmlToSpannableInterface callback)
-    {
+    public SearchManAsyncTask(Context context, String query, ArrayList<ArrayList<CharSequence>> children, ConvertManFromHtmlToSpannableInterface callback) {
         this.mContext = context;
         this.mChildren = children;
         this.mCallback = callback;
@@ -27,8 +26,7 @@ public class SearchManAsyncTask extends AsyncTask<String, ArrayList<ArrayList<Ch
     }
 
     @Override
-    protected ArrayList<ArrayList<CharSequence>> doInBackground(String... params)
-    {
+    protected ArrayList<ArrayList<CharSequence>> doInBackground(String... params) {
         for (ArrayList<CharSequence> children : mChildren) {
             for (int i = 0; i < children.size(); i++) {
                 CharSequence chld = children.get(i);
@@ -57,8 +55,7 @@ public class SearchManAsyncTask extends AsyncTask<String, ArrayList<ArrayList<Ch
     }
 
     @Override
-    protected void onPostExecute(ArrayList<ArrayList<CharSequence>> children)
-    {
+    protected void onPostExecute(ArrayList<ArrayList<CharSequence>> children) {
         super.onPostExecute(children);
 
         mCallback.onConvertedHtmlToSpannable(children);

@@ -3,13 +3,9 @@ package com.inspiredandroid.linuxcommandbibliotheca.fragments;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.LoaderManager;
-import android.support.v4.content.CursorLoader;
-import android.support.v4.content.Loader;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.widget.SearchView;
 import android.view.LayoutInflater;
@@ -25,15 +21,12 @@ import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.CommandManActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.CommandsAdapter;
-import com.inspiredandroid.linuxcommandbibliotheca.adapter.MyAdapter;
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
-import com.inspiredandroid.linuxcommandbibliotheca.models.CommandPage;
-import com.inspiredandroid.linuxcommandbibliotheca.models.CommandsDBTableModel;
-import com.inspiredandroid.linuxcommandbibliotheca.models.Quiz;
 import com.inspiredandroid.linuxcommandbibliotheca.sql.BookmarkManager;
-import com.inspiredandroid.linuxcommandbibliotheca.sql.CommandsDbHelper;
 
 import java.text.Normalizer;
+import java.util.ArrayList;
+import java.util.List;
 
 import io.realm.Realm;
 import io.realm.RealmResults;
@@ -43,16 +36,14 @@ import io.realm.RealmResults;
  */
 public class CommandsFragment extends Fragment implements AdapterView.OnItemClickListener {
 
-    private MyAdapter mAdapter;
+    private CommandsAdapter mAdapter;
     private Realm mRealm;
 
-    public CommandsFragment()
-    {
+    public CommandsFragment() {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setHasOptionsMenu(true);
@@ -63,8 +54,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-    {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_commands, container, false);
 
         // Init mList view
@@ -76,14 +66,12 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
     }
 
     @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id)
-    {
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         startCommandManActivity(id);
     }
 
     @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater)
-    {
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.main, menu);
 
         // Associate searchable configuration with the SearchView
@@ -97,14 +85,12 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
             searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
 
                 @Override
-                public boolean onQueryTextSubmit(String s)
-                {
+                public boolean onQueryTextSubmit(String s) {
                     return false;
                 }
 
                 @Override
-                public boolean onQueryTextChange(String query)
-                {
+                public boolean onQueryTextChange(String query) {
                     if (query.length() > 0) {
                         String normalizedText = Normalizer.normalize(query, Normalizer.Form.NFD).replaceAll("\\p{InCombiningDiacriticalMarks}+", "").toLowerCase();
                         search(normalizedText);
@@ -116,14 +102,12 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
             });
             MenuItemCompat.setOnActionExpandListener(item, new MenuItemCompat.OnActionExpandListener() {
                 @Override
-                public boolean onMenuItemActionExpand(MenuItem item)
-                {
+                public boolean onMenuItemActionExpand(MenuItem item) {
                     return true;
                 }
 
                 @Override
-                public boolean onMenuItemActionCollapse(MenuItem item)
-                {
+                public boolean onMenuItemActionCollapse(MenuItem item) {
                     resetSearchResults();
                     return true;
                 }
@@ -132,8 +116,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
+    public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.about) {
             startAboutFragment();
             return true;
@@ -142,16 +125,14 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
     }
 
     @Override
-    public void onDestroy()
-    {
+    public void onDestroy() {
         super.onDestroy();
 
         mRealm.close();
     }
 
     @Override
-    public void onResume()
-    {
+    public void onResume() {
         super.onResume();
 
         if (BookmarkManager.hasBookmarkChanged(getContext())) {
@@ -159,8 +140,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
         }
     }
 
-    private void startCommandManActivity(long id)
-    {
+    private void startCommandManActivity(long id) {
         Intent intent = new Intent(getContext(), CommandManActivity.class);
         Bundle b = new Bundle();
         b.putLong(CommandManActivity.EXTRA_COMMAND_ID, id);
@@ -168,14 +148,12 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
         startActivity(intent);
     }
 
-    private void startAboutFragment()
-    {
+    private void startAboutFragment() {
         Intent intent = new Intent(getContext(), AboutActivity.class);
         startActivity(intent);
     }
 
-    private void createAdapter()
-    {
+    private void createAdapter() {
         /*
         mRealm.beginTransaction();
         mRealm.clear(Command.class);
@@ -218,7 +196,9 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
         mRealm.commitTransaction();
         */
 
-        mAdapter = new MyAdapter(getContext(), mRealm.where(Command.class).findAll(), false);
+        List<RealmResults<Command>> results = new ArrayList<>();
+        results.add(mRealm.where(Command.class).findAll());
+        mAdapter = new CommandsAdapter(getContext(), results, false);
 
         // mAdapter = new CommandsAdapter(getActivity(), R.layout.row_command_child, mDbHelper.getAllCommands(BookmarkManager.getBookmarkIdsChain(getContext())), true);
     }
@@ -226,9 +206,10 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
     /**
      * reset mAdapter entries
      */
-    private void resetSearchResults()
-    {
-        mAdapter.updateRealmResults(mRealm.where(Command.class).findAll());
+    private void resetSearchResults() {
+        List<RealmResults<Command>> results = new ArrayList<>();
+        results.add(mRealm.where(Command.class).findAll());
+        mAdapter.updateRealmResults(results);
         mAdapter.setSearchQuery("");
     }
 
@@ -237,10 +218,13 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
      *
      * @param query
      */
-    private void search(String query)
-    {
-        RealmResults<Command> commands = mRealm.where(Command.class).contains("name", query).findAll();
-        mAdapter.updateRealmResults(commands);
+    private void search(String query) {
+        List<RealmResults<Command>> results = new ArrayList<>();
+        results.add(mRealm.where(Command.class).equalTo("name", query).findAll());
+        results.add(mRealm.where(Command.class).beginsWith("name", query).notEqualTo("name", query).findAll());
+        results.add(mRealm.where(Command.class).contains("name", query).not().beginsWith("name", query).notEqualTo("name", query).findAll());
+
+        mAdapter.updateRealmResults(results);
         mAdapter.setSearchQuery(query);
     }
 

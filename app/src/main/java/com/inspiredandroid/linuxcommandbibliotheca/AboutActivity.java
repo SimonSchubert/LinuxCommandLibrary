@@ -11,14 +11,13 @@ import com.inspiredandroid.linuxcommandbibliotheca.fragments.AboutFragment;
 
 /**
  * Created by Simon Schubert
- * <p/>
+ * <p>
  * This Activity just holds the AboutFragment
  */
 public class AboutActivity extends BaseActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
@@ -33,8 +32,7 @@ public class AboutActivity extends BaseActivity {
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
+    public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
                 this.finish();
@@ -43,8 +41,7 @@ public class AboutActivity extends BaseActivity {
         return (super.onOptionsItemSelected(item));
     }
 
-    private void showAboutFragment()
-    {
+    private void showAboutFragment() {
         Fragment fragment = new AboutFragment();
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();

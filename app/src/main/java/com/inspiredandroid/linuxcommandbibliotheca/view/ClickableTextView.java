@@ -15,7 +15,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.interfaces.ClickInterface;
 
 /**
  * Created by Simon Schubert
- * <p/>
+ * <p>
  * This View makes it very easy to highlightQueryInsideText defined commands in an normal textview. Define the
  * words which should be highlighted in an string array and link it in the layout resource.
  */
@@ -23,8 +23,7 @@ public class ClickableTextView extends TextView {
 
     private ClickInterface mClickInterface;
 
-    public ClickableTextView(Context context, AttributeSet attrs)
-    {
+    public ClickableTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
 
         if (isInEditMode()) {
@@ -43,8 +42,7 @@ public class ClickableTextView extends TextView {
      * @param phrase
      * @param clickInterface
      */
-    public static void addClickableSpanToPhrases(SpannableString ss, String text, String phrase, final ClickInterface clickInterface)
-    {
+    public static void addClickableSpanToPhrases(SpannableString ss, String text, String phrase, final ClickInterface clickInterface) {
         // would end in endless loop
         if (phrase.isEmpty()) {
             return;
@@ -59,14 +57,12 @@ public class ClickableTextView extends TextView {
 
             ClickableSpan clickableSpan = new ClickableSpan() {
                 @Override
-                public void onClick(View textView)
-                {
+                public void onClick(View textView) {
                     clickInterface.onClick();
                 }
 
                 @Override
-                public void updateDrawState(TextPaint ds)
-                {
+                public void updateDrawState(TextPaint ds) {
                     super.updateDrawState(ds);
                     ds.setUnderlineText(false);
                 }
@@ -82,8 +78,7 @@ public class ClickableTextView extends TextView {
      *
      * @param word
      */
-    public void setClickableWord(String word)
-    {
+    public void setClickableWord(String word) {
         setText(createSpannable(getText().toString(), word));
     }
 
@@ -92,8 +87,7 @@ public class ClickableTextView extends TextView {
      *
      * @param clickInterface
      */
-    public void setClickInterface(ClickInterface clickInterface)
-    {
+    public void setClickInterface(ClickInterface clickInterface) {
         this.mClickInterface = clickInterface;
     }
 
@@ -104,8 +98,7 @@ public class ClickableTextView extends TextView {
      * @param word the word which should get highlighted
      * @return
      */
-    private SpannableString createSpannable(String text, final String word)
-    {
+    private SpannableString createSpannable(String text, final String word) {
         SpannableString ss = new SpannableString(text);
 
         ClickableTextView.addClickableSpanToPhrases(ss, text, word, mClickInterface);

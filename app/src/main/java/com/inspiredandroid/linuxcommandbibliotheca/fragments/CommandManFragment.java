@@ -2,7 +2,6 @@ package com.inspiredandroid.linuxcommandbibliotheca.fragments;
 
 import android.app.SearchManager;
 import android.content.Context;
-import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -26,7 +25,6 @@ import com.inspiredandroid.linuxcommandbibliotheca.asnytasks.SearchManAsyncTask;
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.ConvertManFromHtmlToSpannableInterface;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandPage;
 import com.inspiredandroid.linuxcommandbibliotheca.sql.BookmarkManager;
-import com.inspiredandroid.linuxcommandbibliotheca.sql.CommandsDbHelper;
 
 import java.util.ArrayList;
 
@@ -58,8 +56,7 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
      * @param partitionSize
      * @return
      */
-    private static ArrayList<String> getParts(String string, int partitionSize)
-    {
+    private static ArrayList<String> getParts(String string, int partitionSize) {
         ArrayList<String> parts = new ArrayList<>();
         int len = string.length();
         for (int i = 0; i < len; i += partitionSize) {
@@ -69,22 +66,19 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
     }
 
     @Override
-    public String getAppIndexingTitle()
-    {
+    public String getAppIndexingTitle() {
         return mName + "(" + mCategory + ") man page";
     }
 
     @Override
-    public Action getAppIndexingAction()
-    {
+    public Action getAppIndexingAction() {
         final Uri APP_URI = Uri.parse("android-app://com.inspiredandroid.linuxcommandbibliotheca/http/linux.schubert-simon.de/mans");
         final Uri WEB_URL = Uri.parse("http://linux.schubert-simon.de/mans/");
         return Action.newAction(Action.TYPE_VIEW, getAppIndexingTitle(), WEB_URL, APP_URI);
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setHasOptionsMenu(true);
@@ -101,8 +95,7 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-    {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_command_man, container, false);
 
         mList = (ExpandableListView) view.findViewById(R.id.fraggment_commandman_elv);
@@ -117,16 +110,14 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
     }
 
     @Override
-    public void onDestroy()
-    {
+    public void onDestroy() {
         super.onDestroy();
 
         mRealm.close();
     }
 
     @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater)
-    {
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.man, menu);
 
         // Associate searchable configuration with the SearchView
@@ -140,14 +131,12 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
             searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
 
                 @Override
-                public boolean onQueryTextSubmit(String s)
-                {
+                public boolean onQueryTextSubmit(String s) {
                     return false;
                 }
 
                 @Override
-                public boolean onQueryTextChange(String query)
-                {
+                public boolean onQueryTextChange(String query) {
                     if (query.length() > 0) {
                         search(query);
                     } else {
@@ -158,14 +147,12 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
             });
             MenuItemCompat.setOnActionExpandListener(item, new MenuItemCompat.OnActionExpandListener() {
                 @Override
-                public boolean onMenuItemActionExpand(MenuItem item)
-                {
+                public boolean onMenuItemActionExpand(MenuItem item) {
                     return true;
                 }
 
                 @Override
-                public boolean onMenuItemActionCollapse(MenuItem item)
-                {
+                public boolean onMenuItemActionCollapse(MenuItem item) {
                     resetSearchResults();
                     return true;
                 }
@@ -177,8 +164,7 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
+    public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.bookmark) {
             toogleBookmarkState();
             getActivity().supportInvalidateOptionsMenu();
@@ -192,8 +178,7 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
      *
      * @return
      */
-    private ManExpandableListAdapter createAdapter()
-    {
+    private ManExpandableListAdapter createAdapter() {
         RealmResults<CommandPage> pages = mRealm.where(CommandPage.class).equalTo("commandid", mId).findAll();
 
         ArrayList<String> groups = new ArrayList<>();
@@ -221,8 +206,7 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
         return new ManExpandableListAdapter(getActivity(), groups, child);
     }
 
-    private void toogleBookmarkState()
-    {
+    private void toogleBookmarkState() {
         if (BookmarkManager.hasBookmark(getContext(), mId)) {
             BookmarkManager.removeBookmark(getContext(), mId);
         } else {
@@ -233,8 +217,7 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
     /**
      *
      */
-    private void resetSearchResults()
-    {
+    private void resetSearchResults() {
         SearchManAsyncTask async = new SearchManAsyncTask(getContext(), "", mAdapter.mChild, this);
         addAsyncTask(async);
         async.execute();
@@ -247,8 +230,7 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
      *
      * @param q
      */
-    private void search(String q)
-    {
+    private void search(String q) {
         SearchManAsyncTask async = new SearchManAsyncTask(getContext(), q, mAdapter.mChild, this);
         addAsyncTask(async);
         async.execute();
@@ -271,8 +253,7 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
      *
      * @param index
      */
-    private void scrollToPosition(int index)
-    {
+    private void scrollToPosition(int index) {
         /*
         int line = tvDescription.getLayout().getLineForOffset(index);
         int lineHeight = tvDescription.getLayout().getHeight() / tvDescription.getLayout().getLineCount();
@@ -284,8 +265,7 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
     /**
      *
      */
-    private void hideButton()
-    {
+    private void hideButton() {
         btnUp.setVisibility(View.GONE);
         btnDown.setVisibility(View.GONE);
     }
@@ -293,8 +273,7 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
     /**
      *
      */
-    private void showButton()
-    {
+    private void showButton() {
         btnUp.setVisibility(View.VISIBLE);
         btnDown.setVisibility(View.VISIBLE);
     }
@@ -302,8 +281,7 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
     /**
      * go to next, if last then go to first
      */
-    private void jumpToNextPosition()
-    {
+    private void jumpToNextPosition() {
         mIndexesPosition--;
         if (mIndexesPosition < 0) {
             mIndexesPosition = indexes.size() - 1;
@@ -314,8 +292,7 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
     /**
      * go to previous, if smaller 0 then go to last
      */
-    private void jumpToPreviousPosition()
-    {
+    private void jumpToPreviousPosition() {
         mIndexesPosition++;
         if (mIndexesPosition >= indexes.size()) {
             mIndexesPosition = 0;
@@ -324,15 +301,13 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
     }
 
     @Override
-    public void onConvertedHtmlToSpannable(ArrayList<ArrayList<CharSequence>> spannable)
-    {
+    public void onConvertedHtmlToSpannable(ArrayList<ArrayList<CharSequence>> spannable) {
         mAdapter.mChild = spannable;
         mAdapter.notifyDataSetChanged();
     }
 
     @Override
-    public void onClick(View v)
-    {
+    public void onClick(View v) {
         if (v.getId() == R.id.fragment_command_man_btn_up) {
             jumpToNextPosition();
         } else if (v.getId() == R.id.fragment_command_man_btn_down) {

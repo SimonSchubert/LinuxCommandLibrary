@@ -23,33 +23,28 @@ public class CommandDetailAdapter extends BaseAdapter {
     private CommandGroupModel mCommandGroupModel;
     private Context mContext;
 
-    public CommandDetailAdapter(Context context, CommandGroupModel commandGroupModel)
-    {
+    public CommandDetailAdapter(Context context, CommandGroupModel commandGroupModel) {
         this.mContext = context;
         this.mCommandGroupModel = commandGroupModel;
     }
 
     @Override
-    public int getCount()
-    {
+    public int getCount() {
         return mCommandGroupModel.getCommands().size();
     }
 
     @Override
-    public CommandChildModel getItem(int position)
-    {
+    public CommandChildModel getItem(int position) {
         return mCommandGroupModel.getCommands().get(position);
     }
 
     @Override
-    public long getItemId(int position)
-    {
+    public long getItemId(int position) {
         return 0;
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent)
-    {
+    public View getView(int position, View convertView, ViewGroup parent) {
         final CommandChildModel command = getItem(position);
         CommandViewHolder holder;
 
@@ -70,8 +65,7 @@ public class CommandDetailAdapter extends BaseAdapter {
         holder.command.setCommands(CommandChildModel.getMans(command));
         holder.share.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 handleCommandClick(command);
             }
         });
@@ -84,8 +78,7 @@ public class CommandDetailAdapter extends BaseAdapter {
      *
      * @param command
      */
-    private void handleCommandClick(CommandChildModel command)
-    {
+    private void handleCommandClick(CommandChildModel command) {
         if (((Activity) mContext).getCallingActivity() != null) {
             returnResult(command);
         } else {
@@ -98,8 +91,7 @@ public class CommandDetailAdapter extends BaseAdapter {
      *
      * @param command
      */
-    private void shareCommand(CommandChildModel command)
-    {
+    private void shareCommand(CommandChildModel command) {
         Intent i = new Intent(Intent.ACTION_SEND);
         i.setType("text/plain");
         i.putExtra(android.content.Intent.EXTRA_TEXT, command.getCommand());
@@ -112,8 +104,7 @@ public class CommandDetailAdapter extends BaseAdapter {
      *
      * @param command
      */
-    private void returnResult(CommandChildModel command)
-    {
+    private void returnResult(CommandChildModel command) {
         Intent data = new Intent();
         data.putExtra(CommandBibliothecaActivity.EXTRA_COMMAND, command.getCommand());
         data.putExtra(CommandBibliothecaActivity.EXTRA_ICON, mCommandGroupModel.getIconBase64());

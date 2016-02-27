@@ -1,6 +1,6 @@
 <resources>
 
-    <style name="LibAppTheme" parent="LibAppTheme.Base"/>
+    <style name="LibAppTheme" parent="LibAppTheme.Base" />
 
     <style name="LibAppTheme.Base" parent="Theme.AppCompat.NoActionBar">
         <item name="colorPrimary">@color/ab_primary</item>

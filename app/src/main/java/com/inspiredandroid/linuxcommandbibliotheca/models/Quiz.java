@@ -5,7 +5,7 @@ import io.realm.RealmObject;
 /**
  * Created by simon on 24.01.16.
  */
-public class Quiz extends RealmObject{
+public class Quiz extends RealmObject {
 
     private int id;
     private String name;
@@ -14,63 +14,51 @@ public class Quiz extends RealmObject{
     private String description;
     private String extra;
 
-    public int getId()
-    {
+    public int getId() {
         return id;
     }
 
-    public void setId(int _id)
-    {
+    public void setId(int _id) {
         this.id = _id;
     }
 
-    public String getName()
-    {
+    public String getName() {
         return name;
     }
 
-    public void setName(String name)
-    {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public int getDifficulty()
-    {
+    public int getDifficulty() {
         return difficulty;
     }
 
-    public void setDifficulty(int difficulty)
-    {
+    public void setDifficulty(int difficulty) {
         this.difficulty = difficulty;
     }
 
-    public int getType()
-    {
+    public int getType() {
         return type;
     }
 
-    public void setType(int type)
-    {
+    public void setType(int type) {
         this.type = type;
     }
 
-    public String getDescription()
-    {
+    public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description)
-    {
+    public void setDescription(String description) {
         this.description = description;
     }
 
-    public String getExtra()
-    {
+    public String getExtra() {
         return extra;
     }
 
-    public void setExtra(String extra)
-    {
+    public void setExtra(String extra) {
         this.extra = extra;
     }
 }

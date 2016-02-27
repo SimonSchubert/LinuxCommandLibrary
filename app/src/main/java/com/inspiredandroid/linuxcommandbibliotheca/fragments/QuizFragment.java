@@ -57,21 +57,18 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
 
     private Realm mRealm;
 
-    public QuizFragment()
-    {
+    public QuizFragment() {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         mRealm = Realm.getInstance(getContext());
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-    {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_quiz, container, false);
 
         mTvQuestion = (TextView) view.findViewById(R.id.fragment_quiz_tv_question);
@@ -106,27 +103,23 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
         mBtnGiveUp = (Button) view.findViewById(R.id.fragment_quiz_btn_giveup);
         mEtLesson.addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after)
-            {
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
             }
 
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count)
-            {
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
 
             }
 
             @Override
-            public void afterTextChanged(Editable s)
-            {
+            public void afterTextChanged(Editable s) {
                 if (s.toString().equals(mData.lesson.answer)) {
                     mEtLesson.setEnabled(false);
 
                     new Handler().postDelayed(new Runnable() {
                         @Override
-                        public void run()
-                        {
+                        public void run() {
                             startCurtainAnimations();
 
                             if (mData.lesson.failed) {
@@ -168,16 +161,14 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     }
 
     @Override
-    public void onSaveInstanceState(Bundle outState)
-    {
+    public void onSaveInstanceState(Bundle outState) {
         outState.putSerializable("data", mData);
 
         super.onSaveInstanceState(outState);
     }
 
     @Override
-    public void onClick(View v)
-    {
+    public void onClick(View v) {
         if (v.getId() == R.id.fragment_quiz_btn_help) {
             startCommandManActivity(mData.lesson.command);
         } else if (v.getId() == R.id.fragment_quiz_btn_giveup) {
@@ -207,8 +198,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     }
 
     @Override
-    public void onDestroy()
-    {
+    public void onDestroy() {
         super.onDestroy();
 
         mRealm.close();
@@ -217,8 +207,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     /**
      * @param command
      */
-    private void startCommandManActivity(String command)
-    {
+    private void startCommandManActivity(String command) {
         Log.e("TAG", "start: " + command);
 
         Intent intent = new Intent(getActivity(), CommandManActivity.class);
@@ -231,8 +220,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     /**
      * Initialize/reset variables
      */
-    private void initQuiz()
-    {
+    private void initQuiz() {
         mData.usedCommandIds = new ArrayList<>();
         mData.currentCorrectAnswerId = -1;
         mData.answerCounter = -1;
@@ -242,8 +230,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     /**
      * The first round has a different animation cycle
      */
-    private void firstRound()
-    {
+    private void firstRound() {
         nextRound();
 
         fillQuestionTextView();
@@ -259,8 +246,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     /**
      * Show dialog fragment with last question info
      */
-    private void showLastQuestionInfoDialog()
-    {
+    private void showLastQuestionInfoDialog() {
         FragmentManager fragmentManager = getChildFragmentManager();
         QuizPreviousResultDialogFragment newFragment = QuizPreviousResultDialogFragment.getInstance(mData.lastAnswers, mData.lastCorrectAnswerId);
         newFragment.show(fragmentManager, QuizPreviousResultDialogFragment.class.getName());
@@ -269,25 +255,21 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     /**
      * Animate a red cross
      */
-    private void startWrongAnimation()
-    {
+    private void startWrongAnimation() {
         mIvWrong.setVisibility(View.VISIBLE);
 
         Animation scaleAnimation = AnimationUtils.loadAnimation(getContext(), R.anim.scale_up);
         scaleAnimation.setAnimationListener(new Animation.AnimationListener() {
             @Override
-            public void onAnimationStart(Animation animation)
-            {
+            public void onAnimationStart(Animation animation) {
 
             }
 
             @Override
-            public void onAnimationEnd(Animation animation)
-            {
+            public void onAnimationEnd(Animation animation) {
                 new Handler().postDelayed(new Runnable() {
                     @Override
-                    public void run()
-                    {
+                    public void run() {
                         updateNextRoundDataAndAnimate();
                         mIvWrong.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.scale_down));
                     }
@@ -295,8 +277,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
             }
 
             @Override
-            public void onAnimationRepeat(Animation animation)
-            {
+            public void onAnimationRepeat(Animation animation) {
 
             }
         });
@@ -306,25 +287,21 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     /**
      * animate well done tux
      */
-    private void startCorrectAnimation()
-    {
+    private void startCorrectAnimation() {
         mIvCorrect.setVisibility(View.VISIBLE);
 
         Animation scaleAnimation = AnimationUtils.loadAnimation(getContext(), R.anim.scale_up);
         scaleAnimation.setAnimationListener(new Animation.AnimationListener() {
             @Override
-            public void onAnimationStart(Animation animation)
-            {
+            public void onAnimationStart(Animation animation) {
 
             }
 
             @Override
-            public void onAnimationEnd(Animation animation)
-            {
+            public void onAnimationEnd(Animation animation) {
                 new Handler().postDelayed(new Runnable() {
                     @Override
-                    public void run()
-                    {
+                    public void run() {
                         updateNextRoundDataAndAnimate();
                         mIvCorrect.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.scale_down));
                     }
@@ -332,8 +309,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
             }
 
             @Override
-            public void onAnimationRepeat(Animation animation)
-            {
+            public void onAnimationRepeat(Animation animation) {
 
             }
         });
@@ -343,25 +319,21 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     /**
      * Animate results
      */
-    private void startFinishAnimation()
-    {
+    private void startFinishAnimation() {
         mLlCongratulation.setVisibility(View.VISIBLE);
 
         Animation scaleAnimation = AnimationUtils.loadAnimation(getContext(), R.anim.scale_up);
         scaleAnimation.setAnimationListener(new Animation.AnimationListener() {
             @Override
-            public void onAnimationStart(Animation animation)
-            {
+            public void onAnimationStart(Animation animation) {
             }
 
             @Override
-            public void onAnimationEnd(Animation animation)
-            {
+            public void onAnimationEnd(Animation animation) {
             }
 
             @Override
-            public void onAnimationRepeat(Animation animation)
-            {
+            public void onAnimationRepeat(Animation animation) {
             }
         });
         mLlCongratulation.startAnimation(scaleAnimation);
@@ -370,8 +342,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     /**
      * Update views
      */
-    private void updateNextRoundDataAndAnimate()
-    {
+    private void updateNextRoundDataAndAnimate() {
         if (mData.answerCounter == mData.maxAnswerCount) {
 
             fillResultView();
@@ -386,22 +357,19 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
         }
     }
 
-    private void fillResultView()
-    {
+    private void fillResultView() {
         float percentage = (float) mData.correctAnswerCounter / (float) mData.maxAnswerCount * 100f;
         mTvPercentage.setText(String.format(getString(R.string.fragment_quiz_result), (int) percentage));
     }
 
-    private void updateCounter()
-    {
+    private void updateCounter() {
         ((QuizActivity) getActivity()).setCounterText(String.format(getString(R.string.fragment_quiz_counter), (mData.answerCounter + 1), mData.maxAnswerCount));
     }
 
     /**
      * Save last answers and generate new answers
      */
-    private void nextRound()
-    {
+    private void nextRound() {
         setInfoButtonVisibility();
 
         mData.answerCounter++;
@@ -414,8 +382,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
         getQuizData(questionType);
     }
 
-    private void getQuizData(int questionType)
-    {
+    private void getQuizData(int questionType) {
         mData.questionType = questionType;
         if (questionType == 0) {
             // define a random correct answer
@@ -433,8 +400,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     /**
      * show/hide info button
      */
-    private void setInfoButtonVisibility()
-    {
+    private void setInfoButtonVisibility() {
         if (mData.questionType == 0 && mData.answerCounter != mData.maxAnswerCount) {
             mBtnInfo.setVisibility(View.VISIBLE);
         } else {
@@ -445,10 +411,9 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     /**
      * @return
      */
-    private LessonData getLesson()
-    {
+    private LessonData getLesson() {
         RealmResults<Quiz> lesson = mRealm.where(Quiz.class).equalTo("type", 1).findAll();
-        for(String id : mData.usedCommandIds) {
+        for (String id : mData.usedCommandIds) {
             lesson.where().notEqualTo("name", id);
         }
 
@@ -476,10 +441,9 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
      * @param count size of string array mList size
      * @return
      */
-    private ArrayList<String> getAnswers(int count)
-    {
+    private ArrayList<String> getAnswers(int count) {
         RealmResults<Quiz> lesson = mRealm.where(Quiz.class).equalTo("type", 0).findAll();
-        for(String id : mData.usedCommandIds) {
+        for (String id : mData.usedCommandIds) {
             lesson.where().notEqualTo("name", id);
         }
 
@@ -497,8 +461,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     /**
      * Set answers button text
      */
-    private void fillAnswerViews()
-    {
+    private void fillAnswerViews() {
         if (mData.questionType == 0) {
             for (int i = 0; i < mData.currentAnswers.size(); i++) {
                 String command = mData.currentAnswers.get(i);
@@ -528,8 +491,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     /**
      *
      */
-    private void fillQuestionTextView()
-    {
+    private void fillQuestionTextView() {
         String question;
         if (mData.questionType == 0) {
             question = getQuestionText(mData.currentAnswers.get(mData.currentCorrectAnswerId));
@@ -545,8 +507,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
      * @param command
      * @return
      */
-    private String getQuestionText(String command)
-    {
+    private String getQuestionText(String command) {
         Quiz quiz = mRealm.where(Quiz.class).equalTo("name", command).findFirst();
 
         return quiz.getDescription();
@@ -555,8 +516,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     /**
      * send buttons and questions out of the screen
      */
-    private void startCurtainAnimations()
-    {
+    private void startCurtainAnimations() {
         mRlButtons.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.from_center_to_bottom));
         mTvQuestion.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.from_center_to_top));
     }

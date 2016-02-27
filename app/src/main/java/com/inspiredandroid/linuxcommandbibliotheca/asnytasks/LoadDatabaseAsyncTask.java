@@ -5,7 +5,6 @@ import android.os.AsyncTask;
 
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.CraftDatabaseInterface;
-import com.inspiredandroid.linuxcommandbibliotheca.sql.CommandsDbHelper;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -22,22 +21,19 @@ public class LoadDatabaseAsyncTask extends AsyncTask<Boolean, Void, Boolean> {
     Context mContext;
     CraftDatabaseInterface mCallback;
 
-    public LoadDatabaseAsyncTask(Context context, CraftDatabaseInterface callback)
-    {
+    public LoadDatabaseAsyncTask(Context context, CraftDatabaseInterface callback) {
         super();
         mContext = context;
         mCallback = callback;
     }
 
     @Override
-    protected void onPreExecute()
-    {
+    protected void onPreExecute() {
         super.onPreExecute();
     }
 
     @Override
-    protected Boolean doInBackground(Boolean... contexts)
-    {
+    protected Boolean doInBackground(Boolean... contexts) {
         /*
         CommandsDbHelper helper = new CommandsDbHelper(mContext);
         try {
@@ -49,8 +45,8 @@ public class LoadDatabaseAsyncTask extends AsyncTask<Boolean, Void, Boolean> {
         helper.close();
         */
 
-        File file = new File(mContext.getFilesDir()+"/"+ Realm.DEFAULT_REALM_NAME);
-        if(!file.exists()) {
+        File file = new File(mContext.getFilesDir() + "/" + Realm.DEFAULT_REALM_NAME);
+        if (!file.exists()) {
             try {
                 copyBundledRealmFile(mContext.getResources().openRawResource(R.raw.realm), "default.realm");
             } catch (IOException e) {
@@ -64,8 +60,7 @@ public class LoadDatabaseAsyncTask extends AsyncTask<Boolean, Void, Boolean> {
     }
 
 
-    private String copyBundledRealmFile(InputStream inputStream, String outFileName) throws IOException
-    {
+    private String copyBundledRealmFile(InputStream inputStream, String outFileName) throws IOException {
         try {
             File file = new File(mContext.getFilesDir(), outFileName);
             FileOutputStream outputStream = new FileOutputStream(file);
@@ -83,8 +78,7 @@ public class LoadDatabaseAsyncTask extends AsyncTask<Boolean, Void, Boolean> {
     }
 
     @Override
-    protected void onPostExecute(Boolean success)
-    {
+    protected void onPostExecute(Boolean success) {
         super.onPostExecute(success);
         if (success) {
             mCallback.onSuccessCraftingDatabase();

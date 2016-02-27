@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,7 +33,7 @@
                     android:layout_marginTop="10dp"
                     android:gravity="center"
                     android:text="New Text"
-                    android:textSize="22sp"/>
+                    android:textSize="22sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -48,14 +48,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="18sp"
                     android:text="New Button"
-                    android:textColor="@android:color/white"/>
+                    android:textColor="@android:color/white" />
 
                 <TextView
                     android:id="@+id/fragment_quiz_result_tv_answer1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="New Text"/>
+                    android:text="New Text" />
 
                 <Button
                     android:id="@+id/fragment_quiz_result_btn_answer2"
@@ -63,14 +63,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="18dp"
                     android:text="New Button"
-                    android:textColor="@android:color/white"/>
+                    android:textColor="@android:color/white" />
 
                 <TextView
                     android:id="@+id/fragment_quiz_result_tv_answer2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="New Text"/>
+                    android:text="New Text" />
 
                 <Button
                     android:id="@+id/fragment_quiz_result_btn_answer3"
@@ -78,14 +78,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="18dp"
                     android:text="New Button"
-                    android:textColor="@android:color/white"/>
+                    android:textColor="@android:color/white" />
 
                 <TextView
                     android:id="@+id/fragment_quiz_result_tv_answer3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="New Text"/>
+                    android:text="New Text" />
 
                 <Button
                     android:id="@+id/fragment_quiz_result_btn_answer4"
@@ -93,14 +93,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="18dp"
                     android:text="New Button"
-                    android:textColor="@android:color/white"/>
+                    android:textColor="@android:color/white" />
 
                 <TextView
                     android:id="@+id/fragment_quiz_result_tv_answer4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text=""/>
+                    android:text="" />
             </LinearLayout>
 
         </LinearLayout>

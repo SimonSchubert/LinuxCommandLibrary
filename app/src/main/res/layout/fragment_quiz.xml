@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,7 +26,7 @@
                 android:paddingLeft="22dp"
                 android:paddingRight="22dp"
                 android:text=""
-                android:textSize="18sp"/>
+                android:textSize="18sp" />
 
             <ImageButton
                 android:id="@+id/fragment_quiz_btn_info"
@@ -40,7 +40,7 @@
                 android:layout_marginTop="10dp"
                 android:background="@null"
                 android:scaleType="centerCrop"
-                android:src="@drawable/last_result"/>
+                android:src="@drawable/last_result" />
 
         </RelativeLayout>
 
@@ -49,8 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.5"
-            android:gravity="center_horizontal"
-            >
+            android:gravity="center_horizontal">
 
 
             <Button
@@ -58,12 +57,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="3dp"
-                android:layout_marginRight="3dp"
                 android:layout_marginEnd="3dp"
+                android:layout_marginRight="3dp"
                 android:minWidth="115dp"
-                android:textAllCaps="false"
                 android:text=""
-                />
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/fragment_quiz_btn_answer2"
@@ -74,20 +72,20 @@
                 android:layout_toEndOf="@+id/fragment_quiz_btn_answer1"
                 android:layout_toRightOf="@+id/fragment_quiz_btn_answer1"
                 android:minWidth="115dp"
-                android:textAllCaps="false"
-                android:text=""/>
+                android:text=""
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/fragment_quiz_btn_answer3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/fragment_quiz_btn_answer1"
-                android:layout_marginRight="3dp"
                 android:layout_marginEnd="3dp"
+                android:layout_marginRight="3dp"
                 android:layout_marginTop="3dp"
                 android:minWidth="115dp"
-                android:textAllCaps="false"
-                android:text=""/>
+                android:text=""
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/fragment_quiz_btn_answer4"
@@ -99,40 +97,39 @@
                 android:layout_toEndOf="@+id/fragment_quiz_btn_answer3"
                 android:layout_toRightOf="@+id/fragment_quiz_btn_answer3"
                 android:minWidth="115dp"
-                android:textAllCaps="false"
-                android:text=""/>
+                android:text=""
+                android:textAllCaps="false" />
 
 
             <EditText
                 android:id="@+id/fragment_quiz_et_alesson"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:text=""
                 android:inputType="textNoSuggestions"
-                />
+                android:text="" />
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/fragment_quiz_et_alesson"
-                android:layout_alignRight="@+id/fragment_quiz_et_alesson"
                 android:layout_alignEnd="@+id/fragment_quiz_et_alesson"
                 android:layout_alignLeft="@+id/fragment_quiz_et_alesson"
+                android:layout_alignRight="@+id/fragment_quiz_et_alesson"
                 android:layout_alignStart="@+id/fragment_quiz_et_alesson"
-                android:gravity="center_horizontal">
+                android:layout_below="@+id/fragment_quiz_et_alesson"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/fragment_quiz_btn_help"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/fragment_quiz_help"
-                    android:id="@+id/fragment_quiz_btn_help"/>
+                    android:text="@string/fragment_quiz_help" />
 
                 <Button
+                    android:id="@+id/fragment_quiz_btn_giveup"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/fragment_quiz_give_up"
-                    android:id="@+id/fragment_quiz_btn_giveup"/>
+                    android:text="@string/fragment_quiz_give_up" />
             </LinearLayout>
 
         </RelativeLayout>
@@ -152,7 +149,7 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:src="@drawable/wrong"
-            android:visibility="gone"/>
+            android:visibility="gone" />
 
         <ImageView
             android:id="@+id/fragment_quiz_iv_correct"
@@ -161,7 +158,7 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:src="@drawable/well_done"
-            android:visibility="gone"/>
+            android:visibility="gone" />
 
         <LinearLayout
             android:id="@+id/fragment_quiz_ll_congratulation"
@@ -177,7 +174,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:text="@string/fragment_quiz_congratulation"
-                android:textSize="28sp"/>
+                android:textSize="28sp" />
 
             <RelativeLayout
                 android:layout_width="wrap_content"
@@ -189,7 +186,7 @@
                     android:layout_height="250dp"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:src="@drawable/result"/>
+                    android:src="@drawable/result" />
 
                 <TextView
                     android:id="@+id/fragment_quiz_tv_percentage"
@@ -202,7 +199,7 @@
                     android:text="10%"
                     android:textColor="@color/ab_primary_dark"
                     android:textSize="28sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
             </RelativeLayout>
 
             <Button
@@ -210,7 +207,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:text="@string/fragment_quiz_again"/>
+                android:text="@string/fragment_quiz_again" />
 
         </LinearLayout>
 

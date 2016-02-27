@@ -14,21 +14,18 @@ public class CommandChildModel extends RealmObject {
     private RealmList<CommandCompatibilityModel> compatibility;
     private RealmList<CommandManModel> mans;
 
-    public CommandChildModel()
-    {
+    public CommandChildModel() {
 
     }
 
-    public CommandChildModel(String _command, ArrayList<String> _mans)
-    {
+    public CommandChildModel(String _command, ArrayList<String> _mans) {
         command = _command;
         for (String man : _mans) {
             mans.add(new CommandManModel(man));
         }
     }
 
-    public static String[] getMans(CommandChildModel model)
-    {
+    public static String[] getMans(CommandChildModel model) {
         if (model.getMans() == null) {
             return new String[]{};
         }
@@ -40,33 +37,27 @@ public class CommandChildModel extends RealmObject {
         return data;
     }
 
-    public RealmList<CommandCompatibilityModel> getCompatibility()
-    {
+    public RealmList<CommandCompatibilityModel> getCompatibility() {
         return compatibility;
     }
 
-    public void setCompatibility(RealmList<CommandCompatibilityModel> compatibility)
-    {
+    public void setCompatibility(RealmList<CommandCompatibilityModel> compatibility) {
         this.compatibility = compatibility;
     }
 
-    public RealmList<CommandManModel> getMans()
-    {
+    public RealmList<CommandManModel> getMans() {
         return mans;
     }
 
-    public void setMans(RealmList<CommandManModel> mans)
-    {
+    public void setMans(RealmList<CommandManModel> mans) {
         this.mans = mans;
     }
 
-    public String getCommand()
-    {
+    public String getCommand() {
         return command;
     }
 
-    public void setCommand(String command)
-    {
+    public void setCommand(String command) {
         this.command = command;
     }
 }

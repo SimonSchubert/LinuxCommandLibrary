@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
 
     <ExpandableListView
+        android:id="@+id/fraggment_commandman_elv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/fraggment_commandman_elv"
-        android:divider="@null"/>
+        android:divider="@null" />
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/fragment_command_man_btn_up"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:src="@drawable/arrowup"
-        android:visibility="gone"/>
-
-    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/fragment_command_man_btn_down"
-        android:layout_below="@+id/fragment_command_man_btn_up"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/arrowup"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/fragment_command_man_btn_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/fragment_command_man_btn_up"
         android:src="@drawable/arrowdown"
-        android:visibility="gone"/>
+        android:visibility="gone" />
 
 </RelativeLayout>

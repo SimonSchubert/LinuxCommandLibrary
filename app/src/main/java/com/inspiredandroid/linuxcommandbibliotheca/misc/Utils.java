@@ -32,8 +32,7 @@ public class Utils {
      * @param resName
      * @return
      */
-    public static String getBase64StringByResourceName(Context context, String resName)
-    {
+    public static String getBase64StringByResourceName(Context context, String resName) {
         int imageRes = context.getResources().getIdentifier(resName, "drawable", context.getPackageName());
 
         Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), imageRes);
@@ -50,8 +49,7 @@ public class Utils {
      * @param inputStream
      * @return
      */
-    public static String readTextFile(InputStream inputStream)
-    {
+    public static String readTextFile(InputStream inputStream) {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 
         byte buf[] = new byte[1024];
@@ -74,8 +72,7 @@ public class Utils {
      * @param packageName
      * @return
      */
-    public static boolean isAppInstalled(Context context, String packageName)
-    {
+    public static boolean isAppInstalled(Context context, String packageName) {
         PackageManager pm = context.getPackageManager();
         boolean installed;
         try {
@@ -93,8 +90,7 @@ public class Utils {
      * @param list
      * @return
      */
-    public static ArrayList<String> cloneList(ArrayList<String> list)
-    {
+    public static ArrayList<String> cloneList(ArrayList<String> list) {
         if (list == null) {
             return null;
         }
@@ -113,8 +109,7 @@ public class Utils {
      * @param originalText
      * @return
      */
-    public static CharSequence highlightQueryInsideText(Context context, String query, String originalText)
-    {
+    public static CharSequence highlightQueryInsideText(Context context, String query, String originalText) {
         if (query.isEmpty() || originalText.isEmpty()) {
             return originalText;
         }

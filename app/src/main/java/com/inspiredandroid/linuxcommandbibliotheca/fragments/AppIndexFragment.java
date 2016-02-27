@@ -28,16 +28,14 @@ public abstract class AppIndexFragment extends SuperFragment {
     public abstract Action getAppIndexingAction();
 
     @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         mClient = new GoogleApiClient.Builder(getContext()).addApi(AppIndex.API).build();
     }
 
     @Override
-    public void onStart()
-    {
+    public void onStart() {
         super.onStart();
 
         mClient.connect();
@@ -45,8 +43,7 @@ public abstract class AppIndexFragment extends SuperFragment {
     }
 
     @Override
-    public void onStop()
-    {
+    public void onStop() {
         AppIndex.AppIndexApi.end(mClient, getAppIndexingAction());
         mClient.disconnect();
 

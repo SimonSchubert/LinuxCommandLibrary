@@ -1,6 +1,5 @@
 package com.inspiredandroid.linuxcommandbibliotheca;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -18,7 +17,7 @@ import io.realm.Realm;
 
 /**
  * Created by Simon Schubert
- * <p/>
+ * <p>
  * This Activity just holds the BibliothecaFragment
  */
 public class CommandBibliothecaActivity extends LoadingBaseActivity {
@@ -27,8 +26,7 @@ public class CommandBibliothecaActivity extends LoadingBaseActivity {
     public static final String EXTRA_ICON = "extra_icon"; //NON-NLS
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_commands);
 
@@ -37,8 +35,8 @@ public class CommandBibliothecaActivity extends LoadingBaseActivity {
 
         showLoadingFragment();
 
-        File file = new File(getFilesDir()+"/"+Realm.DEFAULT_REALM_NAME);
-        if(file.exists()) {
+        File file = new File(getFilesDir() + "/" + Realm.DEFAULT_REALM_NAME);
+        if (file.exists()) {
             showBibliothecaFragment();
         } else {
             mAsyncTask = new LoadDatabaseAsyncTask(this, this);
@@ -49,8 +47,7 @@ public class CommandBibliothecaActivity extends LoadingBaseActivity {
     /**
      *
      */
-    private void showBibliothecaFragment()
-    {
+    private void showBibliothecaFragment() {
         Fragment fragment = new BibliothecaFragment();
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -62,8 +59,7 @@ public class CommandBibliothecaActivity extends LoadingBaseActivity {
     /**
      *
      */
-    private void showLoadingFragment()
-    {
+    private void showLoadingFragment() {
         Fragment fragment = new DatabaseLoadingFragment();
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -73,14 +69,12 @@ public class CommandBibliothecaActivity extends LoadingBaseActivity {
     }
 
     @Override
-    public void onSuccessCraftingDatabase()
-    {
+    public void onSuccessCraftingDatabase() {
         showBibliothecaFragment();
     }
 
     @Override
-    public void onFailedCraftingDatabase()
-    {
+    public void onFailedCraftingDatabase() {
         Toast.makeText(getBaseContext(), R.string.fragment_datanase_loading_failed_craftin_database, Toast.LENGTH_LONG).show();
     }
 }

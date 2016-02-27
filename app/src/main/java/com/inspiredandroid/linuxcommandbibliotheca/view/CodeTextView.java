@@ -16,7 +16,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.interfaces.ClickInterface;
 
 /**
  * Created by Simon Schubert
- * <p/>
+ * <p>
  * This View makes it very easy to highlightQueryInsideText defined mCommands in an normal textview. Define the
  * mCommands which should be highlighted in an string array and link it in the layout resource as
  * "command".
@@ -25,8 +25,7 @@ public class CodeTextView extends TextView {
 
     private String[] mCommands;
 
-    public CodeTextView(Context context, AttributeSet attrs)
-    {
+    public CodeTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
 
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.CodeTextView);
@@ -48,8 +47,7 @@ public class CodeTextView extends TextView {
      *
      * @param mCommands
      */
-    public void setCommands(String[] mCommands)
-    {
+    public void setCommands(String[] mCommands) {
         this.mCommands = mCommands;
         updateLinks();
     }
@@ -57,8 +55,7 @@ public class CodeTextView extends TextView {
     /**
      * Mark man pages(mCommands) clickable
      */
-    private void updateLinks()
-    {
+    private void updateLinks() {
         setText(createSpannable(getText().toString(), mCommands));
     }
 
@@ -69,16 +66,14 @@ public class CodeTextView extends TextView {
      * @param commands list of mCommands to highlightQueryInsideText
      * @return
      */
-    private SpannableString createSpannable(String text, String[] commands)
-    {
+    private SpannableString createSpannable(String text, String[] commands) {
         SpannableString ss = new SpannableString(text);
 
         for (final String command : commands) {
 
             ClickInterface clickInterface = new ClickInterface() {
                 @Override
-                public void onClick()
-                {
+                public void onClick() {
                     startCommandManActivity(command);
                 }
             };
@@ -94,8 +89,7 @@ public class CodeTextView extends TextView {
      *
      * @param command
      */
-    private void startCommandManActivity(String command)
-    {
+    private void startCommandManActivity(String command) {
         Intent intent = new Intent(getContext(), CommandManActivity.class);
         Bundle b = new Bundle();
         b.putString(CommandManActivity.EXTRA_COMMAND_NAME, command);
