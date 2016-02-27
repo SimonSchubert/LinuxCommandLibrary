@@ -60,7 +60,7 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
 
         setHasOptionsMenu(true);
 
-        mRealm = Realm.getInstance(getContext());
+        mRealm = Realm.getDefaultInstance();
 
         mAdapter = createAdapter();
 
@@ -248,8 +248,7 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
         if (mAsync == null
                 || mAsync.getStatus() == AsyncTask.Status.FINISHED) {
             mAdapter.setLoading();
-            mAsync = new FetchCommandlineFuCommandsAsyncTask(
-                    getContext(), this, mFetchedCommandlineFuPages);
+            mAsync = new FetchCommandlineFuCommandsAsyncTask(this, mFetchedCommandlineFuPages);
             addAsyncTask(mAsync);
             mAsync.execute();
             mFetchedCommandlineFuPages++;

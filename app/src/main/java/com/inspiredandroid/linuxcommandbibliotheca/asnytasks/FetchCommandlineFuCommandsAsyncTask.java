@@ -1,6 +1,5 @@
 package com.inspiredandroid.linuxcommandbibliotheca.asnytasks;
 
-import android.content.Context;
 import android.os.AsyncTask;
 
 import com.google.gson.Gson;
@@ -32,14 +31,12 @@ import io.realm.Realm;
  */
 public class FetchCommandlineFuCommandsAsyncTask extends AsyncTask<String, String, ArrayList<CommandGroupModel>> {
 
-    private Context mContext;
     private FetchedCommandlineFuCommandsInterface mCallback;
     private int mPage;
 
-    public FetchCommandlineFuCommandsAsyncTask(Context _context, FetchedCommandlineFuCommandsInterface _callback, int _page) {
-        mContext = _context;
-        mCallback = _callback;
-        mPage = _page;
+    public FetchCommandlineFuCommandsAsyncTask(FetchedCommandlineFuCommandsInterface callback, int page) {
+        mCallback = callback;
+        mPage = page;
     }
 
     @Override
@@ -64,7 +61,7 @@ public class FetchCommandlineFuCommandsAsyncTask extends AsyncTask<String, Strin
             commandLineFuModels = new ArrayList<>();
         }
 
-        Realm realm = Realm.getInstance(mContext);
+        Realm realm = Realm.getDefaultInstance();
 
         realm.beginTransaction();
 

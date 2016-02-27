@@ -17,7 +17,7 @@ import io.realm.Realm;
 
 /**
  * Created by Simon Schubert
- * <p>
+ * <p/>
  * This Activity tries to get a command based on different opening types and starts a
  * CommandManFragment if successfully fetched or finishes immediately
  */
@@ -89,7 +89,7 @@ public class CommandManActivity extends LoadingBaseActivity {
      * @return unique command id
      */
     private long getIdByCommandName(String name) {
-        Realm realm = Realm.getInstance(this);
+        Realm realm = Realm.getDefaultInstance();
         Command command = realm.where(Command.class).equalTo("name", name).findFirst();
         long id = INVALID;
         if (command != null) {
@@ -111,7 +111,7 @@ public class CommandManActivity extends LoadingBaseActivity {
             return;
         }
 
-        Realm realm = Realm.getInstance(this);
+        Realm realm = Realm.getDefaultInstance();
 
         Command command = realm.where(Command.class).equalTo("id", id).findFirst();
         String name = command.getName().toUpperCase();
