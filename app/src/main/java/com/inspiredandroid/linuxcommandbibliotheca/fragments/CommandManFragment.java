@@ -36,16 +36,16 @@ import io.realm.RealmResults;
  */
 public class CommandManFragment extends AppIndexFragment implements ConvertManFromHtmlToSpannableInterface, View.OnClickListener {
 
-    ExpandableListView mList;
-    ManExpandableListAdapter mAdapter;
-    Realm mRealm;
-    String mName;
-    long mId;
-    int mCategory;
-    int mIndexesPosition;
-    String query;
-    ImageButton btnUp;
-    ImageButton btnDown;
+    private ExpandableListView mList;
+    private ManExpandableListAdapter mAdapter;
+    private Realm mRealm;
+    private String mName;
+    private long mId;
+    private int mCategory;
+    private int mIndexesPosition;
+    private String query;
+    private ImageButton btnUp;
+    private ImageButton btnDown;
 
     ArrayList<Integer> indexes = new ArrayList<>();
 

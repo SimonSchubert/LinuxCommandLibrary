@@ -18,8 +18,8 @@ import io.realm.Realm;
  */
 public class LoadDatabaseAsyncTask extends AsyncTask<Boolean, Void, Boolean> {
 
-    Context mContext;
-    CraftDatabaseInterface mCallback;
+    private Context mContext;
+    private CraftDatabaseInterface mCallback;
 
     public LoadDatabaseAsyncTask(Context context, CraftDatabaseInterface callback) {
         super();
