@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.widget.SearchView;
 import android.text.Html;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -178,6 +179,7 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
      * @return
      */
     private ManExpandableListAdapter createAdapter() {
+
         RealmResults<CommandPage> pages = mRealm.where(CommandPage.class).equalTo(CommandPage.COMMANDID, mId).findAll();
 
         ArrayList<String> groups = new ArrayList<>();
