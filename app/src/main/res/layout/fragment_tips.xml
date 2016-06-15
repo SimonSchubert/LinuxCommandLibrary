@@ -24,7 +24,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="@string/fragment_tips_start_quiz" />
+            android:text="@string/fragment_tips_start_quiz"
+            android:layout_marginTop="6dp" />
 
         <TextView
             android:id="@+id/textView"
