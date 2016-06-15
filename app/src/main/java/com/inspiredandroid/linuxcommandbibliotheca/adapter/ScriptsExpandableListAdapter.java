@@ -32,9 +32,9 @@ public class ScriptsExpandableListAdapter extends BaseExpandableListAdapter {
     private ArrayList<String> mGroup;
 
     public ScriptsExpandableListAdapter(Activity context, ArrayList<String> group, ArrayList<ArrayList<CommandGroupModel>> child) {
-        this.mContext = context;
-        this.mChild = child;
-        this.mGroup = group;
+        mContext = context;
+        mChild = child;
+        mGroup = group;
     }
 
     public CommandGroupModel getChild(int groupPosition, int childPosition) {

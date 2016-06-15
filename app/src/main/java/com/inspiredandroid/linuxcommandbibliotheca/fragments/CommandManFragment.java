@@ -29,6 +29,8 @@ import com.inspiredandroid.linuxcommandbibliotheca.sql.BookmarkManager;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import io.realm.Realm;
 import io.realm.RealmResults;
 
@@ -37,7 +39,6 @@ import io.realm.RealmResults;
  */
 public class CommandManFragment extends AppIndexFragment implements ConvertManFromHtmlToSpannableInterface, View.OnClickListener {
 
-    private ExpandableListView mList;
     private ManExpandableListAdapter mAdapter;
     private Realm mRealm;
     private String mName;
@@ -45,8 +46,11 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
     private int mCategory;
     private int mIndexesPosition;
     private String query;
-    private ImageButton btnUp;
-    private ImageButton btnDown;
+
+    @BindView(R.id.fragment_command_man_btn_up) ImageButton btnUp;
+    @BindView(R.id.fragment_command_man_btn_down) ImageButton btnDown;
+    @BindView(R.id.fraggment_commandman_elv) ExpandableListView mList;
+
     private ArrayList<Integer> indexes = new ArrayList<>();
 
     /**
@@ -98,12 +102,11 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_command_man, container, false);
 
-        mList = (ExpandableListView) view.findViewById(R.id.fraggment_commandman_elv);
+        ButterKnife.bind(this, view);
+
         mList.setAdapter(mAdapter);
 
-        btnUp = (ImageButton) view.findViewById(R.id.fragment_command_man_btn_up);
         btnUp.setOnClickListener(this);
-        btnDown = (ImageButton) view.findViewById(R.id.fragment_command_man_btn_down);
         btnDown.setOnClickListener(this);
 
         return view;

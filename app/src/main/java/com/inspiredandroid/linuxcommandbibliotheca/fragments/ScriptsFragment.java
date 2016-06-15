@@ -187,9 +187,9 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
     private void handleAdClick() {
         final String appPackageName = Utils.PACKAGE_LINUXREMOTE;
         try {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?mId=" + appPackageName)));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
         } catch (android.content.ActivityNotFoundException anfe) {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?mId=" + appPackageName)));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
         }
     }
 

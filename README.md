@@ -1,5 +1,5 @@
 ##Linux Command Bibliotheca for Android
-The app delivers you thousands of manual pages of Linux terminal mCommands, a bunch of useful one-line scripts, general terminal tips and a Linux quiz.
+The app delivers you thousands of manual pages of Linux terminal commands, a bunch of useful one-line scripts, general terminal tips and a Linux quiz.
 
 Download from Play Store https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca
 
@@ -9,13 +9,13 @@ Download from Play Store https://play.google.com/store/apps/details?id=com.inspi
 ![enter image description here][4]
 ![enter image description here][5]
 
-###Usage
-start library
+###Sample usage
+Start library from another app
 
     Intent intent = new Intent("com.inspiredandroid.linuxcommandbibliotheca.CommandBibliothecaActivity");
     startActivityForResult(intent, REQ_PICK_COMMAND);
 
-fetch result
+Read result from onActivityResult
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {

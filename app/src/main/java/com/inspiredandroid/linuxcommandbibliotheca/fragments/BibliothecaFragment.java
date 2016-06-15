@@ -19,6 +19,8 @@ import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
 
 import java.io.File;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import io.realm.Realm;
 
 /**
@@ -26,8 +28,10 @@ import io.realm.Realm;
  */
 public class BibliothecaFragment extends Fragment {
 
+    @BindView(R.id.tab_layout) TabLayout tabLayout;
+    @BindView(R.id.fragment_bibliotheca_pager) ViewPager mPager;
+
     private ScreenSlidePagerAdapter mAdapter;
-    private ViewPager mPager;
 
     public BibliothecaFragment() {
 
@@ -50,12 +54,13 @@ public class BibliothecaFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_bibliotheca, container, false);
 
+        ButterKnife.bind(this, view);
+
         // Get total commands count
         Realm realm = Realm.getDefaultInstance();
         long commandsCount = realm.where(Command.class).count();
         realm.close();
 
-        TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tab_layout);
         tabLayout.addTab(tabLayout.newTab().setText(String.format(getString(R.string.fragment_bibliotheca_commands), commandsCount)));
         tabLayout.addTab(tabLayout.newTab().setText(String.format(getString(R.string.fragment_bibliotheca_scripts), 30)));
         tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.tip)));
