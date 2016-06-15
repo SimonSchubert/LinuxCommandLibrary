@@ -29,6 +29,8 @@ import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import io.realm.Realm;
 import io.realm.RealmResults;
 
@@ -36,6 +38,8 @@ import io.realm.RealmResults;
  * Created by Simon Schubert.
  */
 public class CommandsFragment extends Fragment implements AdapterView.OnItemClickListener {
+
+    @BindView(R.id.fragment_commands_lv) ListView mList;
 
     private CommandsAdapter mAdapter;
     private Realm mRealm;
@@ -58,8 +62,8 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_commands, container, false);
 
-        // Init mList view
-        ListView mList = (ListView) view.findViewById(R.id.fragment_commands_lv);
+        ButterKnife.bind(this, view);
+
         mList.setAdapter(mAdapter);
         mList.setOnItemClickListener(this);
 

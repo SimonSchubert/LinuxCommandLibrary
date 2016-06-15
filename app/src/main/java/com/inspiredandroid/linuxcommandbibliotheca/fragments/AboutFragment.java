@@ -11,10 +11,13 @@ import android.view.ViewGroup;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
 
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 /**
  * Created by simon on 23.11.15.
  */
-public class AboutFragment extends Fragment implements View.OnClickListener {
+public class AboutFragment extends Fragment {
 
     public AboutFragment() {
 
@@ -24,25 +27,24 @@ public class AboutFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_about, container, false);
 
-        view.findViewById(R.id.fragment_about_btn_orcgenocide).setOnClickListener(this);
-        view.findViewById(R.id.fragment_about_btn_remote).setOnClickListener(this);
-        view.findViewById(R.id.fragment_about_btn_burger).setOnClickListener(this);
+        ButterKnife.bind(this, view);
 
         return view;
     }
 
-    @Override
-    public void onClick(View v) {
-        if (v.getId() == R.id.fragment_about_btn_orcgenocide) {
-            final String appPackageName = Utils.PACKAGE_ORCGENOCIDE;
-            showAppInMarket(appPackageName);
-        } else if (v.getId() == R.id.fragment_about_btn_remote) {
-            final String appPackageName = Utils.PACKAGE_LINUXREMOTE;
-            showAppInMarket(appPackageName);
-        } else if (v.getId() == R.id.fragment_about_btn_burger) {
-            final String appPackageName = Utils.PACKAGE_BURGER;
-            showAppInMarket(appPackageName);
-        }
+    @OnClick(R.id.fragment_about_btn_orcgenocide)
+    public void startOrcGenocide() {
+        startAppMarketActivity(Utils.PACKAGE_ORCGENOCIDE);
+    }
+
+    @OnClick(R.id.fragment_about_btn_remote)
+    public void startRemote() {
+        startAppMarketActivity(Utils.PACKAGE_LINUXREMOTE);
+    }
+
+    @OnClick(R.id.fragment_about_btn_burger)
+    public void startBurger() {
+        startAppMarketActivity(Utils.PACKAGE_BURGER);
     }
 
     /**
@@ -50,7 +52,7 @@ public class AboutFragment extends Fragment implements View.OnClickListener {
      *
      * @param appPackageName package mName
      */
-    private void showAppInMarket(final String appPackageName) {
+    private void startAppMarketActivity(final String appPackageName) {
         try {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
         } catch (android.content.ActivityNotFoundException e) {

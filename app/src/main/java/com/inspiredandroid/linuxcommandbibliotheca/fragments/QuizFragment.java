@@ -31,6 +31,8 @@ import com.inspiredandroid.linuxcommandbibliotheca.models.Quiz;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import io.realm.Realm;
 import io.realm.RealmResults;
 
@@ -39,18 +41,18 @@ import io.realm.RealmResults;
  */
 public class QuizFragment extends Fragment implements View.OnClickListener {
 
-    // views
-    private TextView mTvQuestion;
-    private TextView mTvPercentage;
-    private ImageView mIvCorrect;
-    private ImageView mIvWrong;
-    private ImageButton mBtnInfo;
-    private RelativeLayout mRlButtons;
-    private LinearLayout mLlCongratulation;
+    @BindView(R.id.fragment_quiz_tv_question) TextView mTvQuestion;
+    @BindView(R.id.fragment_quiz_tv_percentage) TextView mTvPercentage;
+    @BindView(R.id.fragment_quiz_btn_help) Button mBtnHelp;
+    @BindView(R.id.fragment_quiz_btn_giveup) Button mBtnGiveUp;
+    @BindView(R.id.fragment_quiz_iv_correct) ImageView mIvCorrect;
+    @BindView(R.id.fragment_quiz_iv_wrong) ImageView mIvWrong;
+    @BindView(R.id.fragment_quiz_btn_info) ImageButton mBtnInfo;
+    @BindView(R.id.fragment_quiz_et_alesson) EditText mEtLesson;
+    @BindView(R.id.fragment_quiz_rl_buttons) RelativeLayout mRlButtons;
+    @BindView(R.id.fragment_quiz_ll_congratulation) LinearLayout mLlCongratulation;
+    
     private ArrayList<Button> mBtnAnswers = new ArrayList<>();
-    private EditText mEtLesson;
-    private Button mBtnHelp;
-    private Button mBtnGiveUp;
 
     private DataHolder mData;
 
@@ -70,10 +72,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_quiz, container, false);
 
-        mTvQuestion = (TextView) view.findViewById(R.id.fragment_quiz_tv_question);
-        mRlButtons = (RelativeLayout) view.findViewById(R.id.fragment_quiz_rl_buttons);
-        mLlCongratulation = (LinearLayout) view.findViewById(R.id.fragment_quiz_ll_congratulation);
-        mTvPercentage = (TextView) view.findViewById(R.id.fragment_quiz_tv_percentage);
+        ButterKnife.bind(this, view);
 
         int[] ANSWERS = new int[]{R.id.fragment_quiz_btn_answer1,
                 R.id.fragment_quiz_btn_answer2,
@@ -85,21 +84,14 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
             mBtnAnswers.add((Button) view.findViewById(id));
         }
 
-
         view.findViewById(R.id.fragment_quiz_btn_info).setOnClickListener(this);
         view.findViewById(R.id.fragment_quiz_btn_again).setOnClickListener(this);
         view.findViewById(R.id.fragment_quiz_btn_help).setOnClickListener(this);
         view.findViewById(R.id.fragment_quiz_btn_giveup).setOnClickListener(this);
 
-
-        mIvCorrect = (ImageView) view.findViewById(R.id.fragment_quiz_iv_correct);
         mIvCorrect.setVisibility(View.GONE);
-        mIvWrong = (ImageView) view.findViewById(R.id.fragment_quiz_iv_wrong);
         mIvWrong.setVisibility(View.GONE);
-        mBtnInfo = (ImageButton) view.findViewById(R.id.fragment_quiz_btn_info);
-        mEtLesson = (EditText) view.findViewById(R.id.fragment_quiz_et_alesson);
-        mBtnHelp = (Button) view.findViewById(R.id.fragment_quiz_btn_help);
-        mBtnGiveUp = (Button) view.findViewById(R.id.fragment_quiz_btn_giveup);
+
         mEtLesson.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {

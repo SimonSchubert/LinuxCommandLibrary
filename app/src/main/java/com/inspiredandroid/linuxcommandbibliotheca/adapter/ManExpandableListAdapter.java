@@ -27,9 +27,9 @@ public class ManExpandableListAdapter extends BaseExpandableListAdapter {
     private ArrayList<String> mGroup;
 
     public ManExpandableListAdapter(Activity context, ArrayList<String> group, ArrayList<ArrayList<CharSequence>> child) {
-        this.mContext = context;
-        this.mChild = child;
-        this.mGroup = group;
+        mContext = context;
+        mChild = child;
+        mGroup = group;
     }
 
     public CharSequence getChild(int groupPosition, int childPosition) {

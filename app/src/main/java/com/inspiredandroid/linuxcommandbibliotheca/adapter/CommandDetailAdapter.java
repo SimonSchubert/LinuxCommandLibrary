@@ -24,8 +24,8 @@ public class CommandDetailAdapter extends BaseAdapter {
     private Context mContext;
 
     public CommandDetailAdapter(Context context, CommandGroupModel commandGroupModel) {
-        this.mContext = context;
-        this.mCommandGroupModel = commandGroupModel;
+        mContext = context;
+        mCommandGroupModel = commandGroupModel;
     }
 
     @Override
@@ -82,7 +82,7 @@ public class CommandDetailAdapter extends BaseAdapter {
         if (((Activity) mContext).getCallingActivity() != null) {
             returnResult(command);
         } else {
-            shareCommand(command);
+            startShareActivity(command);
         }
     }
 
@@ -91,7 +91,7 @@ public class CommandDetailAdapter extends BaseAdapter {
      *
      * @param command
      */
-    private void shareCommand(CommandChildModel command) {
+    private void startShareActivity(CommandChildModel command) {
         Intent i = new Intent(Intent.ACTION_SEND);
         i.setType("text/plain");
         i.putExtra(android.content.Intent.EXTRA_TEXT, command.getCommand());
