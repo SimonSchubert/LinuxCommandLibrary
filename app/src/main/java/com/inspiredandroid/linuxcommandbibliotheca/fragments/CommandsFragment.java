@@ -16,6 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity;
@@ -40,6 +41,8 @@ import io.realm.RealmResults;
 public class CommandsFragment extends Fragment implements AdapterView.OnItemClickListener {
 
     @BindView(R.id.fragment_commands_lv) ListView mList;
+    @BindView(R.id.fragment_commands_ll_nothingfound)
+    LinearLayout mLLNothingFound;
 
     private CommandsAdapter mAdapter;
     private Realm mRealm;
@@ -195,6 +198,14 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
 
         mAdapter.updateRealmResults(results);
         mAdapter.setSearchQuery(query);
+
+        if(mAdapter.getCount()==0) {
+            mLLNothingFound.setVisibility(View.VISIBLE);
+            mList.setVisibility(View.GONE);
+        } else {
+            mLLNothingFound.setVisibility(View.GONE);
+            mList.setVisibility(View.VISIBLE);
+        }
     }
 
 }

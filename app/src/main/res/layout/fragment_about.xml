@@ -18,6 +18,9 @@
             android:layout_height="wrap_content"
             android:text="Other projects" />
 
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -69,6 +72,25 @@
                 android:orientation="vertical">
 
                 <ImageButton
+                    android:id="@+id/fragment_about_btn_meowdo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/cat_icon" />
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Meowdo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageButton
                     android:id="@+id/fragment_about_btn_burger"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -83,6 +105,7 @@
                     android:text="Berlin Burger Map" />
             </LinearLayout>
         </LinearLayout>
+        </HorizontalScrollView>
 
         <TextView
             android:id="@+id/textView23"
