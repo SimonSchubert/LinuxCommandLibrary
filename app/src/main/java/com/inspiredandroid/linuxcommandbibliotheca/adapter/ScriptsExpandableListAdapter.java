@@ -16,6 +16,9 @@ import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * Created by Simon Schubert
  */
@@ -75,11 +78,7 @@ public class ScriptsExpandableListAdapter extends BaseExpandableListAdapter {
             if (convertView == null) {
                 LayoutInflater inflater = mContext.getLayoutInflater();
                 convertView = inflater.inflate(R.layout.row_script_child, parent, false);
-
-                holder = new CommandViewHolder();
-                holder.desc = (TextView) convertView.findViewById(R.id.row_script_child_tv_title);
-                holder.icon = (ImageView) convertView.findViewById(R.id.row_script_child_iv_icon);
-
+                holder = new CommandViewHolder(convertView);
                 convertView.setTag(holder);
             } else {
                 holder = (CommandViewHolder) convertView.getTag();
@@ -136,11 +135,7 @@ public class ScriptsExpandableListAdapter extends BaseExpandableListAdapter {
         if (convertView == null) {
             LayoutInflater inflater = mContext.getLayoutInflater();
             convertView = inflater.inflate(R.layout.row_command_group, parent, false);
-
-            holder = new CommandGroupViewHolder();
-            holder.title = (TextView) convertView.findViewById(R.id.row_command_group_tv_title);
-            holder.size = (TextView) convertView.findViewById(R.id.row_command_group_tv_size);
-
+            holder = new CommandGroupViewHolder(convertView);
             convertView.setTag(holder);
         } else {
             holder = (CommandGroupViewHolder) convertView.getTag();
@@ -192,12 +187,20 @@ public class ScriptsExpandableListAdapter extends BaseExpandableListAdapter {
     }
 
     public class CommandViewHolder {
-        public TextView desc;
-        public ImageView icon;
+        @BindView(R.id.row_script_child_tv_title) TextView desc;
+        @BindView(R.id.row_script_child_iv_icon) ImageView icon;
+
+        public CommandViewHolder(View view) {
+            ButterKnife.bind(this,view);
+        }
     }
 
     public class CommandGroupViewHolder {
-        public TextView title;
-        public TextView size;
+        @BindView(R.id.row_command_group_tv_title) TextView title;
+        @BindView(R.id.row_command_group_tv_size) TextView size;
+
+        public CommandGroupViewHolder(View view) {
+            ButterKnife.bind(this,view);
+        }
     }
 }
