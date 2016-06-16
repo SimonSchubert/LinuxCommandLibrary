@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.inspiredandroid.linuxcommandbibliotheca.R;
@@ -15,6 +16,8 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import io.realm.Realm;
 
 /**
@@ -50,10 +53,7 @@ public class ManExpandableListAdapter extends BaseExpandableListAdapter {
         if (convertView == null) {
             LayoutInflater inflater = mContext.getLayoutInflater();
             convertView = inflater.inflate(R.layout.row_man_child, parent, false);
-
-            holder = new CommandViewHolder();
-            holder.desc = (CodeTextView) convertView.findViewById(R.id.row_man_child_tv_description);
-
+            holder = new CommandViewHolder(convertView);
             convertView.setTag(holder);
         } else {
             holder = (CommandViewHolder) convertView.getTag();
@@ -97,10 +97,7 @@ public class ManExpandableListAdapter extends BaseExpandableListAdapter {
         if (convertView == null) {
             LayoutInflater inflater = mContext.getLayoutInflater();
             convertView = inflater.inflate(R.layout.row_man_group, parent, false);
-
-            holder = new CommandGroupViewHolder();
-            holder.title = (TextView) convertView.findViewById(R.id.row_man_group_tv_title);
-
+            holder = new CommandGroupViewHolder(convertView);
             convertView.setTag(holder);
         } else {
             holder = (CommandGroupViewHolder) convertView.getTag();
@@ -162,10 +159,20 @@ public class ManExpandableListAdapter extends BaseExpandableListAdapter {
     }
 
     public class CommandViewHolder {
-        public CodeTextView desc;
+        @BindView(R.id.row_man_child_tv_description)
+        CodeTextView desc;
+
+        public CommandViewHolder(View view) {
+            ButterKnife.bind(this,view);
+        }
     }
 
     public class CommandGroupViewHolder {
-        public TextView title;
+        @BindView(R.id.row_man_group_tv_title)
+        TextView title;
+
+        public CommandGroupViewHolder(View view) {
+            ButterKnife.bind(this,view);
+        }
     }
 }

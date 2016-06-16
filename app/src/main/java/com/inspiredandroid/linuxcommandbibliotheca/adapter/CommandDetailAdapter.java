@@ -15,6 +15,9 @@ import com.inspiredandroid.linuxcommandbibliotheca.models.CommandChildModel;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel;
 import com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * Created by simon on 23.11.15.
  */
@@ -51,11 +54,7 @@ public class CommandDetailAdapter extends BaseAdapter {
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.row_scriptdescription_child, parent, false);
-
-            holder = new CommandViewHolder();
-            holder.command = (CodeTextView) convertView.findViewById(R.id.row_scriptdescription_child_tv_description);
-            holder.share = (ImageButton) convertView.findViewById(R.id.row_scriptdescription_child_iv_share);
-
+            holder = new CommandViewHolder(convertView);
             convertView.setTag(holder);
         } else {
             holder = (CommandViewHolder) convertView.getTag();
@@ -114,7 +113,11 @@ public class CommandDetailAdapter extends BaseAdapter {
     }
 
     public class CommandViewHolder {
-        public CodeTextView command;
-        public ImageButton share;
+        @BindView(R.id.row_scriptdescription_child_tv_description) public CodeTextView command;
+        @BindView(R.id.row_scriptdescription_child_iv_share) public ImageButton share;
+
+        public CommandViewHolder(View view) {
+            ButterKnife.bind(this,view);
+        }
     }
 }

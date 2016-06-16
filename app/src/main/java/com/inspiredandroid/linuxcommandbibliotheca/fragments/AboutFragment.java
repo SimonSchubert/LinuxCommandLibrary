@@ -47,6 +47,11 @@ public class AboutFragment extends Fragment {
         startAppMarketActivity(Utils.PACKAGE_BURGER);
     }
 
+    @OnClick(R.id.fragment_about_btn_rate)
+    public void startRateActivity() {
+        startAppMarketActivity(Utils.PACKAGE_COMMANDLIBRARY);
+    }
+
     /**
      * Show app in the Play Store. If Play Store is not installed, show it in the browser instead.
      *

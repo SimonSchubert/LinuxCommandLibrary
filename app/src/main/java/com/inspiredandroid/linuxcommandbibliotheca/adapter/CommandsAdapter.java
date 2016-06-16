@@ -17,6 +17,8 @@ import com.inspiredandroid.linuxcommandbibliotheca.sql.BookmarkManager;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import io.realm.RealmResults;
 
 public class CommandsAdapter extends RealmMultiAdapter<Command> implements ListAdapter {
@@ -45,11 +47,7 @@ public class CommandsAdapter extends RealmMultiAdapter<Command> implements ListA
         if (convertView == null) {
             convertView = mInflater.inflate(R.layout.row_command_child,
                     parent, false);
-            viewHolder = new ViewHolder();
-            viewHolder.name = (TextView) convertView.findViewById(R.id.row_command_child_tv_title);
-            viewHolder.description = (TextView) convertView.findViewById(R.id.row_command_child_tv_desc);
-            viewHolder.icon = (ImageView) convertView.findViewById(R.id.row_command_child_iv_icon);
-
+            viewHolder = new ViewHolder(convertView);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
@@ -95,9 +93,13 @@ public class CommandsAdapter extends RealmMultiAdapter<Command> implements ListA
         return R.drawable.icon_linux;
     }
 
-    private static class ViewHolder {
-        TextView name;
-        TextView description;
-        ImageView icon;
+    public class ViewHolder {
+        @BindView(R.id.row_command_child_tv_title) TextView name;
+        @BindView(R.id.row_command_child_tv_desc) TextView description;
+        @BindView(R.id.row_command_child_iv_icon) ImageView icon;
+
+        public ViewHolder(View view) {
+            ButterKnife.bind(this,view);
+        }
     }
 }

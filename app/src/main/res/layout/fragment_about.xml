@@ -127,6 +127,14 @@
             android:autoLink="web"
             android:text="https://github.com/SimonSchubert/LinuxCommandBibliotheca" />
 
+        <Button
+            android:id="@+id/fragment_about_btn_rate"
+            android:drawableLeft="@android:drawable/star_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rate the app"
+            android:layout_marginTop="6dp" />
+
         <TextView
             android:id="@+id/textView21"
             style="@style/LicenseLarge"

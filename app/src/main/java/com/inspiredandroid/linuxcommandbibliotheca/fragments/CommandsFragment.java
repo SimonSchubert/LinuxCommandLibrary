@@ -3,6 +3,7 @@ package com.inspiredandroid.linuxcommandbibliotheca.fragments;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -32,6 +33,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import io.realm.Realm;
 import io.realm.RealmResults;
 
@@ -46,6 +48,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
 
     private CommandsAdapter mAdapter;
     private Realm mRealm;
+    private String mQuery = "";
 
     public CommandsFragment() {
     }
@@ -57,8 +60,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
         setHasOptionsMenu(true);
 
         mRealm = Realm.getDefaultInstance();
-
-        createAdapter();
+        mAdapter = new CommandsAdapter(getContext(), getAllCommands(), false);
     }
 
     @Override
@@ -99,6 +101,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
 
                 @Override
                 public boolean onQueryTextChange(String query) {
+                    mQuery = query;
                     if (query.length() > 0) {
                         String normalizedText = Normalizer.normalize(query, Normalizer.Form.NFD).replaceAll("\\p{InCombiningDiacriticalMarks}+", "").toLowerCase();
                         search(normalizedText);
@@ -148,6 +151,18 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
         }
     }
 
+    @OnClick(R.id.fragment_commands_btn_send_request)
+    public void sendEmail() {
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:" + "sschubert89@gmail.com"));
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Command request");
+        intent.putExtra(Intent.EXTRA_TEXT, "Command: " + mQuery);
+        try {
+            startActivity(Intent.createChooser(intent, "Send mail..."));
+        } catch (android.content.ActivityNotFoundException ex) {
+        }
+    }
+
     private void startCommandManActivity(long id) {
         Intent intent = new Intent(getContext(), CommandManActivity.class);
         Bundle b = new Bundle();
@@ -161,10 +176,6 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
         startActivity(intent);
     }
 
-    private void createAdapter() {
-        mAdapter = new CommandsAdapter(getContext(), getAllCommands(), false);
-    }
-
     /**
      * reset mAdapter entries
      */
@@ -172,6 +183,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
         mAdapter.updateRealmResults(getAllCommands());
         mAdapter.setSearchQuery("");
         mAdapter.updateBookmarkIds();
+        updateViews();
     }
 
     private List<RealmResults<Command>> getAllCommands() {
@@ -199,6 +211,10 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
         mAdapter.updateRealmResults(results);
         mAdapter.setSearchQuery(query);
 
+        updateViews();
+    }
+
+    private void updateViews() {
         if(mAdapter.getCount()==0) {
             mLLNothingFound.setVisibility(View.VISIBLE);
             mList.setVisibility(View.GONE);
