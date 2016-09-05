@@ -187,20 +187,24 @@ public class ScriptsExpandableListAdapter extends BaseExpandableListAdapter {
     }
 
     public class CommandViewHolder {
-        @BindView(R.id.row_script_child_tv_title) TextView desc;
-        @BindView(R.id.row_script_child_iv_icon) ImageView icon;
+        @BindView(R.id.row_script_child_tv_title)
+        TextView desc;
+        @BindView(R.id.row_script_child_iv_icon)
+        ImageView icon;
 
         public CommandViewHolder(View view) {
-            ButterKnife.bind(this,view);
+            ButterKnife.bind(this, view);
         }
     }
 
     public class CommandGroupViewHolder {
-        @BindView(R.id.row_command_group_tv_title) TextView title;
-        @BindView(R.id.row_command_group_tv_size) TextView size;
+        @BindView(R.id.row_command_group_tv_title)
+        TextView title;
+        @BindView(R.id.row_command_group_tv_size)
+        TextView size;
 
         public CommandGroupViewHolder(View view) {
-            ButterKnife.bind(this,view);
+            ButterKnife.bind(this, view);
         }
     }
 }

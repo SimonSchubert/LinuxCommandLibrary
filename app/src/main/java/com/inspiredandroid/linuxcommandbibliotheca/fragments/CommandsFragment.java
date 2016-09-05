@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.widget.SearchView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -42,7 +41,8 @@ import io.realm.RealmResults;
  */
 public class CommandsFragment extends Fragment implements AdapterView.OnItemClickListener {
 
-    @BindView(R.id.fragment_commands_lv) ListView mList;
+    @BindView(R.id.fragment_commands_lv)
+    ListView mList;
     @BindView(R.id.fragment_commands_ll_nothingfound)
     LinearLayout mLLNothingFound;
 
@@ -189,7 +189,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
     private List<RealmResults<Command>> getAllCommands() {
         List<RealmResults<Command>> results = new ArrayList<>();
         List<Long> ids = BookmarkManager.getBookmarkIds(getContext());
-        for(long id : ids) {
+        for (long id : ids) {
             results.add(mRealm.where(Command.class).equalTo(Command.ID, id).findAll());
         }
         results.add(mRealm.where(Command.class).findAll());
@@ -215,7 +215,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
     }
 
     private void updateViews() {
-        if(mAdapter.getCount()==0) {
+        if (mAdapter.getCount() == 0) {
             mLLNothingFound.setVisibility(View.VISIBLE);
             mList.setVisibility(View.GONE);
         } else {

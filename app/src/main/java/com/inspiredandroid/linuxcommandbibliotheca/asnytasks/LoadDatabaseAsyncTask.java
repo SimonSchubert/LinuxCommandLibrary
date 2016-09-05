@@ -2,7 +2,6 @@ package com.inspiredandroid.linuxcommandbibliotheca.asnytasks;
 
 import android.content.Context;
 import android.os.AsyncTask;
-import android.util.Log;
 
 import com.inspiredandroid.linuxcommandbibliotheca.Constants;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
@@ -36,7 +35,7 @@ public class LoadDatabaseAsyncTask extends AsyncTask<Boolean, Void, Boolean> {
     protected Boolean doInBackground(Boolean... contexts) {
 
         File oldDatabase = mContext.getDatabasePath("commands.db");
-        if(oldDatabase.exists()) {
+        if (oldDatabase.exists()) {
             oldDatabase.delete();
         }
 

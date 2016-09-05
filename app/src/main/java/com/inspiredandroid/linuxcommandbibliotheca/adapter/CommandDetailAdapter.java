@@ -113,11 +113,13 @@ public class CommandDetailAdapter extends BaseAdapter {
     }
 
     public class CommandViewHolder {
-        @BindView(R.id.row_scriptdescription_child_tv_description) public CodeTextView command;
-        @BindView(R.id.row_scriptdescription_child_iv_share) public ImageButton share;
+        @BindView(R.id.row_scriptdescription_child_tv_description)
+        public CodeTextView command;
+        @BindView(R.id.row_scriptdescription_child_iv_share)
+        public ImageButton share;
 
         public CommandViewHolder(View view) {
-            ButterKnife.bind(this,view);
+            ButterKnife.bind(this, view);
         }
     }
 }

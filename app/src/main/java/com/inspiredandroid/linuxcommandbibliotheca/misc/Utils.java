@@ -2,19 +2,13 @@ package com.inspiredandroid.linuxcommandbibliotheca.misc;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.support.v4.content.ContextCompat;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
-import android.util.Base64;
 
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.text.Normalizer;
 import java.util.ArrayList;
 
@@ -27,6 +21,7 @@ public class Utils {
     public final static String PACKAGE_LINUXREMOTE = "com.inspiredandroid.linuxcontrolcenter";
     public final static String PACKAGE_LINUXREMOTE_PRO = "com.inspiredandroid.linuxcontrolcenterpro";
     public static final String PACKAGE_ORCGENOCIDE = "com.inspiredandroid.orcgenocide";
+    public static final String PACKAGE_MEOWDO = "com.inspiredandroid.meowdo";
     public static final String PACKAGE_COMMANDLIBRARY = "com.inspiredandroid.linuxcommandbibliotheca";
 
     /**

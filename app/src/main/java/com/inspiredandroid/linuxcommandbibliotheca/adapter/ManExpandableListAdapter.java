@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.inspiredandroid.linuxcommandbibliotheca.R;
@@ -163,7 +162,7 @@ public class ManExpandableListAdapter extends BaseExpandableListAdapter {
         CodeTextView desc;
 
         public CommandViewHolder(View view) {
-            ButterKnife.bind(this,view);
+            ButterKnife.bind(this, view);
         }
     }
 
@@ -172,7 +171,7 @@ public class ManExpandableListAdapter extends BaseExpandableListAdapter {
         TextView title;
 
         public CommandGroupViewHolder(View view) {
-            ButterKnife.bind(this,view);
+            ButterKnife.bind(this, view);
         }
     }
 }
