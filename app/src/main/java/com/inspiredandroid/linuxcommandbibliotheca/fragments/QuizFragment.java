@@ -41,17 +41,27 @@ import io.realm.RealmResults;
  */
 public class QuizFragment extends Fragment implements View.OnClickListener {
 
-    @BindView(R.id.fragment_quiz_tv_question) TextView mTvQuestion;
-    @BindView(R.id.fragment_quiz_tv_percentage) TextView mTvPercentage;
-    @BindView(R.id.fragment_quiz_btn_help) Button mBtnHelp;
-    @BindView(R.id.fragment_quiz_btn_giveup) Button mBtnGiveUp;
-    @BindView(R.id.fragment_quiz_iv_correct) ImageView mIvCorrect;
-    @BindView(R.id.fragment_quiz_iv_wrong) ImageView mIvWrong;
-    @BindView(R.id.fragment_quiz_btn_info) ImageButton mBtnInfo;
-    @BindView(R.id.fragment_quiz_et_alesson) EditText mEtLesson;
-    @BindView(R.id.fragment_quiz_rl_buttons) RelativeLayout mRlButtons;
-    @BindView(R.id.fragment_quiz_ll_congratulation) LinearLayout mLlCongratulation;
-    
+    @BindView(R.id.fragment_quiz_tv_question)
+    TextView mTvQuestion;
+    @BindView(R.id.fragment_quiz_tv_percentage)
+    TextView mTvPercentage;
+    @BindView(R.id.fragment_quiz_btn_help)
+    Button mBtnHelp;
+    @BindView(R.id.fragment_quiz_btn_giveup)
+    Button mBtnGiveUp;
+    @BindView(R.id.fragment_quiz_iv_correct)
+    ImageView mIvCorrect;
+    @BindView(R.id.fragment_quiz_iv_wrong)
+    ImageView mIvWrong;
+    @BindView(R.id.fragment_quiz_btn_info)
+    ImageButton mBtnInfo;
+    @BindView(R.id.fragment_quiz_et_alesson)
+    EditText mEtLesson;
+    @BindView(R.id.fragment_quiz_rl_buttons)
+    RelativeLayout mRlButtons;
+    @BindView(R.id.fragment_quiz_ll_congratulation)
+    LinearLayout mLlCongratulation;
+
     private ArrayList<Button> mBtnAnswers = new ArrayList<>();
 
     private DataHolder mData;

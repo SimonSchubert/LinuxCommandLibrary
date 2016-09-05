@@ -5,13 +5,13 @@
 
     <item
         android:id="@+id/about"
-        android:icon="@android:drawable/ic_dialog_info"
+        android:icon="@drawable/ic_info_white_24dp"
         android:title="@string/about" />
 
     <item
         android:id="@+id/search"
         android:hint="@string/search_for_command"
-        android:icon="@android:drawable/ic_menu_search"
+        android:icon="@drawable/ic_search_white_24dp"
         android:title="@string/search_for_command"
         app:actionViewClass="android.support.v7.widget.SearchView"
         app:showAsAction="collapseActionView|ifRoom" />

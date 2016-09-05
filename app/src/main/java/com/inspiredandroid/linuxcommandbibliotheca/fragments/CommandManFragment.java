@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.widget.SearchView;
 import android.text.Html;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -39,6 +38,12 @@ import io.realm.RealmResults;
  */
 public class CommandManFragment extends AppIndexFragment implements ConvertManFromHtmlToSpannableInterface, View.OnClickListener {
 
+    @BindView(R.id.fragment_command_man_btn_up)
+    ImageButton btnUp;
+    @BindView(R.id.fragment_command_man_btn_down)
+    ImageButton btnDown;
+    @BindView(R.id.fraggment_commandman_elv)
+    ExpandableListView mList;
     private ManExpandableListAdapter mAdapter;
     private Realm mRealm;
     private String mName;
@@ -46,11 +51,6 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
     private int mCategory;
     private int mIndexesPosition;
     private String query;
-
-    @BindView(R.id.fragment_command_man_btn_up) ImageButton btnUp;
-    @BindView(R.id.fragment_command_man_btn_down) ImageButton btnDown;
-    @BindView(R.id.fraggment_commandman_elv) ExpandableListView mList;
-
     private ArrayList<Integer> indexes = new ArrayList<>();
 
     /**
@@ -163,7 +163,7 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
         }
 
         MenuItem bookmarkItem = menu.findItem(R.id.bookmark);
-        bookmarkItem.setIcon(BookmarkManager.hasBookmark(getContext(), mId) ? android.R.drawable.ic_menu_revert : android.R.drawable.ic_menu_save);
+        bookmarkItem.setIcon(BookmarkManager.hasBookmark(getContext(), mId) ? R.drawable.ic_bookmark_white_24dp : R.drawable.ic_bookmark_border_white_24dp);
     }
 
     @Override

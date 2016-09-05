@@ -282,7 +282,7 @@ public class ScriptsFragment extends SuperFragment implements View.OnClickListen
                             }
                         }
                 )
-                        // Set the action buttons
+                // Set the action buttons
                 .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {

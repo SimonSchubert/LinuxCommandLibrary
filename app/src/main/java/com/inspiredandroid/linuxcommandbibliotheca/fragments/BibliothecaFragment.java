@@ -8,16 +8,12 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.inspiredandroid.linuxcommandbibliotheca.Constants;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
-
-import java.io.File;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -28,8 +24,10 @@ import io.realm.Realm;
  */
 public class BibliothecaFragment extends Fragment {
 
-    @BindView(R.id.tab_layout) TabLayout tabLayout;
-    @BindView(R.id.fragment_bibliotheca_pager) ViewPager mPager;
+    @BindView(R.id.tab_layout)
+    TabLayout tabLayout;
+    @BindView(R.id.fragment_bibliotheca_pager)
+    ViewPager mPager;
 
     private ScreenSlidePagerAdapter mAdapter;
 

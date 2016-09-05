@@ -37,6 +37,11 @@ public class AboutFragment extends Fragment {
         startAppMarketActivity(Utils.PACKAGE_ORCGENOCIDE);
     }
 
+    @OnClick(R.id.fragment_about_btn_meowdo)
+    public void startMeadow() {
+        startAppMarketActivity(Utils.PACKAGE_MEOWDO);
+    }
+
     @OnClick(R.id.fragment_about_btn_remote)
     public void startRemote() {
         startAppMarketActivity(Utils.PACKAGE_LINUXREMOTE);

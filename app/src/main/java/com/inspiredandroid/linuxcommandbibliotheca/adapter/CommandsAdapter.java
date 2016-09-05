@@ -57,7 +57,7 @@ public class CommandsAdapter extends RealmMultiAdapter<Command> implements ListA
         viewHolder.name.setText(Utils.highlightQueryInsideText(mContext, mQuery, item.getName()));
         viewHolder.description.setText(Utils.highlightQueryInsideText(mContext, mQuery, item.getDescription().trim()));
         viewHolder.icon.setImageResource(getSectionImageResource(item.getCategory()));
-        if(mIds.contains((long)item.getId())) {
+        if (mIds.contains((long) item.getId())) {
             viewHolder.icon.setColorFilter(ContextCompat.getColor(mContext, R.color.ab_primary));
         } else {
             viewHolder.icon.setColorFilter(null);
@@ -94,12 +94,15 @@ public class CommandsAdapter extends RealmMultiAdapter<Command> implements ListA
     }
 
     public class ViewHolder {
-        @BindView(R.id.row_command_child_tv_title) TextView name;
-        @BindView(R.id.row_command_child_tv_desc) TextView description;
-        @BindView(R.id.row_command_child_iv_icon) ImageView icon;
+        @BindView(R.id.row_command_child_tv_title)
+        TextView name;
+        @BindView(R.id.row_command_child_tv_desc)
+        TextView description;
+        @BindView(R.id.row_command_child_iv_icon)
+        ImageView icon;
 
         public ViewHolder(View view) {
-            ButterKnife.bind(this,view);
+            ButterKnife.bind(this, view);
         }
     }
 }
