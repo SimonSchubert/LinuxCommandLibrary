@@ -80,15 +80,15 @@ public class CommandsAdapter extends RealmMultiAdapter<Command> implements ListA
     private int getSectionImageResource(int section) {
         switch (section) {
             case CommandsDBTableModel.SCTION_GAMES:
-                return R.drawable.icon_section_game;
+                return R.drawable.ic_videogame_asset_white_36dp;
             case CommandsDBTableModel.SCTION_SYSTEMADMINANDDEAMON:
-                return R.drawable.icon_section_usercommands;
+                return R.drawable.ic_security_white_36dp;
             case CommandsDBTableModel.SCTION_USERCOMMANDS:
-                return R.drawable.icon_section_usercommands;
+                return R.drawable.ic_keyboard_white_36dp;
             case CommandsDBTableModel.SCTION_SYSTEMCALLS:
-                return R.drawable.icon_section_code;
+                return R.drawable.ic_code_white_36dp;
             case CommandsDBTableModel.SCTION_MISSCELANOUS:
-                return R.drawable.icon_section_usercommands;
+                return R.drawable.ic_keyboard_white_36dp;
         }
         return R.drawable.icon_linux;
     }
