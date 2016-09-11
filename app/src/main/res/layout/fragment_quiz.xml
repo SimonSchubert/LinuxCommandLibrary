@@ -2,6 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tool="http://schemas.android.com/tools"
     android:orientation="vertical">
 
     <LinearLayout
@@ -60,7 +61,7 @@
                 android:layout_marginEnd="3dp"
                 android:layout_marginRight="3dp"
                 android:minWidth="115dp"
-                android:text=""
+                tool:text="adb"
                 android:textAllCaps="false" />
 
             <Button
@@ -72,7 +73,7 @@
                 android:layout_toEndOf="@+id/fragment_quiz_btn_answer1"
                 android:layout_toRightOf="@+id/fragment_quiz_btn_answer1"
                 android:minWidth="115dp"
-                android:text=""
+                tool:text="xkill"
                 android:textAllCaps="false" />
 
             <Button
@@ -84,7 +85,7 @@
                 android:layout_marginRight="3dp"
                 android:layout_marginTop="3dp"
                 android:minWidth="115dp"
-                android:text=""
+                tool:text="cat"
                 android:textAllCaps="false" />
 
             <Button
@@ -97,7 +98,7 @@
                 android:layout_toEndOf="@+id/fragment_quiz_btn_answer3"
                 android:layout_toRightOf="@+id/fragment_quiz_btn_answer3"
                 android:minWidth="115dp"
-                android:text=""
+                tool:text="ifconfig"
                 android:textAllCaps="false" />
 
 

@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
+    xmlns:tool="http://schemas.android.com/tools"
     android:gravity="center_vertical"
     android:orientation="horizontal"
     android:padding="10dp">
@@ -14,13 +15,14 @@
         android:layout_weight="1"
         android:textIsSelectable="true"
         android:textSize="16sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        tool:text="xkill"/>
 
     <ImageButton
         android:id="@+id/row_scriptdescription_child_iv_share"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/fragment_scriptdescription_share_command"
-        android:src="@android:drawable/ic_menu_share" />
+        android:src="@drawable/ic_share_white_24dp" />
 
 </LinearLayout>

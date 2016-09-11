@@ -159,7 +159,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
         intent.putExtra(Intent.EXTRA_TEXT, "Command: " + mQuery);
         try {
             startActivity(Intent.createChooser(intent, "Send mail..."));
-        } catch (android.content.ActivityNotFoundException ex) {
+        } catch (android.content.ActivityNotFoundException ignored) {
         }
     }
 
