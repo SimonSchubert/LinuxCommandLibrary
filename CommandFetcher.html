@@ -1,0 +1,134 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script>
+
+
+
+
+	var myObj = "";
+	var myObj2 = "";
+	var cars = new Array();
+$(document).ready(function() {
+	var id = 2448;
+	var pageId = 18496;
+    $("#step1").click(function(){
+    $("#content").empty();
+		$("#content")
+    	.append($("#input").val());
+         	var name = $("h1").text().replace("- Linux man page","").split("(")[0].trim();
+         	$('#name').text(name);
+         	var result = $("h1").text().match(/\((.*)\)/)[1].trim();
+         	$('#category').text(result);
+         	$('script').each(function () {
+    			//$(this).remove();
+			});
+			$('#content').find('*:not(a,p,b,br,dd,h2)').contents().unwrap();
+			id++;
+    $('h2').each(function() {
+    		var page = "";
+    		var description = "";
+  			title = $(this).text().trim();
+  			console.log("title: " + title + " " + $(this)[0].nextSibling.nodeValue);
+  			if($(this)[0].nextSibling.nodeValue != null) {
+  				page += $(this)[0].nextSibling.nodeValue;
+  			console.log("page: " + page);
+  			}
+  			$(this).nextUntil( "h2" ).each(function() {
+  				if($(this).is("p")) {
+  					page += ("<br><br>");	
+  				}
+  				page += ($(this).html().trim());
+  				description	+= ($(this).text().trim());	
+  				if($(this)[0].nextSibling.nodeType == 3 && $(this)[0].nextSibling.nodeValue != null) {
+  					page += $(this)[0].nextSibling.nodeValue;
+  					description	+= $(this)[0].nextSibling.nodeValue.trim();
+  				}
+  			});
+  			if(page === "") {
+  			console.log("page empty: " + title + " page: " + page);
+  			  			$(this).nextUntil( "#adbottom" ).each(function() {
+  				page += ($(this).html().trim());	
+  				if($(this)[0].nextSibling.nodeType == 3 && $(this)[0].nextSibling.nodeValue != null) {
+  					page += $(this)[0].nextSibling.nodeValue.trim();
+  				}
+  			});
+  			}
+  			pageId++;
+         	if(title === "Name" || title === "name") {
+         		$('#description').text(description);
+         	}
+         	
+         	myObj += "{\"id\": " + JSON.stringify(pageId) +"," +
+         	"\"commandid\" : " + JSON.stringify(id) + "," +
+         	"\"title\": \"" + escapeSpecialChars(title.replace(/['"]+/g, '')) + "\"," +
+            "\"page\": \"" + escapeSpecialChars(page.replace(/['"]+/g, '')) + "\"},";
+		});
+		
+        myObj2 += ("{\"id\": " +JSON.stringify(id) + ",");
+        myObj2 += ("\"category\": " + JSON.stringify($('#category').text()) + ",");
+        myObj2 += ("\"name\": " +JSON.stringify($('#name').text()) + ",");
+        myObj2 += ("\"description\": " + JSON.stringify($('#description').text()) + "},");
+    }); 
+});
+
+function downloadFiles() {
+		download("page.txt", myObj);
+		download("command.txt", myObj2);
+}
+
+function download(filename, text) {
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+  element.setAttribute('download', filename);
+
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
+}
+
+function copyToClipboard(element) {
+  $(element).select();
+  document.execCommand("copy");
+}
+    function escapeSpecialChars(value) {
+    return value.replace(/\\n/g, "\\n")
+               .replace(/\\'/g, "\\'")
+               .replace(/\\"/g, '\\"')
+               .replace(/\\&/g, "\\&")
+               .replace(/\\r/g, "\\r")
+               .replace(/\\t/g, "\\t")
+               .replace(/\\b/g, "\\b")
+               .replace(/\\f/g, "\\f");
+};
+</script>
+</head>
+<body>
+
+<div id="name"></div>
+<div id="category"></div>
+<div id="description"></div>
+
+<textarea id="result2"></textarea>
+
+<button id="step1">Schritt 1</button>
+<button onclick="downloadFiles()">Download</button>
+<button onclick="copyToClipboard('#result')">Copy Commad Page</button>
+<button onclick="copyToClipboard('#result2')">Copy Command</button>
+<textarea id="input">
+</textarea>
+
+<ul>
+</ul>
+<textarea id="result" ></textarea>
+<div id="content">
+
+</div>
+
+</body>
+
+</html>

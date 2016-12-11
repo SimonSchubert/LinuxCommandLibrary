@@ -2,15 +2,20 @@ package com.inspiredandroid.linuxcommandbibliotheca.asnytasks;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.util.Log;
 
 import com.inspiredandroid.linuxcommandbibliotheca.Constants;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.CraftDatabaseInterface;
+import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
+import com.inspiredandroid.linuxcommandbibliotheca.models.CommandPage;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+
+import io.realm.Realm;
 
 /**
  * Created by Simon Schubert
@@ -49,9 +54,29 @@ public class LoadDatabaseAsyncTask extends AsyncTask<Boolean, Void, Boolean> {
             }
         }
 
+        applyPatch();
+
         return true;
     }
 
+    private void applyPatch() {
+        Realm realm = Realm.getDefaultInstance();
+        if(realm.where(Command.class).equalTo("name", "pkill").findFirst() == null) {
+            realm.beginTransaction();
+            try {
+                realm.createAllFromJson(Command.class, mContext.getResources().openRawResource(R.raw.commands_patch_0));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            try {
+                realm.createAllFromJson(CommandPage.class, mContext.getResources().openRawResource(R.raw.commands_page_patch_0));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            realm.commitTransaction();
+        }
+        realm.close();
+    }
 
     private String copyBundledRealmFile(InputStream inputStream, String outFileName) throws IOException {
 

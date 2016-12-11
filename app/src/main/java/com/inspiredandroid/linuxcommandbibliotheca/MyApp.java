@@ -1,6 +1,12 @@
 package com.inspiredandroid.linuxcommandbibliotheca;
 
 import android.app.Application;
+import android.util.Log;
+
+import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
+import com.inspiredandroid.linuxcommandbibliotheca.models.CommandPage;
+
+import java.io.IOException;
 
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
@@ -14,6 +20,8 @@ public class MyApp extends Application {
     public void onCreate() {
         super.onCreate();
 
-        Realm.setDefaultConfiguration(new RealmConfiguration.Builder(this).name(Constants.REALM_DATABASE).build());
+        Realm.init(this);
+        RealmConfiguration config = new RealmConfiguration.Builder().name(Constants.REALM_DATABASE).build();
+        Realm.setDefaultConfiguration(config);
     }
 }
