@@ -2,12 +2,14 @@ package com.inspiredandroid.linuxcommandbibliotheca.fragments;
 
 import android.app.SearchManager;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.MenuItemCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.SearchView;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -23,6 +25,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.CommandManActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.CommandsAdapter;
+import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
 import com.inspiredandroid.linuxcommandbibliotheca.sql.BookmarkManager;
 
@@ -61,6 +64,38 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
 
         mRealm = Realm.getDefaultInstance();
         mAdapter = new CommandsAdapter(getContext(), getAllCommands(), false);
+
+        if (BookmarkManager.shouldShowRateDialog(getContext())) {
+            new AlertDialog.Builder(getContext())
+                    .setTitle(R.string.rate_title)
+                    .setMessage(R.string.rate_message)
+                    .setPositiveButton(R.string.rate_rate_now, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            startAppMarketActivity(Utils.PACKAGE_COMMANDLIBRARY);
+                        }
+                    })
+                    .setNeutralButton(R.string.rate_later, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .setNegativeButton(R.string.rate_no_thanks, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            BookmarkManager.disableRateDialog(getContext());
+                        }
+                    }).show();
+        }
+    }
+
+    private void startAppMarketActivity(final String appPackageName) {
+        try {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+        } catch (android.content.ActivityNotFoundException e) {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+        }
     }
 
     @Override
@@ -192,7 +227,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
         for (long id : ids) {
             results.add(mRealm.where(Command.class).equalTo(Command.ID, id).findAll());
         }
-        results.add(mRealm.where(Command.class).findAll());
+        results.add(mRealm.where(Command.class).findAll().sort("name"));
         return results;
     }
 

@@ -204,4 +204,10 @@
     <string name="fragment_quiz_help">Help</string>
     <string name="fragment_quiz_give_up">Give up</string>
 
+    <string name="rate_title">Do you like us?</string>
+    <string name="rate_message">Please rate the Linux Command Library App, if you think it is great!</string>
+    <string name="rate_rate_now">Rate now</string>
+    <string name="rate_later">Remind me later</string>
+    <string name="rate_no_thanks">No thanks</string>
+
 </resources>

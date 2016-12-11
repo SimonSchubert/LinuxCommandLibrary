@@ -53,6 +53,27 @@
                 android:orientation="vertical">
 
                 <ImageButton
+                    android:id="@+id/fragment_about_btn_bimo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_bimo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:maxWidth="120dp"
+                    android:text="Bimo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageButton
                     android:id="@+id/fragment_about_btn_orcgenocide"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

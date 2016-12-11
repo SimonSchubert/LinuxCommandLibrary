@@ -11,8 +11,32 @@ import java.util.ArrayList;
  */
 public class BookmarkManager {
 
+    private static final String KEY_APP_OPEN_COUNT = "KEY_APP_OPEN_COUNT";
+    private static final String KEY_RATING_DIALOG_STATE = "KEY_RATING_DIALOG_STATE";
     private static final String KEY_BOOKMARKS = "KEY_BOOKMARKS";
     private static final String KEY_BOOKMARKCHANGED = "KEY_BOOKMARKCHANGED";
+
+    public static boolean shouldShowRateDialog(Context context) {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        if(prefs.getInt(KEY_RATING_DIALOG_STATE, 0) == 0) {
+
+            SharedPreferences.Editor edit = prefs.edit();
+            edit.putInt(KEY_APP_OPEN_COUNT, prefs.getInt(KEY_APP_OPEN_COUNT, 0) +1);
+            edit.apply();
+
+            if (prefs.getInt(KEY_APP_OPEN_COUNT, 0) % 10 == 0) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static void disableRateDialog(Context context) {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        SharedPreferences.Editor edit = prefs.edit();
+        edit.putInt(KEY_RATING_DIALOG_STATE, 1);
+        edit.apply();
+    }
 
     /**
      * get arraylist of ids
