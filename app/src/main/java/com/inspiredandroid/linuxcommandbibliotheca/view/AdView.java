@@ -35,12 +35,7 @@ public class AdView extends ImageView {
         if (Utils.isAppInstalled(getContext(), Utils.PACKAGE_LINUXREMOTE) || Utils.isAppInstalled(getContext(), Utils.PACKAGE_LINUXREMOTE_PRO)) {
             setVisibility(View.GONE);
         } else {
-            setOnClickListener(new OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    startRemoteControl();
-                }
-            });
+            setOnClickListener(view -> startRemoteControl());
         }
     }
 

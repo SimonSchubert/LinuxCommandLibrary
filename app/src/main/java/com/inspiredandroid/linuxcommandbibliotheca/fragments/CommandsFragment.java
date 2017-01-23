@@ -25,7 +25,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.CommandsAdapter;
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.dialogs.RateDialogFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
-import com.inspiredandroid.linuxcommandbibliotheca.sql.BookmarkManager;
+import com.inspiredandroid.linuxcommandbibliotheca.misc.BookmarkManager;
 
 import java.text.Normalizer;
 import java.util.ArrayList;

@@ -3,7 +3,7 @@ package com.inspiredandroid.linuxcommandbibliotheca.asnytasks;
 import android.content.Context;
 import android.os.AsyncTask;
 
-import com.inspiredandroid.linuxcommandbibliotheca.interfaces.ConvertManFromHtmlToSpannableInterface;
+import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnConvertFromHtmlToSpannableListener;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
 
 import java.util.ArrayList;
@@ -13,12 +13,12 @@ import java.util.ArrayList;
  */
 public class SearchManAsyncTask extends AsyncTask<String, ArrayList<ArrayList<CharSequence>>, ArrayList<ArrayList<CharSequence>>> {
 
-    private ConvertManFromHtmlToSpannableInterface mCallback;
+    private OnConvertFromHtmlToSpannableListener mCallback;
     private Context mContext;
     private ArrayList<ArrayList<CharSequence>> mChildren;
     private String mQuery;
 
-    public SearchManAsyncTask(Context context, String query, ArrayList<ArrayList<CharSequence>> children, ConvertManFromHtmlToSpannableInterface callback) {
+    public SearchManAsyncTask(Context context, String query, ArrayList<ArrayList<CharSequence>> children, OnConvertFromHtmlToSpannableListener callback) {
         mContext = context;
         mChildren = children;
         mCallback = callback;
@@ -58,7 +58,7 @@ public class SearchManAsyncTask extends AsyncTask<String, ArrayList<ArrayList<Ch
     protected void onPostExecute(ArrayList<ArrayList<CharSequence>> children) {
         super.onPostExecute(children);
 
-        mCallback.onConvertedHtmlToSpannable(children);
+        mCallback.onConvertHtmlToSpannable(children);
     }
 
 }

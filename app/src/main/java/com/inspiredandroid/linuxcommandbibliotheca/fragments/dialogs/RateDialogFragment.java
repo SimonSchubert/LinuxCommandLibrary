@@ -10,7 +10,7 @@ import android.support.v7.app.AlertDialog;
 
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
-import com.inspiredandroid.linuxcommandbibliotheca.sql.BookmarkManager;
+import com.inspiredandroid.linuxcommandbibliotheca.misc.BookmarkManager;
 
 /**
  * Created by Simon Schubert

@@ -63,7 +63,7 @@ public class TipFragment extends AppIndexFragment {
 
         tvLinkToRedirection.setClickInterface(new OnLinkClickListener() {
             @Override
-            public void onClick() {
+            public void onLinkClick() {
                 scrollToRedirectionView();
             }
         });

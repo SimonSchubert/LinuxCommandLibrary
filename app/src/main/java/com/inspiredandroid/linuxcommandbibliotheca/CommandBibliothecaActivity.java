@@ -56,12 +56,12 @@ public class CommandBibliothecaActivity extends LoadingBaseActivity {
     }
 
     @Override
-    public void onSuccessCraftingDatabase() {
+    public void onDatabaseCreateSuccess() {
         showBibliothecaFragment();
     }
 
     @Override
-    public void onFailedCraftingDatabase() {
+    public void onDatabaseCreateFail() {
         Toast.makeText(getBaseContext(), R.string.fragment_datanase_loading_failed_craftin_database, Toast.LENGTH_LONG).show();
     }
 }

@@ -58,7 +58,7 @@ public class ClickableTextView extends TextView {
             ClickableSpan clickableSpan = new ClickableSpan() {
                 @Override
                 public void onClick(View textView) {
-                    onLinkClickListener.onClick();
+                    onLinkClickListener.onLinkClick();
                 }
 
                 @Override

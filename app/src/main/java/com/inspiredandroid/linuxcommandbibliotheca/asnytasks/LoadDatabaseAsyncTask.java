@@ -5,7 +5,7 @@ import android.os.AsyncTask;
 
 import com.inspiredandroid.linuxcommandbibliotheca.Constants;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
-import com.inspiredandroid.linuxcommandbibliotheca.interfaces.CraftDatabaseInterface;
+import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnCraftDatabaseListener;
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandPage;
 
@@ -22,9 +22,9 @@ import io.realm.Realm;
 public class LoadDatabaseAsyncTask extends AsyncTask<Boolean, Void, Boolean> {
 
     private Context mContext;
-    private CraftDatabaseInterface mCallback;
+    private OnCraftDatabaseListener mCallback;
 
-    public LoadDatabaseAsyncTask(Context context, CraftDatabaseInterface callback) {
+    public LoadDatabaseAsyncTask(Context context, OnCraftDatabaseListener callback) {
         super();
         mContext = context;
         mCallback = callback;
@@ -94,9 +94,9 @@ public class LoadDatabaseAsyncTask extends AsyncTask<Boolean, Void, Boolean> {
     protected void onPostExecute(Boolean success) {
         super.onPostExecute(success);
         if (success) {
-            mCallback.onSuccessCraftingDatabase();
+            mCallback.onDatabaseCreateSuccess();
         } else {
-            mCallback.onFailedCraftingDatabase();
+            mCallback.onDatabaseCreateFail();
         }
     }
 

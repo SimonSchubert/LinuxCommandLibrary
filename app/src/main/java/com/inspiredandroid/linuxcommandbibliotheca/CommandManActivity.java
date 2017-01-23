@@ -9,7 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.inspiredandroid.linuxcommandbibliotheca.fragments.CommandManFragment;
+import com.inspiredandroid.linuxcommandbibliotheca.fragments.CommandManFragmentOn;
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.DatabaseLoadingFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
 
@@ -19,7 +19,7 @@ import io.realm.Realm;
  * Created by Simon Schubert
  * <p/>
  * This Activity tries to get a command based on different opening types and starts a
- * CommandManFragment if successfully fetched or finishes immediately
+ * CommandManFragmentOn if successfully fetched or finishes immediately
  */
 public class CommandManActivity extends LoadingBaseActivity {
 
@@ -131,7 +131,7 @@ public class CommandManActivity extends LoadingBaseActivity {
         // Set command name as actionbar title
         setTitle(name);
 
-        Fragment fragment = new CommandManFragment();
+        Fragment fragment = new CommandManFragmentOn();
 
         // Add unique command ID for fragment
         Bundle bundle = new Bundle();
@@ -162,12 +162,12 @@ public class CommandManActivity extends LoadingBaseActivity {
     }
 
     @Override
-    public void onSuccessCraftingDatabase() {
+    public void onDatabaseCreateSuccess() {
         handleIntent();
     }
 
     @Override
-    public void onFailedCraftingDatabase() {
+    public void onDatabaseCreateFail() {
         Toast.makeText(getBaseContext(), R.string.fragment_datanase_loading_failed_craftin_database, Toast.LENGTH_LONG).show();
     }
 }

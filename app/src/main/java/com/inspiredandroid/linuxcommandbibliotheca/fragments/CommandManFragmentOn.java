@@ -22,9 +22,9 @@ import com.inspiredandroid.linuxcommandbibliotheca.CommandManActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.ManExpandableListAdapter;
 import com.inspiredandroid.linuxcommandbibliotheca.asnytasks.SearchManAsyncTask;
-import com.inspiredandroid.linuxcommandbibliotheca.interfaces.ConvertManFromHtmlToSpannableInterface;
+import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnConvertFromHtmlToSpannableListener;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandPage;
-import com.inspiredandroid.linuxcommandbibliotheca.sql.BookmarkManager;
+import com.inspiredandroid.linuxcommandbibliotheca.misc.BookmarkManager;
 
 import java.util.ArrayList;
 
@@ -36,7 +36,7 @@ import io.realm.RealmResults;
 /**
  * Created by Simon Schubert
  */
-public class CommandManFragment extends AppIndexFragment implements ConvertManFromHtmlToSpannableInterface, View.OnClickListener {
+public class CommandManFragmentOn extends AppIndexFragment implements OnConvertFromHtmlToSpannableListener, View.OnClickListener {
 
     @BindView(R.id.fragment_command_man_btn_up)
     ImageButton btnUp;
@@ -293,7 +293,7 @@ public class CommandManFragment extends AppIndexFragment implements ConvertManFr
     }
 
     @Override
-    public void onConvertedHtmlToSpannable(ArrayList<ArrayList<CharSequence>> spannable) {
+    public void onConvertHtmlToSpannable(ArrayList<ArrayList<CharSequence>> spannable) {
         mAdapter.mChild = spannable;
         mAdapter.notifyDataSetChanged();
     }
