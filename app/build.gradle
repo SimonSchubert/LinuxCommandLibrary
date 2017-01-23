@@ -7,7 +7,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath "io.realm:realm-gradle-plugin:2.2.1"
+        classpath "io.realm:realm-gradle-plugin:2.3.0"
     }
 }
 
@@ -23,7 +23,6 @@ android {
         versionName "1.5.5"
         applicationId "com.inspiredandroid.linuxcommandbibliotheca"
     }
-
     buildTypes {
         release {
             minifyEnabled false
@@ -45,8 +44,8 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:25.0.1'
-    compile 'com.android.support:design:25.0.1'
+    compile 'com.android.support:appcompat-v7:25.1.0'
+    compile 'com.android.support:design:25.1.0'
     compile 'com.google.android.gms:play-services-appindexing:9.8.0'
     compile 'com.google.code.gson:gson:2.8.0'
     compile 'org.apache.commons:commons-io:1.3.2'

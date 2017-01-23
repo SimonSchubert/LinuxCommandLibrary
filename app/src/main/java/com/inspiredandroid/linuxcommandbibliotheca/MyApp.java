@@ -1,12 +1,6 @@
 package com.inspiredandroid.linuxcommandbibliotheca;
 
 import android.app.Application;
-import android.util.Log;
-
-import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
-import com.inspiredandroid.linuxcommandbibliotheca.models.CommandPage;
-
-import java.io.IOException;
 
 import io.realm.Realm;
 import io.realm.RealmConfiguration;

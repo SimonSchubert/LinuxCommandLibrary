@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tool="http://schemas.android.com/tools"
     android:orientation="vertical">
 
     <LinearLayout
@@ -61,8 +61,8 @@
                 android:layout_marginEnd="3dp"
                 android:layout_marginRight="3dp"
                 android:minWidth="115dp"
-                tool:text="adb"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                tool:text="adb" />
 
             <Button
                 android:id="@+id/fragment_quiz_btn_answer2"
@@ -73,8 +73,8 @@
                 android:layout_toEndOf="@+id/fragment_quiz_btn_answer1"
                 android:layout_toRightOf="@+id/fragment_quiz_btn_answer1"
                 android:minWidth="115dp"
-                tool:text="xkill"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                tool:text="xkill" />
 
             <Button
                 android:id="@+id/fragment_quiz_btn_answer3"
@@ -85,8 +85,8 @@
                 android:layout_marginRight="3dp"
                 android:layout_marginTop="3dp"
                 android:minWidth="115dp"
-                tool:text="cat"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                tool:text="cat" />
 
             <Button
                 android:id="@+id/fragment_quiz_btn_answer4"
@@ -98,8 +98,8 @@
                 android:layout_toEndOf="@+id/fragment_quiz_btn_answer3"
                 android:layout_toRightOf="@+id/fragment_quiz_btn_answer3"
                 android:minWidth="115dp"
-                tool:text="ifconfig"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                tool:text="ifconfig" />
 
 
             <EditText

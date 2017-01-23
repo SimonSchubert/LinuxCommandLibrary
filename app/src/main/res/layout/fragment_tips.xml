@@ -12,22 +12,6 @@
         android:paddingBottom="10dp">
 
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="22dp"
-            android:text="@string/fragment_tips_do_the_test" />
-
-        <Button
-            android:id="@+id/fragment_tips_btn_quiz"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/fragment_tips_start_quiz"
-            android:layout_marginTop="6dp" />
-
-        <TextView
             android:id="@+id/textView"
             style="@style/TextMedium"
             android:layout_width="wrap_content"
@@ -764,7 +748,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
-                        android:text=" $ ^png^xcf^" />
+                        android:text="@string/fragment_tips_special_characters_code_substitution_part_2" />
 
                     <TextView
                         android:id="@+id/textView15"

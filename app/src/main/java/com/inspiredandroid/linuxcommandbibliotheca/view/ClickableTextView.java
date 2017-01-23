@@ -11,7 +11,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.TextView;
 
-import com.inspiredandroid.linuxcommandbibliotheca.interfaces.ClickInterface;
+import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnLinkClickListener;
 
 /**
  * Created by Simon Schubert
@@ -21,7 +21,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.interfaces.ClickInterface;
  */
 public class ClickableTextView extends TextView {
 
-    private ClickInterface mClickInterface;
+    private OnLinkClickListener mOnLinkClickListener;
 
     public ClickableTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -40,9 +40,9 @@ public class ClickableTextView extends TextView {
      * @param ss
      * @param text
      * @param phrase
-     * @param clickInterface
+     * @param onLinkClickListener
      */
-    public static void addClickableSpanToPhrases(SpannableString ss, String text, String phrase, final ClickInterface clickInterface) {
+    public static void addClickableSpanToPhrases(SpannableString ss, String text, String phrase, final OnLinkClickListener onLinkClickListener) {
         // would end in endless loop
         if (phrase.isEmpty()) {
             return;
@@ -58,7 +58,7 @@ public class ClickableTextView extends TextView {
             ClickableSpan clickableSpan = new ClickableSpan() {
                 @Override
                 public void onClick(View textView) {
-                    clickInterface.onClick();
+                    onLinkClickListener.onClick();
                 }
 
                 @Override
@@ -83,12 +83,12 @@ public class ClickableTextView extends TextView {
     }
 
     /**
-     * Set ClickInterface
+     * Set OnLinkClickListener
      *
-     * @param clickInterface
+     * @param onLinkClickListener
      */
-    public void setClickInterface(ClickInterface clickInterface) {
-        this.mClickInterface = clickInterface;
+    public void setClickInterface(OnLinkClickListener onLinkClickListener) {
+        this.mOnLinkClickListener = onLinkClickListener;
     }
 
     /**
@@ -101,7 +101,7 @@ public class ClickableTextView extends TextView {
     private SpannableString createSpannable(String text, final String word) {
         SpannableString ss = new SpannableString(text);
 
-        ClickableTextView.addClickableSpanToPhrases(ss, text, word, mClickInterface);
+        ClickableTextView.addClickableSpanToPhrases(ss, text, word, mOnLinkClickListener);
 
         return ss;
     }

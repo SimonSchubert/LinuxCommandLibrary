@@ -68,6 +68,11 @@
             android:theme="@style/LibAppTheme"
             android:label="@string/about" />
 
+        <activity
+            android:name=".ScriptCategoryActivity"
+            android:theme="@style/LibAppTheme"
+            android:label="" />
+
     </application>
 
 </manifest>

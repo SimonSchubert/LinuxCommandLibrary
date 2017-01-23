@@ -16,16 +16,22 @@ import com.google.android.gms.appindexing.Action;
 import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.QuizActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
-import com.inspiredandroid.linuxcommandbibliotheca.interfaces.ClickInterface;
+import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnLinkClickListener;
 import com.inspiredandroid.linuxcommandbibliotheca.view.ClickableTextView;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * Created by Simon Schubert
  */
-public class TipFragment extends AppIndexFragment implements View.OnClickListener {
+public class TipFragment extends AppIndexFragment {
 
+    @BindView(R.id.fragment_tips_tv_link_to_redirection)
+    ClickableTextView tvLinkToRedirection;
+    @BindView(R.id.fragment_tips_tv_redirection)
+    TextView mTvRedirection;
     private ScrollView mView;
-    private TextView mTvRedirection;
 
     public TipFragment() {
     }
@@ -53,11 +59,9 @@ public class TipFragment extends AppIndexFragment implements View.OnClickListene
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mView = (ScrollView) inflater.inflate(R.layout.fragment_tips, container, false);
 
-        mView.findViewById(R.id.fragment_tips_btn_quiz).setOnClickListener(this);
-        mTvRedirection = (TextView) mView.findViewById(R.id.fragment_tips_tv_redirection);
+        ButterKnife.bind(this, mView);
 
-        ClickableTextView tvLinkToRedirection = (ClickableTextView) mView.findViewById(R.id.fragment_tips_tv_link_to_redirection);
-        tvLinkToRedirection.setClickInterface(new ClickInterface() {
+        tvLinkToRedirection.setClickInterface(new OnLinkClickListener() {
             @Override
             public void onClick() {
                 scrollToRedirectionView();
@@ -66,13 +70,6 @@ public class TipFragment extends AppIndexFragment implements View.OnClickListene
         tvLinkToRedirection.setClickableWord("below");
 
         return mView;
-    }
-
-    @Override
-    public void onClick(View v) {
-        if (v.getId() == R.id.fragment_tips_btn_quiz) {
-            startActivity(new Intent(getContext(), QuizActivity.class));
-        }
     }
 
     @Override
@@ -85,8 +82,16 @@ public class TipFragment extends AppIndexFragment implements View.OnClickListene
         if (item.getItemId() == R.id.about) {
             startAboutActivity();
             return true;
+        } else if (item.getItemId() == R.id.quiz) {
+            startQuizActivity();
+            return true;
         }
         return false;
+    }
+
+    private void startQuizActivity() {
+        Intent intent = new Intent(getContext(), QuizActivity.class);
+        startActivity(intent);
     }
 
     private void startAboutActivity() {
