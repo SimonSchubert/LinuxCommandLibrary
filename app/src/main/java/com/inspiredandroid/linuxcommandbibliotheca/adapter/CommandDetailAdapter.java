@@ -62,12 +62,7 @@ public class CommandDetailAdapter extends BaseAdapter {
 
         holder.command.setText(String.format(mContext.getString(R.string.commandline), command.getCommand()));
         holder.command.setCommands(CommandChildModel.getMans(command));
-        holder.share.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                handleCommandClick(command);
-            }
-        });
+        holder.share.setOnClickListener(v -> handleCommandClick(command));
 
         return convertView;
     }
@@ -94,7 +89,6 @@ public class CommandDetailAdapter extends BaseAdapter {
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
         intent.putExtra(android.content.Intent.EXTRA_TEXT, command.getCommand());
-
         mContext.startActivity(intent);
     }
 

@@ -2,6 +2,7 @@ package com.inspiredandroid.linuxcommandbibliotheca.fragments.dialogs;
 
 import android.app.Dialog;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -76,6 +77,7 @@ public class ScriptDetailDialogFragment extends DialogFragment {
     /**
      * The system calls this only when creating the layout in a dialog.
      */
+    @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         Dialog dialog = super.onCreateDialog(savedInstanceState);

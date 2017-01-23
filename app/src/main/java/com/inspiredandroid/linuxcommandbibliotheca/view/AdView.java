@@ -12,7 +12,6 @@ import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
 /**
  * Created by simon on 23/01/17.
  */
-
 public class AdView extends ImageView {
 
     public AdView(Context context) {

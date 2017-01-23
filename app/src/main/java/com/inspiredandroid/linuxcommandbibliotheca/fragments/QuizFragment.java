@@ -115,22 +115,19 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (s.toString().equals(mData.lesson.answer)) {
+                if (mData != null && s.toString().equals(mData.lesson.answer)) {
                     mEtLesson.setEnabled(false);
 
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            startCurtainAnimations();
+                    new Handler().postDelayed(() -> {
+                        startCurtainAnimations();
 
-                            if (mData.lesson.failed) {
-                                startWrongAnimation();
-                            } else {
-                                startCorrectAnimation();
-                            }
-
-                            nextRound();
+                        if (mData.lesson.failed) {
+                            startWrongAnimation();
+                        } else {
+                            startCorrectAnimation();
                         }
+
+                        nextRound();
                     }, 2000);
                 }
             }
@@ -210,9 +207,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
      */
     private void startCommandManActivity(String command) {
         Intent intent = new Intent(getActivity(), CommandManActivity.class);
-        Bundle b = new Bundle();
-        b.putString(CommandManActivity.EXTRA_COMMAND_NAME, command);
-        intent.putExtras(b);
+        intent.putExtra(CommandManActivity.EXTRA_COMMAND_NAME, command);
         startActivity(intent);
     }
 
@@ -266,12 +261,9 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        updateNextRoundDataAndAnimate();
-                        mIvWrong.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.scale_down));
-                    }
+                new Handler().postDelayed(() -> {
+                    updateNextRoundDataAndAnimate();
+                    mIvWrong.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.scale_down));
                 }, 200);
             }
 
@@ -298,12 +290,9 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        updateNextRoundDataAndAnimate();
-                        mIvCorrect.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.scale_down));
-                    }
+                new Handler().postDelayed(() -> {
+                    updateNextRoundDataAndAnimate();
+                    mIvCorrect.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.scale_down));
                 }, 700);
             }
 
@@ -480,7 +469,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
             mBtnHelp.setVisibility(View.VISIBLE);
             mBtnGiveUp.setVisibility(View.VISIBLE);
 
-            mEtLesson.setText(mData.lesson.command + " ");
+            mEtLesson.setText(String.format("%s ", mData.lesson.command));
             int position = mEtLesson.length();
             mEtLesson.setSelection(position);
             mEtLesson.setEnabled(true);
