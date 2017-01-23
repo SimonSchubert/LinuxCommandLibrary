@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AlertDialog;
 
@@ -21,29 +22,15 @@ public class RateDialogFragment extends DialogFragment {
         return new RateDialogFragment();
     }
 
+    @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         return new AlertDialog.Builder(getContext())
                 .setTitle(R.string.rate_title)
                 .setMessage(R.string.rate_message)
-                .setPositiveButton(R.string.rate_rate_now, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        startAppMarketActivity(Utils.PACKAGE_COMMANDLIBRARY);
-                    }
-                })
-                .setNeutralButton(R.string.rate_later, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                    }
-                })
-                .setNegativeButton(R.string.rate_no_thanks, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        BookmarkManager.disableRateDialog(getContext());
-                    }
-                }).create();
+                .setPositiveButton(R.string.rate_rate_now, (dialogInterface, i) -> startAppMarketActivity(Utils.PACKAGE_COMMANDLIBRARY))
+                .setNeutralButton(R.string.rate_later, null)
+                .setNegativeButton(R.string.rate_no_thanks, (dialogInterface, i) -> BookmarkManager.disableRateDialog(getContext())).create();
     }
 
     private void startAppMarketActivity(final String appPackageName) {

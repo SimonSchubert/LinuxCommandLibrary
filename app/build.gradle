@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'realm-android'
+apply plugin: 'me.tatarka.retrolambda'
 
 buildscript {
     repositories {
@@ -8,6 +9,7 @@ buildscript {
     }
     dependencies {
         classpath "io.realm:realm-gradle-plugin:2.3.0"
+        classpath 'me.tatarka:gradle-retrolambda:3.4.0'
     }
 }
 
@@ -22,9 +24,6 @@ android {
         versionCode 24
         versionName "1.5.5"
         applicationId "com.inspiredandroid.linuxcommandbibliotheca"
-        jackOptions {
-            enabled true
-        }
     }
     buildTypes {
         release {

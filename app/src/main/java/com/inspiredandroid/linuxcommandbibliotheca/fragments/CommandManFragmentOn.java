@@ -191,7 +191,7 @@ public class CommandManFragmentOn extends AppIndexFragment implements OnConvertF
 
             groups.add(page.getTitle());
 
-            CharSequence chars = Html.fromHtml(page.getPage());
+            CharSequence chars = fromHtml(page.getPage());
 
             ArrayList<CharSequence> pageSplit = new ArrayList<>();
             String[] tmp = chars.toString().split("\\r?\\n");
@@ -208,6 +208,17 @@ public class CommandManFragmentOn extends AppIndexFragment implements OnConvertF
         }
 
         return new ManExpandableListAdapter(getActivity(), groups, child);
+    }
+
+    @SuppressWarnings("deprecation")
+    public static CharSequence fromHtml(String html){
+        CharSequence result;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+            result = Html.fromHtml(html,Html.FROM_HTML_MODE_LEGACY);
+        } else {
+            result = Html.fromHtml(html);
+        }
+        return result;
     }
 
     private void toogleBookmarkState() {

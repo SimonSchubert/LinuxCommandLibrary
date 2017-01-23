@@ -5,8 +5,8 @@
     <string name="command">Command</string>
     <string name="fragment_bibliotheca_scripts">Scripts (%d)</string>
     <string name="fragment_bibliotheca_commands">Commands (%d)</string>
+    <string name="tip">Tips</string>
     <string name="commandline">" &gt;_ %s "</string>
-    <string name="tip">Tips + Quiz</string>
 
     <string name="action_settings">Settings</string>
     <string name="system_info">System Information</string>
@@ -49,8 +49,8 @@
 
     <!-- Fragment Quiz -->
     <string name="fragment_quiz_quit_dialog_text">Do you really want to quit the Quiz?</string>
-    <string name="fragment_quiz_counter">%1$s / %2$s</string>
-    <string name="fragment_quiz_result">%s%%</string>
+    <string name="fragment_quiz_counter">%1$d / %2$d</string>
+    <string name="fragment_quiz_result">%d%%</string>
     <string name="fragment_quiz_question">\"%s\"</string>
     <string name="fragment_quiz_congratulation">Congratulation</string>
     <string name="fragment_quiz_again">Again</string>
@@ -195,10 +195,8 @@
         <item>rm</item>
     </string-array>
 
-    <item name="ID" type="id" />
-
-    <string name="fragment_datanase_loading_craftin_database">Crafting Database</string>
-    <string name="fragment_datanase_loading_failed_craftin_database">Couldn\'t craft database</string>
+    <string name="fragment_datanase_loading_craftin_database">Creating Database</string>
+    <string name="fragment_datanase_loading_failed_craftin_database">Couldn\'t create database</string>
     <string name="about">About</string>
     <string name="fragment_scriptdescription_share_command">Share command</string>
     <string name="bookmark">Bookmark</string>

@@ -45,10 +45,10 @@ public class CodeTextView extends TextView {
     /**
      * Set clickable man pages(mCommands)
      *
-     * @param mCommands
+     * @param commands
      */
-    public void setCommands(String[] mCommands) {
-        this.mCommands = mCommands;
+    public void setCommands(String[] commands) {
+        mCommands = commands;
         updateLinks();
     }
 
@@ -70,15 +70,7 @@ public class CodeTextView extends TextView {
         SpannableString ss = new SpannableString(text);
 
         for (final String command : commands) {
-
-            OnLinkClickListener onLinkClickListener = new OnLinkClickListener() {
-                @Override
-                public void onLinkClick() {
-                    startCommandManActivity(command);
-                }
-            };
-
-            ClickableTextView.addClickableSpanToPhrases(ss, text, command, onLinkClickListener);
+            ClickableTextView.addClickableSpanToPhrases(ss, text, command, () -> startCommandManActivity(command));
         }
 
         return ss;
@@ -91,10 +83,7 @@ public class CodeTextView extends TextView {
      */
     private void startCommandManActivity(String command) {
         Intent intent = new Intent(getContext(), CommandManActivity.class);
-        Bundle b = new Bundle();
-        b.putString(CommandManActivity.EXTRA_COMMAND_NAME, command);
-        intent.putExtras(b);
-
+        intent.putExtra(CommandManActivity.EXTRA_COMMAND_NAME, command);
         getContext().startActivity(intent);
     }
 }

@@ -61,12 +61,7 @@ public class TipFragment extends AppIndexFragment {
 
         ButterKnife.bind(this, mView);
 
-        tvLinkToRedirection.setClickInterface(new OnLinkClickListener() {
-            @Override
-            public void onLinkClick() {
-                scrollToRedirectionView();
-            }
-        });
+        tvLinkToRedirection.setClickInterface(() -> scrollToRedirectionView());
         tvLinkToRedirection.setClickableWord("below");
 
         return mView;
@@ -100,11 +95,6 @@ public class TipFragment extends AppIndexFragment {
     }
 
     private void scrollToRedirectionView() {
-        mView.post(new Runnable() {
-            @Override
-            public void run() {
-                mView.scrollTo(0, mTvRedirection.getBottom());
-            }
-        });
+        mView.post(() -> mView.scrollTo(0, mTvRedirection.getBottom()));
     }
 }
