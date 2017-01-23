@@ -18,10 +18,10 @@ public class BookmarkManager {
 
     public static boolean shouldShowRateDialog(Context context) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        if(prefs.getInt(KEY_RATING_DIALOG_STATE, 0) == 0) {
+        if (prefs.getInt(KEY_RATING_DIALOG_STATE, 0) == 0) {
 
             SharedPreferences.Editor edit = prefs.edit();
-            edit.putInt(KEY_APP_OPEN_COUNT, prefs.getInt(KEY_APP_OPEN_COUNT, 0) +1);
+            edit.putInt(KEY_APP_OPEN_COUNT, prefs.getInt(KEY_APP_OPEN_COUNT, 0) + 1);
             edit.apply();
 
             if (prefs.getInt(KEY_APP_OPEN_COUNT, 0) % 10 == 0) {

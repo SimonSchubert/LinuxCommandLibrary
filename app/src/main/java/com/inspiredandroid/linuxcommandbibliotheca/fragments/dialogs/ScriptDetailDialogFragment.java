@@ -14,6 +14,8 @@ import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.CommandDetailAdapter;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import io.realm.Realm;
 
 /**
@@ -23,13 +25,18 @@ public class ScriptDetailDialogFragment extends DialogFragment {
 
     private final static String EXTRA_KEY_ID = "EXTRA_KEY_ID";
 
+    @BindView(R.id.fragment_scriptdetail_tv_title)
+    TextView tvTitle;
+    @BindView(R.id.fragment_scriptdetail_lv_list)
+    ListView listView;
+
     private Realm mRealm;
 
-    public static ScriptDetailDialogFragment getInstance(CommandGroupModel group) {
+    public static ScriptDetailDialogFragment getInstance(int id) {
         ScriptDetailDialogFragment fragment = new ScriptDetailDialogFragment();
 
         Bundle arguments = new Bundle();
-        arguments.putInt(EXTRA_KEY_ID, group.getId());
+        arguments.putInt(EXTRA_KEY_ID, id);
         fragment.setArguments(arguments);
 
         return fragment;
@@ -51,16 +58,16 @@ public class ScriptDetailDialogFragment extends DialogFragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_scriptdetail, container, false);
 
+        ButterKnife.bind(this, view);
+
         int id = getArguments().getInt(EXTRA_KEY_ID, -1);
 
-        CommandGroupModel commandGroupModel = mRealm.where(CommandGroupModel.class).equalTo("id", id).findFirst();
+        CommandGroupModel commandGroupModel = mRealm.where(CommandGroupModel.class).equalTo(CommandGroupModel.COLUMN_ID, id).findFirst();
         String description = CommandGroupModel.getDescString(commandGroupModel, getContext());
 
         CommandDetailAdapter adapter = new CommandDetailAdapter(getActivity(), commandGroupModel);
-        ListView listView = (ListView) view.findViewById(R.id.fragment_scriptdetail_lv_list);
         listView.setAdapter(adapter);
 
-        TextView tvTitle = (TextView) view.findViewById(R.id.fragment_scriptdetail_tv_title);
         tvTitle.setText(description);
 
         return view;
@@ -71,10 +78,6 @@ public class ScriptDetailDialogFragment extends DialogFragment {
      */
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        // The only reason you might override this method when using onCreateView() is
-        // to modify any dialog characteristics. For example, the dialog includes a
-        // title by default, but your custom layout might not need it. So here you can
-        // remove the dialog title, but you must call the superclass to get the Dialog.
         Dialog dialog = super.onCreateDialog(savedInstanceState);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         return dialog;

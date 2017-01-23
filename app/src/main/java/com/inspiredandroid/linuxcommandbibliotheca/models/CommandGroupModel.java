@@ -15,6 +15,8 @@ import io.realm.annotations.PrimaryKey;
  */
 public class CommandGroupModel extends RealmObject {
 
+    public final static String COLUMN_ID = "id";
+
     @PrimaryKey
     private int id;
 

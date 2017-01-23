@@ -4,28 +4,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:id="@+id/btnFilter"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_gravity="end"
-            android:scaleType="centerCrop"
-            android:src="@drawable/icon_filter" />
-    </LinearLayout>
-
-    <ExpandableListView
-        android:id="@+id/fragment_scripts_elv"
+    <ListView
+        android:id="@+id/fragment_scripts_lv"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_gravity="center_horizontal"
         android:layout_weight="1" />
 
-    <ImageView
+    <com.inspiredandroid.linuxcommandbibliotheca.view.AdView
         android:id="@+id/fragment_scipts_iv_ad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

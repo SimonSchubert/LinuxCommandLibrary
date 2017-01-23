@@ -60,7 +60,7 @@ public class CommandDetailAdapter extends BaseAdapter {
             holder = (CommandViewHolder) convertView.getTag();
         }
 
-        holder.command.setText(command.getCommand());
+        holder.command.setText(String.format(mContext.getString(R.string.commandline), command.getCommand()));
         holder.command.setCommands(CommandChildModel.getMans(command));
         holder.share.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,11 +91,11 @@ public class CommandDetailAdapter extends BaseAdapter {
      * @param command
      */
     private void startShareActivity(CommandChildModel command) {
-        Intent i = new Intent(Intent.ACTION_SEND);
-        i.setType("text/plain");
-        i.putExtra(android.content.Intent.EXTRA_TEXT, command.getCommand());
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(android.content.Intent.EXTRA_TEXT, command.getCommand());
 
-        mContext.startActivity(i);
+        mContext.startActivity(intent);
     }
 
     /**

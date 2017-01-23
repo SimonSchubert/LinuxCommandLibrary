@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.inspiredandroid.linuxcommandbibliotheca.CommandManActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
-import com.inspiredandroid.linuxcommandbibliotheca.interfaces.ClickInterface;
+import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnLinkClickListener;
 
 /**
  * Created by Simon Schubert
@@ -71,14 +71,14 @@ public class CodeTextView extends TextView {
 
         for (final String command : commands) {
 
-            ClickInterface clickInterface = new ClickInterface() {
+            OnLinkClickListener onLinkClickListener = new OnLinkClickListener() {
                 @Override
                 public void onClick() {
                     startCommandManActivity(command);
                 }
             };
 
-            ClickableTextView.addClickableSpanToPhrases(ss, text, command, clickInterface);
+            ClickableTextView.addClickableSpanToPhrases(ss, text, command, onLinkClickListener);
         }
 
         return ss;

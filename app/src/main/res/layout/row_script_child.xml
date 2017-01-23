@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="48dp"
-    xmlns:tool="http://schemas.android.com/tools"
     android:gravity="center_vertical"
     android:orientation="horizontal"
     android:paddingLeft="16dp"
@@ -24,6 +24,6 @@
         android:lines="1"
         android:textSize="13sp"
         android:textStyle="bold"
-        tool:text="Print CPU usage in percentage."/>
+        tool:text="Print CPU usage in percentage." />
 
 </LinearLayout>

@@ -2,7 +2,6 @@ package com.inspiredandroid.linuxcommandbibliotheca.asnytasks;
 
 import android.content.Context;
 import android.os.AsyncTask;
-import android.util.Log;
 
 import com.inspiredandroid.linuxcommandbibliotheca.Constants;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
@@ -61,7 +60,7 @@ public class LoadDatabaseAsyncTask extends AsyncTask<Boolean, Void, Boolean> {
 
     private void applyPatch() {
         Realm realm = Realm.getDefaultInstance();
-        if(realm.where(Command.class).equalTo("name", "pkill").findFirst() == null) {
+        if (realm.where(Command.class).equalTo("name", "pkill").findFirst() == null) {
             realm.beginTransaction();
             try {
                 realm.createAllFromJson(Command.class, mContext.getResources().openRawResource(R.raw.commands_patch_0));

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tool="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
+    android:layout_width="match_parent"
     android:layout_height="60dp"
     android:gravity="center_vertical"
     android:paddingLeft="16dp"
@@ -28,12 +28,12 @@
         android:id="@+id/row_command_child_tv_desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/row_command_child_tv_title"
+        android:layout_alignStart="@+id/row_command_child_tv_title"
+        android:layout_below="@+id/row_command_child_tv_title"
         android:ellipsize="end"
         android:lines="1"
         android:textSize="12sp"
-        tool:text="android debug bridge"
-        android:layout_below="@+id/row_command_child_tv_title"
-        android:layout_alignLeft="@+id/row_command_child_tv_title"
-        android:layout_alignStart="@+id/row_command_child_tv_title" />
+        tool:text="android debug bridge" />
 
 </RelativeLayout>

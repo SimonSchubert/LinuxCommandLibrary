@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tool="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:padding="10dp">
 
@@ -13,6 +13,6 @@
         android:paddingLeft="25dp"
         android:paddingStart="25dp"
         android:textSize="20sp"
-        tool:text="Group"/>
+        tool:text="Group" />
 
 </LinearLayout>

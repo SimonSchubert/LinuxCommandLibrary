@@ -34,7 +34,7 @@ public class AboutFragment extends Fragment {
 
     @OnClick(R.id.fragment_about_btn_bimo)
     public void startBimo() {
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/apps/testing/com.inspiredandroid.bimo")));
+        startAppMarketActivity(Utils.PACKAGE_BIMO);
     }
 
     @OnClick(R.id.fragment_about_btn_orcgenocide)
