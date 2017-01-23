@@ -1,4 +1,4 @@
-package com.inspiredandroid.linuxcommandbibliotheca.sql;
+package com.inspiredandroid.linuxcommandbibliotheca.misc;
 
 import android.content.Context;
 import android.content.SharedPreferences;

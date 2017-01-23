@@ -5,12 +5,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.inspiredandroid.linuxcommandbibliotheca.asnytasks.LoadDatabaseAsyncTask;
-import com.inspiredandroid.linuxcommandbibliotheca.interfaces.CraftDatabaseInterface;
+import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnCraftDatabaseListener;
 
 /**
  * Created by Simon Schubert.
  */
-public abstract class LoadingBaseActivity extends AppCompatActivity implements CraftDatabaseInterface {
+public abstract class LoadingBaseActivity extends AppCompatActivity implements OnCraftDatabaseListener {
 
     protected LoadDatabaseAsyncTask mAsyncTask;
 
@@ -39,12 +39,12 @@ public abstract class LoadingBaseActivity extends AppCompatActivity implements C
     }
 
     @Override
-    public void onSuccessCraftingDatabase() {
+    public void onDatabaseCreateSuccess() {
 
     }
 
     @Override
-    public void onFailedCraftingDatabase() {
+    public void onDatabaseCreateFail() {
 
     }
 }

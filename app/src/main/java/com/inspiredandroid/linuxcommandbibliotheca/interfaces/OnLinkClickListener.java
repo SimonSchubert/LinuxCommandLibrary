@@ -8,5 +8,5 @@ public interface OnLinkClickListener {
     /**
      * Clicked
      */
-    void onClick();
+    void onLinkClick();
 }

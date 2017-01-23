@@ -12,7 +12,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandsDBTableModel;
-import com.inspiredandroid.linuxcommandbibliotheca.sql.BookmarkManager;
+import com.inspiredandroid.linuxcommandbibliotheca.misc.BookmarkManager;
 
 import java.util.ArrayList;
 import java.util.List;

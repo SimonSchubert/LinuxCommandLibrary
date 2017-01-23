@@ -5,10 +5,10 @@ import java.util.ArrayList;
 /**
  * Created by Simon Schubert
  */
-public interface ConvertManFromHtmlToSpannableInterface {
+public interface OnConvertFromHtmlToSpannableListener {
 
     /**
      * @param spannable
      */
-    void onConvertedHtmlToSpannable(ArrayList<ArrayList<CharSequence>> spannable);
+    void onConvertHtmlToSpannable(ArrayList<ArrayList<CharSequence>> spannable);
 }

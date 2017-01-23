@@ -73,7 +73,7 @@ public class CodeTextView extends TextView {
 
             OnLinkClickListener onLinkClickListener = new OnLinkClickListener() {
                 @Override
-                public void onClick() {
+                public void onLinkClick() {
                     startCommandManActivity(command);
                 }
             };
