@@ -99,11 +99,11 @@ public class ClickableTextView extends TextView {
      * @return
      */
     private SpannableString createSpannable(String text, final String word) {
-        SpannableString ss = new SpannableString(text);
+        SpannableString spannableString = new SpannableString(text);
 
-        ClickableTextView.addClickableSpanToPhrases(ss, text, word, mOnLinkClickListener);
+        ClickableTextView.addClickableSpanToPhrases(spannableString, text, word, mOnLinkClickListener);
 
-        return ss;
+        return spannableString;
     }
 
 }

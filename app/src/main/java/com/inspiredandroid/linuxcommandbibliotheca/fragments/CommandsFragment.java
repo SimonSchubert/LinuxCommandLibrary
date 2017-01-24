@@ -25,7 +25,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.CommandsAdapter;
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.dialogs.RateDialogFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
-import com.inspiredandroid.linuxcommandbibliotheca.misc.BookmarkManager;
+import com.inspiredandroid.linuxcommandbibliotheca.misc.AppManager;
 
 import java.text.Normalizer;
 import java.util.ArrayList;
@@ -63,7 +63,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
         mRealm = Realm.getDefaultInstance();
         mAdapter = new CommandsAdapter(getContext(), getAllCommands(), false);
 
-        if (BookmarkManager.shouldShowRateDialog(getContext())) {
+        if (AppManager.shouldShowRateDialog(getContext())) {
             RateDialogFragment rateDialogFragment = RateDialogFragment.getInstance();
             rateDialogFragment.show(getChildFragmentManager(), RateDialogFragment.class.getName());
         }
@@ -152,7 +152,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
     public void onResume() {
         super.onResume();
 
-        if (BookmarkManager.hasBookmarkChanged(getContext())) {
+        if (AppManager.hasBookmarkChanged(getContext())) {
             resetSearchResults();
         }
     }
@@ -194,7 +194,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
 
     private List<RealmResults<Command>> getAllCommands() {
         List<RealmResults<Command>> results = new ArrayList<>();
-        List<Long> ids = BookmarkManager.getBookmarkIds(getContext());
+        List<Long> ids = AppManager.getBookmarkIds(getContext());
         for (long id : ids) {
             results.add(mRealm.where(Command.class).equalTo(Command.ID, id).findAll());
         }

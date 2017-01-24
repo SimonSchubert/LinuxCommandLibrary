@@ -9,10 +9,10 @@ import android.widget.ListAdapter;
 import android.widget.TextView;
 
 import com.inspiredandroid.linuxcommandbibliotheca.R;
+import com.inspiredandroid.linuxcommandbibliotheca.misc.Constants;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
-import com.inspiredandroid.linuxcommandbibliotheca.models.CommandsDBTableModel;
-import com.inspiredandroid.linuxcommandbibliotheca.misc.BookmarkManager;
+import com.inspiredandroid.linuxcommandbibliotheca.misc.AppManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +38,7 @@ public class CommandsAdapter extends RealmMultiAdapter<Command> implements ListA
     }
 
     public void updateBookmarkIds() {
-        mIds = BookmarkManager.getBookmarkIds(mContext);
+        mIds = AppManager.getBookmarkIds(mContext);
     }
 
     @Override
@@ -79,15 +79,15 @@ public class CommandsAdapter extends RealmMultiAdapter<Command> implements ListA
      */
     private int getSectionImageResource(int section) {
         switch (section) {
-            case CommandsDBTableModel.SCTION_GAMES:
+            case Constants.SECTION_GAMES:
                 return R.drawable.ic_videogame_asset_white_36dp;
-            case CommandsDBTableModel.SCTION_SYSTEMADMINANDDEAMON:
+            case Constants.SECTION_SYSTEMADMINANDDEAMON:
                 return R.drawable.ic_security_white_36dp;
-            case CommandsDBTableModel.SCTION_USERCOMMANDS:
+            case Constants.SECTION_USERCOMMANDS:
                 return R.drawable.ic_keyboard_white_36dp;
-            case CommandsDBTableModel.SCTION_SYSTEMCALLS:
+            case Constants.SECTION_SYSTEMCALLS:
                 return R.drawable.ic_code_white_36dp;
-            case CommandsDBTableModel.SCTION_MISSCELANOUS:
+            case Constants.SECTION_MISSCELANOUS:
                 return R.drawable.ic_keyboard_white_36dp;
         }
         return R.drawable.icon_linux;

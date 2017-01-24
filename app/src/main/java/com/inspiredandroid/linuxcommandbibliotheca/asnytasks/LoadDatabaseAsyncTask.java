@@ -2,8 +2,10 @@ package com.inspiredandroid.linuxcommandbibliotheca.asnytasks;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.util.Log;
 
-import com.inspiredandroid.linuxcommandbibliotheca.Constants;
+import com.inspiredandroid.linuxcommandbibliotheca.misc.AppManager;
+import com.inspiredandroid.linuxcommandbibliotheca.misc.Constants;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnCraftDatabaseListener;
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
@@ -37,30 +39,30 @@ public class LoadDatabaseAsyncTask extends AsyncTask<Boolean, Void, Boolean> {
 
     @Override
     protected Boolean doInBackground(Boolean... contexts) {
-
         File oldDatabase = mContext.getDatabasePath("commands.db");
         if (oldDatabase.exists()) {
             oldDatabase.delete();
         }
 
         File file = new File(mContext.getFilesDir() + "/" + Constants.REALM_DATABASE);
-        if (!file.exists()) {
+        if (!file.exists() || !AppManager.isDatabaseVersionUpToDate(mContext)) {
             try {
-                copyBundledRealmFile(mContext.getResources().openRawResource(R.raw.realm), Constants.REALM_DATABASE);
+                copyBundledRealmFile(mContext.getResources().openRawResource(R.raw.database));
+                AppManager.setDatabaseVersionUpToDate(mContext);
             } catch (IOException e) {
                 e.printStackTrace();
                 return false;
             }
         }
 
-        applyPatch();
+        // applyPatch();
 
         return true;
     }
 
     private void applyPatch() {
         Realm realm = Realm.getDefaultInstance();
-        if (realm.where(Command.class).equalTo("name", "pkill").findFirst() == null) {
+        if (realm.where(Command.class).equalTo("name", "lolcat").findFirst() == null) {
             realm.beginTransaction();
             try {
                 realm.createAllFromJson(Command.class, mContext.getResources().openRawResource(R.raw.commands_patch_0));
@@ -74,12 +76,14 @@ public class LoadDatabaseAsyncTask extends AsyncTask<Boolean, Void, Boolean> {
             }
             realm.commitTransaction();
         }
+
+        Log.e("TAG", "cid: " + realm.where(Command.class).max(Command.ID) + ", pid: " + realm.where(CommandPage.class).max("id"));
         realm.close();
     }
 
-    private String copyBundledRealmFile(InputStream inputStream, String outFileName) throws IOException {
-
-        File file = new File(mContext.getFilesDir(), outFileName);
+    private void copyBundledRealmFile(InputStream inputStream) throws IOException {
+        File file = new File(mContext.getFilesDir(), Constants.REALM_DATABASE);
+        file.delete();
         FileOutputStream outputStream = new FileOutputStream(file);
         byte[] buf = new byte[1024];
         int bytesRead;
@@ -87,7 +91,6 @@ public class LoadDatabaseAsyncTask extends AsyncTask<Boolean, Void, Boolean> {
             outputStream.write(buf, 0, bytesRead);
         }
         outputStream.close();
-        return file.getAbsolutePath();
     }
 
     @Override
@@ -99,5 +102,4 @@ public class LoadDatabaseAsyncTask extends AsyncTask<Boolean, Void, Boolean> {
             mCallback.onDatabaseCreateFail();
         }
     }
-
 }

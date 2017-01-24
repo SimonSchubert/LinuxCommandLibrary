@@ -27,7 +27,7 @@
             android:id="@+id/fragment_commands_btn_send_request"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="8dp"
             android:text="@string/request_command" />
 
     </LinearLayout>

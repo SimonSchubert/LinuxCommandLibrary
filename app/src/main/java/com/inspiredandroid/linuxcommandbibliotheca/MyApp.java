@@ -2,6 +2,8 @@ package com.inspiredandroid.linuxcommandbibliotheca;
 
 import android.app.Application;
 
+import com.inspiredandroid.linuxcommandbibliotheca.misc.Constants;
+
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
 

@@ -3,16 +3,20 @@ package com.inspiredandroid.linuxcommandbibliotheca.adapter;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.inspiredandroid.linuxcommandbibliotheca.CommandBibliothecaActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandChildModel;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel;
+import com.inspiredandroid.linuxcommandbibliotheca.models.ScriptGroupItem;
 import com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView;
 
 import butterknife.BindView;
@@ -21,7 +25,7 @@ import butterknife.ButterKnife;
 /**
  * Created by simon on 23.11.15.
  */
-public class CommandDetailAdapter extends BaseAdapter {
+public class CommandDetailAdapter  extends RecyclerView.Adapter<CommandDetailAdapter.ViewHolder> {
 
     private CommandGroupModel mCommandGroupModel;
     private Context mContext;
@@ -30,41 +34,26 @@ public class CommandDetailAdapter extends BaseAdapter {
         mContext = context;
         mCommandGroupModel = commandGroupModel;
     }
-
     @Override
-    public int getCount() {
+    public int getItemCount() {
         return mCommandGroupModel.getCommands().size();
     }
 
     @Override
-    public CommandChildModel getItem(int position) {
-        return mCommandGroupModel.getCommands().get(position);
+    public CommandDetailAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
+                                                             int viewType) {
+        View v = LayoutInflater.from(mContext)
+                .inflate(R.layout.row_scriptdescription_child, parent, false);
+        return new CommandDetailAdapter.ViewHolder(v);
     }
 
     @Override
-    public long getItemId(int position) {
-        return 0;
-    }
+    public void onBindViewHolder(CommandDetailAdapter.ViewHolder viewHolder, int position) {
+        CommandChildModel item = mCommandGroupModel.getCommands().get(position);
 
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        final CommandChildModel command = getItem(position);
-        CommandViewHolder holder;
-
-        if (convertView == null) {
-            LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.row_scriptdescription_child, parent, false);
-            holder = new CommandViewHolder(convertView);
-            convertView.setTag(holder);
-        } else {
-            holder = (CommandViewHolder) convertView.getTag();
-        }
-
-        holder.command.setText(String.format(mContext.getString(R.string.commandline), command.getCommand()));
-        holder.command.setCommands(CommandChildModel.getMans(command));
-        holder.share.setOnClickListener(v -> handleCommandClick(command));
-
-        return convertView;
+        viewHolder.command.setText(item.getCommand());
+        viewHolder.command.setCommands(CommandChildModel.getMans(item));
+        viewHolder.share.setOnClickListener(v -> handleCommandClick(item));
     }
 
     /**
@@ -106,13 +95,14 @@ public class CommandDetailAdapter extends BaseAdapter {
         ((Activity) mContext).finish();
     }
 
-    public class CommandViewHolder {
+    class ViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.row_scriptdescription_child_tv_description)
-        public CodeTextView command;
+        CodeTextView command;
         @BindView(R.id.row_scriptdescription_child_iv_share)
-        public ImageButton share;
+        ImageButton share;
 
-        public CommandViewHolder(View view) {
+        ViewHolder(View view) {
+            super(view);
             ButterKnife.bind(this, view);
         }
     }

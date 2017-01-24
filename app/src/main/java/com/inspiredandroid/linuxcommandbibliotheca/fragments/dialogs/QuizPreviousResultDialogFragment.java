@@ -82,7 +82,6 @@ public class QuizPreviousResultDialogFragment extends DialogFragment implements 
             }
         }
 
-
         setCommandDescriptionForTextView(view, R.id.fragment_quiz_result_tv_answer1, mAnswers.get(0));
         setCommandDescriptionForTextView(view, R.id.fragment_quiz_result_tv_answer2, mAnswers.get(1));
         setCommandDescriptionForTextView(view, R.id.fragment_quiz_result_tv_answer3, mAnswers.get(2));

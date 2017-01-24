@@ -6,9 +6,7 @@
     <string name="fragment_bibliotheca_scripts">Scripts (%d)</string>
     <string name="fragment_bibliotheca_commands">Commands (%d)</string>
     <string name="tip">Tips</string>
-    <string name="commandline">" &gt;_ %s "</string>
 
-    <string name="action_settings">Settings</string>
     <string name="system_info">System Information</string>
     <string name="system_control">System control</string>
     <string name="audio_video">Video/Audio</string>
@@ -42,7 +40,6 @@
     <string name="desc_play_audio_file">Play sound file in wav format.</string>
     <string name="desc_play_beep">The classical way to play a beep sound through the PC speakers. However this will not work in all cases, in many systems PC speakers are completely disabled.</string>
     <string name="desc_turn_off_monitor">Turn off monitor. To turn on, simply press a key, or move the mouse.</string>
-    <string name="send_command">Send command to…</string>
     <string name="quiz">Quiz</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
@@ -54,8 +51,6 @@
     <string name="fragment_quiz_question">\"%s\"</string>
     <string name="fragment_quiz_congratulation">Congratulation</string>
     <string name="fragment_quiz_again">Again</string>
-    <string name="fragment_tips_do_the_test">Test and train your Linux cmd skills.</string>
-    <string name="fragment_tips_start_quiz">Start Quiz</string>
 
     <string-array name="default_codetextview_commands"/>
 
@@ -212,8 +207,36 @@
 
     <string name="user_groups">User/Groups</string>
     <string name="files_folders">Files/Folders</string>
-    <string name="couldnt_find_any_command">We couldn\'t find any command.</string>
+    <string name="couldnt_find_any_command">We couldn\'t find such command.</string>
     <string name="request_command">request command</string>
     <string name="commandlinefu">http://www.commandlinefu.com/</string>
+    <string name="network">Network</string>
+    <string name="search">Search/Find</string>
+    <string name="desc_get_network_card">Check network card</string>
+    <string name="download_file">Download file</string>
+    <string name="get_domain_info">Get information about domain</string>
+    <string name="ping_info">Ping to out and show result</string>
+    <string name="configure_network_interface">Configure network interface</string>
+    <string name="shw_current_directory">Show current directory</string>
+    <string name="move_rename_file">Move/rename file or directory</string>
+    <string name="copy_file_or_directory">Copy file or directory</string>
+    <string name="change_directory">Change directory</string>
+    <string name="display_file_content">Display file content</string>
+    <string name="list_directory">List directory</string>
+    <string name="set_file_permission">Set file permissions</string>
+    <string name="delete_folder">Delete folder</string>
+    <string name="create_folder">Create folder</string>
+    <string name="delete_file">Delete file</string>
+    <string name="create_file">Create file</string>
+    <string name="add_user_to_group">Add user to group</string>
+    <string name="delete_group">Delete group</string>
+    <string name="create_group">Create group</string>
+    <string name="set_user_passord">Set user password</string>
+    <string name="delete_user">Delete user</string>
+    <string name="create_user">Create user</string>
+    <string name="find_file_by_name">Find a file by name</string>
+    <string name="list_of_path">Returns a list of all path names containing the phrase</string>
+    <string name="executable_path">Returns the path of the executable</string>
+    <string name="whereis">Find out where the binary, source, and man page files for a command are located</string>
 
 </resources>

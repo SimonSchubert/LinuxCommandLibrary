@@ -94,7 +94,7 @@ public class BibliothecaFragment extends Fragment {
     }
 
     /**
-     * A simple pager mAdapter that represents the ScriptsFragment, CommandsFragment and TipsFragment
+     * A simple pager mAdapter that represents the ScriptGroupsFragment, CommandsFragment and TipsFragment
      */
     private class ScreenSlidePagerAdapter extends FragmentPagerAdapter {
 
@@ -112,9 +112,9 @@ public class BibliothecaFragment extends Fragment {
                 case POS_COMMANDS:
                     return new CommandsFragment();
                 case POS_SCRIPTS:
-                    return new ScriptsFragment();
+                    return new ScriptGroupsFragment();
                 case POS_TIPS:
-                    return new TipFragment();
+                    return new TipsFragment();
             }
             return null;
         }

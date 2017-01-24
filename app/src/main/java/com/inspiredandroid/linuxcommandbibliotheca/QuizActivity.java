@@ -14,7 +14,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.fragments.dialogs.QuitQuizDia
 /**
  * Created by Simon Schubert
  * <p/>
- * This Activity just holds the CommandManFragmentOn
+ * This Activity just holds the CommandManFragment
  */
 public class QuizActivity extends BaseActivity {
 

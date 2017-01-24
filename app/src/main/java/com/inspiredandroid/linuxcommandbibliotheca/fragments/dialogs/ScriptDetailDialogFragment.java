@@ -4,6 +4,8 @@ import android.app.Dialog;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,7 +31,7 @@ public class ScriptDetailDialogFragment extends DialogFragment {
     @BindView(R.id.fragment_scriptdetail_tv_title)
     TextView tvTitle;
     @BindView(R.id.fragment_scriptdetail_lv_list)
-    ListView listView;
+    RecyclerView listView;
 
     private Realm mRealm;
 
@@ -50,10 +52,6 @@ public class ScriptDetailDialogFragment extends DialogFragment {
         mRealm = Realm.getDefaultInstance();
     }
 
-    /**
-     * The system calls this to get the DialogFragment's layout, regardless
-     * of whether it's being displayed as a dialog or an embedded fragment.
-     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -64,19 +62,17 @@ public class ScriptDetailDialogFragment extends DialogFragment {
         int id = getArguments().getInt(EXTRA_KEY_ID, -1);
 
         CommandGroupModel commandGroupModel = mRealm.where(CommandGroupModel.class).equalTo(CommandGroupModel.COLUMN_ID, id).findFirst();
-        String description = CommandGroupModel.getDescString(commandGroupModel, getContext());
 
         CommandDetailAdapter adapter = new CommandDetailAdapter(getActivity(), commandGroupModel);
         listView.setAdapter(adapter);
+        listView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        tvTitle.setText(description);
+        int descriptionRes = CommandGroupModel.getDescResourceId(commandGroupModel);
+        tvTitle.setText(descriptionRes);
 
         return view;
     }
 
-    /**
-     * The system calls this only when creating the layout in a dialog.
-     */
     @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {

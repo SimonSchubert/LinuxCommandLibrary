@@ -25,8 +25,8 @@ import com.inspiredandroid.linuxcommandbibliotheca.QuizActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.dialogs.QuizPreviousResultDialogFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
-import com.inspiredandroid.linuxcommandbibliotheca.models.DataHolder;
-import com.inspiredandroid.linuxcommandbibliotheca.models.LessonData;
+import com.inspiredandroid.linuxcommandbibliotheca.models.QuizDataHolder;
+import com.inspiredandroid.linuxcommandbibliotheca.models.QuizQuestionData;
 import com.inspiredandroid.linuxcommandbibliotheca.models.Quiz;
 
 import java.util.ArrayList;
@@ -64,7 +64,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
 
     private ArrayList<Button> mBtnAnswers = new ArrayList<>();
 
-    private DataHolder mData;
+    private QuizDataHolder mData;
 
     private Realm mRealm;
 
@@ -133,13 +133,13 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
             }
         });
 
-        mData = new DataHolder();
+        mData = new QuizDataHolder();
 
         if (savedInstanceState == null) {
             initQuiz();
             firstRound();
         } else {
-            mData = (DataHolder) savedInstanceState.getSerializable("data");
+            mData = (QuizDataHolder) savedInstanceState.getSerializable("data");
 
             if (mData.answerCounter == mData.maxAnswerCount) {
                 mTvQuestion.setVisibility(View.INVISIBLE);
@@ -399,13 +399,13 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     /**
      * @return
      */
-    private LessonData getLesson() {
+    private QuizQuestionData getLesson() {
         RealmResults<Quiz> lesson = mRealm.where(Quiz.class).equalTo("type", 1).findAll();
         for (String id : mData.usedCommandIds) {
             lesson.where().notEqualTo("name", id);
         }
 
-        LessonData data = new LessonData();
+        QuizQuestionData data = new QuizQuestionData();
 
         int randomId = (int) (Math.random() * lesson.size());
 
