@@ -32,23 +32,137 @@ public class CommandGroupModel extends RealmObject {
 
     }
 
-    public CommandGroupModel(String command, String desc, ArrayList<String> mans) {
-        this.descStr = desc;
-        this.iconResource = "icon_linux";  //NON-NLS
-        commands.add(new CommandChildModel(command, mans));
-    }
-
     public static String getDescString(CommandGroupModel model, Context context) {
         int resId = getDescResourceId(model);
         if (resId != -1) {
             return context.getResources().getString(resId);
         } else {
-            return model.getDescStr();
+            return "";
         }
     }
 
+    public static int getImageResourceId(CommandGroupModel model) {
+        switch (model.getId()) {
+            case 0:
+                return R.drawable.icon_info_interface;
+            case 1:
+                return R.drawable.icon_info_interface;
+            case 2:
+                return R.drawable.icon_info_interface;
+            case 3:
+                return R.drawable.icon_info_interface;
+            case 4:
+                return R.drawable.icon_info_interface;
+            case 5:
+                return R.drawable.icon_info_memory;
+            case 6:
+                return R.drawable.icon_lock_screen;
+            case 7:
+                return R.drawable.icon_unlock_screen;
+            case 8:
+                return R.drawable.icon_info_linux;
+            case 9:
+                return R.drawable.icon_info_devices;
+            case 10:
+                return R.drawable.icon_info_usb;
+            case 11:
+                return R.drawable.icon_info_devices;
+            case 12:
+                return R.drawable.icon_info_ip;
+            case 13:
+                return R.drawable.icon_restart;
+            case 14:
+                return R.drawable.icon_shutdown;
+            case 15:
+                return R.drawable.icon_shutdown;
+            case 16:
+                return R.drawable.icon_info_ssh;
+            case 17:
+                return R.drawable.icon_info_uptime;
+            case 18:
+                return R.drawable.icon_info_storage;
+            case 19:
+                return R.drawable.icon_info_bootlog;
+            case 20:
+                return R.drawable.icon_desktop;
+            case 21:
+                return R.drawable.icon_webcam;
+            case 22:
+                return R.drawable.icon_stop_bluetooth;
+            case 23:
+                return R.drawable.icon_start_bluetooth;
+            case 24:
+                return R.drawable.icon_stop_wifi;
+            case 25:
+                return R.drawable.icon_start_wifi;
+            case 26:
+                return R.drawable.icon_bullhorn;
+            case 27:
+                return R.drawable.icon_music;
+            case 28:
+                return R.drawable.icon_music;
+            case 29:
+                return R.drawable.icon_lock_screen;
+            case 31:
+                return R.drawable.ic_device_hub_white_48dp;
+            case 158:
+                return R.drawable.ic_device_hub_white_48dp;
+            case 191:
+                return R.drawable.ic_device_hub_white_48dp;
+            case 201:
+                return R.drawable.ic_device_hub_white_48dp;
+            case 189:
+                return R.drawable.ic_device_hub_white_48dp;
+            case 81:
+                return R.drawable.ic_folder_white_48dp;
+            case 94:
+                return R.drawable.ic_folder_white_48dp;
+            case 245:
+                return R.drawable.ic_folder_white_48dp;
+            case 69:
+                return R.drawable.ic_folder_white_48dp;
+            case 237:
+                return R.drawable.ic_folder_white_48dp;
+            case 174:
+                return R.drawable.ic_folder_white_48dp;
+            case 212:
+                return R.drawable.ic_folder_white_48dp;
+            case 240:
+                return R.drawable.ic_folder_white_48dp;
+            case 167:
+                return R.drawable.ic_folder_white_48dp;
+            case 127:
+                return R.drawable.ic_folder_white_48dp;
+            case 70:
+                return R.drawable.ic_folder_white_48dp;
+            case 49:
+                return R.drawable.ic_account_circle_white_36dp;
+            case 110:
+                return R.drawable.ic_account_circle_white_36dp;
+            case 117:
+                return R.drawable.ic_account_circle_white_36dp;
+            case 37:
+                return R.drawable.ic_account_circle_white_36dp;
+            case 71:
+                return R.drawable.ic_account_circle_white_36dp;
+            case 122:
+                return R.drawable.ic_account_circle_white_36dp;
+            case 102:
+                return R.drawable.ic_search_white_48dp;
+            case 90:
+                return R.drawable.ic_search_white_48dp;
+            case 143:
+                return R.drawable.ic_search_white_48dp;
+            case 87:
+                return R.drawable.ic_search_white_48dp;
+        }
+        return -1;
+    }
+
     public static int getDescResourceId(CommandGroupModel model) {
-        switch (model.getDesc()) {
+        switch (model.getId()) {
+            case 0:
+                return R.string.desc_get_cpu_usage;
             case 1:
                 return R.string.desc_battery_usage;
             case 2:
@@ -107,8 +221,58 @@ public class CommandGroupModel extends RealmObject {
                 return R.string.desc_play_beep;
             case 29:
                 return R.string.desc_turn_off_monitor;
-            case 30:
-                return R.string.desc_get_cpu_usage;
+            case 31:
+                return R.string.desc_get_network_card;
+            case 158:
+                return R.string.download_file;
+            case 191:
+                return R.string.get_domain_info;
+            case 201:
+                return R.string.ping_info;
+            case 189:
+                return R.string.configure_network_interface;
+            case 81:
+                return R.string.shw_current_directory;
+            case 94:
+                return R.string.move_rename_file;
+            case 245:
+                return R.string.copy_file_or_directory;
+            case 69:
+                return R.string.change_directory;
+            case 237:
+                return R.string.display_file_content;
+            case 174:
+                return R.string.list_directory;
+            case 212:
+                return R.string.set_file_permission;
+            case 240:
+                return R.string.delete_folder;
+            case 167:
+                return R.string.create_folder;
+            case 127:
+                return R.string.delete_file;
+            case 70:
+                return (R.string.create_file);
+            case 49:
+                return (R.string.add_user_to_group);
+            case 110:
+                return (R.string.delete_group);
+            case 117:
+                return (R.string.create_group);
+            case 37:
+                return (R.string.set_user_passord);
+            case 71:
+                return (R.string.delete_user);
+            case 122:
+                return (R.string.create_user);
+            case 102:
+                return R.string.find_file_by_name;
+            case 90:
+                return R.string.list_of_path;
+            case 143:
+                return R.string.executable_path;
+            case 87:
+                return R.string.whereis;
         }
         return -1;
     }

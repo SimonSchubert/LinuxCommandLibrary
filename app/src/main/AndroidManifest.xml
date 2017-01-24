@@ -12,7 +12,7 @@
         android:label="@string/app_lcl_name"
         android:theme="@style/LibAppTheme"
         android:exported="true"
-        android:supportsRtl="true"
+        android:supportsRtl="false"
         android:name=".MyApp"
         tools:replace="android:icon">
         <activity
@@ -69,7 +69,7 @@
             android:label="@string/about" />
 
         <activity
-            android:name=".ScriptCategoryActivity"
+            android:name=".ScriptChildrenActivity"
             android:theme="@style/LibAppTheme"
             android:label="" />
 

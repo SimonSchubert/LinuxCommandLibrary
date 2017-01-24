@@ -13,7 +13,7 @@
         android:text=""
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <ListView
+    <android.support.v7.widget.RecyclerView
         android:id="@+id/fragment_scriptdetail_lv_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

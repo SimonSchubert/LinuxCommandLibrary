@@ -9,7 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.inspiredandroid.linuxcommandbibliotheca.fragments.CommandManFragmentOn;
+import com.inspiredandroid.linuxcommandbibliotheca.fragments.CommandManFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.DatabaseLoadingFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
 
@@ -19,7 +19,7 @@ import io.realm.Realm;
  * Created by Simon Schubert
  * <p/>
  * This Activity tries to get a command based on different opening types and starts a
- * CommandManFragmentOn if successfully fetched or finishes immediately
+ * CommandManFragment if successfully fetched or finishes immediately
  */
 public class CommandManActivity extends LoadingBaseActivity {
 
@@ -131,7 +131,7 @@ public class CommandManActivity extends LoadingBaseActivity {
         // Set command name as actionbar title
         setTitle(name);
 
-        Fragment fragment = new CommandManFragmentOn();
+        Fragment fragment = new CommandManFragment();
 
         // Add unique command ID for fragment
         Bundle bundle = new Bundle();

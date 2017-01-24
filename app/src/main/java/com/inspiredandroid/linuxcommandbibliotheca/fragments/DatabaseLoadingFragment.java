@@ -26,5 +26,4 @@ public class DatabaseLoadingFragment extends Fragment {
                              Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_database_loading, container, false);
     }
-
 }

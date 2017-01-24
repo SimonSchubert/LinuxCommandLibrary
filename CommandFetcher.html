@@ -1,14 +1,17 @@
 <html>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
+    <!--
+    Go to https://linux.die.net -> copy "content" element and past it into right textare -> press "step 1"
+    -->
 <script>
 	var myObj = "";
 	var myObj2 = "";
 	var cars = new Array();
 $(document).ready(function() {
-	var id = 2448;
-	var pageId = 18496;
+	var id = 2450;
+	var pageId = 18515;
+
     $("#step1").click(function(){
     $("#content").empty();
 		$("#content")
@@ -111,7 +114,7 @@ function copyToClipboard(element) {
 
 <textarea id="result2"></textarea>
 
-<button id="step1">Schritt 1</button>
+<button id="step1">Step 1</button>
 <button onclick="downloadFiles()">Download</button>
 <button onclick="copyToClipboard('#result')">Copy Commad Page</button>
 <button onclick="copyToClipboard('#result2')">Copy Command</button>
