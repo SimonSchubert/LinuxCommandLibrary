@@ -1,5 +1,6 @@
 package com.inspiredandroid.linuxcommandbibliotheca.test;
 
+import android.content.Context;
 import android.test.AndroidTestCase;
 
 import com.google.gson.Gson;
@@ -10,11 +11,18 @@ import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandChildModel;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel;
 
+import org.junit.Test;
+
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import io.realm.Realm;
+
+import static android.support.test.InstrumentationRegistry.getInstrumentation;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 
 /**
@@ -26,32 +34,23 @@ import io.realm.Realm;
  * Html report: [project]/[module]/build/reports/androidTests/connected/[classpath].html
  * Example path: file:///home/simon/Dev/projects/LinuxCommandBibliotheca/app/build/reports/androidTests/connected/index.html
  */
-public class MyAndroidTest extends AndroidTestCase {
+public class MyAndroidTest {
 
-    @Override
-    protected void setUp() throws Exception {
-        super.setUp();
+    public MyAndroidTest() {
+        Locale.setDefault(Locale.US);
     }
 
-    @Override
-    protected void tearDown() throws Exception {
-        super.tearDown();
+    private Context getContext() {
+        return getInstrumentation().getTargetContext().getApplicationContext();
     }
 
-    /**
-     * Test if database crafting works
-     *
-     * @throws Exception
-     */
-    public void testCraftManDatabase() throws Exception {
-
-    }
 
     /**
      * Go thought all the man pages links of the tips fragment
      *
      * @throws Exception
      */
+    @Test
     public void testTipsManPageLinks() throws Exception {
         final int[] IDS = new int[]{
                 R.array.fragment_tips_background_code_array,
@@ -86,7 +85,8 @@ public class MyAndroidTest extends AndroidTestCase {
 
         String missing = getReadableMissingCommands(missingCommands);
 
-        assertTrue("man pages not found: " + missing, missing.isEmpty());
+        //assertTrue("man pages not found: " + missing, missing.isEmpty());
+        assertThat(missing.isEmpty(), is(true));
     }
 
     /**

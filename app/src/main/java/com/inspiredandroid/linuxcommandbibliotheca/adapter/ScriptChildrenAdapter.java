@@ -1,6 +1,8 @@
 package com.inspiredandroid.linuxcommandbibliotheca.adapter;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,32 +19,21 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import io.realm.OrderedRealmCollection;
 import io.realm.Realm;
+import io.realm.RealmRecyclerViewAdapter;
 import io.realm.RealmResults;
 import io.realm.Sort;
 
 /**
  * Created by simon on 23/01/17.
  */
-public class ScriptChildrenAdapter extends RecyclerView.Adapter<ScriptChildrenAdapter.ViewHolder> {
+public class ScriptChildrenAdapter extends RealmRecyclerViewAdapter<CommandGroupModel, ScriptChildrenAdapter.ViewHolder> {
 
-    final private ArrayList<ScriptGroupItem> mGroups = new ArrayList<>();
-    final private Context mContext;
-    private com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnListClickListener mOnListClickListener;
+    private OnListClickListener mOnListClickListener;
 
-    public ScriptChildrenAdapter(Context context, int category) {
-        mContext = context;
-
-        Realm realm = Realm.getDefaultInstance();
-        RealmResults<CommandGroupModel> commandsAll = realm.where(CommandGroupModel.class).equalTo("category", category).findAll();
-        commandsAll.sort("votes", Sort.DESCENDING);
-
-        // sort commands by mCategory
-        for (CommandGroupModel command : commandsAll) {
-            mGroups.add(new ScriptGroupItem(command.getId(), CommandGroupModel.getDescResourceId(command), CommandGroupModel.getImageResourceId(command)));
-        }
-
-        realm.close();
+    public ScriptChildrenAdapter(@NonNull Context context, @Nullable OrderedRealmCollection<CommandGroupModel> data, boolean autoUpdate) {
+        super(context, data, autoUpdate);
     }
 
     public void setOnListClickListener(OnListClickListener listener) {
@@ -52,22 +43,17 @@ public class ScriptChildrenAdapter extends RecyclerView.Adapter<ScriptChildrenAd
     @Override
     public ScriptChildrenAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
                                                                int viewType) {
-        View v = LayoutInflater.from(mContext)
+        View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.row_scriptgroup, parent, false);
         return new ScriptChildrenAdapter.ViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(ScriptChildrenAdapter.ViewHolder viewHolder, int position) {
-        ScriptGroupItem item = mGroups.get(position);
+        CommandGroupModel item = getData().get(position);
 
-        viewHolder.name.setText(item.getmTitle());
-        viewHolder.icon.setImageResource(item.getmIconRes());
-    }
-
-    @Override
-    public int getItemCount() {
-        return mGroups.size();
+        viewHolder.name.setText(CommandGroupModel.getDescResourceId(item));
+        viewHolder.icon.setImageResource(CommandGroupModel.getImageResourceId(item));
     }
 
     class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
@@ -85,7 +71,7 @@ public class ScriptChildrenAdapter extends RecyclerView.Adapter<ScriptChildrenAd
         @Override
         public void onClick(View view) {
             if (mOnListClickListener != null) {
-                mOnListClickListener.onClick(mGroups.get(getAdapterPosition()).getId());
+                mOnListClickListener.onClick(getData().get(getAdapterPosition()).getId());
             }
         }
     }

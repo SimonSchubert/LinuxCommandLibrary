@@ -31,7 +31,7 @@ public class ScriptChildrenActivity extends BaseActivity {
         setTitle(getDescriptionForCategory(categoryId));
     }
 
-    private int getDescriptionForCategory(int category) {
+    public static int getDescriptionForCategory(int category) {
         switch (category) {
             case ScriptGroupItem.GROUP_USER_GROUP:
                 return R.string.user_groups;

@@ -20,10 +20,11 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity;
-import com.inspiredandroid.linuxcommandbibliotheca.CommandManActivity;
+import com.inspiredandroid.linuxcommandbibliotheca.QuizActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.CommandsAdapter;
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.dialogs.RateDialogFragment;
+import com.inspiredandroid.linuxcommandbibliotheca.misc.FragmentCoordinator;
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.AppManager;
 
@@ -83,7 +84,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        startCommandManActivity(id);
+       FragmentCoordinator.startCommandManActivity(getActivity(), id);
     }
 
     @Override
@@ -135,10 +136,23 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.about) {
-            startAboutFragment();
+            startAboutActivity();
+            return true;
+        } else if (item.getItemId() == R.id.quiz) {
+            startQuizActivity();
             return true;
         }
         return false;
+    }
+
+    private void startQuizActivity() {
+        Intent intent = new Intent(getContext(), QuizActivity.class);
+        startActivity(intent);
+    }
+
+    private void startAboutActivity() {
+        Intent intent = new Intent(getContext(), AboutActivity.class);
+        startActivity(intent);
     }
 
     @Override
@@ -169,19 +183,6 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
         }
     }
 
-    private void startCommandManActivity(long id) {
-        Intent intent = new Intent(getContext(), CommandManActivity.class);
-        Bundle b = new Bundle();
-        b.putLong(CommandManActivity.EXTRA_COMMAND_ID, id);
-        intent.putExtras(b);
-        startActivity(intent);
-    }
-
-    private void startAboutFragment() {
-        Intent intent = new Intent(getContext(), AboutActivity.class);
-        startActivity(intent);
-    }
-
     /**
      * reset mAdapter entries
      */
@@ -192,6 +193,10 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
         updateViews();
     }
 
+    /**
+     * Get list of all commands sorted by name
+     * @return
+     */
     private List<RealmResults<Command>> getAllCommands() {
         List<RealmResults<Command>> results = new ArrayList<>();
         List<Long> ids = AppManager.getBookmarkIds(getContext());
@@ -212,7 +217,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
         results.add(mRealm.where(Command.class).equalTo(Command.NAME, query).findAll());
         results.add(mRealm.where(Command.class).beginsWith(Command.NAME, query).notEqualTo(Command.NAME, query).findAll());
         results.add(mRealm.where(Command.class).contains(Command.NAME, query).not().beginsWith(Command.NAME, query).notEqualTo(Command.NAME, query).findAll());
-        results.add(mRealm.where(Command.class).contains(Command.DESCRIPTION, query).findAll());
+        results.add(mRealm.where(Command.class).contains(Command.DESCRIPTION, query).not().contains(Command.NAME, query).findAll());
 
         mAdapter.updateRealmResults(results);
         mAdapter.setSearchQuery(query);
@@ -229,5 +234,4 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
             mList.setVisibility(View.VISIBLE);
         }
     }
-
 }

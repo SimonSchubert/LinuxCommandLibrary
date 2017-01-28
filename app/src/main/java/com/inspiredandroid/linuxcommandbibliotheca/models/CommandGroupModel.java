@@ -16,6 +16,7 @@ import io.realm.annotations.PrimaryKey;
 public class CommandGroupModel extends RealmObject {
 
     public final static String COLUMN_ID = "id";
+    public final static String COLUMN_CATEGORY = "category";
 
     @PrimaryKey
     private int id;
@@ -106,7 +107,7 @@ public class CommandGroupModel extends RealmObject {
             case 31:
                 return R.drawable.ic_device_hub_white_48dp;
             case 158:
-                return R.drawable.ic_device_hub_white_48dp;
+                return R.drawable.ic_file_download_white_48dp;
             case 191:
                 return R.drawable.ic_device_hub_white_48dp;
             case 201:
@@ -114,39 +115,39 @@ public class CommandGroupModel extends RealmObject {
             case 189:
                 return R.drawable.ic_device_hub_white_48dp;
             case 81:
-                return R.drawable.ic_folder_white_48dp;
+                return R.drawable.ic_folder_path_white_48dp;
             case 94:
-                return R.drawable.ic_folder_white_48dp;
+                return R.drawable.ic_file_move_white_48dp;
             case 245:
-                return R.drawable.ic_folder_white_48dp;
+                return R.drawable.ic_file_copy_white_48dp;
             case 69:
-                return R.drawable.ic_folder_white_48dp;
+                return R.drawable.ic_change_folder_white_48dp;
             case 237:
-                return R.drawable.ic_folder_white_48dp;
+                return R.drawable.ic_file_content_white_48dp;
             case 174:
-                return R.drawable.ic_folder_white_48dp;
+                return R.drawable.ic_folder_list_white_48dp;
             case 212:
-                return R.drawable.ic_folder_white_48dp;
+                return R.drawable.ic_file_permission_white_48dp;
             case 240:
-                return R.drawable.ic_folder_white_48dp;
+                return R.drawable.ic_delete_folder_white_48dp;
             case 167:
-                return R.drawable.ic_folder_white_48dp;
+                return R.drawable.ic_create_new_folder_white_48dp;
             case 127:
-                return R.drawable.ic_folder_white_48dp;
+                return R.drawable.ic_delete_file_white_48dp;
             case 70:
-                return R.drawable.ic_folder_white_48dp;
+                return R.drawable.ic_create_file_white_48dp;
             case 49:
-                return R.drawable.ic_account_circle_white_36dp;
+                return R.drawable.ic_add_user_to_group_white_48dp;
             case 110:
-                return R.drawable.ic_account_circle_white_36dp;
+                return R.drawable.ic_delete_group_white_48dp;
             case 117:
-                return R.drawable.ic_account_circle_white_36dp;
+                return R.drawable.ic_create_group_white_48dp;
             case 37:
-                return R.drawable.ic_account_circle_white_36dp;
+                return R.drawable.ic_user_password_white_48dp;
             case 71:
-                return R.drawable.ic_account_circle_white_36dp;
+                return R.drawable.ic_delete_user_white_48dp;
             case 122:
-                return R.drawable.ic_account_circle_white_36dp;
+                return R.drawable.ic_create_user_white_48dp;
             case 102:
                 return R.drawable.ic_search_white_48dp;
             case 90:
@@ -155,6 +156,30 @@ public class CommandGroupModel extends RealmObject {
                 return R.drawable.ic_search_white_48dp;
             case 87:
                 return R.drawable.ic_search_white_48dp;
+            case 320:
+                return R.drawable.ic_device_hub_white_48dp;
+            case 138:
+                return R.drawable.ic_device_hub_white_48dp;
+            case 45:
+                return R.drawable.ic_device_hub_white_48dp;
+            case 106:
+                return R.drawable.ic_device_hub_white_48dp;
+            case 116:
+                return R.drawable.ic_device_hub_white_48dp;
+            case 221:
+                return R.drawable.ic_file_permission_white_48dp;
+            case 52:
+                return R.drawable.ic_file_link_white_48dp;
+            case 113:
+                return R.drawable.ic_search_white_48dp;
+            case 32:
+                return R.drawable.ic_search_white_48dp;
+            case 208:
+                return R.drawable.ic_remove_user_from_group_white_48dp;
+            case 157:
+                return R.drawable.ic_add_user_to_group_white_48dp;
+            case 137:
+                return R.drawable.ic_file_edit_white_48dp;
         }
         return -1;
     }
@@ -252,19 +277,19 @@ public class CommandGroupModel extends RealmObject {
             case 127:
                 return R.string.delete_file;
             case 70:
-                return (R.string.create_file);
+                return R.string.create_file;
             case 49:
-                return (R.string.add_user_to_group);
+                return R.string.add_user_to_group;
             case 110:
-                return (R.string.delete_group);
+                return R.string.delete_group;
             case 117:
-                return (R.string.create_group);
+                return R.string.create_group;
             case 37:
-                return (R.string.set_user_passord);
+                return R.string.set_user_passord;
             case 71:
-                return (R.string.delete_user);
+                return R.string.delete_user;
             case 122:
-                return (R.string.create_user);
+                return R.string.create_user;
             case 102:
                 return R.string.find_file_by_name;
             case 90:
@@ -273,6 +298,30 @@ public class CommandGroupModel extends RealmObject {
                 return R.string.executable_path;
             case 87:
                 return R.string.whereis;
+            case 320:
+                return R.string.print_hostname_of_box;
+            case 138:
+                return R.string.print_traeroute_to_host;
+            case 45:
+                return R.string.telnet;
+            case 106:
+                return R.string.dns_lookup;
+            case 116:
+                return R.string.release_ip_dhcp;
+            case 221:
+                return R.string.open_sockets;
+            case 52:
+                return R.string.create_physical_link;
+            case 113:
+                return R.string.find_phrase_inside_file;
+            case 32:
+                return R.string.search_command_in_history;
+            case 208:
+                return R.string.delete_user_from_group;
+            case 157:
+                return R.string.add_new_user_to_group;
+            case 137:
+                return R.string.edit_text_file;
         }
         return -1;
     }

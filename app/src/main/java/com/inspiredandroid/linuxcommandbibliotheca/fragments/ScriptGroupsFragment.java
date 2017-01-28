@@ -14,9 +14,9 @@ import android.view.ViewGroup;
 import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.QuizActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
-import com.inspiredandroid.linuxcommandbibliotheca.ScriptChildrenActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.ScriptGroupsAdapter;
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnListClickListener;
+import com.inspiredandroid.linuxcommandbibliotheca.misc.FragmentCoordinator;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -80,14 +80,8 @@ public class ScriptGroupsFragment extends SuperFragment implements OnListClickLi
         startActivity(intent);
     }
 
-    private void startScriptCategoryActivity(int i) {
-        Intent intent = new Intent(getContext(), ScriptChildrenActivity.class);
-        intent.putExtra(ScriptChildrenActivity.EXTRA_CATEGORY_ID, i);
-        startActivity(intent);
-    }
-
     @Override
     public void onClick(int id) {
-        startScriptCategoryActivity(id);
+        FragmentCoordinator.startScriptCategoryActivity(getActivity(), id);
     }
 }
