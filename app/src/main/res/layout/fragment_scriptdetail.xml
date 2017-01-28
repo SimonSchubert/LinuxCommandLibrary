@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
 
     <TextView
@@ -10,8 +11,9 @@
         android:layout_height="wrap_content"
         android:background="@color/ab_primary"
         android:padding="10dp"
-        android:text=""
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        tools:text="Create a file"
+        android:textSize="22sp"
+        android:textColor="#fff"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/fragment_scriptdetail_lv_list"

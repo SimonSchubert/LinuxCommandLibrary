@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="0dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/fragment_container_secondary_title"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="?attr/colorPrimary"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:text="WELCOME"/>
+
+            <FrameLayout
+                android:id="@+id/fragment_container_secondary"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <include
+                    layout="@layout/fragment_welcome"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

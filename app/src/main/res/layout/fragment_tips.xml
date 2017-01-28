@@ -14,7 +14,6 @@
         android:paddingRight="8dp">
 
         <TextView
-            android:id="@+id/textView"
             style="@style/TextMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -35,7 +34,6 @@
             custom:commands="@array/fragment_tips_clear_code_array" />
 
         <TextView
-            android:id="@+id/textView3"
             style="@style/TextNormal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -113,7 +111,6 @@
             android:text="Tab Completion" />
 
         <TextView
-            android:id="@+id/textView10"
             style="@style/TextNormal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -284,7 +281,6 @@
                         custom:commands="@array/fragment_tips_special_characters_code_brackets_array" />
 
                     <TextView
-                        android:id="@+id/textView5"
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -293,7 +289,6 @@
                         android:textStyle="italic" />
 
                     <TextView
-                        android:id="@+id/textView6"
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -339,7 +334,6 @@
                         custom:commands="@array/fragment_tips_special_characters_code_semicolon_array" />
 
                     <TextView
-                        android:id="@+id/textView7"
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -347,7 +341,6 @@
                         android:textStyle="italic" />
 
                     <TextView
-                        android:id="@+id/textView8"
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -392,7 +385,6 @@
                         custom:commands="@array/fragment_tips_special_characters_code_single_quote_array" />
 
                     <TextView
-                        android:id="@+id/textView11"
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -438,7 +430,6 @@
                         custom:commands="@array/fragment_tips_special_characters_code_backquote_array" />
 
                     <TextView
-                        android:id="@+id/textView9"
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -689,7 +680,6 @@
                         custom:commands="@array/fragment_tips_special_characters_code_substitution_array" />
 
                     <TextView
-                        android:id="@+id/textView13"
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -698,7 +688,6 @@
                         android:textStyle="italic" />
 
                     <TextView
-                        android:id="@+id/textView14"
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -706,7 +695,6 @@
                         android:text="@string/fragment_tips_special_characters_code_substitution_part_2" />
 
                     <TextView
-                        android:id="@+id/textView15"
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -715,7 +703,6 @@
                         android:textStyle="italic" />
 
                     <TextView
-                        android:id="@+id/textView16"
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -748,7 +735,6 @@
 
                     <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
                         android:layout_column="1"
-                        android:id="@+id/fragment_tips_tv_special_characters_code_comment"
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -808,7 +794,6 @@
 
                     <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
                         android:layout_column="1"
-                        android:id="@+id/fragment_tips_tv_redirection_code_greater"
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -840,7 +825,6 @@
 
                     <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
                         android:layout_column="1"
-                        android:id="@+id/fragment_tips_tv_redirection_code_double_greater"
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -872,7 +856,6 @@
 
                     <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
                         android:layout_column="1"
-                        android:id="@+id/fragment_tips_tv_redirection_code_smaller"
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -904,7 +887,6 @@
 
                     <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
                         android:layout_column="1"
-                        android:id="@+id/fragment_tips_tv_redirection_code_error_output"
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

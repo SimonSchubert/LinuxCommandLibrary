@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.TypedArray;
 import android.graphics.Color;
-import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.text.SpannableString;
 import android.text.method.LinkMovementMethod;
 import android.util.AttributeSet;
@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.inspiredandroid.linuxcommandbibliotheca.CommandManActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
-import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnLinkClickListener;
+import com.inspiredandroid.linuxcommandbibliotheca.misc.FragmentCoordinator;
 
 /**
  * Created by Simon Schubert
@@ -70,20 +70,10 @@ public class CodeTextView extends TextView {
         SpannableString ss = new SpannableString(text);
 
         for (final String command : commands) {
-            ClickableTextView.addClickableSpanToPhrases(ss, text, command, () -> startCommandManActivity(command));
+            ClickableTextView.addClickableSpanToPhrases(ss, text, command, () ->
+                    FragmentCoordinator.startCommandManActivity((FragmentActivity) getContext(), command));
         }
 
         return ss;
-    }
-
-    /**
-     * Show manual page
-     *
-     * @param command
-     */
-    private void startCommandManActivity(String command) {
-        Intent intent = new Intent(getContext(), CommandManActivity.class);
-        intent.putExtra(CommandManActivity.EXTRA_COMMAND_NAME, command);
-        getContext().startActivity(intent);
     }
 }

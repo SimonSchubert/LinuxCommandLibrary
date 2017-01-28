@@ -82,8 +82,7 @@ public abstract class RealmMultiAdapter<T extends RealmObject> extends BaseAdapt
      * @param queryResults the new RealmResults coming from the new query.
      */
     public void updateRealmResults(List<RealmResults<T>> queryResults) {
-
-        this.mRealmResults = queryResults;
+        mRealmResults = queryResults;
         notifyDataSetChanged();
     }
 }

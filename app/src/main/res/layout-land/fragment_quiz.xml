@@ -7,7 +7,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:baselineAligned="false">
 
         <RelativeLayout
             android:layout_width="0dp"
@@ -149,7 +150,6 @@
     </LinearLayout>
 
     <RelativeLayout
-        android:id="@+id/it"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@null">

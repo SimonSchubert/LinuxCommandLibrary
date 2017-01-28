@@ -75,9 +75,8 @@ public class CommandManActivity extends LoadingBaseActivity {
             String action = intent.getAction();
             String data = intent.getDataString();
             if (Intent.ACTION_VIEW.equals(action) && data != null) {
-                String recipeId = data.substring(data.lastIndexOf("/") + 1);
-
-                String name2 = recipeId.substring(6, recipeId.length() - 5);
+                String commandId = data.substring(data.lastIndexOf("/") + 1);
+                String name2 = commandId.substring(6, commandId.length() - 5);
 
                 showManFragmentById(getIdByCommandName(name2));
             }
@@ -113,9 +112,9 @@ public class CommandManActivity extends LoadingBaseActivity {
 
         Realm realm = Realm.getDefaultInstance();
 
-        Command command = realm.where(Command.class).equalTo("id", id).findFirst();
+        Command command = realm.where(Command.class).equalTo(Command.ID, id).findFirst();
         String name = command.getName().toUpperCase();
-        int category = command.getId();
+        int category = command.getCategory();
 
         realm.close();
 

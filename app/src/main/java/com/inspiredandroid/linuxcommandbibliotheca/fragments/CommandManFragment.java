@@ -23,6 +23,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.ManExpandableListAdapter;
 import com.inspiredandroid.linuxcommandbibliotheca.asnytasks.SearchManAsyncTask;
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnConvertFromHtmlToSpannableListener;
+import com.inspiredandroid.linuxcommandbibliotheca.misc.FragmentCoordinator;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandPage;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.AppManager;
 
@@ -85,7 +86,9 @@ public class CommandManFragment extends AppIndexFragment implements OnConvertFro
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setHasOptionsMenu(true);
+        if(!FragmentCoordinator.isTabletLayout(getActivity())) {
+            setHasOptionsMenu(true);
+        }
 
         // Get unique command mId
         Bundle b = getArguments();

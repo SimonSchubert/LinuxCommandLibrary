@@ -12,12 +12,12 @@
         app:showAsAction="collapseActionView|ifRoom" />
 
     <item
-        android:id="@+id/about"
-        android:icon="@drawable/ic_info_white_24dp"
-        android:title="@string/about" />
-
-    <item
         android:id="@+id/quiz"
         android:icon="@drawable/ic_info_white_24dp"
         android:title="@string/quiz" />
+
+    <item
+        android:id="@+id/about"
+        android:icon="@drawable/ic_info_white_24dp"
+        android:title="@string/about" />
 </menu>

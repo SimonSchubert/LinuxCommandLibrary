@@ -11,7 +11,6 @@
         android:layout_weight="1" />
 
     <com.inspiredandroid.linuxcommandbibliotheca.view.AdView
-        android:id="@+id/fragment_sciptgroups_iv_ad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
