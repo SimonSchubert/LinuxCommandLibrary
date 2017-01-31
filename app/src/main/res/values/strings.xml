@@ -7,9 +7,41 @@
     <string name="fragment_bibliotheca_commands">Commands (%d)</string>
     <string name="tip">Tips</string>
 
-    <string name="system_info">System Information</string>
-    <string name="system_control">System control</string>
-    <string name="audio_video">Video/Audio</string>
+    <string name="quiz">Quiz</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <!-- Fragment Quiz -->
+    <string name="fragment_quiz_quit_dialog_text">Do you really want to quit the Quiz?</string>
+    <string name="fragment_quiz_counter">%1$d / %2$d</string>
+    <string name="fragment_quiz_result">%d%%</string>
+    <string name="fragment_quiz_question">\"%s\"</string>
+    <string name="fragment_quiz_congratulation">Congratulation</string>
+    <string name="fragment_quiz_again">Again</string>
+
+    <string-array name="default_codetextview_commands" />
+
+    <string name="fragment_datanase_loading_craftin_database">Creating Database</string>
+    <string name="fragment_datanase_loading_failed_craftin_database">Couldn\'t create database</string>
+    <string name="about">About</string>
+    <string name="fragment_scriptdescription_share_command">Share command</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="search_for_command">Search for command</string>
+    <string name="fragment_quiz_help">Help</string>
+    <string name="fragment_quiz_give_up">Give up</string>
+
+    <string name="dialog_rate_title">Do you like the App?</string>
+    <string name="dialog_rate_message">Please rate the Linux Command Library App, if you think it is great!</string>
+    <string name="dialog_rate_rate_now">Rate now</string>
+    <string name="dialog_rate_later">Remind me later</string>
+    <string name="dialog_rate_no_thanks">No thanks</string>
+
+    <string name="category_system_info">System Information</string>
+    <string name="category_system_control">System control</string>
+    <string name="category_audio_video">Video/Audio</string>
+    <string name="category_search">Search/Find</string>
+    <string name="category_network">Network</string>
+
     <string name="desc_get_cpu_usage">Print CPU usage in percentage</string>
     <string name="desc_battery_usage">Print remaining Laptop battery in percentage</string>
     <string name="desc_bluetooth_mac">Print Bluetooth MAC address</string>
@@ -40,19 +72,52 @@
     <string name="desc_play_audio_file">Play sound file in wav format</string>
     <string name="desc_play_beep">The classical way to play a beep sound through the PC speakers</string>
     <string name="desc_turn_off_monitor">Turn off monitor</string>
-    <string name="quiz">Quiz</string>
-    <string name="yes">Yes</string>
-    <string name="no">No</string>
-
-    <!-- Fragment Quiz -->
-    <string name="fragment_quiz_quit_dialog_text">Do you really want to quit the Quiz?</string>
-    <string name="fragment_quiz_counter">%1$d / %2$d</string>
-    <string name="fragment_quiz_result">%d%%</string>
-    <string name="fragment_quiz_question">\"%s\"</string>
-    <string name="fragment_quiz_congratulation">Congratulation</string>
-    <string name="fragment_quiz_again">Again</string>
-
-    <string-array name="default_codetextview_commands" />
+    <string name="desc_category_user_groups">Users/Groups</string>
+    <string name="desc_category_files_folders">Files/Folders</string>
+    <string name="desc_couldnt_find_any_command">We couldn\'t find such command.</string>
+    <string name="desc_request_command">request command</string>
+    <string name="desc_get_network_card">List network interfaces</string>
+    <string name="desc_download_file">Download file</string>
+    <string name="desc_get_domain_info">Get information about domain</string>
+    <string name="desc_ping_info">Ping to another device</string>
+    <string name="desc_configure_network_interface">Configure network interface</string>
+    <string name="desc_show_current_directory">Show current directory</string>
+    <string name="desc_move_rename_file">Move/rename file or directory</string>
+    <string name="desc_copy_file_or_directory">Copy file or directory</string>
+    <string name="desc_change_directory">Change directory</string>
+    <string name="desc_display_file_content">Display file content</string>
+    <string name="desc_list_directory">List directory contents</string>
+    <string name="desc_set_file_permission">Set file permissions</string>
+    <string name="desc_delete_folder">Delete folder</string>
+    <string name="desc_create_folder">Create folder</string>
+    <string name="desc_delete_file">Delete file</string>
+    <string name="desc_create_file">Create file</string>
+    <string name="desc_add_user_to_group">Add existing user to group</string>
+    <string name="desc_add_new_user_to_group">Add new user to group</string>
+    <string name="desc_delete_group">Delete group</string>
+    <string name="desc_create_group">Create group</string>
+    <string name="desc_set_user_passord">Set user password</string>
+    <string name="desc_delete_user">Delete user</string>
+    <string name="desc_create_user">Create user</string>
+    <string name="desc_find_file_by_name">Find a file by name</string>
+    <string name="desc_list_of_path">Find all path names containing a phrase</string>
+    <string name="desc_executable_path">Find the path of an executable</string>
+    <string name="desc_whereis">Find location of binary/source/man files for a command</string>
+    <string name="desc_print_hostname_of_box">Print the hostname of your box</string>
+    <string name="desc_print_traeroute_to_host">Print the route packets trace to network host</string>
+    <string name="desc_telnet">Telnet connection</string>
+    <string name="desc_dns_lookup">DNS lookups and displays server answer</string>
+    <string name="desc_release_ip_dhcp">Release ip and get a new one from DHCP</string>
+    <string name="desc_open_sockets">List open sockets</string>
+    <string name="desc_create_physical_link">Create a physical link to file or directory</string>
+    <string name="desc_find_phrase_inside_file">Find phrase within file</string>
+    <string name="desc_search_command_in_history">Search for a command in the history</string>
+    <string name="desc_delete_user_from_group">Remove user from group</string>
+    <string name="desc_edit_text_file">Edit text file</string>
+    <string name="desc_change_username">Rename user</string>
+    <string name="desc_change_groupname">Rename group</string>
+    <string name="desc_list_all_users">List all users</string>
+    <string name="desc_list_all_groups">List all groups</string>
 
     <string name="fragment_tips_clear_code">" >_ clear "</string>
     <string-array name="fragment_tips_clear_code_array">
@@ -186,69 +251,16 @@
     </string-array>
 
     <string name="fragment_tips_redirection_code_error_output">" >_ rm -vf folder1 file1 > out.txt 2> err.txt "</string>
+    <string name="desc_mute_volume">Mute volume</string>
+    <string name="turn_imags_into_video">Turn images to a video sequence</string>
+    <string name="turn_video_to_images">Turn a video to images</string>
+    <string name="video_to_mp3">Extract sound from a video to Mp3</string>
+    <string name="avi_to_mpg">Convert .avi video to .mpg</string>
+    <string name="mpg_to_avi">Convert .mpg to .avi</string>
+    <string name="avi_to_gif">Convert .avi to animated gif</string>
+    <string name="avi_to_flv">Convert .avi to .flv</string>
     <string-array name="fragment_tips_redirection_code_error_output_array">
         <item>rm</item>
     </string-array>
-
-    <string name="fragment_datanase_loading_craftin_database">Creating Database</string>
-    <string name="fragment_datanase_loading_failed_craftin_database">Couldn\'t create database</string>
-    <string name="about">About</string>
-    <string name="fragment_scriptdescription_share_command">Share command</string>
-    <string name="bookmark">Bookmark</string>
-    <string name="search_for_command">Search for command</string>
-    <string name="fragment_quiz_help">Help</string>
-    <string name="fragment_quiz_give_up">Give up</string>
-
-    <string name="rate_title">Do you like the App?</string>
-    <string name="rate_message">Please rate the Linux Command Library App, if you think it is great!</string>
-    <string name="rate_rate_now">Rate now</string>
-    <string name="rate_later">Remind me later</string>
-    <string name="rate_no_thanks">No thanks</string>
-
-    <string name="user_groups">Users/Groups</string>
-    <string name="files_folders">Files/Folders</string>
-    <string name="couldnt_find_any_command">We couldn\'t find such command.</string>
-    <string name="request_command">request command</string>
-    <string name="commandlinefu">http://www.commandlinefu.com/</string>
-    <string name="network">Network</string>
-    <string name="search">Search/Find</string>
-    <string name="desc_get_network_card">Show list of network cards</string>
-    <string name="download_file">Download file</string>
-    <string name="get_domain_info">Get information about domain</string>
-    <string name="ping_info">Ping to out and show result</string>
-    <string name="configure_network_interface">Configure network interface</string>
-    <string name="shw_current_directory">Show current directory</string>
-    <string name="move_rename_file">Move/rename file or directory</string>
-    <string name="copy_file_or_directory">Copy file or directory</string>
-    <string name="change_directory">Change directory</string>
-    <string name="display_file_content">Display file content</string>
-    <string name="list_directory">List directory contents</string>
-    <string name="set_file_permission">Set file permissions</string>
-    <string name="delete_folder">Delete folder</string>
-    <string name="create_folder">Create folder</string>
-    <string name="delete_file">Delete file</string>
-    <string name="create_file">Create file</string>
-    <string name="add_user_to_group">Add existing user to group</string>
-    <string name="add_new_user_to_group">Add new user to group</string>
-    <string name="delete_group">Delete group</string>
-    <string name="create_group">Create group</string>
-    <string name="set_user_passord">Set user password</string>
-    <string name="delete_user">Delete user</string>
-    <string name="create_user">Create user</string>
-    <string name="find_file_by_name">Find a file by name</string>
-    <string name="list_of_path">Find all path names containing a phrase</string>
-    <string name="executable_path">Find the path of the executable</string>
-    <string name="whereis">Find location of binary/source/man files for a command</string>
-    <string name="print_hostname_of_box">Print the hostname of your box</string>
-    <string name="print_traeroute_to_host">Print the route packets trace to network host</string>
-    <string name="telnet">Telnet connection</string>
-    <string name="dns_lookup">DNS lookups and displays server answer</string>
-    <string name="release_ip_dhcp">Release computer’s IP address and get a new one from DHCP</string>
-    <string name="open_sockets">Show open sockets</string>
-    <string name="create_physical_link">Create a physical link to file or directory</string>
-    <string name="find_phrase_inside_file">Find phrase within file</string>
-    <string name="search_command_in_history">Search for a command in the history</string>
-    <string name="delete_user_from_group">Remove user from group</string>
-    <string name="edit_text_file">Edit text file</string>
 
 </resources>

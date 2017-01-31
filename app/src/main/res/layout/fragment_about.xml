@@ -11,11 +11,55 @@
         android:paddingLeft="10dp"
         android:paddingRight="10dp">
 
+
         <TextView
             style="@style/LicenseLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Other projects" />
+            android:text="@string/app_lcl_name" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The project is open source and hosted on github. Feel free to contribute via Github or send me over a beer via PayPal." />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/fragment_about_btn_github"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_github" />
+
+            <ImageButton
+                android:id="@+id/fragment_about_btn_paypal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_paypal" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/fragment_about_btn_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_star_white_24dp"
+            android:drawablePadding="6dp"
+            android:text="Rate the app" />
+
+        <TextView
+            style="@style/LicenseLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My other projects" />
 
         <HorizontalScrollView
             android:layout_width="wrap_content"
@@ -131,43 +175,7 @@
             style="@style/LicenseLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/app_lcl_name" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="The project is open source and hosted on github. Feel free to contribute to the project. Starting from adding content and correcting typos to improving the basic code structure. I&apos;m always open for new technologies and ways how to do stuff better." />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:autoLink="web"
-            android:text="https://github.com/SimonSchubert/LinuxCommandBibliotheca" />
-
-        <Button
-            android:id="@+id/fragment_about_btn_rate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:drawableLeft="@android:drawable/star_on"
-            android:text="Rate the app" />
-
-        <TextView
-            style="@style/LicenseLarge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="Licenses" />
-
-        <TextView
-            style="@style/LicenseMedium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Gson" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Copyright 2008 Google Inc.   Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at      http://www.apache.org/licenses/LICENSE-2.0  Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License." />
 
         <TextView
             style="@style/LicenseMedium"

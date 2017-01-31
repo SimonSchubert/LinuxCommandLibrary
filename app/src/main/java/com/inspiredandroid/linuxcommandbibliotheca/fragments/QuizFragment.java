@@ -25,9 +25,9 @@ import com.inspiredandroid.linuxcommandbibliotheca.QuizActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.dialogs.QuizPreviousResultDialogFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
+import com.inspiredandroid.linuxcommandbibliotheca.models.Quiz;
 import com.inspiredandroid.linuxcommandbibliotheca.models.QuizDataHolder;
 import com.inspiredandroid.linuxcommandbibliotheca.models.QuizQuestionData;
-import com.inspiredandroid.linuxcommandbibliotheca.models.Quiz;
 
 import java.util.ArrayList;
 

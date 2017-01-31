@@ -16,6 +16,6 @@
         android:layout_gravity="center_horizontal"
         android:adjustViewBounds="true"
         android:maxWidth="300dp"
-        android:src="@drawable/add" />
+        android:src="@drawable/ad" />
 
 </LinearLayout>

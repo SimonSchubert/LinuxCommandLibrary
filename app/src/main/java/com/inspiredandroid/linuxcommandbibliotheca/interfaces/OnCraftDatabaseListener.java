@@ -1,8 +1,5 @@
 package com.inspiredandroid.linuxcommandbibliotheca.interfaces;
 
-import android.widget.DatePicker;
-import android.widget.SearchView;
-
 /**
  * Created by Simon Schubert
  */

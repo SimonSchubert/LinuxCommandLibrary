@@ -173,14 +173,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
-                        android:layout_column="1"
-                        style="@style/TextCode"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+                    style="@style/TextCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
 
-                        android:text="@string/fragment_tips_tv_special_characters_code_star"
-                        custom:commands="@array/fragment_tips_special_characters_code_star_array" />
+                    android:text="@string/fragment_tips_tv_special_characters_code_star"
+                    custom:commands="@array/fragment_tips_special_characters_code_star_array" />
             </TableRow>
 
             <TableRow
@@ -204,14 +204,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
-                        android:layout_column="1"
-                        style="@style/TextCode"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+                    style="@style/TextCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
 
-                        android:text="@string/fragment_tips_special_characters_code_questionmark"
-                        custom:commands="@array/fragment_tips_special_characters_code_questionmark_array" />
+                    android:text="@string/fragment_tips_special_characters_code_questionmark"
+                    custom:commands="@array/fragment_tips_special_characters_code_questionmark_array" />
             </TableRow>
 
             <TableRow
@@ -235,14 +235,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
-                        android:layout_column="1"
-                        style="@style/TextCode"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+                    style="@style/TextCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
 
-                        android:text="@string/fragment_tips_special_characters_code_square_brackets"
-                        custom:commands="@array/fragment_tips_special_characters_code_square_brackets_array" />
+                    android:text="@string/fragment_tips_special_characters_code_square_brackets"
+                    custom:commands="@array/fragment_tips_special_characters_code_square_brackets_array" />
             </TableRow>
 
             <TableRow
@@ -461,14 +461,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
-                        android:layout_column="1"
-                        style="@style/TextCode"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+                    style="@style/TextCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
 
-                        android:text="@string/fragment_tips_special_characters_code_double_quote"
-                        custom:commands="@array/fragment_tips_special_characters_code_double_quote_array" />
+                    android:text="@string/fragment_tips_special_characters_code_double_quote"
+                    custom:commands="@array/fragment_tips_special_characters_code_double_quote_array" />
             </TableRow>
 
             <TableRow
@@ -492,14 +492,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
-                        android:layout_column="1"
-                        style="@style/TextCode"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+                    style="@style/TextCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
 
-                        android:text="@string/fragment_tips_pipe_code"
-                        custom:commands="@array/fragment_tips_pipe_code_array" />
+                    android:text="@string/fragment_tips_pipe_code"
+                    custom:commands="@array/fragment_tips_pipe_code_array" />
             </TableRow>
 
             <TableRow
@@ -523,14 +523,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
-                        android:layout_column="1"
-                        style="@style/TextCode"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+                    style="@style/TextCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
 
-                        android:text="@string/fragment_tips_background_code"
-                        custom:commands="@array/fragment_tips_background_code_array" />
+                    android:text="@string/fragment_tips_background_code"
+                    custom:commands="@array/fragment_tips_background_code_array" />
             </TableRow>
 
             <TableRow
@@ -554,14 +554,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
-                        style="@style/TextCode"
-                        android:layout_column="1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+                    style="@style/TextCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
 
-                        android:text="@string/fragment_tips_special_characters_code_double_amp"
-                        custom:commands="@array/fragment_tips_special_characters_code_double_amp_array" />
+                    android:text="@string/fragment_tips_special_characters_code_double_amp"
+                    custom:commands="@array/fragment_tips_special_characters_code_double_amp_array" />
             </TableRow>
 
             <TableRow
@@ -585,14 +585,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
-                        android:layout_column="1"
-                        style="@style/TextCode"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+                    style="@style/TextCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
 
-                        android:text="@string/fragment_tips_tv_special_characters_code_double_pipe"
-                        custom:commands="@array/fragment_tips_special_characters_code_double_pipe_array" />
+                    android:text="@string/fragment_tips_tv_special_characters_code_double_pipe"
+                    custom:commands="@array/fragment_tips_special_characters_code_double_pipe_array" />
             </TableRow>
 
             <TableRow
@@ -634,14 +634,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
-                        android:layout_column="1"
-                        style="@style/TextCode"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+                    style="@style/TextCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
 
-                        android:text="@string/fragment_tips_special_characters_code_excelationmark"
-                        custom:commands="@array/fragment_tips_special_characters_code_excelationmark_array" />
+                    android:text="@string/fragment_tips_special_characters_code_excelationmark"
+                    custom:commands="@array/fragment_tips_special_characters_code_excelationmark_array" />
             </TableRow>
 
             <TableRow
@@ -733,14 +733,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
-                        android:layout_column="1"
-                        style="@style/TextCode"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+                    style="@style/TextCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
 
-                        android:text="@string/fragment_tips_special_characters_code_comment"
-                        custom:commands="@array/fragment_tips_special_characters_code_comment_array" />
+                    android:text="@string/fragment_tips_special_characters_code_comment"
+                    custom:commands="@array/fragment_tips_special_characters_code_comment_array" />
             </TableRow>
         </TableLayout>
 
@@ -792,14 +792,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
-                        android:layout_column="1"
-                        style="@style/TextCode"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+                    style="@style/TextCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
 
-                        android:text="@string/fragment_tips_redirection_code_greater"
-                        custom:commands="@array/fragment_tips_redirection_code_greater_array" />
+                    android:text="@string/fragment_tips_redirection_code_greater"
+                    custom:commands="@array/fragment_tips_redirection_code_greater_array" />
             </TableRow>
 
             <TableRow
@@ -823,14 +823,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
-                        android:layout_column="1"
-                        style="@style/TextCode"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+                    style="@style/TextCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
 
-                        android:text="@string/fragment_tips_redirection_code_double_greater"
-                        custom:commands="@array/fragment_tips_redirection_code_double_greater_array" />
+                    android:text="@string/fragment_tips_redirection_code_double_greater"
+                    custom:commands="@array/fragment_tips_redirection_code_double_greater_array" />
             </TableRow>
 
             <TableRow
@@ -854,14 +854,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
-                        android:layout_column="1"
-                        style="@style/TextCode"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+                    style="@style/TextCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
 
-                        android:text="@string/fragment_tips_redirection_code_smaller"
-                        custom:commands="@array/fragment_tips_redirection_code_smaller_array" />
+                    android:text="@string/fragment_tips_redirection_code_smaller"
+                    custom:commands="@array/fragment_tips_redirection_code_smaller_array" />
             </TableRow>
 
             <TableRow
@@ -885,14 +885,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
-                        android:layout_column="1"
-                        style="@style/TextCode"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+                    style="@style/TextCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
 
-                        android:text="@string/fragment_tips_redirection_code_error_output"
-                        custom:commands="@array/fragment_tips_redirection_code_error_output_array" />
+                    android:text="@string/fragment_tips_redirection_code_error_output"
+                    custom:commands="@array/fragment_tips_redirection_code_error_output_array" />
             </TableRow>
 
         </TableLayout>

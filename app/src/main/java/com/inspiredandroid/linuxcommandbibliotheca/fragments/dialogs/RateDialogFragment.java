@@ -9,8 +9,8 @@ import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AlertDialog;
 
 import com.inspiredandroid.linuxcommandbibliotheca.R;
-import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.AppManager;
+import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
 
 /**
  * Created by Simon Schubert
@@ -25,11 +25,11 @@ public class RateDialogFragment extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         return new AlertDialog.Builder(getContext())
-                .setTitle(R.string.rate_title)
-                .setMessage(R.string.rate_message)
-                .setPositiveButton(R.string.rate_rate_now, (dialogInterface, i) -> startAppMarketActivity())
-                .setNeutralButton(R.string.rate_later, null)
-                .setNegativeButton(R.string.rate_no_thanks, (dialogInterface, i) -> AppManager.disableRateDialog(getContext())).create();
+                .setTitle(R.string.dialog_rate_title)
+                .setMessage(R.string.dialog_rate_message)
+                .setPositiveButton(R.string.dialog_rate_rate_now, (dialogInterface, i) -> startAppMarketActivity())
+                .setNeutralButton(R.string.dialog_rate_later, null)
+                .setNegativeButton(R.string.dialog_rate_no_thanks, (dialogInterface, i) -> AppManager.disableRateDialog(getContext())).create();
     }
 
     private void startAppMarketActivity() {

@@ -1,19 +1,18 @@
 package com.inspiredandroid.linuxcommandbibliotheca.test;
 
 import android.content.Context;
-import android.test.AndroidTestCase;
+import android.content.Intent;
+import android.support.test.rule.ActivityTestRule;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
+import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity;
+import com.inspiredandroid.linuxcommandbibliotheca.CommandManActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
-import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
-import com.inspiredandroid.linuxcommandbibliotheca.models.CommandChildModel;
-import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel;
+import com.inspiredandroid.linuxcommandbibliotheca.models.CommandManModel;
 
+import org.junit.Rule;
 import org.junit.Test;
 
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -36,14 +35,30 @@ import static org.hamcrest.MatcherAssert.assertThat;
  */
 public class MyAndroidTest {
 
+    private Realm realm;
+
     public MyAndroidTest() {
         Locale.setDefault(Locale.US);
+        realm = Realm.getDefaultInstance();
     }
 
     private Context getContext() {
         return getInstrumentation().getTargetContext().getApplicationContext();
     }
 
+    @Rule
+    public ActivityTestRule<AboutActivity> aboutActivityRule
+            = new ActivityTestRule<>(AboutActivity.class, true, false);
+
+    @Rule
+    public ActivityTestRule<CommandManActivity> commandManActivityRule
+            = new ActivityTestRule<>(CommandManActivity.class, true, false);
+
+    @Test
+    public void activitiesTest() {
+        aboutActivityRule.launchActivity(new Intent());
+        commandManActivityRule.launchActivity(new Intent());
+    }
 
     /**
      * Go thought all the man pages links of the tips fragment
@@ -83,29 +98,31 @@ public class MyAndroidTest {
             addMissingMansToList(missingCommands, array);
         }
 
+        for (CommandManModel man : realm.where(CommandManModel.class).findAll()) {
+            addMissingMansToList(missingCommands, man.getMan());
+        }
+
         String missing = getReadableMissingCommands(missingCommands);
 
         //assertTrue("man pages not found: " + missing, missing.isEmpty());
-        assertThat(missing.isEmpty(), is(true));
+        assertThat("man pages not found: " + missing, missing.isEmpty());
     }
 
     /**
-     * Loop thought man pages and add to list if not found in database and not already in list
+     * Loop thought man pages and ad to list if not found in database and not already in list
      *
      * @param missingCommands
      * @param mans
      */
-    private void addMissingMansToList(List<String> missingCommands, String[] mans) {
-        Realm realm = Realm.getDefaultInstance();
+    private void addMissingMansToList(List<String> missingCommands, String... mans) {
         for (String man : mans) {
-            Command command = realm.where(Command.class).equalTo("name", man).findFirst();
+            Command command = realm.where(Command.class).equalTo(Command.NAME, man).findFirst();
             if (command == null) {
                 if (!missingCommands.contains(man)) {
                     missingCommands.add(man);
                 }
             }
         }
-        realm.close();
     }
 
     /**

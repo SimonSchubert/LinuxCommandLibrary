@@ -1,16 +1,16 @@
 package com.inspiredandroid.linuxcommandbibliotheca.view;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.res.TypedArray;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.support.v4.app.FragmentActivity;
 import android.text.SpannableString;
 import android.text.method.LinkMovementMethod;
+import android.text.style.StyleSpan;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-import com.inspiredandroid.linuxcommandbibliotheca.CommandManActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.FragmentCoordinator;
 
@@ -60,7 +60,7 @@ public class CodeTextView extends TextView {
     }
 
     /**
-     * Highlights mCommands of the text and make them clickable
+     * Highlights Commands of the text and make them clickable
      *
      * @param text     spannable content
      * @param commands list of mCommands to highlightQueryInsideText
@@ -74,6 +74,27 @@ public class CodeTextView extends TextView {
                     FragmentCoordinator.startCommandManActivity((FragmentActivity) getContext(), command));
         }
 
+        addItalicSpans(ss, text);
+
         return ss;
+    }
+
+    /**
+     * Make placeholder text italic
+     *
+     * @param ss
+     * @param text
+     */
+    private void addItalicSpans(SpannableString ss, String text) {
+        int indexStart = 0;
+        while (text.indexOf("[", indexStart) != -1) {
+            int start = text.indexOf("[", indexStart);
+            int end = text.indexOf("]", indexStart);
+            if (start == -1 || end == -1 || start >= end) {
+                break;
+            }
+            ss.setSpan(new StyleSpan(Typeface.ITALIC), start, end + 1, 0);
+            indexStart = end + 1;
+        }
     }
 }

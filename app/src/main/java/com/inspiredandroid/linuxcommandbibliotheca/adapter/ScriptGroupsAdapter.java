@@ -28,13 +28,13 @@ public class ScriptGroupsAdapter extends RecyclerView.Adapter<ScriptGroupsAdapte
 
     public ScriptGroupsAdapter(Context context) {
         mContext = context;
-        mGroups.add(new ScriptGroupItem(ScriptGroupItem.GROUP_USER_GROUP, R.string.user_groups, R.drawable.ic_account_circle_white_36dp));
-        mGroups.add(new ScriptGroupItem(ScriptGroupItem.GROUP_FILE_FOLDER, R.string.files_folders, R.drawable.ic_folder_white_48dp));
-        mGroups.add(new ScriptGroupItem(ScriptGroupItem.GROUP_INFO, R.string.system_info, R.drawable.ic_info_white_48dp));
-        mGroups.add(new ScriptGroupItem(ScriptGroupItem.GROUP_SYSTEM_CONTROL, R.string.system_control, R.drawable.ic_settings_white_48dp));
-        mGroups.add(new ScriptGroupItem(ScriptGroupItem.GROUP_AUDIO_VIDEO, R.string.audio_video, R.drawable.ic_ondemand_video_white_48dp));
-        mGroups.add(new ScriptGroupItem(ScriptGroupItem.GROUP_NETWORK, R.string.network, R.drawable.ic_device_hub_white_48dp));
-        mGroups.add(new ScriptGroupItem(ScriptGroupItem.GROUP_SEARCH, R.string.search, R.drawable.ic_search_white_48dp));
+        mGroups.add(new ScriptGroupItem(ScriptGroupItem.GROUP_USER_GROUP, R.string.desc_category_user_groups, R.drawable.ic_account_circle_white_36dp));
+        mGroups.add(new ScriptGroupItem(ScriptGroupItem.GROUP_FILE_FOLDER, R.string.desc_category_files_folders, R.drawable.ic_folder_white_48dp));
+        mGroups.add(new ScriptGroupItem(ScriptGroupItem.GROUP_INFO, R.string.category_system_info, R.drawable.ic_info_white_48dp));
+        mGroups.add(new ScriptGroupItem(ScriptGroupItem.GROUP_SYSTEM_CONTROL, R.string.category_system_control, R.drawable.ic_settings_white_48dp));
+        mGroups.add(new ScriptGroupItem(ScriptGroupItem.GROUP_AUDIO_VIDEO, R.string.category_audio_video, R.drawable.ic_ondemand_video_white_48dp));
+        mGroups.add(new ScriptGroupItem(ScriptGroupItem.GROUP_NETWORK, R.string.category_network, R.drawable.ic_device_hub_white_48dp));
+        mGroups.add(new ScriptGroupItem(ScriptGroupItem.GROUP_SEARCH, R.string.category_search, R.drawable.ic_search_white_48dp));
     }
 
     public void setOnListClickListener(OnListClickListener listener) {
