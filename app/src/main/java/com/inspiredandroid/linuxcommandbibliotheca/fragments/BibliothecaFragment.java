@@ -15,7 +15,6 @@ import android.view.ViewGroup;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel;
-import com.inspiredandroid.linuxcommandbibliotheca.models.ScriptGroupItem;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -59,7 +58,7 @@ public class BibliothecaFragment extends Fragment {
         // Get total commands count
         Realm realm = Realm.getDefaultInstance();
         long commandsCount = realm.where(Command.class).count();
-        long commandsGroupCount = realm.where(CommandGroupModel.class).notEqualTo("category", ScriptGroupItem.GROUP_COMMANDLINEFU).count();
+        long commandsGroupCount = realm.where(CommandGroupModel.class).count();
         realm.close();
 
         tabLayout.addTab(tabLayout.newTab().setText(String.format(getString(R.string.fragment_bibliotheca_commands), commandsCount)));

@@ -13,17 +13,11 @@ import android.widget.TextView;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnListClickListener;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel;
-import com.inspiredandroid.linuxcommandbibliotheca.models.ScriptGroupItem;
-
-import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.realm.OrderedRealmCollection;
-import io.realm.Realm;
 import io.realm.RealmRecyclerViewAdapter;
-import io.realm.RealmResults;
-import io.realm.Sort;
 
 /**
  * Created by simon on 23/01/17.

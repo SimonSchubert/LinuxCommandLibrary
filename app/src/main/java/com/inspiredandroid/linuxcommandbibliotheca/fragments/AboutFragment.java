@@ -33,6 +33,25 @@ public class AboutFragment extends Fragment {
         return view;
     }
 
+
+    @OnClick(R.id.fragment_about_btn_github)
+    public void startGithub() {
+        try {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/SimonSchubert/LinuxCommandBibliotheca"));
+            startActivity(intent);
+        } catch (android.content.ActivityNotFoundException ignored) {
+        }
+    }
+
+    @OnClick(R.id.fragment_about_btn_paypal)
+    public void startPaypal() {
+        try {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.paypal.me/SimonSchubert"));
+            startActivity(intent);
+        } catch (android.content.ActivityNotFoundException ignored) {
+        }
+    }
+
     @OnClick(R.id.fragment_about_btn_bimo)
     public void startBimo() {
         startAppMarketActivity(Utils.PACKAGE_BIMO);

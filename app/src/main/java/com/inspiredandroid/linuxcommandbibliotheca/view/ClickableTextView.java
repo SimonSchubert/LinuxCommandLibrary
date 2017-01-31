@@ -35,7 +35,7 @@ public class ClickableTextView extends TextView {
     }
 
     /**
-     * Loop through text and add a clickable at each point the phrase occurs
+     * Loop through text and ad a clickable at each point the phrase occurs
      *
      * @param ss
      * @param text
@@ -49,9 +49,7 @@ public class ClickableTextView extends TextView {
         }
 
         int indexStart = 0;
-
         while (text.indexOf(phrase, indexStart) != -1) {
-
             indexStart = text.indexOf(phrase, indexStart);
             int indexEnd = indexStart + phrase.length();
 
@@ -88,7 +86,7 @@ public class ClickableTextView extends TextView {
      * @param onLinkClickListener
      */
     public void setClickInterface(OnLinkClickListener onLinkClickListener) {
-        this.mOnLinkClickListener = onLinkClickListener;
+        mOnLinkClickListener = onLinkClickListener;
     }
 
     /**

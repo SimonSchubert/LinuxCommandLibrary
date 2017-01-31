@@ -24,9 +24,9 @@ import com.inspiredandroid.linuxcommandbibliotheca.QuizActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.CommandsAdapter;
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.dialogs.RateDialogFragment;
+import com.inspiredandroid.linuxcommandbibliotheca.misc.AppManager;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.FragmentCoordinator;
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
-import com.inspiredandroid.linuxcommandbibliotheca.misc.AppManager;
 
 import java.text.Normalizer;
 import java.util.ArrayList;
@@ -84,7 +84,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-       FragmentCoordinator.startCommandManActivity(getActivity(), id);
+        FragmentCoordinator.startCommandManActivity(getActivity(), id);
     }
 
     @Override
@@ -195,6 +195,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
 
     /**
      * Get list of all commands sorted by name
+     *
      * @return
      */
     private List<RealmResults<Command>> getAllCommands() {

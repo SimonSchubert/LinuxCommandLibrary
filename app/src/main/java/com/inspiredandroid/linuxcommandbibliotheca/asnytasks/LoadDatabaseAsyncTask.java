@@ -4,10 +4,10 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.inspiredandroid.linuxcommandbibliotheca.misc.AppManager;
-import com.inspiredandroid.linuxcommandbibliotheca.misc.Constants;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnCraftDatabaseListener;
+import com.inspiredandroid.linuxcommandbibliotheca.misc.AppManager;
+import com.inspiredandroid.linuxcommandbibliotheca.misc.Constants;
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandPage;
 
@@ -62,7 +62,7 @@ public class LoadDatabaseAsyncTask extends AsyncTask<Boolean, Void, Boolean> {
 
     private void applyPatch() {
         Realm realm = Realm.getDefaultInstance();
-        if (realm.where(Command.class).equalTo("name", "lolcat").findFirst() == null) {
+        if (realm.where(Command.class).equalTo(Command.NAME, "lsof").findFirst() == null) {
             realm.beginTransaction();
             try {
                 realm.createAllFromJson(Command.class, mContext.getResources().openRawResource(R.raw.commands_patch_0));

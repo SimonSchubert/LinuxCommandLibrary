@@ -135,7 +135,7 @@ public class ManExpandableListAdapter extends BaseExpandableListAdapter {
         Pattern p = Pattern.compile("[[:graph:]]+\\s?\\(\\w\\)");
         Matcher m = p.matcher(description);
 
-        // loop results and add if command exists in db
+        // loop results and ad if command exists in db
         ArrayList<String> tmp = new ArrayList<>();
         while (m.find()) {
             String extractedCommand = m.group(0).substring(0, m.group(0).length() - 3).trim();

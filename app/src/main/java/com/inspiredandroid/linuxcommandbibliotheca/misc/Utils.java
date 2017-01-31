@@ -1,31 +1,16 @@
 package com.inspiredandroid.linuxcommandbibliotheca.misc;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
-import android.view.View;
-import android.view.ViewGroup;
 
-import com.inspiredandroid.linuxcommandbibliotheca.CommandManActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
-import com.inspiredandroid.linuxcommandbibliotheca.ScriptChildrenActivity;
-import com.inspiredandroid.linuxcommandbibliotheca.fragments.CommandManFragment;
-import com.inspiredandroid.linuxcommandbibliotheca.fragments.ScriptChildrenFragment;
-import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
 
 import java.text.Normalizer;
 import java.util.ArrayList;
-
-import io.realm.Realm;
 
 /**
  * Created by Simon Schubert

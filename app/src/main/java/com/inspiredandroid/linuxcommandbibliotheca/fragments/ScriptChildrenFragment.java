@@ -14,12 +14,10 @@ import com.inspiredandroid.linuxcommandbibliotheca.adapter.ScriptChildrenAdapter
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.dialogs.ScriptDetailDialogFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnListClickListener;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel;
-import com.inspiredandroid.linuxcommandbibliotheca.models.ScriptGroupItem;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.realm.Realm;
-import io.realm.RealmResults;
 import io.realm.Sort;
 
 /**

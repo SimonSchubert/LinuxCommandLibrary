@@ -18,8 +18,6 @@ import com.inspiredandroid.linuxcommandbibliotheca.fragments.CommandManFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.ScriptChildrenFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
 
-import org.w3c.dom.Text;
-
 import io.realm.Realm;
 
 /**
@@ -33,10 +31,10 @@ public class FragmentCoordinator {
             intent.putExtra(ScriptChildrenActivity.EXTRA_CATEGORY_ID, category);
             activity.startActivity(intent);
         } else {
-            ((TextView)activity.findViewById(R.id.fragment_container_secondary_title)).setText(ScriptChildrenActivity.getDescriptionForCategory(category));
+            ((TextView) activity.findViewById(R.id.fragment_container_secondary_title)).setText(ScriptChildrenActivity.getDescriptionForCategory(category));
 
             View container = activity.findViewById(R.id.fragment_container_secondary);
-            ((ViewGroup)container).removeAllViews();
+            ((ViewGroup) container).removeAllViews();
 
             activity.getIntent().putExtra(ScriptChildrenActivity.EXTRA_CATEGORY_ID, category);
 
@@ -57,7 +55,7 @@ public class FragmentCoordinator {
             activity.startActivity(intent);
         } else {
             View container = activity.findViewById(R.id.fragment_container_secondary);
-            ((ViewGroup)container).removeAllViews();
+            ((ViewGroup) container).removeAllViews();
 
             Realm realm = Realm.getDefaultInstance();
 
@@ -78,7 +76,7 @@ public class FragmentCoordinator {
             activity.startActivity(intent);
         } else {
             View container = activity.findViewById(R.id.fragment_container_secondary);
-            ((ViewGroup)container).removeAllViews();
+            ((ViewGroup) container).removeAllViews();
 
             Realm realm = Realm.getDefaultInstance();
 
@@ -98,7 +96,7 @@ public class FragmentCoordinator {
      * @param category command category
      */
     private static void showManFragmentInSecondaryFrame(FragmentActivity activity, String name, long id, int category) {
-        ((TextView)activity.findViewById(R.id.fragment_container_secondary_title)).setText(name.toUpperCase());
+        ((TextView) activity.findViewById(R.id.fragment_container_secondary_title)).setText(name.toUpperCase());
 
         Fragment fragment = new CommandManFragment();
 

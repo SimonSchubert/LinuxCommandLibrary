@@ -1,10 +1,6 @@
 package com.inspiredandroid.linuxcommandbibliotheca.models;
 
-import android.content.Context;
-
 import com.inspiredandroid.linuxcommandbibliotheca.R;
-
-import java.util.ArrayList;
 
 import io.realm.RealmList;
 import io.realm.RealmObject;
@@ -31,15 +27,6 @@ public class CommandGroupModel extends RealmObject {
 
     public CommandGroupModel() {
 
-    }
-
-    public static String getDescString(CommandGroupModel model, Context context) {
-        int resId = getDescResourceId(model);
-        if (resId != -1) {
-            return context.getResources().getString(resId);
-        } else {
-            return "";
-        }
     }
 
     public static int getImageResourceId(CommandGroupModel model) {
@@ -105,15 +92,15 @@ public class CommandGroupModel extends RealmObject {
             case 29:
                 return R.drawable.icon_lock_screen;
             case 31:
-                return R.drawable.ic_device_hub_white_48dp;
+                return R.drawable.ic_list_interfaces_white_48dp;
             case 158:
                 return R.drawable.ic_file_download_white_48dp;
             case 191:
-                return R.drawable.ic_device_hub_white_48dp;
+                return R.drawable.ic_vip_lookup_white_48dp;
             case 201:
-                return R.drawable.ic_device_hub_white_48dp;
+                return R.drawable.ic_ping_out_white_48dp;
             case 189:
-                return R.drawable.ic_device_hub_white_48dp;
+                return R.drawable.ic_configure_network_white_48dp;
             case 81:
                 return R.drawable.ic_folder_path_white_48dp;
             case 94:
@@ -149,37 +136,61 @@ public class CommandGroupModel extends RealmObject {
             case 122:
                 return R.drawable.ic_create_user_white_48dp;
             case 102:
-                return R.drawable.ic_search_white_48dp;
+                return R.drawable.ic_search_list_white_48dp;
             case 90:
-                return R.drawable.ic_search_white_48dp;
+                return R.drawable.ic_search_list_white_48dp;
             case 143:
-                return R.drawable.ic_search_white_48dp;
+                return R.drawable.ic_search_executeable_man_white_48dp;
             case 87:
-                return R.drawable.ic_search_white_48dp;
+                return R.drawable.ic_search_source_man_white_48dp;
             case 320:
-                return R.drawable.ic_device_hub_white_48dp;
+                return R.drawable.ic_hostname_white_48dp;
             case 138:
-                return R.drawable.ic_device_hub_white_48dp;
+                return R.drawable.ic_traceroute_white_48dp;
             case 45:
-                return R.drawable.ic_device_hub_white_48dp;
+                return R.drawable.ic_telnet_white_48dp;
             case 106:
-                return R.drawable.ic_device_hub_white_48dp;
+                return R.drawable.ic_dns_white_48dp;
             case 116:
-                return R.drawable.ic_device_hub_white_48dp;
+                return R.drawable.ic_refresh_ip_white_48dp;
             case 221:
-                return R.drawable.ic_file_permission_white_48dp;
+                return R.drawable.ic_list_sockets_white_48dp;
             case 52:
                 return R.drawable.ic_file_link_white_48dp;
             case 113:
-                return R.drawable.ic_search_white_48dp;
+                return R.drawable.ic_search_in_file_white_48dp;
             case 32:
-                return R.drawable.ic_search_white_48dp;
+                return R.drawable.ic_search_history_white_48dp;
             case 208:
                 return R.drawable.ic_remove_user_from_group_white_48dp;
             case 157:
                 return R.drawable.ic_add_user_to_group_white_48dp;
             case 137:
                 return R.drawable.ic_file_edit_white_48dp;
+            case 352:
+                return R.drawable.ic_edit_user_white_48dp;
+            case 82:
+                return R.drawable.ic_list_user_white_48dp;
+            case 164:
+                return R.drawable.ic_list_groups_white_48dp;
+            case 120:
+                return R.drawable.ic_edit_group_white_48dp;
+            case 428:
+                return R.drawable.ic_volume_off_white_48dp;
+            case 48:
+                return R.drawable.ic_switch_video_white_48dp;
+            case 39:
+                return R.drawable.ic_switch_video_white_48dp;
+            case 427:
+                return R.drawable.ic_switch_video_white_48dp;
+            case 107:
+                return R.drawable.ic_switch_video_white_48dp;
+            case 185:
+                return R.drawable.ic_switch_video_white_48dp;
+            case 234:
+                return R.drawable.ic_switch_video_white_48dp;
+            case 97:
+                return R.drawable.ic_switch_video_white_48dp;
         }
         return -1;
     }
@@ -249,79 +260,104 @@ public class CommandGroupModel extends RealmObject {
             case 31:
                 return R.string.desc_get_network_card;
             case 158:
-                return R.string.download_file;
+                return R.string.desc_download_file;
             case 191:
-                return R.string.get_domain_info;
+                return R.string.desc_get_domain_info;
             case 201:
-                return R.string.ping_info;
+                return R.string.desc_ping_info;
             case 189:
-                return R.string.configure_network_interface;
+                return R.string.desc_configure_network_interface;
             case 81:
-                return R.string.shw_current_directory;
+                return R.string.desc_show_current_directory;
             case 94:
-                return R.string.move_rename_file;
+                return R.string.desc_move_rename_file;
             case 245:
-                return R.string.copy_file_or_directory;
+                return R.string.desc_copy_file_or_directory;
             case 69:
-                return R.string.change_directory;
+                return R.string.desc_change_directory;
             case 237:
-                return R.string.display_file_content;
+                return R.string.desc_display_file_content;
             case 174:
-                return R.string.list_directory;
+                return R.string.desc_list_directory;
             case 212:
-                return R.string.set_file_permission;
+                return R.string.desc_set_file_permission;
             case 240:
-                return R.string.delete_folder;
+                return R.string.desc_delete_folder;
             case 167:
-                return R.string.create_folder;
+                return R.string.desc_create_folder;
             case 127:
-                return R.string.delete_file;
+                return R.string.desc_delete_file;
             case 70:
-                return R.string.create_file;
+                return R.string.desc_create_file;
             case 49:
-                return R.string.add_user_to_group;
+                return R.string.desc_add_user_to_group;
             case 110:
-                return R.string.delete_group;
+                return R.string.desc_delete_group;
             case 117:
-                return R.string.create_group;
+                return R.string.desc_create_group;
             case 37:
-                return R.string.set_user_passord;
+                return R.string.desc_set_user_passord;
             case 71:
-                return R.string.delete_user;
+                return R.string.desc_delete_user;
             case 122:
-                return R.string.create_user;
+                return R.string.desc_create_user;
             case 102:
-                return R.string.find_file_by_name;
+                return R.string.desc_find_file_by_name;
             case 90:
-                return R.string.list_of_path;
+                return R.string.desc_list_of_path;
             case 143:
-                return R.string.executable_path;
+                return R.string.desc_executable_path;
             case 87:
-                return R.string.whereis;
+                return R.string.desc_whereis;
             case 320:
-                return R.string.print_hostname_of_box;
+                return R.string.desc_print_hostname_of_box;
             case 138:
-                return R.string.print_traeroute_to_host;
+                return R.string.desc_print_traeroute_to_host;
             case 45:
-                return R.string.telnet;
+                return R.string.desc_telnet;
             case 106:
-                return R.string.dns_lookup;
+                return R.string.desc_dns_lookup;
             case 116:
-                return R.string.release_ip_dhcp;
+                return R.string.desc_release_ip_dhcp;
             case 221:
-                return R.string.open_sockets;
+                return R.string.desc_open_sockets;
             case 52:
-                return R.string.create_physical_link;
+                return R.string.desc_create_physical_link;
             case 113:
-                return R.string.find_phrase_inside_file;
+                return R.string.desc_find_phrase_inside_file;
             case 32:
-                return R.string.search_command_in_history;
+                return R.string.desc_search_command_in_history;
             case 208:
-                return R.string.delete_user_from_group;
+                return R.string.desc_delete_user_from_group;
             case 157:
-                return R.string.add_new_user_to_group;
+                return R.string.desc_add_new_user_to_group;
             case 137:
-                return R.string.edit_text_file;
+                return R.string.desc_edit_text_file;
+            case 352:
+                return R.string.desc_change_username;
+            case 82:
+                return R.string.desc_list_all_users;
+            case 164:
+                return R.string.desc_list_all_groups;
+            case 120:
+                return R.string.desc_change_groupname;
+            case 428:
+                return R.string.desc_mute_volume;
+            case 48:
+                return R.string.turn_imags_into_video;
+            case 39:
+                return R.string.turn_video_to_images;
+            case 427:
+                return R.string.video_to_mp3;
+            case 107:
+                return R.string.avi_to_mpg;
+            case 185:
+                return R.string.mpg_to_avi;
+            case 234:
+                return R.string.avi_to_flv;
+            case 97:
+                return R.string.avi_to_gif;
+
         }
         return -1;
     }

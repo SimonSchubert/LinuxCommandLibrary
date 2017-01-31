@@ -23,9 +23,9 @@ import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.ManExpandableListAdapter;
 import com.inspiredandroid.linuxcommandbibliotheca.asnytasks.SearchManAsyncTask;
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnConvertFromHtmlToSpannableListener;
+import com.inspiredandroid.linuxcommandbibliotheca.misc.AppManager;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.FragmentCoordinator;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandPage;
-import com.inspiredandroid.linuxcommandbibliotheca.misc.AppManager;
 
 import java.util.ArrayList;
 
@@ -70,6 +70,17 @@ public class CommandManFragment extends AppIndexFragment implements OnConvertFro
         return parts;
     }
 
+    @SuppressWarnings("deprecation")
+    public static CharSequence fromHtml(String html) {
+        CharSequence result;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+            result = Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY);
+        } else {
+            result = Html.fromHtml(html);
+        }
+        return result;
+    }
+
     @Override
     public String getAppIndexingTitle() {
         return mName + "(" + mCategory + ") man page";
@@ -86,7 +97,7 @@ public class CommandManFragment extends AppIndexFragment implements OnConvertFro
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if(!FragmentCoordinator.isTabletLayout(getActivity())) {
+        if (!FragmentCoordinator.isTabletLayout(getActivity())) {
             setHasOptionsMenu(true);
         }
 
@@ -211,17 +222,6 @@ public class CommandManFragment extends AppIndexFragment implements OnConvertFro
         }
 
         return new ManExpandableListAdapter(getActivity(), groups, child);
-    }
-
-    @SuppressWarnings("deprecation")
-    public static CharSequence fromHtml(String html){
-        CharSequence result;
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
-            result = Html.fromHtml(html,Html.FROM_HTML_MODE_LEGACY);
-        } else {
-            result = Html.fromHtml(html);
-        }
-        return result;
     }
 
     private void toogleBookmarkState() {

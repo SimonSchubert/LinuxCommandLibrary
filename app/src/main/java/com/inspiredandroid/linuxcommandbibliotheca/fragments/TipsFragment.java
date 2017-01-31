@@ -16,7 +16,6 @@ import com.google.android.gms.appindexing.Action;
 import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.QuizActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
-import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnLinkClickListener;
 import com.inspiredandroid.linuxcommandbibliotheca.view.ClickableTextView;
 
 import butterknife.BindView;

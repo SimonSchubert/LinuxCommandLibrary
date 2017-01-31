@@ -21,7 +21,7 @@ public class AppManager {
 
     public static boolean isDatabaseVersionUpToDate(Context context) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        return false; //prefs.getInt(KEY_DATABASE_VERSION, 0) == CURRENTDATABSEVERSION;
+        return prefs.getInt(KEY_DATABASE_VERSION, 0) == CURRENTDATABSEVERSION;
     }
 
     public static void setDatabaseVersionUpToDate(Context context) {
@@ -86,7 +86,7 @@ public class AppManager {
     }
 
     /**
-     * add id to bookmark list
+     * ad id to bookmark list
      *
      * @param context
      * @param id

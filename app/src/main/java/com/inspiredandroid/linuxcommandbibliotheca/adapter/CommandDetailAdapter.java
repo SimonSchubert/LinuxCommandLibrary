@@ -7,16 +7,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.inspiredandroid.linuxcommandbibliotheca.CommandBibliothecaActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandChildModel;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel;
-import com.inspiredandroid.linuxcommandbibliotheca.models.ScriptGroupItem;
 import com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView;
 
 import butterknife.BindView;
@@ -25,7 +21,7 @@ import butterknife.ButterKnife;
 /**
  * Created by simon on 23.11.15.
  */
-public class CommandDetailAdapter  extends RecyclerView.Adapter<CommandDetailAdapter.ViewHolder> {
+public class CommandDetailAdapter extends RecyclerView.Adapter<CommandDetailAdapter.ViewHolder> {
 
     private CommandGroupModel mCommandGroupModel;
     private Context mContext;
@@ -34,6 +30,7 @@ public class CommandDetailAdapter  extends RecyclerView.Adapter<CommandDetailAda
         mContext = context;
         mCommandGroupModel = commandGroupModel;
     }
+
     @Override
     public int getItemCount() {
         return mCommandGroupModel.getCommands().size();
@@ -41,7 +38,7 @@ public class CommandDetailAdapter  extends RecyclerView.Adapter<CommandDetailAda
 
     @Override
     public CommandDetailAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
-                                                             int viewType) {
+                                                              int viewType) {
         View v = LayoutInflater.from(mContext)
                 .inflate(R.layout.row_scriptdescription_child, parent, false);
         return new CommandDetailAdapter.ViewHolder(v);

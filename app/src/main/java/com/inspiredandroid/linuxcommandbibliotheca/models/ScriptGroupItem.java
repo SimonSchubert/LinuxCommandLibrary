@@ -8,7 +8,6 @@ public class ScriptGroupItem {
     public final static int GROUP_INFO = 0;
     public final static int GROUP_SYSTEM_CONTROL = 1;
     public final static int GROUP_AUDIO_VIDEO = 2;
-    public final static int GROUP_COMMANDLINEFU = 3;
     public final static int GROUP_USER_GROUP = 4;
     public final static int GROUP_FILE_FOLDER = 5;
     public final static int GROUP_NETWORK = 6;
