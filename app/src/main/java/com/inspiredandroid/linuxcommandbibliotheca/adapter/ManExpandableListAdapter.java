@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
-import com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView;
+import com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView;
 
 import java.util.ArrayList;
 import java.util.regex.Matcher;
@@ -139,7 +139,7 @@ public class ManExpandableListAdapter extends BaseExpandableListAdapter {
         ArrayList<String> tmp = new ArrayList<>();
         while (m.find()) {
             String extractedCommand = m.group(0).substring(0, m.group(0).length() - 3).trim();
-            Command command = realm.where(Command.class).equalTo("name", extractedCommand).findFirst();
+            Command command = realm.where(Command.class).equalTo(Command.NAME, extractedCommand).findFirst();
             if (command != null) {
                 tmp.add(extractedCommand);
             }
@@ -157,20 +157,20 @@ public class ManExpandableListAdapter extends BaseExpandableListAdapter {
         return commands;
     }
 
-    public class CommandViewHolder {
+    class CommandViewHolder {
         @BindView(R.id.row_man_child_tv_description)
-        CodeTextView desc;
+        TerminalTextView desc;
 
-        public CommandViewHolder(View view) {
+        CommandViewHolder(View view) {
             ButterKnife.bind(this, view);
         }
     }
 
-    public class CommandGroupViewHolder {
+    class CommandGroupViewHolder {
         @BindView(R.id.row_man_group_tv_title)
         TextView title;
 
-        public CommandGroupViewHolder(View view) {
+        CommandGroupViewHolder(View view) {
             ButterKnife.bind(this, view);
         }
     }

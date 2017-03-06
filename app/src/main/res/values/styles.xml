@@ -1,8 +1,6 @@
 <resources>
 
-    <style name="LibAppTheme" parent="LibAppTheme.Base" />
-
-    <style name="LibAppTheme.Base" parent="Theme.AppCompat.NoActionBar">
+    <style name="LibAppTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="colorPrimary">@color/ab_primary</item>
         <item name="colorPrimaryDark">@color/ab_primary_dark</item>
     </style>
@@ -26,6 +24,8 @@
         <item name="android:textColor">#fff</item>
         <item name="android:layout_marginBottom">2dp</item>
         <item name="android:textIsSelectable">true</item>
+        <item name="android:paddingLeft">6dp</item>
+        <item name="android:paddingRight">6dp</item>
     </style>
 
     <style name="LicenseMedium">

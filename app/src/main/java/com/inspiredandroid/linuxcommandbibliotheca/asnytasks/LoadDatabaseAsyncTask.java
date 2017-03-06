@@ -33,11 +33,6 @@ public class LoadDatabaseAsyncTask extends AsyncTask<Boolean, Void, Boolean> {
     }
 
     @Override
-    protected void onPreExecute() {
-        super.onPreExecute();
-    }
-
-    @Override
     protected Boolean doInBackground(Boolean... contexts) {
         File oldDatabase = mContext.getDatabasePath("commands.db");
         if (oldDatabase.exists()) {

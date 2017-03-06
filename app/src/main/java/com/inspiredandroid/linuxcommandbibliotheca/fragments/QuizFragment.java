@@ -426,7 +426,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     /**
      * Get answers from database
      *
-     * @param count size of string array mList size
+     * @param count size of string array mRecyclerView size
      * @return
      */
     private ArrayList<String> getAnswers(int count) {

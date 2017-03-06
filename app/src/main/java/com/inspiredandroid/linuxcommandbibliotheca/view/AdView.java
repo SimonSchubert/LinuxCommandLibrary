@@ -38,7 +38,7 @@ public class AdView extends ImageView {
         }
     }
 
-    public void startRemoteControl() {
+    private void startRemoteControl() {
         final String appPackageName = Utils.PACKAGE_LINUXREMOTE;
         try {
             getContext().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));

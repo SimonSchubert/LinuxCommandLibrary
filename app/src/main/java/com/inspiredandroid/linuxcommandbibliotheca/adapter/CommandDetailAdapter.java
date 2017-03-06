@@ -13,7 +13,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.CommandBibliothecaActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandChildModel;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel;
-import com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView;
+import com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -40,7 +40,7 @@ public class CommandDetailAdapter extends RecyclerView.Adapter<CommandDetailAdap
     public CommandDetailAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
                                                               int viewType) {
         View v = LayoutInflater.from(mContext)
-                .inflate(R.layout.row_scriptdescription_child, parent, false);
+                .inflate(R.layout.row_scriptchild_child, parent, false);
         return new CommandDetailAdapter.ViewHolder(v);
     }
 
@@ -94,7 +94,7 @@ public class CommandDetailAdapter extends RecyclerView.Adapter<CommandDetailAdap
 
     class ViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.row_scriptdescription_child_tv_description)
-        CodeTextView command;
+        TerminalTextView command;
         @BindView(R.id.row_scriptdescription_child_iv_share)
         ImageButton share;
 
