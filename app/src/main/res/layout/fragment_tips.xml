@@ -23,10 +23,9 @@
             style="@style/TextNormal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="To clear the terminal use the command below or press Ctrl+L on your keyboard."
-            android:textDirection="anyRtl" />
+            android:text="To clear the terminal use the command below or press Ctrl+L on your keyboard." />
 
-        <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+        <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
             style="@style/TextCode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -39,7 +38,7 @@
             android:layout_height="wrap_content"
             android:text="If you screw up the screen by e.g. accidentally reading a binary file with with cat or less you might reinitialisation the terminal with the reset command." />
 
-        <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+        <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
             style="@style/TextCode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -58,7 +57,7 @@
             android:layout_height="wrap_content"
             android:text="Use the history command or open the history file in vim $HISTFILE or any other text editor." />
 
-        <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+        <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
             style="@style/TextCode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -77,7 +76,7 @@
             android:layout_height="wrap_content"
             android:text="Execute the command and click on the frozen window." />
 
-        <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+        <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
             style="@style/TextCode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -90,19 +89,13 @@
             android:layout_height="wrap_content"
             android:text="Or find the process id of an application and kill it." />
 
-        <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+        <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
             style="@style/TextCode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/fragment_tips_ps_code"
-            custom:commands="@array/fragment_tips_ps_code_array" />
-
-        <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
-            style="@style/TextCode"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/fragment_tips_killps_code"
-            custom:commands="@array/fragment_tips_killps_code_array" />
+            custom:commands="@array/fragment_tips_ps_code_array"
+            custom:outputRows="@array/fragment_tips_ps_code_array_outputrows"/>
 
         <TextView
             style="@style/TextMedium"
@@ -179,7 +172,7 @@
                     android:layout_column="1"
                     android:orientation="vertical">
 
-                    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+                    <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -217,7 +210,7 @@
                     android:layout_column="1"
                     android:orientation="vertical">
 
-                    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+                    <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -253,7 +246,7 @@
                     android:layout_column="1"
                     android:orientation="vertical">
 
-                    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+                    <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -289,29 +282,13 @@
                     android:layout_column="1"
                     android:orientation="vertical">
 
-                    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+                    <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-
                         android:text="@string/fragment_tips_special_characters_code_brackets"
-                        custom:commands="@array/fragment_tips_special_characters_code_brackets_array" />
-
-                    <TextView
-                        style="@style/TextCode"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-
-                        android:text="/home/simon"
-                        android:textStyle="italic" />
-
-                    <TextView
-                        style="@style/TextCode"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-
-                        android:text="/home/simon"
-                        android:textStyle="italic" />
+                        custom:commands="@array/fragment_tips_special_characters_code_brackets_array"
+                        custom:outputRows="@array/fragment_tips_special_characters_code_brackets_array_outputrows"/>
 
                 </LinearLayout>
             </TableRow>
@@ -343,26 +320,14 @@
                     android:layout_column="1"
                     android:orientation="vertical">
 
-                    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+                    <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/fragment_tips_special_characters_code_semicolon"
-                        custom:commands="@array/fragment_tips_special_characters_code_semicolon_array" />
+                        custom:commands="@array/fragment_tips_special_characters_code_semicolon_array"
+                        custom:outputRows="@array/fragment_tips_special_characters_code_semicolon_array_outputrows"/>
 
-                    <TextView
-                        style="@style/TextCode"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Hi"
-                        android:textStyle="italic" />
-
-                    <TextView
-                        style="@style/TextCode"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Linux"
-                        android:textStyle="italic" />
                 </LinearLayout>
             </TableRow>
 
@@ -393,21 +358,14 @@
                     android:layout_column="1"
                     android:orientation="vertical">
 
-                    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+                    <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-
                         android:text="@string/fragment_tips_special_characters_code_single_quote"
-                        custom:commands="@array/fragment_tips_special_characters_code_single_quote_array" />
+                        custom:commands="@array/fragment_tips_special_characters_code_single_quote_array"
+                        custom:outputRows="@array/fragment_tips_special_characters_code_single_quote_array_outputrows" />
 
-                    <TextView
-                        style="@style/TextCode"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-
-                        android:text="(echo abc).txt"
-                        android:textStyle="italic" />
                 </LinearLayout>
             </TableRow>
 
@@ -438,21 +396,13 @@
                     android:layout_column="1"
                     android:orientation="vertical">
 
-                    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+                    <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-
                         android:text="@string/fragment_tips_special_characters_code_backquote"
-                        custom:commands="@array/fragment_tips_special_characters_code_backquote_array" />
-
-                    <TextView
-                        style="@style/TextCode"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-
-                        android:text="Linux"
-                        android:textStyle="italic" />
+                        custom:commands="@array/fragment_tips_special_characters_code_backquote_array"
+                        custom:outputRows="@array/fragment_tips_special_characters_code_backquote_array_putputrows" />
 
                 </LinearLayout>
             </TableRow>
@@ -485,7 +435,7 @@
                     android:layout_column="1"
                     android:orientation="vertical">
 
-                    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+                    <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -523,7 +473,7 @@
                     android:layout_column="1"
                     android:orientation="vertical">
 
-                    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+                    <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -560,7 +510,7 @@
                     android:layout_column="1"
                     android:orientation="vertical">
 
-                    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+                    <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -598,7 +548,7 @@
                     android:layout_column="1"
                     android:orientation="vertical">
 
-                    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+                    <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -635,7 +585,7 @@
                     android:layout_column="1"
                     android:orientation="vertical">
 
-                    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+                    <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -691,7 +641,7 @@
                     android:layout_column="1"
                     android:orientation="vertical">
 
-                    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+                    <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -729,40 +679,13 @@
                     android:layout_column="1"
                     android:orientation="vertical">
 
-                    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+                    <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-
                         android:text="@string/fragment_tips_special_characters_code_substitution"
-                        custom:commands="@array/fragment_tips_special_characters_code_substitution_array" />
-
-                    <TextView
-                        style="@style/TextCode"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="icon.png"
-                        android:textStyle="italic" />
-
-                    <TextView
-                        style="@style/TextCode"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/fragment_tips_special_characters_code_substitution_part_2" />
-
-                    <TextView
-                        style="@style/TextCode"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="ls *.xcf"
-                        android:textStyle="italic" />
-
-                    <TextView
-                        style="@style/TextCode"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="icon.xcf"
-                        android:textStyle="italic" />
+                        custom:commands="@array/fragment_tips_special_characters_code_substitution_array"
+                        custom:outputRows="@array/fragment_tips_special_characters_code_substitution_array_outputrows"/>
                 </LinearLayout>
             </TableRow>
 
@@ -794,7 +717,7 @@
                     android:layout_column="1"
                     android:orientation="vertical">
 
-                    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+                    <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -861,7 +784,7 @@
                     android:layout_column="1"
                     android:orientation="vertical">
 
-                    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+                    <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -900,7 +823,7 @@
                     android:layout_column="1"
                     android:orientation="vertical">
 
-                    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+                    <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -938,7 +861,7 @@
                     android:layout_column="1"
                     android:orientation="vertical">
 
-                    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+                    <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -977,7 +900,7 @@
                     android:layout_column="1"
                     android:orientation="vertical">
 
-                    <com.inspiredandroid.linuxcommandbibliotheca.view.CodeTextView
+                    <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

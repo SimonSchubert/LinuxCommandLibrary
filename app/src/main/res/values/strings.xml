@@ -20,6 +20,7 @@
     <string name="fragment_quiz_again">Again</string>
 
     <string-array name="default_codetextview_commands" />
+    <integer-array name="default_codetextview_outputRows" />
 
     <string name="fragment_datanase_loading_craftin_database">Creating Database</string>
     <string name="fragment_datanase_loading_failed_craftin_database">Couldn\'t create database</string>
@@ -119,141 +120,137 @@
     <string name="desc_list_all_users">List all users</string>
     <string name="desc_list_all_groups">List all groups</string>
 
-    <string name="fragment_tips_clear_code">" >_ clear "</string>
+    <string name="fragment_tips_clear_code">">_ clear"</string>
     <string-array name="fragment_tips_clear_code_array">
         <item>clear</item>
     </string-array>
 
-    <string name="fragment_tips_reset_code">" >_ reset "</string>
+    <string name="fragment_tips_reset_code">">_ reset"</string>
     <string-array name="fragment_tips_reset_code_array">
         <item>reset</item>
     </string-array>
 
-    <string name="fragment_tips_history_code">" >_ history "</string>
+    <string name="fragment_tips_history_code">">_ history"</string>
     <string-array name="fragment_tips_history_code_array">
         <item>history</item>
     </string-array>
 
-    <string name="fragment_tips_xkill_code">" >_ xkill "</string>
+    <string name="fragment_tips_xkill_code">">_ xkill"</string>
     <string-array name="fragment_tips_xkill_code_array">
         <item>xkill</item>
     </string-array>
 
-    <string name="fragment_tips_tv_special_characters_code_star">" >_ find ex*.txt "</string>
+    <string name="fragment_tips_tv_special_characters_code_star">">_ find ex*.txt"</string>
     <string-array name="fragment_tips_special_characters_code_star_array">
         <item>find</item>
     </string-array>
 
-    <string name="fragment_tips_background_code">" >_ cowsay &amp; "</string>
+    <string name="fragment_tips_background_code">">_ cowsay &amp;"</string>
     <string-array name="fragment_tips_background_code_array">
         <item>cowsay</item>
     </string-array>
 
-    <string name="fragment_tips_pipe_code">" >_ fortune | cowsay "</string>
+    <string name="fragment_tips_pipe_code">">_ fortune | cowsay"</string>
     <string-array name="fragment_tips_pipe_code_array">
         <item>fortune</item>
         <item>cowsay</item>
     </string-array>
 
-    <string name="fragment_tips_ps_code">" >_ ps ax | grep firefox "</string>
+    <string name="fragment_tips_ps_code">">_ ps ax | grep firefox\n[processID] ?? S 0:00.22 firefox\n>_ kill [processID]"</string>
     <string-array name="fragment_tips_ps_code_array">
         <item>ps</item>
         <item>grep</item>
-    </string-array>
-
-    <string name="fragment_tips_killps_code">" >_ kill [processID] "</string>
-    <string-array name="fragment_tips_killps_code_array">
         <item>kill</item>
     </string-array>
 
-    <string name="fragment_tips_special_characters_code_questionmark">" >_ find ex?mple.txt "</string>
+    <string name="fragment_tips_special_characters_code_questionmark">">_ find ex?mple.txt"</string>
     <string-array name="fragment_tips_special_characters_code_questionmark_array">
         <item>find</item>
     </string-array>
 
-    <string name="fragment_tips_special_characters_code_square_brackets">" >_ find ex[abc]mple.txt "</string>
+    <string name="fragment_tips_special_characters_code_square_brackets">">_ find ex[abc]mple.txt"</string>
     <string-array name="fragment_tips_special_characters_code_square_brackets_array">
         <item>find</item>
     </string-array>
 
-    <string name="fragment_tips_special_characters_code_brackets">" >_ pwd &amp;&amp; (cd /etc) &amp;&amp; pwd "</string>
+    <string name="fragment_tips_special_characters_code_brackets">">_ pwd &amp;&amp; (cd /etc) &amp;&amp; pwd\n/home/simon\n/home/simon"</string>
     <string-array name="fragment_tips_special_characters_code_brackets_array">
         <item>pwd</item>
         <item>cd</item>
     </string-array>
 
-    <string name="fragment_tips_special_characters_code_semicolon">" >_ echo Hi ; uname "</string>
+    <string name="fragment_tips_special_characters_code_semicolon">">_ echo Hi ; uname\nHi\nLinux"</string>
     <string-array name="fragment_tips_special_characters_code_semicolon_array">
         <item>echo</item>
         <item>uname</item>
     </string-array>
 
-    <string name="fragment_tips_special_characters_code_single_quote">" >_ find \'(echo abc)\'* "</string>
+    <string name="fragment_tips_special_characters_code_single_quote">">_ find \'(echo abc)\'*\n(echo abc).txt"</string>
     <string-array name="fragment_tips_special_characters_code_single_quote_array">
         <item>find</item>
         <item>echo</item>
     </string-array>
 
-    <string name="fragment_tips_special_characters_code_backquote">" >_ echo `uname` "</string>
+    <string name="fragment_tips_special_characters_code_backquote">">_ echo `uname`\nLinux"</string>
     <string-array name="fragment_tips_special_characters_code_backquote_array">
         <item>echo</item>
         <item>uname</item>
     </string-array>
 
-    <string name="fragment_tips_special_characters_code_double_quote">" >_ cd \"untitled folder\" "</string>
+    <string name="fragment_tips_special_characters_code_double_quote">">_ cd \"untitled folder\""</string>
     <string-array name="fragment_tips_special_characters_code_double_quote_array">
         <item>cd</item>
     </string-array>
 
-    <string name="fragment_tips_special_characters_code_double_amp">" >_ ping localhost -c 1 &amp;&amp; cowsay great "</string>
+    <string name="fragment_tips_special_characters_code_double_amp">">_ ping localhost -c 1 &amp;&amp; cowsay great"</string>
     <string-array name="fragment_tips_special_characters_code_double_amp_array">
         <item>ping</item>
         <item>cowsay</item>
     </string-array>
 
-    <string name="fragment_tips_tv_special_characters_code_double_pipe">" >_ ping \"not.reachable\" -c 1 || cowsay sorry "</string>
+    <string name="fragment_tips_tv_special_characters_code_double_pipe">">_ ping \"not.reachable\" -c 1 || cowsay sorry"</string>
     <string-array name="fragment_tips_special_characters_code_double_pipe_array">
         <item>ping</item>
         <item>cowsay</item>
     </string-array>
 
-    <string name="fragment_tips_special_characters_code_excelationmark">" >_ sudo !! "</string>
+    <string name="fragment_tips_special_characters_code_excelationmark">">_ sudo !!"</string>
     <string-array name="fragment_tips_special_characters_code_excelationmark_array">
         <item>sudo</item>
     </string-array>
 
-    <string name="fragment_tips_special_characters_code_substitution">" >_ ls *.png "</string>
+    <string name="fragment_tips_special_characters_code_substitution">">_ ls *.png\ntoast.png\n>_ ^png^xcf^\nls *.xcf\nbread.xcf"</string>
     <string-array name="fragment_tips_special_characters_code_substitution_array">
         <item>ls</item>
     </string-array>
 
-    <string name="fragment_tips_special_characters_code_substitution_part_2">" >_ ^png^xcf^ "</string>
+    <string name="fragment_tips_special_characters_code_substitution_part_2">">_ ^png^xcf^"</string>
 
-    <string name="fragment_tips_special_characters_code_comment">" >_ whatis xdotool # hint: has sth todo with X11 "</string>
+    <string name="fragment_tips_special_characters_code_comment">">_ whatis xdotool # hint: has sth todo with X11"</string>
     <string-array name="fragment_tips_special_characters_code_comment_array">
         <item>whatis</item>
         <item>xdotool</item>
     </string-array>
 
-    <string name="fragment_tips_redirection_code_greater">" >_ echo \"Write output to file\" &gt; example.txt "</string>
+    <string name="fragment_tips_redirection_code_greater">">_ echo \"Write output to file\" &gt; example.txt"</string>
     <string-array name="fragment_tips_redirection_code_greater_array">
         <item>echo</item>
     </string-array>
 
-    <string name="fragment_tips_redirection_code_double_greater">" >_ echo \"Append this to file\" &gt;&gt; example.txt "</string>
+    <string name="fragment_tips_redirection_code_double_greater">">_ echo \"Append this to file\" &gt;&gt; example.txt"</string>
     <string-array name="fragment_tips_redirection_code_double_greater_array">
         <item>echo</item>
     </string-array>
 
-    <string name="fragment_tips_redirection_code_smaller">" >_ cowsay &lt; example.txt "</string>
+    <string name="fragment_tips_redirection_code_smaller">">_ cowsay &lt; example.txt"</string>
     <string-array name="fragment_tips_redirection_code_smaller_array">
         <item>cowsay</item>
     </string-array>
 
-    <string name="fragment_tips_redirection_code_error_output">" >_ rm -vf folder1 file1 > out.txt 2> err.txt "</string>
+    <string name="fragment_tips_redirection_code_error_output">">_ rm -vf folder1 file1 > out.txt 2> err.txt"</string>
     <string name="desc_mute_volume">Mute volume</string>
     <string name="turn_imags_into_video">Turn images to a video sequence</string>
-    <string name="turn_video_to_images">Turn a video to images</string>
+        <string name="turn_video_to_images">Turn a video to images</string>
     <string name="video_to_mp3">Convert sound from a video to mp3</string>
     <string name="avi_to_mpg">Convert avi to mpg</string>
     <string name="mpg_to_avi">Convert mpg to avi</string>

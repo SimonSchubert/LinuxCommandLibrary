@@ -76,7 +76,7 @@ public class AppManager {
      * @param context
      * @return
      */
-    public static String getBookmarkIdsChain(Context context) {
+    private static String getBookmarkIdsChain(Context context) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         String bookmarksChain = prefs.getString(KEY_BOOKMARKS, "");
         if (!bookmarksChain.isEmpty()) {

@@ -11,8 +11,6 @@ import android.view.ViewGroup;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.ScriptChildrenActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.ScriptChildrenAdapter;
-import com.inspiredandroid.linuxcommandbibliotheca.fragments.dialogs.ScriptDetailDialogFragment;
-import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnListClickListener;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel;
 
 import butterknife.BindView;
@@ -23,11 +21,11 @@ import io.realm.Sort;
 /**
  * Created by Simon Schubert
  */
-public class ScriptChildrenFragment extends SuperFragment implements OnListClickListener {
+public class ScriptChildrenFragment extends SuperFragment {
 
     @BindView(R.id.fragment_scriptchildren_rv)
-    RecyclerView mList;
-    Realm mRealm;
+    RecyclerView mRecyclerView;
+    private Realm mRealm;
 
     public ScriptChildrenFragment() {
     }
@@ -48,17 +46,10 @@ public class ScriptChildrenFragment extends SuperFragment implements OnListClick
         int categoryId = getActivity().getIntent().getIntExtra(ScriptChildrenActivity.EXTRA_CATEGORY_ID, 0);
 
         ScriptChildrenAdapter adapter = new ScriptChildrenAdapter(getContext(), mRealm.where(CommandGroupModel.class).equalTo(CommandGroupModel.COLUMN_CATEGORY, categoryId).findAllSorted("votes", Sort.DESCENDING), false);
-        adapter.setOnListClickListener(this);
-        mList.setAdapter(adapter);
-        mList.setLayoutManager(new LinearLayoutManager(getContext()));
+        mRecyclerView.setAdapter(adapter);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         return view;
-    }
-
-    @Override
-    public void onClick(int id) {
-        ScriptDetailDialogFragment fragment = ScriptDetailDialogFragment.getInstance(id);
-        fragment.show(getChildFragmentManager(), ScriptDetailDialogFragment.class.getName());
     }
 
     @Override

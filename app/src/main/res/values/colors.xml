@@ -2,4 +2,5 @@
 <resources>
     <color name="ab_primary">#F44336</color>
     <color name="ab_primary_dark">#D32F2F</color>
+    <color name="grey">#bcbcbc</color>
 </resources>

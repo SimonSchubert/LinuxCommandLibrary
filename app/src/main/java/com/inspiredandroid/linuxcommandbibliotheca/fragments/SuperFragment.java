@@ -21,7 +21,7 @@ public class SuperFragment extends Fragment {
     /**
      * cancel all asynctasks
      */
-    public void cancelAsyncTasks() {
+    private void cancelAsyncTasks() {
         for (AsyncTask task : mAsyncTasks) {
             if (task != null) {
                 task.cancel(true);

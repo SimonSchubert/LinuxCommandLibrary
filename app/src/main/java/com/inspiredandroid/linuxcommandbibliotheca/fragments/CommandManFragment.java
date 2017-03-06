@@ -71,7 +71,7 @@ public class CommandManFragment extends AppIndexFragment implements OnConvertFro
     }
 
     @SuppressWarnings("deprecation")
-    public static CharSequence fromHtml(String html) {
+    private static CharSequence fromHtml(String html) {
         CharSequence result;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
             result = Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY);
@@ -191,7 +191,7 @@ public class CommandManFragment extends AppIndexFragment implements OnConvertFro
     }
 
     /**
-     * Split long page text into child mList views
+     * Split long page text into child mRecyclerView views
      *
      * @return
      */
