@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.CommandManFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.DatabaseLoadingFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
@@ -28,6 +29,9 @@ public class CommandManActivity extends LoadingBaseActivity {
     public final static String EXTRA_COMMAND_CATEGORY = "EXTRA_COMMAND_CATEGORY"; //NON-NLS
 
     final static int INVALID = -1;
+    private long mId = INVALID;
+    private String mName = "";
+    private int mCategory = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +45,15 @@ public class CommandManActivity extends LoadingBaseActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        showLoadingFragment();
+        if(savedInstanceState == null) {
+            showLoadingFragment();
+        } else {
+            CharSequence title = savedInstanceState.getCharSequence("title");
+            setTitle(title);
+        }
+
+        handleIntent();
+
     }
 
     @Override
@@ -54,6 +66,12 @@ public class CommandManActivity extends LoadingBaseActivity {
         return (super.onOptionsItemSelected(item));
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putCharSequence("title", getTitle());
+        super.onSaveInstanceState(outState);
+    }
+
     /**
      * Start man fragment based on the intent data
      */
@@ -61,43 +79,35 @@ public class CommandManActivity extends LoadingBaseActivity {
         Intent intent = getIntent();
         Bundle b = intent.getExtras();
 
-        long id = b != null ? b.getLong(EXTRA_COMMAND_ID, INVALID) : INVALID;
-        String name = b != null ? b.getString(EXTRA_COMMAND_NAME) : null;
+        mId = b != null ? b.getLong(EXTRA_COMMAND_ID, INVALID) : INVALID;
+        mName = b != null ? b.getString(EXTRA_COMMAND_NAME, "") : "";
 
-        if (id != INVALID) {
-            // id is set
-            showManFragmentById(id);
-        } else if (name != null) {
-            // name is set
-            showManFragmentById(getIdByCommandName(name));
+        String action = intent.getAction();
+        String data = intent.getDataString();
+        if (Intent.ACTION_VIEW.equals(action) && data != null) {
+            String commandId = data.substring(data.lastIndexOf("/") + 1);
+            mName = commandId.substring(6, commandId.length() - 5);
+        }
+
+        if(mId != INVALID) {
+            Realm realm = Realm.getDefaultInstance();
+
+            Command command = realm.where(Command.class).equalTo(Command.ID, mId).findFirst();
+            mCategory = command.getCategory();
+            mName = command.getName().toUpperCase();
+
+            realm.close();
         } else {
-            // activity intent filter
-            String action = intent.getAction();
-            String data = intent.getDataString();
-            if (Intent.ACTION_VIEW.equals(action) && data != null) {
-                String commandId = data.substring(data.lastIndexOf("/") + 1);
-                String name2 = commandId.substring(6, commandId.length() - 5);
+            Realm realm = Realm.getDefaultInstance();
 
-                showManFragmentById(getIdByCommandName(name2));
-            }
+            Command command = realm.where(Command.class).equalTo(Command.NAME, mName).findFirst();
+            mCategory = command.getCategory();
+            mId = command.getId();
+
+            realm.close();
         }
     }
 
-    /**
-     * @param name name of the command
-     * @return unique command id
-     */
-    private long getIdByCommandName(String name) {
-        Realm realm = Realm.getDefaultInstance();
-        Command command = realm.where(Command.class).equalTo("name", name).findFirst();
-        long id = INVALID;
-        if (command != null) {
-            id = command.getId();
-        }
-        realm.close();
-
-        return id;
-    }
 
     /**
      * Find command name and category by id. If id is INVALID then stop and finish activity
@@ -110,33 +120,15 @@ public class CommandManActivity extends LoadingBaseActivity {
             return;
         }
 
-        Realm realm = Realm.getDefaultInstance();
-
-        Command command = realm.where(Command.class).equalTo(Command.ID, id).findFirst();
-        String name = command.getName().toUpperCase();
-        int category = command.getCategory();
-
-        realm.close();
-
-        showManFragment(name, id, category);
-    }
-
-    /**
-     * @param name     command name
-     * @param id       unique command id
-     * @param category command category
-     */
-    private void showManFragment(String name, long id, int category) {
-        // Set command name as actionbar title
-        setTitle(name);
+        setTitle(mName);
 
         Fragment fragment = new CommandManFragment();
 
         // Add unique command ID for fragment
         Bundle bundle = new Bundle();
         bundle.putLong(EXTRA_COMMAND_ID, id);
-        bundle.putString(EXTRA_COMMAND_NAME, name);
-        bundle.putInt(EXTRA_COMMAND_CATEGORY, category);
+        bundle.putString(EXTRA_COMMAND_NAME, mName);
+        bundle.putInt(EXTRA_COMMAND_CATEGORY, mCategory);
         fragment.setArguments(bundle);
 
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -162,7 +154,7 @@ public class CommandManActivity extends LoadingBaseActivity {
 
     @Override
     public void onDatabaseCreateSuccess() {
-        handleIntent();
+        showManFragmentById(mId);
     }
 
     @Override

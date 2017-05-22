@@ -4,8 +4,8 @@ import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.widget.SearchView;
@@ -19,10 +19,12 @@ import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.QuizActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.CommandsAdapter;
+import com.inspiredandroid.linuxcommandbibliotheca.fragments.dialogs.NewsDialogFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.dialogs.RateDialogFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.AppManager;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.FragmentCoordinator;
@@ -51,6 +53,24 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
     private CommandsAdapter mAdapter;
     private Realm mRealm;
     private String mQuery = "";
+    private FirebaseAnalytics mFirebaseAnalytics;
+    private Handler mHandler;
+    private String lastTrackedQuery = "";
+    private final Runnable mConnectionCheck = new Runnable() {
+        @Override
+        public void run() {
+            if (!lastTrackedQuery.equals(mQuery)) {
+                lastTrackedQuery = mQuery;
+            }
+
+            Bundle bundle = new Bundle();
+            bundle.putString(FirebaseAnalytics.Param.VALUE, mQuery);
+            bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "CommandsList");
+            mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SEARCH, bundle);
+
+            mHandler.postDelayed(this, 1000);
+        }
+    };
 
     public CommandsFragment() {
     }
@@ -64,10 +84,17 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
         mRealm = Realm.getDefaultInstance();
         mAdapter = new CommandsAdapter(getContext(), getAllCommands(), false);
 
-        if (AppManager.shouldShowRateDialog(getContext())) {
+        if (AppManager.shouldShowNewsDialog(getContext())) {
+            NewsDialogFragment newDialogFragment = NewsDialogFragment.getInstance();
+            newDialogFragment.show(getChildFragmentManager(), newDialogFragment.getClass().getCanonicalName());
+        } else if (AppManager.shouldShowRateDialog(getContext())) {
             RateDialogFragment rateDialogFragment = RateDialogFragment.getInstance();
             rateDialogFragment.show(getChildFragmentManager(), RateDialogFragment.class.getName());
         }
+
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(getContext());
+
+        mHandler = new Handler();
     }
 
     @Override
@@ -83,6 +110,13 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
     }
 
     @Override
+    public void onPause() {
+        super.onPause();
+
+        mHandler.removeCallbacks(mConnectionCheck);
+    }
+
+    @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         FragmentCoordinator.startCommandManActivity(getActivity(), id);
     }
@@ -91,46 +125,47 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.main, menu);
 
-        // Associate searchable configuration with the SearchView
-        SearchManager searchManager = (SearchManager) getActivity().getSystemService(Context.SEARCH_SERVICE);
         MenuItem item = menu.findItem(R.id.search);
-        if (Build.VERSION.SDK_INT >= 11) {
-            SearchView searchView = (SearchView) item.getActionView();
-            searchView.setSearchableInfo(searchManager.getSearchableInfo(getActivity().getComponentName()));
+        SearchView searchView = (SearchView) MenuItemCompat.getActionView(item);
 
-            // Associate searchable configuration with the SearchView
-            searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+        SearchManager searchManager = (SearchManager) getActivity().getSystemService(Context.SEARCH_SERVICE);
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(getActivity().getComponentName()));
 
-                @Override
-                public boolean onQueryTextSubmit(String s) {
-                    return false;
-                }
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
 
-                @Override
-                public boolean onQueryTextChange(String query) {
-                    mQuery = query;
-                    if (query.length() > 0) {
-                        String normalizedText = Normalizer.normalize(query, Normalizer.Form.NFD).replaceAll("\\p{InCombiningDiacriticalMarks}+", "").toLowerCase();
-                        search(normalizedText);
-                    } else {
-                        resetSearchResults();
-                    }
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String query) {
+                if (!isAdded()) {
                     return true;
                 }
-            });
-            MenuItemCompat.setOnActionExpandListener(item, new MenuItemCompat.OnActionExpandListener() {
-                @Override
-                public boolean onMenuItemActionExpand(MenuItem item) {
-                    return true;
-                }
-
-                @Override
-                public boolean onMenuItemActionCollapse(MenuItem item) {
+                mQuery = query;
+                if (query.length() > 0) {
+                    String normalizedText = Normalizer.normalize(query, Normalizer.Form.NFD).replaceAll("\\p{InCombiningDiacriticalMarks}+", "").toLowerCase();
+                    search(normalizedText);
+                } else {
                     resetSearchResults();
-                    return true;
                 }
-            });
-        }
+
+                return true;
+            }
+        });
+        MenuItemCompat.setOnActionExpandListener(item, new MenuItemCompat.OnActionExpandListener() {
+            @Override
+            public boolean onMenuItemActionExpand(MenuItem item) {
+                return true;
+            }
+
+            @Override
+            public boolean onMenuItemActionCollapse(MenuItem item) {
+                resetSearchResults();
+                return true;
+            }
+        });
     }
 
     @Override
@@ -166,6 +201,8 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
     public void onResume() {
         super.onResume();
 
+        mHandler.postDelayed(mConnectionCheck, 1000);
+
         if (AppManager.hasBookmarkChanged(getContext())) {
             resetSearchResults();
         }
@@ -181,6 +218,11 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
             startActivity(Intent.createChooser(intent, "Send mail..."));
         } catch (android.content.ActivityNotFoundException ignored) {
         }
+
+        Bundle bundle = new Bundle();
+        bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, mQuery);
+        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "RequestCommand");
+        mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
     }
 
     /**

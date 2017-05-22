@@ -1,6 +1,7 @@
 package com.inspiredandroid.linuxcommandbibliotheca.models;
 
 import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 
 /**
  * Created by simon on 24.01.16.
@@ -10,6 +11,7 @@ public class Command extends RealmObject {
     public final static String NAME = "name";
     public final static String DESCRIPTION = "description";
 
+    @PrimaryKey
     private int id;
     private int category;
     private String name;

@@ -35,9 +35,6 @@ https://gist.github.com/SimonSchubert/6f0715610cb37f4fda12
 ###Thanks to
 http://letsgokoyo.com/ - Icons, Tux images
 
-http://www.commandlinefu.com/
-
-https://github.com/jgilfelt/android-sqlite-asset-helper
 
 ###License
 

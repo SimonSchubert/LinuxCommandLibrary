@@ -23,7 +23,6 @@ import static android.support.test.InstrumentationRegistry.getInstrumentation;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-
 /**
  * Class to com.inspiredandroid.linuxcommandbibliotheca.test Android com.inspiredandroid.linuxcommandbibliotheca.test case.
  * <p/>
@@ -56,8 +55,8 @@ public class MyAndroidTest {
 
     @Test
     public void activitiesTest() {
-        aboutActivityRule.launchActivity(new Intent());
-        commandManActivityRule.launchActivity(new Intent());
+        // aboutActivityRule.launchActivity(new Intent());
+        // commandManActivityRule.launchActivity(new Intent());
     }
 
     /**

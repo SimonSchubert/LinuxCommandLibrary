@@ -3,7 +3,6 @@ package com.inspiredandroid.linuxcommandbibliotheca.fragments;
 import android.app.SearchManager;
 import android.content.Context;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.widget.SearchView;
@@ -18,6 +17,7 @@ import android.widget.ExpandableListView;
 import android.widget.ImageButton;
 
 import com.google.android.gms.appindexing.Action;
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.inspiredandroid.linuxcommandbibliotheca.CommandManActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.ManExpandableListAdapter;
@@ -47,6 +47,7 @@ public class CommandManFragment extends AppIndexFragment implements OnConvertFro
     ExpandableListView mList;
     private ManExpandableListAdapter mAdapter;
     private Realm mRealm;
+    private FirebaseAnalytics mFirebaseAnalytics;
     private String mName;
     private long mId;
     private int mCategory;
@@ -61,7 +62,7 @@ public class CommandManFragment extends AppIndexFragment implements OnConvertFro
      * @param partitionSize
      * @return
      */
-    private static ArrayList<String> getParts(String string, int partitionSize) {
+    private ArrayList<String> getParts(String string, int partitionSize) {
         ArrayList<String> parts = new ArrayList<>();
         int len = string.length();
         for (int i = 0; i < len; i += partitionSize) {
@@ -71,7 +72,7 @@ public class CommandManFragment extends AppIndexFragment implements OnConvertFro
     }
 
     @SuppressWarnings("deprecation")
-    private static CharSequence fromHtml(String html) {
+    private CharSequence fromHtml(String html) {
         CharSequence result;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
             result = Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY);
@@ -110,6 +111,15 @@ public class CommandManFragment extends AppIndexFragment implements OnConvertFro
         mRealm = Realm.getDefaultInstance();
 
         mAdapter = createAdapter();
+
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(getContext());
+
+        Bundle bundle = new Bundle();
+        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, mId + "");
+        bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, mName);
+        bundle.putInt(FirebaseAnalytics.Param.ITEM_CATEGORY, mCategory);
+        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "ManDetail");
+        mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.VIEW_ITEM, bundle);
     }
 
     @Override
@@ -140,41 +150,39 @@ public class CommandManFragment extends AppIndexFragment implements OnConvertFro
         // Associate searchable configuration with the SearchView
         SearchManager searchManager = (SearchManager) getActivity().getSystemService(Context.SEARCH_SERVICE);
         MenuItem item = menu.findItem(R.id.search);
-        if (Build.VERSION.SDK_INT >= 11) {
-            SearchView searchView = (SearchView) item.getActionView();
-            searchView.setSearchableInfo(searchManager.getSearchableInfo(getActivity().getComponentName()));
+        SearchView searchView = (SearchView) item.getActionView();
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(getActivity().getComponentName()));
 
-            // Associate searchable configuration with the SearchView
-            searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+        // Associate searchable configuration with the SearchView
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
 
-                @Override
-                public boolean onQueryTextSubmit(String s) {
-                    return false;
-                }
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
 
-                @Override
-                public boolean onQueryTextChange(String query) {
-                    if (query.length() > 0) {
-                        search(query);
-                    } else {
-                        resetSearchResults();
-                    }
-                    return true;
-                }
-            });
-            MenuItemCompat.setOnActionExpandListener(item, new MenuItemCompat.OnActionExpandListener() {
-                @Override
-                public boolean onMenuItemActionExpand(MenuItem item) {
-                    return true;
-                }
-
-                @Override
-                public boolean onMenuItemActionCollapse(MenuItem item) {
+            @Override
+            public boolean onQueryTextChange(String query) {
+                if (query.length() > 0) {
+                    search(query);
+                } else {
                     resetSearchResults();
-                    return true;
                 }
-            });
-        }
+                return true;
+            }
+        });
+        MenuItemCompat.setOnActionExpandListener(item, new MenuItemCompat.OnActionExpandListener() {
+            @Override
+            public boolean onMenuItemActionExpand(MenuItem item) {
+                return true;
+            }
+
+            @Override
+            public boolean onMenuItemActionCollapse(MenuItem item) {
+                resetSearchResults();
+                return true;
+            }
+        });
 
         MenuItem bookmarkItem = menu.findItem(R.id.bookmark);
         bookmarkItem.setIcon(AppManager.hasBookmark(getContext(), mId) ? R.drawable.ic_bookmark_white_24dp : R.drawable.ic_bookmark_border_white_24dp);

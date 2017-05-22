@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -14,10 +15,11 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:layout_below="@+id/toolbar"
-        android:orientation="horizontal"
-        android:baselineAligned="false">
+        android:layout_weight="1"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
 
         <FrameLayout
             android:id="@+id/fragment_container"
@@ -25,34 +27,27 @@
             android:layout_height="match_parent"
             android:layout_weight="1" />
 
-        <LinearLayout
+
+        <FrameLayout
+            android:id="@+id/fragment_container_secondary"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:layout_weight="1">
 
-            <TextView
-                android:id="@+id/fragment_container_secondary_title"
+            <include
+                layout="@layout/fragment_welcome"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:background="?attr/colorPrimary"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textSize="18sp"
-                android:text="WELCOME"/>
-
-            <FrameLayout
-                android:id="@+id/fragment_container_secondary"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <include
-                    layout="@layout/fragment_welcome"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-            </FrameLayout>
-        </LinearLayout>
+                android:layout_height="match_parent" />
+        </FrameLayout>
 
     </LinearLayout>
 
-</RelativeLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/navigation" />
+
+</LinearLayout>

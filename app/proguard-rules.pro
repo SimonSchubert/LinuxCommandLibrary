@@ -24,3 +24,4 @@
 -keep class butterknife.*
 -keepclasseswithmembernames class * { @butterknife.* <methods>; }
 -keepclasseswithmembernames class * { @butterknife.* <fields>; }
+-keep class android.support.v7.widget.SearchView { *; }
