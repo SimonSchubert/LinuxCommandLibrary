@@ -2,7 +2,6 @@ package com.inspiredandroid.linuxcommandbibliotheca.adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -31,8 +30,8 @@ import io.realm.RealmRecyclerViewAdapter;
 public class ScriptChildrenAdapter extends RealmRecyclerViewAdapter<CommandGroupModel, ScriptChildrenAdapter.ViewHolder> {
 
     private HashMap<Integer,Boolean> expanded;
-    public ScriptChildrenAdapter(@NonNull Context context, @Nullable OrderedRealmCollection<CommandGroupModel> data, boolean autoUpdate) {
-        super(context, data, autoUpdate);
+    public ScriptChildrenAdapter(@Nullable OrderedRealmCollection<CommandGroupModel> data, boolean autoUpdate) {
+        super(data, autoUpdate);
         expanded = new HashMap<>();
     }
 
@@ -48,8 +47,8 @@ public class ScriptChildrenAdapter extends RealmRecyclerViewAdapter<CommandGroup
     public void onBindViewHolder(ScriptChildrenAdapter.ViewHolder viewHolder, int position) {
         CommandGroupModel item = getData().get(position);
 
-        viewHolder.name.setText(CommandGroupModel.getDescResourceId(item));
-        viewHolder.icon.setImageResource(CommandGroupModel.getImageResourceId(item));
+        viewHolder.name.setText(item.getDesc());
+        viewHolder.icon.setImageResource(item.getImageResourceId());
         viewHolder.details.removeAllViews();
         for(CommandChildModel command : item.getCommands()) {
             View v = LayoutInflater.from(viewHolder.itemView.getContext()).inflate(R.layout.row_scriptchild_child, viewHolder.details, false);

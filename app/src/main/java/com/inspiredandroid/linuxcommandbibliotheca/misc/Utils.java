@@ -74,25 +74,20 @@ public class Utils {
         // ignore case and accents
         // the same thing should have been done for the search text
         String normalizedText = Normalizer.normalize(originalText, Normalizer.Form.NFD).replaceAll("\\p{InCombiningDiacriticalMarks}+", "").toLowerCase();
+        Spannable highlighted = new SpannableString(originalText);
 
-        int start = normalizedText.indexOf(query);
-        if (start < 0) {
-            // not found, nothing to to
-            return originalText;
-        } else {
-            // highlightQueryInsideText each appearance in the original text
-            // while searching in normalized text
-            Spannable highlighted = new SpannableString(originalText);
+        for (String subSearchQuery : query.split("[,\\s]+")) {
+            int start = normalizedText.indexOf(subSearchQuery);
             while (start >= 0) {
                 int spanStart = Math.min(start, originalText.length());
-                int spanEnd = Math.min(start + query.length(), originalText.length());
+                int spanEnd = Math.min(start + subSearchQuery.length(), originalText.length());
 
-                highlighted.setSpan(new ForegroundColorSpan(ContextCompat.getColor(context, R.color.ab_primary_dark)), spanStart, spanEnd, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                highlighted.setSpan(new ForegroundColorSpan(ContextCompat.getColor(context, R.color.ab_primary)), spanStart, spanEnd, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
-                start = normalizedText.indexOf(query, spanEnd);
+                start = normalizedText.indexOf(subSearchQuery, spanEnd);
             }
-
-            return highlighted;
         }
+
+        return highlighted;
     }
 }

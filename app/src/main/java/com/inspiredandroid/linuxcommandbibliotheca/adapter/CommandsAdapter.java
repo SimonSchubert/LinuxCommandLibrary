@@ -1,7 +1,6 @@
 package com.inspiredandroid.linuxcommandbibliotheca.adapter;
 
 import android.content.Context;
-import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -56,11 +55,11 @@ public class CommandsAdapter extends RealmMultiAdapter<Command> implements ListA
         Command item = getItem(position);
         viewHolder.name.setText(Utils.highlightQueryInsideText(mContext, mQuery, item.getName()));
         viewHolder.description.setText(Utils.highlightQueryInsideText(mContext, mQuery, item.getDescription().trim()));
-        viewHolder.icon.setImageResource(getSectionImageResource(item.getCategory()));
+
         if (mIds.contains((long) item.getId())) {
-            viewHolder.icon.setColorFilter(ContextCompat.getColor(mContext, R.color.ab_primary));
+            viewHolder.icon.setImageResource(R.drawable.ic_bookmark_white_24dp);
         } else {
-            viewHolder.icon.setColorFilter(null);
+            viewHolder.icon.setImageResource(getSectionImageResource(item.getCategory()));
         }
 
         return convertView;

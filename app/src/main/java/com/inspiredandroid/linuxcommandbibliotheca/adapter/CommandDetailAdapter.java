@@ -50,20 +50,7 @@ public class CommandDetailAdapter extends RecyclerView.Adapter<CommandDetailAdap
 
         viewHolder.command.setText(item.getCommand());
         viewHolder.command.setCommands(CommandChildModel.getMans(item));
-        viewHolder.share.setOnClickListener(v -> handleCommandClick(item));
-    }
-
-    /**
-     * decide how to handle share
-     *
-     * @param command
-     */
-    private void handleCommandClick(CommandChildModel command) {
-        if (((Activity) mContext).getCallingActivity() != null) {
-            returnResult(command);
-        } else {
-            startShareActivity(command);
-        }
+        viewHolder.share.setOnClickListener(v -> startShareActivity(item));
     }
 
     /**
@@ -78,19 +65,6 @@ public class CommandDetailAdapter extends RecyclerView.Adapter<CommandDetailAdap
         mContext.startActivity(intent);
     }
 
-    /**
-     * return command to external calling activity
-     *
-     * @param command
-     */
-    private void returnResult(CommandChildModel command) {
-        Intent data = new Intent();
-        data.putExtra(CommandBibliothecaActivity.EXTRA_COMMAND, command.getCommand());
-        data.putExtra(CommandBibliothecaActivity.EXTRA_ICON, mCommandGroupModel.getIconBase64());
-
-        ((Activity) mContext).setResult(Activity.RESULT_OK, data);
-        ((Activity) mContext).finish();
-    }
 
     class ViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.row_scriptdescription_child_tv_description)

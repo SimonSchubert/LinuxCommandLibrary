@@ -15,7 +15,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.CommandManActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.ScriptChildrenActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.CommandManFragment;
-import com.inspiredandroid.linuxcommandbibliotheca.fragments.ScriptChildrenFragment;
+import com.inspiredandroid.linuxcommandbibliotheca.fragments.BasicChildrenFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
 
 import io.realm.Realm;
@@ -31,14 +31,12 @@ public class FragmentCoordinator {
             intent.putExtra(ScriptChildrenActivity.EXTRA_CATEGORY_ID, category);
             activity.startActivity(intent);
         } else {
-            ((TextView) activity.findViewById(R.id.fragment_container_secondary_title)).setText(ScriptChildrenActivity.getDescriptionForCategory(category));
-
             View container = activity.findViewById(R.id.fragment_container_secondary);
             ((ViewGroup) container).removeAllViews();
 
             activity.getIntent().putExtra(ScriptChildrenActivity.EXTRA_CATEGORY_ID, category);
 
-            Fragment fragment = new ScriptChildrenFragment();
+            Fragment fragment = new BasicChildrenFragment();
 
             FragmentManager fragmentManager = activity.getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -70,21 +68,19 @@ public class FragmentCoordinator {
     }
 
     public static void startCommandManActivity(FragmentActivity activity, String name) {
+        Realm realm = Realm.getDefaultInstance();
+        Command command = realm.where(Command.class).equalTo(Command.NAME, name).findFirst();
+        long id = command.getId();
+        int category = command.getCategory();
+        realm.close();
+
         if (!isTabletLayout(activity)) {
             Intent intent = new Intent(activity, CommandManActivity.class);
-            intent.putExtra(CommandManActivity.EXTRA_COMMAND_NAME, name);
+            intent.putExtra(CommandManActivity.EXTRA_COMMAND_ID, id);
             activity.startActivity(intent);
         } else {
             View container = activity.findViewById(R.id.fragment_container_secondary);
             ((ViewGroup) container).removeAllViews();
-
-            Realm realm = Realm.getDefaultInstance();
-
-            Command command = realm.where(Command.class).equalTo(Command.NAME, name).findFirst();
-            long id = command.getId();
-            int category = command.getCategory();
-
-            realm.close();
 
             showManFragmentInSecondaryFrame(activity, name, id, category);
         }
@@ -96,8 +92,6 @@ public class FragmentCoordinator {
      * @param category command category
      */
     private static void showManFragmentInSecondaryFrame(FragmentActivity activity, String name, long id, int category) {
-        ((TextView) activity.findViewById(R.id.fragment_container_secondary_title)).setText(name.toUpperCase());
-
         Fragment fragment = new CommandManFragment();
 
         // Add unique command ID for fragment

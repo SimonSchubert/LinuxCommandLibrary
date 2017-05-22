@@ -1,46 +1,109 @@
 package com.inspiredandroid.linuxcommandbibliotheca;
 
 import android.os.Bundle;
+import android.support.annotation.IntDef;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
-import com.inspiredandroid.linuxcommandbibliotheca.fragments.BibliothecaFragment;
+import com.inspiredandroid.linuxcommandbibliotheca.fragments.BasicGroupsFragment;
+import com.inspiredandroid.linuxcommandbibliotheca.fragments.CommandsFragment;
+import com.inspiredandroid.linuxcommandbibliotheca.fragments.NavigationFragmentFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.DatabaseLoadingFragment;
+import com.inspiredandroid.linuxcommandbibliotheca.fragments.TipsFragment;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * Created by Simon Schubert
  * <p/>
- * This Activity just holds the BibliothecaFragment
+ * This Activity just holds the NavigationFragmentFragment
  */
 public class CommandBibliothecaActivity extends LoadingBaseActivity {
 
-    public final static String EXTRA_COMMAND = "extra_command"; //NON-NLS
-    public static final String EXTRA_ICON = "extra_icon"; //NON-NLS
+    @IntDef({ID.COMMANDS, ID.BASIC, ID.TIPS})
+    @Retention(RetentionPolicy.SOURCE)
+    @interface ID {
+        int COMMANDS = 0;
+        int BASIC = 1;
+        int TIPS = 2;
+    }
+
+    @BindView(R.id.navigation)
+    BottomNavigationView navigation;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
+
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+            = item -> {
+        switch (item.getItemId()) {
+            case R.id.navigation_commands:
+                startFragment(ID.COMMANDS);
+                return true;
+            case R.id.navigation_basics:
+                startFragment(ID.BASIC);
+                return true;
+            case R.id.navigation_tips:
+                startFragment(ID.TIPS);
+                return true;
+        }
+        return false;
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_commandbibliotheca);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        ButterKnife.bind(this, this);
+
         setSupportActionBar(toolbar);
 
-        showLoadingFragment();
+        if(savedInstanceState == null) {
+            showLoadingFragment();
+        } else {
+            CharSequence title = savedInstanceState.getCharSequence("title");
+            setTitle(title);
+        }
+
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
 
-    /**
-     *
-     */
-    private void showBibliothecaFragment() {
-        Fragment fragment = new BibliothecaFragment();
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putCharSequence("title", getTitle());
+        super.onSaveInstanceState(outState);
+    }
 
-        fragmentTransaction.replace(R.id.fragment_container, fragment);
-        fragmentTransaction.commit();
+    private void startFragment(@ID int id) {
+        Fragment fragment = null;
+        switch (id) {
+            case ID.COMMANDS:
+                fragment = new CommandsFragment();
+                setTitle(R.string.fragment_bibliotheca_commands);
+                break;
+            case ID.BASIC:
+                fragment = new BasicGroupsFragment();
+                setTitle(R.string.fragment_bibliotheca_basic);
+                break;
+            case ID.TIPS:
+                fragment = new TipsFragment();
+                setTitle(R.string.tip);
+                break;
+        }
+
+        final FragmentManager fragmentManager = getSupportFragmentManager();
+        final FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.replace(R.id.fragment_container, fragment).commit();
     }
 
     /**
@@ -53,11 +116,13 @@ public class CommandBibliothecaActivity extends LoadingBaseActivity {
 
         fragmentTransaction.replace(R.id.fragment_container, fragment);
         fragmentTransaction.commit();
+        navigation.setVisibility(View.GONE);
     }
 
     @Override
     public void onDatabaseCreateSuccess() {
-        showBibliothecaFragment();
+        startFragment(ID.COMMANDS);
+        navigation.setVisibility(View.VISIBLE);
     }
 
     @Override

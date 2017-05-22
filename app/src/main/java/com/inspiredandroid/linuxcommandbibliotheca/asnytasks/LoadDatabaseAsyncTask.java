@@ -50,30 +50,7 @@ public class LoadDatabaseAsyncTask extends AsyncTask<Boolean, Void, Boolean> {
             }
         }
 
-        // applyPatch();
-
         return true;
-    }
-
-    private void applyPatch() {
-        Realm realm = Realm.getDefaultInstance();
-        if (realm.where(Command.class).equalTo(Command.NAME, "lsof").findFirst() == null) {
-            realm.beginTransaction();
-            try {
-                realm.createAllFromJson(Command.class, mContext.getResources().openRawResource(R.raw.commands_patch_0));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            try {
-                realm.createAllFromJson(CommandPage.class, mContext.getResources().openRawResource(R.raw.commands_page_patch_0));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            realm.commitTransaction();
-        }
-
-        Log.e("TAG", "cid: " + realm.where(Command.class).max(Command.ID) + ", pid: " + realm.where(CommandPage.class).max("id"));
-        realm.close();
     }
 
     private void copyBundledRealmFile(InputStream inputStream) throws IOException {

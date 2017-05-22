@@ -16,8 +16,22 @@ public class AppManager {
     private static final String KEY_BOOKMARKS = "KEY_BOOKMARKS";
     private static final String KEY_BOOKMARKCHANGED = "KEY_BOOKMARKCHANGED";
     private static final String KEY_DATABASE_VERSION = "KEY_DATABASE_VERSION";
+    private static final String KEY_HIDE_ADVERTISING = "KEY_HIDE_ADVERTISING";
+    private static final String KEY_NEWS_DIALOG_STATE = "KEY_NEWS_DIALOG_STATE";
 
-    private static int CURRENTDATABSEVERSION = 1;
+    private static int CURRENTDATABSEVERSION = 2;
+
+    public static boolean getHideAdvertising(Context context) {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        return prefs.getBoolean(KEY_HIDE_ADVERTISING, false);
+    }
+
+    public static void setHideAdvertising(Context context, boolean hide) {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putBoolean(KEY_HIDE_ADVERTISING, hide);
+        editor.apply();
+    }
 
     public static boolean isDatabaseVersionUpToDate(Context context) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
@@ -152,5 +166,18 @@ public class AppManager {
         boolean changed = prefs.getBoolean(KEY_BOOKMARKCHANGED, false);
         prefs.edit().putBoolean(KEY_BOOKMARKCHANGED, false).apply();
         return changed;
+    }
+
+    public static boolean shouldShowNewsDialog(Context context) {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        if (prefs.getInt(KEY_NEWS_DIALOG_STATE, 0) < 1) {
+
+            SharedPreferences.Editor edit = prefs.edit();
+            edit.putInt(KEY_NEWS_DIALOG_STATE, 1);
+            edit.apply();
+
+            return true;
+        }
+        return false;
     }
 }

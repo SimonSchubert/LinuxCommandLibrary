@@ -16,21 +16,16 @@ public class CommandGroupModel extends RealmObject {
 
     @PrimaryKey
     private int id;
-
-    private int category;
-    private int desc;
-    private String iconResource;
-    private String iconBase64;
-    private String descStr;
-    private int votes;
+    private String desc;
+    private long votes;
     private RealmList<CommandChildModel> commands;
 
     public CommandGroupModel() {
 
     }
 
-    public static int getImageResourceId(CommandGroupModel model) {
-        switch (model.getId()) {
+    public int getImageResourceId() {
+        switch (getId()) {
             case 0:
                 return R.drawable.icon_info_interface;
             case 1:
@@ -191,183 +186,43 @@ public class CommandGroupModel extends RealmObject {
                 return R.drawable.ic_switch_video_white_48dp;
             case 97:
                 return R.drawable.ic_switch_video_white_48dp;
-        }
-        return -1;
-    }
-
-    public static int getDescResourceId(CommandGroupModel model) {
-        switch (model.getId()) {
-            case 0:
-                return R.string.desc_get_cpu_usage;
-            case 1:
-                return R.string.desc_battery_usage;
-            case 2:
-                return R.string.desc_bluetooth_mac;
-            case 3:
-                return R.string.desc_bluetooth_name;
-            case 4:
-                return R.string.desc_print_network_interfaces;
-            case 5:
-                return R.string.desc_print_memory_info;
-            case 6:
-                return R.string.desc_lock_screen;
-            case 7:
-                return R.string.desc_unlock_screen;
-            case 8:
-                return R.string.desc_print_system_info;
-            case 9:
-                return R.string.desc_print_pci_devices;
-            case 10:
-                return R.string.desc_print_usb_devices;
-            case 11:
-                return R.string.desc_print_block_devices;
-            case 12:
-                return R.string.desc_print_external_ip;
-            case 13:
-                return R.string.desc_reboot_system;
-            case 14:
-                return R.string.desc_shutdown_system;
-            case 15:
-                return R.string.desc_shutdown_system_at_time;
-            case 16:
-                return R.string.desc_print_ssh_version;
-            case 17:
-                return R.string.desc_print_uptime;
-            case 18:
-                return R.string.desc_print_deisk_info;
-            case 19:
-                return R.string.desc_print_bootlog_info;
-            case 20:
-                return R.string.desc_take_screenshot;
-            case 21:
-                return R.string.desc_take_webcame_photo;
-            case 22:
-                return R.string.desc_stop_bluetooth;
-            case 23:
-                return R.string.desc_start_bluetooth;
-            case 24:
-                return R.string.desc_stop_wifi;
-            case 25:
-                return R.string.desc_start_wifi;
-            case 26:
-                return R.string.desc_play_text_by_computer_voice;
-            case 27:
-                return R.string.desc_play_audio_file;
-            case 28:
-                return R.string.desc_play_beep;
-            case 29:
-                return R.string.desc_turn_off_monitor;
-            case 31:
-                return R.string.desc_get_network_card;
-            case 158:
-                return R.string.desc_download_file;
-            case 191:
-                return R.string.desc_get_domain_info;
-            case 201:
-                return R.string.desc_ping_info;
-            case 189:
-                return R.string.desc_configure_network_interface;
-            case 81:
-                return R.string.desc_show_current_directory;
-            case 94:
-                return R.string.desc_move_rename_file;
-            case 245:
-                return R.string.desc_copy_file_or_directory;
-            case 69:
-                return R.string.desc_change_directory;
-            case 237:
-                return R.string.desc_display_file_content;
-            case 174:
-                return R.string.desc_list_directory;
-            case 212:
-                return R.string.desc_set_file_permission;
-            case 240:
-                return R.string.desc_delete_folder;
-            case 167:
-                return R.string.desc_create_folder;
-            case 127:
-                return R.string.desc_delete_file;
-            case 70:
-                return R.string.desc_create_file;
-            case 49:
-                return R.string.desc_add_user_to_group;
-            case 110:
-                return R.string.desc_delete_group;
-            case 117:
-                return R.string.desc_create_group;
-            case 37:
-                return R.string.desc_set_user_passord;
-            case 71:
-                return R.string.desc_delete_user;
-            case 122:
-                return R.string.desc_create_user;
-            case 102:
-                return R.string.desc_find_file_by_name;
-            case 90:
-                return R.string.desc_list_of_path;
-            case 143:
-                return R.string.desc_executable_path;
-            case 87:
-                return R.string.desc_whereis;
-            case 320:
-                return R.string.desc_print_hostname_of_box;
-            case 138:
-                return R.string.desc_print_traeroute_to_host;
-            case 45:
-                return R.string.desc_telnet;
-            case 106:
-                return R.string.desc_dns_lookup;
-            case 116:
-                return R.string.desc_release_ip_dhcp;
-            case 221:
-                return R.string.desc_open_sockets;
-            case 52:
-                return R.string.desc_create_physical_link;
-            case 113:
-                return R.string.desc_find_phrase_inside_file;
-            case 32:
-                return R.string.desc_search_command_in_history;
-            case 208:
-                return R.string.desc_delete_user_from_group;
-            case 157:
-                return R.string.desc_add_new_user_to_group;
-            case 137:
-                return R.string.desc_edit_text_file;
-            case 352:
-                return R.string.desc_change_username;
-            case 82:
-                return R.string.desc_list_all_users;
-            case 164:
-                return R.string.desc_list_all_groups;
-            case 120:
-                return R.string.desc_change_groupname;
-            case 428:
-                return R.string.desc_mute_volume;
-            case 48:
-                return R.string.turn_imags_into_video;
-            case 39:
-                return R.string.turn_video_to_images;
-            case 427:
-                return R.string.video_to_mp3;
-            case 107:
-                return R.string.avi_to_mpg;
-            case 185:
-                return R.string.mpg_to_avi;
-            case 234:
-                return R.string.avi_to_flv;
-            case 97:
-                return R.string.avi_to_gif;
+            case 430:
+            case 431:
+            case 432:
+            case 433:
+            case 434:
+            case 435:
+            case 436:
+            case 437:
+            case 438:
+            case 439:
+            case 440:
+                return R.drawable.ic_videogame_asset_white_48dp;
+            case 443:
+                return R.drawable.ic_vpn_key_white_48dp;
+            case 450:
+                return R.drawable.ic_wifi_white_48dp;
+            case 446:
+                return R.drawable.ic_info_white_48dp;
+            case 451:
+                return R.drawable.ic_report_white_48dp;
+            case 445:
+                return R.drawable.ic_loupe_white_48dp;
+            case 444:
+                return R.drawable.ic_fingerprint_white_48dp;
+            case 448:
+                return R.drawable.ic_public_white_48dp;
+            case 447:
+                return R.drawable.ic_healing_white_48dp;
+            case 441:
+                return R.drawable.ic_flash_on_white_48dp;
+            case 449:
+                return R.drawable.ic_storage_white_48dp;
+            case 452:
+                return R.drawable.ic_user_sudo_white_48dp;
 
         }
-        return -1;
-    }
-
-    public int getVotes() {
-        return votes;
-    }
-
-    public void setVotes(int votes) {
-        this.votes = votes;
+        return R.drawable.ic_switch_video_white_48dp;
     }
 
     public int getId() {
@@ -378,44 +233,20 @@ public class CommandGroupModel extends RealmObject {
         this.id = id;
     }
 
-    public int getCategory() {
-        return category;
-    }
-
-    public void setCategory(int category) {
-        this.category = category;
-    }
-
-    public int getDesc() {
+    public String getDesc() {
         return desc;
     }
 
-    public void setDesc(int desc) {
+    public void setDesc(String desc) {
         this.desc = desc;
     }
 
-    public String getDescStr() {
-        return descStr;
+    public long getVotes() {
+        return votes;
     }
 
-    public void setDescStr(String descStr) {
-        this.descStr = descStr;
-    }
-
-    public String getIconBase64() {
-        return iconBase64;
-    }
-
-    public void setIconBase64(String value) {
-        iconBase64 = value;
-    }
-
-    public String getIconResource() {
-        return iconResource;
-    }
-
-    public void setIconResource(String iconResource) {
-        this.iconResource = iconResource;
+    public void setVotes(long votes) {
+        this.votes = votes;
     }
 
     public RealmList<CommandChildModel> getCommands() {

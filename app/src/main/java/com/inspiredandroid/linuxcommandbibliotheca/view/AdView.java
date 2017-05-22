@@ -7,6 +7,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.inspiredandroid.linuxcommandbibliotheca.misc.AppManager;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
 
 /**
@@ -31,7 +32,7 @@ public class AdView extends ImageView {
 
     private void init() {
         // Hide ads if remote is already installed
-        if (Utils.isAppInstalled(getContext(), Utils.PACKAGE_LINUXREMOTE) || Utils.isAppInstalled(getContext(), Utils.PACKAGE_LINUXREMOTE_PRO)) {
+        if (AppManager.getHideAdvertising(getContext()) || Utils.isAppInstalled(getContext(), Utils.PACKAGE_LINUXREMOTE) || Utils.isAppInstalled(getContext(), Utils.PACKAGE_LINUXREMOTE_PRO)) {
             setVisibility(View.GONE);
         } else {
             setOnClickListener(view -> startRemoteControl());

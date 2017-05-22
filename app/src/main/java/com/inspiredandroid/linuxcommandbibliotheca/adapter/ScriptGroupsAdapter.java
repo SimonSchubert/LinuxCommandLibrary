@@ -1,41 +1,42 @@
 package com.inspiredandroid.linuxcommandbibliotheca.adapter;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnListClickListener;
+import com.inspiredandroid.linuxcommandbibliotheca.models.BasicGroupModel;
+import com.inspiredandroid.linuxcommandbibliotheca.models.CommandChildModel;
+import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel;
 import com.inspiredandroid.linuxcommandbibliotheca.models.ScriptGroupItem;
+import com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import io.realm.OrderedRealmCollection;
+import io.realm.RealmRecyclerViewAdapter;
 
 /**
  * Created by simon on 23.11.15.
  */
-public class ScriptGroupsAdapter extends RecyclerView.Adapter<ScriptGroupsAdapter.ViewHolder> {
+public class ScriptGroupsAdapter extends RealmRecyclerViewAdapter<BasicGroupModel, ScriptGroupsAdapter.ViewHolder> {
 
-    final private ArrayList<ScriptGroupItem> mGroups = new ArrayList<>();
-    final private Context mContext;
-    private OnListClickListener mOnListClickListener;
-
-    public ScriptGroupsAdapter(Context context) {
-        mContext = context;
-        mGroups.add(new ScriptGroupItem(ScriptGroupItem.GROUP_USER_GROUP, R.string.desc_category_user_groups, R.drawable.ic_account_circle_white_36dp));
-        mGroups.add(new ScriptGroupItem(ScriptGroupItem.GROUP_FILE_FOLDER, R.string.desc_category_files_folders, R.drawable.ic_folder_white_48dp));
-        mGroups.add(new ScriptGroupItem(ScriptGroupItem.GROUP_INFO, R.string.category_system_info, R.drawable.ic_info_white_48dp));
-        mGroups.add(new ScriptGroupItem(ScriptGroupItem.GROUP_SYSTEM_CONTROL, R.string.category_system_control, R.drawable.ic_settings_white_48dp));
-        mGroups.add(new ScriptGroupItem(ScriptGroupItem.GROUP_AUDIO_VIDEO, R.string.category_audio_video, R.drawable.ic_ondemand_video_white_48dp));
-        mGroups.add(new ScriptGroupItem(ScriptGroupItem.GROUP_NETWORK, R.string.category_network, R.drawable.ic_device_hub_white_48dp));
-        mGroups.add(new ScriptGroupItem(ScriptGroupItem.GROUP_SEARCH, R.string.category_search, R.drawable.ic_search_white_48dp));
+    public ScriptGroupsAdapter(@Nullable OrderedRealmCollection<BasicGroupModel> data, boolean autoUpdate) {
+        super(data, autoUpdate);
     }
+
+    private OnListClickListener mOnListClickListener;
 
     public void setOnListClickListener(OnListClickListener listener) {
         mOnListClickListener = listener;
@@ -44,22 +45,17 @@ public class ScriptGroupsAdapter extends RecyclerView.Adapter<ScriptGroupsAdapte
     @Override
     public ScriptGroupsAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
                                                              int viewType) {
-        View v = LayoutInflater.from(mContext)
+        View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.row_scriptgroup, parent, false);
         return new ViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
-        ScriptGroupItem item = mGroups.get(position);
+        BasicGroupModel item = getData().get(position);
 
-        viewHolder.name.setText(item.getmTitle());
-        viewHolder.icon.setImageResource(item.getmIconRes());
-    }
-
-    @Override
-    public int getItemCount() {
-        return mGroups.size();
+        viewHolder.name.setText(item.getTitle());
+        viewHolder.icon.setImageResource(item.getIconResourceId());
     }
 
     class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
@@ -77,7 +73,7 @@ public class ScriptGroupsAdapter extends RecyclerView.Adapter<ScriptGroupsAdapte
         @Override
         public void onClick(View view) {
             if (mOnListClickListener != null) {
-                mOnListClickListener.onClick(mGroups.get(getAdapterPosition()).getId());
+                mOnListClickListener.onClick(getData().get(getAdapterPosition()).getId());
             }
         }
     }

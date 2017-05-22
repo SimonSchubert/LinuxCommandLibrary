@@ -4,7 +4,10 @@
           package="com.inspiredandroid.linuxcommandbibliotheca"
           android:installLocation="preferExternal">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:allowBackup="true"
@@ -19,7 +22,7 @@
             android:name=".CommandBibliothecaActivity"
             android:label="@string/app_lcl_name"
             android:theme="@style/LibAppTheme"
-            android:windowSoftInputMode="stateHidden">
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="com.inspiredandroid.linuxcommandbibliotheca.CommandBibliothecaActivity" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -32,7 +35,7 @@
 
             <meta-data android:name="android.app.searchable"
                        android:resource="@xml/searchable" />
-            <intent-filter android:label="View Linux tips">
+            <intent-filter android:label="Linux tips">
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
@@ -46,8 +49,9 @@
         <activity
             android:name=".CommandManActivity"
             android:theme="@style/LibAppTheme"
-            android:label="@string/command">
-            <intent-filter android:label="View man page">
+            android:label="@string/command"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter android:label="Man page" android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />

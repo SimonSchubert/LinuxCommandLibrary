@@ -3,8 +3,8 @@
 
     <string name="app_lcl_name">Linux Command Library</string>
     <string name="command">Command</string>
-    <string name="fragment_bibliotheca_scripts">Scripts (%d)</string>
-    <string name="fragment_bibliotheca_commands">Commands (%d)</string>
+    <string name="fragment_bibliotheca_basic">Basic</string>
+    <string name="fragment_bibliotheca_commands">Commands</string>
     <string name="tip">Tips</string>
 
     <string name="quiz">Quiz</string>
@@ -250,12 +250,13 @@
     <string name="fragment_tips_redirection_code_error_output">">_ rm -vf folder1 file1 > out.txt 2> err.txt"</string>
     <string name="desc_mute_volume">Mute volume</string>
     <string name="turn_imags_into_video">Turn images to a video sequence</string>
-        <string name="turn_video_to_images">Turn a video to images</string>
+    <string name="turn_video_to_images">Turn a video to images</string>
     <string name="video_to_mp3">Convert sound from a video to mp3</string>
     <string name="avi_to_mpg">Convert avi to mpg</string>
     <string name="mpg_to_avi">Convert mpg to avi</string>
     <string name="avi_to_gif">Convert avi to animated gif</string>
     <string name="avi_to_flv">Convert avi to flv</string>
+    <string name="settings">Settings</string>
     <string-array name="fragment_tips_redirection_code_error_output_array">
         <item>rm</item>
     </string-array>

@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <item
+        android:id="@+id/navigation_commands"
+        android:icon="@drawable/search_96"
+        android:title="@string/fragment_bibliotheca_commands" />
+
+    <item
+        android:id="@+id/navigation_basics"
+        android:icon="@drawable/puzzle_filled_96"
+        android:title="@string/fragment_bibliotheca_basic" />
+
+    <item
+        android:id="@+id/navigation_tips"
+        android:icon="@drawable/idea_96"
+        android:title="@string/tip" />
+
+</menu>

@@ -8,20 +8,20 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath "io.realm:realm-gradle-plugin:2.3.2"
-        classpath 'me.tatarka:gradle-retrolambda:3.5.0'
+        classpath "io.realm:realm-gradle-plugin:3.2.1"
+        classpath 'me.tatarka:gradle-retrolambda:3.6.1'
     }
 }
 
 android {
     compileSdkVersion 25
-    buildToolsVersion '25.0.0'
+    buildToolsVersion '25.0.3'
 
     defaultConfig {
-        minSdkVersion 11
+        minSdkVersion 14
         targetSdkVersion 25
-        versionCode 26
-        versionName "1.6.1"
+        versionCode 27
+        versionName "1.7.0"
         applicationId "com.inspiredandroid.linuxcommandbibliotheca"
 
         resConfigs "en"
@@ -34,7 +34,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -57,19 +57,20 @@ android {
 }
 
 dependencies {
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:support-annotations:25.3.1'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'io.realm:android-adapters:2.1.0'
+    compile 'com.jakewharton:butterknife:8.6.0'
+    compile 'com.google.firebase:firebase-core:10.2.6'
+    compile 'com.google.firebase:firebase-appindexing:10.2.6'
+    compile 'com.google.firebase:firebase-crash:10.2.6'
     testCompile 'junit:junit:4.12'
     androidTestCompile 'com.android.support.test:runner:0.5'
     androidTestCompile 'com.android.support.test:rules:0.5'
-    androidTestCompile 'com.android.support:support-annotations:25.2.0'
-
-    compile 'com.google.android.gms:play-services-appindexing:9.8.0'
-    compile 'com.android.support:support-annotations:25.2.0'
-    compile 'com.android.support:appcompat-v7:25.2.0'
-    compile 'com.android.support:design:25.2.0'
-    compile 'com.android.support:support-v4:25.2.0'
-
-    compile 'io.realm:android-adapters:1.4.1'
-
-    compile 'com.jakewharton:butterknife:8.5.1'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    androidTestCompile 'com.android.support:support-annotations:25.3.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
 }
+apply plugin: 'com.google.gms.google-services'

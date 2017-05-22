@@ -17,19 +17,24 @@ import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.ScriptGroupsAdapter;
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnListClickListener;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.FragmentCoordinator;
+import com.inspiredandroid.linuxcommandbibliotheca.models.BasicGroupModel;
+import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import io.realm.Realm;
+import io.realm.Sort;
 
 /**
  * Created by Simon Schubert
  */
-public class ScriptGroupsFragment extends SuperFragment implements OnListClickListener {
+public class BasicGroupsFragment extends SuperFragment implements OnListClickListener {
 
     @BindView(R.id.fragment_scriptgroups_rv)
     RecyclerView mList;
+    private Realm mRealm;
 
-    public ScriptGroupsFragment() {
+    public BasicGroupsFragment() {
     }
 
     @Override
@@ -37,6 +42,8 @@ public class ScriptGroupsFragment extends SuperFragment implements OnListClickLi
         super.onCreate(savedInstanceState);
 
         setHasOptionsMenu(true);
+
+        mRealm = Realm.getDefaultInstance();
     }
 
     @Override
@@ -45,12 +52,19 @@ public class ScriptGroupsFragment extends SuperFragment implements OnListClickLi
 
         ButterKnife.bind(this, view);
 
-        ScriptGroupsAdapter adapter = new ScriptGroupsAdapter(getContext());
+        ScriptGroupsAdapter adapter = new ScriptGroupsAdapter(mRealm.where(BasicGroupModel.class).findAllSorted("position", Sort.ASCENDING) , false);
         adapter.setOnListClickListener(this);
         mList.setAdapter(adapter);
         mList.setLayoutManager(new LinearLayoutManager(getContext()));
 
         return view;
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+
+        mRealm.close();
     }
 
     @Override

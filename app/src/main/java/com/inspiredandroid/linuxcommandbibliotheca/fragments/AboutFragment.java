@@ -1,5 +1,8 @@
 package com.inspiredandroid.linuxcommandbibliotheca.fragments;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -7,10 +10,16 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.Toast;
 
 import com.inspiredandroid.linuxcommandbibliotheca.R;
+import com.inspiredandroid.linuxcommandbibliotheca.fragments.dialogs.DonateDialogFragment;
+import com.inspiredandroid.linuxcommandbibliotheca.misc.AppManager;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -19,6 +28,9 @@ import butterknife.OnClick;
  * Talk about the App, Licenses and other projects
  */
 public class AboutFragment extends Fragment {
+
+    @BindView(R.id.fragment_about_chb_hide_advertising)
+    CheckBox cbHideAdvertising;
 
     public AboutFragment() {
 
@@ -30,17 +42,18 @@ public class AboutFragment extends Fragment {
 
         ButterKnife.bind(this, view);
 
+        cbHideAdvertising.setChecked(AppManager.getHideAdvertising(getContext()));
+        cbHideAdvertising.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                AppManager.setHideAdvertising(getContext(), isChecked);
+                if (isChecked) {
+                    DonateDialogFragment fragment = DonateDialogFragment.getInstance();
+                    fragment.show(getChildFragmentManager(), fragment.getClass().getCanonicalName());
+                }
+            }
+        });
         return view;
-    }
-
-
-    @OnClick(R.id.fragment_about_btn_github)
-    public void startGithub() {
-        try {
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/SimonSchubert/LinuxCommandBibliotheca"));
-            startActivity(intent);
-        } catch (android.content.ActivityNotFoundException ignored) {
-        }
     }
 
     @OnClick(R.id.fragment_about_btn_paypal)
@@ -50,6 +63,28 @@ public class AboutFragment extends Fragment {
             startActivity(intent);
         } catch (android.content.ActivityNotFoundException ignored) {
         }
+    }
+
+    @OnClick(R.id.fragment_about_btn_bitcoin)
+    public void startBitcoin() {
+        try {
+            startShareActivity(getContext(), "1MRAvdsCfysCVT3ALykJkjwfQPxpUKrqUP");
+        } catch (Exception ignored) {
+        }
+    }
+
+    private void startShareActivity(Context context, String text) {
+        ClipboardManager clipboard = (ClipboardManager) getActivity().getSystemService(Context.CLIPBOARD_SERVICE);
+        ClipData clip = ClipData.newPlainText("Wallet ID", text);
+        clipboard.setPrimaryClip(clip);
+
+        Toast.makeText(getContext(), "Copied wallet id to clipboard", Toast.LENGTH_SHORT).show();
+        /*
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(android.content.Intent.EXTRA_TEXT, text);
+        context.startActivity(intent);
+        */
     }
 
     @OnClick(R.id.fragment_about_btn_bimo)
