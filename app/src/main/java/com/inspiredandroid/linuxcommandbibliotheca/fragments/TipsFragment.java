@@ -14,7 +14,6 @@ import android.widget.TextView;
 
 import com.google.android.gms.appindexing.Action;
 import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity;
-import com.inspiredandroid.linuxcommandbibliotheca.QuizActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.view.ClickableTextView;
 
@@ -77,16 +76,8 @@ public class TipsFragment extends AppIndexFragment {
         if (item.getItemId() == R.id.about) {
             startAboutActivity();
             return true;
-        } else if (item.getItemId() == R.id.quiz) {
-            startQuizActivity();
-            return true;
         }
         return false;
-    }
-
-    private void startQuizActivity() {
-        Intent intent = new Intent(getContext(), QuizActivity.class);
-        startActivity(intent);
     }
 
     private void startAboutActivity() {

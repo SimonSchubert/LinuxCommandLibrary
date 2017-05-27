@@ -118,7 +118,7 @@
     <orderEntry type="library" exported="" name="constraint-layout-solver-1.0.2" level="project" />
     <orderEntry type="library" exported="" name="android-adapters-2.1.0" level="project" />
     <orderEntry type="library" exported="" name="firebase-common-10.2.6" level="project" />
-    <orderEntry type="library" exported="" name="realm-annotations-3.2.1" level="project" />
+    <orderEntry type="library" exported="" name="realm-annotations-3.3.1" level="project" />
     <orderEntry type="library" exported="" name="play-services-basement-10.2.6" level="project" />
     <orderEntry type="library" exported="" name="play-services-tasks-10.2.6" level="project" />
     <orderEntry type="library" exported="" name="support-v4-25.3.1" level="project" />
@@ -127,7 +127,7 @@
     <orderEntry type="library" exported="" scope="TEST" name="junit-4.12" level="project" />
     <orderEntry type="library" exported="" name="recyclerview-v7-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="butterknife-8.6.0" level="project" />
-    <orderEntry type="library" exported="" name="realm-android-library-3.2.1" level="project" />
+    <orderEntry type="library" exported="" name="realm-android-library-3.3.1" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="support-vector-drawable-25.3.1" level="project" />

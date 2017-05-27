@@ -18,34 +18,63 @@ public class BasicGroupModel extends RealmObject {
     private String title;
     private RealmList<CommandGroupModel> groups;
 
-    public int getId() { return id; }
+    public int getId() {
+        return id;
+    }
 
-    public void setId(int id) { this.id = id; }
+    public void setId(int id) {
+        this.id = id;
+    }
 
-    public int getPosition() { return position; }
+    public int getPosition() {
+        return position;
+    }
 
-    public void setPosition(int position) { this.position = position; }
+    public void setPosition(int position) {
+        this.position = position;
+    }
 
-    public String getTitle() { return title; }
+    public String getTitle() {
+        return title;
+    }
 
-    public void setTitle(String title) { this.title = title; }
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-    public RealmList<CommandGroupModel> getGroups() { return groups; }
+    public RealmList<CommandGroupModel> getGroups() {
+        return groups;
+    }
 
-    public void setGroups(RealmList<CommandGroupModel> groups) { this.groups = groups; }
+    public void setGroups(RealmList<CommandGroupModel> groups) {
+        this.groups = groups;
+    }
 
     public int getIconResourceId() {
         switch (id) {
-            case 247: return R.drawable.ic_account_circle_white_36dp;
-            case 37: return R.drawable.ic_folder_white_48dp;
-            case 246: return R.drawable.ic_info_white_48dp;
-            case 21: return R.drawable.ic_settings_white_48dp;
-            case 43: return R.drawable.ic_ondemand_video_white_48dp;
-            case 243: return R.drawable.ic_device_hub_white_48dp;
-            case 179: return R.drawable.ic_search_white_48dp;
-            case 248: return R.drawable.ic_security_white_48dp;
-            case 29: return R.drawable.ic_videogame_asset_white_48dp;
+            case 247:
+                return R.drawable.ic_user_male_circle;
+            case 37:
+                return R.drawable.ic_folder_black_24dp;
+            case 246:
+                return R.drawable.ic_info_black_24dp;
+            case 21:
+                return R.drawable.ic_settings_black_24dp;
+            case 43:
+                return R.drawable.ic_icons8_video_trimming;
+            case 243:
+                return R.drawable.ic_icons8_network_card;
+            case 179:
+                return R.drawable.ic_search_black_24dp;
+            case 248:
+                return R.drawable.ic_skull;
+            case 249:
+                return R.drawable.ic_package;
+            case 29:
+                return R.drawable.ic_videogame_asset_black_24dp;
+            case 250:
+                return R.drawable.ic_1_circle;
         }
-        return R.drawable.ic_account_circle_white_36dp;
+        return R.drawable.ic_user_male_circle;
     }
 }

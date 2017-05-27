@@ -12,13 +12,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity;
-import com.inspiredandroid.linuxcommandbibliotheca.QuizActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.ScriptGroupsAdapter;
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnListClickListener;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.FragmentCoordinator;
 import com.inspiredandroid.linuxcommandbibliotheca.models.BasicGroupModel;
-import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -52,7 +50,7 @@ public class BasicGroupsFragment extends SuperFragment implements OnListClickLis
 
         ButterKnife.bind(this, view);
 
-        ScriptGroupsAdapter adapter = new ScriptGroupsAdapter(mRealm.where(BasicGroupModel.class).findAllSorted("position", Sort.ASCENDING) , false);
+        ScriptGroupsAdapter adapter = new ScriptGroupsAdapter(mRealm.where(BasicGroupModel.class).findAllSorted("position", Sort.ASCENDING), false);
         adapter.setOnListClickListener(this);
         mList.setAdapter(adapter);
         mList.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -77,16 +75,8 @@ public class BasicGroupsFragment extends SuperFragment implements OnListClickLis
         if (item.getItemId() == R.id.about) {
             startAboutActivity();
             return true;
-        } else if (item.getItemId() == R.id.quiz) {
-            startQuizActivity();
-            return true;
         }
         return false;
-    }
-
-    private void startQuizActivity() {
-        Intent intent = new Intent(getContext(), QuizActivity.class);
-        startActivity(intent);
     }
 
     private void startAboutActivity() {

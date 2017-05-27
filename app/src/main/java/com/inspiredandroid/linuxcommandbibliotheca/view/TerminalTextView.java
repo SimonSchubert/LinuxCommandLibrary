@@ -6,13 +6,12 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.widget.AppCompatTextView;
 import android.text.SpannableString;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.StyleSpan;
 import android.util.AttributeSet;
-import android.util.Log;
-import android.widget.TextView;
 
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.FragmentCoordinator;
@@ -25,7 +24,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.misc.TypefaceUtils;
  * mCommands which should be highlighted in an string array and link it in the layout resource as
  * "command".
  */
-public class TerminalTextView extends TextView {
+public class TerminalTextView extends AppCompatTextView {
 
     private String[] mCommands;
     private int[] mOutputRows;
@@ -49,7 +48,7 @@ public class TerminalTextView extends TextView {
         setMovementMethod(LinkMovementMethod.getInstance());
         setHighlightColor(Color.TRANSPARENT);
 
-        if(!mIgnoreTerminalStyle) {
+        if (!mIgnoreTerminalStyle) {
             Typeface typeface = TypefaceUtils.getTypeFace(getContext());
             setTypeface(typeface);
         }
@@ -95,12 +94,11 @@ public class TerminalTextView extends TextView {
     }
 
     /**
-     *
      * @param ss
      * @param text
      */
     private void addOutputSpans(SpannableString ss, String text) {
-        if(mOutputRows.length == 0) {
+        if (mOutputRows.length == 0) {
             return;
         }
 
@@ -110,16 +108,15 @@ public class TerminalTextView extends TextView {
 
         for (int i = 0; i < lines.length; i++) {
             end += lines[i].length();
-            if(doesArrayContainsInt(mOutputRows, i)) {
+            if (doesArrayContainsInt(mOutputRows, i)) {
                 ss.setSpan(new ForegroundColorSpan(ContextCompat.getColor(getContext(), R.color.grey)), start, end, 0);
             }
-            end+=1;
+            end += 1;
             start = end;
         }
     }
 
     /**
-     *
      * @param array
      * @param value
      * @return

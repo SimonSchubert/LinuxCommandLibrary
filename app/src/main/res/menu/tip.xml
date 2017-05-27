@@ -3,11 +3,6 @@
     tools:context=".MainActivity">
 
     <item
-        android:id="@+id/quiz"
-        android:icon="@drawable/ic_info_white_24dp"
-        android:title="@string/quiz" />
-
-    <item
         android:id="@+id/about"
         android:icon="@android:drawable/ic_dialog_info"
         android:title="@string/about" />

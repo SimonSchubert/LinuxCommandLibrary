@@ -13,7 +13,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.inspiredandroid.linuxcommandbibliotheca.R;
-import com.inspiredandroid.linuxcommandbibliotheca.fragments.dialogs.NewsDialogFragment;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -26,17 +25,8 @@ import butterknife.ButterKnife;
  */
 public class NavigationFragmentFragment extends Fragment {
 
-    @IntDef({ID.COMMANDS, ID.BASIC, ID.TIPS})
-    @Retention(RetentionPolicy.SOURCE)
-    @interface ID {
-        int COMMANDS = 0;
-        int BASIC = 1;
-        int TIPS = 2;
-    }
-
     @BindView(R.id.navigation)
     BottomNavigationView navigation;
-
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = item -> {
         switch (item.getItemId()) {
@@ -118,6 +108,14 @@ public class NavigationFragmentFragment extends Fragment {
         final FragmentManager fragmentManager = getChildFragmentManager();
         final FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.main_container, fragment).commit();
+    }
+
+    @IntDef({ID.COMMANDS, ID.BASIC, ID.TIPS})
+    @Retention(RetentionPolicy.SOURCE)
+    @interface ID {
+        int COMMANDS = 0;
+        int BASIC = 1;
+        int TIPS = 2;
     }
 
 }

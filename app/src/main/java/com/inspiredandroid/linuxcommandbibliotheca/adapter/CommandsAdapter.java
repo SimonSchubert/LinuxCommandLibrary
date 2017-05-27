@@ -57,7 +57,7 @@ public class CommandsAdapter extends RealmMultiAdapter<Command> implements ListA
         viewHolder.description.setText(Utils.highlightQueryInsideText(mContext, mQuery, item.getDescription().trim()));
 
         if (mIds.contains((long) item.getId())) {
-            viewHolder.icon.setImageResource(R.drawable.ic_bookmark_white_24dp);
+            viewHolder.icon.setImageResource(R.drawable.ic_bookmark_black_24dp);
         } else {
             viewHolder.icon.setImageResource(getSectionImageResource(item.getCategory()));
         }
@@ -79,17 +79,17 @@ public class CommandsAdapter extends RealmMultiAdapter<Command> implements ListA
     private int getSectionImageResource(int section) {
         switch (section) {
             case Constants.SECTION_GAMES:
-                return R.drawable.ic_videogame_asset_white_36dp;
+                return R.drawable.ic_videogame_asset_black_24dp;
             case Constants.SECTION_SYSTEMADMINANDDEAMON:
-                return R.drawable.ic_security_white_36dp;
+                return R.drawable.ic_security_black_24dp;
             case Constants.SECTION_USERCOMMANDS:
-                return R.drawable.ic_keyboard_white_36dp;
+                return R.drawable.ic_keyboard_black_24dp;
             case Constants.SECTION_SYSTEMCALLS:
-                return R.drawable.ic_code_white_36dp;
+                return R.drawable.ic_code_white_48dp;
             case Constants.SECTION_MISSCELANOUS:
-                return R.drawable.ic_keyboard_white_36dp;
+                return R.drawable.ic_keyboard_black_24dp;
         }
-        return R.drawable.icon_linux;
+        return R.drawable.ic_keyboard_black_24dp;
     }
 
     public class ViewHolder {

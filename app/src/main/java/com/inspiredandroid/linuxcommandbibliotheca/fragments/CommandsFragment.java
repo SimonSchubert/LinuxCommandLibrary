@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.widget.SearchView;
@@ -21,7 +20,6 @@ import android.widget.ListView;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity;
-import com.inspiredandroid.linuxcommandbibliotheca.QuizActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.CommandsAdapter;
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.dialogs.NewsDialogFragment;
@@ -53,22 +51,21 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
     private CommandsAdapter mAdapter;
     private Realm mRealm;
     private String mQuery = "";
-    private FirebaseAnalytics mFirebaseAnalytics;
-    private Handler mHandler;
+    // private FirebaseAnalytics mFirebaseAnalytics;
+    // private Handler mHandler;
     private String lastTrackedQuery = "";
-    private final Runnable mConnectionCheck = new Runnable() {
+    private final Runnable mSearchQueryCheck = new Runnable() {
         @Override
         public void run() {
             if (!lastTrackedQuery.equals(mQuery)) {
                 lastTrackedQuery = mQuery;
+            } else {
+                Bundle bundle = new Bundle();
+                bundle.putString(FirebaseAnalytics.Param.SEARCH_TERM, mQuery);
+                // mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SEARCH, bundle);
             }
 
-            Bundle bundle = new Bundle();
-            bundle.putString(FirebaseAnalytics.Param.VALUE, mQuery);
-            bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "CommandsList");
-            mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SEARCH, bundle);
-
-            mHandler.postDelayed(this, 1000);
+            // mHandler.postDelayed(this, 1000);
         }
     };
 
@@ -92,9 +89,9 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
             rateDialogFragment.show(getChildFragmentManager(), RateDialogFragment.class.getName());
         }
 
-        mFirebaseAnalytics = FirebaseAnalytics.getInstance(getContext());
+        // mFirebaseAnalytics = FirebaseAnalytics.getInstance(getContext());
 
-        mHandler = new Handler();
+        // mHandler = new Handler();
     }
 
     @Override
@@ -113,7 +110,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
     public void onPause() {
         super.onPause();
 
-        mHandler.removeCallbacks(mConnectionCheck);
+        // mHandler.removeCallbacks(mSearchQueryCheck);
     }
 
     @Override
@@ -173,16 +170,8 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
         if (item.getItemId() == R.id.about) {
             startAboutActivity();
             return true;
-        } else if (item.getItemId() == R.id.quiz) {
-            startQuizActivity();
-            return true;
         }
         return false;
-    }
-
-    private void startQuizActivity() {
-        Intent intent = new Intent(getContext(), QuizActivity.class);
-        startActivity(intent);
     }
 
     private void startAboutActivity() {
@@ -201,7 +190,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
     public void onResume() {
         super.onResume();
 
-        mHandler.postDelayed(mConnectionCheck, 1000);
+        // mHandler.postDelayed(mSearchQueryCheck, 1000);
 
         if (AppManager.hasBookmarkChanged(getContext())) {
             resetSearchResults();
@@ -218,11 +207,6 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
             startActivity(Intent.createChooser(intent, "Send mail..."));
         } catch (android.content.ActivityNotFoundException ignored) {
         }
-
-        Bundle bundle = new Bundle();
-        bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, mQuery);
-        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "RequestCommand");
-        mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
     }
 
     /**

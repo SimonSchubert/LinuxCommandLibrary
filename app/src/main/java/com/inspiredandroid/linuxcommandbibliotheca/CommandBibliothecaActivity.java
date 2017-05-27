@@ -7,13 +7,11 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.BasicGroupsFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.CommandsFragment;
-import com.inspiredandroid.linuxcommandbibliotheca.fragments.NavigationFragmentFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.DatabaseLoadingFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.TipsFragment;
 
@@ -30,19 +28,10 @@ import butterknife.ButterKnife;
  */
 public class CommandBibliothecaActivity extends LoadingBaseActivity {
 
-    @IntDef({ID.COMMANDS, ID.BASIC, ID.TIPS})
-    @Retention(RetentionPolicy.SOURCE)
-    @interface ID {
-        int COMMANDS = 0;
-        int BASIC = 1;
-        int TIPS = 2;
-    }
-
     @BindView(R.id.navigation)
     BottomNavigationView navigation;
     @BindView(R.id.toolbar)
     Toolbar toolbar;
-
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = item -> {
         switch (item.getItemId()) {
@@ -68,7 +57,7 @@ public class CommandBibliothecaActivity extends LoadingBaseActivity {
 
         setSupportActionBar(toolbar);
 
-        if(savedInstanceState == null) {
+        if (savedInstanceState == null) {
             showLoadingFragment();
         } else {
             CharSequence title = savedInstanceState.getCharSequence("title");
@@ -128,5 +117,13 @@ public class CommandBibliothecaActivity extends LoadingBaseActivity {
     @Override
     public void onDatabaseCreateFail() {
         Toast.makeText(getBaseContext(), R.string.fragment_datanase_loading_failed_craftin_database, Toast.LENGTH_LONG).show();
+    }
+
+    @IntDef({ID.COMMANDS, ID.BASIC, ID.TIPS})
+    @Retention(RetentionPolicy.SOURCE)
+    @interface ID {
+        int COMMANDS = 0;
+        int BASIC = 1;
+        int TIPS = 2;
     }
 }

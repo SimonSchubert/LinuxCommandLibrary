@@ -9,7 +9,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.google.firebase.analytics.FirebaseAnalytics;
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.CommandManFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.DatabaseLoadingFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
@@ -45,7 +44,7 @@ public class CommandManActivity extends LoadingBaseActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        if(savedInstanceState == null) {
+        if (savedInstanceState == null) {
             showLoadingFragment();
         } else {
             CharSequence title = savedInstanceState.getCharSequence("title");
@@ -53,7 +52,6 @@ public class CommandManActivity extends LoadingBaseActivity {
         }
 
         handleIntent();
-
     }
 
     @Override
@@ -89,7 +87,7 @@ public class CommandManActivity extends LoadingBaseActivity {
             mName = commandId.substring(6, commandId.length() - 5);
         }
 
-        if(mId != INVALID) {
+        if (mId != INVALID) {
             Realm realm = Realm.getDefaultInstance();
 
             Command command = realm.where(Command.class).equalTo(Command.ID, mId).findFirst();
