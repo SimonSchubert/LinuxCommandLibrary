@@ -2,6 +2,7 @@ package com.inspiredandroid.linuxcommandbibliotheca.view;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.support.v7.widget.AppCompatTextView;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.TextPaint;
@@ -9,7 +10,6 @@ import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.util.AttributeSet;
 import android.view.View;
-import android.widget.TextView;
 
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnLinkClickListener;
 
@@ -19,7 +19,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnLinkClickListene
  * This View makes it very easy to highlightQueryInsideText defined commands in an normal textview. Define the
  * words which should be highlighted in an string array and link it in the layout resource.
  */
-public class ClickableTextView extends TextView {
+public class ClickableTextView extends AppCompatTextView {
 
     private OnLinkClickListener mOnLinkClickListener;
 

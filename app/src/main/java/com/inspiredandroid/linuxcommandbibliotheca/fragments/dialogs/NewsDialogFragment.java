@@ -49,7 +49,7 @@ public class NewsDialogFragment extends DialogFragment {
     public void close() {
         try {
             dismissAllowingStateLoss();
-        } catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

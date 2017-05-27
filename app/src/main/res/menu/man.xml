@@ -6,7 +6,7 @@
     <item
         android:id="@+id/search"
         android:hint="@string/search_for_command"
-        android:icon="@drawable/ic_search_white_24dp"
+        android:icon="@drawable/ic_search_black_24dp"
         android:title="@string/search_for_command"
         app:actionViewClass="android.support.v7.widget.SearchView"
         app:showAsAction="collapseActionView|ifRoom" />
@@ -14,7 +14,7 @@
     <item
         android:id="@+id/bookmark"
         android:hint="@string/bookmark"
-        android:icon="@drawable/ic_bookmark_border_white_24dp"
+        android:icon="@drawable/ic_bookmark_border_black_24dp"
         android:title="@string/bookmark"
         app:showAsAction="ifRoom" />
 </menu>

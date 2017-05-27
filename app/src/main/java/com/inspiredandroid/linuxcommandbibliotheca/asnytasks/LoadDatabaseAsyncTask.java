@@ -2,21 +2,16 @@ package com.inspiredandroid.linuxcommandbibliotheca.asnytasks;
 
 import android.content.Context;
 import android.os.AsyncTask;
-import android.util.Log;
 
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnCraftDatabaseListener;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.AppManager;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Constants;
-import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
-import com.inspiredandroid.linuxcommandbibliotheca.models.CommandPage;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-
-import io.realm.Realm;
 
 /**
  * Created by Simon Schubert

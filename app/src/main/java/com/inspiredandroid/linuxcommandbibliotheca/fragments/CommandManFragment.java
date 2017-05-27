@@ -114,12 +114,15 @@ public class CommandManFragment extends AppIndexFragment implements OnConvertFro
 
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(getContext());
 
+        trackSelectContent(mId + "", mName);
+    }
+
+    private void trackSelectContent(String id, String name) {
         Bundle bundle = new Bundle();
-        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, mId + "");
-        bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, mName);
-        bundle.putInt(FirebaseAnalytics.Param.ITEM_CATEGORY, mCategory);
-        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "ManDetail");
-        mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.VIEW_ITEM, bundle);
+        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, id);
+        bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, name);
+        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "Manual Detail");
+        mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
     }
 
     @Override
@@ -185,7 +188,7 @@ public class CommandManFragment extends AppIndexFragment implements OnConvertFro
         });
 
         MenuItem bookmarkItem = menu.findItem(R.id.bookmark);
-        bookmarkItem.setIcon(AppManager.hasBookmark(getContext(), mId) ? R.drawable.ic_bookmark_white_24dp : R.drawable.ic_bookmark_border_white_24dp);
+        bookmarkItem.setIcon(AppManager.hasBookmark(getContext(), mId) ? R.drawable.ic_bookmark_black_24dp : R.drawable.ic_bookmark_border_black_24dp);
     }
 
     @Override

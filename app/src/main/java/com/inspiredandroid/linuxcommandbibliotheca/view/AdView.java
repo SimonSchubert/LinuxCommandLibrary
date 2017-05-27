@@ -3,9 +3,9 @@ package com.inspiredandroid.linuxcommandbibliotheca.view;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
 import android.view.View;
-import android.widget.ImageView;
 
 import com.inspiredandroid.linuxcommandbibliotheca.misc.AppManager;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
@@ -13,7 +13,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
 /**
  * Created by simon on 23/01/17.
  */
-public class AdView extends ImageView {
+public class AdView extends AppCompatImageView {
 
     public AdView(Context context) {
         super(context);

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -11,49 +12,17 @@
         android:paddingLeft="10dp"
         android:paddingRight="10dp">
 
-
         <TextView
             style="@style/LicenseLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/app_lcl_name" />
 
-        <CheckBox
-            android:id="@+id/fragment_about_chb_hide_advertising"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="hide advertising" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:orientation="horizontal">
-
-            <ImageButton
-                android:id="@+id/fragment_about_btn_paypal"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/icon_paypal" />
-
-            <ImageButton
-                android:id="@+id/fragment_about_btn_bitcoin"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/ic_bitcoin" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="invisible" />
-        </LinearLayout>
-
         <Button
             android:id="@+id/fragment_about_btn_rate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_star_white_24dp"
+            android:drawableLeft="@drawable/ic_star_black_24dp"
             android:drawablePadding="6dp"
             android:text="Rate the app" />
 
@@ -82,7 +51,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/ic_remote" />
+                        app:srcCompat="@drawable/ic_remote" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -102,7 +71,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/ic_bimo" />
+                        app:srcCompat="@drawable/ic_bimo" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -123,7 +92,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/ic_org_genocide" />
+                        app:srcCompat="@drawable/ic_org_genocide" />
 
                     <TextView
                         android:layout_width="120dp"
@@ -142,7 +111,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/cat_icon" />
+                        app:srcCompat="@drawable/ic_cat_icon" />
 
                     <TextView
                         android:layout_width="120dp"
@@ -161,7 +130,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/ic_burger" />
+                        app:srcCompat="@drawable/ic_burger" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -234,7 +203,26 @@ limitations under the License.
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Licence information about the man page is usually specified in the man detail page under the category Author, Copyright or Licence. If there is no information on the page you can find the information in the man page source file on your linux system. If you have questions or can't find what you need, you can contact me at sschubert89@gmail.com."/>
+            android:text="Licence information about the man page is usually specified in the man detail page under the category Author, Copyright or Licence. If there is no information on the page you can find the information in the man page source file on your linux system. If you have questions or can't find what you need, you can contact me at sschubert89@gmail.com." />
+
+        <TextView
+            style="@style/LicenseMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Icons8" />
+
+        <TextView
+            android:id="@+id/fragment_about_tv_icons8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="https://icons8.com" />
+
+
+        <TextView
+            style="@style/LicenseMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="commandlinefu.com" />
 
     </LinearLayout>
 </ScrollView>

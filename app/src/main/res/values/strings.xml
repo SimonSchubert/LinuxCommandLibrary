@@ -7,20 +7,9 @@
     <string name="fragment_bibliotheca_commands">Commands</string>
     <string name="tip">Tips</string>
 
-    <string name="quiz">Quiz</string>
-    <string name="yes">Yes</string>
-    <string name="no">No</string>
-
     <!-- Fragment Quiz -->
-    <string name="fragment_quiz_quit_dialog_text">Do you really want to quit the Quiz?</string>
-    <string name="fragment_quiz_counter">%1$d / %2$d</string>
-    <string name="fragment_quiz_result">%d%%</string>
-    <string name="fragment_quiz_question">\"%s\"</string>
-    <string name="fragment_quiz_congratulation">Congratulation</string>
-    <string name="fragment_quiz_again">Again</string>
 
     <string-array name="default_codetextview_commands" />
-    <integer-array name="default_codetextview_outputRows" />
 
     <string name="fragment_datanase_loading_craftin_database">Creating Database</string>
     <string name="fragment_datanase_loading_failed_craftin_database">Couldn\'t create database</string>
@@ -28,8 +17,6 @@
     <string name="fragment_scriptdescription_share_command">Share command</string>
     <string name="bookmark">Bookmark</string>
     <string name="search_for_command">Search for command</string>
-    <string name="fragment_quiz_help">Help</string>
-    <string name="fragment_quiz_give_up">Give up</string>
 
     <string name="dialog_rate_title">Do you like the App?</string>
     <string name="dialog_rate_message">Please rate the Linux Command Library App, if you think it is great!</string>
@@ -37,88 +24,8 @@
     <string name="dialog_rate_later">Remind me later</string>
     <string name="dialog_rate_no_thanks">No thanks</string>
 
-    <string name="category_system_info">System information</string>
-    <string name="category_system_control">System control</string>
-    <string name="category_audio_video">Video/Audio</string>
-    <string name="category_search">Search/Find</string>
-    <string name="category_network">Network</string>
-
-    <string name="desc_get_cpu_usage">Show CPU usage in percentage</string>
-    <string name="desc_battery_usage">Show remaining Laptop battery in percentage</string>
-    <string name="desc_bluetooth_mac">Show Bluetooth MAC address</string>
-    <string name="desc_bluetooth_name">Show Bluetooth name</string>
-    <string name="desc_print_network_interfaces">Show all network interfaces</string>
-    <string name="desc_print_memory_info">Show memory information</string>
-    <string name="desc_lock_screen">Lock screen</string>
-    <string name="desc_unlock_screen">Unlock screen</string>
-    <string name="desc_print_system_info">Show info about the linux system</string>
-    <string name="desc_print_pci_devices">Show all PCI devices</string>
-    <string name="desc_print_usb_devices">Show all USB devices</string>
-    <string name="desc_print_block_devices">Show all block devices (except RAM disks) in a tree-like format</string>
-    <string name="desc_print_external_ip">Show external ip</string>
-    <string name="desc_reboot_system">Reboot the system</string>
-    <string name="desc_shutdown_system">Shutdown the system</string>
-    <string name="desc_shutdown_system_at_time">Shutdown the system at specific time</string>
-    <string name="desc_print_ssh_version">Show SSH client version</string>
-    <string name="desc_print_uptime">Show uptime of machine</string>
-    <string name="desc_print_deisk_info">Show disk usage info</string>
-    <string name="desc_print_bootlog_info">Show bootlog info</string>
-    <string name="desc_take_screenshot">Take screenshot of the desktop</string>
-    <string name="desc_take_webcame_photo">Take webcam photo</string>
-    <string name="desc_stop_bluetooth">Stop bluetooth service</string>
-    <string name="desc_start_bluetooth">Start bluetooth service</string>
-    <string name="desc_stop_wifi">Stop wifi service</string>
-    <string name="desc_start_wifi">Start wifi service</string>
-    <string name="desc_play_text_by_computer_voice">Play text by computer voice</string>
-    <string name="desc_play_audio_file">Play sound file in wav format</string>
-    <string name="desc_play_beep">The classical way to play a beep sound through the PC speakers</string>
-    <string name="desc_turn_off_monitor">Turn off monitor</string>
-    <string name="desc_category_user_groups">Users/Groups</string>
-    <string name="desc_category_files_folders">Files/Folders</string>
     <string name="desc_couldnt_find_any_command">We couldn\'t find such command.</string>
     <string name="desc_request_command">request command</string>
-    <string name="desc_get_network_card">List network interfaces</string>
-    <string name="desc_download_file">Download file</string>
-    <string name="desc_get_domain_info">Get information about domain</string>
-    <string name="desc_ping_info">Ping to another device</string>
-    <string name="desc_configure_network_interface">Configure network interface</string>
-    <string name="desc_show_current_directory">Show current folder</string>
-    <string name="desc_move_rename_file">Move/Rename file or folder</string>
-    <string name="desc_copy_file_or_directory">Copy file or folder</string>
-    <string name="desc_change_directory">Change folder</string>
-    <string name="desc_display_file_content">Display file content</string>
-    <string name="desc_list_directory">List folder contents</string>
-    <string name="desc_set_file_permission">Set file permissions</string>
-    <string name="desc_delete_folder">Delete folder</string>
-    <string name="desc_create_folder">Create folder</string>
-    <string name="desc_delete_file">Delete file</string>
-    <string name="desc_create_file">Create file</string>
-    <string name="desc_add_user_to_group">Add existing user to group</string>
-    <string name="desc_add_new_user_to_group">Add new user to group</string>
-    <string name="desc_delete_group">Delete group</string>
-    <string name="desc_create_group">Create group</string>
-    <string name="desc_set_user_passord">Set user password</string>
-    <string name="desc_delete_user">Delete user</string>
-    <string name="desc_create_user">Create user</string>
-    <string name="desc_find_file_by_name">Find a file by name</string>
-    <string name="desc_list_of_path">Find all path names containing a phrase</string>
-    <string name="desc_executable_path">Find the path of an executable</string>
-    <string name="desc_whereis">Find location of binary/source/man files for a command</string>
-    <string name="desc_print_hostname_of_box">Show the hostname of your box</string>
-    <string name="desc_print_traeroute_to_host">Trace the path that a packet takes to its destination</string>
-    <string name="desc_telnet">Telnet connection</string>
-    <string name="desc_dns_lookup">DNS lookup and display server answer</string>
-    <string name="desc_release_ip_dhcp">Release ip and get a new one from DHCP</string>
-    <string name="desc_open_sockets">List open sockets</string>
-    <string name="desc_create_physical_link">Create a physical link to file or folder</string>
-    <string name="desc_find_phrase_inside_file">Find phrase within file</string>
-    <string name="desc_search_command_in_history">Search for a command in the history</string>
-    <string name="desc_delete_user_from_group">Remove user from group</string>
-    <string name="desc_edit_text_file">Edit text file</string>
-    <string name="desc_change_username">Rename user</string>
-    <string name="desc_change_groupname">Rename group</string>
-    <string name="desc_list_all_users">List all users</string>
-    <string name="desc_list_all_groups">List all groups</string>
 
     <string name="fragment_tips_clear_code">">_ clear"</string>
     <string-array name="fragment_tips_clear_code_array">
@@ -224,8 +131,6 @@
         <item>ls</item>
     </string-array>
 
-    <string name="fragment_tips_special_characters_code_substitution_part_2">">_ ^png^xcf^"</string>
-
     <string name="fragment_tips_special_characters_code_comment">">_ whatis xdotool # hint: has sth todo with X11"</string>
     <string-array name="fragment_tips_special_characters_code_comment_array">
         <item>whatis</item>
@@ -248,15 +153,6 @@
     </string-array>
 
     <string name="fragment_tips_redirection_code_error_output">">_ rm -vf folder1 file1 > out.txt 2> err.txt"</string>
-    <string name="desc_mute_volume">Mute volume</string>
-    <string name="turn_imags_into_video">Turn images to a video sequence</string>
-    <string name="turn_video_to_images">Turn a video to images</string>
-    <string name="video_to_mp3">Convert sound from a video to mp3</string>
-    <string name="avi_to_mpg">Convert avi to mpg</string>
-    <string name="mpg_to_avi">Convert mpg to avi</string>
-    <string name="avi_to_gif">Convert avi to animated gif</string>
-    <string name="avi_to_flv">Convert avi to flv</string>
-    <string name="settings">Settings</string>
     <string-array name="fragment_tips_redirection_code_error_output_array">
         <item>rm</item>
     </string-array>

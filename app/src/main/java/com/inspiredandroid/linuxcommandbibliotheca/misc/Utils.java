@@ -10,7 +10,6 @@ import android.text.style.ForegroundColorSpan;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 
 import java.text.Normalizer;
-import java.util.ArrayList;
 
 /**
  * Created by Simon Schubert
@@ -41,21 +40,6 @@ public class Utils {
             installed = false;
         }
         return installed;
-    }
-
-    /**
-     * Clone string array list
-     *
-     * @param list
-     * @return
-     */
-    public static ArrayList<String> cloneList(ArrayList<String> list) {
-        if (list == null) {
-            return null;
-        }
-        ArrayList<String> clonedList = new ArrayList<>(list.size());
-        clonedList.addAll(list);
-        return clonedList;
     }
 
     /**

@@ -8,7 +8,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath "io.realm:realm-gradle-plugin:3.2.1"
+        classpath "io.realm:realm-gradle-plugin:3.3.1"
         classpath 'me.tatarka:gradle-retrolambda:3.6.1'
     }
 }
@@ -20,20 +20,23 @@ android {
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 25
-        versionCode 27
-        versionName "1.7.0"
+        versionCode 33
+        versionName "1.7.1"
         applicationId "com.inspiredandroid.linuxcommandbibliotheca"
 
         resConfigs "en"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {
+            shrinkResources true
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
+            shrinkResources false
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -45,15 +48,13 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    /*
     splits {
         abi {
             enable true
             reset()
-            include 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'mips', 'x86', 'x86_64'
+            include 'armeabi-v7a', 'arm64-v8a', 'mips', 'x86', 'x86_64'
         }
     }
-    */
 }
 
 dependencies {
@@ -62,6 +63,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support:design:25.3.1'
     compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.android.support:support-vector-drawable:25.3.1'
     compile 'io.realm:android-adapters:2.1.0'
     compile 'com.jakewharton:butterknife:8.6.0'
     compile 'com.google.firebase:firebase-core:10.2.6'

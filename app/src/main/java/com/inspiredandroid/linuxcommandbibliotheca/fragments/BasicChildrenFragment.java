@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.ScriptChildrenActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.ScriptChildrenAdapter;
@@ -43,6 +44,7 @@ public class BasicChildrenFragment extends SuperFragment {
     private String mQuery = "";
     private ScriptChildrenAdapter mAdapter;
     private SearchAdapter mSearchAdapter;
+    private FirebaseAnalytics mFirebaseAnalytics;
 
     public BasicChildrenFragment() {
     }
@@ -69,14 +71,26 @@ public class BasicChildrenFragment extends SuperFragment {
 
         getActivity().setTitle(basicGroupModel.getTitle());
 
-        mAdapter = new ScriptChildrenAdapter(groups, false);
+
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(getContext());
+
+        mAdapter = new ScriptChildrenAdapter(groups, false, mFirebaseAnalytics);
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
 
-        mSearchAdapter = new SearchAdapter(null, false);
+        mSearchAdapter = new SearchAdapter(null, false, mFirebaseAnalytics);
+
+        trackSelectContent(categoryId + "");
 
         return view;
+    }
+
+    private void trackSelectContent(String id) {
+        Bundle bundle = new Bundle();
+        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, id);
+        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "Basic Category");
+        mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
     }
 
     @Override

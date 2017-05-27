@@ -95,7 +95,7 @@
             android:layout_height="wrap_content"
             android:text="@string/fragment_tips_ps_code"
             custom:commands="@array/fragment_tips_ps_code_array"
-            custom:outputRows="@array/fragment_tips_ps_code_array_outputrows"/>
+            custom:outputRows="@array/fragment_tips_ps_code_array_outputrows" />
 
         <TextView
             style="@style/TextMedium"
@@ -283,7 +283,6 @@
                     android:orientation="vertical">
 
                     <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
-                        android:id="@+id/terminalTextView"
                         style="@style/TextCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -327,7 +326,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/fragment_tips_special_characters_code_semicolon"
                         custom:commands="@array/fragment_tips_special_characters_code_semicolon_array"
-                        custom:outputRows="@array/fragment_tips_special_characters_code_semicolon_array_outputrows"/>
+                        custom:outputRows="@array/fragment_tips_special_characters_code_semicolon_array_outputrows" />
 
                 </LinearLayout>
             </TableRow>
@@ -686,7 +685,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/fragment_tips_special_characters_code_substitution"
                         custom:commands="@array/fragment_tips_special_characters_code_substitution_array"
-                        custom:outputRows="@array/fragment_tips_special_characters_code_substitution_array_outputrows"/>
+                        custom:outputRows="@array/fragment_tips_special_characters_code_substitution_array_outputrows" />
                 </LinearLayout>
             </TableRow>
 

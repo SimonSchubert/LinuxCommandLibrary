@@ -18,7 +18,7 @@ public abstract class LoadingBaseActivity extends AppCompatActivity implements O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if(savedInstanceState == null) {
+        if (savedInstanceState == null) {
             mAsyncTask = new LoadDatabaseAsyncTask(this, this);
             mAsyncTask.execute();
         }
