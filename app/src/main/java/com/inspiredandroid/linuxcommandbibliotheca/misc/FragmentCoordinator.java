@@ -41,7 +41,7 @@ public class FragmentCoordinator {
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
             fragmentTransaction.replace(R.id.fragment_container_secondary, fragment);
-            fragmentTransaction.commit();
+            fragmentTransaction.commitAllowingStateLoss();
         }
     }
 
@@ -69,6 +69,10 @@ public class FragmentCoordinator {
     public static void startCommandManActivity(FragmentActivity activity, String name) {
         Realm realm = Realm.getDefaultInstance();
         Command command = realm.where(Command.class).equalTo(Command.NAME, name).findFirst();
+        if(command == null) {
+            realm.close();
+            return;
+        }
         long id = command.getId();
         int category = command.getCategory();
         realm.close();
@@ -104,7 +108,7 @@ public class FragmentCoordinator {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         fragmentTransaction.replace(R.id.fragment_container_secondary, fragment);
-        fragmentTransaction.commit();
+        fragmentTransaction.commitAllowingStateLoss();
     }
 
     public static boolean isTabletLayout(Activity activity) {
