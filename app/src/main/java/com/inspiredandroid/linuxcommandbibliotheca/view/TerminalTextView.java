@@ -1,6 +1,7 @@
 package com.inspiredandroid.linuxcommandbibliotheca.view;
 
 import android.content.Context;
+import android.content.ContextWrapper;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -83,7 +84,7 @@ public class TerminalTextView extends AppCompatTextView {
 
         for (final String command : commands) {
             ClickableTextView.addClickableSpanToPhrases(ss, text, command, () ->
-                    FragmentCoordinator.startCommandManActivity((FragmentActivity) getContext(), command));
+                    FragmentCoordinator.startCommandManActivity(getActivity(), command));
         }
 
 
@@ -91,6 +92,17 @@ public class TerminalTextView extends AppCompatTextView {
         addOutputSpans(ss, text);
 
         return ss;
+    }
+
+    private FragmentActivity getActivity() {
+        Context context = getContext();
+        while (context instanceof ContextWrapper) {
+            if (context instanceof FragmentActivity) {
+                return (FragmentActivity)context;
+            }
+            context = ((ContextWrapper)context).getBaseContext();
+        }
+        return null;
     }
 
     /**

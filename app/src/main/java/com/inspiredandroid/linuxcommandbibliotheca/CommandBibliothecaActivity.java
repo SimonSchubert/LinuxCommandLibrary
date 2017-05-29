@@ -92,7 +92,7 @@ public class CommandBibliothecaActivity extends LoadingBaseActivity {
 
         final FragmentManager fragmentManager = getSupportFragmentManager();
         final FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.replace(R.id.fragment_container, fragment).commit();
+        transaction.replace(R.id.fragment_container, fragment).commitAllowingStateLoss();
     }
 
     /**
@@ -104,12 +104,15 @@ public class CommandBibliothecaActivity extends LoadingBaseActivity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         fragmentTransaction.replace(R.id.fragment_container, fragment);
-        fragmentTransaction.commit();
+        fragmentTransaction.commitAllowingStateLoss();
         navigation.setVisibility(View.GONE);
     }
 
     @Override
     public void onDatabaseCreateSuccess() {
+        if(isFinishing()) {
+            return;
+        }
         startFragment(ID.COMMANDS);
         navigation.setVisibility(View.VISIBLE);
     }

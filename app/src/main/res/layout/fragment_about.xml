@@ -22,8 +22,6 @@
             android:id="@+id/fragment_about_btn_rate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_star_black_24dp"
-            android:drawablePadding="6dp"
             android:text="Rate the app" />
 
         <TextView

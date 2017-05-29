@@ -107,7 +107,7 @@ public class NavigationFragmentFragment extends Fragment {
 
         final FragmentManager fragmentManager = getChildFragmentManager();
         final FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.replace(R.id.main_container, fragment).commit();
+        transaction.replace(R.id.main_container, fragment).commitAllowingStateLoss();
     }
 
     @IntDef({ID.COMMANDS, ID.BASIC, ID.TIPS})
