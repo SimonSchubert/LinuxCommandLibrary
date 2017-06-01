@@ -11,7 +11,6 @@ import io.realm.RealmObject;
 public class CommandChildModel extends RealmObject {
 
     private String command;
-    private RealmList<CommandCompatibilityModel> compatibility;
     private RealmList<CommandManModel> mans;
 
     public CommandChildModel() {
@@ -35,14 +34,6 @@ public class CommandChildModel extends RealmObject {
             data[i] = model.getMans().get(i).getMan();
         }
         return data;
-    }
-
-    public RealmList<CommandCompatibilityModel> getCompatibility() {
-        return compatibility;
-    }
-
-    public void setCompatibility(RealmList<CommandCompatibilityModel> compatibility) {
-        this.compatibility = compatibility;
     }
 
     public RealmList<CommandManModel> getMans() {

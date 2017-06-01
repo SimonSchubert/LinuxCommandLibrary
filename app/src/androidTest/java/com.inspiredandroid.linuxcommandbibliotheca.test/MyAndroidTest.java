@@ -1,5 +1,6 @@
 package com.inspiredandroid.linuxcommandbibliotheca.test;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.test.rule.ActivityTestRule;
@@ -18,9 +19,10 @@ import java.util.List;
 import java.util.Locale;
 
 import io.realm.Realm;
+import io.realm.RealmResults;
 
+import static android.R.attr.id;
 import static android.support.test.InstrumentationRegistry.getInstrumentation;
-import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 /**
@@ -55,8 +57,8 @@ public class MyAndroidTest {
 
     @Test
     public void activitiesTest() {
-        // aboutActivityRule.launchActivity(new Intent());
-        // commandManActivityRule.launchActivity(new Intent());
+        aboutActivityRule.launchActivity(new Intent());
+        commandManActivityRule.launchActivity(new Intent());
     }
 
     /**
@@ -138,4 +140,22 @@ public class MyAndroidTest {
         return missing;
     }
 
+    @Test
+    public void CommandsTest() {
+        RealmResults<Command> commands = realm.where(Command.class).findAll();
+
+        for (Command command : commands) {
+            Intent intent = new Intent(getContext(), CommandManActivity.class);
+            intent.putExtra(CommandManActivity.EXTRA_COMMAND_ID, id);
+            Activity activity = commandManActivityRule.launchActivity(intent);
+
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            activity.finish();
+        }
+    }
 }

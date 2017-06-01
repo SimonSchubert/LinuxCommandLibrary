@@ -60,9 +60,13 @@ public class CommandDetailAdapter extends RecyclerView.Adapter<CommandDetailAdap
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
         intent.putExtra(android.content.Intent.EXTRA_TEXT, command.getCommand());
-        mContext.startActivity(intent);
-    }
 
+        try {
+            mContext.startActivity(intent);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     class ViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.row_scriptdescription_child_tv_description)

@@ -1,5 +1,6 @@
 package com.inspiredandroid.linuxcommandbibliotheca.fragments;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -38,7 +39,7 @@ public class AboutFragment extends Fragment {
         try {
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.icons8.com"));
             startActivity(intent);
-        } catch (android.content.ActivityNotFoundException ignored) {
+        } catch (ActivityNotFoundException ignored) {
         }
     }
 

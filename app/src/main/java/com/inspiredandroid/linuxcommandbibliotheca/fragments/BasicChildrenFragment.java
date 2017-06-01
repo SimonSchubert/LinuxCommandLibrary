@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.inspiredandroid.linuxcommandbibliotheca.BuildConfig;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.ScriptChildrenActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.ScriptChildrenAdapter;
@@ -41,7 +42,6 @@ public class BasicChildrenFragment extends SuperFragment {
     @BindView(R.id.fragment_scriptchildren_rv)
     RecyclerView mRecyclerView;
     private Realm mRealm;
-    private String mQuery = "";
     private ScriptChildrenAdapter mAdapter;
     private SearchAdapter mSearchAdapter;
     private FirebaseAnalytics mFirebaseAnalytics;
@@ -78,19 +78,11 @@ public class BasicChildrenFragment extends SuperFragment {
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-
         mSearchAdapter = new SearchAdapter(null, false, mFirebaseAnalytics);
 
         trackSelectContent(categoryId + "");
 
         return view;
-    }
-
-    private void trackSelectContent(String id) {
-        Bundle bundle = new Bundle();
-        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, id);
-        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "Basic Category");
-        mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
     }
 
     @Override
@@ -122,7 +114,6 @@ public class BasicChildrenFragment extends SuperFragment {
                 if (!isAdded()) {
                     return true;
                 }
-                mQuery = query;
                 if (query.length() > 0) {
                     String normalizedText = Normalizer.normalize(query, Normalizer.Form.NFD).replaceAll("\\p{InCombiningDiacriticalMarks}+", "").toLowerCase();
                     search(normalizedText);
@@ -145,6 +136,16 @@ public class BasicChildrenFragment extends SuperFragment {
                 return true;
             }
         });
+    }
+
+    private void trackSelectContent(String id) {
+        if(BuildConfig.DEBUG) {
+            return;
+        }
+        Bundle bundle = new Bundle();
+        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, id);
+        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "Basic Category");
+        mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
     }
 
     private void search(String query) {

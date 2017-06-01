@@ -1,5 +1,8 @@
 /build
 /gradle
+/captures
 .idea/
 .gradle/
 local.properties
+*.realm
+google-services.json

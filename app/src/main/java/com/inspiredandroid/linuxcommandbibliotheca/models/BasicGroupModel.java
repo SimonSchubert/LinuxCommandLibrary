@@ -74,6 +74,8 @@ public class BasicGroupModel extends RealmObject {
                 return R.drawable.ic_videogame_asset_black_40dp;
             case 250:
                 return R.drawable.ic_1_circle_40dp;
+            case 251:
+                return R.drawable.ic_vpn_key_black_24dp;
         }
         return R.drawable.ic_user_male_circle_40dp;
     }

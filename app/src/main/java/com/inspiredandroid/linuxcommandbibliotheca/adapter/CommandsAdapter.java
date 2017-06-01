@@ -54,7 +54,7 @@ public class CommandsAdapter extends RealmMultiAdapter<Command> implements ListA
 
         Command item = getItem(position);
         viewHolder.name.setText(Utils.highlightQueryInsideText(mContext, mQuery, item.getName()));
-        viewHolder.description.setText(Utils.highlightQueryInsideText(mContext, mQuery, item.getDescription().trim()));
+        viewHolder.description.setText(Utils.highlightQueryInsideText(mContext, mQuery, item.getDesc().trim()));
 
         if (mIds.contains((long) item.getId())) {
             viewHolder.icon.setImageResource(R.drawable.ic_bookmark_black_24dp);
