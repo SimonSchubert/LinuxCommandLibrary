@@ -236,7 +236,34 @@ public class CommandGroupModel extends RealmObject {
                 return R.drawable.ic_delete_black_24dp;
             case 461:
                 return R.drawable.ic_icons8_show_property;
-
+            case 1492:
+                return R.drawable.ic_icons8_home;
+            case 1493:
+                return R.drawable.ic_icons8_mother;
+            case 1496:
+                return R.drawable.ic_icons8_work;
+            case 1497:
+                return R.drawable.ic_icons8_undo;
+            case 1495:
+                return R.drawable.ic_icons8_info;
+            case 1494:
+                return R.drawable.ic_icons8_calendar_1;
+            case 1503:
+                return R.drawable.ic_vpn_key_black_24dp;
+            case 1487:
+            case 1488:
+            case 1489:
+            case 1490:
+            case 1491:
+                return R.drawable.ic_file;
+            case 1498:
+                return R.drawable.ic_icons8_cancel;
+            case 1499:
+            case 1500:
+            case 1501:
+            case 1502:
+            case 1504:
+                return R.drawable.ic_icons8_connected;
         }
         return R.drawable.ic_icons8_console;
     }

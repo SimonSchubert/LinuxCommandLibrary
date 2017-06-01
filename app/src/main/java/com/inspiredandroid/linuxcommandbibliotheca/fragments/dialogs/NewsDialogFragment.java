@@ -1,6 +1,7 @@
 package com.inspiredandroid.linuxcommandbibliotheca.fragments.dialogs;
 
 import android.app.Dialog;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -59,6 +60,9 @@ public class NewsDialogFragment extends DialogFragment {
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
         intent.putExtra(android.content.Intent.EXTRA_TEXT, "https://itunes.apple.com/us/app/linux-command-library/id1219649976");
-        startActivity(intent);
+        try {
+            startActivity(intent);
+        } catch(ActivityNotFoundException ignored) {
+        }
     }
 }

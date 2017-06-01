@@ -18,6 +18,7 @@ import android.widget.ImageButton;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.inspiredandroid.linuxcommandbibliotheca.BuildConfig;
 import com.inspiredandroid.linuxcommandbibliotheca.CommandManActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.ManExpandableListAdapter;
@@ -118,6 +119,9 @@ public class CommandManFragment extends AppIndexFragment implements OnConvertFro
     }
 
     private void trackSelectContent(String id, String name) {
+        if(BuildConfig.DEBUG) {
+            return;
+        }
         Bundle bundle = new Bundle();
         bundle.putString(FirebaseAnalytics.Param.ITEM_ID, id);
         bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, name);

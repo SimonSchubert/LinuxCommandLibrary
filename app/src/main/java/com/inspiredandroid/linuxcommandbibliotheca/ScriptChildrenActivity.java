@@ -4,8 +4,6 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-import com.inspiredandroid.linuxcommandbibliotheca.models.ScriptGroupItem;
-
 /**
  * Created by Simon Schubert
  * <p/>
@@ -27,7 +25,7 @@ public class ScriptChildrenActivity extends BaseActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        int categoryId = getIntent().getIntExtra(EXTRA_CATEGORY_ID, ScriptGroupItem.GROUP_USER_GROUP);
+        // int categoryId = getIntent().getIntExtra(EXTRA_CATEGORY_ID, ScriptGroupItem.GROUP_USER_GROUP);
         // setTitle(getDescriptionForCategory(categoryId));
     }
 

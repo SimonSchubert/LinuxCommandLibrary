@@ -14,6 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.inspiredandroid.linuxcommandbibliotheca.BuildConfig;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandChildModel;
@@ -78,6 +79,9 @@ public class SearchAdapter extends RealmRecyclerViewAdapter<CommandGroupModel, S
     }
 
     private void trackSelectContent(String id) {
+        if(BuildConfig.DEBUG) {
+            return;
+        }
         Bundle bundle = new Bundle();
         bundle.putString(FirebaseAnalytics.Param.ITEM_ID, id);
         bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "Basic Group");
@@ -101,7 +105,12 @@ public class SearchAdapter extends RealmRecyclerViewAdapter<CommandGroupModel, S
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
         intent.putExtra(Intent.EXTRA_TEXT, command.getCommand());
-        context.startActivity(intent);
+
+        try {
+            context.startActivity(intent);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {

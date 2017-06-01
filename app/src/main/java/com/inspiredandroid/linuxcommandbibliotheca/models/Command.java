@@ -9,13 +9,13 @@ import io.realm.annotations.PrimaryKey;
 public class Command extends RealmObject {
     public final static String ID = "id";
     public final static String NAME = "name";
-    public final static String DESCRIPTION = "description";
+    public final static String DESCRIPTION = "desc";
 
     @PrimaryKey
     private int id;
     private int category;
     private String name;
-    private String description;
+    private String desc;
 
     public int getId() {
         return id;
@@ -41,11 +41,11 @@ public class Command extends RealmObject {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
+    public String getDesc() {
+        return desc;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDesc(String desc) {
+        this.desc = desc;
     }
 }
