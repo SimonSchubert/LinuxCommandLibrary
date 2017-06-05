@@ -2,6 +2,7 @@ package com.inspiredandroid.linuxcommandbibliotheca.models;
 
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
+import io.realm.annotations.Required;
 
 /**
  * Created by simon on 24.01.16.
@@ -14,7 +15,9 @@ public class Command extends RealmObject {
     @PrimaryKey
     private int id;
     private int category;
+    @Required
     private String name;
+    @Required
     private String desc;
 
     public int getId() {

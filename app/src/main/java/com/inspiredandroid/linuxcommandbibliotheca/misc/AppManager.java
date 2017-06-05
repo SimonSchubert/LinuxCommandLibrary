@@ -19,7 +19,7 @@ public class AppManager {
     private static final String KEY_HIDE_ADVERTISING = "KEY_HIDE_ADVERTISING";
     private static final String KEY_NEWS_DIALOG_STATE = "KEY_NEWS_DIALOG_STATE";
 
-    private static int CURRENTDATABSEVERSION = 4;
+    private static int CURRENTDATABSEVERSION = 7;
 
     public static boolean getHideAdvertising(Context context) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);

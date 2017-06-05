@@ -66,6 +66,9 @@ public class Utils {
                 int spanStart = Math.min(start, originalText.length());
                 int spanEnd = Math.min(start + subSearchQuery.length(), originalText.length());
 
+                if (spanStart < 0 || spanEnd < 0 || start >= spanEnd) {
+                    break;
+                }
                 highlighted.setSpan(new ForegroundColorSpan(ContextCompat.getColor(context, R.color.ab_primary)), spanStart, spanEnd, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
                 start = normalizedText.indexOf(subSearchQuery, spanEnd);

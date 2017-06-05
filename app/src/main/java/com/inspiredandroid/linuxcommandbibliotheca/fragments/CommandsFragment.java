@@ -22,7 +22,6 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.CommandsAdapter;
-import com.inspiredandroid.linuxcommandbibliotheca.fragments.dialogs.NewsDialogFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.dialogs.RateDialogFragment;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.AppManager;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.FragmentCoordinator;
@@ -81,10 +80,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
         mRealm = Realm.getDefaultInstance();
         mAdapter = new CommandsAdapter(getContext(), getAllCommands(), false);
 
-        if (AppManager.shouldShowNewsDialog(getContext())) {
-            NewsDialogFragment newDialogFragment = NewsDialogFragment.getInstance();
-            newDialogFragment.show(getChildFragmentManager(), newDialogFragment.getClass().getCanonicalName());
-        } else if (AppManager.shouldShowRateDialog(getContext())) {
+        if (AppManager.shouldShowRateDialog(getContext())) {
             RateDialogFragment rateDialogFragment = RateDialogFragment.getInstance();
             rateDialogFragment.show(getChildFragmentManager(), RateDialogFragment.class.getName());
         }

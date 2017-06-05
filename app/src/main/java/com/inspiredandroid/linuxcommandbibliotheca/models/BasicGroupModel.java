@@ -5,6 +5,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.R;
 import io.realm.RealmList;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
+import io.realm.annotations.Required;
 
 /**
  * Created by simon on 19.04.17.
@@ -15,6 +16,7 @@ public class BasicGroupModel extends RealmObject {
     @PrimaryKey
     private int id;
     private int position;
+    @Required
     private String title;
     private RealmList<CommandGroupModel> groups;
 
@@ -55,7 +57,7 @@ public class BasicGroupModel extends RealmObject {
             case 247:
                 return R.drawable.ic_user_male_circle_40dp;
             case 37:
-                return R.drawable.ic_folder_black_40dp;
+                return R.drawable.ic_icons8_file_40dp;
             case 246:
                 return R.drawable.ic_info_40dp;
             case 21:
@@ -73,9 +75,11 @@ public class BasicGroupModel extends RealmObject {
             case 29:
                 return R.drawable.ic_videogame_asset_black_40dp;
             case 250:
-                return R.drawable.ic_1_circle_40dp;
+                return R.drawable.ic_icons8_hand_with_pen_40dp;
             case 251:
-                return R.drawable.ic_vpn_key_black_24dp;
+                return R.drawable.ic_vpn_key_black_40dp;
+            case 252:
+                return R.drawable.ic_icons8_github_40dp;
         }
         return R.drawable.ic_user_male_circle_40dp;
     }

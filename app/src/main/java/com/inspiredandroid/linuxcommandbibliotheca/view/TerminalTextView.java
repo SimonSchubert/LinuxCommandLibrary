@@ -121,6 +121,9 @@ public class TerminalTextView extends AppCompatTextView {
         for (int i = 0; i < lines.length; i++) {
             end += lines[i].length();
             if (doesArrayContainsInt(mOutputRows, i)) {
+                if (start < 0 || end < 0 || start >= end) {
+                    break;
+                }
                 ss.setSpan(new ForegroundColorSpan(ContextCompat.getColor(getContext(), R.color.grey)), start, end, 0);
             }
             end += 1;
@@ -153,7 +156,7 @@ public class TerminalTextView extends AppCompatTextView {
         while (text.indexOf("[", indexStart) != -1) {
             int start = text.indexOf("[", indexStart);
             int end = text.indexOf("]", indexStart);
-            if (start == -1 || end == -1 || start >= end) {
+            if (start < 0 || end < 0 || start >= end) {
                 break;
             }
             ss.setSpan(new StyleSpan(Typeface.ITALIC), start, end + 1, 0);

@@ -20,8 +20,8 @@ android {
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 25
-        versionCode 50
-        versionName "1.7.4"
+        versionCode 55
+        versionName "1.7.5"
         applicationId "com.inspiredandroid.linuxcommandbibliotheca"
 
         resConfigs "en"
