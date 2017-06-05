@@ -1,12 +1,14 @@
 package com.inspiredandroid.linuxcommandbibliotheca.models;
 
 import io.realm.RealmObject;
+import io.realm.annotations.Required;
 
 /**
  * Created by Simon Schubert
  */
 public class CommandManModel extends RealmObject {
 
+    @Required
     private String man;
 
     public CommandManModel() {

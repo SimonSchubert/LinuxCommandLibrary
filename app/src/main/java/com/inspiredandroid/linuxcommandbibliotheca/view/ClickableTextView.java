@@ -48,10 +48,10 @@ public class ClickableTextView extends AppCompatTextView {
             return;
         }
 
-        int indexStart = 0;
-        while (text.indexOf(phrase, indexStart) != -1) {
-            indexStart = text.indexOf(phrase, indexStart);
-            int indexEnd = indexStart + phrase.length();
+        int start = 0;
+        while (text.indexOf(phrase, start) != -1) {
+            start = text.indexOf(phrase, start);
+            int end = start + phrase.length();
 
             ClickableSpan clickableSpan = new ClickableSpan() {
                 @Override
@@ -66,8 +66,11 @@ public class ClickableTextView extends AppCompatTextView {
                 }
             };
 
-            ss.setSpan(clickableSpan, indexStart, indexEnd, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-            indexStart++;
+            if (start < 0 || end < 0 || start >= end) {
+                break;
+            }
+            ss.setSpan(clickableSpan, start, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+            start++;
         }
     }
 

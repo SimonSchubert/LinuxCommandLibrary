@@ -1,6 +1,7 @@
 package com.inspiredandroid.linuxcommandbibliotheca.models;
 
 import io.realm.RealmObject;
+import io.realm.annotations.Required;
 
 /**
  * Created by simon on 24.01.16.
@@ -10,7 +11,9 @@ public class CommandPage extends RealmObject {
 
     private int id;
     private int commandid;
+    @Required
     private String page;
+    @Required
     private String title;
 
     public int getId() {

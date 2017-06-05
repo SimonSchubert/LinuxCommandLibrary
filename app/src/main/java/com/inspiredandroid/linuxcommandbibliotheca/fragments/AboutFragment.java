@@ -9,6 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
+import com.inspiredandroid.linuxcommandbibliotheca.BuildConfig;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils;
 
@@ -21,6 +23,8 @@ import butterknife.OnClick;
  */
 public class AboutFragment extends Fragment {
 
+    private FirebaseAnalytics mFirebaseAnalytics;
+
     public AboutFragment() {
 
     }
@@ -31,7 +35,20 @@ public class AboutFragment extends Fragment {
 
         ButterKnife.bind(this, view);
 
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(getContext());
+        trackContent();
+
         return view;
+    }
+
+
+    private void trackContent() {
+        if(BuildConfig.DEBUG) {
+            return;
+        }
+        Bundle bundle = new Bundle();
+        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "About");
+        mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
     }
 
     @OnClick(R.id.fragment_about_tv_icons8)

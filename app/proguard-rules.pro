@@ -25,3 +25,6 @@
 -keepclasseswithmembernames class * { @butterknife.* <methods>; }
 -keepclasseswithmembernames class * { @butterknife.* <fields>; }
 -keep class android.support.v7.widget.SearchView { *; }
+
+-renamesourcefileattribute SourceFile
+-keepattributes SourceFile,LineNumberTable

@@ -15,8 +15,9 @@ public class MyApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
         Realm.init(this);
-        RealmConfiguration config = new RealmConfiguration.Builder().name(Constants.REALM_DATABASE).schemaVersion(12).build();
+        RealmConfiguration config = new RealmConfiguration.Builder().name(Constants.REALM_DATABASE).schemaVersion(13).build();
         Realm.setDefaultConfiguration(config);
     }
 
