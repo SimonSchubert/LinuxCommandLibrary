@@ -79,7 +79,7 @@ public class SearchAdapter extends RealmRecyclerViewAdapter<CommandGroupModel, S
     }
 
     private void trackSelectContent(String id) {
-        if(BuildConfig.DEBUG) {
+        if (BuildConfig.DEBUG) {
             return;
         }
         Bundle bundle = new Bundle();
@@ -108,7 +108,7 @@ public class SearchAdapter extends RealmRecyclerViewAdapter<CommandGroupModel, S
 
         try {
             context.startActivity(intent);
-        } catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

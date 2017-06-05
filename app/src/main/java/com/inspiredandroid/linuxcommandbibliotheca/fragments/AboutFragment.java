@@ -43,7 +43,7 @@ public class AboutFragment extends Fragment {
 
 
     private void trackContent() {
-        if(BuildConfig.DEBUG) {
+        if (BuildConfig.DEBUG) {
             return;
         }
         Bundle bundle = new Bundle();
