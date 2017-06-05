@@ -139,7 +139,7 @@ public class BasicChildrenFragment extends SuperFragment {
     }
 
     private void trackSelectContent(String id) {
-        if(BuildConfig.DEBUG) {
+        if (BuildConfig.DEBUG) {
             return;
         }
         Bundle bundle = new Bundle();

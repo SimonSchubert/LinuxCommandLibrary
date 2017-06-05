@@ -98,9 +98,9 @@ public class TerminalTextView extends AppCompatTextView {
         Context context = getContext();
         while (context instanceof ContextWrapper) {
             if (context instanceof FragmentActivity) {
-                return (FragmentActivity)context;
+                return (FragmentActivity) context;
             }
-            context = ((ContextWrapper)context).getBaseContext();
+            context = ((ContextWrapper) context).getBaseContext();
         }
         return null;
     }

@@ -119,7 +119,7 @@ public class CommandManFragment extends AppIndexFragment implements OnConvertFro
     }
 
     private void trackSelectContent(String id, String name) {
-        if(BuildConfig.DEBUG) {
+        if (BuildConfig.DEBUG) {
             return;
         }
         Bundle bundle = new Bundle();
