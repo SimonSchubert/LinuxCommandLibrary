@@ -29,11 +29,7 @@ open class CommandChildModel : RealmObject {
     companion object {
 
         fun getMans(model: CommandChildModel): Array<String> {
-            val data = arrayOf<String>()
-            for (i in 0 until model.mans.size) {
-                data[i] = model.mans[i]?.man!!
-            }
-            return data
+            return model.mans.map { it.man!! }.toTypedArray()
         }
     }
 }
