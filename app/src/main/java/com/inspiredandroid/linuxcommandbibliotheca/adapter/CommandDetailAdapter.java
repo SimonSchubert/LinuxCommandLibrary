@@ -47,7 +47,7 @@ public class CommandDetailAdapter extends RecyclerView.Adapter<CommandDetailAdap
         CommandChildModel item = mCommandGroupModel.getCommands().get(position);
 
         viewHolder.command.setText(item.getCommand());
-        viewHolder.command.setCommands(CommandChildModel.getMans(item));
+        viewHolder.command.setCommands(CommandChildModel.Companion.getMans(item));
         viewHolder.share.setOnClickListener(v -> startShareActivity(item));
     }
 

@@ -56,7 +56,7 @@ public class FragmentCoordinator {
 
             Realm realm = Realm.getDefaultInstance();
 
-            Command command = realm.where(Command.class).equalTo(Command.ID, id).findFirst();
+            Command command = realm.where(Command.class).equalTo(Command.Companion.getID(), id).findFirst();
             String name = command.getName().toUpperCase();
             int category = command.getCategory();
 
@@ -68,7 +68,7 @@ public class FragmentCoordinator {
 
     public static void startCommandManActivity(FragmentActivity activity, String name) {
         Realm realm = Realm.getDefaultInstance();
-        Command command = realm.where(Command.class).equalTo(Command.NAME, name).findFirst();
+        Command command = realm.where(Command.class).equalTo(Command.Companion.getNAME(), name).findFirst();
         if(command == null) {
             realm.close();
             return;

@@ -117,7 +117,7 @@ public class CommandManFragment extends AppIndexFragment implements OnConvertFro
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(getContext());
 
         Realm realm = Realm.getDefaultInstance();
-        Command command = realm.where(Command.class).equalTo(Command.ID, mId).findFirst();
+        Command command = realm.where(Command.class).equalTo(Command.Companion.getID(), mId).findFirst();
         if(command != null) {
             trackSelectContent(command.getName());
         }
@@ -217,7 +217,7 @@ public class CommandManFragment extends AppIndexFragment implements OnConvertFro
      */
     private ManExpandableListAdapter createAdapter() {
 
-        RealmResults<CommandPage> pages = mRealm.where(CommandPage.class).equalTo(CommandPage.COMMANDID, mId).findAll();
+        RealmResults<CommandPage> pages = mRealm.where(CommandPage.class).equalTo(CommandPage.Companion.getCOMMANDID(), mId).findAll();
 
         ArrayList<String> groups = new ArrayList<>();
         ArrayList<ArrayList<CharSequence>> child = new ArrayList<>();
