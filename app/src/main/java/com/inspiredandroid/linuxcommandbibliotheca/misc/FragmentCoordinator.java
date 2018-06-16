@@ -27,13 +27,13 @@ public class FragmentCoordinator {
     public static void startScriptCategoryActivity(FragmentActivity activity, int category) {
         if (!isTabletLayout(activity)) {
             Intent intent = new Intent(activity, ScriptChildrenActivity.class);
-            intent.putExtra(ScriptChildrenActivity.EXTRA_CATEGORY_ID, category);
+            intent.putExtra(ScriptChildrenActivity.Companion.getEXTRA_CATEGORY_ID(), category);
             activity.startActivity(intent);
         } else {
             View container = activity.findViewById(R.id.fragment_container_secondary);
             ((ViewGroup) container).removeAllViews();
 
-            activity.getIntent().putExtra(ScriptChildrenActivity.EXTRA_CATEGORY_ID, category);
+            activity.getIntent().putExtra(ScriptChildrenActivity.Companion.getEXTRA_CATEGORY_ID(), category);
 
             Fragment fragment = new BasicChildrenFragment();
 
@@ -48,7 +48,7 @@ public class FragmentCoordinator {
     public static void startCommandManActivity(FragmentActivity activity, long id) {
         if (!isTabletLayout(activity)) {
             Intent intent = new Intent(activity, CommandManActivity.class);
-            intent.putExtra(CommandManActivity.EXTRA_COMMAND_ID, id);
+            intent.putExtra(CommandManActivity.Companion.getEXTRA_COMMAND_ID(), id);
             activity.startActivity(intent);
         } else {
             View container = activity.findViewById(R.id.fragment_container_secondary);
@@ -79,7 +79,7 @@ public class FragmentCoordinator {
 
         if (!isTabletLayout(activity)) {
             Intent intent = new Intent(activity, CommandManActivity.class);
-            intent.putExtra(CommandManActivity.EXTRA_COMMAND_ID, id);
+            intent.putExtra(CommandManActivity.Companion.getEXTRA_COMMAND_ID(), id);
             activity.startActivity(intent);
         } else {
             View container = activity.findViewById(R.id.fragment_container_secondary);
@@ -99,9 +99,9 @@ public class FragmentCoordinator {
 
         // Add unique command ID for fragment
         Bundle bundle = new Bundle();
-        bundle.putLong(CommandManActivity.EXTRA_COMMAND_ID, id);
-        bundle.putString(CommandManActivity.EXTRA_COMMAND_NAME, name);
-        bundle.putInt(CommandManActivity.EXTRA_COMMAND_CATEGORY, category);
+        bundle.putLong(CommandManActivity.Companion.getEXTRA_COMMAND_ID(), id);
+        bundle.putString(CommandManActivity.Companion.getEXTRA_COMMAND_NAME(), name);
+        bundle.putInt(CommandManActivity.Companion.getEXTRA_COMMAND_CATEGORY(), category);
         fragment.setArguments(bundle);
 
         FragmentManager fragmentManager = activity.getSupportFragmentManager();

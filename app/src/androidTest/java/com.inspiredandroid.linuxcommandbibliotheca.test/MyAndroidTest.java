@@ -146,7 +146,7 @@ public class MyAndroidTest {
 
         for (Command command : commands) {
             Intent intent = new Intent(getContext(), CommandManActivity.class);
-            intent.putExtra(CommandManActivity.EXTRA_COMMAND_ID, id);
+            intent.putExtra(CommandManActivity.Companion.getEXTRA_COMMAND_ID(), id);
             Activity activity = commandManActivityRule.launchActivity(intent);
 
             try {
