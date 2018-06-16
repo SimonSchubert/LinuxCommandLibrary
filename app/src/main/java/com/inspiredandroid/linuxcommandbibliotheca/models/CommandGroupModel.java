@@ -5,7 +5,6 @@ import com.inspiredandroid.linuxcommandbibliotheca.R;
 import io.realm.RealmList;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
-import io.realm.annotations.Required;
 
 /**
  * Created by Simon Schubert
@@ -17,7 +16,6 @@ public class CommandGroupModel extends RealmObject {
 
     @PrimaryKey
     private int id;
-    @Required
     private String desc;
     private long votes;
     private RealmList<CommandChildModel> commands;
@@ -81,17 +79,17 @@ public class CommandGroupModel extends RealmObject {
             case 26:
                 return R.drawable.ic_icons8_talk;
             case 27:
-                return R.drawable.ic_icons8_wav;
+                return R.drawable.ic_volume_up_black_24dp;
             case 28:
-                return R.drawable.ic_icons8_signal_horn;
+                return R.drawable.ic_volume_up_black_24dp;
             case 29:
                 return R.drawable.ic_icons8_tv_off;
             case 31:
-                return R.drawable.ic_icons8_numbered_list;
+                return R.drawable.ic_list_interfaces_white_48dp;
             case 158:
-                return R.drawable.ic_file_download_black_24dp;
+                return R.drawable.ic_file_download_white;
             case 191:
-                return R.drawable.ic_icons8_domain;
+                return R.drawable.ic_vip_lookup_white_48dp;
             case 201:
                 return R.drawable.ic_icons8_ping_pong;
             case 189:
@@ -107,7 +105,7 @@ public class CommandGroupModel extends RealmObject {
             case 237:
                 return R.drawable.ic_file_content_white;
             case 174:
-                return R.drawable.ic_icons8_content;
+                return R.drawable.ic_folder_list_white;
             case 212:
                 return R.drawable.ic_file_permission_white_48dp;
             case 240:
@@ -143,7 +141,7 @@ public class CommandGroupModel extends RealmObject {
             case 320:
                 return R.drawable.ic_icons8_show_property;
             case 138:
-                return R.drawable.ic_icons8_baby_footprints_path;
+                return R.drawable.ic_fingerprint_black_24dp;
             case 45:
                 return R.drawable.ic_icons8_console;
             case 106:
@@ -151,7 +149,7 @@ public class CommandGroupModel extends RealmObject {
             case 116:
                 return R.drawable.ic_ip_address;
             case 221:
-                return R.drawable.ic_icons8_numbered_list;
+                return R.drawable.ic_list_sockets_white_48dp;
             case 52:
                 return R.drawable.ic_file_link_white_48dp;
             case 113:
@@ -167,9 +165,9 @@ public class CommandGroupModel extends RealmObject {
             case 352:
                 return R.drawable.ic_icons8_edit_user;
             case 82:
-                return R.drawable.ic_icons8_numbered_list;
+                return R.drawable.ic_list_user_white_48dp;
             case 164:
-                return R.drawable.ic_icons8_numbered_list;
+                return R.drawable.ic_list_groups_white_48dp;
             case 428:
                 return R.drawable.ic_volume_off_black_24dp;
             case 48:
@@ -199,7 +197,7 @@ public class CommandGroupModel extends RealmObject {
             case 440:
                 return R.drawable.ic_videogame_asset_black_24dp;
             case 443:
-                return R.drawable.ic_vpn_key_black_40dp;
+                return R.drawable.ic_vpn_key_black_24dp;
             case 450:
                 return R.drawable.ic_wifi_black_24dp;
             case 446:
@@ -207,17 +205,17 @@ public class CommandGroupModel extends RealmObject {
             case 451:
                 return R.drawable.ic_report_black_24dp;
             case 445:
-                return R.drawable.ic_icons8_fine_print;
+                return R.drawable.ic_loupe_black_24dp;
             case 444:
                 return R.drawable.ic_fingerprint_black_24dp;
             case 448:
-                return R.drawable.ic_icons8_domain;
+                return R.drawable.ic_public_black_24dp;
             case 447:
                 return R.drawable.ic_healing_black_24dp;
             case 441:
                 return R.drawable.ic_flash_on_black_24dp;
             case 449:
-                return R.drawable.ic_icons8_database;
+                return R.drawable.ic_storage_black_24dp;
             case 452:
                 return R.drawable.ic_icons8_moderator_male;
             case 454:
@@ -251,7 +249,7 @@ public class CommandGroupModel extends RealmObject {
             case 1494:
                 return R.drawable.ic_icons8_calendar_1;
             case 1503:
-                return R.drawable.ic_vpn_key_black_40dp;
+                return R.drawable.ic_vpn_key_black_24dp;
             case 1487:
             case 1488:
             case 1489:
@@ -266,56 +264,8 @@ public class CommandGroupModel extends RealmObject {
             case 1502:
             case 1504:
                 return R.drawable.ic_icons8_connected;
-            case 1515:
-                return R.drawable.ic_icons8_new;
-            case 1524:
-                return R.drawable.ic_available_updates;
-            case 1527:
-                return R.drawable.ic_icons8_visible;
-            case 1514:
-                return R.drawable.ic_icons8_hide;
-            case 1526:
-                return R.drawable.ic_icons8_save;
-            case 1520:
-            case 1521:
-                return R.drawable.ic_icons8_right;
-            case 1522:
-                return R.drawable.ic_icons8_merge;
-            case 1525:
-                return R.drawable.ic_icons8_save;
-            case 1518:
-                return R.drawable.ic_icons8_numbered_list;
-            case 1528:
-            case 1529:
-            case 1530:
-            case 1531:
-            case 1532:
-            case 1519:
-                return R.drawable.ic_delete_black_24dp;
-            case 1523:
-                return R.drawable.ic_add_circle_outline_black_24dp;
-            case 1508:
-            case 1507:
-                return R.drawable.ic_user_male_circle_40dp;
-            case 1517:
-                return R.drawable.ic_add_circle_outline_black_24dp;
-            case 1513:
-                return R.drawable.ic_icons8_undo;
-            case 1512:
-                return R.drawable.ic_icons8_upload;
-            case 1511:
-                return R.drawable.ic_delete_black_24dp;
-            case 1505:
-            case 1510:
-                return R.drawable.ic_add_circle_outline_black_24dp;
-            case 1509:
-                return R.drawable.ic_info_black_24dp;
-            case 1506:
-                return R.drawable.ic_icons8_save;
-            case 1516:
-                return R.drawable.ic_info_black_24dp;
         }
-        return R.drawable.ic_icons8_hand_with_pen_40dp;
+        return R.drawable.ic_icons8_console;
     }
 
     public int getId() {

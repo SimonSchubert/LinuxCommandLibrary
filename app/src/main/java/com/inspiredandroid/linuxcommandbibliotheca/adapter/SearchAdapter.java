@@ -74,12 +74,12 @@ public class SearchAdapter extends RealmRecyclerViewAdapter<CommandGroupModel, S
         viewHolder.itemView.setOnClickListener(view -> {
             expanded.put(position, !isExpanded(position));
             notifyItemChanged(position);
-            trackSelectContent(item.getId() + "");
+            trackSelectContent(item.getDesc());
         });
     }
 
     private void trackSelectContent(String id) {
-        if (BuildConfig.DEBUG) {
+        if(BuildConfig.DEBUG) {
             return;
         }
         Bundle bundle = new Bundle();
@@ -108,7 +108,7 @@ public class SearchAdapter extends RealmRecyclerViewAdapter<CommandGroupModel, S
 
         try {
             context.startActivity(intent);
-        } catch (Exception e) {
+        } catch(Exception e) {
             e.printStackTrace();
         }
     }

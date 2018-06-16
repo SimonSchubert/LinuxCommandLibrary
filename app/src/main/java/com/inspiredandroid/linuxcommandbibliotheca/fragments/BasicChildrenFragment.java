@@ -80,7 +80,7 @@ public class BasicChildrenFragment extends SuperFragment {
 
         mSearchAdapter = new SearchAdapter(null, false, mFirebaseAnalytics);
 
-        trackSelectContent(categoryId + "");
+        trackSelectContent(basicGroupModel.getTitle());
 
         return view;
     }
@@ -139,7 +139,7 @@ public class BasicChildrenFragment extends SuperFragment {
     }
 
     private void trackSelectContent(String id) {
-        if (BuildConfig.DEBUG) {
+        if(BuildConfig.DEBUG) {
             return;
         }
         Bundle bundle = new Bundle();
@@ -157,7 +157,7 @@ public class BasicChildrenFragment extends SuperFragment {
             realmQuery.contains("desc", word, Case.INSENSITIVE);
         }
 
-        RealmResults<CommandGroupModel> allGroups = realmQuery.endGroup().findAllSorted("votes", Sort.ASCENDING);
+        RealmResults<CommandGroupModel> allGroups = realmQuery.endGroup().sort("votes").findAll();
         mSearchAdapter.setQuery(query);
         mSearchAdapter.updateData(allGroups);
         mRecyclerView.setAdapter(mSearchAdapter);

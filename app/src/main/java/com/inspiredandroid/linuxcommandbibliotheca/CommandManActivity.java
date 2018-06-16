@@ -87,23 +87,21 @@ public class CommandManActivity extends LoadingBaseActivity {
             mName = commandId.substring(6, commandId.length() - 5);
         }
 
+        Realm realm = Realm.getDefaultInstance();
         if (mId != INVALID) {
-            Realm realm = Realm.getDefaultInstance();
-
             Command command = realm.where(Command.class).equalTo(Command.ID, mId).findFirst();
-            mCategory = command.getCategory();
-            mName = command.getName().toUpperCase();
-
-            realm.close();
+            if(command != null) {
+                mCategory = command.getCategory();
+                mName = command.getName().toUpperCase();
+            }
         } else {
-            Realm realm = Realm.getDefaultInstance();
-
             Command command = realm.where(Command.class).equalTo(Command.NAME, mName).findFirst();
-            mCategory = command.getCategory();
-            mId = command.getId();
-
-            realm.close();
+            if(command != null) {
+                mCategory = command.getCategory();
+                mId = command.getId();
+            }
         }
+        realm.close();
     }
 
 

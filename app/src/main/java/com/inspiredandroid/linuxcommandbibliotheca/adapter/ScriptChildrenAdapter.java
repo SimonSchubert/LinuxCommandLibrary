@@ -72,12 +72,12 @@ public class ScriptChildrenAdapter extends RealmRecyclerViewAdapter<CommandGroup
         viewHolder.itemView.setOnClickListener(view -> {
             expanded.put(position, !isExpanded(position));
             notifyItemChanged(position);
-            trackSelectContent(item.getId() + "");
+            trackSelectContent(item.getDesc());
         });
     }
 
     private void trackSelectContent(String id) {
-        if (BuildConfig.DEBUG) {
+        if(BuildConfig.DEBUG) {
             return;
         }
         Bundle bundle = new Bundle();
@@ -96,9 +96,9 @@ public class ScriptChildrenAdapter extends RealmRecyclerViewAdapter<CommandGroup
      * @param command
      */
     private void startShareActivity(Context context, CommandChildModel command) {
-        Intent intent = new Intent(Intent.ACTION_SEND);
-        intent.setType("text/plain");
-        intent.putExtra(android.content.Intent.EXTRA_TEXT, command.getCommand());
+            Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.setType("text/plain");
+            intent.putExtra(android.content.Intent.EXTRA_TEXT, command.getCommand());
         try {
             context.startActivity(intent);
         } catch (Exception e) {

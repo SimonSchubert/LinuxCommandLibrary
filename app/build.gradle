@@ -1,32 +1,31 @@
 apply plugin: 'com.android.application'
 apply plugin: 'realm-android'
-apply plugin: 'me.tatarka.retrolambda'
 
 buildscript {
     repositories {
         mavenCentral()
         jcenter()
+        google()
     }
     dependencies {
-        classpath "io.realm:realm-gradle-plugin:3.3.1"
-        classpath 'me.tatarka:gradle-retrolambda:3.6.1'
+        classpath 'io.realm:realm-gradle-plugin:5.3.0'
     }
 }
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion '25.0.3'
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 25
-        versionCode 55
-        versionName "1.7.5"
-        applicationId "com.inspiredandroid.linuxcommandbibliotheca"
+        targetSdkVersion 27
+        versionCode 51
+        versionName '1.7.5'
+        applicationId 'com.inspiredandroid.linuxcommandbibliotheca'
 
-        resConfigs "en"
+        resConfigs 'en'
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
         vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
@@ -52,27 +51,27 @@ android {
         abi {
             enable true
             reset()
-            include 'armeabi-v7a', 'arm64-v8a', 'mips', 'x86', 'x86_64'
+            include 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
         }
     }
 }
 
 dependencies {
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.android.support:support-annotations:25.3.1'
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support:design:25.3.1'
-    compile 'com.android.support:support-v4:25.3.1'
-    compile 'com.android.support:support-vector-drawable:25.3.1'
-    compile 'io.realm:android-adapters:2.1.0'
-    compile 'com.jakewharton:butterknife:8.6.0'
-    compile 'com.google.firebase:firebase-core:10.2.6'
-    compile 'com.google.firebase:firebase-appindexing:10.2.6'
-    compile 'com.google.firebase:firebase-crash:10.2.6'
-    testCompile 'junit:junit:4.12'
-    androidTestCompile 'com.android.support.test:runner:0.5'
-    androidTestCompile 'com.android.support.test:rules:0.5'
-    androidTestCompile 'com.android.support:support-annotations:25.3.1'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation 'com.android.support:support-annotations:27.1.1'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:support-vector-drawable:27.1.1'
+    implementation 'io.realm:android-adapters:3.0.0'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    implementation 'com.google.firebase:firebase-core:16.0.1'
+    implementation 'com.google.firebase:firebase-appindexing:16.0.1'
+    implementation 'com.google.firebase:firebase-crash:16.0.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+    androidTestImplementation 'com.android.support:support-annotations:27.1.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 }
 apply plugin: 'com.google.gms.google-services'

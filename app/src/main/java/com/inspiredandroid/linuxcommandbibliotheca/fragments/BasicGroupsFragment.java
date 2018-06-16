@@ -67,7 +67,7 @@ public class BasicGroupsFragment extends SuperFragment implements OnListClickLis
 
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(getContext());
 
-        mAdapter = new ScriptGroupsAdapter(mRealm.where(BasicGroupModel.class).findAllSorted("position", Sort.ASCENDING), false);
+        mAdapter = new ScriptGroupsAdapter(mRealm.where(BasicGroupModel.class).sort("position").findAll(), false);
         mAdapter.setOnListClickListener(this);
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -140,7 +140,7 @@ public class BasicGroupsFragment extends SuperFragment implements OnListClickLis
             realmQuery.contains("desc", word, Case.INSENSITIVE);
         }
 
-        RealmResults<CommandGroupModel> allGroups = realmQuery.endGroup().findAllSorted("votes", Sort.ASCENDING);
+        RealmResults<CommandGroupModel> allGroups = realmQuery.endGroup().sort("votes").findAll();
         mSearchAdapter.setQuery(query);
         mSearchAdapter.updateData(allGroups);
         mRecyclerView.setAdapter(mSearchAdapter);

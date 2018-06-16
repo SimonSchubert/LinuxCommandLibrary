@@ -26,6 +26,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.asnytasks.SearchManAsyncTask;
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnConvertFromHtmlToSpannableListener;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.AppManager;
 import com.inspiredandroid.linuxcommandbibliotheca.misc.FragmentCoordinator;
+import com.inspiredandroid.linuxcommandbibliotheca.models.Command;
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandPage;
 
 import java.util.ArrayList;
@@ -90,7 +91,7 @@ public class CommandManFragment extends AppIndexFragment implements OnConvertFro
 
     @Override
     public Action getAppIndexingAction() {
-        final Uri APP_URI = Uri.parse("android-app://com.inspiredandroid.linuxcommandbibliotheca/http/linux.schubert-simon.de/mans");
+        final Uri APP_URI = Uri.parse("android-app://" + BuildConfig.APPLICATION_ID + "/http/linux.schubert-simon.de/mans");
         final Uri WEB_URL = Uri.parse("http://linux.schubert-simon.de/mans/");
         return Action.newAction(Action.TYPE_VIEW, getAppIndexingTitle(), WEB_URL, APP_URI);
     }
@@ -115,16 +116,20 @@ public class CommandManFragment extends AppIndexFragment implements OnConvertFro
 
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(getContext());
 
-        trackSelectContent(mId + "", mName);
+        Realm realm = Realm.getDefaultInstance();
+        Command command = realm.where(Command.class).equalTo(Command.ID, mId).findFirst();
+        if(command != null) {
+            trackSelectContent(command.getName());
+        }
+        realm.close();
     }
 
-    private void trackSelectContent(String id, String name) {
-        if (BuildConfig.DEBUG) {
+    private void trackSelectContent(String name) {
+        if(BuildConfig.DEBUG) {
             return;
         }
         Bundle bundle = new Bundle();
-        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, id);
-        bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, name);
+        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, name);
         bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "Manual Detail");
         mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
     }
@@ -199,7 +204,7 @@ public class CommandManFragment extends AppIndexFragment implements OnConvertFro
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.bookmark) {
             toogleBookmarkState();
-            getActivity().supportInvalidateOptionsMenu();
+            getActivity().invalidateOptionsMenu();
             return true;
         }
         return false;
