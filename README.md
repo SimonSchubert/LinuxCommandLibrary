@@ -31,6 +31,9 @@ https://www.commandlinefu.com - Lots of one-liners
 
 https://icons8.com - Icons
 
+### Firebase
+Add a firebase config file to the project to get firebase runnning.
+
 ### License
 
 > Licensed under the Apache License, Version 2.0 (the "License"); you
