@@ -4,12 +4,14 @@ import java.util.ArrayList;
 
 import io.realm.RealmList;
 import io.realm.RealmObject;
+import io.realm.annotations.Required;
 
 /**
  * Created by Simon Schubert
  */
 public class CommandChildModel extends RealmObject {
 
+    @Required
     private String command;
     private RealmList<CommandManModel> mans;
 
