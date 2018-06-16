@@ -110,7 +110,7 @@ public class CommandBibliothecaActivity extends LoadingBaseActivity {
 
     @Override
     public void onDatabaseCreateSuccess() {
-        if (isFinishing()) {
+        if(isFinishing()) {
             return;
         }
         startFragment(ID.COMMANDS);

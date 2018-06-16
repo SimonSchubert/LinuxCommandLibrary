@@ -21,7 +21,7 @@ public class Utils {
     public final static String PACKAGE_LINUXREMOTE_PRO = "com.inspiredandroid.linuxcontrolcenterpro";
     public static final String PACKAGE_ORCGENOCIDE = "com.inspiredandroid.orcgenocide";
     public static final String PACKAGE_BIMO = "com.inspiredandroid.bimo";
-    public static final String PACKAGE_MEOWDO = "com.inspiredandroid.meowdo";
+    public static final String PACKAGE_QUIZ = "com.inspiredandroid.twoplayerquiz";
     public static final String PACKAGE_COMMANDLIBRARY = "com.inspiredandroid.linuxcommandbibliotheca";
 
     /**
@@ -66,9 +66,10 @@ public class Utils {
                 int spanStart = Math.min(start, originalText.length());
                 int spanEnd = Math.min(start + subSearchQuery.length(), originalText.length());
 
-                if (spanStart < 0 || spanEnd < 0 || start >= spanEnd) {
+                if(spanStart == -1 || spanEnd == -1) {
                     break;
                 }
+
                 highlighted.setSpan(new ForegroundColorSpan(ContextCompat.getColor(context, R.color.ab_primary)), spanStart, spanEnd, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
                 start = normalizedText.indexOf(subSearchQuery, spanEnd);

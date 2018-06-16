@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.google.android.gms.appindexing.Action;
 import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity;
+import com.inspiredandroid.linuxcommandbibliotheca.BuildConfig;
 import com.inspiredandroid.linuxcommandbibliotheca.R;
 import com.inspiredandroid.linuxcommandbibliotheca.view.ClickableTextView;
 
@@ -42,7 +43,7 @@ public class TipsFragment extends AppIndexFragment {
 
     @Override
     public Action getAppIndexingAction() {
-        final Uri APP_URI = Uri.parse("android-app://com.inspiredandroid.linuxcommandbibliotheca/http/linux.schubert-simon.de/tips");
+        final Uri APP_URI = Uri.parse("android-app://" + BuildConfig.APPLICATION_ID + "/http/linux.schubert-simon.de/tips");
         final Uri WEB_URL = Uri.parse("http://linux.schubert-simon.de/tips/");
         return Action.newAction(Action.TYPE_VIEW, getAppIndexingTitle(), WEB_URL, APP_URI);
     }

@@ -14,6 +14,7 @@ The app currently has **2378** manual pages, **1351** one-line scripts and a bun
 * Terminal Games
 * Hacking Tools
 * One-liners
+* Git
 
 Download on Play Store https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca
 
