@@ -63,7 +63,7 @@ public class SearchAdapter extends RealmRecyclerViewAdapter<CommandGroupModel, S
 
             TerminalTextView tv = ((TerminalTextView) v.findViewById(R.id.row_scriptdescription_child_tv_description));
             tv.setText(command.getCommand());
-            tv.setCommands(CommandChildModel.getMans(command));
+            tv.setCommands(CommandChildModel.Companion.getMans(command));
 
             ImageButton btn = (ImageButton) v.findViewById(R.id.row_scriptdescription_child_iv_share);
             btn.setOnClickListener(view -> startShareActivity(view.getContext(), command));

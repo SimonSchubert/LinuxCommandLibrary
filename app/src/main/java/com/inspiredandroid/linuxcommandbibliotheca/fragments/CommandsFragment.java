@@ -228,7 +228,7 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
         List<RealmResults<Command>> results = new ArrayList<>();
         List<Long> ids = AppManager.getBookmarkIds(getContext());
         for (long id : ids) {
-            results.add(mRealm.where(Command.class).equalTo(Command.ID, id).findAll());
+            results.add(mRealm.where(Command.class).equalTo(Command.Companion.getID(), id).findAll());
         }
         results.add(mRealm.where(Command.class).findAll().sort("name"));
         return results;
@@ -241,10 +241,10 @@ public class CommandsFragment extends Fragment implements AdapterView.OnItemClic
      */
     private void search(String query) {
         List<RealmResults<Command>> results = new ArrayList<>();
-        results.add(mRealm.where(Command.class).equalTo(Command.NAME, query).findAll());
-        results.add(mRealm.where(Command.class).beginsWith(Command.NAME, query).notEqualTo(Command.NAME, query).findAll());
-        results.add(mRealm.where(Command.class).contains(Command.NAME, query).not().beginsWith(Command.NAME, query).notEqualTo(Command.NAME, query).findAll());
-        results.add(mRealm.where(Command.class).contains(Command.DESCRIPTION, query).not().contains(Command.NAME, query).findAll());
+        results.add(mRealm.where(Command.class).equalTo(Command.Companion.getNAME(), query).findAll());
+        results.add(mRealm.where(Command.class).beginsWith(Command.Companion.getNAME(), query).notEqualTo(Command.Companion.getNAME(), query).findAll());
+        results.add(mRealm.where(Command.class).contains(Command.Companion.getNAME(), query).not().beginsWith(Command.Companion.getNAME(), query).notEqualTo(Command.Companion.getNAME(), query).findAll());
+        results.add(mRealm.where(Command.class).contains(Command.Companion.getDESCRIPTION(), query).not().contains(Command.Companion.getNAME(), query).findAll());
 
         mAdapter.updateRealmResults(results);
         mAdapter.setSearchQuery(query);

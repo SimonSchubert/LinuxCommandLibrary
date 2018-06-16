@@ -117,7 +117,7 @@ public class MyAndroidTest {
      */
     private void addMissingMansToList(List<String> missingCommands, String... mans) {
         for (String man : mans) {
-            Command command = realm.where(Command.class).equalTo(Command.NAME, man).findFirst();
+            Command command = realm.where(Command.class).equalTo(Command.Companion.getNAME(), man).findFirst();
             if (command == null) {
                 if (!missingCommands.contains(man)) {
                     missingCommands.add(man);

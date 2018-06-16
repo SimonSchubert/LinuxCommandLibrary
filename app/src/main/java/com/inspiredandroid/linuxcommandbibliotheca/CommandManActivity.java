@@ -89,13 +89,13 @@ public class CommandManActivity extends LoadingBaseActivity {
 
         Realm realm = Realm.getDefaultInstance();
         if (mId != INVALID) {
-            Command command = realm.where(Command.class).equalTo(Command.ID, mId).findFirst();
+            Command command = realm.where(Command.class).equalTo(Command.Companion.getID(), mId).findFirst();
             if(command != null) {
                 mCategory = command.getCategory();
                 mName = command.getName().toUpperCase();
             }
         } else {
-            Command command = realm.where(Command.class).equalTo(Command.NAME, mName).findFirst();
+            Command command = realm.where(Command.class).equalTo(Command.Companion.getNAME(), mName).findFirst();
             if(command != null) {
                 mCategory = command.getCategory();
                 mId = command.getId();

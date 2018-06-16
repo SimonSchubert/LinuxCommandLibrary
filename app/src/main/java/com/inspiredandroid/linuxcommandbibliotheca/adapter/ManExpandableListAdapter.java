@@ -139,7 +139,7 @@ public class ManExpandableListAdapter extends BaseExpandableListAdapter {
         ArrayList<String> tmp = new ArrayList<>();
         while (m.find()) {
             String extractedCommand = m.group(0).substring(0, m.group(0).length() - 3).trim();
-            Command command = realm.where(Command.class).equalTo(Command.NAME, extractedCommand).findFirst();
+            Command command = realm.where(Command.class).equalTo(Command.Companion.getNAME(), extractedCommand).findFirst();
             if (command != null) {
                 tmp.add(extractedCommand);
             }

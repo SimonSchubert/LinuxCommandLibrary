@@ -1,5 +1,7 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 apply plugin: 'realm-android'
+apply plugin: 'kotlin-kapt'
 
 buildscript {
     repositories {
@@ -73,5 +75,9 @@ dependencies {
     androidTestImplementation 'com.android.support.test:rules:1.0.2'
     androidTestImplementation 'com.android.support:support-annotations:27.1.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 apply plugin: 'com.google.gms.google-services'
+repositories {
+    mavenCentral()
+}
