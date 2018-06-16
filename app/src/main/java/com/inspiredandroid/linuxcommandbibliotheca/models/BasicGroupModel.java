@@ -5,6 +5,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.R;
 import io.realm.RealmList;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
+import io.realm.annotations.Required;
 
 /**
  * Created by simon on 19.04.17.
@@ -15,6 +16,7 @@ public class BasicGroupModel extends RealmObject {
     @PrimaryKey
     private int id;
     private int position;
+    @Required
     private String title;
     private RealmList<CommandGroupModel> groups;
 

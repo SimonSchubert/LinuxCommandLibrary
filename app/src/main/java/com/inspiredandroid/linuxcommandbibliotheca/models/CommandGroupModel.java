@@ -5,6 +5,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.R;
 import io.realm.RealmList;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
+import io.realm.annotations.Required;
 
 /**
  * Created by Simon Schubert
@@ -16,6 +17,7 @@ public class CommandGroupModel extends RealmObject {
 
     @PrimaryKey
     private int id;
+    @Required
     private String desc;
     private long votes;
     private RealmList<CommandChildModel> commands;
