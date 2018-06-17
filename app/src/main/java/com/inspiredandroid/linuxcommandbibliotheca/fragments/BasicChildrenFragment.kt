@@ -70,7 +70,7 @@ class BasicChildrenFragment : SuperFragment() {
         fragment_scriptchildren_rv.adapter = mAdapter
         fragment_scriptchildren_rv.layoutManager = LinearLayoutManager(context)
 
-        mSearchAdapter = SearchAdapter(null, false, mFirebaseAnalytics)
+        mSearchAdapter = SearchAdapter(null, false, mFirebaseAnalytics!!)
 
         trackSelectContent(basicGroupModel.title)
     }

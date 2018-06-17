@@ -49,7 +49,7 @@ class BasicGroupsFragment : SuperFragment(), OnListClickListener {
 
         mRealm = Realm.getDefaultInstance()
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(context!!)
-        mSearchAdapter = SearchAdapter(null, false, mFirebaseAnalytics)
+        mSearchAdapter = SearchAdapter(null, false, mFirebaseAnalytics!!)
         mAdapter = ScriptGroupsAdapter(mRealm!!.where(BasicGroupModel::class.java).sort("position").findAll(), false)
         mAdapter!!.setOnListClickListener(this)
     }

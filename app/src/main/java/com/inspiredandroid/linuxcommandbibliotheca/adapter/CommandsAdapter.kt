@@ -52,7 +52,7 @@ class CommandsAdapter(context: Context,
             viewHolder = convertView.tag as ViewHolder
         }
 
-        viewHolder.bind(getItem(position))
+        viewHolder.bind(getItem(position)!!)
 
         return convertView
     }
