@@ -93,9 +93,9 @@ class TerminalTextView(context: Context, attrs: AttributeSet) : AppCompatTextVie
         val ss = SpannableString(text)
 
         for (command in commands) {
-
-            val listener = OnLinkClickListener() {
-                FragmentCoordinator.startCommandManActivity(activity, command)
+            val listener = object : OnLinkClickListener {
+                override fun onLinkClick() {
+                    FragmentCoordinator.startCommandManActivity(activity!!, command)                }
             }
             ClickableTextView.addClickableSpanToPhrases(ss, text, command, listener)
         }
@@ -111,7 +111,7 @@ class TerminalTextView(context: Context, attrs: AttributeSet) : AppCompatTextVie
      * @param text
      */
     private fun addOutputSpans(ss: SpannableString, text: String) {
-        if (mOutputRows.size == 0) {
+        if (mOutputRows.isEmpty()) {
             return
         }
 

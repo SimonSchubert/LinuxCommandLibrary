@@ -10,6 +10,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity
 import com.inspiredandroid.linuxcommandbibliotheca.BuildConfig
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnLinkClickListener
+import com.inspiredandroid.linuxcommandbibliotheca.misc.FragmentCoordinator
 import kotlinx.android.synthetic.main.fragment_tips.*
 
 /**
@@ -43,8 +44,11 @@ class TipsFragment : AppIndexFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        fragment_tips_tv_link_to_redirection.setClickInterface(OnLinkClickListener { this.scrollToRedirectionView() })
+        val listener = object : OnLinkClickListener {
+            override fun onLinkClick() {
+                scrollToRedirectionView()               }
+        }
+        fragment_tips_tv_link_to_redirection.setClickInterface(listener)
         fragment_tips_tv_link_to_redirection.setClickableWord("below")
     }
 
