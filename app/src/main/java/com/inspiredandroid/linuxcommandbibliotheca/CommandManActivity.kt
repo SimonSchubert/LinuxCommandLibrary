@@ -2,18 +2,13 @@ package com.inspiredandroid.linuxcommandbibliotheca
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentManager
-import android.support.v4.app.FragmentTransaction
 import android.support.v7.widget.Toolbar
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
-
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.CommandManFragment
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.DatabaseLoadingFragment
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command
-
 import io.realm.Realm
 
 /**

@@ -8,24 +8,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
-
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.inspiredandroid.linuxcommandbibliotheca.BuildConfig
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandChildModel
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel
 import com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
-
-import java.util.HashMap
-
-import butterknife.BindView
-import butterknife.ButterKnife
 import io.realm.OrderedRealmCollection
 import io.realm.RealmRecyclerViewAdapter
 import kotlinx.android.synthetic.main.row_scriptchild.view.*
+import java.util.*
 
 /**
  * Created by simon on 23/01/17.

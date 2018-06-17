@@ -1,6 +1,6 @@
 package com.inspiredandroid.linuxcommandbibliotheca.interfaces
 
-import java.util.ArrayList
+import java.util.*
 
 /**
  * Created by Simon Schubert

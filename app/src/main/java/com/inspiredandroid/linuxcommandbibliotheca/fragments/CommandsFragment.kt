@@ -8,14 +8,9 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.view.MenuItemCompat
 import android.support.v7.widget.SearchView
-import android.view.LayoutInflater
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.AdapterView
-
+import butterknife.OnClick
 import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.CommandsAdapter
@@ -24,14 +19,11 @@ import com.inspiredandroid.linuxcommandbibliotheca.fragments.dialogs.RateDialogF
 import com.inspiredandroid.linuxcommandbibliotheca.misc.AppManager
 import com.inspiredandroid.linuxcommandbibliotheca.misc.FragmentCoordinator
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command
-
-import java.text.Normalizer
-import java.util.ArrayList
-
-import butterknife.OnClick
 import io.realm.Realm
 import io.realm.RealmResults
 import kotlinx.android.synthetic.main.fragment_commands.*
+import java.text.Normalizer
+import java.util.*
 
 /**
  * Created by Simon Schubert.

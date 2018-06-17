@@ -3,20 +3,15 @@ package com.inspiredandroid.linuxcommandbibliotheca.misc
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentActivity
-import android.support.v4.app.FragmentManager
-import android.support.v4.app.FragmentTransaction
 import android.view.View
 import android.view.ViewGroup
-
 import com.inspiredandroid.linuxcommandbibliotheca.CommandManActivity
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.ScriptChildrenActivity
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.BasicChildrenFragment
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.CommandManFragment
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command
-
 import io.realm.Realm
 
 /**

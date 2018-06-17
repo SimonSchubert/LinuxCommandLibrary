@@ -8,11 +8,8 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils
-
-import butterknife.OnClick
 
 /**
  * Created by Simon Schubert on 23.11.15.

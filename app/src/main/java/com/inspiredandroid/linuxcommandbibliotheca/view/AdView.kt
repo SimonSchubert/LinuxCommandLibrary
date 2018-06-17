@@ -6,8 +6,6 @@ import android.net.Uri
 import android.support.v7.widget.AppCompatImageView
 import android.util.AttributeSet
 import android.view.View
-
-import com.inspiredandroid.linuxcommandbibliotheca.misc.AppManager
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils
 
 /**

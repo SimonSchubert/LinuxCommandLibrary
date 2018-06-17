@@ -6,15 +6,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v4.view.MenuItemCompat
 import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.SearchView
-import android.view.LayoutInflater
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
-import android.view.View
-import android.view.ViewGroup
-
+import android.view.*
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity
 import com.inspiredandroid.linuxcommandbibliotheca.R
@@ -24,13 +17,10 @@ import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnListClickListene
 import com.inspiredandroid.linuxcommandbibliotheca.misc.FragmentCoordinator
 import com.inspiredandroid.linuxcommandbibliotheca.models.BasicGroupModel
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel
-
-import java.text.Normalizer
-
-import butterknife.BindView
 import io.realm.Case
 import io.realm.Realm
 import kotlinx.android.synthetic.main.fragment_scriptgroups.*
+import java.text.Normalizer
 
 /**
  * Created by Simon Schubert
