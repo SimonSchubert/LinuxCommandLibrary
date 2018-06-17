@@ -95,7 +95,8 @@ class TerminalTextView(context: Context, attrs: AttributeSet) : AppCompatTextVie
         for (command in commands) {
             val listener = object : OnLinkClickListener {
                 override fun onLinkClick() {
-                    FragmentCoordinator.startCommandManActivity(activity!!, command)                }
+                    FragmentCoordinator.startCommandManActivity(activity!!, command)
+                }
             }
             ClickableTextView.addClickableSpanToPhrases(ss, text, command, listener)
         }

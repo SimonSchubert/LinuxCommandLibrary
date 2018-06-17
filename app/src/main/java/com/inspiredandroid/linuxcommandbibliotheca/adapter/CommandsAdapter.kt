@@ -18,19 +18,19 @@ class CommandsAdapter(context: Context,
                       realmResults: List<RealmResults<Command>>,
                       automaticUpdate: Boolean) : RealmMultiAdapter<Command>(context, realmResults, automaticUpdate), ListAdapter {
 
-    private var mQuery = ""
-    private var mIds: ArrayList<Long>? = null
+    private var query = ""
+    private var bookmarkIds = ArrayList<Long>()
 
     init {
         updateBookmarkIds()
     }
 
     fun setSearchQuery(searchQuery: String) {
-        mQuery = searchQuery
+        query = searchQuery
     }
 
     fun updateBookmarkIds() {
-        mIds = AppManager.getBookmarkIds(mContext!!)
+        bookmarkIds = AppManager.getBookmarkIds(mContext!!)
     }
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
@@ -74,13 +74,13 @@ class CommandsAdapter(context: Context,
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         fun bind(command: Command) {
-            itemView.row_command_child_tv_title.text = Utils.highlightQueryInsideText(itemView.context, mQuery, command.name!!)
-            itemView.row_command_child_tv_desc.text = Utils.highlightQueryInsideText(itemView.context, mQuery, command.desc!!.trim { it <= ' ' })
+            itemView.title.text = Utils.highlightQueryInsideText(itemView.context, query, command.name!!)
+            itemView.description.text = Utils.highlightQueryInsideText(itemView.context, query, command.desc!!.trim { it <= ' ' })
 
-            if (mIds!!.contains(command.id.toLong())) {
-                itemView.row_command_child_iv_icon.setImageResource(R.drawable.ic_bookmark_black_24dp)
+            if (bookmarkIds.contains(command.id.toLong())) {
+                itemView.icon.setImageResource(R.drawable.ic_bookmark_black_24dp)
             } else {
-                itemView.row_command_child_iv_icon.setImageResource(getSectionImageResource(command.category))
+                itemView.icon.setImageResource(getSectionImageResource(command.category))
             }
         }
     }

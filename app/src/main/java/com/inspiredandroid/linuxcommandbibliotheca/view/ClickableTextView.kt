@@ -25,7 +25,6 @@ class ClickableTextView(context: Context, attrs: AttributeSet) : AppCompatTextVi
     private var mOnLinkClickListener: OnLinkClickListener? = null
 
     init {
-
         if (!isInEditMode) {
             movementMethod = LinkMovementMethod.getInstance()
             highlightColor = Color.TRANSPARENT

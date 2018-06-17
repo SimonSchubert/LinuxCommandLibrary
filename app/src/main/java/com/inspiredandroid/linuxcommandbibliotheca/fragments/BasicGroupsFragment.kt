@@ -11,7 +11,7 @@ import android.view.*
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity
 import com.inspiredandroid.linuxcommandbibliotheca.R
-import com.inspiredandroid.linuxcommandbibliotheca.adapter.ScriptGroupsAdapter
+import com.inspiredandroid.linuxcommandbibliotheca.adapter.BasicGroupsAdapter
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.SearchAdapter
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnListClickListener
 import com.inspiredandroid.linuxcommandbibliotheca.misc.FragmentCoordinator
@@ -28,7 +28,7 @@ import java.text.Normalizer
 class BasicGroupsFragment : SuperFragment(), OnListClickListener {
 
     private var mRealm: Realm? = null
-    private var mAdapter: ScriptGroupsAdapter? = null
+    private var mAdapter: BasicGroupsAdapter? = null
     private var mSearchAdapter: SearchAdapter? = null
     private var mFirebaseAnalytics: FirebaseAnalytics? = null
 
@@ -40,7 +40,7 @@ class BasicGroupsFragment : SuperFragment(), OnListClickListener {
         mRealm = Realm.getDefaultInstance()
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(context!!)
         mSearchAdapter = SearchAdapter(null, false, mFirebaseAnalytics!!)
-        mAdapter = ScriptGroupsAdapter(mRealm!!.where(BasicGroupModel::class.java).sort("position").findAll(), false)
+        mAdapter = BasicGroupsAdapter(mRealm!!.where(BasicGroupModel::class.java).sort("position").findAll(), false)
         mAdapter!!.setOnListClickListener(this)
     }
 
@@ -63,7 +63,6 @@ class BasicGroupsFragment : SuperFragment(), OnListClickListener {
 
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
         inflater!!.inflate(R.menu.tip, menu)
-
 
         val item = menu!!.findItem(R.id.search)
         val searchView = MenuItemCompat.getActionView(item) as SearchView

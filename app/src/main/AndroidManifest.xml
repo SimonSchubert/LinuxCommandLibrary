@@ -19,7 +19,7 @@
         tools:replace="android:icon">
 
         <activity
-            android:name=".CommandBibliothecaActivity"
+            android:name=".NavigationActivity"
             android:label="@string/app_lcl_name"
             android:theme="@style/LibAppTheme"
             android:windowSoftInputMode="adjustPan">

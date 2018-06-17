@@ -14,41 +14,41 @@ import kotlinx.android.synthetic.main.row_scriptgroup.view.*
 /**
  * Created by simon on 23.11.15.
  */
-class ScriptGroupsAdapter(data: OrderedRealmCollection<BasicGroupModel>?, autoUpdate: Boolean) : RealmRecyclerViewAdapter<BasicGroupModel, ScriptGroupsAdapter.ScriptViewHolder>(data, autoUpdate) {
+class BasicGroupsAdapter(data: OrderedRealmCollection<BasicGroupModel>?, autoUpdate: Boolean) : RealmRecyclerViewAdapter<BasicGroupModel, BasicGroupsAdapter.ViewHolder>(data, autoUpdate) {
 
-    private var mOnListClickListener: OnListClickListener? = null
+    private var onListClickListener: OnListClickListener? = null
 
     fun setOnListClickListener(listener: OnListClickListener) {
-        mOnListClickListener = listener
+        onListClickListener = listener
     }
 
     override fun onCreateViewHolder(parent: ViewGroup,
-                                    viewType: Int): ScriptViewHolder {
+                                    viewType: Int): ViewHolder {
         val v = LayoutInflater.from(parent.context)
                 .inflate(R.layout.row_scriptgroup, parent, false)
-        return ScriptViewHolder(v)
+        return ViewHolder(v)
     }
 
-    override fun onBindViewHolder(viewHolder: ScriptViewHolder, position: Int) {
-        val item = data!![position]
-
-        viewHolder.bind(item)
+    override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
+        getItem(position)?.let {
+            viewHolder.bind(it)
+        }
     }
 
-    inner class ScriptViewHolder(view: View) : RecyclerView.ViewHolder(view), View.OnClickListener {
+    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view), View.OnClickListener {
 
         init {
             view.setOnClickListener(this)
         }
 
         fun bind(item: BasicGroupModel) {
-            itemView.row_scriptgroup_tv_title.text = item.title
-            itemView.row_scriptgroup_iv_icon.setImageResource(item.iconResourceId)
+            itemView.title.text = item.title
+            itemView.icon.setImageResource(item.iconResourceId)
         }
 
         override fun onClick(view: View) {
-            if (mOnListClickListener != null) {
-                mOnListClickListener!!.onClick(data!![adapterPosition].id)
+            getItem(adapterPosition)?.let {
+                onListClickListener?.onClick(it.id)
             }
         }
     }

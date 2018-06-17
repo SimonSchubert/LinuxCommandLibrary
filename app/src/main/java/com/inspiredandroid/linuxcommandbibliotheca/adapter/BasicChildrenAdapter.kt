@@ -7,7 +7,6 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.inspiredandroid.linuxcommandbibliotheca.BuildConfig
 import com.inspiredandroid.linuxcommandbibliotheca.R
@@ -22,25 +21,21 @@ import java.util.*
 /**
  * Created by simon on 23/01/17.
  */
-class ScriptChildrenAdapter(data: OrderedRealmCollection<CommandGroupModel>?, autoUpdate: Boolean, private val mFirebaseAnalytics: FirebaseAnalytics) : RealmRecyclerViewAdapter<CommandGroupModel, ScriptChildrenAdapter.ScriptViewHolder>(data, autoUpdate) {
+class BasicChildrenAdapter(data: OrderedRealmCollection<CommandGroupModel>?, autoUpdate: Boolean, private val mFirebaseAnalytics: FirebaseAnalytics) : RealmRecyclerViewAdapter<CommandGroupModel, BasicChildrenAdapter.ViewHolder>(data, autoUpdate) {
 
-    private val expanded: HashMap<Int, Boolean>
-
-    init {
-        expanded = HashMap()
-    }
+    private val expanded: HashMap<Int, Boolean> = HashMap()
 
     override fun onCreateViewHolder(parent: ViewGroup,
-                                    viewType: Int): ScriptViewHolder {
+                                    viewType: Int): ViewHolder {
         val v = LayoutInflater.from(parent.context)
                 .inflate(R.layout.row_scriptchild, parent, false)
-        return ScriptViewHolder(v)
+        return ViewHolder(v)
     }
 
-    override fun onBindViewHolder(scriptViewHolder: ScriptViewHolder, position: Int) {
-        val item = data!![position]
-
-        scriptViewHolder.bind(item);
+    override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
+        getItem(position)?.let {
+            viewHolder.bind(it)
+        }
     }
 
     private fun trackSelectContent(id: String?) {
@@ -54,11 +49,11 @@ class ScriptChildrenAdapter(data: OrderedRealmCollection<CommandGroupModel>?, au
     }
 
     private fun isExpanded(position: Int): Boolean {
-        return expanded.containsKey(position) && expanded[position]!!
+        return expanded[position] ?: false
     }
 
     /**
-     * let user share the command with any compatible app
+     * Let user share the command to any plain text receivable app
      *
      * @param command
      */
@@ -73,28 +68,28 @@ class ScriptChildrenAdapter(data: OrderedRealmCollection<CommandGroupModel>?, au
         }
     }
 
-    inner class ScriptViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         fun bind(item: CommandGroupModel) {
-            itemView.row_scriptgroup_tv_title.text = item.desc
-            itemView.row_scriptgroup_iv_icon.setImageResource(item.imageResourceId)
-            itemView.row_scriptgroup_ll_detail.removeAllViews()
+            itemView.title.text = item.desc
+            itemView.icon.setImageResource(item.imageResourceId)
+            itemView.commands.removeAllViews()
             for (command in item.commands!!) {
-                val v = LayoutInflater.from(itemView.context).inflate(R.layout.row_scriptchild_child, itemView.row_scriptgroup_ll_detail, false)
+                val v = LayoutInflater.from(itemView.context).inflate(R.layout.row_scriptchild_child, itemView.commands, false)
 
-                val tv = v.findViewById<View>(R.id.row_scriptdescription_child_tv_description) as TerminalTextView
+                val tv = v.findViewById<TerminalTextView>(R.id.row_scriptdescription_child_tv_description)
                 tv.text = command.command
-                tv.setCommands(CommandChildModel.getMans(command))
+                tv.setCommands(command.getMansAsStringArray())
 
-                val btn = v.findViewById<View>(R.id.row_scriptdescription_child_iv_share) as ImageButton
+                val btn = v.findViewById<View>(R.id.row_scriptdescription_child_iv_share)
                 btn.setOnClickListener { view -> startShareActivity(view.context, command) }
 
-                itemView.row_scriptgroup_ll_detail.addView(v)
+                itemView.commands.addView(v)
             }
-            itemView.row_scriptgroup_ll_detail.visibility = if (isExpanded(position)) View.VISIBLE else View.GONE
-            itemView.setOnClickListener { view ->
-                expanded[position] = !isExpanded(position)
-                notifyItemChanged(position)
+            itemView.commands.visibility = if (isExpanded(adapterPosition)) View.VISIBLE else View.GONE
+            itemView.setOnClickListener { _ ->
+                expanded[adapterPosition] = !isExpanded(adapterPosition)
+                notifyItemChanged(adapterPosition)
                 trackSelectContent(item.desc)
             }
         }
