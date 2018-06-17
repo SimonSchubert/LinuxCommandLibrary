@@ -26,12 +26,8 @@ import java.util.*
  */
 class SearchAdapter(data: OrderedRealmCollection<CommandGroupModel>?, autoUpdate: Boolean, private val mFirebaseAnalytics: FirebaseAnalytics) : RealmRecyclerViewAdapter<CommandGroupModel, ItemViewHolder>(data, autoUpdate) {
 
-    private val expanded: HashMap<Int, Boolean>
+    private val expanded: HashMap<Int, Boolean> = HashMap()
     private var mQuery = ""
-
-    init {
-        expanded = HashMap()
-    }
 
     override fun onCreateViewHolder(parent: ViewGroup,
                                     viewType: Int): ItemViewHolder {
@@ -82,22 +78,22 @@ class SearchAdapter(data: OrderedRealmCollection<CommandGroupModel>?, autoUpdate
 
     inner class ItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun bind(item: CommandGroupModel) {
-            itemView.row_scriptgroup_tv_title.text = Utils.highlightQueryInsideText(itemView.context, mQuery, item.desc!!)
-            itemView.row_scriptgroup_iv_icon.setImageResource(item.imageResourceId)
-            itemView.row_scriptgroup_ll_detail.removeAllViews()
+            itemView.title.text = Utils.highlightQueryInsideText(itemView.context, mQuery, item.desc!!)
+            itemView.icon.setImageResource(item.imageResourceId)
+            itemView.commands.removeAllViews()
             for (command in item.commands!!) {
-                val v = LayoutInflater.from(itemView.context).inflate(R.layout.row_scriptchild_child, itemView.row_scriptgroup_ll_detail, false)
+                val v = LayoutInflater.from(itemView.context).inflate(R.layout.row_scriptchild_child, itemView.commands, false)
 
                 val tv = v.findViewById<View>(R.id.row_scriptdescription_child_tv_description) as TerminalTextView
                 tv.text = command.command
-                tv.setCommands(CommandChildModel.getMans(command))
+                tv.setCommands(command.getMansAsStringArray())
 
                 val btn = v.findViewById<View>(R.id.row_scriptdescription_child_iv_share) as ImageButton
                 btn.setOnClickListener { view -> startShareActivity(view.context, command) }
 
-                itemView.row_scriptgroup_ll_detail.addView(v)
+                itemView.commands.addView(v)
             }
-            itemView.row_scriptgroup_ll_detail.visibility = if (isExpanded(position)) View.VISIBLE else View.GONE
+            itemView.commands.visibility = if (isExpanded(position)) View.VISIBLE else View.GONE
             itemView.setOnClickListener { view ->
                 expanded[position] = !isExpanded(position)
                 notifyItemChanged(position)

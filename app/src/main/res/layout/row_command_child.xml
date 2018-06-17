@@ -8,13 +8,13 @@
     android:paddingRight="16dp">
 
     <ImageView
-        android:id="@+id/row_command_child_iv_icon"
+        android:id="@+id/icon"
         android:layout_width="40dp"
         android:layout_height="40dp"
         tool:src="@drawable/ic_code_white_48dp" />
 
     <TextView
-        android:id="@+id/row_command_child_tv_title"
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="56dp"
@@ -25,12 +25,12 @@
         tool:text="adb" />
 
     <TextView
-        android:id="@+id/row_command_child_tv_desc"
+        android:id="@+id/description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/row_command_child_tv_title"
-        android:layout_alignStart="@+id/row_command_child_tv_title"
-        android:layout_below="@+id/row_command_child_tv_title"
+        android:layout_alignLeft="@+id/title"
+        android:layout_alignStart="@+id/title"
+        android:layout_below="@+id/title"
         android:ellipsize="end"
         android:lines="1"
         android:textSize="12sp"

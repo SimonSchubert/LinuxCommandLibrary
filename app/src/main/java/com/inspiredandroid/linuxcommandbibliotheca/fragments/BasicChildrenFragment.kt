@@ -11,7 +11,7 @@ import com.google.firebase.analytics.FirebaseAnalytics
 import com.inspiredandroid.linuxcommandbibliotheca.BuildConfig
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.ScriptChildrenActivity
-import com.inspiredandroid.linuxcommandbibliotheca.adapter.ScriptChildrenAdapter
+import com.inspiredandroid.linuxcommandbibliotheca.adapter.BasicChildrenAdapter
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.SearchAdapter
 import com.inspiredandroid.linuxcommandbibliotheca.models.BasicGroupModel
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel
@@ -27,7 +27,6 @@ import java.text.Normalizer
 class BasicChildrenFragment : SuperFragment() {
 
     private var mRealm: Realm? = null
-    private var mAdapter: ScriptChildrenAdapter? = null
     private var mSearchAdapter: SearchAdapter? = null
     private var mFirebaseAnalytics: FirebaseAnalytics? = null
 
@@ -56,11 +55,9 @@ class BasicChildrenFragment : SuperFragment() {
 
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(context!!)
 
-        mAdapter = ScriptChildrenAdapter(groups, false, mFirebaseAnalytics!!)
-        fragment_scriptchildren_rv.adapter = mAdapter
+        mSearchAdapter = SearchAdapter(groups, false, mFirebaseAnalytics!!)
+        fragment_scriptchildren_rv.adapter = mSearchAdapter
         fragment_scriptchildren_rv.layoutManager = LinearLayoutManager(context)
-
-        mSearchAdapter = SearchAdapter(null, false, mFirebaseAnalytics!!)
 
         trackSelectContent(basicGroupModel.title)
     }
@@ -138,7 +135,7 @@ class BasicChildrenFragment : SuperFragment() {
     }
 
     private fun resetSearchResults() {
-        fragment_scriptchildren_rv.adapter = mAdapter
+        fragment_scriptchildren_rv.adapter = mSearchAdapter
     }
 
 }

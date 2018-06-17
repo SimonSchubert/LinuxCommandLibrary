@@ -9,7 +9,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.fragments.BasicGroupsFragment
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.CommandsFragment
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.DatabaseLoadingFragment
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.TipsFragment
-import kotlinx.android.synthetic.main.activity_commandbibliotheca.*
+import kotlinx.android.synthetic.main.activity_navigation.*
 
 /**
  * Created by Simon Schubert
@@ -17,26 +17,29 @@ import kotlinx.android.synthetic.main.activity_commandbibliotheca.*
  *
  * This Activity just holds the NavigationFragmentFragment
  */
-class CommandBibliothecaActivity : LoadingBaseActivity() {
+class NavigationActivity : LoadingBaseActivity() {
 
-    private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener() {
+    private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener() {
         when (it.itemId) {
             R.id.navigation_commands -> {
                 startFragment(COMMANDS)
+                return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_basics -> {
                 startFragment(BASIC)
+                return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_tips -> {
                 startFragment(TIPS)
+                return@OnNavigationItemSelectedListener true
             }
         }
-        false
+         false
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_commandbibliotheca)
+        setContentView(R.layout.activity_navigation)
 
         setSupportActionBar(toolbar)
 
@@ -47,7 +50,7 @@ class CommandBibliothecaActivity : LoadingBaseActivity() {
             setTitle(title)
         }
 
-        activity_navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+        navigation.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
@@ -87,7 +90,7 @@ class CommandBibliothecaActivity : LoadingBaseActivity() {
 
         fragmentTransaction.replace(R.id.fragment_container, fragment)
         fragmentTransaction.commitAllowingStateLoss()
-        activity_navigation.visibility = View.GONE
+        navigation.visibility = View.GONE
     }
 
     override fun onDatabaseCreateSuccess() {
@@ -95,7 +98,7 @@ class CommandBibliothecaActivity : LoadingBaseActivity() {
             return
         }
         startFragment(COMMANDS)
-        activity_navigation.visibility = View.VISIBLE
+        navigation.visibility = View.VISIBLE
     }
 
     override fun onDatabaseCreateFail() {

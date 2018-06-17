@@ -12,9 +12,6 @@ abstract class RealmMultiAdapter<T : RealmObject>(protected var mContext: Contex
     protected var mInflater: LayoutInflater
 
     init {
-        if (mContext == null) {
-            throw IllegalArgumentException("Context cannot be null")
-        }
         mInflater = LayoutInflater.from(mContext)
     }
 
