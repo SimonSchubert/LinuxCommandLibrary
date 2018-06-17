@@ -29,7 +29,7 @@ class AdView : AppCompatImageView {
 
     private fun init() {
         // Hide ads if remote is already installed
-        if (AppManager.getHideAdvertising(context) || Utils.isAppInstalled(context, Utils.PACKAGE_LINUXREMOTE) || Utils.isAppInstalled(context, Utils.PACKAGE_LINUXREMOTE_PRO)) {
+        if (Utils.isAppInstalled(context, Utils.PACKAGE_LINUXREMOTE) || Utils.isAppInstalled(context, Utils.PACKAGE_LINUXREMOTE_PRO)) {
             visibility = View.GONE
         } else {
             setOnClickListener { view -> startRemoteControl() }
