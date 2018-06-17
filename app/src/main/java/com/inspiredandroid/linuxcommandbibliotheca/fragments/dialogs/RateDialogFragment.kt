@@ -22,7 +22,7 @@ class RateDialogFragment : DialogFragment() {
                 .setMessage(R.string.dialog_rate_message)
                 .setPositiveButton(R.string.dialog_rate_rate_now) { dialogInterface, i -> startAppMarketActivity() }
                 .setNeutralButton(R.string.dialog_rate_later, null)
-                .setNegativeButton(R.string.dialog_rate_no_thanks) { dialogInterface, i -> AppManager.disableRateDialog(context) }.create()
+                .setNegativeButton(R.string.dialog_rate_no_thanks) { dialogInterface, i -> AppManager.disableRateDialog(context!!) }.create()
     }
 
     private fun startAppMarketActivity() {

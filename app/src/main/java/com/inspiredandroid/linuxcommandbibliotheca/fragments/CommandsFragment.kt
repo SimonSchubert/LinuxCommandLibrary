@@ -42,7 +42,7 @@ class CommandsFragment : Fragment(), AdapterView.OnItemClickListener {
     private val allCommands: List<RealmResults<Command>>
         get() {
             val results = ArrayList<RealmResults<Command>>()
-            val ids = AppManager.getBookmarkIds(context)
+            val ids = AppManager.getBookmarkIds(context!!)
             for (id in ids) {
                 results.add(mRealm!!.where(Command::class.java).equalTo(Command.ID, id).findAll())
             }
@@ -58,10 +58,10 @@ class CommandsFragment : Fragment(), AdapterView.OnItemClickListener {
         mRealm = Realm.getDefaultInstance()
         mAdapter = CommandsAdapter(context!!, allCommands, false)
 
-        if (AppManager.shouldShowNewsDialog(context)) {
+        if (AppManager.shouldShowNewsDialog(context!!)) {
             val newDialogFragment = NewsDialogFragment.instance
             newDialogFragment.show(childFragmentManager, newDialogFragment.javaClass.canonicalName)
-        } else if (AppManager.shouldShowRateDialog(context)) {
+        } else if (AppManager.shouldShowRateDialog(context!!)) {
             val rateDialogFragment = RateDialogFragment.instance
             rateDialogFragment.show(childFragmentManager, RateDialogFragment::class.java.name)
         }
@@ -79,7 +79,7 @@ class CommandsFragment : Fragment(), AdapterView.OnItemClickListener {
     }
 
     override fun onItemClick(parent: AdapterView<*>, view: View, position: Int, id: Long) {
-        FragmentCoordinator.startCommandManActivity(activity, id)
+        FragmentCoordinator.startCommandManActivity(activity!!, id)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
@@ -148,7 +148,7 @@ class CommandsFragment : Fragment(), AdapterView.OnItemClickListener {
 
         // mHandler.postDelayed(mSearchQueryCheck, 1000);
 
-        if (AppManager.hasBookmarkChanged(context)) {
+        if (AppManager.hasBookmarkChanged(context!!)) {
             resetSearchResults()
         }
     }

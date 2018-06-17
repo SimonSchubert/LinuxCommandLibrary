@@ -136,6 +136,6 @@ class BasicGroupsFragment : SuperFragment(), OnListClickListener {
     }
 
     override fun onClick(id: Int) {
-        FragmentCoordinator.startScriptCategoryActivity(activity, id)
+        FragmentCoordinator.startScriptCategoryActivity(activity!!, id)
     }
 }

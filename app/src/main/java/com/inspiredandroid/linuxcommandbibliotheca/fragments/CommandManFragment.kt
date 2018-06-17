@@ -170,7 +170,7 @@ class CommandManFragment : AppIndexFragment(), OnConvertFromHtmlToSpannableListe
         })
 
         val bookmarkItem = menu.findItem(R.id.bookmark)
-        bookmarkItem.setIcon(if (AppManager.hasBookmark(context, mId)) R.drawable.ic_bookmark_black_24dp else R.drawable.ic_bookmark_border_black_24dp)
+        bookmarkItem.setIcon(if (AppManager.hasBookmark(context!!, mId)) R.drawable.ic_bookmark_black_24dp else R.drawable.ic_bookmark_border_black_24dp)
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
@@ -217,10 +217,10 @@ class CommandManFragment : AppIndexFragment(), OnConvertFromHtmlToSpannableListe
     }
 
     private fun toogleBookmarkState() {
-        if (AppManager.hasBookmark(context, mId)) {
-            AppManager.removeBookmark(context, mId)
+        if (AppManager.hasBookmark(context!!, mId)) {
+            AppManager.removeBookmark(context!!, mId)
         } else {
-            AppManager.addBookmark(context, mId)
+            AppManager.addBookmark(context!!, mId)
         }
     }
 
@@ -228,7 +228,7 @@ class CommandManFragment : AppIndexFragment(), OnConvertFromHtmlToSpannableListe
      *
      */
     private fun resetSearchResults() {
-        val async = SearchManAsyncTask(context, "", mAdapter!!.mChild, this)
+        val async = SearchManAsyncTask(context!!, "", mAdapter!!.mChild, this)
         addAsyncTask(async)
         async.execute()
 
@@ -241,7 +241,7 @@ class CommandManFragment : AppIndexFragment(), OnConvertFromHtmlToSpannableListe
      * @param q
      */
     private fun search(q: String) {
-        val async = SearchManAsyncTask(context, q, mAdapter!!.mChild, this)
+        val async = SearchManAsyncTask(context!!, q, mAdapter!!.mChild, this)
         addAsyncTask(async)
         async.execute()
     }

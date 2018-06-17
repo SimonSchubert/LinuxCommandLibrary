@@ -82,7 +82,7 @@ class SearchAdapter(data: OrderedRealmCollection<CommandGroupModel>?, autoUpdate
 
     inner class ItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun bind(item: CommandGroupModel) {
-            itemView.row_scriptgroup_tv_title.text = Utils.highlightQueryInsideText(itemView.context, mQuery, item.desc)
+            itemView.row_scriptgroup_tv_title.text = Utils.highlightQueryInsideText(itemView.context, mQuery, item.desc!!)
             itemView.row_scriptgroup_iv_icon.setImageResource(item.imageResourceId)
             itemView.row_scriptgroup_ll_detail.removeAllViews()
             for (command in item.commands!!) {

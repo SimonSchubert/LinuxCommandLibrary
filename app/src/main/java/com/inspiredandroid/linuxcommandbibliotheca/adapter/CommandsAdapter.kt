@@ -30,7 +30,7 @@ class CommandsAdapter(context: Context,
     }
 
     fun updateBookmarkIds() {
-        mIds = AppManager.getBookmarkIds(mContext)
+        mIds = AppManager.getBookmarkIds(mContext!!)
     }
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
@@ -74,8 +74,8 @@ class CommandsAdapter(context: Context,
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         fun bind(command: Command) {
-            itemView.row_command_child_tv_title.text = Utils.highlightQueryInsideText(mContext, mQuery, command.name)
-            itemView.row_command_child_tv_desc.text = Utils.highlightQueryInsideText(mContext, mQuery, command.desc!!.trim { it <= ' ' })
+            itemView.row_command_child_tv_title.text = Utils.highlightQueryInsideText(itemView.context, mQuery, command.name!!)
+            itemView.row_command_child_tv_desc.text = Utils.highlightQueryInsideText(itemView.context, mQuery, command.desc!!.trim { it <= ' ' })
 
             if (mIds!!.contains(command.id.toLong())) {
                 itemView.row_command_child_iv_icon.setImageResource(R.drawable.ic_bookmark_black_24dp)
