@@ -1,10 +1,8 @@
 package com.inspiredandroid.linuxcommandbibliotheca.misc
 
 import android.content.Context
-import android.content.SharedPreferences
 import android.preference.PreferenceManager
-
-import java.util.ArrayList
+import java.util.*
 
 /**
  * Created by simon on 29.11.15.

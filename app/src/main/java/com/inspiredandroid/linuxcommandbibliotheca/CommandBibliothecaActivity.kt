@@ -3,7 +3,6 @@ package com.inspiredandroid.linuxcommandbibliotheca
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
-import android.support.v7.widget.Toolbar
 import android.view.View
 import android.widget.Toast
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.BasicGroupsFragment

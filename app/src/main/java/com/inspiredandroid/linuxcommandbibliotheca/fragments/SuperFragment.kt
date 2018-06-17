@@ -2,8 +2,7 @@ package com.inspiredandroid.linuxcommandbibliotheca.fragments
 
 import android.os.AsyncTask
 import android.support.v4.app.Fragment
-
-import java.util.ArrayList
+import java.util.*
 
 /**
  * Created by Simon Schubert

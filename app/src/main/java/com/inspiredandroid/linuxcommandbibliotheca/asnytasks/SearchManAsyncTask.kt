@@ -2,11 +2,9 @@ package com.inspiredandroid.linuxcommandbibliotheca.asnytasks
 
 import android.content.Context
 import android.os.AsyncTask
-
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnConvertFromHtmlToSpannableListener
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils
-
-import java.util.ArrayList
+import java.util.*
 
 /**
  * Created by Simon Schubert

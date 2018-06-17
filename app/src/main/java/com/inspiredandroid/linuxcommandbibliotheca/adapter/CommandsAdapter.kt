@@ -4,22 +4,15 @@ import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.ListAdapter
-import android.widget.TextView
-
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.misc.AppManager
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Constants
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command
-
-import java.util.ArrayList
-
-import butterknife.BindView
-import butterknife.ButterKnife
 import io.realm.RealmResults
 import kotlinx.android.synthetic.main.row_command_child.view.*
+import java.util.*
 
 class CommandsAdapter(context: Context,
                       realmResults: List<RealmResults<Command>>,

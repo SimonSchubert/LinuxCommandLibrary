@@ -9,11 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.Window
-
 import com.inspiredandroid.linuxcommandbibliotheca.R
-
-import butterknife.ButterKnife
-import butterknife.OnClick
 
 /**
  * Created by Simon Schubert
