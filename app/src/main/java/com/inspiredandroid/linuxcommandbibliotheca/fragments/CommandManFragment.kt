@@ -123,7 +123,7 @@ class CommandManFragment : AppIndexFragment(), OnConvertFromHtmlToSpannableListe
 
         fraggment_commandman_elv.setAdapter(mAdapter)
 
-        fragment_command_man_btn_up!!.setOnClickListener(this)
+        fragment_command_man_btn_up.setOnClickListener(this)
         fragment_command_man_btn_down.setOnClickListener(this)
     }
 
@@ -188,7 +188,6 @@ class CommandManFragment : AppIndexFragment(), OnConvertFromHtmlToSpannableListe
      * @return
      */
     private fun createAdapter(): ManExpandableListAdapter {
-
         val pages = mRealm!!.where(CommandPage::class.java).equalTo(CommandPage.COMMANDID, mId).findAll()
 
         val groups = ArrayList<String>()

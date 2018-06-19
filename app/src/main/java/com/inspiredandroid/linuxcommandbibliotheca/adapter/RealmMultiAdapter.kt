@@ -1,31 +1,23 @@
 package com.inspiredandroid.linuxcommandbibliotheca.adapter
 
 import android.content.Context
+import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.widget.BaseAdapter
 
 import io.realm.RealmObject
 import io.realm.RealmResults
 
-abstract class RealmMultiAdapter<T : RealmObject>(protected var mContext: Context?, protected var mRealmResults: List<RealmResults<T>>?, automaticUpdate: Boolean) : BaseAdapter() {
-
-    protected var mInflater: LayoutInflater
-
-    init {
-        mInflater = LayoutInflater.from(mContext)
-    }
+abstract class RealmMultiAdapter<T : RealmObject>(protected var mContext: Context?, protected var mRealmResults: List<RealmResults<T>>, automaticUpdate: Boolean) : RecyclerView.Adapter<CommandsAdapter.ViewHolder>() {
 
     /**
      * Returns how many items are in the data set.
      *
      * @return count of items.
      */
-    override fun getCount(): Int {
-        if (mRealmResults == null) {
-            return 0
-        }
+    override fun getItemCount(): Int {
         var count = 0
-        for (realmResult in mRealmResults!!) {
+        for (realmResult in mRealmResults) {
             count += realmResult.size
         }
         return count
@@ -37,30 +29,18 @@ abstract class RealmMultiAdapter<T : RealmObject>(protected var mContext: Contex
      * @param i index of item whose data we want.
      * @return the item at the specified position.
      */
-    override fun getItem(i: Int): T? {
-        if (mRealmResults == null || mRealmResults!!.size == 0) {
+    fun getItem(i: Int): T? {
+        if (mRealmResults.isEmpty()) {
             return null
         }
         var count = 0
-        for (realmResult in mRealmResults!!) {
+        for (realmResult in mRealmResults) {
             if (i < realmResult.size + count) {
                 return realmResult[i - count]
             }
             count += realmResult.size
         }
         return null
-    }
-
-    /**
-     * Returns the current ID for an item. Note that item IDs are not stable so you cannot rely on the item ID being the
-     * same after [.notifyDataSetChanged] or [&lt;][.updateRealmResults] has been called.
-     *
-     * @param i index of item in the adapter.
-     * @return current item ID.
-     */
-    override fun getItemId(i: Int): Long {
-        // TODO: find better solution once we have unique IDs
-        return i.toLong()
     }
 
     /**

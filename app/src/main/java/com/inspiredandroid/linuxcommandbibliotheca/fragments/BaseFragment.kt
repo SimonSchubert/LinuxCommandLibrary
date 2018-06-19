@@ -7,7 +7,7 @@ import java.util.*
 /**
  * Created by Simon Schubert
  */
-open class SuperFragment : Fragment() {
+open class BaseFragment : Fragment() {
 
     private val mAsyncTasks = ArrayList<AsyncTask<*, *, *>>()
 

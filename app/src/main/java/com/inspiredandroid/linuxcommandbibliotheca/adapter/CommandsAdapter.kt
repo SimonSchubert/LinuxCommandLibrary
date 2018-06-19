@@ -2,10 +2,12 @@ package com.inspiredandroid.linuxcommandbibliotheca.adapter
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ListAdapter
 import com.inspiredandroid.linuxcommandbibliotheca.R
+import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnListClickListener
 import com.inspiredandroid.linuxcommandbibliotheca.misc.AppManager
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Constants
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils
@@ -16,13 +18,31 @@ import java.util.*
 
 class CommandsAdapter(context: Context,
                       realmResults: List<RealmResults<Command>>,
-                      automaticUpdate: Boolean) : RealmMultiAdapter<Command>(context, realmResults, automaticUpdate), ListAdapter {
+                      automaticUpdate: Boolean) : RealmMultiAdapter<Command>(context, realmResults, automaticUpdate) {
 
     private var query = ""
     private var bookmarkIds = ArrayList<Long>()
+    private var onListClickListener: OnListClickListener? = null
 
     init {
         updateBookmarkIds()
+        setHasStableIds(true)
+    }
+
+    fun setOnListClickListener(listener: OnListClickListener) {
+        onListClickListener = listener
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val v = LayoutInflater.from(parent.context)
+                .inflate(R.layout.row_command_child, parent, false)
+        return ViewHolder(v)
+    }
+
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        getItem(position)?.let {
+            holder.bind(it)
+        }
     }
 
     fun setSearchQuery(searchQuery: String) {
@@ -31,23 +51,6 @@ class CommandsAdapter(context: Context,
 
     fun updateBookmarkIds() {
         bookmarkIds = AppManager.getBookmarkIds(mContext!!)
-    }
-
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-        var convertView = convertView
-        val viewHolder: ViewHolder
-        if (convertView == null) {
-            convertView = mInflater.inflate(R.layout.row_command_child,
-                    parent, false)
-            viewHolder = ViewHolder(convertView)
-            convertView!!.tag = viewHolder
-        } else {
-            viewHolder = convertView.tag as ViewHolder
-        }
-
-        viewHolder.bind(getItem(position)!!)
-
-        return convertView
     }
 
     override fun getItemId(i: Int): Long {
@@ -71,7 +74,11 @@ class CommandsAdapter(context: Context,
         return R.drawable.ic_keyboard_black_24dp
     }
 
-    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view), View.OnClickListener {
+
+        init {
+            view.setOnClickListener(this)
+        }
 
         fun bind(command: Command) {
             itemView.title.text = Utils.highlightQueryInsideText(itemView.context, query, command.name!!)
@@ -81,6 +88,12 @@ class CommandsAdapter(context: Context,
                 itemView.icon.setImageResource(R.drawable.ic_bookmark_black_24dp)
             } else {
                 itemView.icon.setImageResource(getSectionImageResource(command.category))
+            }
+        }
+
+        override fun onClick(view: View) {
+            getItem(adapterPosition)?.let {
+                onListClickListener?.onClick(it.id)
             }
         }
     }

@@ -5,14 +5,13 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.support.v4.view.MenuItemCompat
-import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.SearchView
 import android.view.*
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.BasicGroupsAdapter
-import com.inspiredandroid.linuxcommandbibliotheca.adapter.SearchAdapter
+import com.inspiredandroid.linuxcommandbibliotheca.adapter.BasicChildrenAdapter
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnListClickListener
 import com.inspiredandroid.linuxcommandbibliotheca.misc.FragmentCoordinator
 import com.inspiredandroid.linuxcommandbibliotheca.models.BasicGroupModel
@@ -25,11 +24,11 @@ import java.text.Normalizer
 /**
  * Created by Simon Schubert
  */
-class BasicGroupsFragment : SuperFragment(), OnListClickListener {
+class BasicGroupsFragment : BaseFragment(), OnListClickListener {
 
     private var mRealm: Realm? = null
     private var mAdapter: BasicGroupsAdapter? = null
-    private var mSearchAdapter: SearchAdapter? = null
+    private var mSearchAdapter: BasicChildrenAdapter? = null
     private var mFirebaseAnalytics: FirebaseAnalytics? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,7 +38,7 @@ class BasicGroupsFragment : SuperFragment(), OnListClickListener {
 
         mRealm = Realm.getDefaultInstance()
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(context!!)
-        mSearchAdapter = SearchAdapter(null, false, mFirebaseAnalytics!!)
+        mSearchAdapter = BasicChildrenAdapter(null, false, mFirebaseAnalytics!!)
         mAdapter = BasicGroupsAdapter(mRealm!!.where(BasicGroupModel::class.java).sort("position").findAll(), false)
         mAdapter!!.setOnListClickListener(this)
     }
@@ -51,8 +50,7 @@ class BasicGroupsFragment : SuperFragment(), OnListClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        fragment_scriptgroups_rv!!.adapter = mAdapter
-        fragment_scriptgroups_rv!!.layoutManager = LinearLayoutManager(context)
+        recyclerView.adapter = mAdapter
     }
 
     override fun onDestroy() {
@@ -80,7 +78,7 @@ class BasicGroupsFragment : SuperFragment(), OnListClickListener {
                 if (!isAdded) {
                     return true
                 }
-                if (query.length > 0) {
+                if (query.isNotEmpty()) {
                     val normalizedText = Normalizer.normalize(query, Normalizer.Form.NFD).replace("\\p{InCombiningDiacriticalMarks}+".toRegex(), "").toLowerCase()
                     search(normalizedText)
                 } else {
@@ -112,13 +110,13 @@ class BasicGroupsFragment : SuperFragment(), OnListClickListener {
         }
 
         val allGroups = realmQuery.endGroup().sort("votes").findAll()
-        mSearchAdapter!!.setQuery(query)
+        mSearchAdapter!!.setSearchQuery(query)
         mSearchAdapter!!.updateData(allGroups)
-        fragment_scriptgroups_rv!!.adapter = mSearchAdapter
+        recyclerView.adapter = mSearchAdapter
     }
 
     private fun resetSearchResults() {
-        fragment_scriptgroups_rv!!.adapter = mAdapter
+        recyclerView.adapter = mAdapter
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {

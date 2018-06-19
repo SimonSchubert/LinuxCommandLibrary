@@ -4,7 +4,6 @@ import android.app.SearchManager
 import android.content.Context
 import android.os.Bundle
 import android.support.v4.view.MenuItemCompat
-import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.SearchView
 import android.view.*
 import com.google.firebase.analytics.FirebaseAnalytics
@@ -12,7 +11,6 @@ import com.inspiredandroid.linuxcommandbibliotheca.BuildConfig
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.ScriptChildrenActivity
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.BasicChildrenAdapter
-import com.inspiredandroid.linuxcommandbibliotheca.adapter.SearchAdapter
 import com.inspiredandroid.linuxcommandbibliotheca.models.BasicGroupModel
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel
 import io.realm.Case
@@ -24,10 +22,10 @@ import java.text.Normalizer
 /**
  * Created by Simon Schubert
  */
-class BasicChildrenFragment : SuperFragment() {
+class BasicChildrenFragment : BaseFragment() {
 
     private var mRealm: Realm? = null
-    private var mSearchAdapter: SearchAdapter? = null
+    private var mSearchAdapter: BasicChildrenAdapter? = null
     private var mFirebaseAnalytics: FirebaseAnalytics? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,12 +50,10 @@ class BasicChildrenFragment : SuperFragment() {
 
         activity!!.title = basicGroupModel.title
 
-
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(context!!)
 
-        mSearchAdapter = SearchAdapter(groups, false, mFirebaseAnalytics!!)
-        fragment_scriptchildren_rv.adapter = mSearchAdapter
-        fragment_scriptchildren_rv.layoutManager = LinearLayoutManager(context)
+        mSearchAdapter = BasicChildrenAdapter(groups, false, mFirebaseAnalytics!!)
+        recyclerView.adapter = mSearchAdapter
 
         trackSelectContent(basicGroupModel.title)
     }
@@ -129,13 +125,13 @@ class BasicChildrenFragment : SuperFragment() {
         }
 
         val allGroups = realmQuery.endGroup().sort("votes").findAll()
-        mSearchAdapter!!.setQuery(query)
+        mSearchAdapter!!.setSearchQuery(query)
         mSearchAdapter!!.updateData(allGroups)
-        fragment_scriptchildren_rv.adapter = mSearchAdapter
+        recyclerView.adapter = mSearchAdapter
     }
 
     private fun resetSearchResults() {
-        fragment_scriptchildren_rv.adapter = mSearchAdapter
+        recyclerView.adapter = mSearchAdapter
     }
 
 }

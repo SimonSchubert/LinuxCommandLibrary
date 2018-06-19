@@ -2,14 +2,21 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <ListView
-        android:id="@+id/fragment_commands_lv"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:divider="@null"
-        android:fastScrollEnabled="true" />
+        android:layout_height="match_parent"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"/>
+
+    <com.futuremind.recyclerviewfastscroll.FastScroller
+        android:id="@+id/fastScroller"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"/>
 
     <LinearLayout
         android:id="@+id/fragment_commands_ll_nothingfound"
@@ -25,7 +32,7 @@
             android:text="@string/desc_couldnt_find_any_command" />
 
         <Button
-            android:id="@+id/fragment_commands_btn_send_request"
+            android:id="@+id/btnRequestCommand"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"

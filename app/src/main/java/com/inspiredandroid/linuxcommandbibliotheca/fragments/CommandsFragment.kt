@@ -9,18 +9,18 @@ import android.support.v4.app.Fragment
 import android.support.v4.view.MenuItemCompat
 import android.support.v7.widget.SearchView
 import android.view.*
-import android.widget.AdapterView
-import butterknife.OnClick
 import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.CommandsAdapter
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.dialogs.NewsDialogFragment
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.dialogs.RateDialogFragment
+import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnListClickListener
 import com.inspiredandroid.linuxcommandbibliotheca.misc.AppManager
 import com.inspiredandroid.linuxcommandbibliotheca.misc.FragmentCoordinator
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command
 import io.realm.Realm
 import io.realm.RealmResults
+import io.realm.kotlin.where
 import kotlinx.android.synthetic.main.fragment_commands.*
 import java.text.Normalizer
 import java.util.*
@@ -28,11 +28,11 @@ import java.util.*
 /**
  * Created by Simon Schubert.
  */
-class CommandsFragment : Fragment(), AdapterView.OnItemClickListener {
+class CommandsFragment : Fragment(), OnListClickListener {
 
     private var mAdapter: CommandsAdapter? = null
-    private var mRealm: Realm? = null
-    private var mQuery = ""
+    private var realm: Realm? = null
+    private var searchQuery = ""
 
     /**
      * Get list of all commands sorted by name
@@ -44,9 +44,9 @@ class CommandsFragment : Fragment(), AdapterView.OnItemClickListener {
             val results = ArrayList<RealmResults<Command>>()
             val ids = AppManager.getBookmarkIds(context!!)
             for (id in ids) {
-                results.add(mRealm!!.where(Command::class.java).equalTo(Command.ID, id).findAll())
+                results.add(realm!!.where<Command>().equalTo(Command.ID, id).findAll())
             }
-            results.add(mRealm!!.where(Command::class.java).findAll().sort("name"))
+            results.add(realm!!.where<Command>().findAll().sort("name"))
             return results
         }
 
@@ -55,8 +55,9 @@ class CommandsFragment : Fragment(), AdapterView.OnItemClickListener {
 
         setHasOptionsMenu(true)
 
-        mRealm = Realm.getDefaultInstance()
+        realm = Realm.getDefaultInstance()
         mAdapter = CommandsAdapter(context!!, allCommands, false)
+        mAdapter!!.setOnListClickListener(this)
 
         if (AppManager.shouldShowNewsDialog(context!!)) {
             val newDialogFragment = NewsDialogFragment.instance
@@ -74,18 +75,22 @@ class CommandsFragment : Fragment(), AdapterView.OnItemClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        fragment_commands_lv.adapter = mAdapter
-        fragment_commands_lv.onItemClickListener = this
+        recyclerView.adapter = mAdapter
+        fastScroller.setRecyclerView(recyclerView)
+
+        btnRequestCommand.setOnClickListener {
+            sendCommandRequestEmail()
+        }
     }
 
-    override fun onItemClick(parent: AdapterView<*>, view: View, position: Int, id: Long) {
-        FragmentCoordinator.startCommandManActivity(activity!!, id)
+    override fun onClick(id: Int) {
+        FragmentCoordinator.startCommandManActivity(activity!!, id.toLong())
     }
 
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
-        inflater!!.inflate(R.menu.main, menu)
+        inflater?.inflate(R.menu.main, menu)
 
-        val item = menu!!.findItem(R.id.search)
+        val item = menu?.findItem(R.id.search)
         val searchView = MenuItemCompat.getActionView(item) as SearchView
 
         val searchManager = activity!!.getSystemService(Context.SEARCH_SERVICE) as SearchManager
@@ -101,8 +106,8 @@ class CommandsFragment : Fragment(), AdapterView.OnItemClickListener {
                 if (!isAdded) {
                     return true
                 }
-                mQuery = query
-                if (query.length > 0) {
+                searchQuery = query
+                if (query.isNotEmpty()) {
                     val normalizedText = Normalizer.normalize(query, Normalizer.Form.NFD).replace("\\p{InCombiningDiacriticalMarks}+".toRegex(), "").toLowerCase()
                     search(normalizedText)
                 } else {
@@ -125,7 +130,7 @@ class CommandsFragment : Fragment(), AdapterView.OnItemClickListener {
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        if (item!!.itemId == R.id.about) {
+        if (item?.itemId == R.id.about) {
             startAboutActivity()
             return true
         }
@@ -140,30 +145,26 @@ class CommandsFragment : Fragment(), AdapterView.OnItemClickListener {
     override fun onDestroy() {
         super.onDestroy()
 
-        mRealm!!.close()
+        realm!!.close()
     }
 
     override fun onResume() {
         super.onResume()
-
-        // mHandler.postDelayed(mSearchQueryCheck, 1000);
 
         if (AppManager.hasBookmarkChanged(context!!)) {
             resetSearchResults()
         }
     }
 
-    @OnClick(R.id.fragment_commands_btn_send_request)
     fun sendCommandRequestEmail() {
         val intent = Intent(Intent.ACTION_SENDTO)
         intent.data = Uri.parse("mailto:" + "sschubert89@gmail.com")
         intent.putExtra(Intent.EXTRA_SUBJECT, "Command request")
-        intent.putExtra(Intent.EXTRA_TEXT, "Command: $mQuery")
+        intent.putExtra(Intent.EXTRA_TEXT, "Command: $searchQuery")
         try {
             startActivity(Intent.createChooser(intent, "Send mail..."))
         } catch (ignored: android.content.ActivityNotFoundException) {
         }
-
     }
 
     /**
@@ -183,10 +184,10 @@ class CommandsFragment : Fragment(), AdapterView.OnItemClickListener {
      */
     private fun search(query: String) {
         val results = ArrayList<RealmResults<Command>>()
-        results.add(mRealm!!.where(Command::class.java).equalTo(Command.NAME, query).findAll())
-        results.add(mRealm!!.where(Command::class.java).beginsWith(Command.NAME, query).notEqualTo(Command.NAME, query).findAll())
-        results.add(mRealm!!.where(Command::class.java).contains(Command.NAME, query).not().beginsWith(Command.NAME, query).notEqualTo(Command.NAME, query).findAll())
-        results.add(mRealm!!.where(Command::class.java).contains(Command.DESCRIPTION, query).not().contains(Command.NAME, query).findAll())
+        results.add(realm!!.where(Command::class.java).equalTo(Command.NAME, query).findAll())
+        results.add(realm!!.where(Command::class.java).beginsWith(Command.NAME, query).notEqualTo(Command.NAME, query).findAll())
+        results.add(realm!!.where(Command::class.java).contains(Command.NAME, query).not().beginsWith(Command.NAME, query).notEqualTo(Command.NAME, query).findAll())
+        results.add(realm!!.where(Command::class.java).contains(Command.DESCRIPTION, query).not().contains(Command.NAME, query).findAll())
 
         mAdapter!!.updateRealmResults(results)
         mAdapter!!.setSearchQuery(query)
@@ -195,12 +196,12 @@ class CommandsFragment : Fragment(), AdapterView.OnItemClickListener {
     }
 
     private fun updateViews() {
-        if (mAdapter!!.count == 0) {
+        if (mAdapter!!.itemCount == 0) {
             fragment_commands_ll_nothingfound.visibility = View.VISIBLE
-            fragment_commands_lv.visibility = View.GONE
+            recyclerView.visibility = View.GONE
         } else {
             fragment_commands_ll_nothingfound.visibility = View.GONE
-            fragment_commands_lv.visibility = View.VISIBLE
+            recyclerView.visibility = View.VISIBLE
         }
     }
 }
