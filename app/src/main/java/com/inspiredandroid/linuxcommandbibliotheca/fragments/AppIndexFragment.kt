@@ -9,7 +9,7 @@ import com.google.android.gms.common.api.GoogleApiClient
 /**
  * Created by simon on 20.11.15.
  */
-abstract class AppIndexFragment : SuperFragment() {
+abstract class AppIndexFragment : BaseFragment() {
 
     private var mClient: GoogleApiClient? = null
 
