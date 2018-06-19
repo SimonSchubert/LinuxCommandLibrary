@@ -68,7 +68,7 @@
             android:label="@string/about" />
 
         <activity
-            android:name=".ScriptChildrenActivity"
+            android:name=".BasicGroupActivity"
             android:theme="@style/LibAppTheme"
             android:label="" />
 

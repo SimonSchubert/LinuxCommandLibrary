@@ -9,12 +9,12 @@ import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnListClickListene
 import com.inspiredandroid.linuxcommandbibliotheca.models.BasicGroupModel
 import io.realm.OrderedRealmCollection
 import io.realm.RealmRecyclerViewAdapter
-import kotlinx.android.synthetic.main.row_scriptgroup.view.*
+import kotlinx.android.synthetic.main.row_basiccategory.view.*
 
 /**
  * Created by simon on 23.11.15.
  */
-class BasicGroupsAdapter(data: OrderedRealmCollection<BasicGroupModel>?, autoUpdate: Boolean) : RealmRecyclerViewAdapter<BasicGroupModel, BasicGroupsAdapter.ViewHolder>(data, autoUpdate) {
+class BasicCategoryAdapter(data: OrderedRealmCollection<BasicGroupModel>?, autoUpdate: Boolean) : RealmRecyclerViewAdapter<BasicGroupModel, BasicCategoryAdapter.ViewHolder>(data, autoUpdate) {
 
     private var onListClickListener: OnListClickListener? = null
 
@@ -25,7 +25,7 @@ class BasicGroupsAdapter(data: OrderedRealmCollection<BasicGroupModel>?, autoUpd
     override fun onCreateViewHolder(parent: ViewGroup,
                                     viewType: Int): ViewHolder {
         val v = LayoutInflater.from(parent.context)
-                .inflate(R.layout.row_scriptgroup, parent, false)
+                .inflate(R.layout.row_basiccategory, parent, false)
         return ViewHolder(v)
     }
 

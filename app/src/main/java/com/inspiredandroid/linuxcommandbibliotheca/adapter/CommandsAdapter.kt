@@ -5,7 +5,6 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ListAdapter
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnListClickListener
 import com.inspiredandroid.linuxcommandbibliotheca.misc.AppManager
@@ -13,19 +12,19 @@ import com.inspiredandroid.linuxcommandbibliotheca.misc.Constants
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command
 import io.realm.RealmResults
-import kotlinx.android.synthetic.main.row_command_child.view.*
+import kotlinx.android.synthetic.main.row_command.view.*
 import java.util.*
 
-class CommandsAdapter(context: Context,
+class CommandsAdapter(context: Context?,
                       realmResults: List<RealmResults<Command>>,
-                      automaticUpdate: Boolean) : RealmMultiAdapter<Command>(context, realmResults, automaticUpdate) {
+                      automaticUpdate: Boolean) : RealmMultiAdapter<Command>(realmResults, automaticUpdate) {
 
     private var query = ""
     private var bookmarkIds = ArrayList<Long>()
     private var onListClickListener: OnListClickListener? = null
 
     init {
-        updateBookmarkIds()
+        updateBookmarkIds(context)
         setHasStableIds(true)
     }
 
@@ -35,7 +34,7 @@ class CommandsAdapter(context: Context,
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v = LayoutInflater.from(parent.context)
-                .inflate(R.layout.row_command_child, parent, false)
+                .inflate(R.layout.row_command, parent, false)
         return ViewHolder(v)
     }
 
@@ -49,12 +48,14 @@ class CommandsAdapter(context: Context,
         query = searchQuery
     }
 
-    fun updateBookmarkIds() {
-        bookmarkIds = AppManager.getBookmarkIds(mContext!!)
+    fun updateBookmarkIds(context: Context?) {
+        context?.let {
+            bookmarkIds = AppManager.getBookmarkIds(it)
+        }
     }
 
     override fun getItemId(i: Int): Long {
-        return getItem(i)!!.id.toLong()
+        return getItem(i)?.id?.toLong() ?: 0
     }
 
     /**

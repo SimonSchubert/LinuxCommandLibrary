@@ -8,7 +8,7 @@ import android.widget.BaseAdapter
 import io.realm.RealmObject
 import io.realm.RealmResults
 
-abstract class RealmMultiAdapter<T : RealmObject>(protected var mContext: Context?, protected var mRealmResults: List<RealmResults<T>>, automaticUpdate: Boolean) : RecyclerView.Adapter<CommandsAdapter.ViewHolder>() {
+abstract class RealmMultiAdapter<T : RealmObject>(private var mRealmResults: List<RealmResults<T>>, automaticUpdate: Boolean) : RecyclerView.Adapter<CommandsAdapter.ViewHolder>() {
 
     /**
      * Returns how many items are in the data set.

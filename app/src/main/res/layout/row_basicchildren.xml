@@ -9,7 +9,7 @@
     android:padding="10dp">
 
     <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
-        android:id="@+id/row_scriptdescription_child_tv_description"
+        android:id="@+id/description"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -19,7 +19,7 @@
         tool:text="xkill" />
 
     <ImageButton
-        android:id="@+id/row_scriptdescription_child_iv_share"
+        android:id="@+id/share"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"

@@ -5,7 +5,7 @@ import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
 import android.view.View
 import android.widget.Toast
-import com.inspiredandroid.linuxcommandbibliotheca.fragments.BasicGroupsFragment
+import com.inspiredandroid.linuxcommandbibliotheca.fragments.BasicCategoryFragment
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.CommandsFragment
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.DatabaseLoadingFragment
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.TipsFragment
@@ -66,7 +66,7 @@ class NavigationActivity : LoadingBaseActivity() {
                 setTitle(R.string.fragment_bibliotheca_commands)
             }
             BASIC -> {
-                fragment = BasicGroupsFragment()
+                fragment = BasicCategoryFragment()
                 setTitle(R.string.fragment_bibliotheca_basic)
             }
             TIPS -> {
