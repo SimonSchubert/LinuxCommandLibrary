@@ -16,8 +16,7 @@ import kotlinx.android.synthetic.main.row_command.view.*
 import java.util.*
 
 class CommandsAdapter(context: Context?,
-                      realmResults: List<RealmResults<Command>>,
-                      automaticUpdate: Boolean) : RealmMultiAdapter<Command>(realmResults, automaticUpdate) {
+                      var realmResults: List<RealmResults<Command>>) : RecyclerView.Adapter<CommandsAdapter.ViewHolder>() {
 
     private var query = ""
     private var bookmarkIds = ArrayList<Long>()
@@ -26,10 +25,6 @@ class CommandsAdapter(context: Context?,
     init {
         updateBookmarkIds(context)
         setHasStableIds(true)
-    }
-
-    fun setOnListClickListener(listener: OnListClickListener) {
-        onListClickListener = listener
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -42,6 +37,37 @@ class CommandsAdapter(context: Context?,
         getItem(position)?.let {
             holder.bind(it)
         }
+    }
+
+    fun setOnListClickListener(listener: OnListClickListener) {
+        onListClickListener = listener
+    }
+
+    override fun getItemCount(): Int {
+        var count = 0
+        for (realmResult in realmResults) {
+            count += realmResult.size
+        }
+        return count
+    }
+
+    fun getItem(i: Int): Command? {
+        if (realmResults.isEmpty()) {
+            return null
+        }
+        var count = 0
+        for (realmResult in realmResults) {
+            if (i < realmResult.size + count) {
+                return realmResult[i - count]
+            }
+            count += realmResult.size
+        }
+        return null
+    }
+
+    fun updateRealmResults(queryResults: List<RealmResults<Command>>) {
+        realmResults = queryResults
+        notifyDataSetChanged()
     }
 
     fun setSearchQuery(searchQuery: String) {
