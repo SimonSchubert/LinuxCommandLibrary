@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils
+import kotlinx.android.synthetic.main.fragment_about.*
 
 /**
  * Created by Simon Schubert on 23.11.15.
@@ -18,47 +19,27 @@ import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils
 class AboutFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-
         return inflater.inflate(R.layout.fragment_about, container, false)
     }
 
-    // @OnClick(R.id.fragment_about_tv_icons8)
-    fun startIcons8() {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        btnBimo.setOnClickListener { startAppMarketActivity(Utils.PACKAGE_BIMO) }
+        btnOrcgenocide.setOnClickListener { startAppMarketActivity(Utils.PACKAGE_ORCGENOCIDE) }
+        btnQuiz.setOnClickListener { startAppMarketActivity(Utils.PACKAGE_QUIZ) }
+        btnRemote.setOnClickListener { startAppMarketActivity(Utils.PACKAGE_LINUXREMOTE) }
+        btnBurger.setOnClickListener { startAppMarketActivity(Utils.PACKAGE_BURGER) }
+        btnRate.setOnClickListener { startAppMarketActivity(Utils.PACKAGE_COMMANDLIBRARY) }
+        btnIcons8.setOnClickListener { openIcons8Website() }
+    }
+
+    fun openIcons8Website() {
         try {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.icons8.com"))
             startActivity(intent)
         } catch (ignored: ActivityNotFoundException) {
         }
-    }
-
-    // @OnClick(R.id.fragment_about_btn_bimo)
-    fun startBimo() {
-        startAppMarketActivity(Utils.PACKAGE_BIMO)
-    }
-
-    // @OnClick(R.id.fragment_about_btn_orcgenocide)
-    fun startOrcGenocide() {
-        startAppMarketActivity(Utils.PACKAGE_ORCGENOCIDE)
-    }
-
-    // @OnClick(R.id.fragment_about_btn_quiz)
-    fun startQuiz() {
-        startAppMarketActivity(Utils.PACKAGE_QUIZ)
-    }
-
-    // @OnClick(R.id.fragment_about_btn_remote)
-    fun startRemote() {
-        startAppMarketActivity(Utils.PACKAGE_LINUXREMOTE)
-    }
-
-    // @OnClick(R.id.fragment_about_btn_burger)
-    fun startBurger() {
-        startAppMarketActivity(Utils.PACKAGE_BURGER)
-    }
-
-    // @OnClick(R.id.fragment_about_btn_rate)
-    fun startRateActivity() {
-        startAppMarketActivity(Utils.PACKAGE_COMMANDLIBRARY)
     }
 
     /**
@@ -72,6 +53,5 @@ class AboutFragment : Fragment() {
         } catch (e: android.content.ActivityNotFoundException) {
             startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=$appPackageName")))
         }
-
     }
 }

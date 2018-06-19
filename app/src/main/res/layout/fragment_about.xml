@@ -19,7 +19,7 @@
             android:text="@string/app_lcl_name"/>
 
         <Button
-            android:id="@+id/fragment_about_btn_rate"
+            android:id="@+id/btnRate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Rate the app"/>
@@ -45,7 +45,7 @@
                     android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/fragment_about_btn_remote"
+                        android:id="@+id/btnRemote"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
@@ -54,9 +54,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
                         android:layout_marginLeft="4dp"
                         android:layout_marginRight="4dp"
-                        android:layout_gravity="center_horizontal"
                         android:gravity="center_horizontal"
                         android:maxWidth="100dp"
                         android:text="Home Remote Control"/>
@@ -68,7 +68,7 @@
                     android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/fragment_about_btn_orcgenocide"
+                        android:id="@+id/btnOrcgenocide"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
@@ -77,9 +77,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
                         android:layout_marginLeft="4dp"
                         android:layout_marginRight="4dp"
-                        android:layout_gravity="center_horizontal"
                         android:gravity="center_horizontal"
                         android:maxWidth="120dp"
                         android:text="Orc Genocide"/>
@@ -91,7 +91,7 @@
                     android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/fragment_about_btn_quiz"
+                        android:id="@+id/btnQuiz"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
@@ -100,9 +100,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
                         android:layout_marginLeft="4dp"
                         android:layout_marginRight="4dp"
-                        android:layout_gravity="center_horizontal"
                         android:gravity="center_horizontal"
                         android:maxWidth="120dp"
                         android:text="2 Player Quiz"/>
@@ -114,7 +114,7 @@
                     android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/fragment_about_btn_bimo"
+                        android:id="@+id/btnBimo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
@@ -124,9 +124,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
                         android:layout_marginLeft="4dp"
                         android:layout_marginRight="4dp"
-                        android:layout_gravity="center_horizontal"
                         android:gravity="center_horizontal"
                         android:maxWidth="120dp"
                         android:text="Bimo"
@@ -139,7 +139,7 @@
                     android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/fragment_about_btn_burger"
+                        android:id="@+id/btnBurger"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
@@ -226,11 +226,10 @@ limitations under the License.
             android:text="Icons8"/>
 
         <TextView
-            android:id="@+id/fragment_about_tv_icons8"
+            android:id="@+id/btnIcons8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="https://icons8.com"/>
-
 
         <TextView
             style="@style/LicenseMedium"
