@@ -56,7 +56,7 @@ class CommandsFragment : Fragment(), OnListClickListener {
         setHasOptionsMenu(true)
 
         realm = Realm.getDefaultInstance()
-        mAdapter = CommandsAdapter(context, allCommands, false)
+        mAdapter = CommandsAdapter(context, allCommands)
         mAdapter!!.setOnListClickListener(this)
 
         if (AppManager.shouldShowNewsDialog(context!!)) {
