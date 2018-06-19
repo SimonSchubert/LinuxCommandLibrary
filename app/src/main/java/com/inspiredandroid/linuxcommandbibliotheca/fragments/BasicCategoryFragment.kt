@@ -10,25 +10,26 @@ import android.view.*
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity
 import com.inspiredandroid.linuxcommandbibliotheca.R
-import com.inspiredandroid.linuxcommandbibliotheca.adapter.BasicGroupsAdapter
-import com.inspiredandroid.linuxcommandbibliotheca.adapter.BasicChildrenAdapter
+import com.inspiredandroid.linuxcommandbibliotheca.adapter.BasicCategoryAdapter
+import com.inspiredandroid.linuxcommandbibliotheca.adapter.BasicGroupAdapter
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnListClickListener
 import com.inspiredandroid.linuxcommandbibliotheca.misc.FragmentCoordinator
 import com.inspiredandroid.linuxcommandbibliotheca.models.BasicGroupModel
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel
 import io.realm.Case
 import io.realm.Realm
+import io.realm.kotlin.where
 import kotlinx.android.synthetic.main.fragment_scriptgroups.*
 import java.text.Normalizer
 
 /**
  * Created by Simon Schubert
  */
-class BasicGroupsFragment : BaseFragment(), OnListClickListener {
+class BasicCategoryFragment : BaseFragment(), OnListClickListener {
 
     private var mRealm: Realm? = null
-    private var mAdapter: BasicGroupsAdapter? = null
-    private var mSearchAdapter: BasicChildrenAdapter? = null
+    private var mAdapter: BasicCategoryAdapter? = null
+    private var mSearchAdapter: BasicGroupAdapter? = null
     private var mFirebaseAnalytics: FirebaseAnalytics? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,8 +39,8 @@ class BasicGroupsFragment : BaseFragment(), OnListClickListener {
 
         mRealm = Realm.getDefaultInstance()
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(context!!)
-        mSearchAdapter = BasicChildrenAdapter(null, false, mFirebaseAnalytics!!)
-        mAdapter = BasicGroupsAdapter(mRealm!!.where(BasicGroupModel::class.java).sort("position").findAll(), false)
+        mSearchAdapter = BasicGroupAdapter(mRealm!!.where<CommandGroupModel>().findAll(),  mFirebaseAnalytics!!)
+        mAdapter = BasicCategoryAdapter(mRealm!!.where<BasicGroupModel>().sort("position").findAll(), false)
         mAdapter!!.setOnListClickListener(this)
     }
 
@@ -110,7 +111,7 @@ class BasicGroupsFragment : BaseFragment(), OnListClickListener {
         }
 
         val allGroups = realmQuery.endGroup().sort("votes").findAll()
-        mSearchAdapter!!.setSearchQuery(query)
+        mSearchAdapter!!.updateSearchQuery(query)
         mSearchAdapter!!.updateData(allGroups)
         recyclerView.adapter = mSearchAdapter
     }
@@ -120,7 +121,7 @@ class BasicGroupsFragment : BaseFragment(), OnListClickListener {
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        if (item!!.itemId == R.id.about) {
+        if (item?.itemId == R.id.about) {
             startAboutActivity()
             return true
         }

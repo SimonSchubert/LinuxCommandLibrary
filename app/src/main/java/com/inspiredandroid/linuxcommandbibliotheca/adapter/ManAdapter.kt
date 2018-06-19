@@ -1,0 +1,139 @@
+package com.inspiredandroid.linuxcommandbibliotheca.adapter
+
+import android.support.v7.widget.RecyclerView
+import android.text.Html
+import android.text.Spanned
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import com.inspiredandroid.linuxcommandbibliotheca.R
+import com.inspiredandroid.linuxcommandbibliotheca.models.Command
+import com.inspiredandroid.linuxcommandbibliotheca.models.CommandPage
+import io.realm.Realm
+import io.realm.RealmResults
+import io.realm.kotlin.where
+import kotlinx.android.synthetic.main.row_man_child.view.*
+import kotlinx.android.synthetic.main.row_man_group.view.*
+import java.util.*
+import java.util.regex.Pattern
+import kotlin.collections.ArrayList
+
+class ManAdapter(private var pages: ArrayList<String>, var parts: ArrayList<ArrayList<CharSequence>>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+
+    companion object {
+        const val PARENT = 0
+        const val CHILDREN = 1
+    }
+
+    private val expanded: HashMap<Int, Boolean> = HashMap()
+    private var items = ArrayList<BasicItem>()
+
+    class BasicItem(var groupId: Int = 0, var childId: Int = -1)
+
+    init {
+        updateItems()
+    }
+
+    override fun getItemViewType(position: Int): Int {
+        return if(items.get(position).childId == -1) { PARENT } else { CHILDREN }
+    }
+
+    override fun getItemCount(): Int {
+        return items.count()
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+        when (viewType) {
+            PARENT -> {
+                val v = LayoutInflater.from(parent.context).inflate(R.layout.row_man_group, parent, false)
+                return GroupViewHolder(v)
+            }
+            CHILDREN -> {
+                val v = LayoutInflater.from(parent.context).inflate(R.layout.row_man_child, parent, false)
+                return ChildViewHolder(v)
+            }
+        }
+        throw RuntimeException("No viewType found")
+    }
+
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        val item = items.get(position)
+        when (holder.itemViewType) {
+            PARENT -> {
+                val groupViewHolder = holder as GroupViewHolder
+                groupViewHolder.bind(item.groupId, pages[item.groupId])
+            }
+            CHILDREN -> {
+                val childViewHolder = holder as ChildViewHolder
+                childViewHolder.bind(pages[item.groupId], parts[item.groupId][item.childId])
+            }
+        }
+    }
+
+    fun updateItems() {
+        items.clear()
+        pages.forEachIndexed { index, page ->
+            items.add(BasicItem(index))
+            if(isExpanded(index)) {
+                parts.get(index).forEachIndexed { index2, spanned ->
+                    items.add(BasicItem(index, index2))
+                }
+            }
+        }
+    }
+
+    fun isExpanded(id: Int): Boolean {
+        return expanded.containsKey(id) && expanded[id]!!
+    }
+
+    inner class GroupViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+
+        fun bind(index: Int, page: String) {
+            itemView.title.text = page.toUpperCase()
+            itemView.setOnClickListener{
+                expanded[index] = !isExpanded(index)
+                updateItems()
+                notifyDataSetChanged()
+            }
+        }
+    }
+
+    inner class ChildViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+
+        fun bind(title: String, description: CharSequence) {
+            itemView.description.text = description
+            if (title.toUpperCase() == "SEE ALSO") {
+                itemView.description.setCommands(extractCommandsFromDescription(description.toString()))
+            }
+        }
+    }
+
+    /**
+     * Search for commands and return list of commands that exist in database
+     *
+     * @param description
+     * @return
+     */
+    private fun extractCommandsFromDescription(description: String): Array<String> {
+        val realm = Realm.getDefaultInstance()
+
+        // match "command(category)" e.g: gzip(1)
+        val p = Pattern.compile("[[:graph:]]+\\s?\\(\\w\\)")
+        val m = p.matcher(description)
+
+        // loop results and add if command exists in db
+        val tmp = arrayListOf<String>()
+        while (m.find()) {
+            val extractedCommand = m.group(0).substring(0, m.group(0).length - 3).trim { it <= ' ' }
+            val command = realm.where<Command>().equalTo(Command.NAME, extractedCommand).findFirst()
+            if (command != null) {
+                tmp.add(extractedCommand)
+            }
+        }
+
+        realm.close()
+
+        return tmp.toTypedArray()
+    }
+
+}

@@ -9,24 +9,27 @@ import android.view.*
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.inspiredandroid.linuxcommandbibliotheca.BuildConfig
 import com.inspiredandroid.linuxcommandbibliotheca.R
-import com.inspiredandroid.linuxcommandbibliotheca.ScriptChildrenActivity
-import com.inspiredandroid.linuxcommandbibliotheca.adapter.BasicChildrenAdapter
+import com.inspiredandroid.linuxcommandbibliotheca.BasicGroupActivity
+import com.inspiredandroid.linuxcommandbibliotheca.adapter.BasicGroupAdapter
 import com.inspiredandroid.linuxcommandbibliotheca.models.BasicGroupModel
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel
 import io.realm.Case
 import io.realm.Realm
+import io.realm.RealmResults
 import io.realm.Sort
-import kotlinx.android.synthetic.main.fragment_scriptchildren.*
+import io.realm.kotlin.where
+import kotlinx.android.synthetic.main.fragment_basicgroups.*
 import java.text.Normalizer
 
 /**
  * Created by Simon Schubert
  */
-class BasicChildrenFragment : BaseFragment() {
+class BasicGroupFragment : BaseFragment() {
 
     private var mRealm: Realm? = null
-    private var mSearchAdapter: BasicChildrenAdapter? = null
+    private var mSearchAdapter: BasicGroupAdapter? = null
     private var mFirebaseAnalytics: FirebaseAnalytics? = null
+    lateinit var groups : RealmResults<CommandGroupModel>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,22 +40,23 @@ class BasicChildrenFragment : BaseFragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_scriptchildren, container, false)
+        return inflater.inflate(R.layout.fragment_basicgroups, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val categoryId = activity!!.intent.getIntExtra(ScriptChildrenActivity.EXTRA_CATEGORY_ID, 0)
+        val categoryId = activity!!.intent.getIntExtra(BasicGroupActivity.EXTRA_CATEGORY_ID, 0)
 
-        val basicGroupModel = mRealm!!.where(BasicGroupModel::class.java).equalTo("id", categoryId).findFirst()
-        val groups = basicGroupModel!!.groups!!.sort("votes", Sort.DESCENDING)
+        val basicGroupModel = mRealm!!.where<BasicGroupModel>().equalTo("id", categoryId).findFirst()
+        groups = basicGroupModel?.groups!!.sort("votes", Sort.DESCENDING)
 
-        activity!!.title = basicGroupModel.title
+        activity?.title = basicGroupModel.title
 
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(context!!)
 
-        mSearchAdapter = BasicChildrenAdapter(groups, false, mFirebaseAnalytics!!)
+
+        mSearchAdapter = BasicGroupAdapter(groups, mFirebaseAnalytics!!) // BasicGroupAdapter(groups, false, mFirebaseAnalytics!!)
         recyclerView.adapter = mSearchAdapter
 
         trackSelectContent(basicGroupModel.title)
@@ -125,13 +129,13 @@ class BasicChildrenFragment : BaseFragment() {
         }
 
         val allGroups = realmQuery.endGroup().sort("votes").findAll()
-        mSearchAdapter!!.setSearchQuery(query)
+        mSearchAdapter!!.updateSearchQuery(query)
         mSearchAdapter!!.updateData(allGroups)
-        recyclerView.adapter = mSearchAdapter
     }
 
     private fun resetSearchResults() {
-        recyclerView.adapter = mSearchAdapter
+        mSearchAdapter?.updateSearchQuery("")
+        mSearchAdapter?.updateData(groups)
     }
 
 }

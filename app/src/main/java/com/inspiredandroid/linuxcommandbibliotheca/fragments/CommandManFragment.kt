@@ -7,29 +7,29 @@ import android.os.Bundle
 import android.support.v4.view.MenuItemCompat
 import android.support.v7.widget.SearchView
 import android.text.Html
+import android.text.Spanned
 import android.view.*
 import com.google.android.gms.appindexing.Action
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.inspiredandroid.linuxcommandbibliotheca.BuildConfig
 import com.inspiredandroid.linuxcommandbibliotheca.CommandManActivity
 import com.inspiredandroid.linuxcommandbibliotheca.R
-import com.inspiredandroid.linuxcommandbibliotheca.adapter.ManExpandableListAdapter
-import com.inspiredandroid.linuxcommandbibliotheca.asnytasks.SearchManAsyncTask
-import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnConvertFromHtmlToSpannableListener
+import com.inspiredandroid.linuxcommandbibliotheca.adapter.ManAdapter
 import com.inspiredandroid.linuxcommandbibliotheca.misc.AppManager
 import com.inspiredandroid.linuxcommandbibliotheca.misc.FragmentCoordinator
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandPage
 import io.realm.Realm
+import io.realm.kotlin.where
 import kotlinx.android.synthetic.main.fragment_command_man.*
 import java.util.*
 
 /**
  * Created by Simon Schubert
  */
-class CommandManFragment : AppIndexFragment(), OnConvertFromHtmlToSpannableListener, View.OnClickListener {
+class CommandManFragment : AppIndexFragment(), View.OnClickListener {
 
-    private var mAdapter: ManExpandableListAdapter? = null
+    private var mAdapter: ManAdapter? = null
     private var mRealm: Realm? = null
     private var mFirebaseAnalytics: FirebaseAnalytics? = null
     private var mName: String? = null
@@ -39,32 +39,12 @@ class CommandManFragment : AppIndexFragment(), OnConvertFromHtmlToSpannableListe
     private val query: String? = null
     private val indexes = ArrayList<Int>()
 
-    /**
-     * Split String every partitionSize character
-     *
-     * @param string
-     * @param partitionSize
-     * @return
-     */
-    private fun getParts(string: String, partitionSize: Int): ArrayList<String> {
-        val parts = ArrayList<String>()
-        val len = string.length
-        var i = 0
-        while (i < len) {
-            parts.add(string.substring(i, Math.min(len, i + partitionSize)))
-            i += partitionSize
-        }
-        return parts
-    }
-
-    private fun fromHtml(html: String?): CharSequence {
-        val result: CharSequence
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
-            result = Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY)
+    private fun fromHtml(html: String?): Spanned {
+        return if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+            Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY)!!
         } else {
-            result = Html.fromHtml(html)
+            Html.fromHtml(html)
         }
-        return result
     }
 
     override fun getAppIndexingTitle(): String {
@@ -121,7 +101,7 @@ class CommandManFragment : AppIndexFragment(), OnConvertFromHtmlToSpannableListe
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        fraggment_commandman_elv.setAdapter(mAdapter)
+        recyclerView.adapter = mAdapter
 
         fragment_command_man_btn_up.setOnClickListener(this)
         fragment_command_man_btn_down.setOnClickListener(this)
@@ -174,9 +154,9 @@ class CommandManFragment : AppIndexFragment(), OnConvertFromHtmlToSpannableListe
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        if (item!!.itemId == R.id.bookmark) {
-            toogleBookmarkState()
-            activity!!.invalidateOptionsMenu()
+        if (item?.itemId == R.id.bookmark) {
+            toogleBookmark()
+            activity?.invalidateOptionsMenu()
             return true
         }
         return false
@@ -187,8 +167,8 @@ class CommandManFragment : AppIndexFragment(), OnConvertFromHtmlToSpannableListe
      *
      * @return
      */
-    private fun createAdapter(): ManExpandableListAdapter {
-        val pages = mRealm!!.where(CommandPage::class.java).equalTo(CommandPage.COMMANDID, mId).findAll()
+    private fun createAdapter(): ManAdapter {
+        val pages = mRealm!!.where<CommandPage>().equalTo(CommandPage.COMMANDID, mId).findAll()
 
         val groups = ArrayList<String>()
         val child = ArrayList<ArrayList<CharSequence>>()
@@ -196,26 +176,35 @@ class CommandManFragment : AppIndexFragment(), OnConvertFromHtmlToSpannableListe
 
             groups.add(page.title!!)
 
-            val chars = fromHtml(page.page)
-
             val pageSplit = ArrayList<CharSequence>()
-            val tmp = chars.toString().split("\\r?\\n".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
+            val tmp = page.page.toString().split("</p>".toRegex()).toTypedArray()
             for (tmpSplit in tmp) {
-                if (tmpSplit.length < 600) {
-                    if (!tmpSplit.isEmpty()) {
-                        pageSplit.add(tmpSplit)
-                    }
-                } else {
-                    pageSplit.addAll(getParts(tmpSplit, 600))
+                val p = trim(fromHtml("$tmpSplit</p>"))
+                if(p.isNotEmpty()) {
+                    pageSplit.add(p)
                 }
             }
             child.add(pageSplit)
         }
 
-        return ManExpandableListAdapter(activity!!, groups, child)
+        return ManAdapter(groups, child)
     }
 
-    private fun toogleBookmarkState() {
+    private fun trim(data: CharSequence): CharSequence {
+        var text = data
+        if(text.isEmpty()) {
+            return text
+        }
+        while (text[text.length - 1] == '\n') {
+            text = text.subSequence(0, text.length - 1)
+        }
+        while (text[0] == '\n') {
+            text = text.subSequence(1, text.length)
+        }
+        return text
+    }
+
+    private fun toogleBookmark() {
         if (AppManager.hasBookmark(context!!, mId)) {
             AppManager.removeBookmark(context!!, mId)
         } else {
@@ -227,11 +216,13 @@ class CommandManFragment : AppIndexFragment(), OnConvertFromHtmlToSpannableListe
      *
      */
     private fun resetSearchResults() {
+        /*
         val async = SearchManAsyncTask(context!!, "", mAdapter!!.mChild, this)
         addAsyncTask(async)
         async.execute()
 
         hideButton()
+        */
     }
 
     /**
@@ -240,9 +231,11 @@ class CommandManFragment : AppIndexFragment(), OnConvertFromHtmlToSpannableListe
      * @param q
      */
     private fun search(q: String) {
+        /*
         val async = SearchManAsyncTask(context!!, q, mAdapter!!.mChild, this)
         addAsyncTask(async)
         async.execute()
+        */
     }
 
     /**
@@ -295,11 +288,6 @@ class CommandManFragment : AppIndexFragment(), OnConvertFromHtmlToSpannableListe
             mIndexesPosition = 0
         }
         scrollToPosition(indexes[mIndexesPosition])
-    }
-
-    override fun onConvertHtmlToSpannable(spannable: ArrayList<ArrayList<CharSequence>>) {
-        mAdapter!!.mChild = spannable
-        mAdapter!!.notifyDataSetChanged()
     }
 
     override fun onClick(v: View) {

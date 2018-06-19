@@ -4,12 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ExpandableListView
-        android:id="@+id/fraggment_commandman_elv"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:divider="@null"
-        android:groupIndicator="@null"/>
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
 
     <ImageButton
         android:id="@+id/fragment_command_man_btn_up"

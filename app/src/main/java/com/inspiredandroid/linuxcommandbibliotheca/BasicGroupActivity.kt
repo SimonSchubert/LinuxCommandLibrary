@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.v7.widget.Toolbar
 import android.view.MenuItem
 import android.view.View
+import kotlinx.android.synthetic.main.toolbar.*
 
 /**
  * Created by Simon Schubert
@@ -11,18 +12,16 @@ import android.view.View
  *
  * This Activity just holds the AboutFragment
  */
-class ScriptChildrenActivity : BaseActivity() {
+class BasicGroupActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_scriptchildren)
 
-        val toolbar = findViewById<View>(R.id.toolbar) as Toolbar
         setSupportActionBar(toolbar)
 
-        assert(supportActionBar != null)
-
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         // int categoryId = getIntent().getIntExtra(EXTRA_CATEGORY_ID, ScriptGroupItem.GROUP_USER_GROUP);
         // setTitle(getDescriptionForCategory(categoryId));
@@ -30,7 +29,7 @@ class ScriptChildrenActivity : BaseActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            android.R.id.home -> this.finish()
+            android.R.id.home -> finish()
         }
 
         return super.onOptionsItemSelected(item)

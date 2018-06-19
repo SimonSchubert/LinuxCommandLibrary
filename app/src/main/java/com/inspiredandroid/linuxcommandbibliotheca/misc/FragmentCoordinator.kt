@@ -8,8 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.inspiredandroid.linuxcommandbibliotheca.CommandManActivity
 import com.inspiredandroid.linuxcommandbibliotheca.R
-import com.inspiredandroid.linuxcommandbibliotheca.ScriptChildrenActivity
-import com.inspiredandroid.linuxcommandbibliotheca.fragments.BasicChildrenFragment
+import com.inspiredandroid.linuxcommandbibliotheca.BasicGroupActivity
+import com.inspiredandroid.linuxcommandbibliotheca.fragments.BasicGroupFragment
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.CommandManFragment
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command
 import io.realm.Realm
@@ -21,16 +21,16 @@ object FragmentCoordinator {
 
     fun startScriptCategoryActivity(activity: FragmentActivity, category: Int) {
         if (!isTabletLayout(activity)) {
-            val intent = Intent(activity, ScriptChildrenActivity::class.java)
-            intent.putExtra(ScriptChildrenActivity.EXTRA_CATEGORY_ID, category)
+            val intent = Intent(activity, BasicGroupActivity::class.java)
+            intent.putExtra(BasicGroupActivity.EXTRA_CATEGORY_ID, category)
             activity.startActivity(intent)
         } else {
             val container = activity.findViewById<View>(R.id.fragment_container_secondary)
             (container as ViewGroup).removeAllViews()
 
-            activity.intent.putExtra(ScriptChildrenActivity.EXTRA_CATEGORY_ID, category)
+            activity.intent.putExtra(BasicGroupActivity.EXTRA_CATEGORY_ID, category)
 
-            val fragment = BasicChildrenFragment()
+            val fragment = BasicGroupFragment()
 
             val fragmentManager = activity.supportFragmentManager
             val fragmentTransaction = fragmentManager.beginTransaction()

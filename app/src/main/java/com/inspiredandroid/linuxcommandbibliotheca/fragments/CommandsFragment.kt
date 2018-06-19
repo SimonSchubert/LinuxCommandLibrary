@@ -56,7 +56,7 @@ class CommandsFragment : Fragment(), OnListClickListener {
         setHasOptionsMenu(true)
 
         realm = Realm.getDefaultInstance()
-        mAdapter = CommandsAdapter(context!!, allCommands, false)
+        mAdapter = CommandsAdapter(context, allCommands, false)
         mAdapter!!.setOnListClickListener(this)
 
         if (AppManager.shouldShowNewsDialog(context!!)) {
@@ -173,7 +173,7 @@ class CommandsFragment : Fragment(), OnListClickListener {
     private fun resetSearchResults() {
         mAdapter!!.updateRealmResults(allCommands)
         mAdapter!!.setSearchQuery("")
-        mAdapter!!.updateBookmarkIds()
+        mAdapter!!.updateBookmarkIds(context)
         updateViews()
     }
 
