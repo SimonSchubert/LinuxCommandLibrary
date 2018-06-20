@@ -3,7 +3,8 @@
     xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/scrollView">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -608,7 +609,7 @@
                     android:textStyle="bold" />
 
                 <com.inspiredandroid.linuxcommandbibliotheca.view.ClickableTextView
-                    android:id="@+id/fragment_tips_tv_link_to_redirection"
+                    android:id="@+id/tvSeeBelow"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="These symbols are used for redirection; see below." />
@@ -736,7 +737,7 @@
             android:text="Don't confuse shell special characters with special characters in regular expressions. Regular expressions must be protected from the shell by enclosing them in single quotes." />
 
         <TextView
-            android:id="@+id/fragment_tips_tv_redirection"
+            android:id="@+id/tvRedirection"
             style="@style/TextMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

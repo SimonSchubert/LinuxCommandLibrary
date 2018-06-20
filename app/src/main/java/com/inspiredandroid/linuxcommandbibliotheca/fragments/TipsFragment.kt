@@ -4,7 +4,6 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.view.*
-import android.widget.ScrollView
 import com.google.android.gms.appindexing.Action
 import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity
 import com.inspiredandroid.linuxcommandbibliotheca.BuildConfig
@@ -17,8 +16,6 @@ import kotlinx.android.synthetic.main.fragment_tips.*
  * General Linux/CMD Tips
  */
 class TipsFragment : AppIndexFragment() {
-
-    private var mView: ScrollView? = null
 
     override fun getAppIndexingTitle(): String {
         return "Linux tips"
@@ -37,27 +34,26 @@ class TipsFragment : AppIndexFragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        mView = inflater.inflate(R.layout.fragment_tips, container, false) as ScrollView
-        return mView
+        return inflater.inflate(R.layout.fragment_tips, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val listener = object : OnLinkClickListener {
+
+        tvSeeBelow.setClickInterface(object : OnLinkClickListener {
             override fun onLinkClick() {
                 scrollToRedirectionView()
             }
-        }
-        fragment_tips_tv_link_to_redirection.setClickInterface(listener)
-        fragment_tips_tv_link_to_redirection.setClickableWord("below")
+        })
+        tvSeeBelow.setClickableWord("below")
     }
 
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
-        inflater!!.inflate(R.menu.tip, menu)
+        inflater?.inflate(R.menu.tip, menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        if (item!!.itemId == R.id.about) {
+        if (item?.itemId == R.id.about) {
             startAboutActivity()
             return true
         }
@@ -70,6 +66,6 @@ class TipsFragment : AppIndexFragment() {
     }
 
     private fun scrollToRedirectionView() {
-        mView!!.post { mView!!.scrollTo(0, fragment_tips_tv_redirection.bottom) }
+        scrollView.post { scrollView.scrollTo(0, tvRedirection.bottom) }
     }
 }

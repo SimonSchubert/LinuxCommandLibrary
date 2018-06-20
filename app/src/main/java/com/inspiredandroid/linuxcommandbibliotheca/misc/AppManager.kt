@@ -30,7 +30,7 @@ object AppManager {
         editor.apply()
     }
 
-    fun shouldShowRateDialog(context: Context): Boolean {
+    fun shouldShowRateDialog(context: Context?): Boolean {
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
         if (prefs.getInt(KEY_RATING_DIALOG_STATE, 0) == 0) {
 
@@ -58,7 +58,7 @@ object AppManager {
      * @param context
      * @return
      */
-    fun getBookmarkIds(context: Context): ArrayList<Long> {
+    fun getBookmarkIds(context: Context?): ArrayList<Long> {
         val bookmarkIds = getBookmarkIdsChain(context).split(",".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
         val ids = ArrayList<Long>()
         for (id in bookmarkIds) {
@@ -75,7 +75,7 @@ object AppManager {
      * @param context
      * @return
      */
-    private fun getBookmarkIdsChain(context: Context): String {
+    private fun getBookmarkIdsChain(context: Context?): String {
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
         var bookmarksChain = prefs.getString(KEY_BOOKMARKS, "")
         if (!bookmarksChain!!.isEmpty()) {
@@ -146,14 +146,14 @@ object AppManager {
      * @param context
      * @return
      */
-    fun hasBookmarkChanged(context: Context): Boolean {
+    fun hasBookmarkChanged(context: Context?): Boolean {
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
         val changed = prefs.getBoolean(KEY_BOOKMARKCHANGED, false)
         prefs.edit().putBoolean(KEY_BOOKMARKCHANGED, false).apply()
         return changed
     }
 
-    fun shouldShowNewsDialog(context: Context): Boolean {
+    fun shouldShowNewsDialog(context: Context?): Boolean {
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
         if (prefs.getInt(KEY_NEWS_DIALOG_STATE, 0) < 1) {
 
