@@ -6,7 +6,6 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.support.v4.view.MenuItemCompat
 import android.support.v7.widget.SearchView
 import android.view.*
 import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity
@@ -30,8 +29,8 @@ import java.util.*
  */
 class CommandsFragment : Fragment(), OnListClickListener {
 
-    private var mAdapter: CommandsAdapter? = null
-    private var realm: Realm? = null
+    private lateinit var adapter: CommandsAdapter
+    private lateinit var realm: Realm
     private var searchQuery = ""
 
     /**
@@ -42,11 +41,9 @@ class CommandsFragment : Fragment(), OnListClickListener {
     private val allCommands: List<RealmResults<Command>>
         get() {
             val results = ArrayList<RealmResults<Command>>()
-            val ids = AppManager.getBookmarkIds(context!!)
-            for (id in ids) {
-                results.add(realm!!.where<Command>().equalTo(Command.ID, id).findAll())
-            }
-            results.add(realm!!.where<Command>().findAll().sort("name"))
+            val ids = AppManager.getBookmarkIds(context)
+            results.add(realm.where<Command>().`in`(Command.ID, ids.toTypedArray()).findAll())
+            results.add(realm.where<Command>().findAll().sort("name"))
             return results
         }
 
@@ -56,13 +53,13 @@ class CommandsFragment : Fragment(), OnListClickListener {
         setHasOptionsMenu(true)
 
         realm = Realm.getDefaultInstance()
-        mAdapter = CommandsAdapter(context, allCommands)
-        mAdapter!!.setOnListClickListener(this)
+        adapter = CommandsAdapter(context, allCommands)
+        adapter.setOnListClickListener(this)
 
-        if (AppManager.shouldShowNewsDialog(context!!)) {
+        if (AppManager.shouldShowNewsDialog(context)) {
             val newDialogFragment = NewsDialogFragment.instance
             newDialogFragment.show(childFragmentManager, newDialogFragment.javaClass.canonicalName)
-        } else if (AppManager.shouldShowRateDialog(context!!)) {
+        } else if (AppManager.shouldShowRateDialog(context)) {
             val rateDialogFragment = RateDialogFragment.instance
             rateDialogFragment.show(childFragmentManager, RateDialogFragment::class.java.name)
         }
@@ -75,7 +72,7 @@ class CommandsFragment : Fragment(), OnListClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        recyclerView.adapter = mAdapter
+        recyclerView.adapter = adapter
         fastScroller.setRecyclerView(recyclerView)
 
         btnRequestCommand.setOnClickListener {
@@ -84,49 +81,51 @@ class CommandsFragment : Fragment(), OnListClickListener {
     }
 
     override fun onClick(id: Int) {
-        FragmentCoordinator.startCommandManActivity(activity!!, id.toLong())
+        FragmentCoordinator.startCommandManActivity(activity, id.toLong())
     }
 
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
         inflater?.inflate(R.menu.main, menu)
 
         val item = menu?.findItem(R.id.search)
-        val searchView = MenuItemCompat.getActionView(item) as SearchView
+        val searchView = item?.actionView as SearchView
 
-        val searchManager = activity!!.getSystemService(Context.SEARCH_SERVICE) as SearchManager
-        searchView.setSearchableInfo(searchManager.getSearchableInfo(activity!!.componentName))
+        activity?.let {
+            val searchManager = it.getSystemService(Context.SEARCH_SERVICE) as SearchManager
+            searchView.setSearchableInfo(searchManager.getSearchableInfo(it.componentName))
 
-        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
 
-            override fun onQueryTextSubmit(s: String): Boolean {
-                return false
-            }
+                override fun onQueryTextSubmit(s: String): Boolean {
+                    return false
+                }
 
-            override fun onQueryTextChange(query: String): Boolean {
-                if (!isAdded) {
+                override fun onQueryTextChange(query: String): Boolean {
+                    if (!isAdded) {
+                        return true
+                    }
+                    searchQuery = query
+                    if (query.isNotEmpty()) {
+                        val normalizedText = Normalizer.normalize(query, Normalizer.Form.NFD).replace("\\p{InCombiningDiacriticalMarks}+".toRegex(), "").toLowerCase()
+                        search(normalizedText)
+                    } else {
+                        resetSearchResults()
+                    }
+
                     return true
                 }
-                searchQuery = query
-                if (query.isNotEmpty()) {
-                    val normalizedText = Normalizer.normalize(query, Normalizer.Form.NFD).replace("\\p{InCombiningDiacriticalMarks}+".toRegex(), "").toLowerCase()
-                    search(normalizedText)
-                } else {
-                    resetSearchResults()
+            })
+            item.setOnActionExpandListener(object : MenuItem.OnActionExpandListener {
+                override fun onMenuItemActionExpand(item: MenuItem): Boolean {
+                    return true
                 }
 
-                return true
-            }
-        })
-        MenuItemCompat.setOnActionExpandListener(item, object : MenuItemCompat.OnActionExpandListener {
-            override fun onMenuItemActionExpand(item: MenuItem): Boolean {
-                return true
-            }
-
-            override fun onMenuItemActionCollapse(item: MenuItem): Boolean {
-                resetSearchResults()
-                return true
-            }
-        })
+                override fun onMenuItemActionCollapse(item: MenuItem): Boolean {
+                    resetSearchResults()
+                    return true
+                }
+            })
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
@@ -145,13 +144,13 @@ class CommandsFragment : Fragment(), OnListClickListener {
     override fun onDestroy() {
         super.onDestroy()
 
-        realm!!.close()
+        realm.close()
     }
 
     override fun onResume() {
         super.onResume()
 
-        if (AppManager.hasBookmarkChanged(context!!)) {
+        if (AppManager.hasBookmarkChanged(context)) {
             resetSearchResults()
         }
     }
@@ -168,12 +167,12 @@ class CommandsFragment : Fragment(), OnListClickListener {
     }
 
     /**
-     * reset mAdapter entries
+     * reset adapter entries
      */
     private fun resetSearchResults() {
-        mAdapter!!.updateRealmResults(allCommands)
-        mAdapter!!.setSearchQuery("")
-        mAdapter!!.updateBookmarkIds(context)
+        adapter.updateRealmResults(allCommands)
+        adapter.setSearchQuery("")
+        adapter.updateBookmarkIds(context)
         updateViews()
     }
 
@@ -184,19 +183,19 @@ class CommandsFragment : Fragment(), OnListClickListener {
      */
     private fun search(query: String) {
         val results = ArrayList<RealmResults<Command>>()
-        results.add(realm!!.where(Command::class.java).equalTo(Command.NAME, query).findAll())
-        results.add(realm!!.where(Command::class.java).beginsWith(Command.NAME, query).notEqualTo(Command.NAME, query).findAll())
-        results.add(realm!!.where(Command::class.java).contains(Command.NAME, query).not().beginsWith(Command.NAME, query).notEqualTo(Command.NAME, query).findAll())
-        results.add(realm!!.where(Command::class.java).contains(Command.DESCRIPTION, query).not().contains(Command.NAME, query).findAll())
+        results.add(realm.where<Command>().equalTo(Command.NAME, query).findAll())
+        results.add(realm.where<Command>().beginsWith(Command.NAME, query).notEqualTo(Command.NAME, query).findAll())
+        results.add(realm.where<Command>().contains(Command.NAME, query).not().beginsWith(Command.NAME, query).notEqualTo(Command.NAME, query).findAll())
+        results.add(realm.where<Command>().contains(Command.DESCRIPTION, query).not().contains(Command.NAME, query).findAll())
 
-        mAdapter!!.updateRealmResults(results)
-        mAdapter!!.setSearchQuery(query)
+        adapter.updateRealmResults(results)
+        adapter.setSearchQuery(query)
 
         updateViews()
     }
 
     private fun updateViews() {
-        if (mAdapter!!.itemCount == 0) {
+        if (adapter.itemCount == 0) {
             fragment_commands_ll_nothingfound.visibility = View.VISIBLE
             recyclerView.visibility = View.GONE
         } else {
