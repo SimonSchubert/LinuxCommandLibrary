@@ -52,6 +52,8 @@ class CommandsFragment : Fragment(), OnListClickListener {
 
         setHasOptionsMenu(true)
 
+        activity?.title = getString(R.string.fragment_bibliotheca_commands)
+
         realm = Realm.getDefaultInstance()
         adapter = CommandsAdapter(context, allCommands)
         adapter.setOnListClickListener(this)

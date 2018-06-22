@@ -40,4 +40,8 @@
         <item name="android:layout_marginBottom">2dp</item>
     </style>
 
+    <style name="LibAppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="LibAppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>

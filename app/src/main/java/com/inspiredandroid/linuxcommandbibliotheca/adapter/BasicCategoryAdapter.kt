@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.row_basiccategory.view.*
 /**
  * Created by simon on 23.11.15.
  */
-class BasicCategoryAdapter(data: OrderedRealmCollection<BasicGroupModel>?, autoUpdate: Boolean) : RealmRecyclerViewAdapter<BasicGroupModel, BasicCategoryAdapter.ViewHolder>(data, autoUpdate) {
+class BasicCategoryAdapter(data: OrderedRealmCollection<BasicGroupModel>, autoUpdate: Boolean) : RealmRecyclerViewAdapter<BasicGroupModel, BasicCategoryAdapter.ViewHolder>(data, autoUpdate) {
 
     private var onListClickListener: OnListClickListener? = null
 

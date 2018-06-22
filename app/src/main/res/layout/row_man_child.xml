@@ -15,6 +15,7 @@
         android:textIsSelectable="true"
         android:textSize="14sp"
         custom:ignoreTerminalStyle="true"
-        tool:text="Description" />
+        tool:text="Description"
+        android:textColor="#FFA9A9A9"/>
 
 </LinearLayout>

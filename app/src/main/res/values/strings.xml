@@ -156,5 +156,6 @@
     <string-array name="fragment_tips_redirection_code_error_output_array">
         <item>rm</item>
     </string-array>
+    <string name="title_activity_deeplink">DeeplinkActivity</string>
 
 </resources>
