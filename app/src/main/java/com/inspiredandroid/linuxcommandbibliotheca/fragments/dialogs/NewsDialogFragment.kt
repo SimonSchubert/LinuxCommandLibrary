@@ -50,7 +50,6 @@ class NewsDialogFragment : DialogFragment() {
             startActivity(intent)
         } catch (ignored: ActivityNotFoundException) {
         }
-
     }
 
     companion object {

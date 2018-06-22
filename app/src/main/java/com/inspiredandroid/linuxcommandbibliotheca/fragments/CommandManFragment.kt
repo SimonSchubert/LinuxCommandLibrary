@@ -4,7 +4,6 @@ import android.app.SearchManager
 import android.content.Context
 import android.net.Uri
 import android.os.Bundle
-import android.support.v4.view.MenuItemCompat
 import android.support.v7.widget.SearchView
 import android.text.Html
 import android.text.Spanned
@@ -29,26 +28,25 @@ import java.util.*
  */
 class CommandManFragment : AppIndexFragment(), View.OnClickListener {
 
-    private var mAdapter: ManAdapter? = null
-    private var mRealm: Realm? = null
-    private var mFirebaseAnalytics: FirebaseAnalytics? = null
-    private var mName: String? = null
-    private var mId: Long = 0
-    private var mCategory: Int = 0
+    private lateinit var adapter: ManAdapter
+    private lateinit var firebaseAnalytics: FirebaseAnalytics
+    private lateinit var realm: Realm
+    private var name: String = ""
+    private var id: Long = 0
     private var mIndexesPosition: Int = 0
     private val query: String? = null
     private val indexes = ArrayList<Int>()
 
     private fun fromHtml(html: String?): Spanned {
         return if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
-            Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY)!!
+            Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY)
         } else {
             Html.fromHtml(html)
         }
     }
 
     override fun getAppIndexingTitle(): String {
-        return "$mName($mCategory) man page"
+        return "$name man page"
     }
 
     override fun getAppIndexingAction(): Action {
@@ -60,26 +58,24 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        if (!FragmentCoordinator.isTabletLayout(activity!!)) {
+        if (!FragmentCoordinator.isTabletLayout(activity)) {
             setHasOptionsMenu(true)
         }
 
-        // Get unique command mId
-        val b = arguments
-        mId = b!!.getLong(CommandManActivity.EXTRA_COMMAND_ID)
-        mName = b.getString(CommandManActivity.EXTRA_COMMAND_NAME)
-        mCategory = b.getInt(CommandManActivity.EXTRA_COMMAND_CATEGORY)
+        id = arguments?.getLong(CommandManActivity.EXTRA_COMMAND_ID) ?: 0L
 
-        mRealm = Realm.getDefaultInstance()
+        realm = Realm.getDefaultInstance()
 
-        mAdapter = createAdapter()
+        adapter = createAdapter()
 
-        mFirebaseAnalytics = FirebaseAnalytics.getInstance(context!!)
+        firebaseAnalytics = FirebaseAnalytics.getInstance(context!!)
 
         val realm = Realm.getDefaultInstance()
-        val command = realm.where(Command::class.java).equalTo(Command.ID, mId).findFirst()
+        val command = realm.where<Command>().equalTo(Command.ID, id).findFirst()
         if (command != null) {
             trackSelectContent(command.name)
+            name = command.name!!
+            activity?.title = name
         }
         realm.close()
     }
@@ -91,7 +87,7 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
         val bundle = Bundle()
         bundle.putString(FirebaseAnalytics.Param.ITEM_ID, name)
         bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "Manual Detail")
-        mFirebaseAnalytics!!.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle)
+        firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -101,7 +97,7 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        recyclerView.adapter = mAdapter
+        recyclerView.adapter = adapter
 
         fragment_command_man_btn_up.setOnClickListener(this)
         fragment_command_man_btn_down.setOnClickListener(this)
@@ -110,81 +106,98 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
     override fun onDestroy() {
         super.onDestroy()
 
-        mRealm!!.close()
+        realm.close()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
-        inflater!!.inflate(R.menu.man, menu)
+        inflater?.inflate(R.menu.man, menu)
 
-        // Associate searchable configuration with the SearchView
-        val searchManager = activity!!.getSystemService(Context.SEARCH_SERVICE) as SearchManager
-        val item = menu!!.findItem(R.id.search)
-        val searchView = item.actionView as SearchView
-        searchView.setSearchableInfo(searchManager.getSearchableInfo(activity!!.componentName))
+        val item = menu?.findItem(R.id.search)
+        val searchView = item?.actionView as SearchView
 
-        // Associate searchable configuration with the SearchView
-        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+        activity?.let {
+            val searchManager = it.getSystemService(Context.SEARCH_SERVICE) as SearchManager
+            searchView.setSearchableInfo(searchManager.getSearchableInfo(it.componentName))
 
-            override fun onQueryTextSubmit(s: String): Boolean {
-                return false
-            }
+            searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
 
-            override fun onQueryTextChange(query: String): Boolean {
-                if (query.isNotEmpty()) {
-                    search(query)
-                } else {
-                    resetSearchResults()
+                override fun onQueryTextSubmit(s: String): Boolean {
+                    return false
                 }
-                return true
-            }
-        })
-        MenuItemCompat.setOnActionExpandListener(item, object : MenuItemCompat.OnActionExpandListener {
-            override fun onMenuItemActionExpand(item: MenuItem): Boolean {
-                return true
-            }
 
-            override fun onMenuItemActionCollapse(item: MenuItem): Boolean {
-                resetSearchResults()
-                return true
-            }
-        })
+                override fun onQueryTextChange(query: String): Boolean {
+                    if (!isAdded) {
+                        return true
+                    }
+                    if (query.isNotEmpty()) {
+                        search(query)
+                    } else {
+                        resetSearchResults()
+                    }
+                    return true
+                }
+            })
+            item.setOnActionExpandListener(object : MenuItem.OnActionExpandListener {
+                override fun onMenuItemActionExpand(item: MenuItem): Boolean {
+                    return true
+                }
+
+                override fun onMenuItemActionCollapse(item: MenuItem): Boolean {
+                    resetSearchResults()
+                    return true
+                }
+            })
+        }
 
         val bookmarkItem = menu.findItem(R.id.bookmark)
-        bookmarkItem.setIcon(if (AppManager.hasBookmark(context!!, mId)) R.drawable.ic_bookmark_black_24dp else R.drawable.ic_bookmark_border_black_24dp)
+        bookmarkItem.setIcon(if (AppManager.hasBookmark(context, id)) R.drawable.ic_bookmark_black_24dp else R.drawable.ic_bookmark_border_black_24dp)
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         if (item?.itemId == R.id.bookmark) {
-            toogleBookmark()
+            toggleBookmark()
             activity?.invalidateOptionsMenu()
             return true
         }
         return false
     }
 
-    /**
-     * Split long page text into child mRecyclerView views
-     *
-     * @return
-     */
     private fun createAdapter(): ManAdapter {
-        val pages = mRealm!!.where<CommandPage>().equalTo(CommandPage.COMMANDID, mId).findAll()
+        val pages = realm.where<CommandPage>().equalTo(CommandPage.COMMANDID, id).findAll()
 
         val groups = ArrayList<String>()
         val child = ArrayList<ArrayList<CharSequence>>()
         for (page in pages) {
 
-            groups.add(page.title!!)
-
+            // Split description by <p> elements to increase the recyclerview performance
             val pageSplit = ArrayList<CharSequence>()
             val tmp = page.page.toString().split("</p>".toRegex()).toTypedArray()
             for (tmpSplit in tmp) {
                 val p = trim(fromHtml("$tmpSplit</p>"))
-                if(p.isNotEmpty()) {
+                if (p.isNotEmpty()) {
                     pageSplit.add(p)
                 }
             }
-            child.add(pageSplit)
+
+            // If the parts are still to long split them Every 3000 characters
+            val descriptions = ArrayList<CharSequence>()
+            val size = 2000
+            pageSplit.forEach {
+                var index = 0
+                while (index < it.length) {
+                    var endIndex = index + size
+                    if (endIndex >= it.length) {
+                        endIndex = it.length - 1
+                    }
+                    descriptions.add(it.subSequence(index, endIndex))
+                    index += size
+                }
+            }
+
+            if (pageSplit.size > 0) {
+                groups.add(page.title!!)
+                child.add(descriptions)
+            }
         }
 
         return ManAdapter(groups, child)
@@ -192,7 +205,7 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
 
     private fun trim(data: CharSequence): CharSequence {
         var text = data
-        if(text.isEmpty()) {
+        if (text.isEmpty()) {
             return text
         }
         while (text[text.length - 1] == '\n') {
@@ -204,11 +217,11 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
         return text
     }
 
-    private fun toogleBookmark() {
-        if (AppManager.hasBookmark(context!!, mId)) {
-            AppManager.removeBookmark(context!!, mId)
+    private fun toggleBookmark() {
+        if (AppManager.hasBookmark(context, id)) {
+            AppManager.removeBookmark(context, id)
         } else {
-            AppManager.addBookmark(context!!, mId)
+            AppManager.addBookmark(context, id)
         }
     }
 
@@ -217,7 +230,7 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
      */
     private fun resetSearchResults() {
         /*
-        val async = SearchManAsyncTask(context!!, "", mAdapter!!.mChild, this)
+        val async = SearchManAsyncTask(context!!, "", adapter!!.mChild, this)
         addAsyncTask(async)
         async.execute()
 
@@ -232,7 +245,7 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
      */
     private fun search(q: String) {
         /*
-        val async = SearchManAsyncTask(context!!, q, mAdapter!!.mChild, this)
+        val async = SearchManAsyncTask(context!!, q, adapter!!.mChild, this)
         addAsyncTask(async)
         async.execute()
         */

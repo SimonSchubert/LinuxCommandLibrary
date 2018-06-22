@@ -19,24 +19,26 @@ import io.realm.Realm
  */
 object FragmentCoordinator {
 
-    fun startScriptCategoryActivity(activity: FragmentActivity, category: Int) {
-        if (!isTabletLayout(activity)) {
-            val intent = Intent(activity, BasicGroupActivity::class.java)
-            intent.putExtra(BasicGroupActivity.EXTRA_CATEGORY_ID, category)
-            activity.startActivity(intent)
-        } else {
-            val container = activity.findViewById<View>(R.id.fragment_container_secondary)
-            (container as ViewGroup).removeAllViews()
+    fun startScriptCategoryActivity(activity: FragmentActivity?, category: Int) {
+        activity?.let {
+            if (!isTabletLayout(activity)) {
+                val intent = Intent(activity, BasicGroupActivity::class.java)
+                intent.putExtra(BasicGroupActivity.EXTRA_CATEGORY_ID, category)
+                activity.startActivity(intent)
+            } else {
+                val container = activity.findViewById<View>(R.id.fragment_container_secondary)
+                (container as ViewGroup).removeAllViews()
 
-            activity.intent.putExtra(BasicGroupActivity.EXTRA_CATEGORY_ID, category)
+                activity.intent.putExtra(BasicGroupActivity.EXTRA_CATEGORY_ID, category)
 
-            val fragment = BasicGroupFragment()
+                val fragment = BasicGroupFragment()
 
-            val fragmentManager = activity.supportFragmentManager
-            val fragmentTransaction = fragmentManager.beginTransaction()
+                val fragmentManager = activity.supportFragmentManager
+                val fragmentTransaction = fragmentManager.beginTransaction()
 
-            fragmentTransaction.replace(R.id.fragment_container_secondary, fragment)
-            fragmentTransaction.commitAllowingStateLoss()
+                fragmentTransaction.replace(R.id.fragment_container_secondary, fragment)
+                fragmentTransaction.commitAllowingStateLoss()
+            }
         }
     }
 
@@ -97,8 +99,6 @@ object FragmentCoordinator {
         // Add unique command ID for fragment
         val bundle = Bundle()
         bundle.putLong(CommandManActivity.EXTRA_COMMAND_ID, id)
-        bundle.putString(CommandManActivity.EXTRA_COMMAND_NAME, name)
-        bundle.putInt(CommandManActivity.EXTRA_COMMAND_CATEGORY, category)
         fragment.arguments = bundle
 
         val fragmentManager = activity.supportFragmentManager
@@ -108,7 +108,11 @@ object FragmentCoordinator {
         fragmentTransaction.commitAllowingStateLoss()
     }
 
-    fun isTabletLayout(activity: Activity): Boolean {
-        return activity.findViewById<View>(R.id.fragment_container_secondary) != null
+    fun isTabletLayout(activity: Activity?): Boolean {
+        return if(activity == null) {
+            false
+        } else {
+            activity.findViewById<View>(R.id.fragment_container_secondary) != null
+        }
     }
 }

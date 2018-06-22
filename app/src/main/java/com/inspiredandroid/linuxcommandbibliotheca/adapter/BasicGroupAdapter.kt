@@ -19,7 +19,7 @@ import kotlinx.android.synthetic.main.row_basicchildren.view.*
 import java.util.*
 import kotlin.collections.ArrayList
 
-class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>, private val firebaseAnalytics: FirebaseAnalytics) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>, private val firebaseAnalytics: FirebaseAnalytics?) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     companion object {
         const val PARENT = 0
@@ -109,7 +109,7 @@ class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>, pri
         val bundle = Bundle()
         bundle.putString(FirebaseAnalytics.Param.ITEM_ID, id)
         bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "Basic Group")
-        firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle)
+        firebaseAnalytics?.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle)
     }
 
     fun startShareActivity(context: Context, command: CommandChildModel) {

@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools"
-          package="com.inspiredandroid.linuxcommandbibliotheca"
-          android:installLocation="preferExternal">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.inspiredandroid.linuxcommandbibliotheca"
+    android:installLocation="preferExternal">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
+        android:name=".MyApp"
         android:allowBackup="true"
+        android:exported="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_lcl_name"
-        android:theme="@style/LibAppTheme"
-        android:exported="true"
         android:supportsRtl="false"
-        android:name=".MyApp"
+        android:theme="@style/LibAppTheme"
         tools:replace="android:icon">
-
         <activity
             android:name=".NavigationActivity"
             android:label="@string/app_lcl_name"
@@ -25,53 +24,55 @@
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="com.inspiredandroid.linuxcommandbibliotheca.CommandBibliothecaActivity" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
-            <meta-data android:name="android.app.searchable"
-                       android:resource="@xml/searchable" />
-            <intent-filter android:label="Linux tips">
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <!-- Accepts URIs that begin with "http://recipe-app.com/recipes" -->
-                <data android:scheme="http"
-                      android:host="linux.schubert-simon.de"
-                      android:pathPrefix="/tips" />
-            </intent-filter>
-        </activity>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
 
+        </activity>
         <activity
             android:name=".CommandManActivity"
-            android:theme="@style/LibAppTheme"
             android:label="@string/command"
-            android:windowSoftInputMode="adjustPan">
-            <intent-filter android:label="Man page" android:autoVerify="true">
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <!-- Accepts URIs that begin with "http://recipe-app.com/recipes" -->
-                <data android:scheme="http"
-                      android:host="linux.schubert-simon.de"
-                      android:pathPrefix="/mans" />
-            </intent-filter>
-        </activity>
-
+            android:theme="@style/LibAppTheme"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".AboutActivity"
-            android:theme="@style/LibAppTheme"
-            android:label="@string/about" />
-
+            android:label="@string/about"
+            android:theme="@style/LibAppTheme" />
         <activity
             android:name=".BasicGroupActivity"
-            android:theme="@style/LibAppTheme"
-            android:label="" />
+            android:label=""
+            android:theme="@style/LibAppTheme" />
+        <activity
+            android:name=".DeeplinkActivity"
+            android:label="@string/app_lcl_name"
+            android:theme="@style/LibAppTheme">
+            <intent-filter
+                android:autoVerify="true"
+                android:label="Man page">
+                <action android:name="android.intent.action.VIEW" />
 
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="linuxcommandlibrary.com"
+                    android:pathPrefix="/man"
+                    android:scheme="http" />
+                <data
+                    android:host="linuxcommandlibrary.com"
+                    android:pathPrefix="/man"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

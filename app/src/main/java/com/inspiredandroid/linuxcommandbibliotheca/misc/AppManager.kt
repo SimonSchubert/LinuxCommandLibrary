@@ -2,6 +2,9 @@ package com.inspiredandroid.linuxcommandbibliotheca.misc
 
 import android.content.Context
 import android.preference.PreferenceManager
+import com.inspiredandroid.linuxcommandbibliotheca.R
+import java.io.File
+import java.io.InputStream
 import java.util.*
 
 /**
@@ -78,7 +81,7 @@ object AppManager {
     private fun getBookmarkIdsChain(context: Context?): String {
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
         var bookmarksChain = prefs.getString(KEY_BOOKMARKS, "")
-        if (!bookmarksChain!!.isEmpty()) {
+        if (bookmarksChain.isNotEmpty()) {
             bookmarksChain = bookmarksChain.substring(1)
         }
         return bookmarksChain
@@ -90,7 +93,7 @@ object AppManager {
      * @param context
      * @param id
      */
-    fun addBookmark(context: Context, id: Long) {
+    fun addBookmark(context: Context?, id: Long) {
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
         var bookmarksChain = prefs.getString(KEY_BOOKMARKS, "")
         bookmarksChain += ",$id"
@@ -105,7 +108,7 @@ object AppManager {
      * @param id
      * @return
      */
-    fun hasBookmark(context: Context, id: Long): Boolean {
+    fun hasBookmark(context: Context?, id: Long): Boolean {
         return getBookmarkIds(context).contains(id)
     }
 
@@ -115,7 +118,7 @@ object AppManager {
      * @param context
      * @param id
      */
-    fun removeBookmark(context: Context, id: Long) {
+    fun removeBookmark(context: Context?, id: Long) {
         val bookmarksIds = getBookmarkIds(context)
 
         bookmarksIds.remove(id)
@@ -135,7 +138,7 @@ object AppManager {
      *
      * @param context
      */
-    private fun bookmarkHasChanged(context: Context) {
+    private fun bookmarkHasChanged(context: Context?) {
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
         prefs.edit().putBoolean(KEY_BOOKMARKCHANGED, true).apply()
     }
@@ -164,5 +167,24 @@ object AppManager {
             return true
         }
         return false
+    }
+
+    fun createDatabase(context: Context) {
+        val file = File(context.filesDir, Constants.REALM_DATABASE)
+        file.delete()
+        file.copyInputStreamToFile(context.resources.openRawResource(R.raw.database))
+    }
+
+    fun File.copyInputStreamToFile(inputStream: InputStream) {
+        inputStream.use { input ->
+            this.outputStream().use { fileOut ->
+                input.copyTo(fileOut)
+            }
+        }
+    }
+
+    fun existsDatabase(context: Context): Boolean {
+        val file = File(context.filesDir.toString() + "/" + Constants.REALM_DATABASE)
+        return !file.exists()
     }
 }

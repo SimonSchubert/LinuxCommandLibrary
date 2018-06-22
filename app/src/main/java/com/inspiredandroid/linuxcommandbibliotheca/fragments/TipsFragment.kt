@@ -31,6 +31,8 @@ class TipsFragment : AppIndexFragment() {
         super.onCreate(savedInstanceState)
 
         setHasOptionsMenu(true)
+
+        activity?.title = getString(R.string.tip)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {

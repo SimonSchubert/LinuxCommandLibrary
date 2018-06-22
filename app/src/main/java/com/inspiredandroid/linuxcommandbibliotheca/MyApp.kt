@@ -18,5 +18,4 @@ class MyApp : Application() {
         val config = RealmConfiguration.Builder().name(Constants.REALM_DATABASE).schemaVersion(13).build()
         Realm.setDefaultConfiguration(config)
     }
-
 }
