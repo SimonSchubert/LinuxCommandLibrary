@@ -6,14 +6,12 @@ import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.DatabaseLoadingFragment
 import com.inspiredandroid.linuxcommandbibliotheca.misc.AppManager
-import com.inspiredandroid.linuxcommandbibliotheca.misc.Constants
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command
 import io.realm.Realm
 import io.realm.kotlin.where
 import kotlinx.android.synthetic.main.activity_deeplink.*
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.uiThread
-import java.io.File
 
 class DeeplinkActivity : AppCompatActivity() {
 
@@ -38,7 +36,7 @@ class DeeplinkActivity : AppCompatActivity() {
     }
 
     private fun handleIntent() {
-        var commandId : Long = -1
+        var commandId: Long = -1
         val data = intent.dataString
         if (intent.action == Intent.ACTION_VIEW && data != null) {
             val urlFileName = data.substring(data.lastIndexOf("/") + 1)
@@ -51,7 +49,7 @@ class DeeplinkActivity : AppCompatActivity() {
             realm.close()
         }
 
-        if(commandId != -1L) {
+        if (commandId != -1L) {
             val intent = Intent(this, CommandManActivity::class.java)
             intent.putExtra(CommandManActivity.EXTRA_COMMAND_ID, commandId)
             startActivity(intent)

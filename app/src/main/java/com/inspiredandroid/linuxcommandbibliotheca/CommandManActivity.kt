@@ -29,7 +29,8 @@ class CommandManActivity : AppCompatActivity() {
         val intent = intent
         val b = intent.extras
 
-        val id = b?.getLong(CommandManActivity.EXTRA_COMMAND_ID, CommandManActivity.INVALID.toLong()) ?: CommandManActivity.INVALID.toLong()
+        val id = b?.getLong(CommandManActivity.EXTRA_COMMAND_ID, CommandManActivity.INVALID.toLong())
+                ?: CommandManActivity.INVALID.toLong()
 
         val fragment = CommandManFragment()
         val bundle = Bundle()

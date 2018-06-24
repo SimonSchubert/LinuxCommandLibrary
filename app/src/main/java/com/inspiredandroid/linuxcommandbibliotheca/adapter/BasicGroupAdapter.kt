@@ -14,8 +14,8 @@ import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandChildModel
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel
 import io.realm.RealmResults
-import kotlinx.android.synthetic.main.row_basicgroup.view.*
 import kotlinx.android.synthetic.main.row_basicchildren.view.*
+import kotlinx.android.synthetic.main.row_basicgroup.view.*
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -37,7 +37,11 @@ class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>, pri
     }
 
     override fun getItemViewType(position: Int): Int {
-        return if(items.get(position).childId == -1) { PARENT } else { CHILDREN }
+        return if (items.get(position).childId == -1) {
+            PARENT
+        } else {
+            CHILDREN
+        }
     }
 
     override fun getItemCount(): Int {
@@ -80,7 +84,7 @@ class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>, pri
         items.clear()
         groups.forEachIndexed { index, commandGroupModel ->
             items.add(BasicItem(index))
-            if(isExpanded(commandGroupModel.id)) {
+            if (isExpanded(commandGroupModel.id)) {
                 commandGroupModel.commands.forEachIndexed { index2, commandChildModel ->
                     items.add(BasicItem(index, index2))
                 }
