@@ -8,6 +8,5 @@ import io.realm.annotations.Required
  */
 open class CommandManModel : RealmObject() {
 
-    @Required
-    var man: String? = null
+    var man: String = ""
 }
