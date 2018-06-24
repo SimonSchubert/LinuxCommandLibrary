@@ -22,14 +22,14 @@ import com.inspiredandroid.linuxcommandbibliotheca.misc.TypefaceUtils
  * Created by Simon Schubert
  *
  *
- * This View makes it very easy to highlightQueryInsideText defined mCommands in an normal textview. Define the
- * mCommands which should be highlighted in an string array and link it in the layout resource as
+ * This View makes it very easy to highlightQueryInsideText defined commands in an normal textview. Define the
+ * commands which should be highlighted in an string array and link it in the layout resource as
  * "command".
  */
 class TerminalTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(context, attrs) {
 
-    private var mCommands: Array<String>? = null
-    private val mOutputRows: IntArray
+    private var commands: Array<String> = arrayOf()
+    private val outputRows: IntArray
 
     private val activity: FragmentActivity?
         get() {
@@ -48,8 +48,8 @@ class TerminalTextView(context: Context, attrs: AttributeSet) : AppCompatTextVie
         val ta = context.obtainStyledAttributes(attrs, R.styleable.TerminalTextView)
         val resID = ta.getResourceId(R.styleable.TerminalTextView_commands, R.array.default_codetextview_commands)
         val outputRowsResID = ta.getResourceId(R.styleable.TerminalTextView_outputRows, R.array.default_codetextview_commands)
-        mCommands = context.resources.getStringArray(resID)
-        mOutputRows = context.resources.getIntArray(outputRowsResID)
+        commands = context.resources.getStringArray(resID)
+        outputRows = context.resources.getIntArray(outputRowsResID)
         val mIgnoreTerminalStyle = ta.getBoolean(R.styleable.TerminalTextView_ignoreTerminalStyle, false)
         ta.recycle()
 
@@ -66,27 +66,27 @@ class TerminalTextView(context: Context, attrs: AttributeSet) : AppCompatTextVie
     }
 
     /**
-     * Set clickable man pages(mCommands)
+     * Set clickable man pages(commands)
      *
      * @param commands
      */
     fun setCommands(commands: Array<String>) {
-        mCommands = commands
+        this.commands = commands
         updateLinks()
     }
 
     /**
-     * Mark man pages(mCommands) clickable
+     * Mark man pages(commands) clickable
      */
     private fun updateLinks() {
-        text = createSpannable(text.toString(), mCommands!!)
+        text = createSpannable(text.toString(), commands)
     }
 
     /**
      * Highlights Commands of the text and make them clickable
      *
      * @param text     spannable content
-     * @param commands list of mCommands to highlightQueryInsideText
+     * @param commands list of commands to highlightQueryInsideText
      * @return
      */
     private fun createSpannable(text: String, commands: Array<String>): SpannableString {
@@ -95,7 +95,7 @@ class TerminalTextView(context: Context, attrs: AttributeSet) : AppCompatTextVie
         for (command in commands) {
             val listener = object : OnLinkClickListener {
                 override fun onLinkClick() {
-                    FragmentCoordinator.startCommandManActivity(activity!!, command)
+                    FragmentCoordinator.startCommandManActivity(activity, command)
                 }
             }
             ClickableTextView.addClickableSpanToPhrases(ss, text, command, listener)
@@ -112,7 +112,7 @@ class TerminalTextView(context: Context, attrs: AttributeSet) : AppCompatTextVie
      * @param text
      */
     private fun addOutputSpans(ss: SpannableString, text: String) {
-        if (mOutputRows.isEmpty()) {
+        if (outputRows.isEmpty()) {
             return
         }
 
@@ -122,7 +122,7 @@ class TerminalTextView(context: Context, attrs: AttributeSet) : AppCompatTextVie
 
         for (i in lines.indices) {
             end += lines[i].length
-            if (doesArrayContainsInt(mOutputRows, i)) {
+            if (doesArrayContainsInt(outputRows, i)) {
                 ss.setSpan(ForegroundColorSpan(ContextCompat.getColor(context, R.color.grey)), start, end, 0)
             }
             end += 1

@@ -13,6 +13,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.fragments.BasicGroupFragment
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.CommandManFragment
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command
 import io.realm.Realm
+import io.realm.kotlin.where
 
 /**
  * Created by simon on 25/01/17.
@@ -55,36 +56,39 @@ object FragmentCoordinator {
                 val realm = Realm.getDefaultInstance()
 
                 val command = realm.where(Command::class.java).equalTo(Command.ID, id).findFirst()
-                val name = command!!.name!!.toUpperCase()
-                val category = command.category
+                if(command != null) {
+                    val name = command.name.toUpperCase()
+                    val category = command.category
+                    showManFragmentInSecondaryFrame(activity, name, id, category)
+                }
 
                 realm.close()
-
-                showManFragmentInSecondaryFrame(activity, name, id, category)
             }
         }
     }
 
-    fun startCommandManActivity(activity: FragmentActivity, name: String) {
-        val realm = Realm.getDefaultInstance()
-        val command = realm.where(Command::class.java).equalTo(Command.NAME, name).findFirst()
-        if (command == null) {
+    fun startCommandManActivity(activity: FragmentActivity?, name: String) {
+        activity?.let {
+            val realm = Realm.getDefaultInstance()
+            val command = realm.where<Command>().equalTo(Command.NAME, name).findFirst()
+            if (command == null) {
+                realm.close()
+                return
+            }
+            val id = command.id.toLong()
+            val category = command.category
             realm.close()
-            return
-        }
-        val id = command.id.toLong()
-        val category = command.category
-        realm.close()
 
-        if (!isTabletLayout(activity)) {
-            val intent = Intent(activity, CommandManActivity::class.java)
-            intent.putExtra(CommandManActivity.EXTRA_COMMAND_ID, id)
-            activity.startActivity(intent)
-        } else {
-            val container = activity.findViewById<View>(R.id.fragment_container_secondary)
-            (container as ViewGroup).removeAllViews()
+            if (!isTabletLayout(activity)) {
+                val intent = Intent(activity, CommandManActivity::class.java)
+                intent.putExtra(CommandManActivity.EXTRA_COMMAND_ID, id)
+                activity.startActivity(intent)
+            } else {
+                val container = activity.findViewById<View>(R.id.fragment_container_secondary)
+                (container as ViewGroup).removeAllViews()
 
-            showManFragmentInSecondaryFrame(activity, name, id, category)
+                showManFragmentInSecondaryFrame(activity, name, id, category)
+            }
         }
     }
 

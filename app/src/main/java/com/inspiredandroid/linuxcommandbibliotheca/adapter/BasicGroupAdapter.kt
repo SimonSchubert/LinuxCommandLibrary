@@ -68,7 +68,7 @@ class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>, pri
                 }
             }
             CHILDREN -> {
-                groups[item.groupId]?.commands!![item.childId]?.let {
+                groups[item.groupId]?.commands?.get(item.childId)?.let {
                     val childViewHolder = holder as ChildViewHolder
                     childViewHolder.bind(it)
                 }
@@ -81,7 +81,7 @@ class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>, pri
         groups.forEachIndexed { index, commandGroupModel ->
             items.add(BasicItem(index))
             if(isExpanded(commandGroupModel.id)) {
-                commandGroupModel.commands?.forEachIndexed { index2, commandChildModel ->
+                commandGroupModel.commands.forEachIndexed { index2, commandChildModel ->
                     items.add(BasicItem(index, index2))
                 }
             }
@@ -99,7 +99,7 @@ class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>, pri
     }
 
     fun isExpanded(id: Int): Boolean {
-        return expanded.containsKey(id) && expanded[id]!!
+        return expanded[id] == true
     }
 
     fun trackSelectContent(id: String?) {
@@ -126,7 +126,7 @@ class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>, pri
 
     inner class GroupViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun bind(item: CommandGroupModel) {
-            itemView.title.text = Utils.highlightQueryInsideText(itemView.context, searchQuery, item.desc!!)
+            itemView.title.text = Utils.highlightQueryInsideText(itemView.context, searchQuery, item.desc)
             itemView.icon.setImageResource(item.imageResourceId)
             itemView.setOnClickListener { _ ->
                 expanded[item.id] = !isExpanded(item.id)

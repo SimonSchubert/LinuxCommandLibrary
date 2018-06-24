@@ -83,7 +83,7 @@ class ManAdapter(private var pages: ArrayList<String>, var parts: ArrayList<Arra
     }
 
     fun isExpanded(id: Int): Boolean {
-        return expanded.containsKey(id) && expanded[id]!!
+        return expanded[id] == true
     }
 
     inner class GroupViewHolder(view: View) : RecyclerView.ViewHolder(view) {
