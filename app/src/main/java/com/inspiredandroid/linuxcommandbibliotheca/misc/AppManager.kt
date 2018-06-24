@@ -48,7 +48,7 @@ object AppManager {
         return false
     }
 
-    fun disableRateDialog(context: Context) {
+    fun disableRateDialog(context: Context?) {
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
         val edit = prefs.edit()
         edit.putInt(KEY_RATING_DIALOG_STATE, 1)

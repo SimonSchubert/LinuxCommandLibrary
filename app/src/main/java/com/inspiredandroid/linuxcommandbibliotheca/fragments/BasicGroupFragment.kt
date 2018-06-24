@@ -47,7 +47,7 @@ class BasicGroupFragment : BaseFragment() {
         val categoryId = activity?.intent?.getIntExtra(BasicGroupActivity.EXTRA_CATEGORY_ID, 0)
 
         val basicGroupModel = realm.where<BasicGroupModel>().equalTo("id", categoryId).findFirst() ?: BasicGroupModel()
-        groups = basicGroupModel.groups!!.sort("votes", Sort.DESCENDING)
+        groups = basicGroupModel.groups.sort("votes", Sort.DESCENDING)
 
         activity?.title = basicGroupModel.title
 

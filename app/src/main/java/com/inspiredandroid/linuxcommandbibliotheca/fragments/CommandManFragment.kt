@@ -29,8 +29,8 @@ import java.util.*
 class CommandManFragment : AppIndexFragment(), View.OnClickListener {
 
     private lateinit var adapter: ManAdapter
-    private lateinit var firebaseAnalytics: FirebaseAnalytics
     private lateinit var realm: Realm
+    private var firebaseAnalytics: FirebaseAnalytics? = null
     private var name: String = ""
     private var id: Long = 0
     private var mIndexesPosition: Int = 0
@@ -68,13 +68,15 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
 
         adapter = createAdapter()
 
-        firebaseAnalytics = FirebaseAnalytics.getInstance(context!!)
+        context?.let {
+            firebaseAnalytics = FirebaseAnalytics.getInstance(it)
+        }
 
         val realm = Realm.getDefaultInstance()
         val command = realm.where<Command>().equalTo(Command.ID, id).findFirst()
         if (command != null) {
             trackSelectContent(command.name)
-            name = command.name!!
+            name = command.name
             activity?.title = name
         }
         realm.close()
@@ -87,7 +89,7 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
         val bundle = Bundle()
         bundle.putString(FirebaseAnalytics.Param.ITEM_ID, name)
         bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "Manual Detail")
-        firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle)
+        firebaseAnalytics?.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -195,7 +197,7 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
             }
 
             if (pageSplit.size > 0) {
-                groups.add(page.title!!)
+                groups.add(page.title)
                 child.add(descriptions)
             }
         }

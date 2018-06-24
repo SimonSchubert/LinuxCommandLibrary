@@ -17,6 +17,6 @@ object TypefaceUtils {
         if (typeface == null) {
             typeface = Typeface.createFromAsset(context.assets, "ShareTechMono-Regular.ttf")
         }
-        return typeface!!
+        return typeface ?: Typeface.createFromAsset(context.assets, "ShareTechMono-Regular.ttf")
     }
 }

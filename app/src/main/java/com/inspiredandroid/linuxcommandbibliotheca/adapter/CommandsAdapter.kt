@@ -108,8 +108,8 @@ class CommandsAdapter(context: Context?,
         }
 
         fun bind(command: Command) {
-            itemView.title.text = Utils.highlightQueryInsideText(itemView.context, query, command.name!!)
-            itemView.description.text = Utils.highlightQueryInsideText(itemView.context, query, command.desc!!.trim { it <= ' ' })
+            itemView.title.text = Utils.highlightQueryInsideText(itemView.context, query, command.name)
+            itemView.description.text = Utils.highlightQueryInsideText(itemView.context, query, command.desc.trim { it <= ' ' })
 
             if (bookmarkIds.contains(command.id.toLong())) {
                 itemView.icon.setImageResource(R.drawable.ic_bookmark_black_24dp)

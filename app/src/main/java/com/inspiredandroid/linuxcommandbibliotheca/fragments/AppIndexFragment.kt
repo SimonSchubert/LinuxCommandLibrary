@@ -11,7 +11,7 @@ import com.google.android.gms.common.api.GoogleApiClient
  */
 abstract class AppIndexFragment : BaseFragment() {
 
-    private var mClient: GoogleApiClient? = null
+    private var client: GoogleApiClient? = null
 
     /**
      * Title for current page, shown in autocompletion UI
@@ -30,19 +30,21 @@ abstract class AppIndexFragment : BaseFragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        mClient = GoogleApiClient.Builder(context!!).addApi(AppIndex.API).build()
+        context?.let {
+            client = GoogleApiClient.Builder(it).addApi(AppIndex.API).build()
+        }
     }
 
     override fun onStart() {
         super.onStart()
 
-        mClient!!.connect()
-        AppIndex.AppIndexApi.start(mClient, getAppIndexingAction())
+        client?.connect()
+        AppIndex.AppIndexApi.start(client, getAppIndexingAction())
     }
 
     override fun onStop() {
-        AppIndex.AppIndexApi.end(mClient, getAppIndexingAction())
-        mClient!!.disconnect()
+        AppIndex.AppIndexApi.end(client, getAppIndexingAction())
+        client?.disconnect()
 
         super.onStop()
     }

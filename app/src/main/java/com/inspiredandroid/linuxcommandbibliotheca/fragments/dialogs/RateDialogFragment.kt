@@ -17,12 +17,15 @@ import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils
 class RateDialogFragment : DialogFragment() {
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        return AlertDialog.Builder(context!!)
-                .setTitle(R.string.dialog_rate_title)
-                .setMessage(R.string.dialog_rate_message)
-                .setPositiveButton(R.string.dialog_rate_rate_now) { dialogInterface, i -> startAppMarketActivity() }
-                .setNeutralButton(R.string.dialog_rate_later, null)
-                .setNegativeButton(R.string.dialog_rate_no_thanks) { dialogInterface, i -> AppManager.disableRateDialog(context!!) }.create()
+        context?.let {
+            return AlertDialog.Builder(it)
+                    .setTitle(R.string.dialog_rate_title)
+                    .setMessage(R.string.dialog_rate_message)
+                    .setPositiveButton(R.string.dialog_rate_rate_now) { _, _ -> startAppMarketActivity() }
+                    .setNeutralButton(R.string.dialog_rate_later, null)
+                    .setNegativeButton(R.string.dialog_rate_no_thanks) { _, _ -> AppManager.disableRateDialog(context) }.create()
+        }
+        return super.onCreateDialog(savedInstanceState)
     }
 
     private fun startAppMarketActivity() {
