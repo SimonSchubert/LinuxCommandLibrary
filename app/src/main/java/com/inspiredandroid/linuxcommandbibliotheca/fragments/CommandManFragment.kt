@@ -46,7 +46,7 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
     }
 
     override fun getAppIndexingTitle(): String {
-        return "$name man page"
+        return "$name search_bookmark page"
     }
 
     override fun getAppIndexingAction(): Action {
@@ -112,7 +112,7 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
-        inflater?.inflate(R.menu.man, menu)
+        inflater?.inflate(R.menu.search_bookmark, menu)
 
         val item = menu?.findItem(R.id.search)
         val searchView = item?.actionView as SearchView
@@ -241,7 +241,7 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
     }
 
     /**
-     * Search the man page for q occurs and highlight them and jump to first occur
+     * Search the search_bookmark page for q occurs and highlight them and jump to first occur
      *
      * @param q
      */

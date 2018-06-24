@@ -51,7 +51,7 @@ class TipsFragment : AppIndexFragment() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
-        inflater?.inflate(R.menu.tip, menu)
+        inflater?.inflate(R.menu.about, menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {

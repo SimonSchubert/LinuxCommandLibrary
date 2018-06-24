@@ -8,8 +8,8 @@ import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command
 import io.realm.Realm
 import io.realm.kotlin.where
-import kotlinx.android.synthetic.main.row_man_child.view.*
-import kotlinx.android.synthetic.main.row_man_group.view.*
+import kotlinx.android.synthetic.main.row_man_description.view.*
+import kotlinx.android.synthetic.main.row_man_title.view.*
 import java.util.*
 import java.util.regex.Pattern
 import kotlin.collections.ArrayList
@@ -45,11 +45,11 @@ class ManAdapter(private var pages: ArrayList<String>, var parts: ArrayList<Arra
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         when (viewType) {
             PARENT -> {
-                val v = LayoutInflater.from(parent.context).inflate(R.layout.row_man_group, parent, false)
+                val v = LayoutInflater.from(parent.context).inflate(R.layout.row_man_title, parent, false)
                 return GroupViewHolder(v)
             }
             CHILDREN -> {
-                val v = LayoutInflater.from(parent.context).inflate(R.layout.row_man_child, parent, false)
+                val v = LayoutInflater.from(parent.context).inflate(R.layout.row_man_description, parent, false)
                 return ChildViewHolder(v)
             }
         }

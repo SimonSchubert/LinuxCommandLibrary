@@ -18,7 +18,7 @@ import io.realm.Realm
 import io.realm.RealmResults
 import io.realm.Sort
 import io.realm.kotlin.where
-import kotlinx.android.synthetic.main.fragment_basicgroups.*
+import kotlinx.android.synthetic.main.fragment_basic_groups.*
 import java.text.Normalizer
 
 /**
@@ -40,7 +40,7 @@ class BasicGroupFragment : BaseFragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_basicgroups, container, false)
+        return inflater.inflate(R.layout.fragment_basic_groups, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -69,7 +69,7 @@ class BasicGroupFragment : BaseFragment() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
-        inflater?.inflate(R.menu.basic, menu)
+        inflater?.inflate(R.menu.search, menu)
 
         val item = menu?.findItem(R.id.search)
         val searchView = item?.actionView as SearchView

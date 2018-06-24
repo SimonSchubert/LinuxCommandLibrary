@@ -87,7 +87,7 @@ class CommandsFragment : Fragment(), OnListClickListener {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
-        inflater?.inflate(R.menu.main, menu)
+        inflater?.inflate(R.menu.search_about, menu)
 
         val item = menu?.findItem(R.id.search)
         val searchView = item?.actionView as SearchView

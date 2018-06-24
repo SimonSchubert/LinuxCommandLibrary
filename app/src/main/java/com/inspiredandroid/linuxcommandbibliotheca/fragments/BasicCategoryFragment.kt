@@ -19,7 +19,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel
 import io.realm.Case
 import io.realm.Realm
 import io.realm.kotlin.where
-import kotlinx.android.synthetic.main.fragment_scriptgroups.*
+import kotlinx.android.synthetic.main.fragment_basic_category.*
 import java.text.Normalizer
 
 /**
@@ -47,7 +47,7 @@ class BasicCategoryFragment : BaseFragment(), OnListClickListener {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_scriptgroups, container, false)
+        return inflater.inflate(R.layout.fragment_basic_category, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -63,7 +63,7 @@ class BasicCategoryFragment : BaseFragment(), OnListClickListener {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
-        inflater?.inflate(R.menu.main, menu)
+        inflater?.inflate(R.menu.search_about, menu)
 
         val item = menu?.findItem(R.id.search)
         val searchView = item?.actionView as SearchView
