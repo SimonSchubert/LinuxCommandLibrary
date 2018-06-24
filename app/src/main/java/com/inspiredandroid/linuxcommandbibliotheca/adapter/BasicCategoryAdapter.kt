@@ -9,7 +9,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnListClickListene
 import com.inspiredandroid.linuxcommandbibliotheca.models.BasicGroupModel
 import io.realm.OrderedRealmCollection
 import io.realm.RealmRecyclerViewAdapter
-import kotlinx.android.synthetic.main.row_basiccategory.view.*
+import kotlinx.android.synthetic.main.row_basic_category.view.*
 
 /**
  * Created by simon on 23.11.15.
@@ -25,7 +25,7 @@ class BasicCategoryAdapter(data: OrderedRealmCollection<BasicGroupModel>, autoUp
     override fun onCreateViewHolder(parent: ViewGroup,
                                     viewType: Int): ViewHolder {
         val v = LayoutInflater.from(parent.context)
-                .inflate(R.layout.row_basiccategory, parent, false)
+                .inflate(R.layout.row_basic_category, parent, false)
         return ViewHolder(v)
     }
 

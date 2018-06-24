@@ -16,7 +16,7 @@ class BasicGroupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_scriptchildren)
+        setContentView(R.layout.activity_basic_group)
 
         setSupportActionBar(toolbar)
 

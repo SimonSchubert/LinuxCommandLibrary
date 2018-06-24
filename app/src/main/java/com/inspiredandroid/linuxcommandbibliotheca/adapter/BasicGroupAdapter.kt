@@ -14,8 +14,8 @@ import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandChildModel
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel
 import io.realm.RealmResults
-import kotlinx.android.synthetic.main.row_basicchildren.view.*
-import kotlinx.android.synthetic.main.row_basicgroup.view.*
+import kotlinx.android.synthetic.main.row_basic_children.view.*
+import kotlinx.android.synthetic.main.row_basic_group.view.*
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -51,11 +51,11 @@ class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>, pri
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         when (viewType) {
             PARENT -> {
-                val v = LayoutInflater.from(parent.context).inflate(R.layout.row_basicgroup, parent, false)
+                val v = LayoutInflater.from(parent.context).inflate(R.layout.row_basic_group, parent, false)
                 return GroupViewHolder(v)
             }
             CHILDREN -> {
-                val v = LayoutInflater.from(parent.context).inflate(R.layout.row_basicchildren, parent, false)
+                val v = LayoutInflater.from(parent.context).inflate(R.layout.row_basic_children, parent, false)
                 return ChildViewHolder(v)
             }
         }
