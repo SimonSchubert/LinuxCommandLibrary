@@ -1,16 +1,12 @@
 package com.inspiredandroid.linuxcommandbibliotheca.adapter
 
 import android.support.v7.widget.RecyclerView
-import android.text.Html
-import android.text.Spanned
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command
-import com.inspiredandroid.linuxcommandbibliotheca.models.CommandPage
 import io.realm.Realm
-import io.realm.RealmResults
 import io.realm.kotlin.where
 import kotlinx.android.synthetic.main.row_man_child.view.*
 import kotlinx.android.synthetic.main.row_man_group.view.*
@@ -35,7 +31,11 @@ class ManAdapter(private var pages: ArrayList<String>, var parts: ArrayList<Arra
     }
 
     override fun getItemViewType(position: Int): Int {
-        return if(items.get(position).childId == -1) { PARENT } else { CHILDREN }
+        return if (items.get(position).childId == -1) {
+            PARENT
+        } else {
+            CHILDREN
+        }
     }
 
     override fun getItemCount(): Int {
@@ -74,7 +74,7 @@ class ManAdapter(private var pages: ArrayList<String>, var parts: ArrayList<Arra
         items.clear()
         pages.forEachIndexed { index, page ->
             items.add(BasicItem(index))
-            if(isExpanded(index)) {
+            if (isExpanded(index)) {
                 parts.get(index).forEachIndexed { index2, spanned ->
                     items.add(BasicItem(index, index2))
                 }
@@ -90,7 +90,7 @@ class ManAdapter(private var pages: ArrayList<String>, var parts: ArrayList<Arra
 
         fun bind(index: Int, page: String) {
             itemView.title.text = page.toUpperCase()
-            itemView.setOnClickListener{
+            itemView.setOnClickListener {
                 expanded[index] = !isExpanded(index)
                 updateItems()
                 notifyDataSetChanged()

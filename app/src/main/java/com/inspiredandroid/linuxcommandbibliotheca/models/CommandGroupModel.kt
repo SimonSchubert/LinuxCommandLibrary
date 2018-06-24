@@ -1,11 +1,9 @@
 package com.inspiredandroid.linuxcommandbibliotheca.models
 
 import com.inspiredandroid.linuxcommandbibliotheca.R
-
 import io.realm.RealmList
 import io.realm.RealmObject
 import io.realm.annotations.PrimaryKey
-import io.realm.annotations.Required
 
 /**
  * Created by Simon Schubert

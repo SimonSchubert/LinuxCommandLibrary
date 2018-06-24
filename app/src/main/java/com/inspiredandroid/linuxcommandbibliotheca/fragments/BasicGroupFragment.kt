@@ -4,17 +4,19 @@ import android.app.Activity
 import android.app.SearchManager
 import android.content.Context
 import android.os.Bundle
-import android.support.v4.view.MenuItemCompat
 import android.support.v7.widget.SearchView
 import android.view.*
 import com.google.firebase.analytics.FirebaseAnalytics
+import com.inspiredandroid.linuxcommandbibliotheca.BasicGroupActivity
 import com.inspiredandroid.linuxcommandbibliotheca.BuildConfig
 import com.inspiredandroid.linuxcommandbibliotheca.R
-import com.inspiredandroid.linuxcommandbibliotheca.BasicGroupActivity
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.BasicGroupAdapter
 import com.inspiredandroid.linuxcommandbibliotheca.models.BasicGroupModel
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel
-import io.realm.*
+import io.realm.Case
+import io.realm.Realm
+import io.realm.RealmResults
+import io.realm.Sort
 import io.realm.kotlin.where
 import kotlinx.android.synthetic.main.fragment_basicgroups.*
 import java.text.Normalizer
@@ -26,7 +28,7 @@ class BasicGroupFragment : BaseFragment() {
 
     lateinit var realm: Realm
     lateinit var searchAdapter: BasicGroupAdapter
-    lateinit var groups : RealmResults<CommandGroupModel>
+    lateinit var groups: RealmResults<CommandGroupModel>
     var firebaseAnalytics: FirebaseAnalytics? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,7 +48,8 @@ class BasicGroupFragment : BaseFragment() {
 
         val categoryId = activity?.intent?.getIntExtra(BasicGroupActivity.EXTRA_CATEGORY_ID, 0)
 
-        val basicGroupModel = realm.where<BasicGroupModel>().equalTo("id", categoryId).findFirst() ?: BasicGroupModel()
+        val basicGroupModel = realm.where<BasicGroupModel>().equalTo("id", categoryId).findFirst()
+                ?: BasicGroupModel()
         groups = basicGroupModel.groups.sort("votes", Sort.DESCENDING)
 
         activity?.title = basicGroupModel.title

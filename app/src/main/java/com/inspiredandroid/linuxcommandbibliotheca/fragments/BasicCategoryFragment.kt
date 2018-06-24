@@ -5,7 +5,6 @@ import android.app.SearchManager
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.support.v4.view.MenuItemCompat
 import android.support.v7.widget.SearchView
 import android.view.*
 import com.google.firebase.analytics.FirebaseAnalytics
@@ -21,7 +20,6 @@ import io.realm.Case
 import io.realm.Realm
 import io.realm.kotlin.where
 import kotlinx.android.synthetic.main.fragment_scriptgroups.*
-import org.jetbrains.anko.support.v4.act
 import java.text.Normalizer
 
 /**
@@ -43,7 +41,7 @@ class BasicCategoryFragment : BaseFragment(), OnListClickListener {
 
         realm = Realm.getDefaultInstance()
         firebaseAnalytics = FirebaseAnalytics.getInstance(context ?: Activity())
-        searchAdapter = BasicGroupAdapter(realm.where<CommandGroupModel>().findAll(),  firebaseAnalytics)
+        searchAdapter = BasicGroupAdapter(realm.where<CommandGroupModel>().findAll(), firebaseAnalytics)
         adapter = BasicCategoryAdapter(realm.where<BasicGroupModel>().sort("position").findAll(), false)
         adapter.setOnListClickListener(this)
     }

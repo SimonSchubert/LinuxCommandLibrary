@@ -5,7 +5,6 @@ import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import android.widget.Toast
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.BasicCategoryFragment
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.CommandsFragment
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.DatabaseLoadingFragment
@@ -38,7 +37,7 @@ class NavigationActivity : AppCompatActivity() {
                 return@OnNavigationItemSelectedListener true
             }
         }
-         false
+        false
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
