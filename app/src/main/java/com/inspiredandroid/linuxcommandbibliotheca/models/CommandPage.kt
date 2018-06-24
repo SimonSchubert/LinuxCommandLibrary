@@ -10,10 +10,8 @@ open class CommandPage : RealmObject() {
 
     var id: Int = 0
     var commandid: Int = 0
-    @Required
-    var page: String? = null
-    @Required
-    var title: String? = null
+    var page: String = ""
+    var title: String = ""
 
     companion object {
         val COMMANDID = "commandid"

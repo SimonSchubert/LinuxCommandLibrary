@@ -10,11 +10,10 @@ import java.util.*
  */
 open class CommandChildModel : RealmObject() {
 
-    @Required
-    var command: String? = null
+    var command: String = ""
     var mans: RealmList<CommandManModel> = RealmList()
 
     fun getMansAsStringArray(): Array<String> {
-        return mans.map { it.man!! }.toTypedArray()
+        return mans.map { it.man }.toTypedArray()
     }
 }

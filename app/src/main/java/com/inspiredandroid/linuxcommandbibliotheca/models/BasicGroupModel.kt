@@ -16,9 +16,8 @@ open class BasicGroupModel : RealmObject() {
     @PrimaryKey
     var id: Int = 0
     var position: Int = 0
-    @Required
-    var title: String? = null
-    var groups: RealmList<CommandGroupModel>? = null
+    var title: String = ""
+    var groups: RealmList<CommandGroupModel> = RealmList()
 
     val iconResourceId: Int
         get() {

@@ -15,7 +15,7 @@ class MyApp : Application() {
     override fun onCreate() {
         super.onCreate()
         Realm.init(this)
-        val config = RealmConfiguration.Builder().name(Constants.REALM_DATABASE).schemaVersion(13).build()
+        val config = RealmConfiguration.Builder().name(Constants.REALM_DATABASE).schemaVersion(21).build()
         Realm.setDefaultConfiguration(config)
     }
 }

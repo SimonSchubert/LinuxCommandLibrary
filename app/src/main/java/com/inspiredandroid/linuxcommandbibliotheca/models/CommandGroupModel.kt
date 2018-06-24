@@ -14,10 +14,9 @@ open class CommandGroupModel : RealmObject() {
 
     @PrimaryKey
     var id: Int = 0
-    @Required
-    var desc: String? = null
+    var desc: String = ""
     var votes: Long = 0
-    var commands: RealmList<CommandChildModel>? = null
+    var commands: RealmList<CommandChildModel> = RealmList()
 
     val imageResourceId: Int
         get() {

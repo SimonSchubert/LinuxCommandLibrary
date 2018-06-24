@@ -12,10 +12,8 @@ open class Command : RealmObject() {
     @PrimaryKey
     var id: Int = 0
     var category: Int = 0
-    @Required
-    var name: String? = null
-    @Required
-    var desc: String? = null
+    var name: String = ""
+    var desc: String = ""
 
     companion object {
         val ID = "id"
