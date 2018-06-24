@@ -2,11 +2,13 @@ package com.inspiredandroid.linuxcommandbibliotheca.adapter
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.inspiredandroid.linuxcommandbibliotheca.BuildConfig
 import com.inspiredandroid.linuxcommandbibliotheca.R
@@ -131,7 +133,7 @@ class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>, pri
     inner class GroupViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun bind(item: CommandGroupModel) {
             itemView.title.text = Utils.highlightQueryInsideText(itemView.context, searchQuery, item.desc)
-            itemView.icon.setImageResource(item.imageResourceId)
+            itemView.title.setCompoundDrawablesWithIntrinsicBounds(item.imageResourceId, 0,0,0)
             itemView.setOnClickListener { _ ->
                 expanded[item.id] = !isExpanded(item.id)
                 updateItems()

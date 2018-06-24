@@ -198,10 +198,12 @@ class CommandsFragment : Fragment(), OnListClickListener {
 
     private fun updateViews() {
         if (adapter.itemCount == 0) {
-            fragment_commands_ll_nothingfound.visibility = View.VISIBLE
+            btnRequestCommand.visibility = View.VISIBLE
+            tvRequestInfo.visibility = View.VISIBLE
             recyclerView.visibility = View.GONE
         } else {
-            fragment_commands_ll_nothingfound.visibility = View.GONE
+            btnRequestCommand.visibility = View.GONE
+            tvRequestInfo.visibility = View.GONE
             recyclerView.visibility = View.VISIBLE
         }
     }

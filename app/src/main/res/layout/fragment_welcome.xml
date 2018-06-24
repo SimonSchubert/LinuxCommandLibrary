@@ -11,5 +11,4 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/tux_book" />
 
-
 </LinearLayout>

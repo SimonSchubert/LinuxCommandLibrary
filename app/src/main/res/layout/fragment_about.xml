@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,19 +16,19 @@
             style="@style/LicenseLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/app_lcl_name"/>
+            android:text="@string/app_lcl_name" />
 
         <Button
             android:id="@+id/btnRate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Rate the app"/>
+            android:text="Rate the app" />
 
         <TextView
             style="@style/LicenseLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="My other projects"/>
+            android:text="My other projects" />
 
         <HorizontalScrollView
             android:layout_width="wrap_content"
@@ -49,7 +49,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        app:srcCompat="@drawable/ic_remote"/>
+                        app:srcCompat="@drawable/ic_remote" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -59,7 +59,7 @@
                         android:layout_marginRight="4dp"
                         android:gravity="center_horizontal"
                         android:maxWidth="100dp"
-                        android:text="Home Remote Control"/>
+                        android:text="Home Remote Control" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -72,7 +72,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        app:srcCompat="@drawable/ic_org_genocide"/>
+                        app:srcCompat="@drawable/ic_org_genocide" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -82,7 +82,7 @@
                         android:layout_marginRight="4dp"
                         android:gravity="center_horizontal"
                         android:maxWidth="120dp"
-                        android:text="Orc Genocide"/>
+                        android:text="Orc Genocide" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -95,7 +95,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        app:srcCompat="@drawable/ic_quiz"/>
+                        app:srcCompat="@drawable/ic_quiz" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -105,7 +105,7 @@
                         android:layout_marginRight="4dp"
                         android:gravity="center_horizontal"
                         android:maxWidth="120dp"
-                        android:text="2 Player Quiz"/>
+                        android:text="2 Player Quiz" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -118,7 +118,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        app:srcCompat="@drawable/ic_bimo"/>
+                        app:srcCompat="@drawable/ic_bimo" />
 
 
                     <TextView
@@ -129,8 +129,7 @@
                         android:layout_marginRight="4dp"
                         android:gravity="center_horizontal"
                         android:maxWidth="120dp"
-                        android:text="Bimo"
-                        />
+                        android:text="Bimo" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -143,7 +142,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        app:srcCompat="@drawable/ic_burger"/>
+                        app:srcCompat="@drawable/ic_burger" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -151,7 +150,7 @@
                         android:layout_gravity="center_horizontal"
                         android:gravity="center_horizontal"
                         android:maxWidth="120dp"
-                        android:text="Berlin Burger Map"/>
+                        android:text="Berlin Burger Map" />
                 </LinearLayout>
             </LinearLayout>
         </HorizontalScrollView>
@@ -160,35 +159,35 @@
             style="@style/LicenseLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Licenses"/>
+            android:text="Licenses" />
 
         <TextView
             style="@style/LicenseMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Butter Knife"/>
+            android:text="Butter Knife" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Copyright 2013 Jake Wharton Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License."/>
-
-        <TextView
-            style="@style/LicenseMedium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Realm"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License."/>
+            android:text="Copyright 2013 Jake Wharton Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License." />
 
         <TextView
             style="@style/LicenseMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gradle Retrolambda Plugin"/>
+            android:text="Realm" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License." />
+
+        <TextView
+            style="@style/LicenseMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gradle Retrolambda Plugin" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -206,36 +205,36 @@ distributed under the License is distributed on an 'AS IS' BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-"/>
+" />
 
         <TextView
             style="@style/LicenseMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Man pages"/>
+            android:text="Man pages" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Licence information about the man page is usually specified in the man detail page under the category Author, Copyright or Licence. If there is no information on the page you can find the information in the man page source file on your linux system. If you have questions or can't find what you need, you can contact me at sschubert89@gmail.com."/>
+            android:text="Licence information about the man page is usually specified in the man detail page under the category Author, Copyright or Licence. If there is no information on the page you can find the information in the man page source file on your linux system. If you have questions or can't find what you need, you can contact me at sschubert89@gmail.com." />
 
         <TextView
             style="@style/LicenseMedium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Icons8"/>
+            android:text="Icons8" />
 
         <TextView
             android:id="@+id/btnIcons8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="https://icons8.com"/>
+            android:text="https://icons8.com" />
 
         <TextView
             style="@style/LicenseMedium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="commandlinefu.com"/>
+            android:text="commandlinefu.com" />
 
     </LinearLayout>
 </ScrollView>
