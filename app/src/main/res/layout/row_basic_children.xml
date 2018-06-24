@@ -6,7 +6,10 @@
     android:layout_height="wrap_content"
     android:gravity="center_vertical"
     android:orientation="horizontal"
-    android:padding="10dp">
+    android:paddingBottom="12dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="12dp">
 
     <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
         android:id="@+id/description"
@@ -22,7 +25,7 @@
         android:id="@+id/share"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="12dp"
         android:contentDescription="@string/fragment_scriptdescription_share_command"
         app:srcCompat="@drawable/ic_share_black_24dp" />
 

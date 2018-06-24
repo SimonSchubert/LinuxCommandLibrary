@@ -41,6 +41,5 @@ class AdView : AppCompatImageView {
         } catch (anfe: android.content.ActivityNotFoundException) {
             context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=$appPackageName")))
         }
-
     }
 }

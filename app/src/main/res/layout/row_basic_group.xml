@@ -1,36 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/title"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="56dp"
     android:background="?android:attr/selectableItemBackground"
+    android:drawableLeft="@drawable/ic_user_male_circle_40dp"
+    android:drawablePadding="16dp"
+    android:gravity="center_vertical"
     android:paddingLeft="16dp"
-    android:paddingRight="16dp">
-
-    <ImageView
-        android:id="@+id/icon"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="8dp"
-        tool:src="@drawable/ic_user_male_circle_40dp" />
-
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="56dp"
-        android:layout_marginLeft="56dp"
-        android:gravity="center_vertical"
-        android:textSize="16sp"
-        tool:text="adb" />
-
-    <LinearLayout
-        android:id="@+id/commands"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:orientation="vertical"
-        android:visibility="gone">
-
-    </LinearLayout>
-
-</RelativeLayout>
+    android:paddingRight="16dp"
+    android:textSize="16sp"
+    tool:text="adb" />
