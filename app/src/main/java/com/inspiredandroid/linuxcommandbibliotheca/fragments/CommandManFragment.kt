@@ -100,6 +100,7 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
 
         recyclerView.adapter = adapter
+        fastScroller.setRecyclerView(recyclerView)
 
         fragment_command_man_btn_up.setOnClickListener(this)
         fragment_command_man_btn_down.setOnClickListener(this)
