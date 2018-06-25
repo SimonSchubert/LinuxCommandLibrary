@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:custom="http://schemas.android.com/apk/res-auto"
     xmlns:tool="http://schemas.android.com/tools"
     android:id="@+id/description"
     android:layout_width="match_parent"
@@ -9,5 +8,4 @@
     android:textColor="#FFA9A9A9"
     android:textIsSelectable="true"
     android:textSize="14sp"
-    custom:ignoreTerminalStyle="true"
     tool:text="Description" />

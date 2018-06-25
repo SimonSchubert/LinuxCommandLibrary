@@ -55,11 +55,10 @@ object FragmentCoordinator {
 
                 val realm = Realm.getDefaultInstance()
 
-                val command = realm.where(Command::class.java).equalTo(Command.ID, id).findFirst()
+                val command = realm.where<Command>().equalTo(Command.ID, id).findFirst()
                 if (command != null) {
                     val name = command.name.toUpperCase()
-                    val category = command.category
-                    showManFragmentInSecondaryFrame(activity, name, id, category)
+                    showManFragmentInSecondaryFrame(activity, name, id)
                 }
 
                 realm.close()
@@ -87,7 +86,7 @@ object FragmentCoordinator {
                 val container = activity.findViewById<View>(R.id.fragment_container_secondary)
                 (container as ViewGroup).removeAllViews()
 
-                showManFragmentInSecondaryFrame(activity, name, id, category)
+                showManFragmentInSecondaryFrame(activity, name, id)
             }
         }
     }
@@ -97,7 +96,7 @@ object FragmentCoordinator {
      * @param id       unique command id
      * @param category command category
      */
-    private fun showManFragmentInSecondaryFrame(activity: FragmentActivity, name: String, id: Long, category: Int) {
+    private fun showManFragmentInSecondaryFrame(activity: FragmentActivity, name: String, id: Long) {
         val fragment = CommandManFragment()
 
         // Add unique command ID for fragment

@@ -87,7 +87,7 @@ class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>, pri
         groups.forEachIndexed { index, commandGroupModel ->
             items.add(BasicItem(index))
             if (isExpanded(commandGroupModel.id)) {
-                commandGroupModel.commands.forEachIndexed { index2, commandChildModel ->
+                commandGroupModel.commands.forEachIndexed { index2, _ ->
                     items.add(BasicItem(index, index2))
                 }
             }
