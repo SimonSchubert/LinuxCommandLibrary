@@ -3,6 +3,5 @@
     <declare-styleable name="TerminalTextView">
         <attr name="commands" format="reference" />
         <attr name="outputRows" format="reference" />
-        <attr name="ignoreTerminalStyle" format="boolean" />
     </declare-styleable>
 </resources>

@@ -16,7 +16,6 @@ import android.util.AttributeSet
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnLinkClickListener
 import com.inspiredandroid.linuxcommandbibliotheca.misc.FragmentCoordinator
-import com.inspiredandroid.linuxcommandbibliotheca.misc.TypefaceUtils
 
 /**
  * Created by Simon Schubert
@@ -44,24 +43,17 @@ class TerminalTextView(context: Context, attrs: AttributeSet) : AppCompatTextVie
         }
 
     init {
-
         val ta = context.obtainStyledAttributes(attrs, R.styleable.TerminalTextView)
         val resID = ta.getResourceId(R.styleable.TerminalTextView_commands, R.array.default_codetextview_commands)
         val outputRowsResID = ta.getResourceId(R.styleable.TerminalTextView_outputRows, R.array.default_codetextview_commands)
         commands = context.resources.getStringArray(resID)
         outputRows = context.resources.getIntArray(outputRowsResID)
-        val mIgnoreTerminalStyle = ta.getBoolean(R.styleable.TerminalTextView_ignoreTerminalStyle, false)
         ta.recycle()
 
         if (!isInEditMode) {
             updateLinks()
             movementMethod = LinkMovementMethod.getInstance()
             highlightColor = Color.TRANSPARENT
-
-            if (!mIgnoreTerminalStyle) {
-                val typeface = TypefaceUtils.getTypeFace(getContext())
-                setTypeface(typeface)
-            }
         }
     }
 
@@ -122,26 +114,12 @@ class TerminalTextView(context: Context, attrs: AttributeSet) : AppCompatTextVie
 
         for (i in lines.indices) {
             end += lines[i].length
-            if (doesArrayContainsInt(outputRows, i)) {
+            if (outputRows.any { it == i }) {
                 ss.setSpan(ForegroundColorSpan(ContextCompat.getColor(context, R.color.grey)), start, end, 0)
             }
             end += 1
             start = end
         }
-    }
-
-    /**
-     * @param array
-     * @param value
-     * @return
-     */
-    private fun doesArrayContainsInt(array: IntArray, value: Int): Boolean {
-        for (anArray in array) {
-            if (anArray == value) {
-                return true
-            }
-        }
-        return false
     }
 
     /**

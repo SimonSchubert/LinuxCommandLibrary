@@ -72,10 +72,10 @@ class ManAdapter(private var pages: ArrayList<String>, var parts: ArrayList<Arra
 
     fun updateItems() {
         items.clear()
-        pages.forEachIndexed { index, page ->
+        pages.forEachIndexed { index, _ ->
             items.add(BasicItem(index))
             if (isExpanded(index)) {
-                parts.get(index).forEachIndexed { index2, spanned ->
+                parts.get(index).forEachIndexed { index2, _ ->
                     items.add(BasicItem(index, index2))
                 }
             }
