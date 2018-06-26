@@ -10,6 +10,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnListClickListene
 import com.inspiredandroid.linuxcommandbibliotheca.misc.AppManager
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Constants
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils
+import com.inspiredandroid.linuxcommandbibliotheca.misc.highlightQueryInsideText
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command
 import io.realm.RealmResults
 import kotlinx.android.synthetic.main.row_command.view.*
@@ -108,8 +109,8 @@ class CommandsAdapter(context: Context?,
         }
 
         fun bind(command: Command) {
-            itemView.title.text = Utils.highlightQueryInsideText(itemView.context, query, command.name)
-            itemView.description.text = Utils.highlightQueryInsideText(itemView.context, query, command.desc.trim { it <= ' ' })
+            itemView.title.text = command.name.highlightQueryInsideText(itemView.context, query).result
+            itemView.description.text = command.desc.trim { it <= ' ' }.highlightQueryInsideText(itemView.context, query).result
 
             if (bookmarkIds.contains(command.id.toLong())) {
                 itemView.icon.setImageResource(R.drawable.ic_bookmark_black_24dp)
@@ -120,7 +121,7 @@ class CommandsAdapter(context: Context?,
 
         override fun onClick(view: View) {
             getItem(adapterPosition)?.let {
-                onListClickListener?.onClick(it.id)
+                onListClickListener?.onListClick(it.id)
             }
         }
     }

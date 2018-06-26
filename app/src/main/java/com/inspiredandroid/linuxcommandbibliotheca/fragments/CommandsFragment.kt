@@ -82,7 +82,7 @@ class CommandsFragment : Fragment(), OnListClickListener {
         }
     }
 
-    override fun onClick(id: Int) {
+    override fun onListClick(id: Int) {
         FragmentCoordinator.startCommandManActivity(activity, id.toLong())
     }
 

@@ -48,7 +48,7 @@ class BasicCategoryAdapter(data: OrderedRealmCollection<BasicGroupModel>, autoUp
 
         override fun onClick(view: View) {
             getItem(adapterPosition)?.let {
-                onListClickListener?.onClick(it.id)
+                onListClickListener?.onListClick(it.id)
             }
         }
     }

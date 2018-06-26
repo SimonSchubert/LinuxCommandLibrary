@@ -42,41 +42,40 @@ object Utils {
 
         return installed
     }
-
-    /**
-     * Highlight the the appearance of search query inside originalText
-     *
-     * @param context
-     * @param query
-     * @param originalText
-     * @return
-     */
-    fun highlightQueryInsideText(context: Context, query: String, originalText: String): CharSequence {
-        if (query.isEmpty() || originalText.isEmpty()) {
-            return originalText
-        }
-
-        // ignore case and accents
-        // the same thing should have been done for the search text
-        val normalizedText = Normalizer.normalize(originalText, Normalizer.Form.NFD).replace("\\p{InCombiningDiacriticalMarks}+".toRegex(), "").toLowerCase()
-        val highlighted = SpannableString(originalText)
-
-        for (subSearchQuery in query.split("[,\\s]+".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()) {
-            var start = normalizedText.indexOf(subSearchQuery)
-            while (start >= 0) {
-                val spanStart = Math.min(start, originalText.length)
-                val spanEnd = Math.min(start + subSearchQuery.length, originalText.length)
-
-                if (spanStart == -1 || spanEnd == -1) {
-                    break
-                }
-
-                highlighted.setSpan(ForegroundColorSpan(ContextCompat.getColor(context, R.color.ab_primary)), spanStart, spanEnd, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
-
-                start = normalizedText.indexOf(subSearchQuery, spanEnd)
-            }
-        }
-
-        return highlighted
-    }
 }
+
+/**
+ * Highlight the the appearance of search query inside originalText
+ */
+fun String.highlightQueryInsideText(context: Context?, query: String): SearchResult {
+    if (query.isEmpty() || this.isEmpty() || context == null) {
+        return SearchResult(this, arrayListOf())
+    }
+
+    val indexes = arrayListOf<Int>()
+    val normalizedText = Normalizer.normalize(this, Normalizer.Form.NFD).replace("\\p{InCombiningDiacriticalMarks}+".toRegex(), "").toLowerCase()
+    val highlighted = SpannableString(this)
+
+    for (subSearchQuery in query.split("[,\\s]+".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()) {
+        var start = normalizedText.indexOf(subSearchQuery)
+        while (start >= 0) {
+            val spanStart = Math.min(start, this.length)
+            val spanEnd = Math.min(start + subSearchQuery.length, this.length)
+
+            if (spanStart == -1 || spanEnd == -1) {
+                break
+            }
+
+            highlighted.setSpan(ForegroundColorSpan(ContextCompat.getColor(context, R.color.ab_primary)), spanStart, spanEnd, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+
+            start = normalizedText.indexOf(subSearchQuery, spanEnd)
+            indexes.add(start)
+        }
+    }
+
+    return SearchResult(highlighted, indexes)
+}
+
+class SearchResult(var result: CharSequence, var indexes: ArrayList<Int>)
+
+class SearchIndex(var pos: Int, var indexes: ArrayList<Int>)
