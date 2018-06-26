@@ -15,83 +15,83 @@
         android:paddingRight="8dp">
 
         <TextView
-            style="@style/TextMedium"
+            style="@style/Title1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Clear and reset the terminal" />
 
         <TextView
-            style="@style/TextNormal"
+            style="@style/Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="To clear the terminal use the command below or press Ctrl+L on your keyboard." />
 
         <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
-            style="@style/TextCode"
+            style="@style/Code1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/fragment_tips_clear_code"
             custom:commands="@array/fragment_tips_clear_code_array" />
 
         <TextView
-            style="@style/TextNormal"
+            style="@style/Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="If you screw up the screen by e.g. accidentally reading a binary file with with cat or less you might reinitialisation the terminal with the reset command." />
 
         <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
-            style="@style/TextCode"
+            style="@style/Code1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/fragment_tips_reset_code"
             custom:commands="@array/fragment_tips_reset_code_array" />
 
         <TextView
-            style="@style/TextMedium"
+            style="@style/Title1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="List of recent commands" />
 
         <TextView
-            style="@style/TextNormal"
+            style="@style/Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Use the history command or open the history file in vim $HISTFILE or any other text editor." />
 
         <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
-            style="@style/TextCode"
+            style="@style/Code1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/fragment_tips_history_code"
             custom:commands="@array/fragment_tips_history_code_array" />
 
         <TextView
-            style="@style/TextMedium"
+            style="@style/Title1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Close a frozen window/application" />
 
         <TextView
-            style="@style/TextNormal"
+            style="@style/Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Execute the command and click on the frozen window." />
 
         <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
-            style="@style/TextCode"
+            style="@style/Code1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/fragment_tips_xkill_code"
             custom:commands="@array/fragment_tips_xkill_code_array" />
 
         <TextView
-            style="@style/TextNormal"
+            style="@style/Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Or find the process id of an application and kill it." />
 
         <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
-            style="@style/TextCode"
+            style="@style/Code1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/fragment_tips_ps_code"
@@ -99,25 +99,25 @@
             custom:outputRows="@array/fragment_tips_ps_code_array_outputrows" />
 
         <TextView
-            style="@style/TextMedium"
+            style="@style/Title1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tab Completion" />
 
         <TextView
-            style="@style/TextNormal"
+            style="@style/Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="This might save you a lot of time. If you e.g. want to delete a file with a very long name you can type the first few characters of the name and press TAB to auto complete the name. If there are more then one possibilities and you press TAB twice you get a list of all possibilities." />
 
         <TextView
-            style="@style/TextMedium"
+            style="@style/Title1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Special characters in commands" />
 
         <TextView
-            style="@style/TextNormal"
+            style="@style/Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Shell special characters are interpreted by the shell as soon as it is given the command. For example, if you type ls *.bak, the shell translates *.bak to the list of all files in the current folder whose names end in .bak. The ls command never sees the asterisk. So if you want to search for files which actually have an asterisk in their names, you have to escape the asterisk to stop the shell from interpreting it." />
@@ -174,7 +174,7 @@
                     android:orientation="vertical">
 
                     <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
-                        style="@style/TextCode"
+                        style="@style/Code1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/fragment_tips_tv_special_characters_code_star"
@@ -212,7 +212,7 @@
                     android:orientation="vertical">
 
                     <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
-                        style="@style/TextCode"
+                        style="@style/Code1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/fragment_tips_special_characters_code_questionmark"
@@ -248,7 +248,7 @@
                     android:orientation="vertical">
 
                     <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
-                        style="@style/TextCode"
+                        style="@style/Code1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/fragment_tips_special_characters_code_square_brackets"
@@ -284,7 +284,7 @@
                     android:orientation="vertical">
 
                     <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
-                        style="@style/TextCode"
+                        style="@style/Code1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/fragment_tips_special_characters_code_brackets"
@@ -322,7 +322,7 @@
                     android:orientation="vertical">
 
                     <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
-                        style="@style/TextCode"
+                        style="@style/Code1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/fragment_tips_special_characters_code_semicolon"
@@ -360,7 +360,7 @@
                     android:orientation="vertical">
 
                     <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
-                        style="@style/TextCode"
+                        style="@style/Code1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/fragment_tips_special_characters_code_single_quote"
@@ -398,7 +398,7 @@
                     android:orientation="vertical">
 
                     <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
-                        style="@style/TextCode"
+                        style="@style/Code1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/fragment_tips_special_characters_code_backquote"
@@ -437,7 +437,7 @@
                     android:orientation="vertical">
 
                     <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
-                        style="@style/TextCode"
+                        style="@style/Code1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/fragment_tips_special_characters_code_double_quote"
@@ -475,7 +475,7 @@
                     android:orientation="vertical">
 
                     <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
-                        style="@style/TextCode"
+                        style="@style/Code1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/fragment_tips_pipe_code"
@@ -512,7 +512,7 @@
                     android:orientation="vertical">
 
                     <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
-                        style="@style/TextCode"
+                        style="@style/Code1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/fragment_tips_background_code"
@@ -550,7 +550,7 @@
                     android:orientation="vertical">
 
                     <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
-                        style="@style/TextCode"
+                        style="@style/Code1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/fragment_tips_special_characters_code_double_amp"
@@ -587,7 +587,7 @@
                     android:orientation="vertical">
 
                     <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
-                        style="@style/TextCode"
+                        style="@style/Code1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/fragment_tips_tv_special_characters_code_double_pipe"
@@ -643,7 +643,7 @@
                     android:orientation="vertical">
 
                     <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
-                        style="@style/TextCode"
+                        style="@style/Code1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/fragment_tips_special_characters_code_excelationmark"
@@ -681,7 +681,7 @@
                     android:orientation="vertical">
 
                     <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
-                        style="@style/TextCode"
+                        style="@style/Code1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/fragment_tips_special_characters_code_substitution"
@@ -719,7 +719,7 @@
                     android:orientation="vertical">
 
                     <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
-                        style="@style/TextCode"
+                        style="@style/Code1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/fragment_tips_special_characters_code_comment"
@@ -731,20 +731,20 @@
         </TableLayout>
 
         <TextView
-            style="@style/TextNormal"
+            style="@style/Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Don't confuse shell special characters with special characters in regular expressions. Regular expressions must be protected from the shell by enclosing them in single quotes." />
 
         <TextView
             android:id="@+id/tvRedirection"
-            style="@style/TextMedium"
+            style="@style/Title1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Redirection" />
 
         <TextView
-            style="@style/TextNormal"
+            style="@style/Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="You can redirect standard input, output and error by adding these sequences after a command." />
@@ -786,7 +786,7 @@
                     android:orientation="vertical">
 
                     <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
-                        style="@style/TextCode"
+                        style="@style/Code1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/fragment_tips_redirection_code_greater"
@@ -825,7 +825,7 @@
                     android:orientation="vertical">
 
                     <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
-                        style="@style/TextCode"
+                        style="@style/Code1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/fragment_tips_redirection_code_double_greater"
@@ -863,7 +863,7 @@
                     android:orientation="vertical">
 
                     <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
-                        style="@style/TextCode"
+                        style="@style/Code1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/fragment_tips_redirection_code_smaller"
@@ -902,7 +902,7 @@
                     android:orientation="vertical">
 
                     <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
-                        style="@style/TextCode"
+                        style="@style/Code1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/fragment_tips_redirection_code_error_output"

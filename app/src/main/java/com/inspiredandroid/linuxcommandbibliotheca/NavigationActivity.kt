@@ -1,5 +1,6 @@
 package com.inspiredandroid.linuxcommandbibliotheca
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
@@ -47,7 +48,7 @@ class NavigationActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         if (savedInstanceState == null) {
-            if (AppManager.existsDatabase(this)) {
+            if (AppManager.missingDatabase(this)) {
                 showLoadingFragment()
                 doAsync {
                     AppManager.createDatabase(applicationContext)
@@ -58,7 +59,12 @@ class NavigationActivity : AppCompatActivity() {
                     }
                 }
             } else {
-                showFragment(COMMANDS)
+                if (intent.action == Intent.ACTION_VIEW && intent.dataString != null) {
+                    showFragment(TIPS)
+                    navigation.selectedItemId = R.id.navigation_tips
+                } else {
+                    showFragment(COMMANDS)
+                }
             }
         }
 

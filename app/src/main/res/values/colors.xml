@@ -3,4 +3,8 @@
     <color name="ab_primary">#F44336</color>
     <color name="ab_primary_dark">#D32F2F</color>
     <color name="grey">#bcbcbc</color>
+    <color name="grey1">#c3c3c3</color>
+    <color name="grey2">#B3B3B3</color>
+    <color name="white">#fff</color>
+    <color name="background">#121212</color>
 </resources>

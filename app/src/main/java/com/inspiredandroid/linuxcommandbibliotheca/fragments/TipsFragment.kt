@@ -1,12 +1,10 @@
 package com.inspiredandroid.linuxcommandbibliotheca.fragments
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.view.*
-import com.google.android.gms.appindexing.Action
+import com.google.firebase.appindexing.Action
 import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity
-import com.inspiredandroid.linuxcommandbibliotheca.BuildConfig
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnLinkClickListener
 import kotlinx.android.synthetic.main.fragment_tips.*
@@ -17,14 +15,10 @@ import kotlinx.android.synthetic.main.fragment_tips.*
  */
 class TipsFragment : AppIndexFragment() {
 
-    override fun getAppIndexingTitle(): String {
-        return "Linux tips"
-    }
-
     override fun getAppIndexingAction(): Action {
-        val APP_URI = Uri.parse("android-app://" + BuildConfig.APPLICATION_ID + "/http/linux.schubert-simon.de/tips")
-        val WEB_URL = Uri.parse("http://linux.schubert-simon.de/tips/")
-        return Action.newAction(Action.TYPE_VIEW, getAppIndexingTitle(), WEB_URL, APP_URI)
+        return com.google.firebase.appindexing.Action.Builder(com.google.firebase.appindexing.Action.Builder.VIEW_ACTION)
+                .setObject("Linux Tips", "http://linuxcommandlibrary.com/tips.html")
+                .build()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -20,7 +20,7 @@ class DeeplinkActivity : AppCompatActivity() {
         setContentView(R.layout.activity_deeplink)
         setSupportActionBar(toolbar)
 
-        if (AppManager.existsDatabase(this)) {
+        if (AppManager.missingDatabase(this)) {
             showLoadingFragment()
             doAsync {
 
@@ -40,13 +40,15 @@ class DeeplinkActivity : AppCompatActivity() {
         val data = intent.dataString
         if (intent.action == Intent.ACTION_VIEW && data != null) {
             val urlFileName = data.substring(data.lastIndexOf("/") + 1)
-            val commandName = urlFileName.substring(0, urlFileName.length - 5)
-            val realm = Realm.getDefaultInstance()
-            val command = realm.where<Command>().equalTo(Command.NAME, commandName).findFirst()
-            if (command != null) {
-                commandId = command.id.toLong()
+            if(urlFileName.count() > 5) {
+                val commandName = urlFileName.substring(0, urlFileName.length - 5)
+                val realm = Realm.getDefaultInstance()
+                val command = realm.where<Command>().equalTo(Command.NAME, commandName).findFirst()
+                if (command != null) {
+                    commandId = command.id.toLong()
+                }
+                realm.close()
             }
-            realm.close()
         }
 
         if (commandId != -1L) {
