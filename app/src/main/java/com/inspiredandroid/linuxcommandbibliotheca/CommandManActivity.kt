@@ -48,7 +48,6 @@ class CommandManActivity : AppCompatActivity() {
         when (item.itemId) {
             android.R.id.home -> finish()
         }
-
         return super.onOptionsItemSelected(item)
     }
 

@@ -137,7 +137,7 @@ class BasicCategoryFragment : BaseFragment(), OnListClickListener {
         startActivity(intent)
     }
 
-    override fun onClick(id: Int) {
+    override fun onListClick(id: Int) {
         FragmentCoordinator.startScriptCategoryActivity(activity, id)
     }
 }

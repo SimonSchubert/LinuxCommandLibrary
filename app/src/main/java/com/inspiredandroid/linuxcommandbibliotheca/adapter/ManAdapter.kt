@@ -31,7 +31,7 @@ class ManAdapter(private var pages: ArrayList<String>, var parts: ArrayList<Arra
     }
 
     override fun getItemViewType(position: Int): Int {
-        return if (items.get(position).childId == -1) {
+        return if (items[position].childId == -1) {
             PARENT
         } else {
             CHILDREN
@@ -57,7 +57,7 @@ class ManAdapter(private var pages: ArrayList<String>, var parts: ArrayList<Arra
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        val item = items.get(position)
+        val item = items[position]
         when (holder.itemViewType) {
             PARENT -> {
                 val groupViewHolder = holder as GroupViewHolder
@@ -75,11 +75,18 @@ class ManAdapter(private var pages: ArrayList<String>, var parts: ArrayList<Arra
         pages.forEachIndexed { index, _ ->
             items.add(BasicItem(index))
             if (isExpanded(index)) {
-                parts.get(index).forEachIndexed { index2, _ ->
+                parts[index].forEachIndexed { index2, _ ->
                     items.add(BasicItem(index, index2))
                 }
             }
         }
+    }
+
+    fun expandAll() {
+        pages.forEachIndexed { index, _ ->
+            expanded[index] = true
+        }
+        updateItems()
     }
 
     fun isExpanded(id: Int): Boolean {

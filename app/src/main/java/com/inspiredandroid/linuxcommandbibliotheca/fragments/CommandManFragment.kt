@@ -2,7 +2,6 @@ package com.inspiredandroid.linuxcommandbibliotheca.fragments
 
 import android.app.SearchManager
 import android.content.Context
-import android.net.Uri
 import android.os.Bundle
 import android.support.v7.widget.SearchView
 import android.text.Html
@@ -16,11 +15,15 @@ import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.ManAdapter
 import com.inspiredandroid.linuxcommandbibliotheca.misc.AppManager
 import com.inspiredandroid.linuxcommandbibliotheca.misc.FragmentCoordinator
+import com.inspiredandroid.linuxcommandbibliotheca.misc.SearchIndex
+import com.inspiredandroid.linuxcommandbibliotheca.misc.highlightQueryInsideText
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandPage
 import io.realm.Realm
 import io.realm.kotlin.where
 import kotlinx.android.synthetic.main.fragment_command_man.*
+import org.jetbrains.anko.doAsync
+import org.jetbrains.anko.uiThread
 import java.util.*
 
 /**
@@ -33,9 +36,8 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
     private var firebaseAnalytics: FirebaseAnalytics? = null
     private var name: String = ""
     private var id: Long = 0
-    private var mIndexesPosition: Int = 0
-    private val query: String? = null
-    private val indexes = ArrayList<Int>()
+    private var currentIndexPosition: Int = 0
+    var indexes = ArrayList<SearchIndex>()
 
     private fun fromHtml(html: String?): Spanned {
         return if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
@@ -98,8 +100,8 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
         recyclerView.adapter = adapter
         fastScroller.setRecyclerView(recyclerView)
 
-        fragment_command_man_btn_up.setOnClickListener(this)
-        fragment_command_man_btn_down.setOnClickListener(this)
+        btnUp.setOnClickListener(this)
+        btnDown.setOnClickListener(this)
     }
 
     override fun onDestroy() {
@@ -228,13 +230,7 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
      *
      */
     private fun resetSearchResults() {
-        /*
-        val async = SearchManAsyncTask(context!!, "", adapter!!.mChild, this)
-        addAsyncTask(async)
-        async.execute()
-
-        hideButton()
-        */
+        search("")
     }
 
     /**
@@ -243,11 +239,31 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
      * @param q
      */
     private fun search(q: String) {
-        /*
-        val async = SearchManAsyncTask(context!!, q, adapter!!.mChild, this)
-        addAsyncTask(async)
-        async.execute()
-        */
+        doAsync {
+            indexes.clear()
+            adapter.expandAll()
+            var pos = 0
+            adapter.parts.forEachIndexed { index, children ->
+                pos++
+                for (i in children.indices) {
+                    val child = children[i]
+                    val searchResult = child.toString().highlightQueryInsideText(context, q)
+                    children[i] = searchResult.result
+                    if(searchResult.indexes.count() > 0) {
+                        indexes.add(SearchIndex(pos, searchResult.indexes))
+                    }
+                    pos++
+                }
+            }
+            uiThread {
+                adapter.notifyDataSetChanged()
+            }
+        }
+        if(q.isNotEmpty()) {
+            showButton()
+        } else {
+            hideButton()
+        }
     }
 
     /**
@@ -255,57 +271,58 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
      *
      * @param index
      */
-    private fun scrollToPosition(index: Int) {
+    private fun scrollToPosition(index: SearchIndex) {
         /*
         int line = tvDescription.getLayout().getLineForOffset(index);
         int lineHeight = tvDescription.getLayout().getHeight() / tvDescription.getLayout().getLineCount();
         int position = line * lineHeight;
-        scrollView.scrollTo(0, position);
+        scrollView.scrollTo(0, position)
         */
+        recyclerView.layoutManager.scrollToPosition(index.pos)
     }
 
     /**
      *
      */
     private fun hideButton() {
-        fragment_command_man_btn_up.visibility = View.GONE
-        fragment_command_man_btn_down.visibility = View.GONE
+        btnUp.visibility = View.GONE
+        btnDown.visibility = View.GONE
     }
 
     /**
      *
      */
     private fun showButton() {
-        fragment_command_man_btn_up.visibility = View.VISIBLE
-        fragment_command_man_btn_down.visibility = View.VISIBLE
+        btnUp.visibility = View.VISIBLE
+        btnDown.visibility = View.VISIBLE
     }
 
     /**
      * go to next, if last then go to first
      */
     private fun jumpToNextPosition() {
-        mIndexesPosition--
-        if (mIndexesPosition < 0) {
-            mIndexesPosition = indexes.size - 1
+        currentIndexPosition--
+        if (currentIndexPosition < 0) {
+            currentIndexPosition = indexes.size - 1
         }
-        scrollToPosition(indexes[mIndexesPosition])
+        scrollToPosition(indexes[currentIndexPosition])
     }
 
     /**
      * go to previous, if smaller 0 then go to last
      */
     private fun jumpToPreviousPosition() {
-        mIndexesPosition++
-        if (mIndexesPosition >= indexes.size) {
-            mIndexesPosition = 0
+        currentIndexPosition++
+        if (currentIndexPosition >= indexes.size) {
+            currentIndexPosition = 0
         }
-        scrollToPosition(indexes[mIndexesPosition])
+        scrollToPosition(indexes[currentIndexPosition])
     }
 
     override fun onClick(v: View) {
-        if (v.id == R.id.fragment_command_man_btn_up) {
+        if (v.id == R.id.btnUp) {
             jumpToNextPosition()
-        } else if (v.id == R.id.fragment_command_man_btn_down) {
+        } else if (v.id == R.id.btnDown) {
             jumpToPreviousPosition()
         }
     }
