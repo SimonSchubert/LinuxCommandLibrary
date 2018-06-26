@@ -15,12 +15,12 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_lcl_name"
         android:supportsRtl="false"
-        android:theme="@style/LibAppTheme"
+        android:theme="@style/AppTheme"
         tools:replace="android:icon">
         <activity
             android:name=".NavigationActivity"
             android:label="@string/app_lcl_name"
-            android:theme="@style/LibAppTheme"
+            android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="com.inspiredandroid.linuxcommandbibliotheca.CommandBibliothecaActivity" />
@@ -37,46 +37,76 @@
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
 
-        </activity>
-        <activity
-            android:name=".CommandManActivity"
-            android:label="@string/command"
-            android:theme="@style/LibAppTheme"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".AboutActivity"
-            android:label="@string/about"
-            android:theme="@style/LibAppTheme" />
-        <activity
-            android:name=".BasicGroupActivity"
-            android:label=""
-            android:theme="@style/LibAppTheme" />
-        <activity
-            android:name=".DeeplinkActivity"
-            android:label="@string/app_lcl_name"
-            android:theme="@style/LibAppTheme">
-            <intent-filter
-                android:autoVerify="true"
-                android:label="Man page">
+
+            <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
+                    android:scheme="http"
                     android:host="linuxcommandlibrary.com"
-                    android:pathPrefix="/man"
-                    android:scheme="http" />
+                    android:path="/tips.html" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
                 <data
+                    android:scheme="https"
                     android:host="linuxcommandlibrary.com"
-                    android:pathPrefix="/man"
-                    android:scheme="https" />
+                    android:path="/tips.html" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CommandManActivity"
+            android:label="@string/command"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/about"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".BasicGroupActivity"
+            android:label=""
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".DeeplinkActivity"
+            android:label="@string/app_lcl_name"
+            android:theme="@style/AppTheme">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="http"
+                    android:host="linuxcommandlibrary.com"
+                    android:pathPrefix="/man" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="https"
+                    android:host="linuxcommandlibrary.com"
+                    android:pathPrefix="/man" />
             </intent-filter>
         </activity>
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+        <meta-data android:name="search-engine"
+            android:resource="@xml/noindex"/>
     </application>
 
 </manifest>

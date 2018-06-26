@@ -183,7 +183,7 @@ object AppManager {
         }
     }
 
-    fun existsDatabase(context: Context): Boolean {
+    fun missingDatabase(context: Context): Boolean {
         val file = File(context.filesDir.toString() + "/" + Constants.REALM_DATABASE)
         return !file.exists()
     }

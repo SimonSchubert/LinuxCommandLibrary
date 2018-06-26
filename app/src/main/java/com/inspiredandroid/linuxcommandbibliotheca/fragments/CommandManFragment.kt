@@ -8,8 +8,8 @@ import android.support.v7.widget.SearchView
 import android.text.Html
 import android.text.Spanned
 import android.view.*
-import com.google.android.gms.appindexing.Action
 import com.google.firebase.analytics.FirebaseAnalytics
+import com.google.firebase.appindexing.Action
 import com.inspiredandroid.linuxcommandbibliotheca.BuildConfig
 import com.inspiredandroid.linuxcommandbibliotheca.CommandManActivity
 import com.inspiredandroid.linuxcommandbibliotheca.R
@@ -45,14 +45,10 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
         }
     }
 
-    override fun getAppIndexingTitle(): String {
-        return "$name search_bookmark page"
-    }
-
     override fun getAppIndexingAction(): Action {
-        val APP_URI = Uri.parse("android-app://" + BuildConfig.APPLICATION_ID + "/http/linux.schubert-simon.de/mans")
-        val WEB_URL = Uri.parse("http://linux.schubert-simon.de/mans/")
-        return Action.newAction(Action.TYPE_VIEW, getAppIndexingTitle(), WEB_URL, APP_URI)
+        return Action.Builder(Action.Builder.VIEW_ACTION)
+                .setObject("$name Linux man page", "http://linuxcommandlibrary.com/man/$name.html")
+                .build()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

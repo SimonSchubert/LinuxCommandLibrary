@@ -13,7 +13,7 @@
         android:paddingRight="10dp">
 
         <TextView
-            style="@style/LicenseLarge"
+            style="@style/Title2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/app_lcl_name" />
@@ -25,7 +25,7 @@
             android:text="Rate the app" />
 
         <TextView
-            style="@style/LicenseLarge"
+            style="@style/Title2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="My other projects" />
@@ -156,13 +156,13 @@
         </HorizontalScrollView>
 
         <TextView
-            style="@style/LicenseLarge"
+            style="@style/Title2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Licenses" />
 
         <TextView
-            style="@style/LicenseMedium"
+            style="@style/Title3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Butter Knife" />
@@ -173,7 +173,7 @@
             android:text="Copyright 2013 Jake Wharton Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License." />
 
         <TextView
-            style="@style/LicenseMedium"
+            style="@style/Title3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Realm" />
@@ -184,7 +184,7 @@
             android:text="Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License." />
 
         <TextView
-            style="@style/LicenseMedium"
+            style="@style/Title3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Gradle Retrolambda Plugin" />
@@ -208,7 +208,7 @@ limitations under the License.
 " />
 
         <TextView
-            style="@style/LicenseMedium"
+            style="@style/Title3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Man pages" />
@@ -219,7 +219,7 @@ limitations under the License.
             android:text="Licence information about the man page is usually specified in the man detail page under the category Author, Copyright or Licence. If there is no information on the page you can find the information in the man page source file on your linux system. If you have questions or can't find what you need, you can contact me at sschubert89@gmail.com." />
 
         <TextView
-            style="@style/LicenseMedium"
+            style="@style/Title3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Icons8" />
@@ -231,7 +231,7 @@ limitations under the License.
             android:text="https://icons8.com" />
 
         <TextView
-            style="@style/LicenseMedium"
+            style="@style/Title3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="commandlinefu.com" />

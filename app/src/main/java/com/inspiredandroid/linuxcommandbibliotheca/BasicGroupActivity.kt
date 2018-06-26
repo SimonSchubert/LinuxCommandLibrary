@@ -15,15 +15,11 @@ class BasicGroupActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_basic_group)
 
         setSupportActionBar(toolbar)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-        // int categoryId = getIntent().getIntExtra(EXTRA_CATEGORY_ID, ScriptGroupItem.GROUP_USER_GROUP);
-        // setTitle(getDescriptionForCategory(categoryId));
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

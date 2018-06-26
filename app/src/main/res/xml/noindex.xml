@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search-engine xmlns:android="http://schemas.android.com/apk/res/android">
+    <noindex android:value="notification"/>
+    <noindex uri="http://linuxcommandlibrary.com/privacy.html"/>
+</search-engine>

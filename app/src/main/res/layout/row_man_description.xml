@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="8dp"
-    android:textColor="#FFA9A9A9"
+    android:textColor="@color/grey2"
     android:textIsSelectable="true"
     android:textSize="14sp"
     tool:text="Description" />
