@@ -39,7 +39,6 @@ object Utils {
         } catch (e: PackageManager.NameNotFoundException) {
             installed = false
         }
-
         return installed
     }
 }
@@ -78,4 +77,4 @@ fun String.highlightQueryInsideText(context: Context?, query: String): SearchRes
 
 class SearchResult(var result: CharSequence, var indexes: ArrayList<Int>)
 
-class SearchIndex(var pos: Int, var indexes: ArrayList<Int>)
+class SearchIndex(var pos: Int, var index: Int)
