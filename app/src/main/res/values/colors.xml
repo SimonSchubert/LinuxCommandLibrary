@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="ab_primary">#F44336</color>
+    <color name="ab_primary">#f44336</color>
     <color name="ab_primary_dark">#D32F2F</color>
     <color name="grey">#bcbcbc</color>
     <color name="grey1">#c3c3c3</color>

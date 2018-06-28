@@ -3,9 +3,13 @@ package com.inspiredandroid.linuxcommandbibliotheca.fragments
 import android.app.SearchManager
 import android.content.Context
 import android.os.Bundle
+import android.support.v4.content.ContextCompat
 import android.support.v7.widget.SearchView
 import android.text.Html
+import android.text.Spannable
+import android.text.SpannableString
 import android.text.Spanned
+import android.text.style.ForegroundColorSpan
 import android.view.*
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.appindexing.Action
@@ -249,13 +253,24 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
                     val child = children[i]
                     val searchResult = child.toString().highlightQueryInsideText(context, q)
                     children[i] = searchResult.result
-                    if(searchResult.indexes.count() > 0) {
-                        indexes.add(SearchIndex(pos, searchResult.indexes))
+                    searchResult.indexes.forEach {
+                        /*
+                        if(indexes.count() == currentIndexPosition){
+                            val ind = it
+                            context?.let {
+                                val span = SpannableString(children[i])
+                                span.setSpan(ForegroundColorSpan(ContextCompat.getColor(it, R.color.accent_material_dark)), ind, ind+q.count(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+                                children[i] = span
+                            }
+                        }
+                        */
+                        indexes.add(SearchIndex(pos, it))
                     }
                     pos++
                 }
             }
             uiThread {
+                tvSearchCount.text =  "$currentIndexPosition/${indexes.count()}"
                 adapter.notifyDataSetChanged()
             }
         }
@@ -279,6 +294,11 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
         scrollView.scrollTo(0, position)
         */
         recyclerView.layoutManager.scrollToPosition(index.pos)
+        tvSearchCount.text =  "$currentIndexPosition/${indexes.count()}"
+        /*
+        var items = adapter.items[currentIndexPosition]
+        adapter.parts[items.groupId]
+        */
     }
 
     /**
@@ -287,6 +307,8 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
     private fun hideButton() {
         btnUp.visibility = View.GONE
         btnDown.visibility = View.GONE
+        tvSearchCount.visibility = View.GONE
+        imageView7.visibility = View.GONE
     }
 
     /**
@@ -295,6 +317,8 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
     private fun showButton() {
         btnUp.visibility = View.VISIBLE
         btnDown.visibility = View.VISIBLE
+        tvSearchCount.visibility = View.VISIBLE
+        imageView7.visibility = View.VISIBLE
     }
 
     /**
