@@ -1,11 +1,13 @@
 package com.inspiredandroid.linuxcommandbibliotheca.misc
 
+import android.app.Activity
 import android.content.Context
 import android.content.pm.PackageManager
 import android.support.v4.content.ContextCompat
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
+import android.view.inputmethod.InputMethodManager
 
 import com.inspiredandroid.linuxcommandbibliotheca.R
 
@@ -55,24 +57,30 @@ fun String.highlightQueryInsideText(context: Context?, query: String): SearchRes
     val normalizedText = Normalizer.normalize(this, Normalizer.Form.NFD).replace("\\p{InCombiningDiacriticalMarks}+".toRegex(), "").toLowerCase()
     val highlighted = SpannableString(this)
 
-    for (subSearchQuery in query.split("[,\\s]+".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()) {
-        var start = normalizedText.indexOf(subSearchQuery)
-        while (start >= 0) {
-            val spanStart = Math.min(start, this.length)
-            val spanEnd = Math.min(start + subSearchQuery.length, this.length)
+    var start = normalizedText.indexOf(query)
+    while (start >= 0) {
+        val spanStart = Math.min(start, this.length)
+        val spanEnd = Math.min(start + query.length, this.length)
 
-            if (spanStart == -1 || spanEnd == -1) {
-                break
-            }
-
-            highlighted.setSpan(ForegroundColorSpan(ContextCompat.getColor(context, R.color.ab_primary)), spanStart, spanEnd, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
-
-            start = normalizedText.indexOf(subSearchQuery, spanEnd)
-            indexes.add(start)
+        if (spanStart == -1 || spanEnd == -1) {
+            break
         }
+
+        highlighted.setSpan(ForegroundColorSpan(ContextCompat.getColor(context, R.color.ab_primary)), spanStart, spanEnd, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+
+        start = normalizedText.indexOf(query, spanEnd)
+        indexes.add(spanStart)
     }
 
     return SearchResult(highlighted, indexes)
+}
+
+fun Activity.hideKeyboard() {
+    val view = this.currentFocus
+    view?.let {
+        val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(it.windowToken, 0)
+    }
 }
 
 class SearchResult(var result: CharSequence, var indexes: ArrayList<Int>)
