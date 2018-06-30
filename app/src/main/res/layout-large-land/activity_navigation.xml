@@ -9,7 +9,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
+        android:background="@color/primary"
         android:elevation="0dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
@@ -27,7 +27,6 @@
             android:layout_height="match_parent"
             android:layout_weight="1" />
 
-
         <FrameLayout
             android:id="@+id/fragment_container_secondary"
             android:layout_width="0dp"
@@ -41,7 +40,6 @@
         </FrameLayout>
 
     </LinearLayout>
-
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"

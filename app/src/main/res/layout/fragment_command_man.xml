@@ -32,7 +32,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/space"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@color/ab_primary" />
+        app:srcCompat="@color/primary" />
 
     <TextView
         android:id="@+id/tvSearchCount"

@@ -40,7 +40,7 @@ class DeeplinkActivity : AppCompatActivity() {
         val data = intent.dataString
         if (intent.action == Intent.ACTION_VIEW && data != null) {
             val urlFileName = data.substring(data.lastIndexOf("/") + 1)
-            if(urlFileName.count() > 5) {
+            if (urlFileName.count() > 5) {
                 val commandName = urlFileName.substring(0, urlFileName.length - 5)
                 val realm = Realm.getDefaultInstance()
                 val command = realm.where<Command>().equalTo(Command.NAME, commandName).findFirst()

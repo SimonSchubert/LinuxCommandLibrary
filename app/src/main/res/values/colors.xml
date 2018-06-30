@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="ab_primary">#f44336</color>
-    <color name="ab_primary_dark">#D32F2F</color>
+    <color name="primary">#f44336</color>
+    <color name="primaryDark">#D32F2F</color>
     <color name="grey">#bcbcbc</color>
     <color name="grey1">#c3c3c3</color>
     <color name="grey2">#B3B3B3</color>
     <color name="white">#fff</color>
     <color name="background">#121212</color>
-    <color name="accent">#06001a</color>
+    <color name="accent">#009688</color>
 </resources>

@@ -27,9 +27,9 @@ import java.text.Normalizer
 class BasicGroupFragment : BaseFragment() {
 
     lateinit var realm: Realm
-    lateinit var searchAdapter: BasicGroupAdapter
-    lateinit var groups: RealmResults<CommandGroupModel>
-    var firebaseAnalytics: FirebaseAnalytics? = null
+    private lateinit var searchAdapter: BasicGroupAdapter
+    private lateinit var groups: RealmResults<CommandGroupModel>
+    private var firebaseAnalytics: FirebaseAnalytics? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -88,7 +88,7 @@ class BasicGroupFragment : BaseFragment() {
                     if (!isAdded) {
                         return true
                     }
-                    if (query.length > 0) {
+                    if (query.isNotEmpty()) {
                         val normalizedText = Normalizer.normalize(query, Normalizer.Form.NFD).replace("\\p{InCombiningDiacriticalMarks}+".toRegex(), "").toLowerCase()
                         search(normalizedText)
                     } else {

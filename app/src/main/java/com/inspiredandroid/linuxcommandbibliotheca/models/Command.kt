@@ -15,8 +15,8 @@ open class Command : RealmObject() {
     var desc: String = ""
 
     companion object {
-        val ID = "id"
-        val NAME = "name"
-        val DESCRIPTION = "desc"
+        const val ID = "id"
+        const val NAME = "name"
+        const val DESCRIPTION = "desc"
     }
 }

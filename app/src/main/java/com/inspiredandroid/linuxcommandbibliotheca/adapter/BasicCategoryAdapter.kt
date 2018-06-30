@@ -43,7 +43,7 @@ class BasicCategoryAdapter(data: OrderedRealmCollection<BasicGroupModel>, autoUp
 
         fun bind(item: BasicGroupModel) {
             itemView.title.text = item.title
-            itemView.title.setCompoundDrawablesWithIntrinsicBounds(item.iconResourceId, 0,0,0)
+            itemView.title.setCompoundDrawablesWithIntrinsicBounds(item.iconResourceId, 0, 0, 0)
         }
 
         override fun onClick(view: View) {

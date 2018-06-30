@@ -23,7 +23,7 @@ import org.jetbrains.anko.uiThread
  */
 class NavigationActivity : AppCompatActivity() {
 
-    private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener() {
+    private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener {
         when (it.itemId) {
             R.id.navigation_commands -> {
                 showFragment(COMMANDS)
@@ -104,8 +104,8 @@ class NavigationActivity : AppCompatActivity() {
     }
 
     companion object {
-        val COMMANDS = 0
-        val BASIC = 1
-        val TIPS = 2
+        const val COMMANDS = 0
+        const val BASIC = 1
+        const val TIPS = 2
     }
 }

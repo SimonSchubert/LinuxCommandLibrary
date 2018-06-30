@@ -22,7 +22,7 @@ class ManAdapter(private var pages: ArrayList<String>, var parts: ArrayList<Arra
     }
 
     private val expanded: HashMap<Int, Boolean> = HashMap()
-    var items = ArrayList<BasicItem>()
+    private var items = ArrayList<BasicItem>()
 
     class BasicItem(var groupId: Int = 0, var childId: Int = -1)
 

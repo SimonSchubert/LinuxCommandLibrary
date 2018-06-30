@@ -18,12 +18,12 @@ import java.text.Normalizer
  */
 object Utils {
 
-    val PACKAGE_LINUXREMOTE = "com.inspiredandroid.linuxcontrolcenter"
-    val PACKAGE_LINUXREMOTE_PRO = "com.inspiredandroid.linuxcontrolcenterpro"
-    val PACKAGE_ORCGENOCIDE = "com.inspiredandroid.orcgenocide"
-    val PACKAGE_BIMO = "com.inspiredandroid.bimo"
-    val PACKAGE_QUIZ = "com.inspiredandroid.twoplayerquiz"
-    val PACKAGE_COMMANDLIBRARY = "com.inspiredandroid.linuxcommandbibliotheca"
+    const val PACKAGE_LINUXREMOTE = "com.inspiredandroid.linuxcontrolcenter"
+    const val PACKAGE_LINUXREMOTE_PRO = "com.inspiredandroid.linuxcontrolcenterpro"
+    const val PACKAGE_ORCGENOCIDE = "com.inspiredandroid.orcgenocide"
+    const val PACKAGE_BIMO = "com.inspiredandroid.bimo"
+    const val PACKAGE_QUIZ = "com.inspiredandroid.twoplayerquiz"
+    const val PACKAGE_COMMANDLIBRARY = "com.inspiredandroid.linuxcommandbibliotheca"
 }
 
 /**
@@ -62,7 +62,7 @@ fun String.highlightQueryInsideText(context: Context?, query: String): SearchRes
             break
         }
 
-        highlighted.setSpan(ForegroundColorSpan(ContextCompat.getColor(context, R.color.ab_primary)), spanStart, spanEnd, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+        highlighted.setSpan(ForegroundColorSpan(ContextCompat.getColor(context, R.color.primary)), spanStart, spanEnd, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
 
         start = normalizedText.indexOf(query, spanEnd)
         indexes.add(spanStart)

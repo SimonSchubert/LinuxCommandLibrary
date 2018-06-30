@@ -25,7 +25,7 @@ class CommandManActivity : AppCompatActivity() {
         showFragment()
     }
 
-    fun showFragment() {
+    private fun showFragment() {
         val intent = intent
         val b = intent.extras
 
@@ -52,8 +52,8 @@ class CommandManActivity : AppCompatActivity() {
     }
 
     companion object {
-        val EXTRA_COMMAND_ID = "EXTRA_COMMAND_ID"
+        const val EXTRA_COMMAND_ID = "EXTRA_COMMAND_ID"
 
-        internal val INVALID = -1
+        internal const val INVALID = -1
     }
 }

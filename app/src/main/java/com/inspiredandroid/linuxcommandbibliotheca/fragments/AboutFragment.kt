@@ -33,7 +33,7 @@ class AboutFragment : Fragment() {
         btnIcons8.setOnClickListener { openIcons8Website() }
     }
 
-    fun openIcons8Website() {
+    private fun openIcons8Website() {
         try {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.icons8.com"))
             startActivity(intent)

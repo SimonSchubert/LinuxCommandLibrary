@@ -142,10 +142,4 @@ open class CommandGroupModel : RealmObject() {
             }
             return R.drawable.ic_icons8_console
         }
-
-    companion object {
-
-        val COLUMN_ID = "id"
-        val COLUMN_CATEGORY = "category"
-    }
 }

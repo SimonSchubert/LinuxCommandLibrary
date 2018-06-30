@@ -107,28 +107,11 @@
         android:layout_marginTop="32dp"
         android:background="?android:attr/selectableItemBackground"
         android:text="OK"
-        android:textColor="?attr/colorAccent"
+        android:textColor="@color/accent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         app:layout_constraintVertical_bias="0.428" />
-
-    <Button
-        android:id="@+id/fragment_news_btn_share"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:background="?android:attr/selectableItemBackground"
-        android:text="Share"
-        android:textColor="?attr/colorAccent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/fragment_news_btn_ok"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -152,7 +135,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/textView4"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView4"
-        app:srcCompat="@drawable/ic_store_black_24dp" />
+        app:srcCompat="@drawable/ic_check_black_24dp" />
 
     <ImageView
         android:id="@+id/imageView5"

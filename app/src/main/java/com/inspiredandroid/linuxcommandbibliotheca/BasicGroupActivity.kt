@@ -32,7 +32,7 @@ class BasicGroupActivity : AppCompatActivity() {
 
     companion object {
 
-        val EXTRA_CATEGORY_ID = "EXTRA_CATEGORY_ID"
+        const val EXTRA_CATEGORY_ID = "EXTRA_CATEGORY_ID"
     }
 
 }
