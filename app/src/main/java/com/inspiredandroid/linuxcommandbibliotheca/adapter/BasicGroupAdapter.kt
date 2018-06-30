@@ -39,7 +39,7 @@ class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>, pri
     }
 
     override fun getItemViewType(position: Int): Int {
-        return if (items.get(position).childId == -1) {
+        return if (items[position].childId == -1) {
             PARENT
         } else {
             CHILDREN

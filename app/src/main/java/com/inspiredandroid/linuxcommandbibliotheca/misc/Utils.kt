@@ -18,30 +18,26 @@ import java.text.Normalizer
  */
 object Utils {
 
-    val PACKAGE_BURGER = "com.inspiredandroid.stopandroll"
     val PACKAGE_LINUXREMOTE = "com.inspiredandroid.linuxcontrolcenter"
     val PACKAGE_LINUXREMOTE_PRO = "com.inspiredandroid.linuxcontrolcenterpro"
     val PACKAGE_ORCGENOCIDE = "com.inspiredandroid.orcgenocide"
     val PACKAGE_BIMO = "com.inspiredandroid.bimo"
     val PACKAGE_QUIZ = "com.inspiredandroid.twoplayerquiz"
     val PACKAGE_COMMANDLIBRARY = "com.inspiredandroid.linuxcommandbibliotheca"
+}
 
-    /**
-     * Check if app is installed
-     *
-     * @param packageName
-     * @return
-     */
-    fun isAppInstalled(context: Context, packageName: String): Boolean {
-        val pm = context.packageManager
-        var installed: Boolean
-        try {
-            pm.getPackageInfo(packageName, PackageManager.GET_ACTIVITIES)
-            installed = true
-        } catch (e: PackageManager.NameNotFoundException) {
-            installed = false
-        }
-        return installed
+/**
+ * Check if app is installed
+ *
+ * @param packageName
+ * @return
+ */
+fun Context.isAppInstalled(packageName: String): Boolean {
+    return try {
+        packageManager.getPackageInfo(packageName, PackageManager.GET_ACTIVITIES)
+        true
+    } catch (e: PackageManager.NameNotFoundException) {
+        false
     }
 }
 
@@ -76,8 +72,7 @@ fun String.highlightQueryInsideText(context: Context?, query: String): SearchRes
 }
 
 fun Activity.hideKeyboard() {
-    val view = this.currentFocus
-    view?.let {
+    currentFocus?.let {
         val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(it.windowToken, 0)
     }

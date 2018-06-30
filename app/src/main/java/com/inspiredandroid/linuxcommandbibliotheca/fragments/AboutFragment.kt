@@ -29,7 +29,6 @@ class AboutFragment : Fragment() {
         btnOrcgenocide.setOnClickListener { startAppMarketActivity(Utils.PACKAGE_ORCGENOCIDE) }
         btnQuiz.setOnClickListener { startAppMarketActivity(Utils.PACKAGE_QUIZ) }
         btnRemote.setOnClickListener { startAppMarketActivity(Utils.PACKAGE_LINUXREMOTE) }
-        btnBurger.setOnClickListener { startAppMarketActivity(Utils.PACKAGE_BURGER) }
         btnRate.setOnClickListener { startAppMarketActivity(Utils.PACKAGE_COMMANDLIBRARY) }
         btnIcons8.setOnClickListener { openIcons8Website() }
     }

@@ -101,7 +101,7 @@ open class CommandGroupModel : RealmObject() {
                 430, 431, 432, 433, 434, 435, 436, 437, 438, 439, 440 -> return R.drawable.ic_videogame_asset_black_24dp
                 443 -> return R.drawable.ic_vpn_key_black_24dp
                 450 -> return R.drawable.ic_wifi_black_24dp
-                446 -> return R.drawable.ic_info_black_24dp
+                446, 1495, 457, 1516, 1509 -> return R.drawable.ic_info_black_24dp
                 451 -> return R.drawable.ic_report_black_24dp
                 445 -> return R.drawable.ic_loupe_black_24dp
                 444 -> return R.drawable.ic_fingerprint_black_24dp
@@ -112,23 +112,33 @@ open class CommandGroupModel : RealmObject() {
                 452 -> return R.drawable.ic_icons8_moderator_male
                 454 -> return R.drawable.ic_file
                 456 -> return R.drawable.ic_search_black_24dp
-                457 -> return R.drawable.ic_info_black_24dp
                 460 -> return R.drawable.ic_add_rule
                 453 -> return R.drawable.ic_file_download_black_24dp
                 458 -> return R.drawable.ic_available_updates
                 459 -> return R.drawable.ic_arrow_upward_black_24dp
-                455 -> return R.drawable.ic_delete_black_24dp
+                455, 1519, 1511, 1528, 1529, 1530, 1531, 1532 -> return R.drawable.ic_delete_black_24dp
                 461 -> return R.drawable.ic_icons8_show_property
                 1492 -> return R.drawable.ic_icons8_home
                 1493 -> return R.drawable.ic_icons8_mother
                 1496 -> return R.drawable.ic_icons8_work
                 1497 -> return R.drawable.ic_icons8_undo
-                1495 -> return R.drawable.ic_icons8_info
                 1494 -> return R.drawable.ic_icons8_calendar_1
                 1503 -> return R.drawable.ic_vpn_key_black_24dp
                 1487, 1488, 1489, 1490, 1491 -> return R.drawable.ic_file
                 1498 -> return R.drawable.ic_icons8_cancel
                 1499, 1500, 1501, 1502, 1504 -> return R.drawable.ic_icons8_connected
+                1505 -> return R.drawable.ic_icons8_copy
+                1515 -> return R.drawable.ic_icons8_new
+                1506, 1525, 1512 -> return R.drawable.ic_icons8_save
+                1517, 1510, 1523 -> return R.drawable.ic_icons8_plus
+                1518 -> return R.drawable.ic_icons8_numbered_list
+                1522 -> return R.drawable.ic_icons8_merge
+                1520, 1521 -> return R.drawable.ic_icons8_arrow
+                1524 -> return R.drawable.ic_icons8_synchronize
+                1507, 1508 -> return R.drawable.ic_icons8_user_male_circle
+                1513 -> return R.drawable.ic_icons8_redo
+                1514 -> return R.drawable.ic_icons8_hide
+                1527 -> return R.drawable.ic_icons8_visible
             }
             return R.drawable.ic_icons8_console
         }

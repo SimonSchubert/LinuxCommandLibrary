@@ -256,7 +256,7 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
                         if(indexes.count() == currentIndexPosition){
                             context?.let {
                                 val span = SpannableString(children[i])
-                                span.setSpan(ForegroundColorSpan(ContextCompat.getColor(it, R.color.accent_material_dark)), index, index+q.count(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+                                span.setSpan(ForegroundColorSpan(ContextCompat.getColor(it, R.color.accent)), index, index+q.count(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
                                 children[i] = span
                             }
                         }
@@ -266,14 +266,14 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
                 }
             }
             uiThread {
-                tvSearchCount.text =  "$currentIndexPosition/${indexes.count()}"
                 adapter.notifyDataSetChanged()
+                tvSearchCount.text =  "${currentIndexPosition+1}/${indexes.count()}"
+                if(q.isEmpty() || indexes.count() == 0) {
+                    hideButton()
+                } else {
+                    showButton()
+                }
             }
-        }
-        if(q.isNotEmpty()) {
-            showButton()
-        } else {
-            hideButton()
         }
     }
 
@@ -283,20 +283,9 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
      * @param index
      */
     private fun scrollToPosition(index: SearchIndex) {
-        /*
-        int line = tvDescription.getLayout().getLineForOffset(index);
-        int lineHeight = tvDescription.getLayout().getHeight() / tvDescription.getLayout().getLineCount();
-        int position = line * lineHeight;
-        scrollView.scrollTo(0, position)
-        */
         recyclerView.layoutManager.scrollToPosition(index.pos)
-        tvSearchCount.text =  "$currentIndexPosition/${indexes.count()}"
         search(query)
         activity?.hideKeyboard()
-        /*
-        var items = adapter.items[currentIndexPosition]
-        adapter.parts[items.groupId]
-        */
     }
 
     /**
@@ -327,7 +316,9 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
         if (currentIndexPosition < 0) {
             currentIndexPosition = indexes.size - 1
         }
-        scrollToPosition(indexes[currentIndexPosition])
+        if(currentIndexPosition > 0) {
+            scrollToPosition(indexes[currentIndexPosition])
+        }
     }
 
     /**
@@ -338,7 +329,9 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
         if (currentIndexPosition >= indexes.size) {
             currentIndexPosition = 0
         }
-        scrollToPosition(indexes[currentIndexPosition])
+        if(currentIndexPosition < indexes.count()) {
+            scrollToPosition(indexes[currentIndexPosition])
+        }
     }
 
     override fun onClick(v: View) {

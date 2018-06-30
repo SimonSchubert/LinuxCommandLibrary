@@ -11,7 +11,7 @@ buildscript {
         google()
     }
     dependencies {
-        classpath 'io.realm:realm-gradle-plugin:5.3.0'
+        classpath 'io.realm:realm-gradle-plugin:5.3.1'
     }
 }
 
@@ -71,7 +71,6 @@ dependencies {
     implementation 'com.android.support:support-v4:27.1.1'
     implementation 'com.android.support:support-vector-drawable:27.1.1'
     implementation 'io.realm:android-adapters:3.0.0'
-    implementation 'com.jakewharton:butterknife:8.8.1'
     implementation 'com.google.firebase:firebase-core:16.0.1'
     implementation 'com.google.firebase:firebase-appindexing:16.0.1'
     implementation 'com.google.firebase:firebase-crash:16.0.1'

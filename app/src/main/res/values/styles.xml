@@ -15,15 +15,17 @@
     </style>
 
     <style name="Title2">
-        <item name="android:textSize">22sp</item>
-        <item name="android:layout_marginTop">10dp</item>
-        <item name="android:layout_marginBottom">2dp</item>
-    </style>
-
-    <style name="Title3">
         <item name="android:textSize">18sp</item>
         <item name="android:layout_marginTop">10dp</item>
         <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Title3">
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
     <style name="Body1" parent="AppTheme">
