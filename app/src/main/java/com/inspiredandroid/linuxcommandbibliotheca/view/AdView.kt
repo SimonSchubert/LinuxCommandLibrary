@@ -7,6 +7,7 @@ import android.support.v7.widget.AppCompatImageView
 import android.util.AttributeSet
 import android.view.View
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils
+import com.inspiredandroid.linuxcommandbibliotheca.misc.isAppInstalled
 
 /**
  * Created by simon on 23/01/17.
@@ -27,7 +28,7 @@ class AdView : AppCompatImageView {
 
     private fun init() {
         // Hide ads if remote is already installed
-        if (Utils.isAppInstalled(context, Utils.PACKAGE_LINUXREMOTE) || Utils.isAppInstalled(context, Utils.PACKAGE_LINUXREMOTE_PRO)) {
+        if (context.isAppInstalled(Utils.PACKAGE_LINUXREMOTE) || context.isAppInstalled(Utils.PACKAGE_LINUXREMOTE_PRO)) {
             visibility = View.GONE
         } else {
             setOnClickListener { view -> startRemoteControl() }
