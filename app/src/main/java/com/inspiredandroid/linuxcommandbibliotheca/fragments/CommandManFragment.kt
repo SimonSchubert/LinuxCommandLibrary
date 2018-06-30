@@ -17,10 +17,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.BuildConfig
 import com.inspiredandroid.linuxcommandbibliotheca.CommandManActivity
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.ManAdapter
-import com.inspiredandroid.linuxcommandbibliotheca.misc.AppManager
-import com.inspiredandroid.linuxcommandbibliotheca.misc.FragmentCoordinator
-import com.inspiredandroid.linuxcommandbibliotheca.misc.SearchIndex
-import com.inspiredandroid.linuxcommandbibliotheca.misc.highlightQueryInsideText
+import com.inspiredandroid.linuxcommandbibliotheca.misc.*
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandPage
 import io.realm.Realm
@@ -42,6 +39,7 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
     private var id: Long = 0
     private var currentIndexPosition: Int = 0
     var indexes = ArrayList<SearchIndex>()
+    var query = ""
 
     private fun fromHtml(html: String?): Spanned {
         return if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
@@ -243,28 +241,26 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
      * @param q
      */
     private fun search(q: String) {
+        query = q
         doAsync {
             indexes.clear()
             adapter.expandAll()
             var pos = 0
-            adapter.parts.forEachIndexed { index, children ->
+            adapter.parts.forEach { children ->
                 pos++
                 for (i in children.indices) {
                     val child = children[i]
                     val searchResult = child.toString().highlightQueryInsideText(context, q)
                     children[i] = searchResult.result
-                    searchResult.indexes.forEach {
-                        /*
+                    searchResult.indexes.forEach { index ->
                         if(indexes.count() == currentIndexPosition){
-                            val ind = it
                             context?.let {
                                 val span = SpannableString(children[i])
-                                span.setSpan(ForegroundColorSpan(ContextCompat.getColor(it, R.color.accent_material_dark)), ind, ind+q.count(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+                                span.setSpan(ForegroundColorSpan(ContextCompat.getColor(it, R.color.accent_material_dark)), index, index+q.count(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
                                 children[i] = span
                             }
                         }
-                        */
-                        indexes.add(SearchIndex(pos, it))
+                        indexes.add(SearchIndex(pos, index))
                     }
                     pos++
                 }
@@ -295,6 +291,8 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
         */
         recyclerView.layoutManager.scrollToPosition(index.pos)
         tvSearchCount.text =  "$currentIndexPosition/${indexes.count()}"
+        search(query)
+        activity?.hideKeyboard()
         /*
         var items = adapter.items[currentIndexPosition]
         adapter.parts[items.groupId]
