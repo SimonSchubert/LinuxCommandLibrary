@@ -1,6 +1,5 @@
 package com.inspiredandroid.linuxcommandbibliotheca.fragments
 
-import android.app.Activity
 import android.app.SearchManager
 import android.content.Context
 import android.os.Bundle
@@ -54,7 +53,9 @@ class BasicGroupFragment : BaseFragment() {
 
         activity?.title = basicGroupModel.title
 
-        firebaseAnalytics = FirebaseAnalytics.getInstance(context ?: Activity())
+        context?.let {
+            firebaseAnalytics = FirebaseAnalytics.getInstance(it)
+        }
 
         searchAdapter = BasicGroupAdapter(groups, firebaseAnalytics)
         recyclerView.adapter = searchAdapter

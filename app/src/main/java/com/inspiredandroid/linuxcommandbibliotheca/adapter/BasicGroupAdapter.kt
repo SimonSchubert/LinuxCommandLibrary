@@ -24,6 +24,7 @@ class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>, pri
     companion object {
         const val PARENT = 0
         const val CHILDREN = 1
+        const val AD = 2
     }
 
     private val expanded: HashMap<Int, Boolean> = HashMap()
@@ -37,7 +38,10 @@ class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>, pri
     }
 
     override fun getItemViewType(position: Int): Int {
-        return if (items[position].childId == -1) {
+        val item = items[position]
+        return if (item.childId == -1 && item.groupId == -1) {
+            AD
+        } else if (item.childId == -1) {
             PARENT
         } else {
             CHILDREN
@@ -58,6 +62,10 @@ class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>, pri
                 val v = LayoutInflater.from(parent.context).inflate(R.layout.row_basic_children, parent, false)
                 return ChildViewHolder(v)
             }
+            AD -> {
+                val v = LayoutInflater.from(parent.context).inflate(R.layout.row_ad, parent, false)
+                return AdViewHolder(v)
+            }
         }
         throw RuntimeException("No viewType found")
     }
@@ -77,6 +85,10 @@ class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>, pri
                     childViewHolder.bind(it)
                 }
             }
+            AD -> {
+                val childViewHolder = holder as AdViewHolder
+                childViewHolder.bind()
+            }
         }
     }
 
@@ -90,6 +102,7 @@ class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>, pri
                 }
             }
         }
+        items.add(BasicItem(-1,-1))
     }
 
     fun updateData(allGroups: RealmResults<CommandGroupModel>) {
@@ -146,6 +159,11 @@ class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>, pri
             itemView.description.text = command.command
             itemView.description.setCommands(command.getMansAsStringArray())
             itemView.share.setOnClickListener { view -> startShareActivity(view.context, command) }
+        }
+    }
+
+    inner class AdViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        fun bind() {
         }
     }
 

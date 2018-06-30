@@ -191,7 +191,7 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
                 while (index < it.length) {
                     var endIndex = index + size
                     if (endIndex >= it.length) {
-                        endIndex = it.length - 1
+                        endIndex = it.length
                     }
                     descriptions.add(it.subSequence(index, endIndex))
                     index += size
