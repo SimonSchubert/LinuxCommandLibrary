@@ -72,7 +72,6 @@ class ClickableTextView(context: Context, attrs: AttributeSet) : AppCompatTextVi
          * @param ss
          * @param text
          * @param phrase
-         * @param onLinkClickListener
          */
         fun addClickableSpanToPhrases(ss: SpannableString, text: String, phrase: String, listener: OnLinkClickListener?) {
             // would end in endless loop

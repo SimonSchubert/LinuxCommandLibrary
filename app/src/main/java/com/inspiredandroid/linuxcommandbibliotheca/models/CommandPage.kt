@@ -13,6 +13,6 @@ open class CommandPage : RealmObject() {
     var title: String = ""
 
     companion object {
-        val COMMANDID = "commandid"
+        const val COMMANDID = "commandid"
     }
 }

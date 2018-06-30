@@ -17,11 +17,11 @@ abstract class AppIndexFragment : BaseFragment() {
 
     override fun onStart() {
         super.onStart()
-        FirebaseUserActions.getInstance().start(getAppIndexingAction());
+        FirebaseUserActions.getInstance().start(getAppIndexingAction())
     }
 
     override fun onStop() {
-        FirebaseUserActions.getInstance().end(getAppIndexingAction());
+        FirebaseUserActions.getInstance().end(getAppIndexingAction())
         super.onStop()
     }
 

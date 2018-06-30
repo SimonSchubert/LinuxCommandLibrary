@@ -157,7 +157,7 @@ class CommandsFragment : Fragment(), OnListClickListener {
         }
     }
 
-    fun sendCommandRequestEmail() {
+    private fun sendCommandRequestEmail() {
         val intent = Intent(Intent.ACTION_SENDTO)
         intent.data = Uri.parse("mailto:" + "sschubert89@gmail.com")
         intent.putExtra(Intent.EXTRA_SUBJECT, "Command request")

@@ -9,7 +9,6 @@ import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnListClickListener
 import com.inspiredandroid.linuxcommandbibliotheca.misc.AppManager
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Constants
-import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils
 import com.inspiredandroid.linuxcommandbibliotheca.misc.highlightQueryInsideText
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command
 import io.realm.RealmResults
@@ -17,7 +16,7 @@ import kotlinx.android.synthetic.main.row_command.view.*
 import java.util.*
 
 class CommandsAdapter(context: Context?,
-                      var realmResults: List<RealmResults<Command>>) : RecyclerView.Adapter<CommandsAdapter.ViewHolder>() {
+                      private var realmResults: List<RealmResults<Command>>) : RecyclerView.Adapter<CommandsAdapter.ViewHolder>() {
 
     private var query = ""
     private var bookmarkIds = ArrayList<Long>()

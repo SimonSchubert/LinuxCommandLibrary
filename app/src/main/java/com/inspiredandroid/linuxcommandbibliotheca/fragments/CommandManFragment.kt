@@ -2,6 +2,7 @@ package com.inspiredandroid.linuxcommandbibliotheca.fragments
 
 import android.app.SearchManager
 import android.content.Context
+import android.os.Build
 import android.os.Bundle
 import android.support.v4.content.ContextCompat
 import android.support.v7.widget.SearchView
@@ -38,11 +39,11 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
     private var name: String = ""
     private var id: Long = 0
     private var currentIndexPosition: Int = 0
-    var indexes = ArrayList<SearchIndex>()
-    var query = ""
+    private var indexes = ArrayList<SearchIndex>()
+    private var query = ""
 
     private fun fromHtml(html: String?): Spanned {
-        return if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+        return if (Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
             Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY)
         } else {
             Html.fromHtml(html)
@@ -174,7 +175,7 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
 
             // Split description by <p> elements to increase the recyclerview performance
             val pageSplit = ArrayList<CharSequence>()
-            val tmp = page.page.toString().split("</p>".toRegex()).toTypedArray()
+            val tmp = page.page.split("</p>".toRegex()).toTypedArray()
             for (tmpSplit in tmp) {
                 val p = trim(fromHtml("$tmpSplit</p>"))
                 if (p.isNotEmpty()) {
@@ -253,10 +254,10 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
                     val searchResult = child.toString().highlightQueryInsideText(context, q)
                     children[i] = searchResult.result
                     searchResult.indexes.forEach { index ->
-                        if(indexes.count() == currentIndexPosition){
+                        if (indexes.count() == currentIndexPosition) {
                             context?.let {
                                 val span = SpannableString(children[i])
-                                span.setSpan(ForegroundColorSpan(ContextCompat.getColor(it, R.color.accent)), index, index+q.count(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+                                span.setSpan(ForegroundColorSpan(ContextCompat.getColor(it, R.color.accent)), index, index + q.count(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
                                 children[i] = span
                             }
                         }
@@ -267,8 +268,8 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
             }
             uiThread {
                 adapter.notifyDataSetChanged()
-                tvSearchCount.text =  "${currentIndexPosition+1}/${indexes.count()}"
-                if(q.isEmpty() || indexes.count() == 0) {
+                tvSearchCount.text = "${currentIndexPosition + 1}/${indexes.count()}"
+                if (q.isEmpty() || indexes.count() == 0) {
                     hideButton()
                 } else {
                     showButton()
@@ -316,7 +317,7 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
         if (currentIndexPosition < 0) {
             currentIndexPosition = indexes.size - 1
         }
-        if(currentIndexPosition > 0) {
+        if (currentIndexPosition > 0) {
             scrollToPosition(indexes[currentIndexPosition])
         }
     }
@@ -329,7 +330,7 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
         if (currentIndexPosition >= indexes.size) {
             currentIndexPosition = 0
         }
-        if(currentIndexPosition < indexes.count()) {
+        if (currentIndexPosition < indexes.count()) {
             scrollToPosition(indexes[currentIndexPosition])
         }
     }

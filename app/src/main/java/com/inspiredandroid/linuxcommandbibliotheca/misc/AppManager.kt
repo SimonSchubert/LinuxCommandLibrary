@@ -12,14 +12,14 @@ import java.util.*
  */
 object AppManager {
 
-    private val KEY_APP_OPEN_COUNT = "KEY_APP_OPEN_COUNT"
-    private val KEY_RATING_DIALOG_STATE = "KEY_RATING_DIALOG_STATE"
-    private val KEY_BOOKMARKS = "KEY_BOOKMARKS"
-    private val KEY_BOOKMARKCHANGED = "KEY_BOOKMARKCHANGED"
-    private val KEY_DATABASE_VERSION = "KEY_DATABASE_VERSION"
-    private val KEY_NEWS_DIALOG_STATE = "KEY_NEWS_DIALOG_STATE"
+    private const val KEY_APP_OPEN_COUNT = "KEY_APP_OPEN_COUNT"
+    private const val KEY_RATING_DIALOG_STATE = "KEY_RATING_DIALOG_STATE"
+    private const val KEY_BOOKMARKS = "KEY_BOOKMARKS"
+    private const val KEY_BOOKMARKCHANGED = "KEY_BOOKMARKCHANGED"
+    private const val KEY_DATABASE_VERSION = "KEY_DATABASE_VERSION"
+    private const val KEY_NEWS_DIALOG_STATE = "KEY_NEWS_DIALOG_STATE"
 
-    private val CURRENTDATABSEVERSION = 4
+    private const val CURRENTDATABSEVERSION = 4
 
     fun isDatabaseVersionUpToDate(context: Context): Boolean {
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
@@ -175,7 +175,7 @@ object AppManager {
         file.copyInputStreamToFile(context.resources.openRawResource(R.raw.database))
     }
 
-    fun File.copyInputStreamToFile(inputStream: InputStream) {
+    private fun File.copyInputStreamToFile(inputStream: InputStream) {
         inputStream.use { input ->
             this.outputStream().use { fileOut ->
                 input.copyTo(fileOut)

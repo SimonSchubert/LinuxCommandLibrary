@@ -117,7 +117,7 @@ public class MyAndroidTest {
      */
     private void addMissingMansToList(List<String> missingCommands, String... mans) {
         for (String man : mans) {
-            Command command = realm.where(Command.class).equalTo(Command.Companion.getNAME(), man).findFirst();
+            Command command = realm.where(Command.class).equalTo(Command.NAME, man).findFirst();
             if (command == null) {
                 if (!missingCommands.contains(man)) {
                     missingCommands.add(man);
@@ -133,11 +133,11 @@ public class MyAndroidTest {
      * @return
      */
     private String getReadableMissingCommands(ArrayList<String> missingCommands) {
-        String missing = "";
+        StringBuilder missing = new StringBuilder();
         for (String m : missingCommands) {
-            missing += m + " ";
+            missing.append(m).append(" ");
         }
-        return missing;
+        return missing.toString();
     }
 
     @Test
@@ -146,7 +146,7 @@ public class MyAndroidTest {
 
         for (Command command : commands) {
             Intent intent = new Intent(getContext(), CommandManActivity.class);
-            intent.putExtra(CommandManActivity.Companion.getEXTRA_COMMAND_ID(), id);
+            intent.putExtra(CommandManActivity.EXTRA_COMMAND_ID, id);
             Activity activity = commandManActivityRule.launchActivity(intent);
 
             try {

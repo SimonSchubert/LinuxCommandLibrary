@@ -28,8 +28,8 @@ import java.text.Normalizer
 class BasicCategoryFragment : BaseFragment(), OnListClickListener {
 
     lateinit var realm: Realm
-    lateinit var adapter: BasicCategoryAdapter
-    lateinit var searchAdapter: BasicGroupAdapter
+    private lateinit var adapter: BasicCategoryAdapter
+    private lateinit var searchAdapter: BasicGroupAdapter
     private var firebaseAnalytics: FirebaseAnalytics? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -94,7 +94,6 @@ object FragmentCoordinator {
     /**
      * @param name     command name
      * @param id       unique command id
-     * @param category command category
      */
     private fun showManFragmentInSecondaryFrame(activity: FragmentActivity, name: String, id: Long) {
         val fragment = CommandManFragment()

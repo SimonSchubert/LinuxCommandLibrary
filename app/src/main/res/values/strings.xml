@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_lcl_name">Linux Command Library</string>
+    <string name="app_name">Linux Command Library</string>
     <string name="command">Command</string>
     <string name="fragment_bibliotheca_basic">Basic</string>
     <string name="fragment_bibliotheca_commands">Commands</string>
@@ -156,6 +156,5 @@
     <string-array name="fragment_tips_redirection_code_error_output_array">
         <item>rm</item>
     </string-array>
-    <string name="title_activity_deeplink">DeeplinkActivity</string>
 
 </resources>

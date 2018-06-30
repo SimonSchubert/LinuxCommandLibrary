@@ -5,11 +5,11 @@ package com.inspiredandroid.linuxcommandbibliotheca.misc
  */
 object Constants {
 
-    val REALM_DATABASE = "database.realm"
+    const val REALM_DATABASE = "database.realm"
 
-    val SECTION_USERCOMMANDS = 1
-    val SECTION_SYSTEMCALLS = 2
-    val SECTION_GAMES = 6
-    val SECTION_MISSCELANOUS = 7
-    val SECTION_SYSTEMADMINANDDEAMON = 8
+    const val SECTION_USERCOMMANDS = 1
+    const val SECTION_SYSTEMCALLS = 2
+    const val SECTION_GAMES = 6
+    const val SECTION_MISSCELANOUS = 7
+    const val SECTION_SYSTEMADMINANDDEAMON = 8
 }
