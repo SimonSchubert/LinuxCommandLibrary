@@ -14,7 +14,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:gravity="center_vertical"
-        android:text="Added category One-Liners"
+        android:text="Rewrote the whole App from Java to Kotlin"
         app:layout_constraintLeft_toRightOf="@+id/imageView"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
@@ -29,7 +29,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
         android:gravity="center_vertical"
-        android:text="Added all your requested commands"
+        android:text="Refresh design and add support for adaptive icons"
         app:layout_constraintLeft_toRightOf="@+id/imageView"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -44,7 +44,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
         android:gravity="center_vertical"
-        android:text="Replaced some Icons"
+        android:text="Improve perforamnce and add downloadable font to reduce apk size"
         app:layout_constraintLeft_toRightOf="@+id/imageView3"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView1" />
@@ -59,7 +59,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
         android:gravity="center_vertical"
-        android:text="Performance improvements"
+        android:text="Fix man text format and add search"
         app:layout_constraintLeft_toRightOf="@+id/imageView3"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -72,8 +72,8 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="24dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="14dp"
-        android:text="Please help me to spread the word and share the url to the Apple App store with your friends."
+        android:layout_marginTop="12dp"
+        android:text="New commands: "
         app:layout_constraintLeft_toRightOf="@+id/imageView3"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
