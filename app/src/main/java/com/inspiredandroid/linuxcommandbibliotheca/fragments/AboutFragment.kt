@@ -9,7 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.inspiredandroid.linuxcommandbibliotheca.R
-import com.inspiredandroid.linuxcommandbibliotheca.misc.Utils
+import com.inspiredandroid.linuxcommandbibliotheca.misc.Constants
 import kotlinx.android.synthetic.main.fragment_about.*
 
 /**
@@ -25,11 +25,11 @@ class AboutFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        btnBimo.setOnClickListener { startAppMarketActivity(Utils.PACKAGE_BIMO) }
-        btnOrcgenocide.setOnClickListener { startAppMarketActivity(Utils.PACKAGE_ORCGENOCIDE) }
-        btnQuiz.setOnClickListener { startAppMarketActivity(Utils.PACKAGE_QUIZ) }
-        btnRemote.setOnClickListener { startAppMarketActivity(Utils.PACKAGE_LINUXREMOTE) }
-        btnRate.setOnClickListener { startAppMarketActivity(Utils.PACKAGE_COMMANDLIBRARY) }
+        btnBimo.setOnClickListener { startAppMarketActivity(Constants.PACKAGE_BIMO) }
+        btnOrcgenocide.setOnClickListener { startAppMarketActivity(Constants.PACKAGE_ORCGENOCIDE) }
+        btnQuiz.setOnClickListener { startAppMarketActivity(Constants.PACKAGE_QUIZ) }
+        btnRemote.setOnClickListener { startAppMarketActivity(Constants.PACKAGE_LINUXREMOTE) }
+        btnRate.setOnClickListener { startAppMarketActivity(Constants.PACKAGE_COMMANDLIBRARY) }
         btnIcons8.setOnClickListener { openIcons8Website() }
     }
 

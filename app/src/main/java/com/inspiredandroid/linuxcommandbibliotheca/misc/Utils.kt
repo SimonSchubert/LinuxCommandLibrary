@@ -14,19 +14,6 @@ import com.inspiredandroid.linuxcommandbibliotheca.R
 import java.text.Normalizer
 
 /**
- * Created by Simon Schubert
- */
-object Utils {
-
-    const val PACKAGE_LINUXREMOTE = "com.inspiredandroid.linuxcontrolcenter"
-    const val PACKAGE_LINUXREMOTE_PRO = "com.inspiredandroid.linuxcontrolcenterpro"
-    const val PACKAGE_ORCGENOCIDE = "com.inspiredandroid.orcgenocide"
-    const val PACKAGE_BIMO = "com.inspiredandroid.bimo"
-    const val PACKAGE_QUIZ = "com.inspiredandroid.twoplayerquiz"
-    const val PACKAGE_COMMANDLIBRARY = "com.inspiredandroid.linuxcommandbibliotheca"
-}
-
-/**
  * Check if app is installed
  *
  * @param packageName

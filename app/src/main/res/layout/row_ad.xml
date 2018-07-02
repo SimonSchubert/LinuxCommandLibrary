@@ -32,12 +32,12 @@
         android:text="Hi, please have a look at my other projects, too. Thanks, Simon."
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView8"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+        app:layout_constraintEnd_toStartOf="@+id/btnRemote"
         app:layout_constraintStart_toEndOf="@+id/imageView8"
         app:layout_constraintTop_toTopOf="@+id/imageView8" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/btnQuiz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -49,14 +49,14 @@
         app:srcCompat="@drawable/ic_quiz" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/btnRemote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:layout_marginTop="4dp"
         android:background="@null"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintEnd_toStartOf="@+id/btnQuiz"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_remote" />
 
@@ -66,9 +66,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="Quiz"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton"
-        app:layout_constraintStart_toStartOf="@+id/imageButton"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+        app:layout_constraintEnd_toEndOf="@+id/btnQuiz"
+        app:layout_constraintStart_toStartOf="@+id/btnQuiz"
+        app:layout_constraintTop_toBottomOf="@+id/btnQuiz" />
 
     <TextView
         android:id="@+id/textView9"
@@ -78,8 +78,8 @@
         android:layout_marginTop="4dp"
         android:text="Linux Remote"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton2"
-        app:layout_constraintStart_toStartOf="@+id/imageButton2"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+        app:layout_constraintEnd_toEndOf="@+id/btnRemote"
+        app:layout_constraintStart_toStartOf="@+id/btnRemote"
+        app:layout_constraintTop_toBottomOf="@+id/btnRemote" />
 
 </android.support.constraint.ConstraintLayout>

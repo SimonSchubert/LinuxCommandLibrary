@@ -20,19 +20,24 @@ class NewsDialogFragment : DialogFragment() {
         return inflater.inflate(R.layout.fragment_new, container, false)
     }
 
-    /**
-     * The system calls this only when creating the layout in a dialog.
-     */
-    override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        val dialog = super.onCreateDialog(savedInstanceState)
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        dialog.fragment_news_btn_ok.setOnClickListener {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        fragment_news_btn_ok.setOnClickListener {
             try {
                 dismissAllowingStateLoss()
             } catch (e: Exception) {
                 e.printStackTrace()
             }
         }
+    }
+
+    /**
+     * The system calls this only when creating the layout in a dialog.
+     */
+    override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
+        val dialog = super.onCreateDialog(savedInstanceState)
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         return dialog
     }
 

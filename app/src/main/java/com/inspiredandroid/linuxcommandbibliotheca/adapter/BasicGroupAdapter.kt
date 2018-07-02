@@ -2,6 +2,7 @@ package com.inspiredandroid.linuxcommandbibliotheca.adapter
 
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -10,10 +11,12 @@ import android.view.ViewGroup
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.inspiredandroid.linuxcommandbibliotheca.BuildConfig
 import com.inspiredandroid.linuxcommandbibliotheca.R
+import com.inspiredandroid.linuxcommandbibliotheca.misc.Constants
 import com.inspiredandroid.linuxcommandbibliotheca.misc.highlightQueryInsideText
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandChildModel
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel
 import io.realm.RealmResults
+import kotlinx.android.synthetic.main.row_ad.view.*
 import kotlinx.android.synthetic.main.row_basic_children.view.*
 import kotlinx.android.synthetic.main.row_basic_group.view.*
 import java.util.*
@@ -102,7 +105,7 @@ class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>, pri
                 }
             }
         }
-        items.add(BasicItem(-1,-1))
+        items.add(BasicItem(-1, -1))
     }
 
     fun updateData(allGroups: RealmResults<CommandGroupModel>) {
@@ -164,6 +167,25 @@ class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>, pri
 
     inner class AdViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun bind() {
+            itemView.btnQuiz.setOnClickListener {
+                startAppMarketActivity(it.context, Constants.PACKAGE_QUIZ)
+            }
+            itemView.btnRemote.setOnClickListener {
+                startAppMarketActivity(it.context, Constants.PACKAGE_LINUXREMOTE)
+            }
+        }
+
+        /**
+         * Show app in the Play Store. If Play Store is not installed, show it in the browser instead.
+         *
+         * @param appPackageName package mName
+         */
+        private fun startAppMarketActivity(context: Context, appPackageName: String) {
+            try {
+                context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=$appPackageName")))
+            } catch (e: android.content.ActivityNotFoundException) {
+                context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=$appPackageName")))
+            }
         }
     }
 
