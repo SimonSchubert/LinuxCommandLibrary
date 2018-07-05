@@ -182,9 +182,9 @@ class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>, pri
          */
         private fun startAppMarketActivity(context: Context, appPackageName: String) {
             try {
-                context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=$appPackageName")))
+                context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=$appPackageName&referrer=utm_source%3Dlinuxapp%26utm_medium%3Dbasicgroup")))
             } catch (e: android.content.ActivityNotFoundException) {
-                context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=$appPackageName")))
+                context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=$appPackageName&referrer=utm_source%3Dlinuxapp%26utm_medium%3Dbasicgroup")))
             }
         }
     }

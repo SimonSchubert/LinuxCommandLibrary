@@ -1,5 +1,6 @@
 package com.inspiredandroid.linuxcommandbibliotheca.adapter
 
+import android.support.v4.content.ContextCompat
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import io.realm.Realm
 import io.realm.kotlin.where
 import kotlinx.android.synthetic.main.row_man_description.view.*
 import kotlinx.android.synthetic.main.row_man_title.view.*
+import org.jetbrains.anko.textColor
 import java.util.*
 import java.util.regex.Pattern
 import kotlin.collections.ArrayList
@@ -61,7 +63,7 @@ class ManAdapter(private var pages: ArrayList<String>, var parts: ArrayList<Arra
         when (holder.itemViewType) {
             PARENT -> {
                 val groupViewHolder = holder as GroupViewHolder
-                groupViewHolder.bind(item.groupId, pages[item.groupId])
+                groupViewHolder.bind(item.groupId, pages[item.groupId].toUpperCase())
             }
             CHILDREN -> {
                 val childViewHolder = holder as ChildViewHolder
@@ -95,8 +97,9 @@ class ManAdapter(private var pages: ArrayList<String>, var parts: ArrayList<Arra
 
     inner class GroupViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-        fun bind(index: Int, page: String) {
-            itemView.title.text = page.toUpperCase()
+        fun bind(index: Int, title: String) {
+            itemView.title.text = title
+            itemView.title.textColor = ContextCompat.getColor(itemView.context, if(title == "TLDR") {R.color.primary} else {R.color.white})
             itemView.setOnClickListener {
                 expanded[index] = !isExpanded(index)
                 updateItems()

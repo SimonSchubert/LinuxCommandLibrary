@@ -167,7 +167,7 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
     }
 
     private fun createAdapter(): ManAdapter {
-        val pages = realm.where<CommandPage>().equalTo(CommandPage.COMMANDID, id).findAll()
+        val pages = realm.where<CommandPage>().equalTo(CommandPage.COMMANDID, id).sort("id").findAll()
 
         val groups = ArrayList<String>()
         val child = ArrayList<ArrayList<CharSequence>>()
