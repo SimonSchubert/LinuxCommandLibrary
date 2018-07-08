@@ -1,5 +1,6 @@
 package com.inspiredandroid.linuxcommandbibliotheca.adapter
 
+import android.support.graphics.drawable.VectorDrawableCompat
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -43,7 +44,7 @@ class BasicCategoryAdapter(data: OrderedRealmCollection<BasicGroupModel>, autoUp
 
         fun bind(item: BasicGroupModel) {
             itemView.title.text = item.title
-            itemView.title.setCompoundDrawablesWithIntrinsicBounds(item.iconResourceId, 0, 0, 0)
+            itemView.title.setCompoundDrawablesWithIntrinsicBounds(VectorDrawableCompat.create(itemView.context.resources, item.iconResourceId, null), null, null, null)
         }
 
         override fun onClick(view: View) {

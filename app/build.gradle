@@ -20,10 +20,10 @@ android {
     buildToolsVersion '27.0.3'
 
     defaultConfig {
-        minSdkVersion 14
+        minSdkVersion 17
         targetSdkVersion 27
-        versionCode 51
-        versionName '1.7.5'
+        versionCode 59
+        versionName '2.0.0'
         applicationId 'com.inspiredandroid.linuxcommandbibliotheca'
 
         resConfigs 'en'
@@ -38,8 +38,8 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
-            shrinkResources false
-            minifyEnabled false
+            shrinkResources true
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
