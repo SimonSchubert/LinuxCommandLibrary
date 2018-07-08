@@ -17,7 +17,6 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:fontFamily="@font/share_tech_mono"
-        android:textIsSelectable="true"
         android:textSize="16sp"
         tool:text="xkill" />
 
