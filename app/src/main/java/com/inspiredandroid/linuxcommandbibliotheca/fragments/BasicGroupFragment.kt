@@ -3,6 +3,7 @@ package com.inspiredandroid.linuxcommandbibliotheca.fragments
 import android.app.SearchManager
 import android.content.Context
 import android.os.Bundle
+import android.support.v4.app.Fragment
 import android.support.v7.widget.SearchView
 import android.view.*
 import com.google.firebase.analytics.FirebaseAnalytics
@@ -23,7 +24,7 @@ import java.text.Normalizer
 /**
  * Created by Simon Schubert
  */
-class BasicGroupFragment : BaseFragment() {
+class BasicGroupFragment : Fragment() {
 
     lateinit var realm: Realm
     private lateinit var searchAdapter: BasicGroupAdapter

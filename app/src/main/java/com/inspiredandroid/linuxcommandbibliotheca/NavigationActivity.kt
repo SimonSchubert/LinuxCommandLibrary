@@ -48,7 +48,7 @@ class NavigationActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         if (savedInstanceState == null) {
-            if (AppManager.missingDatabase(this)) {
+            if (AppManager.missingDatabase(this) || !AppManager.isDatabaseVersionUpToDate(this)) {
                 showLoadingFragment()
                 doAsync {
                     AppManager.createDatabase(applicationContext)

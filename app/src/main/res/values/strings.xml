@@ -16,13 +16,14 @@
     <string name="about">About</string>
     <string name="fragment_scriptdescription_share_command">Share command</string>
     <string name="bookmark">Bookmark</string>
-    <string name="search_for_command">Search for command</string>
+    <string name="search_for_command">Search</string>
 
     <string name="dialog_rate_title">Do you like the App?</string>
     <string name="dialog_rate_message">Please rate the Linux Command Library App, if you think it is great!</string>
     <string name="dialog_rate_rate_now">Rate now</string>
     <string name="dialog_rate_later">Remind me later</string>
     <string name="dialog_rate_no_thanks">No thanks</string>
+    <string name="dialog_ok">OK</string>
 
     <string name="desc_couldnt_find_any_command">We couldn\'t find such command.</string>
     <string name="desc_request_command">request command</string>
@@ -153,6 +154,7 @@
     </string-array>
 
     <string name="fragment_tips_redirection_code_error_output">">_ rm -vf folder1 file1 > out.txt 2> err.txt"</string>
+    <string name="share">Share</string>
     <string-array name="fragment_tips_redirection_code_error_output_array">
         <item>rm</item>
     </string-array>

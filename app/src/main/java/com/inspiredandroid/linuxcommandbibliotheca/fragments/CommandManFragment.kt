@@ -2,6 +2,7 @@ package com.inspiredandroid.linuxcommandbibliotheca.fragments
 
 import android.app.SearchManager
 import android.content.Context
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.support.v4.content.ContextCompat
@@ -158,12 +159,29 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        if (item?.itemId == R.id.bookmark) {
-            toggleBookmark()
-            activity?.invalidateOptionsMenu()
-            return true
+        when(item?.itemId) {
+            R.id.bookmark -> {
+                toggleBookmark()
+                activity?.invalidateOptionsMenu()
+                return true
+            }
+            R.id.share -> {
+                startShareActivity()
+                return true
+            }
         }
         return false
+    }
+
+    fun startShareActivity() {
+        val intent = Intent(Intent.ACTION_SEND)
+        intent.type = "text/plain"
+        intent.putExtra(Intent.EXTRA_TEXT, "http://linuxcommandlibrary.com/man/$name.html")
+        try {
+            startActivity(Intent.createChooser(intent, "Share man"))
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
     }
 
     private fun createAdapter(): ManAdapter {

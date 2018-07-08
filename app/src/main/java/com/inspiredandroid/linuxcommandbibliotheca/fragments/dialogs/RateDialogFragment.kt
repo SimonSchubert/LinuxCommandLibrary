@@ -16,15 +16,12 @@ import com.inspiredandroid.linuxcommandbibliotheca.misc.Constants
 class RateDialogFragment : DialogFragment() {
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        context?.let {
-            return AlertDialog.Builder(it)
-                    .setTitle(R.string.dialog_rate_title)
-                    .setMessage(R.string.dialog_rate_message)
-                    .setPositiveButton(R.string.dialog_rate_rate_now) { _, _ -> startAppMarketActivity() }
-                    .setNeutralButton(R.string.dialog_rate_later, null)
-                    .setNegativeButton(R.string.dialog_rate_no_thanks) { _, _ -> AppManager.disableRateDialog(context) }.create()
-        }
-        return super.onCreateDialog(savedInstanceState)
+        return AlertDialog.Builder(requireContext())
+                .setTitle(R.string.dialog_rate_title)
+                .setMessage(R.string.dialog_rate_message)
+                .setPositiveButton(R.string.dialog_rate_rate_now) { _, _ -> startAppMarketActivity() }
+                .setNeutralButton(R.string.dialog_rate_later, null)
+                .setNegativeButton(R.string.dialog_rate_no_thanks) { _, _ -> AppManager.disableRateDialog(context) }.create()
     }
 
     private fun startAppMarketActivity() {

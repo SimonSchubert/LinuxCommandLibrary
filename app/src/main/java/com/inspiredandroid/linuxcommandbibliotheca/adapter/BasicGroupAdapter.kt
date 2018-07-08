@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.support.graphics.drawable.VectorDrawableCompat
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -136,9 +137,8 @@ class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>, pri
         val intent = Intent(Intent.ACTION_SEND)
         intent.type = "text/plain"
         intent.putExtra(Intent.EXTRA_TEXT, command.command)
-
         try {
-            context.startActivity(intent)
+            context.startActivity(Intent.createChooser(intent, "Share command"))
         } catch (e: Exception) {
             e.printStackTrace()
         }
@@ -147,7 +147,7 @@ class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>, pri
     inner class GroupViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun bind(item: CommandGroupModel) {
             itemView.title.text = item.desc.highlightQueryInsideText(itemView.context, searchQuery).result
-            itemView.title.setCompoundDrawablesWithIntrinsicBounds(item.imageResourceId, 0, 0, 0)
+            itemView.title.setCompoundDrawablesWithIntrinsicBounds(VectorDrawableCompat.create(itemView.context.resources, item.imageResourceId, null), null, null, null)
             itemView.setOnClickListener { _ ->
                 expanded[item.id] = !isExpanded(item.id)
                 updateItems()
