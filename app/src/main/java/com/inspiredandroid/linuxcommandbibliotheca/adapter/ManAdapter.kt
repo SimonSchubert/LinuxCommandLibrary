@@ -99,7 +99,11 @@ class ManAdapter(private var pages: ArrayList<String>, var parts: ArrayList<Arra
 
         fun bind(index: Int, title: String) {
             itemView.title.text = title
-            itemView.title.textColor = ContextCompat.getColor(itemView.context, if(title == "TLDR") {R.color.primary} else {R.color.white})
+            itemView.title.textColor = ContextCompat.getColor(itemView.context, if (title == "TLDR") {
+                R.color.primary
+            } else {
+                R.color.white
+            })
             itemView.setOnClickListener {
                 expanded[index] = !isExpanded(index)
                 updateItems()

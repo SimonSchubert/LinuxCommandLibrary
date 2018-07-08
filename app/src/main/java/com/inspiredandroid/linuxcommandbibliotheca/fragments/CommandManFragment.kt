@@ -159,7 +159,7 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        when(item?.itemId) {
+        when (item?.itemId) {
             R.id.bookmark -> {
                 toggleBookmark()
                 activity?.invalidateOptionsMenu()

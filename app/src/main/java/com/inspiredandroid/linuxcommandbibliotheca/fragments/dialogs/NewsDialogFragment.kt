@@ -15,7 +15,7 @@ class NewsDialogFragment : DialogFragment() {
         return AlertDialog.Builder(requireContext())
                 .setTitle("Update")
                 .setView(R.layout.fragment_new)
-                .setPositiveButton(R.string.dialog_ok) { _, _ ->  }.create()
+                .setPositiveButton(R.string.dialog_ok) { _, _ -> }.create()
     }
 
     companion object {
