@@ -21,8 +21,8 @@ android {
     defaultConfig {
         minSdkVersion 17
         targetSdkVersion 28
-        versionCode 63
-        versionName '2.0.1'
+        versionCode 64
+        versionName '2.0.2'
         applicationId 'com.inspiredandroid.linuxcommandbibliotheca'
 
         resConfigs 'en'
