@@ -16,12 +16,12 @@ buildscript {
 }
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 28
     buildToolsVersion '27.0.3'
 
     defaultConfig {
         minSdkVersion 17
-        targetSdkVersion 27
+        targetSdkVersion 28
         versionCode 63
         versionName '2.0.1'
         applicationId 'com.inspiredandroid.linuxcommandbibliotheca'
