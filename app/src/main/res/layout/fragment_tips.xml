@@ -10,9 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingBottom="10dp"
         android:paddingLeft="8dp"
-        android:paddingRight="8dp">
+        android:paddingRight="8dp"
+        android:paddingBottom="10dp">
 
         <TextView
             style="@style/Title1"
@@ -66,6 +66,12 @@
             custom:commands="@array/fragment_tips_history_code_array" />
 
         <TextView
+            style="@style/Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="or press ctrl + r to search and execute commands from the history." />
+
+        <TextView
             style="@style/Title1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -109,6 +115,60 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="This might save you a lot of time. If you e.g. want to delete a file with a very long name you can type the first few characters of the name and press TAB to auto complete the name. If there are more then one possibilities and you press TAB twice you get a list of all possibilities." />
+
+        <TextView
+            style="@style/Title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cursor navigation" />
+
+        <TextView
+            style="@style/Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ctrl + u = Clear everything before the cursor" />
+
+        <TextView
+            style="@style/Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ctrl + a = To beginning of line" />
+
+        <TextView
+            style="@style/Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ctrl + e = To end of line" />
+
+        <TextView
+            style="@style/Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ctrl + b = Back one word" />
+
+        <TextView
+            style="@style/Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ctrl + f = Forward one word" />
+
+        <TextView
+            style="@style/Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ctrl + w = Cut last word" />
+
+        <TextView
+            style="@style/Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ctrl + k = Clear everything after cursor" />
+
+        <TextView
+            style="@style/Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ctrl + _ = Undo" />
 
         <TextView
             style="@style/Title1"
