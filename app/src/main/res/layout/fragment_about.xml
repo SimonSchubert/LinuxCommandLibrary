@@ -8,9 +8,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:paddingBottom="10dp"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp">
+        android:paddingRight="10dp">
 
         <TextView
             style="@style/Title2"
@@ -69,6 +69,30 @@
                     android:orientation="vertical">
 
                     <ImageButton
+                        android:id="@+id/btnAncientGenocide"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@null"
+                        app:srcCompat="@drawable/ic_ancient_genocide" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:gravity="center_horizontal"
+                        android:maxWidth="120dp"
+                        android:text="Ancient Genocide" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageButton
                         android:id="@+id/btnOrcgenocide"
                         android:layout_width="64dp"
                         android:layout_height="64dp"
@@ -97,8 +121,7 @@
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:layout_gravity="center_horizontal"
-                        android:background="@null"
-                        app:srcCompat="@drawable/ic_quiz" />
+                        android:background="@drawable/ic_quiz" />
 
                     <TextView
                         android:layout_width="wrap_content"

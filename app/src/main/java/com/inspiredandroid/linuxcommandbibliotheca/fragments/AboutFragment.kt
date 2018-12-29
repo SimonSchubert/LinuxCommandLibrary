@@ -27,6 +27,7 @@ class AboutFragment : Fragment() {
 
         btnBimo.setOnClickListener { startAppMarketActivity(Constants.PACKAGE_BIMO) }
         btnOrcgenocide.setOnClickListener { startAppMarketActivity(Constants.PACKAGE_ORCGENOCIDE) }
+        btnAncientGenocide.setOnClickListener { startAppMarketActivity(Constants.PACKAGE_ANCIENTGENOCIDE) }
         btnQuiz.setOnClickListener { startAppMarketActivity(Constants.PACKAGE_QUIZ) }
         btnRemote.setOnClickListener { startAppMarketActivity(Constants.PACKAGE_LINUXREMOTE) }
         btnRate.setOnClickListener { startAppMarketActivity(Constants.PACKAGE_COMMANDLIBRARY) }
