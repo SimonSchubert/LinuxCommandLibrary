@@ -6,10 +6,10 @@
     android:layout_height="wrap_content"
     android:gravity="center_vertical"
     android:orientation="horizontal"
-    android:paddingBottom="12dp"
     android:paddingLeft="16dp"
+    android:paddingTop="12dp"
     android:paddingRight="16dp"
-    android:paddingTop="12dp">
+    android:paddingBottom="12dp">
 
     <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
         android:id="@+id/description"
