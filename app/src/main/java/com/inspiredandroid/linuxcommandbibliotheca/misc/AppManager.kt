@@ -80,7 +80,7 @@ object AppManager {
      */
     private fun getBookmarkIdsChain(context: Context?): String {
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
-        var bookmarksChain = prefs.getString(KEY_BOOKMARKS, "")
+        var bookmarksChain = prefs.getString(KEY_BOOKMARKS, "") ?: ""
         if (bookmarksChain.isNotEmpty()) {
             bookmarksChain = bookmarksChain.substring(1)
         }
@@ -95,7 +95,7 @@ object AppManager {
      */
     fun addBookmark(context: Context?, id: Long) {
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
-        var bookmarksChain = prefs.getString(KEY_BOOKMARKS, "")
+        var bookmarksChain = prefs.getString(KEY_BOOKMARKS, "") ?: ""
         bookmarksChain += ",$id"
         prefs.edit().putString(KEY_BOOKMARKS, bookmarksChain).apply()
         bookmarkHasChanged(context)
