@@ -148,7 +148,7 @@ class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>, pri
         fun bind(item: CommandGroupModel) {
             itemView.title.text = item.desc.highlightQueryInsideText(itemView.context, searchQuery).result
             itemView.title.setCompoundDrawablesWithIntrinsicBounds(VectorDrawableCompat.create(itemView.context.resources, item.imageResourceId, null), null, null, null)
-            itemView.setOnClickListener { _ ->
+            itemView.setOnClickListener {
                 expanded[item.id] = !isExpanded(item.id)
                 updateItems()
                 notifyDataSetChanged()
