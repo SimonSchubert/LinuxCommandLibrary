@@ -173,7 +173,7 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
         return false
     }
 
-    fun startShareActivity() {
+    private fun startShareActivity() {
         val intent = Intent(Intent.ACTION_SEND)
         intent.type = "text/plain"
         intent.putExtra(Intent.EXTRA_TEXT, "http://linuxcommandlibrary.com/man/$name.html")

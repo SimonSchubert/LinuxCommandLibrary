@@ -61,10 +61,10 @@ class MyAndroidTest {
     @Test
     @Throws(Exception::class)
     fun testTipsManPageLinks() {
-        val IDS = intArrayOf(R.array.fragment_tips_background_code_array, R.array.fragment_tips_clear_code_array, R.array.fragment_tips_history_code_array, R.array.fragment_tips_pipe_code_array, R.array.fragment_tips_redirection_code_double_greater_array, R.array.fragment_tips_redirection_code_error_output_array, R.array.fragment_tips_redirection_code_greater_array, R.array.fragment_tips_redirection_code_smaller_array, R.array.fragment_tips_background_code_array, R.array.fragment_tips_special_characters_code_backquote_array, R.array.fragment_tips_special_characters_code_brackets_array, R.array.fragment_tips_special_characters_code_comment_array, R.array.fragment_tips_special_characters_code_double_amp_array, R.array.fragment_tips_special_characters_code_double_pipe_array, R.array.fragment_tips_special_characters_code_double_quote_array, R.array.fragment_tips_special_characters_code_excelationmark_array, R.array.fragment_tips_special_characters_code_questionmark_array, R.array.fragment_tips_special_characters_code_semicolon_array, R.array.fragment_tips_special_characters_code_single_quote_array, R.array.fragment_tips_special_characters_code_square_brackets_array, R.array.fragment_tips_special_characters_code_star_array, R.array.fragment_tips_special_characters_code_substitution_array)
+        val ids = arrayOf(R.array.fragment_tips_background_code_array, R.array.fragment_tips_clear_code_array, R.array.fragment_tips_history_code_array, R.array.fragment_tips_pipe_code_array, R.array.fragment_tips_redirection_code_double_greater_array, R.array.fragment_tips_redirection_code_error_output_array, R.array.fragment_tips_redirection_code_greater_array, R.array.fragment_tips_redirection_code_smaller_array, R.array.fragment_tips_background_code_array, R.array.fragment_tips_special_characters_code_backquote_array, R.array.fragment_tips_special_characters_code_brackets_array, R.array.fragment_tips_special_characters_code_comment_array, R.array.fragment_tips_special_characters_code_double_amp_array, R.array.fragment_tips_special_characters_code_double_pipe_array, R.array.fragment_tips_special_characters_code_double_quote_array, R.array.fragment_tips_special_characters_code_excelationmark_array, R.array.fragment_tips_special_characters_code_questionmark_array, R.array.fragment_tips_special_characters_code_semicolon_array, R.array.fragment_tips_special_characters_code_single_quote_array, R.array.fragment_tips_special_characters_code_square_brackets_array, R.array.fragment_tips_special_characters_code_star_array, R.array.fragment_tips_special_characters_code_substitution_array)
 
         val missingCommands = ArrayList<String>()
-        for (id in IDS) {
+        for (id in ids) {
             val array = context.resources.getStringArray(id)
             addMissingMansToList(missingCommands, *array)
         }
@@ -111,7 +111,7 @@ class MyAndroidTest {
     }
 
     @Test
-    fun CommandsTest() {
+    fun commandsTest() {
         val commands = realm.where<Command>().findAll()
 
         for (command in commands.subList(0, 10)) {

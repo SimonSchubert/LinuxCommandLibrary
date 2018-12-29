@@ -57,7 +57,6 @@ object FragmentCoordinator {
 
                 val command = realm.where<Command>().equalTo(Command.ID, id).findFirst()
                 if (command != null) {
-                    val name = command.name.toUpperCase()
                     showManFragmentInSecondaryFrame(activity, id)
                 }
 
@@ -90,10 +89,6 @@ object FragmentCoordinator {
         }
     }
 
-    /**
-     * @param name     command name
-     * @param id       unique command id
-     */
     private fun showManFragmentInSecondaryFrame(activity: FragmentActivity, id: Long) {
         val fragment = CommandManFragment()
 
