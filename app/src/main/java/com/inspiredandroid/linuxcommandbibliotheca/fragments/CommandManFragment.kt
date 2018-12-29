@@ -302,7 +302,7 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
      * @param index
      */
     private fun scrollToPosition(index: SearchIndex) {
-        recyclerView.layoutManager.scrollToPosition(index.pos)
+        recyclerView.layoutManager?.scrollToPosition(index.pos)
         search(query)
         activity?.hideKeyboard()
     }
