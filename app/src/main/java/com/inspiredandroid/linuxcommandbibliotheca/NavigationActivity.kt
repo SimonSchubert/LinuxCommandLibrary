@@ -85,9 +85,11 @@ class NavigationActivity : AppCompatActivity() {
             }
         }
 
-        val fragmentManager = supportFragmentManager
-        val transaction = fragmentManager.beginTransaction()
-        transaction.replace(R.id.fragment_container, fragment).commitAllowingStateLoss()
+        fragment?.let {
+            val fragmentManager = supportFragmentManager
+            val transaction = fragmentManager.beginTransaction()
+            transaction.replace(R.id.fragment_container, fragment).commitAllowingStateLoss()
+        }
     }
 
     /**
