@@ -157,6 +157,8 @@ object AppManager {
     }
 
     fun shouldShowNewsDialog(context: Context?): Boolean {
+        return false
+        /*
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
         if (prefs.getInt(KEY_NEWS_DIALOG_STATE, 0) < 1) {
 
@@ -167,6 +169,7 @@ object AppManager {
             return true
         }
         return false
+        */
     }
 
     fun createDatabase(context: Context) {
