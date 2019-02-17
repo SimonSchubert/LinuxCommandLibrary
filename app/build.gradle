@@ -1,17 +1,14 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-apply plugin: 'realm-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'realm-android'
 
 buildscript {
     repositories {
         mavenCentral()
         jcenter()
         google()
-    }
-    dependencies {
-        classpath 'io.realm:realm-gradle-plugin:5.8.0'
     }
 }
 
@@ -70,7 +67,7 @@ dependencies {
     implementation 'com.android.support:support-v4:28.0.0'
     implementation 'com.android.support:support-vector-drawable:28.0.0'
     implementation 'io.realm:android-adapters:3.1.0'
-    implementation 'com.google.firebase:firebase-core:16.0.6'
+    implementation 'com.google.firebase:firebase-core:16.0.7'
     implementation 'com.google.firebase:firebase-appindexing:17.1.0'
     implementation 'com.google.firebase:firebase-crash:16.2.1'
     implementation 'com.futuremind.recyclerfastscroll:fastscroll:0.2.5'
