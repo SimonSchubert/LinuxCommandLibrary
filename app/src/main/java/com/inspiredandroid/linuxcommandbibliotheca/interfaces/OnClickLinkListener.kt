@@ -1,12 +1,4 @@
-package com.inspiredandroid.linuxcommandbibliotheca.fragments
-
-import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-
-import com.inspiredandroid.linuxcommandbibliotheca.R
+package com.inspiredandroid.linuxcommandbibliotheca.interfaces
 
 /* Copyright 2019 Simon Schubert
  *
@@ -22,10 +14,6 @@ import com.inspiredandroid.linuxcommandbibliotheca.R
  * See the License for the specific language governing permissions and
  * limitations under the License.
 */
-class DatabaseLoadingFragment : Fragment() {
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_loading, container, false)
-    }
+interface OnClickLinkListener {
+    fun onClickLink()
 }

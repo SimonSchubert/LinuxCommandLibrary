@@ -11,18 +11,25 @@ import android.text.style.ClickableSpan
 import android.util.AttributeSet
 import android.view.View
 
-import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnLinkClickListener
+import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnClickLinkListener
 
-/**
- * Created by Simon Schubert
+/* Copyright 2019 Simon Schubert
  *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * This View makes it very easy to highlightQueryInsideText defined commands in an normal textview. Define the
- * words which should be highlighted in an string array and link it in the layout resource.
- */
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+*/
 class ClickableTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(context, attrs) {
 
-    private var mOnLinkClickListener: OnLinkClickListener? = null
+    private var mOnLinkClickListener: OnClickLinkListener? = null
 
     init {
         if (!isInEditMode) {
@@ -41,11 +48,11 @@ class ClickableTextView(context: Context, attrs: AttributeSet) : AppCompatTextVi
     }
 
     /**
-     * Set OnLinkClickListener
+     * Set OnClickLinkListener
      *
      * @param onLinkClickListener
      */
-    fun setClickInterface(onLinkClickListener: OnLinkClickListener) {
+    fun setClickInterface(onLinkClickListener: OnClickLinkListener) {
         mOnLinkClickListener = onLinkClickListener
     }
 
@@ -73,7 +80,7 @@ class ClickableTextView(context: Context, attrs: AttributeSet) : AppCompatTextVi
          * @param text
          * @param phrase
          */
-        fun addClickableSpanToPhrases(ss: SpannableString, text: String, phrase: String, listener: OnLinkClickListener?) {
+        fun addClickableSpanToPhrases(ss: SpannableString, text: String, phrase: String, listener: OnClickLinkListener?) {
             // would end in endless loop
             if (phrase.isEmpty()) {
                 return
@@ -86,7 +93,7 @@ class ClickableTextView(context: Context, attrs: AttributeSet) : AppCompatTextVi
 
                 val clickableSpan = object : ClickableSpan() {
                     override fun onClick(textView: View) {
-                        listener?.onLinkClick()
+                        listener?.onClickLink()
                     }
 
                     override fun updateDrawState(ds: TextPaint) {
