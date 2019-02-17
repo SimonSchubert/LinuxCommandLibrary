@@ -3,6 +3,7 @@ package com.inspiredandroid.linuxcommandbibliotheca.misc
 import android.content.Context
 import android.preference.PreferenceManager
 import com.inspiredandroid.linuxcommandbibliotheca.R
+import org.kotlin.mpp.mobile.CURRENT_DATABASE_VERSION
 import java.io.File
 import java.io.InputStream
 import java.util.*
@@ -19,17 +20,15 @@ object AppManager {
     private const val KEY_DATABASE_VERSION = "KEY_DATABASE_VERSION"
     private const val KEY_NEWS_DIALOG_STATE = "KEY_NEWS_DIALOG_STATE"
 
-    private const val CURRENTDATABSEVERSION = 5
-
     fun isDatabaseVersionUpToDate(context: Context): Boolean {
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
-        return prefs.getInt(KEY_DATABASE_VERSION, 0) == CURRENTDATABSEVERSION
+        return prefs.getInt(KEY_DATABASE_VERSION, 0) == CURRENT_DATABASE_VERSION
     }
 
     fun setDatabaseVersionUpToDate(context: Context) {
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
         val editor = prefs.edit()
-        editor.putInt(KEY_DATABASE_VERSION, CURRENTDATABSEVERSION)
+        editor.putInt(KEY_DATABASE_VERSION, CURRENT_DATABASE_VERSION)
         editor.apply()
     }
 

@@ -8,6 +8,7 @@ buildscript {
     dependencies {
         classpath("io.realm:realm-gradle-plugin:5.9.0")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.21")
+        classpath("com.google.gms:google-services:4.2.0")
     }
 }
 
@@ -61,12 +62,15 @@ android {
     }
 
     compileOptions {
-        setSourceCompatibility(JavaVersion.VERSION_1_8)
-        setTargetCompatibility(JavaVersion.VERSION_1_8)
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
 }
 
 dependencies {
+    implementation(project(":SharedCode"))
+    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+
     implementation("org.jetbrains.anko:anko:0.10.8") {
         exclude(module = "kotlin-stdlib")
     }

@@ -1,6 +1,9 @@
 /build
 /gradle
 /captures
+/native
+/SharedCode/build
+/app/build
 .idea/
 .gradle/
 local.properties
