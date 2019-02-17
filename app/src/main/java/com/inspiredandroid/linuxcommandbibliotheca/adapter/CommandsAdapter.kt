@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.inspiredandroid.linuxcommandbibliotheca.R
-import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnListClickListener
+import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnClickListListener
 import com.inspiredandroid.linuxcommandbibliotheca.misc.AppManager
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Constants
 import com.inspiredandroid.linuxcommandbibliotheca.misc.highlightQueryInsideText
@@ -15,12 +15,26 @@ import io.realm.RealmResults
 import kotlinx.android.synthetic.main.row_command.view.*
 import java.util.*
 
+/* Copyright 2019 Simon Schubert
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+*/
 class CommandsAdapter(context: Context?,
                       private var realmResults: List<RealmResults<Command>>) : RecyclerView.Adapter<CommandsAdapter.ViewHolder>() {
 
     private var query = ""
     private var bookmarkIds = ArrayList<Long>()
-    private var onListClickListener: OnListClickListener? = null
+    private var listener: OnClickListListener? = null
 
     init {
         updateBookmarkIds(context)
@@ -39,8 +53,8 @@ class CommandsAdapter(context: Context?,
         }
     }
 
-    fun setOnListClickListener(listener: OnListClickListener) {
-        onListClickListener = listener
+    fun setOnListClickListener(listener: OnClickListListener) {
+        this.listener = listener
     }
 
     override fun getItemCount(): Int {
@@ -120,7 +134,7 @@ class CommandsAdapter(context: Context?,
 
         override fun onClick(view: View) {
             getItem(adapterPosition)?.let {
-                onListClickListener?.onListClick(it.id)
+                listener?.onClickList(it.id)
             }
         }
     }

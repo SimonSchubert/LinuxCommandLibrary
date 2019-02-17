@@ -13,7 +13,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.BasicCategoryAdapter
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.BasicGroupAdapter
-import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnListClickListener
+import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnClickListListener
 import com.inspiredandroid.linuxcommandbibliotheca.misc.FragmentCoordinator
 import com.inspiredandroid.linuxcommandbibliotheca.models.BasicGroupModel
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel
@@ -23,10 +23,21 @@ import io.realm.kotlin.where
 import kotlinx.android.synthetic.main.fragment_basic_category.*
 import java.text.Normalizer
 
-/**
- * Created by Simon Schubert
- */
-class BasicCategoryFragment : Fragment(), OnListClickListener {
+/* Copyright 2019 Simon Schubert
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+*/
+class BasicCategoryFragment : Fragment(), OnClickListListener {
 
     lateinit var realm: Realm
     private lateinit var adapter: BasicCategoryAdapter
@@ -138,7 +149,7 @@ class BasicCategoryFragment : Fragment(), OnListClickListener {
         startActivity(intent)
     }
 
-    override fun onListClick(id: Int) {
+    override fun onClickList(id: Int) {
         FragmentCoordinator.startScriptCategoryActivity(activity, id)
     }
 }
