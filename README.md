@@ -1,3 +1,5 @@
+![GitHub](https://img.shields.io/github/license/SimonSchubert/LinuxCommandBibliotheca.svg)
+
 ## Linux Command Library for Android
 The app currently has **2378** manual pages, **1351** one-line scripts and a bunch of general terminal tips.
 
