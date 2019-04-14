@@ -28,6 +28,7 @@ allprojects {
 tasks.register("clean", Delete::class.java) {
     delete(rootProject.buildDir)
 }
+
 /*
 tasks.named<DependencyUpdatesTask>("dependencyUpdates") {
     resolutionStrategy {

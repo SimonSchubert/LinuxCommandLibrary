@@ -29,7 +29,7 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$/src/iOSMain/resources" />
     <content url="file://$MODULE_DIR$/src/iosMain/kotlin">
-      <sourceFolder url="file://$MODULE_DIR$/src/iosMain/kotlin" type="kotlin-source" />
+      <sourceFolder url="file://$MODULE_DIR$/src/iosMain/kotlin" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Kotlin SDK" jdkType="KotlinSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
