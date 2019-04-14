@@ -1,10 +1,8 @@
-/*
 import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 
 plugins {
-    id("com.github.ben-manes.versions") version "0.20.0"
+    id("com.github.ben-manes.versions") version "0.21.0"
 }
-*/
 
 buildscript {
     repositories {
@@ -12,8 +10,8 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:3.3.1")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.21")
+        classpath("com.android.tools.build:gradle:3.3.2")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.30")
     }
 }
 
@@ -21,7 +19,7 @@ allprojects {
     repositories {
         google()
         jcenter()
-        // maven("https://jitpack.io")
+        maven("https://jitpack.io")
     }
 }
 
@@ -29,7 +27,6 @@ tasks.register("clean", Delete::class.java) {
     delete(rootProject.buildDir)
 }
 
-/*
 tasks.named<DependencyUpdatesTask>("dependencyUpdates") {
     resolutionStrategy {
         componentSelection {
@@ -46,4 +43,3 @@ tasks.named<DependencyUpdatesTask>("dependencyUpdates") {
     // optional parameters
     checkForGradleUpdate = true
 }
-*/

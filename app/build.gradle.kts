@@ -6,8 +6,8 @@ buildscript {
         maven("https://plugins.gradle.org/m2/")
     }
     dependencies {
-        classpath("io.realm:realm-gradle-plugin:5.9.0")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.21")
+        classpath("io.realm:realm-gradle-plugin:5.10.0")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.30")
         classpath("com.google.gms:google-services:4.2.0")
     }
 }
@@ -82,7 +82,7 @@ dependencies {
     implementation("com.android.support:support-v4:28.0.0")
     implementation("com.android.support:support-vector-drawable:28.0.0")
     implementation("io.realm:android-adapters:3.1.0")
-    implementation("com.google.firebase:firebase-core:16.0.7")
+    implementation("com.google.firebase:firebase-core:16.0.8")
     implementation("com.google.firebase:firebase-appindexing:17.1.0")
     implementation("com.google.firebase:firebase-crash:16.2.1")
     implementation("com.futuremind.recyclerfastscroll:fastscroll:0.2.5")
@@ -90,7 +90,7 @@ dependencies {
     androidTestImplementation("com.android.support.test:runner:1.0.2")
     androidTestImplementation("com.android.support.test:rules:1.0.2")
     androidTestImplementation("com.android.support:support-annotations:28.0.0")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.21")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.30")
 }
 
 apply {
