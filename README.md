@@ -1,5 +1,6 @@
 ![GitHub](https://img.shields.io/github/license/SimonSchubert/LinuxCommandBibliotheca.svg)
 ![Liberapay](http://img.shields.io/liberapay/receives/arnald.svg?logo=liberapay)
+[![Paypal](https://img.shields.io/badge/paypal-donate-blue.svg?logo=paypal&style=flat)](https://paypal.me/SimonSchubert)
 
 ## Linux Command Library for Android
 The app currently has **2378** manual pages, **1351** one-line scripts and a bunch of general terminal tips.
