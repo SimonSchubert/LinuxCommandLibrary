@@ -3,7 +3,6 @@ package com.inspiredandroid.linuxcommandbibliotheca.fragments
 import android.content.Intent
 import android.os.Bundle
 import android.view.*
-import com.google.firebase.appindexing.Action
 import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnClickLinkListener
@@ -24,12 +23,6 @@ import kotlinx.android.synthetic.main.fragment_tips.*
  * limitations under the License.
 */
 class TipsFragment : AppIndexFragment() {
-
-    override fun getAppIndexingAction(): Action {
-        return com.google.firebase.appindexing.Action.Builder(com.google.firebase.appindexing.Action.Builder.VIEW_ACTION)
-                .setObject("Linux Tips", "http://linuxcommandlibrary.com/tips.html")
-                .build()
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
