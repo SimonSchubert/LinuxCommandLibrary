@@ -11,8 +11,8 @@ import android.view.ViewGroup
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Constants
 import com.inspiredandroid.linuxcommandbibliotheca.misc.highlightQueryInsideText
-import com.inspiredandroid.linuxcommandbibliotheca.models.CommandChildModel
-import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel
+import com.inspiredandroid.linuxcommandbibliotheca.models.BasicCommand
+import com.inspiredandroid.linuxcommandbibliotheca.models.BasicGroup
 import io.realm.RealmResults
 import kotlinx.android.synthetic.main.row_ad.view.*
 import kotlinx.android.synthetic.main.row_basic_children.view.*
@@ -34,7 +34,7 @@ import kotlin.collections.ArrayList
  * See the License for the specific language governing permissions and
  * limitations under the License.
 */
-class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class BasicGroupAdapter(private var groups: RealmResults<BasicGroup>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     companion object {
         const val PARENT = 0
@@ -120,7 +120,7 @@ class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>) : R
         items.add(BasicItem(-1, -1))
     }
 
-    fun updateData(allGroups: RealmResults<CommandGroupModel>) {
+    fun updateData(allGroups: RealmResults<BasicGroup>) {
         groups = allGroups
         updateItems()
         notifyDataSetChanged()
@@ -134,7 +134,7 @@ class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>) : R
         return expanded[id] == true
     }
 
-    fun startShareActivity(context: Context, command: CommandChildModel) {
+    fun startShareActivity(context: Context, command: BasicCommand) {
         val intent = Intent(Intent.ACTION_SEND)
         intent.type = "text/plain"
         intent.putExtra(Intent.EXTRA_TEXT, command.command)
@@ -146,7 +146,7 @@ class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>) : R
     }
 
     inner class GroupViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        fun bind(item: CommandGroupModel) {
+        fun bind(item: BasicGroup) {
             itemView.title.text = item.desc.highlightQueryInsideText(itemView.context, searchQuery).result
             itemView.title.setCompoundDrawablesWithIntrinsicBounds(VectorDrawableCompat.create(itemView.context.resources, item.imageResourceId, null), null, null, null)
             itemView.setOnClickListener {
@@ -158,7 +158,7 @@ class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>) : R
     }
 
     inner class ChildViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        fun bind(command: CommandChildModel) {
+        fun bind(command: BasicCommand) {
             itemView.description.text = command.command
             itemView.description.setCommands(command.getMansAsStringArray())
             itemView.share.setOnClickListener { view -> startShareActivity(view.context, command) }
@@ -182,9 +182,9 @@ class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>) : R
          */
         private fun startAppMarketActivity(context: Context, appPackageName: String) {
             try {
-                context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=$appPackageName&referrer=utm_source%3Dlinuxapp%26utm_medium%3Dbasicgroup")))
+                context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?position=$appPackageName&referrer=utm_source%3Dlinuxapp%26utm_medium%3Dbasicgroup")))
             } catch (e: android.content.ActivityNotFoundException) {
-                context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=$appPackageName&referrer=utm_source%3Dlinuxapp%26utm_medium%3Dbasicgroup")))
+                context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?position=$appPackageName&referrer=utm_source%3Dlinuxapp%26utm_medium%3Dbasicgroup")))
             }
         }
     }

@@ -8,8 +8,8 @@ import android.view.*
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.activities.BasicGroupActivity
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.BasicGroupAdapter
-import com.inspiredandroid.linuxcommandbibliotheca.models.BasicGroupModel
-import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel
+import com.inspiredandroid.linuxcommandbibliotheca.models.BasicCategory
+import com.inspiredandroid.linuxcommandbibliotheca.models.BasicGroup
 import io.realm.Case
 import io.realm.RealmResults
 import io.realm.Sort
@@ -34,7 +34,7 @@ import java.text.Normalizer
 class BasicGroupFragment : BaseFragment() {
 
     private lateinit var searchAdapter: BasicGroupAdapter
-    private lateinit var groups: RealmResults<CommandGroupModel>
+    private lateinit var groups: RealmResults<BasicGroup>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,11 +51,12 @@ class BasicGroupFragment : BaseFragment() {
 
         val categoryId = activity?.intent?.getIntExtra(BasicGroupActivity.EXTRA_CATEGORY_ID, 0)
 
-        val basicGroupModel = realm.where<BasicGroupModel>().equalTo("id", categoryId).findFirst()
-                ?: BasicGroupModel()
-        groups = basicGroupModel.groups.sort("votes", Sort.DESCENDING)
+        val basicGroupModel = realm.where<BasicCategory>().equalTo("id", categoryId).findFirst()
+        basicGroupModel?.let {
+            groups = it.groups.sort("position", Sort.DESCENDING)
+        }
 
-        activity?.title = basicGroupModel.title
+        activity?.title = basicGroupModel?.title
 
         searchAdapter = BasicGroupAdapter(groups)
         recyclerView.adapter = searchAdapter
@@ -107,11 +108,11 @@ class BasicGroupFragment : BaseFragment() {
     private fun search(query: String) {
         val words = query.split("[,\\s]+".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
 
-        val realmQuery = realm.where<CommandGroupModel>().beginGroup()
+        val realmQuery = realm.where<BasicGroup>().beginGroup()
         for (word in words) {
             realmQuery.contains("desc", word, Case.INSENSITIVE)
         }
-        val allGroups = realmQuery.endGroup().sort("votes").findAll()
+        val allGroups = realmQuery.endGroup().sort("position").findAll()
 
         searchAdapter.updateSearchQuery(query)
         searchAdapter.updateData(allGroups)
