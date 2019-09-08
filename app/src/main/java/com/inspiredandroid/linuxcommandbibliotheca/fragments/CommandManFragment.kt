@@ -13,9 +13,6 @@ import android.text.SpannableString
 import android.text.Spanned
 import android.text.style.ForegroundColorSpan
 import android.view.*
-import com.google.firebase.analytics.FirebaseAnalytics
-import com.google.firebase.appindexing.Action
-import com.inspiredandroid.linuxcommandbibliotheca.BuildConfig
 import com.inspiredandroid.linuxcommandbibliotheca.CommandManActivity
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.ManAdapter
@@ -47,7 +44,6 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
 
     private lateinit var adapter: ManAdapter
     private lateinit var realm: Realm
-    private var firebaseAnalytics: FirebaseAnalytics? = null
     private var name: String = ""
     private var id: Long = 0
     private var currentIndexPosition: Int = 0
@@ -60,12 +56,6 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
         } else {
             Html.fromHtml(html)
         }
-    }
-
-    override fun getAppIndexingAction(): Action {
-        return Action.Builder(Action.Builder.VIEW_ACTION)
-                .setObject("$name Linux man page", "http://linuxcommandlibrary.com/man/$name.html")
-                .build()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -81,28 +71,13 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
 
         adapter = createAdapter()
 
-        context?.let {
-            firebaseAnalytics = FirebaseAnalytics.getInstance(it)
-        }
-
         val realm = Realm.getDefaultInstance()
         val command = realm.where<Command>().equalTo(Command.ID, id).findFirst()
         if (command != null) {
-            trackSelectContent(command.name)
             name = command.name
             activity?.title = name
         }
         realm.close()
-    }
-
-    private fun trackSelectContent(name: String?) {
-        if (BuildConfig.DEBUG) {
-            return
-        }
-        val bundle = Bundle()
-        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, name)
-        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "Manual Detail")
-        firebaseAnalytics?.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {

@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.SearchView
 import android.view.*
-import com.google.firebase.analytics.FirebaseAnalytics
 import com.inspiredandroid.linuxcommandbibliotheca.BasicGroupActivity
 import com.inspiredandroid.linuxcommandbibliotheca.BuildConfig
 import com.inspiredandroid.linuxcommandbibliotheca.R
@@ -40,7 +39,6 @@ class BasicGroupFragment : Fragment() {
     lateinit var realm: Realm
     private lateinit var searchAdapter: BasicGroupAdapter
     private lateinit var groups: RealmResults<CommandGroupModel>
-    private var firebaseAnalytics: FirebaseAnalytics? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,14 +63,8 @@ class BasicGroupFragment : Fragment() {
 
         activity?.title = basicGroupModel.title
 
-        context?.let {
-            firebaseAnalytics = FirebaseAnalytics.getInstance(it)
-        }
-
-        searchAdapter = BasicGroupAdapter(groups, firebaseAnalytics)
+        searchAdapter = BasicGroupAdapter(groups)
         recyclerView.adapter = searchAdapter
-
-        trackSelectContent(basicGroupModel.title)
     }
 
     override fun onDestroy() {
@@ -122,16 +114,6 @@ class BasicGroupFragment : Fragment() {
                 }
             })
         }
-    }
-
-    private fun trackSelectContent(id: String?) {
-        if (BuildConfig.DEBUG) {
-            return
-        }
-        val bundle = Bundle()
-        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, id)
-        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "Basic Category")
-        firebaseAnalytics?.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle)
     }
 
     private fun search(query: String) {

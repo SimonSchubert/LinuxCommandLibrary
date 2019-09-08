@@ -1,6 +1,5 @@
 package com.inspiredandroid.linuxcommandbibliotheca.fragments
 
-import android.app.Activity
 import android.app.SearchManager
 import android.content.Context
 import android.content.Intent
@@ -8,7 +7,6 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.SearchView
 import android.view.*
-import com.google.firebase.analytics.FirebaseAnalytics
 import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.BasicCategoryAdapter
@@ -42,7 +40,6 @@ class BasicCategoryFragment : Fragment(), OnClickListListener {
     lateinit var realm: Realm
     private lateinit var adapter: BasicCategoryAdapter
     private lateinit var searchAdapter: BasicGroupAdapter
-    private var firebaseAnalytics: FirebaseAnalytics? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,8 +49,7 @@ class BasicCategoryFragment : Fragment(), OnClickListListener {
         activity?.title = getString(R.string.fragment_bibliotheca_basic)
 
         realm = Realm.getDefaultInstance()
-        firebaseAnalytics = FirebaseAnalytics.getInstance(context ?: Activity())
-        searchAdapter = BasicGroupAdapter(realm.where<CommandGroupModel>().findAll(), firebaseAnalytics)
+        searchAdapter = BasicGroupAdapter(realm.where<CommandGroupModel>().findAll())
         adapter = BasicCategoryAdapter(realm.where<BasicGroupModel>().sort("position").findAll(), false)
         adapter.setOnListClickListener(this)
     }

@@ -3,14 +3,11 @@ package com.inspiredandroid.linuxcommandbibliotheca.adapter
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
-import android.os.Bundle
 import android.support.graphics.drawable.VectorDrawableCompat
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.google.firebase.analytics.FirebaseAnalytics
-import com.inspiredandroid.linuxcommandbibliotheca.BuildConfig
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Constants
 import com.inspiredandroid.linuxcommandbibliotheca.misc.highlightQueryInsideText
@@ -37,7 +34,7 @@ import kotlin.collections.ArrayList
  * See the License for the specific language governing permissions and
  * limitations under the License.
 */
-class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>, private val firebaseAnalytics: FirebaseAnalytics?) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     companion object {
         const val PARENT = 0
@@ -137,16 +134,6 @@ class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>, pri
         return expanded[id] == true
     }
 
-    fun trackSelectContent(id: String?) {
-        if (BuildConfig.DEBUG) {
-            return
-        }
-        val bundle = Bundle()
-        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, id)
-        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "Basic Group")
-        firebaseAnalytics?.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle)
-    }
-
     fun startShareActivity(context: Context, command: CommandChildModel) {
         val intent = Intent(Intent.ACTION_SEND)
         intent.type = "text/plain"
@@ -166,7 +153,6 @@ class BasicGroupAdapter(private var groups: RealmResults<CommandGroupModel>, pri
                 expanded[item.id] = !isExpanded(item.id)
                 updateItems()
                 notifyDataSetChanged()
-                trackSelectContent(item.desc)
             }
         }
     }

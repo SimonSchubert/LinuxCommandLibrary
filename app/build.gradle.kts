@@ -82,17 +82,10 @@ dependencies {
     implementation("com.android.support:support-v4:28.0.0")
     implementation("com.android.support:support-vector-drawable:28.0.0")
     implementation("io.realm:android-adapters:3.1.0")
-    implementation("com.google.firebase:firebase-core:16.0.8")
-    implementation("com.google.firebase:firebase-appindexing:17.1.0")
-    implementation("com.google.firebase:firebase-crash:16.2.1")
     implementation("com.futuremind.recyclerfastscroll:fastscroll:0.2.5")
     testImplementation("junit:junit:4.12")
     androidTestImplementation("com.android.support.test:runner:1.0.2")
     androidTestImplementation("com.android.support.test:rules:1.0.2")
     androidTestImplementation("com.android.support:support-annotations:28.0.0")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.30")
-}
-
-apply {
-    plugin("com.google.gms.google-services")
 }
