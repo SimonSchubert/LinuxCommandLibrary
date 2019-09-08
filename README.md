@@ -5,7 +5,19 @@
 ## Linux Command Library for Android
 The app currently has **2378** manual pages, **1351** one-line scripts and a bunch of general terminal tips.
 
-#### Categories:
+[![Play Store](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/play_store_badge.png)](https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca)
+
+### Screenshots
+
+<p float="left">
+<img src="https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-1.png" width="200">
+<img src="https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-2.png" width="200">
+<img src="https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-3.png" width="200">
+<img src="https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-4.png" width="200">
+<img src="https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-5.png" width="200">
+</p>
+
+### Categories
 
 * Users/Groups
 * Files/Folders
@@ -20,25 +32,19 @@ The app currently has **2378** manual pages, **1351** one-line scripts and a bun
 * One-liners
 * Git
 
-Download on Play Store https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca
+### Goals
 
-<p float="left">
-<img src="https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-1.png" width="200">
-<img src="https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-2.png" width="200">
-<img src="https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-3.png" width="200">
-<img src="https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-4.png" width="200">
-<img src="https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-5.png" width="200">
-</p>
+* Keep it simple and performant
+* Keep the app content up-to-date
+* Keep the app up-to-date with the Material Design guidelines
 
 ### Thanks to
+
 http://letsgokoyo.com - App Icon
 
 https://www.commandlinefu.com - Lots of one-liners
 
 https://icons8.com - Icons
-
-### Firebase
-Add a firebase config file to the project to get firebase runnning.
 
 ### License
 
