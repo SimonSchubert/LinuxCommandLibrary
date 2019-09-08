@@ -2,6 +2,7 @@ package com.inspiredandroid.linuxcommandbibliotheca.misc
 
 import android.content.Context
 import android.preference.PreferenceManager
+import com.inspiredandroid.linuxcommandbibliotheca.R
 import java.io.File
 import java.io.InputStream
 
@@ -27,7 +28,7 @@ object AppManager {
     private const val KEY_BOOKMARKCHANGED = "KEY_BOOKMARKCHANGED"
     private const val KEY_DATABASE_VERSION = "KEY_DATABASE_VERSION"
     private const val KEY_NEWS_DIALOG_STATE = "KEY_NEWS_DIALOG_STATE"
-    private const val CURRENT_DATABASE_VERSION = 5
+    private const val CURRENT_DATABASE_VERSION = 6
 
     fun isDatabaseVersionUpToDate(context: Context): Boolean {
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
@@ -76,7 +77,7 @@ object AppManager {
     }
 
     /**
-     * Is id bookmarked
+     * Is position bookmarked
      *
      * @param context
      * @param id
@@ -87,7 +88,7 @@ object AppManager {
     }
 
     /**
-     * Add id to bookmark list
+     * Add position to bookmark list
      *
      * @param context
      * @param id
@@ -100,7 +101,7 @@ object AppManager {
     }
 
     /**
-     * Remove id from list
+     * Remove position from list
      *
      * @param context
      * @param id
@@ -162,7 +163,7 @@ object AppManager {
     fun createDatabase(context: Context) {
         val file = File(context.filesDir, Constants.REALM_DATABASE)
         file.delete()
-        // file.copyInputStreamToFile(context.resources.openRawResource(R.raw.database))
+        file.copyInputStreamToFile(context.resources.openRawResource(R.raw.database))
     }
 
     private fun File.copyInputStreamToFile(inputStream: InputStream) {

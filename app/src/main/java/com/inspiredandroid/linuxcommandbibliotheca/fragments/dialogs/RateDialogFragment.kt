@@ -38,9 +38,9 @@ class RateDialogFragment : DialogFragment() {
     private fun startAppMarketActivity() {
         val appPackageName = Constants.PACKAGE_COMMANDLIBRARY
         try {
-            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=$appPackageName")))
+            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?position=$appPackageName")))
         } catch (e: android.content.ActivityNotFoundException) {
-            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=$appPackageName")))
+            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?position=$appPackageName")))
         }
     }
 

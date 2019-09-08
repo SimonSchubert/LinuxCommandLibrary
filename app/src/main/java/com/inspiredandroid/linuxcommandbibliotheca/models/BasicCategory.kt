@@ -19,13 +19,13 @@ import io.realm.annotations.PrimaryKey
  * See the License for the specific language governing permissions and
  * limitations under the License.
 */
-open class BasicGroupModel : RealmObject() {
+open class BasicCategory : RealmObject() {
 
     @PrimaryKey
     var id: Int = 0
     var position: Int = 0
     var title: String = ""
-    var groups: RealmList<CommandGroupModel> = RealmList()
+    var groups: RealmList<BasicGroup> = RealmList()
 
     val iconResourceId: Int
         get() {

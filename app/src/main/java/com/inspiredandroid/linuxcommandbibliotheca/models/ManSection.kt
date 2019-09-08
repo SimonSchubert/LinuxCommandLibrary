@@ -16,7 +16,14 @@ import io.realm.RealmObject
  * See the License for the specific language governing permissions and
  * limitations under the License.
 */
-open class CommandManModel : RealmObject() {
+open class ManSection : RealmObject() {
 
-    var man: String = ""
+    var position: Int = 0
+    var commandId: Int = 0
+    var content: String = ""
+    var title: String = ""
+
+    companion object {
+        const val COMMANDID = "commandId"
+    }
 }

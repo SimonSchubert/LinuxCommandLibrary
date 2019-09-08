@@ -18,7 +18,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.activities.CommandManActivity
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.ManAdapter
 import com.inspiredandroid.linuxcommandbibliotheca.misc.*
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command
-import com.inspiredandroid.linuxcommandbibliotheca.models.CommandPage
+import com.inspiredandroid.linuxcommandbibliotheca.models.ManSection
 import io.realm.kotlin.where
 import kotlinx.android.synthetic.main.fragment_command_man.*
 import org.jetbrains.anko.doAsync
@@ -159,7 +159,7 @@ class CommandManFragment : BaseFragment(), View.OnClickListener {
     }
 
     private fun createAdapter(): ManAdapter {
-        val pages = realm.where<CommandPage>().equalTo(CommandPage.COMMANDID, id).sort("id").findAll()
+        val pages = realm.where<ManSection>().equalTo(ManSection.COMMANDID, id).sort("position").findAll()
 
         val groups = ArrayList<String>()
         val child = ArrayList<ArrayList<CharSequence>>()
@@ -167,7 +167,7 @@ class CommandManFragment : BaseFragment(), View.OnClickListener {
 
             // Split description by <p> elements to increase the recyclerview performance
             val pageSplit = ArrayList<CharSequence>()
-            val tmp = page.page.split("</p>".toRegex()).toTypedArray()
+            val tmp = page.content.split("</p>".toRegex()).toTypedArray()
             for (tmpSplit in tmp) {
                 val p = trim(fromHtml("$tmpSplit</p>"))
                 if (p.isNotEmpty()) {
@@ -229,7 +229,7 @@ class CommandManFragment : BaseFragment(), View.OnClickListener {
     }
 
     /**
-     * Search the search_bookmark page for q occurs and highlight them and jump to first occur
+     * Search the search_bookmark content for q occurs and highlight them and jump to first occur
      *
      * @param q
      */

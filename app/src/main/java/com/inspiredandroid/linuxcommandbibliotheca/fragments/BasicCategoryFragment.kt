@@ -12,8 +12,8 @@ import com.inspiredandroid.linuxcommandbibliotheca.adapter.BasicCategoryAdapter
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.BasicGroupAdapter
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnClickListListener
 import com.inspiredandroid.linuxcommandbibliotheca.misc.FragmentCoordinator
-import com.inspiredandroid.linuxcommandbibliotheca.models.BasicGroupModel
-import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel
+import com.inspiredandroid.linuxcommandbibliotheca.models.BasicCategory
+import com.inspiredandroid.linuxcommandbibliotheca.models.BasicGroup
 import io.realm.Case
 import io.realm.kotlin.where
 import kotlinx.android.synthetic.main.fragment_basic_category.*
@@ -45,8 +45,8 @@ class BasicCategoryFragment : BaseFragment(), OnClickListListener {
 
         activity?.title = getString(R.string.fragment_bibliotheca_basic)
 
-        searchAdapter = BasicGroupAdapter(realm.where<CommandGroupModel>().findAll())
-        adapter = BasicCategoryAdapter(realm.where<BasicGroupModel>().sort("position").findAll(), false)
+        searchAdapter = BasicGroupAdapter(realm.where<BasicGroup>().findAll())
+        adapter = BasicCategoryAdapter(realm.where<BasicCategory>().sort("position").findAll(), false)
         adapter.setOnListClickListener(this)
     }
 
@@ -106,13 +106,13 @@ class BasicCategoryFragment : BaseFragment(), OnClickListListener {
     private fun search(query: String) {
         val words = query.split("[,\\s]+".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
 
-        val realmQuery = realm.where(CommandGroupModel::class.java).beginGroup()
+        val realmQuery = realm.where(BasicGroup::class.java).beginGroup()
 
         for (word in words) {
             realmQuery.contains("desc", word, Case.INSENSITIVE)
         }
 
-        val allGroups = realmQuery.endGroup().sort("votes").findAll()
+        val allGroups = realmQuery.endGroup().sort("position").findAll()
         searchAdapter.updateSearchQuery(query)
         searchAdapter.updateData(allGroups)
         recyclerView.adapter = searchAdapter

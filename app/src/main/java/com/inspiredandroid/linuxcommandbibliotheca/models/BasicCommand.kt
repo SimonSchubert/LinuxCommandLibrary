@@ -16,14 +16,12 @@ import io.realm.RealmObject
  * See the License for the specific language governing permissions and
  * limitations under the License.
 */
-open class CommandPage : RealmObject() {
+open class BasicCommand : RealmObject() {
 
-    var id: Int = 0
-    var commandid: Int = 0
-    var page: String = ""
-    var title: String = ""
+    var command: String = ""
+    var mans: String = ""
 
-    companion object {
-        const val COMMANDID = "commandid"
+    fun getMansAsStringArray(): Array<String> {
+        return mans.split(",".toRegex()).toTypedArray()
     }
 }

@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnClickListListener
-import com.inspiredandroid.linuxcommandbibliotheca.models.BasicGroupModel
+import com.inspiredandroid.linuxcommandbibliotheca.models.BasicCategory
 import io.realm.OrderedRealmCollection
 import io.realm.RealmRecyclerViewAdapter
 import kotlinx.android.synthetic.main.row_basic_category.view.*
@@ -26,7 +26,7 @@ import kotlinx.android.synthetic.main.row_basic_category.view.*
  * See the License for the specific language governing permissions and
  * limitations under the License.
 */
-class BasicCategoryAdapter(data: OrderedRealmCollection<BasicGroupModel>, autoUpdate: Boolean) : RealmRecyclerViewAdapter<BasicGroupModel, BasicCategoryAdapter.ViewHolder>(data, autoUpdate) {
+class BasicCategoryAdapter(data: OrderedRealmCollection<BasicCategory>, autoUpdate: Boolean) : RealmRecyclerViewAdapter<BasicCategory, BasicCategoryAdapter.ViewHolder>(data, autoUpdate) {
 
     private var onListClickListener: OnClickListListener? = null
 
@@ -53,7 +53,7 @@ class BasicCategoryAdapter(data: OrderedRealmCollection<BasicGroupModel>, autoUp
             view.setOnClickListener(this)
         }
 
-        fun bind(item: BasicGroupModel) {
+        fun bind(item: BasicCategory) {
             itemView.title.text = item.title
             itemView.title.setCompoundDrawablesWithIntrinsicBounds(VectorDrawableCompat.create(itemView.context.resources, item.iconResourceId, null), null, null, null)
         }
