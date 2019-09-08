@@ -22,12 +22,12 @@ plugins {
 }
 
 android {
-    compileSdkVersion(28)
+    compileSdkVersion(29)
 
     defaultConfig {
         applicationId = "com.inspiredandroid.linuxcommandbibliotheca"
         minSdkVersion(17)
-        targetSdkVersion(28)
+        targetSdkVersion(29)
         versionCode = 64
         versionName = "2.0.2"
 
