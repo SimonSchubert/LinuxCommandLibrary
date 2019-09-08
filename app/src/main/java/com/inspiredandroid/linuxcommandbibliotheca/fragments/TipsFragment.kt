@@ -2,9 +2,10 @@ package com.inspiredandroid.linuxcommandbibliotheca.fragments
 
 import android.content.Intent
 import android.os.Bundle
+import android.support.v4.app.Fragment
 import android.view.*
-import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity
 import com.inspiredandroid.linuxcommandbibliotheca.R
+import com.inspiredandroid.linuxcommandbibliotheca.activities.AboutActivity
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnClickLinkListener
 import kotlinx.android.synthetic.main.fragment_tips.*
 
@@ -22,7 +23,7 @@ import kotlinx.android.synthetic.main.fragment_tips.*
  * See the License for the specific language governing permissions and
  * limitations under the License.
 */
-class TipsFragment : AppIndexFragment() {
+class TipsFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

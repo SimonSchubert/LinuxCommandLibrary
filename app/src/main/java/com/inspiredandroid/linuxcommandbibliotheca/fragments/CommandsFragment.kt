@@ -5,11 +5,10 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.support.v7.widget.SearchView
 import android.view.*
-import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity
 import com.inspiredandroid.linuxcommandbibliotheca.R
+import com.inspiredandroid.linuxcommandbibliotheca.activities.AboutActivity
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.CommandsAdapter
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.dialogs.NewsDialogFragment
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.dialogs.RateDialogFragment
@@ -17,7 +16,6 @@ import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnClickListListene
 import com.inspiredandroid.linuxcommandbibliotheca.misc.AppManager
 import com.inspiredandroid.linuxcommandbibliotheca.misc.FragmentCoordinator
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command
-import io.realm.Realm
 import io.realm.RealmResults
 import io.realm.kotlin.where
 import kotlinx.android.synthetic.main.fragment_commands.*
@@ -38,10 +36,9 @@ import java.util.*
  * See the License for the specific language governing permissions and
  * limitations under the License.
 */
-class CommandsFragment : Fragment(), OnClickListListener {
+class CommandsFragment : BaseFragment(), OnClickListListener {
 
     private lateinit var adapter: CommandsAdapter
-    private lateinit var realm: Realm
     private var searchQuery = ""
 
     /**
@@ -65,7 +62,6 @@ class CommandsFragment : Fragment(), OnClickListListener {
 
         activity?.title = getString(R.string.fragment_bibliotheca_commands)
 
-        realm = Realm.getDefaultInstance()
         adapter = CommandsAdapter(context, allCommands)
         adapter.setOnListClickListener(this)
 
@@ -149,23 +145,17 @@ class CommandsFragment : Fragment(), OnClickListListener {
         return false
     }
 
-    private fun startAboutActivity() {
-        val intent = Intent(context, AboutActivity::class.java)
-        startActivity(intent)
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-
-        realm.close()
-    }
-
     override fun onResume() {
         super.onResume()
 
         if (AppManager.hasBookmarkChanged(context)) {
             resetSearchResults()
         }
+    }
+
+    private fun startAboutActivity() {
+        val intent = Intent(context, AboutActivity::class.java)
+        startActivity(intent)
     }
 
     private fun sendCommandRequestEmail() {

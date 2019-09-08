@@ -1,8 +1,7 @@
-package com.inspiredandroid.linuxcommandbibliotheca
+package com.inspiredandroid.linuxcommandbibliotheca.activities
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.view.MenuItem
+import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.CommandManFragment
 import kotlinx.android.synthetic.main.toolbar.*
 
@@ -20,12 +19,12 @@ import kotlinx.android.synthetic.main.toolbar.*
  * See the License for the specific language governing permissions and
  * limitations under the License.
 */
-class CommandManActivity : AppCompatActivity() {
+class CommandManActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_command_man)
 
+        setContentView(R.layout.activity_command_man)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
@@ -36,12 +35,12 @@ class CommandManActivity : AppCompatActivity() {
         val intent = intent
         val b = intent.extras
 
-        val id = b?.getLong(CommandManActivity.EXTRA_COMMAND_ID, CommandManActivity.INVALID.toLong())
-                ?: CommandManActivity.INVALID.toLong()
+        val id = b?.getLong(EXTRA_COMMAND_ID, INVALID.toLong())
+                ?: INVALID.toLong()
 
         val fragment = CommandManFragment()
         val bundle = Bundle()
-        bundle.putLong(CommandManActivity.EXTRA_COMMAND_ID, id)
+        bundle.putLong(EXTRA_COMMAND_ID, id)
         fragment.arguments = bundle
 
         val fragmentManager = supportFragmentManager
@@ -49,13 +48,6 @@ class CommandManActivity : AppCompatActivity() {
 
         fragmentTransaction.replace(R.id.fragment_container, fragment)
         fragmentTransaction.commitAllowingStateLoss()
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            android.R.id.home -> finish()
-        }
-        return super.onOptionsItemSelected(item)
     }
 
     companion object {

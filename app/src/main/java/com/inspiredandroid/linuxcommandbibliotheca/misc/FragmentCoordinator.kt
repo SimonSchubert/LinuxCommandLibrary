@@ -6,9 +6,9 @@ import android.os.Bundle
 import android.support.v4.app.FragmentActivity
 import android.view.View
 import android.view.ViewGroup
-import com.inspiredandroid.linuxcommandbibliotheca.BasicGroupActivity
-import com.inspiredandroid.linuxcommandbibliotheca.CommandManActivity
 import com.inspiredandroid.linuxcommandbibliotheca.R
+import com.inspiredandroid.linuxcommandbibliotheca.activities.BasicGroupActivity
+import com.inspiredandroid.linuxcommandbibliotheca.activities.CommandManActivity
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.BasicGroupFragment
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.CommandManFragment
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command

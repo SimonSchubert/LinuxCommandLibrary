@@ -2,11 +2,8 @@ package com.inspiredandroid.linuxcommandbibliotheca.misc
 
 import android.content.Context
 import android.preference.PreferenceManager
-import com.inspiredandroid.linuxcommandbibliotheca.R
-import org.kotlin.mpp.mobile.CURRENT_DATABASE_VERSION
 import java.io.File
 import java.io.InputStream
-import java.util.*
 
 /* Copyright 2019 Simon Schubert
  *
@@ -30,6 +27,7 @@ object AppManager {
     private const val KEY_BOOKMARKCHANGED = "KEY_BOOKMARKCHANGED"
     private const val KEY_DATABASE_VERSION = "KEY_DATABASE_VERSION"
     private const val KEY_NEWS_DIALOG_STATE = "KEY_NEWS_DIALOG_STATE"
+    private const val CURRENT_DATABASE_VERSION = 5
 
     fun isDatabaseVersionUpToDate(context: Context): Boolean {
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
@@ -66,53 +64,19 @@ object AppManager {
     }
 
     /**
-     * get arraylist of ids
+     * Get list of ids
      *
      * @param context
      * @return
      */
-    fun getBookmarkIds(context: Context?): ArrayList<Long> {
-        val bookmarkIds = getBookmarkIdsChain(context).split(",".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
-        val ids = ArrayList<Long>()
-        for (id in bookmarkIds) {
-            if (!id.isEmpty()) {
-                ids.add(java.lang.Long.valueOf(id))
-            }
-        }
-        return ids
-    }
-
-    /**
-     * get list of ids divided by commas
-     *
-     * @param context
-     * @return
-     */
-    private fun getBookmarkIdsChain(context: Context?): String {
+    fun getBookmarkIds(context: Context?): MutableList<Long> {
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
-        var bookmarksChain = prefs.getString(KEY_BOOKMARKS, "") ?: ""
-        if (bookmarksChain.isNotEmpty()) {
-            bookmarksChain = bookmarksChain.substring(1)
-        }
-        return bookmarksChain
+        val bookmarksChain = prefs.getString(KEY_BOOKMARKS, "") ?: ""
+        return bookmarksChain.split(",".toRegex()).filter { it.isNotEmpty() }.map { it.toLong() }.toMutableList()
     }
 
     /**
-     * ad id to bookmark list
-     *
-     * @param context
-     * @param id
-     */
-    fun addBookmark(context: Context?, id: Long) {
-        val prefs = PreferenceManager.getDefaultSharedPreferences(context)
-        var bookmarksChain = prefs.getString(KEY_BOOKMARKS, "") ?: ""
-        bookmarksChain += ",$id"
-        prefs.edit().putString(KEY_BOOKMARKS, bookmarksChain).apply()
-        bookmarkHasChanged(context)
-    }
-
-    /**
-     * is id bookmarked
+     * Is id bookmarked
      *
      * @param context
      * @param id
@@ -123,24 +87,35 @@ object AppManager {
     }
 
     /**
-     * remove id from list
+     * Add id to bookmark list
+     *
+     * @param context
+     * @param id
+     */
+    fun addBookmark(context: Context?, id: Long) {
+        val bookmarksIds = getBookmarkIds(context)
+        bookmarksIds.add(id)
+        saveBookmarkIds(context, bookmarksIds)
+        markBookmarkChange(context)
+    }
+
+    /**
+     * Remove id from list
      *
      * @param context
      * @param id
      */
     fun removeBookmark(context: Context?, id: Long) {
         val bookmarksIds = getBookmarkIds(context)
-
         bookmarksIds.remove(id)
+        saveBookmarkIds(context, bookmarksIds)
+        markBookmarkChange(context)
+    }
 
+    private fun saveBookmarkIds(context: Context?, ids: MutableList<Long>) {
+        val bookmarksChain = ids.joinToString()
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
-        var bookmarksChain = ""
-        for (bookmark in bookmarksIds) {
-            bookmarksChain += ",$bookmark"
-        }
         prefs.edit().putString(KEY_BOOKMARKS, bookmarksChain).apply()
-
-        bookmarkHasChanged(context)
     }
 
     /**
@@ -148,7 +123,7 @@ object AppManager {
      *
      * @param context
      */
-    private fun bookmarkHasChanged(context: Context?) {
+    private fun markBookmarkChange(context: Context?) {
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
         prefs.edit().putBoolean(KEY_BOOKMARKCHANGED, true).apply()
     }
@@ -162,7 +137,9 @@ object AppManager {
     fun hasBookmarkChanged(context: Context?): Boolean {
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
         val changed = prefs.getBoolean(KEY_BOOKMARKCHANGED, false)
-        prefs.edit().putBoolean(KEY_BOOKMARKCHANGED, false).apply()
+        if (changed) {
+            prefs.edit().putBoolean(KEY_BOOKMARKCHANGED, false).apply()
+        }
         return changed
     }
 
@@ -185,7 +162,7 @@ object AppManager {
     fun createDatabase(context: Context) {
         val file = File(context.filesDir, Constants.REALM_DATABASE)
         file.delete()
-        file.copyInputStreamToFile(context.resources.openRawResource(R.raw.database))
+        // file.copyInputStreamToFile(context.resources.openRawResource(R.raw.database))
     }
 
     private fun File.copyInputStreamToFile(inputStream: InputStream) {

@@ -2,15 +2,12 @@ package com.inspiredandroid.linuxcommandbibliotheca.misc
 
 import android.app.Activity
 import android.content.Context
-import android.content.pm.PackageManager
 import android.support.v4.content.ContextCompat
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import android.view.inputmethod.InputMethodManager
-
 import com.inspiredandroid.linuxcommandbibliotheca.R
-
 import java.text.Normalizer
 
 /* Copyright 2019 Simon Schubert
@@ -27,21 +24,6 @@ import java.text.Normalizer
  * See the License for the specific language governing permissions and
  * limitations under the License.
 */
-
-/**
- * Check if app is installed
- *
- * @param packageName
- * @return
- */
-fun Context.isAppInstalled(packageName: String): Boolean {
-    return try {
-        packageManager.getPackageInfo(packageName, PackageManager.GET_ACTIVITIES)
-        true
-    } catch (e: PackageManager.NameNotFoundException) {
-        false
-    }
-}
 
 /**
  * Highlight the the appearance of search query inside originalText

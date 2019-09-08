@@ -1,8 +1,7 @@
-package com.inspiredandroid.linuxcommandbibliotheca
+package com.inspiredandroid.linuxcommandbibliotheca.activities
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.view.MenuItem
+import com.inspiredandroid.linuxcommandbibliotheca.R
 import kotlinx.android.synthetic.main.toolbar.*
 
 /* Copyright 2019 Simon Schubert
@@ -19,23 +18,14 @@ import kotlinx.android.synthetic.main.toolbar.*
  * See the License for the specific language governing permissions and
  * limitations under the License.
 */
-class BasicGroupActivity : AppCompatActivity() {
+class BasicGroupActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_basic_group)
-
         setSupportActionBar(toolbar)
-
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            android.R.id.home -> finish()
-        }
-
-        return super.onOptionsItemSelected(item)
     }
 
     companion object {
