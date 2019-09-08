@@ -4,8 +4,8 @@ import android.content.Context
 import android.content.Intent
 import android.support.test.InstrumentationRegistry.getInstrumentation
 import android.support.test.rule.ActivityTestRule
-import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity
-import com.inspiredandroid.linuxcommandbibliotheca.CommandManActivity
+import com.inspiredandroid.linuxcommandbibliotheca.activities.AboutActivity
+import com.inspiredandroid.linuxcommandbibliotheca.activities.CommandManActivity
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandManModel

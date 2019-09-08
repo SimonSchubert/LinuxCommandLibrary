@@ -3,17 +3,14 @@ package com.inspiredandroid.linuxcommandbibliotheca.fragments
 import android.app.SearchManager
 import android.content.Context
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.support.v7.widget.SearchView
 import android.view.*
-import com.inspiredandroid.linuxcommandbibliotheca.BasicGroupActivity
-import com.inspiredandroid.linuxcommandbibliotheca.BuildConfig
 import com.inspiredandroid.linuxcommandbibliotheca.R
+import com.inspiredandroid.linuxcommandbibliotheca.activities.BasicGroupActivity
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.BasicGroupAdapter
 import com.inspiredandroid.linuxcommandbibliotheca.models.BasicGroupModel
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel
 import io.realm.Case
-import io.realm.Realm
 import io.realm.RealmResults
 import io.realm.Sort
 import io.realm.kotlin.where
@@ -34,9 +31,8 @@ import java.text.Normalizer
  * See the License for the specific language governing permissions and
  * limitations under the License.
 */
-class BasicGroupFragment : Fragment() {
+class BasicGroupFragment : BaseFragment() {
 
-    lateinit var realm: Realm
     private lateinit var searchAdapter: BasicGroupAdapter
     private lateinit var groups: RealmResults<CommandGroupModel>
 
@@ -44,8 +40,6 @@ class BasicGroupFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
         setHasOptionsMenu(true)
-
-        realm = Realm.getDefaultInstance()
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -65,12 +59,6 @@ class BasicGroupFragment : Fragment() {
 
         searchAdapter = BasicGroupAdapter(groups)
         recyclerView.adapter = searchAdapter
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-
-        realm.close()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {

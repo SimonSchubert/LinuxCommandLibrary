@@ -1,4 +1,4 @@
-package com.inspiredandroid.linuxcommandbibliotheca
+package com.inspiredandroid.linuxcommandbibliotheca.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import android.view.View
+import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.BasicCategoryFragment
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.CommandsFragment
 import com.inspiredandroid.linuxcommandbibliotheca.fragments.DatabaseLoadingFragment
@@ -51,8 +52,8 @@ class NavigationActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_navigation)
 
+        setContentView(R.layout.activity_navigation)
         setSupportActionBar(toolbar)
 
         if (savedInstanceState == null) {
@@ -63,7 +64,7 @@ class NavigationActivity : AppCompatActivity() {
                     AppManager.setDatabaseVersionUpToDate(applicationContext)
                     uiThread {
                         showFragment(COMMANDS)
-                        navigation.visibility = View.VISIBLE
+                        navigation?.visibility = View.VISIBLE
                     }
                 }
             } else {

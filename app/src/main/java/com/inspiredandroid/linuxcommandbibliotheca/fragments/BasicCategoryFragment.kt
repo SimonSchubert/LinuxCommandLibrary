@@ -4,11 +4,10 @@ import android.app.SearchManager
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.support.v7.widget.SearchView
 import android.view.*
-import com.inspiredandroid.linuxcommandbibliotheca.AboutActivity
 import com.inspiredandroid.linuxcommandbibliotheca.R
+import com.inspiredandroid.linuxcommandbibliotheca.activities.AboutActivity
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.BasicCategoryAdapter
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.BasicGroupAdapter
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnClickListListener
@@ -16,7 +15,6 @@ import com.inspiredandroid.linuxcommandbibliotheca.misc.FragmentCoordinator
 import com.inspiredandroid.linuxcommandbibliotheca.models.BasicGroupModel
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandGroupModel
 import io.realm.Case
-import io.realm.Realm
 import io.realm.kotlin.where
 import kotlinx.android.synthetic.main.fragment_basic_category.*
 import java.text.Normalizer
@@ -35,9 +33,8 @@ import java.text.Normalizer
  * See the License for the specific language governing permissions and
  * limitations under the License.
 */
-class BasicCategoryFragment : Fragment(), OnClickListListener {
+class BasicCategoryFragment : BaseFragment(), OnClickListListener {
 
-    lateinit var realm: Realm
     private lateinit var adapter: BasicCategoryAdapter
     private lateinit var searchAdapter: BasicGroupAdapter
 
@@ -48,7 +45,6 @@ class BasicCategoryFragment : Fragment(), OnClickListListener {
 
         activity?.title = getString(R.string.fragment_bibliotheca_basic)
 
-        realm = Realm.getDefaultInstance()
         searchAdapter = BasicGroupAdapter(realm.where<CommandGroupModel>().findAll())
         adapter = BasicCategoryAdapter(realm.where<BasicGroupModel>().sort("position").findAll(), false)
         adapter.setOnListClickListener(this)
@@ -62,12 +58,6 @@ class BasicCategoryFragment : Fragment(), OnClickListListener {
         super.onViewCreated(view, savedInstanceState)
 
         recyclerView.adapter = adapter
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-
-        realm.close()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {

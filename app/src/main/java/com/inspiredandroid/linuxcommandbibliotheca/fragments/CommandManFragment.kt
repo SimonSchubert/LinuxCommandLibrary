@@ -13,13 +13,12 @@ import android.text.SpannableString
 import android.text.Spanned
 import android.text.style.ForegroundColorSpan
 import android.view.*
-import com.inspiredandroid.linuxcommandbibliotheca.CommandManActivity
 import com.inspiredandroid.linuxcommandbibliotheca.R
+import com.inspiredandroid.linuxcommandbibliotheca.activities.CommandManActivity
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.ManAdapter
 import com.inspiredandroid.linuxcommandbibliotheca.misc.*
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command
 import com.inspiredandroid.linuxcommandbibliotheca.models.CommandPage
-import io.realm.Realm
 import io.realm.kotlin.where
 import kotlinx.android.synthetic.main.fragment_command_man.*
 import org.jetbrains.anko.doAsync
@@ -40,10 +39,9 @@ import java.util.*
  * See the License for the specific language governing permissions and
  * limitations under the License.
 */
-class CommandManFragment : AppIndexFragment(), View.OnClickListener {
+class CommandManFragment : BaseFragment(), View.OnClickListener {
 
     private lateinit var adapter: ManAdapter
-    private lateinit var realm: Realm
     private var name: String = ""
     private var id: Long = 0
     private var currentIndexPosition: Int = 0
@@ -51,7 +49,7 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
     private var query = ""
 
     private fun fromHtml(html: String?): Spanned {
-        return if (Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY)
         } else {
             Html.fromHtml(html)
@@ -67,17 +65,13 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
 
         id = arguments?.getLong(CommandManActivity.EXTRA_COMMAND_ID) ?: 0L
 
-        realm = Realm.getDefaultInstance()
-
         adapter = createAdapter()
 
-        val realm = Realm.getDefaultInstance()
         val command = realm.where<Command>().equalTo(Command.ID, id).findFirst()
         if (command != null) {
             name = command.name
             activity?.title = name
         }
-        realm.close()
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -92,12 +86,6 @@ class CommandManFragment : AppIndexFragment(), View.OnClickListener {
 
         btnUp.setOnClickListener(this)
         btnDown.setOnClickListener(this)
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-
-        realm.close()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {

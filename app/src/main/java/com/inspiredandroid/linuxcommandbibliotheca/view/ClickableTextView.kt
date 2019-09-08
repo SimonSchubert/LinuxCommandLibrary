@@ -66,7 +66,7 @@ class ClickableTextView(context: Context, attrs: AttributeSet) : AppCompatTextVi
     private fun createSpannable(text: String, word: String): SpannableString {
         val spannableString = SpannableString(text)
 
-        ClickableTextView.addClickableSpanToPhrases(spannableString, text, word, mOnLinkClickListener)
+        addClickableSpanToPhrases(spannableString, text, word, mOnLinkClickListener)
 
         return spannableString
     }

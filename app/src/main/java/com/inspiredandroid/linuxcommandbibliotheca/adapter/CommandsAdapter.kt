@@ -13,7 +13,6 @@ import com.inspiredandroid.linuxcommandbibliotheca.misc.highlightQueryInsideText
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command
 import io.realm.RealmResults
 import kotlinx.android.synthetic.main.row_command.view.*
-import java.util.*
 
 /* Copyright 2019 Simon Schubert
  *
@@ -33,7 +32,7 @@ class CommandsAdapter(context: Context?,
                       private var realmResults: List<RealmResults<Command>>) : RecyclerView.Adapter<CommandsAdapter.ViewHolder>() {
 
     private var query = ""
-    private var bookmarkIds = ArrayList<Long>()
+    private var bookmarkIds = mutableListOf<Long>()
     private var listener: OnClickListListener? = null
 
     init {

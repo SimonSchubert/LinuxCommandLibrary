@@ -1,6 +1,8 @@
 package com.inspiredandroid.linuxcommandbibliotheca.fragments
 
+import android.os.Bundle
 import android.support.v4.app.Fragment
+import io.realm.Realm
 
 /* Copyright 2019 Simon Schubert
  *
@@ -16,7 +18,20 @@ import android.support.v4.app.Fragment
  * See the License for the specific language governing permissions and
  * limitations under the License.
 */
-abstract class AppIndexFragment : Fragment() {
+abstract class BaseFragment : Fragment() {
 
+    lateinit var realm: Realm
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        realm = Realm.getDefaultInstance()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
+        realm.close()
+    }
 
 }
