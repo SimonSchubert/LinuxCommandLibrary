@@ -3,8 +3,8 @@ package com.inspiredandroid.linuxcommandbibliotheca.fragments
 import android.app.SearchManager
 import android.content.Context
 import android.os.Bundle
-import android.support.v7.widget.SearchView
 import android.view.*
+import androidx.appcompat.widget.SearchView
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.activities.BasicGroupActivity
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.BasicGroupAdapter
@@ -62,10 +62,10 @@ class BasicGroupFragment : BaseFragment() {
         recyclerView.adapter = searchAdapter
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
-        inflater?.inflate(R.menu.search, menu)
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.search, menu)
 
-        val item = menu?.findItem(R.id.search)
+        val item = menu.findItem(R.id.search)
         val searchView = item?.actionView as SearchView
 
         activity?.let {

@@ -2,7 +2,6 @@ package com.inspiredandroid.linuxcommandbibliotheca.view
 
 import android.content.Context
 import android.graphics.Color
-import android.support.v7.widget.AppCompatTextView
 import android.text.SpannableString
 import android.text.Spanned
 import android.text.TextPaint
@@ -10,6 +9,7 @@ import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
 import android.util.AttributeSet
 import android.view.View
+import androidx.appcompat.widget.AppCompatTextView
 
 import com.inspiredandroid.linuxcommandbibliotheca.interfaces.OnClickLinkListener
 

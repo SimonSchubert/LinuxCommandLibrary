@@ -1,7 +1,7 @@
 package com.inspiredandroid.linuxcommandbibliotheca.activities
 
-import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 
 /* Copyright 2019 Simon Schubert
  *

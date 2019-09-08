@@ -2,11 +2,11 @@ package com.inspiredandroid.linuxcommandbibliotheca.misc
 
 import android.app.Activity
 import android.content.Context
-import android.support.v4.content.ContextCompat
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import android.view.inputmethod.InputMethodManager
+import androidx.core.content.ContextCompat
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import java.text.Normalizer
 

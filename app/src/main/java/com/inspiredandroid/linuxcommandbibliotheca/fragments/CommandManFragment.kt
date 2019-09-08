@@ -5,14 +5,14 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.support.v4.content.ContextCompat
-import android.support.v7.widget.SearchView
 import android.text.Html
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.Spanned
 import android.text.style.ForegroundColorSpan
 import android.view.*
+import androidx.appcompat.widget.SearchView
+import androidx.core.content.ContextCompat
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.activities.CommandManActivity
 import com.inspiredandroid.linuxcommandbibliotheca.adapter.ManAdapter
@@ -88,10 +88,10 @@ class CommandManFragment : BaseFragment(), View.OnClickListener {
         btnDown.setOnClickListener(this)
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
-        inflater?.inflate(R.menu.search_bookmark, menu)
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.search_bookmark, menu)
 
-        val item = menu?.findItem(R.id.search)
+        val item = menu.findItem(R.id.search)
         val searchView = item?.actionView as SearchView
 
         activity?.let {
@@ -132,8 +132,8 @@ class CommandManFragment : BaseFragment(), View.OnClickListener {
         bookmarkItem.setIcon(if (AppManager.hasBookmark(context, id)) R.drawable.ic_bookmark_black_24dp else R.drawable.ic_bookmark_border_black_24dp)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        when (item?.itemId) {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
             R.id.bookmark -> {
                 toggleBookmark()
                 activity?.invalidateOptionsMenu()
