@@ -1,7 +1,7 @@
 package com.inspiredandroid.linuxcommandbibliotheca.fragments
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import io.realm.Realm
 
 /* Copyright 2019 Simon Schubert

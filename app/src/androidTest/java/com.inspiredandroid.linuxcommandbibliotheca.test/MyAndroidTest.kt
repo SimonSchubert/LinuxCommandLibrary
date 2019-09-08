@@ -7,8 +7,8 @@ import android.support.test.rule.ActivityTestRule
 import com.inspiredandroid.linuxcommandbibliotheca.activities.AboutActivity
 import com.inspiredandroid.linuxcommandbibliotheca.activities.CommandManActivity
 import com.inspiredandroid.linuxcommandbibliotheca.R
+import com.inspiredandroid.linuxcommandbibliotheca.models.BasicCommand
 import com.inspiredandroid.linuxcommandbibliotheca.models.Command
-import com.inspiredandroid.linuxcommandbibliotheca.models.CommandManModel
 import io.realm.Realm
 import io.realm.kotlin.where
 import org.hamcrest.MatcherAssert.assertThat
@@ -65,17 +65,16 @@ class MyAndroidTest {
 
         val missingCommands = ArrayList<String>()
         for (id in ids) {
-            val array = context.resources.getStringArray(id)
-            addMissingMansToList(missingCommands, *array)
+            val array = context.resources.getStringArray(id).toList()
+            addMissingMansToList(missingCommands, array)
         }
 
-        for (man in realm.where<CommandManModel>().findAll()) {
-            addMissingMansToList(missingCommands, man.man)
+        for (man in realm.where<BasicCommand>().findAll()) {
+            addMissingMansToList(missingCommands, man.mans.split(","))
         }
 
         val missing = getReadableMissingCommands(missingCommands)
 
-        //assertTrue("man pages not found: " + missing, missing.isEmpty());
         assertThat("man pages not found: $missing", missing.isEmpty())
     }
 
@@ -85,7 +84,7 @@ class MyAndroidTest {
      * @param missingCommands
      * @param mans
      */
-    private fun addMissingMansToList(missingCommands: MutableList<String>, vararg mans: String) {
+    private fun addMissingMansToList(missingCommands: MutableList<String>, mans: List<String>) {
         for (man in mans) {
             val command = realm.where<Command>().equalTo(Command.NAME, man).findFirst()
             if (command == null) {
