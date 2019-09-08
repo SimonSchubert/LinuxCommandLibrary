@@ -2,13 +2,11 @@ buildscript {
     repositories {
         jcenter()
         mavenCentral()
-        google()
         maven("https://plugins.gradle.org/m2/")
     }
     dependencies {
-        classpath("io.realm:realm-gradle-plugin:5.10.0")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.30")
-        classpath("com.google.gms:google-services:4.2.0")
+        classpath("io.realm:realm-gradle-plugin:5.15.0")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.50")
     }
 }
 
@@ -21,10 +19,6 @@ plugins {
     id("kotlin-android")
     kotlin("android.extensions")
     id("kotlin-kapt")
-}
-
-repositories {
-    maven("https://maven.google.com")
 }
 
 android {
@@ -45,8 +39,8 @@ android {
 
     buildTypes {
         getByName("debug") {
-            isShrinkResources = true
-            isMinifyEnabled = true
+            isShrinkResources = false
+            isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
         }
         getByName("release") {
@@ -68,9 +62,6 @@ android {
 }
 
 dependencies {
-    implementation(project(":SharedCode"))
-    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-
     implementation("org.jetbrains.anko:anko:0.10.8") {
         exclude(module = "kotlin-stdlib")
     }
@@ -83,9 +74,9 @@ dependencies {
     implementation("com.android.support:support-vector-drawable:28.0.0")
     implementation("io.realm:android-adapters:3.1.0")
     implementation("com.futuremind.recyclerfastscroll:fastscroll:0.2.5")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.50")
     testImplementation("junit:junit:4.12")
     androidTestImplementation("com.android.support.test:runner:1.0.2")
     androidTestImplementation("com.android.support.test:rules:1.0.2")
     androidTestImplementation("com.android.support:support-annotations:28.0.0")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.30")
 }
