@@ -6,5 +6,4 @@
 .idea/
 .gradle/
 local.properties
-*.realm
 google-services.json
