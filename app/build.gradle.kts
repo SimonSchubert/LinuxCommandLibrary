@@ -28,8 +28,8 @@ android {
         applicationId = "com.inspiredandroid.linuxcommandbibliotheca"
         minSdkVersion(17)
         targetSdkVersion(29)
-        versionCode = 64
-        versionName = "2.0.2"
+        versionCode = 65
+        versionName = "2.1.0"
 
         resConfigs(listOf("en"))
 
