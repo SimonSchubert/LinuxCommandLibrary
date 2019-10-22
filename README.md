@@ -3,7 +3,7 @@
 [![Paypal](https://img.shields.io/badge/paypal-donate-blue.svg?logo=paypal&style=flat)](https://paypal.me/SimonSchubert)
 
 ## Linux Command Library for Android
-The app currently has **2378** manual pages, **1351** one-line scripts and a bunch of general terminal tips.
+The app currently has **3203** manual pages, **1351** one-line scripts and a bunch of general terminal tips. It works 100% offline, doesn't need an internet connection and has no tracking software.
 
 [![Play Store](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/play_store_badge.png)](https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca)
 
@@ -23,14 +23,25 @@ The app currently has **2378** manual pages, **1351** one-line scripts and a bun
 * Files/Folders
 * Search/Find
 * Network
-* System Information
-* System Control
+* System information
+* System control
 * Video/Audio
-* Package Manager
-* Terminal Games
-* Hacking Tools
+* Package manager
+* Terminal games
+* Hacking tools
 * One-liners
 * Git
+* SSH
+
+### Tips
+
+* Cursor navigation
+* Tab completion
+* Special characters in commands
+* Redirection
+* Clear and reset the terminal
+* List of recent commands
+* Close a frozen window/application
 
 ### Goals
 
