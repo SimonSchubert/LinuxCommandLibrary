@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -8,9 +7,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingBottom="10dp"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp">
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp">
 
         <TextView
             style="@style/Title2"
@@ -32,132 +31,74 @@
 
         <HorizontalScrollView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/btnRemote"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:drawableTop="@drawable/ic_remote"
+                    android:gravity="center_horizontal"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:text="Remote Control" />
 
-                    <ImageButton
-                        android:id="@+id/btnRemote"
-                        android:layout_width="64dp"
-                        android:layout_height="64dp"
-                        android:layout_gravity="center_horizontal"
-                        android:background="@null"
-                        app:srcCompat="@drawable/ic_remote" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginLeft="4dp"
-                        android:layout_marginRight="4dp"
-                        android:gravity="center_horizontal"
-                        android:maxWidth="100dp"
-                        android:text="Home Remote Control" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/btnQuiz"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:drawableTop="@drawable/ic_quiz"
+                    android:gravity="center_horizontal"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:text="2 Player Quiz" />
 
-                    <ImageButton
-                        android:id="@+id/btnAncientGenocide"
-                        android:layout_width="64dp"
-                        android:layout_height="64dp"
-                        android:layout_gravity="center_horizontal"
-                        android:background="@null"
-                        app:srcCompat="@drawable/ic_ancient_genocide" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginLeft="4dp"
-                        android:layout_marginRight="4dp"
-                        android:gravity="center_horizontal"
-                        android:maxWidth="120dp"
-                        android:text="Ancient Genocide" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/btnBraincup"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:drawableTop="@drawable/ic_braincup"
+                    android:gravity="center_horizontal"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:text="Braincup" />
 
-                    <ImageButton
-                        android:id="@+id/btnOrcgenocide"
-                        android:layout_width="64dp"
-                        android:layout_height="64dp"
-                        android:layout_gravity="center_horizontal"
-                        android:background="@null"
-                        app:srcCompat="@drawable/ic_org_genocide" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginLeft="4dp"
-                        android:layout_marginRight="4dp"
-                        android:gravity="center_horizontal"
-                        android:maxWidth="120dp"
-                        android:text="Orc Genocide" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/btnAncientGenocide"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:drawableTop="@drawable/ic_ancient_genocide"
+                    android:gravity="center_horizontal"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:text="Ancient Genocide" />
 
-                    <ImageButton
-                        android:id="@+id/btnQuiz"
-                        android:layout_width="64dp"
-                        android:layout_height="64dp"
-                        android:layout_gravity="center_horizontal"
-                        android:background="@drawable/ic_quiz" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginLeft="4dp"
-                        android:layout_marginRight="4dp"
-                        android:gravity="center_horizontal"
-                        android:maxWidth="120dp"
-                        android:text="2 Player Quiz" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/btnOrcgenocide"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:drawableTop="@drawable/ic_org_genocide"
+                    android:gravity="center_horizontal"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:text="Orc Genocide" />
 
-                    <ImageButton
-                        android:id="@+id/btnBimo"
-                        android:layout_width="64dp"
-                        android:layout_height="64dp"
-                        android:layout_gravity="center_horizontal"
-                        android:background="@null"
-                        app:srcCompat="@drawable/ic_bimo" />
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginLeft="4dp"
-                        android:layout_marginRight="4dp"
-                        android:gravity="center_horizontal"
-                        android:maxWidth="120dp"
-                        android:text="Bimo" />
-                </LinearLayout>
             </LinearLayout>
         </HorizontalScrollView>
 
