@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Constants
+import com.inspiredandroid.linuxcommandbibliotheca.misc.showPlayStoreActivity
 import kotlinx.android.synthetic.main.fragment_about.*
 
 /* Copyright 2019 Simon Schubert
@@ -35,33 +36,20 @@ class AboutFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        btnBimo.setOnClickListener { startAppMarketActivity(Constants.PACKAGE_BIMO) }
-        btnOrcgenocide.setOnClickListener { startAppMarketActivity(Constants.PACKAGE_ORCGENOCIDE) }
-        btnAncientGenocide.setOnClickListener { startAppMarketActivity(Constants.PACKAGE_ANCIENTGENOCIDE) }
-        btnQuiz.setOnClickListener { startAppMarketActivity(Constants.PACKAGE_QUIZ) }
-        btnRemote.setOnClickListener { startAppMarketActivity(Constants.PACKAGE_LINUXREMOTE) }
-        btnRate.setOnClickListener { startAppMarketActivity(Constants.PACKAGE_COMMANDLIBRARY) }
-        btnIcons8.setOnClickListener { openIcons8Website() }
+        btnBimo.setOnClickListener { context?.showPlayStoreActivity(Constants.PACKAGE_BIMO) }
+        btnOrcgenocide.setOnClickListener { context?.showPlayStoreActivity(Constants.PACKAGE_ORCGENOCIDE) }
+        btnAncientGenocide.setOnClickListener { context?.showPlayStoreActivity(Constants.PACKAGE_ANCIENTGENOCIDE) }
+        btnQuiz.setOnClickListener { context?.showPlayStoreActivity(Constants.PACKAGE_QUIZ) }
+        btnRemote.setOnClickListener { context?.showPlayStoreActivity(Constants.PACKAGE_LINUXREMOTE) }
+        btnRate.setOnClickListener { context?.showPlayStoreActivity(Constants.PACKAGE_COMMANDLIBRARY) }
+        btnIcons8.setOnClickListener { showIcons8Website() }
     }
 
-    private fun openIcons8Website() {
+    private fun showIcons8Website() {
         try {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.icons8.com"))
             startActivity(intent)
         } catch (ignored: ActivityNotFoundException) {
-        }
-    }
-
-    /**
-     * Show app in the Play Store. If Play Store is not installed, show it in the browser instead.
-     *
-     * @param appPackageName package mName
-     */
-    private fun startAppMarketActivity(appPackageName: String) {
-        try {
-            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?position=$appPackageName")))
-        } catch (e: ActivityNotFoundException) {
-            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?position=$appPackageName")))
         }
     }
 }
