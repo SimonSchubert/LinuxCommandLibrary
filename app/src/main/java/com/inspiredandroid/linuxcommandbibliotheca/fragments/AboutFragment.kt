@@ -36,7 +36,7 @@ class AboutFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        btnBimo.setOnClickListener { context?.showPlayStoreActivity(Constants.PACKAGE_BIMO) }
+        btnBraincup.setOnClickListener { context?.showPlayStoreActivity(Constants.PACKAGE_BRAINCUP) }
         btnOrcgenocide.setOnClickListener { context?.showPlayStoreActivity(Constants.PACKAGE_ORCGENOCIDE) }
         btnAncientGenocide.setOnClickListener { context?.showPlayStoreActivity(Constants.PACKAGE_ANCIENTGENOCIDE) }
         btnQuiz.setOnClickListener { context?.showPlayStoreActivity(Constants.PACKAGE_QUIZ) }

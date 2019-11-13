@@ -27,7 +27,7 @@ object Constants {
     const val PACKAGE_LINUXREMOTE = "com.inspiredandroid.linuxcontrolcenter"
     const val PACKAGE_ORCGENOCIDE = "com.inspiredandroid.orcgenocide"
     const val PACKAGE_ANCIENTGENOCIDE = "com.inspiredandroid.ancientgenocide"
-    const val PACKAGE_BIMO = "com.inspiredandroid.bimo"
+    const val PACKAGE_BRAINCUP = "com.inspiredandroid.braincup"
     const val PACKAGE_QUIZ = "com.inspiredandroid.twoplayerquizultimate"
     const val PACKAGE_COMMANDLIBRARY = "com.inspiredandroid.linuxcommandbibliotheca"
 }
