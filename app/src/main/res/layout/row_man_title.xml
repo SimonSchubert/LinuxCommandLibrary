@@ -8,4 +8,5 @@
     android:textColor="@color/white"
     android:textSize="20sp"
     android:textStyle="bold"
-    tool:text="Group" />
+    tool:text="Group"
+    android:background="?android:attr/selectableItemBackground"/>
