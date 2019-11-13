@@ -11,6 +11,7 @@ import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Constants
 import com.inspiredandroid.linuxcommandbibliotheca.misc.highlightQueryInsideText
+import com.inspiredandroid.linuxcommandbibliotheca.misc.showPlayStoreActivity
 import com.inspiredandroid.linuxcommandbibliotheca.models.BasicCommand
 import com.inspiredandroid.linuxcommandbibliotheca.models.BasicGroup
 import io.realm.RealmResults
@@ -168,25 +169,11 @@ class BasicGroupAdapter(private var groups: RealmResults<BasicGroup>) : Recycler
     inner class AdViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun bind() {
             itemView.btnQuiz.setOnClickListener {
-                startAppMarketActivity(it.context, Constants.PACKAGE_QUIZ)
+                it.context.showPlayStoreActivity(Constants.PACKAGE_QUIZ)
             }
             itemView.btnRemote.setOnClickListener {
-                startAppMarketActivity(it.context, Constants.PACKAGE_LINUXREMOTE)
-            }
-        }
-
-        /**
-         * Show app in the Play Store. If Play Store is not installed, show it in the browser instead.
-         *
-         * @param appPackageName package mName
-         */
-        private fun startAppMarketActivity(context: Context, appPackageName: String) {
-            try {
-                context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?position=$appPackageName&referrer=utm_source%3Dlinuxapp%26utm_medium%3Dbasicgroup")))
-            } catch (e: android.content.ActivityNotFoundException) {
-                context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?position=$appPackageName&referrer=utm_source%3Dlinuxapp%26utm_medium%3Dbasicgroup")))
+                it.context.showPlayStoreActivity(Constants.PACKAGE_LINUXREMOTE)
             }
         }
     }
-
 }

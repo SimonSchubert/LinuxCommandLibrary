@@ -1,7 +1,10 @@
 package com.inspiredandroid.linuxcommandbibliotheca.misc
 
 import android.app.Activity
+import android.content.ActivityNotFoundException
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
@@ -55,10 +58,26 @@ fun String.highlightQueryInsideText(context: Context?, query: String): SearchRes
     return SearchResult(highlighted, indexes)
 }
 
+/**
+ * Hide the softkeyboard
+ */
 fun Activity.hideKeyboard() {
     currentFocus?.let {
         val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(it.windowToken, 0)
+    }
+}
+
+/**
+ * Show app details page in the Play Store. If Play Store is not installed, show it in the browser instead.
+ *
+ * @param appPackageName package mName
+ */
+fun Context.showPlayStoreActivity(appPackageName: String) {
+    try {
+        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=$appPackageName")))
+    } catch (e: ActivityNotFoundException) {
+        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=$appPackageName")))
     }
 }
 
