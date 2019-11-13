@@ -9,6 +9,7 @@ import androidx.fragment.app.DialogFragment
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.misc.AppManager
 import com.inspiredandroid.linuxcommandbibliotheca.misc.Constants
+import com.inspiredandroid.linuxcommandbibliotheca.misc.showPlayStoreActivity
 
 /* Copyright 2019 Simon Schubert
  *
@@ -30,18 +31,9 @@ class RateDialogFragment : DialogFragment() {
         return AlertDialog.Builder(requireContext())
                 .setTitle(R.string.dialog_rate_title)
                 .setMessage(R.string.dialog_rate_message)
-                .setPositiveButton(R.string.dialog_rate_rate_now) { _, _ -> startAppMarketActivity() }
+                .setPositiveButton(R.string.dialog_rate_rate_now) { _, _ -> context?.showPlayStoreActivity(Constants.PACKAGE_COMMANDLIBRARY) }
                 .setNeutralButton(R.string.dialog_rate_later, null)
                 .setNegativeButton(R.string.dialog_rate_no_thanks) { _, _ -> AppManager.disableRateDialog(context) }.create()
-    }
-
-    private fun startAppMarketActivity() {
-        val appPackageName = Constants.PACKAGE_COMMANDLIBRARY
-        try {
-            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?position=$appPackageName")))
-        } catch (e: android.content.ActivityNotFoundException) {
-            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?position=$appPackageName")))
-        }
     }
 
     companion object {
