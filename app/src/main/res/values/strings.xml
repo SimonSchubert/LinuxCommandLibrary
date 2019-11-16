@@ -155,6 +155,22 @@
 
     <string name="fragment_tips_redirection_code_error_output">">_ rm -vf folder1 file1 > out.txt 2> err.txt"</string>
     <string name="share">Share</string>
+    <string name="_1_file_type_for_a_regular_file_d_for_a_directory_l_for_a_symbolic_link"><b>1</b> = File type: \'-\' for a regular file, \'d\' for a directory, \'l\' for a symbolic link.\n<b>2</b> = Owner permission\n<b>3</b> = Group permission\n<b>4</b> = Other permission</string>
+    <string name="part_2_4_consist_of_each_3_characters_r_read_w_write_x_execute_or_no_permission">Part 2–4 consist of each 3 characters <b>\'r\' = read</b>, <b>\'w\' = write</b>, <b>\'x\' = execute</b> or <b>\'-\' = no permission</b>.</string>
+    <string name="ctrl_u_clear_everything_before_the_cursor"><b>ctrl + u</b> = Clear everything before the cursor</string>
+    <string name="ctrl_a_to_beginning_of_line"><b>ctrl + a</b> = To beginning of line</string>
+    <string name="ctrl_e_to_end_of_line"><b>ctrl + e</b> = To end of line</string>
+    <string name="ctrl_b_back_one_word"><b>ctrl + b</b> = Back one word</string>
+    <string name="ctrl_f_forward_one_word"><b>ctrl + f</b> = Forward one word</string>
+    <string name="ctrl_w_cut_last_word"><b>ctrl + w</b> = Cut last word</string>
+    <string name="ctrl_k_clear_everything_after_cursor"><b>ctrl + k</b> = Clear everything after cursor</string>
+    <string name="ctrl_undo"><b>ctrl + _</b> = Undo</string>
+    <string name="permission_types">Permission types:\n<b>r</b> = Read\n<b>w</b> = Write\n<b>x</b> = Execute</string>
+    <string name="permission_groups">Permission groups:\n<b>u</b> = Owner\n<b>g</b> = Group\n<b>o</b> = Other</string>
+    <string name="binary_explanation">The first number represents the <b>owner</b> permission, the second the <b>group</b> permissions and the last number for all other users. The numbers are a binary representation of the <b>rwx</b> string.</string>
+    <string name="or_use_binary_references_to_set_permissions">Set file permissions via binary references</string>
+    <string name="binaries"><b>r = 4</b>\n<b>w = 2</b>\n<b>x = 1</b></string>
+
     <string-array name="fragment_tips_redirection_code_error_output_array">
         <item>rm</item>
     </string-array>
