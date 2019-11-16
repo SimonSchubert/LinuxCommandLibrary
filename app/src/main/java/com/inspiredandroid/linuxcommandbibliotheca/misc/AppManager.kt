@@ -28,7 +28,7 @@ object AppManager {
     private const val KEY_BOOKMARKCHANGED = "KEY_BOOKMARKCHANGED"
     private const val KEY_DATABASE_VERSION = "KEY_DATABASE_VERSION"
     private const val KEY_NEWS_DIALOG_STATE = "KEY_NEWS_DIALOG_STATE"
-    private const val CURRENT_DATABASE_VERSION = 7
+    private const val CURRENT_DATABASE_VERSION = 8
 
     fun isDatabaseVersionUpToDate(context: Context): Boolean {
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
