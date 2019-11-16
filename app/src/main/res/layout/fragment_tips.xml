@@ -120,55 +120,161 @@
             style="@style/Title1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="View file permissions" />
+
+        <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
+            style="@style/Code1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ls -l [file]" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            custom:srcCompat="@drawable/permission_info" />
+
+        <TextView
+            style="@style/Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_1_file_type_for_a_regular_file_d_for_a_directory_l_for_a_symbolic_link" />
+
+        <TextView
+            style="@style/Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/part_2_4_consist_of_each_3_characters_r_read_w_write_x_execute_or_no_permission" />
+
+        <TextView
+            style="@style/Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In the shown example the user has read, write and execute permission but the group and other has only read permissions." />
+
+        <TextView
+            style="@style/Title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modify file permissions" />
+
+        <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
+            style="@style/Code1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="chmod [modification] [file]" />
+
+        <TextView
+            style="@style/Body1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Example: Give the group read and write access to the test.txt file." />
+
+        <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
+            style="@style/Code1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="chmod g+rw test.txt" />
+
+        <TextView
+            style="@style/Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/permission_groups" />
+
+        <TextView
+            style="@style/Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/permission_types" />
+
+        <TextView
+            style="@style/Body1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Operators for the modification command are + (plus) and – (minus)." />
+
+        <TextView
+            style="@style/Title1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/or_use_binary_references_to_set_permissions" />
+
+        <TextView
+            style="@style/Body1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Example: Give the owner read and write permission, the group read permission and no permission to other." />
+
+        <com.inspiredandroid.linuxcommandbibliotheca.view.TerminalTextView
+            style="@style/Code1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="chmod 640 test.txt" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/binary_explanation"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/binaries"/>
+
+        <TextView
+            style="@style/Title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Cursor navigation" />
 
         <TextView
             style="@style/Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ctrl + u = Clear everything before the cursor" />
+            android:text="@string/ctrl_u_clear_everything_before_the_cursor" />
 
         <TextView
             style="@style/Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ctrl + a = To beginning of line" />
+            android:text="@string/ctrl_a_to_beginning_of_line" />
 
         <TextView
             style="@style/Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ctrl + e = To end of line" />
+            android:text="@string/ctrl_e_to_end_of_line" />
 
         <TextView
             style="@style/Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ctrl + b = Back one word" />
+            android:text="@string/ctrl_b_back_one_word" />
 
         <TextView
             style="@style/Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ctrl + f = Forward one word" />
+            android:text="@string/ctrl_f_forward_one_word" />
 
         <TextView
             style="@style/Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ctrl + w = Cut last word" />
+            android:text="@string/ctrl_w_cut_last_word" />
 
         <TextView
             style="@style/Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ctrl + k = Clear everything after cursor" />
+            android:text="@string/ctrl_k_clear_everything_after_cursor" />
 
         <TextView
             style="@style/Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ctrl + _ = Undo" />
+            android:text="@string/ctrl_undo" />
 
         <TextView
             style="@style/Title1"
