@@ -12,7 +12,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView9"
+        app:layout_constraintBottom_toBottomOf="@+id/tvRemote"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/face" />
@@ -31,54 +31,33 @@
         android:text="Hi, please have a look at my other projects, too. Thanks, Simon."
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView8"
-        app:layout_constraintEnd_toStartOf="@+id/btnRemote"
+        app:layout_constraintEnd_toStartOf="@+id/tvRemote"
         app:layout_constraintStart_toEndOf="@+id/imageView8"
         app:layout_constraintTop_toTopOf="@+id/imageView8" />
 
-    <ImageButton
-        android:id="@+id/btnQuiz"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:background="@null"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_quiz" />
-
-    <ImageButton
-        android:id="@+id/btnRemote"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:background="@null"
-        app:layout_constraintEnd_toStartOf="@+id/btnQuiz"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_remote" />
-
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/tvQuiz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:drawableTop="@drawable/ic_quiz"
+        android:gravity="center"
         android:text="Quiz"
-        app:layout_constraintEnd_toEndOf="@+id/btnQuiz"
-        app:layout_constraintStart_toStartOf="@+id/btnQuiz"
-        app:layout_constraintTop_toBottomOf="@+id/btnQuiz" />
+        android:background="?android:attr/selectableItemBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/tvRemote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="8dp"
+        android:drawableTop="@drawable/ic_remote"
         android:text="Linux Remote"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btnRemote"
-        app:layout_constraintStart_toStartOf="@+id/btnRemote"
-        app:layout_constraintTop_toBottomOf="@+id/btnRemote" />
+        android:background="?android:attr/selectableItemBackground"
+        app:layout_constraintEnd_toStartOf="@+id/tvQuiz"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
