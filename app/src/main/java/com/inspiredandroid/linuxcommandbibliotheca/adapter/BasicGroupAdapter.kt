@@ -2,7 +2,6 @@ package com.inspiredandroid.linuxcommandbibliotheca.adapter
 
 import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -168,10 +167,10 @@ class BasicGroupAdapter(private var groups: RealmResults<BasicGroup>) : Recycler
 
     inner class AdViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun bind() {
-            itemView.btnQuiz.setOnClickListener {
+            itemView.tvQuiz.setOnClickListener {
                 it.context.showPlayStoreActivity(Constants.PACKAGE_QUIZ)
             }
-            itemView.btnRemote.setOnClickListener {
+            itemView.tvRemote.setOnClickListener {
                 it.context.showPlayStoreActivity(Constants.PACKAGE_LINUXREMOTE)
             }
         }
