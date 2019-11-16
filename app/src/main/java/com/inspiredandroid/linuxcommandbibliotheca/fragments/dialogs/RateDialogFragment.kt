@@ -2,8 +2,6 @@ package com.inspiredandroid.linuxcommandbibliotheca.fragments.dialogs
 
 import android.app.AlertDialog
 import android.app.Dialog
-import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.DialogFragment
 import com.inspiredandroid.linuxcommandbibliotheca.R
