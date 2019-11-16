@@ -6,7 +6,7 @@ buildscript {
     }
     dependencies {
         classpath("io.realm:realm-gradle-plugin:6.0.1")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.50")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.60")
     }
 }
 
@@ -73,7 +73,7 @@ dependencies {
     implementation("androidx.vectordrawable:vectordrawable:1.1.0")
     implementation("io.realm:android-adapters:3.1.0")
     implementation("com.futuremind.recyclerfastscroll:fastscroll:0.2.5")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.50")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.60")
     testImplementation("junit:junit:4.12")
     androidTestImplementation("androidx.test:runner:1.2.0")
     androidTestImplementation("androidx.test:rules:1.2.0")
