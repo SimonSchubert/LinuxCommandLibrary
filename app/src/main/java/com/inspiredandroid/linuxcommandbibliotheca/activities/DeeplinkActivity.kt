@@ -36,7 +36,7 @@ class DeeplinkActivity : AppCompatActivity() {
         setContentView(R.layout.activity_deeplink)
         setSupportActionBar(toolbar)
 
-        if (AppManager.missingDatabase(this)) {
+        if (AppManager.isDatabaseMissing(this)) {
             showLoadingFragment()
             doAsync {
 

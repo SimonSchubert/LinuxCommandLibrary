@@ -4,7 +4,6 @@ import android.content.Context
 import android.preference.PreferenceManager
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import java.io.File
-import java.io.InputStream
 
 /* Copyright 2019 Simon Schubert
  *
@@ -30,11 +29,17 @@ object AppManager {
     private const val KEY_NEWS_DIALOG_STATE = "KEY_NEWS_DIALOG_STATE"
     private const val CURRENT_DATABASE_VERSION = 8
 
+    /**
+     * Check if latest database version is copied to app storage
+     */
     fun isDatabaseVersionUpToDate(context: Context): Boolean {
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
         return prefs.getInt(KEY_DATABASE_VERSION, 0) == CURRENT_DATABASE_VERSION
     }
 
+    /**
+     * Mark latest database version as up to date
+     */
     fun setDatabaseVersionUpToDate(context: Context) {
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
         val editor = prefs.edit()
@@ -42,6 +47,26 @@ object AppManager {
         editor.apply()
     }
 
+    /**
+     * Copy realm database from resource to app storage
+     */
+    fun createDatabase(context: Context) {
+        val file = File(context.filesDir, Constants.REALM_DATABASE)
+        file.delete()
+        file.copyInputStreamToFile(context.resources.openRawResource(R.raw.database))
+    }
+
+    /**
+     * Does realm database exist in app storage
+     */
+    fun isDatabaseMissing(context: Context): Boolean {
+        val file = File(context.filesDir.toString() + "/" + Constants.REALM_DATABASE)
+        return !file.exists()
+    }
+
+    /**
+     * Show every 10th time until user hits "Rate" or "Don't show again" button
+     */
     fun shouldShowRateDialog(context: Context?): Boolean {
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
         if (prefs.getInt(KEY_RATING_DIALOG_STATE, 0) == 0) {
@@ -57,6 +82,9 @@ object AppManager {
         return false
     }
 
+    /**
+     * Don't show dialog again
+     */
     fun disableRateDialog(context: Context?) {
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
         val edit = prefs.edit()
@@ -101,7 +129,7 @@ object AppManager {
     }
 
     /**
-     * Remove position from list
+     * Remove id from list
      *
      * @param context
      * @param id
@@ -161,24 +189,5 @@ object AppManager {
         }
         return false
         */
-    }
-
-    fun createDatabase(context: Context) {
-        val file = File(context.filesDir, Constants.REALM_DATABASE)
-        file.delete()
-        file.copyInputStreamToFile(context.resources.openRawResource(R.raw.database))
-    }
-
-    private fun File.copyInputStreamToFile(inputStream: InputStream) {
-        inputStream.use { input ->
-            this.outputStream().use { fileOut ->
-                input.copyTo(fileOut)
-            }
-        }
-    }
-
-    fun missingDatabase(context: Context): Boolean {
-        val file = File(context.filesDir.toString() + "/" + Constants.REALM_DATABASE)
-        return !file.exists()
     }
 }
