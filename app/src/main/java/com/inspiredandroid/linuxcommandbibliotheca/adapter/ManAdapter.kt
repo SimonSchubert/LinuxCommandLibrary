@@ -146,22 +146,24 @@ class ManAdapter(private var pages: ArrayList<String>, var parts: ArrayList<Arra
         val realm = Realm.getDefaultInstance()
 
         // match "command(category)" e.g: gzip(1)
-        val p = Pattern.compile("[[:graph:]]+\\s?\\(\\w\\)")
-        val m = p.matcher(description)
+        val pattern = Pattern.compile("[[:graph:]]+\\s?\\(\\w\\)")
+        val matcher = pattern.matcher(description)
 
         // loop results and add if command exists in db
-        val tmp = arrayListOf<String>()
-        while (m.find()) {
-            val extractedCommand = m.group(0).substring(0, m.group(0).length - 3).trim { it <= ' ' }
-            val command = realm.where<Command>().equalTo(Command.NAME, extractedCommand).findFirst()
-            if (command != null) {
-                tmp.add(extractedCommand)
+        val commands = arrayListOf<String>()
+        while (matcher.find()) {
+            matcher.group(0)?.let {group ->
+                val extractedCommand = group.substring(0, group.length - 3).trim { it <= ' ' }
+                val command = realm.where<Command>().equalTo(Command.NAME, extractedCommand).findFirst()
+                if (command != null) {
+                    commands.add(extractedCommand)
+                }
             }
         }
 
         realm.close()
 
-        return tmp.toTypedArray()
+        return commands.toTypedArray()
     }
 
 }
