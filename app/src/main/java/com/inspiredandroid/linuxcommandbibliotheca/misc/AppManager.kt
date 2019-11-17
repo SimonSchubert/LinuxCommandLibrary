@@ -1,7 +1,7 @@
 package com.inspiredandroid.linuxcommandbibliotheca.misc
 
 import android.content.Context
-import android.preference.PreferenceManager
+import androidx.preference.PreferenceManager
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import java.io.File
 
