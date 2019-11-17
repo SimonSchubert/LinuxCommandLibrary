@@ -17,7 +17,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tool:src="@drawable/ic_code_white_48dp" />
+        tool:src="@drawable/ic_code_white_48dp"
+        android:contentDescription="@null"/>
 
     <TextView
         android:id="@+id/title"

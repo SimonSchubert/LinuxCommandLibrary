@@ -126,7 +126,8 @@
             style="@style/Code1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ls -l [file]" />
+            android:text=">_ ls -l [file]"
+            custom:commands="@array/fragment_tips_ls_array"  />
 
         <ImageView
             android:id="@+id/imageView9"
@@ -162,7 +163,8 @@
             style="@style/Code1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="chmod [modification] [file]" />
+            android:text=">_ chmod [modification] [file]"
+            custom:commands="@array/fragment_tips_chmod_array" />
 
         <TextView
             style="@style/Body1"
@@ -174,7 +176,8 @@
             style="@style/Code1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="chmod g+rw test.txt" />
+            android:text=">_ chmod g+rw test.txt"
+            custom:commands="@array/fragment_tips_chmod_array" />
 
         <TextView
             style="@style/Body1"
@@ -210,7 +213,8 @@
             style="@style/Code1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="chmod 640 test.txt" />
+            android:text=">_ chmod 640 test.txt"
+            custom:commands="@array/fragment_tips_chmod_array" />
 
         <TextView
             android:layout_width="match_parent"
