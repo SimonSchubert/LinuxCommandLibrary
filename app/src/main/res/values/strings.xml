@@ -71,6 +71,14 @@
         <item>kill</item>
     </string-array>
 
+    <string-array name="fragment_tips_ls_array">
+        <item>ls</item>
+    </string-array>
+
+    <string-array name="fragment_tips_chmod_array">
+        <item>chmod</item>
+    </string-array>
+
     <string name="fragment_tips_special_characters_code_questionmark">">_ find ex?mple.txt"</string>
     <string-array name="fragment_tips_special_characters_code_questionmark_array">
         <item>find</item>

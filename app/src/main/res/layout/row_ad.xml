@@ -15,7 +15,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/tvRemote"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/face" />
+        app:srcCompat="@drawable/face"
+        android:contentDescription="Pixel graphic of author"/>
 
     <TextView
         android:id="@+id/textView7"
