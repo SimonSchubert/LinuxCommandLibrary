@@ -73,7 +73,7 @@ object AppManager {
     fun getBookmarkIds(context: Context?): MutableList<Long> {
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
         val bookmarksChain = prefs.getString(KEY_BOOKMARKS, "") ?: ""
-        return bookmarksChain.split(",".toRegex()).filter { it.isNotEmpty() }.map { it.toLong() }.toMutableList()
+        return bookmarksChain.split(",".toRegex()).filter { it.isNotEmpty() }.map { it.trim().toLong() }.toMutableList()
     }
 
     /**
@@ -113,8 +113,11 @@ object AppManager {
         markBookmarkChange(context)
     }
 
+    /**
+     * Save ids in comma separated string
+     */
     private fun saveBookmarkIds(context: Context?, ids: MutableList<Long>) {
-        val bookmarksChain = ids.joinToString()
+        val bookmarksChain = ids.joinToString(separator = ",")
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
         prefs.edit().putString(KEY_BOOKMARKS, bookmarksChain).apply()
     }
