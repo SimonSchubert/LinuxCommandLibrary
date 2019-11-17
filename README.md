@@ -32,6 +32,7 @@ The app currently has **3203** manual pages, **1351** one-line scripts and a bun
 * One-liners
 * Git
 * SSH
+* Printing
 
 ### Tips
 
@@ -42,6 +43,7 @@ The app currently has **3203** manual pages, **1351** one-line scripts and a bun
 * Clear and reset the terminal
 * List of recent commands
 * Close a frozen window/application
+* File permissions
 
 ### Goals
 
