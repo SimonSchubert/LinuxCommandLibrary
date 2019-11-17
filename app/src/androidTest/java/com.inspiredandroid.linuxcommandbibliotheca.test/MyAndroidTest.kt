@@ -2,8 +2,8 @@ package com.inspiredandroid.linuxcommandbibliotheca.test
 
 import android.content.Context
 import android.content.Intent
-import android.support.test.InstrumentationRegistry.getInstrumentation
-import android.support.test.rule.ActivityTestRule
+import androidx.test.platform.app.InstrumentationRegistry.getInstrumentation
+import androidx.test.rule.ActivityTestRule
 import com.inspiredandroid.linuxcommandbibliotheca.activities.AboutActivity
 import com.inspiredandroid.linuxcommandbibliotheca.activities.CommandManActivity
 import com.inspiredandroid.linuxcommandbibliotheca.R
@@ -24,7 +24,7 @@ import java.util.*
  * 2. Execute com.inspiredandroid.linuxcommandbibliotheca.test: ./gradlew connectedCheck
  *
  *
- * Html report: [project]/[module]/build/reports/androidTests/connected/[classpath].html
+ * Html report: {project}/{module}/build/reports/androidTests/connected/{classpath}.html
  * Example path: file:///home/simon/Dev/projects/LinuxCommandBibliotheca/app/build/reports/androidTests/connected/index.html
  */
 class MyAndroidTest {
@@ -61,7 +61,7 @@ class MyAndroidTest {
     @Test
     @Throws(Exception::class)
     fun testTipsManPageLinks() {
-        val ids = arrayOf(R.array.fragment_tips_background_code_array, R.array.fragment_tips_clear_code_array, R.array.fragment_tips_history_code_array, R.array.fragment_tips_pipe_code_array, R.array.fragment_tips_redirection_code_double_greater_array, R.array.fragment_tips_redirection_code_error_output_array, R.array.fragment_tips_redirection_code_greater_array, R.array.fragment_tips_redirection_code_smaller_array, R.array.fragment_tips_background_code_array, R.array.fragment_tips_special_characters_code_backquote_array, R.array.fragment_tips_special_characters_code_brackets_array, R.array.fragment_tips_special_characters_code_comment_array, R.array.fragment_tips_special_characters_code_double_amp_array, R.array.fragment_tips_special_characters_code_double_pipe_array, R.array.fragment_tips_special_characters_code_double_quote_array, R.array.fragment_tips_special_characters_code_excelationmark_array, R.array.fragment_tips_special_characters_code_questionmark_array, R.array.fragment_tips_special_characters_code_semicolon_array, R.array.fragment_tips_special_characters_code_single_quote_array, R.array.fragment_tips_special_characters_code_square_brackets_array, R.array.fragment_tips_special_characters_code_star_array, R.array.fragment_tips_special_characters_code_substitution_array)
+        val ids = arrayOf(R.array.fragment_tips_background_code_array, R.array.fragment_tips_clear_code_array, R.array.fragment_tips_history_code_array, R.array.fragment_tips_pipe_code_array, R.array.fragment_tips_redirection_code_double_greater_array, R.array.fragment_tips_redirection_code_error_output_array, R.array.fragment_tips_redirection_code_greater_array, R.array.fragment_tips_redirection_code_smaller_array, R.array.fragment_tips_background_code_array, R.array.fragment_tips_special_characters_code_backquote_array, R.array.fragment_tips_special_characters_code_brackets_array, R.array.fragment_tips_special_characters_code_comment_array, R.array.fragment_tips_special_characters_code_double_amp_array, R.array.fragment_tips_special_characters_code_double_pipe_array, R.array.fragment_tips_special_characters_code_double_quote_array, R.array.fragment_tips_special_characters_code_excelationmark_array, R.array.fragment_tips_special_characters_code_questionmark_array, R.array.fragment_tips_special_characters_code_semicolon_array, R.array.fragment_tips_special_characters_code_single_quote_array, R.array.fragment_tips_special_characters_code_square_brackets_array, R.array.fragment_tips_special_characters_code_star_array, R.array.fragment_tips_special_characters_code_substitution_array, R.array.fragment_tips_ls_array, R.array.fragment_tips_chmod_array)
 
         val missingCommands = ArrayList<String>()
         for (id in ids) {

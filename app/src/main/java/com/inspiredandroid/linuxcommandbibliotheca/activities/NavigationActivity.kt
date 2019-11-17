@@ -36,18 +36,18 @@ class NavigationActivity : AppCompatActivity() {
         when (it.itemId) {
             R.id.navigation_commands -> {
                 showFragment(COMMANDS)
-                return@OnNavigationItemSelectedListener true
+                true
             }
             R.id.navigation_basics -> {
                 showFragment(BASIC)
-                return@OnNavigationItemSelectedListener true
+                true
             }
             R.id.navigation_tips -> {
                 showFragment(TIPS)
-                return@OnNavigationItemSelectedListener true
+                true
             }
+            else -> false
         }
-        false
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

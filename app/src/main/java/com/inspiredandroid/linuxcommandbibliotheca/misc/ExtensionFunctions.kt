@@ -14,6 +14,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.R
 import java.io.File
 import java.io.InputStream
 import java.text.Normalizer
+import kotlin.math.min
 
 /* Copyright 2019 Simon Schubert
  *
@@ -44,8 +45,8 @@ fun String.highlightQueryInsideText(context: Context?, query: String): SearchRes
 
     var start = normalizedText.indexOf(query)
     while (start >= 0) {
-        val spanStart = Math.min(start, this.length)
-        val spanEnd = Math.min(start + query.length, this.length)
+        val spanStart = min(start, this.length)
+        val spanEnd = min(start + query.length, this.length)
 
         if (spanStart == -1 || spanEnd == -1) {
             break
@@ -61,7 +62,7 @@ fun String.highlightQueryInsideText(context: Context?, query: String): SearchRes
 }
 
 /**
- * Hide the softkeyboard
+ * Hide the soft keyboard
  */
 fun Activity.hideKeyboard() {
     currentFocus?.let {
@@ -83,6 +84,9 @@ fun Context.showPlayStoreActivity(appPackageName: String) {
     }
 }
 
+/**
+ * Copy InputStream to File
+ */
 fun File.copyInputStreamToFile(inputStream: InputStream) {
     inputStream.use { input ->
         this.outputStream().use { fileOut ->
