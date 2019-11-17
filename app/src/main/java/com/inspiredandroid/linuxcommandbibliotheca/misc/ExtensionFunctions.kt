@@ -11,6 +11,8 @@ import android.text.style.ForegroundColorSpan
 import android.view.inputmethod.InputMethodManager
 import androidx.core.content.ContextCompat
 import com.inspiredandroid.linuxcommandbibliotheca.R
+import java.io.File
+import java.io.InputStream
 import java.text.Normalizer
 
 /* Copyright 2019 Simon Schubert
@@ -78,6 +80,14 @@ fun Context.showPlayStoreActivity(appPackageName: String) {
         startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=$appPackageName")))
     } catch (e: ActivityNotFoundException) {
         startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=$appPackageName")))
+    }
+}
+
+fun File.copyInputStreamToFile(inputStream: InputStream) {
+    inputStream.use { input ->
+        this.outputStream().use { fileOut ->
+            input.copyTo(fileOut)
+        }
     }
 }
 
