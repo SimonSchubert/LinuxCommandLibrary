@@ -5,8 +5,8 @@ buildscript {
         maven("https://plugins.gradle.org/m2/")
     }
     dependencies {
-        classpath("io.realm:realm-gradle-plugin:6.0.1")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.60")
+        classpath("io.realm:realm-gradle-plugin:6.0.2")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.61")
     }
 }
 
@@ -69,12 +69,12 @@ dependencies {
     implementation("androidx.annotation:annotation:1.1.0")
     implementation("androidx.appcompat:appcompat:1.1.0")
     implementation("androidx.preference:preference-ktx:1.1.0")
-    implementation("androidx.recyclerview:recyclerview:1.0.0")
+    implementation("androidx.recyclerview:recyclerview:1.1.0")
     implementation("androidx.vectordrawable:vectordrawable:1.1.0")
     implementation("com.google.android.material:material:1.0.0")
     implementation("io.realm:android-adapters:3.1.0")
     implementation("com.futuremind.recyclerfastscroll:fastscroll:0.2.5")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.60")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.61")
     testImplementation("junit:junit:4.12")
     androidTestImplementation("androidx.test:runner:1.2.0")
     androidTestImplementation("androidx.test:rules:1.2.0")
