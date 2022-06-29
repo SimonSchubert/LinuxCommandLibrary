@@ -50,8 +50,11 @@ fun BasicCategoriesScreen(basicCategories: List<BasicCategory>, onNavigate: (Str
                     )
                 },
                 modifier = Modifier.clickable {
-                    onNavigate("basicgroups?categoryId=${basicCategory.id}&categoryName=${
-                        URLEncoder.encode(basicCategory.title, StandardCharsets.UTF_8.toString())}")
+                    onNavigate(
+                        "basicgroups?categoryId=${basicCategory.id}&categoryName=${
+                            URLEncoder.encode(basicCategory.title, StandardCharsets.UTF_8.toString())
+                        }"
+                    )
                 })
         }
     }

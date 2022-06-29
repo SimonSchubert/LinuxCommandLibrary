@@ -1,5 +1,6 @@
 package com.inspiredandroid.linuxcommandbibliotheca
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.annotation.DrawableRes
@@ -25,6 +26,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.ui.theme.LinuxTheme
 import databases.BasicCategory
 import databases.BasicGroup
 import org.example.common.databaseHelper
+import org.example.common.hasDatabase
 import org.example.common.initDatabase
 import java.util.*
 
@@ -49,6 +51,12 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        if (!hasDatabase(this)) {
+            startActivity(Intent(this, InitializeDatabaseActivity::class.java))
+            finish()
+            return
+        }
 
         initDatabase(this)
 
@@ -109,7 +117,7 @@ class MainActivity : AppCompatActivity() {
                                 navDeepLink { uriPattern = "$deepLinkUri/tips.html" })
                         ) {
                             val sections = databaseHelper.getTipSections()
-                            val mergedTips = databaseHelper.getTips().map {tip ->
+                            val mergedTips = databaseHelper.getTips().map { tip ->
                                 MergedTip(tip, sections.filter { it.tip_id == tip.id })
                             }
                             TipsScreen(
