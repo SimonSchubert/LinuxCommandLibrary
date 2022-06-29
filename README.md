@@ -3,18 +3,23 @@
 [![Paypal](https://img.shields.io/badge/paypal-donate-blue.svg?logo=paypal&style=flat)](https://paypal.me/SimonSchubert)
 
 ## Linux Command Library for Android
-The app currently has **3203** manual pages, **1351** one-line scripts and a bunch of general terminal tips. It works 100% offline, doesn't need an internet connection and has no tracking software.
+The app currently has **4608** manual pages, **2000+** one-line scripts and a bunch of general terminal tips. It works 100% offline, doesn't need an internet connection and has no tracking software.
+
+I recently migrated the project to [Jetpack Compose](https://developer.android.com/jetpack/compose) and [Kotlin Multiplatform](https://kotlinlang.org/docs/multiplatform-get-started.html).  
 
 [![Play Store](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/play_store_badge.png)](https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca)
+
+https://linuxcommandlibrary.com
 
 ### Screenshots
 
 <p float="left">
 <img src="https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-1.png" width="200">
-<img src="https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-2.png" width="200">
+<img src="https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-2-dark.png" width="200">
 <img src="https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-3.png" width="200">
-<img src="https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-4.png" width="200">
-<img src="https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-5.png" width="200">
+<img src="https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-4-dark.png" width="200">
+<img src="https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-1-tablet.png" width="200">
+<img src="https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-2-tablet.png" width="200">
 </p>
 
 ### Categories
@@ -33,6 +38,10 @@ The app currently has **3203** manual pages, **1351** one-line scripts and a bun
 * Git
 * SSH
 * Printing
+* Input
+* JSON
+* Crypto currencies
+* VIM/Emacs/Nano/Pico
 
 ### Tips
 
@@ -44,12 +53,19 @@ The app currently has **3203** manual pages, **1351** one-line scripts and a bun
 * List of recent commands
 * Close a frozen window/application
 * File permissions
+* Temporary aliases
+* Permanent aliases
+* Chain commands
+* Command syntax
+* View file permissions
+* Modify file permissions
+* Set file permissions via binary references
 
 ### Goals
 
 * Keep it simple and performant
 * Keep the app content up-to-date
-* Keep the app up-to-date with the Material Design guidelines
+* Keep the app up-to-date with Jetpack Compose
 
 ### Thanks to
 
@@ -61,7 +77,7 @@ https://icons8.com - Icons
 
 ### License
 
->Copyright 2019 Simon Schubert
+>Copyright 2022 Simon Schubert
 >
 >Licensed under the Apache License, Version 2.0 (the "License");
 >you may not use this file except in compliance with the License.
