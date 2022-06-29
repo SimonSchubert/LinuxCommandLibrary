@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Linux Command Library</string>
+    <string name="commands">Commands</string>
+    <string name="basics">Basics</string>
+    <string name="tips">Tips</string>
+    <string name="info">Info</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="bookmarked">Bookmarked</string>
+    <string name="search">Search</string>
+    <string name="back">Back</string>
+    <string name="reset">Reset</string>
+    <string name="share">Share</string>
+
+</resources>

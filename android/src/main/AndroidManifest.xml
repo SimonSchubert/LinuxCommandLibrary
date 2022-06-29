@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          android:installLocation="preferExternal"
+          package="com.inspiredandroid.linuxcommandbibliotheca">
+    <application
+            android:allowBackup="false"
+            android:supportsRtl="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:label="@string/app_name"
+            android:icon="@mipmap/ic_launcher">
+        <activity android:name=".MainActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                        android:scheme="https"
+                        android:host="linuxcommandlibrary.com"
+                        android:path="/tips.html" />
+                <data
+                        android:scheme="https"
+                        android:host="linuxcommandlibrary.com"
+                        android:path="/tips" />
+                <data
+                        android:scheme="https"
+                        android:host="linuxcommandlibrary.com"
+                        android:path="/basics.html" />
+                <data
+                        android:scheme="https"
+                        android:host="linuxcommandlibrary.com"
+                        android:path="/basics" />
+                <data
+                        android:scheme="https"
+                        android:host="linuxcommandlibrary.com"
+                        android:path="/" />
+                <data
+                        android:scheme="https"
+                        android:host="linuxcommandlibrary.com"
+                        android:path="/index.html" />
+                <data
+                        android:scheme="https"
+                        android:host="linuxcommandlibrary.com"
+                        android:pathPrefix="/man/" />
+                <data
+                        android:scheme="https"
+                        android:host="linuxcommandlibrary.com"
+                        android:pathPrefix="/basic/" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <declare-styleable name="TerminalTextView">
-        <attr name="commands" format="reference" />
-        <attr name="outputRows" format="reference" />
-    </declare-styleable>
-</resources>
