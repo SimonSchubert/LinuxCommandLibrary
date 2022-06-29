@@ -9,3 +9,4 @@
 local.properties
 *.key
 *.db
+*.aab

@@ -79,7 +79,7 @@ fun Code(command: String, mans: String, onNavigate: (String) -> Unit = {}) {
                         .firstOrNull()
                         ?.let {
                             val command = databaseHelper.getCommand(it.item)
-                            if(command != null) {
+                            if (command != null) {
                                 onNavigate("command?commandId=${command.id}&commandName=${command.name}")
                             }
                         }

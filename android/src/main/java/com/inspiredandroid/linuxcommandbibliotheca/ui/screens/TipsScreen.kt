@@ -74,7 +74,7 @@ fun TipsScreen(mergedTips: List<MergedTip>, onNavigate: (String) -> Unit = {}) {
                                         modifier = Modifier.width(40.dp),
                                         textAlign = TextAlign.Center
                                     )
-                                    if(section.data2.startsWith("$")) {
+                                    if (section.data2.startsWith("$")) {
                                         Code(section.data2, section.extra, onNavigate)
                                     } else {
                                         Text(section.data2, modifier = Modifier.padding(8.dp))

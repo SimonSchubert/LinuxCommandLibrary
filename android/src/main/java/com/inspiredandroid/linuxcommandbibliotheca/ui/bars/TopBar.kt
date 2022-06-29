@@ -161,28 +161,28 @@ fun TopBar(
                         )
                     }
                 }
-                if(showBookmarkIcon) {
+                if (showBookmarkIcon) {
                     val commandName = navBackStackEntry.value?.arguments?.getString("commandName") ?: ""
                     val command = databaseHelper.getCommand(commandName)
-                    if(command != null) {
+                    if (command != null) {
                         val context = LocalContext.current
                         val bookmarkManager = BookmarkManager()
                         val isBookmarked = remember { mutableStateOf(bookmarkManager.hasBookmark(context, command.id)) }
                         IconButton(onClick = {
                             isBookmarked.value = !isBookmarked.value
-                            if(isBookmarked.value) {
+                            if (isBookmarked.value) {
                                 bookmarkManager.addBookmark(context, command.id)
                             } else {
                                 bookmarkManager.removeBookmark(context, command.id)
                             }
                         }) {
                             Icon(
-                                if(isBookmarked.value) {
+                                if (isBookmarked.value) {
                                     painterResource(R.drawable.ic_bookmark_black_24dp)
                                 } else {
                                     painterResource(R.drawable.ic_bookmark_border_black_24dp)
                                 },
-                                contentDescription = if(isBookmarked.value) {
+                                contentDescription = if (isBookmarked.value) {
                                     stringResource(R.string.bookmarked)
                                 } else {
                                     stringResource(R.string.bookmark)
@@ -196,8 +196,6 @@ fun TopBar(
         AppInfoDialog(showDialog)
     }
 }
-
-
 
 
 @Composable
@@ -214,7 +212,7 @@ private fun getTitleByRoute(backStackEntry: NavBackStackEntry?): String {
                 backStackEntry.arguments?.getString("commandName") ?: ""
             } else if (route?.startsWith("basicgroups?") == true) {
                 val deeplinkName = backStackEntry.arguments?.getString("deepLinkCategoryName") ?: ""
-                if(deeplinkName.isEmpty()) {
+                if (deeplinkName.isEmpty()) {
                     backStackEntry.arguments?.getString("categoryName") ?: ""
                 } else {
                     val categories = databaseHelper.getBasics()

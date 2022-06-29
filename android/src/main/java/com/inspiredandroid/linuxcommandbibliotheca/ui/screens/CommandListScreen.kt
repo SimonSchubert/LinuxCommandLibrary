@@ -45,7 +45,7 @@ fun CommandListScreen(
 ) {
     val filteredCommands = remember(commands, searchText, bookmarkedIds) {
         if (searchText.isEmpty()) {
-            if(bookmarkedIds.isNotEmpty()) {
+            if (bookmarkedIds.isNotEmpty()) {
                 commands.sortedBy { !bookmarkedIds.contains(it.id) }
             } else {
                 commands
@@ -83,7 +83,7 @@ fun CommandListScreen(
                         }
                     },
                     trailing = {
-                        if(bookmarkedIds.contains(command.id)) {
+                        if (bookmarkedIds.contains(command.id)) {
                             Icon(
                                 painterResource(R.drawable.ic_bookmark_black_24dp),
                                 contentDescription = stringResource(R.string.bookmarked)
