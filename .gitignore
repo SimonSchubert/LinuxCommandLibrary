@@ -1,9 +1,11 @@
 /build
 /captures
 /native
-/SharedCode/build
-/app/build
+/android/build
+/common/build
+/desktop/build
 .idea/
 .gradle/
 local.properties
-google-services.json
+*.key
+*.db

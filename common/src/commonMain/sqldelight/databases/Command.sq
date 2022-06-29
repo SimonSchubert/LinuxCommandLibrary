@@ -1,0 +1,128 @@
+CREATE TABLE IF NOT EXISTS BasicGroup (
+	"id" INTEGER PRIMARY KEY AUTOINCREMENT,
+	"position" INTEGER NOT NULL,
+	"description" TEXT NOT NULL,
+	"category_id" INTEGER NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS BasicCommand (
+	"id" INTEGER PRIMARY KEY AUTOINCREMENT,
+	"command" TEXT NOT NULL,
+	"mans" TEXT NOT NULL,
+	"group_id" INTEGER NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS BasicCategory (
+	"id" INTEGER PRIMARY KEY AUTOINCREMENT,
+	"position" INTEGER NOT NULL,
+	"title" TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Command (
+	"id" INTEGER PRIMARY KEY AUTOINCREMENT,
+	"category" INTEGER NOT NULL,
+	"name" TEXT NOT NULL,
+	"description" TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS CommandSection (
+	"id" INTEGER PRIMARY KEY AUTOINCREMENT,
+	"title" TEXT NOT NULL,
+	"content" TEXT NOT NULL,
+	"command_id" INTEGER NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Tip (
+	"id" INTEGER PRIMARY KEY AUTOINCREMENT,
+	"title" TEXT NOT NULL,
+	"position" INTEGER NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS TipSection (
+	"id" INTEGER PRIMARY KEY AUTOINCREMENT,
+	"tip_id" INTEGER NOT NULL,
+	"position" INTEGER NOT NULL,
+	"type" INTEGER NOT NULL,
+	"data1" TEXT NOT NULL,
+	"data2" TEXT NOT NULL,
+	"extra" TEXT NOT NULL
+);
+
+selectBasicCategories:
+SELECT *
+FROM BasicCategory
+ORDER BY position;
+
+selectBasicGroupByCategory:
+SELECT *
+FROM BasicGroup
+WHERE category_id = ?
+ORDER BY position DESC;
+
+selectBasicGroup:
+SELECT *
+FROM BasicGroup
+ORDER BY id DESC;
+
+selectBasicCommandByGroupId:
+SELECT *
+FROM BasicCommand
+WHERE group_id = ?;
+
+insertCommand:
+INSERT INTO Command (category, name, description)
+VALUES (?, ?, ?);
+
+insertBasicGroup:
+INSERT INTO BasicGroup (position, description, category_id)
+VALUES (?, ?, ?);
+
+insertBasicCommand:
+INSERT INTO BasicCommand (command, mans, group_id)
+VALUES (?, ?, ?);
+
+selectCommands:
+SELECT *
+FROM Command
+ORDER BY name COLLATE NOCASE ASC;
+
+selectCommandByName:
+SELECT *
+FROM Command
+WHERE name = ?;
+
+deleteCommandSections:
+DELETE FROM CommandSection
+WHERE command_id = ? AND title != "TLDR";
+
+insertCommandSection:
+INSERT INTO CommandSection (title, content, command_id)
+VALUES (?, ?, ?);
+
+selectCommandSectionsByCommandId:
+SELECT *
+FROM CommandSection
+WHERE command_id = ? AND title != "NAME"
+ORDER BY id;
+
+updateCommandTLDRSectionByCommandId:
+UPDATE CommandSection
+SET content = ?
+WHERE command_id = ? AND title = "TLDR";
+
+selectTips:
+SELECT *
+FROM Tip
+ORDER BY position;
+
+selectTipSections:
+SELECT *
+FROM TipSection
+WHERE tip_id = ?
+ORDER BY position;
+
+
+selectAllTipSections:
+SELECT *
+FROM TipSection
+ORDER BY position;
