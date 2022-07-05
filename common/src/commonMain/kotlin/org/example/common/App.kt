@@ -7,6 +7,9 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import databases.BasicCategory
+import databases.CommandSection
+import java.util.*
 
 @Composable
 fun App() {
@@ -80,4 +83,18 @@ fun String.getCommandList(mans: String, hasBrackets: Boolean = false): List<Elem
     }
     list.add(TextElement(currentText.replace("[cmd]", "[command]")))
     return list.toList()
+}
+
+fun BasicCategory.getHtmlFileName(): String {
+    return this.title.lowercase(Locale.getDefault()).replace("[^a-z]".toRegex(), "")
+}
+
+fun CommandSection.getSortPriority(): Int {
+    return when (this.title) {
+        "TLDR" -> 0
+        "SYNOPSIS" -> 10
+        "SEE ALSO" -> 90
+        "AUTHOR" -> 100
+        else -> 50
+    }
 }
