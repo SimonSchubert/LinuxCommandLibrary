@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterialApi::class, ExperimentalFoundationApi::class)
 
-package com.inspiredandroid.linuxcommandbibliotheca.ui.screens
+package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basiccategories
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.clickable
@@ -16,8 +16,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.inspiredandroid.linuxcommandbibliotheca.getIconResource
-import databases.BasicCategory
 import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
 
@@ -37,9 +37,9 @@ import java.nio.charset.StandardCharsets
 */
 
 @Composable
-fun BasicCategoriesScreen(basicCategories: List<BasicCategory>, onNavigate: (String) -> Unit = {}) {
+fun BasicCategoriesScreen(onNavigate: (String) -> Unit = {}, viewModel: BasicCategoriesModel = viewModel()) {
     LazyVerticalGrid(cells = GridCells.Adaptive(minSize = 300.dp)) {
-        items(items = basicCategories) { basicCategory ->
+        items(items = viewModel.basicCategories) { basicCategory ->
             ListItem(
                 text = { Text(basicCategory.title) },
                 icon = {

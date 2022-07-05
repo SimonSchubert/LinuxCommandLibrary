@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterialApi::class, ExperimentalMaterialApi::class)
 
-package com.inspiredandroid.linuxcommandbibliotheca.ui.screens
+package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commandlist
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -43,6 +43,8 @@ fun CommandListScreen(
     bookmarkedIds: List<Long>,
     onNavigate: (String) -> Unit = {}
 ) {
+    // TODO: Implement viewmodel
+
     val filteredCommands = remember(commands, searchText, bookmarkedIds) {
         if (searchText.isEmpty()) {
             if (bookmarkedIds.isNotEmpty()) {
