@@ -22,9 +22,9 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavBackStackEntry
 import com.inspiredandroid.linuxcommandbibliotheca.BookmarkManager
 import com.inspiredandroid.linuxcommandbibliotheca.R
-import com.inspiredandroid.linuxcommandbibliotheca.getHtmlFileName
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.AppInfoDialog
 import org.example.common.databaseHelper
+import org.example.common.getHtmlFileName
 
 /* Copyright 2022 Simon Schubert
  *
