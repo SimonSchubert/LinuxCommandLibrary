@@ -19,6 +19,7 @@ dependencies {
     implementation("com.google.accompanist:accompanist-appcompat-theme:0.23.1")
     implementation("com.google.accompanist:accompanist-systemuicontroller:0.23.1")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1")
+    implementation("androidx.preference:preference:1.2.0")
 }
 
 android {

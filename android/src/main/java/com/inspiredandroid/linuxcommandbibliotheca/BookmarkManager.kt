@@ -1,7 +1,7 @@
 package com.inspiredandroid.linuxcommandbibliotheca
 
 import android.content.Context
-import android.preference.PreferenceManager
+import androidx.preference.PreferenceManager
 
 class BookmarkManager {
     private val KEY_BOOKMARKS = "KEY_BOOKMARKS"
@@ -18,7 +18,7 @@ class BookmarkManager {
         saveBookmarkIds(context, bookmarksIds)
     }
 
-    private fun saveBookmarkIds(context: Context?, ids: MutableList<Long>) {
+    private fun saveBookmarkIds(context: Context, ids: MutableList<Long>) {
         val bookmarksChain = ids.joinToString(separator = ",")
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
         prefs.edit().putString(KEY_BOOKMARKS, bookmarksChain).apply()
