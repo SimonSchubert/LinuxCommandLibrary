@@ -31,6 +31,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.ui.theme.LinuxTheme
 import databases.BasicCategory
 import databases.BasicGroup
 import org.example.common.databaseHelper
+import org.example.common.getHtmlFileName
 import org.example.common.hasDatabase
 import org.example.common.initDatabase
 import java.util.*
@@ -449,8 +450,4 @@ fun BasicCategory.getIconResource(): Int {
         "Fun" -> R.drawable.ic_icon_fun
         else -> R.drawable.ic_icon_mouse
     }
-}
-
-fun BasicCategory.getHtmlFileName(): String {
-    return this.title.lowercase(Locale.getDefault()).replace("[^a-z]".toRegex(), "")
 }
