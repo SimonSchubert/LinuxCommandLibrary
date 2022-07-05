@@ -47,7 +47,6 @@ fun InputStream.copyToWithStatus(out: OutputStream, onUpdateStatus: (Int) -> Uni
         out.write(buffer, 0, bytes)
         bytesCopied += bytes
         bytes = read(buffer)
-        // Thread.sleep(100)
         onUpdateStatus(bytesCopied.div(totalSize).times(100f).toInt())
     }
     return bytesCopied
