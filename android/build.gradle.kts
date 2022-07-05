@@ -13,22 +13,22 @@ repositories {
 
 dependencies {
     implementation(project(":common"))
-    implementation("androidx.activity:activity-compose:1.4.0")
+    implementation("androidx.activity:activity-compose:1.5.0")
     implementation("androidx.compose.material:material:1.1.1")
-    implementation("androidx.navigation:navigation-compose:2.4.2")
+    implementation("androidx.navigation:navigation-compose:2.5.0")
     implementation("com.google.accompanist:accompanist-appcompat-theme:0.23.1")
     implementation("com.google.accompanist:accompanist-systemuicontroller:0.23.1")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.5.0")
     implementation("androidx.preference:preference:1.2.0")
 }
 
 android {
-    compileSdkVersion(31)
+    compileSdkVersion(33)
     defaultConfig {
         applicationId = "com.inspiredandroid.linuxcommandbibliotheca"
         minSdkVersion(24)
-        targetSdkVersion(31)
-        versionCode = 68
+        targetSdkVersion(33)
+        versionCode = 69
         versionName = "3.0.0"
     }
     compileOptions {
