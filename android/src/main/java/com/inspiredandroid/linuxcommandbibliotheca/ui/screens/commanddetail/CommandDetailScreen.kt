@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterialApi::class)
 
-package com.inspiredandroid.linuxcommandbibliotheca.ui.screens
+package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commanddetail
 
 import android.text.Html
 import android.widget.TextView
@@ -18,6 +18,7 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.inspiredandroid.linuxcommandbibliotheca.ui.shared.Code
 import databases.CommandSection
 
@@ -38,13 +39,14 @@ import databases.CommandSection
 
 @Composable
 fun CommandDetailScreen(
-    sections: List<CommandSection>,
-    onNavigate: (String) -> Unit = {}
+    onNavigate: (String) -> Unit = {},
+    commandId: Long,
+    viewModel: CommandDetailModel = viewModel(factory = CommandDetailModelFactory(commandId))
 ) {
     Column(
         modifier = Modifier.verticalScroll(rememberScrollState())
     ) {
-        sections.forEach { section ->
+        viewModel.sections.forEach { section ->
             CommandSectionColumn(section, onNavigate)
         }
     }

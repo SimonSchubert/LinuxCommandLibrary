@@ -11,6 +11,7 @@ import androidx.compose.material.Scaffold
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.navigation.compose.NavHost
@@ -21,7 +22,11 @@ import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
 import com.inspiredandroid.linuxcommandbibliotheca.ui.bars.BottomBar
 import com.inspiredandroid.linuxcommandbibliotheca.ui.bars.TopBar
-import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.*
+import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.BasicGroupsScreen
+import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basiccategories.BasicCategoriesScreen
+import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commanddetail.CommandDetailScreen
+import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commandlist.CommandListScreen
+import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.tips.TipsScreen
 import com.inspiredandroid.linuxcommandbibliotheca.ui.theme.LinuxTheme
 import databases.BasicCategory
 import databases.BasicGroup
@@ -47,7 +52,8 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
-    val deepLinkUri = "https://linuxcommandlibrary.com"
+    private val deepLinkUri = "https://linuxcommandlibrary.com"
+    private val bookmarkManager = BookmarkManager()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -93,7 +99,7 @@ class MainActivity : AppCompatActivity() {
                                 navDeepLink { uriPattern = "$deepLinkUri/basics" },
                                 navDeepLink { uriPattern = "$deepLinkUri/basics.html" })
                         ) {
-                            BasicCategoriesScreen(databaseHelper.getBasics(), onNavigate)
+                            BasicCategoriesScreen(onNavigate)
                         }
                         composable(
                             Screen.Commands.route,
@@ -101,7 +107,6 @@ class MainActivity : AppCompatActivity() {
                                 navDeepLink { uriPattern = "$deepLinkUri/" },
                                 navDeepLink { uriPattern = "$deepLinkUri/index.html" })
                         ) {
-                            val bookmarkManager = BookmarkManager()
                             val bookmarkedIds = bookmarkManager.getBookmarkIds(this@MainActivity)
                             CommandListScreen(
                                 databaseHelper.getCommands(),
@@ -116,28 +121,21 @@ class MainActivity : AppCompatActivity() {
                                 navDeepLink { uriPattern = "$deepLinkUri/tips" },
                                 navDeepLink { uriPattern = "$deepLinkUri/tips.html" })
                         ) {
-                            val sections = databaseHelper.getTipSections()
-                            val mergedTips = databaseHelper.getTips().map { tip ->
-                                MergedTip(tip, sections.filter { it.tip_id == tip.id })
-                            }
-                            TipsScreen(
-                                mergedTips,
-                                onNavigate
-                            )
+                            TipsScreen(onNavigate)
                         }
                         composable(
                             "basicgroups?categoryId={categoryId}&categoryName={categoryName}",
                             arguments = listOf(navArgument("categoryId") {}, navArgument("categoryName") {})
                         ) { backStackEntry ->
                             val categoryId = backStackEntry.arguments?.getString("categoryId")?.toLongOrNull() ?: 0L
-                            BasicGroupsScreen(databaseHelper.getBasicGroups(categoryId), onNavigate)
+                            BasicGroupsScreen(onNavigate, categoryId)
                         }
                         composable(
                             "command?commandId={commandId}&commandName={commandName}",
                             arguments = listOf(navArgument("commandId") {}, navArgument("commandName") {})
                         ) { backStackEntry ->
                             val commandId = backStackEntry.arguments?.getString("commandId")?.toLongOrNull() ?: 0L
-                            CommandDetailScreen(databaseHelper.getSections(commandId), onNavigate)
+                            CommandDetailScreen(onNavigate, commandId)
                         }
                         // Only used for deeplinks with slightly different parameters
                         composable(
@@ -151,9 +149,9 @@ class MainActivity : AppCompatActivity() {
                             val categories = databaseHelper.getBasics()
                             val category = categories.firstOrNull { it.getHtmlFileName() == categoryName }
                             if (category != null) {
-                                BasicGroupsScreen(databaseHelper.getBasicGroups(category.id), onNavigate)
+                                BasicGroupsScreen(onNavigate, category.id)
                             } else {
-                                BasicCategoriesScreen(databaseHelper.getBasics(), onNavigate)
+                                BasicCategoriesScreen(onNavigate)
                             }
                         }
                         // Only used for deeplinks with slightly different parameters
@@ -168,10 +166,8 @@ class MainActivity : AppCompatActivity() {
 
                             val command = databaseHelper.getCommand(commandName)
                             if (command != null) {
-                                val sections = databaseHelper.getSections(command.id)
-                                CommandDetailScreen(sections, onNavigate)
+                                CommandDetailScreen(onNavigate, command.id)
                             } else {
-                                val bookmarkManager = BookmarkManager()
                                 val bookmarkedIds = bookmarkManager.getBookmarkIds(this@MainActivity)
                                 CommandListScreen(
                                     databaseHelper.getCommands(),

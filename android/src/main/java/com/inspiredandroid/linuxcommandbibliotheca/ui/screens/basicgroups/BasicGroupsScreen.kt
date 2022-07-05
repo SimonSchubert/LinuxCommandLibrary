@@ -14,7 +14,10 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.inspiredandroid.linuxcommandbibliotheca.getIconResource
+import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basicgroups.BasicGroupModelFactory
+import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basicgroups.BasicGroupsModel
 import com.inspiredandroid.linuxcommandbibliotheca.ui.shared.Code
 import databases.BasicGroup
 import org.example.common.databaseHelper
@@ -35,9 +38,13 @@ import org.example.common.databaseHelper
 */
 
 @Composable
-fun BasicGroupsScreen(basicGroups: List<BasicGroup>, onNavigate: (String) -> Unit = {}) {
+fun BasicGroupsScreen(
+    onNavigate: (String) -> Unit = {},
+    categoryId: Long,
+    viewModel: BasicGroupsModel = viewModel(factory = BasicGroupModelFactory(categoryId))
+) {
     LazyColumn {
-        items(items = basicGroups,
+        items(items = viewModel.basicGroups,
             key = { it.id }) { basicGroup ->
             BasicGroupColumn(basicGroup, onNavigate)
         }

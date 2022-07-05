@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterialApi::class)
 
-package com.inspiredandroid.linuxcommandbibliotheca.ui.screens
+package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.tips
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -19,6 +19,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.inspiredandroid.linuxcommandbibliotheca.ui.shared.Code
 import com.inspiredandroid.linuxcommandbibliotheca.ui.shared.StaggeredVerticalGrid
 import databases.Tip
@@ -42,12 +43,12 @@ import databases.TipSection
 data class MergedTip(val tip: Tip, val sections: List<TipSection>)
 
 @Composable
-fun TipsScreen(mergedTips: List<MergedTip>, onNavigate: (String) -> Unit = {}) {
+fun TipsScreen(onNavigate: (String) -> Unit = {}, viewModel: TipsViewModel = viewModel()) {
     StaggeredVerticalGrid(
         maxColumnWidth = 420.dp,
         modifier = Modifier.padding(4.dp).verticalScroll(rememberScrollState())
     ) {
-        mergedTips.forEach { mergedTip ->
+        viewModel.mergedTips.forEach { mergedTip ->
             Card(elevation = 4.dp, modifier = Modifier.padding(4.dp)) {
                 Column(modifier = Modifier.padding(6.dp)) {
                     Text(
