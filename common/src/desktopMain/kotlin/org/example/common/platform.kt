@@ -13,8 +13,8 @@ actual fun getPlatformName(): String {
 actual var databaseHelper = DatabaseHelper()
 
 fun initDatabase() {
-    val driver: SqlDriver = JdbcSqliteDriver("jdbc:sqlite:database.db")
-    if (!File("database.db").exists()) {
+    val driver: SqlDriver = JdbcSqliteDriver("jdbc:sqlite:assets/database.db")
+    if (!File("assets/database.db").exists()) {
         CommandDatabase.Schema.create(driver)
     }
     databaseHelper.setupDriver(driver)

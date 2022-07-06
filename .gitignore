@@ -8,6 +8,5 @@
 .gradle/
 local.properties
 *.key
-*.db
 *.aab
 /html

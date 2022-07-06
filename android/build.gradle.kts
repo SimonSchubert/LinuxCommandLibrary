@@ -31,6 +31,9 @@ android {
         versionCode = 69
         versionName = "3.0.0"
     }
+
+    sourceSets["main"].assets.setSrcDirs(listOf("../assets"))
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
