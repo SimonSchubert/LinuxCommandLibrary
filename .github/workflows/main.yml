@@ -19,13 +19,18 @@ jobs:
          java-version: "11"
      - name: Set execution flag for gradlew
        run: chmod +x gradlew
-     - name: Build APK
-       run: bash ./gradlew assembleDebug --stacktrace
+     - name: Build Signed APK
+       uses: victorbnl/build-signed-apk@main
+       with:
+         keystore: ${{ secrets.keystore }}
+         keystore_password: ${{ secrets.keystore_password }}
+         key_alias: ${{ secrets.key_alias }}
+         key_password: ${{ secrets.key_password }}
      - name: Upload APK
        uses: actions/upload-artifact@v1
        with:
          name: apk
-         path: android/build/outputs/apk/debug/android-debug.apk
+         path: android/release/android-release.apk
 
  release:
    name: Release APK
@@ -51,6 +56,6 @@ jobs:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
        with:
          upload_url: ${{ steps.create_release.outputs.upload_url }}
-         asset_path: apk/android-debug.apk
+         asset_path: apk/android-release.apk
          asset_name: ${{ github.event.repository.name }}.apk
          asset_content_type: application/zip
