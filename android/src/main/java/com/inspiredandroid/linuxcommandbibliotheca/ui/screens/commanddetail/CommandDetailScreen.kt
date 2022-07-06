@@ -18,6 +18,7 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
+import androidx.core.text.HtmlCompat
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.inspiredandroid.linuxcommandbibliotheca.ui.shared.Code
 import databases.CommandSection
@@ -76,7 +77,7 @@ fun CommandSectionColumn(
             ListItem(text = {
                 AndroidView(factory = { context ->
                     TextView(context).apply {
-                        val content = Html.fromHtml(section.content)
+                        val content = HtmlCompat.fromHtml(section.content, HtmlCompat.FROM_HTML_MODE_LEGACY)
                         text = content.dropLastWhile { it.isWhitespace() }
                         setTextColor(color.toArgb())
                     }
