@@ -2,8 +2,8 @@ package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basicgroups
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import databases.BasicGroup
 import com.linuxcommandlibrary.shared.databaseHelper
+import databases.BasicGroup
 
 /* Copyright 2022 Simon Schubert
  *

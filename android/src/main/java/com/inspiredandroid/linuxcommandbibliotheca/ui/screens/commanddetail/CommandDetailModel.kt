@@ -3,6 +3,7 @@ package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commanddetail
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.linuxcommandlibrary.shared.databaseHelper
+import com.linuxcommandlibrary.shared.getSortPriority
 
 /* Copyright 2022 Simon Schubert
  *
@@ -21,7 +22,7 @@ import com.linuxcommandlibrary.shared.databaseHelper
 
 class CommandDetailModel(commandId: Long) : ViewModel() {
 
-    val sections = databaseHelper.getSections(commandId)
+    val sections = databaseHelper.getSections(commandId).sortedBy { it.getSortPriority() }
 }
 
 class CommandDetailModelFactory(private val commandId: Long) :
