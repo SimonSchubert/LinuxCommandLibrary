@@ -35,6 +35,8 @@ import com.inspiredandroid.linuxcommandbibliotheca.R
  * limitations under the License.
 */
 
+// Todo: Replace with AlertDialog
+
 @Composable
 fun AppInfoDialog(showDialog: MutableState<Boolean>) {
     if (showDialog.value) {

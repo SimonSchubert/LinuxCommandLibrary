@@ -2,7 +2,6 @@
 
 package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commanddetail
 
-import android.text.Html
 import android.widget.TextView
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
