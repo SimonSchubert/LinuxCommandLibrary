@@ -20,7 +20,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basicgroups.BasicG
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basicgroups.BasicGroupsModel
 import com.inspiredandroid.linuxcommandbibliotheca.ui.shared.Code
 import databases.BasicGroup
-import org.example.common.databaseHelper
+import com.linuxcommandlibrary.shared.databaseHelper
 
 /* Copyright 2022 Simon Schubert
  *

@@ -2,7 +2,7 @@ package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basiccategories
 
 import androidx.lifecycle.ViewModel
 import databases.BasicCategory
-import org.example.common.databaseHelper
+import com.linuxcommandlibrary.shared.databaseHelper
 
 /* Copyright 2022 Simon Schubert
  *

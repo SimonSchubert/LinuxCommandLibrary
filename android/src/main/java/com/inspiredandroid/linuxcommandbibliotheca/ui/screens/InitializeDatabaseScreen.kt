@@ -14,7 +14,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.R
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import org.example.common.copyDatabase
+import com.linuxcommandlibrary.shared.copyDatabase
 
 @Composable
 fun InitializeDatabaseScreen(onFinish: () -> Unit = {}) {

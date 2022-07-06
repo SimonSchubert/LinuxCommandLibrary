@@ -1,4 +1,4 @@
-package org.example.common
+package com.linuxcommandlibrary.shared
 
 import androidx.compose.material.Text
 import androidx.compose.material.Button

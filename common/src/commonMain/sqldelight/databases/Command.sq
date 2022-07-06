@@ -121,7 +121,6 @@ FROM TipSection
 WHERE tip_id = ?
 ORDER BY position;
 
-
 selectAllTipSections:
 SELECT *
 FROM TipSection

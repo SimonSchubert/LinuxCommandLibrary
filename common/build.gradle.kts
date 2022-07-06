@@ -7,7 +7,7 @@ plugins {
     id("com.squareup.sqldelight")
 }
 
-group = "org.example"
+group = "com.linuxcommandlibrary"
 version = "1.0"
 
 kotlin {

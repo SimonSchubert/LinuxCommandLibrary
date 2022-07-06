@@ -3,7 +3,7 @@ import androidx.compose.material.Text
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
 import com.linuxcommandlibrary.CommandDatabase
-import org.example.common.initDatabase
+import com.linuxcommandlibrary.shared.initDatabase
 
 fun main() = application {
 

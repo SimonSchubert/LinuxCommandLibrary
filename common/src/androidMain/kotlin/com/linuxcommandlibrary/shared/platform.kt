@@ -1,4 +1,4 @@
-package org.example.common
+package com.linuxcommandlibrary.shared
 
 import android.content.Context
 import com.linuxcommandlibrary.CommandDatabase
