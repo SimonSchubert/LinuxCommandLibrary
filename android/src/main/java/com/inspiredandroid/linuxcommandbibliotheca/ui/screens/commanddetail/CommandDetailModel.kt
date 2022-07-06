@@ -2,7 +2,7 @@ package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commanddetail
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import org.example.common.databaseHelper
+import com.linuxcommandlibrary.shared.databaseHelper
 
 /* Copyright 2022 Simon Schubert
  *

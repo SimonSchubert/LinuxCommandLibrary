@@ -1,4 +1,4 @@
-package org.example.common
+package com.linuxcommandlibrary.shared
 
 import com.linuxcommandlibrary.CommandDatabase
 import com.squareup.sqldelight.db.SqlDriver

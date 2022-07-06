@@ -1,7 +1,7 @@
 package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.tips
 
 import androidx.lifecycle.ViewModel
-import org.example.common.databaseHelper
+import com.linuxcommandlibrary.shared.databaseHelper
 
 
 class TipsViewModel : ViewModel() {

@@ -1,5 +1,5 @@
-import org.example.common.databaseHelper
-import org.example.common.initDatabase
+import com.linuxcommandlibrary.shared.databaseHelper
+import com.linuxcommandlibrary.shared.initDatabase
 import java.io.File
 import java.io.PrintStream
 

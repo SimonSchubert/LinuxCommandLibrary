@@ -11,7 +11,6 @@ import androidx.compose.material.Scaffold
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.navigation.compose.NavHost
@@ -30,11 +29,10 @@ import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.tips.TipsScreen
 import com.inspiredandroid.linuxcommandbibliotheca.ui.theme.LinuxTheme
 import databases.BasicCategory
 import databases.BasicGroup
-import org.example.common.databaseHelper
-import org.example.common.getHtmlFileName
-import org.example.common.hasDatabase
-import org.example.common.initDatabase
-import java.util.*
+import com.linuxcommandlibrary.shared.databaseHelper
+import com.linuxcommandlibrary.shared.getHtmlFileName
+import com.linuxcommandlibrary.shared.hasDatabase
+import com.linuxcommandlibrary.shared.initDatabase
 
 /* Copyright 2022 Simon Schubert
  *

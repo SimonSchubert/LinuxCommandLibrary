@@ -16,7 +16,7 @@ import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.withStyle
 import com.inspiredandroid.linuxcommandbibliotheca.R
-import org.example.common.*
+import com.linuxcommandlibrary.shared.*
 
 /* Copyright 2022 Simon Schubert
  *

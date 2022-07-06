@@ -6,7 +6,7 @@ plugins {
     id("org.jetbrains.compose") version "1.1.1"
 }
 
-group = "org.example"
+group = "com.linuxcommandlibrary"
 version = "1.0"
 
 kotlin {
