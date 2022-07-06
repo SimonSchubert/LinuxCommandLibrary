@@ -1,33 +1,42 @@
-The app currently has <b>3200</b> manual pages, <b>1351</b> one-line scripts and <b>a bunch</b> of general terminal tips. Learn how to work with the CLI(Command Line Interface).
+The app currently has <b>4608</b> manual pages, <b>21</b> basic categories and a bunch of general terminal tips. It works 100% offline, doesn't need an internet connection and has no tracking software.
 
-<b>Categories</b>:
+<b>Categories</b>
 
-* Users/Groups
-* Files/Folders
-* Search/Find
-* Network
-* System Information
-* System Control
-* Video/Audio
-* Package Manager
-* Terminal Games
-* Hacking Tools
 * One-liners
+* System information
+* System control
+* Users & Groups
+* Files & Folders
+* Input
 * Printing
+* JSON
+* Network
+* Search & Find
+* GIT
+* SSH
+* Video & Audio
+* Package manager
+* Hacking tools
+* Terminal games
+* Crypto currencies
+* VIM
+* Emacs
+* Nano
+* Pico
 
-<b>Tips</b>:
+<b>Tips</b>
 
-* Cursor navigation
-* Tab completion
-* Special characters in commands
-* Redirection
 * Clear and reset the terminal
 * List of recent commands
 * Close a frozen window/application
-* File permissions
-
-This app was developed as a part of the Home Remote Control. If there is any command you miss, let me know and the next update will have it.
-
-Example of console commands:
-
-shutdown, reboot, lock/unlock screen, print external/internal ip, print cpu/battery usage, take screenshot/webcam photo, play text to speech, play sound file.
+* Tab Completion
+* Temporary aliases
+* Permanent aliases
+* Chain commands
+* Command syntax
+* Cursor navigation
+* Redirection
+* Special characters in commands
+* View file permissions
+* Modify file permissions
+* Set file permissions via binary references

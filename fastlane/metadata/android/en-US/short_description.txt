@@ -1,1 +1,1 @@
-3200 manual pages, 1351 useful one-line scripts and general tips.
+4608 manual pages, 21 basic categories and a bunch of general terminal tips.
