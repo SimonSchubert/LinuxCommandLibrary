@@ -78,9 +78,9 @@ fun Code(command: String, mans: String, onNavigate: (String) -> Unit = {}) {
                     annotatedString.getStringAnnotations(tag = "$index", start = offset, end = offset)
                         .firstOrNull()
                         ?.let {
-                            val command = databaseHelper.getCommand(it.item)
-                            if (command != null) {
-                                onNavigate("command?commandId=${command.id}&commandName=${command.name}")
+                            val manCommand = databaseHelper.getCommand(it.item)
+                            if (manCommand != null) {
+                                onNavigate("command?commandId=${manCommand.id}&commandName=${manCommand.name}")
                             }
                         }
                 }
