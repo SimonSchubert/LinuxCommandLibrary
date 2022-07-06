@@ -2,6 +2,7 @@
 /captures
 /native
 /android/build
+/android/release
 /common/build
 /desktop/build
 .idea/
