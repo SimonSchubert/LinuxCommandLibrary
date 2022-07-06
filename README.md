@@ -62,6 +62,9 @@ https://linuxcommandlibrary.com
 * Keep the app content up-to-date
 * Keep the app up-to-date with Jetpack Compose
 
+### Licensing
+The source code is licensed under the Apache 2.0 license and the copyright of the man pages in the `database.db` file are copyrighted by their respective authors.
+
 ### Thanks to
 
 http://letsgokoyo.com - App Icon
