@@ -1,61 +1,55 @@
-name: Build and Release
+name: Publish release APK
 
+# Controls when the action will run.
 on:
- push:
-   branches:
-     - master
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches:
+      - master
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 jobs:
- apk:
-   name: Generate APK
-   runs-on: ubuntu-latest
-   steps:
-     - name: Checkout
-       uses: actions/checkout@v2.4.0
-     - name: Setup JDK
-       uses: actions/setup-java@v2.5.0
-       with:
-         distribution: temurin
-         java-version: "11"
-     - name: Set execution flag for gradlew
-       run: chmod +x gradlew
-     - name: Build Signed APK
-       uses: victorbnl/build-signed-apk@main
-       with:
-         keystore: ${{ secrets.keystore_b64 }}
-         keystore_password: ${{ secrets.keystore_password }}
-         key_alias: ${{ secrets.key_alias }}
-         key_password: ${{ secrets.key_password }}
-     - name: Upload APK
-       uses: actions/upload-artifact@v1
-       with:
-         name: apk
-         path: android/release/android-release.apk
+  package-release-apk:
+    name: Generate release APK
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code for app release
+        uses: actions/checkout@v2
 
- release:
-   name: Release APK
-   needs: apk
-   runs-on: ubuntu-latest
-   steps:
-     - name: Download APK from build
-       uses: actions/download-artifact@v1
-       with:
-         name: apk
-     - name: Create Release
-       id: create_release
-       uses: actions/create-release@v1
-       env:
-         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-       with:
-         tag_name: ${{ github.run_number }}
-         release_name: ${{ github.event.repository.name }} v${{ github.run_number }}
-     - name: Upload Release APK
-       id: upload_release_asset
-       uses: actions/upload-release-asset@v1.0.1
-       env:
-         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-       with:
-         upload_url: ${{ steps.create_release.outputs.upload_url }}
-         asset_path: apk/android-release.apk
-         asset_name: ${{ github.event.repository.name }}.apk
-         asset_content_type: application/zip
+      - name: Set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+
+      - name: Generate signed APK
+        run: ./gradlew assembleRelease --stacktrace
+
+      - name: Sign APK with keystore
+        uses: r0adkll/sign-android-release@v1
+        id: sign_app
+        with:
+          releaseDirectory: android/release
+          signingKeyBase64: ${{ secrets.keystore_b64 }}
+          keyStorePassword: ${{ secrets.keystore_password }}
+          alias: ${{ secrets.key_alias }}
+          keyPassword: ${{ secrets.key_password }}
+        env:
+          BUILD_TOOLS_VERSION: "30.0.2"
+
+      - name: Upload release APK
+        uses: actions/upload-artifact@v2
+        with:
+          name: android-release.apk
+          path: ${{steps.sign_app.outputs.signedReleaseFile}}
+
+      - name: Echo APK
+        run: echo Signed APK FILE ${{steps.sign_app.outputs.signedReleaseFile}}
+
+      - name: Release signed APK
+        uses: MicahSphelele/action-publish-signed-apk@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          APP_FOLDER: app
+          FILE_DIR: ${{steps.sign_app.outputs.signedReleaseFile}}
