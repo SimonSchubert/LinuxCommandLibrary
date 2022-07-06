@@ -53,7 +53,7 @@ fun CommandListScreen(
                 commands
             }
         } else {
-            commands.filter { it.name.contains(searchText) }
+            commands.filter { it.name.contains(searchText) || it.description.contains(searchText) }
         }
     }
 
@@ -69,19 +69,14 @@ fun CommandListScreen(
                 ListItem(
                     text = {
                         if (searchText.isEmpty()) {
-                            Text(command.name)
+                            Text(
+                                command.name,
+                                maxLines = 1,
+                                softWrap = false,
+                                overflow = TextOverflow.Ellipsis
+                            )
                         } else {
-                            Text(buildAnnotatedString {
-                                val splitText = command.name.split(searchText)
-                                splitText.forEachIndexed { index, s ->
-                                    append(s)
-                                    if (index != splitText.size - 1) {
-                                        withStyle(style = SpanStyle(color = MaterialTheme.colors.primary)) {
-                                            append(searchText)
-                                        }
-                                    }
-                                }
-                            })
+                            HighlightedText(command.name, searchText)
                         }
                     },
                     trailing = {
@@ -93,12 +88,16 @@ fun CommandListScreen(
                         }
                     },
                     secondaryText = {
-                        Text(
-                            command.description,
-                            maxLines = 1,
-                            softWrap = false,
-                            overflow = TextOverflow.Ellipsis
-                        )
+                        if (searchText.isEmpty()) {
+                            Text(
+                                command.description,
+                                maxLines = 1,
+                                softWrap = false,
+                                overflow = TextOverflow.Ellipsis
+                            )
+                        } else {
+                            HighlightedText(command.description, searchText)
+                        }
                     },
                     modifier = Modifier.clickable {
                         onNavigate("command?commandId=${command.id}&commandName=${command.name}")
@@ -106,4 +105,25 @@ fun CommandListScreen(
             }
         }
     }
+}
+
+
+@Composable
+fun HighlightedText(text: String, pattern: String) {
+    Text(
+        buildAnnotatedString {
+            val splitText = text.split(pattern)
+            splitText.forEachIndexed { index, s ->
+                append(s)
+                if (index != splitText.size - 1) {
+                    withStyle(style = SpanStyle(color = MaterialTheme.colors.primary)) {
+                        append(pattern)
+                    }
+                }
+            }
+        },
+        maxLines = 1,
+        softWrap = false,
+        overflow = TextOverflow.Ellipsis
+    )
 }
