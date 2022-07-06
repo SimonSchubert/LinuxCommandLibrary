@@ -43,6 +43,9 @@ data class TextElement(val text: String) : Element()
 data class ManElement(val man: String) : Element()
 data class UrlElement(val command: String, val url: String) : Element()
 
+/**
+ * Return a list of sealed Elements for visual representation
+ */
 fun String.getCommandList(mans: String, hasBrackets: Boolean = false): List<Element> {
     var command = " $this"
     val list = mutableListOf<Element>()
@@ -100,10 +103,16 @@ fun String.getCommandList(mans: String, hasBrackets: Boolean = false): List<Elem
     return list.toList()
 }
 
+/**
+ * Only allow characters in html file names to guarantee matching on the website and app deep linking
+ */
 fun BasicCategory.getHtmlFileName(): String {
-    return this.title.lowercase(Locale.getDefault()).replace("[^a-z]".toRegex(), "")
+    return this.title.lowercase(Locale.US).replace("[^a-z]".toRegex(), "")
 }
 
+/**
+ * Show TLDR and SYNOPSIS always on the top and SEE ALSO and AUTHOR on the bottom. Everything else in between
+ */
 fun CommandSection.getSortPriority(): Int {
     return when (this.title) {
         "TLDR" -> 0

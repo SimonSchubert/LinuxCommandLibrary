@@ -19,8 +19,8 @@ import com.inspiredandroid.linuxcommandbibliotheca.getIconResource
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basicgroups.BasicGroupModelFactory
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basicgroups.BasicGroupsModel
 import com.inspiredandroid.linuxcommandbibliotheca.ui.shared.Code
-import databases.BasicGroup
 import com.linuxcommandlibrary.shared.databaseHelper
+import databases.BasicGroup
 
 /* Copyright 2022 Simon Schubert
  *

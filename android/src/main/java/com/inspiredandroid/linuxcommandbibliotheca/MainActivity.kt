@@ -27,12 +27,12 @@ import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commanddetail.Comm
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commandlist.CommandListScreen
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.tips.TipsScreen
 import com.inspiredandroid.linuxcommandbibliotheca.ui.theme.LinuxTheme
-import databases.BasicCategory
-import databases.BasicGroup
 import com.linuxcommandlibrary.shared.databaseHelper
 import com.linuxcommandlibrary.shared.getHtmlFileName
 import com.linuxcommandlibrary.shared.hasDatabase
 import com.linuxcommandlibrary.shared.initDatabase
+import databases.BasicCategory
+import databases.BasicGroup
 
 /* Copyright 2022 Simon Schubert
  *

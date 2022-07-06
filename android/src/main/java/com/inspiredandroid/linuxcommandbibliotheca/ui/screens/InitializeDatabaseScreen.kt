@@ -11,10 +11,10 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.inspiredandroid.linuxcommandbibliotheca.R
+import com.linuxcommandlibrary.shared.copyDatabase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import com.linuxcommandlibrary.shared.copyDatabase
 
 @Composable
 fun InitializeDatabaseScreen(onFinish: () -> Unit = {}) {
