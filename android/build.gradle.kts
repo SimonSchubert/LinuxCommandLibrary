@@ -40,7 +40,7 @@ android {
     }
     buildTypes {
         getByName("release") {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
         }
         getByName("debug") {
             isMinifyEnabled = false
