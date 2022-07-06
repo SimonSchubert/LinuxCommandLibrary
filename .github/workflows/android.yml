@@ -21,11 +21,19 @@ jobs:
         run: chmod +x gradlew
       - name: Build APK
         run: bash ./gradlew assembleRelease --stacktrace
+      - name: Build signed APK
+        uses: r0adkll/sign-android-release@v1
+        with:
+          releaseDirectory: android/build/outputs/apk/release
+          signingKeyBase64: ${{ secrets.KEYSTORE_B64 }}
+          alias: ${{ secrets.KEY_ALIAS }}
+          keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
+          keyPassword: ${{ secrets.KEYSTORE_PASSWORD }}
       - name: Upload APK
         uses: actions/upload-artifact@v1
         with:
           name: apk
-          path: android/build/outputs/apk/release/android-release-unsigned.apk
+          path: android/build/outputs/apk/release/android-release.apk
 
   release:
     name: Release APK
