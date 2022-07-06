@@ -46,4 +46,8 @@ android {
             isMinifyEnabled = false
         }
     }
+
+    lint {
+        isAbortOnError = false
+    }
 }
