@@ -71,4 +71,6 @@ http://letsgokoyo.com - App Icon
 
 https://www.commandlinefu.com - Lots of one-liners
 
+https://tldr.sh - TLDR
+
 https://icons8.com - Icons
