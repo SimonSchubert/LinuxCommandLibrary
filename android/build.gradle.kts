@@ -28,8 +28,8 @@ android {
         applicationId = "com.inspiredandroid.linuxcommandbibliotheca"
         minSdkVersion(24)
         targetSdkVersion(33)
-        versionCode = 69
-        versionName = "3.0.0"
+        versionCode = 71
+        versionName = "3.0.1"
     }
 
     sourceSets["main"].assets.setSrcDirs(listOf("../assets"))
@@ -41,6 +41,7 @@ android {
     buildTypes {
         getByName("release") {
             isMinifyEnabled = true
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
         getByName("debug") {
             isMinifyEnabled = false
@@ -48,6 +49,6 @@ android {
     }
 
     lint {
-        isAbortOnError = false
+        abortOnError = false
     }
 }
