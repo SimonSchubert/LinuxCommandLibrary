@@ -1,0 +1,4 @@
+Refactor app to Kotlin Compose
+Add new commands
+Add new basics
+Add new tips
