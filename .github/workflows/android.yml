@@ -21,7 +21,7 @@ jobs:
         run: chmod +x gradlew
       - name: Build APK
         run: bash ./gradlew assembleRelease --stacktrace
-      - name: Build signed APK
+      - name: Sign apk
         uses: r0adkll/sign-android-release@v1
         with:
           releaseDirectory: android/build/outputs/apk/release
