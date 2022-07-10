@@ -62,16 +62,16 @@ class MarkdownBuilder {
         }
 
         stream.appendLine()
-        stream.appendLine("### Goals")
-        stream.appendLine("* Keep it simple and performant")
-        stream.appendLine("* Keep the app content up-to-date")
-        stream.appendLine("* Keep the app up-to-date with Jetpack Compose")
+        stream.appendLine()
+        stream.appendLine("### Tests")
+        stream.appendLine("Android Jetpack Compose screen tests: android/src/androidTest/java/com/inspiredandroid/linuxcommandbibliotheca/ComposeTests.kt")
+        stream.appendLine("Android Jetpack Compose deeplinking tests: android/src/androidTest/java/com/inspiredandroid/linuxcommandbibliotheca/ComposeDeeplinkTests.kt")
+        stream.appendLine("Common code unit tests: common/src/commonTest/kotlin/CommonTests.kt")
 
 
         stream.appendLine()
         stream.appendLine("### Licensing")
         stream.appendLine("The source code is licensed under the Apache 2.0 license and the copyright of the man pages in the `database.db` file are copyrighted by their respective authors.")
-
 
         stream.appendLine()
         stream.appendLine("### Thanks to")
