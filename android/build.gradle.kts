@@ -23,11 +23,11 @@ dependencies {
 }
 
 android {
-    compileSdkVersion(33)
+    compileSdk = 33
     defaultConfig {
         applicationId = "com.inspiredandroid.linuxcommandbibliotheca"
-        minSdkVersion(24)
-        targetSdkVersion(33)
+        minSdk = 24
+        targetSdk = 33
         versionCode = 71
         versionName = "3.0.1"
     }
