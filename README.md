@@ -57,10 +57,11 @@ https://linuxcommandlibrary.com
 * Modify file permissions
 * Set file permissions via binary references
 
-### Goals
-* Keep it simple and performant
-* Keep the app content up-to-date
-* Keep the app up-to-date with Jetpack Compose
+
+### Tests
+Android Jetpack Compose screen tests: android/src/androidTest/java/com/inspiredandroid/linuxcommandbibliotheca/ComposeTests.kt
+Android Jetpack Compose deeplinking tests: android/src/androidTest/java/com/inspiredandroid/linuxcommandbibliotheca/ComposeDeeplinkTests.kt
+Common code unit tests: common/src/commonTest/kotlin/CommonTests.kt
 
 ### Licensing
 The source code is licensed under the Apache 2.0 license and the copyright of the man pages in the `database.db` file are copyrighted by their respective authors.
@@ -70,7 +71,5 @@ The source code is licensed under the Apache 2.0 license and the copyright of th
 http://letsgokoyo.com - App Icon
 
 https://www.commandlinefu.com - Lots of one-liners
-
-https://tldr.sh - TLDR
 
 https://icons8.com - Icons

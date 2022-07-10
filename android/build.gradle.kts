@@ -20,6 +20,9 @@ dependencies {
     implementation("com.google.accompanist:accompanist-systemuicontroller:0.23.1")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.5.0")
     implementation("androidx.preference:preference:1.2.0")
+
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.1.1")
+    debugImplementation("androidx.compose.ui:ui-test-manifest:1.1.1")
 }
 
 android {
@@ -30,6 +33,7 @@ android {
         targetSdk = 33
         versionCode = 71
         versionName = "3.0.1"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     sourceSets["main"].assets.setSrcDirs(listOf("../assets"))

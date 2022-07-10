@@ -16,6 +16,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -53,7 +55,10 @@ fun TopBar(
     if (route == "commands") {
         val showSearch = remember { mutableStateOf(true) }
 
-        TopAppBar(title = { Text("Commands") },
+        TopAppBar(title = {
+            Text("Commands",
+                modifier = Modifier.semantics { contentDescription = "TopAppBarTitle" })
+        },
             backgroundColor = MaterialTheme.colors.primary,
             contentColor = Color.White,
             navigationIcon = if (showSearch.value) {
@@ -77,7 +82,8 @@ fun TopBar(
                         modifier = Modifier
                             .fillMaxWidth()
                             .padding(vertical = 2.dp)
-                            .focusRequester(focusRequester),
+                            .focusRequester(focusRequester)
+                            .semantics { contentDescription = "SearchField" },
                         value = textFieldValue.value,
                         onValueChange = { tfv ->
                             if (showSearch.value) {
@@ -134,7 +140,10 @@ fun TopBar(
 
         TopAppBar(
             title = {
-                Text(getTitleByRoute(navBackStackEntry.value), overflow = TextOverflow.Ellipsis)
+                Text(
+                    getTitleByRoute(navBackStackEntry.value),
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.semantics { contentDescription = "TopAppBarTitle" })
             },
             backgroundColor = MaterialTheme.colors.primary,
             contentColor = Color.White,
@@ -162,12 +171,20 @@ fun TopBar(
                     }
                 }
                 if (showBookmarkIcon) {
-                    val commandName = navBackStackEntry.value?.arguments?.getString("commandName") ?: ""
+                    val commandName =
+                        navBackStackEntry.value?.arguments?.getString("commandName") ?: ""
                     val command = databaseHelper.getCommand(commandName)
                     if (command != null) {
                         val context = LocalContext.current
                         val bookmarkManager = BookmarkManager()
-                        val isBookmarked = remember { mutableStateOf(bookmarkManager.hasBookmark(context, command.id)) }
+                        val isBookmarked = remember {
+                            mutableStateOf(
+                                bookmarkManager.hasBookmark(
+                                    context,
+                                    command.id
+                                )
+                            )
+                        }
                         IconButton(onClick = {
                             isBookmarked.value = !isBookmarked.value
                             if (isBookmarked.value) {
