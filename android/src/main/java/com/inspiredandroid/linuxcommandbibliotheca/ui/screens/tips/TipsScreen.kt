@@ -19,8 +19,6 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.inspiredandroid.linuxcommandbibliotheca.ui.shared.Code
 import com.inspiredandroid.linuxcommandbibliotheca.ui.shared.StaggeredVerticalGrid
-import databases.Tip
-import databases.TipSection
 
 /* Copyright 2022 Simon Schubert
  *
@@ -37,7 +35,6 @@ import databases.TipSection
  * limitations under the License.
 */
 
-data class MergedTip(val tip: Tip, val sections: List<TipSection>)
 
 @Composable
 fun TipsScreen(onNavigate: (String) -> Unit = {}, viewModel: TipsViewModel = viewModel()) {
@@ -55,28 +52,38 @@ fun TipsScreen(onNavigate: (String) -> Unit = {}, viewModel: TipsViewModel = vie
                         fontWeight = FontWeight.Bold,
                         modifier = Modifier.padding(bottom = 4.dp)
                     )
-                    mergedTip.sections.forEach { section ->
-                        when (section.type) {
-                            0L -> {
-                                // Remove html specific characters
-                                val text = section.data1.replace("\\n", "").replace("<b>", "").replace("</b>", "")
-                                    .replace("\\'", "")
-                                Text(text)
+                    mergedTip.sections.forEach { sectionElement ->
+                        when (sectionElement) {
+                            is TipSectionTextElement -> {
+                                Text(sectionElement.text)
                             }
-                            1L -> Code(section.data1, section.extra, onNavigate)
-                            3L -> {
+                            is TipSectionCodeElement -> {
+                                Code(sectionElement.command, sectionElement.elements, onNavigate)
+                            }
+                            is TipSectionNestedCodeElement -> {
                                 Row(verticalAlignment = Alignment.CenterVertically) {
                                     Text(
-                                        section.data1,
+                                        sectionElement.text,
                                         fontWeight = FontWeight.Bold,
                                         modifier = Modifier.width(40.dp),
                                         textAlign = TextAlign.Center
                                     )
-                                    if (section.data2.startsWith("$")) {
-                                        Code(section.data2, section.extra, onNavigate)
-                                    } else {
-                                        Text(section.data2, modifier = Modifier.padding(8.dp))
-                                    }
+                                    Code(
+                                        sectionElement.command,
+                                        sectionElement.elements,
+                                        onNavigate
+                                    )
+                                }
+                            }
+                            is TipSectionNestedTextElement -> {
+                                Row(verticalAlignment = Alignment.CenterVertically) {
+                                    Text(
+                                        sectionElement.text,
+                                        fontWeight = FontWeight.Bold,
+                                        modifier = Modifier.width(40.dp),
+                                        textAlign = TextAlign.Center
+                                    )
+                                    Text(sectionElement.info, modifier = Modifier.padding(8.dp))
                                 }
                             }
                         }

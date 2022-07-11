@@ -32,7 +32,10 @@ fun InitializeDatabaseScreen(onFinish: () -> Unit = {}) {
                 modifier = Modifier.size(240.dp).align(Alignment.CenterHorizontally)
             )
             Text("Initialize database", modifier = Modifier.align(Alignment.CenterHorizontally))
-            LinearProgressIndicator(progress = status.value.div(100f), modifier = Modifier.padding(top = 16.dp))
+            LinearProgressIndicator(
+                progress = status.value.div(100f),
+                modifier = Modifier.padding(top = 16.dp)
+            )
         }
     }
 
