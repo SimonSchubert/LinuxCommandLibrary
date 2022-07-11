@@ -228,14 +228,10 @@ private fun getTitleByRoute(backStackEntry: NavBackStackEntry?): String {
             if (route?.startsWith("command?") == true) {
                 backStackEntry.arguments?.getString("commandName") ?: ""
             } else if (route?.startsWith("basicgroups?") == true) {
-                val deeplinkName = backStackEntry.arguments?.getString("deepLinkCategoryName") ?: ""
-                if (deeplinkName.isEmpty()) {
-                    backStackEntry.arguments?.getString("categoryName") ?: ""
-                } else {
-                    val categories = databaseHelper.getBasics()
-                    val category = categories.firstOrNull { it.getHtmlFileName() == deeplinkName }
-                    category?.title ?: "Not found"
-                }
+                val deeplinkName = backStackEntry.arguments?.getString("categoryName") ?: ""
+                val categories = databaseHelper.getBasics()
+                val category = categories.firstOrNull { it.getHtmlFileName() == deeplinkName }
+                category?.title ?: "Not found"
             } else {
                 ""
             }

@@ -135,61 +135,53 @@ fun LinuxApp() {
                 }
                 composable(
                     "basicgroups?categoryId={categoryId}&categoryName={categoryName}",
-                    arguments = listOf(navArgument("categoryId") {}, navArgument("categoryName") {})
+                    arguments = listOf(
+                        navArgument("categoryId") { defaultValue = "" },
+                        navArgument("categoryName") {}),
+                    deepLinks = listOf(
+                        navDeepLink {
+                            uriPattern = "$deepLinkUri/basic/{categoryName}.html"
+                        },
+                        navDeepLink { uriPattern = "$deepLinkUri/basic/{categoryName}" })
                 ) { backStackEntry ->
-                    val categoryId =
+                    var categoryId =
                         backStackEntry.arguments?.getString("categoryId")?.toLongOrNull() ?: 0L
-                    BasicGroupsScreen(onNavigate, categoryId)
+                    if(categoryId == 0L) {
+                        // get id by category name when opened via deeplink
+                        val categoryName =
+                            backStackEntry.arguments?.getString("deepLinkCategoryName") ?: ""
+                        val categories = databaseHelper.getBasics()
+                        categoryId = categories.firstOrNull { it.getHtmlFileName() == categoryName }?.id ?: 0L
+                    }
+                    if(categoryId != 0L) {
+                        BasicGroupsScreen(onNavigate, categoryId)
+                    } else {
+                        // open tips screen on invalid deeplink parameters
+                        TipsScreen(onNavigate)
+                    }
                 }
                 composable(
                     "command?commandId={commandId}&commandName={commandName}",
-                    arguments = listOf(navArgument("commandId") {}, navArgument("commandName") {})
-                ) { backStackEntry ->
-                    val commandId =
-                        backStackEntry.arguments?.getString("commandId")?.toLongOrNull() ?: 0L
-                    CommandDetailScreen(onNavigate, commandId)
-                }
-                // Only used for deeplinks with slightly different parameters
-                composable(
-                    "basicgroups?categoryName={deepLinkCategoryName}",
-                    arguments = listOf(navArgument("deepLinkCategoryName") {}),
-                    deepLinks = listOf(
-                        navDeepLink {
-                            uriPattern = "$deepLinkUri/basic/{deepLinkCategoryName}.html"
-                        },
-                        navDeepLink { uriPattern = "$deepLinkUri/basic/{deepLinkCategoryName}" })
-                ) { backStackEntry ->
-                    val categoryName =
-                        backStackEntry.arguments?.getString("deepLinkCategoryName") ?: ""
-                    val categories = databaseHelper.getBasics()
-                    val category = categories.firstOrNull { it.getHtmlFileName() == categoryName }
-                    if (category != null) {
-                        BasicGroupsScreen(onNavigate, category.id)
-                    } else {
-                        BasicCategoriesScreen(onNavigate)
-                    }
-                }
-                // Only used for deeplinks with slightly different parameters
-                composable(
-                    "command?commandName={commandName}",
-                    arguments = listOf(navArgument("commandName") {}),
+                    arguments = listOf(
+                        navArgument("commandId") { defaultValue = "" },
+                        navArgument("commandName") {}),
                     deepLinks = listOf(
                         navDeepLink { uriPattern = "$deepLinkUri/man/{commandName}.html" },
                         navDeepLink { uriPattern = "$deepLinkUri/man/{commandName}" })
                 ) { backStackEntry ->
-                    val commandName = backStackEntry.arguments?.getString("commandName") ?: ""
-
-                    val command = databaseHelper.getCommand(commandName)
-                    if (command != null) {
-                        CommandDetailScreen(onNavigate, command.id)
+                    var commandId =
+                        backStackEntry.arguments?.getString("commandId")?.toLongOrNull() ?: 0L
+                    if (commandId == 0L) {
+                        // get id by command name when opened via deeplink
+                        val commandName = backStackEntry.arguments?.getString("commandName") ?: ""
+                        val command = databaseHelper.getCommand(commandName)
+                        commandId = command?.id ?: 0L
+                    }
+                    if (commandId != 0L) {
+                        CommandDetailScreen(onNavigate, commandId)
                     } else {
-                        val bookmarkedIds = bookmarkManager.getBookmarkIds(LocalContext.current)
-                        CommandListScreen(
-                            databaseHelper.getCommands(),
-                            searchTextValue.value.text,
-                            bookmarkedIds,
-                            onNavigate
-                        )
+                        // open tips screen on invalid deeplink parameters
+                        TipsScreen(onNavigate)
                     }
                 }
             }
