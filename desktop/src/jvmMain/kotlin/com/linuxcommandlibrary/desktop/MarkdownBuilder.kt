@@ -1,3 +1,5 @@
+package com.linuxcommandlibrary.desktop
+
 import com.linuxcommandlibrary.shared.databaseHelper
 import com.linuxcommandlibrary.shared.initDatabase
 import java.io.File
@@ -30,6 +32,9 @@ class MarkdownBuilder {
         val file = File("README.md")
         val stream = PrintStream(file)
         stream.appendLine("## Linux Command Library (Mobile+Web)")
+        stream.appendLine()
+        stream.appendLine("![Icon](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandLibrary/master/art/web_hi_res_144.png)")
+        stream.appendLine()
         stream.appendLine("The app currently has **${databaseHelper.getCommands().size}** manual pages, **${databaseHelper.getBasics().size}+** basic categories and a bunch of general terminal tips. It works 100% offline, doesn't need an internet connection and has no tracking software.")
         stream.appendLine()
         stream.appendLine("[![Play Store](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/play_store_badge.png)](https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca)")
@@ -38,7 +43,7 @@ class MarkdownBuilder {
         stream.appendLine()
         stream.appendLine("### Screenshots")
         stream.appendLine()
-        stream.appendLine("<p float=\"left\">")
+        stream.appendLine("<p>")
         val mobileScreenshotFiles = listOf("screen-1.png", "screen-2-dark.png", "screen-3.png", "screen-4-dark.png")
         mobileScreenshotFiles.forEach { fileName ->
             stream.appendLine("<img src=\"https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/${fileName}\" width=\"200\">")
@@ -64,9 +69,12 @@ class MarkdownBuilder {
         stream.appendLine()
         stream.appendLine()
         stream.appendLine("### Tests")
-        stream.appendLine("Android Jetpack Compose screen tests: android/src/androidTest/java/com/inspiredandroid/linuxcommandbibliotheca/ComposeTests.kt")
-        stream.appendLine("Android Jetpack Compose deeplinking tests: android/src/androidTest/java/com/inspiredandroid/linuxcommandbibliotheca/ComposeDeeplinkTests.kt")
-        stream.appendLine("Common code unit tests: common/src/commonTest/kotlin/CommonTests.kt")
+        stream.appendLine()
+        stream.appendLine("Android Jetpack Compose screen tests: [ComposeTests.kt](android/src/androidTest/java/com/inspiredandroid/linuxcommandbibliotheca/ComposeTests.kt)")
+        stream.appendLine()
+        stream.appendLine("Android Jetpack Compose deeplinking tests: [ComposeDeeplinkTests.kt](android/src/androidTest/java/com/inspiredandroid/linuxcommandbibliotheca/ComposeDeeplinkTests.kt)")
+        stream.appendLine()
+        stream.appendLine("Common code unit tests: [CommonTests](common/src/commonTest/kotlin/CommonTests.kt)")
 
 
         stream.appendLine()
@@ -81,6 +89,8 @@ class MarkdownBuilder {
         stream.appendLine("https://www.commandlinefu.com - Lots of one-liners")
         stream.appendLine()
         stream.appendLine("https://icons8.com - Icons")
+        stream.appendLine()
+        stream.appendLine("https://tldr.sh - TLDR")
 
 
         stream.close()

@@ -1,3 +1,5 @@
+package com.linuxcommandlibrary.desktop
+
 import com.linuxcommandlibrary.shared.*
 import databases.BasicCategory
 import kotlinx.html.*
@@ -77,7 +79,7 @@ class WebsiteBuilder {
                     keywords = "linux,cmd,tips,man,commands"
                 )
 
-                styleLink("/stylesheets/main.css?v=$cacheVersion")
+                styleLink("/stylesheets/com.linuxcommandlibrary.desktop.main.css?v=$cacheVersion")
                 script(src = "/scripts/search.js?v=$cacheVersion") {
                     defer = true
                 }
@@ -155,7 +157,7 @@ class WebsiteBuilder {
                     keywords = "linux,cmd,basics,terminal,console,cheat sheets,tips,${basicCategories.joinToString(",") { it.title }}"
                 )
 
-                styleLink("/stylesheets/main.css?v=$cacheVersion")
+                styleLink("/stylesheets/com.linuxcommandlibrary.desktop.main.css?v=$cacheVersion")
             }
             body {
                 header(selectedIndex = 1)
@@ -216,7 +218,7 @@ class WebsiteBuilder {
                         keywords = getKeywordsForBasic(category)
                     )
 
-                    styleLink("/stylesheets/main.css?v=$cacheVersion")
+                    styleLink("/stylesheets/com.linuxcommandlibrary.desktop.main.css?v=$cacheVersion")
                     script(src = "/scripts/copy.js?v=$cacheVersion") {
                         defer = true
                     }
@@ -326,7 +328,7 @@ class WebsiteBuilder {
                     keywords = "linux,cmd,useful,terminal,tips,cheat"
                 )
 
-                styleLink("/stylesheets/main.css?v=$cacheVersion")
+                styleLink("/stylesheets/com.linuxcommandlibrary.desktop.main.css?v=$cacheVersion")
                 script(src = "/scripts/copy.js?v=$cacheVersion") {
                     defer = true
                 }
@@ -456,7 +458,7 @@ class WebsiteBuilder {
                         keywords = "linux,man,page,command,manual,${command.name}"
                     )
 
-                    styleLink("/stylesheets/main.css?v=$cacheVersion")
+                    styleLink("/stylesheets/com.linuxcommandlibrary.desktop.main.css?v=$cacheVersion")
                     script(src = "/scripts/copy.js?v=$cacheVersion") {
                         defer = true
                     }
@@ -592,7 +594,7 @@ class WebsiteBuilder {
                     keywords = "linux,cmd,tips,man,commands"
                 )
 
-                styleLink("/stylesheets/main.css?v=$cacheVersion")
+                styleLink("/stylesheets/com.linuxcommandlibrary.desktop.main.css?v=$cacheVersion")
             }
             body {
                 header(selectedIndex = -1)

@@ -1,3 +1,5 @@
+package com.linuxcommandlibrary.desktop
+
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.ui.window.Window

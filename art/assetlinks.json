@@ -1,0 +1,11 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.inspiredandroid.linuxcommandbibliotheca",
+      "sha256_cert_fingerprints":
+      ["01:76:7F:F9:25:17:A7:25:AF:AE:87:3F:40:E3:67:BD:A4:2F:0E:DB:A5:65:3A:D1:5C:AF:04:93:C6:43:5E:60"]
+    }
+  }
+]

@@ -1,3 +1,5 @@
+package com.linuxcommandlibrary.desktop
+
 import com.linuxcommandlibrary.shared.databaseHelper
 import com.linuxcommandlibrary.shared.initDatabase
 import java.io.File
