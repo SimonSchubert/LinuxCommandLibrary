@@ -85,11 +85,13 @@ fun String.getCommandList(mans: String, hasBrackets: Boolean = false): List<Code
     return list.toList()
 }
 
+val onlyCharactersRegex = "[^a-z]".toRegex()
+
 /**
  * Only allow characters in html file names to guarantee matching on the website and app deep linking
  */
 fun BasicCategory.getHtmlFileName(): String {
-    return this.title.lowercase(Locale.US).replace("[^a-z]".toRegex(), "")
+    return this.title.lowercase(Locale.US).replace(onlyCharactersRegex, "")
 }
 
 /**
