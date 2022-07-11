@@ -18,8 +18,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.inspiredandroid.linuxcommandbibliotheca.getIconResource
-import java.net.URLEncoder
-import java.nio.charset.StandardCharsets
+import com.linuxcommandlibrary.shared.getHtmlFileName
 
 /* Copyright 2022 Simon Schubert
  *
@@ -37,7 +36,10 @@ import java.nio.charset.StandardCharsets
 */
 
 @Composable
-fun BasicCategoriesScreen(onNavigate: (String) -> Unit = {}, viewModel: BasicCategoriesModel = viewModel()) {
+fun BasicCategoriesScreen(
+    onNavigate: (String) -> Unit = {},
+    viewModel: BasicCategoriesModel = viewModel()
+) {
     LazyVerticalGrid(cells = GridCells.Adaptive(minSize = 300.dp)) {
         items(items = viewModel.basicCategories) { basicCategory ->
             ListItem(
@@ -51,9 +53,7 @@ fun BasicCategoriesScreen(onNavigate: (String) -> Unit = {}, viewModel: BasicCat
                 },
                 modifier = Modifier.clickable {
                     onNavigate(
-                        "basicgroups?categoryId=${basicCategory.id}&categoryName=${
-                            URLEncoder.encode(basicCategory.title, StandardCharsets.UTF_8.toString())
-                        }"
+                        "basicgroups?categoryId=${basicCategory.id}&categoryName=${basicCategory.getHtmlFileName()}"
                     )
                 })
         }
