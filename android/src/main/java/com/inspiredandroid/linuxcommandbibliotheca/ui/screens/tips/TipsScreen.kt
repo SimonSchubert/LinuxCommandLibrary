@@ -2,10 +2,7 @@
 
 package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.tips
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Card
@@ -49,7 +46,7 @@ fun TipsScreen(onNavigate: (String) -> Unit = {}, viewModel: TipsViewModel = vie
         modifier = Modifier.padding(4.dp).verticalScroll(rememberScrollState())
     ) {
         viewModel.mergedTips.forEach { mergedTip ->
-            Card(elevation = 4.dp, modifier = Modifier.padding(4.dp)) {
+            Card(elevation = 4.dp, modifier = Modifier.padding(4.dp).fillMaxWidth()) {
                 Column(modifier = Modifier.padding(6.dp)) {
                     Text(
                         mergedTip.tip.title,
