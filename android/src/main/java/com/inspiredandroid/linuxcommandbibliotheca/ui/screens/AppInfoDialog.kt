@@ -56,7 +56,8 @@ fun AppInfoDialog(showDialog: MutableState<Boolean>) {
                         uriHandler.openUri("https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca")
                     }, modifier = Modifier.padding(start = 6.dp))
                     Column(
-                        modifier = Modifier.padding(8.dp).weight(1f).verticalScroll(rememberScrollState())
+                        modifier = Modifier.padding(8.dp).weight(1f)
+                            .verticalScroll(rememberScrollState())
                     ) {
                         Text("Man pages", style = MaterialTheme.typography.h6)
                         Text("Licence information about the man page is usually specified in the man detail page under the category Author, Copyright or Licence. If there is no information on the page you can find the information in the man page source file on your linux system. If you have questions or can't find what you need, you can contact me at sschubert89@gmail.com.")

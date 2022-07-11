@@ -1,12 +1,5 @@
 package com.linuxcommandlibrary.shared
 
-import androidx.compose.material.Text
-import androidx.compose.material.Button
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import databases.BasicCategory
 import databases.CommandSection
 import java.util.*
@@ -26,48 +19,37 @@ import java.util.*
  * limitations under the License.
 */
 
-@Composable
-fun App() {
-    var text by remember { mutableStateOf("Hello, World!") }
-
-    Button(onClick = {
-        text = "Hello, ${getPlatformName()}"
-    }) {
-        Text(text)
-    }
-}
-
-
-sealed class Element
-data class TextElement(val text: String) : Element()
-data class ManElement(val man: String) : Element()
-data class UrlElement(val command: String, val url: String) : Element()
+sealed class CodeElement
+data class TextCodeElement(val text: String) : CodeElement()
+data class ManCodeElement(val man: String) : CodeElement()
+data class UrlCodeElement(val command: String, val url: String) : CodeElement()
 
 /**
  * Return a list of sealed Elements for visual representation
  */
-fun String.getCommandList(mans: String, hasBrackets: Boolean = false): List<Element> {
+fun String.getCommandList(mans: String, hasBrackets: Boolean = false): List<CodeElement> {
     var command = " $this"
-    val list = mutableListOf<Element>()
-    mans.split(",").filterNot { it.isEmpty() }.map { it.replace("(", "").replace(")", "") }.forEach {
-        command = if (it.startsWith("url:")) {
-            val cmd = it.substring(4).split("|").first()
-            command.replace(cmd, " ü${it}ä")
-        } else {
-            if (hasBrackets) {
-                command.replace("(?:[\\s,])($it)".toRegex(), " ü${it}ä")
+    val list = mutableListOf<CodeElement>()
+    mans.split(",").filterNot { it.isEmpty() }.map { it.replace("(", "").replace(")", "") }
+        .forEach {
+            command = if (it.startsWith("url:")) {
+                val cmd = it.substring(4).split("|").first()
+                command.replace(cmd, " ü${it}ä")
             } else {
-                command.replace(it, " ü${it}ä")
+                if (hasBrackets) {
+                    command.replace("(?:[\\s,])($it)".toRegex(), " ü${it}ä")
+                } else {
+                    command.replace(it, " ü${it}ä")
+                }
             }
         }
-    }
 
     var currentText = ""
     var currentCommand = ""
     var isCommand = false
     command.trim().forEach {
         if (it == 'ü') {
-            list.add(TextElement(currentText))
+            list.add(TextCodeElement(currentText.replace("\\n", "")))
             currentText = ""
             isCommand = true
         } else if (it == 'ä') {
@@ -76,7 +58,7 @@ fun String.getCommandList(mans: String, hasBrackets: Boolean = false): List<Elem
                     currentCommand.startsWith("url:") -> {
                         val url = currentCommand.split("|").last()
                         val cmd = currentCommand.substring(4).split("|").first()
-                        list.add(UrlElement(cmd, url))
+                        list.add(UrlCodeElement(cmd, url))
                     }
 //                    database.getCommandByName(currentCommand) != null -> {
 //                        list.add(Man(currentCommand))
@@ -85,7 +67,7 @@ fun String.getCommandList(mans: String, hasBrackets: Boolean = false): List<Elem
 //                        list.add(Text(currentCommand))
 //                    }
                     else -> {
-                        list.add(ManElement(currentCommand))
+                        list.add(ManCodeElement(currentCommand))
                     }
                 }
             }
@@ -99,7 +81,7 @@ fun String.getCommandList(mans: String, hasBrackets: Boolean = false): List<Elem
             }
         }
     }
-    list.add(TextElement(currentText.replace("[cmd]", "[command]")))
+    list.add(TextCodeElement(currentText.replace("[cmd]", "[command]").replace("\\n", "")))
     return list.toList()
 }
 

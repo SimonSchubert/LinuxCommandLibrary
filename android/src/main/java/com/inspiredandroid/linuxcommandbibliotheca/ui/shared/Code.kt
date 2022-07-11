@@ -34,24 +34,21 @@ import com.linuxcommandlibrary.shared.*
 */
 
 @Composable
-fun Code(command: String, mans: String, onNavigate: (String) -> Unit = {}) {
-    val elements = remember(command, mans) {
-        command.getCommandList(mans)
-    }
+fun Code(command: String, elements: List<CodeElement>, onNavigate: (String) -> Unit = {}) {
     val codeColor = MaterialTheme.colors.primary
     val annotatedString = remember(codeColor) {
         buildAnnotatedString {
             elements.forEachIndexed { index, element ->
                 when (element) {
-                    is TextElement -> append(element.text.replace("\\n", ""))
-                    is ManElement -> {
+                    is TextCodeElement -> append(element.text)
+                    is ManCodeElement -> {
                         pushStringAnnotation(tag = "$index", annotation = element.man)
                         withStyle(style = SpanStyle(color = codeColor)) {
                             append(element.man)
                         }
                         pop()
                     }
-                    is UrlElement -> {
+                    is UrlCodeElement -> {
                         pushStringAnnotation(tag = "$index", annotation = element.url)
                         withStyle(style = SpanStyle(color = codeColor)) {
                             append(element.command)
@@ -65,27 +62,38 @@ fun Code(command: String, mans: String, onNavigate: (String) -> Unit = {}) {
 
     val uriHandler = LocalUriHandler.current
     ListItem(text = {
-        ClickableText(text = annotatedString, style = MaterialTheme.typography.subtitle2, onClick = { offset ->
-            elements.forEachIndexed { index, element ->
-                if (element is UrlElement) {
-                    annotatedString.getStringAnnotations(tag = "$index", start = offset, end = offset)
-                        .firstOrNull()
-                        ?.let {
-                            uriHandler.openUri(it.item)
-                        }
-                }
-                if (element is ManElement) {
-                    annotatedString.getStringAnnotations(tag = "$index", start = offset, end = offset)
-                        .firstOrNull()
-                        ?.let {
-                            val manCommand = databaseHelper.getCommand(it.item)
-                            if (manCommand != null) {
-                                onNavigate("command?commandId=${manCommand.id}&commandName=${manCommand.name}")
+        ClickableText(
+            text = annotatedString,
+            style = MaterialTheme.typography.subtitle2,
+            onClick = { offset ->
+                elements.forEachIndexed { index, element ->
+                    if (element is UrlCodeElement) {
+                        annotatedString.getStringAnnotations(
+                            tag = "$index",
+                            start = offset,
+                            end = offset
+                        )
+                            .firstOrNull()
+                            ?.let {
+                                uriHandler.openUri(it.item)
                             }
-                        }
+                    }
+                    if (element is ManCodeElement) {
+                        annotatedString.getStringAnnotations(
+                            tag = "$index",
+                            start = offset,
+                            end = offset
+                        )
+                            .firstOrNull()
+                            ?.let {
+                                val manCommand = databaseHelper.getCommand(it.item)
+                                if (manCommand != null) {
+                                    onNavigate("command?commandId=${manCommand.id}&commandName=${manCommand.name}")
+                                }
+                            }
+                    }
                 }
-            }
-        })
+            })
     }, trailing = {
         val shareCommand = shareCommandLambda(command)
         IconButton(onClick = {
@@ -105,7 +113,10 @@ fun shareCommandLambda(command: String): () -> Unit {
     return {
         val intent = Intent(Intent.ACTION_SEND)
         intent.type = "text/plain"
-        intent.putExtra(Intent.EXTRA_TEXT, command.dropWhile { it == '$' || it.isWhitespace() }.replace("\\n", ""))
+        intent.putExtra(
+            Intent.EXTRA_TEXT,
+            command.dropWhile { it == '$' || it.isWhitespace() }.replace("\\n", "")
+        )
         try {
             context.startActivity(Intent.createChooser(intent, "Share command"))
         } catch (e: Exception) {

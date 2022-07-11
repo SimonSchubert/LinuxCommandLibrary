@@ -20,6 +20,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basicgroups.BasicG
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basicgroups.BasicGroupsModel
 import com.inspiredandroid.linuxcommandbibliotheca.ui.shared.Code
 import com.linuxcommandlibrary.shared.databaseHelper
+import com.linuxcommandlibrary.shared.getCommandList
 import databases.BasicGroup
 
 /* Copyright 2022 Simon Schubert
@@ -68,7 +69,11 @@ fun BasicGroupColumn(basicGroup: BasicGroup, onNavigate: (String) -> Unit = {}) 
     if (switched) {
         val commands = databaseHelper.getBasicCommands(basicGroup.id)
         commands.forEach { basicCommand ->
-            Code(basicCommand.command, basicCommand.mans, onNavigate)
+            Code(
+                basicCommand.command,
+                basicCommand.command.getCommandList(basicCommand.mans),
+                onNavigate
+            )
         }
     }
 }

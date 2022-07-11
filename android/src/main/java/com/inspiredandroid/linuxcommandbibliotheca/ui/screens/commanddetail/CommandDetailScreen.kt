@@ -20,6 +20,7 @@ import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.text.HtmlCompat
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.inspiredandroid.linuxcommandbibliotheca.ui.shared.Code
+import com.linuxcommandlibrary.shared.TextCodeElement
 import databases.CommandSection
 
 /* Copyright 2022 Simon Schubert
@@ -58,7 +59,13 @@ fun CommandSectionColumn(
     onNavigate: (String) -> Unit = {}
 ) {
     var switched by remember { mutableStateOf(false) }
-    ListItem(text = { Text(section.title.uppercase(), fontWeight = FontWeight.Bold, fontSize = 20.sp) },
+    ListItem(text = {
+        Text(
+            section.title.uppercase(),
+            fontWeight = FontWeight.Bold,
+            fontSize = 20.sp
+        )
+    },
         modifier = Modifier.clickable {
             switched = !switched
         })
@@ -68,7 +75,8 @@ fun CommandSectionColumn(
                 val split = it.split("</b><br>")
                 if (split.size > 1) {
                     ListItem(text = { Text(split[0], fontWeight = FontWeight.Bold) })
-                    Code("$ " + split[1].replace("<br>", "").replace("`", ""), "", onNavigate)
+                    val command = "$ " + split[1].replace("<br>", "").replace("`", "")
+                    Code(command, listOf(TextCodeElement(command)), onNavigate)
                 }
             }
         } else {
@@ -76,7 +84,8 @@ fun CommandSectionColumn(
             ListItem(text = {
                 AndroidView(factory = { context ->
                     TextView(context).apply {
-                        val content = HtmlCompat.fromHtml(section.content, HtmlCompat.FROM_HTML_MODE_LEGACY)
+                        val content =
+                            HtmlCompat.fromHtml(section.content, HtmlCompat.FROM_HTML_MODE_LEGACY)
                         text = content.dropLastWhile { it.isWhitespace() }
                         setTextColor(color.toArgb())
                     }

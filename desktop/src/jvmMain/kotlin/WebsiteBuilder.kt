@@ -519,13 +519,13 @@ class WebsiteBuilder {
                                             p {
                                                 text.getCommandList(mans, true).forEach { element ->
                                                     when (element) {
-                                                        is ManElement -> {
+                                                        is ManCodeElement -> {
                                                             a("/man/${element.man}") {
                                                                 title = "${element.man} man page"
                                                                 text(element.man)
                                                             }
                                                         }
-                                                        is TextElement -> {
+                                                        is TextCodeElement -> {
                                                             unsafe {
                                                                 +element.text
                                                             }
@@ -797,13 +797,13 @@ class WebsiteBuilder {
                 }
                 command.getCommandList(mans).forEach { element ->
                     when (element) {
-                        is ManElement -> {
+                        is ManCodeElement -> {
                             a("/man/${element.man}") {
                                 title = "${element.man} man page"
                                 text(element.man)
                             }
                         }
-                        is TextElement -> {
+                        is TextCodeElement -> {
                             element.text.split("<br>").map { it.replace("$  ", "$ ") }.forEachIndexed { index, s ->
                                 if (index != 0) {
                                     br
@@ -818,7 +818,7 @@ class WebsiteBuilder {
                                 }
                             }
                         }
-                        is UrlElement -> {
+                        is UrlCodeElement -> {
                             a(element.url) {
                                 target = ATarget.blank
                                 rel = "noopener"
