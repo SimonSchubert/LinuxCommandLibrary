@@ -1,0 +1,2 @@
+Fix tips screen UI width bug
+Improve tips screen performance
