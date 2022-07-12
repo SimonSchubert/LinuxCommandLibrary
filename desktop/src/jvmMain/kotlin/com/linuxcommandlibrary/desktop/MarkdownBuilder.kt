@@ -38,6 +38,7 @@ class MarkdownBuilder {
         stream.appendLine("The app currently has **${databaseHelper.getCommands().size}** manual pages, **${databaseHelper.getBasics().size}+** basic categories and a bunch of general terminal tips. It works 100% offline, doesn't need an internet connection and has no tracking software.")
         stream.appendLine()
         stream.appendLine("[![Play Store](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/play_store_badge.png)](https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca)")
+        stream.appendLine("[![F-Droid](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/fdroid_badge.png)](https://f-droid.org/en/packages/com.inspiredandroid.linuxcommandbibliotheca/)")
         stream.appendLine()
         stream.appendLine("https://linuxcommandlibrary.com")
         stream.appendLine()
@@ -74,7 +75,7 @@ class MarkdownBuilder {
         stream.appendLine()
         stream.appendLine("Android Jetpack Compose deeplinking tests: [ComposeDeeplinkTests.kt](android/src/androidTest/java/com/inspiredandroid/linuxcommandbibliotheca/ComposeDeeplinkTests.kt)")
         stream.appendLine()
-        stream.appendLine("Common code unit tests: [CommonTests](common/src/commonTest/kotlin/CommonTests.kt)")
+        stream.appendLine("Common code unit tests: [CommonTests.kt](common/src/commonTest/kotlin/CommonTests.kt)")
 
 
         stream.appendLine()
