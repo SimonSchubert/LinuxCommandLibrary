@@ -21,7 +21,7 @@ kotlin {
             dependencies {
                 implementation(project(":common"))
                 implementation(compose.desktop.currentOs)
-                implementation("org.jetbrains.kotlinx:kotlinx-html-jvm:0.7.5")
+                implementation("org.jetbrains.kotlinx:kotlinx-html-jvm:0.8.0")
                 implementation("org.json:json:20220320")
             }
         }
