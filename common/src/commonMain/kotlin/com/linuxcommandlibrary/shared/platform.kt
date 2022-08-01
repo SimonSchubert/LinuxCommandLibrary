@@ -30,7 +30,7 @@ class DatabaseHelper {
 
     fun setupDriver(driver: SqlDriver) {
         sqlDriver = driver
-        println("Setup driver: $sqlDriver")
+        // println("Setup driver: $sqlDriver")
         commandQueries = CommandDatabase(sqlDriver).commandQueries
     }
 
