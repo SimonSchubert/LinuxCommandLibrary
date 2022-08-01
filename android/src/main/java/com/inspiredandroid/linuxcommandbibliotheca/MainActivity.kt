@@ -56,8 +56,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        if (!hasDatabase(this)) {
+
+        val preferenceManager = PreferenceUtil()
+        if (!hasDatabase(this) || !preferenceManager.isDatabaseUpToDate(this)) {
             startActivity(Intent(this, InitializeDatabaseActivity::class.java))
+            preferenceManager.updateDatabaseVersion(this)
             finish()
             return
         }
@@ -75,7 +78,7 @@ fun LinuxApp() {
     val navController = rememberNavController()
     val navBackStackEntry = navController.currentBackStackEntryAsState()
     val currentDestination = navBackStackEntry.value?.destination
-    val bookmarkManager = BookmarkManager()
+    val bookmarkManager = PreferenceUtil()
     val searchTextValue = remember {
         mutableStateOf(
             TextFieldValue(text = "", selection = TextRange(0))

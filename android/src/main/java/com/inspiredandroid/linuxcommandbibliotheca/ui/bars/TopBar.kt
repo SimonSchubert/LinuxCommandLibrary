@@ -22,7 +22,7 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavBackStackEntry
-import com.inspiredandroid.linuxcommandbibliotheca.BookmarkManager
+import com.inspiredandroid.linuxcommandbibliotheca.PreferenceUtil
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.AppInfoDialog
 import com.linuxcommandlibrary.shared.databaseHelper
@@ -176,7 +176,7 @@ fun TopBar(
                     val command = databaseHelper.getCommand(commandName)
                     if (command != null) {
                         val context = LocalContext.current
-                        val bookmarkManager = BookmarkManager()
+                        val bookmarkManager = PreferenceUtil()
                         val isBookmarked = remember {
                             mutableStateOf(
                                 bookmarkManager.hasBookmark(

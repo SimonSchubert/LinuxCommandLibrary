@@ -30,11 +30,9 @@ class InitializeDatabaseActivity : AppCompatActivity() {
 
         setContent {
             LinuxTheme {
-                Scaffold {
-                    InitializeDatabaseScreen {
-                        startActivity(Intent(this, MainActivity::class.java))
-                        finish()
-                    }
+                InitializeDatabaseScreen {
+                    startActivity(Intent(this, MainActivity::class.java))
+                    finish()
                 }
             }
         }
