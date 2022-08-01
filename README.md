@@ -1,4 +1,4 @@
-## Linux Command Library (Mobile+Web)
+## Linux Command Library (Mobile+CLI+Web)
 
 ![Icon](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandLibrary/master/art/web_hi_res_144.png)
 
@@ -9,7 +9,7 @@ The app currently has **4608** manual pages, **21+** basic categories and a bunc
 
 https://linuxcommandlibrary.com
 
-### Screenshots
+### Mobile screenshots
 
 <p>
 <img src="https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-1.png" width="200">
@@ -19,6 +19,11 @@ https://linuxcommandlibrary.com
 </p>
 <img src="https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-1-tablet.png" width="400">
 <img src="https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-2-tablet.png" width="400">
+
+### CLI screenshot
+<img src="https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-cli-1.png" width="300">
+
+Execute `:cli:buildFatJar2` to create jar file for Linux, Windows and Mac.
 
 ### Categories
 
