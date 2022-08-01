@@ -42,6 +42,7 @@ kotlin {
                 api(compose.preview)
                 implementation("com.squareup.sqldelight:sqlite-driver:1.5.3")
             }
+            resources.setSrcDirs(listOf("../assets"))
         }
         val desktopTest by getting
     }

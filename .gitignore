@@ -5,9 +5,11 @@
 /android/release
 /common/build
 /desktop/build
+/cli/build
 .idea/
 .gradle/
 local.properties
 *.key
 *.aab
+*.jar
 /html

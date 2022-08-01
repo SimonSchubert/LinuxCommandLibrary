@@ -1,9 +1,7 @@
 package com.linuxcommandlibrary.shared
 
-import com.linuxcommandlibrary.CommandDatabase
-import com.squareup.sqldelight.db.SqlDriver
-import com.squareup.sqldelight.sqlite.driver.JdbcSqliteDriver
-import java.io.File
+import androidx.compose.desktop.ui.tooling.preview.Preview
+import androidx.compose.runtime.Composable
 
 /* Copyright 2022 Simon Schubert
  *
@@ -20,18 +18,8 @@ import java.io.File
  * limitations under the License.
 */
 
-actual fun getPlatformName(): String {
-    return "Desktop"
-}
-
-
-actual var databaseHelper = DatabaseHelper()
-
-fun initDatabase() {
-    val databaseFile = EmptyClass::class.java.classLoader.getResource("database.db")?.toURI()
-    val driver: SqlDriver = JdbcSqliteDriver("jdbc:sqlite::resource:$databaseFile")
-    if (!File("assets/database.db").exists()) {
-        CommandDatabase.Schema.create(driver)
-    }
-    databaseHelper.setupDriver(driver)
+@Preview
+@Composable
+fun AppPreview() {
+    // App()
 }
