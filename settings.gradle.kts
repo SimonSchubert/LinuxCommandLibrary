@@ -10,5 +10,5 @@ pluginManagement {
 rootProject.name = "Linux Command Library"
 
 
-include(":android", ":desktop", ":common")
+include(":android", ":desktop", ":common", ":cli")
 
