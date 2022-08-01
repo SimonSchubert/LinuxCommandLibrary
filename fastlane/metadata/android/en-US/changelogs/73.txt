@@ -1,0 +1,3 @@
+Add search priority sorting
+Add new commands and update man pages
+Upgrade to the latest Jetpack Compose and Kotlin
