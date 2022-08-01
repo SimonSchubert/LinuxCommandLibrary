@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.inspiredandroid.linuxcommandbibliotheca"
-version = "1.0"
+version = parent!!.version
 
 repositories {
     mavenCentral()
@@ -32,7 +32,7 @@ android {
         minSdk = 24
         targetSdk = 33
         versionCode = 72
-        versionName = "3.0.2"
+        versionName = project.version.toString()
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 

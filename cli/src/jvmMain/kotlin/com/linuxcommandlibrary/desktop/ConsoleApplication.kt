@@ -1,6 +1,7 @@
 package com.linuxcommandlibrary.desktop
 
 import com.linuxcommandlibrary.shared.databaseHelper
+import com.linuxcommandlibrary.shared.getCurrentVersion
 import com.linuxcommandlibrary.shared.initDatabase
 import kotlin.system.exitProcess
 
@@ -25,6 +26,7 @@ fun showIntro() {
     println(" _     _ _____ _____   ____  _____ __  __")
     println("| |__ | || () )| () ) / () \\ | () )\\ \\/ /")
     println("|____||_||_()_)|_|\\_\\/__/\\__\\|_|\\_\\ |__|")
+    println("Version: ${getCurrentVersion()}")
 }
 
 fun showStartMenu() {
@@ -68,6 +70,7 @@ fun showSearch() {
             val name = commands[choice - 1].name
             showCommand(name)
         }
+
         else -> {
             println("Invalid input")
             showSearch()
@@ -107,6 +110,7 @@ fun showBasicCategories() {
             val id = categories[choice - 1].id
             showBasicGroups(id)
         }
+
         else -> {
             println("Invalid input")
             showBasicCategories()
@@ -142,6 +146,7 @@ fun showTips() {
             val id = tips[choice - 1].id
             showTipsDetail(id)
         }
+
         else -> {
             println("Invalid input")
             showTips()
@@ -155,9 +160,11 @@ fun showTipsDetail(id: Long) {
             0L -> {
                 printTipData(it.data1)
             }
+
             1L -> {
                 printTipData(it.data1)
             }
+
             3L -> {
                 if (it.data1.isNotBlank()) {
                     printTipData(it.data1)
