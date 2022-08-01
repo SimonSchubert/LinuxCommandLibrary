@@ -1,3 +1,4 @@
+import com.android.build.gradle.internal.res.processResources
 import org.jetbrains.compose.compose
 
 plugins {
@@ -43,10 +44,13 @@ kotlin {
                 implementation("com.squareup.sqldelight:sqlite-driver:1.5.3")
             }
             resources.setSrcDirs(listOf("../assets"))
+
         }
         val desktopTest by getting
     }
+
 }
+
 
 android {
     compileSdk = 33

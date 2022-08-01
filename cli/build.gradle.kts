@@ -4,8 +4,7 @@ plugins {
 }
 
 group = "com.linuxcommandlibrary"
-version = "1.0"
-
+version = parent!!.version
 
 kotlin {
     jvm {
@@ -44,6 +43,12 @@ kotlin {
         }
         val jvmTest by getting
     }
+}
+
+tasks.processResources {
+    val contents = "version=${version}"
+    val file = File("cli/src/jvmMain/resources", "application.properties")
+    file.writeText(contents)
 }
 
 application {
