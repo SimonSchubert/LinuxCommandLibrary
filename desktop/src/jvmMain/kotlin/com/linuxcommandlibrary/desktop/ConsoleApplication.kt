@@ -2,6 +2,7 @@ package com.linuxcommandlibrary.desktop
 
 import com.linuxcommandlibrary.shared.databaseHelper
 import com.linuxcommandlibrary.shared.initDatabase
+import kotlin.system.exitProcess
 
 const val bold = "\u001b[1m"
 const val reset = "\u001b[0m"
@@ -15,29 +16,34 @@ fun main() {
 }
 
 fun showIntro() {
-    println(" _     _  __  _  __ __ __  __  ")
-    println("| |__ | ||  \\| ||  |  |\\ \\/ /                    ")
-    println("|____||_||_|\\__| \\___/ /_/\\_\\                    ")
-    println(" ____  ____  __  __  __  __   ____   __  _  ____ ")
+    println(" _     _  __  _  __ __ __  __")
+    println("| |__ | ||  \\| ||  |  |\\ \\/ /")
+    println("|____||_||_|\\__| \\___/ /_/\\_\\")
+    println(" ____  ____  __  __  __  __   ____   __  _  ____")
     println("/ (__`/ () \\|  \\/  ||  \\/  | / () \\ |  \\| || _) \\")
     println("\\____)\\____/|_|\\/|_||_|\\/|_|/__/\\__\\|_|\\__||____/")
-    println(" _     _ _____ _____   ____  _____ __  __        ")
-    println("| |__ | || () )| () ) / () \\ | () )\\ \\/ /        ")
-    println("|____||_||_()_)|_|\\_\\/__/\\__\\|_|\\_\\ |__|    ")
-
-    println()
+    println(" _     _ _____ _____   ____  _____ __  __")
+    println("| |__ | || () )| () ) / () \\ | () )\\ \\/ /")
+    println("|____||_||_()_)|_|\\_\\/__/\\__\\|_|\\_\\ |__|")
 }
 
 fun showStartMenu() {
-    println("1. Commands")
-    println("2. Basics")
-    println("3. Tips")
+    println()
+    println("1 Commands")
+    println("2 Basics")
+    println("3 Tips")
+    println()
+    println("0 Exit")
 
-    val choice = readlnOrNull()?.toIntOrNull() ?: 0
-    when (choice) {
+    when (readNumber()) {
+        0 -> exitProcess(0)
         1 -> showSearch()
         2 -> showBasicCategories()
         3 -> showTips()
+        else -> {
+            println("Invalid input")
+            showStartMenu()
+        }
     }
 }
 
@@ -45,18 +51,26 @@ fun showSearch() {
     print("Search: ")
     val input = readlnOrNull() ?: ""
     val commands = databaseHelper.getCommands().filter { it.name.contains(input) }.take(10)
+    if (commands.isEmpty()) {
+        println("No results for \"$input\"")
+        showSearch()
+        return
+    }
     commands.forEachIndexed { index, command ->
         println("${index + 1} ${command.name}")
     }
     println()
     println("0 Back")
 
-    val choice = readlnOrNull()?.toIntOrNull() ?: 0
-    when (choice) {
+    when (val choice = readNumber()) {
         0 -> showStartMenu()
-        else -> {
+        in 1..commands.size -> {
             val name = commands[choice - 1].name
             showCommand(name)
+        }
+        else -> {
+            println("Invalid input")
+            showSearch()
         }
     }
 }
@@ -87,12 +101,15 @@ fun showBasicCategories() {
     println()
     println("0 Back")
 
-    val choice = readlnOrNull()?.toIntOrNull() ?: 0
-    when (choice) {
+    when (val choice = readNumber()) {
         0 -> showStartMenu()
-        else -> {
+        in 1..categories.size -> {
             val id = categories[choice - 1].id
             showBasicGroups(id)
+        }
+        else -> {
+            println("Invalid input")
+            showBasicCategories()
         }
     }
 }
@@ -119,12 +136,15 @@ fun showTips() {
     println()
     println("0 Back")
 
-    val choice = readlnOrNull()?.toIntOrNull() ?: 0
-    when (choice) {
+    when (val choice = readNumber()) {
         0 -> showStartMenu()
-        else -> {
+        in 1..tips.size -> {
             val id = tips[choice - 1].id
             showTipsDetail(id)
+        }
+        else -> {
+            println("Invalid input")
+            showTips()
         }
     }
 }
@@ -154,5 +174,8 @@ fun showTipsDetail(id: Long) {
 
 fun printTipData(data: String) {
     println(data.replace("\\n", "").replace("<b>", bold).replace("</b>", reset))
+}
 
+fun readNumber(): Int {
+    return readlnOrNull()?.toIntOrNull() ?: -1
 }
