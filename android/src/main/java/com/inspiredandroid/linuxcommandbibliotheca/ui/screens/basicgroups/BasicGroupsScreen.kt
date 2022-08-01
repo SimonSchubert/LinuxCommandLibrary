@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterialApi::class)
 
-package com.inspiredandroid.linuxcommandbibliotheca.ui.screens
+package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basicgroups
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.size
@@ -16,8 +16,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.inspiredandroid.linuxcommandbibliotheca.getIconResource
-import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basicgroups.BasicGroupModelFactory
-import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basicgroups.BasicGroupsModel
 import com.inspiredandroid.linuxcommandbibliotheca.ui.shared.Code
 import com.linuxcommandlibrary.shared.databaseHelper
 import com.linuxcommandlibrary.shared.getCommandList
