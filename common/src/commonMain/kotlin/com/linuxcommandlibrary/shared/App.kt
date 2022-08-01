@@ -1,6 +1,7 @@
 package com.linuxcommandlibrary.shared
 
 import databases.BasicCategory
+import databases.Command
 import databases.CommandSection
 import java.util.*
 
@@ -23,6 +24,25 @@ sealed class CodeElement
 data class TextCodeElement(val text: String) : CodeElement()
 data class ManCodeElement(val man: String) : CodeElement()
 data class UrlCodeElement(val command: String, val url: String) : CodeElement()
+
+/**
+ * Search in name and description and return sorted by priority
+ */
+fun List<Command>.search(input: String): List<Command> {
+    return this.filter { it.name.contains(input) || it.description.contains(input) }.sortedBy {
+        if(it.name.contains(input)) {
+            if(it.name == input) {
+                0
+            } else if(it.name.startsWith(input)) {
+                10
+            } else {
+                20
+            }
+        } else {
+            30
+        }
+    }
+}
 
 /**
  * Return a list of sealed Elements for visual representation

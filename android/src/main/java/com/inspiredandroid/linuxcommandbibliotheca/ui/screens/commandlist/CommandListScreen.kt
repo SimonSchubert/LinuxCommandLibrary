@@ -19,6 +19,7 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.withStyle
 import com.inspiredandroid.linuxcommandbibliotheca.R
+import com.linuxcommandlibrary.shared.search
 import databases.Command
 
 /* Copyright 2022 Simon Schubert
@@ -53,7 +54,7 @@ fun CommandListScreen(
                 commands
             }
         } else {
-            commands.filter { it.name.contains(searchText) || it.description.contains(searchText) }
+            commands.search(searchText)
         }
     }
 
