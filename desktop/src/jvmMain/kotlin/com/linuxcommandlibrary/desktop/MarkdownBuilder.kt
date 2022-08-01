@@ -31,7 +31,7 @@ class MarkdownBuilder {
     fun build() {
         val file = File("README.md")
         val stream = PrintStream(file)
-        stream.appendLine("## Linux Command Library (Mobile+Web)")
+        stream.appendLine("## Linux Command Library (Mobile+CLI+Web)")
         stream.appendLine()
         stream.appendLine("![Icon](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandLibrary/master/art/web_hi_res_144.png)")
         stream.appendLine()
@@ -42,7 +42,7 @@ class MarkdownBuilder {
         stream.appendLine()
         stream.appendLine("https://linuxcommandlibrary.com")
         stream.appendLine()
-        stream.appendLine("### Screenshots")
+        stream.appendLine("### Mobile screenshots")
         stream.appendLine()
         stream.appendLine("<p>")
         val mobileScreenshotFiles = listOf("screen-1.png", "screen-2-dark.png", "screen-3.png", "screen-4-dark.png")
@@ -54,6 +54,11 @@ class MarkdownBuilder {
         tabletScreenshotFiles.forEach { fileName ->
             stream.appendLine("<img src=\"https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/${fileName}\" width=\"400\">")
         }
+        stream.appendLine()
+        stream.appendLine("### CLI screenshot")
+        stream.appendLine("<img src=\"https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-cli-1.png\" width=\"300\">")
+        stream.appendLine()
+        stream.appendLine("Execute `:cli:buildFatJar2` to create jar file for Linux, Windows and Mac.")
         stream.appendLine()
         stream.appendLine("### Categories")
         stream.appendLine()
