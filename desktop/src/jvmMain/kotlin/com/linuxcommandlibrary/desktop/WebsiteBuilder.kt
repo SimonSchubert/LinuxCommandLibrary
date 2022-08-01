@@ -532,6 +532,7 @@ class WebsiteBuilder {
                                                                 +element.text
                                                             }
                                                         }
+                                                        else -> {}
                                                     }
                                                 }
                                             }

@@ -1,9 +1,11 @@
-import com.android.build.gradle.internal.res.processResources
-import org.jetbrains.compose.compose
+// import org.jetbrains.compose.compose
+
+repositories {
+    google()
+}
 
 plugins {
     kotlin("multiplatform")
-    id("org.jetbrains.compose") version "1.1.1"
     id("com.android.library")
     id("com.squareup.sqldelight")
 }
@@ -21,9 +23,7 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                api(compose.runtime)
-                api(compose.foundation)
-                api(compose.material)
+
             }
         }
         val commonTest by getting {
@@ -40,15 +40,12 @@ kotlin {
         }
         val desktopMain by getting {
             dependencies {
-                api(compose.preview)
                 implementation("com.squareup.sqldelight:sqlite-driver:1.5.3")
             }
             resources.setSrcDirs(listOf("../assets", "../cli/src/jvmMain/resources"))
-
         }
         val desktopTest by getting
     }
-
 }
 
 
@@ -59,6 +56,15 @@ android {
         minSdk = 24
         targetSdk = 33
     }
+
+    buildFeatures {
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.2.0"
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8

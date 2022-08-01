@@ -23,7 +23,7 @@ import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
 import com.inspiredandroid.linuxcommandbibliotheca.ui.bars.BottomBar
 import com.inspiredandroid.linuxcommandbibliotheca.ui.bars.TopBar
-import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.BasicGroupsScreen
+import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basicgroups.BasicGroupsScreen
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basiccategories.BasicCategoriesScreen
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commanddetail.CommandDetailScreen
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commandlist.CommandListScreen
