@@ -79,7 +79,7 @@ class WebsiteBuilder {
                     keywords = "linux,cmd,tips,man,commands"
                 )
 
-                styleLink("/stylesheets/com.linuxcommandlibrary.desktop.main.css?v=$cacheVersion")
+                styleLink("/stylesheets/main.css?v=$cacheVersion")
                 script(src = "/scripts/search.js?v=$cacheVersion") {
                     defer = true
                 }
@@ -157,7 +157,7 @@ class WebsiteBuilder {
                     keywords = "linux,cmd,basics,terminal,console,cheat sheets,tips,${basicCategories.joinToString(",") { it.title }}"
                 )
 
-                styleLink("/stylesheets/com.linuxcommandlibrary.desktop.main.css?v=$cacheVersion")
+                styleLink("/stylesheets/main.css?v=$cacheVersion")
             }
             body {
                 header(selectedIndex = 1)
@@ -218,7 +218,7 @@ class WebsiteBuilder {
                         keywords = getKeywordsForBasic(category)
                     )
 
-                    styleLink("/stylesheets/com.linuxcommandlibrary.desktop.main.css?v=$cacheVersion")
+                    styleLink("/stylesheets/main.css?v=$cacheVersion")
                     script(src = "/scripts/copy.js?v=$cacheVersion") {
                         defer = true
                     }
@@ -328,7 +328,7 @@ class WebsiteBuilder {
                     keywords = "linux,cmd,useful,terminal,tips,cheat"
                 )
 
-                styleLink("/stylesheets/com.linuxcommandlibrary.desktop.main.css?v=$cacheVersion")
+                styleLink("/stylesheets/main.css?v=$cacheVersion")
                 script(src = "/scripts/copy.js?v=$cacheVersion") {
                     defer = true
                 }
@@ -458,7 +458,7 @@ class WebsiteBuilder {
                         keywords = "linux,man,page,command,manual,${command.name}"
                     )
 
-                    styleLink("/stylesheets/com.linuxcommandlibrary.desktop.main.css?v=$cacheVersion")
+                    styleLink("/stylesheets/main.css?v=$cacheVersion")
                     script(src = "/scripts/copy.js?v=$cacheVersion") {
                         defer = true
                     }
@@ -595,7 +595,7 @@ class WebsiteBuilder {
                     keywords = "linux,cmd,tips,man,commands"
                 )
 
-                styleLink("/stylesheets/com.linuxcommandlibrary.desktop.main.css?v=$cacheVersion")
+                styleLink("/stylesheets/main.css?v=$cacheVersion")
             }
             body {
                 header(selectedIndex = -1)
@@ -710,7 +710,18 @@ class WebsiteBuilder {
 
     private fun FlowContent.footer(showAd: Boolean = true): FlowContent {
         if (showAd) {
-            // advertising(styleExtra = "margin-top: 12px;margin-bottom: 12px;", imageStyleExtra = "border: black 2px solid;")
+            div {
+                style = "text-align: center;"
+                a("https://coindodo.io/starlite") {
+                    target = ATarget.blank
+                    img {
+                        style = "max-width: calc(100% - 4px);"
+                        src = "/images/af/starlite.webp"
+                        attributes["loading"] = "lazy"
+                        width = "480"
+                    }
+                }
+            }
         }
         div {
             id = "filler"
@@ -732,9 +743,22 @@ class WebsiteBuilder {
             }
             br
             br
-            text("Simon Schubert - info@linuxcommandlibrary.com")
+            div {
+                style = "display: flex;flex-wrap: wrap;align-items: center;"
+                text("Simon Schubert - info@linuxcommandlibrary.com ")
+                a("https://github.com/SimonSchubert/LinuxCommandLibrary") {
+                    target = ATarget.blank
+                    rel = "noopener"
+                    img {
+                        src = "/images/logo-github.svg"
+                        width = "25"
+                        height = "25"
+                    }
+                }
+            }
             br
             a("https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca") {
+                style = "margin-right: 4px;"
                 target = ATarget.blank
                 rel = "noopener"
                 img {
@@ -742,6 +766,18 @@ class WebsiteBuilder {
                     alt = "Google Play Store"
                     classes = setOf("download-icon")
                     width = "169"
+                    height = "50"
+                }
+            }
+            a("https://f-droid.org/en/packages/com.inspiredandroid.linuxcommandbibliotheca") {
+                style = "margin-left: 4px;"
+                target = ATarget.blank
+                rel = "noopener"
+                img {
+                    src = "/images/f-droid-download.png"
+                    alt = "F-Droid Store"
+                    classes = setOf("download-icon")
+                    width = "168"
                     height = "50"
                 }
             }
