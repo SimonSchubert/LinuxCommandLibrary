@@ -20,10 +20,10 @@ import java.util.*
  * limitations under the License.
 */
 
-sealed class CodeElement
-data class TextCodeElement(val text: String) : CodeElement()
-data class ManCodeElement(val man: String) : CodeElement()
-data class UrlCodeElement(val command: String, val url: String) : CodeElement()
+sealed class CommandElement
+data class TextCommandElement(val text: String) : CommandElement()
+data class ManCommandElement(val man: String) : CommandElement()
+data class UrlCommandElement(val command: String, val url: String) : CommandElement()
 
 /**
  * Search in name and description and return sorted by priority
@@ -47,9 +47,9 @@ fun List<Command>.search(input: String): List<Command> {
 /**
  * Return a list of sealed Elements for visual representation
  */
-fun String.getCommandList(mans: String, hasBrackets: Boolean = false): List<CodeElement> {
+fun String.getCommandList(mans: String, hasBrackets: Boolean = false): List<CommandElement> {
     var command = " $this"
-    val list = mutableListOf<CodeElement>()
+    val list = mutableListOf<CommandElement>()
     mans.split(",").filterNot { it.isEmpty() }.map { it.replace("(", "").replace(")", "") }
         .forEach {
             command = if (it.startsWith("url:")) {
@@ -69,7 +69,7 @@ fun String.getCommandList(mans: String, hasBrackets: Boolean = false): List<Code
     var isCommand = false
     command.trim().forEach {
         if (it == 'ü') {
-            list.add(TextCodeElement(currentText.replace("\\n", "")))
+            list.add(TextCommandElement(currentText.replace("\\n", "")))
             currentText = ""
             isCommand = true
         } else if (it == 'ä') {
@@ -78,7 +78,7 @@ fun String.getCommandList(mans: String, hasBrackets: Boolean = false): List<Code
                     currentCommand.startsWith("url:") -> {
                         val url = currentCommand.split("|").last()
                         val cmd = currentCommand.substring(4).split("|").first()
-                        list.add(UrlCodeElement(cmd, url))
+                        list.add(UrlCommandElement(cmd, url))
                     }
 //                    database.getCommandByName(currentCommand) != null -> {
 //                        list.add(Man(currentCommand))
@@ -87,7 +87,7 @@ fun String.getCommandList(mans: String, hasBrackets: Boolean = false): List<Code
 //                        list.add(Text(currentCommand))
 //                    }
                     else -> {
-                        list.add(ManCodeElement(currentCommand))
+                        list.add(ManCommandElement(currentCommand))
                     }
                 }
             }
@@ -101,7 +101,7 @@ fun String.getCommandList(mans: String, hasBrackets: Boolean = false): List<Code
             }
         }
     }
-    list.add(TextCodeElement(currentText.replace("[cmd]", "[command]").replace("\\n", "")))
+    list.add(TextCommandElement(currentText.replace("[cmd]", "[command]").replace("\\n", "")))
     return list.toList()
 }
 

@@ -19,8 +19,8 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.text.HtmlCompat
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.inspiredandroid.linuxcommandbibliotheca.ui.shared.Code
-import com.linuxcommandlibrary.shared.TextCodeElement
+import com.inspiredandroid.linuxcommandbibliotheca.ui.shared.CommandView
+import com.linuxcommandlibrary.shared.TextCommandElement
 import databases.CommandSection
 
 /* Copyright 2022 Simon Schubert
@@ -76,7 +76,7 @@ fun CommandSectionColumn(
                 if (split.size > 1) {
                     ListItem(text = { Text(split[0], fontWeight = FontWeight.Bold) })
                     val command = "$ " + split[1].replace("<br>", "").replace("`", "")
-                    Code(command, listOf(TextCodeElement(command)), onNavigate)
+                    CommandView(command, listOf(TextCommandElement(command)), onNavigate)
                 }
             }
         } else {

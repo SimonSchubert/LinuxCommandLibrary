@@ -1,20 +1,20 @@
 package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.tips
 
 import androidx.lifecycle.ViewModel
-import com.linuxcommandlibrary.shared.CodeElement
+import com.linuxcommandlibrary.shared.CommandElement
 import com.linuxcommandlibrary.shared.databaseHelper
 import com.linuxcommandlibrary.shared.getCommandList
 import databases.Tip
 
 sealed class TipSectionElement
 data class TipSectionTextElement(val text: String) : TipSectionElement()
-data class TipSectionCodeElement(val command: String, val elements: List<CodeElement>) :
+data class TipSectionCodeElement(val command: String, val elements: List<CommandElement>) :
     TipSectionElement()
 
 data class TipSectionNestedCodeElement(
     val text: String,
     val command: String,
-    val elements: List<CodeElement>
+    val elements: List<CommandElement>
 ) : TipSectionElement()
 
 data class TipSectionNestedTextElement(val text: String, val info: String) : TipSectionElement()
