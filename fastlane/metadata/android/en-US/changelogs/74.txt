@@ -1,0 +1,2 @@
+Adjust layouts, margins, colors and bottom navigation highlights
+Upgrade to the latest Jetpack Compose
