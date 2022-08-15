@@ -1,4 +1,4 @@
-import com.linuxcommandlibrary.shared.ManCodeElement
+import com.linuxcommandlibrary.shared.ManCommandElement
 import com.linuxcommandlibrary.shared.getCommandList
 import com.linuxcommandlibrary.shared.getHtmlFileName
 import com.linuxcommandlibrary.shared.getSortPriority
@@ -14,7 +14,7 @@ class CommonTests {
     fun testCommandListElements() {
         val command = "ps ax | grep firefox"
         val elements = command.getCommandList("ps,grep")
-        assertTrue(elements.count { it is ManCodeElement } == 2)
+        assertTrue(elements.count { it is ManCommandElement } == 2)
     }
 
     @Test

@@ -17,7 +17,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.inspiredandroid.linuxcommandbibliotheca.ui.shared.Code
+import com.inspiredandroid.linuxcommandbibliotheca.ui.shared.CommandView
 import com.inspiredandroid.linuxcommandbibliotheca.ui.shared.StaggeredVerticalGrid
 
 /* Copyright 2022 Simon Schubert
@@ -58,7 +58,7 @@ fun TipsScreen(onNavigate: (String) -> Unit = {}, viewModel: TipsViewModel = vie
                                 Text(sectionElement.text)
                             }
                             is TipSectionCodeElement -> {
-                                Code(sectionElement.command, sectionElement.elements, onNavigate)
+                                CommandView(sectionElement.command, sectionElement.elements, onNavigate)
                             }
                             is TipSectionNestedCodeElement -> {
                                 Row(verticalAlignment = Alignment.CenterVertically) {
@@ -68,7 +68,7 @@ fun TipsScreen(onNavigate: (String) -> Unit = {}, viewModel: TipsViewModel = vie
                                         modifier = Modifier.width(40.dp),
                                         textAlign = TextAlign.Center
                                     )
-                                    Code(
+                                    CommandView(
                                         sectionElement.command,
                                         sectionElement.elements,
                                         onNavigate

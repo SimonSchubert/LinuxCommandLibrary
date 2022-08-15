@@ -521,13 +521,13 @@ class WebsiteBuilder {
                                             p {
                                                 text.getCommandList(mans, true).forEach { element ->
                                                     when (element) {
-                                                        is ManCodeElement -> {
+                                                        is ManCommandElement -> {
                                                             a("/man/${element.man}") {
                                                                 title = "${element.man} man page"
                                                                 text(element.man)
                                                             }
                                                         }
-                                                        is TextCodeElement -> {
+                                                        is TextCommandElement -> {
                                                             unsafe {
                                                                 +element.text
                                                             }
@@ -744,7 +744,7 @@ class WebsiteBuilder {
             br
             br
             div {
-                style = "display: flex;flex-wrap: wrap;align-items: center;"
+                style = "display: flex;flex-wrap: wrap;align-items: center;justify-content: center;"
                 text("Simon Schubert - info@linuxcommandlibrary.com ")
                 a("https://github.com/SimonSchubert/LinuxCommandLibrary") {
                     target = ATarget.blank
@@ -836,13 +836,13 @@ class WebsiteBuilder {
                 }
                 command.getCommandList(mans).forEach { element ->
                     when (element) {
-                        is ManCodeElement -> {
+                        is ManCommandElement -> {
                             a("/man/${element.man}") {
                                 title = "${element.man} man page"
                                 text(element.man)
                             }
                         }
-                        is TextCodeElement -> {
+                        is TextCommandElement -> {
                             element.text.split("<br>").map { it.replace("$  ", "$ ") }.forEachIndexed { index, s ->
                                 if (index != 0) {
                                     br
@@ -857,7 +857,7 @@ class WebsiteBuilder {
                                 }
                             }
                         }
-                        is UrlCodeElement -> {
+                        is UrlCommandElement -> {
                             a(element.url) {
                                 target = ATarget.blank
                                 rel = "noopener"

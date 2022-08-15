@@ -1,20 +1,25 @@
-@file:OptIn(ExperimentalMaterialApi::class)
-
 package com.inspiredandroid.linuxcommandbibliotheca.ui.shared
 
 import android.content.Intent
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.ClickableText
-import androidx.compose.material.*
+import androidx.compose.material.Icon
+import androidx.compose.material.IconButton
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.withStyle
+import androidx.compose.ui.unit.dp
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.linuxcommandlibrary.shared.*
 
@@ -34,21 +39,22 @@ import com.linuxcommandlibrary.shared.*
 */
 
 @Composable
-fun Code(command: String, elements: List<CodeElement>, onNavigate: (String) -> Unit = {}) {
+fun CommandView(command: String, elements: List<CommandElement>, onNavigate: (String) -> Unit = {}) {
     val codeColor = MaterialTheme.colors.primary
     val annotatedString = remember(codeColor) {
         buildAnnotatedString {
             elements.forEachIndexed { index, element ->
                 when (element) {
-                    is TextCodeElement -> append(element.text)
-                    is ManCodeElement -> {
+                    is TextCommandElement -> append(element.text)
+                    is ManCommandElement -> {
                         pushStringAnnotation(tag = "$index", annotation = element.man)
                         withStyle(style = SpanStyle(color = codeColor)) {
                             append(element.man)
                         }
                         pop()
                     }
-                    is UrlCodeElement -> {
+
+                    is UrlCommandElement -> {
                         pushStringAnnotation(tag = "$index", annotation = element.url)
                         withStyle(style = SpanStyle(color = codeColor)) {
                             append(element.command)
@@ -61,13 +67,16 @@ fun Code(command: String, elements: List<CodeElement>, onNavigate: (String) -> U
     }
 
     val uriHandler = LocalUriHandler.current
-    ListItem(text = {
+    Row(modifier = Modifier.padding(start = 12.dp, end = 4.dp, top = 8.dp, bottom = 8.dp)) {
         ClickableText(
             text = annotatedString,
+            modifier = Modifier
+                .weight(1f)
+                .align(Alignment.CenterVertically),
             style = MaterialTheme.typography.subtitle2,
             onClick = { offset ->
                 elements.forEachIndexed { index, element ->
-                    if (element is UrlCodeElement) {
+                    if (element is UrlCommandElement) {
                         annotatedString.getStringAnnotations(
                             tag = "$index",
                             start = offset,
@@ -78,7 +87,7 @@ fun Code(command: String, elements: List<CodeElement>, onNavigate: (String) -> U
                                 uriHandler.openUri(it.item)
                             }
                     }
-                    if (element is ManCodeElement) {
+                    if (element is ManCommandElement) {
                         annotatedString.getStringAnnotations(
                             tag = "$index",
                             start = offset,
@@ -94,17 +103,18 @@ fun Code(command: String, elements: List<CodeElement>, onNavigate: (String) -> U
                     }
                 }
             })
-    }, trailing = {
         val shareCommand = shareCommandLambda(command)
-        IconButton(onClick = {
-            shareCommand()
-        }) {
+        IconButton(
+            modifier = Modifier.align(Alignment.CenterVertically),
+            onClick = {
+                shareCommand()
+            }) {
             Icon(
                 imageVector = Icons.Filled.Share,
                 contentDescription = stringResource(R.string.share)
             )
         }
-    })
+    }
 }
 
 @Composable
