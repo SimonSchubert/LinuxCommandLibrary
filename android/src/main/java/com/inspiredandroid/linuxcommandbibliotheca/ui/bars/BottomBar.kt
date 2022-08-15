@@ -3,13 +3,14 @@ package com.inspiredandroid.linuxcommandbibliotheca.ui.bars
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavDestination
-import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import com.inspiredandroid.linuxcommandbibliotheca.Screen
@@ -30,12 +31,15 @@ import com.inspiredandroid.linuxcommandbibliotheca.Screen
 */
 
 @Composable
-fun BottomBar(currentDestination: NavDestination?, navController: NavHostController) {
+fun BottomBar(navController: NavHostController) {
     val items = listOf(
         Screen.Basics,
         Screen.Tips,
         Screen.Commands
     )
+    // TODO: read current route from navcontroller
+    val selectedRoute = remember { mutableStateOf(Screen.Basics.route) }
+
     BottomNavigation(backgroundColor = MaterialTheme.colors.surface) {
         items.forEach { screen ->
             BottomNavigationItem(
@@ -47,11 +51,12 @@ fun BottomBar(currentDestination: NavDestination?, navController: NavHostControl
                     )
                 },
                 label = { Text(stringResource(screen.resourceId)) },
-                selected = currentDestination?.hierarchy?.any { it.route == screen.route } == true,
+                selected = screen.route == selectedRoute.value,
                 selectedContentColor = Color(0xFFe45151),
                 unselectedContentColor = MaterialTheme.colors.onSurface,
                 onClick = {
                     navController.navigate(screen.route) {
+                        selectedRoute.value = screen.route
                         popUpTo(navController.graph.findStartDestination().id) {
                             saveState = true
                         }

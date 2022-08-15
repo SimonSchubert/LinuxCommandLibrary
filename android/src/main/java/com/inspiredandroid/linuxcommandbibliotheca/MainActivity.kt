@@ -77,7 +77,6 @@ class MainActivity : AppCompatActivity() {
 fun LinuxApp() {
     val navController = rememberNavController()
     val navBackStackEntry = navController.currentBackStackEntryAsState()
-    val currentDestination = navBackStackEntry.value?.destination
     val bookmarkManager = PreferenceUtil()
     val searchTextValue = remember {
         mutableStateOf(
@@ -98,7 +97,7 @@ fun LinuxApp() {
                     })
             },
             bottomBar = {
-                BottomBar(currentDestination, navController)
+                BottomBar(navController)
             }) { innerPadding ->
             NavHost(
                 navController,
