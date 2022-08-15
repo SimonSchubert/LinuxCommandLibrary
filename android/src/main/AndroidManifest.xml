@@ -14,48 +14,48 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
             <intent-filter android:autoVerify="true">
-                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.VIEW"/>
 
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
 
                 <data
                         android:scheme="https"
                         android:host="linuxcommandlibrary.com"
-                        android:path="/tips.html" />
+                        android:path="/tips.html"/>
                 <data
                         android:scheme="https"
                         android:host="linuxcommandlibrary.com"
-                        android:path="/tips" />
+                        android:path="/tips"/>
                 <data
                         android:scheme="https"
                         android:host="linuxcommandlibrary.com"
-                        android:path="/basics.html" />
+                        android:path="/basics.html"/>
                 <data
                         android:scheme="https"
                         android:host="linuxcommandlibrary.com"
-                        android:path="/basics" />
+                        android:path="/basics"/>
                 <data
                         android:scheme="https"
                         android:host="linuxcommandlibrary.com"
-                        android:path="/" />
+                        android:path="/"/>
                 <data
                         android:scheme="https"
                         android:host="linuxcommandlibrary.com"
-                        android:path="/index.html" />
+                        android:path="/index.html"/>
                 <data
                         android:scheme="https"
                         android:host="linuxcommandlibrary.com"
-                        android:pathPrefix="/man/" />
+                        android:pathPrefix="/man/"/>
                 <data
                         android:scheme="https"
                         android:host="linuxcommandlibrary.com"
-                        android:pathPrefix="/basic/" />
+                        android:pathPrefix="/basic/"/>
             </intent-filter>
         </activity>
         <activity android:name=".InitializeDatabaseActivity" android:exported="true">
             <intent-filter android:autoVerify="true">
-                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.VIEW"/>
             </intent-filter>
         </activity>
     </application>

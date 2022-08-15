@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.material.Scaffold
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.InitializeDatabaseScreen
 import com.inspiredandroid.linuxcommandbibliotheca.ui.theme.LinuxTheme
 
