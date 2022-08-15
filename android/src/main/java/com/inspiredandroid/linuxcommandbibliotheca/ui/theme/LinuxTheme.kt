@@ -35,12 +35,15 @@ fun LinuxTheme(content: @Composable () -> Unit) {
     val darkMode = isSystemInDarkTheme()
     val ourDarkColorScheme = darkColors(
         primary = Color(0xFFe45151),
-        secondary = Color.White
+        secondary = Color.White,
+        background = Color(0xFF262626)
     )
     val ourLightColorScheme = lightColors(
         primary = Color(0xFFe45151),
         secondary = Color.Black
     )
+    val colorSchema = if (darkMode) ourDarkColorScheme else ourLightColorScheme
+
     val systemUiController = rememberSystemUiController()
     systemUiController.setSystemBarsColor(
         color = Color(0xFFd34747)
@@ -48,8 +51,6 @@ fun LinuxTheme(content: @Composable () -> Unit) {
     val techMonoFont = FontFamily(
         Font(R.font.share_tech_mono)
     )
-
-    val colorSchema = if (darkMode) ourDarkColorScheme else ourLightColorScheme
 
     val codeTextStyle = TextStyle(
         fontFamily = techMonoFont,
