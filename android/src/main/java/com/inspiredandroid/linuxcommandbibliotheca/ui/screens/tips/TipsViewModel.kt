@@ -36,12 +36,14 @@ class TipsViewModel : ViewModel() {
                                 .replace("\\'", "")
                         TipSectionTextElement(text)
                     }
+
                     1L -> {
                         TipSectionCodeElement(
                             section.data1,
                             section.data1.getCommandList(section.extra)
                         )
                     }
+
                     3L -> {
                         if (section.data2.startsWith("$")) {
                             TipSectionNestedCodeElement(
@@ -53,6 +55,7 @@ class TipsViewModel : ViewModel() {
                             TipSectionNestedTextElement(section.data1, section.data2)
                         }
                     }
+
                     else -> {
                         TipSectionTextElement("")
                     }

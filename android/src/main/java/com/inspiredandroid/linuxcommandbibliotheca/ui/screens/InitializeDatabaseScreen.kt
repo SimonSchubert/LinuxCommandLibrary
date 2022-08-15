@@ -29,7 +29,9 @@ fun InitializeDatabaseScreen(onFinish: () -> Unit = {}) {
             Image(
                 painterResource(R.mipmap.ic_launcher_foreground),
                 contentDescription = null,
-                modifier = Modifier.size(240.dp).align(Alignment.CenterHorizontally)
+                modifier = Modifier
+                    .size(240.dp)
+                    .align(Alignment.CenterHorizontally)
             )
             Text("Initialize database", modifier = Modifier.align(Alignment.CenterHorizontally))
             LinearProgressIndicator(

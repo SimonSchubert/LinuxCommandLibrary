@@ -23,8 +23,8 @@ import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
 import com.inspiredandroid.linuxcommandbibliotheca.ui.bars.BottomBar
 import com.inspiredandroid.linuxcommandbibliotheca.ui.bars.TopBar
-import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basicgroups.BasicGroupsScreen
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basiccategories.BasicCategoriesScreen
+import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basicgroups.BasicGroupsScreen
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commanddetail.CommandDetailScreen
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commandlist.CommandListScreen
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.tips.TipsScreen
@@ -148,14 +148,14 @@ fun LinuxApp() {
                 ) { backStackEntry ->
                     var categoryId =
                         backStackEntry.arguments?.getString("categoryId")?.toLongOrNull() ?: 0L
-                    if(categoryId == 0L) {
+                    if (categoryId == 0L) {
                         // get id by category name when opened via deeplink
                         val categoryName =
                             backStackEntry.arguments?.getString("deepLinkCategoryName") ?: ""
                         val categories = databaseHelper.getBasics()
                         categoryId = categories.firstOrNull { it.getHtmlFileName() == categoryName }?.id ?: 0L
                     }
-                    if(categoryId != 0L) {
+                    if (categoryId != 0L) {
                         BasicGroupsScreen(onNavigate, categoryId)
                     } else {
                         // open tips screen on invalid deeplink parameters

@@ -56,7 +56,9 @@ fun AppInfoDialog(showDialog: MutableState<Boolean>) {
                         uriHandler.openUri("https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca")
                     }, modifier = Modifier.padding(start = 6.dp))
                     Column(
-                        modifier = Modifier.padding(8.dp).weight(1f)
+                        modifier = Modifier
+                            .padding(8.dp)
+                            .weight(1f)
                             .verticalScroll(rememberScrollState())
                     ) {
                         Text("Man pages", style = MaterialTheme.typography.h6)
@@ -73,7 +75,9 @@ fun AppInfoDialog(showDialog: MutableState<Boolean>) {
                     }
                     Button(
                         content = { Text("OK") },
-                        modifier = Modifier.align(Alignment.End).padding(end = 6.dp),
+                        modifier = Modifier
+                            .align(Alignment.End)
+                            .padding(end = 6.dp),
                         onClick = {
                             showDialog.value = false
                         })
