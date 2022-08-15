@@ -1,27 +1,43 @@
 package com.inspiredandroid.linuxcommandbibliotheca
 
 import android.content.Context
+import android.graphics.Bitmap
+import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES
+import androidx.appcompat.app.AppCompatDelegate.setDefaultNightMode
+import androidx.compose.ui.graphics.asAndroidBitmap
 import androidx.compose.ui.test.*
-import androidx.compose.ui.test.junit4.createComposeRule
+import androidx.compose.ui.test.junit4.ComposeTestRule
+import androidx.compose.ui.test.junit4.createEmptyComposeRule
 import androidx.preference.PreferenceManager
+import androidx.test.core.app.ActivityScenario
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.linuxcommandlibrary.shared.databaseHelper
+import androidx.test.platform.app.InstrumentationRegistry
 import com.linuxcommandlibrary.shared.initDatabase
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.runBlocking
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import java.io.FileOutputStream
 
 
 /**
- * Test for navigation, search and booksmarks. More tests to come
+ * Take screenshots of Phone and Tablet.
+ * Phone = Pixel 2 1080x1920
+ * Tablet 7" = Nexus 7 1200x1920
+ *
+ * Pull images from device to art folder for readme:
+ * run pull_screenshots.sh
  */
 @RunWith(AndroidJUnit4::class)
 class ComposeScreenshots {
 
+    private lateinit var scenario: ActivityScenario<MainActivity>
+
     @get:Rule
-    val composeTestRule = createComposeRule()
+    val composeTestRule = createEmptyComposeRule()
 
     @Before
     fun setUp() {
@@ -32,83 +48,82 @@ class ComposeScreenshots {
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
         prefs.edit().putString("KEY_BOOKMARKS", "").apply()
 
-        composeTestRule.setContent { LinuxApp() }
+        // Clear files folder
+        InstrumentationRegistry.getInstrumentation().targetContext.filesDir.listFiles()?.forEach {
+            it.deleteRecursively()
+        }
+        scenario = ActivityScenario.launch(MainActivity::class.java)
     }
 
-    /**
-     * Click though BottomNavigationBar and assert that TopAppBar titles are correct
-     */
     @Test
-    fun testBottomNavigation() {
+    fun takeTabletLightAndDarkScreenshots() {
+        takeTabletScreenshots("")
+        scenario = ActivityScenario.launch(MainActivity::class.java)
+        scenario.onActivity {
+            setDefaultNightMode(MODE_NIGHT_YES)
+        }
+        takeTabletScreenshots("-dark")
+    }
+
+    private fun takeTabletScreenshots(prefix: String) {
+        // Tips
         composeTestRule.onNodeWithText("Tips").performClick()
-        composeTestRule.onNodeWithContentDescription("TopAppBarTitle").assertTextEquals("Tips")
-        composeTestRule.onNodeWithText("Commands").performClick()
-        composeTestRule.onNodeWithContentDescription("Back").performClick()
-        composeTestRule.onNodeWithContentDescription("TopAppBarTitle").assertTextEquals("Commands")
+        composeTestRule.takeScreenshot("screen-1-tablet$prefix.png")
+
+        // Basics
         composeTestRule.onNodeWithText("Basics").performClick()
-        composeTestRule.onNodeWithContentDescription("TopAppBarTitle").assertTextEquals("Basics")
+        composeTestRule.takeScreenshot("screen-2-tablet$prefix.png")
     }
 
-    /**
-     * Test if info is shown when search for a command that doesn't exist and if command description
-     * is shown when search for an existing command
-     */
     @Test
-    fun testSearch() {
+    fun takePhoneLightAndDarkScreenshots() {
+        takePhoneScreenshots("")
+        scenario = ActivityScenario.launch(MainActivity::class.java)
+        scenario.onActivity {
+            setDefaultNightMode(MODE_NIGHT_YES)
+        }
+        takePhoneScreenshots("-dark")
+    }
+
+    private fun takePhoneScreenshots(prefix: String) {
+        // Command list
         composeTestRule.onNodeWithText("Commands").performClick()
-
-        // Search for a command that doesn't exist
         composeTestRule.onNodeWithContentDescription("SearchField")
-            .performTextInput("CommandThatDoesn'tExist")
-        composeTestRule.onNodeWithText("404 command not found").assertIsDisplayed()
-        composeTestRule.onNodeWithContentDescription("SearchField").performTextClearance()
+            .performTextInput("mk")
+        composeTestRule.takeScreenshot("screen-4$prefix.png")
 
-        // Search for an existing command
-        val firstCommand = databaseHelper.getCommand("2048")!!
-        composeTestRule.onNodeWithContentDescription("SearchField")
-            .performTextInput(firstCommand.name)
-        composeTestRule.onNodeWithText(firstCommand.description).assertIsDisplayed()
+        // Command detail
+        composeTestRule.onNodeWithText("mkdir").performClick()
+        composeTestRule.onNodeWithText("SYNOPSIS").performClick()
+        composeTestRule.onNodeWithText("DESCRIPTION").performClick()
+        composeTestRule.takeScreenshot("screen-1$prefix.png")
+
+        // Basics
+        composeTestRule.onNodeWithText("Basics").performClick()
+        composeTestRule.onNodeWithText("System information").performClick()
+        composeTestRule.takeScreenshot("screen-3$prefix.png")
+
+        // Tips
+        composeTestRule.onNodeWithText("Tips").performClick()
+        composeTestRule.onNodeWithContentDescription("Scroll").performScrollToNode(hasText("$ [command] --help"))
+        composeTestRule.takeScreenshot("screen-2$prefix.png")
     }
 
-    /**
-     * Test if bookmarks in command detail and command list are shown correctly
-     */
-    @Test
-    fun testBookmarks() {
-        val firstCommand = databaseHelper.getCommands().first()
-
-        composeTestRule.onNodeWithText("Commands").performClick()
-
-        // Search for first command and go to command detail screen
-        composeTestRule.onNodeWithContentDescription("SearchField")
-            .performTextInput(firstCommand.name)
-        composeTestRule.onNodeWithText(firstCommand.description).performClick()
-
-        // Click bookmark icon and check if icon/contentDescription changed
-        composeTestRule.onNodeWithContentDescription("Bookmark").performClick()
-        composeTestRule.onNodeWithContentDescription("Bookmarked").assertIsDisplayed()
-
-        // Go back to search/list and check if bookmark icon is visible
-        composeTestRule.onNodeWithContentDescription("Back").performClick()
-        composeTestRule.onNodeWithContentDescription("Bookmarked").assertIsDisplayed()
+    private fun ComposeTestRule.takeScreenshot(file: String) {
+        // TODO: Find better way to wait for animations to finish
+        runBlocking {
+            delay(1000L)
+        }
+        onRoot()
+            .captureToImage()
+            .asAndroidBitmap()
+            .save(file)
     }
 
-    @Test
-    fun testBasicsScreen() {
-        val firstBasicCategory = databaseHelper.getBasics().first()
-
-        // Click on first category
-        composeTestRule.onNodeWithText(firstBasicCategory.title).performClick()
-        composeTestRule.onNodeWithContentDescription("TopAppBarTitle")
-            .assertTextEquals(firstBasicCategory.title)
-
-        val basicGroup = databaseHelper.getBasicGroups(firstBasicCategory.id).first()
-
-        // Click on first group
-        composeTestRule.onNodeWithText(basicGroup.description).performClick()
-
-        // Check if commands of group expanded and therefore share icon(s) are visible
-        composeTestRule.onAllNodesWithContentDescription("Share").assertAny(isEnabled())
+    private fun Bitmap.save(file: String) {
+        val path = InstrumentationRegistry.getInstrumentation().targetContext.filesDir.canonicalPath
+        FileOutputStream("$path/$file").use { out ->
+            compress(Bitmap.CompressFormat.PNG, 100, out)
+        }
     }
-
 }
