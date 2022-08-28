@@ -40,6 +40,8 @@ fun main() {
     websiteBuilder.createManHtmlFiles(File(folder, "man"))
 
     websiteBuilder.create404HtmlFile()
+    
+    websiteBuilder.createSitemap(folder)
 }
 
 class WebsiteBuilder {
@@ -687,6 +689,32 @@ class WebsiteBuilder {
         }
     }
 
+    fun createSitemap(folder: File) {
+        val file = File(folder, "sitemap.xml")
+        file.delete()
+
+        val stream = PrintStream(file)
+        stream.print("<?xml version=\"1.0\" encoding=\"UTF-8\"?><urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">")
+        stream.print(getSitemapUrlNode(""))
+        stream.print(getSitemapUrlNode("tips"))
+        stream.print(getSitemapUrlNode("basics"))
+        databaseHelper.getBasics().forEach {
+            stream.print(getSitemapUrlNode("basic/${it.getHtmlFileName()}"))
+        }
+        databaseHelper.getCommands().forEach {
+            stream.print(getSitemapUrlNode("man/${it.name}"))
+        }
+        stream.print("</urlset>")
+        stream.close()
+    }
+
+    private fun getSitemapUrlNode(urlPart: String): String {
+        return "<url>" +
+                "<loc>https://linuxcommandlibrary.com/$urlPart</loc>" +
+                "</url>"
+    }
+
+
     private fun HEAD.commonMeta() {
         meta(charset = "utf-8")
         meta(name = "viewport", content = "width=device-width, initial-scale=1")
@@ -731,11 +759,11 @@ class WebsiteBuilder {
         if (showAd) {
             div {
                 style = "text-align: center;"
-                a("https://coindodo.io/starlite") {
+                a("https://coindodo.io/digitalocean") {
                     target = ATarget.blank
                     img {
                         style = "max-width: calc(100% - 4px);"
-                        src = "/images/af/starlite.webp"
+                        src = "/images/af/digitalocean.webp"
                         attributes["loading"] = "lazy"
                         width = "480"
                     }
