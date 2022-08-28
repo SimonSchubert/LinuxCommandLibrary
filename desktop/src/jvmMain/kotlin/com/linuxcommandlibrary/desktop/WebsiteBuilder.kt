@@ -510,16 +510,9 @@ class WebsiteBuilder {
                                     classes = setOf("panel")
                                     when (section.title) {
                                         "SEE ALSO" -> {
-                                            var text = section.content.replace(htmlTagRegex, "")
-                                            repeat(10) {
-                                                text = text.replace(" ($it)", "($it)")
-                                            }
-                                            val matches = commandRegex.findAll(text)
-                                            val mans = matches.mapNotNull {
-                                                it.groups[1]?.value
-                                            }.sortedByDescending { it.length }.joinToString(",")
                                             p {
-                                                text.getCommandList(mans, true).forEach { element ->
+                                                val elements = getSeeAlsoSectionElements(section.content)
+                                                elements.forEach { element ->
                                                     when (element) {
                                                         is ManCommandElement -> {
                                                             a("/man/${element.man}") {
@@ -573,6 +566,32 @@ class WebsiteBuilder {
             stream.close()
         }
         println()
+    }
+
+    /**
+     * Find and link man pages if command exists in database. Example: ps(1), regex(7), signal(7)
+     */
+    private fun getSeeAlsoSectionElements(content: String): List<CommandElement> {
+        var text = content.replace(htmlTagRegex, "")
+        repeat(10) {
+            text = text.replace(" ($it)", "($it)")
+        }
+        val mans = text.getCommaSeparatedMans()
+
+        return text.getCommandList(mans,
+            hasBrackets = true,
+            checkExisting = true
+        )
+    }
+
+    /**
+     * Return comma separated list of commands. Example: ps(1),man(1) -> ps,man
+     */
+    private fun String.getCommaSeparatedMans(): String {
+        val matches = commandRegex.findAll(this)
+        return matches.mapNotNull {
+            it.groups[1]?.value
+        }.sortedByDescending { it.length }.joinToString(",")
     }
 
     fun create404HtmlFile() {

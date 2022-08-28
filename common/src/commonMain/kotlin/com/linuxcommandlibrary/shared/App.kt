@@ -47,7 +47,7 @@ fun List<Command>.search(input: String): List<Command> {
 /**
  * Return a list of sealed Elements for visual representation
  */
-fun String.getCommandList(mans: String, hasBrackets: Boolean = false): List<CommandElement> {
+fun String.getCommandList(mans: String, hasBrackets: Boolean = false, checkExisting: Boolean = false): List<CommandElement> {
     var command = " $this"
     val list = mutableListOf<CommandElement>()
     mans.split(",").filterNot { it.isEmpty() }.map { it.replace("(", "").replace(")", "") }
@@ -80,12 +80,9 @@ fun String.getCommandList(mans: String, hasBrackets: Boolean = false): List<Comm
                         val cmd = currentCommand.substring(4).split("|").first()
                         list.add(UrlCommandElement(cmd, url))
                     }
-//                    database.getCommandByName(currentCommand) != null -> {
-//                        list.add(Man(currentCommand))
-//                    }
-//                    else -> {
-//                        list.add(Text(currentCommand))
-//                    }
+                    checkExisting && databaseHelper.getCommand(currentCommand) == null -> {
+                        list.add(TextCommandElement(currentCommand))
+                    }
                     else -> {
                         list.add(ManCommandElement(currentCommand))
                     }
