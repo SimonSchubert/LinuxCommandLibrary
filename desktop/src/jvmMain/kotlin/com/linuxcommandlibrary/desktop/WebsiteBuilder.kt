@@ -40,7 +40,7 @@ fun main() {
     websiteBuilder.createManHtmlFiles(File(folder, "man"))
 
     websiteBuilder.create404HtmlFile()
-    
+
     websiteBuilder.createSitemap(folder)
 }
 
@@ -64,7 +64,7 @@ class WebsiteBuilder {
     fun createIndexHtmlFile(folder: File) {
         println("Create index html")
 
-        val file = File(folder, "index.html")
+        val file = File(folder, "commands.html")
         file.delete()
         val stream = PrintStream(file)
 
@@ -139,7 +139,7 @@ class WebsiteBuilder {
     fun createBasicsHtmlFile(folder: File) {
         println("Crate basics html")
 
-        val file = File(folder, "basics.html")
+        val file = File(folder, "index.html")
         file.delete()
         val stream = PrintStream(file)
 
@@ -658,33 +658,65 @@ class WebsiteBuilder {
     private fun FlowContent.header(selectedIndex: Int) {
         div {
             id = "top-border"
+
+            div {
+                a("/") {
+                    title = "logo"
+                    id = "logo-icon-wrapper"
+                    i {
+                        style = "background-image: url('/images/logo.png');"
+                        classes = setOf("logo-icon")
+                    }
+                }
+                div {
+                    classes = setOf("title")
+                    span {
+                        text("Linux")
+                    }
+                    span {
+                        text("Command")
+                    }
+                    span {
+                        text("Library")
+                    }
+                }
+
+                div {
+                    a("https://github.com/SimonSchubert/LinuxCommandLibrary") {
+                        target = ATarget.blank
+                        rel = "noopener"
+                        img {
+                            src = "/images/logo-github.svg"
+                            width = "25"
+                            height = "25"
+                        }
+                    }
+                    a("https://f-droid.org/en/packages/com.inspiredandroid.linuxcommandbibliotheca") {
+                        target = ATarget.blank
+                        rel = "noopener"
+                        img {
+                            src = "/images/icon-fdroid.svg"
+                            width = "25"
+                            height = "25"
+                        }
+                    }
+                    a("https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca") {
+                        target = ATarget.blank
+                        rel = "noopener"
+                        img {
+                            src = "/images/icon-playstore.svg"
+                            width = "25"
+                            height = "25"
+                        }
+                    }
+                }
+            }
         }
         nav {
-            a("/") {
-                style = "background: #d34747; padding: 6px;"
-                title = "logo"
-                id = "logo-icon-wrapper"
-                i {
-                    style = "background-image: url('/images/logo.png');"
-                    classes = setOf("logo-icon")
-                }
-            }
-            div {
-                classes = setOf("title")
-                span {
-                    text("Linux")
-                }
-                span {
-                    text("Command")
-                }
-                span {
-                    text("Library")
-                }
-            }
             ul {
-                headerNav("Commands", "/", 0, selectedIndex)
-                headerNav("Basics", "/basics", 1, selectedIndex)
+                headerNav("Basics", "/", 1, selectedIndex)
                 headerNav("Tips", "/tips", 2, selectedIndex)
+                headerNav("Commands", "/commands", 0, selectedIndex)
             }
         }
     }
@@ -697,7 +729,7 @@ class WebsiteBuilder {
         stream.print("<?xml version=\"1.0\" encoding=\"UTF-8\"?><urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">")
         stream.print(getSitemapUrlNode(""))
         stream.print(getSitemapUrlNode("tips"))
-        stream.print(getSitemapUrlNode("basics"))
+        stream.print(getSitemapUrlNode("commands"))
         databaseHelper.getBasics().forEach {
             stream.print(getSitemapUrlNode("basic/${it.getHtmlFileName()}"))
         }
@@ -713,7 +745,6 @@ class WebsiteBuilder {
                 "<loc>https://linuxcommandlibrary.com/$urlPart</loc>" +
                 "</url>"
     }
-
 
     private fun HEAD.commonMeta() {
         meta(charset = "utf-8")
@@ -789,21 +820,10 @@ class WebsiteBuilder {
                 text("commandlinefu.com")
             }
             br
-            br
             div {
                 style = "display: flex;flex-wrap: wrap;align-items: center;justify-content: center;"
                 text("Simon Schubert - info@linuxcommandlibrary.com ")
-                a("https://github.com/SimonSchubert/LinuxCommandLibrary") {
-                    target = ATarget.blank
-                    rel = "noopener"
-                    img {
-                        src = "/images/logo-github.svg"
-                        width = "25"
-                        height = "25"
-                    }
-                }
             }
-            br
             a("https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca") {
                 style = "margin-right: 4px;"
                 target = ATarget.blank
