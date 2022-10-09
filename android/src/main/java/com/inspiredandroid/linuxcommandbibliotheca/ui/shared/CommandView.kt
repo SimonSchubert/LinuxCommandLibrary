@@ -21,7 +21,11 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import com.inspiredandroid.linuxcommandbibliotheca.R
-import com.linuxcommandlibrary.shared.*
+import com.linuxcommandlibrary.shared.CommandElement
+import com.linuxcommandlibrary.shared.ManCommandElement
+import com.linuxcommandlibrary.shared.TextCommandElement
+import com.linuxcommandlibrary.shared.UrlCommandElement
+import com.linuxcommandlibrary.shared.databaseHelper
 
 /* Copyright 2022 Simon Schubert
  *

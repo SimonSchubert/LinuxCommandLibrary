@@ -1,7 +1,11 @@
 package com.inspiredandroid.linuxcommandbibliotheca.ui.bars
 
 import androidx.compose.foundation.layout.size
-import androidx.compose.material.*
+import androidx.compose.material.BottomNavigation
+import androidx.compose.material.BottomNavigationItem
+import androidx.compose.material.Icon
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember

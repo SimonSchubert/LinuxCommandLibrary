@@ -19,9 +19,11 @@ dependencies {
     implementation("com.google.accompanist:accompanist-systemuicontroller:0.25.1")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1")
     implementation("androidx.preference:preference:1.2.0")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.2.1")
 
     androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.2.1")
     debugImplementation("androidx.compose.ui:ui-test-manifest:1.2.1")
+    debugImplementation("androidx.compose.ui:ui-tooling:1.2.1")
 }
 
 android {
