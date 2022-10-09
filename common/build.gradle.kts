@@ -33,14 +33,14 @@ kotlin {
         }
         val androidMain by getting {
             dependencies {
-                api("androidx.appcompat:appcompat:1.5.0")
-                api("androidx.core:core-ktx:1.8.0")
-                implementation("com.squareup.sqldelight:android-driver:1.5.3")
+                api("androidx.appcompat:appcompat:1.5.1")
+                api("androidx.core:core-ktx:1.9.0")
+                implementation("com.squareup.sqldelight:android-driver:1.5.4")
             }
         }
         val desktopMain by getting {
             dependencies {
-                implementation("com.squareup.sqldelight:sqlite-driver:1.5.3")
+                implementation("com.squareup.sqldelight:sqlite-driver:1.5.4")
             }
             resources.setSrcDirs(listOf("../assets", "../cli/src/jvmMain/resources"))
         }
@@ -62,7 +62,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.3.0"
+        kotlinCompilerExtensionVersion = "1.3.2"
     }
 
     compileOptions {
