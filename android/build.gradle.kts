@@ -12,9 +12,9 @@ repositories {
 
 dependencies {
     implementation(project(":common"))
-    implementation("androidx.activity:activity-compose:1.5.1")
+    implementation("androidx.activity:activity-compose:1.6.0")
     implementation("androidx.compose.material:material:1.2.1")
-    implementation("androidx.navigation:navigation-compose:2.5.1")
+    implementation("androidx.navigation:navigation-compose:2.5.2")
     implementation("com.google.accompanist:accompanist-appcompat-theme:0.25.1")
     implementation("com.google.accompanist:accompanist-systemuicontroller:0.25.1")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1")
@@ -42,7 +42,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.3.0"
+        kotlinCompilerExtensionVersion = "1.3.2"
     }
 
     compileOptions {
