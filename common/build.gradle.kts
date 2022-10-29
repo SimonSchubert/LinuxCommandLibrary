@@ -73,6 +73,7 @@ android {
     lint {
         abortOnError = false
     }
+    namespace = "com.linuxcommandlibrary.shared"
 }
 
 sqldelight {
