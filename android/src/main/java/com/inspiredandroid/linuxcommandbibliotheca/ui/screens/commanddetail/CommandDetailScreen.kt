@@ -5,6 +5,7 @@ package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commanddetail
 import android.widget.TextView
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.ExperimentalMaterialApi
@@ -19,10 +20,12 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.text.HtmlCompat
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.SectionTitle
 import com.inspiredandroid.linuxcommandbibliotheca.ui.shared.CommandView
 import com.linuxcommandlibrary.shared.TextCommandElement
 import databases.CommandSection
@@ -62,7 +65,7 @@ fun CommandSectionColumn(
     section: CommandSection,
     onNavigate: (String) -> Unit = {}
 ) {
-    var switched by remember { mutableStateOf(false) }
+    var collapsed by remember { mutableStateOf(false) }
     ListItem(text = {
         Text(
             section.title.uppercase(),
@@ -71,14 +74,18 @@ fun CommandSectionColumn(
         )
     },
         modifier = Modifier.clickable {
-            switched = !switched
+            collapsed = !collapsed
         })
-    if (switched) {
+    if (collapsed) {
         if (section.title == "TLDR") {
             section.content.split("<b>").forEach {
                 val split = it.split("</b><br>")
                 if (split.size > 1) {
-                    ListItem(text = { Text(split[0], fontWeight = FontWeight.Bold) })
+                    SectionTitle(
+                        modifier = Modifier.padding(start = 8.dp, end = 8.dp),
+                        title = split[0]
+                    )
+
                     val command = "$ " + split[1].replace("<br>", "").replace("`", "")
                     CommandView(command, listOf(TextCommandElement(command)), onNavigate)
                 }

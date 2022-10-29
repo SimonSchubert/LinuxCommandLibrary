@@ -10,7 +10,6 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Icon
 import androidx.compose.material.ListItem
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
@@ -18,12 +17,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.SpanStyle
-import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import com.inspiredandroid.linuxcommandbibliotheca.R
+import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.HighlightedText
 import com.inspiredandroid.linuxcommandbibliotheca.ui.theme.LinuxTheme
 import com.linuxcommandlibrary.shared.search
 import databases.Command
@@ -114,26 +111,6 @@ fun CommandListScreen(
     }
 }
 
-
-@Composable
-fun HighlightedText(text: String, pattern: String) {
-    Text(
-        buildAnnotatedString {
-            val splitText = text.split(pattern)
-            splitText.forEachIndexed { index, s ->
-                append(s)
-                if (index != splitText.size - 1) {
-                    withStyle(style = SpanStyle(color = MaterialTheme.colors.primary)) {
-                        append(pattern)
-                    }
-                }
-            }
-        },
-        maxLines = 1,
-        softWrap = false,
-        overflow = TextOverflow.Ellipsis
-    )
-}
 
 @Preview
 @Composable

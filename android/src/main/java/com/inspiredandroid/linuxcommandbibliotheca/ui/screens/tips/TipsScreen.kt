@@ -3,26 +3,22 @@
 package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.tips
 
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Card
 import androidx.compose.material.ExperimentalMaterialApi
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.NestedCommandView
+import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.NestedText
+import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.SectionTitle
 import com.inspiredandroid.linuxcommandbibliotheca.ui.shared.CommandView
 import com.inspiredandroid.linuxcommandbibliotheca.ui.shared.StaggeredVerticalGrid
 
@@ -41,7 +37,6 @@ import com.inspiredandroid.linuxcommandbibliotheca.ui.shared.StaggeredVerticalGr
  * limitations under the License.
 */
 
-
 @Composable
 fun TipsScreen(onNavigate: (String) -> Unit = {}, viewModel: TipsViewModel = viewModel()) {
     StaggeredVerticalGrid(
@@ -58,13 +53,9 @@ fun TipsScreen(onNavigate: (String) -> Unit = {}, viewModel: TipsViewModel = vie
                     .fillMaxWidth()
             ) {
                 Column(modifier = Modifier.padding(6.dp)) {
-                    Text(
-                        mergedTip.tip.title,
-                        fontSize = 18.sp,
-                        style = MaterialTheme.typography.subtitle1,
-                        fontWeight = FontWeight.Bold,
-                        modifier = Modifier.padding(bottom = 4.dp)
-                    )
+
+                    SectionTitle(title = mergedTip.tip.title)
+
                     mergedTip.sections.forEach { sectionElement ->
                         when (sectionElement) {
                             is TipSectionTextElement -> {
@@ -72,35 +63,27 @@ fun TipsScreen(onNavigate: (String) -> Unit = {}, viewModel: TipsViewModel = vie
                             }
 
                             is TipSectionCodeElement -> {
-                                CommandView(sectionElement.command, sectionElement.elements, onNavigate)
+                                CommandView(
+                                    command = sectionElement.command,
+                                    elements = sectionElement.elements,
+                                    onNavigate = onNavigate
+                                )
                             }
 
                             is TipSectionNestedCodeElement -> {
-                                Row(verticalAlignment = Alignment.CenterVertically) {
-                                    Text(
-                                        sectionElement.text,
-                                        fontWeight = FontWeight.Bold,
-                                        modifier = Modifier.width(40.dp),
-                                        textAlign = TextAlign.Center
-                                    )
-                                    CommandView(
-                                        sectionElement.command,
-                                        sectionElement.elements,
-                                        onNavigate
-                                    )
-                                }
+                                NestedCommandView(
+                                    text = sectionElement.text,
+                                    command = sectionElement.command,
+                                    commandElements = sectionElement.elements,
+                                    onNavigate = onNavigate
+                                )
                             }
 
                             is TipSectionNestedTextElement -> {
-                                Row(verticalAlignment = Alignment.CenterVertically) {
-                                    Text(
-                                        sectionElement.text,
-                                        fontWeight = FontWeight.Bold,
-                                        modifier = Modifier.width(40.dp),
-                                        textAlign = TextAlign.Center
-                                    )
-                                    Text(sectionElement.info, modifier = Modifier.padding(8.dp))
-                                }
+                                NestedText(
+                                    textLeft = sectionElement.text,
+                                    textRight = sectionElement.info
+                                )
                             }
                         }
                     }
@@ -109,3 +92,4 @@ fun TipsScreen(onNavigate: (String) -> Unit = {}, viewModel: TipsViewModel = vie
         }
     }
 }
+
