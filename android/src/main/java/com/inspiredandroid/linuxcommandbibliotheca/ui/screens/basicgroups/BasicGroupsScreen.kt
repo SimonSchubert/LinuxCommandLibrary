@@ -56,7 +56,7 @@ fun BasicGroupsScreen(
 
 @Composable
 fun BasicGroupColumn(basicGroup: BasicGroup, onNavigate: (String) -> Unit = {}) {
-    var switched by remember { mutableStateOf(false) }
+    var collapsed by remember { mutableStateOf(false) }
     ListItem(text = { Text(basicGroup.description) },
         icon = {
             Icon(
@@ -66,9 +66,9 @@ fun BasicGroupColumn(basicGroup: BasicGroup, onNavigate: (String) -> Unit = {}) 
             )
         },
         modifier = Modifier.clickable {
-            switched = !switched
+            collapsed = !collapsed
         })
-    if (switched) {
+    if (collapsed) {
         val commands = databaseHelper.getBasicCommands(basicGroup.id)
         commands.forEach { basicCommand ->
             CommandView(

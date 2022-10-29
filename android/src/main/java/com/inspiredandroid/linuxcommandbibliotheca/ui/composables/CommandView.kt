@@ -19,8 +19,10 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.withStyle
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.inspiredandroid.linuxcommandbibliotheca.R
+import com.inspiredandroid.linuxcommandbibliotheca.ui.theme.LinuxTheme
 import com.linuxcommandlibrary.shared.CommandElement
 import com.linuxcommandlibrary.shared.ManCommandElement
 import com.linuxcommandlibrary.shared.TextCommandElement
@@ -136,5 +138,21 @@ fun shareCommandLambda(command: String): () -> Unit {
         } catch (e: Exception) {
             e.printStackTrace()
         }
+    }
+}
+
+
+@Composable
+@Preview
+fun CommandViewPreview() {
+    LinuxTheme {
+        CommandView(
+            command = "$ find ex?mple.txt",
+            elements = listOf(
+                TextCommandElement("$ "),
+                ManCommandElement("find"),
+                TextCommandElement(" ex?mple.txt")
+            ),
+        )
     }
 }
