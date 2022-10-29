@@ -2,7 +2,7 @@
 
 ![Icon](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandLibrary/master/art/web_hi_res_144.png)
 
-The app currently has **4638** manual pages, **21+** basic categories and a bunch of general terminal tips. It works 100% offline, doesn't need an internet connection and has no tracking software.
+The app currently has **4779** manual pages, **21+** basic categories and a bunch of general terminal tips. It works 100% offline, doesn't need an internet connection and has no tracking software.
 
 [![Play Store](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/play_store_badge.png)](https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca)
 [![F-Droid](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/fdroid_badge.png)](https://f-droid.org/en/packages/com.inspiredandroid.linuxcommandbibliotheca/)
@@ -23,49 +23,15 @@ https://linuxcommandlibrary.com
 ### CLI screenshot
 <img src="https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-cli-1.png" width="300">
 
-Execute `:cli:buildFatJar2` to create jar file for Linux, Windows and Mac.
+Execute `[gradle](https://docs.gradle.org/current/userguide/command_line_interface.html#sec:command_line_executing_tasks) :cli:buildFatJar2` to create jar file for Linux, Windows and Mac.
 
 ### Categories
 
-* One-liners
-* System information
-* System control
-* Users & Groups
-* Files & Folders
-* Input
-* Printing
-* JSON
-* Network
-* Search & Find
-* GIT
-* SSH
-* Video & Audio
-* Package manager
-* Hacking tools
-* Terminal games
-* Crypto currencies
-* VIM
-* Emacs
-* Nano
-* Pico
+One-liners, System information, System control, Users & Groups, Files & Folders, Input, Printing, JSON, Network, Search & Find, GIT, SSH, Video & Audio, Package manager, Hacking tools, Terminal games, Crypto currencies, VIM, Emacs, Nano, Pico
 
 ### Tips
 
-* Clear and reset the terminal
-* List of recent commands
-* Close a frozen window/application
-* Tab Completion
-* Temporary aliases
-* Permanent aliases
-* Chain commands
-* Command syntax
-* Cursor navigation
-* Redirection
-* Special characters in commands
-* View file permissions
-* Modify file permissions
-* Set file permissions via binary references
-
+Clear and reset the terminal, List of recent commands, Close a frozen window/application, Tab Completion, Temporary aliases, Permanent aliases, Chain commands, Command syntax, Cursor navigation, Redirection, Special characters in commands, View file permissions, Modify file permissions, Set file permissions via binary references
 
 ### Tests
 
