@@ -56,23 +56,22 @@ class MarkdownBuilder {
         }
         stream.appendLine()
         stream.appendLine("### CLI screenshot")
+        stream.appendLine()
         stream.appendLine("<img src=\"https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-cli-1.png\" width=\"300\">")
         stream.appendLine()
-        stream.appendLine("Execute `:cli:buildFatJar2` to create jar file for Linux, Windows and Mac.")
+        stream.appendLine("Execute `[gradle](https://docs.gradle.org/current/userguide/command_line_interface.html#sec:command_line_executing_tasks) :cli:buildFatJar2` to create jar file for Linux, Windows and Mac.")
         stream.appendLine()
         stream.appendLine("### Categories")
         stream.appendLine()
-        databaseHelper.getBasics().forEach { category ->
-            stream.appendLine("* ${category.title}")
-        }
+        stream.appendLine(databaseHelper.getBasics().joinToString { category ->
+            category.title
+        })
         stream.appendLine()
         stream.appendLine("### Tips")
         stream.appendLine()
-        databaseHelper.getTips().forEach { tip ->
-            stream.appendLine("* ${tip.title}")
-        }
-
-        stream.appendLine()
+        stream.appendLine(databaseHelper.getTips().joinToString { tip ->
+            tip.title
+        })
         stream.appendLine()
         stream.appendLine("### Tests")
         stream.appendLine()
@@ -85,6 +84,7 @@ class MarkdownBuilder {
 
         stream.appendLine()
         stream.appendLine("### Licensing")
+        stream.appendLine()
         stream.appendLine("The source code is licensed under the Apache 2.0 license and the copyright of the man pages in the `database.db` file are copyrighted by their respective authors.")
 
         stream.appendLine()
