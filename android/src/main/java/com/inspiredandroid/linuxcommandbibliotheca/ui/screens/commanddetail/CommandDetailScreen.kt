@@ -5,6 +5,8 @@ package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commanddetail
 import android.widget.TextView
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -25,8 +27,7 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.text.HtmlCompat
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.SectionTitle
-import com.inspiredandroid.linuxcommandbibliotheca.ui.shared.CommandView
+import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.CommandView
 import com.linuxcommandlibrary.shared.TextCommandElement
 import databases.CommandSection
 
@@ -78,16 +79,27 @@ fun CommandSectionColumn(
         })
     if (collapsed) {
         if (section.title == "TLDR") {
-            section.content.split("<b>").forEach {
-                val split = it.split("</b><br>")
-                if (split.size > 1) {
-                    SectionTitle(
-                        modifier = Modifier.padding(start = 8.dp, end = 8.dp),
-                        title = split[0]
-                    )
+            Column(
+                modifier = Modifier.padding(start = 16.dp, end = 16.dp)
+            ) {
 
-                    val command = "$ " + split[1].replace("<br>", "").replace("`", "")
-                    CommandView(command, listOf(TextCommandElement(command)), onNavigate)
+                val tldrParts = section.content.split("<b>")
+                tldrParts.forEachIndexed { index, s ->
+                    val split = s.split("</b><br>")
+                    if (split.size > 1) {
+                        Text(
+                            text = split[0],
+                            fontSize = 16.sp,
+                            style = MaterialTheme.typography.subtitle1,
+                            fontWeight = FontWeight.Bold
+                        )
+
+                        val command = "$ " + split[1].replace("<br>", "").replace("`", "")
+                        CommandView(command, listOf(TextCommandElement(command)), onNavigate)
+                    }
+                    if (index != tldrParts.lastIndex) {
+                        Spacer(Modifier.height(8.dp))
+                    }
                 }
             }
         } else {

@@ -10,6 +10,7 @@ import androidx.compose.material.Button
 import androidx.compose.material.Card
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
+import androidx.compose.material.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
@@ -77,7 +78,7 @@ fun AppInfoDialog(showDialog: MutableState<Boolean>) {
                             style = MaterialTheme.typography.h6
                         )
                     }
-                    Button(
+                    TextButton(
                         content = { Text("OK") },
                         modifier = Modifier
                             .align(Alignment.End)

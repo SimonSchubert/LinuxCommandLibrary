@@ -1,4 +1,4 @@
-package com.inspiredandroid.linuxcommandbibliotheca.ui.bars
+package com.inspiredandroid.linuxcommandbibliotheca.ui.composables
 
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.BottomNavigation
