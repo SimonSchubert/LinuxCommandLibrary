@@ -1,4 +1,4 @@
-package com.inspiredandroid.linuxcommandbibliotheca.ui.shared
+package com.inspiredandroid.linuxcommandbibliotheca.ui.composables
 
 import android.content.Intent
 import androidx.compose.foundation.layout.Row

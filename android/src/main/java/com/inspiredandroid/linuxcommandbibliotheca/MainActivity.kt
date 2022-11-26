@@ -21,8 +21,8 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
-import com.inspiredandroid.linuxcommandbibliotheca.ui.bars.BottomBar
-import com.inspiredandroid.linuxcommandbibliotheca.ui.bars.TopBar
+import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.BottomBar
+import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.TopBar
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basiccategories.BasicCategoriesScreen
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basicgroups.BasicGroupsScreen
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commanddetail.CommandDetailScreen

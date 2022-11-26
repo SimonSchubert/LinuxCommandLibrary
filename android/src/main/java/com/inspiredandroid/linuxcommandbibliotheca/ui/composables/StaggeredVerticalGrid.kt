@@ -1,4 +1,4 @@
-package com.inspiredandroid.linuxcommandbibliotheca.ui.shared
+package com.inspiredandroid.linuxcommandbibliotheca.ui.composables
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier

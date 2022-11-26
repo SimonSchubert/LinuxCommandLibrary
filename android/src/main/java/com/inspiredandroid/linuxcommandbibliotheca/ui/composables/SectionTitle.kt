@@ -29,8 +29,8 @@ import com.inspiredandroid.linuxcommandbibliotheca.ui.theme.LinuxTheme
 @Composable
 fun SectionTitle(modifier: Modifier = Modifier, title: String) {
     Text(
-        title,
-        fontSize = 18.sp,
+        text = title,
+        fontSize = 20.sp,
         style = MaterialTheme.typography.subtitle1,
         fontWeight = FontWeight.Bold,
         modifier = modifier.padding(bottom = 4.dp)
