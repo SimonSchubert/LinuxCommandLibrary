@@ -3,9 +3,7 @@
 package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.tips
 
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -18,10 +16,10 @@ import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.CommandView
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.NestedCommandView
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.NestedText
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.SectionTitle
-import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.CommandView
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.StaggeredVerticalGrid
 
 /* Copyright 2022 Simon Schubert

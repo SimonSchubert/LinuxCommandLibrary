@@ -8,6 +8,10 @@ import androidx.compose.material.LocalContentAlpha
 import androidx.compose.material.LocalContentColor
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.OutlinedTextField
+import androidx.compose.material.ScaffoldState
+import androidx.compose.material.Snackbar
+import androidx.compose.material.SnackbarHost
+import androidx.compose.material.SnackbarHostState
 import androidx.compose.material.Text
 import androidx.compose.material.TextFieldDefaults
 import androidx.compose.material.TopAppBar
@@ -16,6 +20,9 @@ import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.Star
+import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
@@ -38,6 +45,7 @@ import androidx.navigation.NavBackStackEntry
 import com.inspiredandroid.linuxcommandbibliotheca.PreferenceUtil
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.AppInfoDialog
+import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.BookmarkFeedbackDialog
 import com.linuxcommandlibrary.shared.databaseHelper
 import com.linuxcommandlibrary.shared.getHtmlFileName
 
@@ -150,6 +158,8 @@ fun TopBar(
         val showAppInfoIcon = route == "basics"
         val showBookmarkIcon = route?.startsWith("command?") ?: false
         val showDialog = remember { mutableStateOf(false) }
+        val showBookmarkToast = remember { mutableStateOf(false) }
+        val snackbarHostState = remember { SnackbarHostState() }
 
         TopAppBar(
             title = {
@@ -202,6 +212,7 @@ fun TopBar(
                             isBookmarked.value = !isBookmarked.value
                             if (isBookmarked.value) {
                                 bookmarkManager.addBookmark(context, command.id)
+                                showBookmarkToast.value = true
                             } else {
                                 bookmarkManager.removeBookmark(context, command.id)
                             }
@@ -223,6 +234,9 @@ fun TopBar(
                 }
             }
         )
+
+        BookmarkFeedbackDialog(showBookmarkToast)
+
         AppInfoDialog(showDialog)
     }
 }
