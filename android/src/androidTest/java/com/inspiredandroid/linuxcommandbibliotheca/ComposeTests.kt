@@ -8,6 +8,8 @@ import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.linuxcommandlibrary.shared.databaseHelper
 import com.linuxcommandlibrary.shared.initDatabase
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.runBlocking
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -86,6 +88,8 @@ class ComposeTests {
 
         // Click bookmark icon and check if icon/contentDescription changed
         composeTestRule.onNodeWithContentDescription("Bookmark").performClick()
+        composeTestRule.mainClock.advanceTimeBy(1000)
+        composeTestRule.waitForIdle()
         composeTestRule.onNodeWithContentDescription("Bookmarked").assertIsDisplayed()
 
         // Go back to search/list and check if bookmark icon is visible
