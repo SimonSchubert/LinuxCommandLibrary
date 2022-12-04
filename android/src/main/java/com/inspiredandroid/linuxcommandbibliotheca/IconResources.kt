@@ -235,6 +235,9 @@ fun BasicGroup.getIconResource(): Int {
         1220 -> R.drawable.ic_icons8_clipboard
         1219 -> R.drawable.ic_icons8_treatment
         1225, 1224 -> R.drawable.ic_icons8_keyboard
+        2403 -> R.drawable.ic_icon_mouse
+        2400 -> R.drawable.ic_icons8_keyboard
+        2402 -> R.drawable.ic_file
         else -> R.drawable.ic_icons8_console
     }
 }
@@ -255,7 +258,7 @@ fun BasicCategory.getIconResource(): Int {
         "Package manager" -> R.drawable.ic_package_40
         "Hacking tools" -> R.drawable.ic_icon_skull
         "Terminal games" -> R.drawable.ic_icon_controller
-        "VIM", "Emacs", "Nano", "Pico" -> R.drawable.ic_icons8_text
+        "VIM Texteditor", "Emacs Texteditor", "Nano Texteditor", "Pico Texteditor", "Micro Texteditor" -> R.drawable.ic_icons8_text
         "Crypto currencies" -> R.drawable.ic_icon_bitcoin
         "Input" -> R.drawable.ic_icon_mouse
         "JSON" -> R.drawable.ic_icon_json
