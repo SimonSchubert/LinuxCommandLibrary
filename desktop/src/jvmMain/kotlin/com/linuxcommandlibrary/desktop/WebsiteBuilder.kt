@@ -1055,10 +1055,11 @@ class WebsiteBuilder {
             "Package manager" -> "linux,install,file,repository,find,package,upgrade"
             "Hacking tools" -> "linux,password,forensics,sniffing,spoofing,exploit,vulnerability"
             "Crypto currencies" -> "linux,minters,wallets,coin,trading,bots"
-            "VIM" -> "linux,insert,search,edit,replace,navigation"
-            "Emacs" -> "linux,emacs,usage,buffers,navigation"
-            "Nano" -> "linux,nano,info,navigation,edit,input,output"
-            "Pico" -> "linux,pico,navigation,usage,input,output"
+            "VIM Texteditor" -> "linux,insert,search,edit,replace,navigation"
+            "Emacs Texteditor" -> "linux,emacs,usage,buffers,navigation"
+            "Nano Texteditor" -> "linux,nano,info,navigation,edit,input,output"
+            "Pico Texteditor" -> "linux,pico,navigation,usage,input,output"
+            "Micro Texteditor" -> "linux,pico,navigation,usage,input,output"
             "Terminal games" -> "linux,terminal,games,list,rogue"
             else -> throw Exception("${category.title} not found")
         }
