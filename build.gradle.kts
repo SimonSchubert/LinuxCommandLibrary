@@ -18,7 +18,7 @@ buildscript {
 }
 
 group = "org.example"
-version = "3.0.7"
+version = "3.0.8"
 
 allprojects {
     repositories {
