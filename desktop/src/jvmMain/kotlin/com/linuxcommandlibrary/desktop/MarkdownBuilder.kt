@@ -59,7 +59,7 @@ class MarkdownBuilder {
         stream.appendLine()
         stream.appendLine("<img src=\"https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-cli-1.png\" width=\"300\">")
         stream.appendLine()
-        stream.appendLine("Execute `[gradle](https://docs.gradle.org/current/userguide/command_line_interface.html#sec:command_line_executing_tasks) :cli:buildFatJar2` to create jar file for Linux, Windows and Mac.")
+        stream.appendLine("Execute `gradle :cli:buildFatJar2` to create jar file for Linux, Windows and Mac.")
         stream.appendLine()
         stream.appendLine("### Categories")
         stream.appendLine()

@@ -1,4 +1,4 @@
-The app currently has <b>4638</b> manual pages, <b>21</b> basic categories and a bunch of general terminal tips. It works 100% offline, doesn't need an internet connection and has no tracking software.
+The app currently has <b>4945</b> manual pages, <b>22</b> basic categories and a bunch of general terminal tips. It works 100% offline, doesn't need an internet connection and has no tracking software.
 
 <b>Categories</b>
 
@@ -19,10 +19,11 @@ The app currently has <b>4638</b> manual pages, <b>21</b> basic categories and a
 * Hacking tools
 * Terminal games
 * Crypto currencies
-* VIM
-* Emacs
-* Nano
-* Pico
+* VIM Texteditor
+* Emacs Texteditor
+* Nano Texteditor
+* Pico Texteditor
+* Micro Texteditor
 
 <b>Tips</b>
 
