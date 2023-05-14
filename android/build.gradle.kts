@@ -12,18 +12,19 @@ repositories {
 
 dependencies {
     implementation(project(":common"))
-    implementation("androidx.activity:activity-compose:1.6.1")
-    implementation("androidx.compose.material:material:1.3.1")
+    implementation("androidx.activity:activity-compose:1.7.1")
+    implementation("androidx.compose.material:material:1.4.3")
     implementation("androidx.navigation:navigation-compose:2.5.3")
-    implementation("com.google.accompanist:accompanist-appcompat-theme:0.28.0")
-    implementation("com.google.accompanist:accompanist-systemuicontroller:0.28.0")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1")
+    implementation("com.google.accompanist:accompanist-appcompat-theme:0.30.1")
+    implementation("com.google.accompanist:accompanist-systemuicontroller:0.30.1")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")
     implementation("androidx.preference:preference:1.2.0")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.3.2")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.4.3")
 
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.3.2")
-    debugImplementation("androidx.compose.ui:ui-test-manifest:1.3.2")
-    debugImplementation("androidx.compose.ui:ui-tooling:1.3.2")
+
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.4.3")
+    debugImplementation("androidx.compose.ui:ui-test-manifest:1.4.3")
+    debugImplementation("androidx.compose.ui:ui-tooling:1.4.3")
 }
 
 android {
@@ -32,7 +33,7 @@ android {
         applicationId = "com.inspiredandroid.linuxcommandbibliotheca"
         minSdk = 24
         targetSdk = 33
-        versionCode = 78
+        versionCode = 79
         versionName = project.version.toString()
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -44,12 +45,12 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.3.2"
+        kotlinCompilerExtensionVersion = "1.4.7"
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     buildTypes {
         getByName("release") {

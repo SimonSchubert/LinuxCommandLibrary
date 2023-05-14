@@ -17,13 +17,14 @@ kotlin {
     android()
     jvm("desktop") {
         compilations.all {
-            kotlinOptions.jvmTarget = "11"
+            kotlinOptions.jvmTarget = "17"
         }
     }
     sourceSets {
         val commonMain by getting {
             dependencies {
 
+                // implementation("androidx.compose.runtime:runtime:1.4.4")
             }
         }
         val commonTest by getting {
@@ -33,21 +34,20 @@ kotlin {
         }
         val androidMain by getting {
             dependencies {
-                api("androidx.appcompat:appcompat:1.5.1")
-                api("androidx.core:core-ktx:1.9.0")
-                implementation("com.squareup.sqldelight:android-driver:1.5.4")
+                api("androidx.appcompat:appcompat:1.6.1")
+                api("androidx.core:core-ktx:1.10.1")
+                implementation("com.squareup.sqldelight:android-driver:1.5.5")
             }
         }
         val desktopMain by getting {
             dependencies {
-                implementation("com.squareup.sqldelight:sqlite-driver:1.5.4")
+                implementation("com.squareup.sqldelight:sqlite-driver:1.5.5")
             }
             resources.setSrcDirs(listOf("../assets", "../cli/src/jvmMain/resources"))
         }
         val desktopTest by getting
     }
 }
-
 
 android {
     compileSdk = 33
@@ -57,17 +57,9 @@ android {
         targetSdk = 33
     }
 
-    buildFeatures {
-        compose = true
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.3.2"
-    }
-
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     lint {

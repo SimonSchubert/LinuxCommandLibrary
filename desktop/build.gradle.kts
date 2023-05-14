@@ -8,7 +8,7 @@ version = "1.0"
 kotlin {
     jvm {
         compilations.all {
-            kotlinOptions.jvmTarget = "11"
+            kotlinOptions.jvmTarget = "17"
         }
         withJava()
     }
@@ -16,8 +16,8 @@ kotlin {
         val jvmMain by getting {
             dependencies {
                 implementation(project(":common"))
-                implementation("org.jetbrains.kotlinx:kotlinx-html-jvm:0.8.0")
-                implementation("org.json:json:20220924")
+                implementation("org.jetbrains.kotlinx:kotlinx-html-jvm:0.8.1")
+                implementation("org.json:json:20230227")
             }
         }
         val jvmTest by getting
