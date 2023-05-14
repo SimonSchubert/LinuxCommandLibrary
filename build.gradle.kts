@@ -1,7 +1,7 @@
 import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 
 plugins {
-    id("com.github.ben-manes.versions") version "0.44.0"
+    id("com.github.ben-manes.versions") version "0.46.0"
 }
 
 buildscript {
@@ -11,20 +11,19 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.20")
-        classpath("com.android.tools.build:gradle:7.3.1")
-        classpath( "com.squareup.sqldelight:gradle-plugin:1.5.4")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.21")
+        classpath("com.android.tools.build:gradle:8.0.1")
+        classpath( "com.squareup.sqldelight:gradle-plugin:1.5.5")
     }
 }
 
 group = "org.example"
-version = "3.0.8"
+version = "3.1.0"
 
 allprojects {
     repositories {
         google()
         mavenCentral()
-        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
 }
 
