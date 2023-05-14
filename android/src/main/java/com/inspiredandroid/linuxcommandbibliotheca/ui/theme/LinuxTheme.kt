@@ -33,16 +33,16 @@ import com.inspiredandroid.linuxcommandbibliotheca.R
 @Composable
 fun LinuxTheme(content: @Composable () -> Unit) {
     val darkMode = isSystemInDarkTheme()
-    val ourDarkColorScheme = darkColors(
+    val darkColors = darkColors(
         primary = Color(0xFFe45151),
         secondary = Color.White,
         background = Color(0xFF262626)
     )
-    val ourLightColorScheme = lightColors(
+    val lightColors = lightColors(
         primary = Color(0xFFe45151),
         secondary = Color.Black
     )
-    val colorSchema = if (darkMode) ourDarkColorScheme else ourLightColorScheme
+    val colorSchema = if (darkMode) darkColors else lightColors
 
     val systemUiController = rememberSystemUiController()
     systemUiController.setSystemBarsColor(
