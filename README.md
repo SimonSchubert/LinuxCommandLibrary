@@ -46,6 +46,10 @@ Common code unit tests: [CommonTests.kt](common/src/commonTest/kotlin/CommonTest
 
 The source code is licensed under the Apache 2.0 license and the copyright of the man pages in the `database.db` file are copyrighted by their respective authors.
 
+### Contributing
+
+To edit code snippets, install the `DB Browser for SQLite` application to edit the assets/database.db file.
+
 ### Thanks to
 
 http://letsgokoyo.com - App Icon
