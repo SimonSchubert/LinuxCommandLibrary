@@ -19,6 +19,8 @@ jobs:
           java-version: "17"
       - name: Set execution flag for gradlew
         run: chmod +x gradlew
+      - name: Run common unit tests
+        run: bash ./gradlew :common:cleanDesktopTest :common:desktopTest
       - name: Build APK
         run: bash ./gradlew assembleRelease --stacktrace
       - name: Sign apk
