@@ -26,15 +26,17 @@ class CommonTests {
             Command(0, 0, "optipng", "convert"),
             Command(0, 0, "thumbnail", "take png and do something"),
             Command(0, 0, "pngcheck", "print detailed"),
+            Command(0, 0, "png", "png"),
         )
 
-        val sortedCommands = commands.search("png")
+        val filteredCommands = commands.search("png")
 
-        assert(sortedCommands.size == 3)
+        assert(filteredCommands.size == 4)
 
-        assertEquals(sortedCommands[0].name, "pngcheck")
-        assertEquals(sortedCommands[1].name, "optipng")
-        assertEquals(sortedCommands[2].name, "thumbnail")
+        assertEquals(filteredCommands[0].name, "png")
+        assertEquals(filteredCommands[1].name, "pngcheck")
+        assertEquals(filteredCommands[2].name, "optipng")
+        assertEquals(filteredCommands[3].name, "thumbnail")
     }
 
     @Test
