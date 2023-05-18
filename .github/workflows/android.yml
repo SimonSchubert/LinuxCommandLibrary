@@ -21,6 +21,27 @@ jobs:
         run: chmod +x gradlew
       - name: Run common unit tests
         run: bash ./gradlew :common:cleanDesktopTest :common:desktopTest
+      - name: Build Release AAB
+        id: buildRelease
+        run: ./gradlew bundleRelease
+      - name: Sign AAB
+        id: sign
+        uses: r0adkll/sign-android-release@v1
+        with:
+          releaseDirectory: android/build/outputs/bundle/release
+          signingKeyBase64: ${{ secrets.KEYSTORE_B64 }}
+          alias: ${{ secrets.KEY_ALIAS }}
+          keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
+          keyPassword: ${{ secrets.KEYSTORE_PASSWORD }}
+      - name: Upload AAB to Play Store
+        uses: r0adkll/upload-google-play@v1
+        with:
+          serviceAccountJsonPlainText: ${{ secrets.SERVICE_ACCOUNT_JSON }}
+          packageName: com.inspiredandroid.linuxcommandbibliotheca
+          releaseFiles: android/build/outputs/bundle/release/app-release.aab
+          track: beta
+          status: draft
+          mappingFile: android/build/outputs/mapping/release/mapping.txt
       - name: Build APK
         run: bash ./gradlew assembleRelease --stacktrace
       - name: Sign APK
@@ -45,7 +66,7 @@ jobs:
           path: cli/out/linuxcommandlibrary.jar
         
   release:
-    name: Release APK
+    name: Release APK and JAR
     needs: apk
     runs-on: ubuntu-latest
     steps:
@@ -57,7 +78,7 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: jar
-      - name: Create Release
+      - name: Create Github Release
         id: create_release
         uses: actions/create-release@v1
         env:
@@ -65,7 +86,7 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           release_name: Release ${{ github.ref }}
-      - name: Upload Release APK
+      - name: Upload Github Release APK
         id: upload_release_asset
         uses: actions/upload-release-asset@v1.0.1
         env:
@@ -75,7 +96,7 @@ jobs:
           asset_path: apk/android-release-unsigned-signed.apk
           asset_name: ${{ github.event.repository.name }}.apk
           asset_content_type: application/zip
-      - name: Upload Release cli JAR
+      - name: Upload Github Release cli JAR
         id: upload_release_asset2
         uses: actions/upload-release-asset@v1.0.1
         env:
