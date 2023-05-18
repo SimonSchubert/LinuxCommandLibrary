@@ -1,0 +1,3 @@
+Add monochrome icon
+Improve performance
+Fix group and command section collapse state not persisting

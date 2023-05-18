@@ -19,8 +19,6 @@ import databases.*
  * limitations under the License.
 */
 
-expect fun getPlatformName(): String
-
 expect var databaseHelper: DatabaseHelper
 
 class DatabaseHelper {

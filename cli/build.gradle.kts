@@ -15,7 +15,7 @@ kotlin {
         compilations {
             val main = getByName("main")
             tasks {
-                register<Jar>("buildFatJar2") {
+                register<Jar>("buildJar") {
                     group = "application"
                     dependsOn(build)
 

@@ -1,0 +1,36 @@
+package com.inspiredandroid.linuxcommandbibliotheca
+
+import android.app.Application
+import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basiccategories.BasicCategoriesViewModel
+import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basicgroups.BasicGroupsViewModel
+import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commanddetail.CommandDetailViewModel
+import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commandlist.CommandListViewModel
+import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.tips.TipsViewModel
+import org.koin.android.ext.koin.androidContext
+import org.koin.android.ext.koin.androidLogger
+import org.koin.androidx.viewmodel.dsl.viewModel
+import org.koin.core.context.GlobalContext.startKoin
+import org.koin.dsl.module
+
+class LinixApplication : Application() {
+
+    override fun onCreate() {
+        super.onCreate()
+
+        startKoin {
+            androidLogger()
+            androidContext(this@LinixApplication)
+            modules(appModule)
+        }
+    }
+
+    private val appModule = module {
+        viewModel { BasicGroupsViewModel(get()) }
+        viewModel { BasicCategoriesViewModel() }
+        viewModel { CommandDetailViewModel(get()) }
+        viewModel { TipsViewModel() }
+        viewModel { CommandListViewModel(get()) }
+
+        single { PreferenceUtil(androidContext()) }
+    }
+}

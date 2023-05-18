@@ -20,10 +20,11 @@ import java.util.*
  * limitations under the License.
 */
 
-sealed class CommandElement
-data class TextCommandElement(val text: String) : CommandElement()
-data class ManCommandElement(val man: String) : CommandElement()
-data class UrlCommandElement(val command: String, val url: String) : CommandElement()
+sealed class CommandElement {
+    data class Text(val text: String) : CommandElement()
+    data class Man(val man: String) : CommandElement()
+    data class Url(val command: String, val url: String) : CommandElement()
+}
 
 /**
  * Search in name and description and return sorted by priority
@@ -69,7 +70,7 @@ fun String.getCommandList(mans: String, hasBrackets: Boolean = false, checkExist
     var isCommand = false
     command.trim().forEach {
         if (it == 'ü') {
-            list.add(TextCommandElement(currentText.replace("\\n", "")))
+            list.add(CommandElement.Text(currentText.replace("\\n", "")))
             currentText = ""
             isCommand = true
         } else if (it == 'ä') {
@@ -78,13 +79,13 @@ fun String.getCommandList(mans: String, hasBrackets: Boolean = false, checkExist
                     currentCommand.startsWith("url:") -> {
                         val url = currentCommand.split("|").last()
                         val cmd = currentCommand.substring(4).split("|").first()
-                        list.add(UrlCommandElement(cmd, url))
+                        list.add(CommandElement.Url(cmd, url))
                     }
                     checkExisting && databaseHelper.getCommand(currentCommand) == null -> {
-                        list.add(TextCommandElement(currentCommand))
+                        list.add(CommandElement.Text(currentCommand))
                     }
                     else -> {
-                        list.add(ManCommandElement(currentCommand))
+                        list.add(CommandElement.Man(currentCommand))
                     }
                 }
             }
@@ -98,7 +99,7 @@ fun String.getCommandList(mans: String, hasBrackets: Boolean = false, checkExist
             }
         }
     }
-    list.add(TextCommandElement(currentText.replace("[cmd]", "[command]").replace("\\n", "")))
+    list.add(CommandElement.Text(currentText.replace("[cmd]", "[command]").replace("\\n", "")))
     return list.toList()
 }
 

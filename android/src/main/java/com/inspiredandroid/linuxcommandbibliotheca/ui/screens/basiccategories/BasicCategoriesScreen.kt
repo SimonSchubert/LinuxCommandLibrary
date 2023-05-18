@@ -3,6 +3,7 @@
 package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basiccategories
 
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
@@ -15,9 +16,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
 import com.inspiredandroid.linuxcommandbibliotheca.getIconResource
 import com.linuxcommandlibrary.shared.getHtmlFileName
+import org.koin.androidx.compose.getViewModel
 
 /* Copyright 2022 Simon Schubert
  *
@@ -37,10 +38,14 @@ import com.linuxcommandlibrary.shared.getHtmlFileName
 @Composable
 fun BasicCategoriesScreen(
     onNavigate: (String) -> Unit = {},
-    viewModel: BasicCategoriesModel = viewModel()
+    viewModel: BasicCategoriesViewModel = getViewModel()
 ) {
-    LazyVerticalGrid(columns = GridCells.Adaptive(minSize = 300.dp)) {
-        items(viewModel.basicCategories) { basicCategory ->
+
+    LazyVerticalGrid(modifier = Modifier.fillMaxSize(), columns = GridCells.Adaptive(minSize = 300.dp)) {
+        items(
+            items = viewModel.basicCategories,
+            key = { it.id }
+        ) { basicCategory ->
             ListItem(
                 text = { Text(basicCategory.title) },
                 icon = {

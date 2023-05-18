@@ -1,8 +1,10 @@
-import com.linuxcommandlibrary.shared.ManCommandElement
+import com.linuxcommandlibrary.shared.CommandElement
 import com.linuxcommandlibrary.shared.getCommandList
 import com.linuxcommandlibrary.shared.getHtmlFileName
 import com.linuxcommandlibrary.shared.getSortPriority
+import com.linuxcommandlibrary.shared.search
 import databases.BasicCategory
+import databases.Command
 import databases.CommandSection
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -14,13 +16,31 @@ class CommonTests {
     fun testCommandListElements() {
         val command = "ps ax | grep firefox"
         val elements = command.getCommandList("ps,grep")
-        assertTrue(elements.count { it is ManCommandElement } == 2)
+        assertTrue(elements.count { it is CommandElement.Man } == 2)
+    }
+
+    @Test
+    fun testCommandListSearch() {
+        val commands = listOf(
+            Command(0, 0, "img2webp", "convert image to webp"),
+            Command(0, 0, "optipng", "convert"),
+            Command(0, 0, "thumbnail", "take png and do something"),
+            Command(0, 0, "pngcheck", "print detailed"),
+        )
+
+        val sortedCommands = commands.search("png")
+
+        assert(sortedCommands.size == 3)
+
+        assertEquals(sortedCommands[0].name, "pngcheck")
+        assertEquals(sortedCommands[1].name, "optipng")
+        assertEquals(sortedCommands[2].name, "thumbnail")
     }
 
     @Test
     fun testBasicCategory() {
         val category = BasicCategory(0L, 0L, "Users & Groups 2")
-        assertTrue(category.getHtmlFileName() == "usersgroups")
+        assertEquals(category.getHtmlFileName(), "usersgroups")
     }
 
     @Test
