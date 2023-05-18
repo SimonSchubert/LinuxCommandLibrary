@@ -516,13 +516,13 @@ class WebsiteBuilder {
                                                 val elements = getSeeAlsoSectionElements(section.content)
                                                 elements.forEach { element ->
                                                     when (element) {
-                                                        is ManCommandElement -> {
+                                                        is CommandElement.Man -> {
                                                             a("/man/${element.man}") {
                                                                 title = "${element.man} man page"
                                                                 text(element.man)
                                                             }
                                                         }
-                                                        is TextCommandElement -> {
+                                                        is CommandElement.Text -> {
                                                             unsafe {
                                                                 +element.text
                                                             }
@@ -903,13 +903,13 @@ class WebsiteBuilder {
                 }
                 command.getCommandList(mans).forEach { element ->
                     when (element) {
-                        is ManCommandElement -> {
+                        is CommandElement.Man -> {
                             a("/man/${element.man}") {
                                 title = "${element.man} man page"
                                 text(element.man)
                             }
                         }
-                        is TextCommandElement -> {
+                        is CommandElement.Text -> {
                             element.text.split("<br>").map { it.replace("$  ", "$ ") }.forEachIndexed { index, s ->
                                 if (index != 0) {
                                     br
@@ -924,7 +924,7 @@ class WebsiteBuilder {
                                 }
                             }
                         }
-                        is UrlCommandElement -> {
+                        is CommandElement.Url -> {
                             a(element.url) {
                                 target = ATarget.blank
                                 rel = "noopener"

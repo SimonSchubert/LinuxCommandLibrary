@@ -26,13 +26,19 @@ https://linuxcommandlibrary.com
 
 Execute `gradle :cli:buildJar` to create jar file for Linux, Windows and Mac.
 
-### Categories
+### Content
+
+#### Categories
 
 One-liners, System information, System control, Users & Groups, Files & Folders, Input, Printing, JSON, Network, Search & Find, GIT, SSH, Video & Audio, Package manager, Hacking tools, Terminal games, Crypto currencies, VIM Texteditor, Emacs Texteditor, Nano Texteditor, Pico Texteditor, Micro Texteditor
 
-### Tips
+#### Tips
 
 Clear and reset the terminal, List of recent commands, Close a frozen window/application, Tab Completion, Temporary aliases, Permanent aliases, Chain commands, Command syntax, Cursor navigation, Redirection, Special characters in commands, View file permissions, Modify file permissions, Set file permissions via binary references
+
+### CI/CD
+
+[Github Action](.github/workflows/android.yml) to automatically create a new Github release with APK and JAR and upload an AAB to the Play Store.
 
 ### Tests
 
@@ -45,10 +51,6 @@ Common code unit tests: [CommonTests.kt](common/src/commonTest/kotlin/CommonTest
 ### Licensing
 
 The source code is licensed under the Apache 2.0 license and the copyright of the man pages in the `database.db` file are copyrighted by their respective authors.
-
-### Contributing
-
-To edit code snippets, install the `DB Browser for SQLite` application to edit the assets/database.db file.
 
 ### Thanks to
 
