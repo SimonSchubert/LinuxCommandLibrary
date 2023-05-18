@@ -59,19 +59,27 @@ class MarkdownBuilder {
         stream.appendLine()
         stream.appendLine("<img src=\"https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-cli-1.png\" width=\"300\">")
         stream.appendLine()
-        stream.appendLine("Execute `gradle :cli:buildFatJar2` to create jar file for Linux, Windows and Mac.")
+        stream.appendLine("Execute `gradle :cli:buildJar` to create jar file for Linux, Windows and Mac.")
         stream.appendLine()
-        stream.appendLine("### Categories")
+        stream.appendLine("### Content")
+        stream.appendLine()
+        stream.appendLine("#### Categories")
         stream.appendLine()
         stream.appendLine(databaseHelper.getBasics().joinToString { category ->
             category.title
         })
         stream.appendLine()
-        stream.appendLine("### Tips")
+        stream.appendLine("#### Tips")
         stream.appendLine()
         stream.appendLine(databaseHelper.getTips().joinToString { tip ->
             tip.title
         })
+
+        stream.appendLine()
+        stream.appendLine("### CI/CD")
+        stream.appendLine()
+        stream.appendLine("[Github Action](.github/workflows/android.yml) to automatically create a new Github release with APK and JAR and upload an AAB to the Play Store.")
+
         stream.appendLine()
         stream.appendLine("### Tests")
         stream.appendLine()
@@ -80,7 +88,6 @@ class MarkdownBuilder {
         stream.appendLine("Android Jetpack Compose deeplinking tests: [ComposeDeeplinkTests.kt](android/src/androidTest/java/com/inspiredandroid/linuxcommandbibliotheca/ComposeDeeplinkTests.kt)")
         stream.appendLine()
         stream.appendLine("Common code unit tests: [CommonTests.kt](common/src/commonTest/kotlin/CommonTests.kt)")
-
 
         stream.appendLine()
         stream.appendLine("### Licensing")
