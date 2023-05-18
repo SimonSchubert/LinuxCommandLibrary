@@ -36,9 +36,9 @@ jobs:
         with:
           name: apk
           path: android/build/outputs/apk/release/android-release-unsigned-signed.apk
-      - name: Build cli jar
+      - name: Build cli JAR
         run: bash ./gradlew :cli:buildJar
-      - name: Upload cli jar
+      - name: Upload cli JAR
         uses: actions/upload-artifact@v1
         with:
           name: jar
@@ -53,6 +53,10 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: apk
+      - name: Download JAR from build
+        uses: actions/download-artifact@v1
+        with:
+          name: jar
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -71,7 +75,7 @@ jobs:
           asset_path: apk/android-release-unsigned-signed.apk
           asset_name: ${{ github.event.repository.name }}.apk
           asset_content_type: application/zip
-      - name: Upload Release cli jar
+      - name: Upload Release cli JAR
         id: upload_release_asset2
         uses: actions/upload-release-asset@v1.0.1
         env:
