@@ -3,34 +3,34 @@ package com.inspiredandroid.linuxcommandbibliotheca
 import android.content.Context
 import androidx.preference.PreferenceManager
 
-class PreferenceUtil {
+class PreferenceUtil(private val context: Context) {
 
-    fun addBookmark(context: Context, id: Long) {
-        val bookmarksIds = getBookmarkIds(context)
-        bookmarksIds.add(id)
-        saveBookmarkIds(context, bookmarksIds)
-    }
+    val bookmarksIds = getBookmarkIds()
 
-    fun removeBookmark(context: Context, id: Long) {
-        val bookmarksIds = getBookmarkIds(context)
-        bookmarksIds.remove(id)
-        saveBookmarkIds(context, bookmarksIds)
-    }
-
-    private fun saveBookmarkIds(context: Context, ids: MutableList<Long>) {
-        val bookmarksChain = ids.joinToString(separator = ",")
-        val prefs = PreferenceManager.getDefaultSharedPreferences(context)
-        prefs.edit().putString(KEY_BOOKMARKS, bookmarksChain).apply()
-    }
-
-    fun getBookmarkIds(context: Context): MutableList<Long> {
+    private fun getBookmarkIds(): MutableList<Long> {
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
         val bookmarksChain = prefs.getString(KEY_BOOKMARKS, "") ?: ""
         return bookmarksChain.split(",").mapNotNull { it.trim().toLongOrNull() }.toMutableList()
     }
 
-    fun hasBookmark(context: Context, id: Long): Boolean {
-        return getBookmarkIds(context).contains(id)
+    private fun saveBookmarkIds() {
+        val bookmarksChain = bookmarksIds.joinToString(separator = ",")
+        val prefs = PreferenceManager.getDefaultSharedPreferences(context)
+        prefs.edit().putString(KEY_BOOKMARKS, bookmarksChain).apply()
+    }
+
+    fun addBookmark(id: Long) {
+        bookmarksIds.add(id)
+        saveBookmarkIds()
+    }
+
+    fun removeBookmark(id: Long) {
+        bookmarksIds.remove(id)
+        saveBookmarkIds()
+    }
+
+    fun hasBookmark(id: Long): Boolean {
+        return bookmarksIds.contains(id)
     }
 
     fun isDatabaseUpToDate(context: Context): Boolean {

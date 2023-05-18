@@ -12,8 +12,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.inspiredandroid.linuxcommandbibliotheca.ui.theme.LinuxTheme
 import com.linuxcommandlibrary.shared.CommandElement
-import com.linuxcommandlibrary.shared.ManCommandElement
-import com.linuxcommandlibrary.shared.TextCommandElement
 
 /* Copyright 2022 Simon Schubert
  *
@@ -55,9 +53,9 @@ fun NestedCommandViewPreview() {
             text = "",
             command = "$ find ex?mple.txt",
             commandElements = listOf(
-                TextCommandElement("$ "),
-                ManCommandElement("find"),
-                TextCommandElement(" ex?mple.txt")
+                CommandElement.Text("$ "),
+                CommandElement.Man("find"),
+                CommandElement.Text(" ex?mple.txt")
             ),
             onNavigate = {})
     }

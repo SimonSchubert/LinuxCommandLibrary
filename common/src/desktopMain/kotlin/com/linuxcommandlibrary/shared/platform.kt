@@ -23,11 +23,6 @@ import java.util.*
  * limitations under the License.
 */
 
-actual fun getPlatformName(): String {
-    return "Desktop"
-}
-
-
 actual var databaseHelper = DatabaseHelper()
 
 fun initDatabase() {

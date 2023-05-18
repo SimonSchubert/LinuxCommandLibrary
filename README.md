@@ -24,7 +24,7 @@ https://linuxcommandlibrary.com
 
 <img src="https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-cli-1.png" width="300">
 
-Execute `gradle :cli:buildFatJar2` to create jar file for Linux, Windows and Mac.
+Execute `gradle :cli:buildJar` to create jar file for Linux, Windows and Mac.
 
 ### Categories
 

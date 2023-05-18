@@ -8,10 +8,8 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -42,7 +40,7 @@ fun BottomBar(navController: NavHostController) {
         Screen.Commands
     )
     // TODO: read current route from navcontroller
-    val selectedRoute = rememberSaveable{ mutableStateOf(Screen.Basics.route) }
+    val selectedRoute = rememberSaveable { mutableStateOf(Screen.Basics.route) }
 
     BottomNavigation(backgroundColor = MaterialTheme.colors.surface) {
         items.forEach { screen ->
@@ -56,7 +54,7 @@ fun BottomBar(navController: NavHostController) {
                 },
                 label = { Text(stringResource(screen.resourceId)) },
                 selected = screen.route == selectedRoute.value,
-                selectedContentColor = Color(0xFFe45151),
+                selectedContentColor = MaterialTheme.colors.primary,
                 unselectedContentColor = MaterialTheme.colors.onSurface,
                 onClick = {
                     navController.navigate(screen.route) {

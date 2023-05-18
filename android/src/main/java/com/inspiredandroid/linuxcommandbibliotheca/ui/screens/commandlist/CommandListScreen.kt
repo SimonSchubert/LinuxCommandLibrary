@@ -12,7 +12,7 @@ import androidx.compose.material.Icon
 import androidx.compose.material.ListItem
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
@@ -21,9 +21,6 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.HighlightedText
-import com.inspiredandroid.linuxcommandbibliotheca.ui.theme.LinuxTheme
-import com.linuxcommandlibrary.shared.search
-import databases.Command
 
 /* Copyright 2022 Simon Schubert
  *
@@ -42,33 +39,22 @@ import databases.Command
 
 @Composable
 fun CommandListScreen(
-    commands: List<Command>,
     searchText: String,
-    bookmarkedIds: List<Long>,
+    viewModel: CommandListViewModel,
     onNavigate: (String) -> Unit = {}
 ) {
-    // TODO: Implement viewmodel
-
-    val filteredCommands = remember(commands, searchText, bookmarkedIds) {
-        if (searchText.isEmpty()) {
-            if (bookmarkedIds.isNotEmpty()) {
-                commands.sortedBy { !bookmarkedIds.contains(it.id) }
-            } else {
-                commands
-            }
-        } else {
-            commands.search(searchText)
-        }
+    LaunchedEffect(searchText) {
+        viewModel.filterCommands(searchText)
     }
 
-    if (filteredCommands.isEmpty()) {
+    if (viewModel.filteredCommands.isEmpty()) {
         Box(modifier = Modifier.fillMaxSize()) {
             Text("404 command not found", modifier = Modifier.align(Alignment.Center))
         }
     } else {
         LazyColumn {
             items(
-                items = filteredCommands,
+                items = viewModel.filteredCommands,
                 key = { it.id }) { command ->
                 ListItem(
                     text = {
@@ -84,7 +70,7 @@ fun CommandListScreen(
                         }
                     },
                     trailing = {
-                        if (bookmarkedIds.contains(command.id)) {
+                        if (viewModel.hasBookmark(command.id)) {
                             Icon(
                                 painterResource(R.drawable.ic_bookmark_black_24dp),
                                 contentDescription = stringResource(R.string.bookmarked)
@@ -115,11 +101,11 @@ fun CommandListScreen(
 @Preview
 @Composable
 fun CommandListScreenPreview() {
-    val commands = listOf(
-        Command(0L, 0L, "cowsay", "speaking cow"),
-        Command(1L, 0L, "cowthink", "thinking cow")
-    )
-    LinuxTheme {
-        CommandListScreen(commands, "cow", listOf(0L)) {}
-    }
+//    val commands = listOf(
+//        Command(0L, 0L, "cowsay", "speaking cow"),
+//        Command(1L, 0L, "cowthink", "thinking cow")
+//    )
+//    LinuxTheme {
+//        CommandListScreen(commands, "cow", listOf(0L)) {}
+//    }
 }

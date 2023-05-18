@@ -23,10 +23,6 @@ import java.io.OutputStream
  * limitations under the License.
 */
 
-actual fun getPlatformName(): String {
-    return "Android"
-}
-
 actual var databaseHelper = DatabaseHelper()
 
 fun hasDatabase(context: Context): Boolean {

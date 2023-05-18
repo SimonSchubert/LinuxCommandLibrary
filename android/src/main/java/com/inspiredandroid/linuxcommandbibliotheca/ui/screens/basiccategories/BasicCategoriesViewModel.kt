@@ -2,7 +2,6 @@ package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basiccategories
 
 import androidx.lifecycle.ViewModel
 import com.linuxcommandlibrary.shared.databaseHelper
-import databases.BasicCategory
 
 /* Copyright 2022 Simon Schubert
  *
@@ -19,8 +18,8 @@ import databases.BasicCategory
  * limitations under the License.
 */
 
-class BasicCategoriesModel : ViewModel() {
+class BasicCategoriesViewModel : ViewModel() {
 
-    val basicCategories: List<BasicCategory> = databaseHelper.getBasics()
+    var basicCategories = databaseHelper.getBasics()
 
 }

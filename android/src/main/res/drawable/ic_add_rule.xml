@@ -1,42 +1,42 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="40dp"
     android:height="40dp"
-    android:viewportHeight="24.0"
-    android:viewportWidth="24.0">
+    android:viewportWidth="24.0"
+    android:viewportHeight="24.0">
     <path
         android:fillColor="#00000000"
         android:pathData="M6,7"
+        android:strokeWidth="2"
         android:strokeColor="#ffffff"
         android:strokeLineCap="round"
-        android:strokeLineJoin="round"
-        android:strokeWidth="2" />
+        android:strokeLineJoin="round" />
     <path
         android:fillColor="#00000000"
         android:pathData="M12,5c0,-1.2 1,-2 2,-2c-2.6,0 -8.8,0 -9.2,0C3.8,3 3,3.9 3,5s0.8,2 1.8,2c0.4,0 6.6,0 9.2,0C13,7 12,6.2 12,5z"
+        android:strokeWidth="2"
         android:strokeColor="#ffffff"
-        android:strokeLineCap="round"
-        android:strokeWidth="2" />
+        android:strokeLineCap="round" />
     <path
         android:fillColor="#00000000"
         android:pathData="M6,7c0,0 0,7.5 0,10s1.5,4 3,4h5"
-        android:strokeColor="#ffffff"
-        android:strokeWidth="2" />
+        android:strokeWidth="2"
+        android:strokeColor="#ffffff" />
     <path
         android:fillColor="#00000000"
         android:pathData="M17,17c0,0 0,-7.5 0,-10s-1.5,-4 -3,-4"
+        android:strokeWidth="2"
         android:strokeColor="#ffffff"
-        android:strokeLineJoin="round"
-        android:strokeWidth="2" />
+        android:strokeLineJoin="round" />
     <path
         android:fillColor="#00000000"
         android:pathData="M9,11L14,11"
-        android:strokeColor="#ffffff"
-        android:strokeWidth="2" />
+        android:strokeWidth="2"
+        android:strokeColor="#ffffff" />
     <path
         android:fillColor="#00000000"
         android:pathData="M9,15L14,15"
-        android:strokeColor="#ffffff"
-        android:strokeWidth="2" />
+        android:strokeWidth="2"
+        android:strokeColor="#ffffff" />
     <path
         android:fillColor="#ffffff"
         android:pathData="M19,16h2v8h-2z" />

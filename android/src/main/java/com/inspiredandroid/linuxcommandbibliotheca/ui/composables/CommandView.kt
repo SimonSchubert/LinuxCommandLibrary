@@ -1,5 +1,6 @@
 package com.inspiredandroid.linuxcommandbibliotheca.ui.composables
 
+import android.content.Context
 import android.content.Intent
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
@@ -24,9 +25,6 @@ import androidx.compose.ui.unit.dp
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.ui.theme.LinuxTheme
 import com.linuxcommandlibrary.shared.CommandElement
-import com.linuxcommandlibrary.shared.ManCommandElement
-import com.linuxcommandlibrary.shared.TextCommandElement
-import com.linuxcommandlibrary.shared.UrlCommandElement
 import com.linuxcommandlibrary.shared.databaseHelper
 
 /* Copyright 2022 Simon Schubert
@@ -51,8 +49,8 @@ fun CommandView(command: String, elements: List<CommandElement>, onNavigate: (St
         buildAnnotatedString {
             elements.forEachIndexed { index, element ->
                 when (element) {
-                    is TextCommandElement -> append(element.text)
-                    is ManCommandElement -> {
+                    is CommandElement.Text -> append(element.text)
+                    is CommandElement.Man -> {
                         pushStringAnnotation(tag = "$index", annotation = element.man)
                         withStyle(style = SpanStyle(color = codeColor)) {
                             append(element.man)
@@ -60,7 +58,7 @@ fun CommandView(command: String, elements: List<CommandElement>, onNavigate: (St
                         pop()
                     }
 
-                    is UrlCommandElement -> {
+                    is CommandElement.Url -> {
                         pushStringAnnotation(tag = "$index", annotation = element.url)
                         withStyle(style = SpanStyle(color = codeColor)) {
                             append(element.command)
@@ -82,7 +80,7 @@ fun CommandView(command: String, elements: List<CommandElement>, onNavigate: (St
             style = MaterialTheme.typography.subtitle2,
             onClick = { offset ->
                 elements.forEachIndexed { index, element ->
-                    if (element is UrlCommandElement) {
+                    if (element is CommandElement.Url) {
                         annotatedString.getStringAnnotations(
                             tag = "$index",
                             start = offset,
@@ -93,7 +91,7 @@ fun CommandView(command: String, elements: List<CommandElement>, onNavigate: (St
                                 uriHandler.openUri(it.item)
                             }
                     }
-                    if (element is ManCommandElement) {
+                    if (element is CommandElement.Man) {
                         annotatedString.getStringAnnotations(
                             tag = "$index",
                             start = offset,
@@ -109,11 +107,12 @@ fun CommandView(command: String, elements: List<CommandElement>, onNavigate: (St
                     }
                 }
             })
-        val shareCommand = shareCommandLambda(command)
+
+        val context = LocalContext.current
         IconButton(
             modifier = Modifier.align(Alignment.CenterVertically),
             onClick = {
-                shareCommand()
+                shareCommand(context, command)
             }) {
             Icon(
                 imageVector = Icons.Filled.Share,
@@ -123,21 +122,17 @@ fun CommandView(command: String, elements: List<CommandElement>, onNavigate: (St
     }
 }
 
-@Composable
-fun shareCommandLambda(command: String): () -> Unit {
-    val context = LocalContext.current
-    return {
-        val intent = Intent(Intent.ACTION_SEND)
-        intent.type = "text/plain"
-        intent.putExtra(
-            Intent.EXTRA_TEXT,
-            command.dropWhile { it == '$' || it.isWhitespace() }.replace("\\n", "")
-        )
-        try {
-            context.startActivity(Intent.createChooser(intent, "Share command"))
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
+fun shareCommand(context: Context, command: String) {
+    val intent = Intent(Intent.ACTION_SEND)
+    intent.type = "text/plain"
+    intent.putExtra(
+        Intent.EXTRA_TEXT,
+        command.dropWhile { it == '$' || it.isWhitespace() }.replace("\\n", "")
+    )
+    try {
+        context.startActivity(Intent.createChooser(intent, "Share command"))
+    } catch (e: Exception) {
+        e.printStackTrace()
     }
 }
 
@@ -149,9 +144,9 @@ fun CommandViewPreview() {
         CommandView(
             command = "$ find ex?mple.txt",
             elements = listOf(
-                TextCommandElement("$ "),
-                ManCommandElement("find"),
-                TextCommandElement(" ex?mple.txt")
+                CommandElement.Text("$ "),
+                CommandElement.Man("find"),
+                CommandElement.Text(" ex?mple.txt")
             ),
         )
     }

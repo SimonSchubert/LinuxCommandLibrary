@@ -1,7 +1,7 @@
 package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commanddetail
 
+import androidx.compose.runtime.mutableStateMapOf
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import com.linuxcommandlibrary.shared.databaseHelper
 import com.linuxcommandlibrary.shared.getSortPriority
 
@@ -20,14 +20,17 @@ import com.linuxcommandlibrary.shared.getSortPriority
  * limitations under the License.
 */
 
-class CommandDetailModel(commandId: Long) : ViewModel() {
+class CommandDetailViewModel(commandId: Long) : ViewModel() {
 
-    val sections = databaseHelper.getSections(commandId).sortedBy { it.getSortPriority() }
-}
+    private val collapsedMap = mutableStateMapOf<Long, Boolean>()
 
-class CommandDetailModelFactory(private val commandId: Long) :
-    ViewModelProvider.NewInstanceFactory() {
-    override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        return CommandDetailModel(commandId) as T
+    var sections = databaseHelper.getSections(commandId).sortedBy { it.getSortPriority() }
+
+    fun isGroupCollapsed(id: Long): Boolean {
+        return collapsedMap[id] == true
+    }
+
+    fun toggleCollapse(id: Long) {
+        collapsedMap[id] = !collapsedMap.getOrDefault(id, false)
     }
 }

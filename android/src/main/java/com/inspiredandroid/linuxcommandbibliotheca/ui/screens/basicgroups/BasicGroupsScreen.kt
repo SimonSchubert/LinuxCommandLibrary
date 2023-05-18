@@ -3,6 +3,7 @@
 package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basicgroups
 
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -11,14 +12,9 @@ import androidx.compose.material.Icon
 import androidx.compose.material.ListItem
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
 import com.inspiredandroid.linuxcommandbibliotheca.getIconResource
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.CommandView
 import com.linuxcommandlibrary.shared.databaseHelper
@@ -43,20 +39,20 @@ import databases.BasicGroup
 @Composable
 fun BasicGroupsScreen(
     onNavigate: (String) -> Unit = {},
-    categoryId: Long,
-    viewModel: BasicGroupsModel = viewModel(factory = BasicGroupModelFactory(categoryId))
+    viewModel: BasicGroupsViewModel
 ) {
-    LazyColumn {
+
+    LazyColumn(Modifier.fillMaxSize()) {
         items(items = viewModel.basicGroups,
-            key = { it.id }) { basicGroup ->
-            BasicGroupColumn(basicGroup, onNavigate)
+            key = { it.id }
+        ) { basicGroup ->
+            BasicGroupColumn(viewModel, basicGroup, onNavigate)
         }
     }
 }
 
 @Composable
-fun BasicGroupColumn(basicGroup: BasicGroup, onNavigate: (String) -> Unit = {}) {
-    var collapsed by remember { mutableStateOf(false) }
+fun BasicGroupColumn(viewModel: BasicGroupsViewModel, basicGroup: BasicGroup, onNavigate: (String) -> Unit = {}) {
     ListItem(text = { Text(basicGroup.description) },
         icon = {
             Icon(
@@ -66,9 +62,10 @@ fun BasicGroupColumn(basicGroup: BasicGroup, onNavigate: (String) -> Unit = {}) 
             )
         },
         modifier = Modifier.clickable {
-            collapsed = !collapsed
+            viewModel.toggleCollapse(basicGroup.id)
         })
-    if (collapsed) {
+
+    if (viewModel.isGroupCollapsed(basicGroup.id)) {
         val commands = databaseHelper.getBasicCommands(basicGroup.id)
         commands.forEach { basicCommand ->
             CommandView(

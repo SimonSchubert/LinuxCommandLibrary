@@ -21,6 +21,10 @@ dependencies {
     implementation("androidx.preference:preference:1.2.0")
     implementation("androidx.compose.ui:ui-tooling-preview:1.4.3")
 
+    implementation("io.insert-koin:koin-core:3.4.0")
+    implementation("io.insert-koin:koin-android:3.4.0")
+    implementation("io.insert-koin:koin-androidx-compose:3.4.4")
+    implementation("androidx.compose.foundation:foundation:1.4.3")
 
     androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.4.3")
     debugImplementation("androidx.compose.ui:ui-test-manifest:1.4.3")
@@ -33,7 +37,7 @@ android {
         applicationId = "com.inspiredandroid.linuxcommandbibliotheca"
         minSdk = 24
         targetSdk = 33
-        versionCode = 79
+        versionCode = 80
         versionName = project.version.toString()
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

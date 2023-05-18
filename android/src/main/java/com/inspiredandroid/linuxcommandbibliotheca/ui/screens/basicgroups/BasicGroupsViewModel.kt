@@ -1,9 +1,8 @@
 package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basicgroups
 
+import androidx.compose.runtime.mutableStateMapOf
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import com.linuxcommandlibrary.shared.databaseHelper
-import databases.BasicGroup
 
 /* Copyright 2022 Simon Schubert
  *
@@ -20,14 +19,17 @@ import databases.BasicGroup
  * limitations under the License.
 */
 
-class BasicGroupsModel(categoryId: Long) : ViewModel() {
+class BasicGroupsViewModel(categoryId: Long) : ViewModel() {
 
-    val basicGroups: List<BasicGroup> = databaseHelper.getBasicGroups(categoryId)
-}
+    private val collapsedMap = mutableStateMapOf<Long, Boolean>()
 
-class BasicGroupModelFactory(private val categoryId: Long) :
-    ViewModelProvider.NewInstanceFactory() {
-    override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        return BasicGroupsModel(categoryId) as T
+    var basicGroups = databaseHelper.getBasicGroups(categoryId)
+
+    fun isGroupCollapsed(id: Long): Boolean {
+        return collapsedMap[id] == true
+    }
+
+    fun toggleCollapse(id: Long) {
+        collapsedMap[id] = !collapsedMap.getOrDefault(id, false)
     }
 }
