@@ -19,9 +19,11 @@ jobs:
           java-version: "17"
       - name: Set execution flag for gradlew
         run: chmod +x gradlew
+      - name: Run common unit tests
+        run: bash ./gradlew :common:cleanDesktopTest :common:desktopTest
       - name: Build APK
         run: bash ./gradlew assembleRelease --stacktrace
-      - name: Sign apk
+      - name: Sign APK
         uses: r0adkll/sign-android-release@v1
         with:
           releaseDirectory: android/build/outputs/apk/release
@@ -34,7 +36,14 @@ jobs:
         with:
           name: apk
           path: android/build/outputs/apk/release/android-release-unsigned-signed.apk
-
+      - name: Build cli jar
+        run: bash ./gradlew :cli:buildJar
+      - name: Upload cli jar
+        uses: actions/upload-artifact@v1
+        with:
+          name: jar
+          path: cli/out/linuxcommandlibrary.jar
+        
   release:
     name: Release APK
     needs: apk
@@ -61,4 +70,14 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: apk/android-release-unsigned-signed.apk
           asset_name: ${{ github.event.repository.name }}.apk
+          asset_content_type: application/zip
+      - name: Upload Release cli jar
+        id: upload_release_asset2
+        uses: actions/upload-release-asset@v1.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: jar/linuxcommandlibrary.jar
+          asset_name: linuxcommandlibrary.jar
           asset_content_type: application/zip
