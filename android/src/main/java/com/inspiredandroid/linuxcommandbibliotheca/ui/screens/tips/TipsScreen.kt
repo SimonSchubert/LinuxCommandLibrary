@@ -2,25 +2,24 @@
 
 package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.tips
 
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.lazy.staggeredgrid.LazyVerticalStaggeredGrid
+import androidx.compose.foundation.lazy.staggeredgrid.StaggeredGridCells
 import androidx.compose.material.Card
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.semantics.contentDescription
-import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.CommandView
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.NestedCommandView
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.NestedText
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.SectionTitle
-import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.StaggeredVerticalGrid
+import org.koin.androidx.compose.getViewModel
 
 /* Copyright 2022 Simon Schubert
  *
@@ -37,16 +36,19 @@ import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.StaggeredVerti
  * limitations under the License.
 */
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun TipsScreen(onNavigate: (String) -> Unit = {}, viewModel: TipsViewModel = viewModel()) {
-    StaggeredVerticalGrid(
-        maxColumnWidth = 420.dp,
-        modifier = Modifier
-            .padding(4.dp)
-            .verticalScroll(rememberScrollState())
-            .semantics { contentDescription = "Scroll" }
+fun TipsScreen(onNavigate: (String) -> Unit = {}, viewModel: TipsViewModel = getViewModel()) {
+
+    LazyVerticalStaggeredGrid(
+        columns = StaggeredGridCells.Adaptive(minSize = 300.dp),
     ) {
-        viewModel.mergedTips.forEach { mergedTip ->
+
+        items(count = viewModel.tips.size,
+            key = { viewModel.tips[it].tip.id }
+        ) {
+            val tip = viewModel.tips[it]
+
             Card(
                 elevation = 4.dp, modifier = Modifier
                     .padding(4.dp)
@@ -54,35 +56,35 @@ fun TipsScreen(onNavigate: (String) -> Unit = {}, viewModel: TipsViewModel = vie
             ) {
                 Column(modifier = Modifier.padding(8.dp)) {
 
-                    SectionTitle(title = mergedTip.tip.title)
+                    SectionTitle(title = tip.tip.title)
 
-                    mergedTip.sections.forEach { sectionElement ->
-                        when (sectionElement) {
-                            is TipSectionTextElement -> {
-                                Text(sectionElement.text)
+                    tip.sections.forEach { element ->
+                        when (element) {
+                            is TipSectionElement.Text -> {
+                                Text(element.text)
                             }
 
-                            is TipSectionCodeElement -> {
+                            is TipSectionElement.Code -> {
                                 CommandView(
-                                    command = sectionElement.command,
-                                    elements = sectionElement.elements,
+                                    command = element.command,
+                                    elements = element.elements,
                                     onNavigate = onNavigate
                                 )
                             }
 
-                            is TipSectionNestedCodeElement -> {
+                            is TipSectionElement.NestedCode -> {
                                 NestedCommandView(
-                                    text = sectionElement.text,
-                                    command = sectionElement.command,
-                                    commandElements = sectionElement.elements,
+                                    text = element.text,
+                                    command = element.command,
+                                    commandElements = element.elements,
                                     onNavigate = onNavigate
                                 )
                             }
 
-                            is TipSectionNestedTextElement -> {
+                            is TipSectionElement.NestedText -> {
                                 NestedText(
-                                    textLeft = sectionElement.text,
-                                    textRight = sectionElement.info
+                                    textLeft = element.text,
+                                    textRight = element.info
                                 )
                             }
                         }
