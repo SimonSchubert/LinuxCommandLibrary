@@ -38,7 +38,7 @@ jobs:
         with:
           serviceAccountJsonPlainText: ${{ secrets.SERVICE_ACCOUNT_JSON }}
           packageName: com.inspiredandroid.linuxcommandbibliotheca
-          releaseFiles: android/build/outputs/bundle/release/app-release.aab
+          releaseFiles: android/build/outputs/bundle/release/android-release.aab
           track: beta
           status: draft
           mappingFile: android/build/outputs/mapping/release/mapping.txt
