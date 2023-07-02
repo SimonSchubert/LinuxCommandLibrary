@@ -31,7 +31,7 @@ fun HighlightedText(text: String, pattern: String) {
     val highlightColor = MaterialTheme.colors.primary
     val annotatedString = remember(pattern, highlightColor) {
         buildAnnotatedString {
-            val splitText = text.split(pattern)
+            val splitText = text.split(pattern, ignoreCase = true)
             splitText.forEachIndexed { index, s ->
                 append(s)
                 if (index != splitText.size - 1) {

@@ -25,7 +25,7 @@ class CommonTests {
             Command(0, 0, "img2webp", "convert image to webp"),
             Command(0, 0, "optipng", "convert"),
             Command(0, 0, "thumbnail", "take png and do something"),
-            Command(0, 0, "pngcheck", "print detailed"),
+            Command(0, 0, "Pngcheck", "print detailed"),
             Command(0, 0, "png", "png"),
         )
 
@@ -34,7 +34,7 @@ class CommonTests {
         assert(filteredCommands.size == 4)
 
         assertEquals(filteredCommands[0].name, "png")
-        assertEquals(filteredCommands[1].name, "pngcheck")
+        assertEquals(filteredCommands[1].name, "Pngcheck")
         assertEquals(filteredCommands[2].name, "optipng")
         assertEquals(filteredCommands[3].name, "thumbnail")
     }

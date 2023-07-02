@@ -29,18 +29,15 @@ sealed class CommandElement {
 /**
  * Search in name and description and return sorted by priority
  */
-fun List<Command>.search(input: String): List<Command> {
-    return this.filter { it.name.contains(input) || it.description.contains(input) }.sortedBy {
-        if(it.name.contains(input)) {
-            if(it.name == input) {
-                0
-            } else if(it.name.startsWith(input)) {
-                10
-            } else {
-                20
-            }
-        } else {
-            30
+fun List<Command>.search(phrase: String): List<Command> {
+    return this.filter { it.name.contains(phrase, true) || it.description.contains(phrase, true) }.sortedBy {
+        val name = it.name.lowercase()
+        val lowercasePhrase = phrase.lowercase()
+        when {
+            !name.contains(lowercasePhrase) -> 30
+            name == lowercasePhrase -> 0
+            name.startsWith(lowercasePhrase) -> 10
+            else -> 20
         }
     }
 }
