@@ -12,18 +12,18 @@ repositories {
 
 dependencies {
     implementation(project(":common"))
-    implementation("androidx.activity:activity-compose:1.7.1")
+    implementation("androidx.activity:activity-compose:1.7.2")
     implementation("androidx.compose.material:material:1.4.3")
-    implementation("androidx.navigation:navigation-compose:2.5.3")
+    implementation("androidx.navigation:navigation-compose:2.6.0")
     implementation("com.google.accompanist:accompanist-appcompat-theme:0.30.1")
     implementation("com.google.accompanist:accompanist-systemuicontroller:0.30.1")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")
     implementation("androidx.preference:preference:1.2.0")
     implementation("androidx.compose.ui:ui-tooling-preview:1.4.3")
 
-    implementation("io.insert-koin:koin-core:3.4.0")
-    implementation("io.insert-koin:koin-android:3.4.0")
-    implementation("io.insert-koin:koin-androidx-compose:3.4.4")
+    implementation("io.insert-koin:koin-core:3.4.2")
+    implementation("io.insert-koin:koin-android:3.4.2")
+    implementation("io.insert-koin:koin-androidx-compose:3.4.5")
     implementation("androidx.compose.foundation:foundation:1.4.3")
 
     androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.4.3")
@@ -32,11 +32,11 @@ dependencies {
 }
 
 android {
-    compileSdk = 33
+    compileSdk = 34
     defaultConfig {
         applicationId = "com.inspiredandroid.linuxcommandbibliotheca"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 81
         versionName = project.version.toString()
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -59,7 +59,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.7"
+        kotlinCompilerExtensionVersion = "1.4.8"
     }
 
     compileOptions {
