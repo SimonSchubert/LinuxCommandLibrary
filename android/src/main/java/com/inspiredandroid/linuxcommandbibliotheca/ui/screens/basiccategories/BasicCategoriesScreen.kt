@@ -41,7 +41,10 @@ fun BasicCategoriesScreen(
     viewModel: BasicCategoriesViewModel = getViewModel()
 ) {
 
-    LazyVerticalGrid(modifier = Modifier.fillMaxSize(), columns = GridCells.Adaptive(minSize = 300.dp)) {
+    LazyVerticalGrid(
+        modifier = Modifier.fillMaxSize(),
+        columns = GridCells.Adaptive(minSize = 300.dp)
+    ) {
         items(
             items = viewModel.basicCategories,
             key = { it.id }

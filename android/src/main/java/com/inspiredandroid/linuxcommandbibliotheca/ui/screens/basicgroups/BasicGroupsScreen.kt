@@ -52,7 +52,11 @@ fun BasicGroupsScreen(
 }
 
 @Composable
-fun BasicGroupColumn(viewModel: BasicGroupsViewModel, basicGroup: BasicGroup, onNavigate: (String) -> Unit = {}) {
+fun BasicGroupColumn(
+    viewModel: BasicGroupsViewModel,
+    basicGroup: BasicGroup,
+    onNavigate: (String) -> Unit = {}
+) {
     ListItem(text = { Text(basicGroup.description) },
         icon = {
             Icon(

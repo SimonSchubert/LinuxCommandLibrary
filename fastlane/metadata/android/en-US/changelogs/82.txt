@@ -1,0 +1,2 @@
+Fix case sensitive search
+Upgrade sdks
