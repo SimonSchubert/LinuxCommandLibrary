@@ -43,7 +43,11 @@ import com.linuxcommandlibrary.shared.databaseHelper
 */
 
 @Composable
-fun CommandView(command: String, elements: List<CommandElement>, onNavigate: (String) -> Unit = {}) {
+fun CommandView(
+    command: String,
+    elements: List<CommandElement>,
+    onNavigate: (String) -> Unit = {}
+) {
     val codeColor = MaterialTheme.colors.primary
     val annotatedString = remember(codeColor) {
         buildAnnotatedString {

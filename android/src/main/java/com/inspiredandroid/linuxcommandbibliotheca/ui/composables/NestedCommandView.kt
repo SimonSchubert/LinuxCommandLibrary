@@ -29,7 +29,12 @@ import com.linuxcommandlibrary.shared.CommandElement
 */
 
 @Composable
-fun NestedCommandView(text: String, command: String, commandElements: List<CommandElement>, onNavigate: (String) -> Unit) {
+fun NestedCommandView(
+    text: String,
+    command: String,
+    commandElements: List<CommandElement>,
+    onNavigate: (String) -> Unit
+) {
     Row(verticalAlignment = Alignment.CenterVertically) {
         Text(
             text,
