@@ -105,7 +105,8 @@ class ComposeScreenshots {
 
         // Tips
         composeTestRule.onNodeWithText("Tips").performClick()
-        composeTestRule.onNodeWithContentDescription("Scroll").performScrollToNode(hasText("$ [command] --help"))
+        composeTestRule.onNodeWithContentDescription("Scroll")
+            .performScrollToNode(hasText("$ [command] --help"))
         composeTestRule.takeScreenshot("screen-2$prefix.png")
     }
 

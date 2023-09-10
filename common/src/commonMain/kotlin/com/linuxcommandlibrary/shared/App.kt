@@ -3,7 +3,7 @@ package com.linuxcommandlibrary.shared
 import databases.BasicCategory
 import databases.Command
 import databases.CommandSection
-import java.util.*
+import java.util.Locale
 
 /* Copyright 2022 Simon Schubert
  *
@@ -30,22 +30,27 @@ sealed class CommandElement {
  * Search in name and description and return sorted by priority
  */
 fun List<Command>.search(phrase: String): List<Command> {
-    return this.filter { it.name.contains(phrase, true) || it.description.contains(phrase, true) }.sortedBy {
-        val name = it.name.lowercase()
-        val lowercasePhrase = phrase.lowercase()
-        when {
-            !name.contains(lowercasePhrase) -> 30
-            name == lowercasePhrase -> 0
-            name.startsWith(lowercasePhrase) -> 10
-            else -> 20
+    return this.filter { it.name.contains(phrase, true) || it.description.contains(phrase, true) }
+        .sortedBy {
+            val name = it.name.lowercase()
+            val lowercasePhrase = phrase.lowercase()
+            when {
+                !name.contains(lowercasePhrase) -> 30
+                name == lowercasePhrase -> 0
+                name.startsWith(lowercasePhrase) -> 10
+                else -> 20
+            }
         }
-    }
 }
 
 /**
  * Return a list of sealed Elements for visual representation
  */
-fun String.getCommandList(mans: String, hasBrackets: Boolean = false, checkExisting: Boolean = false): List<CommandElement> {
+fun String.getCommandList(
+    mans: String,
+    hasBrackets: Boolean = false,
+    checkExisting: Boolean = false
+): List<CommandElement> {
     var command = " $this"
     val list = mutableListOf<CommandElement>()
     mans.split(",").filterNot { it.isEmpty() }.map { it.replace("(", "").replace(")", "") }
@@ -78,9 +83,11 @@ fun String.getCommandList(mans: String, hasBrackets: Boolean = false, checkExist
                         val cmd = currentCommand.substring(4).split("|").first()
                         list.add(CommandElement.Url(cmd, url))
                     }
+
                     checkExisting && databaseHelper.getCommand(currentCommand) == null -> {
                         list.add(CommandElement.Text(currentCommand))
                     }
+
                     else -> {
                         list.add(CommandElement.Man(currentCommand))
                     }

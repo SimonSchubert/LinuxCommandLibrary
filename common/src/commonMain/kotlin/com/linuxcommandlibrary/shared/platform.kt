@@ -2,7 +2,14 @@ package com.linuxcommandlibrary.shared
 
 import com.linuxcommandlibrary.CommandDatabase
 import com.squareup.sqldelight.db.SqlDriver
-import databases.*
+import databases.BasicCategory
+import databases.BasicCommand
+import databases.BasicGroup
+import databases.Command
+import databases.CommandQueries
+import databases.CommandSection
+import databases.Tip
+import databases.TipSection
 
 /* Copyright 2022 Simon Schubert
  *

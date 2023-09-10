@@ -45,7 +45,8 @@ class MarkdownBuilder {
         stream.appendLine("### Mobile screenshots")
         stream.appendLine()
         stream.appendLine("<p>")
-        val mobileScreenshotFiles = listOf("screen-1.png", "screen-2-dark.png", "screen-3.png", "screen-4-dark.png")
+        val mobileScreenshotFiles =
+            listOf("screen-1.png", "screen-2-dark.png", "screen-3.png", "screen-4-dark.png")
         mobileScreenshotFiles.forEach { fileName ->
             stream.appendLine("<img src=\"https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/${fileName}\" width=\"200\">")
         }
