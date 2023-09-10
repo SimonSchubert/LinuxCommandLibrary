@@ -40,6 +40,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.AppInfoDialog
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.BookmarkFeedbackDialog
 import com.linuxcommandlibrary.shared.databaseHelper
 import com.linuxcommandlibrary.shared.getHtmlFileName
+import org.koin.java.KoinJavaComponent.inject
 
 /* Copyright 2022 Simon Schubert
  *
@@ -60,10 +61,13 @@ import com.linuxcommandlibrary.shared.getHtmlFileName
 fun TopBar(
     navBackStackEntry: State<NavBackStackEntry?>,
     textFieldValue: MutableState<TextFieldValue>,
-    bookmarkManager: PreferenceUtil,
     onNavigateBack: () -> Unit = {}
 ) {
     val focusRequester = remember { FocusRequester() }
+    val bookmarkManager = remember {
+        val preferenceManager by inject<PreferenceUtil>(PreferenceUtil::class.java)
+        preferenceManager
+    }
 
     val route = navBackStackEntry.value?.destination?.route
     if (route == "commands") {

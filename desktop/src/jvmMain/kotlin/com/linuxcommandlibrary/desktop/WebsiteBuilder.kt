@@ -1,14 +1,63 @@
 package com.linuxcommandlibrary.desktop
 
-import com.linuxcommandlibrary.shared.*
+import com.linuxcommandlibrary.shared.CommandElement
+import com.linuxcommandlibrary.shared.databaseHelper
+import com.linuxcommandlibrary.shared.getCommandList
+import com.linuxcommandlibrary.shared.getHtmlFileName
+import com.linuxcommandlibrary.shared.getSortPriority
+import com.linuxcommandlibrary.shared.initDatabase
 import databases.BasicCategory
-import kotlinx.html.*
+import kotlinx.html.ATarget
+import kotlinx.html.FlowContent
+import kotlinx.html.HEAD
+import kotlinx.html.HTMLTag
+import kotlinx.html.HtmlTagMarker
+import kotlinx.html.InputType
+import kotlinx.html.LINK
+import kotlinx.html.META
+import kotlinx.html.UL
+import kotlinx.html.a
+import kotlinx.html.attributesMapOf
+import kotlinx.html.b
+import kotlinx.html.body
+import kotlinx.html.br
+import kotlinx.html.button
+import kotlinx.html.classes
+import kotlinx.html.div
+import kotlinx.html.footer
+import kotlinx.html.h1
+import kotlinx.html.h2
+import kotlinx.html.head
+import kotlinx.html.html
+import kotlinx.html.i
+import kotlinx.html.id
+import kotlinx.html.img
+import kotlinx.html.input
+import kotlinx.html.lang
+import kotlinx.html.li
+import kotlinx.html.link
+import kotlinx.html.nav
+import kotlinx.html.noScript
+import kotlinx.html.onClick
+import kotlinx.html.onKeyUp
+import kotlinx.html.p
+import kotlinx.html.script
+import kotlinx.html.span
 import kotlinx.html.stream.appendHTML
+import kotlinx.html.style
+import kotlinx.html.styleLink
+import kotlinx.html.table
+import kotlinx.html.td
+import kotlinx.html.title
+import kotlinx.html.tr
+import kotlinx.html.ul
+import kotlinx.html.unsafe
+import kotlinx.html.visit
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.File
 import java.io.PrintStream
-import java.util.*
+import java.util.Locale
 
 /* Copyright 2022 Simon Schubert
  *
@@ -156,7 +205,11 @@ class WebsiteBuilder {
                     title = title,
                     description = "Handy cheat sheets with linux tips and terminal basics about System control, Users, Files, Package managers, Video and Audio, Hacking tools, Terminal games and many more categories.",
                     url = "https://linuxcommandlibrary.com/${folder.name}/${file.nameWithoutExtension}",
-                    keywords = "linux,cmd,basics,terminal,console,cheat sheets,tips,${basicCategories.joinToString(",") { it.title }}"
+                    keywords = "linux,cmd,basics,terminal,console,cheat sheets,tips,${
+                        basicCategories.joinToString(
+                            ","
+                        ) { it.title }
+                    }"
                 )
 
                 styleLink("/stylesheets/main.css?v=$cacheVersion")
@@ -175,7 +228,8 @@ class WebsiteBuilder {
                                         if (!listOf(253, 254, 255).contains(it.id.toInt())) {
                                             classes = setOf("invert-color")
                                         }
-                                        style = "background-image: url(\"images/${it.getIconResource()}\");"
+                                        style =
+                                            "background-image: url(\"images/${it.getIconResource()}\");"
                                     }
                                     h2 {
                                         text(it.title)
@@ -277,7 +331,13 @@ class WebsiteBuilder {
                                     }
                                 }
                                 databaseHelper.getBasicCommands(group.id).forEach { command ->
-                                    if (listOf("VIM", "Emacs", "Nano", "Pico").contains(category.title)) {
+                                    if (listOf(
+                                            "VIM",
+                                            "Emacs",
+                                            "Nano",
+                                            "Pico"
+                                        ).contains(category.title)
+                                    ) {
                                         table {
                                             command.command.split("\n").forEach {
                                                 tr {
@@ -289,10 +349,21 @@ class WebsiteBuilder {
                                                 }
                                             }
                                         }
-                                    } else if (listOf("Terminal games", "Fun").contains(category.title)) {
-                                        code("$ ${command.command.replace("\\n", "<br>")}", command.mans, true)
+                                    } else if (listOf(
+                                            "Terminal games",
+                                            "Fun"
+                                        ).contains(category.title)
+                                    ) {
+                                        code(
+                                            "$ ${command.command.replace("\\n", "<br>")}",
+                                            command.mans,
+                                            true
+                                        )
                                     } else {
-                                        code("$ ${command.command.replace("\\n", "<br>")}", command.mans)
+                                        code(
+                                            "$ ${command.command.replace("\\n", "<br>")}",
+                                            command.mans
+                                        )
                                     }
                                 }
                             }
@@ -390,9 +461,11 @@ class WebsiteBuilder {
                                         }
                                         br
                                     }
+
                                     1L -> {
                                         code(it.data1.replace("\\n", "<br>"), it.extra)
                                     }
+
                                     3L -> {
                                         unsafe {
                                             +"<tr><td>"
@@ -502,7 +575,8 @@ class WebsiteBuilder {
                                 h2 {
                                     onClick = "togglePanel(this)"
                                     classes = setOf("accordion-button", "active")
-                                    val sectionId = section.title.lowercase(Locale.US).replace(" ", "-")
+                                    val sectionId =
+                                        section.title.lowercase(Locale.US).replace(" ", "-")
                                     a("/man/${command.name.lowercase(Locale.US)}#$sectionId") {
                                         id = sectionId
                                         text(section.title)
@@ -513,7 +587,8 @@ class WebsiteBuilder {
                                     when (section.title) {
                                         "SEE ALSO" -> {
                                             p {
-                                                val elements = getSeeAlsoSectionElements(section.content)
+                                                val elements =
+                                                    getSeeAlsoSectionElements(section.content)
                                                 elements.forEach { element ->
                                                     when (element) {
                                                         is CommandElement.Man -> {
@@ -522,16 +597,19 @@ class WebsiteBuilder {
                                                                 text(element.man)
                                                             }
                                                         }
+
                                                         is CommandElement.Text -> {
                                                             unsafe {
                                                                 +element.text
                                                             }
                                                         }
+
                                                         else -> {}
                                                     }
                                                 }
                                             }
                                         }
+
                                         "TLDR" -> {
                                             p {
                                                 unsafe {
@@ -539,6 +617,7 @@ class WebsiteBuilder {
                                                 }
                                             }
                                         }
+
                                         else -> {
                                             p {
                                                 unsafe {
@@ -580,7 +659,8 @@ class WebsiteBuilder {
         }
         val mans = text.getCommaSeparatedMans()
 
-        return text.getCommandList(mans,
+        return text.getCommandList(
+            mans,
             hasBrackets = true,
             checkExisting = true
         )
@@ -643,7 +723,12 @@ class WebsiteBuilder {
         }
     }
 
-    private fun UL.headerNav(title: String, href: String, index: Int, selectedIndex: Int): FlowContent {
+    private fun UL.headerNav(
+        title: String,
+        href: String,
+        index: Int,
+        selectedIndex: Int
+    ): FlowContent {
         li {
             a(href) {
                 if (selectedIndex == index) {
@@ -757,7 +842,12 @@ class WebsiteBuilder {
         meta(name = "theme-color", content = "#ffffff")
     }
 
-    private fun HEAD.uncommonMeta(title: String, description: String, url: String, keywords: String) {
+    private fun HEAD.uncommonMeta(
+        title: String,
+        description: String,
+        url: String,
+        keywords: String
+    ) {
         title(title)
 
         meta(name = "description", content = description)
@@ -775,7 +865,10 @@ class WebsiteBuilder {
         meta(property = "twitter:card", content = "summary")
         meta(property = "twitter:title", content = title)
         meta(property = "twitter:description", content = description)
-        meta(property = "twitter:image", content = "https://linuxcommandlibrary.com/images/preview.jpg")
+        meta(
+            property = "twitter:image",
+            content = "https://linuxcommandlibrary.com/images/preview.jpg"
+        )
     }
 
     private inline fun HTMLTag.link(
@@ -784,7 +877,10 @@ class WebsiteBuilder {
         type: String? = null,
         sizes: String?,
         crossinline block: LINK.() -> Unit = {}
-    ): Unit = LINK(attributesMapOf("href", href, "rel", rel, "type", type, "sizes", sizes), consumer).visit(block)
+    ): Unit = LINK(
+        attributesMapOf("href", href, "rel", rel, "type", type, "sizes", sizes),
+        consumer
+    ).visit(block)
 
     private fun FlowContent.footer(showAd: Boolean = true): FlowContent {
         if (showAd) {
@@ -893,7 +989,11 @@ class WebsiteBuilder {
         return this
     }
 
-    private fun FlowContent.code(command: String, mans: String, isMonospace: Boolean = false): FlowContent {
+    private fun FlowContent.code(
+        command: String,
+        mans: String,
+        isMonospace: Boolean = false
+    ): FlowContent {
         div {
             classes = setOf("code-wrapper")
             span {
@@ -909,21 +1009,24 @@ class WebsiteBuilder {
                                 text(element.man)
                             }
                         }
+
                         is CommandElement.Text -> {
-                            element.text.split("<br>").map { it.replace("$  ", "$ ") }.forEachIndexed { index, s ->
-                                if (index != 0) {
-                                    br
-                                }
-                                s.split(" ").forEachIndexed { index2, s2 ->
-                                    if (index2 != 0) {
-                                        unsafe {
-                                            +"&nbsp;"
-                                        }
+                            element.text.split("<br>").map { it.replace("$  ", "$ ") }
+                                .forEachIndexed { index, s ->
+                                    if (index != 0) {
+                                        br
                                     }
-                                    text(s2)
+                                    s.split(" ").forEachIndexed { index2, s2 ->
+                                        if (index2 != 0) {
+                                            unsafe {
+                                                +"&nbsp;"
+                                            }
+                                        }
+                                        text(s2)
+                                    }
                                 }
-                            }
                         }
+
                         is CommandElement.Url -> {
                             a(element.url) {
                                 target = ATarget.blank
@@ -941,7 +1044,8 @@ class WebsiteBuilder {
                 } else {
                     onClick =
                         "javascript:copy('${
-                            command.split("<br>").first().drop(2).replace("'", "&#039;").replace("\n", "").trim()
+                            command.split("<br>").first().drop(2).replace("'", "&#039;")
+                                .replace("\n", "").trim()
                         }')"
 
                 }
@@ -1069,7 +1173,8 @@ class WebsiteBuilder {
         var content = this
         var matches = quoteRegex.findAll(content)
         matches.forEach {
-            val command = it.value.replace("`", "").replace("'", "&#039;").replace(">", "&gt;").replace("<", "&lt;")
+            val command = it.value.replace("`", "").replace("'", "&#039;").replace(">", "&gt;")
+                .replace("<", "&lt;")
                 .replace("\"", "&quot;")
             content = content.replace(
                 it.value,
@@ -1080,7 +1185,8 @@ class WebsiteBuilder {
         matches = h2Regex.findAll(content)
         matches.forEachIndexed { index, matchResult ->
             val text =
-                matchResult.value.replace("<h2>", "").replace("</h2>", "").replace(">", "&gt;").replace("<", "&lt;")
+                matchResult.value.replace("<h2>", "").replace("</h2>", "").replace(">", "&gt;")
+                    .replace("<", "&lt;")
             content =
                 content.replace(
                     matchResult.value,
