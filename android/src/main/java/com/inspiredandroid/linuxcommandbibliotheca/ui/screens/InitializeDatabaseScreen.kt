@@ -10,6 +10,7 @@ import androidx.compose.material.LinearProgressIndicator
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -27,7 +28,7 @@ import kotlinx.coroutines.withContext
 @Composable
 fun InitializeDatabaseScreen(onFinish: () -> Unit = {}) {
     val status = remember {
-        mutableStateOf(0)
+        mutableIntStateOf(0)
     }
     val coroutineScope = rememberCoroutineScope()
     val context = LocalContext.current
@@ -43,7 +44,7 @@ fun InitializeDatabaseScreen(onFinish: () -> Unit = {}) {
             )
             Text("Initialize database", modifier = Modifier.align(Alignment.CenterHorizontally))
             LinearProgressIndicator(
-                progress = status.value.div(100f),
+                progress = status.intValue.div(100f),
                 modifier = Modifier.padding(top = 16.dp)
             )
         }
@@ -52,7 +53,7 @@ fun InitializeDatabaseScreen(onFinish: () -> Unit = {}) {
     LaunchedEffect(Unit) {
         coroutineScope.launch(Dispatchers.IO) {
             copyDatabase(context) {
-                status.value = it
+                status.intValue = it
             }
             withContext(Dispatchers.Main) {
                 onFinish()
