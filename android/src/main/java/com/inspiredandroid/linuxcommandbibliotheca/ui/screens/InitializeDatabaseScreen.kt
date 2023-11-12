@@ -1,7 +1,7 @@
 package com.inspiredandroid.linuxcommandbibliotheca.ui.screens
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -11,7 +11,6 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.mutableIntStateOf
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
@@ -33,21 +32,23 @@ fun InitializeDatabaseScreen(onFinish: () -> Unit = {}) {
     val coroutineScope = rememberCoroutineScope()
     val context = LocalContext.current
 
-    Box(modifier = Modifier.fillMaxSize()) {
-        Column(modifier = Modifier.align(Alignment.Center)) {
-            Image(
-                painterResource(R.mipmap.ic_launcher_foreground),
-                contentDescription = null,
-                modifier = Modifier
-                    .size(240.dp)
-                    .align(Alignment.CenterHorizontally)
-            )
-            Text("Initialize database", modifier = Modifier.align(Alignment.CenterHorizontally))
-            LinearProgressIndicator(
-                progress = status.intValue.div(100f),
-                modifier = Modifier.padding(top = 16.dp)
-            )
-        }
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Image(
+            painterResource(R.mipmap.ic_launcher_foreground),
+            contentDescription = null,
+            modifier = Modifier
+                .size(240.dp)
+                .align(Alignment.CenterHorizontally)
+        )
+        Text("Initialize database", modifier = Modifier.align(Alignment.CenterHorizontally))
+        LinearProgressIndicator(
+            progress = status.intValue.div(100f),
+            modifier = Modifier.padding(top = 16.dp)
+        )
     }
 
     LaunchedEffect(Unit) {
