@@ -190,7 +190,7 @@ sealed class Screen(
     @StringRes val resourceId: Int,
     @DrawableRes val drawableRes: Int
 ) {
-    object Commands : Screen("commands", R.string.commands, R.drawable.ic_search_40dp)
-    object Basics : Screen("basics", R.string.basics, R.drawable.ic_puzzle)
-    object Tips : Screen("tips", R.string.tips, R.drawable.ic_idea)
+    data object Commands : Screen("commands", R.string.commands, R.drawable.ic_search_40dp)
+    data object Basics : Screen("basics", R.string.basics, R.drawable.ic_puzzle)
+    data object Tips : Screen("tips", R.string.tips, R.drawable.ic_idea)
 }

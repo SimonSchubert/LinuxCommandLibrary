@@ -2,12 +2,12 @@
 
 package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.tips
 
-import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.staggeredgrid.LazyVerticalStaggeredGrid
 import androidx.compose.foundation.lazy.staggeredgrid.StaggeredGridCells
+import androidx.compose.foundation.lazy.staggeredgrid.items
 import androidx.compose.material.Card
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Text
@@ -35,19 +35,16 @@ import org.koin.androidx.compose.getViewModel
  * limitations under the License.
 */
 
-@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun TipsScreen(onNavigate: (String) -> Unit = {}, viewModel: TipsViewModel = getViewModel()) {
 
     LazyVerticalStaggeredGrid(
         columns = StaggeredGridCells.Adaptive(minSize = 300.dp),
     ) {
-
-        items(count = viewModel.tips.size,
-            key = { viewModel.tips[it].tip.id }
-        ) {
-            val tip = viewModel.tips[it]
-
+        items(
+            items = viewModel.tips,
+            key = { it.tip.id }
+        ) { tip ->
             Card(
                 elevation = 4.dp, modifier = Modifier
                     .padding(4.dp)

@@ -17,7 +17,7 @@ kotlin {
             dependencies {
                 implementation(project(":common"))
                 implementation("org.jetbrains.kotlinx:kotlinx-html-jvm:0.9.1")
-                implementation("org.json:json:20230618")
+                implementation("org.json:json:20231013")
             }
         }
         val jvmTest by getting
