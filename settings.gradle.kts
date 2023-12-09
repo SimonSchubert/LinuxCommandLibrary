@@ -4,8 +4,11 @@ pluginManagement {
         gradlePluginPortal()
         mavenCentral()
     }
+    plugins {
+        kotlin("multiplatform") version "1.9.21"
+    }
 }
 rootProject.name = "Linux Command Library"
 
 
-include(":android", ":desktop", ":common", ":cli")
+include(":android", ":common", ":desktop", ":cli")

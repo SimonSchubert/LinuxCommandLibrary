@@ -1,5 +1,3 @@
-// import org.jetbrains.compose.compose
-
 repositories {
     google()
 }
@@ -15,37 +13,29 @@ version = "1.0"
 
 kotlin {
     androidTarget()
-    jvm("desktop") {
-        compilations.all {
-            kotlinOptions.jvmTarget = "17"
-        }
-    }
-    sourceSets {
-        val commonMain by getting {
-            dependencies {
+    jvm()
 
-                // implementation("androidx.compose.runtime:runtime:1.4.4")
+    sourceSets {
+        commonMain {
+            dependencies {
+                implementation("com.squareup.sqldelight:runtime:1.5.5")
             }
         }
-        val commonTest by getting {
+        commonTest {
             dependencies {
                 implementation(kotlin("test"))
             }
         }
-        val androidMain by getting {
+        androidMain {
             dependencies {
-                api("androidx.appcompat:appcompat:1.6.1")
-                api("androidx.core:core-ktx:1.12.0")
                 implementation("com.squareup.sqldelight:android-driver:1.5.5")
             }
         }
-        val desktopMain by getting {
+        jvmMain {
             dependencies {
                 implementation("com.squareup.sqldelight:sqlite-driver:1.5.5")
             }
-            resources.setSrcDirs(listOf("../assets", "../cli/src/jvmMain/resources"))
         }
-        val desktopTest by getting
     }
 }
 

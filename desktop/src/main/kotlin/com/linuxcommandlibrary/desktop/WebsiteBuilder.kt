@@ -886,13 +886,13 @@ class WebsiteBuilder {
         if (showAd) {
             div {
                 style = "text-align: center;"
-                a("https://coindodo.io/digitalocean") {
+                a("https://coindodo.io/stge") {
                     target = ATarget.blank
                     img {
                         style = "max-width: calc(100% - 4px);"
-                        src = "/images/af/digitalocean.webp"
+                        src = "/images/af/stge.webp"
                         attributes["loading"] = "lazy"
-                        width = "480"
+                        width = "800"
                     }
                 }
             }
@@ -956,19 +956,6 @@ class WebsiteBuilder {
                         img {
                             src = "/images/project-coindodo.webp"
                             alt = "coindodo.io"
-                            width = "30"
-                            height = "30"
-                        }
-                    }
-                }
-                div {
-                    classes = setOf("project")
-                    a("https://whatch.online") {
-                        target = ATarget.blank
-                        rel = "noopener"
-                        img {
-                            src = "/images/project-whatch.webp"
-                            alt = "whatch.online"
                             width = "30"
                             height = "30"
                         }

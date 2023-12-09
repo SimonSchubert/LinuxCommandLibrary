@@ -1,4 +1,4 @@
-package com.linuxcommandlibrary.desktop
+package com.linuxcommandlibrary.cli
 
 import com.linuxcommandlibrary.shared.databaseHelper
 import com.linuxcommandlibrary.shared.getCurrentVersion
