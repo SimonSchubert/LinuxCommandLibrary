@@ -1,56 +1,39 @@
 plugins {
-    kotlin("multiplatform")
-    application
+    kotlin("jvm")
 }
 
 group = "com.linuxcommandlibrary"
 version = parent!!.version
 
+dependencies {
+    implementation(project(":common"))
+    implementation("com.squareup.sqldelight:sqlite-driver:1.5.5")
+}
+
 kotlin {
-    jvm {
-        compilations.all {
-            kotlinOptions.jvmTarget = "17"
-        }
-        withJava()
-        compilations {
-            val main = getByName("main")
-            tasks {
-                register<Jar>("buildJar") {
-                    group = "application"
-                    dependsOn(build)
-
-                    destinationDirectory.set(file("$projectDir/out"))
-                    archiveFileName.set("linuxcommandlibrary.jar")
-
-                    duplicatesStrategy = DuplicatesStrategy.INCLUDE
-                    exclude("META-INF/*.RSA", "META-INF/*.SF","META-INF/*.DSA")
-
-                    manifest {
-                        attributes["Main-Class"] = "com.linuxcommandlibrary.desktop.ConsoleApplicationKt"
-                    }
-                    from(configurations.getByName("runtimeClasspath").map { if (it.isDirectory) it else zipTree(it) }, main.output.classesDirs)
-                    archiveBaseName.set("${project.name}-fat2")
-                }
-            }
+    compilerOptions {
+        sourceSets["main"].apply {
+            resources.srcDirs("../assets")
         }
     }
+}
 
-    sourceSets {
-        val jvmMain by getting {
-            dependencies {
-                implementation(project(":common"))
-            }
-        }
-        val jvmTest by getting
+val createJar = tasks.register("createJar", Jar::class) {
+    archiveBaseName.set("MyApplication")
+    from(sourceSets["main"].output)
+
+    archiveFileName.set("linuxcommandlibrary.jar")
+    manifest {
+        attributes["Main-Class"] = "com.linuxcommandlibrary.cli.ConsoleApplicationKt"
     }
+    from(configurations.getByName("runtimeClasspath").map { if (it.isDirectory) it else zipTree(it) })
+
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+    exclude("META-INF/*.RSA", "META-INF/*.SF","META-INF/*.DSA")
 }
 
 tasks.processResources {
     val contents = "version=${version}"
-    val file = File("cli/src/jvmMain/resources", "application.properties")
+    val file = File("cli/src/main/resources", "application.properties")
     file.writeText(contents)
-}
-
-application {
-    mainClass.set("ConsoleApplicationKt")
 }
