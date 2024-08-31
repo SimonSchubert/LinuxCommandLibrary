@@ -27,6 +27,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
+import com.inspiredandroid.linuxcommandbibliotheca.BuildConfig
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.ui.theme.LinuxTheme
 
@@ -76,6 +77,11 @@ fun AppInfoDialog(showDialog: MutableState<Boolean>) {
                             )
                         }
                     }
+                    Text(
+                        "Version: ${BuildConfig.VERSION_NAME}",
+                        style = MaterialTheme.typography.caption,
+                        modifier = Modifier.padding(8.dp),
+                    )
                     Column(
                         modifier = Modifier
                             .padding(8.dp)
