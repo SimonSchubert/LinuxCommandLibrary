@@ -20,7 +20,7 @@ jobs:
       - name: Set execution flag for gradlew
         run: chmod +x gradlew
       - name: Run common unit tests
-        run: bash ./gradlew :common:cleanDesktopTest :common:desktopTest
+        run: bash ./gradlew :common:cleanTestDebugUnitTest :common:testDebugUnitTest
       - name: Build Release AAB
         id: buildRelease
         run: ./gradlew bundleRelease
