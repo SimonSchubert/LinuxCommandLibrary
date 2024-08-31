@@ -38,7 +38,7 @@ android {
         applicationId = "com.inspiredandroid.linuxcommandbibliotheca"
         minSdk = 24
         targetSdk = 34
-        versionCode = 85
+        versionCode = 86
         versionName = project.version.toString()
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
