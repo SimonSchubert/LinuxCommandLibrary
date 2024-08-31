@@ -35,7 +35,7 @@ fun NestedText(textLeft: String, textRight: String) {
             textLeft,
             fontWeight = FontWeight.Bold,
             modifier = Modifier.width(40.dp),
-            textAlign = TextAlign.Center
+            textAlign = TextAlign.Center,
         )
         Text(textRight, modifier = Modifier.padding(8.dp))
     }

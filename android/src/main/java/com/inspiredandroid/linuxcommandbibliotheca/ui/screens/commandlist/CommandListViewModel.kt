@@ -29,15 +29,17 @@ class CommandListViewModel(val preferenceUtil: PreferenceUtil) : ViewModel() {
 
     fun filterCommands(searchText: String) {
         filteredCommands.clear()
-        filteredCommands.addAll(if (searchText.isEmpty()) {
-            if (preferenceUtil.bookmarksIds.isNotEmpty()) {
-                commands.sortedBy { !hasBookmark(it.id) }
+        filteredCommands.addAll(
+            if (searchText.isEmpty()) {
+                if (preferenceUtil.bookmarksIds.isNotEmpty()) {
+                    commands.sortedBy { !hasBookmark(it.id) }
+                } else {
+                    commands
+                }
             } else {
-                commands
-            }
-        } else {
-            commands.search(searchText)
-        })
+                commands.search(searchText)
+            },
+        )
     }
 
     fun hasBookmark(id: Long): Boolean {

@@ -46,7 +46,7 @@ fun HighlightedText(text: String, pattern: String) {
         text = annotatedString,
         maxLines = 1,
         softWrap = false,
-        overflow = TextOverflow.Ellipsis
+        overflow = TextOverflow.Ellipsis,
     )
 }
 
@@ -56,7 +56,7 @@ fun HighlightedTextPreview() {
     LinuxTheme {
         HighlightedText(
             text = "pacman",
-            pattern = "cm"
+            pattern = "cm",
         )
     }
 }

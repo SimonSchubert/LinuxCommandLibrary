@@ -6,8 +6,8 @@ import com.linuxcommandlibrary.shared.initDatabase
 import com.linuxcommandlibrary.shared.search
 import kotlin.system.exitProcess
 
-const val bold = "\u001b[1m"
-const val reset = "\u001b[0m"
+const val BOLD = "\u001b[1m"
+const val RESET = "\u001b[0m"
 
 fun main() {
     initDatabase()
@@ -83,11 +83,11 @@ fun showCommand(name: String) {
     val commandId = databaseHelper.getCommand(name)?.id ?: return
 
     databaseHelper.getSections(commandId).forEach {
-        println(bold + it.title + reset)
+        println(BOLD + it.title + RESET)
 
         println(
-            it.content.replace("<br>", "\n").replace("<b>", bold).replace("</b>", reset)
-                .replace(Regex("s/<(.*?)>//g"), "").replace("&nbsp;", "").replace("&amp;", "")
+            it.content.replace("<br>", "\n").replace("<b>", BOLD).replace("</b>", RESET)
+                .replace(Regex("s/<(.*?)>//g"), "").replace("&nbsp;", "").replace("&amp;", ""),
         )
         println()
     }
@@ -121,7 +121,7 @@ fun showBasicCategories() {
 
 fun showBasicGroups(id: Long) {
     databaseHelper.getBasicGroups(id).forEach { group ->
-        println("$bold${group.description}$reset")
+        println("$BOLD${group.description}$RESET")
         databaseHelper.getBasicCommands(group.id).forEach { command ->
             println("- " + command.command)
         }
@@ -181,7 +181,7 @@ fun showTipsDetail(id: Long) {
 }
 
 fun printTipData(data: String) {
-    println(data.replace("\\n", "").replace("<b>", bold).replace("</b>", reset))
+    println(data.replace("\\n", "").replace("<b>", BOLD).replace("</b>", RESET))
 }
 
 fun readNumber(): Int {

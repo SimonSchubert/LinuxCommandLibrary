@@ -12,6 +12,7 @@ import androidx.compose.material.Text
 import androidx.compose.material.TextFieldDefaults
 import androidx.compose.material.TopAppBar
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Info
@@ -61,7 +62,7 @@ import org.koin.java.KoinJavaComponent.inject
 fun TopBar(
     navBackStackEntry: State<NavBackStackEntry?>,
     textFieldValue: MutableState<TextFieldValue>,
-    onNavigateBack: () -> Unit = {}
+    onNavigateBack: () -> Unit = {},
 ) {
     val focusRequester = remember { FocusRequester() }
     val bookmarkManager = remember {
@@ -73,10 +74,13 @@ fun TopBar(
     if (route == "commands") {
         val showSearch = remember { mutableStateOf(true) }
 
-        TopAppBar(title = {
-            Text("Commands",
-                modifier = Modifier.semantics { contentDescription = "TopAppBarTitle" })
-        },
+        TopAppBar(
+            title = {
+                Text(
+                    "Commands",
+                    modifier = Modifier.semantics { contentDescription = "TopAppBarTitle" },
+                )
+            },
             backgroundColor = MaterialTheme.colors.primary,
             contentColor = Color.White,
             navigationIcon = if (showSearch.value) {
@@ -86,15 +90,16 @@ fun TopBar(
                         showSearch.value = false
                     }) {
                         Icon(
-                            imageVector = Icons.Filled.ArrowBack,
+                            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                             modifier = Modifier,
-                            contentDescription = stringResource(id = R.string.back)
+                            contentDescription = stringResource(id = R.string.back),
                         )
                     }
                 }
             } else {
                 null
-            }, actions = {
+            },
+            actions = {
                 if (showSearch.value) {
                     OutlinedTextField(
                         modifier = Modifier
@@ -112,7 +117,7 @@ fun TopBar(
                             focusedIndicatorColor = Color.Transparent,
                             unfocusedIndicatorColor = Color.Transparent,
                             backgroundColor = Color.Transparent,
-                            cursorColor = LocalContentColor.current.copy(alpha = LocalContentAlpha.current)
+                            cursorColor = LocalContentColor.current.copy(alpha = LocalContentAlpha.current),
                         ),
                         trailingIcon = {
                             IconButton(onClick = {
@@ -124,12 +129,12 @@ fun TopBar(
                             }) {
                                 Icon(
                                     imageVector = Icons.Filled.Close,
-                                    contentDescription = stringResource(id = R.string.reset)
+                                    contentDescription = stringResource(id = R.string.reset),
                                 )
                             }
                         },
                         maxLines = 1,
-                        singleLine = true
+                        singleLine = true,
                     )
                 } else {
                     IconButton(onClick = {
@@ -137,11 +142,12 @@ fun TopBar(
                     }) {
                         Icon(
                             imageVector = Icons.Filled.Search,
-                            contentDescription = stringResource(R.string.search)
+                            contentDescription = stringResource(R.string.search),
                         )
                     }
                 }
-            })
+            },
+        )
         if (showSearch.value) {
             LaunchedEffect(Unit) {
                 focusRequester.requestFocus()
@@ -162,7 +168,8 @@ fun TopBar(
                 Text(
                     getTitleByRoute(navBackStackEntry.value),
                     overflow = TextOverflow.Ellipsis,
-                    modifier = Modifier.semantics { contentDescription = "TopAppBarTitle" })
+                    modifier = Modifier.semantics { contentDescription = "TopAppBarTitle" },
+                )
             },
             backgroundColor = MaterialTheme.colors.primary,
             contentColor = Color.White,
@@ -170,8 +177,8 @@ fun TopBar(
                 {
                     IconButton(onClick = { onNavigateBack() }) {
                         Icon(
-                            imageVector = Icons.Filled.ArrowBack,
-                            contentDescription = stringResource(R.string.back)
+                            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                            contentDescription = stringResource(R.string.back),
                         )
                     }
                 }
@@ -185,7 +192,7 @@ fun TopBar(
                     }) {
                         Icon(
                             imageVector = Icons.Filled.Info,
-                            contentDescription = stringResource(R.string.info)
+                            contentDescription = stringResource(R.string.info),
                         )
                     }
                 }
@@ -197,8 +204,8 @@ fun TopBar(
                         val isBookmarked = remember {
                             mutableStateOf(
                                 bookmarkManager.hasBookmark(
-                                    command.id
-                                )
+                                    command.id,
+                                ),
                             )
                         }
                         IconButton(onClick = {
@@ -220,12 +227,12 @@ fun TopBar(
                                     stringResource(R.string.bookmarked)
                                 } else {
                                     stringResource(R.string.bookmark)
-                                }
+                                },
                             )
                         }
                     }
                 }
-            }
+            },
         )
 
         BookmarkFeedbackDialog(showBookmarkToast)
@@ -233,7 +240,6 @@ fun TopBar(
         AppInfoDialog(showDialog)
     }
 }
-
 
 @Composable
 private fun getTitleByRoute(backStackEntry: NavBackStackEntry?): String {

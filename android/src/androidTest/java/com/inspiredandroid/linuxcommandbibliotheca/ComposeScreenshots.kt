@@ -22,7 +22,6 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import java.io.FileOutputStream
 
-
 /**
  * Take screenshots of Phone and Tablet.
  * Phone = Pixel 2 1080x1920

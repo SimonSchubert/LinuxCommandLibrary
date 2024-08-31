@@ -35,19 +35,19 @@ fun InitializeDatabaseScreen(onFinish: () -> Unit = {}) {
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
+        horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Image(
             painterResource(R.mipmap.ic_launcher_foreground),
             contentDescription = null,
             modifier = Modifier
                 .size(240.dp)
-                .align(Alignment.CenterHorizontally)
+                .align(Alignment.CenterHorizontally),
         )
         Text("Initialize database", modifier = Modifier.align(Alignment.CenterHorizontally))
         LinearProgressIndicator(
             progress = status.intValue.div(100f),
-            modifier = Modifier.padding(top = 16.dp)
+            modifier = Modifier.padding(top = 16.dp),
         )
     }
 

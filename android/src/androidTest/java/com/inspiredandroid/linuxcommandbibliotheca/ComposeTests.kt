@@ -13,7 +13,6 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
-
 /**
  * Test for navigation, search and booksmarks. More tests to come
  */
@@ -112,5 +111,4 @@ class ComposeTests {
         // Check if commands of group expanded and therefore share icon(s) are visible
         composeTestRule.onAllNodesWithContentDescription("Share").assertAny(isEnabled())
     }
-
 }

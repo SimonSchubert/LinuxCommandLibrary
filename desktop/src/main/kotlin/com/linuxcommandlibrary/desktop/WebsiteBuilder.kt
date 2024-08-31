@@ -127,7 +127,7 @@ class WebsiteBuilder {
                     title = title,
                     description = "Handy cheat sheets with linux tips, terminal basics and thousands of man pages.",
                     url = "https://linuxcommandlibrary.com",
-                    keywords = "linux,cmd,tips,man,commands"
+                    keywords = "linux,cmd,tips,man,commands",
                 )
 
                 styleLink("/stylesheets/main.css?v=$cacheVersion")
@@ -207,9 +207,9 @@ class WebsiteBuilder {
                     url = "https://linuxcommandlibrary.com/${folder.name}/${file.nameWithoutExtension}",
                     keywords = "linux,cmd,basics,terminal,console,cheat sheets,tips,${
                         basicCategories.joinToString(
-                            ","
+                            ",",
                         ) { it.title }
-                    }"
+                    }",
                 )
 
                 styleLink("/stylesheets/main.css?v=$cacheVersion")
@@ -271,7 +271,7 @@ class WebsiteBuilder {
                         title = title,
                         description = category.getDescription(),
                         url = "https://linuxcommandlibrary.com/${folder.name}/${file.nameWithoutExtension}",
-                        keywords = getKeywordsForBasic(category)
+                        keywords = getKeywordsForBasic(category),
                     )
 
                     styleLink("/stylesheets/main.css?v=$cacheVersion")
@@ -303,7 +303,7 @@ class WebsiteBuilder {
                                 acceptedAnswerJson.put("@type", "Answer")
                                 acceptedAnswerJson.put(
                                     "text",
-                                    databaseHelper.getBasicCommands(group.id).first().command
+                                    databaseHelper.getBasicCommands(group.id).first().command,
                                 )
                                 answerJson.put("acceptedAnswer", acceptedAnswerJson)
                                 answerArray.put(answerJson)
@@ -335,7 +335,7 @@ class WebsiteBuilder {
                                             "VIM",
                                             "Emacs",
                                             "Nano",
-                                            "Pico"
+                                            "Pico",
                                         ).contains(category.title)
                                     ) {
                                         table {
@@ -351,18 +351,18 @@ class WebsiteBuilder {
                                         }
                                     } else if (listOf(
                                             "Terminal games",
-                                            "Fun"
+                                            "Fun",
                                         ).contains(category.title)
                                     ) {
                                         code(
                                             "$ ${command.command.replace("\\n", "<br>")}",
                                             command.mans,
-                                            true
+                                            true,
                                         )
                                     } else {
                                         code(
                                             "$ ${command.command.replace("\\n", "<br>")}",
-                                            command.mans
+                                            command.mans,
                                         )
                                     }
                                 }
@@ -398,7 +398,7 @@ class WebsiteBuilder {
                     title = title,
                     description = "Handy cheat sheets with linux tips and terminal basics.",
                     url = "https://linuxcommandlibrary.com/${file.nameWithoutExtension}",
-                    keywords = "linux,cmd,useful,terminal,tips,cheat"
+                    keywords = "linux,cmd,useful,terminal,tips,cheat",
                 )
 
                 styleLink("/stylesheets/main.css?v=$cacheVersion")
@@ -530,7 +530,7 @@ class WebsiteBuilder {
                         title = title,
                         description = "${command.name} linux command man page: ${command.description}",
                         url = "https://linuxcommandlibrary.com/${folder.name}/${file.nameWithoutExtension}",
-                        keywords = "linux,man,page,command,manual,${command.name}"
+                        keywords = "linux,man,page,command,manual,${command.name}",
                     )
 
                     styleLink("/stylesheets/main.css?v=$cacheVersion")
@@ -662,7 +662,7 @@ class WebsiteBuilder {
         return text.getCommandList(
             mans,
             hasBrackets = true,
-            checkExisting = true
+            checkExisting = true,
         )
     }
 
@@ -693,7 +693,7 @@ class WebsiteBuilder {
                     title = title,
                     description = "Handy cheat sheets with linux tips, terminal basics and thousands of man pages.",
                     url = "https://linuxcommandlibrary.com",
-                    keywords = "linux,cmd,tips,man,commands"
+                    keywords = "linux,cmd,tips,man,commands",
                 )
 
                 styleLink("/stylesheets/main.css?v=$cacheVersion")
@@ -727,7 +727,7 @@ class WebsiteBuilder {
         title: String,
         href: String,
         index: Int,
-        selectedIndex: Int
+        selectedIndex: Int,
     ): FlowContent {
         li {
             a(href) {
@@ -827,8 +827,8 @@ class WebsiteBuilder {
 
     private fun getSitemapUrlNode(urlPart: String): String {
         return "<url>" +
-                "<loc>https://linuxcommandlibrary.com/$urlPart</loc>" +
-                "</url>"
+            "<loc>https://linuxcommandlibrary.com/$urlPart</loc>" +
+            "</url>"
     }
 
     private fun HEAD.commonMeta() {
@@ -846,7 +846,7 @@ class WebsiteBuilder {
         title: String,
         description: String,
         url: String,
-        keywords: String
+        keywords: String,
     ) {
         title(title)
 
@@ -867,7 +867,7 @@ class WebsiteBuilder {
         meta(property = "twitter:description", content = description)
         meta(
             property = "twitter:image",
-            content = "https://linuxcommandlibrary.com/images/preview.jpg"
+            content = "https://linuxcommandlibrary.com/images/preview.jpg",
         )
     }
 
@@ -876,10 +876,10 @@ class WebsiteBuilder {
         rel: String? = null,
         type: String? = null,
         sizes: String?,
-        crossinline block: LINK.() -> Unit = {}
+        crossinline block: LINK.() -> Unit = {},
     ): Unit = LINK(
         attributesMapOf("href", href, "rel", rel, "type", type, "sizes", sizes),
-        consumer
+        consumer,
     ).visit(block)
 
     private fun FlowContent.footer(showAd: Boolean = true): FlowContent {
@@ -979,7 +979,7 @@ class WebsiteBuilder {
     private fun FlowContent.code(
         command: String,
         mans: String,
-        isMonospace: Boolean = false
+        isMonospace: Boolean = false,
     ): FlowContent {
         div {
             classes = setOf("code-wrapper")
@@ -1027,14 +1027,13 @@ class WebsiteBuilder {
             div {
                 if (isMonospace) {
                     onClick =
-                        "javascript:copy('${mans}')"
+                        "javascript:copy('$mans')"
                 } else {
                     onClick =
                         "javascript:copy('${
                             command.split("<br>").first().drop(2).replace("'", "&#039;")
                                 .replace("\n", "").trim()
                         }')"
-
                 }
                 classes = setOf("copy-button")
                 img {
@@ -1055,7 +1054,7 @@ class WebsiteBuilder {
         content: String? = null,
         charset: String? = null,
         httpEquiv: String? = null,
-        crossinline block: META.() -> Unit = {}
+        crossinline block: META.() -> Unit = {},
     ): Unit = META(
         attributesMapOf(
             "property",
@@ -1067,9 +1066,9 @@ class WebsiteBuilder {
             "charset",
             charset,
             "http-equiv",
-            httpEquiv
+            httpEquiv,
         ),
-        consumer
+        consumer,
     ).visit(block)
 
     private fun BasicCategory.getIconResource(): String {
@@ -1165,7 +1164,7 @@ class WebsiteBuilder {
                 .replace("\"", "&quot;")
             content = content.replace(
                 it.value,
-                "<div class=\"code-wrapper\"><span class=\"code\">$ $command</span><div onclick=\"javascript:copy('${command}')\" class=\"copy-button\"><img alt=\"copy\" src=\"/images/icon-copy.svg\" width=\"24\" height=\"24\"></div></div>"
+                "<div class=\"code-wrapper\"><span class=\"code\">$ $command</span><div onclick=\"javascript:copy('$command')\" class=\"copy-button\"><img alt=\"copy\" src=\"/images/icon-copy.svg\" width=\"24\" height=\"24\"></div></div>",
             )
         }
 
@@ -1177,11 +1176,10 @@ class WebsiteBuilder {
             content =
                 content.replace(
                     matchResult.value,
-                    "<h3><a id=\"tldr$index\" href=\"/man/$fileName#tldr$index\">$text</a></h3>"
+                    "<h3><a id=\"tldr$index\" href=\"/man/$fileName#tldr$index\">$text</a></h3>",
                 )
         }
 
         return content
     }
-
 }

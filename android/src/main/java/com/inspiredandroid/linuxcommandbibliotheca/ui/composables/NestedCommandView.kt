@@ -33,19 +33,19 @@ fun NestedCommandView(
     text: String,
     command: String,
     commandElements: List<CommandElement>,
-    onNavigate: (String) -> Unit
+    onNavigate: (String) -> Unit,
 ) {
     Row(verticalAlignment = Alignment.CenterVertically) {
         Text(
             text,
             fontWeight = FontWeight.Bold,
             modifier = Modifier.width(40.dp),
-            textAlign = TextAlign.Center
+            textAlign = TextAlign.Center,
         )
         CommandView(
             command,
             commandElements,
-            onNavigate
+            onNavigate,
         )
     }
 }
@@ -60,8 +60,9 @@ fun NestedCommandViewPreview() {
             commandElements = listOf(
                 CommandElement.Text("$ "),
                 CommandElement.Man("find"),
-                CommandElement.Text(" ex?mple.txt")
+                CommandElement.Text(" ex?mple.txt"),
             ),
-            onNavigate = {})
+            onNavigate = {},
+        )
     }
 }

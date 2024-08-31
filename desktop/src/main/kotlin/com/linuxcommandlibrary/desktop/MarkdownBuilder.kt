@@ -66,15 +66,19 @@ class MarkdownBuilder {
         stream.appendLine()
         stream.appendLine("#### Categories")
         stream.appendLine()
-        stream.appendLine(databaseHelper.getBasics().joinToString { category ->
-            category.title
-        })
+        stream.appendLine(
+            databaseHelper.getBasics().joinToString { category ->
+                category.title
+            },
+        )
         stream.appendLine()
         stream.appendLine("#### Tips")
         stream.appendLine()
-        stream.appendLine(databaseHelper.getTips().joinToString { tip ->
-            tip.title
-        })
+        stream.appendLine(
+            databaseHelper.getTips().joinToString { tip ->
+                tip.title
+            },
+        )
 
         stream.appendLine()
         stream.appendLine("### CI/CD")
@@ -105,7 +109,6 @@ class MarkdownBuilder {
         stream.appendLine("https://icons8.com - Icons")
         stream.appendLine()
         stream.appendLine("https://tldr.sh - TLDR")
-
 
         stream.close()
     }

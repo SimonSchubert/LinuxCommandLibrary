@@ -1,4 +1,3 @@
 package com.linuxcommandlibrary.shared
 
-class EmptyClass {
-}
+class EmptyClass
