@@ -3,6 +3,7 @@ import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 plugins {
     id("com.github.ben-manes.versions") version "0.50.0"
     alias(libs.plugins.compose.compiler) apply false
+    alias(libs.plugins.spotless)
 }
 
 buildscript {
@@ -31,6 +32,25 @@ allprojects {
 tasks.withType<DependencyUpdatesTask> {
     rejectVersionIf {
         isNonStable(candidate.version)
+    }
+}
+
+configure<com.diffplug.gradle.spotless.SpotlessExtension> {
+    kotlin {
+        target("**/*.kt")
+        ktlint()
+            .editorConfigOverride(
+                mapOf(
+                    "ktlint_standard_no-wildcard-imports" to "disabled",
+                    "ktlint_standard_package-name" to "disabled",
+                    "ktlint_standard_function-naming" to "disabled",
+                    "ktlint_standard_discouraged-comment-location" to "disabled",
+                ),
+            )
+    }
+    kotlinGradle {
+        target("**/*.gradle.kts")
+        ktlint()
     }
 }
 

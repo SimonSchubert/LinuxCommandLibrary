@@ -45,13 +45,12 @@ import databases.CommandSection
 @Composable
 fun CommandDetailScreen(
     onNavigate: (String) -> Unit = {},
-    viewModel: CommandDetailViewModel
+    viewModel: CommandDetailViewModel,
 ) {
-
     LazyColumn(Modifier.fillMaxSize()) {
         items(
             items = viewModel.sections,
-            key = { it.id }
+            key = { it.id },
         ) { section ->
             CommandSectionColumn(viewModel, section, onNavigate)
         }
@@ -62,25 +61,26 @@ fun CommandDetailScreen(
 fun CommandSectionColumn(
     viewModel: CommandDetailViewModel,
     section: CommandSection,
-    onNavigate: (String) -> Unit = {}
+    onNavigate: (String) -> Unit = {},
 ) {
-    ListItem(text = {
-        Text(
-            section.title.uppercase(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 20.sp
-        )
-    },
+    ListItem(
+        text = {
+            Text(
+                section.title.uppercase(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 20.sp,
+            )
+        },
         modifier = Modifier.clickable {
             viewModel.toggleCollapse(section.id)
-        })
+        },
+    )
 
     if (viewModel.isGroupCollapsed(section.id)) {
         if (section.title == "TLDR") {
             Column(
-                modifier = Modifier.padding(start = 16.dp, end = 16.dp)
+                modifier = Modifier.padding(start = 16.dp, end = 16.dp),
             ) {
-
                 val tldrParts = section.content.split("<b>")
                 tldrParts.forEachIndexed { index, s ->
                     val split = s.split("</b><br>")
@@ -89,7 +89,7 @@ fun CommandSectionColumn(
                             text = split[0],
                             fontSize = 16.sp,
                             style = MaterialTheme.typography.subtitle1,
-                            fontWeight = FontWeight.Bold
+                            fontWeight = FontWeight.Bold,
                         )
 
                         val command = "$ " + split[1].replace("<br>", "").replace("`", "")

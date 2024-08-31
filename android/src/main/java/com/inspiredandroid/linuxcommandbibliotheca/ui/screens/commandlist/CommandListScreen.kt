@@ -41,7 +41,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.HighlightedTex
 fun CommandListScreen(
     searchText: String,
     viewModel: CommandListViewModel,
-    onNavigate: (String) -> Unit = {}
+    onNavigate: (String) -> Unit = {},
 ) {
     LaunchedEffect(searchText) {
         viewModel.filterCommands(searchText)
@@ -55,7 +55,8 @@ fun CommandListScreen(
         LazyColumn {
             items(
                 items = viewModel.filteredCommands,
-                key = { it.id }) { command ->
+                key = { it.id },
+            ) { command ->
                 ListItem(
                     text = {
                         if (searchText.isEmpty()) {
@@ -63,7 +64,7 @@ fun CommandListScreen(
                                 command.name,
                                 maxLines = 1,
                                 softWrap = false,
-                                overflow = TextOverflow.Ellipsis
+                                overflow = TextOverflow.Ellipsis,
                             )
                         } else {
                             HighlightedText(command.name, searchText)
@@ -73,7 +74,7 @@ fun CommandListScreen(
                         if (viewModel.hasBookmark(command.id)) {
                             Icon(
                                 painterResource(R.drawable.ic_bookmark_black_24dp),
-                                contentDescription = stringResource(R.string.bookmarked)
+                                contentDescription = stringResource(R.string.bookmarked),
                             )
                         }
                     },
@@ -83,7 +84,7 @@ fun CommandListScreen(
                                 command.description,
                                 maxLines = 1,
                                 softWrap = false,
-                                overflow = TextOverflow.Ellipsis
+                                overflow = TextOverflow.Ellipsis,
                             )
                         } else {
                             HighlightedText(command.description, searchText)
@@ -91,12 +92,12 @@ fun CommandListScreen(
                     },
                     modifier = Modifier.clickable {
                         onNavigate("command?commandId=${command.id}&commandName=${command.name}")
-                    })
+                    },
+                )
             }
         }
     }
 }
-
 
 @Preview
 @Composable

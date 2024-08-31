@@ -18,7 +18,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.inspiredandroid.linuxcommandbibliotheca.getIconResource
 import com.linuxcommandlibrary.shared.getHtmlFileName
-import org.koin.androidx.compose.getViewModel
+import org.koin.androidx.compose.koinViewModel
 
 /* Copyright 2022 Simon Schubert
  *
@@ -38,16 +38,15 @@ import org.koin.androidx.compose.getViewModel
 @Composable
 fun BasicCategoriesScreen(
     onNavigate: (String) -> Unit = {},
-    viewModel: BasicCategoriesViewModel = getViewModel()
+    viewModel: BasicCategoriesViewModel = koinViewModel(),
 ) {
-
     LazyVerticalGrid(
         modifier = Modifier.fillMaxSize(),
-        columns = GridCells.Adaptive(minSize = 300.dp)
+        columns = GridCells.Adaptive(minSize = 300.dp),
     ) {
         items(
             items = viewModel.basicCategories,
-            key = { it.id }
+            key = { it.id },
         ) { basicCategory ->
             ListItem(
                 text = { Text(basicCategory.title) },
@@ -55,14 +54,15 @@ fun BasicCategoriesScreen(
                     Icon(
                         painterResource(basicCategory.getIconResource()),
                         contentDescription = null,
-                        modifier = Modifier.size(40.dp)
+                        modifier = Modifier.size(40.dp),
                     )
                 },
                 modifier = Modifier.clickable {
                     onNavigate(
-                        "basicgroups?categoryId=${basicCategory.id}&categoryName=${basicCategory.getHtmlFileName()}"
+                        "basicgroups?categoryId=${basicCategory.id}&categoryName=${basicCategory.getHtmlFileName()}",
                     )
-                })
+                },
+            )
         }
     }
 }

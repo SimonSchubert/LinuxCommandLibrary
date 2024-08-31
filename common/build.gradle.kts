@@ -18,7 +18,7 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                implementation("com.squareup.sqldelight:runtime:1.5.5")
+                implementation(libs.runtime)
             }
         }
         commonTest {

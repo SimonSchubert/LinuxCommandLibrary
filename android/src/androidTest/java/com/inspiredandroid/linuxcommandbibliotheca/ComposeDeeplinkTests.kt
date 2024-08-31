@@ -17,7 +17,6 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
-
 /**
  * Test if deeplinks from/to website open correct screens. If test started the first time
  * "Always open urls with app" dialog has to be accepted. Or the app has to be signed with the

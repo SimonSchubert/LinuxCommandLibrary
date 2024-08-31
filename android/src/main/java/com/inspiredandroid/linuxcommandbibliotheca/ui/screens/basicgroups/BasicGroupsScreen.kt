@@ -39,12 +39,12 @@ import databases.BasicGroup
 @Composable
 fun BasicGroupsScreen(
     onNavigate: (String) -> Unit = {},
-    viewModel: BasicGroupsViewModel
+    viewModel: BasicGroupsViewModel,
 ) {
-
     LazyColumn(Modifier.fillMaxSize()) {
-        items(items = viewModel.basicGroups,
-            key = { it.id }
+        items(
+            items = viewModel.basicGroups,
+            key = { it.id },
         ) { basicGroup ->
             BasicGroupColumn(viewModel, basicGroup, onNavigate)
         }
@@ -55,19 +55,21 @@ fun BasicGroupsScreen(
 fun BasicGroupColumn(
     viewModel: BasicGroupsViewModel,
     basicGroup: BasicGroup,
-    onNavigate: (String) -> Unit = {}
+    onNavigate: (String) -> Unit = {},
 ) {
-    ListItem(text = { Text(basicGroup.description) },
+    ListItem(
+        text = { Text(basicGroup.description) },
         icon = {
             Icon(
                 painterResource(basicGroup.getIconResource()),
                 contentDescription = null,
-                modifier = Modifier.size(40.dp)
+                modifier = Modifier.size(40.dp),
             )
         },
         modifier = Modifier.clickable {
             viewModel.toggleCollapse(basicGroup.id)
-        })
+        },
+    )
 
     if (viewModel.isGroupCollapsed(basicGroup.id)) {
         val commands = databaseHelper.getBasicCommands(basicGroup.id)
@@ -75,7 +77,7 @@ fun BasicGroupColumn(
             CommandView(
                 basicCommand.command,
                 basicCommand.command.getCommandList(basicCommand.mans),
-                onNavigate
+                onNavigate,
             )
         }
     }

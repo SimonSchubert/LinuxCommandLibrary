@@ -36,36 +36,36 @@ fun LinuxTheme(content: @Composable () -> Unit) {
     val darkColors = darkColors(
         primary = Color(0xFFe45151),
         secondary = Color.White,
-        background = Color(0xFF262626)
+        background = Color(0xFF262626),
     )
     val lightColors = lightColors(
         primary = Color(0xFFe45151),
-        secondary = Color.Black
+        secondary = Color.Black,
     )
     val colorSchema = if (darkMode) darkColors else lightColors
 
     val systemUiController = rememberSystemUiController()
     systemUiController.setSystemBarsColor(
-        color = Color(0xFFd34747)
+        color = Color(0xFFd34747),
     )
     val techMonoFont = FontFamily(
-        Font(R.font.share_tech_mono)
+        Font(R.font.share_tech_mono),
     )
 
     val codeTextStyle = TextStyle(
         fontFamily = techMonoFont,
         fontWeight = FontWeight.Normal,
         fontSize = 14.sp,
-        color = colorSchema.secondary
+        color = colorSchema.secondary,
     )
 
     val typography = Typography(
-        subtitle2 = codeTextStyle
+        subtitle2 = codeTextStyle,
     )
 
     MaterialTheme(
         colors = colorSchema,
         typography = typography,
-        content = content
+        content = content,
     )
 }

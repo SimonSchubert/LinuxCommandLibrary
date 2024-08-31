@@ -14,7 +14,7 @@ sealed class TipSectionElement {
     data class NestedCode(
         val text: String,
         val command: String,
-        val elements: List<CommandElement>
+        val elements: List<CommandElement>,
     ) : TipSectionElement()
 
     data class NestedText(val text: String, val info: String) : TipSectionElement()
@@ -29,39 +29,42 @@ class TipsViewModel : ViewModel() {
     init {
         val sections = databaseHelper.getTipSections()
         tips = databaseHelper.getTips().map { tip ->
-            MergedTip(tip, sections.filter { it.tip_id == tip.id }.map { section ->
-                when (section.type) {
-                    0L -> {
-                        val text =
-                            section.data1.replace("\\n", "").replace("<b>", "").replace("</b>", "")
-                                .replace("\\'", "")
-                        TipSectionElement.Text(text)
-                    }
+            MergedTip(
+                tip,
+                sections.filter { it.tip_id == tip.id }.map { section ->
+                    when (section.type) {
+                        0L -> {
+                            val text =
+                                section.data1.replace("\\n", "").replace("<b>", "").replace("</b>", "")
+                                    .replace("\\'", "")
+                            TipSectionElement.Text(text)
+                        }
 
-                    1L -> {
-                        TipSectionElement.Code(
-                            section.data1,
-                            section.data1.getCommandList(section.extra)
-                        )
-                    }
-
-                    3L -> {
-                        if (section.data2.startsWith("$")) {
-                            TipSectionElement.NestedCode(
+                        1L -> {
+                            TipSectionElement.Code(
                                 section.data1,
-                                section.data2,
-                                section.data2.getCommandList(section.extra)
+                                section.data1.getCommandList(section.extra),
                             )
-                        } else {
-                            TipSectionElement.NestedText(section.data1, section.data2)
+                        }
+
+                        3L -> {
+                            if (section.data2.startsWith("$")) {
+                                TipSectionElement.NestedCode(
+                                    section.data1,
+                                    section.data2,
+                                    section.data2.getCommandList(section.extra),
+                                )
+                            } else {
+                                TipSectionElement.NestedText(section.data1, section.data2)
+                            }
+                        }
+
+                        else -> {
+                            TipSectionElement.Text("")
                         }
                     }
-
-                    else -> {
-                        TipSectionElement.Text("")
-                    }
-                }
-            })
+                },
+            )
         }
     }
 }

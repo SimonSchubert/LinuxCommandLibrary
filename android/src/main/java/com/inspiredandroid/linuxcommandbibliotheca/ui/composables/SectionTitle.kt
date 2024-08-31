@@ -33,7 +33,7 @@ fun SectionTitle(modifier: Modifier = Modifier, title: String) {
         fontSize = 20.sp,
         style = MaterialTheme.typography.subtitle1,
         fontWeight = FontWeight.Bold,
-        modifier = modifier.padding(bottom = 4.dp)
+        modifier = modifier.padding(bottom = 4.dp),
     )
 }
 

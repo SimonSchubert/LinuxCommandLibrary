@@ -49,7 +49,7 @@ fun List<Command>.search(phrase: String): List<Command> {
 fun String.getCommandList(
     mans: String,
     hasBrackets: Boolean = false,
-    checkExisting: Boolean = false
+    checkExisting: Boolean = false,
 ): List<CommandElement> {
     var command = " $this"
     val list = mutableListOf<CommandElement>()

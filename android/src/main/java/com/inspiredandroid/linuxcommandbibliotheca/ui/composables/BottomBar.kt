@@ -37,7 +37,7 @@ fun BottomBar(navController: NavHostController) {
     val items = listOf(
         Screen.Basics,
         Screen.Tips,
-        Screen.Commands
+        Screen.Commands,
     )
     // TODO: read current route from navcontroller
     val selectedRoute = rememberSaveable { mutableStateOf(Screen.Basics.route) }
@@ -49,7 +49,7 @@ fun BottomBar(navController: NavHostController) {
                     Icon(
                         painterResource(id = screen.drawableRes),
                         null,
-                        modifier = Modifier.size(24.dp)
+                        modifier = Modifier.size(24.dp),
                     )
                 },
                 label = { Text(stringResource(screen.resourceId)) },
@@ -65,9 +65,8 @@ fun BottomBar(navController: NavHostController) {
                         launchSingleTop = true
                         restoreState = true
                     }
-                }
+                },
             )
         }
     }
 }
-

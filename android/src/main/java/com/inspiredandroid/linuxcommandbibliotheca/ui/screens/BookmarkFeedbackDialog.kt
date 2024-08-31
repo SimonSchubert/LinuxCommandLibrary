@@ -24,28 +24,24 @@ import kotlinx.coroutines.delay
 @Composable
 fun BookmarkFeedbackDialog(showDialog: MutableState<Boolean>) {
     if (showDialog.value) {
-
         LaunchedEffect(showDialog) {
             delay(600)
             showDialog.value = false
         }
 
         Dialog(onDismissRequest = { showDialog.value = false }) {
-
             Card(
                 elevation = 8.dp,
-                shape = RoundedCornerShape(6.dp)
+                shape = RoundedCornerShape(6.dp),
             ) {
-
                 Column(
                     horizontalAlignment = Alignment.CenterHorizontally,
-                    modifier = Modifier.padding(16.dp)
+                    modifier = Modifier.padding(16.dp),
                 ) {
-
                     Icon(
                         painterResource(R.drawable.ic_bookmark_black_24dp),
                         contentDescription = stringResource(R.string.bookmarked),
-                        modifier = Modifier.size(48.dp)
+                        modifier = Modifier.size(48.dp),
                     )
 
                     Spacer(Modifier.height(8.dp))

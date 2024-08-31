@@ -21,5 +21,4 @@ import com.linuxcommandlibrary.shared.databaseHelper
 class BasicCategoriesViewModel : ViewModel() {
 
     var basicCategories = databaseHelper.getBasics()
-
 }

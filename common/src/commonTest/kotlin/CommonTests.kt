@@ -52,7 +52,7 @@ class CommonTests {
             CommandSection(0L, "RANDOM", "", 0L),
             CommandSection(0L, "TLDR", "", 0L),
             CommandSection(0L, "AUTHOR", "", 0L),
-            CommandSection(0L, "SYNOPSIS", "", 0L)
+            CommandSection(0L, "SYNOPSIS", "", 0L),
         ).sortedBy { it.getSortPriority() }
 
         assertEquals("TLDR", sections[0].title)

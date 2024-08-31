@@ -18,7 +18,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.CommandView
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.NestedCommandView
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.NestedText
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.SectionTitle
-import org.koin.androidx.compose.getViewModel
+import org.koin.androidx.compose.koinViewModel
 
 /* Copyright 2022 Simon Schubert
  *
@@ -36,22 +36,24 @@ import org.koin.androidx.compose.getViewModel
 */
 
 @Composable
-fun TipsScreen(onNavigate: (String) -> Unit = {}, viewModel: TipsViewModel = getViewModel()) {
-
+fun TipsScreen(
+    onNavigate: (String) -> Unit = {},
+    viewModel: TipsViewModel = koinViewModel(),
+) {
     LazyVerticalStaggeredGrid(
         columns = StaggeredGridCells.Adaptive(minSize = 300.dp),
     ) {
         items(
             items = viewModel.tips,
-            key = { it.tip.id }
+            key = { it.tip.id },
         ) { tip ->
             Card(
-                elevation = 4.dp, modifier = Modifier
+                elevation = 4.dp,
+                modifier = Modifier
                     .padding(4.dp)
-                    .fillMaxWidth()
+                    .fillMaxWidth(),
             ) {
                 Column(modifier = Modifier.padding(8.dp)) {
-
                     SectionTitle(title = tip.tip.title)
 
                     tip.sections.forEach { element ->
@@ -64,7 +66,7 @@ fun TipsScreen(onNavigate: (String) -> Unit = {}, viewModel: TipsViewModel = get
                                 CommandView(
                                     command = element.command,
                                     elements = element.elements,
-                                    onNavigate = onNavigate
+                                    onNavigate = onNavigate,
                                 )
                             }
 
@@ -73,14 +75,14 @@ fun TipsScreen(onNavigate: (String) -> Unit = {}, viewModel: TipsViewModel = get
                                     text = element.text,
                                     command = element.command,
                                     commandElements = element.elements,
-                                    onNavigate = onNavigate
+                                    onNavigate = onNavigate,
                                 )
                             }
 
                             is TipSectionElement.NestedText -> {
                                 NestedText(
                                     textLeft = element.text,
-                                    textRight = element.info
+                                    textRight = element.info,
                                 )
                             }
                         }
@@ -90,4 +92,3 @@ fun TipsScreen(onNavigate: (String) -> Unit = {}, viewModel: TipsViewModel = get
         }
     }
 }
-

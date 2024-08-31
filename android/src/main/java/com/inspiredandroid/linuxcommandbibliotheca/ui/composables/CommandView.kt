@@ -46,7 +46,7 @@ import com.linuxcommandlibrary.shared.databaseHelper
 fun CommandView(
     command: String,
     elements: List<CommandElement>,
-    onNavigate: (String) -> Unit = {}
+    onNavigate: (String) -> Unit = {},
 ) {
     val codeColor = MaterialTheme.colors.primary
     val annotatedString = remember(codeColor) {
@@ -88,7 +88,7 @@ fun CommandView(
                         annotatedString.getStringAnnotations(
                             tag = "$index",
                             start = offset,
-                            end = offset
+                            end = offset,
                         )
                             .firstOrNull()
                             ?.let {
@@ -99,7 +99,7 @@ fun CommandView(
                         annotatedString.getStringAnnotations(
                             tag = "$index",
                             start = offset,
-                            end = offset
+                            end = offset,
                         )
                             .firstOrNull()
                             ?.let {
@@ -110,17 +110,19 @@ fun CommandView(
                             }
                     }
                 }
-            })
+            },
+        )
 
         val context = LocalContext.current
         IconButton(
             modifier = Modifier.align(Alignment.CenterVertically),
             onClick = {
                 shareCommand(context, command)
-            }) {
+            },
+        ) {
             Icon(
                 imageVector = Icons.Filled.Share,
-                contentDescription = stringResource(R.string.share)
+                contentDescription = stringResource(R.string.share),
             )
         }
     }
@@ -131,7 +133,7 @@ fun shareCommand(context: Context, command: String) {
     intent.type = "text/plain"
     intent.putExtra(
         Intent.EXTRA_TEXT,
-        command.dropWhile { it == '$' || it.isWhitespace() }.replace("\\n", "")
+        command.dropWhile { it == '$' || it.isWhitespace() }.replace("\\n", ""),
     )
     try {
         context.startActivity(Intent.createChooser(intent, "Share command"))
@@ -139,7 +141,6 @@ fun shareCommand(context: Context, command: String) {
         e.printStackTrace()
     }
 }
-
 
 @Composable
 @Preview
@@ -150,7 +151,7 @@ fun CommandViewPreview() {
             elements = listOf(
                 CommandElement.Text("$ "),
                 CommandElement.Man("find"),
-                CommandElement.Text(" ex?mple.txt")
+                CommandElement.Text(" ex?mple.txt"),
             ),
         )
     }

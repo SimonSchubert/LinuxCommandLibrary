@@ -34,7 +34,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.ui.theme.LinuxTheme
 import com.linuxcommandlibrary.shared.hasDatabase
 import com.linuxcommandlibrary.shared.initDatabase
 import org.koin.android.ext.android.inject
-import org.koin.androidx.compose.getViewModel
+import org.koin.androidx.compose.koinViewModel
 import org.koin.core.parameter.parametersOf
 
 /* Copyright 2022 Simon Schubert
@@ -51,8 +51,6 @@ import org.koin.core.parameter.parametersOf
  * See the License for the specific language governing permissions and
  * limitations under the License.
 */
-
-const val deepLinkUri = "https://linuxcommandlibrary.com"
 
 class MainActivity : AppCompatActivity() {
 
@@ -76,13 +74,15 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
+const val DEEPLINK_URI = "https://linuxcommandlibrary.com"
+
 @Composable
 fun LinuxApp() {
     val navController = rememberNavController()
     val navBackStackEntry = navController.currentBackStackEntryAsState()
     val searchTextValue = remember {
         mutableStateOf(
-            TextFieldValue(text = "", selection = TextRange(0))
+            TextFieldValue(text = "", selection = TextRange(0)),
         )
     }
     val onNavigate: (String) -> Unit = {
@@ -92,49 +92,54 @@ fun LinuxApp() {
     LinuxTheme {
         Scaffold(
             topBar = {
-                TopBar(navBackStackEntry,
+                TopBar(
+                    navBackStackEntry,
                     searchTextValue,
                     onNavigateBack = {
                         navController.popBackStack()
-                    })
+                    },
+                )
             },
             bottomBar = {
                 BottomBar(navController)
-            }) { innerPadding ->
+            },
+        ) { innerPadding ->
 
             NavHost(
                 navController,
                 startDestination = Screen.Basics.route,
-                Modifier.padding(innerPadding)
+                Modifier.padding(innerPadding),
             ) {
-
                 composable(
                     Screen.Basics.route,
                     deepLinks = listOf(
-                        navDeepLink { uriPattern = "$deepLinkUri/basics" },
-                        navDeepLink { uriPattern = "$deepLinkUri/basics.html" })
+                        navDeepLink { uriPattern = "$DEEPLINK_URI/basics" },
+                        navDeepLink { uriPattern = "$DEEPLINK_URI/basics.html" },
+                    ),
                 ) {
                     BasicCategoriesScreen(onNavigate)
                 }
                 composable(
                     Screen.Commands.route,
                     deepLinks = listOf(
-                        navDeepLink { uriPattern = "$deepLinkUri/" },
-                        navDeepLink { uriPattern = "$deepLinkUri/index.html" })
+                        navDeepLink { uriPattern = "$DEEPLINK_URI/" },
+                        navDeepLink { uriPattern = "$DEEPLINK_URI/index.html" },
+                    ),
                 ) {
-                    val viewModel = getViewModel<CommandListViewModel>()
+                    val viewModel = koinViewModel<CommandListViewModel>()
 
                     CommandListScreen(
                         searchTextValue.value.text,
                         viewModel,
-                        onNavigate
+                        onNavigate,
                     )
                 }
                 composable(
                     Screen.Tips.route,
                     deepLinks = listOf(
-                        navDeepLink { uriPattern = "$deepLinkUri/tips" },
-                        navDeepLink { uriPattern = "$deepLinkUri/tips.html" })
+                        navDeepLink { uriPattern = "$DEEPLINK_URI/tips" },
+                        navDeepLink { uriPattern = "$DEEPLINK_URI/tips.html" },
+                    ),
                 ) {
                     TipsScreen(onNavigate)
                 }
@@ -142,17 +147,19 @@ fun LinuxApp() {
                     "basicgroups?categoryId={categoryId}&categoryName={categoryName}",
                     arguments = listOf(
                         navArgument("categoryId") { defaultValue = "" },
-                        navArgument("categoryName") {}),
+                        navArgument("categoryName") {},
+                    ),
                     deepLinks = listOf(
                         navDeepLink {
-                            uriPattern = "$deepLinkUri/basic/{categoryName}.html"
+                            uriPattern = "$DEEPLINK_URI/basic/{categoryName}.html"
                         },
-                        navDeepLink { uriPattern = "$deepLinkUri/basic/{categoryName}" })
+                        navDeepLink { uriPattern = "$DEEPLINK_URI/basic/{categoryName}" },
+                    ),
                 ) { backStackEntry ->
                     val categoryId = backStackEntry.getCategoryId()
                     if (categoryId != null) {
-                        val viewModel = getViewModel<BasicGroupsViewModel>(
-                            parameters = { parametersOf(categoryId) }
+                        val viewModel = koinViewModel<BasicGroupsViewModel>(
+                            parameters = { parametersOf(categoryId) },
                         )
                         BasicGroupsScreen(onNavigate, viewModel)
                     } else {
@@ -164,15 +171,17 @@ fun LinuxApp() {
                     "command?commandId={commandId}&commandName={commandName}",
                     arguments = listOf(
                         navArgument("commandId") { defaultValue = "" },
-                        navArgument("commandName") {}),
+                        navArgument("commandName") {},
+                    ),
                     deepLinks = listOf(
-                        navDeepLink { uriPattern = "$deepLinkUri/man/{commandName}.html" },
-                        navDeepLink { uriPattern = "$deepLinkUri/man/{commandName}" })
+                        navDeepLink { uriPattern = "$DEEPLINK_URI/man/{commandName}.html" },
+                        navDeepLink { uriPattern = "$DEEPLINK_URI/man/{commandName}" },
+                    ),
                 ) { backStackEntry ->
                     val commandId = backStackEntry.getCommandId()
                     if (commandId != null) {
-                        val viewModel = getViewModel<CommandDetailViewModel>(
-                            parameters = { parametersOf(commandId) }
+                        val viewModel = koinViewModel<CommandDetailViewModel>(
+                            parameters = { parametersOf(commandId) },
                         )
                         CommandDetailScreen(onNavigate, viewModel)
                     } else {
@@ -188,7 +197,7 @@ fun LinuxApp() {
 sealed class Screen(
     val route: String,
     @StringRes val resourceId: Int,
-    @DrawableRes val drawableRes: Int
+    @DrawableRes val drawableRes: Int,
 ) {
     data object Commands : Screen("commands", R.string.commands, R.drawable.ic_search_40dp)
     data object Basics : Screen("basics", R.string.basics, R.drawable.ic_puzzle)

@@ -17,6 +17,7 @@ navigationCompose = "2.7.7"
 preference = "1.2.1"
 sqliteDriver = "1.5.5"
 uiToolingPreview = "1.6.8"
+spotless = "6.22.0"
 
 
 [libraries]
@@ -41,10 +42,11 @@ koin-core = { module = "io.insert-koin:koin-core", version.ref = "koinCore" }
 kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlinGradlePlugin" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCore" }
 kotlinx-html-jvm = { module = "org.jetbrains.kotlinx:kotlinx-html-jvm", version.ref = "kotlinxHtmlJvm" }
+runtime = { module = "com.squareup.sqldelight:runtime", version.ref = "androidDriver" }
 sqldelight-android-driver = { module = "com.squareup.sqldelight:android-driver", version.ref = "androidDriver" }
 sqldelight-sqlite-driver = { module = "com.squareup.sqldelight:sqlite-driver", version.ref = "sqliteDriver" }
 
 
 [plugins]
-kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
