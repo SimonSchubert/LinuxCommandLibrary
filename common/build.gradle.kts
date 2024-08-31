@@ -28,12 +28,12 @@ kotlin {
         }
         androidMain {
             dependencies {
-                implementation("com.squareup.sqldelight:android-driver:1.5.5")
+                implementation(libs.sqldelight.android.driver)
             }
         }
         jvmMain {
             dependencies {
-                implementation("com.squareup.sqldelight:sqlite-driver:1.5.5")
+                implementation(libs.sqldelight.sqlite.driver)
             }
         }
     }

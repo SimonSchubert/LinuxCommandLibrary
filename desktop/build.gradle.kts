@@ -7,10 +7,10 @@ version = "1.0"
 
 dependencies {
     implementation(project(":common"))
-    implementation("org.jetbrains.kotlinx:kotlinx-html-jvm:0.9.1")
-    implementation("org.json:json:20231013")
-    implementation("com.squareup.sqldelight:sqlite-driver:1.5.5")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+    implementation(libs.kotlinx.html.jvm)
+    implementation(libs.json)
+    implementation(libs.sqldelight.sqlite.driver)
+    implementation(libs.kotlinx.coroutines.core)
 }
 
 kotlin {

@@ -7,7 +7,7 @@ version = parent!!.version
 
 dependencies {
     implementation(project(":common"))
-    implementation("com.squareup.sqldelight:sqlite-driver:1.5.5")
+    implementation(libs.sqldelight.sqlite.driver)
 }
 
 kotlin {

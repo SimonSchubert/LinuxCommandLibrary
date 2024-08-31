@@ -2,6 +2,7 @@ import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 
 plugins {
     id("com.github.ben-manes.versions") version "0.50.0"
+    alias(libs.plugins.compose.compiler) apply false
 }
 
 buildscript {
@@ -11,9 +12,9 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.21")
-        classpath("com.android.tools.build:gradle:8.2.0")
-        classpath("com.squareup.sqldelight:gradle-plugin:1.5.5")
+        classpath(libs.kotlin.gradle.plugin)
+        classpath(libs.gradle)
+        classpath(libs.gradle.plugin)
     }
 }
 
