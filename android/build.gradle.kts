@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     kotlin("android")
+    alias(libs.plugins.compose.compiler)
 }
 
 group = "com.inspiredandroid.linuxcommandbibliotheca"
@@ -12,23 +13,23 @@ repositories {
 
 dependencies {
     implementation(project(":common"))
-    implementation("androidx.activity:activity-compose:1.8.1")
-    implementation("androidx.compose.material:material:1.5.4")
-    implementation("androidx.navigation:navigation-compose:2.7.5")
-    implementation("com.google.accompanist:accompanist-appcompat-theme:0.32.0")
-    implementation("com.google.accompanist:accompanist-systemuicontroller:0.32.0")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
-    implementation("androidx.preference:preference:1.2.1")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.5.4")
+    implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.material)
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.accompanist.appcompat.theme)
+    implementation(libs.accompanist.systemuicontroller)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.androidx.preference)
+    implementation(libs.androidx.ui.tooling.preview)
 
-    implementation("io.insert-koin:koin-core:3.5.0")
-    implementation("io.insert-koin:koin-android:3.5.0")
-    implementation("io.insert-koin:koin-androidx-compose:3.5.0")
-    implementation("androidx.compose.foundation:foundation:1.5.4")
+    implementation(libs.koin.core)
+    implementation(libs.koin.android)
+    implementation(libs.koin.androidx.compose)
+    implementation(libs.androidx.foundation)
 
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.5.4")
-    debugImplementation("androidx.compose.ui:ui-test-manifest:1.5.4")
-    debugImplementation("androidx.compose.ui:ui-tooling:1.5.4")
+    androidTestImplementation(libs.androidx.ui.test.junit4)
+    debugImplementation(libs.androidx.ui.test.manifest)
+    debugImplementation(libs.androidx.ui.tooling)
 }
 
 android {
@@ -62,7 +63,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.6"
+        kotlinCompilerExtensionVersion = "1.5.15"
     }
 
     compileOptions {

@@ -1,0 +1,50 @@
+[versions]
+kotlin = "2.0.20"
+accompanistAppcompatTheme = "0.34.0"
+activityCompose = "1.9.1"
+androidDriver = "1.5.5"
+foundation = "1.6.8"
+gradle = "8.6.0"
+gradlePlugin = "1.5.5"
+json = "20240303"
+koinCore = "3.5.6"
+kotlinGradlePlugin = "2.0.20"
+kotlinxCoroutinesCore = "1.8.1"
+kotlinxHtmlJvm = "0.11.0"
+lifecycleViewmodelCompose = "2.8.4"
+material = "1.6.8"
+navigationCompose = "2.7.7"
+preference = "1.2.1"
+sqliteDriver = "1.5.5"
+uiToolingPreview = "1.6.8"
+
+
+[libraries]
+accompanist-appcompat-theme = { module = "com.google.accompanist:accompanist-appcompat-theme", version.ref = "accompanistAppcompatTheme" }
+accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanistAppcompatTheme" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
+androidx-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "foundation" }
+androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleViewmodelCompose" }
+androidx-material = { module = "androidx.compose.material:material", version.ref = "material" }
+androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
+androidx-preference = { module = "androidx.preference:preference", version.ref = "preference" }
+androidx-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "uiToolingPreview" }
+androidx-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "uiToolingPreview" }
+androidx-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "uiToolingPreview" }
+androidx-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "uiToolingPreview" }
+gradle = { module = "com.android.tools.build:gradle", version.ref = "gradle" }
+gradle-plugin = { module = "com.squareup.sqldelight:gradle-plugin", version.ref = "gradlePlugin" }
+json = { module = "org.json:json", version.ref = "json" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koinCore" }
+koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koinCore" }
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koinCore" }
+kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlinGradlePlugin" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCore" }
+kotlinx-html-jvm = { module = "org.jetbrains.kotlinx:kotlinx-html-jvm", version.ref = "kotlinxHtmlJvm" }
+sqldelight-android-driver = { module = "com.squareup.sqldelight:android-driver", version.ref = "androidDriver" }
+sqldelight-sqlite-driver = { module = "com.squareup.sqldelight:sqlite-driver", version.ref = "sqliteDriver" }
+
+
+[plugins]
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
