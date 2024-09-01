@@ -1,0 +1,2 @@
+Add commands
+Migrate to android sdk 35
