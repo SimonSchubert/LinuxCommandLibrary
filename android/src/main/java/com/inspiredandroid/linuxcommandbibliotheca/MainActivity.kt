@@ -2,16 +2,22 @@ package com.inspiredandroid.linuxcommandbibliotheca
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.navigation.compose.NavHost
@@ -57,6 +63,7 @@ class MainActivity : AppCompatActivity() {
     private val preferenceManager by inject<PreferenceUtil>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        enableEdgeToEdge(statusBarStyle = SystemBarStyle.dark(android.graphics.Color.TRANSPARENT))
         super.onCreate(savedInstanceState)
 
         if (!hasDatabase(this) || !preferenceManager.isDatabaseUpToDate(this)) {
@@ -69,7 +76,13 @@ class MainActivity : AppCompatActivity() {
         initDatabase(this)
 
         setContent {
-            LinuxApp()
+            Box(
+                Modifier
+                    .background(Color(0xFFd34747))
+                    .safeDrawingPadding(),
+            ) {
+                LinuxApp()
+            }
         }
     }
 }

@@ -12,7 +12,6 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.inspiredandroid.linuxcommandbibliotheca.R
 
 /* Copyright 2022 Simon Schubert
@@ -44,10 +43,6 @@ fun LinuxTheme(content: @Composable () -> Unit) {
     )
     val colorSchema = if (darkMode) darkColors else lightColors
 
-    val systemUiController = rememberSystemUiController()
-    systemUiController.setSystemBarsColor(
-        color = Color(0xFFd34747),
-    )
     val techMonoFont = FontFamily(
         Font(R.font.share_tech_mono),
     )
