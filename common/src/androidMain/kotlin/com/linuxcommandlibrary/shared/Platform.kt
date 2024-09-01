@@ -37,7 +37,6 @@ fun copyDatabase(context: Context, onUpdateStatus: (Int) -> Unit = {}) {
     }
     val file = File(databaseFolder, "database.db")
 
-    println("Copy ${file.name} from assets to $file")
     val inputStream = context.assets.open("database.db")
     inputStream.copyToWithStatus(file.outputStream(), onUpdateStatus)
     inputStream.close()
