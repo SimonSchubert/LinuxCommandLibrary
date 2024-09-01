@@ -19,6 +19,8 @@ jobs:
           java-version: "17"
       - name: Set execution flag for gradlew
         run: chmod +x gradlew
+      - name: Install Android Build Tools
+        run: sdkmanager "build-tools;29.0.3"
       - name: Run common unit tests
         run: bash ./gradlew :common:cleanTestDebugUnitTest :common:testDebugUnitTest
       - name: Build Release AAB
