@@ -886,13 +886,13 @@ class WebsiteBuilder {
         if (showAd) {
             div {
                 style = "text-align: center;"
-                a("https://coindodo.io/stge") {
+                a("https://gala.fan/6-I5oCuOy") {
                     target = ATarget.blank
                     img {
                         style = "max-width: calc(100% - 4px);"
-                        src = "/images/af/stge.webp"
+                        src = "/images/musicapp.webp"
                         attributes["loading"] = "lazy"
-                        width = "800"
+                        width = "600"
                     }
                 }
             }
