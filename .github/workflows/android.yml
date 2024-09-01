@@ -19,6 +19,8 @@ jobs:
           java-version: "17"
       - name: Set execution flag for gradlew
         run: chmod +x gradlew
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v2
       - name: Install Android Build Tools
         run: sdkmanager "build-tools;29.0.3"
       - name: Run common unit tests
