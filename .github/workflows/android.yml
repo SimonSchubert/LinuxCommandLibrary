@@ -67,7 +67,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: jar
-          path: cli/out/linuxcommandlibrary.jar
+          path: cli/build/libs/linuxcommandlibrary.jar
 
   release:
     name: Release APK and JAR
