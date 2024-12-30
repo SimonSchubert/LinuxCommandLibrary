@@ -74,6 +74,8 @@ jobs:
     needs: apk
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2.4.0
       - name: Download APK from build
         uses: actions/download-artifact@v4.1.7
         with:
@@ -97,7 +99,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: apk/android-release-unsigned-signed.apk
+          asset_path: android/build/outputs/apk/release/android-release-unsigned-signed.apk
           asset_name: ${{ github.event.repository.name }}.apk
           asset_content_type: application/zip
       - name: Upload Github Release cli JAR
@@ -107,6 +109,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: jar/linuxcommandlibrary.jar
+          asset_path: cli/build/libs/linuxcommandlibrary.jar
           asset_name: linuxcommandlibrary.jar
           asset_content_type: application/zip
