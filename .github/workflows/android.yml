@@ -57,14 +57,14 @@ jobs:
           keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
           keyPassword: ${{ secrets.KEYSTORE_PASSWORD }}
       - name: Upload APK
-        uses: actions/upload-artifact@v4.1.7
+        uses: actions/upload-artifact@v4
         with:
           name: apk
           path: android/build/outputs/apk/release/android-release-unsigned-signed.apk
       - name: Build cli JAR
         run: bash ./gradlew :cli:createJar
       - name: Upload cli JAR
-        uses: actions/upload-artifact@v4.1.7
+        uses: actions/upload-artifact@v4
         with:
           name: jar
           path: cli/build/libs/linuxcommandlibrary.jar
