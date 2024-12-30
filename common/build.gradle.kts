@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 repositories {
     google()
 }
@@ -14,6 +16,12 @@ version = "1.0"
 kotlin {
     androidTarget()
     jvm()
+
+    androidTarget {
+        compilerOptions {
+            jvmTarget.set(JvmTarget.JVM_17)
+        }
+    }
 
     sourceSets {
         commonMain {
@@ -40,7 +48,7 @@ kotlin {
 }
 
 android {
-    compileSdk = 34
+    compileSdk = 35
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     defaultConfig {
         minSdk = 24
