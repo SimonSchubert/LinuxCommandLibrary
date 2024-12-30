@@ -25,27 +25,6 @@ jobs:
         run: sdkmanager "build-tools;29.0.3"
       - name: Run common unit tests
         run: bash ./gradlew :common:cleanTestDebugUnitTest :common:testDebugUnitTest
-      - name: Build Release AAB
-        id: buildRelease
-        run: ./gradlew bundleRelease
-      - name: Sign AAB
-        id: sign
-        uses: r0adkll/sign-android-release@v1
-        with:
-          releaseDirectory: android/build/outputs/bundle/release
-          signingKeyBase64: ${{ secrets.KEYSTORE_B64 }}
-          alias: ${{ secrets.KEY_ALIAS }}
-          keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
-          keyPassword: ${{ secrets.KEYSTORE_PASSWORD }}
-      - name: Upload AAB to Play Store
-        uses: r0adkll/upload-google-play@v1
-        with:
-          serviceAccountJsonPlainText: ${{ secrets.SERVICE_ACCOUNT_JSON }}
-          packageName: com.inspiredandroid.linuxcommandbibliotheca
-          releaseFiles: android/build/outputs/bundle/release/android-release.aab
-          track: beta
-          status: draft
-          mappingFile: android/build/outputs/mapping/release/mapping.txt
       - name: Build APK
         run: bash ./gradlew assembleRelease --stacktrace
       - name: Sign APK
@@ -56,17 +35,17 @@ jobs:
           alias: ${{ secrets.KEY_ALIAS }}
           keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
           keyPassword: ${{ secrets.KEYSTORE_PASSWORD }}
-      - name: Upload APK
+      - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: apk
+          name: signed-apk
           path: android/build/outputs/apk/release/android-release-unsigned-signed.apk
       - name: Build cli JAR
         run: bash ./gradlew :cli:createJar
-      - name: Upload cli JAR
+      - name: Upload cli JAR Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: jar
+          name: cli-jar
           path: cli/build/libs/linuxcommandlibrary.jar
 
   release:
@@ -76,14 +55,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2.4.0
-      - name: Download APK from build
+      - name: Download APK Artifact
         uses: actions/download-artifact@v4.1.7
         with:
-          name: apk
-      - name: Download JAR from build
+          name: signed-apk
+      - name: Download JAR Artifact
         uses: actions/download-artifact@v4.1.7
         with:
-          name: jar
+          name: cli-jar
       - name: Create Github Release
         id: create_release
         uses: actions/create-release@v1
@@ -92,23 +71,23 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           release_name: Release ${{ github.ref }}
-      - name: Upload Github Release APK
-        id: upload_release_asset
+      - name: Upload APK to Github Release
+        id: upload_apk
         uses: actions/upload-release-asset@v1.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: android/build/outputs/apk/release/android-release-unsigned-signed.apk
-          asset_name: ${{ github.event.repository.name }}.apk
+          asset_path: android-release-unsigned-signed.apk
+          asset_name: LinuxCommandLibrary.apk
           asset_content_type: application/zip
-      - name: Upload Github Release cli JAR
-        id: upload_release_asset2
+      - name: Upload JAR to Github Release
+        id: upload_jar
         uses: actions/upload-release-asset@v1.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: cli/build/libs/linuxcommandlibrary.jar
+          asset_path: linuxcommandlibrary.jar
           asset_name: linuxcommandlibrary.jar
           asset_content_type: application/zip
