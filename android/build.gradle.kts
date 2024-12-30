@@ -21,6 +21,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.androidx.preference)
     implementation(libs.androidx.ui.tooling.preview)
+    implementation(libs.androidx.material.icons.core)
 
     implementation(libs.koin.core)
     implementation(libs.koin.android)
@@ -33,12 +34,12 @@ dependencies {
 }
 
 android {
-    compileSdk = 34
+    compileSdk = 35
     defaultConfig {
         applicationId = "com.inspiredandroid.linuxcommandbibliotheca"
         minSdk = 24
         targetSdk = 35
-        versionCode = 90
+        versionCode = 91
         versionName = project.version.toString()
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -61,10 +62,6 @@ android {
     buildFeatures {
         compose = true
         buildConfig = true
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.15"
     }
 
     compileOptions {

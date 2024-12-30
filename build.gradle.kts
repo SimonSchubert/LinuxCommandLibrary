@@ -1,7 +1,7 @@
 import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 
 plugins {
-    id("com.github.ben-manes.versions") version "0.50.0"
+    id("com.github.ben-manes.versions") version "0.51.0"
     alias(libs.plugins.compose.compiler) apply false
     alias(libs.plugins.spotless)
 }
@@ -20,7 +20,7 @@ buildscript {
 }
 
 group = "org.example"
-version = "3.2.6"
+version = "3.2.7"
 
 allprojects {
     repositories {
