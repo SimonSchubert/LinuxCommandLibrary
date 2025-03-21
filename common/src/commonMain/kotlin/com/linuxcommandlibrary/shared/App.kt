@@ -29,19 +29,17 @@ sealed class CommandElement {
 /**
  * Search in name and description and return sorted by priority
  */
-fun List<Command>.search(phrase: String): List<Command> {
-    return this.filter { it.name.contains(phrase, true) || it.description.contains(phrase, true) }
-        .sortedBy {
-            val name = it.name.lowercase()
-            val lowercasePhrase = phrase.lowercase()
-            when {
-                !name.contains(lowercasePhrase) -> 30
-                name == lowercasePhrase -> 0
-                name.startsWith(lowercasePhrase) -> 10
-                else -> 20
-            }
+fun List<Command>.search(phrase: String): List<Command> = this.filter { it.name.contains(phrase, true) || it.description.contains(phrase, true) }
+    .sortedBy {
+        val name = it.name.lowercase()
+        val lowercasePhrase = phrase.lowercase()
+        when {
+            !name.contains(lowercasePhrase) -> 30
+            name == lowercasePhrase -> 0
+            name.startsWith(lowercasePhrase) -> 10
+            else -> 20
         }
-}
+    }
 
 /**
  * Return a list of sealed Elements for visual representation
@@ -112,19 +110,15 @@ val onlyCharactersRegex = "[^a-z]".toRegex()
 /**
  * Only allow characters in html file names to guarantee matching on the website and app deep linking
  */
-fun BasicCategory.getHtmlFileName(): String {
-    return this.title.lowercase(Locale.US).replace(onlyCharactersRegex, "")
-}
+fun BasicCategory.getHtmlFileName(): String = this.title.lowercase(Locale.US).replace(onlyCharactersRegex, "")
 
 /**
  * Show TLDR and SYNOPSIS always on the top and SEE ALSO and AUTHOR on the bottom. Everything else in between
  */
-fun CommandSection.getSortPriority(): Int {
-    return when (this.title) {
-        "TLDR" -> 0
-        "SYNOPSIS" -> 10
-        "SEE ALSO" -> 90
-        "AUTHOR" -> 100
-        else -> 50
-    }
+fun CommandSection.getSortPriority(): Int = when (this.title) {
+    "TLDR" -> 0
+    "SYNOPSIS" -> 10
+    "SEE ALSO" -> 90
+    "AUTHOR" -> 100
+    else -> 50
 }

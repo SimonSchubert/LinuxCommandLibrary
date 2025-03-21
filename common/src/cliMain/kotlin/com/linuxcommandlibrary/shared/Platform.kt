@@ -20,9 +20,7 @@ import java.io.File
  * limitations under the License.
 */
 
-actual fun getPlatformName(): String {
-    return "Desktop"
-}
+actual fun getPlatformName(): String = "Desktop"
 
 actual var databaseHelper = DatabaseHelper()
 

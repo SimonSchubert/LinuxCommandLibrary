@@ -825,11 +825,9 @@ class WebsiteBuilder {
         stream.close()
     }
 
-    private fun getSitemapUrlNode(urlPart: String): String {
-        return "<url>" +
-            "<loc>https://linuxcommandlibrary.com/$urlPart</loc>" +
-            "</url>"
-    }
+    private fun getSitemapUrlNode(urlPart: String): String = "<url>" +
+        "<loc>https://linuxcommandlibrary.com/$urlPart</loc>" +
+        "</url>"
 
     private fun HEAD.commonMeta() {
         meta(charset = "utf-8")
@@ -1071,88 +1069,82 @@ class WebsiteBuilder {
         consumer,
     ).visit(block)
 
-    private fun BasicCategory.getIconResource(): String {
-        return when (title) {
-            "One-liners" -> "icon-hand_with_pen.svg"
-            "System information" -> "icon-system_task.svg"
-            "System control" -> "icon-settings.svg"
-            "Users & Groups" -> "icon-user.svg"
-            "Files & Folders" -> "icon-file.svg"
-            "Printing" -> "icon-print.svg"
-            "Network" -> "icon-network_card.svg"
-            "Search & Find" -> "icon-search.svg"
-            "GIT" -> "icon-git.svg"
-            "SSH" -> "icon-console.svg"
-            "Video & Audio" -> "icon-video_trimming.svg"
-            "Package manager" -> "icon-package.svg"
-            "Hacking tools" -> "icon-skull.svg"
-            "Terminal games" -> "icon-controller.svg"
-            "VIM" -> "icon-vim.svg"
-            "Emacs" -> "icon-emacs.svg"
-            "Nano" -> "icon-nano.svg"
-            "Pico" -> "icon-pico.svg"
-            "Crypto currencies" -> "icon-bitcoin.svg"
-            "Input" -> "icon-mouse.svg"
-            "JSON" -> "icon-json.svg"
-            "Fun" -> "icon-fun.svg"
-            else -> ""
-        }
+    private fun BasicCategory.getIconResource(): String = when (title) {
+        "One-liners" -> "icon-hand_with_pen.svg"
+        "System information" -> "icon-system_task.svg"
+        "System control" -> "icon-settings.svg"
+        "Users & Groups" -> "icon-user.svg"
+        "Files & Folders" -> "icon-file.svg"
+        "Printing" -> "icon-print.svg"
+        "Network" -> "icon-network_card.svg"
+        "Search & Find" -> "icon-search.svg"
+        "GIT" -> "icon-git.svg"
+        "SSH" -> "icon-console.svg"
+        "Video & Audio" -> "icon-video_trimming.svg"
+        "Package manager" -> "icon-package.svg"
+        "Hacking tools" -> "icon-skull.svg"
+        "Terminal games" -> "icon-controller.svg"
+        "VIM" -> "icon-vim.svg"
+        "Emacs" -> "icon-emacs.svg"
+        "Nano" -> "icon-nano.svg"
+        "Pico" -> "icon-pico.svg"
+        "Crypto currencies" -> "icon-bitcoin.svg"
+        "Input" -> "icon-mouse.svg"
+        "JSON" -> "icon-json.svg"
+        "Fun" -> "icon-fun.svg"
+        else -> ""
     }
 
-    private fun BasicCategory.getDescription(): String {
-        return when (title) {
-            "One-liners" -> "Useful linux command line one liners"
-            "System information" -> "System and battery/cpu/memory/disk usage info on Linux "
-            "System control" -> "Lock, unlock, start/stop bluetooth/wifi, shutdown, reboot system"
-            "Users & Groups" -> "Create, remove, modify and list Linux groups and users"
-            "Files & Folders" -> "Create, delete, list, show and change Linux files and folders"
-            "Printing" -> "Print, view, start and cancel printing jobs on Linux"
-            "Network" -> "Configure, list, trace, sockets, wifi networks on Linux"
-            "Search & Find" -> "Search and find files by phrase, date and size on Linux"
-            "GIT" -> "Commit, push, create, delete and undo with git on Linux"
-            "SSH" -> "Connect, forward, push and pull files via SSH"
-            "Video & Audio" -> "Convert, volume, play, screenshot, webcam on Linux"
-            "Package manager" -> "Install, update, upgrade, remove packages on Linux"
-            "Hacking tools" -> "Hacking, forensics and exploitation tools for Linux"
-            "Terminal games" -> "Terminal games on Linux"
-            "VIM" -> "Working with vim on the Linux command line"
-            "Emacs" -> "Working with emacs on the Linux command line"
-            "Nano" -> "Working with nano on the Linux command line"
-            "Pico" -> "Working with pico on the Linux command line"
-            "Crypto currencies" -> "Miners, wallets and trading bots for Linux"
-            "Input" -> "Type keys and move mouse via the Linux command line"
-            "JSON" -> "Print, select, modify, delete and create json files on cmd"
-            "Fun" -> "Fun on the linux command line"
-            else -> ""
-        }
+    private fun BasicCategory.getDescription(): String = when (title) {
+        "One-liners" -> "Useful linux command line one liners"
+        "System information" -> "System and battery/cpu/memory/disk usage info on Linux "
+        "System control" -> "Lock, unlock, start/stop bluetooth/wifi, shutdown, reboot system"
+        "Users & Groups" -> "Create, remove, modify and list Linux groups and users"
+        "Files & Folders" -> "Create, delete, list, show and change Linux files and folders"
+        "Printing" -> "Print, view, start and cancel printing jobs on Linux"
+        "Network" -> "Configure, list, trace, sockets, wifi networks on Linux"
+        "Search & Find" -> "Search and find files by phrase, date and size on Linux"
+        "GIT" -> "Commit, push, create, delete and undo with git on Linux"
+        "SSH" -> "Connect, forward, push and pull files via SSH"
+        "Video & Audio" -> "Convert, volume, play, screenshot, webcam on Linux"
+        "Package manager" -> "Install, update, upgrade, remove packages on Linux"
+        "Hacking tools" -> "Hacking, forensics and exploitation tools for Linux"
+        "Terminal games" -> "Terminal games on Linux"
+        "VIM" -> "Working with vim on the Linux command line"
+        "Emacs" -> "Working with emacs on the Linux command line"
+        "Nano" -> "Working with nano on the Linux command line"
+        "Pico" -> "Working with pico on the Linux command line"
+        "Crypto currencies" -> "Miners, wallets and trading bots for Linux"
+        "Input" -> "Type keys and move mouse via the Linux command line"
+        "JSON" -> "Print, select, modify, delete and create json files on cmd"
+        "Fun" -> "Fun on the linux command line"
+        else -> ""
     }
 
-    private fun getKeywordsForBasic(category: BasicCategory): String {
-        return when (category.title) {
-            "One-liners" -> "linux,list,useful,oneliners,commands,cmd"
-            "Input" -> "linux,move,click,mouse,type,text,xdotool,ydotool,read,copy,clipboard"
-            "System information" -> "linux,system,info,disk,bluetooth,cpu,memory,battery"
-            "System control" -> "linux,control,lock,unlock,reboot,shutdown,start,stop,wifi,bluetooth"
-            "Users & Groups" -> "linux,create,delete,user,group,list,info"
-            "Files & Folders" -> "linux,create,edit,delete,file,folder,permission,list"
-            "Printing" -> "linux,print,file,cancel,job,status,queue"
-            "JSON" -> "linux,json,pretty,print,select,put,delete,create"
-            "Network" -> "linux,network,wifi,password,ip,interfaces,sockets"
-            "Search & Find" -> "linux,find,search,pattern,files,path,phrase"
-            "GIT" -> "linux,create,clone,repository,tag,checkout,delete,commit"
-            "SSH" -> "linux,connect,ssh,push,pull,forwarding"
-            "Video & Audio" -> "linux,screenshot,webcam,sounds,video,convert,image"
-            "Package manager" -> "linux,install,file,repository,find,package,upgrade"
-            "Hacking tools" -> "linux,password,forensics,sniffing,spoofing,exploit,vulnerability"
-            "Crypto currencies" -> "linux,minters,wallets,coin,trading,bots"
-            "VIM Texteditor" -> "linux,insert,search,edit,replace,navigation"
-            "Emacs Texteditor" -> "linux,emacs,usage,buffers,navigation"
-            "Nano Texteditor" -> "linux,nano,info,navigation,edit,input,output"
-            "Pico Texteditor" -> "linux,pico,navigation,usage,input,output"
-            "Micro Texteditor" -> "linux,pico,navigation,usage,input,output"
-            "Terminal games" -> "linux,terminal,games,list,rogue"
-            else -> throw Exception("${category.title} not found")
-        }
+    private fun getKeywordsForBasic(category: BasicCategory): String = when (category.title) {
+        "One-liners" -> "linux,list,useful,oneliners,commands,cmd"
+        "Input" -> "linux,move,click,mouse,type,text,xdotool,ydotool,read,copy,clipboard"
+        "System information" -> "linux,system,info,disk,bluetooth,cpu,memory,battery"
+        "System control" -> "linux,control,lock,unlock,reboot,shutdown,start,stop,wifi,bluetooth"
+        "Users & Groups" -> "linux,create,delete,user,group,list,info"
+        "Files & Folders" -> "linux,create,edit,delete,file,folder,permission,list"
+        "Printing" -> "linux,print,file,cancel,job,status,queue"
+        "JSON" -> "linux,json,pretty,print,select,put,delete,create"
+        "Network" -> "linux,network,wifi,password,ip,interfaces,sockets"
+        "Search & Find" -> "linux,find,search,pattern,files,path,phrase"
+        "GIT" -> "linux,create,clone,repository,tag,checkout,delete,commit"
+        "SSH" -> "linux,connect,ssh,push,pull,forwarding"
+        "Video & Audio" -> "linux,screenshot,webcam,sounds,video,convert,image"
+        "Package manager" -> "linux,install,file,repository,find,package,upgrade"
+        "Hacking tools" -> "linux,password,forensics,sniffing,spoofing,exploit,vulnerability"
+        "Crypto currencies" -> "linux,minters,wallets,coin,trading,bots"
+        "VIM Texteditor" -> "linux,insert,search,edit,replace,navigation"
+        "Emacs Texteditor" -> "linux,emacs,usage,buffers,navigation"
+        "Nano Texteditor" -> "linux,nano,info,navigation,edit,input,output"
+        "Pico Texteditor" -> "linux,pico,navigation,usage,input,output"
+        "Micro Texteditor" -> "linux,pico,navigation,usage,input,output"
+        "Terminal games" -> "linux,terminal,games,list,rogue"
+        else -> throw Exception("${category.title} not found")
     }
 
     fun String.addAnchorAndCodeStyle(fileName: String): String {

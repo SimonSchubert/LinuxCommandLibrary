@@ -25,9 +25,7 @@ class BasicGroupsViewModel(categoryId: Long) : ViewModel() {
 
     var basicGroups = databaseHelper.getBasicGroups(categoryId)
 
-    fun isGroupCollapsed(id: Long): Boolean {
-        return collapsedMap[id] == true
-    }
+    fun isGroupCollapsed(id: Long): Boolean = collapsedMap[id] == true
 
     fun toggleCollapse(id: Long) {
         collapsedMap[id] = !collapsedMap.getOrDefault(id, false)

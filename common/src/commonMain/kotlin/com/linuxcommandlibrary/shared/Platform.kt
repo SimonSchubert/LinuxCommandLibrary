@@ -1,7 +1,7 @@
 package com.linuxcommandlibrary.shared
 
+import app.cash.sqldelight.db.SqlDriver
 import com.linuxcommandlibrary.CommandDatabase
-import com.squareup.sqldelight.db.SqlDriver
 import databases.BasicCategory
 import databases.BasicCommand
 import databases.BasicGroup
@@ -39,35 +39,19 @@ class DatabaseHelper {
         commandQueries = CommandDatabase(sqlDriver).commandQueries
     }
 
-    fun getCommand(name: String): Command? {
-        return commandQueries.selectCommandByName(name).executeAsOneOrNull()
-    }
+    fun getCommand(name: String): Command? = commandQueries.selectCommandByName(name).executeAsOneOrNull()
 
-    fun getCommands(): List<Command> {
-        return commandQueries.selectCommands().executeAsList()
-    }
+    fun getCommands(): List<Command> = commandQueries.selectCommands().executeAsList()
 
-    fun getBasics(): List<BasicCategory> {
-        return commandQueries.selectBasicCategories().executeAsList()
-    }
+    fun getBasics(): List<BasicCategory> = commandQueries.selectBasicCategories().executeAsList()
 
-    fun getBasicGroups(categoryId: Long): List<BasicGroup> {
-        return commandQueries.selectBasicGroupByCategory(categoryId).executeAsList()
-    }
+    fun getBasicGroups(categoryId: Long): List<BasicGroup> = commandQueries.selectBasicGroupByCategory(categoryId).executeAsList()
 
-    fun getBasicCommands(groupId: Long): List<BasicCommand> {
-        return commandQueries.selectBasicCommandByGroupId(groupId).executeAsList()
-    }
+    fun getBasicCommands(groupId: Long): List<BasicCommand> = commandQueries.selectBasicCommandByGroupId(groupId).executeAsList()
 
-    fun getSections(commandId: Long): List<CommandSection> {
-        return commandQueries.selectCommandSectionsByCommandId(commandId).executeAsList()
-    }
+    fun getSections(commandId: Long): List<CommandSection> = commandQueries.selectCommandSectionsByCommandId(commandId).executeAsList()
 
-    fun getTips(): List<Tip> {
-        return commandQueries.selectTips().executeAsList()
-    }
+    fun getTips(): List<Tip> = commandQueries.selectTips().executeAsList()
 
-    fun getTipSections(): List<TipSection> {
-        return commandQueries.selectAllTipSections().executeAsList()
-    }
+    fun getTipSections(): List<TipSection> = commandQueries.selectAllTipSections().executeAsList()
 }

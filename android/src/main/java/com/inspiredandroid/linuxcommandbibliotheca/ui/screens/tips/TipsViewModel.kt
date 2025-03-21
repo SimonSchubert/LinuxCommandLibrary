@@ -8,8 +8,7 @@ import databases.Tip
 
 sealed class TipSectionElement {
     data class Text(val text: String) : TipSectionElement()
-    data class Code(val command: String, val elements: List<CommandElement>) :
-        TipSectionElement()
+    data class Code(val command: String, val elements: List<CommandElement>) : TipSectionElement()
 
     data class NestedCode(
         val text: String,
