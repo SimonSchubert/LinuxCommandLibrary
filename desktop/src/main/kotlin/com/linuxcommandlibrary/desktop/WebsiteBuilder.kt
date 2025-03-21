@@ -77,6 +77,10 @@ import java.util.Locale
 fun main() {
     initDatabase()
 
+    val minifier = Minifier()
+    minifier.minifyScriptsAndSheets(true)
+    return
+
     val websiteBuilder = WebsiteBuilder()
 
     val folder = File("html")
@@ -91,6 +95,8 @@ fun main() {
     websiteBuilder.create404HtmlFile()
 
     websiteBuilder.createSitemap(folder)
+
+    minifier.minifyScriptsAndSheets(true)
 }
 
 class WebsiteBuilder {
@@ -152,7 +158,7 @@ class WebsiteBuilder {
                             id = "search"
                             onKeyUp = "search()"
                             placeholder = "Search for commands"
-                            autoComplete = false
+                            autoComplete = "false"
                         }
                     }
                     div {
