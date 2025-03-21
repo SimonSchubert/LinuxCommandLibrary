@@ -1,8 +1,8 @@
 package com.linuxcommandlibrary.shared
 
+import app.cash.sqldelight.db.SqlDriver
+import app.cash.sqldelight.driver.jdbc.sqlite.JdbcSqliteDriver
 import com.linuxcommandlibrary.CommandDatabase
-import com.squareup.sqldelight.db.SqlDriver
-import com.squareup.sqldelight.sqlite.driver.JdbcSqliteDriver
 import java.io.File
 import java.io.IOException
 import java.util.Properties
@@ -25,7 +25,7 @@ import java.util.Properties
 actual var databaseHelper = DatabaseHelper()
 
 fun initDatabase() {
-    val databaseFile = EmptyClass::class.java.classLoader.getResource("database.db")?.toURI()
+    val databaseFile = EmptyClass::class.java.classLoader?.getResource("database.db")?.toURI()
     val driver: SqlDriver = JdbcSqliteDriver("jdbc:sqlite::resource:$databaseFile")
     if (!File("assets/database.db").exists()) {
         CommandDatabase.Schema.create(driver)
@@ -36,7 +36,7 @@ fun initDatabase() {
 fun getCurrentVersion(): String {
     val prop = Properties()
     try {
-        val input = EmptyClass::class.java.classLoader.getResource("application.properties")
+        val input = EmptyClass::class.java.classLoader?.getResource("application.properties")
         prop.load(input?.openStream())
     } catch (io: IOException) {
         io.printStackTrace()
