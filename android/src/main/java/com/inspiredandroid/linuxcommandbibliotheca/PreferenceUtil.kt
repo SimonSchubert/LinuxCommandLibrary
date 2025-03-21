@@ -29,9 +29,7 @@ class PreferenceUtil(private val context: Context) {
         saveBookmarkIds()
     }
 
-    fun hasBookmark(id: Long): Boolean {
-        return bookmarksIds.contains(id)
-    }
+    fun hasBookmark(id: Long): Boolean = bookmarksIds.contains(id)
 
     fun isDatabaseUpToDate(context: Context): Boolean {
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)

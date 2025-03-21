@@ -7,7 +7,7 @@ repositories {
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
-    id("com.squareup.sqldelight")
+    id("app.cash.sqldelight")
 }
 
 group = "com.linuxcommandlibrary"
@@ -66,7 +66,9 @@ android {
 }
 
 sqldelight {
-    database("CommandDatabase") {
-        packageName = "com.linuxcommandlibrary"
+    databases {
+        create("CommandDatabase") {
+            packageName.set("com.linuxcommandlibrary")
+        }
     }
 }
