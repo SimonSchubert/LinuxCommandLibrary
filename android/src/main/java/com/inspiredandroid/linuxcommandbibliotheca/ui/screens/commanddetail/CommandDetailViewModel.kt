@@ -26,9 +26,7 @@ class CommandDetailViewModel(commandId: Long) : ViewModel() {
 
     var sections = databaseHelper.getSections(commandId).sortedBy { it.getSortPriority() }
 
-    fun isGroupCollapsed(id: Long): Boolean {
-        return collapsedMap[id] == true
-    }
+    fun isGroupCollapsed(id: Long): Boolean = collapsedMap[id] == true
 
     fun toggleCollapse(id: Long) {
         collapsedMap[id] = !collapsedMap.getOrDefault(id, false)

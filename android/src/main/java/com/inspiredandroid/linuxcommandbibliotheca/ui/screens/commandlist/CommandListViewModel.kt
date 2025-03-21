@@ -42,7 +42,5 @@ class CommandListViewModel(val preferenceUtil: PreferenceUtil) : ViewModel() {
         )
     }
 
-    fun hasBookmark(id: Long): Boolean {
-        return preferenceUtil.hasBookmark(id)
-    }
+    fun hasBookmark(id: Long): Boolean = preferenceUtil.hasBookmark(id)
 }

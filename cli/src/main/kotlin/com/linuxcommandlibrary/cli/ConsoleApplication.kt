@@ -184,6 +184,4 @@ fun printTipData(data: String) {
     println(data.replace("\\n", "").replace("<b>", BOLD).replace("</b>", RESET))
 }
 
-fun readNumber(): Int {
-    return readlnOrNull()?.toIntOrNull() ?: -1
-}
+fun readNumber(): Int = readlnOrNull()?.toIntOrNull() ?: -1
