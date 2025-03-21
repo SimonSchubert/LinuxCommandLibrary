@@ -1,9 +1,9 @@
 package com.linuxcommandlibrary.shared
 
 import android.content.Context
+import app.cash.sqldelight.db.SqlDriver
+import app.cash.sqldelight.driver.android.AndroidSqliteDriver
 import com.linuxcommandlibrary.CommandDatabase
-import com.squareup.sqldelight.android.AndroidSqliteDriver
-import com.squareup.sqldelight.db.SqlDriver
 import java.io.File
 import java.io.InputStream
 import java.io.OutputStream

@@ -1,23 +1,21 @@
 [versions]
-kotlin = "2.1.10"
+kotlin = "2.1.20"
 accompanistAppcompatTheme = "0.36.0"
 activityCompose = "1.10.1"
-androidDriver = "1.5.5"
 foundation = "1.7.8"
 gradle = "8.9.0"
-gradlePlugin = "1.5.5"
-json = "20240303"
+json = "20250107"
 koinCore = "4.0.2"
 kotlinGradlePlugin = "2.1.0"
 kotlinxCoroutinesCore = "1.10.1"
-kotlinxHtmlJvm = "0.11.0"
+kotlinxHtmlJvm = "0.12.0"
 lifecycleViewmodelCompose = "2.8.7"
 material = "1.7.8"
-navigationCompose = "2.8.8"
+navigationCompose = "2.8.9"
 preference = "1.2.1"
-sqliteDriver = "1.5.5"
+sqldelight = "2.0.1"
 uiToolingPreview = "1.7.8"
-spotless = "6.22.0"
+spotless = "7.0.2"
 
 
 [libraries]
@@ -35,7 +33,6 @@ androidx-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", v
 androidx-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "uiToolingPreview" }
 androidx-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "uiToolingPreview" }
 gradle = { module = "com.android.tools.build:gradle", version.ref = "gradle" }
-gradle-plugin = { module = "com.squareup.sqldelight:gradle-plugin", version.ref = "gradlePlugin" }
 json = { module = "org.json:json", version.ref = "json" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koinCore" }
 koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koinCore" }
@@ -43,9 +40,10 @@ koin-core = { module = "io.insert-koin:koin-core", version.ref = "koinCore" }
 kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlinGradlePlugin" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCore" }
 kotlinx-html-jvm = { module = "org.jetbrains.kotlinx:kotlinx-html-jvm", version.ref = "kotlinxHtmlJvm" }
-runtime = { module = "com.squareup.sqldelight:runtime", version.ref = "androidDriver" }
-sqldelight-android-driver = { module = "com.squareup.sqldelight:android-driver", version.ref = "androidDriver" }
-sqldelight-sqlite-driver = { module = "com.squareup.sqldelight:sqlite-driver", version.ref = "sqliteDriver" }
+gradle-plugin = { module = "app.cash.sqldelight:gradle-plugin", version.ref = "sqldelight" }
+runtime = { module = "app.cash.sqldelight:runtime", version.ref = "sqldelight" }
+sqldelight-android-driver = { module = "app.cash.sqldelight:android-driver", version.ref = "sqldelight" }
+sqldelight-sqlite-driver = { module = "app.cash.sqldelight:sqlite-driver", version.ref = "sqldelight" }
 
 
 [plugins]
