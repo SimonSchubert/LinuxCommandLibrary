@@ -41,7 +41,7 @@ class DatabaseHelper {
 
     fun getCommand(name: String): Command? = commandQueries.selectCommandByName(name).executeAsOneOrNull()
 
-    fun getCommands(): List<Command> = commandQueries.selectCommands().executeAsList()
+    fun getCommands(): List<Command> = commandQueries.selectCommands().executeAsList().sortedBy { !it.name.isLetter() }
 
     fun getBasics(): List<BasicCategory> = commandQueries.selectBasicCategories().executeAsList()
 

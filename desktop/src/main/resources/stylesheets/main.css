@@ -88,21 +88,51 @@ footer {
 	text-align: center;
 	padding: 8px;
 	background: #e45151;
-	margin-top: 12px;
 	color: #151515;
 }
 
 #content, .grid-container, .masonry {
-	padding-left: 8px;
-	padding-right: 8px;
 	align-self: center;
-	width: calc(100% - 16px);
+	width: auto;
 }
+
+#content-wrapper {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+
 .grid-container, .masonry {
 	max-width: 900px;
 }
 #content {
 	max-width: 900px;
+}
+
+@media (max-width: 1000px) {
+    .side-panel {
+        display: none;
+    }
+}
+@media (min-width: 1000px) {
+     .bottom-panel {
+         display: none;
+     }
+ }
+
+ .bottom-panel {
+    text-align: center;
+    background-color: #e4751a;
+ }
+
+.bottom-panel a {
+    display: block;
+    width: 100%;
+}
+
+.side-panel a {
+    display: block;
+    height: 100%;
 }
 
 .title {
@@ -171,6 +201,11 @@ h1 {
     border-radius: 5px;
 }
 
+.project {
+font-size: 12px;
+    text-align: center;
+    }
+
 
 .masonry {
 	-webkit-column-width: 300px;
@@ -178,27 +213,18 @@ h1 {
 	column-width: 300px;
 	-webkit-column-gap: 10px;
 	-moz-column-gap: 10px;
-	column-gap: 15px;
-	margin-top: 15px;
-	margin-bottom: 15px;
+	column-gap: 12px;
+	margin: 12px;
 }
 
 .grid-container {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	margin-top: 0;
-    padding: 15px 0 0 0;
-    list-style: none;
-}
-
-.grid-item h2 {
+	margin: 6px;
     padding: 0;
-    margin: 0;
-    margin-left: 14px;
-    margin-right: 14px;
-	font-size: 18px;
-	font-weight: bold;
+    list-style: none;
+    width: auto;
 }
 
 .grid-item {
@@ -208,6 +234,18 @@ h1 {
     height: 128px;
 	text-align: center;
 	margin: 6px;
+	    min-width: 128px;
+        flex: 1 1 128px;
+        max-width: 180px;
+}
+
+.grid-item h2 {
+    padding: 0;
+    margin: 0;
+    margin-left: 14px;
+    margin-right: 14px;
+	font-size: 18px;
+	font-weight: bold;
 }
 
 .grid-item:hover {
@@ -244,7 +282,6 @@ h1 {
 	padding: 12px 20px 12px 40px;
 	border: 2px solid #ddd;
 	border-radius: 2px;
-	margin: 16px 0 0 0;
 	outline-color: #F44336;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
