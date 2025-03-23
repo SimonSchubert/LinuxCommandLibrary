@@ -58,7 +58,9 @@ fun String.getCommandList(
                 command.replace(cmd, " ü${it}ä")
             } else {
                 if (hasBrackets) {
-                    command.replace("(?:[\\s,])($it)".toRegex(), " ü${it}ä")
+                    val escapedIt = Regex.escape(it) // Escapes special characters, e.g., "pbmto\\*\\*\\*"
+                    val regex = "(?:[\\s,])($escapedIt)".toRegex()
+                    command.replace(regex, " ü${it}ä")
                 } else {
                     command.replace(it, " ü${it}ä")
                 }
@@ -122,3 +124,5 @@ fun CommandSection.getSortPriority(): Int = when (this.title) {
     "AUTHOR" -> 100
     else -> 50
 }
+
+fun String.isLetter(): Boolean = this.firstOrNull() in 'a'..'z' || this.firstOrNull() in 'A'..'Z'

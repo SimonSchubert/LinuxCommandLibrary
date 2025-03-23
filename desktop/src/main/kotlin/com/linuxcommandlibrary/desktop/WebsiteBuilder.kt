@@ -8,6 +8,7 @@ import com.linuxcommandlibrary.shared.getSortPriority
 import com.linuxcommandlibrary.shared.initDatabase
 import databases.BasicCategory
 import kotlinx.html.ATarget
+import kotlinx.html.DIV
 import kotlinx.html.FlowContent
 import kotlinx.html.HEAD
 import kotlinx.html.HTMLTag
@@ -78,17 +79,21 @@ fun main() {
     initDatabase()
 
     val minifier = Minifier()
-    minifier.minifyScriptsAndSheets(true)
-    return
-
     val websiteBuilder = WebsiteBuilder()
 
     val folder = File("html")
     folder.mkdir()
 
-    websiteBuilder.createIndexHtmlFile(folder)
+    websiteBuilder.createCommandsHtmlFile(folder)
+
     websiteBuilder.createBasicsHtmlFile(folder)
-    websiteBuilder.createBasicHtmlFies(File(folder, "basic"))
+
+    minifier.minifyScriptsAndSheets(true)
+
+    return
+
+    websiteBuilder.createBasicHtmlFiles(File(folder, "basic"))
+
     websiteBuilder.createTipsHtmlFile(folder)
     websiteBuilder.createManHtmlFiles(File(folder, "man"))
 
@@ -99,9 +104,10 @@ fun main() {
     minifier.minifyScriptsAndSheets(true)
 }
 
+
 class WebsiteBuilder {
 
-    private val cacheVersion = 10
+    private val cacheVersion = 11
 
     private val h2Regex by lazy {
         "(<h2>)(.*?)(</h2>)".toRegex()
@@ -116,7 +122,7 @@ class WebsiteBuilder {
         "<[^>]*>".toRegex()
     }
 
-    fun createIndexHtmlFile(folder: File) {
+    fun createCommandsHtmlFile(folder: File) {
         println("Create index html")
 
         val file = File(folder, "commands.html")
@@ -149,39 +155,43 @@ class WebsiteBuilder {
             }
             body {
                 header(selectedIndex = 0)
-                div {
-                    id = "content"
+
+                contentWrapper {
                     div {
-                        id = "search-wrapper"
-                        input {
-                            type = InputType.text
-                            id = "search"
-                            onKeyUp = "search()"
-                            placeholder = "Search for commands"
-                            autoComplete = "false"
+                        id = "content"
+                        style = "width: 100%; padding: 12px;"
+                        div {
+                            id = "search-wrapper"
+                            input {
+                                type = InputType.text
+                                id = "search"
+                                onKeyUp = "search()"
+                                placeholder = "Search for commands"
+                                autoComplete = "false"
+                            }
                         }
-                    }
-                    div {
-                        id = "commandlist"
-                        var currentFirstLetter = ""
-                        databaseHelper.getCommands().forEach {
-                            if (it.name.lowercase().first().toString() != currentFirstLetter) {
-                                currentFirstLetter = it.name.lowercase().first().toString()
-                                div {
-                                    classes = classes + "headline"
-                                    text(currentFirstLetter.uppercase())
+                        div {
+                            id = "commandlist"
+                            var currentFirstLetter = ""
+                            databaseHelper.getCommands().forEach {
+                                if (it.name.lowercase().first().toString() != currentFirstLetter) {
+                                    currentFirstLetter = it.name.lowercase().first().toString()
+                                    div {
+                                        classes = classes + "headline"
+                                        text(currentFirstLetter.uppercase())
+                                    }
                                 }
+                                a("man/${it.name.lowercase()}") {
+                                    attributes["data-c"] = it.name.lowercase()
+                                    text(it.name)
+                                }
+                                it.name
                             }
-                            a("man/${it.name.lowercase()}") {
-                                attributes["data-c"] = it.name.lowercase()
-                                text(it.name)
-                            }
-                            it.name
                         }
-                    }
-                    div {
-                        id = "no-results"
-                        text("No results")
+                        div {
+                            id = "no-results"
+                            text("No results")
+                        }
                     }
                 }
 
@@ -222,23 +232,33 @@ class WebsiteBuilder {
             }
             body {
                 header(selectedIndex = 1)
-                ul {
-                    classes = setOf("grid-container")
 
-                    basicCategories.forEach {
-                        li {
-                            classes = setOf("grid-item")
-                            a("basic/${it.getHtmlFileName()}") {
-                                div {
-                                    i {
-                                        if (!listOf(253, 254, 255).contains(it.id.toInt())) {
-                                            classes = setOf("invert-color")
+                contentWrapper {
+                    div {
+                        ul {
+                            classes = setOf("grid-container")
+
+                            basicCategories.forEach {
+                                li {
+                                    classes = setOf("grid-item")
+                                    a("basic/${it.getHtmlFileName()}") {
+                                        div {
+                                            i {
+                                                if (!listOf(
+                                                        253,
+                                                        254,
+                                                        255
+                                                    ).contains(it.id.toInt())
+                                                ) {
+                                                    classes = setOf("invert-color")
+                                                }
+                                                style =
+                                                    "background-image: url(\"images/${it.getIconResource()}\");"
+                                            }
+                                            h2 {
+                                                text(it.title)
+                                            }
                                         }
-                                        style =
-                                            "background-image: url(\"images/${it.getIconResource()}\");"
-                                    }
-                                    h2 {
-                                        text(it.title)
                                     }
                                 }
                             }
@@ -252,7 +272,7 @@ class WebsiteBuilder {
         stream.close()
     }
 
-    fun createBasicHtmlFies(folder: File) {
+    fun createBasicHtmlFiles(folder: File) {
         folder.mkdir()
 
         val basicCategories = databaseHelper.getBasics()
@@ -321,55 +341,69 @@ class WebsiteBuilder {
                 body {
                     header(1)
 
-                    h1 {
-                        text(category.title)
-                    }
-
-                    div {
-                        classes = setOf("masonry")
-                        groups.forEach { group ->
+                    contentWrapper {
+                        div {
+                            h1 {
+                                text(category.title)
+                            }
                             div {
-                                classes = setOf("code-group")
-                                h2 {
-                                    a("/${folder.name}/${file.nameWithoutExtension}#${group.id}") {
-                                        id = group.id.toString()
-                                        text(group.description)
-                                    }
-                                }
-                                databaseHelper.getBasicCommands(group.id).forEach { command ->
-                                    if (listOf(
-                                            "VIM",
-                                            "Emacs",
-                                            "Nano",
-                                            "Pico",
-                                        ).contains(category.title)
-                                    ) {
-                                        table {
-                                            command.command.split("\n").forEach {
-                                                tr {
-                                                    it.split(" - ").forEach {
-                                                        td {
-                                                            text(it)
-                                                        }
-                                                    }
-                                                }
+                                classes = setOf("masonry")
+                                groups.forEach { group ->
+                                    div {
+                                        classes = setOf("code-group")
+                                        h2 {
+                                            a("/${folder.name}/${file.nameWithoutExtension}#${group.id}") {
+                                                id = group.id.toString()
+                                                text(group.description)
                                             }
                                         }
-                                    } else if (listOf(
-                                            "Terminal games",
-                                            "Fun",
-                                        ).contains(category.title)
-                                    ) {
-                                        code(
-                                            "$ ${command.command.replace("\\n", "<br>")}",
-                                            command.mans,
-                                            true,
-                                        )
-                                    } else {
-                                        code(
-                                            "$ ${command.command.replace("\\n", "<br>")}",
-                                            command.mans,
-                                        )
+                                        databaseHelper.getBasicCommands(group.id)
+                                            .forEach { command ->
+                                                if (listOf(
+                                                        "VIM",
+                                                        "Emacs",
+                                                        "Nano",
+                                                        "Pico",
+                                                    ).contains(category.title)
+                                                ) {
+                                                    table {
+                                                        command.command.split("\n").forEach {
+                                                            tr {
+                                                                it.split(" - ").forEach {
+                                                                    td {
+                                                                        text(it)
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                } else if (listOf(
+                                                        "Terminal games",
+                                                        "Fun",
+                                                    ).contains(category.title)
+                                                ) {
+                                                    code(
+                                                        "$ ${
+                                                            command.command.replace(
+                                                                "\\n",
+                                                                "<br>",
+                                                            )
+                                                        }",
+                                                        command.mans,
+                                                        true,
+                                                    )
+                                                } else {
+                                                    code(
+                                                        "$ ${
+                                                            command.command.replace(
+                                                                "\\n",
+                                                                "<br>",
+                                                            )
+                                                        }",
+                                                        command.mans,
+                                                    )
+                                                }
+                                            }
                                     }
                                 }
                             }
@@ -421,85 +455,88 @@ class WebsiteBuilder {
 
             body {
                 header(2)
-                div {
-                    classes = setOf("masonry")
 
-                    databaseHelper.getTips().forEach { tip ->
-                        div {
-                            classes = setOf("code-group")
+                contentWrapper {
+                    div {
+                        classes = setOf("masonry")
 
-                            h2 {
-                                a("/${file.nameWithoutExtension}#${tip.id}") {
-                                    id = tip.id.toString()
-                                    text(tip.title)
+                        databaseHelper.getTips().forEach { tip ->
+                            div {
+                                classes = setOf("code-group")
+
+                                h2 {
+                                    a("/${file.nameWithoutExtension}#${tip.id}") {
+                                        id = tip.id.toString()
+                                        text(tip.title)
+                                    }
                                 }
-                            }
 
-                            var isTable = false
+                                var isTable = false
 
-                            fun closeTable() {
-                                isTable = false
-                                unsafe {
-                                    +"</table>"
+                                fun closeTable() {
+                                    isTable = false
+                                    unsafe {
+                                        +"</table>"
+                                    }
                                 }
-                            }
 
-                            fun startTable() {
-                                isTable = true
-                                unsafe {
-                                    +"<table>"
+                                fun startTable() {
+                                    isTable = true
+                                    unsafe {
+                                        +"<table>"
+                                    }
                                 }
-                            }
 
-                            databaseHelper.getTipSections().filter { it.tip_id == tip.id }.forEach {
-                                if (it.type != 3L && isTable) {
+                                databaseHelper.getTipSections().filter { it.tip_id == tip.id }.forEach {
+                                    if (it.type != 3L && isTable) {
+                                        closeTable()
+                                    }
+                                    if (it.type == 3L && !isTable) {
+                                        startTable()
+                                    }
+                                    when (it.type) {
+                                        0L -> {
+                                            span {
+                                                unsafe {
+                                                    +it.data1.replace("\\n", "<br>")
+                                                }
+                                            }
+                                            br
+                                        }
+
+                                        1L -> {
+                                            code(it.data1.replace("\\n", "<br>"), it.extra)
+                                        }
+
+                                        3L -> {
+                                            unsafe {
+                                                +"<tr><td>"
+                                            }
+                                            if (it.data1.isNotBlank()) {
+                                                b {
+                                                    text(it.data1)
+                                                }
+                                            }
+                                            unsafe {
+                                                +"</td>"
+                                            }
+                                            unsafe {
+                                                +"<td>"
+                                            }
+                                            if (it.extra.isNotBlank()) {
+                                                code(it.data2.replace("\\n", "<br>"), it.extra)
+                                            } else {
+                                                text(it.data2)
+                                            }
+                                            unsafe {
+                                                +"</td></tr>"
+                                            }
+                                        }
+                                    }
+                                }
+                                if (isTable) {
                                     closeTable()
                                 }
-                                if (it.type == 3L && !isTable) {
-                                    startTable()
-                                }
-                                when (it.type) {
-                                    0L -> {
-                                        span {
-                                            unsafe {
-                                                +it.data1.replace("\\n", "<br>")
-                                            }
-                                        }
-                                        br
-                                    }
-
-                                    1L -> {
-                                        code(it.data1.replace("\\n", "<br>"), it.extra)
-                                    }
-
-                                    3L -> {
-                                        unsafe {
-                                            +"<tr><td>"
-                                        }
-                                        if (it.data1.isNotBlank()) {
-                                            b {
-                                                text(it.data1)
-                                            }
-                                        }
-                                        unsafe {
-                                            +"</td>"
-                                        }
-                                        unsafe {
-                                            +"<td>"
-                                        }
-                                        if (it.extra.isNotBlank()) {
-                                            code(it.data2.replace("\\n", "<br>"), it.extra)
-                                        } else {
-                                            text(it.data2)
-                                        }
-                                        unsafe {
-                                            +"</td></tr>"
-                                        }
-                                    }
-                                }
-                            }
-                            if (isTable) {
-                                closeTable()
                             }
                         }
                     }
@@ -566,79 +603,82 @@ class WebsiteBuilder {
                 body {
                     header(selectedIndex = 0)
 
-                    div {
-                        id = "content"
-                        h1 {
-                            text(command.name)
-                        }
-                        h2 {
-                            classes = setOf("subtitle")
-                            text(command.description)
-                        }
+                    contentWrapper {
+                        div {
+                            id = "content"
+                            h1 {
+                                text(command.name)
+                            }
+                            h2 {
+                                classes = setOf("subtitle")
+                                text(command.description)
+                            }
 
-                        databaseHelper.getSections(command.id).sortedBy { it.getSortPriority() }
-                            .forEach { section ->
-                                h2 {
-                                    onClick = "togglePanel(this)"
-                                    classes = setOf("accordion-button", "active")
-                                    val sectionId =
-                                        section.title.lowercase(Locale.US).replace(" ", "-")
-                                    a("/man/${command.name.lowercase(Locale.US)}#$sectionId") {
-                                        id = sectionId
-                                        text(section.title)
+                            databaseHelper.getSections(command.id).sortedBy { it.getSortPriority() }
+                                .forEach { section ->
+                                    h2 {
+                                        onClick = "togglePanel(this)"
+                                        classes = setOf("accordion-button", "active")
+                                        val sectionId =
+                                            section.title.lowercase(Locale.US).replace(" ", "-")
+                                        a("/man/${command.name.lowercase(Locale.US)}#$sectionId") {
+                                            id = sectionId
+                                            text(section.title)
+                                        }
                                     }
-                                }
-                                div {
-                                    classes = setOf("panel")
-                                    when (section.title) {
-                                        "SEE ALSO" -> {
-                                            p {
-                                                val elements =
-                                                    getSeeAlsoSectionElements(section.content)
-                                                elements.forEach { element ->
-                                                    when (element) {
-                                                        is CommandElement.Man -> {
-                                                            a("/man/${element.man}") {
-                                                                title = "${element.man} man page"
-                                                                text(element.man)
+                                    div {
+                                        classes = setOf("panel")
+                                        when (section.title) {
+                                            "SEE ALSO" -> {
+                                                p {
+                                                    val elements =
+                                                        getSeeAlsoSectionElements(section.content)
+                                                    elements.forEach { element ->
+                                                        when (element) {
+                                                            is CommandElement.Man -> {
+                                                                a("/man/${element.man}") {
+                                                                    title =
+                                                                        "${element.man} man page"
+                                                                    text(element.man)
+                                                                }
                                                             }
-                                                        }
 
-                                                        is CommandElement.Text -> {
-                                                            unsafe {
-                                                                +element.text
+                                                            is CommandElement.Text -> {
+                                                                unsafe {
+                                                                    +element.text
+                                                                }
                                                             }
-                                                        }
 
-                                                        else -> {}
+                                                            else -> {}
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                            "TLDR" -> {
+                                                p {
+                                                    unsafe {
+                                                        +section.content.addAnchorAndCodeStyle(file.nameWithoutExtension)
+                                                    }
+                                                }
+                                            }
+
+                                            else -> {
+                                                p {
+                                                    unsafe {
+                                                        +section.content
                                                     }
                                                 }
                                             }
                                         }
-
-                                        "TLDR" -> {
-                                            p {
-                                                unsafe {
-                                                    +section.content.addAnchorAndCodeStyle(file.nameWithoutExtension)
-                                                }
-                                            }
-                                        }
-
-                                        else -> {
-                                            p {
-                                                unsafe {
-                                                    +section.content
-                                                }
-                                            }
-                                        }
                                     }
                                 }
-                            }
 
-                        button {
-                            onClick = "toggleAll(this)"
-                            classes = setOf("toggle-all-button")
-                            text("COLLAPSE ALL")
+                            button {
+                                onClick = "toggleAll(this)"
+                                classes = setOf("toggle-all-button")
+                                text("COLLAPSE ALL")
+                            }
                         }
                     }
 
@@ -886,23 +926,51 @@ class WebsiteBuilder {
         consumer,
     ).visit(block)
 
+    private fun FlowContent.contentWrapper(content: DIV.() -> Unit = {}): FlowContent {
+        div {
+            id = "content-wrapper"
+            div {
+                classes = setOf("side-panel")
+                style = "background-color: #ea9230"
+                a {
+                    href = "/linode-2025"
+                    img {
+                        src = "/images/af/linode-vertical.webp"
+                        width = "200"
+                    }
+                }
+            }
+            content()
+            div {
+                classes = setOf("side-panel")
+                style = "background-color: #173a62"
+                a {
+                    href = "/digitalocean-2025"
+                    img {
+                        src = "/images/af/digitalocean-vertical.webp"
+                        width = "200"
+                    }
+                }
+            }
+        }
+        return this
+    }
+
     private fun FlowContent.footer(showAd: Boolean = true): FlowContent {
         if (showAd) {
             div {
-                style = "text-align: center;"
-                a("https://gala.fan/6-I5oCuOy") {
+                classes = setOf("bottom-panel")
+
+                a("/linode-2025") {
                     target = ATarget.blank
                     img {
                         style = "max-width: calc(100% - 4px);"
-                        src = "/images/musicapp.webp"
+                        src = "/images/af/linode-horizontal.webp"
                         attributes["loading"] = "lazy"
                         width = "600"
                     }
                 }
             }
-        }
-        div {
-            id = "filler"
         }
         footer {
             text("All man pages are copyrighted by their respective authors. Thanks to ")
@@ -954,16 +1022,48 @@ class WebsiteBuilder {
                 text("My other projects: ")
                 div {
                     classes = setOf("project")
-                    a("https://coindodo.io") {
+                    a("https://adahub.io") {
                         target = ATarget.blank
                         rel = "noopener"
                         img {
-                            src = "/images/project-coindodo.webp"
-                            alt = "coindodo.io"
+                            src = "https://adahub.io/favicon.svg"
+                            alt = "adahub.io"
                             width = "30"
                             height = "30"
                         }
                     }
+                    br
+                    text("Blockchain")
+                }
+                div {
+                    classes = setOf("project")
+                    a("https://endlessdungeon.fun") {
+                        target = ATarget.blank
+                        rel = "noopener"
+                        img {
+                            src = "https://endlessdungeon-production.up.railway.app/favicon.png"
+                            alt = "endlessdungeon.fun"
+                            width = "30"
+                            height = "30"
+                        }
+                    }
+                    br
+                    text("Game")
+                }
+                div {
+                    classes = setOf("project")
+                    a("https://betabase.fun") {
+                        target = ATarget.blank
+                        rel = "noopener"
+                        img {
+                            src = "https://betabase.fun/images/icon.png"
+                            alt = "betabase.fun"
+                            width = "30"
+                            height = "30"
+                        }
+                    }
+                    br
+                    text("Climbing")
                 }
             }
         }
