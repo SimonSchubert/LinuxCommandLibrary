@@ -52,7 +52,7 @@ fun BasicGroupsScreen(
 }
 
 @Composable
-fun BasicGroupColumn(
+private fun BasicGroupColumn(
     viewModel: BasicGroupsViewModel,
     basicGroup: BasicGroup,
     onNavigate: (String) -> Unit = {},

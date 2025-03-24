@@ -58,10 +58,10 @@ fun CommandDetailScreen(
 }
 
 @Composable
-fun CommandSectionColumn(
+private fun CommandSectionColumn(
     viewModel: CommandDetailViewModel,
     section: CommandSection,
-    onNavigate: (String) -> Unit = {},
+    onNavigate: (String) -> Unit,
 ) {
     ListItem(
         text = {
@@ -81,9 +81,10 @@ fun CommandSectionColumn(
             Column(
                 modifier = Modifier.padding(start = 16.dp, end = 16.dp),
             ) {
+                println(section.content)
                 val tldrParts = section.content.split("<b>")
                 tldrParts.forEachIndexed { index, s ->
-                    val split = s.split("</b><br>")
+                    val split = s.split("</b>")
                     if (split.size > 1) {
                         Text(
                             text = split[0],
@@ -101,14 +102,14 @@ fun CommandSectionColumn(
                 }
             }
         } else {
-            val color = MaterialTheme.colors.onSurface
+            val color = MaterialTheme.colors.onSurface.toArgb()
             ListItem(text = {
                 AndroidView(factory = { context ->
                     TextView(context).apply {
                         val content =
                             HtmlCompat.fromHtml(section.content, HtmlCompat.FROM_HTML_MODE_LEGACY)
                         text = content.dropLastWhile { it.isWhitespace() }
-                        setTextColor(color.toArgb())
+                        setTextColor(color)
                     }
                 })
             })

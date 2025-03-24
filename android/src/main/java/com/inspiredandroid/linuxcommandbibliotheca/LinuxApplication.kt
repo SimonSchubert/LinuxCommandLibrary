@@ -8,8 +8,8 @@ import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commandlist.Comman
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.tips.TipsViewModel
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
-import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.context.GlobalContext.startKoin
+import org.koin.core.module.dsl.*
 import org.koin.dsl.module
 
 class LinuxApplication : Application() {

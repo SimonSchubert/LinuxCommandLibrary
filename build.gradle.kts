@@ -19,8 +19,8 @@ buildscript {
     }
 }
 
-group = "org.example"
-version = "3.2.7"
+group = "com.inspiredandroid"
+version = "3.3.0"
 
 allprojects {
     repositories {

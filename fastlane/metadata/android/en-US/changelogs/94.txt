@@ -1,0 +1,2 @@
+Add new commands and major update command info data
+Upgrade sdks
