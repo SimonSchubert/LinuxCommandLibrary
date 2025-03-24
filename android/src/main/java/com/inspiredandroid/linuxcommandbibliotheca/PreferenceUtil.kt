@@ -1,6 +1,7 @@
 package com.inspiredandroid.linuxcommandbibliotheca
 
 import android.content.Context
+import androidx.core.content.edit
 import androidx.preference.PreferenceManager
 
 class PreferenceUtil(private val context: Context) {
@@ -16,7 +17,7 @@ class PreferenceUtil(private val context: Context) {
     private fun saveBookmarkIds() {
         val bookmarksChain = bookmarksIds.joinToString(separator = ",")
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
-        prefs.edit().putString(KEY_BOOKMARKS, bookmarksChain).apply()
+        prefs.edit { putString(KEY_BOOKMARKS, bookmarksChain) }
     }
 
     fun addBookmark(id: Long) {
@@ -39,12 +40,12 @@ class PreferenceUtil(private val context: Context) {
 
     fun updateDatabaseVersion(context: Context) {
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
-        prefs.edit().putInt(KEY_DATABASE_VERSION, CURRENT_DATABASE_VERSION).apply()
+        prefs.edit { putInt(KEY_DATABASE_VERSION, CURRENT_DATABASE_VERSION) }
     }
 
     companion object {
         const val KEY_BOOKMARKS = "KEY_BOOKMARKS"
         const val KEY_DATABASE_VERSION = "DATABASE_VERSION"
-        const val CURRENT_DATABASE_VERSION = 8
+        const val CURRENT_DATABASE_VERSION = 9
     }
 }

@@ -87,11 +87,6 @@ fun main() {
     websiteBuilder.createCommandsHtmlFile(folder)
 
     websiteBuilder.createBasicsHtmlFile(folder)
-
-    minifier.minifyScriptsAndSheets(true)
-
-    return
-
     websiteBuilder.createBasicHtmlFiles(File(folder, "basic"))
 
     websiteBuilder.createTipsHtmlFile(folder)
@@ -103,7 +98,6 @@ fun main() {
 
     minifier.minifyScriptsAndSheets(true)
 }
-
 
 class WebsiteBuilder {
 
@@ -247,7 +241,7 @@ class WebsiteBuilder {
                                                 if (!listOf(
                                                         253,
                                                         254,
-                                                        255
+                                                        255,
                                                     ).contains(it.id.toInt())
                                                 ) {
                                                     classes = setOf("invert-color")
