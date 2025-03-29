@@ -1,4 +1,6 @@
-@file:OptIn(ExperimentalMaterialApi::class, ExperimentalMaterialApi::class)
+@file:OptIn(ExperimentalMaterialApi::class, ExperimentalMaterialApi::class,
+    ExperimentalMaterialApi::class
+)
 
 package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commandlist
 
@@ -21,6 +23,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.HighlightedText
+import databases.Command
 import org.koin.androidx.compose.koinViewModel
 
 /* Copyright 2022 Simon Schubert
@@ -58,46 +61,67 @@ fun CommandListScreen(
                 items = viewModel.filteredCommands,
                 key = { it.id },
             ) { command ->
-                ListItem(
-                    text = {
-                        if (searchText.isEmpty()) {
-                            Text(
-                                command.name,
-                                maxLines = 1,
-                                softWrap = false,
-                                overflow = TextOverflow.Ellipsis,
-                            )
-                        } else {
-                            HighlightedText(command.name, searchText)
-                        }
-                    },
-                    trailing = {
-                        if (viewModel.hasBookmark(command.id)) {
-                            Icon(
-                                painterResource(R.drawable.ic_bookmark_black_24dp),
-                                contentDescription = stringResource(R.string.bookmarked),
-                            )
-                        }
-                    },
-                    secondaryText = {
-                        if (searchText.isEmpty()) {
-                            Text(
-                                command.description,
-                                maxLines = 1,
-                                softWrap = false,
-                                overflow = TextOverflow.Ellipsis,
-                            )
-                        } else {
-                            HighlightedText(command.description, searchText)
-                        }
-                    },
-                    modifier = Modifier.clickable {
-                        onNavigate("command?commandId=${command.id}&commandName=${command.name}")
-                    },
+                CommandListItem(
+                    command = command,
+                    searchText = searchText,
+                    onNavigate = onNavigate,
+                    isBookmarked = { id -> viewModel.hasBookmark(id) },
                 )
             }
         }
     }
+}
+
+@Composable
+private fun CommandListItem(
+    command: Command,
+    searchText: String,
+    onNavigate: (String) -> Unit,
+    isBookmarked: (Long) -> Boolean,
+) {
+    ListItem(
+        text = {
+            if (searchText.isEmpty()) {
+                Text(
+                    command.name,
+                    maxLines = 1,
+                    softWrap = false,
+                    overflow = TextOverflow.Ellipsis,
+                )
+            } else {
+                HighlightedText(
+                    text = command.name,
+                    pattern = searchText,
+                )
+            }
+        },
+        trailing = {
+            if (isBookmarked(command.id)) {
+                Icon(
+                    painterResource(R.drawable.ic_bookmark_black_24dp),
+                    contentDescription = stringResource(R.string.bookmarked),
+                )
+            }
+        },
+        secondaryText = {
+            if (searchText.isEmpty()) {
+                Text(
+                    command.description,
+                    maxLines = 1,
+                    softWrap = false,
+                    overflow = TextOverflow.Ellipsis,
+                )
+            } else {
+                HighlightedText(
+                    text = command.description,
+                    pattern = searchText,
+                )
+            }
+        },
+        modifier = Modifier.clickable {
+            onNavigate("command?commandId=${command.id}&commandName=${command.name}")
+        },
+    )
 }
 
 @Preview

@@ -1,8 +1,11 @@
 package com.inspiredandroid.linuxcommandbibliotheca.ui.screens
 
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
@@ -64,9 +67,13 @@ fun AppInfoDialog(showDialog: MutableState<Boolean>) {
                         modifier = Modifier.padding(8.dp),
                     )
                     Row {
-                        Button(content = { Text("Rate the app") }, onClick = {
-                            uriHandler.openUri("https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca")
-                        }, modifier = Modifier.padding(start = 6.dp))
+                        Button(
+                            modifier = Modifier.padding(start = 6.dp),
+                            content = { Text("Rate the app") },
+                            onClick = {
+                                uriHandler.openUri("https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca")
+                            },
+                        )
                         IconButton(onClick = {
                             uriHandler.openUri("https://github.com/SimonSchubert/LinuxCommandLibrary")
                         }) {
@@ -88,6 +95,18 @@ fun AppInfoDialog(showDialog: MutableState<Boolean>) {
                             .weight(1f)
                             .verticalScroll(rememberScrollState()),
                     ) {
+                        Image(
+                            modifier = Modifier
+                                .padding(bottom = 8.dp)
+                                .fillMaxWidth()
+                                .clickable {
+                                    val link = "https://linuxcommandlibrary.com/linode-2025"
+                                    uriHandler.openUri(link)
+                                },
+                            painter = painterResource(R.mipmap.linode_horizontal),
+                            contentDescription = null,
+                        )
+
                         Text("Man pages", style = MaterialTheme.typography.h6)
                         Text("Licence information about the man page is usually specified in the man detail page under the category Author, Copyright or Licence. If there is no information on the page you can find the information in the man page source file on your linux system. If you have questions or can't find what you need, you can contact me at sschubert89@gmail.com.")
 
