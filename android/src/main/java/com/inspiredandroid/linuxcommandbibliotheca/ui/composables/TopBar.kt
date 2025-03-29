@@ -90,7 +90,6 @@ fun TopBar(
                     }) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                            modifier = Modifier,
                             contentDescription = stringResource(id = R.string.back),
                         )
                     }
@@ -117,6 +116,7 @@ fun TopBar(
                             unfocusedIndicatorColor = Color.Transparent,
                             backgroundColor = Color.Transparent,
                             cursorColor = LocalContentColor.current.copy(alpha = LocalContentAlpha.current),
+                            trailingIconColor = Color.White,
                         ),
                         trailingIcon = {
                             IconButton(onClick = {

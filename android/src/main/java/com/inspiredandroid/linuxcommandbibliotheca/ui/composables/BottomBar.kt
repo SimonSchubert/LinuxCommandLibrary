@@ -16,6 +16,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import com.inspiredandroid.linuxcommandbibliotheca.Screen
+import com.inspiredandroid.linuxcommandbibliotheca.ui.theme.LocalCustomColors
 
 /* Copyright 2022 Simon Schubert
  *
@@ -42,13 +43,16 @@ fun BottomBar(navController: NavHostController) {
     // TODO: read current route from navcontroller
     val selectedRoute = rememberSaveable { mutableStateOf(Screen.Basics.route) }
 
-    BottomNavigation(backgroundColor = MaterialTheme.colors.surface) {
+    BottomNavigation(
+        backgroundColor = LocalCustomColors.current.navBarBackground,
+        elevation = 0.dp,
+    ) {
         items.forEach { screen ->
             BottomNavigationItem(
                 icon = {
                     Icon(
-                        painterResource(id = screen.drawableRes),
-                        null,
+                        painter = painterResource(id = screen.drawableRes),
+                        contentDescription = null,
                         modifier = Modifier.size(24.dp),
                     )
                 },

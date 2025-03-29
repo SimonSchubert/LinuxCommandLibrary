@@ -6,6 +6,8 @@ import androidx.compose.material.Typography
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
@@ -29,6 +31,12 @@ import com.inspiredandroid.linuxcommandbibliotheca.R
  * limitations under the License.
 */
 
+data class CustomColors(
+    val navBarBackground: Color = Color(0xFF00695C),
+)
+
+val LocalCustomColors = compositionLocalOf { CustomColors() }
+
 @Composable
 fun LinuxTheme(content: @Composable () -> Unit) {
     val darkMode = isSystemInDarkTheme()
@@ -36,10 +44,13 @@ fun LinuxTheme(content: @Composable () -> Unit) {
         primary = Color(0xFFe45151),
         secondary = Color.White,
         background = Color(0xFF262626),
+        surface = Color(0xFF262626),
     )
     val lightColors = lightColors(
         primary = Color(0xFFe45151),
         secondary = Color.Black,
+        background = Color.White,
+        surface = Color.White,
     )
     val colorSchema = if (darkMode) darkColors else lightColors
 
@@ -58,9 +69,20 @@ fun LinuxTheme(content: @Composable () -> Unit) {
         subtitle2 = codeTextStyle,
     )
 
-    MaterialTheme(
-        colors = colorSchema,
-        typography = typography,
-        content = content,
-    )
+    val customColors = if (darkMode) {
+        CustomColors(
+            navBarBackground = Color(0xFF2D2D2D),
+        )
+    } else {
+        CustomColors(
+            navBarBackground = Color(0xFFFAFAFA),
+        )
+    }
+    CompositionLocalProvider(LocalCustomColors provides customColors) {
+        MaterialTheme(
+            colors = colorSchema,
+            typography = typography,
+            content = content,
+        )
+    }
 }
