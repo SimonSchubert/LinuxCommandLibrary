@@ -1,22 +1,27 @@
-@file:OptIn(ExperimentalMaterialApi::class)
+@file:OptIn(ExperimentalMaterialApi::class, ExperimentalLayoutApi::class)
 
 package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commanddetail
 
 import android.text.style.StyleSpan
 import android.text.style.UnderlineSpan
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material.Chip
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.ListItem
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
@@ -29,6 +34,7 @@ import androidx.compose.ui.unit.sp
 import androidx.core.text.HtmlCompat
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.CommandView
 import com.linuxcommandlibrary.shared.CommandElement
+import com.linuxcommandlibrary.shared.databaseHelper
 import databases.CommandSection
 import org.koin.androidx.compose.koinViewModel
 import org.koin.core.parameter.parametersOf
@@ -92,41 +98,87 @@ private fun CommandSectionColumn(
     )
 
     if (isCollapsed) {
-        if (section.title == "TLDR") {
-            Column(
-                modifier = Modifier.padding(start = 16.dp, end = 16.dp),
-            ) {
-                val tldrParts = section.content.split("<b>")
-                tldrParts.forEachIndexed { index, s ->
-                    val split = s.split("</b>")
-                    if (split.size > 1) {
-                        Text(
-                            text = split[0],
-                            fontSize = 16.sp,
-                            style = MaterialTheme.typography.subtitle1,
-                            fontWeight = FontWeight.Bold,
-                        )
+        when (section.title) {
+            "TLDR" -> {
+                Column(
+                    modifier = Modifier.padding(horizontal = 16.dp),
+                ) {
+                    val tldrParts = section.content.split("<b>")
+                    tldrParts.forEachIndexed { index, s ->
+                        val split = s.split("</b>")
+                        if (split.size > 1) {
+                            Text(
+                                text = split[0],
+                                fontSize = 15.sp,
+                                style = MaterialTheme.typography.subtitle1,
+                                fontWeight = FontWeight.Bold,
+                            )
 
-                        val command = "$ " + split[1].replace("<br>", "").replace("`", "")
-                        CommandView(command, listOf(CommandElement.Text(command)), onNavigate)
-                    }
-                    if (index != tldrParts.lastIndex) {
-                        Spacer(Modifier.height(8.dp))
+                            val command = "$ " + split[1].replace("<br>", "").replace("`", "")
+                            CommandView(
+                                command = command,
+                                elements = listOf(CommandElement.Text(command)),
+                                onNavigate = onNavigate,
+                            )
+                        }
+                        if (index != tldrParts.lastIndex) {
+                            Spacer(Modifier.height(6.dp))
+                        }
                     }
                 }
             }
-        } else {
-            ListItem(text = {
+            "SEE ALSO" -> {
+                val commands = remember {
+                    getCommands(section.content)
+                }
+                if (commands.isNotEmpty()) {
+                    FlowRow(
+                        modifier = Modifier.padding(horizontal = 16.dp),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    ) {
+                        commands.forEach { name ->
+                            Chip(onClick = {
+                                onNavigate("command?commandName=$name")
+                            }) {
+                                Text(
+                                    text = name,
+                                    color = MaterialTheme.colors.onSurface,
+                                )
+                            }
+                        }
+                    }
+                } else {
+                    // fallback
+                    Text(
+                        modifier = Modifier.padding(horizontal = 16.dp),
+                        text = section.content.toAnnotatedString(),
+                        color = MaterialTheme.colors.onSurface,
+                    )
+                }
+            }
+            else -> {
                 Text(
+                    modifier = Modifier.padding(horizontal = 16.dp),
                     text = section.content.toAnnotatedString(),
                     color = MaterialTheme.colors.onSurface,
                 )
-            })
+            }
         }
     }
 }
 
-fun String.toAnnotatedString(): AnnotatedString {
+private fun getCommands(input: String): List<String> {
+    val commands = input.split(",").map { it.trim() }
+
+    return commands
+        .map { command ->
+            command.replace(Regex("\\(\\d+\\)$"), "").trim()
+        }.filter {
+            databaseHelper.getCommand(it) != null
+        }
+}
+
+private fun String.toAnnotatedString(): AnnotatedString {
     val spanned = HtmlCompat.fromHtml(this, HtmlCompat.FROM_HTML_MODE_LEGACY)
 
     return buildAnnotatedString {
