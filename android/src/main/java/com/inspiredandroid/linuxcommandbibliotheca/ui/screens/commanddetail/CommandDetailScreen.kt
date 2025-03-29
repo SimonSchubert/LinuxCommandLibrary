@@ -2,7 +2,8 @@
 
 package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commanddetail
 
-import android.widget.TextView
+import android.text.style.StyleSpan
+import android.text.style.UnderlineSpan
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -17,11 +18,14 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.toArgb
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.text.HtmlCompat
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.CommandView
 import com.linuxcommandlibrary.shared.CommandElement
@@ -57,15 +61,21 @@ fun CommandDetailScreen(
             items = viewModel.sections,
             key = { it.id },
         ) { section ->
-            CommandSectionColumn(viewModel, section, onNavigate)
+            CommandSectionColumn(
+                section = section,
+                isCollapsed = viewModel.isGroupCollapsed(section.id),
+                onToggleCollapse = { id -> viewModel.toggleCollapse(id) },
+                onNavigate = onNavigate,
+            )
         }
     }
 }
 
 @Composable
 private fun CommandSectionColumn(
-    viewModel: CommandDetailViewModel,
     section: CommandSection,
+    isCollapsed: Boolean,
+    onToggleCollapse: (Long) -> Unit,
     onNavigate: (String) -> Unit,
 ) {
     ListItem(
@@ -77,11 +87,11 @@ private fun CommandSectionColumn(
             )
         },
         modifier = Modifier.clickable {
-            viewModel.toggleCollapse(section.id)
+            onToggleCollapse(section.id)
         },
     )
 
-    if (viewModel.isGroupCollapsed(section.id)) {
+    if (isCollapsed) {
         if (section.title == "TLDR") {
             Column(
                 modifier = Modifier.padding(start = 16.dp, end = 16.dp),
@@ -106,17 +116,39 @@ private fun CommandSectionColumn(
                 }
             }
         } else {
-            val color = MaterialTheme.colors.onSurface.toArgb()
             ListItem(text = {
-                AndroidView(factory = { context ->
-                    TextView(context).apply {
-                        val content =
-                            HtmlCompat.fromHtml(section.content, HtmlCompat.FROM_HTML_MODE_LEGACY)
-                        text = content.dropLastWhile { it.isWhitespace() }
-                        setTextColor(color)
-                    }
-                })
+                Text(
+                    text = section.content.toAnnotatedString(),
+                    color = MaterialTheme.colors.onSurface,
+                )
             })
+        }
+    }
+}
+
+fun String.toAnnotatedString(): AnnotatedString {
+    val spanned = HtmlCompat.fromHtml(this, HtmlCompat.FROM_HTML_MODE_LEGACY)
+
+    return buildAnnotatedString {
+        append(spanned.toString().trim('\n', ' '))
+
+        spanned.getSpans(0, spanned.length, Any::class.java).forEach { span ->
+            val start = spanned.getSpanStart(span)
+            val end = spanned.getSpanEnd(span)
+
+            when (span) {
+                is StyleSpan -> when (span.style) {
+                    android.graphics.Typeface.BOLD -> {
+                        addStyle(SpanStyle(fontWeight = FontWeight.Bold), start, end)
+                    }
+                    android.graphics.Typeface.ITALIC -> {
+                        addStyle(SpanStyle(fontStyle = FontStyle.Italic), start, end)
+                    }
+                }
+                is UnderlineSpan -> {
+                    addStyle(SpanStyle(textDecoration = TextDecoration.Underline), start, end)
+                }
+            }
         }
     }
 }
