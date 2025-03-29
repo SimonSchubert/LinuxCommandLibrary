@@ -196,7 +196,7 @@ class WebsiteBuilder {
     }
 
     fun createBasicsHtmlFile(folder: File) {
-        println("Crate basics html")
+        println("Create basics html")
 
         val file = File(folder, "index.html")
         file.delete()
@@ -408,7 +408,7 @@ class WebsiteBuilder {
     }
 
     fun createTipsHtmlFile(folder: File) {
-        println("Crate tips html")
+        println("Create tips html")
 
         folder.mkdir()
 
@@ -646,7 +646,7 @@ class WebsiteBuilder {
                                             "TLDR" -> {
                                                 p {
                                                     unsafe {
-                                                        +section.content.addAnchorAndCodeStyle(file.nameWithoutExtension)
+                                                        +sanitizeHtml(section.content.addAnchorAndCodeStyle(file.nameWithoutExtension))
                                                     }
                                                 }
                                             }
@@ -654,7 +654,7 @@ class WebsiteBuilder {
                                             else -> {
                                                 p {
                                                     unsafe {
-                                                        +section.content
+                                                        +sanitizeHtml(section.content)
                                                     }
                                                 }
                                             }
@@ -682,6 +682,9 @@ class WebsiteBuilder {
         }
         println()
     }
+
+    fun sanitizeHtml(content: String): String = content.replace(Regex("(?i)<(html|head|title|body)[^>]*>.*?</\\1>|<(html|head|title|body)[^>]*>"), "")
+        .replace(Regex("(?i)</?(html|head|title|body)>"), "")
 
     /**
      * Find and link man pages if command exists in database. Example: ps(1), regex(7), signal(7)

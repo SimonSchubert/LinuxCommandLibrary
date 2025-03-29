@@ -46,6 +46,6 @@ class PreferenceUtil(private val context: Context) {
     companion object {
         const val KEY_BOOKMARKS = "KEY_BOOKMARKS"
         const val KEY_DATABASE_VERSION = "DATABASE_VERSION"
-        const val CURRENT_DATABASE_VERSION = 10
+        const val CURRENT_DATABASE_VERSION = 11
     }
 }

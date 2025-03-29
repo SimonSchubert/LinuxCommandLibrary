@@ -29,7 +29,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.ui.theme.LinuxTheme
 @Composable
 fun HighlightedText(text: String, pattern: String) {
     val highlightColor = MaterialTheme.colors.primary
-    val annotatedString = remember(pattern, highlightColor) {
+    val annotatedString = remember(pattern) {
         buildAnnotatedString {
             val splitText = text.split(pattern, ignoreCase = true)
             splitText.forEachIndexed { index, s ->
