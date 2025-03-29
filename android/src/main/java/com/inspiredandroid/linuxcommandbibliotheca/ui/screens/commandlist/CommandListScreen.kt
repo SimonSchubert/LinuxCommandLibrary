@@ -21,6 +21,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.HighlightedText
+import org.koin.androidx.compose.koinViewModel
 
 /* Copyright 2022 Simon Schubert
  *
@@ -40,7 +41,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.HighlightedTex
 @Composable
 fun CommandListScreen(
     searchText: String,
-    viewModel: CommandListViewModel,
+    viewModel: CommandListViewModel = koinViewModel(),
     onNavigate: (String) -> Unit = {},
 ) {
     LaunchedEffect(searchText) {

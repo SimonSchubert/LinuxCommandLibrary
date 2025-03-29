@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.LinearProgressIndicator
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -44,7 +45,11 @@ fun InitializeDatabaseScreen(onFinish: () -> Unit = {}) {
                 .size(240.dp)
                 .align(Alignment.CenterHorizontally),
         )
-        Text("Initialize database", modifier = Modifier.align(Alignment.CenterHorizontally))
+        Text(
+            "Initialize database",
+            color = MaterialTheme.colors.onSurface,
+            modifier = Modifier.align(Alignment.CenterHorizontally),
+        )
         LinearProgressIndicator(
             progress = status.intValue.div(100f),
             modifier = Modifier.padding(top = 16.dp),

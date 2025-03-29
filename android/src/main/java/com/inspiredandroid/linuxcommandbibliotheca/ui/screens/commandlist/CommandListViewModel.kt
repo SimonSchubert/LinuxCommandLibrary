@@ -22,7 +22,7 @@ import databases.Command
  * limitations under the License.
 */
 
-class CommandListViewModel(val preferenceUtil: PreferenceUtil) : ViewModel() {
+class CommandListViewModel(private val preferenceUtil: PreferenceUtil) : ViewModel() {
 
     private val commands: List<Command> = databaseHelper.getCommands()
     var filteredCommands = mutableStateListOf<Command>()

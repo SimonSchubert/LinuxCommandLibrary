@@ -20,6 +20,8 @@ import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.CommandView
 import com.linuxcommandlibrary.shared.databaseHelper
 import com.linuxcommandlibrary.shared.getCommandList
 import databases.BasicGroup
+import org.koin.androidx.compose.koinViewModel
+import org.koin.core.parameter.parametersOf
 
 /* Copyright 2022 Simon Schubert
  *
@@ -38,8 +40,11 @@ import databases.BasicGroup
 
 @Composable
 fun BasicGroupsScreen(
+    categoryId: Long,
+    viewModel: BasicGroupsViewModel = koinViewModel<BasicGroupsViewModel>(
+        parameters = { parametersOf(categoryId) },
+    ),
     onNavigate: (String) -> Unit = {},
-    viewModel: BasicGroupsViewModel,
 ) {
     LazyColumn(Modifier.fillMaxSize()) {
         items(

@@ -26,6 +26,8 @@ import androidx.core.text.HtmlCompat
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.CommandView
 import com.linuxcommandlibrary.shared.CommandElement
 import databases.CommandSection
+import org.koin.androidx.compose.koinViewModel
+import org.koin.core.parameter.parametersOf
 
 /* Copyright 2022 Simon Schubert
  *
@@ -44,8 +46,11 @@ import databases.CommandSection
 
 @Composable
 fun CommandDetailScreen(
-    onNavigate: (String) -> Unit = {},
-    viewModel: CommandDetailViewModel,
+    commandId: Long,
+    viewModel: CommandDetailViewModel = koinViewModel<CommandDetailViewModel>(
+        parameters = { parametersOf(commandId) },
+    ),
+    onNavigate: (String) -> Unit,
 ) {
     LazyColumn(Modifier.fillMaxSize()) {
         items(
@@ -81,7 +86,6 @@ private fun CommandSectionColumn(
             Column(
                 modifier = Modifier.padding(start = 16.dp, end = 16.dp),
             ) {
-                println(section.content)
                 val tldrParts = section.content.split("<b>")
                 tldrParts.forEachIndexed { index, s ->
                     val split = s.split("</b>")

@@ -431,7 +431,7 @@ pre {
 	-webkit-column-break-inside: avoid;
 	page-break-inside: avoid;
 	break-inside: avoid-column;
-	display: table;
+	display: inline-grid;
 	margin-bottom: 15px;
 }
 

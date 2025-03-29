@@ -153,7 +153,7 @@ class WebsiteBuilder {
                 contentWrapper {
                     div {
                         id = "content"
-                        style = "width: 100%; padding: 12px;"
+                        style = "width: 100%; padding: 12px; align-self: start"
                         div {
                             id = "search-wrapper"
                             input {
@@ -238,14 +238,7 @@ class WebsiteBuilder {
                                     a("basic/${it.getHtmlFileName()}") {
                                         div {
                                             i {
-                                                if (!listOf(
-                                                        253,
-                                                        254,
-                                                        255,
-                                                    ).contains(it.id.toInt())
-                                                ) {
-                                                    classes = setOf("invert-color")
-                                                }
+                                                classes = setOf("invert-color")
                                                 style =
                                                     "background-image: url(\"images/${it.getIconResource()}\");"
                                             }
@@ -354,10 +347,11 @@ class WebsiteBuilder {
                                         databaseHelper.getBasicCommands(group.id)
                                             .forEach { command ->
                                                 if (listOf(
-                                                        "VIM",
-                                                        "Emacs",
-                                                        "Nano",
-                                                        "Pico",
+                                                        "VIM Texteditor",
+                                                        "Emacs Texteditor",
+                                                        "Nano Texteditor",
+                                                        "Pico Texteditor",
+                                                        "Micro Texteditor",
                                                     ).contains(category.title)
                                                 ) {
                                                     table {
@@ -920,29 +914,42 @@ class WebsiteBuilder {
         consumer,
     ).visit(block)
 
+    data class Ad(val imageUrl: String, val url: String, val backgroundColor: String)
+    val ads = listOf(
+        Ad("linode-vertical.webp", "/linode-2025", "#ea9230"),
+        Ad("digitalocean-vertical.webp", "/digitalocean-2025", "#173a62"),
+        Ad("proton-free-vertical.webp", "/proton-free-2025", "#01a4e8"),
+        Ad("proton-paid-vertical.webp", "/proton-paid-2025", "#f1c522"),
+    )
+
     private fun FlowContent.contentWrapper(content: DIV.() -> Unit = {}): FlowContent {
+        val randomAds = ads.shuffled().take(2)
         div {
             id = "content-wrapper"
-            div {
-                classes = setOf("side-panel")
-                style = "background-color: #ea9230"
-                a {
-                    href = "/linode-2025"
-                    img {
-                        src = "/images/af/linode-vertical.webp"
-                        width = "200"
+            randomAds[0].let { ad ->
+                div {
+                    classes = setOf("side-panel")
+                    style = "background-color: ${ad.backgroundColor}"
+                    a {
+                        href = ad.url
+                        img {
+                            src = "/images/af/${ad.imageUrl}"
+                            width = "200"
+                        }
                     }
                 }
             }
             content()
-            div {
-                classes = setOf("side-panel")
-                style = "background-color: #173a62"
-                a {
-                    href = "/digitalocean-2025"
-                    img {
-                        src = "/images/af/digitalocean-vertical.webp"
-                        width = "200"
+            randomAds[1].let { ad ->
+                div {
+                    classes = setOf("side-panel")
+                    style = "background-color: ${ad.backgroundColor}"
+                    a {
+                        href = ad.url
+                        img {
+                            src = "/images/af/${ad.imageUrl}"
+                            width = "200"
+                        }
                     }
                 }
             }
@@ -1192,6 +1199,11 @@ class WebsiteBuilder {
         "Input" -> "icon-mouse.svg"
         "JSON" -> "icon-json.svg"
         "Fun" -> "icon-fun.svg"
+        "VIM Texteditor" -> "icon-text-edit.svg"
+        "Emacs Texteditor" -> "icon-text-edit.svg"
+        "Nano Texteditor" -> "icon-text-edit.svg"
+        "Pico Texteditor" -> "icon-text-edit.svg"
+        "Micro Texteditor" -> "icon-text-edit.svg"
         else -> ""
     }
 
@@ -1210,10 +1222,11 @@ class WebsiteBuilder {
         "Package manager" -> "Install, update, upgrade, remove packages on Linux"
         "Hacking tools" -> "Hacking, forensics and exploitation tools for Linux"
         "Terminal games" -> "Terminal games on Linux"
-        "VIM" -> "Working with vim on the Linux command line"
-        "Emacs" -> "Working with emacs on the Linux command line"
-        "Nano" -> "Working with nano on the Linux command line"
-        "Pico" -> "Working with pico on the Linux command line"
+        "VIM Texteditor" -> "Working with vim on the Linux command line"
+        "Emacs Texteditor" -> "Working with emacs on the Linux command line"
+        "Nano Texteditor" -> "Working with nano on the Linux command line"
+        "Pico Texteditor" -> "Working with pico on the Linux command line"
+        "Micro Texteditor" -> "Working with micro on the Linux command line"
         "Crypto currencies" -> "Miners, wallets and trading bots for Linux"
         "Input" -> "Type keys and move mouse via the Linux command line"
         "JSON" -> "Print, select, modify, delete and create json files on cmd"
