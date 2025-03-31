@@ -3,7 +3,7 @@ package com.linuxcommandlibrary.cli
 import com.linuxcommandlibrary.shared.databaseHelper
 import com.linuxcommandlibrary.shared.getCurrentVersion
 import com.linuxcommandlibrary.shared.initDatabase
-import com.linuxcommandlibrary.shared.search
+import com.linuxcommandlibrary.shared.sortedSearch
 import kotlin.system.exitProcess
 
 const val BOLD = "\u001b[1m"
@@ -53,7 +53,7 @@ fun showStartMenu() {
 fun showSearch() {
     print("Search: ")
     val input = readlnOrNull() ?: ""
-    val commands = databaseHelper.getCommands().search(input).take(10)
+    val commands = databaseHelper.getCommandsByQuery(input).sortedSearch(input).take(10)
     if (commands.isEmpty()) {
         println("No results for \"$input\"")
         showSearch()
