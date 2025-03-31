@@ -20,7 +20,7 @@ buildscript {
 }
 
 group = "com.inspiredandroid"
-version = "3.3.2"
+version = "3.3.3"
 
 allprojects {
     repositories {

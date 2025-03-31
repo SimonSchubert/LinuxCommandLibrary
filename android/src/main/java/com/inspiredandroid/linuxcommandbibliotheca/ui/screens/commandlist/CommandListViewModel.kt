@@ -1,11 +1,16 @@
 package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commandlist
 
-import androidx.compose.runtime.mutableStateListOf
+import android.content.SharedPreferences
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.inspiredandroid.linuxcommandbibliotheca.PreferenceUtil
 import com.linuxcommandlibrary.shared.databaseHelper
-import com.linuxcommandlibrary.shared.search
 import databases.Command
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
 
 /* Copyright 2022 Simon Schubert
  *
@@ -24,23 +29,32 @@ import databases.Command
 
 class CommandListViewModel(private val preferenceUtil: PreferenceUtil) : ViewModel() {
 
-    private val commands: List<Command> = databaseHelper.getCommands()
-    var filteredCommands = mutableStateListOf<Command>()
+    private val _commands = MutableStateFlow<List<Command>>(emptyList())
+    val commands = _commands.asStateFlow()
 
-    fun filterCommands(searchText: String) {
-        filteredCommands.clear()
-        filteredCommands.addAll(
-            if (searchText.isEmpty()) {
-                if (preferenceUtil.bookmarksIds.isNotEmpty()) {
-                    commands.sortedBy { !hasBookmark(it.id) }
-                } else {
-                    commands
-                }
-            } else {
-                commands.search(searchText)
-            },
-        )
+    private val preferenceListener = SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
+        if (key == PreferenceUtil.KEY_BOOKMARKS) {
+            updateCommands()
+        }
+    }
+
+    init {
+        updateCommands()
+        preferenceUtil.prefs.registerOnSharedPreferenceChangeListener(preferenceListener)
+    }
+
+    private fun updateCommands() {
+        viewModelScope.launch(Dispatchers.IO) {
+            _commands.update {
+                databaseHelper.getCommands().sortedBy { !hasBookmark(it.id) }
+            }
+        }
     }
 
     fun hasBookmark(id: Long): Boolean = preferenceUtil.hasBookmark(id)
+
+    override fun onCleared() {
+        preferenceUtil.prefs.unregisterOnSharedPreferenceChangeListener(preferenceListener)
+        super.onCleared()
+    }
 }

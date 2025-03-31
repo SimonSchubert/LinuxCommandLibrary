@@ -8,6 +8,10 @@ import androidx.activity.enableEdgeToEdge
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
@@ -19,7 +23,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.navigation.compose.NavHost
@@ -34,6 +37,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basiccategories.Ba
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basicgroups.BasicGroupsScreen
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commanddetail.CommandDetailScreen
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commandlist.CommandListScreen
+import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.search.SearchScreen
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.tips.TipsScreen
 import com.inspiredandroid.linuxcommandbibliotheca.ui.theme.LinuxTheme
 import com.inspiredandroid.linuxcommandbibliotheca.ui.theme.LocalCustomColors
@@ -64,9 +68,9 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge(statusBarStyle = SystemBarStyle.dark(android.graphics.Color.TRANSPARENT))
         super.onCreate(savedInstanceState)
 
-        if (!hasDatabase(this) || !preferenceManager.isDatabaseUpToDate(this)) {
+        if (!hasDatabase(this) || !preferenceManager.isDatabaseUpToDate()) {
             startActivity(Intent(this, InitializeDatabaseActivity::class.java))
-            preferenceManager.updateDatabaseVersion(this)
+            preferenceManager.updateDatabaseVersion()
             finish()
             return
         }
@@ -104,6 +108,7 @@ fun LinuxApp() {
             TextFieldValue(text = "", selection = TextRange(0)),
         )
     }
+    val showSearch = remember { mutableStateOf(false) }
     val onNavigate: (String) -> Unit = {
         navController.navigate(it)
     }
@@ -116,93 +121,123 @@ fun LinuxApp() {
                 onNavigateBack = {
                     navController.popBackStack()
                 },
+                showSearch = showSearch,
             )
         },
         bottomBar = {
-            BottomBar(navController)
+            BottomBar(
+                navController = navController,
+                resetSearch = {
+                    searchTextValue.value = TextFieldValue(text = "", selection = TextRange(0))
+                    showSearch.value = false
+                },
+            )
         },
     ) { innerPadding ->
-
-        NavHost(
-            navController = navController,
-            startDestination = Screen.Basics.route,
+        Box(
             modifier = Modifier.padding(innerPadding),
         ) {
-            composable(
-                Screen.Basics.route,
-                deepLinks = listOf(
-                    navDeepLink { uriPattern = "$DEEPLINK_URI/basics" },
-                    navDeepLink { uriPattern = "$DEEPLINK_URI/basics.html" },
-                ),
+            NavHost(
+                navController = navController,
+                startDestination = Screen.Basics.route,
             ) {
-                BasicCategoriesScreen(onNavigate)
+                composable(
+                    Screen.Basics.route,
+                    deepLinks = listOf(
+                        navDeepLink { uriPattern = "$DEEPLINK_URI/basics" },
+                        navDeepLink { uriPattern = "$DEEPLINK_URI/basics.html" },
+                    ),
+                ) {
+                    BasicCategoriesScreen(
+                        onNavigate = onNavigate,
+                    )
+                }
+                composable(
+                    Screen.Commands.route,
+                    deepLinks = listOf(
+                        navDeepLink { uriPattern = "$DEEPLINK_URI/" },
+                        navDeepLink { uriPattern = "$DEEPLINK_URI/index.html" },
+                    ),
+                ) {
+                    CommandListScreen(
+                        onNavigate = onNavigate,
+                    )
+                }
+                composable(
+                    Screen.Tips.route,
+                    deepLinks = listOf(
+                        navDeepLink { uriPattern = "$DEEPLINK_URI/tips" },
+                        navDeepLink { uriPattern = "$DEEPLINK_URI/tips.html" },
+                    ),
+                ) {
+                    TipsScreen(onNavigate)
+                }
+                composable(
+                    "basicgroups?categoryId={categoryId}&categoryName={categoryName}",
+                    arguments = listOf(
+                        navArgument("categoryId") { defaultValue = "" },
+                        navArgument("categoryName") {},
+                    ),
+                    deepLinks = listOf(
+                        navDeepLink {
+                            uriPattern = "$DEEPLINK_URI/basic/{categoryName}.html"
+                        },
+                        navDeepLink { uriPattern = "$DEEPLINK_URI/basic/{categoryName}" },
+                    ),
+                ) { backStackEntry ->
+                    val categoryId = backStackEntry.getCategoryId()
+                    if (categoryId != null) {
+                        BasicGroupsScreen(
+                            categoryId = categoryId,
+                            onNavigate = onNavigate,
+                        )
+                    } else {
+                        // open tips screen on invalid deeplink parameters
+                        TipsScreen(onNavigate)
+                    }
+                }
+                composable(
+                    "command?commandId={commandId}&commandName={commandName}",
+                    arguments = listOf(
+                        navArgument("commandId") { defaultValue = "" },
+                        navArgument("commandName") {},
+                    ),
+                    deepLinks = listOf(
+                        navDeepLink { uriPattern = "$DEEPLINK_URI/man/{commandName}.html" },
+                        navDeepLink { uriPattern = "$DEEPLINK_URI/man/{commandName}" },
+                    ),
+                ) { backStackEntry ->
+                    val commandId = backStackEntry.getCommandId()
+                    if (commandId != null) {
+                        CommandDetailScreen(
+                            commandId = commandId,
+                            onNavigate = onNavigate,
+                        )
+                    } else {
+                        // open tips screen on invalid deeplink parameters
+                        TipsScreen(onNavigate)
+                    }
+                }
             }
-            composable(
-                Screen.Commands.route,
-                deepLinks = listOf(
-                    navDeepLink { uriPattern = "$DEEPLINK_URI/" },
-                    navDeepLink { uriPattern = "$DEEPLINK_URI/index.html" },
-                ),
+
+            val isSearchVisible = remember(
+                searchTextValue.value.text,
+                navBackStackEntry.value?.destination?.route,
             ) {
-                CommandListScreen(
+                searchTextValue.value.text.isNotEmpty() &&
+                    navBackStackEntry.value?.destination?.route?.startsWith("command?") == false
+            }
+            AnimatedVisibility(
+                visible = isSearchVisible,
+                enter = fadeIn(animationSpec = tween(300)),
+                exit = fadeOut(animationSpec = tween(durationMillis = 300, delayMillis = 300)), // work around for navigation overlaps
+            ) {
+                SearchScreen(
                     searchText = searchTextValue.value.text,
-                    onNavigate = onNavigate,
-                )
-            }
-            composable(
-                Screen.Tips.route,
-                deepLinks = listOf(
-                    navDeepLink { uriPattern = "$DEEPLINK_URI/tips" },
-                    navDeepLink { uriPattern = "$DEEPLINK_URI/tips.html" },
-                ),
-            ) {
-                TipsScreen(onNavigate)
-            }
-            composable(
-                "basicgroups?categoryId={categoryId}&categoryName={categoryName}",
-                arguments = listOf(
-                    navArgument("categoryId") { defaultValue = "" },
-                    navArgument("categoryName") {},
-                ),
-                deepLinks = listOf(
-                    navDeepLink {
-                        uriPattern = "$DEEPLINK_URI/basic/{categoryName}.html"
+                    onNavigate = {
+                        navController.navigate(it)
                     },
-                    navDeepLink { uriPattern = "$DEEPLINK_URI/basic/{categoryName}" },
-                ),
-            ) { backStackEntry ->
-                val categoryId = backStackEntry.getCategoryId()
-                if (categoryId != null) {
-                    BasicGroupsScreen(
-                        categoryId = categoryId,
-                        onNavigate = onNavigate,
-                    )
-                } else {
-                    // open tips screen on invalid deeplink parameters
-                    TipsScreen(onNavigate)
-                }
-            }
-            composable(
-                "command?commandId={commandId}&commandName={commandName}",
-                arguments = listOf(
-                    navArgument("commandId") { defaultValue = "" },
-                    navArgument("commandName") {},
-                ),
-                deepLinks = listOf(
-                    navDeepLink { uriPattern = "$DEEPLINK_URI/man/{commandName}.html" },
-                    navDeepLink { uriPattern = "$DEEPLINK_URI/man/{commandName}" },
-                ),
-            ) { backStackEntry ->
-                val commandId = backStackEntry.getCommandId()
-                if (commandId != null) {
-                    CommandDetailScreen(
-                        commandId = commandId,
-                        onNavigate = onNavigate,
-                    )
-                } else {
-                    // open tips screen on invalid deeplink parameters
-                    TipsScreen(onNavigate)
-                }
+                )
             }
         }
     }

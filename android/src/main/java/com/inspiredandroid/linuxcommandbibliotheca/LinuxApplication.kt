@@ -5,6 +5,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basiccategories.Ba
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basicgroups.BasicGroupsViewModel
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commanddetail.CommandDetailViewModel
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commandlist.CommandListViewModel
+import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.search.SearchViewModel
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.tips.TipsViewModel
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -30,6 +31,7 @@ class LinuxApplication : Application() {
         viewModel { CommandDetailViewModel(get()) }
         viewModel { TipsViewModel() }
         viewModel { CommandListViewModel(get()) }
+        viewModel { SearchViewModel() }
 
         single { PreferenceUtil(androidContext()) }
     }

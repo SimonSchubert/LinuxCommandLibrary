@@ -1,22 +1,23 @@
 package com.inspiredandroid.linuxcommandbibliotheca
 
 import android.content.Context
+import android.content.SharedPreferences
 import androidx.core.content.edit
 import androidx.preference.PreferenceManager
 
-class PreferenceUtil(private val context: Context) {
+class PreferenceUtil(context: Context) {
 
-    val bookmarksIds = getBookmarkIds()
+    val prefs: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
+
+    private val bookmarksIds = getBookmarkIds()
 
     private fun getBookmarkIds(): MutableList<Long> {
-        val prefs = PreferenceManager.getDefaultSharedPreferences(context)
         val bookmarksChain = prefs.getString(KEY_BOOKMARKS, "") ?: ""
         return bookmarksChain.split(",").mapNotNull { it.trim().toLongOrNull() }.toMutableList()
     }
 
     private fun saveBookmarkIds() {
         val bookmarksChain = bookmarksIds.joinToString(separator = ",")
-        val prefs = PreferenceManager.getDefaultSharedPreferences(context)
         prefs.edit { putString(KEY_BOOKMARKS, bookmarksChain) }
     }
 
@@ -32,20 +33,18 @@ class PreferenceUtil(private val context: Context) {
 
     fun hasBookmark(id: Long): Boolean = bookmarksIds.contains(id)
 
-    fun isDatabaseUpToDate(context: Context): Boolean {
-        val prefs = PreferenceManager.getDefaultSharedPreferences(context)
+    fun isDatabaseUpToDate(): Boolean {
         val databaseVersion = prefs.getInt(KEY_DATABASE_VERSION, 0)
         return databaseVersion == CURRENT_DATABASE_VERSION
     }
 
-    fun updateDatabaseVersion(context: Context) {
-        val prefs = PreferenceManager.getDefaultSharedPreferences(context)
+    fun updateDatabaseVersion() {
         prefs.edit { putInt(KEY_DATABASE_VERSION, CURRENT_DATABASE_VERSION) }
     }
 
     companion object {
         const val KEY_BOOKMARKS = "KEY_BOOKMARKS"
         const val KEY_DATABASE_VERSION = "DATABASE_VERSION"
-        const val CURRENT_DATABASE_VERSION = 11
+        const val CURRENT_DATABASE_VERSION = 12
     }
 }
