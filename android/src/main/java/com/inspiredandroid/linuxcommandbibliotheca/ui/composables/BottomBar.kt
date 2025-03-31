@@ -33,13 +33,17 @@ import com.inspiredandroid.linuxcommandbibliotheca.ui.theme.LocalCustomColors
  * limitations under the License.
 */
 
+val bottomBarItems = listOf(
+    Screen.Basics,
+    Screen.Tips,
+    Screen.Commands,
+)
+
 @Composable
-fun BottomBar(navController: NavHostController) {
-    val items = listOf(
-        Screen.Basics,
-        Screen.Tips,
-        Screen.Commands,
-    )
+fun BottomBar(
+    navController: NavHostController,
+    resetSearch: () -> Unit,
+) {
     // TODO: read current route from navcontroller
     val selectedRoute = rememberSaveable { mutableStateOf(Screen.Basics.route) }
 
@@ -47,7 +51,7 @@ fun BottomBar(navController: NavHostController) {
         backgroundColor = LocalCustomColors.current.navBarBackground,
         elevation = 0.dp,
     ) {
-        items.forEach { screen ->
+        bottomBarItems.forEach { screen ->
             BottomNavigationItem(
                 icon = {
                     Icon(
@@ -61,6 +65,9 @@ fun BottomBar(navController: NavHostController) {
                 selectedContentColor = MaterialTheme.colors.primary,
                 unselectedContentColor = MaterialTheme.colors.onSurface,
                 onClick = {
+                    while (navController.currentBackStackEntry?.destination?.route?.startsWith("command?") == true) {
+                        navController.popBackStack()
+                    }
                     navController.navigate(screen.route) {
                         selectedRoute.value = screen.route
                         popUpTo(navController.graph.findStartDestination().id) {
@@ -69,6 +76,7 @@ fun BottomBar(navController: NavHostController) {
                         launchSingleTop = true
                         restoreState = true
                     }
+                    resetSearch()
                 },
             )
         }

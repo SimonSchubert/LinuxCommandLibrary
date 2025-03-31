@@ -4,8 +4,10 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
@@ -95,9 +97,22 @@ fun AppInfoDialog(showDialog: MutableState<Boolean>) {
                             .weight(1f)
                             .verticalScroll(rememberScrollState()),
                     ) {
+                        Text("Support this project", style = MaterialTheme.typography.h6)
+                        Text("By using my referral links for these amazing products.")
+                        Spacer(Modifier.height(4.dp))
                         Image(
                             modifier = Modifier
-                                .padding(bottom = 8.dp)
+                                .fillMaxWidth()
+                                .clickable {
+                                    val link = "https://linuxcommandlibrary.com/proton-free-2025"
+                                    uriHandler.openUri(link)
+                                },
+                            painter = painterResource(R.mipmap.proton_free_horizontal),
+                            contentDescription = null,
+                        )
+                        Spacer(Modifier.height(8.dp))
+                        Image(
+                            modifier = Modifier
                                 .fillMaxWidth()
                                 .clickable {
                                     val link = "https://linuxcommandlibrary.com/linode-2025"
@@ -107,13 +122,16 @@ fun AppInfoDialog(showDialog: MutableState<Boolean>) {
                             contentDescription = null,
                         )
 
+                        Spacer(Modifier.height(8.dp))
                         Text("Man pages", style = MaterialTheme.typography.h6)
                         Text("Licence information about the man page is usually specified in the man detail page under the category Author, Copyright or Licence. If there is no information on the page you can find the information in the man page source file on your linux system. If you have questions or can't find what you need, you can contact me at sschubert89@gmail.com.")
 
+                        Spacer(Modifier.height(8.dp))
                         Text("TLDR pages", style = MaterialTheme.typography.h6)
                         Text(
                             "The MIT License (MIT) Copyright (c) 2014 the TLDR team and contributors Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
                         )
+                        Spacer(Modifier.height(8.dp))
                         Text(
                             "Thanks to commandlinefu.com for the one-liners and icons8.com for the icons",
                             style = MaterialTheme.typography.h6,

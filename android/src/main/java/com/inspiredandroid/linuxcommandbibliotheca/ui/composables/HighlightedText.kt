@@ -28,26 +28,35 @@ import com.inspiredandroid.linuxcommandbibliotheca.ui.theme.LinuxTheme
 
 @Composable
 fun HighlightedText(text: String, pattern: String) {
-    val highlightColor = MaterialTheme.colors.primary
-    val annotatedString = remember(pattern) {
-        buildAnnotatedString {
-            val splitText = text.split(pattern, ignoreCase = true)
-            splitText.forEachIndexed { index, s ->
-                append(s)
-                if (index != splitText.size - 1) {
-                    withStyle(style = SpanStyle(color = highlightColor)) {
-                        append(pattern)
+    if (pattern.isEmpty()) {
+        Text(
+            text,
+            maxLines = 1,
+            softWrap = false,
+            overflow = TextOverflow.Ellipsis,
+        )
+    } else {
+        val highlightColor = MaterialTheme.colors.primary
+        val annotatedString = remember(pattern) {
+            buildAnnotatedString {
+                val splitText = text.split(pattern, ignoreCase = true)
+                splitText.forEachIndexed { index, s ->
+                    append(s)
+                    if (index != splitText.size - 1) {
+                        withStyle(style = SpanStyle(color = highlightColor)) {
+                            append(pattern)
+                        }
                     }
                 }
             }
         }
+        Text(
+            text = annotatedString,
+            maxLines = 1,
+            softWrap = false,
+            overflow = TextOverflow.Ellipsis,
+        )
     }
-    Text(
-        text = annotatedString,
-        maxLines = 1,
-        softWrap = false,
-        overflow = TextOverflow.Ellipsis,
-    )
 }
 
 @Composable

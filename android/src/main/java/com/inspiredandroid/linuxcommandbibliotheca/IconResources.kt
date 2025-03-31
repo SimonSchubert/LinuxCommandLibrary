@@ -57,7 +57,7 @@ fun BasicGroup.getIconResource(): Int = when (id.toInt()) {
     130 -> R.drawable.ic_icons8_synchronize
     131 -> R.drawable.ic_arrow_upward_black_24dp
     132 -> R.drawable.ic_add_rule
-    7, 5, 1236, 1248, 1235, 1247, 1246, 1238, 8, 6, 10, 1241, 1245, 9, 1244, 1243, 1, 4, 1242, 2, 3, 0, 1237 -> R.drawable.ic_icon_controller
+    7, 5, 1236, 1248, 1235, 1247, 1246, 1238, 8, 6, 10, 1241, 1245, 9, 1244, 1243, 1, 4, 1242, 2, 3, 0, 1237, 2630 -> R.drawable.ic_icon_controller
     1163 -> R.drawable.ic_vpn_key_black_24dp
     1164, 1162, 1161, 1160, 1159 -> R.drawable.ic_icons8_connected
     1231, 1232 -> R.drawable.ic_file

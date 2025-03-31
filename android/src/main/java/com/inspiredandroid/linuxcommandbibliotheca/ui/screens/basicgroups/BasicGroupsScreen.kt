@@ -10,13 +10,14 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Icon
 import androidx.compose.material.ListItem
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.inspiredandroid.linuxcommandbibliotheca.getIconResource
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.CommandView
+import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.HighlightedText
 import com.linuxcommandlibrary.shared.databaseHelper
 import com.linuxcommandlibrary.shared.getCommandList
 import databases.BasicGroup
@@ -51,19 +52,31 @@ fun BasicGroupsScreen(
             items = viewModel.basicGroups,
             key = { it.id },
         ) { basicGroup ->
-            BasicGroupColumn(viewModel, basicGroup, onNavigate)
+            BasicGroupColumn(
+                basicGroup = basicGroup,
+                isCollapsed = viewModel.isGroupCollapsed(basicGroup.id),
+                onToggleCollapse = { viewModel.toggleCollapse(basicGroup.id) },
+                onNavigate = onNavigate,
+            )
         }
     }
 }
 
 @Composable
-private fun BasicGroupColumn(
-    viewModel: BasicGroupsViewModel,
+fun BasicGroupColumn(
     basicGroup: BasicGroup,
+    searchText: String = "",
+    isCollapsed: Boolean,
+    onToggleCollapse: () -> Unit,
     onNavigate: (String) -> Unit = {},
 ) {
     ListItem(
-        text = { Text(basicGroup.description) },
+        text = {
+            HighlightedText(
+                text = basicGroup.description,
+                pattern = searchText,
+            )
+        },
         icon = {
             Icon(
                 painterResource(basicGroup.getIconResource()),
@@ -71,13 +84,11 @@ private fun BasicGroupColumn(
                 modifier = Modifier.size(40.dp),
             )
         },
-        modifier = Modifier.clickable {
-            viewModel.toggleCollapse(basicGroup.id)
-        },
+        modifier = Modifier.clickable { onToggleCollapse() },
     )
 
-    if (viewModel.isGroupCollapsed(basicGroup.id)) {
-        val commands = databaseHelper.getBasicCommands(basicGroup.id)
+    if (isCollapsed) {
+        val commands = remember { databaseHelper.getBasicCommands(basicGroup.id) }
         commands.forEach { basicCommand ->
             CommandView(
                 basicCommand.command,

@@ -37,8 +37,8 @@ import org.koin.androidx.compose.koinViewModel
 
 @Composable
 fun BasicCategoriesScreen(
-    onNavigate: (String) -> Unit = {},
     viewModel: BasicCategoriesViewModel = koinViewModel(),
+    onNavigate: (String) -> Unit,
 ) {
     LazyVerticalGrid(
         modifier = Modifier.fillMaxSize(),

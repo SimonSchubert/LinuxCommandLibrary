@@ -62,6 +62,7 @@ fun TopBar(
     navBackStackEntry: State<NavBackStackEntry?>,
     textFieldValue: MutableState<TextFieldValue>,
     onNavigateBack: () -> Unit = {},
+    showSearch: MutableState<Boolean>,
 ) {
     val focusRequester = remember { FocusRequester() }
     val bookmarkManager = remember {
@@ -70,13 +71,12 @@ fun TopBar(
     }
 
     val route = navBackStackEntry.value?.destination?.route
-    if (route == "commands") {
-        val showSearch = remember { mutableStateOf(true) }
 
+    if (route == "commands" || route == "basics") {
         TopAppBar(
             title = {
                 Text(
-                    "Commands",
+                    getTitleByRoute(navBackStackEntry.value),
                     modifier = Modifier.semantics { contentDescription = "TopAppBarTitle" },
                 )
             },
@@ -120,11 +120,8 @@ fun TopBar(
                         ),
                         trailingIcon = {
                             IconButton(onClick = {
-                                if (textFieldValue.value.text.isEmpty()) {
-                                    showSearch.value = false
-                                } else {
-                                    textFieldValue.value = TextFieldValue("")
-                                }
+                                showSearch.value = false
+                                textFieldValue.value = TextFieldValue("")
                             }) {
                                 Icon(
                                     imageVector = Icons.Filled.Close,
@@ -147,17 +144,17 @@ fun TopBar(
                 }
             },
         )
-        if (showSearch.value) {
-            LaunchedEffect(Unit) {
+        LaunchedEffect(showSearch.value) {
+            if (showSearch.value) {
                 focusRequester.requestFocus()
             }
         }
     } else {
         val showBackIcon = when (route) {
-            "basics", "tips" -> false
+            "tips" -> false
             else -> true
         }
-        val showAppInfoIcon = route == "basics"
+        val showAppInfoIcon = route == "tips"
         val showBookmarkIcon = route?.startsWith("command?") ?: false
         val showDialog = remember { mutableStateOf(false) }
         val showBookmarkToast = remember { mutableStateOf(false) }

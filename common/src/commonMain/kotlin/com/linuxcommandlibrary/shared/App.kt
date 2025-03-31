@@ -29,17 +29,16 @@ sealed class CommandElement {
 /**
  * Search in name and description and return sorted by priority
  */
-fun List<Command>.search(phrase: String): List<Command> = this.filter { it.name.contains(phrase, true) || it.description.contains(phrase, true) }
-    .sortedBy {
-        val name = it.name.lowercase()
-        val lowercasePhrase = phrase.lowercase()
-        when {
-            !name.contains(lowercasePhrase) -> 30
-            name == lowercasePhrase -> 0
-            name.startsWith(lowercasePhrase) -> 10
-            else -> 20
-        }
+fun List<Command>.sortedSearch(phrase: String): List<Command> = this.sortedBy {
+    val name = it.name.lowercase()
+    val lowercasePhrase = phrase.lowercase()
+    when {
+        !name.contains(lowercasePhrase) -> 30
+        name == lowercasePhrase -> 0
+        name.startsWith(lowercasePhrase) -> 10
+        else -> 20
     }
+}
 
 /**
  * Return a list of sealed Elements for visual representation

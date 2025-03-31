@@ -59,10 +59,17 @@ FROM BasicGroup
 WHERE category_id = ?
 ORDER BY position DESC;
 
-selectBasicGroup:
+selectBasicGroupsByQuery:
 SELECT *
 FROM BasicGroup
-ORDER BY id DESC;
+WHERE UPPER(description) LIKE '%' || UPPER(?) || '%'
+AND category_id != 250
+AND category_id != 253
+AND category_id != 254
+AND category_id != 255
+AND category_id != 256
+AND category_id != 260
+ORDER BY position DESC;
 
 selectBasicCommandByGroupId:
 SELECT *
@@ -84,6 +91,13 @@ VALUES (?, ?, ?);
 selectCommands:
 SELECT *
 FROM Command
+ORDER BY name COLLATE NOCASE ASC;
+
+selectCommandsByQuery:
+SELECT *
+FROM Command
+WHERE UPPER(name) LIKE '%' || UPPER(?) || '%'
+   OR UPPER(description) LIKE '%' || UPPER(?) || '%'
 ORDER BY name COLLATE NOCASE ASC;
 
 selectCommandByName:
