@@ -23,7 +23,7 @@ class BasicGroupsViewModel(categoryId: Long) : ViewModel() {
 
     private val collapsedMap = mutableStateMapOf<Long, Boolean>()
 
-    var basicGroups = databaseHelper.getBasicGroups(categoryId)
+    var basicGroups = databaseHelper.getBasicGroupsByQuery(categoryId)
 
     fun isGroupCollapsed(id: Long): Boolean = collapsedMap[id] == true
 

@@ -103,7 +103,7 @@ class ComposeTests {
         composeTestRule.onNodeWithContentDescription("TopAppBarTitle")
             .assertTextEquals(firstBasicCategory.title)
 
-        val basicGroup = databaseHelper.getBasicGroups(firstBasicCategory.id).first()
+        val basicGroup = databaseHelper.getBasicGroupsByQuery(firstBasicCategory.id).first()
 
         // Click on first group
         composeTestRule.onNodeWithText(basicGroup.description).performClick()

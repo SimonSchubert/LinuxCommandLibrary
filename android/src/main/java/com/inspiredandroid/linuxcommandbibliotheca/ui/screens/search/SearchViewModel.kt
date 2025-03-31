@@ -40,7 +40,7 @@ class SearchViewModel : ViewModel() {
                 ensureActive()
 
                 val commands = databaseHelper.getCommandsByQuery(searchText).sortedSearch(searchText)
-                val basicGroups = databaseHelper.getBasicGroups(searchText)
+                val basicGroups = databaseHelper.getBasicGroupsByQuery(searchText)
 
                 ensureActive()
 

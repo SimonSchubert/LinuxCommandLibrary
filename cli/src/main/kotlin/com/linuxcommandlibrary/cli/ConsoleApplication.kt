@@ -120,7 +120,7 @@ fun showBasicCategories() {
 }
 
 fun showBasicGroups(id: Long) {
-    databaseHelper.getBasicGroups(id).forEach { group ->
+    databaseHelper.getBasicGroupsByQuery(id).forEach { group ->
         println("$BOLD${group.description}$RESET")
         databaseHelper.getBasicCommands(group.id).forEach { command ->
             println("- " + command.command)
