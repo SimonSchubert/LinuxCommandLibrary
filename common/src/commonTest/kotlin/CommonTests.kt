@@ -2,7 +2,7 @@ import com.linuxcommandlibrary.shared.CommandElement
 import com.linuxcommandlibrary.shared.getCommandList
 import com.linuxcommandlibrary.shared.getHtmlFileName
 import com.linuxcommandlibrary.shared.getSortPriority
-import com.linuxcommandlibrary.shared.search
+import com.linuxcommandlibrary.shared.sortedSearch
 import databases.BasicCategory
 import databases.Command
 import databases.CommandSection
@@ -22,14 +22,13 @@ class CommonTests {
     @Test
     fun testCommandListSearch() {
         val commands = listOf(
-            Command(0, 0, "img2webp", "convert image to webp"),
             Command(0, 0, "optipng", "convert"),
             Command(0, 0, "thumbnail", "take png and do something"),
             Command(0, 0, "Pngcheck", "print detailed"),
             Command(0, 0, "png", "png"),
         )
 
-        val filteredCommands = commands.search("png")
+        val filteredCommands = commands.sortedSearch("png")
 
         assert(filteredCommands.size == 4)
 

@@ -268,7 +268,7 @@ class WebsiteBuilder {
         basicCategories.forEachIndexed { index, category ->
             print("\rCreate basic category html ${index + 1}/$totalCount")
 
-            val groups = databaseHelper.getBasicGroups(category.id)
+            val groups = databaseHelper.getBasicGroupsByQuery(category.id)
 
             val file = File(folder, "${category.getHtmlFileName()}.html")
             file.delete()
