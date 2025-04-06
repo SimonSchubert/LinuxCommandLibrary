@@ -4,10 +4,10 @@ import android.content.Context
 import android.content.Intent
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.text.ClickableText
 import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
 import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.runtime.Composable
@@ -15,8 +15,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.LinkAnnotation
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.withStyle
@@ -49,68 +49,57 @@ fun CommandView(
     onNavigate: (String) -> Unit = {},
 ) {
     val codeColor = MaterialTheme.colors.primary
-    val annotatedString = remember(codeColor) {
+    val annotatedString = remember(elements, codeColor) {
         buildAnnotatedString {
-            elements.forEachIndexed { index, element ->
+            elements.forEach { element ->
                 when (element) {
-                    is CommandElement.Text -> append(element.text)
+                    is CommandElement.Text -> {
+                        append(element.text)
+                    }
                     is CommandElement.Man -> {
-                        pushStringAnnotation(tag = "$index", annotation = element.man)
+                        val start = this.length
                         withStyle(style = SpanStyle(color = codeColor)) {
                             append(element.man)
                         }
-                        pop()
+                        val end = this.length
+                        addLink(
+                            LinkAnnotation.Clickable(
+                                tag = "man:${element.man}",
+                                linkInteractionListener = {
+                                    val manCommand = databaseHelper.getCommand(element.man)
+                                    if (manCommand != null) {
+                                        onNavigate("command?commandId=${manCommand.id}&commandName=${manCommand.name}")
+                                    }
+                                },
+                            ),
+                            start,
+                            end,
+                        )
                     }
-
                     is CommandElement.Url -> {
-                        pushStringAnnotation(tag = "$index", annotation = element.url)
+                        val start = this.length
                         withStyle(style = SpanStyle(color = codeColor)) {
                             append(element.command)
                         }
-                        pop()
+                        val end = this.length
+                        addLink(
+                            LinkAnnotation.Url(element.url),
+                            start,
+                            end,
+                        )
                     }
                 }
             }
         }
     }
 
-    val uriHandler = LocalUriHandler.current
-    Row(modifier = Modifier.padding(start = 12.dp, end = 4.dp, top = 8.dp, bottom = 8.dp)) {
-        ClickableText(
+    Row(modifier = Modifier.padding(start = 12.dp, end = 4.dp, top = 6.dp, bottom = 6.dp)) {
+        Text(
             text = annotatedString,
             modifier = Modifier
                 .weight(1f)
                 .align(Alignment.CenterVertically),
             style = MaterialTheme.typography.subtitle2,
-            onClick = { offset ->
-                elements.forEachIndexed { index, element ->
-                    if (element is CommandElement.Url) {
-                        annotatedString.getStringAnnotations(
-                            tag = "$index",
-                            start = offset,
-                            end = offset,
-                        )
-                            .firstOrNull()
-                            ?.let {
-                                uriHandler.openUri(it.item)
-                            }
-                    }
-                    if (element is CommandElement.Man) {
-                        annotatedString.getStringAnnotations(
-                            tag = "$index",
-                            start = offset,
-                            end = offset,
-                        )
-                            .firstOrNull()
-                            ?.let {
-                                val manCommand = databaseHelper.getCommand(it.item)
-                                if (manCommand != null) {
-                                    onNavigate("command?commandId=${manCommand.id}&commandName=${manCommand.name}")
-                                }
-                            }
-                    }
-                }
-            },
         )
 
         val context = LocalContext.current

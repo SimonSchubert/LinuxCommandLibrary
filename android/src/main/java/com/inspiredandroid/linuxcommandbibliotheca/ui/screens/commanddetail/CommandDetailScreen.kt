@@ -110,7 +110,6 @@ private fun CommandSectionColumn(
                             Text(
                                 text = split[0],
                                 fontSize = 15.sp,
-                                style = MaterialTheme.typography.subtitle1,
                                 fontWeight = FontWeight.Bold,
                             )
 
@@ -181,10 +180,12 @@ private fun getCommands(input: String): List<String> {
 private fun String.toAnnotatedString(): AnnotatedString {
     val spanned = HtmlCompat.fromHtml(this, HtmlCompat.FROM_HTML_MODE_LEGACY)
 
-    return buildAnnotatedString {
-        append(spanned.toString().trim('\n', ' '))
+    val trimmedText = spanned.toString().trim('\n', ' ')
 
-        spanned.getSpans(0, spanned.length, Any::class.java).forEach { span ->
+    return buildAnnotatedString {
+        append(trimmedText)
+
+        spanned.getSpans(0, trimmedText.length, Any::class.java).forEach { span ->
             val start = spanned.getSpanStart(span)
             val end = spanned.getSpanEnd(span)
 
