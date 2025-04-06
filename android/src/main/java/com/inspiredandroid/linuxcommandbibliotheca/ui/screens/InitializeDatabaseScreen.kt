@@ -11,9 +11,11 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
@@ -27,7 +29,7 @@ import kotlinx.coroutines.withContext
 
 @Composable
 fun InitializeDatabaseScreen(onFinish: () -> Unit = {}) {
-    val status = remember {
+    var status by remember {
         mutableIntStateOf(0)
     }
     val coroutineScope = rememberCoroutineScope()
@@ -51,7 +53,7 @@ fun InitializeDatabaseScreen(onFinish: () -> Unit = {}) {
             modifier = Modifier.align(Alignment.CenterHorizontally),
         )
         LinearProgressIndicator(
-            progress = status.intValue.div(100f),
+            progress = status.div(100f),
             modifier = Modifier.padding(top = 16.dp),
         )
     }
@@ -59,7 +61,7 @@ fun InitializeDatabaseScreen(onFinish: () -> Unit = {}) {
     LaunchedEffect(Unit) {
         coroutineScope.launch(Dispatchers.IO) {
             copyDatabase(context) {
-                status.intValue = it
+                status = it
             }
             withContext(Dispatchers.Main) {
                 onFinish()

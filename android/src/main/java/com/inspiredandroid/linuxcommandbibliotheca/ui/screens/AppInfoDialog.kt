@@ -26,6 +26,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -71,7 +72,12 @@ fun AppInfoDialog(showDialog: MutableState<Boolean>) {
                     Row {
                         Button(
                             modifier = Modifier.padding(start = 6.dp),
-                            content = { Text("Rate the app") },
+                            content = {
+                                Text(
+                                    "Rate the app",
+                                    color = Color.White,
+                                )
+                            },
                             onClick = {
                                 uriHandler.openUri("https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca")
                             },
