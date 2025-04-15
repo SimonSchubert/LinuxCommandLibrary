@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<string name="app_name">"Biblioteka poleceń Linux"</string>
+<string name="commands">"Polecenia"</string>
+<string name="basics">"Podstawowe"</string>
+<string name="tips">"Poradnik"</string>
+<string name="info">"Informacje"</string>
+<string name="bookmark">"Zakładka"</string>
+<string name="bookmarked">"Zaznaczenie"</string>
+<string name="search">"Szukaj"</string>
+<string name="back">"Wstecz"</string>
+<string name="reset">"Resetuj"</string>
+<string name="share">"Udostępnij"</string>
+
+</resources>
