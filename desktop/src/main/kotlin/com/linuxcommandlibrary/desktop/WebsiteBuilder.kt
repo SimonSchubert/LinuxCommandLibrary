@@ -7,6 +7,7 @@ import com.linuxcommandlibrary.shared.getHtmlFileName
 import com.linuxcommandlibrary.shared.getSortPriority
 import com.linuxcommandlibrary.shared.initDatabase
 import databases.BasicCategory
+import kotlinx.coroutines.async
 import kotlinx.html.ATarget
 import kotlinx.html.DIV
 import kotlinx.html.FlowContent
@@ -16,6 +17,7 @@ import kotlinx.html.HtmlTagMarker
 import kotlinx.html.InputType
 import kotlinx.html.LINK
 import kotlinx.html.META
+import kotlinx.html.ScriptCrossorigin
 import kotlinx.html.UL
 import kotlinx.html.a
 import kotlinx.html.attributesMapOf
@@ -875,6 +877,11 @@ class WebsiteBuilder {
         link(rel = "manifest", href = "/site.webmanifest")
         meta(name = "msapplication-TileColor", content = "#da532c")
         meta(name = "theme-color", content = "#ffffff")
+        script {
+            src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3003920357099437"
+            async = true
+            crossorigin = ScriptCrossorigin.anonymous
+        }
     }
 
     private fun HEAD.uncommonMeta(
