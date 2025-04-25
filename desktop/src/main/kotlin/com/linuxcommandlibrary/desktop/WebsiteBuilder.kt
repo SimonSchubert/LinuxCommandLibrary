@@ -95,6 +95,9 @@ fun main() {
     websiteBuilder.createManHtmlFiles(File(folder, "man"))
 
     websiteBuilder.create404HtmlFile()
+    websiteBuilder.createPrivacyPolicyHtmlFile(folder)
+    websiteBuilder.createContactHtmlFile(folder)
+    websiteBuilder.createTermsAndConditionsHtmlFile(folder)
 
     websiteBuilder.createSitemap(folder)
 
@@ -538,7 +541,7 @@ class WebsiteBuilder {
         stream.close()
     }
 
-    internal fun createManHtmlFiles(folder: File) {
+    fun createManHtmlFiles(folder: File) {
         folder.mkdir()
 
         val commands = databaseHelper.getCommands()
@@ -685,7 +688,187 @@ class WebsiteBuilder {
         println()
     }
 
-    fun sanitizeHtml(content: String): String = content.replace(Regex("(?i)<(html|head|title|body)[^>]*>.*?</\\1>|<(html|head|title|body)[^>]*>"), "")
+    fun createTermsAndConditionsHtmlFile(folder: File) {
+        println("Create terms and conditions html")
+
+        folder.mkdir()
+
+        val file = File(folder, "terms-conditions.html")
+        file.delete()
+        val stream = PrintStream(file)
+
+        stream.appendLine("<!DOCTYPE html>")
+
+        stream.appendHTML().html {
+            lang = "en"
+            head {
+                commonMeta(adSense = false)
+                val title = "Terms and Conditions | Linux Command Library"
+                uncommonMeta(
+                    title = title,
+                    description = "",
+                    url = "https://linuxcommandlibrary.com/${file.nameWithoutExtension}",
+                    keywords = "",
+                )
+
+                styleLink("/stylesheets/main.css?v=$cacheVersion")
+            }
+
+            body {
+                header(-1)
+
+                div {
+                    id = "content"
+
+                    h1 { +"Terms and Conditions" }
+
+                    h2 { +"Educational Purpose Only" }
+                    p {
+                        +"The content on Linux Command Library is provided solely for educational and informational purposes. It is intended to assist users in learning about Linux commands."
+                    }
+
+                    h2 { +"Disclaimer of Liability" }
+                    p {
+                        +"The commands on this website can be powerful and may cause data loss or system damage if misused. Users are responsible for verifying and safely using the commands. Linux Command Library is not liable for any damage or loss resulting from the use or misuse of this information."
+                    }
+
+                    h2 { +"Copyright and Credits" }
+                    p {
+                        +"Man pages referenced on this site are copyrighted by their respective authors and used under fair use principles for educational reference. We gratefully acknowledge inspiration and contributions from "
+                        a(href = "https://tldr.sh/") { +"TLDR" }
+                        +" and "
+                        a(href = "https://www.commandlinefu.com/") { +"commandlinefu.com" }
+                        +"."
+                    }
+                }
+
+                footer(showAd = false)
+            }
+        }
+        stream.close()
+    }
+
+    fun createPrivacyPolicyHtmlFile(folder: File) {
+        println("Create privacy html")
+
+        folder.mkdir()
+
+        val file = File(folder, "privacy-policy.html")
+        file.delete()
+        val stream = PrintStream(file)
+
+        stream.appendLine("<!DOCTYPE html>")
+
+        stream.appendHTML().html {
+            lang = "en"
+            head {
+                commonMeta(adSense = false)
+                val title = "Privacy Policy | Linux Command Library"
+                uncommonMeta(
+                    title = title,
+                    description = "",
+                    url = "https://linuxcommandlibrary.com/${file.nameWithoutExtension}",
+                    keywords = "",
+                )
+
+                styleLink("/stylesheets/main.css?v=$cacheVersion")
+            }
+
+            body {
+                header(-1)
+
+                div {
+                    id = "content"
+
+                    h1 { +"Privacy Policy" }
+                    p { +"Last Updated: April 19, 2025" }
+
+                    h2 { +"1. No Data Collection or Tracking" }
+                    p { +"Our website does not use cookies, web beacons, or any other tracking technologies to collect personal information about your browsing activities." }
+                    p { +"We do not collect any personal data from users. There are no contact forms, email sign-ups, or other mechanisms that gather personal information on our website." }
+
+                    h2 { +"2. Future Use of Cookies (Google AdSense)" }
+                    p {
+                        +"If our website is approved for Google AdSense, we may use cookies to serve personalized advertisements. These cookies would be managed by Google and are subject to "
+                        a(href = "https://policies.google.com/privacy") { +"Google’s Privacy Policy" }
+                        +". If this occurs, we will update this Privacy Policy to reflect the change and provide details on how cookies are used for advertising purposes."
+                    }
+                    p { +"You will be able to manage your ad preferences through Google’s Ad Settings." }
+
+                    h2 { +"3. Your Rights (GDPR Compliance)" }
+                    p { +"For EU Users: If you are located in the European Union, you have the right to access, correct, or delete any personal data we may hold about you. Since we do not collect personal data through tracking or forms, no such data is stored." }
+                    p { +"Cookie Consent (Future): If we introduce cookies for advertising in the future, we will implement a cookie consent mechanism for EU users to ensure compliance with GDPR." }
+
+                    h2 { +"4. Contact Us" }
+                    p { +"If you have any questions or concerns about this Privacy Policy, you can contact us at [your email address]." }
+
+                    h2 { +"5. Changes to This Policy" }
+                    p { +"We may update this Privacy Policy from time to time, especially if we introduce new features or services that affect data handling (e.g., Google AdSense). Any changes will be posted on this page with an updated 'Last Updated' date." }
+                }
+
+                footer(showAd = false)
+            }
+        }
+        stream.close()
+    }
+
+    fun createContactHtmlFile(folder: File) {
+        println("Create contact html")
+
+        folder.mkdir()
+
+        val file = File(folder, "contact.html")
+        file.delete()
+        val stream = PrintStream(file)
+
+        stream.appendLine("<!DOCTYPE html>")
+
+        stream.appendHTML().html {
+            lang = "en"
+            head {
+                commonMeta(adSense = false)
+                val title = "Contact | Linux Command Library"
+                uncommonMeta(
+                    title = title,
+                    description = "",
+                    url = "https://linuxcommandlibrary.com/${file.nameWithoutExtension}",
+                    keywords = "",
+                )
+
+                styleLink("/stylesheets/main.css?v=$cacheVersion")
+            }
+
+            body {
+                header(-1)
+
+                div {
+                    id = "content"
+
+                    h1 { +"Contact Us" }
+                    p {
+                        +"Have questions, feedback, or issues about Linux Command Library?"
+                    }
+                    p {
+                        +"Please reach out to us at "
+                        a(href = "mailto:info@linuxcommandlibrary.com") { +"info@linuxcommandlibrary.com" }
+                        +". We aim to respond within 2-3 business days."
+                    }
+                    p {
+                        +"For more information about our site, please review our "
+                        a(href = "/privacy-policy") { +"Privacy Policy" }
+                        +" and "
+                        a(href = "/terms-and-conditions") { +"Terms and Conditions" }
+                        +"."
+                    }
+                }
+
+                footer(showAd = false)
+            }
+        }
+        stream.close()
+    }
+
+    private fun sanitizeHtml(content: String): String = content.replace(Regex("(?i)<(html|head|title|body)[^>]*>.*?</\\1>|<(html|head|title|body)[^>]*>"), "")
         .replace(Regex("(?i)</?(html|head|title|body)>"), "")
 
     /**
@@ -726,7 +909,7 @@ class WebsiteBuilder {
         stream.appendHTML().html {
             lang = "en"
             head {
-                commonMeta()
+                commonMeta(adSense = false)
                 val title = "404 command not found | Linux Command Library"
                 uncommonMeta(
                     title = title,
@@ -868,7 +1051,7 @@ class WebsiteBuilder {
         "<loc>https://linuxcommandlibrary.com/$urlPart</loc>" +
         "</url>"
 
-    private fun HEAD.commonMeta() {
+    private fun HEAD.commonMeta(adSense: Boolean = true) {
         meta(charset = "utf-8")
         meta(name = "viewport", content = "width=device-width, initial-scale=1")
         link(rel = "apple-touch-icon", sizes = "180x180", href = "/apple-touch-icon.png")
@@ -877,10 +1060,13 @@ class WebsiteBuilder {
         link(rel = "manifest", href = "/site.webmanifest")
         meta(name = "msapplication-TileColor", content = "#da532c")
         meta(name = "theme-color", content = "#ffffff")
-        script {
-            src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3003920357099437"
-            async = true
-            crossorigin = ScriptCrossorigin.anonymous
+        if (adSense) {
+            script {
+                src =
+                    "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3003920357099437"
+                async = true
+                crossorigin = ScriptCrossorigin.anonymous
+            }
         }
     }
 
@@ -984,25 +1170,29 @@ class WebsiteBuilder {
             }
         }
         footer {
-            text("All man pages are copyrighted by their respective authors. Thanks to ")
-            a {
-                target = ATarget.blank
-                rel = "noopener"
-                href = "https://github.com/tldr-pages/tldr"
-                text("TLDR")
+            p {
+                a {
+                    target = ATarget.self
+                    rel = "noopener"
+                    href = "/privacy-policy"
+                    text("Privacy Policy")
+                }
+                text(" | ")
+                a {
+                    target = ATarget.self
+                    rel = "noopener"
+                    href = "/terms-conditions"
+                    text("Terms and Conditions")
+                }
+                text(" | ")
+                a {
+                    target = ATarget.self
+                    rel = "noopener"
+                    href = "/contact"
+                    text("Contact")
+                }
             }
-            text(" and ")
-            a {
-                target = ATarget.blank
-                rel = "noopener"
-                href = "https://www.commandlinefu.com"
-                text("commandlinefu.com")
-            }
-            br
-            div {
-                style = "display: flex;flex-wrap: wrap;align-items: center;justify-content: center;"
-                text("Simon Schubert - info@linuxcommandlibrary.com ")
-            }
+
             a("https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca") {
                 style = "margin-right: 4px;"
                 target = ATarget.blank
@@ -1270,7 +1460,7 @@ class WebsiteBuilder {
         else -> throw Exception("${category.title} not found")
     }
 
-    fun String.addAnchorAndCodeStyle(fileName: String): String {
+    private fun String.addAnchorAndCodeStyle(fileName: String): String {
         var content = this
         var matches = quoteRegex.findAll(content)
         matches.forEach {
