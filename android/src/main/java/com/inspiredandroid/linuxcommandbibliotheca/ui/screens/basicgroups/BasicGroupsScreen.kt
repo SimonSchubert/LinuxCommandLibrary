@@ -91,9 +91,9 @@ fun BasicGroupColumn(
         val commands = remember { databaseHelper.getBasicCommands(basicGroup.id) }
         commands.forEach { basicCommand ->
             CommandView(
-                basicCommand.command,
-                basicCommand.command.getCommandList(basicCommand.mans),
-                onNavigate,
+                command = basicCommand.command,
+                elements = basicCommand.command.getCommandList(basicCommand.mans),
+                onNavigate = onNavigate,
             )
         }
     }

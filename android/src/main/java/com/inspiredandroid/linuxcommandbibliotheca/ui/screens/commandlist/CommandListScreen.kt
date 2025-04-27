@@ -78,7 +78,7 @@ fun CommandListItem(
             if (isBookmarked(command.id)) {
                 Icon(
                     painterResource(R.drawable.ic_bookmark_black_24dp),
-                    contentDescription = stringResource(R.string.bookmarked),
+                    contentDescription = stringResource(R.string.remove_bookmark),
                 )
             }
         },

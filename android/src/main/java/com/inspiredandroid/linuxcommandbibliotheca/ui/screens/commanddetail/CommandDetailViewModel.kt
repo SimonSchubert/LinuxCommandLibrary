@@ -1,9 +1,11 @@
 package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commanddetail
 
-import androidx.compose.runtime.mutableStateMapOf
 import androidx.lifecycle.ViewModel
+import com.inspiredandroid.linuxcommandbibliotheca.DataManager
 import com.linuxcommandlibrary.shared.databaseHelper
 import com.linuxcommandlibrary.shared.getSortPriority
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.update
 
 /* Copyright 2022 Simon Schubert
  *
@@ -20,15 +22,65 @@ import com.linuxcommandlibrary.shared.getSortPriority
  * limitations under the License.
 */
 
-class CommandDetailViewModel(commandId: Long) : ViewModel() {
+class CommandDetailViewModel(
+    private val commandId: Long,
+    private val dataManager: DataManager,
+) : ViewModel() {
 
-    private val collapsedMap = mutableStateMapOf<Long, Boolean>()
+    val state: MutableStateFlow<CommandDetailUiState>
 
-    var sections = databaseHelper.getSections(commandId).sortedBy { it.getSortPriority() }
+    init {
+        val sections = databaseHelper.getSections(commandId).sortedBy { it.getSortPriority() }
+        val isAutoExpandEnabled = dataManager.isAutoExpandSections()
+        state = MutableStateFlow(
+            CommandDetailUiState(
+                sections = sections,
+                expandedSectionsMap = sections.associate {
+                    it.id to isAutoExpandEnabled
+                },
+                isBookmarked = dataManager.hasBookmark(commandId),
+            ),
+        )
+    }
 
-    fun isGroupCollapsed(id: Long): Boolean = collapsedMap[id] == true
+    fun onToggleAllExpanded() {
+        val isAllExpanded = state.value.isAllExpanded()
+        state.update {
+            val updatedMap = it.expandedSectionsMap.toMutableMap()
+            updatedMap.replaceAll { _, _ -> !isAllExpanded }
+            it.copy(expandedSectionsMap = updatedMap)
+        }
+        dataManager.setAutoExpandSections(!isAllExpanded)
+    }
 
-    fun toggleCollapse(id: Long) {
-        collapsedMap[id] = !collapsedMap.getOrDefault(id, false)
+    fun onToggleExpanded(id: Long) {
+        state.update {
+            val updatedMap = it.expandedSectionsMap.toMutableMap()
+            updatedMap[id] = !updatedMap.getOrDefault(id, false)
+            it.copy(expandedSectionsMap = updatedMap)
+        }
+    }
+
+    fun removeBookmark() {
+        state.update {
+            it.copy(isBookmarked = false)
+        }
+        dataManager.removeBookmark(commandId)
+    }
+
+    fun addBookmark() {
+        state.update {
+            it.copy(
+                isBookmarked = true,
+                showBookmarkDialog = true,
+            )
+        }
+        dataManager.addBookmark(commandId)
+    }
+
+    fun hideBookmarkDialog() {
+        state.update {
+            it.copy(showBookmarkDialog = false)
+        }
     }
 }

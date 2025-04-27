@@ -43,9 +43,9 @@ fun NestedCommandView(
             textAlign = TextAlign.Center,
         )
         CommandView(
-            command,
-            commandElements,
-            onNavigate,
+            command = command,
+            elements = commandElements,
+            onNavigate = onNavigate,
         )
     }
 }
