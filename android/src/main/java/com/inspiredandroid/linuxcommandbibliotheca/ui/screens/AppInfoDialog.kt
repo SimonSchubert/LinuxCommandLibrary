@@ -21,9 +21,6 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.material.TextButton
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.MutableState
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -55,104 +52,102 @@ import com.inspiredandroid.linuxcommandbibliotheca.ui.theme.LinuxTheme
 // Todo: Replace with AlertDialog
 
 @Composable
-fun AppInfoDialog(showDialog: MutableState<Boolean>) {
-    if (showDialog.value) {
-        val uriHandler = LocalUriHandler.current
-        Dialog(onDismissRequest = { showDialog.value = false }) {
-            Card(
-                elevation = 8.dp,
-                shape = RoundedCornerShape(6.dp),
-            ) {
-                Column(modifier = Modifier.fillMaxSize()) {
-                    Text(
-                        stringResource(R.string.app_name),
-                        style = MaterialTheme.typography.h5,
-                        modifier = Modifier.padding(8.dp),
-                    )
-                    Row {
-                        Button(
-                            modifier = Modifier.padding(start = 6.dp),
-                            content = {
-                                Text(
-                                    "Rate the app",
-                                    color = Color.White,
-                                )
-                            },
-                            onClick = {
-                                uriHandler.openUri("https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca")
-                            },
-                        )
-                        IconButton(onClick = {
-                            uriHandler.openUri("https://github.com/SimonSchubert/LinuxCommandLibrary")
-                        }) {
-                            Icon(
-                                painterResource(R.drawable.ic_icons8_github),
-                                contentDescription = null,
-                                modifier = Modifier.size(40.dp),
+fun AppInfoDialog(
+    onDismiss: () -> Unit = {},
+) {
+    val uriHandler = LocalUriHandler.current
+    Dialog(onDismissRequest = { onDismiss() }) {
+        Card(
+            elevation = 8.dp,
+            shape = RoundedCornerShape(6.dp),
+        ) {
+            Column(modifier = Modifier.fillMaxSize()) {
+                Text(
+                    stringResource(R.string.app_name),
+                    style = MaterialTheme.typography.h5,
+                    modifier = Modifier.padding(8.dp),
+                )
+                Row {
+                    Button(
+                        modifier = Modifier.padding(start = 6.dp),
+                        content = {
+                            Text(
+                                "Rate the app",
+                                color = Color.White,
                             )
-                        }
-                    }
-                    Text(
-                        "Version: ${BuildConfig.VERSION_NAME}",
-                        style = MaterialTheme.typography.caption,
-                        modifier = Modifier.padding(8.dp),
-                    )
-                    Column(
-                        modifier = Modifier
-                            .padding(8.dp)
-                            .weight(1f)
-                            .verticalScroll(rememberScrollState()),
-                    ) {
-                        Text("Support this project", style = MaterialTheme.typography.h6)
-                        Text("By using my referral links for these amazing products.")
-                        Spacer(Modifier.height(4.dp))
-                        Image(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .clickable {
-                                    val link = "https://linuxcommandlibrary.com/proton-free-2025"
-                                    uriHandler.openUri(link)
-                                },
-                            painter = painterResource(R.mipmap.proton_free_horizontal),
-                            contentDescription = null,
-                        )
-                        Spacer(Modifier.height(8.dp))
-                        Image(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .clickable {
-                                    val link = "https://linuxcommandlibrary.com/linode-2025"
-                                    uriHandler.openUri(link)
-                                },
-                            painter = painterResource(R.mipmap.linode_horizontal),
-                            contentDescription = null,
-                        )
-
-                        Spacer(Modifier.height(8.dp))
-                        Text("Man pages", style = MaterialTheme.typography.h6)
-                        Text("Licence information about the man page is usually specified in the man detail page under the category Author, Copyright or Licence. If there is no information on the page you can find the information in the man page source file on your linux system. If you have questions or can't find what you need, you can contact me at sschubert89@gmail.com.")
-
-                        Spacer(Modifier.height(8.dp))
-                        Text("TLDR pages", style = MaterialTheme.typography.h6)
-                        Text(
-                            "The MIT License (MIT) Copyright (c) 2014 the TLDR team and contributors Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
-                        )
-                        Spacer(Modifier.height(8.dp))
-                        Text(
-                            "Thanks to commandlinefu.com for the one-liners and icons8.com for the icons",
-                            style = MaterialTheme.typography.h6,
-                        )
-                    }
-                    TextButton(
-                        content = { Text("OK") },
-                        modifier = Modifier
-                            .align(Alignment.End)
-                            .padding(end = 6.dp),
+                        },
                         onClick = {
-                            showDialog.value = false
+                            uriHandler.openUri("https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca")
                         },
                     )
+                    IconButton(onClick = {
+                        uriHandler.openUri("https://github.com/SimonSchubert/LinuxCommandLibrary")
+                    }) {
+                        Icon(
+                            painterResource(R.drawable.ic_icons8_github),
+                            contentDescription = null,
+                            modifier = Modifier.size(40.dp),
+                        )
+                    }
                 }
+                Text(
+                    "Version: ${BuildConfig.VERSION_NAME}",
+                    style = MaterialTheme.typography.caption,
+                    modifier = Modifier.padding(8.dp),
+                )
+                Column(
+                    modifier = Modifier
+                        .padding(8.dp)
+                        .weight(1f)
+                        .verticalScroll(rememberScrollState()),
+                ) {
+                    Text("Support this project", style = MaterialTheme.typography.h6)
+                    Text("By using my referral links for these amazing products.")
+                    Spacer(Modifier.height(4.dp))
+                    Image(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clickable {
+                                val link = "https://linuxcommandlibrary.com/proton-free-2025"
+                                uriHandler.openUri(link)
+                            },
+                        painter = painterResource(R.mipmap.proton_free_horizontal),
+                        contentDescription = null,
+                    )
+                    Spacer(Modifier.height(8.dp))
+                    Image(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clickable {
+                                val link = "https://linuxcommandlibrary.com/linode-2025"
+                                uriHandler.openUri(link)
+                            },
+                        painter = painterResource(R.mipmap.linode_horizontal),
+                        contentDescription = null,
+                    )
+
+                    Spacer(Modifier.height(8.dp))
+                    Text("Man pages", style = MaterialTheme.typography.h6)
+                    Text("Licence information about the man page is usually specified in the man detail page under the category Author, Copyright or Licence. If there is no information on the page you can find the information in the man page source file on your linux system. If you have questions or can't find what you need, you can contact me at sschubert89@gmail.com.")
+
+                    Spacer(Modifier.height(8.dp))
+                    Text("TLDR pages", style = MaterialTheme.typography.h6)
+                    Text(
+                        "The MIT License (MIT) Copyright (c) 2014 the TLDR team and contributors Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+                    )
+                    Spacer(Modifier.height(8.dp))
+                    Text(
+                        "Thanks to commandlinefu.com for the one-liners and icons8.com for the icons",
+                        style = MaterialTheme.typography.h6,
+                    )
+                }
+                TextButton(
+                    content = { Text("OK") },
+                    modifier = Modifier
+                        .align(Alignment.End)
+                        .padding(end = 6.dp),
+                    onClick = onDismiss,
+                )
             }
         }
     }
@@ -161,10 +156,7 @@ fun AppInfoDialog(showDialog: MutableState<Boolean>) {
 @Preview
 @Composable
 fun AppInfoDialogPreview() {
-    val showDialog = remember {
-        mutableStateOf(true)
-    }
     LinuxTheme {
-        AppInfoDialog(showDialog)
+        AppInfoDialog()
     }
 }

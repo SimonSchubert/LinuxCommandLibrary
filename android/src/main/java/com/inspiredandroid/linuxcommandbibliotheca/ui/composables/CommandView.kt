@@ -21,6 +21,7 @@ import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.ui.theme.LinuxTheme
@@ -47,6 +48,7 @@ fun CommandView(
     command: String,
     elements: List<CommandElement>,
     onNavigate: (String) -> Unit = {},
+    verticalPadding: Dp = 6.dp,
 ) {
     val codeColor = MaterialTheme.colors.primary
     val annotatedString = remember(elements, codeColor) {
@@ -93,7 +95,7 @@ fun CommandView(
         }
     }
 
-    Row(modifier = Modifier.padding(start = 12.dp, end = 4.dp, top = 6.dp, bottom = 6.dp)) {
+    Row(modifier = Modifier.padding(start = 12.dp, end = 4.dp).padding(vertical = verticalPadding)) {
         Text(
             text = annotatedString,
             modifier = Modifier

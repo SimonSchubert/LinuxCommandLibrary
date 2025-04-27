@@ -6,12 +6,14 @@ import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.preference.PreferenceManager
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.linuxcommandlibrary.shared.copyDatabase
 import com.linuxcommandlibrary.shared.databaseHelper
 import com.linuxcommandlibrary.shared.initDatabase
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.koin.java.KoinJavaComponent.inject
 
 /**
  * Test for navigation, search and booksmarks. More tests to come
@@ -25,7 +27,11 @@ class ComposeTests {
     @Before
     fun setUp() {
         val context: Context = ApplicationProvider.getApplicationContext()
+        copyDatabase(context)
         initDatabase(context)
+
+        val dataManager: com.inspiredandroid.linuxcommandbibliotheca.DataManager by inject(com.inspiredandroid.linuxcommandbibliotheca.DataManager::class.java)
+        dataManager.updateDatabaseVersion()
 
         // Clear bookmarks
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
@@ -56,6 +62,8 @@ class ComposeTests {
     fun testSearch() {
         composeTestRule.onNodeWithText("Commands").performClick()
 
+        composeTestRule.onNodeWithContentDescription("Search").performClick()
+
         // Search for a command that doesn't exist
         composeTestRule.onNodeWithContentDescription("SearchField")
             .performTextInput("CommandThatDoesn'tExist")
@@ -63,7 +71,7 @@ class ComposeTests {
         composeTestRule.onNodeWithContentDescription("SearchField").performTextClearance()
 
         // Search for an existing command
-        val firstCommand = databaseHelper.getCommand("2048")!!
+        val firstCommand = databaseHelper.getCommands().last()
         composeTestRule.onNodeWithContentDescription("SearchField")
             .performTextInput(firstCommand.name)
         composeTestRule.onNodeWithText(firstCommand.description).assertIsDisplayed()
@@ -78,16 +86,18 @@ class ComposeTests {
 
         composeTestRule.onNodeWithText("Commands").performClick()
 
+        composeTestRule.onNodeWithContentDescription("Search").performClick()
+
         // Search for first command and go to command detail screen
         composeTestRule.onNodeWithContentDescription("SearchField")
             .performTextInput(firstCommand.name)
         composeTestRule.onNodeWithText(firstCommand.description).performClick()
 
         // Click bookmark icon and check if icon/contentDescription changed
-        composeTestRule.onNodeWithContentDescription("Bookmark").performClick()
+        composeTestRule.onNodeWithContentDescription("Add bookmark").performClick()
         composeTestRule.mainClock.advanceTimeBy(1000)
         composeTestRule.waitForIdle()
-        composeTestRule.onNodeWithContentDescription("Bookmarked").assertIsDisplayed()
+        composeTestRule.onNodeWithContentDescription("Remove bookmark").assertIsDisplayed()
 
         // Go back to search/list and check if bookmark icon is visible
         composeTestRule.onNodeWithContentDescription("Back").performClick()

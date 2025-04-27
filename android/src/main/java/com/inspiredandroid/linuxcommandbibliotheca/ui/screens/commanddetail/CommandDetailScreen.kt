@@ -4,6 +4,7 @@ package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commanddetail
 
 import android.text.style.StyleSpan
 import android.text.style.UnderlineSpan
+import androidx.activity.compose.LocalActivity
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -21,6 +22,7 @@ import androidx.compose.material.ListItem
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.AnnotatedString
@@ -32,6 +34,8 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.text.HtmlCompat
+import androidx.lifecycle.ViewModelStoreOwner
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.CommandView
 import com.linuxcommandlibrary.shared.CommandElement
 import com.linuxcommandlibrary.shared.databaseHelper
@@ -57,20 +61,24 @@ import org.koin.core.parameter.parametersOf
 @Composable
 fun CommandDetailScreen(
     commandId: Long,
-    viewModel: CommandDetailViewModel = koinViewModel<CommandDetailViewModel>(
+    viewModel: CommandDetailViewModel = koinViewModel(
+        key = commandId.toString(),
+        viewModelStoreOwner = LocalActivity.current as ViewModelStoreOwner,
         parameters = { parametersOf(commandId) },
     ),
     onNavigate: (String) -> Unit,
 ) {
+    val uiState by viewModel.state.collectAsStateWithLifecycle()
+
     LazyColumn(Modifier.fillMaxSize()) {
         items(
-            items = viewModel.sections,
+            items = uiState.sections,
             key = { it.id },
         ) { section ->
             CommandSectionColumn(
                 section = section,
-                isCollapsed = viewModel.isGroupCollapsed(section.id),
-                onToggleCollapse = { id -> viewModel.toggleCollapse(id) },
+                isExpanded = uiState.expandedSectionsMap.getOrDefault(section.id, false),
+                onToggleExpanded = { id -> viewModel.onToggleExpanded(id) },
                 onNavigate = onNavigate,
             )
         }
@@ -80,8 +88,8 @@ fun CommandDetailScreen(
 @Composable
 private fun CommandSectionColumn(
     section: CommandSection,
-    isCollapsed: Boolean,
-    onToggleCollapse: (Long) -> Unit,
+    isExpanded: Boolean,
+    onToggleExpanded: (Long) -> Unit,
     onNavigate: (String) -> Unit,
 ) {
     ListItem(
@@ -93,11 +101,11 @@ private fun CommandSectionColumn(
             )
         },
         modifier = Modifier.clickable {
-            onToggleCollapse(section.id)
+            onToggleExpanded(section.id)
         },
     )
 
-    if (isCollapsed) {
+    if (isExpanded) {
         when (section.title) {
             "TLDR" -> {
                 Column(
@@ -109,8 +117,8 @@ private fun CommandSectionColumn(
                         if (split.size > 1) {
                             Text(
                                 text = split[0],
-                                fontSize = 15.sp,
                                 fontWeight = FontWeight.Bold,
+                                color = MaterialTheme.colors.onSurface.copy(alpha = 0.7f),
                             )
 
                             val command = "$ " + split[1].replace("<br>", "").replace("`", "")
@@ -118,6 +126,7 @@ private fun CommandSectionColumn(
                                 command = command,
                                 elements = listOf(CommandElement.Text(command)),
                                 onNavigate = onNavigate,
+                                verticalPadding = 4.dp,
                             )
                         }
                         if (index != tldrParts.lastIndex) {
@@ -159,7 +168,7 @@ private fun CommandSectionColumn(
                 Text(
                     modifier = Modifier.padding(horizontal = 16.dp),
                     text = section.content.toAnnotatedString(),
-                    color = MaterialTheme.colors.onSurface,
+                    color = MaterialTheme.colors.onSurface.copy(alpha = 0.7f),
                 )
             }
         }

@@ -5,7 +5,7 @@ import android.content.SharedPreferences
 import androidx.core.content.edit
 import androidx.preference.PreferenceManager
 
-class PreferenceUtil(context: Context) {
+class DataManager(context: Context) {
 
     val prefs: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
 
@@ -42,9 +42,16 @@ class PreferenceUtil(context: Context) {
         prefs.edit { putInt(KEY_DATABASE_VERSION, CURRENT_DATABASE_VERSION) }
     }
 
+    fun setAutoExpandSections(autoExpand: Boolean) {
+        prefs.edit { putBoolean(KEY_AUTO_EXPAND_SECTIONS, autoExpand) }
+    }
+
+    fun isAutoExpandSections(): Boolean = prefs.getBoolean(KEY_AUTO_EXPAND_SECTIONS, false)
+
     companion object {
         const val KEY_BOOKMARKS = "KEY_BOOKMARKS"
         const val KEY_DATABASE_VERSION = "DATABASE_VERSION"
-        const val CURRENT_DATABASE_VERSION = 15
+        const val KEY_AUTO_EXPAND_SECTIONS = "auto_expand_sections"
+        const val CURRENT_DATABASE_VERSION = 16
     }
 }

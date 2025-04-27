@@ -3,7 +3,7 @@ package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commandlist
 import android.content.SharedPreferences
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.inspiredandroid.linuxcommandbibliotheca.PreferenceUtil
+import com.inspiredandroid.linuxcommandbibliotheca.DataManager
 import com.linuxcommandlibrary.shared.databaseHelper
 import databases.Command
 import kotlinx.coroutines.Dispatchers
@@ -27,20 +27,20 @@ import kotlinx.coroutines.launch
  * limitations under the License.
 */
 
-class CommandListViewModel(private val preferenceUtil: PreferenceUtil) : ViewModel() {
+class CommandListViewModel(private val dataManager: DataManager) : ViewModel() {
 
     private val _commands = MutableStateFlow<List<Command>>(emptyList())
     val commands = _commands.asStateFlow()
 
     private val preferenceListener = SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
-        if (key == PreferenceUtil.KEY_BOOKMARKS) {
+        if (key == DataManager.KEY_BOOKMARKS) {
             updateCommands()
         }
     }
 
     init {
         updateCommands()
-        preferenceUtil.prefs.registerOnSharedPreferenceChangeListener(preferenceListener)
+        dataManager.prefs.registerOnSharedPreferenceChangeListener(preferenceListener)
     }
 
     private fun updateCommands() {
@@ -51,10 +51,10 @@ class CommandListViewModel(private val preferenceUtil: PreferenceUtil) : ViewMod
         }
     }
 
-    fun hasBookmark(id: Long): Boolean = preferenceUtil.hasBookmark(id)
+    fun hasBookmark(id: Long): Boolean = dataManager.hasBookmark(id)
 
     override fun onCleared() {
-        preferenceUtil.prefs.unregisterOnSharedPreferenceChangeListener(preferenceListener)
+        dataManager.prefs.unregisterOnSharedPreferenceChangeListener(preferenceListener)
         super.onCleared()
     }
 }

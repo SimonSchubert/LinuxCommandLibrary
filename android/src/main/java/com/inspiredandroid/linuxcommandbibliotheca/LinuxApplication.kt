@@ -26,13 +26,13 @@ class LinuxApplication : Application() {
     }
 
     private val appModule = module {
+        single { DataManager(androidContext()) }
+
         viewModel { BasicGroupsViewModel(get()) }
         viewModel { BasicCategoriesViewModel() }
-        viewModel { CommandDetailViewModel(get()) }
+        viewModel { (commandId: Long) -> CommandDetailViewModel(commandId, get()) }
         viewModel { TipsViewModel() }
         viewModel { CommandListViewModel(get()) }
         viewModel { SearchViewModel() }
-
-        single { PreferenceUtil(androidContext()) }
     }
 }

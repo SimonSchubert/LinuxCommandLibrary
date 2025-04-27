@@ -62,15 +62,15 @@ import org.koin.android.ext.android.inject
 
 class MainActivity : AppCompatActivity() {
 
-    private val preferenceManager by inject<PreferenceUtil>()
+    private val dataManager by inject<DataManager>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         enableEdgeToEdge(statusBarStyle = SystemBarStyle.dark(android.graphics.Color.TRANSPARENT))
         super.onCreate(savedInstanceState)
 
-        if (!hasDatabase(this) || !preferenceManager.isDatabaseUpToDate()) {
+        if (!hasDatabase(this) || !dataManager.isDatabaseUpToDate()) {
             startActivity(Intent(this, InitializeDatabaseActivity::class.java))
-            preferenceManager.updateDatabaseVersion()
+            dataManager.updateDatabaseVersion()
             finish()
             return
         }
@@ -121,7 +121,7 @@ fun LinuxApp() {
                 onNavigateBack = {
                     navController.popBackStack()
                 },
-                showSearch = showSearch,
+                isSearchVisible = showSearch,
             )
         },
         bottomBar = {
