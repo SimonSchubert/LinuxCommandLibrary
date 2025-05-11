@@ -2,19 +2,20 @@
 kotlin = "2.1.20"
 accompanistAppcompatTheme = "0.36.0"
 activityCompose = "1.10.1"
-foundation = "1.8.0"
-gradle = "8.9.2"
+foundation = "1.8.1"
+gradle = "8.10.0"
 json = "20250107"
 koinCore = "4.0.4"
 kotlinGradlePlugin = "2.1.20"
 kotlinxCoroutinesCore = "1.10.2"
 kotlinxHtmlJvm = "0.12.0"
-lifecycleViewmodelCompose = "2.8.7"
-material = "1.7.8"
-navigationCompose = "2.8.9"
+lifecycleViewmodelCompose = "2.9.0"
+material = "1.8.1"
+materialIcons = "1.7.8"
+navigationCompose = "2.9.0"
 preference = "1.2.1"
 sqldelight = "2.0.2"
-uiToolingPreview = "1.8.0"
+uiToolingPreview = "1.8.1"
 spotless = "7.0.3"
 
 
@@ -25,7 +26,7 @@ androidx-activity-compose = { module = "androidx.activity:activity-compose", ver
 androidx-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "foundation" }
 androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleViewmodelCompose" }
 androidx-material = { module = "androidx.compose.material:material", version.ref = "material" }
-androidx-material-icons-core = { module = "androidx.compose.material:material-icons-core", version.ref = "material" }
+androidx-material-icons-core = { module = "androidx.compose.material:material-icons-core", version.ref = "materialIcons" }
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 androidx-preference = { module = "androidx.preference:preference", version.ref = "preference" }
 androidx-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "uiToolingPreview" }
