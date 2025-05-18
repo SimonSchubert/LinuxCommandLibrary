@@ -52,6 +52,6 @@ class DataManager(context: Context) {
         const val KEY_BOOKMARKS = "KEY_BOOKMARKS"
         const val KEY_DATABASE_VERSION = "DATABASE_VERSION"
         const val KEY_AUTO_EXPAND_SECTIONS = "auto_expand_sections"
-        const val CURRENT_DATABASE_VERSION = 18
+        const val CURRENT_DATABASE_VERSION = 19
     }
 }
