@@ -4,8 +4,6 @@ import app.cash.sqldelight.db.SqlDriver
 import app.cash.sqldelight.driver.jdbc.sqlite.JdbcSqliteDriver
 import com.linuxcommandlibrary.CommandDatabase
 import java.io.File
-import java.io.IOException
-import java.util.Properties
 
 /* Copyright 2022 Simon Schubert
  *
@@ -31,15 +29,4 @@ fun initDatabase() {
         CommandDatabase.Schema.create(driver)
     }
     databaseHelper.setupDriver(driver)
-}
-
-fun getCurrentVersion(): String {
-    val prop = Properties()
-    try {
-        val input = EmptyClass::class.java.classLoader?.getResource("application.properties")
-        prop.load(input?.openStream())
-    } catch (io: IOException) {
-        io.printStackTrace()
-    }
-    return prop["version"].toString()
 }

@@ -1,7 +1,7 @@
 package com.linuxcommandlibrary.cli
 
+import com.linuxcommandlibrary.shared.Version
 import com.linuxcommandlibrary.shared.databaseHelper
-import com.linuxcommandlibrary.shared.getCurrentVersion
 import com.linuxcommandlibrary.shared.initDatabase
 import com.linuxcommandlibrary.shared.sortedSearch
 import kotlin.system.exitProcess
@@ -27,7 +27,7 @@ fun showIntro() {
     println(" _     _ _____ _____   ____  _____ __  __")
     println("| |__ | || () )| () ) / () \\ | () )\\ \\/ /")
     println("|____||_||_()_)|_|\\_\\/__/\\__\\|_|\\_\\ |__|")
-    println("Version: ${getCurrentVersion()}")
+    println("Version: ${Version.appVersion}")
 }
 
 fun showStartMenu() {
