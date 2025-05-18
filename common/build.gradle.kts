@@ -11,7 +11,6 @@ plugins {
 }
 
 group = "com.linuxcommandlibrary"
-version = "1.0"
 
 kotlin {
     androidTarget()
@@ -28,6 +27,7 @@ kotlin {
             dependencies {
                 implementation(libs.runtime)
             }
+            kotlin.srcDir(layout.buildDirectory.dir("generated/src/commonMain/kotlin"))
         }
         commonTest {
             dependencies {
@@ -72,3 +72,27 @@ sqldelight {
         }
     }
 }
+
+class VersionGeneratorPlugin : Plugin<Project> {
+    override fun apply(project: Project) {
+        project.afterEvaluate {
+            val versionFile =
+                layout.buildDirectory
+                    .file("generated/src/commonMain/kotlin/com/linuxcommandlibrary/shared/Version.kt")
+                    .get()
+                    .asFile
+            versionFile.parentFile?.mkdirs()
+            versionFile.writeText(
+                """
+                package com.linuxcommandlibrary.shared
+
+                object Version {
+                    const val appVersion = "${libs.versions.appVersion.get()}"
+                }
+                """.trimIndent(),
+            )
+        }
+    }
+}
+
+apply<VersionGeneratorPlugin>()
