@@ -32,9 +32,3 @@ val createJar =
         duplicatesStrategy = DuplicatesStrategy.INCLUDE
         exclude("META-INF/*.RSA", "META-INF/*.SF", "META-INF/*.DSA")
     }
-
-tasks.processResources {
-    val contents = "version=$version"
-    val file = File("cli/src/main/resources", "application.properties")
-    file.writeText(contents)
-}
