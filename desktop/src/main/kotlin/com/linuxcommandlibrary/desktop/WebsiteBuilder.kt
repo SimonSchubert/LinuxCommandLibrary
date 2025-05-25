@@ -1238,18 +1238,18 @@ class WebsiteBuilder {
                 }
                 div {
                     classes = setOf("project")
-                    a("https://endlessdungeon.fun") {
+                    a("https://simonschubert.github.io/YogaBase/") {
                         target = ATarget.blank
                         rel = "noopener"
                         img {
-                            src = "https://endlessdungeon-production.up.railway.app/favicon.png"
-                            alt = "endlessdungeon.fun"
+                            src = "https://simonschubert.github.io/YogaBase/favicon.svg"
+                            alt = ""
                             width = "30"
                             height = "30"
                         }
                     }
                     br
-                    text("Game")
+                    text("Yoga")
                 }
                 div {
                     classes = setOf("project")
