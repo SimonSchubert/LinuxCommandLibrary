@@ -27,12 +27,15 @@ import com.inspiredandroid.linuxcommandbibliotheca.ui.theme.LinuxTheme
 */
 
 @Composable
-fun HighlightedText(text: String, pattern: String) {
+fun HighlightedText(
+    text: String,
+    pattern: String,
+    maxLines: Int = 1,
+) {
     if (pattern.isEmpty()) {
         Text(
             text,
-            maxLines = 1,
-            softWrap = false,
+            maxLines = maxLines,
             overflow = TextOverflow.Ellipsis,
         )
     } else {
@@ -52,8 +55,7 @@ fun HighlightedText(text: String, pattern: String) {
         }
         Text(
             text = annotatedString,
-            maxLines = 1,
-            softWrap = false,
+            maxLines = maxLines,
             overflow = TextOverflow.Ellipsis,
         )
     }

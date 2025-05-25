@@ -75,6 +75,7 @@ fun BasicGroupColumn(
             HighlightedText(
                 text = basicGroup.description,
                 pattern = searchText,
+                maxLines = 3,
             )
         },
         icon = {
