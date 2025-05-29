@@ -1,6 +1,6 @@
 [versions]
-appVersion = "3.3.11"
-androidVersionCode = "105"
+appVersion = "3.3.12"
+androidVersionCode = "106"
 kotlin = "2.1.21"
 kotlinGradlePlugin = "2.1.21"
 accompanistAppcompatTheme = "0.36.0"
