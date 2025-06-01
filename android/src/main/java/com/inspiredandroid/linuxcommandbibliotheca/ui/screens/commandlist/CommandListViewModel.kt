@@ -6,6 +6,9 @@ import androidx.lifecycle.viewModelScope
 import com.inspiredandroid.linuxcommandbibliotheca.DataManager
 import com.linuxcommandlibrary.shared.databaseHelper
 import databases.Command
+import kotlinx.collections.immutable.ImmutableList
+import kotlinx.collections.immutable.persistentListOf
+import kotlinx.collections.immutable.toImmutableList
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -29,7 +32,7 @@ import kotlinx.coroutines.launch
 
 class CommandListViewModel(private val dataManager: DataManager) : ViewModel() {
 
-    private val _commands = MutableStateFlow<List<Command>>(emptyList())
+    private val _commands = MutableStateFlow<ImmutableList<Command>>(persistentListOf())
     val commands = _commands.asStateFlow()
 
     private val preferenceListener = SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
@@ -46,7 +49,7 @@ class CommandListViewModel(private val dataManager: DataManager) : ViewModel() {
     private fun updateCommands() {
         viewModelScope.launch(Dispatchers.IO) {
             _commands.update {
-                databaseHelper.getCommands().sortedBy { !hasBookmark(it.id) }
+                databaseHelper.getCommands().sortedBy { !hasBookmark(it.id) }.toImmutableList()
             }
         }
     }

@@ -5,32 +5,34 @@ import com.linuxcommandlibrary.shared.CommandElement
 import com.linuxcommandlibrary.shared.databaseHelper
 import com.linuxcommandlibrary.shared.getCommandList
 import databases.Tip
+import kotlinx.collections.immutable.ImmutableList
+import kotlinx.collections.immutable.toImmutableList
 
 sealed class TipSectionElement {
     data class Text(val text: String) : TipSectionElement()
-    data class Code(val command: String, val elements: List<CommandElement>) : TipSectionElement()
+    data class Code(val command: String, val elements: ImmutableList<CommandElement>) : TipSectionElement()
 
     data class NestedCode(
         val text: String,
         val command: String,
-        val elements: List<CommandElement>,
+        val elements: ImmutableList<CommandElement>,
     ) : TipSectionElement()
 
     data class NestedText(val text: String, val info: String) : TipSectionElement()
 }
 
-data class MergedTip(val tip: Tip, val sections: List<TipSectionElement>)
+data class MergedTip(val tip: Tip, val sections: ImmutableList<TipSectionElement>)
 
 class TipsViewModel : ViewModel() {
 
-    var tips: List<MergedTip>
+    var tips: ImmutableList<MergedTip>
 
     init {
-        val sections = databaseHelper.getTipSections()
+        val tipSectionsFromDB = databaseHelper.getTipSections() // Renamed to avoid confusion with MergedTip.sections
         tips = databaseHelper.getTips().map { tip ->
             MergedTip(
                 tip,
-                sections.filter { it.tip_id == tip.id }.map { section ->
+                tipSectionsFromDB.filter { it.tip_id == tip.id }.map { section ->
                     when (section.type) {
                         0L -> {
                             val text =
@@ -42,7 +44,7 @@ class TipsViewModel : ViewModel() {
                         1L -> {
                             TipSectionElement.Code(
                                 section.data1,
-                                section.data1.getCommandList(section.extra),
+                                section.data1.getCommandList(section.extra).toImmutableList(),
                             )
                         }
 
@@ -51,7 +53,7 @@ class TipsViewModel : ViewModel() {
                                 TipSectionElement.NestedCode(
                                     section.data1,
                                     section.data2,
-                                    section.data2.getCommandList(section.extra),
+                                    section.data2.getCommandList(section.extra).toImmutableList(),
                                 )
                             } else {
                                 TipSectionElement.NestedText(section.data1, section.data2)
@@ -62,8 +64,8 @@ class TipsViewModel : ViewModel() {
                             TipSectionElement.Text("")
                         }
                     }
-                },
+                }.toImmutableList(), // Convert list of sections for a tip to ImmutableList
             )
-        }
+        }.toImmutableList() // Convert final list of MergedTip to ImmutableList
     }
 }

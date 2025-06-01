@@ -85,7 +85,7 @@ fun AppInfoDialog(
                     }) {
                         Icon(
                             painterResource(R.drawable.ic_icons8_github),
-                            contentDescription = null,
+                            contentDescription = "View on GitHub", // TODO: Use stringResource
                             modifier = Modifier.size(40.dp),
                         )
                     }
@@ -112,7 +112,7 @@ fun AppInfoDialog(
                                 uriHandler.openUri(link)
                             },
                         painter = painterResource(R.mipmap.proton_free_horizontal),
-                        contentDescription = null,
+                        contentDescription = "Proton services promotion", // TODO: Use stringResource
                     )
                     Spacer(Modifier.height(8.dp))
                     Image(
@@ -123,7 +123,7 @@ fun AppInfoDialog(
                                 uriHandler.openUri(link)
                             },
                         painter = painterResource(R.mipmap.linode_horizontal),
-                        contentDescription = null,
+                        contentDescription = "Linode cloud hosting promotion", // TODO: Use stringResource
                     )
 
                     Spacer(Modifier.height(8.dp))
