@@ -1,13 +1,11 @@
 [versions]
-agp = "8.4.1"
+agp = "8.10.1"
 appVersion = "3.3.12"
 androidVersionCode = "106"
 kotlin = "2.1.21"
-# kotlinGradlePlugin = "2.1.21" # Removed, use versions.kotlin
 accompanistAppcompatTheme = "0.36.0"
 activityCompose = "1.10.1"
 foundation = "1.8.2"
-# gradle = "8.10.1" # Removed, replaced by agp
 json = "20250517"
 koinCore = "4.0.4"
 kotlinxCoroutinesCore = "1.10.2"
@@ -20,7 +18,7 @@ preference = "1.2.1"
 sqldelight = "2.1.0"
 uiToolingPreview = "1.8.2"
 spotless = "7.0.4"
-kotlinxCollectionsImmutable = "0.3.7"
+kotlinxCollectionsImmutable = "0.4.0"
 benManesVersions = "0.52.0"
 
 
@@ -38,15 +36,12 @@ androidx-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4", versi
 androidx-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "uiToolingPreview" }
 androidx-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "uiToolingPreview" }
 androidx-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "uiToolingPreview" }
-# gradle = { module = "com.android.tools.build:gradle", version.ref = "gradle" } # Removed
 json = { module = "org.json:json", version.ref = "json" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koinCore" }
 koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koinCore" }
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koinCore" }
-# kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlinGradlePlugin" } # Removed
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCore" }
 kotlinx-html-jvm = { module = "org.jetbrains.kotlinx:kotlinx-html-jvm", version.ref = "kotlinxHtmlJvm" }
-# gradle-plugin = { module = "app.cash.sqldelight:gradle-plugin", version.ref = "sqldelight" } # Removed
 runtime = { module = "app.cash.sqldelight:runtime", version.ref = "sqldelight" }
 sqldelight-android-driver = { module = "app.cash.sqldelight:android-driver", version.ref = "sqldelight" }
 sqldelight-sqlite-driver = { module = "app.cash.sqldelight:sqlite-driver", version.ref = "sqldelight" }
@@ -57,7 +52,6 @@ kotlinx-collections-immutable = { module = "org.jetbrains.kotlinx:kotlinx-collec
 android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 sqldelight = { id = "app.cash.sqldelight", version.ref = "sqldelight" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
