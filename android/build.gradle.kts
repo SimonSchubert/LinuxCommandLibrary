@@ -1,14 +1,10 @@
 plugins {
-    id("com.android.application")
-    kotlin("android")
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
     alias(libs.plugins.compose.compiler)
 }
 
 group = "com.inspiredandroid.linuxcommandbibliotheca"
-
-repositories {
-    mavenCentral()
-}
 
 dependencies {
     implementation(project(":common"))
@@ -79,10 +75,6 @@ android {
         abortOnError = false
     }
     namespace = "com.inspiredandroid.linuxcommandbibliotheca"
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.kotlin.get()
-    }
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
