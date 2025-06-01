@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.linuxcommandlibrary.shared.databaseHelper
 import com.linuxcommandlibrary.shared.sortedSearch
+import kotlinx.collections.immutable.persistentListOf
 import kotlinx.collections.immutable.toImmutableList
 import kotlinx.collections.immutable.toPersistentMap
 import kotlinx.coroutines.Dispatchers
@@ -20,8 +21,7 @@ class SearchViewModel : ViewModel() {
     private val _uiState = MutableStateFlow(SearchUiState())
     val uiState = _uiState.asStateFlow()
 
-    fun isGroupCollapsed(id: Long): Boolean =
-        _uiState.value.collapsedMap.getOrDefault(id, false)
+    fun isGroupCollapsed(id: Long): Boolean = _uiState.value.collapsedMap.getOrDefault(id, false)
 
     fun toggleCollapse(id: Long) {
         _uiState.update { currentState ->
@@ -38,7 +38,7 @@ class SearchViewModel : ViewModel() {
             _uiState.update {
                 it.copy(
                     filteredCommands = persistentListOf(),
-                    filteredBasicGroups = persistentListOf()
+                    filteredBasicGroups = persistentListOf(),
                 )
             }
             return
@@ -55,7 +55,7 @@ class SearchViewModel : ViewModel() {
                 _uiState.update { currentState ->
                     currentState.copy(
                         filteredCommands = commands.toImmutableList(),
-                        filteredBasicGroups = basicGroups.toImmutableList()
+                        filteredBasicGroups = basicGroups.toImmutableList(),
                     )
                 }
             } catch (ignore: CancellationException) {

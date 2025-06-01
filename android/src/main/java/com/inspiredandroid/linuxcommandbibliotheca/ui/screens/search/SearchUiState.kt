@@ -10,5 +10,5 @@ import kotlinx.collections.immutable.persistentMapOf
 data class SearchUiState(
     val filteredCommands: ImmutableList<Command> = persistentListOf(),
     val filteredBasicGroups: ImmutableList<BasicGroup> = persistentListOf(),
-    val collapsedMap: ImmutableMap<Long, Boolean> = persistentMapOf()
+    val collapsedMap: ImmutableMap<Long, Boolean> = persistentMapOf(),
 )

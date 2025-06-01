@@ -5,12 +5,8 @@ import com.linuxcommandlibrary.shared.databaseHelper
 import databases.BasicGroup
 import databases.Command
 import io.mockk.coEvery
-import io.mockk.coVerify
-import io.mockk.every
-import io.mockk.mockk
 import io.mockk.mockkObject
 import io.mockk.unmockkObject
-import kotlinx.collections.immutable.persistentListOf
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.delay
@@ -103,7 +99,6 @@ class SearchViewModelTest {
         assertTrue(latestState.filteredCommands.isEmpty())
         assertTrue(latestState.filteredBasicGroups.isEmpty())
     }
-
 
     @Test
     fun `search cancels previous search`() = runTest {
