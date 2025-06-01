@@ -20,6 +20,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.CommandView
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.NestedCommandView
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.NestedText
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.SectionTitle
+import kotlinx.collections.immutable.toImmutableList
 import org.koin.androidx.compose.koinViewModel
 
 /* Copyright 2022 Simon Schubert
@@ -69,7 +70,7 @@ fun TipsScreen(
                             is TipSectionElement.Code -> {
                                 CommandView(
                                     command = element.command,
-                                    elements = element.elements,
+                                    elements = element.elements.toImmutableList(), // Ensure ImmutableList
                                     onNavigate = onNavigate,
                                 )
                             }
@@ -78,7 +79,7 @@ fun TipsScreen(
                                 NestedCommandView(
                                     text = element.text,
                                     command = element.command,
-                                    commandElements = element.elements,
+                                    commandElements = element.elements.toImmutableList(), // Ensure ImmutableList
                                     onNavigate = onNavigate,
                                 )
                             }

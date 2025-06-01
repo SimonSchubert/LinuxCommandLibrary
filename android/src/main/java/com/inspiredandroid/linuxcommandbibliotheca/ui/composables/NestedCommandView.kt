@@ -12,6 +12,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.inspiredandroid.linuxcommandbibliotheca.ui.theme.LinuxTheme
 import com.linuxcommandlibrary.shared.CommandElement
+import kotlinx.collections.immutable.ImmutableList
+import kotlinx.collections.immutable.toImmutableList
 
 /* Copyright 2022 Simon Schubert
  *
@@ -32,7 +34,7 @@ import com.linuxcommandlibrary.shared.CommandElement
 fun NestedCommandView(
     text: String,
     command: String,
-    commandElements: List<CommandElement>,
+    commandElements: ImmutableList<CommandElement>,
     onNavigate: (String) -> Unit,
 ) {
     Row(verticalAlignment = Alignment.CenterVertically) {
@@ -61,7 +63,7 @@ fun NestedCommandViewPreview() {
                 CommandElement.Text("$ "),
                 CommandElement.Man("find"),
                 CommandElement.Text(" ex?mple.txt"),
-            ),
+            ).toImmutableList(),
             onNavigate = {},
         )
     }

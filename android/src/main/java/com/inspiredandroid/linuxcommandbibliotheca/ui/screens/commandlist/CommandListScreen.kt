@@ -54,7 +54,7 @@ fun CommandListScreen(
             CommandListItem(
                 command = command,
                 onNavigate = onNavigate,
-                isBookmarked = { id -> viewModel.hasBookmark(id) },
+                isBookmarked = viewModel.hasBookmark(command.id),
             )
         }
     }
@@ -65,7 +65,7 @@ fun CommandListItem(
     command: Command,
     searchText: String = "",
     onNavigate: (String) -> Unit,
-    isBookmarked: (Long) -> Boolean,
+    isBookmarked: Boolean,
 ) {
     ListItem(
         text = {
@@ -75,7 +75,7 @@ fun CommandListItem(
             )
         },
         trailing = {
-            if (isBookmarked(command.id)) {
+            if (isBookmarked) {
                 Icon(
                     painterResource(R.drawable.ic_bookmark_black_24dp),
                     contentDescription = stringResource(R.string.remove_bookmark),
@@ -96,12 +96,28 @@ fun CommandListItem(
 
 @Preview
 @Composable
+fun CommandListItemPreview() {
+    val command = Command(0L, 0L, "cowsay", "A talking cow says moo.", "", 0, 0)
+    // LinuxTheme is not accessible here directly, assuming a basic preview
+    // For a themed preview, wrap with LinuxTheme if it's made available or part of the project structure
+    CommandListItem(
+        command = command,
+        searchText = "cow",
+        onNavigate = { },
+        isBookmarked = true
+    )
+}
+
+@Preview
+@Composable
 fun CommandListScreenPreview() {
-//    val commands = listOf(
-//        Command(0L, 0L, "cowsay", "speaking cow"),
-//        Command(1L, 0L, "cowthink", "thinking cow")
-//    )
-//    LinuxTheme {
-//        CommandListScreen(commands, "cow", listOf(0L)) {}
-//    }
+    // This preview is more complex due to the ViewModel dependency.
+    // For a proper preview, you'd typically use a fake ViewModel implementation
+    // or mock data source. For now, this will just show an empty screen
+    // or potentially crash if the ViewModel koinViewModel() can't be resolved in preview.
+    // To make it useful, one might need to adjust Koin setup for previews or pass
+    // a fake ViewModel.
+    // LinuxTheme {
+    //    CommandListScreen(onNavigate = {})
+    // }
 }
