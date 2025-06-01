@@ -56,7 +56,6 @@ fun BasicGroupsScreen(
         ) { basicGroup ->
             BasicGroupColumn(
                 basicGroup = basicGroup,
-                // Assuming isGroupCollapsed(id) == true means content is hidden
                 isExpanded = !viewModel.isGroupCollapsed(basicGroup.id),
                 onToggleCollapse = { viewModel.toggleCollapse(basicGroup.id) },
                 onNavigate = onNavigate,
@@ -101,7 +100,6 @@ private fun ExpandedGroupContent(basicGroup: BasicGroup, onNavigate: (String) ->
     val commands = remember(basicGroup.id) {
         databaseHelper.getBasicCommands(basicGroup.id).toImmutableList()
     }
-    // Consider adding some padding or a Column wrapper if needed for layout consistency
     commands.forEach { basicCommand ->
         CommandView(
             command = basicCommand.command,
