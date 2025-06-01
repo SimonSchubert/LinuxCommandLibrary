@@ -90,9 +90,11 @@ fun CommandListItem(
                 pattern = searchText,
             )
         },
-        modifier = Modifier.clickable {
-            onNavigate("command?commandId=${command.id}&commandName=${command.name}")
-        },
+        modifier = Modifier.clickable(
+            onClick = remember(command.id, command.name, onNavigate) {
+                { onNavigate("command?commandId=${command.id}&commandName=${command.name}") }
+            }
+        ),
     )
 }
 

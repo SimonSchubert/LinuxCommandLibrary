@@ -11,6 +11,8 @@ import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Icon
 import androidx.compose.material.ListItem
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
@@ -48,15 +50,17 @@ fun BasicGroupsScreen(
     ),
     onNavigate: (String) -> Unit = {},
 ) {
+    val uiState by viewModel.uiState.collectAsState()
+
     LazyColumn(Modifier.fillMaxSize()) {
         items(
-            items = viewModel.basicGroups,
+            items = uiState.basicGroups,
             key = { it.id },
             contentType = { "basic_group_item" },
         ) { basicGroup ->
             BasicGroupColumn(
                 basicGroup = basicGroup,
-                isExpanded = !viewModel.isGroupCollapsed(basicGroup.id),
+                isExpanded = !uiState.collapsedMap.getOrDefault(basicGroup.id, false),
                 onToggleCollapse = { viewModel.toggleCollapse(basicGroup.id) },
                 onNavigate = onNavigate,
             )

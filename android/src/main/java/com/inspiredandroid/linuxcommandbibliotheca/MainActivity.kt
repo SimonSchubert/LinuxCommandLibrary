@@ -20,6 +20,8 @@ import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.derivedStateOf
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
@@ -108,10 +110,8 @@ fun LinuxApp() {
             TextFieldValue(text = "", selection = TextRange(0)),
         )
     }
-    val showSearch = remember { mutableStateOf(false) }
-    val onNavigate: (String) -> Unit = {
-        navController.navigate(it)
-    }
+    val showSearch = remember { mutableStateof(false) }
+    val onNavigate: (String) -> Unit = remember(navController) { { route -> navController.navigate(route) } }
 
     Scaffold(
         topBar = {
@@ -220,12 +220,11 @@ fun LinuxApp() {
                 }
             }
 
-            val isSearchVisible = remember(
-                searchTextValue.value.text,
-                navBackStackEntry.value?.destination?.route,
-            ) {
-                searchTextValue.value.text.isNotEmpty() &&
-                    navBackStackEntry.value?.destination?.route?.startsWith("command?") == false
+            val isSearchVisible by remember(navBackStackEntry, searchTextValue) {
+                derivedStateOf {
+                    searchTextValue.value.text.isNotEmpty() &&
+                        navBackStackEntry.value?.destination?.route?.startsWith("command?") == false
+                }
             }
             AnimatedVisibility(
                 visible = isSearchVisible,
@@ -234,9 +233,7 @@ fun LinuxApp() {
             ) {
                 SearchScreen(
                     searchText = searchTextValue.value.text,
-                    onNavigate = {
-                        navController.navigate(it)
-                    },
+                    onNavigate = remember(navController) { { route -> navController.navigate(route) } },
                 )
             }
         }
