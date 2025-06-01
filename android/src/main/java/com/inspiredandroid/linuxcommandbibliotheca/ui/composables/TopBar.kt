@@ -21,6 +21,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.State
+import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
@@ -91,52 +92,65 @@ fun TopBar(
             onNavigateBack = onNavigateBack,
         )
     } else {
-        val showBackIcon = when (route) {
-            "tips" -> false
-            else -> true
-        }
+        val title = getTitleByRoute(navBackStackEntry.value)
+        val showBackIcon = route != "tips" // Simplified from original when
         val showAppInfoIcon = route == "tips"
-        var showDialog by remember { mutableStateOf(false) }
-
-        TopAppBar(
-            title = {
-                Text(
-                    getTitleByRoute(navBackStackEntry.value),
-                    modifier = Modifier.semantics { contentDescription = "TopAppBarTitle" },
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                )
-            },
-            backgroundColor = MaterialTheme.colors.primary,
-            contentColor = Color.White,
-            navigationIcon = if (showBackIcon) {
-                {
-                    IconButton(onClick = { onNavigateBack() }) {
-                        Icon(
-                            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = stringResource(R.string.back),
-                        )
-                    }
-                }
-            } else {
-                null
-            },
-            actions = {
-                if (showAppInfoIcon) {
-                    IconButton(onClick = {
-                        showDialog = true
-                    }) {
-                        Icon(
-                            imageVector = Icons.Filled.Info,
-                            contentDescription = stringResource(R.string.info),
-                        )
-                    }
-                }
-            },
+        GenericTopBar(
+            title = title,
+            showBackIcon = showBackIcon,
+            onNavigateBack = onNavigateBack,
+            showAppInfoIcon = showAppInfoIcon
         )
-        if (showDialog) {
-            AppInfoDialog(onDismiss = { showDialog = false })
-        }
+    }
+}
+
+@Composable
+private fun GenericTopBar(
+    title: String,
+    showBackIcon: Boolean,
+    onNavigateBack: () -> Unit,
+    showAppInfoIcon: Boolean
+) {
+    var showDialog by remember { mutableStateOf(false) }
+
+    TopAppBar(
+        title = {
+            Text(
+                title,
+                modifier = Modifier.semantics { contentDescription = "TopAppBarTitle" },
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+            )
+        },
+        backgroundColor = MaterialTheme.colors.primary,
+        contentColor = Color.White,
+        navigationIcon = if (showBackIcon) {
+            {
+                IconButton(onClick = { onNavigateBack() }) {
+                    Icon(
+                        imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                        contentDescription = stringResource(R.string.back),
+                    )
+                }
+            }
+        } else {
+            null
+        },
+        actions = {
+            if (showAppInfoIcon) {
+                IconButton(onClick = {
+                    showDialog = true
+                }) {
+                    Icon(
+                        imageVector = Icons.Filled.Info,
+                        contentDescription = stringResource(R.string.info),
+                    )
+                }
+            }
+        },
+    )
+    if (showDialog) {
+        AppInfoDialog(onDismiss = { showDialog = false })
     }
 }
 
@@ -152,6 +166,7 @@ private fun DetailTopBar(
     onNavigateBack: () -> Unit,
 ) {
     val uiState by viewModel.state.collectAsStateWithLifecycle()
+    val isAllExpanded by remember { derivedStateOf { uiState.isAllExpanded() } }
 
     TopAppBar(
         title = {
@@ -176,7 +191,7 @@ private fun DetailTopBar(
             IconButton(onClick = {
                 viewModel.onToggleAllExpanded()
             }) {
-                if (uiState.isAllExpanded()) {
+                if (isAllExpanded) {
                     Icon(
                         painterResource(R.drawable.ic_collapse_all),
                         contentDescription = stringResource(R.string.collapse_all),

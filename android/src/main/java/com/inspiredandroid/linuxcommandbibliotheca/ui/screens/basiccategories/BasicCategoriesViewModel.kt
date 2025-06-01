@@ -2,6 +2,9 @@ package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basiccategories
 
 import androidx.lifecycle.ViewModel
 import com.linuxcommandlibrary.shared.databaseHelper
+import databases.BasicCategory
+import kotlinx.collections.immutable.ImmutableList
+import kotlinx.collections.immutable.toImmutableList
 
 /* Copyright 2022 Simon Schubert
  *
@@ -20,5 +23,5 @@ import com.linuxcommandlibrary.shared.databaseHelper
 
 class BasicCategoriesViewModel : ViewModel() {
 
-    var basicCategories = databaseHelper.getBasics()
+    var basicCategories: ImmutableList<BasicCategory> = databaseHelper.getBasics().toImmutableList()
 }

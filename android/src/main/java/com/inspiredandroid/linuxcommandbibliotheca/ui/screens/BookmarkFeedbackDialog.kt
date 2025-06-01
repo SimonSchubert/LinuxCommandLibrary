@@ -38,7 +38,7 @@ fun BookmarkFeedbackDialog(onDismiss: () -> Unit) {
             ) {
                 Icon(
                     painterResource(R.drawable.ic_bookmark_black_24dp),
-                    contentDescription = stringResource(R.string.remove_bookmark),
+                    contentDescription = null, // Decorative, as title says "Bookmarked"
                     modifier = Modifier.size(48.dp),
                 )
 

@@ -4,6 +4,11 @@ import androidx.lifecycle.ViewModel
 import com.inspiredandroid.linuxcommandbibliotheca.DataManager
 import com.linuxcommandlibrary.shared.databaseHelper
 import com.linuxcommandlibrary.shared.getSortPriority
+import databases.CommandSection
+import kotlinx.collections.immutable.ImmutableList
+import kotlinx.collections.immutable.ImmutableMap
+import kotlinx.collections.immutable.toImmutableList
+import kotlinx.collections.immutable.toImmutableMap
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.update
 
@@ -30,14 +35,14 @@ class CommandDetailViewModel(
     val state: MutableStateFlow<CommandDetailUiState>
 
     init {
-        val sections = databaseHelper.getSections(commandId).sortedBy { it.getSortPriority() }
+        val sectionsData = databaseHelper.getSections(commandId).sortedBy { it.getSortPriority() }
         val isAutoExpandEnabled = dataManager.isAutoExpandSections()
         state = MutableStateFlow(
             CommandDetailUiState(
-                sections = sections,
-                expandedSectionsMap = sections.associate {
+                sections = sectionsData.toImmutableList(),
+                expandedSectionsMap = sectionsData.associate {
                     it.id to isAutoExpandEnabled
-                },
+                }.toImmutableMap(),
                 isBookmarked = dataManager.hasBookmark(commandId),
             ),
         )
@@ -46,18 +51,20 @@ class CommandDetailViewModel(
     fun onToggleAllExpanded() {
         val isAllExpanded = state.value.isAllExpanded()
         state.update {
-            val updatedMap = it.expandedSectionsMap.toMutableMap()
+            val currentMap = it.expandedSectionsMap
+            val updatedMap = currentMap.toMutableMap()
             updatedMap.replaceAll { _, _ -> !isAllExpanded }
-            it.copy(expandedSectionsMap = updatedMap)
+            it.copy(expandedSectionsMap = updatedMap.toImmutableMap())
         }
         dataManager.setAutoExpandSections(!isAllExpanded)
     }
 
     fun onToggleExpanded(id: Long) {
         state.update {
-            val updatedMap = it.expandedSectionsMap.toMutableMap()
+            val currentMap = it.expandedSectionsMap
+            val updatedMap = currentMap.toMutableMap()
             updatedMap[id] = !updatedMap.getOrDefault(id, false)
-            it.copy(expandedSectionsMap = updatedMap)
+            it.copy(expandedSectionsMap = updatedMap.toImmutableMap())
         }
     }
 

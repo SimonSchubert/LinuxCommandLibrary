@@ -52,6 +52,7 @@ fun BasicGroupsScreen(
         items(
             items = viewModel.basicGroups,
             key = { it.id },
+            contentType = { "basic_group_item" },
         ) { basicGroup ->
             BasicGroupColumn(
                 basicGroup = basicGroup,
@@ -91,15 +92,21 @@ fun BasicGroupColumn(
     )
 
     if (isExpanded) {
-        val commands = remember(basicGroup.id) {
-            databaseHelper.getBasicCommands(basicGroup.id).toImmutableList()
-        }
-        commands.forEach { basicCommand ->
-            CommandView(
-                command = basicCommand.command,
-                elements = basicCommand.command.getCommandList(basicCommand.mans).toImmutableList(),
-                onNavigate = onNavigate,
-            )
-        }
+        ExpandedGroupContent(basicGroup = basicGroup, onNavigate = onNavigate)
+    }
+}
+
+@Composable
+private fun ExpandedGroupContent(basicGroup: BasicGroup, onNavigate: (String) -> Unit) {
+    val commands = remember(basicGroup.id) {
+        databaseHelper.getBasicCommands(basicGroup.id).toImmutableList()
+    }
+    // Consider adding some padding or a Column wrapper if needed for layout consistency
+    commands.forEach { basicCommand ->
+        CommandView(
+            command = basicCommand.command,
+            elements = basicCommand.command.getCommandList(basicCommand.mans).toImmutableList(),
+            onNavigate = onNavigate,
+        )
     }
 }
