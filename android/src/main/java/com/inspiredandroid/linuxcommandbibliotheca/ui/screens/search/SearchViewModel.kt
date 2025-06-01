@@ -1,15 +1,12 @@
 package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.search
 
-import androidx.compose.runtime.mutableStateMapOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.linuxcommandlibrary.shared.databaseHelper
 import com.linuxcommandlibrary.shared.sortedSearch
-import databases.BasicGroup
-import databases.Command
-import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.persistentListOf
 import kotlinx.collections.immutable.toImmutableList
+import kotlinx.collections.immutable.toPersistentMap
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.ensureActive
@@ -21,23 +18,31 @@ import kotlin.coroutines.cancellation.CancellationException
 
 class SearchViewModel : ViewModel() {
 
-    private val collapsedMap = mutableStateMapOf<Long, Boolean>()
+    private val _uiState = MutableStateFlow(SearchUiState())
+    val uiState = _uiState.asStateFlow()
 
-    fun isGroupCollapsed(id: Long): Boolean = collapsedMap[id] == true
+    fun isGroupCollapsed(id: Long): Boolean = _uiState.value.collapsedMap.getOrDefault(id, false)
 
     fun toggleCollapse(id: Long) {
-        collapsedMap[id] = !collapsedMap.getOrDefault(id, false)
+        _uiState.update { currentState ->
+            val newMap = currentState.collapsedMap.toMutableMap()
+            newMap[id] = !currentState.collapsedMap.getOrDefault(id, false)
+            currentState.copy(collapsedMap = newMap.toPersistentMap())
+        }
     }
-
-    private val _filteredCommands = MutableStateFlow<ImmutableList<Command>>(persistentListOf())
-    val filteredCommands = _filteredCommands.asStateFlow()
-
-    private val _filteredBasicGroups = MutableStateFlow<ImmutableList<BasicGroup>>(persistentListOf())
-    val filteredBasicGroups = _filteredBasicGroups.asStateFlow()
 
     private var searchJob: Job? = null
     fun search(searchText: String) {
         searchJob?.cancel()
+        if (searchText.isBlank()) {
+            _uiState.update {
+                it.copy(
+                    filteredCommands = persistentListOf(),
+                    filteredBasicGroups = persistentListOf(),
+                )
+            }
+            return
+        }
         searchJob = viewModelScope.launch(Dispatchers.IO) {
             try {
                 ensureActive()
@@ -47,9 +52,15 @@ class SearchViewModel : ViewModel() {
 
                 ensureActive()
 
-                _filteredCommands.update { commands.toImmutableList() }
-                _filteredBasicGroups.update { basicGroups.toImmutableList() }
-            } catch (ignore: CancellationException) { }
+                _uiState.update { currentState ->
+                    currentState.copy(
+                        filteredCommands = commands.toImmutableList(),
+                        filteredBasicGroups = basicGroups.toImmutableList(),
+                    )
+                }
+            } catch (ignore: CancellationException) {
+                // Preserve previous results on cancellation
+            }
         }
     }
 }
