@@ -1,32 +1,17 @@
 import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 
 plugins {
-    id("com.github.ben-manes.versions") version "0.52.0"
-    alias(libs.plugins.compose.compiler) apply false
+    alias(libs.plugins.ben.manes.versions) apply false
     alias(libs.plugins.spotless)
-}
-
-buildscript {
-    repositories {
-        gradlePluginPortal()
-        google()
-        mavenCentral()
-    }
-    dependencies {
-        classpath(libs.kotlin.gradle.plugin)
-        classpath(libs.gradle)
-        classpath(libs.gradle.plugin)
-    }
+    alias(libs.plugins.kotlin.multiplatform) apply false
+    alias(libs.plugins.kotlin.android) apply false
+    alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.android.library) apply false
+    alias(libs.plugins.sqldelight) apply false
+    alias(libs.plugins.compose.compiler) apply false
 }
 
 group = "com.inspiredandroid"
-
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
 
 tasks.withType<DependencyUpdatesTask> {
     rejectVersionIf {

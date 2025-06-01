@@ -1,13 +1,9 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
-repositories {
-    google()
-}
-
 plugins {
-    kotlin("multiplatform")
-    id("com.android.library")
-    id("app.cash.sqldelight")
+    alias(libs.plugins.kotlin.multiplatform)
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.sqldelight)
 }
 
 group = "com.linuxcommandlibrary"
