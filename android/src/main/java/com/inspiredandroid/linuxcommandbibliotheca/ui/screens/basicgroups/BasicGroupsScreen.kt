@@ -60,7 +60,7 @@ fun BasicGroupsScreen(
         ) { basicGroup ->
             BasicGroupColumn(
                 basicGroup = basicGroup,
-                isExpanded = !uiState.collapsedMap.getOrDefault(basicGroup.id, false),
+                isExpanded = !uiState.collapsedMap.getOrDefault(basicGroup.id, true),
                 onToggleCollapse = { viewModel.toggleCollapse(basicGroup.id) },
                 onNavigate = onNavigate,
             )

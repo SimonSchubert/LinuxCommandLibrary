@@ -8,5 +8,5 @@ import kotlinx.collections.immutable.persistentMapOf
 
 data class BasicGroupsUiState(
     val basicGroups: ImmutableList<BasicGroup> = persistentListOf(),
-    val collapsedMap: ImmutableMap<Long, Boolean> = persistentMapOf()
+    val collapsedMap: ImmutableMap<Long, Boolean> = persistentMapOf(),
 )

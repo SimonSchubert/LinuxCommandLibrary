@@ -4,10 +4,8 @@ import app.cash.turbine.test
 import com.linuxcommandlibrary.shared.databaseHelper
 import databases.BasicGroup
 import io.mockk.every
-import io.mockk.mockk
 import io.mockk.mockkObject
 import io.mockk.unmockkObject
-import kotlinx.collections.immutable.persistentListOf
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.StandardTestDispatcher
@@ -43,7 +41,7 @@ class BasicGroupsViewModelTest {
         val categoryId = 1L
         val mockGroups = listOf(
             BasicGroup(1L, "Group 1", categoryId, 0, "icon1"),
-            BasicGroup(2L, "Group 2", categoryId, 0, "icon2")
+            BasicGroup(2L, "Group 2", categoryId, 0, "icon2"),
         )
         every { databaseHelper.getBasicGroupsByQuery(categoryId) } returns mockGroups
 

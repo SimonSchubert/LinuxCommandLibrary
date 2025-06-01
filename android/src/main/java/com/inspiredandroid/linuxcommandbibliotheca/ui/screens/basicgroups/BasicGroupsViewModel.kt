@@ -33,13 +33,12 @@ class BasicGroupsViewModel(categoryId: Long) : ViewModel() {
         _uiState.value = BasicGroupsUiState(basicGroups = groups)
     }
 
-    fun isGroupCollapsed(id: Long): Boolean =
-        _uiState.value.collapsedMap.getOrDefault(id, false)
+    fun isGroupCollapsed(id: Long): Boolean = _uiState.value.collapsedMap.getOrDefault(id, true)
 
     fun toggleCollapse(id: Long) {
         _uiState.update { currentState ->
             val newMap = currentState.collapsedMap.toMutableMap()
-            newMap[id] = !currentState.collapsedMap.getOrDefault(id, false)
+            newMap[id] = !currentState.collapsedMap.getOrDefault(id, true)
             currentState.copy(collapsedMap = newMap.toPersistentMap())
         }
     }

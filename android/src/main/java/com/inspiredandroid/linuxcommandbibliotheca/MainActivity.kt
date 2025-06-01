@@ -110,7 +110,7 @@ fun LinuxApp() {
             TextFieldValue(text = "", selection = TextRange(0)),
         )
     }
-    val showSearch = remember { mutableStateof(false) }
+    val showSearch = remember { mutableStateOf(false) }
     val onNavigate: (String) -> Unit = remember(navController) { { route -> navController.navigate(route) } }
 
     Scaffold(
