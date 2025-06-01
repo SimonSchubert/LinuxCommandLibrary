@@ -4,9 +4,6 @@ import androidx.lifecycle.ViewModel
 import com.inspiredandroid.linuxcommandbibliotheca.DataManager
 import com.linuxcommandlibrary.shared.databaseHelper
 import com.linuxcommandlibrary.shared.getSortPriority
-import databases.CommandSection
-import kotlinx.collections.immutable.ImmutableList
-import kotlinx.collections.immutable.ImmutableMap
 import kotlinx.collections.immutable.toImmutableList
 import kotlinx.collections.immutable.toImmutableMap
 import kotlinx.coroutines.flow.MutableStateFlow

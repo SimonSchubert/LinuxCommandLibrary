@@ -21,6 +21,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.HighlightedText
+import com.inspiredandroid.linuxcommandbibliotheca.ui.theme.LinuxTheme
 import databases.Command
 import org.koin.androidx.compose.koinViewModel
 
@@ -98,15 +99,15 @@ fun CommandListItem(
 @Preview
 @Composable
 fun CommandListItemPreview() {
-    val command = Command(0L, 0L, "cowsay", "A talking cow says moo.", "", 0, 0)
-    // LinuxTheme is not accessible here directly, assuming a basic preview
-    // For a themed preview, wrap with LinuxTheme if it's made available or part of the project structure
-    CommandListItem(
-        command = command,
-        searchText = "cow",
-        onNavigate = { },
-        isBookmarked = true
-    )
+    val command = Command(0L, 0L, "cowsay", "A talking cow says moo.")
+    LinuxTheme {
+        CommandListItem(
+            command = command,
+            searchText = "cow",
+            onNavigate = { },
+            isBookmarked = true,
+        )
+    }
 }
 
 @Preview
