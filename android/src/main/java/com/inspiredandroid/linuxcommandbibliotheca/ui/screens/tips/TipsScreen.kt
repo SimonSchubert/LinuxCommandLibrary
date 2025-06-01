@@ -20,6 +20,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.CommandView
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.NestedCommandView
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.NestedText
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.SectionTitle
+import kotlinx.collections.immutable.toImmutableList
 import org.koin.androidx.compose.koinViewModel
 
 /* Copyright 2022 Simon Schubert
@@ -50,48 +51,60 @@ fun TipsScreen(
         items(
             items = viewModel.tips,
             key = { it.tip.id },
+            contentType = { "tip_item" },
         ) { tip ->
-            Card(
-                elevation = 4.dp,
-                modifier = Modifier
-                    .padding(4.dp)
-                    .fillMaxWidth(),
-            ) {
-                Column(modifier = Modifier.padding(8.dp)) {
-                    SectionTitle(title = tip.tip.title)
+            TipItemCard(tip = tip, onNavigate = onNavigate)
+        }
+    }
+}
 
-                    tip.sections.forEach { element ->
-                        when (element) {
-                            is TipSectionElement.Text -> {
-                                Text(element.text)
-                            }
+@Composable
+private fun TipItemCard(tip: MergedTip, onNavigate: (String) -> Unit) {
+    Card(
+        elevation = 4.dp,
+        modifier = Modifier
+            .padding(4.dp)
+            .fillMaxWidth(),
+    ) {
+        Column(modifier = Modifier.padding(8.dp)) {
+            SectionTitle(title = tip.tip.title)
+            TipSections(sections = tip.sections, onNavigate = onNavigate)
+        }
+    }
+}
 
-                            is TipSectionElement.Code -> {
-                                CommandView(
-                                    command = element.command,
-                                    elements = element.elements,
-                                    onNavigate = onNavigate,
-                                )
-                            }
+@Composable
+private fun TipSections(sections: List<TipSectionElement>, onNavigate: (String) -> Unit) {
+    // Assuming MergedTip.sections is already ImmutableList from ViewModel refactor
+    // If not, it should be passed as ImmutableList<TipSectionElement>
+    sections.forEach { element ->
+        when (element) {
+            is TipSectionElement.Text -> {
+                Text(element.text)
+            }
 
-                            is TipSectionElement.NestedCode -> {
-                                NestedCommandView(
-                                    text = element.text,
-                                    command = element.command,
-                                    commandElements = element.elements,
-                                    onNavigate = onNavigate,
-                                )
-                            }
+            is TipSectionElement.Code -> {
+                CommandView(
+                    command = element.command,
+                    elements = element.elements.toImmutableList(), // elements within TipSectionElement should also be ImmutableList
+                    onNavigate = onNavigate,
+                )
+            }
 
-                            is TipSectionElement.NestedText -> {
-                                NestedText(
-                                    textLeft = element.text,
-                                    textRight = element.info,
-                                )
-                            }
-                        }
-                    }
-                }
+            is TipSectionElement.NestedCode -> {
+                NestedCommandView(
+                    text = element.text,
+                    command = element.command,
+                    commandElements = element.elements.toImmutableList(), // elements within TipSectionElement should also be ImmutableList
+                    onNavigate = onNavigate,
+                )
+            }
+
+            is TipSectionElement.NestedText -> {
+                NestedText(
+                    textLeft = element.text,
+                    textRight = element.info,
+                )
             }
         }
     }

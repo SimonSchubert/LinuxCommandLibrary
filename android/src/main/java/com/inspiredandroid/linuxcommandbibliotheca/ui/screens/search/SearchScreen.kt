@@ -11,7 +11,9 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
@@ -38,7 +40,13 @@ fun SearchScreen(
     val keyboardController = LocalSoftwareKeyboardController.current
     val lazyListState = rememberLazyListState()
 
-    if (commands.isEmpty() && basicGroups.isEmpty()) {
+    val showEmptyMessage by remember {
+        derivedStateOf {
+            commands.isEmpty() && basicGroups.isEmpty()
+        }
+    }
+
+    if (showEmptyMessage) {
         Box(
             modifier = Modifier
                 .fillMaxSize()
@@ -56,24 +64,27 @@ fun SearchScreen(
             items(
                 items = basicGroups,
                 key = { "basicGroup_${it.id}" },
+                contentType = { "search_basic_group_item" },
             ) { basicGroup ->
                 BasicGroupColumn(
                     basicGroup = basicGroup,
                     searchText = searchText,
                     onNavigate = onNavigate,
-                    isCollapsed = viewModel.isGroupCollapsed(basicGroup.id),
+                    // Assuming isGroupCollapsed(id) == true means content is hidden
+                    isExpanded = !viewModel.isGroupCollapsed(basicGroup.id),
                     onToggleCollapse = { viewModel.toggleCollapse(basicGroup.id) },
                 )
             }
             items(
                 items = commands,
                 key = { "command_${it.id}" },
+                contentType = { "search_command_item" },
             ) { command ->
                 CommandListItem(
                     command = command,
                     searchText = searchText,
                     onNavigate = onNavigate,
-                    isBookmarked = { false },
+                    isBookmarked = false, // Or fetch actual bookmark status if relevant
                 )
             }
         }

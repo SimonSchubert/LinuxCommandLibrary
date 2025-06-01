@@ -27,6 +27,8 @@ import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.ui.theme.LinuxTheme
 import com.linuxcommandlibrary.shared.CommandElement
 import com.linuxcommandlibrary.shared.databaseHelper
+import kotlinx.collections.immutable.ImmutableList
+import kotlinx.collections.immutable.toImmutableList
 
 /* Copyright 2022 Simon Schubert
  *
@@ -46,7 +48,7 @@ import com.linuxcommandlibrary.shared.databaseHelper
 @Composable
 fun CommandView(
     command: String,
-    elements: List<CommandElement>,
+    elements: ImmutableList<CommandElement>,
     onNavigate: (String) -> Unit = {},
     verticalPadding: Dp = 6.dp,
 ) {
@@ -143,7 +145,7 @@ fun CommandViewPreview() {
                 CommandElement.Text("$ "),
                 CommandElement.Man("find"),
                 CommandElement.Text(" ex?mple.txt"),
-            ),
+            ).toImmutableList(),
         )
     }
 }

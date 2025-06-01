@@ -7,6 +7,9 @@ import com.linuxcommandlibrary.shared.databaseHelper
 import com.linuxcommandlibrary.shared.sortedSearch
 import databases.BasicGroup
 import databases.Command
+import kotlinx.collections.immutable.ImmutableList
+import kotlinx.collections.immutable.persistentListOf
+import kotlinx.collections.immutable.toImmutableList
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.ensureActive
@@ -26,10 +29,10 @@ class SearchViewModel : ViewModel() {
         collapsedMap[id] = !collapsedMap.getOrDefault(id, false)
     }
 
-    private val _filteredCommands = MutableStateFlow<List<Command>>(emptyList())
+    private val _filteredCommands = MutableStateFlow<ImmutableList<Command>>(persistentListOf())
     val filteredCommands = _filteredCommands.asStateFlow()
 
-    private val _filteredBasicGroups = MutableStateFlow<List<BasicGroup>>(emptyList())
+    private val _filteredBasicGroups = MutableStateFlow<ImmutableList<BasicGroup>>(persistentListOf())
     val filteredBasicGroups = _filteredBasicGroups.asStateFlow()
 
     private var searchJob: Job? = null
@@ -44,8 +47,8 @@ class SearchViewModel : ViewModel() {
 
                 ensureActive()
 
-                _filteredCommands.update { commands }
-                _filteredBasicGroups.update { basicGroups }
+                _filteredCommands.update { commands.toImmutableList() }
+                _filteredBasicGroups.update { basicGroups.toImmutableList() }
             } catch (ignore: CancellationException) { }
         }
     }

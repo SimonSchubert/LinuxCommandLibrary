@@ -3,6 +3,9 @@ package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basicgroups
 import androidx.compose.runtime.mutableStateMapOf
 import androidx.lifecycle.ViewModel
 import com.linuxcommandlibrary.shared.databaseHelper
+import databases.BasicGroup
+import kotlinx.collections.immutable.ImmutableList
+import kotlinx.collections.immutable.toImmutableList
 
 /* Copyright 2022 Simon Schubert
  *
@@ -23,7 +26,8 @@ class BasicGroupsViewModel(categoryId: Long) : ViewModel() {
 
     private val collapsedMap = mutableStateMapOf<Long, Boolean>()
 
-    var basicGroups = databaseHelper.getBasicGroupsByQuery(categoryId)
+    var basicGroups: ImmutableList<BasicGroup> =
+        databaseHelper.getBasicGroupsByQuery(categoryId).toImmutableList()
 
     fun isGroupCollapsed(id: Long): Boolean = collapsedMap[id] == true
 

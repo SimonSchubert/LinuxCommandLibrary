@@ -60,8 +60,8 @@ fun InitializeDatabaseScreen(onFinish: () -> Unit = {}) {
 
     LaunchedEffect(Unit) {
         coroutineScope.launch(Dispatchers.IO) {
-            copyDatabase(context) {
-                status = it
+            copyDatabase(context) { progress ->
+                status = progress
             }
             withContext(Dispatchers.Main) {
                 onFinish()

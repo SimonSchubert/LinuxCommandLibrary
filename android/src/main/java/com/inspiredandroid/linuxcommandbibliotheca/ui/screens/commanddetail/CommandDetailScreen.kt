@@ -23,7 +23,6 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
@@ -40,6 +39,8 @@ import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.CommandView
 import com.linuxcommandlibrary.shared.CommandElement
 import com.linuxcommandlibrary.shared.databaseHelper
 import databases.CommandSection
+import kotlinx.collections.immutable.ImmutableList
+import kotlinx.collections.immutable.toImmutableList
 import org.koin.androidx.compose.koinViewModel
 import org.koin.core.parameter.parametersOf
 
@@ -72,8 +73,9 @@ fun CommandDetailScreen(
 
     LazyColumn(Modifier.fillMaxSize()) {
         items(
-            items = uiState.sections,
+            items = uiState.sections, // This should ideally be ImmutableList from ViewModel
             key = { it.id },
+            contentType = { "command_section_item" },
         ) { section ->
             CommandSectionColumn(
                 section = section,
@@ -107,75 +109,78 @@ private fun CommandSectionColumn(
 
     if (isExpanded) {
         when (section.title) {
-            "TLDR" -> {
-                Column(
-                    modifier = Modifier.padding(horizontal = 16.dp),
-                ) {
-                    val tldrParts = section.content.split("<b>")
-                    tldrParts.forEachIndexed { index, s ->
-                        val split = s.split("</b>")
-                        if (split.size > 1) {
-                            Text(
-                                text = split[0],
-                                fontWeight = FontWeight.Bold,
-                                color = MaterialTheme.colors.onSurface.copy(alpha = 0.7f),
-                            )
+            "TLDR" -> TldrSectionContent(content = section.content, onNavigate = onNavigate)
+            "SEE ALSO" -> SeeAlsoSectionContent(content = section.content, onNavigate = onNavigate)
+            else -> DefaultSectionContent(content = section.content)
+        }
+    }
+}
 
-                            val command = "$ " + split[1].replace("<br>", "").replace("`", "")
-                            CommandView(
-                                command = command,
-                                elements = listOf(CommandElement.Text(command)),
-                                onNavigate = onNavigate,
-                                verticalPadding = 4.dp,
-                            )
-                        }
-                        if (index != tldrParts.lastIndex) {
-                            Spacer(Modifier.height(6.dp))
-                        }
-                    }
-                }
-            }
-            "SEE ALSO" -> {
-                val commands = remember {
-                    getCommands(section.content)
-                }
-                if (commands.isNotEmpty()) {
-                    FlowRow(
-                        modifier = Modifier.padding(horizontal = 16.dp),
-                        horizontalArrangement = Arrangement.spacedBy(8.dp),
-                    ) {
-                        commands.forEach { name ->
-                            Chip(onClick = {
-                                onNavigate("command?commandName=$name")
-                            }) {
-                                Text(
-                                    text = name,
-                                    color = MaterialTheme.colors.onSurface,
-                                )
-                            }
-                        }
-                    }
-                } else {
-                    // fallback
-                    Text(
-                        modifier = Modifier.padding(horizontal = 16.dp),
-                        text = section.content.toAnnotatedString(),
-                        color = MaterialTheme.colors.onSurface,
-                    )
-                }
-            }
-            else -> {
+@Composable
+private fun TldrSectionContent(content: String, onNavigate: (String) -> Unit) {
+    Column(
+        modifier = Modifier.padding(start = 16.dp, end = 16.dp, top = 8.dp, bottom = 8.dp),
+    ) {
+        val tldrParts = content.split("<b>")
+        tldrParts.forEachIndexed { index, s ->
+            val split = s.split("</b>")
+            if (split.size > 1) {
                 Text(
-                    modifier = Modifier.padding(horizontal = 16.dp),
-                    text = section.content.toAnnotatedString(),
+                    text = split[0],
+                    fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colors.onSurface.copy(alpha = 0.7f),
                 )
+
+                val command = "$ " + split[1].replace("<br>", "").replace("`", "")
+                CommandView(
+                    command = command,
+                    elements = listOf(CommandElement.Text(command)).toImmutableList(),
+                    onNavigate = onNavigate,
+                    verticalPadding = 4.dp,
+                )
+            }
+            if (index != tldrParts.lastIndex && split.size > 1) { // Add spacer only if content was added
+                Spacer(Modifier.height(6.dp))
             }
         }
     }
 }
 
-private fun getCommands(input: String): List<String> {
+@Composable
+private fun SeeAlsoSectionContent(content: String, onNavigate: (String) -> Unit) {
+    val commands = getCommands(content)
+    if (commands.isNotEmpty()) {
+        FlowRow(
+            modifier = Modifier.padding(start = 16.dp, end = 16.dp, top = 8.dp, bottom = 8.dp),
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+        ) {
+            commands.forEach { name ->
+                Chip(onClick = {
+                    onNavigate("command?commandName=$name")
+                }) {
+                    Text(
+                        text = name,
+                        color = MaterialTheme.colors.onSurface,
+                    )
+                }
+            }
+        }
+    } else {
+        // fallback to default rendering if no commands were parsed (e.g. plain text)
+        DefaultSectionContent(content = content, isFallback = true)
+    }
+}
+
+@Composable
+private fun DefaultSectionContent(content: String, isFallback: Boolean = false) {
+    Text(
+        modifier = Modifier.padding(start = 16.dp, end = 16.dp, top = if (isFallback) 0.dp else 8.dp, bottom = 8.dp),
+        text = content.toAnnotatedString(),
+        color = MaterialTheme.colors.onSurface.copy(alpha = 0.7f),
+    )
+}
+
+private fun getCommands(input: String): ImmutableList<String> {
     val commands = input.split(",").map { it.trim() }
 
     return commands
@@ -183,7 +188,7 @@ private fun getCommands(input: String): List<String> {
             command.replace(Regex("\\(\\d+\\)$"), "").trim()
         }.filter {
             databaseHelper.getCommand(it) != null
-        }
+        }.toImmutableList()
 }
 
 private fun String.toAnnotatedString(): AnnotatedString {
