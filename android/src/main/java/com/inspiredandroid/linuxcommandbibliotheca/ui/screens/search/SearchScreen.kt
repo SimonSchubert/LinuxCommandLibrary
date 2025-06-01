@@ -27,11 +27,8 @@ fun SearchScreen(
     viewModel: SearchViewModel = koinViewModel(),
     onNavigate: (String) -> Unit,
 ) {
-    if (searchText.isEmpty()) {
-        return
-    }
-    val commands by viewModel.filteredCommands.collectAsState()
-    val basicGroups by viewModel.filteredBasicGroups.collectAsState()
+    // Removed the early return for searchText.isEmpty() as ViewModel now handles it by emitting an empty state.
+    val uiState by viewModel.uiState.collectAsState()
 
     LaunchedEffect(searchText) {
         viewModel.search(searchText)
@@ -40,13 +37,14 @@ fun SearchScreen(
     val keyboardController = LocalSoftwareKeyboardController.current
     val lazyListState = rememberLazyListState()
 
-    val showEmptyMessage by remember {
+    val showEmptyMessage by remember(uiState.filteredCommands, uiState.filteredBasicGroups) {
         derivedStateOf {
-            commands.isEmpty() && basicGroups.isEmpty()
+            uiState.filteredCommands.isEmpty() && uiState.filteredBasicGroups.isEmpty()
         }
     }
 
-    if (showEmptyMessage) {
+    // Only show "404" if search text is not empty and results are empty
+    if (searchText.isNotEmpty() && showEmptyMessage) {
         Box(
             modifier = Modifier
                 .fillMaxSize()
@@ -62,7 +60,7 @@ fun SearchScreen(
             state = lazyListState,
         ) {
             items(
-                items = basicGroups,
+                items = uiState.filteredBasicGroups,
                 key = { "basicGroup_${it.id}" },
                 contentType = { "search_basic_group_item" },
             ) { basicGroup ->
@@ -70,13 +68,12 @@ fun SearchScreen(
                     basicGroup = basicGroup,
                     searchText = searchText,
                     onNavigate = onNavigate,
-                    // Assuming isGroupCollapsed(id) == true means content is hidden
-                    isExpanded = !viewModel.isGroupCollapsed(basicGroup.id),
+                    isExpanded = !uiState.collapsedMap.getOrDefault(basicGroup.id, false),
                     onToggleCollapse = { viewModel.toggleCollapse(basicGroup.id) },
                 )
             }
             items(
-                items = commands,
+                items = uiState.filteredCommands,
                 key = { "command_${it.id}" },
                 contentType = { "search_command_item" },
             ) { command ->

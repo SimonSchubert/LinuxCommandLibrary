@@ -15,6 +15,7 @@ import androidx.compose.material.ListItem
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -90,9 +91,11 @@ fun CommandListItem(
                 pattern = searchText,
             )
         },
-        modifier = Modifier.clickable {
-            onNavigate("command?commandId=${command.id}&commandName=${command.name}")
-        },
+        modifier = Modifier.clickable(
+            onClick = remember(command.id, command.name, onNavigate) {
+                { onNavigate("command?commandId=${command.id}&commandName=${command.name}") }
+            },
+        ),
     )
 }
 

@@ -1,11 +1,12 @@
 package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basicgroups
 
-import androidx.compose.runtime.mutableStateMapOf
 import androidx.lifecycle.ViewModel
 import com.linuxcommandlibrary.shared.databaseHelper
-import databases.BasicGroup
-import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
+import kotlinx.collections.immutable.toPersistentMap
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
 
 /* Copyright 2022 Simon Schubert
  *
@@ -24,14 +25,21 @@ import kotlinx.collections.immutable.toImmutableList
 
 class BasicGroupsViewModel(categoryId: Long) : ViewModel() {
 
-    private val collapsedMap = mutableStateMapOf<Long, Boolean>()
+    private val _uiState = MutableStateFlow(BasicGroupsUiState())
+    val uiState = _uiState.asStateFlow()
 
-    var basicGroups: ImmutableList<BasicGroup> =
-        databaseHelper.getBasicGroupsByQuery(categoryId).toImmutableList()
+    init {
+        val groups = databaseHelper.getBasicGroupsByQuery(categoryId).toImmutableList()
+        _uiState.value = BasicGroupsUiState(basicGroups = groups)
+    }
 
-    fun isGroupCollapsed(id: Long): Boolean = collapsedMap[id] == true
+    fun isGroupCollapsed(id: Long): Boolean = _uiState.value.collapsedMap.getOrDefault(id, true)
 
     fun toggleCollapse(id: Long) {
-        collapsedMap[id] = !collapsedMap.getOrDefault(id, false)
+        _uiState.update { currentState ->
+            val newMap = currentState.collapsedMap.toMutableMap()
+            newMap[id] = !currentState.collapsedMap.getOrDefault(id, true)
+            currentState.copy(collapsedMap = newMap.toPersistentMap())
+        }
     }
 }
