@@ -61,7 +61,8 @@ fun SearchScreen(
                     basicGroup = basicGroup,
                     searchText = searchText,
                     onNavigate = onNavigate,
-                    isCollapsed = viewModel.isGroupCollapsed(basicGroup.id),
+                    // Assuming isGroupCollapsed(id) == true means content is hidden
+                    isExpanded = !viewModel.isGroupCollapsed(basicGroup.id),
                     onToggleCollapse = { viewModel.toggleCollapse(basicGroup.id) },
                 )
             }
@@ -73,7 +74,7 @@ fun SearchScreen(
                     command = command,
                     searchText = searchText,
                     onNavigate = onNavigate,
-                    isBookmarked = { false },
+                    isBookmarked = false, // Or fetch actual bookmark status if relevant
                 )
             }
         }

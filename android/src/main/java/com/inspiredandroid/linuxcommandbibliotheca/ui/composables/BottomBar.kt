@@ -7,14 +7,15 @@ import androidx.compose.material.Icon
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
+import androidx.navigation.compose.currentBackStackEntryAsState
 import com.inspiredandroid.linuxcommandbibliotheca.Screen
 import com.inspiredandroid.linuxcommandbibliotheca.ui.theme.LocalCustomColors
 
@@ -44,8 +45,8 @@ fun BottomBar(
     navController: NavHostController,
     resetSearch: () -> Unit,
 ) {
-    // TODO: read current route from navcontroller
-    val selectedRoute = rememberSaveable { mutableStateOf(Screen.Basics.route) }
+    val navBackStackEntry by navController.currentBackStackEntryAsState()
+    val currentDestination = navBackStackEntry?.destination
 
     BottomNavigation(
         backgroundColor = LocalCustomColors.current.navBarBackground,
@@ -61,15 +62,18 @@ fun BottomBar(
                     )
                 },
                 label = { Text(stringResource(screen.resourceId)) },
-                selected = screen.route == selectedRoute.value,
+                selected = currentDestination?.hierarchy?.any { it.route == screen.route } == true,
                 selectedContentColor = MaterialTheme.colors.primary,
                 unselectedContentColor = MaterialTheme.colors.onSurface,
                 onClick = {
+                    // Pop back stack if current route starts with "command?"
+                    // This specific logic might need adjustment based on detailed navigation graph behavior
+                    // For example, ensure it doesn't pop too much or interfere with expected navigation.
+                    // A more robust way might be to navigate to a specific point before the command details.
                     while (navController.currentBackStackEntry?.destination?.route?.startsWith("command?") == true) {
                         navController.popBackStack()
                     }
                     navController.navigate(screen.route) {
-                        selectedRoute.value = screen.route
                         popUpTo(navController.graph.findStartDestination().id) {
                             saveState = true
                         }

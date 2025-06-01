@@ -19,6 +19,7 @@ preference = "1.2.1"
 sqldelight = "2.1.0"
 uiToolingPreview = "1.8.2"
 spotless = "7.0.4"
+kotlinxCollectionsImmutable = "0.3.7"
 
 
 [libraries]
@@ -47,6 +48,7 @@ gradle-plugin = { module = "app.cash.sqldelight:gradle-plugin", version.ref = "s
 runtime = { module = "app.cash.sqldelight:runtime", version.ref = "sqldelight" }
 sqldelight-android-driver = { module = "app.cash.sqldelight:android-driver", version.ref = "sqldelight" }
 sqldelight-sqlite-driver = { module = "app.cash.sqldelight:sqlite-driver", version.ref = "sqldelight" }
+kotlinx-collections-immutable = { module = "org.jetbrains.kotlinx:kotlinx-collections-immutable", version.ref = "kotlinxCollectionsImmutable" }
 
 
 [plugins]

@@ -21,6 +21,7 @@ import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.HighlightedTex
 import com.linuxcommandlibrary.shared.databaseHelper
 import com.linuxcommandlibrary.shared.getCommandList
 import databases.BasicGroup
+import kotlinx.collections.immutable.toImmutableList
 import org.koin.androidx.compose.koinViewModel
 import org.koin.core.parameter.parametersOf
 
@@ -54,7 +55,8 @@ fun BasicGroupsScreen(
         ) { basicGroup ->
             BasicGroupColumn(
                 basicGroup = basicGroup,
-                isCollapsed = viewModel.isGroupCollapsed(basicGroup.id),
+                // Assuming isGroupCollapsed(id) == true means content is hidden
+                isExpanded = !viewModel.isGroupCollapsed(basicGroup.id),
                 onToggleCollapse = { viewModel.toggleCollapse(basicGroup.id) },
                 onNavigate = onNavigate,
             )
@@ -66,7 +68,7 @@ fun BasicGroupsScreen(
 fun BasicGroupColumn(
     basicGroup: BasicGroup,
     searchText: String = "",
-    isCollapsed: Boolean,
+    isExpanded: Boolean,
     onToggleCollapse: () -> Unit,
     onNavigate: (String) -> Unit = {},
 ) {
@@ -88,12 +90,14 @@ fun BasicGroupColumn(
         modifier = Modifier.clickable { onToggleCollapse() },
     )
 
-    if (isCollapsed) {
-        val commands = remember { databaseHelper.getBasicCommands(basicGroup.id) }
+    if (isExpanded) {
+        val commands = remember(basicGroup.id) {
+            databaseHelper.getBasicCommands(basicGroup.id).toImmutableList()
+        }
         commands.forEach { basicCommand ->
             CommandView(
                 command = basicCommand.command,
-                elements = basicCommand.command.getCommandList(basicCommand.mans),
+                elements = basicCommand.command.getCommandList(basicCommand.mans).toImmutableList(),
                 onNavigate = onNavigate,
             )
         }

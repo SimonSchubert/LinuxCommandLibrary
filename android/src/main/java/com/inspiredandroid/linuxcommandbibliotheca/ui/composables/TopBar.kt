@@ -75,16 +75,14 @@ fun TopBar(
     val route = navBackStackEntry.value?.destination?.route
 
     if (route == "commands" || route == "basics") {
+        val hideSearchCallback = remember { { isSearchVisible.value = false } }
+        val showSearchCallback = remember { { isSearchVisible.value = true } }
         SearchTopBar(
             title = getTitleByRoute(navBackStackEntry.value),
             textFieldValue = textFieldValue,
             isSearchVisible = isSearchVisible.value,
-            hideSearch = {
-                isSearchVisible.value = false
-            },
-            showSearch = {
-                isSearchVisible.value = true
-            },
+            hideSearch = hideSearchCallback,
+            showSearch = showSearchCallback,
         )
     } else if (route?.startsWith("command?") == true) {
         DetailTopBar(
@@ -319,9 +317,17 @@ private fun getTitleByRoute(backStackEntry: NavBackStackEntry?): String {
                 backStackEntry.arguments?.getString("commandName") ?: ""
             } else if (route?.startsWith("basicgroups?") == true) {
                 val deeplinkName = backStackEntry.arguments?.getString("categoryName") ?: ""
-                val categories = databaseHelper.getBasics()
-                val category = categories.firstOrNull { it.getHtmlFileName() == deeplinkName }
-                category?.title ?: "Not found"
+                // Remember the category title calculation based on deeplinkName
+                // Assuming databaseHelper.getBasics() result is stable or changes infrequently.
+                // If getBasics() is very cheap, remember might be overkill.
+                // If getBasics() is expensive, this helps.
+                // A more robust solution might involve moving data loading to ViewModel
+                // and passing only necessary data to Composables.
+                remember(deeplinkName) {
+                    val categories = databaseHelper.getBasics() // This could return ImmutableList
+                    val category = categories.firstOrNull { it.getHtmlFileName() == deeplinkName }
+                    category?.title ?: "Not found"
+                }
             } else {
                 ""
             }

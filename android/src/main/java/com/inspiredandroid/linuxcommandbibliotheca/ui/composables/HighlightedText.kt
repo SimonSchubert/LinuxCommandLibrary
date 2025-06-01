@@ -40,7 +40,7 @@ fun HighlightedText(
         )
     } else {
         val highlightColor = MaterialTheme.colors.primary
-        val annotatedString = remember(pattern) {
+        val annotatedString = remember(text, pattern, highlightColor) {
             buildAnnotatedString {
                 val splitText = text.split(pattern, ignoreCase = true)
                 splitText.forEachIndexed { index, s ->

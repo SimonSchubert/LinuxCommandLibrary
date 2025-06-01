@@ -40,6 +40,8 @@ import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.CommandView
 import com.linuxcommandlibrary.shared.CommandElement
 import com.linuxcommandlibrary.shared.databaseHelper
 import databases.CommandSection
+import kotlinx.collections.immutable.ImmutableList
+import kotlinx.collections.immutable.toImmutableList
 import org.koin.androidx.compose.koinViewModel
 import org.koin.core.parameter.parametersOf
 
@@ -72,7 +74,7 @@ fun CommandDetailScreen(
 
     LazyColumn(Modifier.fillMaxSize()) {
         items(
-            items = uiState.sections,
+            items = uiState.sections, // This should ideally be ImmutableList from ViewModel
             key = { it.id },
         ) { section ->
             CommandSectionColumn(
@@ -124,7 +126,7 @@ private fun CommandSectionColumn(
                             val command = "$ " + split[1].replace("<br>", "").replace("`", "")
                             CommandView(
                                 command = command,
-                                elements = listOf(CommandElement.Text(command)),
+                                elements = listOf(CommandElement.Text(command)).toImmutableList(),
                                 onNavigate = onNavigate,
                                 verticalPadding = 4.dp,
                             )
@@ -136,9 +138,7 @@ private fun CommandSectionColumn(
                 }
             }
             "SEE ALSO" -> {
-                val commands = remember {
-                    getCommands(section.content)
-                }
+                val commands = getCommands(section.content)
                 if (commands.isNotEmpty()) {
                     FlowRow(
                         modifier = Modifier.padding(horizontal = 16.dp),
@@ -175,7 +175,7 @@ private fun CommandSectionColumn(
     }
 }
 
-private fun getCommands(input: String): List<String> {
+private fun getCommands(input: String): ImmutableList<String> {
     val commands = input.split(",").map { it.trim() }
 
     return commands
@@ -183,7 +183,7 @@ private fun getCommands(input: String): List<String> {
             command.replace(Regex("\\(\\d+\\)$"), "").trim()
         }.filter {
             databaseHelper.getCommand(it) != null
-        }
+        }.toImmutableList()
 }
 
 private fun String.toAnnotatedString(): AnnotatedString {
