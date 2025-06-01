@@ -1,5 +1,5 @@
 plugins {
-    alias(libs.plugins.kotlin.jvm)
+    kotlin("jvm") // Revert to simple ID to test version conflict
 }
 
 group = "com.linuxcommandlibrary"
