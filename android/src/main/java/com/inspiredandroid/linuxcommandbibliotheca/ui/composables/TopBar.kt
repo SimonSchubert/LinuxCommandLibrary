@@ -99,7 +99,7 @@ fun TopBar(
             title = title,
             showBackIcon = showBackIcon,
             onNavigateBack = onNavigateBack,
-            showAppInfoIcon = showAppInfoIcon
+            showAppInfoIcon = showAppInfoIcon,
         )
     }
 }
@@ -109,7 +109,7 @@ private fun GenericTopBar(
     title: String,
     showBackIcon: Boolean,
     onNavigateBack: () -> Unit,
-    showAppInfoIcon: Boolean
+    showAppInfoIcon: Boolean,
 ) {
     var showDialog by remember { mutableStateOf(false) }
 
