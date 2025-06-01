@@ -107,11 +107,10 @@ fun CommandView(
         )
 
         val context = LocalContext.current
+        val shareAction = remember(context, command) { { shareCommand(context, command) } }
         IconButton(
             modifier = Modifier.align(Alignment.CenterVertically),
-            onClick = {
-                shareCommand(context, command)
-            },
+            onClick = shareAction,
         ) {
             Icon(
                 imageVector = Icons.Filled.Share,
