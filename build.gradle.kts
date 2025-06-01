@@ -2,7 +2,7 @@ import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 
 plugins {
     alias(libs.plugins.ben.manes.versions) apply false
-    alias(libs.plugins.spotless) // Apply Spotless to the root project
+    alias(libs.plugins.spotless)
     alias(libs.plugins.kotlin.multiplatform) apply false
     alias(libs.plugins.kotlin.android) apply false
     alias(libs.plugins.android.application) apply false

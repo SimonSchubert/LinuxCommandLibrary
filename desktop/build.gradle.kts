@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") // Revert to simple ID to test version conflict
+    kotlin("jvm")
 }
 
 group = "com.linuxcommandlibrary"
