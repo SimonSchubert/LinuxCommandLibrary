@@ -25,7 +25,7 @@ class AppKtTest {
         val expected = listOf(
             CommandElement.Text("sudo "),
             CommandElement.Man("apt-get"),
-            CommandElement.Text(" update"),
+            CommandElement.Text(" update")
         )
         assertEquals(expected, command.getCommandList(mans, checkExisting = false))
     }
@@ -47,7 +47,7 @@ class AppKtTest {
         // Let's test "tar" first.
         val expectedTar = listOf(
             CommandElement.Man("tar"),
-            CommandElement.Text(" -czvf archive.tar.gz /my/folder"),
+            CommandElement.Text(" -czvf archive.tar.gz /my/folder")
         )
         assertEquals(expectedTar, command.getCommandList("tar", checkExisting = false))
 
@@ -58,7 +58,7 @@ class AppKtTest {
             CommandElement.Man("gzip"),
             CommandElement.Text(" -d file.gz; "),
             CommandElement.Man("tar"),
-            CommandElement.Text(" -xf file.tar"),
+            CommandElement.Text(" -xf file.tar")
         )
         assertEquals(expected2, command2.getCommandList(mans2, checkExisting = false))
     }
@@ -74,7 +74,7 @@ class AppKtTest {
         val expected = listOf(
             CommandElement.Text("check this out: "),
             CommandElement.Url("my-tool", "https://example.com/my-tool"),
-            CommandElement.Text(" --help"),
+            CommandElement.Text(" --help")
         )
         assertEquals(expected, command.getCommandList(mans, checkExisting = false))
     }
@@ -101,7 +101,7 @@ class AppKtTest {
         val mans = "ls"
         val expected = listOf(
             CommandElement.Man("ls"),
-            CommandElement.Text(" -a"),
+            CommandElement.Text(" -a")
         )
         assertEquals(expected, command.getCommandList(mans, checkExisting = false))
     }
@@ -113,7 +113,7 @@ class AppKtTest {
         val expected = listOf(
             CommandElement.Text("execute an "),
             CommandElement.Man("ls"),
-            CommandElement.Text(""), // The logic adds a final Text element
+            CommandElement.Text("") // The logic adds a final Text element
         )
         // The parser adds " " at the beginning of the command string " $this"
         // " execute an ls" -> " execute an ülsä"
@@ -133,7 +133,7 @@ class AppKtTest {
         val expected = listOf(
             CommandElement.Text(""), // Leading space added by " $this"
             CommandElement.Text("mycustomcommand"), // This is the key part
-            CommandElement.Text(" --option"),
+            CommandElement.Text(" --option")
         )
         // This test depends on the test environment's behavior of databaseHelper.
         // If databaseHelper is a real instance that's somehow available and mycustomcommand exists, this test will fail.
@@ -156,6 +156,7 @@ class AppKtTest {
         // Let's test current behavior first for hasBrackets = false
         val expectedNoBrackets = listOf(CommandElement.Text("call(ls, -l)"))
         assertEquals(expectedNoBrackets, command.getCommandList(mans, false, false))
+
 
         // With hasBrackets=true, it should find "ls" if preceded by space or comma
         // Original command: " $this" -> " call(ls, -l)"
@@ -189,15 +190,15 @@ class AppKtTest {
         val expectedWithBrackets = listOf(
             CommandElement.Text("call("),
             CommandElement.Man("ls"),
-            CommandElement.Text(" -l)"),
+            CommandElement.Text(" -l)")
         )
         assertEquals(expectedWithBrackets, command.getCommandList(mans, true, false))
 
         val command2 = " call ls -l"
-        val expectedWithBrackets2 = listOf(
+         val expectedWithBrackets2 = listOf(
             CommandElement.Text("call "), // Note: leading space on " $this"
             CommandElement.Man("ls"),
-            CommandElement.Text(" -l"),
+            CommandElement.Text(" -l")
         )
         assertEquals(expectedWithBrackets2, command2.getCommandList(mans, true, false))
     }

@@ -47,6 +47,7 @@ fun BasicCategoriesScreen(
         items(
             items = viewModel.basicCategories,
             key = { it.id },
+            contentType = { "basic_category_item" },
         ) { basicCategory ->
             ListItem(
                 text = { Text(basicCategory.title) },
