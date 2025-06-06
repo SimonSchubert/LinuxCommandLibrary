@@ -17,6 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.LinkAnnotation
+import androidx.compose.ui.text.ParagraphStyle
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.withStyle
@@ -53,7 +54,7 @@ fun CommandView(
     verticalPadding: Dp = 6.dp,
 ) {
     val codeColor = MaterialTheme.colors.primary
-    val annotatedString = remember(elements, codeColor) {
+    val baseAnnotatedString = remember(elements, codeColor) {
         buildAnnotatedString {
             elements.forEach { element ->
                 when (element) {
@@ -97,9 +98,24 @@ fun CommandView(
         }
     }
 
+    val finalAnnotatedString = remember(baseAnnotatedString) {
+        if (baseAnnotatedString.text.isEmpty()) {
+            baseAnnotatedString
+        } else {
+            buildAnnotatedString {
+                append(baseAnnotatedString)
+                addStyle(
+                    style = ParagraphStyle(), // Default ParagraphStyle
+                    start = 0,
+                    end = baseAnnotatedString.text.length
+                )
+            }
+        }
+    }
+
     Row(modifier = Modifier.padding(start = 12.dp, end = 4.dp).padding(vertical = verticalPadding)) {
         Text(
-            text = annotatedString,
+            text = finalAnnotatedString,
             modifier = Modifier
                 .weight(1f)
                 .align(Alignment.CenterVertically),

@@ -71,7 +71,7 @@ fun String.getCommandList(
     var isCommand = false
     command.trim().forEach {
         if (it == 'ü') {
-            list.add(CommandElement.Text(currentText.replace("\\n", "")))
+            list.add(CommandElement.Text(currentText.replace("\n", "")))
             currentText = ""
             isCommand = true
         } else if (it == 'ä') {
@@ -102,7 +102,7 @@ fun String.getCommandList(
             }
         }
     }
-    list.add(CommandElement.Text(currentText.replace("[cmd]", "[command]").replace("\\n", "")))
+    list.add(CommandElement.Text(currentText.replace("[cmd]", "[command]").replace("\n", "")))
     return list.toList()
 }
 
