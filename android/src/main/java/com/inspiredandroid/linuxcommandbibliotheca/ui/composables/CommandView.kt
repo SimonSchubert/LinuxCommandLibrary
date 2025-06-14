@@ -107,7 +107,7 @@ fun CommandView(
                 addStyle(
                     style = ParagraphStyle(), // Default ParagraphStyle
                     start = 0,
-                    end = baseAnnotatedString.text.length
+                    end = baseAnnotatedString.text.length,
                 )
             }
         }

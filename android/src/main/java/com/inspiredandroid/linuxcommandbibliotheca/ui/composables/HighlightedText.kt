@@ -34,9 +34,16 @@ fun HighlightedText(
 ) {
     if (pattern.isEmpty()) {
         Text(
-            text,
+            text = text,
             maxLines = maxLines,
             overflow = TextOverflow.Ellipsis,
+        )
+    } else if (text.equals(pattern, ignoreCase = true)) {
+        Text(
+            text = text,
+            maxLines = maxLines,
+            overflow = TextOverflow.Ellipsis,
+            color = MaterialTheme.colors.primary,
         )
     } else {
         val highlightColor = MaterialTheme.colors.primary
