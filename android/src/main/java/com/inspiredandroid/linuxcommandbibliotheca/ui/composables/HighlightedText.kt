@@ -34,19 +34,18 @@ fun HighlightedText(
 ) {
     if (pattern.isEmpty()) {
         Text(
-            text = text, // Explicitly naming arguments for clarity
+            text = text,
             maxLines = maxLines,
-            overflow = TextOverflow.Ellipsis
+            overflow = TextOverflow.Ellipsis,
         )
     } else if (text.equals(pattern, ignoreCase = true)) {
-        // Fallback for full-text match to avoid potential crash
         Text(
             text = text,
             maxLines = maxLines,
-            overflow = TextOverflow.Ellipsis
+            overflow = TextOverflow.Ellipsis,
+            color = MaterialTheme.colors.primary,
         )
     } else {
-        // Original compact highlighting logic for partial matches
         val highlightColor = MaterialTheme.colors.primary
         val annotatedString = remember(text, pattern, highlightColor) {
             buildAnnotatedString {
@@ -55,7 +54,7 @@ fun HighlightedText(
                     append(s)
                     if (index != splitText.size - 1) {
                         withStyle(style = SpanStyle(color = highlightColor)) {
-                            append(pattern) // Appends the pattern string directly
+                            append(pattern)
                         }
                     }
                 }
@@ -64,7 +63,7 @@ fun HighlightedText(
         Text(
             text = annotatedString,
             maxLines = maxLines,
-            overflow = TextOverflow.Ellipsis
+            overflow = TextOverflow.Ellipsis,
         )
     }
 }
@@ -75,7 +74,7 @@ fun HighlightedTextPreview() {
     LinuxTheme {
         HighlightedText(
             text = "pacman",
-            pattern = "cm"
+            pattern = "cm",
         )
     }
 }
