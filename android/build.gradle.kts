@@ -30,11 +30,11 @@ dependencies {
 }
 
 android {
-    compileSdk = 35
+    compileSdk = 36
     defaultConfig {
         applicationId = "com.inspiredandroid.linuxcommandbibliotheca"
         minSdk = 24
-        targetSdk = 35
+        targetSdk = 36
         versionCode =
             libs.versions.androidVersionCode
                 .get()
@@ -75,19 +75,4 @@ android {
         abortOnError = false
     }
     namespace = "com.inspiredandroid.linuxcommandbibliotheca"
-}
-
-tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
-    kotlinOptions {
-        freeCompilerArgs +=
-            listOf(
-                "-P",
-                "plugin:androidx.compose.compiler.plugins.kotlin:metricsDestination=" + project.buildDir.absolutePath + "/compose_metrics",
-            )
-        freeCompilerArgs +=
-            listOf(
-                "-P",
-                "plugin:androidx.compose.compiler.plugins.kotlin:reportsDestination=" + project.buildDir.absolutePath + "/compose_reports",
-            )
-    }
 }
