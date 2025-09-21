@@ -1,7 +1,10 @@
 package com.inspiredandroid.linuxcommandbibliotheca.ui.composables
 
 import androidx.activity.compose.LocalActivity
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
@@ -27,6 +30,7 @@ import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
@@ -240,77 +244,88 @@ private fun SearchTopBar(
 ) {
     val focusRequester = remember { FocusRequester() }
 
-    TopAppBar(
-        title = {
-            Text(
-                title,
-                modifier = Modifier.semantics { contentDescription = "TopAppBarTitle" },
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .background(MaterialTheme.colors.primary)
+            .heightIn(min = 56.dp)
+            .padding(horizontal = 4.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        if (isSearchVisible) {
+            IconButton(onClick = {
+                hideSearch()
+                textFieldValue.value = TextFieldValue("")
+            }) {
+                Icon(
+                    imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                    contentDescription = stringResource(id = R.string.back),
+                    tint = Color.White,
+                )
+            }
+        }
+        if (isSearchVisible) {
+            OutlinedTextField(
+                value = textFieldValue.value,
+                onValueChange = { textFieldValue.value = it },
+                modifier = Modifier
+                    .weight(1f)
+                    .focusRequester(focusRequester)
+                    .semantics { contentDescription = "SearchField" }
+                    .padding(start = 8.dp, end = 8.dp),
+                placeholder = { Text("Search...", color = Color.White.copy(alpha = 0.7f)) },
+                textStyle = MaterialTheme.typography.subtitle1.copy(color = Color.White),
+                colors = TextFieldDefaults.outlinedTextFieldColors(
+                    textColor = Color.White,
+                    cursorColor = Color.White,
+                    focusedBorderColor = Color.Transparent,
+                    unfocusedBorderColor = Color.Transparent,
+                    disabledBorderColor = Color.Transparent,
+                    backgroundColor = Color.Transparent,
+                    trailingIconColor = LocalContentColor.current.copy(alpha = LocalContentAlpha.current),
+                    placeholderColor = LocalContentColor.current.copy(alpha = 0.7f),
+                ),
                 maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
+                singleLine = true,
             )
-        },
-        backgroundColor = MaterialTheme.colors.primary,
-        contentColor = Color.White,
-        navigationIcon = if (isSearchVisible) {
-            {
+            if (textFieldValue.value.text.isNotEmpty()) {
                 IconButton(onClick = {
                     textFieldValue.value = TextFieldValue("")
-                    hideSearch()
                 }) {
                     Icon(
-                        imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                        contentDescription = stringResource(id = R.string.back),
+                        imageVector = Icons.Filled.Close,
+                        contentDescription = stringResource(id = R.string.reset),
+                        tint = Color.White,
                     )
                 }
             }
         } else {
-            null
-        },
-        actions = {
-            if (isSearchVisible) {
-                OutlinedTextField(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(vertical = 2.dp)
-                        .focusRequester(focusRequester)
-                        .semantics { contentDescription = "SearchField" },
-                    value = textFieldValue.value,
-                    onValueChange = { tfv ->
-                        textFieldValue.value = tfv
-                    },
-                    colors = TextFieldDefaults.textFieldColors(
-                        focusedIndicatorColor = Color.Transparent,
-                        unfocusedIndicatorColor = Color.Transparent,
-                        backgroundColor = Color.Transparent,
-                        cursorColor = LocalContentColor.current.copy(alpha = LocalContentAlpha.current),
-                        trailingIconColor = Color.White,
-                    ),
-                    trailingIcon = {
-                        IconButton(onClick = {
-                            textFieldValue.value = TextFieldValue("")
-                            hideSearch()
-                        }) {
-                            Icon(
-                                imageVector = Icons.Filled.Close,
-                                contentDescription = stringResource(id = R.string.reset),
-                            )
-                        }
-                    },
-                    maxLines = 1,
-                    singleLine = true,
+            Text(
+                title,
+                modifier = Modifier
+                    .weight(1f)
+                    .padding(start = 16.dp) // Standard title padding when no nav icon
+                    .semantics { contentDescription = "TopAppBarTitle" },
+                style = MaterialTheme.typography.h6.copy(color = LocalContentColor.current), // Use h6 for title as per Material
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                color = Color.White,
+            )
+        }
+
+        if (!isSearchVisible) {
+            IconButton(onClick = {
+                showSearch()
+            }) {
+                Icon(
+                    imageVector = Icons.Filled.Search,
+                    contentDescription = stringResource(R.string.search),
+                    tint = Color.White,
                 )
-            } else {
-                IconButton(onClick = {
-                    showSearch()
-                }) {
-                    Icon(
-                        imageVector = Icons.Filled.Search,
-                        contentDescription = stringResource(R.string.search),
-                    )
-                }
             }
-        },
-    )
+        }
+    }
+
     LaunchedEffect(isSearchVisible) {
         if (isSearchVisible) {
             focusRequester.requestFocus()
@@ -332,14 +347,8 @@ private fun getTitleByRoute(backStackEntry: NavBackStackEntry?): String {
                 backStackEntry.arguments?.getString("commandName") ?: ""
             } else if (route?.startsWith("basicgroups?") == true) {
                 val deeplinkName = backStackEntry.arguments?.getString("categoryName") ?: ""
-                // Remember the category title calculation based on deeplinkName
-                // Assuming databaseHelper.getBasics() result is stable or changes infrequently.
-                // If getBasics() is very cheap, remember might be overkill.
-                // If getBasics() is expensive, this helps.
-                // A more robust solution might involve moving data loading to ViewModel
-                // and passing only necessary data to Composables.
                 remember(deeplinkName) {
-                    val categories = databaseHelper.getBasics() // This could return ImmutableList
+                    val categories = databaseHelper.getBasics()
                     val category = categories.firstOrNull { it.getHtmlFileName() == deeplinkName }
                     category?.title ?: "Not found"
                 }

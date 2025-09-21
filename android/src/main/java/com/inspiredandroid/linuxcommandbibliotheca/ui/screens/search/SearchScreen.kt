@@ -1,6 +1,7 @@
 package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.search
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
@@ -48,6 +49,7 @@ fun SearchScreen(
         Box(
             modifier = Modifier
                 .fillMaxSize()
+                .clickable(enabled = false, onClick = {})
                 .background(MaterialTheme.colors.background),
         ) {
             Text("404 command not found", modifier = Modifier.align(Alignment.Center))
