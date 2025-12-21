@@ -2,21 +2,25 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
-    alias(libs.plugins.android.library)
+    alias(libs.plugins.android.kotlin.multiplatform.library)
     alias(libs.plugins.sqldelight)
 }
 
 group = "com.linuxcommandlibrary"
 
 kotlin {
-    androidTarget()
-    jvm()
-
-    androidTarget {
+    androidLibrary {
+        namespace = "com.linuxcommandlibrary.shared"
+        compileSdk = 35
+        minSdk = 24
         compilerOptions {
             jvmTarget.set(JvmTarget.JVM_17)
         }
+        lint {
+            abortOnError = false
+        }
     }
+    jvm()
 
     sourceSets {
         commonMain {
@@ -41,24 +45,6 @@ kotlin {
             }
         }
     }
-}
-
-android {
-    compileSdk = 35
-    sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
-    defaultConfig {
-        minSdk = 24
-    }
-
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
-    }
-
-    lint {
-        abortOnError = false
-    }
-    namespace = "com.linuxcommandlibrary.shared"
 }
 
 sqldelight {
