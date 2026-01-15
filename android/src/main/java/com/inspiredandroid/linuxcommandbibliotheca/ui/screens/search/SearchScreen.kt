@@ -38,7 +38,7 @@ fun SearchScreen(
     val keyboardController = LocalSoftwareKeyboardController.current
     val lazyListState = rememberLazyListState()
 
-    val showEmptyMessage by remember(uiState.filteredCommands, uiState.filteredBasicGroups) {
+    val showEmptyMessage by remember(uiState.filteredCommands, uiState.filteredBasicGroups, uiState.matchingBasicCommandIds) {
         derivedStateOf {
             uiState.filteredCommands.isEmpty() && uiState.filteredBasicGroups.isEmpty()
         }
@@ -66,12 +66,14 @@ fun SearchScreen(
                 key = { "basicGroup_${it.id}" },
                 contentType = { "search_basic_group_item" },
             ) { basicGroup ->
+                // All search results are expanded by default to show matching content
                 BasicGroupColumn(
                     basicGroup = basicGroup,
                     searchText = searchText,
                     onNavigate = onNavigate,
                     isExpanded = !uiState.collapsedMap.getOrDefault(basicGroup.id, false),
                     onToggleCollapse = { viewModel.toggleCollapse(basicGroup.id) },
+                    matchingBasicCommandIds = uiState.matchingBasicCommandIds,
                 )
             }
             items(

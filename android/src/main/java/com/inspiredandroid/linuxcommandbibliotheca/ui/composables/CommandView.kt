@@ -19,6 +19,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.LinkAnnotation
 import androidx.compose.ui.text.ParagraphStyle
 import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
@@ -52,19 +54,21 @@ fun CommandView(
     elements: ImmutableList<CommandElement>,
     onNavigate: (String) -> Unit = {},
     verticalPadding: Dp = 6.dp,
+    searchText: String = "",
 ) {
     val codeColor = MaterialTheme.colors.primary
-    val baseAnnotatedString = remember(elements, codeColor) {
+    val highlightColor = MaterialTheme.colors.secondary
+    val baseAnnotatedString = remember(elements, codeColor, searchText, highlightColor) {
         buildAnnotatedString {
             elements.forEach { element ->
                 when (element) {
                     is CommandElement.Text -> {
-                        append(element.text)
+                        appendWithHighlight(element.text, searchText, highlightColor)
                     }
                     is CommandElement.Man -> {
                         val start = this.length
                         withStyle(style = SpanStyle(color = codeColor)) {
-                            append(element.man)
+                            appendWithHighlight(element.man, searchText, highlightColor)
                         }
                         val end = this.length
                         addLink(
@@ -84,7 +88,7 @@ fun CommandView(
                     is CommandElement.Url -> {
                         val start = this.length
                         withStyle(style = SpanStyle(color = codeColor)) {
-                            append(element.command)
+                            appendWithHighlight(element.command, searchText, highlightColor)
                         }
                         val end = this.length
                         addLink(
@@ -147,6 +151,38 @@ fun shareCommand(context: Context, command: String) {
         context.startActivity(Intent.createChooser(intent, "Share command"))
     } catch (e: Exception) {
         e.printStackTrace()
+    }
+}
+
+private fun AnnotatedString.Builder.appendWithHighlight(
+    text: String,
+    searchText: String,
+    highlightColor: Color,
+) {
+    if (searchText.isEmpty()) {
+        append(text)
+        return
+    }
+
+    val lowercaseText = text.lowercase()
+    val lowercaseSearch = searchText.lowercase()
+    var currentIndex = 0
+
+    while (currentIndex < text.length) {
+        val matchIndex = lowercaseText.indexOf(lowercaseSearch, currentIndex)
+        if (matchIndex == -1) {
+            append(text.substring(currentIndex))
+            break
+        }
+        // Append text before match
+        if (matchIndex > currentIndex) {
+            append(text.substring(currentIndex, matchIndex))
+        }
+        // Append highlighted match
+        withStyle(style = SpanStyle(background = highlightColor.copy(alpha = 0.3f))) {
+            append(text.substring(matchIndex, matchIndex + searchText.length))
+        }
+        currentIndex = matchIndex + searchText.length
     }
 }
 

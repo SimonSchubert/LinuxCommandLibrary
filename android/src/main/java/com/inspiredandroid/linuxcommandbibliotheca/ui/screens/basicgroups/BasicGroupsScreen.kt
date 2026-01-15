@@ -23,6 +23,8 @@ import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.HighlightedTex
 import com.linuxcommandlibrary.shared.databaseHelper
 import com.linuxcommandlibrary.shared.getCommandList
 import databases.BasicGroup
+import kotlinx.collections.immutable.ImmutableSet
+import kotlinx.collections.immutable.persistentSetOf
 import kotlinx.collections.immutable.toImmutableList
 import org.koin.androidx.compose.koinViewModel
 import org.koin.core.parameter.parametersOf
@@ -75,6 +77,7 @@ fun BasicGroupColumn(
     isExpanded: Boolean,
     onToggleCollapse: () -> Unit,
     onNavigate: (String) -> Unit = {},
+    matchingBasicCommandIds: ImmutableSet<Long> = persistentSetOf(),
 ) {
     ListItem(
         text = {
@@ -95,20 +98,33 @@ fun BasicGroupColumn(
     )
 
     if (isExpanded) {
-        ExpandedGroupContent(basicGroup = basicGroup, onNavigate = onNavigate)
+        ExpandedGroupContent(
+            basicGroup = basicGroup,
+            onNavigate = onNavigate,
+            searchText = searchText,
+            matchingBasicCommandIds = matchingBasicCommandIds,
+        )
     }
 }
 
 @Composable
-private fun ExpandedGroupContent(basicGroup: BasicGroup, onNavigate: (String) -> Unit) {
+private fun ExpandedGroupContent(
+    basicGroup: BasicGroup,
+    onNavigate: (String) -> Unit,
+    searchText: String = "",
+    matchingBasicCommandIds: ImmutableSet<Long> = persistentSetOf(),
+) {
     val commands = remember(basicGroup.id) {
         databaseHelper.getBasicCommands(basicGroup.id).toImmutableList()
     }
     commands.forEach { basicCommand ->
+        // Only highlight search text if this command matched the search
+        val highlightText = if (basicCommand.id in matchingBasicCommandIds) searchText else ""
         CommandView(
             command = basicCommand.command,
             elements = basicCommand.command.getCommandList(basicCommand.mans).toImmutableList(),
             onNavigate = onNavigate,
+            searchText = highlightText,
         )
     }
 }

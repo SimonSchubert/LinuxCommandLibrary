@@ -5,7 +5,9 @@ import androidx.lifecycle.viewModelScope
 import com.linuxcommandlibrary.shared.databaseHelper
 import com.linuxcommandlibrary.shared.sortedSearch
 import kotlinx.collections.immutable.persistentListOf
+import kotlinx.collections.immutable.persistentSetOf
 import kotlinx.collections.immutable.toImmutableList
+import kotlinx.collections.immutable.toImmutableSet
 import kotlinx.collections.immutable.toPersistentMap
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -39,6 +41,8 @@ class SearchViewModel : ViewModel() {
                 it.copy(
                     filteredCommands = persistentListOf(),
                     filteredBasicGroups = persistentListOf(),
+                    matchingBasicCommandIds = persistentSetOf(),
+                    groupsMatchedByCommand = persistentSetOf(),
                 )
             }
             return
@@ -47,15 +51,37 @@ class SearchViewModel : ViewModel() {
             try {
                 ensureActive()
 
+                // Search commands (man pages)
                 val commands = databaseHelper.getCommandsByQuery(searchText).sortedSearch(searchText)
-                val basicGroups = databaseHelper.getBasicGroupsByQuery(searchText)
+                // Search basic groups by description
+                val basicGroupsByDescription = databaseHelper.getBasicGroupsByQuery(searchText)
+                // Search basic commands (one-liners) by command text
+                val matchingBasicCommands = databaseHelper.getBasicCommandsByQuery(searchText)
+
+                ensureActive()
+
+                // Get parent groups for matching basic commands
+                val groupsFromCommands = matchingBasicCommands
+                    .mapNotNull { basicCommand ->
+                        databaseHelper.getBasicGroup(basicCommand.group_id)
+                    }
+                    .distinctBy { it.id }
+
+                // Track which groups were matched via their commands (for auto-expand)
+                val groupsMatchedByCommandIds = groupsFromCommands.map { it.id }.toSet()
+
+                // Merge groups: description matches + command matches (avoid duplicates)
+                val descriptionMatchIds = basicGroupsByDescription.map { it.id }.toSet()
+                val allGroups = basicGroupsByDescription + groupsFromCommands.filter { it.id !in descriptionMatchIds }
 
                 ensureActive()
 
                 _uiState.update { currentState ->
                     currentState.copy(
                         filteredCommands = commands.toImmutableList(),
-                        filteredBasicGroups = basicGroups.toImmutableList(),
+                        filteredBasicGroups = allGroups.toImmutableList(),
+                        matchingBasicCommandIds = matchingBasicCommands.map { it.id }.toImmutableSet(),
+                        groupsMatchedByCommand = groupsMatchedByCommandIds.toImmutableSet(),
                     )
                 }
             } catch (ignore: CancellationException) {

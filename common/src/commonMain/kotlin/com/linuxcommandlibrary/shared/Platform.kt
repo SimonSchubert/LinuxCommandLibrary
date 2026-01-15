@@ -51,6 +51,10 @@ class DatabaseHelper {
 
     fun getBasicCommands(groupId: Long): List<BasicCommand> = commandQueries.selectBasicCommandByGroupId(groupId).executeAsList()
 
+    fun getBasicCommandsByQuery(query: String): List<BasicCommand> = commandQueries.selectBasicCommandsByQuery(query).executeAsList()
+
+    fun getBasicGroup(groupId: Long): BasicGroup? = commandQueries.selectBasicGroupById(groupId).executeAsOneOrNull()
+
     fun getBasicGroupsByQuery(query: String): List<BasicGroup> = commandQueries.selectBasicGroupsByQuery(query).executeAsList()
 
     fun getSections(commandId: Long): List<CommandSection> = commandQueries.selectCommandSectionsByCommandId(commandId).executeAsList()

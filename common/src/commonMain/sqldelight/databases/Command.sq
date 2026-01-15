@@ -59,6 +59,11 @@ FROM BasicGroup
 WHERE category_id = ?
 ORDER BY position DESC;
 
+selectBasicGroupById:
+SELECT *
+FROM BasicGroup
+WHERE id = ?;
+
 selectBasicGroupsByQuery:
 SELECT *
 FROM BasicGroup
@@ -75,6 +80,11 @@ selectBasicCommandByGroupId:
 SELECT *
 FROM BasicCommand
 WHERE group_id = ?;
+
+selectBasicCommandsByQuery:
+SELECT *
+FROM BasicCommand
+WHERE UPPER(command) LIKE '%' || UPPER(?) || '%';
 
 insertCommand:
 INSERT INTO Command (category, name, description)
