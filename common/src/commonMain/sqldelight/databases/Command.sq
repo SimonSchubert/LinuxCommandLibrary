@@ -64,6 +64,11 @@ SELECT *
 FROM BasicGroup
 WHERE id = ?;
 
+selectBasicGroupsByIds:
+SELECT *
+FROM BasicGroup
+WHERE id IN ?;
+
 selectBasicGroupsByQuery:
 SELECT *
 FROM BasicGroup

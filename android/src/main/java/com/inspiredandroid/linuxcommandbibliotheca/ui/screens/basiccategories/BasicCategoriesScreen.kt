@@ -13,7 +13,9 @@ import androidx.compose.material.Icon
 import androidx.compose.material.ListItem
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.inspiredandroid.linuxcommandbibliotheca.getIconResource
@@ -40,12 +42,14 @@ fun BasicCategoriesScreen(
     viewModel: BasicCategoriesViewModel = koinViewModel(),
     onNavigate: (String) -> Unit,
 ) {
+    val basicCategories by viewModel.basicCategories.collectAsStateWithLifecycle()
+
     LazyVerticalGrid(
         modifier = Modifier.fillMaxSize(),
         columns = GridCells.Adaptive(minSize = 300.dp),
     ) {
         items(
-            items = viewModel.basicCategories,
+            items = basicCategories,
             key = { it.id },
             contentType = { "basic_category_item" },
         ) { basicCategory ->

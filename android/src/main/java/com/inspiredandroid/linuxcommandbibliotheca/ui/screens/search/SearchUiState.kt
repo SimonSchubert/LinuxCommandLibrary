@@ -1,5 +1,6 @@
 package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.search
 
+import databases.BasicCommand
 import databases.BasicGroup
 import databases.Command
 import kotlinx.collections.immutable.ImmutableList
@@ -15,4 +16,5 @@ data class SearchUiState(
     val collapsedMap: ImmutableMap<Long, Boolean> = persistentMapOf(),
     val matchingBasicCommandIds: ImmutableSet<Long> = persistentSetOf(),
     val groupsMatchedByCommand: ImmutableSet<Long> = persistentSetOf(),
+    val commandsByGroupId: ImmutableMap<Long, ImmutableList<BasicCommand>> = persistentMapOf(),
 )

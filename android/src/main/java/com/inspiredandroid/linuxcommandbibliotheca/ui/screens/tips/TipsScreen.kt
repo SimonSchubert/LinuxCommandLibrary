@@ -12,7 +12,9 @@ import androidx.compose.material.Card
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
@@ -20,7 +22,6 @@ import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.CommandView
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.NestedCommandView
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.NestedText
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.SectionTitle
-import kotlinx.collections.immutable.toImmutableList
 import org.koin.androidx.compose.koinViewModel
 
 /* Copyright 2022 Simon Schubert
@@ -43,13 +44,15 @@ fun TipsScreen(
     onNavigate: (String) -> Unit = {},
     viewModel: TipsViewModel = koinViewModel(),
 ) {
+    val tips by viewModel.tips.collectAsStateWithLifecycle()
+
     LazyVerticalStaggeredGrid(
         modifier = Modifier
             .semantics { contentDescription = "Scroll" },
         columns = StaggeredGridCells.Adaptive(minSize = 300.dp),
     ) {
         items(
-            items = viewModel.tips,
+            items = tips,
             key = { it.tip.id },
             contentType = { "tip_item" },
         ) { tip ->
@@ -86,7 +89,7 @@ private fun TipSections(sections: List<TipSectionElement>, onNavigate: (String) 
             is TipSectionElement.Code -> {
                 CommandView(
                     command = element.command,
-                    elements = element.elements.toImmutableList(), // elements within TipSectionElement should also be ImmutableList
+                    elements = element.elements,
                     onNavigate = onNavigate,
                 )
             }
@@ -95,7 +98,7 @@ private fun TipSections(sections: List<TipSectionElement>, onNavigate: (String) 
                 NestedCommandView(
                     text = element.text,
                     command = element.command,
-                    commandElements = element.elements.toImmutableList(), // elements within TipSectionElement should also be ImmutableList
+                    commandElements = element.elements,
                     onNavigate = onNavigate,
                 )
             }

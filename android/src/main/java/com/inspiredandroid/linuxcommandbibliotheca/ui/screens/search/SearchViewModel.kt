@@ -7,6 +7,7 @@ import com.linuxcommandlibrary.shared.sortedSearch
 import kotlinx.collections.immutable.persistentListOf
 import kotlinx.collections.immutable.persistentSetOf
 import kotlinx.collections.immutable.toImmutableList
+import kotlinx.collections.immutable.toImmutableMap
 import kotlinx.collections.immutable.toImmutableSet
 import kotlinx.collections.immutable.toPersistentMap
 import kotlinx.coroutines.Dispatchers
@@ -60,12 +61,9 @@ class SearchViewModel : ViewModel() {
 
                 ensureActive()
 
-                // Get parent groups for matching basic commands
-                val groupsFromCommands = matchingBasicCommands
-                    .mapNotNull { basicCommand ->
-                        databaseHelper.getBasicGroup(basicCommand.group_id)
-                    }
-                    .distinctBy { it.id }
+                // Get parent groups for matching basic commands using batch query
+                val groupIds = matchingBasicCommands.map { it.group_id }.distinct()
+                val groupsFromCommands = databaseHelper.getBasicGroupsByIds(groupIds)
 
                 // Track which groups were matched via their commands (for auto-expand)
                 val groupsMatchedByCommandIds = groupsFromCommands.map { it.id }.toSet()
@@ -76,12 +74,18 @@ class SearchViewModel : ViewModel() {
 
                 ensureActive()
 
+                // Pre-load commands for all filtered groups
+                val commandsByGroupId = allGroups.associate { group ->
+                    group.id to databaseHelper.getBasicCommands(group.id).toImmutableList()
+                }.toImmutableMap()
+
                 _uiState.update { currentState ->
                     currentState.copy(
                         filteredCommands = commands.toImmutableList(),
                         filteredBasicGroups = allGroups.toImmutableList(),
                         matchingBasicCommandIds = matchingBasicCommands.map { it.id }.toImmutableSet(),
                         groupsMatchedByCommand = groupsMatchedByCommandIds.toImmutableSet(),
+                        commandsByGroupId = commandsByGroupId,
                     )
                 }
             } catch (ignore: CancellationException) {

@@ -11,16 +11,17 @@ import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Icon
 import androidx.compose.material.ListItem
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import databases.BasicCommand
+import kotlinx.collections.immutable.ImmutableList
+import kotlinx.collections.immutable.persistentListOf
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.inspiredandroid.linuxcommandbibliotheca.getIconResource
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.CommandView
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.HighlightedText
-import com.linuxcommandlibrary.shared.databaseHelper
 import com.linuxcommandlibrary.shared.getCommandList
 import databases.BasicGroup
 import kotlinx.collections.immutable.ImmutableSet
@@ -52,7 +53,7 @@ fun BasicGroupsScreen(
     ),
     onNavigate: (String) -> Unit = {},
 ) {
-    val uiState by viewModel.uiState.collectAsState()
+    val uiState by viewModel.uiState.collectAsStateWithLifecycle()
 
     LazyColumn(Modifier.fillMaxSize()) {
         items(
@@ -62,6 +63,7 @@ fun BasicGroupsScreen(
         ) { basicGroup ->
             BasicGroupColumn(
                 basicGroup = basicGroup,
+                commands = uiState.commandsByGroupId[basicGroup.id] ?: persistentListOf(),
                 isExpanded = !uiState.collapsedMap.getOrDefault(basicGroup.id, true),
                 onToggleCollapse = { viewModel.toggleCollapse(basicGroup.id) },
                 onNavigate = onNavigate,
@@ -73,6 +75,7 @@ fun BasicGroupsScreen(
 @Composable
 fun BasicGroupColumn(
     basicGroup: BasicGroup,
+    commands: ImmutableList<BasicCommand> = persistentListOf(),
     searchText: String = "",
     isExpanded: Boolean,
     onToggleCollapse: () -> Unit,
@@ -99,7 +102,7 @@ fun BasicGroupColumn(
 
     if (isExpanded) {
         ExpandedGroupContent(
-            basicGroup = basicGroup,
+            commands = commands,
             onNavigate = onNavigate,
             searchText = searchText,
             matchingBasicCommandIds = matchingBasicCommandIds,
@@ -109,14 +112,11 @@ fun BasicGroupColumn(
 
 @Composable
 private fun ExpandedGroupContent(
-    basicGroup: BasicGroup,
+    commands: ImmutableList<BasicCommand>,
     onNavigate: (String) -> Unit,
     searchText: String = "",
     matchingBasicCommandIds: ImmutableSet<Long> = persistentSetOf(),
 ) {
-    val commands = remember(basicGroup.id) {
-        databaseHelper.getBasicCommands(basicGroup.id).toImmutableList()
-    }
     commands.forEach { basicCommand ->
         // Only highlight search text if this command matched the search
         val highlightText = if (basicCommand.id in matchingBasicCommandIds) searchText else ""

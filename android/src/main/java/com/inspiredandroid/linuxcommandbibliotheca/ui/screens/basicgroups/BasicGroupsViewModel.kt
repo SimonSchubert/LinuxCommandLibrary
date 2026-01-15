@@ -1,12 +1,16 @@
 package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basicgroups
 
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.linuxcommandlibrary.shared.databaseHelper
 import kotlinx.collections.immutable.toImmutableList
+import kotlinx.collections.immutable.toImmutableMap
 import kotlinx.collections.immutable.toPersistentMap
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
 
 /* Copyright 2022 Simon Schubert
  *
@@ -29,8 +33,15 @@ class BasicGroupsViewModel(categoryId: Long) : ViewModel() {
     val uiState = _uiState.asStateFlow()
 
     init {
-        val groups = databaseHelper.getBasicGroupsByQuery(categoryId).toImmutableList()
-        _uiState.value = BasicGroupsUiState(basicGroups = groups)
+        viewModelScope.launch(Dispatchers.IO) {
+            val groups = databaseHelper.getBasicGroupsByQuery(categoryId).toImmutableList()
+            val commandsMap = groups.associate { group ->
+                group.id to databaseHelper.getBasicCommands(group.id).toImmutableList()
+            }.toImmutableMap()
+            _uiState.update {
+                it.copy(basicGroups = groups, commandsByGroupId = commandsMap)
+            }
+        }
     }
 
     fun isGroupCollapsed(id: Long): Boolean = _uiState.value.collapsedMap.getOrDefault(id, true)

@@ -1,13 +1,16 @@
 package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commanddetail
 
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.inspiredandroid.linuxcommandbibliotheca.DataManager
 import com.linuxcommandlibrary.shared.databaseHelper
 import com.linuxcommandlibrary.shared.getSortPriority
 import kotlinx.collections.immutable.toImmutableList
 import kotlinx.collections.immutable.toImmutableMap
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
 
 /* Copyright 2022 Simon Schubert
  *
@@ -29,20 +32,22 @@ class CommandDetailViewModel(
     private val dataManager: DataManager,
 ) : ViewModel() {
 
-    val state: MutableStateFlow<CommandDetailUiState>
+    val state = MutableStateFlow(CommandDetailUiState())
 
     init {
-        val sectionsData = databaseHelper.getSections(commandId).sortedBy { it.getSortPriority() }
-        val isAutoExpandEnabled = dataManager.isAutoExpandSections()
-        state = MutableStateFlow(
-            CommandDetailUiState(
-                sections = sectionsData.toImmutableList(),
-                expandedSectionsMap = sectionsData.associate {
-                    it.id to isAutoExpandEnabled
-                }.toImmutableMap(),
-                isBookmarked = dataManager.hasBookmark(commandId),
-            ),
-        )
+        viewModelScope.launch(Dispatchers.IO) {
+            val sectionsData = databaseHelper.getSections(commandId).sortedBy { it.getSortPriority() }
+            val isAutoExpandEnabled = dataManager.isAutoExpandSections()
+            state.update {
+                CommandDetailUiState(
+                    sections = sectionsData.toImmutableList(),
+                    expandedSectionsMap = sectionsData.associate { section ->
+                        section.id to isAutoExpandEnabled
+                    }.toImmutableMap(),
+                    isBookmarked = dataManager.hasBookmark(commandId),
+                )
+            }
+        }
     }
 
     fun onToggleAllExpanded() {

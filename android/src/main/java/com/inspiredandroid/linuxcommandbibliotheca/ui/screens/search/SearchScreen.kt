@@ -11,15 +11,16 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basicgroups.BasicGroupColumn
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commandlist.CommandListItem
+import kotlinx.collections.immutable.persistentListOf
 import org.koin.androidx.compose.koinViewModel
 
 @Composable
@@ -29,7 +30,7 @@ fun SearchScreen(
     onNavigate: (String) -> Unit,
 ) {
     // Removed the early return for searchText.isEmpty() as ViewModel now handles it by emitting an empty state.
-    val uiState by viewModel.uiState.collectAsState()
+    val uiState by viewModel.uiState.collectAsStateWithLifecycle()
 
     LaunchedEffect(searchText) {
         viewModel.search(searchText)
@@ -69,6 +70,7 @@ fun SearchScreen(
                 // All search results are expanded by default to show matching content
                 BasicGroupColumn(
                     basicGroup = basicGroup,
+                    commands = uiState.commandsByGroupId[basicGroup.id] ?: persistentListOf(),
                     searchText = searchText,
                     onNavigate = onNavigate,
                     isExpanded = !uiState.collapsedMap.getOrDefault(basicGroup.id, false),

@@ -1,10 +1,16 @@
 package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basiccategories
 
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.linuxcommandlibrary.shared.databaseHelper
 import databases.BasicCategory
 import kotlinx.collections.immutable.ImmutableList
+import kotlinx.collections.immutable.persistentListOf
 import kotlinx.collections.immutable.toImmutableList
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.launch
 
 /* Copyright 2022 Simon Schubert
  *
@@ -23,5 +29,12 @@ import kotlinx.collections.immutable.toImmutableList
 
 class BasicCategoriesViewModel : ViewModel() {
 
-    var basicCategories: ImmutableList<BasicCategory> = databaseHelper.getBasics().toImmutableList()
+    private val _basicCategories = MutableStateFlow<ImmutableList<BasicCategory>>(persistentListOf())
+    val basicCategories = _basicCategories.asStateFlow()
+
+    init {
+        viewModelScope.launch(Dispatchers.IO) {
+            _basicCategories.value = databaseHelper.getBasics().toImmutableList()
+        }
+    }
 }
