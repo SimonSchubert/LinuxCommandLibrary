@@ -23,6 +23,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
@@ -37,7 +38,6 @@ import androidx.lifecycle.ViewModelStoreOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.CommandView
 import com.linuxcommandlibrary.shared.CommandElement
-import com.linuxcommandlibrary.shared.databaseHelper
 import databases.CommandSection
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
@@ -80,6 +80,7 @@ fun CommandDetailScreen(
             CommandSectionColumn(
                 section = section,
                 isExpanded = uiState.expandedSectionsMap.getOrDefault(section.id, false),
+                seeAlsoCommands = uiState.seeAlsoCommands,
                 onToggleExpanded = { id -> viewModel.onToggleExpanded(id) },
                 onNavigate = onNavigate,
             )
@@ -91,6 +92,7 @@ fun CommandDetailScreen(
 private fun CommandSectionColumn(
     section: CommandSection,
     isExpanded: Boolean,
+    seeAlsoCommands: ImmutableList<String>,
     onToggleExpanded: (Long) -> Unit,
     onNavigate: (String) -> Unit,
 ) {
@@ -110,36 +112,58 @@ private fun CommandSectionColumn(
     if (isExpanded) {
         when (section.title) {
             "TLDR" -> TldrSectionContent(content = section.content, onNavigate = onNavigate)
-            "SEE ALSO" -> SeeAlsoSectionContent(content = section.content, onNavigate = onNavigate)
+            "SEE ALSO" -> SeeAlsoSectionContent(
+                content = section.content,
+                seeAlsoCommands = seeAlsoCommands,
+                onNavigate = onNavigate,
+            )
             else -> DefaultSectionContent(content = section.content)
         }
     }
 }
 
+private data class TldrPart(
+    val description: String,
+    val command: String,
+    val elements: ImmutableList<CommandElement>,
+)
+
 @Composable
 private fun TldrSectionContent(content: String, onNavigate: (String) -> Unit) {
+    val parsedParts = remember(content) {
+        content.split("<b>").mapNotNull { part ->
+            val split = part.split("</b>")
+            if (split.size > 1) {
+                val command = "$ " + split[1].replace("<br>", "").replace("`", "")
+                TldrPart(
+                    description = split[0],
+                    command = command,
+                    elements = listOf(CommandElement.Text(command)).toImmutableList(),
+                )
+            } else {
+                null
+            }
+        }
+    }
+
     Column(
         modifier = Modifier.padding(start = 16.dp, end = 16.dp, top = 8.dp, bottom = 8.dp),
     ) {
-        val tldrParts = content.split("<b>")
-        tldrParts.forEachIndexed { index, s ->
-            val split = s.split("</b>")
-            if (split.size > 1) {
-                Text(
-                    text = split[0],
-                    fontWeight = FontWeight.Bold,
-                    color = MaterialTheme.colors.onSurface.copy(alpha = 0.7f),
-                )
+        parsedParts.forEachIndexed { index, tldrPart ->
+            Text(
+                text = tldrPart.description,
+                fontWeight = FontWeight.Bold,
+                color = MaterialTheme.colors.onSurface.copy(alpha = 0.7f),
+            )
 
-                val command = "$ " + split[1].replace("<br>", "").replace("`", "")
-                CommandView(
-                    command = command,
-                    elements = listOf(CommandElement.Text(command)).toImmutableList(),
-                    onNavigate = onNavigate,
-                    verticalPadding = 4.dp,
-                )
-            }
-            if (index != tldrParts.lastIndex && split.size > 1) { // Add spacer only if content was added
+            CommandView(
+                command = tldrPart.command,
+                elements = tldrPart.elements,
+                onNavigate = onNavigate,
+                verticalPadding = 4.dp,
+            )
+
+            if (index != parsedParts.lastIndex) {
                 Spacer(Modifier.height(6.dp))
             }
         }
@@ -147,14 +171,17 @@ private fun TldrSectionContent(content: String, onNavigate: (String) -> Unit) {
 }
 
 @Composable
-private fun SeeAlsoSectionContent(content: String, onNavigate: (String) -> Unit) {
-    val commands = getCommands(content)
-    if (commands.isNotEmpty()) {
+private fun SeeAlsoSectionContent(
+    content: String,
+    seeAlsoCommands: ImmutableList<String>,
+    onNavigate: (String) -> Unit,
+) {
+    if (seeAlsoCommands.isNotEmpty()) {
         FlowRow(
             modifier = Modifier.padding(start = 16.dp, end = 16.dp, top = 8.dp, bottom = 8.dp),
             horizontalArrangement = Arrangement.spacedBy(8.dp),
         ) {
-            commands.forEach { name ->
+            seeAlsoCommands.forEach { name ->
                 Chip(onClick = {
                     onNavigate("command?commandName=$name")
                 }) {
@@ -173,22 +200,12 @@ private fun SeeAlsoSectionContent(content: String, onNavigate: (String) -> Unit)
 
 @Composable
 private fun DefaultSectionContent(content: String, isFallback: Boolean = false) {
+    val annotatedString = remember(content) { content.toAnnotatedString() }
     Text(
         modifier = Modifier.padding(start = 16.dp, end = 16.dp, top = if (isFallback) 0.dp else 8.dp, bottom = 8.dp),
-        text = content.toAnnotatedString(),
+        text = annotatedString,
         color = MaterialTheme.colors.onSurface.copy(alpha = 0.7f),
     )
-}
-
-private fun getCommands(input: String): ImmutableList<String> {
-    val commands = input.split(",").map { it.trim() }
-
-    return commands
-        .map { command ->
-            command.replace(Regex("\\(\\d+\\)$"), "").trim()
-        }.filter {
-            databaseHelper.getCommand(it) != null
-        }.toImmutableList()
 }
 
 private fun String.toAnnotatedString(): AnnotatedString {

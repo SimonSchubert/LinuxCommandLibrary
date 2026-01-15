@@ -13,13 +13,13 @@ import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Icon
 import androidx.compose.material.ListItem
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.HighlightedText
 import com.inspiredandroid.linuxcommandbibliotheca.ui.theme.LinuxTheme
@@ -46,7 +46,7 @@ fun CommandListScreen(
     viewModel: CommandListViewModel = koinViewModel(),
     onNavigate: (String) -> Unit,
 ) {
-    val commands by viewModel.commands.collectAsState()
+    val commands by viewModel.commands.collectAsStateWithLifecycle()
 
     LazyColumn {
         items(

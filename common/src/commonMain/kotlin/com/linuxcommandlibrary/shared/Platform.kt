@@ -55,9 +55,11 @@ class DatabaseHelper {
 
     fun getBasicGroup(groupId: Long): BasicGroup? = commandQueries.selectBasicGroupById(groupId).executeAsOneOrNull()
 
-    fun getBasicGroupsByIds(ids: List<Long>): List<BasicGroup> =
-        if (ids.isEmpty()) emptyList()
-        else commandQueries.selectBasicGroupsByIds(ids).executeAsList()
+    fun getBasicGroupsByIds(ids: List<Long>): List<BasicGroup> = if (ids.isEmpty()) {
+        emptyList()
+    } else {
+        commandQueries.selectBasicGroupsByIds(ids).executeAsList()
+    }
 
     fun getBasicGroupsByQuery(query: String): List<BasicGroup> = commandQueries.selectBasicGroupsByQuery(query).executeAsList()
 

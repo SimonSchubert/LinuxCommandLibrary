@@ -12,19 +12,20 @@ import androidx.compose.material.Icon
 import androidx.compose.material.ListItem
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import databases.BasicCommand
-import kotlinx.collections.immutable.ImmutableList
-import kotlinx.collections.immutable.persistentListOf
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.inspiredandroid.linuxcommandbibliotheca.getIconResource
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.CommandView
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.HighlightedText
 import com.linuxcommandlibrary.shared.getCommandList
+import databases.BasicCommand
 import databases.BasicGroup
+import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.ImmutableSet
+import kotlinx.collections.immutable.persistentListOf
 import kotlinx.collections.immutable.persistentSetOf
 import kotlinx.collections.immutable.toImmutableList
 import org.koin.androidx.compose.koinViewModel
@@ -120,9 +121,12 @@ private fun ExpandedGroupContent(
     commands.forEach { basicCommand ->
         // Only highlight search text if this command matched the search
         val highlightText = if (basicCommand.id in matchingBasicCommandIds) searchText else ""
+        val elements = remember(basicCommand.command, basicCommand.mans) {
+            basicCommand.command.getCommandList(basicCommand.mans).toImmutableList()
+        }
         CommandView(
             command = basicCommand.command,
-            elements = basicCommand.command.getCommandList(basicCommand.mans).toImmutableList(),
+            elements = elements,
             onNavigate = onNavigate,
             searchText = highlightText,
         )

@@ -5,6 +5,7 @@ import androidx.lifecycle.viewModelScope
 import com.inspiredandroid.linuxcommandbibliotheca.DataManager
 import com.linuxcommandlibrary.shared.databaseHelper
 import com.linuxcommandlibrary.shared.getSortPriority
+import kotlinx.collections.immutable.persistentListOf
 import kotlinx.collections.immutable.toImmutableList
 import kotlinx.collections.immutable.toImmutableMap
 import kotlinx.coroutines.Dispatchers
@@ -34,10 +35,23 @@ class CommandDetailViewModel(
 
     val state = MutableStateFlow(CommandDetailUiState())
 
+    private companion object {
+        val COMMAND_SUFFIX_REGEX = Regex("\\(\\d+\\)$")
+    }
+
     init {
         viewModelScope.launch(Dispatchers.IO) {
             val sectionsData = databaseHelper.getSections(commandId).sortedBy { it.getSortPriority() }
             val isAutoExpandEnabled = dataManager.isAutoExpandSections()
+
+            val seeAlsoSection = sectionsData.find { it.title == "SEE ALSO" }
+            val seeAlsoCommands = seeAlsoSection?.content?.let { content ->
+                content.split(",")
+                    .map { it.trim().replace(COMMAND_SUFFIX_REGEX, "").trim() }
+                    .filter { databaseHelper.getCommand(it) != null }
+                    .toImmutableList()
+            } ?: persistentListOf()
+
             state.update {
                 CommandDetailUiState(
                     sections = sectionsData.toImmutableList(),
@@ -45,6 +59,7 @@ class CommandDetailViewModel(
                         section.id to isAutoExpandEnabled
                     }.toImmutableMap(),
                     isBookmarked = dataManager.hasBookmark(commandId),
+                    seeAlsoCommands = seeAlsoCommands,
                 )
             }
         }
