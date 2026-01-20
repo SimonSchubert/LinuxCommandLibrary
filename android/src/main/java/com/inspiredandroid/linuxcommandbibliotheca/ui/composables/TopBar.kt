@@ -46,13 +46,12 @@ import androidx.lifecycle.ViewModelStoreOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavBackStackEntry
 import com.inspiredandroid.linuxcommandbibliotheca.R
-import com.inspiredandroid.linuxcommandbibliotheca.getCommandId
+import com.inspiredandroid.linuxcommandbibliotheca.data.BasicsRepository
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.AppInfoDialog
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.BookmarkFeedbackDialog
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commanddetail.CommandDetailViewModel
-import com.linuxcommandlibrary.shared.databaseHelper
-import com.linuxcommandlibrary.shared.getHtmlFileName
 import org.koin.androidx.compose.koinViewModel
+import org.koin.compose.koinInject
 import org.koin.core.parameter.parametersOf
 
 /* Copyright 2022 Simon Schubert
@@ -90,8 +89,9 @@ fun TopBar(
             showSearch = showSearchCallback,
         )
     } else if (route?.startsWith("command?") == true) {
+        val commandName = navBackStackEntry.value?.arguments?.getString("commandName") ?: ""
         DetailTopBar(
-            commandId = navBackStackEntry.value?.getCommandId() ?: 0,
+            commandName = commandName,
             title = getTitleByRoute(navBackStackEntry.value),
             onNavigateBack = onNavigateBack,
         )
@@ -160,11 +160,11 @@ private fun GenericTopBar(
 
 @Composable
 private fun DetailTopBar(
-    commandId: Long,
+    commandName: String,
     viewModel: CommandDetailViewModel = koinViewModel(
-        key = commandId.toString(),
+        key = commandName,
         viewModelStoreOwner = LocalActivity.current as ViewModelStoreOwner,
-        parameters = { parametersOf(commandId) },
+        parameters = { parametersOf(commandName) },
     ),
     title: String,
     onNavigateBack: () -> Unit,
@@ -335,6 +335,7 @@ private fun SearchTopBar(
 
 @Composable
 private fun getTitleByRoute(backStackEntry: NavBackStackEntry?): String {
+    val basicsRepository: BasicsRepository = koinInject()
     if (backStackEntry == null) {
         return "Linux"
     }
@@ -348,8 +349,8 @@ private fun getTitleByRoute(backStackEntry: NavBackStackEntry?): String {
             } else if (route?.startsWith("basicgroups?") == true) {
                 val deeplinkName = backStackEntry.arguments?.getString("categoryName") ?: ""
                 remember(deeplinkName) {
-                    val categories = databaseHelper.getBasics()
-                    val category = categories.firstOrNull { it.getHtmlFileName() == deeplinkName }
+                    val categories = basicsRepository.getCategories()
+                    val category = categories.firstOrNull { it.id == deeplinkName }
                     category?.title ?: "Not found"
                 }
             } else {

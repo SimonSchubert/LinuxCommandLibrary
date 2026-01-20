@@ -1,6 +1,9 @@
 package com.inspiredandroid.linuxcommandbibliotheca
 
 import android.app.Application
+import com.inspiredandroid.linuxcommandbibliotheca.data.BasicsRepository
+import com.inspiredandroid.linuxcommandbibliotheca.data.CommandsRepository
+import com.inspiredandroid.linuxcommandbibliotheca.data.TipsRepository
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basiccategories.BasicCategoriesViewModel
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basicgroups.BasicGroupsViewModel
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commanddetail.CommandDetailViewModel
@@ -27,12 +30,15 @@ class LinuxApplication : Application() {
 
     private val appModule = module {
         single { DataManager(androidContext()) }
+        single { BasicsRepository(androidContext()) }
+        single { CommandsRepository(androidContext()) }
+        single { TipsRepository(androidContext()) }
 
-        viewModel { BasicGroupsViewModel(get()) }
-        viewModel { BasicCategoriesViewModel() }
-        viewModel { (commandId: Long) -> CommandDetailViewModel(commandId, get()) }
-        viewModel { TipsViewModel() }
-        viewModel { CommandListViewModel(get()) }
-        viewModel { SearchViewModel() }
+        viewModel { (categoryId: String) -> BasicGroupsViewModel(categoryId, get()) }
+        viewModel { BasicCategoriesViewModel(get()) }
+        viewModel { (commandName: String) -> CommandDetailViewModel(commandName, get(), get()) }
+        viewModel { TipsViewModel(get()) }
+        viewModel { CommandListViewModel(get(), get()) }
+        viewModel { SearchViewModel(get()) }
     }
 }

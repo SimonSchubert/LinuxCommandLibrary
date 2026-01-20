@@ -16,12 +16,21 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.inspiredandroid.linuxcommandbibliotheca.data.TextElement
+import com.inspiredandroid.linuxcommandbibliotheca.data.TipInfo
+import com.inspiredandroid.linuxcommandbibliotheca.data.TipSectionElement
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.CommandView
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.NestedCommandView
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.NestedText
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.SectionTitle
+import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.TableView
+import com.mikepenz.markdown.m2.Markdown
 import org.koin.androidx.compose.koinViewModel
 
 /* Copyright 2022 Simon Schubert
@@ -53,7 +62,7 @@ fun TipsScreen(
     ) {
         items(
             items = tips,
-            key = { it.tip.id },
+            key = { it.id },
             contentType = { "tip_item" },
         ) { tip ->
             TipItemCard(tip = tip, onNavigate = onNavigate)
@@ -62,7 +71,7 @@ fun TipsScreen(
 }
 
 @Composable
-private fun TipItemCard(tip: MergedTip, onNavigate: (String) -> Unit) {
+private fun TipItemCard(tip: TipInfo, onNavigate: (String) -> Unit) {
     Card(
         elevation = 4.dp,
         modifier = Modifier
@@ -70,7 +79,7 @@ private fun TipItemCard(tip: MergedTip, onNavigate: (String) -> Unit) {
             .fillMaxWidth(),
     ) {
         Column(modifier = Modifier.padding(8.dp)) {
-            SectionTitle(title = tip.tip.title)
+            SectionTitle(title = tip.title)
             TipSections(sections = tip.sections, onNavigate = onNavigate)
         }
     }
@@ -78,12 +87,23 @@ private fun TipItemCard(tip: MergedTip, onNavigate: (String) -> Unit) {
 
 @Composable
 private fun TipSections(sections: List<TipSectionElement>, onNavigate: (String) -> Unit) {
-    // Assuming MergedTip.sections is already ImmutableList from ViewModel refactor
-    // If not, it should be passed as ImmutableList<TipSectionElement>
     sections.forEach { element ->
         when (element) {
             is TipSectionElement.Text -> {
-                Text(element.text)
+                val annotatedString = buildAnnotatedString {
+                    element.elements.forEach { textElement ->
+                        when (textElement) {
+                            is TextElement.Plain -> append(textElement.text)
+                            is TextElement.Bold -> {
+                                withStyle(style = SpanStyle(fontWeight = FontWeight.Bold)) {
+                                    append(textElement.text)
+                                }
+                            }
+                            is TextElement.Man -> append(textElement.man)
+                        }
+                    }
+                }
+                Text(annotatedString)
             }
 
             is TipSectionElement.Code -> {
@@ -107,6 +127,14 @@ private fun TipSections(sections: List<TipSectionElement>, onNavigate: (String) 
                 NestedText(
                     textLeft = element.text,
                     textRight = element.info,
+                )
+            }
+
+            is TipSectionElement.Table -> {
+                TableView(
+                    headers = element.headers,
+                    rows = element.rows,
+                    onNavigate = onNavigate,
                 )
             }
         }

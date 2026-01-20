@@ -17,12 +17,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.inspiredandroid.linuxcommandbibliotheca.data.BasicCommand
+import com.inspiredandroid.linuxcommandbibliotheca.data.BasicGroup
 import com.inspiredandroid.linuxcommandbibliotheca.getIconResource
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.CommandView
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.HighlightedText
 import com.linuxcommandlibrary.shared.getCommandList
-import databases.BasicCommand
-import databases.BasicGroup
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.ImmutableSet
 import kotlinx.collections.immutable.persistentListOf
@@ -48,7 +48,7 @@ import org.koin.core.parameter.parametersOf
 
 @Composable
 fun BasicGroupsScreen(
-    categoryId: Long,
+    categoryId: String,
     viewModel: BasicGroupsViewModel = koinViewModel<BasicGroupsViewModel>(
         parameters = { parametersOf(categoryId) },
     ),

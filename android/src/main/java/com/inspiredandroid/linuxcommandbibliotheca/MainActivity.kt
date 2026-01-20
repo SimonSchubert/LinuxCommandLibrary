@@ -1,6 +1,5 @@
 package com.inspiredandroid.linuxcommandbibliotheca
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
@@ -44,9 +43,6 @@ import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.search.SearchScree
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.tips.TipsScreen
 import com.inspiredandroid.linuxcommandbibliotheca.ui.theme.LinuxTheme
 import com.inspiredandroid.linuxcommandbibliotheca.ui.theme.LocalCustomColors
-import com.linuxcommandlibrary.shared.hasDatabase
-import com.linuxcommandlibrary.shared.initDatabase
-import org.koin.android.ext.android.inject
 
 /* Copyright 2022 Simon Schubert
  *
@@ -65,20 +61,9 @@ import org.koin.android.ext.android.inject
 
 class MainActivity : AppCompatActivity() {
 
-    private val dataManager by inject<DataManager>()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         enableEdgeToEdge(statusBarStyle = SystemBarStyle.dark(android.graphics.Color.TRANSPARENT), navigationBarStyle = SystemBarStyle.dark(android.graphics.Color.TRANSPARENT))
         super.onCreate(savedInstanceState)
-
-        if (!hasDatabase(this) || !dataManager.isDatabaseUpToDate()) {
-            startActivity(Intent(this, InitializeDatabaseActivity::class.java))
-            dataManager.updateDatabaseVersion()
-            finish()
-            return
-        }
-
-        initDatabase(this)
 
         setContent {
             LinuxTheme {
@@ -198,20 +183,19 @@ fun LinuxApp() {
                     }
                 }
                 composable(
-                    "command?commandId={commandId}&commandName={commandName}",
+                    "command?commandName={commandName}",
                     arguments = listOf(
-                        navArgument("commandId") { defaultValue = "" },
-                        navArgument("commandName") {},
+                        navArgument("commandName") { defaultValue = "" },
                     ),
                     deepLinks = listOf(
                         navDeepLink { uriPattern = "$DEEPLINK_URI/man/{commandName}.html" },
                         navDeepLink { uriPattern = "$DEEPLINK_URI/man/{commandName}" },
                     ),
                 ) { backStackEntry ->
-                    val commandId = backStackEntry.getCommandId()
-                    if (commandId != null) {
+                    val commandName = backStackEntry.arguments?.getString("commandName") ?: ""
+                    if (commandName.isNotEmpty()) {
                         CommandDetailScreen(
-                            commandId = commandId,
+                            commandName = commandName,
                             onNavigate = onNavigate,
                         )
                     } else {

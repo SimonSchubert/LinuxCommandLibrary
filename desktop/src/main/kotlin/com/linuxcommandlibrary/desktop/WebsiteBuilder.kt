@@ -1157,12 +1157,13 @@ class WebsiteBuilder {
         if (showAd) {
             div {
                 classes = setOf("bottom-panel")
+                style = "background-color: #141823; display: block;"
 
-                a("/linode-2025") {
+                a("https://www.hydralands.com") {
                     target = ATarget.blank
                     img {
                         style = "max-width: calc(100% - 4px);"
-                        src = "/images/af/linode-horizontal.webp"
+                        src = "/images/af/hydralands.webp"
                         attributes["loading"] = "lazy"
                         width = "600"
                     }

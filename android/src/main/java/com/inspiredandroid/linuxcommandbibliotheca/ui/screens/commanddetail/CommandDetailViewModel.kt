@@ -3,8 +3,8 @@ package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commanddetail
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.inspiredandroid.linuxcommandbibliotheca.DataManager
-import com.linuxcommandlibrary.shared.databaseHelper
-import com.linuxcommandlibrary.shared.getSortPriority
+import com.inspiredandroid.linuxcommandbibliotheca.data.CommandsRepository
+import com.inspiredandroid.linuxcommandbibliotheca.data.getSortPriority
 import kotlinx.collections.immutable.persistentListOf
 import kotlinx.collections.immutable.toImmutableList
 import kotlinx.collections.immutable.toImmutableMap
@@ -29,26 +29,28 @@ import kotlinx.coroutines.launch
 */
 
 class CommandDetailViewModel(
-    private val commandId: Long,
+    private val commandName: String,
     private val dataManager: DataManager,
+    private val commandsRepository: CommandsRepository,
 ) : ViewModel() {
 
     val state = MutableStateFlow(CommandDetailUiState())
 
     private companion object {
-        val COMMAND_SUFFIX_REGEX = Regex("\\(\\d+\\)$")
+        val MARKDOWN_LINK_REGEX = Regex("\\[([^\\]]+)\\]\\([^)]+\\)")
     }
 
     init {
         viewModelScope.launch(Dispatchers.IO) {
-            val sectionsData = databaseHelper.getSections(commandId).sortedBy { it.getSortPriority() }
+            val sectionsData = commandsRepository.getSections(commandName).sortedBy { it.getSortPriority() }
             val isAutoExpandEnabled = dataManager.isAutoExpandSections()
 
             val seeAlsoSection = sectionsData.find { it.title == "SEE ALSO" }
             val seeAlsoCommands = seeAlsoSection?.content?.let { content ->
-                content.split(",")
-                    .map { it.trim().replace(COMMAND_SUFFIX_REGEX, "").trim() }
-                    .filter { databaseHelper.getCommand(it) != null }
+                MARKDOWN_LINK_REGEX.findAll(content)
+                    .map { it.groupValues[1] }
+                    .filter { commandsRepository.hasCommand(it) }
+                    .toList()
                     .toImmutableList()
             } ?: persistentListOf()
 
@@ -58,7 +60,7 @@ class CommandDetailViewModel(
                     expandedSectionsMap = sectionsData.associate { section ->
                         section.id to isAutoExpandEnabled
                     }.toImmutableMap(),
-                    isBookmarked = dataManager.hasBookmark(commandId),
+                    isBookmarked = dataManager.hasBookmark(commandName),
                     seeAlsoCommands = seeAlsoCommands,
                 )
             }
@@ -89,7 +91,7 @@ class CommandDetailViewModel(
         state.update {
             it.copy(isBookmarked = false)
         }
-        dataManager.removeBookmark(commandId)
+        dataManager.removeBookmark(commandName)
     }
 
     fun addBookmark() {
@@ -99,7 +101,7 @@ class CommandDetailViewModel(
                 showBookmarkDialog = true,
             )
         }
-        dataManager.addBookmark(commandId)
+        dataManager.addBookmark(commandName)
     }
 
     fun hideBookmarkDialog() {

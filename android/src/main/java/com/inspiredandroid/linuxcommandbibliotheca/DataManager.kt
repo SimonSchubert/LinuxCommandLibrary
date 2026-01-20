@@ -9,38 +9,29 @@ class DataManager(context: Context) {
 
     val prefs: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
 
-    private val bookmarksIds = getBookmarkIds()
+    private val bookmarkNames = getBookmarkNames()
 
-    private fun getBookmarkIds(): MutableList<Long> {
-        val bookmarksChain = prefs.getString(KEY_BOOKMARKS, "") ?: ""
-        return bookmarksChain.split(",").mapNotNull { it.trim().toLongOrNull() }.toMutableList()
+    private fun getBookmarkNames(): MutableSet<String> {
+        val bookmarksChain = prefs.getString(KEY_BOOKMARKS_V2, "") ?: ""
+        return bookmarksChain.split(",").filter { it.isNotBlank() }.toMutableSet()
     }
 
-    private fun saveBookmarkIds() {
-        val bookmarksChain = bookmarksIds.joinToString(separator = ",")
-        prefs.edit { putString(KEY_BOOKMARKS, bookmarksChain) }
+    private fun saveBookmarkNames() {
+        val bookmarksChain = bookmarkNames.joinToString(separator = ",")
+        prefs.edit { putString(KEY_BOOKMARKS_V2, bookmarksChain) }
     }
 
-    fun addBookmark(id: Long) {
-        bookmarksIds.add(id)
-        saveBookmarkIds()
+    fun addBookmark(name: String) {
+        bookmarkNames.add(name)
+        saveBookmarkNames()
     }
 
-    fun removeBookmark(id: Long) {
-        bookmarksIds.remove(id)
-        saveBookmarkIds()
+    fun removeBookmark(name: String) {
+        bookmarkNames.remove(name)
+        saveBookmarkNames()
     }
 
-    fun hasBookmark(id: Long): Boolean = bookmarksIds.contains(id)
-
-    fun isDatabaseUpToDate(): Boolean {
-        val databaseVersion = prefs.getInt(KEY_DATABASE_VERSION, 0)
-        return databaseVersion == CURRENT_DATABASE_VERSION
-    }
-
-    fun updateDatabaseVersion() {
-        prefs.edit { putInt(KEY_DATABASE_VERSION, CURRENT_DATABASE_VERSION) }
-    }
+    fun hasBookmark(name: String): Boolean = bookmarkNames.contains(name)
 
     fun setAutoExpandSections(autoExpand: Boolean) {
         prefs.edit { putBoolean(KEY_AUTO_EXPAND_SECTIONS, autoExpand) }
@@ -49,9 +40,7 @@ class DataManager(context: Context) {
     fun isAutoExpandSections(): Boolean = prefs.getBoolean(KEY_AUTO_EXPAND_SECTIONS, false)
 
     companion object {
-        const val KEY_BOOKMARKS = "KEY_BOOKMARKS"
-        const val KEY_DATABASE_VERSION = "DATABASE_VERSION"
+        const val KEY_BOOKMARKS_V2 = "KEY_BOOKMARKS_V2"
         const val KEY_AUTO_EXPAND_SECTIONS = "auto_expand_sections"
-        const val CURRENT_DATABASE_VERSION = 34
     }
 }

@@ -6,14 +6,12 @@ import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.preference.PreferenceManager
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.linuxcommandlibrary.shared.copyDatabase
-import com.linuxcommandlibrary.shared.databaseHelper
-import com.linuxcommandlibrary.shared.initDatabase
+import com.inspiredandroid.linuxcommandbibliotheca.data.BasicsRepository
+import com.inspiredandroid.linuxcommandbibliotheca.data.CommandsRepository
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.koin.java.KoinJavaComponent.inject
 
 /**
  * Test for navigation, search and booksmarks. More tests to come
@@ -24,14 +22,15 @@ class ComposeTests {
     @get:Rule
     val composeTestRule = createComposeRule()
 
+    private lateinit var commandsRepository: CommandsRepository
+    private lateinit var basicsRepository: BasicsRepository
+
     @Before
     fun setUp() {
         val context: Context = ApplicationProvider.getApplicationContext()
-        copyDatabase(context)
-        initDatabase(context)
 
-        val dataManager: com.inspiredandroid.linuxcommandbibliotheca.DataManager by inject(com.inspiredandroid.linuxcommandbibliotheca.DataManager::class.java)
-        dataManager.updateDatabaseVersion()
+        commandsRepository = CommandsRepository(context)
+        basicsRepository = BasicsRepository(context)
 
         // Clear bookmarks
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
@@ -71,10 +70,11 @@ class ComposeTests {
         composeTestRule.onNodeWithContentDescription("SearchField").performTextClearance()
 
         // Search for an existing command
-        val firstCommand = databaseHelper.getCommands().last()
+        val firstCommand = commandsRepository.getCommands().last()
         composeTestRule.onNodeWithContentDescription("SearchField")
             .performTextInput(firstCommand.name)
-        composeTestRule.onNodeWithText(firstCommand.description).assertIsDisplayed()
+        // Verify the command appears in results
+        composeTestRule.onNodeWithText(firstCommand.name).assertIsDisplayed()
     }
 
     /**
@@ -82,7 +82,7 @@ class ComposeTests {
      */
     @Test
     fun testBookmarks() {
-        val firstCommand = databaseHelper.getCommands().first()
+        val firstCommand = commandsRepository.getCommands().first()
 
         composeTestRule.onNodeWithText("Commands").performClick()
 
@@ -91,7 +91,7 @@ class ComposeTests {
         // Search for first command and go to command detail screen
         composeTestRule.onNodeWithContentDescription("SearchField")
             .performTextInput(firstCommand.name)
-        composeTestRule.onNodeWithText(firstCommand.description).performClick()
+        composeTestRule.onNodeWithText(firstCommand.name).performClick()
 
         // Click bookmark icon and check if icon/contentDescription changed
         composeTestRule.onNodeWithContentDescription("Add bookmark").performClick()
@@ -106,14 +106,15 @@ class ComposeTests {
 
     @Test
     fun testBasicsScreen() {
-        val firstBasicCategory = databaseHelper.getBasics().first()
+        val firstBasicCategory = basicsRepository.getCategories().first()
 
         // Click on first category
         composeTestRule.onNodeWithText(firstBasicCategory.title).performClick()
         composeTestRule.onNodeWithContentDescription("TopAppBarTitle")
             .assertTextEquals(firstBasicCategory.title)
 
-        val basicGroup = databaseHelper.getBasicGroupsByQuery(firstBasicCategory.id).first()
+        val (groups, _) = basicsRepository.getGroupsAndCommands(firstBasicCategory.id)
+        val basicGroup = groups.first()
 
         // Click on first group
         composeTestRule.onNodeWithText(basicGroup.description).performClick()

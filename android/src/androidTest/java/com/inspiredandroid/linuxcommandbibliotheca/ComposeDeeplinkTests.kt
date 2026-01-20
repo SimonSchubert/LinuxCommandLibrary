@@ -11,7 +11,6 @@ import androidx.preference.PreferenceManager
 import androidx.test.core.app.ActivityScenario
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.linuxcommandlibrary.shared.initDatabase
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -33,7 +32,6 @@ class ComposeDeeplinkTests {
     @Before
     fun setUp() {
         val context: Context = ApplicationProvider.getApplicationContext()
-        initDatabase(context)
 
         // Clear bookmarks
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)

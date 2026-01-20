@@ -1,8 +1,8 @@
 package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basicgroups
 
 import androidx.compose.runtime.Stable
-import databases.BasicCommand
-import databases.BasicGroup
+import com.inspiredandroid.linuxcommandbibliotheca.data.BasicCommand
+import com.inspiredandroid.linuxcommandbibliotheca.data.BasicGroup
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.ImmutableMap
 import kotlinx.collections.immutable.persistentListOf

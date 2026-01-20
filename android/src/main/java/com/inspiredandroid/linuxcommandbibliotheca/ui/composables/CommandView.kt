@@ -29,7 +29,6 @@ import androidx.compose.ui.unit.dp
 import com.inspiredandroid.linuxcommandbibliotheca.R
 import com.inspiredandroid.linuxcommandbibliotheca.ui.theme.LinuxTheme
 import com.linuxcommandlibrary.shared.CommandElement
-import com.linuxcommandlibrary.shared.databaseHelper
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
 
@@ -75,10 +74,7 @@ fun CommandView(
                             LinkAnnotation.Clickable(
                                 tag = "man:${element.man}",
                                 linkInteractionListener = {
-                                    val manCommand = databaseHelper.getCommand(element.man)
-                                    if (manCommand != null) {
-                                        onNavigate("command?commandId=${manCommand.id}&commandName=${manCommand.name}")
-                                    }
+                                    onNavigate("command?commandName=${element.man}")
                                 },
                             ),
                             start,

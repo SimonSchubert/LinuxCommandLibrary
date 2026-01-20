@@ -13,15 +13,12 @@ import androidx.test.core.app.ActivityScenario
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import com.linuxcommandlibrary.shared.copyDatabase
-import com.linuxcommandlibrary.shared.initDatabase
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.koin.java.KoinJavaComponent.inject
 import java.io.FileOutputStream
 
 /**
@@ -43,11 +40,6 @@ class ComposeScreenshots {
     @Before
     fun setUp() {
         val context: Context = ApplicationProvider.getApplicationContext()
-        copyDatabase(context)
-        initDatabase(context)
-
-        val dataManager: com.inspiredandroid.linuxcommandbibliotheca.DataManager by inject(com.inspiredandroid.linuxcommandbibliotheca.DataManager::class.java)
-        dataManager.updateDatabaseVersion()
 
         // Clear bookmarks
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)

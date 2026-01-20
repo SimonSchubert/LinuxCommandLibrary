@@ -2,7 +2,7 @@ package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basicgroups
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.linuxcommandlibrary.shared.databaseHelper
+import com.inspiredandroid.linuxcommandbibliotheca.data.BasicsRepository
 import kotlinx.collections.immutable.toImmutableList
 import kotlinx.collections.immutable.toImmutableMap
 import kotlinx.collections.immutable.toPersistentMap
@@ -27,19 +27,24 @@ import kotlinx.coroutines.launch
  * limitations under the License.
 */
 
-class BasicGroupsViewModel(categoryId: Long) : ViewModel() {
+class BasicGroupsViewModel(
+    categoryId: String,
+    basicsRepository: BasicsRepository,
+) : ViewModel() {
 
     private val _uiState = MutableStateFlow(BasicGroupsUiState())
     val uiState = _uiState.asStateFlow()
 
     init {
         viewModelScope.launch(Dispatchers.IO) {
-            val groups = databaseHelper.getBasicGroupsByQuery(categoryId).toImmutableList()
-            val commandsMap = groups.associate { group ->
-                group.id to databaseHelper.getBasicCommands(group.id).toImmutableList()
-            }.toImmutableMap()
+            val (groups, commandsMap) = basicsRepository.getGroupsAndCommands(categoryId)
             _uiState.update {
-                it.copy(basicGroups = groups, commandsByGroupId = commandsMap)
+                it.copy(
+                    basicGroups = groups.toImmutableList(),
+                    commandsByGroupId = commandsMap.mapValues { entry ->
+                        entry.value.toImmutableList()
+                    }.toImmutableMap()
+                )
             }
         }
     }

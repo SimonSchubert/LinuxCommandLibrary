@@ -4,8 +4,8 @@ import android.content.SharedPreferences
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.inspiredandroid.linuxcommandbibliotheca.DataManager
-import com.linuxcommandlibrary.shared.databaseHelper
-import databases.Command
+import com.inspiredandroid.linuxcommandbibliotheca.data.CommandInfo
+import com.inspiredandroid.linuxcommandbibliotheca.data.CommandsRepository
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.persistentListOf
 import kotlinx.collections.immutable.toImmutableList
@@ -30,13 +30,16 @@ import kotlinx.coroutines.launch
  * limitations under the License.
 */
 
-class CommandListViewModel(private val dataManager: DataManager) : ViewModel() {
+class CommandListViewModel(
+    private val dataManager: DataManager,
+    private val commandsRepository: CommandsRepository,
+) : ViewModel() {
 
-    private val _commands = MutableStateFlow<ImmutableList<Command>>(persistentListOf())
+    private val _commands = MutableStateFlow<ImmutableList<CommandInfo>>(persistentListOf())
     val commands = _commands.asStateFlow()
 
     private val preferenceListener = SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
-        if (key == DataManager.KEY_BOOKMARKS) {
+        if (key == DataManager.KEY_BOOKMARKS_V2) {
             updateCommands()
         }
     }
@@ -49,12 +52,12 @@ class CommandListViewModel(private val dataManager: DataManager) : ViewModel() {
     private fun updateCommands() {
         viewModelScope.launch(Dispatchers.IO) {
             _commands.update {
-                databaseHelper.getCommands().sortedBy { !hasBookmark(it.id) }.toImmutableList()
+                commandsRepository.getCommands().sortedBy { !hasBookmark(it.name) }.toImmutableList()
             }
         }
     }
 
-    fun hasBookmark(id: Long): Boolean = dataManager.hasBookmark(id)
+    fun hasBookmark(name: String): Boolean = dataManager.hasBookmark(name)
 
     override fun onCleared() {
         dataManager.prefs.unregisterOnSharedPreferenceChangeListener(preferenceListener)

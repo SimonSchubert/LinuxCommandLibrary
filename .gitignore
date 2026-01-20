@@ -13,3 +13,7 @@ local.properties
 *.aab
 *.jar
 /html
+/assets/tldr
+.claude
+/data/intructions.md
+/data/processed.txt

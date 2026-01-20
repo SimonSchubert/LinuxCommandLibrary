@@ -18,9 +18,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.basicgroups.BasicGroupColumn
 import com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commandlist.CommandListItem
-import kotlinx.collections.immutable.persistentListOf
 import org.koin.androidx.compose.koinViewModel
 
 @Composable
@@ -29,7 +27,6 @@ fun SearchScreen(
     viewModel: SearchViewModel = koinViewModel(),
     onNavigate: (String) -> Unit,
 ) {
-    // Removed the early return for searchText.isEmpty() as ViewModel now handles it by emitting an empty state.
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
 
     LaunchedEffect(searchText) {
@@ -39,9 +36,9 @@ fun SearchScreen(
     val keyboardController = LocalSoftwareKeyboardController.current
     val lazyListState = rememberLazyListState()
 
-    val showEmptyMessage by remember(uiState.filteredCommands, uiState.filteredBasicGroups, uiState.matchingBasicCommandIds) {
+    val showEmptyMessage by remember(uiState.filteredCommands) {
         derivedStateOf {
-            uiState.filteredCommands.isEmpty() && uiState.filteredBasicGroups.isEmpty()
+            uiState.filteredCommands.isEmpty()
         }
     }
 
@@ -63,22 +60,6 @@ fun SearchScreen(
             state = lazyListState,
         ) {
             items(
-                items = uiState.filteredBasicGroups,
-                key = { "basicGroup_${it.id}" },
-                contentType = { "search_basic_group_item" },
-            ) { basicGroup ->
-                // All search results are expanded by default to show matching content
-                BasicGroupColumn(
-                    basicGroup = basicGroup,
-                    commands = uiState.commandsByGroupId[basicGroup.id] ?: persistentListOf(),
-                    searchText = searchText,
-                    onNavigate = onNavigate,
-                    isExpanded = !uiState.collapsedMap.getOrDefault(basicGroup.id, false),
-                    onToggleCollapse = { viewModel.toggleCollapse(basicGroup.id) },
-                    matchingBasicCommandIds = uiState.matchingBasicCommandIds,
-                )
-            }
-            items(
                 items = uiState.filteredCommands,
                 key = { "command_${it.id}" },
                 contentType = { "search_command_item" },
@@ -87,7 +68,7 @@ fun SearchScreen(
                     command = command,
                     searchText = searchText,
                     onNavigate = onNavigate,
-                    isBookmarked = false, // Or fetch actual bookmark status if relevant
+                    isBookmarked = false,
                 )
             }
         }

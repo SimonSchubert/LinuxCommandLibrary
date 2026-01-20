@@ -1,7 +1,5 @@
 @file:OptIn(
     ExperimentalMaterialApi::class,
-    ExperimentalMaterialApi::class,
-    ExperimentalMaterialApi::class,
 )
 
 package com.inspiredandroid.linuxcommandbibliotheca.ui.screens.commandlist
@@ -21,9 +19,9 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.inspiredandroid.linuxcommandbibliotheca.R
+import com.inspiredandroid.linuxcommandbibliotheca.data.CommandInfo
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.HighlightedText
 import com.inspiredandroid.linuxcommandbibliotheca.ui.theme.LinuxTheme
-import databases.Command
 import org.koin.androidx.compose.koinViewModel
 
 /* Copyright 2022 Simon Schubert
@@ -57,7 +55,7 @@ fun CommandListScreen(
             CommandListItem(
                 command = command,
                 onNavigate = onNavigate,
-                isBookmarked = viewModel.hasBookmark(command.id),
+                isBookmarked = viewModel.hasBookmark(command.name),
             )
         }
     }
@@ -65,7 +63,7 @@ fun CommandListScreen(
 
 @Composable
 fun CommandListItem(
-    command: Command,
+    command: CommandInfo,
     searchText: String = "",
     onNavigate: (String) -> Unit,
     isBookmarked: Boolean,
@@ -85,15 +83,9 @@ fun CommandListItem(
                 )
             }
         },
-        secondaryText = {
-            HighlightedText(
-                text = command.description,
-                pattern = searchText,
-            )
-        },
         modifier = Modifier.clickable(
-            onClick = remember(command.id, command.name, onNavigate) {
-                { onNavigate("command?commandId=${command.id}&commandName=${command.name}") }
+            onClick = remember(command.name, onNavigate) {
+                { onNavigate("command?commandName=${command.name}") }
             },
         ),
     )
@@ -102,7 +94,7 @@ fun CommandListItem(
 @Preview
 @Composable
 fun CommandListItemPreview() {
-    val command = Command(0L, 0L, "cowsay", "A talking cow says moo.")
+    val command = CommandInfo(0L, "cowsay")
     LinuxTheme {
         CommandListItem(
             command = command,

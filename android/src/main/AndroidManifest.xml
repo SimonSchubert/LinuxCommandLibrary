@@ -56,12 +56,5 @@
                     android:scheme="https" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".InitializeDatabaseActivity"
-            android:exported="true">
-            <intent-filter android:autoVerify="true">
-                <action android:name="android.intent.action.VIEW" />
-            </intent-filter>
-        </activity>
     </application>
 </manifest>

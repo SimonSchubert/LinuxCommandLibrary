@@ -19,7 +19,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.inspiredandroid.linuxcommandbibliotheca.getIconResource
-import com.linuxcommandlibrary.shared.getHtmlFileName
 import org.koin.androidx.compose.koinViewModel
 
 /* Copyright 2022 Simon Schubert
@@ -64,7 +63,7 @@ fun BasicCategoriesScreen(
                 },
                 modifier = Modifier.clickable {
                     onNavigate(
-                        "basicgroups?categoryId=${basicCategory.id}&categoryName=${basicCategory.getHtmlFileName()}",
+                        "basicgroups?categoryId=${basicCategory.id}&categoryName=${basicCategory.id}",
                     )
                 },
             )
