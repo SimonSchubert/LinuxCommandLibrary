@@ -9,7 +9,6 @@ dependencies {
     implementation(project(":common"))
     implementation(libs.kotlinx.html.jvm)
     implementation(libs.json)
-    implementation(libs.sqldelight.sqlite.driver)
     implementation(libs.kotlinx.coroutines.core)
 }
 

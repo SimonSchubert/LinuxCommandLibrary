@@ -1,7 +1,5 @@
 package com.linuxcommandlibrary.desktop
 
-import com.linuxcommandlibrary.shared.databaseHelper
-import com.linuxcommandlibrary.shared.initDatabase
 import java.io.File
 import java.io.PrintStream
 
@@ -21,8 +19,6 @@ import java.io.PrintStream
 */
 
 fun main() {
-    initDatabase()
-
     val markdownBuilder = MarkdownBuilder()
     markdownBuilder.build()
 }
@@ -35,7 +31,7 @@ class MarkdownBuilder {
         stream.appendLine()
         stream.appendLine("![Icon](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandLibrary/master/art/web_hi_res_144.png)")
         stream.appendLine()
-        stream.appendLine("The app currently has **${databaseHelper.getCommands().size}** manual pages, **${databaseHelper.getBasics().size}+** basic categories and a bunch of general terminal tips. It works 100% offline, doesn't need an internet connection and has no tracking software.")
+        stream.appendLine("The app currently has **${MarkdownFileUtils.getCommandCount()}** manual pages, **${MarkdownFileUtils.getBasicCategories().size}+** basic categories and a bunch of general terminal tips. It works 100% offline, doesn't need an internet connection and has no tracking software.")
         stream.appendLine()
         stream.appendLine("[![Play Store](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/play_store_badge.png)](https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca)")
         stream.appendLine("[![F-Droid](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/fdroid_badge.png)](https://f-droid.org/en/packages/com.inspiredandroid.linuxcommandbibliotheca/)")
@@ -66,17 +62,13 @@ class MarkdownBuilder {
         stream.appendLine("#### Categories")
         stream.appendLine()
         stream.appendLine(
-            databaseHelper.getBasics().joinToString { category ->
-                category.title
-            },
+            MarkdownFileUtils.getBasicCategories().joinToString(),
         )
         stream.appendLine()
         stream.appendLine("#### Tips")
         stream.appendLine()
         stream.appendLine(
-            databaseHelper.getTips().joinToString { tip ->
-                tip.title
-            },
+            MarkdownFileUtils.getTipTitles().joinToString(),
         )
 
         stream.appendLine()
@@ -96,7 +88,7 @@ class MarkdownBuilder {
         stream.appendLine()
         stream.appendLine("### Licensing")
         stream.appendLine()
-        stream.appendLine("The source code is licensed under the Apache 2.0 license and the copyright of the man pages in the `database.db` file are copyrighted by their respective authors.")
+        stream.appendLine("The source code is licensed under the Apache 2.0 license and the copyright of the man pages are copyrighted by their respective authors.")
 
         stream.appendLine()
         stream.appendLine("### Thanks to")

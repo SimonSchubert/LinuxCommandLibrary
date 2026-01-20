@@ -1,10 +1,5 @@
 package com.linuxcommandlibrary.shared
 
-import app.cash.sqldelight.db.SqlDriver
-import app.cash.sqldelight.driver.jdbc.sqlite.JdbcSqliteDriver
-import com.linuxcommandlibrary.CommandDatabase
-import java.io.File
-
 /* Copyright 2022 Simon Schubert
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,13 +15,10 @@ import java.io.File
  * limitations under the License.
 */
 
-actual var databaseHelper = DatabaseHelper()
-
-fun initDatabase() {
-    val databaseFile = EmptyClass::class.java.classLoader?.getResource("database.db")?.toURI()
-    val driver: SqlDriver = JdbcSqliteDriver("jdbc:sqlite::resource:$databaseFile")
-    if (!File("assets/database.db").exists()) {
-        CommandDatabase.Schema.create(driver)
-    }
-    databaseHelper.setupDriver(driver)
+/**
+ * JVM Platform utilities.
+ * Database has been removed in favor of markdown files.
+ */
+actual object Platform {
+    actual val NAME: String = "JVM"
 }

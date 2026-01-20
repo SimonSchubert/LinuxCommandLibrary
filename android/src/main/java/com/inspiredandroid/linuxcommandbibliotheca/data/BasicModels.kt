@@ -1,17 +1,24 @@
 package com.inspiredandroid.linuxcommandbibliotheca.data
 
 data class BasicCategory(
-    val id: String,    // filename without .md (e.g., "filesfolders")
-    val title: String  // from H1 (e.g., "Files & Folders")
+    /** filename without .md (e.g., "filesfolders") */
+    val id: String,
+    /** from H1 (e.g., "Files & Folders") */
+    val title: String,
 )
 
 data class BasicGroup(
-    val id: Long,            // hash of categoryId+description
-    val description: String  // from H2 (e.g., "Create file")
+    /** hash of categoryId+description */
+    val id: Long,
+    /** from H2 (e.g., "Create file") */
+    val description: String,
 )
 
 data class BasicCommand(
-    val id: Long,       // hash for stable ID
-    val command: String, // e.g., "$ touch [fileName]"
-    val mans: String     // e.g., "touch"
+    /** hash for stable ID */
+    val id: Long,
+    /** e.g., "$ touch [fileName]" */
+    val command: String,
+    /** e.g., "touch" */
+    val mans: String,
 )

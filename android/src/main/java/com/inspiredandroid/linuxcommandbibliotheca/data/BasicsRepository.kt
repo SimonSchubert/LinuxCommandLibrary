@@ -22,14 +22,12 @@ class BasicsRepository(private val context: Context) {
             .sortedBy { it.title }
     }
 
-    private fun readCategoryTitle(filename: String): String? {
-        return try {
-            context.assets.open("basics/$filename").bufferedReader().useLines { lines ->
-                lines.firstOrNull { it.startsWith("# ") }?.removePrefix("# ")?.trim()
-            }
-        } catch (e: Exception) {
-            null
+    private fun readCategoryTitle(filename: String): String? = try {
+        context.assets.open("basics/$filename").bufferedReader().useLines { lines ->
+            lines.firstOrNull { it.startsWith("# ") }?.removePrefix("# ")?.trim()
         }
+    } catch (e: Exception) {
+        null
     }
 
     fun getGroupsAndCommands(categoryId: String): Pair<List<BasicGroup>, Map<Long, List<BasicCommand>>> {
@@ -57,7 +55,7 @@ class BasicsRepository(private val context: Context) {
                         val (command, mans) = parseCommandLine(line)
                         val commandId = (categoryId + currentGroupId + commandIndex).hashCode().toLong()
                         commandsByGroupId[currentGroupId]?.add(
-                            BasicCommand(id = commandId, command = command, mans = mans)
+                            BasicCommand(id = commandId, command = command, mans = mans),
                         )
                         commandIndex++
                     }

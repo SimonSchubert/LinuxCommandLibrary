@@ -1,12 +1,9 @@
 package com.linuxcommandlibrary.desktop
 
 import com.linuxcommandlibrary.shared.CommandElement
-import com.linuxcommandlibrary.shared.databaseHelper
-import com.linuxcommandlibrary.shared.getCommandList
-import com.linuxcommandlibrary.shared.getHtmlFileName
-import com.linuxcommandlibrary.shared.getSortPriority
-import com.linuxcommandlibrary.shared.initDatabase
-import databases.BasicCategory
+import com.linuxcommandlibrary.shared.MarkdownParser
+import com.linuxcommandlibrary.shared.TipSectionElement
+import com.linuxcommandlibrary.shared.onlyCharactersRegex
 import kotlinx.coroutines.async
 import kotlinx.html.ATarget
 import kotlinx.html.DIV
@@ -78,8 +75,6 @@ import java.util.Locale
 */
 
 fun main() {
-    initDatabase()
-
     val minifier = Minifier()
     val websiteBuilder = WebsiteBuilder()
 
@@ -104,21 +99,151 @@ fun main() {
     minifier.minifyScriptsAndSheets(true)
 }
 
+/**
+ * Data class for parsed tip from markdown.
+ */
+data class TipInfo(
+    val id: Long,
+    val title: String,
+    val sections: List<TipSectionElement>,
+)
+
+/**
+ * Data class for parsed basic category group from markdown.
+ */
+data class BasicGroup(
+    val id: Long,
+    val description: String,
+    val sections: List<TipSectionElement>,
+)
+
+/**
+ * Data class for parsed basic category from markdown.
+ */
+data class BasicInfo(
+    val title: String,
+    val groups: List<BasicGroup>,
+)
+
+/**
+ * Data class for command parsed from markdown.
+ */
+data class CommandInfo(
+    val name: String,
+    val description: String,
+    val sections: List<CommandSectionInfo>,
+)
+
+/**
+ * Data class for a section of a command.
+ */
+data class CommandSectionInfo(
+    val title: String,
+    val content: String,
+    val elements: List<TipSectionElement>,
+)
+
+/**
+ * Get sort priority for command sections.
+ * TLDR first, SEE ALSO and AUTHOR/HISTORY last.
+ */
+fun CommandSectionInfo.getSortPriority(): Int = when (title.uppercase()) {
+    "TLDR" -> 0
+    "NAME" -> 1
+    "SYNOPSIS" -> 2
+    "DESCRIPTION" -> 3
+    "PARAMETERS" -> 4
+    "OPTIONS" -> 5
+    "EXAMPLES" -> 6
+    "CAVEATS" -> 90
+    "HISTORY" -> 91
+    "AUTHOR" -> 92
+    "SEE ALSO" -> 93
+    else -> 50
+}
+
 class WebsiteBuilder {
 
     private val cacheVersion = 11
 
-    private val h2Regex by lazy {
-        "(<h2>)(.*?)(</h2>)".toRegex()
+    /**
+     * Get sorted list of command names from markdown files.
+     */
+    private fun getCommandNamesFromMarkdown(): List<String> {
+        val commandsDir = File("assets/commands")
+        return commandsDir.listFiles { file -> file.extension == "md" }
+            ?.map { it.nameWithoutExtension }
+            ?.sorted()
+            ?: emptyList()
     }
-    private val quoteRegex by lazy {
-        "`(.*?)`".toRegex()
+
+    /**
+     * Get all commands with their info from markdown files.
+     */
+    private fun getCommandsFromMarkdown(): List<CommandInfo> {
+        val commandsDir = File("assets/commands")
+        return commandsDir.listFiles { file -> file.extension == "md" }
+            ?.mapNotNull { parseCommandMarkdown(it) }
+            ?.sortedBy { it.name }
+            ?: emptyList()
     }
-    private val commandRegex by lazy {
-        "([^\\s,]+)\\(([0-9]|1L|1M|p)\\)".toRegex()
-    }
-    private val htmlTagRegex by lazy {
-        "<[^>]*>".toRegex()
+
+    /**
+     * Parse a command markdown file into CommandInfo.
+     */
+    private fun parseCommandMarkdown(file: File): CommandInfo? {
+        val content = file.readText()
+        val lines = content.lines()
+        val commandName = file.nameWithoutExtension
+
+        val sections = mutableListOf<CommandSectionInfo>()
+        var description = ""
+        var i = 0
+
+        while (i < lines.size) {
+            val line = lines[i]
+
+            // Section header (# SECTION)
+            if (line.startsWith("# ") && !line.startsWith("## ")) {
+                val sectionTitle = line.removePrefix("# ").trim()
+                i++
+
+                // Collect content until next # header or end of file
+                val contentLines = mutableListOf<String>()
+                while (i < lines.size && !lines[i].startsWith("# ")) {
+                    contentLines.add(lines[i])
+                    i++
+                }
+
+                val sectionContent = contentLines.joinToString("\n").trim()
+
+                // Extract description from TLDR section (first line of text)
+                if (sectionTitle.uppercase() == "TLDR" && description.isEmpty()) {
+                    val firstTextLine = contentLines.firstOrNull { it.trim().isNotEmpty() && !it.trim().startsWith("```") }
+                    description = firstTextLine?.trim()?.replace(Regex("\\*\\*([^*]+)\\*\\*"), "$1") ?: ""
+                }
+
+                val elements = MarkdownParser.parseMarkdownContent(sectionContent)
+
+                sections.add(
+                    CommandSectionInfo(
+                        title = sectionTitle,
+                        content = sectionContent,
+                        elements = elements,
+                    ),
+                )
+            } else {
+                i++
+            }
+        }
+
+        if (sections.isEmpty()) return null
+
+        return CommandInfo(
+            name = commandName,
+            description = description,
+            sections = sections,
+        )
     }
 
     fun createCommandsHtmlFile(folder: File) {
@@ -172,19 +297,18 @@ class WebsiteBuilder {
                         div {
                             id = "commandlist"
                             var currentFirstLetter = ""
-                            databaseHelper.getCommands().forEach {
-                                if (it.name.lowercase().first().toString() != currentFirstLetter) {
-                                    currentFirstLetter = it.name.lowercase().first().toString()
+                            getCommandNamesFromMarkdown().forEach { commandName ->
+                                if (commandName.lowercase().first().toString() != currentFirstLetter) {
+                                    currentFirstLetter = commandName.lowercase().first().toString()
                                     div {
                                         classes = classes + "headline"
                                         text(currentFirstLetter.uppercase())
                                     }
                                 }
-                                a("man/${it.name.lowercase()}") {
-                                    attributes["data-c"] = it.name.lowercase()
-                                    text(it.name)
+                                a("man/${commandName.lowercase()}") {
+                                    attributes["data-c"] = commandName.lowercase()
+                                    text(commandName)
                                 }
-                                it.name
                             }
                         }
                         div {
@@ -207,7 +331,15 @@ class WebsiteBuilder {
         file.delete()
         val stream = PrintStream(file)
 
-        val basicCategories = databaseHelper.getBasics()
+        // Get basic categories from markdown files
+        val basicsDir = File("assets/basics")
+        val basicTitles = basicsDir.listFiles { f -> f.extension == "md" }
+            ?.map { mdFile ->
+                val firstLine = mdFile.readLines().firstOrNull { it.startsWith("# ") } ?: "# Unknown"
+                firstLine.removePrefix("# ").trim()
+            }
+            ?.sorted()
+            ?: emptyList()
 
         stream.appendLine("<!DOCTYPE html>")
         stream.appendHTML().html {
@@ -220,11 +352,7 @@ class WebsiteBuilder {
                     title = title,
                     description = "Handy cheat sheets with linux tips and terminal basics about System control, Users, Files, Package managers, Video and Audio, Hacking tools, Terminal games and many more categories.",
                     url = "https://linuxcommandlibrary.com/${folder.name}/${file.nameWithoutExtension}",
-                    keywords = "linux,cmd,basics,terminal,console,cheat sheets,tips,${
-                        basicCategories.joinToString(
-                            ",",
-                        ) { it.title }
-                    }",
+                    keywords = "linux,cmd,basics,terminal,console,cheat sheets,tips,${basicTitles.joinToString(",")}",
                 )
 
                 styleLink("/stylesheets/main.css?v=$cacheVersion")
@@ -237,18 +365,18 @@ class WebsiteBuilder {
                         ul {
                             classes = setOf("grid-container")
 
-                            basicCategories.forEach {
+                            basicTitles.forEach { categoryTitle ->
+                                val htmlFileName = categoryTitle.lowercase(Locale.US).replace(onlyCharactersRegex, "")
                                 li {
                                     classes = setOf("grid-item")
-                                    a("basic/${it.getHtmlFileName()}") {
+                                    a("basic/$htmlFileName") {
                                         div {
                                             i {
                                                 classes = setOf("invert-color")
-                                                style =
-                                                    "background-image: url(\"images/${it.getIconResource()}\");"
+                                                style = "background-image: url(\"images/${getIconResourceForTitle(categoryTitle)}\");"
                                             }
                                             h2 {
-                                                text(it.title)
+                                                text(categoryTitle)
                                             }
                                         }
                                     }
@@ -264,16 +392,60 @@ class WebsiteBuilder {
         stream.close()
     }
 
+    /**
+     * Get icon resource for a category title.
+     */
+    private fun getIconResourceForTitle(title: String): String = when (title) {
+        "One-liners" -> "icon-hand_with_pen.svg"
+        "System information" -> "icon-system_task.svg"
+        "System control" -> "icon-settings.svg"
+        "Users & Groups" -> "icon-user.svg"
+        "Files & Folders" -> "icon-file.svg"
+        "Printing" -> "icon-print.svg"
+        "Network" -> "icon-network_card.svg"
+        "Search & Find" -> "icon-search.svg"
+        "GIT" -> "icon-git.svg"
+        "SSH" -> "icon-console.svg"
+        "Video & Audio" -> "icon-video_trimming.svg"
+        "Package manager" -> "icon-package.svg"
+        "Hacking tools" -> "icon-skull.svg"
+        "Terminal games" -> "icon-controller.svg"
+        "VIM" -> "icon-vim.svg"
+        "Emacs" -> "icon-emacs.svg"
+        "Nano" -> "icon-nano.svg"
+        "Pico" -> "icon-pico.svg"
+        "Crypto currencies" -> "icon-bitcoin.svg"
+        "Input" -> "icon-mouse.svg"
+        "JSON" -> "icon-json.svg"
+        "Fun" -> "icon-fun.svg"
+        "VIM Texteditor" -> "icon-text-edit.svg"
+        "Emacs Texteditor" -> "icon-text-edit.svg"
+        "Nano Texteditor" -> "icon-text-edit.svg"
+        "Pico Texteditor" -> "icon-text-edit.svg"
+        "Micro Texteditor" -> "icon-text-edit.svg"
+        else -> ""
+    }
+
     fun createBasicHtmlFiles(folder: File) {
         folder.mkdir()
 
-        val basicCategories = databaseHelper.getBasics()
-        val totalCount = basicCategories.count()
+        val basicsDir = File("assets/basics")
+        val mdFiles = basicsDir.listFiles { file -> file.extension == "md" } ?: emptyArray()
+        val totalCount = mdFiles.size
 
-        basicCategories.forEachIndexed { index, category ->
+        mdFiles.forEachIndexed { index, mdFile ->
             print("\rCreate basic category html ${index + 1}/$totalCount")
 
-            val groups = databaseHelper.getBasicGroupsByQuery(category.id)
+            val basicInfo = parseBasicsMarkdown(mdFile.readText())
+            val categoryTitle = basicInfo.title
+            val groups = basicInfo.groups
+
+            // Create a mock BasicCategory for helper functions
+            val category = object {
+                val title = categoryTitle
+                fun getHtmlFileName() = categoryTitle.lowercase(Locale.US).replace(onlyCharactersRegex, "")
+                fun getDescription() = getDescriptionForTitle(categoryTitle)
+            }
 
             val file = File(folder, "${category.getHtmlFileName()}.html")
             file.delete()
@@ -289,7 +461,7 @@ class WebsiteBuilder {
                         title = title,
                         description = category.getDescription(),
                         url = "https://linuxcommandlibrary.com/${folder.name}/${file.nameWithoutExtension}",
-                        keywords = getKeywordsForBasic(category),
+                        keywords = getKeywordsForTitle(categoryTitle),
                     )
 
                     styleLink("/stylesheets/main.css?v=$cacheVersion")
@@ -307,7 +479,7 @@ class WebsiteBuilder {
                         style {
                             unsafe { +".masonry{-webkit-column-width: 400px !important;-moz-column-width: 400px !important;column-width: 400px !important;}" }
                         }
-                    } else {
+                    } else if (groups.isNotEmpty()) {
                         script(type = "application/ld+json") {
                             val faqJson = JSONObject()
                             faqJson.put("@context", "https://schema.org")
@@ -319,10 +491,10 @@ class WebsiteBuilder {
                                 answerJson.put("name", group.description)
                                 val acceptedAnswerJson = JSONObject()
                                 acceptedAnswerJson.put("@type", "Answer")
-                                acceptedAnswerJson.put(
-                                    "text",
-                                    databaseHelper.getBasicCommands(group.id).first().command,
-                                )
+                                // Get first code section's command as the answer
+                                val firstCommand = group.sections.filterIsInstance<TipSectionElement.Code>()
+                                    .firstOrNull()?.command ?: ""
+                                acceptedAnswerJson.put("text", firstCommand)
                                 answerJson.put("acceptedAnswer", acceptedAnswerJson)
                                 answerArray.put(answerJson)
                             }
@@ -349,54 +521,36 @@ class WebsiteBuilder {
                                                 text(group.description)
                                             }
                                         }
-                                        databaseHelper.getBasicCommands(group.id)
-                                            .forEach { command ->
-                                                if (listOf(
-                                                        "VIM Texteditor",
-                                                        "Emacs Texteditor",
-                                                        "Nano Texteditor",
-                                                        "Pico Texteditor",
-                                                        "Micro Texteditor",
-                                                    ).contains(category.title)
-                                                ) {
-                                                    table {
-                                                        command.command.split("\n").forEach {
-                                                            tr {
-                                                                it.split(" - ").forEach {
-                                                                    td {
-                                                                        text(it)
-                                                                    }
-                                                                }
-                                                            }
+                                        // Render sections using HtmlMarkdownRenderer
+                                        val isTextEditor = listOf(
+                                            "VIM Texteditor",
+                                            "Emacs Texteditor",
+                                            "Nano Texteditor",
+                                            "Pico Texteditor",
+                                            "Micro Texteditor",
+                                        ).contains(categoryTitle)
+
+                                        val isMonospace = listOf(
+                                            "Terminal games",
+                                            "Fun",
+                                        ).contains(categoryTitle)
+
+                                        if (isTextEditor) {
+                                            // Render text editor keybindings as a table
+                                            table {
+                                                group.sections.filterIsInstance<TipSectionElement.Code>().forEach { codeSection ->
+                                                    tr {
+                                                        td {
+                                                            text(codeSection.command)
                                                         }
                                                     }
-                                                } else if (listOf(
-                                                        "Terminal games",
-                                                        "Fun",
-                                                    ).contains(category.title)
-                                                ) {
-                                                    code(
-                                                        "$ ${
-                                                            command.command.replace(
-                                                                "\\n",
-                                                                "<br>",
-                                                            )
-                                                        }",
-                                                        command.mans,
-                                                        true,
-                                                    )
-                                                } else {
-                                                    code(
-                                                        "$ ${
-                                                            command.command.replace(
-                                                                "\\n",
-                                                                "<br>",
-                                                            )
-                                                        }",
-                                                        command.mans,
-                                                    )
                                                 }
                                             }
+                                        } else {
+                                            unsafe {
+                                                +HtmlMarkdownRenderer.renderSections(group.sections)
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -412,6 +566,115 @@ class WebsiteBuilder {
         println()
     }
 
+    /**
+     * Parse a basics markdown file into BasicInfo.
+     */
+    private fun parseBasicsMarkdown(content: String): BasicInfo {
+        val lines = content.lines()
+        var title = ""
+        val groups = mutableListOf<BasicGroup>()
+
+        var i = 0
+        while (i < lines.size) {
+            val line = lines[i]
+
+            when {
+                // Category title (# Title)
+                line.startsWith("# ") && !line.startsWith("## ") -> {
+                    title = line.removePrefix("# ").trim()
+                    i++
+                }
+                // Group header (## Group)
+                line.startsWith("## ") -> {
+                    val groupTitle = line.removePrefix("## ").trim()
+                    i++
+
+                    // Collect content until next ## header or end of file
+                    val contentLines = mutableListOf<String>()
+                    while (i < lines.size && !lines[i].startsWith("## ") && !lines[i].startsWith("# ")) {
+                        contentLines.add(lines[i])
+                        i++
+                    }
+
+                    val groupContent = contentLines.joinToString("\n")
+                    val sections = MarkdownParser.parseMarkdownContent(groupContent)
+
+                    groups.add(
+                        BasicGroup(
+                            id = groupTitle.hashCode().toLong(),
+                            description = groupTitle,
+                            sections = sections,
+                        ),
+                    )
+                }
+                else -> {
+                    i++
+                }
+            }
+        }
+
+        return BasicInfo(title = title, groups = groups)
+    }
+
+    /**
+     * Get description for a category title.
+     */
+    private fun getDescriptionForTitle(title: String): String = when (title) {
+        "One-liners" -> "Useful linux command line one liners"
+        "System information" -> "System and battery/cpu/memory/disk usage info on Linux "
+        "System control" -> "Lock, unlock, start/stop bluetooth/wifi, shutdown, reboot system"
+        "Users & Groups" -> "Create, remove, modify and list Linux groups and users"
+        "Files & Folders" -> "Create, delete, list, show and change Linux files and folders"
+        "Printing" -> "Print, view, start and cancel printing jobs on Linux"
+        "Network" -> "Configure, list, trace, sockets, wifi networks on Linux"
+        "Search & Find" -> "Search and find files by phrase, date and size on Linux"
+        "GIT" -> "Commit, push, create, delete and undo with git on Linux"
+        "SSH" -> "Connect, forward, push and pull files via SSH"
+        "Video & Audio" -> "Convert, volume, play, screenshot, webcam on Linux"
+        "Package manager" -> "Install, update, upgrade, remove packages on Linux"
+        "Hacking tools" -> "Hacking, forensics and exploitation tools for Linux"
+        "Terminal games" -> "Terminal games on Linux"
+        "VIM Texteditor" -> "Working with vim on the Linux command line"
+        "Emacs Texteditor" -> "Working with emacs on the Linux command line"
+        "Nano Texteditor" -> "Working with nano on the Linux command line"
+        "Pico Texteditor" -> "Working with pico on the Linux command line"
+        "Micro Texteditor" -> "Working with micro on the Linux command line"
+        "Crypto currencies" -> "Miners, wallets and trading bots for Linux"
+        "Input" -> "Type keys and move mouse via the Linux command line"
+        "JSON" -> "Print, select, modify, delete and create json files on cmd"
+        "Fun" -> "Fun on the linux command line"
+        else -> ""
+    }
+
+    /**
+     * Get keywords for a category title.
+     */
+    private fun getKeywordsForTitle(title: String): String = when (title) {
+        "One-liners" -> "linux,list,useful,oneliners,commands,cmd"
+        "Input" -> "linux,move,click,mouse,type,text,xdotool,ydotool,read,copy,clipboard"
+        "System information" -> "linux,system,info,disk,bluetooth,cpu,memory,battery"
+        "System control" -> "linux,control,lock,unlock,reboot,shutdown,start,stop,wifi,bluetooth"
+        "Users & Groups" -> "linux,create,delete,user,group,list,info"
+        "Files & Folders" -> "linux,create,edit,delete,file,folder,permission,list"
+        "Printing" -> "linux,print,file,cancel,job,status,queue"
+        "JSON" -> "linux,json,pretty,print,select,put,delete,create"
+        "Network" -> "linux,network,wifi,password,ip,interfaces,sockets"
+        "Search & Find" -> "linux,find,search,pattern,files,path,phrase"
+        "GIT" -> "linux,create,clone,repository,tag,checkout,delete,commit"
+        "SSH" -> "linux,connect,ssh,push,pull,forwarding"
+        "Video & Audio" -> "linux,screenshot,webcam,sounds,video,convert,image"
+        "Package manager" -> "linux,install,file,repository,find,package,upgrade"
+        "Hacking tools" -> "linux,password,forensics,sniffing,spoofing,exploit,vulnerability"
+        "Crypto currencies" -> "linux,minters,wallets,coin,trading,bots"
+        "VIM Texteditor" -> "linux,insert,search,edit,replace,navigation"
+        "Emacs Texteditor" -> "linux,emacs,usage,buffers,navigation"
+        "Nano Texteditor" -> "linux,nano,info,navigation,edit,input,output"
+        "Pico Texteditor" -> "linux,pico,navigation,usage,input,output"
+        "Micro Texteditor" -> "linux,pico,navigation,usage,input,output"
+        "Terminal games" -> "linux,terminal,games,list,rogue"
+        else -> "linux"
+    }
+
     fun createTipsHtmlFile(folder: File) {
         println("Create tips html")
 
@@ -420,6 +683,9 @@ class WebsiteBuilder {
         val file = File(folder, "tips.html")
         file.delete()
         val stream = PrintStream(file)
+
+        // Read tips from markdown file
+        val tips = parseTipsMarkdown(File("assets/tips.md").readText())
 
         stream.appendLine("<!DOCTYPE html>")
         stream.appendHTML().html {
@@ -453,7 +719,7 @@ class WebsiteBuilder {
                     div {
                         classes = setOf("masonry")
 
-                        databaseHelper.getTips().forEach { tip ->
+                        tips.forEach { tip ->
                             div {
                                 classes = setOf("code-group")
 
@@ -464,71 +730,8 @@ class WebsiteBuilder {
                                     }
                                 }
 
-                                var isTable = false
-
-                                fun closeTable() {
-                                    isTable = false
-                                    unsafe {
-                                        +"</table>"
-                                    }
-                                }
-
-                                fun startTable() {
-                                    isTable = true
-                                    unsafe {
-                                        +"<table>"
-                                    }
-                                }
-
-                                databaseHelper.getTipSections().filter { it.tip_id == tip.id }.forEach {
-                                    if (it.type != 3L && isTable) {
-                                        closeTable()
-                                    }
-                                    if (it.type == 3L && !isTable) {
-                                        startTable()
-                                    }
-                                    when (it.type) {
-                                        0L -> {
-                                            span {
-                                                unsafe {
-                                                    +it.data1.replace("\\n", "<br>")
-                                                }
-                                            }
-                                            br
-                                        }
-
-                                        1L -> {
-                                            code(it.data1.replace("\\n", "<br>"), it.extra)
-                                        }
-
-                                        3L -> {
-                                            unsafe {
-                                                +"<tr><td>"
-                                            }
-                                            if (it.data1.isNotBlank()) {
-                                                b {
-                                                    text(it.data1)
-                                                }
-                                            }
-                                            unsafe {
-                                                +"</td>"
-                                            }
-                                            unsafe {
-                                                +"<td>"
-                                            }
-                                            if (it.extra.isNotBlank()) {
-                                                code(it.data2.replace("\\n", "<br>"), it.extra)
-                                            } else {
-                                                text(it.data2)
-                                            }
-                                            unsafe {
-                                                +"</td></tr>"
-                                            }
-                                        }
-                                    }
-                                }
-                                if (isTable) {
-                                    closeTable()
+                                unsafe {
+                                    +HtmlMarkdownRenderer.renderSections(tip.sections)
                                 }
                             }
                         }
@@ -541,11 +744,42 @@ class WebsiteBuilder {
         stream.close()
     }
 
+    /**
+     * Parse tips.md content into list of TipInfo objects.
+     */
+    private fun parseTipsMarkdown(content: String): List<TipInfo> {
+        val tips = mutableListOf<TipInfo>()
+
+        // Split by ## headers to get individual tips
+        val tipBlocks = content.split(Regex("(?=^## )", RegexOption.MULTILINE))
+            .filter { it.trim().startsWith("## ") }
+
+        for (block in tipBlocks) {
+            val lines = block.lines()
+            val titleLine = lines.firstOrNull() ?: continue
+            val title = titleLine.removePrefix("## ").trim()
+            if (title.isEmpty()) continue
+
+            val contentLines = lines.drop(1).joinToString("\n")
+            val sections = MarkdownParser.parseMarkdownContent(contentLines)
+
+            tips.add(
+                TipInfo(
+                    id = title.hashCode().toLong(),
+                    title = title,
+                    sections = sections,
+                ),
+            )
+        }
+
+        return tips
+    }
+
     fun createManHtmlFiles(folder: File) {
         folder.mkdir()
 
-        val commands = databaseHelper.getCommands()
-        val totalCount = commands.count()
+        val commands = getCommandsFromMarkdown()
+        val totalCount = commands.size
 
         commands.forEachIndexed { index, command ->
             print("\rCreate mans html ${index + 1}/$totalCount")
@@ -607,7 +841,7 @@ class WebsiteBuilder {
                                 text(command.description)
                             }
 
-                            databaseHelper.getSections(command.id).sortedBy { it.getSortPriority() }
+                            command.sections.sortedBy { it.getSortPriority() }
                                 .forEach { section ->
                                     h2 {
                                         onClick = "togglePanel(this)"
@@ -621,8 +855,9 @@ class WebsiteBuilder {
                                     }
                                     div {
                                         classes = setOf("panel")
-                                        when (section.title) {
+                                        when (section.title.uppercase()) {
                                             "SEE ALSO" -> {
+                                                // Parse SEE ALSO section for man page links
                                                 p {
                                                     val elements =
                                                         getSeeAlsoSectionElements(section.content)
@@ -648,18 +883,11 @@ class WebsiteBuilder {
                                                 }
                                             }
 
-                                            "TLDR" -> {
-                                                p {
-                                                    unsafe {
-                                                        +sanitizeHtml(section.content.addAnchorAndCodeStyle(file.nameWithoutExtension))
-                                                    }
-                                                }
-                                            }
-
                                             else -> {
+                                                // Use HtmlMarkdownRenderer for all other sections
                                                 p {
                                                     unsafe {
-                                                        +sanitizeHtml(section.content)
+                                                        +HtmlMarkdownRenderer.renderSections(section.elements)
                                                     }
                                                 }
                                             }
@@ -872,30 +1100,46 @@ class WebsiteBuilder {
         .replace(Regex("(?i)</?(html|head|title|body)>"), "")
 
     /**
-     * Find and link man pages if command exists in database. Example: ps(1), regex(7), signal(7)
+     * Parse SEE ALSO section for man page links.
+     * Handles markdown links like [less](/man/less)(1) and plain text.
      */
     private fun getSeeAlsoSectionElements(content: String): List<CommandElement> {
-        var text = content.replace(htmlTagRegex, "")
-        repeat(10) {
-            text = text.replace(" ($it)", "($it)")
+        val elements = mutableListOf<CommandElement>()
+        var remaining = content
+
+        // Pattern to match markdown man links: [command](/man/command) optionally followed by (1) etc.
+        val manLinkRegex = Regex("""\[([^\]]+)]\(/man/([^)]+)\)(\([^)]*\))?""")
+
+        while (remaining.isNotEmpty()) {
+            val match = manLinkRegex.find(remaining)
+            if (match != null) {
+                // Add text before the match
+                if (match.range.first > 0) {
+                    val textBefore = remaining.substring(0, match.range.first)
+                    if (textBefore.isNotEmpty()) {
+                        elements.add(CommandElement.Text(textBefore))
+                    }
+                }
+                // Add the man link (use the command name from the URL path)
+                val manName = match.groupValues[2]
+                elements.add(CommandElement.Man(manName))
+                // Add the section number if present (e.g., "(1)")
+                val sectionNum = match.groupValues[3]
+                if (sectionNum.isNotEmpty()) {
+                    elements.add(CommandElement.Text(sectionNum))
+                }
+
+                remaining = remaining.substring(match.range.last + 1)
+            } else {
+                // No more links, add remaining text
+                if (remaining.isNotEmpty()) {
+                    elements.add(CommandElement.Text(remaining))
+                }
+                break
+            }
         }
-        val mans = text.getCommaSeparatedMans()
 
-        return text.getCommandList(
-            mans,
-            hasBrackets = true,
-            checkExisting = true,
-        )
-    }
-
-    /**
-     * Return comma separated list of commands. Example: ps(1),man(1) -> ps,man
-     */
-    private fun String.getCommaSeparatedMans(): String {
-        val matches = commandRegex.findAll(this)
-        return matches.mapNotNull {
-            it.groups[1]?.value
-        }.sortedByDescending { it.length }.joinToString(",")
+        return elements
     }
 
     fun create404HtmlFile() {
@@ -1037,11 +1281,17 @@ class WebsiteBuilder {
         stream.print(getSitemapUrlNode(""))
         stream.print(getSitemapUrlNode("tips"))
         stream.print(getSitemapUrlNode("commands"))
-        databaseHelper.getBasics().forEach {
-            stream.print(getSitemapUrlNode("basic/${it.getHtmlFileName()}"))
+        // Get basic categories from markdown files
+        val basicsDir = File("assets/basics")
+        basicsDir.listFiles { f -> f.extension == "md" }?.forEach { mdFile ->
+            val firstLine = mdFile.readLines().firstOrNull { it.startsWith("# ") } ?: "# Unknown"
+            val title = firstLine.removePrefix("# ").trim()
+            val htmlFileName = title.lowercase(Locale.US).replace(onlyCharactersRegex, "")
+            stream.print(getSitemapUrlNode("basic/$htmlFileName"))
         }
-        databaseHelper.getCommands().forEach {
-            stream.print(getSitemapUrlNode("man/${it.name}"))
+        // Get commands from markdown files
+        getCommandNamesFromMarkdown().forEach { commandName ->
+            stream.print(getSitemapUrlNode("man/$commandName"))
         }
         stream.print("</urlset>")
         stream.close()
@@ -1282,77 +1532,6 @@ class WebsiteBuilder {
         return this
     }
 
-    private fun FlowContent.code(
-        command: String,
-        mans: String,
-        isMonospace: Boolean = false,
-    ): FlowContent {
-        div {
-            classes = setOf("code-wrapper")
-            span {
-                classes = setOf("code")
-                if (isMonospace) {
-                    style = "font-family: 'Courier New', Courier, monospace;font-size:14px;"
-                }
-                command.getCommandList(mans).forEach { element ->
-                    when (element) {
-                        is CommandElement.Man -> {
-                            a("/man/${element.man}") {
-                                title = "${element.man} man page"
-                                text(element.man)
-                            }
-                        }
-
-                        is CommandElement.Text -> {
-                            element.text.split("<br>").map { it.replace("$  ", "$ ") }
-                                .forEachIndexed { index, s ->
-                                    if (index != 0) {
-                                        br
-                                    }
-                                    s.split(" ").forEachIndexed { index2, s2 ->
-                                        if (index2 != 0) {
-                                            unsafe {
-                                                +"&nbsp;"
-                                            }
-                                        }
-                                        text(s2)
-                                    }
-                                }
-                        }
-
-                        is CommandElement.Url -> {
-                            a(element.url) {
-                                target = ATarget.blank
-                                rel = "noopener"
-                                text(element.command)
-                            }
-                        }
-                    }
-                }
-            }
-            div {
-                if (isMonospace) {
-                    onClick =
-                        "javascript:copy('$mans')"
-                } else {
-                    onClick =
-                        "javascript:copy('${
-                            command.split("<br>").first().drop(2).replace("'", "&#039;")
-                                .replace("\n", "").trim()
-                        }')"
-                }
-                classes = setOf("copy-button")
-                img {
-                    src = "/images/icon-copy.svg"
-                    alt = "copy"
-                    width = "24"
-                    height = "24"
-                }
-            }
-        }
-        return this
-    }
-
     @HtmlTagMarker
     inline fun HTMLTag.meta(
         property: String? = null,
@@ -1376,116 +1555,4 @@ class WebsiteBuilder {
         ),
         consumer,
     ).visit(block)
-
-    private fun BasicCategory.getIconResource(): String = when (title) {
-        "One-liners" -> "icon-hand_with_pen.svg"
-        "System information" -> "icon-system_task.svg"
-        "System control" -> "icon-settings.svg"
-        "Users & Groups" -> "icon-user.svg"
-        "Files & Folders" -> "icon-file.svg"
-        "Printing" -> "icon-print.svg"
-        "Network" -> "icon-network_card.svg"
-        "Search & Find" -> "icon-search.svg"
-        "GIT" -> "icon-git.svg"
-        "SSH" -> "icon-console.svg"
-        "Video & Audio" -> "icon-video_trimming.svg"
-        "Package manager" -> "icon-package.svg"
-        "Hacking tools" -> "icon-skull.svg"
-        "Terminal games" -> "icon-controller.svg"
-        "VIM" -> "icon-vim.svg"
-        "Emacs" -> "icon-emacs.svg"
-        "Nano" -> "icon-nano.svg"
-        "Pico" -> "icon-pico.svg"
-        "Crypto currencies" -> "icon-bitcoin.svg"
-        "Input" -> "icon-mouse.svg"
-        "JSON" -> "icon-json.svg"
-        "Fun" -> "icon-fun.svg"
-        "VIM Texteditor" -> "icon-text-edit.svg"
-        "Emacs Texteditor" -> "icon-text-edit.svg"
-        "Nano Texteditor" -> "icon-text-edit.svg"
-        "Pico Texteditor" -> "icon-text-edit.svg"
-        "Micro Texteditor" -> "icon-text-edit.svg"
-        else -> ""
-    }
-
-    private fun BasicCategory.getDescription(): String = when (title) {
-        "One-liners" -> "Useful linux command line one liners"
-        "System information" -> "System and battery/cpu/memory/disk usage info on Linux "
-        "System control" -> "Lock, unlock, start/stop bluetooth/wifi, shutdown, reboot system"
-        "Users & Groups" -> "Create, remove, modify and list Linux groups and users"
-        "Files & Folders" -> "Create, delete, list, show and change Linux files and folders"
-        "Printing" -> "Print, view, start and cancel printing jobs on Linux"
-        "Network" -> "Configure, list, trace, sockets, wifi networks on Linux"
-        "Search & Find" -> "Search and find files by phrase, date and size on Linux"
-        "GIT" -> "Commit, push, create, delete and undo with git on Linux"
-        "SSH" -> "Connect, forward, push and pull files via SSH"
-        "Video & Audio" -> "Convert, volume, play, screenshot, webcam on Linux"
-        "Package manager" -> "Install, update, upgrade, remove packages on Linux"
-        "Hacking tools" -> "Hacking, forensics and exploitation tools for Linux"
-        "Terminal games" -> "Terminal games on Linux"
-        "VIM Texteditor" -> "Working with vim on the Linux command line"
-        "Emacs Texteditor" -> "Working with emacs on the Linux command line"
-        "Nano Texteditor" -> "Working with nano on the Linux command line"
-        "Pico Texteditor" -> "Working with pico on the Linux command line"
-        "Micro Texteditor" -> "Working with micro on the Linux command line"
-        "Crypto currencies" -> "Miners, wallets and trading bots for Linux"
-        "Input" -> "Type keys and move mouse via the Linux command line"
-        "JSON" -> "Print, select, modify, delete and create json files on cmd"
-        "Fun" -> "Fun on the linux command line"
-        else -> ""
-    }
-
-    private fun getKeywordsForBasic(category: BasicCategory): String = when (category.title) {
-        "One-liners" -> "linux,list,useful,oneliners,commands,cmd"
-        "Input" -> "linux,move,click,mouse,type,text,xdotool,ydotool,read,copy,clipboard"
-        "System information" -> "linux,system,info,disk,bluetooth,cpu,memory,battery"
-        "System control" -> "linux,control,lock,unlock,reboot,shutdown,start,stop,wifi,bluetooth"
-        "Users & Groups" -> "linux,create,delete,user,group,list,info"
-        "Files & Folders" -> "linux,create,edit,delete,file,folder,permission,list"
-        "Printing" -> "linux,print,file,cancel,job,status,queue"
-        "JSON" -> "linux,json,pretty,print,select,put,delete,create"
-        "Network" -> "linux,network,wifi,password,ip,interfaces,sockets"
-        "Search & Find" -> "linux,find,search,pattern,files,path,phrase"
-        "GIT" -> "linux,create,clone,repository,tag,checkout,delete,commit"
-        "SSH" -> "linux,connect,ssh,push,pull,forwarding"
-        "Video & Audio" -> "linux,screenshot,webcam,sounds,video,convert,image"
-        "Package manager" -> "linux,install,file,repository,find,package,upgrade"
-        "Hacking tools" -> "linux,password,forensics,sniffing,spoofing,exploit,vulnerability"
-        "Crypto currencies" -> "linux,minters,wallets,coin,trading,bots"
-        "VIM Texteditor" -> "linux,insert,search,edit,replace,navigation"
-        "Emacs Texteditor" -> "linux,emacs,usage,buffers,navigation"
-        "Nano Texteditor" -> "linux,nano,info,navigation,edit,input,output"
-        "Pico Texteditor" -> "linux,pico,navigation,usage,input,output"
-        "Micro Texteditor" -> "linux,pico,navigation,usage,input,output"
-        "Terminal games" -> "linux,terminal,games,list,rogue"
-        else -> throw Exception("${category.title} not found")
-    }
-
-    private fun String.addAnchorAndCodeStyle(fileName: String): String {
-        var content = this
-        var matches = quoteRegex.findAll(content)
-        matches.forEach {
-            val command = it.value.replace("`", "").replace("'", "&#039;").replace(">", "&gt;")
-                .replace("<", "&lt;")
-                .replace("\"", "&quot;")
-            content = content.replace(
-                it.value,
-                "<div class=\"code-wrapper\"><span class=\"code\">$ $command</span><div onclick=\"javascript:copy('$command')\" class=\"copy-button\"><img alt=\"copy\" src=\"/images/icon-copy.svg\" width=\"24\" height=\"24\"></div></div>",
-            )
-        }
-
-        matches = h2Regex.findAll(content)
-        matches.forEachIndexed { index, matchResult ->
-            val text =
-                matchResult.value.replace("<h2>", "").replace("</h2>", "").replace(">", "&gt;")
-                    .replace("<", "&lt;")
-            content =
-                content.replace(
-                    matchResult.value,
-                    "<h3><a id=\"tldr$index\" href=\"/man/$fileName#tldr$index\">$text</a></h3>",
-                )
-        }
-
-        return content
-    }
 }

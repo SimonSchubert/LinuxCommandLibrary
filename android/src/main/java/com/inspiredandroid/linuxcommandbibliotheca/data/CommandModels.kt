@@ -1,13 +1,17 @@
 package com.inspiredandroid.linuxcommandbibliotheca.data
 
 data class CommandInfo(
-    val id: Long,      // name.hashCode().toLong() for stable ID
-    val name: String,  // filename without .md
+    /** name.hashCode().toLong() for stable ID */
+    val id: Long,
+    /** filename without .md */
+    val name: String,
 )
 
 data class CommandSectionInfo(
-    val id: Long,      // (commandName + title).hashCode().toLong()
-    val title: String, // "TLDR", "SYNOPSIS", etc.
+    /** (commandName + title).hashCode().toLong() */
+    val id: Long,
+    /** "TLDR", "SYNOPSIS", etc. */
+    val title: String,
     val content: String,
 )
 

@@ -43,7 +43,7 @@ class BasicGroupsViewModel(
                     basicGroups = groups.toImmutableList(),
                     commandsByGroupId = commandsMap.mapValues { entry ->
                         entry.value.toImmutableList()
-                    }.toImmutableMap()
+                    }.toImmutableMap(),
                 )
             }
         }

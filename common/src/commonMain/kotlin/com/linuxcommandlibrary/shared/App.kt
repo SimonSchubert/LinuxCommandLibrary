@@ -1,8 +1,5 @@
 package com.linuxcommandlibrary.shared
 
-import databases.BasicCategory
-import databases.Command
-import databases.CommandSection
 import java.util.Locale
 
 /* Copyright 2022 Simon Schubert
@@ -27,26 +24,11 @@ sealed class CommandElement {
 }
 
 /**
- * Search in name and description and return sorted by priority
- */
-fun List<Command>.sortedSearch(phrase: String): List<Command> = this.sortedBy {
-    val name = it.name.lowercase()
-    val lowercasePhrase = phrase.lowercase()
-    when {
-        !name.contains(lowercasePhrase) -> 30
-        name == lowercasePhrase -> 0
-        name.startsWith(lowercasePhrase) -> 10
-        else -> 20
-    }
-}
-
-/**
  * Return a list of sealed Elements for visual representation
  */
 fun String.getCommandList(
     mans: String,
     hasBrackets: Boolean = false,
-    checkExisting: Boolean = false,
 ): List<CommandElement> {
     var command = " $this"
     val list = mutableListOf<CommandElement>()
@@ -57,7 +39,7 @@ fun String.getCommandList(
                 command.replace(cmd, " ü${it}ä")
             } else {
                 if (hasBrackets) {
-                    val escapedIt = Regex.escape(it) // Escapes special characters, e.g., "pbmto\\*\\*\\*"
+                    val escapedIt = Regex.escape(it)
                     val regex = "(?:[\\s,])($escapedIt)".toRegex()
                     command.replace(regex, " ü${it}ä")
                 } else {
@@ -82,11 +64,6 @@ fun String.getCommandList(
                         val cmd = currentCommand.substring(4).split("|").first()
                         list.add(CommandElement.Url(cmd, url))
                     }
-
-                    checkExisting && databaseHelper.getCommand(currentCommand) == null -> {
-                        list.add(CommandElement.Text(currentCommand))
-                    }
-
                     else -> {
                         list.add(CommandElement.Man(currentCommand))
                     }
@@ -111,17 +88,6 @@ val onlyCharactersRegex = "[^a-z]".toRegex()
 /**
  * Only allow characters in html file names to guarantee matching on the website and app deep linking
  */
-fun BasicCategory.getHtmlFileName(): String = this.title.lowercase(Locale.US).replace(onlyCharactersRegex, "")
-
-/**
- * Show TLDR and SYNOPSIS always on the top and SEE ALSO and AUTHOR on the bottom. Everything else in between
- */
-fun CommandSection.getSortPriority(): Int = when (this.title) {
-    "TLDR" -> 0
-    "SYNOPSIS" -> 10
-    "SEE ALSO" -> 90
-    "AUTHOR" -> 100
-    else -> 50
-}
+fun String.toHtmlFileName(): String = this.lowercase(Locale.US).replace(onlyCharactersRegex, "")
 
 fun String.isLetter(): Boolean = this.firstOrNull() in 'a'..'z' || this.firstOrNull() in 'A'..'Z'

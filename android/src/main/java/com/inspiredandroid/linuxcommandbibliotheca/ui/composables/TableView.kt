@@ -16,13 +16,14 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.LinkAnnotation
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.inspiredandroid.linuxcommandbibliotheca.data.TextElement
 import com.inspiredandroid.linuxcommandbibliotheca.ui.theme.LinuxTheme
+import com.linuxcommandlibrary.shared.TextElement
 
 /* Copyright 2022 Simon Schubert
  *
@@ -44,7 +45,7 @@ fun TableView(
     headers: List<List<TextElement>>,
     rows: List<List<List<TextElement>>>,
     onNavigate: (String) -> Unit = {},
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
 ) {
     val textMeasurer = rememberTextMeasurer()
     val density = LocalDensity.current
@@ -65,7 +66,7 @@ fun TableView(
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(IntrinsicSize.Min)
+                    .height(IntrinsicSize.Min),
             ) {
                 headers.forEachIndexed { index, headerElements ->
                     val cellModifier = if (index == 0) Modifier.width(firstColumnWidth) else Modifier.weight(1f)
@@ -73,7 +74,7 @@ fun TableView(
                         text = headerElements.toPlainText(),
                         fontWeight = FontWeight.Bold,
                         modifier = cellModifier
-                            .padding(horizontal = 8.dp, vertical = 4.dp)
+                            .padding(horizontal = 8.dp, vertical = 4.dp),
                     )
                 }
             }
@@ -84,7 +85,7 @@ fun TableView(
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(IntrinsicSize.Min)
+                    .height(IntrinsicSize.Min),
             ) {
                 row.forEachIndexed { index, cellElements ->
                     val cellModifier = if (index == 0) Modifier.width(firstColumnWidth) else Modifier.weight(1f)
@@ -95,6 +96,11 @@ fun TableView(
                                     is TextElement.Plain -> append(element.text)
                                     is TextElement.Bold -> {
                                         withStyle(style = SpanStyle(fontWeight = FontWeight.Bold)) {
+                                            append(element.text)
+                                        }
+                                    }
+                                    is TextElement.Italic -> {
+                                        withStyle(style = SpanStyle(fontStyle = FontStyle.Italic)) {
                                             append(element.text)
                                         }
                                     }
@@ -122,7 +128,7 @@ fun TableView(
                     Text(
                         text = annotatedString,
                         modifier = cellModifier
-                            .padding(horizontal = 8.dp, vertical = 4.dp)
+                            .padding(horizontal = 8.dp, vertical = 4.dp),
                     )
                 }
             }
@@ -130,13 +136,12 @@ fun TableView(
     }
 }
 
-private fun List<TextElement>.toPlainText(): String {
-    return this.joinToString("") { element ->
-        when (element) {
-            is TextElement.Plain -> element.text
-            is TextElement.Bold -> element.text
-            is TextElement.Man -> element.man
-        }
+private fun List<TextElement>.toPlainText(): String = this.joinToString("") { element ->
+    when (element) {
+        is TextElement.Plain -> element.text
+        is TextElement.Bold -> element.text
+        is TextElement.Italic -> element.text
+        is TextElement.Man -> element.man
     }
 }
 
@@ -147,22 +152,22 @@ fun TableViewPreview() {
         TableView(
             headers = listOf(
                 listOf(TextElement.Plain("Shortcut")),
-                listOf(TextElement.Plain("Action"))
+                listOf(TextElement.Plain("Action")),
             ),
             rows = listOf(
                 listOf(
                     listOf(TextElement.Bold("ctrl + u")),
-                    listOf(TextElement.Plain("Clear everything before cursor"))
+                    listOf(TextElement.Plain("Clear everything before cursor")),
                 ),
                 listOf(
                     listOf(TextElement.Bold("ctrl + a")),
-                    listOf(TextElement.Plain("Jump to beginning of line"))
+                    listOf(TextElement.Plain("Jump to beginning of line")),
                 ),
                 listOf(
                     listOf(TextElement.Man("find"), TextElement.Plain(" ex*.txt")),
-                    listOf(TextElement.Plain("Find files matching pattern"))
-                )
-            )
+                    listOf(TextElement.Plain("Find files matching pattern")),
+                ),
+            ),
         )
     }
 }

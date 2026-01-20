@@ -1,11 +1,6 @@
 import com.linuxcommandlibrary.shared.CommandElement
 import com.linuxcommandlibrary.shared.getCommandList
-import com.linuxcommandlibrary.shared.getHtmlFileName
-import com.linuxcommandlibrary.shared.getSortPriority
-import com.linuxcommandlibrary.shared.sortedSearch
-import databases.BasicCategory
-import databases.Command
-import databases.CommandSection
+import com.linuxcommandlibrary.shared.toHtmlFileName
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
@@ -20,44 +15,23 @@ class CommonTests {
     }
 
     @Test
-    fun testCommandListSearch() {
-        val commands = listOf(
-            Command(0, 0, "optipng", "convert"),
-            Command(0, 0, "thumbnail", "take png and do something"),
-            Command(0, 0, "Pngcheck", "print detailed"),
-            Command(0, 0, "png", "png"),
-        )
-
-        val filteredCommands = commands.sortedSearch("png")
-
-        assert(filteredCommands.size == 4)
-
-        assertEquals(filteredCommands[0].name, "png")
-        assertEquals(filteredCommands[1].name, "Pngcheck")
-        assertEquals(filteredCommands[2].name, "optipng")
-        assertEquals(filteredCommands[3].name, "thumbnail")
+    fun testHtmlFileName() {
+        assertEquals("usersgroups".toHtmlFileName(), "usersgroups")
+        assertEquals("Users & Groups 2".toHtmlFileName(), "usersgroups")
+        assertEquals("Files & Folders".toHtmlFileName(), "filesfolders")
     }
 
     @Test
-    fun testBasicCategory() {
-        val category = BasicCategory(0L, 0L, "Users & Groups 2")
-        assertEquals(category.getHtmlFileName(), "usersgroups")
+    fun testCommandListWithUrls() {
+        val command = "install nvm"
+        val elements = command.getCommandList("url:nvm|https://github.com/nvm-sh/nvm")
+        assertTrue(elements.any { it is CommandElement.Url })
     }
 
     @Test
-    fun testSectionSorting() {
-        val sections = listOf(
-            CommandSection(0L, "SEE ALSO", "", 0L),
-            CommandSection(0L, "RANDOM", "", 0L),
-            CommandSection(0L, "TLDR", "", 0L),
-            CommandSection(0L, "AUTHOR", "", 0L),
-            CommandSection(0L, "SYNOPSIS", "", 0L),
-        ).sortedBy { it.getSortPriority() }
-
-        assertEquals("TLDR", sections[0].title)
-        assertEquals("SYNOPSIS", sections[1].title)
-        assertEquals("RANDOM", sections[2].title)
-        assertEquals("SEE ALSO", sections[3].title)
-        assertEquals("AUTHOR", sections[4].title)
+    fun testCommandListEmptyMans() {
+        val command = "echo hello"
+        val elements = command.getCommandList("")
+        assertTrue(elements.all { it is CommandElement.Text })
     }
 }

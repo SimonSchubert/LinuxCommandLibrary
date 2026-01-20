@@ -16,21 +16,11 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
-import androidx.compose.ui.text.SpanStyle
-import androidx.compose.ui.text.buildAnnotatedString
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.inspiredandroid.linuxcommandbibliotheca.data.TextElement
 import com.inspiredandroid.linuxcommandbibliotheca.data.TipInfo
-import com.inspiredandroid.linuxcommandbibliotheca.data.TipSectionElement
-import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.CommandView
-import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.NestedCommandView
-import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.NestedText
 import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.SectionTitle
-import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.TableView
-import com.mikepenz.markdown.m2.Markdown
+import com.inspiredandroid.linuxcommandbibliotheca.ui.composables.TipSectionContent
 import org.koin.androidx.compose.koinViewModel
 
 /* Copyright 2022 Simon Schubert
@@ -80,63 +70,7 @@ private fun TipItemCard(tip: TipInfo, onNavigate: (String) -> Unit) {
     ) {
         Column(modifier = Modifier.padding(8.dp)) {
             SectionTitle(title = tip.title)
-            TipSections(sections = tip.sections, onNavigate = onNavigate)
-        }
-    }
-}
-
-@Composable
-private fun TipSections(sections: List<TipSectionElement>, onNavigate: (String) -> Unit) {
-    sections.forEach { element ->
-        when (element) {
-            is TipSectionElement.Text -> {
-                val annotatedString = buildAnnotatedString {
-                    element.elements.forEach { textElement ->
-                        when (textElement) {
-                            is TextElement.Plain -> append(textElement.text)
-                            is TextElement.Bold -> {
-                                withStyle(style = SpanStyle(fontWeight = FontWeight.Bold)) {
-                                    append(textElement.text)
-                                }
-                            }
-                            is TextElement.Man -> append(textElement.man)
-                        }
-                    }
-                }
-                Text(annotatedString)
-            }
-
-            is TipSectionElement.Code -> {
-                CommandView(
-                    command = element.command,
-                    elements = element.elements,
-                    onNavigate = onNavigate,
-                )
-            }
-
-            is TipSectionElement.NestedCode -> {
-                NestedCommandView(
-                    text = element.text,
-                    command = element.command,
-                    commandElements = element.elements,
-                    onNavigate = onNavigate,
-                )
-            }
-
-            is TipSectionElement.NestedText -> {
-                NestedText(
-                    textLeft = element.text,
-                    textRight = element.info,
-                )
-            }
-
-            is TipSectionElement.Table -> {
-                TableView(
-                    headers = element.headers,
-                    rows = element.rows,
-                    onNavigate = onNavigate,
-                )
-            }
+            TipSectionContent(sections = tip.sections, onNavigate = onNavigate)
         }
     }
 }

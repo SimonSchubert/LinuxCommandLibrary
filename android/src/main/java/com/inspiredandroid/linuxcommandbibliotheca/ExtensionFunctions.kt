@@ -4,5 +4,5 @@ import androidx.navigation.NavBackStackEntry
 
 fun NavBackStackEntry.getCategoryId(): String? {
     return arguments?.getString("categoryId")?.takeIf { it.isNotEmpty() }
-        ?: arguments?.getString("categoryName")  // For deep links
+        ?: arguments?.getString("categoryName") // For deep links
 }

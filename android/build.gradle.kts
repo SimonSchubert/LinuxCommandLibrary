@@ -27,9 +27,6 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.test.manifest)
     debugImplementation(libs.androidx.ui.tooling)
-    implementation(libs.multiplatform.markdown.renderer.android)
-    implementation(libs.multiplatform.markdown.renderer.m2)
-    implementation(libs.multiplatform.markdown.renderer.code)
 }
 
 android {

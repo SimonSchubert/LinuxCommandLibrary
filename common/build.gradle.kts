@@ -3,14 +3,17 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.android.library)
-    alias(libs.plugins.sqldelight)
 }
 
 group = "com.linuxcommandlibrary"
 
 kotlin {
     androidTarget()
-    jvm()
+    jvm {
+        compilerOptions {
+            jvmTarget.set(JvmTarget.JVM_17)
+        }
+    }
 
     androidTarget {
         compilerOptions {
@@ -21,7 +24,6 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                implementation(libs.runtime)
             }
             kotlin.srcDir(layout.buildDirectory.dir("generated/src/commonMain/kotlin"))
         }
@@ -32,12 +34,10 @@ kotlin {
         }
         androidMain {
             dependencies {
-                implementation(libs.sqldelight.android.driver)
             }
         }
         jvmMain {
             dependencies {
-                implementation(libs.sqldelight.sqlite.driver)
             }
         }
     }
@@ -59,14 +59,6 @@ android {
         abortOnError = false
     }
     namespace = "com.linuxcommandlibrary.shared"
-}
-
-sqldelight {
-    databases {
-        create("CommandDatabase") {
-            packageName.set("com.linuxcommandlibrary")
-        }
-    }
 }
 
 class VersionGeneratorPlugin : Plugin<Project> {

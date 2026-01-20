@@ -33,23 +33,21 @@ class CommandsRepository(private val context: Context) {
 
         return commands
             .filter { it.name.lowercase().contains(lowerQuery) }
-            .sortedWith(compareBy(
-                // Exact match first
-                { it.name.lowercase() != lowerQuery },
-                // Starts with query second
-                { !it.name.lowercase().startsWith(lowerQuery) },
-                // Then alphabetically
-                { it.name }
-            ))
+            .sortedWith(
+                compareBy(
+                    // Exact match first
+                    { it.name.lowercase() != lowerQuery },
+                    // Starts with query second
+                    { !it.name.lowercase().startsWith(lowerQuery) },
+                    // Then alphabetically
+                    { it.name },
+                ),
+            )
     }
 
-    fun getCommand(name: String): CommandInfo? {
-        return getCommands().find { it.name == name }
-    }
+    fun getCommand(name: String): CommandInfo? = getCommands().find { it.name == name }
 
-    fun hasCommand(name: String): Boolean {
-        return getCommands().any { it.name == name }
-    }
+    fun hasCommand(name: String): Boolean = getCommands().any { it.name == name }
 
     fun getSections(commandName: String): List<CommandSectionInfo> {
         val sections = mutableListOf<CommandSectionInfo>()
@@ -70,7 +68,7 @@ class CommandsRepository(private val context: Context) {
                                 id = (commandName + currentTitle).hashCode().toLong(),
                                 title = currentTitle,
                                 content = currentContent.toString().trim(),
-                            )
+                            ),
                         )
                     }
                     // Start new section
@@ -88,7 +86,7 @@ class CommandsRepository(private val context: Context) {
                         id = (commandName + currentTitle).hashCode().toLong(),
                         title = currentTitle,
                         content = currentContent.toString().trim(),
-                    )
+                    ),
                 )
             }
         } catch (e: Exception) {
