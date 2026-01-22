@@ -12,7 +12,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material.Chip
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.ListItem
@@ -62,11 +62,11 @@ fun CommandDetailScreen(
     val uiState by viewModel.state.collectAsStateWithLifecycle()
 
     LazyColumn(Modifier.fillMaxSize()) {
-        items(
+        itemsIndexed(
             items = uiState.sections,
-            key = { it.id },
-            contentType = { "command_section_item" },
-        ) { section ->
+            key = { index, _ -> index },
+            contentType = { _, _ -> "command_section_item" },
+        ) { _, section ->
             CommandSectionColumn(
                 section = section,
                 isExpanded = uiState.expandedSectionsMap.getOrDefault(section.id, false),

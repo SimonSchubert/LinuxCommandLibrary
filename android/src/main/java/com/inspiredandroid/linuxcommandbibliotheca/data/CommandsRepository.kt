@@ -45,8 +45,6 @@ class CommandsRepository(private val context: Context) {
             )
     }
 
-    fun getCommand(name: String): CommandInfo? = getCommands().find { it.name == name }
-
     fun hasCommand(name: String): Boolean = getCommands().any { it.name == name }
 
     fun getSections(commandName: String): List<CommandSectionInfo> {

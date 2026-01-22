@@ -13,7 +13,8 @@ local.properties
 *.aab
 *.jar
 /html
-/assets/tldr
 .claude
-/data/intructions.md
-/data/processed.txt
+processed.txt
+instructions-tldr.md
+instructions-man.md
+commands.txt

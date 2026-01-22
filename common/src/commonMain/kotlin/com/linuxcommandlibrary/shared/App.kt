@@ -85,6 +85,32 @@ fun String.getCommandList(
 
 val onlyCharactersRegex = "[^a-z]".toRegex()
 
+val basicsSortOrder =
+    listOf(
+        "One-liners",
+        "System information",
+        "System control",
+        "Users & Groups",
+        "Files & Folders",
+        "Input",
+        "Printing",
+        "JSON",
+        "Network",
+        "Search & Find",
+        "GIT",
+        "SSH",
+        "Video & Audio",
+        "Package manager",
+        "Hacking tools",
+        "Terminal games",
+        "Crypto currencies",
+        "VIM Texteditor",
+        "Emacs Texteditor",
+        "Nano Texteditor",
+        "Pico Texteditor",
+        "Micro Texteditor",
+    )
+
 /**
  * Only allow characters in html file names to guarantee matching on the website and app deep linking
  */

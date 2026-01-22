@@ -1,0 +1,52 @@
+# TLDR
+
+**Generate rainbow gradient**
+
+```ppmrainbow -width [100] -height [50] [color1] [color2] > [output.ppm]```
+
+**Create red to blue gradient**
+
+```ppmrainbow -width 200 -height 100 red blue > [gradient.ppm]```
+
+**Multiple color gradient**
+
+```ppmrainbow -width 300 -height 50 red yellow green blue > [rainbow.ppm]```
+
+# SYNOPSIS
+
+**ppmrainbow** [_options_] _colors_
+
+# PARAMETERS
+
+_COLORS_
+> Color stops.
+
+**-width** _N_
+> Output width.
+
+**-height** _N_
+> Output height.
+
+**-norepeat**
+> Don't repeat spectrum.
+
+# DESCRIPTION
+
+**ppmrainbow** creates color gradient images. Multi-color spectrums.
+
+The tool generates rainbow effects. Part of Netpbm.
+
+ppmrainbow makes gradients.
+
+# CAVEATS
+
+Horizontal gradient only. Part of Netpbm suite.
+
+# HISTORY
+
+ppmrainbow was created as part of **Netpbm** for gradient generation.
+
+# SEE ALSO
+
+[ppm](/man/ppm)(5), [ppmmake](/man/ppmmake)(1)
+

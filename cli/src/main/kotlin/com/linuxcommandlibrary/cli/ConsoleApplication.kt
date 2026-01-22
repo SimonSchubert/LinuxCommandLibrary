@@ -54,9 +54,7 @@ private fun showStartMenu() {
 }
 
 // Helper function to read classpath resources
-private fun readResource(path: String): String? {
-    return object {}.javaClass.getResourceAsStream("/$path")?.bufferedReader()?.readText()
-}
+private fun readResource(path: String): String? = object {}.javaClass.getResourceAsStream("/$path")?.bufferedReader()?.readText()
 
 // Command functions
 private fun getCommands(): List<CommandInfo> {

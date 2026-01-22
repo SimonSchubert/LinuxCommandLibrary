@@ -148,5 +148,6 @@ fun BasicCategory.getIconResource(): Int = when (title) {
     "Input" -> R.drawable.ic_icon_mouse
     "JSON" -> R.drawable.ic_icon_json
     "Fun" -> R.drawable.ic_icon_fun
+    "Coding Agents" -> R.drawable.ic_agent
     else -> R.drawable.ic_icon_mouse
 }

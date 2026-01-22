@@ -1,0 +1,60 @@
+# TLDR
+
+**Push directory to stack**
+
+```pushd [/path/to/dir]```
+
+**Swap top two directories**
+
+```pushd```
+
+**Push without changing directory**
+
+```pushd -n [/path/to/dir]```
+
+**Show directory stack**
+
+```dirs```
+
+**Pop from stack**
+
+```popd```
+
+# SYNOPSIS
+
+**pushd** [_options_] [_dir_]
+
+# PARAMETERS
+
+_DIR_
+> Directory to push.
+
+**-n**
+> Add without changing.
+
+**+N**
+> Rotate to Nth entry.
+
+**-N**
+> Rotate to Nth from end.
+
+# DESCRIPTION
+
+**pushd** pushes directory onto stack. Directory navigation tool.
+
+The tool enables quick directory switching. Shell built-in.
+
+pushd saves directories.
+
+# CAVEATS
+
+Shell built-in. Works with popd and dirs.
+
+# HISTORY
+
+pushd is a **shell built-in** for directory stack management.
+
+# SEE ALSO
+
+[popd](/man/popd)(1), [dirs](/man/dirs)(1), [cd](/man/cd)(1)
+

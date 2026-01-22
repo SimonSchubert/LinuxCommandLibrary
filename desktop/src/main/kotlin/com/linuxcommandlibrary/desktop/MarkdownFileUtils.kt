@@ -1,5 +1,6 @@
 package com.linuxcommandlibrary.desktop
 
+import com.linuxcommandlibrary.shared.basicsSortOrder
 import java.io.File
 
 /* Copyright 2022 Simon Schubert
@@ -41,7 +42,7 @@ object MarkdownFileUtils {
                 val firstLine = mdFile.readLines().firstOrNull { it.startsWith("# ") }
                 firstLine?.removePrefix("# ")?.trim()
             }
-            ?.sorted()
+            ?.sortedBy { basicsSortOrder.indexOf(it) }
             ?: emptyList()
     }
 

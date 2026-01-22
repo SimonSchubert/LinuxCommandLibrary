@@ -18,34 +18,39 @@ kotlin {
 }
 
 // Generate index files listing all commands and basics
-val generateIndexFiles = tasks.register("generateIndexFiles") {
-    val assetsDir = file("../assets")
-    val outputDir = layout.buildDirectory.dir("generated/resources")
+val generateIndexFiles =
+    tasks.register("generateIndexFiles") {
+        val assetsDir = file("../assets")
+        val outputDir = layout.buildDirectory.dir("generated/resources")
 
-    inputs.dir(assetsDir)
-    outputs.dir(outputDir)
+        inputs.dir(assetsDir)
+        outputs.dir(outputDir)
 
-    doLast {
-        val outDir = outputDir.get().asFile
-        outDir.mkdirs()
+        doLast {
+            val outDir = outputDir.get().asFile
+            outDir.mkdirs()
 
-        // Generate commands index
-        val commandsDir = file("../assets/commands")
-        val commandsIndex = commandsDir.listFiles { f -> f.extension == "md" }
-            ?.map { it.nameWithoutExtension }
-            ?.sorted()
-            ?.joinToString("\n") ?: ""
-        file("${outDir}/commands.index").writeText(commandsIndex)
+            // Generate commands index
+            val commandsDir = file("../assets/commands")
+            val commandsIndex =
+                commandsDir
+                    .listFiles { f -> f.extension == "md" }
+                    ?.map { it.nameWithoutExtension }
+                    ?.sorted()
+                    ?.joinToString("\n") ?: ""
+            file("$outDir/commands.index").writeText(commandsIndex)
 
-        // Generate basics index
-        val basicsDir = file("../assets/basics")
-        val basicsIndex = basicsDir.listFiles { f -> f.extension == "md" }
-            ?.map { it.nameWithoutExtension }
-            ?.sorted()
-            ?.joinToString("\n") ?: ""
-        file("${outDir}/basics.index").writeText(basicsIndex)
+            // Generate basics index
+            val basicsDir = file("../assets/basics")
+            val basicsIndex =
+                basicsDir
+                    .listFiles { f -> f.extension == "md" }
+                    ?.map { it.nameWithoutExtension }
+                    ?.sorted()
+                    ?.joinToString("\n") ?: ""
+            file("$outDir/basics.index").writeText(basicsIndex)
+        }
     }
-}
 
 tasks.named("processResources") {
     dependsOn(generateIndexFiles)

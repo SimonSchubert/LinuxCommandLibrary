@@ -3,6 +3,7 @@ package com.linuxcommandlibrary.desktop
 import com.linuxcommandlibrary.shared.CommandElement
 import com.linuxcommandlibrary.shared.MarkdownParser
 import com.linuxcommandlibrary.shared.TipSectionElement
+import com.linuxcommandlibrary.shared.basicsSortOrder
 import com.linuxcommandlibrary.shared.onlyCharactersRegex
 import kotlinx.coroutines.async
 import kotlinx.html.ATarget
@@ -58,6 +59,8 @@ import org.json.JSONObject
 import java.io.File
 import java.io.PrintStream
 import java.util.Locale
+import kotlin.io.readLines
+import kotlin.text.startsWith
 
 /* Copyright 2022 Simon Schubert
  *
@@ -338,7 +341,9 @@ class WebsiteBuilder {
                 val firstLine = mdFile.readLines().firstOrNull { it.startsWith("# ") } ?: "# Unknown"
                 firstLine.removePrefix("# ").trim()
             }
-            ?.sorted()
+            ?.sortedBy {
+                basicsSortOrder.indexOf(it)
+            }
             ?: emptyList()
 
         stream.appendLine("<!DOCTYPE html>")
@@ -397,6 +402,7 @@ class WebsiteBuilder {
      */
     private fun getIconResourceForTitle(title: String): String = when (title) {
         "One-liners" -> "icon-hand_with_pen.svg"
+        "Coding Agents" -> "icon-agent.svg"
         "System information" -> "icon-system_task.svg"
         "System control" -> "icon-settings.svg"
         "Users & Groups" -> "icon-user.svg"
@@ -430,7 +436,10 @@ class WebsiteBuilder {
         folder.mkdir()
 
         val basicsDir = File("assets/basics")
-        val mdFiles = basicsDir.listFiles { file -> file.extension == "md" } ?: emptyArray()
+        val mdFiles = basicsDir.listFiles { file -> file.extension == "md" }.sortedBy {
+           val title =  it.readLines().firstOrNull { it.startsWith("# ") }?.removePrefix("# ")?.trim()
+            basicsSortOrder.indexOf(title)
+        }
         val totalCount = mdFiles.size
 
         mdFiles.forEachIndexed { index, mdFile ->

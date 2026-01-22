@@ -1,6 +1,7 @@
 package com.inspiredandroid.linuxcommandbibliotheca.data
 
 import android.content.Context
+import com.linuxcommandlibrary.shared.basicsSortOrder
 
 class BasicsRepository(private val context: Context) {
 
@@ -19,7 +20,7 @@ class BasicsRepository(private val context: Context) {
                     null
                 }
             }
-            .sortedBy { it.title }
+            .sortedBy { basicsSortOrder.indexOf(it.title) }
     }
 
     private fun readCategoryTitle(filename: String): String? = try {
@@ -51,7 +52,7 @@ class BasicsRepository(private val context: Context) {
                         commandsByGroupId[groupId] = mutableListOf()
                         commandIndex = 0
                     }
-                    line.contains("<code>") && currentGroupId != null -> {
+                    line.trim().startsWith("```") && line.trim().endsWith("```") && currentGroupId != null -> {
                         val (command, mans) = parseCommandLine(line)
                         val commandId = (categoryId + currentGroupId + commandIndex).hashCode().toLong()
                         commandsByGroupId[currentGroupId]?.add(
@@ -69,26 +70,18 @@ class BasicsRepository(private val context: Context) {
     }
 
     private fun parseCommandLine(line: String): Pair<String, String> {
-        // Extract command from <code>...</code>
-        val codeRegex = Regex("<code>(.*?)</code>")
-        val codeMatch = codeRegex.find(line)
-        val codeContent = codeMatch?.groupValues?.get(1) ?: ""
+        // Extract code content from ```...```
+        val codeContent = line.trim().removeSurrounding("```")
 
-        // Extract man links from <a href="/man/xxx">
-        val manRegex = Regex("""<a href="/man/([^"]+)">""")
+        // Extract man page names from [text](/man/xxx) links
+        val manRegex = Regex("""\[([^\]]+)]\(/man/([^)]+)\)""")
         val mans = manRegex.findAll(codeContent)
-            .map { it.groupValues[1] }
+            .map { it.groupValues[2] }
             .distinct()
             .joinToString(",")
 
-        // Remove HTML tags to get clean command text
-        val command = codeContent
-            .replace(Regex("""<a href="[^"]*">"""), "")
-            .replace("</a>", "")
-            .replace("&gt;", ">")
-            .replace("&lt;", "<")
-            .replace("&amp;", "&")
-            .trim()
+        // Remove markdown link syntax to get clean command text
+        val command = codeContent.replace(manRegex, "$1").trim()
 
         return Pair(command, mans)
     }
