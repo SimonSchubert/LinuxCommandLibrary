@@ -1,1 +1,1 @@
-4285 manual pages, 22 basic categories and a bunch of general terminal tips.
+4299 manual pages, 23 basic categories and a bunch of general terminal tips.

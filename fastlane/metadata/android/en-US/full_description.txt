@@ -1,8 +1,9 @@
-The app currently has <b>4285</b> manual pages, <b>22</b> basic categories and a bunch of general terminal tips. It works 100% offline, doesn't need an internet connection and has no tracking software.
+The app currently has <b>4299</b> manual pages, <b>23</b> basic categories and a bunch of general terminal tips. It works 100% offline, doesn't need an internet connection and has no tracking software.
 
 <b>Categories</b>
 
-* Coding Agents
+* One-liners
+* Coding agents
 * System information
 * System control
 * Users & Groups
