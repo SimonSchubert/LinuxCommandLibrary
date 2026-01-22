@@ -88,6 +88,7 @@ val onlyCharactersRegex = "[^a-z]".toRegex()
 val basicsSortOrder =
     listOf(
         "One-liners",
+        "Coding agents",
         "System information",
         "System control",
         "Users & Groups",

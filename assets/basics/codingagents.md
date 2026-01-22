@@ -1,4 +1,4 @@
-# Coding Agents
+# Coding agents
 
 ## CLI
 ```[claude](/man/claude)```
