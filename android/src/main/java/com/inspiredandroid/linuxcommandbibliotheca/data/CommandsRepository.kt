@@ -1,6 +1,7 @@
 package com.inspiredandroid.linuxcommandbibliotheca.data
 
 import android.content.Context
+import com.linuxcommandlibrary.shared.MarkdownParser
 
 class CommandsRepository(private val context: Context) {
 
@@ -47,50 +48,18 @@ class CommandsRepository(private val context: Context) {
 
     fun hasCommand(name: String): Boolean = getCommands().any { it.name == name }
 
-    fun getSections(commandName: String): List<CommandSectionInfo> {
-        val sections = mutableListOf<CommandSectionInfo>()
+    fun getSections(commandName: String): List<CommandSectionInfo> = try {
+        val content = context.assets.open("commands/$commandName.md").bufferedReader().readText()
 
-        try {
-            val content = context.assets.open("commands/$commandName.md").bufferedReader().readText()
-            val lines = content.lines()
-
-            var currentTitle: String? = null
-            val currentContent = StringBuilder()
-
-            for (line in lines) {
-                if (line.startsWith("# ")) {
-                    // Save previous section if exists
-                    if (currentTitle != null) {
-                        sections.add(
-                            CommandSectionInfo(
-                                id = (commandName + currentTitle).hashCode().toLong(),
-                                title = currentTitle,
-                                content = currentContent.toString().trim(),
-                            ),
-                        )
-                    }
-                    // Start new section
-                    currentTitle = line.removePrefix("# ").trim()
-                    currentContent.clear()
-                } else if (currentTitle != null) {
-                    currentContent.appendLine(line)
-                }
-            }
-
-            // Save the last section
-            if (currentTitle != null) {
-                sections.add(
-                    CommandSectionInfo(
-                        id = (commandName + currentTitle).hashCode().toLong(),
-                        title = currentTitle,
-                        content = currentContent.toString().trim(),
-                    ),
-                )
-            }
-        } catch (e: Exception) {
-            // Return empty on error
-        }
-
-        return sections.sortedBy { it.getSortPriority() }
+        // Use shared parser which properly handles code blocks
+        MarkdownParser.splitByHeaders(content, "# ").map { (title, sectionContent) ->
+            CommandSectionInfo(
+                id = (commandName + title).hashCode().toLong(),
+                title = title,
+                content = sectionContent,
+            )
+        }.sortedBy { it.getSortPriority() }
+    } catch (e: Exception) {
+        emptyList()
     }
 }

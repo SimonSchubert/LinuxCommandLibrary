@@ -1,6 +1,8 @@
 package com.linuxcommandlibrary.cli
 
+import com.linuxcommandlibrary.shared.BasicInfo
 import com.linuxcommandlibrary.shared.MarkdownParser
+import com.linuxcommandlibrary.shared.TipInfo
 import com.linuxcommandlibrary.shared.TipSectionElement
 import com.linuxcommandlibrary.shared.Version
 import kotlin.system.exitProcess
@@ -10,10 +12,9 @@ const val ITALIC = "\u001b[3m"
 const val RESET = "\u001b[0m"
 
 // Data classes for CLI
-data class CommandInfo(val name: String)
+data class CommandInfoSimple(val name: String)
 data class CommandSection(val title: String, val content: String)
 data class BasicCategory(val id: String, val title: String)
-data class TipInfo(val id: Long, val title: String, val sections: List<TipSectionElement>)
 
 fun main() {
     showIntro()
@@ -57,15 +58,15 @@ private fun showStartMenu() {
 private fun readResource(path: String): String? = object {}.javaClass.getResourceAsStream("/$path")?.bufferedReader()?.readText()
 
 // Command functions
-private fun getCommands(): List<CommandInfo> {
+private fun getCommands(): List<CommandInfoSimple> {
     val index = readResource("commands.index") ?: return emptyList()
     return index.lines()
         .filter { it.isNotBlank() }
-        .map { CommandInfo(it) }
+        .map { CommandInfoSimple(it) }
         .sortedBy { it.name }
 }
 
-private fun getCommandsByQuery(query: String): List<CommandInfo> {
+private fun getCommandsByQuery(query: String): List<CommandInfoSimple> {
     val lowerQuery = query.lowercase()
     return getCommands()
         .filter { it.name.lowercase().contains(lowerQuery) }
@@ -79,30 +80,12 @@ private fun getCommandsByQuery(query: String): List<CommandInfo> {
 }
 
 private fun getSections(commandName: String): List<CommandSection> {
-    val sections = mutableListOf<CommandSection>()
-    val content = readResource("commands/$commandName.md") ?: return sections
+    val content = readResource("commands/$commandName.md") ?: return emptyList()
 
-    val lines = content.lines()
-    var currentTitle: String? = null
-    val currentContent = StringBuilder()
-
-    for (line in lines) {
-        if (line.startsWith("# ")) {
-            if (currentTitle != null) {
-                sections.add(CommandSection(currentTitle, currentContent.toString().trim()))
-            }
-            currentTitle = line.removePrefix("# ").trim()
-            currentContent.clear()
-        } else if (currentTitle != null) {
-            currentContent.appendLine(line)
-        }
-    }
-
-    if (currentTitle != null) {
-        sections.add(CommandSection(currentTitle, currentContent.toString().trim()))
-    }
-
-    return sections.sortedBy { getSortPriority(it.title) }
+    // Use the shared parser which properly handles code blocks
+    return MarkdownParser.splitByHeaders(content, "# ").map { (title, sectionContent) ->
+        CommandSection(title, sectionContent)
+    }.sortedBy { getSortPriority(it.title) }
 }
 
 private fun getSortPriority(title: String): Int = when (title.uppercase()) {
@@ -215,25 +198,24 @@ private fun showBasicGroups(categoryId: String) {
         return
     }
 
-    val lines = content.lines()
-    var currentGroup: String? = null
+    // Use the shared parser which properly handles code blocks
+    val basicInfo: BasicInfo = MarkdownParser.parseBasic(content)
 
-    for (line in lines) {
-        when {
-            line.startsWith("## ") -> {
-                if (currentGroup != null) println()
-                currentGroup = line.removePrefix("## ").trim()
-                println("$BOLD$currentGroup$RESET")
-            }
-            line.trim().startsWith("```") && currentGroup != null -> {
-                val code = line.trim().removeSurrounding("```")
-                    .replace(Regex("\\[([^\\]]+)]\\(/man/[^)]+\\)")) { it.groupValues[1] } // Remove man links
-                println("- $ $code")
+    basicInfo.groups.forEach { group ->
+        println("$BOLD${group.description}$RESET")
+        group.sections.forEach { section ->
+            when (section) {
+                is TipSectionElement.Code -> {
+                    val code = section.command
+                        .replace(Regex("\\[([^\\]]+)]\\(/man/[^)]+\\)")) { it.groupValues[1] } // Remove man links
+                    println("- $ $code")
+                }
+                else -> {} // Skip non-code sections in basic groups display
             }
         }
+        println()
     }
 
-    println()
     println("Press enter")
     readlnOrNull()
     showBasicCategories()
@@ -242,30 +224,7 @@ private fun showBasicGroups(categoryId: String) {
 // Tips functions
 private fun getTips(): List<TipInfo> {
     val content = readResource("tips.md") ?: return emptyList()
-    val tips = mutableListOf<TipInfo>()
-
-    val tipBlocks = content.split(Regex("(?=^## )", RegexOption.MULTILINE))
-        .filter { it.trim().startsWith("## ") }
-
-    for (block in tipBlocks) {
-        val lines = block.lines()
-        val titleLine = lines.firstOrNull() ?: continue
-        val title = titleLine.removePrefix("## ").trim()
-        if (title.isEmpty()) continue
-
-        val contentLines = lines.drop(1).joinToString("\n")
-        val sections = MarkdownParser.parseMarkdownContent(contentLines)
-
-        tips.add(
-            TipInfo(
-                id = title.hashCode().toLong(),
-                title = title,
-                sections = sections,
-            ),
-        )
-    }
-
-    return tips
+    return MarkdownParser.parseTips(content)
 }
 
 private fun showTips() {

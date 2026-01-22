@@ -1,6 +1,7 @@
 package com.inspiredandroid.linuxcommandbibliotheca.data
 
 import android.content.Context
+import com.linuxcommandlibrary.shared.MarkdownParser
 import com.linuxcommandlibrary.shared.basicsSortOrder
 
 class BasicsRepository(private val context: Context) {
@@ -37,25 +38,25 @@ class BasicsRepository(private val context: Context) {
 
         try {
             val content = context.assets.open("basics/$categoryId.md").bufferedReader().readText()
-            val lines = content.lines()
 
-            var currentGroupId: Long? = null
-            var commandIndex = 0
+            // Use shared parser which properly handles code blocks when splitting by headers
+            val groupSections = MarkdownParser.splitByHeaders(content, "## ")
 
-            for (line in lines) {
-                when {
-                    line.startsWith("## ") -> {
-                        val description = line.removePrefix("## ").trim()
-                        val groupId = (categoryId + description).hashCode().toLong()
-                        groups.add(BasicGroup(id = groupId, description = description))
-                        currentGroupId = groupId
-                        commandsByGroupId[groupId] = mutableListOf()
-                        commandIndex = 0
-                    }
-                    line.trim().startsWith("```") && line.trim().endsWith("```") && currentGroupId != null -> {
+            for ((description, groupContent) in groupSections) {
+                val groupId = (categoryId + description).hashCode().toLong()
+                groups.add(BasicGroup(id = groupId, description = description))
+                commandsByGroupId[groupId] = mutableListOf()
+
+                // Extract commands from the group content
+                var commandIndex = 0
+                val lines = groupContent.lines()
+
+                for (line in lines) {
+                    // Handle inline code blocks (```command```)
+                    if (line.trim().startsWith("```") && line.trim().endsWith("```") && line.trim().length > 6) {
                         val (command, mans) = parseCommandLine(line)
-                        val commandId = (categoryId + currentGroupId + commandIndex).hashCode().toLong()
-                        commandsByGroupId[currentGroupId]?.add(
+                        val commandId = (categoryId + groupId + commandIndex).hashCode().toLong()
+                        commandsByGroupId[groupId]?.add(
                             BasicCommand(id = commandId, command = command, mans = mans),
                         )
                         commandIndex++

@@ -112,8 +112,20 @@ object MarkdownParser {
             val line = lines[i]
 
             when {
-                // Multi-line code block
-                line.trim().startsWith("```") && !line.trim().endsWith("```") -> {
+                // Inline code block ```code``` (must have content between markers, length > 6)
+                line.trim().let { it.startsWith("```") && it.endsWith("```") && it.length > 6 } -> {
+                    val codeContent = line.trim().removeSurrounding("```")
+                    val elements = parseCodeToElements(codeContent)
+                    sections.add(
+                        TipSectionElement.Code(
+                            command = cleanMarkdownCommand(codeContent),
+                            elements = elements,
+                        ),
+                    )
+                    i++
+                }
+                // Multi-line code block (opening or closing)
+                line.trim().startsWith("```") -> {
                     val codeLines = mutableListOf<String>()
                     i++ // Skip opening ```
                     while (i < lines.size && !lines[i].trim().startsWith("```")) {
@@ -129,18 +141,6 @@ object MarkdownParser {
                             elements = elements,
                         ),
                     )
-                }
-                // Inline code block ```code```
-                line.trim().startsWith("```") && line.trim().endsWith("```") -> {
-                    val codeContent = line.trim().removeSurrounding("```")
-                    val elements = parseCodeToElements(codeContent)
-                    sections.add(
-                        TipSectionElement.Code(
-                            command = cleanMarkdownCommand(codeContent),
-                            elements = elements,
-                        ),
-                    )
-                    i++
                 }
                 // Blockquote
                 line.trim().startsWith(">") -> {
@@ -310,5 +310,123 @@ object MarkdownParser {
             .removeSurrounding("|")
             .split("|")
             .map { it.replace(placeholder, "|").trim() }
+    }
+
+    /**
+     * Split markdown content by header level, respecting code blocks.
+     * Returns list of pairs: (headerTitle, contentUnderHeader)
+     *
+     * @param content The markdown content to split
+     * @param headerPrefix The header prefix to split by (e.g., "# " or "## ")
+     */
+    fun splitByHeaders(content: String, headerPrefix: String): List<Pair<String, String>> {
+        val sections = mutableListOf<Pair<String, String>>()
+        val lines = content.lines()
+        var insideCodeBlock = false
+        var currentTitle: String? = null
+        val currentContent = StringBuilder()
+
+        for (line in lines) {
+            // Track code block boundaries
+            if (line.trim().startsWith("```")) {
+                val trimmed = line.trim()
+                // Only toggle for multi-line code blocks, not inline ones like ```code```
+                // Check if there's a closing ``` after the opening ```
+                val afterOpening = if (trimmed.length > 3) trimmed.substring(3) else ""
+                val isInlineCodeBlock = afterOpening.contains("```")
+                if (!isInlineCodeBlock) {
+                    insideCodeBlock = !insideCodeBlock
+                }
+            }
+
+            // Only treat as header if NOT inside code block
+            if (!insideCodeBlock && line.startsWith(headerPrefix) &&
+                (headerPrefix == "## " || !line.startsWith("## "))
+            ) {
+                // Save previous section
+                if (currentTitle != null) {
+                    sections.add(currentTitle to currentContent.toString().trim())
+                }
+                currentTitle = line.removePrefix(headerPrefix).trim()
+                currentContent.clear()
+            } else if (currentTitle != null) {
+                currentContent.appendLine(line)
+            }
+        }
+
+        // Save last section
+        if (currentTitle != null) {
+            sections.add(currentTitle to currentContent.toString().trim())
+        }
+
+        return sections
+    }
+
+    /**
+     * Parse a tips markdown file into list of TipInfo.
+     */
+    fun parseTips(content: String): List<TipInfo> = splitByHeaders(content, "## ").map { (title, sectionContent) ->
+        TipInfo(
+            id = title.hashCode().toLong(),
+            title = title,
+            sections = parseMarkdownContent(sectionContent),
+        )
+    }
+
+    /**
+     * Parse a basics markdown file into BasicInfo.
+     */
+    fun parseBasic(content: String): BasicInfo {
+        val lines = content.lines()
+        var title = ""
+
+        // Find the title (# Header)
+        for (line in lines) {
+            if (line.startsWith("# ") && !line.startsWith("## ")) {
+                title = line.removePrefix("# ").trim()
+                break
+            }
+        }
+
+        // Get groups using ## headers
+        val groups = splitByHeaders(content, "## ").map { (groupTitle, groupContent) ->
+            BasicGroup(
+                id = groupTitle.hashCode().toLong(),
+                description = groupTitle,
+                sections = parseMarkdownContent(groupContent),
+            )
+        }
+
+        return BasicInfo(title = title, groups = groups)
+    }
+
+    /**
+     * Parse a command markdown file into CommandInfo.
+     */
+    fun parseCommand(content: String, commandName: String): CommandInfo? {
+        val sections = splitByHeaders(content, "# ").map { (sectionTitle, sectionContent) ->
+            CommandSectionInfo(
+                title = sectionTitle,
+                content = sectionContent,
+                elements = parseMarkdownContent(sectionContent),
+            )
+        }
+
+        if (sections.isEmpty()) return null
+
+        // Extract description from TLDR section (first line of text)
+        var description = ""
+        val tldrSection = sections.find { it.title.uppercase() == "TLDR" }
+        if (tldrSection != null) {
+            val firstTextLine = tldrSection.content.lines()
+                .firstOrNull { it.trim().isNotEmpty() && !it.trim().startsWith("```") }
+            description = firstTextLine?.trim()?.replace(Regex("\\*\\*([^*]+)\\*\\*"), "$1") ?: ""
+        }
+
+        return CommandInfo(
+            name = commandName,
+            description = description,
+            sections = sections,
+        )
     }
 }

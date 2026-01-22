@@ -1,7 +1,7 @@
 # System information
 
 ## CPU usage in percentage
-```HZ=`[awk](/man/awk) '/\#define HZ/ { print $3}' /usr/include/asm-generic/param.h`; NUMCPUS=`[grep](/man/grep) ^proc /proc/cpuinfo | [wc](/man/wc) -l`; FIRST=`[cat](/man/cat) /proc/stat | [awk](/man/awk) '/^cpu / { print $5}'`; [sleep](/man/sleep) 1; SECOND=`[cat](/man/cat) /proc/stat | [awk](/man/awk) '/^cpu / { print $5}'`; USED=`[echo](/man/echo) 4 k 100 $SECOND $FIRST - $NUMCPUS $HZ \* / 100 \* - p | [dc](/man/dc)`; [echo](/man/echo) ${USED}`
+```HZ=`[awk](/man/awk) '/\#define HZ/ { print $3}' /usr/include/asm-generic/param.h`; NUMCPUS=`[grep](/man/grep) ^proc /proc/cpuinfo | [wc](/man/wc) -l`; FIRST=`[cat](/man/cat) /proc/stat | [awk](/man/awk) '/^cpu / { print $5}'`; [sleep](/man/sleep) 1; SECOND=`[cat](/man/cat) /proc/stat | [awk](/man/awk) '/^cpu / { print $5}'`; USED=`[echo](/man/echo) 4 k 100 $SECOND $FIRST - $NUMCPUS $HZ \* / 100 \* - p | [dc](/man/dc)`; [echo](/man/echo) ${USED}` ```
 ```NUMCPUS=`[grep](/man/grep) ^proc /proc/cpuinfo | [wc](/man/wc) -l`; FIRST=`[cat](/man/cat) /proc/stat | [awk](/man/awk) '/^cpu / { print $5}'`; [sleep](/man/sleep) 1; SECOND=`[cat](/man/cat) /proc/stat | [awk](/man/awk) '/^cpu / { print $5}'`; USED=`[echo](/man/echo) 2 k 100 $SECOND $FIRST - $NUMCPUS / - p | [dc](/man/dc)`; [echo](/man/echo) ${USED}%```
 
 ## Laptop battery in percentage

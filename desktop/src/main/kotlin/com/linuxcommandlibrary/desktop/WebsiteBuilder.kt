@@ -1,9 +1,15 @@
 package com.linuxcommandlibrary.desktop
 
+import com.linuxcommandlibrary.shared.BasicGroup
+import com.linuxcommandlibrary.shared.BasicInfo
 import com.linuxcommandlibrary.shared.CommandElement
+import com.linuxcommandlibrary.shared.CommandInfo
+import com.linuxcommandlibrary.shared.CommandSectionInfo
 import com.linuxcommandlibrary.shared.MarkdownParser
+import com.linuxcommandlibrary.shared.TipInfo
 import com.linuxcommandlibrary.shared.TipSectionElement
 import com.linuxcommandlibrary.shared.basicsSortOrder
+import com.linuxcommandlibrary.shared.getSortPriority
 import com.linuxcommandlibrary.shared.onlyCharactersRegex
 import kotlinx.coroutines.async
 import kotlinx.html.ATarget
@@ -102,69 +108,6 @@ fun main() {
     minifier.minifyScriptsAndSheets(true)
 }
 
-/**
- * Data class for parsed tip from markdown.
- */
-data class TipInfo(
-    val id: Long,
-    val title: String,
-    val sections: List<TipSectionElement>,
-)
-
-/**
- * Data class for parsed basic category group from markdown.
- */
-data class BasicGroup(
-    val id: Long,
-    val description: String,
-    val sections: List<TipSectionElement>,
-)
-
-/**
- * Data class for parsed basic category from markdown.
- */
-data class BasicInfo(
-    val title: String,
-    val groups: List<BasicGroup>,
-)
-
-/**
- * Data class for command parsed from markdown.
- */
-data class CommandInfo(
-    val name: String,
-    val description: String,
-    val sections: List<CommandSectionInfo>,
-)
-
-/**
- * Data class for a section of a command.
- */
-data class CommandSectionInfo(
-    val title: String,
-    val content: String,
-    val elements: List<TipSectionElement>,
-)
-
-/**
- * Get sort priority for command sections.
- * TLDR first, SEE ALSO and AUTHOR/HISTORY last.
- */
-fun CommandSectionInfo.getSortPriority(): Int = when (title.uppercase()) {
-    "TLDR" -> 0
-    "NAME" -> 1
-    "SYNOPSIS" -> 2
-    "DESCRIPTION" -> 3
-    "PARAMETERS" -> 4
-    "OPTIONS" -> 5
-    "EXAMPLES" -> 6
-    "CAVEATS" -> 90
-    "HISTORY" -> 91
-    "AUTHOR" -> 92
-    "SEE ALSO" -> 93
-    else -> 50
-}
-
 class WebsiteBuilder {
 
     private val cacheVersion = 11
@@ -196,57 +139,8 @@ class WebsiteBuilder {
      */
     private fun parseCommandMarkdown(file: File): CommandInfo? {
         val content = file.readText()
-        val lines = content.lines()
         val commandName = file.nameWithoutExtension
-
-        val sections = mutableListOf<CommandSectionInfo>()
-        var description = ""
-        var i = 0
-
-        while (i < lines.size) {
-            val line = lines[i]
-
-            // Section header (# SECTION)
-            if (line.startsWith("# ") && !line.startsWith("## ")) {
-                val sectionTitle = line.removePrefix("# ").trim()
-                i++
-
-                // Collect content until next # header or end of file
-                val contentLines = mutableListOf<String>()
-                while (i < lines.size && !lines[i].startsWith("# ")) {
-                    contentLines.add(lines[i])
-                    i++
-                }
-
-                val sectionContent = contentLines.joinToString("\n").trim()
-
-                // Extract description from TLDR section (first line of text)
-                if (sectionTitle.uppercase() == "TLDR" && description.isEmpty()) {
-                    val firstTextLine = contentLines.firstOrNull { it.trim().isNotEmpty() && !it.trim().startsWith("```") }
-                    description = firstTextLine?.trim()?.replace(Regex("\\*\\*([^*]+)\\*\\*"), "$1") ?: ""
-                }
-
-                val elements = MarkdownParser.parseMarkdownContent(sectionContent)
-
-                sections.add(
-                    CommandSectionInfo(
-                        title = sectionTitle,
-                        content = sectionContent,
-                        elements = elements,
-                    ),
-                )
-            } else {
-                i++
-            }
-        }
-
-        if (sections.isEmpty()) return null
-
-        return CommandInfo(
-            name = commandName,
-            description = description,
-            sections = sections,
-        )
+        return MarkdownParser.parseCommand(content, commandName)
     }
 
     fun createCommandsHtmlFile(folder: File) {
@@ -437,7 +331,7 @@ class WebsiteBuilder {
 
         val basicsDir = File("assets/basics")
         val mdFiles = basicsDir.listFiles { file -> file.extension == "md" }.sortedBy {
-           val title =  it.readLines().firstOrNull { it.startsWith("# ") }?.removePrefix("# ")?.trim()
+            val title = it.readLines().firstOrNull { it.startsWith("# ") }?.removePrefix("# ")?.trim()
             basicsSortOrder.indexOf(title)
         }
         val totalCount = mdFiles.size
@@ -578,52 +472,7 @@ class WebsiteBuilder {
     /**
      * Parse a basics markdown file into BasicInfo.
      */
-    private fun parseBasicsMarkdown(content: String): BasicInfo {
-        val lines = content.lines()
-        var title = ""
-        val groups = mutableListOf<BasicGroup>()
-
-        var i = 0
-        while (i < lines.size) {
-            val line = lines[i]
-
-            when {
-                // Category title (# Title)
-                line.startsWith("# ") && !line.startsWith("## ") -> {
-                    title = line.removePrefix("# ").trim()
-                    i++
-                }
-                // Group header (## Group)
-                line.startsWith("## ") -> {
-                    val groupTitle = line.removePrefix("## ").trim()
-                    i++
-
-                    // Collect content until next ## header or end of file
-                    val contentLines = mutableListOf<String>()
-                    while (i < lines.size && !lines[i].startsWith("## ") && !lines[i].startsWith("# ")) {
-                        contentLines.add(lines[i])
-                        i++
-                    }
-
-                    val groupContent = contentLines.joinToString("\n")
-                    val sections = MarkdownParser.parseMarkdownContent(groupContent)
-
-                    groups.add(
-                        BasicGroup(
-                            id = groupTitle.hashCode().toLong(),
-                            description = groupTitle,
-                            sections = sections,
-                        ),
-                    )
-                }
-                else -> {
-                    i++
-                }
-            }
-        }
-
-        return BasicInfo(title = title, groups = groups)
-    }
+    private fun parseBasicsMarkdown(content: String): BasicInfo = MarkdownParser.parseBasic(content)
 
     /**
      * Get description for a category title.
@@ -756,33 +605,7 @@ class WebsiteBuilder {
     /**
      * Parse tips.md content into list of TipInfo objects.
      */
-    private fun parseTipsMarkdown(content: String): List<TipInfo> {
-        val tips = mutableListOf<TipInfo>()
-
-        // Split by ## headers to get individual tips
-        val tipBlocks = content.split(Regex("(?=^## )", RegexOption.MULTILINE))
-            .filter { it.trim().startsWith("## ") }
-
-        for (block in tipBlocks) {
-            val lines = block.lines()
-            val titleLine = lines.firstOrNull() ?: continue
-            val title = titleLine.removePrefix("## ").trim()
-            if (title.isEmpty()) continue
-
-            val contentLines = lines.drop(1).joinToString("\n")
-            val sections = MarkdownParser.parseMarkdownContent(contentLines)
-
-            tips.add(
-                TipInfo(
-                    id = title.hashCode().toLong(),
-                    title = title,
-                    sections = sections,
-                ),
-            )
-        }
-
-        return tips
-    }
+    private fun parseTipsMarkdown(content: String): List<TipInfo> = MarkdownParser.parseTips(content)
 
     fun createManHtmlFiles(folder: File) {
         folder.mkdir()
