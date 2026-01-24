@@ -18,3 +18,4 @@ processed.txt
 instructions-tldr.md
 instructions-man.md
 commands.txt
+find_missing_commands.sh
