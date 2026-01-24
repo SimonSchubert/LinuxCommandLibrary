@@ -31,7 +31,7 @@ data class BasicGroup(
  */
 data class CommandInfo(
     val name: String,
-    val description: String,
+    val description: String?,
     val sections: List<CommandSectionInfo>,
 )
 

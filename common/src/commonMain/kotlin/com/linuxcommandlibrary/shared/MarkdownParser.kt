@@ -414,9 +414,9 @@ object MarkdownParser {
 
         if (sections.isEmpty()) return null
 
-        // Extract description from TLDR section (first line of text)
-        var description = ""
-        val tldrSection = sections.find { it.title.uppercase() == "TLDR" }
+        // Extract description from TAGLINE section (first line of text)
+        var description: String? = null
+        val tldrSection = sections.find { it.title.uppercase() == "TAGLINE" }
         if (tldrSection != null) {
             val firstTextLine = tldrSection.content.lines()
                 .firstOrNull { it.trim().isNotEmpty() && !it.trim().startsWith("```") }

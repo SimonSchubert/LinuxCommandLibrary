@@ -75,41 +75,6 @@ object HtmlMarkdownRenderer {
         }
     }
 
-    /**
-     * Render code block with optional prefix (used for terminal games with monospace).
-     */
-    fun renderCodeWithStyle(code: TipSectionElement.Code, isMonospace: Boolean = false, copyText: String? = null): String {
-        val escapedCommand = (copyText ?: code.command).escapeHtml().replace("'", "&#039;")
-        return buildString {
-            append("""<div class="code-wrapper"><span class="code"""")
-            if (isMonospace) {
-                append(""" style="font-family: 'Courier New', Courier, monospace;font-size:14px;"""")
-            }
-            append(">$ ")
-            code.elements.forEach { element ->
-                when (element) {
-                    is CommandElement.Man -> append("""<a href="/man/${element.man}" title="${element.man} man page">${element.man}</a>""")
-                    is CommandElement.Text -> {
-                        element.text.split("\n").forEachIndexed { index, line ->
-                            if (index > 0) {
-                                append("<br>")
-                            }
-                            line.split(" ").forEachIndexed { spaceIndex, word ->
-                                if (spaceIndex > 0) {
-                                    append("&nbsp;")
-                                }
-                                append(word.escapeHtml())
-                            }
-                        }
-                    }
-                    is CommandElement.Url -> append("""<a href="${element.url}" target="_blank" rel="noopener">${element.command.escapeHtml()}</a>""")
-                }
-            }
-            append("""</span><div onclick="javascript:copy('$escapedCommand')" class="copy-button">""")
-            append("""<img src="/images/icon-copy.svg" alt="copy" width="24" height="24"></div></div>""")
-        }
-    }
-
     private fun renderTable(table: TipSectionElement.Table): String = buildString {
         append("<table>")
 

@@ -433,11 +433,6 @@ class WebsiteBuilder {
                                             "Micro Texteditor",
                                         ).contains(categoryTitle)
 
-                                        val isMonospace = listOf(
-                                            "Terminal games",
-                                            "Fun",
-                                        ).contains(categoryTitle)
-
                                         if (isTextEditor) {
                                             // Render text editor keybindings as a table
                                             table {
@@ -668,9 +663,11 @@ class WebsiteBuilder {
                             h1 {
                                 text(command.name)
                             }
-                            h2 {
-                                classes = setOf("subtitle")
-                                text(command.description)
+                            command.description?.let {
+                                h2 {
+                                    classes = setOf("subtitle")
+                                    text(it)
+                                }
                             }
 
                             command.sections.sortedBy { it.getSortPriority() }
