@@ -64,6 +64,7 @@ fun String.getCommandList(
                         val cmd = currentCommand.substring(4).split("|").first()
                         list.add(CommandElement.Url(cmd, url))
                     }
+
                     else -> {
                         list.add(CommandElement.Man(currentCommand))
                     }

@@ -44,9 +44,13 @@ private fun showStartMenu() {
 
     when (readNumber()) {
         0 -> exitProcess(0)
+
         1 -> showSearch()
+
         2 -> showBasicCategories()
+
         3 -> showTips()
+
         else -> {
             println("Invalid input")
             showStartMenu()
@@ -114,10 +118,12 @@ private fun showSearch() {
 
     when (val choice = readNumber()) {
         0 -> showStartMenu()
+
         in 1..commands.size -> {
             val name = commands[choice - 1].name
             showCommand(name)
         }
+
         else -> {
             println("Invalid input")
             showSearch()
@@ -179,10 +185,12 @@ private fun showBasicCategories() {
 
     when (val choice = readNumber()) {
         0 -> showStartMenu()
+
         in 1..categories.size -> {
             val id = categories[choice - 1].id
             showBasicGroups(id)
         }
+
         else -> {
             println("Invalid input")
             showBasicCategories()
@@ -210,6 +218,7 @@ private fun showBasicGroups(categoryId: String) {
                         .replace(Regex("\\[([^\\]]+)]\\(/man/[^)]+\\)")) { it.groupValues[1] } // Remove man links
                     println("- $ $code")
                 }
+
                 else -> {} // Skip non-code sections in basic groups display
             }
         }
@@ -237,9 +246,11 @@ private fun showTips() {
 
     when (val choice = readNumber()) {
         0 -> showStartMenu()
+
         in 1..tips.size -> {
             showTipDetail(tips[choice - 1])
         }
+
         else -> {
             println("Invalid input")
             showTips()
@@ -264,6 +275,7 @@ private fun showTipDetail(tip: TipInfo) {
                 }
                 println(text)
             }
+
             is TipSectionElement.Blockquote -> {
                 val text = section.elements.joinToString("") { element ->
                     when (element) {
@@ -275,9 +287,11 @@ private fun showTipDetail(tip: TipInfo) {
                 }
                 println("  > $text")
             }
+
             is TipSectionElement.Code -> {
                 println("$ ${section.command}")
             }
+
             is TipSectionElement.Table -> {
                 // Simple table rendering
                 section.rows.forEach { row ->

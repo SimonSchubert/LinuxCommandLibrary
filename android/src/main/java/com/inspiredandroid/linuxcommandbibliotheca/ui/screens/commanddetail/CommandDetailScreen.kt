@@ -106,6 +106,7 @@ private fun CommandSectionColumn(
                 seeAlsoCommands = seeAlsoCommands,
                 onNavigate = onNavigate,
             )
+
             else -> DefaultSectionContent(content = section.content, onNavigate = onNavigate)
         }
     }

@@ -36,16 +36,19 @@ fun buildTextElementString(elements: List<TextElement>): AnnotatedString = build
     elements.forEach { textElement ->
         when (textElement) {
             is TextElement.Plain -> append(textElement.text)
+
             is TextElement.Bold -> {
                 withStyle(style = SpanStyle(fontWeight = FontWeight.Bold)) {
                     append(textElement.text)
                 }
             }
+
             is TextElement.Italic -> {
                 withStyle(style = SpanStyle(fontStyle = FontStyle.Italic)) {
                     append(textElement.text)
                 }
             }
+
             is TextElement.Man -> append(textElement.man)
         }
     }

@@ -341,8 +341,11 @@ private fun getTitleByRoute(backStackEntry: NavBackStackEntry?): String {
     }
     return when (val route = backStackEntry.destination.route) {
         "commands" -> stringResource(R.string.commands)
+
         "basics" -> stringResource(R.string.basics)
+
         "tips" -> stringResource(R.string.tips)
+
         else -> {
             if (route?.startsWith("command?") == true) {
                 backStackEntry.arguments?.getString("commandName") ?: ""

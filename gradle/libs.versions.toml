@@ -1,7 +1,7 @@
 [versions]
 agp = "8.13.2"
-appVersion = "3.5.1"
-androidVersionCode = "125"
+appVersion = "3.5.2"
+androidVersionCode = "126"
 kotlin = "2.3.0"
 accompanistAppcompatTheme = "0.36.0"
 activityCompose = "1.12.2"
@@ -16,7 +16,7 @@ materialIcons = "1.7.8"
 navigationCompose = "2.9.6"
 preference = "1.2.1"
 uiToolingPreview = "1.10.1"
-spotless = "8.1.0"
+spotless = "8.2.0"
 kotlinxCollectionsImmutable = "0.4.0"
 benManesVersions = "0.53.0"
 

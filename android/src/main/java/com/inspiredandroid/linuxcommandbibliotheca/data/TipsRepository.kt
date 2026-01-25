@@ -74,6 +74,7 @@ class TipsRepository(private val context: Context) {
                         }
                     }
                 }
+
                 line.trim().startsWith("```") && line.trim().endsWith("```") -> {
                     // Markdown inline code block
                     val codeContent = line.trim().removeSurrounding("```")
@@ -86,6 +87,7 @@ class TipsRepository(private val context: Context) {
                     )
                     i++
                 }
+
                 line.trim().isNotEmpty() -> {
                     // Plain text with potential bold formatting
                     val cleanText = cleanHtmlText(line.trim())
@@ -94,6 +96,7 @@ class TipsRepository(private val context: Context) {
                     }
                     i++
                 }
+
                 else -> {
                     i++
                 }

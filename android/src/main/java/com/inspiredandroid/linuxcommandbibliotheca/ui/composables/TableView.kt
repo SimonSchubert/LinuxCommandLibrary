@@ -94,16 +94,19 @@ fun TableView(
                             cellElements.forEach { element ->
                                 when (element) {
                                     is TextElement.Plain -> append(element.text)
+
                                     is TextElement.Bold -> {
                                         withStyle(style = SpanStyle(fontWeight = FontWeight.Bold)) {
                                             append(element.text)
                                         }
                                     }
+
                                     is TextElement.Italic -> {
                                         withStyle(style = SpanStyle(fontStyle = FontStyle.Italic)) {
                                             append(element.text)
                                         }
                                     }
+
                                     is TextElement.Man -> {
                                         val start = this.length
                                         withStyle(style = SpanStyle(color = codeColor)) {

@@ -64,6 +64,7 @@ fun CommandView(
                     is CommandElement.Text -> {
                         appendWithHighlight(element.text, searchText, highlightColor)
                     }
+
                     is CommandElement.Man -> {
                         val start = this.length
                         withStyle(style = SpanStyle(color = codeColor)) {
@@ -81,6 +82,7 @@ fun CommandView(
                             end,
                         )
                     }
+
                     is CommandElement.Url -> {
                         val start = this.length
                         withStyle(style = SpanStyle(color = codeColor)) {

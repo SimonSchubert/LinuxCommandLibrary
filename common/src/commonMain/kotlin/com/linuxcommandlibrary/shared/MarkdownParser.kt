@@ -44,6 +44,7 @@ object MarkdownParser {
                     elements.add(TextElement.Bold(match.groupValues[1]))
                     remaining = remaining.substring(match.range.last + 1)
                 }
+
                 "italic" -> {
                     val match = italicMatch!!
                     elements.add(TextElement.Italic(match.groupValues[1]))
@@ -124,6 +125,7 @@ object MarkdownParser {
                     )
                     i++
                 }
+
                 // Multi-line code block (opening or closing)
                 line.trim().startsWith("```") -> {
                     val codeLines = mutableListOf<String>()
@@ -142,6 +144,7 @@ object MarkdownParser {
                         ),
                     )
                 }
+
                 // Blockquote
                 line.trim().startsWith(">") -> {
                     val quoteContent = line.trim().removePrefix(">").trim()
@@ -150,6 +153,7 @@ object MarkdownParser {
                     }
                     i++
                 }
+
                 // Markdown table
                 line.trim().startsWith("|") && line.trim().endsWith("|") -> {
                     val tableLines = mutableListOf<String>()
@@ -164,12 +168,14 @@ object MarkdownParser {
                         }
                     }
                 }
+
                 // Plain text
                 line.trim().isNotEmpty() -> {
                     val cleanText = line.trim()
                     sections.add(TipSectionElement.Text(parseTextWithBold(cleanText)))
                     i++
                 }
+
                 else -> {
                     i++
                 }
@@ -248,11 +254,13 @@ object MarkdownParser {
                     elements.add(TextElement.Bold(match.groupValues[1]))
                     remaining = remaining.substring(match.range.last + 1)
                 }
+
                 "italic" -> {
                     val match = italicMatch!!
                     elements.add(TextElement.Italic(match.groupValues[1]))
                     remaining = remaining.substring(match.range.last + 1)
                 }
+
                 "code" -> {
                     val match = codeMatch!!
                     val codeContent = match.groupValues[1]

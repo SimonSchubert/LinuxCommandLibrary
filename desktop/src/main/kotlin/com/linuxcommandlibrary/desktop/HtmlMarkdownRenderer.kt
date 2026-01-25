@@ -53,6 +53,7 @@ object HtmlMarkdownRenderer {
             code.elements.forEach { element ->
                 when (element) {
                     is CommandElement.Man -> append("""<a href="/man/${element.man}" title="${element.man} man page">${element.man}</a>""")
+
                     is CommandElement.Text -> {
                         element.text.split("\n").forEachIndexed { index, line ->
                             if (index > 0) {
@@ -67,6 +68,7 @@ object HtmlMarkdownRenderer {
                             }
                         }
                     }
+
                     is CommandElement.Url -> append("""<a href="${element.url}" target="_blank" rel="noopener">${element.command.escapeHtml()}</a>""")
                 }
             }
