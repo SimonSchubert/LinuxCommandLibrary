@@ -1,7 +1,7 @@
 [versions]
 agp = "8.13.2"
-appVersion = "3.5.2"
-androidVersionCode = "126"
+appVersion = "3.5.3"
+androidVersionCode = "127"
 kotlin = "2.3.0"
 accompanistAppcompatTheme = "0.36.0"
 activityCompose = "1.12.2"
