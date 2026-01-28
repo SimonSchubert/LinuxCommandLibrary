@@ -1,26 +1,52 @@
 # Users & Groups
 
-## Print a file
-```[cat](/man/cat) [file] > /dev/lp```
-```[cat](/man/cat) [file] | [lpr](/man/lpr)```
-```[pr](/man/pr) -l60 [file] | [lpr](/man/lpr)```
-```[lpr](/man/lpr) [printerName] [file]```
+## Create group
+```[groupadd](/man/groupadd) [name]```
+```[addgroup](/man/addgroup) [name]```
 
-## View printing queue
-```[lpq](/man/lpq)```
+## Delete group
+```[groupdel](/man/groupdel) [name]```
 
-## Cancel printing job
-```[lprm](/man/lprm) -```
-```[lprm](/man/lprm) [jobID]```
-```[lprm](/man/lprm) -a all```
-```[cancel](/man/cancel) [printerName]```
-```[cancel](/man/cancel) -u [user]```
+## Rename group
+```[groupmod](/man/groupmod) -n [newGroupname] [oldGroupname]```
 
-## Display printer status
-```[lpstat](/man/lpstat) -t```
+## Create user
+```[useradd](/man/useradd) [name]```
+```[adduser](/man/adduser) [name]```
 
-## Enable printer
-```[enable](/man/enable) [name]```
+## Delete user
+```[userdel](/man/userdel) [name]```
+```[deluser](/man/deluser) [name]```
 
-## Disable printer
-```[disable](/man/disable) [name]```
+## Rename user
+```[usermod](/man/usermod) -l [newUsername] [oldUsername]```
+
+## Set user password
+```[passwd](/man/passwd) [name]```
+
+## Grant sudo privileges to an existing user
+```[usermod](/man/usermod) -a -G sudo [user]```
+```[adduser](/man/adduser) [user] sudo```
+
+## User information
+```[finger](/man/finger) [user]```
+
+## Add existing user to group
+```[usermod](/man/usermod) -aG [groupName] [userName]```
+```[adduser](/man/adduser) [userName] [groupName]```
+```[gpasswd](/man/gpasswd) -a [userName] [groupName]```
+
+## Add new user to group
+```[useradd](/man/useradd) -G [group] [user]```
+
+## Remove user from group
+```[gpasswd](/man/gpasswd) -d [user] [group]```
+```[deluser](/man/deluser) [user] [group]```
+
+## List all groups
+```[getent](/man/getent) group```
+```[cat](/man/cat) /etc/group```
+
+## List all users
+```[getent](/man/getent) passwd```
+```[cat](/man/cat) /etc/passwd```
