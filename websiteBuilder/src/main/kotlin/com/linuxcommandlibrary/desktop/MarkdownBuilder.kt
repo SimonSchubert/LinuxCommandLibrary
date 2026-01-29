@@ -27,7 +27,7 @@ class MarkdownBuilder {
     fun build() {
         val file = File("README.md")
         val stream = PrintStream(file)
-        stream.appendLine("## Linux Command Library (Mobile+CLI+Web)")
+        stream.appendLine("## Linux Command Library (Android+iOS+Desktop GUI and CLI+Web)")
         stream.appendLine()
         stream.appendLine("![Icon](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandLibrary/master/art/web_hi_res_144.png)")
         stream.appendLine()
@@ -46,6 +46,9 @@ class MarkdownBuilder {
             stream.appendLine("<img src=\"https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/${fileName}\" width=\"200\">")
         }
         stream.appendLine("</p>")
+        stream.appendLine()
+        stream.appendLine("### iOS screenshots")
+        stream.appendLine()
         stream.appendLine("<p>")
         val iosScreenshotFiles =
             listOf("screen-ios-1.png", "screen-ios-2.png")
@@ -53,6 +56,9 @@ class MarkdownBuilder {
             stream.appendLine("<img src=\"https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/${fileName}\" width=\"200\">")
         }
         stream.appendLine("</p>")
+        stream.appendLine()
+        stream.appendLine("### Desktop screenshots")
+        stream.appendLine()
         stream.appendLine("<p>")
         val desktopScreenshotFiles =
             listOf("screen-desktop-1.png", "screen-desktop-2.png")
@@ -104,8 +110,6 @@ class MarkdownBuilder {
         stream.appendLine("### Thanks to")
         stream.appendLine()
         stream.appendLine("http://letsgokoyo.com - App Icon")
-        stream.appendLine()
-        stream.appendLine("https://www.commandlinefu.com - Lots of one-liners")
         stream.appendLine()
         stream.appendLine("https://icons8.com - Icons")
         stream.appendLine()

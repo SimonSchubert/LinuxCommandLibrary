@@ -1,4 +1,4 @@
-## Linux Command Library (Mobile+CLI+Web)
+## Linux Command Library (Android+iOS+Desktop GUI and CLI+Web)
 
 ![Icon](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandLibrary/master/art/web_hi_res_144.png)
 
@@ -14,10 +14,16 @@ The app currently has **6219** manual pages, **23+** basic categories and a bunc
 <img src="https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-android-1.png" width="200">
 <img src="https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-android-2.png" width="200">
 </p>
+
+### iOS screenshots
+
 <p>
 <img src="https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-ios-1.png" width="200">
 <img src="https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-ios-2.png" width="200">
 </p>
+
+### Desktop screenshots
+
 <p>
 <img src="https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-desktop-1.png" width="400">
 <img src="https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-desktop-2.png" width="400">

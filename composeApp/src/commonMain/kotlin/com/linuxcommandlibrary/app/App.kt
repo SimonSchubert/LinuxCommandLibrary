@@ -31,7 +31,6 @@ import androidx.compose.material.Text
 import androidx.compose.material.TextFieldDefaults
 import androidx.compose.material.TopAppBar
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Search
@@ -57,6 +56,7 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.linuxcommandlibrary.app.data.BasicsRepository
+import com.linuxcommandlibrary.app.platform.backIcon
 import com.linuxcommandlibrary.app.ui.composables.AppIcon
 import com.linuxcommandlibrary.app.ui.composables.rememberIconPainter
 import com.linuxcommandlibrary.app.ui.screens.AppInfoDialog
@@ -102,7 +102,7 @@ fun App() {
                 modifier = Modifier
                     .fillMaxWidth()
                     .windowInsetsTopHeight(WindowInsets.safeDrawing)
-                    .background(MaterialTheme.colors.primary)
+                    .background(MaterialTheme.colors.primary),
             )
             // Main content
             Box(modifier = Modifier.weight(1f)) {
@@ -113,7 +113,7 @@ fun App() {
                 modifier = Modifier
                     .fillMaxWidth()
                     .windowInsetsBottomHeight(WindowInsets.safeDrawing)
-                    .background(LocalCustomColors.current.navBarBackground)
+                    .background(LocalCustomColors.current.navBarBackground),
             )
         }
     }
@@ -171,6 +171,7 @@ fun LinuxApp() {
                         showSearch = { showSearch.value = true },
                     )
                 }
+
                 is NavDestination.CommandDetail -> {
                     commandDetailViewModel?.let { viewModel ->
                         DetailTopBar(
@@ -180,6 +181,7 @@ fun LinuxApp() {
                         )
                     }
                 }
+
                 else -> {
                     val showBackIcon = currentDestination != NavDestination.Tips
                     val showAppInfoIcon = currentDestination == NavDestination.Tips
@@ -210,18 +212,22 @@ fun LinuxApp() {
                     val viewModel: BasicCategoriesViewModel = koinInject()
                     BasicCategoriesScreen(viewModel = viewModel, onNavigate = onNavigate)
                 }
+
                 NavDestination.Commands -> {
                     val viewModel: CommandListViewModel = koinInject()
                     CommandListScreen(viewModel = viewModel, onNavigate = onNavigate)
                 }
+
                 NavDestination.Tips -> {
                     val viewModel: TipsViewModel = koinInject()
                     TipsScreen(viewModel = viewModel, onNavigate = onNavigate)
                 }
+
                 is NavDestination.BasicGroups -> {
                     val viewModel: BasicGroupsViewModel = koinInject { parametersOf(dest.categoryId) }
                     BasicGroupsScreen(viewModel = viewModel, onNavigate = onNavigate)
                 }
+
                 is NavDestination.CommandDetail -> {
                     commandDetailViewModel?.let { viewModel ->
                         CommandDetailScreen(viewModel = viewModel, onNavigate = onNavigate)
@@ -252,37 +258,42 @@ fun LinuxApp() {
     }
 }
 
-private fun parseRoute(route: String): NavDestination? {
-    return when {
-        route == "basics" -> NavDestination.Basics
-        route == "commands" -> NavDestination.Commands
-        route == "tips" -> NavDestination.Tips
-        route.startsWith("basicgroups?") -> {
-            val categoryId = route.substringAfter("categoryId=").substringBefore("&")
-            NavDestination.BasicGroups(categoryId)
-        }
-        route.startsWith("command?") -> {
-            val commandName = route.substringAfter("commandName=")
-            NavDestination.CommandDetail(commandName)
-        }
-        else -> null
+private fun parseRoute(route: String): NavDestination? = when {
+    route == "basics" -> NavDestination.Basics
+
+    route == "commands" -> NavDestination.Commands
+
+    route == "tips" -> NavDestination.Tips
+
+    route.startsWith("basicgroups?") -> {
+        val categoryId = route.substringAfter("categoryId=").substringBefore("&")
+        NavDestination.BasicGroups(categoryId)
     }
+
+    route.startsWith("command?") -> {
+        val commandName = route.substringAfter("commandName=")
+        NavDestination.CommandDetail(commandName)
+    }
+
+    else -> null
 }
 
 @Composable
-private fun getTitleForDestination(dest: NavDestination): String {
-    return when (dest) {
-        NavDestination.Basics -> "Basics"
-        NavDestination.Commands -> "Commands"
-        NavDestination.Tips -> "Tips"
-        is NavDestination.BasicGroups -> {
-            val basicsRepository: BasicsRepository = koinInject()
-            val categories = basicsRepository.getCategories()
-            val category = categories.firstOrNull { it.id == dest.categoryId }
-            category?.title ?: "Not found"
-        }
-        is NavDestination.CommandDetail -> dest.commandName
+private fun getTitleForDestination(dest: NavDestination): String = when (dest) {
+    NavDestination.Basics -> "Basics"
+
+    NavDestination.Commands -> "Commands"
+
+    NavDestination.Tips -> "Tips"
+
+    is NavDestination.BasicGroups -> {
+        val basicsRepository: BasicsRepository = koinInject()
+        val categories = basicsRepository.getCategories()
+        val category = categories.firstOrNull { it.id == dest.categoryId }
+        category?.title ?: "Not found"
     }
+
+    is NavDestination.CommandDetail -> dest.commandName
 }
 
 @Composable
@@ -307,12 +318,14 @@ private fun GenericTopBar(
                     onClick = onNavigateBack,
                 ) {
                     Icon(
-                        imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                        imageVector = backIcon,
                         contentDescription = "Back",
                     )
                 }
             }
-        } else null,
+        } else {
+            null
+        },
         actions = {
             if (showAppInfoIcon) {
                 IconButton(
@@ -358,7 +371,7 @@ private fun DetailTopBar(
                 onClick = onNavigateBack,
             ) {
                 Icon(
-                    imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                    imageVector = backIcon,
                     contentDescription = "Back",
                 )
             }
@@ -421,7 +434,7 @@ private fun SearchTopBar(
                 },
             ) {
                 Icon(
-                    imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                    imageVector = backIcon,
                     contentDescription = "Back",
                     tint = Color.White,
                 )
@@ -501,9 +514,12 @@ private fun BottomBar(
         bottomBarItems.forEach { screen ->
             val painter = rememberIconPainter(screen.icon)
             val isSelected = when (screen) {
-                Screen.Basics -> currentDestination == NavDestination.Basics ||
+                Screen.Basics ->
+                    currentDestination == NavDestination.Basics ||
                         currentDestination is NavDestination.BasicGroups
+
                 Screen.Commands -> currentDestination == NavDestination.Commands
+
                 Screen.Tips -> currentDestination == NavDestination.Tips
             }
             BottomNavigationItem(

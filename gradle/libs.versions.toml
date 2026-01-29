@@ -1,22 +1,19 @@
 [versions]
 agp = "8.13.2"
-appVersion = "3.5.3"
-androidVersionCode = "127"
+appVersion = "3.5.4"
+androidVersionCode = "128"
 kotlin = "2.3.0"
 composeMultiplatform = "1.10.0"
 accompanistAppcompatTheme = "0.36.0"
-activityCompose = "1.12.2"
-foundation = "1.10.1"
+activityCompose = "1.12.3"
 json = "20251224"
 koinCore = "4.1.1"
 kotlinxCoroutinesCore = "1.10.2"
 kotlinxHtmlJvm = "0.12.0"
-lifecycleViewmodelCompose = "2.10.0"
-material = "1.10.1"
-materialIcons = "1.7.8"
-navigationCompose = "2.9.6"
+material = "1.10.2"
+navigationCompose = "2.9.7"
 preference = "1.2.1"
-uiToolingPreview = "1.10.1"
+uiToolingPreview = "1.10.2"
 spotless = "8.2.1"
 kotlinxCollectionsImmutable = "0.4.0"
 benManesVersions = "0.53.0"
@@ -26,16 +23,12 @@ benManesVersions = "0.53.0"
 accompanist-appcompat-theme = { module = "com.google.accompanist:accompanist-appcompat-theme", version.ref = "accompanistAppcompatTheme" }
 accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanistAppcompatTheme" }
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
-androidx-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "foundation" }
-androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleViewmodelCompose" }
 androidx-material = { module = "androidx.compose.material:material", version.ref = "material" }
-androidx-material-icons-core = { module = "androidx.compose.material:material-icons-core", version.ref = "materialIcons" }
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 androidx-preference = { module = "androidx.preference:preference", version.ref = "preference" }
 androidx-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "uiToolingPreview" }
 androidx-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "uiToolingPreview" }
 androidx-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "uiToolingPreview" }
-androidx-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "uiToolingPreview" }
 json = { module = "org.json:json", version.ref = "json" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koinCore" }
 koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koinCore" }

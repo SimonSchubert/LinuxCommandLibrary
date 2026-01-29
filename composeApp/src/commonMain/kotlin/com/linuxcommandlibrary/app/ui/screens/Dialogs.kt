@@ -1,5 +1,6 @@
 package com.linuxcommandlibrary.app.ui.screens
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -29,11 +30,15 @@ import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import com.linuxcommandlibrary.app.platform.showRateAppButton
+import com.linuxcommandlibrary.app.resources.Res
+import com.linuxcommandlibrary.app.resources.af_linode
+import com.linuxcommandlibrary.app.resources.af_proton
 import com.linuxcommandlibrary.app.ui.composables.AppIcon
 import com.linuxcommandlibrary.app.ui.composables.SectionTitle
 import com.linuxcommandlibrary.app.ui.composables.rememberIconPainter
 import com.linuxcommandlibrary.shared.Version
 import kotlinx.coroutines.delay
+import org.jetbrains.compose.resources.painterResource
 
 @Composable
 fun AppInfoDialog(
@@ -94,26 +99,29 @@ fun AppInfoDialog(
                 ) {
                     Text("Support this project", style = MaterialTheme.typography.h6)
                     Text("By using my referral links for these amazing products.")
-                    Spacer(Modifier.height(4.dp))
-                    Text(
-                        text = "Proton Free",
-                        color = MaterialTheme.colors.primary,
-                        modifier = Modifier
-                            .pointerHoverIcon(PointerIcon.Hand)
-                            .clickable {
-                                uriHandler.openUri("https://linuxcommandlibrary.com/proton-free-2025")
-                            },
-                    )
                     Spacer(Modifier.height(8.dp))
-                    Text(
-                        text = "Linode Cloud",
-                        color = MaterialTheme.colors.primary,
-                        modifier = Modifier
-                            .pointerHoverIcon(PointerIcon.Hand)
-                            .clickable {
-                                uriHandler.openUri("https://linuxcommandlibrary.com/linode-2025")
-                            },
-                    )
+                    Row {
+                        Image(
+                            painter = painterResource(Res.drawable.af_proton),
+                            contentDescription = "Proton Free",
+                            modifier = Modifier
+                                .weight(1f)
+                                .pointerHoverIcon(PointerIcon.Hand)
+                                .clickable {
+                                    uriHandler.openUri("https://linuxcommandlibrary.com/proton-free-2025")
+                                },
+                        )
+                        Image(
+                            painter = painterResource(Res.drawable.af_linode),
+                            contentDescription = "Linode Cloud",
+                            modifier = Modifier
+                                .weight(1f)
+                                .pointerHoverIcon(PointerIcon.Hand)
+                                .clickable {
+                                    uriHandler.openUri("https://linuxcommandlibrary.com/linode-2025")
+                                },
+                        )
+                    }
                     Spacer(Modifier.height(8.dp))
                     Text("Man pages", style = MaterialTheme.typography.h6)
                     Text("Licence information about the man page is usually specified in the man detail page under the category Author, Copyright or Licence.")
@@ -123,7 +131,7 @@ fun AppInfoDialog(
                     Text("The MIT License (MIT) Copyright (c) 2014 the TLDR team and contributors")
                     Spacer(Modifier.height(8.dp))
                     Text(
-                        "Thanks to commandlinefu.com for the one-liners and icons8.com for the icons",
+                        "Thanks to icons8.com for the icons",
                         style = MaterialTheme.typography.h6,
                     )
                 }

@@ -17,19 +17,22 @@ import com.linuxcommandlibrary.shared.TextElement
 import com.linuxcommandlibrary.shared.TipSectionElement
 import kotlinx.collections.immutable.toImmutableList
 
-fun buildTextElementString(elements: List<TextElement>): AnnotatedString = buildAnnotatedString {
+fun buildTextElementString(
+    elements: List<TextElement>,
+    textColor: Color = Color.Unspecified,
+): AnnotatedString = buildAnnotatedString {
     elements.forEach { textElement ->
         when (textElement) {
             is TextElement.Plain -> append(textElement.text)
 
             is TextElement.Bold -> {
-                withStyle(style = SpanStyle(fontWeight = FontWeight.Bold)) {
+                withStyle(style = SpanStyle(fontWeight = FontWeight.Bold, color = textColor)) {
                     append(textElement.text)
                 }
             }
 
             is TextElement.Italic -> {
-                withStyle(style = SpanStyle(fontStyle = FontStyle.Italic)) {
+                withStyle(style = SpanStyle(fontStyle = FontStyle.Italic, color = textColor)) {
                     append(textElement.text)
                 }
             }
@@ -50,14 +53,14 @@ fun TipSectionContent(
         when (section) {
             is TipSectionElement.Text -> {
                 Text(
-                    text = buildTextElementString(section.elements),
+                    text = buildTextElementString(section.elements, textColor),
                     color = textColor,
                 )
             }
 
             is TipSectionElement.Blockquote -> {
                 Text(
-                    text = buildTextElementString(section.elements),
+                    text = buildTextElementString(section.elements, textColor),
                     color = textColor,
                     modifier = Modifier.padding(start = 8.dp, bottom = 8.dp),
                 )

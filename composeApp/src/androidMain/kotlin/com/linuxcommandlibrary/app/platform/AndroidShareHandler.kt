@@ -12,9 +12,11 @@ class AndroidShareHandler(private val context: Context) : ShareHandler {
             addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         }
         try {
-            context.startActivity(Intent.createChooser(intent, "Share command").apply {
-                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-            })
+            context.startActivity(
+                Intent.createChooser(intent, "Share command").apply {
+                    addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                },
+            )
         } catch (e: Exception) {
             e.printStackTrace()
         }

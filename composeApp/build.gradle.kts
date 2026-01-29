@@ -96,3 +96,30 @@ compose.resources {
     packageOfResClass = "com.linuxcommandlibrary.app.resources"
     generateResClass = always
 }
+
+// Task to update iOS Info.plist with the app version from libs.versions.toml
+tasks.register("updateIosVersion") {
+    val appVersion = libs.versions.appVersion.get()
+    val infoPlistFile = file("${rootProject.projectDir}/iosApp/iosApp/Info.plist")
+
+    inputs.property("appVersion", appVersion)
+    outputs.file(infoPlistFile)
+
+    doLast {
+        if (infoPlistFile.exists()) {
+            var content = infoPlistFile.readText()
+            // Update CFBundleShortVersionString
+            content = content.replace(
+                Regex("<key>CFBundleShortVersionString</key>\\s*<string>[^<]*</string>"),
+                "<key>CFBundleShortVersionString</key>\n\t<string>$appVersion</string>"
+            )
+            infoPlistFile.writeText(content)
+            println("Updated iOS Info.plist with version $appVersion")
+        }
+    }
+}
+
+// Make iOS framework tasks depend on updateIosVersion
+tasks.matching { it.name.contains("link") && it.name.contains("Ios") }.configureEach {
+    dependsOn("updateIosVersion")
+}

@@ -17,7 +17,7 @@ fun main() = application {
     Window(
         onCloseRequest = ::exitApplication,
         title = "Linux Command Library",
-        state = rememberWindowState(width = 900.dp, height = 700.dp)
+        state = rememberWindowState(width = 900.dp, height = 700.dp),
     ) {
         App()
     }

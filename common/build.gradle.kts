@@ -60,6 +60,35 @@ kotlin {
     }
 }
 
+// Task to generate Version.kt from libs.versions.toml
+val generateVersionFile by tasks.registering {
+    val appVersion = libs.versions.appVersion.get()
+    val outputDir = file("src/commonMain/kotlin/com/linuxcommandlibrary/shared")
+    val outputFile = file("$outputDir/Version.kt")
+
+    inputs.property("appVersion", appVersion)
+    outputs.file(outputFile)
+
+    doLast {
+        outputDir.mkdirs()
+        outputFile.writeText(
+            """
+            |package com.linuxcommandlibrary.shared
+            |
+            |object Version {
+            |    const val appVersion = "$appVersion"
+            |}
+            |""".trimMargin()
+        )
+        println("Generated Version.kt with version $appVersion")
+    }
+}
+
+// Make compilation depend on version generation
+tasks.matching { it.name.contains("compileKotlin") || it.name.contains("Kotlin") && it.name.contains("compile") }.configureEach {
+    dependsOn(generateVersionFile)
+}
+
 android {
     compileSdk = 36
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
