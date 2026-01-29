@@ -37,19 +37,29 @@ class MarkdownBuilder {
         stream.appendLine("[![F-Droid](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/fdroid_badge.png)](https://f-droid.org/en/packages/com.inspiredandroid.linuxcommandbibliotheca/)")
         stream.appendLine("[![Web](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/web_badge.png)](https://linuxcommandlibrary.com)")
         stream.appendLine()
-        stream.appendLine("### Mobile screenshots")
+        stream.appendLine("### Android screenshots")
         stream.appendLine()
         stream.appendLine("<p>")
-        val mobileScreenshotFiles =
-            listOf("screen-1.png", "screen-2-dark.png", "screen-3.png", "screen-4-dark.png")
-        mobileScreenshotFiles.forEach { fileName ->
+        val androidScreenshotFiles =
+            listOf("screen-android-1.png", "screen-android-2.png")
+        androidScreenshotFiles.forEach { fileName ->
             stream.appendLine("<img src=\"https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/${fileName}\" width=\"200\">")
         }
         stream.appendLine("</p>")
-        val tabletScreenshotFiles = listOf("screen-1-tablet.png", "screen-2-tablet.png")
-        tabletScreenshotFiles.forEach { fileName ->
+        stream.appendLine("<p>")
+        val iosScreenshotFiles =
+            listOf("screen-ios-1.png", "screen-ios-2.png")
+        iosScreenshotFiles.forEach { fileName ->
+            stream.appendLine("<img src=\"https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/${fileName}\" width=\"200\">")
+        }
+        stream.appendLine("</p>")
+        stream.appendLine("<p>")
+        val desktopScreenshotFiles =
+            listOf("screen-desktop-1.png", "screen-desktop-2.png")
+        desktopScreenshotFiles.forEach { fileName ->
             stream.appendLine("<img src=\"https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/${fileName}\" width=\"400\">")
         }
+        stream.appendLine("</p>")
         stream.appendLine()
         stream.appendLine("### CLI screenshot")
         stream.appendLine()
