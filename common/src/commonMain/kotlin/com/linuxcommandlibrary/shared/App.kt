@@ -1,7 +1,5 @@
 package com.linuxcommandlibrary.shared
 
-import java.util.Locale
-
 /* Copyright 2022 Simon Schubert
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -116,6 +114,6 @@ val basicsSortOrder =
 /**
  * Only allow characters in html file names to guarantee matching on the website and app deep linking
  */
-fun String.toHtmlFileName(): String = this.lowercase(Locale.US).replace(onlyCharactersRegex, "")
+fun String.toHtmlFileName(): String = this.lowercase().replace(onlyCharactersRegex, "")
 
 fun String.isLetter(): Boolean = this.firstOrNull() in 'a'..'z' || this.firstOrNull() in 'A'..'Z'

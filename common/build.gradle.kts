@@ -8,16 +8,25 @@ plugins {
 group = "com.linuxcommandlibrary"
 
 kotlin {
-    androidTarget()
-    jvm {
+    androidTarget {
+        compilerOptions {
+            jvmTarget.set(JvmTarget.JVM_17)
+        }
+    }
+    jvm("desktop") {
         compilerOptions {
             jvmTarget.set(JvmTarget.JVM_17)
         }
     }
 
-    androidTarget {
-        compilerOptions {
-            jvmTarget.set(JvmTarget.JVM_17)
+    listOf(
+        iosX64(),
+        iosArm64(),
+        iosSimulatorArm64()
+    ).forEach {
+        it.binaries.framework {
+            baseName = "common"
+            isStatic = true
         }
     }
 
@@ -25,7 +34,6 @@ kotlin {
         commonMain {
             dependencies {
             }
-            kotlin.srcDir(layout.buildDirectory.dir("generated/src/commonMain/kotlin"))
         }
         commonTest {
             dependencies {
@@ -36,9 +44,18 @@ kotlin {
             dependencies {
             }
         }
-        jvmMain {
+        val desktopMain by getting {
             dependencies {
             }
+        }
+        val iosX64Main by getting
+        val iosArm64Main by getting
+        val iosSimulatorArm64Main by getting
+        val iosMain by creating {
+            dependsOn(commonMain.get())
+            iosX64Main.dependsOn(this)
+            iosArm64Main.dependsOn(this)
+            iosSimulatorArm64Main.dependsOn(this)
         }
     }
 }
@@ -60,27 +77,3 @@ android {
     }
     namespace = "com.linuxcommandlibrary.shared"
 }
-
-class VersionGeneratorPlugin : Plugin<Project> {
-    override fun apply(project: Project) {
-        project.afterEvaluate {
-            val versionFile =
-                layout.buildDirectory
-                    .file("generated/src/commonMain/kotlin/com/linuxcommandlibrary/shared/Version.kt")
-                    .get()
-                    .asFile
-            versionFile.parentFile?.mkdirs()
-            versionFile.writeText(
-                """
-                package com.linuxcommandlibrary.shared
-
-                object Version {
-                    const val appVersion = "${libs.versions.appVersion.get()}"
-                }
-                """.trimIndent(),
-            )
-        }
-    }
-}
-
-apply<VersionGeneratorPlugin>()

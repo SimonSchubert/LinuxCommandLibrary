@@ -16,4 +16,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Linux Command Library"
 
-include(":android", ":common", ":desktop", ":cli")
+include(":android", ":common", ":websiteBuilder", ":cli", ":composeApp", ":desktopApp")

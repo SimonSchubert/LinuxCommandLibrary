@@ -8,21 +8,15 @@ group = "com.inspiredandroid.linuxcommandbibliotheca"
 
 dependencies {
     implementation(project(":common"))
+    implementation(project(":composeApp"))
     implementation(libs.androidx.activity.compose)
-    implementation(libs.androidx.material)
-    implementation(libs.androidx.navigation.compose)
     implementation(libs.accompanist.appcompat.theme)
     implementation(libs.accompanist.systemuicontroller)
-    implementation(libs.androidx.lifecycle.viewmodel.compose)
-    implementation(libs.androidx.preference)
-    implementation(libs.androidx.ui.tooling.preview)
-    implementation(libs.androidx.material.icons.core)
+    implementation(libs.androidx.material)
 
     implementation(libs.koin.core)
     implementation(libs.koin.android)
     implementation(libs.koin.androidx.compose)
-    implementation(libs.androidx.foundation)
-    implementation(libs.kotlinx.collections.immutable)
 
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.test.manifest)

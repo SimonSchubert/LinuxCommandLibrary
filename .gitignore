@@ -5,7 +5,11 @@
 /android/release
 /common/build
 /desktop/build
+/desktopApp/build
+/composeApp/build
 /cli/build
+/websiteBuilder/html
+/websiteBuilder/build
 .idea/
 .gradle/
 local.properties
@@ -14,6 +18,7 @@ local.properties
 *.jar
 /html
 .claude
+.kotlin
 processed.txt
 instructions-tldr.md
 instructions-man.md

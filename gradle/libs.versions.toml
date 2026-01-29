@@ -3,6 +3,7 @@ agp = "8.13.2"
 appVersion = "3.5.3"
 androidVersionCode = "127"
 kotlin = "2.3.0"
+composeMultiplatform = "1.10.0"
 accompanistAppcompatTheme = "0.36.0"
 activityCompose = "1.12.2"
 foundation = "1.10.1"
@@ -16,7 +17,7 @@ materialIcons = "1.7.8"
 navigationCompose = "2.9.6"
 preference = "1.2.1"
 uiToolingPreview = "1.10.1"
-spotless = "8.2.0"
+spotless = "8.2.1"
 kotlinxCollectionsImmutable = "0.4.0"
 benManesVersions = "0.53.0"
 
@@ -38,6 +39,7 @@ androidx-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview
 json = { module = "org.json:json", version.ref = "json" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koinCore" }
 koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koinCore" }
+koin-compose = { module = "io.insert-koin:koin-compose", version.ref = "koinCore" }
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koinCore" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCore" }
 kotlinx-html-jvm = { module = "org.jetbrains.kotlinx:kotlinx-html-jvm", version.ref = "kotlinxHtmlJvm" }
@@ -50,5 +52,6 @@ android-library = { id = "com.android.library", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "composeMultiplatform" }
 spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
 ben-manes-versions = { id = "com.github.ben-manes.versions", version.ref = "benManesVersions" }
