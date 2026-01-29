@@ -11,16 +11,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2.4.0
+        uses: actions/checkout@v4
       - name: Setup JDK
-        uses: actions/setup-java@v2.5.0
+        uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: "17"
       - name: Set execution flag for gradlew
         run: chmod +x gradlew
       - name: Setup Android SDK
-        uses: android-actions/setup-android@v2
+        uses: android-actions/setup-android@v3
       - name: Install Android Build Tools
         run: sdkmanager "build-tools;29.0.3"
       - name: Run common unit tests
@@ -48,21 +48,121 @@ jobs:
           name: cli-jar
           path: cli/build/libs/linuxcommandlibrary.jar
 
-  release:
-    name: Release APK and JAR
-    needs: apk
+  dmg:
+    name: Generate DMG
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - name: Set execution flag for gradlew
+        run: chmod +x gradlew
+      - name: Build DMG
+        run: ./gradlew :desktopApp:packageDmg
+      - name: Upload DMG Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dmg
+          path: desktopApp/build/compose/binaries/main/dmg/*.dmg
+
+  msi:
+    name: Generate MSI
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - name: Build MSI
+        run: ./gradlew :desktopApp:packageMsi
+      - name: Upload MSI Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: msi
+          path: desktopApp/build/compose/binaries/main/msi/*.msi
+
+  deb:
+    name: Generate DEB
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2.4.0
+        uses: actions/checkout@v4
+      - name: Setup JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - name: Set execution flag for gradlew
+        run: chmod +x gradlew
+      - name: Build DEB
+        run: ./gradlew :desktopApp:packageDeb
+      - name: Upload DEB Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: deb
+          path: desktopApp/build/compose/binaries/main/deb/*.deb
+
+  release:
+    name: Release All Platforms
+    needs: [apk, dmg, msi, deb]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: Download APK Artifact
-        uses: actions/download-artifact@v4.1.7
+        uses: actions/download-artifact@v4
         with:
           name: signed-apk
+          path: artifacts/apk
       - name: Download JAR Artifact
-        uses: actions/download-artifact@v4.1.7
+        uses: actions/download-artifact@v4
         with:
           name: cli-jar
+          path: artifacts/jar
+      - name: Download DMG Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: dmg
+          path: artifacts/dmg
+      - name: Download MSI Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: msi
+          path: artifacts/msi
+      - name: Download DEB Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: deb
+          path: artifacts/deb
+      - name: Extract version and rename assets
+        run: |
+          VERSION=${GITHUB_REF_NAME#v}
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+
+          # Rename APK
+          mv artifacts/apk/android-release-unsigned-signed.apk artifacts/LinuxCommandLibrary-${VERSION}-android.apk
+
+          # Rename JAR
+          mv artifacts/jar/linuxcommandlibrary.jar artifacts/linuxcommandlibrary-${VERSION}.jar
+
+          # Rename DMG (find the actual file)
+          DMG_FILE=$(find artifacts/dmg -name "*.dmg" | head -1)
+          mv "$DMG_FILE" artifacts/LinuxCommandLibrary-${VERSION}-macos.dmg
+
+          # Rename MSI (find the actual file)
+          MSI_FILE=$(find artifacts/msi -name "*.msi" | head -1)
+          mv "$MSI_FILE" artifacts/LinuxCommandLibrary-${VERSION}-windows.msi
+
+          # Rename DEB (find the actual file)
+          DEB_FILE=$(find artifacts/deb -name "*.deb" | head -1)
+          mv "$DEB_FILE" artifacts/LinuxCommandLibrary-${VERSION}-linux.deb
       - name: Create Github Release
         id: create_release
         uses: actions/create-release@v1
@@ -72,22 +172,47 @@ jobs:
           tag_name: ${{ github.ref }}
           release_name: Release ${{ github.ref }}
       - name: Upload APK to Github Release
-        id: upload_apk
         uses: actions/upload-release-asset@v1.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: android-release-unsigned-signed.apk
-          asset_name: LinuxCommandLibrary.apk
-          asset_content_type: application/zip
+          asset_path: artifacts/LinuxCommandLibrary-${{ env.VERSION }}-android.apk
+          asset_name: LinuxCommandLibrary-${{ env.VERSION }}-android.apk
+          asset_content_type: application/vnd.android.package-archive
       - name: Upload JAR to Github Release
-        id: upload_jar
         uses: actions/upload-release-asset@v1.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: linuxcommandlibrary.jar
-          asset_name: linuxcommandlibrary.jar
-          asset_content_type: application/zip
+          asset_path: artifacts/linuxcommandlibrary-${{ env.VERSION }}.jar
+          asset_name: linuxcommandlibrary-${{ env.VERSION }}.jar
+          asset_content_type: application/java-archive
+      - name: Upload DMG to Github Release
+        uses: actions/upload-release-asset@v1.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: artifacts/LinuxCommandLibrary-${{ env.VERSION }}-macos.dmg
+          asset_name: LinuxCommandLibrary-${{ env.VERSION }}-macos.dmg
+          asset_content_type: application/x-apple-diskimage
+      - name: Upload MSI to Github Release
+        uses: actions/upload-release-asset@v1.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: artifacts/LinuxCommandLibrary-${{ env.VERSION }}-windows.msi
+          asset_name: LinuxCommandLibrary-${{ env.VERSION }}-windows.msi
+          asset_content_type: application/x-msi
+      - name: Upload DEB to Github Release
+        uses: actions/upload-release-asset@v1.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: artifacts/LinuxCommandLibrary-${{ env.VERSION }}-linux.deb
+          asset_name: LinuxCommandLibrary-${{ env.VERSION }}-linux.deb
+          asset_content_type: application/vnd.debian.binary-package
