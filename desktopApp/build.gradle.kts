@@ -44,7 +44,7 @@ compose.desktop {
         mainClass = "com.linuxcommandlibrary.MainKt"
 
         nativeDistributions {
-            targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
+            targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb, TargetFormat.Rpm, TargetFormat.AppImage)
             packageName = "LinuxCommandLibrary"
             packageVersion = libs.versions.appVersion.get()
         }
