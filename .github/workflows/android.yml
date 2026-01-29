@@ -109,9 +109,30 @@ jobs:
           name: deb
           path: desktopApp/build/compose/binaries/main/deb/*.deb
 
+  appimage:
+    name: Generate AppImage
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - name: Set execution flag for gradlew
+        run: chmod +x gradlew
+      - name: Build AppImage
+        run: ./gradlew :desktopApp:packageAppImage
+      - name: Upload AppImage Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: appimage
+          path: desktopApp/build/compose/binaries/main/app-image/*.AppImage
+
   release:
     name: Release All Platforms
-    needs: [apk, dmg, msi, deb]
+    needs: [apk, dmg, msi, deb, appimage]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -141,6 +162,11 @@ jobs:
         with:
           name: deb
           path: artifacts/deb
+      - name: Download AppImage Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: appimage
+          path: artifacts/appimage
       - name: Extract version and rename assets
         run: |
           VERSION=${GITHUB_REF_NAME#v}
@@ -150,7 +176,7 @@ jobs:
           mv artifacts/apk/android-release-unsigned-signed.apk artifacts/LinuxCommandLibrary-${VERSION}-android.apk
 
           # Rename JAR
-          mv artifacts/jar/linuxcommandlibrary.jar artifacts/linuxcommandlibrary-${VERSION}.jar
+          mv artifacts/jar/linuxcommandlibrary.jar artifacts/linuxcommandlibrary-${VERSION}-cli.jar
 
           # Rename DMG (find the actual file)
           DMG_FILE=$(find artifacts/dmg -name "*.dmg" | head -1)
@@ -163,6 +189,10 @@ jobs:
           # Rename DEB (find the actual file)
           DEB_FILE=$(find artifacts/deb -name "*.deb" | head -1)
           mv "$DEB_FILE" artifacts/LinuxCommandLibrary-${VERSION}-linux.deb
+
+          # Rename AppImage (find the actual file)
+          APPIMAGE_FILE=$(find artifacts/appimage -name "*.AppImage" | head -1)
+          mv "$APPIMAGE_FILE" artifacts/LinuxCommandLibrary-${VERSION}-linux.AppImage
       - name: Create Github Release
         id: create_release
         uses: actions/create-release@v1
@@ -186,8 +216,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: artifacts/linuxcommandlibrary-${{ env.VERSION }}.jar
-          asset_name: linuxcommandlibrary-${{ env.VERSION }}.jar
+          asset_path: artifacts/linuxcommandlibrary-${{ env.VERSION }}-cli.jar
+          asset_name: linuxcommandlibrary-${{ env.VERSION }}-cli.jar
           asset_content_type: application/java-archive
       - name: Upload DMG to Github Release
         uses: actions/upload-release-asset@v1.0.1
@@ -216,3 +246,12 @@ jobs:
           asset_path: artifacts/LinuxCommandLibrary-${{ env.VERSION }}-linux.deb
           asset_name: LinuxCommandLibrary-${{ env.VERSION }}-linux.deb
           asset_content_type: application/vnd.debian.binary-package
+      - name: Upload AppImage to Github Release
+        uses: actions/upload-release-asset@v1.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: artifacts/LinuxCommandLibrary-${{ env.VERSION }}-linux.AppImage
+          asset_name: LinuxCommandLibrary-${{ env.VERSION }}-linux.AppImage
+          asset_content_type: application/x-executable
