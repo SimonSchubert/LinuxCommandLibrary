@@ -5,6 +5,9 @@ on:
     tags:
       - 'v*'
 
+permissions:
+  contents: write
+
 jobs:
   apk:
     name: Generate APK
@@ -24,7 +27,7 @@ jobs:
       - name: Install Android Build Tools
         run: sdkmanager "build-tools;29.0.3"
       - name: Run common unit tests
-        run: bash ./gradlew :common:cleanTestDebugUnitTest :common:testDebugUnitTest
+        run: bash ./gradlew :common:cleanTestDebugUnitTest :common:testDebugUnitTest --stacktrace
       - name: Build APK
         run: bash ./gradlew assembleRelease --stacktrace
       - name: Sign APK
@@ -41,7 +44,7 @@ jobs:
           name: signed-apk
           path: android/build/outputs/apk/release/android-release-unsigned-signed.apk
       - name: Build cli JAR
-        run: bash ./gradlew :cli:createJar
+        run: bash ./gradlew :cli:createJar --stacktrace
       - name: Upload cli JAR Artifact
         uses: actions/upload-artifact@v4
         with:
@@ -62,11 +65,11 @@ jobs:
       - name: Set execution flag for gradlew
         run: chmod +x gradlew
       - name: Build DMG
-        run: ./gradlew :desktopApp:packageDmg
+        run: bash ./gradlew :desktopApp:packageDmg --stacktrace
       - name: Upload DMG Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: dmg
+          name: dmg-package
           path: desktopApp/build/compose/binaries/main/dmg/*.dmg
 
   msi:
@@ -81,11 +84,11 @@ jobs:
           distribution: temurin
           java-version: "17"
       - name: Build MSI
-        run: ./gradlew :desktopApp:packageMsi
+        run: ./gradlew :desktopApp:packageMsi --stacktrace
       - name: Upload MSI Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: msi
+          name: msi-package
           path: desktopApp/build/compose/binaries/main/msi/*.msi
 
   deb:
@@ -102,12 +105,35 @@ jobs:
       - name: Set execution flag for gradlew
         run: chmod +x gradlew
       - name: Build DEB
-        run: ./gradlew :desktopApp:packageDeb
+        run: ./gradlew :desktopApp:packageDeb --stacktrace
       - name: Upload DEB Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: deb
+          name: deb-package
           path: desktopApp/build/compose/binaries/main/deb/*.deb
+
+  rpm:
+    name: Generate RPM
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - name: Set execution flag for gradlew
+        run: chmod +x gradlew
+      - name: Install RPM build tools
+        run: sudo apt-get update && sudo apt-get install -y rpm
+      - name: Build RPM
+        run: ./gradlew :desktopApp:packageRpm --stacktrace
+      - name: Upload RPM Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: rpm-package
+          path: desktopApp/build/compose/binaries/main/rpm/*.rpm
 
   appimage:
     name: Generate AppImage
@@ -122,77 +148,130 @@ jobs:
           java-version: "17"
       - name: Set execution flag for gradlew
         run: chmod +x gradlew
+      - name: Install AppImage tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libfuse2 file
+          wget -q https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-x86_64.AppImage
+          chmod +x appimagetool-x86_64.AppImage
+      - name: Build application distribution
+        run: ./gradlew :desktopApp:createDistributable --stacktrace
+      - name: Create AppDir structure
+        run: |
+          mkdir -p AppDir/usr/bin
+          mkdir -p AppDir/usr/lib
+          mkdir -p AppDir/usr/share/applications
+          mkdir -p AppDir/usr/share/icons/hicolor/256x256/apps
+
+          # Copy distributable contents
+          cp -r desktopApp/build/compose/binaries/main/app/LinuxCommandLibrary/* AppDir/usr/lib/
+
+          # Copy icon
+          cp desktopApp/icon.png AppDir/usr/share/icons/hicolor/256x256/apps/linuxcommandlibrary.png
+          cp desktopApp/icon.png AppDir/linuxcommandlibrary.png
+
+          # Create desktop file
+          cat > AppDir/linuxcommandlibrary.desktop << 'EOF'
+          [Desktop Entry]
+          Name=Linux Command Library
+          Comment=Linux Command Reference
+          Exec=linuxcommandlibrary
+          Icon=linuxcommandlibrary
+          Type=Application
+          Categories=Utility;
+          Terminal=false
+          EOF
+          cp AppDir/linuxcommandlibrary.desktop AppDir/usr/share/applications/
+
+          # Create AppRun
+          cat > AppDir/AppRun << 'EOF'
+          #!/bin/bash
+          SELF=$(readlink -f "$0")
+          HERE=${SELF%/*}
+          export PATH="${HERE}/usr/lib/bin:${PATH}"
+          export LD_LIBRARY_PATH="${HERE}/usr/lib/lib/runtime/lib:${LD_LIBRARY_PATH}"
+          exec "${HERE}/usr/lib/bin/LinuxCommandLibrary" "$@"
+          EOF
+          chmod +x AppDir/AppRun
       - name: Build AppImage
-        run: ./gradlew :desktopApp:packageAppImage
+        run: |
+          ARCH=x86_64 ./appimagetool-x86_64.AppImage --appimage-extract-and-run AppDir LinuxCommandLibrary-x86_64.AppImage
       - name: Upload AppImage Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: appimage
-          path: desktopApp/build/compose/binaries/main/app-image/*.AppImage
+          name: appimage-package
+          path: LinuxCommandLibrary-*.AppImage
 
   release:
     name: Release All Platforms
-    needs: [apk, dmg, msi, deb, appimage]
+    needs: [apk, dmg, msi, deb, rpm, appimage]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Download APK Artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v4.1.7
         with:
           name: signed-apk
-          path: artifacts/apk
+
       - name: Download JAR Artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v4.1.7
         with:
           name: cli-jar
-          path: artifacts/jar
+
       - name: Download DMG Artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v4.1.7
         with:
-          name: dmg
-          path: artifacts/dmg
+          name: dmg-package
+
       - name: Download MSI Artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v4.1.7
         with:
-          name: msi
-          path: artifacts/msi
+          name: msi-package
+
       - name: Download DEB Artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v4.1.7
         with:
-          name: deb
-          path: artifacts/deb
+          name: deb-package
+
+      - name: Download RPM Artifact
+        uses: actions/download-artifact@v4.1.7
+        with:
+          name: rpm-package
+
       - name: Download AppImage Artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v4.1.7
         with:
-          name: appimage
-          path: artifacts/appimage
-      - name: Extract version and rename assets
-        run: |
-          VERSION=${GITHUB_REF_NAME#v}
-          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          name: appimage-package
 
-          # Rename APK
-          mv artifacts/apk/android-release-unsigned-signed.apk artifacts/LinuxCommandLibrary-${VERSION}-android.apk
+      - name: List downloaded files (for debugging)
+        run: ls -la
 
-          # Rename JAR
-          mv artifacts/jar/linuxcommandlibrary.jar artifacts/linuxcommandlibrary-${VERSION}-cli.jar
+      - name: Get DMG filename
+        id: dmg
+        run: echo "file=$(ls *.dmg | head -n1)" >> $GITHUB_OUTPUT
 
-          # Rename DMG (find the actual file)
-          DMG_FILE=$(find artifacts/dmg -name "*.dmg" | head -1)
-          mv "$DMG_FILE" artifacts/LinuxCommandLibrary-${VERSION}-macos.dmg
+      - name: Get MSI filename
+        id: msi
+        run: echo "file=$(ls *.msi | head -n1)" >> $GITHUB_OUTPUT
 
-          # Rename MSI (find the actual file)
-          MSI_FILE=$(find artifacts/msi -name "*.msi" | head -1)
-          mv "$MSI_FILE" artifacts/LinuxCommandLibrary-${VERSION}-windows.msi
+      - name: Get DEB filename
+        id: deb
+        run: echo "file=$(ls *.deb | head -n1)" >> $GITHUB_OUTPUT
 
-          # Rename DEB (find the actual file)
-          DEB_FILE=$(find artifacts/deb -name "*.deb" | head -1)
-          mv "$DEB_FILE" artifacts/LinuxCommandLibrary-${VERSION}-linux.deb
+      - name: Get RPM filename
+        id: rpm
+        run: echo "file=$(ls *.rpm | head -n1)" >> $GITHUB_OUTPUT
 
-          # Rename AppImage (find the actual file)
-          APPIMAGE_FILE=$(find artifacts/appimage -name "*.AppImage" | head -1)
-          mv "$APPIMAGE_FILE" artifacts/LinuxCommandLibrary-${VERSION}-linux.AppImage
+      - name: Get AppImage filename
+        id: appimage
+        run: echo "file=$(ls *.AppImage | head -n1)" >> $GITHUB_OUTPUT
+
+      - name: Get version
+        id: get_version
+        run: echo "version=${GITHUB_REF_NAME#v}" >> $GITHUB_OUTPUT
+
       - name: Create Github Release
         id: create_release
         uses: actions/create-release@v1
@@ -201,57 +280,73 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           release_name: Release ${{ github.ref }}
+
       - name: Upload APK to Github Release
         uses: actions/upload-release-asset@v1.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: artifacts/LinuxCommandLibrary-${{ env.VERSION }}-android.apk
-          asset_name: LinuxCommandLibrary-${{ env.VERSION }}-android.apk
-          asset_content_type: application/vnd.android.package-archive
+          asset_path: android-release-unsigned-signed.apk
+          asset_name: LinuxCommandLibrary-${{ steps.get_version.outputs.version }}-android.apk
+          asset_content_type: application/zip
+
       - name: Upload JAR to Github Release
         uses: actions/upload-release-asset@v1.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: artifacts/linuxcommandlibrary-${{ env.VERSION }}-cli.jar
-          asset_name: linuxcommandlibrary-${{ env.VERSION }}-cli.jar
+          asset_path: linuxcommandlibrary.jar
+          asset_name: linuxcommandlibrary-${{ steps.get_version.outputs.version }}-cli.jar
           asset_content_type: application/java-archive
+
       - name: Upload DMG to Github Release
         uses: actions/upload-release-asset@v1.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: artifacts/LinuxCommandLibrary-${{ env.VERSION }}-macos.dmg
-          asset_name: LinuxCommandLibrary-${{ env.VERSION }}-macos.dmg
-          asset_content_type: application/x-apple-diskimage
+          asset_path: ${{ steps.dmg.outputs.file }}
+          asset_name: LinuxCommandLibrary-${{ steps.get_version.outputs.version }}-macos.dmg
+          asset_content_type: application/octet-stream
+
       - name: Upload MSI to Github Release
         uses: actions/upload-release-asset@v1.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: artifacts/LinuxCommandLibrary-${{ env.VERSION }}-windows.msi
-          asset_name: LinuxCommandLibrary-${{ env.VERSION }}-windows.msi
-          asset_content_type: application/x-msi
+          asset_path: ${{ steps.msi.outputs.file }}
+          asset_name: LinuxCommandLibrary-${{ steps.get_version.outputs.version }}-windows.msi
+          asset_content_type: application/octet-stream
+
       - name: Upload DEB to Github Release
         uses: actions/upload-release-asset@v1.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: artifacts/LinuxCommandLibrary-${{ env.VERSION }}-linux.deb
-          asset_name: LinuxCommandLibrary-${{ env.VERSION }}-linux.deb
-          asset_content_type: application/vnd.debian.binary-package
+          asset_path: ${{ steps.deb.outputs.file }}
+          asset_name: LinuxCommandLibrary-${{ steps.get_version.outputs.version }}-linux.deb
+          asset_content_type: application/octet-stream
+
+      - name: Upload RPM to Github Release
+        uses: actions/upload-release-asset@v1.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ${{ steps.rpm.outputs.file }}
+          asset_name: LinuxCommandLibrary-${{ steps.get_version.outputs.version }}-linux.rpm
+          asset_content_type: application/octet-stream
+
       - name: Upload AppImage to Github Release
         uses: actions/upload-release-asset@v1.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: artifacts/LinuxCommandLibrary-${{ env.VERSION }}-linux.AppImage
-          asset_name: LinuxCommandLibrary-${{ env.VERSION }}-linux.AppImage
-          asset_content_type: application/x-executable
+          asset_path: ${{ steps.appimage.outputs.file }}
+          asset_name: LinuxCommandLibrary-${{ steps.get_version.outputs.version }}-linux.AppImage
+          asset_content_type: application/octet-stream
