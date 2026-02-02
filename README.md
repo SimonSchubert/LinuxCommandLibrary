@@ -34,7 +34,7 @@ The app currently has **6279** manual pages, **23+** basic categories and a bunc
 
 <img src="https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-cli-1.png" width="300">
 
-Execute `gradle :cli:buildJar` to create jar file for Linux, Windows and Mac.
+Native CLI binaries for Linux, macOS, and Windows are available in [Releases](https://github.com/SimonSchubert/LinuxCommandLibrary/releases).
 
 ### Content
 
@@ -48,7 +48,7 @@ Clear and reset the terminal, List of recent commands, Close a frozen window/app
 
 ### CI/CD
 
-[Github Action](.github/workflows/android.yml) to automatically create a new Github release with APK and JAR and upload an AAB to the Play Store.
+[Github Action](.github/workflows/android.yml) to automatically create a new Github release with APK, CLI binaries, and desktop installers, and upload an AAB to the Play Store.
 
 ### Tests
 
