@@ -30,6 +30,13 @@ kotlin {
         }
     }
 
+    // Native CLI targets
+    linuxX64()
+    linuxArm64()
+    macosX64()
+    macosArm64()
+    mingwX64()
+
     sourceSets {
         commonMain {
             dependencies {
@@ -57,6 +64,16 @@ kotlin {
             iosArm64Main.dependsOn(this)
             iosSimulatorArm64Main.dependsOn(this)
         }
+
+        // Native CLI targets source sets
+        val nativeCliMain by creating {
+            dependsOn(commonMain.get())
+        }
+        val linuxX64Main by getting { dependsOn(nativeCliMain) }
+        val linuxArm64Main by getting { dependsOn(nativeCliMain) }
+        val macosX64Main by getting { dependsOn(nativeCliMain) }
+        val macosArm64Main by getting { dependsOn(nativeCliMain) }
+        val mingwX64Main by getting { dependsOn(nativeCliMain) }
     }
 }
 

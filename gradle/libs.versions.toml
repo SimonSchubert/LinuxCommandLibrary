@@ -1,7 +1,7 @@
 [versions]
 agp = "8.13.2"
-appVersion = "3.5.5"
-androidVersionCode = "130"
+appVersion = "3.5.6"
+androidVersionCode = "131"
 kotlin = "2.3.0"
 composeMultiplatform = "1.10.0"
 accompanistAppcompatTheme = "0.36.0"
@@ -17,9 +17,11 @@ uiToolingPreview = "1.10.2"
 spotless = "8.2.1"
 kotlinxCollectionsImmutable = "0.4.0"
 benManesVersions = "0.53.0"
+mordant = "3.0.2"
 
 
 [libraries]
+mordant = { module = "com.github.ajalt.mordant:mordant", version.ref = "mordant" }
 accompanist-appcompat-theme = { module = "com.google.accompanist:accompanist-appcompat-theme", version.ref = "accompanistAppcompatTheme" }
 accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanistAppcompatTheme" }
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
