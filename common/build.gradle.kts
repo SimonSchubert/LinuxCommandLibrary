@@ -22,7 +22,7 @@ kotlin {
     listOf(
         iosX64(),
         iosArm64(),
-        iosSimulatorArm64()
+        iosSimulatorArm64(),
     ).forEach {
         it.binaries.framework {
             baseName = "common"
@@ -76,16 +76,17 @@ val generateVersionFile by tasks.registering {
             |package com.linuxcommandlibrary.shared
             |
             |object Version {
-            |    const val appVersion = "$appVersion"
+            |    const val APP_VERSION = "$appVersion"
             |}
-            |""".trimMargin()
+            |
+            """.trimMargin(),
         )
         println("Generated Version.kt with version $appVersion")
     }
 }
 
 // Make compilation depend on version generation
-tasks.matching { it.name.contains("compileKotlin") || it.name.contains("Kotlin") && it.name.contains("compile") }.configureEach {
+tasks.matching { it.name.contains("compileKotlin") || (it.name.contains("Kotlin") && it.name.contains("compile")) }.configureEach {
     dependsOn(generateVersionFile)
 }
 

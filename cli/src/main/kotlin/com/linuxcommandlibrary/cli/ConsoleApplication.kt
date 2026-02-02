@@ -31,7 +31,7 @@ private fun showIntro() {
     println(" _     _ _____ _____   ____  _____ __  __")
     println("| |__ | || () )| () ) / () \\ | () )\\ \\/ /")
     println("|____||_||_()_)|_|\\_\\/__/\\__\\|_|\\_\\ |__|")
-    println("Version: ${Version.appVersion}")
+    println("Version: ${Version.APP_VERSION}")
 }
 
 private fun showStartMenu() {

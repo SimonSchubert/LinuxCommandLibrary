@@ -52,11 +52,11 @@ Clear and reset the terminal, List of recent commands, Close a frozen window/app
 
 ### Tests
 
-Android Jetpack Compose screen tests: [ComposeTests.kt](android/src/androidTest/java/com/inspiredandroid/linuxcommandbibliotheca/ComposeTests.kt)
-
 Android Jetpack Compose deeplinking tests: [ComposeDeeplinkTests.kt](android/src/androidTest/java/com/inspiredandroid/linuxcommandbibliotheca/ComposeDeeplinkTests.kt)
 
-Common code unit tests: [CommonTests.kt](common/src/commonTest/kotlin/CommonTests.kt)
+Common unit tests: [CommonTests.kt](common/src/commonTest/kotlin/CommonTests.kt)
+
+Desktop unit tests: [DesktopTests.kt](common/src/desktopTest/kotlin/DesktopTests.kt)
 
 ### Licensing
 

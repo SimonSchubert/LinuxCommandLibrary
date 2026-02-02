@@ -25,7 +25,7 @@ kotlin {
     listOf(
         iosX64(),
         iosArm64(),
-        iosSimulatorArm64()
+        iosSimulatorArm64(),
     ).forEach {
         it.binaries.framework {
             baseName = "ComposeApp"
@@ -109,10 +109,11 @@ tasks.register("updateIosVersion") {
         if (infoPlistFile.exists()) {
             var content = infoPlistFile.readText()
             // Update CFBundleShortVersionString
-            content = content.replace(
-                Regex("<key>CFBundleShortVersionString</key>\\s*<string>[^<]*</string>"),
-                "<key>CFBundleShortVersionString</key>\n\t<string>$appVersion</string>"
-            )
+            content =
+                content.replace(
+                    Regex("<key>CFBundleShortVersionString</key>\\s*<string>[^<]*</string>"),
+                    "<key>CFBundleShortVersionString</key>\n\t<string>$appVersion</string>",
+                )
             infoPlistFile.writeText(content)
             println("Updated iOS Info.plist with version $appVersion")
         }

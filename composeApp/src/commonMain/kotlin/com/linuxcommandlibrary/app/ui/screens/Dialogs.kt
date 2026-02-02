@@ -87,7 +87,7 @@ fun AppInfoDialog(
                     }
                 }
                 Text(
-                    "Version: ${Version.appVersion}",
+                    "Version: ${Version.APP_VERSION}",
                     style = MaterialTheme.typography.caption,
                     modifier = Modifier.padding(8.dp),
                 )
