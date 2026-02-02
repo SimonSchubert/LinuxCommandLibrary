@@ -141,7 +141,7 @@ fun LinuxApp() {
     val onNavigateBack: () -> Unit = remember {
         {
             if (navigationStack.isNotEmpty()) {
-                currentDestination = navigationStack.removeLast()
+                currentDestination = navigationStack.removeAt(navigationStack.lastIndex)
             }
         }
     }

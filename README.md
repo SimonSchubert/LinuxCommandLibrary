@@ -4,6 +4,7 @@
 
 The app currently has **6279** manual pages, **23+** basic categories and a bunch of general terminal tips. It works 100% offline, doesn't need an internet connection and has no tracking software.
 
+[![App Store](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/app_store_badge.png)](https://apps.apple.com/us/app/linux-command-library/id1219649976)
 [![Play Store](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/play_store_badge.png)](https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca)
 [![F-Droid](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/fdroid_badge.png)](https://f-droid.org/en/packages/com.inspiredandroid.linuxcommandbibliotheca/)
 [![Web](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/web_badge.png)](https://linuxcommandlibrary.com)
