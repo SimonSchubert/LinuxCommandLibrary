@@ -14,14 +14,14 @@ class CommandsRepository(private val assetReader: AssetReader) {
 
         val commands = files
             .filter { it.endsWith(".md") }
-            .map { filename ->
-                val name = filename.removeSuffix(".md")
+            .map { it.removeSuffix(".md") }
+            .sorted()
+            .mapIndexed { index, name ->
                 CommandInfo(
-                    id = name.hashCode().toLong(),
+                    id = index.toLong(),
                     name = name,
                 )
             }
-            .sortedBy { it.name }
 
         cachedCommands = commands
         return commands

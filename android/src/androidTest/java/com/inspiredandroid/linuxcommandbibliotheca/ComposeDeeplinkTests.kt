@@ -3,11 +3,11 @@ package com.inspiredandroid.linuxcommandbibliotheca
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
+import android.preference.PreferenceManager
 import androidx.compose.ui.test.assertTextEquals
 import androidx.compose.ui.test.junit4.createEmptyComposeRule
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.performClick
-import androidx.preference.PreferenceManager
 import androidx.test.core.app.ActivityScenario
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4

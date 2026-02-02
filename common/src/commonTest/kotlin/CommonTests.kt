@@ -11,7 +11,7 @@ class CommonTests {
     fun testCommandListElements() {
         val command = "ps ax | grep firefox"
         val elements = command.getCommandList("ps,grep")
-        assertTrue(elements.count { it is CommandElement.Man } == 2)
+        assertEquals(elements.count { it is CommandElement.Man }, 2)
     }
 
     @Test
