@@ -1,4 +1,3 @@
-.DS_Store
 codingagents.md
 cryptocurrencies.md
 emacstexteditor.md
