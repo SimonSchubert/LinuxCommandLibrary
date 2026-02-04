@@ -23,4 +23,5 @@ processed.txt
 instructions-tldr.md
 instructions-man.md
 commands.txt
+commands_ignore.txt
 find_missing_commands.sh
