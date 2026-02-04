@@ -51,6 +51,8 @@ import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.PointerIcon
 import androidx.compose.ui.input.pointer.pointerHoverIcon
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextOverflow
@@ -88,7 +90,7 @@ sealed class NavDestination {
 }
 
 @Composable
-fun App() {
+fun App(initialDeeplink: String? = null) {
     val reviewHandler: ReviewHandler = koinInject()
     LaunchedEffect(Unit) {
         reviewHandler.incrementAppStartCount()
@@ -106,7 +108,7 @@ fun App() {
             )
             // Main content
             Box(modifier = Modifier.weight(1f)) {
-                LinuxApp()
+                LinuxApp(initialDeeplink = initialDeeplink)
             }
             // Navigation bar area with white/surface color
             Spacer(
@@ -120,8 +122,11 @@ fun App() {
 }
 
 @Composable
-fun LinuxApp() {
-    var currentDestination by remember { mutableStateOf<NavDestination>(NavDestination.Basics) }
+fun LinuxApp(initialDeeplink: String? = null) {
+    val initialDestination = remember(initialDeeplink) {
+        parseDeeplink(initialDeeplink) ?: NavDestination.Basics
+    }
+    var currentDestination by remember { mutableStateOf<NavDestination>(initialDestination) }
     val navigationStack = remember { mutableListOf<NavDestination>() }
     val searchTextValue = rememberSaveable(stateSaver = TextFieldValue.Saver) {
         mutableStateOf(TextFieldValue(text = "", selection = TextRange(0)))
@@ -278,6 +283,25 @@ private fun parseRoute(route: String): NavDestination? = when {
     else -> null
 }
 
+private fun parseDeeplink(url: String?): NavDestination? {
+    if (url == null) return null
+    
+    return when {
+        url.endsWith("/basics.html") || url.endsWith("/basics") -> NavDestination.Basics
+        url.endsWith("/tips.html") || url.endsWith("/tips") -> NavDestination.Tips
+        url.contains("/man/") -> {
+            val commandName = url.substringAfterLast("/man/").removeSuffix(".html")
+            NavDestination.CommandDetail(commandName)
+        }
+        url.contains("/basic/") -> {
+            val categoryId = url.substringAfterLast("/basic/").removeSuffix(".html")
+            NavDestination.BasicGroups(categoryId)
+        }
+        url.endsWith("/") || url.endsWith("/index.html") -> NavDestination.Commands
+        else -> null
+    }
+}
+
 @Composable
 private fun getTitleForDestination(dest: NavDestination): String = when (dest) {
     NavDestination.Basics -> "Basics"
@@ -307,7 +331,12 @@ private fun GenericTopBar(
 
     TopAppBar(
         title = {
-            Text(title, maxLines = 1, overflow = TextOverflow.Ellipsis)
+            Text(
+                title,
+                modifier = Modifier.semantics { contentDescription = "TopAppBarTitle" },
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+            )
         },
         backgroundColor = MaterialTheme.colors.primary,
         contentColor = Color.White,
@@ -361,7 +390,12 @@ private fun DetailTopBar(
 
     TopAppBar(
         title = {
-            Text(commandName, maxLines = 1, overflow = TextOverflow.Ellipsis)
+            Text(
+                commandName,
+                modifier = Modifier.semantics { contentDescription = "TopAppBarTitle" },
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+            )
         },
         backgroundColor = MaterialTheme.colors.primary,
         contentColor = Color.White,
@@ -476,7 +510,10 @@ private fun SearchTopBar(
         } else {
             Text(
                 title,
-                modifier = Modifier.weight(1f).padding(start = 16.dp),
+                modifier = Modifier
+                    .weight(1f)
+                    .padding(start = 16.dp)
+                    .semantics { contentDescription = "TopAppBarTitle" },
                 style = MaterialTheme.typography.h6.copy(color = LocalContentColor.current),
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
