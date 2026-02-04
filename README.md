@@ -4,9 +4,12 @@
 
 The app currently has **7700** manual pages, **23+** basic categories and a bunch of general terminal tips. It works 100% offline, doesn't need an internet connection and has no tracking software.
 
+[![App Store](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/app_store_badge.png)](https://apps.apple.com/us/app/linux-command-library/id1219649976)
 [![Play Store](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/play_store_badge.png)](https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca)
 [![F-Droid](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/fdroid_badge.png)](https://f-droid.org/en/packages/com.inspiredandroid.linuxcommandbibliotheca/)
 [![Web](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/web_badge.png)](https://linuxcommandlibrary.com)
+
+Native CLI and GUI binaries for Linux, macOS, and Windows are available in [Releases](https://github.com/SimonSchubert/LinuxCommandLibrary/releases).
 
 ### Android screenshots
 
@@ -31,9 +34,7 @@ The app currently has **7700** manual pages, **23+** basic categories and a bunc
 
 ### CLI screenshot
 
-<img src="https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-cli-1.png" width="300">
-
-Execute `gradle :cli:buildJar` to create jar file for Linux, Windows and Mac.
+<img src="https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/screen-cli-1.png" width="400">
 
 ### Content
 
@@ -47,11 +48,9 @@ Clear and reset the terminal, List of recent commands, Close a frozen window/app
 
 ### CI/CD
 
-[Github Action](.github/workflows/android.yml) to automatically create a new Github release with APK and JAR and upload an AAB to the Play Store.
+[Github Action](.github/workflows/android.yml) to automatically create a new Github release with APK, CLI binaries, and desktop installers, and upload an AAB to the Play Store.
 
 ### Tests
-
-Android Jetpack Compose screen tests: [ComposeTests.kt](android/src/androidTest/java/com/inspiredandroid/linuxcommandbibliotheca/ComposeTests.kt)
 
 Android Jetpack Compose deeplinking tests: [ComposeDeeplinkTests.kt](android/src/androidTest/java/com/inspiredandroid/linuxcommandbibliotheca/ComposeDeeplinkTests.kt)
 
