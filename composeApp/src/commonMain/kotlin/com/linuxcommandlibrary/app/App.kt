@@ -285,19 +285,24 @@ private fun parseRoute(route: String): NavDestination? = when {
 
 private fun parseDeeplink(url: String?): NavDestination? {
     if (url == null) return null
-    
+
     return when {
         url.endsWith("/basics.html") || url.endsWith("/basics") -> NavDestination.Basics
+
         url.endsWith("/tips.html") || url.endsWith("/tips") -> NavDestination.Tips
+
         url.contains("/man/") -> {
             val commandName = url.substringAfterLast("/man/").removeSuffix(".html")
             NavDestination.CommandDetail(commandName)
         }
+
         url.contains("/basic/") -> {
             val categoryId = url.substringAfterLast("/basic/").removeSuffix(".html")
             NavDestination.BasicGroups(categoryId)
         }
+
         url.endsWith("/") || url.endsWith("/index.html") -> NavDestination.Commands
+
         else -> null
     }
 }

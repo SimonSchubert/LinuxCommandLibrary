@@ -38,7 +38,7 @@ class ComposeDeeplinkTests {
         val context = ApplicationProvider.getApplicationContext<Context>()
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
             .setPackage(context.packageName)
-        
+
         composeTestRule.activityRule.scenario.onActivity { activity ->
             activity.startActivity(intent)
         }
@@ -56,7 +56,7 @@ class ComposeDeeplinkTests {
     @Test
     fun testBasicCategory() {
         openUrl("https://linuxcommandlibrary.com/basic/usersgroups")
-        
+
         composeTestRule.onNodeWithContentDescription("TopAppBarTitle")
             .assertTextEquals("Users & Groups")
     }
