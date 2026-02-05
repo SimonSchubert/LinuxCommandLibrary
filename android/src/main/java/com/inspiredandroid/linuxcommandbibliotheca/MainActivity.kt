@@ -39,6 +39,8 @@ class MainActivity : AppCompatActivity() {
         )
         super.onCreate(savedInstanceState)
 
+        val deeplink = intent?.data?.toString()
+
         setContent {
             LinuxTheme {
                 Box(
@@ -51,7 +53,7 @@ class MainActivity : AppCompatActivity() {
                             .background(LocalCustomColors.current.navBarBackground)
                             .systemBarsPadding(),
                     ) {
-                        App()
+                        App(initialDeeplink = deeplink)
                     }
                 }
             }
