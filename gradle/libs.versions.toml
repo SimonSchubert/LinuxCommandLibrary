@@ -10,8 +10,9 @@ json = "20251224"
 koinCore = "4.1.1"
 kotlinxCoroutinesCore = "1.10.2"
 kotlinxHtmlJvm = "0.12.0"
+kotlinxSerializationCore = "1.10.0"
 material = "1.10.2"
-navigationCompose = "2.9.7"
+navigationCompose = "2.9.1"
 preference = "1.2.1"
 uiToolingPreview = "1.10.2"
 spotless = "8.2.1"
@@ -21,12 +22,13 @@ mordant = "3.0.2"
 
 
 [libraries]
+kotlinx-serialization-core = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core", version.ref = "kotlinxSerializationCore" }
 mordant = { module = "com.github.ajalt.mordant:mordant", version.ref = "mordant" }
 accompanist-appcompat-theme = { module = "com.google.accompanist:accompanist-appcompat-theme", version.ref = "accompanistAppcompatTheme" }
 accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanistAppcompatTheme" }
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
 androidx-material = { module = "androidx.compose.material:material", version.ref = "material" }
-androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
+navigation-compose = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 androidx-preference = { module = "androidx.preference:preference", version.ref = "preference" }
 androidx-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "uiToolingPreview" }
 androidx-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "uiToolingPreview" }
@@ -49,5 +51,6 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "composeMultiplatform" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
 ben-manes-versions = { id = "com.github.ben-manes.versions", version.ref = "benManesVersions" }

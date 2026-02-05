@@ -53,6 +53,13 @@ import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.NavDestination.Companion.hasRoute
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.currentBackStackEntryAsState
+import androidx.navigation.compose.rememberNavController
+import androidx.navigation.toRoute
 import com.linuxcommandlibrary.app.data.BasicsRepository
 import com.linuxcommandlibrary.app.platform.backIcon
 import com.linuxcommandlibrary.app.ui.composables.AppIcon
@@ -76,14 +83,6 @@ import com.linuxcommandlibrary.app.ui.theme.LocalCustomColors
 import com.linuxcommandlibrary.shared.platform.ReviewHandler
 import org.koin.compose.koinInject
 import org.koin.core.parameter.parametersOf
-
-sealed class NavDestination {
-    data object Basics : NavDestination()
-    data object Commands : NavDestination()
-    data object Tips : NavDestination()
-    data class BasicGroups(val categoryId: String) : NavDestination()
-    data class CommandDetail(val commandName: String) : NavDestination()
-}
 
 @Composable
 fun App(initialDeeplink: String? = null) {
@@ -110,30 +109,21 @@ fun App(initialDeeplink: String? = null) {
 
 @Composable
 fun LinuxApp(initialDeeplink: String? = null) {
-    val initialDestination = remember(initialDeeplink) {
-        parseDeeplink(initialDeeplink) ?: NavDestination.Basics
+    val navController = rememberNavController()
+    val initialRoute = remember(initialDeeplink) {
+        parseDeeplink(initialDeeplink) ?: Route.Basics
     }
-    var currentDestination by remember { mutableStateOf<NavDestination>(initialDestination) }
-    val navigationStack = remember { mutableListOf<NavDestination>() }
+
     val searchTextValue = rememberSaveable(stateSaver = TextFieldValue.Saver) {
         mutableStateOf(TextFieldValue(text = "", selection = TextRange(0)))
     }
     val showSearch = rememberSaveable { mutableStateOf(false) }
 
-    val onNavigate: (String) -> Unit = remember {
+    val onNavigate: (String) -> Unit = remember(navController) {
         { route ->
             val dest = parseRoute(route)
             if (dest != null) {
-                navigationStack.add(currentDestination)
-                currentDestination = dest
-            }
-        }
-    }
-
-    val onNavigateBack: () -> Unit = remember {
-        {
-            if (navigationStack.isNotEmpty()) {
-                currentDestination = navigationStack.removeAt(navigationStack.lastIndex)
+                navController.navigate(dest)
             }
         }
     }
@@ -145,18 +135,41 @@ fun LinuxApp(initialDeeplink: String? = null) {
         }
     }
 
+    val navBackStackEntry by navController.currentBackStackEntryAsState()
+    val currentRoute = navBackStackEntry?.destination
+
+    // Determine current destination type for UI purposes
+    val isOnBasics = currentRoute?.hasRoute<Route.Basics>() == true
+    val isOnCommands = currentRoute?.hasRoute<Route.Commands>() == true
+    val isOnTips = currentRoute?.hasRoute<Route.Tips>() == true
+    val isOnBasicGroups = currentRoute?.hasRoute<Route.BasicGroups>() == true
+    val isOnCommandDetail = currentRoute?.hasRoute<Route.CommandDetail>() == true
+
+    // Get current command name for detail screen
+    val currentCommandName = if (isOnCommandDetail) {
+        navBackStackEntry?.toRoute<Route.CommandDetail>()?.commandName
+    } else {
+        null
+    }
+
+    // Get current category id for basic groups screen
+    val currentCategoryId = if (isOnBasicGroups) {
+        navBackStackEntry?.toRoute<Route.BasicGroups>()?.categoryId
+    } else {
+        null
+    }
+
     // Create CommandDetailViewModel at this level so it can be shared between TopBar and Screen
-    val commandDetailViewModel: CommandDetailViewModel? = when (val dest = currentDestination) {
-        is NavDestination.CommandDetail -> koinInject { parametersOf(dest.commandName) }
-        else -> null
+    val commandDetailViewModel: CommandDetailViewModel? = currentCommandName?.let {
+        koinInject { parametersOf(it) }
     }
 
     Scaffold(
         topBar = {
-            when (val dest = currentDestination) {
-                NavDestination.Commands, NavDestination.Basics -> {
+            when {
+                isOnCommands || isOnBasics -> {
                     SearchTopBar(
-                        title = getTitleForDestination(currentDestination),
+                        title = if (isOnBasics) "Basics" else "Commands",
                         textFieldValue = searchTextValue,
                         isSearchVisible = showSearch.value,
                         hideSearch = { showSearch.value = false },
@@ -164,23 +177,35 @@ fun LinuxApp(initialDeeplink: String? = null) {
                     )
                 }
 
-                is NavDestination.CommandDetail -> {
+                isOnCommandDetail && currentCommandName != null -> {
                     commandDetailViewModel?.let { viewModel ->
                         DetailTopBar(
-                            commandName = dest.commandName,
+                            commandName = currentCommandName,
                             viewModel = viewModel,
-                            onNavigateBack = onNavigateBack,
+                            navController = navController,
                         )
                     }
                 }
 
                 else -> {
-                    val showBackIcon = currentDestination != NavDestination.Tips
-                    val showAppInfoIcon = currentDestination == NavDestination.Tips
+                    val title = when {
+                        isOnTips -> "Tips"
+
+                        isOnBasicGroups -> {
+                            val basicsRepository: BasicsRepository = koinInject()
+                            val categories = basicsRepository.getCategories()
+                            val category = categories.firstOrNull { it.id == currentCategoryId }
+                            category?.title ?: "Not found"
+                        }
+
+                        else -> ""
+                    }
+                    val showBackIcon = !isOnTips
+                    val showAppInfoIcon = isOnTips
                     GenericTopBar(
-                        title = getTitleForDestination(currentDestination),
+                        title = title,
                         showBackIcon = showBackIcon,
-                        onNavigateBack = onNavigateBack,
+                        navController = navController,
                         showAppInfoIcon = showAppInfoIcon,
                     )
                 }
@@ -188,48 +213,60 @@ fun LinuxApp(initialDeeplink: String? = null) {
         },
         bottomBar = {
             BottomBar(
-                currentDestination = currentDestination,
-                onSelectTab = { dest ->
-                    // Clear navigation stack when switching tabs
-                    navigationStack.clear()
-                    currentDestination = dest
+                isOnBasics = isOnBasics,
+                isOnBasicGroups = isOnBasicGroups,
+                isOnCommands = isOnCommands,
+                isOnTips = isOnTips,
+                onSelectTab = { route ->
+                    navController.navigate(route) {
+                        // Pop up to the start destination to avoid building up a large stack
+                        popUpTo(navController.graph.startDestinationId) {
+                            saveState = true
+                        }
+                        launchSingleTop = true
+                        restoreState = true
+                    }
                     resetSearch()
                 },
             )
         },
     ) { innerPadding ->
         Box(modifier = Modifier.padding(innerPadding)) {
-            when (val dest = currentDestination) {
-                NavDestination.Basics -> {
+            NavHost(
+                navController = navController,
+                startDestination = initialRoute,
+            ) {
+                composable<Route.Basics> {
                     val viewModel: BasicCategoriesViewModel = koinInject()
                     BasicCategoriesScreen(viewModel = viewModel, onNavigate = onNavigate)
                 }
 
-                NavDestination.Commands -> {
+                composable<Route.Commands> {
                     val viewModel: CommandListViewModel = koinInject()
                     CommandListScreen(viewModel = viewModel, onNavigate = onNavigate)
                 }
 
-                NavDestination.Tips -> {
+                composable<Route.Tips> {
                     val viewModel: TipsViewModel = koinInject()
                     TipsScreen(viewModel = viewModel, onNavigate = onNavigate)
                 }
 
-                is NavDestination.BasicGroups -> {
-                    val viewModel: BasicGroupsViewModel = koinInject { parametersOf(dest.categoryId) }
+                composable<Route.BasicGroups> { backStackEntry ->
+                    val route = backStackEntry.toRoute<Route.BasicGroups>()
+                    val viewModel: BasicGroupsViewModel = koinInject { parametersOf(route.categoryId) }
                     BasicGroupsScreen(viewModel = viewModel, onNavigate = onNavigate)
                 }
 
-                is NavDestination.CommandDetail -> {
-                    commandDetailViewModel?.let { viewModel ->
-                        CommandDetailScreen(viewModel = viewModel, onNavigate = onNavigate)
-                    }
+                composable<Route.CommandDetail> { backStackEntry ->
+                    val route = backStackEntry.toRoute<Route.CommandDetail>()
+                    val viewModel: CommandDetailViewModel = koinInject { parametersOf(route.commandName) }
+                    CommandDetailScreen(viewModel = viewModel, onNavigate = onNavigate)
                 }
             }
 
             val isSearchVisible by remember(searchTextValue) {
                 derivedStateOf {
-                    searchTextValue.value.text.isNotEmpty() && currentDestination !is NavDestination.CommandDetail
+                    searchTextValue.value.text.isNotEmpty() && !isOnCommandDetail
                 }
             }
             AnimatedVisibility(
@@ -250,73 +287,55 @@ fun LinuxApp(initialDeeplink: String? = null) {
     }
 }
 
-private fun parseRoute(route: String): NavDestination? = when {
-    route == "basics" -> NavDestination.Basics
+private fun parseRoute(route: String): Route? = when {
+    route == "basics" -> Route.Basics
 
-    route == "commands" -> NavDestination.Commands
+    route == "commands" -> Route.Commands
 
-    route == "tips" -> NavDestination.Tips
+    route == "tips" -> Route.Tips
 
     route.startsWith("basicgroups?") -> {
         val categoryId = route.substringAfter("categoryId=").substringBefore("&")
-        NavDestination.BasicGroups(categoryId)
+        Route.BasicGroups(categoryId)
     }
 
     route.startsWith("command?") -> {
         val commandName = route.substringAfter("commandName=")
-        NavDestination.CommandDetail(commandName)
+        Route.CommandDetail(commandName)
     }
 
     else -> null
 }
 
-private fun parseDeeplink(url: String?): NavDestination? {
+private fun parseDeeplink(url: String?): Route? {
     if (url == null) return null
 
     return when {
-        url.endsWith("/basics.html") || url.endsWith("/basics") -> NavDestination.Basics
+        url.endsWith("/basics.html") || url.endsWith("/basics") -> Route.Basics
 
-        url.endsWith("/tips.html") || url.endsWith("/tips") -> NavDestination.Tips
+        url.endsWith("/tips.html") || url.endsWith("/tips") -> Route.Tips
 
         url.contains("/man/") -> {
             val commandName = url.substringAfterLast("/man/").removeSuffix(".html")
-            NavDestination.CommandDetail(commandName)
+            Route.CommandDetail(commandName)
         }
 
         url.contains("/basic/") -> {
             val categoryId = url.substringAfterLast("/basic/").removeSuffix(".html")
-            NavDestination.BasicGroups(categoryId)
+            Route.BasicGroups(categoryId)
         }
 
-        url.endsWith("/") || url.endsWith("/index.html") -> NavDestination.Commands
+        url.endsWith("/") || url.endsWith("/index.html") -> Route.Commands
 
         else -> null
     }
 }
 
 @Composable
-private fun getTitleForDestination(dest: NavDestination): String = when (dest) {
-    NavDestination.Basics -> "Basics"
-
-    NavDestination.Commands -> "Commands"
-
-    NavDestination.Tips -> "Tips"
-
-    is NavDestination.BasicGroups -> {
-        val basicsRepository: BasicsRepository = koinInject()
-        val categories = basicsRepository.getCategories()
-        val category = categories.firstOrNull { it.id == dest.categoryId }
-        category?.title ?: "Not found"
-    }
-
-    is NavDestination.CommandDetail -> dest.commandName
-}
-
-@Composable
 private fun GenericTopBar(
     title: String,
     showBackIcon: Boolean,
-    onNavigateBack: () -> Unit,
+    navController: NavController,
     showAppInfoIcon: Boolean,
 ) {
     var showDialog by remember { mutableStateOf(false) }
@@ -336,7 +355,7 @@ private fun GenericTopBar(
             {
                 IconButton(
                     modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
-                    onClick = onNavigateBack,
+                    onClick = { navController.popBackStack() },
                 ) {
                     Icon(
                         imageVector = backIcon,
@@ -370,7 +389,7 @@ private fun GenericTopBar(
 private fun DetailTopBar(
     commandName: String,
     viewModel: CommandDetailViewModel,
-    onNavigateBack: () -> Unit,
+    navController: NavController,
 ) {
     val uiState by viewModel.state.collectAsState()
     val isAllExpanded by remember { derivedStateOf { uiState.isAllExpanded() } }
@@ -394,7 +413,7 @@ private fun DetailTopBar(
         navigationIcon = {
             IconButton(
                 modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
-                onClick = onNavigateBack,
+                onClick = { navController.popBackStack() },
             ) {
                 Icon(
                     imageVector = backIcon,
@@ -533,8 +552,11 @@ private fun SearchTopBar(
 
 @Composable
 private fun BottomBar(
-    currentDestination: NavDestination,
-    onSelectTab: (NavDestination) -> Unit,
+    isOnBasics: Boolean,
+    isOnBasicGroups: Boolean,
+    isOnCommands: Boolean,
+    isOnTips: Boolean,
+    onSelectTab: (Route) -> Unit,
 ) {
     BottomNavigation(
         backgroundColor = LocalCustomColors.current.navBarBackground,
@@ -543,13 +565,9 @@ private fun BottomBar(
         bottomBarItems.forEach { screen ->
             val painter = rememberIconPainter(screen.icon)
             val isSelected = when (screen) {
-                Screen.Basics ->
-                    currentDestination == NavDestination.Basics ||
-                        currentDestination is NavDestination.BasicGroups
-
-                Screen.Commands -> currentDestination == NavDestination.Commands
-
-                Screen.Tips -> currentDestination == NavDestination.Tips
+                Screen.Basics -> isOnBasics || isOnBasicGroups
+                Screen.Commands -> isOnCommands
+                Screen.Tips -> isOnTips
             }
             BottomNavigationItem(
                 modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
@@ -565,12 +583,12 @@ private fun BottomBar(
                 selectedContentColor = MaterialTheme.colors.primary,
                 unselectedContentColor = MaterialTheme.colors.onSurface,
                 onClick = {
-                    val dest = when (screen) {
-                        Screen.Basics -> NavDestination.Basics
-                        Screen.Commands -> NavDestination.Commands
-                        Screen.Tips -> NavDestination.Tips
+                    val route = when (screen) {
+                        Screen.Basics -> Route.Basics
+                        Screen.Commands -> Route.Commands
+                        Screen.Tips -> Route.Tips
                     }
-                    onSelectTab(dest)
+                    onSelectTab(route)
                 },
             )
         }
