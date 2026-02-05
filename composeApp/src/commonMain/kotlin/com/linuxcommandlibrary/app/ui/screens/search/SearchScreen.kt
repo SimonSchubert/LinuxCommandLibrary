@@ -18,6 +18,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.linuxcommandlibrary.app.ui.screens.commandlist.CommandListItem
+import com.linuxcommandlibrary.app.ui.theme.LocalCustomColors
 
 @Composable
 fun SearchScreen(

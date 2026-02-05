@@ -2,6 +2,7 @@
 
 package com.linuxcommandlibrary.app.ui.screens.basiccategories
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
@@ -11,6 +12,7 @@ import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Icon
 import androidx.compose.material.ListItem
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -22,6 +24,7 @@ import androidx.compose.ui.unit.dp
 import com.linuxcommandlibrary.app.ui.composables.AppIcon
 import com.linuxcommandlibrary.app.ui.composables.getIconId
 import com.linuxcommandlibrary.app.ui.composables.rememberIconPainter
+import com.linuxcommandlibrary.app.ui.theme.LocalCustomColors
 
 @Composable
 fun BasicCategoriesScreen(
@@ -31,7 +34,9 @@ fun BasicCategoriesScreen(
     val basicCategories by viewModel.basicCategories.collectAsState()
 
     LazyVerticalGrid(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier
+            .background(MaterialTheme.colors.background)
+            .fillMaxSize(),
         columns = GridCells.Adaptive(minSize = 300.dp),
     ) {
         items(

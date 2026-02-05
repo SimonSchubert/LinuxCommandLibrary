@@ -1,17 +1,14 @@
 package com.linuxcommandlibrary.desktop
 
-import com.linuxcommandlibrary.shared.BasicGroup
 import com.linuxcommandlibrary.shared.BasicInfo
 import com.linuxcommandlibrary.shared.CommandElement
 import com.linuxcommandlibrary.shared.CommandInfo
-import com.linuxcommandlibrary.shared.CommandSectionInfo
 import com.linuxcommandlibrary.shared.MarkdownParser
 import com.linuxcommandlibrary.shared.TipInfo
 import com.linuxcommandlibrary.shared.TipSectionElement
 import com.linuxcommandlibrary.shared.basicsSortOrder
 import com.linuxcommandlibrary.shared.getSortPriority
 import com.linuxcommandlibrary.shared.onlyCharactersRegex
-import kotlinx.coroutines.async
 import kotlinx.html.ATarget
 import kotlinx.html.DIV
 import kotlinx.html.FlowContent
@@ -82,6 +79,8 @@ import kotlin.text.startsWith
  * See the License for the specific language governing permissions and
  * limitations under the License.
 */
+
+data class Ad(val imageUrl: String, val url: String, val backgroundColor: String)
 
 fun main() {
     val minifier = Minifier()
@@ -1189,16 +1188,20 @@ class WebsiteBuilder {
         consumer,
     ).visit(block)
 
-    data class Ad(val imageUrl: String, val url: String, val backgroundColor: String)
-    val ads = listOf(
+    val verticalAds = listOf(
         Ad("linode-vertical.webp", "/linode-2025", "#ea9230"),
         Ad("digitalocean-vertical.webp", "/digitalocean-2025", "#173a62"),
         Ad("proton-free-vertical.webp", "/proton-free-2025", "#01a4e8"),
         Ad("proton-paid-vertical.webp", "/proton-paid-2025", "#f1c522"),
+        Ad("beelink-vertical-1.webp", "/beelink", "#01a4e8"),
+    )
+    val horizontalAds = listOf(
+        Ad("beelink-horizontal-1.webp", "/beelink", "#e47617"),
+        Ad("beelink-horizontal-2.webp", "/beelink", "#e47617"),
     )
 
     private fun FlowContent.contentWrapper(content: DIV.() -> Unit = {}): FlowContent {
-        val randomAds = ads.shuffled().take(2)
+        val randomAds = verticalAds.shuffled().take(2)
         div {
             id = "content-wrapper"
             randomAds[0].let { ad ->
@@ -1234,17 +1237,20 @@ class WebsiteBuilder {
 
     private fun FlowContent.footer(showAd: Boolean = true): FlowContent {
         if (showAd) {
-            div {
-                classes = setOf("bottom-panel")
-                style = "background-color: #141823; display: block;"
+            val randomAds = horizontalAds.shuffled().firstOrNull()
+            randomAds?.let { ad ->
+                div {
+                    classes = setOf("bottom-panel")
+                    style = "background-color: ${ad.backgroundColor}; display: block;"
 
-                a("https://www.hydralands.com") {
-                    target = ATarget.blank
-                    img {
-                        style = "max-width: calc(100% - 4px);"
-                        src = "/images/af/hydralands.webp"
-                        attributes["loading"] = "lazy"
-                        width = "600"
+                    a(ad.url) {
+                        target = ATarget.blank
+                        img {
+                            style = "max-width: calc(100% - 4px);"
+                            src = "/images/af/${ad.imageUrl}"
+                            attributes["loading"] = "lazy"
+                            width = "600"
+                        }
                     }
                 }
             }
@@ -1272,7 +1278,18 @@ class WebsiteBuilder {
                     text("Contact")
                 }
             }
-
+            a("https://apps.apple.com/us/app/linux-command-library/id1219649976") {
+                style = "margin-right: 4px;"
+                target = ATarget.blank
+                rel = "noopener"
+                img {
+                    src = "/images/app-store-badge.png"
+                    alt = "Google Play Store"
+                    classes = setOf("download-icon")
+                    width = "169"
+                    height = "50"
+                }
+            }
             a("https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca") {
                 style = "margin-right: 4px;"
                 target = ATarget.blank
@@ -1297,56 +1314,58 @@ class WebsiteBuilder {
                     height = "50"
                 }
             }
-            div {
-                style =
-                    "width: 100%; justify-content: center; padding-top: 6px; display: flex; align-items: center; gap: 6px;"
-                text("My other projects: ")
-                div {
-                    classes = setOf("project")
-                    a("https://adahub.io") {
-                        target = ATarget.blank
-                        rel = "noopener"
-                        img {
-                            src = "https://adahub.io/favicon.svg"
-                            alt = "adahub.io"
-                            width = "30"
-                            height = "30"
-                        }
-                    }
-                    br
-                    text("Blockchain")
-                }
-                div {
-                    classes = setOf("project")
-                    a("https://simonschubert.github.io/YogaBase/") {
-                        target = ATarget.blank
-                        rel = "noopener"
-                        img {
-                            src = "https://simonschubert.github.io/YogaBase/favicon.svg"
-                            alt = ""
-                            width = "30"
-                            height = "30"
-                        }
-                    }
-                    br
-                    text("Yoga")
-                }
-                div {
-                    classes = setOf("project")
-                    a("https://betabase.fun") {
-                        target = ATarget.blank
-                        rel = "noopener"
-                        img {
-                            src = "https://betabase.fun/images/icon.png"
-                            alt = "betabase.fun"
-                            width = "30"
-                            height = "30"
-                        }
-                    }
-                    br
-                    text("Climbing")
-                }
-            }
+            br
+            br
+//            div {
+//                style =
+//                    "width: 100%; justify-content: center; padding-top: 6px; display: flex; align-items: center; gap: 6px;"
+//                text("My other projects: ")
+//                div {
+//                    classes = setOf("project")
+//                    a("https://adahub.io") {
+//                        target = ATarget.blank
+//                        rel = "noopener"
+//                        img {
+//                            src = "https://adahub.io/favicon.svg"
+//                            alt = "adahub.io"
+//                            width = "30"
+//                            height = "30"
+//                        }
+//                    }
+//                    br
+//                    text("Blockchain")
+//                }
+//                div {
+//                    classes = setOf("project")
+//                    a("https://simonschubert.github.io/YogaBase/") {
+//                        target = ATarget.blank
+//                        rel = "noopener"
+//                        img {
+//                            src = "https://simonschubert.github.io/YogaBase/favicon.svg"
+//                            alt = ""
+//                            width = "30"
+//                            height = "30"
+//                        }
+//                    }
+//                    br
+//                    text("Yoga")
+//                }
+//                div {
+//                    classes = setOf("project")
+//                    a("https://betabase.fun") {
+//                        target = ATarget.blank
+//                        rel = "noopener"
+//                        img {
+//                            src = "https://betabase.fun/images/icon.png"
+//                            alt = "betabase.fun"
+//                            width = "30"
+//                            height = "30"
+//                        }
+//                    }
+//                    br
+//                    text("Climbing")
+//                }
+//            }
         }
         return this
     }

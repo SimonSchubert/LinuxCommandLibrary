@@ -2,6 +2,7 @@
 
 package com.linuxcommandlibrary.app.ui.screens.commanddetail
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -29,6 +30,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.linuxcommandlibrary.app.data.CommandSectionInfo
 import com.linuxcommandlibrary.app.ui.composables.TipSectionContent
+import com.linuxcommandlibrary.app.ui.theme.LocalCustomColors
 import com.linuxcommandlibrary.shared.MarkdownParser
 import kotlinx.collections.immutable.ImmutableList
 
@@ -39,7 +41,11 @@ fun CommandDetailScreen(
 ) {
     val uiState by viewModel.state.collectAsState()
 
-    LazyColumn(Modifier.fillMaxSize()) {
+    LazyColumn(
+        Modifier
+            .background(MaterialTheme.colors.background)
+            .fillMaxSize(),
+    ) {
         itemsIndexed(
             items = uiState.sections,
             key = { index, _ -> index },

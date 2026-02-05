@@ -2,6 +2,7 @@
 
 package com.linuxcommandlibrary.app.ui.screens.basicgroups
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
@@ -10,6 +11,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Icon
 import androidx.compose.material.ListItem
+import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -24,6 +26,7 @@ import com.linuxcommandlibrary.app.ui.composables.CommandView
 import com.linuxcommandlibrary.app.ui.composables.HighlightedText
 import com.linuxcommandlibrary.app.ui.composables.getIconId
 import com.linuxcommandlibrary.app.ui.composables.rememberIconPainter
+import com.linuxcommandlibrary.app.ui.theme.LocalCustomColors
 import com.linuxcommandlibrary.shared.getCommandList
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.ImmutableSet
@@ -38,7 +41,11 @@ fun BasicGroupsScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
 
-    LazyColumn(Modifier.fillMaxSize()) {
+    LazyColumn(
+        Modifier
+            .fillMaxSize()
+            .background(MaterialTheme.colors.background),
+    ) {
         items(
             items = uiState.basicGroups,
             key = { it.id },

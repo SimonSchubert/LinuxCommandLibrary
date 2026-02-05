@@ -231,7 +231,10 @@ fun LinuxApp(initialDeeplink: String? = null) {
             )
         },
     ) { innerPadding ->
-        Box(modifier = Modifier.padding(innerPadding)) {
+        Box(
+            modifier = Modifier
+                .padding(innerPadding),
+        ) {
             NavHost(
                 navController = navController,
                 startDestination = initialRoute,
