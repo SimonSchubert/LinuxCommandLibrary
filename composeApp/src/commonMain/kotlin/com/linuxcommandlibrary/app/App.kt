@@ -6,18 +6,14 @@ import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.windowInsetsBottomHeight
-import androidx.compose.foundation.layout.windowInsetsTopHeight
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material.Icon
@@ -98,25 +94,16 @@ fun App(initialDeeplink: String? = null) {
     }
 
     LinuxTheme {
-        Column(modifier = Modifier.fillMaxSize()) {
-            // Status bar area with primary color
-            Spacer(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .windowInsetsTopHeight(WindowInsets.safeDrawing)
-                    .background(MaterialTheme.colors.primary),
-            )
-            // Main content
-            Box(modifier = Modifier.weight(1f)) {
-                LinuxApp(initialDeeplink = initialDeeplink)
-            }
-            // Navigation bar area with white/surface color
-            Spacer(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .windowInsetsBottomHeight(WindowInsets.safeDrawing)
-                    .background(LocalCustomColors.current.navBarBackground),
-            )
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(MaterialTheme.colors.primary)
+                .statusBarsPadding()
+                .background(LocalCustomColors.current.navBarBackground)
+                .navigationBarsPadding()
+                .background(MaterialTheme.colors.background),
+        ) {
+            LinuxApp(initialDeeplink = initialDeeplink)
         }
     }
 }

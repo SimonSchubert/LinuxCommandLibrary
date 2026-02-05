@@ -5,15 +5,7 @@ import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.statusBarsPadding
-import androidx.compose.foundation.layout.systemBarsPadding
-import androidx.compose.material.MaterialTheme
-import androidx.compose.ui.Modifier
 import com.linuxcommandlibrary.app.App
-import com.linuxcommandlibrary.app.ui.theme.LinuxTheme
-import com.linuxcommandlibrary.app.ui.theme.LocalCustomColors
 
 /* Copyright 2022 Simon Schubert
  *
@@ -38,25 +30,8 @@ class MainActivity : AppCompatActivity() {
             navigationBarStyle = SystemBarStyle.dark(android.graphics.Color.TRANSPARENT),
         )
         super.onCreate(savedInstanceState)
-
-        val deeplink = intent?.data?.toString()
-
         setContent {
-            LinuxTheme {
-                Box(
-                    Modifier
-                        .background(MaterialTheme.colors.primary)
-                        .statusBarsPadding(),
-                ) {
-                    Box(
-                        Modifier
-                            .background(LocalCustomColors.current.navBarBackground)
-                            .systemBarsPadding(),
-                    ) {
-                        App(initialDeeplink = deeplink)
-                    }
-                }
-            }
+            App(initialDeeplink = intent?.data?.toString())
         }
     }
 }
