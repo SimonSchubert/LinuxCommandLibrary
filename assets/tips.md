@@ -1,7 +1,7 @@
 # Tips
 
 ## Clear and reset the terminal
-To clear the terminal use the command below or press Ctrl+L on your keyboard.
+To clear the terminal, use the command below or press Ctrl+L on your keyboard.
 
 ```[clear](/man/clear)```
 
@@ -18,7 +18,7 @@ Search command history for query.
 
 ```[history](/man/history) | [grep](/man/grep) [query]```
 
-or press ctrl + r to search and execute commands from the history.
+Or press Ctrl+R to search and execute commands from the history.
 
 ## Close a frozen window/application
 Execute the command and click on the frozen window.
@@ -32,14 +32,14 @@ Or find the process id of an application and kill it.
 ```[kill](/man/kill) [processID]```
 
 ## Tab Completion
-This might save you a lot of time. If you e.g. want to delete a file with a very long name you can type the first few characters of the name and press TAB to auto complete the name. If there is more then one possibilities and you press TAB twice you get a list of all possibilities.
+This might save you a lot of time. If you e.g. want to delete a file with a very long name you can type the first few characters of the name and press TAB to auto complete the name. If there is more than one possibility and you press TAB twice, you get a list of all possibilities.
 
 ## Temporary aliases
 Save yourself time and create aliases for your most used commands. Aliases are like custom shortcuts.
 
 ```alias [name]="[command]"```
 
-Example: Find out your external ip.
+Example: Find out your external IP.
 
 ```alias publicip="[curl](/man/curl) ifconfig.me"```
 
@@ -143,8 +143,8 @@ Shell special characters are interpreted by the shell as soon as it is given the
 | **>>**   | These symbols are used for redirection.                                                                                                |
 | **!!**   | Repeat the last command                                                                                                                |
 |          | `[sudo](/man/sudo) !!`                                                                                                             |
-| **!***   | Change command keep all arguments                                                                                                      |
-|          | `!* [tail](/man/tail)`                                                                                                             |
+| **!***   | Change the command, keep all arguments                                                                                                 |
+|          | `[tail](/man/tail) !*`                                                                                                             |
 | **^**    | Quick history substitution, changing one string to another.                                                                            |
 |          | `^png^xcf^`                                                                                                                        |
 | **#**    | Turns the line into a comment; the line is not processed in any way.                                                                   |
@@ -159,11 +159,11 @@ Don't confuse shell special characters with special characters in regular expres
 | Position | Meaning |
 |----------|---------|
 | 1 | File type: '-' for a regular file, 'd' for a directory, 'l' for a symbolic link. |
-| 2 | Owner permission |
-| 3 | Group permission |
-| 4 | Other permission |
+| 2-4 | Owner permissions (rwx) |
+| 5-7 | Group permissions (rwx) |
+| 8-10 | Other permissions (rwx) |
 
-In the shown example the user has read, write and execute permissions but the group and others have only read permissions.
+Example: `-rwxr--r--` means the owner has read, write and execute permissions, but the group and others have only read permissions.
 
 ## Modify file permissions
 
@@ -189,17 +189,61 @@ Permission types:
 | **w** | Write |
 | **x** | Execute |
 
-Operators for the modification command are **+** (plus) and **–** (minus).
+Operators for the modification command are **+** (plus) and **-** (minus).
 
 ## Set file permissions via binary references
 Example: Give the owner read and write permission, the group read permission and no permission to other.
 
 ```[chmod](/man/chmod) 640 test.txt```
 
-The first number represents the **owner** permissions, the second the **group** permissions and the last number for all other users. The numbers are a binary representation of the **rwx** string.
+The first number represents the **owner** permissions, the second the **group** permissions, and the last number the permissions for all other users. The numbers are a binary representation of the **rwx** string.
 
-| Permission | Binary |
+| Permission | Value |
 |------------|--------|
 | r | 4 |
 | w | 2 |
 | x | 1 |
+
+## Running commands in the background
+If a command is taking a long time, you can suspend it with **Ctrl+Z** and then resume it in the background.
+
+```[bg](/man/bg)```
+
+To bring a background job back to the foreground:
+
+```[fg](/man/fg)```
+
+To list all background jobs in the current session:
+
+```[jobs](/man/jobs)```
+
+If you want a command to keep running even after you log out, use nohup.
+
+```[nohup](/man/nohup) [command] &```
+
+For long-running tasks or managing multiple terminal sessions, use tmux. It lets you detach and reattach sessions, so your work survives disconnects.
+
+```[tmux](/man/tmux) new -s mysession```
+
+Detach from a session with **Ctrl+B** then **D**. Reattach later with:
+
+```[tmux](/man/tmux) attach -t mysession```
+
+## Scheduling tasks with cron
+Edit your user's crontab to schedule recurring tasks.
+
+```[crontab](/man/crontab) -e```
+
+Each line in the crontab follows a five-field format:
+
+| Field | Value |
+|-------|-------|
+| Minute | 0 - 59 |
+| Hour | 0 - 23 |
+| Day of month | 1 - 31 |
+| Month | 1 - 12 |
+| Day of week | 0 - 7 (0 and 7 are Sunday) |
+
+Example: Run a backup script every day at 2 AM.
+
+```0 2 * * * /home/user/backup.sh```
