@@ -3,6 +3,7 @@ package com.linuxcommandlibrary.app.ui.composables
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.AnnotatedString
@@ -15,7 +16,6 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.linuxcommandlibrary.shared.TextElement
 import com.linuxcommandlibrary.shared.TipSectionElement
-import kotlinx.collections.immutable.toImmutableList
 
 fun buildTextElementString(
     elements: List<TextElement>,
@@ -52,15 +52,21 @@ fun TipSectionContent(
     sections.forEach { section ->
         when (section) {
             is TipSectionElement.Text -> {
+                val annotatedString = remember(section.elements, textColor) {
+                    buildTextElementString(section.elements, textColor)
+                }
                 Text(
-                    text = buildTextElementString(section.elements, textColor),
+                    text = annotatedString,
                     color = textColor,
                 )
             }
 
             is TipSectionElement.Blockquote -> {
+                val annotatedString = remember(section.elements, textColor) {
+                    buildTextElementString(section.elements, textColor)
+                }
                 Text(
-                    text = buildTextElementString(section.elements, textColor),
+                    text = annotatedString,
                     color = textColor,
                     modifier = Modifier.padding(start = 8.dp, bottom = 8.dp),
                 )
@@ -69,7 +75,7 @@ fun TipSectionContent(
             is TipSectionElement.Code -> {
                 CommandView(
                     command = section.command,
-                    elements = section.elements.toImmutableList(),
+                    elements = section.elements,
                     onNavigate = onNavigate,
                     verticalPadding = commandVerticalPadding,
                 )

@@ -77,7 +77,7 @@ class TipsRepository(private val assetReader: AssetReader) {
                     sections.add(
                         TipSectionElement.Code(
                             command = MarkdownParser.cleanMarkdownCommand(codeContent),
-                            elements = elements,
+                            elements = elements.toImmutableList(),
                         ),
                     )
                     i++

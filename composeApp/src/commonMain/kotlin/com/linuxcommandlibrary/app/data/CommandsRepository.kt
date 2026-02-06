@@ -6,6 +6,7 @@ import com.linuxcommandlibrary.shared.platform.AssetReader
 class CommandsRepository(private val assetReader: AssetReader) {
 
     private var cachedCommands: List<CommandInfo>? = null
+    private var cachedCommandNames: Set<String>? = null
 
     fun getCommands(): List<CommandInfo> {
         cachedCommands?.let { return it }
@@ -24,25 +25,27 @@ class CommandsRepository(private val assetReader: AssetReader) {
             }
 
         cachedCommands = commands
+        cachedCommandNames = commands.mapTo(HashSet()) { it.name }
         return commands
     }
 
     fun getCommandsByQuery(query: String): List<CommandInfo> {
-        val commands = getCommands()
         val lowerQuery = query.lowercase()
 
-        return commands
-            .filter { it.name.lowercase().contains(lowerQuery) }
+        return getCommands()
+            .map { cmd -> cmd to cmd.name.lowercase() }
+            .filter { (_, lowerName) -> lowerName.contains(lowerQuery) }
             .sortedWith(
                 compareBy(
-                    { it.name.lowercase() != lowerQuery },
-                    { !it.name.lowercase().startsWith(lowerQuery) },
-                    { it.name },
+                    { (_, lowerName) -> lowerName != lowerQuery },
+                    { (_, lowerName) -> !lowerName.startsWith(lowerQuery) },
+                    { (cmd, _) -> cmd.name },
                 ),
             )
+            .map { (cmd, _) -> cmd }
     }
 
-    fun hasCommand(name: String): Boolean = getCommands().any { it.name == name }
+    fun hasCommand(name: String): Boolean = name in (cachedCommandNames ?: getCommands().let { cachedCommandNames!! })
 
     fun getSections(commandName: String): List<CommandSectionInfo> = try {
         val content = assetReader.readFile("commands/$commandName.md") ?: return emptyList()

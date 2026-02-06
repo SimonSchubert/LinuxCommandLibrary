@@ -30,6 +30,7 @@ fun CommandListScreen(
     onNavigate: (String) -> Unit,
 ) {
     val commands by viewModel.commands.collectAsState()
+    val bookmarkedNames by viewModel.bookmarkedNames.collectAsState()
 
     LazyColumn(
         modifier = Modifier
@@ -44,7 +45,7 @@ fun CommandListScreen(
             CommandListItem(
                 command = command,
                 onNavigate = onNavigate,
-                isBookmarked = viewModel.hasBookmark(command.name),
+                isBookmarked = command.name in bookmarkedNames,
             )
         }
     }

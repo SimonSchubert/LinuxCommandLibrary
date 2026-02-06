@@ -1,5 +1,7 @@
 package com.linuxcommandlibrary.shared
 
+import kotlinx.collections.immutable.toImmutableList
+
 /**
  * Shared markdown parsing utilities for text formatting, code blocks, and man page links.
  */
@@ -120,7 +122,7 @@ object MarkdownParser {
                     sections.add(
                         TipSectionElement.Code(
                             command = cleanMarkdownCommand(codeContent),
-                            elements = elements,
+                            elements = elements.toImmutableList(),
                         ),
                     )
                     i++
@@ -140,7 +142,7 @@ object MarkdownParser {
                     sections.add(
                         TipSectionElement.Code(
                             command = cleanMarkdownCommand(codeContent),
-                            elements = elements,
+                            elements = elements.toImmutableList(),
                         ),
                     )
                 }

@@ -1,5 +1,7 @@
 package com.linuxcommandlibrary.shared
 
+import kotlinx.collections.immutable.ImmutableList
+
 /**
  * Represents text formatting elements within tip sections.
  */
@@ -16,7 +18,7 @@ sealed class TextElement {
 sealed class TipSectionElement {
     data class Text(val elements: List<TextElement>) : TipSectionElement()
     data class Blockquote(val elements: List<TextElement>) : TipSectionElement()
-    data class Code(val command: String, val elements: List<CommandElement>) : TipSectionElement()
+    data class Code(val command: String, val elements: ImmutableList<CommandElement>) : TipSectionElement()
     data class Table(
         val headers: List<List<TextElement>>,
         val rows: List<List<List<TextElement>>>,

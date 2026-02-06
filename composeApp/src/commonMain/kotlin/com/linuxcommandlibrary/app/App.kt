@@ -61,6 +61,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
 import com.linuxcommandlibrary.app.data.BasicsRepository
+import com.linuxcommandlibrary.app.data.CommandsRepository
 import com.linuxcommandlibrary.app.platform.backIcon
 import com.linuxcommandlibrary.app.ui.composables.AppIcon
 import com.linuxcommandlibrary.app.ui.composables.rememberIconPainter
@@ -81,15 +82,21 @@ import com.linuxcommandlibrary.app.ui.screens.tips.TipsViewModel
 import com.linuxcommandlibrary.app.ui.theme.LinuxTheme
 import com.linuxcommandlibrary.app.ui.theme.LocalCustomColors
 import com.linuxcommandlibrary.shared.platform.ReviewHandler
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import org.koin.compose.koinInject
 import org.koin.core.parameter.parametersOf
 
 @Composable
 fun App(initialDeeplink: String? = null) {
     val reviewHandler: ReviewHandler = koinInject()
+    val commandsRepository: CommandsRepository = koinInject()
     LaunchedEffect(Unit) {
         reviewHandler.incrementAppStartCount()
         reviewHandler.requestReviewIfNeeded()
+        withContext(Dispatchers.Default) {
+            commandsRepository.getCommands()
+        }
     }
 
     LinuxTheme {
@@ -260,18 +267,14 @@ fun LinuxApp(initialDeeplink: String? = null) {
                     BasicGroupsScreen(viewModel = viewModel, onNavigate = onNavigate)
                 }
 
-                composable<Route.CommandDetail> { backStackEntry ->
-                    val route = backStackEntry.toRoute<Route.CommandDetail>()
-                    val viewModel: CommandDetailViewModel = koinInject { parametersOf(route.commandName) }
-                    CommandDetailScreen(viewModel = viewModel, onNavigate = onNavigate)
+                composable<Route.CommandDetail> {
+                    commandDetailViewModel?.let { viewModel ->
+                        CommandDetailScreen(viewModel = viewModel, onNavigate = onNavigate)
+                    }
                 }
             }
 
-            val isSearchVisible by remember(searchTextValue) {
-                derivedStateOf {
-                    searchTextValue.value.text.isNotEmpty() && !isOnCommandDetail
-                }
-            }
+            val isSearchVisible = searchTextValue.value.text.isNotEmpty() && !isOnCommandDetail
             AnimatedVisibility(
                 visible = isSearchVisible,
                 enter = fadeIn(animationSpec = tween(300)),
