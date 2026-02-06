@@ -24,3 +24,21 @@
 ```[nanobot](/man/nanobot)```
 ```[nanoclaw](/man/nanoclaw)```
 ```[leon](/man/leon)```
+
+## Image Generation
+```[sd-cli](/man/sd-cli)```
+```[mflux](/man/mflux)```
+```[comfyui](/man/comfyui)```
+
+## Speech & Audio AI
+```[whisper](/man/whisper)```
+```[faster-whisper](/man/faster-whisper)```
+```[deepspeech](/man/deepspeech)```
+```[piper](/man/piper)```
+```[bark](/man/bark)```
+```[tts](/man/tts)```
+
+## AI Terminal Utilities
+```[mods](/man/mods)```
+```[aichat](/man/aichat)```
+```[smartcat](/man/smartcat)```

@@ -115,6 +115,7 @@ age.md
 agetty.md
 agg.md
 ahost.md
+aichat.md
 aide.md
 aider.md
 air.md
@@ -559,6 +560,7 @@ banshee.md
 baobab.md
 bar.md
 barcode.md
+bark.md
 barotrauma.md
 base32.md
 base64.md
@@ -1138,6 +1140,7 @@ column.md
 combine.md
 combinediff.md
 comby.md
+comfyui.md
 comm.md
 comma.md
 command.md
@@ -1960,6 +1963,7 @@ fast.md
 fastapi.md
 fastboot.md
 fastd.md
+faster-whisper.md
 fastfetch.md
 fastlane.md
 fastmod.md
@@ -3959,6 +3963,7 @@ metals.md
 metasploit.md
 meteor.md
 metro.md
+mflux.md
 mfoc.md
 mfterm.md
 mg.md
@@ -6143,6 +6148,7 @@ scrontab.md
 scrot.md
 scrun.md
 scylladb.md
+sd-cli.md
 sd.md
 sdcv.md
 sdiag.md
@@ -6316,6 +6322,7 @@ slurmstepd.md
 slurp.md
 sm.md
 smalltalkci.md
+smartcat.md
 smartctl.md
 smartd.md
 smbcacls.md
