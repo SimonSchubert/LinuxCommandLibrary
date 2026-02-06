@@ -50,3 +50,20 @@
 ## List all users
 ```[getent](/man/getent) passwd```
 ```[cat](/man/cat) /etc/passwd```
+
+## Show current user
+```[whoami](/man/whoami)```
+
+## Switch user
+```[su](/man/su) [user]```
+
+## Show logged-in users
+```[who](/man/who)```
+```[w](/man/w)```
+```[users](/man/users)```
+
+## Show user ID and groups
+```[id](/man/id) [user]```
+
+## Show login history
+```[last](/man/last)```

@@ -1,4 +1,4 @@
-# Micro Texteditor
+# Micro Text Editor
 
 ## Default Keybindings
 ```Up```

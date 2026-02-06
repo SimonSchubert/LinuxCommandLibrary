@@ -48,7 +48,7 @@
 ```[nmap](/man/nmap)```
 ```[zenmap](/man/zenmap)```
 
-## Vulnerability analyses
+## Vulnerability analysis
 ```[lynis](/man/lynis)```
 ```[nikto](/man/nikto)```
 ```[nmap](/man/nmap)```

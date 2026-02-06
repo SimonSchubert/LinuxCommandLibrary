@@ -1,4 +1,4 @@
-# Emacs Texteditor
+# Emacs Text Editor
 
 ## Basic Usage
 ```TAB```

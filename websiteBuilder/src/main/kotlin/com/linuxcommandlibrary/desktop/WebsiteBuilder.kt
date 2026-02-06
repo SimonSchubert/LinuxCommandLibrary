@@ -295,7 +295,7 @@ class WebsiteBuilder {
      */
     private fun getIconResourceForTitle(title: String): String = when (title) {
         "One-liners" -> "icon-hand_with_pen.svg"
-        "Coding agents" -> "icon-agent.svg"
+        "AI tools" -> "icon-agent.svg"
         "System information" -> "icon-system_task.svg"
         "System control" -> "icon-settings.svg"
         "Users & Groups" -> "icon-user.svg"

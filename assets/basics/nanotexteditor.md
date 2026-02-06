@@ -1,4 +1,4 @@
-# Nano Texteditor
+# Nano Text Editor
 
 ## Info
 ```Ctrl+G```

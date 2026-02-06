@@ -2,13 +2,15 @@
 
 ## Create file
 ```[touch](/man/touch) [fileName]```
-```[echo](/man/echo) $null >> [fileName]```
+```[echo](/man/echo) "" >> [fileName]```
+```> [fileName]```
 
 ## Delete file
 ```[rm](/man/rm) [fileName]```
 
 ## Display file content
 ```[cat](/man/cat) [fileName]```
+```[bat](/man/bat) [fileName]```
 
 ## Edit text file
 ```[vi](/man/vi) [fileName]```
@@ -34,11 +36,13 @@
 ## List folder contents
 ```[ls](/man/ls)```
 ```[dir](/man/dir)```
+```[exa](/man/exa)```
+```[lsd](/man/lsd)```
 
 ## Change folder
 ```[cd](/man/cd) [path]```
 
-## Change to users home directory
+## Change to user's home directory
 ```[cd](/man/cd) ~```
 
 ## Change to parent directory
@@ -55,6 +59,7 @@
 
 ## Find phrase within file
 ```[grep](/man/grep) [phrase] [fileName]```
+```[rg](/man/rg) [phrase] [fileName]```
 
 ## Get filesystem of partition
 ```[file](/man/file) -sL [partition]```
@@ -68,8 +73,9 @@
 ## Make file executable
 ```[chmod](/man/chmod) +x [file]```
 
-## Show size of all sub directories
+## Show size of all subdirectories
 ```[du](/man/du) -h --max-depth=1```
+```[dust](/man/dust)```
 
 ## Display and update information of files
 ```[watch](/man/watch) -d -n 2 'df; ls -FlAt;'```
@@ -89,6 +95,7 @@
 
 ## View file permission
 ```[ls](/man/ls) -l [file]```
+```[stat](/man/stat) [file]```
 
 ## Set file permission
 ```[chmod](/man/chmod) [permission] [file]```
@@ -101,3 +108,32 @@
 
 ## Change group ownership of file
 ```[chgrp](/man/chgrp) [group] [file]```
+
+## Compare two files
+```[diff](/man/diff) [file1] [file2]```
+
+## Create symbolic link
+```[ln](/man/ln) -s [target] [linkName]```
+
+## Show file type
+```[file](/man/file) [fileName]```
+
+## Count lines, words and characters
+```[wc](/man/wc) [fileName]```
+
+## Show first lines of a file
+```[head](/man/head) [fileName]```
+
+## Show last lines of a file
+```[tail](/man/tail) [fileName]```
+
+## Browse file content
+```[less](/man/less) [fileName]```
+```[more](/man/more) [fileName]```
+```[most](/man/most) [fileName]```
+
+## Sort file contents
+```[sort](/man/sort) [fileName]```
+
+## Tree view of directory
+```[tree](/man/tree)```

@@ -195,7 +195,7 @@ fun BasicGroup.getIconId(): AppIcon = when (description) {
     "Create user" -> AppIcon.ADD_USER
     "Create group" -> AppIcon.ADD_USER_GROUP
     "Checkout an existing branch", "Checkout and create a new branch with that name" -> AppIcon.ARROW_CHECKOUT
-    "Trading bots" -> AppIcon.BOT
+    "Trading bots", "AI Assistants" -> AppIcon.BOT
     "Show a small months calender" -> AppIcon.CALENDAR
     "Cancel printing job" -> AppIcon.CANCEL
     "Disable printer", "End session" -> AppIcon.PAUSE
@@ -204,6 +204,7 @@ fun BasicGroup.getIconId(): AppIcon = when (description) {
     "Wallets" -> AppIcon.WALLET
     "Navigation" -> AppIcon.COMPASS
     "Connect to host", "Run a command and exit", "SOCKS5 proxying", "TCP Port Forwarding", "X11 Session Forwarding" -> AppIcon.CONNECTED
+    "Coding Agents" -> AppIcon.AGENT
     "Other stuff" -> AppIcon.CONSOLE
     "Clone an existing repository", "Insertion" -> AppIcon.COPY
     "Empty trash" -> AppIcon.DELETE_TRASH
@@ -298,11 +299,11 @@ fun BasicCategory.getIconId(): AppIcon = when (title) {
     "Package manager" -> AppIcon.PACKAGE
     "Hacking tools" -> AppIcon.SKULL
     "Terminal games" -> AppIcon.CONTROLLER
-    "VIM Texteditor", "Emacs Texteditor", "Nano Texteditor", "Pico Texteditor", "Micro Texteditor" -> AppIcon.TEXT
-    "Crypto currencies" -> AppIcon.BITCOIN
+    "VIM Text Editor", "Emacs Text Editor", "Nano Text Editor", "Pico Text Editor", "Micro Text Editor" -> AppIcon.TEXT
+    "Cryptocurrencies" -> AppIcon.BITCOIN
     "Input" -> AppIcon.MOUSE
     "JSON" -> AppIcon.JSON
     "Fun" -> AppIcon.FUN
-    "Coding agents" -> AppIcon.AGENT
+    "AI tools" -> AppIcon.AGENT
     else -> AppIcon.MOUSE
 }

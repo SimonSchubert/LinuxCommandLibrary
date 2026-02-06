@@ -1,9 +1,9 @@
-The app currently has <b>7703</b> manual pages, <b>23</b> basic categories and a bunch of general terminal tips. It works 100% offline, doesn't need an internet connection and has no tracking software.
+The app currently has <b>7706</b> manual pages, <b>23</b> basic categories and a bunch of general terminal tips. It works 100% offline, doesn't need an internet connection and has no tracking software.
 
 <b>Categories</b>
 
 * One-liners
-* Coding agents
+* AI tools
 * System information
 * System control
 * Users & Groups
@@ -19,12 +19,12 @@ The app currently has <b>7703</b> manual pages, <b>23</b> basic categories and a
 * Package manager
 * Hacking tools
 * Terminal games
-* Crypto currencies
-* VIM Texteditor
-* Emacs Texteditor
-* Nano Texteditor
-* Pico Texteditor
-* Micro Texteditor
+* Cryptocurrencies
+* VIM Text Editor
+* Emacs Text Editor
+* Nano Text Editor
+* Pico Text Editor
+* Micro Text Editor
 
 <b>Tips</b>
 
@@ -42,3 +42,5 @@ The app currently has <b>7703</b> manual pages, <b>23</b> basic categories and a
 * View file permissions
 * Modify file permissions
 * Set file permissions via binary references
+* Running commands in the background
+* Scheduling tasks with cron

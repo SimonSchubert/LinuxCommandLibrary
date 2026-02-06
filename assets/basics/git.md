@@ -27,9 +27,11 @@
 
 ## Checkout an existing branch
 ```[git](/man/git) checkout [branchName]```
+```[git](/man/git) switch [branchName]```
 
 ## Checkout and create a new branch with that name
 ```[git](/man/git) checkout -b [newBranch]```
+```[git](/man/git) switch -c [newBranch]```
 
 ## Create a tag
 ```[git](/man/git) tag [tagName]```
@@ -82,7 +84,29 @@
 ```[git](/man/git) rm -r --cached [directoryName]```
 
 ## Delete an entire directory (force)
-```[git](/man/git) rm -r -f [fileName]```
+```[git](/man/git) rm -r -f [directoryName]```
 
 ## Delete a remote branch
 ```[git](/man/git) push origin :[branchName]```
+
+## Show commit log
+```[git](/man/git) log```
+```[git](/man/git) log --oneline```
+
+## Show changes
+```[git](/man/git) diff```
+
+## Show remote URLs
+```[git](/man/git) remote -v```
+
+## Amend last commit message
+```[git](/man/git) commit --amend```
+
+## Blame a file
+```[git](/man/git) blame [fileName]```
+
+## Cherry-pick a commit
+```[git](/man/git) cherry-pick [commitHash]```
+
+## Rebase onto another branch
+```[git](/man/git) rebase [branchName]```

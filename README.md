@@ -2,7 +2,7 @@
 
 ![Icon](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandLibrary/master/art/web_hi_res_144.png)
 
-The app currently has **7703** manual pages, **23+** basic categories and a bunch of general terminal tips. It works 100% offline, doesn't need an internet connection and has no tracking software.
+The app currently has **7706** manual pages, **23+** basic categories and a bunch of general terminal tips. It works 100% offline, doesn't need an internet connection and has no tracking software.
 
 [![App Store](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/app_store_badge.png)](https://apps.apple.com/us/app/linux-command-library/id1219649976)
 [![Play Store](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/play_store_badge.png)](https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca)
@@ -40,11 +40,11 @@ Native CLI and GUI binaries for Linux, macOS, and Windows are available in [Rele
 
 #### Categories
 
-One-liners, Coding agents, System information, System control, Users & Groups, Files & Folders, Input, Printing, JSON, Network, Search & Find, GIT, SSH, Video & Audio, Package manager, Hacking tools, Terminal games, Crypto currencies, VIM Texteditor, Emacs Texteditor, Nano Texteditor, Pico Texteditor, Micro Texteditor
+One-liners, AI tools, System information, System control, Users & Groups, Files & Folders, Input, Printing, JSON, Network, Search & Find, GIT, SSH, Video & Audio, Package manager, Hacking tools, Terminal games, Cryptocurrencies, VIM Text Editor, Emacs Text Editor, Nano Text Editor, Pico Text Editor, Micro Text Editor
 
 #### Tips
 
-Clear and reset the terminal, List of recent commands, Close a frozen window/application, Tab Completion, Temporary aliases, Permanent aliases, Chain commands, Command syntax, Cursor navigation, Redirection, Special characters in commands, View file permissions, Modify file permissions, Set file permissions via binary references
+Clear and reset the terminal, List of recent commands, Close a frozen window/application, Tab Completion, Temporary aliases, Permanent aliases, Chain commands, Command syntax, Cursor navigation, Redirection, Special characters in commands, View file permissions, Modify file permissions, Set file permissions via binary references, Running commands in the background, Scheduling tasks with cron
 
 ### CI/CD
 

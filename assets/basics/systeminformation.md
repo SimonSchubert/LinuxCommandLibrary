@@ -22,10 +22,12 @@
 ## Memory information
 ```[cat](/man/cat) /proc/meminfo```
 
-## Info about the linux system
+## Info about the Linux system
 ```[cat](/man/cat) /proc/version```
 ```[uname](/man/uname) -a```
 ```[neofetch](/man/neofetch)```
+```[hostnamectl](/man/hostnamectl)```
+```[lsb_release](/man/lsb_release) -a```
 
 ## PCI devices
 ```[lspci](/man/lspci)```
@@ -41,9 +43,36 @@
 
 ## Disk usage info
 ```[df](/man/df) -k```
+```[df](/man/df) -h```
+```[duf](/man/duf)```
 
 ## Bootlog info
 ```[cat](/man/cat) /var/log/boot.log```
 
-## Show a small months calendar
+## Show a small monthly calendar
 ```[cal](/man/cal)```
+
+## CPU information
+```[lscpu](/man/lscpu)```
+```[cat](/man/cat) /proc/cpuinfo```
+
+## Show running processes
+```[ps](/man/ps) aux```
+```[top](/man/top)```
+```[htop](/man/htop)```
+```[btop](/man/btop)```
+```[atop](/man/atop)```
+
+## Memory usage
+```[free](/man/free) -h```
+```[vmstat](/man/vmstat)```
+
+## Kernel messages
+```[dmesg](/man/dmesg)```
+
+## Loaded kernel modules
+```[lsmod](/man/lsmod)```
+
+## Show disk partitions
+```[fdisk](/man/fdisk) -l```
+```[parted](/man/parted) -l```

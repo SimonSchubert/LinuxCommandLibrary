@@ -1,4 +1,4 @@
-# VIM Texteditor
+# VIM Text Editor
 
 ## File Management
 ```:e```

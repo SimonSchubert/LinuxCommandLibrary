@@ -1,4 +1,4 @@
-# Crypto currencies
+# Cryptocurrencies
 
 ## Miners
 ```[minergate](/man/minergate)```

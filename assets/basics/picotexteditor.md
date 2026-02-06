@@ -1,4 +1,4 @@
-# Pico Texteditor
+# Pico Text Editor
 
 ## Navigation
 ```Ctrl+f```

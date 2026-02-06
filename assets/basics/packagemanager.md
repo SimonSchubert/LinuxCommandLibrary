@@ -15,6 +15,7 @@
 ## Install from file
 ```[flatpak](/man/flatpak) install [package.flatpakref]```
 ```[dpkg](/man/dpkg) -i [package.deb]```
+```[rpm](/man/rpm) -i [package.rpm]```
 ```[yum](/man/yum) install [package.rpm]```
 ```[dnf](/man/dnf) install [package.rpm]```
 ```[pkg](/man/pkg) add [package.txz]```
@@ -25,7 +26,9 @@
 ```[snap](/man/snap) remove [packageName]```
 ```[apt-get](/man/apt-get) remove [packageName]```
 ```[apt](/man/apt) remove [packageName]```
+```[yum](/man/yum) remove [packageName]```
 ```[dnf](/man/dnf) erase [packageName]```
+```[flatpak](/man/flatpak) uninstall [packageName]```
 ```[pkg](/man/pkg) delete [packageName]```
 ```[pacman](/man/pacman) -R [packageName]```
 ```[pip](/man/pip) uninstall [packageName]```
@@ -81,3 +84,12 @@
 ```[yum-config-manager](/man/yum-config-manager) --add-repo [url]```
 ```[dnf](/man/dnf) config-manager --add-repo [url]```
 ```[zypper](/man/zypper) addrepo [url] [alias]```
+
+## List installed packages
+```[snap](/man/snap) list```
+```[flatpak](/man/flatpak) list```
+```[apt](/man/apt) list --installed```
+```[dpkg](/man/dpkg) -l```
+```[rpm](/man/rpm) -qa```
+```[pacman](/man/pacman) -Q```
+```[pip](/man/pip) list```

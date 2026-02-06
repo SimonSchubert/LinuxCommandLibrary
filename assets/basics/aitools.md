@@ -1,6 +1,6 @@
-# Coding agents
+# AI tools
 
-## CLI
+## Coding Agents
 ```[claude](/man/claude)```
 ```[opencode](/man/opencode)```
 ```[copilot](/man/copilot)```
@@ -18,3 +18,9 @@
 ```[droid](/man/droid)```
 ```[kimi](/man/kimi)```
 ```[bondai](/man/bondai)```
+
+## AI Assistants
+```[openclaw](/man/openclaw)```
+```[nanobot](/man/nanobot)```
+```[nanoclaw](/man/nanoclaw)```
+```[leon](/man/leon)```

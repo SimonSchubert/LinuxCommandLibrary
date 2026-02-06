@@ -3601,6 +3601,7 @@ lefthook.md
 legit.md
 lein.md
 lemonbar.md
+leon.md
 lerna.md
 less.md
 let.md
@@ -4216,6 +4217,8 @@ named.md
 namei.md
 namespaces.md
 nano.md
+nanobot.md
+nanoclaw.md
 nanosleep.md
 napalm.md
 nasm.md
