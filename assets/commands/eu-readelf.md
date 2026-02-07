@@ -1,3 +1,7 @@
+# TAGLINE
+
+ELF file information viewer
+
 # TLDR
 
 Display **all** information from ELF file

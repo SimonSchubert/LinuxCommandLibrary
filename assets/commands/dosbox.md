@@ -1,3 +1,7 @@
+# TAGLINE
+
+DOS emulator for classic games and applications
+
 # TLDR
 
 **Start DOSBox** with a mounted directory
@@ -80,6 +84,14 @@ The emulator provides a command prompt where standard DOS commands work: **dir**
 Configuration files control emulation settings including CPU speed (cycles), graphics rendering, sound card emulation (Sound Blaster, AdLib, etc.), and memory allocation. The default configuration file is in **~/.dosbox/** on Linux or the user profile on Windows.
 
 Key mappings can be customized with the built-in keymapper (Ctrl+F1). Common controls include Alt+Enter for fullscreen toggle, Ctrl+F10 to release mouse capture, and Ctrl+F12/F11 to adjust CPU speed. DOSBox can mount disk images (ISO, CUE/BIN) for games requiring CD-ROMs.
+
+# CONFIGURATION
+
+**~/.dosbox/dosbox-*.conf**
+> Primary configuration file controlling CPU, graphics, sound, and autoexec settings.
+
+**/etc/dosbox.conf**
+> System-wide configuration file (Linux).
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Discover domains and infrastructure for an organization
+
 # TLDR
 
 **Discover** root domains for an organization
@@ -57,6 +61,11 @@ This command is typically used at the beginning of reconnaissance to identify al
 
 **-config** _file_
 > Configuration file
+
+# CONFIGURATION
+
+**~/.config/amass/config.ini**
+> Amass configuration file defining data sources, API keys, and scope settings.
 
 # CAVEATS
 

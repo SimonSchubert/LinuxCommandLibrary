@@ -1,3 +1,7 @@
+# TAGLINE
+
+line-editing mode of vi/vim
+
 # TLDR
 
 **Start ex mode**
@@ -47,6 +51,14 @@ _FILES_
 Commands are entered on a command line rather than visual mode. The same command language powers vi's : commands. ex can process multiple files sequentially.
 
 ex is valuable for batch editing, allowing search/replace and other modifications without interactive use.
+
+# CONFIGURATION
+
+**~/.exrc**
+> User configuration file for ex initialization commands.
+
+**/etc/vimrc** or **~/.vimrc**
+> Shared configuration with vim when ex is invoked via vim.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+CSV file validator and cleaner
+
 # TLDR
 
 **Validate and report errors** in a CSV file

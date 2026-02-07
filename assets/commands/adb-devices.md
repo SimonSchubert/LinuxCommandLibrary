@@ -1,3 +1,7 @@
+# TAGLINE
+
+connected Android device lister
+
 # TLDR
 
 **List** all connected devices

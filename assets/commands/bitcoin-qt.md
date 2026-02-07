@@ -1,3 +1,7 @@
+# TAGLINE
+
+Graphical interface for Bitcoin Core
+
 # TLDR
 
 **Start Bitcoin Core** with graphical interface
@@ -93,6 +97,11 @@ The wallet features include address generation, transaction history, coin contro
 
 **-lang=** _lang_
 > Set interface language.
+
+# CONFIGURATION
+
+**~/.bitcoin/bitcoin.conf**
+> Bitcoin Core configuration file for network, RPC, wallet, and GUI settings.
 
 # CAVEATS
 

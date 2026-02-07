@@ -1,3 +1,7 @@
+# TAGLINE
+
+standalone Ethereum account manager and transaction signer
+
 # TLDR
 
 **Start clef** with default settings

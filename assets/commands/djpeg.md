@@ -1,3 +1,7 @@
+# TAGLINE
+
+JPEG decompressor with format conversion
+
 # TLDR
 
 **Decompress JPEG** to PPM

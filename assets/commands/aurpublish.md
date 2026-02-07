@@ -1,3 +1,7 @@
+# TAGLINE
+
+Publish packages to the Arch User Repository
+
 # TLDR
 
 **Publish** a package to the AUR

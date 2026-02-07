@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fork GitHub repository and clone locally
+
 # TLDR
 
 **Fork and clone repository**
@@ -22,11 +26,9 @@ _URL_
 
 # DESCRIPTION
 
-**git fork** forks a GitHub repository and clones it locally. It automates the common workflow of forking a project for contribution, setting up both origin and upstream remotes.
+**git fork** forks a GitHub repository and clones it locally, automating the common workflow of forking a project for contribution. It uses the GitHub API to create the fork, then clones your fork and configures the original as upstream, setting up the standard contribution workflow.
 
-The command uses the GitHub API to create the fork, then clones your fork and configures the original as upstream. This sets up the standard contribution workflow.
-
-git fork streamlines the fork-and-clone contribution pattern.
+Part of the git-extras suite, this command streamlines the fork-and-clone pattern that is fundamental to open-source collaboration on GitHub.
 
 # CAVEATS
 

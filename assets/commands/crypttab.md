@@ -1,3 +1,7 @@
+# TAGLINE
+
+encrypted block device configuration
+
 # TLDR
 
 **View current crypttab**

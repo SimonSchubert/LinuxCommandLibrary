@@ -1,3 +1,7 @@
+# TAGLINE
+
+update Go code for newer API versions
+
 # TLDR
 
 **Fix old Go code**
@@ -31,9 +35,7 @@ _PACKAGES_
 
 **go fix** updates Go code for newer Go versions. It applies transformations for API changes and deprecated patterns, helping maintain code across Go releases.
 
-The tool runs specific fixers that handle known changes between Go versions. It modifies source files in place, so version control is recommended.
-
-go fix modernizes Go code for new releases.
+The tool runs specific fixers that handle known changes between Go versions. It modifies source files in place, so version control is recommended before running.
 
 # CAVEATS
 

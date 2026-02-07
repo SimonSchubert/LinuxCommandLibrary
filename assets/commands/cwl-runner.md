@@ -1,3 +1,7 @@
+# TAGLINE
+
+Common Workflow Language executor
+
 # TLDR
 
 **Run a CWL workflow**

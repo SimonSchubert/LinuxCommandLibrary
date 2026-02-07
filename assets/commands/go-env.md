@@ -1,3 +1,7 @@
+# TAGLINE
+
+print and manage Go environment variables
+
 # TLDR
 
 **Print all Go environment variables**
@@ -41,7 +45,12 @@
 
 # DESCRIPTION
 
-**go env** prints Go environment information. Without arguments, it prints all known environment variables. With arguments, it prints the values of the named variables. The -w flag writes values to the go/env file, making them persistent across sessions. The -u flag removes variables from go/env.
+**go env** prints Go environment information. Without arguments, it prints all known environment variables. With arguments, it prints the values of the named variables. The **-w** flag writes values to the go/env file, making them persistent across sessions. The **-u** flag removes variables from go/env.
+
+# CONFIGURATION
+
+**$HOME/.config/go/env**
+> Persistent Go environment variable file managed by go env -w.
 
 # CAVEATS
 
@@ -50,4 +59,3 @@ Variables set with -w take precedence over shell environment variables. The go/e
 # SEE ALSO
 
 [go](/man/go)(1), [go-build](/man/go-build)(1)
-

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Assemble a local package into a distributable archive
+
 # TLDR
 
 **Create package archive**
@@ -26,7 +30,9 @@
 
 # DESCRIPTION
 
-**cargo package** creates a distributable .crate archive from the source code. Output is placed in target/package/. The archive is verified by extracting and building unless --no-verify is used.
+**cargo package** creates a distributable `.crate` archive from the source code. The archive is placed in `target/package/` and contains the source files, a normalized Cargo.toml, and optionally the Cargo.lock file. By default, the package is verified by extracting and building it in a temporary directory.
+
+During packaging, the Cargo.toml manifest is normalized: workspace inheritance is resolved, `[patch]`, `[replace]`, and `[workspace]` sections are removed, and path dependencies must include a version key. The `include` and `exclude` fields in Cargo.toml control which files are packaged. This command is equivalent to `cargo publish --dry-run` and is useful for inspecting what would be uploaded to a registry.
 
 # PARAMETERS
 

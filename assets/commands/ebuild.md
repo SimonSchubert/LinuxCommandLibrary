@@ -1,3 +1,7 @@
+# TAGLINE
+
+Gentoo package build interface
+
 # TLDR
 
 Create/update package **manifest**
@@ -40,7 +44,9 @@ Install to **live filesystem**
 
 **ebuild** is a low-level interface to the Gentoo Portage system. It processes ebuild files, which are Bash scripts describing how to build and install packages.
 
-Used for package development and manual package operations.
+The tool provides direct access to individual build phases (fetch, unpack, compile, install, merge), allowing developers to test and debug packages step-by-step. This is essential for package maintainers creating or modifying ebuilds.
+
+While emerge is used for normal package management, ebuild gives fine-grained control over the build process. It's particularly useful for testing new packages before adding them to the portage tree or for manually installing custom ebuilds.
 
 # PARAMETERS
 

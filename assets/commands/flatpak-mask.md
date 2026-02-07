@@ -1,3 +1,7 @@
+# TAGLINE
+
+prevent Flatpak applications from updating
+
 # TLDR
 
 **Mask** a flatpak to ignore updates

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create, edit, and optimize GIF images and animations
+
 # TLDR
 
 **Optimize a GIF** for smaller file size
@@ -93,13 +97,7 @@
 
 **gifsicle** is a command-line tool for creating, editing, and optimizing GIF images and animations. It can manipulate existing GIFs, combine multiple images into animations, extract frames, and significantly reduce file sizes.
 
-The optimization feature is particularly valuable: level 3 optimization can reduce GIF file sizes by 30-50% without quality loss by storing only changed pixels between frames and finding optimal color palettes.
-
-Frame selection uses '#' notation: '#0' is the first frame, '#0-5' selects frames 0 through 5, '#0-' selects from frame 0 to the end. This allows extracting, deleting, or rearranging specific frames.
-
-For creating animations, gifsicle combines individual GIF frames with configurable delays and loop counts. It handles disposal methods correctly to produce proper animations from separate images.
-
-The tool operates as a filter by default (reading stdin, writing stdout) but typically uses -o for output. The --batch flag enables in-place editing of multiple files.
+The optimization feature is particularly valuable: level 3 optimization can reduce GIF file sizes by 30-50% without quality loss by storing only changed pixels between frames. Frame selection uses '#' notation (e.g., '#0' for the first frame, '#0-5' for a range).
 
 # CAVEATS
 
@@ -107,7 +105,7 @@ Input must be valid GIF format. Very large GIFs may require significant memory. 
 
 # HISTORY
 
-**gifsicle** was written by Eddie Kohler starting in **1997** at UCLA. It became a standard tool for GIF manipulation in the open-source community, particularly for web optimization. The tool predates the web's animated GIF renaissance but remains highly relevant for creating and optimizing GIFs.
+**gifsicle** was written by Eddie Kohler starting in **1997** at UCLA. It became a standard tool for GIF manipulation in the open-source community, particularly for web optimization.
 
 # SEE ALSO
 

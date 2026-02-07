@@ -1,3 +1,7 @@
+# TAGLINE
+
+configure database cluster maintenance schedules
+
 # TLDR
 
 **Get maintenance window**
@@ -31,6 +35,10 @@
 # DESCRIPTION
 
 **doctl databases maintenance-window** manages the maintenance window for DigitalOcean managed database clusters. Maintenance includes updates and patches applied during this window.
+
+DigitalOcean performs automated maintenance on managed databases including security patches, version updates, and system optimizations. The maintenance window defines when these operations can occur, allowing you to schedule them during low-traffic periods to minimize impact on your applications.
+
+You can configure both the day of the week and the hour (in UTC) when maintenance should begin. Planning the window around your application's usage patterns helps ensure maintenance doesn't affect peak traffic times.
 
 # SEE ALSO
 

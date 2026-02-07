@@ -1,3 +1,7 @@
+# TAGLINE
+
+Verify connectivity and validity of repository objects
+
 # TLDR
 
 **Check repository integrity**
@@ -50,9 +54,12 @@
 
 # DESCRIPTION
 
-**git fsck** verifies the connectivity and validity of objects in the database. Useful for finding corruption or recovering lost commits.
+**git fsck** (file system check) performs integrity verification on all objects in the Git object database. It validates that objects are well-formed, correctly connected, and that the repository structure is consistent and uncorrupted.
+
+The command checks for corrupted objects, broken links, invalid object types, and unreachable objects that exist but are not referenced by any branch or tag. Unreachable objects are often the result of rebases, amended commits, or deleted branches, and can be useful for recovering accidentally deleted work via the --lost-found option.
+
+Regular fsck runs are recommended after suspected repository corruption, disk errors, or hardware failures. The --full option extends checking to objects inside pack files rather than just checking pack file integrity.
 
 # SEE ALSO
 
 [git-gc](/man/git-gc)(1), [git-prune](/man/git-prune)(1)
-

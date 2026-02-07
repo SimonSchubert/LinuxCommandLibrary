@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage GitHub project boards and work items
+
 # TLDR
 
 **List projects**
@@ -63,9 +67,10 @@
 
 # DESCRIPTION
 
-**gh project** manages GitHub Projects (project boards). Organize and track work with customizable views, fields, and automation.
+**gh project** manages GitHub Projects (project boards) from the command line. It enables organizing and tracking work with customizable views, fields, and automation.
+
+Projects can contain issues, pull requests, and draft items organized into boards with custom columns and filters. The command provides full lifecycle management from creation through closure.
 
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-issue](/man/gh-issue)(1)
-

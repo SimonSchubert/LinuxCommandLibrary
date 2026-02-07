@@ -1,3 +1,7 @@
+# TAGLINE
+
+test data generator for development
+
 # TLDR
 
 **Generate fake names**
@@ -47,7 +51,11 @@
 
 # DESCRIPTION
 
-**fakedata** generates fake data for testing and development. Supports many types including names, emails, addresses, dates, numbers, and custom formats.
+**fakedata** generates fake data for testing and development. It provides numerous data generators for creating realistic but synthetic information including names, emails, addresses, phone numbers, dates, numbers, and custom format strings.
+
+The tool is designed for populating test databases, creating sample datasets, and development work where realistic data is needed without using actual user information. It supports multiple output formats including CSV, JSON, and tab-separated values.
+
+Generators can be combined in a single invocation, and the seed option enables reproducible data generation for consistent test scenarios.
 
 # SEE ALSO
 

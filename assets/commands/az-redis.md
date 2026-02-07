@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Azure Cache for Redis instances
+
 # TLDR
 
 **Create a Redis cache**

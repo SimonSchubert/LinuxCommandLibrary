@@ -1,3 +1,7 @@
+# TAGLINE
+
+Observe Java method arguments, return values, and exceptions live.
+
 # TLDR
 
 **Watch** method return value

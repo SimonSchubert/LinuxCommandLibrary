@@ -1,3 +1,7 @@
+# TAGLINE
+
+manage GitHub CLI authentication and credentials
+
 # TLDR
 
 **Login to GitHub**
@@ -60,6 +64,11 @@
 The command stores credentials securely in the system keychain when available, falling back to encrypted file storage. It supports github.com and GitHub Enterprise Server instances simultaneously.
 
 gh auth provides the foundation for all authenticated gh operations.
+
+# CONFIGURATION
+
+**~/.config/gh/hosts.yml**
+> Stores authentication tokens and host-specific settings for each GitHub instance.
 
 # CAVEATS
 

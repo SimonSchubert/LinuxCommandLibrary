@@ -1,3 +1,7 @@
+# TAGLINE
+
+Add package repositories to APT sources
+
 # TLDR
 
 This command is an alias of **add-apt-repository**.

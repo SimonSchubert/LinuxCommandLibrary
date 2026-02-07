@@ -1,3 +1,7 @@
+# TAGLINE
+
+Mandatory Access Control framework for confining applications.
+
 # TLDR
 
 **Display AppArmor status** and loaded profiles
@@ -87,6 +91,17 @@ Profiles are stored in **/etc/apparmor.d/** and loaded at boot. The AppArmor ser
 # EXIT CODES
 
 **aa-status** returns: **0** = AppArmor enabled with policy loaded, **1** = AppArmor not enabled, **2** = AppArmor enabled but no policy loaded, **3** = AppArmor control files not available, **4** = insufficient privileges.
+
+# CONFIGURATION
+
+**/etc/apparmor.d/**
+> Directory containing AppArmor security profiles, loaded at boot by the apparmor service.
+
+**/etc/apparmor.d/tunables/**
+> Shared variable definitions included by profiles.
+
+**/etc/apparmor.d/abstractions/**
+> Reusable rule fragments that profiles can include.
 
 # CAVEATS
 

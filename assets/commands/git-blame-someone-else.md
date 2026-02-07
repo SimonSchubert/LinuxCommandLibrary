@@ -1,3 +1,7 @@
+# TAGLINE
+
+Rewrite commit authorship (for fixing attribution errors)
+
 # TLDR
 
 **Blame someone else**
@@ -33,7 +37,7 @@ _COMMIT_
 
 The command uses git's commit amendment capabilities to change the author while preserving other commit metadata. It rewrites history, creating a new commit with the same changes but different authorship.
 
-git blame-someone-else is a joke tool with occasional practical use.
+Despite the humorous name, it has legitimate uses such as correcting author information when commits were made with misconfigured user settings or from a shared development environment.
 
 # CAVEATS
 

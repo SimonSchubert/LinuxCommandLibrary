@@ -1,3 +1,7 @@
+# TAGLINE
+
+Apply patches from email messages in mbox format
+
 # TLDR
 
 **Apply patches from mailbox**
@@ -54,9 +58,9 @@ _MBOX_
 
 **git am** (apply mailbox) applies patches from email messages. It reads patches in mbox format, commonly used for email-based patch submission workflows in open source projects.
 
-The command extracts patch content and commit message from email format, creating commits with the original author information preserved. It handles patch series and manages conflicts.
+The command extracts patch content and commit message from email format, creating commits with the original author information preserved. It handles patch series and manages conflicts through --skip, --abort, and --continue operations.
 
-git am enables traditional patch-based collaboration workflows.
+This workflow remains fundamental to the Linux kernel development process and other projects that rely on email-based code review and patch submission.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Redistribute data across btrfs devices
+
 # TLDR
 
 Show **status**
@@ -30,7 +34,9 @@ Balance **metadata** with limits
 
 # DESCRIPTION
 
-**btrfs balance** redistributes data across devices in a btrfs filesystem. It can rebalance data, convert between RAID profiles, and relocate chunks from specific devices.
+**btrfs balance** redistributes data and metadata across devices in a btrfs filesystem. It operates on block groups (chunks), moving their contents to achieve a more even distribution or to convert between RAID profiles.
+
+Common use cases include rebalancing after adding or removing devices, converting from one RAID level to another, and reclaiming space by consolidating partially used chunks. Filters allow targeting specific chunk types (data, metadata, system) and usage thresholds to avoid unnecessary work.
 
 # PARAMETERS
 

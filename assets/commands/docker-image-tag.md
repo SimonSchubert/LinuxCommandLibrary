@@ -1,3 +1,7 @@
+# TAGLINE
+
+tag Docker images with repository and version identifiers
+
 # TLDR
 
 **Tag an image**
@@ -18,7 +22,7 @@
 
 # DESCRIPTION
 
-**docker image tag** creates a tag that refers to an existing image. Tags are references to specific image versions and are used to push images to registries.
+**docker image tag** creates a tag that refers to an existing image. Tags are references to specific image versions and are used to push images to registries. Multiple tags can point to the same image, allowing different versioning schemes or registry locations without duplicating the image data.
 
 # SEE ALSO
 

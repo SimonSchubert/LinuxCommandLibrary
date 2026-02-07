@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manipulate real-time scheduling attributes of processes
+
 # TLDR
 
 Display **scheduling attributes** of a process
@@ -36,7 +40,11 @@ Run command with **idle** scheduling
 
 # DESCRIPTION
 
-**chrt** sets or retrieves the real-time scheduling attributes of an existing process, or runs a command with specified scheduling attributes. It supports various scheduling policies including FIFO, round-robin, batch, idle, and deadline.
+**chrt** sets or retrieves the real-time scheduling attributes of an existing process, or runs a command with specified scheduling attributes. It supports various Linux scheduling policies including FIFO, round-robin, batch, idle, and deadline.
+
+Real-time scheduling policies (SCHED_FIFO, SCHED_RR) give processes priority over normal tasks, which is critical for time-sensitive applications like audio processing, industrial control, and high-frequency trading. Non-real-time policies (SCHED_BATCH, SCHED_IDLE) are useful for background workloads that should yield to interactive processes.
+
+The tool is part of the **util-linux** package and operates via the **sched_setscheduler**(2) and **sched_setattr**(2) system calls.
 
 # PARAMETERS
 

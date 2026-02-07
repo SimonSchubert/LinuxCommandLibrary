@@ -1,3 +1,7 @@
+# TAGLINE
+
+Merge and split repositories using subdirectories
+
 # TLDR
 
 **Add subtree**
@@ -54,9 +58,10 @@
 
 # DESCRIPTION
 
-**git subtree** merges and splits repositories into subdirectories. Alternative to submodules that keeps a single repository history.
+**git subtree** merges and splits repositories into subdirectories, providing an alternative to submodules. Unlike submodules, subtrees keep everything in a single repository with a unified history.
+
+The `split` command extracts the history of a subdirectory into a separate branch, while `add`, `pull`, and `push` manage the ongoing synchronization with the upstream repository.
 
 # SEE ALSO
 
 [git-submodule](/man/git-submodule)(1), [git-merge](/man/git-merge)(1)
-

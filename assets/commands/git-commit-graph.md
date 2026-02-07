@@ -1,3 +1,7 @@
+# TAGLINE
+
+Write and verify commit graph files
+
 # TLDR
 
 **Write commit graph**
@@ -40,7 +44,13 @@
 
 # DESCRIPTION
 
-**git commit-graph** writes and verifies commit-graph files. Commit graphs accelerate commit walks and reachability queries by caching commit metadata.
+**git commit-graph** manages commit-graph files, a performance optimization feature that stores commit metadata in a format optimized for fast graph traversal operations. These files significantly accelerate common operations like git log, git merge-base, and reachability checks in repositories with deep history.
+
+The commit graph stores a pre-computed representation of the commit DAG (directed acyclic graph), including commit parent relationships, generation numbers, and tree object IDs. This avoids repeatedly parsing commit objects during graph walks, providing dramatic performance improvements for large repositories.
+
+The write subcommand generates or updates the commit graph, either for all reachable commits (--reachable) or for commits provided via stdin (--stdin-commits). Incremental graphs (--split) allow updating the graph efficiently as new commits are added without rewriting the entire file.
+
+Modern Git versions include commit-graph maintenance as part of git gc and git maintenance, so manual invocation is rarely necessary. The verify subcommand checks graph integrity, ensuring the data structure remains consistent with repository state.
 
 # SEE ALSO
 

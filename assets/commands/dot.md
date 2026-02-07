@@ -1,3 +1,7 @@
+# TAGLINE
+
+hierarchical directed graph renderer
+
 # TLDR
 
 **Render graph to** PNG image

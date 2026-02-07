@@ -1,3 +1,7 @@
+# TAGLINE
+
+cryptocurrency trading bot framework
+
 # TLDR
 
 **Start trading** with a configuration and strategy
@@ -77,6 +81,14 @@
 
 **-h**, **--help**
 > Show help message
+
+# CONFIGURATION
+
+**config.json**
+> Main configuration file specifying exchange, API keys, trading parameters, stake amount, and strategy settings.
+
+**user_data/strategies/**
+> Directory containing custom trading strategy Python classes.
 
 # COMMANDS
 

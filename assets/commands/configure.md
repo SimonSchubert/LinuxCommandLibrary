@@ -1,3 +1,7 @@
+# TAGLINE
+
+autotools build configuration script
+
 # TLDR
 
 **Run with default options**

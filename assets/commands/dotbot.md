@@ -1,3 +1,7 @@
+# TAGLINE
+
+dotfiles bootstrapping automation tool
+
 # TLDR
 
 **Install dotfiles with config**

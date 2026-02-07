@@ -1,3 +1,7 @@
+# TAGLINE
+
+Quickly navigate to frequently used directories
+
 # TLDR
 
 **Jump** to directory

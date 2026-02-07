@@ -1,3 +1,7 @@
+# TAGLINE
+
+Hackable text editor built on Electron
+
 # TLDR
 
 **Open** Atom editor
@@ -52,6 +56,20 @@ The editor emphasized community packages and Git integration.
 
 **--clear-window-state**
 > Reset window state
+
+# CONFIGURATION
+
+**~/.atom/config.cson**
+> Main configuration file for settings, themes, and package options.
+
+**~/.atom/init.coffee**
+> Startup script executed when Atom launches.
+
+**~/.atom/keymap.cson**
+> Custom keyboard shortcut bindings.
+
+**~/.atom/styles.less**
+> Custom CSS/LESS styles for the editor UI.
 
 # CAVEATS
 

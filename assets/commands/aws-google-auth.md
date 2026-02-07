@@ -1,3 +1,7 @@
+# TAGLINE
+
+Acquire AWS credentials via Google Workspace SSO
+
 # TLDR
 
 **Authenticate and get AWS credentials** using Google SSO
@@ -59,6 +63,14 @@ The tool authenticates against Google, retrieves a SAML assertion, and exchanges
 
 **--no-cache**
 > Disable caching of IDP and SP IDs
+
+# CONFIGURATION
+
+**~/.aws/credentials**
+> Stores temporary AWS credentials obtained after authentication.
+
+**~/.aws/config**
+> AWS profile configuration including region and output format. Profile-specific google_config.google_idp_id and google_config.google_sp_id can be set here.
 
 # CAVEATS
 

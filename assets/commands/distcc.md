@@ -1,3 +1,7 @@
+# TAGLINE
+
+distributed C/C++ compilation across network hosts
+
 # TLDR
 
 **Compile with distcc**
@@ -61,6 +65,17 @@ The tool acts as a compiler wrapper, deciding whether to compile locally or remo
 **hostname/limit**: Limit jobs to host
 **@hostname**: SSH mode
 **--localslots=N**: Local job slots
+
+# CONFIGURATION
+
+**~/.distcc/hosts**
+> List of distcc hosts to use for distributed compilation.
+
+**/etc/distcc/hosts**
+> System-wide distcc host configuration.
+
+**~/.distcc/state**
+> State directory for distcc logs and temporary files.
 
 # CAVEATS
 

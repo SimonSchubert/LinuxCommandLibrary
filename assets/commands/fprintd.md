@@ -1,3 +1,7 @@
+# TAGLINE
+
+D-Bus fingerprint authentication service
+
 # TLDR
 
 View documentation for **listing** enrolled fingerprints

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Resolve mDNS hostnames and addresses
+
 # TLDR
 
 Resolve name to **IPv4**
@@ -14,7 +18,9 @@ Resolve **IP** to hostname
 
 # DESCRIPTION
 
-**avahi-resolve** translates between mDNS/DNS-SD hostnames and IP addresses using the Avahi daemon. It can resolve .local hostnames to IP addresses and perform reverse lookups.
+**avahi-resolve** translates between mDNS/DNS-SD hostnames and IP addresses using the Avahi daemon. It supports two resolution modes: forward lookup (**--name**) resolves a hostname like **myhost.local** to its IP address, while reverse lookup (**--address**) resolves an IP address back to its mDNS hostname.
+
+The tool queries the local network using multicast DNS rather than traditional unicast DNS servers. Resolution is limited to the local network segment where mDNS traffic is visible. Results can be filtered to IPv4 only (**-4**) or IPv6 only (**-6**).
 
 # PARAMETERS
 

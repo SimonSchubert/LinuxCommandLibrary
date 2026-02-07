@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create, view, and extract archives graphically.
+
 # TLDR
 
 **Extract** a specific archive into the current directory

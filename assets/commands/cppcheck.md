@@ -1,3 +1,7 @@
+# TAGLINE
+
+Static analysis tool for C/C++
+
 # TLDR
 
 **Check single file**
@@ -38,7 +42,11 @@
 
 # DESCRIPTION
 
-**cppcheck** performs static analysis on C/C++ source code. Detects bugs, undefined behavior, and dangerous coding patterns. Focuses on low false positive rate. Supports C++11 through C++20.
+**cppcheck** performs static analysis on C/C++ source code to detect bugs, undefined behavior, and dangerous coding patterns without executing the program. It focuses on maintaining a low false positive rate, making warnings actionable and trustworthy.
+
+The tool analyzes code for memory leaks, null pointer dereferences, buffer overflows, uninitialized variables, and many other issues. It supports C++11 through C++20 standards and can check both individual files and entire project directories.
+
+Unlike compiler warnings, cppcheck performs deeper analysis including flow-sensitive checks and interprocedural analysis. It can detect issues that compilers typically miss while being faster and simpler to configure than comprehensive tools like Clang Static Analyzer.
 
 # PARAMETERS
 

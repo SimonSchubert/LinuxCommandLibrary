@@ -1,3 +1,7 @@
+# TAGLINE
+
+Container image signing and verification tool
+
 # TLDR
 
 **Sign container image (keyless)**
@@ -34,7 +38,11 @@
 
 # DESCRIPTION
 
-**cosign** is Sigstore's tool for signing and verifying container images and software artifacts. It supports keyless signing using OIDC identity or traditional key-based signing.
+**cosign** is Sigstore's tool for signing and verifying container images and software artifacts. It supports keyless signing using OIDC identity or traditional key-based signing, providing cryptographic guarantees about image authenticity and integrity.
+
+The tool integrates with container registries to attach signatures and attestations as OCI artifacts. Keyless signing leverages short-lived certificates tied to identity providers like GitHub, Google, or Microsoft, eliminating the need to manage long-term signing keys. Signatures are recorded in Sigstore's transparency log (Rekor) for public verification and auditability.
+
+cosign also handles SBOMs (Software Bill of Materials), attestations, and other metadata, enabling comprehensive supply chain security. It works with various key management systems including cloud providers' KMS services and hardware security modules.
 
 # COMMANDS
 

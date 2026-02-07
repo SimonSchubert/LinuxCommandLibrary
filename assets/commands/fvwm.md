@@ -1,3 +1,7 @@
+# TAGLINE
+
+highly configurable X11 window manager
+
 # TLDR
 
 **Start FVWM**
@@ -45,6 +49,11 @@
 **FVWM** (F Virtual Window Manager) is a highly configurable window manager for X11. It provides virtual desktops, extensive theming, and a powerful configuration language.
 
 FVWM is known for its flexibility and low resource usage. Configuration is done through a text file with commands for window decoration, menus, keybindings, and module loading.
+
+# CONFIGURATION
+
+**~/.fvwm/config**
+> Main configuration file for window styles, keybindings, menus, and modules.
 
 # CONFIGURATION EXAMPLE
 

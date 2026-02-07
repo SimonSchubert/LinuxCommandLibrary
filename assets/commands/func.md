@@ -1,3 +1,7 @@
+# TAGLINE
+
+Azure Functions development CLI
+
 # TLDR
 
 **Create new function**
@@ -46,6 +50,14 @@ _COMMAND_
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**local.settings.json**
+> Local development settings for runtime, connections, and app settings.
+
+**host.json**
+> Global configuration for all functions in a function app.
 
 # DESCRIPTION
 

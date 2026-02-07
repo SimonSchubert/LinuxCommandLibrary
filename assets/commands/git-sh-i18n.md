@@ -1,3 +1,7 @@
+# TAGLINE
+
+Internationalization support library for Git shell scripts
+
 # TLDR
 
 **Source for i18n support**
@@ -10,11 +14,9 @@
 
 # DESCRIPTION
 
-**git-sh-i18n** is a shell library providing internationalization support for git shell scripts. It's sourced by scripts that need to display translated messages.
+**git-sh-i18n** is an internal shell library providing internationalization support for Git shell scripts. It is sourced by scripts that need to display translated messages.
 
-The library provides functions for message translation using gettext. It handles locale detection and fallback to English when translations aren't available.
-
-git-sh-i18n is internal infrastructure for git script localization.
+The library provides functions for message translation using gettext. It handles locale detection and falls back to English when translations are not available.
 
 # CAVEATS
 

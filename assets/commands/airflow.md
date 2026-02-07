@@ -1,3 +1,7 @@
+# TAGLINE
+
+Author, schedule, and monitor data workflows
+
 # TLDR
 
 **Start the Airflow scheduler**
@@ -95,6 +99,14 @@ Workflows are defined as Python code, creating DAGs that describe how tasks shou
 The tool manages connections to external systems (databases, APIs, cloud services) and variables for configuration. Resource pools allow controlling task concurrency. The database stores metadata about DAG runs, task states, and history.
 
 Common workflows include initializing the database with **db migrate**, starting the **scheduler** and **webserver**, and using **dags trigger** to manually start DAG runs. Tasks can be tested individually without affecting production state using **tasks test**.
+
+# CONFIGURATION
+
+**~/airflow/airflow.cfg**
+> Main configuration file controlling executor type, database connection, web server settings, scheduler behavior, and logging. Can also be overridden via environment variables prefixed with AIRFLOW__.
+
+**~/airflow/webserver_config.py**
+> Web server authentication and security configuration, including RBAC settings and authentication backends.
 
 # CAVEATS
 

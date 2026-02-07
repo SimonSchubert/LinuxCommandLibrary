@@ -1,3 +1,7 @@
+# TAGLINE
+
+Functional frontend language compiler and toolchain
+
 # TLDR
 
 **Initialize Elm project**

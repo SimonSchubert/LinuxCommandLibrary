@@ -1,3 +1,7 @@
+# TAGLINE
+
+cross-platform music player and library organizer
+
 # TLDR
 
 **Start Clementine** music player

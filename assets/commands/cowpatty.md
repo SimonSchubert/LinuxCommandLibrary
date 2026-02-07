@@ -1,3 +1,7 @@
+# TAGLINE
+
+WPA/WPA2 PSK offline auditing tool
+
 # TLDR
 
 **Dictionary attack** on capture file

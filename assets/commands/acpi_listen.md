@@ -1,3 +1,7 @@
+# TAGLINE
+
+ACPI event monitor
+
 # TLDR
 
 **Listen** to any ACPI event while the daemon is running

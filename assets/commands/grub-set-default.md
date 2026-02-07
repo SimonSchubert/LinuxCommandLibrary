@@ -1,3 +1,7 @@
+# TAGLINE
+
+set permanent default GRUB boot entry
+
 # TLDR
 
 Set the **default boot entry** permanently
@@ -26,7 +30,10 @@ _entry_
 
 The entry can be specified as a number (0 for first entry), the full entry name from grub.cfg, or a menu entry identifier. Submenu entries use notation like "1>2" for the third item in the second submenu.
 
-Use **awk -F\' '/menuentry / {print $2}' /boot/grub/grub.cfg** to list menu entry names.
+# CONFIGURATION
+
+**/etc/default/grub**
+> Must contain GRUB_DEFAULT=saved for grub-set-default to take effect.
 
 # CAVEATS
 

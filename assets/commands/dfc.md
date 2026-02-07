@@ -1,3 +1,7 @@
+# TAGLINE
+
+disk usage display with color-coded graphs
+
 # TLDR
 
 **Display disk usage** with color-coded graph bars

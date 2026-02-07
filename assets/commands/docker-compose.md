@@ -1,3 +1,7 @@
+# TAGLINE
+
+multi-container Docker orchestration
+
 # TLDR
 
 **Start** services
@@ -30,9 +34,11 @@
 
 # DESCRIPTION
 
-**docker-compose** is a tool for defining and running multi-container Docker applications. It uses YAML files to configure application services, networks, and volumes, simplifying complex Docker setups.
+**docker-compose** is a tool for defining and running multi-container Docker applications using YAML configuration files. Instead of managing multiple docker run commands with complex flags, Compose lets you declare your entire application stack in a single docker-compose.yml file.
 
-The tool is essential for local development and testing of multi-service applications.
+The tool handles service orchestration, networking, volume management, and dependencies between containers. It automatically creates isolated networks for your application, manages startup order through depends_on directives, and provides convenient commands for viewing logs, executing commands, and managing the entire application lifecycle.
+
+Docker Compose is essential for local development environments where applications require multiple services (web server, database, cache, queue). It ensures consistency across development teams and simplifies the transition from development to production. Modern Docker includes Compose V2 as a native plugin (docker compose) replacing the standalone docker-compose command.
 
 # PARAMETERS
 
@@ -171,6 +177,17 @@ Custom file:
 ```bash
 docker-compose -f custom-compose.yml up
 ```
+
+# CONFIGURATION
+
+**docker-compose.yml**
+> Main configuration file defining services, networks, volumes, and their relationships. Placed in project root directory.
+
+**docker-compose.override.yml**
+> Optional override file automatically loaded alongside docker-compose.yml for local customizations without modifying the main file.
+
+**.env**
+> Environment variables file automatically loaded by Docker Compose to populate variable substitutions in compose files.
 
 # CAVEATS
 

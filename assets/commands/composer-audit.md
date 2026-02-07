@@ -1,3 +1,7 @@
+# TAGLINE
+
+scan PHP dependencies for security vulnerabilities
+
 # TLDR
 
 **Audit dependencies** for security vulnerabilities
@@ -29,9 +33,11 @@
 
 # DESCRIPTION
 
-**composer audit** checks installed PHP packages for known security vulnerabilities. It queries the Packagist security advisories database and reports any vulnerable packages.
+**composer audit** performs security vulnerability scanning for PHP dependencies by querying the official Packagist security advisories database. Introduced in Composer 2.4, it provides a built-in mechanism to identify packages with known security issues, eliminating the need for third-party security scanning tools.
 
-This is similar to **npm audit** for PHP/Composer projects.
+The command analyzes both composer.json requirements and the locked versions in composer.lock, reporting any packages that have published Common Vulnerabilities and Exposures (CVE) entries or security advisories. Results include the vulnerability severity, affected versions, and recommended remediation steps.
+
+This functionality mirrors npm audit for JavaScript and bundle audit for Ruby, providing PHP developers with a standardized way to maintain secure dependency chains. It's particularly valuable in CI/CD pipelines where automated security checks help prevent vulnerable code from reaching production.
 
 # CAVEATS
 

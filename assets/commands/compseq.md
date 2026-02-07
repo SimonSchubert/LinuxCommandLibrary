@@ -1,3 +1,7 @@
+# TAGLINE
+
+calculate nucleotide and amino acid composition
+
 # TLDR
 
 Count word frequencies with **interactive prompt**
@@ -30,9 +34,11 @@ Calculate **expected frequencies** from input
 
 # DESCRIPTION
 
-**compseq** calculates the composition of unique words (k-mers) in biological sequences. It counts the frequency of nucleotide or amino acid patterns in FASTA files.
+**compseq** is a bioinformatics tool from the EMBOSS (European Molecular Biology Open Software Suite) package that performs k-mer frequency analysis on DNA, RNA, and protein sequences. It reads sequences in FASTA format and generates compositional statistics showing how often each possible word (k-mer) of a specified length appears in the sequence.
 
-Part of the EMBOSS bioinformatics suite, it is used for sequence analysis, codon usage studies, and compositional analysis.
+The tool is widely used in molecular biology for multiple applications: analyzing codon usage bias in genes, identifying sequence composition patterns that indicate functional or structural elements, and comparing sequence characteristics across organisms or genomic regions. By specifying different word sizes, researchers can examine dinucleotide frequencies (word size 2), codon frequencies (word size 3), or longer oligonucleotide patterns.
+
+compseq can calculate both observed frequencies and expected frequencies based on the overall base composition, making it useful for identifying statistically significant deviations from random distribution. The reading frame parameter allows analysis of coding sequences in specific frames, critical for studying codon usage patterns in protein-coding genes.
 
 # PARAMETERS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+C and C++ type declaration translator
+
 # TLDR
 
 **Start interactive mode**

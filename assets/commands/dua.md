@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast parallel disk usage analyzer
+
 # TLDR
 
 **Analyze current directory**

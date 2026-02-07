@@ -1,3 +1,7 @@
+# TAGLINE
+
+secure desktop access to Cockpit pages
+
 # TLDR
 
 **Open** a Cockpit page
@@ -14,9 +18,11 @@ Open the **storage** page
 
 # DESCRIPTION
 
-**cockpit-desktop** provides secure access to Cockpit pages within a running desktop session. It starts cockpit-ws and a web browser in an isolated network namespace, along with cockpit-bridge in the user's session.
+**cockpit-desktop** provides secure access to Cockpit server management pages from within a local desktop session without exposing any network ports. It launches cockpit-ws and a web browser inside an isolated network namespace, along with cockpit-bridge in the user's session.
 
-This allows accessing Cockpit functionality without exposing a network port.
+The network namespace isolation ensures that the Cockpit web service is only accessible to the locally spawned browser, eliminating the security surface of a listening network socket. This is ideal for single-user workstations where full Cockpit network service is unnecessary.
+
+An optional SSH host argument allows managing remote machines through the local desktop interface, with the SSH connection providing the transport layer instead of a direct network service.
 
 # PARAMETERS
 

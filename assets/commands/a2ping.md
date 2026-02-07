@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert between PostScript, EPS, and PDF formats
+
 # TLDR
 
 **Convert** a PostScript file to PDF

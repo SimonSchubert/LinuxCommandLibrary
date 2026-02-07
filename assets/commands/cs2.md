@@ -1,3 +1,7 @@
+# TAGLINE
+
+alias for Counter-Strike 2
+
 # TLDR
 
 This command is an alias of **counter-strike-2**.

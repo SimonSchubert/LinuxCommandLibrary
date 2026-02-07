@@ -1,3 +1,7 @@
+# TAGLINE
+
+Download, build, and add AUR packages to a local repository.
+
 # TLDR
 
 **Download and build** packages from the AUR

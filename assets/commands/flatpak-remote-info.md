@@ -1,3 +1,7 @@
+# TAGLINE
+
+query information about remote Flatpak packages
+
 # TLDR
 
 Show **information** about a flatpak in a remote

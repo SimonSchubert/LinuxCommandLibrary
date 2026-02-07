@@ -1,3 +1,7 @@
+# TAGLINE
+
+desktop notification sender for dunst
+
 # TLDR
 
 **Send a notification**
@@ -60,7 +64,11 @@
 
 # DESCRIPTION
 
-**dunstify** sends desktop notifications through the dunst daemon. Provides more features than notify-send including actions and notification replacement.
+**dunstify** is a notification client specifically designed for dunst, offering extended features beyond the standard notify-send utility. It implements the freedesktop.org notification specification with dunst-specific enhancements.
+
+The tool's key advantage is notification replacement: by storing the notification ID from a previous call (via --printid), subsequent notifications can update the existing one rather than creating duplicates. This is essential for progress indicators, status updates, and volume/brightness notifications.
+
+Additional features include action buttons that can trigger commands when clicked, custom hints for advanced styling, and the ability to close notifications programmatically. The tool integrates seamlessly with dunst's configuration for consistent appearance and behavior.
 
 # SEE ALSO
 

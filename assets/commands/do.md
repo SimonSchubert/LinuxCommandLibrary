@@ -1,3 +1,7 @@
+# TAGLINE
+
+command repetition utility
+
 # TLDR
 
 **Execute command** repeatedly

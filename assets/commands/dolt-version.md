@@ -1,3 +1,7 @@
+# TAGLINE
+
+display version and build information
+
 # TLDR
 
 **Show Dolt version**

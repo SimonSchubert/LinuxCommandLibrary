@@ -1,3 +1,7 @@
+# TAGLINE
+
+Add metadata stamps to commit messages
+
 # TLDR
 
 **Add stamp to commit message**
@@ -19,9 +23,8 @@
 
 # DESCRIPTION
 
-**git stamp** adds a stamp (like "Reviewed-by") to the most recent commit message. Part of git-extras. Useful for adding metadata to commits without amending the entire message.
+**git stamp** appends a stamp (such as "Reviewed-by" or "Tested-by") to the most recent commit message. Part of git-extras, it is useful for adding metadata to commits without manually amending the entire message.
 
 # SEE ALSO
 
 [git-commit](/man/git-commit)(1), [git-extras](/man/git-extras)(1)
-

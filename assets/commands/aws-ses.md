@@ -1,3 +1,7 @@
+# TAGLINE
+
+Send and manage email through AWS
+
 # TLDR
 
 **Send an email** with subject and body

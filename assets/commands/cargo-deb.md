@@ -1,3 +1,7 @@
+# TAGLINE
+
+Build Debian packages from Rust projects
+
 # TLDR
 
 **Create Debian package**

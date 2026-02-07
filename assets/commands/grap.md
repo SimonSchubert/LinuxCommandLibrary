@@ -1,3 +1,7 @@
+# TAGLINE
+
+Graph language for groff documents
+
 # TLDR
 
 **Create graph**
@@ -25,11 +29,9 @@ _FILE_
 
 # DESCRIPTION
 
-**grap** is a language for creating graphs, designed for use with groff. It describes graphs using a simple language that produces pic output for troff/groff processing.
+**grap** is a language for creating graphs, designed for use with groff. It describes graphs using a simple declarative language that produces pic output for troff/groff processing.
 
-The tool creates publication-quality graphs for technical documents. It integrates with the troff document processing system.
-
-grap creates graphs for groff documents.
+The tool creates publication-quality graphs for technical documents, integrating seamlessly with the troff document processing system.
 
 # CAVEATS
 

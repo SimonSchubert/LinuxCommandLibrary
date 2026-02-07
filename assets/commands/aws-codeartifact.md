@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage private package artifact repositories.
+
 # TLDR
 
 **Login to a CodeArtifact repository** for npm

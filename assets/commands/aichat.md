@@ -1,3 +1,7 @@
+# TAGLINE
+
+Chat with AI models from the terminal
+
 # TLDR
 
 **Ask a question**
@@ -78,6 +82,14 @@ Roles define reusable personas and system prompts. Built-in roles include coder,
 The tool supports function calling, allowing AI models to invoke defined tools. Sessions persist conversations across invocations. Multiple providers and models can be configured simultaneously.
 
 Install via `cargo install aichat`, Homebrew, or download binaries.
+
+# CONFIGURATION
+
+**~/.config/aichat/config.yaml**
+> Main configuration file for model settings, API keys, roles, and default parameters.
+
+**~/.config/aichat/roles.yaml**
+> Custom role definitions with system prompts and parameters.
 
 # CAVEATS
 

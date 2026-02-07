@@ -1,3 +1,7 @@
+# TAGLINE
+
+Samba Windows event log manager
+
 # TLDR
 
 **Create event log** database
@@ -43,6 +47,11 @@ _OPERATION_
 The tool works with Samba's implementation of the Windows Event Log service. Event logs are stored in TDB (Trivial Database) format and can be viewed from Windows Event Viewer.
 
 eventlogadm is useful for integrating Unix logging with Windows-centric management tools.
+
+# CONFIGURATION
+
+**/etc/samba/smb.conf**
+> Samba server configuration that defines event log paths and settings.
 
 # CAVEATS
 

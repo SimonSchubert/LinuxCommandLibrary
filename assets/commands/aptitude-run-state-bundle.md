@@ -1,3 +1,7 @@
+# TAGLINE
+
+Replay aptitude state from a bundle
+
 # TLDR
 
 **Run** aptitude with state bundle

@@ -1,3 +1,7 @@
+# TAGLINE
+
+OpenCL platform and device information tool
+
 # TLDR
 
 **Display all OpenCL information**

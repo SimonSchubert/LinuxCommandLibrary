@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage bloom filters for password checking
+
 # TLDR
 
 **Generate** bloom filter from dictionary

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage remote repository clones in a structured directory hierarchy
+
 # TLDR
 
 **Clone a repository**
@@ -54,9 +58,15 @@
 
 **ghq** manages remote repository clones in a structured directory hierarchy. It clones repositories into organized paths based on their URLs, enabling consistent repository organization across projects.
 
-The tool integrates with shell workflows and fuzzy finders like fzf for quick repository navigation. It supports GitHub, GitLab, Bitbucket, and custom Git hosts.
+The tool integrates with shell workflows and fuzzy finders like **fzf** for quick repository navigation. It supports GitHub, GitLab, Bitbucket, and custom Git hosts.
 
-ghq simplifies managing many repositories with predictable paths.
+# CONFIGURATION
+
+**~/.gitconfig**
+> Configure repository root path with `ghq.root` setting.
+
+**~/.config/ghq/config.toml**
+> Alternative configuration file for setting root paths and Git command options.
 
 # CAVEATS
 

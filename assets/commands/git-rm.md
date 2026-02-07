@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove files from the working tree and index
+
 # TLDR
 
 **Remove file from tracking**
@@ -49,11 +53,9 @@ _FILES_
 
 # DESCRIPTION
 
-**git rm** removes files from the working tree and index. It stages the removal for the next commit. The --cached option removes from tracking while keeping the file on disk.
+**git rm** removes files from the working tree and the index, staging the removal for the next commit. The `--cached` option removes files from tracking while keeping them on disk, which is useful for files that should have been in `.gitignore`.
 
-The command is used to stop tracking files or delete tracked files. For untracking files that should have been ignored, use --cached combined with adding to .gitignore.
-
-git rm provides controlled file removal from version control.
+Without `--cached`, the file is deleted from both the working tree and the index.
 
 # CAVEATS
 

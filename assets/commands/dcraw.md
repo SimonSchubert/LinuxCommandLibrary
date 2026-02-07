@@ -1,3 +1,7 @@
+# TAGLINE
+
+universal RAW camera image decoder
+
 # TLDR
 
 **Convert RAW to PPM with default settings**

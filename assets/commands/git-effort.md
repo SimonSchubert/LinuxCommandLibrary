@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display commit activity and development effort per file
+
 # TLDR
 
 **Show effort for all files**
@@ -29,11 +33,9 @@ _PATH_
 
 # DESCRIPTION
 
-**git effort** displays commit activity for files over time. It shows which files receive the most attention through commit frequency and active days, helping identify hotspots.
+**git effort** displays commit activity for files over time, showing which files receive the most attention through commit frequency and active days. The output ranks files by commit count and active days, helping identify hotspots and understand maintenance patterns in the codebase.
 
-The output displays files ranked by commit count and active days. This reveals which areas of the codebase receive ongoing development effort.
-
-git effort helps understand maintenance patterns and code hotspots.
+Part of the git-extras suite, it reveals which areas of the codebase receive ongoing development effort, useful for planning code reviews and understanding project dynamics.
 
 # CAVEATS
 

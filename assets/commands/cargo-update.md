@@ -1,3 +1,7 @@
+# TAGLINE
+
+Update dependencies in Cargo.lock
+
 # TLDR
 
 **Update all dependencies**
@@ -30,7 +34,9 @@
 
 # DESCRIPTION
 
-**cargo update** updates dependencies in Cargo.lock to latest compatible versions. Creates Cargo.lock if it doesn't exist. Without -p flag, updates all dependencies.
+**cargo update** updates dependencies recorded in Cargo.lock to the latest versions compatible with the version requirements specified in Cargo.toml. If Cargo.lock does not exist, it is created. Without the `-p` flag, all dependencies are updated.
+
+When used with `-p`, only the specified package is updated conservatively. The `--precise` flag can pin a package to an exact version. The lockfile ensures reproducible builds across environments; running `cargo update` is the standard way to pull in bug fixes and minor updates from dependencies while respecting semver constraints.
 
 # PARAMETERS
 

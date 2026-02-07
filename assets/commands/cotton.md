@@ -1,3 +1,7 @@
+# TAGLINE
+
+Git worktree management wrapper
+
 # TLDR
 
 **Initialize cotton** in a repository

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Ada/SPARK source package manager.
+
 # TLDR
 
 **Search** for a crate

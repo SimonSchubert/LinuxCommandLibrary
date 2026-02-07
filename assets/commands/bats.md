@@ -1,3 +1,7 @@
+# TAGLINE
+
+Automated testing framework for bash scripts
+
 # TLDR
 
 **Run** test file

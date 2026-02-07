@@ -1,3 +1,7 @@
+# TAGLINE
+
+interactive cross-platform process killer
+
 # TLDR
 
 **Interactive process killer**
@@ -41,7 +45,11 @@
 
 # DESCRIPTION
 
-**fkill** is a cross-platform process killer with an interactive interface. Can kill processes by name, PID, or port number. Provides fuzzy search in interactive mode.
+**fkill** is a cross-platform process killer with an interactive interface. It provides fuzzy search for selecting processes to terminate, supporting multiple selection methods.
+
+The tool can kill processes by name, PID, or port number. In interactive mode, it displays a searchable list of running processes with resource usage information, allowing users to select targets with arrow keys and fuzzy matching.
+
+Written in Node.js, fkill works consistently across Linux, macOS, and Windows platforms.
 
 # SEE ALSO
 

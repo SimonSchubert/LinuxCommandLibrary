@@ -1,3 +1,7 @@
+# TAGLINE
+
+Python toolkit for manipulating font files
+
 # TLDR
 
 **Subset** a TTF font file to the Basic Latin Unicode block

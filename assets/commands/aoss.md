@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run OSS applications using ALSA emulation
+
 # TLDR
 
 **Run an application with ALSA OSS emulation**

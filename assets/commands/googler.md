@@ -1,3 +1,7 @@
+# TAGLINE
+
+Google search from the terminal
+
 # TLDR
 
 **Search Google**
@@ -49,11 +53,14 @@ _QUERY_
 
 # DESCRIPTION
 
-**googler** is a power tool to search Google from the terminal. It shows results with titles, URLs, and snippets, supporting navigation and browser opening.
+**googler** is a power tool to search Google from the terminal. It shows results with titles, URLs, and snippets, and supports an interactive interface for browsing results and opening them in a browser.
 
-The tool provides an interactive interface for browsing results. It supports various search options and output customization.
+The tool supports site-specific search, news, various output customizations, and works without requiring an API key.
 
-googler enables comprehensive Google search from terminal.
+# CONFIGURATION
+
+**BROWSER**
+> Environment variable to specify the browser for opening search results.
 
 # CAVEATS
 

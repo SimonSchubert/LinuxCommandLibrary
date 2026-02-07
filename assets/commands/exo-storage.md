@@ -1,3 +1,7 @@
+# TAGLINE
+
+Exoscale S3-compatible object storage management
+
 # TLDR
 
 **List buckets**
@@ -54,6 +58,10 @@
 # DESCRIPTION
 
 **exo storage** manages Exoscale Simple Object Storage (SOS), an S3-compatible object storage service. Store and retrieve files with HTTP access.
+
+SOS provides scalable object storage for backups, static assets, media files, and data lakes. Being S3-compatible, it works with standard tools like s3cmd, rclone, and AWS SDKs.
+
+The tool supports bucket management, file uploads/downloads, presigned URLs for temporary access, and CORS configuration for web applications.
 
 # SEE ALSO
 

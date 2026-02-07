@@ -1,3 +1,7 @@
+# TAGLINE
+
+Automated multi-threaded network reconnaissance
+
 # TLDR
 
 Scan **target** host
@@ -24,6 +28,8 @@ Scan specific **ports**
 
 **autorecon** is a multi-threaded network reconnaissance tool that performs automated enumeration of services. It runs various scanning tools in parallel and organizes results by host and service type.
 
+The tool first performs port scanning using **nmap**, then launches service-specific enumeration scripts based on detected open ports. Results are organized into per-target directories with structured output for each scanning phase. It supports custom scan profiles and plugin-based service enumeration, making it extensible for different penetration testing methodologies.
+
 # PARAMETERS
 
 **-t, --target-file** _file_
@@ -43,6 +49,11 @@ Scan specific **ports**
 
 **--heartbeat**
 > Show periodic status updates
+
+# CONFIGURATION
+
+**~/.config/AutoRecon/**
+> Directory for custom scan profiles and plugin configurations.
 
 # CAVEATS
 

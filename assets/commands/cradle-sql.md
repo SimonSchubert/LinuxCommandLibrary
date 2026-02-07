@@ -1,3 +1,7 @@
+# TAGLINE
+
+execute SQL queries through Cradle framework
+
 # TLDR
 
 **Execute a SQL query**

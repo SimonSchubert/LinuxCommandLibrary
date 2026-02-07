@@ -1,3 +1,7 @@
+# TAGLINE
+
+Built-in Jest-compatible test runner
+
 # TLDR
 
 **Run all tests**

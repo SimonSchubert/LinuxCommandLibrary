@@ -1,3 +1,7 @@
+# TAGLINE
+
+embedded analytical database engine
+
 # TLDR
 
 **Start an interactive SQL shell**
@@ -82,6 +86,11 @@
 
 **-version**
 > Print version and exit.
+
+# CONFIGURATION
+
+**~/.duckdbrc**
+> Initialization file with SQL commands executed on shell startup, used for setting preferences and defaults.
 
 # DESCRIPTION
 

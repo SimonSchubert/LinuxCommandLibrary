@@ -1,3 +1,7 @@
+# TAGLINE
+
+XSL-FO to PDF processor
+
 # TLDR
 
 **Convert XSL-FO to PDF**
@@ -65,6 +69,11 @@ The tool supports transformation pipelines from XML through XSLT to XSL-FO to fi
 
 **-d**
 > Debug mode.
+
+# CONFIGURATION
+
+**fop.xconf**
+> Configuration file for fonts, renderers, and hyphenation settings.
 
 # CAVEATS
 

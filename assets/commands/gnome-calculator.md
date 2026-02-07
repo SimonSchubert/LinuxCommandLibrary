@@ -1,3 +1,7 @@
+# TAGLINE
+
+GNOME desktop calculator application
+
 # TLDR
 
 Launch the **GNOME Calculator GUI**
@@ -32,16 +36,9 @@ Display **version**
 
 # DESCRIPTION
 
-**gnome-calculator** is the official calculator application for the GNOME desktop environment. It provides multiple modes for different calculation needs:
+**gnome-calculator** is the official calculator application for the GNOME desktop environment. It provides multiple modes: Basic for simple arithmetic, Advanced for scientific functions and trigonometry, Financial for interest and currency conversion, and Programming for bitwise operations and base conversion.
 
-**Basic** - Simple arithmetic operations
-**Advanced** - Scientific functions, trigonometry, logarithms
-**Financial** - Interest, amortization, currency conversion
-**Programming** - Bitwise operations, base conversion (hex, octal, binary)
-
-The calculator supports variables, unit conversions, and complex mathematical expressions. Results can be copied to the clipboard, and calculation history is preserved.
-
-The **--solve** option allows using it as a command-line calculator without opening the GUI window.
+The calculator supports variables, unit conversions, and complex mathematical expressions. The **--solve** option allows using it as a command-line calculator without opening the GUI window.
 
 # CAVEATS
 

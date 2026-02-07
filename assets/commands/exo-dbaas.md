@@ -1,3 +1,7 @@
+# TAGLINE
+
+Exoscale managed database service operations
+
 # TLDR
 
 **List database services**
@@ -54,7 +58,11 @@
 
 # DESCRIPTION
 
-**exo dbaas** manages Exoscale Database as a Service (DBaaS). Supports PostgreSQL, MySQL, Redis, OpenSearch, and other managed database engines.
+**exo dbaas** manages Exoscale Database as a Service (DBaaS). Supports PostgreSQL, MySQL, Redis, OpenSearch, Kafka, and other managed database engines.
+
+DBaaS provides fully managed database instances with automated backups, monitoring, updates, and high availability. Services run on dedicated infrastructure with configurable performance plans.
+
+The tool handles provisioning, configuration updates, and access credential management without manual database server administration.
 
 # SEE ALSO
 

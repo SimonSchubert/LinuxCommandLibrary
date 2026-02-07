@@ -1,3 +1,7 @@
+# TAGLINE
+
+Internal session and application launcher for Cinnamon
+
 # TLDR
 
 **Start or restart a Cinnamon session**

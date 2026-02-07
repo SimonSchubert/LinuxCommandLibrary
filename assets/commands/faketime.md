@@ -1,3 +1,7 @@
+# TAGLINE
+
+system time manipulation for testing
+
 # TLDR
 
 Fake time to **this evening**
@@ -32,6 +36,14 @@ _command_
 
 **-f**
 > Freeze time (don't advance)
+
+# DESCRIPTION
+
+**faketime** runs a command with a fake system time by intercepting time-related system calls. It uses LD_PRELOAD to wrap system calls like time(), gettimeofday(), and clock_gettime(), returning user-specified times instead of actual system time.
+
+This is useful for testing time-dependent software behavior, debugging date-related bugs, simulating future or past conditions, and testing expiration or scheduling logic. The tool accepts both absolute timestamps and relative offsets using natural language.
+
+The freeze option (-f) prevents time from advancing, useful for testing code that expects a specific moment rather than progressing time.
 
 # CAVEATS
 

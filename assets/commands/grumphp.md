@@ -1,3 +1,7 @@
+# TAGLINE
+
+PHP code quality enforcement via git hooks
+
 # TLDR
 
 **Initialize GrumPHP**
@@ -49,11 +53,14 @@ _COMMAND_
 
 # DESCRIPTION
 
-**GrumPHP** is a PHP code quality tool that runs checks on git commits. It enforces coding standards by running tasks like PHPStan, PHP_CodeSniffer, and PHPUnit.
+**GrumPHP** is a PHP code quality tool that runs checks on git commits. It enforces coding standards by running tasks like PHPStan, PHP_CodeSniffer, and PHPUnit before allowing commits.
 
-The tool integrates with git hooks to prevent commits that fail quality checks. It's configurable via grumphp.yml.
+The tool integrates with git hooks to prevent commits that fail quality checks. It is configurable via a grumphp.yml file in the project root.
 
-GrumPHP enforces PHP code quality on commits.
+# CONFIGURATION
+
+**grumphp.yml**
+> Project-level configuration file defining tasks, parameters, and git hook settings.
 
 # CAVEATS
 

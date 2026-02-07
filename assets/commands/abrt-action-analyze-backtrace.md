@@ -1,3 +1,7 @@
+# TAGLINE
+
+analyze crash backtrace for duplication and quality
+
 # TLDR
 
 Analyze backtrace for the **current working directory**

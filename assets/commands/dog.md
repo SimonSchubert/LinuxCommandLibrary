@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line DNS client with colorful output
+
 # TLDR
 
 **Query A records**

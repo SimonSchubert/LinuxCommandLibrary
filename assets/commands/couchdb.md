@@ -1,3 +1,7 @@
+# TAGLINE
+
+Document-oriented NoSQL database server
+
 # TLDR
 
 **Start CouchDB** server
@@ -64,6 +68,14 @@
 CouchDB is designed for reliability with Multi-Version Concurrency Control (MVCC), ensuring data integrity without locking. It features built-in replication for distributed deployments, making it suitable for offline-first applications that sync when connectivity is available.
 
 The database provides a RESTful HTTP API for all operations, from creating databases and documents to running queries. The built-in web interface, Fauxton, allows administration and querying through a browser at http://localhost:5984/_utils/.
+
+# CONFIGURATION
+
+**/etc/couchdb/local.ini**
+> Local configuration overrides for network binding, authentication, logging, and performance tuning.
+
+**/etc/couchdb/default.ini**
+> Default system configuration (should not be edited directly; use local.ini for overrides).
 
 # CAVEATS
 

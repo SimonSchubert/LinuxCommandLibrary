@@ -1,3 +1,7 @@
+# TAGLINE
+
+shell expansion operator for variables and commands
+
 # TLDR
 
 **Reference a variable**

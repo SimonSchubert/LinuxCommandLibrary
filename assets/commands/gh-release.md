@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage GitHub releases and distribution assets
+
 # TLDR
 
 **List releases**
@@ -81,9 +85,10 @@
 
 # DESCRIPTION
 
-**gh release** manages GitHub releases. Create releases, upload assets, and manage release notes for versioned software distribution.
+**gh release** manages GitHub releases for versioned software distribution. Releases package git tags with release notes and downloadable binary assets, providing an official distribution mechanism.
+
+The command supports creating releases from existing tags or creating tags automatically. Release notes can be written manually, loaded from files, or auto-generated from commit messages and merged pull requests using the --generate-notes flag. Assets like compiled binaries, packages, and archives can be uploaded during creation or added later.
 
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-repo](/man/gh-repo)(1)
-

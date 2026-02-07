@@ -1,3 +1,7 @@
+# TAGLINE
+
+Register mDNS/DNS-SD services on the local network
+
 # TLDR
 
 **Publish** mDNS service
@@ -22,9 +26,11 @@ Publish with **subtype**
 
 # DESCRIPTION
 
-**avahi-publish-service** registers a mDNS/DNS-SD service on the local network. It allows services to be discovered by other devices using Avahi or Bonjour-compatible service discovery.
+**avahi-publish-service** registers a mDNS/DNS-SD service on the local network via the Avahi daemon. It allows services to be discovered by other devices using Avahi or Bonjour-compatible service discovery. This command is equivalent to **avahi-publish -s** and provides a convenient shortcut specifically for service registration.
 
-The tool is useful for advertising network services like printers, file shares, or custom applications without requiring manual network configuration.
+The tool requires a service name, a DNS-SD service type (e.g., **_http._tcp**), and a port number. Optional TXT record strings can provide additional metadata about the service. Service subtypes can be registered for more specific categorization.
+
+The registration persists only while the process is running. When terminated, the service advertisement is automatically withdrawn from the network.
 
 # PARAMETERS
 

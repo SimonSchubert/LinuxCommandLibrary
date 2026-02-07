@@ -1,3 +1,7 @@
+# TAGLINE
+
+Reset current HEAD to a specified state
+
 # TLDR
 
 **Unstage files**
@@ -54,7 +58,9 @@
 
 # DESCRIPTION
 
-**git reset** resets current HEAD to specified state. Can be used to unstage files, undo commits, or completely discard changes.
+**git reset** moves the current HEAD to a specified state. It can unstage files, undo commits, or completely discard changes depending on the mode used.
+
+The three main modes are `--soft` (keeps changes staged), `--mixed` (unstages changes, the default), and `--hard` (discards all changes). When given file paths, it unstages those files without moving HEAD.
 
 # CAVEATS
 
@@ -63,4 +69,3 @@ Hard reset discards changes permanently. Be careful with --hard on uncommitted w
 # SEE ALSO
 
 [git-checkout](/man/git-checkout)(1), [git-revert](/man/git-revert)(1)
-

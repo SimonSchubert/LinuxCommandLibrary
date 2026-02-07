@@ -1,3 +1,7 @@
+# TAGLINE
+
+Control the Apache HTTP Server
+
 # TLDR
 
 **Start** the server
@@ -75,6 +79,20 @@ Print full **Apache configuration**
 
 **-h**
 > Display help
+
+# CONFIGURATION
+
+**/etc/httpd/conf/httpd.conf**
+> Main configuration file on RHEL/CentOS/Fedora systems.
+
+**/etc/apache2/apache2.conf**
+> Main configuration file on Debian/Ubuntu systems.
+
+**/etc/httpd/conf.d/**
+> Directory for additional configuration files on RHEL-based systems.
+
+**/etc/apache2/sites-available/**
+> Virtual host configuration files on Debian-based systems.
 
 # CAVEATS
 

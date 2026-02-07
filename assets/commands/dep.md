@@ -1,3 +1,7 @@
+# TAGLINE
+
+legacy dependency management for Go
+
 # TLDR
 
 **Initialize dependency management** for project
@@ -64,6 +68,14 @@ _COMMAND_
 The tool resolves transitive dependencies, handles version constraints, and vendors dependencies in the vendor directory. The ensure command is the primary interface for adding, updating, and synchronizing dependencies.
 
 dep uses semantic import versioning and supports various version constraint syntaxes including semver ranges, branches, and revisions.
+
+# CONFIGURATION
+
+**Gopkg.toml**
+> Project dependency constraints and metadata configuration.
+
+**Gopkg.lock**
+> Generated lock file with exact dependency versions and hashes.
 
 # CAVEATS
 

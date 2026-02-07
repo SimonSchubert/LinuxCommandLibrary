@@ -1,3 +1,7 @@
+# TAGLINE
+
+Multicast DNS/DNS-SD service discovery daemon
+
 # TLDR
 
 **Start** the Avahi mDNS/DNS-SD daemon
@@ -81,16 +85,16 @@ The daemon provides two IPC APIs: a simple protocol used by **avahi-dnsconfd** a
 
 **Signal handling**: **SIGINT** and **SIGTERM** trigger shutdown, **SIGHUP** reloads DNS server data and service definitions, and **SIGUSR1** dumps cached resource records to syslog for debugging.
 
-# FILES
+# CONFIGURATION
 
 **/etc/avahi/avahi-daemon.conf**
-> Main configuration file
+> Main daemon configuration file controlling server settings, network interfaces, publishing options, and resource limits.
 
 **/etc/avahi/hosts**
-> Static hostname mappings for mDNS publishing
+> Static hostname-to-address mappings published via mDNS.
 
-**/etc/avahi/services/\*.service**
-> XML service definition files for static service registration
+**/etc/avahi/services/*.service**
+> XML service definition files for persistent static service registration.
 
 # CAVEATS
 

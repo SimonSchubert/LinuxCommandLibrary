@@ -1,3 +1,7 @@
+# TAGLINE
+
+Transform images into ASCII art for terminal display.
+
 # TLDR
 
 **Convert** image to ASCII

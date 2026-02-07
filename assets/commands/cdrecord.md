@@ -1,3 +1,7 @@
+# TAGLINE
+
+burn data to CD, DVD, and Blu-ray discs
+
 # TLDR
 
 **Burn an ISO image** to CD/DVD

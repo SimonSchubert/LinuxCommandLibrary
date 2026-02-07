@@ -1,3 +1,7 @@
+# TAGLINE
+
+Grap graph to image converter
+
 # TLDR
 
 **Convert grap to image**
@@ -36,11 +40,9 @@ _FILE_
 
 # DESCRIPTION
 
-**grap2graph** converts grap graphs to image formats. It's a wrapper that pipes grap output through groff and converts the result to various image formats.
+**grap2graph** converts grap graphs to image formats. It is a wrapper that pipes grap output through groff and converts the result to various image formats like PNG, SVG, and PDF.
 
-The tool is part of the groff suite and facilitates converting grap language graphs into standalone images. It handles the intermediate processing steps automatically.
-
-grap2graph converts grap graphs to images.
+The tool is part of the groff suite and handles the intermediate processing steps automatically, producing standalone images from grap source.
 
 # CAVEATS
 

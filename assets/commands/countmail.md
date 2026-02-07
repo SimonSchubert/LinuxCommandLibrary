@@ -1,3 +1,7 @@
+# TAGLINE
+
+Mailbox message counter
+
 # TLDR
 
 **Count messages** in the default mailbox

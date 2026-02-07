@@ -1,3 +1,7 @@
+# TAGLINE
+
+change SELinux security categories
+
 # TLDR
 
 **List** all available categories

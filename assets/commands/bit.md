@@ -1,3 +1,7 @@
+# TAGLINE
+
+Modern Git CLI wrapper with simplified commands
+
 # TLDR
 
 **Save changes** to the current branch

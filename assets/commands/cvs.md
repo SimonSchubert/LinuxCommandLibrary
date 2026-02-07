@@ -1,3 +1,7 @@
+# TAGLINE
+
+Concurrent Versions System for version control
+
 # TLDR
 
 **Checkout a module** from the repository

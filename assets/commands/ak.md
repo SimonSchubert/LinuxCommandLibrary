@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage the authentik identity provider
+
 # TLDR
 
 **Start the server**
@@ -90,6 +94,14 @@ Blueprints provide declarative configuration management. Export configurations w
 For account recovery when users are locked out, **create_recovery_key** generates a time-limited recovery URL. This requires access to the server command line.
 
 authentik supports various authentication protocols including SAML, OAuth2/OIDC, LDAP, SCIM, and proxy authentication for applications that don't support SSO natively.
+
+# CONFIGURATION
+
+**/etc/authentik/config.yml**
+> Main authentik configuration file for database, secret key, email, and logging settings.
+
+**blueprints/**
+> Directory containing declarative YAML blueprints for configuration-as-code.
 
 # CAVEATS
 

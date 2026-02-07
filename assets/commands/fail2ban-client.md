@@ -1,3 +1,7 @@
+# TAGLINE
+
+intrusion prevention control interface
+
 # TLDR
 
 Retrieve current **status** of a jail
@@ -44,6 +48,20 @@ Used for managing jail status, banning/unbanning IPs, and server control.
 
 **reload**
 > Reload configuration
+
+# CONFIGURATION
+
+**/etc/fail2ban/jail.conf**
+> Default jail configurations (do not modify directly).
+
+**/etc/fail2ban/jail.local**
+> Local overrides for jail configurations.
+
+**/etc/fail2ban/fail2ban.conf**
+> Main fail2ban server configuration.
+
+**/etc/fail2ban/filter.d/**
+> Filter definitions for log parsing.
 
 # CAVEATS
 

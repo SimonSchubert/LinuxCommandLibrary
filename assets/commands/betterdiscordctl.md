@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage BetterDiscord installation on Linux
+
 # TLDR
 
 **Install** BetterDiscord on Discord Stable

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Trace Java method execution paths and timing.
+
 # TLDR
 
 **Trace** method execution

@@ -1,3 +1,7 @@
+# TAGLINE
+
+automated login to Cisco network devices
+
 # TLDR
 
 **Login to a Cisco device**
@@ -60,16 +64,6 @@
 **-v**
 > Enable verbose output.
 
-# CONFIGURATION FILE
-
-Credentials in **~/.cloginrc**:
-```
-add user hostname username
-add password hostname {login_pass} {enable_pass}
-add method hostname ssh
-add autoenable hostname 1
-```
-
 # DESCRIPTION
 
 **clogin** is part of RANCID (Really Awesome New Cisco confIg Differ), a network device configuration management system. It provides automated login to Cisco and compatible network devices, handling authentication and enable mode transitions.
@@ -77,6 +71,11 @@ add autoenable hostname 1
 The tool uses Expect scripts to automate the interactive login process, supporting various authentication methods and device prompts. It can execute commands or scripts across multiple devices, making it valuable for network automation and configuration backup.
 
 Credentials are typically stored in **.cloginrc** with restricted permissions. The tool supports SSH, telnet, and other access methods depending on device configuration.
+
+# CONFIGURATION
+
+**~/.cloginrc**
+> Stores device credentials, authentication methods, and connection settings. Must be chmod 600.
 
 # CAVEATS
 

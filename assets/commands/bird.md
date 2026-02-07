@@ -1,3 +1,7 @@
+# TAGLINE
+
+Dynamic IP routing daemon
+
 # TLDR
 
 **Start** BIRD daemon
@@ -55,25 +59,8 @@ The daemon is widely used for internet routing, particularly by ISPs and in data
 
 # CONFIGURATION
 
-Example /etc/bird/bird.conf:
-```
-router id 192.0.2.1;
-
-protocol kernel {
-    ipv4 {
-        export all;
-    };
-}
-
-protocol bgp {
-    local as 65001;
-    neighbor 192.0.2.2 as 65002;
-    ipv4 {
-        import all;
-        export all;
-    };
-}
-```
+**/etc/bird/bird.conf**
+> Main configuration file defining routing protocols, filters, and network interfaces.
 
 # CONTROL
 

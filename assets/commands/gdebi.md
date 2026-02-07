@@ -1,3 +1,7 @@
+# TAGLINE
+
+local .deb package installer with dependency resolution
+
 # TLDR
 
 **Install** local .deb packages resolving dependencies

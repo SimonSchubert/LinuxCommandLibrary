@@ -1,3 +1,7 @@
+# TAGLINE
+
+flash drive integrity verification tool
+
 # TLDR
 
 **Read and verify** flash drive

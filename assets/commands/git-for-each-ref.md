@@ -1,3 +1,7 @@
+# TAGLINE
+
+Output information on each reference with custom formatting
+
 # TLDR
 
 **List all refs**
@@ -50,9 +54,12 @@
 
 # DESCRIPTION
 
-**git for-each-ref** outputs information on each ref. Highly customizable with format strings. Used for scripting and custom ref listings.
+**git for-each-ref** is a plumbing command that outputs detailed information about Git references (branches, tags, remote branches) in a highly customizable format. It serves as the foundation for many higher-level Git commands and scripts that need to process repository references.
+
+The format string syntax supports field extraction using %(fieldname) placeholders, with available fields including refname, objecttype, objectname, author, committer, and many others. Sorting capabilities enable ordering references by any field, with support for reverse sorting using a minus prefix.
+
+This command is primarily used in scripts and Git aliases rather than direct user interaction. The filtering options (--merged, --no-merged, --points-at) provide powerful selection mechanisms for finding references matching specific criteria.
 
 # SEE ALSO
 
 [git-branch](/man/git-branch)(1), [git-tag](/man/git-tag)(1)
-

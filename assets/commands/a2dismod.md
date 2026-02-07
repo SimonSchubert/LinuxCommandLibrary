@@ -1,3 +1,7 @@
+# TAGLINE
+
+disable an Apache2 module
+
 # TLDR
 
 **Disable** a module

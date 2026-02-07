@@ -1,3 +1,7 @@
+# TAGLINE
+
+Scripts triggered at Git workflow points
+
 # TLDR
 
 **Create pre-commit hook**
@@ -36,21 +40,10 @@ update             Per-branch pre-receive
 post-receive       After push completes
 ```
 
-# EXAMPLE HOOKS
+# CONFIGURATION
 
-```bash
-# .git/hooks/pre-commit
-#!/bin/sh
-npm run lint || exit 1
-npm test || exit 1
-
-# .git/hooks/commit-msg
-#!/bin/sh
-grep -qE "^(feat|fix|docs|style|refactor|test|chore):" "$1" || {
-  echo "Commit message must follow convention"
-  exit 1
-}
-```
+**.git/hooks/**
+> Directory containing hook scripts for the repository. Must be executable.
 
 # CAVEATS
 

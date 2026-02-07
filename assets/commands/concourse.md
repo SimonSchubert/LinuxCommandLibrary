@@ -1,3 +1,7 @@
+# TAGLINE
+
+container-based continuous integration server
+
 # TLDR
 
 **Start a quickstart all-in-one** Concourse instance

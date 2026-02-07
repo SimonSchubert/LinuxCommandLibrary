@@ -1,3 +1,7 @@
+# TAGLINE
+
+generate human-readable backtrace from a coredump
+
 # TLDR
 
 **Generate backtrace** from a problem directory

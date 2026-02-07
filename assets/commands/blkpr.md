@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage persistent reservations on block devices
+
 # TLDR
 
 **Register** reservation

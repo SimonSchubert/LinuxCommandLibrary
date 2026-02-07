@@ -1,3 +1,7 @@
+# TAGLINE
+
+vulnerability scanner for container images and filesystems
+
 # TLDR
 
 **Scan container image**
@@ -28,12 +32,6 @@
 
 **grype** [_options_] _source_
 
-# DESCRIPTION
-
-**grype** is a vulnerability scanner for container images and filesystems. It identifies known security vulnerabilities in packages and dependencies by comparing against vulnerability databases.
-
-The tool integrates with CI/CD pipelines and produces reports in various formats. It works with the same sources as Syft for comprehensive software composition analysis.
-
 # PARAMETERS
 
 **-o**, **--output** _format_
@@ -59,6 +57,12 @@ The tool integrates with CI/CD pipelines and produces reports in various formats
 
 **--exclude** _glob_
 > Exclude paths.
+
+# DESCRIPTION
+
+**grype** is a vulnerability scanner for container images and filesystems. It identifies known security vulnerabilities in packages and dependencies by comparing against vulnerability databases.
+
+The tool integrates with CI/CD pipelines and produces reports in various formats. It works with the same sources as Syft for comprehensive software composition analysis.
 
 # SOURCE TYPES
 

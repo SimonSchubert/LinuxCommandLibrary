@@ -1,3 +1,7 @@
+# TAGLINE
+
+Mount directories with altered ownership and permissions via FUSE
+
 # TLDR
 
 **Mount** directory

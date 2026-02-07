@@ -1,3 +1,7 @@
+# TAGLINE
+
+Decompress bzip2 compressed files
+
 # TLDR
 
 **Decompress** file

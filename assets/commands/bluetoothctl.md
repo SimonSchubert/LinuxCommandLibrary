@@ -1,3 +1,7 @@
+# TAGLINE
+
+Control Bluetooth devices from the command line
+
 # TLDR
 
 Enter **interactive** shell

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Build cross-platform mobile apps from web code
+
 # TLDR
 
 **Initialize Capacitor** in a project
@@ -86,6 +90,11 @@
 The Capacitor CLI manages the native project lifecycle including initialization, platform management, asset synchronization, and building. Unlike Cordova, Capacitor embraces native project configuration, giving developers direct access to native IDEs and build systems.
 
 Web assets are built separately (using any web framework) and then copied to native projects with **cap sync**. Native functionality is accessed through Capacitor plugins that bridge JavaScript to native iOS/Android APIs.
+
+# CONFIGURATION
+
+**capacitor.config.ts** (or **capacitor.config.json**)
+> Project-level Capacitor configuration including app ID, app name, web directory, and platform-specific settings.
 
 # CAVEATS
 

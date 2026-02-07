@@ -1,3 +1,7 @@
+# TAGLINE
+
+data transformation workflow tool for analytics engineering
+
 # TLDR
 
 **Initialize a new dbt** project
@@ -60,6 +64,14 @@ _COMMAND_
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**~/.dbt/profiles.yml**
+> Connection profiles for data warehouses, including credentials and connection parameters.
+
+**dbt_project.yml**
+> Project configuration defining models, tests, sources, and project-level settings.
 
 # DESCRIPTION
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+structural code search and replace tool
+
 # TLDR
 
 **Simple replacement**
@@ -74,12 +78,6 @@
 
 **:[_]**
 > Anonymous hole (discard)
-
-# EXAMPLES
-
-```
-comby 'if :[cond] { :[body] }' 'when :[cond] { :[body] }'
-```
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interactive multi-base calculator with bit manipulation
+
 # TLDR
 
 **Interactive** mode

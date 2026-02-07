@@ -1,3 +1,7 @@
+# TAGLINE
+
+cross-platform audio spectrum visualizer for the terminal
+
 # TLDR
 
 **Start audio visualizer**
@@ -18,7 +22,9 @@
 
 # DESCRIPTION
 
-**cava** (Cross-platform Audio Visualizer) is a bar spectrum audio visualizer for terminal (ncurses) or desktop (SDL). Displays audio input as frequency bars. Supports ALSA, PulseAudio, PipeWire, JACK, and more.
+**cava** (Console Audio Visualizer for ALSA) is a bar spectrum audio visualizer that displays real-time frequency analysis as animated bars in the terminal or on the desktop. It captures audio from the system and renders it as a colorful equalizer-style display.
+
+The visualizer supports multiple audio backends including ALSA, PulseAudio, PipeWire, JACK, sndio, and PortAudio. Output can be rendered through ncurses for terminal display, SDL for a desktop window, or raw data for piping to other programs. All visual and audio settings are controlled through a configuration file.
 
 # PARAMETERS
 
@@ -38,14 +44,8 @@
 
 # CONFIGURATION
 
-Default config: ~/.config/cava/config
-
-Configurable options:
-- Bar width and spacing
-- Colors and gradients
-- Audio source
-- Sensitivity and smoothing
-- Output mode (ncurses, SDL, raw)
+**~/.config/cava/config**
+> Controls bar width, spacing, colors, gradients, audio source, sensitivity, smoothing, and output mode.
 
 # AUDIO SOURCES
 

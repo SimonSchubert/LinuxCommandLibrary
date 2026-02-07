@@ -1,3 +1,7 @@
+# TAGLINE
+
+Lightweight POSIX-compliant shell
+
 # TLDR
 
 **Start** ash shell
@@ -35,6 +39,17 @@ Many systems use dash (Debian Almquist Shell) as their ash implementation. BusyB
 
 **-s**
 > Read commands from stdin
+
+# CONFIGURATION
+
+**/etc/profile**
+> System-wide login shell initialization.
+
+**~/.profile**
+> Per-user login shell initialization.
+
+**$ENV**
+> If set, sourced for interactive shells (often points to ~/.ashrc).
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Official image viewer for the GNOME desktop
+
 # TLDR
 
 **Open** an image file
@@ -30,9 +34,9 @@ Open an image in a **new** window instance
 
 # DESCRIPTION
 
-**eog** (Eye of GNOME) is the official image viewer for the GNOME desktop. It displays images in various formats with support for slideshows, fullscreen viewing, and basic image operations.
+**eog** (Eye of GNOME) is the official image viewer for the GNOME desktop environment. It provides a fast, lightweight interface for displaying images in various formats including JPEG, PNG, GIF, SVG, and many others. The viewer supports slideshows, fullscreen viewing, and basic image operations like rotation and zooming.
 
-Integrates with GNOME desktop services and file managers.
+The application integrates seamlessly with GNOME desktop services and file managers, supporting drag-and-drop, thumbnail generation, and EXIF metadata display. While designed for GNOME, eog can run on other desktop environments, though some features may require GNOME libraries.
 
 # PARAMETERS
 
@@ -50,6 +54,14 @@ Integrates with GNOME desktop services and file managers.
 
 **-n, --new-instance**
 > Start new instance
+
+# CONFIGURATION
+
+**~/.config/eog/**
+> Configuration directory for user preferences and settings managed through GNOME.
+
+**dconf/gsettings**
+> Settings accessible via gsettings for org.gnome.eog schema controlling UI, plugins, and behavior.
 
 # CAVEATS
 

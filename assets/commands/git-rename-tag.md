@@ -1,3 +1,7 @@
+# TAGLINE
+
+Rename a Git tag locally and on the remote
+
 # TLDR
 
 **Rename a tag**
@@ -10,9 +14,8 @@
 
 # DESCRIPTION
 
-**git rename-tag** renames a tag locally and on the remote. Part of git-extras. Creates new tag, deletes old tag, and updates remote.
+**git rename-tag** renames a tag both locally and on the remote. Part of git-extras, it creates the new tag, deletes the old one, and updates the remote in one step.
 
 # SEE ALSO
 
 [git-tag](/man/git-tag)(1), [git-extras](/man/git-extras)(1)
-

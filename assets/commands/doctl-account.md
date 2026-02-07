@@ -1,3 +1,7 @@
+# TAGLINE
+
+display DigitalOcean account information
+
 # TLDR
 
 **Show account information**
@@ -23,6 +27,8 @@
 # DESCRIPTION
 
 **doctl account** displays information about your DigitalOcean account including email, UUID, status, and API rate limits.
+
+The command provides quick access to account details without navigating the web console. This is useful for verifying which account you're currently authenticated with, especially when managing multiple contexts. The ratelimit subcommand helps monitor API usage to avoid exceeding rate limits during automated operations or intensive scripting.
 
 # SEE ALSO
 

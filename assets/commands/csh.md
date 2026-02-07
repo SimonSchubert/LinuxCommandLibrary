@@ -1,3 +1,7 @@
+# TAGLINE
+
+Unix shell with C-like syntax
+
 # TLDR
 
 **Start an interactive** C shell session
@@ -70,6 +74,14 @@
 The shell provides interactive features like history substitution (!!, !$), command completion, and aliases. Its scripting syntax differs significantly from Bourne-style shells, using C-like constructs for conditionals and loops.
 
 Configuration files include **~/.cshrc** (read for every shell) and **~/.login** (read for login shells). The shell sets various environment variables and provides built-in commands for job control and directory navigation.
+
+# CONFIGURATION
+
+**~/.cshrc**
+> Read for every shell, sets aliases and environment variables.
+
+**~/.login**
+> Read for login shells, sets up environment.
 
 # CAVEATS
 

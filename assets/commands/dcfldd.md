@@ -1,3 +1,7 @@
+# TAGLINE
+
+forensic disk imaging tool with hashing
+
 # TLDR
 
 **Create disk image** with progress

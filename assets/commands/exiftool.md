@@ -1,3 +1,7 @@
+# TAGLINE
+
+comprehensive metadata reader and writer
+
 # TLDR
 
 **Show all metadata** for a file
@@ -39,14 +43,6 @@
 # SYNOPSIS
 
 **exiftool** [_options_] [**-**_tag_[=_value_]]... _file_...
-
-# DESCRIPTION
-
-**ExifTool** is a powerful, platform-independent tool for reading, writing, and editing metadata in a wide variety of file formats. It supports EXIF, IPTC, XMP, GPS, and many proprietary metadata formats used by cameras and software.
-
-The tool can handle images (JPEG, TIFF, PNG, RAW formats), audio files, video files, PDFs, and documents. It recognizes metadata from virtually every camera manufacturer and supports both reading and writing for most formats.
-
-ExifTool is invaluable for photographers organizing collections, forensic analysts examining files, and anyone needing to manage file metadata programmatically.
 
 # PARAMETERS
 
@@ -94,6 +90,14 @@ ExifTool is invaluable for photographers organizing collections, forensic analys
 
 **-G**
 > Show group name for each tag.
+
+# DESCRIPTION
+
+**ExifTool** is a powerful, platform-independent tool for reading, writing, and editing metadata in a wide variety of file formats. It supports EXIF, IPTC, XMP, GPS, and many proprietary metadata formats used by cameras and software.
+
+The tool can handle images (JPEG, TIFF, PNG, RAW formats), audio files, video files, PDFs, and documents. It recognizes metadata from virtually every camera manufacturer and supports both reading and writing for most formats.
+
+ExifTool is invaluable for photographers organizing collections, forensic analysts examining files, and anyone needing to manage file metadata programmatically.
 
 # CAVEATS
 

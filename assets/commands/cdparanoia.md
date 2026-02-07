@@ -1,3 +1,7 @@
+# TAGLINE
+
+CD audio ripper with error correction
+
 # TLDR
 
 **Rip entire CD to WAV files**
@@ -30,7 +34,11 @@
 
 # DESCRIPTION
 
-**cdparanoia** is a CD audio ripper with advanced error correction. Reads audio tracks from CDDA drives with verification, synchronization, and scratch reconstruction. Outputs WAV, AIFF, AIFF-C, or raw PCM format.
+**cdparanoia** is a CD digital audio extraction tool with advanced error correction and jitter handling. It reads audio tracks from CDDA-capable drives and performs verification, synchronization, and scratch reconstruction to produce bit-perfect rips whenever possible.
+
+Unlike simple CD rippers, cdparanoia uses multiple read passes and cross-correlates data to detect and correct errors caused by scratches, smudges, or drive imperfections. The progress display shows smiley faces indicating read quality, from normal operation to scratch detection and correction failures.
+
+Output formats include WAV (default), AIFF, AIFF-C, and raw 16-bit PCM. Batch mode (`-B`) splits output into one file per track automatically.
 
 # PARAMETERS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+native Docker clustering and orchestration
+
 # TLDR
 
 **Initialize a swarm**

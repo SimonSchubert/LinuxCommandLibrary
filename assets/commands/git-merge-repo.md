@@ -1,3 +1,7 @@
+# TAGLINE
+
+Merge repository into subdirectory
+
 # TLDR
 
 **Merge another repository**
@@ -28,11 +32,9 @@ _DIRECTORY_
 
 # DESCRIPTION
 
-**git merge-repo** merges another repository into a subdirectory while preserving its history. It combines two repositories, placing the merged content in a specified directory.
+**git merge-repo** merges another repository into a subdirectory while preserving its full commit history. It handles the complex process of combining two separate repository histories with directory relocation.
 
-The command handles the complex process of combining histories with directory relocation. It's useful for incorporating libraries or consolidating repositories.
-
-git merge-repo enables repository consolidation with history.
+The command is useful for incorporating external libraries, consolidating multiple repositories into a monorepo, or absorbing a project that was previously maintained separately.
 
 # CAVEATS
 

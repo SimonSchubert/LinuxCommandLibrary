@@ -1,3 +1,7 @@
+# TAGLINE
+
+pacman database query tool with custom formatting
+
 # TLDR
 
 List **dependencies** of a package
@@ -28,7 +32,9 @@ List **explicitly-installed** packages with optional dependencies
 
 **expac** extracts data from alpm databases using printf-like format strings. It provides flexible output formatting for pacman-based package queries.
 
-Useful for scripting and generating custom package reports.
+The tool acts as a lightweight alternative to parsing pacman output, offering direct access to package metadata including dependencies, sizes, descriptions, and installation dates. Format specifiers like %n (name), %v (version), %D (dependencies) enable custom reports.
+
+Useful for scripting, package analysis, and generating custom package reports. Particularly powerful when combined with other tools for filtering and processing package information.
 
 # PARAMETERS
 

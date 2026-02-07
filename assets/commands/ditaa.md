@@ -1,3 +1,7 @@
+# TAGLINE
+
+convert ASCII art diagrams to graphics
+
 # TLDR
 
 **Convert ASCII art to PNG image**

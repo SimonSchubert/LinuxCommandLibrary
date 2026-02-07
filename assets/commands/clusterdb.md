@@ -1,3 +1,7 @@
+# TAGLINE
+
+PostgreSQL table reclustering utility
+
 # TLDR
 
 **Cluster all tables** in a database

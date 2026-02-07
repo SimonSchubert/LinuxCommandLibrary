@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage large files in git without storing content in repository
+
 # TLDR
 
 **Initialize git-annex**
@@ -54,9 +58,17 @@
 
 **git-annex** manages large files with git without storing file contents in git history. Files are replaced with symlinks to content stored in a separate annex, enabling version control of large datasets.
 
-The tool tracks which repositories have copies of which files, enabling distributed storage across local drives, servers, and cloud services. Content can be retrieved on demand.
+The tool tracks which repositories have copies of which files, enabling distributed storage across local drives, servers, and cloud services. Content can be retrieved on demand with **git annex get** and removed locally with **git annex drop**.
 
-git-annex is ideal for research data, media files, and any large file management.
+git-annex supports special remotes including Amazon S3, rsync, and many other backends, making it ideal for managing research datasets, media archives, and any large file collections.
+
+# CONFIGURATION
+
+**.git/annex/**
+> Local annex storage directory containing file content and metadata.
+
+**.git/config**
+> Repository configuration including remote repository settings and annex preferences.
 
 # CAVEATS
 

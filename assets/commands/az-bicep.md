@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Bicep files for Azure infrastructure as code
+
 # TLDR
 
 **Build a Bicep file** to ARM template

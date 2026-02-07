@@ -1,3 +1,7 @@
+# TAGLINE
+
+GNU Ada compiler toolchain
+
 # TLDR
 
 **Compile an Ada program** to object file
@@ -95,9 +99,7 @@
 
 **GNAT** (GNU Ada Translator) is the Ada compiler in the GCC collection. It compiles Ada 83, Ada 95, Ada 2005, and Ada 2012 programs. Ada source files use .ads (specification) and .adb (body) extensions.
 
-The GNAT build process has three phases: compilation (gcc -c), binding (gnatbind), and linking (gnatlink). The **gnatmake** tool automates all three, determining dependencies and recompiling only what's necessary.
-
-GNAT generates object files (.o) and Ada Library Information files (.ali) containing dependency and interface information.
+The GNAT build process has three phases: compilation (gcc -c), binding (gnatbind), and linking (gnatlink). The **gnatmake** tool automates all three, determining dependencies and recompiling only what is necessary.
 
 # CAVEATS
 

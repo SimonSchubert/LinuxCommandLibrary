@@ -1,3 +1,7 @@
+# TAGLINE
+
+Load, replace, and manage AppArmor security profiles.
+
 # TLDR
 
 **Load** a profile into the kernel
@@ -72,6 +76,14 @@ Replace a profile while **skipping cache** reads
 
 **-d, --debug**
 > Enable debug output
+
+# CONFIGURATION
+
+**/etc/apparmor.d/**
+> Directory containing AppArmor security profiles loaded at boot.
+
+**/etc/apparmor.d/cache/**
+> Directory for compiled binary profile caches.
 
 # CAVEATS
 

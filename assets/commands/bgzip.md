@@ -1,3 +1,7 @@
+# TAGLINE
+
+Block compression with random access support for genomics data
+
 # TLDR
 
 **Compress** file

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Colorize text with pride flag colors
+
 # TLDR
 
 **Display a colorful shark**

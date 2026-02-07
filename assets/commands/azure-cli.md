@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Azure cloud resources from the command line.
+
 # TLDR
 
 **Install** via pip
@@ -55,6 +59,11 @@ The package includes:
 - Extensions framework
 - Auto-completion support
 - Telemetry (can be disabled)
+
+# CONFIGURATION
+
+**~/.azure/config**
+> User-specific Azure CLI configuration file for defaults, output format, and extension settings.
 
 # CAVEATS
 

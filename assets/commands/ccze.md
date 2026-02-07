@@ -1,3 +1,7 @@
+# TAGLINE
+
+modular log colorizer
+
 # TLDR
 
 **Colorize log file**
@@ -30,7 +34,11 @@
 
 # DESCRIPTION
 
-**ccze** is a robust modular log colorizer with plugins for syslog, httpd, postfix, squid, exim, fetchmail, procmail, vsftpd, and more. Faster than colorize (written in C).
+**ccze** is a modular log colorizer written in C for high performance. It reads log data from standard input and outputs colorized text using ANSI escape codes or HTML, making log files much easier to scan visually.
+
+The tool uses a plugin architecture to recognize and colorize different log formats including syslog, Apache httpd, Postfix, Squid, Exim, fetchmail, procmail, and vsftpd. Each plugin understands the structure of its target log format and applies appropriate colors to timestamps, hostnames, severity levels, and other fields.
+
+Output defaults to ncurses mode but the `-A` flag produces raw ANSI output suitable for piping to `less -R` or other tools.
 
 # PARAMETERS
 

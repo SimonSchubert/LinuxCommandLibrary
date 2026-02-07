@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extract sequences from BLAST databases
+
 # TLDR
 
 **Get database information**

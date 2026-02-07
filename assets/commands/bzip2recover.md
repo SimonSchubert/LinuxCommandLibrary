@@ -1,3 +1,7 @@
+# TAGLINE
+
+Recover data from damaged bzip2 files
+
 # TLDR
 
 **Recover** data from damaged file

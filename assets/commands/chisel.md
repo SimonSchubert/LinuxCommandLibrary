@@ -1,3 +1,7 @@
+# TAGLINE
+
+TCP/UDP tunnel over HTTP secured via SSH
+
 # TLDR
 
 **Start server**
@@ -31,7 +35,9 @@
 
 # DESCRIPTION
 
-**chisel** is a fast TCP/UDP tunnel over HTTP, secured via SSH. Single executable for both client and server. Uses WebSockets to multiplex connections efficiently. Written in Go.
+**chisel** is a fast TCP/UDP tunnel transported over HTTP and secured via SSH. A single executable contains both client and server functionality. It uses WebSockets to multiplex connections, allowing multiple tunnels through a single HTTP connection.
+
+The tool is useful for traversing firewalls, accessing services behind NAT, and creating reverse tunnels. It supports forward and reverse port forwarding as well as SOCKS5 proxy mode. Authentication can be configured with username/password pairs or an authentication file. Written in Go.
 
 # SERVER OPTIONS
 

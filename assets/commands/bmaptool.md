@@ -1,3 +1,7 @@
+# TAGLINE
+
+Flash disk images efficiently using block maps
+
 # TLDR
 
 **Copy an image to a device** using bmap

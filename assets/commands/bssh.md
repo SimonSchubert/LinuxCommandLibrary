@@ -1,3 +1,7 @@
+# TAGLINE
+
+Browse for SSH and VNC servers on the local network
+
 # TLDR
 
 **Browse for SSH servers on local network**

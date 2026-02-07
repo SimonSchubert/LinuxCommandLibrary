@@ -1,3 +1,7 @@
+# TAGLINE
+
+dependency manager for PHP projects
+
 # TLDR
 
 **Install** dependencies
@@ -62,6 +66,20 @@ The tool is essential for modern PHP development and used by virtually all PHP f
 
 **self-update**
 > Update Composer itself
+
+# CONFIGURATION
+
+**composer.json**
+> Project dependencies and metadata.
+
+**composer.lock**
+> Locked dependency versions for reproducible installs.
+
+**~/.composer/config.json**
+> Global composer configuration.
+
+**~/.composer/auth.json**
+> Authentication credentials for private repositories.
 
 # COMPOSER.JSON
 

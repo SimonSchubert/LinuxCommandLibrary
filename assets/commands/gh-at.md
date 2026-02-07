@@ -1,3 +1,7 @@
+# TAGLINE
+
+view mentions across GitHub issues, PRs, and comments
+
 # TLDR
 
 **Show user mentions**

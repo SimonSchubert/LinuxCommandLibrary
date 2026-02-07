@@ -1,3 +1,7 @@
+# TAGLINE
+
+List Homebrew packages with available updates
+
 # TLDR
 
 **List outdated packages**

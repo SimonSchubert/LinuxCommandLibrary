@@ -1,3 +1,7 @@
+# TAGLINE
+
+colorizing cat with syntax highlighting
+
 # TLDR
 
 **Display file with syntax highlighting**
@@ -26,7 +30,9 @@
 
 # DESCRIPTION
 
-**ccat** is a colorizing cat command that displays file contents with syntax highlighting. Supports JavaScript, Java, Go, Ruby, C, Python, JSON, and more. Single binary, native speed.
+**ccat** is a drop-in replacement for cat that adds syntax highlighting to file contents displayed in the terminal. It automatically detects the programming language from the file extension and applies color coding to keywords, strings, comments, and other syntax elements.
+
+The tool supports a wide range of languages including JavaScript, Python, Go, Ruby, C, C++, Java, and JSON. It ships as a single binary with no external dependencies, providing native execution speed. Output can be rendered for light or dark terminal backgrounds, and HTML output is available for embedding highlighted code in web pages.
 
 # PARAMETERS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+GitHub Copilot agent task executor
+
 # TLDR
 
 **Run agent task**
@@ -19,7 +23,9 @@
 
 # DESCRIPTION
 
-**gh agent task** runs a task using GitHub Copilot agents. Agents can perform specialized tasks based on their capabilities.
+**gh agent task** runs a task using GitHub Copilot agents. Agents can perform specialized tasks based on their capabilities, such as code analysis, refactoring suggestions, documentation generation, or domain-specific problem solving.
+
+Tasks are processed by the specified agent, which applies its specialized knowledge to provide relevant assistance. This allows developers to leverage agent expertise without leaving the command line interface.
 
 # SEE ALSO
 

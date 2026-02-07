@@ -1,3 +1,7 @@
+# TAGLINE
+
+IT infrastructure monitoring tool
+
 # TLDR
 
 **Check a host manually**
@@ -74,6 +78,14 @@
 The system uses agents installed on monitored hosts that collect metrics and status information. The **cmk** command processes this data, discovers available services, performs checks, and manages the configuration.
 
 Discovery (**cmk -I**) scans hosts for monitorable services. Configuration changes require activation with **cmk -O** or **cmk -R**. The tool supports distributed monitoring, agent bakery for deployment, and extensive plugin architecture.
+
+# CONFIGURATION
+
+**/omd/sites/&lt;site&gt;/etc/check_mk/main.mk**
+> Main configuration file for host definitions, check parameters, and rules.
+
+**/omd/sites/&lt;site&gt;/etc/check_mk/conf.d/**
+> Directory for additional configuration files, often managed by the web interface.
 
 # CAVEATS
 

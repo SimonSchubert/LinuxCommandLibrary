@@ -1,3 +1,7 @@
+# TAGLINE
+
+lightweight BitTorrent client with plugin architecture
+
 # TLDR
 
 **Launch Deluge** GTK client
@@ -54,6 +58,11 @@ _TORRENT_
 Deluge operates with a daemon/client architecture, allowing the download daemon (deluged) to run independently while clients connect locally or remotely. The GTK client provides a full-featured interface for adding torrents, managing downloads, and configuring settings.
 
 The client supports features like bandwidth scheduling, per-torrent settings, peer exchange, magnet URIs, and encryption. Its plugin system extends functionality with features like labels, notifications, and web seeds.
+
+# CONFIGURATION
+
+**~/.config/deluge/**
+> Configuration files including core.conf, gtk-ui.conf, and plugins.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Show ASCII art animation demos
+
 # TLDR
 
 View a random **ASCII art animation**

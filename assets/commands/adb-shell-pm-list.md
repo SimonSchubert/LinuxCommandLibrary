@@ -1,3 +1,7 @@
+# TAGLINE
+
+List and filter installed Android packages
+
 # TLDR
 
 **List** all installed packages

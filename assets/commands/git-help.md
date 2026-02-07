@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display documentation for Git commands
+
 # TLDR
 
 **Get help for command**
@@ -52,11 +56,9 @@ _GUIDE_
 
 # DESCRIPTION
 
-**git help** displays documentation for git commands. It opens manual pages by default, with options for web browser or info format display.
+**git help** displays documentation for Git commands and conceptual guides. It opens manual pages by default, with options for web browser or info format display.
 
-The command provides access to both command documentation and conceptual guides covering topics like workflows and attributes. Git includes extensive built-in documentation.
-
-git help is the gateway to git's comprehensive documentation.
+The command provides access to both command documentation and conceptual guides covering topics like workflows, attributes, and revision specifications. Git includes extensive built-in documentation accessible through this interface.
 
 # CAVEATS
 

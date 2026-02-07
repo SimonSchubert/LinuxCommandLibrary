@@ -1,3 +1,7 @@
+# TAGLINE
+
+Attack surface mapping and asset discovery
+
 # TLDR
 
 **Enumerate** subdomains passively
@@ -69,6 +73,11 @@ The tool builds a comprehensive map of an organization's external network footpr
 
 **-config** _file_
 > Configuration file
+
+# CONFIGURATION
+
+**~/.config/amass/config.ini**
+> Main configuration file for data sources, API keys, and enumeration settings.
 
 # CAVEATS
 

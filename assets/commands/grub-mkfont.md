@@ -1,3 +1,7 @@
+# TAGLINE
+
+convert fonts to GRUB PF2 format
+
 # TLDR
 
 **Convert font to GRUB format**
@@ -45,11 +49,9 @@ _FONT-FILE_
 
 # DESCRIPTION
 
-**grub-mkfont** converts fonts to GRUB's PF2 format. This enables custom fonts in the GRUB boot menu.
+**grub-mkfont** converts fonts to GRUB's PF2 bitmap format, enabling custom fonts in the GRUB boot menu. The tool accepts TrueType, OpenType, and other font formats.
 
-The tool accepts TrueType, OpenType, and other font formats. It can generate fonts at specific sizes and with specific character ranges.
-
-grub-mkfont creates GRUB fonts from TTF/OTF.
+It can generate fonts at specific sizes and with specific character ranges, allowing fine control over which glyphs are included in the output.
 
 # CAVEATS
 

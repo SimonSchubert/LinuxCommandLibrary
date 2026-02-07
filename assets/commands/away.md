@@ -1,3 +1,7 @@
+# TAGLINE
+
+Lock terminal with an away message
+
 # TLDR
 
 **Lock terminal** and set an away message

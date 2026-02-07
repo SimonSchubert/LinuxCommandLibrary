@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create or regenerate Cargo.lock for a Rust project
+
 # TLDR
 
 **Generate lock file**

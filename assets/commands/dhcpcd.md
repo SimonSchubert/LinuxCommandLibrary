@@ -1,3 +1,7 @@
+# TAGLINE
+
+DHCP and DHCPv6 client daemon
+
 # TLDR
 
 **Release** all address leases
@@ -14,9 +18,11 @@
 
 # DESCRIPTION
 
-**dhcpcd** is a DHCP and DHCPv6 client. It obtains IP addresses, default routes, and DNS servers from DHCP servers on the network. It can also use IPv6 Router Advertisement.
+**dhcpcd** is a DHCP and DHCPv6 client daemon that automatically configures network interfaces. It obtains IP addresses, default routes, and DNS servers from DHCP servers on the network, and can also process IPv6 Router Advertisements for stateless autoconfiguration.
 
-Commonly used for automatic network configuration on Linux systems.
+The daemon runs in the background managing network configuration as interfaces come up and down. It handles lease renewal, rebinding, and release operations automatically. Configuration hooks allow running custom scripts when network state changes.
+
+dhcpcd is commonly used as the default network configuration tool on many Linux distributions, particularly those without NetworkManager. It's lightweight, follows RFC standards closely, and integrates well with embedded and server environments.
 
 # PARAMETERS
 
@@ -37,6 +43,11 @@ Commonly used for automatic network configuration on Linux systems.
 
 **-T, --test**
 > Test mode, don't configure
+
+# CONFIGURATION
+
+**/etc/dhcpcd.conf**
+> Main configuration file controlling interface behavior, static addresses, hooks, and client options.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+generate compilation database for C/C++ projects
+
 # TLDR
 
 **Generate compilation database** from make

@@ -1,3 +1,7 @@
+# TAGLINE
+
+screenshot tool with annotation capabilities
+
 # TLDR
 
 Create a **fullscreen screenshot**
@@ -79,6 +83,11 @@ Open the **launcher dialog** for advanced options
 **Flameshot** is a powerful yet simple screenshot tool for Linux featuring an intuitive GUI for region selection and built-in annotation capabilities. It supports drawing shapes, adding text, arrows, and markers directly on screenshots before saving.
 
 The tool integrates with the system tray for quick access and supports both X11 and Wayland display servers. Screenshots can be saved to files, copied to clipboard, or uploaded to image hosting services. A D-Bus interface enables scripting and integration with other applications.
+
+# CONFIGURATION
+
+**~/.config/flameshot/flameshot.ini**
+> Configuration file for UI settings, default save paths, and keyboard shortcuts.
 
 # CAVEATS
 

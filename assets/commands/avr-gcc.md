@@ -1,3 +1,7 @@
+# TAGLINE
+
+GNU C compiler for AVR microcontrollers
+
 # TLDR
 
 **Compile C code** for an AVR microcontroller

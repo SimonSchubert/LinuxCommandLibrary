@@ -1,3 +1,7 @@
+# TAGLINE
+
+flash chip reading, writing, and verification
+
 # TLDR
 
 **Probe** the chip to ensure wiring is correct

@@ -1,3 +1,7 @@
+# TAGLINE
+
+convert astronomical FITS images to PNM
+
 # TLDR
 
 **Convert FITS to PNM**
@@ -22,7 +26,9 @@
 
 # DESCRIPTION
 
-**fitstopnm** converts FITS (Flexible Image Transport System) files to PNM format. FITS is an astronomical image format. Part of the Netpbm toolkit.
+**fitstopnm** converts FITS (Flexible Image Transport System) files to PNM format. FITS is the standard astronomical image format used for scientific data interchange.
+
+The tool reads multi-dimensional image data from FITS files and converts it to the portable anymap format, making astronomical images accessible to standard image processing tools. Part of the Netpbm toolkit.
 
 # SEE ALSO
 

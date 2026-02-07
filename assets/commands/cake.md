@@ -1,3 +1,7 @@
+# TAGLINE
+
+Cross-platform build automation using C#
+
 # TLDR
 
 **Run default build script**

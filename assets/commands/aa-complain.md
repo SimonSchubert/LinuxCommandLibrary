@@ -1,3 +1,7 @@
+# TAGLINE
+
+Set AppArmor profiles to complain mode
+
 # TLDR
 
 Set a profile to **complain mode**

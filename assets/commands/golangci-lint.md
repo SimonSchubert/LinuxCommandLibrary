@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fast Go linter aggregator
+
 # TLDR
 
 **Run all linters**
@@ -49,11 +53,17 @@
 
 # DESCRIPTION
 
-**golangci-lint** is a fast Go linter runner. It aggregates many linters into one tool with parallel execution, caching, and unified configuration.
+**golangci-lint** is a fast Go linter runner that aggregates dozens of linters into one tool. It provides parallel execution, result caching, and unified configuration for checking style, bugs, performance, and security issues.
 
-The tool includes dozens of linters for style, bugs, performance, and security. Configuration via .golangci.yml enables project-specific rules.
+Configuration via .golangci.yml enables project-specific rules and linter selection, replacing the need to run individual linters separately.
 
-golangci-lint provides comprehensive Go code analysis.
+# CONFIGURATION
+
+**.golangci.yml**
+> Project-level configuration file for linter selection, rules, severity, and exclusions.
+
+**.golangci.yaml**
+> Alternative YAML configuration file name.
 
 # CAVEATS
 

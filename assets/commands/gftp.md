@@ -1,3 +1,7 @@
+# TAGLINE
+
+graphical FTP and SFTP client
+
 # TLDR
 
 **Start gFTP**

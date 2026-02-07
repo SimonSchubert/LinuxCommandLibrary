@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate parsers from grammar descriptions
+
 # TLDR
 
 **Generate** parser

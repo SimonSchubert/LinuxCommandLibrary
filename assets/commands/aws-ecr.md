@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Docker container image repositories on AWS.
+
 # TLDR
 
 **Authenticate Docker** to an ECR registry

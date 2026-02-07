@@ -1,3 +1,7 @@
+# TAGLINE
+
+Prevent committing secrets and credentials to Git
+
 # TLDR
 
 **Install hooks in repository**
@@ -56,21 +60,14 @@
 
 # DESCRIPTION
 
-**git-secrets** prevents committing secrets and credentials to Git repositories. It installs hooks that scan staged changes against configurable patterns before allowing commits.
+**git-secrets** prevents committing secrets and credentials to Git repositories. It installs pre-commit hooks that scan staged changes against configurable patterns, blocking commits that match known secret formats.
 
-The tool was created by AWS Labs to prevent accidental AWS credential commits. It supports custom patterns for other types of secrets.
+Created by AWS Labs, it includes built-in patterns for AWS credentials and supports custom patterns for other types of secrets.
 
 # CONFIGURATION
 
-```bash
-# Global installation
-git secrets --install ~/.git-templates/git-secrets
-git config --global init.templateDir ~/.git-templates/git-secrets
-
-# Add patterns
-git secrets --add 'password\s*=\s*.+'
-git secrets --add-allowed 'password = "example"'
-```
+**~/.git-templates/git-secrets/**
+> Global git template directory for automatic hook installation in new repositories.
 
 # CAVEATS
 

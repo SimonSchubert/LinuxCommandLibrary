@@ -1,3 +1,7 @@
+# TAGLINE
+
+Multiplayer FPS dedicated server
+
 # TLDR
 
 Run a game with **one map**
@@ -22,9 +26,11 @@ Run with specific **IP and port**
 
 # DESCRIPTION
 
-**Counter-Strike 2** dedicated server hosts headless game servers for multiplayer matches. It runs without a graphical interface and can be managed via console commands.
+**Counter-Strike 2** dedicated server hosts headless game servers for multiplayer matches. It runs without a graphical interface and can be managed via console commands or RCON (Remote Console) for remote administration.
 
-Server configuration is done through command-line arguments and config files.
+The server can be configured through command-line parameters, console commands, and configuration files. It supports custom game modes, maps, plugins, and administrative controls. Dedicated servers are essential for hosting competitive matches, community servers, and private games with specific rule sets.
+
+Server performance depends on player count, tick rate, and available system resources. The dedicated server is distributed via SteamCMD and requires Steam authentication to run.
 
 # PARAMETERS
 
@@ -53,6 +59,11 @@ Server configuration is done through command-line arguments and config files.
 
 **status**
 > Show server status
+
+# CONFIGURATION
+
+**game/csgo/cfg/server.cfg**
+> Server configuration including hostname, passwords, game rules, and administrative settings.
 
 # CAVEATS
 

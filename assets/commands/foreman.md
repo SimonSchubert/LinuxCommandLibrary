@@ -1,3 +1,7 @@
+# TAGLINE
+
+process manager for Procfile-based applications
+
 # TLDR
 
 **Start** an application with the Procfile in the current directory
@@ -59,6 +63,14 @@ Start all processes **except** the one named "worker"
 
 **-t**, **--timeout** _SECONDS_
 > Specify shutdown timeout
+
+# CONFIGURATION
+
+**Procfile**
+> Defines process types as name:command lines (e.g., web: python app.py).
+
+**.env**
+> Environment variables loaded automatically by foreman.
 
 # DESCRIPTION
 

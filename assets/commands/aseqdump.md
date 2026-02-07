@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display MIDI events from ALSA sequencer ports
+
 # TLDR
 
 **Dump** MIDI events from all sources

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Rename a Git branch locally and on the remote
+
 # TLDR
 
 **Rename current branch**
@@ -14,9 +18,8 @@
 
 # DESCRIPTION
 
-**git rename-branch** renames a branch locally and on the remote. Part of git-extras. Handles both local rename and remote tracking update.
+**git rename-branch** renames a branch both locally and on the remote. Part of git-extras, it handles the local rename and remote tracking update in a single command.
 
 # SEE ALSO
 
 [git-branch](/man/git-branch)(1), [git-extras](/man/git-extras)(1)
-

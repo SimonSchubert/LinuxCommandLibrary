@@ -1,3 +1,7 @@
+# TAGLINE
+
+POSIX system configuration variable query tool
+
 # TLDR
 
 List **all** configuration values available

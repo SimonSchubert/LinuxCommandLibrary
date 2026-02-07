@@ -1,3 +1,7 @@
+# TAGLINE
+
+plugin manager for fish shell
+
 # TLDR
 
 **Install plugin**
@@ -43,6 +47,11 @@ _PLUGINS_
 
 **list**
 > List installed plugins.
+
+# CONFIGURATION
+
+**~/.config/fish/fish_plugins**
+> List of installed plugins tracked for version control and bulk installation.
 
 # DESCRIPTION
 

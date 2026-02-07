@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert BDF bitmap fonts to PCF format
+
 # TLDR
 
 **Convert BDF font to PCF**

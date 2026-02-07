@@ -1,3 +1,7 @@
+# TAGLINE
+
+DNS zone validator and debugger
+
 # TLDR
 
 **Check DNS zone** for errors

@@ -1,3 +1,7 @@
+# TAGLINE
+
+manage code snippets and shareable files
+
 # TLDR
 
 **Create a gist**
@@ -72,7 +76,11 @@
 
 # DESCRIPTION
 
-**gh gist** manages GitHub Gists. Create, view, edit, and share code snippets and small files.
+**gh gist** manages GitHub Gists, a simple way to share code snippets, notes, and small files. Gists can be public or secret, with secret gists hidden from search but accessible via URL.
+
+Each gist supports multiple files and full version history through git. They can be cloned like regular repositories, making them useful for sharing configuration files, scripts, or documentation. Gists support syntax highlighting and can be embedded in websites.
+
+The CLI provides full lifecycle management from creation through editing and deletion, with support for reading content from stdin for scripting workflows.
 
 # SEE ALSO
 

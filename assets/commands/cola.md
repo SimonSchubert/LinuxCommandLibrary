@@ -1,3 +1,7 @@
+# TAGLINE
+
+graphical Git interface
+
 # TLDR
 
 **Launch Git Cola**
@@ -29,9 +33,11 @@
 
 # DESCRIPTION
 
-**cola** launches Git Cola, a graphical user interface for Git. It provides a visual interface for staging changes, creating commits, managing branches, and other Git operations.
+**cola** launches Git Cola, a powerful graphical user interface for Git built with Python and Qt. It provides a visual, keyboard-driven interface for staging changes, creating commits, managing branches, viewing history, and performing other Git operations without requiring command-line expertise.
 
-Git Cola is designed to be a simple and powerful Git client that works across platforms.
+The interface emphasizes the Git staging workflow with a three-pane view showing unstaged changes, staged changes, and commit message composition. Interactive staging allows selecting individual lines or hunks to stage, providing fine-grained control over commits. The diff viewer provides syntax highlighting and side-by-side comparison modes.
+
+Git Cola is cross-platform, running on Linux, macOS, and Windows. It integrates with system editors and diff tools, supports keyboard shortcuts for efficient workflows, and provides both beginner-friendly and power-user features. The tool is open source and actively maintained, offering an alternative to command-line Git and other GUI clients.
 
 # SEE ALSO
 

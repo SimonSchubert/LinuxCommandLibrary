@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line option parser for shell scripts
+
 # TLDR
 
 Parse optional **verbose/version flags** with shorthands

@@ -1,3 +1,7 @@
+# TAGLINE
+
+3D falling blocks puzzle game
+
 # TLDR
 
 **Launch BlockOut II**
@@ -21,6 +25,11 @@ The game involves manipulating falling 3D blocks in a pit, rotating and position
 - **P** - Pause game
 
 Replay files are stored in **~/.bl2/replay/** on Linux systems.
+
+# CONFIGURATION
+
+**~/.bl2/blockout.cfg**
+> Game settings including pit dimensions, block set, and display options.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Enhanced interactive Python interpreter
+
 # TLDR
 
 **Start** interactive Python
@@ -60,13 +64,8 @@ The tool improves the standard Python interactive interpreter experience with mo
 
 # CONFIGURATION
 
-~/.config/bpython/config:
-```ini
-[general]
-auto_display_list = True
-syntax = True
-color_scheme = default
-```
+**~/.config/bpython/config**
+> Main configuration file for syntax highlighting, colors, key bindings, and behavior settings.
 
 # CAVEATS
 

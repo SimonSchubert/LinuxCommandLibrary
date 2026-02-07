@@ -1,3 +1,7 @@
+# TAGLINE
+
+Provision infrastructure from declarative templates.
+
 # TLDR
 
 **Create a new stack** from a template file

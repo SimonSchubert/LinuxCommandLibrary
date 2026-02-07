@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove an application from an Android device
+
 # TLDR
 
 **Uninstall** an application

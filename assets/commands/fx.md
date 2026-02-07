@@ -1,3 +1,7 @@
+# TAGLINE
+
+interactive JSON viewer and processor
+
 # TLDR
 
 **Interactive JSON viewer**

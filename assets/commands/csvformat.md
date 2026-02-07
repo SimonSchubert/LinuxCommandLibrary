@@ -1,3 +1,7 @@
+# TAGLINE
+
+CSV format and delimiter converter
+
 # TLDR
 
 **Convert CSV to tab-delimited**
@@ -37,9 +41,27 @@
 **-M** _char_
 > Set output line terminator.
 
+**-d** _CHAR_, **--delimiter** _CHAR_
+> Input field delimiter (default: comma).
+
+**-e** _ENCODING_, **--encoding** _ENCODING_
+> Input file encoding.
+
 # DESCRIPTION
 
-**csvformat** converts CSV files to different delimited formats. Part of csvkit, it handles delimiter changes, quoting styles, and line endings.
+**csvformat** is part of csvkit that converts CSV files between different delimited formats. It allows changing field delimiters, quote characters, quoting styles, and line terminators while maintaining proper CSV structure.
+
+The tool is useful for converting CSV files to tab-delimited format for Unix tools, standardizing quote handling across files, or reformatting data for systems with specific delimiter requirements. It properly handles CSV quoting rules during conversion.
+
+Quoting styles include minimal (quote only when necessary), all fields, non-numeric fields only, and none. The tool can also skip header rows and adjust line endings for cross-platform compatibility.
+
+# CAVEATS
+
+Part of csvkit, requires Python. Type inference determines quoting behavior in minimal mode. Some combinations of options may produce invalid CSV for certain parsers.
+
+# HISTORY
+
+csvformat is part of **csvkit**, created by Christopher Groskopf in **2011**. It addresses the common need to convert between CSV dialects and delimited formats while preserving data integrity.
 
 # SEE ALSO
 

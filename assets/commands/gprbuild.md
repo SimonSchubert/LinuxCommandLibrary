@@ -1,3 +1,7 @@
+# TAGLINE
+
+GNAT project-aware Ada builder
+
 # TLDR
 
 **Build project**
@@ -45,11 +49,9 @@ _PROJECT_
 
 # DESCRIPTION
 
-**gprbuild** is the GNAT project-aware builder. It compiles Ada projects defined in GPR (GNAT Project) files, handling dependencies and build configuration.
+**gprbuild** is the GNAT project-aware builder for Ada. It compiles Ada projects defined in GPR (GNAT Project) files, handling dependencies and build configuration automatically.
 
-The tool manages compilation of Ada sources with incremental builds. It supports configuration through external variables and multiple build modes.
-
-gprbuild builds Ada projects with GNAT.
+The tool manages compilation of Ada sources with incremental builds, supporting configuration through external variables and multiple build modes.
 
 # CAVEATS
 

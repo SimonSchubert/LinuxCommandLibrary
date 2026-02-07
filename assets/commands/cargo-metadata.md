@@ -1,3 +1,7 @@
+# TAGLINE
+
+Output workspace and dependency metadata as JSON
+
 # TLDR
 
 **Output project metadata**

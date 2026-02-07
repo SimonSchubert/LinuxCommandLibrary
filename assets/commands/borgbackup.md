@@ -1,3 +1,7 @@
+# TAGLINE
+
+Deduplicating backup with compression and encryption
+
 # TLDR
 
 **Initialize a new backup repository**

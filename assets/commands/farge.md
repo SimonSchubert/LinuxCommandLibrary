@@ -1,3 +1,7 @@
+# TAGLINE
+
+screen color picker for X11 and Wayland
+
 # TLDR
 
 Display **preview** and copy hexadecimal value

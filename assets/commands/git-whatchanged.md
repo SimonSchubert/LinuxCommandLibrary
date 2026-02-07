@@ -1,3 +1,7 @@
+# TAGLINE
+
+Show commit logs with file-level diff information
+
 # TLDR
 
 **Show commit logs with diffs**
@@ -43,9 +47,10 @@
 
 # DESCRIPTION
 
-**git whatchanged** shows logs with difference each commit introduces. Similar to git log but with different default output format.
+**git whatchanged** shows logs with the difference each commit introduces. It is similar to `git log` but defaults to showing raw diff output, making it easier to see which files were affected by each commit.
+
+This command is considered somewhat legacy; `git log` with appropriate options provides the same functionality.
 
 # SEE ALSO
 
 [git-log](/man/git-log)(1), [git-diff](/man/git-diff)(1)
-

@@ -1,3 +1,7 @@
+# TAGLINE
+
+character encoding detection and conversion
+
 # TLDR
 
 **Detect encoding** of file

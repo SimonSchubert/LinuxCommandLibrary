@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal-based email and news client.
+
 # TLDR
 
 Open **alpine** email client
@@ -42,9 +46,14 @@ Alpine is the successor to Pine and was developed by the University of Washingto
 **-p pinerc**
 > Use alternate configuration file
 
+# CONFIGURATION
+
+**~/.pinerc**
+> Main configuration file for Alpine. Stores mail server settings, folder paths, display preferences, and feature flags.
+
 # CAVEATS
 
-Configuration is stored in ~/.pstrict by default. Alpine may require additional setup for OAuth2 authentication with modern email providers like Gmail.
+Configuration is stored in ~/.pinerc by default. Alpine may require additional setup for OAuth2 authentication with modern email providers like Gmail.
 
 # HISTORY
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Opinionated Python code formatter
+
 # TLDR
 
 **Format** Python file
@@ -72,13 +76,8 @@ The tool integrates with editors and CI pipelines to ensure consistent Python co
 
 # CONFIGURATION
 
-pyproject.toml:
-```toml
-[tool.black]
-line-length = 100
-target-version = ['py39']
-include = '\.pyi?$'
-```
+**pyproject.toml**
+> Project-level configuration under `[tool.black]` section. Supports `line-length`, `target-version`, `include`, and `exclude` settings.
 
 # WORKFLOW
 

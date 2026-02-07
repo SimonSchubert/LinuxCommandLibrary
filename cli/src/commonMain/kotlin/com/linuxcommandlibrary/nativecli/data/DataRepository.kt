@@ -40,7 +40,8 @@ object DataRepository {
         val content = allCommands[name] ?: return emptyList()
         return MarkdownParser.splitByHeaders(content, "# ").map { (title, sectionContent) ->
             CommandSection(title, sectionContent)
-        }.sortedBy { getSortPriority(it.title) }
+        }.filter { it.title.uppercase() != "TAGLINE" }
+            .sortedBy { getSortPriority(it.title) }
     }
 
     private fun getSortPriority(title: String): Int = when (title.uppercase()) {
@@ -51,6 +52,7 @@ object DataRepository {
         "PARAMETERS" -> 4
         "OPTIONS" -> 5
         "EXAMPLES" -> 6
+        "CONFIGURATION" -> 7
         "CAVEATS" -> 90
         "HISTORY" -> 91
         "AUTHOR" -> 92

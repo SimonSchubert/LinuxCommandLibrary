@@ -1,3 +1,7 @@
+# TAGLINE
+
+Trash CLI written in Go
+
 # TLDR
 
 **Move to trash**
@@ -39,11 +43,9 @@ _FILES_
 
 # DESCRIPTION
 
-**gomi** is a trash CLI written in Go. It moves files to a trash directory instead of permanently deleting them, providing an undo for file deletion.
+**gomi** is a trash CLI written in Go that moves files to a trash directory instead of permanently deleting them. It implements the FreeDesktop.org trash specification, providing an undo mechanism for file deletion.
 
-The tool implements the FreeDesktop.org trash specification. It enables recovery of accidentally deleted files and provides trash management.
-
-gomi provides safe file deletion with recovery.
+The tool enables recovery of accidentally deleted files through an interactive restore interface and provides trash management commands for listing and emptying.
 
 # CAVEATS
 

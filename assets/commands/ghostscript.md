@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interpreter for PostScript and PDF file manipulation
+
 # TLDR
 
 **Convert PDF to images**
@@ -55,9 +59,17 @@
 
 # DESCRIPTION
 
-**Ghostscript** (gs) is an interpreter for PostScript and PDF. It renders documents to various output formats, converts between formats, and processes print jobs.
+**Ghostscript** (gs) is an interpreter for PostScript and PDF. It renders documents to various output formats, converts between formats, and processes print jobs. It is the engine behind many PDF tools and print systems on Unix/Linux.
 
-Ghostscript is used for PDF manipulation, printing, and creating raster images from vector documents. It's the engine behind many PDF tools and print systems.
+The tool supports a wide range of output devices for rasterization, format conversion, and print processing. PDF manipulation includes merging, splitting, compressing, and converting between quality levels.
+
+# CONFIGURATION
+
+**/etc/ghostscript/**
+> System-wide configuration directory for font mappings, resource files, and initialization scripts.
+
+**~/.ghostscript**
+> User-specific Ghostscript resources and configuration overrides.
 
 # CAVEATS
 

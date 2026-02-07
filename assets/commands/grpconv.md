@@ -1,3 +1,7 @@
+# TAGLINE
+
+convert to shadow group format
+
 # TLDR
 
 **Convert to shadow groups**
@@ -25,8 +29,6 @@
 **grpconv** converts from traditional group format to shadow group format. It creates /etc/gshadow from /etc/group information.
 
 The tool moves encrypted group passwords from /etc/group to /etc/gshadow, improving security by limiting access to password data.
-
-grpconv enables shadow group passwords.
 
 # CAVEATS
 

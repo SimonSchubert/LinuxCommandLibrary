@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage browser abstraction includes in AppArmor profiles
+
 # TLDR
 
 **List** available browser abstraction profiles

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Google BigQuery command-line interface
+
 # TLDR
 
 **Query** data
@@ -105,6 +109,11 @@ bq extract mydataset.mytable gs://bucket/export.csv
 - Access control management
 - Scheduled queries
 - Data transfer service
+
+# CONFIGURATION
+
+**~/.bigqueryrc**
+> User configuration file for default project, dataset, format, and query settings.
 
 # CAVEATS
 

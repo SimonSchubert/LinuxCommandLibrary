@@ -1,3 +1,7 @@
+# TAGLINE
+
+updatable project template tool
+
 # TLDR
 
 **Create project from template**
@@ -30,7 +34,11 @@
 
 # DESCRIPTION
 
-**copier** renders project templates with Jinja2 templating. Supports Git URLs and local paths. Unique feature: update existing projects when template evolves while preserving your changes.
+**copier** is a project templating tool similar to cookiecutter but with a crucial distinction: it can update existing projects when the template evolves. This makes it ideal for maintaining multiple projects based on a shared template, as you can propagate improvements and bug fixes from the template to all derived projects.
+
+The tool uses Jinja2 templating and supports both Git repository URLs and local paths as template sources. Templates are versioned using Git tags, allowing projects to track which template version they were created from and update to newer versions while preserving local customizations.
+
+copier stores metadata about template answers in the generated project, enabling the **update** command to intelligently merge template changes with your modifications. This addresses a major limitation of traditional project generators where improvements to the template couldn't be applied to existing projects. The tool requires Python 3.10+ and is particularly popular in Python and web development communities.
 
 # COMMANDS
 

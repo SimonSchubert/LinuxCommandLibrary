@@ -1,3 +1,7 @@
+# TAGLINE
+
+interactive regex-based codebase refactoring tool
+
 # TLDR
 
 **Interactive regex replace in directory**
@@ -26,9 +30,11 @@
 
 # DESCRIPTION
 
-**codemod** assists with large-scale codebase refactors that require human oversight. For each regex match, it shows a colored diff and prompts whether to accept, reject, or edit the change.
+**codemod** assists with large-scale codebase refactoring that requires human oversight and judgment. Unlike fully automated find-and-replace tools, codemod presents each potential change interactively, showing a colored diff and prompting whether to accept, reject, or manually edit the modification.
 
-Developed by Facebook and released as open source.
+This interactive approach is ideal for complex refactoring tasks like renaming functions across hundreds of files, updating API calls, or modernizing code patterns where context matters. The tool uses Python regex for pattern matching and displays sufficient surrounding code to make informed decisions.
+
+Developed by Facebook and released as open source, codemod was designed for their massive PHP and JavaScript codebases. While the original project is now archived, it pioneered the interactive refactoring workflow later adopted by tools like fastmod and jscodeshift.
 
 # PARAMETERS
 

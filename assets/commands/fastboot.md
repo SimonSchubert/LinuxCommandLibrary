@@ -1,3 +1,7 @@
+# TAGLINE
+
+Android bootloader flashing and modification tool
+
 # TLDR
 
 **List connected devices**

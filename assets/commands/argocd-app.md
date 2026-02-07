@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Argo CD applications
+
 # TLDR
 
 **List** all applications

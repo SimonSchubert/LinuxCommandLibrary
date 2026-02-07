@@ -1,3 +1,7 @@
+# TAGLINE
+
+LPU-powered terminal coding assistant
+
 # TLDR
 
 **Start interactive chat** session
@@ -74,9 +78,12 @@
 
 The CLI stores configuration in a **.groq/** folder in your home directory, including API keys and model preferences. Users can select different language models available on the Groq platform using the **/model** command.
 
-Proxy configuration follows a priority order: CLI flag (**--proxy**) takes precedence over **HTTPS_PROXY**, which takes precedence over **HTTP_PROXY** environment variables. The tool supports HTTP, HTTPS, and SOCKS5 proxy protocols.
+Proxy configuration follows a priority order: CLI flag (**--proxy**) takes precedence over **HTTPS_PROXY**, which takes precedence over **HTTP_PROXY** environment variables.
 
-The CLI is designed as an extensible blueprint, allowing developers to add custom tools, slash commands, and modify startup behavior to fit their workflow.
+# CONFIGURATION
+
+**~/.groq/**
+> Configuration directory storing API keys, model preferences, and session data.
 
 # CAVEATS
 

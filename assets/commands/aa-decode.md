@@ -1,3 +1,7 @@
+# TAGLINE
+
+Decode hex-encoded strings in AppArmor logs
+
 # TLDR
 
 **Decode** a hex string

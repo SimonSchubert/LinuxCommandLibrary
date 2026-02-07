@@ -1,3 +1,7 @@
+# TAGLINE
+
+Handle alert deduplication, grouping, and routing for Prometheus
+
 # TLDR
 
 **Start Alertmanager** with default configuration
@@ -65,6 +69,11 @@ When Prometheus detects a condition matching an alerting rule, it sends alerts t
 Key features include **silences** to mute alerts during maintenance, **inhibition** rules to suppress alerts when related alerts are firing, and **high availability** through a gossip-based cluster protocol that ensures alerts are not duplicated across instances.
 
 The web UI at the configured listen address provides alert management, silence creation, and cluster status visibility.
+
+# CONFIGURATION
+
+**/etc/alertmanager/alertmanager.yml**
+> Main configuration file defining routes, receivers, inhibition rules, and notification templates.
 
 # CAVEATS
 

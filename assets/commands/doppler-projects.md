@@ -1,3 +1,7 @@
+# TAGLINE
+
+manage Doppler projects and environments
+
 # TLDR
 
 **List projects**
@@ -43,7 +47,11 @@
 
 # DESCRIPTION
 
-**doppler projects** manages Doppler projects. Projects contain environments and their associated secrets and configurations.
+**doppler projects** manages Doppler projects, which are top-level organizational units containing environments and their associated secrets and configurations.
+
+Projects group related environments together (development, staging, production), allowing teams to organize secrets logically by application or service. Each project contains multiple configs representing different deployment environments.
+
+Operations include creating new projects, listing existing ones, viewing details, updating metadata like descriptions, and deleting projects when no longer needed. Project management is typically done during initial setup or when restructuring secret organization.
 
 # SEE ALSO
 

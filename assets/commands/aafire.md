@@ -1,3 +1,7 @@
+# TAGLINE
+
+ASCII art fire animation
+
 # TLDR
 
 **Display ASCII fire** animation in the terminal

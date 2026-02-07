@@ -1,3 +1,7 @@
+# TAGLINE
+
+Find symbolic names for commits
+
 # TLDR
 
 **Find symbolic name for commit**
@@ -39,9 +43,10 @@
 
 # DESCRIPTION
 
-**git name-rev** finds symbolic names for given commits. Shows the nearest ref (branch or tag) that can describe the commit.
+**git name-rev** finds symbolic names for given commit hashes, making them more human-readable. It shows the nearest ref (branch or tag) that can describe each commit, along with the number of commits from that ref (e.g., "main~3" means three commits before main).
+
+The `--stdin` option allows processing commit hashes from pipelines, enabling annotation of `git log` output or other commands that produce commit IDs. Filter options like `--tags` or `--refs` restrict which references are used for naming.
 
 # SEE ALSO
 
 [git-describe](/man/git-describe)(1), [git-rev-parse](/man/git-rev-parse)(1)
-

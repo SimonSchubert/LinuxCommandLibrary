@@ -1,3 +1,7 @@
+# TAGLINE
+
+open-source cloud security posture scanner
+
 # TLDR
 
 **Run a scan with default settings**
@@ -64,6 +68,11 @@
 The tool runs plugins that query cloud APIs to assess configuration against security best practices. Results are categorized by severity (OK, WARN, FAIL, UNKNOWN) with descriptions and remediation guidance.
 
 CloudSploit supports compliance mapping to frameworks like CIS Benchmarks, PCI-DSS, and HIPAA, helping organizations meet regulatory requirements. It can be integrated into CI/CD pipelines for continuous security monitoring.
+
+# CONFIGURATION
+
+**config.js**
+> Cloud provider credentials and scan settings (typically in the project root).
 
 # CAVEATS
 

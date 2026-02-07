@@ -1,3 +1,7 @@
+# TAGLINE
+
+Host a dedicated game server for dinosaur survival multiplayer.
+
 # TLDR
 
 Start the server with a **specific map**
@@ -69,6 +73,14 @@ Server options use URL-style query parameters (joined with **?**) for gameplay s
 
 **-crossplay**
 > Enable crossplay between Steam and Epic Games
+
+# CONFIGURATION
+
+**/ShooterGame/Saved/Config/LinuxServer/GameUserSettings.ini**
+> Main server configuration including session name, passwords, ports, rates, and gameplay toggles.
+
+**/ShooterGame/Saved/Config/LinuxServer/Game.ini**
+> Advanced gameplay overrides including engram points, loot tables, and per-level stat multipliers.
 
 # CAVEATS
 

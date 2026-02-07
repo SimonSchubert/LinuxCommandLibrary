@@ -1,3 +1,7 @@
+# TAGLINE
+
+Debug bare-metal ARM firmware interactively.
+
 # TLDR
 
 **Start debugging an ARM firmware binary**
@@ -86,6 +90,11 @@
 The debugger connects to hardware targets via debug servers like OpenOCD, J-Link GDB Server, or ST-Link utilities. These servers provide the bridge between GDB's remote protocol and the physical debug interface on the microcontroller.
 
 With an ELF file containing debug symbols, arm-none-eabi-gdb provides full source-level debugging: setting breakpoints, inspecting variables, stepping through code, and examining memory and registers. It supports ARM-specific features like viewing special registers and peripheral memory regions.
+
+# CONFIGURATION
+
+**~/.gdbinit**
+> GDB initialization commands executed at startup, such as target connection settings and custom macros.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+combine images using ImageMagick 6
+
 # TLDR
 
 **Overlay one image** on top of another

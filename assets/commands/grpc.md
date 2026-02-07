@@ -1,3 +1,7 @@
+# TAGLINE
+
+high-performance remote procedure call framework
+
 # TLDR
 
 **Generate Go code from proto**

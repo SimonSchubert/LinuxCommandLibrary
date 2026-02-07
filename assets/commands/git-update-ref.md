@@ -1,3 +1,7 @@
+# TAGLINE
+
+Safely update Git reference values
+
 # TLDR
 
 **Update ref to new value**
@@ -39,9 +43,10 @@
 
 # DESCRIPTION
 
-**git update-ref** safely updates ref names. Provides atomic ref updates with optional old value verification. Used by higher-level commands like git branch.
+**git update-ref** safely updates ref names stored in the repository. It provides atomic ref updates with optional old value verification, ensuring that a ref is only changed if it currently points to an expected value.
+
+This is a low-level plumbing command used internally by higher-level commands like `git branch` and `git tag`.
 
 # SEE ALSO
 
 [git-symbolic-ref](/man/git-symbolic-ref)(1), [git-branch](/man/git-branch)(1)
-

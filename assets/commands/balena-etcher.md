@@ -1,3 +1,7 @@
+# TAGLINE
+
+Flash OS images to SD cards and USB drives
+
 # TLDR
 
 **Launch Balena Etcher** graphical interface

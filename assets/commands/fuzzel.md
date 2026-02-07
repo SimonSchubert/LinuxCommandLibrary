@@ -1,3 +1,7 @@
+# TAGLINE
+
+Wayland application launcher with fuzzy search
+
 # TLDR
 
 **Run** applications
@@ -70,6 +74,14 @@ Use fuzzel for **online search**
 
 **-T**, **--terminal** _CMD_
 > Terminal command for launching terminal apps
+
+# CONFIGURATION
+
+**~/.config/fuzzel/fuzzel.ini**
+> Appearance, behavior, keybindings, and default options.
+
+**~/.cache/fuzzel**
+> Usage frequency tracking for application sorting.
 
 # DESCRIPTION
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Original Colossal Cave text adventure game
+
 # TLDR
 
 **Start** the adventure game

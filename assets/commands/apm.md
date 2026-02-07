@@ -1,3 +1,7 @@
+# TAGLINE
+
+Query Advanced Power Management status and battery info.
+
 # TLDR
 
 **Show** APM status (power/battery)

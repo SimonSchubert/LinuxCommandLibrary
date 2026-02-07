@@ -1,3 +1,7 @@
+# TAGLINE
+
+Console mouse support daemon
+
 # TLDR
 
 Start gpm with a **PS/2 mouse**
@@ -61,6 +65,11 @@ List the available **mouse types**
 Text selection is done by holding the left button and dragging. Middle button pastes selected text. Right button extends selection. This provides clipboard functionality similar to X11 in pure text mode.
 
 In repeater mode (**-R**), gpm can pass mouse events to X server, allowing both console and X applications to share the mouse device.
+
+# CONFIGURATION
+
+**/etc/gpm.conf**
+> Daemon configuration including mouse device, type, and options.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Add dependencies to a Rust project
+
 # TLDR
 
 **Add dependency**

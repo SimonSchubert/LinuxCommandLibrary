@@ -1,3 +1,7 @@
+# TAGLINE
+
+Pre-compute WPA/WPA2 PMK databases for faster cracking
+
 # TLDR
 
 **Create** a new database

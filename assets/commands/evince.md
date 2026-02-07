@@ -1,3 +1,7 @@
+# TAGLINE
+
+GNOME document viewer for PDF and PostScript
+
 # TLDR
 
 **Open** a PDF file
@@ -24,12 +28,6 @@ Open a specific **page** number
 
 **evince** [_options_] [_files_]
 
-# DESCRIPTION
-
-**evince** is the GNOME document viewer supporting PDF, PostScript, DjVu, TIFF, and other formats. It provides annotation support, form filling, and presentation mode.
-
-Integrates with GNOME desktop services for printing and file management.
-
 # PARAMETERS
 
 **-f, --fullscreen**
@@ -46,6 +44,12 @@ Integrates with GNOME desktop services for printing and file management.
 
 **-w, --preview**
 > Run in preview mode
+
+# DESCRIPTION
+
+**evince** is the GNOME document viewer supporting PDF, PostScript, DjVu, TIFF, and other formats. It provides annotation support, form filling, and presentation mode.
+
+Integrates with GNOME desktop services for printing and file management.
 
 # CAVEATS
 

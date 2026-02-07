@@ -1,3 +1,7 @@
+# TAGLINE
+
+Review and inspect past CLI command executions.
+
 # TLDR
 
 **List recent CLI command history**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Drupal code deprecation checker
+
 # TLDR
 
 **Check module for** deprecations

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage file-based Elasticsearch users
+
 # TLDR
 
 **List users**

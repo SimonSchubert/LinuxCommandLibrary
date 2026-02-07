@@ -1,3 +1,7 @@
+# TAGLINE
+
+Android DEX to JAR file converter
+
 # TLDR
 
 **Convert DEX to JAR**

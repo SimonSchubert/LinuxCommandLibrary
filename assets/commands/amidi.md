@@ -1,3 +1,7 @@
+# TAGLINE
+
+Send and receive raw MIDI data
+
 # TLDR
 
 **List** MIDI hardware ports

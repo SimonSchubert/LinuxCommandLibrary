@@ -1,3 +1,7 @@
+# TAGLINE
+
+save ext filesystem metadata images
+
 # TLDR
 
 Write metadata to **file**
@@ -26,9 +30,9 @@ Create **QCOW2** image
 
 # DESCRIPTION
 
-**e2image** saves critical ext2/ext3/ext4 filesystem metadata to a file. This is useful for backing up filesystem structure for disaster recovery or debugging.
+**e2image** saves critical ext2/ext3/ext4 filesystem metadata to a file. This is useful for backing up filesystem structure for disaster recovery or debugging filesystem corruption issues.
 
-The image file contains only metadata, not file contents, making it much smaller than a full backup.
+The image file contains only metadata (superblock, block groups, inode tables, etc.), not file contents, making it much smaller than a full backup. This allows filesystem experts to diagnose problems without access to the actual data or the need to copy entire filesystems.
 
 # PARAMETERS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line interface for GnuCash reports and quotes
+
 # TLDR
 
 **Update quotes for all securities**
@@ -62,7 +66,7 @@
 
 # DESCRIPTION
 
-**gnucash-cli** is a command-line tool for GnuCash, a personal and small business financial accounting application. It operates in two modes: quotes mode for fetching and updating security prices, and report mode for generating financial reports. This allows automation of price updates and report generation without opening the GUI.
+**gnucash-cli** is the command-line interface for GnuCash, a personal and small business financial accounting application. It operates in two modes: quotes mode for fetching and updating security prices, and report mode for generating financial reports. This allows automation of price updates and report generation without opening the GUI.
 
 # CAVEATS
 
@@ -71,4 +75,3 @@ Quotes functionality requires Finance::Quote to be properly configured. Database
 # SEE ALSO
 
 [gnucash](/man/gnucash)(1), [ledger](/man/ledger)(1)
-

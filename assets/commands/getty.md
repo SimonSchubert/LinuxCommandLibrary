@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal login session manager
+
 # TLDR
 
 **Start getty on** terminal
@@ -50,6 +54,14 @@ _BAUD_
 The program is started by init/systemd for each terminal requiring login access. It handles baud rate detection for serial terminals and terminal type configuration.
 
 getty provides the foundational login interface for Unix systems.
+
+# CONFIGURATION
+
+**/etc/inittab**
+> System V init configuration defining getty instances for each terminal (legacy systems).
+
+**/etc/systemd/system/getty@.service**
+> Systemd service template for getty instances on modern Linux systems.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+modern ls replacement written in Rust
+
 # TLDR
 
 **List files** with colors

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Copy files to or from a remote via scp
+
 # TLDR
 
 **Copy files to remote**
@@ -19,9 +23,8 @@
 
 # DESCRIPTION
 
-**git scp** copies files to or from a remote using scp. Part of git-extras. Uses the remote's SSH configuration from Git.
+**git scp** copies files to or from a Git remote using scp. Part of git-extras, it reads the remote's SSH configuration from Git to determine the host and path.
 
 # SEE ALSO
 
 [git-rscp](/man/git-rscp)(1), [scp](/man/scp)(1), [git-extras](/man/git-extras)(1)
-

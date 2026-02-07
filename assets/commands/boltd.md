@@ -1,3 +1,7 @@
+# TAGLINE
+
+Thunderbolt device management daemon
+
 # TLDR
 
 **Start the bolt daemon**

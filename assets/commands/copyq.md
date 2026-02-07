@@ -1,3 +1,7 @@
+# TAGLINE
+
+advanced clipboard manager
+
 # TLDR
 
 **Start CopyQ** in the system tray

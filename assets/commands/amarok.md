@@ -1,3 +1,7 @@
+# TAGLINE
+
+Feature-rich KDE music player
+
 # TLDR
 
 **Start** Amarok
@@ -71,6 +75,11 @@ The player can scan your music library, fetch album art and lyrics, and provides
 
 **--engine** _engine_
 > Use specific audio engine
+
+# CONFIGURATION
+
+**~/.kde/share/config/amarokrc**
+> Main configuration file storing player settings, collection paths, and plugin preferences.
 
 # CAVEATS
 

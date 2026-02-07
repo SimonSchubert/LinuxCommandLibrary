@@ -1,3 +1,7 @@
+# TAGLINE
+
+Debian archive manipulation tool
+
 # TLDR
 
 Display package **information**
@@ -26,9 +30,11 @@ Display package **name and version**
 
 # DESCRIPTION
 
-**dpkg-deb** packs, unpacks, and provides information about Debian archives (.deb files). It's the low-level tool for working with .deb file format.
+**dpkg-deb** packs, unpacks, and provides information about Debian archives (.deb files). It's the low-level tool for working directly with the .deb file format without involving the package database.
 
-Used for inspecting packages before installation or creating packages from prepared directory structures.
+The tool allows you to inspect package contents and metadata before installation, extract files from packages without installing them, or build new .deb archives from properly structured directory trees. Unlike dpkg itself, dpkg-deb operates purely on archive files and doesn't modify the system's package database.
+
+Common use cases include examining unfamiliar packages for security auditing, extracting specific files from packages, and building custom .deb packages as part of a development workflow.
 
 # PARAMETERS
 

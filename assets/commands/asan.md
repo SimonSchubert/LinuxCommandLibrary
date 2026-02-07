@@ -1,3 +1,7 @@
+# TAGLINE
+
+Detect memory errors at runtime via compiler instrumentation.
+
 # TLDR
 
 **Compile a C program with AddressSanitizer**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Clean disk space and maintain privacy
+
 # TLDR
 
 Launch **GUI**
@@ -26,7 +30,9 @@ List **cleaners**
 
 # DESCRIPTION
 
-**bleachbit** frees disk space and maintains privacy by cleaning cache, cookies, temporary files, logs, and other junk. It can also securely shred files to prevent recovery.
+**bleachbit** frees disk space and maintains privacy by cleaning cache, cookies, temporary files, logs, and other junk. It supports hundreds of applications through its cleaner system, which identifies and removes unnecessary files specific to each program.
+
+The tool can also securely shred individual files to prevent recovery. It provides both a graphical interface and command-line mode for scripted or scheduled cleanups.
 
 # PARAMETERS
 

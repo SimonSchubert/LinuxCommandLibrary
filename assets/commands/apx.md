@@ -1,3 +1,7 @@
+# TAGLINE
+
+Package manager with containerized subsystem support
+
 # TLDR
 
 View documentation for managing **package managers**
@@ -59,6 +63,14 @@ Packages are installed in isolated subsystems based on Podman containers. Applic
 
 **export**
 > Export an application to the host system
+
+# CONFIGURATION
+
+**/etc/apx/apx.json**
+> System-wide configuration defining the container storage path, apnx storage path, and default stack settings.
+
+**~/.local/share/apx/**
+> Per-user directory containing stacks, subsystems, and package manager configurations.
 
 # CAVEATS
 

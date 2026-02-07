@@ -1,3 +1,7 @@
+# TAGLINE
+
+display mail sender information
+
 # TLDR
 
 **Show mail senders**

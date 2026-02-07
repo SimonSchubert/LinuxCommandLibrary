@@ -1,3 +1,7 @@
+# TAGLINE
+
+Uninstall and reinstall a Homebrew package
+
 # TLDR
 
 **Reinstall a formula**

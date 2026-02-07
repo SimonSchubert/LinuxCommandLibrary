@@ -1,3 +1,7 @@
+# TAGLINE
+
+Install, upgrade, and manage packages.
+
 # TLDR
 
 **Update** the list of available packages
@@ -86,6 +90,17 @@
 
 **-f, --fix-broken**
 > Attempt to fix broken dependencies
+
+# CONFIGURATION
+
+**/etc/apt/sources.list**
+> Package source repositories.
+
+**/etc/apt/apt.conf**
+> Main APT configuration file.
+
+**/etc/apt/apt.conf.d/**
+> Directory for drop-in configuration fragments.
 
 # CAVEATS
 

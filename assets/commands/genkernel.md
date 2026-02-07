@@ -1,3 +1,7 @@
+# TAGLINE
+
+automated kernel compilation and installation for Gentoo
+
 # TLDR
 
 Automatically **compile and install** a generic kernel
@@ -61,6 +65,11 @@ Use a kernel source **outside** the default directory
 
 **--luks**
 > Add LUKS encryption support to initramfs
+
+# CONFIGURATION
+
+**/etc/genkernel.conf**
+> Main configuration file controlling default build options, paths, and features.
 
 # DESCRIPTION
 

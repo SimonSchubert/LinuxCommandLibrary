@@ -1,3 +1,7 @@
+# TAGLINE
+
+Concise NVIDIA GPU status monitor
+
 # TLDR
 
 **Show GPU status**
@@ -28,12 +32,6 @@
 
 **gpustat** [_options_]
 
-# DESCRIPTION
-
-**gpustat** displays GPU status in a concise format, similar to nvidia-smi but more readable. It shows GPU utilization, memory usage, temperature, and running processes.
-
-The tool is designed for quick monitoring of NVIDIA GPUs during machine learning training or GPU-intensive tasks.
-
 # PARAMETERS
 
 **-p**, **--show-pid**
@@ -62,6 +60,12 @@ The tool is designed for quick monitoring of NVIDIA GPUs during machine learning
 
 **--id** _id_
 > Show specific GPU only.
+
+# DESCRIPTION
+
+**gpustat** displays GPU status in a concise format, similar to nvidia-smi but more readable. It shows GPU utilization, memory usage, temperature, and running processes at a glance.
+
+The tool is designed for quick monitoring of NVIDIA GPUs during machine learning training or other GPU-intensive tasks.
 
 # CAVEATS
 

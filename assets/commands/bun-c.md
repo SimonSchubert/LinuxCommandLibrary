@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run a shell command string through Bun
+
 # TLDR
 
 **Run a shell command**
@@ -14,9 +18,7 @@
 
 # DESCRIPTION
 
-**bun -c** (or **bun --bun -c**) runs a shell command string. This is similar to **sh -c** but uses Bun's shell implementation.
-
-This allows running arbitrary shell commands through Bun's runtime.
+**bun -c** runs a shell command string, similar to **sh -c** but using Bun's built-in shell implementation. It can load environment variables from **.env** files before executing the command, making it useful for running scripts that depend on environment configuration without additional tooling.
 
 # SEE ALSO
 

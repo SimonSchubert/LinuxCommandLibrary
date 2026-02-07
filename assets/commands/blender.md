@@ -1,3 +1,7 @@
+# TAGLINE
+
+3D creation suite for modeling, animation, and rendering
+
 # TLDR
 
 **Start** Blender GUI

@@ -1,3 +1,7 @@
+# TAGLINE
+
+macOS code signing and verification utility
+
 # TLDR
 
 **Sign an application**
@@ -34,7 +38,11 @@
 
 # DESCRIPTION
 
-**codesign** creates, verifies, and displays code signatures on macOS. Required for Gatekeeper approval and notarization. Signs applications, frameworks, plugins, and executables.
+**codesign** creates, verifies, and displays code signatures on macOS. Code signing is required for Gatekeeper approval, notarization, and distribution of applications. It cryptographically signs executables, applications, frameworks, plugins, and other code to verify their authenticity and integrity.
+
+The tool integrates with macOS security frameworks to enforce that code comes from identified developers and hasn't been tampered with. Signing requires valid certificates from Apple stored in the Keychain. Timestamps from Apple's servers ensure signatures remain valid even after certificates expire.
+
+Deep signing recursively signs all nested content within bundles, which is necessary for complex applications with embedded frameworks and plugins. Entitlements files specify security capabilities and permissions. Verification confirms signatures are valid and meet specified requirements.
 
 # OPERATIONS
 

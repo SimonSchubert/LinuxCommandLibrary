@@ -1,3 +1,7 @@
+# TAGLINE
+
+Cat clone with syntax highlighting and Git integration
+
 # TLDR
 
 **View** file with syntax highlighting
@@ -79,11 +83,8 @@ The tool provides a more user-friendly file viewing experience for developers an
 
 # CONFIGURATION
 
-Config file: `~/.config/bat/config`
-```
---theme="Monokai Extended"
---style="numbers,changes,grid"
-```
+**~/.config/bat/config**
+> Default command-line options applied automatically. One option per line (e.g. --theme, --style).
 
 # CAVEATS
 

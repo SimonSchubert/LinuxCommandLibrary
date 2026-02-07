@@ -1,3 +1,7 @@
+# TAGLINE
+
+Unix shell and command language interpreter
+
 # TLDR
 
 **Run** script
@@ -100,6 +104,23 @@ Bash is backward-compatible with the original Bourne shell (sh) while adding num
 **$?** - Exit status of last command
 **$$** - Process ID
 **$!** - PID of last background job
+
+# CONFIGURATION
+
+**~/.bashrc**
+> Per-user configuration for interactive non-login shells. Aliases, functions, prompt customization.
+
+**~/.bash_profile**
+> Per-user configuration for login shells. Typically sources ~/.bashrc.
+
+**~/.bash_logout**
+> Executed when a login shell exits.
+
+**/etc/bash.bashrc**
+> System-wide configuration for interactive shells.
+
+**/etc/profile**
+> System-wide configuration for login shells.
 
 # CAVEATS
 

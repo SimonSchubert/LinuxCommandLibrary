@@ -1,3 +1,7 @@
+# TAGLINE
+
+Nucleotide-to-nucleotide sequence alignment search
+
 # TLDR
 
 **Align sequences** using megablast with e-value threshold

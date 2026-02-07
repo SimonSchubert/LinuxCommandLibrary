@@ -1,3 +1,7 @@
+# TAGLINE
+
+content-based file type identification
+
 # TLDR
 
 **Determine file type**

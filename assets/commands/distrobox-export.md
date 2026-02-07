@@ -1,3 +1,7 @@
+# TAGLINE
+
+export container applications and binaries to host system
+
 # TLDR
 
 **Export an app** to the host

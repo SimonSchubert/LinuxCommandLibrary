@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove unreachable objects
+
 # TLDR
 
 **Prune unreachable objects**
@@ -39,11 +43,9 @@
 
 # DESCRIPTION
 
-**git prune** removes unreachable objects from the object database. Objects become unreachable when their referencing commits are deleted or rebased away.
+**git prune** removes unreachable objects from the object database. Objects become unreachable when their referencing commits are deleted, rebased away, or otherwise orphaned.
 
-The command is typically run as part of git gc. Direct use is for specific cleanup scenarios. Expire times prevent pruning recent objects that might still be needed.
-
-git prune cleans up orphaned repository objects.
+The command is typically run as part of `git gc` rather than directly. The `--expire` option prevents pruning recent objects that might still be needed by concurrent operations, providing a safety margin.
 
 # CAVEATS
 

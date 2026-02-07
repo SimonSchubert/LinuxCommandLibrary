@@ -1,3 +1,7 @@
+# TAGLINE
+
+Cross-platform desktop apps with web technologies
+
 # TLDR
 
 **Run Electron app**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Shell function for interactive directory navigation
+
 # TLDR
 
 Start **interactive** navigation

@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates contour lines from elevation data
+
 # TLDR
 
 **Generate contours**

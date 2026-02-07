@@ -1,3 +1,7 @@
+# TAGLINE
+
+Search a container library for available images.
+
 # TLDR
 
 **Search** for container images matching a query

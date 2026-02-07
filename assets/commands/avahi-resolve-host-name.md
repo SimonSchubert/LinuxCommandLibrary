@@ -1,3 +1,7 @@
+# TAGLINE
+
+Resolve hostnames to IP addresses via mDNS
+
 # TLDR
 
 This command is an alias of **avahi-resolve --name**.

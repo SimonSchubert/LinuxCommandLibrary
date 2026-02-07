@@ -1,3 +1,7 @@
+# TAGLINE
+
+Cloud Foundry CLI for application deployment
+
 # TLDR
 
 **Login to Cloud Foundry**
@@ -34,7 +38,11 @@
 
 # DESCRIPTION
 
-**cf** is the Cloud Foundry CLI for managing applications and services on Cloud Foundry platforms. Deploys, scales, and manages cloud-native applications across multiple cloud providers.
+**cf** is the Cloud Foundry CLI for managing applications and services on Cloud Foundry platforms. It handles the full application lifecycle including deployment, scaling, logging, and service binding across multiple cloud providers.
+
+Cloud Foundry uses a push-based deployment model where developers run `cf push` to upload application code, which is then built, containerized, and deployed automatically. Applications are organized into organizations and spaces, providing multi-tenant isolation. The CLI manages the interaction between developers and the Cloud Foundry API.
+
+Services such as databases, message queues, and caches are provisioned from a marketplace and bound to applications, with connection credentials injected via environment variables.
 
 # COMMANDS
 
@@ -105,6 +113,14 @@
 
 **--skip-ssl-validation**
 > Skip SSL certificate verification
+
+# CONFIGURATION
+
+**~/.cf/config.json**
+> CLI configuration including API endpoint, access tokens, and current org/space target.
+
+**manifest.yml**
+> Application deployment manifest defining memory, instances, routes, and service bindings.
 
 # CAVEATS
 

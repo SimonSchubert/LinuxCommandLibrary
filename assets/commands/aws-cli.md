@@ -1,3 +1,7 @@
+# TAGLINE
+
+Unified command-line interface for Amazon Web Services.
+
 # TLDR
 
 **Configure AWS credentials**
@@ -98,6 +102,14 @@
 The CLI uses credentials stored in **~/.aws/credentials** and configuration in **~/.aws/config**. Multiple profiles support working with different AWS accounts or roles. Commands follow the pattern **aws service operation --parameters**.
 
 Output can be formatted as JSON, YAML, text, or tables, and filtered using JMESPath queries with **--query**. The CLI supports shell completion and an interactive auto-prompt mode for discovering commands and parameters.
+
+# CONFIGURATION
+
+**~/.aws/credentials**
+> Stores access key ID and secret access key, organized by named profiles.
+
+**~/.aws/config**
+> Stores default region, output format, SSO settings, and role assumptions per profile.
 
 # CAVEATS
 

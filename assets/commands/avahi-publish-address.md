@@ -1,3 +1,7 @@
+# TAGLINE
+
+Register mDNS hostname-to-address mappings
+
 # TLDR
 
 **Register** a hostname to IP address mapping

@@ -1,3 +1,7 @@
+# TAGLINE
+
+daemon-based virus scanner client
+
 # TLDR
 
 **Scan file or directory**
@@ -34,7 +38,11 @@
 
 # DESCRIPTION
 
-**clamdscan** is a ClamAV daemon client. Sends files to clamd for scanning. Faster than clamscan for batch scanning as database stays loaded in memory. Requires running clamd daemon.
+**clamdscan** is a client for the ClamAV daemon (clamd). Instead of loading the virus signature database itself, it sends file paths or data streams to the clamd daemon for scanning, making it significantly faster than clamscan for repeated or batch scanning operations.
+
+Because clamd keeps the virus database loaded in memory, clamdscan avoids the startup overhead of loading signatures on each invocation. The **--multiscan** option enables parallel scanning using multiple daemon threads, further improving throughput on multi-core systems.
+
+clamdscan requires a running clamd daemon and inherits most scan settings from the daemon's configuration. It communicates with clamd via Unix socket or TCP connection and supports the same quarantine actions (move, copy, remove) as clamscan.
 
 # PARAMETERS
 

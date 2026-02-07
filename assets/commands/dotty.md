@@ -1,3 +1,7 @@
+# TAGLINE
+
+interactive DOT graph viewer
+
 # TLDR
 
 **View DOT graph** interactively

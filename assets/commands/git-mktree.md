@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create tree object from ls-tree format
+
 # TLDR
 
 **Create tree from ls-tree output**
@@ -32,11 +36,9 @@
 
 # DESCRIPTION
 
-**git mktree** creates a tree object from ls-tree formatted input. It reads file modes, object types, hashes, and names, creating a new tree object containing those entries.
+**git mktree** creates a tree object from ls-tree formatted input. It reads file modes, object types, hashes, and names from stdin, creating a new tree object containing those entries. The command is the inverse of `git ls-tree`.
 
-The command is a plumbing tool for programmatic tree creation. It's the inverse of git ls-tree, enabling tree manipulation in scripts.
-
-git mktree provides low-level tree object creation.
+This plumbing tool enables programmatic tree creation and manipulation in scripts. Input must be properly formatted with each line specifying mode, type, hash, and filename.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+restore DVC-tracked files to workspace
+
 # TLDR
 
 **Checkout all tracked** files

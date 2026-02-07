@@ -1,3 +1,7 @@
+# TAGLINE
+
+input device event monitor and debugger
+
 # TLDR
 
 **List** all detected input devices
@@ -20,12 +24,6 @@ Display **events** from a specific device
 
 **evtest** [_options_] [_device_]
 
-# DESCRIPTION
-
-**evtest** displays information from input device drivers using the Linux input subsystem. It reads and displays input events like key presses, mouse movements, and touch events.
-
-Useful for debugging input devices and testing driver functionality.
-
 # PARAMETERS
 
 **--grab**
@@ -33,6 +31,12 @@ Useful for debugging input devices and testing driver functionality.
 
 **--query** _device_ _type_ _code_
 > Query state of specific input
+
+# DESCRIPTION
+
+**evtest** displays information from input device drivers using the Linux input subsystem. It reads and displays input events like key presses, mouse movements, and touch events.
+
+Useful for debugging input devices and testing driver functionality.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+disable an Apache2 virtual host
+
 # TLDR
 
 **Disable** a virtual host

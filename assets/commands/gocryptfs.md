@@ -1,3 +1,7 @@
+# TAGLINE
+
+Encrypted overlay filesystem using FUSE
+
 # TLDR
 
 **Create encrypted directory**
@@ -52,11 +56,14 @@ _MOUNTPOINT_
 
 # DESCRIPTION
 
-**gocryptfs** is an encrypted overlay filesystem. It encrypts files individually using AES-256-GCM, storing ciphertext in a directory while presenting plaintext through a FUSE mount.
+**gocryptfs** is an encrypted overlay filesystem written in Go. It encrypts files individually using AES-256-GCM, storing ciphertext in a directory while presenting plaintext through a FUSE mount.
 
-The tool provides file-level encryption, enabling cloud backup of encrypted data. File names are encrypted; metadata leakage is minimized.
+The tool provides file-level encryption with encrypted file names, enabling safe cloud backup of encrypted data. Metadata leakage is minimized compared to full-disk encryption alternatives.
 
-gocryptfs provides transparent file encryption.
+# CONFIGURATION
+
+**gocryptfs.conf**
+> Per-volume configuration file stored in the cipher directory, containing encryption parameters and the encrypted master key.
 
 # CAVEATS
 

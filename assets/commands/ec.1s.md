@@ -1,3 +1,7 @@
+# TAGLINE
+
+Elliptic Curve key operations
+
 # TLDR
 
 **Generate EC key**

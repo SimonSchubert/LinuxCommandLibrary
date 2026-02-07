@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line firmware update client
+
 # TLDR
 
 Display all **devices detected** by fwupd

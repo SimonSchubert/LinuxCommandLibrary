@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display Azure CLI version information
+
 # TLDR
 
 **Show** Azure CLI version

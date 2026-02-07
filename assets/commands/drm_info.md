@@ -1,3 +1,7 @@
+# TAGLINE
+
+display DRM device information
+
 # TLDR
 
 **Display info about all DRM devices** with formatted output

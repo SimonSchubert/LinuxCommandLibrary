@@ -1,3 +1,7 @@
+# TAGLINE
+
+enhanced conditional expression for bash/zsh
+
 # TLDR
 
 **Test condition (bash/zsh extended)**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+List installed packages on an Android device
+
 # TLDR
 
 **List** all packages

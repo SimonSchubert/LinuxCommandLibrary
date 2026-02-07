@@ -1,3 +1,7 @@
+# TAGLINE
+
+Serve content over the Gemini protocol
+
 # TLDR
 
 **Start** a Gemini server

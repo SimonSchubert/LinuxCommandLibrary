@@ -1,3 +1,7 @@
+# TAGLINE
+
+user-space encrypted filesystem using FUSE
+
 # TLDR
 
 **Create/mount encrypted directory**
@@ -62,6 +66,11 @@ The tool is useful for encrypting cloud-synced folders or sensitive directories.
 
 **--extpass** _cmd_
 > External password program.
+
+# CONFIGURATION
+
+**.encfs6.xml**
+> Configuration file stored in the encrypted directory containing encryption parameters and settings.
 
 # CAVEATS
 

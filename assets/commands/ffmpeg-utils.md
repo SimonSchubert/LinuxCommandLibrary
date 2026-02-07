@@ -1,3 +1,7 @@
+# TAGLINE
+
+utility functions for ffmpeg processing
+
 # TLDR
 
 **Get media information**

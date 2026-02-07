@@ -1,3 +1,7 @@
+# TAGLINE
+
+manage container registry authentication
+
 # TLDR
 
 **Login to a registry**

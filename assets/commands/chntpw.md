@@ -1,3 +1,7 @@
+# TAGLINE
+
+offline Windows password and registry editor
+
 # TLDR
 
 **List** all users in the SAM file

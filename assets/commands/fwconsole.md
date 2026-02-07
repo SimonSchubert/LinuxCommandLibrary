@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line interface for FreePBX administration
+
 # TLDR
 
 **Reload** FreePBX configurations

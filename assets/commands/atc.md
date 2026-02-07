@@ -1,3 +1,7 @@
+# TAGLINE
+
+Text-based air traffic control simulation game
+
 # TLDR
 
 **Start** the air traffic control game

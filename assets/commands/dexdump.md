@@ -1,3 +1,7 @@
+# TAGLINE
+
+Android DEX file analysis and disassembly tool
+
 # TLDR
 
 **Dump a DEX file**
@@ -39,9 +43,11 @@
 
 # DESCRIPTION
 
-**dexdump** displays information about Android DEX (Dalvik Executable) files. It can dump class definitions, method signatures, and disassemble bytecode.
+**dexdump** displays detailed information about Android DEX (Dalvik Executable) files. It can dump class definitions, method signatures, field information, and disassemble bytecode into human-readable format.
 
-Part of the Android SDK build tools, useful for analyzing Android applications.
+The tool is part of the Android SDK build tools and provides insight into the structure of compiled Android applications. It can output information in plain text or XML format for further processing.
+
+DEX files contain compiled Java bytecode for the Dalvik VM or Android Runtime (ART). dexdump helps developers and security researchers understand app internals, debug compilation issues, and perform reverse engineering analysis.
 
 # SEE ALSO
 

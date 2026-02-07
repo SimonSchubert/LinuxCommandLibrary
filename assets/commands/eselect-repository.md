@@ -1,3 +1,7 @@
+# TAGLINE
+
+Gentoo ebuild repository configuration
+
 # TLDR
 
 **List** all ebuild repositories

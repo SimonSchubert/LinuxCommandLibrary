@@ -1,3 +1,7 @@
+# TAGLINE
+
+extend CLI functionality with community plugins
+
 # TLDR
 
 **Install an extension**
@@ -57,6 +61,11 @@
 Extensions are GitHub repositories containing executables that follow gh's extension protocol. They can be written in any language and distributed through GitHub. The extension system enables community contributions to gh.
 
 gh extension provides full lifecycle management from installation to updates and removal.
+
+# CONFIGURATION
+
+**~/.local/share/gh/extensions/**
+> Directory where installed extensions are stored and executed from.
 
 # CAVEATS
 

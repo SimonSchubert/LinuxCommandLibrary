@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert BMP images to PNM format
+
 # TLDR
 
 **Convert a BMP image** to PNM format

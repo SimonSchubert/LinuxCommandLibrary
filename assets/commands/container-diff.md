@@ -1,3 +1,7 @@
+# TAGLINE
+
+container image analysis and comparison
+
 # TLDR
 
 **Analyze image size**
@@ -34,7 +38,11 @@
 
 # DESCRIPTION
 
-**container-diff** analyzes and compares container images. Shows semantic differences in packages, files, and metadata. Supports Docker daemon, remote registries, and tarballs. From Google Container Tools.
+**container-diff** is a tool for analyzing and comparing container images at a semantic level. Rather than just showing raw filesystem differences, it understands package managers and can report changes in terms of actual packages (apt, pip, npm), making it easier to understand what changed between image versions.
+
+The tool supports multiple image sources including local Docker daemon images, remote registry images, and tarball archives. It can analyze a single image or compare two images, with output available in human-readable or JSON formats for integration with CI/CD pipelines.
+
+Developed by Google as part of their Container Tools suite, container-diff helps with debugging image bloat, understanding layer contents, and validating that builds produce expected changes. It's particularly useful for security auditing and optimizing Docker images.
 
 # COMMANDS
 

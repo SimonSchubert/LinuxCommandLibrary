@@ -1,3 +1,7 @@
+# TAGLINE
+
+Report the current AppArmor confinement state.
+
 # TLDR
 
 This command is an **alias** of aa-status

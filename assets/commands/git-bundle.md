@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create and manipulate portable bundle files
+
 # TLDR
 
 **Create bundle of entire repository**
@@ -49,7 +53,11 @@
 
 # DESCRIPTION
 
-**git bundle** creates and manipulates bundle files. Bundles are binary files containing objects and refs that can be transferred offline and used like a remote.
+**git bundle** creates and manipulates bundle files for transferring repository data offline. Bundles are portable binary archives containing Git objects and references, functioning as standalone repository snapshots.
+
+The primary use case is sharing repository data without network access, such as air-gapped environments or slow connections. Bundles can contain entire repositories or specific branches and commit ranges. They act as read-only remotes when cloned or fetched from.
+
+Unlike archives, bundles preserve Git history and can be incrementally fetched from. They're verified cryptographically to ensure data integrity. Common workflows include creating bundles on one machine, physically transferring them, and cloning or fetching on another machine.
 
 # SEE ALSO
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Add CD-ROM or DVD-ROM as an APT package source
+
 # TLDR
 
 **Add** CD-ROM to sources
@@ -48,6 +52,14 @@ This is useful for offline installations or when using distribution media withou
 
 **-a**, **--thorough**
 > Thorough scan for packages
+
+# CONFIGURATION
+
+**/etc/apt/sources.list**
+> File where CD-ROM entries are added as package sources.
+
+**/etc/apt/apt.conf**
+> APT configuration file where CD-ROM mount point and behavior options can be set.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line gRPC client like curl
+
 # TLDR
 
 **List services** on a gRPC server (with reflection)
@@ -89,11 +93,9 @@
 
 The tool can discover services in two ways: server reflection (where the server describes its own API) or by providing proto files. Reflection is convenient but must be enabled on the server. Proto files work with any server but require having the service definitions.
 
-For unary calls, request data is provided as JSON via -d flag. Streaming calls can read multiple messages from stdin. Response data is output as JSON by default, making it easy to parse with jq or other tools.
+For unary calls, request data is provided as JSON via the -d flag. Streaming calls can read multiple messages from stdin. Response data is output as JSON by default, making it easy to parse with jq or other tools.
 
-grpcurl handles the complexity of gRPC's HTTP/2 transport, protobuf encoding, and TLS. The -plaintext flag is needed for non-TLS servers (common in development). For production servers with TLS, proper certificates may be required.
-
-Common uses include testing gRPC services during development, debugging production issues, automation scripts, and exploring unfamiliar gRPC APIs through reflection.
+**grpcurl** handles the complexity of gRPC's HTTP/2 transport, protobuf encoding, and TLS. The -plaintext flag is needed for non-TLS servers (common in development). For production servers with TLS, proper certificates may be required.
 
 # CAVEATS
 

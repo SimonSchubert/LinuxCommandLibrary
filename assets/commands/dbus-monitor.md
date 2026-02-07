@@ -1,3 +1,7 @@
+# TAGLINE
+
+D-Bus message bus monitoring and debugging tool
+
 # TLDR
 
 **Monitor session bus**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+create GRUB device mapping file
+
 # TLDR
 
 **Generate device map**
@@ -32,11 +36,9 @@
 
 # DESCRIPTION
 
-**grub-mkdevicemap** creates a device map file for GRUB. This maps BIOS drive numbers to Linux device names.
+**grub-mkdevicemap** creates a device map file for GRUB that maps BIOS drive numbers to Linux device names. The device map helps GRUB understand disk ordering.
 
-The device map helps GRUB understand disk ordering. It's automatically generated but can be customized for special configurations.
-
-grub-mkdevicemap creates GRUB device maps.
+The map is automatically generated but can be customized for special configurations where disk ordering needs to be explicitly controlled.
 
 # CAVEATS
 

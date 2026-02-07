@@ -1,3 +1,7 @@
+# TAGLINE
+
+command correction suggester
+
 # TLDR
 
 **Fix previous command**
@@ -27,6 +31,11 @@
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**~/.config/thefuck/settings.py**
+> Configuration for rules, excluded commands, priority, and aliases.
 
 # DESCRIPTION
 

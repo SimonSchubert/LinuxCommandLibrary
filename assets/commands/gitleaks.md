@@ -1,3 +1,7 @@
+# TAGLINE
+
+Detect secrets and sensitive data in Git repositories
+
 # TLDR
 
 **Scan repository**
@@ -49,11 +53,14 @@
 
 # DESCRIPTION
 
-**gitleaks** detects secrets and sensitive data in git repositories. It scans commits for API keys, passwords, tokens, and other credentials that shouldn't be in version control.
+**gitleaks** detects secrets and sensitive data in Git repositories. It scans commits for API keys, passwords, tokens, and other credentials that should not be in version control.
 
-The tool uses regex patterns to identify common secret formats. It can scan entire history or be used as a pre-commit hook to prevent accidental secret commits.
+The tool uses regex patterns to identify common secret formats. It can scan entire commit history or be used as a pre-commit hook to prevent accidental secret commits.
 
-gitleaks helps maintain security by finding exposed credentials.
+# CONFIGURATION
+
+**.gitleaks.toml**
+> Custom rules configuration file defining regex patterns, allowlists, and scanning behavior.
 
 # CAVEATS
 

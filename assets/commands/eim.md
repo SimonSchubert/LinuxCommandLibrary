@@ -1,3 +1,7 @@
+# TAGLINE
+
+Erlang version manager
+
 # TLDR
 
 **Run Erlang installation** manager

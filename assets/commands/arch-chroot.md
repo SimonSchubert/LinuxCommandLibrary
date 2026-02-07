@@ -1,3 +1,7 @@
+# TAGLINE
+
+Enhanced chroot with automatic filesystem mounting
+
 # TLDR
 
 Start an **interactive shell** in a new root directory
@@ -22,7 +26,9 @@ Specify a different **shell**
 
 # DESCRIPTION
 
-**arch-chroot** is an enhanced chroot command designed to help in the Arch Linux installation process. It automatically mounts /proc, /sys, /dev, and other necessary filesystems before entering the chroot, making it easier to perform system administration tasks on a mounted root filesystem.
+**arch-chroot** is an enhanced chroot wrapper designed to simplify the Arch Linux installation and recovery process. Unlike plain chroot, it automatically mounts essential API filesystems (/proc, /sys, /dev, /dev/pts, and /run) before entering the chroot environment, and cleanly unmounts them upon exit.
+
+This makes it significantly easier to perform system administration tasks on a mounted root filesystem, such as installing packages, configuring bootloaders, or repairing a broken system from a live environment. It can also run a single command and exit, or start an interactive shell as a specified user.
 
 # PARAMETERS
 

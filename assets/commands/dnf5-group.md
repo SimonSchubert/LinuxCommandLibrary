@@ -1,3 +1,7 @@
+# TAGLINE
+
+manage package groups in DNF5
+
 # TLDR
 
 This command is an alias of **dnf group**.

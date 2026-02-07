@@ -1,3 +1,7 @@
+# TAGLINE
+
+reconfigure installed Debian packages
+
 # TLDR
 
 **Reconfigure** packages
@@ -18,9 +22,11 @@ Reconfigure **timezone**
 
 # DESCRIPTION
 
-**dpkg-reconfigure** reconfigures already installed packages. It runs the package's configuration scripts again, allowing you to change settings made during installation.
+**dpkg-reconfigure** reconfigures already installed packages on Debian-based systems. It runs a package's post-installation configuration scripts again, presenting the same prompts shown during initial installation and allowing you to change previously configured settings.
 
-Useful for reconfiguring locales, keyboard layout, timezone, and other system settings.
+The tool uses the debconf system to manage configuration questions and responses. It's particularly useful for system settings that are difficult to change manually, such as locales, keyboard layouts, timezones, and display manager configurations.
+
+Different frontends (dialog, readline, noninteractive) control how questions are presented, making it suitable for both interactive terminal sessions and automated scripts.
 
 # PARAMETERS
 

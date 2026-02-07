@@ -1,3 +1,7 @@
+# TAGLINE
+
+remove groups from the system
+
 # TLDR
 
 **Delete a group**
@@ -47,6 +51,11 @@ When called with just a group name, it deletes the group. With both user and gro
 
 **--conf** _file_
 > Use alternate configuration.
+
+# CONFIGURATION
+
+**/etc/deluser.conf**
+> Controls default behavior for deluser and delgroup operations.
 
 # CAVEATS
 

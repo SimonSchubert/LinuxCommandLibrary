@@ -1,3 +1,7 @@
+# TAGLINE
+
+Check out GitHub pull requests
+
 # TLDR
 
 **Check out pull request**
@@ -39,11 +43,9 @@ _REMOTE_
 
 # DESCRIPTION
 
-**git pr** checks out GitHub pull requests locally. It fetches the pull request reference and creates a local branch for testing, reviewing, or contribution.
+**git pr** checks out GitHub pull requests locally for testing, reviewing, or contributing. It fetches the pull request reference and creates a local branch named "pr/N" for the specified PR number.
 
-The command simplifies reviewing pull requests by handling ref fetching automatically. It creates a branch named "pr/N" for the specified PR number.
-
-git pr enables easy pull request checkout for GitHub repos.
+The command simplifies the review workflow by handling ref fetching and branch creation in a single step. For GitLab repositories, the equivalent command is `git mr`.
 
 # CAVEATS
 

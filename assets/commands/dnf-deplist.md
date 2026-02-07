@@ -1,3 +1,7 @@
+# TAGLINE
+
+query package dependencies
+
 # TLDR
 
 This command is an alias of **dnf repoquery --deplist**.

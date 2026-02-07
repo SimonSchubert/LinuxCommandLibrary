@@ -1,3 +1,7 @@
+# TAGLINE
+
+Alias for removing packages from a project
+
 # TLDR
 
 **Remove a package**

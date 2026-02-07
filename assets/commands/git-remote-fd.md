@@ -1,3 +1,7 @@
+# TAGLINE
+
+File descriptor transport helper for Git
+
 # TLDR
 
 **Use file descriptors for git**
@@ -28,11 +32,9 @@ _FD-OUT_
 
 # DESCRIPTION
 
-**git-remote-fd** is a remote helper that uses file descriptors for communication. The fd:: URL scheme allows git to communicate over pre-established connections.
+**git-remote-fd** is a remote helper that uses file descriptors for communication. The fd:: URL scheme allows Git to communicate over pre-established connections rather than opening new ones.
 
-This enables integration with connection brokers, process supervisors, or other systems that manage connections externally. It's used for advanced integration scenarios.
-
-git-remote-fd enables git over pre-opened file descriptors.
+This enables integration with connection brokers, process supervisors, or other systems that manage connections externally. File descriptors must be pre-opened before invoking Git.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+load Docker images from tar archives
+
 # TLDR
 
 **Load image from tar file**
@@ -30,7 +34,7 @@
 
 # DESCRIPTION
 
-**docker load** loads an image from a tar archive or STDIN. Restores both images and tags saved by docker save.
+**docker load** loads an image from a tar archive or STDIN. Restores both images and tags saved by docker save. This command is the counterpart to docker save, enabling image transfer between systems without using a registry. Useful for air-gapped environments or offline distribution.
 
 # SEE ALSO
 

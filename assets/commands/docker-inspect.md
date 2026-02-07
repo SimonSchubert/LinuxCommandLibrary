@@ -1,3 +1,7 @@
+# TAGLINE
+
+return low-level information on Docker objects
+
 # TLDR
 
 **Inspect a container**
@@ -37,7 +41,7 @@
 
 # DESCRIPTION
 
-**docker inspect** returns low-level information on Docker objects including containers, images, volumes, and networks. Output is JSON by default.
+**docker inspect** returns low-level information on Docker objects including containers, images, volumes, and networks. Output is JSON by default. This command is essential for debugging and automation, providing complete metadata about Docker objects including configuration, state, network settings, and mounts.
 
 # SEE ALSO
 

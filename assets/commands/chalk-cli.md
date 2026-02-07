@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal string styling with colors and formatting
+
 # TLDR
 
 **Style text with color**
@@ -36,7 +40,11 @@
 
 # DESCRIPTION
 
-**chalk-cli** is a command-line tool for styling terminal strings with colors and formatting. It provides an easy way to add visual styling to command output using the Chalk library.
+**chalk-cli** is a command-line tool for styling terminal strings with colors and formatting. It wraps the popular Node.js Chalk library, providing access to its styling capabilities from shell scripts and the command line.
+
+Styles include foreground and background colors (standard and bright variants), as well as text modifiers like bold, dim, italic, underline, inverse, and strikethrough. Multiple styles can be combined, and the template syntax allows applying different styles to different parts of a single string.
+
+Input can come from command arguments or stdin, making it useful in shell pipelines for highlighting output or building colorful CLI interfaces.
 
 # PARAMETERS
 

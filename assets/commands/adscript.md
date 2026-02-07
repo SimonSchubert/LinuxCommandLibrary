@@ -1,3 +1,7 @@
+# TAGLINE
+
+Audio and digital signal processing language compiler
+
 # TLDR
 
 **Compile** an ADscript file

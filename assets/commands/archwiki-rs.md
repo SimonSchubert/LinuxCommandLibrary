@@ -1,3 +1,7 @@
+# TAGLINE
+
+Browse the Arch Linux Wiki from the terminal
+
 # TLDR
 
 **Search** Arch Wiki

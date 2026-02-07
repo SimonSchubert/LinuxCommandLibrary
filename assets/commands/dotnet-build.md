@@ -1,3 +1,7 @@
+# TAGLINE
+
+.NET project compiler and builder
+
 # TLDR
 
 **Build current project**

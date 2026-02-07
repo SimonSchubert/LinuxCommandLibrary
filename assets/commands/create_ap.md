@@ -1,3 +1,7 @@
+# TAGLINE
+
+WiFi access point creation tool
+
 # TLDR
 
 Create an **open network** without passphrase
@@ -34,9 +38,9 @@ Use **different WiFi driver**
 
 # DESCRIPTION
 
-**create_ap** creates a WiFi access point using hostapd. It handles the configuration of hostapd, dnsmasq, iptables, and network interfaces automatically.
+**create_ap** creates a WiFi access point using hostapd. It handles the complex configuration of hostapd, dnsmasq, iptables, and network interfaces automatically, abstracting away the tedious manual setup typically required.
 
-Supports NAT and bridge modes, WPA/WPA2 encryption, and various WiFi drivers.
+The tool configures hostapd to create the access point, sets up dnsmasq for DHCP and DNS services, establishes NAT routing through iptables (or bridging if specified), and manages network interface configuration. It supports NAT mode (default) for sharing Internet connections, bridge mode for transparent network bridging, and isolated mode without Internet sharing.
 
 # PARAMETERS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert between Linux package formats.
+
 # TLDR
 
 Convert a file to **Debian format** (.deb)

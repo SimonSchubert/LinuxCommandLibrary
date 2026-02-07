@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal chat interface for Cohere AI models
+
 # TLDR
 
 **Start interactive chat** session
@@ -62,7 +66,13 @@ The CLI supports Cohere's Command models including **Command R+** and **Command 
 
 Key features include web search integration via the Cohere connector, returning results with proper citations. File upload support allows analysis of PDF and TXT documents up to 20MB, with local preprocessing for PDFs using pdftotext.
 
-Configuration is stored in **~/.config/cohere-cli/config.env** and conversation history persists in **~/.config/cohere-cli/chat-memory.json**. Optional context injection can include real-time information like location and local time.
+# CONFIGURATION
+
+**~/.config/cohere-cli/config.env**
+> API key and CLI settings.
+
+**~/.config/cohere-cli/chat-memory.json**
+> Conversation history persistence.
 
 # CAVEATS
 

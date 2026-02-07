@@ -1,3 +1,7 @@
+# TAGLINE
+
+deep recursive file comparison tool
+
 # TLDR
 
 **Compare two files**

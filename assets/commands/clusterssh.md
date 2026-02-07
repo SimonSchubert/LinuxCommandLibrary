@@ -1,3 +1,7 @@
+# TAGLINE
+
+simultaneous SSH to multiple hosts
+
 # TLDR
 
 **Open SSH connections to multiple hosts**

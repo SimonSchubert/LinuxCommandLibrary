@@ -1,3 +1,7 @@
+# TAGLINE
+
+sound synthesis and audio programming language
+
 # TLDR
 
 **Render orchestra and score** to audio

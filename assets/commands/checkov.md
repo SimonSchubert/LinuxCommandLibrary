@@ -1,3 +1,7 @@
+# TAGLINE
+
+static analysis for infrastructure as code
+
 # TLDR
 
 **Scan a directory for IaC misconfigurations**
@@ -65,6 +69,11 @@ Checkov also performs software composition analysis (SCA) and secrets detection 
 
 **--list**
 > List all available checks
+
+# CONFIGURATION
+
+**.checkov.yaml**
+> Project-level configuration for default frameworks, skip rules, and output settings.
 
 # CAVEATS
 

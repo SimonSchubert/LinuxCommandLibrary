@@ -1,3 +1,7 @@
+# TAGLINE
+
+Scala artifact fetcher and application launcher
+
 # TLDR
 
 **Install a Scala application**

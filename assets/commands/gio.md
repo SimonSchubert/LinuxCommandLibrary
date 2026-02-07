@@ -1,3 +1,7 @@
+# TAGLINE
+
+GNOME file operations utility supporting local and virtual filesystems
+
 # TLDR
 
 **Open** a file with the default application
@@ -67,9 +71,7 @@ Send a file to the **trash** (reversible)
 
 **gio** is the GIO command-line tool for file operations in GNOME-based systems. It provides a unified interface for both local files and virtual filesystems (GVfs), including network locations, trash, and removable media.
 
-Unlike standard Unix commands, gio integrates with GNOME's infrastructure, respecting desktop settings for default applications, trash behavior, and virtual filesystem mounts. It can access locations like **smb://**, **sftp://**, **mtp://**, and **trash://**.
-
-The tool replaces older utilities like gvfs-open, gvfs-copy, and gvfs-trash.
+Unlike standard Unix commands, **gio** integrates with GNOME's infrastructure, respecting desktop settings for default applications, trash behavior, and virtual filesystem mounts. It can access locations like **smb://**, **sftp://**, **mtp://**, and **trash://**.
 
 # CAVEATS
 
@@ -77,7 +79,7 @@ Requires GLib and GVfs to be properly installed. Some virtual filesystem operati
 
 # HISTORY
 
-gio was introduced in GLib 2.50 (**2016**) as a unified command-line interface for GIO operations, consolidating various gvfs-* utilities into a single tool with subcommands. It's part of the GNOME platform's modern approach to file handling.
+gio was introduced in GLib 2.50 (**2016**) as a unified command-line interface for GIO operations, consolidating various gvfs-* utilities into a single tool with subcommands.
 
 # SEE ALSO
 

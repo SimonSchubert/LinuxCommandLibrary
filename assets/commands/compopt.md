@@ -1,3 +1,7 @@
+# TAGLINE
+
+modify completion options dynamically in Bash
+
 # TLDR
 
 **Enable filenames completion** for a completion function

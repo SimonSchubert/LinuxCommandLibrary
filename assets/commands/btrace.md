@@ -1,3 +1,7 @@
+# TAGLINE
+
+Dynamic tracing tool for Java applications
+
 # TLDR
 
 **Trace method calls** in a running Java application

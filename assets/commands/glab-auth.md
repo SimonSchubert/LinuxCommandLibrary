@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage GitLab CLI authentication
+
 # TLDR
 
 **Login to GitLab**
@@ -45,9 +49,10 @@
 
 # DESCRIPTION
 
-**glab auth** manages GitLab CLI authentication. Login to GitLab instances with personal access tokens or OAuth.
+**glab auth** manages GitLab CLI authentication. It handles logging in to GitLab instances with personal access tokens or OAuth, and stores credentials for use by other glab commands.
+
+For self-hosted GitLab instances, use the `--hostname` flag to specify the server address.
 
 # SEE ALSO
 
 [glab](/man/glab)(1)
-

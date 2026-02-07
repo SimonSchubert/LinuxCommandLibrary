@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates shell autocompletion scripts
+
 # TLDR
 
 Generate the autocompletion script for your **shell**

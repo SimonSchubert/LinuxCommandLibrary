@@ -1,3 +1,7 @@
+# TAGLINE
+
+Build documentation with extra rustdoc flags
+
 # TLDR
 
 **Build docs with rustdoc options**
@@ -26,9 +30,9 @@
 
 # DESCRIPTION
 
-**cargo rustdoc** builds documentation and passes extra options directly to rustdoc. Arguments after -- are passed to the final rustdoc invocation only.
+**cargo rustdoc** builds documentation for the current package and passes extra options directly to the rustdoc tool. Arguments after `--` are forwarded only to the final rustdoc invocation for the specified target, not to dependencies.
 
-Similar to cargo doc but allows direct rustdoc flag control.
+This command is similar to `cargo doc` but provides fine-grained control over rustdoc flags. Common uses include documenting private items, generating JSON output for tooling (on nightly), and passing custom HTML or CSS settings. Only one target can be documented at a time when extra arguments are provided.
 
 # PARAMETERS
 

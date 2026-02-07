@@ -1,3 +1,7 @@
+# TAGLINE
+
+secure IMAP and POP3 email server
+
 # TLDR
 
 **Start Dovecot** daemon
@@ -53,6 +57,14 @@
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**/etc/dovecot/dovecot.conf**
+> Main configuration file for protocols, authentication, and mail storage settings.
+
+**/etc/dovecot/conf.d/**
+> Modular configuration directory for protocol-specific and feature-specific settings.
 
 # DESCRIPTION
 

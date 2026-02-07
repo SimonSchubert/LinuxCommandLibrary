@@ -1,3 +1,7 @@
+# TAGLINE
+
+Search and query audit log events
+
 # TLDR
 
 Search for **SELinux AVC** denials
@@ -64,6 +68,14 @@ Output **raw** format
 
 **-i, --interpret**
 > Interpret numeric values (UIDs, syscalls, etc.)
+
+# CONFIGURATION
+
+**/etc/audit/auditd.conf**
+> Main audit daemon configuration, controls log file location and retention policy.
+
+**/etc/audit/audit.rules**
+> Defines which events are logged by the audit system. Determines what events are searchable.
 
 # CAVEATS
 

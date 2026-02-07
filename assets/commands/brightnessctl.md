@@ -1,3 +1,7 @@
+# TAGLINE
+
+Control device brightness
+
 # TLDR
 
 **List devices** with changeable brightness

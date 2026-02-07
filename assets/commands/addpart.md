@@ -1,3 +1,7 @@
+# TAGLINE
+
+Inform the kernel about a new partition
+
 # TLDR
 
 Tell the kernel about the existence of a **partition**
@@ -10,9 +14,9 @@ Tell the kernel about the existence of a **partition**
 
 # DESCRIPTION
 
-**addpart** tells the Linux kernel about the existence of the specified partition. It is a simple wrapper around the "add partition" ioctl. This command informs the kernel of a partition that exists on disk but may not have been detected during boot.
+**addpart** is a simple wrapper around the "add partition" ioctl that notifies the Linux kernel about a partition that exists on disk but was not detected automatically. This is useful when partition tables are modified while the disk is in use, or when the kernel's partition scanning missed an entry during boot.
 
-The command does not modify the partition table on disk; it only updates the kernel's in-memory representation.
+The command only updates the kernel's in-memory partition table; it does not create or modify the actual partition table on disk.
 
 # PARAMETERS
 

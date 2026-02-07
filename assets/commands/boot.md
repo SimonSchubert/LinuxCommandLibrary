@@ -1,3 +1,7 @@
+# TAGLINE
+
+Linux system startup process documentation
+
 # TLDR
 
 **View the boot process documentation**

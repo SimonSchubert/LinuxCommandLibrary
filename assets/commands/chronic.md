@@ -1,3 +1,7 @@
+# TAGLINE
+
+Silences command output unless it fails
+
 # TLDR
 
 **Run command silently unless it fails**
@@ -15,6 +19,10 @@
 **Verbose with stderr triggering**
 
 ```chronic -ve [command]```
+
+**Use in a cron job instead of redirecting to /dev/null**
+
+```0 1 * * * chronic backup```
 
 # SYNOPSIS
 
@@ -42,18 +50,6 @@
 
 **2**
 > Command succeeded but produced stderr (in -e mode)
-
-# EXAMPLES
-
-**Cron job**
-```
-0 1 * * * chronic backup
-```
-
-**Instead of**
-```
-0 1 * * * backup >/dev/null 2>&1
-```
 
 # BEHAVIOR
 

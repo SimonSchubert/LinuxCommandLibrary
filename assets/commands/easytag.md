@@ -1,3 +1,7 @@
+# TAGLINE
+
+graphical audio file metadata editor
+
 # TLDR
 
 **Launch EasyTAG**
@@ -22,6 +26,11 @@ _directory_
 
 **--version**
 > Show version.
+
+# CONFIGURATION
+
+**~/.config/easytag/easytag.conf**
+> Application settings including default directory, tag format preferences, and UI options.
 
 # DESCRIPTION
 

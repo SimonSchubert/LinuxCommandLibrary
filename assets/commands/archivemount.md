@@ -1,3 +1,7 @@
+# TAGLINE
+
+Mount archive files as virtual filesystems via FUSE
+
 # TLDR
 
 **Mount** an archive to a specific mountpoint

@@ -1,3 +1,7 @@
+# TAGLINE
+
+comprehensive DNS reconnaissance tool
+
 # TLDR
 
 Scan and save to **SQLite database**
@@ -34,9 +38,9 @@ Perform **zone transfer**
 
 # DESCRIPTION
 
-**dnsrecon** is a comprehensive DNS enumeration tool. It performs various DNS reconnaissance techniques including zone transfers, brute-force subdomain discovery, cache snooping, and zone walking.
+**dnsrecon** is a comprehensive DNS reconnaissance tool that performs multiple enumeration techniques to map DNS infrastructure. It combines zone transfers (AXFR), brute-force subdomain discovery, cache snooping, DNSSEC zone walking, and reverse lookups into a single tool.
 
-Widely used in penetration testing and security assessments.
+The tool supports various scan types: standard enumeration, zone transfers to extract complete zone data, brute-force with custom dictionaries to discover subdomains, cache snooping to check for cached records on nameservers, and DNSSEC zone walking which exploits NSEC records to enumerate zones. Results can be exported to multiple formats including JSON, CSV, and SQLite databases for analysis. It can also perform Google enumeration to find subdomains through search engine results and SPF record analysis to discover related IP ranges. Widely used in penetration testing and security assessments to thoroughly map an organization's DNS footprint.
 
 # PARAMETERS
 

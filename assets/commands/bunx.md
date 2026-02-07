@@ -1,3 +1,7 @@
+# TAGLINE
+
+Auto-install and run package executables
+
 # TLDR
 
 **Run package executable**

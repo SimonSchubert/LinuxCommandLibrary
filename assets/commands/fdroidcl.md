@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line client for F-Droid repository
+
 # TLDR
 
 **Search for apps**

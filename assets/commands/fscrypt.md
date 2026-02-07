@@ -1,3 +1,7 @@
+# TAGLINE
+
+Linux native filesystem encryption manager
+
 # TLDR
 
 Prepare the **root filesystem** for use with fscrypt
@@ -46,6 +50,14 @@ Prepare a **specific mountpoint** for use with fscrypt
 
 **metadata**
 > Manage encryption metadata and policies
+
+# CONFIGURATION
+
+**/.fscrypt**
+> Stores encryption metadata on each enabled mountpoint.
+
+**~/.config/fscrypt/fscrypt.conf**
+> Global fscrypt configuration settings and protector definitions.
 
 # DESCRIPTION
 

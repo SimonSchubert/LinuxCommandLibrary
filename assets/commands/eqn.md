@@ -1,3 +1,7 @@
+# TAGLINE
+
+Mathematical equation preprocessor for troff
+
 # TLDR
 
 **Process equations** in troff input

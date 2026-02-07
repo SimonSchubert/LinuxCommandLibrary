@@ -1,3 +1,7 @@
+# TAGLINE
+
+cron job monitoring service CLI
+
 # TLDR
 
 **Sync cron jobs with Cronitor**
@@ -34,7 +38,9 @@
 
 # DESCRIPTION
 
-**cronitor** is the CLI companion for Cronitor monitoring service. Monitors cron jobs, tracks execution, and alerts on failures. Syncs jobs automatically and provides telemetry.
+**cronitor** is the CLI companion for Cronitor, a cloud-based monitoring service for cron jobs and scheduled tasks. The tool monitors cron job execution, tracks timing and frequency, and sends alerts when jobs fail, miss their schedule, or run longer than expected.
+
+The CLI automatically syncs cron jobs from the system to the Cronitor service, wraps command execution to send telemetry pings, and provides a dashboard for viewing job status. It helps teams maintain reliability of scheduled maintenance tasks, backups, and automated processes by ensuring timely notification of problems.
 
 # COMMANDS
 
@@ -90,7 +96,8 @@
 
 # CONFIGURATION
 
-Config stored as JSON file. Set via environment variables or config file.
+**~/.config/cronitor/cronitor.json**
+> User configuration file containing API key, environment, hostname, and other settings.
 
 # CAVEATS
 

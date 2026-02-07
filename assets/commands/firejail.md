@@ -1,3 +1,7 @@
+# TAGLINE
+
+application sandboxing with Linux namespaces
+
 # TLDR
 
 **Integrate** firejail with desktop environment
@@ -70,6 +74,14 @@ Provides per-application profiles for common programs like Firefox and VLC.
 
 **--private-dev**
 > Use private /dev
+
+# CONFIGURATION
+
+**/etc/firejail/[application].profile**
+> Application-specific sandboxing profiles defining restrictions and permissions.
+
+**~/.config/firejail/[application].profile**
+> User-level custom profiles that override system defaults.
 
 # CAVEATS
 

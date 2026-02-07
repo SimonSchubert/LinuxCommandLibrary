@@ -1,3 +1,7 @@
+# TAGLINE
+
+Diagramming and flowcharting application
+
 # TLDR
 
 **Launch Calligra Flow**

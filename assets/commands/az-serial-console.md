@@ -1,3 +1,7 @@
+# TAGLINE
+
+Access the serial console of Azure virtual machines
+
 # TLDR
 
 **Connect to a VM's serial console**

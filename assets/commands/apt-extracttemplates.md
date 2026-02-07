@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extract debconf templates from Debian packages.
+
 # TLDR
 
 **Extract** debconf templates from packages

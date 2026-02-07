@@ -1,3 +1,7 @@
+# TAGLINE
+
+Common shell library for Git scripts
+
 # TLDR
 
 **Source for git scripts**
@@ -10,11 +14,9 @@
 
 # DESCRIPTION
 
-**git-sh-setup** is a shell library for git scripts. It provides common functions for repository validation, directory finding, color output, and error handling.
+**git-sh-setup** is an internal shell library that provides common functions for Git scripts. It includes utilities for repository validation, directory navigation, color output, and error handling.
 
-Functions include require_work_tree, cd_to_toplevel, die, and git_pager. Scripts source this library to get consistent behavior and error handling.
-
-git-sh-setup provides common shell functions for git scripts.
+Key functions include `require_work_tree`, `cd_to_toplevel`, `die`, and `git_pager`. Scripts source this library to get consistent behavior across Git shell commands.
 
 # CAVEATS
 

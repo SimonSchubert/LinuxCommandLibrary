@@ -1,3 +1,7 @@
+# TAGLINE
+
+official DigitalOcean command-line interface
+
 # TLDR
 
 **Authenticate with** DigitalOcean

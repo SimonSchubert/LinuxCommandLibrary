@@ -1,3 +1,7 @@
+# TAGLINE
+
+Update the Azure CLI to the latest version
+
 # TLDR
 
 **Upgrade** Azure CLI

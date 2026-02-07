@@ -1,3 +1,7 @@
+# TAGLINE
+
+read man pages from uninstalled Debian packages
+
 # TLDR
 
 Read man page from a **package**

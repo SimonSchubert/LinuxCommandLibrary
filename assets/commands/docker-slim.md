@@ -1,3 +1,7 @@
+# TAGLINE
+
+optimize and reduce Docker image sizes
+
 # TLDR
 
 **Analyze and slim an image**
@@ -61,7 +65,7 @@
 
 # DESCRIPTION
 
-**docker-slim** (also known as SlimToolkit) analyzes and optimizes Docker images, reducing size significantly while maintaining functionality. Uses static and dynamic analysis.
+**docker-slim** (also known as SlimToolkit) analyzes and optimizes Docker images, reducing size significantly while maintaining functionality. Uses static and dynamic analysis. The tool works by executing the container, monitoring which files and dependencies are actually used, then creating a minimal image containing only those components. Can reduce image sizes by up to 30x while preserving application functionality.
 
 # SEE ALSO
 

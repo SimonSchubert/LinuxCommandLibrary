@@ -1,3 +1,7 @@
+# TAGLINE
+
+Control KDE Baloo file indexing
+
 # TLDR
 
 Show indexer **status**
@@ -34,7 +38,9 @@ Show **disk** space used
 
 # DESCRIPTION
 
-**balooctl** controls the Baloo file indexing and search framework for KDE Plasma. It manages the file indexer that enables fast desktop search functionality.
+**balooctl** is the control utility for Baloo, the file indexing and search framework used in KDE Plasma. It manages the file indexer daemon that powers fast desktop file search, allowing users to enable, disable, suspend, and monitor the indexing process.
+
+The tool is useful for troubleshooting search issues, reclaiming disk space used by the index, and checking which files have been indexed.
 
 # PARAMETERS
 
@@ -64,6 +70,11 @@ Show **disk** space used
 
 **monitor**
 > Monitor indexer activity
+
+# CONFIGURATION
+
+**~/.config/baloofilerc**
+> Controls which directories to index, file types to exclude, and indexing behavior.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Print the path to a project's Cargo.toml
+
 # TLDR
 
 **Show manifest path**

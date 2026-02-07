@@ -1,3 +1,7 @@
+# TAGLINE
+
+lists container registry tags
+
 # TLDR
 
 **List tags**
@@ -26,7 +30,9 @@
 
 # DESCRIPTION
 
-**gcrane ls** lists tags in a container registry repository. gcrane is optimized for Google Container Registry and Artifact Registry.
+**gcrane ls** lists tags, manifests, and sub-repositories in Google Container Registry and Artifact Registry. Unlike standard crane ls, it provides richer output including detailed manifest information and recursive repository exploration.
+
+The command can display results in human-readable format or as JSON for scripting. Full reference mode shows complete image URIs including registry hostname and digest. gcrane ls is essential for discovering available images, auditing registry contents, and building automation scripts.
 
 # SEE ALSO
 

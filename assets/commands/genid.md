@@ -1,3 +1,7 @@
+# TAGLINE
+
+random identifier and UUID generator
+
 # TLDR
 
 **Generate random ID**

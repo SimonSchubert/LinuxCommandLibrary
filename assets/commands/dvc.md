@@ -1,3 +1,7 @@
+# TAGLINE
+
+version control system for machine learning projects
+
 # TLDR
 
 **Initialize DVC** repository
@@ -57,6 +61,17 @@ _COMMAND_
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**.dvc/config**
+> Repository-level DVC configuration including remote storage settings.
+
+**~/.config/dvc/config**
+> Global user configuration for DVC defaults and preferences.
+
+**.dvc/config.local**
+> Local repository config for machine-specific settings not committed to Git.
 
 # DESCRIPTION
 

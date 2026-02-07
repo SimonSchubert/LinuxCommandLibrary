@@ -1,3 +1,7 @@
+# TAGLINE
+
+environment archival tool
+
 # TLDR
 
 **Package an environment** into a tarball
@@ -19,6 +23,14 @@
 
 **-p**, **--prefix** _path_
 > Path to environment to package.
+
+# CONFIGURATION
+
+**~/.condarc**
+> User-level conda configuration for channels, package settings, and solver options.
+
+**/opt/conda/.condarc**
+> System-wide conda configuration.
 
 # DESCRIPTION
 

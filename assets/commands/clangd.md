@@ -1,3 +1,7 @@
+# TAGLINE
+
+C/C++ language server for IDE features
+
 # TLDR
 
 **Start clangd** language server
@@ -77,6 +81,17 @@ The server communicates over stdin/stdout using JSON-RPC, making it compatible w
 
 **--version**
 > Display version information.
+
+# CONFIGURATION
+
+**.clangd**
+> Project-level configuration for compiler flags, diagnostics, and completion behavior.
+
+**compile_commands.json**
+> Build system-generated compilation database for accurate project analysis.
+
+**compile_flags.txt**
+> Simple per-line compiler flags as an alternative to compile_commands.json.
 
 # CAVEATS
 

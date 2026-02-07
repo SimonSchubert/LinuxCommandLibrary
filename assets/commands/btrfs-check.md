@@ -1,3 +1,7 @@
+# TAGLINE
+
+Check and repair btrfs filesystem integrity
+
 # TLDR
 
 **Check** a btrfs filesystem

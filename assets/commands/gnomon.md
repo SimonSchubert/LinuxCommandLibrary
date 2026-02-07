@@ -1,3 +1,7 @@
+# TAGLINE
+
+prepend timestamps to command output
+
 # TLDR
 
 **Prepend timestamps**
@@ -41,9 +45,7 @@
 
 **gnomon** prepends timestamp information to command output. It shows how long each line took to appear, useful for identifying slow operations in build processes or logs.
 
-The tool color-codes output based on time thresholds, highlighting slow lines. It helps diagnose performance issues in command pipelines.
-
-gnomon adds timing information to command output.
+The tool color-codes output based on time thresholds, highlighting slow lines in red or yellow. It helps diagnose performance issues in command pipelines.
 
 # CAVEATS
 

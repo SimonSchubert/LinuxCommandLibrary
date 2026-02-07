@@ -1,3 +1,7 @@
+# TAGLINE
+
+check and repair ext filesystems
+
 # TLDR
 
 **Check** filesystem for errors
@@ -78,6 +82,11 @@ Exhaustive **bad block** test
 
 **-y**
 > Answer "yes" to all questions
+
+# CONFIGURATION
+
+**/etc/e2fsck.conf**
+> Configuration file controlling default behavior, problem handling, and optimization settings.
 
 # CAVEATS
 

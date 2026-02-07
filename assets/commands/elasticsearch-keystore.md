@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage encrypted Elasticsearch secure settings
+
 # TLDR
 
 **Create keystore**

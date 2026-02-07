@@ -1,3 +1,7 @@
+# TAGLINE
+
+Google Chrome web browser
+
 # TLDR
 
 **Start Chrome**
@@ -52,11 +56,14 @@ _URLS_
 
 # DESCRIPTION
 
-**google-chrome** is Google's Chrome web browser. It provides web browsing with V8 JavaScript engine, multi-process architecture, and extensive extension support.
+**google-chrome** is Google's Chrome web browser, built on the open-source Chromium project. It provides web browsing with the V8 JavaScript engine, multi-process architecture, and extensive extension support.
 
-The command-line interface enables automation, testing, and headless operation. Headless mode is used for web scraping and automated testing.
+The command-line interface enables automation, testing, and headless operation. Headless mode is widely used for web scraping, automated testing, and screenshot generation.
 
-google-chrome provides feature-rich web browsing.
+# CONFIGURATION
+
+**~/.config/google-chrome/**
+> User profile directory containing bookmarks, extensions, preferences, and cached data.
 
 # CAVEATS
 

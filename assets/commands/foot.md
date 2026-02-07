@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast Wayland terminal emulator
+
 # TLDR
 
 **Spawn** a terminal
@@ -66,6 +70,14 @@ Display **version**
 Key features include sixel image support, synchronized rendering to prevent tearing, font ligatures, scrollback search, and URL detection. It can run in server mode where a single daemon handles multiple terminal windows via **footclient**, reducing memory overhead.
 
 Configuration is done through **~/.config/foot/foot.ini** with extensive customization options for colors, fonts, keybindings, and behavior.
+
+# CONFIGURATION
+
+**~/.config/foot/foot.ini**
+> Main configuration file for colors, fonts, keybindings, scrollback, and terminal behavior.
+
+**~/.config/foot/colors.ini**
+> Optional separate color scheme configuration that can be included from foot.ini.
 
 # CAVEATS
 

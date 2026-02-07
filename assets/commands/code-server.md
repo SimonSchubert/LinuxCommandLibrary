@@ -1,3 +1,7 @@
+# TAGLINE
+
+VS Code in the browser on a remote server
+
 # TLDR
 
 **Start code-server**
@@ -30,7 +34,11 @@
 
 # DESCRIPTION
 
-**code-server** runs VS Code on a remote server, accessible via web browser. Enables coding from any device with consistent development environment. By Coder.
+**code-server** runs Visual Studio Code on a remote server, making it accessible through any web browser. This enables development from Chromebooks, tablets, and other devices that cannot run VS Code natively, while maintaining a consistent development environment with full access to server resources.
+
+The service provides nearly identical functionality to desktop VS Code, including extension support, terminal access, and file system integration. It's particularly useful for remote development, cloud workspaces, and teams needing standardized environments. All compute and storage occurs on the server, with only the interface rendered in the browser.
+
+Authentication can be password-based or disabled for trusted networks. TLS certificates enable secure HTTPS connections. The tool is developed by Coder and runs as a long-lived service, typically behind a reverse proxy in production deployments.
 
 # PARAMETERS
 

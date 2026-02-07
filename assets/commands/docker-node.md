@@ -1,3 +1,7 @@
+# TAGLINE
+
+manage Docker Swarm cluster nodes
+
 # TLDR
 
 **List swarm nodes**
@@ -57,7 +61,7 @@
 
 # DESCRIPTION
 
-**docker node** manages Swarm nodes. Nodes are Docker hosts participating in a swarm cluster. Only works when the Docker daemon is running in swarm mode.
+**docker node** manages Swarm nodes. Nodes are Docker hosts participating in a swarm cluster. Only works when the Docker daemon is running in swarm mode. Managers coordinate cluster operations while workers execute tasks. Node management includes controlling availability, labels for task placement constraints, and role assignments.
 
 # SEE ALSO
 

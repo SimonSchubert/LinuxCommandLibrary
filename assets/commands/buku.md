@@ -1,3 +1,7 @@
+# TAGLINE
+
+Command-line bookmark manager with tagging and search
+
 # TLDR
 
 **Add** bookmark
@@ -32,7 +36,7 @@
 
 **buku** is a powerful command-line bookmark manager. It stores bookmarks in a SQLite database with support for tagging, searching, automatic title fetching, and browser integration.
 
-The tool provides a fast, private alternative to cloud bookmark services.
+Bookmarks can be organized with comma-separated tags and searched using keywords, regular expressions, or tag filters. The tool automatically fetches page titles and descriptions when adding URLs. Import and export is supported in HTML, Markdown, and JSON formats, enabling migration from browsers and other bookmark managers. An optional web interface (**bukuserver**) is available for graphical access to the same database.
 
 # PARAMETERS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Functional language runtime on Erlang VM
+
 # TLDR
 
 **Run Elixir script**

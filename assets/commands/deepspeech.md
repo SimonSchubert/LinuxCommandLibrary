@@ -1,3 +1,7 @@
+# TAGLINE
+
+open-source speech-to-text engine
+
 # TLDR
 
 **Transcribe an audio file**

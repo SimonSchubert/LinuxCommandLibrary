@@ -1,3 +1,7 @@
+# TAGLINE
+
+download and manage Go package dependencies
+
 # TLDR
 
 **Download package**
@@ -46,11 +50,9 @@ _PACKAGES_
 
 # DESCRIPTION
 
-**go get** downloads and installs packages and dependencies. In module mode, it updates go.mod and go.sum files. For binaries, use go install instead.
+**go get** downloads and installs packages and dependencies. In module mode, it updates go.mod and go.sum files to track dependencies. For installing tool binaries, use **go install** instead.
 
 The command resolves versions from module proxies, supporting semantic versioning. It can target specific versions, branches, or commits.
-
-go get manages Go package dependencies.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Unified command-line interface for Amazon Web Services.
+
 # TLDR
 
 **List** S3 buckets
@@ -73,9 +77,11 @@ The CLI enables automation, scripting, and management of AWS resources from the 
 
 # CONFIGURATION
 
-Credentials stored in:
-- **~/.aws/credentials** - Access keys
-- **~/.aws/config** - Region and output preferences
+**~/.aws/credentials**
+> Access keys and secret keys for named profiles.
+
+**~/.aws/config**
+> Region, output format, and profile settings including role assumptions and SSO configuration.
 
 # CAVEATS
 

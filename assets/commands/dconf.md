@@ -1,3 +1,7 @@
+# TAGLINE
+
+GNOME configuration database management tool
+
 # TLDR
 
 **Read** a key value
@@ -30,9 +34,11 @@
 
 # DESCRIPTION
 
-**dconf** is a low-level configuration system for GNOME and GTK applications. It provides a simple key-value database organized in a hierarchical structure similar to a filesystem.
+**dconf** is a low-level configuration system for GNOME and GTK applications. It provides a simple key-value database organized in a hierarchical structure similar to a filesystem, storing settings in a binary format for fast read access.
 
-For most users, gsettings provides a higher-level interface. dconf is useful for bulk operations and scripting.
+The database uses a path-based key structure (like /org/gnome/desktop/interface/font-name) and values are stored in GVariant format, which supports typed data including strings, integers, booleans, and arrays. Changes written to dconf take effect immediately for running applications that monitor the database.
+
+For most users, gsettings provides a higher-level, schema-validated interface. dconf is useful for bulk operations, scripting configuration changes, and backup/restore operations using the dump and load commands. It's particularly valuable for system administrators managing multiple GNOME systems or creating configuration profiles.
 
 # PARAMETERS
 
@@ -56,6 +62,11 @@ For most users, gsettings provides a higher-level interface. dconf is useful for
 
 **load** _dir_
 > Load from INI format
+
+# CONFIGURATION
+
+**~/.config/dconf/user**
+> Binary database file storing user configuration values for GNOME and GTK applications.
 
 # CAVEATS
 

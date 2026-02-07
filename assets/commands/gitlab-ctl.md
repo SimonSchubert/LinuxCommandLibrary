@@ -1,3 +1,7 @@
+# TAGLINE
+
+Control Omnibus GitLab services
+
 # TLDR
 
 **Start GitLab**
@@ -60,9 +64,15 @@
 
 # DESCRIPTION
 
-**gitlab-ctl** controls Omnibus GitLab installation. Manages services, applies configuration changes, and provides debugging tools.
+**gitlab-ctl** controls an Omnibus GitLab installation. It manages all GitLab services (nginx, PostgreSQL, Redis, Puma, Sidekiq, etc.), applies configuration changes from `/etc/gitlab/gitlab.rb`, and provides debugging tools.
+
+The `reconfigure` command is used after modifying `gitlab.rb` to apply the new settings.
+
+# CONFIGURATION
+
+**/etc/gitlab/gitlab.rb**
+> Main configuration file for the Omnibus GitLab installation, controlling all services and settings.
 
 # SEE ALSO
 
 [gitlab-backup](/man/gitlab-backup)(1), [gitlab-rake](/man/gitlab-rake)(1)
-

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Search bzip2 files using extended regular expressions
+
 # TLDR
 
 **Search for an extended regex pattern in a bzip2 compressed file**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Gradle full build lifecycle task
+
 # TLDR
 
 **Build project**
@@ -43,11 +47,9 @@
 
 # DESCRIPTION
 
-**gradle build** compiles source code, runs tests, and produces output artifacts. It's the main build lifecycle task combining compile, test, and assemble.
+**gradle build** compiles source code, runs tests, and produces output artifacts. It is the main build lifecycle task combining compile, test, and assemble phases.
 
-The command executes the complete build process including dependency resolution, compilation, testing, and packaging. It can be customized per project.
-
-gradle build executes the full build lifecycle.
+The command executes the complete build process including dependency resolution, compilation, testing, and packaging. It can be customized per project through build scripts.
 
 # CAVEATS
 

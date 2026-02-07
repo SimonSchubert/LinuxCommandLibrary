@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line webcam image capture
+
 # TLDR
 
 **Capture image**
@@ -63,21 +67,16 @@
 **--jpeg** _quality_
 > JPEG quality (0-100).
 
+# CONFIGURATION
+
+**~/.fswebcam**
+> Optional configuration file for default settings.
+
 # DESCRIPTION
 
 **fswebcam** is a command-line webcam capture utility. It captures images from V4L2 (Video4Linux) devices and saves them as JPEG or PNG files.
 
 The tool is useful for timelapse photography, security camera snapshots, and automated image capture. It supports overlays, timestamps, and various image adjustments.
-
-# EXAMPLES
-
-```bash
-# Timelapse capture every minute
-while true; do
-  fswebcam -r 1920x1080 --no-banner "$(date +%Y%m%d_%H%M%S).jpg"
-  sleep 60
-done
-```
 
 # CAVEATS
 

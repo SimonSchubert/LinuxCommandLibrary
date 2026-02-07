@@ -1,3 +1,7 @@
+# TAGLINE
+
+arithmetic evaluation and expansion
+
 # TLDR
 
 **Arithmetic evaluation**

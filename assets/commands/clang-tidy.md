@@ -1,3 +1,7 @@
+# TAGLINE
+
+Clang-based C++ linter and static analyzer
+
 # TLDR
 
 **Run checks on file**
@@ -34,7 +38,11 @@
 
 # DESCRIPTION
 
-**clang-tidy** is a clang-based C++ linter tool for diagnosing and fixing typical programming errors including style violations, interface misuse, and bugs detectable via static analysis.
+**clang-tidy** is a clang-based C++ linter tool for diagnosing and fixing typical programming errors including style violations, interface misuse, and bugs detectable via static analysis. It is part of the LLVM/Clang extra tools.
+
+The tool provides hundreds of checks organized into categories such as bugprone, modernize, performance, readability, and cppcoreguidelines. Many checks can automatically apply fixes to source code, making it useful for large-scale code modernization (e.g., migrating to modern C++ idioms).
+
+clang-tidy uses a **.clang-tidy** configuration file for project-level settings and supports inline suppression with NOLINT comments. For large projects, **run-clang-tidy.py** provides parallel execution across multiple files.
 
 # PARAMETERS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Draw ASCII art boxes around text.
+
 # TLDR
 
 **Create** box around text

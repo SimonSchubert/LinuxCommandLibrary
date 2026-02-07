@@ -1,3 +1,7 @@
+# TAGLINE
+
+evaluate arithmetic and string expressions in shell
+
 # TLDR
 
 **Evaluate arithmetic** expression

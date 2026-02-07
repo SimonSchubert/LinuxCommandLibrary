@@ -1,3 +1,7 @@
+# TAGLINE
+
+remove files from version control
+
 # TLDR
 
 **Delete a file**
@@ -26,7 +30,9 @@
 
 # DESCRIPTION
 
-**fossil delete** is an alias for fossil rm. Schedules files for removal from the repository on the next commit.
+**fossil delete** is an alias for **fossil rm**. It schedules files for removal from version control on the next commit.
+
+This command is provided for convenience and compatibility. All options and behaviors are identical to **fossil rm**. By default, files remain on disk and are only removed from version control.
 
 # SEE ALSO
 

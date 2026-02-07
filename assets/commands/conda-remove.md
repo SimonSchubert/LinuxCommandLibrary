@@ -1,3 +1,7 @@
+# TAGLINE
+
+package uninstaller
+
 # TLDR
 
 **Remove a package**
@@ -37,6 +41,14 @@
 
 **--force**
 > Force removal without dependency checking.
+
+# CONFIGURATION
+
+**~/.condarc**
+> User-level conda configuration for channels, package settings, and solver options.
+
+**/opt/conda/.condarc**
+> System-wide conda configuration.
 
 # DESCRIPTION
 

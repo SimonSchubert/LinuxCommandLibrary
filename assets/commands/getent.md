@@ -1,3 +1,7 @@
+# TAGLINE
+
+Name Service Switch database query tool
+
 # TLDR
 
 Get list of all **groups**
@@ -49,6 +53,11 @@ Perform a **reverse DNS lookup**
 
 **aliases**
 > Mail aliases
+
+# CONFIGURATION
+
+**/etc/nsswitch.conf**
+> Name Service Switch configuration determining which sources to query for each database type.
 
 # DESCRIPTION
 

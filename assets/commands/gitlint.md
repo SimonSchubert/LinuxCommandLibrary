@@ -1,3 +1,7 @@
+# TAGLINE
+
+Lint and enforce commit message conventions
+
 # TLDR
 
 **Lint last commit**
@@ -46,11 +50,14 @@
 
 # DESCRIPTION
 
-**gitlint** enforces commit message conventions. It checks that messages follow configured rules for format, length, and content, ensuring consistent commit history.
+**gitlint** enforces commit message conventions by checking that messages follow configured rules for format, length, and content. This ensures consistent, readable commit history across a project.
 
-Rules cover title length, body formatting, and conventional commit patterns. It can run as a commit-msg hook for immediate feedback.
+Rules cover title length, body formatting, and conventional commit patterns. It can run as a commit-msg hook for immediate feedback during commits.
 
-gitlint maintains commit message quality standards.
+# CONFIGURATION
+
+**.gitlint**
+> Project-level configuration file defining commit message rules, ignored rules, and custom settings.
 
 # CAVEATS
 

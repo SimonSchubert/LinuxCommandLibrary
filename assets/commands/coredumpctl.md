@@ -1,3 +1,7 @@
+# TAGLINE
+
+core dump retrieval and analysis
+
 # TLDR
 
 **List** all captured core dumps
@@ -34,7 +38,11 @@ Debug with custom **gdb arguments**
 
 # DESCRIPTION
 
-**coredumpctl** retrieves and processes saved core dumps and metadata from the systemd journal. It can list, view, debug, and export core dumps captured by systemd-coredump.
+**coredumpctl** is a systemd utility for managing core dumps - memory snapshots created when a program crashes. Instead of traditional core dump files scattered across the filesystem, systemd-coredump captures crashes and stores them in the journal with rich metadata including timestamps, process information, and system state.
+
+The tool provides a unified interface for working with these captured core dumps. You can list all crashes, filter by program or time range, view detailed information about specific crashes, and launch a debugger to analyze the failure. Core dumps can also be extracted to files for offline analysis or sharing with developers.
+
+This centralized approach to core dump management makes it much easier to track down intermittent crashes, debug production issues, and maintain system reliability. The integration with journalctl means crash data is preserved alongside system logs, providing full context for debugging. The tool requires systemd-coredump to be configured as the system's core dump handler, which is the default on most modern systemd-based distributions.
 
 # COMMANDS
 
@@ -91,6 +99,11 @@ Debug with custom **gdb arguments**
 # MATCHES
 
 Matches filter by: PID, executable name, path, or core dump timestamp.
+
+# CONFIGURATION
+
+**/etc/systemd/coredump.conf**
+> Configuration file controlling core dump storage, compression, and retention settings.
 
 # CAVEATS
 

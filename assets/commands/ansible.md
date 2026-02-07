@@ -1,3 +1,7 @@
+# TAGLINE
+
+Agentless IT automation and configuration management
+
 # TLDR
 
 **Ping** all hosts in inventory
@@ -64,6 +68,20 @@ For ad-hoc commands, ansible executes modules against hosts matching a pattern. 
 
 **--list-hosts**
 > List hosts matching pattern
+
+# CONFIGURATION
+
+**/etc/ansible/ansible.cfg**
+> System-wide Ansible configuration, including default module path, connection settings, and privilege escalation.
+
+**~/.ansible.cfg**
+> Per-user Ansible configuration overriding system defaults.
+
+**ansible.cfg**
+> Project-level configuration in the current directory, highest priority.
+
+**/etc/ansible/hosts**
+> Default inventory file listing managed hosts and groups.
 
 # CAVEATS
 

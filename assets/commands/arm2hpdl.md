@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert ARM firmware to HP printer download format.
+
 # TLDR
 
 **Convert** ARM firmware to HPDL format

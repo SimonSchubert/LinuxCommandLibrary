@@ -1,3 +1,7 @@
+# TAGLINE
+
+Natural language interface for the command line
+
 # TLDR
 
 **Ask Betty a question**

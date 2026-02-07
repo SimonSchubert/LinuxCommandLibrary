@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal-based disk space navigator with treemap visualization
+
 # TLDR
 
 **Analyze current directory**

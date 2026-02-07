@@ -1,3 +1,7 @@
+# TAGLINE
+
+ABC music notation to LilyPond converter
+
 # TLDR
 
 **Convert an ABC file** to LilyPond format

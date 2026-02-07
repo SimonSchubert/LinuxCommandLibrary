@@ -1,3 +1,7 @@
+# TAGLINE
+
+display and adjust OOM-killer score
+
 # TLDR
 
 Display the **OOM-killer score** of a process

@@ -1,3 +1,7 @@
+# TAGLINE
+
+animated ASCII art bonsai tree generator
+
 # TLDR
 
 **Generate random bonsai tree**
@@ -34,7 +38,9 @@
 
 # DESCRIPTION
 
-**cbonsai** generates ASCII art bonsai trees in the terminal. Written in C using ncurses. Supports animation, colors, and decorative elements like birds.
+**cbonsai** generates procedurally created ASCII art bonsai trees in the terminal. Each run produces a unique tree using randomized growth algorithms, and a seed value can be specified for reproducibility.
+
+The tool supports live animation of tree growth, infinite mode for continuous generation, and a screensaver mode that combines both. Written in C using ncurses, it also supports color output, decorative birds, and custom messages displayed alongside the tree.
 
 # PARAMETERS
 

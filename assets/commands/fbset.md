@@ -1,3 +1,7 @@
+# TAGLINE
+
+configure framebuffer device settings
+
 # TLDR
 
 Show current **framebuffer settings**
@@ -36,9 +40,14 @@ Used for configuring console display on systems using framebuffer.
 **-fb** _device_
 > Use specified framebuffer device
 
+# CONFIGURATION
+
+**/etc/fb.modes**
+> Defines predefined video modes with resolution, timing, and color depth settings.
+
 # CAVEATS
 
-Requires framebuffer support in kernel. Mode definitions in /etc/fb.modes. May require root privileges. Incorrect settings can cause display issues.
+Requires framebuffer support in kernel. May require root privileges. Incorrect settings can cause display issues.
 
 # SEE ALSO
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interact with cameras via libcamera
+
 # TLDR
 
 **List** available cameras

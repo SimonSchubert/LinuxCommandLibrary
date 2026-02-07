@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage passwords and secrets from the terminal
+
 # TLDR
 
 **Log in to Bitwarden**

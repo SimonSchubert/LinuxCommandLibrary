@@ -1,3 +1,7 @@
+# TAGLINE
+
+GnuPG 2 encryption and digital signatures
+
 # TLDR
 
 **Generate key pair**
@@ -72,9 +76,17 @@
 
 # DESCRIPTION
 
-**gpg2** (GnuPG 2) is the GNU Privacy Guard, an implementation of the OpenPGP standard. It provides encryption, digital signatures, and key management for secure communication.
+**gpg2** (GnuPG 2) is the modern version of GNU Privacy Guard, implementing the OpenPGP standard for encryption, digital signatures, and key management. It uses a modular architecture with separate daemons for improved security.
 
-gpg2 is the modern version with improved architecture, splitting functionality into separate daemons. Most systems alias gpg to gpg2.
+On most modern systems, **gpg** is aliased to gpg2. The two share keyrings and are functionally equivalent, with gpg2 offering improved architecture and daemon management.
+
+# CONFIGURATION
+
+**~/.gnupg/gpg.conf**
+> User configuration file for default options, preferred algorithms, and keyserver settings.
+
+**~/.gnupg/gpg-agent.conf**
+> Configuration for the gpg-agent daemon handling passphrase caching and key operations.
 
 # CAVEATS
 

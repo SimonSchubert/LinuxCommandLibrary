@@ -1,3 +1,7 @@
+# TAGLINE
+
+AI-powered terminal coding assistant
+
 # TLDR
 
 **Start an interactive session** in the current directory

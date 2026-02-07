@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display an animated ASCII art aquarium
+
 # TLDR
 
 **Run** the aquarium

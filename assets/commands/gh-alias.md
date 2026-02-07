@@ -1,3 +1,7 @@
+# TAGLINE
+
+GitHub CLI command alias management
+
 # TLDR
 
 **List aliases**
@@ -38,7 +42,9 @@
 
 # DESCRIPTION
 
-**gh alias** manages command aliases for the GitHub CLI. Create shortcuts for frequently used or complex commands.
+**gh alias** manages command aliases for the GitHub CLI. Create shortcuts for frequently used or complex commands to streamline your GitHub workflow.
+
+Aliases can simplify multi-step operations, provide shorthand for common tasks, and customize the CLI to match your development patterns. Shell aliases support piping and advanced command composition, while regular aliases work with gh subcommands and flags.
 
 # SEE ALSO
 

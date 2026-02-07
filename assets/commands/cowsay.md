@@ -1,3 +1,7 @@
+# TAGLINE
+
+ASCII cow speech bubble generator
+
 # TLDR
 
 **Say** message
@@ -28,7 +32,9 @@
 
 **cowsay** generates ASCII art of a cow saying a message. It's a whimsical program that displays text in a speech bubble with various animal ASCII art, commonly used for fun messages, fortune quotes, or MOTD displays.
 
-The program has become an iconic part of Unix culture.
+The program supports multiple "cow files" representing different animals and characters, each with their own ASCII art. Messages can be displayed as speech (cowsay) or thoughts (cowthink), and the cow's appearance can be modified with different eye and tongue states.
+
+cowsay has become an iconic part of Unix culture, often paired with fortune for random quotes or lolcat for colorful output. While purely for entertainment, it's widely used in login messages, shell prompts, and documentation to add personality to command-line interfaces.
 
 # PARAMETERS
 

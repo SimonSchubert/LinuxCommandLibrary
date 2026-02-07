@@ -1,3 +1,7 @@
+# TAGLINE
+
+GPU switching utility for Nvidia Optimus laptops
+
 # TLDR
 
 **Switch** between GPU modes
@@ -30,9 +34,9 @@ Display **version**
 
 # DESCRIPTION
 
-**envycontrol** is a GPU switching utility for Nvidia Optimus laptops. It allows switching between integrated, hybrid, and dedicated Nvidia graphics modes without manual configuration.
+**envycontrol** is a GPU switching utility specifically designed for Nvidia Optimus laptops running Linux. It provides a streamlined interface for switching between integrated Intel/AMD graphics, hybrid mode (both GPUs active), and dedicated Nvidia GPU mode without requiring manual configuration file editing.
 
-Simplifies power management and performance tuning on dual-GPU systems.
+The tool simplifies power management and performance tuning on dual-GPU systems by handling the complex configuration changes needed for GPU mode switching, including display manager setup and driver configuration. Changes require a system reboot to take effect as the underlying graphics stack must be reinitialized.
 
 # PARAMETERS
 

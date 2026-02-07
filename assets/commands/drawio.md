@@ -1,3 +1,7 @@
+# TAGLINE
+
+diagram editor for flowcharts and diagrams
+
 # TLDR
 
 **Open diagram editor**

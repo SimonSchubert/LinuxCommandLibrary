@@ -1,3 +1,7 @@
+# TAGLINE
+
+Shell-level integration testing library
+
 # TLDR
 
 **Create a basic test script**

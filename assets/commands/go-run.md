@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compile and run Go programs
+
 # TLDR
 
 **Run Go file**
@@ -39,11 +43,9 @@ _ARGUMENTS_
 
 # DESCRIPTION
 
-**go run** compiles and runs a Go program in one step. It's useful for development and testing, combining build and execute without creating a binary.
+**go run** compiles and runs a Go program in one step. It compiles to a temporary location and executes immediately, making it useful for rapid development and testing without creating a persistent binary.
 
-The command compiles to a temporary location and executes. Any arguments after the package name are passed to the program. Build flags are supported.
-
-go run provides rapid compile-and-run development.
+Any arguments after the package name are passed to the program. Standard build flags like `-race` and `-ldflags` are supported.
 
 # CAVEATS
 

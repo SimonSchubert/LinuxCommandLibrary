@@ -1,3 +1,7 @@
+# TAGLINE
+
+DICT protocol dictionary server daemon
+
 # TLDR
 
 **Start dictionary server**
@@ -26,9 +30,11 @@
 
 # DESCRIPTION
 
-**dictd** is a dictionary server implementing the DICT protocol (RFC 2229). It serves dictionary databases to clients, enabling word lookups, definitions, and translations.
+**dictd** is a dictionary server daemon implementing the DICT protocol (RFC 2229). It serves dictionary databases to clients over TCP port 2628, enabling word lookups, definitions, translations, and thesaurus queries.
 
-The server supports multiple dictionary formats and can serve several dictionaries simultaneously. Clients connect via TCP to query words across all configured databases.
+The server supports multiple dictionary formats and can serve several dictionaries simultaneously. Clients can query words across all configured databases at once or target specific dictionaries. The protocol supports various search strategies including exact match, prefix, suffix, and fuzzy matching.
+
+dictd databases are typically in the dictd format created by dictfmt, which converts various source formats into indexed dictionary files. The server handles concurrent connections and can be configured with access controls. Popular dictionary databases include WordNet, Elements, Jargon File, and various language translation dictionaries.
 
 # PARAMETERS
 
@@ -58,6 +64,11 @@ The server supports multiple dictionary formats and can serve several dictionari
 
 **-V**, **--version**
 > Show version.
+
+# CONFIGURATION
+
+**/etc/dictd/dictd.conf**
+> Server configuration file specifying dictionary database locations, access controls, and server behavior.
 
 # CAVEATS
 

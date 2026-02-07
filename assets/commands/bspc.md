@@ -1,3 +1,7 @@
+# TAGLINE
+
+Control the bspwm tiling window manager
+
 # TLDR
 
 Define **virtual desktops**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Collection of classic BSD Unix text-based games
+
 # TLDR
 
 **Play text adventure game**

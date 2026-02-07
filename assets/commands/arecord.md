@@ -1,3 +1,7 @@
+# TAGLINE
+
+Record audio from ALSA sound devices
+
 # TLDR
 
 Record in **CD quality** (finish with Ctrl+C)
@@ -30,7 +34,7 @@ Allow **interactive** interface
 
 # DESCRIPTION
 
-**arecord** is a command-line sound recorder for ALSA soundcard drivers. It records audio from sound cards and saves it in various formats including WAV, AU, and raw audio.
+**arecord** is a command-line sound recorder for ALSA soundcard drivers. It captures audio from sound cards and saves it in various formats including WAV, AU, VOC, and raw audio. The tool supports configurable sample rates, bit depths, and channel counts. The shorthand format **cd** sets 16-bit signed little-endian stereo at 44100 Hz. Raw output can be piped to encoders like **lame** for MP3 conversion. It is the recording counterpart to **aplay**.
 
 # PARAMETERS
 

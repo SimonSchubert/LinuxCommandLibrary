@@ -1,3 +1,7 @@
+# TAGLINE
+
+Cython compilation wrapper for building extensions
+
 # TLDR
 
 **Compile Cython file**

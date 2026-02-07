@@ -1,3 +1,7 @@
+# TAGLINE
+
+modern DNS client with encrypted protocol support
+
 # TLDR
 
 **Query A records**

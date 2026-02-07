@@ -1,3 +1,7 @@
+# TAGLINE
+
+Analyze cloud cost and usage data.
+
 # TLDR
 
 **Get cost and usage data** for the last month grouped by service

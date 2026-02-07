@@ -1,3 +1,7 @@
+# TAGLINE
+
+autoconf macro collector for GNU build system
+
 # TLDR
 
 **Generate** aclocal.m4 from configure.ac

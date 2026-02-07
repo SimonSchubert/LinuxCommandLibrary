@@ -1,3 +1,7 @@
+# TAGLINE
+
+GitHub release binary downloader
+
 # TLDR
 
 **Download latest release** binary

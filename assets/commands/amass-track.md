@@ -1,3 +1,7 @@
+# TAGLINE
+
+Track changes in external attack surface over time
+
 # TLDR
 
 **Track** changes between enumerations
@@ -45,6 +49,11 @@ This is useful for continuous monitoring of an organization's digital footprint,
 
 **-dir** _path_
 > Database directory
+
+# CONFIGURATION
+
+**~/.config/amass/config.ini**
+> Amass configuration file defining data sources, API keys, and scope settings.
 
 # CAVEATS
 

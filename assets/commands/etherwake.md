@@ -1,3 +1,7 @@
+# TAGLINE
+
+Wake-on-LAN magic packet sender
+
 # TLDR
 
 **Wake computer by MAC address**

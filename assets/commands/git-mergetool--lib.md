@@ -1,3 +1,7 @@
+# TAGLINE
+
+Internal tool integration library
+
 # TLDR
 
 **Source for tool scripts**
@@ -10,11 +14,9 @@
 
 # DESCRIPTION
 
-**git-mergetool--lib** is a shell library used by git-mergetool and git-difftool. It provides common functions for tool selection, invocation, and configuration handling.
+**git-mergetool--lib** is a shell library used internally by `git-mergetool` and `git-difftool`. It provides common functions for tool selection, invocation, and configuration handling.
 
-The library is sourced by scripts that need merge/diff tool functionality. It handles tool detection, path configuration, and tool-specific setup.
-
-git-mergetool--lib is internal infrastructure for tool integration.
+The library is sourced by scripts that need merge or diff tool functionality. It handles tool detection, path configuration, and tool-specific setup. This is internal infrastructure and not intended for direct use.
 
 # CAVEATS
 

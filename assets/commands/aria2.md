@@ -1,3 +1,7 @@
+# TAGLINE
+
+Multi-protocol multi-source download utility
+
 # TLDR
 
 **Download** a file
@@ -61,6 +65,11 @@ The tool is highly optimized, using minimal memory while supporting advanced fea
 
 **--select-file** _indices_
 > Select files from torrent
+
+# CONFIGURATION
+
+**~/.aria2/aria2.conf**
+> Default configuration file for setting download options, connection limits, and protocol-specific settings.
 
 # CAVEATS
 

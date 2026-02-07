@@ -1,3 +1,7 @@
+# TAGLINE
+
+modular multi-threaded Bitcoin miner
+
 # TLDR
 
 **Mine Bitcoin** using a pool with username and password

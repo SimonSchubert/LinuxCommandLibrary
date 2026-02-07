@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Azure DevOps organizations and projects
+
 # TLDR
 
 **Configure default organization** and project

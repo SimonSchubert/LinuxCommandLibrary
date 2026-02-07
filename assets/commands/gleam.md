@@ -1,3 +1,7 @@
+# TAGLINE
+
+type-safe functional language build tool
+
 # TLDR
 
 **Create new project**
@@ -52,11 +56,14 @@
 
 # DESCRIPTION
 
-**gleam** is the build tool for the Gleam programming language. Gleam is a type-safe functional language that compiles to Erlang and JavaScript.
+**gleam** is the build tool and compiler for the Gleam programming language, a type-safe functional language that compiles to Erlang and JavaScript.
 
-The tool manages projects, dependencies, compilation, and testing. It integrates with the Hex package manager for Erlang/Elixir ecosystem packages.
+The tool manages projects, dependencies, compilation, and testing. It integrates with the Hex package manager for the Erlang/Elixir ecosystem.
 
-gleam provides the complete toolchain for Gleam development.
+# CONFIGURATION
+
+**gleam.toml**
+> Project configuration file defining name, version, target, and dependencies.
 
 # CAVEATS
 

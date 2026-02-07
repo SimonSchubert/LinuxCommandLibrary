@@ -1,3 +1,7 @@
+# TAGLINE
+
+word-by-word file comparison
+
 # TLDR
 
 **Compare two files word by word**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Simple Queue Service queues and messages.
+
 # TLDR
 
 **Create a new queue**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Print the machine hardware architecture
+
 # TLDR
 
 **Print** machine architecture

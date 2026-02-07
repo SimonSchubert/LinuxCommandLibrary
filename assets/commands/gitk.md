@@ -1,3 +1,7 @@
+# TAGLINE
+
+Graphical Git repository browser
+
 # TLDR
 
 **Start gitk**
@@ -46,11 +50,9 @@ _PATH_
 
 # DESCRIPTION
 
-**gitk** is a graphical repository browser. It displays commit history in a visual graph, showing branches, merges, and commit details in a GUI window.
+**gitk** is a graphical repository browser for Git. It displays commit history in a visual graph, showing branches, merges, and commit details in a GUI window.
 
-The interface shows the commit graph, file changes, and diff content. It enables visual exploration of repository history with search and filtering.
-
-gitk provides graphical git history visualization.
+The interface shows the commit graph, file changes, and diff content. It supports search, filtering, and visual exploration of repository history.
 
 # CAVEATS
 

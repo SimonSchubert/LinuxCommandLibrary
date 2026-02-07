@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage DNS hosted zones and records
+
 # TLDR
 
 **List all hosted zones** in your account

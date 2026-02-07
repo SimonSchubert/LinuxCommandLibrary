@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Amazon EventBridge rules and event routing
+
 # TLDR
 
 **List all rules** in the default event bus

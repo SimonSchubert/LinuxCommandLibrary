@@ -1,3 +1,7 @@
+# TAGLINE
+
+Restricted login shell for Git-only SSH access
+
 # TLDR
 
 **Set user shell to git-shell**
@@ -22,11 +26,14 @@
 
 # DESCRIPTION
 
-**git-shell** is a restricted login shell for git-only SSH access. When used as a user's shell, it only allows git operations (push, pull, fetch) and blocks shell access.
+**git-shell** is a restricted login shell that allows only Git operations (push, pull, fetch) over SSH while blocking general shell access. When set as a user's login shell, it prevents interactive login while permitting Git protocol operations.
 
-The shell enables secure git hosting by creating users that can only interact through git protocols. It prevents shell escapes while permitting git operations.
+This is the standard way to create secure Git hosting accounts that can only interact through Git commands.
 
-git-shell provides secure restricted access for git servers.
+# CONFIGURATION
+
+**~/git-shell-commands/**
+> Optional directory of allowed interactive commands. If present, git-shell provides a limited interactive mode listing these commands.
 
 # CAVEATS
 

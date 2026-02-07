@@ -1,3 +1,7 @@
+# TAGLINE
+
+multimedia stream analyzer
+
 # TLDR
 
 **Display information** about a media file

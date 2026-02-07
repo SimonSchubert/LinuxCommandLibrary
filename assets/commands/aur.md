@@ -1,3 +1,7 @@
+# TAGLINE
+
+Collection of scripts for managing AUR packages through a local repository.
+
 # TLDR
 
 **Search** the AUR database for a package

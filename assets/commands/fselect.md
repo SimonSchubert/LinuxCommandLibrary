@@ -1,3 +1,7 @@
+# TAGLINE
+
+SQL-like query language for file searching
+
 # TLDR
 
 **Find files by** name

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Open-source PBX and telephony server
+
 # TLDR
 
 **Connect** to running server
@@ -58,6 +62,26 @@ Show **voicemail** users
 
 **-n**
 > Disable ANSI color in console
+
+# CONFIGURATION
+
+**/etc/asterisk/asterisk.conf**
+> Main configuration file controlling global settings, directory paths, and module loading.
+
+**/etc/asterisk/extensions.conf**
+> Dialplan configuration defining call routing, IVR menus, and application logic.
+
+**/etc/asterisk/sip.conf**
+> Legacy SIP channel driver configuration for peers, trunks, and registrations.
+
+**/etc/asterisk/pjsip.conf**
+> Modern PJSIP stack configuration for endpoints, transports, and authentication.
+
+**/etc/asterisk/voicemail.conf**
+> Voicemail system configuration including mailbox definitions and notification settings.
+
+**/etc/asterisk/modules.conf**
+> Controls which Asterisk modules are loaded at startup.
 
 # CAVEATS
 

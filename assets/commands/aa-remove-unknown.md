@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove orphaned AppArmor profiles from the kernel
+
 # TLDR
 
 Perform a **dry run** to see which profiles would be removed

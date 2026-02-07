@@ -1,3 +1,7 @@
+# TAGLINE
+
+Partially check out only specified directories
+
 # TLDR
 
 **Initialize sparse checkout**
@@ -58,9 +62,15 @@
 
 # DESCRIPTION
 
-**git sparse-checkout** enables partial repository checkouts. Only specified directories are checked out, reducing working directory size for large repositories.
+**git sparse-checkout** enables partial repository checkouts, where only specified directories and files are materialized in the working tree. This significantly reduces working directory size for large monorepos.
+
+Cone mode (recommended) restricts patterns to directory-based inclusion, which is faster and simpler than full pattern matching.
+
+# CONFIGURATION
+
+**.git/info/sparse-checkout**
+> File containing the sparse-checkout patterns that control which paths are checked out.
 
 # SEE ALSO
 
 [git-read-tree](/man/git-read-tree)(1), [git-checkout](/man/git-checkout)(1)
-

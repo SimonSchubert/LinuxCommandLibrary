@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display system and project diagnostic information
+
 # TLDR
 
 **Display system and project info**

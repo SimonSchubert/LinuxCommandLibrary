@@ -1,3 +1,7 @@
+# TAGLINE
+
+Alpine Linux package manager
+
 # TLDR
 
 **Update** repository indexes and upgrade all packages
@@ -89,6 +93,17 @@ Display **information** about a specific package
 
 **-X, --repository**
 > Specify supplemental repositories
+
+# CONFIGURATION
+
+**/etc/apk/repositories**
+> List of package repository URLs, one per line.
+
+**/etc/apk/world**
+> List of explicitly installed packages and version constraints.
+
+**/etc/apk/keys/**
+> Directory containing trusted repository signing keys.
 
 # CAVEATS
 

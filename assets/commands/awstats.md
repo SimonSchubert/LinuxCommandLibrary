@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate advanced web server statistics
+
 # TLDR
 
 **Update statistics** for a virtual host
@@ -56,6 +60,17 @@ Configuration files are searched in order: **awstats._virtualhostname_.conf**, *
 
 **AWSTATS_FORCE_CONFIG**
 > If defined, AWStats uses this value as the config regardless of command line.
+
+# CONFIGURATION
+
+**/etc/awstats/awstats.conf**
+> Default global configuration file.
+
+**/etc/awstats/awstats.MODEL.conf**
+> Per-virtual-host configuration file, where MODEL is the virtual host name specified with -config.
+
+**/usr/local/etc/awstats/awstats.conf**
+> Alternative global configuration location on some systems.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Encrypt and decrypt sensitive data
+
 # TLDR
 
 **Create** a new encrypted file
@@ -72,6 +76,17 @@ Encrypted files can be edited, viewed, and used in playbooks without manual decr
 
 **--new-vault-password-file** _file_
 > New password file for rekey
+
+# CONFIGURATION
+
+**/etc/ansible/ansible.cfg**
+> System-wide Ansible configuration, including vault password file path and vault identity settings.
+
+**~/.ansible.cfg**
+> Per-user Ansible configuration overriding system defaults.
+
+**ansible.cfg**
+> Project-level configuration in the current directory, highest priority.
 
 # CAVEATS
 

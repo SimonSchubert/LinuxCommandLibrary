@@ -1,3 +1,7 @@
+# TAGLINE
+
+debhelper sequence executor for Debian packaging
+
 # TLDR
 
 **Execute debhelper commands** sequentially

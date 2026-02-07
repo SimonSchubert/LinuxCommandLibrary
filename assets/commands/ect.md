@@ -1,3 +1,7 @@
+# TAGLINE
+
+lossless image compression optimizer
+
 # TLDR
 
 **Optimize PNG file**

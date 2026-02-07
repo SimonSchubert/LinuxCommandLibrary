@@ -1,3 +1,7 @@
+# TAGLINE
+
+schema-driven code generator for multiple languages
+
 # TLDR
 
 **Generate code** from specification

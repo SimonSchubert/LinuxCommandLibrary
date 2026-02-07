@@ -1,3 +1,7 @@
+# TAGLINE
+
+Bidirectional Git-Perforce integration
+
 # TLDR
 
 **Clone from Perforce**
@@ -45,11 +49,9 @@
 
 # DESCRIPTION
 
-**git p4** enables bidirectional interaction between Git and Perforce. It imports Perforce history into git and can submit git commits back to Perforce.
+**git p4** enables bidirectional interaction between Git and Perforce. It can import Perforce depot history into a Git repository and submit Git commits back to Perforce, supporting both migration and ongoing hybrid workflows.
 
-The tool supports gradual migration from Perforce to Git, or ongoing hybrid workflows. It maps Perforce depot paths to git branches.
-
-git p4 bridges Git and Perforce version control systems.
+The tool maps Perforce depot paths to Git branches, allowing teams to work with Git locally while maintaining synchronization with a Perforce server. It supports gradual migration from Perforce to Git as well as permanent dual-system setups.
 
 # CAVEATS
 

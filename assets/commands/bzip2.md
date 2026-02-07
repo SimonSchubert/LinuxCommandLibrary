@@ -1,3 +1,7 @@
+# TAGLINE
+
+Block-sorting file compressor
+
 # TLDR
 
 **Compress** file

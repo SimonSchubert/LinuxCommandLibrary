@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create, list, or delete object replacement refs
+
 # TLDR
 
 **Replace object**
@@ -39,9 +43,10 @@
 
 # DESCRIPTION
 
-**git replace** creates, lists, or deletes refs to replace objects. Allows temporarily changing how objects are viewed without modifying the objects themselves.
+**git replace** creates, lists, or deletes refs that substitute one object for another. This allows temporarily changing how objects are viewed without modifying the original objects themselves.
+
+Replacements are useful for fixing published history, grafting histories together, or replacing large blobs. The `--graft` option simplifies rewriting commit parentage.
 
 # SEE ALSO
 
 [git-commit](/man/git-commit)(1), [git-tag](/man/git-tag)(1)
-

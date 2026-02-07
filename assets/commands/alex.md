@@ -1,3 +1,7 @@
+# TAGLINE
+
+Catch insensitive, inconsiderate writing in text.
+
 # TLDR
 
 **Check** a file for insensitive language
@@ -55,6 +59,14 @@ The tool is designed for documentation, README files, and other written content,
 
 **-v**, **--version**
 > Display version
+
+# CONFIGURATION
+
+**.alexrc**
+> JSON or YAML configuration file in the project root. Defines allowed terms, custom rules, and language preferences.
+
+**.alexignore**
+> Lists files and directories to exclude from checking, using gitignore-style patterns.
 
 # CAVEATS
 

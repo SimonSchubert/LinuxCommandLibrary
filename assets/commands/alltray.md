@@ -1,3 +1,7 @@
+# TAGLINE
+
+Dock any application into the system tray.
+
 # TLDR
 
 **Click-mode:** run alltray and click on a window to dock it

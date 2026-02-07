@@ -1,3 +1,7 @@
+# TAGLINE
+
+Check a Rust package for errors without compiling
+
 # TLDR
 
 **Check project for errors**

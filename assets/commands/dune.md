@@ -1,3 +1,7 @@
+# TAGLINE
+
+composable build system for OCaml projects
+
 # TLDR
 
 **Build the project**
@@ -66,6 +70,17 @@
 
 **--release**
 > Build in release mode.
+
+# CONFIGURATION
+
+**dune**
+> Per-directory build configuration files using S-expression syntax defining libraries, executables, and tests.
+
+**dune-project**
+> Project-level configuration at repository root specifying project metadata and language version.
+
+**dune-workspace**
+> Optional workspace configuration for multi-context builds and advanced project settings.
 
 # DESCRIPTION
 

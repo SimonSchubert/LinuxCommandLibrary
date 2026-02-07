@@ -1,3 +1,7 @@
+# TAGLINE
+
+Show repository summary with contribution statistics
+
 # TLDR
 
 **Show repository summary**
@@ -26,9 +30,8 @@
 
 # DESCRIPTION
 
-**git summary** outputs a repository summary including project age, active days, and commit statistics per author. Part of git-extras.
+**git summary** outputs a repository overview including project age, number of active days, total commits, and per-author contribution statistics. Part of git-extras, it provides a quick snapshot of project activity.
 
 # SEE ALSO
 
 [git-log](/man/git-log)(1), [git-shortlog](/man/git-shortlog)(1), [git-extras](/man/git-extras)(1)
-

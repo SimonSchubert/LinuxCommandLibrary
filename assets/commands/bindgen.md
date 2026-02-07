@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate Rust FFI bindings from C/C++ headers
+
 # TLDR
 
 **Generate Rust bindings** from a C header

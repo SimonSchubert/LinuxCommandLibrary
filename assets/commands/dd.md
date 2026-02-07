@@ -1,3 +1,7 @@
+# TAGLINE
+
+low-level data copying and conversion tool
+
 # TLDR
 
 Make a **bootable USB** from an ISO and show progress
@@ -26,7 +30,11 @@ Create a **system backup** to an IMG file
 
 # DESCRIPTION
 
-**dd** converts and copies files. It is commonly used for creating disk images, writing ISOs to USB drives, cloning drives, and low-level data manipulation. It reads from standard input and writes to standard output by default.
+**dd** converts and copies files at the block level, making it useful for low-level disk operations that bypass filesystem structures. It reads from standard input and writes to standard output by default, but is typically used with if= and of= parameters to specify input and output files or devices.
+
+The tool operates in fixed block sizes (set with bs=), reading and writing data in chunks for efficiency. This block-oriented approach makes dd suitable for creating exact disk images, cloning entire drives, writing bootable USB drives from ISO files, and generating test files of specific sizes.
+
+Common use cases include forensic disk imaging, data backup and restoration, disk benchmarking, and creating files filled with zeros or random data. The status=progress option (added in GNU coreutils 8.24) provides real-time progress information, addressing a long-standing complaint about dd's silence during operation. However, dd provides no safety checks and will overwrite data without confirmation, making it critical to verify the of= parameter before execution.
 
 # PARAMETERS
 

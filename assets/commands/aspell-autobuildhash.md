@@ -1,3 +1,7 @@
+# TAGLINE
+
+Rebuild aspell dictionary hash files
+
 # TLDR
 
 **Rebuild** all hash files

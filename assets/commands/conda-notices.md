@@ -1,3 +1,7 @@
+# TAGLINE
+
+channel notices viewer
+
 # TLDR
 
 **Show channel notices**
@@ -7,6 +11,14 @@
 # SYNOPSIS
 
 **conda** **notices**
+
+# CONFIGURATION
+
+**~/.condarc**
+> User-level conda configuration for channels, package settings, and solver options.
+
+**/opt/conda/.condarc**
+> System-wide conda configuration.
 
 # DESCRIPTION
 

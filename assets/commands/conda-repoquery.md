@@ -1,3 +1,7 @@
+# TAGLINE
+
+advanced package query tool
+
 # TLDR
 
 **Search for packages**
@@ -26,6 +30,14 @@
 
 **whoneeds**
 > Show reverse dependencies.
+
+# CONFIGURATION
+
+**~/.condarc**
+> User-level conda configuration for channels, package settings, and solver options.
+
+**/opt/conda/.condarc**
+> System-wide conda configuration.
 
 # DESCRIPTION
 

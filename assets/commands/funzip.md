@@ -1,3 +1,7 @@
+# TAGLINE
+
+streaming ZIP extraction filter
+
 # TLDR
 
 **Extract from stdin**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+disk usage analyzer
+
 # TLDR
 
 **Show** disk usage
@@ -26,9 +30,13 @@
 
 # DESCRIPTION
 
-**du** (disk usage) estimates file and directory space usage. It recursively summarizes disk usage for each file and directory, making it essential for finding what's consuming disk space.
+**du** (disk usage) estimates and reports file and directory space usage by recursively examining directory trees. Unlike df which shows filesystem-level free space, du focuses on individual files and directories, making it essential for identifying what's consuming disk space and where cleanup efforts should focus.
 
-The command is commonly used for storage analysis and cleanup.
+The tool walks directory hierarchies and sums the disk space used by each file, reporting sizes at each directory level. By default, it shows sizes for all directories in the tree, but options like --max-depth allow limiting output to higher-level summaries. The -h flag converts raw block counts to human-readable formats (KB, MB, GB).
+
+du is commonly combined with sort to identify the largest space consumers. Patterns like "du -h | sort -hr | head" reveal the top disk space users, essential for troubleshooting full filesystems or planning cleanup operations.
+
+The command reports disk usage (actual blocks consumed) rather than apparent file size, which matters for sparse files and filesystems with compression. Hard links are counted multiple times (once per link), potentially overstating actual disk usage. The -x option prevents crossing filesystem boundaries, useful for analyzing specific filesystems without including mounted subdirectories.
 
 # PARAMETERS
 

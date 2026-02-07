@@ -1,3 +1,7 @@
+# TAGLINE
+
+Web server with automatic HTTPS
+
 # TLDR
 
 **Start** web server
@@ -105,6 +109,11 @@ caddy run
 # Validate config
 caddy validate --config Caddyfile
 ```
+
+# CONFIGURATION
+
+**Caddyfile**
+> Default configuration file in the current directory, defining sites, routes, and server behavior
 
 # CAVEATS
 

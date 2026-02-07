@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate compilation database for clang tooling
+
 # TLDR
 
 **Generate** compilation database

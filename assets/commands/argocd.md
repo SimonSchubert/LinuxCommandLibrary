@@ -1,3 +1,7 @@
+# TAGLINE
+
+GitOps continuous delivery CLI for Kubernetes
+
 # TLDR
 
 **Login** to Argo CD server
@@ -61,6 +65,11 @@ The tool enables GitOps workflows where Git repositories are the source of truth
 
 **--insecure**
 > Skip TLS verification
+
+# CONFIGURATION
+
+**~/.config/argocd/config**
+> Stores authentication contexts for Argo CD servers including server addresses and auth tokens.
 
 # CAVEATS
 

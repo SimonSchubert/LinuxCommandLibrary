@@ -1,3 +1,7 @@
+# TAGLINE
+
+Produce tones through the PC speaker
+
 # TLDR
 
 Play a **beep**

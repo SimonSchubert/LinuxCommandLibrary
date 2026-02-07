@@ -1,3 +1,7 @@
+# TAGLINE
+
+Debian package changelog editor
+
 # TLDR
 
 **Add new changelog entry**

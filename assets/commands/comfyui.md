@@ -1,3 +1,7 @@
+# TAGLINE
+
+node-based workflow system for Stable Diffusion
+
 # TLDR
 
 **Start ComfyUI server**

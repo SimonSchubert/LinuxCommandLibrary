@@ -1,3 +1,7 @@
+# TAGLINE
+
+F-Droid repository management tool
+
 # TLDR
 
 **Update repository index**
@@ -57,6 +61,14 @@ _COMMAND_
 The tool handles the entire app publication workflow: building APKs from source, signing them, generating metadata, and publishing to repositories. It enforces F-Droid's commitment to open source by building from source code.
 
 fdroid is used by the official F-Droid repository and third-party repositories hosting open source Android applications.
+
+# CONFIGURATION
+
+**config.yml**
+> Repository configuration including repo name, description, and keystore settings.
+
+**metadata/**
+> Directory containing per-app metadata files describing build recipes and app information.
 
 # CAVEATS
 

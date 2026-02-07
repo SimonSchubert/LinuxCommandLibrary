@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast reverse proxy for NAT traversal
+
 # TLDR
 
 **Start frp client**
@@ -33,6 +37,14 @@
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**frpc.ini**
+> Client configuration file defining server connection, authentication token, and proxy definitions for services to expose.
+
+**frps.ini**
+> Server configuration file specifying bind ports, dashboard settings, authentication tokens, and connection limits.
 
 # DESCRIPTION
 

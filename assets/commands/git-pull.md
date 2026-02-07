@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fetch and integrate remote changes
+
 # TLDR
 
 **Pull from origin**
@@ -60,9 +64,10 @@
 
 # DESCRIPTION
 
-**git pull** fetches from remote and integrates with the current branch. Equivalent to git fetch followed by git merge (or git rebase with --rebase).
+**git pull** fetches from a remote and integrates the changes with the current branch. It is equivalent to running `git fetch` followed by `git merge`, or `git rebase` when the `--rebase` option is used.
+
+Pull strategies vary by workflow. Some teams prefer merge (preserving all history), others prefer rebase (linear history), and some use `--ff-only` to reject non-fast-forward updates and prevent unexpected merge commits. The `pull.rebase` configuration setting controls default behavior.
 
 # SEE ALSO
 
 [git-fetch](/man/git-fetch)(1), [git-merge](/man/git-merge)(1)
-

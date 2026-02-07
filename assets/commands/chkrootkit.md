@@ -1,3 +1,7 @@
+# TAGLINE
+
+local rootkit detection scanner
+
 # TLDR
 
 **Scan system for rootkits**
@@ -30,7 +34,9 @@
 
 # DESCRIPTION
 
-**chkrootkit** locally checks for signs of rootkits. Examines system binaries for modifications, checks for deleted log entries, LKM trojans, and promiscuous network interfaces. Detects 70+ rootkits.
+**chkrootkit** locally checks for signs of rootkits on a system. It examines system binaries for known modifications, checks for deleted log entries, detects loadable kernel module (LKM) trojans, and identifies promiscuous network interfaces.
+
+The tool works by comparing system binaries against known signatures of rootkit modifications and by running a series of tests that look for common rootkit behaviors. It can detect over 70 known rootkits and worms. For best results, it should be run from trusted binaries on a clean system or live CD, since a compromised system's tools may hide infections.
 
 # PARAMETERS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+JPEG XL image encoder
+
 # TLDR
 
 **Encode** an image to JPEG XL format with default settings

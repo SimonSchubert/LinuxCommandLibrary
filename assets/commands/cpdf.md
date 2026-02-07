@@ -1,3 +1,7 @@
+# TAGLINE
+
+Command-line PDF manipulation tool
+
 # TLDR
 
 **Merge PDF files**
@@ -32,6 +36,14 @@
 
 **cpdf** [_options_] _input.pdf_ [_pages_] **-o** _output.pdf_
 
+# DESCRIPTION
+
+**cpdf** (Coherent PDF) is a command-line tool for manipulating PDF files. It can merge, split, encrypt, decrypt, rotate, scale, and perform many other operations on PDF documents without requiring a GUI.
+
+The tool provides precise control over PDF manipulation with support for page ranges, encryption levels, metadata editing, and transformations. It's designed for batch processing, automation, and scenarios where graphical PDF tools are impractical.
+
+cpdf is particularly useful for server-side PDF processing, shell scripts, and workflows requiring reliable, scriptable PDF operations. It handles complex operations like adding watermarks, stamping pages, and manipulating bookmarks.
+
 # PARAMETERS
 
 **-o** _file_
@@ -54,12 +66,6 @@
 
 **-merge**
 > Merge multiple PDFs.
-
-# DESCRIPTION
-
-**cpdf** (Coherent PDF) is a command-line tool for manipulating PDF files. It can merge, split, encrypt, decrypt, rotate, scale, and perform many other operations on PDF documents.
-
-It's a powerful alternative to tools like pdftk for PDF manipulation.
 
 # SEE ALSO
 

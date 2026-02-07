@@ -1,3 +1,7 @@
+# TAGLINE
+
+VESA CVT display modeline calculator
+
 # TLDR
 
 **Generate a modeline** for a resolution and refresh rate

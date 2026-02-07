@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove a Rust binary installed by cargo install
+
 # TLDR
 
 **Uninstall package**
@@ -22,7 +26,9 @@
 
 # DESCRIPTION
 
-**cargo uninstall** removes packages installed with cargo install. By default removes all binaries for the package. Use --bin to remove specific binaries.
+**cargo uninstall** removes packages that were previously installed with `cargo install`. By default it removes all binaries associated with the package. The `--bin` flag can be used to remove only a specific binary while leaving others from the same package in place.
+
+The installation root is determined by the `--root` flag, the `CARGO_INSTALL_ROOT` environment variable, the `install.root` configuration value, or `$CARGO_HOME` (defaulting to `~/.cargo`). Only the installed binaries are removed; cached build artifacts in the target directory are not cleaned up.
 
 # PARAMETERS
 

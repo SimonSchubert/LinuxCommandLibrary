@@ -1,3 +1,7 @@
+# TAGLINE
+
+shell-based ACME SSL/TLS certificate client
+
 # TLDR
 
 **Issue** a certificate using webroot mode
@@ -76,6 +80,20 @@ The tool automatically handles certificate renewal through cron jobs and support
 
 **--force**
 > Force renewal regardless of expiry
+
+# CONFIGURATION
+
+**~/.acme.sh/account.conf**
+> Main configuration file storing default settings, CA server, email, and DNS API credentials.
+
+**~/.acme.sh/[domain]/[domain].conf**
+> Per-domain configuration storing issuance parameters, validation method, and renewal settings.
+
+**~/.acme.sh/[domain]/[domain].cer**
+> Issued certificate file for the domain.
+
+**~/.acme.sh/[domain]/[domain].key**
+> Private key file for the domain.
 
 # CAVEATS
 

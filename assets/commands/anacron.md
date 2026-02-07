@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run periodic jobs on systems not running continuously
+
 # TLDR
 
 **Run** anacron jobs now
@@ -55,6 +59,14 @@ Unlike cron, which runs jobs at specific times, anacron runs jobs based on perio
 
 **-u**
 > Update timestamps only, don't run jobs
+
+# CONFIGURATION
+
+**/etc/anacrontab**
+> Defines periodic jobs with their period in days, delay in minutes, identifier, and command to execute.
+
+**/var/spool/anacron/**
+> Timestamp files tracking the last execution date of each job.
 
 # CAVEATS
 

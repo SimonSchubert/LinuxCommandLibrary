@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display information about LSF batch jobs
+
 # TLDR
 
 **Show all your pending and running jobs**

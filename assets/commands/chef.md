@@ -1,3 +1,7 @@
+# TAGLINE
+
+infrastructure automation and configuration management platform
+
 # TLDR
 
 **Generate a new cookbook**
@@ -66,6 +70,17 @@ Cookbooks contain recipes written in Ruby DSL that describe desired system state
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**~/.chef/config.rb**
+> Main Chef Workstation configuration file. Sets default Chef Server URL, client key path, cookbook paths, and node name.
+
+**~/.chef/credentials**
+> Stores Chef Server credentials and profiles for managing multiple organizations.
+
+**/etc/chef/client.rb**
+> Chef client configuration on managed nodes. Sets server URL, node name, validation key, and run list intervals.
 
 # CAVEATS
 

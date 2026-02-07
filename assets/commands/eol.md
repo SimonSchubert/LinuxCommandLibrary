@@ -1,3 +1,7 @@
+# TAGLINE
+
+Line ending format detector and converter
+
 # TLDR
 
 **Check line endings** in file

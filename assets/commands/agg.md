@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert terminal recordings to animated GIFs
+
 # TLDR
 
 **Convert** asciinema recording to GIF

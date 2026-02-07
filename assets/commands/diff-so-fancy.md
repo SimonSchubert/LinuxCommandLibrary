@@ -1,3 +1,7 @@
+# TAGLINE
+
+human-readable git diff formatter
+
 # TLDR
 
 **Pipe git diff** through diff-so-fancy
@@ -39,6 +43,11 @@ The tool uses terminal colors effectively to highlight what changed within lines
 
 **--set-defaults**
 > Configure git to use diff-so-fancy.
+
+# CONFIGURATION
+
+**~/.gitconfig**
+> Git configuration for integrating diff-so-fancy as the default pager.
 
 # GIT CONFIGURATION
 

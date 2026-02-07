@@ -1,3 +1,7 @@
+# TAGLINE
+
+safely check for Arch Linux package updates
+
 # TLDR
 
 Synchronize database and **list pending updates**

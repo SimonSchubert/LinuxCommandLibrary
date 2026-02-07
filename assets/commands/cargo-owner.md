@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage crate owners on a registry
+
 # TLDR
 
 **List crate owners**
@@ -22,7 +26,9 @@
 
 # DESCRIPTION
 
-**cargo owner** manages owners of a crate on crates.io. Owners can publish versions, yank releases, and manage other owners. Requires authentication.
+**cargo owner** manages the owners of a crate on crates.io or another registry. Owners have the ability to publish new versions, yank existing releases, and add or remove other owners. All ownership modifications require authentication via an API token.
+
+There are two types of owners: named users and teams. Named users have full rights including managing other owners, while teams can only publish and yank versions. GitHub teams can be added as owners using the `github:org:team` syntax, but only by a member of that team.
 
 # PARAMETERS
 
@@ -49,6 +55,11 @@
 
 **-q**, **--quiet**
 > Suppress output
+
+# CONFIGURATION
+
+**~/.cargo/credentials.toml**
+> Stores API tokens for registry authentication. Created by `cargo login`.
 
 # OWNER TYPES
 

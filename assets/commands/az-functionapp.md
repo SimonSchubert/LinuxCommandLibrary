@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Azure Functions serverless apps
+
 # TLDR
 
 **List all function apps**

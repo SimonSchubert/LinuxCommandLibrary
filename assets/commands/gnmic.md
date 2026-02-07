@@ -1,3 +1,7 @@
+# TAGLINE
+
+gNMI network management CLI client
+
 # TLDR
 
 **Get configuration**
@@ -45,11 +49,17 @@
 
 # DESCRIPTION
 
-**gnmic** is a gNMI (gRPC Network Management Interface) CLI client. It interacts with network devices supporting gNMI for configuration and telemetry.
+**gnmic** is a gNMI (gRPC Network Management Interface) CLI client. It interacts with network devices supporting gNMI for configuration retrieval, modification, and streaming telemetry.
 
-The tool supports get, set, subscribe, and capability operations. It's used for network automation and monitoring with modern network operating systems.
+The tool supports get, set, subscribe, and capability operations. It is used for network automation and monitoring with modern network operating systems.
 
-gnmic provides command-line gNMI network management.
+# CONFIGURATION
+
+**~/.gnmic.yaml**
+> Global configuration file for targets, credentials, and default settings.
+
+**.gnmic.yaml**
+> Per-directory configuration file for project-specific settings.
 
 # CAVEATS
 

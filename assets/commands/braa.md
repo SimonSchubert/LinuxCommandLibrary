@@ -1,3 +1,7 @@
+# TAGLINE
+
+Mass SNMP scanner for querying multiple hosts
+
 # TLDR
 
 **Walk the SNMP tree** of a host

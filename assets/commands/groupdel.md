@@ -1,3 +1,7 @@
+# TAGLINE
+
+delete a group from the system
+
 # TLDR
 
 **Delete** an existing group
@@ -21,7 +25,7 @@
 
 # DESCRIPTION
 
-**groupdel** removes a group entry from the system. The group is deleted from /etc/group and /etc/gshadow files. The command cannot remove a group if it's the primary group of any existing user.
+**groupdel** removes a group entry from the system. It deletes the group from /etc/group and /etc/gshadow files. The command cannot remove a group if it is the primary group of any existing user.
 
 Files owned by the deleted group retain their numeric GID but lose the group name association. Consider reassigning file ownership before deleting groups.
 

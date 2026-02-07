@@ -1,3 +1,7 @@
+# TAGLINE
+
+DesktopEntry execution for XDG autostart programs
+
 # TLDR
 
 Execute all programs in **autostart folders**

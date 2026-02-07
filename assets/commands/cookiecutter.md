@@ -1,3 +1,7 @@
+# TAGLINE
+
+project template generator
+
 # TLDR
 
 **Create project from template**
@@ -34,9 +38,11 @@
 
 # DESCRIPTION
 
-**cookiecutter** creates projects from project templates. It takes a template directory or repository URL and interactively prompts for variable values, generating a new project with those values substituted.
+**cookiecutter** is a command-line utility for creating projects from templates, eliminating the need to manually set up boilerplate code and project structure. It takes a template directory (local or from a Git repository) and prompts for configuration values, then generates a complete project with those values substituted throughout.
 
-Templates use Jinja2 syntax for variable substitution in filenames and content. This enables consistent project bootstrapping with customizable names, configurations, and boilerplate code.
+Templates use Jinja2 syntax for variable substitution in both filenames and file content. For example, a template might prompt for "project_name" and use it to create directories, populate setup files, and customize code comments. This ensures consistency across projects while allowing customization.
+
+The tool has spawned a large ecosystem of community templates for frameworks like Django, Flask, React, and many others. cookiecutter is language-agnostic and can template any type of project. It supports advanced features like conditional file inclusion, pre/post-generation hooks, and replay files for reproducing previous configurations. The tool has become a standard in Python development and influenced similar tools in other ecosystems.
 
 # PARAMETERS
 

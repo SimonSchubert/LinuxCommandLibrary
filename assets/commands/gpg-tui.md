@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal user interface for GnuPG key management
+
 # TLDR
 
 **Launch gpg-tui**
@@ -39,9 +43,10 @@
 
 # DESCRIPTION
 
-**gpg-tui** is a terminal user interface for managing GnuPG keys. It provides an interactive interface for listing, viewing, importing, exporting, signing, editing, and deleting keys. Written in Rust, it makes GPG key management more accessible without memorizing complex command-line options.
+**gpg-tui** is a terminal user interface for managing GnuPG keys. Written in Rust, it provides an interactive interface for listing, viewing, importing, exporting, signing, editing, and deleting keys without memorizing complex gpg command-line options.
+
+The tool reads from the standard GnuPG keyring and supports multiple visual styles for display customization.
 
 # SEE ALSO
 
 [gpg](/man/gpg)(1), [gpg-agent](/man/gpg-agent)(1)
-

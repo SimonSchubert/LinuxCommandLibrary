@@ -1,3 +1,7 @@
+# TAGLINE
+
+display live container resource usage statistics
+
 # TLDR
 
 **Show live stats for all containers**

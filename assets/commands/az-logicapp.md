@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Azure Logic Apps
+
 # TLDR
 
 **Create a Logic App**

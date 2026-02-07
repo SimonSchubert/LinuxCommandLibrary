@@ -1,3 +1,7 @@
+# TAGLINE
+
+compiler cache for faster recompilation
+
 # TLDR
 
 **Show cache statistics**
@@ -82,6 +86,14 @@ ln -s /usr/bin/ccache /usr/local/bin/g++
 export CC="ccache gcc"
 export CXX="ccache g++"
 ```
+
+# CONFIGURATION
+
+**~/.config/ccache/ccache.conf**
+> Primary configuration file controlling cache size, compression, compiler settings, and remote storage.
+
+**/etc/ccache.conf**
+> System-wide configuration defaults.
 
 # REMOTE CACHING
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+resource limit query and management interface
+
 # TLDR
 
 **Get resource limits (shell)**
@@ -53,6 +57,14 @@ ulimit -s        # Stack size
 ulimit -a        # All limits
 ulimit -n 4096   # Set open files limit
 ```
+
+# CONFIGURATION
+
+**/etc/security/limits.conf**
+> PAM configuration for setting default resource limits per user or group.
+
+**/etc/systemd/system.conf**
+> Systemd-wide default resource limits for services and user sessions.
 
 # CAVEATS
 

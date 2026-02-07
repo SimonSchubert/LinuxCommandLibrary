@@ -1,3 +1,7 @@
+# TAGLINE
+
+encrypted environment variable manager
+
 # TLDR
 
 **Run command with .env loaded**
@@ -63,9 +67,19 @@
 **--overload**
 > Override existing env vars.
 
+# CONFIGURATION
+
+**.env**
+> Default environment variables file loaded automatically.
+
+**.env.keys**
+> Encryption keys for decrypting .env files.
+
 # DESCRIPTION
 
-**dotenvx** is an enhanced dotenv tool that loads environment variables from .env files with support for encryption. Provides secure secret management for development and deployment.
+**dotenvx** is an enhanced dotenv tool that loads environment variables from .env files with support for encryption. It extends the traditional dotenv pattern with built-in encryption capabilities, allowing teams to securely commit encrypted environment files to version control.
+
+The tool supports multiple environment files (.env.production, .env.staging), automatic decryption at runtime, and key management for team-based secret sharing. It provides a modern approach to managing application secrets without external secret management services.
 
 # SEE ALSO
 

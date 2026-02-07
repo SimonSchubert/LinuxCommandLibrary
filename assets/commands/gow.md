@@ -1,3 +1,7 @@
+# TAGLINE
+
+File watcher for Go commands
+
 # TLDR
 
 **Run with auto-reload**
@@ -33,11 +37,9 @@ _ARGS_
 
 # DESCRIPTION
 
-**gow** is a file watcher for Go commands. It wraps go commands and re-runs them when source files change, providing automatic rebuilding.
+**gow** is a file watcher that wraps Go commands and re-runs them when source files change. It supports go run, test, build, and other commands, watching .go files and triggering re-execution on changes.
 
-The tool supports go run, test, build and other commands. It watches .go files and triggers re-execution on changes.
-
-gow provides simple go command watching.
+The tool provides a minimal approach to automatic rebuilding during Go development without complex configuration.
 
 # CAVEATS
 

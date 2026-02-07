@@ -1,3 +1,7 @@
+# TAGLINE
+
+manage DVD-RAM media settings
+
 # TLDR
 
 **Show DVD-RAM status**

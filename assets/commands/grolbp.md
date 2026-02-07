@@ -1,3 +1,7 @@
+# TAGLINE
+
+Groff Canon LBP printer driver
+
 # TLDR
 
 **Generate Canon LBP output**
@@ -44,11 +48,9 @@ _FILE_
 
 # DESCRIPTION
 
-**grolbp** is a groff output driver for Canon CAPSL laser beam printers. It generates output compatible with Canon LBP printer series.
+**grolbp** is a groff output driver for Canon CAPSL laser beam printers. It generates output compatible with Canon LBP printer series, supporting various paper sizes, orientations, and copy counts.
 
-The driver produces printer-specific commands for direct printing. It supports various paper sizes and orientations.
-
-grolbp outputs to Canon LBP printers.
+The driver produces printer-specific commands for direct printing to Canon LBP hardware.
 
 # CAVEATS
 

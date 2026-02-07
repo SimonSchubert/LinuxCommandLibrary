@@ -1,3 +1,7 @@
+# TAGLINE
+
+compile and install Go packages and binaries
+
 # TLDR
 
 **Install a package from current module**
@@ -40,7 +44,7 @@
 
 # DESCRIPTION
 
-**go install** compiles and installs packages and their dependencies. Executables are installed to the directory named by GOBIN environment variable, defaulting to $GOPATH/bin or $HOME/go/bin. When used with @version suffix, it installs in module-aware mode regardless of current directory, ignoring any go.mod in the current directory.
+**go install** compiles and installs packages and their dependencies. Executables are installed to the directory named by the GOBIN environment variable, defaulting to $GOPATH/bin or $HOME/go/bin. When used with an @version suffix, it installs in module-aware mode regardless of the current directory, ignoring any go.mod present.
 
 # CAVEATS
 
@@ -49,4 +53,3 @@ Use **@latest** or **@version** to install tools independent of current module. 
 # SEE ALSO
 
 [go](/man/go)(1), [go-build](/man/go-build)(1), [go-get](/man/go-get)(1)
-

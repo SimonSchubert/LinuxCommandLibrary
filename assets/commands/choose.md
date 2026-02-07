@@ -1,3 +1,7 @@
+# TAGLINE
+
+human-friendly alternative to cut and awk
+
 # TLDR
 
 **Select first field**
@@ -38,7 +42,9 @@
 
 # DESCRIPTION
 
-**choose** is a human-friendly, fast alternative to cut and awk for field selection. Written in Rust. Uses Python-like slice syntax with zero-based indexing and negative indices.
+**choose** is a human-friendly, fast alternative to **cut** and **awk** for selecting fields from text input. It uses Python-like slice syntax with zero-based indexing, negative indices for counting from the end, and inclusive ranges by default.
+
+Unlike **cut**, which requires exact delimiter specification and uses 1-based indexing, choose handles whitespace splitting automatically and supports regex-based field separators. Written in Rust, it is significantly faster than awk for simple field selection tasks.
 
 # PARAMETERS
 

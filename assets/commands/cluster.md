@@ -1,3 +1,7 @@
+# TAGLINE
+
+graph cluster layout tool
+
 # TLDR
 
 **Generate a cluster layout** from a graph
@@ -14,9 +18,11 @@
 
 # DESCRIPTION
 
-**cluster** is a graph layout tool from the Graphviz package that finds clusters in graphs. It can identify and highlight communities or groups within graph structures.
+**cluster** is a graph layout tool from the Graphviz package that identifies and highlights clusters (communities or groups) within graph structures. It reads graphs in DOT format and annotates them with cluster information.
 
-This is part of the Graphviz suite alongside dot, neato, and other graph visualization tools.
+The tool analyzes the connectivity of a graph to detect natural groupings of nodes. These groupings are then represented as subgraph clusters in the output, which can be further processed by other Graphviz layout engines like dot or neato for visualization.
+
+It is part of the Graphviz suite alongside dot, neato, fdp, sfdp, twopi, and circo, each providing different layout algorithms for graph visualization.
 
 # SEE ALSO
 

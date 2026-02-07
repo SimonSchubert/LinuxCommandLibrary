@@ -1,3 +1,7 @@
+# TAGLINE
+
+modern ls replacement with git integration
+
 # TLDR
 
 **List files with** icons and colors

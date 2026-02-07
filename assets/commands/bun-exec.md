@@ -1,3 +1,7 @@
+# TAGLINE
+
+Execute package binaries
+
 # TLDR
 
 **Execute a package binary**

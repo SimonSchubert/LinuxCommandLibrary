@@ -1,3 +1,7 @@
+# TAGLINE
+
+Lightweight audio player with plugin support
+
 # TLDR
 
 **Start** Audacious
@@ -64,6 +68,14 @@ The player emphasizes customization through skins and plugins while maintaining 
 
 **-m**, **--show-jump-box**
 > Show jump to file dialog
+
+# CONFIGURATION
+
+**~/.config/audacious/config**
+> Main configuration file for player settings and preferences.
+
+**~/.config/audacious/plugin-registry**
+> Registry of installed plugins and their enabled state.
 
 # CAVEATS
 

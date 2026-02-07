@@ -1,3 +1,7 @@
+# TAGLINE
+
+convert CoffeeScript to modern JavaScript
+
 # TLDR
 
 **Convert CoffeeScript to JavaScript**

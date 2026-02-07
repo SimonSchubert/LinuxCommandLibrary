@@ -1,3 +1,7 @@
+# TAGLINE
+
+Temporarily save uncommitted changes for later
+
 # TLDR
 
 **Stash changes**
@@ -82,9 +86,10 @@
 
 # DESCRIPTION
 
-**git stash** temporarily saves changes for later. Useful when you need to switch branches without committing work in progress.
+**git stash** temporarily shelves uncommitted changes so you can work on something else. It saves both staged and unstaged modifications, then reverts the working directory to match HEAD.
+
+Use `pop` to restore and remove a stash, or `apply` to restore while keeping it. Stashes are stored as a stack, with the most recent at `stash@{0}`.
 
 # SEE ALSO
 
 [git-checkout](/man/git-checkout)(1), [git-reset](/man/git-reset)(1)
-

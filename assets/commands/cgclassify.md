@@ -1,3 +1,7 @@
+# TAGLINE
+
+move running processes to a cgroup
+
 # TLDR
 
 Move a process to the **CPU cgroup** "student"
@@ -32,6 +36,14 @@ When used without the -g option, processes are classified according to rules in 
 
 **--cancel-sticky**
 > Allow cgred to manage the process again
+
+# CONFIGURATION
+
+**/etc/cgrules.conf**
+> Rules for automatic cgroup classification when -g is not specified.
+
+**/etc/cgconfig.conf**
+> Cgroup hierarchy and controller configuration.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+wireless regulatory domain agent
+
 # TLDR
 
 **Set the regulatory domain** for wireless
@@ -32,9 +36,9 @@
 
 **CRDA** (Central Regulatory Domain Agent) is a userspace agent that provides wireless regulatory domain information to the Linux kernel. It responds to kernel requests for regulatory rules based on the configured country code.
 
-The Linux wireless subsystem requires knowledge of regional regulations that control which frequencies, power levels, and modes wireless devices can use. CRDA loads this information from a regulatory database and provides it to the kernel on demand.
+The Linux wireless subsystem requires knowledge of regional regulations that control which frequencies, power levels, and modes wireless devices can use. Different countries have different legal restrictions on wireless spectrum, and CRDA ensures devices comply by loading the appropriate rules from a signed regulatory database.
 
-CRDA runs automatically when the kernel needs regulatory information, typically during boot or when wireless devices are configured. The actual regulatory rules are stored in a signed database that CRDA reads and verifies.
+CRDA runs automatically when the kernel needs regulatory information, typically during boot or when wireless devices are configured. The regulatory database contains country-specific rules covering permissible frequency ranges, maximum transmission power, DFS (Dynamic Frequency Selection) requirements, and indoor/outdoor restrictions. CRDA verifies the cryptographic signature of the database to prevent tampering with regulatory rules.
 
 # CAVEATS
 

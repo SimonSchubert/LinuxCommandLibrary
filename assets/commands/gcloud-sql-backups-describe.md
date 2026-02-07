@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays backup information
+
 # TLDR
 
 **Describe a backup**
@@ -22,7 +26,9 @@
 
 # DESCRIPTION
 
-**gcloud sql backups describe** displays information about a Cloud SQL backup including status, type, timestamps, and size.
+**gcloud sql backups describe** displays detailed information about a specific Cloud SQL backup. It retrieves metadata including backup status, type (on-demand or automatic), creation timestamp, completion time, and backup size.
+
+The command is useful for verifying backup completion, checking backup integrity before restoration, and auditing backup operations. Output can be formatted as JSON or YAML for programmatic processing or integration with automation scripts.
 
 # SEE ALSO
 

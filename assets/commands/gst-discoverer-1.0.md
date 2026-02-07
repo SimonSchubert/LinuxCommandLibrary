@@ -1,3 +1,7 @@
+# TAGLINE
+
+GStreamer media file metadata analyzer
+
 # TLDR
 
 **Show media file information**
@@ -47,9 +51,10 @@
 
 # DESCRIPTION
 
-**gst-discoverer-1.0** displays metadata and stream information about media files. It analyzes containers, codecs, duration, resolution, sample rates, bitrates, and other properties without playing the file. Useful for debugging multimedia issues and understanding media structure. Recurses into subdirectories when given a directory path.
+**gst-discoverer-1.0** displays metadata and stream information about media files. It analyzes containers, codecs, duration, resolution, sample rates, bitrates, and other properties without playing the file.
+
+The tool is useful for debugging multimedia issues and understanding media structure. It recurses into subdirectories when given a directory path.
 
 # SEE ALSO
 
 [gst-launch-1.0](/man/gst-launch-1.0)(1), [gst-inspect-1.0](/man/gst-inspect-1.0)(1), [mediainfo](/man/mediainfo)(1)
-

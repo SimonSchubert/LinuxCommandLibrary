@@ -1,3 +1,7 @@
+# TAGLINE
+
+documentation generator for source code
+
 # TLDR
 
 **Generate default config** file
@@ -45,6 +49,11 @@ _CONFIGFILE_
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**Doxyfile**
+> Main configuration file for project documentation settings, output formats, and parsing options.
 
 # DESCRIPTION
 

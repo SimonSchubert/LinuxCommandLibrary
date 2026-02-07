@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run Amanda backups
+
 # TLDR
 
 **Run a full backup** using a configuration
@@ -57,6 +61,14 @@ The command is typically executed via cron for scheduled nightly backups. It coo
 If a file named **hold** exists in the configuration directory, amdump waits until it is removed before starting, checking every minute. This allows administrators to delay scheduled backups when the tape device is in use elsewhere.
 
 When problems occur, amdump may enter "degraded mode" where backups continue to holding disk but tape writing is skipped. The **--no-taper** option forces this mode intentionally.
+
+# CONFIGURATION
+
+**/etc/amanda/<config>/amanda.conf**
+> Amanda server configuration defining tape devices, holding disks, dump types, and scheduling parameters.
+
+**/etc/amanda/<config>/disklist**
+> List of client hosts and filesystems to back up.
 
 # CAVEATS
 

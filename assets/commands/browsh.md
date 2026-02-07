@@ -1,3 +1,7 @@
+# TAGLINE
+
+Modern text-based web browser for terminals
+
 # TLDR
 
 **Start browsh**

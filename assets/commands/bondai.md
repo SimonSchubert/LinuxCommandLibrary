@@ -1,3 +1,7 @@
+# TAGLINE
+
+AI agent framework with built-in tools
+
 # TLDR
 
 **Start an interactive chat session**

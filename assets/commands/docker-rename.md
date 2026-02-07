@@ -1,3 +1,7 @@
+# TAGLINE
+
+change container name identifier
+
 # TLDR
 
 **Rename a container**
@@ -10,7 +14,7 @@
 
 # DESCRIPTION
 
-**docker rename** renames an existing container. Works on both running and stopped containers. Useful for giving meaningful names to containers created without --name.
+**docker rename** renames an existing container. Works on both running and stopped containers. Useful for giving meaningful names to containers created without --name. Container names must be unique within the Docker host and follow naming conventions (alphanumeric characters, underscores, periods, and hyphens).
 
 # SEE ALSO
 

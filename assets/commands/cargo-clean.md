@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove build artifacts from a Rust project
+
 # TLDR
 
 **Remove entire target directory**

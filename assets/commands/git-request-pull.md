@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate a pull request summary for email submission
+
 # TLDR
 
 **Generate pull request summary**
@@ -23,9 +27,10 @@
 
 # DESCRIPTION
 
-**git request-pull** generates a summary of pending changes for email submission. Creates a message describing the commits and where to pull them from.
+**git request-pull** generates a summary of pending changes suitable for email submission. It creates a message describing the commits between a starting point and the current HEAD, along with the URL to pull from.
+
+This command is commonly used in email-based patch workflows to ask maintainers to pull changes from your repository.
 
 # SEE ALSO
 
 [git-format-patch](/man/git-format-patch)(1), [git-send-email](/man/git-send-email)(1)
-

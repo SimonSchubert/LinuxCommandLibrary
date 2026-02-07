@@ -1,3 +1,7 @@
+# TAGLINE
+
+enable and disable individual CPUs
+
 # TLDR
 
 **Disable** one or more CPUs

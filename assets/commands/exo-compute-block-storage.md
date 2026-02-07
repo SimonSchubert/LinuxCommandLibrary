@@ -1,3 +1,7 @@
+# TAGLINE
+
+Exoscale persistent block storage volume management
+
 # TLDR
 
 **List block storage volumes**
@@ -54,6 +58,10 @@
 # DESCRIPTION
 
 **exo compute block-storage** manages Exoscale block storage volumes. Volumes provide persistent storage that can be attached to compute instances.
+
+Block storage volumes survive instance termination and can be moved between instances. They are ideal for databases, application data, and any workload requiring persistent storage separate from the instance lifecycle.
+
+Volumes can be resized online and support snapshots for backup and cloning.
 
 # SEE ALSO
 

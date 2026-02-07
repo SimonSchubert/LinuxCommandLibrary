@@ -1,3 +1,7 @@
+# TAGLINE
+
+industry-standard container runtime daemon
+
 # TLDR
 
 **Start containerd** daemon
@@ -56,6 +60,11 @@
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**/etc/containerd/config.toml**
+> Main configuration file for containerd daemon settings, runtime options, and plugin configurations.
 
 # DESCRIPTION
 

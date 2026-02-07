@@ -1,3 +1,7 @@
+# TAGLINE
+
+POSIX-compliant shell optimized for speed
+
 # TLDR
 
 **Run script**
@@ -30,7 +34,13 @@
 
 # DESCRIPTION
 
-**dash** is the Debian Almquist Shell, a POSIX-compliant /bin/sh implementation. Faster and smaller than bash. Default /bin/sh on Debian and Ubuntu. Derived from NetBSD ash.
+**dash** is the Debian Almquist Shell, a POSIX-compliant /bin/sh implementation designed for efficiency and standards compliance. It is significantly faster and smaller than bash, making it ideal for running shell scripts and system initialization.
+
+The shell prioritizes script execution speed, startup time, and minimal memory footprint over interactive features. It's approximately 4x faster than bash for script execution, which is why Debian and Ubuntu use it as the default /bin/sh.
+
+dash is derived from NetBSD's ash (Almquist shell), which itself was created as a BSD-licensed replacement for the original Bourne shell. It implements the POSIX shell specification strictly, without bash extensions like arrays, [[ ]] conditionals, or process substitution.
+
+The shell is primarily used for system scripts, package manager scripts, and situations where POSIX compliance and performance matter more than advanced interactive features.
 
 # PARAMETERS
 

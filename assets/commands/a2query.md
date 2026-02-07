@@ -1,3 +1,7 @@
+# TAGLINE
+
+Query Apache2 configuration state
+
 # TLDR
 
 List enabled Apache **modules**

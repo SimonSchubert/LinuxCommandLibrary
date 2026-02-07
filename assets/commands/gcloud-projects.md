@@ -1,3 +1,7 @@
+# TAGLINE
+
+Google Cloud project management
+
 # TLDR
 
 **List projects**
@@ -52,7 +56,11 @@
 
 # DESCRIPTION
 
-**gcloud projects** manages Google Cloud projects. Projects are the top-level organizing entity for resources and IAM policies.
+**gcloud projects** provides commands for managing Google Cloud projects, which serve as the fundamental organizational unit in GCP. Every resource in Google Cloud belongs to exactly one project, and projects provide the basis for billing, access control, and resource isolation.
+
+The command group supports the full project lifecycle including creation, deletion, and restoration of soft-deleted projects. It also handles IAM policy management at the project level, controlling which principals have access to project resources.
+
+Projects contain settings like project ID (immutable), project name (changeable), and project number (assigned by Google). Understanding project management is essential for organizing resources and managing costs in Google Cloud, as billing is tracked per project.
 
 # SEE ALSO
 

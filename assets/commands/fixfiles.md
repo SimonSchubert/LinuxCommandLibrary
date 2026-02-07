@@ -1,3 +1,7 @@
+# TAGLINE
+
+fix SELinux file security contexts
+
 # TLDR
 
 **Restore** SELinux contexts for entire system
@@ -76,6 +80,11 @@ Only process files created **after date**
 
 **verify**
 > Verify file contexts match policy
+
+# CONFIGURATION
+
+**/etc/selinux/[policy]/contexts/files/file_contexts**
+> Default SELinux file context rules defining security labels for paths.
 
 # CAVEATS
 

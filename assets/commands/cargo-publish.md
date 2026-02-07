@@ -1,3 +1,7 @@
+# TAGLINE
+
+Upload a package to a registry
+
 # TLDR
 
 **Publish to crates.io**
@@ -30,9 +34,9 @@
 
 # DESCRIPTION
 
-**cargo publish** uploads a package to crates.io or another registry. Creates .crate archive, verifies it builds, and uploads. Publishes are permanent and cannot be deleted.
+**cargo publish** uploads a package to crates.io or another registry. It creates a `.crate` archive, verifies that the archive builds successfully, and then uploads it to the registry. Authentication is required and is typically set up via `cargo login`.
 
-Requires authentication via cargo login.
+Publishes are permanent and cannot be deleted or overwritten. Once a version is published, that exact version number can never be reused. The `cargo yank` command can mark a version as deprecated to prevent new projects from depending on it, but it remains available for existing users. Before publishing, ensure the version number in Cargo.toml has been incremented according to semver conventions.
 
 # PARAMETERS
 
@@ -68,6 +72,11 @@ Requires authentication via cargo login.
 
 **--all-features**
 > Enable all features
+
+# CONFIGURATION
+
+**~/.cargo/credentials.toml**
+> Stores API tokens for crates.io and other registries. Created by `cargo login`.
 
 # PREPARATION
 

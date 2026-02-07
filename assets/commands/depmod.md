@@ -1,3 +1,7 @@
+# TAGLINE
+
+generate kernel module dependency files
+
 # TLDR
 
 **Generate module dependencies**
@@ -64,6 +68,11 @@ _KERNEL_VERSION_
 The tool scans module files for exported and required symbols, building a dependency tree. This information allows modprobe to load prerequisite modules automatically when a module is requested.
 
 depmod is typically run automatically during kernel installation or module updates. The generated files are stored in /lib/modules/<kernel_version>/.
+
+# CONFIGURATION
+
+**/etc/depmod.conf** or **/etc/depmod.d/*.conf**
+> Configuration files specifying module search paths and overrides.
 
 # CAVEATS
 

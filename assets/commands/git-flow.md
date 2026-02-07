@@ -1,3 +1,7 @@
+# TAGLINE
+
+High-level branching model workflow commands
+
 # TLDR
 
 **Initialize git flow**
@@ -52,11 +56,9 @@
 
 # DESCRIPTION
 
-**git flow** implements Vincent Driessen's branching model. It provides high-level commands for managing feature, release, and hotfix branches with consistent naming and merge strategies.
+**git flow** implements Vincent Driessen's branching model, providing high-level commands for managing feature, release, and hotfix branches with consistent naming and merge strategies.
 
-The workflow uses develop as the integration branch and main/master for releases. Features branch from develop, releases prepare for production, and hotfixes go directly to main.
-
-git flow standardizes team branching workflows.
+The workflow uses develop as the integration branch and main/master for releases. Features branch from develop, releases prepare for production, and hotfixes go directly to main. This standardizes team branching workflows with clear conventions.
 
 # CAVEATS
 

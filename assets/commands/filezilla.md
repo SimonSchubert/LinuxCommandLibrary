@@ -1,3 +1,7 @@
+# TAGLINE
+
+graphical FTP/SFTP client
+
 # TLDR
 
 **Start FileZilla**
@@ -46,6 +50,14 @@ _URL_
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**~/.config/filezilla/sitemanager.xml**
+> Saved FTP/SFTP site configurations and connection profiles.
+
+**~/.config/filezilla/filezilla.xml**
+> General application settings and preferences.
 
 # DESCRIPTION
 

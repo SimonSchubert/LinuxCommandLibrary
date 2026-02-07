@@ -1,3 +1,7 @@
+# TAGLINE
+
+Universal groff document viewer
+
 # TLDR
 
 **View man page**
@@ -52,11 +56,9 @@ _FILES_
 
 # DESCRIPTION
 
-**groffer** is a wrapper for groff that automatically selects the best display method. It can handle man pages, roff files, and various input formats.
+**groffer** is a wrapper for groff that automatically selects the best display method for a document. It can handle man pages, roff files, and various input formats.
 
-The tool detects the environment and chooses between X viewers, PDF viewers, or terminal display. It simplifies the groff workflow significantly.
-
-groffer provides convenient groff document viewing.
+The tool detects the environment and chooses between X viewers, PDF viewers, or terminal display, simplifying the groff workflow significantly.
 
 # CAVEATS
 

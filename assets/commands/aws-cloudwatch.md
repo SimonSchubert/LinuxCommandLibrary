@@ -1,3 +1,7 @@
+# TAGLINE
+
+Monitor resources with metrics, alarms, and dashboards.
+
 # TLDR
 
 **Put custom metric data** to CloudWatch

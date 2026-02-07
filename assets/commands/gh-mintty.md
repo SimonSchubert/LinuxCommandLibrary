@@ -1,3 +1,7 @@
+# TAGLINE
+
+GitHub CLI configuration guidance for MinTTY terminal on Windows
+
 # TLDR
 
 **Show MinTTY help**
@@ -23,11 +27,9 @@
 
 # DESCRIPTION
 
-**gh-mintty** refers to GitHub CLI configuration guidance for MinTTY, the terminal emulator used by Git Bash on Windows. MinTTY has specific requirements for interactive prompts and pseudo-terminal handling.
+**gh-mintty** provides GitHub CLI configuration guidance for MinTTY, the terminal emulator used by Git Bash on Windows. MinTTY has specific requirements for interactive prompts and pseudo-terminal handling that can affect **gh** behavior.
 
-The gh CLI includes special documentation for MinTTY users addressing common issues like authentication prompts, interactive selections, and color output. Some features may require configuration adjustments or alternative approaches.
-
-gh help mintty provides Windows-specific terminal configuration advice.
+The documentation addresses common issues like authentication prompts, interactive selections, and color output. Some features may require configuration adjustments or alternative approaches when running in MinTTY.
 
 # CAVEATS
 

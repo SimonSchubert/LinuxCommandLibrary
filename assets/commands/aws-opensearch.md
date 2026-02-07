@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage OpenSearch Service domains for search and analytics.
+
 # TLDR
 
 **List all OpenSearch domains**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Decode and display BIOS data structures
+
 # TLDR
 
 **Display all BIOS information**

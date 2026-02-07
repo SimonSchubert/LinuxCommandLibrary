@@ -1,3 +1,7 @@
+# TAGLINE
+
+console-based multi-protocol chat client
+
 # TLDR
 
 **Launch** finch
@@ -48,6 +52,17 @@ Text-based alternative to the Pidgin GUI client.
 
 **-v, --version**
 > Display version
+
+# CONFIGURATION
+
+**~/.purple/prefs.xml**
+> Libpurple preferences shared with Pidgin.
+
+**~/.purple/accounts.xml**
+> Account credentials and connection settings.
+
+**~/.gntrc**
+> GNT (finch) UI keybindings and window behavior.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+input method framework
+
 # TLDR
 
 **Start fcitx**
@@ -51,6 +55,14 @@
 The framework provides a modular architecture with addons for different input methods like Pinyin, Wubi, Hangul, and Anthy. It integrates with desktop environments through GTK and Qt input modules.
 
 fcitx handles input method switching, candidate selection, and provides a configurable user interface for text entry.
+
+# CONFIGURATION
+
+**~/.config/fcitx/**
+> User configuration files for input methods, hotkeys, and addons.
+
+**/usr/share/fcitx/**
+> System-wide input method data and addon files.
 
 # CAVEATS
 

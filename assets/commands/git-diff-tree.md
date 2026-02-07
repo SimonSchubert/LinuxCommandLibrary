@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compare content of tree objects
+
 # TLDR
 
 **Compare two trees**
@@ -45,9 +49,10 @@
 
 # DESCRIPTION
 
-**git diff-tree** compares the content and mode of blobs found via two tree objects. A low-level command for examining differences between trees.
+**git diff-tree** compares the content and mode of blobs found via two tree objects, providing low-level access to Git's internal tree comparison mechanism. This plumbing command forms the foundation for examining differences between commits, branches, or any tree-like structures in Git's object database.
+
+The command accepts one or two tree-ish arguments and outputs the differences in various formats. It can process commits via stdin, enabling efficient batch processing of history. While rarely needed in daily Git use, it underpins many higher-level operations and is essential for scripts and custom diff tools.
 
 # SEE ALSO
 
 [git-diff](/man/git-diff)(1), [git-diff-index](/man/git-diff-index)(1)
-

@@ -1,3 +1,7 @@
+# TAGLINE
+
+extended attribute retrieval tool
+
 # TLDR
 
 Retrieve **all extended attributes** of a file in detailed format

@@ -1,3 +1,7 @@
+# TAGLINE
+
+re-enable frozen pipeline stages
+
 # TLDR
 
 **Unfreeze a stage**

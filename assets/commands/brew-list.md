@@ -1,3 +1,7 @@
+# TAGLINE
+
+List installed Homebrew packages
+
 # TLDR
 
 **List all installed packages**

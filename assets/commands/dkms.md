@@ -1,3 +1,7 @@
+# TAGLINE
+
+dynamic kernel module framework
+
 # TLDR
 
 List **installed modules**
@@ -77,6 +81,14 @@ List **installed modules**
 
 **-c, --config**
 > Specify dkms.conf location
+
+# CONFIGURATION
+
+**/etc/dkms/framework.conf**
+> Global DKMS framework configuration settings.
+
+**/usr/src/MODULE-VERSION/dkms.conf**
+> Per-module build configuration, dependencies, and installation instructions.
 
 # CAVEATS
 

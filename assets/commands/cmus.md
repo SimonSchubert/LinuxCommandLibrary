@@ -1,3 +1,7 @@
+# TAGLINE
+
+small, fast console music player
+
 # TLDR
 
 **Open** cmus in a specific directory
@@ -34,9 +38,11 @@ Toggle **shuffle** mode
 
 # DESCRIPTION
 
-**cmus** is a small, fast, and powerful console music player. It supports various audio formats and features a library view, playlist, play queue, and directory browser.
+**cmus** is a small, fast, and powerful console music player for Unix-like systems. It supports a wide range of audio formats including Ogg Vorbis, MP3, FLAC, Opus, Musepack, WavPack, WAV, AAC, and MP4 through its plugin-based codec system.
 
-Navigation uses arrow keys, Enter to select, and number keys 1-8 to switch between views.
+The interface provides multiple views accessed via number keys 1-7: library (artist/album tree), sorted library (flat list), playlist, play queue, directory browser, filters, and settings. Navigation uses arrow keys and Enter to select, with vi-style keybindings available throughout.
+
+cmus features gapless playback, ReplayGain support, and can be controlled remotely via the **cmus-remote** command or its socket interface, making it suitable for integration with window managers and status bars.
 
 # KEYBINDINGS
 
@@ -66,6 +72,14 @@ Navigation uses arrow keys, Enter to select, and number keys 1-8 to switch betwe
 
 **/**_query_
 > Search
+
+# CONFIGURATION
+
+**~/.config/cmus/autosave**
+> Automatically saved settings, library state, and playback position on exit.
+
+**~/.config/cmus/rc**
+> Startup commands executed when cmus launches (keybindings, settings, colors).
 
 # CAVEATS
 

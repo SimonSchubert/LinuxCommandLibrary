@@ -1,3 +1,7 @@
+# TAGLINE
+
+calculator REPL with arbitrary precision
+
 # TLDR
 
 **Calculate expression**

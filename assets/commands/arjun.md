@@ -1,3 +1,7 @@
+# TAGLINE
+
+Discover hidden HTTP parameters in web applications
+
 # TLDR
 
 **Find GET parameters** for a URL

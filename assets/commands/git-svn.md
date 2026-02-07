@@ -1,3 +1,7 @@
+# TAGLINE
+
+Bidirectional bridge between Git and Subversion
+
 # TLDR
 
 **Clone SVN repository**
@@ -52,11 +56,9 @@
 
 # DESCRIPTION
 
-**git svn** provides bidirectional operation between Git and Subversion. It allows using git locally while working with SVN repositories, enabling git workflows for SVN teams.
+**git svn** provides bidirectional operation between Git and Subversion repositories. It allows developers to use Git locally while working with an SVN server, enabling full Git workflows for teams still using Subversion.
 
-The command clones SVN repos to git, syncs changes, and commits back to SVN. It maps SVN structure to git branches and handles metadata translation.
-
-git svn bridges Git and Subversion version control.
+The command clones SVN repos into Git, syncs changes in both directions, and maps SVN's trunk/branches/tags structure to Git branches.
 
 # CAVEATS
 

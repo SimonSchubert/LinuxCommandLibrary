@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage GitLab project releases
+
 # TLDR
 
 **List releases**
@@ -61,9 +65,8 @@
 
 # DESCRIPTION
 
-**glab release** manages GitLab releases. Create releases, upload assets, and manage release notes.
+**glab release** manages GitLab project releases from the command line. It provides subcommands for creating releases, uploading binary assets, writing release notes, and managing existing releases.
 
 # SEE ALSO
 
 [glab](/man/glab)(1), [git-tag](/man/git-tag)(1)
-

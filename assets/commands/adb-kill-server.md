@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminate the running adb server process
+
 # TLDR
 
 **Stop** the adb server

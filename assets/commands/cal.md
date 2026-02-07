@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display a calendar in the terminal
+
 # TLDR
 
 Display calendar for the **current month**

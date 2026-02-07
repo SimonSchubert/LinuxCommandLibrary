@@ -1,3 +1,7 @@
+# TAGLINE
+
+External command transport helper
+
 # TLDR
 
 **Clone via external command**
@@ -34,11 +38,9 @@ _URL_
 
 # DESCRIPTION
 
-**git-remote-ext** is a remote helper that allows arbitrary external commands to handle git transport. The ext:: URL scheme specifies a command to run for communication.
+**git-remote-ext** is a remote helper that allows arbitrary external commands to handle Git transport. The `ext::` URL scheme specifies a command to run for communication, enabling custom transport mechanisms like specific SSH commands or non-standard protocols.
 
-The helper enables custom transport mechanisms, like using specific SSH commands or non-standard protocols. Template variables allow dynamic command construction.
-
-git-remote-ext provides flexible transport for special cases.
+Template variables (such as `%s`, `%S`, `%G`) allow dynamic command construction based on the Git service being requested. This helper is typically not invoked directly but is used through `ext::` URLs in remote configurations.
 
 # CAVEATS
 

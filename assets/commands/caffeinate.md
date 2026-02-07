@@ -1,3 +1,7 @@
+# TAGLINE
+
+Prevent the system from sleeping
+
 # TLDR
 
 Prevent the desktop from **sleeping**

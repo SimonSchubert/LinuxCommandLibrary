@@ -1,3 +1,7 @@
+# TAGLINE
+
+reduce file sizes using LZW compression
+
 # TLDR
 
 **Compress** files
@@ -34,7 +38,11 @@ Display **compression percentage**
 
 # DESCRIPTION
 
-**compress** reduces file sizes using adaptive Lempel-Ziv coding. Compressed files are given a .Z extension. The program preserves file ownership, modes, and timestamps. It ignores symbolic links and refuses to compress files with multiple hard links unless forced.
+**compress** is the classic Unix compression utility that implements the LZW (Lempel-Ziv-Welch) algorithm, producing files with the distinctive .Z extension. It was the standard compression tool on Unix systems before being largely superseded by gzip in the early 1990s. The algorithm uses adaptive dictionary-based compression, starting with 9-bit codes and expanding up to 16 bits as needed.
+
+When compressing files, compress preserves important file metadata including ownership, permissions (modes), and timestamps. It operates safely by default, refusing to compress symbolic links and files with multiple hard links unless the -f force flag is used. Compressed files replace the originals unless the -c stdout option or -k keep option is specified.
+
+The compression ratio varies by file type, with text files typically achieving 50-60% size reduction. Binary files may compress less effectively. While compress is considered obsolete for most purposes today, it remains available for compatibility with legacy .Z archives and systems that still use this format. Modern alternatives like gzip and bzip2 provide better compression ratios and are more widely supported.
 
 # PARAMETERS
 

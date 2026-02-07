@@ -1,3 +1,7 @@
+# TAGLINE
+
+remove enrolled fingerprint data
+
 # TLDR
 
 Remove **all fingerprints** for a specific user

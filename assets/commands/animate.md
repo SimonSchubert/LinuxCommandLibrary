@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display image sequences as animations
+
 # TLDR
 
 **Animate** a sequence of images

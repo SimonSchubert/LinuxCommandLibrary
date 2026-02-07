@@ -1,3 +1,7 @@
+# TAGLINE
+
+CUPS build configuration helper
+
 # TLDR
 
 **Get CUPS include directory**

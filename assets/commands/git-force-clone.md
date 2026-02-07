@@ -1,3 +1,7 @@
+# TAGLINE
+
+Clone repository forcibly removing target directory
+
 # TLDR
 
 **Force clone to directory**
@@ -25,11 +29,9 @@ _DIRECTORY_
 
 # DESCRIPTION
 
-**git force-clone** clones a repository, forcibly removing any existing directory at the target path. It combines rm -rf with git clone, useful for ensuring a fresh clone.
+**git force-clone** clones a repository, forcibly removing any existing directory at the target path. It combines rm -rf with git clone, ensuring a fresh clone regardless of what previously existed at the destination.
 
-The command is dangerous as it unconditionally deletes the target directory. It's useful for deployment scripts where you always want a clean clone state.
-
-git force-clone provides destructive but predictable clone behavior.
+The command is useful for deployment scripts where you always want a clean clone state. However, it is dangerous as it unconditionally deletes the target directory without confirmation.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Bluetooth system daemon
+
 # TLDR
 
 **Start** the daemon
@@ -46,6 +50,11 @@ The daemon is typically started automatically by systemd. It reads configuration
 
 **-P, --noplugin** _name_
 > Specify plugins to exclude
+
+# CONFIGURATION
+
+**/etc/bluetooth/main.conf**
+> Main configuration file controlling device class, name, pairing timeout, discoverable mode, and adapter defaults.
 
 # CAVEATS
 

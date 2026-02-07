@@ -1,3 +1,7 @@
+# TAGLINE
+
+universal database tool and SQL client
+
 # TLDR
 
 **Launch DBeaver** GUI

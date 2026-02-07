@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate random passwords
+
 # TLDR
 
 **Generate** random passwords

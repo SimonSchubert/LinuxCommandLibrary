@@ -1,3 +1,7 @@
+# TAGLINE
+
+lightweight X11 image viewer
+
 # TLDR
 
 **View images**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Directory and DNS brute-forcing tool
+
 # TLDR
 
 **Directory brute-force**
@@ -27,12 +31,6 @@
 # SYNOPSIS
 
 **gobuster** _mode_ [_options_]
-
-# DESCRIPTION
-
-**gobuster** is a fast directory and DNS brute-forcing tool written in Go. It discovers hidden directories, files, and subdomains through wordlist-based enumeration.
-
-The tool is designed for web application security testing, helping identify hidden content that may reveal vulnerabilities or sensitive information.
 
 # PARAMETERS
 
@@ -71,6 +69,12 @@ The tool is designed for web application security testing, helping identify hidd
 
 **-b** _codes_
 > Status codes to blacklist.
+
+# DESCRIPTION
+
+**gobuster** is a fast directory and DNS brute-forcing tool written in Go. It discovers hidden directories, files, and subdomains through wordlist-based enumeration.
+
+The tool is designed for web application security testing, helping identify hidden content that may reveal vulnerabilities or sensitive information. It supports multiple modes including directory enumeration, DNS subdomain brute-forcing, and virtual host discovery.
 
 # CAVEATS
 

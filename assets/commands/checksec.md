@@ -1,3 +1,7 @@
+# TAGLINE
+
+audit security features in ELF binaries
+
 # TLDR
 
 **Check security properties of a binary**

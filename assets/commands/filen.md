@@ -1,3 +1,7 @@
+# TAGLINE
+
+end-to-end encrypted cloud storage CLI
+
 # TLDR
 
 **Upload file**

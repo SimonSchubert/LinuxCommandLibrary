@@ -1,3 +1,7 @@
+# TAGLINE
+
+Android package manager shell interface
+
 # TLDR
 
 **List** all installed packages

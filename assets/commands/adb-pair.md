@@ -1,3 +1,7 @@
+# TAGLINE
+
+Pair with an Android device for wireless debugging
+
 # TLDR
 
 **Pair** with a device using pairing code

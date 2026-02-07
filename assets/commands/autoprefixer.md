@@ -1,3 +1,7 @@
+# TAGLINE
+
+Add vendor prefixes to CSS automatically
+
 # TLDR
 
 **Process a CSS file and add vendor prefixes**
@@ -67,6 +71,14 @@
 The tool uses Browserslist to determine which prefixes are needed based on target browser specifications. It not only adds required prefixes but also removes outdated ones that are no longer necessary, keeping CSS clean and efficient.
 
 Autoprefixer handles CSS properties, values, at-rules, and selectors. It understands which browsers support which features and adds only the necessary prefixes based on the specified browser targets, typically configured in a **browserslist** file or **package.json**.
+
+# CONFIGURATION
+
+**.browserslistrc**
+> Defines target browsers for prefix generation using Browserslist query syntax.
+
+**postcss.config.js**
+> PostCSS configuration file where Autoprefixer can be loaded as a plugin with options.
 
 # CAVEATS
 

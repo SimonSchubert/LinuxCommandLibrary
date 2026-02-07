@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert ASCII art to PPM color image
+
 # TLDR
 
 **Convert** ASCII to PPM image
@@ -10,7 +14,9 @@
 
 # DESCRIPTION
 
-**asciitoppm** converts ASCII text to a PPM (Portable Pixmap) color image. Similar to asciitopgm, but produces color output based on character patterns.
+**asciitoppm** converts ASCII text to a PPM (Portable Pixmap) color image. Each character in the input is mapped to a colored pixel, producing a visual representation of the text content.
+
+Unlike **asciitopgm** which produces grayscale output, **asciitoppm** generates full-color images. The input is read from standard input and the output image dimensions must be specified. It is part of the Netpbm image processing toolkit.
 
 # PARAMETERS
 

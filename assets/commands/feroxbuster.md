@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast recursive web content discovery tool
+
 # TLDR
 
 **Scan a URL** for directories and files

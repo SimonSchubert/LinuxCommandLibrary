@@ -1,3 +1,7 @@
+# TAGLINE
+
+generate completion matches in bash
+
 # TLDR
 
 **List all commands**

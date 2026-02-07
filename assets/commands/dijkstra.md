@@ -1,3 +1,7 @@
+# TAGLINE
+
+shortest path graph algorithm filter
+
 # TLDR
 
 **Check Graphviz graph** for proper layout
@@ -22,9 +26,11 @@
 
 # DESCRIPTION
 
-**dijkstra** is a Graphviz filter that calculates shortest paths in graphs using Dijkstra's algorithm. It can compute distance matrices and modify graph attributes based on path calculations.
+**dijkstra** is a specialized Graphviz filter implementing Dijkstra's shortest path algorithm for graph analysis. It reads graph descriptions in DOT format, computes shortest paths between nodes, and outputs modified graphs with calculated distances or path information.
 
-Part of the Graphviz graph visualization suite.
+The tool can calculate distance matrices showing the shortest path length between all pairs of nodes in a graph. It modifies graph attributes to reflect path calculations, which can then be used by other Graphviz layout tools for visualization.
+
+This utility is part of the Graphviz suite and is primarily used for network analysis, routing problems, and graph algorithm research. It processes graphs with weighted edges and can output results in various formats compatible with other Graphviz tools.
 
 # SEE ALSO
 

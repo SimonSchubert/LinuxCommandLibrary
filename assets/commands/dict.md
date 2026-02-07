@@ -1,3 +1,7 @@
+# TAGLINE
+
+DICT protocol dictionary client
+
 # TLDR
 
 **Look up a word** definition

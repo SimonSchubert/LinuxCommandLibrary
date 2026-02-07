@@ -1,3 +1,7 @@
+# TAGLINE
+
+Automatically manage display profiles
+
 # TLDR
 
 **Save** current layout
@@ -26,7 +30,9 @@ Set **default** profile
 
 # DESCRIPTION
 
-**autorandr** automatically detects connected displays and applies the appropriate screen layout based on saved profiles. It integrates with xrandr and can automatically switch profiles when monitors are connected or disconnected.
+**autorandr** automatically detects connected displays and applies the appropriate screen layout based on saved profiles. It integrates with **xrandr** and can automatically switch profiles when monitors are connected or disconnected.
+
+Profiles are identified by the EDID fingerprint of connected displays, allowing seamless switching between different monitor configurations such as docking stations, projectors, or standalone laptop use. The tool can be triggered manually or run as a **udev** or **systemd** hook for fully automatic profile switching.
 
 # PARAMETERS
 
@@ -53,6 +59,11 @@ Set **default** profile
 
 **--skip-options** _options_
 > Skip certain xrandr options when comparing
+
+# CONFIGURATION
+
+**~/.config/autorandr/**
+> Directory containing saved display profiles. Each profile is a subdirectory with setup and config files.
 
 # CAVEATS
 

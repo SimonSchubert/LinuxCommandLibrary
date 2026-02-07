@@ -1,3 +1,7 @@
+# TAGLINE
+
+display or set the system date and time
+
 # TLDR
 
 **Show** current date and time
@@ -26,9 +30,13 @@
 
 # DESCRIPTION
 
-**date** displays or sets the system date and time. It supports various output formats, time calculations, and conversions. The command is essential for timestamping, logging, and time-based operations.
+**date** displays or sets the system date and time. It supports extensive output formatting through format specifiers, time zone conversions, relative date calculations, and Unix timestamp conversions. The command is essential for timestamping, logging, scheduling, and time-based operations.
 
-The tool is one of the most commonly used Unix utilities.
+Beyond simple display, date excels at date arithmetic: you can specify relative dates like "tomorrow", "next monday", "2 days ago", or "+3 hours". It can parse dates from strings, convert Unix timestamps to human-readable format, and format output for any purpose from ISO 8601 standards to custom formats.
+
+The tool is one of the most commonly used Unix utilities, present since the earliest Unix versions. It's frequently used in shell scripts for generating timestamped filenames, calculating time differences, or performing date-based conditional logic.
+
+Format specifiers allow precise control over output, from simple "YYYY-MM-DD" to complex locale-specific formats. The tool respects timezone settings and can display UTC or any specific timezone.
 
 # PARAMETERS
 

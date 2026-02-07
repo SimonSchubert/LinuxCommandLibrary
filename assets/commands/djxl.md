@@ -1,3 +1,7 @@
+# TAGLINE
+
+JPEG XL decoder to multiple formats
+
 # TLDR
 
 **Decode JPEG XL** to PNG

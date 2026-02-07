@@ -1,3 +1,7 @@
+# TAGLINE
+
+build and run GStreamer multimedia pipelines
+
 # TLDR
 
 **Play a video file**
@@ -48,9 +52,10 @@
 
 # DESCRIPTION
 
-**gst-launch-1.0** builds and runs GStreamer multimedia pipelines from the command line. Elements are linked with **!** (exclamation mark). Properties are set with **name=value**. Caps filters constrain formats: **video/x-raw,width=640,height=480**. Use **decodebin** or **playbin** for automatic codec selection.
+**gst-launch-1.0** builds and runs GStreamer multimedia pipelines from the command line. Elements are linked with **!** (exclamation mark), and properties are set with **name=value** syntax.
+
+Caps filters constrain formats between elements (e.g., **video/x-raw,width=640,height=480**). Use **decodebin** or **playbin** for automatic codec selection.
 
 # SEE ALSO
 
 [gst-inspect-1.0](/man/gst-inspect-1.0)(1), [gst-discoverer-1.0](/man/gst-discoverer-1.0)(1), [ffmpeg](/man/ffmpeg)(1)
-

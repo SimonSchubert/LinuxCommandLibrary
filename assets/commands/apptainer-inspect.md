@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display metadata from container images.
+
 # TLDR
 
 Show the **labels** of an image (default)

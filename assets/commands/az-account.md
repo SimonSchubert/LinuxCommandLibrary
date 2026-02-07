@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Azure subscriptions and access tokens
+
 # TLDR
 
 **List all subscriptions** for the logged-in account

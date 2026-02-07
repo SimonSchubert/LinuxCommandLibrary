@@ -1,3 +1,7 @@
+# TAGLINE
+
+Rust ORM command-line interface
+
 # TLDR
 
 **Setup database** (create if not exists)

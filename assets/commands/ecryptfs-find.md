@@ -1,3 +1,7 @@
+# TAGLINE
+
+locate eCryptfs encrypted files
+
 # TLDR
 
 **Find eCryptfs** encrypted files

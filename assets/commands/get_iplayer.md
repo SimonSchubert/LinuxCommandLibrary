@@ -1,3 +1,7 @@
+# TAGLINE
+
+BBC iPlayer TV and radio downloader
+
 # TLDR
 
 **Search for programs**
@@ -58,9 +62,21 @@
 **--refresh**
 > Refresh program cache.
 
+# CONFIGURATION
+
+**~/.get_iplayer/options**
+> User preferences file for default options and settings.
+
+**~/.get_iplayer/presets**
+> Custom quality and recording presets.
+
 # DESCRIPTION
 
-**get_iplayer** downloads BBC iPlayer TV and radio programs. Provides search and automated download scheduling. Programs are time-limited by BBC rights.
+**get_iplayer** downloads BBC iPlayer TV and radio programs from the BBC's streaming service. It provides search functionality across the iPlayer catalog, quality selection, and automated PVR-style scheduling for recording programs.
+
+The tool can download both on-demand and live content, with support for subtitles and metadata. It maintains a local cache of available programs for faster searching and supports batch downloads.
+
+Programs on iPlayer are typically available for 30 days after broadcast, though some content may have different availability windows based on BBC rights agreements.
 
 # CAVEATS
 

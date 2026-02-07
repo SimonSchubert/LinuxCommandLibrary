@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage archives in various formats with a unified interface
+
 # TLDR
 
 **Extract** any archive
@@ -65,6 +69,11 @@ The tool simplifies working with mixed archive formats without memorizing differ
 - ar
 - cpio
 - And more through backend tools
+
+# CONFIGURATION
+
+**~/.atoolrc**
+> User configuration file for default options and format preferences.
 
 # CAVEATS
 

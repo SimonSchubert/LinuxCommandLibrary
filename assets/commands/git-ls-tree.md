@@ -1,3 +1,7 @@
+# TAGLINE
+
+List tree object contents
+
 # TLDR
 
 **List tree contents**
@@ -55,11 +59,9 @@ _PATH_
 
 # DESCRIPTION
 
-**git ls-tree** lists the contents of a tree object. It shows file names, modes, types, and object hashes for a specific commit's directory structure.
+**git ls-tree** lists the contents of a tree object, showing file names, modes, types, and object hashes for a specific commit's directory structure. It provides a snapshot of the repository's file layout at any given commit.
 
-The command displays git's internal tree structure. It's useful for scripting and understanding how git stores directory contents. Recursive mode shows all files.
-
-git ls-tree inspects repository tree structure at any commit.
+The command is useful for scripting and understanding how Git stores directory contents internally. Recursive mode (`-r`) shows all files across all subdirectories, while `--name-only` provides clean output suitable for piping to other commands.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+installed packages viewer
+
 # TLDR
 
 **List packages** in current environment
@@ -37,6 +41,14 @@
 
 **--json**
 > Output in JSON format.
+
+# CONFIGURATION
+
+**~/.condarc**
+> User-level conda configuration for channels, package settings, and solver options.
+
+**/opt/conda/.condarc**
+> System-wide conda configuration.
 
 # DESCRIPTION
 

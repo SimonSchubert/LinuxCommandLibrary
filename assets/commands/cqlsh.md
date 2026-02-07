@@ -1,3 +1,7 @@
+# TAGLINE
+
+interactive Cassandra Query Language shell
+
 # TLDR
 
 **Start CQL shell**
@@ -98,6 +102,14 @@
 
 **describecluster**
 > Cluster information.
+
+# CONFIGURATION
+
+**~/.cassandra/cqlshrc**
+> User-specific cqlsh settings including connection defaults, display formatting, and authentication credentials.
+
+**/etc/cassandra/cassandra.yaml**
+> Main Cassandra configuration file controlling cluster behavior, data directories, network settings, and replication.
 
 # DESCRIPTION
 

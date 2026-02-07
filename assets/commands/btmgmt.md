@@ -1,3 +1,7 @@
+# TAGLINE
+
+Low-level Bluetooth adapter management tool
+
 # TLDR
 
 **Start interactive mode**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Ruby dependency manager
+
 # TLDR
 
 **Install** dependencies
@@ -102,6 +106,14 @@ bundle clean
 - Gem groups (development, test, production)
 - Local gem path override
 - Git repository gems
+
+# CONFIGURATION
+
+**Gemfile**
+> Specifies Ruby gem dependencies for the project. Located in the project root directory.
+
+**.bundle/config**
+> Per-project Bundler configuration including install paths, without groups, and deployment settings. Also reads from ~/.bundle/config for global defaults.
 
 # CAVEATS
 

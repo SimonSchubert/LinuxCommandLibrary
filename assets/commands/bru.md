@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run API requests from Bruno collections
+
 # TLDR
 
 **Run a single API request**

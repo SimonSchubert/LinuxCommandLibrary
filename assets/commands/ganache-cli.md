@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line Ethereum test blockchain
+
 # TLDR
 
 **Start Ethereum test blockchain**
@@ -60,7 +64,19 @@
 
 # DESCRIPTION
 
-**ganache-cli** (now part of Ganache) creates a local Ethereum blockchain for development and testing. Provides instant mining and configurable accounts.
+**ganache-cli** (now part of Ganache) creates a local Ethereum blockchain for development and testing. It provides instant transaction mining and configurable test accounts for smart contract development.
+
+This command-line version is now superseded by the **ganache** command, which offers the same functionality with additional features. ganache-cli was originally known as TestRPC before being renamed and integrated into the Ganache suite.
+
+The tool simulates a full Ethereum client, making it ideal for testing smart contracts locally before deploying to testnets or mainnet. It integrates with development frameworks like Truffle and Hardhat.
+
+# CAVEATS
+
+ganache-cli is deprecated in favor of the **ganache** command. Not for production use. Blockchain state resets on restart unless persistence is configured. Behavior may differ from actual Ethereum mainnet.
+
+# HISTORY
+
+Originally released as **TestRPC**, it was renamed to **ganache-cli** when incorporated into the Truffle Suite around **2017**. The tool has since been replaced by the unified **ganache** command starting with Ganache 7.
 
 # SEE ALSO
 

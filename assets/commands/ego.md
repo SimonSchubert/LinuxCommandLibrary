@@ -1,3 +1,7 @@
+# TAGLINE
+
+Funtoo system personality manager
+
 # TLDR
 
 **Synchronize** the Portage tree
@@ -53,6 +57,11 @@ Replaces several separate tools with a single coherent interface.
 
 **query bug** _package_
 > Query bugs for package
+
+# CONFIGURATION
+
+**/etc/ego.conf**
+> Main configuration file for ego profiles and settings.
 
 # CAVEATS
 

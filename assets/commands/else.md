@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fallback branch in shell conditional statements
+
 # TLDR
 
 **Use else in** bash script

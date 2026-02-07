@@ -1,3 +1,7 @@
+# TAGLINE
+
+Perl module dependency manager
+
 # TLDR
 
 **Install dependencies from cpanfile**
@@ -71,6 +75,14 @@
 Dependencies are specified in a cpanfile using a simple DSL. Running **carton install** creates a cpanfile.snapshot that locks exact versions, ensuring reproducible installations across environments.
 
 The **carton exec** command runs programs with the correct library paths set, avoiding conflicts with system Perl modules. This enables multiple projects with different dependency versions to coexist on the same system.
+
+# CONFIGURATION
+
+**cpanfile**
+> Declares project dependencies using a Perl DSL syntax.
+
+**cpanfile.snapshot**
+> Lockfile with exact resolved dependency versions for reproducible installations.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+DVD and Blu-ray disc burning tool
+
 # TLDR
 
 **Burn ISO to DVD**
@@ -45,11 +49,9 @@
 
 # DESCRIPTION
 
-**growisofs** burns DVDs and Blu-ray discs. It combines mkisofs frontend with dvd+rw-tools backend for seamless disc creation.
+**growisofs** burns DVDs and Blu-ray discs. It combines an mkisofs frontend with a dvd+rw-tools backend for seamless disc creation.
 
-The tool handles session management, supports multisession DVDs, and works with DVD-R, DVD+R, DVD-RW, and Blu-ray media. It's the standard Linux DVD burning utility.
-
-growisofs burns DVDs and Blu-ray discs.
+The tool handles session management, supports multisession DVDs, and works with DVD-R, DVD+R, DVD-RW, and Blu-ray media. It is the standard Linux DVD burning utility.
 
 # CAVEATS
 

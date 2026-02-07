@@ -1,3 +1,7 @@
+# TAGLINE
+
+AES-based file encryption and decryption
+
 # TLDR
 
 **Encrypt a file**
@@ -36,7 +40,11 @@
 
 # DESCRIPTION
 
-**ccrypt** encrypts and decrypts files using the Rijndael cipher (AES) with 256-bit keys. Provides secure symmetric encryption for files and streams. Encrypted files get .cpt extension.
+**ccrypt** encrypts and decrypts files and streams using the Rijndael cipher (AES) with 256-bit keys. It replaces the original file with an encrypted version bearing a `.cpt` extension, and the original is securely overwritten rather than simply deleted.
+
+The tool provides three modes of operation through separate command names: **ccencrypt** for encryption, **ccdecrypt** for decryption, and **ccat** for decrypting to standard output without modifying the file. All three are functionally equivalent to invoking ccrypt with the appropriate flag.
+
+Keys are prompted interactively by default and must be entered twice for encryption to prevent typos. For automated workflows, keys can be read from a file with the `-k` option.
 
 # PARAMETERS
 

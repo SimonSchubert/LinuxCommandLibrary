@@ -1,3 +1,7 @@
+# TAGLINE
+
+Visualize Active Directory attack paths
+
 # TLDR
 
 **Start BloodHound GUI**
@@ -23,37 +27,6 @@
 # SYNOPSIS
 
 **bloodhound** [_options_]
-
-# PARAMETERS
-
-**--database** _path_
-> Path to Neo4j database.
-
-**--import** _file_
-> Import JSON data file on startup.
-
-**--neo4j-uri** _uri_
-> URI for Neo4j connection.
-
-**--neo4j-user** _user_
-> Neo4j username.
-
-**--neo4j-password** _pass_
-> Neo4j password.
-
-**--debug**
-> Enable debug logging.
-
-**--version**
-> Display version information.
-
-# DATA COLLECTION
-
-**SharpHound** (Windows):
-```SharpHound.exe -c All```
-
-**BloodHound.py** (Linux):
-```bloodhound-python -u [user] -p [pass] -d [domain] -c all```
 
 # DESCRIPTION
 

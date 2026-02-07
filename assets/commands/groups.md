@@ -1,3 +1,7 @@
+# TAGLINE
+
+display user group memberships
+
 # TLDR
 
 **Show current user groups**
@@ -32,8 +36,6 @@ _USERS_
 **groups** displays the groups a user belongs to. Without arguments, it shows groups for the current user.
 
 The command reads from /etc/group and the user's supplementary group list. It shows both primary and secondary group memberships.
-
-groups shows user group membership.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert any image format to PNM
+
 # TLDR
 
 **Convert** any image to PNM format

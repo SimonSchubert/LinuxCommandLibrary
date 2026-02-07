@@ -1,3 +1,7 @@
+# TAGLINE
+
+cross-platform file change monitor
+
 # TLDR
 
 **Watch directory** for changes

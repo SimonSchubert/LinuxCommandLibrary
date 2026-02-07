@@ -1,3 +1,7 @@
+# TAGLINE
+
+Haskell package manager and build system
+
 # TLDR
 
 **Build** project
@@ -30,9 +34,7 @@
 
 # DESCRIPTION
 
-**cabal** (Common Architecture for Building Applications and Libraries) is the package manager and build system for Haskell. It handles dependency resolution, building, testing, and distributing Haskell packages.
-
-The tool is essential for Haskell development and package management.
+**cabal** (Common Architecture for Building Applications and Libraries) is the package manager and build system for Haskell. It handles dependency resolution, building, testing, and distributing Haskell packages. Cabal uses Nix-style local builds by default, isolating dependencies per project to avoid conflicts.
 
 # PARAMETERS
 
@@ -120,6 +122,11 @@ Dependency resolution can be slow. "Cabal hell" (dependency conflicts) historica
 # HISTORY
 
 **Cabal** was developed for Haskell starting around **2003**, with major improvements in Cabal 2.0 (2017) introducing Nix-style local builds.
+
+# CONFIGURATION
+
+**~/.cabal/config**
+> Global configuration for package repositories, install directories, and build settings
 
 # SEE ALSO
 

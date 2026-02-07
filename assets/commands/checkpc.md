@@ -1,3 +1,7 @@
+# TAGLINE
+
+validate printcap database and spool directories
+
 # TLDR
 
 **Check the printcap database for errors**
@@ -65,6 +69,11 @@ The command is useful when installing a new printcap configuration or cleaning u
 
 **-V**
 > Print version information
+
+# CONFIGURATION
+
+**/etc/printcap**
+> Printer capability database that checkpc validates and checks for errors.
 
 # CAVEATS
 

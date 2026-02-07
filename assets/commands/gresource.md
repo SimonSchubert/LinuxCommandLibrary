@@ -1,3 +1,7 @@
+# TAGLINE
+
+GNOME GResource bundle inspector
+
 # TLDR
 
 **List resources in file**
@@ -42,8 +46,6 @@ _PATH_
 **gresource** inspects and extracts resources from GResource bundles. GResource is GNOME's resource bundling system that embeds files like icons, UI definitions, and data into executables.
 
 The tool can list all resources, extract individual files, and show detailed information. It works with both standalone .gresource files and ELF binaries with embedded resources.
-
-gresource manages GNOME application resources.
 
 # CAVEATS
 

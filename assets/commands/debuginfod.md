@@ -1,3 +1,7 @@
+# TAGLINE
+
+HTTP server for distributing ELF debugging information
+
 # TLDR
 
 **Start server** with default paths

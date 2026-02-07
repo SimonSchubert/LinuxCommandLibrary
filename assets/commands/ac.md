@@ -1,3 +1,7 @@
+# TAGLINE
+
+display user connect time statistics
+
 # TLDR
 
 Print how long the **current user** has been connected in hours
@@ -26,7 +30,7 @@ Display additional **compatibility** details
 
 # DESCRIPTION
 
-**ac** generates a report of connect time in hours based on the logins and logouts recorded in the system's **wtmp** file. The wtmp file tracks user login and logout activity and is maintained by system utilities.
+**ac** generates a report of connect time in hours based on the logins and logouts recorded in the system's **wtmp** file. It calculates the difference between login and logout timestamps to determine how long each user has been connected. Output can be broken down by individual user, by day, or presented as an aggregate total. The wtmp file is maintained automatically by login-related system utilities such as **login**, **sshd**, and **init**.
 
 # PARAMETERS
 

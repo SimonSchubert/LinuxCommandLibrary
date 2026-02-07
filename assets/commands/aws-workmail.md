@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage business email and calendaring organizations and users.
+
 # TLDR
 
 **List all organizations**

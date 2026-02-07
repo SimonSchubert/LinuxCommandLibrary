@@ -1,3 +1,7 @@
+# TAGLINE
+
+automatic bug reporting tool alias
+
 # TLDR
 
 This command is an **alias** of abrt-cli

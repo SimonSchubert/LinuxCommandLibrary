@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compile C++ source code into executables
+
 # TLDR
 
 **Compile** C++ program

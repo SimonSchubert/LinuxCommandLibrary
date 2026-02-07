@@ -1,3 +1,7 @@
+# TAGLINE
+
+NSS certificate database management
+
 # TLDR
 
 **List certificates in database**
@@ -30,7 +34,11 @@
 
 # DESCRIPTION
 
-**certutil** manages keys and certificates in NSS databases. Creates, modifies, lists, and deletes certificates. Used by Firefox, Thunderbird, and other NSS-based applications.
+**certutil** manages keys and certificates in NSS (Network Security Services) databases. It creates, modifies, lists, and deletes certificates and key pairs used by applications built on the NSS library, including Firefox, Thunderbird, and Chromium-based browsers.
+
+NSS databases store certificates in a directory-based format, with modern versions using SQLite (specified with the `sql:` prefix). The tool handles the full certificate lifecycle including generating key pairs, creating self-signed certificates, importing CA certificates, and managing trust flags that control how certificates are used for SSL, email signing, and code signing.
+
+Trust flags follow the format "SSL,Email,Object Signing" where `C` marks a trusted CA and `T` marks a certificate trusted for client authentication.
 
 # PARAMETERS
 

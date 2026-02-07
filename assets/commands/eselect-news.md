@@ -1,3 +1,7 @@
+# TAGLINE
+
+Gentoo news item reader and manager
+
 # TLDR
 
 **List** news items

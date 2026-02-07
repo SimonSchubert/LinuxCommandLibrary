@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line interface for Dropbox cloud storage
+
 # TLDR
 
 **Authenticate with Dropbox**

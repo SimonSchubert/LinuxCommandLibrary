@@ -1,3 +1,7 @@
+# TAGLINE
+
+change ext filesystem labels
+
 # TLDR
 
 Change **volume label**
@@ -10,9 +14,9 @@ Change **volume label**
 
 # DESCRIPTION
 
-**e2label** changes or displays the filesystem label on an ext2/ext3/ext4 filesystem. Labels can be used to mount filesystems by label instead of device name.
+**e2label** changes or displays the filesystem label on an ext2/ext3/ext4 filesystem. Labels provide human-readable names for filesystems and can be used to mount filesystems by label instead of device name, which improves portability when device names change.
 
-If no label is specified, the current label is displayed.
+If no label is specified, the current label is displayed. Labels are particularly useful in /etc/fstab entries, making system configuration more resilient to device renaming after hardware changes.
 
 # PARAMETERS
 

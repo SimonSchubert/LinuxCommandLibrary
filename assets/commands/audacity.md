@@ -1,3 +1,7 @@
+# TAGLINE
+
+Open-source graphical audio editor for recording and editing sounds.
+
 # TLDR
 
 **Launch Audacity** graphical interface

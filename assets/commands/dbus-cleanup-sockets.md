@@ -1,3 +1,7 @@
+# TAGLINE
+
+utility to remove leftover D-Bus Unix domain sockets
+
 # TLDR
 
 **Clean up leftover** D-Bus sockets

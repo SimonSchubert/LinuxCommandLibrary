@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage serverless functions and event-driven compute.
+
 # TLDR
 
 **Create a function** from a ZIP file

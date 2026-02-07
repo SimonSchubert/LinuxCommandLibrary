@@ -1,3 +1,7 @@
+# TAGLINE
+
+Clang-based static analysis and AST inspection tool
+
 # TLDR
 
 **Run static analysis** on a source file

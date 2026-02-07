@@ -1,3 +1,7 @@
+# TAGLINE
+
+GPG signing tool for Debian packages
+
 # TLDR
 
 **Sign a .changes file**
@@ -53,6 +57,11 @@ _FILE_
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**~/.devscripts**
+> Configuration file for default GPG key ID and signing behavior.
 
 # DESCRIPTION
 

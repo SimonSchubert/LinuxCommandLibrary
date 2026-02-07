@@ -1,3 +1,7 @@
+# TAGLINE
+
+Encode and decode base64 data.
+
 # TLDR
 
 **Encode** to base64

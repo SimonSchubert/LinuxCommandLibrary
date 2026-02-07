@@ -1,3 +1,7 @@
+# TAGLINE
+
+Local Azure Storage emulator for development and testing.
+
 # TLDR
 
 **Start** Azurite (all services)

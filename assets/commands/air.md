@@ -1,3 +1,7 @@
+# TAGLINE
+
+Live-reloading development server for Go applications
+
 # TLDR
 
 **Start live reload** in the current directory
@@ -60,6 +64,11 @@
 Run air in your project root directory and it monitors file changes based on configured extensions and directories. When changes are detected, Air rebuilds the application and restarts the binary. Configuration is managed through a **.air.toml** file that controls watched directories, excluded paths, file extensions, build commands, and environment variables.
 
 Air can load environment variables from .env files before building and running. The tool is intended for development workflows only and is not designed for production hot-deploy scenarios.
+
+# CONFIGURATION
+
+**.air.toml**
+> Project-level configuration file controlling watched directories, excluded paths, file extensions, build commands, and environment variables. Generated with `air init`.
 
 # CAVEATS
 

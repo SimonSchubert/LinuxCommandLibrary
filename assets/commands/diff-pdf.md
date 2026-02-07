@@ -1,3 +1,7 @@
+# TAGLINE
+
+visual PDF comparison tool
+
 # TLDR
 
 **Compare two PDFs** visually
@@ -39,9 +43,11 @@
 
 # DESCRIPTION
 
-**diff-pdf** compares two PDF files visually, page by page. It can generate a difference PDF showing where documents differ or open an interactive viewer.
+**diff-pdf** compares two PDF files visually, rendering each page and performing pixel-by-pixel comparison. Unlike text-based diff tools, it captures visual differences including formatting, fonts, images, and layout changes that wouldn't be visible in a text comparison.
 
-Returns exit code 0 if files are identical, 1 if different.
+The tool rasterizes each page from both PDFs and compares the resulting images. It can generate a difference PDF highlighting changes in red, or open an interactive viewer for side-by-side comparison. A fuzzy tolerance parameter allows small rendering variations to be ignored.
+
+This is particularly useful for comparing versions of documents where content may be identical but visual presentation differs, or for quality assurance workflows verifying that document generation produces consistent output. The tool returns exit code 0 if files are identical, 1 if different, making it suitable for automated testing.
 
 # SEE ALSO
 

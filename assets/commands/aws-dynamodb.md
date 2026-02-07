@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage tables and items in Amazon DynamoDB.
+
 # TLDR
 
 **Create a table** with a partition key

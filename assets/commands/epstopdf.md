@@ -1,3 +1,7 @@
+# TAGLINE
+
+Encapsulated PostScript to PDF converter
+
 # TLDR
 
 **Convert EPS to PDF**

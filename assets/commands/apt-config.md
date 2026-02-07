@@ -1,3 +1,7 @@
+# TAGLINE
+
+Query and display APT configuration settings.
+
 # TLDR
 
 **Show** APT configuration
@@ -35,6 +39,14 @@ This is useful for debugging APT behavior, understanding which settings are acti
 
 **-c** _file_
 > Read additional configuration file
+
+# CONFIGURATION
+
+**/etc/apt/apt.conf**
+> Main APT configuration file.
+
+**/etc/apt/apt.conf.d/**
+> Directory for drop-in configuration fragments, processed in alphanumeric order.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+image metadata reader and editor for Exif, IPTC, and XMP
+
 # TLDR
 
 **Show metadata** of image

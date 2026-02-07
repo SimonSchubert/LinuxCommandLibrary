@@ -1,3 +1,7 @@
+# TAGLINE
+
+Dynamic menu for Wayland and X11
+
 # TLDR
 
 **Display a menu** and output selected item

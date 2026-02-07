@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Cinnamon desktop applets, desklets, and extensions
+
 # TLDR
 
 **List all installed extensions**

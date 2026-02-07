@@ -1,3 +1,7 @@
+# TAGLINE
+
+Ada source file preprocessor
+
 # TLDR
 
 **Preprocess an Ada source file**
@@ -59,4 +63,3 @@ Neither -b nor -c preserves original line numbers. If both are absent, preproces
 # SEE ALSO
 
 [gnatmake](/man/gnatmake)(1), [gcc](/man/gcc)(1)
-

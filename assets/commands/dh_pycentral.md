@@ -1,3 +1,7 @@
+# TAGLINE
+
+obsolete debhelper for python-central registration
+
 # TLDR
 
 **Register Python modules** with pycentral

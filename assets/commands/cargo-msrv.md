@@ -1,3 +1,7 @@
+# TAGLINE
+
+Find and manage the minimum supported Rust version
+
 # TLDR
 
 **Find minimum supported Rust version**
@@ -34,7 +38,9 @@
 
 # DESCRIPTION
 
-**cargo msrv** finds and manages the Minimum Supported Rust Version (MSRV) for Rust projects. Uses binary search by default to efficiently find the oldest compatible Rust version.
+**cargo msrv** finds and manages the Minimum Supported Rust Version (MSRV) for Rust projects. It determines the oldest Rust compiler version that can successfully build a crate by testing against available toolchains. By default it uses binary search to efficiently narrow down the compatible version range.
+
+Maintaining an accurate MSRV is important for library authors who want to support users on older Rust versions. The tool can automatically set the `rust-version` field in Cargo.toml after finding the minimum version, and verify that the declared MSRV remains valid as the codebase evolves.
 
 # COMMANDS
 

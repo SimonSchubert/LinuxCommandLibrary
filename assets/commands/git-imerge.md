@@ -1,3 +1,7 @@
+# TAGLINE
+
+Incremental bisect-style merging
+
 # TLDR
 
 **Start incremental merge**
@@ -52,11 +56,9 @@
 
 # DESCRIPTION
 
-**git imerge** performs incremental, bisect-style merges. Instead of one large merge, it merges commits one at a time, making conflict resolution more manageable.
+**git imerge** performs incremental, bisect-style merges. Instead of one large merge with many conflicts, it merges commits one at a time, making conflict resolution more manageable and helping identify exactly which commits cause conflicts.
 
-The tool tracks merge progress visually and allows conflicts to be resolved independently. This approach helps identify exactly which commits cause conflicts.
-
-git imerge makes complex merges tractable through incremental conflict resolution.
+The tool tracks merge progress visually via the diagram command and allows conflicts to be resolved independently. This approach is particularly valuable for difficult merges between long-diverged branches.
 
 # CAVEATS
 

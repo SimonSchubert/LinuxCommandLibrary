@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interact with Claude AI from the command line
+
 # TLDR
 
 **Send a simple message** to Claude

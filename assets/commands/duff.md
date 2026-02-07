@@ -1,3 +1,7 @@
+# TAGLINE
+
+duplicate file finder
+
 # TLDR
 
 **Find duplicate files in directory**

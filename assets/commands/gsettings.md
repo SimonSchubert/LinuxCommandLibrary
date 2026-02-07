@@ -1,3 +1,7 @@
+# TAGLINE
+
+GNOME desktop configuration command-line interface
+
 # TLDR
 
 **Set** the value of a key
@@ -66,8 +70,6 @@ Display the **description** of a key
 **gsettings** is the command-line interface for GSettings, GNOME's configuration system. It provides schema-validated access to dconf settings, ensuring type safety and valid values.
 
 Settings are organized in schemas (like org.gnome.desktop.interface) containing typed keys. Unlike direct dconf access, gsettings validates values against the schema before applying them.
-
-Common uses include customizing GNOME desktop settings, scripting configuration changes, and debugging application preferences.
 
 # COMMON SCHEMAS
 

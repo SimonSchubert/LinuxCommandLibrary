@@ -1,3 +1,7 @@
+# TAGLINE
+
+display gcloud installation and configuration details
+
 # TLDR
 
 **Show SDK information**
@@ -36,11 +40,11 @@
 
 # DESCRIPTION
 
-**gcloud info** displays information about the gcloud CLI installation and configuration. It shows SDK version, Python version, installation path, and current settings.
+**gcloud info** provides a comprehensive snapshot of the Google Cloud SDK installation and runtime environment. The output includes SDK version, installation directory, Python interpreter location and version, configured account and project, and active configuration name.
 
-The command helps troubleshoot issues by revealing the environment gcloud is running in. Diagnostics mode tests connectivity to GCP services.
+This information is invaluable for troubleshooting when gcloud commands behave unexpectedly or when seeking help, as it reveals environmental factors that may affect command execution. The --run-diagnostics flag goes further by performing active connectivity tests to Google Cloud services, helping identify network or firewall issues.
 
-gcloud info is useful for debugging and verifying SDK setup.
+The --format option allows extracting specific values programmatically, useful for scripts that need to determine installation paths or active configuration settings. The --anonymize flag removes personally identifiable information from the output, making it safe to include in bug reports or support requests without exposing account details.
 
 # CAVEATS
 

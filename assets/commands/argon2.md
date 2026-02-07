@@ -1,3 +1,7 @@
+# TAGLINE
+
+Hash passwords using the Argon2 algorithm
+
 # TLDR
 
 **Hash** a password

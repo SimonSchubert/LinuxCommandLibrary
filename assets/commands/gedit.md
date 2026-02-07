@@ -1,3 +1,7 @@
+# TAGLINE
+
+text editor for GNOME desktop environment
+
 # TLDR
 
 **Open** a text file
@@ -45,6 +49,11 @@ Display a list of **supported encodings**
 
 **+LINE:COLUMN**
 > Open file at specified line and column
+
+# CONFIGURATION
+
+**~/.config/gedit/gedit.ini**
+> User preferences including editor settings, colors, and enabled plugins.
 
 # DESCRIPTION
 

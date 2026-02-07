@@ -1,3 +1,7 @@
+# TAGLINE
+
+Reuse recorded resolution of conflicted merges
+
 # TLDR
 
 **Enable rerere**
@@ -46,11 +50,14 @@
 
 # DESCRIPTION
 
-**git rerere** (reuse recorded resolution) remembers how you resolved merge conflicts and automatically reapplies those resolutions. This is invaluable for repeated merges and rebases.
+**git rerere** (reuse recorded resolution) remembers how you resolved merge conflicts and automatically reapplies those resolutions in future merges. This is especially valuable during repeated merges and rebases.
 
-When enabled, git records conflict resolutions. On subsequent merges with identical conflicts, the previous resolution is applied automatically. This eliminates repetitive conflict resolution.
+When enabled, Git records conflict resolutions. On subsequent merges with identical conflicts, the previous resolution is applied automatically, eliminating repetitive conflict resolution work.
 
-git rerere automates repeated conflict resolution.
+# CONFIGURATION
+
+**rerere.enabled**
+> Set to `true` in git config to enable automatic recording of conflict resolutions.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+line-by-line file comparison tool
+
 # TLDR
 
 **Compare** files

@@ -1,3 +1,7 @@
+# TAGLINE
+
+strip LaTeX commands from documents
+
 # TLDR
 
 **Remove LaTeX commands from a file**
@@ -58,21 +62,6 @@
 The tool handles standard LaTeX constructs: commands, environments, comments, and special characters. Math mode content is typically removed unless **-m** is specified. With **-e**, it follows \\input directives to process multi-file documents.
 
 Output is the document text without markup, suitable for piping to spell checkers, word processors, or text analysis tools.
-
-# EXAMPLE
-
-```latex
-% Input
-\documentclass{article}
-\begin{document}
-Hello \textbf{world}! Here is $x^2$ math.
-\end{document}
-```
-
-```text
-# Output
-Hello world! Here is  math.
-```
 
 # CAVEATS
 

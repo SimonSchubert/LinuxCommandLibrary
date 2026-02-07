@@ -1,3 +1,7 @@
+# TAGLINE
+
+Restore working tree files or unstage changes
+
 # TLDR
 
 **Restore working tree file**
@@ -53,9 +57,10 @@
 
 # DESCRIPTION
 
-**git restore** restores working tree files. Added in Git 2.23 to separate the file restoration function from git checkout.
+**git restore** restores working tree files or unstages changes from the index. Introduced in Git 2.23 to provide a clearer alternative to the file-restoration aspects of `git checkout`.
+
+Use `--staged` to unstage files, `--worktree` (the default) to discard working tree changes, or both together to restore a file completely to a previous state.
 
 # SEE ALSO
 
 [git-checkout](/man/git-checkout)(1), [git-reset](/man/git-reset)(1)
-

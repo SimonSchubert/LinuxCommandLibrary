@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display images as ASCII art in the terminal
+
 # TLDR
 
 Display an **image** as ASCII art

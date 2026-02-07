@@ -1,3 +1,7 @@
+# TAGLINE
+
+service discovery and configuration tool
+
 # TLDR
 
 **Start agent in development mode**
@@ -92,6 +96,11 @@
 
 **-http-addr** _addr_
 > Consul HTTP API address
+
+# CONFIGURATION
+
+**/etc/consul.d/**
+> Configuration directory for Consul agent settings, services, and checks in HCL or JSON format.
 
 # ENVIRONMENT
 

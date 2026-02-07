@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage background services for Homebrew packages
+
 # TLDR
 
 **List all services**

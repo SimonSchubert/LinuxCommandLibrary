@@ -1,3 +1,7 @@
+# TAGLINE
+
+Android DEX file disassembler
+
 # TLDR
 
 **Disassemble** DEX file

@@ -1,3 +1,7 @@
+# TAGLINE
+
+time-based job scheduler daemon
+
 # TLDR
 
 **Edit crontab**
@@ -28,7 +32,9 @@
 
 # DESCRIPTION
 
-**cron** is the daemon that executes scheduled commands. **crontab** manages per-user cron tables. Jobs run at specified times, dates, or intervals for automated system maintenance.
+**cron** is the daemon that executes scheduled commands. **crontab** manages per-user cron tables. Together they provide time-based job scheduling for automated system maintenance, backups, log rotation, and recurring tasks.
+
+The cron daemon starts at boot and runs continuously, waking up every minute to check all crontab files for jobs that need execution. Each user can have their own crontab file, and the system has crontabs for system-wide maintenance. Jobs run in the background without user interaction, making cron essential for Unix/Linux system administration.
 
 # CRONTAB OPTIONS
 
@@ -87,13 +93,16 @@
 
 **@yearly**: 0 0 1 1 *
 
-# FILES
+# CONFIGURATION
 
-**/etc/crontab**: System crontab
+**/etc/crontab**
+> System-wide crontab file with additional user field for running jobs as specific users.
 
-**/etc/cron.d/**: System cron jobs
+**/etc/cron.d/**
+> Directory containing system crontab files in the same format as /etc/crontab.
 
-**/var/spool/cron/**: User crontabs
+**/var/spool/cron/**
+> Directory containing per-user crontab files managed via the crontab command.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Authenticate with Azure
+
 # TLDR
 
 **Login** interactively

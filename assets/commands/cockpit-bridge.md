@@ -1,3 +1,7 @@
+# TAGLINE
+
+Cockpit web service message relay
+
 # TLDR
 
 **List** all cockpit packages
@@ -14,9 +18,11 @@ Display **help**
 
 # DESCRIPTION
 
-**cockpit-bridge** relays messages and commands between the Cockpit web front end and server-side configuration tools. It serves as the communication layer that enables the web interface to interact with system services.
+**cockpit-bridge** relays messages and commands between the Cockpit web front end and server-side system configuration tools. It serves as the communication layer that enables the browser-based interface to interact with system services like systemd, NetworkManager, and storage management.
 
-This is typically started automatically by cockpit-ws and not run directly by users.
+The bridge runs in the user's session and translates JSON-based Cockpit protocol messages into D-Bus calls, file operations, and process management actions. It enforces the permissions of the logged-in user, ensuring that the web interface cannot perform actions beyond what the user is authorized to do.
+
+This process is typically started automatically by cockpit-ws and is not intended to be run directly by users. The **--packages** option is useful for debugging to list all installed Cockpit UI packages.
 
 # PARAMETERS
 
@@ -25,6 +31,11 @@ This is typically started automatically by cockpit-ws and not run directly by us
 
 **--help**
 > Display help information
+
+# CONFIGURATION
+
+**/etc/cockpit/cockpit.conf**
+> Main Cockpit configuration file controlling bridge behavior, allowed origins, and authentication settings.
 
 # CAVEATS
 

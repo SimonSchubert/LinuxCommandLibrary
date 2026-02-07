@@ -1,3 +1,7 @@
+# TAGLINE
+
+API documentation generator for PHP
+
 # TLDR
 
 **Generate documentation**
@@ -53,6 +57,11 @@ _CONFIG-FILE_
 The tool is a fork of Sami, providing continued maintenance and improvements. It supports modern PHP features including traits, namespaces, and type declarations. Configuration is done through PHP files allowing flexible customization.
 
 Doctum creates searchable documentation with cross-references between classes and methods, making it valuable for documenting libraries and frameworks.
+
+# CONFIGURATION
+
+**doctum.php**
+> Configuration file defining source directories, build paths, themes, and parsing options.
 
 # CAVEATS
 

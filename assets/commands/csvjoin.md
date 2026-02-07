@@ -1,3 +1,7 @@
+# TAGLINE
+
+SQL-style joins for CSV files
+
 # TLDR
 
 **Join two CSV files** on a common column

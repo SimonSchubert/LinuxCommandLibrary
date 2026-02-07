@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interactively browse and restore Amanda backups
+
 # TLDR
 
 **Start recovery session** with a configuration
@@ -101,6 +105,11 @@ The tool connects to the Amanda index server to browse the backup catalog and de
 For in-place restores, run amrecover from the root of the backed-up filesystem or use **lcd** to change to that directory before extraction. Otherwise, a directory tree replicating the backup structure will be created in the current directory.
 
 The GNU readline library provides command history and editing when available.
+
+# CONFIGURATION
+
+**/etc/amanda/<config>/amanda.conf**
+> Amanda configuration defining index and tape server settings used during recovery.
 
 # CAVEATS
 

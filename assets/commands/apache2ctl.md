@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage the Apache HTTP Server on Debian
+
 # TLDR
 
 **Start** the Apache daemon
@@ -68,6 +72,23 @@ Restart **gracefully** without dropping connections
 
 **-S**
 > Print full Apache configuration
+
+# CONFIGURATION
+
+**/etc/apache2/apache2.conf**
+> Main configuration file on Debian/Ubuntu systems.
+
+**/etc/apache2/sites-available/**
+> Virtual host configuration files, enabled via a2ensite.
+
+**/etc/apache2/mods-available/**
+> Module configuration files, enabled via a2enmod.
+
+**/etc/apache2/envvars**
+> Environment variables for the Apache process (user, group, pid file).
+
+**/etc/apache2/ports.conf**
+> Listen directives specifying which ports Apache binds to.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Native Clojure interpreter for scripting
+
 # TLDR
 
 **Build** Clojure project
@@ -67,6 +71,11 @@ Define tasks in bb.edn:
  {test {:doc "Run tests"
         :task (shell "clojure -M:test")}}}
 ```
+
+# CONFIGURATION
+
+**bb.edn**
+> Project configuration file for tasks, dependencies, and classpath settings.
 
 # CAVEATS
 

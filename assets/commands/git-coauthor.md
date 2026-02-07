@@ -1,3 +1,7 @@
+# TAGLINE
+
+Add co-author attribution to commits
+
 # TLDR
 
 **Add coauthor to last commit**
@@ -27,9 +31,9 @@ _EMAIL_
 
 **git coauthor** adds Co-authored-by trailers to the last commit message. GitHub and GitLab recognize these trailers to attribute commits to multiple contributors.
 
-The command amends the last commit, appending Co-authored-by lines. Multiple coauthors can be added in a single command. This supports pair programming and collaborative coding attribution.
+The command amends the last commit, appending Co-authored-by lines in the format recognized by GitHub and GitLab. Multiple coauthors can be added in a single invocation.
 
-git coauthor simplifies adding co-author attribution to commits.
+This supports pair programming, mob programming, and collaborative coding workflows where attribution should reflect the actual contributors rather than just the person who typed the commit command.
 
 # CAVEATS
 

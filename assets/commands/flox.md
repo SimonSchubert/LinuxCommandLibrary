@@ -1,3 +1,7 @@
+# TAGLINE
+
+reproducible development environments built on Nix
+
 # TLDR
 
 **Initialize environment**

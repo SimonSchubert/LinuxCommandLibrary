@@ -1,3 +1,7 @@
+# TAGLINE
+
+decode WebP images to other formats
+
 # TLDR
 
 **Convert WebP to PNG**

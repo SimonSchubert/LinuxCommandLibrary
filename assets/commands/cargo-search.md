@@ -1,3 +1,7 @@
+# TAGLINE
+
+Search for crates on a registry
+
 # TLDR
 
 **Search for crate**
@@ -18,7 +22,9 @@
 
 # DESCRIPTION
 
-**cargo search** performs textual search for crates on crates.io. Results are displayed in TOML format suitable for copying into Cargo.toml.
+**cargo search** performs a textual search for crates on crates.io or another registry. Results are displayed in a TOML-compatible format showing the package name, latest version, and description, making them easy to copy directly into a Cargo.toml dependencies section.
+
+By default, up to 10 results are returned, sorted by relevance. The `--limit` flag can increase this up to 100. For more advanced browsing, the crates.io website or tools like `cargo-seek` provide richer filtering and categorization.
 
 # PARAMETERS
 

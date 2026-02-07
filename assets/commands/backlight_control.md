@@ -1,3 +1,7 @@
+# TAGLINE
+
+Adjust screen backlight brightness by percentage.
+
 # TLDR
 
 **Increase** the backlight by a percentage

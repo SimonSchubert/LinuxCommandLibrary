@@ -1,3 +1,7 @@
+# TAGLINE
+
+initramfs image generator
+
 # TLDR
 
 Generate initramfs for **current kernel**
@@ -45,6 +49,17 @@ Configuration files in /etc/dracut.conf, /etc/dracut.conf.d/, and /usr/lib/dracu
 
 **-H, --hostonly**
 > Only include drivers for current host
+
+# CONFIGURATION
+
+**/etc/dracut.conf**
+> Main configuration file for dracut behavior and module selection.
+
+**/etc/dracut.conf.d/**
+> Directory for additional configuration files.
+
+**/usr/lib/dracut/dracut.conf.d/**
+> System-wide dracut configuration directory.
 
 # CAVEATS
 

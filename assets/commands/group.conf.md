@@ -1,3 +1,7 @@
+# TAGLINE
+
+PAM dynamic group assignment configuration
+
 # TLDR
 
 **View group.conf**
@@ -6,9 +10,9 @@
 
 # DESCRIPTION
 
-**/etc/security/group.conf** configures the pam_group module, which assigns supplementary groups to users based on the service they're logging into and time of day.
+**/etc/security/group.conf** configures the pam_group module, which assigns supplementary groups to users based on the service they are logging into and time of day.
 
-This PAM configuration file allows dynamic group membership without modifying /etc/group permanently.
+This PAM configuration file allows dynamic group membership without modifying /etc/group permanently. Rules are defined with five semicolon-separated fields specifying services, terminals, users, time windows, and groups to assign.
 
 # FILE FORMAT
 
@@ -23,19 +27,6 @@ services;ttys;users;times;groups
 - **times**: Time specifications (Al0000-2400 = always)
 - **groups**: Groups to assign
 
-# EXAMPLE ENTRIES
-
-```
-# Give console users floppy access
-login;tty*;*;Al0000-2400;floppy,cdrom
-
-# Give ssh users special group on weekdays
-sshd;*;alice,bob;Wk0900-1700;developers
-
-# All local logins get audio group
-login|gdm;*;*;Al0000-2400;audio,video
-```
-
 # TIME FORMAT
 
 ```
@@ -45,6 +36,11 @@ Wd - Weekends
 Mo,Tu,We,Th,Fr,Sa,Su - Specific days
 0000-2400 - Time range (24h format)
 ```
+
+# CONFIGURATION
+
+**/etc/security/group.conf**
+> The configuration file itself, read by pam_group.so during login.
 
 # CAVEATS
 

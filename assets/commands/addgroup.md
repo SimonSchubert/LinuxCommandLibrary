@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create groups and manage group membership
+
 # TLDR
 
 **Create** a new group
@@ -47,6 +51,11 @@ When adding a user to a group, it modifies /etc/group to include the user as a m
 
 **--debug**
 > Print debug information
+
+# CONFIGURATION
+
+**/etc/adduser.conf**
+> Controls default behavior for addgroup and adduser, including GID ranges for normal and system groups, naming policies, and group creation defaults.
 
 # CAVEATS
 

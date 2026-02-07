@@ -1,3 +1,7 @@
+# TAGLINE
+
+Customizable lock screen using i3lock
+
 # TLDR
 
 **Lock** screen
@@ -22,7 +26,9 @@ Lock with **monitor** timeout
 
 # DESCRIPTION
 
-**betterlockscreen** is a minimal lock screen wrapper for i3lock. It provides a simple and visually pleasing lock screen with customizable background images and effects.
+**betterlockscreen** is a lock screen wrapper for i3lock-color that provides visually appealing lock screens with customizable background effects. It supports dim, blur, dimblur, and pixel effects applied to a wallpaper image.
+
+Before locking, the background image must be cached using the **-u** flag, which generates processed versions with each effect. This makes subsequent locks instant since the effects are pre-computed. The tool can also set the desktop wallpaper using the same cached images.
 
 # PARAMETERS
 
@@ -40,6 +46,11 @@ Lock with **monitor** timeout
 
 **-w, --wall** [_effect_]
 > Set desktop wallpaper
+
+# CONFIGURATION
+
+**~/.config/betterlockscreenrc**
+> Configuration file for default effects, colors, font settings, and lock screen appearance.
 
 # CAVEATS
 

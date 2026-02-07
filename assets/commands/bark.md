@@ -1,3 +1,7 @@
+# TAGLINE
+
+AI text-to-audio synthesis with expressive speech.
+
 # TLDR
 
 **Generate speech from text**

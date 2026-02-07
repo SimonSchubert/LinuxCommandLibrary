@@ -1,3 +1,7 @@
+# TAGLINE
+
+Package Electron apps for distribution
+
 # TLDR
 
 **Package for current platform**

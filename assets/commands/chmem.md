@@ -1,3 +1,7 @@
+# TAGLINE
+
+configure memory hotplug state
+
 # TLDR
 
 Set a memory block **offline**

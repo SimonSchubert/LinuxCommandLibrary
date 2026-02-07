@@ -1,3 +1,7 @@
+# TAGLINE
+
+IP subnet and CIDR notation calculator
+
 # TLDR
 
 **Calculate subnet info**
@@ -23,7 +27,11 @@
 
 # DESCRIPTION
 
-CIDR calculators compute network information from IP addresses and subnet masks. Common tools include ipcalc, sipcalc, and whatmask. They calculate network/broadcast addresses, host ranges, and wildcard masks.
+CIDR calculators compute network information from IP addresses and subnet masks. Common tools include **ipcalc**, **sipcalc**, and **whatmask**. They calculate network and broadcast addresses, usable host ranges, wildcard masks, and other subnet parameters.
+
+These utilities are essential for network planning, subnetting, and troubleshooting. Given an IP address and prefix length (or netmask), they break down all relevant addressing details. Some tools also support IPv6, subnet splitting, and supernetting.
+
+Available on most Linux distributions via package managers. For visual CIDR notation exploration, online tools like cidr.xyz provide interactive visualizations.
 
 # IPCALC OPTIONS
 

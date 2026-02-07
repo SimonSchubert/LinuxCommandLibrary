@@ -1,3 +1,7 @@
+# TAGLINE
+
+Wayland-native screenshot tool
+
 # TLDR
 
 **Screenshot** all outputs
@@ -56,8 +60,6 @@ Screenshot and **copy to clipboard**
 **grim** (grab image) is a Wayland-native screenshot tool. It captures images directly from the Wayland compositor, making it compatible with Sway, GNOME on Wayland, and other Wayland-based environments.
 
 For region selection, grim is commonly paired with **slurp**, which allows interactive selection of screen areas. Output to stdout (**-**) enables piping to clipboard managers like **wl-copy**.
-
-The tool supports multiple output formats and quality settings for different use cases.
 
 # CAVEATS
 

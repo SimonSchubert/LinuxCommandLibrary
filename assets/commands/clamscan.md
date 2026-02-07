@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line virus scanner
+
 # TLDR
 
 **Scan single file**
@@ -34,7 +38,11 @@
 
 # DESCRIPTION
 
-**clamscan** is a command-line virus scanner from ClamAV. Scans files and directories for malware using the ClamAV virus database. Loads database fresh each run (use clamdscan for daemon mode).
+**clamscan** is a standalone command-line virus scanner from the ClamAV antivirus suite. It scans files and directories for viruses, trojans, malware, and other threats using the ClamAV signature database.
+
+Each invocation loads the full virus database into memory, which makes it suitable for one-off scans but slower for repeated use. For high-volume or frequent scanning, the daemon-based **clamdscan** is preferred as it avoids the database reload overhead.
+
+clamscan supports recursive directory scanning, pattern-based file inclusion and exclusion, configurable size limits, and various actions for infected files including removal, quarantine (move), and copying. Scan results can be logged to a file for audit purposes.
 
 # PARAMETERS
 

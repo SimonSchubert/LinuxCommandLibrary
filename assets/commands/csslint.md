@@ -1,3 +1,7 @@
+# TAGLINE
+
+CSS code quality checker
+
 # TLDR
 
 **Lint a CSS file**
@@ -43,7 +47,14 @@
 
 # DESCRIPTION
 
-**csslint** is a tool for checking CSS code quality. It identifies potential problems like inefficient selectors, browser compatibility issues, and stylistic errors.
+**csslint** is a tool for checking CSS code quality. It identifies potential problems like inefficient selectors, browser compatibility issues, and stylistic errors. The tool checks for patterns that may cause cross-browser issues, performance problems, or maintenance difficulties.
+
+Rules are categorized by severity and cover topics like selector performance, box model compatibility, known browser bugs, and best practices. csslint can be integrated into build processes and continuous integration workflows.
+
+# CONFIGURATION
+
+**.csslintrc**
+> JSON configuration file for customizing rules and severity levels.
 
 # SEE ALSO
 

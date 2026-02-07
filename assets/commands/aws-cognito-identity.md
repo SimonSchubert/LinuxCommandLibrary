@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage federated identity pools for AWS resource access.
+
 # TLDR
 
 **List identity pools** in the current region

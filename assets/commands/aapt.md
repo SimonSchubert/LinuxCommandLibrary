@@ -1,3 +1,7 @@
+# TAGLINE
+
+Android resource packaging tool
+
 # TLDR
 
 **List contents** of an APK file

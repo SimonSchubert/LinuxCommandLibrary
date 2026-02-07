@@ -1,3 +1,7 @@
+# TAGLINE
+
+scan font files and directories
+
 # TLDR
 
 **Scan directory for** fonts

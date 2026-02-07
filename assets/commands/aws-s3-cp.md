@@ -1,3 +1,7 @@
+# TAGLINE
+
+Copy files to and from S3 buckets
+
 # TLDR
 
 **Copy a local file** to an S3 bucket

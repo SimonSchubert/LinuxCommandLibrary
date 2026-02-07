@@ -1,3 +1,7 @@
+# TAGLINE
+
+client for foot terminal server
+
 # TLDR
 
 **Open a new terminal window** via foot server

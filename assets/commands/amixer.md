@@ -1,3 +1,7 @@
+# TAGLINE
+
+Control ALSA soundcard mixer from the command line
+
 # TLDR
 
 Turn up the **master volume** by 10%
@@ -26,7 +30,9 @@ List all **simple mixer controls**
 
 # DESCRIPTION
 
-**amixer** allows command-line control of the mixer for the ALSA soundcard driver and supports multiple soundcards. Running it without arguments displays current mixer settings for the default soundcard.
+**amixer** is a command-line mixer control for the ALSA soundcard driver. It can adjust volume levels, toggle mute states, and query mixer control settings for any available soundcard. Running it without arguments displays current mixer settings for the default soundcard.
+
+The tool provides both simple and full mixer interfaces. The simple interface (commands prefixed with **s**) uses human-readable control names like "Master" or "PCM", while the full interface operates on numeric control identifiers. Volume can be specified as absolute values, percentages, or decibels.
 
 # PARAMETERS
 

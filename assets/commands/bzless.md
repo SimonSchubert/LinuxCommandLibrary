@@ -1,3 +1,7 @@
+# TAGLINE
+
+View bzip2 compressed files with less pager
+
 # TLDR
 
 **View** compressed file

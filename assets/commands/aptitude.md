@@ -1,3 +1,7 @@
+# TAGLINE
+
+Advanced package management with dependency resolution
+
 # TLDR
 
 **Synchronize** list of packages and versions
@@ -80,6 +84,17 @@ Search for an **installed** package
 
 **autoclean**
 > Remove old downloaded package files
+
+# CONFIGURATION
+
+**~/.aptitude/config**
+> User-specific aptitude configuration.
+
+**/etc/apt/apt.conf**
+> APT configuration shared with apt and apt-get.
+
+**/etc/apt/apt.conf.d/**
+> Directory for additional APT configuration fragments.
 
 # CAVEATS
 

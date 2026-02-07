@@ -1,3 +1,7 @@
+# TAGLINE
+
+display running processes inside a container
+
 # TLDR
 
 **Show running processes** in a container
@@ -14,7 +18,9 @@
 
 # DESCRIPTION
 
-**docker container top** displays the running processes inside a container. Accepts ps options to customize output format.
+**docker container top** displays the running processes inside a container, similar to the Unix **ps** command but scoped to a specific container's process namespace. This provides visibility into what is actually executing within the container at any given moment.
+
+The command accepts standard **ps** options to customize the output format and control which process attributes are displayed. This is particularly useful for debugging containers, verifying that expected processes are running, and investigating resource usage at the process level.
 
 # SEE ALSO
 

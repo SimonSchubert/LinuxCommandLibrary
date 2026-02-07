@@ -1,3 +1,7 @@
+# TAGLINE
+
+list containers on the system
+
 # TLDR
 
 **List running containers**
@@ -46,7 +50,9 @@
 
 # DESCRIPTION
 
-**docker container ls** lists containers. By default shows only running containers; use **-a** to show all. This is equivalent to **docker ps**.
+**docker container ls** lists containers on the Docker host, providing information about container IDs, images, commands, creation time, status, ports, and names. By default, only running containers are displayed, but the **-a** flag reveals all containers regardless of state.
+
+This command is equivalent to the legacy **docker ps** command and serves as the primary interface for viewing container inventory. Filtering and formatting options make it suitable for scripting and automation workflows.
 
 # SEE ALSO
 

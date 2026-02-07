@@ -1,3 +1,7 @@
+# TAGLINE
+
+connect to running Emacs server for fast editing
+
 # TLDR
 
 **Open file** in existing Emacs frame
@@ -75,6 +79,11 @@ This workflow is common for using Emacs as an external editor for other programs
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**~/.emacs.d/server/**
+> Server socket and authentication files for Emacs server connections.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+display resource usage statistics for containers
+
 # TLDR
 
 **Show live resource usage**
@@ -33,7 +37,9 @@
 
 # DESCRIPTION
 
-**docker container stats** displays a live stream of container resource usage statistics including CPU, memory, network I/O, and block I/O.
+**docker container stats** displays a live stream of container resource usage statistics, providing real-time visibility into CPU percentage, memory usage and limit, network I/O, and block I/O for running containers.
+
+By default, the display continuously updates with current metrics for all running containers. The **--no-stream** option provides a single snapshot instead of continuous updates, which is useful for scripting and automation. This command is essential for monitoring container performance and diagnosing resource-related issues.
 
 # SEE ALSO
 

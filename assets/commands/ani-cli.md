@@ -1,3 +1,7 @@
+# TAGLINE
+
+Search and stream anime from the terminal
+
 # TLDR
 
 **Search** and watch anime

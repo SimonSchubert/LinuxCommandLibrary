@@ -1,3 +1,7 @@
+# TAGLINE
+
+Groff DVI output driver
+
 # TLDR
 
 **Convert groff to DVI**
@@ -40,9 +44,7 @@ _FILE_
 
 **grodvi** is a groff output driver that produces DVI (DeVice Independent) format, compatible with TeX ecosystem tools like dvips and xdvi.
 
-The driver converts groff intermediate output to DVI format, allowing integration with TeX-based workflows. It supports standard groff font features.
-
-grodvi generates DVI output from groff.
+The driver converts groff intermediate output to DVI format, allowing integration with TeX-based workflows and standard groff font features.
 
 # CAVEATS
 

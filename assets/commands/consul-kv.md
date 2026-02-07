@@ -1,3 +1,7 @@
+# TAGLINE
+
+distributed key-value store management
+
 # TLDR
 
 **Get a key's value**

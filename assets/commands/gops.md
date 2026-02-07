@@ -1,3 +1,7 @@
+# TAGLINE
+
+Go process diagnostic tool
+
 # TLDR
 
 **List Go processes**
@@ -49,11 +53,9 @@ _PID_
 
 # DESCRIPTION
 
-**gops** lists and diagnoses Go processes. It identifies Go programs running on the system and provides debugging commands for them.
+**gops** lists and diagnoses Go processes running on the system. It identifies Go programs and provides debugging commands including stack traces, memory statistics, and CPU/heap profiling.
 
-The tool can extract stack traces, memory statistics, and profiles from running Go programs. It requires the agent to be imported in target programs.
-
-gops provides Go process inspection.
+For full diagnostic capabilities, the gops agent must be imported in target programs. Basic process identification works without the agent.
 
 # CAVEATS
 

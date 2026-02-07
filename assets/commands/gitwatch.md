@@ -1,3 +1,7 @@
+# TAGLINE
+
+Automatically commit changes when files are modified
+
 # TLDR
 
 **Watch directory and auto-commit**
@@ -39,9 +43,10 @@
 
 # DESCRIPTION
 
-**gitwatch** watches a directory and automatically commits changes. Uses inotify to detect file changes. Useful for automatic version control of notes or configs.
+**gitwatch** watches a directory and automatically commits changes whenever files are modified. It uses inotify (on Linux) to detect file changes in real time.
+
+The tool is useful for automatic version control of notes, configuration files, or any directory where you want every change tracked without manual commits.
 
 # SEE ALSO
 
 [inotifywait](/man/inotifywait)(1), [git](/man/git)(1)
-

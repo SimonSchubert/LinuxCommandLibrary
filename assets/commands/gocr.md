@@ -1,3 +1,7 @@
+# TAGLINE
+
+Optical character recognition program
+
 # TLDR
 
 **OCR an image**
@@ -42,11 +46,9 @@ _IMAGE_
 
 # DESCRIPTION
 
-**gocr** is an optical character recognition (OCR) program. It reads images and outputs recognized text, supporting various image formats and character sets.
+**gocr** is an optical character recognition (OCR) program that reads images and outputs recognized text. It supports various image formats including PBM, PGM, PPM, and can be tuned for specific character sets.
 
-The tool processes scanned documents and images to extract text. It can be tuned for specific character sets and integrates into document processing pipelines.
-
-gocr provides command-line OCR functionality.
+The tool processes scanned documents and images to extract text, integrating into document processing pipelines via standard input and output.
 
 # CAVEATS
 

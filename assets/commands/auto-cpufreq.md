@@ -1,3 +1,7 @@
+# TAGLINE
+
+Automatic CPU speed and power optimizer
+
 # TLDR
 
 **Monitor** CPU frequency and power
@@ -64,6 +68,11 @@ Show **statistics**
 
 **--debug**
 > Enable debug output
+
+# CONFIGURATION
+
+**/etc/auto-cpufreq.conf**
+> Main configuration file. Defines governor and turbo boost preferences per power source (charger/battery).
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Ethereum smart contract Go binding generator
+
 # TLDR
 
 **Generate** Go bindings from a Solidity ABI

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage multiple runtime versions with a single tool
+
 # TLDR
 
 **Install** a plugin
@@ -65,6 +69,17 @@ Versions can be set globally, per-project (.tool-versions file), or per-shell se
 
 **reshim** _plugin_
 > Rebuild shims
+
+# CONFIGURATION
+
+**~/.asdfrc**
+> User configuration file for asdf settings like legacy version file support.
+
+**.tool-versions**
+> Per-project file specifying tool versions. Placed in the project root directory.
+
+**~/.tool-versions**
+> Global default tool versions used when no project-level file is found.
 
 # CAVEATS
 

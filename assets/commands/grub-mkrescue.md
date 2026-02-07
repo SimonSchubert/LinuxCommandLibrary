@@ -1,3 +1,7 @@
+# TAGLINE
+
+create bootable GRUB rescue images
+
 # TLDR
 
 Create a **bootable ISO** from the current directory
@@ -48,7 +52,7 @@ Display **help**
 
 **grub-mkrescue** creates bootable CD, USB, or floppy images using GRUB as the bootloader. It generates hybrid images that can boot from both BIOS and UEFI systems.
 
-The command packages the source directory contents with the necessary GRUB files to create a bootable rescue or installation medium. Additional options can be passed to the underlying xorriso tool using -- separator.
+The command packages the source directory contents with the necessary GRUB files to create a bootable rescue or installation medium. Additional options can be passed to the underlying xorriso tool using the -- separator.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+compositing window manager with 3D effects
+
 # TLDR
 
 **Start Compiz window manager**
@@ -46,6 +50,14 @@
 
 **--debug**
 > Enable debug output.
+
+# CONFIGURATION
+
+**~/.config/compiz-1/compizconfig/Default.ini**
+> User-specific Compiz settings and enabled plugins.
+
+**/etc/compizconfig/config**
+> System-wide Compiz configuration.
 
 # POPULAR PLUGINS
 

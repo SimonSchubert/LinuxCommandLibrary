@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage identity, access, and permissions for AWS resources.
+
 # TLDR
 
 **Create a new IAM user**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Lightweight tool for querying the Arch User Repository.
+
 # TLDR
 
 **Search** for AUR packages matching a regex

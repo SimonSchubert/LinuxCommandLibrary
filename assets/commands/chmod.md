@@ -1,3 +1,7 @@
+# TAGLINE
+
+change file access permissions
+
 # TLDR
 
 **Make** file executable
@@ -26,9 +30,9 @@
 
 # DESCRIPTION
 
-**chmod** (change mode) modifies file permissions. It controls read, write, and execute permissions for the owner, group, and others. Permissions determine who can access or modify files.
+**chmod** (change mode) modifies file access permissions. It controls read, write, and execute permissions for three classes of users: the file owner (user), the file's group, and all other users.
 
-The command is essential for file security and access control on Unix systems.
+Permissions can be specified in two ways: numeric (octal) mode using digits 0-7, or symbolic mode using letters (u/g/o/a, +/-/=, r/w/x). Numeric mode sets all permissions at once, while symbolic mode allows adding or removing individual permissions. The command is fundamental to Unix file security and access control.
 
 # PARAMETERS
 

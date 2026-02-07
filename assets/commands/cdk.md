@@ -1,3 +1,7 @@
+# TAGLINE
+
+AWS Cloud Development Kit CLI
+
 # TLDR
 
 **Initialize new CDK project**
@@ -34,7 +38,11 @@
 
 # DESCRIPTION
 
-**cdk** is the AWS Cloud Development Kit CLI for defining cloud infrastructure as code. Synthesizes CloudFormation templates from TypeScript, Python, Java, C#, or Go code. Deploys and manages AWS resources.
+**cdk** is the AWS Cloud Development Kit CLI for defining cloud infrastructure as code using familiar programming languages. It synthesizes CloudFormation templates from TypeScript, Python, Java, C#, or Go code and deploys them to AWS.
+
+Instead of writing CloudFormation YAML or JSON by hand, developers define infrastructure using constructs -- reusable, composable classes that represent AWS resources. The CDK synthesizes these constructs into CloudFormation templates, which are then deployed to create and manage the actual AWS resources.
+
+The workflow typically involves initializing a project with `cdk init`, writing infrastructure code, previewing changes with `cdk diff`, and deploying with `cdk deploy`. The `cdk watch` command enables hot-reloading during development.
 
 # COMMANDS
 
@@ -90,6 +98,11 @@
 
 **--verbose**, **-v**
 > Verbose output
+
+# CONFIGURATION
+
+**cdk.json**
+> Project configuration including app entry point, context values, and feature flags.
 
 # CAVEATS
 

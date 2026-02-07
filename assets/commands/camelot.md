@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extract tables from PDF files
+
 # TLDR
 
 **Extract tables from a PDF**

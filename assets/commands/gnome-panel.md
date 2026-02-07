@@ -1,3 +1,7 @@
+# TAGLINE
+
+traditional GNOME desktop panel and taskbar
+
 # TLDR
 
 **Start GNOME Panel**
@@ -24,9 +28,7 @@
 
 **gnome-panel** is the traditional GNOME desktop panel. It provides the taskbar, application menu, system tray, and applet hosting for the GNOME Flashback session.
 
-The panel displays running applications, provides quick launch buttons, and hosts status applets. It's used in GNOME Flashback for a classic desktop experience.
-
-gnome-panel provides the traditional GNOME desktop bar.
+The panel displays running applications, provides quick launch buttons, and hosts status applets. It is used in GNOME Flashback for a classic desktop experience.
 
 # CAVEATS
 

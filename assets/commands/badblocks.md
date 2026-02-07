@@ -1,3 +1,7 @@
+# TAGLINE
+
+Scan devices for bad disk blocks
+
 # TLDR
 
 **Check** device for bad blocks (read-only)

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Control the Apache HTTP web server
+
 # TLDR
 
 **Start Apache** in the foreground
@@ -91,6 +95,20 @@ The **apachectl** script provides a convenient interface for controlling the Apa
 Configuration is primarily done through **httpd.conf** and related files in the Apache configuration directory. The modular architecture allows enabling features like SSL/TLS (mod_ssl), URL rewriting (mod_rewrite), proxying (mod_proxy), and dynamic content via CGI, PHP, or mod_wsgi.
 
 Apache supports two primary Multi-Processing Modules: **prefork** (process-based) for compatibility and **event/worker** (threaded) for higher concurrency.
+
+# CONFIGURATION
+
+**/etc/httpd/conf/httpd.conf**
+> Main configuration file on RHEL/CentOS/Fedora systems.
+
+**/etc/apache2/apache2.conf**
+> Main configuration file on Debian/Ubuntu systems.
+
+**/etc/httpd/conf.d/**
+> Directory for additional configuration files on RHEL-based systems.
+
+**/etc/apache2/sites-available/**
+> Virtual host configuration files on Debian-based systems.
 
 # CAVEATS
 

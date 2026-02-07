@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interactive terminal package browser
+
 # TLDR
 
 **Start** aptitude TUI

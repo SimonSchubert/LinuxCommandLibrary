@@ -1,3 +1,7 @@
+# TAGLINE
+
+display CPU frequency scaling information
+
 # TLDR
 
 Show CPU frequency **info for all CPUs**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Scan dependencies for known security vulnerabilities
+
 # TLDR
 
 **Audit dependencies** for security vulnerabilities

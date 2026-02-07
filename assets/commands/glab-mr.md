@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage GitLab merge requests from the command line
+
 # TLDR
 
 **List merge requests**
@@ -73,9 +77,8 @@
 
 # DESCRIPTION
 
-**glab mr** manages GitLab merge requests. Create, review, and merge MRs from the command line.
+**glab mr** manages GitLab merge requests from the command line. It provides subcommands for creating, viewing, reviewing, approving, and merging MRs without leaving the terminal.
 
 # SEE ALSO
 
 [glab](/man/glab)(1), [glab-mr-create](/man/glab-mr-create)(1)
-

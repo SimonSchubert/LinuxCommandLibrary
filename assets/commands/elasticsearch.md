@@ -1,3 +1,7 @@
+# TAGLINE
+
+distributed search and analytics engine
+
 # TLDR
 
 **Start Elasticsearch**
@@ -57,17 +61,16 @@
 
 Data is stored as JSON documents in indices (analogous to databases). Elasticsearch automatically distributes data across nodes for scalability and replication. It's commonly used with Kibana for visualization and as part of the ELK stack (Elasticsearch, Logstash, Kibana).
 
-# REST API EXAMPLES
+# CONFIGURATION
 
-```bash
-# Index a document
-curl -X POST "localhost:9200/myindex/_doc" \
-  -H "Content-Type: application/json" \
-  -d '{"title": "Hello", "content": "World"}'
+**/etc/elasticsearch/elasticsearch.yml**
+> Main configuration file for cluster settings, network configuration, and paths.
 
-# Search
-curl -X GET "localhost:9200/myindex/_search?q=hello"
-```
+**/etc/elasticsearch/jvm.options**
+> JVM heap size and garbage collection settings.
+
+**config/elasticsearch.keystore**
+> Secure storage for sensitive settings like passwords.
 
 # CAVEATS
 

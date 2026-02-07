@@ -1,3 +1,7 @@
+# TAGLINE
+
+Laravel's command-line interface for PHP development tasks.
+
 # TLDR
 
 **List all available commands**

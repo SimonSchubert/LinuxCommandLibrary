@@ -1,3 +1,7 @@
+# TAGLINE
+
+Decrypt WEP and WPA/WPA2 encrypted capture files
+
 # TLDR
 
 **Decrypt WEP** capture file

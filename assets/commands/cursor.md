@@ -1,3 +1,7 @@
+# TAGLINE
+
+AI-powered code editor CLI
+
 # TLDR
 
 **Start interactive agent** session

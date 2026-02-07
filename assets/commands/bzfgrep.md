@@ -1,3 +1,7 @@
+# TAGLINE
+
+Search bzip2 files for fixed string patterns
+
 # TLDR
 
 **Search for a fixed string in a bzip2 compressed file**

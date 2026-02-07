@@ -1,3 +1,7 @@
+# TAGLINE
+
+Modern bibliography processor for BibLaTeX
+
 # TLDR
 
 **Process a BibLaTeX bibliography**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+container platform for application deployment
+
 # TLDR
 
 **Run** container
@@ -34,9 +38,11 @@
 
 # DESCRIPTION
 
-**docker** is a platform for developing, shipping, and running applications in containers. It packages applications with dependencies into standardized units, ensuring consistency across different environments.
+**docker** is a platform for developing, shipping, and running applications in containers. Containers package applications with their dependencies into standardized units, ensuring consistency across different environments from development to production.
 
-The tool has revolutionized application deployment and development workflows.
+Docker has revolutionized application deployment and development workflows by solving the "it works on my machine" problem. It uses OS-level virtualization to isolate applications, making them portable, efficient, and easy to scale. Containers share the host kernel but maintain isolated filesystems, processes, and networking.
+
+The Docker ecosystem includes Docker Engine (the runtime), Docker Hub (image registry), and a comprehensive CLI for managing containers, images, networks, and volumes. Docker images are built in layers, making them efficient to distribute and update. The platform supports both single-container applications and complex multi-service architectures.
 
 # PARAMETERS
 
@@ -175,6 +181,14 @@ docker inspect container_name
 # Container stats
 docker stats
 ```
+
+# CONFIGURATION
+
+**/etc/docker/daemon.json**
+> Docker daemon configuration including storage drivers, logging, registry mirrors, and resource limits.
+
+**~/.docker/config.json**
+> User-level configuration for registry authentication, default command settings, and CLI preferences.
 
 # CAVEATS
 

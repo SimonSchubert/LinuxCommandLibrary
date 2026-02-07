@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create and restore GitLab instance backups
+
 # TLDR
 
 **Create GitLab backup**
@@ -34,9 +38,10 @@
 
 # DESCRIPTION
 
-**gitlab-backup** creates and restores GitLab instance backups. Backs up repositories, database, uploads, and other GitLab data.
+**gitlab-backup** creates and restores GitLab instance backups. It backs up repositories, database, uploads, and other GitLab data into a single archive.
+
+The tool is part of the Omnibus GitLab installation and should be run with root privileges. Backups are stored in the configured backup path.
 
 # SEE ALSO
 
 [gitlab-ctl](/man/gitlab-ctl)(8), [gitlab-rake](/man/gitlab-rake)(1)
-

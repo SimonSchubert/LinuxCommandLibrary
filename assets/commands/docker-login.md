@@ -1,3 +1,7 @@
+# TAGLINE
+
+authenticate with Docker registries
+
 # TLDR
 
 **Log in to Docker Hub**
@@ -33,7 +37,12 @@
 
 # DESCRIPTION
 
-**docker login** authenticates with a Docker registry. Credentials are stored in ~/.docker/config.json. Defaults to Docker Hub if no server specified.
+**docker login** authenticates with a Docker registry. Credentials are stored in ~/.docker/config.json. Defaults to Docker Hub if no server specified. Authentication is required to push images and access private repositories. The command supports various registry providers including Docker Hub, GitHub Container Registry, and private registries.
+
+# CONFIGURATION
+
+**~/.docker/config.json**
+> Stores registry credentials and authentication tokens. Uses credential helpers for secure storage when available.
 
 # CAVEATS
 

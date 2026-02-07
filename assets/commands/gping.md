@@ -1,3 +1,7 @@
+# TAGLINE
+
+Graphical ping with live terminal graph
+
 # TLDR
 
 **Ping a host with graph**
@@ -80,15 +84,9 @@ red, green, blue, yellow, cyan, magenta, white, black
 
 # DESCRIPTION
 
-**gping** is a graphical ping tool that displays latency as a live updating graph in the terminal. It provides visual representation of network latency over time.
+**gping** is a graphical ping tool that displays latency as a live updating graph in the terminal. Multiple hosts can be pinged simultaneously, each displayed with different colors for easy comparison.
 
-Multiple hosts can be pinged simultaneously, each displayed with different colors. This allows comparing latency between hosts or tracking multiple endpoints.
-
-The **--cmd** option executes arbitrary commands and graphs their numeric output. Useful for graphing any time-series metric like response times or resource usage.
-
-The graph updates in real-time, showing trends and spikes in latency. The buffer size controls how much history is displayed. Increase for longer time windows.
-
-Simple graphics mode (**-s**) uses basic characters instead of Unicode braille patterns, improving compatibility with terminals lacking Unicode support.
+The **--cmd** option executes arbitrary commands and graphs their numeric output, useful for graphing any time-series metric like response times or resource usage. Simple graphics mode (**-s**) uses basic characters for terminals lacking Unicode braille support.
 
 # CAVEATS
 

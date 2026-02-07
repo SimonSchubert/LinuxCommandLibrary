@@ -1,3 +1,7 @@
+# TAGLINE
+
+analyze ext filesystem free space fragmentation
+
 # TLDR
 
 Check **free space fragmentation**
@@ -14,9 +18,11 @@ Check with specific **chunk size**
 
 # DESCRIPTION
 
-**e2freefrag** prints free space fragmentation information for ext2/ext3/ext4 filesystems. It shows how many free blocks are available as contiguous and aligned free space.
+**e2freefrag** prints free space fragmentation information for ext2/ext3/ext4 filesystems. It shows how many free blocks are available as contiguous and aligned free space in histogram format.
 
-Useful for analyzing filesystem health and determining if defragmentation might help.
+The tool analyzes the filesystem's free space distribution, reporting statistics about chunk sizes and their frequency. This information helps assess filesystem health and determine if defragmentation might improve performance.
+
+Useful for identifying fragmentation patterns that could impact sequential I/O performance, particularly on systems with large files or database workloads.
 
 # PARAMETERS
 

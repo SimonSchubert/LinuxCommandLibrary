@@ -1,3 +1,7 @@
+# TAGLINE
+
+groff preprocessor for chemical structure diagrams
+
 # TLDR
 
 **Process a chem file and view the output**

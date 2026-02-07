@@ -1,3 +1,7 @@
+# TAGLINE
+
+utility to swap two file paths
+
 # TLDR
 
 **Swap** filepaths of two files
@@ -8,12 +12,6 @@
 
 **exch** _file1_ _file2_
 
-# DESCRIPTION
-
-**exch** swaps the filepaths and filenames of two files. After the operation, file1 will have the contents that were at file2's path and vice versa.
-
-Useful for quickly swapping configuration files or backups.
-
 # PARAMETERS
 
 _file1_
@@ -21,6 +19,12 @@ _file1_
 
 _file2_
 > Second file to swap
+
+# DESCRIPTION
+
+**exch** swaps the filepaths and filenames of two files. After the operation, file1 will have the contents that were at file2's path and vice versa.
+
+Useful for quickly swapping configuration files or backups.
 
 # CAVEATS
 

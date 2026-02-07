@@ -1,3 +1,7 @@
+# TAGLINE
+
+File Transfer Protocol client
+
 # TLDR
 
 **Connect to server**
@@ -52,6 +56,11 @@ _HOST_
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**~/.netrc**
+> Stores FTP credentials for auto-login (format: machine host login user password pass).
 
 # DESCRIPTION
 

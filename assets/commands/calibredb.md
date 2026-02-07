@@ -1,3 +1,7 @@
+# TAGLINE
+
+Command-line interface to the Calibre ebook database
+
 # TLDR
 
 **List all books**

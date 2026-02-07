@@ -1,3 +1,7 @@
+# TAGLINE
+
+Lightweight multi-connection download accelerator
+
 # TLDR
 
 **Download** file with multiple connections
@@ -67,6 +71,14 @@ The tool is particularly effective for large files on servers that don't rate-li
 - FTP and HTTP support
 - Progress indicators
 - Proxy support
+
+# CONFIGURATION
+
+**/etc/axelrc**
+> System-wide configuration file.
+
+**~/.axelrc**
+> Per-user configuration file for default settings like number of connections and speed limits.
 
 # CAVEATS
 

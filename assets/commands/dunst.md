@@ -1,3 +1,7 @@
+# TAGLINE
+
+lightweight notification daemon for desktops
+
 # TLDR
 
 **Start dunst** notification daemon
@@ -51,6 +55,11 @@
 
 **-h**, **-help**
 > Display help information.
+
+# CONFIGURATION
+
+**~/.config/dunst/dunstrc**
+> Main configuration file controlling appearance, behavior, urgency styling, and notification rules.
 
 # DESCRIPTION
 

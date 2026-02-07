@@ -1,3 +1,7 @@
+# TAGLINE
+
+ClamAV virus database updater
+
 # TLDR
 
 **Update virus definitions**
@@ -46,6 +50,11 @@
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**/etc/clamav/freshclam.conf**
+> Main configuration file controlling database mirrors, update frequency, proxy settings, and notification options.
 
 # DESCRIPTION
 

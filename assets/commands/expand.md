@@ -1,3 +1,7 @@
+# TAGLINE
+
+convert tab characters to spaces in text files
+
 # TLDR
 
 **Convert tabs to** spaces

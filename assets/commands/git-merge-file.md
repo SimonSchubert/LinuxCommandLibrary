@@ -1,3 +1,7 @@
+# TAGLINE
+
+Three-way file merging
+
 # TLDR
 
 **Three-way merge files**
@@ -51,11 +55,9 @@ _OTHER_
 
 # DESCRIPTION
 
-**git merge-file** performs a three-way merge on files. Given the current version, common ancestor, and other version, it produces a merged result with conflict markers where needed.
+**git merge-file** performs a three-way merge on individual files. Given the current version, common ancestor, and other version, it produces a merged result with conflict markers where automatic resolution is not possible.
 
-The command is low-level, operating on files outside git's control. It's useful for custom merge workflows or merging files independently of git's automatic merging.
-
-git merge-file provides standalone file merging capability.
+The command operates on files outside of Git's normal merge workflow, making it useful for custom merge scenarios or merging files independently. The first file is modified in place with the merge result, and the exit code indicates whether conflicts occurred.
 
 # CAVEATS
 

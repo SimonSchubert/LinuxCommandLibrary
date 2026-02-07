@@ -1,3 +1,7 @@
+# TAGLINE
+
+concatenate and display file contents
+
 # TLDR
 
 Print the contents of a file to **stdout**
@@ -30,7 +34,9 @@ Pass file contents to another program through **stdin**
 
 # DESCRIPTION
 
-**cat** (concatenate) reads files sequentially and writes their contents to standard output. It is commonly used to display file contents, combine files, and pipe content to other commands.
+**cat** (concatenate) reads files sequentially and writes their contents to standard output. It is one of the most frequently used Unix utilities, serving as the standard way to display file contents, combine multiple files, and pipe data to other commands in shell pipelines.
+
+When given multiple file arguments, cat concatenates them in order, making it useful for joining split files or appending content. With no file arguments or a dash (-), it reads from standard input, which allows it to function as a simple pass-through in pipelines. Various flags control output formatting, including line numbering and display of non-printing characters.
 
 # PARAMETERS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display details about a Homebrew package
+
 # TLDR
 
 **Display information about a formula**

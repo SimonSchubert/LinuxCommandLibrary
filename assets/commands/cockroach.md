@@ -1,3 +1,7 @@
+# TAGLINE
+
+distributed SQL database CLI
+
 # TLDR
 
 **Start single-node cluster**
@@ -38,7 +42,11 @@
 
 # DESCRIPTION
 
-**cockroach** is the CLI for CockroachDB, a distributed SQL database. It manages cluster nodes, executes SQL, handles backups, and monitors cluster health.
+**cockroach** is the command-line interface for CockroachDB, a distributed SQL database designed for cloud-native applications. It provides comprehensive tools for managing multi-node clusters, executing SQL queries, performing backups and restores, and monitoring cluster health and performance.
+
+CockroachDB combines the scalability of NoSQL systems with the consistency guarantees and SQL interface of traditional relational databases. The CLI handles cluster initialization, node management, certificate generation for secure deployments, and direct SQL execution either interactively or programmatically.
+
+The tool supports both secure production deployments with TLS certificates and insecure development environments. It includes a demo mode for experimentation and testing without requiring persistent storage or cluster setup.
 
 # COMMANDS
 

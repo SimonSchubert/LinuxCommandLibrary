@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove untracked files from working tree
+
 # TLDR
 
 **Preview files to remove**
@@ -54,9 +58,9 @@
 
 **git clean** removes untracked files from the working tree. It cleans up generated files, build artifacts, and other files not tracked by git.
 
-The command requires -f to actually delete files, preventing accidental data loss. Dry run mode (-n) shows what would be removed. Options control whether ignored files and directories are included.
+The command requires **-f** to actually delete files, preventing accidental data loss. Dry run mode (**-n**) shows what would be removed without deleting anything. Options control whether ignored files (**-x**/**-X**) and directories (**-d**) are included.
 
-git clean resets the working directory to tracked-only state.
+Combined with **git reset --hard**, git clean provides a complete way to return the working tree to a pristine state matching the last commit. Always preview with **-n** first, as deleted untracked files cannot be recovered through Git.
 
 # CAVEATS
 

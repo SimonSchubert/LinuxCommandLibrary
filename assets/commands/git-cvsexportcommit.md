@@ -1,3 +1,7 @@
+# TAGLINE
+
+Export Git commits to CVS repositories
+
 # TLDR
 
 **Export commit to CVS**
@@ -32,9 +36,10 @@
 
 # DESCRIPTION
 
-**git cvsexportcommit** exports a Git commit to a CVS checkout. Used for migrating changes from Git to legacy CVS repositories.
+**git cvsexportcommit** exports a Git commit to a CVS checkout, enabling migration of changes from Git to legacy CVS repositories. It applies a specific Git commit's changes to a CVS working directory, optionally committing them automatically.
+
+The command handles file additions, modifications, and deletions, translating Git's commit semantics into equivalent CVS operations. It is particularly useful in hybrid environments where teams are transitioning from CVS to Git but must maintain synchronization with CVS-dependent systems.
 
 # SEE ALSO
 
 [git-cvsimport](/man/git-cvsimport)(1), [cvs](/man/cvs)(1)
-

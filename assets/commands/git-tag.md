@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create, list, and manage tags
+
 # TLDR
 
 **List tags**
@@ -69,7 +73,8 @@
 
 **git tag** creates, lists, deletes, and verifies tag objects. Tags mark specific points in history as important, typically used for release versions.
 
+Lightweight tags are simple pointers to a commit, while annotated tags store extra metadata such as the tagger name, date, and a message. Signed tags add a GPG signature for verification.
+
 # SEE ALSO
 
 [git-branch](/man/git-branch)(1), [git-commit](/man/git-commit)(1)
-

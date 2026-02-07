@@ -1,3 +1,7 @@
+# TAGLINE
+
+lightweight minimalist web browser
+
 # TLDR
 
 **Launch Dillo** browser
@@ -43,6 +47,17 @@ _FILE_
 
 **-h**, **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**~/.dillo/dillorc**
+> Main configuration file for browser preferences, fonts, and behavior.
+
+**~/.dillo/keysrc**
+> Keyboard shortcut mappings.
+
+**~/.dillo/domainrc**
+> Domain-specific rules and settings.
 
 # DESCRIPTION
 

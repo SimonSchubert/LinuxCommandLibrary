@@ -1,3 +1,7 @@
+# TAGLINE
+
+Bulk repository synchronization and cloning extension
+
 # TLDR
 
 **Sync all repos**
@@ -48,8 +52,6 @@
 **gh rs** (repo-sync) is a GitHub CLI extension for bulk repository operations. It enables synchronizing and cloning multiple repositories from organizations or users in parallel.
 
 The extension is useful for maintaining local copies of many repositories, setting up development environments, or backing up organization code. It handles authentication and rate limiting automatically.
-
-gh rs streamlines multi-repository workflows for developers and teams.
 
 # CAVEATS
 

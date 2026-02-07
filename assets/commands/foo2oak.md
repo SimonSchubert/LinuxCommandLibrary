@@ -1,3 +1,7 @@
+# TAGLINE
+
+PBM to OAKT converter for Oak Technology printers
+
 # TLDR
 
 **Convert PBM to** OAKT format

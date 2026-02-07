@@ -1,3 +1,7 @@
+# TAGLINE
+
+cert-manager CLI for Kubernetes
+
 # TLDR
 
 **Check cert-manager status**
@@ -34,7 +38,11 @@
 
 # DESCRIPTION
 
-**cmctl** is the cert-manager CLI for Kubernetes. Manages certificates, certificate requests, and cert-manager resources. Can also be used as kubectl plugin (kubectl cert-manager).
+**cmctl** is the official command-line tool for interacting with cert-manager, the Kubernetes certificate management controller. It provides commands for checking API readiness, inspecting certificate status, triggering renewals, and approving or denying certificate requests.
+
+The tool can also be installed as a kubectl plugin, making it available as **kubectl cert-manager**. It simplifies common cert-manager operations that would otherwise require manually creating or editing Kubernetes resources with kubectl.
+
+cmctl is particularly useful for debugging certificate issues, as the **status** and **inspect** commands provide detailed information about certificate chains, expiration dates, and issuance conditions that are not easily visible through standard kubectl output.
 
 # COMMANDS
 

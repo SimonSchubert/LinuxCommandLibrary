@@ -1,3 +1,7 @@
+# TAGLINE
+
+disk quota editor
+
 # TLDR
 
 Edit quota of **current user**
@@ -50,6 +54,17 @@ Quota information is stored in quota.user and quota.group files at the filesyste
 
 **-p, --prototype** _user_
 > Copy quota from prototype user
+
+# CONFIGURATION
+
+**quota.user** (at filesystem root)
+> Stores user quota limits and usage.
+
+**quota.group** (at filesystem root)
+> Stores group quota limits and usage.
+
+**/etc/fstab**
+> Must have usrquota and/or grpquota mount options to enable quotas.
 
 # CAVEATS
 

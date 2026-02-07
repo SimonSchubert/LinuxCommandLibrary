@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate enrollment tokens for nodes and Kibana
+
 # TLDR
 
 **Create token for new node**

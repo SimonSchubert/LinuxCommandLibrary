@@ -1,3 +1,7 @@
+# TAGLINE
+
+static site generator optimized for documentation
+
 # TLDR
 
 **Create a new Docusaurus site**
@@ -88,6 +92,14 @@ my-website/
 ├── docusaurus.config.js
 └── sidebars.js     # Sidebar configuration
 ```
+
+# CONFIGURATION
+
+**docusaurus.config.js**
+> Main configuration defining site metadata, themes, plugins, navbar, footer, and build options.
+
+**sidebars.js**
+> Sidebar structure configuration defining documentation hierarchy and navigation.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates web map tiles from rasters
+
 # TLDR
 
 **Generate tiles from** image

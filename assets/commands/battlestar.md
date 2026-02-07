@@ -1,3 +1,7 @@
+# TAGLINE
+
+Text-based science fiction adventure game
+
 # TLDR
 
 **Start** Battlestar game
@@ -10,9 +14,9 @@
 
 # DESCRIPTION
 
-**battlestar** is a classic text adventure game included in BSD games. Players explore locations, solve puzzles, and interact with characters in a science fiction setting.
+**battlestar** is a classic text adventure game included in the BSD games collection. Set aboard a damaged starship after a fierce battle, players must explore the wreckage, find essential items, and survive encounters while navigating through various locations.
 
-The game is a traditional interactive fiction with parser-based input.
+The game uses a parser-based input system where players type natural language commands to interact with the environment. It features multiple areas to explore, inventory management, and puzzles typical of the interactive fiction genre from the early 1980s.
 
 # GAMEPLAY
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Command-line compiler for Arduino sketches
+
 # TLDR
 
 **Compile** a sketch

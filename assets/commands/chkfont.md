@@ -1,3 +1,7 @@
+# TAGLINE
+
+FIGlet font file validator
+
 # TLDR
 
 **Check a FIGlet font file for errors**

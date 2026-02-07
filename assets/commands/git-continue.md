@@ -1,3 +1,7 @@
+# TAGLINE
+
+Resume interrupted git operations
+
 # TLDR
 
 **Continue interrupted operation**
@@ -12,9 +16,9 @@
 
 **git continue** resumes an interrupted git operation. It's a convenience command from git-extras that detects the pending operation (rebase, merge, cherry-pick, revert) and runs the appropriate continue command.
 
-Instead of remembering git rebase --continue, git cherry-pick --continue, or git merge --continue, a single git continue handles any interrupted operation.
+Instead of remembering **git rebase --continue**, **git cherry-pick --continue**, or **git merge --continue**, a single **git continue** handles any interrupted operation.
 
-git continue simplifies workflow recovery after resolving conflicts.
+The command detects which operation is currently paused and executes the appropriate continue command, reducing cognitive overhead during complex conflict resolution workflows.
 
 # CAVEATS
 

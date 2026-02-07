@@ -1,3 +1,7 @@
+# TAGLINE
+
+Reset passwords for built-in Elasticsearch users
+
 # TLDR
 
 **Reset elastic user password**

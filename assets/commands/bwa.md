@@ -1,3 +1,7 @@
+# TAGLINE
+
+Map DNA sequences against a reference genome
+
 # TLDR
 
 **Index** the reference genome

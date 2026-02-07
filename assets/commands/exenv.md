@@ -1,3 +1,7 @@
+# TAGLINE
+
+Elixir version manager
+
 # TLDR
 
 **List installed versions**
@@ -65,7 +69,14 @@
 
 **exenv** manages multiple Elixir versions. Allows switching between versions per-project or globally. Similar to rbenv for Ruby.
 
+# CONFIGURATION
+
+**~/.exenv/version**
+> Global default Elixir version.
+
+**.elixir-version**
+> Directory-local Elixir version file.
+
 # SEE ALSO
 
 [elixir](/man/elixir)(1), [mix](/man/mix)(1)
-

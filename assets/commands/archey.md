@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display system information with ASCII art logo
+
 # TLDR
 
 Show **system information**
@@ -19,6 +23,14 @@ Show **system information**
 
 **-n, --no-color**
 > Disable colored output
+
+# CONFIGURATION
+
+**~/.config/archey4/config.yaml**
+> User-specific configuration for archey4, controlling which entries to display, colors, and logo.
+
+**/etc/archey4/config.yaml**
+> System-wide configuration for archey4.
 
 # CAVEATS
 

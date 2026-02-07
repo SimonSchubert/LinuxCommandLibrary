@@ -1,3 +1,7 @@
+# TAGLINE
+
+Discover hosts on local networks via ARP requests.
+
 # TLDR
 
 **Scan** local network
@@ -58,6 +62,11 @@ The tool shows IP addresses, MAC addresses, and optionally vendor names from the
 
 **-x**, **--ignoredups**
 > Ignore duplicate responses
+
+# CONFIGURATION
+
+**/etc/arp-scan/mac-vendor.txt**
+> MAC address to vendor name mapping database used for OUI resolution.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+lightweight battery indicator for the system tray
+
 # TLDR
 
 Show the **battery icon** in the system tray

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Vote for AUR packages from the command line
+
 # TLDR
 
 Interactively **configure** AUR credentials
@@ -39,6 +43,11 @@ Credentials are stored in **~/.config/aurvote** and must be configured before us
 
 **-h, --help**
 > Display help information
+
+# CONFIGURATION
+
+**~/.config/aurvote**
+> Stores AUR credentials (username and password) for authentication. Created interactively with --configure.
 
 # CAVEATS
 

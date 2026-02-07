@@ -1,3 +1,7 @@
+# TAGLINE
+
+Tetris-like puzzle game
+
 # TLDR
 
 **Start** a new game

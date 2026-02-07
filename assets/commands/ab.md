@@ -1,3 +1,7 @@
+# TAGLINE
+
+HTTP server benchmarking tool
+
 # TLDR
 
 **Benchmark** a URL with 100 requests using 10 concurrent connections

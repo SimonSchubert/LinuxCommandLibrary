@@ -1,3 +1,7 @@
+# TAGLINE
+
+Upgrade installed Homebrew packages to newer versions
+
 # TLDR
 
 **Upgrade all installed formulae and casks**

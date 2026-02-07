@@ -1,3 +1,7 @@
+# TAGLINE
+
+collection of programs automating Debian package building
+
 # TLDR
 
 **Clean build artifacts**

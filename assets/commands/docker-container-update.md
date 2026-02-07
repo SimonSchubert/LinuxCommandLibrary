@@ -1,3 +1,7 @@
+# TAGLINE
+
+dynamically update container resource limits
+
 # TLDR
 
 **Update CPU limit**
@@ -39,7 +43,9 @@
 
 # DESCRIPTION
 
-**docker container update** dynamically updates container resource limits. Some updates require container restart to take effect.
+**docker container update** dynamically updates resource constraints and restart policies for one or more running containers without requiring a restart. This allows administrators to adjust resource limits in response to changing workload requirements or to correct initial configuration mistakes.
+
+While most resource limit changes take effect immediately, some settings may require a container restart to fully apply. The restart policy update is particularly useful for changing whether containers should automatically restart on failure or system boot.
 
 # SEE ALSO
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage distributed system deployments and lifecycle operations.
+
 # TLDR
 
 **Deploy** release

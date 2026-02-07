@@ -1,3 +1,7 @@
+# TAGLINE
+
+gettext infrastructure initialization tool
+
 # TLDR
 
 **Initialize gettext in** project

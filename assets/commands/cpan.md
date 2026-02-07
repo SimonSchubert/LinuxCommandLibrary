@@ -1,3 +1,7 @@
+# TAGLINE
+
+Perl module installer from CPAN
+
 # TLDR
 
 **Install a Perl module**
@@ -89,6 +93,11 @@ On first run, cpan enters a configuration mode to set up mirrors, build preferen
 The interactive shell provides commands for searching (m /pattern/), installing (install Module), examining (look Module), and managing the local CPAN cache. Tab completion and command history are available in the shell.
 
 CPAN.pm downloads module distributions to **~/.cpan/sources/**, extracts and builds them in **~/.cpan/build/**, then installs to the Perl library path. On systems where users lack write access to system Perl directories, consider using **local::lib** or **perlbrew** for user-local installations.
+
+# CONFIGURATION
+
+**~/.cpan/CPAN/MyConfig.pm**
+> Main CPAN configuration storing mirror URLs, build preferences, proxy settings, and installation directories.
 
 # CAVEATS
 

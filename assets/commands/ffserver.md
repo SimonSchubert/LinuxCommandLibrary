@@ -1,3 +1,7 @@
+# TAGLINE
+
+deprecated HTTP/RTSP streaming server
+
 # TLDR
 
 **Start streaming server**
@@ -32,6 +36,11 @@
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**ffserver.conf**
+> Server configuration defining input feeds, output streams, formats, and bitrates.
 
 # DESCRIPTION
 

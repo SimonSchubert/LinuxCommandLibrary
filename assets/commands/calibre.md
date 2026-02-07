@@ -1,3 +1,7 @@
+# TAGLINE
+
+Ebook management and format conversion suite
+
 # TLDR
 
 **Start** Calibre GUI
@@ -85,6 +89,11 @@ calibre-server /path/to/library
 # Fetch metadata
 fetch-ebook-metadata --isbn 9780123456789
 ```
+
+# CONFIGURATION
+
+**~/.config/calibre/**
+> Configuration directory containing preferences, plugins, and library settings
 
 # CAVEATS
 

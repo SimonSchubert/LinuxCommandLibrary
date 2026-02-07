@@ -1,3 +1,7 @@
+# TAGLINE
+
+simulated root environment for package building
+
 # TLDR
 
 Start default shell as **fakeroot**
@@ -47,6 +51,14 @@ Commonly used for building packages that need to create root-owned files.
 
 **-h, --help**
 > Display help
+
+# DESCRIPTION
+
+**fakeroot** runs commands in an environment that fakes root privileges for file manipulation. It intercepts system calls to make files appear owned by root without actual root access.
+
+The tool uses LD_PRELOAD to intercept library calls and maintain a database of fake ownership and permission information. When a program creates a file, fakeroot records it as owned by root (uid 0, gid 0) while the actual file on disk retains the user's ownership.
+
+This is commonly used for building packages (particularly Debian .deb packages) that need to create root-owned files. The saved environment (-s/-i) allows preserving fake ownership across multiple commands and sessions.
 
 # CAVEATS
 

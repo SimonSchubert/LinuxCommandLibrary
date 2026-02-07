@@ -1,3 +1,7 @@
+# TAGLINE
+
+calculate actual CPU frequency using hardware counters
+
 # TLDR
 
 Start calculating for **all CPUs** with 1 second interval

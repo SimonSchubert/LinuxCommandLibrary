@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line password manager and secrets management
+
 # TLDR
 
 **Sign in** to a 1Password account

@@ -1,3 +1,7 @@
+# TAGLINE
+
+dump detailed x86/x64 processor information
+
 # TLDR
 
 Display information for **all CPUs**

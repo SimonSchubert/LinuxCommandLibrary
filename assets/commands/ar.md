@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create and manage static library archives
+
 # TLDR
 
 **Create** archive from files

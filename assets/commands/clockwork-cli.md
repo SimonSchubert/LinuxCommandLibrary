@@ -1,3 +1,7 @@
+# TAGLINE
+
+PHP debugging and profiling tool CLI
+
 # TLDR
 
 **Start Clockwork server**
@@ -18,9 +22,9 @@
 
 # DESCRIPTION
 
-**clockwork-cli** is the command-line interface for Clockwork, a PHP debugging and profiling tool. It works with the Clockwork browser extension to provide insights into Laravel and other PHP framework requests.
+**clockwork-cli** is the command-line interface for Clockwork, a PHP debugging and profiling tool. It works with the Clockwork browser extension to provide detailed insights into Laravel, Slim, and other PHP framework requests, including database queries, cache operations, log entries, and timeline data.
 
-The CLI manages the local Clockwork server and stored request data.
+The CLI manages the local Clockwork server that receives profiling data from your PHP application and serves it to the browser extension. It can also display request logs directly in the terminal and clean up stored profiling data.
 
 # SEE ALSO
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Record and recover reference movements
+
 # TLDR
 
 **Show reflog**
@@ -52,11 +56,9 @@
 
 # DESCRIPTION
 
-**git reflog** records when refs are updated. It tracks branch tip movements, providing a safety net for recovering lost commits after resets, rebases, or accidental deletions.
+**git reflog** records when refs (like HEAD and branch tips) are updated, providing a safety net for recovering lost commits. After accidental resets, rebases, or branch deletions, the reflog shows where refs previously pointed, allowing recovery of otherwise unreachable commits.
 
-The reflog shows where HEAD and branches pointed over time. Entries can be used to recover commits that are no longer reachable from any branch.
-
-git reflog is essential for recovering from mistakes.
+Entries in the reflog expire after a configurable period (default 90 days). The reflog is local only and is not shared between repositories.
 
 # CAVEATS
 

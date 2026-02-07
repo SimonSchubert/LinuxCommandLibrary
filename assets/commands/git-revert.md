@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create commits that undo previous changes
+
 # TLDR
 
 **Revert a commit**
@@ -53,9 +57,10 @@
 
 # DESCRIPTION
 
-**git revert** creates new commits that undo the changes of specified commits. Unlike reset, it preserves history by adding new commits.
+**git revert** creates new commits that undo the changes introduced by specified commits. Unlike `git reset`, it preserves history by adding inverse commits rather than removing existing ones.
+
+This makes it safe for shared branches where rewriting history would cause problems. Use `-m` to specify the mainline parent when reverting merge commits.
 
 # SEE ALSO
 
 [git-reset](/man/git-reset)(1), [git-cherry-pick](/man/git-cherry-pick)(1)
-

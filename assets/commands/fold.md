@@ -1,3 +1,7 @@
+# TAGLINE
+
+wrap input lines to fit within specified width
+
 # TLDR
 
 **Fold** lines to a specific width (default: 80 columns)

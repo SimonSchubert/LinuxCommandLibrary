@@ -1,3 +1,7 @@
+# TAGLINE
+
+Vendor all dependencies locally
+
 # TLDR
 
 **Vendor dependencies**
@@ -26,7 +30,9 @@
 
 # DESCRIPTION
 
-**cargo vendor** copies all crates.io and git dependencies into a local directory. Outputs configuration for using vendored sources. Useful for offline builds and reproducible environments.
+**cargo vendor** downloads and copies all crates.io and git dependencies into a local directory (default: `vendor/`). It outputs the Cargo configuration needed to redirect dependency resolution to the vendored sources.
+
+This is primarily used for offline builds, air-gapped environments, and reproducible build systems where network access during compilation is not available or not desired. The vendored sources are read-only; to modify a vendored crate, use the `[patch]` section in Cargo.toml instead of editing files directly in the vendor directory.
 
 # PARAMETERS
 
@@ -53,15 +59,8 @@
 
 # CONFIGURATION
 
-After vendoring, add output to .cargo/config.toml:
-
-```toml
-[source.crates-io]
-replace-with = "vendored-sources"
-
-[source.vendored-sources]
-directory = "vendor"
-```
+**.cargo/config.toml**
+> Source replacement settings that redirect dependency resolution to the vendored directory. The output of `cargo vendor` provides the exact configuration to add.
 
 # OFFLINE BUILDS
 

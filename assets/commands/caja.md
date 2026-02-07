@@ -1,3 +1,7 @@
+# TAGLINE
+
+File manager for the MATE desktop
+
 # TLDR
 
 Open the **home directory**

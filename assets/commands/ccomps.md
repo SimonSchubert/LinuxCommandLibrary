@@ -1,3 +1,7 @@
+# TAGLINE
+
+decompose graphs into connected components
+
 # TLDR
 
 **Extract connected components** from a graph

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Salvage files from a damaged btrfs filesystem
+
 # TLDR
 
 **Restore** all files from a btrfs device

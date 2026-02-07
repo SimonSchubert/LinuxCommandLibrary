@@ -1,3 +1,7 @@
+# TAGLINE
+
+Command-line interface for the Ghost publishing platform
+
 # TLDR
 
 **Start Ghost in development**
@@ -74,9 +78,18 @@
 
 # DESCRIPTION
 
-**ghost** is the CLI for Ghost, an open-source publishing platform. Manages Ghost installations, updates, and configurations.
+**ghost** is the command-line interface for Ghost, a modern open-source publishing platform built on Node.js. It provides complete lifecycle management for Ghost installations, including initial setup, updates, configuration, and process management.
+
+The CLI automates database setup, SSL certificate installation, systemd service configuration, and nginx proxy setup. It handles migrations during updates and provides diagnostic tools through the doctor command.
+
+# CONFIGURATION
+
+**config.production.json**
+> Production environment configuration for database, URL, mail, and server settings.
+
+**config.development.json**
+> Development environment configuration.
 
 # SEE ALSO
 
 [node](/man/node)(1), [npm](/man/npm)(1)
-

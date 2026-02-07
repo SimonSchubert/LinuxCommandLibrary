@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Prometheus Alertmanager from the command line
+
 # TLDR
 
 **List all current alerts**
@@ -80,6 +84,11 @@
 The tool connects to an Alertmanager instance via its HTTP API to perform operations. It is particularly useful for creating silences during maintenance windows, debugging alert routing, and integrating Alertmanager management into automation scripts.
 
 Configuration can be validated offline using **check-config** without requiring a running Alertmanager instance. The **config routes test** command helps verify that alerts will be routed to expected receivers based on their labels.
+
+# CONFIGURATION
+
+**~/.config/amtool/config.yml**
+> Persistent configuration for the Alertmanager URL, author, and output format defaults.
 
 # CAVEATS
 

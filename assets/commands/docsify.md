@@ -1,3 +1,7 @@
+# TAGLINE
+
+dynamic Markdown documentation site generator
+
 # TLDR
 
 **Initialize new documentation** site

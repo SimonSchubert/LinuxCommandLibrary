@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fast, scalable multi-language build system
+
 # TLDR
 
 **Build** target
@@ -92,6 +96,17 @@ cc_binary(
     srcs = ["hello.cc"],
 )
 ```
+
+# CONFIGURATION
+
+**~/.bazelrc**
+> User-level build options and configuration flags.
+
+**WORKSPACE** or **WORKSPACE.bazel**
+> Root file that defines external dependencies and the project boundary.
+
+**.bazelrc**
+> Project-level build options, config groups, and default flags.
 
 # CAVEATS
 

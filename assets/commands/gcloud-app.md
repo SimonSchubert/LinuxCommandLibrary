@@ -1,3 +1,7 @@
+# TAGLINE
+
+Google App Engine management commands
+
 # TLDR
 
 **Deploy application**
@@ -52,11 +56,11 @@ _COMMAND_
 
 # DESCRIPTION
 
-**gcloud app** manages Google App Engine applications. It handles deployment, monitoring, and management of serverless applications running on App Engine.
+**gcloud app** provides comprehensive management capabilities for Google App Engine applications. App Engine is Google's original Platform-as-a-Service offering, allowing developers to deploy web applications without managing the underlying infrastructure.
 
-The command group supports deploying from app.yaml configurations, viewing logs, managing versions, and controlling traffic splitting between versions.
+The command group handles the complete application lifecycle including deployment from app.yaml configuration files, version management, and traffic routing between multiple versions. This enables zero-downtime deployments and gradual rollouts through traffic splitting.
 
-gcloud app provides CLI access to all App Engine features.
+Monitoring capabilities include streaming logs and viewing application status. The browse command provides quick access to your deployed application in a web browser. gcloud app integrates with other GCP services, making it easy to connect App Engine applications to databases, storage, and other cloud resources.
 
 # CAVEATS
 

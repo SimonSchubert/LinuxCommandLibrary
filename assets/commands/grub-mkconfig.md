@@ -1,3 +1,7 @@
+# TAGLINE
+
+generate GRUB bootloader configuration file
+
 # TLDR
 
 Print configuration to **stdout** (dry run)
@@ -20,10 +24,6 @@ Display **version**
 
 **grub-mkconfig** [_OPTION_]
 
-# DESCRIPTION
-
-**grub-mkconfig** generates a GRUB bootloader configuration file by processing system settings and detecting installed operating systems. It is typically used after kernel updates or when modifying boot parameters.
-
 # PARAMETERS
 
 **-o, --output=FILE**
@@ -34,6 +34,20 @@ Display **version**
 
 **-V, --version**
 > Display version information and exit
+
+# DESCRIPTION
+
+**grub-mkconfig** generates a GRUB bootloader configuration file by processing system settings and detecting installed operating systems. It is typically used after kernel updates or when modifying boot parameters.
+
+The command reads settings from /etc/default/grub and executes scripts in /etc/grub.d/ to produce the final grub.cfg file.
+
+# CONFIGURATION
+
+**/etc/default/grub**
+> Main settings file controlling timeout, default entry, kernel parameters, and display options.
+
+**/etc/grub.d/**
+> Directory of scripts executed during configuration generation. Custom boot entries can be added here.
 
 # CAVEATS
 

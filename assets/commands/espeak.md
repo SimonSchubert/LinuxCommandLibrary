@@ -1,3 +1,7 @@
+# TAGLINE
+
+compact open-source speech synthesizer
+
 # TLDR
 
 **Speak text**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+AI-powered writing assistant
+
 # TLDR
 
 **Use Grammarly browser extension**
@@ -10,7 +14,7 @@
 
 # DESCRIPTION
 
-**Grammarly** is a writing assistant that checks grammar, spelling, punctuation, and style. It's primarily used through browser extensions, desktop applications, and integrations with text editors.
+**Grammarly** is a writing assistant that checks grammar, spelling, punctuation, and style. It is primarily used through browser extensions, desktop applications, and integrations with text editors.
 
 Grammarly provides real-time suggestions as you write, with premium features including tone detection, clarity improvements, and plagiarism checking.
 

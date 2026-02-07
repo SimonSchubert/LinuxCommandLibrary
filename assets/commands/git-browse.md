@@ -1,3 +1,7 @@
+# TAGLINE
+
+Open repository in web browser
+
 # TLDR
 
 **Open repository in browser**
@@ -37,7 +41,11 @@
 
 # DESCRIPTION
 
-**git browse** opens the GitHub/GitLab repository in a web browser. Part of git-extras. Supports GitHub, GitLab, and Bitbucket URLs.
+**git browse** is a git-extras command that automatically detects your repository's remote URL and opens it in your default web browser. It intelligently handles GitHub, GitLab, and Bitbucket repositories, constructing the appropriate web URLs.
+
+The command can navigate directly to specific commits, branches, or repository sections like the issues page. This eliminates the need to manually type or copy repository URLs when you want to view code on the hosting platform.
+
+The --url option allows scripting and automation by printing the URL instead of opening it, useful for integration with other tools or workflows.
 
 # SEE ALSO
 

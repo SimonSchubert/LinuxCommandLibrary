@@ -1,3 +1,7 @@
+# TAGLINE
+
+change user password expiry information
+
 # TLDR
 
 List **password information** for user
@@ -30,7 +34,11 @@ Force user to **change password** on next login
 
 # DESCRIPTION
 
-**chage** changes user password expiry information. It modifies the number of days between password changes and the date of the last password change. This information is used by the system to determine when a user must change their password.
+**chage** changes user password expiry information stored in /etc/shadow. It controls the number of days between required password changes, the date of the last password change, and account expiration dates.
+
+System administrators use chage to enforce password policies, such as requiring users to change passwords at regular intervals, setting grace periods after expiration, and disabling accounts on a specific date. The -l option allows any user to view their own aging information without root privileges.
+
+Setting the last password change date to 0 with -d forces an immediate password change on the user's next login, which is commonly used when creating new accounts or after a security incident.
 
 # PARAMETERS
 
@@ -57,6 +65,14 @@ Force user to **change password** on next login
 
 **-W, --warndays WARN_DAYS**
 > Days before expiration to warn user
+
+# CONFIGURATION
+
+**/etc/shadow**
+> Password aging data for each user account.
+
+**/etc/login.defs**
+> System-wide defaults for password aging policies.
 
 # CAVEATS
 

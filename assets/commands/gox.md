@@ -1,3 +1,7 @@
+# TAGLINE
+
+Go cross-compilation tool
+
 # TLDR
 
 **Build for all platforms**
@@ -49,11 +53,9 @@ _PACKAGES_
 
 # DESCRIPTION
 
-**gox** is a simple Go cross-compilation tool. It builds Go binaries for multiple platforms in parallel, simplifying release builds.
+**gox** is a simple Go cross-compilation tool that builds Go binaries for multiple platforms in parallel. It wraps `go build` with convenient cross-compilation options and templated output paths using OS and architecture variables.
 
-The tool wraps go build with convenient cross-compilation options. Output paths can be templated with OS and architecture variables.
-
-gox provides easy Go cross-compilation.
+The tool simplifies creating release builds for multiple target platforms from a single command.
 
 # CAVEATS
 

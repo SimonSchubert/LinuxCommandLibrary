@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line shell for Drupal
+
 # TLDR
 
 **Clear all caches**
@@ -64,6 +68,17 @@ _COMMAND_
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**~/.drush/drushrc.php** or **~/.drush/drush.yml**
+> User-level Drush configuration for default options and aliases.
+
+**drush/drush.yml** or **drush/sites/**.yml
+> Project-specific Drush configuration files in Drupal root.
+
+**/drush/sites/*.site.yml**
+> Site alias definitions for managing multiple Drupal sites.
 
 # DESCRIPTION
 

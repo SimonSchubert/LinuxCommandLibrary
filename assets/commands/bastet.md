@@ -1,3 +1,7 @@
+# TAGLINE
+
+Tetris clone that gives you the worst possible pieces
+
 # TLDR
 
 **Start** Bastet Tetris game

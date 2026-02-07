@@ -1,3 +1,7 @@
+# TAGLINE
+
+shell history year-in-review summary generator
+
 # TLDR
 
 **Generate your command-line wrapped** summary

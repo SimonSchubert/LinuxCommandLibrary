@@ -1,3 +1,7 @@
+# TAGLINE
+
+modify CPU frequency scaling settings
+
 # TLDR
 
 Set CPU frequency **governor**

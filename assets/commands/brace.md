@@ -1,3 +1,7 @@
+# TAGLINE
+
+Shell syntax for grouping and expansion
+
 # TLDR
 
 **Command grouping (current shell)**

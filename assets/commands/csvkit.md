@@ -1,3 +1,7 @@
+# TAGLINE
+
+Suite of command-line CSV processing tools
+
 # TLDR
 
 **Display CSV file** in a readable table format

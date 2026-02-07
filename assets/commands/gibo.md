@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate .gitignore files from community-maintained templates
+
 # TLDR
 
 **List available boilerplates**
@@ -49,11 +53,9 @@
 
 # DESCRIPTION
 
-**gibo** (gitignore boilerplates) generates .gitignore files from community-maintained templates. It accesses GitHub's gitignore repository, providing templates for languages, frameworks, IDEs, and operating systems.
+**gibo** (gitignore boilerplates) generates .gitignore files from community-maintained templates hosted in GitHub's official gitignore repository. It provides templates for languages, frameworks, IDEs, and operating systems.
 
-Multiple boilerplates can be combined in a single command. The tool caches templates locally for offline use. Templates are regularly updated by the community.
-
-gibo streamlines .gitignore creation with best-practice patterns.
+Multiple boilerplates can be combined in a single command. The tool caches templates locally for offline use and supports searching by name.
 
 # CAVEATS
 

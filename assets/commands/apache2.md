@@ -1,3 +1,7 @@
+# TAGLINE
+
+Apache HTTP Server daemon
+
 # TLDR
 
 **Start** Apache server
@@ -62,6 +66,23 @@ On Debian/Ubuntu systems, apache2 is typically managed through systemctl or apac
 
 **-k** _command_
 > Signal command: start, stop, restart, graceful
+
+# CONFIGURATION
+
+**/etc/apache2/apache2.conf**
+> Main configuration file on Debian/Ubuntu systems.
+
+**/etc/apache2/sites-available/**
+> Virtual host configuration files, enabled via a2ensite.
+
+**/etc/apache2/mods-available/**
+> Module configuration files, enabled via a2enmod.
+
+**/etc/apache2/envvars**
+> Environment variables for the Apache process (user, group, pid file).
+
+**/etc/apache2/ports.conf**
+> Listen directives specifying which ports Apache binds to.
 
 # CAVEATS
 

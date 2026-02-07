@@ -1,3 +1,7 @@
+# TAGLINE
+
+Real-time web log analyzer and interactive viewer
+
 # TLDR
 
 **Analyze** one or more log files in interactive mode
@@ -56,6 +60,14 @@ Analyze a log and write to **HTML** file in real-time
 Features include real-time analysis with streaming logs, geolocation lookup, user agent parsing, and detailed metrics for visitors, requests, referrers, 404 errors, operating systems, and browsers.
 
 The interactive terminal mode provides a ncurses-based dashboard with drill-down capabilities. HTML reports can update in real-time via WebSocket connections.
+
+# CONFIGURATION
+
+**~/.goaccessrc**
+> User-level configuration file for default options like log format and output settings.
+
+**/etc/goaccess/goaccess.conf**
+> System-wide configuration file with default log format, date/time formats, and panel settings.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+hands-on software engineering challenges platform CLI
+
 # TLDR
 
 **Log in** to CodeCrafters

@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line interface for automatic bug reporting
+
 # TLDR
 
 **List** detected problems

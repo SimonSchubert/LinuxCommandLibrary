@@ -1,3 +1,7 @@
+# TAGLINE
+
+Gradle dependency tracing tool
+
 # TLDR
 
 **Trace dependency**
@@ -25,11 +29,9 @@
 
 # DESCRIPTION
 
-**gradle dependencyInsight** traces why a dependency appears in the build. It shows the path from direct dependencies to the transitive inclusion.
+**gradle dependencyInsight** traces why a specific dependency appears in the build. It shows the path from direct dependencies to the transitive inclusion, revealing how version conflicts are resolved.
 
-The task helps debug version conflicts and understand why specific versions are selected. It's essential for resolving dependency issues.
-
-gradle dependencyInsight explains dependency inclusion.
+The task is essential for debugging dependency issues and understanding why specific versions are selected during resolution.
 
 # CAVEATS
 

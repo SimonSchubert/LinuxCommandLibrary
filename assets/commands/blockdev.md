@@ -1,3 +1,7 @@
+# TAGLINE
+
+Query and set block device parameters
+
 # TLDR
 
 **Report** all devices

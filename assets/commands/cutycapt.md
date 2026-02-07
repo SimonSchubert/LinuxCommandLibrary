@@ -1,3 +1,7 @@
+# TAGLINE
+
+WebKit web page to image converter
+
 # TLDR
 
 **Capture webpage as PNG**

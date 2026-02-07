@@ -1,3 +1,7 @@
+# TAGLINE
+
+Free video editor for cutting, filtering, and encoding
+
 # TLDR
 
 **Open** video file

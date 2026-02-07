@@ -1,3 +1,7 @@
+# TAGLINE
+
+encrypted cloud storage and key-value database
+
 # TLDR
 
 **Store a key-value pair**

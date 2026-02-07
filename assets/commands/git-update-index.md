@@ -1,3 +1,7 @@
+# TAGLINE
+
+Modify index entries for tracked files
+
 # TLDR
 
 **Mark file as unchanged**
@@ -56,9 +60,10 @@
 
 # DESCRIPTION
 
-**git update-index** registers file contents in the working tree to the index. A low-level command used by git add internally.
+**git update-index** registers file contents in the working tree to the index. It is a low-level plumbing command used internally by `git add`.
+
+The most common use is the `--assume-unchanged` flag, which tells Git to temporarily ignore changes to a tracked file. The `--skip-worktree` flag serves a similar purpose but is intended for files managed by sparse checkout.
 
 # SEE ALSO
 
 [git-add](/man/git-add)(1), [git-rm](/man/git-rm)(1)
-

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert AsciiDoc documents to various output formats
+
 # TLDR
 
 **Convert** to HTML

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Simplified OpenPGP signature verifier
+
 # TLDR
 
 **Verify a signed file**
@@ -49,7 +53,9 @@
 
 # DESCRIPTION
 
-**gpgv** is a stripped-down version of gpg for verifying OpenPGP signatures. It assumes all keys in the keyring are trustworthy and does not check for expired or revoked keys. By default, it uses the trustedkeys.kbx or trustedkeys.gpg keyring in the GnuPG home directory.
+**gpgv** is a stripped-down version of gpg designed solely for verifying OpenPGP signatures. It assumes all keys in the keyring are trustworthy and does not check for expired or revoked keys.
+
+By default, it uses the trustedkeys.kbx or trustedkeys.gpg keyring in the GnuPG home directory. It is commonly used in package managers and automated verification scripts where trust is pre-established.
 
 # CAVEATS
 
@@ -58,4 +64,3 @@ Returns 0 if verification succeeds, 1 if any signature is bad, and other codes f
 # SEE ALSO
 
 [gpg](/man/gpg)(1), [gpg2](/man/gpg2)(1)
-

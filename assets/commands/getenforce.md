@@ -1,3 +1,7 @@
+# TAGLINE
+
+SELinux enforcement mode checker
+
 # TLDR
 
 Display the **current mode** of SELinux

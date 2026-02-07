@@ -1,3 +1,7 @@
+# TAGLINE
+
+AUR helper with pacman-like interface
+
 # TLDR
 
 **Synchronize and update** all packages

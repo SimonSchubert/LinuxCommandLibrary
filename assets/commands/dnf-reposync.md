@@ -1,3 +1,7 @@
+# TAGLINE
+
+synchronize remote repositories locally
+
 # TLDR
 
 **Synchronize** repository to local directory

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Unload all AppArmor profiles and disable enforcement
+
 # TLDR
 
 **Disable** all AppArmor profiles and stop enforcement

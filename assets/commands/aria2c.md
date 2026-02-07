@@ -1,3 +1,7 @@
+# TAGLINE
+
+Multi-protocol multi-source download utility
+
 # TLDR
 
 **Download** single file
@@ -68,6 +72,11 @@ The tool handles HTTP/HTTPS, FTP, SFTP, BitTorrent, and Metalink, with extensive
 
 **-q**, **--quiet**
 > Quiet mode
+
+# CONFIGURATION
+
+**~/.aria2/aria2.conf**
+> Default configuration file for setting download options, connection limits, and protocol-specific settings.
 
 # CAVEATS
 

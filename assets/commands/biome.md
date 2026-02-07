@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fast code formatter and linter for JavaScript, TypeScript, and CSS
+
 # TLDR
 
 **Initialize Biome in a project**
@@ -81,6 +85,11 @@
 Written in Rust, Biome provides exceptional performance - often 10-100x faster than JavaScript-based alternatives. It requires minimal configuration, with sensible defaults out of the box while remaining highly customizable through **biome.json**.
 
 The tool integrates formatting and linting into a single pass, reducing overhead. Editor integrations provide real-time feedback, and the CLI supports various output formats for CI systems.
+
+# CONFIGURATION
+
+**biome.json**
+> Project-level configuration file controlling formatter settings, linter rules, file include/exclude patterns, and language-specific options. Created by `biome init`.
 
 # CAVEATS
 

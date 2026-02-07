@@ -1,3 +1,7 @@
+# TAGLINE
+
+DNS lookup utility using the c-ares library
+
 # TLDR
 
 Display **A record** (default) from DNS for a hostname
@@ -26,7 +30,9 @@ Use a specific **UDP port** to connect to a DNS server
 
 # DESCRIPTION
 
-**adig** prints information received from Domain Name System (DNS) servers. It performs DNS lookups and displays the results, similar to **dig** but using the c-ares library.
+**adig** prints information received from Domain Name System (DNS) servers. It performs DNS lookups and displays the results, similar to **dig** but built on the c-ares asynchronous resolver library.
+
+The tool supports querying specific record types such as A, AAAA, MX, NS, CNAME, SOA, and others. It can direct queries to a particular DNS server and use custom TCP or UDP port numbers for the connection. Debug output is available for troubleshooting resolution issues.
 
 # PARAMETERS
 

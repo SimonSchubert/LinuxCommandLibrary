@@ -1,3 +1,7 @@
+# TAGLINE
+
+Show the working tree status
+
 # TLDR
 
 **Show working tree status**
@@ -53,9 +57,10 @@
 
 # DESCRIPTION
 
-**git status** shows the working tree status. Displays staged changes, unstaged modifications, and untracked files.
+**git status** displays the state of the working tree and the staging area. It shows which changes have been staged, which are unstaged, and which files are untracked by Git.
+
+The `--porcelain` format provides stable, machine-readable output suitable for scripting, while the default format is designed for human readability.
 
 # SEE ALSO
 
 [git-diff](/man/git-diff)(1), [git-add](/man/git-add)(1)
-

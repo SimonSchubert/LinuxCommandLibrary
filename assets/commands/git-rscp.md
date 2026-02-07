@@ -1,3 +1,7 @@
+# TAGLINE
+
+Copy files to a remote via rsync
+
 # TLDR
 
 **Copy files via rsync**
@@ -10,9 +14,8 @@
 
 # DESCRIPTION
 
-**git rscp** copies files to a remote using rsync over SSH. Part of git-extras. Uses the remote's SSH configuration from Git.
+**git rscp** copies files to a Git remote using rsync over SSH. Part of git-extras, it uses the remote's SSH configuration from Git to determine the destination.
 
 # SEE ALSO
 
 [git-scp](/man/git-scp)(1), [rsync](/man/rsync)(1), [git-extras](/man/git-extras)(1)
-

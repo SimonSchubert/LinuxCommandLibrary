@@ -1,3 +1,7 @@
+# TAGLINE
+
+official Clojure language launcher
+
 # TLDR
 
 **Start a Clojure REPL**
@@ -78,6 +82,14 @@
 The CLI integrates with Maven and Git repositories for dependency resolution, automatically downloading and caching libraries as needed. Aliases in deps.edn allow defining different configurations for development, testing, and production environments.
 
 Clojure provides three main execution modes: **-M** for traditional main function execution, **-X** for executing functions with keyword arguments, and **-T** for tool invocation. The REPL supports interactive development with immediate feedback, a core practice in Clojure development.
+
+# CONFIGURATION
+
+**deps.edn**
+> Project-level dependency declarations, aliases, and path configurations.
+
+**~/.clojure/deps.edn**
+> User-level default dependencies and aliases applied to all projects.
 
 # CAVEATS
 

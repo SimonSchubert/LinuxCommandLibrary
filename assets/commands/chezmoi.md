@@ -1,3 +1,7 @@
+# TAGLINE
+
+cross-platform dotfile manager with templating
+
 # TLDR
 
 **Initialize** dotfiles
@@ -30,9 +34,11 @@
 
 # DESCRIPTION
 
-**chezmoi** manages your dotfiles across multiple machines. It uses a source directory (typically a git repository) to store dotfiles and can template them, handle machine-specific configurations, and securely manage secrets.
+**chezmoi** manages dotfiles across multiple machines. It uses a source directory (typically a git repository at **~/.local/share/chezmoi**) to store the desired state of dotfiles, then applies that state to the home directory.
 
-The tool makes it easy to keep configurations synchronized across different systems.
+The tool supports Go templates for machine-specific configurations, allowing a single source repository to produce different files on different machines based on hostname, OS, or custom data. Secrets can be managed through integrations with password managers like 1Password, Bitwarden, and pass, or via encrypted files using age or gpg.
+
+Unlike symlink-based managers like GNU Stow, chezmoi copies files to their destinations, meaning the target files are ordinary files that work with any tool.
 
 # PARAMETERS
 
@@ -113,6 +119,11 @@ Use templates for machine-specific configs:
     email = "personal@example.com"
 {{- end }}
 ```
+
+# CONFIGURATION
+
+**~/.config/chezmoi/chezmoi.toml**
+> Main configuration file. Sets source directory, merge tool, diff settings, encryption method, and secret manager integrations.
 
 # CAVEATS
 

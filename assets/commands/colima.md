@@ -1,3 +1,7 @@
+# TAGLINE
+
+container runtime for macOS and Linux
+
 # TLDR
 
 **Start with defaults**
@@ -38,7 +42,11 @@
 
 # DESCRIPTION
 
-**colima** provides container runtimes on macOS and Linux with minimal setup. Uses Lima to run Linux VMs. Supports Docker and containerd. Free alternative to Docker Desktop.
+**colima** provides container runtimes on macOS and Linux with minimal setup and resource requirements. It uses Lima (Linux virtual machines) to create an environment for running Docker and containerd, offering a completely free and open-source alternative to Docker Desktop.
+
+On macOS, Colima leverages either QEMU or the native Apple Virtualization framework (VZ) for better performance on Apple Silicon. On Linux, it provides a consistent containerization environment. The tool automatically configures Docker client connectivity, port forwarding, and volume mounts, making the VM layer transparent to users.
+
+Colima supports multiple runtime profiles, allowing separate instances with different configurations for various projects. Kubernetes clusters can be enabled for local development. The tool integrates seamlessly with existing Docker workflows, requiring no changes to docker commands or compose files. Resource allocation (CPU, memory, disk) is configurable and lightweight compared to alternatives.
 
 # COMMANDS
 

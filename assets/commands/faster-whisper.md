@@ -1,3 +1,7 @@
+# TAGLINE
+
+optimized Whisper speech recognition engine
+
 # TLDR
 
 **Transcribe an audio file**

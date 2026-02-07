@@ -1,3 +1,7 @@
+# TAGLINE
+
+Android SDK emulator for testing apps
+
 # TLDR
 
 **Start Android emulator**
@@ -65,6 +69,14 @@
 
 **-http-proxy** _proxy_
 > HTTP proxy address.
+
+# CONFIGURATION
+
+**~/.android/avd/**
+> Directory containing Android Virtual Device configurations and data.
+
+**config.ini**
+> AVD-specific configuration file within each AVD directory.
 
 # DESCRIPTION
 

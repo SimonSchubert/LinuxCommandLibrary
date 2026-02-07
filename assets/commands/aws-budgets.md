@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage cost budgets and spending alerts.
+
 # TLDR
 
 **Create a monthly cost budget**

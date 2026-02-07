@@ -1,3 +1,7 @@
+# TAGLINE
+
+remove jobs from shell job table
+
 # TLDR
 
 **Disown the most recent** background job

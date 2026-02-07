@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage business intelligence dashboards and analytics
+
 # TLDR
 
 **List all dashboards** in an account

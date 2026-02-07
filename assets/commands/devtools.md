@@ -1,3 +1,7 @@
+# TAGLINE
+
+Arch Linux package building scripts
+
 # TLDR
 
 **Build a package in a clean chroot**
@@ -82,6 +86,14 @@
 The build scripts (extra-x86_64-build, etc.) create isolated chroots matching official repository states, build packages, and verify the results. This guarantees packages work on fresh Arch installations.
 
 Additional tools help with package maintenance: finding dependencies, comparing versions, signing packages, and managing chroots.
+
+# CONFIGURATION
+
+**/etc/makepkg.conf**
+> System-wide makepkg configuration affecting build behavior.
+
+**~/.makepkg.conf**
+> User-specific makepkg overrides for package building.
 
 # CAVEATS
 

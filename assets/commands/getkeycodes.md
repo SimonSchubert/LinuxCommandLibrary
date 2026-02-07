@@ -1,3 +1,7 @@
+# TAGLINE
+
+keyboard scancode-to-keycode mapping display
+
 # TLDR
 
 **Display keyboard scancodes**

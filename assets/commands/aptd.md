@@ -1,3 +1,7 @@
+# TAGLINE
+
+Package management daemon via D-Bus
+
 # TLDR
 
 **Start** the APT daemon
@@ -31,6 +35,17 @@ The daemon handles authentication through PolicyKit and queues package operation
 
 **-h**, **--help**
 > Show help
+
+# CONFIGURATION
+
+**/etc/apt/apt.conf.d/**
+> APT configuration fragments used by the daemon.
+
+**/usr/share/dbus-1/system-services/org.debian.apt.service**
+> D-Bus service activation file for aptd.
+
+**/usr/share/polkit-1/actions/org.debian.apt.policy**
+> PolicyKit policy file controlling authentication requirements.
 
 # CAVEATS
 

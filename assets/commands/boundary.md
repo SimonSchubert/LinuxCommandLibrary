@@ -1,3 +1,7 @@
+# TAGLINE
+
+Secure identity-based remote access to infrastructure.
+
 # TLDR
 
 **Authenticate to Boundary**

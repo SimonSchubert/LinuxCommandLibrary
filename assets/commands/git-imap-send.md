@@ -1,3 +1,7 @@
+# TAGLINE
+
+Upload patches to IMAP drafts folder
+
 # TLDR
 
 **Send patches via IMAP**
@@ -28,11 +32,14 @@
 
 # DESCRIPTION
 
-**git imap-send** uploads patches to an IMAP drafts folder. This enables composing patch emails in your email client, supporting email-based patch workflows.
+**git imap-send** uploads patches to an IMAP drafts folder, enabling review and composition of patch emails in your email client before sending. It reads mbox-formatted patches from stdin and uploads them to the configured IMAP server.
 
-The command reads mbox-formatted patches from stdin and uploads them to the configured IMAP server. Patches appear as drafts for review before sending.
+This supports the email-driven patch submission workflow used by projects like the Linux kernel, where patches are reviewed on mailing lists rather than through web-based pull requests.
 
-git imap-send supports the email-driven patch submission workflow.
+# CONFIGURATION
+
+**~/.gitconfig**
+> IMAP server configuration including host, user, port, and SSL settings under the [imap] section.
 
 # CAVEATS
 

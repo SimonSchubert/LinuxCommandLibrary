@@ -1,3 +1,7 @@
+# TAGLINE
+
+Cloudflare Tunnel client for secure connections
+
 # TLDR
 
 **Login to Cloudflare**
@@ -35,7 +39,11 @@
 
 # DESCRIPTION
 
-**cloudflared** is the Cloudflare Tunnel client. Creates secure outbound-only connections from your origin to Cloudflare's network without exposing public IPs. Supports HTTP, SSH, RDP, and other protocols.
+**cloudflared** is the Cloudflare Tunnel client that creates secure, outbound-only connections from your origin server to Cloudflare's global network. This eliminates the need to expose public IP addresses or open inbound firewall ports, as all traffic is routed through Cloudflare's edge.
+
+The tool supports tunneling HTTP, SSH, RDP, and arbitrary TCP protocols. Named tunnels provide persistent configurations, while quick tunnels offer temporary public URLs for development and testing. Tunnels can be configured to route traffic based on hostname and path rules defined in a YAML configuration file.
+
+cloudflared also provides Cloudflare Access integration for authenticating users before they reach your origin, and can run as a system service for production deployments.
 
 # TUNNEL COMMANDS
 
@@ -85,15 +93,11 @@
 
 # CONFIGURATION
 
-~/.cloudflared/config.yml:
-```yaml
-tunnel: <tunnel-id>
-credentials-file: /path/to/creds.json
-ingress:
-  - hostname: app.example.com
-    service: http://localhost:8080
-  - service: http_status:404
-```
+**~/.cloudflared/config.yml**
+> Main tunnel configuration defining tunnel ID, credentials path, and ingress routing rules.
+
+**~/.cloudflared/cert.pem**
+> Origin certificate obtained during `cloudflared tunnel login`, used to authenticate tunnel creation.
 
 # CAVEATS
 

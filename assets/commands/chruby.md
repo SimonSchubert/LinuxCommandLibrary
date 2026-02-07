@@ -1,3 +1,7 @@
+# TAGLINE
+
+Lightweight Ruby version switcher
+
 # TLDR
 
 **List available Ruby versions**

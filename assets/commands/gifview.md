@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display GIF images and animations in an X11 window
+
 # TLDR
 
 **View a GIF**
@@ -49,11 +53,9 @@ _FILES_
 
 # DESCRIPTION
 
-**gifview** displays GIF images and animations in an X11 window. It's part of the gifsicle package and provides simple GIF viewing with animation support.
+**gifview** displays GIF images and animations in an X11 window. It is part of the gifsicle package and provides simple GIF viewing with animation support and configurable playback speed.
 
-The viewer handles animated GIFs with configurable playback speed. It can display specific frames for inspection and supports basic window management options.
-
-gifview provides lightweight GIF viewing for X11 environments.
+The viewer can display specific frames for inspection and supports basic window management options. It handles animated GIFs with proper frame timing.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create and apply binary patches
+
 # TLDR
 
 **Create a binary patch**

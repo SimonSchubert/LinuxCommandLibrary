@@ -1,3 +1,7 @@
+# TAGLINE
+
+Analyze and extract firmware images
+
 # TLDR
 
 **Scan** firmware for signatures

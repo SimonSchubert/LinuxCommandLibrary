@@ -1,3 +1,7 @@
+# TAGLINE
+
+Archive utility with stdin file lists
+
 # TLDR
 
 **Create** archive
@@ -24,7 +28,9 @@
 
 **cpio** (copy in/out) is an archiving utility that reads file lists from stdin and creates or extracts archives. It's commonly used in initramfs images, RPM packages, and for copying directory trees.
 
-The tool offers more flexibility than tar in some scenarios due to its stdin-based operation.
+The tool operates in three modes: copy-out (create archives), copy-in (extract archives), and pass-through (copy files without archiving). Unlike tar, which accepts file arguments directly, cpio reads filenames from standard input, typically piped from find. This design provides greater flexibility for file selection using find's powerful filtering capabilities.
+
+cpio is the preferred format for Linux initial ramdisk images because of its simplicity and kernel support. RPM packages use cpio internally for storing files. The format supports various archive types and can preserve file metadata including permissions, ownership, and timestamps.
 
 # PARAMETERS
 

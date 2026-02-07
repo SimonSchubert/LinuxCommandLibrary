@@ -1,3 +1,7 @@
+# TAGLINE
+
+DNS enumeration and reconnaissance tool
+
 # TLDR
 
 **Enumerate DNS information** for domain

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Add third-party repositories to Homebrew
+
 # TLDR
 
 **List all tapped repositories**

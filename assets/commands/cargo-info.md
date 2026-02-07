@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display information about a Rust crate
+
 # TLDR
 
 **Show package information**

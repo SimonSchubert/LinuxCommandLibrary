@@ -1,3 +1,7 @@
+# TAGLINE
+
+image mosaicing, reprojection, and warping utility
+
 # TLDR
 
 **Reproject a raster** to a different coordinate system

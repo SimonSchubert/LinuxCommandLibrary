@@ -1,3 +1,7 @@
+# TAGLINE
+
+Gentoo system configuration and management tool
+
 # TLDR
 
 Display a list of **installed modules**
@@ -18,9 +22,9 @@ Display **help** for a specific module
 
 # DESCRIPTION
 
-**eselect** is Gentoo's multi-purpose configuration and management tool. It provides a modular framework for managing system configuration like kernel symlinks, compiler versions, locales, and profiles.
+**eselect** is Gentoo Linux's multi-purpose configuration and system management tool. It provides a unified, modular framework for managing various system settings that would otherwise require editing configuration files or managing symlinks manually. Common uses include selecting kernel sources, switching compiler versions, managing Java implementations, configuring locales, and setting system profiles.
 
-Each module handles specific administrative tasks with consistent syntax.
+The tool's modular design means each aspect of system configuration is handled by a dedicated module with consistent syntax (list, set, show, help). This makes system administration more accessible and reduces the risk of configuration errors. Additional modules can be provided by packages, extending eselect's capabilities as needed for specific software.
 
 # PARAMETERS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+SQL database with Git-like version control
+
 # TLDR
 
 **Initialize a repository**
@@ -75,6 +79,14 @@ _COMMAND_
 Data is stored in tables queryable via standard SQL (MySQL-compatible). Changes can be staged, committed, and pushed to remotes like DoltHub. Branches allow parallel development with merge capabilities including conflict resolution.
 
 Dolt enables use cases like data versioning, collaborative data editing, reproducible data pipelines, and auditable data changes with complete history.
+
+# CONFIGURATION
+
+**~/.dolt/config_global.json**
+> Global configuration for user name, email, and default remotes.
+
+**.dolt/config.json**
+> Repository-specific configuration for remotes and branch settings.
 
 # CAVEATS
 

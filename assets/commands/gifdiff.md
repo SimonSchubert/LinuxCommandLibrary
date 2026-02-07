@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compare two GIF images and report differences
+
 # TLDR
 
 **Compare two GIF files**
@@ -29,9 +33,10 @@
 
 # DESCRIPTION
 
-**gifdiff** compares two GIF images and reports differences. Can output a visual difference image showing which pixels differ.
+**gifdiff** is a specialized comparison tool for GIF image files, part of the gifsicle toolkit. It performs pixel-by-pixel comparison between two GIF files and reports the differences found.
+
+The tool can produce a visual difference image when using the -o flag, where differing pixels are highlighted. Without the brief flag, **gifdiff** provides detailed information about differences in image dimensions, color palettes, animation frames, and pixel data.
 
 # SEE ALSO
 
 [gifsicle](/man/gifsicle)(1)
-

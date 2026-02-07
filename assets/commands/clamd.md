@@ -1,3 +1,7 @@
+# TAGLINE
+
+multi-threaded antivirus scanning daemon
+
 # TLDR
 
 **Start clamd** daemon
@@ -51,6 +55,11 @@ clamd is commonly used with mail transfer agents (Postfix, Exim, Sendmail), web 
 
 **-V**, **--version**
 > Display version.
+
+# CONFIGURATION
+
+**/etc/clamav/clamd.conf**
+> Daemon configuration including socket type, scan limits, thread count, and logging options.
 
 # CAVEATS
 

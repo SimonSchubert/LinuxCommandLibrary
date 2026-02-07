@@ -1,3 +1,7 @@
+# TAGLINE
+
+cron daemon for job scheduling
+
 # TLDR
 
 Start daemon in **background**
@@ -57,6 +61,17 @@ Enable **clustering** support
 
 **-V**
 > Display version number
+
+# CONFIGURATION
+
+**/etc/crontab**
+> System-wide crontab file monitored by crond.
+
+**/etc/cron.d/**
+> Directory containing additional system crontab files.
+
+**/var/spool/cron/crontabs/**
+> Directory containing user-specific crontab files.
 
 # CAVEATS
 

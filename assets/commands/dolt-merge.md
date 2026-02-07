@@ -1,3 +1,7 @@
+# TAGLINE
+
+join branch histories and table changes
+
 # TLDR
 
 **Merge branch into** current branch

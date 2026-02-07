@@ -1,3 +1,7 @@
+# TAGLINE
+
+Word search game on a grid of letter cubes
+
 # TLDR
 
 **Start a game of Boggle**

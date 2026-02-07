@@ -1,3 +1,7 @@
+# TAGLINE
+
+Utilities for working with Apache Avro data files
+
 # TLDR
 
 **Convert JSON to Avro**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+subdomain brute-force scanner
+
 # TLDR
 
 Scan for subdomains using **internal wordlist**
@@ -22,9 +26,9 @@ Store results to **CSV file**
 
 # DESCRIPTION
 
-**dnsmap** scans a domain for common subdomains using DNS queries. It attempts to resolve subdomain names from a wordlist to discover hidden or unlisted subdomains.
+**dnsmap** is a subdomain brute-force enumeration tool that uses DNS queries to discover subdomains not listed in public DNS records. It works by attempting to resolve potential subdomain names from a wordlist, identifying which ones successfully resolve to IP addresses.
 
-Used in security testing and reconnaissance to map an organization's DNS infrastructure.
+The tool comes with a built-in wordlist of common subdomain names (www, mail, ftp, etc.), but custom wordlists can be specified for more thorough enumeration. DNS wildcard configurations can cause false positives where all subdomains resolve to the same IP; the -i flag allows filtering out these known wildcard addresses. Results can be saved to CSV format for further analysis. The tool is commonly used in penetration testing reconnaissance to map an organization's DNS footprint and discover potential attack surfaces like development servers, staging environments, or forgotten subdomains.
 
 # PARAMETERS
 

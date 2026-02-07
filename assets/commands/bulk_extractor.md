@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extract structured data from disk images for digital forensics
+
 # TLDR
 
 **Extract data from disk image**
@@ -38,9 +42,9 @@
 
 # DESCRIPTION
 
-**bulk_extractor** is a high-performance digital forensics tool that scans disk images, files, or directories and extracts structured information without parsing file system structures. It extracts email addresses, credit card numbers, URLs, and other artifacts.
+**bulk_extractor** is a high-performance digital forensics tool that scans disk images, files, or directories and extracts structured information without parsing file system structures. It extracts email addresses, credit card numbers, URLs, EXIF metadata, and other artifacts directly from raw data streams.
 
-The tool processes data in parallel across multiple CPU cores, making it significantly faster than traditional forensic tools.
+The tool processes data in parallel across multiple CPU cores, making it significantly faster than traditional forensic tools. It operates on raw bytes rather than file system metadata, allowing it to find data in unallocated space, slack space, and within compressed or encoded content. Each scanner plugin generates a separate feature file in the output directory, making results easy to filter and analyze.
 
 # PARAMETERS
 

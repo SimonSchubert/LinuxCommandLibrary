@@ -1,3 +1,7 @@
+# TAGLINE
+
+shell builtin that terminates the current shell or script
+
 # TLDR
 
 **Exit shell with** success status

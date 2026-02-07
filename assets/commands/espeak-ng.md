@@ -1,3 +1,7 @@
+# TAGLINE
+
+next-generation formant-based speech synthesis
+
 # TLDR
 
 **Speak text**

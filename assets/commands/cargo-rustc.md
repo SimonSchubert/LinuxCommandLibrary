@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compile a package with extra rustc flags
+
 # TLDR
 
 **Compile with extra rustc flags**
@@ -26,7 +30,9 @@
 
 # DESCRIPTION
 
-**cargo rustc** compiles the current package and passes extra options directly to rustc. Arguments after -- are passed to the final compiler invocation only, not to dependencies.
+**cargo rustc** compiles the current package and passes extra options directly to the Rust compiler. Unlike `RUSTFLAGS`, which applies flags to all crates in the build, arguments after `--` are passed only to the final compiler invocation for the specified target, not to its dependencies.
+
+This command is useful for enabling specific codegen options, changing optimization levels, emitting intermediate representations like LLVM IR or assembly, or passing custom linker arguments for a single crate without affecting the rest of the dependency graph.
 
 # PARAMETERS
 

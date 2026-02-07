@@ -1,3 +1,7 @@
+# TAGLINE
+
+IP address geolocation lookup via DNS
+
 # TLDR
 
 Print the **country** where an IPv4 address or host is located
@@ -18,7 +22,9 @@ Print more **verbose** information
 
 # DESCRIPTION
 
-**acountry** prints the country where an IPv4 address or hostname is located. It performs DNS lookups to determine the geographic location of the specified address using country code databases.
+**acountry** prints the country where an IPv4 address or hostname is located. It works by performing DNS-based lookups against country code databases to determine the geographic origin of an IP address. The tool is part of the **c-ares** library utilities, which provide asynchronous DNS resolution capabilities.
+
+Unlike GeoIP database tools, acountry relies on DNS TXT record queries to specialized services that map IP ranges to country codes. This makes it lightweight and dependency-free but limited to country-level granularity.
 
 # PARAMETERS
 

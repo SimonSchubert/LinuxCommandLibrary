@@ -1,3 +1,7 @@
+# TAGLINE
+
+Pattern scanning and text processing language
+
 # TLDR
 
 Print the **fifth column** (a.k.a. field) in a space-separated file
@@ -62,13 +66,13 @@ Print all the lines which the 10th column value is **between a min and a max**
 
 # DESCRIPTION
 
-The **cat** command (_concatenate_) is a core Unix utility for reading files sequentially and writing their contents to standard output. It excels at quick file inspection, merging multiple files, and feeding data into pipelines.  
-  
-Basic usage: **cat file.txt** prints a file's content. For concatenation: **cat file1.txt file2.txt > combined.txt** merges files. It processes files in order, reading from stdin if no files are given or if **-** is specified.  
-  
-Options enhance visibility: **-n** numbers lines, **-A** shows all non-printing characters, tabs as **^I**, and line ends as **$**. Suppress blank lines with **-s**. Ideal for scripts and pipes, e.g., **cat data.txt | sort | uniq**.  
-  
-Though simple, **cat** is ubiquitous in shell scripting for input/output manipulation. Avoid for very large files without redirection or piping to pagers like **less**, as it dumps everything at once. Supports text and binary files but may garble terminals with binaries.
+**awk** is a pattern-scanning and text-processing language designed for extracting and transforming structured data. It reads input line by line, splits each line into fields, and applies user-defined rules consisting of patterns and actions.
+
+An awk program is a sequence of **pattern { action }** rules. For each input line, awk tests the patterns and executes the associated actions for any that match. If no pattern is given, the action applies to every line. If no action is given, matching lines are printed.
+
+Fields are accessed as **$1**, **$2**, etc., with **$0** representing the entire line. The default field separator is whitespace, changeable with **-F**. Built-in variables include **NR** (current line number), **NF** (number of fields in current line), **FS** (field separator), and **OFS** (output field separator).
+
+Special patterns **BEGIN** and **END** execute actions before and after all input is processed, useful for initialization and summary output. Awk supports variables, arrays, arithmetic, string functions, printf formatting, and control flow statements, making it a complete programming language for text processing.
 
 # FIELD ACCESS
 
@@ -80,12 +84,12 @@ Use **\$(n)** for nth field
 
 # CAVEATS
 
-Binary files may corrupt terminal display; use **hexdump** or **xxd**. No built-in paging for large files—pipe to **less**. Processes entire files sequentially without seeking.
+Different awk implementations (gawk, mawk, nawk) have varying feature sets. Regular expressions and string functions may behave differently across implementations. Associative arrays are unordered. Floating-point arithmetic may produce rounding errors. Very large files are processed efficiently but complex programs with many arrays can consume significant memory.
 
 # HISTORY
 
-Originated in 1971 for first Edition Unix by Ken Thompson at Bell Labs. Core POSIX utility, evolved in GNU coreutils with enhanced options.
+**awk** was created by **Alfred Aho**, **Peter Weinberger**, and **Brian Kernighan** at Bell Labs in **1977**, with the name derived from their initials. It was redesigned and expanded in **1985** as "new awk" (nawk). **GNU awk** (gawk) added many extensions including networking and internationalization. Awk is a standard POSIX utility available on virtually all Unix-like systems.
 
 # SEE ALSO
 
-[screenfetch](/man/screenfetch)(1), [fastfetch](/man/fastfetch)(1), [inxi](/man/inxi "inxi man page")(1), [hwinfo](/man/hwinfo)(1), [lshw](/man/lshw)(1)
+[sed](/man/sed)(1), [grep](/man/grep)(1), [cut](/man/cut)(1), [perl](/man/perl)(1), [gawk](/man/gawk)(1)

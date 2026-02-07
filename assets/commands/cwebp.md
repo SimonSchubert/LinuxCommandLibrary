@@ -1,3 +1,7 @@
+# TAGLINE
+
+Google WebP image encoder
+
 # TLDR
 
 **Convert an image to WebP** format

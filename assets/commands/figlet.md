@@ -1,3 +1,7 @@
+# TAGLINE
+
+ASCII art text banner generator
+
 # TLDR
 
 **Create ASCII art** text

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Print a fully qualified package specification
+
 # TLDR
 
 **Show package ID for current package**
@@ -22,9 +26,9 @@
 
 # DESCRIPTION
 
-**cargo pkgid** prints the fully qualified package ID specification for a package in the dependency graph. Useful for disambiguation when multiple versions of a package exist.
+**cargo pkgid** prints the fully qualified package ID specification for a package in the dependency graph. The output includes the source URL, package name, and version in a canonical format that can be used with other Cargo commands like `cargo update -p`.
 
-Requires Cargo.lock to exist.
+This command is primarily useful when multiple versions of the same package exist in the dependency tree and disambiguation is needed. It accepts partial specifications such as just the name or name with version, and resolves them against the lockfile. The Cargo.lock file must exist and dependencies must be fetched before this command can be used.
 
 # PARAMETERS
 

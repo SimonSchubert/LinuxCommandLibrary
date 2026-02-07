@@ -1,3 +1,7 @@
+# TAGLINE
+
+Highly configurable tiling window manager for X11
+
 # TLDR
 
 **Start awesome** window manager
@@ -71,6 +75,11 @@ Default keybindings include:
 - **Mod4 + 1-9**: Switch to tag
 
 The window manager includes a built-in menu, notification system, and status bar with system information.
+
+# CONFIGURATION
+
+**~/.config/awesome/rc.lua**
+> Main configuration file written in Lua. Controls layouts, keybindings, widgets, themes, and all window manager behavior.
 
 # CAVEATS
 

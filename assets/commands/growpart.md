@@ -1,3 +1,7 @@
+# TAGLINE
+
+extend a partition to fill available space
+
 # TLDR
 
 **Extend** partition n to fill empty space until end of disk
@@ -28,7 +32,7 @@ Show what modifications would be made (**dry run**)
 
 # DESCRIPTION
 
-**growpart** extends a partition to fill available free space following it on a disk. It's commonly used after enlarging a virtual disk or cloud volume to make the added space available to the partition.
+**growpart** extends a partition to fill available free space following it on a disk. It is commonly used after enlarging a virtual disk or cloud volume to make the added space available to the partition.
 
 The tool works with both physical disks (like /dev/sda) and disk image files. It automatically handles partition table updates for both MBR and GPT partition schemes.
 

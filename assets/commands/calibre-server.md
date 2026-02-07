@@ -1,3 +1,7 @@
+# TAGLINE
+
+Serve ebook libraries over the network
+
 # TLDR
 
 **Start content server with library**

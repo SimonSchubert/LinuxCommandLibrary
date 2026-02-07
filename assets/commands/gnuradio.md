@@ -1,3 +1,7 @@
+# TAGLINE
+
+software-defined radio signal processing toolkit
+
 # TLDR
 
 **Start GNU Radio Companion**
@@ -50,6 +54,11 @@ uhd_fft            Spectrum analyzer (for USRP)
 - **Filters**: Low/high/band pass, FFT
 - **Modulation**: AM, FM, PSK, QAM
 - **Hardware**: RTL-SDR, USRP, HackRF
+
+# CONFIGURATION
+
+**~/.gnuradio/config.conf**
+> User configuration file for GNU Radio preferences and block paths.
 
 # CAVEATS
 

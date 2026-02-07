@@ -1,3 +1,7 @@
+# TAGLINE
+
+.desktop file generator for Linux applications
+
 # TLDR
 
 **Generate desktop file**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+display text output
+
 # TLDR
 
 **Print** text

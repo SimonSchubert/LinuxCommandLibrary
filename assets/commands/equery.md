@@ -1,3 +1,7 @@
+# TAGLINE
+
+Portage package information query tool
+
 # TLDR
 
 **List** all installed packages
@@ -26,9 +30,9 @@ List all **files** installed by a package
 
 # DESCRIPTION
 
-**equery** views information about Portage packages on Gentoo. It queries installed packages, dependencies, files, and USE flags.
+**equery** is a powerful query tool for viewing information about Portage packages on Gentoo Linux. It provides detailed information about installed packages, their dependencies, owned files, USE flag settings, and more. The tool can search both the local installed package database and the Portage tree including overlays.
 
-Part of the gentoolkit package providing Gentoo-specific utilities.
+As part of the gentoolkit package, equery offers a more user-friendly interface than raw Portage queries, making it easier to investigate package relationships, troubleshoot installation issues, and understand the state of the system. It's an essential tool for Gentoo system administration and package management.
 
 # PARAMETERS
 

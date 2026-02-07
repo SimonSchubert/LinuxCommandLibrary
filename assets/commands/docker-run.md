@@ -1,3 +1,7 @@
+# TAGLINE
+
+create and start containers from images
+
 # TLDR
 
 **Run a container interactively**
@@ -99,3 +103,4 @@ docker run has been the fundamental Docker command since the initial release in 
 # SEE ALSO
 
 [docker](/man/docker)(1), [docker-build](/man/docker-build)(1), [docker-ps](/man/docker-ps)(1), [docker-exec](/man/docker-exec)(1)
+

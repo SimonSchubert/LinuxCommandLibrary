@@ -1,3 +1,7 @@
+# TAGLINE
+
+Structural code search and rewrite using AST patterns
+
 # TLDR
 
 **Search for a pattern** in the current directory
@@ -93,6 +97,11 @@ Patterns use a code-like syntax where **$METAVARIABLES** match any expression. F
 The tool supports multiple languages through tree-sitter parsers, including JavaScript, TypeScript, Python, Rust, Go, C, C++, Java, and more. The **scan** command applies rules from YAML configuration files, enabling project-wide linting and enforcement of code patterns.
 
 Configuration files (**sgconfig.yml**) define rule directories and project settings. Individual rules specify patterns, rewrites, severity levels, and file filters.
+
+# CONFIGURATION
+
+**sgconfig.yml**
+> Project configuration file defining rule directories, language settings, and custom rule paths.
 
 # CAVEATS
 

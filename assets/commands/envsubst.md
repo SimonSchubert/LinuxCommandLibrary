@@ -1,3 +1,7 @@
+# TAGLINE
+
+substitute environment variables in text
+
 # TLDR
 
 **Substitute environment variables** in a file

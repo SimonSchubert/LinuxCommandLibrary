@@ -1,3 +1,7 @@
+# TAGLINE
+
+Open the feedback page in a browser
+
 # TLDR
 
 **Open the feedback page** for Bun

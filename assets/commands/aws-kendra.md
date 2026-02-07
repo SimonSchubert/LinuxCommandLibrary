@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage ML-powered enterprise search indexes and data sources.
+
 # TLDR
 
 **Create a new Kendra index**

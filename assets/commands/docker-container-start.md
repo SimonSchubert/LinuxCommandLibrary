@@ -1,3 +1,7 @@
+# TAGLINE
+
+start one or more stopped containers
+
 # TLDR
 
 **Start a stopped container**
@@ -30,7 +34,9 @@
 
 # DESCRIPTION
 
-**docker container start** starts one or more stopped containers.
+**docker container start** starts one or more stopped containers, resuming them from their previous state. Unlike **docker container run**, which creates a new container, this command operates on existing containers that have been stopped.
+
+The container resumes with its original configuration, including environment variables, volumes, network settings, and the command that was initially specified. This makes it useful for restarting services or resuming work in development containers.
 
 # SEE ALSO
 

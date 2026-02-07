@@ -1,3 +1,7 @@
+# TAGLINE
+
+2D data plotting utility
+
 # TLDR
 
 **Plot data from file**
@@ -58,7 +62,7 @@
 
 # DESCRIPTION
 
-**graph** is part of GNU plotutils, creating 2D plots from data files. It reads x,y coordinates from input and generates publication-quality graphs in various formats.
+**graph** is part of GNU plotutils, creating 2D plots from data files. It reads x,y coordinates from input and generates publication-quality graphs in various formats including PostScript, PNG, and SVG.
 
 The tool supports multiple datasets, various line and symbol styles, and extensive customization for scientific and technical plotting.
 

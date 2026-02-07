@@ -1,3 +1,7 @@
+# TAGLINE
+
+Integrated development environment for Arduino boards
+
 # TLDR
 
 **Start** Arduino IDE
@@ -58,6 +62,11 @@ The command-line interface enables headless compilation and upload, useful for C
 
 **--install-library** _name_
 > Install library
+
+# CONFIGURATION
+
+**~/.arduino15/preferences.txt**
+> IDE preferences including board defaults, editor settings, and additional board manager URLs.
 
 # CAVEATS
 

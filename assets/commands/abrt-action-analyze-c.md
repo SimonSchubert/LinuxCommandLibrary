@@ -1,3 +1,7 @@
+# TAGLINE
+
+generate UUID from coredump for crash deduplication
+
 # TLDR
 
 Calculate and save the UUID for the **current working directory**

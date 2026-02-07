@@ -1,3 +1,7 @@
+# TAGLINE
+
+authenticated HTTP requests to GitHub REST and GraphQL APIs
+
 # TLDR
 
 **Make GET request**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+dm-crypt and LUKS encrypted volume manager
+
 # TLDR
 
 Initialize **LUKS** volume
@@ -62,6 +66,11 @@ Show mapping **status**
 
 **--cipher** _cipher_
 > Encryption cipher specification
+
+# CONFIGURATION
+
+**/etc/crypttab**
+> Defines encrypted volumes to unlock at boot.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Find and replace across tracked files
+
 # TLDR
 
 **Find and replace in tracked files**
@@ -22,9 +26,8 @@
 
 # DESCRIPTION
 
-**git sed** runs find and replace across all tracked files. Part of git-extras. Uses sed internally but only modifies Git-tracked files.
+**git sed** runs a find-and-replace operation across all Git-tracked files. Part of git-extras, it uses sed internally but limits changes to files under version control, avoiding untracked or ignored files.
 
 # SEE ALSO
 
 [sed](/man/sed)(1), [git-grep](/man/git-grep)(1), [git-extras](/man/git-extras)(1)
-

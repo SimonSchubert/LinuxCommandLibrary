@@ -1,3 +1,7 @@
+# TAGLINE
+
+nroff output filter for terminal display
+
 # TLDR
 
 **Filter nroff output** for terminal display

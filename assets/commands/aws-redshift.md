@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage data warehouse clusters
+
 # TLDR
 
 **List all clusters**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Build books and documentation from Markdown
+
 # TLDR
 
 **Initialize new book**
@@ -32,12 +36,6 @@
 
 **gitbook** _command_ [_options_]
 
-# DESCRIPTION
-
-**gitbook** is a command-line tool for building books and documentation from Markdown files. It generates static HTML sites or other formats like PDF and ePub.
-
-The tool uses a book.json configuration file and organizes content through SUMMARY.md for structure. Plugins extend functionality with custom features.
-
 # PARAMETERS
 
 **init**
@@ -70,13 +68,24 @@ The tool uses a book.json configuration file and organizes content through SUMMA
 **--log** _level_
 > Log level.
 
+# DESCRIPTION
+
+**gitbook** is a command-line tool for building books and documentation from Markdown files. It generates static HTML sites or other formats like PDF and ePub.
+
+The tool uses a `book.json` configuration file and organizes content through `SUMMARY.md` for structure. Plugins extend functionality with custom features.
+
+# CONFIGURATION
+
+**book.json**
+> Project configuration file defining title, description, plugins, and build settings.
+
 # CAVEATS
 
 Legacy CLI deprecated. Requires older Node.js versions. Plugins may be unmaintained. PDF generation needs Calibre.
 
 # HISTORY
 
-**GitBook** was created by **Samy Pessé** and **Aaron O'Mullan** around **2014**. It became popular for technical documentation and books. The company pivoted to a commercial platform, leaving the CLI as a legacy tool. Community forks continue development.
+**GitBook** was created by **Samy Pesse** and **Aaron O'Mullan** around **2014**. It became popular for technical documentation and books. The company pivoted to a commercial platform, leaving the CLI as a legacy tool. Community forks continue development.
 
 # SEE ALSO
 

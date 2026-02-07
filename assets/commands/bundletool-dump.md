@@ -1,3 +1,7 @@
+# TAGLINE
+
+Inspect Android App Bundle contents
+
 # TLDR
 
 **Dump the AndroidManifest.xml** from an app bundle

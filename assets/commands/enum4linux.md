@@ -1,3 +1,7 @@
+# TAGLINE
+
+enumerate information from Windows and Samba systems
+
 # TLDR
 
 Enumerate using **all** methods

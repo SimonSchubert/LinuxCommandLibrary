@@ -1,3 +1,7 @@
+# TAGLINE
+
+local GitHub Actions runner
+
 # TLDR
 
 **Run** the default workflow
@@ -67,6 +71,14 @@ The tool supports most GitHub Actions features including matrix builds, secrets,
 
 **--container-architecture** _arch_
 > Container architecture (amd64, arm64)
+
+# CONFIGURATION
+
+**~/.actrc**
+> User-level default flags applied to every act invocation. Each line contains a single command-line flag (e.g., `-P ubuntu-latest=catthehacker/ubuntu:act-latest`).
+
+**.actrc**
+> Project-level defaults, same format as the user-level file. Overrides user-level settings when present.
 
 # CAVEATS
 

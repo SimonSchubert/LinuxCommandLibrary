@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display comprehensive GitHub CLI command reference
+
 # TLDR
 
 **View full reference**
@@ -25,8 +29,6 @@
 **gh reference** displays a comprehensive reference manual for all GitHub CLI commands. It provides a complete listing of commands, subcommands, and their options in a single view.
 
 The reference is useful for discovering available commands and getting an overview of gh's capabilities. Unlike individual help pages, it shows all commands together for easier exploration.
-
-gh reference serves as a quick reference card for the GitHub CLI.
 
 # CAVEATS
 

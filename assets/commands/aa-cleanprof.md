@@ -1,3 +1,7 @@
+# TAGLINE
+
+Clean AppArmor profiles by removing redundant rules
+
 # TLDR
 
 **Clean** a profile to remove unused rules

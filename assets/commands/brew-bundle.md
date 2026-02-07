@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Homebrew packages declaratively with a Brewfile
+
 # TLDR
 
 **Install all dependencies** from Brewfile

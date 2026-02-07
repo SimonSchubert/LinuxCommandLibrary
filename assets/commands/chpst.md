@@ -1,3 +1,7 @@
+# TAGLINE
+
+change process state for runit services
+
 # TLDR
 
 **Run command as different user**
@@ -31,6 +35,14 @@
 # SYNOPSIS
 
 **chpst** [_options_] _command_
+
+# DESCRIPTION
+
+**chpst** (change process state) runs a command with modified process attributes. It is part of the **runit** service supervision suite and provides a standardized way to set user, limits, and environment for service processes.
+
+The tool consolidates several common process modifications: changing user/group identity, setting resource limits, loading environment from files, and obtaining locks. This simplifies service run scripts that would otherwise need multiple commands.
+
+Environment directories (used with **-e**) contain files named for environment variables, with file contents as values. This pattern is common in runit and daemontools service management.
 
 # PARAMETERS
 
@@ -72,14 +84,6 @@
 
 **-v**
 > Verbose output.
-
-# DESCRIPTION
-
-**chpst** (change process state) runs a command with modified process attributes. It is part of the **runit** service supervision suite and provides a standardized way to set user, limits, and environment for service processes.
-
-The tool consolidates several common process modifications: changing user/group identity, setting resource limits, loading environment from files, and obtaining locks. This simplifies service run scripts that would otherwise need multiple commands.
-
-Environment directories (used with **-e**) contain files named for environment variables, with file contents as values. This pattern is common in runit and daemontools service management.
 
 # CAVEATS
 

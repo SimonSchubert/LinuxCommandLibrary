@@ -1,3 +1,7 @@
+# TAGLINE
+
+shell builtin to replace process with command
+
 # TLDR
 
 **Execute** a specific command
@@ -20,12 +24,6 @@ Execute with **different name**
 
 **exec** [_options_] [_command_] [_arguments_]
 
-# DESCRIPTION
-
-**exec** replaces the current shell process with the specified command without creating a child process. When exec completes, the shell session ends because the shell process no longer exists.
-
-Built-in shell command commonly used in shell scripts and wrapper scripts.
-
 # PARAMETERS
 
 **-c**
@@ -36,6 +34,12 @@ Built-in shell command commonly used in shell scripts and wrapper scripts.
 
 **-a** _name_
 > Pass name as argv[0] to command
+
+# DESCRIPTION
+
+**exec** replaces the current shell process with the specified command without creating a child process. When exec completes, the shell session ends because the shell process no longer exists.
+
+Built-in shell command commonly used in shell scripts and wrapper scripts.
 
 # CAVEATS
 

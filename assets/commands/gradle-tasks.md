@@ -1,3 +1,7 @@
+# TAGLINE
+
+Gradle available tasks lister
+
 # TLDR
 
 **List main tasks**
@@ -39,4 +43,3 @@
 # SEE ALSO
 
 [gradle](/man/gradle)(1), [gradle-projects](/man/gradle-projects)(1)
-

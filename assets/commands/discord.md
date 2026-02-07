@@ -1,3 +1,7 @@
+# TAGLINE
+
+voice, video, and text communication platform
+
 # TLDR
 
 **Launch Discord**

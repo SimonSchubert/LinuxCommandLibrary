@@ -1,3 +1,7 @@
+# TAGLINE
+
+secure runtime for JavaScript and TypeScript
+
 # TLDR
 
 **Run a TypeScript/JavaScript** file
@@ -75,6 +79,11 @@ _SCRIPT_
 Deno features native TypeScript support without configuration, a built-in formatter and linter, test runner, and standard library. It uses ES modules exclusively and can import modules directly from URLs, eliminating the need for a package manager.
 
 The runtime is built on V8 and Rust, emphasizing security and modern JavaScript features. It provides Web API compatibility, making code more portable between Deno and browser environments.
+
+# CONFIGURATION
+
+**deno.json** or **deno.jsonc**
+> Project configuration file for import maps, tasks, compiler options, and formatting rules.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+PostgreSQL user removal utility
+
 # TLDR
 
 **Drop a user**

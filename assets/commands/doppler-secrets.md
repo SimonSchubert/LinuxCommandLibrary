@@ -1,3 +1,7 @@
+# TAGLINE
+
+manage and export secret values
+
 # TLDR
 
 **List all secrets**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Encrypt and decrypt files using Blowfish
+
 # TLDR
 
 **Encrypt** file

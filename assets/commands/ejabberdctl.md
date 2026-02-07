@@ -1,3 +1,7 @@
+# TAGLINE
+
+ejabberd XMPP server control utility
+
 # TLDR
 
 **Start ejabberd server**
@@ -69,6 +73,11 @@
 
 **restore** _file_
 > Restore database.
+
+# CONFIGURATION
+
+**/etc/ejabberd/ejabberd.yml**
+> Main ejabberd configuration file controlling server behavior, virtual hosts, and modules.
 
 # DESCRIPTION
 

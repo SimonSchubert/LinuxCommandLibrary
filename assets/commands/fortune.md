@@ -1,3 +1,7 @@
+# TAGLINE
+
+random quotation and fortune display
+
 # TLDR
 
 **Display random fortune**

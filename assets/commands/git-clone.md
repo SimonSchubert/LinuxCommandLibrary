@@ -1,3 +1,7 @@
+# TAGLINE
+
+Clone a remote repository
+
 # TLDR
 
 **Clone a repository**
@@ -55,11 +59,15 @@ _DIRECTORY_
 
 # DESCRIPTION
 
-**git clone** creates a copy of a remote repository. It downloads all branches, tags, and history, setting up remote tracking for the origin.
+**git clone** creates a complete copy of a remote repository, establishing a local working directory with all version history, branches, and tags. It automatically sets up the origin remote and configures tracking branches for remote branches.
 
-The command supports various protocols including HTTPS, SSH, and git://. Shallow clones reduce download size for large repositories. Bare clones create server-side repositories.
+The command supports multiple transfer protocols including HTTPS (standard for public repositories), SSH (preferred for authenticated access), and the git:// protocol (read-only). When cloning, Git fetches all commits, branches, and tags by default, creating a full mirror of the repository's history.
 
-git clone is the standard way to obtain a copy of any git repository.
+Shallow clones (--depth) are useful for large repositories where full history isn't needed, such as CI/CD environments or deployment scenarios. This reduces download time and disk usage significantly by fetching only the most recent commits. However, shallow clones have limitations: some operations like rebasing or examining old history may fail or require fetching additional depth.
+
+Bare repositories (--bare) contain only the Git data without a working directory, making them ideal for server-side hosting or backup purposes. Mirror clones (--mirror) are like bare clones but also replicate all refs including remotes and configuration, perfect for creating complete repository backups.
+
+The --recursive option initializes and updates all Git submodules recursively, essential when working with projects that depend on external repositories. Without this flag, submodule directories will be empty after cloning.
 
 # CAVEATS
 

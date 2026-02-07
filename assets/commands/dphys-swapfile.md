@@ -1,3 +1,7 @@
+# TAGLINE
+
+swap file management for Debian-based systems
+
 # TLDR
 
 **Disable** swap file
@@ -35,6 +39,11 @@ Configuration is in /etc/dphys-swapfile.
 
 **uninstall**
 > Remove swap file
+
+# CONFIGURATION
+
+**/etc/dphys-swapfile**
+> Configuration file for swap size, location, and behavior settings.
 
 # CAVEATS
 

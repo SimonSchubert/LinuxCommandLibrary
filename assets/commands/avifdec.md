@@ -1,3 +1,7 @@
+# TAGLINE
+
+Decode AVIF images to standard formats
+
 # TLDR
 
 **Decode** AVIF to PNG

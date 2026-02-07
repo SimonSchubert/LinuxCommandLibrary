@@ -1,3 +1,7 @@
+# TAGLINE
+
+Sign and verify Android APK files
+
 # TLDR
 
 **Sign** an APK

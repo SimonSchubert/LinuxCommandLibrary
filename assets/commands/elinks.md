@@ -1,3 +1,7 @@
+# TAGLINE
+
+Feature-rich text-mode web browser
+
 # TLDR
 
 **Open a URL** in the text browser
@@ -78,7 +82,21 @@ ELinks can execute JavaScript (when compiled with SpiderMonkey support), handle 
 
 The **-dump** mode is particularly useful for scripts, converting web pages to plain text. Combined with shell pipes, it enables command-line web scraping. The output respects terminal width and formats tables as text.
 
-Configuration is stored in **~/.elinks/** including options, bookmarks, cookies, and history. The setup manager (press **o** in the browser) provides an interactive interface for customization.
+# CONFIGURATION
+
+**~/.elinks/elinks.conf**
+> Main configuration file for browser settings and behavior.
+
+**~/.elinks/bookmarks**
+> Stored bookmarks and favorites.
+
+**~/.elinks/cookies**
+> Cookie storage for websites.
+
+**~/.elinks/history**
+> Browsing and URL history.
+
+The setup manager (press **o** in the browser) provides an interactive interface for customization.
 
 # CAVEATS
 

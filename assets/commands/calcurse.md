@@ -1,3 +1,7 @@
+# TAGLINE
+
+Text-based calendar and scheduling application
+
 # TLDR
 
 Start calcurse in **interactive mode**
@@ -54,6 +58,11 @@ The interactive interface shows a monthly calendar, appointments list, and todo 
 
 **calcurse-caldav**
 > Synchronize with CalDAV server
+
+# CONFIGURATION
+
+**~/.calcurse/conf**
+> Main configuration file for display settings, key bindings, and general options
 
 # CAVEATS
 

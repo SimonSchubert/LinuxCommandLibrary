@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Systems Manager sessions, commands, and parameters.
+
 # TLDR
 
 **List managed instances**

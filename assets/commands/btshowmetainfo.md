@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display metadata from BitTorrent .torrent files
+
 # TLDR
 
 **Display torrent file information**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+CUPS print server daemon
+
 # TLDR
 
 **Start CUPS daemon**
@@ -42,6 +46,11 @@
 **cupsd** is the scheduler daemon for CUPS (Common Unix Printing System). It manages print queues, processes print requests, and handles printer communication.
 
 Typically started automatically by systemd or init scripts.
+
+# CONFIGURATION
+
+**/etc/cups/cupsd.conf**
+> Main configuration file controlling daemon behavior, port settings, access control, and logging levels.
 
 # CAVEATS
 

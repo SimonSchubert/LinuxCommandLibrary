@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Azure DevOps CI/CD pipelines
+
 # TLDR
 
 **List all pipelines** in a project

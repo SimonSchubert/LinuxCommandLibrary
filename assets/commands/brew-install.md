@@ -1,3 +1,7 @@
+# TAGLINE
+
+Install packages via Homebrew
+
 # TLDR
 
 **Install a formula**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Map gamepad inputs to keyboard and mouse
+
 # TLDR
 
 **Launch the graphical interface**
@@ -67,6 +71,11 @@
 The application provides a visual editor for creating profiles that define how each controller input translates to keyboard/mouse actions. Profiles can include complex mappings with modifiers, turbo modes, macros, and set switching for different control schemes within a single profile.
 
 AntiMicroX supports multiple simultaneous controllers, each with independent profiles. It runs on Linux using uinput or XTest for input injection, working with both X11 and Wayland (with limitations).
+
+# CONFIGURATION
+
+**~/.local/share/antimicrox/**
+> Default directory for controller profiles and application data.
 
 # CAVEATS
 

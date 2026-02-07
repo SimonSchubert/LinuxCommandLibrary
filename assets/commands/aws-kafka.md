@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Amazon Managed Streaming for Apache Kafka clusters.
+
 # TLDR
 
 **Create a new MSK cluster**

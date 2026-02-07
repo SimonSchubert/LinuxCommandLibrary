@@ -1,3 +1,7 @@
+# TAGLINE
+
+DDC/CI monitor control via I2C
+
 # TLDR
 
 **List** all compatible displays
@@ -22,9 +26,11 @@
 
 # DESCRIPTION
 
-**ddcutil** queries and modifies display settings using the DDC/CI protocol over I2C. It can control brightness, contrast, input source, and many other monitor parameters.
+**ddcutil** queries and modifies display settings using the DDC/CI (Display Data Channel Command Interface) protocol over I2C bus communication. It can control brightness, contrast, input source, color temperature, and many other monitor parameters that would normally require physical button presses or OSD navigation.
 
-Requires the i2c-dev kernel module to be loaded.
+The tool communicates with monitors through the I2C bus interface, which requires the i2c-dev kernel module. Each monitor exposes a set of VCP (Virtual Control Panel) features that can be read or written. Different monitors support different features, and ddcutil can query capabilities to discover what a specific monitor supports.
+
+Common use cases include scripting brightness adjustments based on time of day, switching monitor inputs automatically, and saving/restoring monitor configurations. This is particularly valuable for multi-monitor setups where manual adjustment would be tedious, or for accessibility scenarios requiring programmatic control of display properties. The tool also enables remote monitor management over SSH for headless systems.
 
 # PARAMETERS
 

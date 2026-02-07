@@ -1,3 +1,7 @@
+# TAGLINE
+
+Analytics and monitoring visualization platform
+
 # TLDR
 
 **Start Grafana server**
@@ -38,7 +42,7 @@
 
 **Grafana** is an open-source analytics and visualization platform. It creates dashboards for monitoring metrics from data sources like Prometheus, InfluxDB, Elasticsearch, and many others.
 
-Grafana provides rich visualization options including graphs, tables, heatmaps, and alerting. It's commonly used for infrastructure monitoring, application metrics, and business analytics.
+Grafana provides rich visualization options including graphs, tables, heatmaps, and alerting. It is commonly used for infrastructure monitoring, application metrics, and business analytics.
 
 # DEFAULT CREDENTIALS
 
@@ -55,7 +59,14 @@ Password: admin (change on first login)
 - User authentication and teams
 - Plugin ecosystem
 - Dashboard templating
-- Annotations and annotations
+
+# CONFIGURATION
+
+**/etc/grafana/grafana.ini**
+> Main server configuration file controlling ports, authentication, database, and data sources.
+
+**/etc/grafana/provisioning/**
+> Directory for provisioning dashboards, data sources, and alerting via YAML files.
 
 # CAVEATS
 
@@ -63,7 +74,7 @@ Runs as service; requires systemd or init setup. Data sources need separate inst
 
 # HISTORY
 
-Grafana was created by **Torkel Ödegaard** in **2014**, initially as a fork of Kibana for Graphite visualization. It grew into a leading visualization platform, with Grafana Labs founded in **2015** to support commercial development.
+Grafana was created by **Torkel Odegaard** in **2014**, initially as a fork of Kibana for Graphite visualization. It grew into a leading visualization platform, with Grafana Labs founded in **2015** to support commercial development.
 
 # SEE ALSO
 

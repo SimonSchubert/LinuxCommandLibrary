@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast multi-purpose DNS toolkit
+
 # TLDR
 
 **Resolve A records** for domains

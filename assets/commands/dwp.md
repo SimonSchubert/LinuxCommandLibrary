@@ -1,3 +1,7 @@
+# TAGLINE
+
+package DWARF debugging information
+
 # TLDR
 
 **Process DWP files**
@@ -14,7 +18,7 @@
 
 The tool is used with split DWARF (-gsplit-dwarf) compilation, where debug info is separated from object files. dwp merges the resulting .dwo files into one efficient package.
 
-Split DWARF with dwp significantly reduces link times and executable sizes while maintaining full debugging capability.
+Split DWARF with dwp significantly reduces link times and executable sizes while maintaining full debugging capability. This is particularly valuable for large C++ codebases where traditional debugging symbols can significantly impact build performance.
 
 # CAVEATS
 

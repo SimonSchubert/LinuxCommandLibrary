@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Azure DevOps Git repositories and pull requests
+
 # TLDR
 
 **List all repositories** in a project

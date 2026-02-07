@@ -1,3 +1,7 @@
+# TAGLINE
+
+retrieve mail from remote servers
+
 # TLDR
 
 **Fetch mail from server**
@@ -69,6 +73,11 @@ The tool is configured through ~/.fetchmailrc or command-line options. It can ru
 
 **-q**, **--quit**
 > Kill running daemon.
+
+# CONFIGURATION
+
+**~/.fetchmailrc**
+> Main configuration file containing server settings, authentication, and delivery options.
 
 # CAVEATS
 

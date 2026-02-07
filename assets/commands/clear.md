@@ -1,3 +1,7 @@
+# TAGLINE
+
+clear the terminal screen
+
 # TLDR
 
 **Clear the terminal screen**

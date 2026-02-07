@@ -1,3 +1,7 @@
+# TAGLINE
+
+distributed key-value store with Raft consensus
+
 # TLDR
 
 **Start etcd server**
@@ -59,7 +63,24 @@
 
 # DESCRIPTION
 
-**etcd** is a distributed key-value store used for shared configuration and service discovery. Provides strong consistency using the Raft consensus algorithm. Commonly used as the backend for Kubernetes.
+**etcd** is a distributed key-value store that provides reliable, consistent data storage for distributed systems. It implements the Raft consensus algorithm to ensure strong consistency across multiple nodes, making it suitable for critical configuration data and service coordination.
+
+The server forms the backbone of Kubernetes cluster state management and is used extensively in cloud-native architectures for configuration management, service discovery, and distributed locking. Its simple HTTP/gRPC API and watch functionality enable applications to respond to configuration changes in real-time.
+
+etcd prioritizes consistency and availability, making it ideal for storing cluster membership, feature flags, and other distributed system metadata.
+
+# CONFIGURATION
+
+**/etc/etcd/etcd.conf.yml**
+> Main configuration file for etcd server settings, cluster topology, and security options.
+
+# CAVEATS
+
+Requires careful cluster planning for production use. Network partitions affect availability. Disk performance impacts latency. Regular backups essential. Raft consensus requires quorum majority.
+
+# HISTORY
+
+etcd was created by **CoreOS** in **2013** and became a Cloud Native Computing Foundation (CNCF) project. It has become the de facto standard for Kubernetes configuration storage and is widely deployed in production cloud environments.
 
 # SEE ALSO
 

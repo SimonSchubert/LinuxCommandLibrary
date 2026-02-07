@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run a command repeatedly over groups of arguments.
+
 # TLDR
 
 **Apply a command to each argument**

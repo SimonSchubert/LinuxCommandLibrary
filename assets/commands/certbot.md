@@ -1,3 +1,7 @@
+# TAGLINE
+
+Let's Encrypt certificate management
+
 # TLDR
 
 Obtain certificate via **webroot** authorization
@@ -73,6 +77,14 @@ Certificates are valid for 90 days. The renew command should be run regularly (t
 
 **--test-cert**
 > Use staging server (untrusted certificates)
+
+# CONFIGURATION
+
+**/etc/letsencrypt/renewal/**
+> Per-certificate renewal configuration files controlling automatic renewal behavior.
+
+**/etc/letsencrypt/cli.ini**
+> Global certbot defaults for all certificate operations.
 
 # CAVEATS
 

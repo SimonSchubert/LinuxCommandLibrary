@@ -1,3 +1,7 @@
+# TAGLINE
+
+GnuPG component configuration utility
+
 # TLDR
 
 **List all GnuPG components**
@@ -66,9 +70,10 @@
 
 # DESCRIPTION
 
-**gpgconf** is a utility for configuring GnuPG components. It can query and modify configuration files, manage daemons like gpg-agent, and apply settings programmatically. Commonly used to reload gpg-agent after configuration changes.
+**gpgconf** is a utility for querying and modifying GnuPG component configuration. It can manage daemons like gpg-agent, apply settings programmatically, and inspect the GnuPG installation.
+
+The tool is commonly used to reload gpg-agent after configuration changes, list available components, and troubleshoot GnuPG installations.
 
 # SEE ALSO
 
 [gpg](/man/gpg)(1), [gpg-agent](/man/gpg-agent)(1)
-

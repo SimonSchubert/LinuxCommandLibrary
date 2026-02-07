@@ -1,3 +1,7 @@
+# TAGLINE
+
+Transpile modern JavaScript into backward-compatible versions.
+
 # TLDR
 
 **Transpile** JavaScript file
@@ -75,13 +79,11 @@ The tool is essential for modern JavaScript development, enabling use of latest 
 
 # CONFIGURATION
 
-Configuration in babel.config.json or .babelrc:
-```json
-{
-  "presets": ["@babel/preset-env"],
-  "plugins": ["@babel/plugin-transform-runtime"]
-}
-```
+**babel.config.json**
+> Project-wide Babel configuration for presets, plugins, and transformation options.
+
+**.babelrc**
+> Directory-specific Babel configuration, applies to files within the containing directory.
 
 # CAVEATS
 

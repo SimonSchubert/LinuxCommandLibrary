@@ -1,3 +1,7 @@
+# TAGLINE
+
+graphical disk management utility
+
 # TLDR
 
 **Start GNOME Disks**
@@ -22,11 +26,9 @@
 
 # DESCRIPTION
 
-**gnome-disks** is a graphical disk management utility. It manages disks, partitions, filesystems, and RAID arrays through a user-friendly GTK interface.
+**gnome-disks** is a graphical disk management utility for the GNOME desktop. It manages disks, partitions, filesystems, and RAID arrays through a user-friendly GTK interface.
 
-The tool handles formatting, mounting, imaging, and benchmarking. It integrates with udisks2 for operations and supports encrypted volumes.
-
-gnome-disks provides graphical disk management for GNOME.
+The tool handles formatting, mounting, imaging, and benchmarking. It integrates with udisks2 for privileged operations and supports encrypted volumes.
 
 # CAVEATS
 

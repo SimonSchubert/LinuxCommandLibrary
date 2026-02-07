@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run managed continuous integration builds.
+
 # TLDR
 
 **Start a build** for a project

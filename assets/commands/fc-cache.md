@@ -1,3 +1,7 @@
+# TAGLINE
+
+build fontconfig cache files
+
 # TLDR
 
 **Rebuild font cache** for all directories
@@ -58,6 +62,20 @@
 If no directory arguments are given, fc-cache processes all directories in the current fontconfig configuration. Each directory is scanned for font files readable by FreeType, and cache files are created containing font properties and associated filenames.
 
 User caches are stored in **~/.cache/fontconfig/** while system caches are stored in **/var/cache/fontconfig/**. Cache files must be regenerated when fonts are added or removed.
+
+# CONFIGURATION
+
+**~/.cache/fontconfig/**
+> User-specific font cache files.
+
+**/var/cache/fontconfig/**
+> System-wide font cache files.
+
+**/etc/fonts/fonts.conf**
+> Main fontconfig configuration specifying font directories.
+
+**~/.config/fontconfig/fonts.conf**
+> User-specific fontconfig configuration.
 
 # CAVEATS
 

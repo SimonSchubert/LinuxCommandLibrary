@@ -1,3 +1,7 @@
+# TAGLINE
+
+Official GitLab CLI tool
+
 # TLDR
 
 **Create merge request**
@@ -62,20 +66,12 @@
 
 **glab** is the official GitLab CLI tool. It provides command-line access to GitLab features including merge requests, issues, CI/CD pipelines, and repository management.
 
-The tool mirrors the gh CLI's approach for GitHub, providing a familiar interface for GitLab users. It supports GitLab.com and self-hosted instances.
+The tool mirrors the `gh` CLI's approach for GitHub, providing a familiar interface for GitLab users. It supports both GitLab.com and self-hosted instances.
 
-# AUTHENTICATION
+# CONFIGURATION
 
-```bash
-# Login interactively
-glab auth login
-
-# Login with token
-glab auth login --token $GITLAB_TOKEN
-
-# For self-hosted
-glab auth login --hostname gitlab.company.com
-```
+**~/.config/glab-cli/config.yml**
+> Configuration file storing authentication tokens, default settings, and host configurations.
 
 # CAVEATS
 

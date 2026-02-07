@@ -1,3 +1,7 @@
+# TAGLINE
+
+Erlang runtime system and interactive shell
+
 # TLDR
 
 **Start Erlang shell**
@@ -57,6 +61,14 @@
 
 **-config** _FILE_
 > Configuration file.
+
+# CONFIGURATION
+
+**sys.config**
+> Application configuration file specifying runtime parameters for OTP applications.
+
+**vm.args**
+> VM arguments file for distributed Erlang settings, memory limits, and node configuration.
 
 # DESCRIPTION
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast Node.js version manager written in Rust
+
 # TLDR
 
 **Install Node version**
@@ -60,6 +64,14 @@ _COMMAND_
 The tool reads .node-version or .nvmrc files for automatic version switching. Shell integration enables per-directory version selection without manual commands.
 
 fnm emphasizes speed with Rust implementation and cross-platform support including Windows.
+
+# CONFIGURATION
+
+**.node-version**
+> Specifies Node.js version for the current directory.
+
+**.nvmrc**
+> Alternative version file format compatible with nvm.
 
 # CAVEATS
 

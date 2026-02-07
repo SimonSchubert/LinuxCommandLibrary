@@ -1,3 +1,7 @@
+# TAGLINE
+
+specify bash command argument completion
+
 # TLDR
 
 **Complete with files**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Package manager for CircuitPython libraries
+
 # TLDR
 
 **List installed CircuitPython libraries**
@@ -53,9 +57,11 @@
 
 # DESCRIPTION
 
-**circup** is a package manager for CircuitPython libraries. It manages libraries on CircuitPython devices, checking for updates against the Adafruit CircuitPython Bundle and handling installation and removal.
+**circup** is a package manager for CircuitPython libraries on microcontroller boards. It manages the lib folder on connected CircuitPython devices, checking installed libraries against the Adafruit CircuitPython Bundle for available updates.
 
-The tool automatically detects connected CircuitPython devices and manages the lib folder.
+The tool automatically detects connected CircuitPython devices by scanning mounted filesystems for a valid CircuitPython installation. It handles downloading, installing, updating, and removing libraries, and can freeze the current library state into a requirements file for reproducibility.
+
+circup is written in Python and installed via pip. It supports boards like Adafruit Feather, Circuit Playground, and other CircuitPython-compatible hardware.
 
 # CAVEATS
 

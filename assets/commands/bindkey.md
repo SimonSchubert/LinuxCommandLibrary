@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage shell key bindings in Zsh and tcsh
+
 # TLDR
 
 **List all current key bindings**

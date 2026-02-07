@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage package manager configurations for apx subsystems
+
 # TLDR
 
 Interactively **create** a new package manager configuration

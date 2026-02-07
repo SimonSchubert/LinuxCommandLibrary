@@ -1,3 +1,7 @@
+# TAGLINE
+
+Groff HP LaserJet 4 printer driver
+
 # TLDR
 
 **Generate HP LaserJet output**
@@ -44,11 +48,9 @@ _FILE_
 
 # DESCRIPTION
 
-**grolj4** is a groff output driver for HP LaserJet 4-series and compatible printers. It produces PCL 5 output.
+**grolj4** is a groff output driver for HP LaserJet 4-series and compatible printers. It produces PCL 5 output and supports duplex printing, various paper sizes, and orientations.
 
-The driver generates printer commands for direct printing to HP laser printers. It supports duplex printing, various paper sizes, and orientations.
-
-grolj4 outputs to HP LaserJet printers.
+The driver generates printer commands for direct printing to HP laser printers.
 
 # CAVEATS
 

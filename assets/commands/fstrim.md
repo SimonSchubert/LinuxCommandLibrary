@@ -1,3 +1,7 @@
+# TAGLINE
+
+SSD TRIM command issuer
+
 # TLDR
 
 Trim **all** mounted partitions

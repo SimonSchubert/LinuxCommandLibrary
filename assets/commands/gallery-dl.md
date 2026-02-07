@@ -1,3 +1,7 @@
+# TAGLINE
+
+image gallery downloader for multiple sites
+
 # TLDR
 
 **Download from URL**
@@ -49,6 +53,11 @@ _URLS_
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**~/.config/gallery-dl/config.json**
+> Main configuration file for output paths, filename patterns, authentication, and site-specific options.
 
 # DESCRIPTION
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Wallet server and CLI for managing Cardano wallets
+
 # TLDR
 
 **Start the wallet server**

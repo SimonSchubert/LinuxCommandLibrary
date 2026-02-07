@@ -1,3 +1,7 @@
+# TAGLINE
+
+screen color temperature adjuster
+
 # TLDR
 
 **Start with automatic location**
@@ -64,6 +68,11 @@
 Gammastep is a fork of Redshift with Wayland support. It's commonly used with tiling window managers and supports automatic location detection or manual coordinates.
 
 # CONFIGURATION
+
+**~/.config/gammastep/config.ini**
+> Configuration for color temperature, brightness, and location settings.
+
+# CONFIGURATION EXAMPLE
 
 ```ini
 # ~/.config/gammastep/config.ini

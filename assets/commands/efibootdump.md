@@ -1,3 +1,7 @@
+# TAGLINE
+
+UEFI boot entry decoder
+
 # TLDR
 
 Dump boot entries from **file**

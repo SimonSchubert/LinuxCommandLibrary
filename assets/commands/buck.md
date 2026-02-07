@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fast multi-language build system
+
 # TLDR
 
 **Build a target**
@@ -89,6 +93,17 @@ Buck supports many languages including C++, Java, Python, Go, Rust, and others t
 
 **--help**
 > Show help information.
+
+# CONFIGURATION
+
+**.buckconfig**
+> Project-level configuration for Buck1, specifying build settings, tool paths, and repository options.
+
+**.buckroot**
+> Marker file indicating the root of a Buck project.
+
+**BUCK** / **BUILD**
+> Per-directory build files defining targets and rules (BUCK for Buck1, BUILD for Buck2).
 
 # CAVEATS
 

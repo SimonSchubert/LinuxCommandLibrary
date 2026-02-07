@@ -1,3 +1,7 @@
+# TAGLINE
+
+Map system call names to numbers and vice versa
+
 # TLDR
 
 Display **syscall number** of a specific system call

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Exim mail queue search utility
+
 # TLDR
 
 Match **sender** address (case-insensitive)
@@ -28,12 +32,6 @@ Display **count** of bounced messages
 
 **exiqgrep** [_options_] [_pattern_]
 
-# DESCRIPTION
-
-**exiqgrep** is a Perl script for searching the Exim mail queue. It filters queue output by sender, recipient, age, and other criteria.
-
-Useful for managing mail queues and identifying problematic messages.
-
 # PARAMETERS
 
 **-f** _pattern_
@@ -56,6 +54,12 @@ Useful for managing mail queues and identifying problematic messages.
 
 **-z**
 > Match frozen messages only
+
+# DESCRIPTION
+
+**exiqgrep** is a Perl script for searching the Exim mail queue. It filters queue output by sender, recipient, age, and other criteria.
+
+Useful for managing mail queues and identifying problematic messages.
 
 # CAVEATS
 

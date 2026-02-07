@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate barcodes in PostScript format.
+
 # TLDR
 
 **Generate a barcode as PostScript**

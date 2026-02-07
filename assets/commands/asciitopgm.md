@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert ASCII art to PGM grayscale image
+
 # TLDR
 
 **Convert** ASCII art to PGM

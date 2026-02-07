@@ -1,3 +1,7 @@
+# TAGLINE
+
+environment specification exporter
+
 # TLDR
 
 **Export current environment**
@@ -26,6 +30,14 @@
 
 **-n**, **--name** _name_
 > Name of environment to export.
+
+# CONFIGURATION
+
+**~/.condarc**
+> User-level conda configuration for channels, package settings, and solver options.
+
+**/opt/conda/.condarc**
+> System-wide conda configuration.
 
 # DESCRIPTION
 

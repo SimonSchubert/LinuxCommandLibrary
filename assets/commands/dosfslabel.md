@@ -1,3 +1,7 @@
+# TAGLINE
+
+display or set FAT filesystem labels
+
 # TLDR
 
 **Display the label** of a FAT filesystem

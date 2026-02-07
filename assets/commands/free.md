@@ -1,3 +1,7 @@
+# TAGLINE
+
+display memory usage statistics
+
 # TLDR
 
 Display **system memory**

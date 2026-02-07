@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage cloud-based development environments.
+
 # TLDR
 
 **Create a new Cloud9 EC2 environment** with a t2.micro instance

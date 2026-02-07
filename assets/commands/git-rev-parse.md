@@ -1,3 +1,7 @@
+# TAGLINE
+
+Parse revision and repository information
+
 # TLDR
 
 **Get commit hash**
@@ -60,9 +64,10 @@
 
 # DESCRIPTION
 
-**git rev-parse** translates ref names and other arguments to SHA-1 hashes. Also provides information about the repository structure.
+**git rev-parse** translates ref names, symbolic references, and other arguments into SHA-1 hashes. It also provides information about the repository structure, such as the root directory, git directory, and current branch.
+
+This plumbing command is widely used in scripts for resolving refs and querying repository metadata.
 
 # SEE ALSO
 
 [git-rev-list](/man/git-rev-list)(1), [git-describe](/man/git-describe)(1)
-

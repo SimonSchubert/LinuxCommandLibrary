@@ -1,3 +1,7 @@
+# TAGLINE
+
+post-exploitation tool for Windows/AD networks
+
 # TLDR
 
 **Enumerate SMB shares**

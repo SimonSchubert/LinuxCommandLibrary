@@ -1,3 +1,7 @@
+# TAGLINE
+
+GNOME webcam photo and video application
+
 # TLDR
 
 **Launch Cheese webcam application**

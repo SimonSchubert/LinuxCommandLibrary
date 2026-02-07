@@ -1,3 +1,7 @@
+# TAGLINE
+
+C source code beautifier
+
 # TLDR
 
 **Beautify C code from a file**

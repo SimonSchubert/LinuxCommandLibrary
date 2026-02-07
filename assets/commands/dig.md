@@ -1,3 +1,7 @@
+# TAGLINE
+
+DNS lookup and troubleshooting utility
+
 # TLDR
 
 **Query** DNS

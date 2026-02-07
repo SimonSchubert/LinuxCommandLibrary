@@ -1,3 +1,7 @@
+# TAGLINE
+
+convert text files to PostScript for printing
+
 # TLDR
 
 **Print file to default printer**
@@ -66,7 +70,19 @@
 
 # DESCRIPTION
 
-**enscript** converts text files to PostScript, HTML, or RTF for printing or viewing. Supports syntax highlighting for many programming languages.
+**enscript** converts text files to PostScript, HTML, or RTF for printing or viewing. It provides advanced formatting capabilities including multi-column output, headers, footers, and syntax highlighting for numerous programming languages.
+
+The tool is widely used for generating professional-looking printouts of source code and documentation. It can automatically detect file types and apply appropriate syntax highlighting, making code more readable when printed.
+
+enscript supports customization through configuration files and command-line options, allowing control over fonts, page layout, borders, and output format. It's particularly useful in development environments for code reviews and documentation.
+
+# CONFIGURATION
+
+**/etc/enscript.cfg**
+> System-wide configuration file for default settings.
+
+**~/.enscriptrc**
+> User-specific configuration file for personal preferences.
 
 # SEE ALSO
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate a stream of btrfs subvolume changes for backup and replication
+
 # TLDR
 
 **Send a snapshot** to stdout

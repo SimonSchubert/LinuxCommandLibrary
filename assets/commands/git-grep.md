@@ -1,3 +1,7 @@
+# TAGLINE
+
+Search patterns in tracked files
+
 # TLDR
 
 **Search for pattern**
@@ -55,11 +59,9 @@ _REVISION_
 
 # DESCRIPTION
 
-**git grep** searches tracked files for patterns. It's optimized for git repositories, searching only tracked files and supporting search across history.
+**git grep** searches tracked files for patterns, optimized specifically for Git repositories. Unlike regular grep, it ignores untracked files and can search any commit in the repository history.
 
-Unlike regular grep, git grep ignores untracked files and can search any commit. It's significantly faster on large repos because it uses git's index.
-
-git grep provides fast, git-aware text search.
+The command is significantly faster on large repositories because it uses Git's index rather than scanning the filesystem directly. It supports the same regex syntax as grep and integrates seamlessly with Git's revision and path specifications.
 
 # CAVEATS
 

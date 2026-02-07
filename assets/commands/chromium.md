@@ -1,3 +1,7 @@
+# TAGLINE
+
+open-source web browser
+
 # TLDR
 
 **Open Chromium browser**
@@ -75,6 +79,14 @@ Configuration data is stored in **~/.config/chromium** and cache in **~/.cache/c
 
 **--remote-debugging-port=**_port_
 > Enable remote debugging on specified port
+
+# CONFIGURATION
+
+**~/.config/chromium/**
+> User profile directory containing preferences, bookmarks, extensions, cookies, and browsing history.
+
+**~/.config/chromium/Default/Preferences**
+> JSON file with browser settings. Can be edited directly but changes may be overwritten when the browser is running.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+OpenAI terminal-based coding agent
+
 # TLDR
 
 **Launch interactive terminal UI**

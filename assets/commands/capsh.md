@@ -1,3 +1,7 @@
+# TAGLINE
+
+Explore and constrain Linux capabilities
+
 # TLDR
 
 **Display current capability state**

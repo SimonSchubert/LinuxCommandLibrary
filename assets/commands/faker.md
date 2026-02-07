@@ -1,3 +1,7 @@
+# TAGLINE
+
+localized fake data generation library CLI
+
 # TLDR
 
 **Generate fake name**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+display system clipboard contents
+
 # TLDR
 
 **View clipboard contents**
@@ -14,7 +18,9 @@
 
 # DESCRIPTION
 
-**clip-view** displays the current contents of the system clipboard. It's useful for inspecting clipboard data from the command line, especially when working with scripts or debugging copy-paste issues.
+**clip-view** displays the current contents of the system clipboard from the command line. It supports viewing clipboard data in different formats, making it useful for inspecting what is currently stored in the clipboard.
+
+The tool is particularly handy for scripting workflows that involve the clipboard, or for debugging copy-paste issues where you need to verify the exact content being transferred between applications.
 
 # SEE ALSO
 

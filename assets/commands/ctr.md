@@ -1,3 +1,7 @@
+# TAGLINE
+
+Containerd command-line client
+
 # TLDR
 
 **List** all containers
@@ -52,6 +56,10 @@ Unlike Docker CLI, ctr is designed for debugging and direct containerd interacti
 # CAVEATS
 
 Low-level tool primarily for debugging. For Kubernetes environments, use crictl. For general Docker-like experience, use nerdctl. Requires root or containerd socket access.
+
+# HISTORY
+
+**ctr** is part of **containerd**, which was originally developed by Docker Inc. and donated to the **Cloud Native Computing Foundation (CNCF)** in **2017**. containerd became a graduated CNCF project and is now the standard container runtime for Kubernetes and many other platforms.
 
 # SEE ALSO
 

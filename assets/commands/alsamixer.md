@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interactive ncurses audio mixer
+
 # TLDR
 
 Select the **soundcard** to use
@@ -67,6 +71,14 @@ Start with **black background**
 > B or =: balance left/right channels
 > L: redraw screen
 > Esc or Alt+Q: quit
+
+# CONFIGURATION
+
+**/etc/asound.conf**
+> System-wide ALSA configuration file.
+
+**~/.asoundrc**
+> Per-user ALSA configuration file for custom device definitions and plugin settings.
 
 # CAVEATS
 

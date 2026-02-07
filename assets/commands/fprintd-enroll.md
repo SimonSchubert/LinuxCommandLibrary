@@ -1,3 +1,7 @@
+# TAGLINE
+
+register fingerprints for authentication
+
 # TLDR
 
 Enroll the **right index finger** for the current user

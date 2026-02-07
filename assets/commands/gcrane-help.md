@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays help information
+
 # TLDR
 
 **Show help**
@@ -14,7 +18,9 @@
 
 # DESCRIPTION
 
-**gcrane help** displays help information for gcrane commands. Shows usage, available subcommands, and options.
+**gcrane help** displays comprehensive help information for gcrane and its subcommands. Without arguments, it shows an overview of all available commands with brief descriptions. When given a specific command name, it displays detailed usage information including all flags and parameters.
+
+The help system documents gcrane's GCR-specific extensions beyond standard crane functionality, including recursive copy operations and garbage collection commands.
 
 # SEE ALSO
 

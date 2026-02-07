@@ -1,3 +1,7 @@
+# TAGLINE
+
+Perl utility for creating custom Encode modules
+
 # TLDR
 
 **Create Encode module** from UCM file

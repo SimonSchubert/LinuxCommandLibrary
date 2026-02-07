@@ -1,3 +1,7 @@
+# TAGLINE
+
+graph edge coloring tool
+
 # TLDR
 
 **Color graph edges**

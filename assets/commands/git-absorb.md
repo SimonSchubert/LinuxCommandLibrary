@@ -1,3 +1,7 @@
+# TAGLINE
+
+Automatically create fixup commits for staged changes
+
 # TLDR
 
 **Absorb staged changes** into matching commits
@@ -56,19 +60,14 @@
 
 # DESCRIPTION
 
-**git-absorb** automatically creates **fixup!** commits for staged changes, matching each hunk to the appropriate commit in your branch history. It's a port of Facebook's **hg absorb** tool for Mercurial.
+**git-absorb** automatically creates **fixup!** commits for staged changes, matching each hunk to the appropriate commit in your branch history. It is a port of Facebook's **hg absorb** tool for Mercurial.
 
-The workflow is: stage changes with **git add**, run **git absorb** to create fixup commits, then either run **git rebase -i --autosquash** manually or use **--and-rebase** to do it automatically.
+The workflow is: stage changes with **git add**, run **git absorb** to create fixup commits, then either run **git rebase -i --autosquash** manually or use **--and-rebase** to do it automatically. By default, absorb searches within the last 10 commits.
 
-Git-absorb analyzes each staged hunk and finds the most recent commit that modified those lines. It then creates a **fixup!** commit targeting that commit. This is significantly faster than manually creating fixup commits and avoids errors.
+# CONFIGURATION
 
-By default, absorb searches within the last 10 commits. Increase this with **maxStack** in your **.gitconfig**:
-```
-[absorb]
-    maxStack = 50
-```
-
-If something goes wrong, recover with **git reset --soft PRE_ABSORB_HEAD** or find the commit in **git reflog**.
+**~/.gitconfig**
+> Configure `absorb.maxStack` to control how many commits absorb will search through (default: 10).
 
 # CAVEATS
 
@@ -76,7 +75,7 @@ Only considers staged changes (git index). Cannot absorb changes that span multi
 
 # HISTORY
 
-Git-absorb was created by **Stephen Chung** as a Rust port of Facebook's **hg absorb** command for Mercurial. The tool was developed to bring the efficient fixup workflow from Mercurial to Git users. It became popular in stacked diff workflows where maintaining clean commit history is essential.
+Git-absorb was created by **Stephen Chung** as a Rust port of Facebook's **hg absorb** command for Mercurial. It became popular in stacked diff workflows where maintaining clean commit history is essential.
 
 # SEE ALSO
 

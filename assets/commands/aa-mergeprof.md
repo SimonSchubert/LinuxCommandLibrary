@@ -1,3 +1,7 @@
+# TAGLINE
+
+Merge AppArmor profile files into the profile directory
+
 # TLDR
 
 **Merge** one or more profile files into the default profile directory
@@ -14,7 +18,7 @@ Merge profile files into a **specific directory**
 
 # DESCRIPTION
 
-**aa-mergeprof** merges AppArmor security profile files into the profile directory. This utility is useful for combining profiles from different sources or importing profiles from other systems into the local AppArmor configuration.
+**aa-mergeprof** merges one or more AppArmor security profile files into the system profile directory. It is an interactive tool that presents differences between existing and incoming profiles, allowing administrators to resolve conflicts manually. This is useful for importing profiles from other systems, combining profiles from different sources, or consolidating profiles after a system migration.
 
 # PARAMETERS
 

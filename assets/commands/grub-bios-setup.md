@@ -1,3 +1,7 @@
+# TAGLINE
+
+write GRUB boot code to MBR for BIOS systems
+
 # TLDR
 
 Set up a device to **boot with GRUB**
@@ -37,9 +41,7 @@ Install GRUB in a **specific directory**
 
 **grub-bios-setup** is a low-level tool that writes the GRUB boot code to a disk's Master Boot Record (MBR) or BIOS Boot Partition for BIOS/legacy boot systems.
 
-> **Note**: In most cases, you should use **grub-install** instead, which handles both copying GRUB files and running grub-bios-setup automatically.
-
-This tool is typically used for advanced scenarios like installing GRUB to a different device than where the GRUB files are located, or when grub-install's automatic handling isn't suitable.
+In most cases, you should use **grub-install** instead, which handles both copying GRUB files and running grub-bios-setup automatically. This tool is typically used for advanced scenarios like installing GRUB to a different device than where the GRUB files are located.
 
 # CAVEATS
 

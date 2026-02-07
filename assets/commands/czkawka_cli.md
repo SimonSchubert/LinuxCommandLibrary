@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast multi-function file cleaner written in Rust
+
 # TLDR
 
 **Find duplicate files**

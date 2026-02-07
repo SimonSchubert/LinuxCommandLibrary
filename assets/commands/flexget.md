@@ -1,3 +1,7 @@
+# TAGLINE
+
+multipurpose media automation tool
+
 # TLDR
 
 **Run all tasks**
@@ -72,9 +76,18 @@
 **--no-cache**
 > Disable caching.
 
+# CONFIGURATION
+
+**~/.flexget/config.yml**
+> Main configuration file defining tasks, feeds, and filters for automation workflows.
+
 # DESCRIPTION
 
-**flexget** is a multipurpose automation tool for downloading, organizing, and managing media content. Supports torrents, podcasts, series tracking, and more.
+**FlexGet** is a powerful automation tool for managing media content through customizable tasks and plugins. It monitors RSS feeds, torrent sites, and other sources to automatically download and organize TV shows, movies, podcasts, and other media based on user-defined rules and filters.
+
+The tool operates on a task-based system defined in YAML configuration files. Tasks can filter content by quality, series tracking, release groups, or custom patterns. FlexGet integrates with download clients like Transmission, Deluge, and qBittorrent, as well as media management tools like Plex and Kodi.
+
+FlexGet can run as a daemon for continuous monitoring or execute tasks on-demand. It maintains a database of seen entries to prevent duplicate downloads and supports series tracking with automatic episode progression. The plugin architecture enables extensive customization for specific workflows.
 
 # SEE ALSO
 

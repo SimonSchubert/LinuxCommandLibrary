@@ -1,3 +1,7 @@
+# TAGLINE
+
+modern input method framework
+
 # TLDR
 
 **Start fcitx5** input method daemon
@@ -56,6 +60,17 @@ QT_IM_MODULE=fcitx
 ```
 
 Fcitx5 supports both X11 and Wayland, with native Wayland text-input protocol support for better integration.
+
+# CONFIGURATION
+
+**~/.config/fcitx5/**
+> User configuration directory containing profile settings, input method configurations, and addon settings.
+
+**~/.local/share/fcitx5/**
+> User data directory for themes, dictionaries, and custom data.
+
+**/etc/xdg/fcitx5/**
+> System-wide configuration directory.
 
 # CAVEATS
 

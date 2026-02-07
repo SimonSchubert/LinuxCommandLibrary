@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line tool for D-Bus introspection and interaction
+
 # TLDR
 
 List all names on the **session bus**

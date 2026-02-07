@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal-based resource monitor with graphs
+
 # TLDR
 
 **Start** resource monitor
@@ -62,6 +66,11 @@ Built-in themes:
 - Gruvbox dark/light
 - Nord
 - Monokai
+
+# CONFIGURATION
+
+**~/.config/bpytop/bpytop.conf**
+> Main configuration file for themes, update interval, process sorting, and display options.
 
 # CAVEATS
 

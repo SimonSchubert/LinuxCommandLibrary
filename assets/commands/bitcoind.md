@@ -1,3 +1,7 @@
+# TAGLINE
+
+Bitcoin Core full node daemon
+
 # TLDR
 
 **Start** Bitcoin daemon
@@ -60,15 +64,8 @@ Running a full node contributes to Bitcoin network decentralization and allows t
 
 # CONFIGURATION
 
-bitcoin.conf example:
-```
-daemon=1
-server=1
-rpcuser=username
-rpcpassword=securepassword
-txindex=1
-prune=0
-```
+**~/.bitcoin/bitcoin.conf**
+> Main configuration file for daemon mode, RPC credentials, network selection, pruning, and indexing options.
 
 # SYSTEM REQUIREMENTS
 

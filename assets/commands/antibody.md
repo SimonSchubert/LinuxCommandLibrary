@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fast Zsh plugin manager
+
 # TLDR
 
 **Bundle** plugins

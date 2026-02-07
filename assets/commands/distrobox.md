@@ -1,3 +1,7 @@
+# TAGLINE
+
+run Linux distributions in containers with host integration
+
 # TLDR
 
 **distrobox** is a set of commands for running Linux distributions in containers.

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Open a terminal and prompt for login
+
 # TLDR
 
 Connect stdin to a **port** with an optional baud rate
@@ -65,6 +69,14 @@ Do not display the **pre-login issue** file
 
 **-t, --timeout seconds**
 > Terminate if no input within timeout
+
+# CONFIGURATION
+
+**/etc/issue**
+> Pre-login message displayed before the login prompt. Supports escape codes for system information.
+
+**/etc/os-release**
+> Operating system identification data used by agetty for \S escape in /etc/issue.
 
 # CAVEATS
 

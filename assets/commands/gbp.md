@@ -1,3 +1,7 @@
+# TAGLINE
+
+Git integration for Debian package building
+
 # TLDR
 
 **Convert** an existing Debian package to gbp
@@ -58,6 +62,14 @@ Import a new **upstream release**
 
 **-uc**
 > Do not sign changes file
+
+# CONFIGURATION
+
+**debian/gbp.conf**
+> Project-specific settings for branch names, build options, and pristine-tar configuration.
+
+**~/.gbp.conf**
+> User-level defaults for gbp behavior across all projects.
 
 # DESCRIPTION
 

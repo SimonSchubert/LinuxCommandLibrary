@@ -1,3 +1,7 @@
+# TAGLINE
+
+GNOME Minesweeper puzzle game
+
 # TLDR
 
 **Start GNOME Mines**

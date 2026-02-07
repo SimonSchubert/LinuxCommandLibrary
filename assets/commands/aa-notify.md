@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display and monitor AppArmor denial notifications
+
 # TLDR
 
 **Display summary** of AppArmor denials since last login

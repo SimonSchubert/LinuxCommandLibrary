@@ -1,3 +1,7 @@
+# TAGLINE
+
+download tracked files to local cache
+
 # TLDR
 
 **Fetch all tracked data**
@@ -46,7 +50,11 @@
 
 # DESCRIPTION
 
-**dvc fetch** downloads tracked files from remote storage to the local cache without placing them in the workspace. Use dvc checkout to restore files after fetching.
+**dvc fetch** downloads DVC-tracked data from remote storage into the local DVC cache without affecting the workspace. This is useful for preparing data for later use without immediately populating the working directory.
+
+The two-stage process (fetch then checkout) provides control over disk space and timing. Fetching brings data into cache (usually .dvc/cache) where it's stored efficiently with deduplication. A subsequent dvc checkout creates links or copies from cache to workspace when you actually need the files.
+
+This separation is particularly valuable in CI/CD pipelines or when switching between branches: you can fetch all necessary data upfront, then quickly checkout different versions as needed without repeated downloads. The --all-commits, --all-branches, and --all-tags options help prefetch data for multiple revisions in bulk.
 
 # SEE ALSO
 

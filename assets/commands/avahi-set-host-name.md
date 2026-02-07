@@ -1,3 +1,7 @@
+# TAGLINE
+
+Change the mDNS hostname advertised on the network
+
 # TLDR
 
 **Set** mDNS hostname

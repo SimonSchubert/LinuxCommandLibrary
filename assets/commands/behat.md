@@ -1,3 +1,7 @@
+# TAGLINE
+
+BDD testing framework for PHP
+
 # TLDR
 
 **Initialize a new Behat project**

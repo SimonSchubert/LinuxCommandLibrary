@@ -1,3 +1,7 @@
+# TAGLINE
+
+Configure system authentication sources via profiles
+
 # TLDR
 
 **List available profiles**
@@ -117,6 +121,14 @@ Profiles define how users are authenticated and where identity information is re
 Authselect only configures PAM and nsswitch; it does not configure the underlying daemons (SSSD, Winbind). Use tools like **realm join** or **ipa-client-install** to set up domain membership, which automatically configure authselect.
 
 Custom profiles can be created by copying and modifying existing profiles in **/etc/authselect/custom/**.
+
+# CONFIGURATION
+
+**/etc/authselect/authselect.conf**
+> Records the currently active profile and enabled features.
+
+**/etc/authselect/custom/**
+> Directory for user-created custom profiles. Copy and modify existing profiles here.
 
 # CAVEATS
 

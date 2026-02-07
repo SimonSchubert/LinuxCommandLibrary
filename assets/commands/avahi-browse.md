@@ -1,3 +1,7 @@
+# TAGLINE
+
+Browse for mDNS/DNS-SD network services
+
 # TLDR
 
 **List** services with addresses
@@ -23,6 +27,8 @@ Search specific **domain**
 # DESCRIPTION
 
 **avahi-browse** displays services and hosts exposed on the local network via mDNS/DNS-SD (Multicast DNS Service Discovery). It is compatible with Apple's Bonjour/Zeroconf protocol.
+
+By default, the tool runs continuously and displays services as they appear or disappear on the network, prefixed with **"+"** for new and **"-"** for removed entries. When used with **--resolve**, it also looks up hostnames and port numbers for discovered services. The **--terminate** flag causes it to exit after dumping all currently known services, which is useful for scripting.
 
 # PARAMETERS
 

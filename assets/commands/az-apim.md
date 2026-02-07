@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Azure API Management services
+
 # TLDR
 
 **Create a new API Management** service instance

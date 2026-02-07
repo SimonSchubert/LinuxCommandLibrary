@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates process core dumps
+
 # TLDR
 
 **Generate core dump**

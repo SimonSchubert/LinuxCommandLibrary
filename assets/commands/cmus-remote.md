@@ -1,3 +1,7 @@
+# TAGLINE
+
+remote control interface for cmus music player
+
 # TLDR
 
 **Toggle play/pause**

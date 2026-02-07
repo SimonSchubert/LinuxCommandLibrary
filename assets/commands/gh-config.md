@@ -1,3 +1,7 @@
+# TAGLINE
+
+manage GitHub CLI settings and preferences
+
 # TLDR
 
 **Get config value**
@@ -48,6 +52,11 @@
 Configuration is stored per-host, allowing different settings for github.com and GitHub Enterprise instances. Settings can be environment-specific or global.
 
 Common settings include git_protocol (https/ssh), editor, browser, and pager.
+
+# CONFIGURATION
+
+**~/.config/gh/config.yml**
+> Main configuration file storing user preferences, default settings, and per-host configurations.
 
 # CAVEATS
 

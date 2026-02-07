@@ -1,3 +1,7 @@
+# TAGLINE
+
+Google C++ style guide checker
+
 # TLDR
 
 **Check single file**
@@ -30,9 +34,11 @@
 
 # DESCRIPTION
 
-**cpplint** is a static code checker for C++ that verifies code against Google's C++ style guide. It checks for style errors, formatting issues, and common programming mistakes.
+**cpplint** is a static code checker for C++ that verifies code against Google's C++ style guide. It checks for style errors, formatting issues, and common programming mistakes to enforce consistent code standards across projects.
 
-Originally developed by Google, now maintained as an open-source project.
+The tool examines source files for compliance with naming conventions, spacing rules, comment formatting, header guard patterns, and many other style requirements. It helps teams maintain uniform code style and catch common errors before code review.
+
+Originally developed by Google for internal use, cpplint is now maintained as an open-source project. While designed specifically for Google's style guide, its rules can be filtered and customized for projects with different conventions.
 
 # PARAMETERS
 
@@ -72,6 +78,11 @@ Originally developed by Google, now maintained as an open-source project.
 - **whitespace**: Spacing and formatting
 
 Prefix with - to disable, + to enable.
+
+# CONFIGURATION
+
+**CPPLINT.cfg**
+> Project-wide configuration file for filters, line length, root directory, and excluded paths.
 
 # CAVEATS
 

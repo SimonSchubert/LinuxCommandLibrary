@@ -1,3 +1,7 @@
+# TAGLINE
+
+syntax-aware structural diff tool
+
 # TLDR
 
 **Compare two files** with structural diffing

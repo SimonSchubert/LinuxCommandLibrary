@@ -1,3 +1,7 @@
+# TAGLINE
+
+dynamic firewall management interface
+
 # TLDR
 
 **List** all zones and rules
@@ -68,6 +72,14 @@ Enable **panic** mode
 
 **--panic-on/--panic-off**
 > Enable/disable panic mode (drops all traffic)
+
+# CONFIGURATION
+
+**/etc/firewalld/zones/*.xml**
+> Zone definitions including allowed services, ports, and rich rules.
+
+**/etc/firewalld/services/*.xml**
+> Service definitions mapping service names to ports and protocols.
 
 # CAVEATS
 

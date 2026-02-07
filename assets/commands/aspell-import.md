@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert dictionaries from ispell to aspell format
+
 # TLDR
 
 **Import** ispell dictionary

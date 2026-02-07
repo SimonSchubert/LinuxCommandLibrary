@@ -1,3 +1,7 @@
+# TAGLINE
+
+Nginx configuration security analyzer
+
 # TLDR
 
 **Analyze nginx config**
@@ -39,11 +43,9 @@ _CONFIG_
 
 # DESCRIPTION
 
-**gixy** analyzes nginx configuration for security issues. It detects common misconfigurations that could lead to vulnerabilities like SSRF, host spoofing, and path traversal.
+**gixy** analyzes nginx configuration files for security issues. It detects common misconfigurations that could lead to vulnerabilities like SSRF, host spoofing, and path traversal.
 
-The tool includes plugins for various security checks and provides detailed explanations of issues found. It's used in security audits and CI pipelines.
-
-gixy identifies nginx security misconfigurations.
+The tool includes plugins for various security checks and provides detailed explanations of issues found. It is used in security audits and CI pipelines to catch nginx misconfigurations before deployment.
 
 # CAVEATS
 

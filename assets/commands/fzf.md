@@ -1,3 +1,7 @@
+# TAGLINE
+
+general-purpose command-line fuzzy finder
+
 # TLDR
 
 **Interactive file finder**

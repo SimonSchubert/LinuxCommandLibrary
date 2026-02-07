@@ -1,3 +1,7 @@
+# TAGLINE
+
+DNS delegation tracing tool
+
 # TLDR
 
 Trace DNS **resolution path**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+open-source AI coding assistant for terminals
+
 # TLDR
 
 **Start an interactive session**
@@ -61,6 +65,17 @@
 **-V**, **--version**
 > Print version
 
+# CONFIGURATION
+
+**forge.yaml**
+> Project-level configuration for forge settings and preferences.
+
+**.mcp.json**
+> Model Context Protocol server configuration.
+
+**~/.forge/config.yaml**
+> Global user configuration for API keys and defaults.
+
 # COMMANDS
 
 **provider login**
@@ -97,7 +112,7 @@ The tool analyzes project files, dependencies, and Git history to provide contex
 
 # CAVEATS
 
-Requires API keys from supported AI providers, configured via **forge provider login**. The **--restricted** flag limits shell access for enhanced security but reduces functionality. Configuration files include **forge.yaml** for project settings and **.mcp.json** for Model Context Protocol servers.
+Requires API keys from supported AI providers, configured via **forge provider login**. The **--restricted** flag limits shell access for enhanced security but reduces functionality.
 
 # HISTORY
 

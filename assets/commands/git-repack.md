@@ -1,3 +1,7 @@
+# TAGLINE
+
+Pack loose objects into pack files
+
 # TLDR
 
 **Repack objects**
@@ -52,9 +56,10 @@
 
 # DESCRIPTION
 
-**git repack** packs unpacked objects in the repository. Improves storage efficiency and access time by consolidating loose objects into pack files.
+**git repack** consolidates loose objects into pack files, improving storage efficiency and access time. It reorganizes the repository's object database by combining individual loose objects into compressed packs.
+
+Repacking is useful after many small commits or after importing objects. The `-a -d` combination is common for aggressive repacking that removes redundant packs.
 
 # SEE ALSO
 
 [git-gc](/man/git-gc)(1), [git-prune-packed](/man/git-prune-packed)(1)
-

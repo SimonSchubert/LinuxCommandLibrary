@@ -1,3 +1,7 @@
+# TAGLINE
+
+Exoscale virtual machine lifecycle management
+
 # TLDR
 
 **List instances**
@@ -63,7 +67,11 @@
 
 # DESCRIPTION
 
-**exo compute instance** manages Exoscale compute instances. Create, start, stop, and manage virtual machines in Exoscale cloud.
+**exo compute instance** manages Exoscale compute instances (virtual machines). It handles the full lifecycle from creation through deletion, including power management and configuration.
+
+Instances run in specified availability zones with configurable templates, instance types, security groups, and SSH keys. The tool provides convenient SSH access and management without using the web console.
+
+Commands support all instance operations including resizing, rebooting, and attaching to networks and storage.
 
 # SEE ALSO
 

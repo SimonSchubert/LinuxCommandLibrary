@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compare changes using external visual diff tools
+
 # TLDR
 
 **Compare using external tool**
@@ -50,9 +54,18 @@
 
 # DESCRIPTION
 
-**git difftool** shows changes using external diff tools. Supports vimdiff, meld, kdiff3, and other visual diff applications.
+**git difftool** launches external visual diff tools to review changes in Git repositories. Unlike the built-in git diff which displays changes in the terminal, difftool provides a graphical or enhanced viewing experience through specialized applications.
+
+The command supports a wide variety of diff tools including vimdiff, meld, kdiff3, emerge, opendiff, and many others. Directory diff mode (-d) is particularly useful for graphical tools that support comparing entire directory trees simultaneously.
+
+# CONFIGURATION
+
+**~/.gitconfig**
+> Global difftool settings including default tool and tool-specific configurations.
+
+**.git/config**
+> Repository-specific difftool configuration overriding global settings.
 
 # SEE ALSO
 
 [git-diff](/man/git-diff)(1), [git-mergetool](/man/git-mergetool)(1)
-

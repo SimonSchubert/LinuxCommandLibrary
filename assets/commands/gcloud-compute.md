@@ -1,3 +1,7 @@
+# TAGLINE
+
+Google Compute Engine resource management
+
 # TLDR
 
 **List VM instances**
@@ -49,11 +53,11 @@ _RESOURCE_
 
 # DESCRIPTION
 
-**gcloud compute** manages Google Compute Engine resources. It handles virtual machines, disks, networks, firewalls, and other infrastructure components.
+**gcloud compute** is the command-line interface for Google Compute Engine, Google's Infrastructure-as-a-Service offering. It provides complete control over virtual machines, persistent disks, networks, load balancers, and other infrastructure primitives.
 
-The command group provides full lifecycle management for VMs and related resources. It includes convenience commands for SSH and file transfer to instances.
+The instances subcommand handles VM lifecycle operations including creation with customizable machine types, starting and stopping instances, and deletion. Network resources like VPCs, subnets, firewall rules, and routes are managed through their respective subcommands.
 
-gcloud compute is the primary CLI interface for Compute Engine operations.
+Special convenience features include built-in SSH access via gcloud compute ssh, which automatically manages SSH keys and connection details, and gcloud compute scp for secure file transfers. The command group supports advanced features like custom images, snapshots, instance groups, and managed instance groups for autoscaling. All operations respect zones and regions, which must be specified either per-command or via configuration defaults.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Detect Debian installer system architecture
+
 # TLDR
 
 **Detect** system architecture

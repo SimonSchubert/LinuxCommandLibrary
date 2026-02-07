@@ -1,3 +1,7 @@
+# TAGLINE
+
+Ethereum blockchain interaction tool from Foundry
+
 # TLDR
 
 **Get the balance** of an address
@@ -97,6 +101,11 @@ The tool also provides utilities for working with Ethereum data formats, includi
 
 **--chain** _chain_
 > Chain name or ID.
+
+# CONFIGURATION
+
+**foundry.toml**
+> Project-level Foundry configuration including default RPC URLs, chain settings, and etherscan API keys.
 
 # CAVEATS
 

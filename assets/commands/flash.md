@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal-based spaced repetition flashcards
+
 # TLDR
 
 Open a **menu of available flashcard decks** for selection

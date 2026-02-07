@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create files and stage them for commit
+
 # TLDR
 
 **Touch and stage file**
@@ -22,11 +26,9 @@ _FILES_
 
 # DESCRIPTION
 
-**git touch** creates files and stages them for commit. It combines the Unix touch command with git add, creating empty files that are immediately tracked.
+**git touch** creates files and stages them for commit. It combines the Unix `touch` command with `git add`, creating empty files that are immediately tracked.
 
 The command is useful for creating placeholder files that will be committed. It saves the separate steps of creating files then adding them.
-
-git touch creates and stages new files.
 
 # CAVEATS
 

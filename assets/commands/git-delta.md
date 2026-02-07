@@ -1,3 +1,7 @@
+# TAGLINE
+
+List files that differ between branches
+
 # TLDR
 
 **List touched files**
@@ -35,11 +39,9 @@ _BRANCH2_
 
 # DESCRIPTION
 
-**git delta** lists files that differ between two branches. It provides a quick way to see which files have been added, modified, or removed between branch points.
+**git delta** lists files that differ between two branches, providing a quick way to see which files have been added, modified, or removed between branch points. Unlike git diff, it shows only file names without content differences.
 
-The command simplifies comparing branches for code review preparation or deployment planning. Unlike git diff, it shows only file names without content.
-
-git delta offers quick file-level branch comparison.
+The command simplifies comparing branches for code review preparation or deployment planning. Part of the git-extras suite, it should not be confused with the separate "delta" project, which is a syntax-highlighting diff viewer.
 
 # CAVEATS
 

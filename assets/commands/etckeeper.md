@@ -1,3 +1,7 @@
+# TAGLINE
+
+version control for /etc directory
+
 # TLDR
 
 **Initialize** Git repo in /etc
@@ -26,9 +30,11 @@ Run **arbitrary Git** commands
 
 # DESCRIPTION
 
-**etckeeper** tracks system configuration files in /etc using Git (or other version control systems). It integrates with package managers to automatically commit changes before and after package operations.
+**etckeeper** tracks system configuration files in /etc using version control (Git, Mercurial, Bazaar, or Darcs). It integrates seamlessly with package managers like apt, yum, pacman, and dnf to automatically commit changes before and after package operations.
 
-Useful for tracking configuration changes and reverting problematic modifications.
+This provides an audit trail of all system configuration modifications, making it possible to review what changed when, understand why a system behaves differently after updates, and revert problematic changes. The tool preserves file permissions and metadata that Git normally doesn't track.
+
+etckeeper is valuable for system administrators managing multiple servers, troubleshooting configuration issues, and maintaining compliance documentation.
 
 # PARAMETERS
 
@@ -52,6 +58,11 @@ Useful for tracking configuration changes and reverting problematic modification
 
 **post-install**
 > Run after package install
+
+# CONFIGURATION
+
+**/etc/etckeeper/etckeeper.conf**
+> Main configuration file specifying VCS to use, package manager hooks to enable, and files to ignore.
 
 # CAVEATS
 

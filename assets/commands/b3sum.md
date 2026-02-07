@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compute and verify BLAKE3 cryptographic checksums.
+
 # TLDR
 
 **Calculate** BLAKE3 checksum

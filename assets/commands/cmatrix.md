@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal-based Matrix digital rain effect
+
 # TLDR
 
 **Display the Matrix** with default settings

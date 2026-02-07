@@ -1,3 +1,7 @@
+# TAGLINE
+
+view compose service logs
+
 # TLDR
 
 **View logs** from all services

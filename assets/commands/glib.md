@@ -1,3 +1,7 @@
+# TAGLINE
+
+general-purpose C utility library for GTK and GNOME
+
 # TLDR
 
 **Compile with GLib**

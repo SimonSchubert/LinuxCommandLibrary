@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display ASCII character table and aliases
+
 # TLDR
 
 Show **aliases** for character

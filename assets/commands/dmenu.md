@@ -1,3 +1,7 @@
+# TAGLINE
+
+dynamic menu for X11
+
 # TLDR
 
 Display menu from **ls output**

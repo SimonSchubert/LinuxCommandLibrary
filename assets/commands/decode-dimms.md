@@ -1,3 +1,7 @@
+# TAGLINE
+
+decode and display RAM SPD EEPROM information
+
 # TLDR
 
 Display **DIMM information**

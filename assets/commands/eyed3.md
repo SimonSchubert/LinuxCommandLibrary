@@ -1,3 +1,7 @@
+# TAGLINE
+
+ID3 tag editor for MP3 files
+
 # TLDR
 
 **View** information about an MP3 file

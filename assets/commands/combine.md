@@ -1,3 +1,7 @@
+# TAGLINE
+
+composite images with blend modes
+
 # TLDR
 
 **Combine two images** using the default compose operator

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Kubernetes Cluster API management CLI
+
 # TLDR
 
 **Initialize management cluster**
@@ -34,7 +38,11 @@
 
 # DESCRIPTION
 
-**clusterctl** manages Kubernetes Cluster API management clusters. Installs providers, generates cluster templates, and handles lifecycle operations. Transforms Kubernetes clusters into management clusters.
+**clusterctl** is the command-line tool for managing Kubernetes Cluster API (CAPI) management clusters. It handles the full lifecycle of cluster infrastructure providers, from initial installation through upgrades and deletion.
+
+The tool can initialize a Kubernetes cluster as a CAPI management cluster by installing infrastructure providers (AWS, Azure, vSphere, etc.), bootstrap providers, and control plane providers. Once initialized, it generates cluster templates for creating workload clusters and retrieves their kubeconfigs.
+
+clusterctl also supports moving Cluster API resources between management clusters, which is essential for upgrade scenarios and disaster recovery. The upgrade commands help keep providers in sync with the latest releases and API contract versions.
 
 # COMMANDS
 
@@ -84,7 +92,8 @@
 
 # CONFIGURATION
 
-Config file: ~/.cluster-api/clusterctl.yaml
+**~/.cluster-api/clusterctl.yaml**
+> Main configuration file for providers, variables, and image overrides.
 
 # CAVEATS
 

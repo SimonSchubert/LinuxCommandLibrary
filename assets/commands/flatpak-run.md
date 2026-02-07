@@ -1,3 +1,7 @@
+# TAGLINE
+
+execute sandboxed Flatpak applications
+
 # TLDR
 
 **Run** an installed flatpak application

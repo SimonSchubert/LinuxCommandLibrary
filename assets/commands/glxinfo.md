@@ -1,3 +1,7 @@
+# TAGLINE
+
+OpenGL and GLX capability display tool
+
 # TLDR
 
 **Show OpenGL information**
@@ -28,12 +32,6 @@
 
 **glxinfo** [_options_]
 
-# DESCRIPTION
-
-**glxinfo** displays information about the GLX implementation and OpenGL capabilities of the graphics system. It's useful for diagnosing graphics driver issues and checking hardware capabilities.
-
-The tool queries the X server and graphics driver, reporting OpenGL version, renderer, vendor, and supported extensions.
-
 # PARAMETERS
 
 **-B**
@@ -56,6 +54,12 @@ The tool queries the X server and graphics driver, reporting OpenGL version, ren
 
 **-h**
 > Display help.
+
+# DESCRIPTION
+
+**glxinfo** displays information about the GLX implementation and OpenGL capabilities of the graphics system. It is useful for diagnosing graphics driver issues and checking hardware capabilities.
+
+The tool queries the X server and graphics driver, reporting OpenGL version, renderer, vendor, and supported extensions.
 
 # CAVEATS
 

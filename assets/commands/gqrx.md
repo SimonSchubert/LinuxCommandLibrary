@@ -1,3 +1,7 @@
+# TAGLINE
+
+Software defined radio receiver
+
 # TLDR
 
 **Start Gqrx**
@@ -57,6 +61,11 @@ The application features a waterfall display, spectrum analyzer, and various dem
 - Adjustable filters and squelch
 - Audio recording
 - Remote control via TCP
+
+# CONFIGURATION
+
+**~/.config/gqrx/default.conf**
+> Default configuration file storing frequency, gain, and demodulation settings.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Read change data capture records from DynamoDB tables.
+
 # TLDR
 
 **List all streams** associated with a DynamoDB table

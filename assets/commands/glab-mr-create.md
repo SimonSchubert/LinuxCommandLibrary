@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create a new GitLab merge request
+
 # TLDR
 
 **Create MR interactively**
@@ -62,9 +66,10 @@
 
 # DESCRIPTION
 
-**glab mr create** creates a new GitLab merge request. Supports drafts, reviewers, and auto-fill from commit messages.
+**glab mr create** creates a new GitLab merge request from the current branch. It supports drafts, reviewer assignment, labels, and auto-filling title and description from commit messages.
+
+When run without flags, it launches an interactive editor for composing the merge request.
 
 # SEE ALSO
 
 [glab-mr](/man/glab-mr)(1), [glab](/man/glab)(1)
-

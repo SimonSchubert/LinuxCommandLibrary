@@ -1,3 +1,7 @@
+# TAGLINE
+
+Synchronize local branch with remote
+
 # TLDR
 
 **Sync with remote**
@@ -32,8 +36,6 @@ _BRANCH_
 **git sync** synchronizes the current branch with its remote tracking branch. It combines fetch and rebase/merge into a single command for quick synchronization.
 
 The command stashes local changes if needed, syncs with remote, then restores changes. It simplifies the common workflow of updating a branch.
-
-git sync provides convenient branch synchronization.
 
 # CAVEATS
 

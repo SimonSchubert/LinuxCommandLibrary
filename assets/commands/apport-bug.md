@@ -1,3 +1,7 @@
+# TAGLINE
+
+File bug reports with automatic system diagnostics.
+
 # TLDR
 
 Report a bug about **the whole system**

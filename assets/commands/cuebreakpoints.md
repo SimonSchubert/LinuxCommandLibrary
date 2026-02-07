@@ -1,3 +1,7 @@
+# TAGLINE
+
+extract track split points from CUE sheets
+
 # TLDR
 
 **Extract breakpoints from a CUE sheet**
@@ -52,15 +56,6 @@ The output is a list of timestamps in mm:ss.ff format (minutes:seconds.frames at
 
 Gap handling options control how the silence between tracks is distributed. Different ripping/encoding workflows may require gaps prepended, appended, or split between adjacent tracks.
 
-# EXAMPLE WORKFLOW
-
-```bash
-# Extract breakpoints and split FLAC file
-cuebreakpoints album.cue | shnsplit -o flac album.flac
-
-# Tag the resulting files
-cuetag album.cue split-track*.flac
-```
 
 # CAVEATS
 

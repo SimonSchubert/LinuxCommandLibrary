@@ -1,3 +1,7 @@
+# TAGLINE
+
+Google Cloud SDK component manager
+
 # TLDR
 
 **List available components**
@@ -49,11 +53,11 @@ _COMMAND_
 
 # DESCRIPTION
 
-**gcloud components** manages Google Cloud SDK components. It installs additional tools like kubectl, gsutil, and bq, and keeps the SDK updated.
+**gcloud components** manages the modular component system of the Google Cloud SDK. The SDK follows a core-plus-components architecture where a minimal base installation can be extended with additional tools as needed.
 
-The command handles downloading, installing, and updating individual components. The SDK can be extended with optional tools for specific GCP services.
+Common optional components include kubectl for Kubernetes management, gsutil for Cloud Storage operations, bq for BigQuery interactions, and language-specific App Engine runtimes. This modular approach keeps the initial SDK installation small while allowing expansion for specific workflows.
 
-gcloud components ensures you have the tools needed for your GCP workflow.
+The update command keeps all installed components current with the latest features and bug fixes. Component management is tracked locally, allowing different machines to have different component sets based on their specific use cases. Some components have dependencies on others, which the system handles automatically during installation.
 
 # CAVEATS
 

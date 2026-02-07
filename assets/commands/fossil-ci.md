@@ -1,3 +1,7 @@
+# TAGLINE
+
+shorthand for fossil commit
+
 # TLDR
 
 **Commit changes**
@@ -36,7 +40,9 @@
 
 # DESCRIPTION
 
-**fossil ci** is an alias for fossil commit. Records changes to the repository with a commit message.
+**fossil ci** is a shorthand alias for **fossil commit**. It records changes in the working directory to the repository with a commit message.
+
+This command is provided for convenience and compatibility with users familiar with other version control systems that use similar abbreviations. All options and behaviors are identical to **fossil commit**.
 
 # SEE ALSO
 

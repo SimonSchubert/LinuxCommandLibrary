@@ -1,3 +1,7 @@
+# TAGLINE
+
+Show locked files
+
 # TLDR
 
 **Show locked files**
@@ -10,11 +14,9 @@
 
 # DESCRIPTION
 
-**git locked** displays files currently marked as locked. It reads the .gitlock file and lists all files that have been locked using git lock.
+**git locked** displays files currently marked as locked. It reads the `.gitlock` file and lists all files that have been locked using `git lock`, providing visibility into which files are currently claimed by team members.
 
-The command provides visibility into which files are currently claimed by team members. This helps avoid conflicts on binary or other non-mergeable files.
-
-git locked shows the current lock state for coordination.
+This helps avoid conflicts on binary or other non-mergeable files where simultaneous edits would be problematic.
 
 # CAVEATS
 

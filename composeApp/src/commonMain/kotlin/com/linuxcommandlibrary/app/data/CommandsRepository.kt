@@ -56,7 +56,8 @@ class CommandsRepository(private val assetReader: AssetReader) {
                 title = title,
                 content = sectionContent,
             )
-        }.sortedBy { it.getSortPriority() }
+        }.filter { it.title.uppercase() != "TAGLINE" }
+            .sortedBy { it.getSortPriority() }
     } catch (e: Exception) {
         emptyList()
     }

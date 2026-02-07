@@ -1,3 +1,7 @@
+# TAGLINE
+
+Java-based web content discovery tool
+
 # TLDR
 
 Start in **GUI mode**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+list available logs in Cloud Logging
+
 # TLDR
 
 **List logs**
@@ -33,7 +37,11 @@
 
 # DESCRIPTION
 
-**gcloud logging logs list** lists the available logs in Cloud Logging. Each log contains entries written by services or applications.
+**gcloud logging logs list** displays all log streams available in a Google Cloud project's Cloud Logging service. Each log name represents a distinct stream of log entries, typically corresponding to a specific service, application, or resource.
+
+Logs are created automatically when services write entries to them. Common log names include those from Compute Engine instances, App Engine applications, Kubernetes clusters, and other GCP services. User applications can also write to custom logs.
+
+This command is useful for discovering what logs are available before reading their contents with other logging commands. The output helps identify the correct log name to use when querying or tailing specific application or service logs.
 
 # SEE ALSO
 

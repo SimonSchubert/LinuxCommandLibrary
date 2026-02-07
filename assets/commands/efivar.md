@@ -1,3 +1,7 @@
+# TAGLINE
+
+UEFI variable management utility
+
 # TLDR
 
 **List** all UEFI variables

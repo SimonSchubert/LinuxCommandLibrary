@@ -1,3 +1,7 @@
+# TAGLINE
+
+Music player and media manager
+
 # TLDR
 
 **Start** Banshee music player

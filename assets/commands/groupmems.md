@@ -1,3 +1,7 @@
+# TAGLINE
+
+manage group membership
+
 # TLDR
 
 **Add user to group**
@@ -48,8 +52,6 @@
 **groupmems** manages group membership. It allows administrators to add or remove users from groups without directly editing /etc/group.
 
 The tool provides a safe interface for group membership changes. Regular users can manage groups they own if configured appropriately.
-
-groupmems manages group membership.
 
 # CAVEATS
 

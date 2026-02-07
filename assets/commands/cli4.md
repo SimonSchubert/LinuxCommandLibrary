@@ -1,3 +1,7 @@
+# TAGLINE
+
+Cloudflare API v4 command-line client
+
 # TLDR
 
 **List all zones** (domains) in your Cloudflare account
@@ -68,6 +72,11 @@
 The tool uses a simple syntax where API endpoints are specified as paths and data is passed as key-value pairs. JSON values use the **:=** operator for proper typing, while string assignment uses **=**. Authentication is handled via environment variables or a configuration file.
 
 cli4 is particularly useful for automation and scripting Cloudflare operations. It can be integrated into CI/CD pipelines for cache purging, DNS updates, or firewall rule management.
+
+# CONFIGURATION
+
+**~/.cloudflare/cloudflare.cfg**
+> Stores API credentials (email, key, or token) as an alternative to environment variables.
 
 # CAVEATS
 

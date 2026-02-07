@@ -1,3 +1,7 @@
+# TAGLINE
+
+JDBC command-line client for Apache Hive
+
 # TLDR
 
 **Connect to HiveServer2**

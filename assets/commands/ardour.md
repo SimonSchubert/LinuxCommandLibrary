@@ -1,3 +1,7 @@
+# TAGLINE
+
+Professional digital audio workstation for recording and mixing
+
 # TLDR
 
 **Launch Ardour** with the graphical interface
@@ -92,6 +96,11 @@
 Ardour uses JACK (JACK Audio Connection Kit) for all audio I/O, enabling perfect sample-sync data exchange with other applications and hardware audio interfaces. It is capable of simultaneously recording 24 or more channels of 32-bit audio at 48kHz. The software supports LADSPA, LV2, VST, and AudioUnit plugins for effects processing and virtual instruments.
 
 Sessions are stored as directories containing all project data including audio files, edits, automation, and settings. Ardour supports non-destructive editing with unlimited undo history.
+
+# CONFIGURATION
+
+**~/.config/ardour8/**
+> User configuration directory containing preferences, keybindings, plugin settings, and templates. The directory name includes the major version number (e.g., ardour7, ardour8).
 
 # CAVEATS
 

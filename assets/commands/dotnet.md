@@ -1,3 +1,7 @@
+# TAGLINE
+
+cross-platform .NET development CLI
+
 # TLDR
 
 **Create new project**
@@ -67,6 +71,14 @@ _COMMAND_
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**global.json**
+> Specifies SDK version and project settings at solution level.
+
+**nuget.config**
+> Configures NuGet package sources and credentials.
 
 # DESCRIPTION
 

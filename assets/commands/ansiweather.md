@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display weather in the terminal with ANSI colors
+
 # TLDR
 
 **Get** weather for a city
@@ -61,6 +65,11 @@ The tool provides a quick, colorful weather overview without leaving the command
 
 **-h** _bool_
 > Show humidity info
+
+# CONFIGURATION
+
+**~/.ansiweatherrc**
+> User configuration file for default location, units, API key, and display options.
 
 # CAVEATS
 

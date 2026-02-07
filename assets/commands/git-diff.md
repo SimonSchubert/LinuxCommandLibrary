@@ -1,3 +1,7 @@
+# TAGLINE
+
+Show differences between commits and files
+
 # TLDR
 
 **Show unstaged changes**
@@ -69,28 +73,9 @@
 
 # DESCRIPTION
 
-**git diff** shows differences between commits, branches, working directory, and staging area. It's essential for reviewing changes before committing and understanding what changed between versions.
+**git diff** shows differences between commits, branches, working directory, and staging area. It is essential for reviewing changes before committing and understanding what changed between versions.
 
-By default, it shows unstaged changes (working directory vs index). With --staged, it shows what will be committed. Between commits, it shows all changes.
-
-# COMMON PATTERNS
-
-```bash
-# What changed in working directory
-git diff
-
-# What will be committed
-git diff --staged
-
-# Changes in last commit
-git diff HEAD~1
-
-# Changes between branches
-git diff main..feature
-
-# Changes in a file over time
-git diff HEAD~5 -- file.txt
-```
+By default, it shows unstaged changes (working directory vs index). With --staged, it shows what will be committed. When given two commits or branches, it shows all changes between them.
 
 # SEE ALSO
 

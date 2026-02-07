@@ -1,3 +1,7 @@
+# TAGLINE
+
+Administrative interface for Amanda backup management
+
 # TLDR
 
 **Check** configuration validity
@@ -55,6 +59,14 @@ The tool provides control over backup schedules, storage allocation, and retenti
 
 **balance**
 > Show backup level balance
+
+# CONFIGURATION
+
+**/etc/amanda/<config>/amanda.conf**
+> Main Amanda configuration file defining backup schedules, tape types, and holding disks.
+
+**/etc/amanda/<config>/disklist**
+> Lists hosts and disks to be backed up for a given configuration.
 
 # CAVEATS
 

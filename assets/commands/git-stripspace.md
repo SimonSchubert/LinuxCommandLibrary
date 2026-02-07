@@ -1,3 +1,7 @@
+# TAGLINE
+
+Clean up whitespace in Git messages
+
 # TLDR
 
 **Strip trailing whitespace**
@@ -26,9 +30,10 @@
 
 # DESCRIPTION
 
-**git stripspace** filters stdin for use with Git. Strips trailing whitespace and collapses multiple blank lines. Used internally for commit message cleanup.
+**git stripspace** filters text from stdin, stripping trailing whitespace and collapsing multiple consecutive blank lines. It is used internally by Git for commit message cleanup.
+
+The command can also strip or add comment lines, making it useful for processing Git-formatted messages and templates.
 
 # SEE ALSO
 
 [git-commit](/man/git-commit)(1)
-

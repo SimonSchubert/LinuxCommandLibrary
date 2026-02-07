@@ -1,3 +1,7 @@
+# TAGLINE
+
+CSV to tab-separated values converter
+
 # TLDR
 
 **Convert CSV to TSV**

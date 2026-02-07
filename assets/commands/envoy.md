@@ -1,3 +1,7 @@
+# TAGLINE
+
+high-performance L4/L7 proxy and service mesh data plane
+
 # TLDR
 
 **Start with configuration file**
@@ -93,6 +97,14 @@
 
 **--help**, **-h**
 > Show help message.
+
+# CONFIGURATION
+
+**/etc/envoy/envoy.yaml**
+> Common location for Envoy bootstrap configuration file.
+
+**envoy.yaml**
+> Bootstrap configuration defining listeners, clusters, routes, and filters.
 
 # DESCRIPTION
 

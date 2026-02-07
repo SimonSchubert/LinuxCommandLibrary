@@ -1,3 +1,7 @@
+# TAGLINE
+
+brace expansion and arithmetic separator in shell
+
 # TLDR
 
 **Brace expansion with sequence**
@@ -31,24 +35,6 @@ The **comma** has several uses in shell scripting:
 **For loop multiple expressions**: In C-style for loops, comma separates initialization and increment expressions.
 
 **Parameter expansion (bash 4+)**: **${var,,}** lowercases, **${var,}** lowercases first char.
-
-# EXAMPLES
-
-```bash
-# Brace expansion
-cp file.{txt,bak}        # cp file.txt file.bak
-mkdir -p project/{src,bin,lib}
-
-# Nested expansion
-echo {a,b}{1,2}          # a1 a2 b1 b2
-
-# Arithmetic
-(( x=1, y=2, z=x+y ))    # z=3
-
-# Case conversion (bash 4+)
-var="HELLO"
-echo ${var,,}            # hello
-```
 
 # CAVEATS
 

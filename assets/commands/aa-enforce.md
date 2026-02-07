@@ -1,3 +1,7 @@
+# TAGLINE
+
+Set AppArmor profiles to enforce mode
+
 # TLDR
 
 **Enable** a profile in enforce mode

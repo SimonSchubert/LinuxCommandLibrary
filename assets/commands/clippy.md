@@ -1,3 +1,7 @@
+# TAGLINE
+
+Rust linter for catching common mistakes
+
 # TLDR
 
 **Run clippy on project**

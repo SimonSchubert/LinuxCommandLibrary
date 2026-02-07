@@ -1,3 +1,7 @@
+# TAGLINE
+
+HTTP stress testing tool
+
 # TLDR
 
 **Test** a specific website
@@ -49,11 +53,9 @@ Display **help**
 
 # DESCRIPTION
 
-**goldeneye.py** is an HTTP stress testing tool designed to test the resilience of web servers and applications against heavy load conditions. It generates concurrent HTTP connections using randomized headers and user agents.
+**goldeneye.py** is an HTTP stress testing tool designed to test the resilience of web servers and applications against heavy load conditions. It generates concurrent HTTP connections using randomized headers and user agents to simulate traffic patterns and identify performance bottlenecks.
 
 > **WARNING**: This tool is intended ONLY for authorized security testing and load testing of systems you own or have explicit permission to test. Unauthorized use against systems you don't own is illegal and unethical.
-
-The tool operates by maintaining multiple open HTTP connections, simulating legitimate traffic patterns to identify performance bottlenecks and stress limits.
 
 # CAVEATS
 

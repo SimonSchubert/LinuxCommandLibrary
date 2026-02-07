@@ -1,3 +1,7 @@
+# TAGLINE
+
+Control EFI firmware boot settings and systemd-boot
+
 # TLDR
 
 Show **firmware and bootloader** information

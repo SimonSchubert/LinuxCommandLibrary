@@ -1,3 +1,7 @@
+# TAGLINE
+
+Translate Windows SIDs to Linux UIDs/GIDs for CIFS mounts
+
 # TLDR
 
 **Display help information**
@@ -33,6 +37,14 @@ The utility relies on a plugin at **/etc/cifs-utils/idmap-plugin** to perform ac
 
 **key_id**
 > The key identifier provided by the kernel upcall
+
+# CONFIGURATION
+
+**/etc/cifs-utils/idmap-plugin**
+> Symlink or plugin that performs the actual SID-to-UID/GID mapping. Must point to a supported backend (sfu, rid, nss, or tdb).
+
+**/etc/request-key.conf**
+> Kernel keyring configuration that directs upcalls to cifs.idmap.
 
 # CAVEATS
 

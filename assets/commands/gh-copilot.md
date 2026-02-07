@@ -1,3 +1,7 @@
+# TAGLINE
+
+AI-powered command suggestions and explanations
+
 # TLDR
 
 **Ask Copilot a question**
@@ -38,7 +42,11 @@
 
 # DESCRIPTION
 
-**gh copilot** provides AI-powered assistance using GitHub Copilot. Get command suggestions and explanations directly in the terminal.
+**gh copilot** provides AI-powered assistance using GitHub Copilot for the command line. It helps users discover and understand commands through natural language interactions.
+
+The suggest subcommand generates shell, git, or gh commands based on task descriptions, making it easier to find the right command syntax. The explain subcommand breaks down complex commands into understandable explanations, helping users learn what commands do before executing them.
+
+This integration brings GitHub Copilot's AI capabilities directly into the terminal workflow, requiring an active GitHub Copilot subscription.
 
 # SEE ALSO
 

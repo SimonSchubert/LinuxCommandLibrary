@@ -1,3 +1,7 @@
+# TAGLINE
+
+Control and manage Linux audit system rules.
+
 # TLDR
 
 Show **status**
@@ -30,7 +34,9 @@ Watch **directory** recursively
 
 # DESCRIPTION
 
-**auditctl** controls the behavior and manages rules of the Linux Auditing System. It can enable/disable auditing, add or remove rules, and display current audit status and configuration.
+**auditctl** controls the behavior and manages rules of the Linux Auditing System. It can enable or disable auditing, add or remove audit rules, and display the current audit status and configuration.
+
+Rules can monitor specific files and directories for access, track system calls by process attributes, and filter events by user, group, or architecture. The tool communicates directly with the kernel audit subsystem to apply rules immediately, though these runtime rules are lost on reboot unless persisted to the audit rules file.
 
 # PARAMETERS
 
@@ -57,6 +63,11 @@ Watch **directory** recursively
 
 **-p** _permissions_
 > Permissions filter (r=read, w=write, x=execute, a=attribute change)
+
+# CONFIGURATION
+
+**/etc/audit/audit.rules**
+> Persistent audit rules loaded at boot by auditd. Rules added with auditctl are lost on reboot unless saved here.
 
 # CAVEATS
 

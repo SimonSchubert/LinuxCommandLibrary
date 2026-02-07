@@ -1,3 +1,7 @@
+# TAGLINE
+
+ImageMagick MSL script interpreter
+
 # TLDR
 
 **Execute a Magick Scripting Language** (MSL) script

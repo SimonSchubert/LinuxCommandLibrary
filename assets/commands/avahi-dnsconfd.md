@@ -1,3 +1,7 @@
+# TAGLINE
+
+Unicast DNS server configuration daemon using mDNS
+
 # TLDR
 
 **Start the DNS configuration daemon**
@@ -62,6 +66,11 @@ The daemon requires avahi-daemon to be running. It is useful in environments whe
 
 **SIGHUP**
 > Refresh DNS server data
+
+# CONFIGURATION
+
+**/etc/avahi/avahi-dnsconfd.action**
+> Shell script executed when DNS servers are discovered or removed on the network. Receives action type and DNS server address as arguments.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Node.js web application scaffolding tool
+
 # TLDR
 
 **Create Express app with generator**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+sandboxed application distribution for Linux
+
 # TLDR
 
 **Run** an installed application

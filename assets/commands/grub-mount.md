@@ -1,3 +1,7 @@
+# TAGLINE
+
+mount filesystems using GRUB's drivers via FUSE
+
 # TLDR
 
 **Mount** a block device or file system image to a mount point
@@ -46,7 +50,7 @@ Enable **verbose** output
 
 # DESCRIPTION
 
-**grub-mount** mounts file systems or disk images read-only using GRUB's built-in file system drivers. This utility is useful for accessing file systems that GRUB supports but the host operating system might not, or for inspecting boot images.
+**grub-mount** mounts file systems or disk images read-only using GRUB's built-in file system drivers via FUSE. This is useful for accessing file systems that GRUB supports but the host operating system might not, or for inspecting boot images.
 
 The tool supports various file systems including ext2/3/4, XFS, Btrfs, ZFS, FAT, NTFS, and ISO9660. It can also handle encrypted volumes with the appropriate options.
 

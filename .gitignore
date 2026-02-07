@@ -22,6 +22,8 @@ local.properties
 processed.txt
 instructions-tldr.md
 instructions-man.md
+products_dataset.json
+instructions-config.md
 commands.txt
 commands_ignore.txt
 find_missing_commands.sh

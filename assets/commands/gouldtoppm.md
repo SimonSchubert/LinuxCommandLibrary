@@ -1,3 +1,7 @@
+# TAGLINE
+
+Gould scanner file to PPM converter
+
 # TLDR
 
 **Convert Gould scanner file to PPM**
@@ -14,9 +18,10 @@
 
 # DESCRIPTION
 
-**gouldtoppm** reads a file produced by a Gould scanner and converts it to PPM (Portable Pixmap) format. Part of the Netpbm package of graphics manipulation tools.
+**gouldtoppm** reads a file produced by a Gould scanner and converts it to PPM (Portable Pixmap) format. It is part of the Netpbm package of graphics manipulation tools.
+
+The command reads from a file argument or standard input and writes PPM output to standard output.
 
 # SEE ALSO
 
 [ppmtogif](/man/ppmtogif)(1), [pnmtopng](/man/pnmtopng)(1), [netpbm](/man/netpbm)(1)
-

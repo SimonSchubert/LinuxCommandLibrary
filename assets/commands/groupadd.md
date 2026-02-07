@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create a new system group
+
 # TLDR
 
 Create a **new group**
@@ -19,10 +23,6 @@ Create group with **initial members**
 # SYNOPSIS
 
 **groupadd** [_options_] _NEWGROUP_
-
-# DESCRIPTION
-
-**groupadd** creates a new group account using command-line options and system defaults. The new group information is recorded in the system files.
 
 # PARAMETERS
 
@@ -52,6 +52,12 @@ Create group with **initial members**
 
 **-P, --prefix PREFIX_DIR**
 > Apply changes in prefix directory
+
+# DESCRIPTION
+
+**groupadd** creates a new group account on the system. It records the new group information in system files (/etc/group and /etc/gshadow), assigning a unique GID unless specified.
+
+System groups (created with **-r**) use GIDs from the system range defined in /etc/login.defs, typically below 1000.
 
 # CAVEATS
 

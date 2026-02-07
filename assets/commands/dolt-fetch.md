@@ -1,3 +1,7 @@
+# TAGLINE
+
+download objects and refs from remote
+
 # TLDR
 
 **Fetch from remote**
@@ -30,7 +34,11 @@
 
 # DESCRIPTION
 
-**dolt fetch** downloads objects and refs from a remote repository. Updates remote tracking branches without merging changes into local branches.
+**dolt fetch** downloads objects, commits, and branch references from a remote Dolt repository. It synchronizes the local repository's knowledge of the remote's state without modifying the working set or local branches.
+
+This command updates remote-tracking branches (e.g., origin/main) to reflect the current state of the remote repository. Unlike pull, fetch does not automatically merge changes, allowing you to review remote changes before integrating them into your local branches.
+
+The --prune option removes remote-tracking branches that no longer exist on the remote, keeping the local repository clean. Fetching from all remotes simultaneously is useful in multi-remote workflows.
 
 # SEE ALSO
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+general purpose syntax highlighter
+
 # TLDR
 
 **Highlight source file**
@@ -30,7 +34,9 @@
 
 # DESCRIPTION
 
-**chroma** is a general purpose syntax highlighter supporting ~250 languages. Converts source code to syntax highlighted HTML, ANSI-colored terminal output, and more. Based on Pygments. Written in Go.
+**chroma** is a general-purpose syntax highlighter supporting approximately 250 languages. It converts source code to syntax-highlighted HTML, ANSI-colored terminal output, SVG, and other formats.
+
+The tool is based on the Pygments highlighting engine but reimplemented in Go for speed and easy embedding. It supports numerous color styles (monokai, dracula, github, etc.) and can autodetect the language from filenames and content. Chroma is also available as a Go library, used by tools like Hugo for code highlighting.
 
 # PARAMETERS
 

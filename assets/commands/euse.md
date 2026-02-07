@@ -1,3 +1,7 @@
+# TAGLINE
+
+Gentoo USE flag management utility
+
 # TLDR
 
 List **active global** USE flags
@@ -30,7 +34,9 @@ Show **info** about a USE flag
 
 # DESCRIPTION
 
-**euse** is a Gentoo utility to enable, disable, and obtain information about USE flags. USE flags control which optional features are compiled into packages during installation.
+**euse** is a Gentoo utility to enable, disable, and obtain information about USE flags. USE flags control which optional features are compiled into packages during installation, allowing fine-grained control over software capabilities, dependencies, and binary size.
+
+The tool simplifies USE flag management by providing a command-line interface to modify system and package-specific flags without manually editing configuration files. This is central to Gentoo's philosophy of compile-time customization.
 
 # PARAMETERS
 
@@ -54,6 +60,14 @@ Show **info** about a USE flag
 
 **-i, --info**
 > Show information about a USE flag
+
+# CONFIGURATION
+
+**/etc/portage/make.conf**
+> Global USE flags for the entire system set via the USE variable.
+
+**/etc/portage/package.use/**
+> Per-package USE flag settings organized in files within this directory.
 
 # CAVEATS
 

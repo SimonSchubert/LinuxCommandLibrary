@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create audio loopback between ALSA devices.
+
 # TLDR
 
 **Loop** audio from capture to playback device

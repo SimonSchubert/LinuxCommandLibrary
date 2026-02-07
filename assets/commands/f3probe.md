@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast counterfeit flash memory detector
+
 # TLDR
 
 **Probe a flash drive** for counterfeit memory (destructive)

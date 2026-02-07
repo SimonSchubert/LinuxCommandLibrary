@@ -1,3 +1,7 @@
+# TAGLINE
+
+Open-source VHDL simulator and synthesizer
+
 # TLDR
 
 **Analyze VHDL file**
@@ -57,9 +61,7 @@
 
 **ghdl** is an open-source VHDL simulator and synthesizer. It analyzes, elaborates, and simulates VHDL designs, supporting VHDL-87, VHDL-93, VHDL-2002, and VHDL-2008 standards.
 
-The workflow involves analyzing source files, elaborating the design hierarchy, and running simulation. GHDL can generate waveform outputs in VCD and GHW formats for viewing in waveform tools.
-
-ghdl enables VHDL development and verification without commercial EDA tools.
+The workflow involves analyzing source files, elaborating the design hierarchy, and running simulation. **ghdl** can generate waveform outputs in VCD and GHW formats for viewing in waveform tools like GTKWave.
 
 # CAVEATS
 

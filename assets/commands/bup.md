@@ -1,3 +1,7 @@
+# TAGLINE
+
+Git-based backup system with deduplication
+
 # TLDR
 
 **Initialize** repository

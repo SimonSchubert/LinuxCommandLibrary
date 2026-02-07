@@ -1,3 +1,7 @@
+# TAGLINE
+
+reverse line feed filter for text processing
+
 # TLDR
 
 Filter **reverse line feeds** from input
@@ -26,7 +30,11 @@ Format **man page** for viewing
 
 # DESCRIPTION
 
-**col** filters reverse and half-reverse line feeds from input, ensuring output displays in correct order. It replaces whitespace with tabs when feasible and is particularly useful for processing output from nroff and tbl commands.
+**col** filters reverse line feeds and half-reverse line feeds from input text, ensuring output displays in the correct order on terminals that cannot handle these control sequences. It's a text processing filter that resolves line feed conflicts and optimizes whitespace representation.
+
+The utility is particularly useful for processing output from nroff, tbl, and other text formatting commands that use reverse line feeds for underlining and overstriking. By default, col converts sequences of spaces to tabs for efficiency, though this can be disabled with the -x flag.
+
+Originally designed for printing formatted text on line printers and simple terminals, col remains useful for converting man page output to plain text, preprocessing formatted documents, and handling legacy text formats. It reads from standard input and writes cleaned output to standard output, making it suitable for Unix pipelines.
 
 # PARAMETERS
 

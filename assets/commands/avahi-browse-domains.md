@@ -1,3 +1,7 @@
+# TAGLINE
+
+Discover mDNS browsing domains on the network
+
 # TLDR
 
 **Browse** for browsing domains on the local network

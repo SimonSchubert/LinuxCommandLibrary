@@ -1,3 +1,7 @@
+# TAGLINE
+
+color scheme configurator for ls
+
 # TLDR
 
 **Output shell commands** to set LS_COLORS
@@ -34,6 +38,14 @@
 
 **-p**, **--print-database**
 > Print the default database.
+
+# CONFIGURATION
+
+**~/.dircolors** or **~/.dir_colors**
+> User-specific color configuration database mapping file types and extensions to colors.
+
+**/etc/DIR_COLORS**
+> System-wide default color configuration.
 
 # DESCRIPTION
 

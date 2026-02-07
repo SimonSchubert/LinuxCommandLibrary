@@ -1,3 +1,7 @@
+# TAGLINE
+
+PKI/TLS certificate authority toolkit
+
 # TLDR
 
 **Initialize a new CA**
@@ -34,7 +38,11 @@
 
 # DESCRIPTION
 
-**cfssl** is CloudFlare's PKI/TLS toolkit for signing, verifying, and bundling TLS certificates. It includes a command-line tool and HTTP API server for certificate authority operations.
+**cfssl** is CloudFlare's PKI/TLS toolkit for signing, verifying, and bundling TLS certificates. It provides both a command-line tool and an HTTP API server for running a complete certificate authority.
+
+The toolkit handles the full certificate lifecycle: generating root and intermediate CAs, signing certificate requests, creating self-signed certificates, and building certificate bundles for deployment. Configuration files define signing profiles with specific expiry periods, key usages, and authentication requirements.
+
+The companion tool cfssljson extracts certificates and keys from cfssl's JSON output into PEM files. The multirootca component allows running a CA server with multiple signing keys for different purposes.
 
 # COMMANDS
 
@@ -101,6 +109,14 @@ Default address: 127.0.0.1:8888
 
 **mkbundle**
 > Build certificate bundles
+
+# CONFIGURATION
+
+**ca-csr.json**
+> Certificate Signing Request defaults (key algorithm, size, names, hosts).
+
+**config.json**
+> Signing profiles defining certificate expiry, usages, and auth keys for the CA.
 
 # CAVEATS
 

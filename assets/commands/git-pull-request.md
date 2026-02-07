@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create pull request from command line
+
 # TLDR
 
 **Create pull request**
@@ -29,9 +33,10 @@
 
 # DESCRIPTION
 
-**git pull-request** creates a GitHub pull request from the command line. Part of git-extras or hub. Opens PR creation in browser or creates directly via API.
+**git pull-request** creates a GitHub pull request from the command line. Part of git-extras or hub, it pushes the current branch if needed and opens a pull request to the specified base branch.
+
+The command can extract PR title and body from commit messages or prompt for them interactively. Modern alternatives include the official `gh` CLI tool which provides more comprehensive GitHub integration.
 
 # SEE ALSO
 
 [gh-pr-create](/man/gh-pr-create)(1), [git-extras](/man/git-extras)(1)
-

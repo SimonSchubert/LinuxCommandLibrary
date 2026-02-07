@@ -1,3 +1,7 @@
+# TAGLINE
+
+simple OpenGL rendering test
+
 # TLDR
 
 **Run OpenGL demo**
@@ -13,8 +17,6 @@
 **glxdemo** is a simple OpenGL demonstration program. It displays a basic 3D scene to verify that OpenGL rendering is working correctly on the system.
 
 The program is used for testing X11 OpenGL (GLX) functionality. If it runs successfully, OpenGL acceleration is properly configured.
-
-glxdemo verifies OpenGL functionality.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+GNOME Sudoku puzzle game
+
 # TLDR
 
 **Start GNOME Sudoku**
@@ -18,7 +22,7 @@
 
 # DESCRIPTION
 
-**GNOME Sudoku** is a puzzle game where players fill a 9×9 grid so that each row, column, and 3×3 box contains digits 1-9 exactly once.
+**GNOME Sudoku** is a puzzle game where players fill a 9x9 grid so that each row, column, and 3x3 box contains digits 1-9 exactly once.
 
 The game generates puzzles at various difficulty levels and provides features like hints, notes (pencil marks), and error highlighting. It saves game progress automatically.
 

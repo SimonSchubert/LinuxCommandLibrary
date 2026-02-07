@@ -1,3 +1,7 @@
+# TAGLINE
+
+Parse and display block I/O trace data
+
 # TLDR
 
 **Parse and display blktrace output** for a device

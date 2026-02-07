@@ -1,3 +1,7 @@
+# TAGLINE
+
+List all contributors to a repository
+
 # TLDR
 
 **List all authors**
@@ -40,7 +44,7 @@
 
 The command is part of git-extras, a collection of useful git utilities. It can output in various formats suitable for documentation or acknowledgment files.
 
-git authors simplifies contributor tracking and recognition.
+The output can be redirected to create an AUTHORS file, which is a common convention in open source projects for crediting all contributors. The **--no-email** option produces a cleaner list suitable for public display.
 
 # CAVEATS
 

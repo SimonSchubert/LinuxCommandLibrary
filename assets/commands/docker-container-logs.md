@@ -1,3 +1,7 @@
+# TAGLINE
+
+view logs from a container
+
 # TLDR
 
 **View container logs**
@@ -43,7 +47,9 @@
 
 # DESCRIPTION
 
-**docker container logs** fetches logs from a container. Shows stdout and stderr from the container's main process.
+**docker container logs** fetches logs from a container's main process, displaying both standard output and standard error streams. This command is essential for debugging and monitoring containerized applications, allowing you to view historical logs or follow them in real-time.
+
+Logs are collected from the container's configured logging driver, which by default captures stdout and stderr from the container's PID 1 process. Time-based filtering and tail options make it efficient to work with large log volumes.
 
 # SEE ALSO
 

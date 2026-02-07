@@ -1,3 +1,7 @@
+# TAGLINE
+
+byte-by-byte file comparison
+
 # TLDR
 
 **Compare two files**
@@ -30,7 +34,11 @@
 
 # DESCRIPTION
 
-**cmp** compares two files byte by byte. Reports first difference location or indicates files are identical. More efficient than diff for binary files. Part of GNU diffutils.
+**cmp** compares two files byte by byte and reports the location of the first difference. By default, it prints the byte number and line number where the files diverge, or produces no output if they are identical.
+
+Unlike **diff**, which operates on text lines, cmp works at the byte level, making it more efficient and appropriate for binary files. The **-s** (silent) mode is commonly used in scripts where only the exit status matters: 0 for identical files, 1 for differences, and 2 for errors.
+
+The **-l** option lists all byte positions where the files differ, along with the differing byte values in octal. The tool can also skip initial bytes in one or both files and limit the comparison to a specified number of bytes.
 
 # PARAMETERS
 

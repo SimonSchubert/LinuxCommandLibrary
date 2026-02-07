@@ -1,3 +1,7 @@
+# TAGLINE
+
+Cygwin diagnostic and package query tool
+
 # TLDR
 
 **Generate full system** diagnostic report

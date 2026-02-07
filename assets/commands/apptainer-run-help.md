@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display embedded help text from a container.
+
 # TLDR
 
 **Display the run-help** for a container

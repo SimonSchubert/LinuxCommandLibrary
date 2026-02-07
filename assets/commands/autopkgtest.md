@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run DEP-8 tests for Debian packages
+
 # TLDR
 
 Build the package and **run all tests** directly on the system

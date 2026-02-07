@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal confetti animation
+
 # TLDR
 
 **Display confetti** animation in the terminal

@@ -1,3 +1,7 @@
+# TAGLINE
+
+manage deployment environments and protection rules
+
 # TLDR
 
 **List environments**
@@ -27,7 +31,11 @@
 
 # DESCRIPTION
 
-**gh environment** manages GitHub repository environments. Environments are used for deployment targets with protection rules and secrets.
+**gh environment** manages GitHub repository environments used in deployment workflows. Environments represent deployment targets like production, staging, or development with configurable protection rules and environment-specific secrets.
+
+Protection rules can require manual approvals, enforce wait timers, or restrict deployments to specific branches. Environment secrets provide secure storage for credentials and configuration needed for deployments without exposing them in workflow files.
+
+Managing environments through the CLI enables automation of deployment infrastructure setup and configuration.
 
 # SEE ALSO
 

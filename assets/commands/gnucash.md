@@ -1,3 +1,7 @@
+# TAGLINE
+
+personal and small-business financial accounting
+
 # TLDR
 
 **Launch GnuCash**
@@ -56,9 +60,16 @@
 
 # DESCRIPTION
 
-**GnuCash** is a personal and small-business financial accounting application. It supports double-entry bookkeeping, stock/bond/mutual fund accounts, scheduled transactions, and financial reports. GnuCash can import OFX, QIF, and CSV files and track income, expenses, bank accounts, and investments.
+**GnuCash** is a personal and small-business financial accounting application. It supports double-entry bookkeeping, stock/bond/mutual fund accounts, scheduled transactions, and financial reports. **GnuCash** can import OFX, QIF, and CSV files and track income, expenses, bank accounts, and investments.
+
+# CONFIGURATION
+
+**~/.local/share/gnucash/**
+> User data directory containing saved reports, custom settings, and metadata.
+
+**~/.config/gnucash/**
+> User configuration directory for preferences and UI state.
 
 # SEE ALSO
 
 [gnucash-cli](/man/gnucash-cli)(1), [ledger](/man/ledger)(1), [hledger](/man/hledger)(1)
-

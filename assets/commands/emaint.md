@@ -1,3 +1,7 @@
+# TAGLINE
+
+Portage system maintenance utility
+
 # TLDR
 
 Synchronize repositories set to **auto-sync**
@@ -55,6 +59,11 @@ Preferred over deprecated `emerge --sync` for repository updates.
 
 **-f, --fix**
 > Apply fixes
+
+# CONFIGURATION
+
+**/etc/portage/repos.conf**
+> Repository configuration for Portage, controlling which repositories are synchronized.
 
 # CAVEATS
 

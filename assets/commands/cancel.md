@@ -1,3 +1,7 @@
+# TAGLINE
+
+Cancel print jobs
+
 # TLDR
 
 **Cancel the current print job on the default printer**
@@ -53,6 +57,14 @@ Job IDs are assigned by the print system and can be viewed with **lpstat**. The 
 
 **-x**
 > Delete job data files in addition to canceling
+
+# CONFIGURATION
+
+**/etc/cups/cupsd.conf**
+> CUPS server configuration including operation policies that control Cancel-Jobs and Cancel-My-Jobs permissions.
+
+**/etc/cups/printers.conf**
+> Printer definitions and queue settings.
 
 # CAVEATS
 

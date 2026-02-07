@@ -1,3 +1,7 @@
+# TAGLINE
+
+SQL query executor and database importer for CSV
+
 # TLDR
 
 **Execute SQL query** on a CSV file

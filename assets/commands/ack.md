@@ -1,3 +1,7 @@
+# TAGLINE
+
+grep-like source code search tool for programmers
+
 # TLDR
 
 **Search** for a pattern in current directory recursively
@@ -73,6 +77,17 @@ The tool provides built-in file type filtering, allowing searches limited to spe
 
 **--help-types**
 > List all recognized file types
+
+# CONFIGURATION
+
+**~/.ackrc**
+> Per-user configuration file for default options. Each line contains a single command-line option (e.g., --type-add=xml:ext:xsl). Loaded before command-line arguments.
+
+**/etc/ackrc**
+> System-wide configuration file, loaded before ~/.ackrc.
+
+**.ackrc**
+> Project-level configuration file in the current directory. Overrides system and user settings for the project.
 
 # CAVEATS
 

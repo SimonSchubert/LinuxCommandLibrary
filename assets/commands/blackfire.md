@@ -1,3 +1,7 @@
+# TAGLINE
+
+Profile PHP application performance
+
 # TLDR
 
 **Profile a PHP script**
@@ -77,6 +81,14 @@ The tool integrates with Blackfire.io cloud services to provide detailed flame g
 
 **--ignore-exit-status**
 > Ignore non-zero exit status from profiled command
+
+# CONFIGURATION
+
+**/etc/blackfire/agent**
+> Blackfire agent configuration including server credentials and socket settings.
+
+**~/.blackfire.ini**
+> Client-side configuration with client ID and token for authentication.
 
 # CAVEATS
 

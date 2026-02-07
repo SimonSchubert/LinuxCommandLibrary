@@ -1,3 +1,7 @@
+# TAGLINE
+
+Archive authentication and trust model documentation.
+
 # TLDR
 
 This is a **manual page** describing APT's security model, not a command.
@@ -29,6 +33,14 @@ The document covers:
 
 **signed-by**
 > Modern method to specify per-repository keys
+
+# CONFIGURATION
+
+**/etc/apt/trusted.gpg.d/**
+> Directory for trusted keyring files used to verify repository signatures.
+
+**/etc/apt/sources.list**
+> Package sources, supporting signed-by option for per-repository keys.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Text-based backgammon board game.
+
 # TLDR
 
 **Start** backgammon game

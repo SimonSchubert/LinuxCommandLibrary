@@ -1,3 +1,7 @@
+# TAGLINE
+
+Cryptographic Message Syntax operations via OpenSSL
+
 # TLDR
 
 **Sign a file** with a certificate and output in S/MIME format

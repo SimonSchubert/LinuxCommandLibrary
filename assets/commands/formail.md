@@ -1,3 +1,7 @@
+# TAGLINE
+
+mail header extraction and manipulation tool
+
 # TLDR
 
 **Extract headers from email**
@@ -65,19 +69,6 @@
 **formail** is a mail processing utility from the procmail suite. It extracts headers, adds or modifies headers, splits mbox files, and helps generate automated replies.
 
 The tool reads from stdin and writes to stdout, designed for use in pipelines and procmail recipes. It handles RFC 822 mail format intricacies.
-
-# EXAMPLES
-
-```bash
-# Split mbox and save each message
-formail -s procmail < mbox
-
-# Extract sender address
-formail -x From: < message | head -1
-
-# Add header for filtering
-formail -a "X-Filtered: yes" < message
-```
 
 # CAVEATS
 

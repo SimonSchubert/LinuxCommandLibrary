@@ -1,3 +1,7 @@
+# TAGLINE
+
+GLib resource file compiler
+
 # TLDR
 
 **Compile resources** to a binary bundle
@@ -63,8 +67,6 @@
 **glib-compile-resources** compiles application resources (images, UI files, CSS, icons, data) into binary bundles or C source for embedding in GLib/GTK applications. Resources are described in XML files (typically with .gresource.xml extension) that list files to include and optional preprocessing.
 
 The GResource system enables applications to access embedded resources through a virtual filesystem path (e.g., /org/myapp/data.txt) without external file dependencies. This simplifies deployment and improves load times.
-
-Generated C source can be compiled directly into the application binary. Binary .gresource files can be loaded at runtime with g_resource_load().
 
 # CAVEATS
 

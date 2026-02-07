@@ -1,3 +1,7 @@
+# TAGLINE
+
+display enrolled fingerprints
+
 # TLDR
 
 List enrolled fingerprints for a **specific user**

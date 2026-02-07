@@ -1,3 +1,7 @@
+# TAGLINE
+
+pluggable JavaScript and TypeScript linter
+
 # TLDR
 
 **Lint JavaScript files**
@@ -68,6 +72,17 @@ _FILES_
 Rules are highly configurable through .eslintrc files. Plugins extend functionality for React, Vue, TypeScript, and other frameworks. The --fix flag automatically corrects many issues.
 
 ESLint integrates with editors and CI systems, making it central to JavaScript development workflows.
+
+# CONFIGURATION
+
+**.eslintrc.js** / **.eslintrc.json** / **.eslintrc.yml**
+> Main configuration files defining rules, parser options, plugins, and extends. Can be placed in project root or any parent directory.
+
+**package.json**
+> ESLint configuration can be embedded in the "eslintConfig" field.
+
+**.eslintignore**
+> Specifies files and directories to exclude from linting.
 
 # CAVEATS
 

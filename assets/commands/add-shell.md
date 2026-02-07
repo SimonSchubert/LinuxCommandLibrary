@@ -1,3 +1,7 @@
+# TAGLINE
+
+Register valid login shells
+
 # TLDR
 
 **Add** a shell to /etc/shells

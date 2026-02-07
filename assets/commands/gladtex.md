@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert LaTeX formulas in HTML to images
+
 # TLDR
 
 **Convert HTML with LaTeX**
@@ -42,11 +46,9 @@ _FILE_
 
 # DESCRIPTION
 
-**gladtex** converts LaTeX formulas in HTML documents to images. It processes .htex files containing LaTeX math markup and produces standard HTML with formula images.
+**gladtex** converts LaTeX formulas embedded in HTML documents to images. It processes `.htex` files containing LaTeX math markup and produces standard HTML with rendered formula images.
 
-The tool enables embedding mathematical notation in web pages. Formulas are rendered via LaTeX and converted to images that display in browsers.
-
-gladtex provides LaTeX math rendering for HTML.
+The tool enables embedding mathematical notation in web pages by rendering formulas through LaTeX and converting them to images that display in any browser.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create or update GitHub Actions encrypted secrets
+
 # TLDR
 
 **Set secret interactively**
@@ -51,9 +55,7 @@ _NAME_
 
 **gh secret set** creates or updates encrypted secrets for GitHub Actions. When run interactively, it prompts for the secret value securely without echoing to the terminal.
 
-The command encrypts secrets using repository or organization public keys before transmission. Secrets can be scoped to specific environments for deployment workflows or to selected repositories in organizations.
-
-Pipe or redirect input to avoid exposing secrets in shell history.
+The command encrypts secrets using repository or organization public keys before transmission. Secrets can be scoped to specific environments for deployment workflows or to selected repositories in organizations. Pipe or redirect input to avoid exposing secrets in shell history.
 
 # CAVEATS
 

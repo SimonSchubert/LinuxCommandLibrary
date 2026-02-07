@@ -1,3 +1,7 @@
+# TAGLINE
+
+Encode images into AVIF format
+
 # TLDR
 
 **Convert** a PNG image to AVIF

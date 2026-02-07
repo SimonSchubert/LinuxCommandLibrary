@@ -1,3 +1,7 @@
+# TAGLINE
+
+Daemon that executes jobs scheduled with at
+
 # TLDR
 
 **Start the at daemon**
@@ -54,6 +58,14 @@ Related commands:
 - **atq** - list pending jobs
 - **atrm** - remove a pending job
 - **batch** - schedule a job for when system load permits
+
+# CONFIGURATION
+
+**/etc/at.allow**
+> If this file exists, only users listed in it can schedule jobs with at.
+
+**/etc/at.deny**
+> Users listed in this file are denied access to at. Ignored if at.allow exists.
 
 # CAVEATS
 

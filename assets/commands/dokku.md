@@ -1,3 +1,7 @@
+# TAGLINE
+
+self-hosted Platform-as-a-Service powered by Docker
+
 # TLDR
 
 **Create an app**

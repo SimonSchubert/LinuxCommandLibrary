@@ -1,3 +1,7 @@
+# TAGLINE
+
+Docksal Docker development environment CLI
+
 # TLDR
 
 **List projects**
@@ -49,6 +53,14 @@ _COMMAND_
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**.docksal/docksal.yml**
+> Project-specific Docksal configuration for containers and services.
+
+**.docksal/docksal.env**
+> Environment variables for the project.
 
 # DESCRIPTION
 

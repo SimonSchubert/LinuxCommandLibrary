@@ -1,3 +1,7 @@
+# TAGLINE
+
+Translate SELinux denial messages into human-readable explanations.
+
 # TLDR
 
 Explain the **most recent** SELinux denial

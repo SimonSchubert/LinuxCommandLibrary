@@ -1,3 +1,7 @@
+# TAGLINE
+
+Advisory file locking
+
 # TLDR
 
 **Lock a file**
@@ -22,11 +26,9 @@ _FILES_
 
 # DESCRIPTION
 
-**git lock** marks files as locked in git-extras. It adds files to a .gitlock file, indicating they shouldn't be modified by others. This provides advisory file locking.
+**git lock** marks files as locked in git-extras. It adds files to a `.gitlock` file, indicating they shouldn't be modified by others. This provides advisory file locking for coordinating work on binary or non-mergeable files.
 
-The lock is advisory and tracked in the repository. It requires team cooperation to respect locks. Use git locked to see currently locked files.
-
-git lock provides simple file locking coordination.
+The lock is advisory and tracked in the repository, requiring team cooperation to respect locks. Use `git locked` to see currently locked files and `git unlock` to release them.
 
 # CAVEATS
 

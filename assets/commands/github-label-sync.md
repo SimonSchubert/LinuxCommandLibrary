@@ -1,3 +1,7 @@
+# TAGLINE
+
+Synchronize GitHub repository labels from a config file
+
 # TLDR
 
 **Sync labels to repository**
@@ -32,9 +36,8 @@
 
 # DESCRIPTION
 
-**github-label-sync** synchronizes GitHub labels with a configuration file. Ensures consistent labeling across repositories by defining labels declaratively.
+**github-label-sync** synchronizes GitHub labels with a JSON configuration file. It ensures consistent labeling across repositories by defining labels declaratively, adding missing labels, updating changed ones, and optionally removing unlisted labels.
 
 # SEE ALSO
 
 [gh-label](/man/gh-label)(1)
-

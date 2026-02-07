@@ -1,3 +1,7 @@
+# TAGLINE
+
+Automatically scale EC2 instance groups based on demand
+
 # TLDR
 
 **Create an Auto Scaling group** with a launch template

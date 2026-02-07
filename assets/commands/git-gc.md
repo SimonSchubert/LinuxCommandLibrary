@@ -1,3 +1,7 @@
+# TAGLINE
+
+Cleanup and optimize repository storage
+
 # TLDR
 
 **Run garbage collection**
@@ -46,11 +50,9 @@
 
 # DESCRIPTION
 
-**git gc** (garbage collection) cleans up unnecessary files and optimizes the repository. It packs loose objects, removes unreachable objects, and compresses the repository.
+**git gc** (garbage collection) cleans up unnecessary files and optimizes the repository. It packs loose objects, removes unreachable objects, and compresses the repository for better performance.
 
-Git runs gc automatically after certain operations. Manual gc is useful after history rewrites or large imports. Aggressive mode does deeper optimization but takes longer.
-
-git gc maintains repository health and performance.
+Git runs gc automatically after certain operations. Manual gc is useful after history rewrites or large imports. Aggressive mode performs deeper optimization but takes significantly longer.
 
 # CAVEATS
 

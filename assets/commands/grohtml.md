@@ -1,3 +1,7 @@
+# TAGLINE
+
+Groff HTML output driver
+
 # TLDR
 
 **Convert groff to HTML**
@@ -38,11 +42,9 @@ _FILE_
 
 # DESCRIPTION
 
-**grohtml** is a groff output driver that produces HTML. It converts groff documents to web-viewable format with optional image generation.
+**grohtml** is a groff output driver that produces HTML. It converts groff documents to web-viewable format with optional image generation for elements that do not translate directly to HTML.
 
-The driver handles text formatting, creating appropriate HTML tags. It can generate images for elements that don't translate directly to HTML.
-
-grohtml generates HTML output from groff.
+The driver handles text formatting and creates appropriate HTML tags. Complex formatting elements can be rendered as inline images for accurate representation.
 
 # CAVEATS
 

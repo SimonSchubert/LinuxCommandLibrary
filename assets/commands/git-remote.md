@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage remote repository connections
+
 # TLDR
 
 **List remotes**
@@ -49,11 +53,20 @@
 
 # DESCRIPTION
 
-**git remote** manages tracked remote repositories. It configures URLs and refspecs for fetch and push operations, enabling interaction with multiple remote repositories.
+**git remote** manages tracked remote repositories. It configures URLs and refspecs for fetch and push operations, enabling interaction with multiple remote repositories in distributed workflows.
 
-The command handles the remote setup that enables distributed workflows. Common operations include adding upstreams, changing URLs after repository moves, and inspecting remote configuration.
+Common operations include adding upstream remotes for fork-based development, changing URLs after repository migrations, renaming remotes, and inspecting remote configuration details like tracked branches and push/fetch URLs.
 
-git remote configures repository remote connections.
+# CONFIGURATION
+
+**.git/config**
+> Repository remote configuration with URLs and refspecs.
+
+```
+[remote "origin"]
+    url = https://github.com/user/repo.git
+    fetch = +refs/heads/*:refs/remotes/origin/*
+```
 
 # CAVEATS
 

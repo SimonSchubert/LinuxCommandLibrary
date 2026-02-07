@@ -1,3 +1,7 @@
+# TAGLINE
+
+Switch between branches
+
 # TLDR
 
 **Switch to branch**
@@ -60,9 +64,10 @@
 
 # DESCRIPTION
 
-**git switch** switches branches. Introduced in Git 2.23 to provide a clearer way to switch branches, separating this from git checkout's file restoration functionality.
+**git switch** changes the current branch. Introduced in Git 2.23 to provide a focused command for branch switching, separating this concern from `git checkout` which also handles file restoration.
+
+Use `-c` to create a new branch and switch to it in one step, or `--detach` to move to a specific commit without being on any branch.
 
 # SEE ALSO
 
 [git-checkout](/man/git-checkout)(1), [git-branch](/man/git-branch)(1)
-

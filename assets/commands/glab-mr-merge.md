@@ -1,3 +1,7 @@
+# TAGLINE
+
+Merge a GitLab merge request
+
 # TLDR
 
 **Merge a merge request**
@@ -39,9 +43,8 @@
 
 # DESCRIPTION
 
-**glab mr merge** merges a GitLab merge request. Supports squash merges and automatic branch deletion.
+**glab mr merge** merges a GitLab merge request. It supports squash merging, automatic source branch deletion, and deferred merging that waits for the CI pipeline to pass before completing.
 
 # SEE ALSO
 
 [glab-mr](/man/glab-mr)(1), [glab-mr-create](/man/glab-mr-create)(1)
-

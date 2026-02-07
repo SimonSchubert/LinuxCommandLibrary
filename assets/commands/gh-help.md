@@ -1,3 +1,7 @@
+# TAGLINE
+
+display command documentation and usage
+
 # TLDR
 
 **Show general help**

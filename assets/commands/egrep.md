@@ -1,3 +1,7 @@
+# TAGLINE
+
+extended regex pattern searcher
+
 # TLDR
 
 **Search for pattern** in file

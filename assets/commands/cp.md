@@ -1,3 +1,7 @@
+# TAGLINE
+
+File and directory copy utility
+
 # TLDR
 
 **Copy** file

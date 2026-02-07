@@ -1,3 +1,7 @@
+# TAGLINE
+
+CPIO firmware image creator
+
 # TLDR
 
 Create a **CPIO archive** from current directory

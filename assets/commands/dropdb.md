@@ -1,3 +1,7 @@
+# TAGLINE
+
+remove a PostgreSQL database
+
 # TLDR
 
 **Drop a database**

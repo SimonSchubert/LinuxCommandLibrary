@@ -1,3 +1,7 @@
+# TAGLINE
+
+privileged command execution with Active Directory
+
 # TLDR
 
 **Run command** as root
@@ -50,6 +54,11 @@ _COMMAND_
 dzdo integrates with Centrify's DirectControl for unified identity management across Unix/Linux and Windows systems. Policies are managed in Active Directory rather than local sudoers files.
 
 The tool provides similar functionality to sudo but with enterprise authentication and authorization features.
+
+# CONFIGURATION
+
+**/etc/centrifydc/centrifydc.conf**
+> Centrify DirectControl configuration controlling AD integration and authentication settings.
 
 # CAVEATS
 

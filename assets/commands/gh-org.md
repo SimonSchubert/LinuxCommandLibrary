@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage GitHub organization information from the command line
+
 # TLDR
 
 **List organizations**
@@ -31,9 +35,7 @@
 
 **gh org** manages GitHub organization information from the command line. It provides access to organization membership, details, and settings for organizations you belong to.
 
-The command enables viewing organization information without visiting github.com. For more complex organization management like team operations and member management, the gh api command provides full API access.
-
-gh org simplifies organization navigation in terminal workflows.
+The command enables viewing organization information without visiting github.com. For more complex organization management like team operations and member management, the **gh api** command provides full API access.
 
 # CAVEATS
 

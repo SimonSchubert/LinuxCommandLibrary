@@ -1,3 +1,7 @@
+# TAGLINE
+
+Import quilt patches to commits
+
 # TLDR
 
 **Import quilt patches**
@@ -35,11 +39,9 @@
 
 # DESCRIPTION
 
-**git quiltimport** imports a quilt patchset into git. Quilt is a patch management system, and this command converts quilt-managed patches into git commits.
+**git quiltimport** imports a quilt patchset into Git as a series of commits. Quilt is a patch management system, and this command reads the patches directory and series file, creating one commit per patch in order.
 
-The command reads the patches/ directory and series file, creating commits in order. It enables migration from quilt-based workflows to git.
-
-git quiltimport bridges quilt and git patch management.
+The command enables migration from quilt-based development workflows to Git, which was particularly common in Linux distribution packaging before Git became the standard.
 
 # CAVEATS
 

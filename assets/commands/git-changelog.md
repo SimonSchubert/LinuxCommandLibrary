@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate formatted changelogs from commit history
+
 # TLDR
 
 **Generate changelog**
@@ -48,9 +52,9 @@ _RANGE_
 
 **git changelog** generates a changelog from git commit history. It formats commits into release notes, grouped by version tags or date ranges, suitable for documentation.
 
-The command is part of git-extras and supports various output formats. It can filter merges, format messages, and generate markdown-ready output.
+The command is part of git-extras and supports various output formats. It can filter merge commits, format messages, and generate markdown-ready output suitable for inclusion in project documentation.
 
-git changelog automates release documentation from commit history.
+Using tags as version markers, it groups commits into release sections, making it straightforward to maintain a CHANGELOG.md file that documents the evolution of a project.
 
 # CAVEATS
 

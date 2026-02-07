@@ -1,3 +1,7 @@
+# TAGLINE
+
+distcc server daemon for distributed compilation
+
 # TLDR
 
 **Start distcc daemon**
@@ -45,9 +49,19 @@
 
 # DESCRIPTION
 
-**distccd** is the distcc server daemon for distributed C/C++ compilation. It receives compilation jobs from distcc clients and compiles them locally.
+**distccd** is the distcc server daemon that receives and processes compilation jobs from distcc clients on a network. It accepts preprocessed source code, compiles it using local compilers, and returns the object files to the requesting client.
 
-Distcc distributes compilation across multiple machines to speed up builds.
+The daemon listens on TCP port 3632 by default and should be configured with access control to prevent unauthorized compilation requests. Security is implemented through IP address allowlists specified with the --allow option, as the protocol itself provides no authentication.
+
+distccd can limit the number of concurrent compilation jobs to prevent system overload. It logs to syslog by default but can be configured to write to specific log files. The daemon typically runs as a dedicated user with limited privileges for security.
+
+# CONFIGURATION
+
+**/etc/default/distccd**
+> Default configuration for distccd daemon on Debian-based systems.
+
+**/etc/sysconfig/distccd**
+> Default configuration for distccd daemon on Red Hat-based systems.
 
 # CAVEATS
 

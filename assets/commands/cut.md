@@ -1,3 +1,7 @@
+# TAGLINE
+
+extract sections from lines of files
+
 # TLDR
 
 **Extract** fields

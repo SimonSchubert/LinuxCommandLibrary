@@ -1,3 +1,7 @@
+# TAGLINE
+
+compile C/C++ to WebAssembly or JavaScript
+
 # TLDR
 
 **Compile C to WebAssembly**
@@ -63,6 +67,11 @@
 
 **-sMODULARIZE**
 > Output as ES6 module.
+
+# CONFIGURATION
+
+**.emscripten**
+> Emscripten configuration file containing SDK paths and compiler settings.
 
 # DESCRIPTION
 

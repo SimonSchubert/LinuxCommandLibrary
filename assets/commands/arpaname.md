@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert IP addresses to reverse DNS ARPA names.
+
 # TLDR
 
 Translate an **IP address** to its corresponding ARPA name

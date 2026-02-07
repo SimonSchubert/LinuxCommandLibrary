@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display image sequences as animations (ImageMagick 6)
+
 # TLDR
 
 **Animate** images (ImageMagick 6)

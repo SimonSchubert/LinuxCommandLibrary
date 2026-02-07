@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage private certificate authorities and certificates
+
 # TLDR
 
 **Create** a private certificate authority

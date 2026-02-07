@@ -1,3 +1,7 @@
+# TAGLINE
+
+modify configuration on gNMI devices
+
 # TLDR
 
 **Set configuration value**
@@ -47,9 +51,7 @@
 
 **gnmic set** modifies configuration on gNMI-enabled devices. It supports update (merge), replace, and delete operations on configuration data.
 
-The command can set individual values or apply entire configuration files. It's used for network automation and configuration management.
-
-gnmic set writes configuration to network devices via gNMI.
+The command can set individual values or apply entire configuration files. It is used for network automation and configuration management via the gNMI protocol.
 
 # CAVEATS
 

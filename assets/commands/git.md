@@ -1,3 +1,7 @@
+# TAGLINE
+
+Distributed version control system for tracking code changes
+
 # TLDR
 
 **Clone a repository**
@@ -65,7 +69,16 @@
 
 Git's distributed nature means every clone contains full history. Branches are lightweight, enabling feature development workflows. The staging area provides fine-grained commit control.
 
-git is the dominant version control system for software development worldwide.
+# CONFIGURATION
+
+**~/.gitconfig**
+> Global user configuration including identity, aliases, and default behaviors.
+
+**.git/config**
+> Repository-specific configuration for remotes, branches, and local settings.
+
+**~/.gitignore_global**
+> Global ignore patterns applied to all repositories.
 
 # CAVEATS
 

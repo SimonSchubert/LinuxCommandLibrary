@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line interface for the Dart programming language
+
 # TLDR
 
 **Run a Dart file** directly

@@ -1,3 +1,7 @@
+# TAGLINE
+
+execute commands with injected secrets
+
 # TLDR
 
 **Run command with** injected secrets

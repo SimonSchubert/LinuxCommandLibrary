@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extract patch from email message
+
 # TLDR
 
 **Extract patch info**
@@ -37,11 +41,9 @@ _PATCH_
 
 # DESCRIPTION
 
-**git mailinfo** extracts patch and commit information from email messages. It parses email headers and body, separating the commit message from the patch content.
+**git mailinfo** extracts patch and commit information from email messages. It parses email headers and body, separating the commit message from the patch content, and handles encoding and author extraction.
 
-The command is a plumbing tool used by git am. It handles email encoding, extracts author information, and processes the message format used in patch emails.
-
-git mailinfo is low-level email patch processing.
+The command is a plumbing tool used internally by `git am`. It processes the email format used in patch-based development workflows, such as those used by the Linux kernel project.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Pure Rust Git implementation CLI
+
 # TLDR
 
 **Clone a repository**
@@ -88,11 +92,9 @@
 
 # DESCRIPTION
 
-**gitoxide** provides two CLI binaries: **gix** for low-level plumbing operations and **ein** for high-level porcelain commands. Written entirely in Rust, it aims to be a correct, performant, and safe Git implementation.
+**gix** (gitoxide) provides two CLI binaries: **gix** for low-level plumbing operations and **ein** for high-level porcelain commands. Written entirely in Rust, it aims to be a correct, performant, and safe Git implementation.
 
-The **gix** binary serves as a testing and validation tool for the gitoxide API, providing expert-level access to Git internals. It emphasizes performance and allows detailed inspection of repository data structures.
-
-The **ein** binary is designed for everyday Git workflows with a focus on user experience. It aims to become the preferred way to interact with Git repositories through an enhanced, intuitive interface.
+The **gix** binary serves as a testing and validation tool for the gitoxide API, providing expert-level access to Git internals. The **ein** binary is designed for everyday Git workflows with an enhanced, intuitive interface.
 
 Both binaries access the same underlying **gix** library ecosystem, which provides pure Rust implementations of Git protocols, object storage, reference handling, and more.
 
@@ -102,7 +104,7 @@ The CLI binaries are considered unstable and should not be relied upon in script
 
 # HISTORY
 
-Gitoxide was created by **Sebastian Thiel** as an effort to rewrite Git in Rust. Development began with a focus on correctness first, then performance. The project has grown to include comprehensive Git functionality with multiple crates (gix-*) providing modular components. It serves both as a library for Rust applications needing Git functionality and as experimental CLI tools.
+Gitoxide was created by **Sebastian Thiel** as an effort to rewrite Git in Rust. Development began with a focus on correctness first, then performance. The project has grown to include comprehensive Git functionality with multiple crates (gix-*) providing modular components.
 
 # SEE ALSO
 

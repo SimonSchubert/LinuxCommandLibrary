@@ -1,3 +1,7 @@
+# TAGLINE
+
+open-source parametric 3D CAD modeler
+
 # TLDR
 
 **Start FreeCAD**
@@ -46,6 +50,14 @@ _file_
 
 **-v**, **--version**
 > Show version.
+
+# CONFIGURATION
+
+**~/.config/FreeCAD/user.cfg**
+> User preferences including workbench settings, appearance, units, and default paths.
+
+**~/.local/share/FreeCAD/Mod/**
+> User-installed workbenches and macros directory.
 
 # DESCRIPTION
 

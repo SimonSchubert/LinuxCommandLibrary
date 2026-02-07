@@ -1,3 +1,7 @@
+# TAGLINE
+
+Play desktop sound events
+
 # TLDR
 
 **Play a sound event by identifier**

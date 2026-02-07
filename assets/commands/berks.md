@@ -1,3 +1,7 @@
+# TAGLINE
+
+Dependency manager for Chef cookbooks
+
 # TLDR
 
 **Install cookbook dependencies**

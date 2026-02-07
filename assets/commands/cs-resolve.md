@@ -1,3 +1,7 @@
+# TAGLINE
+
+Maven and Ivy dependency resolver
+
 # TLDR
 
 **Resolve dependencies** for an artifact

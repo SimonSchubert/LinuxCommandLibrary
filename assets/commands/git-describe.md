@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate human-readable names for commits
+
 # TLDR
 
 **Describe current commit**
@@ -49,11 +53,9 @@ _COMMIT_
 
 # DESCRIPTION
 
-**git describe** gives a human-readable name to a commit based on available tags. It finds the most recent tag reachable from the commit and describes distance from it.
+**git describe** gives a human-readable name to a commit based on available tags. It finds the most recent tag reachable from the commit and describes the distance from it.
 
-Output format is tag-distance-gSHA, like "v1.0.2-14-g2414721" meaning 14 commits after v1.0.2. If on a tag, just the tag name is returned.
-
-git describe is commonly used for version strings in build systems.
+Output format is tag-distance-gSHA, like "v1.0.2-14-g2414721" meaning 14 commits after v1.0.2. If the commit is directly on a tag, just the tag name is returned. This is commonly used for generating version strings in build systems.
 
 # CAVEATS
 

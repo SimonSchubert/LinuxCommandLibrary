@@ -1,3 +1,7 @@
+# TAGLINE
+
+Strip directory and suffix from filenames.
+
 # TLDR
 
 **Extract** filename from path

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Change the install state of packages.
+
 # TLDR
 
 Mark a package as **automatically installed**

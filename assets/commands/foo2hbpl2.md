@@ -1,3 +1,7 @@
+# TAGLINE
+
+PBM to HBPL converter for Dell and Xerox printers
+
 # TLDR
 
 **Convert PBM to** HBPL

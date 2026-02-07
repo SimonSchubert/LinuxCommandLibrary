@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display Git objects such as commits, tags, and blobs
+
 # TLDR
 
 **Show last commit**
@@ -49,11 +53,9 @@ _OBJECT_
 
 # DESCRIPTION
 
-**git show** displays git objects. For commits, it shows the commit message and diff. For tags, it shows tag information. For trees and blobs, it shows contents.
+**git show** displays various types of Git objects. For commits, it shows the commit message and diff. For tags, it shows the tag annotation. For trees and blobs, it shows the contents directly.
 
-The command is versatile for inspecting any git object. It combines log and diff functionality for convenient commit inspection.
-
-git show provides object inspection for commits, tags, and files.
+The command combines log and diff functionality into a convenient single-object inspector, making it the go-to tool for examining any Git object.
 
 # CAVEATS
 

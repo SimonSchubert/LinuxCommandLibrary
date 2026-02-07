@@ -1,3 +1,7 @@
+# TAGLINE
+
+manage DigitalOcean managed database clusters
+
 # TLDR
 
 **List database clusters**
@@ -69,6 +73,10 @@
 # DESCRIPTION
 
 **doctl databases** manages DigitalOcean Managed Databases including PostgreSQL, MySQL, Redis, MongoDB, and Kafka clusters.
+
+The command provides full lifecycle management for database clusters, from creation and configuration to monitoring and deletion. Managed databases handle automated backups, updates, high availability, and scaling. The tool supports various database engines optimized for different use cases, from relational databases to caching and streaming platforms.
+
+Additional subcommands manage database users, connection pools, read replicas, firewall rules, and maintenance windows. Connection strings and credentials can be retrieved for application integration.
 
 # SEE ALSO
 

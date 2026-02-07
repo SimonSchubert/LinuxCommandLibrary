@@ -1,3 +1,7 @@
+# TAGLINE
+
+MAME Compressed Hunks of Data manager
+
 # TLDR
 
 **Display CHD file information**

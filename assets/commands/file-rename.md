@@ -1,3 +1,7 @@
+# TAGLINE
+
+Perl regex-based file renaming
+
 # TLDR
 
 **Rename using Perl expression**
@@ -41,7 +45,11 @@
 
 # DESCRIPTION
 
-**file-rename** (also called rename or prename) renames files using Perl regular expressions. Provides powerful pattern-based renaming capabilities.
+**file-rename** (also known as rename or prename) renames multiple files using Perl regular expressions, providing powerful pattern-based transformation capabilities. Unlike simple mv operations, it can apply complex substitutions, case conversions, and pattern matching across multiple filenames simultaneously.
+
+The tool supports the full Perl regex syntax including capture groups, look-ahead/look-behind assertions, and transliteration operations. Common uses include batch renaming, removing or replacing characters, changing file extensions, and standardizing filename formats.
+
+file-rename's dry-run mode (-n) allows preview of changes before execution, preventing accidental destructive operations. The force flag (-f) enables overwriting existing files when name collisions occur.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Music library manager and metadata organizer
+
 # TLDR
 
 **Import** music from a directory and tag from MusicBrainz
@@ -67,9 +71,14 @@ Beets can fix tags, rename files based on metadata, fetch album art, and integra
 **-c, --config** _path_
 > Specify the configuration file
 
+# CONFIGURATION
+
+**~/.config/beets/config.yaml**
+> Main configuration file for library paths, import behavior, plugins, and metadata preferences.
+
 # CAVEATS
 
-Initial library import of large collections can be time-consuming. MusicBrainz queries have rate limits. Configuration file (**~/.config/beets/config.yaml**) should be set up for optimal behavior.
+Initial library import of large collections can be time-consuming. MusicBrainz queries have rate limits. Configuration file should be set up for optimal behavior.
 
 # HISTORY
 

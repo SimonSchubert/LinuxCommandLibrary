@@ -1,3 +1,7 @@
+# TAGLINE
+
+Equation description to graphic image converter
+
 # TLDR
 
 **Convert equation** to image

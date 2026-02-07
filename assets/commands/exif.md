@@ -1,3 +1,7 @@
+# TAGLINE
+
+EXIF metadata viewer and editor
+
 # TLDR
 
 Show all **EXIF information** in an image
@@ -24,12 +28,6 @@ Show **raw contents** of a tag
 
 **exif** [_options_] _files_
 
-# DESCRIPTION
-
-**exif** shows and modifies EXIF metadata in JPEG files. EXIF data contains camera settings, date/time, GPS coordinates, and other image information.
-
-Command-line tool for quick EXIF inspection and modification.
-
 # PARAMETERS
 
 **-l, --list-tags**
@@ -55,6 +53,12 @@ Command-line tool for quick EXIF inspection and modification.
 
 **--no-fixup**
 > Don't fix malformed data
+
+# DESCRIPTION
+
+**exif** shows and modifies EXIF metadata in JPEG files. EXIF data contains camera settings, date/time, GPS coordinates, and other image information.
+
+Command-line tool for quick EXIF inspection and modification.
 
 # CAVEATS
 

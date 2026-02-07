@@ -1,3 +1,7 @@
+# TAGLINE
+
+NTP daemon for system clock synchronization
+
 # TLDR
 
 **Start chronyd** daemon
@@ -72,6 +76,17 @@ The daemon maintains a drift file to track the system clock's frequency error, a
 
 **-6**
 > Use only IPv6.
+
+# CONFIGURATION
+
+**/etc/chrony.conf**
+> Main configuration file specifying NTP servers, access controls, drift file path, and logging options.
+
+**/var/lib/chrony/drift**
+> Drift file tracking the system clock's frequency error.
+
+**/var/run/chrony/chronyd.pid**
+> PID file for the running daemon.
 
 # CAVEATS
 

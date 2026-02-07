@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run a remote shell on an Android device
+
 # TLDR
 
 **Open** an interactive shell on the device

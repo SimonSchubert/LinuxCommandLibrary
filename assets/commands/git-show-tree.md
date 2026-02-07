@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display an ASCII tree of repository branches
+
 # TLDR
 
 **Show branch tree**
@@ -10,11 +14,9 @@
 
 # DESCRIPTION
 
-**git show-tree** displays a visual representation of repository branches. It shows the branch structure in an ASCII tree format, making branch relationships visible.
+**git show-tree** displays a visual ASCII representation of repository branches. Part of git-extras, it shows the branch structure in a tree format, making branch relationships easy to see at a glance.
 
-The command provides a quick overview of branch topology without the full commit history that git log --graph shows.
-
-git show-tree visualizes branch structure.
+The command provides a quick overview of branch topology without the full commit history that `git log --graph` shows.
 
 # CAVEATS
 

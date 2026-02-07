@@ -1,3 +1,7 @@
+# TAGLINE
+
+Graphical disk usage analyzer
+
 # TLDR
 
 **Analyze** disk usage

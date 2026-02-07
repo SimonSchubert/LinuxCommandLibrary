@@ -1,3 +1,7 @@
+# TAGLINE
+
+JVM build automation tool
+
 # TLDR
 
 **Build project**
@@ -49,11 +53,23 @@ _TASKS_
 
 # DESCRIPTION
 
-**gradle** is a build automation tool for Java, Kotlin, Android, and other JVM projects. It uses Groovy or Kotlin DSL for build scripts.
+**gradle** is a build automation tool for Java, Kotlin, Android, and other JVM projects. It uses Groovy or Kotlin DSL for build scripts and provides dependency management, incremental builds, and an extensive plugin ecosystem.
 
-The tool provides dependency management, incremental builds, and extensive plugin ecosystem. It's the standard build system for Android.
+Gradle is the standard build system for Android development and supports multi-project builds with a persistent daemon for faster execution.
 
-gradle provides flexible JVM project building.
+# CONFIGURATION
+
+**build.gradle** / **build.gradle.kts**
+> Project build script defining tasks, dependencies, and plugins.
+
+**gradle.properties**
+> Project and user-level properties for build configuration.
+
+**settings.gradle** / **settings.gradle.kts**
+> Multi-project build settings and included modules.
+
+**~/.gradle/gradle.properties**
+> User-level Gradle properties applied to all builds.
 
 # CAVEATS
 

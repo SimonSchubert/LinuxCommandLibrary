@@ -1,3 +1,7 @@
+# TAGLINE
+
+display Go package and symbol documentation
+
 # TLDR
 
 **Show package documentation**
@@ -51,9 +55,7 @@ _SYMBOL_
 
 **go doc** shows documentation for Go packages and symbols. It extracts documentation from source code comments following Go documentation conventions.
 
-The command displays documentation for packages, types, functions, and methods. It can show source code and unexported symbols for development.
-
-go doc provides command-line access to Go documentation.
+The command displays documentation for packages, types, functions, and methods. It can show source code and unexported symbols for development reference.
 
 # CAVEATS
 

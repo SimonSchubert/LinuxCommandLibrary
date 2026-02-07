@@ -1,3 +1,7 @@
+# TAGLINE
+
+Source code tag index generator
+
 # TLDR
 
 **Generate tags for current directory**
@@ -34,7 +38,11 @@
 
 # DESCRIPTION
 
-**ctags** generates tag index files for source code. Enables editors to jump to function definitions, variables, and other symbols. Supports many programming languages.
+**ctags** generates index files (tags) that map identifiers in source code to their definitions. This enables text editors and IDEs to quickly navigate to function definitions, class declarations, variables, and other programming constructs across large codebases.
+
+The tool parses source code in dozens of programming languages, extracting symbols like function names, classes, methods, variables, macros, and type definitions. It creates a tags file (default name: **tags**) containing the symbol name, file location, and search pattern to find it.
+
+Modern editors like Vim, Emacs, and many IDEs use ctags files for features like "go to definition," symbol completion, and code navigation. Universal Ctags is the actively maintained fork and supports more languages and features than the original Exuberant Ctags.
 
 # PARAMETERS
 
@@ -77,6 +85,17 @@
 **--list-maps**
 > List file extension mappings
 
+# CONFIGURATION
+
+**~/.ctags**
+> User configuration file for tag generation options and language definitions.
+
+**~/.ctags.d/**
+> Directory containing modular configuration files for different languages and settings.
+
+**.ctags.d/**
+> Project-level configuration directory for repository-specific tag settings.
+
 # TAG KINDS
 
 **c**: classes
@@ -99,7 +118,11 @@
 
 # CAVEATS
 
-Output file named 'tags' by default. Use with Vim :tag command or Ctrl-]. Universal Ctags recommended over Exuberant Ctags.
+Output file named 'tags' by default. Use with Vim :tag command or Ctrl-]. Universal Ctags recommended over Exuberant Ctags. Large codebases may produce large tag files. Requires regeneration after code changes.
+
+# HISTORY
+
+**ctags** was originally developed as part of the BSD Unix project in the late 1970s. **Exuberant Ctags** by Darren Hiebert became the dominant implementation in 1996, adding support for many languages. **Universal Ctags** forked in 2014 and is now the actively maintained version with modern language support.
 
 # SEE ALSO
 

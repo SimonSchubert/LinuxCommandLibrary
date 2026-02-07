@@ -1,3 +1,7 @@
+# TAGLINE
+
+set default boot entry for next reboot only
+
 # TLDR
 
 Set the **default boot entry** for the next boot only
@@ -27,6 +31,11 @@ _entry_
 The entry can be specified as a number (0 for first entry), the full entry name from grub.cfg, or a menu entry identifier. Use **grep menuentry /boot/grub/grub.cfg** to see available entries.
 
 This is useful for one-time boots into recovery mode, alternative kernels, or other operating systems without permanently changing the boot order.
+
+# CONFIGURATION
+
+**/etc/default/grub**
+> Must contain GRUB_DEFAULT=saved for grub-reboot to function.
 
 # CAVEATS
 

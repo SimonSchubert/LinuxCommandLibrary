@@ -1,3 +1,7 @@
+# TAGLINE
+
+Aptos blockchain CLI for accounts and smart contracts
+
 # TLDR
 
 **Initialize a new Aptos account**
@@ -78,6 +82,14 @@
 The CLI supports the full development lifecycle: initializing projects, compiling Move modules, running tests, deploying to various networks (devnet, testnet, mainnet), and executing on-chain functions. It manages accounts, keys, and profiles for different environments.
 
 Move is Aptos's smart contract language, derived from Facebook's Diem project. The CLI's Move commands handle compilation, testing, and publishing of Move packages to the blockchain.
+
+# CONFIGURATION
+
+**~/.aptos/config.yaml**
+> Main CLI configuration file storing profiles, private keys, and network settings.
+
+**Move.toml**
+> Move package manifest file in the project directory, defining dependencies and addresses.
 
 # CAVEATS
 

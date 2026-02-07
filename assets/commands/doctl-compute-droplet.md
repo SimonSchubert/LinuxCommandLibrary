@@ -1,3 +1,7 @@
+# TAGLINE
+
+manage DigitalOcean Droplet virtual machines
+
 # TLDR
 
 **List all droplets**

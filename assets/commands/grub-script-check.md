@@ -1,3 +1,7 @@
+# TAGLINE
+
+validate GRUB configuration script syntax
+
 # TLDR
 
 Check a GRUB script file for **syntax errors**

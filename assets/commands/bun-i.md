@@ -1,3 +1,7 @@
+# TAGLINE
+
+Install packages (alias for bun install)
+
 # TLDR
 
 **Install all dependencies** from package.json

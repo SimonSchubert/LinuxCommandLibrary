@@ -1,3 +1,7 @@
+# TAGLINE
+
+Issue BlueCore commands to CSR Bluetooth chips
+
 # TLDR
 
 **Get chip revision**

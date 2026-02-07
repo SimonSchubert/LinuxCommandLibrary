@@ -1,3 +1,7 @@
+# TAGLINE
+
+ImageMagick version 6 image viewer
+
 # TLDR
 
 **Display an image** (ImageMagick 6)

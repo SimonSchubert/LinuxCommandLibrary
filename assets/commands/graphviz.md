@@ -1,3 +1,7 @@
+# TAGLINE
+
+Graph visualization toolkit
+
 # TLDR
 
 **Render DOT file to PNG**
@@ -69,7 +73,9 @@ digraph G {
 
 # DESCRIPTION
 
-**Graphviz** is a graph visualization toolkit. It reads graph descriptions in DOT language and renders them as images. Multiple layout algorithms handle different graph types.
+**Graphviz** is a graph visualization toolkit that reads graph descriptions in the DOT language and renders them as images. Multiple layout algorithms handle different graph types, from hierarchical directed graphs to force-directed undirected layouts.
+
+The suite includes several layout programs (dot, neato, fdp, sfdp, circo, twopi) and utility tools for format conversion and graph manipulation.
 
 # CAVEATS
 

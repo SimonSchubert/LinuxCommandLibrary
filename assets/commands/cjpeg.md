@@ -1,3 +1,7 @@
+# TAGLINE
+
+JPEG image compressor
+
 # TLDR
 
 **Compress** a BMP image to JPEG with default quality

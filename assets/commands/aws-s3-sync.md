@@ -1,3 +1,7 @@
+# TAGLINE
+
+Synchronize directories and S3 prefixes
+
 # TLDR
 
 **Sync a local directory** to an S3 bucket

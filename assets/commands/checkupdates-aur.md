@@ -1,3 +1,7 @@
+# TAGLINE
+
+check for AUR package updates
+
 # TLDR
 
 List pending updates for **AUR packages**

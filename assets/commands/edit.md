@@ -1,3 +1,7 @@
+# TAGLINE
+
+MIME-type aware file editor launcher
+
 # TLDR
 
 **Edit** a file using mailcap configuration
@@ -22,6 +26,14 @@ The actual editor used depends on the file type and system mailcap configuration
 
 _filename_
 > File to edit
+
+# CONFIGURATION
+
+**/etc/mailcap**
+> System-wide MIME type to application mappings.
+
+**~/.mailcap**
+> User-specific MIME type overrides.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage GitHub Actions workflow runs
+
 # TLDR
 
 **List workflow runs**
@@ -60,9 +64,7 @@
 
 **gh run** manages GitHub Actions workflow runs from the command line. It provides visibility into CI/CD execution including logs, status, and artifacts without visiting github.com.
 
-The watch command provides live progress updates for running workflows. Download retrieves artifacts produced by workflows. Rerun enables retriggering workflows with options for full or partial reruns.
-
-gh run brings GitHub Actions management to terminal workflows.
+The watch command provides live progress updates for running workflows. Download retrieves artifacts produced by workflows, and rerun enables retriggering workflows with options for full or partial reruns.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Add metadata to commits
+
 # TLDR
 
 **Add note to commit**
@@ -52,11 +56,9 @@
 
 # DESCRIPTION
 
-**git notes** adds metadata to commits without modifying them. Notes are stored separately from commit history, allowing annotations, code review comments, or other metadata.
+**git notes** adds metadata to commits without modifying them. Notes are stored as separate refs, allowing annotations, code review comments, or other metadata to be attached after commits are created and even after they have been pushed.
 
-Notes can be organized in namespaces (refs). They're useful for adding information after commits are pushed, as they don't change commit hashes.
-
-git notes enables non-destructive commit annotation.
+Notes can be organized in namespaces using the `--ref` option. Since notes don't change commit hashes, they provide a non-destructive way to enrich commit history with additional context.
 
 # CAVEATS
 

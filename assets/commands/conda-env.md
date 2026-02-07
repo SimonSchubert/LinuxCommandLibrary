@@ -1,3 +1,7 @@
+# TAGLINE
+
+environment management tool
+
 # TLDR
 
 **List all environments**
@@ -43,6 +47,14 @@
 
 **config**
 > Configure environment variables.
+
+# CONFIGURATION
+
+**~/.condarc**
+> User-level conda configuration for channels, package settings, and solver options.
+
+**/opt/conda/.condarc**
+> System-wide conda configuration.
 
 # DESCRIPTION
 

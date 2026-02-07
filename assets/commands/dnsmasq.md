@@ -1,3 +1,7 @@
+# TAGLINE
+
+lightweight DNS forwarder and DHCP server
+
 # TLDR
 
 **Start dnsmasq** as DNS forwarder
@@ -83,6 +87,17 @@ The DHCP server provides dynamic and static address assignment with support for 
 
 **--log-queries**
 > Log DNS queries.
+
+# CONFIGURATION
+
+**/etc/dnsmasq.conf**
+> Main configuration file. Contains DNS and DHCP settings, upstream servers, domain configurations, and DHCP ranges.
+
+**/etc/hosts**
+> Local hostname to IP mappings. Read by dnsmasq for local DNS resolution unless --no-hosts is specified.
+
+**/etc/dnsmasq.d/**
+> Directory for additional configuration snippets. Files here are automatically included in the main configuration.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+interactive image viewer for X Window System
+
 # TLDR
 
 **Display an image**

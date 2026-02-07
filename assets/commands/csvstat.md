@@ -1,3 +1,7 @@
+# TAGLINE
+
+Descriptive statistics calculator for CSV columns
+
 # TLDR
 
 **Show statistics** for all columns

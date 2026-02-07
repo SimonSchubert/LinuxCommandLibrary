@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compute object ID value
+
 # TLDR
 
 **Compute object hash**
@@ -39,9 +43,10 @@
 
 # DESCRIPTION
 
-**git hash-object** computes the object ID and optionally creates a blob from a file. A low-level command for interacting with the object database.
+**git hash-object** computes the SHA-1 object ID for a file and optionally stores it in the Git object database. This low-level plumbing command exposes Git's internal object storage mechanism.
+
+The command calculates the hash by formatting the file content as a Git object (with type and size header), then computing the SHA-1 hash. With the -w option, it also writes the object to .git/objects/, making it part of the repository even if not yet referenced by any commit. The --stdin option enables hashing content from pipes or scripts.
 
 # SEE ALSO
 
 [git-cat-file](/man/git-cat-file)(1), [git-write-tree](/man/git-write-tree)(1)
-

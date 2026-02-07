@@ -1,3 +1,7 @@
+# TAGLINE
+
+check boot image file type
+
 # TLDR
 
 Check if a file is an **ARM EFI** image
@@ -61,7 +65,7 @@ Check if a file is an **x86_64 XNU** (macOS) kernel
 
 **grub-file** checks whether a file is a bootable image of a specific type. It examines file headers and signatures to identify kernel images, EFI applications, and other bootable formats.
 
-The command returns exit code 0 (success) if the file matches the specified type, or 1 (failure) if it doesn't. This is useful in scripts for validating boot images or determining the correct boot method.
+The command returns exit code 0 (success) if the file matches the specified type, or 1 (failure) if it does not. This is useful in scripts for validating boot images or determining the correct boot method.
 
 # CAVEATS
 

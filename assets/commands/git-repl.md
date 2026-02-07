@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interactive read-eval-print loop for Git
+
 # TLDR
 
 **Start git REPL**
@@ -22,11 +26,9 @@
 
 # DESCRIPTION
 
-**git repl** provides an interactive shell for git commands. It starts a read-eval-print loop where git commands can be entered without the "git" prefix.
+**git repl** provides an interactive shell for Git commands. Part of git-extras, it starts a read-eval-print loop where commands can be entered without the "git" prefix.
 
-The REPL simplifies exploratory git sessions by reducing typing. Tab completion and command history are available. Exit with "exit" or Ctrl-D.
-
-git repl offers interactive git command exploration.
+The REPL simplifies exploratory Git sessions by reducing typing. Tab completion and command history are available. Exit with "exit" or Ctrl-D.
 
 # CAVEATS
 

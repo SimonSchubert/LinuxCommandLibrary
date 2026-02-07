@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interactive spell checker
+
 # TLDR
 
 **Check** a file
@@ -67,6 +71,14 @@ The tool supports multiple languages, personal dictionaries, and has better sugg
 
 **dump** _mode_
 > Dump dictionary information
+
+# CONFIGURATION
+
+**/etc/aspell.conf**
+> System-wide configuration for default language, dictionary paths, and options.
+
+**~/.aspell.conf**
+> Per-user configuration overriding system defaults.
 
 # CAVEATS
 

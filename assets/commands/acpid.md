@@ -1,3 +1,7 @@
+# TAGLINE
+
+ACPI event daemon
+
 # TLDR
 
 **Start** the ACPI daemon
@@ -51,6 +55,14 @@ The daemon reads event configuration files from /etc/acpi/events/ and runs the a
 
 **-s** _file_
 > Socket file for client connections
+
+# CONFIGURATION
+
+**/etc/acpi/events/**
+> Directory containing event rule files. Each file defines an event pattern and an action (script) to execute when that event occurs.
+
+**/etc/acpi/handler.sh**
+> Default event handler script invoked by acpid when events match. Receives the event type and parameters as arguments.
 
 # CAVEATS
 

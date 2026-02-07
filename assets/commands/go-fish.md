@@ -1,3 +1,7 @@
+# TAGLINE
+
+fish shell completion generator for Go programs
+
 # TLDR
 
 **Generate fish completions**
@@ -25,8 +29,6 @@ _PACKAGE_
 **go-fish** generates fish shell completions for Go programs. It analyzes Go command-line flag definitions and creates fish completion scripts.
 
 The tool automates completion script generation from Go source code. It uses Go's flag package conventions to identify commands and options.
-
-go-fish creates fish shell completions from Go programs.
 
 # CAVEATS
 

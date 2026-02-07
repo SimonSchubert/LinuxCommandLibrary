@@ -1,3 +1,7 @@
+# TAGLINE
+
+exports Cloud SQL data to storage
+
 # TLDR
 
 **Export database to Cloud Storage**
@@ -32,7 +36,9 @@
 
 # DESCRIPTION
 
-**gcloud sql export sql** exports data from a Cloud SQL instance to a SQL dump file in Cloud Storage. Supports MySQL and PostgreSQL.
+**gcloud sql export sql** exports data from a Cloud SQL instance to a SQL dump file stored in Google Cloud Storage. The command creates a database backup in standard SQL format that can be imported into other database systems or restored to Cloud SQL instances.
+
+The tool supports both MySQL and PostgreSQL instances. Exports can target specific databases or tables, or dump all databases at once. The async mode allows long-running exports to continue in the background without blocking the terminal. Offloading exports to read replicas minimizes performance impact on production instances.
 
 # SEE ALSO
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Sourcegraph AI coding assistant CLI
+
 # TLDR
 
 **Log in via web browser**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Secure, multilingual package manager for Arch Linux and the AUR.
+
 # TLDR
 
 **Search** AUR packages

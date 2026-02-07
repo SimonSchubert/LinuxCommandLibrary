@@ -1,3 +1,7 @@
+# TAGLINE
+
+Framework for managing Bash plugins, aliases, and themes.
+
 # TLDR
 
 **Enable** plugin
@@ -96,6 +100,17 @@ bash-it show plugins
 # Update
 bash-it update
 ```
+
+# CONFIGURATION
+
+**~/.bash_it/**
+> Main Bash-it installation directory containing all plugins, aliases, completions, and themes.
+
+**~/.bash_it/custom/**
+> User custom scripts, aliases, and plugins loaded automatically.
+
+**~/.bashrc**
+> Must source the Bash-it loader script to activate the framework.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+set persistent gcloud configuration properties
+
 # TLDR
 
 **Set default project**
@@ -49,11 +53,11 @@ _VALUE_
 
 # DESCRIPTION
 
-**gcloud config set** sets persistent configuration properties for the gcloud CLI. These defaults are used when options aren't specified on the command line.
+**gcloud config set** assigns values to gcloud configuration properties, establishing defaults that apply to all subsequent gcloud commands. This eliminates repetitive specification of common parameters like project ID, region, and zone.
 
-Common properties include project, region, zone, and account. Properties are namespaced (like compute/region) for service-specific settings.
+Properties follow a hierarchical naming scheme, with some scoped to specific services (like compute/region for Compute Engine operations) and others applying globally (like project). The command validates property names but may not immediately validate values, which could lead to errors in future commands if invalid.
 
-Setting defaults reduces command verbosity for frequently used values.
+Command-line flags always take precedence over configured properties, allowing temporary overrides without changing stored configuration. Properties are saved to the active configuration, so switching configurations changes the effective property values. This property-based system is central to efficient gcloud usage, particularly for users managing resources across multiple zones or projects.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage devices in a btrfs filesystem
+
 # TLDR
 
 **Add** devices

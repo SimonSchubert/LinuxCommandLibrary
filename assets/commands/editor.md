@@ -1,3 +1,7 @@
+# TAGLINE
+
+system default text editor
+
 # TLDR
 
 **Open the default editor**

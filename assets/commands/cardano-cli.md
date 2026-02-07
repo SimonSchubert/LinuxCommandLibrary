@@ -1,3 +1,7 @@
+# TAGLINE
+
+Command-line interface for the Cardano blockchain
+
 # TLDR
 
 **Query tip** (latest block info)

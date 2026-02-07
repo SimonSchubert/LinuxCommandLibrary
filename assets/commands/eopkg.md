@@ -1,3 +1,7 @@
+# TAGLINE
+
+Package manager for Solus Linux
+
 # TLDR
 
 **Install** a specific package
@@ -18,9 +22,9 @@
 
 # DESCRIPTION
 
-**eopkg** is the package manager for Solus Linux. It handles package installation, updates, removal, and repository management using .eopkg format packages.
+**eopkg** is the package manager for Solus Linux, an independent distribution. It handles all aspects of package management including installation, updates, removal, and repository management using the .eopkg package format.
 
-Evolved from the PiSi package manager with improvements for Solus.
+The tool evolved from the PiSi package manager originally developed for Pardus Linux, with significant improvements and optimizations for Solus. eopkg provides dependency resolution, package rollback capabilities, and maintains a local database of installed packages. It integrates with Solus's rolling release model to provide continuous updates while maintaining system stability.
 
 # PARAMETERS
 

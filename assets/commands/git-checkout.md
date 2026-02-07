@@ -1,3 +1,7 @@
+# TAGLINE
+
+Switch branches or restore working tree files
+
 # TLDR
 
 **Switch to branch**
@@ -51,9 +55,9 @@ _BRANCH_
 
 **git checkout** switches branches or restores files. It updates the working tree to match the specified branch, commit, or file version from history.
 
-The command serves multiple purposes: branch switching, branch creation, file restoration, and detached HEAD operations. Modern git prefers git switch for branches and git restore for files.
+The command serves multiple purposes: branch switching, branch creation with **-b**, file restoration with **--**, and detached HEAD operations. Since **Git 2.23**, the recommended approach is **git switch** for branches and **git restore** for files, which provide clearer separation of concerns.
 
-git checkout remains widely used for its versatility.
+Despite the newer alternatives, git checkout remains widely used for its versatility and is deeply embedded in existing workflows, documentation, and scripts.
 
 # CAVEATS
 

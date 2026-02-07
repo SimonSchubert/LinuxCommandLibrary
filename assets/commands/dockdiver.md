@@ -1,3 +1,7 @@
+# TAGLINE
+
+Docker image secrets scanner
+
 # TLDR
 
 **Scan Docker Hub** for secrets

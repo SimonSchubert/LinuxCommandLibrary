@@ -1,3 +1,7 @@
+# TAGLINE
+
+Gradle version-pinning wrapper generator
+
 # TLDR
 
 **Generate wrapper**
@@ -36,11 +40,14 @@
 
 # DESCRIPTION
 
-**gradle wrapper** generates the Gradle Wrapper, enabling projects to use a specific Gradle version without requiring installation. Users run ./gradlew instead of gradle.
+**gradle wrapper** generates the Gradle Wrapper, enabling projects to use a specific Gradle version without requiring a global installation. Users run **./gradlew** instead of **gradle**, and the wrapper downloads and uses the specified version automatically.
 
-The wrapper downloads and uses the specified Gradle version automatically. This ensures consistent builds across different machines and CI systems.
+This ensures consistent builds across different machines and CI systems by pinning the exact Gradle version in source control.
 
-gradle wrapper provides reproducible Gradle builds.
+# CONFIGURATION
+
+**gradle/wrapper/gradle-wrapper.properties**
+> Specifies the Gradle distribution URL, version, and checksum for the wrapper.
 
 # CAVEATS
 

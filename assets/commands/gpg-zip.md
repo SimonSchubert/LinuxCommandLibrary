@@ -1,3 +1,7 @@
+# TAGLINE
+
+Encrypt or sign files into a GPG archive (deprecated)
+
 # TLDR
 
 **Encrypt directory with symmetric encryption**
@@ -52,7 +56,9 @@
 
 # DESCRIPTION
 
-**gpg-zip** encrypts or signs files into an archive using GnuPG. It combines tar archiving with GPG encryption in a format compatible with PGP Zip. Supports both symmetric (passphrase) and asymmetric (public-key) encryption.
+**gpg-zip** encrypts or signs files into an archive using GnuPG. It combines tar archiving with GPG encryption in a format compatible with PGP Zip, supporting both symmetric (passphrase) and asymmetric (public-key) encryption.
+
+This tool is deprecated in favor of **gpgtar**, which provides the same functionality with better integration into the modern GnuPG suite.
 
 # CAVEATS
 
@@ -61,4 +67,3 @@
 # SEE ALSO
 
 [gpgtar](/man/gpgtar)(1), [gpg](/man/gpg)(1), [tar](/man/tar)(1)
-

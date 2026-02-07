@@ -1,3 +1,7 @@
+# TAGLINE
+
+NuGet package reference manager
+
 # TLDR
 
 **Add a NuGet package**
@@ -43,7 +47,9 @@
 
 # DESCRIPTION
 
-**dotnet add package** adds a NuGet package reference to a project file. The package is downloaded and restored automatically.
+**dotnet add package** adds a NuGet package reference to a project file and automatically downloads the package. It modifies the .csproj or .fsproj file to include the package reference, making the dependency trackable in version control.
+
+The command integrates with NuGet package sources to resolve packages and their transitive dependencies. Version constraints can be specified to pin specific versions or allow updates within semantic versioning ranges.
 
 # SEE ALSO
 

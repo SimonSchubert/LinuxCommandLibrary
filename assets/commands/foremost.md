@@ -1,3 +1,7 @@
+# TAGLINE
+
+file carving and data recovery tool
+
 # TLDR
 
 **Recover files from disk image**
@@ -62,6 +66,11 @@ The tool is useful for data recovery and forensic analysis, recovering files eve
 
 **-w**
 > Only write audit file.
+
+# CONFIGURATION
+
+**/etc/foremost.conf**
+> Configuration file defining file signatures, headers, and footers for recovery.
 
 # FILE TYPES
 

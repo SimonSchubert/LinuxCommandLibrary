@@ -1,3 +1,7 @@
+# TAGLINE
+
+Open-source image editor for photo retouching and graphic design
+
 # TLDR
 
 **Start GIMP**
@@ -56,7 +60,16 @@ _FILES_
 
 GIMP features layers, masks, filters, color adjustments, and drawing tools. It supports scripting through Script-Fu and Python for automation. The plugin architecture enables extensive customization.
 
-gimp serves as a free alternative to commercial image editors like Photoshop.
+# CONFIGURATION
+
+**~/.config/GIMP/2.10/gimprc**
+> Main configuration file containing preferences, tool settings, and UI options.
+
+**~/.config/GIMP/2.10/pluginrc**
+> Plugin registry file listing installed plugins and their parameters.
+
+**~/.config/GIMP/2.10/sessionrc**
+> Session configuration storing window positions and dialog states.
 
 # CAVEATS
 

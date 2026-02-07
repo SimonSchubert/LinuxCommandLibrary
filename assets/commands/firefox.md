@@ -1,3 +1,7 @@
+# TAGLINE
+
+Mozilla's open source web browser
+
 # TLDR
 
 **Open Firefox**
@@ -55,6 +59,17 @@ _URLS_
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**~/.mozilla/firefox/profiles.ini**
+> Profile configuration and location mappings.
+
+**~/.mozilla/firefox/[profile]/prefs.js**
+> User preferences for a specific profile.
+
+**~/.mozilla/firefox/[profile]/user.js**
+> Custom user overrides for preferences.
 
 # DESCRIPTION
 

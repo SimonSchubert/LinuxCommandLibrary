@@ -1,3 +1,7 @@
+# TAGLINE
+
+ext2/ext3/ext4 filesystem backup utility
+
 # TLDR
 
 **Backup filesystem to file**
@@ -49,6 +53,14 @@
 
 **-M**
 > Multi-volume; prompt for new tape.
+
+# CONFIGURATION
+
+**/etc/dumpdates**
+> Records dump history tracking dump levels and timestamps for incremental backup management.
+
+**/etc/fstab**
+> Defines filesystem mount points that dump uses to identify filesystems by name rather than device.
 
 # DESCRIPTION
 

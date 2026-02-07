@@ -1,3 +1,7 @@
+# TAGLINE
+
+Gradle dependency tree viewer
+
 # TLDR
 
 **List dependencies**
@@ -32,9 +36,7 @@
 
 **gradle dependencies** displays the dependency tree for a project. It shows all direct and transitive dependencies with their versions and conflict resolution.
 
-The output shows dependency hierarchies for different configurations (compile, runtime, test). It helps understand dependency chains and version conflicts.
-
-gradle dependencies reveals project dependency structure.
+The output shows dependency hierarchies for different configurations (compile, runtime, test), helping to understand dependency chains and version conflicts.
 
 # CAVEATS
 

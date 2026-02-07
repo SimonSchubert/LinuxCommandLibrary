@@ -1,3 +1,7 @@
+# TAGLINE
+
+crawl URLs for endpoints, secrets, and sensitive data
+
 # TLDR
 
 **Crawl domains from list**
@@ -34,7 +38,11 @@
 
 # DESCRIPTION
 
-**cariddi** is a reconnaissance tool that crawls URLs and scans for endpoints, secrets, API keys, file extensions, and tokens. Accepts domain lists via stdin. Useful for bug bounty hunting and penetration testing.
+**cariddi** is a reconnaissance tool that crawls URLs and scans for endpoints, secrets, API keys, file extensions, and tokens. It accepts domain lists via standard input, making it easy to chain with subdomain discovery tools in automated security assessment pipelines.
+
+The tool performs passive analysis of crawled pages, extracting sensitive data such as hardcoded credentials, authentication tokens, and API keys using pattern matching. It supports configurable crawl depth, concurrency, and proxy settings for thorough yet controlled scanning.
+
+Designed for bug bounty hunting and authorized penetration testing, cariddi outputs results in plain text or JSON format for integration with other security tools.
 
 # PARAMETERS
 

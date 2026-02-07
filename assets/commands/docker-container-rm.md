@@ -1,3 +1,7 @@
+# TAGLINE
+
+remove one or more containers
+
 # TLDR
 
 **Remove a container**
@@ -37,7 +41,9 @@
 
 # DESCRIPTION
 
-**docker container rm** removes one or more containers. Containers must be stopped unless **-f** is used.
+**docker container rm** removes one or more containers from the Docker host, freeing disk space occupied by the container's read-write layer and metadata. Containers must be stopped before removal unless the **-f** flag is used to force removal of running containers.
+
+The **-v** option also removes anonymous volumes associated with the container, which is useful for complete cleanup. Named volumes are preserved by default to prevent accidental data loss.
 
 # SEE ALSO
 

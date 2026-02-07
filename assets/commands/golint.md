@@ -1,3 +1,7 @@
+# TAGLINE
+
+Go source code style linter (deprecated)
+
 # TLDR
 
 **Lint current package**
@@ -33,19 +37,9 @@ _packages_
 
 # DESCRIPTION
 
-**golint** checks Go source code for style issues. It enforces the style guidelines from Effective Go and the Go Code Review Comments, focusing on naming conventions, comments, and code structure.
+**golint** checks Go source code for style issues based on the guidelines from Effective Go and the Go Code Review Comments. It focuses on naming conventions, comments, and code structure.
 
-Unlike go vet which finds bugs, golint focuses on style and readability. Issues are suggestions, not errors.
-
-# COMMON ISSUES
-
-```
-- Exported functions should have comments
-- Package comments should be of the form "Package x..."
-- Receiver names should be consistent
-- Don't use underscores in Go names
-- Error strings should not be capitalized
-```
+Unlike go vet which finds bugs, golint focuses on style and readability. Issues are suggestions, not errors. The tool is deprecated in favor of staticcheck or golangci-lint.
 
 # CAVEATS
 

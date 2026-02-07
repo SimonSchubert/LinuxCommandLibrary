@@ -1,3 +1,7 @@
+# TAGLINE
+
+Tcl/Tk graphical interface for Git
+
 # TLDR
 
 **Start git gui**
@@ -39,11 +43,9 @@
 
 # DESCRIPTION
 
-**git gui** is a Tcl/Tk graphical interface to git. It provides visual tools for committing, browsing history, and viewing blame annotations.
+**git gui** is a Tcl/Tk graphical interface for Git. It provides visual tools for committing, browsing history, and viewing blame annotations.
 
-The interface shows staged and unstaged changes, allowing selective staging and commit message composition. The blame viewer shows line-by-line attribution with interactive navigation.
-
-git gui offers graphical git operations for those preferring GUI tools.
+The interface shows staged and unstaged changes, allowing selective staging and commit message composition. The blame viewer shows line-by-line attribution with interactive navigation through the commit history.
 
 # CAVEATS
 

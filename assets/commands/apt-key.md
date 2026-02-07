@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage trusted keys for package authentication.
+
 # TLDR
 
 **List** trusted keys
@@ -58,6 +62,14 @@ Add a key from **keyserver** with only key ID
 
 **finger**
 > List fingerprints of trusted keys
+
+# CONFIGURATION
+
+**/etc/apt/trusted.gpg.d/**
+> Directory for trusted keyring files in GPG format.
+
+**/usr/share/keyrings/**
+> System-wide keyrings referenced via signed-by in sources.list.
 
 # CAVEATS
 

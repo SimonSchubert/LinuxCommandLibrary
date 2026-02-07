@@ -1,3 +1,7 @@
+# TAGLINE
+
+Update AppArmor profiles from log events interactively
+
 # TLDR
 
 Interactively **review and update** profiles based on system logs
@@ -39,6 +43,11 @@ Upon exit, updated profiles are saved and reloaded if AppArmor is active. Intera
 
 **-h, --help**
 > Display help information
+
+# CONFIGURATION
+
+**/etc/apparmor/logprof.conf**
+> Controls default logfile location, repository settings, and behavior options for log-based profile updates.
 
 # CAVEATS
 

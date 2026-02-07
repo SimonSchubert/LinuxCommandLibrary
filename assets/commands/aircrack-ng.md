@@ -1,3 +1,7 @@
+# TAGLINE
+
+Crack WEP and WPA/WPA2 wireless encryption keys
+
 # TLDR
 
 **Crack WPA/WPA2** with wordlist

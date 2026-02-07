@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast cross-platform subdomain enumerator
+
 # TLDR
 
 **Find subdomains** for a domain
@@ -62,6 +66,11 @@ The tool aggregates results from certificate transparency logs, search engines, 
 
 **-u**, **--unique**
 > Remove duplicates.
+
+# CONFIGURATION
+
+**~/.config/findomain/config.toml**
+> API keys for data sources like SecurityTrails, Shodan, and VirusTotal.
 
 # CAVEATS
 

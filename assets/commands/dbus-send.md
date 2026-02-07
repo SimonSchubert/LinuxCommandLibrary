@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line D-Bus method invocation and signaling
+
 # TLDR
 
 **Send a method call** to a service

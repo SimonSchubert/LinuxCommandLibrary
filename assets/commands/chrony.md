@@ -1,3 +1,7 @@
+# TAGLINE
+
+Versatile NTP time synchronization suite
+
 # TLDR
 
 **Check synchronization status**
@@ -87,6 +91,17 @@
 chrony excels in challenging environments: intermittent network connections, virtual machines with unstable clocks, and systems that sleep or hibernate. It synchronizes faster than ntpd and maintains better accuracy in variable conditions.
 
 Configuration is in **/etc/chrony.conf** (or **/etc/chrony/chrony.conf**), specifying NTP servers, access controls, and clock adjustments. The daemon can operate as both NTP client and server.
+
+# CONFIGURATION
+
+**/etc/chrony.conf** (or **/etc/chrony/chrony.conf**)
+> Main configuration file specifying NTP servers, access controls, clock adjustments, and logging options.
+
+**/var/lib/chrony/drift**
+> Drift file tracking the system clock's frequency error for accurate correction when offline.
+
+**/var/log/chrony/** (or via syslog)
+> Log directory for tracking and measurements data.
 
 # CAVEATS
 

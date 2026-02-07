@@ -1,3 +1,7 @@
+# TAGLINE
+
+Build Apptainer container images from definition files or remote sources.
+
 # TLDR
 
 Build a container from a **definition file**
@@ -57,6 +61,11 @@ Definition files (**.def**) provide a reproducible way to specify base images, s
 
 **--update**
 > Run the %post script on an existing sandbox container
+
+# CONFIGURATION
+
+**/etc/apptainer/apptainer.conf**
+> Main configuration file controlling build behavior, security settings, bind paths, and fakeroot mappings.
 
 # CAVEATS
 

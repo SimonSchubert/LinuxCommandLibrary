@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage CloudWatch log groups, streams, and queries.
+
 # TLDR
 
 **List all log groups**

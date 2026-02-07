@@ -1,3 +1,7 @@
+# TAGLINE
+
+CDK for Terraform CLI
+
 # TLDR
 
 **Initialize a new CDKTF project**
@@ -84,6 +88,11 @@
 CDKTF projects define **constructs** that represent infrastructure resources. The **synth** command compiles code to Terraform JSON in **cdktf.out/**, which can be inspected or applied manually. The **deploy** command handles synthesis and application in one step.
 
 Provider bindings are generated from Terraform providers, providing type safety and IDE autocompletion. Complex logic, loops, and conditionals use native language features rather than HCL limitations.
+
+# CONFIGURATION
+
+**cdktf.json**
+> Project configuration including Terraform providers, modules, and application entry point.
 
 # CAVEATS
 

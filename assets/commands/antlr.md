@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate parsers from grammar files
+
 # TLDR
 
 **Generate parser** from a grammar file (default: Java)

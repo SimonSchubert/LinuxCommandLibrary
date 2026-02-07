@@ -1,3 +1,7 @@
+# TAGLINE
+
+Push objects over HTTP/WebDAV
+
 # TLDR
 
 **Push via HTTP**
@@ -33,11 +37,9 @@ _REFS_
 
 # DESCRIPTION
 
-**git http-push** pushes objects to a remote repository over HTTP/WebDAV. It's a low-level command used by git push when the remote uses the older DAV-based HTTP protocol.
+**git http-push** pushes objects to a remote repository over HTTP/WebDAV. It is a low-level command used by git push when the remote uses the older DAV-based HTTP protocol.
 
-This command is rarely used directly. Modern HTTP git servers use the smart HTTP protocol which is handled by git push directly. DAV push is considered legacy.
-
-git http-push provides DAV-based HTTP push for legacy servers.
+This command is rarely used directly. Modern HTTP Git servers use the smart HTTP protocol which is handled by git push automatically. The DAV-based push is considered legacy and retained for backward compatibility.
 
 # CAVEATS
 

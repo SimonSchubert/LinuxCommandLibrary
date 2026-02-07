@@ -1,3 +1,7 @@
+# TAGLINE
+
+Linux disk encryption subsystem
+
 # TLDR
 
 **Create LUKS encrypted volume**

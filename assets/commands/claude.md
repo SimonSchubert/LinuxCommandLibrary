@@ -1,3 +1,7 @@
+# TAGLINE
+
+AI-powered agentic coding assistant CLI
+
 # TLDR
 
 **Start an interactive session** in the current directory
@@ -146,6 +150,17 @@ The tool operates in two main modes: interactive mode for extended sessions with
 Claude Code integrates with your terminal environment, understanding project context through file access and command execution. It maintains conversation history across sessions, allowing you to resume previous discussions. The tool supports piping input from other commands and outputting structured JSON for integration with other tools.
 
 Special syntax includes **@** for file references and **!** for direct shell command execution. The CLI supports MCP (Model Context Protocol) servers for extending capabilities and can connect to IDEs and Chrome for enhanced integration.
+
+# CONFIGURATION
+
+**CLAUDE.md**
+> Project-level instructions and context loaded automatically from the working directory.
+
+**~/.claude/settings.json**
+> Global user settings including permissions, allowed tools, and default behaviors.
+
+**.claude/settings.json**
+> Project-level settings for permissions and tool configuration.
 
 # CAVEATS
 

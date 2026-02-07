@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate contribution statistics by author
+
 # TLDR
 
 **Show line statistics**
@@ -46,11 +50,9 @@ _PATH_
 
 # DESCRIPTION
 
-**git fame** generates contribution statistics showing lines of code, commits, and files per author. It provides a comprehensive view of who contributed what to the codebase.
+**git fame** generates contribution statistics showing lines of code, commits, and files per author. It provides a comprehensive view of who contributed what to the codebase, using blame analysis to count current lines attributed to each author.
 
-The tool counts current lines (not historical) attributed to each author via blame analysis. Output includes percentages for relative contribution comparison.
-
-git fame provides detailed attribution statistics.
+Output includes percentages for relative contribution comparison. The tool is useful for understanding code ownership patterns and team contribution distribution.
 
 # CAVEATS
 

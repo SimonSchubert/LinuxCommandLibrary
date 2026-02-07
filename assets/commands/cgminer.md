@@ -1,3 +1,7 @@
+# TAGLINE
+
+multi-threaded cryptocurrency miner for ASIC devices
+
 # TLDR
 
 **Mine Bitcoin** using a pool with username and password
@@ -109,6 +113,11 @@
 The miner supports multiple pools with configurable failover, load-balancing, and rotation strategies. It connects using the stratum protocol or JSON-RPC and submits proof-of-work solutions. The built-in API allows remote monitoring and control of mining operations.
 
 CGMiner supports various ASIC hardware including Avalon, AntMiner, BitFury, Cointerra, Drillbit, HashFast, Icarus, and Klondike devices. On Linux, direct USB support requires no additional drivers, though udev rules may be needed for non-root access.
+
+# CONFIGURATION
+
+**cgminer.conf**
+> JSON configuration file with pool URLs, credentials, device settings, and mining parameters. Loaded with -c flag or auto-loaded from the working directory.
 
 # CAVEATS
 

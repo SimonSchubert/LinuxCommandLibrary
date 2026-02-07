@@ -1,3 +1,7 @@
+# TAGLINE
+
+Cross-platform terminal system monitor
+
 # TLDR
 
 **Start** resource monitor
@@ -67,14 +71,8 @@ The tool offers an alternative to htop and top with modern features and aestheti
 
 # CONFIGURATION
 
-Config file: `~/.config/bottom/bottom.toml`
-
-```toml
-[flags]
-hide_avg_cpu = false
-dot_marker = false
-cpu_left_legend = false
-```
+**~/.config/bottom/bottom.toml**
+> Main configuration file for flags, colors, layout, and widget settings.
 
 # CAVEATS
 

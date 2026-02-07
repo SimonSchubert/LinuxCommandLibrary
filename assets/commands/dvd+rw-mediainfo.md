@@ -1,3 +1,7 @@
+# TAGLINE
+
+display DVD media information
+
 # TLDR
 
 **Show media information**

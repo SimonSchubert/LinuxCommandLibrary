@@ -1,3 +1,7 @@
+# TAGLINE
+
+Show recent commits for standup meetings
+
 # TLDR
 
 **Show recent commits by you**
@@ -43,9 +47,10 @@
 
 # DESCRIPTION
 
-**git standup** shows commits for standup meetings. Part of git-extras. Displays your recent commits across repositories, useful for daily standups.
+**git standup** displays your recent commits, designed for daily standup meetings. Part of git-extras, it shows what you worked on recently and can scan across multiple repositories.
+
+The command defaults to showing your commits from the last working day, making it easy to recall what you accomplished.
 
 # SEE ALSO
 
 [git-log](/man/git-log)(1), [git-extras](/man/git-extras)(1)
-

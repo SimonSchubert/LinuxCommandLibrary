@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate configure scripts from templates
+
 # TLDR
 
 **Generate** configure script

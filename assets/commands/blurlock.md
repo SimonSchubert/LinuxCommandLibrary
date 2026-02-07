@@ -1,3 +1,7 @@
+# TAGLINE
+
+Lock the screen with a blurred screenshot background
+
 # TLDR
 
 **Lock** the screen with a blurred screenshot

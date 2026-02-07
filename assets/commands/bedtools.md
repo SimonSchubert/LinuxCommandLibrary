@@ -1,3 +1,7 @@
+# TAGLINE
+
+Analyze and manipulate genomic interval data
+
 # TLDR
 
 **Intersect** genomic intervals

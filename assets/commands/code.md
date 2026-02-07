@@ -1,3 +1,7 @@
+# TAGLINE
+
+Visual Studio Code editor launcher
+
 # TLDR
 
 **Open VS Code** in the current directory

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Auto-reloading daemon for rapid Haskell development
+
 # TLDR
 
 **Start with default settings**
@@ -49,11 +53,9 @@
 
 # DESCRIPTION
 
-**ghcid** (GHCi daemon) provides rapid Haskell development feedback. It runs GHCi in the background, watching source files and automatically reloading on changes, displaying errors and warnings immediately.
+**ghcid** (GHCi daemon) provides rapid Haskell development feedback by running GHCi in the background, watching source files, and automatically reloading on changes. Errors and warnings are displayed immediately.
 
-The tool minimizes the compile-fix-compile cycle by providing instant feedback. It integrates with cabal, stack, and bare GHCi. The test option runs expressions after successful compilation.
-
-ghcid is the standard tool for interactive Haskell development workflows.
+The tool minimizes the compile-fix-compile cycle by providing instant feedback. It integrates with cabal, stack, and bare GHCi. The --test option runs expressions after successful compilation, enabling continuous testing.
 
 # CAVEATS
 

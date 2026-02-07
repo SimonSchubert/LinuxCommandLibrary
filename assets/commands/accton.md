@@ -1,3 +1,7 @@
+# TAGLINE
+
+enable or disable process accounting
+
 # TLDR
 
 **Enable process accounting** to a specific file

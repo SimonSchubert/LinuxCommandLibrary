@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create new GitHub repositories
+
 # TLDR
 
 **Create repo interactively**
@@ -66,9 +70,10 @@
 
 # DESCRIPTION
 
-**gh repo create** creates a new GitHub repository. Can create empty repos, from templates, or push existing local repositories.
+**gh repo create** creates GitHub repositories from the command line with support for multiple creation workflows. It can create empty repositories, initialize from the current directory, or instantiate from repository templates.
+
+When run interactively without arguments, the command guides you through repository creation with prompts for visibility, description, and initialization options. The --source flag publishes an existing local git repository to GitHub. Template repositories (--template) provide starter configurations for common project types.
 
 # SEE ALSO
 
 [gh-repo](/man/gh-repo)(1), [gh-repo-clone](/man/gh-repo-clone)(1)
-

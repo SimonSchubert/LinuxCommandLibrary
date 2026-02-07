@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage user pools for authentication and user directories.
+
 # TLDR
 
 **Create a new user pool**

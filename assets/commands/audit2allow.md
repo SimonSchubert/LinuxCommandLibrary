@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate SELinux policy allow rules from audit logs.
+
 # TLDR
 
 Generate **allow** rules
@@ -30,7 +34,9 @@ For specific **service**
 
 # DESCRIPTION
 
-**audit2allow** generates SELinux policy allow rules from audit logs. It reads denial messages and creates policy rules that would permit the denied operations, helping to troubleshoot and fix SELinux policy issues.
+**audit2allow** generates SELinux policy allow rules from audit logs. It reads denial messages from the audit subsystem and creates type enforcement rules that would permit the denied operations.
+
+The tool can produce simple allow rules for quick troubleshooting or generate complete loadable policy modules with the **-M** option. When used with **-R**, it generates reference policy using standard macros, producing cleaner and more maintainable rules. It is typically used after **audit2why** has identified the root cause of denials.
 
 # PARAMETERS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Raspberry Pi GPIO pin control utility
+
 # TLDR
 
 **Read GPIO pin state**
@@ -61,7 +65,7 @@
 
 **gpio** is the WiringPi command-line utility for controlling GPIO pins on Raspberry Pi and similar boards. It allows reading, writing, and configuring GPIO pins from shell scripts and the command line.
 
-The tool supports multiple pin numbering schemes: WiringPi numbering, BCM GPIO numbering (-g), and physical pin numbers (-1).
+The tool supports multiple pin numbering schemes: WiringPi numbering (default), BCM GPIO numbering (**-g**), and physical pin numbers (**-1**). The **readall** command displays a complete pin status table.
 
 # CAVEATS
 

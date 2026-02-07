@@ -1,3 +1,7 @@
+# TAGLINE
+
+revert from shadow group format
+
 # TLDR
 
 **Convert from shadow groups**
@@ -25,8 +29,6 @@
 **grpunconv** converts from shadow group format back to traditional format. It moves password information from /etc/gshadow back to /etc/group and removes /etc/gshadow.
 
 The tool reverses what grpconv does, returning to traditional group password storage. This is rarely needed on modern systems.
-
-grpunconv disables shadow group passwords.
 
 # CAVEATS
 

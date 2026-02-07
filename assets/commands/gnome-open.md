@@ -1,3 +1,7 @@
+# TAGLINE
+
+open files with associated GNOME applications (deprecated)
+
 # TLDR
 
 **Open file with default app**
@@ -28,9 +32,7 @@ _LOCATION_
 
 **gnome-open** opens files, URLs, and directories with their associated applications. It uses GNOME's MIME type handling to determine the appropriate application.
 
-The command is deprecated in favor of xdg-open or gio open, which provide cross-desktop functionality. It remains available for compatibility.
-
-gnome-open launches associated applications for files.
+The command is deprecated in favor of xdg-open or gio open, which provide cross-desktop functionality. It remains available for backward compatibility.
 
 # CAVEATS
 

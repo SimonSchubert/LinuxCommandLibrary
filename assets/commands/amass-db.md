@@ -1,3 +1,7 @@
+# TAGLINE
+
+Query and manage stored enumeration results
+
 # TLDR
 
 **List** all enumerations in database
@@ -58,6 +62,11 @@ The database persists discovered assets, enabling tracking of changes over time 
 
 **-show**
 > Show details for enumeration
+
+# CONFIGURATION
+
+**~/.config/amass/config.ini**
+> Amass configuration file defining data sources, API keys, and scope settings.
 
 # CAVEATS
 

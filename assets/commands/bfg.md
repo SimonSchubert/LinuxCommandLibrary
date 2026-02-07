@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove unwanted data from Git repository history
+
 # TLDR
 
 **Remove** file from history

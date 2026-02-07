@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create a new Rust package in an existing directory
+
 # TLDR
 
 **Initialize in current directory**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+HDMI-CEC device control client
+
 # TLDR
 
 **List** all CEC adapters
@@ -30,9 +34,11 @@ Set a device to **standby** (interactive mode)
 
 # DESCRIPTION
 
-**cec-client** manages CEC (Consumer Electronics Control) connections over HDMI. CEC allows devices connected via HDMI to control each other, enabling features like turning on a TV when a media player starts.
+**cec-client** manages CEC (Consumer Electronics Control) connections over HDMI using the libCEC library. CEC is a feature of the HDMI specification that allows devices connected via HDMI to control each other, enabling actions like turning on a TV when a media player starts, or controlling volume across devices with a single remote.
 
-The tool provides both interactive and scripted control of CEC-enabled devices.
+The tool provides both interactive and scripted control of CEC-enabled devices. In interactive mode, you can send commands like `on`, `standby`, and `tx` (raw CEC frames) to any device on the HDMI bus. For automation, the `-s` flag processes a single command from stdin and exits, making it suitable for use in scripts and home automation setups.
+
+Devices are addressed by logical address (0-15), where 0 is typically the TV, 1 is a recording device, and 5 is an audio system.
 
 # PARAMETERS
 

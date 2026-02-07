@@ -1,3 +1,7 @@
+# TAGLINE
+
+Official command-line tool for Arduino development
+
 # TLDR
 
 **List connected boards**
@@ -95,6 +99,11 @@ The tool uses Fully Qualified Board Names (FQBNs) to identify target boards, for
 Typical workflow: install the target platform with **core install**, compile the sketch with **compile**, and upload with **upload**. The **--upload** flag can be added to compile to perform both steps together.
 
 The tool supports custom libraries via **--libraries** flag, board configuration via **--build-property**, and integrates well with IDEs like VS Code for Arduino development workflows.
+
+# CONFIGURATION
+
+**~/.arduino15/arduino-cli.yaml**
+> Main configuration file controlling board manager URLs, library paths, logging, and build defaults.
 
 # CAVEATS
 

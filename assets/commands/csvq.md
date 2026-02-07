@@ -1,3 +1,7 @@
+# TAGLINE
+
+SQL query engine for CSV files
+
 # TLDR
 
 **Query a CSV file with SQL**

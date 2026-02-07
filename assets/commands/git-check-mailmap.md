@@ -1,3 +1,7 @@
+# TAGLINE
+
+Resolve canonical author and committer identities
+
 # TLDR
 
 **Check mailmap entry**
@@ -33,7 +37,12 @@ _CONTACT_
 
 The mailmap feature consolidates identity variations (typos, name changes, multiple emails) to canonical forms. This command shows how identities will be mapped in git log and shortlog output.
 
-git check-mailmap helps verify mailmap configuration.
+This is primarily a debugging tool for verifying that .mailmap entries are correctly resolving contributor identities before relying on them in reports or statistics.
+
+# CONFIGURATION
+
+**.mailmap**
+> Maps author and committer names/emails to canonical forms, consolidating identity variations in logs and statistics.
 
 # CAVEATS
 

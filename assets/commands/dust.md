@@ -1,3 +1,7 @@
+# TAGLINE
+
+intuitive disk usage analyzer with visualization
+
 # TLDR
 
 **Show disk usage** of current directory

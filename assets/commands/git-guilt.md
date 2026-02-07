@@ -1,3 +1,7 @@
+# TAGLINE
+
+Track authorship changes between commits
+
 # TLDR
 
 **Show blame delta**
@@ -32,11 +36,9 @@ _PATH_
 
 # DESCRIPTION
 
-**git guilt** shows the delta in blame between two commits. It calculates which authors gained or lost lines of code between the specified revisions.
+**git guilt** shows the delta in blame between two commits, calculating which authors gained or lost lines of code between the specified revisions. The output shows net line changes per author, with positive numbers indicating lines added and negative indicating lines removed.
 
-The output shows net line changes per author. Positive numbers indicate lines added, negative indicate lines removed. This reveals who is actively modifying which areas.
-
-git guilt tracks authorship changes over time.
+Part of the git-extras suite, this tool reveals who is actively modifying which areas of the codebase, useful for understanding recent code ownership changes.
 
 # CAVEATS
 

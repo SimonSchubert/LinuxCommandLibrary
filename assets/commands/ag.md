@@ -1,3 +1,7 @@
+# TAGLINE
+
+Search code fast like ack but faster
+
 # TLDR
 
 **Search** for a pattern recursively
@@ -83,6 +87,14 @@ The tool is optimized for speed, using multiple threads and memory-mapped I/O. I
 
 **-z**, **--search-zip**
 > Search inside compressed files
+
+# CONFIGURATION
+
+**~/.agignore**
+> Global file patterns to ignore during searches.
+
+**.agignore**
+> Per-project file patterns to ignore, similar to .gitignore syntax.
 
 # CAVEATS
 

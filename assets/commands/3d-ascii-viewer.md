@@ -1,3 +1,7 @@
+# TAGLINE
+
+render 3D models as ASCII art in the terminal
+
 # TLDR
 
 **View a 3D model** as ASCII art in the terminal

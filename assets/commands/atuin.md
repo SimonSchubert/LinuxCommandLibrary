@@ -1,3 +1,7 @@
+# TAGLINE
+
+Magical shell history with sync and search
+
 # TLDR
 
 **Search** command history
@@ -62,6 +66,11 @@ Add to shell rc file:
 ```bash
 eval "$(atuin init bash)"  # or zsh, fish
 ```
+
+# CONFIGURATION
+
+**~/.config/atuin/config.toml**
+> Main configuration file for search settings, sync options, database path, and UI preferences.
 
 # CAVEATS
 

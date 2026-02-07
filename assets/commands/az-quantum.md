@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Azure Quantum workspaces and jobs
+
 # TLDR
 
 **List available quantum providers** in a location

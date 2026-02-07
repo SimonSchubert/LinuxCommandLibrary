@@ -1,3 +1,7 @@
+# TAGLINE
+
+crack password-protected ZIP archives
+
 # TLDR
 
 **Brute-force** alphanumeric password (4-8 chars)

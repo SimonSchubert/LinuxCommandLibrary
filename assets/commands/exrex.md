@@ -1,3 +1,7 @@
+# TAGLINE
+
+reverse regex matching string generator
+
 # TLDR
 
 **Generate strings from** regex

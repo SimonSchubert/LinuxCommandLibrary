@@ -1,3 +1,7 @@
+# TAGLINE
+
+OpenPGP and PIV smartcard management
+
 # TLDR
 
 **List available smartcards**
@@ -69,9 +73,10 @@
 
 # DESCRIPTION
 
-**gpg-card** is a GnuPG tool for managing OpenPGP and PIV smartcards. It provides an interactive interface for configuring cards, managing PINs, generating keys, and transferring keys to smartcards. Introduced in GnuPG 2.3 as a replacement for the older **gpg --card-edit** workflow.
+**gpg-card** is a GnuPG tool for managing OpenPGP and PIV smartcards. It provides an interactive interface for configuring cards, managing PINs, generating keys, and transferring keys to smartcards.
+
+Introduced in GnuPG 2.3 as a replacement for the older **gpg --card-edit** workflow, it offers a more streamlined command-line experience for smartcard operations.
 
 # SEE ALSO
 
 [gpg](/man/gpg)(1), [gpg-agent](/man/gpg-agent)(1)
-

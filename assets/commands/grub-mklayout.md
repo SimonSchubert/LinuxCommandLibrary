@@ -1,3 +1,7 @@
+# TAGLINE
+
+create GRUB keyboard layout files
+
 # TLDR
 
 **Create keyboard layout**
@@ -29,11 +33,9 @@
 
 # DESCRIPTION
 
-**grub-mklayout** creates keyboard layout files for GRUB. It converts console keyboard maps to GRUB's GKB format.
+**grub-mklayout** creates keyboard layout files for GRUB by converting console keyboard maps to GRUB's GKB format. It reads from stdin and produces a binary layout file for use during boot.
 
-The tool enables non-US keyboard layouts in GRUB. It reads from stdin and produces a binary layout file for use during boot.
-
-grub-mklayout creates GRUB keyboard layouts.
+The tool enables non-US keyboard layouts in GRUB, allowing users to type passwords and commands in the boot menu using their native keyboard layout.
 
 # CAVEATS
 

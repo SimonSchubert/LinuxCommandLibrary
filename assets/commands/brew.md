@@ -1,3 +1,7 @@
+# TAGLINE
+
+Package manager for macOS and Linux
+
 # TLDR
 
 **Install** package

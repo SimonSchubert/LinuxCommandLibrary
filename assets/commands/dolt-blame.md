@@ -1,3 +1,7 @@
+# TAGLINE
+
+show revision and author for table rows
+
 # TLDR
 
 **Show blame for table**

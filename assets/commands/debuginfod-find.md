@@ -1,3 +1,7 @@
+# TAGLINE
+
+client for requesting debug information from debuginfod servers
+
 # TLDR
 
 Request debuginfo based on **build ID**
@@ -28,10 +32,13 @@ Part of the elfutils package, it enables on-demand downloading of debug symbols 
 **-v**
 > Verbose output
 
-# ENVIRONMENT
+# CONFIGURATION
 
-**DEBUGINFOD_URLS**
-> Space-separated list of debuginfod server URLs
+**DEBUGINFOD_URLS** (environment variable)
+> Space-separated list of debuginfod server URLs to query for debug information.
+
+**DEBUGINFOD_CACHE_PATH** (environment variable)
+> Directory for caching downloaded debug files (default: $HOME/.debuginfod_client_cache).
 
 # CAVEATS
 

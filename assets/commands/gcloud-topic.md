@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays supplementary help topics
+
 # TLDR
 
 **List available topics**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Internal single-file merge helper
+
 # TLDR
 
 **Merge single file**
@@ -30,11 +34,9 @@ _MODE_
 
 # DESCRIPTION
 
-**git merge-one-file** is a helper script for single-file merging. It's called by git merge-index to handle individual file conflicts using the standard three-way merge.
+**git merge-one-file** is a helper script for single-file merging, called by `git merge-index` to handle individual file conflicts using the standard three-way merge algorithm. It receives blob SHA-1 hashes for the base, ours, and theirs versions and performs the merge.
 
-The command receives blob SHA-1s for base, ours, and theirs versions, performing the merge. It's part of git's internal merge machinery.
-
-git merge-one-file provides single-file merge for scripts.
+This command is part of Git's internal merge machinery and is not typically invoked directly by users. It exists to support custom merge workflows and to provide a reference implementation for per-file merge programs.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage MySQL and PostgreSQL-compatible relational database clusters
+
 # TLDR
 
 **Create an Aurora MySQL cluster**

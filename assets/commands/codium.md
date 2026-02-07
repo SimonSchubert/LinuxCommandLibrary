@@ -1,3 +1,7 @@
+# TAGLINE
+
+privacy-focused VS Code without Microsoft telemetry
+
 # TLDR
 
 **Open current directory** in VSCodium

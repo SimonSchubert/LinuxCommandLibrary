@@ -1,3 +1,7 @@
+# TAGLINE
+
+shell integration setup
+
 # TLDR
 
 **Initialize conda** for the current shell
@@ -30,6 +34,14 @@
 
 **-d**, **--dry-run**
 > Show what would be done without making changes.
+
+# CONFIGURATION
+
+**~/.condarc**
+> User-level conda configuration for channels, package settings, and solver options.
+
+**/opt/conda/.condarc**
+> System-wide conda configuration.
 
 # DESCRIPTION
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+high-performance duplicate file finder
+
 # TLDR
 
 **Find duplicate files**

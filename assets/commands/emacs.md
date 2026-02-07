@@ -1,3 +1,7 @@
+# TAGLINE
+
+extensible, customizable text editor and computing environment
+
 # TLDR
 
 **Open Emacs** with a file
@@ -113,6 +117,17 @@
 Emacs is built around Emacs Lisp (Elisp), a full programming language that allows users to customize and extend virtually every aspect of the editor. User configurations are stored in **~/.emacs** or **~/.emacs.d/init.el**.
 
 The editor operates in different modes depending on the file type, providing syntax highlighting, indentation, and mode-specific commands. Major modes handle different file types, while minor modes add optional features. The built-in help system is accessed with **C-h** (Ctrl+h) or **F1**.
+
+# CONFIGURATION
+
+**~/.emacs**
+> User initialization file for Emacs configuration and customization.
+
+**~/.emacs.d/init.el**
+> Alternative location for user initialization file, preferred for organizing multiple config files.
+
+**~/.emacs.d/**
+> Directory for packages, themes, and additional Elisp files.
 
 # CAVEATS
 

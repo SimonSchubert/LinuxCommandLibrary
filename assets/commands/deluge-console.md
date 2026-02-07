@@ -1,3 +1,7 @@
+# TAGLINE
+
+text-based console interface for Deluge
+
 # TLDR
 
 **Start interactive** console
@@ -68,6 +72,11 @@ _COMMAND_
 In interactive mode, it presents a navigable interface for managing torrents with keyboard shortcuts. In command mode, it accepts commands as arguments for non-interactive operation, useful for scripts and automation.
 
 The console connects to the Deluge daemon (deluged) either locally or remotely, providing the same functionality as the GTK client through a terminal interface.
+
+# CONFIGURATION
+
+**~/.config/deluge/**
+> Configuration files including console.conf for console-specific settings.
 
 # CAVEATS
 

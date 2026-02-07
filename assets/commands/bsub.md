@@ -1,3 +1,7 @@
+# TAGLINE
+
+Submit batch jobs to IBM Spectrum LSF
+
 # TLDR
 
 **Submit** a script file as a job

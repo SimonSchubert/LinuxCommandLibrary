@@ -1,3 +1,7 @@
+# TAGLINE
+
+Query AWS service pricing information
+
 # TLDR
 
 **List all AWS services** with pricing information

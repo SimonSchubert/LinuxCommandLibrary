@@ -1,3 +1,7 @@
+# TAGLINE
+
+AI pair programming in the terminal
+
 # TLDR
 
 **Start** aider with files
@@ -64,6 +68,14 @@ The tool integrates with git, can automatically commit changes, and understands 
 
 **--message** _text_
 > Send a message and exit
+
+# CONFIGURATION
+
+**.aider.conf.yml**
+> Per-project configuration file for default options, model selection, and behavior settings.
+
+**.aiderignore**
+> Files and directories to exclude from the repository map, using .gitignore syntax.
 
 # CAVEATS
 

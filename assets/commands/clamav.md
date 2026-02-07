@@ -1,3 +1,7 @@
+# TAGLINE
+
+open-source antivirus toolkit
+
 # TLDR
 
 **Scan a file** for viruses
@@ -77,6 +81,14 @@
 ClamAV is widely used in mail gateway scanning, particularly on Unix-based systems. It supports scanning of archives (ZIP, RAR, TAR, GZIP), documents (PDF, Office formats), executables, and many other file types. The signature database is maintained by Cisco Talos and updated multiple times daily.
 
 For high-volume scanning, running the **clamd** daemon provides significantly better performance than repeated clamscan invocations, as it keeps the signature database loaded in memory.
+
+# CONFIGURATION
+
+**/etc/clamav/clamd.conf**
+> Main daemon configuration including socket path, scan limits, and logging.
+
+**/etc/clamav/freshclam.conf**
+> Virus database update settings including mirror, proxy, and update frequency.
 
 # CAVEATS
 

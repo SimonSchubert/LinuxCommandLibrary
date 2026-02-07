@@ -1,3 +1,7 @@
+# TAGLINE
+
+Protein-to-protein sequence alignment search
+
 # TLDR
 
 **Align sequences** using blastp with e-value threshold

@@ -1,3 +1,7 @@
+# TAGLINE
+
+display images in the terminal using Unicode characters
+
 # TLDR
 
 **Display image in terminal**
@@ -22,7 +26,9 @@
 
 # DESCRIPTION
 
-**catimg** renders images in the terminal using Unicode characters. Supports JPEG, PNG, and GIF formats. Works over SSH connections with no dependencies.
+**catimg** renders images directly in the terminal using Unicode block characters and ANSI color codes. It supports JPEG, PNG, and GIF formats, with animated GIF playback via configurable loop counts.
+
+The tool requires no external dependencies and works over SSH connections, making it useful for previewing images on remote servers or in minimal environments without a graphical display. Image resolution can be adjusted with width, height, and resolution multiplier options to balance detail against terminal size.
 
 # PARAMETERS
 

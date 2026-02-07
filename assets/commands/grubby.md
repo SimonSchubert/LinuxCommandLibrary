@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line bootloader configuration tool for Red Hat systems
+
 # TLDR
 
 Add kernel boot **arguments** to all kernel menu entries
@@ -52,9 +56,7 @@ Add kernel boot **arguments** to all kernel menu entries
 
 **grubby** is a command-line tool for updating and modifying bootloader configuration on Red Hat-based systems. It works with GRUB, GRUB2, and zipl (for s390 systems), providing a unified interface for boot configuration changes.
 
-The tool modifies kernel command-line arguments, manages boot entries, and sets default kernels without directly editing configuration files. This is particularly useful for scripted configuration management.
-
-On modern Fedora/RHEL systems using GRUB2 with BLS (Boot Loader Specification), grubby modifies the individual kernel entry files in /boot/loader/entries/.
+The tool modifies kernel command-line arguments, manages boot entries, and sets default kernels without directly editing configuration files. On modern Fedora/RHEL systems using GRUB2 with BLS (Boot Loader Specification), grubby modifies the individual kernel entry files in /boot/loader/entries/.
 
 # CAVEATS
 

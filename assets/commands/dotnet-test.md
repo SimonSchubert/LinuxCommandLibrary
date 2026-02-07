@@ -1,3 +1,7 @@
+# TAGLINE
+
+test runner for .NET projects
+
 # TLDR
 
 **Run tests**
@@ -60,7 +64,9 @@
 
 # DESCRIPTION
 
-**dotnet test** runs tests using configured test runner. Supports MSTest, NUnit, and xUnit frameworks. Discovers and executes tests in the project.
+**dotnet test** executes unit tests in .NET projects using the configured test framework adapter. It supports popular testing frameworks including MSTest, NUnit, and xUnit through their respective NuGet packages.
+
+The command discovers test methods through framework-specific attributes, executes them, and reports results including pass/fail status, execution time, and detailed failure information. It integrates with code coverage tools and CI/CD pipelines through various loggers and output formats.
 
 # SEE ALSO
 

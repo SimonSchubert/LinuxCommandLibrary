@@ -1,3 +1,7 @@
+# TAGLINE
+
+text-mode dialog boxes for shell scripts
+
 # TLDR
 
 Display a **message**
@@ -22,9 +26,11 @@ Display **help**
 
 # DESCRIPTION
 
-**dialog** displays dialog boxes from shell scripts. It supports various widget types including message boxes, input boxes, menus, checklists, and file selection dialogs.
+**dialog** displays dialog boxes from shell scripts, providing a user-friendly text-based interface for interactive scripts. It supports various widget types including message boxes, input boxes, menus, checklists, radio lists, progress bars, and file selection dialogs.
 
-Output is written to stderr (or specified file), and exit status indicates button pressed.
+The program uses the ncurses library to create pseudo-graphical interfaces in text terminals. This enables shell scripts to present professional-looking user interfaces without requiring a graphical environment.
+
+Output is written to stderr (or a specified file), while exit status indicates which button was pressed (0 for OK/Yes, 1 for Cancel/No, 255 for ESC). This design allows scripts to capture both user selections and continue using stdout for other purposes. dialog is widely used in system administration scripts, installation programs, and configuration utilities.
 
 # PARAMETERS
 

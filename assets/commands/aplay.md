@@ -1,3 +1,7 @@
+# TAGLINE
+
+Play audio files via ALSA
+
 # TLDR
 
 **Play** a specific file
@@ -55,6 +59,14 @@ List available **audio devices**
 
 **-v, --verbose**
 > Verbose mode; show PCM structure and setup
+
+# CONFIGURATION
+
+**/etc/asound.conf**
+> System-wide ALSA configuration file for device defaults and plugin definitions.
+
+**~/.asoundrc**
+> Per-user ALSA configuration overriding system defaults.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Device Tree Compiler
+
 # TLDR
 
 **Compile DTS to DTB**
@@ -49,7 +53,13 @@
 
 # DESCRIPTION
 
-**dtc** (Device Tree Compiler) compiles Device Tree Source (DTS) files to Device Tree Blob (DTB) format and vice versa. Used for configuring hardware in Linux systems, especially embedded devices.
+**dtc** (Device Tree Compiler) compiles Device Tree Source (DTS) files to Device Tree Blob (DTB) format and performs the reverse operation of decompiling DTB back to DTS. Device trees are data structures that describe hardware components and their relationships, allowing Linux kernels to support various hardware platforms without hardcoded board-specific code.
+
+The compiler is essential for embedded Linux development, particularly for ARM, RISC-V, and PowerPC platforms. DTS files provide a human-readable description of hardware (CPUs, memory, peripherals, interrupts, buses), while DTB is the binary format loaded by bootloaders and passed to the kernel at runtime.
+
+dtc supports device tree overlays, which allow runtime modification of the base device tree. This is particularly useful for add-on hardware like Raspberry Pi HATs or BeagleBone capes, where the overlay describes additional hardware without modifying the base system device tree.
+
+The tool includes validation and warning systems to catch common errors in device tree syntax and structure. It can also generate assembly output for inclusion in firmware builds.
 
 # SEE ALSO
 

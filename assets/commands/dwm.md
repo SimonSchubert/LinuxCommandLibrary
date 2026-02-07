@@ -1,3 +1,7 @@
+# TAGLINE
+
+dynamic tiling window manager
+
 # TLDR
 
 **Start dwm** (from xinitrc)
@@ -19,6 +23,11 @@
 Windows are organized into tags (similar to workspaces). The master/stack layout places the primary window prominently with others stacked alongside. Configuration is done by editing the C source code and recompiling.
 
 dwm is designed to be extremely small (under 2000 lines of code) and fast, following the suckless philosophy of simplicity and efficiency.
+
+# CONFIGURATION
+
+**config.h**
+> Source-level configuration file that must be edited and recompiled to change keybindings, colors, layouts, bar settings, rules, and behavior.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+DNS lookup tool with DNSSEC support
+
 # TLDR
 
 **Query A records**

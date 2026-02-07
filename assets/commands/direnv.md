@@ -1,3 +1,7 @@
+# TAGLINE
+
+per-directory environment variable manager
+
 # TLDR
 
 **Enable direnv** in your shell (add to shell config)
@@ -73,6 +77,17 @@
 
 **stdlib**
 > Print the stdlib functions available in .envrc.
+
+# CONFIGURATION
+
+**.envrc**
+> Per-directory environment configuration script loaded when entering the directory.
+
+**~/.config/direnv/direnv.toml**
+> Global direnv configuration for whitelist and settings.
+
+**~/.config/direnv/direnvrc**
+> Global shared functions and settings available to all .envrc files.
 
 # DESCRIPTION
 

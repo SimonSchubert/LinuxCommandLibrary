@@ -1,3 +1,7 @@
+# TAGLINE
+
+debhelper extensions for Python packaging
+
 # TLDR
 
 **Build Python 3 package with debhelper**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Play MIDI files through ALSA sequencer
+
 # TLDR
 
 **Play** MIDI file

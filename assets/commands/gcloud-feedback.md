@@ -1,3 +1,7 @@
+# TAGLINE
+
+submit feedback to Google Cloud
+
 # TLDR
 
 **Send feedback to Google**
@@ -19,7 +23,11 @@
 
 # DESCRIPTION
 
-**gcloud feedback** opens a browser to send feedback to Google Cloud. Provides a way to report issues or suggest improvements for the gcloud CLI.
+**gcloud feedback** provides a direct channel for reporting issues, bugs, and feature requests to the Google Cloud SDK team. When invoked, it opens your default web browser to a feedback form pre-populated with relevant system information.
+
+The command can optionally attach log files to help the team diagnose issues. This is particularly useful when reporting errors or unexpected behavior, as the logs provide context about what operations were attempted.
+
+gcloud feedback is the recommended way to contribute to improving the Google Cloud CLI tools, whether reporting bugs encountered during use or suggesting enhancements to existing functionality.
 
 # SEE ALSO
 

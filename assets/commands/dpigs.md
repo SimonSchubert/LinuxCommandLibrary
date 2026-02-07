@@ -1,3 +1,7 @@
+# TAGLINE
+
+show largest installed packages
+
 # TLDR
 
 Display **n largest** packages
@@ -22,9 +26,11 @@ Display in **human-readable** format
 
 # DESCRIPTION
 
-**dpigs** shows which installed packages occupy the most disk space on apt-based systems. Useful for identifying large packages when freeing disk space.
+**dpigs** shows which installed packages occupy the most disk space on Debian-based systems. It queries the dpkg database to determine the installed size of each package and sorts them to identify space hogs.
 
-Part of the debian-goodies package.
+The tool is particularly useful when disk space is limited and you need to identify candidates for removal. It can display either binary packages or aggregate source packages, making it easy to see which software projects consume the most space.
+
+dpigs is part of the debian-goodies package, a collection of useful utilities for Debian system administrators.
 
 # PARAMETERS
 

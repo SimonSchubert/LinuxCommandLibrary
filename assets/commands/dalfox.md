@@ -1,3 +1,7 @@
+# TAGLINE
+
+open-source XSS vulnerability scanner and parameter analyzer
+
 # TLDR
 
 **Scan a URL** for XSS vulnerabilities

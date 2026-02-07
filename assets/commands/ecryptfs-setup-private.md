@@ -1,3 +1,7 @@
+# TAGLINE
+
+encrypted private directory setup
+
 # TLDR
 
 **Setup encrypted private directory**
@@ -42,6 +46,14 @@
 
 **-m**, **--mountpass** _pass_
 > Mount passphrase (insecure, for scripting).
+
+# CONFIGURATION
+
+**~/.ecryptfs/**
+> Directory containing encryption keys, wrapped passphrases, and mount configuration.
+
+**~/.ecryptfs/wrapped-passphrase**
+> Mount passphrase wrapped with login password for automatic decryption.
 
 # DESCRIPTION
 

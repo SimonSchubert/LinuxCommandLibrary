@@ -1,3 +1,7 @@
+# TAGLINE
+
+shell-like command-line file manager
+
 # TLDR
 
 **Start file manager**
@@ -26,7 +30,11 @@
 
 # DESCRIPTION
 
-**clifm** is a shell-like, command-line terminal file manager. Unlike TUI file managers, it uses CLI principles with ELN (Entry List Numbers) for file selection. Runs on Linux, BSD, macOS, and even VT100 terminals.
+**clifm** is a shell-like, command-line terminal file manager that differs fundamentally from TUI file managers like ranger or nnn. Instead of navigating a panel-based interface, users interact through a command prompt, using ELN (Entry List Numbers) to reference files by their displayed index numbers.
+
+Standard shell commands work directly within clifm, and built-in commands provide additional file management capabilities such as bulk renaming, trash support, bookmarks, and directory jumping. The tool supports multiple workspaces, custom profiles, and a plugin system.
+
+clifm runs on Linux, BSD, macOS, and even VT100 terminals, making it one of the most portable file managers available. Its CLI-first approach is particularly suited for users who are already comfortable working in a shell environment.
 
 # PARAMETERS
 
@@ -78,6 +86,14 @@ Standard shell commands work. Built-in commands:
 
 **help** or **?**
 > Show help
+
+# CONFIGURATION
+
+**~/.config/clifm/profiles/<profile>/clifmrc**
+> Main configuration file controlling colors, aliases, prompt, and behavior settings.
+
+**~/.config/clifm/profiles/<profile>/keybindings.clifm**
+> Custom keyboard shortcuts and key bindings.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Azure virtual machines
+
 # TLDR
 
 **Create** virtual machine

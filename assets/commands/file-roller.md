@@ -1,3 +1,7 @@
+# TAGLINE
+
+GNOME graphical archive manager
+
 # TLDR
 
 **Open archive manager**

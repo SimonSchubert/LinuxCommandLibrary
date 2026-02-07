@@ -1,3 +1,7 @@
+# TAGLINE
+
+Decompose graphs into biconnected components
+
 # TLDR
 
 **Decompose graph into biconnected components**

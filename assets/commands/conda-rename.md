@@ -1,3 +1,7 @@
+# TAGLINE
+
+environment renaming utility
+
 # TLDR
 
 **Rename an environment**
@@ -15,6 +19,14 @@
 
 **-p**, **--prefix** _path_
 > Current path of environment to rename.
+
+# CONFIGURATION
+
+**~/.condarc**
+> User-level conda configuration for channels, package settings, and solver options.
+
+**/opt/conda/.condarc**
+> System-wide conda configuration.
 
 # DESCRIPTION
 

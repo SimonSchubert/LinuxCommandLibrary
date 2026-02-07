@@ -1,3 +1,7 @@
+# TAGLINE
+
+prevent automatic pipeline stage re-execution
+
 # TLDR
 
 **Freeze a stage**

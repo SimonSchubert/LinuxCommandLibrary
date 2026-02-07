@@ -1,3 +1,7 @@
+# TAGLINE
+
+verify integrity of group files
+
 # TLDR
 
 **Check group file integrity**
@@ -44,9 +48,7 @@ _SHADOW_
 
 **grpck** verifies the integrity of group information files. It checks for duplicate entries, valid field formats, and consistency between /etc/group and /etc/gshadow.
 
-The tool can automatically fix some issues when run interactively. It's essential for maintaining system security and proper group functionality.
-
-grpck verifies group file integrity.
+The tool can automatically fix some issues when run interactively. It is essential for maintaining system security and proper group functionality.
 
 # CAVEATS
 

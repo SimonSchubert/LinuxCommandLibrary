@@ -1,3 +1,7 @@
+# TAGLINE
+
+reproducible development environments on any infrastructure
+
 # TLDR
 
 **Create a new workspace**
@@ -68,6 +72,14 @@ _COMMAND_
 DevPod workspaces are created from git repositories, local directories, or container images. The tool automatically provisions infrastructure, builds the dev container, and connects your IDE. It supports VS Code, JetBrains IDEs, and SSH access.
 
 The provider architecture allows running the same development environment locally with Docker or remotely on cloud infrastructure, maintaining consistency regardless of where the environment runs.
+
+# CONFIGURATION
+
+**.devcontainer/devcontainer.json**
+> Dev container configuration defining the development environment.
+
+**~/.devpod/provider/**
+> Provider configurations for different infrastructure backends.
 
 # CAVEATS
 

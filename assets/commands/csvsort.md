@@ -1,3 +1,7 @@
+# TAGLINE
+
+Type-aware CSV file sorter
+
 # TLDR
 
 **Sort by column**

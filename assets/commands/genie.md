@@ -1,3 +1,7 @@
+# TAGLINE
+
+systemd namespace bottle for WSL
+
 # TLDR
 
 **Initialize** the bottle (run once at start)
@@ -32,6 +36,11 @@ Run a **specified command** inside the bottle
 
 **-v**, **--verbose**
 > Enable verbose output
+
+# CONFIGURATION
+
+**/etc/genie.ini**
+> Main configuration file controlling systemd path, user mappings, and bottle behavior.
 
 # DESCRIPTION
 

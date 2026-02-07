@@ -1,3 +1,7 @@
+# TAGLINE
+
+display user information and status
+
 # TLDR
 
 **Look up local** user

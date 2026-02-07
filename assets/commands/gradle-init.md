@@ -1,3 +1,7 @@
+# TAGLINE
+
+Gradle project scaffolding generator
+
 # TLDR
 
 **Create new project interactively**
@@ -47,9 +51,8 @@
 
 # DESCRIPTION
 
-**gradle init** creates a new Gradle project with a basic structure. It can run interactively, prompting for project type, language, and build script DSL, or non-interactively with command-line options. Supported types include applications and libraries for Java, Kotlin, Groovy, Scala, C++, and Swift.
+**gradle init** creates a new Gradle project with a standard directory structure. It can run interactively, prompting for project type, language, and build script DSL, or non-interactively with command-line options. Supported types include applications and libraries for Java, Kotlin, Groovy, Scala, C++, and Swift.
 
 # SEE ALSO
 
 [gradle](/man/gradle)(1), [gradle-build](/man/gradle-build)(1)
-

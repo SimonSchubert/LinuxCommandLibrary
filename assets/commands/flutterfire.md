@@ -1,3 +1,7 @@
+# TAGLINE
+
+CLI for setting up Firebase in Flutter projects
+
 # TLDR
 
 **Configure Firebase**

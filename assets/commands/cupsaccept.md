@@ -1,3 +1,7 @@
+# TAGLINE
+
+allow printer queues to accept jobs
+
 # TLDR
 
 **Accept print jobs** for a printer

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Watch source files and run Cargo commands on changes
+
 # TLDR
 
 **Watch and rebuild** on changes
@@ -84,6 +88,11 @@ It watches all files that Cargo considers part of the project, including src/, t
 
 **-N**
 > Send desktop notification on finish.
+
+# CONFIGURATION
+
+**.ignore**
+> Project-level ignore patterns for watched files (uses gitignore syntax).
 
 # CAVEATS
 

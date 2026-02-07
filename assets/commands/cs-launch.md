@@ -1,3 +1,7 @@
+# TAGLINE
+
+run JVM applications from Maven coordinates
+
 # TLDR
 
 **Launch an application** by Maven coordinates

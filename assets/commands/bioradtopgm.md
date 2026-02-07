@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert Bio-Rad confocal microscope images to PGM format
+
 # TLDR
 
 **Convert a Biorad confocal file** to PGM

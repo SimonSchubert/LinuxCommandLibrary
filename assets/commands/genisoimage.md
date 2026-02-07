@@ -1,3 +1,7 @@
+# TAGLINE
+
+ISO9660 filesystem image creator
+
 # TLDR
 
 Create an **ISO image** from the given source directory

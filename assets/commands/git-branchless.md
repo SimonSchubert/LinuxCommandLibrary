@@ -1,3 +1,7 @@
+# TAGLINE
+
+High-velocity Git workflow tools with smartlog and undo
+
 # TLDR
 
 **Initialize git-branchless** in a repository
@@ -108,6 +112,14 @@ The **undo** command can reverse almost any Git operation, including hard resets
 Git-branchless uses **revset expressions**, a declarative language for specifying commits similar to Mercurial. This enables powerful queries like **stack()** (all commits in current stack) or **draft()** (local unpublished commits).
 
 The **move** command allows relocating entire commit subtrees without affecting the working copy, automatically cleaning up obsolete branches.
+
+# CONFIGURATION
+
+**.git/hooks/**
+> git-branchless init installs custom hooks (post-commit, post-rewrite, etc.) to track commit visibility and DAG changes.
+
+**.git/config**
+> Stores branchless-specific settings under the [branchless] section, including default revset queries and display preferences.
 
 # CAVEATS
 

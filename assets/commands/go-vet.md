@@ -1,3 +1,7 @@
+# TAGLINE
+
+Static analysis for Go source code
+
 # TLDR
 
 **Check current package**
@@ -40,11 +44,9 @@ _PACKAGES_
 
 # DESCRIPTION
 
-**go vet** examines Go source code and reports suspicious constructs. It finds bugs that the compiler doesn't catch, like incorrect printf format strings or unreachable code.
+**go vet** examines Go source code and reports suspicious constructs that the compiler does not catch. It finds bugs like incorrect printf format strings, unreachable code, and misuse of sync primitives.
 
-The tool runs multiple analyzers that check for common mistakes. It's part of the standard quality assurance workflow alongside testing and formatting.
-
-go vet catches bugs before runtime.
+The tool runs multiple analyzers that check for common mistakes. It is part of the standard quality assurance workflow alongside testing and formatting.
 
 # CAVEATS
 

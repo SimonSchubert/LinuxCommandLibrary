@@ -1,3 +1,7 @@
+# TAGLINE
+
+Erlang compiler for BEAM bytecode
+
 # TLDR
 
 **Compile Erlang module**

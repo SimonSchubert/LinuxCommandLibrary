@@ -1,3 +1,7 @@
+# TAGLINE
+
+compile Go packages and dependencies
+
 # TLDR
 
 **Build current package**
@@ -51,9 +55,7 @@ _PACKAGES_
 
 **go build** compiles Go packages and dependencies. It produces an executable binary from the main package or checks compilation for library packages.
 
-The command handles dependency resolution, compilation, and linking. Cross-compilation is built-in via GOOS and GOARCH environment variables.
-
-go build compiles Go programs to native executables.
+The command handles dependency resolution, compilation, and linking. Cross-compilation is built-in via GOOS and GOARCH environment variables, requiring no additional toolchains.
 
 # CAVEATS
 

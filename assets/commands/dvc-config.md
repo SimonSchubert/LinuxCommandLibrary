@@ -1,3 +1,7 @@
+# TAGLINE
+
+manage DVC configuration settings
+
 # TLDR
 
 **Set configuration** value
@@ -49,6 +53,14 @@ _VALUE_
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**.dvc/config**
+> Repository-level DVC configuration file.
+
+**~/.config/dvc/config**
+> Global user configuration file.
 
 # DESCRIPTION
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+image difference detection and comparison
+
 # TLDR
 
 **Compare two images**

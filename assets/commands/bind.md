@@ -1,3 +1,7 @@
+# TAGLINE
+
+Set Readline key bindings and variables in Bash
+
 # TLDR
 
 **List all Readline key bindings**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+free lossless audio codec encoder and decoder
+
 # TLDR
 
 **Encode WAV to FLAC**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+simple text formatter that rewraps paragraphs
+
 # TLDR
 
 **Reformat a text file** to 75 columns (default)

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Thunderbolt device authorization
+
 # TLDR
 
 List **connected and authorized** devices

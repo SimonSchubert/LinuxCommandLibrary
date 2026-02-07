@@ -1,3 +1,7 @@
+# TAGLINE
+
+AI-powered terminal coding agent by xAI
+
 # TLDR
 
 **Start an interactive session** in the current directory
@@ -58,11 +62,20 @@
 
 # DESCRIPTION
 
-**Grok CLI** is an open-source AI agent that brings the power of xAI's Grok directly into your terminal. It provides a conversational interface for coding assistance, file operations, and shell command execution through natural language.
+**Grok CLI** is an open-source AI agent that brings xAI's Grok directly into the terminal. It provides a conversational interface for coding assistance, file operations, and shell command execution through natural language.
 
-The tool operates in two modes: interactive mode for extended sessions with ongoing dialogue, and headless mode (-p) for scripted automation and one-off commands. Grok can navigate codebases, view and edit files, run bash commands, and intelligently select appropriate tools for requested tasks.
+The tool operates in two modes: interactive mode for extended sessions with ongoing dialogue, and headless mode (**-p**) for scripted automation and one-off commands. Grok can navigate codebases, view and edit files, run bash commands, and intelligently select appropriate tools for requested tasks.
 
-Configuration can be set via environment variables (**GROK_API_KEY**, **GROK_BASE_URL**, **GROK_MODEL**), user settings (~/.grok/user-settings.json), or project-level settings (.grok/settings.json). Custom instructions can be placed in .grok/GROK.md files.
+# CONFIGURATION
+
+**~/.grok/user-settings.json**
+> User-level settings including API key, model preferences, and default behaviors.
+
+**.grok/settings.json**
+> Project-level settings for tool permissions and configuration.
+
+**.grok/GROK.md**
+> Project-level custom instructions loaded automatically.
 
 # CAVEATS
 

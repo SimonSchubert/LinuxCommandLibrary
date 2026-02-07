@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal-based cryptocurrency tracker
+
 # TLDR
 
 Open the **TUI interface**
@@ -26,9 +30,11 @@ Display **version**
 
 # DESCRIPTION
 
-**cointop** is a terminal-based cryptocurrency tracker. It displays real-time prices, market data, and portfolio information in an interactive text user interface.
+**cointop** is a fast, lightweight terminal-based cryptocurrency tracking and portfolio management tool. It displays real-time prices, market capitalizations, trading volumes, and price changes for thousands of cryptocurrencies in an interactive text user interface.
 
-The TUI supports keyboard navigation, sorting, favorites, and portfolio tracking.
+The interface provides keyboard-driven navigation with vim-style bindings, allowing rapid browsing through coin lists, detailed charts, and portfolio views. Users can mark favorites, sort by various metrics, and track personal holdings with cost basis and profit/loss calculations.
+
+Data is sourced from cryptocurrency APIs and cached locally for performance. The tool supports multiple currencies for price display and provides historical price charts rendered in ASCII. Portfolio data is stored locally in a configuration file, making it suitable for privacy-conscious users who prefer local-first tools over web-based trackers.
 
 # PARAMETERS
 

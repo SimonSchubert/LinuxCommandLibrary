@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Amazon Data Firehose delivery streams
+
 # TLDR
 
 **List all delivery streams**

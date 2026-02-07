@@ -1,3 +1,7 @@
+# TAGLINE
+
+DNS reconnaissance and subdomain discovery tool
+
 # TLDR
 
 **DNS reconnaissance on** domain

@@ -1,3 +1,7 @@
+# TAGLINE
+
+System tray toggle to prevent idle sleep
+
 # TLDR
 
 Start the **caffeine indicator** applet

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Package manager for shell scripts
+
 # TLDR
 
 **Install a package** from GitHub

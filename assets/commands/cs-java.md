@@ -1,3 +1,7 @@
+# TAGLINE
+
+JDK version manager via Coursier
+
 # TLDR
 
 **List available JDK** distributions

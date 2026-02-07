@@ -1,3 +1,7 @@
+# TAGLINE
+
+Capture wireless packets and discover nearby networks
+
 # TLDR
 
 **Scan** all wireless networks

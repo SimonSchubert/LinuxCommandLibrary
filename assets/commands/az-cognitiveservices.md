@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Azure AI and Cognitive Services accounts
+
 # TLDR
 
 **Create a Cognitive Services account**

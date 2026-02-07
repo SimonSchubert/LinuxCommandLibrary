@@ -1,3 +1,7 @@
+# TAGLINE
+
+Simple and fast work queue server
+
 # TLDR
 
 **Start beanstalkd** on the default port

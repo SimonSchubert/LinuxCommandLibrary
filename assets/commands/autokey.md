@@ -1,3 +1,7 @@
+# TAGLINE
+
+Desktop text expansion and automation utility
+
 # TLDR
 
 **Start AutoKey** with GTK interface
@@ -50,7 +54,10 @@
 
 AutoKey comes in two variants: **autokey-gtk** for GTK-based desktops (GNOME, XFCE, MATE) and **autokey-qt** for Qt-based desktops (KDE Plasma). Both share the same configuration and scripting capabilities.
 
-Configuration files are stored in **~/.config/autokey/** and include phrases, scripts, and settings.
+# CONFIGURATION
+
+**~/.config/autokey/**
+> Configuration directory containing phrases, scripts, and application settings.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+run code generation directives in Go source files
+
 # TLDR
 
 **Run generators in current package**
@@ -56,4 +60,3 @@ Environment variables $GOFILE, $GOLINE, $GOPACKAGE, and $GOROOT are set during e
 # SEE ALSO
 
 [go](/man/go)(1), [go-build](/man/go-build)(1)
-

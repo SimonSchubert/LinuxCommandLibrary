@@ -1,3 +1,7 @@
+# TAGLINE
+
+Wayland kiosk compositor for single applications
+
 # TLDR
 
 **Run** an application in kiosk mode

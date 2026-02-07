@@ -1,3 +1,7 @@
+# TAGLINE
+
+Find related records across NCBI databases
+
 # TLDR
 
 Search pubmed then find **related sequences**

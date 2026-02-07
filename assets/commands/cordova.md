@@ -1,3 +1,7 @@
+# TAGLINE
+
+hybrid mobile app development framework
+
 # TLDR
 
 **Create a new Cordova project**

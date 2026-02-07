@@ -1,3 +1,7 @@
+# TAGLINE
+
+create image from container changes
+
 # TLDR
 
 **Create image from container**
@@ -36,9 +40,9 @@
 
 # DESCRIPTION
 
-**docker commit** creates a new image from a container's changes. This captures the current state of a container's filesystem as a new image layer.
+**docker commit** creates a new image from a container's changes. This captures the current state of a container's filesystem as a new image layer by examining all modifications made since the container was created.
 
-Useful for saving container modifications, though Dockerfiles are preferred for reproducible builds.
+While useful for debugging, experimentation, or saving a working state, this approach is not recommended for production workflows. Dockerfiles provide better reproducibility, version control, and documentation of the build process. Committed images lack the transparent layer history that Dockerfiles provide, making them harder to maintain and audit.
 
 # CAVEATS
 

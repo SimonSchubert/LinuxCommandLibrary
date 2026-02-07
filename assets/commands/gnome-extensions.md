@@ -1,3 +1,7 @@
+# TAGLINE
+
+GNOME Shell extension manager
+
 # TLDR
 
 **List** all the installed extensions
@@ -65,9 +69,7 @@ Display **version**
 
 **gnome-extensions** is the command-line tool for managing GNOME Shell extensions. Extensions modify GNOME Shell's behavior and appearance, adding features like system monitors, window tiling, or custom themes.
 
-Extensions are identified by UUIDs like **dash-to-dock@micxgx.gmail.com**. They're installed in **~/.local/share/gnome-shell/extensions/** (user) or **/usr/share/gnome-shell/extensions/** (system-wide).
-
-For graphical extension management, use the Extensions app or the GNOME Extensions website (extensions.gnome.org).
+Extensions are identified by UUIDs like **dash-to-dock@micxgx.gmail.com**. They are installed in **~/.local/share/gnome-shell/extensions/** (user) or **/usr/share/gnome-shell/extensions/** (system-wide).
 
 # CAVEATS
 

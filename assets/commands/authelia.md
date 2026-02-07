@@ -1,3 +1,7 @@
+# TAGLINE
+
+Authentication and authorization server with multi-factor support
+
 # TLDR
 
 **Validate configuration file**
@@ -104,6 +108,14 @@ Configuration validation with **validate-config** checks YAML syntax and setting
 The **storage** commands manage the user database, including migrations between versions and encryption key rotation. Authelia stores user credentials, TOTP secrets, and session data.
 
 Authelia integrates with reverse proxies like Nginx, Traefik, and HAProxy to protect web applications with authentication portals and access policies.
+
+# CONFIGURATION
+
+**/etc/authelia/configuration.yml**
+> Main configuration file defining authentication backends, session settings, access control rules, and storage options.
+
+**/etc/authelia/users_database.yml**
+> File-based user database when using the file authentication backend. Contains usernames, password hashes, and group memberships.
 
 # CAVEATS
 

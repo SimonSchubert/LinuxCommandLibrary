@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fedora/RHEL package manager
+
 # TLDR
 
 **Upgrade** installed packages to newest versions
@@ -80,6 +84,14 @@ Find which packages **provide** a command
 
 **--refresh**
 > Set metadata as expired before running command
+
+# CONFIGURATION
+
+**/etc/dnf/dnf.conf**
+> Main DNF configuration file with settings for package management behavior.
+
+**/etc/yum.repos.d/*.repo**
+> Repository configuration files defining package sources.
 
 # CAVEATS
 

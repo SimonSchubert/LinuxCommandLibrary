@@ -1,3 +1,7 @@
+# TAGLINE
+
+Command-line interface for Bitcoin Core
+
 # TLDR
 
 **Get** blockchain info
@@ -91,6 +95,11 @@ bitcoin-cli sendtoaddress "1ABC..." 0.1
 # List recent transactions
 bitcoin-cli listtransactions "*" 10
 ```
+
+# CONFIGURATION
+
+**~/.bitcoin/bitcoin.conf**
+> Bitcoin Core configuration file for RPC credentials, network settings, and daemon options.
 
 # CAVEATS
 

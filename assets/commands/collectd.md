@@ -1,3 +1,7 @@
+# TAGLINE
+
+system performance statistics collection daemon
+
 # TLDR
 
 **Test** the configuration file and exit
@@ -53,6 +57,14 @@ Common use cases include monitoring system resources, network statistics, and ap
 
 **-h**
 > Display help and version
+
+# CONFIGURATION
+
+**/etc/collectd.conf**
+> Main configuration file controlling plugins, intervals, and output destinations.
+
+**~/.collectdrc**
+> User-specific configuration file.
 
 # CAVEATS
 

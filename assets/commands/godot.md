@@ -1,3 +1,7 @@
+# TAGLINE
+
+Open-source game engine and editor
+
 # TLDR
 
 **Start Godot editor**
@@ -49,11 +53,9 @@ _SCENE_
 
 # DESCRIPTION
 
-**godot** is the Godot game engine editor and runtime. It provides a complete game development environment with 2D/3D rendering, physics, scripting, and export capabilities.
+**Godot** is the Godot game engine editor and runtime. It provides a complete game development environment with 2D/3D rendering, physics, scripting, and export capabilities.
 
-The engine uses GDScript, C#, or C++ for game logic. It supports export to desktop, mobile, and web platforms. The editor is itself built with Godot.
-
-godot provides open-source game development.
+The engine uses GDScript, C#, or C++ for game logic and supports export to desktop, mobile, and web platforms. Headless mode enables CI/CD pipelines for automated builds and testing.
 
 # CAVEATS
 

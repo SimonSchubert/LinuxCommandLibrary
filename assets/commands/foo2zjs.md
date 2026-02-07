@@ -1,3 +1,7 @@
+# TAGLINE
+
+PBM to ZjStream converter for HP and Minolta printers
+
 # TLDR
 
 **Convert PBM to** ZjStream format

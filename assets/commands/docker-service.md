@@ -1,3 +1,7 @@
+# TAGLINE
+
+manage containerized services in Docker Swarm
+
 # TLDR
 
 **Create a service**
@@ -63,7 +67,7 @@
 
 # DESCRIPTION
 
-**docker service** manages Swarm services. Services define how containers run in a swarm, including replicas, networks, and resource limits. Only available in Swarm mode.
+**docker service** manages Swarm services. Services define how containers run in a swarm, including replicas, networks, and resource limits. Only available in Swarm mode. Services provide declarative configuration for running containers at scale with automatic scheduling, load balancing, rolling updates, and health monitoring across the cluster.
 
 # SEE ALSO
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+capture framebuffer screenshots to PNG
+
 # TLDR
 
 **Take a screenshot** of the current framebuffer

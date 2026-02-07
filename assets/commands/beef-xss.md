@@ -1,3 +1,7 @@
+# TAGLINE
+
+Browser exploitation framework for penetration testing
+
 # TLDR
 
 **Start BeEF server**
@@ -53,6 +57,14 @@ The framework provides a web-based control panel for managing hooked browsers, e
 
 **Command Modules**
 > Browser exploitation modules (keylogging, phishing, network discovery)
+
+# CONFIGURATION
+
+**/etc/beef-xss/config.yaml**
+> Main configuration file on Kali Linux installations. Controls network settings, credentials, and enabled extensions.
+
+**/usr/share/beef-xss/config.yaml**
+> Alternative location for the main configuration file in package installations.
 
 # CAVEATS
 

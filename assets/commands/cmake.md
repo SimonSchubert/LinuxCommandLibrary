@@ -1,3 +1,7 @@
+# TAGLINE
+
+cross-platform build system generator
+
 # TLDR
 
 **Generate** build files
@@ -26,9 +30,11 @@
 
 # DESCRIPTION
 
-**cmake** is a cross-platform build system generator. It generates native build files (Makefiles, Ninja, Visual Studio, Xcode) from platform-independent CMakeLists.txt files, simplifying the build process across different operating systems.
+**cmake** is a cross-platform build system generator. It reads platform-independent CMakeLists.txt project descriptions and generates native build files for the user's chosen build tool, including Unix Makefiles, Ninja, Visual Studio solutions, and Xcode projects.
 
-The tool is widely used for C/C++ projects and supports other languages.
+The typical workflow involves a configure step that generates build files in an out-of-source build directory, followed by a build step that invokes the native build tool. CMake handles dependency detection, compiler feature checks, and library discovery through its find-module system.
+
+CMake is the dominant build system for C and C++ projects, and also supports Fortran, CUDA, and other languages. It includes CTest for test automation and CPack for creating distributable packages.
 
 # PARAMETERS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Securely store and access AWS credentials in the system keychain.
+
 # TLDR
 
 **Add** AWS credentials
@@ -83,6 +87,14 @@ aws-vault exec work -- aws s3 ls
 aws-vault exec work
 aws-vault login work
 ```
+
+# CONFIGURATION
+
+**~/.aws/config**
+> AWS profile settings including role_arn, source_profile, mfa_serial, and region.
+
+**~/.aws/credentials**
+> Master credentials stored in system keychain; this file is read for profile discovery.
 
 # CAVEATS
 

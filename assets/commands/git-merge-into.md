@@ -1,3 +1,7 @@
+# TAGLINE
+
+Merge current branch into target
+
 # TLDR
 
 **Merge current into target**
@@ -22,11 +26,9 @@ _TARGET-BRANCH_
 
 # DESCRIPTION
 
-**git merge-into** merges the current branch into another branch without switching. It's the reverse of normal merge workflow, where you typically checkout the target first.
+**git merge-into** merges the current branch into another branch without manually switching. It reverses the normal merge workflow where you would first checkout the target branch, perform the merge, then switch back.
 
-The command checks out the target, merges the source, then returns to the original branch. It saves the workflow of manually switching branches.
-
-git merge-into simplifies merging without branch switching.
+The command checks out the target, performs the merge, then returns to the original branch automatically. This saves the repetitive workflow of switching branches for a simple merge operation.
 
 # CAVEATS
 

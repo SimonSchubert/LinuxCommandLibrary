@@ -1,3 +1,7 @@
+# TAGLINE
+
+List files in index and working tree
+
 # TLDR
 
 **List tracked files**
@@ -52,11 +56,9 @@
 
 # DESCRIPTION
 
-**git ls-files** lists files in the index and working tree. It shows tracked files, untracked files, ignored files, and various file states useful for scripting.
+**git ls-files** lists files in the index and working tree. It can show tracked, untracked, ignored, modified, and deleted files, making it valuable for scripting and automation.
 
-The command provides low-level access to git's file tracking. It's commonly used in scripts to enumerate files matching certain criteria. Various flags control which file states to show.
-
-git ls-files enables programmatic file listing.
+The command provides low-level access to Git's file tracking state. Various flags control which file categories to display. It is commonly used in scripts to enumerate files matching certain criteria, such as finding all untracked files or listing everything ignored by `.gitignore`.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+network interface configuration and diagnostics
+
 # TLDR
 
 Show **settings**
@@ -30,7 +34,11 @@ Set **speed** and duplex
 
 # DESCRIPTION
 
-**ethtool** displays and modifies Network Interface Controller (NIC) parameters. It can query driver information, link status, hardware features, and configure settings like speed, duplex, and offload features.
+**ethtool** displays and modifies Network Interface Controller (NIC) parameters. It provides comprehensive control over Ethernet device settings, allowing administrators to query driver information, link status, hardware capabilities, and configure parameters like speed, duplex mode, and various offload features.
+
+The tool is essential for network troubleshooting, performance tuning, and hardware diagnostics. It can enable or disable features like checksumming offload, scatter-gather I/O, and segmentation offloading that affect network throughput and CPU utilization.
+
+ethtool works directly with network device drivers, exposing hardware-specific capabilities and statistics not available through standard networking tools.
 
 # PARAMETERS
 

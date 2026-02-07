@@ -1,3 +1,7 @@
+# TAGLINE
+
+Visual front end for display configuration
+
 # TLDR
 
 **Launch the graphical display configuration** tool

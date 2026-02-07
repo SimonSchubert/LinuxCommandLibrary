@@ -1,3 +1,7 @@
+# TAGLINE
+
+automate interactive applications with scripted responses
+
 # TLDR
 
 **Execute** an expect script from file
@@ -20,7 +24,9 @@ Enter **interactive** REPL
 
 **expect** automates interactive applications by scripting responses to expected prompts. It spawns processes and responds to their output based on pattern matching.
 
-Commonly used for automating SSH logins, FTP sessions, and other interactive programs.
+The tool uses Tcl scripting language with expect-specific commands like spawn, expect, and send. Scripts can handle multiple response patterns, timeouts, and conditional logic. This enables automation of programs that require interactive input like passwords, confirmations, or menu selections.
+
+Commonly used for automating SSH logins, FTP sessions, database setup scripts, and other interactive programs. While powerful, modern alternatives like SSH keys, API tokens, and configuration management tools are often preferred for security.
 
 # PARAMETERS
 

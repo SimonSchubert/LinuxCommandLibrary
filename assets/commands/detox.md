@@ -1,3 +1,7 @@
+# TAGLINE
+
+clean up problematic filenames
+
 # TLDR
 
 **Clean filenames** in current directory
@@ -61,6 +65,11 @@ _FILE_
 The tool applies configurable sequences of transformations including replacing spaces with underscores, removing or transliterating non-ASCII characters, and fixing case issues. Multiple built-in sequences handle different cleaning scenarios.
 
 detox is valuable for batch-processing files from Windows systems, music libraries with complex names, or any source with inconsistent naming conventions.
+
+# CONFIGURATION
+
+**/etc/detoxrc** or **~/.detoxrc**
+> Configuration file defining cleaning sequences and filename filters.
 
 # CAVEATS
 

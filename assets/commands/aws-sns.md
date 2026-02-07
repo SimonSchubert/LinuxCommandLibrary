@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Simple Notification Service topics and subscriptions.
+
 # TLDR
 
 **Create a new SNS topic**

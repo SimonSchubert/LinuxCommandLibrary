@@ -1,3 +1,7 @@
+# TAGLINE
+
+manage DigitalOcean CLI authentication contexts
+
 # TLDR
 
 **Initialize authentication**

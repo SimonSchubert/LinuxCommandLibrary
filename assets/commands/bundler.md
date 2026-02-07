@@ -1,3 +1,7 @@
+# TAGLINE
+
+Ruby dependency manager
+
 # TLDR
 
 **Install dependencies from Gemfile**
@@ -99,6 +103,14 @@ Since Ruby 2.6, Bundler is part of Ruby's standard library.
 
 **--deployment**
 > Install in deployment mode
+
+# CONFIGURATION
+
+**Gemfile**
+> Specifies Ruby gem dependencies for the project. Located in the project root directory.
+
+**.bundle/config**
+> Per-project Bundler configuration including install paths, without groups, and deployment settings. Also reads from ~/.bundle/config for global defaults.
 
 # CAVEATS
 

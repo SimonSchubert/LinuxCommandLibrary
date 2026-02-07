@@ -1,3 +1,7 @@
+# TAGLINE
+
+Show branches and their commits with relationship indicators
+
 # TLDR
 
 **Show branch relationships**
@@ -49,9 +53,10 @@
 
 # DESCRIPTION
 
-**git show-branch** shows branches and their commits with visual indication of which commits belong to which branches.
+**git show-branch** displays branches and their commits with visual indicators showing which commits belong to which branches. It provides a compact overview of branch divergence and shared history.
+
+This is useful for understanding how branches relate to each other, especially when multiple branches share common ancestors.
 
 # SEE ALSO
 
 [git-branch](/man/git-branch)(1), [git-log](/man/git-log)(1)
-

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Elasticsearch TLS certificate generator
+
 # TLDR
 
 **Generate CA certificate**
@@ -60,7 +64,11 @@
 
 # DESCRIPTION
 
-**elasticsearch-certutil** generates certificates and certificate authorities for securing Elasticsearch clusters. Used for TLS/SSL encryption and node authentication.
+**elasticsearch-certutil** generates certificates and certificate authorities for securing Elasticsearch clusters. It simplifies the certificate management process by automating the creation of self-signed certificates, certificate authorities, and certificate signing requests.
+
+The tool is essential for enabling TLS/SSL encryption on both the transport layer (node-to-node communication) and the HTTP layer (client API access). It generates certificates in PKCS#12 or PEM format and can include multiple DNS names and IP addresses for cluster deployments.
+
+elasticsearch-certutil streamlines security configuration required for production Elasticsearch deployments and enables features like Elastic Stack security.
 
 # SEE ALSO
 

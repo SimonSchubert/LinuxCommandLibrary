@@ -1,3 +1,7 @@
+# TAGLINE
+
+source code browsing tool for C, C++, and Java
+
 # TLDR
 
 **Build database** for current directory
@@ -66,6 +70,11 @@ The interactive interface allows searching for symbol definitions, function call
 
 **-p** _n_
 > Display last n path components.
+
+# CONFIGURATION
+
+**cscope.files**
+> List of files to include in the database.
 
 # SEARCH TYPES
 

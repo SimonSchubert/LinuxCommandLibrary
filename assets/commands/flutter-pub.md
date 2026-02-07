@@ -1,3 +1,7 @@
+# TAGLINE
+
+Dart package dependency manager for Flutter
+
 # TLDR
 
 **Get dependencies**
@@ -60,6 +64,14 @@ _COMMAND_
 The tool reads pubspec.yaml for dependency specifications and generates pubspec.lock for reproducible builds. It handles transitive dependencies and version conflicts automatically.
 
 flutter pub enables code reuse through thousands of community packages for networking, state management, UI components, and more.
+
+# CONFIGURATION
+
+**pubspec.yaml**
+> Project configuration file defining dependencies, dev dependencies, and package metadata.
+
+**pubspec.lock**
+> Generated lock file ensuring reproducible dependency versions across environments.
 
 # CAVEATS
 

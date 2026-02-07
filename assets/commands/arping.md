@@ -1,3 +1,7 @@
+# TAGLINE
+
+Send ARP requests to discover and test network hosts.
+
 # TLDR
 
 **Ping** host using ARP

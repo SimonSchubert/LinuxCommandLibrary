@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate Expect scripts by recording interactive sessions
+
 # TLDR
 
 Spawn a shell and **generate a script** from the session

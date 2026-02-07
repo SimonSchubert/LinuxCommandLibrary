@@ -1,3 +1,7 @@
+# TAGLINE
+
+Prevent idle sleep for fullscreen applications
+
 # TLDR
 
 Start a **caffeine server**

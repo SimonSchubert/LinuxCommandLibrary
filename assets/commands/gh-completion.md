@@ -1,3 +1,7 @@
+# TAGLINE
+
+generate shell completion scripts
+
 # TLDR
 
 **Generate bash completions**

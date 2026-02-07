@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage GitLab CI/CD pipelines
+
 # TLDR
 
 **List pipelines**
@@ -58,9 +62,8 @@
 
 # DESCRIPTION
 
-**glab pipeline** manages GitLab CI/CD pipelines. View, trigger, and monitor pipelines from the command line.
+**glab pipeline** manages GitLab CI/CD pipelines from the command line. It provides subcommands for viewing, triggering, and monitoring pipelines, as well as inspecting individual job details and logs.
 
 # SEE ALSO
 
 [glab](/man/glab)(1), [gitlab-ci](/man/gitlab-ci)(1)
-

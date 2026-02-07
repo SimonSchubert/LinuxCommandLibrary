@@ -1,3 +1,7 @@
+# TAGLINE
+
+list Docker containers and their status
+
 # TLDR
 
 **List running containers**
@@ -103,3 +107,4 @@ docker ps has been part of Docker since its initial release in **2013**, modeled
 # SEE ALSO
 
 [docker](/man/docker)(1), [docker-inspect](/man/docker-inspect)(1), [docker-logs](/man/docker-logs)(1), [docker-stats](/man/docker-stats)(1)
+

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Google Kubernetes Engine cluster management
+
 # TLDR
 
 **Create GKE cluster**
@@ -49,11 +53,11 @@ _RESOURCE_
 
 # DESCRIPTION
 
-**gcloud container** manages Google Kubernetes Engine (GKE) resources. It creates and manages Kubernetes clusters, node pools, and integrates with Container Registry.
+**gcloud container** provides comprehensive management for Google Kubernetes Engine (GKE), Google's managed Kubernetes service. It handles the complete lifecycle of Kubernetes clusters without requiring manual setup of master nodes or control plane components.
 
-The command handles cluster lifecycle, scaling, upgrades, and authentication. get-credentials configures kubectl to access your GKE cluster.
+The clusters subcommand creates and manages GKE clusters with customizable node configurations, network settings, and Kubernetes versions. Node pools allow heterogeneous clusters with different machine types or configurations for different workload types. Scaling operations can adjust cluster capacity by modifying node pool sizes.
 
-gcloud container provides the primary CLI interface for GKE operations.
+A critical feature is get-credentials, which configures kubectl by writing cluster authentication details to your kubeconfig file. This seamlessly connects the standard Kubernetes CLI tools to your GKE clusters. The command integrates with Google Container Registry for private image storage and supports advanced features like cluster autoscaling, node auto-repair, and automatic Kubernetes version upgrades.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+flexible Mail Transfer Agent
+
 # TLDR
 
 **Start mail queue processing**
@@ -36,12 +40,6 @@
 
 **exim** [_options_] [_addresses_...]
 
-# DESCRIPTION
-
-**exim** is a Mail Transfer Agent (MTA) that handles sending, receiving, and routing email on Unix systems. It's known for flexibility in configuration and filtering capabilities.
-
-The tool supports ACLs, content scanning, TLS encryption, and various authentication mechanisms. It can function as both an incoming and outgoing mail server.
-
 # PARAMETERS
 
 **-q** [_time_]
@@ -76,6 +74,20 @@ The tool supports ACLs, content scanning, TLS encryption, and various authentica
 
 **-C** _file_
 > Use alternate configuration.
+
+# DESCRIPTION
+
+**exim** is a Mail Transfer Agent (MTA) that handles sending, receiving, and routing email on Unix systems. It's known for flexibility in configuration and filtering capabilities.
+
+The tool supports ACLs, content scanning, TLS encryption, and various authentication mechanisms. It can function as both an incoming and outgoing mail server.
+
+# CONFIGURATION
+
+**/etc/exim4/exim4.conf**
+> Main configuration file controlling routing, ACLs, authentication, and transport settings.
+
+**/etc/exim4/passwd**
+> Authentication credentials for SMTP clients.
 
 # CAVEATS
 

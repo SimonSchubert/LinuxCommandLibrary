@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compress and decompress files with the Brotli algorithm
+
 # TLDR
 
 **Compress** file

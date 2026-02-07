@@ -1,3 +1,7 @@
+# TAGLINE
+
+Google Contacts command-line interface
+
 # TLDR
 
 Allow goobook to access Google contacts using **OAuth2**
@@ -39,6 +43,11 @@ set query_command="goobook query %s"
 ```
 
 Configuration is stored in **~/.goobookrc** and includes Google API credentials obtained through the OAuth2 authentication flow.
+
+# CONFIGURATION
+
+**~/.goobookrc**
+> Configuration file containing Google API credentials, OAuth2 tokens, and cache settings.
 
 # CAVEATS
 

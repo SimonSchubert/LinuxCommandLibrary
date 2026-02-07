@@ -1,3 +1,7 @@
+# TAGLINE
+
+amateur radio programming tool
+
 # TLDR
 
 **Launch CHIRP radio programming software**

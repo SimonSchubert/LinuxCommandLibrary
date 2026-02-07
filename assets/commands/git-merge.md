@@ -1,3 +1,7 @@
+# TAGLINE
+
+Join development histories together
+
 # TLDR
 
 **Merge branch into current**
@@ -55,11 +59,9 @@ _COMMIT_
 
 # DESCRIPTION
 
-**git merge** joins development histories together. It combines the specified commit and its history into the current branch, creating a merge commit when necessary.
+**git merge** joins two or more development histories together. It combines the specified branch and its history into the current branch, creating a merge commit when the histories have diverged.
 
-Fast-forward merges move the branch pointer without creating a commit. Non-fast-forward merges create explicit merge commits. Squash merges combine all changes into one commit.
-
-git merge is fundamental to branch-based workflows.
+Fast-forward merges simply move the branch pointer forward without creating a merge commit. The `--no-ff` flag forces a merge commit even when fast-forward is possible, preserving branch topology. Squash merges (`--squash`) combine all changes into a single staged changeset without creating a merge commit.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate summary reports from audit logs
+
 # TLDR
 
 Show **summary** of events
@@ -63,6 +67,14 @@ List **audit files** and time range
 
 **-i, --interpret**
 > Interpret numeric values to names
+
+# CONFIGURATION
+
+**/etc/audit/auditd.conf**
+> Main audit daemon configuration, controls log file location, size, and rotation.
+
+**/etc/audit/audit.rules**
+> Defines which events the audit system logs. Determines what data is available for reporting.
 
 # CAVEATS
 

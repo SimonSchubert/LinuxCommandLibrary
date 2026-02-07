@@ -1,3 +1,7 @@
+# TAGLINE
+
+Variant calling and VCF/BCF file manipulation
+
 # TLDR
 
 **View a VCF/BCF file**

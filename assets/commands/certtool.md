@@ -1,3 +1,7 @@
+# TAGLINE
+
+GnuTLS certificate and key generation tool
+
 # TLDR
 
 Generate a **private key**
@@ -26,9 +30,11 @@ Generate a **CA certificate**
 
 # DESCRIPTION
 
-**certtool** generates and manages X.509 certificates, keys, and PKI structures using GnuTLS. It is an alternative to OpenSSL's certificate tools with a different command-line interface.
+**certtool** generates and manages X.509 certificates, private keys, certificate signing requests, and other PKI structures using the GnuTLS library. It serves as an alternative to OpenSSL's certificate tools with a distinct command-line interface and template-based workflow.
 
-Template files define certificate attributes like organization name, validity period, and key usage.
+Certificate attributes such as organization name, common name, validity period, key usage, and extensions are defined in template files rather than passed as command-line arguments. This makes complex certificate configurations reproducible and scriptable. The template syntax uses simple key-value pairs.
+
+The tool supports the full PKI workflow: generating private keys, creating self-signed CA certificates, issuing certificate signing requests, signing certificates with a CA, and verifying certificate chains.
 
 # PARAMETERS
 

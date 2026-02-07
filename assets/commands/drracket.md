@@ -1,3 +1,7 @@
+# TAGLINE
+
+integrated development environment for Racket
+
 # TLDR
 
 **Start DrRacket IDE**

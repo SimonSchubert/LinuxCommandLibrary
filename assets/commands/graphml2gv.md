@@ -1,3 +1,7 @@
+# TAGLINE
+
+GraphML to Graphviz DOT format converter
+
 # TLDR
 
 **Convert GraphML to DOT**
@@ -31,9 +35,7 @@ _FILES_
 
 **graphml2gv** converts GraphML format graphs to Graphviz DOT format. It enables using GraphML data with Graphviz visualization tools.
 
-The tool handles the translation between the XML-based GraphML format and the DOT language. It preserves graph structure and attributes during conversion.
-
-graphml2gv converts GraphML to Graphviz format.
+The tool handles the translation between the XML-based GraphML format and the DOT language, preserving graph structure and attributes during conversion.
 
 # CAVEATS
 

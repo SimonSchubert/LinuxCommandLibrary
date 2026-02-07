@@ -1,3 +1,7 @@
+# TAGLINE
+
+Automatic crash reporting and diagnostics system.
+
 # TLDR
 
 Show **crash report** for a PID
@@ -28,9 +32,11 @@ When enabled, apport intercepts segmentation faults and other crashes, creating 
 
 # CONFIGURATION
 
-Apport is controlled by /etc/default/apport:
-- **enabled=1**: Collect crash reports
-- **enabled=0**: Disable crash collection
+**/etc/default/apport**
+> Main configuration file. Set enabled=1 to collect crash reports or enabled=0 to disable.
+
+**/var/crash/**
+> Directory where crash report files are stored.
 
 # RELATED COMMANDS
 

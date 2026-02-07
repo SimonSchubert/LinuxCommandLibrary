@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extract fields from crash reports into individual files.
+
 # TLDR
 
 **Extract a crash report** to a directory

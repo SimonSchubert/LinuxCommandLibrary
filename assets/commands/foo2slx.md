@@ -1,3 +1,7 @@
+# TAGLINE
+
+PBM to SLX converter for Lexmark printers
+
 # TLDR
 
 **Convert PBM to** SLX format

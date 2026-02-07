@@ -1,3 +1,7 @@
+# TAGLINE
+
+Python code linter and style checker
+
 # TLDR
 
 **Check Python file**
@@ -49,6 +53,17 @@ _FILES_
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**setup.cfg**
+> Project-level flake8 configuration in the [flake8] section.
+
+**.flake8**
+> Dedicated flake8 configuration file for project settings.
+
+**~/.config/flake8**
+> User-level global configuration file.
 
 # DESCRIPTION
 

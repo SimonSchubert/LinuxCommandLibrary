@@ -1,3 +1,7 @@
+# TAGLINE
+
+Google Cloud authentication management
+
 # TLDR
 
 **Login interactively**
@@ -52,11 +56,11 @@ _COMMAND_
 
 # DESCRIPTION
 
-**gcloud auth** manages authentication for Google Cloud Platform. It handles user logins, service account activation, and credential management.
+**gcloud auth** manages authentication and authorization for Google Cloud Platform access. All gcloud operations require valid credentials, which this command group provides and maintains.
 
-The command supports browser-based login for users and key-file authentication for service accounts. Multiple accounts can be configured with one active at a time.
+For interactive use, the login command initiates a browser-based OAuth flow where you authenticate with your Google account. For automation and server environments, service accounts can be activated using JSON key files, providing non-interactive authentication suitable for CI/CD pipelines.
 
-gcloud auth is essential for authorizing CLI access to GCP resources.
+The command supports multiple concurrent authenticated accounts, allowing you to switch between different Google accounts or between user accounts and service accounts. Only one account is active at a time, but switching is quick and preserves all credentials. Access tokens can be printed for use with external tools that need to authenticate to Google Cloud APIs.
 
 # CAVEATS
 

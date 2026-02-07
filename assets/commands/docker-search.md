@@ -1,3 +1,7 @@
+# TAGLINE
+
+search Docker Hub for container images
+
 # TLDR
 
 **Search Docker Hub**
@@ -40,7 +44,7 @@
 
 # DESCRIPTION
 
-**docker search** searches Docker Hub for images. Returns image name, description, stars, and official/automated status.
+**docker search** searches Docker Hub for images. Returns image name, description, stars, and official/automated status. This command queries the public Docker Hub registry to help discover available images. Results can be filtered by official status, automation, or popularity to find trusted images.
 
 # SEE ALSO
 

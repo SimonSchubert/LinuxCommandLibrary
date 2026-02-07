@@ -1,3 +1,7 @@
+# TAGLINE
+
+Linux audit daemon for tracking security-relevant events.
+
 # TLDR
 
 **Start** audit daemon
@@ -42,9 +46,11 @@ The daemon logs file accesses, system calls, authentication events, and other ac
 
 # CONFIGURATION
 
-- **/etc/audit/auditd.conf**: Daemon configuration
-- **/etc/audit/rules.d/**: Audit rules
-- **/var/log/audit/audit.log**: Default log file
+**/etc/audit/auditd.conf**
+> Main daemon configuration controlling log file location, retention, disk space handling, and dispatcher settings.
+
+**/etc/audit/rules.d/**
+> Directory containing audit rule files loaded at startup. Rules define which system calls and file accesses to monitor.
 
 # CAVEATS
 

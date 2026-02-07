@@ -1,3 +1,7 @@
+# TAGLINE
+
+UEFI boot manager configuration tool
+
 # TLDR
 
 **List** all boot options with their numbers

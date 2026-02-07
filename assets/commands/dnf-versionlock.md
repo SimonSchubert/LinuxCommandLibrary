@@ -1,3 +1,7 @@
+# TAGLINE
+
+lock package versions
+
 # TLDR
 
 **List** versionlock entries
@@ -46,6 +50,11 @@ Useful for keeping specific package versions that are known to work or avoiding 
 
 **list**
 > Show current locks (default)
+
+# CONFIGURATION
+
+**/etc/dnf/plugins/versionlock.list**
+> Stores package version lock entries. Each line contains a package specification to lock.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+copy files between containers and the host
+
 # TLDR
 
 **Copy file from container to host**
@@ -35,9 +39,12 @@
 
 # DESCRIPTION
 
-**docker cp** copies files or directories between a container and the local filesystem. Works with both running and stopped containers. Uses tar internally for efficient transfer.
+**docker cp** copies files or directories between a container's filesystem and the local host filesystem, functioning bidirectionally for both container-to-host and host-to-container transfers. This command works with both running and stopped containers, making it useful for extracting logs, injecting configuration files, or backing up data.
+
+The command uses tar internally for efficient transfer, streaming data between the container and host. Archive mode (**-a**) preserves file ownership and permissions, which is important when copying system files or maintaining consistent file attributes.
+
+Unlike volume mounts which are configured at container creation, **docker cp** enables ad-hoc file transfer at any time during a container's lifecycle.
 
 # SEE ALSO
 
 [docker-container-cp](/man/docker-container-cp)(1), [docker](/man/docker)(1)
-

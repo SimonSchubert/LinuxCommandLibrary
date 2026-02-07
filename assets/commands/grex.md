@@ -1,3 +1,7 @@
+# TAGLINE
+
+Regex generator from example strings
+
 # TLDR
 
 **Generate regex from examples**
@@ -55,11 +59,9 @@ _TEST-STRINGS_
 
 # DESCRIPTION
 
-**grex** generates regular expressions from user-provided test strings. It analyzes the input and produces a regex that matches all provided examples.
+**grex** generates regular expressions from user-provided test strings. It analyzes the input examples and produces a regex that matches all of them.
 
-The tool supports various character class conversions and can detect patterns like repetitions. It's useful for quickly creating regexes without manual pattern analysis.
-
-grex automates regex generation from examples.
+The tool supports various character class conversions and can detect patterns like repetitions. It is useful for quickly creating regexes without manual pattern analysis.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+internationalization message catalog lookup
+
 # TLDR
 
 **Display translated string**
@@ -50,6 +54,11 @@ _MSGID_
 The tool searches .mo files for translations, returning the original if none found. It enables shell scripts and programs to produce localized output.
 
 gettext enables internationalization of command-line applications.
+
+# CONFIGURATION
+
+**/usr/share/locale/[LANG]/LC_MESSAGES/[domain].mo**
+> Compiled message catalogs containing translations for specific domains and locales.
 
 # CAVEATS
 

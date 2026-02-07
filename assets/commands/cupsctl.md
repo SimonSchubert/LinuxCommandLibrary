@@ -1,3 +1,7 @@
+# TAGLINE
+
+configure CUPS server settings
+
 # TLDR
 
 **Show CUPS settings**

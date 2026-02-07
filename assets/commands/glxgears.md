@@ -1,3 +1,7 @@
+# TAGLINE
+
+OpenGL rotating gears demo and sanity check
+
 # TLDR
 
 **Run the gears demo** (shows FPS in terminal)
@@ -54,9 +58,9 @@
 
 The application creates a simple GLX window and renders the classic gears animation using OpenGL. When working properly, modern systems typically show several thousand FPS (capped by vsync to monitor refresh rate when composited, or much higher when unthrottled).
 
-The FPS display makes glxgears useful for quick GPU sanity checks: if you see reasonable FPS (hundreds to thousands) and smooth animation, OpenGL acceleration is working. Very low FPS (under 60) may indicate software rendering or driver issues.
+The FPS display makes **glxgears** useful for quick GPU sanity checks: if you see reasonable FPS (hundreds to thousands) and smooth animation, OpenGL acceleration is working. Very low FPS (under 60) may indicate software rendering or driver issues.
 
-Despite common use as a "benchmark," glxgears tests very little of modern GPU capabilities. It uses ancient OpenGL features that aren't representative of real application performance. The FPS number is heavily influenced by vsync, compositing, and rendering pipeline configuration rather than actual GPU power.
+Despite common use as a "benchmark," glxgears tests very little of modern GPU capabilities. It uses ancient OpenGL features that aren't representative of real application performance.
 
 # CAVEATS
 

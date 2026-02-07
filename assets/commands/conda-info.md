@@ -1,3 +1,7 @@
+# TAGLINE
+
+installation information display
+
 # TLDR
 
 **Show conda information**
@@ -37,6 +41,14 @@
 
 **-s**, **--system**
 > List environment variables.
+
+# CONFIGURATION
+
+**~/.condarc**
+> User-level conda configuration for channels, package settings, and solver options.
+
+**/opt/conda/.condarc**
+> System-wide conda configuration.
 
 # DESCRIPTION
 

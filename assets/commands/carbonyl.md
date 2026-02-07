@@ -1,3 +1,7 @@
+# TAGLINE
+
+Chromium-based browser for the terminal
+
 # TLDR
 
 **Open URL**

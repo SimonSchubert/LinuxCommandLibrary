@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate AppArmor profiles by monitoring program behavior
+
 # TLDR
 
 Start generating a **profile** for a program
@@ -32,6 +36,11 @@ The workflow involves setting the profile to complain mode, logging access viola
 
 **-h, --help**
 > Display help information
+
+# CONFIGURATION
+
+**/etc/apparmor/logprof.conf**
+> Controls default logfile location, repository settings, and other options used during profile generation.
 
 # CAVEATS
 

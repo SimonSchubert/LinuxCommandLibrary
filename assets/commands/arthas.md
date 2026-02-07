@@ -1,3 +1,7 @@
+# TAGLINE
+
+Diagnose and troubleshoot Java applications in real time.
+
 # TLDR
 
 **Attach** to Java process
@@ -61,6 +65,11 @@ Features include method tracing, class decompilation, monitoring metrics, and OG
 
 **monitor** _class_ _method_
 > Monitor method stats
+
+# CONFIGURATION
+
+**~/.arthas/arthas.properties**
+> Default configuration for telnet port, HTTP port, target IP, and tunnel server settings.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Provision and manage SSL/TLS certificates
+
 # TLDR
 
 **Request** a new SSL/TLS certificate

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Search bzip2 compressed files for patterns
+
 # TLDR
 
 **Search** in compressed file

@@ -1,3 +1,7 @@
+# TAGLINE
+
+combine 32-bit and 64-bit EFI binaries
+
 # TLDR
 
 **Glue EFI binaries**
@@ -30,9 +34,7 @@
 
 **grub-glue-efi** combines 32-bit and 64-bit EFI binaries into a single fat binary. This enables booting on systems with either architecture.
 
-The tool creates universal EFI binaries for GRUB bootloaders. This is useful for removable media that must boot on diverse hardware.
-
-grub-glue-efi creates universal EFI binaries.
+The tool creates universal EFI binaries for GRUB bootloaders, which is useful for removable media that must boot on diverse hardware.
 
 # CAVEATS
 

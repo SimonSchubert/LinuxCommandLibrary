@@ -1,3 +1,7 @@
+# TAGLINE
+
+resume printer job processing
+
 # TLDR
 
 **Enable a printer**

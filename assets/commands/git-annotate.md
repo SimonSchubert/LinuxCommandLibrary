@@ -1,3 +1,7 @@
+# TAGLINE
+
+Show line-by-line authorship and revision information for a file
+
 # TLDR
 
 **Show line-by-line authorship**
@@ -39,7 +43,13 @@
 
 # DESCRIPTION
 
-**git annotate** shows what revision and author last modified each line of a file. Similar to git blame but with different default output format. Useful for tracking down when changes were introduced.
+**git annotate** displays line-by-line authorship information for a file, showing which commit and author last modified each line. It's functionally equivalent to **git blame** but uses a slightly different default output format that emphasizes revision information over authorship.
+
+For each line in the file, the command displays the abbreviated commit hash, author name, timestamp, line number, and the actual line content. This makes it invaluable for understanding the history of changes, identifying when bugs were introduced, or determining who to ask about specific code sections.
+
+The command supports detecting moved and copied code across files using the **-M** and **-C** options, following code even when it's been refactored or relocated. The **--porcelain** format provides machine-readable output suitable for parsing by scripts or tools.
+
+While **git blame** is more commonly used and has become the de facto standard, **git annotate** remains available as an alias with historically different formatting preferences.
 
 # SEE ALSO
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+curl frontend with httpie-style syntax
+
 # TLDR
 
 Send a **GET** request

@@ -1,3 +1,7 @@
+# TAGLINE
+
+FUSE filesystem mount manager
+
 # TLDR
 
 **Unmount FUSE filesystem**
@@ -49,6 +53,11 @@ The tool enables non-root users to mount and unmount filesystems, subject to pro
 
 **-h**
 > Display help.
+
+# CONFIGURATION
+
+**/etc/fuse.conf**
+> Controls system-wide FUSE settings including user_allow_other and mount_max.
 
 # CAVEATS
 

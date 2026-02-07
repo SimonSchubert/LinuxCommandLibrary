@@ -1,3 +1,7 @@
+# TAGLINE
+
+convert font files to C source code arrays
+
 # TLDR
 
 **Convert font to** C array

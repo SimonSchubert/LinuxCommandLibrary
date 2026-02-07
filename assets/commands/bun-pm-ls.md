@@ -1,3 +1,7 @@
+# TAGLINE
+
+List installed packages
+
 # TLDR
 
 **List installed packages**
@@ -19,7 +23,9 @@
 
 # DESCRIPTION
 
-**bun pm ls** lists packages installed in the current project. This is equivalent to **bun list**.
+**bun pm ls** lists packages installed in the current project. By default it shows top-level dependencies. Use **--all** to display the full dependency tree including transitive dependencies.
+
+This command is equivalent to **bun list**.
 
 # SEE ALSO
 

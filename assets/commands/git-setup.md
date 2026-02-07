@@ -1,3 +1,7 @@
+# TAGLINE
+
+Initialize a repo and commit all existing files
+
 # TLDR
 
 **Create new repo with files**
@@ -22,11 +26,9 @@ _DIRECTORY_
 
 # DESCRIPTION
 
-**git setup** initializes a new repository and makes an initial commit with all existing files. It combines git init, git add, and git commit into one command.
+**git setup** initializes a new repository and makes an initial commit with all existing files. Part of git-extras, it combines `git init`, `git add`, and `git commit` into a single command.
 
-The command is useful for quickly turning an existing directory of files into a git repository with an initial snapshot. It creates a clean starting point.
-
-git setup provides quick repository initialization.
+This is useful for quickly turning an existing directory of files into a Git repository with a clean starting snapshot.
 
 # CAVEATS
 

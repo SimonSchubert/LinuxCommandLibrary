@@ -1,3 +1,7 @@
+# TAGLINE
+
+Arbitrary precision calculator
+
 # TLDR
 
 **Calculate** expression

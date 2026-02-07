@@ -1,3 +1,7 @@
+# TAGLINE
+
+POSIX shell builtin for option parsing
+
 # TLDR
 
 **Basic option parsing** in a script

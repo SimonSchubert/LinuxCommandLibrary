@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display help for Alire package manager commands.
+
 # TLDR
 
 **Display help** for a specific alr command

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage CIFS mount credentials in the kernel keyring
+
 # TLDR
 
 **Add credentials for a CIFS server**

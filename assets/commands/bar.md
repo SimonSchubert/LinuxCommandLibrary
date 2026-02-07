@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display progress bars for data transfers.
+
 # TLDR
 
 **Copy a file with a progress bar**

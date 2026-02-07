@@ -1,3 +1,7 @@
+# TAGLINE
+
+Groff PostScript output driver
+
 # TLDR
 
 **Convert groff to PostScript**
@@ -48,11 +52,9 @@ _FILE_
 
 # DESCRIPTION
 
-**grops** is a groff output driver that produces PostScript. It's the primary driver for high-quality printed output from groff.
+**grops** is a groff output driver that produces PostScript. It is the primary driver for high-quality printed output from groff, generating Level 2 PostScript with support for color, graphics, and embedded fonts.
 
-The driver generates Level 2 PostScript with support for color, graphics, and embedded fonts. Output can be printed directly or converted to PDF.
-
-grops generates PostScript output from groff.
+Output can be printed directly or converted to PDF with tools like ps2pdf.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+SELinux boolean state query tool
+
 # TLDR
 
 Show the **current setting** of a boolean

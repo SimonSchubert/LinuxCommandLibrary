@@ -1,3 +1,7 @@
+# TAGLINE
+
+next-generation Android resource compiler and packager
+
 # TLDR
 
 **Compile a single resource file**

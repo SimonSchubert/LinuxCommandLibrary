@@ -1,3 +1,7 @@
+# TAGLINE
+
+Execute a command within an Apptainer container.
+
 # TLDR
 
 **Execute a command** inside a container
@@ -95,6 +99,11 @@ The container can be specified as a local SIF file, a library URI (library://), 
 By default, Apptainer mounts the current directory, home directory, and standard system paths into the container. Additional paths can be bound using **--bind**. For HPC workloads, the **--nv** or **--rocm** flags enable GPU passthrough.
 
 The command inherits the host's environment by default. Use **--cleanenv** for reproducibility or **--contain** for isolation. Exit status reflects the executed command's return code.
+
+# CONFIGURATION
+
+**/etc/apptainer/apptainer.conf**
+> Main configuration file controlling default bind paths, security options, GPU support, and namespace settings.
 
 # CAVEATS
 

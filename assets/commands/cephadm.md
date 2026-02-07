@@ -1,3 +1,7 @@
+# TAGLINE
+
+container-based Ceph cluster deployment
+
 # TLDR
 
 **Bootstrap** a new Ceph cluster
@@ -30,9 +34,11 @@ Enter a **shell** inside the Ceph container
 
 # DESCRIPTION
 
-**cephadm** deploys and manages Ceph clusters using containers (Docker or Podman). It is the modern orchestration tool for Ceph, replacing older deployment methods like ceph-deploy.
+**cephadm** deploys and manages Ceph distributed storage clusters using containers (Podman preferred, Docker supported). It is the modern orchestration tool for Ceph, replacing older deployment methods like ceph-deploy and ceph-ansible.
 
-The tool handles container lifecycle, service placement, and cluster bootstrapping in a declarative manner.
+The tool handles the complete cluster lifecycle: bootstrapping a new cluster on a single node, adding hosts, deploying daemons (monitors, OSDs, managers, gateways), and upgrading the cluster. Each Ceph daemon runs in its own container, providing isolation and simplified upgrades.
+
+The `bootstrap` command creates an initial single-node cluster with a monitor and manager, generates admin credentials, and sets up the orchestrator for subsequent operations. The `shell` command provides an interactive environment inside a Ceph container with all management tools available.
 
 # SUBCOMMANDS
 

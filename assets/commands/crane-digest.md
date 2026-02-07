@@ -1,3 +1,7 @@
+# TAGLINE
+
+retrieve image content digest
+
 # TLDR
 
 **Get the digest** of an image

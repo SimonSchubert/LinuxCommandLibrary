@@ -1,3 +1,7 @@
+# TAGLINE
+
+Presentation application from Calligra suite
+
 # TLDR
 
 **Launch Calligra Stage**

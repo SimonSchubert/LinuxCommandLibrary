@@ -1,3 +1,7 @@
+# TAGLINE
+
+Install packages from configured repositories.
+
 # TLDR
 
 **Install** a package or update it to the latest version
@@ -46,6 +50,17 @@ If the specified package is already installed, the command will upgrade it to th
 
 **-d, --download-only**
 > Download packages but do not install them
+
+# CONFIGURATION
+
+**/etc/apt/sources.list**
+> Package source repositories.
+
+**/etc/apt/apt.conf**
+> Main APT configuration file.
+
+**/etc/apt/apt.conf.d/**
+> Directory for drop-in configuration fragments.
 
 # CAVEATS
 

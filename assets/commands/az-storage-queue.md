@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Azure Queue Storage and messages
+
 # TLDR
 
 **Create a queue**

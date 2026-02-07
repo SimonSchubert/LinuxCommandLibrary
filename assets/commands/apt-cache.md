@@ -1,3 +1,7 @@
+# TAGLINE
+
+Query the APT package cache
+
 # TLDR
 
 **Search** for a package in your current sources
@@ -26,7 +30,9 @@ Show packages that **depend on** a particular package
 
 # DESCRIPTION
 
-**apt-cache** is a query tool for the APT package cache. It performs a variety of operations on APT's package cache and can search for packages, show package information, and display dependency relationships.
+**apt-cache** queries the local APT package cache to search for packages, display detailed package information, and analyze dependency relationships. It reads the package index files downloaded by **apt update** and provides fast, offline access to package metadata without contacting remote repositories.
+
+Common operations include searching for packages by name or description, inspecting version and dependency details, checking installation policies, and listing reverse dependencies. The output is suitable for scripting and can help diagnose dependency conflicts or determine which repository provides a given package.
 
 # PARAMETERS
 
@@ -62,6 +68,17 @@ Show packages that **depend on** a particular package
 
 **-n, --names-only**
 > Only search package names, not descriptions
+
+# CONFIGURATION
+
+**/etc/apt/sources.list**
+> Main file listing configured package repositories.
+
+**/etc/apt/sources.list.d/**
+> Directory for additional repository source files.
+
+**/etc/apt/preferences.d/**
+> Directory for package pinning and priority preferences.
 
 # CAVEATS
 

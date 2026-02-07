@@ -1,3 +1,7 @@
+# TAGLINE
+
+Hardware-accelerated screen recorder
+
 # TLDR
 
 Select a source using a **desktop portal** and record it
@@ -66,11 +70,9 @@ Run gpu-screen-recorder in the **background**
 
 # DESCRIPTION
 
-**gpu-screen-recorder** is a hardware-accelerated screen recorder that uses GPU encoding (NVENC, VAAPI, or AMF) for minimal CPU impact. It's designed for recording gameplay and screen content with low performance overhead.
+**gpu-screen-recorder** is a hardware-accelerated screen recorder that uses GPU encoding (NVENC, VAAPI, or AMF) for minimal CPU impact. It is designed for recording gameplay and screen content with low performance overhead.
 
-Key features include a replay buffer (recording the last N seconds like instant replay), support for both X11 and Wayland via portals, and efficient hardware encoding. The replay buffer can be triggered to save via SIGUSR1 signal.
-
-The tool supports multiple monitors, specific window capture, and can record system audio and microphone simultaneously.
+Key features include a replay buffer (recording the last N seconds like instant replay), support for both X11 and Wayland via portals, and efficient hardware encoding. The replay buffer can be triggered to save via SIGUSR1 signal. The tool supports multiple monitors, specific window capture, and simultaneous system audio and microphone recording.
 
 # CAVEATS
 

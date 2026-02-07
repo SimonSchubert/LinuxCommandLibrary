@@ -1,3 +1,7 @@
+# TAGLINE
+
+Upload local commits to remote
+
 # TLDR
 
 **Push to remote**
@@ -58,11 +62,9 @@ _REFSPEC_
 
 # DESCRIPTION
 
-**git push** uploads local commits to a remote repository. It updates remote refs with local refs, transferring objects needed to complete the refs.
+**git push** uploads local commits to a remote repository, updating remote refs with local refs and transferring the objects needed to complete them. This is how local work becomes shared with collaborators.
 
-The command is how local work becomes shared with others. Force push options handle diverged histories, though they should be used carefully. Upstream tracking simplifies future pushes.
-
-git push shares local commits with remote repositories.
+The `--force-with-lease` option provides a safer alternative to `--force` by checking that the remote hasn't been updated since your last fetch before overwriting. The `-u` flag sets upstream tracking, simplifying future push and pull commands.
 
 # CAVEATS
 

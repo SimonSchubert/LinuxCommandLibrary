@@ -1,3 +1,7 @@
+# TAGLINE
+
+retrieve configuration or state from gNMI devices
+
 # TLDR
 
 **Get interface config**
@@ -41,9 +45,7 @@
 
 **gnmic get** retrieves configuration or state data from gNMI-enabled devices. It fetches data at specified YANG paths and returns it in the requested encoding.
 
-The command supports multiple paths, various encodings, and data type filtering. It's used for configuration retrieval and state inspection.
-
-gnmic get reads data from network devices via gNMI.
+The command supports multiple paths, various encodings, and data type filtering. It is used for configuration retrieval and state inspection in network automation workflows.
 
 # CAVEATS
 

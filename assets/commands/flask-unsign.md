@@ -1,3 +1,7 @@
+# TAGLINE
+
+Flask session cookie manipulation and cracking
+
 # TLDR
 
 **Decode a Flask session cookie**
@@ -48,7 +52,11 @@
 
 # DESCRIPTION
 
-**flask-unsign** is a tool for decoding, brute-forcing, and crafting Flask session cookies. Used in security testing to analyze Flask application sessions.
+**Flask-unsign** is a security testing tool for analyzing and manipulating Flask session cookies. Flask stores session data in cryptographically signed cookies, and this tool can decode the contents, attempt to recover the secret key through brute-force attacks, and craft custom signed cookies.
+
+The tool is primarily used in web application security assessments to test Flask applications for weak secret keys. If the secret key can be recovered, attackers could forge arbitrary session data, potentially leading to privilege escalation or authentication bypass vulnerabilities.
+
+Flask-unsign supports multithreaded brute-forcing, custom wordlists, and both encoding and decoding operations. It can work with sessions even when the signature verification fails, allowing inspection of tampered or expired cookies.
 
 # SEE ALSO
 

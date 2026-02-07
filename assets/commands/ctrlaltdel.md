@@ -1,3 +1,7 @@
+# TAGLINE
+
+control Ctrl+Alt+Del key combination behavior
+
 # TLDR
 
 **Get** current setting

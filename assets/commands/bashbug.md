@@ -1,3 +1,7 @@
+# TAGLINE
+
+Report bugs in bash to the maintainers
+
 # TLDR
 
 **Report** bash bug

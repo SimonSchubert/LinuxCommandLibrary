@@ -1,3 +1,7 @@
+# TAGLINE
+
+Query JSON data using JSONPath expressions
+
 # TLDR
 
 **Query** JSON using JSONPath

@@ -1,3 +1,7 @@
+# TAGLINE
+
+distributed PyTorch training launcher
+
 # TLDR
 
 **Launch** a training script with default configuration
@@ -66,6 +70,10 @@ The tool abstracts away the boilerplate needed for mixed precision training, gra
 
 **env**
 > Print environment information
+
+# CONFIGURATION
+
+Running **accelerate config** creates a YAML configuration file at **~/.cache/huggingface/accelerate/default_config.yaml**. This file stores settings for compute environment type, distributed training backend, number of processes, mixed precision mode, and DeepSpeed/FSDP options. The configuration can also be specified per-project by placing an **accelerate_config.yaml** in the project directory or by passing **--config_file** to the launch command.
 
 # CAVEATS
 

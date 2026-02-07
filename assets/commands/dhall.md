@@ -1,3 +1,7 @@
+# TAGLINE
+
+programmable configuration language with guaranteed termination
+
 # TLDR
 
 **Evaluate a Dhall expression**

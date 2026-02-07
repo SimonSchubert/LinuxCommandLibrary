@@ -1,3 +1,7 @@
+# TAGLINE
+
+squash container layers into one
+
 # TLDR
 
 **Flatten image layers**

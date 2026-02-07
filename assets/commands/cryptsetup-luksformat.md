@@ -1,3 +1,7 @@
+# TAGLINE
+
+initialize LUKS encrypted partition
+
 # TLDR
 
 Initialize LUKS volume with **passphrase**

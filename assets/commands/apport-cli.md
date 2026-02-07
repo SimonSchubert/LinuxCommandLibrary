@@ -1,3 +1,7 @@
+# TAGLINE
+
+Command-line interface for crash reporting and bug filing.
+
 # TLDR
 
 **Process pending crash reports** interactively

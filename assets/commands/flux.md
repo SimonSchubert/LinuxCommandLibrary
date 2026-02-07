@@ -1,3 +1,7 @@
+# TAGLINE
+
+GitOps continuous delivery tool for Kubernetes
+
 # TLDR
 
 **Bootstrap Flux** on a Kubernetes cluster with GitHub

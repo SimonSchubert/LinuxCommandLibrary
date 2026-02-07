@@ -1,3 +1,7 @@
+# TAGLINE
+
+Loop-avoiding distance-vector routing protocol daemon.
+
 # TLDR
 
 **Start** Babel routing daemon
@@ -63,12 +67,8 @@ The daemon implements the Babel routing protocol (RFC 8966) and is suitable for 
 
 # CONFIGURATION
 
-Example /etc/babeld.conf:
-```
-interface eth0
-interface wlan0 rxcost 256
-redistribute local deny
-```
+**/etc/babeld.conf**
+> Main configuration file for interface settings, filters, and redistribution rules.
 
 # CAVEATS
 

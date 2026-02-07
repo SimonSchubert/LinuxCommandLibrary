@@ -1,3 +1,7 @@
+# TAGLINE
+
+cross-platform text expansion tool
+
 # TLDR
 
 **Start Espanso**
@@ -68,6 +72,14 @@ _COMMAND_
 Configuration files define matches between triggers and replacements. Replacements can include static text, dynamic content (dates, clipboard), or scripts. Packages add pre-configured expansions.
 
 Espanso works across all applications, handling common typing patterns, boilerplate text, and frequently used phrases.
+
+# CONFIGURATION
+
+**~/.config/espanso/config/default.yml**
+> Main configuration file controlling behavior like toggle key, backend preferences, and global settings.
+
+**~/.config/espanso/match/base.yml**
+> Default match file defining triggers and replacements. Additional match files can be created to organize expansions.
 
 # CAVEATS
 

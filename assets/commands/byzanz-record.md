@@ -1,3 +1,7 @@
+# TAGLINE
+
+Record screen sessions as animated GIFs or videos
+
 # TLDR
 
 **Record** the screen to a file (default 10 seconds)

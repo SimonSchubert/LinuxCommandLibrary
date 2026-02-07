@@ -1,3 +1,7 @@
+# TAGLINE
+
+Parse and display ASN.1 encoded data
+
 # TLDR
 
 **Parse** ASN.1 data

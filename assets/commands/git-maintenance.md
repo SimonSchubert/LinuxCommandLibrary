@@ -1,3 +1,7 @@
+# TAGLINE
+
+Automated repository optimization
+
 # TLDR
 
 **Start background maintenance**
@@ -52,11 +56,20 @@
 
 # DESCRIPTION
 
-**git maintenance** manages repository maintenance tasks. It handles garbage collection, commit graph updates, and other optimizations either on-demand or through scheduled background jobs.
+**git maintenance** manages repository maintenance tasks automatically. It handles garbage collection, commit graph updates, prefetch, and incremental repack either on-demand or through scheduled background jobs.
 
-Background maintenance improves performance by running tasks automatically. Tasks include gc, commit-graph, prefetch, and incremental-repack. Configuration controls which tasks run.
+Background maintenance improves repository performance over time without manual intervention. The `start` subcommand registers the repository and sets up a system scheduler to run tasks periodically. Configuration controls which tasks run and how frequently.
 
-git maintenance keeps repositories optimized automatically.
+# CONFIGURATION
+
+**~/.gitconfig**
+> Global maintenance configuration for scheduled tasks.
+
+```
+[maintenance]
+    auto = true
+    strategy = incremental
+```
 
 # CAVEATS
 

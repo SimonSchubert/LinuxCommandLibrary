@@ -1,3 +1,7 @@
+# TAGLINE
+
+Delete container images from a remote library.
+
 # TLDR
 
 **Delete an image** from the Container Library

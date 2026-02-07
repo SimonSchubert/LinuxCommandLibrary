@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert deskjet brush files to PBM images
+
 # TLDR
 
 **Convert a deskjet brush file** to PBM

@@ -1,3 +1,7 @@
+# TAGLINE
+
+filter platforms from manifest index
+
 # TLDR
 
 **Filter platforms** from an index

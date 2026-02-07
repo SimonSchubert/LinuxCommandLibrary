@@ -1,3 +1,7 @@
+# TAGLINE
+
+Deploy and manage applications on CapRover
+
 # TLDR
 
 **Login to CapRover machine**

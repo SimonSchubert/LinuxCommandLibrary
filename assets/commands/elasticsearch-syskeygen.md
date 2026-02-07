@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate deprecated Elasticsearch system encryption key
+
 # TLDR
 
 **Generate system key**

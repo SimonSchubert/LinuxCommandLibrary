@@ -1,3 +1,7 @@
+# TAGLINE
+
+Restore file timestamps from commit history
+
 # TLDR
 
 **Restore file timestamps**
@@ -10,11 +14,9 @@
 
 # DESCRIPTION
 
-**git utimes** updates file modification times to match their last commit time. Git doesn't preserve timestamps, so this command restores them from commit history.
+**git utimes** updates file modification times to match their last commit time. Git does not preserve file timestamps during checkout, so this command restores them from commit history.
 
-The command is useful for build systems that rely on timestamps or when file dates matter. It sets each file's mtime to its last modification commit.
-
-git utimes restores commit-based file timestamps.
+The command is useful for build systems that rely on timestamps or when file dates matter for deployment or archival purposes.
 
 # CAVEATS
 

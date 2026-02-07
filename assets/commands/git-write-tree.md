@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create a tree object from the current index
+
 # TLDR
 
 **Write tree from index**
@@ -26,9 +30,8 @@
 
 # DESCRIPTION
 
-**git write-tree** creates a tree object from the current index. A low-level command used internally by git commit.
+**git write-tree** creates a tree object from the current index contents. It is a low-level plumbing command used internally by `git commit` to snapshot the staged file structure into a tree object in the Git object database.
 
 # SEE ALSO
 
 [git-commit-tree](/man/git-commit-tree)(1), [git-read-tree](/man/git-read-tree)(1)
-

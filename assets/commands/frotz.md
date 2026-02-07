@@ -1,3 +1,7 @@
+# TAGLINE
+
+Z-machine interactive fiction interpreter
+
 # TLDR
 
 **Play Z-machine game**

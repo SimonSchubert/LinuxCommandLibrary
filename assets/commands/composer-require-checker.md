@@ -1,3 +1,7 @@
+# TAGLINE
+
+verify all PHP dependencies are declared
+
 # TLDR
 
 **Check for missing composer requirements**
@@ -26,9 +30,11 @@
 
 # DESCRIPTION
 
-**composer-require-checker** analyzes PHP code to detect classes, functions, and constants used but not declared in composer.json requirements. It helps ensure all dependencies are properly declared.
+**composer-require-checker** is a static analysis tool that scans PHP codebases to identify symbols (classes, functions, constants) that are used in the code but not explicitly declared as dependencies in composer.json. It helps prevent the common problem of transitive dependencies where Package A requires Package B, and your code uses Package B without explicitly declaring it, creating a fragile dependency graph.
 
-This prevents "works on my machine" issues where implicit dependencies exist through other packages.
+The tool performs symbol table analysis across the entire codebase, cross-referencing discovered symbols against the declared require and require-dev sections in composer.json. When undeclared dependencies are found, it reports which symbols are missing and from which packages they originate, allowing developers to add proper dependency declarations.
+
+This is particularly important for library maintainers who need to ensure their packages can be installed independently without relying on implicit dependencies. It prevents "works on my machine" scenarios where a dependency happens to be available through another package locally but fails in different environments or when dependency versions change.
 
 # CAVEATS
 

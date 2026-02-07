@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create a new Cargo package
+
 # TLDR
 
 **Create new binary project**
@@ -26,7 +30,9 @@
 
 # DESCRIPTION
 
-**cargo new** creates a new Cargo package in a new directory. Generates Cargo.toml manifest and src/ directory with a "Hello, World!" starter program. Initializes a git repository by default.
+**cargo new** creates a new Cargo package in a new directory. It generates a Cargo.toml manifest file, a src/ directory with either a "Hello, World!" binary (`main.rs`) or a library stub (`lib.rs`), and initializes a git repository by default.
+
+The generated Cargo.toml includes the package name, version, and Rust edition. The command respects Cargo configuration for default settings such as author name and email, which are read from git config or environment variables. Custom templates are not supported; use `cargo-generate` for template-based project creation.
 
 # PARAMETERS
 

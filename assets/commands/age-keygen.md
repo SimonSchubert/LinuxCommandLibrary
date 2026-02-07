@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate encryption key pairs for age
+
 # TLDR
 
 **Generate** a new key pair

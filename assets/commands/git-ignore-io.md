@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate gitignore from templates
+
 # TLDR
 
 **Generate gitignore for language**
@@ -40,11 +44,9 @@ _TEMPLATES_
 
 # DESCRIPTION
 
-**git ignore-io** generates .gitignore content from gitignore.io templates. It fetches curated ignore patterns for languages, frameworks, IDEs, and operating systems.
+**git ignore-io** generates .gitignore content from gitignore.io templates. It fetches curated ignore patterns for languages, frameworks, IDEs, and operating systems via the gitignore.io API.
 
-The command accesses the gitignore.io API to retrieve and combine templates. Multiple templates can be combined in a single request for comprehensive coverage.
-
-git ignore-io provides easy access to the gitignore.io template database.
+Multiple templates can be combined in a single request for comprehensive coverage. Part of the git-extras suite, it provides quick command-line access to the extensive gitignore.io template database.
 
 # CAVEATS
 

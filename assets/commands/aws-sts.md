@@ -1,3 +1,7 @@
+# TAGLINE
+
+Request temporary security credentials and verify identity.
+
 # TLDR
 
 **Get the identity** of the current caller

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage continuous delivery pipelines on AWS.
+
 # TLDR
 
 **Start a pipeline execution**

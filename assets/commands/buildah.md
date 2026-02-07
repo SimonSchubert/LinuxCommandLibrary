@@ -1,3 +1,7 @@
+# TAGLINE
+
+Build OCI and Docker container images without a daemon
+
 # TLDR
 
 **Build** container from Dockerfile
@@ -28,7 +32,7 @@
 
 **buildah** is a tool for building OCI and Docker container images without requiring a daemon. It provides fine-grained control over image layers and can build from Dockerfiles or through direct manipulation of containers.
 
-The tool is part of the Podman ecosystem and emphasizes security and scriptability.
+Unlike Docker, buildah does not require a background daemon process, making it well-suited for CI/CD pipelines and restricted environments. It supports rootless builds, where the entire build process runs without elevated privileges. As part of the Podman ecosystem, it shares storage and image formats with podman and skopeo, allowing seamless interoperation between the tools.
 
 # PARAMETERS
 
@@ -96,6 +100,17 @@ buildah commit $ctr myapp:latest
 - OCI image format
 - Multiple storage backends
 - Script-friendly
+
+# CONFIGURATION
+
+**/etc/containers/registries.conf**
+> Registry configuration including mirrors, insecure registries, and search order.
+
+**/etc/containers/storage.conf**
+> Storage driver and location settings for images and containers.
+
+**/etc/containers/policy.json**
+> Image signature verification policy.
 
 # CAVEATS
 

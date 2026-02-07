@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage ARP packet filtering rules.
+
 # TLDR
 
 **List** ARP rules

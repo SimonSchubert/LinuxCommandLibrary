@@ -1,3 +1,7 @@
+# TAGLINE
+
+Preview merge without modifying tree
+
 # TLDR
 
 **Show merge result**
@@ -34,11 +38,9 @@ _BRANCH2_
 
 # DESCRIPTION
 
-**git merge-tree** performs a three-way merge without touching the index or working tree. It shows what merge would produce, useful for previewing merges or scripted merge analysis.
+**git merge-tree** performs a three-way merge without touching the index or working tree. It shows what a merge would produce, making it useful for previewing merges or performing scripted merge analysis.
 
-The traditional mode requires specifying the base commit. Modern mode (--write-tree) automatically finds the merge base. It reports conflicts without actually merging.
-
-git merge-tree enables merge preview and scripted merge testing.
+The traditional mode requires specifying the base commit explicitly. Modern mode (`--write-tree`, added in Git 2.38) automatically finds the merge base and reports conflicts without actually merging, making it ideal for CI pipelines and automation scripts.
 
 # CAVEATS
 

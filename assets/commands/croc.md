@@ -1,3 +1,7 @@
+# TAGLINE
+
+secure file transfer tool
+
 # TLDR
 
 **Send file**
@@ -35,9 +39,11 @@
 
 # DESCRIPTION
 
-**croc** is a tool for securely transferring files between computers. It uses a relay server and PAKE (Password Authenticated Key Exchange) for end-to-end encryption. Works across different networks without port forwarding.
+**croc** is a tool for securely transferring files between computers. It uses a relay server and PAKE (Password Authenticated Key Exchange) for end-to-end encryption, ensuring that transferred files cannot be read by the relay server or intercepted on the network.
 
-Features include resumable transfers, multiple files, cross-platform support, and optional self-hosted relay.
+The tool works across different networks without requiring port forwarding or firewall configuration. Users share a short code phrase, both parties connect to a relay server, and files are transferred through an encrypted channel. Local network transfers automatically use direct connections for faster speeds when possible.
+
+Features include resumable transfers (if interrupted, transfers can continue from where they left off), support for sending multiple files and entire directories, cross-platform compatibility (Linux, macOS, Windows), and the option to run your own relay server for complete control.
 
 # COMMANDS
 

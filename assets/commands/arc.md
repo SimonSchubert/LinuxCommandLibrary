@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create and extract ARC format archives
+
 # TLDR
 
 **Create** archive
@@ -22,9 +26,9 @@
 
 # DESCRIPTION
 
-**arc** creates and manipulates archives in the old ARC format, popular in the MS-DOS era. It provides compatibility with legacy archive files from the 1980s.
+**arc** creates and manipulates archives in the ARC format, which was widely popular in the MS-DOS era during the 1980s. It supports creating new archives, extracting files, listing contents, and testing archive integrity.
 
-The tool supports various compression methods used in historical ARC files.
+The tool handles various compression methods used in historical ARC files, including Squeeze, Crunch, and LZW variants. It is primarily used today for accessing legacy archive files rather than creating new ones, as modern formats like zip and tar.gz offer significantly better compression and features.
 
 # PARAMETERS
 

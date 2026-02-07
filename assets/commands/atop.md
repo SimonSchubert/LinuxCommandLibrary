@@ -1,3 +1,7 @@
+# TAGLINE
+
+Advanced system and process activity monitor
+
 # TLDR
 
 **Start** atop
@@ -74,6 +78,14 @@ Display the number of **processes for each user**
 **u**: user statistics
 **p**: process activity
 **?**: help
+
+# CONFIGURATION
+
+**/etc/atoprc**
+> System-wide configuration for default display options and intervals.
+
+**~/.atoprc**
+> Per-user configuration overriding system defaults.
 
 # CAVEATS
 

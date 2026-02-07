@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line interface for ChatGPT
+
 # TLDR
 
 **Start interactive chat**
@@ -71,6 +75,11 @@
 The tool handles conversation context, allowing multi-turn dialogues in interactive mode. Input can come from arguments, stdin (pipes), or interactive prompts. Responses are rendered with markdown formatting by default for better readability.
 
 Integration with shell pipelines enables powerful workflows: analyzing files, transforming text, generating code, and automating content creation. The streaming option shows responses as they're generated.
+
+# CONFIGURATION
+
+**OPENAI_API_KEY**
+> Environment variable for the OpenAI API key, used when --api-key is not provided.
 
 # CAVEATS
 

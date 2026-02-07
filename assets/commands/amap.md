@@ -1,3 +1,7 @@
+# TAGLINE
+
+Identify application protocols on network ports
+
 # TLDR
 
 **Identify** service on a port
@@ -64,6 +68,14 @@ The tool compares responses against a signature database to fingerprint applicat
 
 **-o** _file_
 > Write results to file
+
+# CONFIGURATION
+
+**/etc/amap/appdefs.trig**
+> Trigger definitions file containing packets sent to identify services.
+
+**/etc/amap/appdefs.resp**
+> Response signatures file used to match and identify application protocols.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Show what revision and author last modified each line
+
 # TLDR
 
 **Blame a file**
@@ -54,9 +58,9 @@ _FILE_
 
 **git blame** shows what revision and author last modified each line of a file. It annotates each line with commit information, helping identify when and why changes were made.
 
-The command is essential for code archaeology, understanding code history, and finding who to ask about specific code. Options detect moved and copied code to show original authorship.
+The command is essential for code archaeology, understanding code history, and finding who to ask about specific code. Options like **-M** and **-C** detect moved and copied code across files to show original authorship rather than the person who relocated it.
 
-git blame provides line-level history for accountability and understanding.
+Line ranges can be specified with **-L** to focus on specific sections, and **-w** ignores whitespace changes to find meaningful modifications. The output is invaluable for debugging, code review, and understanding the evolution of specific code sections.
 
 # CAVEATS
 

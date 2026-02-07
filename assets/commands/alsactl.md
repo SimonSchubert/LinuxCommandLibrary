@@ -1,3 +1,7 @@
+# TAGLINE
+
+Save and restore ALSA sound card settings.
+
 # TLDR
 
 **Store** current sound card settings
@@ -55,6 +59,11 @@ The tool is typically called automatically during system startup and shutdown to
 
 **-F**
 > Force restore even if card is busy
+
+# CONFIGURATION
+
+**/var/lib/alsa/asound.state**
+> Default state file where mixer settings and volume levels are saved and restored from. Can also be located at /etc/asound.state on some distributions.
 
 # CAVEATS
 

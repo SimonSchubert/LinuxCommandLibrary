@@ -1,3 +1,7 @@
+# TAGLINE
+
+kernel random number generator interface
+
 # TLDR
 
 **Get random bytes (shell)**

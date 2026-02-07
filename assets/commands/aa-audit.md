@@ -1,3 +1,7 @@
+# TAGLINE
+
+Set AppArmor profiles to audit mode
+
 # TLDR
 
 Set a profile to **audit mode**

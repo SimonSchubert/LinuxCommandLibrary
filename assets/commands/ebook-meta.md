@@ -1,3 +1,7 @@
+# TAGLINE
+
+ebook metadata editor
+
 # TLDR
 
 **Show metadata**

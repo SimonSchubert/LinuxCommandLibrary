@@ -1,3 +1,7 @@
+# TAGLINE
+
+Save a registry API token for authentication
+
 # TLDR
 
 **Login to crates.io**

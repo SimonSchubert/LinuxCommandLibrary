@@ -1,3 +1,7 @@
+# TAGLINE
+
+Reboot a connected Android device
+
 # TLDR
 
 **Reboot** the device normally

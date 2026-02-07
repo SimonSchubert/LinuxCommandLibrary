@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast customizable system information display
+
 # TLDR
 
 **Display system information**
@@ -81,6 +85,11 @@ fastfetch detects and displays OS, kernel, DE/WM, terminal, shell, CPU, GPU, mem
 
 **--version**
 > Display version information.
+
+# CONFIGURATION
+
+**~/.config/fastfetch/config.jsonc**
+> User configuration file for customizing modules, display format, and appearance.
 
 # CAVEATS
 

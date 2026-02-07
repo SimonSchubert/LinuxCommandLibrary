@@ -1,3 +1,7 @@
+# TAGLINE
+
+Share terminal as a web application
+
 # TLDR
 
 **Share terminal as web**
@@ -46,11 +50,14 @@ _COMMAND_
 
 # DESCRIPTION
 
-**gotty** shares terminal as a web application. It runs a command and exposes it through a web browser, enabling remote terminal access.
+**gotty** shares a terminal command as a web application accessible through a browser. It runs a command and exposes it through HTTP, enabling remote terminal access, log viewing, and collaborative debugging.
 
-The tool enables sharing interactive terminals, viewing logs, and collaborative debugging. Authentication and TLS are supported for security.
+Authentication and TLS are supported for secure deployments. The **-w** flag enables browser users to send input to the running command.
 
-gotty provides web-based terminal sharing.
+# CONFIGURATION
+
+**~/.gotty**
+> Configuration file for default settings like port, TLS certificates, and credential options.
 
 # CAVEATS
 

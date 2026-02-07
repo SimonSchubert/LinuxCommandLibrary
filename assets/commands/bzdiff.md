@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compare bzip2 compressed files
+
 # TLDR
 
 **Compare two bzip2 compressed files**

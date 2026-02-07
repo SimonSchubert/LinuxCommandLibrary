@@ -1,3 +1,7 @@
+# TAGLINE
+
+simple media player using ffmpeg libraries
+
 # TLDR
 
 **Play media file**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Command-line client for the APT daemon
+
 # TLDR
 
 **Install** packages via aptd

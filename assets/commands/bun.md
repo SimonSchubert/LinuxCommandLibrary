@@ -1,3 +1,7 @@
+# TAGLINE
+
+All-in-one JavaScript runtime and toolkit
+
 # TLDR
 
 **Run** JavaScript file
@@ -106,6 +110,11 @@ bun build ./src/index.ts --outdir ./dist
 - npm package ecosystem
 - Jest-compatible test runner
 - ESM and CommonJS support
+
+# CONFIGURATION
+
+**bunfig.toml**
+> Project-level and global configuration for Bun. Controls package installation behavior, runtime settings, test runner options, and bundler defaults. Searched in the project root directory, or globally at ~/.bunfig.toml.
 
 # CAVEATS
 

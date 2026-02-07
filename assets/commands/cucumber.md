@@ -1,3 +1,7 @@
+# TAGLINE
+
+behavior-driven development test runner
+
 # TLDR
 
 **Run all features**
@@ -66,6 +70,11 @@ Features describe behavior in Given/When/Then format that both developers and st
 
 **--order** _type_
 > Run order (defined, random).
+
+# CONFIGURATION
+
+**cucumber.yml**
+> Defines reusable profiles with pre-configured options for different test runs.
 
 # CAVEATS
 

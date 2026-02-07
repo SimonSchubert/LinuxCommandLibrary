@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert termcap descriptions to terminfo format
+
 # TLDR
 
 **Convert a termcap file** to terminfo format

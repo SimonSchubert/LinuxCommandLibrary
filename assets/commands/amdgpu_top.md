@@ -1,3 +1,7 @@
+# TAGLINE
+
+Monitor AMD GPU utilization in real time
+
 # TLDR
 
 **Start the TUI** to monitor AMD GPU usage

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interactive directory tree navigator
+
 # TLDR
 
 **Install** the br shell function
@@ -71,9 +75,17 @@ Start in **specific directory**
 **--outcmd PATH**
 > Write command to file for shell integration
 
+# CONFIGURATION
+
+**~/.config/broot/conf.hjson**
+> Main configuration file in Hjson format. Controls key bindings, verbs, skin, and display settings.
+
+**~/.config/broot/conf.toml**
+> Alternative configuration file in TOML format. Used instead of conf.hjson if present.
+
 # CAVEATS
 
-The br shell function is recommended over direct broot invocation for changing directories. Install it with --install and use br instead of broot for full shell integration. Configuration is stored in ~/.config/broot/.
+The br shell function is recommended over direct broot invocation for changing directories. Install it with --install and use br instead of broot for full shell integration.
 
 # HISTORY
 

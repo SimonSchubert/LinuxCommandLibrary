@@ -1,3 +1,7 @@
+# TAGLINE
+
+hardware identification system for Linux
+
 # TLDR
 
 **Run hardware discovery**

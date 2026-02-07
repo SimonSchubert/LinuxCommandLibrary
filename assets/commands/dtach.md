@@ -1,3 +1,7 @@
+# TAGLINE
+
+minimal detachable terminal session manager
+
 # TLDR
 
 **Create new session**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Google Cloud Platform diagnostics tool
+
 # TLDR
 
 **Run lint checks**
@@ -51,7 +55,11 @@
 
 # DESCRIPTION
 
-**gcpdiag** diagnoses Google Cloud Platform issues. Runs automated checks against projects to identify misconfigurations, quota issues, and best practice violations.
+**gcpdiag** is a command-line diagnostics tool for Google Cloud Platform that runs automated checks against projects to identify common issues. It analyzes infrastructure for misconfigurations, quota problems, permission errors, and best practice violations.
+
+The tool executes a curated set of rules organized by service (GKE, Compute Engine, Cloud SQL, etc.). Each rule checks for specific known issues based on Google's internal troubleshooting knowledge. Results indicate whether checks passed, failed, or were skipped, with detailed explanations and remediation guidance.
+
+gcpdiag reduces troubleshooting time by proactively identifying issues before they cause outages. It's particularly useful for validating new deployments and investigating production problems.
 
 # SEE ALSO
 

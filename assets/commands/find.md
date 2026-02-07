@@ -1,3 +1,7 @@
+# TAGLINE
+
+search directory trees for files
+
 # TLDR
 
 **Find files by** name

@@ -1,3 +1,7 @@
+# TAGLINE
+
+firmware RAID metadata discovery and activation
+
 # TLDR
 
 **List all RAID sets**

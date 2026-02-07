@@ -1,3 +1,7 @@
+# TAGLINE
+
+return failure exit status
+
 # TLDR
 
 **Return failure status**

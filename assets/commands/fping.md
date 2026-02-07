@@ -1,3 +1,7 @@
+# TAGLINE
+
+parallel ping utility for multiple hosts
+
 # TLDR
 
 **Ping multiple hosts**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+combine images with blending and compositing operations
+
 # TLDR
 
 **Overlay one image** on top of another

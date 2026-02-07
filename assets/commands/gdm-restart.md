@@ -1,3 +1,7 @@
+# TAGLINE
+
+restart the GNOME Display Manager service
+
 # TLDR
 
 **Restart GNOME Display Manager**
@@ -10,7 +14,9 @@
 
 # DESCRIPTION
 
-**gdm-restart** restarts the GNOME Display Manager. This will log out all graphical sessions and restart the login screen.
+**gdm-restart** restarts the GNOME Display Manager service, terminating all active graphical user sessions and returning to the login screen. This command is useful for applying configuration changes, recovering from display issues, or resetting the graphical environment without a full system reboot.
+
+When executed, all logged-in users will be forcibly logged out, and any unsaved work will be lost. The display manager then reinitializes, presenting a fresh login screen. On modern systems using systemd, this is typically a wrapper for "systemctl restart gdm".
 
 # CAVEATS
 

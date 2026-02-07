@@ -1,3 +1,7 @@
+# TAGLINE
+
+GStreamer plugin and element inspector
+
 # TLDR
 
 **List all available plugins**
@@ -47,9 +51,10 @@
 
 # DESCRIPTION
 
-**gst-inspect-1.0** queries information about GStreamer plugins and elements. It displays element details, pad information, capabilities, properties with types and defaults, and available signals. Without arguments, it lists all available plugins. With an element or plugin name, it shows detailed information about that component.
+**gst-inspect-1.0** queries information about GStreamer plugins and elements. It displays element details, pad information, capabilities, properties with types and defaults, and available signals.
+
+Without arguments, it lists all available plugins. With an element or plugin name, it shows detailed information about that component.
 
 # SEE ALSO
 
 [gst-launch-1.0](/man/gst-launch-1.0)(1), [gst-discoverer-1.0](/man/gst-discoverer-1.0)(1)
-

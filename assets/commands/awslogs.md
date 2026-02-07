@@ -1,3 +1,7 @@
+# TAGLINE
+
+Query and stream CloudWatch log groups from the terminal.
+
 # TLDR
 
 **Stream** CloudWatch logs

@@ -1,3 +1,7 @@
+# TAGLINE
+
+manage Doom Emacs configuration framework
+
 # TLDR
 
 **Install Doom Emacs**
@@ -61,6 +65,17 @@ _COMMAND_
 The sync command is central to Doom workflows, ensuring installed packages match the configuration after changes to init.el or packages.el. It handles package installation, removal, and byte-compilation.
 
 doom doctor helps troubleshoot issues by checking for common problems like missing dependencies, outdated packages, or configuration errors.
+
+# CONFIGURATION
+
+**~/.doom.d/init.el**
+> Core configuration file enabling Doom modules and features.
+
+**~/.doom.d/config.el**
+> User-specific settings, keybindings, and customizations.
+
+**~/.doom.d/packages.el**
+> Package declarations for additional Emacs packages beyond Doom's defaults.
 
 # CAVEATS
 

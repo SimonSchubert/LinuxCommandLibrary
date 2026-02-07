@@ -1,3 +1,7 @@
+# TAGLINE
+
+Go version manager
+
 # TLDR
 
 **List available Go versions**
@@ -65,9 +69,21 @@
 
 # DESCRIPTION
 
-**goenv** is a Go version manager inspired by rbenv and pyenv. It allows installing multiple Go versions side by side and switching between them per-project or globally. Version selection is managed through **.go-version** files and shims that intercept Go commands.
+**goenv** is a Go version manager inspired by rbenv and pyenv. It allows installing multiple Go versions side by side and switching between them per-project or globally.
+
+Version selection is managed through **.go-version** files and shims that intercept Go commands, routing them to the appropriate version.
+
+# CONFIGURATION
+
+**~/.goenv/version**
+> Global Go version setting.
+
+**.go-version**
+> Per-directory Go version override file.
+
+**GOENV_ROOT**
+> Environment variable specifying the goenv installation directory (default ~/.goenv).
 
 # SEE ALSO
 
 [go](/man/go)(1), [pyenv](/man/pyenv)(1), [rbenv](/man/rbenv)(1)
-

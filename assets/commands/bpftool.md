@@ -1,3 +1,7 @@
+# TAGLINE
+
+Inspect and manage eBPF programs and maps.
+
 # TLDR
 
 List information about loaded **eBPF programs**

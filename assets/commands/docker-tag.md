@@ -1,3 +1,7 @@
+# TAGLINE
+
+create tags for Docker images
+
 # TLDR
 
 **Tag an image**

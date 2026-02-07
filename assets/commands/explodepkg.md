@@ -1,3 +1,7 @@
+# TAGLINE
+
+extract Slackware package contents without installing
+
 # TLDR
 
 **Extract** a package to current directory
@@ -16,7 +20,9 @@ Extract **multiple** packages
 
 **explodepkg** extracts the contents of Slackware packages to the current directory. Unlike installpkg, it does not install the package to the system or run installation scripts.
 
-Useful for inspecting package contents before installation.
+Slackware packages are compressed tarballs (.tgz or .txz) with a specific structure. This tool unpacks them for inspection, extracting files to see package contents, documentation, or to create modified packages.
+
+Useful for inspecting package contents before installation, debugging package issues, or extracting specific files without full installation. Part of Slackware's pkgtools suite.
 
 # PARAMETERS
 

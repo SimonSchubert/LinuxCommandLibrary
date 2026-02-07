@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compare two commit ranges
+
 # TLDR
 
 **Compare two revision ranges**
@@ -33,9 +37,10 @@
 
 # DESCRIPTION
 
-**git range-diff** compares two commit ranges. Shows how a series of patches changed between versions, useful for reviewing rebased or amended commits.
+**git range-diff** compares two commit ranges, showing how a series of patches changed between versions. It performs a diff-of-diffs, matching commits between the two ranges based on content similarity and revealing what changed during a rebase, amend, or other history rewrite.
+
+Common use cases include comparing a feature branch before and after rebasing, reviewing how patches evolved during iterative development, or verifying that a rebase preserved intended changes. The output uses dual coloring to distinguish between the two levels of diff.
 
 # SEE ALSO
 
 [git-diff](/man/git-diff)(1), [git-log](/man/git-log)(1)
-

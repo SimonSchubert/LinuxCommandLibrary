@@ -1,3 +1,7 @@
+# TAGLINE
+
+Configure system authentication on Red Hat-based distributions
+
 # TLDR
 
 Show **current** configuration
@@ -38,7 +42,9 @@ Enable **local** authorization
 
 # DESCRIPTION
 
-**authconfig** configures system authentication resources on Red Hat-based Linux distributions. It can enable or disable various authentication mechanisms including LDAP, NIS, Kerberos, Winbind, and local authentication.
+**authconfig** configures system authentication resources on Red Hat-based Linux distributions. It manages PAM stack configuration, nsswitch.conf settings, and related authentication files to enable or disable mechanisms including LDAP, NIS, Kerberos, Winbind, and local authentication.
+
+The tool modifies system files to integrate centralized identity providers with the local authentication stack. Use **--test** to inspect the current configuration before making changes with **--update**.
 
 # PARAMETERS
 
@@ -71,6 +77,17 @@ Enable **local** authorization
 
 **--enableshadow**
 > Enable shadow password file
+
+# CONFIGURATION
+
+**/etc/sysconfig/authconfig**
+> Stores the current authconfig settings as key-value pairs.
+
+**/etc/pam.d/**
+> PAM configuration directory modified by authconfig to enable authentication modules.
+
+**/etc/nsswitch.conf**
+> Name service switch configuration, updated to reflect identity source changes.
 
 # CAVEATS
 

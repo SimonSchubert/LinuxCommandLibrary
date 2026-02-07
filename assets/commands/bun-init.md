@@ -1,3 +1,7 @@
+# TAGLINE
+
+Scaffold a new project
+
 # TLDR
 
 **Initialize new project interactively**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+ANSI escape sequences for terminal text styling
+
 # TLDR
 
 **Display ANSI colors in terminal**

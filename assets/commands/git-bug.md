@@ -1,3 +1,7 @@
+# TAGLINE
+
+Distributed bug tracker embedded in git
+
 # TLDR
 
 **Add a new bug**
@@ -54,9 +58,9 @@
 
 **git-bug** is a distributed bug tracker embedded in git. Bugs are stored as git objects, enabling offline bug management, distributed synchronization, and integration with git workflows.
 
-The tool provides full issue tracking including titles, descriptions, comments, labels, and status. Bugs sync with git push/pull, enabling decentralized issue management without external services.
+The tool provides full issue tracking including titles, descriptions, comments, labels, and status. Bugs sync with git push/pull, enabling decentralized issue management without relying on external services like GitHub Issues or Jira.
 
-git-bug brings issue tracking into the repository itself.
+Bugs are stored as git objects and can be managed entirely offline, syncing with collaborators through standard git push and pull operations.
 
 # CAVEATS
 

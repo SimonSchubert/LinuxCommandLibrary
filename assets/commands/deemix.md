@@ -1,3 +1,7 @@
+# TAGLINE
+
+download tool for Deezer music streaming service
+
 # TLDR
 
 **Download a track** by URL
@@ -53,6 +57,14 @@ _FILE_
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**~/.config/deemix/.arl**
+> Stores the Deezer ARL authentication token.
+
+**~/.config/deemix/config.json**
+> Configuration file for download quality, folder structure, and other settings.
 
 # DESCRIPTION
 

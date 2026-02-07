@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal-based graphical activity monitor
+
 # TLDR
 
 **Start gotop**
@@ -114,15 +118,17 @@
 
 # DESCRIPTION
 
-**gotop** is a terminal-based graphical activity monitor inspired by gtop and vtop. It displays CPU, memory, disk, network, and process information with ASCII graphs.
+**gotop** is a terminal-based graphical activity monitor inspired by gtop and vtop. It displays CPU, memory, disk, network, and process information with ASCII graphs in real-time widget panels.
 
-The interface shows widget panels with real-time metrics. CPU displays cores or average usage. Memory shows RAM and swap. Network shows bandwidth per interface.
+Color schemes like monokai, solarized, and vice change the appearance. Custom layouts with **-l** allow rearranging and resizing widgets using YAML format. Process sorting supports CPU, memory, and PID columns with filtering and kill capabilities.
 
-Color schemes change the appearance. Built-in schemes include monokai, solarized, vice, and more. Custom themes can be defined in configuration.
+# CONFIGURATION
 
-Custom layouts with **-l** allow rearranging and resizing widgets. Layout files define widget placement in YAML format.
+**~/.config/gotop/layout**
+> Custom layout file defining widget placement in YAML format.
 
-Process sorting supports CPU, memory, and PID columns. Filter with **/** and kill with **d**. The process list scrolls independently.
+**~/.config/gotop/colorscheme**
+> Custom color scheme definitions.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Docker daemon background service
+
 # TLDR
 
 Run Docker **daemon**
@@ -49,6 +53,11 @@ Usually managed by systemd rather than run directly.
 
 **--data-root** _path_
 > Root directory for Docker data
+
+# CONFIGURATION
+
+**/etc/docker/daemon.json**
+> Main configuration file for the Docker daemon. Controls storage drivers, logging, networking, registry mirrors, and runtime settings.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Go programming language debugger
+
 # TLDR
 
 **Debug an executable**

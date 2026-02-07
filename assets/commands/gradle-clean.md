@@ -1,3 +1,7 @@
+# TAGLINE
+
+Gradle build artifact removal task
+
 # TLDR
 
 **Clean build directory**
@@ -26,11 +30,9 @@
 
 # DESCRIPTION
 
-**gradle clean** removes the build directory and all generated output. It deletes compiled classes, packaged artifacts, and cached build data.
+**gradle clean** removes the build directory and all generated output. It deletes compiled classes, packaged artifacts, and cached build data, ensuring a fresh build environment.
 
-The task ensures a fresh build by removing all artifacts from previous builds. It's useful when builds become inconsistent or caches are corrupted.
-
-gradle clean removes build artifacts.
+The task is useful when builds become inconsistent or caches are corrupted, forcing a complete rebuild on the next invocation.
 
 # CAVEATS
 

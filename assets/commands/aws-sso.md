@@ -1,3 +1,7 @@
+# TAGLINE
+
+Authenticate with IAM Identity Center for federated access.
+
 # TLDR
 
 **Log in** to AWS SSO
@@ -46,6 +50,11 @@ The SSO commands allow users to authenticate once and access multiple AWS accoun
 
 **get-role-credentials**
 > Retrieve temporary AWS credentials for assuming a role
+
+# CONFIGURATION
+
+**~/.aws/config**
+> SSO profile settings including sso_start_url, sso_region, sso_account_id, and sso_role_name.
 
 # CAVEATS
 

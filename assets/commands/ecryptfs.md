@@ -1,3 +1,7 @@
+# TAGLINE
+
+stacked cryptographic filesystem
+
 # TLDR
 
 **Mount encrypted directory**

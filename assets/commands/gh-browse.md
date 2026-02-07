@@ -1,3 +1,7 @@
+# TAGLINE
+
+open repository pages in web browser
+
 # TLDR
 
 **Open repository in browser**
@@ -60,7 +64,11 @@
 
 # DESCRIPTION
 
-**gh browse** opens the GitHub repository in a web browser. Can navigate directly to files, issues, pull requests, and other repository pages.
+**gh browse** opens the GitHub repository in a web browser. It intelligently navigates to specific repository pages, files, and even line numbers based on the arguments provided.
+
+When run in a git repository, it automatically detects the GitHub remote and opens the corresponding page. The command supports opening various repository sections including issues, pull requests, wiki, settings, and releases. It can also navigate to specific files and line numbers, making it easy to share code references with others.
+
+The --no-browser flag allows printing URLs without opening them, useful for scripting and integration with other tools.
 
 # SEE ALSO
 

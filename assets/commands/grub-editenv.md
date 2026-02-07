@@ -1,3 +1,7 @@
+# TAGLINE
+
+manage GRUB environment block variables
+
 # TLDR
 
 Set a **default boot entry**
@@ -34,13 +38,17 @@ Display all GRUB **environment variables**
 
 **grub-editenv** manages GRUB's environment block (grubenv), which stores persistent variables across boots. The environment file is typically located at /boot/grub/grubenv or /boot/grub2/grubenv.
 
-Common variables include:
-
-**saved_entry** - The boot entry to use when GRUB_DEFAULT=saved
-**next_entry** - Entry for next boot only (used by grub-reboot)
-**recordfail** - Set when a boot fails
+Common variables include **saved_entry** (the boot entry to use when GRUB_DEFAULT=saved), **next_entry** (entry for next boot only, used by grub-reboot), and **recordfail** (set when a boot fails).
 
 This tool enables scripted management of boot configuration without regenerating grub.cfg.
+
+# CONFIGURATION
+
+**/boot/grub/grubenv**
+> The GRUB environment block file storing persistent boot variables.
+
+**/etc/default/grub**
+> Must contain GRUB_DEFAULT=saved for grub-editenv settings to take effect.
 
 # CAVEATS
 

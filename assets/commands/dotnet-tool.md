@@ -1,3 +1,7 @@
+# TAGLINE
+
+.NET CLI tool package manager
+
 # TLDR
 
 **Install global tool**
@@ -56,6 +60,11 @@ _COMMAND_
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**dotnet-tools.json**
+> Manifest file specifying local tool dependencies and versions for the project.
 
 # DESCRIPTION
 

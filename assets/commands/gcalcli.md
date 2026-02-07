@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line interface for Google Calendar
+
 # TLDR
 
 **Show agenda**
@@ -79,9 +83,21 @@
 **--duration** _minutes_
 > Event duration.
 
+# CONFIGURATION
+
+**~/.gcalclirc**
+> Main configuration file containing OAuth credentials, calendar settings, and display preferences.
+
+**~/.gcalcli_oauth**
+> OAuth 2.0 credentials for Google Calendar API access.
+
 # DESCRIPTION
 
-**gcalcli** provides command-line access to Google Calendar. View, create, edit, and delete events from the terminal.
+**gcalcli** is a command-line interface for Google Calendar that enables terminal-based calendar management without opening a web browser. It authenticates via OAuth 2.0 and provides full access to your Google Calendar data.
+
+The tool supports both viewing operations like agenda and calendar displays, and modification operations including creating, editing, and deleting events. Quick add functionality allows natural language event creation, while the structured add command provides precise control over event details.
+
+gcalcli is particularly useful for terminal-centric workflows, automation scripts, and integration with other command-line tools. It can display calendar data in various formats and supports working with multiple calendars simultaneously.
 
 # SEE ALSO
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+monitoring daemon wrapper for collectd with auto-restart
+
 # TLDR
 
 **Start collectd** as daemon
@@ -39,6 +43,11 @@ The daemon ensures continuous metric collection by maintaining collectd uptime. 
 
 **-h**
 > Display help information.
+
+# CONFIGURATION
+
+**/etc/collectd.conf**
+> Configuration file passed to the monitored collectd process.
 
 # CAVEATS
 

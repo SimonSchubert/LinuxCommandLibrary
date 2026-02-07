@@ -1,3 +1,7 @@
+# TAGLINE
+
+Control client for the BIRD routing daemon
+
 # TLDR
 
 **Show** protocols
@@ -99,6 +103,11 @@ bird> show protocols
 bird> show route all
 bird> exit
 ```
+
+# CONFIGURATION
+
+**/etc/bird/bird.conf**
+> Main configuration file for the BIRD routing daemon that birdc controls.
 
 # CAVEATS
 

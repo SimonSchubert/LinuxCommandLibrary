@@ -1,3 +1,7 @@
+# TAGLINE
+
+trace file access events in real-time
+
 # TLDR
 
 Print file access events on **all** filesystems

@@ -1,3 +1,7 @@
+# TAGLINE
+
+data orchestration platform for software-defined assets
+
 # TLDR
 
 **Start development server**
@@ -103,6 +107,14 @@ Software-defined assets are the core abstraction—functions that produce data a
 Schedules trigger jobs on cron patterns; sensors trigger based on external events. Both require the daemon process to run.
 
 The webserver provides a UI showing asset lineage, run history, logs, and metrics. The asset graph visualizes data dependencies.
+
+# CONFIGURATION
+
+**dagster.yaml**
+> Instance configuration file controlling storage, compute, and run settings.
+
+**workspace.yaml**
+> Workspace configuration defining code locations and repositories.
 
 # CAVEATS
 

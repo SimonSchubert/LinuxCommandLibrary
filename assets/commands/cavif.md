@@ -1,3 +1,7 @@
+# TAGLINE
+
+convert images to AVIF format
+
 # TLDR
 
 **Convert an image to AVIF format**

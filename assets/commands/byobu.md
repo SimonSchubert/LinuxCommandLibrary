@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal multiplexer with enhanced status bar and keybindings
+
 # TLDR
 
 **Start** byobu session
@@ -104,6 +108,23 @@ F-keys may conflict with terminal emulator. Backend (tmux vs screen) affects fea
 # HISTORY
 
 **Byobu** was created by Dustin Kirkland around **2008** to provide a more user-friendly interface to GNU screen, later adding tmux support.
+
+# CONFIGURATION
+
+**~/.byobu/**
+> User configuration directory containing keybindings, status bar settings, and profile preferences
+
+**~/.byobu/keybindings**
+> Custom keybinding definitions
+
+**~/.byobu/status**
+> Status bar configuration (which elements to display)
+
+**~/.byobu/statusrc**
+> Status bar refresh rate and display options
+
+**~/.byobu/.tmux.conf**
+> Byobu-specific tmux configuration overrides
 
 # SEE ALSO
 

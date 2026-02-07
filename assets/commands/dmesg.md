@@ -1,3 +1,7 @@
+# TAGLINE
+
+kernel ring buffer message viewer
+
 # TLDR
 
 Show **kernel messages**

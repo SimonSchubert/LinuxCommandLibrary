@@ -1,3 +1,7 @@
+# TAGLINE
+
+multi-format text decoder and cipher utility
+
 # TLDR
 
 **Decode base64** encoded text

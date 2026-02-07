@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display reminders from a calendar file
+
 # TLDR
 
 **Display today and tomorrow's reminders**

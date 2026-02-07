@@ -1,3 +1,7 @@
+# TAGLINE
+
+Count commits in repository
+
 # TLDR
 
 **Count total commits**
@@ -24,9 +28,9 @@
 
 **git count** shows the total number of commits in the repository. With the --all flag, it shows commit counts broken down by author.
 
-The command provides a quick overview of repository activity and contributor participation. It's simpler than parsing git shortlog output.
+The command provides a quick overview of repository activity and contributor participation. It's simpler than parsing **git shortlog** output manually.
 
-git count offers quick commit statistics.
+With the **--all** flag, it produces a ranked list of contributors by commit count, making it useful for project statistics and activity reports.
 
 # CAVEATS
 

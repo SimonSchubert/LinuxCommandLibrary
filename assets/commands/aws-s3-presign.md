@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate pre-signed URLs for temporary S3 object access
+
 # TLDR
 
 **Generate a pre-signed URL** with default 1-hour expiration

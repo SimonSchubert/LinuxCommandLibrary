@@ -1,3 +1,7 @@
+# TAGLINE
+
+Download and stream anime from the command line
+
 # TLDR
 
 **Search** for anime
@@ -58,6 +62,11 @@ The tool emphasizes speed and reliability, with parallel downloading capabilitie
 
 **-a**, **--auto**
 > Auto-select first result
+
+# CONFIGURATION
+
+**~/.config/animdl/config.yml**
+> Configuration file for default provider, quality, download directory, and player settings.
 
 # CAVEATS
 

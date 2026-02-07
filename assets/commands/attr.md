@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manipulate extended attributes on filesystem objects
+
 # TLDR
 
 **Set an extended attribute on a file**

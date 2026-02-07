@@ -1,3 +1,7 @@
+# TAGLINE
+
+RCS revision checkout
+
 # TLDR
 
 **Check out the latest revision** of a file (read-only)

@@ -1,3 +1,7 @@
+# TAGLINE
+
+transfer data with URLs
+
 # TLDR
 
 **Download** file
@@ -72,49 +76,13 @@ The tool is ubiquitous in scripts, CI/CD pipelines, and system administration.
 **-k**, **--insecure**
 > Allow insecure SSL connections
 
-# COMMON USES
+# CONFIGURATION
 
-**Download file:**
-```bash
-curl -O https://example.com/file.zip
-curl -o myfile.zip https://example.com/download
-```
+**~/.curlrc**
+> Default options loaded on every curl invocation (one option per line).
 
-**API calls:**
-```bash
-# GET request
-curl https://api.example.com/users
-
-# POST JSON
-curl -X POST \
-  -H "Content-Type: application/json" \
-  -d '{"name":"John","age":30}' \
-  https://api.example.com/users
-
-# With authentication
-curl -u username:password https://api.example.com/data
-```
-
-**Headers:**
-```bash
-# View response headers
-curl -I https://example.com
-
-# Custom headers
-curl -H "Authorization: Bearer TOKEN" \
-  https://api.example.com/secure
-```
-
-# FEATURES
-
-- Multiple protocols (HTTP, HTTPS, FTP, SFTP, etc.)
-- Authentication (Basic, Digest, OAuth, etc.)
-- Cookie support
-- Proxy support
-- SSL/TLS
-- Rate limiting
-- Resume transfers
-- Multiple simultaneous transfers
+**~/.netrc**
+> Stores authentication credentials for remote hosts (used with --netrc).
 
 # CAVEATS
 

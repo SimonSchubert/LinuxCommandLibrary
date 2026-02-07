@@ -1,3 +1,7 @@
+# TAGLINE
+
+screen color sampling tool
+
 # TLDR
 
 **Launch color picker**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+minimal 7z-only file archiver
+
 # TLDR
 
 **Create 7z archive**

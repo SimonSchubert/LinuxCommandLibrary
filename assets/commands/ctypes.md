@@ -1,3 +1,7 @@
+# TAGLINE
+
+Python foreign function interface to C libraries
+
 # TLDR
 
 **Load a shared library**
@@ -59,24 +63,6 @@ from ctypes import CDLL, c_int, c_char_p, POINTER
 The module enables Python code to interface with native libraries without writing C extension modules. It handles type conversion between Python and C, pointer management, and structure/union definitions.
 
 Common uses include accessing system libraries, using hardware interfaces, integrating legacy C code, and calling platform-specific APIs (Windows DLLs, macOS frameworks).
-
-# EXAMPLE
-
-```python
-from ctypes import CDLL, c_double
-
-# Load math library
-libm = CDLL('libm.so.6')  # Linux
-# libm = CDLL('libSystem.B.dylib')  # macOS
-
-# Configure function
-libm.sqrt.argtypes = [c_double]
-libm.sqrt.restype = c_double
-
-# Call function
-result = libm.sqrt(16.0)
-print(result)  # 4.0
-```
 
 # CAVEATS
 

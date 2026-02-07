@@ -1,3 +1,7 @@
+# TAGLINE
+
+Register mDNS/DNS-SD services and address mappings
+
 # TLDR
 
 **Register** a service on the local network

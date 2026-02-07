@@ -1,3 +1,7 @@
+# TAGLINE
+
+wordlist generator for password testing
+
 # TLDR
 
 **Generate all combinations** of specified length using default charset

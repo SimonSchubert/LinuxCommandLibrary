@@ -1,3 +1,7 @@
+# TAGLINE
+
+manage Docker daemon connection contexts
+
 # TLDR
 
 **List contexts**
@@ -59,7 +63,16 @@
 
 # DESCRIPTION
 
-**docker context** manages Docker contexts, which store connection information for Docker engines. Contexts allow switching between different Docker hosts (local, remote, or cloud).
+**docker context** manages Docker contexts, which are configuration profiles that store connection information for different Docker engines. Contexts enable seamless switching between local, remote, and cloud-based Docker hosts without manually reconfiguring connection settings.
+
+Each context contains endpoint information, TLS certificates, and other metadata needed to communicate with a Docker daemon. This is particularly useful for developers and operators who work with multiple Docker environments, such as local development, staging servers, and production clusters.
+
+The default context named "default" connects to the local Docker daemon via Unix socket. Additional contexts can be created to connect to remote Docker hosts over SSH, TCP, or other protocols.
+
+# CONFIGURATION
+
+**~/.docker/contexts**
+> Directory storing context metadata and TLS certificates for custom contexts.
 
 # SEE ALSO
 

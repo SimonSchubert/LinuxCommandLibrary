@@ -1,3 +1,7 @@
+# TAGLINE
+
+Executable and Linkable Format for Unix binaries
+
 # TLDR
 
 **View ELF header**

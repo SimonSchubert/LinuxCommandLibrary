@@ -1,3 +1,7 @@
+# TAGLINE
+
+prevent printer from accepting new jobs
+
 # TLDR
 
 **Reject new print jobs** for a printer

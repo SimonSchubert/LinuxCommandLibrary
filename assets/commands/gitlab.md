@@ -1,3 +1,7 @@
+# TAGLINE
+
+Python CLI for the GitLab API
+
 # TLDR
 
 **List projects**
@@ -56,9 +60,15 @@
 
 # DESCRIPTION
 
-**gitlab** is the python-gitlab CLI for interacting with GitLab API. Manages projects, merge requests, issues, and other GitLab resources.
+**gitlab** is the python-gitlab CLI for interacting with the GitLab API. It manages projects, merge requests, issues, users, groups, and other GitLab resources from the command line.
+
+The tool follows a resource-action pattern, where you specify the GitLab resource type and the action to perform on it.
+
+# CONFIGURATION
+
+**~/.python-gitlab.cfg**
+> Configuration file containing GitLab instance URLs, private tokens, and default settings.
 
 # SEE ALSO
 
 [glab](/man/glab)(1), [git](/man/git)(1)
-

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Gentoo Linux package manager
+
 # TLDR
 
 **Synchronize** all packages
@@ -69,6 +73,17 @@ Manages the entire software lifecycle including dependency resolution and slot c
 
 **--skipfirst**
 > Skip first package when resuming
+
+# CONFIGURATION
+
+**/etc/portage/make.conf**
+> Global Portage configuration including USE flags, compiler flags, and system settings.
+
+**/etc/portage/package.use**
+> Per-package USE flag overrides.
+
+**/etc/portage/package.accept_keywords**
+> Accept unstable packages or specific versions.
 
 # CAVEATS
 

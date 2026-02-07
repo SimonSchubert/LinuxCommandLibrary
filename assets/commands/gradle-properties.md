@@ -1,3 +1,7 @@
+# TAGLINE
+
+Gradle project properties viewer
+
 # TLDR
 
 **List all project properties**
@@ -37,4 +41,3 @@
 # SEE ALSO
 
 [gradle](/man/gradle)(1), [gradle-tasks](/man/gradle-tasks)(1)
-

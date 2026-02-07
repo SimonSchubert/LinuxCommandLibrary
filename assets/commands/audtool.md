@@ -1,3 +1,7 @@
+# TAGLINE
+
+Command-line interface for controlling the Audacious media player.
+
 # TLDR
 
 **Get** current song

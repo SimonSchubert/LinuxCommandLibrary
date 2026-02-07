@@ -1,3 +1,7 @@
+# TAGLINE
+
+Backup tool for btrfs snapshots and subvolumes
+
 # TLDR
 
 Print **statistics** about subvolumes and snapshots
@@ -66,6 +70,11 @@ Configuration is defined in **/etc/btrbk/btrbk.conf**, specifying source subvolu
 
 **-c** _file_
 > Use alternate configuration file
+
+# CONFIGURATION
+
+**/etc/btrbk/btrbk.conf**
+> Main configuration file defining source subvolumes, snapshot locations, backup targets, and retention policies.
 
 # CAVEATS
 

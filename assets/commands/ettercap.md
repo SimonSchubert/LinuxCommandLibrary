@@ -1,3 +1,7 @@
+# TAGLINE
+
+comprehensive suite for network MITM attacks
+
 # TLDR
 
 **Start graphical** interface
@@ -64,6 +68,14 @@ _TARGET_
 The tool can intercept traffic through ARP poisoning, allowing packet sniffing, injection, and filtering. Plugins extend functionality for DNS spoofing, OS fingerprinting, and more.
 
 Ettercap is used for network security testing, protocol analysis, and penetration testing on authorized networks.
+
+# CONFIGURATION
+
+**/etc/ettercap/etter.conf**
+> Main configuration file controlling default interface, packet forwarding, plugin paths, and network settings.
+
+**/etc/ettercap/etter.dns**
+> DNS spoofing configuration mapping hostnames to IP addresses for the dns_spoof plugin.
 
 # CAVEATS
 

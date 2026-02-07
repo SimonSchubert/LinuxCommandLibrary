@@ -1,3 +1,7 @@
+# TAGLINE
+
+advanced calendar with holiday calculations
+
 # TLDR
 
 **Show current month**
@@ -50,7 +54,11 @@
 
 # DESCRIPTION
 
-**gcal** displays calendars with extensive formatting options. Supports holiday calculations, astronomical data, and various calendar systems. More feature-rich than cal.
+**gcal** is a feature-rich calendar program that goes far beyond simple date display. Unlike the standard cal utility, gcal supports extensive customization including week numbering, configurable week start days, and multi-month displays.
+
+One of gcal's most powerful features is its holiday calculation capability, which can display holidays for various countries and religious traditions. The program also supports astronomical data, eternal holiday lists, and various international calendar systems.
+
+gcal is highly scriptable and can be used for complex date calculations, making it valuable for both interactive use and automation tasks that require sophisticated calendar operations.
 
 # SEE ALSO
 

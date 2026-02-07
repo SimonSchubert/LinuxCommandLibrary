@@ -1,3 +1,7 @@
+# TAGLINE
+
+desktop RSS/Atom news aggregator
+
 # TLDR
 
 Print count of **unread** articles
@@ -26,9 +30,11 @@ Download **images** from article
 
 # DESCRIPTION
 
-**feedreader** is a GUI desktop RSS/Atom feed client. It aggregates news feeds and provides desktop notifications for new articles.
+**feedreader** is a GUI desktop RSS/Atom feed client built with GTK. It aggregates news feeds from multiple sources and provides desktop notifications for new articles, allowing users to read content in a unified interface.
 
-Note: FeedReader is no longer being maintained.
+The application supports various feed services including Feedly, Inoreader, and local feed reading. It offers features like article synchronization, tagging, and full-text search across feed content.
+
+Note: FeedReader is no longer being maintained. Users are encouraged to migrate to actively developed alternatives like NewsFlash or Akregator.
 
 # PARAMETERS
 

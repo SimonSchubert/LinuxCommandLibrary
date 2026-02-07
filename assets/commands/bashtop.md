@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal-based resource monitor written in bash
+
 # TLDR
 
 **Start** resource monitor
@@ -42,6 +46,11 @@ Display sections:
 - **p/n** - Sort processes
 - **Arrow keys** - Navigate
 - **Mouse** - Click to interact
+
+# CONFIGURATION
+
+**~/.config/bashtop/bashtop.cfg**
+> User configuration file. Controls theme, update interval, process sorting, and display options.
 
 # CAVEATS
 

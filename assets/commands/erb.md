@@ -1,3 +1,7 @@
+# TAGLINE
+
+Embedded Ruby template processor
+
 # TLDR
 
 **Process ERB template**

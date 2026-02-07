@@ -1,3 +1,7 @@
+# TAGLINE
+
+real-time software MIDI synthesizer using SoundFont 2
+
 # TLDR
 
 **Play** a MIDI file with a SoundFont

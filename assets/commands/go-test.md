@@ -1,3 +1,7 @@
+# TAGLINE
+
+Go package testing framework
+
 # TLDR
 
 **Run tests in current package**
@@ -73,9 +77,10 @@
 
 # DESCRIPTION
 
-**go test** automates testing of Go packages. It compiles and runs test files (*_test.go) containing functions named Test*, Benchmark*, and Example*. Tests can run in parallel, include race detection, and generate coverage reports. The command recompiles packages as needed and caches successful test results.
+**go test** automates testing of Go packages. It compiles and runs test files (*_test.go) containing functions named Test*, Benchmark*, and Example*. Tests can run in parallel, include race detection, and generate coverage reports.
+
+The command recompiles packages as needed and caches successful test results. It supports subtests, table-driven tests, and fuzz testing for comprehensive validation.
 
 # SEE ALSO
 
 [go](/man/go)(1), [go-build](/man/go-build)(1)
-

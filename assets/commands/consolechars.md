@@ -1,3 +1,7 @@
+# TAGLINE
+
+console font and character map loader
+
 # TLDR
 
 **Load a console font**

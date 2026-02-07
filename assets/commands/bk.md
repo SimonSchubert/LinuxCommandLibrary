@@ -1,3 +1,7 @@
+# TAGLINE
+
+Distributed version control system
+
 # TLDR
 
 **Clone a repository**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+probe device and filesystem information for GRUB
+
 # TLDR
 
 Get GRUB **filesystem module** for a path
@@ -48,17 +52,11 @@ Probe using a **custom device map**
 
 # DESCRIPTION
 
-**grub-probe** extracts device and filesystem information in GRUB's naming format. It's primarily used internally by GRUB tools but is useful for debugging boot configuration.
+**grub-probe** extracts device and filesystem information in GRUB's naming format. It is primarily used internally by GRUB tools but is useful for debugging boot configuration.
 
-Target types include:
-- **fs** - Filesystem type (GRUB module name)
-- **device** - Linux device path
-- **drive** - GRUB drive name (hd0, hd1, etc.)
-- **fs_uuid** - Filesystem UUID
-- **fs_label** - Filesystem label
-- **partmap** - Partition map type (msdos, gpt)
+Target types include **fs** (filesystem type), **device** (Linux device path), **drive** (GRUB drive name like hd0), **fs_uuid** (filesystem UUID), **fs_label** (filesystem label), and **partmap** (partition map type).
 
-This tool bridges Linux device names to GRUB's naming conventions, essential for generating correct boot configurations.
+This tool bridges Linux device names to GRUB's naming conventions, which is essential for generating correct boot configurations.
 
 # CAVEATS
 

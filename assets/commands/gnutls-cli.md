@@ -1,3 +1,7 @@
+# TAGLINE
+
+TLS/SSL connection testing and debugging client
+
 # TLDR
 
 **Connect to TLS server**
@@ -27,12 +31,6 @@
 # SYNOPSIS
 
 **gnutls-cli** [_options_] _hostname_
-
-# DESCRIPTION
-
-**gnutls-cli** is a TLS/SSL client for testing and debugging secure connections. It connects to servers, displays certificate information, and allows testing of various TLS configurations.
-
-The tool helps diagnose certificate issues, protocol support, and cipher suite negotiation. It can also serve as a simple secure client for interactive protocols.
 
 # PARAMETERS
 
@@ -65,6 +63,12 @@ The tool helps diagnose certificate issues, protocol support, and cipher suite n
 
 **--list**
 > List supported algorithms.
+
+# DESCRIPTION
+
+**gnutls-cli** is a TLS/SSL client for testing and debugging secure connections. It connects to servers, displays certificate information, and allows testing of various TLS configurations.
+
+The tool helps diagnose certificate issues, protocol support, and cipher suite negotiation. It can also serve as a simple secure client for interactive protocols.
 
 # CAVEATS
 

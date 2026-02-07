@@ -1,3 +1,7 @@
+# TAGLINE
+
+pixel-level image difference calculator
+
 # TLDR
 
 Calculate **difference** between images
@@ -10,9 +14,11 @@ Calculate **difference** between images
 
 # DESCRIPTION
 
-**diffimg** calculates the intersection between two images. It outputs an image where each pixel represents the difference between corresponding pixels in the input images.
+**diffimg** calculates pixel-level differences between two images by comparing corresponding pixels and generating a difference image. Each pixel in the output represents the delta between the input images at that position, making visual changes immediately apparent.
 
-Useful for visual regression testing, comparing screenshots, and image analysis.
+The tool performs per-pixel subtraction or comparison operations, highlighting areas where images differ. This is valuable for visual regression testing in web development, where screenshots of UI components can be compared across code changes to detect unintended visual modifications.
+
+Common use cases include comparing rendered output before and after changes, detecting image manipulation, and automated quality assurance for graphics pipelines. The tool supports multiple image formats including PNG, JPEG, GIF, and PostScript.
 
 # PARAMETERS
 

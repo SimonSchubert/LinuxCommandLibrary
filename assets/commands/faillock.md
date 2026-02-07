@@ -1,3 +1,7 @@
+# TAGLINE
+
+authentication failure tracking and lockout manager
+
 # TLDR
 
 List **login failures** of current user
@@ -40,6 +44,11 @@ Used for security monitoring and account lockout management.
 
 **--dir** _dir_
 > Use alternate tally directory
+
+# CONFIGURATION
+
+**/etc/security/faillock.conf**
+> Configuration for pam_faillock module including lockout thresholds and duration.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Low-level node recovery and cluster operations
+
 # TLDR
 
 **Repurpose node as voting-only**

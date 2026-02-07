@@ -1,3 +1,7 @@
+# TAGLINE
+
+Go import line management and formatting
+
 # TLDR
 
 **Format and fix imports in a file**
@@ -50,9 +54,10 @@
 
 # DESCRIPTION
 
-**goimports** updates Go import lines by adding missing imports and removing unreferenced ones. It also formats code in the same style as gofmt, making it a superset replacement. Imports are grouped with standard library first, then third-party packages, and sorted alphabetically within each group.
+**goimports** updates Go import lines by adding missing imports and removing unreferenced ones. It also formats code in the same style as gofmt, making it a drop-in replacement.
+
+Imports are grouped with standard library first, then third-party packages, and sorted alphabetically within each group. The **-local** flag allows separating project-specific imports into their own group.
 
 # SEE ALSO
 
 [gofmt](/man/gofmt)(1), [go-fmt](/man/go-fmt)(1)
-

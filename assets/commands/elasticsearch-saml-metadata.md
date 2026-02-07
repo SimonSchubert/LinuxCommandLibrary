@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate SAML Service Provider metadata
+
 # TLDR
 
 **Generate SAML metadata**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+GNOME screen capture utility
+
 # TLDR
 
 Take **screenshot** and save to default location
@@ -36,10 +40,6 @@ Include **mouse pointer** in screenshot
 
 **gnome-screenshot** [**-c**] [**-w**] [**-a**] [**-p**] [**-d** _SECONDS_] [**-i**] [**-f** _FILENAME_]
 
-# DESCRIPTION
-
-**gnome-screenshot** is a GNOME utility that captures the screen, a window, or a user-defined area and saves the resulting image to a file or clipboard.
-
 # PARAMETERS
 
 **-c, --clipboard**
@@ -69,9 +69,15 @@ Include **mouse pointer** in screenshot
 **--display=DISPLAY**
 > Specify the X display to capture
 
+# DESCRIPTION
+
+**gnome-screenshot** is a GNOME utility that captures the screen, a window, or a user-defined area and saves the resulting image to a file or clipboard. It provides both command-line and interactive modes for flexible screen capture.
+
+Screenshots are saved to ~/Pictures by default. The tool integrates with the GNOME desktop for quick capture workflows.
+
 # CAVEATS
 
-Screenshots are saved to ~/Pictures by default. Border effect functionality is deprecated and defaults to "none". Standard GTK+ command-line options are also supported.
+Border effect functionality is deprecated and defaults to "none". Standard GTK+ command-line options are also supported.
 
 # HISTORY
 

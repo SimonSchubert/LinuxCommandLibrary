@@ -1,3 +1,7 @@
+# TAGLINE
+
+frecency-based file and directory navigation
+
 # TLDR
 
 **Jump to frecent directory**
@@ -79,6 +83,11 @@ The tool integrates with the shell to track cd and file access, enabling fast na
 **zz**: Interactive directory select
 **f**: Select file
 **v**: Open frecent file in $EDITOR
+
+# CONFIGURATION
+
+**~/.fasd**
+> Database file tracking frecency scores for files and directories.
 
 # CAVEATS
 

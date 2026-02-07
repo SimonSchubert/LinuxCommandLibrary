@@ -1,3 +1,7 @@
+# TAGLINE
+
+Reapply commits on new base
+
 # TLDR
 
 **Rebase onto branch**
@@ -63,7 +67,9 @@
 
 # DESCRIPTION
 
-**git rebase** reapplies commits on top of another base. Used to maintain a linear project history and integrate upstream changes cleanly.
+**git rebase** reapplies commits on top of another base tip, producing a linear project history. It finds the common ancestor of the current branch and the upstream, then replays each commit from the current branch onto the upstream tip.
+
+Interactive mode (`-i`) allows reordering, squashing, editing, or dropping commits during the replay, making it a powerful tool for cleaning up commit history. The `--onto` option enables advanced workflows like moving a branch to an entirely new base. Autosquash automatically applies fixup! and squash! commits, supporting the iterative fixup workflow.
 
 # CAVEATS
 
@@ -72,4 +78,3 @@ Rebasing rewrites history. Don't rebase commits that have been pushed to shared 
 # SEE ALSO
 
 [git-merge](/man/git-merge)(1), [git-cherry-pick](/man/git-cherry-pick)(1)
-

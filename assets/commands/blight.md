@@ -1,3 +1,7 @@
+# TAGLINE
+
+Control display backlight brightness
+
 # TLDR
 
 **Set** display brightness to a percentage

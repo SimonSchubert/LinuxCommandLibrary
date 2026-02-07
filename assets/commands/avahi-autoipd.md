@@ -1,3 +1,7 @@
+# TAGLINE
+
+Acquire IPv4 link-local addresses automatically
+
 # TLDR
 
 **Start** the daemon on an interface to auto-configure an IPv4LL address

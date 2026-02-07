@@ -1,3 +1,7 @@
+# TAGLINE
+
+format text into aligned columns
+
 # TLDR
 
 Format output for **specific width**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage and switch between Neovim versions
+
 # TLDR
 
 **Install a Neovim version**

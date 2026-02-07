@@ -1,3 +1,7 @@
+# TAGLINE
+
+colored syntax highlighting wrapper for diff
+
 # TLDR
 
 **Compare files with colored output**

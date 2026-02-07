@@ -1,3 +1,7 @@
+# TAGLINE
+
+comprehensive font editor for creating and modifying fonts
+
 # TLDR
 
 **Open FontForge GUI**

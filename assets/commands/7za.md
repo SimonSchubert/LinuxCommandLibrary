@@ -1,3 +1,7 @@
+# TAGLINE
+
+standalone file archiver from the 7-Zip family
+
 # TLDR
 
 **Create archive**

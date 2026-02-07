@@ -1,3 +1,7 @@
+# TAGLINE
+
+PostgreSQL user creation utility
+
 # TLDR
 
 **Create a user interactively**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+AI-powered command-line assistant for shell commands
+
 # TLDR
 
 **Explain a command**
@@ -36,23 +40,9 @@
 
 # DESCRIPTION
 
-**GitHub Copilot CLI** is an AI-powered command-line assistant that explains commands and suggests shell commands based on natural language descriptions. It's a GitHub CLI extension.
+**GitHub Copilot CLI** is an AI-powered command-line assistant that explains commands and suggests shell commands based on natural language descriptions. It is a GitHub CLI extension that helps users understand complex commands and discover the right command for a task without memorizing syntax.
 
-The tool helps users understand complex commands and discover the right command for a task without memorizing syntax. It supports various shells and command-line tools.
-
-# USAGE EXAMPLES
-
-```bash
-# Explain a complex command
-gh copilot explain "find . -name '*.log' -mtime +7 -delete"
-
-# Suggest a command
-gh copilot suggest "compress all jpg files in directory"
-
-# Set up aliases for quick access
-eval "$(gh copilot alias -- bash)"
-# Then use: ?? "find large files"
-```
+The tool supports various shells and command-line tools, providing interactive suggestions that can be copied or executed directly.
 
 # CAVEATS
 

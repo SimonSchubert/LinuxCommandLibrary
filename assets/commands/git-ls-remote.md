@@ -1,3 +1,7 @@
+# TAGLINE
+
+List remote repository references
+
 # TLDR
 
 **List remote refs**
@@ -52,11 +56,9 @@ _REFS_
 
 # DESCRIPTION
 
-**git ls-remote** lists references in a remote repository. It shows branches, tags, and their commit hashes without downloading objects, useful for checking remote state.
+**git ls-remote** lists references in a remote repository without downloading any objects. It shows branches, tags, and their commit hashes, useful for checking remote state before fetching.
 
-The command queries the remote directly, showing current refs. This enables checking tag existence or branch status without fetching. It works with named remotes or direct URLs.
-
-git ls-remote provides remote ref information without downloading.
+The command queries the remote directly, showing current refs at query time. This enables checking tag existence, verifying branch status, or scripting against remote repository state. It works with both named remotes and direct URLs.
 
 # CAVEATS
 

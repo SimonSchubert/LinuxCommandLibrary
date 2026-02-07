@@ -1,3 +1,7 @@
+# TAGLINE
+
+remote debugging stub for GDB
+
 # TLDR
 
 **Start debug server**
@@ -45,11 +49,13 @@ _PROGRAM_
 
 # DESCRIPTION
 
-**gdbserver** is a remote debugging stub that runs on the target system. It allows GDB to debug programs on a different machine or embedded systems.
+**gdbserver** is a lightweight remote debugging stub that runs on the target system, allowing a full GDB debugger running on a different machine to control and debug programs remotely. This architecture is essential for embedded development, cross-compilation workflows, and debugging on resource-constrained devices.
 
-The server listens for connections from GDB, relaying debug commands and program state. It enables debugging systems with limited resources or cross-compilation targets.
+The server component runs on the target system (embedded device, remote server, or different architecture), while the full GDB client runs on the developer's workstation. Communication occurs over TCP/IP or serial connections, with gdbserver translating GDB's debugging protocol into system-level debugging operations.
 
-gdbserver provides lightweight remote debugging infrastructure.
+This split architecture minimizes the footprint on the target system, as gdbserver is much smaller than full GDB and requires fewer dependencies. It's particularly valuable for embedded Linux systems, IoT devices, and scenarios where the target lacks sufficient resources for a complete debugging environment.
+
+Typical workflows involve starting gdbserver on the target with the program to debug, then connecting from a GDB client using commands like "target remote host:port". The full power of GDB is available remotely, including breakpoints, single-stepping, memory inspection, and core file generation.
 
 # CAVEATS
 

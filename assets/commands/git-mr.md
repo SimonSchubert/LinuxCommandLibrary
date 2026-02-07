@@ -1,3 +1,7 @@
+# TAGLINE
+
+Check out GitLab merge requests
+
 # TLDR
 
 **Check out merge request**
@@ -32,11 +36,9 @@ _NUMBER_
 
 # DESCRIPTION
 
-**git mr** checks out GitLab merge requests locally. It fetches the merge request reference and creates a local branch for testing or review.
+**git mr** checks out GitLab merge requests locally for testing or review. It fetches the merge request reference and creates a local branch automatically, simplifying the code review workflow.
 
-The command simplifies the workflow of reviewing merge requests by handling the ref fetching and branch creation automatically.
-
-git mr enables easy merge request checkout for GitLab repos.
+The command handles ref fetching and branch creation in a single step. For GitHub repositories, the equivalent command is `git pr`.
 
 # CAVEATS
 

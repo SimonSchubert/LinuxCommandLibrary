@@ -1,3 +1,7 @@
+# TAGLINE
+
+gcloud CLI configuration management
+
 # TLDR
 
 **List configurations**
@@ -49,11 +53,11 @@ _COMMAND_
 
 # DESCRIPTION
 
-**gcloud config** manages gcloud CLI configuration. It sets default project, region, zone, and account settings used when not specified on command line.
+**gcloud config** manages persistent configuration properties for the gcloud command-line tool. Properties set through this command become defaults used by all gcloud commands unless explicitly overridden with command-line flags.
 
-Named configurations allow switching between different setups for multiple projects or accounts. Properties affect all subsequent gcloud commands.
+Common properties include the default project, Compute Engine region and zone, and active account. These eliminate the need to specify frequently-used values on every command, significantly reducing command verbosity for regular workflows.
 
-gcloud config centralizes settings to avoid repetitive command-line options.
+Named configurations enable managing multiple independent sets of properties, making it easy to switch between different projects, accounts, or environments. Each configuration is a complete set of property values that can be activated with a single command. This is essential for developers working across multiple GCP projects or organizations, as it prevents accidentally running commands in the wrong project context.
 
 # CAVEATS
 

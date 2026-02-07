@@ -1,3 +1,7 @@
+# TAGLINE
+
+filesystem check and repair utility
+
 # TLDR
 
 **Check** filesystem
@@ -78,6 +82,11 @@ Show **progress**
 
 **-n**
 > Answer "no" to all questions (read-only check)
+
+# CONFIGURATION
+
+**/etc/fstab**
+> Defines which filesystems are checked with the -A option and in what order (pass field).
 
 # CAVEATS
 

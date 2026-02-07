@@ -1,3 +1,7 @@
+# TAGLINE
+
+Traditional Linux desktop environment
+
 # TLDR
 
 **Start Cinnamon desktop (typically via display manager)**

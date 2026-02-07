@@ -1,3 +1,7 @@
+# TAGLINE
+
+change SELinux security context of files
+
 # TLDR
 
 View **security context** of a file
@@ -38,7 +42,9 @@ Change context **recursively**
 
 # DESCRIPTION
 
-**chcon** changes the SELinux security context of files. The context can be specified directly, by individual components (user, role, type, range), or by copying from a reference file.
+**chcon** changes the SELinux security context of files. An SELinux context consists of four components: user, role, type, and range (level). The context can be specified as a complete string, by individual components, or by copying from a reference file.
+
+Context changes made with chcon are temporary and will be overwritten during a system relabel or by running restorecon. For persistent context changes, use **semanage fcontext** to define rules and **restorecon** to apply them. The chcon command is primarily useful for testing and debugging SELinux policies before making permanent changes.
 
 # PARAMETERS
 

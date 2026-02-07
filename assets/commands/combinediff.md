@@ -1,3 +1,7 @@
+# TAGLINE
+
+merge two incremental patches into one
+
 # TLDR
 
 **Combine two patches**

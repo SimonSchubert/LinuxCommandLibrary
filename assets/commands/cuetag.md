@@ -1,3 +1,7 @@
+# TAGLINE
+
+apply CUE sheet metadata to audio files
+
 # TLDR
 
 **Tag FLAC files from CUE sheet**
@@ -33,23 +37,6 @@ Tags transferred include: title, artist/performer, album, track number, genre, d
 **FLAC**: Uses metaflac (standard tags)
 **Ogg Vorbis**: Uses vorbiscomment
 **MP3**: Uses id3v2 or id3tag
-
-# EXAMPLE WORKFLOW
-
-```bash
-# Split single FLAC using CUE breakpoints
-cuebreakpoints album.cue | shnsplit -o flac album.flac
-
-# Tag the resulting files
-cuetag album.cue split-track*.flac
-
-# Rename using tags
-for f in split-track*.flac; do
-  title=$(metaflac --show-tag=TITLE "$f" | cut -d= -f2)
-  track=$(metaflac --show-tag=TRACKNUMBER "$f" | cut -d= -f2)
-  mv "$f" "$(printf '%02d' $track) - $title.flac"
-done
-```
 
 # CAVEATS
 

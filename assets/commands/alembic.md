@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage SQLAlchemy database migrations
+
 # TLDR
 
 **Initialize Alembic** in a project
@@ -95,6 +99,14 @@ Migrations are Python files stored in a versions directory. Each migration has a
 The **--autogenerate** feature compares SQLAlchemy model definitions against the current database schema to automatically generate migration scripts. While convenient, generated migrations should be reviewed as autogenerate cannot detect all types of changes.
 
 Configuration is stored in **alembic.ini**, which specifies the database URL, migration script location, and other settings. The **env.py** script in the alembic directory handles migration environment setup and can be customized for complex scenarios.
+
+# CONFIGURATION
+
+**alembic.ini**
+> Main configuration file specifying the database URL, migration script location, and logging settings.
+
+**alembic/env.py**
+> Migration environment script that configures how migrations are run and connects to the database.
 
 # CAVEATS
 

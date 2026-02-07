@@ -1,3 +1,7 @@
+# TAGLINE
+
+shell builtin to mark variables for child processes
+
 # TLDR
 
 **Set** an environment variable
@@ -28,7 +32,9 @@ Export a **function** to child processes
 
 **export** marks shell variables for export to child processes. Exported variables become environment variables visible to all commands run from the shell.
 
-Built-in shell command for managing the process environment.
+When a variable is exported, it's passed to the environment of any command or script executed from that shell. This is essential for configuration like PATH, EDITOR, and application-specific settings that child processes need to inherit.
+
+Variables set without export remain local to the current shell. The -n option removes the export attribute while keeping the variable defined. Common in shell scripts and initialization files like .bashrc and .profile.
 
 # PARAMETERS
 

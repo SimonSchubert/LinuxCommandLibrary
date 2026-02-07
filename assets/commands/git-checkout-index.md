@@ -1,3 +1,7 @@
+# TAGLINE
+
+Copy files from index to working directory
+
 # TLDR
 
 **Copy all files to working tree**
@@ -43,7 +47,11 @@
 
 # DESCRIPTION
 
-**git checkout-index** copies files from the index to the working tree. A low-level command underlying git checkout.
+**git checkout-index** is a low-level plumbing command that copies files from Git's staging area (index) to the working directory. It provides fine-grained control over which index entries are materialized as working tree files.
+
+Unlike the higher-level git checkout, this command operates purely on the index without switching branches or updating HEAD. It's primarily used in Git's internal operations and specialized scripts that need precise control over working tree population.
+
+The --prefix option enables extracting the index to an alternate location, useful for creating clean checkouts or exporting specific versions. This command is essential for understanding Git's three-tree architecture (working directory, index, and HEAD) and how file state moves between them.
 
 # SEE ALSO
 

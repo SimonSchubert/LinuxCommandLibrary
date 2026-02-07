@@ -1,3 +1,7 @@
+# TAGLINE
+
+Clockify time tracking CLI client
+
 # TLDR
 
 **Start a time entry**

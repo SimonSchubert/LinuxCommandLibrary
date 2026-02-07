@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast and user-friendly file finder
+
 # TLDR
 
 **Find files by name**
@@ -67,9 +71,14 @@
 
 # DESCRIPTION
 
-**fdfind** (or fd) is a simple, fast, and user-friendly alternative to find. Uses regex patterns by default and respects .gitignore files.
+**fdfind** (or fd) is a simple, fast, and user-friendly alternative to find, written in Rust. It uses regex patterns by default and respects .gitignore files, making it ideal for searching code repositories.
+
+The command provides colorful output, sensible defaults that ignore hidden and gitignored files, and parallel execution for better performance. On Debian-based systems, the binary is named fdfind to avoid conflicts with another package.
+
+# CAVEATS
+
+Uses regex patterns by default, not glob syntax. Ignores hidden and .gitignore files unless explicitly enabled. May not cover all find use cases.
 
 # SEE ALSO
 
 [find](/man/find)(1), [ripgrep](/man/ripgrep)(1)
-

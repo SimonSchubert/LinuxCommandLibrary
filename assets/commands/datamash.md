@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line tool for basic numeric and statistical operations
+
 # TLDR
 
 Get **max, min, mean, median** of a column
@@ -22,9 +26,11 @@ Get mean **ignoring NA/NaN** values
 
 # DESCRIPTION
 
-**datamash** performs basic numeric, textual, and statistical operations on input data. It's designed for command-line data analysis, supporting operations like sum, mean, median, standard deviation, and more.
+**datamash** performs basic numeric, textual, and statistical operations on input data from the command line. It's designed for quick data analysis tasks that would otherwise require scripting or statistical software, supporting operations like sum, mean, median, standard deviation, variance, and more.
 
-Input is read from stdin or files, with columns separated by whitespace or a specified delimiter.
+Input is read from stdin or files, with columns separated by whitespace or a specified delimiter. The tool can group data by fields and compute aggregate statistics for each group, similar to SQL's GROUP BY functionality.
+
+datamash is part of the GNU project and excels at one-liners for data exploration. It's commonly used in pipelines to analyze CSV files, log data, or any tabular text data. The tool can handle both numeric and textual operations, including counting unique values, string operations, and random sampling.
 
 # PARAMETERS
 

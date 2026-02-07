@@ -1,3 +1,7 @@
+# TAGLINE
+
+static type checker for JavaScript
+
 # TLDR
 
 **Type check project**
@@ -57,6 +61,11 @@ _COMMAND_
 The tool runs as a background server for fast incremental checking. Type annotations use a superset of JavaScript syntax, stripped at build time.
 
 Flow integrates with editors for real-time type checking and provides detailed error messages with suggested fixes.
+
+# CONFIGURATION
+
+**.flowconfig**
+> Configuration file controlling which files Flow checks, library definitions, linting rules, and options for type checking behavior.
 
 # CAVEATS
 

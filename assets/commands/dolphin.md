@@ -1,3 +1,7 @@
+# TAGLINE
+
+KDE file manager with integrated features
+
 # TLDR
 
 **Launch** the file manager

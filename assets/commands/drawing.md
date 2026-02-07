@@ -1,3 +1,7 @@
+# TAGLINE
+
+basic raster image editor for GNOME
+
 # TLDR
 
 **Start** Drawing
@@ -18,9 +22,11 @@ Open in **new window**
 
 # DESCRIPTION
 
-**drawing** is a free basic raster image editor for the GNOME desktop environment. It provides simple tools for creating and editing images including pencil, eraser, shapes, and text.
+**drawing** is a simple raster image editor designed for the GNOME desktop environment. It provides basic drawing and editing tools including pencil, eraser, line, arc, shapes, text, and selection tools with crop, scale, and rotate capabilities.
 
-A lightweight alternative to GIMP for basic image editing tasks.
+The application fills the gap between basic screenshot annotation and full-featured image editors like GIMP. It's ideal for quick image edits, adding arrows and text to screenshots, creating simple diagrams, or making basic modifications to existing images.
+
+Drawing supports common image formats including PNG, JPEG, and BMP, making it suitable for everyday image editing tasks without the complexity of professional graphics software.
 
 # PARAMETERS
 

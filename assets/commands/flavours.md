@@ -1,3 +1,7 @@
+# TAGLINE
+
+Base16 color scheme manager
+
 # TLDR
 
 **Apply a theme**
@@ -55,8 +59,11 @@ Base16 provides 16-color schemes designed to work across terminals, editors, and
 
 # CONFIGURATION
 
-```yaml
-# ~/.config/flavours/config.toml
+**~/.config/flavours/config.toml**
+> Defines which applications receive theme updates and their template mappings. Each item specifies a target file, template name, and optional subtemplate.
+
+Example configuration:
+```toml
 [[items]]
 file = "~/.config/alacritty/alacritty.yml"
 template = "alacritty"

@@ -1,3 +1,7 @@
+# TAGLINE
+
+filename encoding converter
+
 # TLDR
 
 **Preview converting filenames** from Latin1 to UTF-8

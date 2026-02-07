@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Azure App Configuration stores
+
 # TLDR
 
 **Create an App Configuration store**

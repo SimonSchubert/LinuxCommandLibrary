@@ -1,3 +1,7 @@
+# TAGLINE
+
+pbmraw to HBPL2 converter for Dell and Xerox printers
+
 # TLDR
 
 **Convert pbmraw to HBPL2** stream for printing

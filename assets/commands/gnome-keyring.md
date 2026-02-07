@@ -1,3 +1,7 @@
+# TAGLINE
+
+secure password and key storage daemon
+
 # TLDR
 
 **Start keyring daemon**
@@ -12,7 +16,7 @@
 
 ```gnome-keyring-daemon --replace```
 
-**Unlock keyring via CLI**
+**Store a secret via CLI**
 
 ```secret-tool store --label="My Secret" service myapp```
 
@@ -56,18 +60,10 @@ The keyring is typically started at login and unlocked with the user's password.
 - **ssh**: SSH agent (replaces ssh-agent)
 - **pkcs11**: PKCS#11 smart card support
 
-# COMMAND-LINE ACCESS
+# CONFIGURATION
 
-```bash
-# Store a secret
-secret-tool store --label="GitHub Token" service github account token
-
-# Retrieve a secret
-secret-tool lookup service github
-
-# Clear a secret
-secret-tool clear service github
-```
+**~/.local/share/keyrings/**
+> Directory containing keyring data files.
 
 # CAVEATS
 

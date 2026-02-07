@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line client for etcd key-value store
+
 # TLDR
 
 **Set a key**

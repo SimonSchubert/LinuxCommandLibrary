@@ -1,3 +1,7 @@
+# TAGLINE
+
+display battery, thermal, and power information
+
 # TLDR
 
 Show **battery** information
@@ -30,7 +34,9 @@ Extract information from **/proc** instead of /sys
 
 # DESCRIPTION
 
-**acpi** shows information from the /proc or /sys filesystem, such as battery status, AC adapter status, thermal information, and cooling device status. This is useful for monitoring laptop battery levels and system temperatures.
+**acpi** shows information from the /proc or /sys filesystem, such as battery status, AC adapter status, thermal zone temperatures, and cooling device status. It is primarily used on laptops and portable devices to monitor battery charge levels, remaining time, and system temperatures from the command line.
+
+By default, it displays battery information. Additional flags enable viewing thermal zones, AC adapter state, and cooling device activity. Temperature output can be displayed in Celsius, Fahrenheit, or Kelvin. The tool reads ACPI data exposed by the kernel, making it a lightweight alternative to graphical power management applets.
 
 # PARAMETERS
 

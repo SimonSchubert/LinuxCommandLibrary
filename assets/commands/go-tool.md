@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run Go toolchain programs
+
 # TLDR
 
 **List available tools**
@@ -52,11 +56,9 @@ _ARGUMENTS_
 
 # DESCRIPTION
 
-**go tool** runs Go toolchain programs. It provides access to low-level tools like the compiler, linker, profiler, and tracer that underlie go build.
+**go tool** runs Go toolchain programs that underlie the standard go commands. It provides access to low-level tools like the compiler, linker, profiler, and tracer.
 
-The command is used for advanced debugging, profiling, and understanding compiler behavior. Each tool has its own options and usage.
-
-go tool exposes the Go toolchain internals.
+The command is used for advanced debugging, profiling, and understanding compiler behavior. Each tool has its own options and usage patterns.
 
 # CAVEATS
 

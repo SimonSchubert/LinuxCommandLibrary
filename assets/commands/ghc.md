@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compiler for the Haskell functional programming language
+
 # TLDR
 
 **Compile a Haskell file**
@@ -61,8 +65,6 @@ _FILES_
 **ghc** (Glasgow Haskell Compiler) is the leading compiler for the Haskell programming language. It compiles Haskell source code to native machine code, producing efficient executables.
 
 GHC supports the full Haskell language standard plus numerous extensions for advanced type system features, parallelism, and performance. The --make mode automatically handles module dependencies.
-
-ghc is the standard compiler for Haskell development and production systems.
 
 # CAVEATS
 

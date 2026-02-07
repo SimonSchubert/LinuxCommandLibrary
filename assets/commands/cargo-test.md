@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run unit and integration tests
+
 # TLDR
 
 **Run all tests**
@@ -38,7 +42,9 @@
 
 # DESCRIPTION
 
-**cargo test** compiles and runs tests. Looks for tests in src/ (unit tests, doc tests) and tests/ (integration tests). Arguments after -- are passed to the test binary.
+**cargo test** compiles and runs the test suite for a Rust project. It discovers unit tests (functions annotated with `#[test]` in `src/`), integration tests (files in `tests/`), documentation tests (code blocks in doc comments), and benchmark tests. A test name filter can be provided to run only matching tests.
+
+Arguments after `--` are passed directly to the test harness rather than to Cargo. This allows controlling test execution behavior such as thread count, output capture, and whether ignored tests should run. Tests run in parallel by default; use `--test-threads=1` for sequential execution when tests have shared state.
 
 # PARAMETERS
 

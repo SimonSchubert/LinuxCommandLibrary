@@ -1,3 +1,7 @@
+# TAGLINE
+
+Modern PHP unit testing framework
+
 # TLDR
 
 **Run** tests
@@ -58,6 +62,11 @@ The framework uses a natural, fluent assertion syntax and includes tools for tes
 
 **--fail-if-void-methods**
 > Fail if test methods are empty
+
+# CONFIGURATION
+
+**.atoum.php**
+> Project-level configuration file for test runners, reports, and coverage settings.
 
 # CAVEATS
 

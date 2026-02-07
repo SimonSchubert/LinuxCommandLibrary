@@ -1,3 +1,7 @@
+# TAGLINE
+
+wireless Android device disconnector
+
 # TLDR
 
 **Disconnect** from a specific device

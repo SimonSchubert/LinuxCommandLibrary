@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line two-factor authentication code generator
+
 # TLDR
 
 **Add a new TOTP secret** for an account

@@ -1,3 +1,7 @@
+# TAGLINE
+
+arbitrary-precision reverse Polish notation calculator
+
 # TLDR
 
 **Start interactive** calculator

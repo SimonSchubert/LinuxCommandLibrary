@@ -1,3 +1,7 @@
+# TAGLINE
+
+utility to start a D-Bus session bus instance
+
 # TLDR
 
 **Start a D-Bus session** bus

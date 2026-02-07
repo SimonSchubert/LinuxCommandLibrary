@@ -1,3 +1,7 @@
+# TAGLINE
+
+record staged database table changes
+
 # TLDR
 
 **Commit staged changes**
@@ -42,7 +46,11 @@
 
 # DESCRIPTION
 
-**dolt commit** records changes to the repository. Creates a new commit with staged table changes. Similar to git commit but for database versioning.
+**dolt commit** records changes to the database repository by creating a new commit with staged table modifications. It captures a snapshot of the current state of all staged tables, preserving the data and schema at that moment in the repository's history.
+
+Each commit requires a message describing the changes, creating an audit trail of database evolution over time. The command mirrors Git's commit workflow but operates on database tables instead of files, enabling version control for data.
+
+Commits can be amended, authored by different users, and can include all modified tables automatically with the -a flag. Empty commits are rejected by default to prevent meaningless history entries.
 
 # SEE ALSO
 

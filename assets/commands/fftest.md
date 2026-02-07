@@ -1,3 +1,7 @@
+# TAGLINE
+
+force-feedback device testing utility
+
 # TLDR
 
 Open fftest on an **event device**
@@ -10,9 +14,11 @@ Open fftest on an **event device**
 
 # DESCRIPTION
 
-**fftest** tests force-feedback devices like game controllers with rumble functionality. It sends various force-feedback effects to the device to verify they work correctly.
+**fftest** tests force-feedback devices like game controllers, steering wheels, and joysticks with rumble or haptic feedback functionality. It sends various force-feedback effects to the device including constant forces, periodic effects, ramps, and spring conditions to verify they work correctly.
 
-Part of the linuxconsole package for input device testing.
+The tool is part of the linuxconsole package for input device testing. It interacts with Linux input event devices through the force-feedback API, allowing users to diagnose hardware issues and verify driver support.
+
+fftest requires appropriate device permissions and is primarily used for troubleshooting gaming peripherals and testing driver implementations.
 
 # PARAMETERS
 

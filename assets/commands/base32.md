@@ -1,3 +1,7 @@
+# TAGLINE
+
+Encode and decode base32 data.
+
 # TLDR
 
 **Encode** to base32

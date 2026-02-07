@@ -1,3 +1,7 @@
+# TAGLINE
+
+generate XML descriptions of C/C++ declarations
+
 # TLDR
 
 **Generate XML from C++ header**
@@ -26,9 +30,11 @@
 
 # DESCRIPTION
 
-**castxml** creates an XML representation of C++ declarations from source files. It parses C-family languages using Clang and outputs an abstract syntax tree in XML format.
+**castxml** creates an XML representation of C and C++ declarations from source files. It uses the Clang compiler frontend to parse C-family source code and produces a structured XML output describing types, functions, classes, and other declarations.
 
-The tool is commonly used for generating language bindings and code analysis.
+The tool is commonly used as a foundation for generating language bindings, enabling projects like pygccxml to automatically create Python wrappers for C++ libraries. It also serves as a code analysis backend where machine-readable representations of header files are needed.
+
+CastXML was created as a replacement for the deprecated GCC-XML tool, providing a modern Clang-based alternative with compatible output formats for backward compatibility.
 
 # PARAMETERS
 

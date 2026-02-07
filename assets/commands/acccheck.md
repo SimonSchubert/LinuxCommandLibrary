@@ -1,3 +1,7 @@
+# TAGLINE
+
+Windows SMB password dictionary attack tool
+
 # TLDR
 
 **Check** for blank passwords on a target

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Ada program build utility
+
 # TLDR
 
 **Compile an Ada program**
@@ -62,7 +66,7 @@
 
 # DESCRIPTION
 
-**gnatmake** is the primary build utility for Ada programs in the GNAT (GNU Ada Toolset) environment. It automatically determines dependencies by analyzing Ada's with clauses, compiles modified source files, and performs binding and linking to create an executable. Unlike traditional make utilities, gnatmake always recomputes dependencies from sources, ensuring accurate tracking of changes.
+**gnatmake** is the primary build utility for Ada programs in the GNAT (GNU Ada Toolset) environment. It automatically determines dependencies by analyzing Ada's with clauses, compiles modified source files, and performs binding and linking to create an executable. Unlike traditional make utilities, **gnatmake** always recomputes dependencies from sources, ensuring accurate tracking of changes.
 
 # CAVEATS
 
@@ -71,4 +75,3 @@ Multiple main files can be specified to build several executables. Dependencies 
 # SEE ALSO
 
 [gcc](/man/gcc)(1), [gnatbind](/man/gnatbind)(1), [gnatlink](/man/gnatlink)(1)
-

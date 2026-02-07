@@ -1,3 +1,7 @@
+# TAGLINE
+
+roguelike dungeon exploration game
+
 # TLDR
 
 **Start Dungeon Crawl Stone Soup**
@@ -54,9 +58,6 @@
 **-tutorial**
 > Start the tutorial.
 
-**-rc** _file_
-> Use specific configuration file.
-
 **-morgue** _dir_
 > Directory for morgue files.
 
@@ -79,6 +80,11 @@ DCSS is known for its streamlined design philosophy, removing tedious elements c
 **Rest**: **5** or **.** to rest/wait
 **Stairs**: **>** descend, **<** ascend
 **Save**: **Ctrl-S** (or quit, auto-saves)
+
+# CONFIGURATION
+
+**~/.crawlrc**
+> User-specific configuration including keybindings, autopickup rules, display options, and game preferences.
 
 # CAVEATS
 

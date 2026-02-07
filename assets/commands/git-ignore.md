@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage gitignore entries
+
 # TLDR
 
 **Add to gitignore**
@@ -36,11 +40,17 @@ _PATTERNS_
 
 # DESCRIPTION
 
-**git ignore** manages .gitignore entries. It adds patterns to the repository's .gitignore or the global gitignore file, simplifying ignore rule management.
+**git ignore** manages .gitignore entries, adding patterns to the repository's .gitignore or the global gitignore file. Without arguments, it displays the current .gitignore contents.
 
-Without arguments, it displays the current .gitignore contents. The command handles proper formatting and avoids duplicates.
+Part of the git-extras suite, the command handles proper formatting and avoids duplicates. It creates .gitignore if the file does not exist.
 
-git ignore provides easy gitignore file editing.
+# CONFIGURATION
+
+**.gitignore**
+> Repository-level ignore patterns managed by this command.
+
+**~/.gitignore_global**
+> Global ignore patterns applied to all repositories when using --global.
 
 # CAVEATS
 

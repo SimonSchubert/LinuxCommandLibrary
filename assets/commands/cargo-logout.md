@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove a saved registry API token
+
 # TLDR
 
 **Logout from crates.io**

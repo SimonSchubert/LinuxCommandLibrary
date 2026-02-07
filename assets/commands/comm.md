@@ -1,3 +1,7 @@
+# TAGLINE
+
+compare two sorted files line by line
+
 # TLDR
 
 **Compare two sorted files**

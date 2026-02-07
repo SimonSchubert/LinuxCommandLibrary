@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast reverse proxy client
+
 # TLDR
 
 **Start frp client**
@@ -46,6 +50,11 @@ _COMMAND_
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**frpc.ini**
+> Client configuration file specifying server address, authentication token, and proxy definitions for each service to expose through the tunnel.
 
 # DESCRIPTION
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+immutable root partition manager with A/B switching
+
 # TLDR
 
 **Add** packages to the local image

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Kubernetes developer tool with hot reloading
+
 # TLDR
 
 **Initialize a project**
@@ -62,11 +66,18 @@
 
 **devspace** is a Kubernetes developer tool for building, deploying, and developing applications. It provides hot reloading, log streaming, and terminal access during development.
 
-Configuration is defined in devspace.yaml.
+The tool simplifies Kubernetes development by automating common tasks like building container images, deploying manifests, and syncing code changes. DevSpace watches for local file changes and automatically syncs them to running containers, enabling rapid iteration without rebuilding images.
+
+Configuration is defined in devspace.yaml, specifying images, deployments, dev configurations, and custom commands. The tool supports Helm charts, kubectl manifests, and Kustomize.
+
+# CONFIGURATION
+
+**devspace.yaml**
+> Main configuration file defining images, deployments, dev settings, and pipelines.
 
 # CAVEATS
 
-Requires kubectl and access to a Kubernetes cluster.
+Requires kubectl and access to a Kubernetes cluster. Hot reload performance depends on file sync mechanism. Initial deployment may be slow for large images.
 
 # SEE ALSO
 

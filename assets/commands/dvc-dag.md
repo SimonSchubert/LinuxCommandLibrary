@@ -1,3 +1,7 @@
+# TAGLINE
+
+visualize DVC pipeline dependencies
+
 # TLDR
 
 **Show pipeline DAG**
@@ -33,7 +37,11 @@
 
 # DESCRIPTION
 
-**dvc dag** visualizes the pipeline as a directed acyclic graph. Shows dependencies between stages in DVC pipelines.
+**dvc dag** generates a visual representation of your DVC pipeline's structure as a directed acyclic graph (DAG). It shows how pipeline stages depend on each other and the flow of data through your machine learning workflow.
+
+Each node in the graph represents a pipeline stage (data processing, training, evaluation, etc.), and edges show dependencies between stages. This visualization helps understand pipeline structure, identify bottlenecks, and debug execution order issues.
+
+The default output is ASCII art suitable for terminal viewing. The --dot option exports to Graphviz DOT format, which can be rendered to images using tools like Graphviz or online viewers. This is useful for documentation and sharing pipeline architecture with team members.
 
 # SEE ALSO
 

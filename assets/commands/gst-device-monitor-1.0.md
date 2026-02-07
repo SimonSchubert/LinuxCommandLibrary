@@ -1,3 +1,7 @@
+# TAGLINE
+
+GStreamer multimedia device detection tool
+
 # TLDR
 
 **List all devices**
@@ -44,7 +48,9 @@
 
 # DESCRIPTION
 
-**gst-device-monitor-1.0** is a GStreamer tool for detecting and listing available multimedia devices. It shows audio sources (microphones), audio sinks (speakers), video sources (webcams), and other media devices. By default, it lists all devices and exits. Use **--follow** to continuously monitor for device additions and removals.
+**gst-device-monitor-1.0** is a GStreamer tool for detecting and listing available multimedia devices. It shows audio sources (microphones), audio sinks (speakers), video sources (webcams), and other media devices.
+
+By default, it lists all devices and exits. Use **--follow** to continuously monitor for device additions and removals.
 
 # CAVEATS
 
@@ -53,4 +59,3 @@ Requires GStreamer 1.4+ with appropriate plugins. Device detection depends on in
 # SEE ALSO
 
 [gst-launch-1.0](/man/gst-launch-1.0)(1), [gst-inspect-1.0](/man/gst-inspect-1.0)(1)
-

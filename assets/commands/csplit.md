@@ -1,3 +1,7 @@
+# TAGLINE
+
+split files by context patterns
+
 # TLDR
 
 Split a file starting second part at **line 10**

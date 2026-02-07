@@ -1,3 +1,7 @@
+# TAGLINE
+
+Core node software for the Cardano blockchain network
+
 # TLDR
 
 **Run a Cardano node** on mainnet
@@ -88,6 +92,14 @@
 The node can operate in two modes: as a relay node that forwards transactions and blocks, or as a block-producing node (stake pool) that creates new blocks when selected by the protocol. Block producers require KES keys, VRF keys, and an operational certificate.
 
 Communication with the node happens through a Unix domain socket specified by **--socket-path**. The **cardano-cli** tool and other applications use the **CARDANO_NODE_SOCKET_PATH** environment variable to locate this socket for queries and transaction submission.
+
+# CONFIGURATION
+
+**config.json**
+> Main node configuration file specifying protocol parameters, logging, tracing, and network settings.
+
+**topology.json**
+> Defines network peers the node connects to, including relay nodes and block producers.
 
 # CAVEATS
 

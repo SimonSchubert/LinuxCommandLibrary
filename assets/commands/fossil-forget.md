@@ -1,3 +1,7 @@
+# TAGLINE
+
+untrack files without deleting them
+
 # TLDR
 
 **Forget a file**
@@ -23,7 +27,9 @@
 
 # DESCRIPTION
 
-**fossil forget** removes files from source control but leaves them in the working directory. Unlike rm/delete, the file itself is not removed from disk.
+**fossil forget** removes files from source control but leaves them in the working directory. This is useful when you've added files by mistake and want to untrack them without deleting them.
+
+Unlike **fossil rm** or **fossil delete**, forgotten files remain on disk untouched. The command only affects the staging area, removing the scheduled addition of files that haven't been committed yet.
 
 # SEE ALSO
 

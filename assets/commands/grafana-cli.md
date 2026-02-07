@@ -1,3 +1,7 @@
+# TAGLINE
+
+Grafana plugin and administration manager
+
 # TLDR
 
 **Install plugin**
@@ -49,11 +53,9 @@
 
 # DESCRIPTION
 
-**grafana-cli** manages Grafana plugins and administration. It installs, updates, and removes visualization plugins and data sources from the Grafana plugin repository.
+**grafana-cli** manages Grafana plugins and administration tasks. It installs, updates, and removes visualization plugins and data sources from the Grafana plugin repository.
 
-The tool handles plugin installation and updates independently of the Grafana server. It also provides admin commands for password reset and migration.
-
-grafana-cli manages Grafana plugins and configuration.
+The tool handles plugin lifecycle management independently of the Grafana server. It also provides admin commands for password reset and database migration.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display real-time celestial maps in the terminal
+
 # TLDR
 
 **Run** astroterm
@@ -14,11 +18,11 @@ Connect to **specific host**
 
 # DESCRIPTION
 
-**astroterm** is a terminal application, possibly related to astronomical software or a specific terminal emulator. Without widespread documentation, specifics vary by implementation.
+**astroterm** is a terminal-based application that renders real-time celestial maps directly in the console. It displays stars, constellations, and other astronomical objects based on the observer's location and time, providing an interactive planetarium experience without a graphical desktop environment.
 
 # CAVEATS
 
-This appears to be a specialized or lesser-known tool. Functionality may vary significantly by version and context.
+Requires a terminal with Unicode and 256-color or truecolor support for proper rendering. Display quality depends on terminal size and font.
 
 # SEE ALSO
 

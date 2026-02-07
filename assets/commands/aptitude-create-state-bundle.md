@@ -1,3 +1,7 @@
+# TAGLINE
+
+Bundle aptitude state for bug reports
+
 # TLDR
 
 **Create** state bundle for bug reports

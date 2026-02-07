@@ -1,3 +1,7 @@
+# TAGLINE
+
+system fact gathering tool for Puppet
+
 # TLDR
 
 **Show all facts**
@@ -60,6 +64,17 @@
 
 **-p**
 > Include Puppet facts.
+
+# CONFIGURATION
+
+**/etc/facter/facts.d/**
+> Custom external facts directory for system-wide facts.
+
+**/opt/puppetlabs/facter/facts.d/**
+> Puppet-specific custom facts directory.
+
+**~/.facter/facts.d/**
+> User-specific custom facts directory.
 
 # DESCRIPTION
 

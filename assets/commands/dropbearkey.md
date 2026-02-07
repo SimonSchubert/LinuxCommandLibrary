@@ -1,3 +1,7 @@
+# TAGLINE
+
+generate SSH keys for Dropbear
+
 # TLDR
 
 Generate **ed25519** key
@@ -22,9 +26,11 @@ Print **fingerprint and public key**
 
 # DESCRIPTION
 
-**dropbearkey** generates SSH keys in Dropbear format. Dropbear is a lightweight SSH implementation for embedded systems.
+**dropbearkey** generates SSH host and user keys in Dropbear's native format. Dropbear is a lightweight SSH implementation commonly used on embedded systems, routers, and resource-constrained devices where OpenSSH would be too large.
 
-Keys generated are not directly compatible with OpenSSH format; use dropbearconvert to convert between formats.
+The tool supports modern key types including Ed25519, ECDSA, and RSA with configurable key sizes. Generated keys are stored in Dropbear's own format, which differs from OpenSSH's format. If you need to use keys with OpenSSH or vice versa, use dropbearconvert to convert between formats.
+
+Host keys are typically stored in /etc/dropbear/, while user keys can be placed in standard SSH locations.
 
 # PARAMETERS
 

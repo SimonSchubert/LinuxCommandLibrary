@@ -1,3 +1,7 @@
+# TAGLINE
+
+lightweight GNOME spreadsheet application
+
 # TLDR
 
 **Start Gnumeric**
@@ -36,11 +40,9 @@ _FILES_
 
 # DESCRIPTION
 
-**gnumeric** is a spreadsheet application for GNOME. It provides spreadsheet functionality including formulas, charts, and data analysis with high calculation accuracy.
+**Gnumeric** is a spreadsheet application for GNOME. It provides spreadsheet functionality including formulas, charts, and data analysis with high calculation accuracy.
 
-Gnumeric supports various file formats including Excel, OpenDocument, and CSV. It's known for accurate statistical functions and being lightweight.
-
-gnumeric offers accurate, lightweight spreadsheet functionality.
+**Gnumeric** supports various file formats including Excel, OpenDocument, and CSV. It is known for accurate statistical functions and being lightweight compared to full office suites.
 
 # CAVEATS
 

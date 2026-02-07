@@ -1,3 +1,7 @@
+# TAGLINE
+
+Roguelike dungeon exploration game
+
 # TLDR
 
 **Start a new game**
@@ -59,6 +63,14 @@ The game runs in a terminal using ASCII characters to represent the dungeon, mon
 **Stairs**: **>** descend, **<** ascend
 **Target**: ***** to target, **t** to fire
 **Save and quit**: **Ctrl-X**
+
+# CONFIGURATION
+
+**~/.angband/Angband/**
+> User directory containing save files, character dumps, and preferences.
+
+**~/.angband/Angband/user/pref.prf**
+> User preference file for keymaps, colors, and display settings.
 
 # CAVEATS
 

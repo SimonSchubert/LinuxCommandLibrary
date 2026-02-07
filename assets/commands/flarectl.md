@@ -1,3 +1,7 @@
+# TAGLINE
+
+Cloudflare management from the command line
+
 # TLDR
 
 **List DNS records**
@@ -58,7 +62,11 @@
 
 # DESCRIPTION
 
-**flarectl** is the Cloudflare CLI tool. Manages DNS records, zones, firewall rules, and other Cloudflare settings from the command line.
+**Flarectl** is the official command-line interface for managing Cloudflare services. It provides programmatic access to Cloudflare's API, enabling automation of DNS management, zone configuration, firewall rules, and CDN settings without using the web dashboard.
+
+The tool supports common operations including creating and modifying DNS records, managing zone settings like caching and security features, configuring firewall rules and access controls, and retrieving analytics data. Authentication uses API tokens or legacy API keys stored in environment variables or configuration files.
+
+Flarectl is particularly useful for infrastructure-as-code workflows, CI/CD pipelines, and bulk operations across multiple domains. It outputs results in human-readable format by default, with JSON output available for scripting and automation.
 
 # SEE ALSO
 

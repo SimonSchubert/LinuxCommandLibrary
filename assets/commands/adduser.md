@@ -1,3 +1,7 @@
+# TAGLINE
+
+Debian-friendly user and group management frontend
+
 # TLDR
 
 Create a new user with a **default home directory** and prompt for a password
@@ -77,6 +81,11 @@ The utility chooses appropriate UID/GID values, creates home directories with sk
 
 **--conf file**
 > Use alternate configuration file
+
+# CONFIGURATION
+
+**/etc/adduser.conf**
+> Controls default behavior including home directory base path, default shell, skeleton directory, UID/GID ranges, and whether to add users to extra groups automatically.
 
 # CAVEATS
 

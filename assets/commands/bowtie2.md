@@ -1,3 +1,7 @@
+# TAGLINE
+
+Align sequencing reads to reference genomes.
+
 # TLDR
 
 **Align reads** to a reference genome

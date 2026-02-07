@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal user interface for Bluetooth management
+
 # TLDR
 
 **Start** the Bluetooth TUI

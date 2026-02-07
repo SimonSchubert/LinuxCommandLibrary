@@ -1,3 +1,7 @@
+# TAGLINE
+
+GitHub-flavored Markdown preview server
+
 # TLDR
 
 **Preview README in current directory**
@@ -57,7 +61,9 @@
 
 # DESCRIPTION
 
-**grip** (GitHub Readme Instant Preview) is a command-line server that renders GitHub-flavored Markdown using GitHub's API. It displays how your README will appear on GitHub with accurate styling. Changes to files are reflected instantly without page refresh. Use **--offline** to avoid API rate limits for basic rendering.
+**grip** (GitHub Readme Instant Preview) is a command-line server that renders GitHub-flavored Markdown using GitHub's API. It displays how your README will appear on GitHub with accurate styling, and changes to files are reflected instantly without page refresh.
+
+Use **--offline** to avoid API rate limits for basic rendering.
 
 # CAVEATS
 
@@ -66,4 +72,3 @@ Without authentication, GitHub API rate limits may apply. Use **--user** and **-
 # SEE ALSO
 
 [markdown](/man/markdown)(1), [pandoc](/man/pandoc)(1)
-

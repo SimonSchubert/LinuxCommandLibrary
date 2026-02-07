@@ -1,3 +1,7 @@
+# TAGLINE
+
+Program AVR microcontroller flash and fuses
+
 # TLDR
 
 **Upload** firmware to Arduino
@@ -70,6 +74,14 @@ The tool is essential for Arduino development and embedded systems work with AVR
 > Lock bits
 
 Operations: **r** (read), **w** (write), **v** (verify)
+
+# CONFIGURATION
+
+**/etc/avrdude.conf**
+> System-wide configuration defining programmer types, part definitions, and default settings.
+
+**~/.avrduderc**
+> Per-user configuration overrides. Can add custom programmer definitions or modify part settings.
 
 # CAVEATS
 

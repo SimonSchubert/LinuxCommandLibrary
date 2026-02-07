@@ -1,3 +1,7 @@
+# TAGLINE
+
+Ethereum network bootstrap node
+
 # TLDR
 
 **Generate a node key**

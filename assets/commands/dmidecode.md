@@ -1,3 +1,7 @@
+# TAGLINE
+
+DMI/SMBIOS hardware information reader
+
 # TLDR
 
 Show all **DMI table** contents

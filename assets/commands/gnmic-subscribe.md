@@ -1,3 +1,7 @@
+# TAGLINE
+
+subscribe to gNMI streaming telemetry (full form)
+
 # TLDR
 
 **Subscribe to a path**
@@ -61,4 +65,3 @@
 # SEE ALSO
 
 [gnmic](/man/gnmic)(1), [gnmic-get](/man/gnmic-get)(1)
-

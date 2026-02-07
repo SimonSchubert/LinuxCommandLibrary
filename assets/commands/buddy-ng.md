@@ -1,3 +1,7 @@
+# TAGLINE
+
+Companion server for easside-ng WEP attacks
+
 # TLDR
 
 **Start buddy-ng server**

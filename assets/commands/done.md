@@ -1,3 +1,7 @@
+# TAGLINE
+
+mark task complete or end loop
+
 # TLDR
 
 **Mark task as done** (Taskwarrior)

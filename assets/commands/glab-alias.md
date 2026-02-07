@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage command aliases for GitLab CLI
+
 # TLDR
 
 **List aliases**
@@ -29,9 +33,10 @@
 
 # DESCRIPTION
 
-**glab alias** manages command aliases for the GitLab CLI. Create shortcuts for frequently used commands.
+**glab alias** manages command aliases for the GitLab CLI. It allows creating shortcuts for frequently used glab commands, making common workflows faster to execute.
+
+Aliases are stored in the glab configuration and can reference any valid glab command with arguments.
 
 # SEE ALSO
 
 [glab](/man/glab)(1)
-

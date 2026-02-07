@@ -1,3 +1,7 @@
+# TAGLINE
+
+Data Matrix barcode decoder
+
 # TLDR
 
 **Read Data Matrix barcode from image**

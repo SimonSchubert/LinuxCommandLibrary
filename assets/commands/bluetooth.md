@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Bluetooth devices interactively
+
 # TLDR
 
 **Start Bluetooth interactive mode**

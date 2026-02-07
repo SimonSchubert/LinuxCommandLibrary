@@ -1,3 +1,7 @@
+# TAGLINE
+
+Groff font file format description
+
 # TLDR
 
 **List available fonts**
@@ -14,9 +18,9 @@
 
 # DESCRIPTION
 
-**groff_font** describes the format of font files used by GNU troff (groff). Font files define character metrics, kerning pairs, and other typographic information.
+**groff_font** describes the format of font files used by GNU troff (groff). Font files define character metrics, kerning pairs, and other typographic information needed for text layout.
 
-Font files are stored in device-specific subdirectories under /usr/share/groff/. Each output device (ps, pdf, html) has its own font definitions.
+Font files are stored in device-specific subdirectories under /usr/share/groff/. Each output device (ps, pdf, html) has its own font definitions with the DESC file specifying device parameters.
 
 # FONT FILE FORMAT
 

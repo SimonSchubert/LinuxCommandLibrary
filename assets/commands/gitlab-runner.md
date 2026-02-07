@@ -1,3 +1,7 @@
+# TAGLINE
+
+CI/CD job execution agent for GitLab
+
 # TLDR
 
 **Register a new runner**
@@ -87,13 +91,14 @@
 
 **gitlab-runner** is the agent that runs CI/CD jobs for GitLab. It connects to a GitLab instance, receives job requests, executes them in isolated environments, and reports results back. Runners can be shared across projects or dedicated to specific ones.
 
-The runner supports multiple executors that define how jobs run: **shell** (directly on host), **docker** (in containers), **docker-machine** (auto-scaled Docker), **kubernetes** (in K8s pods), **virtualbox**, **parallels**, and **ssh**. Docker executor is most common for isolated, reproducible builds.
+The runner supports multiple executors: **shell** (directly on host), **docker** (in containers), **docker-machine** (auto-scaled Docker), **kubernetes** (in K8s pods), **virtualbox**, **parallels**, and **ssh**. The Docker executor is most common for isolated, reproducible builds.
 
-Configuration is stored in **config.toml** (typically at /etc/gitlab-runner/config.toml). Each registered runner appears as a `[[runners]]` section with its URL, token, executor, and settings. The config can be edited manually or regenerated with register.
+Registration requires a GitLab URL and registration token from the project/group/admin CI settings. Runners can operate as a system service or run in the foreground for debugging.
 
-Registration requires a GitLab URL and registration token (found in project/group/admin CI settings). During registration, you specify the executor, tags (for job matching), and executor-specific settings like Docker image.
+# CONFIGURATION
 
-Runners can run as a system service or in foreground for debugging. For production, install as a service to ensure it starts on boot and restarts on failure.
+**/etc/gitlab-runner/config.toml**
+> Main configuration file where each registered runner appears as a `[[runners]]` section with its URL, token, executor, and settings.
 
 # CAVEATS
 

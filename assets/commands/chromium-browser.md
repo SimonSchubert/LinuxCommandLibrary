@@ -1,3 +1,7 @@
+# TAGLINE
+
+Open-source web browser with extensive command-line controls
+
 # TLDR
 
 **Open URL**
@@ -30,7 +34,11 @@
 
 # DESCRIPTION
 
-**chromium-browser** is the open-source web browser that Chrome is based on. Supports extensive command-line switches for customization, debugging, and automation.
+**chromium-browser** is the open-source web browser project that forms the foundation of Google Chrome, Microsoft Edge, and many other browsers. It provides a full-featured browsing experience with support for modern web standards, extensions, and developer tools.
+
+The browser supports an extensive set of command-line switches for customization, debugging, and automation. Headless mode enables server-side rendering, automated testing, and screenshot/PDF generation without a graphical display. Remote debugging via DevTools Protocol allows external tools to inspect and control browser sessions.
+
+Chromium can be configured to use specific user profiles, proxy servers, and experimental features. It is commonly used in CI/CD pipelines, web scraping, and automated testing environments alongside tools like Puppeteer and Playwright.
 
 # PARAMETERS
 
@@ -81,6 +89,14 @@
 ```
 chromium-browser --headless --print-to-pdf=page.pdf https://example.com
 ```
+
+# CONFIGURATION
+
+**~/.config/chromium/**
+> User profile directory containing preferences, bookmarks, history, and extensions.
+
+**~/.config/chromium/Default/Preferences**
+> JSON file with per-profile browser settings.
 
 # CAVEATS
 

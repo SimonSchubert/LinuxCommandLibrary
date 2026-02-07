@@ -1,3 +1,7 @@
+# TAGLINE
+
+Privacy-focused web browser
+
 # TLDR
 
 **Open** Brave browser

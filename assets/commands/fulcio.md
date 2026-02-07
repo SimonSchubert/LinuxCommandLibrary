@@ -1,3 +1,7 @@
+# TAGLINE
+
+certificate authority for keyless code signing
+
 # TLDR
 
 **Start Fulcio server**
@@ -31,6 +35,11 @@
 
 **version**
 > Show version.
+
+# CONFIGURATION
+
+**/etc/fulcio/config.yaml**
+> Server configuration including OIDC provider settings, certificate policies, and CA parameters.
 
 # DESCRIPTION
 

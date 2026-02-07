@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compile a Rust package and its dependencies
+
 # TLDR
 
 **Build project**

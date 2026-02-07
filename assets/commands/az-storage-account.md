@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Azure Storage accounts
+
 # TLDR
 
 **Create a storage account**

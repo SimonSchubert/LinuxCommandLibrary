@@ -1,3 +1,7 @@
+# TAGLINE
+
+standalone compositor for X11 window systems
+
 # TLDR
 
 **Start compton** with default settings
@@ -76,6 +80,14 @@
 
 **--backend** _BACKEND_
 > Rendering backend: xrender, glx.
+
+# CONFIGURATION
+
+**~/.config/compton.conf**
+> User configuration file for compton settings.
+
+**/etc/xdg/compton.conf**
+> System-wide default configuration.
 
 # DESCRIPTION
 

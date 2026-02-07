@@ -1,3 +1,7 @@
+# TAGLINE
+
+NCBI Entrez database information tool
+
 # TLDR
 
 **Print** all database names

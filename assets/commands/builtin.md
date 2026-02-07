@@ -1,3 +1,7 @@
+# TAGLINE
+
+Execute a shell built-in command directly
+
 # TLDR
 
 **Run** built-in command

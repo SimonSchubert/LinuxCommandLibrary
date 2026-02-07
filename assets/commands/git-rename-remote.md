@@ -1,3 +1,7 @@
+# TAGLINE
+
+Rename a Git remote
+
 # TLDR
 
 **Rename remote**
@@ -10,9 +14,8 @@
 
 # DESCRIPTION
 
-**git rename-remote** renames a Git remote. Part of git-extras. A convenience wrapper around git remote rename.
+**git rename-remote** renames a Git remote. Part of git-extras, it is a convenience wrapper around `git remote rename`.
 
 # SEE ALSO
 
 [git-remote](/man/git-remote)(1), [git-extras](/man/git-extras)(1)
-

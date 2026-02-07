@@ -1,3 +1,7 @@
+# TAGLINE
+
+interactive codebase-wide find and replace
+
 # TLDR
 
 **Replace string in files**

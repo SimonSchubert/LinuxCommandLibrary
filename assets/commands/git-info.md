@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display comprehensive repository information
+
 # TLDR
 
 **Show repository info**
@@ -22,11 +26,9 @@
 
 # DESCRIPTION
 
-**git info** displays comprehensive repository information. It shows configuration, remotes, branch status, and recent commits in a single formatted view.
+**git info** displays comprehensive repository information in a single formatted view, including configuration, remotes, branch status, and recent commits. It provides a quick overview of repository name, remote URLs, branch information, last commit details, and file statistics.
 
-The output includes repository name, remote URLs, branch information, last commit details, and file statistics. It provides a quick overview of repository state.
-
-git info gives a snapshot of the current repository status.
+Part of the git-extras suite, this command gives a snapshot of the current repository state without needing to run multiple separate git commands.
 
 # CAVEATS
 

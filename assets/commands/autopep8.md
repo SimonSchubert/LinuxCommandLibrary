@@ -1,3 +1,7 @@
+# TAGLINE
+
+Automatically format Python code to PEP 8 style
+
 # TLDR
 
 **Format** Python file
@@ -65,6 +69,17 @@ Based on PEP 8:
 - **E**: Errors
 - **W**: Warnings
 - Examples: E501 (line too long), W291 (trailing whitespace)
+
+# CONFIGURATION
+
+**setup.cfg**
+> Project-level configuration under `[pycodestyle]` section.
+
+**pyproject.toml**
+> Project-level configuration under `[tool.autopep8]` section.
+
+**~/.config/pycodestyle**
+> User-level default configuration for pycodestyle rules.
 
 # CAVEATS
 

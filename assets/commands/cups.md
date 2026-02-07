@@ -1,3 +1,7 @@
+# TAGLINE
+
+Common UNIX Printing System
+
 # TLDR
 
 **List available printers**
@@ -91,6 +95,17 @@
 Administration: http://localhost:631/admin
 
 Requires user in lpadmin group.
+
+# CONFIGURATION
+
+**/etc/cups/cupsd.conf**
+> Main CUPS daemon configuration file controlling server behavior, access control, and logging.
+
+**/etc/cups/printers.conf**
+> Printer definitions and settings (managed automatically by cupsd).
+
+**~/.cups/lpoptions**
+> User-specific default printer options and preferences.
 
 # CAVEATS
 

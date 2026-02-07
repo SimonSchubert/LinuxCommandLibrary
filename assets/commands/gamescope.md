@@ -1,3 +1,7 @@
+# TAGLINE
+
+Wayland gaming micro-compositor
+
 # TLDR
 
 Run a program with **gamescope**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage devices in a bcachefs filesystem
+
 # TLDR
 
 Format and **add a new device** to an existing filesystem

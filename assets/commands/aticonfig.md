@@ -1,3 +1,7 @@
+# TAGLINE
+
+Configure AMD/ATI proprietary graphics drivers
+
 # TLDR
 
 **Display current GPU configuration**
@@ -81,6 +85,11 @@
 The tool generates and modifies X configuration files, manages multi-monitor setups, and provides access to OverDrive features for monitoring temperatures and adjusting clock speeds. It serves as the CLI counterpart to the AMD Catalyst Control Center graphical tool.
 
 Configuration changes for X.org typically require restart of the X server to take effect. OverDrive settings for clocks and fan control can be applied at runtime.
+
+# CONFIGURATION
+
+**/etc/X11/xorg.conf**
+> X.org server configuration file generated and modified by aticonfig for display settings, multi-monitor layout, and GPU parameters.
 
 # CAVEATS
 

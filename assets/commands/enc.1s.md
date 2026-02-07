@@ -1,3 +1,7 @@
+# TAGLINE
+
+symmetric encryption and decryption utility
+
 # TLDR
 
 **Encrypt file with** cipher

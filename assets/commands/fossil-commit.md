@@ -1,3 +1,7 @@
+# TAGLINE
+
+record changes to repository
+
 # TLDR
 
 **Commit with message**
@@ -46,7 +50,11 @@
 
 # DESCRIPTION
 
-**fossil commit** records changes in the working copy to the repository. Creates a new check-in with the specified comment.
+**fossil commit** records changes in the working copy to the repository, creating a new check-in with the specified comment. All files previously added or modified are included in the commit.
+
+The command opens an editor for the commit message if **-m** is not provided. Unlike Git, Fossil uses autosync by default, potentially pushing changes to configured remotes immediately after commit.
+
+Commits can create new branches, add tags, and include metadata like timestamps and user information. The **--private** option creates commits that won't be pushed to public repositories.
 
 # SEE ALSO
 

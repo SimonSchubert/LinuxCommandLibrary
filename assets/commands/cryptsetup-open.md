@@ -1,3 +1,7 @@
+# TAGLINE
+
+open and map LUKS encrypted volume
+
 # TLDR
 
 **Open** a LUKS volume and create decrypted mapping

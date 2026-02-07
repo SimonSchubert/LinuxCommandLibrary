@@ -1,3 +1,7 @@
+# TAGLINE
+
+Read and modify symbolic references like HEAD
+
 # TLDR
 
 **Show HEAD target**
@@ -42,11 +46,9 @@ _REF_
 
 # DESCRIPTION
 
-**git symbolic-ref** reads and modifies symbolic references. HEAD is the most common symbolic ref, pointing to the current branch.
+**git symbolic-ref** reads and modifies symbolic references. HEAD is the most common symbolic ref, pointing to the currently checked-out branch. This plumbing command shows which branch HEAD points to or changes it programmatically.
 
-The command shows where HEAD points (which branch is checked out) or changes it. It's a plumbing command used by checkout and branch operations.
-
-git symbolic-ref manages symbolic references like HEAD.
+When HEAD is detached (pointing directly to a commit rather than a branch), this command will report an error, distinguishing it from `git rev-parse`.
 
 # CAVEATS
 

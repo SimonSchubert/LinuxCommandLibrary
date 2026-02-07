@@ -1,3 +1,7 @@
+# TAGLINE
+
+Administer group passwords and membership
+
 # TLDR
 
 Define group **administrators**
@@ -46,11 +50,9 @@ Create a **password** for the named group
 
 # DESCRIPTION
 
-**gpasswd** administers /etc/group and /etc/gshadow files. It's used to add and remove users from groups, set group administrators, and manage group passwords.
+**gpasswd** administers /etc/group and /etc/gshadow files. It is used to add and remove users from groups, set group administrators, and manage group passwords.
 
-Group administrators (set with **-A**) can add or remove members without root privileges. This delegates group management to trusted users.
-
-Group passwords (rarely used) allow non-members to temporarily join a group using the **newgrp** command with the password. This is generally considered less secure than proper group membership.
+Group administrators (set with **-A**) can add or remove members without root privileges, delegating group management to trusted users. Group passwords (rarely used) allow non-members to temporarily join a group using the **newgrp** command.
 
 # CAVEATS
 

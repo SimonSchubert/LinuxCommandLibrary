@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display X application resource settings.
+
 # TLDR
 
 **Show** resources for an application

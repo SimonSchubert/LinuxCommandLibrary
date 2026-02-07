@@ -1,3 +1,7 @@
+# TAGLINE
+
+spelling checker for source code and text files
+
 # TLDR
 
 **Check for misspellings** in the current directory

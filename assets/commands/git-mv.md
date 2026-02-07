@@ -1,3 +1,7 @@
+# TAGLINE
+
+Move or rename tracked files
+
 # TLDR
 
 **Rename a file**
@@ -45,11 +49,9 @@ _DESTINATION_
 
 # DESCRIPTION
 
-**git mv** moves or renames files and directories while updating the index. It's equivalent to moving the file, deleting the old path from git, and adding the new path.
+**git mv** moves or renames files and directories while updating the Git index. It is equivalent to moving the file with `mv`, deleting the old path with `git rm`, and adding the new path with `git add`.
 
-The command preserves file history by recording the rename. Git detects renames by content similarity, so the explicit command helps ensure proper tracking.
-
-git mv provides tracked file relocation.
+Using this command ensures the rename is properly staged for the next commit. While Git can detect renames automatically through content analysis, using `git mv` makes the intent explicit and updates the index in one step.
 
 # CAVEATS
 

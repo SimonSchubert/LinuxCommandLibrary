@@ -1,3 +1,7 @@
+# TAGLINE
+
+Search GitHub for repositories, code, issues, and more
+
 # TLDR
 
 **Search repositories**
@@ -64,9 +68,10 @@
 
 # DESCRIPTION
 
-**gh search** searches across GitHub for repositories, code, issues, pull requests, and commits. Supports GitHub's powerful search syntax.
+**gh search** provides command-line access to GitHub's powerful search capabilities across repositories, code, issues, pull requests, and commits. It supports GitHub's full search syntax including qualifiers, filters, and boolean operators.
+
+Repository search enables finding projects by language, stars, topics, and other metadata. Code search indexes file contents across public repositories, useful for finding implementation examples. Issue and PR search support filtering by state, author, labels, and mentions.
 
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-repo](/man/gh-repo)(1)
-

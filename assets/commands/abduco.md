@@ -1,3 +1,7 @@
+# TAGLINE
+
+lightweight terminal session manager
+
 # TLDR
 
 **Create** a new session with a command

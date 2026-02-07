@@ -1,3 +1,7 @@
+# TAGLINE
+
+Install prebuilt Rust binaries from crates.io
+
 # TLDR
 
 **Install package binary**

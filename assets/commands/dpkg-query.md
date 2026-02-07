@@ -1,3 +1,7 @@
+# TAGLINE
+
+query dpkg database information
+
 # TLDR
 
 **List** all installed packages
@@ -26,7 +30,11 @@ Show package **information**
 
 # DESCRIPTION
 
-**dpkg-query** queries the dpkg database for information about installed packages. It can list packages, show their status, list files they contain, or find which package owns a file.
+**dpkg-query** queries the dpkg database for information about installed packages on Debian-based systems. It provides a read-only interface to the package database, allowing you to search for packages, inspect their metadata, and determine file ownership.
+
+The tool is essential for system administration tasks like verifying package installations, troubleshooting file conflicts, and generating package inventories. Unlike dpkg itself, dpkg-query only reads information and never modifies the package database, making it safe to use without elevated privileges.
+
+Its custom output formatting capabilities make it particularly useful in scripts and automation workflows.
 
 # PARAMETERS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+custom desktop widget system
+
 # TLDR
 
 Start the **daemon**
@@ -28,12 +32,6 @@ Print and **watch logs**
 
 **eww** [_options_] _command_ [_arguments_]
 
-# DESCRIPTION
-
-**eww** (ElKowar's Wacky Widgets) creates custom desktop widgets for any window manager. It uses a configuration language to define widgets with dynamic content and styling.
-
-Popular for creating status bars, sidebars, and other desktop elements.
-
 # PARAMETERS
 
 **daemon**
@@ -56,6 +54,20 @@ Popular for creating status bars, sidebars, and other desktop elements.
 
 **-c, --config** _path_
 > Specify config directory
+
+# DESCRIPTION
+
+**eww** (ElKowar's Wacky Widgets) creates custom desktop widgets for any window manager. It uses a configuration language to define widgets with dynamic content and styling.
+
+Popular for creating status bars, sidebars, and other desktop elements.
+
+# CONFIGURATION
+
+**~/.config/eww/eww.yuck**
+> Widget definitions and structure written in the eww configuration language.
+
+**~/.config/eww/eww.scss**
+> Widget styling using CSS/SCSS syntax.
 
 # CAVEATS
 

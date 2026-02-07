@@ -1,3 +1,7 @@
+# TAGLINE
+
+display or set NIS domain name
+
 # TLDR
 
 **Show current NIS domain name**

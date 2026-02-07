@@ -1,3 +1,7 @@
+# TAGLINE
+
+manage SysVinit service runlevels
+
 # TLDR
 
 **List** services with runlevel
@@ -47,6 +51,11 @@ This tool is primarily used on CentOS 6 and older RHEL systems. Modern systems u
 
 **--del** _name_
 > Remove a service from management
+
+# CONFIGURATION
+
+**/etc/rc.d/init.d/**
+> Directory containing SysVinit service scripts managed by chkconfig. Each script includes a chkconfig header specifying default runlevels.
 
 # CAVEATS
 

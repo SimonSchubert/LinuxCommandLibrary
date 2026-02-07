@@ -1,3 +1,7 @@
+# TAGLINE
+
+manage DNF repositories and configuration
+
 # TLDR
 
 **Add** repository from URL
@@ -26,9 +30,9 @@
 
 # DESCRIPTION
 
-**dnf config-manager** manages DNF configuration options and repositories. Part of dnf-plugins-core.
+**dnf config-manager** provides command-line management of DNF repositories and configuration settings. It's part of dnf-plugins-core and offers an alternative to manually editing configuration files.
 
-Can add, enable, disable repositories and modify DNF configuration values.
+The tool can add repositories from URLs (creating .repo files automatically), enable or disable existing repositories, and modify DNF configuration options on the fly. Changes to repositories are persisted in /etc/yum.repos.d/ as .repo files. This is particularly useful for scripted repository management, adding third-party repositories, or temporarily adjusting configuration without editing files manually. The --dump option is helpful for troubleshooting by showing the complete effective configuration.
 
 # PARAMETERS
 
@@ -49,6 +53,14 @@ Can add, enable, disable repositories and modify DNF configuration values.
 
 **--help-cmd**
 > Display help
+
+# CONFIGURATION
+
+**/etc/yum.repos.d/*.repo**
+> Repository configuration files. Changes made by dnf config-manager persist here.
+
+**/etc/dnf/dnf.conf**
+> Main DNF configuration file. Options can be modified using --setopt.
 
 # CAVEATS
 

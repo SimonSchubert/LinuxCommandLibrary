@@ -1,3 +1,7 @@
+# TAGLINE
+
+graphical front-end for retro gaming emulators
+
 # TLDR
 
 **Start EmulationStation**

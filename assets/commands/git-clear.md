@@ -1,3 +1,7 @@
+# TAGLINE
+
+Reset and clean working directory
+
 # TLDR
 
 **Clear working directory**
@@ -19,7 +23,11 @@
 
 # DESCRIPTION
 
-**git clear** removes untracked files and resets the working directory. Part of git-extras. Combines git reset and git clean operations.
+**git clear** is a git-extras command that combines git reset --hard and git clean operations into a single convenience command. It removes all uncommitted changes, both tracked and untracked, returning the repository to a pristine state matching HEAD.
+
+This command is useful when you want to completely abandon all local modifications and start fresh. It's more aggressive than git reset --hard alone, which only removes changes to tracked files, leaving untracked files intact.
+
+The operation is destructive and cannot be undone, as it permanently deletes uncommitted work. The -f flag bypasses confirmation prompts, allowing automated scripts to clean repositories without user interaction. Use with caution in repositories containing valuable uncommitted work.
 
 # SEE ALSO
 

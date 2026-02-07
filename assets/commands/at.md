@@ -1,3 +1,7 @@
+# TAGLINE
+
+Schedule commands to execute at a specified time
+
 # TLDR
 
 Create commands interactively and execute them in **5 minutes**
@@ -54,6 +58,14 @@ Execute commands from a **file** at a specific time
 
 **-v**
 > Show the time the job will be executed
+
+# CONFIGURATION
+
+**/etc/at.allow**
+> If this file exists, only users listed in it can schedule jobs with at.
+
+**/etc/at.deny**
+> Users listed in this file are denied access to at. Ignored if at.allow exists.
 
 # CAVEATS
 

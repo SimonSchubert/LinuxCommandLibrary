@@ -1,3 +1,7 @@
+# TAGLINE
+
+shell builtin for dynamic command execution
+
 # TLDR
 
 **Evaluate and execute** arguments

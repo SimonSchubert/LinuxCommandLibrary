@@ -1,3 +1,7 @@
+# TAGLINE
+
+format Go source code to standard style
+
 # TLDR
 
 **Format a Go file**
@@ -64,4 +68,3 @@
 # SEE ALSO
 
 [go](/man/go)(1), [goimports](/man/goimports)(1)
-

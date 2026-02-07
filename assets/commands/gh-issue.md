@@ -1,3 +1,7 @@
+# TAGLINE
+
+manage repository issues and bug reports
+
 # TLDR
 
 **List issues**
@@ -81,7 +85,11 @@
 
 # DESCRIPTION
 
-**gh issue** manages GitHub issues. Create, view, edit, and track issues for bug reports, feature requests, and tasks.
+**gh issue** manages GitHub issues for tracking bugs, feature requests, tasks, and discussions. Issues form the core of project management on GitHub, supporting labels, assignees, milestones, and projects.
+
+The command provides comprehensive issue lifecycle management including creation, editing, commenting, status changes, and deletion. Filtering capabilities enable finding issues by assignee, label, state, and search queries. Issues can be managed across multiple repositories.
+
+Integration with pull requests allows linking issues to code changes, with automatic closing when PRs merge using keywords in commit messages.
 
 # SEE ALSO
 

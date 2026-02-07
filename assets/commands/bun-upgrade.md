@@ -1,3 +1,7 @@
+# TAGLINE
+
+Upgrade the runtime itself
+
 # TLDR
 
 **Upgrade Bun** to the latest version

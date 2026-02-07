@@ -1,3 +1,7 @@
+# TAGLINE
+
+DocBook Authoring and Publishing Suite
+
 # TLDR
 
 **Build HTML documentation**

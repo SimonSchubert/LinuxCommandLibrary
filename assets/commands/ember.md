@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line interface for Ember.js framework
+
 # TLDR
 
 **Create new Ember** app
@@ -53,6 +57,14 @@ _COMMAND_
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**.ember-cli**
+> Project-specific Ember CLI configuration file.
+
+**config/environment.js**
+> Main application configuration including API endpoints, feature flags, and environment-specific settings.
 
 # DESCRIPTION
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+CLI for Drupal code generation and site management
+
 # TLDR
 
 **Generate module** boilerplate
@@ -57,6 +61,14 @@ _COMMAND_
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**~/.console/config.yml**
+> User-level configuration for Drupal Console, including default options and preferences.
+
+**drupal.yml**
+> Project-specific configuration file in Drupal root, defining module paths and custom settings.
 
 # DESCRIPTION
 

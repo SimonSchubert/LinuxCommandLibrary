@@ -1,3 +1,7 @@
+# TAGLINE
+
+Deploy Azure resources using ARM templates and Bicep
+
 # TLDR
 
 **Create a resource group deployment** from a template

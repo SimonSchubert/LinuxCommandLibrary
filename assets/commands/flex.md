@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast lexical analyzer generator
+
 # TLDR
 
 **Generate** an analyzer from a Lex file (output: lex.yy.c)

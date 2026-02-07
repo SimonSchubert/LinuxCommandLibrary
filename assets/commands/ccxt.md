@@ -1,3 +1,7 @@
+# TAGLINE
+
+cryptocurrency exchange trading CLI
+
 # TLDR
 
 **Fetch the order book** for a trading pair
@@ -86,6 +90,11 @@ _exchange_id_ **createOrder** _symbol_ _type_ _side_ _amount_ [_price_]
 The CLI supports both public APIs (no authentication needed) and private APIs (requiring API keys). Credentials can be provided via environment variables (e.g., BINANCE_APIKEY, BINANCE_SECRET) or a keys.local.json configuration file.
 
 Output is JSON by default and can be piped to tools like **jq** for processing. The **--table** option provides human-readable formatted output.
+
+# CONFIGURATION
+
+**keys.local.json**
+> Stores API keys and secrets for exchange authentication. Located in the working directory.
 
 # CAVEATS
 

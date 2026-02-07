@@ -1,3 +1,7 @@
+# TAGLINE
+
+Check in revisions to the RCS version control system
+
 # TLDR
 
 **Check in a file to RCS (removes working file)**

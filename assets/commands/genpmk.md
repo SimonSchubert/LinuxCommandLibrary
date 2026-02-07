@@ -1,3 +1,7 @@
+# TAGLINE
+
+WPA/WPA2 PSK precomputation tool
+
 # TLDR
 
 **Generate hash table**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+low-level firmware manipulation tool
+
 # TLDR
 
 Display all **devices detected** by fwupd

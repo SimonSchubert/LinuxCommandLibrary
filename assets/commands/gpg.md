@@ -1,3 +1,7 @@
+# TAGLINE
+
+GNU Privacy Guard encryption and signing tool
+
 # TLDR
 
 **Generate a new key pair**
@@ -112,11 +116,20 @@
 
 # DESCRIPTION
 
-**gpg** (GNU Privacy Guard) is a complete and free implementation of the OpenPGP standard as defined by RFC 4880. It allows you to encrypt and sign data and communications, features a versatile key management system, and provides access modules for public key directories.
+**gpg** (GNU Privacy Guard) is a complete and free implementation of the OpenPGP standard as defined by RFC 4880. It allows encrypting and signing data, features a versatile key management system, and provides access modules for public key directories.
 
-GPG is a command-line tool with features for easy integration with other applications. It supports both symmetric (password-based) and asymmetric (public/private key) encryption. The program creates and manages key pairs for secure communication and can verify digital signatures to ensure data integrity and authenticity.
+GPG supports both symmetric (password-based) and asymmetric (public/private key) encryption. Common use cases include encrypting sensitive files, signing email messages, verifying software package authenticity, and establishing secure communication channels.
 
-Common use cases include encrypting sensitive files, signing email messages, verifying software package authenticity, and establishing secure communication channels between parties.
+# CONFIGURATION
+
+**~/.gnupg/gpg.conf**
+> User configuration file for default options, keyserver settings, and algorithm preferences.
+
+**~/.gnupg/pubring.kbx**
+> Public keyring database storing imported and generated public keys.
+
+**~/.gnupg/trustdb.gpg**
+> Trust database for the web of trust model.
 
 # CAVEATS
 

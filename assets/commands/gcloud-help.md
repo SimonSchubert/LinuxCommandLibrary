@@ -1,3 +1,7 @@
+# TAGLINE
+
+integrated documentation for gcloud commands
+
 # TLDR
 
 **General help**
@@ -33,11 +37,11 @@ _COMMAND_
 
 # DESCRIPTION
 
-**gcloud help** displays help information for gcloud commands. It provides usage, descriptions, and examples for any command or command group.
+**gcloud help** provides access to the comprehensive built-in documentation system for the Google Cloud SDK. Every gcloud command and command group has detailed help text covering syntax, available options, and common usage examples.
 
-The help system covers all gcloud functionality with detailed explanations. Searching helps find commands when you don't know the exact name.
+Help can be accessed for any command by specifying its full path, such as "gcloud help compute instances create" for detailed instance creation documentation. The --all flag lists every available command in the SDK, useful for discovering lesser-known commands.
 
-gcloud help is the built-in reference for learning and using the CLI.
+The search functionality (via -- keyword) allows finding relevant commands when you know what you want to accomplish but not the exact command name. This is particularly valuable given the extensive gcloud command surface, which spans dozens of service groups and hundreds of individual commands. The help system is always current with your installed SDK version, ensuring accuracy for the specific components you have.
 
 # CAVEATS
 

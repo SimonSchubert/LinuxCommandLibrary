@@ -1,3 +1,7 @@
+# TAGLINE
+
+CLI for building Angular web applications
+
 # TLDR
 
 **Create a new Angular workspace** and application
@@ -95,6 +99,14 @@ The CLI automates common development tasks through schematics - templates that g
 Projects are configured through **angular.json**, which defines build targets, file paths, and environment-specific settings. The CLI supports multiple projects within a single workspace, enabling monorepo-style development.
 
 The **serve** command provides a development server with hot module replacement, automatically rebuilding and refreshing the browser when source files change. Production builds use **build --configuration production** which enables optimizations like ahead-of-time compilation, tree shaking, and minification.
+
+# CONFIGURATION
+
+**angular.json**
+> Project workspace configuration defining build targets, file paths, and environment settings.
+
+**tsconfig.json**
+> TypeScript compiler configuration for the Angular project.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate Makefile.in templates from Makefile.am
+
 # TLDR
 
 **Generate** Makefile.in

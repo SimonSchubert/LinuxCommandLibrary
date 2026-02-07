@@ -1,3 +1,7 @@
+# TAGLINE
+
+Background Rust code checker
+
 # TLDR
 
 **Run** background checker for Rust
@@ -62,12 +66,11 @@ The tool provides immediate feedback during development without manually running
 
 # CONFIGURATION
 
-Configuration in bacon.toml:
-```toml
-[jobs.check]
-command = ["cargo", "check", "--color", "always"]
-need_stdout = false
-```
+**bacon.toml**
+> Project-level configuration for jobs, keybindings, and display settings.
+
+**~/.config/bacon/prefs.toml**
+> User-level preferences and default settings.
 
 # CAVEATS
 

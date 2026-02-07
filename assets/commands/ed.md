@@ -1,3 +1,7 @@
+# TAGLINE
+
+standard Unix line editor
+
 # TLDR
 
 **Start ed with** file

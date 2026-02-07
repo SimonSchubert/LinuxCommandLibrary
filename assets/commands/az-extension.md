@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Azure CLI extensions
+
 # TLDR
 
 **List installed extensions**

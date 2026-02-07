@@ -1,3 +1,7 @@
+# TAGLINE
+
+cloud platform CLI for Kubernetes and infrastructure
+
 # TLDR
 
 **Create Kubernetes cluster**
@@ -102,6 +106,11 @@
 
 **--config** _file_
 > Config file path
+
+# CONFIGURATION
+
+**~/.civo.json**
+> Stores API keys, default region, and CLI preferences.
 
 # CAVEATS
 

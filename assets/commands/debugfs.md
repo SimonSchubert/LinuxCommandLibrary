@@ -1,3 +1,7 @@
+# TAGLINE
+
+interactive debugger for ext2/ext3/ext4 filesystems
+
 # TLDR
 
 Open filesystem in **read-only** mode

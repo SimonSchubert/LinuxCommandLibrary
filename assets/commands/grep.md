@@ -1,3 +1,7 @@
+# TAGLINE
+
+Pattern-matching text search utility
+
 # TLDR
 
 **Search for pattern in file**
@@ -84,11 +88,9 @@ _FILES_
 
 # DESCRIPTION
 
-**grep** searches files for lines matching a pattern. It's one of the most fundamental Unix utilities, named for g/re/p (global regular expression print) from ed.
+**grep** searches files for lines matching a regular expression pattern. It is one of the most fundamental Unix utilities, named for g/re/p (global regular expression print) from the ed editor.
 
-The tool supports basic and extended regular expressions, recursive directory searching, and various output formats. It can search multiple files, show context around matches, and highlight results.
-
-grep is essential for text searching and filtering.
+The tool supports basic and extended regular expressions, recursive directory searching, and various output formats. It can search multiple files, show context around matches, and highlight results with color.
 
 # CAVEATS
 

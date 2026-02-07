@@ -1,3 +1,7 @@
+# TAGLINE
+
+versatile resource statistics tool
+
 # TLDR
 
 Display **CPU, disk, net, paging, system** statistics
@@ -30,9 +34,13 @@ Display **battery** information
 
 # DESCRIPTION
 
-**dstat** is a versatile system resource statistics generator. It combines the functionality of vmstat, iostat, netstat, and ifstat in a single tool with colorful output.
+**dstat** is a versatile system resource statistics generator that unifies the functionality of vmstat, iostat, netstat, and ifstat in a single tool. It provides real-time monitoring of CPU, memory, disk I/O, network, processes, and other system resources with colorful, easy-to-read output.
 
-Note: dstat is deprecated and no longer maintained. Consider using dool or other alternatives.
+The tool's plugin architecture allows for extensible monitoring capabilities beyond the standard metrics. Users can display top CPU and memory consumers, battery information, and custom statistics through third-party plugins. Output updates at configurable intervals, making it suitable for both quick system checks and continuous monitoring.
+
+dstat's strength lies in its ability to correlate metrics across different subsystems in one view. For example, you can simultaneously monitor CPU usage, disk I/O, and network traffic to understand system bottlenecks.
+
+Important note: dstat is deprecated and no longer maintained. The Python 2 codebase has not been updated for modern systems. Users should consider alternatives like dool (a maintained fork), or use the traditional sysstat tools (vmstat, iostat, sar) which continue to be actively maintained.
 
 # PARAMETERS
 

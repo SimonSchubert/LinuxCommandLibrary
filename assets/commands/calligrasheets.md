@@ -1,3 +1,7 @@
+# TAGLINE
+
+Spreadsheet application from Calligra suite
+
 # TLDR
 
 **Launch Calligra Sheets**

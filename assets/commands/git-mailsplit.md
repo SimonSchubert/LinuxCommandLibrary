@@ -1,3 +1,7 @@
+# TAGLINE
+
+Split mbox into individual messages
+
 # TLDR
 
 **Split mbox into messages**
@@ -37,11 +41,9 @@ _MBOX_
 
 # DESCRIPTION
 
-**git mailsplit** splits an mbox file into individual email messages. Each email becomes a numbered file in the output directory, preparing patches for processing.
+**git mailsplit** splits an mbox file into individual email messages. Each email becomes a numbered file in the output directory, preparing patches for processing by `git am`.
 
-The command is a plumbing tool used by git am to process mailbox files containing multiple patches. It handles mbox format detection and message separation.
-
-git mailsplit enables batch patch processing from mbox files.
+The command is a plumbing tool used internally by `git am` to handle mailbox files containing multiple patches. It detects mbox format boundaries and separates each message into its own file.
 
 # CAVEATS
 

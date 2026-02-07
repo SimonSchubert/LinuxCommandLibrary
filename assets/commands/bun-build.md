@@ -1,3 +1,7 @@
+# TAGLINE
+
+Bundle JavaScript and TypeScript for production
+
 # TLDR
 
 **Bundle JavaScript/TypeScript file**
@@ -36,7 +40,7 @@
 
 **bun build** is Bun's fast native bundler for JavaScript and TypeScript. It bundles code for production, generates standalone executables, and supports both server and client code in a single command.
 
-The bundler automatically performs tree-shaking to eliminate unused code.
+The bundler automatically performs tree-shaking to eliminate unused code. It can target multiple runtimes including browsers, Node.js, and Bun itself. The **--compile** flag creates self-contained executables with the Bun runtime embedded, enabling distribution without requiring users to install Bun. Code splitting, source maps, and minification are supported through command-line flags or the equivalent JavaScript API via **Bun.build()**.
 
 # PARAMETERS
 

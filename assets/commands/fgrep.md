@@ -1,3 +1,7 @@
+# TAGLINE
+
+fixed-string search without regex
+
 # TLDR
 
 **Search for literal** string

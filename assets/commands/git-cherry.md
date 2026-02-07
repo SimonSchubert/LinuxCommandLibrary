@@ -1,3 +1,7 @@
+# TAGLINE
+
+Find commits not merged upstream
+
 # TLDR
 
 **Show unpicked commits**
@@ -37,9 +41,9 @@ _HEAD_
 
 **git cherry** finds commits not yet applied to upstream. It compares commits between branches, identifying which commits from your branch are missing from upstream based on patch content, not commit hashes.
 
-Output uses + for commits not in upstream and - for equivalent commits already present. This helps identify what still needs to be merged or cherry-picked.
+Output uses **+** for commits not in upstream and **-** for equivalent commits already present. This helps identify what still needs to be merged or cherry-picked.
 
-git cherry is useful for reviewing branch status before merging.
+This command is particularly useful for reviewing branch status before merging, ensuring that all intended changes have been integrated and identifying any commits that may have been lost during rebasing.
 
 # CAVEATS
 

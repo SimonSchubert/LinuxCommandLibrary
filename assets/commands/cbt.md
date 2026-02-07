@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line interface for Google Cloud Bigtable
+
 # TLDR
 
 **List all tables in an instance**
@@ -59,6 +63,11 @@ The tool can be configured via a **~/.cbtrc** file containing project and instan
 **set** _table_ _row_ _family:col=val_ - Write cell value
 **deleterow** _table_ _row_ - Delete a row
 **help** - Print help text
+
+# CONFIGURATION
+
+**~/.cbtrc**
+> Default project and instance settings, avoiding the need to pass -project and -instance flags on every invocation.
 
 # CAVEATS
 

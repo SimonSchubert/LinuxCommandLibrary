@@ -1,3 +1,7 @@
+# TAGLINE
+
+download container images from registries
+
 # TLDR
 
 **Pull an image**
@@ -44,7 +48,7 @@
 
 # DESCRIPTION
 
-**docker pull** downloads an image from a registry. Pulls from Docker Hub by default. If no tag is specified, pulls the latest tag.
+**docker pull** downloads an image from a registry. Pulls from Docker Hub by default. If no tag is specified, pulls the latest tag. Images are downloaded in layers, and Docker caches these layers to optimize subsequent pulls. Supports multi-platform images with automatic platform detection.
 
 # SEE ALSO
 

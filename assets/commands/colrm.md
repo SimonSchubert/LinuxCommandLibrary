@@ -1,3 +1,7 @@
+# TAGLINE
+
+remove columns from text input
+
 # TLDR
 
 Remove **first column** from stdin

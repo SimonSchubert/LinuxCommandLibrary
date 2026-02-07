@@ -1,3 +1,7 @@
+# TAGLINE
+
+D programming language reference compiler
+
 # TLDR
 
 **Compile D source** file
@@ -63,6 +67,11 @@ _FILE_
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**/etc/dmd.conf** or **~/.dmd/dmd.conf**
+> Import paths, library paths, and default compiler flags.
 
 # DESCRIPTION
 

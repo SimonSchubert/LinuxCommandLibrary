@@ -1,3 +1,7 @@
+# TAGLINE
+
+C/C++ package manager for all platforms
+
 # TLDR
 
 **Install dependencies from conanfile**
@@ -38,7 +42,11 @@
 
 # DESCRIPTION
 
-**conan** is a decentralized C/C++ package manager supporting all platforms, build systems, and compilers. It manages dependencies, creates binary packages, and handles cross-compilation.
+**conan** is a modern, decentralized package manager designed specifically for C and C++ projects, addressing the historically fragmented dependency management landscape in these languages. Unlike language-specific package managers that assume a single build system, Conan integrates with CMake, MSBuild, Meson, Autotools, and custom build systems, making it genuinely cross-platform across Windows, Linux, macOS, and embedded systems.
+
+The tool operates on a binary package model where packages can be precompiled for specific configurations (compiler, OS, architecture, build type) and cached for reuse, dramatically speeding up build times compared to source-only approaches. Conan profiles define these build configurations, and the package manager performs sophisticated dependency resolution that accounts for binary compatibility across the entire dependency graph.
+
+Conan uses a decentralized repository model similar to Git, where teams can host private Conan servers (Artifactory, ConanCenter) while still accessing the public ConanCenter repository. Package recipes (conanfile.py) are written in Python, providing full programmability for complex build scenarios. Conan 2.x represents a major evolution with improved versioning, better CMake integration, and a cleaner CLI, though it introduces breaking changes from the 1.x series.
 
 # COMMANDS
 
@@ -100,11 +108,17 @@
 
 # CONFIGURATION
 
-**conanfile.txt / conanfile.py**
-> Project dependency file
+**conanfile.txt**
+> Simple text format for declaring dependencies.
+
+**conanfile.py**
+> Python-based package recipe with full control.
 
 **~/.conan2/profiles/**
-> Build profiles
+> Build profiles defining compiler, OS, architecture settings.
+
+**~/.conan2/global.conf**
+> Global configuration for Conan behavior.
 
 # CAVEATS
 

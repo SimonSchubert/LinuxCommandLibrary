@@ -1,3 +1,7 @@
+# TAGLINE
+
+tool for exploring and publishing SQLite databases
+
 # TLDR
 
 **Serve a SQLite database**

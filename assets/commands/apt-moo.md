@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display an ASCII cow easter egg.
+
 # TLDR
 
 Print a **cow easter egg**

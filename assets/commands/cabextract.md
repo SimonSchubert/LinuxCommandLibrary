@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extract Microsoft cabinet archives
+
 # TLDR
 
 **Extract cabinet file**

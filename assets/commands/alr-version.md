@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display Alire version and build information.
+
 # TLDR
 
 **Display alr version** and build information

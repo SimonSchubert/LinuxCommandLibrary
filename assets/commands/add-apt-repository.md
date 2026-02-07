@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage APT repository sources
+
 # TLDR
 
 **Add** a new apt repository
@@ -30,7 +34,9 @@ Add a **PPA** (Personal Package Archive)
 
 # DESCRIPTION
 
-**add-apt-repository** adds a repository into /etc/apt/sources.list or /etc/apt/sources.list.d, or removes an existing one. The tool provides a convenient way to manage external APT repositories on Debian and Ubuntu systems.
+**add-apt-repository** is a Debian/Ubuntu utility that manages third-party APT repository sources. It can add entries to /etc/apt/sources.list or create individual files in /etc/apt/sources.list.d/, and can also remove previously added repositories.
+
+The tool is most commonly used to add PPAs (Personal Package Archives) from Launchpad, handling both the source list entry and the associated GPG key import automatically. It can optionally update the package cache after modifying sources.
 
 # PARAMETERS
 

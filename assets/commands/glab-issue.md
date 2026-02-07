@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage GitLab issues from the command line
+
 # TLDR
 
 **List issues**
@@ -67,9 +71,8 @@
 
 # DESCRIPTION
 
-**glab issue** manages GitLab issues. Create, view, and manage issues from the command line.
+**glab issue** manages GitLab issues from the command line. It provides subcommands for creating, viewing, listing, closing, and commenting on issues without leaving the terminal.
 
 # SEE ALSO
 
 [glab](/man/glab)(1), [glab-mr](/man/glab-mr)(1)
-

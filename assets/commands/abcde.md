@@ -1,3 +1,7 @@
+# TAGLINE
+
+automated CD ripper and encoder
+
 # TLDR
 
 **Rip a CD** to the default format (usually Ogg Vorbis)
@@ -111,6 +115,16 @@
 The tool queries online databases (CDDB, MusicBrainz) to automatically retrieve track names, artist information, and album details. It uses backend programs like **cdparanoia** for secure ripping and encoders like **lame**, **oggenc**, **flac**, and **opusenc** for compression.
 
 Multiple output formats can be generated in a single pass, and the encoding can be parallelized across multiple CPU cores using the **-j** option. Configuration is managed through **/etc/abcde.conf** or **~/.abcde.conf**, allowing customization of encoder settings, output paths, and naming conventions.
+
+# CONFIGURATION
+
+**/etc/abcde.conf**
+> System-wide configuration file with default settings for all users.
+
+**~/.abcde.conf**
+> Per-user configuration file that overrides system defaults. Controls output format, encoder options, file naming templates, CDDB server, and post-processing actions.
+
+Key configuration variables include **OUTPUTTYPE** (output format), **OUTPUTDIR** (destination directory), **LAMEOPTS** / **OGGENCOPTS** / **FLACOPTS** (encoder-specific options), **CDDBMETHOD** (metadata lookup method), and **MUNGEDFILENAME** (filename character handling).
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+compare CSV files and show differences
+
 # TLDR
 
 **Diff two CSV files**

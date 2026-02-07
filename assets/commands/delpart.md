@@ -1,3 +1,7 @@
+# TAGLINE
+
+ask kernel to forget about a partition
+
 # TLDR
 
 Tell kernel to **forget** partition 1 of /dev/sda
@@ -12,7 +16,7 @@ Tell kernel to **forget** partition 1 of /dev/sda
 
 **delpart** asks the Linux kernel to forget about a partition. This is a low-level command that updates the kernel's in-memory partition table without modifying the actual partition table on disk.
 
-Used when the on-disk partition table has been modified and the kernel needs to be informed of the change without rebooting.
+Used when the on-disk partition table has been modified and the kernel needs to be informed of the change without rebooting. This is particularly useful after manually editing partition tables with tools like fdisk or parted, allowing the changes to take effect immediately.
 
 # PARAMETERS
 

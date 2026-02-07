@@ -1,3 +1,7 @@
+# TAGLINE
+
+hardware capture device support for ffmpeg
+
 # TLDR
 
 **List available devices**

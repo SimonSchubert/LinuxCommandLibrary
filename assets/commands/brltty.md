@@ -1,3 +1,7 @@
+# TAGLINE
+
+Braille display daemon for console access
+
 # TLDR
 
 **Start brltty daemon**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Node.js process daemon and monitor
+
 # TLDR
 
 **Start script as daemon**
@@ -65,6 +69,11 @@
 
 **-m** _max_
 > Maximum restarts.
+
+# CONFIGURATION
+
+**~/.forever/config.json**
+> Global configuration for forever settings and defaults.
 
 # DESCRIPTION
 

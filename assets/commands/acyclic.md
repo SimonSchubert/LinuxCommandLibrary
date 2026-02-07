@@ -1,3 +1,7 @@
+# TAGLINE
+
+directed graph cycle tester
+
 # TLDR
 
 **Check** if a graph is acyclic

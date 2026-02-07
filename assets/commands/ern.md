@@ -1,3 +1,7 @@
+# TAGLINE
+
+React Native integration platform for native apps
+
 # TLDR
 
 **Create new React** Native project

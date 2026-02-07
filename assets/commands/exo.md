@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line interface for Exoscale cloud services
+
 # TLDR
 
 **List accounts**
@@ -46,6 +50,11 @@ _COMMAND_
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**~/.config/exoscale/exoscale.toml**
+> Stores API credentials and default zone/account settings.
 
 # DESCRIPTION
 

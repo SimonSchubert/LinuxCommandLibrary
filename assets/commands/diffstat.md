@@ -1,3 +1,7 @@
+# TAGLINE
+
+patch file statistics generator
+
 # TLDR
 
 **Show diff statistics**

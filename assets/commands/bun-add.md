@@ -1,3 +1,7 @@
+# TAGLINE
+
+Add packages to a Bun project
+
 # TLDR
 
 **Add a dependency**

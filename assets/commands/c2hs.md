@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate Haskell FFI bindings from C headers
+
 # TLDR
 
 **Generate Haskell bindings from C header**

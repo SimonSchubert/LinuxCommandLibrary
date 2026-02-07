@@ -1,3 +1,7 @@
+# TAGLINE
+
+manage PostgreSQL connection pools
+
 # TLDR
 
 **List connection pools**
@@ -50,9 +54,12 @@
 
 # DESCRIPTION
 
-**doctl databases pool** manages connection pools for PostgreSQL managed databases. Pools provide connection multiplexing for better performance.
+**doctl databases pool** manages connection pools for PostgreSQL managed databases on DigitalOcean. Connection pools provide connection multiplexing, significantly improving performance for applications with many concurrent clients.
+
+Pools act as intermediaries between applications and the database, maintaining a set number of reusable database connections. This reduces overhead from repeatedly opening and closing connections. Pool modes determine connection behavior: transaction mode (fastest for stateless queries), session mode (preserves server-side session state), and statement mode (most compatible but least efficient).
+
+Proper pool configuration balances performance with resource usage, especially important for applications with high connection counts or intermittent traffic patterns.
 
 # SEE ALSO
 
 [doctl-databases](/man/doctl-databases)(1), [doctl-databases-user](/man/doctl-databases-user)(1)
-

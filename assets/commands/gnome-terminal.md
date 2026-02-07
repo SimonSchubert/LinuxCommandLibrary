@@ -1,3 +1,7 @@
+# TAGLINE
+
+GNOME desktop terminal emulator
+
 # TLDR
 
 Open a new **GNOME terminal window**
@@ -58,7 +62,10 @@ Set the **title** of the new tab
 
 Features include multiple profiles with different colors and fonts, transparent backgrounds, custom key bindings, and VTE-based terminal emulation with Unicode support.
 
-Profiles are configured through the Preferences dialog or dconf/gsettings and control appearance, behavior, and compatibility settings.
+# CONFIGURATION
+
+**dconf /org/gnome/terminal/**
+> Terminal settings stored in dconf, configurable via gsettings or the Preferences dialog.
 
 # CAVEATS
 

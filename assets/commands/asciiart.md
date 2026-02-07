@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert images to ASCII art
+
 # TLDR
 
 Read an image from a **file** and print in ASCII

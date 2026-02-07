@@ -1,3 +1,7 @@
+# TAGLINE
+
+build Debian packages from source
+
 # TLDR
 
 **Build** package in current directory
@@ -41,6 +45,11 @@ Run from a Debian source package directory containing debian/control and other p
 
 **-j** _n_
 > Parallel build with n jobs
+
+# CONFIGURATION
+
+**~/.devscripts**
+> Default debuild options including lintian settings and build behavior.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Transparent encryption of files in Git repositories
+
 # TLDR
 
 **Initialize git-crypt in repo**
@@ -50,14 +54,16 @@
 
 # DESCRIPTION
 
-**git-crypt** enables transparent encryption of files in a Git repository. Configured files are encrypted when committed and decrypted when checked out, allowing sensitive data to be stored securely.
+**git-crypt** enables transparent encryption of files in a Git repository. Configured files are encrypted when committed and decrypted when checked out, allowing sensitive data to be stored securely alongside regular code.
 
-Encryption is configured via .gitattributes patterns. Users with the key or authorized GPG keys can unlock the repository.
+Encryption is configured via .gitattributes patterns. Users with the symmetric key or authorized GPG keys can unlock the repository to view and edit protected files.
 
 # CONFIGURATION
 
+**.gitattributes**
+> Defines which files are encrypted using filter and diff attributes.
+
 ```
-# .gitattributes
 secrets/** filter=git-crypt diff=git-crypt
 *.key filter=git-crypt diff=git-crypt
 .env filter=git-crypt diff=git-crypt

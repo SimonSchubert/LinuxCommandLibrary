@@ -1,3 +1,7 @@
+# TAGLINE
+
+debugging tool for ReiserFS filesystems
+
 # TLDR
 
 **Display superblock** information

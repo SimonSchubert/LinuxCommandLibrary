@@ -1,3 +1,7 @@
+# TAGLINE
+
+CommonMark Markdown parser and renderer
+
 # TLDR
 
 **Convert Markdown to HTML**
@@ -47,9 +51,11 @@
 
 # DESCRIPTION
 
-**cmark** is the reference implementation of CommonMark, a standardized Markdown specification. It parses Markdown and converts it to various output formats including HTML, XML, man pages, and LaTeX.
+**cmark** is the reference C implementation of CommonMark, a strongly specified and highly compatible variant of Markdown. It parses Markdown input and converts it to various output formats including HTML, XML, groff man pages, CommonMark, and LaTeX.
 
-The tool is fast and follows the CommonMark specification precisely, making it useful for consistent Markdown processing.
+The parser is designed for correctness and performance, strictly following the CommonMark specification to eliminate the ambiguities present in the original Markdown description. This makes it suitable for applications that require predictable, consistent rendering across different tools.
+
+cmark reads from files or standard input and writes to standard output, making it easy to integrate into pipelines. The **--smart** option provides typographic enhancements like curly quotes and em-dashes, while **--safe** strips potentially dangerous raw HTML from input.
 
 # SEE ALSO
 

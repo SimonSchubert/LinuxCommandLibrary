@@ -1,3 +1,7 @@
+# TAGLINE
+
+graphical login manager for GNOME
+
 # TLDR
 
 **Start GDM**
@@ -31,6 +35,14 @@
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**/etc/gdm/custom.conf**
+> Main GDM configuration file controlling login behavior, auto-login, and session settings.
+
+**/etc/gdm3/custom.conf**
+> Alternative configuration path on Debian-based systems.
 
 # DESCRIPTION
 

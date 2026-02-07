@@ -1,3 +1,7 @@
+# TAGLINE
+
+encrypted file sharing client
+
 # TLDR
 
 **Upload file**

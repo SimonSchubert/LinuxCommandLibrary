@@ -1,3 +1,7 @@
+# TAGLINE
+
+RSS/Atom feed automation tool
+
 # TLDR
 
 **Fetch all configured feeds**
@@ -50,20 +54,16 @@
 **--debug**
 > Debug output.
 
+# CONFIGURATION
+
+**~/.config/feed2exec.ini**
+> Main configuration file defining feeds, output formats, and processing commands.
+
 # DESCRIPTION
 
 **feed2exec** fetches RSS/Atom feeds and executes commands for each new entry. It's a flexible feed processor that can send emails, run scripts, save files, or trigger any command based on feed updates.
 
 Unlike feed readers, feed2exec is designed for automation. Common uses include email notifications, archiving, and triggering webhooks when feeds update.
-
-# CONFIGURATION EXAMPLE
-
-```ini
-[example-feed]
-url = https://example.com/feed.xml
-output = maildir
-folder = ~/Mail/feeds
-```
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+System error number lookup utility
+
 # TLDR
 
 **Look up error** by number

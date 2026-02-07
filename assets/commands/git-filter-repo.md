@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fast, safe tool for rewriting Git repository history
+
 # TLDR
 
 **Remove file from history**
@@ -52,11 +56,9 @@
 
 # DESCRIPTION
 
-**git filter-repo** rewrites git history with powerful filtering capabilities. It replaces the deprecated git filter-branch with faster, safer history manipulation.
+**git filter-repo** rewrites Git history with powerful filtering capabilities. It is the officially recommended replacement for the deprecated git filter-branch, offering significantly faster and safer history manipulation.
 
-The tool can remove files, rename paths, strip sensitive data, change authors, and restructure repositories. It's significantly faster than filter-branch and prevents common mistakes.
-
-git filter-repo is the recommended tool for history rewriting.
+The tool can remove files, rename paths, strip sensitive data, change authors, and restructure repositories. It prevents common mistakes that git filter-branch was prone to and operates much faster on large repositories.
 
 # CAVEATS
 

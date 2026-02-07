@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage GitLab repositories from the command line
+
 # TLDR
 
 **Clone a repository**
@@ -67,9 +71,8 @@
 
 # DESCRIPTION
 
-**glab repo** manages GitLab repositories from the command line. Clone, create, fork, and view repositories without leaving the terminal.
+**glab repo** manages GitLab repositories from the command line. It provides subcommands for cloning, creating, forking, searching, and viewing repositories without leaving the terminal.
 
 # SEE ALSO
 
 [glab](/man/glab)(1), [git-clone](/man/git-clone)(1)
-

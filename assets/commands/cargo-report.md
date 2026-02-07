@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display build reports and diagnostics
+
 # TLDR
 
 **Show future incompatibility report**
@@ -14,7 +18,9 @@
 
 # DESCRIPTION
 
-**cargo report** generates various reports about the project. Currently supports future-incompatibilities reports which show code patterns that will be rejected in future Rust versions.
+**cargo report** generates diagnostic reports about the project. Currently its primary subcommand is `future-incompatibilities`, which displays warnings about code patterns in dependencies that will be rejected in future Rust versions.
+
+When Cargo detects future-incompatible warnings during a build, it stores a report and displays a notification with instructions to view the full details. These warnings indicate patterns that may exhibit undefined behavior, are scheduled for removal, or lack well-defined semantics. Reviewing these reports helps maintainers proactively update their dependencies before breaking changes land.
 
 # SUBCOMMANDS
 
@@ -46,12 +52,8 @@ When detected, a warning appears after build with instructions to view the full 
 
 # CONFIGURATION
 
-Configure in .cargo/config.toml:
-
-```toml
-[future-incompat-report]
-frequency = "always"
-```
+**.cargo/config.toml**
+> Controls report frequency via `[future-incompat-report]` section (e.g., `frequency = "always"`).
 
 # RESOLVING ISSUES
 

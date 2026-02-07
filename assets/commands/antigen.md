@@ -1,3 +1,7 @@
+# TAGLINE
+
+Zsh plugin manager inspired by Vundle
+
 # TLDR
 
 **Load oh-my-zsh** framework

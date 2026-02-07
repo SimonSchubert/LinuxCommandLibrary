@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compute and report repository size metrics
+
 # TLDR
 
 **Analyze repository size**
@@ -36,9 +40,10 @@
 
 # DESCRIPTION
 
-**git-sizer** computes various size metrics for a Git repository. Identifies potential problems like large files, deep histories, or wide trees that could cause performance issues.
+**git-sizer** computes various size metrics for a Git repository, identifying potential performance problems such as oversized files, deep histories, or wide directory trees.
+
+The tool reports metrics with concern levels, helping maintainers understand whether their repository structure may cause issues with cloning, fetching, or general Git operations.
 
 # SEE ALSO
 
 [git-filter-repo](/man/git-filter-repo)(1), [git-gc](/man/git-gc)(1)
-

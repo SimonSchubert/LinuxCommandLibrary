@@ -1,3 +1,7 @@
+# TAGLINE
+
+Live reload tool for Go development
+
 # TLDR
 
 **Watch and reload Go app**
@@ -36,11 +40,9 @@
 
 # DESCRIPTION
 
-**goreload** is a live reload tool for Go development. It watches source files and automatically rebuilds and restarts the application on changes.
+**goreload** is a live reload tool for Go development. It watches source files and automatically rebuilds and restarts the application when changes are detected, eliminating manual rebuild cycles.
 
-The tool accelerates development by eliminating manual rebuild cycles. It detects file changes and triggers rebuilds with configurable commands.
-
-goreload provides automatic Go app reloading.
+The tool supports configurable watch directories, exclude patterns, and custom build commands.
 
 # CAVEATS
 

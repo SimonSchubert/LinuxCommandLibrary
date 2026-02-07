@@ -1,3 +1,7 @@
+# TAGLINE
+
+Tiling window manager based on binary space partitioning
+
 # TLDR
 
 **Start** bspwm with a configuration file
@@ -26,6 +30,14 @@ Hotkey binding is handled separately by tools like **sxhkd** (Simple X Hotkey Da
 
 **-o** _count_
 > Number of monitors
+
+# CONFIGURATION
+
+**~/.config/bspwm/bspwmrc**
+> Shell script executed at startup to configure bspwm via bspc commands.
+
+**~/.config/sxhkd/sxhkdrc**
+> Hotkey configuration for sxhkd, the companion hotkey daemon.
 
 # CAVEATS
 

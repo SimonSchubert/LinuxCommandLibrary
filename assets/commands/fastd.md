@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast and secure VPN daemon
+
 # TLDR
 
 **Start fastd with config**
@@ -47,9 +51,16 @@
 **--daemon**
 > Run as daemon.
 
+# CONFIGURATION
+
+**/etc/fastd/fastd.conf**
+> Main configuration file defining interface, peers, encryption methods, and network settings.
+
 # DESCRIPTION
 
-**fastd** is a fast and secure VPN daemon. Used for building mesh networks and tunneling traffic. Commonly used in Freifunk community networks.
+**fastd** is a fast and secure VPN daemon designed for building mesh networks and tunneling traffic. It's commonly used in Freifunk community wireless networks to create encrypted mesh topologies.
+
+The tool supports multiple encryption methods and is optimized for low-latency, high-performance VPN connections. It uses UDP for transport and supports various authentication and encryption ciphers. Configuration defines peers, network interfaces, and security parameters.
 
 # SEE ALSO
 

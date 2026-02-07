@@ -1,3 +1,7 @@
+# TAGLINE
+
+Module manager for Escargot JavaScript engine
+
 # TLDR
 
 **List Escargot** modules

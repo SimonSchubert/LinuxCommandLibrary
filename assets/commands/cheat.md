@@ -1,3 +1,7 @@
+# TAGLINE
+
+interactive command-line cheatsheets
+
 # TLDR
 
 **View** cheatsheet
@@ -50,39 +54,13 @@ The tool is designed to be a more practical alternative to man pages for everyda
 **-v**, **--version**
 > Show version
 
-# FEATURES
-
-- Community-contributed cheatsheets
-- Syntax highlighting
-- Multiple cheatsheet sources
-- Personal cheatsheet creation
-- Tag-based organization
-- Search functionality
-
-# WORKFLOW
-
-```bash
-# View cheatsheet
-cheat tar
-
-# Search for commands
-cheat -s compress
-
-# List all available
-cheat -l
-
-# Edit or create cheatsheet
-cheat -e mycommand
-
-# Find cheatsheet location
-cheat -p tar
-```
-
 # CONFIGURATION
 
-Config file: `~/.config/cheat/conf.yml`
+**~/.config/cheat/conf.yml**
+> Main configuration file for editor, cheatsheet directories, and syntax highlighting.
 
-Custom cheatsheets in: `~/.config/cheat/cheatsheets/personal/`
+**~/.config/cheat/cheatsheets/personal/**
+> Directory for user-created custom cheatsheets.
 
 # CAVEATS
 

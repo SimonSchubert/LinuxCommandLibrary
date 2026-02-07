@@ -1,3 +1,7 @@
+# TAGLINE
+
+manage Chainguard container images and resources
+
 # TLDR
 
 **Authenticate with Chainguard**
@@ -59,11 +63,14 @@ The CLI follows the **context noun verb** style of interaction, allowing users t
 **packages** - Interact with Chainguard packages
 **config** - Manage chainctl configuration
 
+# CONFIGURATION
+
+**CHAINCTL_CONFIG**
+> Environment variable specifying an alternate configuration file location.
+
 # CAVEATS
 
 Requires a Chainguard account for authentication. Some commands require appropriate IAM permissions within your organization.
-
-The **CHAINCTL_CONFIG** environment variable can specify an alternate configuration file location.
 
 # HISTORY
 

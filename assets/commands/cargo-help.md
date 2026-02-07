@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display help for Cargo commands
+
 # TLDR
 
 **Show general help**

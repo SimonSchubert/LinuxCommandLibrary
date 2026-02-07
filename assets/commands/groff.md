@@ -1,3 +1,7 @@
+# TAGLINE
+
+GNU document formatting system
+
 # TLDR
 
 **Format document to PDF**
@@ -58,11 +62,14 @@ _FILES_
 
 # DESCRIPTION
 
-**groff** is the GNU implementation of the roff document formatting system. It processes text files with embedded formatting commands to produce typeset output in various formats.
+**groff** is the GNU implementation of the roff document formatting system. It processes text files with embedded formatting commands to produce typeset output in various formats including PDF, PostScript, HTML, and terminal display.
 
-The system supports multiple output devices including PDF, PostScript, and terminal display. It includes preprocessors for tables (tbl), equations (eqn), and diagrams (pic).
+The system includes preprocessors for tables (tbl), equations (eqn), and diagrams (pic), and supports multiple macro packages for different document types.
 
-groff provides powerful text formatting for documents.
+# CONFIGURATION
+
+**/usr/share/groff/current/tmac/**
+> System-wide macro files and configuration for groff output devices.
 
 # CAVEATS
 
@@ -70,7 +77,7 @@ Steep learning curve. Macro packages have different conventions. PostScript outp
 
 # HISTORY
 
-groff was created by **James Clark** as a free implementation of AT&T troff. It's now maintained as part of the **GNU** project.
+groff was created by **James Clark** as a free implementation of AT&T troff. It is now maintained as part of the **GNU** project.
 
 # SEE ALSO
 

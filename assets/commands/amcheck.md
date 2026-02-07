@@ -1,3 +1,7 @@
+# TAGLINE
+
+Verify Amanda backup configuration before a run
+
 # TLDR
 
 **Run all checks** (client and server) for a configuration
@@ -82,6 +86,14 @@ On the server side, amcheck verifies that the correct tape is mounted for the ne
 The tool is typically run before scheduled backups or manually by administrators to verify the backup infrastructure is ready. Results can be displayed on standard output or sent via email using the **-m** option. The default behavior runs both client and server checks (**-cs**).
 
 Client checks have a configurable timeout (default 30 seconds) controlled by the **ctimeout** setting in amanda.conf.
+
+# CONFIGURATION
+
+**/etc/amanda/<config>/amanda.conf**
+> Amanda server configuration defining tape devices, holding disks, dump types, and scheduling parameters.
+
+**/etc/amanda/<config>/disklist**
+> List of client hosts and filesystems to back up.
 
 # CAVEATS
 

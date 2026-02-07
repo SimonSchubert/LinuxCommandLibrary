@@ -1,3 +1,7 @@
+# TAGLINE
+
+accessibility settings for GitHub CLI
+
 # TLDR
 
 **Show accessibility settings**
@@ -10,7 +14,9 @@
 
 # DESCRIPTION
 
-**gh accessibility** displays and manages accessibility settings for GitHub CLI. Helps configure the CLI for users with accessibility needs.
+**gh accessibility** displays and manages accessibility settings for GitHub CLI. It provides options to configure the CLI interface for users with accessibility needs, including adjustments for screen readers, color schemes, and interaction patterns.
+
+The command helps ensure GitHub CLI is usable by developers with various accessibility requirements, supporting inclusive development workflows.
 
 # SEE ALSO
 

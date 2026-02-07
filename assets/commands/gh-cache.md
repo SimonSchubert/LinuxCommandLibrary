@@ -1,3 +1,7 @@
+# TAGLINE
+
+manage GitHub Actions workflow caches
+
 # TLDR
 
 **List caches**
@@ -41,7 +45,11 @@
 
 # DESCRIPTION
 
-**gh cache** manages GitHub Actions caches for a repository. Caches store dependencies to speed up workflows.
+**gh cache** manages GitHub Actions caches for a repository. Caches store dependencies and build artifacts to speed up workflow execution by reusing data between runs.
+
+The cache system uses key-based storage, where workflows save and restore cached data using unique keys. Cache entries have size limits and are automatically evicted based on usage policies. Managing caches manually helps troubleshoot workflow issues and reclaim storage.
+
+Deleting caches can be necessary when dependencies change or to force rebuilds with fresh data.
 
 # SEE ALSO
 

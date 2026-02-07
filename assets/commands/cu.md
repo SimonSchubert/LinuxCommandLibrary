@@ -1,3 +1,7 @@
+# TAGLINE
+
+serial port terminal communication tool
+
 # TLDR
 
 **Open** a serial port

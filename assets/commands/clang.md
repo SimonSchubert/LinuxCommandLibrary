@@ -1,3 +1,7 @@
+# TAGLINE
+
+LLVM C/C++/Objective-C compiler
+
 # TLDR
 
 **Compile** C program
@@ -26,9 +30,11 @@
 
 # DESCRIPTION
 
-**clang** is a C, C++, and Objective-C compiler based on LLVM. It provides fast compilation, excellent diagnostics with clear error messages, and is designed as a drop-in replacement for GCC.
+**clang** is a C, C++, and Objective-C compiler based on the LLVM compiler infrastructure. It provides fast compilation, excellent diagnostics with clear error messages, and is designed as a drop-in replacement for GCC on most platforms.
 
-The compiler is known for its helpful error messages and modern architecture.
+Clang is known for its expressive error messages that include source highlighting, fix-it hints, and template backtrace improvements over GCC. Its modular library-based architecture enables reuse in tools like clang-format, clang-tidy, and clangd.
+
+The compiler supports modern language standards (C17, C++20, C++23), sanitizers for detecting memory errors and undefined behavior at runtime, and extensive static analysis capabilities. It is the default compiler on macOS and FreeBSD and widely used on Linux.
 
 # PARAMETERS
 

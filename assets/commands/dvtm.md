@@ -1,3 +1,7 @@
+# TAGLINE
+
+dynamic virtual terminal manager
+
 # TLDR
 
 **Start dvtm**
@@ -29,6 +33,11 @@
 **dvtm** (dynamic virtual terminal manager) brings dwm-style window management to the terminal. It tiles multiple terminal windows within a single terminal emulator.
 
 The tool provides dynamic layouts, tagging, and keyboard-driven window management. It's lightweight and follows the suckless philosophy of minimalism.
+
+# CONFIGURATION
+
+**config.h**
+> Source-level configuration file that must be edited and recompiled to change keybindings, colors, layouts, and behavior.
 
 # PARAMETERS
 

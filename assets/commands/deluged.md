@@ -1,3 +1,7 @@
+# TAGLINE
+
+daemon component for Deluge BitTorrent client
+
 # TLDR
 
 **Start Deluge daemon**
@@ -61,6 +65,11 @@
 The daemon architecture allows Deluge to run on headless servers with clients connecting remotely. Multiple clients (GTK, web, console) can connect to the same daemon simultaneously. Downloads continue even when clients disconnect.
 
 deluged listens on a configurable port for client connections and handles authentication, ensuring secure access to the torrent management functions.
+
+# CONFIGURATION
+
+**~/.config/deluge/**
+> Configuration directory containing core.conf, auth file, and state files.
 
 # CAVEATS
 

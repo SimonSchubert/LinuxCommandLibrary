@@ -1,3 +1,7 @@
+# TAGLINE
+
+login failure tracking and management
+
 # TLDR
 
 **Display failure** records
@@ -46,6 +50,11 @@
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**/var/log/faillog**
+> Binary database of login failure records, tracking failed attempts and lockout states.
 
 # DESCRIPTION
 

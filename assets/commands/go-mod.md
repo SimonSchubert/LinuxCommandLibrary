@@ -1,3 +1,7 @@
+# TAGLINE
+
+Go module dependency management
+
 # TLDR
 
 **Initialize new module**
@@ -52,11 +56,23 @@
 
 # DESCRIPTION
 
-**go mod** manages Go modules. Modules are collections of packages with versioned dependencies defined in go.mod files.
+**go mod** manages Go modules, the official dependency management system for Go. Modules are collections of packages with versioned dependencies defined in go.mod files.
 
-The command initializes modules, manages dependencies, and maintains reproducible builds. It integrates with module proxies and checksum databases.
+The command initializes modules, manages dependencies, and maintains reproducible builds. It integrates with module proxies and checksum databases to ensure package integrity and availability.
 
-go mod provides Go's dependency management system.
+# CONFIGURATION
+
+**go.mod**
+> Module definition file containing module path, Go version, and dependency requirements.
+
+**go.sum**
+> Checksums of module dependencies for verification.
+
+**GONOSUMCHECK**
+> Environment variable to skip checksum verification for specific modules.
+
+**GOFLAGS**
+> Default flags applied to go commands, including go mod subcommands.
 
 # CAVEATS
 

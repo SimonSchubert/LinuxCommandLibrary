@@ -1,3 +1,7 @@
+# TAGLINE
+
+install GRUB bootloader to a device
+
 # TLDR
 
 Install GRUB on a **BIOS system**
@@ -58,9 +62,7 @@ Display **help**
 
 **grub-install** installs the GRUB bootloader to a disk device or EFI System Partition. The installation method differs between BIOS/legacy and UEFI systems.
 
-For **BIOS systems**, GRUB is installed to the Master Boot Record (MBR) or a BIOS Boot Partition on GPT disks.
-
-For **UEFI systems**, GRUB is installed to the EFI System Partition (ESP). The **--bootloader-id** option sets the name shown in the UEFI boot menu.
+For **BIOS systems**, GRUB is installed to the Master Boot Record (MBR) or a BIOS Boot Partition on GPT disks. For **UEFI systems**, GRUB is installed to the EFI System Partition (ESP), and the **--bootloader-id** option sets the name shown in the UEFI boot menu.
 
 After installation, run **grub-mkconfig** to generate the configuration file.
 

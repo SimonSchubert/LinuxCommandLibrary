@@ -1,3 +1,7 @@
+# TAGLINE
+
+HTTP proxy and network traffic monitor
+
 # TLDR
 
 **Start Charles Proxy**
@@ -65,6 +69,11 @@ iOS/Android: Configure WiFi proxy to point to Charles IP:8888
 Key features include SSL proxying for decrypting HTTPS traffic, bandwidth throttling to simulate slow connections, request/response modification, breakpoints for intercepting requests, and automated testing support.
 
 Charles presents traffic in a tree view organized by host, with detailed inspection of headers, cookies, request/response bodies, and timing information. Sessions can be saved for later analysis or sharing.
+
+# CONFIGURATION
+
+**config.xml**
+> Charles configuration file with proxy settings, SSL certificates, and recording options. Loaded with -config flag.
 
 # CAVEATS
 

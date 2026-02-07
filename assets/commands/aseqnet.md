@@ -1,3 +1,7 @@
+# TAGLINE
+
+ALSA MIDI sequencer over network
+
 # TLDR
 
 **Start** MIDI network server

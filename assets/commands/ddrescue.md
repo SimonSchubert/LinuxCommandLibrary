@@ -1,3 +1,7 @@
+# TAGLINE
+
+data recovery tool for failing drives
+
 # TLDR
 
 Take an **image** of a device with log file
@@ -14,9 +18,11 @@ Take an **image** of a device with log file
 
 # DESCRIPTION
 
-**ddrescue** is a data recovery tool that copies data from one block device to another. Unlike dd, it handles read errors gracefully, skipping bad sectors and continuing to copy good data.
+**ddrescue** is a data recovery tool that copies data from one block device to another while handling read errors intelligently. Unlike dd, which stops on the first read error, ddrescue skips bad sectors and continues copying good data, then returns to problematic areas for repeated retry attempts.
 
-The logfile tracks progress and error locations, allowing resumption of interrupted operations and multiple passes for maximum data recovery.
+The logfile tracks which blocks have been successfully copied, which failed, and which remain untried. This allows operations to be interrupted and resumed without starting over, making it practical to run multiple passes over days or weeks. The first pass typically uses -n to quickly copy all readable data, skipping errors. Subsequent passes focus on bad sectors with different strategies.
+
+ddrescue employs sophisticated algorithms to maximize data recovery from failing drives. It can read in reverse, try different block sizes, and make multiple attempts with delays between retries, as sometimes failing drives become temporarily more cooperative. The tool is essential for recovering data from physically damaged media, handling situations where traditional copying tools would fail completely. Always work with a spare drive for recovered data rather than attempting in-place recovery.
 
 # PARAMETERS
 

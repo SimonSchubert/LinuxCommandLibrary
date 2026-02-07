@@ -1,3 +1,7 @@
+# TAGLINE
+
+Check for Advanced Power Management support
+
 # TLDR
 
 **Check** if APM is available

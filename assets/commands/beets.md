@@ -1,3 +1,7 @@
+# TAGLINE
+
+Music library manager and metadata organizer
+
 # TLDR
 
 **Import music into your library**
@@ -93,6 +97,11 @@ The plugin system extends functionality with features like fetching lyrics, mana
 **convert**: Transcode to different formats
 **duplicates**: Find duplicate tracks
 **web**: Web interface for browsing
+
+# CONFIGURATION
+
+**~/.config/beets/config.yaml**
+> Main configuration file for library paths, import behavior, plugins, and metadata preferences.
 
 # CAVEATS
 

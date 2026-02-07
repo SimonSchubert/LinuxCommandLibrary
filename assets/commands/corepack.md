@@ -1,3 +1,7 @@
+# TAGLINE
+
+Node.js package manager manager
+
 # TLDR
 
 **Enable Corepack**
@@ -30,9 +34,11 @@
 
 # DESCRIPTION
 
-**corepack** is Node.js's package manager manager. It transparently manages Yarn, npm, and pnpm versions per project, using the "packageManager" field in package.json.
+**corepack** is Node.js's package manager manager. It transparently manages Yarn, npm, and pnpm versions per project, using the "packageManager" field in package.json. This ensures that each project uses its specified package manager version without requiring global installations or manual version switching.
 
-Included with Node.js from version 14.19.0 to 24.x.
+Included with Node.js from version 14.19.0 to 24.x, Corepack acts as a shim that intercepts package manager commands and automatically downloads and uses the correct version specified in the project's configuration. This eliminates "works on my machine" issues caused by package manager version mismatches across development teams.
+
+The tool maintains a local cache of package manager versions and can operate in offline mode using packed archives. Zero runtime dependencies make it lightweight and reliable for CI/CD environments.
 
 # COMMANDS
 

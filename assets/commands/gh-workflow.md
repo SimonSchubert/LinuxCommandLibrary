@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage GitHub Actions workflows from the command line
+
 # TLDR
 
 **List workflows**
@@ -55,8 +59,6 @@
 **gh workflow** manages GitHub Actions workflows from the command line. It provides control over workflow definitions including listing, viewing, triggering, and enabling or disabling workflows.
 
 The run command triggers workflow_dispatch events, executing workflows on demand with optional input parameters. This enables manual CI runs and parameter-driven workflows from the terminal.
-
-gh workflow brings GitHub Actions management to command line workflows.
 
 # CAVEATS
 

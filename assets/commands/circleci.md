@@ -1,3 +1,7 @@
+# TAGLINE
+
+CLI for CircleCI continuous integration platform
+
 # TLDR
 
 **Configure CLI with API token**
@@ -39,6 +43,10 @@
 # DESCRIPTION
 
 **circleci** is the official CLI for CircleCI, enabling local job execution, config validation, pipeline management, and interaction with CircleCI resources from the terminal.
+
+The CLI is particularly useful for validating and processing configuration files before pushing changes, running jobs locally in Docker containers for faster development iteration, and managing orbs, contexts, and project settings. It integrates with the CircleCI API for pipeline and workflow management.
+
+Local execution requires Docker and runs individual jobs in containers that mirror the cloud environment, though some features like caching and workflows are not available locally.
 
 # COMMANDS
 
@@ -94,7 +102,11 @@ Note: Workflows, caching, and some features are not supported locally.
 
 # CONFIGURATION
 
-Requires API token from CircleCI Personal API Tokens page. Config stored in ~/.circleci/cli.yml.
+**~/.circleci/cli.yml**
+> CLI configuration including API token and host URL.
+
+**.circleci/config.yml**
+> Project-level CircleCI pipeline configuration defining jobs, workflows, and orbs.
 
 # CAVEATS
 

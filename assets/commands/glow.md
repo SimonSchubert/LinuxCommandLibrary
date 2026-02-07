@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal markdown renderer
+
 # TLDR
 
 **Render markdown file**
@@ -47,7 +51,10 @@ _FILE_
 
 The tool supports various styles and can browse markdown files interactively. It handles GitHub Flavored Markdown including tables and code blocks.
 
-glow provides beautiful markdown rendering in the terminal.
+# CONFIGURATION
+
+**~/.config/glow/glow.yml**
+> Configuration file for default style, width, and pager settings.
 
 # CAVEATS
 

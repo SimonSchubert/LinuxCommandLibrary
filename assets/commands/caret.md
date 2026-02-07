@@ -1,3 +1,7 @@
+# TAGLINE
+
+Shell history substitution and regex anchor character
+
 # TLDR
 
 **Quick substitution on last command**
@@ -42,23 +46,6 @@
 **Character class negation**: **[^abc]** matches any character except a, b, or c.
 
 **Exponentiation**: In **$((...))** and some languages, **^** may be XOR or exponent (use ******** in bash for exponent).
-
-# EXAMPLES
-
-```bash
-# Fix typo in previous command
-$ echo "helo world"
-helo world
-$ ^helo^hello
-echo "hello world"
-hello world
-
-# Regex: lines starting with #
-grep "^#" config.txt
-
-# Regex: non-digits
-grep "[^0-9]" file.txt
-```
 
 # CAVEATS
 

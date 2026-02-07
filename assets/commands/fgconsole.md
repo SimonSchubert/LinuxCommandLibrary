@@ -1,3 +1,7 @@
+# TAGLINE
+
+print foreground virtual terminal number
+
 # TLDR
 
 Print **current** terminal number

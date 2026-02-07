@@ -1,3 +1,7 @@
+# TAGLINE
+
+Django command-line utility for administrative tasks
+
 # TLDR
 
 **Start a new project**
@@ -71,6 +75,14 @@ _COMMAND_
 The tool requires a Django settings module to function. When inside a project directory, it automatically discovers the settings; otherwise, the DJANGO_SETTINGS_MODULE environment variable or --settings flag specifies the configuration.
 
 django-admin is typically aliased or replaced by manage.py within projects, which automatically configures the settings module. Both provide identical functionality.
+
+# CONFIGURATION
+
+**settings.py**
+> Django project settings module controlling database, installed apps, middleware, and all configuration.
+
+**manage.py**
+> Project-specific wrapper around django-admin that sets the settings module automatically.
 
 # CAVEATS
 

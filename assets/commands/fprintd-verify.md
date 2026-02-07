@@ -1,3 +1,7 @@
+# TAGLINE
+
+test fingerprint authentication
+
 # TLDR
 
 Verify **all stored fingerprints** for the current user

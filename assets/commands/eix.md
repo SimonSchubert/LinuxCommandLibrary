@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast Gentoo package search utility
+
 # TLDR
 
 **Search** for a package

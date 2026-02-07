@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extensible RSS/Atom feed reader for Emacs
+
 # TLDR
 
 **Open Elfeed in Emacs**
@@ -45,6 +49,17 @@ u         - Mark as unread
 -         - Remove tag
 q         - Quit
 ```
+
+# CONFIGURATION
+
+**~/.emacs.d/init.el** or **~/.emacs**
+> Configure feeds and settings using Emacs Lisp (setq elfeed-feeds).
+
+**~/.elfeed/** (default database location)
+> Local feed database and cached entries.
+
+**~/.emacs.d/elfeed.org** (with elfeed-org)
+> Org-mode file for managing feeds when using elfeed-org integration.
 
 # CAVEATS
 

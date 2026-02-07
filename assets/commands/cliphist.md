@@ -1,3 +1,7 @@
+# TAGLINE
+
+Wayland clipboard history manager
+
 # TLDR
 
 **List** clipboard history entries
@@ -26,9 +30,9 @@
 
 # DESCRIPTION
 
-**cliphist** is a clipboard history manager for Wayland compositors. It stores clipboard entries and allows retrieving them later. Works in conjunction with wl-copy and wl-paste from wl-clipboard.
+**cliphist** is a clipboard history manager for Wayland compositors. It stores clipboard entries and allows retrieving previous items, supporting both text and image content. It works in conjunction with **wl-copy** and **wl-paste** from the wl-clipboard package.
 
-To automatically store clipboard entries, run: `wl-paste --watch cliphist store`
+To automatically capture clipboard entries as they are copied, run `wl-paste --watch cliphist store` as a background process, typically in your compositor's startup configuration. Entries can then be browsed and selected using tools like **fzf**, **dmenu**, or **wofi** for quick recall of previously copied content.
 
 # PARAMETERS
 

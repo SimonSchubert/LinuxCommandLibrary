@@ -1,3 +1,7 @@
+# TAGLINE
+
+Clojure CLI with readline support
+
 # TLDR
 
 **Start REPL**
@@ -34,7 +38,11 @@
 
 # DESCRIPTION
 
-**clj** is the Clojure CLI for running REPLs and programs. Manages dependencies via deps.edn. Includes rlwrap for line editing in REPL. Use `clojure` for non-interactive execution.
+**clj** is a wrapper around the **clojure** command that adds readline support via **rlwrap**, providing line editing, history, and completion in the REPL. It is the recommended way to start interactive Clojure development sessions.
+
+The tool manages dependencies through **deps.edn** configuration files and supports multiple execution modes for running programs, executing functions, and invoking tools. Aliases defined in deps.edn allow switching between different dependency configurations for development, testing, and production.
+
+For non-interactive use cases such as shell scripts and CI pipelines, use the **clojure** command directly instead, as rlwrap can interfere with piped input and output.
 
 # EXECUTION MODES
 
@@ -89,6 +97,14 @@ clj -X:deps list       # List all deps
 clj -X:deps tree       # Dependency tree
 clj -X:deps mvn-pom    # Generate pom.xml
 ```
+
+# CONFIGURATION
+
+**deps.edn**
+> Project-level dependency declarations, aliases, and path configurations.
+
+**~/.clojure/deps.edn**
+> User-level default dependencies and aliases applied to all projects.
 
 # CAVEATS
 

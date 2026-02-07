@@ -1,3 +1,7 @@
+# TAGLINE
+
+List, create, rename, and delete branches
+
 # TLDR
 
 **List all local branches**

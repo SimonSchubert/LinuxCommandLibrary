@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate highly customizable changelogs from commits
+
 # TLDR
 
 **Generate changelog**
@@ -51,9 +55,17 @@
 
 **git cliff** generates changelogs from git history using conventional commit conventions. It parses commit messages to categorize changes and produces formatted output.
 
-The tool is highly configurable through TOML files, supporting custom templates, commit groups, and filtering. It integrates with CI/CD for automated release documentation.
+The tool is highly configurable through TOML files, supporting custom Tera templates, commit groups, scope-based filtering, and conditional sections. It integrates with CI/CD pipelines for automated release documentation.
 
-git cliff produces professional changelogs from structured commit messages.
+git cliff supports conventional commits, Angular-style commits, and custom parsing rules, producing professional changelogs in Markdown, AsciiDoc, or custom template formats.
+
+# CONFIGURATION
+
+**cliff.toml**
+> Configuration file defining commit parsing rules, grouping logic, filtering patterns, and output templates using Tera template syntax.
+
+**~/.config/git-cliff/cliff.toml**
+> User-level default configuration for git-cliff settings.
 
 # CAVEATS
 
@@ -61,7 +73,7 @@ Works best with conventional commits. Requires configuration for custom formats.
 
 # HISTORY
 
-git cliff was created by **Orhun Parmaksız** as a highly customizable changelog generator, written in Rust for performance.
+git cliff was created by **Orhun Parmaksiz** as a highly customizable changelog generator, written in Rust for performance.
 
 # SEE ALSO
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+CSV row filter by column values
+
 # TLDR
 
 **Filter rows by column** matching a value

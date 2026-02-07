@@ -1,3 +1,7 @@
+# TAGLINE
+
+CSV table renderer for terminal viewing
+
 # TLDR
 
 **Display CSV as table**

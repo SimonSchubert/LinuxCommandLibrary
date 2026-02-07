@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Git repositories hosted on AWS CodeCommit.
+
 # TLDR
 
 **Create a new repository**

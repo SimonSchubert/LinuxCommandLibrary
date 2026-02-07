@@ -1,3 +1,7 @@
+# TAGLINE
+
+Print the package manager version
+
 # TLDR
 
 **Show package manager version**
@@ -10,7 +14,7 @@
 
 # DESCRIPTION
 
-**bun pm version** prints the version of Bun's built-in package manager. This is the same as the Bun runtime version.
+**bun pm version** prints the version of Bun's built-in package manager. The package manager version matches the Bun runtime version since the package manager is bundled with the runtime.
 
 # SEE ALSO
 

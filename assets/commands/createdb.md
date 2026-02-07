@@ -1,3 +1,7 @@
+# TAGLINE
+
+PostgreSQL database creation utility
+
 # TLDR
 
 **Create database**
@@ -34,7 +38,9 @@
 
 # DESCRIPTION
 
-**createdb** creates a PostgreSQL database. Wrapper around SQL CREATE DATABASE command. Connects to postgres database to issue the command.
+**createdb** creates a PostgreSQL database. It is a convenience wrapper around the SQL CREATE DATABASE command, providing a command-line interface that's often more convenient than invoking psql directly.
+
+The utility connects to the PostgreSQL server (typically to the postgres or template1 database) and executes the CREATE DATABASE SQL command with the specified parameters. This avoids the need to launch psql interactively just to create a database.
 
 # PARAMETERS
 

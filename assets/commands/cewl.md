@@ -1,3 +1,7 @@
+# TAGLINE
+
+custom wordlist generator from website content
+
 # TLDR
 
 Create a **wordlist** from URL with 2 links depth

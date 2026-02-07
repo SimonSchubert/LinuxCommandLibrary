@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert between binary, decimal, and hexadecimal
+
 # TLDR
 
 **Convert decimal to binary and hex**

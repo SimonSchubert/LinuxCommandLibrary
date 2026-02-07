@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove dependencies from a Cargo.toml manifest
+
 # TLDR
 
 **Remove dependency**
@@ -30,7 +34,9 @@
 
 # DESCRIPTION
 
-**cargo remove** removes one or more dependencies from Cargo.toml. Supports removing from dev, build, or target-specific dependency sections.
+**cargo remove** removes one or more dependencies from the Cargo.toml manifest file. It can target regular dependencies, dev-dependencies, build-dependencies, or platform-specific dependency sections.
+
+The command modifies Cargo.toml directly but does not update Cargo.lock until the next build or `cargo update`. Multiple dependencies can be removed in a single invocation. Use `--dry-run` to preview changes before applying them.
 
 # PARAMETERS
 

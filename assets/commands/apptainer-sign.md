@@ -1,3 +1,7 @@
+# TAGLINE
+
+Cryptographically sign container images
+
 # TLDR
 
 **Sign** a container image using the default PGP key

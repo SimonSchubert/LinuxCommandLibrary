@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage front-end web dependencies.
+
 # TLDR
 
 **Install** package

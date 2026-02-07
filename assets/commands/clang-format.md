@@ -1,3 +1,7 @@
+# TAGLINE
+
+automatic source code formatter for C-family languages
+
 # TLDR
 
 **Format file and output to stdout**
@@ -38,7 +42,11 @@
 
 # DESCRIPTION
 
-**clang-format** formats C, C++, Java, JavaScript, JSON, Objective-C, Protobuf, and C# code according to configurable style rules. It's part of the LLVM/Clang project.
+**clang-format** is an automatic code formatting tool for C, C++, Java, JavaScript, JSON, Objective-C, Protobuf, and C# source files. It is part of the LLVM/Clang project and formats code according to configurable style rules.
+
+The tool ships with several predefined styles (LLVM, Google, Chromium, Mozilla, WebKit, Microsoft, GNU) and supports extensive customization through **.clang-format** configuration files. When using **--style=file**, it searches parent directories for the nearest configuration file.
+
+clang-format integrates with most major editors and CI/CD pipelines. The **--dry-run** option with **--Werror** enables enforcement of formatting standards in automated checks without modifying files.
 
 # PARAMETERS
 

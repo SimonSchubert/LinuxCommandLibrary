@@ -1,3 +1,7 @@
+# TAGLINE
+
+Command-line interface for the chrony NTP daemon
+
 # TLDR
 
 **Check synchronization status**
@@ -84,7 +88,8 @@
 
 # CONFIGURATION
 
-Permanent changes: edit /etc/chrony.conf
+**/etc/chrony.conf**
+> Permanent configuration for chronyd. Runtime changes via chronyc are lost on restart.
 
 # CAVEATS
 

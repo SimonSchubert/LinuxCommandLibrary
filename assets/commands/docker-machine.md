@@ -1,3 +1,7 @@
+# TAGLINE
+
+provision and manage Docker hosts on virtual machines
+
 # TLDR
 
 **List machines**
@@ -66,7 +70,7 @@
 
 # DESCRIPTION
 
-**docker-machine** creates and manages Docker hosts on local hypervisors or cloud providers. Allows running Docker Engine on remote machines.
+**docker-machine** creates and manages Docker hosts on local hypervisors or cloud providers. Allows running Docker Engine on remote machines. It automates the process of creating virtual machines, installing Docker, and configuring the Docker client to connect to them. Supports multiple drivers including VirtualBox, VMware, AWS, Azure, and Digital Ocean.
 
 # CAVEATS
 

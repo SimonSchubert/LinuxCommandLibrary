@@ -1,3 +1,7 @@
+# TAGLINE
+
+install applications from Flatpak repositories
+
 # TLDR
 
 **Install an application** from configured remotes

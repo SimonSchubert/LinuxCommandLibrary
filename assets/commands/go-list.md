@@ -1,3 +1,7 @@
+# TAGLINE
+
+list Go packages and module information
+
 # TLDR
 
 **List current package**
@@ -59,4 +63,3 @@
 # SEE ALSO
 
 [go](/man/go)(1), [go-mod](/man/go-mod)(1)
-

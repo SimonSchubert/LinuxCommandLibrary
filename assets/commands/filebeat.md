@@ -1,3 +1,7 @@
+# TAGLINE
+
+lightweight log shipper for Elastic Stack
+
 # TLDR
 
 **Start filebeat** with default configuration
@@ -99,6 +103,14 @@
 
 **-d** _SELECTOR_
 > Enable debug output for specific components.
+
+# CONFIGURATION
+
+**filebeat.yml**
+> Main configuration file specifying inputs, outputs, modules, and processing options.
+
+**/etc/filebeat/modules.d/*.yml**
+> Module-specific configuration files for pre-built log parsers.
 
 # DESCRIPTION
 

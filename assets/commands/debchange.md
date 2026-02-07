@@ -1,3 +1,7 @@
+# TAGLINE
+
+Debian changelog maintenance tool
+
 # TLDR
 
 Add a new version for **non-maintainer upload**
@@ -41,6 +45,14 @@ Essential for Debian package maintainers to track changes between package versio
 
 **-D** _distribution_
 > Set distribution (stable, unstable, etc.)
+
+# CONFIGURATION
+
+**~/.devscripts**
+> Default configuration options for debchange behavior, including maintainer name and email.
+
+**/etc/devscripts.conf**
+> System-wide devscripts configuration file.
 
 # CAVEATS
 

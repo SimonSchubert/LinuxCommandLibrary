@@ -1,3 +1,7 @@
+# TAGLINE
+
+change file attributes on Linux filesystems
+
 # TLDR
 
 Make **immutable**
@@ -27,6 +31,8 @@ Remove **immutable**
 # DESCRIPTION
 
 **chattr** changes file attributes on Linux filesystems. These extended attributes provide security and administrative controls beyond standard permissions, such as making files immutable or append-only.
+
+The immutable attribute (+i) is particularly useful for protecting critical system files, as even root cannot modify, delete, or rename an immutable file until the attribute is removed. The append-only attribute (+a) is commonly used for log files to prevent tampering while still allowing new entries to be written.
 
 # PARAMETERS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate beautiful images of source code
+
 # TLDR
 
 **Generate image from file**
@@ -39,7 +43,9 @@
 
 # DESCRIPTION
 
-**carbon-now** creates beautiful images of source code from the terminal using Carbon (carbon.now.sh). It downloads high-quality images and automatically detects file types.
+**carbon-now** creates beautiful images of source code from the terminal using the Carbon service (carbon.now.sh). It renders code with syntax highlighting, customizable themes, and professional styling suitable for presentations, documentation, and social media.
+
+The tool uses a headless browser (Playwright) to render images through the Carbon web service. It supports reading from files, clipboard, or stdin, and can output to files or clipboard. Interactive mode allows customizing appearance settings before generating the image. Presets save frequently used configurations for consistent styling.
 
 # PARAMETERS
 
@@ -84,7 +90,8 @@
 
 # CONFIGURATION
 
-Settings stored in ~/.carbon-now.json. Previous settings are reused automatically.
+**~/.carbon-now.json**
+> Saved settings and presets. Previous settings are reused automatically.
 
 # CAVEATS
 

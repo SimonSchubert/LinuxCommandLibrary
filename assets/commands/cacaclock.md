@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display time as ASCII art in the terminal
+
 # TLDR
 
 Display the **time** as ASCII art

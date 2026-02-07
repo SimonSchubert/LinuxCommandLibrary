@@ -1,3 +1,7 @@
+# TAGLINE
+
+cron job output suppressor
+
 # TLDR
 
 **Run a command** and only show output on error
@@ -14,9 +18,9 @@
 
 # DESCRIPTION
 
-**cronic** is a shell script to wrap cron jobs and suppress output unless the command fails. It captures stdout, stderr, and the exit code, only displaying output when the command returns a non-zero exit code.
+**cronic** is a shell script wrapper for cron jobs that suppresses output unless the command fails. Without cronic, every cron job that produces output triggers an email to the user, leading to inbox clutter from routine successful executions.
 
-This reduces email noise from successful cron jobs while still alerting on failures.
+cronic captures both stdout and stderr along with the exit code. If the command succeeds (returns zero), all output is discarded. If the command fails (returns non-zero), cronic displays the captured output, allowing cron to send the failure notification email. This approach reduces email noise from successful jobs while ensuring administrators are alerted to actual failures.
 
 # CAVEATS
 

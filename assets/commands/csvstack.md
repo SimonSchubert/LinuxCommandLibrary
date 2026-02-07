@@ -1,3 +1,7 @@
+# TAGLINE
+
+Vertical CSV file concatenator
+
 # TLDR
 
 **Stack multiple CSV files**

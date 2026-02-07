@@ -1,3 +1,7 @@
+# TAGLINE
+
+package and environment manager for Python and data science
+
 # TLDR
 
 **Create** environment
@@ -30,9 +34,11 @@
 
 # DESCRIPTION
 
-**conda** is a package and environment manager for Python and other languages. It handles dependencies, creates isolated environments, and works across platforms, making it popular for data science and scientific computing.
+**conda** is a cross-platform package and environment management system originally developed for Python but extended to support R, Ruby, Lua, Scala, Java, JavaScript, C/C++, and other languages. Unlike pip which only manages Python packages, conda handles complete environments including system-level dependencies and compiled libraries, making it particularly valuable for scientific computing where native dependencies are common.
 
-The tool is part of the Anaconda and Miniconda distributions.
+The environment isolation feature allows multiple projects with conflicting dependency requirements to coexist on the same system. Each conda environment is a directory containing a specific collection of packages, and switching between environments changes which packages are available. This is essential for data science workflows where different projects may require different versions of NumPy, TensorFlow, or other foundational libraries.
+
+Conda distributes binary packages rather than building from source, which dramatically speeds up installation and eliminates compilation errors that plague pip-based workflows. The package ecosystem is organized into channels, with conda-forge being the largest community-maintained channel. conda is included in both Anaconda (a large distribution with 1500+ packages) and Miniconda (minimal installer with just conda and Python). The tool has become the de facto standard in data science, machine learning, and scientific computing communities.
 
 # PARAMETERS
 
@@ -62,6 +68,17 @@ The tool is part of the Anaconda and Miniconda distributions.
 
 **deactivate**
 > Deactivate environment
+
+# CONFIGURATION
+
+**~/.condarc**
+> User-level conda configuration file.
+
+**/opt/conda/.condarc**
+> System-level conda configuration.
+
+**environment.yml**
+> Environment specification file for reproducible environments.
 
 # ENVIRONMENT MANAGEMENT
 

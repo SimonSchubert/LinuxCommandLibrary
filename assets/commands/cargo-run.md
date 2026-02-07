@@ -1,3 +1,7 @@
+# TAGLINE
+
+Build and execute a local package binary
+
 # TLDR
 
 **Build and run project**
@@ -34,7 +38,9 @@
 
 # DESCRIPTION
 
-**cargo run** builds and executes the binary target of the current package. Compiles the project if needed, then runs the resulting executable. Arguments after -- are passed to the binary.
+**cargo run** builds and executes a binary target of the current package. It automatically recompiles the project when source files have changed, then runs the resulting executable. Any arguments placed after `--` are forwarded directly to the binary rather than being interpreted by Cargo.
+
+If the package contains multiple binary targets, a specific one must be selected with `--bin` or `--example`, or a default can be configured via the `default-run` field in Cargo.toml. The binary's working directory is set to the current shell directory.
 
 # PARAMETERS
 

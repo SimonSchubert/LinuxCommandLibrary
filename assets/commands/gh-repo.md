@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage GitHub repositories from the command line
+
 # TLDR
 
 **Clone a repository**
@@ -64,8 +68,6 @@
 **gh repo** manages GitHub repositories from the command line. It provides repository creation, cloning, forking, and management without visiting github.com.
 
 The command supports both HTTPS and SSH cloning based on configuration. Repository creation includes options for visibility, description, license, and gitignore templates. Forking creates linked copies for contribution workflows.
-
-gh repo centralizes repository operations in terminal workflows.
 
 # CAVEATS
 

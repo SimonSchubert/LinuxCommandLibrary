@@ -1,3 +1,7 @@
+# TAGLINE
+
+prime factorization utility
+
 # TLDR
 
 **Factorize a number**

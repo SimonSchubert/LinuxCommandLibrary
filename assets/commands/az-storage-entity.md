@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage entities in Azure Table Storage
+
 # TLDR
 
 **Insert an entity** into a table

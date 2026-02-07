@@ -1,3 +1,7 @@
+# TAGLINE
+
+web-based file management interface
+
 # TLDR
 
 **Start web file browser**
@@ -51,9 +55,21 @@
 **--key** _file_
 > TLS key.
 
+# CONFIGURATION
+
+**config.json**
+> Configuration file for server settings, authentication, and permissions.
+
+**database.db**
+> SQLite database storing users, permissions, and settings.
+
 # DESCRIPTION
 
-**filebrowser** provides a web-based file management interface. Supports file upload, download, sharing, and includes a built-in editor. Useful for self-hosted file access.
+**filebrowser** provides a self-hosted web-based file management interface accessible through any browser. It creates a complete file server with upload, download, preview, search, and sharing capabilities, along with a built-in code editor for text files.
+
+The application supports user authentication with granular permissions, allowing different access levels for different directories. Multiple users can be configured with individual permissions controlling read, write, execute, and sharing capabilities.
+
+filebrowser is ideal for personal cloud storage, team file sharing, or providing controlled access to server directories without SSH. It includes features like drag-and-drop uploads, multi-file operations, and custom command execution hooks.
 
 # SEE ALSO
 

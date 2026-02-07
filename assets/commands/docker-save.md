@@ -1,3 +1,7 @@
+# TAGLINE
+
+save Docker images to tar archives
+
 # TLDR
 
 **Save image to tar file**
@@ -31,7 +35,7 @@
 
 # DESCRIPTION
 
-**docker save** saves one or more images to a tar archive, including all parent layers, tags, and versions. Use docker load to restore.
+**docker save** saves one or more images to a tar archive, including all parent layers, tags, and versions. Use docker load to restore. This command is useful for offline distribution, backing up images, or transferring images between systems without a registry. The resulting archive preserves the complete image with all metadata and history.
 
 # SEE ALSO
 

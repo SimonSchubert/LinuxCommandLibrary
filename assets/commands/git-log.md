@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display commit history
+
 # TLDR
 
 **Show commit history**
@@ -58,11 +62,9 @@
 
 # DESCRIPTION
 
-**git log** shows the commit history. It displays commits in reverse chronological order with details including author, date, and message. Extensive formatting options enable customized output.
+**git log** shows the commit history in reverse chronological order. Each entry displays the commit hash, author, date, and message. Extensive formatting and filtering options enable customized output for any use case.
 
-The command supports filtering by author, date, path, and message. Graph mode visualizes branch structure. Custom formats enable scripted log processing.
-
-git log is the primary tool for exploring repository history.
+The command supports filtering by author, date range, file path, and message content. Graph mode visualizes branch structure with ASCII art. Custom format strings enable scripted log processing and report generation.
 
 # CAVEATS
 

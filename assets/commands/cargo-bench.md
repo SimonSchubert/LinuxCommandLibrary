@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compile and run benchmarks for a Rust project
+
 # TLDR
 
 **Run all benchmarks**

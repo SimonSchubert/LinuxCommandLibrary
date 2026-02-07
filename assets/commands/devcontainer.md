@@ -1,3 +1,7 @@
+# TAGLINE
+
+CLI for managing development containers
+
 # TLDR
 
 **Build a dev container**
@@ -65,6 +69,11 @@ _COMMAND_
 Dev containers provide reproducible development environments using Docker containers. Configuration in .devcontainer/devcontainer.json defines the container image, extensions, settings, and features needed for a project.
 
 The CLI enables dev container workflows without IDE integration, useful for CI/CD pipelines, remote development, and automation of development environment setup.
+
+# CONFIGURATION
+
+**.devcontainer/devcontainer.json**
+> Configuration file defining container image, features, extensions, and environment settings.
 
 # CAVEATS
 

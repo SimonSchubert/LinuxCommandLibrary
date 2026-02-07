@@ -1,3 +1,7 @@
+# TAGLINE
+
+enhanced ls with colors and icons
+
 # TLDR
 
 **List files** with colors and icons
@@ -88,6 +92,17 @@
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**~/.config/colorls/dark_colors.yaml**
+> Color scheme for dark terminal backgrounds.
+
+**~/.config/colorls/light_colors.yaml**
+> Color scheme for light terminal backgrounds.
+
+**~/.config/colorls/file_aliases.yaml**
+> Custom file type associations and icon mappings.
 
 # DESCRIPTION
 

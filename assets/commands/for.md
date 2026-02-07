@@ -1,3 +1,7 @@
+# TAGLINE
+
+shell loop construct for iteration
+
 # TLDR
 
 **Iterate over list**

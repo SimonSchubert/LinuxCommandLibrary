@@ -1,3 +1,7 @@
+# TAGLINE
+
+filesystem mount configuration file
+
 # TLDR
 
 **View fstab**

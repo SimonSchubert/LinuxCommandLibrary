@@ -1,3 +1,7 @@
+# TAGLINE
+
+Go documentation server and viewer
+
 # TLDR
 
 **Start documentation server**
@@ -42,11 +46,9 @@ _SYMBOL_
 
 # DESCRIPTION
 
-**godoc** extracts and generates documentation for Go packages. It can serve documentation as a web server or print to console, providing browsable documentation.
+**godoc** extracts and generates documentation for Go packages. It can serve documentation as a web server or print to the console, providing browsable, searchable documentation.
 
-The HTTP server mode provides searchable documentation with source code links. It indexes all packages in GOPATH/GOROOT for comprehensive browsing.
-
-godoc serves and displays Go documentation.
+The HTTP server mode indexes all packages in GOPATH/GOROOT for comprehensive browsing with source code links. For quick command-line lookups, the `go doc` subcommand is preferred.
 
 # CAVEATS
 

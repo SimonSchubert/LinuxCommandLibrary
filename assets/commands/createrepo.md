@@ -1,3 +1,7 @@
+# TAGLINE
+
+RPM repository metadata generator
+
 # TLDR
 
 **Initialize** a basic repository
@@ -18,9 +22,9 @@ Use **SHA1 checksum** and skip symlinks
 
 # DESCRIPTION
 
-**createrepo** initializes an RPM repository by creating the metadata files (XML and SQLite) required by yum/dnf. It scans a directory of RPM packages and generates the repodata subdirectory.
+**createrepo** initializes an RPM repository by creating the metadata files required by yum/dnf package managers. It scans a directory containing RPM packages and generates a repodata subdirectory with XML metadata files and SQLite databases describing available packages.
 
-Used to create local or custom RPM repositories for package distribution.
+The generated metadata includes package names, versions, dependencies, file lists, and checksums. This enables yum/dnf clients to query package information, resolve dependencies, and perform installations from the repository without downloading every RPM file. The tool is essential for creating local repositories, custom enterprise package distributions, or mirror sites.
 
 # PARAMETERS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Python deterministic profiler
+
 # TLDR
 
 **Profile a Python script**

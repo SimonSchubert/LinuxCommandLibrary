@@ -1,3 +1,7 @@
+# TAGLINE
+
+Search manual page descriptions by keyword
+
 # TLDR
 
 **Search** man pages by keyword

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Record and replay terminal sessions
+
 # TLDR
 
 **Record** terminal session
@@ -61,6 +65,11 @@ Unlike video screen recording, asciinema recordings are text-based, allowing cop
 
 **--cols** _n_ / **--rows** _n_
 > Override terminal dimensions
+
+# CONFIGURATION
+
+**~/.config/asciinema/config**
+> User configuration file for default recording settings, API URL, and authentication token.
 
 # CAVEATS
 

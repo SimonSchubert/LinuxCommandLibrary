@@ -1,3 +1,7 @@
+# TAGLINE
+
+remove Docker images from local storage
+
 # TLDR
 
 **Remove an image**
@@ -34,7 +38,7 @@
 
 # DESCRIPTION
 
-**docker rmi** removes one or more images. Images in use by containers cannot be removed unless forced. Shorthand for docker image rm.
+**docker rmi** removes one or more images. Images in use by containers cannot be removed unless forced. Shorthand for docker image rm. Removing an image deletes all its layers unless they're shared with other images. Dangling images are untagged images that are no longer referenced by any tagged image.
 
 # SEE ALSO
 

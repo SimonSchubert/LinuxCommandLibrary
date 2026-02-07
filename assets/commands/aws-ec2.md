@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage virtual servers and networking on Amazon EC2.
+
 # TLDR
 
 **Launch a new EC2 instance**

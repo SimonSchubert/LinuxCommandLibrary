@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast web fuzzer written in Go
+
 # TLDR
 
 **Directory fuzzing**

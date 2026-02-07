@@ -1,3 +1,7 @@
+# TAGLINE
+
+Disable AppArmor security profiles
+
 # TLDR
 
 **Disable** a profile

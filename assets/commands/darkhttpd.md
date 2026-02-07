@@ -1,3 +1,7 @@
+# TAGLINE
+
+simple, fast, and secure static web server
+
 # TLDR
 
 **Serve the current directory** on the default port

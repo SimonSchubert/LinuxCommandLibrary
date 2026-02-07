@@ -1,3 +1,7 @@
+# TAGLINE
+
+Bulk download submissions and media from Reddit
+
 # TLDR
 
 **Download posts from a subreddit**
@@ -89,6 +93,11 @@ The tool has three modes: **download** (downloads linked media like images and v
 
 **-v, --verbose**
 > Increase output verbosity
+
+# CONFIGURATION
+
+**~/.config/bdfr/default_config.cfg**
+> Main configuration file with client ID, secret, and default options.
 
 # CAVEATS
 

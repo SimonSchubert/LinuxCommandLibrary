@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage GitHub Actions configuration variables
+
 # TLDR
 
 **List variables**
@@ -54,9 +58,10 @@
 
 # DESCRIPTION
 
-**gh variable** manages GitHub Actions variables. Variables store non-sensitive configuration data for workflows.
+**gh variable** manages GitHub Actions configuration variables for storing non-sensitive workflow data. Unlike secrets, variables are not encrypted and their values can be retrieved, making them suitable for configuration settings, feature flags, and environment names.
+
+Variables can be scoped to repositories, organizations, or specific deployment environments. They are accessible in workflows via the **vars** context (e.g., `vars.VARIABLE_NAME`). They are ideal for API endpoints, build configurations, and other non-secret parameters.
 
 # SEE ALSO
 
 [gh](/man/gh)(1), [gh-secret](/man/gh-secret)(1)
-

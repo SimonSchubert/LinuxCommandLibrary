@@ -1,3 +1,7 @@
+# TAGLINE
+
+retrieve DigitalOcean account billing balance
+
 # TLDR
 
 **Get account balance**

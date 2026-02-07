@@ -1,3 +1,7 @@
+# TAGLINE
+
+lock-free cloud backup with deduplication
+
 # TLDR
 
 **Initialize a repository** with local storage

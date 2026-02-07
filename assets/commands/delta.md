@@ -1,3 +1,7 @@
+# TAGLINE
+
+syntax-highlighting pager for diffs
+
 # TLDR
 
 **View git diff** with delta
@@ -68,6 +72,11 @@ _FILE1_ _FILE2_
 delta is designed as a git pager replacement, integrating seamlessly with git diff, git show, git log, and git blame. It uses the same syntax highlighting engine as bat, supporting hundreds of languages.
 
 Features include navigation between hunks, customizable themes, hyperlinks to line numbers, and special handling of merge conflicts. It can also process unified diff output from other tools.
+
+# CONFIGURATION
+
+**~/.gitconfig**
+> Configure delta as the default git pager with core.pager and delta.* options.
 
 # CAVEATS
 

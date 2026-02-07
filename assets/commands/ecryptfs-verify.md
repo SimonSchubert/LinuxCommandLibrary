@@ -1,3 +1,7 @@
+# TAGLINE
+
+verify eCryptfs encryption setup
+
 # TLDR
 
 **Verify eCryptfs setup**

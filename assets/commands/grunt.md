@@ -1,3 +1,7 @@
+# TAGLINE
+
+JavaScript task runner for automation
+
 # TLDR
 
 **Run default task**
@@ -50,11 +54,17 @@ _TASKS_
 
 # DESCRIPTION
 
-**Grunt** is a JavaScript task runner for automating repetitive tasks. It handles minification, compilation, testing, and linting through plugins.
+**Grunt** is a JavaScript task runner for automating repetitive tasks. It handles minification, compilation, testing, and linting through a plugin ecosystem.
 
-The tool reads configuration from Gruntfile.js. It was widely used before npm scripts and newer build tools like Gulp and webpack.
+The tool reads configuration from Gruntfile.js. It was widely used before npm scripts and newer build tools like Gulp and webpack gained popularity.
 
-Grunt automates JavaScript project tasks.
+# CONFIGURATION
+
+**Gruntfile.js**
+> Project-level configuration file defining tasks, their options, and execution order.
+
+**package.json**
+> Lists Grunt plugins as devDependencies.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+GitHub official command line interface
+
 # TLDR
 
 **Clone a repository**
@@ -64,6 +68,14 @@
 The tool integrates deeply with git workflows, enabling seamless transitions between local development and GitHub collaboration. It supports interactive prompts for complex operations and scripted automation for CI/CD pipelines.
 
 gh provides a unified interface for GitHub's REST and GraphQL APIs with built-in authentication and configuration management.
+
+# CONFIGURATION
+
+**~/.config/gh/config.yml**
+> User configuration including default settings, authentication tokens, and preferences.
+
+**~/.config/gh/hosts.yml**
+> Authentication credentials for GitHub.com and GitHub Enterprise instances.
 
 # CAVEATS
 

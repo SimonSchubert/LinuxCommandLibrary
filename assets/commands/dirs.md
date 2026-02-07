@@ -1,3 +1,7 @@
+# TAGLINE
+
+directory stack display command
+
 # TLDR
 
 **Display directory stack**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Dovecot mail server administration tool
+
 # TLDR
 
 **Show mailbox status**
@@ -68,6 +72,11 @@ The tool handles tasks like mailbox maintenance, message search and manipulation
 **quota**: Quota operations
 **sync**: Dsync replication
 **user**: User information
+
+# CONFIGURATION
+
+**/etc/dovecot/dovecot.conf**
+> Main Dovecot configuration file controlling mail storage, authentication, and protocols.
 
 # CAVEATS
 

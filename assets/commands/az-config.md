@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Azure CLI configuration settings
+
 # TLDR
 
 **Get all configurations**
@@ -66,6 +70,14 @@
 **az config** manages Azure CLI configuration settings. It allows customizing CLI behavior including output formatting, default values, telemetry, logging, and error display. Configuration can be set globally or locally per directory.
 
 The default configuration file is stored at ~/.azure/config.
+
+# CONFIGURATION
+
+**~/.azure/config**
+> Global Azure CLI configuration file with INI-format sections for core, defaults, logging, and other settings.
+
+**.azure/config**
+> Local directory-scoped configuration file, created with the --local flag, overriding global settings for the current project.
 
 # CAVEATS
 

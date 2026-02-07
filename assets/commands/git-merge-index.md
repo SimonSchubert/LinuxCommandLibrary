@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run merge program for unmerged files
+
 # TLDR
 
 **Run merge for unmerged files**
@@ -25,9 +29,10 @@
 
 # DESCRIPTION
 
-**git merge-index** runs a merge program for files needing merging. A low-level command used during three-way merge operations.
+**git merge-index** runs a specified merge program for each file needing merging. This low-level plumbing command is part of Git's internal merge machinery, invoked during three-way merge operations to handle unmerged files in the index.
+
+The command passes file information (including base, ours, and theirs versions with their object IDs) to the specified merge program. Most users never need to call this directly, as `git merge` handles it automatically. It is exposed for custom merge workflows and understanding Git internals.
 
 # SEE ALSO
 
 [git-merge](/man/git-merge)(1), [git-mergetool](/man/git-mergetool)(1)
-

@@ -1,3 +1,7 @@
+# TAGLINE
+
+OpenSSL private key generation utility
+
 # TLDR
 
 **Generate RSA key**

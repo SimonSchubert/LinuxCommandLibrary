@@ -1,3 +1,7 @@
+# TAGLINE
+
+Summarize git log output grouped by author
+
 # TLDR
 
 **Summarize commits by author**
@@ -49,11 +53,14 @@ _REVISION-RANGE_
 
 # DESCRIPTION
 
-**git shortlog** summarizes git log output, grouping commits by author. It's commonly used for release notes and contributor acknowledgments.
+**git shortlog** summarizes `git log` output by grouping commits under each author. It is commonly used for generating release notes and contributor acknowledgments.
 
-The command can show commit counts, sort by contribution size, and handle the mailmap for identity normalization. It provides quick contribution statistics.
+The command can show commit counts per author, sort by contribution size, and use the mailmap for identity normalization across different name/email variations.
 
-git shortlog generates commit summaries by contributor.
+# CONFIGURATION
+
+**.mailmap**
+> Maps author identities to canonical names and emails, used by git shortlog for deduplication.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create archives of repository files without version control metadata
+
 # TLDR
 
 **Create tar archive of HEAD**
@@ -47,7 +51,11 @@
 
 # DESCRIPTION
 
-**git archive** creates an archive of files from a named tree. Useful for creating release packages without .git directory.
+**git archive** creates archive files (tar, zip) containing repository content at a specific commit or branch without including the .git directory and other version control metadata. This is essential for creating clean distribution packages and release artifacts.
+
+The command supports multiple archive formats including tar, zip, and tar.gz through pipes. Archives can be created from any tree-ish reference (commit, branch, tag) and can include specific subdirectories or use path filtering to include only desired files.
+
+Prefix support allows prepending a directory structure to all archived files, useful for creating archives that extract into a specific folder. Remote repository archives can be created without local checkout using the --remote option, though this requires server support.
 
 # SEE ALSO
 

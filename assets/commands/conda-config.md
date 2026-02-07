@@ -1,3 +1,7 @@
+# TAGLINE
+
+manage conda configuration settings
+
 # TLDR
 
 **Show all configuration**
@@ -48,9 +52,21 @@
 **--env**
 > Apply to environment-specific config.
 
+# CONFIGURATION
+
+**~/.condarc**
+> User-level configuration file.
+
+**.condarc**
+> Project or environment-specific configuration.
+
 # DESCRIPTION
 
-**conda config** manages conda configuration including channels, proxy settings, and behavior options. Configuration is stored in .condarc files at user or system level.
+**conda config** provides command-line access to conda's configuration system, which controls package channels, proxy settings, SSL verification, default behaviors, and numerous other options affecting how conda operates. Configuration is stored in .condarc files (YAML format) which can exist at system, user, or project levels, with user-level typically at ~/.condarc.
+
+The configuration system uses a hierarchical override mechanism where more specific configurations take precedence over general ones. Common configuration tasks include managing the channel priority list (determining which repositories are searched for packages and in what order), setting up proxy servers for corporate environments, disabling SSL verification for internal repositories, and controlling automatic environment activation.
+
+Channels are particularly important in conda's configuration as they determine where packages are sourced. The defaults channel points to Anaconda's official repository, while conda-forge is a community-driven channel with a broader package selection. Channel priority affects which package version is selected when the same package exists in multiple channels. The --show-sources option reveals which .condarc files are currently in effect and how configuration values are being inherited or overridden.
 
 # SEE ALSO
 

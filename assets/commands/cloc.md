@@ -1,3 +1,7 @@
+# TAGLINE
+
+source code line counter
+
 # TLDR
 
 **Count lines in directory**
@@ -42,9 +46,11 @@
 
 # DESCRIPTION
 
-**cloc** counts blank lines, comment lines, and physical lines of source code in over 200 programming languages. It analyzes files, directories, and archives, producing reports by language or file.
+**cloc** (Count Lines of Code) counts blank lines, comment lines, and physical lines of source code in over 200 programming languages. It analyzes individual files, entire directory trees, and compressed archives, producing summary reports broken down by language or by file.
 
-Written in Perl with no external dependencies.
+The tool includes a diff mode that compares two codebases and reports added, removed, modified, and unchanged lines. Output can be generated in plain text, CSV, JSON, SQL, or XML format for integration with other tools and reporting systems.
+
+Written in Perl with no external dependencies, cloc is easy to install and runs on any platform with a Perl interpreter. It correctly handles multi-language files and uses language-specific comment detection rules for accurate counting.
 
 # PARAMETERS
 

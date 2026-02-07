@@ -1,3 +1,7 @@
+# TAGLINE
+
+create isolated conda environments
+
 # TLDR
 
 **Create a new environment** with Python
@@ -46,7 +50,11 @@
 
 # DESCRIPTION
 
-**conda create** creates a new conda environment with specified packages. Environments provide isolated spaces for different projects with different dependencies.
+**conda create** initializes a new isolated conda environment, which is a self-contained directory structure containing a specific collection of packages and their dependencies. Environments are conda's fundamental mechanism for managing multiple projects with potentially conflicting package requirements on the same system.
+
+The creation process involves specifying the environment name (or prefix path), the desired Python version, and any initial packages to install. Conda performs dependency resolution to ensure all specified packages and their dependencies are compatible, then downloads and installs the required packages into the new environment directory. Environments can be created with minimal packages and later extended, or fully specified upfront with a complete package set.
+
+The --clone option provides a way to duplicate existing environments, which is useful for experimentation or creating backup environments. The --file option allows reading package specifications from a file, enabling reproducible environment creation. Environments created with --prefix can exist anywhere on the filesystem, while named environments (--name) are stored in conda's default envs directory. Once created, environments must be activated before their packages become available to the shell.
 
 # CAVEATS
 

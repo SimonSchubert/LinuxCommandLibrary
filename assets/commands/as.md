@@ -1,3 +1,7 @@
+# TAGLINE
+
+Translate assembly language source into object files.
+
 # TLDR
 
 **Assemble** a file, writing output to a.out

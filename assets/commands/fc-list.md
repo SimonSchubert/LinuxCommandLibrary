@@ -1,3 +1,7 @@
+# TAGLINE
+
+list available fonts
+
 # TLDR
 
 **List all fonts**
@@ -57,22 +61,6 @@ _elements_
 **fc-list** lists fonts available to applications using fontconfig. It displays font family names, styles, file locations, and other properties.
 
 The command is essential for discovering installed fonts, finding font file paths, and verifying font installation. It queries the fontconfig database which caches font information.
-
-# EXAMPLES
-
-```bash
-# List all font families
-fc-list : family | sort -u
-
-# Find fonts supporting Japanese
-fc-list :lang=ja family
-
-# List all italic fonts
-fc-list :slant=italic family style
-
-# Custom format
-fc-list --format="%{family}\n"
-```
 
 # CAVEATS
 

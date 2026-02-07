@@ -1,3 +1,7 @@
+# TAGLINE
+
+replay ext filesystem undo logs
+
 # TLDR
 
 Display **undo file info**
@@ -26,9 +30,9 @@ Create **backup undo file** before overwriting
 
 # DESCRIPTION
 
-**e2undo** replays undo logs for ext2/ext3/ext4 filesystems. This can reverse a failed operation by e2fsprogs tools like e2fsck, resize2fs, or tune2fs.
+**e2undo** replays undo logs for ext2/ext3/ext4 filesystems. This can reverse a failed or unwanted operation by e2fsprogs tools like e2fsck, resize2fs, or tune2fs, providing a safety mechanism for filesystem modifications.
 
-Undo files are created when these tools are run with the -z option.
+Undo files are created when these tools are run with the -z option. The undo file records all blocks modified during the operation, allowing precise rollback to the pre-operation state. This is particularly valuable when testing filesystem modifications or recovering from interrupted operations.
 
 # PARAMETERS
 

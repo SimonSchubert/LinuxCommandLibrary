@@ -1,3 +1,7 @@
+# TAGLINE
+
+Google Cloud Platform command-line interface
+
 # TLDR
 
 **Initialize gcloud**
@@ -49,6 +53,17 @@ _GROUP_
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**~/.config/gcloud/configurations/config_default**
+> Default configuration properties including project, region, zone, and account settings.
+
+**~/.config/gcloud/credentials.db**
+> Encrypted credentials database for authenticated accounts.
+
+**~/.config/gcloud/properties**
+> User-specific gcloud properties and preferences.
 
 # DESCRIPTION
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compress executables into self-extracting archives
+
 # TLDR
 
 **Compress an executable file in place**

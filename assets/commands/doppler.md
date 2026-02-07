@@ -1,3 +1,7 @@
+# TAGLINE
+
+secrets management and injection platform
+
 # TLDR
 
 **Login to Doppler**

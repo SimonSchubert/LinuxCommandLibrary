@@ -1,3 +1,7 @@
+# TAGLINE
+
+PostgreSQL embedded SQL preprocessor
+
 # TLDR
 
 **Preprocess embedded SQL file**
@@ -53,6 +57,8 @@
 # DESCRIPTION
 
 **ecpg** is the PostgreSQL embedded SQL preprocessor. It converts C programs with embedded SQL statements into regular C code that uses the libpq library.
+
+The tool reads .pgc files containing EXEC SQL statements embedded in C code and generates standard C files that can be compiled and linked with PostgreSQL's libpq library. This enables database operations to be written directly in the application code rather than as separate SQL strings.
 
 # SEE ALSO
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Emacs tag file generator
+
 # TLDR
 
 **Generate TAGS file**

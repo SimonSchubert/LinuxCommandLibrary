@@ -1,3 +1,7 @@
+# TAGLINE
+
+minimal privilege escalation tool
+
 # TLDR
 
 **Run a command as root**
@@ -64,6 +68,11 @@ Configuration is done through **/etc/doas.conf** with simple rules specifying wh
 The configuration syntax is straightforward: each line is a rule with **permit** or **deny**, optional keywords like **nopass** (no password), **persist** (cache credentials), **keepenv** (preserve environment), and specifications for user, group, and allowed commands.
 
 Unlike sudo's extensive feature set, doas focuses on the core use case of privilege escalation with minimal complexity. This makes it easier to audit and reduces potential security vulnerabilities. Many Linux distributions now package doas as a sudo alternative.
+
+# CONFIGURATION
+
+**/etc/doas.conf**
+> Main configuration file specifying authorization rules. Each line contains a rule with permit/deny, optional keywords (nopass, persist, keepenv), and user/group/command specifications.
 
 # CAVEATS
 

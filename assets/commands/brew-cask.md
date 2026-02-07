@@ -1,3 +1,7 @@
+# TAGLINE
+
+Install and manage macOS GUI applications via Homebrew
+
 # TLDR
 
 **Install an application**

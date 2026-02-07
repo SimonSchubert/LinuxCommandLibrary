@@ -1,3 +1,7 @@
+# TAGLINE
+
+Apply changes from existing commits
+
 # TLDR
 
 **Apply commit to current branch**
@@ -57,7 +61,11 @@
 
 # DESCRIPTION
 
-**git cherry-pick** applies changes from existing commits to the current branch. Each commit is applied as a new commit with the same changes but different hash.
+**git cherry-pick** applies the changes introduced by existing commits onto the current branch, creating new commits with the same diff but different ancestry. This allows selective integration of specific changes without merging entire branches.
+
+The command is essential for backporting bug fixes to maintenance branches, incorporating specific features from development branches, and recovering commits from abandoned branches. Each cherry-picked commit gets a new SHA-1 hash reflecting its new parent.
+
+Cherry-picking can encounter conflicts when changes don't apply cleanly to the target branch's context. The operation can be paused, and conflicts resolved manually before continuing. The -x option appends a "cherry picked from commit" note to track the original source, useful for auditing backports.
 
 # SEE ALSO
 

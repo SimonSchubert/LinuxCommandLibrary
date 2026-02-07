@@ -1,3 +1,7 @@
+# TAGLINE
+
+fish shell abbreviation manager
+
 # TLDR
 
 **Add** a new abbreviation
@@ -30,7 +34,9 @@ Import abbreviations from another host over **SSH**
 
 # DESCRIPTION
 
-**abbr** manages abbreviations for the fish shell. Abbreviations are user-defined words that are replaced with longer phrases after they are entered and confirmed with space or enter. Only typed-in commands use abbreviations; abbreviations are not expanded in scripts.
+**abbr** manages abbreviations for the fish shell. Abbreviations are user-defined words that expand into longer phrases when entered at the command line and confirmed with space or enter. Unlike aliases, which are simple command substitutions, abbreviations allow the user to see and edit the expanded text before execution.
+
+Abbreviations only apply to interactively typed commands and are not expanded in scripts or functions. They can be scoped to trigger only at command position or anywhere on the line, and support regex patterns and dynamic expansions through shell functions.
 
 # PARAMETERS
 

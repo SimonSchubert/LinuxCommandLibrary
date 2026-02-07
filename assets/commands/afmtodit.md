@@ -1,3 +1,7 @@
+# TAGLINE
+
+Adobe font metrics to groff font description converter
+
 # TLDR
 
 **Convert** AFM file to groff font
@@ -18,9 +22,9 @@ Convert with **encoding** file
 
 # DESCRIPTION
 
-**afmtodit** converts Adobe Font Metrics (AFM) files to font description files suitable for use with groff. It creates the font metrics files that groff's PostScript driver uses to typeset documents.
+**afmtodit** converts Adobe Font Metrics (AFM) files to font description files suitable for use with the groff typesetting system. It creates the font metrics files that groff's PostScript driver needs to properly position and space characters when typesetting documents.
 
-The tool maps PostScript glyph names to groff character names using a map file, and can include kerning pairs and ligature information in the output.
+The tool maps PostScript glyph names to groff character names using a user-supplied map file, and can include kerning pairs and ligature information in the output. It also supports synthetic transformations such as oblique slanting, making it possible to generate italic variants from roman font metrics without a separate AFM file.
 
 # PARAMETERS
 

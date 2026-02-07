@@ -1,3 +1,7 @@
+# TAGLINE
+
+web path brute-force scanner for content discovery
+
 # TLDR
 
 **Scan a URL** with default wordlist

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Make JSON greppable
+
 # TLDR
 
 **Convert JSON to gron**
@@ -49,11 +53,9 @@ _FILE_
 
 # DESCRIPTION
 
-**gron** transforms JSON into discrete path-value assignments, making it greppable. Each JSON value becomes a line showing its full path.
+**gron** transforms JSON into discrete path-value assignments, making it greppable with standard Unix tools. Each JSON value becomes a single line showing its full path from the root.
 
-The tool enables searching JSON with standard Unix tools like grep. Results can be converted back to valid JSON using ungron mode.
-
-gron makes JSON greppable.
+Results can be filtered with grep and converted back to valid JSON using ungron mode (**-u**), enabling powerful JSON querying without specialized tools.
 
 # CAVEATS
 

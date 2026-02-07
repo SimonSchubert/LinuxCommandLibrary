@@ -1,3 +1,7 @@
+# TAGLINE
+
+Groff preprocessor for Gremlin graphics
+
 # TLDR
 
 **Process gremlin file**
@@ -35,11 +39,9 @@ _FILE_
 
 # DESCRIPTION
 
-**grn** is a groff preprocessor for Gremlin graphics files. It converts Gremlin vector graphics format to groff commands for embedding in documents.
+**grn** is a groff preprocessor for Gremlin graphics files. It converts Gremlin vector graphics format to groff commands for embedding line drawings and text in documents.
 
-The tool was originally developed for SunView and later adapted for groff. It handles line drawings, text, and other Gremlin primitives.
-
-grn preprocesses Gremlin graphics for groff.
+The tool was originally developed for SunView and later adapted for groff. It handles line drawings, text labels, and other Gremlin primitives.
 
 # CAVEATS
 

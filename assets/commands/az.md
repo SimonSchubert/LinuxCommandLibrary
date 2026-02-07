@@ -1,3 +1,7 @@
+# TAGLINE
+
+Unified command-line interface for Microsoft Azure
+
 # TLDR
 
 **Login** to Azure
@@ -74,6 +78,9 @@ The CLI enables automation, scripting, and management of Azure resources without
 - **account** - Account management
 
 # CONFIGURATION
+
+**~/.azure/config**
+> INI-format configuration file for defaults and settings. Sections include [core], [defaults], and [cloud]. Managed via `az config set`.
 
 ```bash
 # Set default output format

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Check playbooks for best practices
+
 # TLDR
 
 **Lint** a playbook
@@ -62,6 +66,14 @@ The tool helps maintain consistent, high-quality Ansible code and catch common m
 
 **-c** _file_, **--config-file** _file_
 > Configuration file
+
+# CONFIGURATION
+
+**.ansible-lint**
+> Project-level configuration file for rule selection, skip lists, and profiles.
+
+**~/.config/ansible-lint/config.yml**
+> User-level default configuration.
 
 # CAVEATS
 

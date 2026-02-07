@@ -1,3 +1,7 @@
+# TAGLINE
+
+CLI for deploying apps on Fly.io platform
+
 # TLDR
 
 **Launch new app**
@@ -60,6 +64,11 @@ _COMMAND_
 The tool deploys Docker containers or builds from source, distributing them across Fly's global network. It handles secrets, volumes, scaling, and networking configuration.
 
 flyctl enables full platform control from the command line, from initial launch to production management.
+
+# CONFIGURATION
+
+**fly.toml**
+> Application configuration file defining services, regions, build settings, and environment variables.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Groff command-line option guesser
+
 # TLDR
 
 **Guess groff options**
@@ -39,11 +43,9 @@ _FILES_
 
 # DESCRIPTION
 
-**grog** analyzes roff input files and suggests the appropriate groff command line. It detects which macro packages and preprocessors are needed.
+**grog** analyzes roff input files and suggests the appropriate groff command line. It detects which macro packages and preprocessors are needed by examining document content for macro usage.
 
-The tool examines document content for macro usage like .TH (man), .PP (ms), and preprocessor commands. It outputs the complete groff command.
-
-grog guesses correct groff options from files.
+The tool outputs the complete groff command with correct options, which can be piped to a shell for execution.
 
 # CAVEATS
 

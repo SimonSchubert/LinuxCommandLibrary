@@ -1,3 +1,7 @@
+# TAGLINE
+
+List references in the local repository
+
 # TLDR
 
 **List all refs**
@@ -52,11 +56,9 @@ _PATTERN_
 
 # DESCRIPTION
 
-**git show-ref** lists references in the repository. It shows SHA-1 hashes and ref names for branches, tags, and other refs.
+**git show-ref** lists references in the local repository, showing SHA-1 hashes and ref names for branches, tags, and other refs. It is a plumbing command commonly used in scripts.
 
-The command is useful for scripting and ref verification. Verify mode checks if a specific ref exists without listing all refs.
-
-git show-ref provides ref enumeration and verification.
+The verify mode checks whether a specific ref exists without listing all refs, returning an appropriate exit code.
 
 # CAVEATS
 

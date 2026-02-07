@@ -1,3 +1,7 @@
+# TAGLINE
+
+GRand Unified Bootloader for Linux systems
+
 # TLDR
 
 **Enter GRUB shell**
@@ -52,7 +56,16 @@
 
 GRUB 2 supports multiple filesystems, LVM, RAID, and encrypted partitions. It provides rescue mode for system recovery and scripting for advanced configurations.
 
-GRUB boots operating systems.
+# CONFIGURATION
+
+**/etc/default/grub**
+> Main GRUB configuration file controlling default boot entry, timeout, kernel parameters, and display settings.
+
+**/etc/grub.d/**
+> Directory containing scripts that generate the grub.cfg file. Custom entries can be added here.
+
+**/boot/grub/grub.cfg**
+> Generated configuration file. Do not edit directly; use grub-mkconfig to regenerate.
 
 # CAVEATS
 

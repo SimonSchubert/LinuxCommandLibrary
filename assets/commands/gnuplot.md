@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-driven graphing and plotting utility
+
 # TLDR
 
 **Start interactive mode**
@@ -43,11 +47,14 @@ _FILES_
 
 # DESCRIPTION
 
-**gnuplot** is a command-driven graphing utility. It creates 2D and 3D plots of functions and data, supporting many output formats for publication-quality graphics.
+**gnuplot** is a command-driven graphing utility for creating 2D and 3D plots of functions and data. It supports many output formats for publication-quality graphics.
 
-The tool uses a scripting language for plot customization. It supports terminals for X11, PNG, PDF, SVG, and many others. It's widely used in scientific visualization.
+The tool uses its own scripting language for plot customization. It supports terminals for X11, PNG, PDF, SVG, and many others. It is widely used in scientific visualization and data analysis.
 
-gnuplot produces publication-quality plots and visualizations.
+# CONFIGURATION
+
+**~/.gnuplot**
+> Initialization file executed on startup, used for default settings and custom functions.
 
 # CAVEATS
 

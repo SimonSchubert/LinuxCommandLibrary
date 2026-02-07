@@ -1,3 +1,7 @@
+# TAGLINE
+
+Zero-configuration CPAN installer
+
 # TLDR
 
 **Install a Perl module**

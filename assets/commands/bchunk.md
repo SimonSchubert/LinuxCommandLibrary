@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert BIN/CUE CD images to ISO and audio tracks
+
 # TLDR
 
 **Convert** a binary CD image to ISO

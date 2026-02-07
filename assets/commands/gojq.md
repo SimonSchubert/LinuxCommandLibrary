@@ -1,3 +1,7 @@
+# TAGLINE
+
+Pure Go implementation of jq JSON processor
+
 # TLDR
 
 **Pretty print JSON**
@@ -94,15 +98,11 @@
 
 # DESCRIPTION
 
-**gojq** is a pure Go implementation of jq, the JSON processor. It provides the same query language for filtering, transforming, and extracting data from JSON, with additional YAML support.
+**gojq** is a pure Go implementation of jq, the JSON processor. It provides the same query language for filtering, transforming, and extracting data from JSON, with additional native YAML support.
 
 The filter language uses **|** for pipelines, **.** for field access, **[]** for iteration, and **select()** for filtering. Complex transformations combine these with object construction, array slicing, and built-in functions.
 
-YAML input (**--yaml-input**) and output (**--yaml-output**) make gojq useful for Kubernetes and other YAML-heavy workflows without external conversion.
-
-Variables with **--arg** and **--argjson** enable parameterized queries, useful for scripts. Module support via **-L** allows organizing complex transformations into reusable libraries.
-
-gojq aims for jq compatibility while being easier to install (single binary) and embed in Go applications.
+YAML input and output make gojq particularly useful for Kubernetes and other YAML-heavy workflows. Variables with **--arg** enable parameterized queries for scripting.
 
 # CAVEATS
 

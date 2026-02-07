@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line interface for OpenAI language models
+
 # TLDR
 
 **Start an interactive chat** session
@@ -86,6 +90,11 @@ The tool supports both interactive mode for back-and-forth conversation and sing
 Configuration can be set via command-line flags, environment variables, or a config file. The **OPENAI_API_KEY** environment variable is commonly used for authentication. Different models offer varying capabilities, speed, and pricing.
 
 System prompts allow customizing the assistant's behavior and expertise area. Temperature controls response creativity - lower values produce more focused responses while higher values increase variety. The streaming option displays responses token-by-token as they're generated.
+
+# CONFIGURATION
+
+**OPENAI_API_KEY**
+> Environment variable for API authentication.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Go source code formatter
+
 # TLDR
 
 **Format a Go file** and print to stdout
@@ -59,11 +63,7 @@
 
 **gofmt** formats Go source code according to standard Go style guidelines. It uses tabs for indentation and blanks for alignment, ensuring consistent formatting across all Go codebases.
 
-When invoked without paths, gofmt reads from standard input and writes to standard output. With file or directory arguments, it processes those paths. Directories are processed recursively.
-
-The **-s** flag applies simplification transformations like removing unnecessary type declarations and simplifying slice expressions. The **-r** flag enables custom rewrite rules for code transformations.
-
-gofmt is typically run automatically by editors or as part of pre-commit hooks to maintain consistent style.
+When invoked without paths, it reads from standard input. With file or directory arguments, it processes those paths recursively. The **-s** flag applies simplification transformations like removing unnecessary type declarations. The **-r** flag enables custom rewrite rules for code transformations.
 
 # CAVEATS
 

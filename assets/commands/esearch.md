@@ -1,3 +1,7 @@
+# TAGLINE
+
+NCBI Entrez database search utility
+
 # TLDR
 
 Search **pubmed** for a query
@@ -22,9 +26,9 @@ Display **help**
 
 # DESCRIPTION
 
-**esearch** performs new Entrez searches using terms in indexed fields. It queries NCBI biological databases like pubmed, protein, and nucleotide.
+**esearch** is a command-line tool for performing searches in NCBI's Entrez databases using indexed field queries. It provides programmatic access to major biological databases including PubMed (biomedical literature), GenBank (nucleotide sequences), Protein (protein sequences), and many others.
 
-Part of the NCBI EDirect utilities for programmatic access to biological databases.
+The tool is part of the NCBI EDirect (Entrez Direct) utilities suite, designed for automated retrieval and processing of biological data. esearch typically serves as the first step in a pipeline, identifying records that match search criteria. Its output is usually piped to other EDirect commands like efetch (to retrieve full records) or elink (to find related data across databases). This enables powerful automation of biological database queries in research workflows.
 
 # PARAMETERS
 

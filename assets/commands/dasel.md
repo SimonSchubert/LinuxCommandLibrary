@@ -1,3 +1,7 @@
+# TAGLINE
+
+universal data selector for querying and modifying structured data
+
 # TLDR
 
 **Query a value** from a JSON file

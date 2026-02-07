@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display CI check status on pull requests
+
 # TLDR
 
 **View PR checks**
@@ -49,8 +53,6 @@ _PR-NUMBER_
 **gh pr checks** displays the status of CI checks and status checks on a pull request. It shows each check's name, status (pending, passing, failing), and conclusion.
 
 The watch mode enables waiting for checks to complete, useful in scripts that need to proceed only after successful CI runs. The command integrates with GitHub Actions and third-party CI services.
-
-gh pr checks provides CI status visibility directly in the terminal.
 
 # CAVEATS
 

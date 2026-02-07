@@ -1,3 +1,7 @@
+# TAGLINE
+
+Android Debug Bridge client-server tool
+
 # TLDR
 
 **List** connected devices
@@ -76,6 +80,20 @@ The tool operates through a client-server architecture where the adb server runs
 
 **kill-server**
 > Stop the adb server
+
+# CONFIGURATION
+
+**~/.android/adb_usb.ini**
+> List of USB vendor IDs for device detection, one per line.
+
+**~/.android/adbkey**
+> RSA private key used for device authentication. The corresponding public key (adbkey.pub) is pushed to authorized devices.
+
+**ANDROID_ADB_SERVER_PORT**
+> Environment variable to override the default adb server port (5037).
+
+**ADB_VENDOR_KEYS**
+> Environment variable specifying colon-separated paths to additional RSA key files for device authorization.
 
 # CAVEATS
 

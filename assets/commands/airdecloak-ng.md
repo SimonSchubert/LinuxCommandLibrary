@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove WEP cloaking from wireless capture files
+
 # TLDR
 
 **Remove cloaking** from a capture file

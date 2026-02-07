@@ -1,3 +1,7 @@
+# TAGLINE
+
+Undo recent commits while preserving changes
+
 # TLDR
 
 **Undo last commit**
@@ -36,11 +40,9 @@ _COUNT_
 
 # DESCRIPTION
 
-**git undo** removes the last commit(s) while keeping changes in the working directory. It's a safer alternative to git reset that defaults to preserving work.
+**git undo** removes the last commit(s) while keeping changes in the working directory. It is a safer alternative to `git reset` that defaults to preserving work.
 
 The command makes it easy to fix mistakes, amend commits, or restructure recent history. Different modes control whether changes remain staged or unstaged.
-
-git undo provides convenient commit reversal.
 
 # CAVEATS
 

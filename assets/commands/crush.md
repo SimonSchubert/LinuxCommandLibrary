@@ -1,3 +1,7 @@
+# TAGLINE
+
+glamorous AI coding agent TUI
+
 # TLDR
 
 **Start an interactive session**
@@ -77,6 +81,11 @@
 Crush supports multiple AI providers including OpenAI, Anthropic, Google Gemini, Groq, OpenRouter, AWS Bedrock, and local models via Ollama and LM Studio. It uses Language Server Protocol (LSP) for enhanced code context and is extensible via Model Context Protocol (MCP) servers with stdio, http, and sse transports.
 
 The tool offers excellent cross-platform compatibility, supporting macOS, Linux, Windows (PowerShell and WSL), FreeBSD, OpenBSD, and NetBSD. Configuration is stored in JSON files with settings for providers, LSP, MCP servers, and permissions.
+
+# CONFIGURATION
+
+**~/.config/crush/crush.json**
+> Main configuration file containing AI provider settings, API keys, LSP configurations, MCP server definitions, and permission settings.
 
 # CAVEATS
 

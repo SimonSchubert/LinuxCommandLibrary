@@ -1,3 +1,7 @@
+# TAGLINE
+
+Flutter version manager
+
 # TLDR
 
 **Install Flutter version**
@@ -49,6 +53,14 @@ _COMMAND_
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**.fvm/fvm_config.json**
+> Project-level Flutter version pinning.
+
+**~/.fvm/versions**
+> Directory containing cached Flutter SDK versions.
 
 # DESCRIPTION
 

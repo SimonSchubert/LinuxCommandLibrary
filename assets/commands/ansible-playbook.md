@@ -1,3 +1,7 @@
+# TAGLINE
+
+Execute Ansible playbooks
+
 # TLDR
 
 **Run** a playbook
@@ -77,6 +81,20 @@ Unlike ad-hoc ansible commands, playbooks define complete automation workflows w
 
 **--step**
 > Prompt before each task
+
+# CONFIGURATION
+
+**/etc/ansible/ansible.cfg**
+> System-wide Ansible configuration, including default inventory, forks, and connection settings.
+
+**~/.ansible.cfg**
+> Per-user Ansible configuration overriding system defaults.
+
+**ansible.cfg**
+> Project-level configuration in the current directory, highest priority.
+
+**/etc/ansible/hosts**
+> Default inventory file used when no inventory is specified.
 
 # CAVEATS
 

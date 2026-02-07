@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interactive Python shell for CSV files
+
 # TLDR
 
 **Open a CSV file** in a Python shell

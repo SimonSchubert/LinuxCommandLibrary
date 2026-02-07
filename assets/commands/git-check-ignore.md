@@ -1,3 +1,7 @@
+# TAGLINE
+
+Debug gitignore patterns and ignored files
+
 # TLDR
 
 **Check if file is ignored**
@@ -51,9 +55,20 @@ _PATHSPEC_
 
 **git check-ignore** debugs gitignore patterns. It reports whether paths are ignored and which pattern causes the ignore, helping troubleshoot gitignore rules.
 
-The verbose mode shows the gitignore file and line number responsible for ignoring a path. This is essential for debugging complex gitignore configurations with multiple files.
+The verbose mode (**-v**) shows the gitignore file, line number, and pattern responsible for ignoring a path. This is essential for debugging complex gitignore configurations with multiple .gitignore files at different directory levels.
 
-git check-ignore clarifies ignore behavior for any path.
+The **--non-matching** option combined with **-v** can also show why a file is _not_ being ignored, helping diagnose cases where files unexpectedly appear in git status output.
+
+# CONFIGURATION
+
+**.gitignore**
+> Pattern list specifying intentionally untracked files to ignore. Multiple .gitignore files can exist at different directory levels.
+
+**~/.config/git/ignore**
+> User-level global ignore patterns applied to all repositories.
+
+**/etc/gitconfig**
+> System-wide core.excludesFile configuration pointing to global ignore file.
 
 # CAVEATS
 

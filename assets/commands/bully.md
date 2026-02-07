@@ -1,3 +1,7 @@
+# TAGLINE
+
+Brute-force WPS pins to recover WPA/WPA2 passphrases
+
 # TLDR
 
 **Brute-force** the WPS pin of an access point

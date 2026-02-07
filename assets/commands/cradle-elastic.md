@@ -1,3 +1,7 @@
+# TAGLINE
+
+manage Elasticsearch within Cradle framework
+
 # TLDR
 
 **Start Elasticsearch** with Cradle
@@ -18,9 +22,11 @@
 
 # DESCRIPTION
 
-**cradle elastic** manages Elasticsearch instances within the Cradle PHP framework. It provides commands to start, stop, and manage Elasticsearch for development environments.
+**cradle elastic** manages Elasticsearch instances within the Cradle PHP framework. It provides commands to start, stop, and check the status of Elasticsearch services for development environments.
 
-Part of the Cradle framework's service management tools.
+This tool simplifies local Elasticsearch management by handling service lifecycle operations through the Cradle CLI. It's particularly useful for developers who need Elasticsearch running locally for search functionality testing without manually managing the service.
+
+Part of the Cradle framework's integrated service management tools that allow developers to control dependencies directly from the framework CLI.
 
 # SEE ALSO
 

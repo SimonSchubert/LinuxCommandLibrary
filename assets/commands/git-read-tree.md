@@ -1,3 +1,7 @@
+# TAGLINE
+
+Read tree information into index
+
 # TLDR
 
 **Read tree into index**
@@ -45,11 +49,9 @@ _TREE-ISH_
 
 # DESCRIPTION
 
-**git read-tree** reads tree information into the index. It's a plumbing command used by porcelain commands like checkout and merge to manipulate the index.
+**git read-tree** reads tree information into the index. It is a plumbing command used internally by porcelain commands like `git checkout` and `git merge` to manipulate the staging area.
 
-The command can read single trees or perform three-way merges of trees. It updates the index without touching the working tree unless -u is specified.
-
-git read-tree provides low-level index manipulation.
+The command can read a single tree or perform three-way merges of trees. It updates the index without touching the working tree unless the `-u` flag is specified to synchronize the working directory.
 
 # CAVEATS
 

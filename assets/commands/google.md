@@ -1,3 +1,7 @@
+# TAGLINE
+
+Command-line Google search tool
+
 # TLDR
 
 **Search Google**
@@ -42,11 +46,9 @@ _QUERY_
 
 # DESCRIPTION
 
-**google** is a command-line Google search tool. It searches Google and displays results in the terminal or opens them in a browser.
+**google** is a command-line tool for searching Google directly from the terminal. It displays results with titles and URLs, or opens them in a browser.
 
-The tool provides quick access to search from the command line without opening a browser. Various flags enable different search types.
-
-google provides terminal-based Google searching.
+The tool provides quick access to search without leaving the terminal, with flags for different search types including news and images.
 
 # CAVEATS
 

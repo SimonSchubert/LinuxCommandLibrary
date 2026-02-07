@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extract blob contents to a temporary file
+
 # TLDR
 
 **Unpack blob to temp file**
@@ -10,9 +14,8 @@
 
 # DESCRIPTION
 
-**git unpack-file** creates a temporary file with a blob's contents and prints the filename. A low-level plumbing command for accessing blob contents.
+**git unpack-file** creates a temporary file with a blob's contents and prints the filename. It is a low-level plumbing command for accessing blob contents outside of the working tree.
 
 # SEE ALSO
 
 [git-cat-file](/man/git-cat-file)(1), [git-hash-object](/man/git-hash-object)(1)
-

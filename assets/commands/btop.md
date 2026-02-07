@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal-based resource monitor with GPU support
+
 # TLDR
 
 **Start** resource monitor
@@ -58,9 +62,11 @@ The tool provides comprehensive system monitoring with GPU support, mouse intera
 
 # CONFIGURATION
 
-Config file: `~/.config/btop/btop.conf`
+**~/.config/btop/btop.conf**
+> Main configuration file for settings like update interval, theme, and layout.
 
-Themes directory: `~/.config/btop/themes/`
+**~/.config/btop/themes/**
+> Directory for custom color themes.
 
 # CAVEATS
 

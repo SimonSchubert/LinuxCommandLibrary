@@ -1,3 +1,7 @@
+# TAGLINE
+
+generate optimized subsets of font files
+
 # TLDR
 
 **Subset** a TTF font file to the Basic Latin Unicode block

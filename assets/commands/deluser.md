@@ -1,3 +1,7 @@
+# TAGLINE
+
+remove users from the system
+
 # TLDR
 
 **Remove** a user
@@ -46,6 +50,11 @@ When given both a user and group name, it removes the user from that group witho
 
 **--system**
 > Only delete if system user
+
+# CONFIGURATION
+
+**/etc/deluser.conf**
+> Controls default behavior including removal of home directories and backup settings.
 
 # CAVEATS
 

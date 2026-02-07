@@ -1,3 +1,7 @@
+# TAGLINE
+
+create and start a new container
+
 # TLDR
 
 **Run a container**
@@ -70,7 +74,11 @@
 
 # DESCRIPTION
 
-**docker container run** creates and starts a new container from an image. Equivalent to **docker run**.
+**docker container run** creates and starts a new container from a specified image, combining the functionality of **docker container create** and **docker container start** into a single command. This is the most common way to launch containers in Docker.
+
+When executed, Docker pulls the image if not locally available, creates a container with the specified configuration, and starts it. The command supports extensive configuration options for networking, storage, resource limits, and runtime behavior. Using **--rm** ensures ephemeral containers are cleaned up automatically, while **-d** enables daemon mode for background services.
+
+This command is equivalent to the legacy **docker run** command.
 
 # SEE ALSO
 

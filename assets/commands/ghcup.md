@@ -1,3 +1,7 @@
+# TAGLINE
+
+Universal installer for the Haskell toolchain
+
 # TLDR
 
 **Install GHC version**
@@ -78,9 +82,18 @@
 
 # DESCRIPTION
 
-**ghcup** is the Haskell toolchain installer. Manages installations of GHC (compiler), Cabal, Stack, and HLS. The recommended way to install Haskell tools.
+**ghcup** is the universal installer and version manager for the Haskell toolchain. It provides a centralized way to install, manage, and switch between multiple versions of GHC, Cabal, Stack, and HLS (Haskell Language Server).
+
+The tool handles downloading, installing, and setting up PATH entries for all Haskell development tools. It supports installing specific versions, setting global defaults, and maintaining multiple versions side-by-side. The interactive TUI mode provides a visual interface for managing installations.
+
+# CONFIGURATION
+
+**~/.ghcup/config.yaml**
+> Configuration file for ghcup settings, download mirrors, and caching preferences.
+
+**~/.ghcup/bin/**
+> Installation directory for all managed toolchain binaries.
 
 # SEE ALSO
 
 [ghc](/man/ghc)(1), [cabal](/man/cabal)(1), [stack](/man/stack)(1)
-

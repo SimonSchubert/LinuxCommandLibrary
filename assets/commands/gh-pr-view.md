@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display pull request details and metadata
+
 # TLDR
 
 **View current PR**
@@ -49,8 +53,6 @@ _PR-NUMBER_
 **gh pr view** displays detailed information about a pull request including title, body, state, reviewers, labels, and merge status. It renders markdown content in the terminal.
 
 The command defaults to the pull request for the current branch if no number is specified. JSON output enables scripted access to PR data with optional jq filtering.
-
-gh pr view provides quick PR inspection without leaving the terminal.
 
 # CAVEATS
 

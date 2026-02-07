@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display the dependency graph as a tree
+
 # TLDR
 
 **Show dependency tree**
@@ -34,9 +38,9 @@
 
 # DESCRIPTION
 
-**cargo tree** displays a tree visualization of the dependency graph. Shows all packages and their dependencies. Packages marked with (*) have been deduplicated.
+**cargo tree** displays a tree visualization of the dependency graph for a Rust project. It shows all packages and their transitive dependencies in an indented tree format, with packages marked `(*)` indicating they have already been shown elsewhere and are deduplicated.
 
-Built into Cargo since Rust 1.44.
+The command supports several analysis modes: `--invert` traces which packages depend on a given crate, `--duplicates` shows packages that appear multiple times with different versions, and `--edges features` reveals how features propagate through the dependency graph. Built into Cargo since Rust 1.44, it replaced the earlier `cargo-tree` third-party plugin.
 
 # PARAMETERS
 

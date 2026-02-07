@@ -1,3 +1,7 @@
+# TAGLINE
+
+Introspect and monitor the D-Bus message bus
+
 # TLDR
 
 Show all **peers on the bus**

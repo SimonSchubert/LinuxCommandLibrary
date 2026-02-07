@@ -1,3 +1,7 @@
+# TAGLINE
+
+list, edit, and re-execute shell commands
+
 # TLDR
 
 **Edit and rerun** last command

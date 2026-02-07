@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage encrypted secrets for GitHub Actions
+
 # TLDR
 
 **List repository secrets**
@@ -52,11 +56,9 @@
 
 # DESCRIPTION
 
-**gh secret** manages encrypted secrets for GitHub Actions workflows. Secrets are encrypted and only exposed to workflows at runtime, providing secure credential storage.
+**gh secret** manages encrypted secrets for GitHub Actions workflows. Secrets are encrypted and only exposed to workflows at runtime, providing secure credential storage for CI/CD pipelines.
 
 The command supports repository, organization, and environment-level secrets. Organization secrets can be scoped to specific repositories. Values are encrypted before transmission and storage.
-
-gh secret enables secure CI/CD configuration from the command line.
 
 # CAVEATS
 

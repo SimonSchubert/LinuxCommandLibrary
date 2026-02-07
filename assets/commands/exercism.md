@@ -1,3 +1,7 @@
+# TAGLINE
+
+CLI for Exercism coding practice platform
+
 # TLDR
 
 **Configure with token**
@@ -27,12 +31,6 @@
 # SYNOPSIS
 
 **exercism** _command_ [_options_]
-
-# DESCRIPTION
-
-**exercism** is the CLI for Exercism, a platform for learning programming languages through practice exercises. It downloads exercises, submits solutions, and manages your local workspace.
-
-The tool integrates with the Exercism website, allowing iteration on exercises with mentor feedback. It supports dozens of programming language tracks.
 
 # PARAMETERS
 
@@ -65,6 +63,17 @@ The tool integrates with the Exercism website, allowing iteration on exercises w
 
 **--force**
 > Overwrite existing files.
+
+# DESCRIPTION
+
+**exercism** is the CLI for Exercism, a platform for learning programming languages through practice exercises. It downloads exercises, submits solutions, and manages your local workspace.
+
+The tool integrates with the Exercism website, allowing iteration on exercises with mentor feedback. It supports dozens of programming language tracks.
+
+# CONFIGURATION
+
+**~/.config/exercism/user.json**
+> Stores API token, workspace path, and user preferences.
 
 # CAVEATS
 

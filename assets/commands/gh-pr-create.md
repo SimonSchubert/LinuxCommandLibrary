@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create new pull requests on GitHub
+
 # TLDR
 
 **Create PR interactively**
@@ -69,9 +73,10 @@
 
 # DESCRIPTION
 
-**gh pr create** creates a pull request on GitHub. Supports drafts, reviewers, labels, and can auto-fill details from commit messages.
+**gh pr create** creates pull requests on GitHub from the command line. It streamlines the PR creation workflow by detecting the current branch context and offering multiple input modes.
+
+When run without arguments, the command prompts interactively for title, body, and metadata. The --fill flag auto-populates the title from the first commit message and the body from all commit messages since branching. Draft PRs (--draft) allow pushing work-in-progress changes for early feedback without formal review requests.
 
 # SEE ALSO
 
 [gh-pr](/man/gh-pr)(1), [gh-pr-list](/man/gh-pr-list)(1)
-

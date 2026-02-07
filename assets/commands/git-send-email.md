@@ -1,3 +1,7 @@
+# TAGLINE
+
+Send patches as emails via SMTP
+
 # TLDR
 
 **Send patches via email**
@@ -48,11 +52,20 @@ _PATCHES_
 
 # DESCRIPTION
 
-**git send-email** sends patches as emails. It's the standard way to submit patches to projects using email-based workflows, like the Linux kernel.
+**git send-email** sends patches as properly formatted emails. It is the standard way to submit patches to projects using email-based workflows, such as the Linux kernel.
 
-The command handles SMTP configuration, threading, and proper email formatting for patches. It integrates with git format-patch output.
+The command handles SMTP configuration, threading, and patch formatting. It integrates with `git format-patch` output and supports cover letters for patch series.
 
-git send-email enables email-based patch submission.
+# CONFIGURATION
+
+**sendemail.smtpServer**
+> SMTP server hostname or path to sendmail binary, configured via `git config`.
+
+**sendemail.smtpUser**
+> SMTP username for authentication.
+
+**sendemail.to**
+> Default recipient address.
 
 # CAVEATS
 

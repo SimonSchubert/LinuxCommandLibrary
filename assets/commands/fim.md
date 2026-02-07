@@ -1,3 +1,7 @@
+# TAGLINE
+
+framebuffer and terminal image viewer
+
 # TLDR
 
 **View images** in framebuffer or terminal
@@ -83,6 +87,11 @@
 
 **q**, **ESC**
 > Quit.
+
+# CONFIGURATION
+
+**~/.fimrc**
+> User configuration file for FIM settings, keybindings, and startup commands.
 
 # DESCRIPTION
 

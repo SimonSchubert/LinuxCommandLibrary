@@ -1,3 +1,7 @@
+# TAGLINE
+
+manage multi-platform image indexes
+
 # TLDR
 
 **Show index** subcommands

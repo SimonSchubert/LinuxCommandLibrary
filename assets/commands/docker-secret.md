@@ -1,3 +1,7 @@
+# TAGLINE
+
+manage sensitive data in Docker Swarm
+
 # TLDR
 
 **Create secret from file**
@@ -40,7 +44,7 @@
 
 # DESCRIPTION
 
-**docker secret** manages Swarm secrets, which are sensitive data like passwords, certificates, or API keys. Secrets are encrypted and only available to services that need them.
+**docker secret** manages Swarm secrets, which are sensitive data like passwords, certificates, or API keys. Secrets are encrypted and only available to services that need them. The secret content itself is never exposed in inspect output, only metadata. Secrets are mounted into service containers as files in /run/secrets.
 
 # CAVEATS
 

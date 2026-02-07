@@ -56,6 +56,7 @@ fun CommandSectionInfo.getSortPriority(): Int = when (title.uppercase()) {
     "PARAMETERS" -> 4
     "OPTIONS" -> 5
     "EXAMPLES" -> 6
+    "CONFIGURATION" -> 7
     "CAVEATS" -> 90
     "HISTORY" -> 91
     "AUTHOR" -> 92

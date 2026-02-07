@@ -1,3 +1,7 @@
+# TAGLINE
+
+fetch container logs from STDOUT and STDERR
+
 # TLDR
 
 **Show container logs**
@@ -50,7 +54,7 @@
 
 # DESCRIPTION
 
-**docker logs** fetches the logs of a container. Shows STDOUT and STDERR output from the container's main process.
+**docker logs** fetches the logs of a container. Shows STDOUT and STDERR output from the container's main process. Logs are captured by Docker's logging driver and can be filtered by time range or number of lines. Essential for debugging containerized applications and monitoring runtime behavior.
 
 # SEE ALSO
 

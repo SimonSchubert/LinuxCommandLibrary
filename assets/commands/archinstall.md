@@ -1,3 +1,7 @@
+# TAGLINE
+
+Guided Arch Linux installer with interactive menus
+
 # TLDR
 
 Start the **interactive installer**

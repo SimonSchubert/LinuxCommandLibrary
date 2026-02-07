@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage simplified virtual servers, databases, and storage.
+
 # TLDR
 
 **Create a new instance** (virtual private server)

@@ -1,3 +1,7 @@
+# TAGLINE
+
+throttle process CPU usage
+
 # TLDR
 
 Limit process by **PID** to 25% CPU

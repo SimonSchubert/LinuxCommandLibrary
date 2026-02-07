@@ -1,3 +1,7 @@
+# TAGLINE
+
+/etc/fstab generator from mounted filesystems
+
 # TLDR
 
 Generate **/etc/fstab** using volume UUIDs during Arch installation

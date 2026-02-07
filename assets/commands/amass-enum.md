@@ -1,3 +1,7 @@
+# TAGLINE
+
+Perform DNS enumeration and subdomain discovery
+
 # TLDR
 
 **Passive** subdomain enumeration
@@ -70,6 +74,11 @@ This is the primary command for subdomain discovery, offering extensive configur
 
 **-timeout** _minutes_
 > Timeout for the enumeration
+
+# CONFIGURATION
+
+**~/.config/amass/config.ini**
+> Amass configuration file defining data sources, API keys, resolvers, and scope settings.
 
 # CAVEATS
 

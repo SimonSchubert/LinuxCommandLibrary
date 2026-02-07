@@ -1,3 +1,7 @@
+# TAGLINE
+
+manage issue and PR labels
+
 # TLDR
 
 **List labels**
@@ -57,7 +61,11 @@
 
 # DESCRIPTION
 
-**gh label** manages repository labels. Labels help categorize issues and pull requests for organization and filtering.
+**gh label** manages repository labels used for categorizing and filtering issues and pull requests. Labels provide visual organization with customizable colors and descriptions, helping teams triage work and track issue types.
+
+Common label patterns include bug/feature categorization, priority levels, status indicators, and area tags. The clone command copies an entire label scheme from another repository, useful for maintaining consistency across projects or setting up new repositories.
+
+Labels are essential for automated workflows, project boards, and issue management systems. They enable quick filtering and provide visual cues in issue lists.
 
 # SEE ALSO
 

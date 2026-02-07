@@ -1,3 +1,7 @@
+# TAGLINE
+
+GNU execution profiler
+
 # TLDR
 
 **Generate profile report**
@@ -52,7 +56,7 @@
 
 # DESCRIPTION
 
-**gprof** analyzes program execution profiles to identify performance bottlenecks. It requires programs compiled with **-pg** flag and produces reports showing time spent in each function and call relationships.
+**gprof** analyzes program execution profiles to identify performance bottlenecks. It requires programs compiled with the **-pg** flag and produces reports showing time spent in each function and call relationships.
 
 The tool generates two main reports: a flat profile showing time per function, and a call graph showing function relationships and cumulative times.
 

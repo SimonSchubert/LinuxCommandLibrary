@@ -1,3 +1,7 @@
+# TAGLINE
+
+external Debian repository manager
+
 # TLDR
 
 **Search** for a repository
@@ -26,7 +30,11 @@
 
 # DESCRIPTION
 
-**extrepo** manages external Debian repositories. It provides a safe way to enable third-party software repositories on Debian systems with verified GPG keys.
+**extrepo** manages external Debian repositories in a secure, standardized way. It provides a curated collection of third-party repositories that have been vetted by the Debian project, each with verified GPG keys and proper configuration.
+
+Instead of manually editing /etc/apt/sources.list or using add-apt-repository with untrusted sources, extrepo offers a safe method to enable popular external repositories like Docker, Node.js, Kubernetes, and other projects. All repository configurations are maintained centrally and include proper security verification.
+
+This tool helps avoid common pitfalls like insecure repository additions, missing GPG keys, or incorrect sources.list syntax when adding third-party software sources to Debian systems.
 
 # PARAMETERS
 

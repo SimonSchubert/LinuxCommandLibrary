@@ -1,3 +1,7 @@
+# TAGLINE
+
+Rewrite branch history by applying filters
+
 # TLDR
 
 **Remove file from history**
@@ -46,13 +50,14 @@
 
 # DESCRIPTION
 
-**git filter-branch** rewrites branches by applying filters. Used for removing files from history, changing author info, or restructuring repos.
+**git filter-branch** is a powerful but deprecated tool for rewriting Git history by applying filter commands to every commit in a branch. It walks through the entire commit history, allowing modifications to trees, commit messages, author information, or other metadata.
+
+The subdirectory-filter is particularly useful for extracting a subdirectory into a new repository with its history intact. Performance is notably poor on large repositories because it must check out every commit's tree. This limitation led to the development of git-filter-repo as the official replacement.
 
 # CAVEATS
 
-Deprecated in favor of git-filter-repo. Changes history and invalidates commit hashes.
+**Officially deprecated** in favor of git-filter-repo. Slow on large repositories. Changes history, invalidating commit hashes and requiring force pushes. Collaborators must reclone. Creates backup refs that must be manually cleaned.
 
 # SEE ALSO
 
 [git-filter-repo](/man/git-filter-repo)(1), [git-rebase](/man/git-rebase)(1)
-

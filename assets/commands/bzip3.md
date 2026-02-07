@@ -1,3 +1,7 @@
+# TAGLINE
+
+High-performance file compressor with improved ratios over bzip2
+
 # TLDR
 
 **Compress** file

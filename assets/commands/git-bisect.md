@@ -1,3 +1,7 @@
+# TAGLINE
+
+Use binary search to find commits that introduced bugs
+
 # TLDR
 
 **Start bisecting**
@@ -54,9 +58,9 @@
 
 **git bisect** uses binary search to find the commit that introduced a bug. Given a known good and bad commit, it systematically narrows down the range until finding the exact commit.
 
-The process works by checking out commits halfway between good and bad, testing, and marking the result. Run mode automates this with a test script that returns success or failure.
+The process works by checking out commits halfway between good and bad, testing, and marking the result. This logarithmic search reduces the number of commits to test dramatically -- finding a bug among 1000 commits requires only about 10 tests.
 
-git bisect is invaluable for tracking down regressions in large histories.
+The **run** subcommand fully automates bisection with a test script that returns exit code 0 for good and non-zero for bad, making it possible to find regressions without manual intervention.
 
 # CAVEATS
 

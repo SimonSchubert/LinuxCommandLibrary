@@ -1,3 +1,7 @@
+# TAGLINE
+
+Stage changes in the working directory for next commit
+
 # TLDR
 
 **Stage a specific file**

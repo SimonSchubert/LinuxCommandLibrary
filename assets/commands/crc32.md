@@ -1,3 +1,7 @@
+# TAGLINE
+
+CRC-32 checksum calculator
+
 # TLDR
 
 **Calculate CRC32 checksum** of a file

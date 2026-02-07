@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interactive console for managing the Asterisk PBX server
+
 # TLDR
 
 **Connect to the running Asterisk** console
@@ -104,6 +108,20 @@ Connect to a running Asterisk instance with **asterisk -r**. For scripts and aut
 The CLI provides access to all Asterisk subsystems including SIP/PJSIP peers, active channels, dialplan, voicemail, queues, and the internal database. Verbosity levels (-v flags) control the amount of real-time event output displayed.
 
 Configuration changes typically require module reloads rather than full restarts. Use **dialplan reload** for extensions.conf changes or **module reload** for specific modules.
+
+# CONFIGURATION
+
+**/etc/asterisk/asterisk.conf**
+> Main Asterisk configuration file controlling global settings, module paths, and logging.
+
+**/etc/asterisk/extensions.conf**
+> Dialplan configuration defining call routing rules and IVR logic.
+
+**/etc/asterisk/sip.conf**
+> Legacy SIP peer and trunk configuration.
+
+**/etc/asterisk/pjsip.conf**
+> Modern PJSIP endpoint and transport configuration.
 
 # CAVEATS
 

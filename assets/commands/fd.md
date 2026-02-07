@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast and user-friendly file finder
+
 # TLDR
 
 **Find files by** name

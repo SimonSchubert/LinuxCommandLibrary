@@ -1,3 +1,7 @@
+# TAGLINE
+
+High-level package management interface
+
 # TLDR
 
 **Update** the list of available packages
@@ -83,6 +87,26 @@ List all **installed** packages
 
 **--no-install-recommends**
 > Don't install recommended packages
+
+# CONFIGURATION
+
+**/etc/apt/sources.list**
+> Main list of package repositories.
+
+**/etc/apt/sources.list.d/**
+> Directory for additional repository list files.
+
+**/etc/apt/apt.conf**
+> Main APT configuration file.
+
+**/etc/apt/apt.conf.d/**
+> Directory for additional APT configuration fragments.
+
+**/etc/apt/preferences**
+> Package pinning preferences.
+
+**/etc/apt/preferences.d/**
+> Directory for additional pinning preference files.
 
 # CAVEATS
 

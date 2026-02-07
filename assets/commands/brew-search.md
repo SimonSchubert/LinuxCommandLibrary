@@ -1,3 +1,7 @@
+# TAGLINE
+
+Search for available Homebrew packages
+
 # TLDR
 
 **Search for formula or cask**

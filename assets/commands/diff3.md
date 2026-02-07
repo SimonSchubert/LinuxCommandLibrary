@@ -1,3 +1,7 @@
+# TAGLINE
+
+three-way file comparison and merge
+
 # TLDR
 
 **Compare** three files

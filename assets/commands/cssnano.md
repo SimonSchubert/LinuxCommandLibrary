@@ -1,3 +1,7 @@
+# TAGLINE
+
+modular CSS minifier built on PostCSS
+
 # TLDR
 
 **Minify a CSS file**
@@ -62,18 +66,11 @@ As a PostCSS plugin, cssnano integrates with existing build pipelines (webpack, 
 
 # CONFIGURATION
 
-In **postcss.config.js**:
-```javascript
-module.exports = {
-  plugins: [
-    require('cssnano')({
-      preset: ['default', {
-        discardComments: { removeAll: true }
-      }]
-    })
-  ]
-}
-```
+**postcss.config.js**
+> PostCSS configuration file where cssnano plugin and presets are defined.
+
+**cssnano.config.js**
+> Dedicated configuration file for cssnano options and preset customization.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Add font metric information to troff font files
+
 # TLDR
 
 **Add** font metrics to a troff font file

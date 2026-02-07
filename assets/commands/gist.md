@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create and manage GitHub Gists from the command line
+
 # TLDR
 
 **Create a gist from file**
@@ -61,9 +65,18 @@
 
 # DESCRIPTION
 
-**gist** creates GitHub Gists from the command line. Gists are simple way to share snippets and files. Requires GitHub authentication via ~/.gist or environment variable.
+**gist** creates and manages GitHub Gists from the command line. Gists provide a lightweight way to share code snippets, notes, and small files without creating a full repository. Each gist supports multiple files, syntax highlighting, version control, forking, and commenting.
+
+The tool requires authentication through a GitHub personal access token. Gists are private by default unless created with the -p flag. It integrates with the system clipboard and browser for streamlined workflows.
+
+# CONFIGURATION
+
+**~/.gist**
+> Stores the GitHub personal access token for authentication.
+
+**GITHUB_TOKEN**
+> Environment variable alternative for authentication token.
 
 # SEE ALSO
 
 [gh-gist](/man/gh-gist)(1), [gh](/man/gh)(1)
-

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage GitHub pull requests from the command line
+
 # TLDR
 
 **Create a pull request**
@@ -64,8 +68,6 @@
 **gh pr** manages GitHub pull requests from the command line. It provides full pull request lifecycle management including creation, review, merging, and CI status monitoring.
 
 The command integrates with git workflows, automatically detecting the current branch's pull request context. It supports interactive creation with editor integration and automated creation for scripted workflows.
-
-gh pr enables complete pull request workflows without leaving the terminal.
 
 # CAVEATS
 

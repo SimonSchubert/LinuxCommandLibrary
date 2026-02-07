@@ -1,3 +1,7 @@
+# TAGLINE
+
+statically-typed compiled language with Ruby-inspired syntax
+
 # TLDR
 
 **Run a Crystal program**

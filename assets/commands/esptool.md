@@ -1,3 +1,7 @@
+# TAGLINE
+
+Espressif chip firmware flashing utility
+
 # TLDR
 
 **Flash firmware**

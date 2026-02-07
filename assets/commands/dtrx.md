@@ -1,3 +1,7 @@
+# TAGLINE
+
+intelligent archive extraction tool
+
 # TLDR
 
 **Extract archive**

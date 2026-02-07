@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fast terminal UI for Git written in Rust
+
 # TLDR
 
 **Start GitUI**
@@ -35,11 +39,17 @@
 
 # DESCRIPTION
 
-**gitui** is a fast terminal UI for git. It provides a keyboard-driven interface for staging, committing, branching, and viewing diffs, all within the terminal.
+**gitui** is a fast terminal UI for Git. It provides a keyboard-driven interface for staging, committing, branching, and viewing diffs, all within the terminal.
 
-Written in Rust, GitUI is lightweight and fast. It displays status, log, diff, and staging information in a split-pane interface with vim-like key bindings.
+Written in Rust, **gitui** is lightweight and responsive. It displays status, log, diff, and staging information in a split-pane interface with vim-like key bindings.
 
-gitui offers a fast TUI alternative to graphical git clients.
+# CONFIGURATION
+
+**~/.config/gitui/theme.ron**
+> Theme configuration file in RON format for customizing colors and appearance.
+
+**~/.config/gitui/key_bindings.ron**
+> Key binding customization file.
 
 # CAVEATS
 

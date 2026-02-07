@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert AsciiDoc markup to HTML and DocBook
+
 # TLDR
 
 **Convert an AsciiDoc file** to HTML
@@ -76,6 +80,14 @@ The default backend is HTML (xhtml11). DocBook output can be further processed w
 Document attributes control output features like table of contents (**-a toc**), embedded images (**-a data-uri**), icons (**-a icons**), and maximum width (**-a max-width=55em**). Attributes can also be set within the document itself.
 
 If FILE is **-**, input is read from standard input, enabling pipeline processing.
+
+# CONFIGURATION
+
+**/etc/asciidoc/**
+> System-wide configuration files, filters, and backend templates.
+
+**~/.asciidoc/**
+> User-specific configuration files and custom backends.
 
 # CAVEATS
 

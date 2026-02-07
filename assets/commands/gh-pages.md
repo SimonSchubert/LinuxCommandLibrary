@@ -1,3 +1,7 @@
+# TAGLINE
+
+Publish static sites to GitHub Pages branch
+
 # TLDR
 
 **Deploy dist folder to gh-pages**
@@ -58,19 +62,14 @@
 
 # DESCRIPTION
 
-**gh-pages** is an npm package that publishes files to a GitHub Pages branch. It automates pushing built static sites to the gh-pages branch for hosting.
+**gh-pages** is an npm package that publishes files to a GitHub Pages branch. It automates pushing built static sites to the gh-pages branch for hosting, creating clean commits of your distribution folder to the target branch.
 
-The tool creates clean commits of your distribution folder to the target branch, making deployment a single command. It's commonly used in CI/CD pipelines.
+The tool makes deployment a single command and is commonly used in CI/CD pipelines and as a package.json script.
 
-# PACKAGE.JSON SCRIPT
+# CONFIGURATION
 
-```json
-{
-  "scripts": {
-    "deploy": "gh-pages -d dist"
-  }
-}
-```
+**package.json**
+> Configure a deploy script with `"deploy": "gh-pages -d dist"` in the scripts section.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Graphical frontend for sudo with GTK password dialog
+
 # TLDR
 
 Run a command as a **specific user**
@@ -49,7 +53,7 @@ Output **debug** info for the given command
 
 # DESCRIPTION
 
-**gksudo** is a graphical frontend for sudo that prompts for a password using a GTK dialog. It's essentially gksu configured to use sudo-mode by default, authenticating with the current user's password and sudo privileges.
+**gksudo** is a graphical frontend for `sudo` that prompts for a password using a GTK dialog. It is essentially `gksu` configured to use sudo-mode by default, authenticating with the current user's password and sudo privileges.
 
 This allows running graphical applications with elevated privileges while using sudo's configuration for permission control.
 

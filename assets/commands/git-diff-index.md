@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compare tree to working tree or index
+
 # TLDR
 
 **Compare index to commit**
@@ -39,9 +43,10 @@
 
 # DESCRIPTION
 
-**git diff-index** compares a tree to the working tree or index. A low-level command used by git diff for comparing commits.
+**git diff-index** compares a tree object to the working tree or index, operating as a low-level plumbing command used internally by git diff for commit comparisons. It accepts a tree-ish (commit, branch, tag, or tree object) and compares it against either the index (with --cached) or the working tree.
+
+The tool is particularly useful in automation scenarios that need to detect whether files have changed since a specific commit, such as CI/CD pipelines checking for uncommitted modifications or scripts validating clean working directories. Its --quiet flag enables simple boolean checks for changes without processing full diff output.
 
 # SEE ALSO
 
 [git-diff](/man/git-diff)(1), [git-diff-tree](/man/git-diff-tree)(1)
-

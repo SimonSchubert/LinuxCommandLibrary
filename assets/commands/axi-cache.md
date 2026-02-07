@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fast indexed package search for Debian
+
 # TLDR
 
 **Search** package descriptions

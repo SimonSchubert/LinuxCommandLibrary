@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display documentation for Ansible modules and plugins
+
 # TLDR
 
 **Show** documentation for a module
@@ -53,6 +57,14 @@ The tool can list all available modules and filter by plugin type, making it use
 
 **-M** _path_, **--module-path** _path_
 > Additional module search path
+
+# CONFIGURATION
+
+**ansible.cfg**
+> Main Ansible configuration file, searched in current directory, ~/.ansible.cfg, or /etc/ansible/ansible.cfg.
+
+**ANSIBLE_CONFIG**
+> Environment variable to specify an alternate configuration file path.
 
 # CAVEATS
 

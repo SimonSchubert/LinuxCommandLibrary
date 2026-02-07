@@ -1,3 +1,7 @@
+# TAGLINE
+
+cross-platform system monitoring tool
+
 # TLDR
 
 **Start glances**
@@ -51,9 +55,12 @@
 
 **glances** is a cross-platform system monitoring tool. It displays real-time CPU, memory, disk, network, and process information in a comprehensive terminal interface.
 
-The tool provides more information than top/htop in a single view. It supports client-server mode, web interface, and exports to various formats for monitoring.
+The tool provides more information than top or htop in a single view. It supports client-server mode, a web interface, and exports to various formats for monitoring and analysis.
 
-glances offers comprehensive system monitoring.
+# CONFIGURATION
+
+**~/.config/glances/glances.conf**
+> Main configuration file for thresholds, display options, and export settings.
 
 # CAVEATS
 

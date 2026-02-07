@@ -1,3 +1,7 @@
+# TAGLINE
+
+Go toolchain telemetry management
+
 # TLDR
 
 **View telemetry config**
@@ -43,11 +47,9 @@
 
 # DESCRIPTION
 
-**gotelemetry** manages Go toolchain telemetry. It controls whether usage statistics are collected and uploaded to help improve Go development.
+**gotelemetry** manages Go toolchain telemetry settings. It controls whether usage statistics are collected and uploaded to help improve Go development tools.
 
-Telemetry data includes usage patterns that help prioritize Go development. Users can enable, disable, or use local-only collection mode.
-
-gotelemetry controls Go telemetry settings.
+Users can enable full telemetry, disable it entirely, or use local-only collection mode where data is gathered but never uploaded. The **view** command shows what data has been collected.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+GNOME graphical software manager
+
 # TLDR
 
 Launch the **GNOME Software GUI**
@@ -44,9 +48,7 @@ Display **version**
 
 **gnome-software** is GNOME's graphical application for managing software. It provides a user-friendly interface for browsing, installing, removing, and updating applications.
 
-The application aggregates software from multiple sources including distribution repositories (via PackageKit), Flatpak, and Snap, presenting them in a unified app store interface. It also handles system updates and firmware updates (via fwupd).
-
-Features include user reviews, screenshots, application categories, and editor's picks. It runs a background service for update notifications.
+The application aggregates software from multiple sources including distribution repositories (via PackageKit), Flatpak, and Snap, presenting them in a unified app store interface. It also handles system and firmware updates (via fwupd).
 
 # CAVEATS
 

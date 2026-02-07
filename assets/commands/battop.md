@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interactive battery monitor
+
 # TLDR
 
 Display **battery** information

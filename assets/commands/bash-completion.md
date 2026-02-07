@@ -1,3 +1,7 @@
+# TAGLINE
+
+Programmable tab completion for Bash commands.
+
 # TLDR
 
 **Load bash completions** in current session
@@ -59,16 +63,19 @@ The system works by defining completion specifications that tell Bash how to gen
 
 Completions are stored in **/usr/share/bash-completion/completions/** (or **/etc/bash_completion.d/** on older systems). They are loaded on-demand when Tab is first pressed for a command, improving shell startup time.
 
-# COMPLETION DIRECTORIES
+# CONFIGURATION
+
+**/etc/bash_completion**
+> System-wide bash-completion configuration sourced at shell startup.
 
 **/usr/share/bash-completion/completions/**
-> System-wide completion scripts (modern standard)
+> System-wide per-command completion scripts, loaded on demand.
 
 **/etc/bash_completion.d/**
-> Legacy location, still supported
+> Legacy directory for system-wide completion scripts, loaded eagerly at startup.
 
 **~/.local/share/bash-completion/completions/**
-> User-specific completions
+> User-specific per-command completion scripts.
 
 # CAVEATS
 

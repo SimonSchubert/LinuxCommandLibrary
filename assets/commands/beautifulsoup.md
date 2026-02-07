@@ -1,3 +1,7 @@
+# TAGLINE
+
+Parse and extract data from HTML and XML documents
+
 # TLDR
 
 **Parse HTML and find all links**

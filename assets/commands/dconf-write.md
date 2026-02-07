@@ -1,3 +1,7 @@
+# TAGLINE
+
+write values to dconf configuration database
+
 # TLDR
 
 **Write** a key value
@@ -30,7 +34,11 @@ Write an **empty array**
 
 # DESCRIPTION
 
-**dconf write** sets a value in the dconf database. Values must be specified in GVariant text format, which requires careful quoting.
+**dconf write** sets a value in the dconf database. Values must be specified in GVariant text format, which requires careful quoting to satisfy both shell parsing and GVariant syntax requirements.
+
+The challenge with dconf write is the layered quoting: the shell requires quotes around the entire value argument, while GVariant format requires its own quotes for strings. This leads to constructions like "'string value'" where outer double quotes are for the shell and inner single quotes are GVariant syntax. Integers, booleans, and other types don't need the inner quotes.
+
+Changes take effect immediately for applications monitoring the dconf database. Unlike gsettings, dconf write doesn't validate values against schemas, so it's possible to write values that applications won't accept. For schema-validated writes with better error checking, use gsettings instead. dconf write is most useful in scripts where the value format is known and controlled.
 
 # PARAMETERS
 

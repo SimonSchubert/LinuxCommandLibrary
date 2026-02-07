@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extremely fast JavaScript and TypeScript bundler
+
 # TLDR
 
 **Bundle JavaScript file**

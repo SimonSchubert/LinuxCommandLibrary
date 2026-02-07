@@ -1,3 +1,7 @@
+# TAGLINE
+
+Enhanced Git/GitHub shell with auto-completion
+
 # TLDR
 
 **Start gitsome shell**
@@ -28,9 +32,7 @@
 
 **gitsome** is a supercharged Git/GitHub command line interface. It provides an enhanced shell with GitHub integration, auto-completion, and syntax highlighting.
 
-The tool combines git commands with GitHub features like viewing feeds, trending repos, and notifications. It offers extensive auto-completion for git commands and GitHub interactions.
-
-gitsome enhances the git command line experience.
+The tool combines Git commands with GitHub features like viewing feeds, trending repos, and notifications. It offers extensive auto-completion for Git commands and GitHub interactions, all within a customized shell environment.
 
 # CAVEATS
 
@@ -38,7 +40,7 @@ Python tool. GitHub features need authentication. Separate from official gh CLI.
 
 # HISTORY
 
-gitsome was created by **Donne Martin** to provide an enhanced command line experience for git and GitHub users.
+gitsome was created by **Donne Martin** to provide an enhanced command line experience for Git and GitHub users.
 
 # SEE ALSO
 

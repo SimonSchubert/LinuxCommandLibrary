@@ -1,3 +1,7 @@
+# TAGLINE
+
+Send files over Bluetooth via a graphical dialog
+
 # TLDR
 
 **Open file transfer dialog to select device and files**

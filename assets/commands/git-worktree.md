@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage multiple working trees for a repository
+
 # TLDR
 
 **Add worktree**
@@ -46,11 +50,9 @@
 
 # DESCRIPTION
 
-**git worktree** manages multiple working trees attached to one repository. Each worktree can have a different branch checked out, enabling parallel work without stashing.
+**git worktree** manages multiple working trees attached to one repository. Each worktree can have a different branch checked out, enabling parallel work without stashing or switching branches.
 
-Worktrees share the same repository data but have separate working directories. This enables working on multiple branches simultaneously, useful for bug fixes during feature work.
-
-git worktree provides parallel branch development.
+Worktrees share the same repository data but have separate working directories. This is useful for working on a bug fix while a feature branch is mid-development, or for running tests on one branch while editing another.
 
 # CAVEATS
 

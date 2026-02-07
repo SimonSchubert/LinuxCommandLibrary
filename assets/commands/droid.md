@@ -1,3 +1,7 @@
+# TAGLINE
+
+enterprise AI coding agent
+
 # TLDR
 
 **Start an interactive session**
@@ -71,6 +75,11 @@
 
 **--enabled-tools** _IDS_
 > Enable specific tools
+
+# CONFIGURATION
+
+**.factory/droids/**
+> Directory containing custom sub-agent definitions as markdown files with YAML frontmatter.
 
 # DESCRIPTION
 

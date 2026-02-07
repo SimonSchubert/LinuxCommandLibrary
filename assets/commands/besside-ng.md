@@ -1,3 +1,7 @@
+# TAGLINE
+
+Automated WiFi security auditing tool
+
 # TLDR
 
 **Auto-crack all WEP networks and log WPA handshakes**

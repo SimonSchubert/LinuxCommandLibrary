@@ -1,3 +1,7 @@
+# TAGLINE
+
+FreeSWITCH command-line interface
+
 # TLDR
 
 Connect to the **local FreeSWITCH** instance with an interactive session
@@ -61,6 +65,11 @@ Show **active calls**
 
 **-d**, **--debug** _LEVEL_
 > Debug level (0-7)
+
+# CONFIGURATION
+
+**/etc/freeswitch/autoload_configs/event_socket.conf.xml**
+> Event Socket Layer configuration controlling the listen address, port, and authentication password for ESL connections.
 
 # DESCRIPTION
 

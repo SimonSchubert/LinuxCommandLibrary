@@ -1,3 +1,7 @@
+# TAGLINE
+
+Merge pull requests using GitHub API
+
 # TLDR
 
 **Merge current PR**
@@ -55,11 +59,9 @@ _PR-NUMBER_
 
 # DESCRIPTION
 
-**gh pr merge** merges pull requests using GitHub's merge API. It supports all merge strategies: merge commits, squash merging, and rebasing. The command can wait for required checks and approvals.
+**gh pr merge** merges pull requests using GitHub's merge API. It supports all merge strategies: merge commits, squash merging, and rebasing. The command can wait for required checks and approvals before proceeding.
 
-Auto-merge enables setting a PR to merge automatically once all requirements are satisfied, useful for approved PRs waiting on CI. The delete-branch option cleans up after merging.
-
-gh pr merge completes the pull request workflow from the command line.
+Auto-merge (--auto) sets a PR to merge automatically once all requirements are satisfied, useful for approved PRs waiting on CI. The --delete-branch option cleans up feature branches after merging.
 
 # CAVEATS
 

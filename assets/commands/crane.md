@@ -1,3 +1,7 @@
+# TAGLINE
+
+interact with container registries without Docker
+
 # TLDR
 
 **Pull image**
@@ -94,6 +98,11 @@
 
 **-v**, **--verbose**
 > Verbose output
+
+# CONFIGURATION
+
+**~/.docker/config.json**
+> Docker configuration file storing registry credentials used by crane for authentication.
 
 # ENVIRONMENT
 

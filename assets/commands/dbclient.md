@@ -1,3 +1,7 @@
+# TAGLINE
+
+lightweight SSH client from the Dropbear suite
+
 # TLDR
 
 **Connect** to a remote host
@@ -26,9 +30,13 @@ Run a **command** with TTY allocation
 
 # DESCRIPTION
 
-**dbclient** is the SSH client from the Dropbear suite, a lightweight SSH implementation designed for embedded systems and environments with limited resources.
+**dbclient** is the SSH client from the Dropbear suite, a lightweight SSH implementation designed for embedded systems and environments with limited resources. It provides standard SSH functionality including remote shell access, command execution, port forwarding, and agent forwarding, all with a significantly smaller binary size and memory footprint than OpenSSH.
 
-It provides standard SSH functionality with a smaller footprint than OpenSSH.
+Dropbear is commonly found on routers, IoT devices, embedded Linux systems, and other resource-constrained environments. The entire suite (server and client) is typically under 110KB compressed, compared to several megabytes for OpenSSH.
+
+dbclient supports the core SSH protocol features: public key authentication, password authentication, local and remote port forwarding, and TTY allocation for interactive sessions. However, it omits some advanced OpenSSH features to maintain its small size.
+
+One notable difference is key format: dbclient uses Dropbear's own key format rather than OpenSSH's format. The **dropbearconvert** utility can convert between the two formats when needed.
 
 # PARAMETERS
 

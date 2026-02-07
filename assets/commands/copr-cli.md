@@ -1,3 +1,7 @@
+# TAGLINE
+
+COPR build system client
+
 # TLDR
 
 **Create a new COPR project**
@@ -63,6 +67,11 @@
 
 **--config** _FILE_
 > Use alternate configuration file.
+
+# CONFIGURATION
+
+**~/.config/copr**
+> API token configuration for authenticating with the COPR build system.
 
 # DESCRIPTION
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+AS-REP roasting tool for domain user enumeration
+
 # TLDR
 
 **Query domain users** with Kerberos pre-auth disabled (with credentials)

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Netflix-powered internet speed test CLI
+
 # TLDR
 
 **Run speed test**

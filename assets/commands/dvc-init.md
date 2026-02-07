@@ -1,3 +1,7 @@
+# TAGLINE
+
+initialize data version control
+
 # TLDR
 
 **Initialize DVC in repository**
@@ -29,7 +33,17 @@
 
 # DESCRIPTION
 
-**dvc init** initializes DVC in a directory, creating the .dvc directory structure. Should be run in a Git repository for full functionality.
+**dvc init** initializes Data Version Control in a directory, creating the .dvc directory structure. This sets up DVC for tracking large files, datasets, and machine learning models alongside Git version control.
+
+Should be run in a Git repository for full functionality, though the --no-scm option allows standalone operation. The command creates configuration files, cache directory, and integrates with Git by adding .dvc files to .gitignore.
+
+# CONFIGURATION
+
+**.dvc/config**
+> Local repository configuration including remotes, cache settings, and execution parameters.
+
+**.dvc/config.local**
+> Local machine-specific settings not tracked in Git, such as credentials and cache locations.
 
 # SEE ALSO
 

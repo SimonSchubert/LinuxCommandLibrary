@@ -1,3 +1,7 @@
+# TAGLINE
+
+detect secrets accidentally committed to repositories
+
 # TLDR
 
 **Scan a directory for secrets**
@@ -83,6 +87,11 @@ The audit workflow allows reviewing detected secrets interactively, marking them
 **KeywordDetector**: Secret keywords
 **PrivateKeyDetector**: Private key headers
 **SlackDetector**: Slack tokens
+
+# CONFIGURATION
+
+**.secrets.baseline**
+> Baseline file tracking known secrets and audit decisions.
 
 # CAVEATS
 

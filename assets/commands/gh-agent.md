@@ -1,3 +1,7 @@
+# TAGLINE
+
+GitHub Copilot agent management
+
 # TLDR
 
 **List available agents**
@@ -29,7 +33,9 @@
 
 # DESCRIPTION
 
-**gh agent** manages GitHub Copilot agents (extensions). Agents extend Copilot's capabilities with specialized knowledge and tools.
+**gh agent** manages GitHub Copilot agents (extensions). Agents extend Copilot's capabilities with specialized knowledge and tools for specific domains or tasks.
+
+The command provides access to first-party and third-party agents that enhance GitHub Copilot's functionality. Agents can offer expertise in specific programming languages, frameworks, or development workflows, making Copilot more versatile for various development contexts.
 
 # SEE ALSO
 

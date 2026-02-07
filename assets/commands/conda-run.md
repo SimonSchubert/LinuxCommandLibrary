@@ -1,3 +1,7 @@
+# TAGLINE
+
+environment command executor
+
 # TLDR
 
 **Run a command** in an environment
@@ -29,6 +33,14 @@
 
 **--no-capture-output**
 > Don't capture stdout/stderr.
+
+# CONFIGURATION
+
+**~/.condarc**
+> User-level conda configuration for channels, package settings, and solver options.
+
+**/opt/conda/.condarc**
+> System-wide conda configuration.
 
 # DESCRIPTION
 

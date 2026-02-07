@@ -1,3 +1,7 @@
+# TAGLINE
+
+NuGet package dependency restorer
+
 # TLDR
 
 **Restore dependencies**
@@ -46,7 +50,9 @@
 
 # DESCRIPTION
 
-**dotnet restore** restores the dependencies and tools of a project. Downloads NuGet packages specified in the project file.
+**dotnet restore** downloads and installs all NuGet package dependencies specified in project files. It resolves package versions, handles transitive dependencies, and caches packages locally for faster subsequent restores.
+
+The command reads package references from .csproj/.fsproj files and nuget.config, then downloads packages from configured NuGet sources. Restore is typically automatic before build/run commands but can be run explicitly for troubleshooting or CI/CD pipelines.
 
 # SEE ALSO
 

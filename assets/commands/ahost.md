@@ -1,3 +1,7 @@
+# TAGLINE
+
+Look up DNS address records
+
 # TLDR
 
 Print an **A or AAAA record** associated with a hostname
@@ -18,7 +22,9 @@ Display the record with a **specified type**
 
 # DESCRIPTION
 
-**ahost** is a DNS lookup utility that displays the A or AAAA record linked with a hostname or IP address. It uses the c-ares asynchronous DNS library to perform lookups.
+**ahost** is a DNS lookup utility that displays the A (IPv4) or AAAA (IPv6) records associated with a hostname or IP address. It uses the c-ares asynchronous DNS library to perform lookups, making it non-blocking and efficient.
+
+Unlike the more common **host** or **dig** commands, ahost is specifically designed as a lightweight demonstration and utility tool from the c-ares library. It supports reverse lookups and can query for specific record types.
 
 # PARAMETERS
 

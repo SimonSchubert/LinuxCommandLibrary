@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interact with Box cloud storage from the terminal.
+
 # TLDR
 
 **Login to Box**

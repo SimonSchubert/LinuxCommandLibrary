@@ -1,3 +1,7 @@
+# TAGLINE
+
+GNOME Display Manager daemon process
+
 # TLDR
 
 **Start GNOME Display Manager**
@@ -25,7 +29,11 @@
 
 # DESCRIPTION
 
-**gdm-binary** is the GNOME Display Manager daemon binary. Manages graphical logins and user sessions. Usually started by systemd, not invoked directly.
+**gdm-binary** is the actual daemon executable for the GNOME Display Manager. It handles the low-level operations of managing graphical login screens, authenticating users, and launching desktop sessions. This binary is the core GDM process that runs with elevated privileges to manage display servers and user session creation.
+
+On modern systems, gdm-binary is typically started and managed by systemd rather than being invoked directly by users or administrators. The gdm service wrapper handles process management, while gdm-binary performs the actual display manager functions.
+
+Users rarely need to interact with gdm-binary directly, as system management commands like systemctl or the gdm wrapper script are the preferred interfaces for controlling the display manager.
 
 # SEE ALSO
 

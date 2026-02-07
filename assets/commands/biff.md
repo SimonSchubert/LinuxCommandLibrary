@@ -1,3 +1,7 @@
+# TAGLINE
+
+Toggle mail arrival notification at the terminal
+
 # TLDR
 
 **Enable mail notification** for the current terminal session

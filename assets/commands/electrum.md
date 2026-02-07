@@ -1,3 +1,7 @@
+# TAGLINE
+
+Lightweight Bitcoin wallet with SPV verification
+
 # TLDR
 
 **Start Electrum GUI**
@@ -126,6 +130,17 @@
 The wallet uses hierarchical deterministic (HD) key generation from a mnemonic seed phrase, allowing full wallet recovery from the seed alone. It supports multi-signature wallets, hardware wallet integration (Trezor, Ledger), and watch-only wallets.
 
 For command-line operations, the daemon can run in the background handling network communication while CLI commands interact with it. Some commands work offline without the daemon using the **-o** flag. The special argument **!** means "maximum amount available" and **-** reads from stdin.
+
+# CONFIGURATION
+
+**~/.electrum/config**
+> Main configuration file for wallet settings and server preferences.
+
+**~/.electrum/wallets/**
+> Directory containing encrypted wallet files.
+
+**~/.electrum/daemon**
+> Daemon socket and process information.
 
 # CAVEATS
 

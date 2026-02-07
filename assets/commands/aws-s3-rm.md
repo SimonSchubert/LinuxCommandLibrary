@@ -1,3 +1,7 @@
+# TAGLINE
+
+Delete objects from S3
+
 # TLDR
 
 **Delete a single object** from S3

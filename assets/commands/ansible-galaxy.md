@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Ansible roles and collections from Galaxy
+
 # TLDR
 
 **Install** a role from Galaxy
@@ -65,6 +69,17 @@ The tool can install, create, and manage roles (traditional content) and collect
 
 **--offline**
 > Work offline (installed content only)
+
+# CONFIGURATION
+
+**/etc/ansible/ansible.cfg**
+> System-wide Ansible configuration, including Galaxy server URL and roles path.
+
+**~/.ansible.cfg**
+> Per-user Ansible configuration overriding system defaults.
+
+**ansible.cfg**
+> Project-level configuration in the current directory, highest priority.
 
 # CAVEATS
 

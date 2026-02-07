@@ -1,3 +1,7 @@
+# TAGLINE
+
+Format Rust source code with rustfmt
+
 # TLDR
 
 **Format current package**

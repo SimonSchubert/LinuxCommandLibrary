@@ -1,3 +1,7 @@
+# TAGLINE
+
+Merge branch and delete immediately
+
 # TLDR
 
 **Graft branch into history**
@@ -25,11 +29,9 @@ _BASE_
 
 # DESCRIPTION
 
-**git graft** merges a branch then immediately deletes it. It's a convenience command that combines git merge followed by git branch -d, for branches that should become part of history without keeping the branch reference.
+**git graft** merges a branch then immediately deletes it, combining git merge followed by git branch -d into a single operation. It is useful for incorporating completed feature branches into the main history while cleaning up branch clutter.
 
-The command is useful for incorporating completed feature branches into the main history while cleaning up branch clutter.
-
-git graft simplifies the merge-and-delete workflow.
+Part of the git-extras suite, the command simplifies the common merge-and-delete workflow for branches that should become part of history without keeping the branch reference.
 
 # CAVEATS
 

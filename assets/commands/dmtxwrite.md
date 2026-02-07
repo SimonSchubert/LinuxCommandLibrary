@@ -1,3 +1,7 @@
+# TAGLINE
+
+Data Matrix barcode encoder
+
 # TLDR
 
 **Encode text as Data Matrix barcode**

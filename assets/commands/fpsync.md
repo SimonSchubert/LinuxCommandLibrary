@@ -1,3 +1,7 @@
+# TAGLINE
+
+parallel rsync synchronization tool
+
 # TLDR
 
 **Sync directories**

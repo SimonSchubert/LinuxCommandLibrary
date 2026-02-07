@@ -1,3 +1,7 @@
+# TAGLINE
+
+Text-based solitaire card game
+
 # TLDR
 
 **Start a game of Canfield solitaire**

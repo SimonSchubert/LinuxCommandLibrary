@@ -1,3 +1,7 @@
+# TAGLINE
+
+Translated nucleotide-to-protein sequence search
+
 # TLDR
 
 **Search translated nucleotide** against protein database

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display AWS CLI command documentation
+
 # TLDR
 
 **Get** general help

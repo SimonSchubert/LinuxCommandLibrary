@@ -1,3 +1,7 @@
+# TAGLINE
+
+automated modem and serial device conversation
+
 # TLDR
 
 Execute a **chat script** directly
@@ -34,9 +38,11 @@ Include an **abort condition**
 
 # DESCRIPTION
 
-**chat** automates conversations with modems and serial devices. It sends strings and waits for expected responses, commonly used to establish PPP connections.
+**chat** automates conversations with modems and serial devices by exchanging expect-send string pairs. It waits for an expected string from the device, then sends a response, repeating this process through a scripted sequence.
 
-Scripts consist of expect-send pairs: the program waits for the expect string, then sends the send string.
+The primary use case is establishing PPP (Point-to-Point Protocol) connections over serial lines and modems. A typical chat script initializes the modem with AT commands, dials a phone number, waits for a CONNECT response, and handles login sequences. Abort strings can be defined to terminate the script on error conditions like BUSY or NO CARRIER.
+
+chat is part of the ppp package and is typically invoked by pppd rather than run directly. Scripts can be specified inline on the command line or loaded from a file.
 
 # PARAMETERS
 

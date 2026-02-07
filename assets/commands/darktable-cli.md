@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line interface for batch RAW photo processing
+
 # TLDR
 
 **Export a RAW file to JPEG**

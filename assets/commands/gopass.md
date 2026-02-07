@@ -1,3 +1,7 @@
+# TAGLINE
+
+Team-oriented password manager compatible with pass
+
 # TLDR
 
 **Initialize password store**
@@ -36,12 +40,6 @@
 
 **gopass** [_options_] _command_ [_args_]
 
-# DESCRIPTION
-
-**gopass** is a password manager compatible with pass (the standard Unix password manager). It stores passwords encrypted with GPG in a git repository, enabling version control and synchronization.
-
-The tool supports multiple stores, team sharing, and integration with browsers and other tools. It adds features like TOTP support and better multi-user handling over standard pass.
-
 # PARAMETERS
 
 **init**
@@ -76,6 +74,20 @@ The tool supports multiple stores, team sharing, and integration with browsers a
 
 **-c**, **--clip**
 > Copy to clipboard.
+
+# DESCRIPTION
+
+**gopass** is a password manager compatible with pass (the standard Unix password manager). It stores passwords encrypted with GPG in a git repository, enabling version control and synchronization.
+
+The tool supports multiple stores, team sharing, TOTP generation, and integration with browsers and other tools. It adds features like better multi-user handling and mounted substores over standard pass.
+
+# CONFIGURATION
+
+**~/.config/gopass/config**
+> gopass configuration file with store locations, mount points, and default settings.
+
+**~/.local/share/gopass/stores/**
+> Default storage location for password store data.
 
 # CAVEATS
 

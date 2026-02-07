@@ -1,3 +1,7 @@
+# TAGLINE
+
+EGL graphics library information display
+
 # TLDR
 
 Display **full** platform EGL information

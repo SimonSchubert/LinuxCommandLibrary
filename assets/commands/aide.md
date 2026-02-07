@@ -1,3 +1,7 @@
+# TAGLINE
+
+Detect file system changes for intrusion detection
+
 # TLDR
 
 **Initialize** the database
@@ -34,7 +38,9 @@ Send reporter results to a **URL**
 
 # DESCRIPTION
 
-**AIDE** (Advanced Intrusion Detection Environment) is an intrusion detection system for checking the integrity of files. It builds a database of file attributes and can later compare files against this database to detect changes.
+**AIDE** (Advanced Intrusion Detection Environment) is a file and directory integrity checker used for intrusion detection. It builds a database of file attributes including permissions, inode numbers, timestamps, file sizes, link counts, and checksums using algorithms like SHA-256 and SHA-512.
+
+Once an initial database is created, AIDE can compare the current state of the file system against the stored snapshot to detect unauthorized modifications, new files, or deleted files. Rules in the configuration file define which directories to monitor and which attributes to check for each path.
 
 # PARAMETERS
 
@@ -70,6 +76,11 @@ Send reporter results to a **URL**
 
 **-A, --after**
 > Set config parameters after file reading
+
+# CONFIGURATION
+
+**/etc/aide/aide.conf**
+> Main configuration file defining which files to monitor, database locations, and check rules.
 
 # CAVEATS
 

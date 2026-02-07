@@ -1,3 +1,7 @@
+# TAGLINE
+
+exFAT filesystem label utility
+
 # TLDR
 
 **Show volume label**
@@ -23,4 +27,3 @@ The filesystem must be unmounted before changing the label. Maximum label length
 # SEE ALSO
 
 [exfatprogs](/man/exfatprogs)(8), [mkfs.exfat](/man/mkfs.exfat)(8)
-

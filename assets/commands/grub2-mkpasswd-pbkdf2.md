@@ -1,3 +1,7 @@
+# TAGLINE
+
+generate PBKDF2 password hash for GRUB protection
+
 # TLDR
 
 Create a **password hash** for GRUB 2

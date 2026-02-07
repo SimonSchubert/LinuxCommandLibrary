@@ -1,3 +1,7 @@
+# TAGLINE
+
+network password sniffer
+
 # TLDR
 
 **Sniff passwords** on interface
@@ -22,9 +26,11 @@
 
 # DESCRIPTION
 
-**dsniff** is a password sniffer that captures authentication credentials from network traffic. It handles various protocols including FTP, Telnet, HTTP, SNMP, IMAP, LDAP, and others.
+**dsniff** is a password sniffer that passively monitors network traffic to capture authentication credentials transmitted in cleartext. It supports a comprehensive array of protocols including FTP, Telnet, HTTP, SNMP, IMAP, POP, LDAP, rlogin, RPC, NFS, X11, Oracle, PostgreSQL, and many others.
 
-The tool is designed for authorized network auditing and security testing, demonstrating the risks of transmitting credentials over unencrypted protocols.
+The tool operates by analyzing packet streams and extracting usernames and passwords as they traverse the network. It performs automatic protocol detection and TCP stream reassembly to correctly capture credentials from multi-packet exchanges.
+
+dsniff was designed for authorized network security auditing and penetration testing, demonstrating the significant security risks of transmitting credentials over unencrypted protocols. Its existence helped drive the widespread adoption of encrypted alternatives like SSH and HTTPS. The tool remains relevant for security assessments and identifying legacy systems using insecure authentication methods.
 
 # PARAMETERS
 

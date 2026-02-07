@@ -1,3 +1,7 @@
+# TAGLINE
+
+Animated version control history visualization
+
 # TLDR
 
 **Visualize current repo**
@@ -49,11 +53,9 @@ _PATH_
 
 # DESCRIPTION
 
-**gource** visualizes version control history as animated tree. Developers appear as avatars making changes, with files and directories branching from the center.
+**gource** visualizes version control history as an animated tree. Developers appear as avatars making changes, with files and directories branching from the center in a real-time animation.
 
-The tool creates compelling visualizations of project history. It supports Git, SVN, Mercurial, and Bazaar. Output can be piped to video encoders.
-
-gource creates animated repository visualizations.
+The tool supports Git, SVN, Mercurial, and Bazaar repositories. Output can be piped to video encoders like ffmpeg for creating shareable recordings of project history.
 
 # CAVEATS
 

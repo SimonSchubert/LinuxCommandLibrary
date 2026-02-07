@@ -1,3 +1,7 @@
+# TAGLINE
+
+Maintained fork of gixy for nginx security analysis
+
 # TLDR
 
 **Analyze nginx config**
@@ -35,11 +39,9 @@ _CONFIG_
 
 # DESCRIPTION
 
-**gixy-next** is a maintained fork of gixy for nginx security analysis. It continues development of the original gixy tool with updates and improvements.
+**gixy-next** is a maintained fork of gixy for nginx security analysis. It continues development of the original tool with updates, bug fixes, and support for newer nginx features.
 
-The tool analyzes nginx configurations for security issues, detecting misconfigurations that could lead to vulnerabilities.
-
-gixy-next provides updated nginx security checking.
+The tool analyzes nginx configurations for security issues, detecting misconfigurations that could lead to vulnerabilities such as SSRF and host spoofing.
 
 # CAVEATS
 

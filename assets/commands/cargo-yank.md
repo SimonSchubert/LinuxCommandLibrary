@@ -1,3 +1,7 @@
+# TAGLINE
+
+remove a pushed crate version from the registry
+
 # TLDR
 
 **Yank version from registry**

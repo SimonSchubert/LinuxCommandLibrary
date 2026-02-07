@@ -1,3 +1,7 @@
+# TAGLINE
+
+Pack and extract Electron application archives.
+
 # TLDR
 
 **Create** asar archive

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Bitwarden password manager CLI
+
 # TLDR
 
 **Login** to Bitwarden

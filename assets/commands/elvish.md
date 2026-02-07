@@ -1,3 +1,7 @@
+# TAGLINE
+
+Expressive shell with modern programming features
+
 # TLDR
 
 **Start Elvish shell**
@@ -44,6 +48,14 @@ _SCRIPT_
 The shell offers pipelines that pass structured data (not just strings), built-in file manager (Ctrl-N), and comprehensive history with directory history (Ctrl-L). Its syntax is cleaner than traditional shells.
 
 Elvish provides real-time syntax highlighting, intelligent completions, and a consistent programming model for both interactive use and scripting.
+
+# CONFIGURATION
+
+**~/.config/elvish/rc.elv** or **~/.elvish/rc.elv**
+> Main configuration file loaded on shell startup.
+
+**~/.config/elvish/lib/**
+> Directory for Elvish modules and libraries.
 
 # CAVEATS
 

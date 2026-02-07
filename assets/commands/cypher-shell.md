@@ -1,3 +1,7 @@
+# TAGLINE
+
+Neo4j Cypher query language shell
+
 # TLDR
 
 **Connect to Neo4j** with default settings

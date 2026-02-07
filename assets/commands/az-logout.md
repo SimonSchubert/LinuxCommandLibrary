@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove Azure CLI authentication credentials
+
 # TLDR
 
 **Logout** current user

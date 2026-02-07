@@ -1,3 +1,7 @@
+# TAGLINE
+
+AI-powered agentic coding assistant from Google
+
 # TLDR
 
 **Start an interactive session**
@@ -89,6 +93,14 @@
 
 **!**_command_
 > Execute a shell command
+
+# CONFIGURATION
+
+**GEMINI.md**
+> Project-specific instructions and context loaded from the working directory.
+
+**~/.config/gemini/config.json**
+> User configuration for API keys, default models, and preferences.
 
 # DESCRIPTION
 

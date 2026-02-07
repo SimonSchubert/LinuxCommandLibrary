@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage AWS Cost and Usage Report definitions.
+
 # TLDR
 
 **List all report definitions** in the account

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Report AppArmor profile and confinement status
+
 # TLDR
 
 Check **AppArmor status**
@@ -34,7 +38,7 @@ Display the number of policies in **kill mode**
 
 # DESCRIPTION
 
-**aa-status** reports various aspects of the current state of AppArmor confinement. By default, it outputs information about loaded profiles, their enforcement modes, and confined processes.
+**aa-status** reports the current state of AppArmor confinement on the system. By default, it displays a summary of loaded profiles grouped by enforcement mode (enforce, complain, kill, unconfined), the number of confined processes, and which profiles apply to them. Individual flags can query specific counters for use in scripts. The **--json** and **--pretty-json** flags provide machine-parseable output suitable for monitoring and automation pipelines.
 
 # PARAMETERS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+package repository searcher
+
 # TLDR
 
 **Search for a package**
@@ -30,6 +34,14 @@
 
 **--json**
 > Output in JSON format.
+
+# CONFIGURATION
+
+**~/.condarc**
+> User-level conda configuration for channels, package settings, and solver options.
+
+**/opt/conda/.condarc**
+> System-wide conda configuration.
 
 # DESCRIPTION
 

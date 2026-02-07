@@ -1,3 +1,7 @@
+# TAGLINE
+
+analyzes and visualizes terrain elevation
+
 # TLDR
 
 **Generate hillshade**

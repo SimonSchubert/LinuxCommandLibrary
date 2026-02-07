@@ -1,3 +1,7 @@
+# TAGLINE
+
+build and execute .NET projects
+
 # TLDR
 
 **Run current project**
@@ -53,6 +57,11 @@
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**Properties/launchSettings.json**
+> Configures launch profiles with environment variables and application arguments.
 
 # DESCRIPTION
 

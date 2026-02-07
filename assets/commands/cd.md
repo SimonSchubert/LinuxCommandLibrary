@@ -1,3 +1,7 @@
+# TAGLINE
+
+change the current working directory
+
 # TLDR
 
 **Change** to directory
@@ -60,31 +64,6 @@ _directory_
 
 **-**
 > Previous directory
-
-# WORKFLOW
-
-```bash
-# Go to home directory
-cd
-cd ~
-
-# Go to specific directory
-cd /etc
-
-# Go to relative directory
-cd Documents
-cd ../Downloads
-
-# Go back to previous directory
-cd -
-
-# Go up multiple levels
-cd ../../..
-
-# Use variables
-cd $HOME/Projects
-cd ${MYDIR}
-```
 
 # ENVIRONMENT VARIABLES
 

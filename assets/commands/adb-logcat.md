@@ -1,3 +1,7 @@
+# TAGLINE
+
+Android system log viewer
+
 # TLDR
 
 **View** device logs

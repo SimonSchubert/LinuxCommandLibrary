@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display historical information about LSF batch jobs
+
 # TLDR
 
 **Show history** of your own jobs

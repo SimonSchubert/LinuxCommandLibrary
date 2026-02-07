@@ -1,3 +1,7 @@
+# TAGLINE
+
+TigerGraph graph database query shell
+
 # TLDR
 
 **Connect to TigerGraph**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Groff terminal output driver
+
 # TLDR
 
 **Display in terminal**
@@ -54,11 +58,9 @@ _FILE_
 
 # DESCRIPTION
 
-**grotty** is a groff output driver for terminal display. It produces ASCII or UTF-8 output suitable for viewing in text terminals.
+**grotty** is a groff output driver for terminal display. It produces ASCII or UTF-8 output suitable for viewing in text terminals, supporting bold and underline via SGR escape sequences or overstriking.
 
-The driver supports bold and underline using SGR escape sequences or overstriking. It's used for man page display and terminal document viewing.
-
-grotty outputs groff to terminals.
+It is the driver used for man page display and terminal document viewing.
 
 # CAVEATS
 

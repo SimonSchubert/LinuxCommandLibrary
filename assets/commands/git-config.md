@@ -1,3 +1,7 @@
+# TAGLINE
+
+Get and set repository or global options
+
 # TLDR
 
 **Set user name**
@@ -55,11 +59,22 @@ _VALUE_
 
 # DESCRIPTION
 
-**git config** gets and sets repository or global options. Configuration controls git behavior including user identity, aliases, colors, merge tools, and remote settings.
+**git config** manages Git configuration variables that control all aspects of Git's behavior, from user identity and commit settings to advanced options like merge strategies, credential helpers, and performance tuning. Configuration is stored in INI-style text files at three hierarchical levels.
 
-Configuration exists at three levels: system, global (user), and local (repository). Local settings override global, which override system. The command supports reading, writing, and listing values.
+System-level configuration (/etc/gitconfig) applies to all users on the system and requires administrator privileges to modify. Global configuration (~/.gitconfig or ~/.config/git/config) applies to the current user across all repositories. Local configuration (.git/config) applies only to the specific repository. Settings at lower levels override higher levels, allowing project-specific customization.
 
-git config is essential for customizing git's behavior.
+Common configuration tasks include setting user identity (user.name and user.email, required for commits), defining command aliases (alias.*), configuring merge and diff tools (merge.tool, diff.tool), setting default branch names (init.defaultBranch), and managing credentials (credential.helper).
+
+# CONFIGURATION
+
+**~/.gitconfig** or **~/.config/git/config**
+> Global user-level configuration file (--global).
+
+**.git/config**
+> Repository-specific configuration file (--local).
+
+**/etc/gitconfig**
+> System-wide configuration file (--system).
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+DuckDuckGo search from the command line
+
 # TLDR
 
 **Search DuckDuckGo** from the terminal
@@ -116,6 +120,11 @@ The tool supports DuckDuckGo bangs (shortcuts like !w for Wikipedia, !yt for You
 
 **HTTPS_PROXY**
 > HTTP proxy configuration.
+
+# CONFIGURATION
+
+**~/.config/ddgr/config**
+> Configuration file for setting default options like number of results, region, and proxy settings.
 
 # CAVEATS
 

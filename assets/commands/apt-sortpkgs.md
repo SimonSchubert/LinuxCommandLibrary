@@ -1,3 +1,7 @@
+# TAGLINE
+
+Sort package index files
+
 # TLDR
 
 **Sort** a Packages file

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove an installed Homebrew package
+
 # TLDR
 
 **Remove a formula**

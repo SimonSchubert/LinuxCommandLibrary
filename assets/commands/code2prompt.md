@@ -1,3 +1,7 @@
+# TAGLINE
+
+source code to LLM prompt converter
+
 # TLDR
 
 **Generate a prompt** from source code
@@ -43,9 +47,11 @@
 
 # DESCRIPTION
 
-**code2prompt** transforms source code into prompts for Large Language Models (LLMs). It traverses a codebase, formats the files with proper context, and generates prompts suitable for AI code assistants.
+**code2prompt** transforms source code into structured prompts optimized for Large Language Models (LLMs). It recursively traverses a codebase, formats files with proper context including file paths and structure, and generates comprehensive prompts suitable for AI code assistants like Claude, GPT-4, or other LLMs.
 
-Useful for providing context to AI models when asking for code review, refactoring suggestions, or understanding unfamiliar codebases.
+The tool intelligently filters files based on patterns and extensions, excluding common noise like node_modules, build artifacts, and log files. Template support allows customizing the output format for different use cases such as code review, documentation generation, or architectural analysis.
+
+Token counting helps ensure prompts fit within model context limits. The clipboard integration streamlines workflows by directly copying output for immediate use in AI chat interfaces. This is particularly valuable for providing complete codebase context when asking AI assistants for refactoring suggestions, bug analysis, or understanding unfamiliar projects.
 
 # SEE ALSO
 

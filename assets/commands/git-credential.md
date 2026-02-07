@@ -1,3 +1,7 @@
+# TAGLINE
+
+Retrieve and store authentication credentials
+
 # TLDR
 
 **Get credentials**
@@ -40,9 +44,7 @@ EOF```
 
 **git credential** manages stored authentication credentials. It interfaces with credential helpers to retrieve, store, and erase credentials for remote repositories.
 
-The command is typically invoked automatically by git during push/pull operations. Direct use is for debugging or scripting authentication. Credentials flow through configured helpers (cache, store, osxkeychain, etc.).
-
-git credential provides the low-level credential management interface.
+The command is typically invoked automatically by Git during push/pull operations. Direct use is for debugging or scripting authentication. Credentials flow through configured helpers (cache, store, osxkeychain, etc.).
 
 # CAVEATS
 

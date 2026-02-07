@@ -1,3 +1,7 @@
+# TAGLINE
+
+distributed storage cluster management
+
 # TLDR
 
 Check cluster **health status**
@@ -34,9 +38,11 @@ Get **placement group** statistics
 
 # DESCRIPTION
 
-**ceph** is the command-line interface for managing Ceph distributed storage clusters. Ceph provides unified object, block, and file storage with high availability and no single point of failure.
+**ceph** is the command-line interface for managing Ceph distributed storage clusters. Ceph provides unified object, block, and file storage with automatic data replication, self-healing, and no single point of failure.
 
-The command communicates with the Ceph monitor daemons to perform cluster administration tasks.
+The command communicates with the Ceph monitor daemons to perform cluster administration tasks including checking health status, managing OSDs (Object Storage Daemons), configuring placement groups, and handling authentication. It serves as the primary tool for day-to-day cluster operations and troubleshooting.
+
+Ceph organizes data into pools, which contain placement groups that map to OSDs across the cluster. The `ceph status` command provides a quick overview of cluster health, while more specific subcommands allow fine-grained control over individual components.
 
 # SUBCOMMANDS
 
@@ -71,6 +77,14 @@ The command communicates with the Ceph monitor daemons to perform cluster admini
 
 **-c** _file_
 > Use alternate config file
+
+# CONFIGURATION
+
+**/etc/ceph/ceph.conf**
+> Main cluster configuration including monitor addresses, authentication settings, and OSD parameters.
+
+**/etc/ceph/ceph.client.admin.keyring**
+> Admin authentication keyring for cluster access.
 
 # CAVEATS
 

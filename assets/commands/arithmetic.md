@@ -1,3 +1,7 @@
+# TAGLINE
+
+Practice basic math with a quiz game
+
 # TLDR
 
 Start an **arithmetic quiz**

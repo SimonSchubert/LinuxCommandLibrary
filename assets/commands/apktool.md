@@ -1,3 +1,7 @@
+# TAGLINE
+
+Reverse engineer Android APK files
+
 # TLDR
 
 **Decode** (decompile) an APK
@@ -62,6 +66,11 @@ After modifications, apktool can rebuild the APK, which then needs to be signed 
 
 **--use-aapt2**
 > Use aapt2 instead of aapt
+
+# CONFIGURATION
+
+**~/.local/share/apktool/framework/**
+> Directory for stored framework files used during decoding and rebuilding.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Build and install Rust binary crates
+
 # TLDR
 
 **Install from crates.io**

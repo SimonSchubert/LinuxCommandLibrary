@@ -1,3 +1,7 @@
+# TAGLINE
+
+Cockpit web service for server administration
+
 # TLDR
 
 Start with **SSH authentication** enabled

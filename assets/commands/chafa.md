@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal image viewer using character art
+
 # TLDR
 
 **Display image in terminal**
@@ -34,7 +38,11 @@
 
 # DESCRIPTION
 
-**chafa** converts images to character art for terminal display. Supports Sixels, Kitty, iTerm2 protocols, and Unicode mosaics. Handles JPEG, PNG, GIF (animated), AVIF, SVG, WebP, and more.
+**chafa** converts images to character art for display directly in the terminal. It uses Unicode block characters, braille patterns, and ASCII art to approximate images at the resolution of the terminal grid.
+
+For terminals with advanced graphics support, chafa can output using the Sixel, Kitty, or iTerm2 graphics protocols, producing much higher fidelity results. It handles a wide range of image formats including JPEG, PNG, GIF (with animation), AVIF, SVG, WebP, TIFF, and JPEG XL.
+
+Output can be tuned by adjusting size, color depth, symbol sets, and animation speed. chafa automatically detects terminal capabilities and selects the best available output mode.
 
 # PARAMETERS
 

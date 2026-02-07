@@ -1,3 +1,7 @@
+# TAGLINE
+
+friendly interactive shell
+
 # TLDR
 
 **Start fish shell**
@@ -49,6 +53,17 @@ _FILE_
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**~/.config/fish/config.fish**
+> User configuration file loaded on shell startup.
+
+**~/.config/fish/fish_variables**
+> Universal variables stored persistently across sessions.
+
+**~/.config/fish/functions/*.fish**
+> User-defined functions, one per file.
 
 # DESCRIPTION
 

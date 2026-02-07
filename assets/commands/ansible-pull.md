@@ -1,3 +1,7 @@
+# TAGLINE
+
+Pull and run playbooks from a repository
+
 # TLDR
 
 **Pull** and run playbook from git
@@ -61,6 +65,17 @@ This is useful for scaling to many nodes, bootstrap scenarios, or environments w
 
 **--accept-host-key**
 > Accept SSH host key
+
+# CONFIGURATION
+
+**/etc/ansible/ansible.cfg**
+> System-wide Ansible configuration on the target node.
+
+**~/.ansible.cfg**
+> Per-user Ansible configuration overriding system defaults.
+
+**ansible.cfg**
+> Project-level configuration in the current directory, highest priority.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage large file storage
+
 # TLDR
 
 **Install LFS for repo**
@@ -52,11 +56,22 @@
 
 # DESCRIPTION
 
-**git lfs** (Large File Storage) manages large files in git. Instead of storing large binary files directly, it stores pointers and keeps actual content on a separate server.
+**git lfs** (Large File Storage) manages large files in Git repositories. Instead of storing large binary files directly in the repository, it replaces them with lightweight pointer files and stores the actual content on a separate LFS server.
 
-LFS reduces repository size and clone times by downloading large files on demand. It integrates transparently with git commands while storing content efficiently.
+LFS significantly reduces repository size and clone times by downloading large files only on demand. It integrates transparently with standard Git commands, so `git add`, `git commit`, and `git push` work as expected while LFS handles the content storage efficiently behind the scenes.
 
-git lfs is essential for repositories with large binary assets.
+# CONFIGURATION
+
+**.gitattributes**
+> Specifies which file patterns are tracked by LFS.
+
+```
+*.psd filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
+```
+
+**.lfsconfig**
+> Repository-specific LFS configuration including endpoint URLs.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Azure resource providers
+
 # TLDR
 
 **List all resource providers**

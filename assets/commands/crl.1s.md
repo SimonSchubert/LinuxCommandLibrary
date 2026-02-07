@@ -1,3 +1,7 @@
+# TAGLINE
+
+certificate revocation list processor
+
 # TLDR
 
 **Display CRL information** in text format

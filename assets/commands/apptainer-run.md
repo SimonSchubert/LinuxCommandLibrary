@@ -1,3 +1,7 @@
+# TAGLINE
+
+Execute the default runscript of a container.
+
 # TLDR
 
 **Run the default action** of a container
@@ -92,6 +96,11 @@ This differs from **apptainer exec** which runs an arbitrary command. When you r
 Containers can be specified as local SIF files, Docker references (docker://), library references (library://), or OCI archives. If the container has no runscript defined, the command will execute a shell.
 
 The run command supports SCIF (Scientific Filesystem) apps via the **--app** flag, allowing containers to bundle multiple applications with separate entry points. Standard bind mounts, environment variables, and GPU support work identically to other Apptainer commands.
+
+# CONFIGURATION
+
+**/etc/apptainer/apptainer.conf**
+> Main configuration file controlling default bind paths, security options, GPU support, and namespace settings.
 
 # CAVEATS
 

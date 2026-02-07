@@ -1,3 +1,7 @@
+# TAGLINE
+
+Print Go version and binary build info
+
 # TLDR
 
 **Show Go version**
@@ -32,11 +36,9 @@ _FILES_
 
 # DESCRIPTION
 
-**go version** prints the Go version. When given binaries, it reports the Go version used to compile them and optionally their module information.
+**go version** prints the installed Go version. When given compiled binaries, it reports the Go version used to build them and optionally their embedded module information.
 
-The command helps verify installed Go version and debug binaries' build information. The -m flag shows embedded module and dependency versions.
-
-go version identifies Go version and binary build info.
+The **-m** flag shows module and dependency versions embedded in the binary, which is useful for debugging and auditing deployed applications.
 
 # CAVEATS
 

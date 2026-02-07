@@ -1,3 +1,7 @@
+# TAGLINE
+
+framebuffer image viewer
+
 # TLDR
 
 **Display** an image

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Stricter Go code formatter
+
 # TLDR
 
 **Format file**
@@ -46,11 +50,9 @@ _FILES_
 
 # DESCRIPTION
 
-**gofumpt** is a stricter gofmt. It applies additional formatting rules beyond standard gofmt, enforcing a more consistent code style.
+**gofumpt** is a stricter alternative to gofmt that applies additional formatting rules beyond the standard Go style. It removes unnecessary blank lines, enforces consistent grouping, and applies other style preferences while remaining a superset of gofmt.
 
-The tool removes unnecessary blank lines, applies consistent grouping, and enforces other style preferences. It's a superset of gofmt.
-
-gofumpt provides stricter Go code formatting.
+The **-extra** flag enables even more opinionated rules for tighter code formatting.
 
 # CAVEATS
 
@@ -58,7 +60,7 @@ Stricter than gofmt. May conflict with project style. Configure editors accordin
 
 # HISTORY
 
-gofumpt was created by **Daniel Martí** to provide stricter formatting than standard gofmt.
+gofumpt was created by **Daniel Marti** to provide stricter formatting than standard gofmt.
 
 # SEE ALSO
 

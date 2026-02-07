@@ -1,3 +1,7 @@
+# TAGLINE
+
+copies container images between registries
+
 # TLDR
 
 **Copy image between registries**
@@ -29,7 +33,9 @@
 
 # DESCRIPTION
 
-**gcrane copy** copies container images between registries. gcrane is a variant of crane optimized for Google Container Registry and Artifact Registry.
+**gcrane copy** copies container images between registries, supporting both single images and repository-wide operations. It handles multi-architecture images and maintains all image metadata during transfer.
+
+The command can copy individual tagged images or use the **-a** flag to copy all tags from a repository. Platform filtering allows selective copying for specific architectures. Parallel job execution speeds up bulk copy operations. gcrane copy is commonly used for backup, migration between regions or projects, and promoting images from staging to production registries.
 
 # SEE ALSO
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+curses-based disk partition editor
+
 # TLDR
 
 Start the partition manager for a **specific device**
@@ -14,9 +18,11 @@ Create a **new partition table** and manage it
 
 # DESCRIPTION
 
-**cfdisk** is a curses-based partition table editor. It provides a user-friendly text interface for creating, deleting, and modifying disk partitions.
+**cfdisk** is a curses-based disk partition table editor from the util-linux package. It provides a user-friendly text interface for creating, deleting, resizing, and changing the type of disk partitions, making it more approachable than the command-driven fdisk.
 
-The tool supports MBR (DOS) and GPT partition tables and displays partition information in an easy-to-read format.
+The tool supports both MBR (DOS) and GPT partition tables and displays partition layout in an interactive menu-driven format. Navigation uses arrow keys to select partitions and operations, with changes held in memory until explicitly written with the "Write" command.
+
+The `-z` flag starts with a zeroed partition table, which is useful when setting up a new disk or switching between MBR and GPT schemes.
 
 # PARAMETERS
 

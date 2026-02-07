@@ -1,3 +1,7 @@
+# TAGLINE
+
+Web interface for browsing Git repositories
+
 # TLDR
 
 **Start development server**
@@ -14,11 +18,14 @@
 
 # DESCRIPTION
 
-**gitweb** is a web interface for git repositories. It provides a CGI script that displays repository contents, commits, branches, and diffs through a web browser.
+**gitweb** is a web interface for Git repositories. It provides a CGI script that displays repository contents, commits, branches, and diffs through a web browser.
 
-Gitweb is typically deployed with a web server (Apache, nginx) for shared repository browsing. It shows commit history, file contents, blame, and search functionality.
+**gitweb** is typically deployed with a web server (Apache, nginx) for shared repository browsing. It shows commit history, file contents, blame annotations, and search functionality.
 
-gitweb provides web-based git repository browsing.
+# CONFIGURATION
+
+**/etc/gitweb.conf**
+> Main configuration file specifying project root, site name, and display options.
 
 # CAVEATS
 
@@ -26,7 +33,7 @@ CGI script, needs web server. No authentication built-in. Read-only interface.
 
 # HISTORY
 
-gitweb is part of the **Git** distribution, providing web repository browsing since Git's early versions. It's the predecessor to modern git hosting interfaces.
+gitweb is part of the **Git** distribution, providing web repository browsing since Git's early versions. It is the predecessor to modern git hosting interfaces.
 
 # SEE ALSO
 

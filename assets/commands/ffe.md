@@ -1,3 +1,7 @@
+# TAGLINE
+
+flat file data extractor and parser
+
 # TLDR
 
 **Extract fields from** flat file
@@ -42,6 +46,11 @@ _FILES_
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**config.ffe**
+> Structure definition file specifying record layouts, field names, widths, types, and delimiters.
 
 # DESCRIPTION
 

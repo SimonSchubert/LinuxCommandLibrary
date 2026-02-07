@@ -1,3 +1,7 @@
+# TAGLINE
+
+Active Directory domain client tool
+
 # TLDR
 
 **Join** a domain

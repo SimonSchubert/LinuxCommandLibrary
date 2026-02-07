@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interactive REPL environment for Haskell
+
 # TLDR
 
 **Start interactive session**
@@ -56,7 +60,10 @@ _FILES_
 
 GHCi supports all GHC language extensions and can compile modules on the fly. It provides introspection commands for examining types, kinds, and documentation. Tab completion and command history enhance usability.
 
-ghci is essential for Haskell development, testing, and learning.
+# CONFIGURATION
+
+**~/.ghci**
+> Startup file loaded when GHCi starts, containing default settings, imports, and custom commands.
 
 # CAVEATS
 

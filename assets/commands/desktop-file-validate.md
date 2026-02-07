@@ -1,3 +1,7 @@
+# TAGLINE
+
+validate desktop entry files against specification
+
 # TLDR
 
 **Validate a desktop entry file**

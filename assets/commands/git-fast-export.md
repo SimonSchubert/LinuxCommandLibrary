@@ -1,3 +1,7 @@
+# TAGLINE
+
+Export Git history in fast-import stream format
+
 # TLDR
 
 **Export repository to stream**
@@ -39,9 +43,12 @@
 
 # DESCRIPTION
 
-**git fast-export** dumps Git history in a format suitable for git fast-import. Used for repository transformations, migrations, and conversions.
+**git fast-export** generates a complete textual representation of Git repository history in a format designed for consumption by git fast-import. This creates a portable, version-control-system-agnostic representation of commits, trees, tags, and their relationships.
+
+The primary use case is repository migration and transformation. Export streams can be filtered, modified, or split before reimport, enabling powerful repository restructuring operations such as extracting subdirectories, rewriting author information, or converting between Git hosting providers.
+
+The export format is line-oriented and human-readable. Combined with git fast-import, this command pair provides significantly faster repository operations than git filter-branch for large-scale history rewrites. The --anonymize option supports sharing repository structure for debugging while protecting sensitive content.
 
 # SEE ALSO
 
 [git-fast-import](/man/git-fast-import)(1), [git-filter-branch](/man/git-filter-branch)(1)
-

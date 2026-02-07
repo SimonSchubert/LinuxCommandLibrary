@@ -1,3 +1,7 @@
+# TAGLINE
+
+Scan APKs for hardcoded secrets and keys
+
 # TLDR
 
 **Scan** APK for hardcoded secrets

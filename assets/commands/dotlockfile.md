@@ -1,3 +1,7 @@
+# TAGLINE
+
+mailbox-style file locking utility
+
 # TLDR
 
 **Create a lockfile**
@@ -53,7 +57,7 @@ _LOCKFILE_
 
 # DESCRIPTION
 
-**dotlockstreetfile** creates lockfiles using the mailbox locking convention (name.lock). It provides atomic file locking for scripts and applications that need to serialize access to resources.
+**dotlockfile** creates lockfiles using the mailbox locking convention (name.lock). It provides atomic file locking for scripts and applications that need to serialize access to resources.
 
 The tool handles retry logic, stale lock detection, and PID tracking. With -p, it writes the process ID to the lockfile enabling detection of dead lock holders.
 

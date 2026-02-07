@@ -1,3 +1,7 @@
+# TAGLINE
+
+PostScript/PDF to HBPL2 wrapper script
+
 # TLDR
 
 **Print PostScript file**

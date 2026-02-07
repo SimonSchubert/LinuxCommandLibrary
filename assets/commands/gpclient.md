@@ -1,3 +1,7 @@
+# TAGLINE
+
+GlobalProtect VPN client for Linux
+
 # TLDR
 
 **Connect** to a GlobalProtect VPN using a portal server
@@ -59,9 +63,7 @@ Display **help** for any command
 
 **gpclient** is a Linux client for Palo Alto Networks GlobalProtect VPN, built on top of OpenConnect. It provides both command-line and graphical interfaces for connecting to corporate VPN gateways that use GlobalProtect.
 
-The client supports SAML authentication, two-factor authentication, and both portal and gateway connections. It's an open-source alternative to the official GlobalProtect client, which has limited Linux support.
-
-Configuration and credentials are stored for subsequent connections, and the GUI provides system tray integration for connection status.
+The client supports SAML authentication, two-factor authentication, and both portal and gateway connections. It is an open-source alternative to the official GlobalProtect client, which has limited Linux support.
 
 # CAVEATS
 

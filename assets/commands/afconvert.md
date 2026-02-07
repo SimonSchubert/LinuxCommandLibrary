@@ -1,3 +1,7 @@
+# TAGLINE
+
+macOS audio file format converter
+
 # TLDR
 
 **Convert** audio file to AAC

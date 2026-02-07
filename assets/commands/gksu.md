@@ -1,3 +1,7 @@
+# TAGLINE
+
+Graphical frontend for su with GTK password dialog
+
 # TLDR
 
 Run a command as a **specific user**
@@ -49,7 +53,7 @@ Output **debug** info for the given command
 
 # DESCRIPTION
 
-**gksu** is a graphical frontend for su that prompts for a password using a GTK dialog. It allows running graphical applications with elevated privileges from the command line or menu entries without needing a terminal.
+**gksu** is a graphical frontend for `su` that prompts for a password using a GTK dialog. It allows running graphical applications with elevated privileges from the command line or menu entries without needing a terminal.
 
 The tool can operate in either su mode (authenticate as target user, typically root) or sudo mode (use current user's sudo privileges), with automatic detection based on system configuration.
 

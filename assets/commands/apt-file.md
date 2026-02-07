@@ -1,3 +1,7 @@
+# TAGLINE
+
+Search for files within packages.
+
 # TLDR
 
 **Update** the metadata database
@@ -49,6 +53,11 @@ Search for packages that match a **regex**
 
 **-a, --architecture arch**
 > Search for a specific architecture
+
+# CONFIGURATION
+
+**/etc/apt/apt-file.conf**
+> Configuration file controlling cache location and default options.
 
 # CAVEATS
 

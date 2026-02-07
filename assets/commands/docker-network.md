@@ -1,3 +1,7 @@
+# TAGLINE
+
+manage container networking and connectivity
+
 # TLDR
 
 **List networks**
@@ -57,7 +61,7 @@
 
 # DESCRIPTION
 
-**docker network** manages Docker networks. Networks enable communication between containers. Supports bridge, host, overlay, and macvlan drivers.
+**docker network** manages Docker networks. Networks enable communication between containers. Supports bridge, host, overlay, and macvlan drivers. Containers on the same user-defined network can communicate using container names as hostnames, providing service discovery. Custom networks isolate containers and provide better security than the default bridge network.
 
 # SEE ALSO
 

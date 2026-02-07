@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Azure Table Storage tables
+
 # TLDR
 
 **Create a table**

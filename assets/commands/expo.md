@@ -1,3 +1,7 @@
+# TAGLINE
+
+React Native development platform and build toolchain
+
 # TLDR
 
 **Create new project**
@@ -57,6 +61,14 @@ _COMMAND_
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**app.json**
+> Expo project configuration including app name, version, SDK version, and platform-specific settings.
+
+**eas.json**
+> EAS Build and Submit configuration for managed builds and deployments.
 
 # DESCRIPTION
 

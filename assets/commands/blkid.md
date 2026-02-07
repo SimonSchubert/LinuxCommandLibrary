@@ -1,3 +1,7 @@
+# TAGLINE
+
+Identify block device attributes
+
 # TLDR
 
 List **all partitions**
@@ -52,6 +56,14 @@ Get the **filesystem type** of a partition
 
 **-i, --info**
 > Print I/O limits (sector size, etc.)
+
+# CONFIGURATION
+
+**/etc/blkid.tab**
+> Default cache file storing previously detected block device attributes.
+
+**/run/blkid/blkid.tab**
+> Runtime cache location on systems using tmpfs for /run.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Lint, format, and manage Protocol Buffer files
+
 # TLDR
 
 **Lint Protocol Buffer files**
@@ -77,6 +81,17 @@
 The linting engine enforces best practices and style consistency across Protobuf definitions. Breaking change detection compares against git branches or published versions, preventing accidental API incompatibilities.
 
 Code generation is configured via **buf.gen.yaml**, replacing complex protoc command lines. The Buf Schema Registry (BSR) enables sharing and versioning Protobuf modules as dependencies, similar to package managers for other languages.
+
+# CONFIGURATION
+
+**buf.yaml**
+> Module configuration defining linting rules, breaking change policies, and dependencies.
+
+**buf.gen.yaml**
+> Code generation configuration specifying plugins and output directories.
+
+**buf.lock**
+> Dependency lock file for reproducible builds.
 
 # CAVEATS
 

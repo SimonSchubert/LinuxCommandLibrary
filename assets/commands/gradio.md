@@ -1,3 +1,7 @@
+# TAGLINE
+
+Machine learning web interface builder
+
 # TLDR
 
 **Run Gradio app**
@@ -44,7 +48,7 @@ _file_
 
 **Gradio** is a Python library for creating machine learning demos and web interfaces. It allows rapid prototyping of ML models with interactive UIs, supporting inputs like text, images, audio, and video.
 
-Gradio interfaces can be shared via temporary public URLs, making it easy to demonstrate models to others. It's widely used in the Hugging Face ecosystem.
+Gradio interfaces can be shared via temporary public URLs, making it easy to demonstrate models to others. It is widely used in the Hugging Face ecosystem.
 
 # PYTHON EXAMPLE
 

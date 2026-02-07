@@ -1,3 +1,7 @@
+# TAGLINE
+
+stop printer from processing jobs
+
 # TLDR
 
 **Disable a printer**

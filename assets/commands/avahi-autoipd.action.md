@@ -1,3 +1,7 @@
+# TAGLINE
+
+Handle IPv4 link-local address events
+
 # TLDR
 
 **Add** an acquired IPv4LL address to a network interface (BIND event)

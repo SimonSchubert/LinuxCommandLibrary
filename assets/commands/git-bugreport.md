@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate diagnostic information for reporting Git bugs
+
 # TLDR
 
 **Generate bug report**
@@ -34,9 +38,9 @@
 
 **git bugreport** generates a template for reporting bugs to the Git project. It collects system information, git version, and configuration details needed for debugging.
 
-The report includes environment information, installed hooks, and space for describing the problem. It outputs to a text file ready for submission to the git mailing list.
+The report includes environment information, installed hooks, and space for describing the problem. It outputs to a text file ready for submission to the git mailing list or issue tracker.
 
-git bugreport streamlines the process of creating useful bug reports.
+The generated report contains Git version, operating system details, shell information, and a template prompting for steps to reproduce the issue, expected behavior, and actual behavior.
 
 # CAVEATS
 

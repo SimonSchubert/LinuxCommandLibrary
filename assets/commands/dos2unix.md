@@ -1,3 +1,7 @@
+# TAGLINE
+
+convert DOS/Windows line endings to Unix
+
 # TLDR
 
 **Convert** file line endings
@@ -22,9 +26,11 @@ Handle **BOM** (keep/add/remove)
 
 # DESCRIPTION
 
-**dos2unix** converts text files from DOS/Windows format (CRLF line endings) to Unix format (LF line endings). It modifies files in place by default.
+**dos2unix** converts text files from DOS/Windows format (CRLF line endings) to Unix format (LF line endings). DOS/Windows systems use carriage return and line feed (\\r\\n) to mark line endings, while Unix-like systems use only line feed (\\n).
 
-Essential when working with files created on Windows or transferred between operating systems.
+Line ending mismatches cause problems in scripts, compilation errors, or rendering issues in text editors. This tool resolves these issues by normalizing line endings to the Unix standard. It handles byte order marks (BOM) commonly found in UTF-8 files from Windows.
+
+The tool operates in-place by default, modifying the original file, but can create new output files preserving the original. It intelligently detects file formats and can provide information about a file's current line ending format before conversion.
 
 # PARAMETERS
 

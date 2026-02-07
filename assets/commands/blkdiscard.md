@@ -1,3 +1,7 @@
+# TAGLINE
+
+Discard sectors on a storage device
+
 # TLDR
 
 **Discard** all sectors

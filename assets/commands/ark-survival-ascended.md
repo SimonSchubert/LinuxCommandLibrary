@@ -1,3 +1,7 @@
+# TAGLINE
+
+Dedicated server for the ARK survival game
+
 # TLDR
 
 Start the server with a **specific map**
@@ -66,6 +70,14 @@ Server options are passed using URL-style query parameters (joined with **?**) f
 
 **-ServerPlatform=**_platforms_
 > Allow cross-platform connections (PC, XSX, PS5)
+
+# CONFIGURATION
+
+**ShooterGame/Saved/Config/WindowsServer/GameUserSettings.ini**
+> Main server configuration including session settings, admin passwords, player limits, and gameplay options.
+
+**ShooterGame/Saved/Config/WindowsServer/Game.ini**
+> Advanced gameplay overrides for engrams, loot tables, creature spawns, and crafting recipes.
 
 # CAVEATS
 

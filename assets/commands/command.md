@@ -1,3 +1,7 @@
+# TAGLINE
+
+execute commands bypassing shell functions
+
 # TLDR
 
 **Run a command ignoring shell functions**
@@ -42,22 +46,6 @@
 With **-v**, it prints how the command would be resolved: the path for external commands, the definition for aliases, or indication for builtins and functions. This is the POSIX-portable way to check if a command exists (preferred over **which**).
 
 The **-V** option provides verbose output describing what type of command it is (builtin, function, alias, or external) and where it's defined.
-
-# EXAMPLES
-
-**Wrapper function calling original:**
-```bash
-ls() {
-    command ls --color=auto "$@"
-}
-```
-
-**Check command existence in scripts:**
-```bash
-if command -v docker > /dev/null 2>&1; then
-    echo "Docker is installed"
-fi
-```
 
 # CAVEATS
 

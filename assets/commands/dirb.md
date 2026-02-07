@@ -1,3 +1,7 @@
+# TAGLINE
+
+web directory brute-force scanner
+
 # TLDR
 
 Scan webserver using **default wordlist**

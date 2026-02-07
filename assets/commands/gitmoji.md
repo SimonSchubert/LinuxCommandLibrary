@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interactive emoji guide for commit messages
+
 # TLDR
 
 **Interactive commit**
@@ -46,11 +50,9 @@
 
 # DESCRIPTION
 
-**gitmoji** adds emoji to commit messages following a standardized convention. Each emoji represents a commit type (bug fix, feature, docs, etc.), making history more visual.
+**gitmoji** adds emoji to commit messages following a standardized convention. Each emoji represents a commit type (bug fix, feature, docs, etc.), making commit history more visual and scannable.
 
-The interactive mode guides through emoji selection and message composition. It can be installed as a hook for automatic emoji prompts.
-
-gitmoji provides emoji-enhanced commit conventions.
+The interactive mode guides through emoji selection and message composition. It can be installed as a Git hook for automatic emoji prompts on every commit.
 
 # CAVEATS
 

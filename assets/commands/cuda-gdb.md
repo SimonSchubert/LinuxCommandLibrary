@@ -1,3 +1,7 @@
+# TAGLINE
+
+NVIDIA CUDA kernel debugger
+
 # TLDR
 
 **Debug a CUDA application**

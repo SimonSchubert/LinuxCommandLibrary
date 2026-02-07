@@ -1,3 +1,7 @@
+# TAGLINE
+
+Store and manage secrets securely
+
 # TLDR
 
 **Create a new secret**

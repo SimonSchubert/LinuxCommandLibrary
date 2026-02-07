@@ -1,3 +1,7 @@
+# TAGLINE
+
+mypy daemon for fast incremental type checking
+
 # TLDR
 
 **Start mypy daemon**

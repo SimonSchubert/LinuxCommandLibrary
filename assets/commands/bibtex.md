@@ -1,3 +1,7 @@
+# TAGLINE
+
+Process bibliography references for LaTeX documents
+
 # TLDR
 
 **Generate** bibliography

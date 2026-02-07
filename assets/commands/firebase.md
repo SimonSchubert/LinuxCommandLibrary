@@ -1,3 +1,7 @@
+# TAGLINE
+
+Firebase platform management CLI
+
 # TLDR
 
 **Login to Firebase**
@@ -66,6 +70,14 @@
 
 **hosting:disable**
 > Disable hosting for project.
+
+# CONFIGURATION
+
+**firebase.json**
+> Project configuration including hosting rules, function settings, and database rules.
+
+**.firebaserc**
+> Project aliases and active project selection.
 
 # DESCRIPTION
 

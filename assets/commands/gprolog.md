@@ -1,3 +1,7 @@
+# TAGLINE
+
+GNU Prolog compiler and interpreter
+
 # TLDR
 
 **Start GNU Prolog interpreter**

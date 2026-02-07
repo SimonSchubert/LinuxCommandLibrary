@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create shorthand names for commands.
+
 # TLDR
 
 **List** all aliases

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert GIF images to WebP format
+
 # TLDR
 
 Convert a **GIF image** to WebP
@@ -44,9 +48,7 @@ Convert a **GIF image** to WebP
 
 **gif2webp** converts GIF images, including animated GIFs, to WebP format. WebP typically provides better compression than GIF while maintaining quality, resulting in smaller file sizes suitable for web use.
 
-For animated GIFs, the tool preserves frame timing, loop count, and transparency. It can use lossless compression (preserving exact pixel values) or lossy compression for even smaller files.
-
-The tool is part of Google's libwebp package.
+For animated GIFs, the tool preserves frame timing, loop count, and transparency. It supports both lossless compression (preserving exact pixel values) and lossy compression for even smaller files. The tool is part of Google's libwebp package.
 
 # CAVEATS
 

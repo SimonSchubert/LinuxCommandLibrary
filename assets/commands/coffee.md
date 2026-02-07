@@ -1,3 +1,7 @@
+# TAGLINE
+
+CoffeeScript compiler and runtime
+
 # TLDR
 
 **Compile a CoffeeScript file** to JavaScript

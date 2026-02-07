@@ -1,3 +1,7 @@
+# TAGLINE
+
+dynamic firewall daemon for Linux
+
 # TLDR
 
 **Start firewalld** daemon
@@ -50,6 +54,17 @@
 
 **-h**, **--help**
 > Display help message.
+
+# CONFIGURATION
+
+**/etc/firewalld/firewalld.conf**
+> Main daemon configuration including default zone, cleanup settings, and backend selection.
+
+**/etc/firewalld/zones/*.xml**
+> Zone definitions controlling network trust levels.
+
+**/etc/firewalld/services/*.xml**
+> Service definitions for port and protocol mappings.
 
 # DESCRIPTION
 

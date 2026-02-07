@@ -1,3 +1,7 @@
+# TAGLINE
+
+decrypt data using Cloud KMS keys
+
 # TLDR
 
 **Decrypt file**
@@ -38,11 +42,11 @@
 
 # DESCRIPTION
 
-**gcloud kms decrypt** decrypts data using Cloud KMS keys. It reverses encryption performed with the corresponding encrypt command, using the same key.
+**gcloud kms decrypt** uses Cloud Key Management Service to decrypt data that was previously encrypted with a Cloud KMS key. KMS provides centralized cryptographic key management, separating key storage and access control from the applications that use them.
 
-The command handles encryption key management centrally, allowing secure data protection without managing keys locally. It supports envelope encryption patterns.
+The decryption operation requires specifying the exact key, keyring, and location used during encryption. Access to decrypt is controlled by IAM permissions on the key, allowing fine-grained control over who can decrypt sensitive data. This enables secure secrets management where encrypted data can be stored in version control or configuration files while keys remain secured in KMS.
 
-gcloud kms decrypt is used for secrets management and secure data handling.
+The command supports reading from files or stdin and writing to files or stdout, enabling integration into pipelines and scripts. Cloud KMS is commonly used for envelope encryption, where data encryption keys are themselves encrypted by KMS keys, providing an additional security layer. This is the standard pattern for encrypting application secrets, database credentials, and other sensitive configuration data in Google Cloud environments.
 
 # CAVEATS
 

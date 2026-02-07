@@ -1,3 +1,7 @@
+# TAGLINE
+
+ClamAV configuration display and generation tool
+
 # TLDR
 
 **Display all ClamAV configuration** settings
@@ -51,6 +55,14 @@
 The tool shows both explicitly set values and default settings, highlighting which options differ from defaults. It also displays information about loaded virus signature databases, including database version, signature count, and build time.
 
 System administrators use clamconf to verify ClamAV installations are correctly configured, generate example configuration files for new deployments, and troubleshoot scanning or update issues by examining the active settings.
+
+# CONFIGURATION
+
+**/etc/clamav/clamd.conf**
+> ClamAV daemon configuration file.
+
+**/etc/clamav/freshclam.conf**
+> Virus database update configuration file.
 
 # CAVEATS
 

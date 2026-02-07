@@ -1,3 +1,7 @@
+# TAGLINE
+
+file checksum and byte count calculator
+
 # TLDR
 
 **Calculate checksum of file**
@@ -30,7 +34,11 @@
 
 # DESCRIPTION
 
-**cksum** prints CRC checksum and byte count for files. By default uses 32-bit CRC algorithm. Part of GNU coreutils. Used to verify file integrity after transfers.
+**cksum** computes a cyclic redundancy check (CRC) checksum and byte count for each specified file, or for standard input if no file is given. It is part of GNU coreutils and is commonly used to verify file integrity after transfers or copies.
+
+By default, cksum uses the POSIX-standard 32-bit CRC algorithm. Modern versions of cksum (GNU coreutils 9.0+) support additional algorithms including MD5, SHA1, SHA256, and SHA512 via the **--algorithm** option, making it a versatile replacement for separate checksum utilities.
+
+The output format includes the checksum value, byte count, and filename. When using the **--check** option, cksum can read previously generated checksum files and verify that the listed files have not been modified.
 
 # PARAMETERS
 

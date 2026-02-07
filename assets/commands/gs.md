@@ -1,3 +1,7 @@
+# TAGLINE
+
+Ghostscript PostScript and PDF interpreter
+
 # TLDR
 
 **View** a PDF file
@@ -31,10 +35,6 @@ List available **devices**
 # SYNOPSIS
 
 **gs** [_options_] [_files_]...
-
-# DESCRIPTION
-
-**gs** (Ghostscript) is an interpreter for Adobe PostScript and PDF languages. It can convert between formats, render to various output devices, and process PDF and PostScript files.
 
 # PARAMETERS
 
@@ -77,9 +77,15 @@ List available **devices**
 **-h or -?**
 > Display help and available devices
 
+# DESCRIPTION
+
+**gs** (Ghostscript) is an interpreter for Adobe PostScript and PDF languages. It can convert between formats, render to various output devices, and process PDF and PostScript files.
+
+Ghostscript is widely used for PDF manipulation including merging, splitting, compressing, and converting to image formats. The -dPDFSETTINGS preset controls quality and file size: /screen (lowest), /ebook, /printer, /prepress (highest).
+
 # CAVEATS
 
-The available devices depend on your Ghostscript installation. Use gs -h to see installed devices. PDFSETTINGS presets affect quality and file size: /screen (lowest), /ebook, /printer, /prepress (highest).
+The available devices depend on your Ghostscript installation. Use gs -h to see installed devices. PDFSETTINGS presets affect quality and file size significantly.
 
 # HISTORY
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate random corporate buzzword phrases
+
 # TLDR
 
 **Generate a random buzzphrase**

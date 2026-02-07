@@ -1,3 +1,7 @@
+# TAGLINE
+
+garbage collects untagged images
+
 # TLDR
 
 **Garbage collect untagged images**
@@ -26,7 +30,9 @@
 
 # DESCRIPTION
 
-**gcrane gc** garbage collects untagged images in a container registry. Helps clean up old images and reduce storage costs.
+**gcrane gc** identifies untagged container images in Google Container Registry or Artifact Registry that are candidates for garbage collection. These orphaned images typically result from retagging or deleting tags, leaving unreferenced manifests that consume storage.
+
+The command lists image digests that have no associated tags. It does not delete images directly; output should be piped to gcrane delete for actual removal. The grace period option protects recently created images from accidental deletion. Dry run mode shows what would be deleted without making changes, allowing safe preview before cleanup operations.
 
 # SEE ALSO
 

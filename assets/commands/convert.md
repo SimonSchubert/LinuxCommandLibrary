@@ -1,3 +1,7 @@
+# TAGLINE
+
+image manipulation and format conversion
+
 # TLDR
 
 **Convert** image format
@@ -26,9 +30,11 @@
 
 # DESCRIPTION
 
-**convert** is an ImageMagick tool for image manipulation. It can convert between formats, resize, rotate, crop, add effects, and perform batch operations on images.
+**convert** is the primary command-line interface for ImageMagick, one of the most versatile image processing tools available. It supports over 200 image formats and can perform virtually any image transformation including format conversion, resizing, rotation, cropping, color manipulation, and applying artistic effects.
 
-The command is versatile for image processing tasks in scripts and workflows.
+The tool operates by reading one or more input images, applying a series of transformations specified by command-line options, and writing the result to an output file. Multiple operations can be chained together in a single command, with operations applied in the order specified.
+
+convert is widely used in web development for generating thumbnails, in photography workflows for batch processing, and in scientific computing for image analysis. Its scriptable nature makes it ideal for automation, though complex operations can consume significant memory and CPU time. In ImageMagick 7+, the command is being replaced by the unified **magick** command, though convert remains available for compatibility.
 
 # PARAMETERS
 

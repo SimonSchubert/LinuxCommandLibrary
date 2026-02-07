@@ -1,3 +1,7 @@
+# TAGLINE
+
+Inspect and display inventory data
+
 # TLDR
 
 **List** all hosts in inventory
@@ -62,6 +66,20 @@ This tool is useful for debugging inventory configurations and understanding the
 
 **--playbook-dir** _path_
 > Set playbook directory for relative paths
+
+# CONFIGURATION
+
+**/etc/ansible/hosts**
+> Default inventory file listing managed hosts and groups.
+
+**/etc/ansible/ansible.cfg**
+> System-wide Ansible configuration, including default inventory path.
+
+**~/.ansible.cfg**
+> Per-user Ansible configuration overriding system defaults.
+
+**ansible.cfg**
+> Project-level configuration in the current directory, highest priority.
 
 # CAVEATS
 

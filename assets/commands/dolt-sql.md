@@ -1,3 +1,7 @@
+# TAGLINE
+
+execute SQL queries on versioned database
+
 # TLDR
 
 **Run SQL query**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+cryptographic filesystem for cloud storage
+
 # TLDR
 
 **Create and mount** an encrypted filesystem
@@ -61,6 +65,11 @@ _MOUNT_POINT_
 Files are split into fixed-size blocks that are individually encrypted and stored with random names. This prevents cloud providers and attackers from learning anything about your data, including which files changed and how large they are.
 
 The encrypted data is stored in the cipher directory, which can be synced with cloud services. The mount point shows the decrypted view of your files. CryFS uses authenticated encryption with AES-256-GCM by default.
+
+# CONFIGURATION
+
+**~/.cryfs/config**
+> Stores filesystem configuration and cipher settings.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Add computer accounts to Active Directory domains
+
 # TLDR
 
 **Add** a computer account to Active Directory

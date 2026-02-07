@@ -1,3 +1,7 @@
+# TAGLINE
+
+manage GPG keys for commit signing
+
 # TLDR
 
 **List GPG keys**

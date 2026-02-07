@@ -1,3 +1,7 @@
+# TAGLINE
+
+HTML coverage report generator from lcov trace files
+
 # TLDR
 
 **Generate HTML report**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage embedded external repositories within a project
+
 # TLDR
 
 **Add submodule**
@@ -78,9 +82,15 @@
 
 # DESCRIPTION
 
-**git submodule** initializes, updates, and inspects submodules. Submodules allow embedding external Git repositories within a parent repository.
+**git submodule** manages submodules, which are external Git repositories embedded within a parent repository at specific paths. Each submodule tracks a particular commit of the external repository.
+
+Submodules allow projects to include and track dependencies or shared components while keeping their histories separate. Use `update --init --recursive` after cloning to populate all submodule contents.
+
+# CONFIGURATION
+
+**.gitmodules**
+> Configuration file mapping submodule names to their repository URLs and local paths.
 
 # SEE ALSO
 
 [git-clone](/man/git-clone)(1), [gitmodules](/man/gitmodules)(5)
-

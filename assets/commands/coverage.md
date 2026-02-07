@@ -1,3 +1,7 @@
+# TAGLINE
+
+Python code coverage measurement tool
+
 # TLDR
 
 **Run a Python script with coverage**
@@ -87,15 +91,14 @@ Branch coverage (**--branch**) additionally tracks which conditional branches ar
 
 # CONFIGURATION
 
-Settings in **pyproject.toml**, **setup.cfg**, or **.coveragerc**:
-```ini
-[coverage:run]
-source = mypackage
-branch = True
+**pyproject.toml**
+> Configuration in [tool.coverage.run] and [tool.coverage.report] sections for source paths, branch coverage, and reporting thresholds.
 
-[coverage:report]
-fail_under = 80
-```
+**setup.cfg**
+> Alternative configuration location using [coverage:run] and [coverage:report] sections.
+
+**.coveragerc**
+> Dedicated configuration file for coverage settings, omit patterns, and report options.
 
 # CAVEATS
 

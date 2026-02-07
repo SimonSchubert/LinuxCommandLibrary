@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays raster dataset information
+
 # TLDR
 
 **Show raster information**

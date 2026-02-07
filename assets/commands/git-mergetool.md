@@ -1,3 +1,7 @@
+# TAGLINE
+
+Visual conflict resolution tool
+
 # TLDR
 
 **Run merge tool**
@@ -46,11 +50,22 @@ _FILE_
 
 # DESCRIPTION
 
-**git mergetool** runs a merge conflict resolution tool. It launches configured tools like vimdiff, meld, or kdiff3 on each conflicted file, providing visual three-way merge interfaces.
+**git mergetool** runs a visual merge conflict resolution tool for each conflicted file. It launches configured tools like vimdiff, meld, or kdiff3, providing a three-way merge interface showing the base, local, and remote versions side by side.
 
-The tool shows base, local, and remote versions side by side. After saving the merged result, the file is marked as resolved. Multiple files are processed sequentially.
+After saving the merged result in the tool, the file is marked as resolved. Multiple conflicted files are processed sequentially, and you can choose to skip individual files.
 
-git mergetool provides visual conflict resolution.
+# CONFIGURATION
+
+**~/.gitconfig**
+> Configure default merge tool and tool-specific settings.
+
+```
+[merge]
+    tool = vimdiff
+[mergetool]
+    prompt = false
+    keepBackup = false
+```
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Azure Marketplace terms acceptance
+
 # TLDR
 
 **Accept marketplace terms** for a VM image

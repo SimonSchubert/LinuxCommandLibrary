@@ -1,3 +1,7 @@
+# TAGLINE
+
+Embeddable Common Lisp interpreter
+
 # TLDR
 
 **Start ECL REPL**
@@ -53,6 +57,11 @@
 
 **--help**
 > Display help.
+
+# CONFIGURATION
+
+**~/.eclrc**
+> Initialization file loaded on startup containing Lisp expressions for customization.
 
 # DESCRIPTION
 

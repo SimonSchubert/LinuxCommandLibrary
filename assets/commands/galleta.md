@@ -1,3 +1,7 @@
+# TAGLINE
+
+Internet Explorer cookie forensic parser
+
 # TLDR
 
 **Parse IE cookies**

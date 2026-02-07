@@ -1,3 +1,7 @@
+# TAGLINE
+
+List commit objects in reverse chronological order
+
 # TLDR
 
 **List all commits**
@@ -56,9 +60,10 @@
 
 # DESCRIPTION
 
-**git rev-list** lists commit objects in reverse chronological order. A low-level command used for enumerating commits and objects.
+**git rev-list** lists commit objects in reverse chronological order. It is a low-level plumbing command used for enumerating reachable commits and objects, forming the basis for many higher-level Git commands.
+
+Common uses include counting commits, finding merge bases, and building commit ranges for other tools.
 
 # SEE ALSO
 
 [git-log](/man/git-log)(1), [git-rev-parse](/man/git-rev-parse)(1)
-

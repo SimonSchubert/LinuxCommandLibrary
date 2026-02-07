@@ -1,3 +1,7 @@
+# TAGLINE
+
+Lightweight image viewer for LXDE
+
 # TLDR
 
 **Open image**
@@ -27,7 +31,7 @@ _file_
 
 **GPicView** is a lightweight image viewer for the LXDE desktop environment. It provides fast image viewing with minimal resource usage, supporting common formats like JPEG, PNG, GIF, and BMP.
 
-The viewer offers basic navigation, zoom, rotation, and slideshow features. It's designed to be simple and responsive, ideal for systems with limited resources.
+The viewer offers basic navigation, zoom, rotation, and slideshow features. It is designed to be simple and responsive, ideal for systems with limited resources.
 
 # KEYBOARD SHORTCUTS
 

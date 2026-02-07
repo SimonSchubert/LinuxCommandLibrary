@@ -1,3 +1,7 @@
+# TAGLINE
+
+Format Haskell source code
+
 # TLDR
 
 **Format file and output to stdout**

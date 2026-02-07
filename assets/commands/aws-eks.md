@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Amazon Elastic Kubernetes Service clusters
+
 # TLDR
 
 **Create a new EKS cluster**

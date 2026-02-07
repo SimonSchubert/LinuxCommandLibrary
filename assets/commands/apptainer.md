@@ -1,3 +1,7 @@
+# TAGLINE
+
+Build, run, and manage application containers for HPC
+
 # TLDR
 
 **Download a container** from Docker Hub
@@ -71,6 +75,14 @@ Key features include GPU and MPI support, cryptographic container signing, overl
 
 **verify**
 > Verify a container's cryptographic signature
+
+# CONFIGURATION
+
+**/etc/apptainer/apptainer.conf**
+> System-wide configuration controlling security options, bind paths, mount behavior, and resource limits.
+
+**~/.apptainer/**
+> Per-user directory for cached images, keys, and remote endpoint configurations.
 
 # CAVEATS
 

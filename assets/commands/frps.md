@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast reverse proxy server
+
 # TLDR
 
 **Start frp server**
@@ -42,6 +46,11 @@ _COMMAND_
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**frps.ini**
+> Server configuration file controlling bind port, dashboard settings, authentication requirements, and connection policies.
 
 # DESCRIPTION
 

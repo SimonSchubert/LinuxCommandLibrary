@@ -1,3 +1,7 @@
+# TAGLINE
+
+Print the bin directory path
+
 # TLDR
 
 **Print local bin directory** path

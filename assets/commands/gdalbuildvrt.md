@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates virtual raster mosaics
+
 # TLDR
 
 **Create virtual mosaic**
@@ -49,7 +53,11 @@
 
 # DESCRIPTION
 
-**gdalbuildvrt** creates a virtual dataset (VRT) that references multiple input raster files. VRTs provide a lightweight way to mosaic or stack rasters without copying data.
+**gdalbuildvrt** creates a virtual raster dataset (VRT) that references multiple input files without copying data. VRT files are XML documents describing how to combine source rasters into a unified dataset, enabling on-the-fly mosaicking, stacking, and subsetting.
+
+The tool can mosaic adjacent tiles into seamless coverages or stack bands from separate files into multi-band datasets. Resolution handling controls how inputs with different pixel sizes are combined. VRTs support mixing projections with appropriate flags.
+
+Virtual datasets save disk space and processing time compared to creating physical mosaics. They're ideal for working with large tile collections, time series data, and multi-spectral imagery where logical combinations change frequently.
 
 # SEE ALSO
 

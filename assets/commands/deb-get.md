@@ -1,3 +1,7 @@
+# TAGLINE
+
+apt-get-like functionality for third-party .deb packages
+
 # TLDR
 
 **Update** available packages list

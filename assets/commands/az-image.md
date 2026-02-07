@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage custom virtual machine images in Azure
+
 # TLDR
 
 **Create a managed image** from a VM

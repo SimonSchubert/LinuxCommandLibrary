@@ -1,3 +1,7 @@
+# TAGLINE
+
+Scaffold new projects from templates
+
 # TLDR
 
 **Create project from template**

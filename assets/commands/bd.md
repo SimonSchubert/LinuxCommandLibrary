@@ -1,3 +1,7 @@
+# TAGLINE
+
+Navigate to parent directories by name
+
 # TLDR
 
 **Go back** to parent directory by name

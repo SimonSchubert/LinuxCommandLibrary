@@ -1,3 +1,7 @@
+# TAGLINE
+
+Start the Android Debug Bridge background server
+
 # TLDR
 
 **Start** the adb server

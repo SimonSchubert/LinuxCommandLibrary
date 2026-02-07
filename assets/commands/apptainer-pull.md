@@ -1,3 +1,7 @@
+# TAGLINE
+
+Download container images from remote registries.
+
 # TLDR
 
 Pull a container from **Docker Hub**
@@ -54,6 +58,11 @@ Downloaded images are cached locally to speed up subsequent operations. The resu
 
 **--no-https**
 > Use HTTP instead of HTTPS for downloads
+
+# CONFIGURATION
+
+**/etc/apptainer/apptainer.conf**
+> Main configuration file controlling cache directories, registry defaults, and download behavior.
 
 # CAVEATS
 

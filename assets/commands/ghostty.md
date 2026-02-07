@@ -1,3 +1,7 @@
+# TAGLINE
+
+GPU-accelerated terminal emulator with modern features
+
 # TLDR
 
 **Start Ghostty** terminal emulator
@@ -85,23 +89,25 @@
 
 # DESCRIPTION
 
-**Ghostty** is a fast, feature-rich terminal emulator that uses GPU acceleration for rendering. It aims to combine the speed and simplicity of minimal terminals with the features of more complex ones, while maintaining native platform integration.
+**Ghostty** is a fast, feature-rich terminal emulator that uses GPU acceleration for rendering. It combines the speed of minimal terminals with advanced features while maintaining native platform integration.
 
-The terminal supports modern features including true color (24-bit), Unicode with ligatures and emoji, images (Sixel, iTerm2, Kitty protocols), hyperlinks, and advanced text rendering with font fallback. GPU rendering via OpenGL/Metal provides smooth scrolling and low latency.
+The terminal supports true color (24-bit), Unicode with ligatures and emoji, images (Sixel, iTerm2, Kitty protocols), hyperlinks, and advanced text rendering with font fallback. It provides tabs, splits, and multiple windows with fully customizable keybindings.
 
-Configuration is done through a simple text file at **~/.config/ghostty/config** (Linux) or **~/Library/Application Support/com.mitchellh.ghostty/config** (macOS). Options use a **key = value** format. The -o flag overrides config options from the command line.
+# CONFIGURATION
 
-Ghostty supports tabs, splits, and multiple windows. Keybindings are fully customizable, with actions like split creation, pane navigation, font size adjustment, and more. Native platform integration means proper macOS menu bar, system notifications, and platform-appropriate defaults.
+**~/.config/ghostty/config** (Linux)
+> Main configuration file with key-value pairs for all settings including fonts, colors, keybindings, and behavior.
 
-The terminal is designed for performance with minimal input latency, efficient memory usage, and fast startup times. It handles large scrollback buffers without performance degradation.
+**~/Library/Application Support/com.mitchellh.ghostty/config** (macOS)
+> Main configuration file on macOS systems.
 
 # CAVEATS
 
-Requires GPU with OpenGL 3.3+ (Linux) or Metal (macOS). Some legacy terminal applications may have compatibility issues. Configuration syntax differs from other terminals. Currently supports macOS and Linux only.
+Requires GPU with OpenGL 3.3+ (Linux) or Metal (macOS). Some legacy terminal applications may have compatibility issues. Currently supports macOS and Linux only.
 
 # HISTORY
 
-**Ghostty** was created by Mitchell Hashimoto (founder of HashiCorp) and publicly released in **December 2024** after several years of development. It was developed with a focus on performance and correctness, particularly around terminal emulation standards. The project is open source and written in Zig.
+**Ghostty** was created by Mitchell Hashimoto (founder of HashiCorp) and publicly released in **December 2024** after several years of development. The project is open source and written in Zig.
 
 # SEE ALSO
 

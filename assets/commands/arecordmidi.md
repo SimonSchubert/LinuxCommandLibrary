@@ -1,3 +1,7 @@
+# TAGLINE
+
+Record MIDI events to a Standard MIDI File
+
 # TLDR
 
 **Record** MIDI to file

@@ -1,3 +1,7 @@
+# TAGLINE
+
+manage database read replicas
+
 # TLDR
 
 **List replicas**
@@ -46,9 +50,12 @@
 
 # DESCRIPTION
 
-**doctl databases replica** manages read replicas for DigitalOcean managed database clusters. Replicas provide read scaling and can be promoted to standalone clusters.
+**doctl databases replica** manages read replicas for DigitalOcean managed database clusters. Read replicas are read-only copies of a primary database that provide horizontal scaling for read-heavy workloads and geographic distribution of data.
+
+Replicas asynchronously replicate data from the primary cluster, allowing applications to distribute read queries across multiple database instances. This reduces load on the primary and improves query performance. Replicas can be placed in different regions for lower latency to geographically distributed users.
+
+In disaster recovery scenarios, replicas can be promoted to standalone clusters, creating an independent database cluster from the replica. This provides failover capabilities and data migration options.
 
 # SEE ALSO
 
 [doctl-databases](/man/doctl-databases)(1)
-

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Package manager for bash scripts.
+
 # TLDR
 
 **Install a package globally**

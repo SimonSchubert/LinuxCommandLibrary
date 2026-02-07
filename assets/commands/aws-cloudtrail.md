@@ -1,3 +1,7 @@
+# TAGLINE
+
+Track and audit API activity across cloud services.
+
 # TLDR
 
 **Look up recent events** by username

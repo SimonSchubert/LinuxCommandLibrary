@@ -1,3 +1,7 @@
+# TAGLINE
+
+lightweight system monitor
+
 # TLDR
 
 Start with **default** configuration
@@ -67,9 +71,17 @@ Set **alignment** on desktop
 **-v, --version**
 > Display version information
 
+# CONFIGURATION
+
+**~/.config/conky/conky.conf**
+> User-level configuration file with conky.config and conky.text sections.
+
+**/etc/conky/conky.conf**
+> System-wide default configuration.
+
 # CAVEATS
 
-Default configuration is stored in ~/.config/conky/conky.conf or /etc/conky/conky.conf. Configuration uses two main sections: conky.config for settings and conky.text for display content. Send SIGUSR1 to reload configuration without restarting.
+Send SIGUSR1 to reload configuration without restarting. Configuration uses two main sections: conky.config for settings and conky.text for display content.
 
 # HISTORY
 

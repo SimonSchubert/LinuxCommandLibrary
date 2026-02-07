@@ -1,3 +1,7 @@
+# TAGLINE
+
+DNS-based SSL certificate validation
+
 # TLDR
 
 **Issue** certificate using Cloudflare DNS
@@ -65,6 +69,11 @@ The tool supports over 100 DNS providers through API integration. Credentials ar
 
 **dns_ovh**
 > OVH (OVH_AK + OVH_AS + OVH_CK)
+
+# CONFIGURATION
+
+**~/.acme.sh/account.conf**
+> Stores DNS provider API credentials (tokens, keys, secrets) after first use. These are reused automatically during certificate renewal.
 
 # CAVEATS
 

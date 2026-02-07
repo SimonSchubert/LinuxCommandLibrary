@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage real-time data streaming with Kinesis Data Streams.
+
 # TLDR
 
 **Create a new data stream**

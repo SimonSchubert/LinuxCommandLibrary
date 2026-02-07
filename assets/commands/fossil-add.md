@@ -1,3 +1,7 @@
+# TAGLINE
+
+stage files for version control
+
 # TLDR
 
 **Add a file**
@@ -36,7 +40,9 @@
 
 # DESCRIPTION
 
-**fossil add** schedules files to be added to the repository on the next commit. Files must be committed after adding.
+**fossil add** schedules files to be added to the repository on the next commit. Unlike some version control systems, adding files in Fossil simply marks them for inclusion - they won't appear in the repository until committed.
+
+The command supports glob patterns and can recursively add directories. Dotfiles are ignored by default unless explicitly specified. Binary files are detected automatically and handled appropriately.
 
 # SEE ALSO
 

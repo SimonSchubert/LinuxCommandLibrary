@@ -1,3 +1,7 @@
+# TAGLINE
+
+GPU-accelerated terminal emulator
+
 # TLDR
 
 **Start** Alacritty
@@ -58,6 +62,14 @@ Configuration is done through a TOML or YAML file (depending on version), suppor
 
 **--print-events**
 > Print all events for debugging
+
+# CONFIGURATION
+
+**~/.config/alacritty/alacritty.toml**
+> Main configuration file for colors, fonts, keybindings, window settings, and shell behavior.
+
+**~/.config/alacritty/alacritty.yml**
+> Legacy YAML configuration file used in versions before 0.13.
 
 # CAVEATS
 

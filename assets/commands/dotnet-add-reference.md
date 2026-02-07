@@ -1,3 +1,7 @@
+# TAGLINE
+
+project-to-project reference adder
+
 # TLDR
 
 **Add project reference**
@@ -23,7 +27,9 @@
 
 # DESCRIPTION
 
-**dotnet add reference** adds project-to-project (P2P) references to a project file. Referenced projects are built before the referencing project.
+**dotnet add reference** adds project-to-project (P2P) references to a project file, creating build-time dependencies between projects in a solution. Referenced projects are automatically built before the referencing project, ensuring correct build order.
+
+P2P references enable code sharing within a solution while maintaining clear dependency boundaries. The command modifies the project file to include the reference path, which can be relative or absolute.
 
 # SEE ALSO
 

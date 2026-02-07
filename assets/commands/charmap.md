@@ -1,3 +1,7 @@
+# TAGLINE
+
+Unicode character map browser
+
 # TLDR
 
 **Open character map**

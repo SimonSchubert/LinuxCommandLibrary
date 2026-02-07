@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate template header files for configure
+
 # TLDR
 
 **Generate** config.h.in

@@ -1,3 +1,7 @@
+# TAGLINE
+
+flexible I/O tester and benchmark
+
 # TLDR
 
 **Sequential read test**
@@ -55,6 +59,14 @@ _JOBFILES_
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**~/.fio**
+> Global job configuration file for default settings.
+
+**/etc/fio/fio.conf**
+> System-wide configuration file.
 
 # DESCRIPTION
 

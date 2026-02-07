@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Azure resources generically across all types
+
 # TLDR
 
 **List all resources** in the subscription

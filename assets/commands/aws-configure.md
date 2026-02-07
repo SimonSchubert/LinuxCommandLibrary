@@ -1,3 +1,7 @@
+# TAGLINE
+
+Set up AWS CLI credentials, region, and output format.
+
 # TLDR
 
 **Configure** default credentials
@@ -67,6 +71,14 @@ Interactive setup:
 ```bash
 aws configure
 ```
+
+# CONFIGURATION
+
+**~/.aws/credentials**
+> Stores access key ID and secret access key for each named profile.
+
+**~/.aws/config**
+> Stores region, output format, and other settings for each named profile.
 
 # CAVEATS
 

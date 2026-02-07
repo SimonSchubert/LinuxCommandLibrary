@@ -1,3 +1,7 @@
+# TAGLINE
+
+Exit from a loop in shell scripts
+
 # TLDR
 
 **Break** from loop

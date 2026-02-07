@@ -1,3 +1,7 @@
+# TAGLINE
+
+Gentoo repository cleanup utility
+
 # TLDR
 
 Clean **source file** directory
@@ -24,7 +28,9 @@ Clean **binary package** directory
 
 **eclean** cleans Gentoo repository source files and binary packages. It removes old or unused distfiles and packages to free disk space.
 
-Part of the gentoolkit package.
+The tool operates on two main targets: distfiles (source tarballs in /usr/portage/distfiles) and packages (binary packages in /usr/portage/packages). Over time, these directories accumulate old versions and files for uninstalled packages, consuming significant disk space.
+
+eclean provides both conservative and aggressive cleaning modes. Normal mode keeps files for installed packages and current portage tree entries, while deep mode only keeps files for currently installed packages. This is particularly useful on systems with limited storage or after system upgrades.
 
 # PARAMETERS
 

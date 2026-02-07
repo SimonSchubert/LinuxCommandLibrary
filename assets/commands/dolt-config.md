@@ -1,3 +1,7 @@
+# TAGLINE
+
+manage repository and global settings
+
 # TLDR
 
 **Set global user** name
@@ -64,6 +68,14 @@ _VALUE_
 Global configuration applies to all repositories for the user, while local configuration is repository-specific. Local settings override global ones when both exist.
 
 Configuration is stored in files similar to Git's config system, with the same precedence rules for local vs. global settings.
+
+# CONFIGURATION
+
+**~/.dolt/config_global.json**
+> Global configuration for all Dolt repositories for the current user.
+
+**.dolt/config.json**
+> Repository-local configuration that overrides global settings.
 
 # CAVEATS
 

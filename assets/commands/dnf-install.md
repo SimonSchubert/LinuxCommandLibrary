@@ -1,3 +1,7 @@
+# TAGLINE
+
+install RPM packages
+
 # TLDR
 
 **Install** packages by name
@@ -26,9 +30,9 @@ Add **Remi** repository
 
 # DESCRIPTION
 
-**dnf install** installs packages on Red Hat-based distributions. It can install from repositories, local files, or URLs.
+**dnf install** is the primary command for installing software packages on Red Hat-based distributions including RHEL, CentOS, Fedora, and AlmaLinux. It handles installation from multiple sources: repository package names, local RPM files, or direct URLs to RPM packages.
 
-Automatically resolves and installs dependencies.
+The command automatically resolves and installs all required dependencies, downloading them from configured repositories. When installing from URLs, this is commonly used to add third-party repositories like EPEL or RPM Fusion by installing their release packages. The tool verifies package signatures, checks for conflicts, and can handle complex scenarios like replacing packages or allowing erasure of conflicting packages with --allowerasing. Root privileges are required as installation modifies system files.
 
 # PARAMETERS
 

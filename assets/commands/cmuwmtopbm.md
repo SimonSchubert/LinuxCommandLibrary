@@ -1,3 +1,7 @@
+# TAGLINE
+
+CMU window manager bitmap to PBM converter
+
 # TLDR
 
 **Convert CMU window manager bitmap** to PBM

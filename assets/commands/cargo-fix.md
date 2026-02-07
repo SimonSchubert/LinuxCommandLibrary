@@ -1,3 +1,7 @@
+# TAGLINE
+
+Automatically fix compiler warnings in Rust code
+
 # TLDR
 
 **Fix all warnings**

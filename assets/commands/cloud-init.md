@@ -1,3 +1,7 @@
+# TAGLINE
+
+cloud instance initialization and configuration
+
 # TLDR
 
 Display the **status** of the most recent cloud-init run
@@ -26,9 +30,11 @@ Display the **status** of the most recent cloud-init run
 
 # DESCRIPTION
 
-**cloud-init** is the industry standard for cloud instance initialization. It handles early initialization of cloud instances including networking, storage, SSH keys, user accounts, and package installation.
+**cloud-init** is the industry standard for cloud instance initialization across all major cloud providers and Linux distributions. It handles early initialization of cloud instances including networking configuration, storage setup, SSH key injection, user account creation, and package installation.
 
-Cloud-init reads configuration from various datasources (cloud provider metadata, user-data) and applies it during boot.
+Cloud-init reads configuration from various datasources including cloud provider metadata services, user-data scripts, and local configuration files. It runs during the boot process in multiple stages to ensure proper ordering of system configuration tasks.
+
+The tool supports cloud-config YAML for declarative configuration, shell scripts for imperative setup, and can be extended with custom modules. It provides commands for querying instance metadata, validating configurations, and troubleshooting initialization issues.
 
 # PARAMETERS
 
@@ -46,6 +52,14 @@ Cloud-init reads configuration from various datasources (cloud provider metadata
 
 **schema**
 > Validate cloud-config files
+
+# CONFIGURATION
+
+**/etc/cloud/cloud.cfg**
+> Main configuration file controlling modules, datasources, and default settings.
+
+**/etc/cloud/cloud.cfg.d/*.cfg**
+> Drop-in configuration files merged with the main config.
 
 # CAVEATS
 

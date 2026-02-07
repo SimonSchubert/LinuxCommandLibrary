@@ -1,3 +1,7 @@
+# TAGLINE
+
+decentralized dependency manager for Cocoa projects
+
 # TLDR
 
 **Update and build dependencies**
@@ -34,9 +38,11 @@
 
 # DESCRIPTION
 
-**carthage** is a decentralized dependency manager for Swift and Objective-C Cocoa projects. It builds dependencies as binary frameworks without modifying your project files or build settings.
+**carthage** is a decentralized dependency manager for Swift and Objective-C Cocoa projects. Unlike CocoaPods, it builds dependencies as binary frameworks without modifying your Xcode project files, workspace, or build settings, leaving full control of the project structure to the developer.
 
-Dependencies are specified in a Cartfile.
+Dependencies are declared in a **Cartfile** using a simple syntax that supports GitHub repositories, Git URLs, and binary-only frameworks. Running `carthage update` resolves versions, checks out sources, and builds frameworks into the Carthage/Build directory. A Cartfile.resolved lockfile ensures reproducible builds across team members.
+
+Since version 0.37.0, Carthage supports building XCFrameworks, which bundle binaries for multiple platforms and architectures into a single distributable package.
 
 # COMMANDS
 
@@ -91,6 +97,17 @@ github "Alamofire/Alamofire" ~> 5.0
 github "realm/realm-swift" == 10.0.0
 git "https://example.com/repo.git" "branch-name"
 ```
+
+# CONFIGURATION
+
+**Cartfile**
+> Declares project dependencies with version constraints.
+
+**Cartfile.resolved**
+> Lockfile with exact resolved versions for reproducible builds.
+
+**Cartfile.private**
+> Dependencies needed only for development and testing.
 
 # CAVEATS
 

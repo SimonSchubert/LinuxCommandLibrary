@@ -1,3 +1,7 @@
+# TAGLINE
+
+Open-source phishing simulation framework
+
 # TLDR
 
 **Start Gophish server**
@@ -23,18 +27,14 @@
 
 # DESCRIPTION
 
-**Gophish** is an open-source phishing framework for security awareness training and penetration testing. It provides a web interface for creating and managing phishing campaigns.
+**Gophish** is an open-source phishing framework for security awareness training and penetration testing. It provides a web interface for creating and managing phishing campaigns, including email template editing, landing page cloning, and results tracking.
 
-The platform enables creating email templates, landing pages, and tracking user interactions. It's used by security teams to test organizational awareness and response to phishing attacks.
+The platform is used by security teams to test organizational awareness and response to phishing attacks, with campaign management, user group handling, and API support for automation.
 
-# FEATURES
+# CONFIGURATION
 
-- Email template editor with tracking
-- Landing page cloning
-- Campaign management
-- Results dashboard with statistics
-- User group management
-- API for automation
+**config.json**
+> Main configuration file specifying admin server address, phishing server address, database path, and TLS settings.
 
 # DEFAULT CREDENTIALS
 

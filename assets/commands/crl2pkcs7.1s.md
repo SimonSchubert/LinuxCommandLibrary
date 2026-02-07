@@ -1,3 +1,7 @@
+# TAGLINE
+
+CRL to PKCS#7 format converter
+
 # TLDR
 
 **Create PKCS#7 from CRL** and certificates

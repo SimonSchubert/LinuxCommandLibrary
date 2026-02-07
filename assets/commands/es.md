@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extensible shell with functional programming features
+
 # TLDR
 
 **Start es shell**
@@ -42,6 +46,11 @@
 
 **-n**
 > Parse only, don't execute.
+
+# CONFIGURATION
+
+**~/.esrc**
+> User initialization file loaded at startup (unless -p flag is used).
 
 # DESCRIPTION
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display mail sender information from a mailbox
+
 # TLDR
 
 **Show who has sent mail to your mailbox**

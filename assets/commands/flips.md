@@ -1,3 +1,7 @@
+# TAGLINE
+
+IPS and BPS patch creation and application
+
 # TLDR
 
 **Create IPS patch**
@@ -36,7 +40,11 @@
 
 # DESCRIPTION
 
-**flips** (Floating IPS) creates and applies IPS and BPS patches for ROMs and binary files. BPS provides better support for larger files than IPS.
+**Flips** (Floating IPS) is a patch creation and application tool for binary files, commonly used in ROM hacking and game modification communities. It supports both the legacy IPS (International Patching System) format and the modern BPS (Binary Patching System) format.
+
+The IPS format has been the standard for ROM patches since the 1990s but has limitations including a 16MB file size restriction and lack of error detection. BPS addresses these issues with support for files of any size, built-in CRC32 checksums for verification, and better compression for smaller patch files.
+
+Flips can create patches by comparing original and modified files, then apply those patches to reproduce the modifications. The BPS format includes metadata and verification to ensure patches apply correctly, preventing corruption from applying patches to incorrect source files.
 
 # SEE ALSO
 

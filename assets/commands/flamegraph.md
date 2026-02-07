@@ -1,3 +1,7 @@
+# TAGLINE
+
+visualization for profiled stack traces
+
 # TLDR
 
 **Generate flame graph from perf data**

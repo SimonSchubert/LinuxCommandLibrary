@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run SQL queries on data stored in Amazon S3
+
 # TLDR
 
 **Start a query execution**

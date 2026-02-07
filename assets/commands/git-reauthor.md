@@ -1,3 +1,7 @@
+# TAGLINE
+
+Rewrite commit authorship history
+
 # TLDR
 
 **Change author of commits**
@@ -35,11 +39,9 @@ _RANGE_
 
 # DESCRIPTION
 
-**git reauthor** rewrites commit history to change author information. It updates author names and emails throughout the commit history for matching commits.
+**git reauthor** rewrites commit history to correct author information. It updates author names and email addresses throughout the specified commit range for all commits matching the old email.
 
-The command is useful for fixing incorrect attribution or consolidating identities. It rewrites history, so should only be used on unshared branches.
-
-git reauthor fixes authorship across repository history.
+The command is useful for fixing incorrect attribution, consolidating identities after email changes, or correcting authorship before publishing a repository. Since it rewrites history, it should only be used on branches that have not been shared.
 
 # CAVEATS
 

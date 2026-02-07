@@ -1,3 +1,7 @@
+# TAGLINE
+
+display package changelogs
+
 # TLDR
 
 View **all changelogs** for a package
@@ -22,9 +26,9 @@ Show **new items** for upgradeable packages
 
 # DESCRIPTION
 
-**dnf changelog** displays changelogs for packages. Part of dnf-plugins-core.
+**dnf changelog** displays package changelogs, which document changes, bug fixes, and security updates included in package versions. It's part of dnf-plugins-core and requires that plugin to be installed.
 
-Useful for reviewing what changes a package update will bring before upgrading.
+Changelogs are maintained by package maintainers and provide insight into what has changed between versions. This is particularly useful before upgrading to review security fixes, new features, or bug corrections. You can filter changelogs by date or count to focus on recent changes, or use --upgrades to see only what's new in available updates compared to your installed version.
 
 # PARAMETERS
 

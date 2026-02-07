@@ -1,3 +1,7 @@
+# TAGLINE
+
+Add comments to pull requests
+
 # TLDR
 
 **Add comment to PR**
@@ -36,9 +40,10 @@
 
 # DESCRIPTION
 
-**gh pr comment** adds comments to a pull request. Comments support GitHub-flavored Markdown formatting.
+**gh pr comment** adds comments to pull requests from the command line. It provides flexible options for composing comments, including inline text, file input, and interactive editing.
+
+When called without the --body flag, the command opens your default editor for composing the comment. Comments support full GitHub-flavored Markdown including code blocks, tables, task lists, and @ mentions. The --edit-last option allows modifying your most recent comment on a pull request.
 
 # SEE ALSO
 
 [gh-pr](/man/gh-pr)(1), [gh-issue-comment](/man/gh-issue-comment)(1)
-

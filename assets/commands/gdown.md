@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line Google Drive downloader
+
 # TLDR
 
 **Download from Google** Drive
@@ -46,11 +50,13 @@ _URL_OR_ID_
 
 # DESCRIPTION
 
-**gdown** downloads files from Google Drive via command line. It handles the authentication and download process automatically, including large files that normally require confirmation.
+**gdown** is a command-line tool for downloading files and folders from Google Drive, providing wget/curl-like functionality specifically for Drive URLs. It automatically handles Google Drive's download mechanisms, including the virus scan confirmation step that large files require, making automated downloads possible.
 
-The tool extracts file IDs from various Google Drive URL formats. It supports downloading individual files and complete folders.
+The tool intelligently extracts file IDs from various Google Drive URL formats, whether they're sharing links, direct file URLs, or folder URLs. It can download individual files, entire folders recursively, and works with both public and shared links without requiring OAuth authentication for public content.
 
-gdown is commonly used for downloading datasets and models shared via Google Drive.
+gdown is particularly popular in machine learning and data science workflows, where large datasets and model weights are frequently shared via Google Drive. It enables reproducible research pipelines and automated data fetching in scripts. The fuzzy matching option helps when URLs are embedded in redirects or formatted unusually.
+
+For files requiring authentication or private Drive content, gdown's functionality is limited. It works best with publicly accessible shared files and folders, making it ideal for open datasets and model distributions.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Breadth-first file search
+
 # TLDR
 
 **Find** all files

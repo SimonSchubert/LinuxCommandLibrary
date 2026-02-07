@@ -1,3 +1,7 @@
+# TAGLINE
+
+trace exec() system calls system-wide
+
 # TLDR
 
 Trace **all** program executions on the system
@@ -26,9 +30,11 @@ Display **user** running each process
 
 # DESCRIPTION
 
-**extrace** traces exec() system calls to monitor program execution on Linux. It shows what programs are being started, by whom, and with what arguments.
+**extrace** traces exec() system calls system-wide to monitor program execution on Linux. It captures every time a program is executed, displaying the command line, process hierarchy, and optionally the user, working directory, and environment variables.
 
-Useful for security auditing, debugging, and understanding system behavior.
+Unlike strace which traces individual processes, extrace monitors all execution activity on the system or within a specific process tree. It's particularly useful for security auditing to detect suspicious process execution, debugging complex scripts that spawn multiple subprocesses, and understanding system behavior during package installations or automated tasks.
+
+The tool uses Linux kernel tracing facilities (ftrace or similar) to capture exec calls with minimal overhead compared to attaching a debugger to each process.
 
 # PARAMETERS
 

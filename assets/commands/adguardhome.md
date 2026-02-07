@@ -1,3 +1,7 @@
+# TAGLINE
+
+Network-wide ad and tracker blocking DNS server
+
 # TLDR
 
 **Start** AdGuard Home
@@ -55,6 +59,11 @@ The application provides a web interface for configuration and statistics, suppo
 
 **--verbose**
 > Enable verbose logging
+
+# CONFIGURATION
+
+**AdGuardHome.yaml**
+> Main configuration file, typically located in the working directory (e.g. /opt/AdGuardHome/). Controls DNS settings, upstream servers, filtering rules, DHCP, clients, and web interface options.
 
 # CAVEATS
 

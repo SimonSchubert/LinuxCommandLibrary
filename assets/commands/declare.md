@@ -1,3 +1,7 @@
+# TAGLINE
+
+bash builtin for declaring variables with attributes
+
 # TLDR
 
 **Declare an integer variable**
@@ -87,27 +91,6 @@
 Integer variables (**-i**) perform arithmetic automatically: `declare -i x; x=5+3` sets x to 8. Arrays require explicit declaration for proper initialization. Read-only variables cannot be changed or unset.
 
 In functions, variables are local by default with declare; use **-g** for global scope. The **-n** option creates references to other variables, enabling indirect variable access.
-
-# EXAMPLES
-
-```bash
-# Integer arithmetic
-declare -i count=0
-count+=5  # count is now 5
-
-# Associative array
-declare -A colors
-colors[red]="#FF0000"
-colors[blue]="#0000FF"
-
-# Read-only constant
-declare -r PI=3.14159
-
-# Name reference
-name="world"
-declare -n ref=name
-echo $ref  # prints "world"
-```
 
 # CAVEATS
 

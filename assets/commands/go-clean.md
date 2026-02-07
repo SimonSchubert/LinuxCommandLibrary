@@ -1,3 +1,7 @@
+# TAGLINE
+
+remove Go build artifacts and cached data
+
 # TLDR
 
 **Clean build cache**
@@ -51,9 +55,7 @@ _PACKAGES_
 
 **go clean** removes object files and cached data. It cleans build artifacts, test results, and downloaded modules to free disk space or force rebuilding.
 
-The command can target specific caches or packages. Cleaning the module cache removes all downloaded dependencies, requiring re-download.
-
-go clean maintains Go build environment cleanliness.
+The command can target specific caches or packages. Cleaning the module cache removes all downloaded dependencies, requiring re-download on next build.
 
 # CAVEATS
 

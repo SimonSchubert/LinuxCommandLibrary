@@ -1,3 +1,7 @@
+# TAGLINE
+
+display Unicode character information
+
 # TLDR
 
 **Display character information**
@@ -18,9 +22,9 @@
 
 # DESCRIPTION
 
-**chars** is a command-line tool for displaying information about Unicode characters. It shows the code point, name, category, and other properties of characters.
+**chars** is a command-line tool for displaying detailed information about Unicode characters. Given a character, it shows the code point, official Unicode name, general category, block, and other properties.
 
-Useful for working with Unicode text, debugging encoding issues, or finding specific characters.
+The search functionality allows finding characters by name, making it useful for locating specific symbols, emoji, or special characters without leaving the terminal. It is a lightweight alternative to graphical character map utilities for developers and anyone working with Unicode text or debugging encoding issues.
 
 # SEE ALSO
 

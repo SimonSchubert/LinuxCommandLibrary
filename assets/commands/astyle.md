@@ -1,3 +1,7 @@
+# TAGLINE
+
+Source code formatter for C, C++, C#, and Java
+
 # TLDR
 
 **Format** C++ code
@@ -67,6 +71,14 @@ The tool supports various predefined styles (Google, Mozilla, GNU, etc.) and ext
 
 **--dry-run**
 > Show changes without applying
+
+# CONFIGURATION
+
+**~/.astylerc**
+> User-level default options file. Each line contains one option (e.g., --style=google).
+
+**.astylerc**
+> Project-level options file in the current directory, overrides user defaults.
 
 # CAVEATS
 

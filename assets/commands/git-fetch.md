@@ -1,3 +1,7 @@
+# TAGLINE
+
+Download objects and refs from remote repositories
+
 # TLDR
 
 **Fetch from origin**
@@ -57,9 +61,12 @@
 
 # DESCRIPTION
 
-**git fetch** downloads objects and refs from another repository. Updates remote-tracking branches without modifying local branches. Use git pull to fetch and merge.
+**git fetch** retrieves commits, files, and references from a remote repository, updating your local repository's knowledge of remote branches without modifying your working directory or current branch. This makes it a safe operation for staying synchronized with remote changes.
+
+When you fetch, Git downloads all new commits and objects from the remote and updates remote-tracking branches (like origin/main). Your local branches remain unchanged, allowing you to review remote changes before integrating them. This is the crucial distinction from git pull, which fetches and then automatically merges.
+
+The prune option (-p) removes references to remote branches that no longer exist on the server. Shallow fetches with --depth limit history download, useful for CI/CD environments. The --unshallow option converts a shallow clone to a complete repository.
 
 # SEE ALSO
 
 [git-pull](/man/git-pull)(1), [git-push](/man/git-push)(1)
-

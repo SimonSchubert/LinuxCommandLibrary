@@ -1,3 +1,7 @@
+# TAGLINE
+
+dump the man-db database in readable form
+
 # TLDR
 
 **Dump** the man-db database contents

@@ -1,3 +1,7 @@
+# TAGLINE
+
+NTLM/NTLMv2 authenticating HTTP proxy
+
 # TLDR
 
 **Start with config file**
@@ -30,7 +34,11 @@
 
 # DESCRIPTION
 
-**cntlm** is an NTLM/NTLMv2 authenticating HTTP proxy. Caches authenticated connections for speed. Supports TCP/IP tunneling and SOCKS5. Much faster than similar proxies.
+**cntlm** is an NTLM/NTLMv2 authenticating HTTP proxy that sits between applications and a corporate proxy server. It handles the NTLM authentication handshake transparently, so applications only need to use a simple unauthenticated proxy connection.
+
+The proxy caches authenticated connections for reuse, providing significant speed improvements over alternatives that re-authenticate on every request. It supports NTLM, NTLMv2, NTLM2SR, and basic authentication methods, with automatic detection of the strongest supported method via the **-M** flag.
+
+In addition to HTTP proxying, cntlm provides SOCKS5 proxy support and TCP/IP tunneling through the corporate proxy, enabling protocols beyond HTTP to traverse the proxy infrastructure. Password hashes can be stored instead of plaintext passwords for improved security.
 
 # PARAMETERS
 
@@ -76,16 +84,10 @@
 **-P** _pidfile_
 > Create PID file
 
-# CONFIGURATION FILE
+# CONFIGURATION
 
-/etc/cntlm.conf:
-```
-Username    user
-Domain      CORP
-Password    pass
-Proxy       proxy.corp.com:8080
-Listen      3128
-```
+**/etc/cntlm.conf**
+> Main configuration file for proxy address, credentials, listen port, and authentication settings.
 
 # AUTH TYPES
 

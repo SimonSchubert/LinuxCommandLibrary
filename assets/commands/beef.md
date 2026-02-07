@@ -1,3 +1,7 @@
+# TAGLINE
+
+Browser exploitation framework for penetration testing
+
 # TLDR
 
 **Start BeEF** server with default configuration
@@ -48,6 +52,14 @@
 When a target browser loads a page containing the BeEF hook script, it establishes a persistent connection to the BeEF control panel. Security professionals can then execute various command modules against the hooked browser, testing for vulnerabilities like XSS, session hijacking, and social engineering attacks.
 
 The tool provides a web-based UI accessible at **http://127.0.0.1:3000/ui/panel** by default. The hook script is served at **http://\<IP\>:3000/hook.js** and must be embedded in target pages via a script tag.
+
+# CONFIGURATION
+
+**/etc/beef-xss/config.yaml**
+> Main configuration file on Kali Linux installations. Controls network settings, credentials, and enabled extensions.
+
+**/usr/share/beef-xss/config.yaml**
+> Alternative location for the main configuration file in package installations.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+official Go implementation of Ethereum protocol
+
 # TLDR
 
 **Start Ethereum node**
@@ -55,11 +59,11 @@ _COMMAND_
 
 # DESCRIPTION
 
-**geth** (go-ethereum) is the official Go implementation of the Ethereum protocol. It runs a full Ethereum node, enabling blockchain interaction, mining, and smart contract deployment.
+**geth** (go-ethereum) is the official Go implementation of the Ethereum protocol. It runs a full Ethereum node, enabling blockchain synchronization, transaction validation, mining operations, and smart contract deployment.
 
-The client syncs the blockchain, validates transactions, and provides RPC APIs for applications. It supports multiple sync modes balancing speed and security.
+The client provides multiple sync modes: "snap" for fast syncing with state snapshots, "full" for complete blockchain validation, and "light" for minimal storage requirements. It exposes JSON-RPC APIs over HTTP, WebSocket, and IPC for application integration.
 
-geth is the most widely used Ethereum client for running nodes and development.
+geth includes an interactive JavaScript console for direct blockchain interaction, account management for creating and managing Ethereum wallets, and support for both mainnet and test networks. It's the most widely used Ethereum client for running production nodes and development environments.
 
 # CAVEATS
 

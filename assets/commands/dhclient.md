@@ -1,3 +1,7 @@
+# TAGLINE
+
+ISC DHCP client for dynamic network configuration
+
 # TLDR
 
 **Obtain IP address** for interface
@@ -59,6 +63,14 @@ _INTERFACE_
 
 **--help**
 > Display help information.
+
+# CONFIGURATION
+
+**/etc/dhcp/dhclient.conf**
+> DHCP client configuration file. Controls request behavior, timeout values, and custom DHCP options.
+
+**/var/lib/dhcp/dhclient.leases**
+> Stores active and historical lease information for network interfaces.
 
 # DESCRIPTION
 

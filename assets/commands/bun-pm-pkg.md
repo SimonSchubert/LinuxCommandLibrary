@@ -1,3 +1,7 @@
+# TAGLINE
+
+Read and modify package.json fields
+
 # TLDR
 
 **Get a package.json field**
