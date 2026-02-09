@@ -5,7 +5,9 @@ import com.linuxcommandlibrary.shared.platform.AssetReader
 
 class AndroidAssetReader(private val context: Context) : AssetReader {
     override fun listFiles(path: String): List<String> = try {
-        context.assets.list(path)?.toList() ?: emptyList()
+        context.assets.open("$path/index.txt").bufferedReader().use {
+            it.readLines()
+        }
     } catch (e: Exception) {
         emptyList()
     }
