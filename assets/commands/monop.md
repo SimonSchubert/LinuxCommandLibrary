@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays type information
+
 # TLDR
 
 **Show type information**

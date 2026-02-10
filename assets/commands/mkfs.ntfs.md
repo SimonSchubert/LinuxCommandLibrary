@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates an NTFS filesystem on a device or file
+
 # TLDR
 
 Create an **NTFS filesystem** inside partition Y on device X

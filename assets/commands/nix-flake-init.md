@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates a new flake
+
 # TLDR
 
 **Initialize default flake**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs stop, restart, and start scripts
+
 # TLDR
 
 **Restart application**

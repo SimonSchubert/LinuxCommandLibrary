@@ -1,3 +1,7 @@
+# TAGLINE
+
+sets the system date and time by querying NTP servers
+
 # TLDR
 
 **Synchronize and set** date and time

@@ -1,3 +1,7 @@
+# TAGLINE
+
+checks Internet-Drafts for formatting issues
+
 # TLDR
 
 **Check Internet-Draft**
@@ -45,8 +49,6 @@ _FILE_
 **idnits** checks Internet-Drafts for formatting issues. It validates IETF document format requirements before submission.
 
 The tool checks RFC formatting, boilerplate text, references, and common errors. It helps authors prepare drafts for IETF submission.
-
-idnits validates IETF Internet-Drafts.
 
 # CAVEATS
 

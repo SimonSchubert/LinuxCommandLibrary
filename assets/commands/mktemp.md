@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates temporary files or directories safely and prints their names
+
 # TLDR
 
 Create an empty **temporary file** and print its path

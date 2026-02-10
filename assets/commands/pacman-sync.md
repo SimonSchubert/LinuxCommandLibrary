@@ -1,3 +1,7 @@
+# TAGLINE
+
+synchronizes packages from remote repositories
+
 # TLDR
 
 **Install** a package

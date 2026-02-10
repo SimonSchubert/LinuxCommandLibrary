@@ -1,3 +1,7 @@
+# TAGLINE
+
+waveform viewer for digital simulation results
+
 # TLDR
 
 **Open waveform file**

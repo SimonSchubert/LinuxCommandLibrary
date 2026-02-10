@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages tags in a Jujutsu repository
+
 # TLDR
 
 **List all tags**

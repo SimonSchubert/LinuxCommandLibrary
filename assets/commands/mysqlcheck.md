@@ -1,3 +1,7 @@
+# TAGLINE
+
+checks, repairs, and optimizes MySQL tables
+
 # TLDR
 
 **Check all tables in database**
@@ -63,8 +67,6 @@ _TABLES_
 **mysqlcheck** checks, repairs, and optimizes MySQL tables. It maintains database integrity.
 
 The tool runs CHECK, REPAIR, ANALYZE, and OPTIMIZE. Essential for database maintenance.
-
-mysqlcheck maintains MySQL tables.
 
 # CAVEATS
 

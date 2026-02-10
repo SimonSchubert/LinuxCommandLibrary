@@ -1,3 +1,7 @@
+# TAGLINE
+
+library and command-line tool for handling input devices on Linux
+
 # TLDR
 
 **List** all input devices

@@ -1,3 +1,7 @@
+# TAGLINE
+
+queries and filters packages from pacman databases with flexible criteria
+
 # TLDR
 
 List **all available packages**

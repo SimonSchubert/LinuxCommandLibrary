@@ -1,3 +1,7 @@
+# TAGLINE
+
+layer Four Traceroute
+
 # TLDR
 
 **Traceroute to host**
@@ -59,8 +63,6 @@ _HOST_
 **lft** is Layer Four Traceroute. It traces routes using TCP, UDP, or ICMP at layer 4.
 
 The tool bypasses many firewalls that block ICMP. It shows AS numbers for network analysis.
-
-lft traces using layer 4.
 
 # CAVEATS
 

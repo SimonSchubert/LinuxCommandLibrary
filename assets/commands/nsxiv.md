@@ -1,3 +1,7 @@
+# TAGLINE
+
+lightweight, keyboard-driven image viewer for X11
+
 # TLDR
 
 **Open images**

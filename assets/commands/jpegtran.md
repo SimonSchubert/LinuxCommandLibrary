@@ -1,3 +1,7 @@
+# TAGLINE
+
+performs lossless transformations on JPEG images
+
 # TLDR
 
 **Mirror** an image horizontally or vertically

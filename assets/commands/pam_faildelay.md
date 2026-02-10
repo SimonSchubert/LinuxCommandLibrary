@@ -1,3 +1,7 @@
+# TAGLINE
+
+sets authentication failure delay
+
 # TLDR
 
 **Set authentication delay**
@@ -22,8 +26,6 @@
 **pam_faildelay** sets authentication failure delay. Adds delay after failed login.
 
 The module slows brute force attacks. Configurable delay time.
-
-pam_faildelay adds login delay.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+controls whether other users can send messages to your terminal using
+
 # TLDR
 
 Check **current status**

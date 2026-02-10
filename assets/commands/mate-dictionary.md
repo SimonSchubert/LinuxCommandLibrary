@@ -1,3 +1,7 @@
+# TAGLINE
+
+graphical dictionary application for the MATE desktop
+
 # TLDR
 
 **Open dictionary**

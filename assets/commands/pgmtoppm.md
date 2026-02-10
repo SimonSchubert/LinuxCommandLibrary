@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts a PGM grayscale image to a PPM color image
+
 # TLDR
 
 **Convert grayscale to color**
@@ -33,10 +37,6 @@
 # DESCRIPTION
 
 **pgmtoppm** converts a PGM grayscale image to a PPM color image. It maps gray values to colors, either a single color, a color range, or via a colormap.
-
-# EXAMPLES
-
-```bash
 # Grayscale to red tint
 pgmtoppm red image.pgm > red.ppm
 

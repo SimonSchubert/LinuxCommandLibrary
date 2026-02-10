@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates and restores backups of iOS devices running iOS 4 and later
+
 # TLDR
 
 **Create full backup**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+sends desktop notifications when commands complete
+
 # TLDR
 
 **Notify when command finishes**
@@ -42,8 +46,6 @@
 **ntfyme** sends desktop notifications when commands complete. Monitors long tasks.
 
 The tool wraps commands with notifications. Useful for lengthy operations.
-
-ntfyme notifies on completion.
 
 # CAVEATS
 

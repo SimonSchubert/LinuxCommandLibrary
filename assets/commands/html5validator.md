@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line HTML5 validation tool using the Nu Html Checker
+
 # TLDR
 
 **Validate an HTML file**

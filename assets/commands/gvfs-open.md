@@ -1,3 +1,7 @@
+# TAGLINE
+
+opens files and URIs with their default applications
+
 # TLDR
 
 **Open file with default app**
@@ -33,8 +37,6 @@ _LOCATION_
 **gvfs-open** opens files and URIs with their default applications. It uses GVFS and MIME type associations to determine the appropriate application.
 
 The tool handles local files, remote URIs, and URLs. It's the command-line equivalent of double-clicking in GNOME file manager.
-
-gvfs-open opens files with default apps.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates multiple users at once
+
 # TLDR
 
 **Create users from file**
@@ -39,8 +43,6 @@ _FILE_
 **newusers** creates multiple users at once. It reads user data from a file.
 
 The tool processes passwd-format entries. Batch user creation for administrators.
-
-newusers creates users in bulk.
 
 # CAVEATS
 

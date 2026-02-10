@@ -1,3 +1,7 @@
+# TAGLINE
+
+screen brightness and color temperature manager for Linux systems running X11
+
 # TLDR
 
 Set screen **temperature** to 3000K

@@ -1,3 +1,7 @@
+# TAGLINE
+
+extracts and analyzes peer information from BitTorrent files
+
 # TLDR
 
 **Analyze torrent peer data**

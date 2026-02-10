@@ -1,3 +1,7 @@
+# TAGLINE
+
+prints memory maps for Java processes
+
 # TLDR
 
 **Print heap summary**
@@ -55,8 +59,6 @@ _PID_
 **jmap** prints memory maps for Java processes. It generates heap dumps and object histograms.
 
 The tool is essential for memory analysis and leak detection. Heap dumps can be analyzed with tools like MAT.
-
-jmap creates Java heap dumps.
 
 # CAVEATS
 

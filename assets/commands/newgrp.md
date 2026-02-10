@@ -1,3 +1,7 @@
+# TAGLINE
+
+changes the current real group ID to the specified group
+
 # TLDR
 
 **Switch** to a different primary group

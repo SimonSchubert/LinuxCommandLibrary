@@ -1,3 +1,7 @@
+# TAGLINE
+
+extracts and displays Intel graphics BIOS information
+
 # TLDR
 
 **Dump BIOS data**
@@ -32,8 +36,6 @@ _FILE_
 **intel_bios_reader** extracts and displays Intel graphics BIOS information. It reads the Video BIOS Tables (VBT) for display configuration.
 
 The tool shows panel timing, backlight settings, and display connector information. Useful for debugging display issues.
-
-intel_bios_reader shows Intel GPU BIOS.
 
 # CAVEATS
 

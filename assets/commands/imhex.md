@@ -1,3 +1,7 @@
+# TAGLINE
+
+feature-rich hex editor designed for reverse engineers and programmers
+
 # TLDR
 
 **Open** a file in ImHex

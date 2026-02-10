@@ -1,3 +1,7 @@
+# TAGLINE
+
+captures and displays HTTP traffic in real-time
+
 # TLDR
 
 **Capture HTTP traffic on interface**
@@ -48,8 +52,6 @@ _FILTER_
 **httpflow** captures and displays HTTP traffic in real-time. It reconstructs HTTP requests and responses from network packets.
 
 The tool is useful for debugging, monitoring, and analyzing web traffic. It displays headers, bodies, and request/response pairs.
-
-httpflow captures HTTP network traffic.
 
 # CAVEATS
 

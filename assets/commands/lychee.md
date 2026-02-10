@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast link checker
+
 # TLDR
 
 **Check links in file**
@@ -53,8 +57,6 @@ _INPUTS_
 **lychee** is a fast link checker. It validates links in markdown, HTML, and plain text.
 
 The tool is written in Rust for speed. It checks both local and remote links concurrently.
-
-lychee validates links quickly.
 
 # CAVEATS
 

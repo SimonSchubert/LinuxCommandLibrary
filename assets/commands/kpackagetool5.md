@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages KDE Plasma packages including plasmoids, themes, wallpapers
+
 # TLDR
 
 **List** all known package types

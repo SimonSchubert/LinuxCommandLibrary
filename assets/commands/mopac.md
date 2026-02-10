@@ -1,3 +1,7 @@
+# TAGLINE
+
+semiempirical quantum chemistry program for computational chemistry calculations
+
 # TLDR
 
 **Run calculations** from an input file

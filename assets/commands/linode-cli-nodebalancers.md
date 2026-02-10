@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages Linode NodeBalancers
+
 # TLDR
 
 **List node balancers**
@@ -62,8 +66,6 @@ _SUBCOMMAND_
 **linode-cli nodebalancers** manages Linode NodeBalancers. NodeBalancers distribute traffic across instances.
 
 The tool configures load balancing, health checks, and SSL termination for high availability.
-
-linode-cli nodebalancers manages load balancers.
 
 # CAVEATS
 

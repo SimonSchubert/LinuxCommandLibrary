@@ -1,3 +1,7 @@
+# TAGLINE
+
+installs Slackware packages, which are compressed tar archives containing
+
 # TLDR
 
 **Install** a Slackware package

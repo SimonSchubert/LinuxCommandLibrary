@@ -1,3 +1,7 @@
+# TAGLINE
+
+filters PO file translations through a command
+
 # TLDR
 
 **Filter translations through command**
@@ -45,8 +49,6 @@ _FILTER-COMMAND_
 **msgfilter** filters PO file translations through a command. It's part of GNU gettext.
 
 The tool processes each msgstr through a filter. Useful for batch transformations.
-
-msgfilter filters PO translations.
 
 # CAVEATS
 

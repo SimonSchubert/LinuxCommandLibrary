@@ -1,3 +1,7 @@
+# TAGLINE
+
+uploads package to registry
+
 # TLDR
 
 **Publish package**
@@ -53,8 +57,6 @@ _PATH_
 **npm publish** uploads package to registry. Makes package available for installation.
 
 The command publishes to npm. Requires authentication and unique version.
-
-npm publish uploads packages.
 
 # CAVEATS
 

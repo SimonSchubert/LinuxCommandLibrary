@@ -1,3 +1,7 @@
+# TAGLINE
+
+JavaScript task runner for automating development workflows
+
 # TLDR
 
 **Run default task**

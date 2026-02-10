@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates posters from PDF
+
 # TLDR
 
 **Create 2x2 poster**
@@ -55,8 +59,6 @@ Scale factor determines size. 2x means twice original.
 Tile specification sets layout. 2x2 makes 4 pages.
 
 Overlap helps assembly. Tiles share edges.
-
-Media size sets output pages. A4, letter, custom.
 
 # CAVEATS
 

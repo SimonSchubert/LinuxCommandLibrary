@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates UPC-A barcodes
+
 # TLDR
 
 **Create UPC barcode**
@@ -28,8 +32,6 @@ _DIGITS_
 **pbmupc** creates UPC-A barcodes. Generates barcode images.
 
 The tool produces retail barcodes. Part of Netpbm.
-
-pbmupc makes barcodes.
 
 # CAVEATS
 

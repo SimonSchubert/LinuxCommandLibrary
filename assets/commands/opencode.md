@@ -1,3 +1,7 @@
+# TAGLINE
+
+open-source AI coding agent that runs in your terminal, desktop, or IDE
+
 # TLDR
 
 **Launch the interactive TUI**

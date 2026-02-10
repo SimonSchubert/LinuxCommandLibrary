@@ -1,3 +1,7 @@
+# TAGLINE
+
+fixes PHP coding standards
+
 # TLDR
 
 **Fix current directory**
@@ -49,8 +53,6 @@
 **php-cs-fixer** fixes PHP coding standards. Enforces consistent style.
 
 The tool automatically formats code. Supports PSR standards.
-
-php-cs-fixer formats PHP.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts web pages to desktop apps
+
 # TLDR
 
 **Package URL as app**
@@ -48,8 +52,6 @@ _URL_
 **pake** converts web pages to desktop apps. Uses Rust and system webview.
 
 The tool creates lightweight native wrappers. Cross-platform support.
-
-pake packages web as apps.
 
 # CAVEATS
 

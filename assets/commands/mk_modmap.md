@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates keyboard modifier mappings
+
 # TLDR
 
 **Generate modmap**
@@ -29,8 +33,6 @@
 **mk_modmap** generates keyboard modifier mappings. It outputs xmodmap format for X11.
 
 The tool reads current keyboard configuration and creates a modmap file for backup or transfer.
-
-mk_modmap generates X11 modmaps.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+fixes truncated images
+
 # TLDR
 
 **Fix truncated image**
@@ -25,8 +29,6 @@ _FILE_
 **pamfixtrunc** fixes truncated images. Pads missing data.
 
 The tool completes incomplete files. Part of Netpbm.
-
-pamfixtrunc fixes truncation.
 
 # CAVEATS
 

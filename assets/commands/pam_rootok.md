@@ -1,3 +1,7 @@
+# TAGLINE
+
+succeeds if user is root
+
 # TLDR
 
 **Allow root without password**
@@ -17,8 +21,6 @@ No parameters. Checks for UID 0.
 **pam_rootok** succeeds if user is root. Allows password-less root operations.
 
 The module checks UID equals zero. Used for su and similar.
-
-pam_rootok bypasses auth for root.
 
 # CAVEATS
 

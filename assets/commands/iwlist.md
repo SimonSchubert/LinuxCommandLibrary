@@ -1,3 +1,7 @@
+# TAGLINE
+
+retrieves detailed information from a wireless network interface including
+
 # TLDR
 
 **Scan** for networks

@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages Angular CLI usage analytics
+
 # TLDR
 
 **Enable analytics**

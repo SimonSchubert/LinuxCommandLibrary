@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line interface for ModemManager, a DBus-powered daemon that provides
+
 # TLDR
 
 **List available modems**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+interactive process viewer and system monitor, designed as an enhanced
+
 # TLDR
 
 **Start htop**
@@ -34,11 +38,9 @@
 
 # DESCRIPTION
 
-**htop** is an interactive process viewer and system monitor, designed as an enhanced alternative to the traditional top command. It provides a full-screen, colorful display of system processes with intuitive keyboard and mouse controls.
+**htop** is an interactive, ncurses-based process viewer and system monitor designed as a more capable alternative to the traditional top command. Its full-screen interface displays per-core CPU utilization, memory, and swap usage as color-coded bar meters at the top, followed by a scrollable, sortable table of all running processes. Unlike top, htop supports full mouse interaction and intuitive keyboard shortcuts for everyday tasks.
 
-The interface shows CPU, memory, and swap usage with graphical meters, followed by a sortable list of running processes. Users can scroll through the process list, search, filter, and perform operations like sending signals or changing priorities.
-
-htop supports multiple views including tree mode (showing process hierarchy), and allows customization of displayed columns and meters through its setup menu.
+Users can filter the process list in real time (F4), search for processes by name (F3), and toggle a tree view (F5) that reveals parent-child process hierarchies. Sending signals to processes is straightforward -- pressing F9 presents a menu of signals (SIGTERM, SIGKILL, SIGHUP, etc.) to send to one or more tagged processes. Process priority (nice value) can be adjusted directly, and the setup screen (F2) allows full customization of which columns and meters are displayed, persisted across sessions.
 
 # PARAMETERS
 

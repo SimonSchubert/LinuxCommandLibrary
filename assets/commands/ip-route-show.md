@@ -1,3 +1,7 @@
+# TAGLINE
+
+display IP routing table entries
+
 # TLDR
 
 This command is an alias of **ip route list**

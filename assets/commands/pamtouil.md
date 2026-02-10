@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PAM/PNM images to UIL format for Motif/X11 GUI development
+
 # TLDR
 
 **Convert PAM to UIL format**

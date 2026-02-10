@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal user interface for git commands that simplifies common git workflows
+
 # TLDR
 
 **Open lazygit** in current repository
@@ -30,11 +34,9 @@
 
 # DESCRIPTION
 
-**lazygit** is a terminal user interface (TUI) for git commands that simplifies common git workflows. It provides visual panels for staging changes, viewing diffs, managing branches, commits, and stashes.
+**lazygit** is a terminal user interface (TUI) for Git that replaces sequences of typed commands with visual, keyboard-driven panels. Its split-pane layout presents Status, Files, Branches, Commits, and Stash side by side, letting you stage individual files or hunks with a single keypress, review diffs inline, and commit without leaving the interface.
 
-The interface is divided into panels: Status, Files, Branches, Commits, and Stash. Users navigate with keyboard shortcuts, staging files with space, committing with c, and pushing with P. All operations show real-time git command output.
-
-lazygit handles complex operations like interactive rebasing, cherry-picking, and conflict resolution through intuitive interfaces, making git's powerful features more accessible.
+Beyond everyday staging and committing, lazygit makes Git's more advanced operations approachable. Interactive rebasing is handled through a visual commit list where entries can be reordered, squashed, or edited in place. Cherry-picking is a matter of tagging commits and pasting them onto another branch. Merge conflict resolution displays conflicting sections with one-key choices for each side. Branch management, remote operations (push, pull, fetch), and stash manipulation are all accessible from their respective panels with contextual menus that surface the available actions. A customizable configuration file allows user-defined keybindings and custom command shortcuts.
 
 # PARAMETERS
 

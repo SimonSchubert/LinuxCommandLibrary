@@ -1,3 +1,7 @@
+# TAGLINE
+
+verifies the integrity and consistency of installed packages on Arch-based
+
 # TLDR
 
 **List and check** all installed packages

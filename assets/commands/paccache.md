@@ -1,3 +1,7 @@
+# TAGLINE
+
+cache cleaning utility for pacman, the Arch Linux package manager
+
 # TLDR
 
 Remove all but the **3 most recent** package versions from the pacman cache

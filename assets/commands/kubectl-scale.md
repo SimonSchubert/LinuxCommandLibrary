@@ -1,3 +1,7 @@
+# TAGLINE
+
+sets a new size for a deployment, replica set, or replication controller
+
 # TLDR
 
 **Scale deployment replicas**
@@ -36,7 +40,9 @@
 
 # DESCRIPTION
 
-**kubectl scale** sets a new size for a deployment, replica set, or replication controller. Changes take effect immediately. Use --current-replicas to ensure the current state matches expectations before scaling.
+**kubectl scale** adjusts the replica count for deployments, replica sets, replication controllers, and stateful sets, allowing you to increase or decrease the number of running pod instances on demand. Changes take effect immediately, with the Kubernetes controller manager working to reconcile the actual state to the desired replica count.
+
+The command supports a precondition flag (--current-replicas) that causes the scaling operation to fail if the current number of replicas does not match the expected value, which is useful for preventing race conditions in automated workflows. You can also scale resources defined in manifest files and apply the operation to multiple resources in a single invocation.
 
 # SEE ALSO
 

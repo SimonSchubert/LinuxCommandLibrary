@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs Kotlin scripts and provides a REPL
+
 # TLDR
 
 **Run Kotlin script**
@@ -43,11 +47,9 @@ _SCRIPT_
 
 # DESCRIPTION
 
-**kotlin** runs Kotlin scripts and provides a REPL. It executes .kts files directly without separate compilation.
+**kotlin** is the Kotlin runtime command that executes Kotlin scripts (.kts files) directly on the JVM without requiring a separate compilation step. It also provides an interactive Read-Eval-Print Loop (REPL) when invoked with no arguments, allowing you to experiment with Kotlin expressions and statements interactively.
 
-The tool supports scripting use cases. It can run expressions and interact with the JVM ecosystem.
-
-kotlin runs Kotlin scripts.
+The tool can evaluate single expressions from the command line using the `-e` flag, run script files with command-line arguments, and include additional JARs on the classpath for access to external libraries. Since Kotlin scripts run on the JVM, they have full access to the Java standard library and any Java or Kotlin libraries added to the classpath, making it suitable for automation tasks, quick prototyping, and build scripting.
 
 # CAVEATS
 

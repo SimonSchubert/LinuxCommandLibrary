@@ -1,3 +1,7 @@
+# TAGLINE
+
+removes old WAL archive files no longer needed by standby servers
+
 # TLDR
 
 **Clean old WAL files**

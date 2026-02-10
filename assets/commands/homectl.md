@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages user accounts and home directories via systemd-homed, a systemd
+
 # TLDR
 
 **List** user accounts and home directories

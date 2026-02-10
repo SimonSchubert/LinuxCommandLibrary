@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal-based graphical activity monitor written in Node
+
 # TLDR
 
 **Start gtop**

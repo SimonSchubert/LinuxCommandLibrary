@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PO files between character encodings
+
 # TLDR
 
 **Convert PO file encoding**
@@ -45,8 +49,6 @@ _INPUTFILE_
 **msgconv** converts PO files between character encodings. It's part of GNU gettext.
 
 The tool handles translation file encoding. Preserves message structure during conversion.
-
-msgconv converts PO file encoding.
 
 # CAVEATS
 

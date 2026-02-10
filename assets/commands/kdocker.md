@@ -1,3 +1,7 @@
+# TAGLINE
+
+allows any application to be docked to the system tray
+
 # TLDR
 
 **Select** a window to dock (click to select)

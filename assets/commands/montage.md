@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates composite images by joining multiple images together
+
 # TLDR
 
 **Create image grid**

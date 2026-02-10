@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal Sudoku game
+
 # TLDR
 
 **Start new game**
@@ -39,8 +43,6 @@
 **nudoku** is a terminal Sudoku game. Uses ncurses for display.
 
 The game generates puzzles at different difficulties. Keyboard-driven interface.
-
-nudoku plays Sudoku in terminal.
 
 # CAVEATS
 

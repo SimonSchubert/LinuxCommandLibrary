@@ -1,3 +1,7 @@
+# TAGLINE
+
+helper program for the **pam_mkhomedir** PAM module
+
 # TLDR
 
 Create a **home directory** for a user based on /etc/skel with umask 022

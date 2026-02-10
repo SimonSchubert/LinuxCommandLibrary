@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates and verifies signatures
+
 # TLDR
 
 **Generate key pair**
@@ -55,8 +59,6 @@
 **minisign** creates and verifies signatures. It's simpler than GPG with good security.
 
 The tool uses Ed25519 signatures. Designed for signing software releases.
-
-minisign signs and verifies files.
 
 # CAVEATS
 

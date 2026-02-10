@@ -1,3 +1,7 @@
+# TAGLINE
+
+inspects NixOS configuration values, showing what options are set and their
+
 # TLDR
 
 List all **subkeys** of a given option key

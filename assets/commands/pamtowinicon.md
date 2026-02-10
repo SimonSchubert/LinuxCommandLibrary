@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PAM images to Windows ICO or CUR format
+
 # TLDR
 
 **Convert PAM to Windows icon**

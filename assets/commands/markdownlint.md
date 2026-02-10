@@ -1,3 +1,7 @@
+# TAGLINE
+
+style checker and linter for Markdown files
+
 # TLDR
 
 **Lint Markdown file**

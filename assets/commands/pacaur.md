@@ -1,3 +1,7 @@
+# TAGLINE
+
+AUR helper for Arch Linux that wraps pacman functionality while adding
+
 # TLDR
 
 **Synchronize and update** all packages (includes AUR)

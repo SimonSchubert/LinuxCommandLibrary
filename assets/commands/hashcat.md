@@ -1,3 +1,7 @@
+# TAGLINE
+
+high-performance password recovery tool that uses CPU, GPU, and other hardware
+
 # TLDR
 
 **Run a dictionary attack** on MD5 hashes

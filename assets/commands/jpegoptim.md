@@ -1,3 +1,7 @@
+# TAGLINE
+
+optimizes JPEG files by removing metadata and optionally reducing quality
+
 # TLDR
 
 **Optimize JPEG losslessly**

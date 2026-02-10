@@ -1,3 +1,7 @@
+# TAGLINE
+
+compresses files using the Lempel-Ziv coding algorithm
+
 # TLDR
 
 **Compress a file**

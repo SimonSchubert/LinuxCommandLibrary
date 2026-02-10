@@ -1,3 +1,7 @@
+# TAGLINE
+
+provides a curses-based interface for configuring network connections managed
+
 # TLDR
 
 Open the **user interface**

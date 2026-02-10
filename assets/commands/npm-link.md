@@ -1,3 +1,7 @@
+# TAGLINE
+
+symlinks packages for local development
+
 # TLDR
 
 **Link current package globally**
@@ -33,8 +37,6 @@ _PACKAGE_
 **npm link** symlinks packages for local development. Enables testing packages locally.
 
 The command creates global symlink. Then link into projects for development.
-
-npm link symlinks packages.
 
 # CAVEATS
 

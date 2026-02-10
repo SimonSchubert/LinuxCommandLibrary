@@ -1,3 +1,7 @@
+# TAGLINE
+
+lists Kubernetes resources
+
 # TLDR
 
 **List pods**
@@ -60,11 +64,11 @@ _NAME_
 
 # DESCRIPTION
 
-**kubectl get** lists Kubernetes resources. It's the most common command for viewing cluster state.
+**kubectl get** retrieves and displays one or more Kubernetes resources from the cluster. It is the most frequently used kubectl subcommand for inspecting cluster state, supporting every resource type including pods, deployments, services, nodes, configmaps, and custom resources defined by CRDs.
 
-The command supports various output formats. It can filter by labels and namespaces.
+The command provides flexible output formatting through the `-o` flag, including human-readable tables, YAML, JSON, JSONPath expressions, and custom column definitions. Results can be filtered by label selectors, field selectors, and namespaces, or retrieved across all namespaces with the `-A` flag. The `--watch` flag enables real-time streaming of resource changes via the Kubernetes watch API.
 
-kubectl get lists cluster resources.
+By default, the output shows a summary table with key fields like name, status, and age. The `wide` output format adds additional columns such as node assignments and IP addresses, while structured formats like YAML and JSON return the complete resource specification for scripting and automation.
 
 # CAVEATS
 

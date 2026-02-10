@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays information about USB buses in the system and devices connected to them
+
 # TLDR
 
 List all **USB devices**

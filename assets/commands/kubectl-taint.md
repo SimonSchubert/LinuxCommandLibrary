@@ -1,3 +1,7 @@
+# TAGLINE
+
+adds or removes node taints
+
 # TLDR
 
 **Add taint to node**
@@ -52,8 +56,6 @@ _KEY=VALUE:EFFECT_
 **kubectl taint** adds or removes node taints. Taints repel pods unless they have matching tolerations.
 
 The command controls workload placement. Effects determine scheduling behavior and eviction.
-
-kubectl taint manages node taints.
 
 # CAVEATS
 

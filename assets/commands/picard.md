@@ -1,3 +1,7 @@
+# TAGLINE
+
+musicBrainz's music tagger application
+
 # TLDR
 
 **Start MusicBrainz Picard**

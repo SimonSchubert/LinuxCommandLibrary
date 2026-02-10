@@ -1,3 +1,7 @@
+# TAGLINE
+
+restores file contents from another revision
+
 # TLDR
 
 **Restore files from parent**

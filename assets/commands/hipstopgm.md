@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts a HIPS image file to PGM format
+
 # TLDR
 
 **Convert HIPS file to PGM**

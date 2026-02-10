@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts document formats
+
 # TLDR
 
 **Convert Markdown to HTML**
@@ -56,8 +60,6 @@ _INPUT_
 **pandoc** converts document formats. Universal document converter.
 
 The tool handles many formats. Markdown, LaTeX, HTML, DOCX, PDF, and more.
-
-pandoc converts documents.
 
 # CAVEATS
 

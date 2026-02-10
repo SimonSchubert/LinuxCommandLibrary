@@ -1,3 +1,7 @@
+# TAGLINE
+
+updates fields of a resource using strategic merge patch, JSON merge
+
 # TLDR
 
 **Patch deployment with JSON**
@@ -36,7 +40,9 @@
 
 # DESCRIPTION
 
-**kubectl patch** updates fields of a resource using strategic merge patch, JSON merge patch, or JSON patch. More targeted than edit for scripted updates. Supports partial updates without replacing the entire resource.
+**kubectl patch** applies incremental updates to Kubernetes resource fields without requiring you to replace the entire resource specification. This makes it well suited for scripted and automated changes where only specific fields need modification, such as adjusting replica counts, updating image tags, or adding annotations.
+
+The command supports three patch strategies: strategic merge patch (the default), which intelligently merges lists and maps according to Kubernetes schema knowledge; JSON merge patch, which performs a straightforward recursive merge; and JSON patch (RFC 6902), which uses explicit operations like add, remove, and replace on specific JSON paths. Patch content can be provided inline via the -p flag or read from a file with --patch-file.
 
 # SEE ALSO
 

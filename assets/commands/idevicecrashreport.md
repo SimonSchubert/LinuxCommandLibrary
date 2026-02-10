@@ -1,3 +1,7 @@
+# TAGLINE
+
+retrieves crash reports from iOS devices
+
 # TLDR
 
 **Download crash reports**

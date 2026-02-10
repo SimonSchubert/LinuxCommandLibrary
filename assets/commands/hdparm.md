@@ -1,3 +1,7 @@
+# TAGLINE
+
+gets and sets SATA/IDE hard drive parameters
+
 # TLDR
 
 Get device **identification**

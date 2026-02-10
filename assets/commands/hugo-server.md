@@ -1,3 +1,7 @@
+# TAGLINE
+
+starts a local development server with live reload
+
 # TLDR
 
 **Start development server**
@@ -56,8 +60,6 @@
 **hugo server** starts a local development server with live reload. It watches for file changes and automatically rebuilds the site.
 
 The server provides fast iteration during development. Live reload refreshes browsers automatically when content changes.
-
-hugo server runs local development server.
 
 # CAVEATS
 

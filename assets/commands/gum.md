@@ -1,3 +1,7 @@
+# TAGLINE
+
+tool for creating glamorous shell scripts
+
 # TLDR
 
 **Prompt for input**
@@ -62,8 +66,6 @@ _COMMAND_
 **gum** is a tool for creating glamorous shell scripts. It provides interactive prompts, styled output, and TUI components for building beautiful CLI applications.
 
 The tool offers pre-built components for input, selection, confirmation, and more. It's designed for easy integration in shell scripts.
-
-gum creates beautiful shell script interfaces.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+PHP Backup Utility
+
 # TLDR
 
 **Run backup**
@@ -42,8 +46,6 @@
 **phpbu** is PHP Backup Utility. Automates backup creation.
 
 The tool handles databases, files, and syncing. XML configuration.
-
-phpbu creates backups.
 
 # CAVEATS
 

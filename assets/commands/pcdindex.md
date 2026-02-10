@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates a visual index of images from a Kodak PhotoCD file
+
 # TLDR
 
 **Create index of PhotoCD images**

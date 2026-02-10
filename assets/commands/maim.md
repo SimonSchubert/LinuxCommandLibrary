@@ -1,3 +1,7 @@
+# TAGLINE
+
+lightweight screenshot utility for X11
+
 # TLDR
 
 **Capture** full screenshot

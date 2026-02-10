@@ -1,3 +1,7 @@
+# TAGLINE
+
+instructs the system to stop all processes and halt the CPU
+
 # TLDR
 
 **Halt** the system

@@ -1,3 +1,7 @@
+# TAGLINE
+
+helps resolve merge conflicts
+
 # TLDR
 
 **Resolve conflicts**
@@ -42,8 +46,6 @@ _PATH_
 **jj resolve** helps resolve merge conflicts. It launches a merge tool for conflicted files.
 
 The command identifies and processes files with conflict markers. Jujutsu tracks conflicts as first-class states.
-
-jj resolve handles conflicts.
 
 # CAVEATS
 

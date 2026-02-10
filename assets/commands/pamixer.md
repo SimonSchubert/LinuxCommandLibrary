@@ -1,3 +1,7 @@
+# TAGLINE
+
+controls PulseAudio and PipeWire volume from the command line
+
 # TLDR
 
 **Get current volume**

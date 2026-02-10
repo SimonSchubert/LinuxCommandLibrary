@@ -1,3 +1,7 @@
+# TAGLINE
+
+bluetooth Host Controller Interface tool for monitoring, configuring
+
 # TLDR
 
 **Scan** for Bluetooth devices

@@ -1,3 +1,7 @@
+# TAGLINE
+
+monitors MIDI messages
+
 # TLDR
 
 **Start MIDI monitor**
@@ -46,8 +50,6 @@
 **midisnoop** monitors MIDI messages. It displays incoming MIDI data in real-time.
 
 The tool helps debug MIDI devices and software. Shows note, control, and system messages.
-
-midisnoop monitors MIDI data.
 
 # CAVEATS
 

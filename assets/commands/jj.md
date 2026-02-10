@@ -1,3 +1,7 @@
+# TAGLINE
+
+jujutsu, a Git-compatible version control system
+
 # TLDR
 
 **Initialize repository**
@@ -60,8 +64,6 @@
 **jj** is Jujutsu, a Git-compatible version control system. It uses a different model with automatic commits and conflict handling.
 
 The tool tracks uncommitted changes as first-class revisions. It supports anonymous branches and powerful history rewriting.
-
-jj is Jujutsu version control.
 
 # CAVEATS
 

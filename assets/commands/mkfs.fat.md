@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates MS-DOS FAT filesystems on devices or image files
+
 # TLDR
 
 Create a **FAT filesystem** inside partition Y on device X

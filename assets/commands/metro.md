@@ -1,3 +1,7 @@
+# TAGLINE
+
+JavaScript bundler used by React Native
+
 # TLDR
 
 **Start Metro bundler**

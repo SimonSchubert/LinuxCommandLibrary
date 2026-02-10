@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line client for Koji, the build system used by Fedora, CentOS
+
 # TLDR
 
 Execute a **subcommand**

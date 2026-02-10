@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PGM images to Usenix FaceSaver format, used for storing face images
+
 # TLDR
 
 **Convert PGM to Usenix FaceSaver format**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+open-source autonomous AI assistant that runs locally or on private servers
+
 # TLDR
 
 **Start an interactive session**

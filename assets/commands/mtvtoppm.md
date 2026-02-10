@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts MTV ray tracer format to PPM
+
 # TLDR
 
 **Convert MTV ray tracer output to PPM**

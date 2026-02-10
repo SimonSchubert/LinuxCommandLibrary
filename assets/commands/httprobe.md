@@ -1,3 +1,7 @@
+# TAGLINE
+
+takes a list of domains from stdin and probes for working HTTP and HTTPS servers
+
 # TLDR
 
 **Probe domains from stdin**

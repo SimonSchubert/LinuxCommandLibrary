@@ -1,3 +1,7 @@
+# TAGLINE
+
+suite for reading Microsoft Access databases
+
 # TLDR
 
 **List tables**
@@ -56,8 +60,6 @@ _DATABASE_
 **mdbtools** is a suite for reading Microsoft Access databases. It exports data and schema from MDB files.
 
 The tools enable Access database access on Unix systems without Microsoft Office.
-
-mdbtools reads Access databases.
 
 # CAVEATS
 

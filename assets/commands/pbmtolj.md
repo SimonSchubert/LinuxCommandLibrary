@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PBM bitmaps to HP LaserJet PCL format for direct printing
+
 # TLDR
 
 **Convert PBM to HP LaserJet format**

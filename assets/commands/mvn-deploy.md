@@ -1,3 +1,7 @@
+# TAGLINE
+
+uploads artifacts to remote repository
+
 # TLDR
 
 **Deploy to repository**
@@ -53,8 +57,6 @@
 **mvn deploy** uploads artifacts to remote repository. It's the final Maven lifecycle phase.
 
 The goal publishes built artifacts. Requires repository configuration in settings.xml.
-
-mvn deploy publishes artifacts.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+verifies Perl installation
+
 # TLDR
 
 **Run installation verification**
@@ -32,8 +36,6 @@
 **perlivp** verifies Perl installation. Runs diagnostic tests.
 
 The tool checks Perl configuration. Installation validation.
-
-perlivp tests Perl install.
 
 # CAVEATS
 

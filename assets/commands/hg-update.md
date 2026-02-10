@@ -1,3 +1,7 @@
+# TAGLINE
+
+updates the working directory to a specific revision
+
 # TLDR
 
 **Update to tip**

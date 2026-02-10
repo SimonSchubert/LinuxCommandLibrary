@@ -1,3 +1,7 @@
+# TAGLINE
+
+removes files using GVFS
+
 # TLDR
 
 **Remove file**
@@ -32,8 +36,6 @@ _LOCATION_
 **gvfs-rm** removes files using GVFS. It can delete local files and files on remote servers accessed through GVFS backends.
 
 The tool handles deletion across different protocols transparently. It works with SMB, FTP, SSH, and other GVFS-supported systems.
-
-gvfs-rm removes files via GVFS backends.
 
 # CAVEATS
 

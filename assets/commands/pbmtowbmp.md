@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PBM bitmaps to WBMP format used by WAP/WML mobile web pages
+
 # TLDR
 
 **Convert PBM to WBMP format**

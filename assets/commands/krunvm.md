@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages lightweight microVMs
+
 # TLDR
 
 **Create microVM**
@@ -56,11 +60,9 @@
 
 # DESCRIPTION
 
-**krunvm** manages lightweight microVMs. It creates VMs from OCI container images using libkrun.
+**krunvm** is a tool for creating and managing lightweight microVMs built from OCI container images. It uses libkrun, a library that leverages KVM virtualization to run each workload in its own minimal virtual machine, providing stronger isolation than containers while maintaining a container-like user experience with fast startup times and low memory overhead.
 
-The tool provides container-like UX with VM isolation. It supports rapid startup and minimal overhead.
-
-krunvm manages microVMs.
+MicroVMs are created from standard container images pulled from registries, so existing container workflows and images can be reused directly. Each VM can be configured with a specific number of CPUs, memory allocation, and port mappings, similar to container runtime options. The result is a workflow that feels like managing containers but with the security boundaries of hardware virtualization, making krunvm well suited for multi-tenant environments or workloads that require stronger isolation guarantees.
 
 # CAVEATS
 

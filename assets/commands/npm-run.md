@@ -1,3 +1,7 @@
+# TAGLINE
+
+executes scripts defined in package
+
 # TLDR
 
 **Run script from package.json**
@@ -46,8 +50,6 @@ _ARGS_
 **npm run** executes scripts defined in package.json. Core workflow command.
 
 The command runs scripts section. Passes additional arguments after --.
-
-npm run executes package scripts.
 
 # CAVEATS
 

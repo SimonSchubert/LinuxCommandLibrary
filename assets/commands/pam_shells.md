@@ -1,3 +1,7 @@
+# TAGLINE
+
+validates user shells
+
 # TLDR
 
 **Require valid shell**
@@ -21,8 +25,6 @@ No parameters. Checks /etc/shells.
 **pam_shells** validates user shells. Checks shell in /etc/shells.
 
 The module denies invalid shells. Security access control.
-
-pam_shells validates login shells.
 
 # CAVEATS
 

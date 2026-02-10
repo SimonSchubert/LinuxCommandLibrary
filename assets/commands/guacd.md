@@ -1,3 +1,7 @@
+# TAGLINE
+
+guacamole proxy daemon, the core component of Apache Guacamole
+
 # TLDR
 
 **Start guacd daemon**

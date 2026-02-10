@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays the combined CI status for a commit or branch on GitHub
+
 # TLDR
 
 **Show CI status for current branch**

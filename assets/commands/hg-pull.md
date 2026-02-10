@@ -1,3 +1,7 @@
+# TAGLINE
+
+fetches changesets from a remote repository into the local repository
+
 # TLDR
 
 **Pull from default remote**

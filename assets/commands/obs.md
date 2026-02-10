@@ -1,3 +1,7 @@
+# TAGLINE
+
+studio, an open-source streaming and recording program
+
 # TLDR
 
 **Start OBS Studio**
@@ -53,8 +57,6 @@
 **obs** is OBS Studio, an open-source streaming and recording program.
 
 The application provides video capture, scene composition, and streaming. Cross-platform.
-
-obs captures and streams video.
 
 # CAVEATS
 

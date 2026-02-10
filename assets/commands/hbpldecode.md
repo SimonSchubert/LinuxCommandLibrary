@@ -1,3 +1,7 @@
+# TAGLINE
+
+decodes HP Business Inkjet Printer Language files
+
 # TLDR
 
 **Decode HBP file**
@@ -32,8 +36,6 @@ _FILE_
 **hbpldecode** decodes HP Business Inkjet Printer Language files. It extracts image data from printer spool files.
 
 The tool is part of foo2hbpl printer driver suite. It's useful for analyzing printer data and extracting embedded images.
-
-hbpldecode decodes HBPL printer data.
 
 # CAVEATS
 

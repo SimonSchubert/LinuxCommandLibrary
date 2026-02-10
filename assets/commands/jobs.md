@@ -1,3 +1,7 @@
+# TAGLINE
+
+shell builtin that displays the status of jobs started in the current shell
+
 # TLDR
 
 View **jobs** spawned by current shell

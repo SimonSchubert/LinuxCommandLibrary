@@ -1,3 +1,7 @@
+# TAGLINE
+
+applies changes described in a patch file to original files
+
 # TLDR
 
 **Apply a patch**

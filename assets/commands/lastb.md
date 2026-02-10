@@ -1,3 +1,7 @@
+# TAGLINE
+
+same as last, but shows failed login attempts as recorded in /var/log/btmp
+
 # TLDR
 
 List **failed login attempts**

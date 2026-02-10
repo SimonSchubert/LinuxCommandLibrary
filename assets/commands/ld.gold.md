@@ -1,3 +1,7 @@
+# TAGLINE
+
+faster ELF linker
+
 # TLDR
 
 **Link with gold**
@@ -52,8 +56,6 @@ _FILES_
 **ld.gold** is a faster ELF linker. It focuses on speed over features compared to standard ld.
 
 The linker supports multi-threading for large projects. It's part of GNU binutils.
-
-ld.gold is a fast ELF linker.
 
 # CAVEATS
 

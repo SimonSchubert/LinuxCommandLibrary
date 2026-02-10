@@ -1,3 +1,7 @@
+# TAGLINE
+
+monitors system input/output device loading by observing the time devices are
+
 # TLDR
 
 Display **CPU and disk** statistics

@@ -1,3 +1,7 @@
+# TAGLINE
+
+typing tutor program
+
 # TLDR
 
 **Start GNU Typist**

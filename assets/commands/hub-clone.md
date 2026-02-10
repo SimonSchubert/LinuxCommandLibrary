@@ -1,3 +1,7 @@
+# TAGLINE
+
+clones GitHub repositories using shorthand notation
+
 # TLDR
 
 **Clone with shorthand**
@@ -42,8 +46,6 @@ _DIRECTORY_
 **hub clone** clones GitHub repositories using shorthand notation. It expands user/repo format to full GitHub URLs automatically.
 
 The command supports cloning your own repositories with just the repo name. It wraps git clone with GitHub-specific conveniences.
-
-hub clone clones GitHub repos with shorthand.
 
 # CAVEATS
 

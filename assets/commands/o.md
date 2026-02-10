@@ -1,3 +1,7 @@
+# TAGLINE
+
+small, fast text editor
+
 # TLDR
 
 **Open file**
@@ -45,8 +49,6 @@ _FILE_
 **o** is a small, fast text editor. Minimal configuration required.
 
 The editor provides essential editing features. Written in Go for speed.
-
-o edits text files quickly.
 
 # CAVEATS
 

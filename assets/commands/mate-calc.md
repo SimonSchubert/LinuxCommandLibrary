@@ -1,3 +1,7 @@
+# TAGLINE
+
+graphical calculator for the MATE desktop environment
+
 # TLDR
 
 **Start** the calculator

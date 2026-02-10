@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs linters on git staged files
+
 # TLDR
 
 **Run on staged files**

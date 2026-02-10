@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PDF document pages to image formats
+
 # TLDR
 
 Specify the **range of pages** to convert (n - first page, m - last page)

@@ -1,3 +1,7 @@
+# TAGLINE
+
+git-based dotfile synchronizer written in Bash
+
 # TLDR
 
 **Create** a new castle (dotfiles repository)

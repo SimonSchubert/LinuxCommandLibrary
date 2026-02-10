@@ -1,3 +1,7 @@
+# TAGLINE
+
+hardware locality topology viewer alias
+
 # TLDR
 
 This command is an alias of **lstopo-no-graphics**

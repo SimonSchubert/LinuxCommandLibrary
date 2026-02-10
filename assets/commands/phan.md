@@ -1,3 +1,7 @@
+# TAGLINE
+
+PHP static analyzer
+
 # TLDR
 
 **Analyze PHP project**
@@ -49,8 +53,6 @@
 **phan** is a PHP static analyzer. Finds bugs through type checking.
 
 The tool performs deep analysis. Supports PHP 7/8 features.
-
-phan analyzes PHP code.
 
 # CAVEATS
 

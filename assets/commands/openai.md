@@ -1,3 +1,7 @@
+# TAGLINE
+
+chat completion
+
 # TLDR
 
 **Chat completion**
@@ -45,8 +49,6 @@
 **openai** is the OpenAI CLI. Interacts with GPT models and other APIs.
 
 The tool provides command-line API access. Requires API key.
-
-openai accesses OpenAI APIs.
 
 # CAVEATS
 

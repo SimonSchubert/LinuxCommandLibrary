@@ -1,3 +1,7 @@
+# TAGLINE
+
+professional digital painting application
+
 # TLDR
 
 **Open Krita**
@@ -49,8 +53,6 @@ _FILES_
 **Krita** is a professional digital painting application. It supports brushes, layers, filters, and animation.
 
 The tool targets concept artists, illustrators, and texture artists. It has extensive brush customization.
-
-Krita is digital painting software.
 
 # CAVEATS
 

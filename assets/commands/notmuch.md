@@ -1,3 +1,7 @@
+# TAGLINE
+
+mail indexer and searcher
+
 # TLDR
 
 **Initial setup**
@@ -60,8 +64,6 @@ _COMMAND_
 **notmuch** is a mail indexer and searcher. Provides fast full-text search.
 
 The tool indexes Maildir messages. Used with various email clients.
-
-notmuch indexes and searches mail.
 
 # CAVEATS
 

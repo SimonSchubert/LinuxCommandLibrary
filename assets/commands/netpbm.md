@@ -1,3 +1,7 @@
+# TAGLINE
+
+toolkit for image manipulation
+
 # TLDR
 
 **Convert JPEG to PPM**
@@ -49,8 +53,6 @@ _TOOL_
 **netpbm** is a toolkit for image manipulation. It includes many utilities for format conversion.
 
 The tools work with portable bitmap formats. Pipeline-based image processing.
-
-netpbm is image manipulation toolkit.
 
 # CAVEATS
 

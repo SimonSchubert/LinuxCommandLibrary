@@ -1,3 +1,7 @@
+# TAGLINE
+
+installer CLI for creating new Laravel PHP framework applications
+
 # TLDR
 
 **Create new Laravel project**

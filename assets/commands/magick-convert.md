@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts between image formats and applies transformations
+
 # TLDR
 
 **Convert image format**

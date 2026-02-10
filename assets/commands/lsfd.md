@@ -1,3 +1,7 @@
+# TAGLINE
+
+lists information about files opened by running processes on Linux
+
 # TLDR
 
 List **all open files**

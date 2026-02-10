@@ -1,3 +1,7 @@
+# TAGLINE
+
+like awk, sed, cut, join, and sort for name-indexed data such as CSV
+
 # TLDR
 
 **Convert CSV to JSON**

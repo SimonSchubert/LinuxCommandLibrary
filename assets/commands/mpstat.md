@@ -1,3 +1,7 @@
+# TAGLINE
+
+reports processor-related statistics including CPU utilization
+
 # TLDR
 
 Display **CPU statistics** every 2 seconds

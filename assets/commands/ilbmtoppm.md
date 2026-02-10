@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts an IFF ILBM file to PPM format
+
 # TLDR
 
 **Convert ILBM to PPM**

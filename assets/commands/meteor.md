@@ -1,3 +1,7 @@
+# TAGLINE
+
+full-stack JavaScript framework
+
 # TLDR
 
 **Create new project**
@@ -56,8 +60,6 @@ _COMMAND_
 **meteor** is a full-stack JavaScript framework. It builds web and mobile apps with reactive data.
 
 The tool provides real-time updates, hot code push, and integrated build system.
-
-meteor builds reactive apps.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+downloads course materials from TU Berlin's ISIS/Moodle platform
+
 # TLDR
 
 **Download all courses**
@@ -49,8 +53,6 @@
 **isisdl** downloads course materials from TU Berlin's ISIS/Moodle platform. It authenticates and bulk downloads files.
 
 The tool organizes downloads by course structure. It supports syncing to avoid re-downloading existing files.
-
-isisdl downloads ISIS course files.
 
 # CAVEATS
 

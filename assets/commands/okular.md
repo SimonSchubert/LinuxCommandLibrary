@@ -1,3 +1,7 @@
+# TAGLINE
+
+KDE's universal document viewer
+
 # TLDR
 
 **Open document**

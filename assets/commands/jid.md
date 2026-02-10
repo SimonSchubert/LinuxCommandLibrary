@@ -1,3 +1,7 @@
+# TAGLINE
+
+interactive JSON query tool
+
 # TLDR
 
 **Interactively explore JSON file**

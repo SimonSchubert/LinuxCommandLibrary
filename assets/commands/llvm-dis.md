@@ -1,3 +1,7 @@
+# TAGLINE
+
+disassembler
+
 # TLDR
 
 **Disassemble bitcode to LLVM IR**

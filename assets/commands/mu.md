@@ -1,3 +1,7 @@
+# TAGLINE
+
+mail indexer and searcher
+
 # TLDR
 
 **Index mail**
@@ -56,8 +60,6 @@ _COMMAND_
 **mu** is a mail indexer and searcher. It indexes Maildir format messages for fast searching.
 
 The tool uses Xapian for full-text search. Works with mu4e Emacs mail client.
-
-mu is mail indexer and searcher.
 
 # CAVEATS
 

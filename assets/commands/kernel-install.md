@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages kernel images in the boot partition
+
 # TLDR
 
 **Add** kernel and initramfs to bootloader

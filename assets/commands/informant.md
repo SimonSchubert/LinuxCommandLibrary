@@ -1,3 +1,7 @@
+# TAGLINE
+
+tool for reading Arch Linux news from the archlinux
+
 # TLDR
 
 **Read** all unread news

@@ -1,3 +1,7 @@
+# TAGLINE
+
+interactive spell checker
+
 # TLDR
 
 **Check file interactively**
@@ -56,8 +60,6 @@
 **ispell** is an interactive spell checker. It highlights misspellings and offers corrections for text files.
 
 The tool supports multiple languages and formats. It can run interactively or in batch mode for scripting.
-
-ispell checks spelling interactively.
 
 # CAVEATS
 

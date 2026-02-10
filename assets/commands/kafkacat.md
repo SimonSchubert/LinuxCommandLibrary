@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line Kafka producer and consumer
+
 # TLDR
 
 **Produce messages**

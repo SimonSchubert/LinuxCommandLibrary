@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates a new change in the repository
+
 # TLDR
 
 **Create new change**
@@ -49,8 +53,6 @@ _REVISIONS_
 **jj new** creates a new change in the repository. It starts a fresh working copy state on top of specified parents.
 
 The command enables branching and merge point creation. Multiple parents create a merge change.
-
-jj new creates changes.
 
 # CAVEATS
 

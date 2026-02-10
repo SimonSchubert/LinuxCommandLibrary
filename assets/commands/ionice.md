@@ -1,3 +1,7 @@
+# TAGLINE
+
+gets or sets the I/O scheduling class and priority for a process
+
 # TLDR
 
 Run command with specific I/O **class and priority**

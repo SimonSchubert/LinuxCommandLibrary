@@ -1,3 +1,7 @@
+# TAGLINE
+
+scans documents from HP all-in-one devices
+
 # TLDR
 
 **Scan document**
@@ -52,8 +56,6 @@
 **hp-scan** scans documents from HP all-in-one devices. It supports various output formats and resolutions.
 
 The tool can use the flatbed or automatic document feeder. It provides a command-line alternative to the graphical scanning interface.
-
-hp-scan captures documents from HP scanners.
 
 # CAVEATS
 

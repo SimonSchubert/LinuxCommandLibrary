@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast conda replacement
+
 # TLDR
 
 **Create environment**
@@ -59,8 +63,6 @@ _COMMAND_
 **mamba** is a fast conda replacement. It provides faster package resolution and downloading.
 
 The tool is drop-in compatible with conda. Uses parallel downloading and C++ solver.
-
-mamba is fast conda alternative.
 
 # CAVEATS
 

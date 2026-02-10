@@ -1,3 +1,7 @@
+# TAGLINE
+
+plugin manager for Hyprland, a dynamic tiling Wayland compositor
+
 # TLDR
 
 **Add** a plugin from Git repository

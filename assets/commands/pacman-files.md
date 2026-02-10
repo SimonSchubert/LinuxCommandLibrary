@@ -1,3 +1,7 @@
+# TAGLINE
+
+queries the files database to find which packages own specific files
+
 # TLDR
 
 **Update** files database

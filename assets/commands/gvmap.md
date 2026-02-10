@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates geographical-style maps from graphs
+
 # TLDR
 
 **Create map from graph**
@@ -45,8 +49,6 @@ _FILES_
 **gvmap** creates geographical-style maps from graphs. It groups related nodes into regions and generates map-like visualizations.
 
 The tool analyzes graph structure to cluster nodes into countries or regions. It adds visual styling to create appealing map layouts.
-
-gvmap creates map visualizations from graphs.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates a PGM image filled with random grayscale pixels
+
 # TLDR
 
 **Create white noise image**
@@ -39,10 +43,6 @@
 **pgmnoise** creates a PGM image filled with random grayscale pixels (white noise). Each pixel is independently assigned a random gray value.
 
 Useful for testing, creating textures, or generating random patterns.
-
-# EXAMPLES
-
-```bash
 # Basic noise image
 pgmnoise 512 512 > noise.pgm
 

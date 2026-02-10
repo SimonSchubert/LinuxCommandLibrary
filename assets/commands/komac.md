@@ -1,3 +1,7 @@
+# TAGLINE
+
+community Manifest Creator for WinGet
+
 # TLDR
 
 **Create new package manifest**

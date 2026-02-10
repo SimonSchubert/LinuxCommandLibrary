@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line interface for the NordVPN service, providing secure VPN
+
 # TLDR
 
 **Interactively log into** a NordVPN account

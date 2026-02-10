@@ -1,3 +1,7 @@
+# TAGLINE
+
+retrieves status information from HP printers
+
 # TLDR
 
 **Query printer status**
@@ -45,8 +49,6 @@
 **hp-query** retrieves status information from HP printers. It sends queries and returns printer responses for various parameters.
 
 The tool accesses internal printer status and configuration. It's useful for scripting and monitoring.
-
-hp-query retrieves HP printer status.
 
 # CAVEATS
 

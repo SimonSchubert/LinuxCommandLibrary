@@ -1,3 +1,7 @@
+# TAGLINE
+
+mermaid CLI
+
 # TLDR
 
 **Generate diagram**
@@ -53,8 +57,6 @@
 **mmdc** is the Mermaid CLI. It generates diagrams from Mermaid markdown.
 
 The tool creates flowcharts, sequence diagrams, and other visualizations from text.
-
-mmdc renders Mermaid diagrams.
 
 # CAVEATS
 

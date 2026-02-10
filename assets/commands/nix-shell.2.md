@@ -1,3 +1,7 @@
+# TAGLINE
+
+provides ad-hoc development environments
+
 # TLDR
 
 **Quick package shell**
@@ -39,8 +43,6 @@
 **nix-shell** provides ad-hoc development environments. This is alternate documentation.
 
 The tool is essential for quick environment setup. No permanent changes.
-
-nix-shell creates temp shells.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays MySQL binary log contents in readable format
+
 # TLDR
 
 **Read binary log**

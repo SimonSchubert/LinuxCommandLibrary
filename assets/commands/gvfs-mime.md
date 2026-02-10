@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages MIME type associations in GNOME
+
 # TLDR
 
 **Show default handler**
@@ -38,8 +42,6 @@ _HANDLER_
 **gvfs-mime** manages MIME type associations in GNOME. It queries and sets default applications for opening different file types.
 
 The tool modifies the user's MIME database to associate applications with content types. Changes affect how files are opened in GNOME.
-
-gvfs-mime manages MIME type handlers.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line tool for working with iCalendar files
+
 # TLDR
 
 **Display calendar**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line Git information tool that displays repository summary with ASCII
+
 # TLDR
 
 **Show repository info**

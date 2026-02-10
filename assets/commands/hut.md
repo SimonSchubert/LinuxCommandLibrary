@@ -1,3 +1,7 @@
+# TAGLINE
+
+CLI for SourceHut services
+
 # TLDR
 
 **List builds**
@@ -52,8 +56,6 @@ _COMMAND_
 **hut** is the CLI for SourceHut services. It provides access to builds, todos, git hosting, mailing lists, and other sr.ht features.
 
 The tool enables automation and scripting of SourceHut workflows. It covers all major services in the platform.
-
-hut manages SourceHut from command line.
 
 # CAVEATS
 

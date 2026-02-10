@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays disk partition layout
+
 # TLDR
 
 **List partitions**
@@ -53,8 +57,6 @@ _IMAGE_
 **mmls** displays disk partition layout. It's part of The Sleuth Kit for forensics.
 
 The tool shows partition table entries. Supports DOS, GPT, and other schemes.
-
-mmls lists disk partitions.
 
 # CAVEATS
 

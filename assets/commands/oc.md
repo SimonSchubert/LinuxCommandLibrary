@@ -1,3 +1,7 @@
+# TAGLINE
+
+openShift CLI
+
 # TLDR
 
 **Login to cluster**
@@ -56,8 +60,6 @@
 **oc** is the OpenShift CLI. Manages OpenShift/Kubernetes clusters.
 
 The tool extends kubectl with OpenShift features. Primary interface for OpenShift.
-
-oc manages OpenShift clusters.
 
 # CAVEATS
 

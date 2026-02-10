@@ -1,3 +1,7 @@
+# TAGLINE
+
+PHP Mess Detector
+
 # TLDR
 
 **Check for issues**
@@ -45,8 +49,6 @@ _RULESETS_
 **phpmd** is PHP Mess Detector. Finds potential problems in code.
 
 The tool detects code smells. Complexity and design issues.
-
-phpmd finds PHP problems.
 
 # CAVEATS
 

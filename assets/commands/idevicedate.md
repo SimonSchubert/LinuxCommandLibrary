@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays or sets the date and time on iOS devices
+
 # TLDR
 
 **Show device date and time**

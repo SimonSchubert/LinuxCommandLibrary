@@ -1,3 +1,7 @@
+# TAGLINE
+
+sends L2CAP echo requests to a Bluetooth device, similar to ping for IP networks
+
 # TLDR
 
 **Ping a Bluetooth device**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PBM bitmaps to Epson printer control codes for direct printing
+
 # TLDR
 
 **Convert PBM to Epson printer format**

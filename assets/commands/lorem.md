@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates Lorem Ipsum placeholder text
+
 # TLDR
 
 **Generate paragraphs**
@@ -49,8 +53,6 @@ _COUNT_
 **lorem** generates Lorem Ipsum placeholder text. It creates dummy text for design and development.
 
 The tool produces paragraphs, sentences, or words of standard Lorem Ipsum text.
-
-lorem generates placeholder text.
 
 # CAVEATS
 

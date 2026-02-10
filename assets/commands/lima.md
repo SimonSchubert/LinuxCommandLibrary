@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs Linux VMs on macOS
+
 # TLDR
 
 **Create default VM**
@@ -59,8 +63,6 @@ _COMMAND_
 **lima** (Linux Machines) runs Linux VMs on macOS. It provides automatic file sharing and port forwarding.
 
 The tool uses QEMU for virtualization. It's commonly used for running containerd and Docker on macOS.
-
-lima runs Linux VMs on macOS.
 
 # CAVEATS
 

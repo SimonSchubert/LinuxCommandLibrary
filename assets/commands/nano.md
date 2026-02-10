@@ -1,3 +1,7 @@
+# TAGLINE
+
+simple text editor
+
 # TLDR
 
 **Open file**
@@ -63,8 +67,6 @@ _FILE_
 **nano** is a simple text editor. It provides an easy-to-use terminal editor.
 
 The tool shows shortcuts at bottom. Beginner-friendly alternative to vi/vim.
-
-nano is simple terminal editor.
 
 # CAVEATS
 

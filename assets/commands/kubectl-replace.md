@@ -1,3 +1,7 @@
+# TAGLINE
+
+replaces a resource by filename or stdin
+
 # TLDR
 
 **Replace resource from file**

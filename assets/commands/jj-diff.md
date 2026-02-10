@@ -1,3 +1,7 @@
+# TAGLINE
+
+shows differences between revisions in Jujutsu
+
 # TLDR
 
 **Show working copy diff**

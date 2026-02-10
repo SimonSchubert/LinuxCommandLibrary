@@ -1,3 +1,7 @@
+# TAGLINE
+
+encrypts Kubernetes secrets for safe storage
+
 # TLDR
 
 **Seal secret**
@@ -46,11 +50,9 @@
 
 # DESCRIPTION
 
-**kubeseal** encrypts Kubernetes secrets for safe storage. It creates SealedSecrets that only the cluster can decrypt.
+**kubeseal** is a client-side tool for encrypting Kubernetes Secret resources into SealedSecret objects that are safe to store in version control. It uses asymmetric encryption with a public key fetched from the Sealed Secrets controller running in the cluster, ensuring that only that specific controller can decrypt the data back into a usable Secret.
 
-The tool enables GitOps with secrets. Sealed secrets can be committed to version control safely.
-
-kubeseal encrypts K8s secrets.
+The tool reads a standard Kubernetes Secret from stdin or a file, encrypts it, and outputs a SealedSecret custom resource in YAML or JSON format. This enables GitOps workflows where all cluster configuration, including secrets, can be committed to a Git repository without exposing sensitive values. Each SealedSecret is scoped to a specific namespace and cluster by default, preventing re-use of encrypted data across environments.
 
 # CAVEATS
 

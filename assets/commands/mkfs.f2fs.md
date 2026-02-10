@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates a Flash-Friendly File System on block devices
+
 # TLDR
 
 Create an **F2FS filesystem** inside partition Y on device X

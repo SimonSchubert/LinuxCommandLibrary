@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts source code to formatted output with syntax highlighting
+
 # TLDR
 
 **Highlight source code**

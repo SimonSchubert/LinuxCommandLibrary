@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PBM bitmaps to Encapsulated PostScript Interchange format
+
 # TLDR
 
 **Convert PBM to EPSI format**

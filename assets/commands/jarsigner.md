@@ -1,3 +1,7 @@
+# TAGLINE
+
+signs and verifies Java Archive files
+
 # TLDR
 
 **Sign JAR file**

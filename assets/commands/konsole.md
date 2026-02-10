@@ -1,3 +1,7 @@
+# TAGLINE
+
+KDE's terminal emulator application
+
 # TLDR
 
 Open terminal in a **specific directory**

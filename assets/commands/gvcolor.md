@@ -1,3 +1,7 @@
+# TAGLINE
+
+graphviz filter that colors nodes in a ranked directed graph
+
 # TLDR
 
 **Color a graph by rank**

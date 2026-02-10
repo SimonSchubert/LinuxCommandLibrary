@@ -1,3 +1,7 @@
+# TAGLINE
+
+user-friendly HTTP client for the command line
+
 # TLDR
 
 **Simple GET request**

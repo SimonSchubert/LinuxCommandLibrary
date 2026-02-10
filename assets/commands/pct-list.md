@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays all LXC containers on a Proxmox VE host
+
 # TLDR
 
 **List all containers**
@@ -19,8 +23,6 @@
 # DESCRIPTION
 
 **pct list** displays all LXC containers on a Proxmox VE host. It shows container ID, status, lock state, and name.
-
-Part of the Proxmox container management toolkit.
 
 # EXAMPLE OUTPUT
 

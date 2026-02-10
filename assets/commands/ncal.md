@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays a calendar in a vertical format where weeks run down the screen
+
 # TLDR
 
 This command is an alias of **cal** with vertical calendar layout.

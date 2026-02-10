@@ -1,3 +1,7 @@
+# TAGLINE
+
+joe's Own Editor, a terminal text editor
+
 # TLDR
 
 **Open file**
@@ -49,8 +53,6 @@ _FILE_
 **joe** is Joe's Own Editor, a terminal text editor. It supports multiple editing modes including WordStar and Emacs.
 
 The editor features syntax highlighting, macros, and split windows. Key bindings are configurable.
-
-joe is a terminal text editor.
 
 # CAVEATS
 

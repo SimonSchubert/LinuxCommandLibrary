@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs commands in parallel
+
 # TLDR
 
 **Run command on hosts**
@@ -46,8 +50,6 @@
 **pdsh** runs commands in parallel. Parallel distributed shell.
 
 The tool executes on multiple hosts. High performance cluster administration.
-
-pdsh executes in parallel.
 
 # CAVEATS
 

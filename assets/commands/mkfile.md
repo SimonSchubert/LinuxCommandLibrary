@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates files of specified size
+
 # TLDR
 
 **Create file of size**
@@ -46,8 +50,6 @@ _FILE_
 **mkfile** creates files of specified size. It can create empty files or sparse files.
 
 The tool is useful for testing and creating disk images. Sparse files don't allocate full space.
-
-mkfile creates sized files.
 
 # CAVEATS
 

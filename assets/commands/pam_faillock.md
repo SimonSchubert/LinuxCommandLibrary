@@ -1,3 +1,7 @@
+# TAGLINE
+
+PAM module that denies access after multiple failed authentication
+
 # TLDR
 
 **Show failed login attempts**

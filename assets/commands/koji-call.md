@@ -1,3 +1,7 @@
+# TAGLINE
+
+executes an arbitrary XML-RPC call to the Koji hub
+
 # TLDR
 
 Execute **arbitrary XML-RPC call** to Koji hub

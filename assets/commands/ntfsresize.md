@@ -1,3 +1,7 @@
+# TAGLINE
+
+resizes NTFS filesystems without data loss
+
 # TLDR
 
 **Show current size and minimum**

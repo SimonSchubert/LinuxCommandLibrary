@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays the revision history
+
 # TLDR
 
 **Show log**
@@ -53,8 +57,6 @@
 **jj log** displays the revision history. It shows a graph of changes with descriptions and metadata.
 
 The command supports revsets for filtering. It visualizes branches and merges in the history graph.
-
-jj log shows revision history.
 
 # CAVEATS
 

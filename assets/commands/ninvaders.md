@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal Space Invaders game
+
 # TLDR
 
 **Play game**
@@ -32,8 +36,6 @@
 **ninvaders** is a terminal Space Invaders game. Classic arcade gameplay in the terminal.
 
 The tool uses ncurses for display. Keyboard controlled shooter game.
-
-ninvaders is terminal Space Invaders.
 
 # CAVEATS
 

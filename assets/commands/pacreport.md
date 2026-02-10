@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates reports about installed packages and system state
+
 # TLDR
 
 Generate a **summary** of installed packages

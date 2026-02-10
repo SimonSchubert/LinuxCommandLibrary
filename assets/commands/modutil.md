@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages PKCS#11 security modules in NSS databases
+
 # TLDR
 
 **List modules**

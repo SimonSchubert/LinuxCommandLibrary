@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages Linode account information
+
 # TLDR
 
 **Show account info**

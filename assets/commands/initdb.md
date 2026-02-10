@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates a new PostgreSQL database cluster
+
 # TLDR
 
 **Initialize PostgreSQL database cluster**

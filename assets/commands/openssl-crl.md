@@ -1,3 +1,7 @@
+# TAGLINE
+
+processes Certificate Revocation Lists
+
 # TLDR
 
 **View CRL contents**

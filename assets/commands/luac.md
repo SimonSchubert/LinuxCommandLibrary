@@ -1,3 +1,7 @@
+# TAGLINE
+
+compiles Lua source code into bytecode
+
 # TLDR
 
 **Compile Lua script to bytecode**

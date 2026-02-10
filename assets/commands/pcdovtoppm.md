@@ -1,3 +1,7 @@
+# TAGLINE
+
+extracts the overview image from a Kodak PhotoCD file and converts to PPM
+
 # TLDR
 
 **Convert PhotoCD overview to PPM**

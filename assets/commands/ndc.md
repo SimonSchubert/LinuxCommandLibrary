@@ -1,3 +1,7 @@
+# TAGLINE
+
+BIND name daemon controller
+
 # TLDR
 
 **Reload BIND configuration**
@@ -59,8 +63,6 @@ _COMMAND_
 **ndc** is the BIND name daemon controller. It manages the BIND DNS server.
 
 The tool sends commands to named. Legacy tool, replaced by rndc.
-
-ndc controls BIND DNS server.
 
 # CAVEATS
 

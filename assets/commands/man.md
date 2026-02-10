@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays manual pages
+
 # TLDR
 
 **View man page**
@@ -56,8 +60,6 @@ _SECTION_
 **man** displays manual pages. Man pages document commands, system calls, and configuration.
 
 The tool is the primary Unix documentation system. Sections organize different types of documentation.
-
-man shows manual pages.
 
 # CAVEATS
 

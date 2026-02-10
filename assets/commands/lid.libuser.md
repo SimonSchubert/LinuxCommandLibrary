@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays information about group membership on Linux systems
+
 # TLDR
 
 List **primary and secondary groups** of a specific user

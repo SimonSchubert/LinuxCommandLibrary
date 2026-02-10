@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages packages in GNU Guix, a functional package manager
+
 # TLDR
 
 **Install** a package

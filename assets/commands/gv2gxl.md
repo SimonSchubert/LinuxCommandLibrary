@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts Graphviz DOT format to GXL
+
 # TLDR
 
 **Convert DOT to GXL**
@@ -35,8 +39,6 @@ _FILES_
 **gv2gxl** converts Graphviz DOT format to GXL (Graph eXchange Language). GXL is an XML-based format for graph interchange.
 
 The tool translates graph structure to XML representation. It's useful for processing graphs with XML tools or exchanging with other graph systems.
-
-gv2gxl converts Graphviz to GXL format.
 
 # CAVEATS
 

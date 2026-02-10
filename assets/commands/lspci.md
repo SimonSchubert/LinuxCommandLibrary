@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays information about PCI buses in the system and devices connected to them
+
 # TLDR
 
 Show **brief list** of devices

@@ -1,3 +1,7 @@
+# TAGLINE
+
+official CLI for JFrog platform
+
 # TLDR
 
 **Configure server**
@@ -56,8 +60,6 @@
 **jfrog** is the official CLI for JFrog platform. It interacts with Artifactory, Xray, and other JFrog services.
 
 The tool manages binary artifacts across all package types. It integrates with CI/CD for build info and security scanning.
-
-jfrog manages artifact repositories.
 
 # CAVEATS
 

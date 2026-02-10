@@ -1,3 +1,7 @@
+# TAGLINE
+
+port of Meta's LLaMA model to C/C++ for efficient CPU and GPU inference
+
 # TLDR
 
 **Run interactive chat**

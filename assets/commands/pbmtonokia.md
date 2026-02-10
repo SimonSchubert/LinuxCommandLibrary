@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PBM bitmaps to various Nokia phone formats for logos and graphics
+
 # TLDR
 
 **Convert PBM to Nokia format**

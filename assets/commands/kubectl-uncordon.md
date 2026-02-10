@@ -1,3 +1,7 @@
+# TAGLINE
+
+marks a node as schedulable
+
 # TLDR
 
 **Uncordon node**
@@ -39,8 +43,6 @@ _NODE_
 **kubectl uncordon** marks a node as schedulable. It reverses the effect of cordon.
 
 The command is used after node maintenance. New pods can be scheduled once uncordoned.
-
-kubectl uncordon restores scheduling.
 
 # CAVEATS
 

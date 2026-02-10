@@ -1,3 +1,7 @@
+# TAGLINE
+
+decodes Opus audio files to WAV or raw PCM
+
 # TLDR
 
 **Decode Opus to WAV**
@@ -50,8 +54,6 @@
 # DESCRIPTION
 
 **opusdec** decodes Opus audio files to WAV or raw PCM. Opus is a versatile audio codec designed for both speech and music, widely used in WebRTC and streaming.
-
-Part of the opus-tools package.
 
 # EXAMPLE
 

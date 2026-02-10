@@ -1,3 +1,7 @@
+# TAGLINE
+
+performs three-way file merge
+
 # TLDR
 
 **Three-way merge**
@@ -48,8 +52,6 @@ _FILE3_
 **merge** performs three-way file merge. It combines changes from two files based on a common ancestor.
 
 The tool is part of RCS. It writes conflicts with markers for manual resolution.
-
-merge combines file changes.
 
 # CAVEATS
 

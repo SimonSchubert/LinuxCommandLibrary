@@ -1,3 +1,7 @@
+# TAGLINE
+
+bash builtin that declares variables with local scope within a function
+
 # TLDR
 
 **Declare local variable**

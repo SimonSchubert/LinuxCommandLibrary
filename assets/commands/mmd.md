@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates directories on MS-DOS filesystems
+
 # TLDR
 
 **Create directory on MS-DOS**
@@ -36,8 +40,6 @@ _DIRECTORIES_
 **mmd** creates directories on MS-DOS filesystems. It's part of mtools.
 
 The tool creates directories on FAT filesystems without mounting.
-
-mmd creates MS-DOS directories.
 
 # CAVEATS
 

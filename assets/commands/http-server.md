@@ -1,3 +1,7 @@
+# TAGLINE
+
+simple static file server
+
 # TLDR
 
 **Start server**
@@ -59,8 +63,6 @@ _PATH_
 **http-server** is a simple static file server. It serves files from a directory over HTTP with no configuration required.
 
 The tool is useful for development, testing, and quick file sharing. It supports SSL, CORS, and basic caching.
-
-http-server serves static files locally.
 
 # CAVEATS
 

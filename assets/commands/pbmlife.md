@@ -1,3 +1,7 @@
+# TAGLINE
+
+applies Game of Life rules
+
 # TLDR
 
 **Run Game of Life iteration**
@@ -22,8 +26,6 @@ _FILE_
 **pbmlife** applies Game of Life rules. Single generation step.
 
 The tool simulates cellular automata. Conway's Game of Life.
-
-pbmlife runs life simulation.
 
 # CAVEATS
 

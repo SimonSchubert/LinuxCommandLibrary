@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages Jujutsu's operation log
+
 # TLDR
 
 **List operations**

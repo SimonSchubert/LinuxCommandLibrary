@@ -1,3 +1,7 @@
+# TAGLINE
+
+wrapper around GnuPG for managing the keyring used by pacman to verify package
+
 # TLDR
 
 **Initialize** the pacman keyring

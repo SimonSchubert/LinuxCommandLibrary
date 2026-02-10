@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line interface for Perplexity AI, enabling terminal-based
+
 # TLDR
 
 **Ask a question** to Perplexity AI

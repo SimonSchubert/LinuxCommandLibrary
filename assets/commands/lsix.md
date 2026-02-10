@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays images in the terminal
+
 # TLDR
 
 **Display images**
@@ -40,8 +44,6 @@ _FILES_
 **lsix** displays images in the terminal. It requires a terminal with sixel graphics support.
 
 The tool creates thumbnails in the terminal. It works with terminals like xterm, mlterm, and foot.
-
-lsix shows images in terminal.
 
 # CAVEATS
 

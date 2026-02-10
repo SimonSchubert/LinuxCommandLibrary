@@ -1,3 +1,7 @@
+# TAGLINE
+
+lists Java Virtual Machine processes
+
 # TLDR
 
 **List Java processes**
@@ -53,8 +57,6 @@ _HOSTID_
 **jps** lists Java Virtual Machine processes. It shows running Java applications with their PIDs.
 
 The tool is the Java equivalent of ps for Java processes. It provides quick identification of Java applications.
-
-jps lists Java processes.
 
 # CAVEATS
 

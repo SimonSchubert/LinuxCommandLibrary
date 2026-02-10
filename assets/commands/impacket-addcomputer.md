@@ -1,3 +1,7 @@
+# TAGLINE
+
+tool from the Impacket library that allows adding or removing computer
+
 # TLDR
 
 **Add a computer account** to the domain using default credentials

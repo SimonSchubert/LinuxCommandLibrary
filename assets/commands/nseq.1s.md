@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates sequences of numbers
+
 # TLDR
 
 **Generate sequence numbers**
@@ -35,8 +39,6 @@ _LAST_
 **nseq** generates sequences of numbers. OpenSSL utility variant.
 
 The tool outputs numeric sequences. Part of OpenSSL tools.
-
-nseq generates number sequences.
 
 # CAVEATS
 

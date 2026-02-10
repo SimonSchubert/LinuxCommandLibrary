@@ -1,3 +1,7 @@
+# TAGLINE
+
+splits multi-image files
+
 # TLDR
 
 **Split multi-image file**
@@ -28,8 +32,6 @@ _OUTPUT_TEMPLATE_
 **pamsplit** splits multi-image files. Creates separate files per image.
 
 The tool extracts image sequences. Part of Netpbm.
-
-pamsplit splits image files.
 
 # CAVEATS
 

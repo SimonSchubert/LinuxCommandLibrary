@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages GitHub issues from the command line
+
 # TLDR
 
 **List open issues**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+checks PostgreSQL database corruption using Access Method verification
+
 # TLDR
 
 **Check all databases**

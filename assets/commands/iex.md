@@ -1,3 +1,7 @@
+# TAGLINE
+
+interactive Elixir shell
+
 # TLDR
 
 **Start interactive Elixir**
@@ -56,8 +60,6 @@ _FILE_
 **iex** is the Interactive Elixir shell. It provides a REPL for evaluating Elixir expressions and exploring code.
 
 The shell supports tab completion, history, and documentation lookup. It integrates with Mix projects and remote nodes.
-
-iex is the Elixir interactive shell.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+advanced log file viewer that leverages semantic information from log files
+
 # TLDR
 
 View **log files**

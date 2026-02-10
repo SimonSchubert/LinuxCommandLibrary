@@ -1,3 +1,7 @@
+# TAGLINE
+
+shows the status of the working copy in Jujutsu
+
 # TLDR
 
 **Show working copy status**

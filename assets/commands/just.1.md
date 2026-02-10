@@ -1,3 +1,7 @@
+# TAGLINE
+
+command runner that reads recipes from a justfile
+
 # TLDR
 
 **Run default recipe**

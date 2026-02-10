@@ -1,3 +1,7 @@
+# TAGLINE
+
+resets properties on files managed by alpm
+
 # TLDR
 
 Search for package and **reset file properties**

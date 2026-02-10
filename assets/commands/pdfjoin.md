@@ -1,3 +1,7 @@
+# TAGLINE
+
+joins PDF files
+
 # TLDR
 
 **Join PDFs**
@@ -53,8 +57,6 @@ Part of pdfjam utilities. Uses LaTeX pdfpages package.
 Page selection supported. Specify ranges or individual pages.
 
 Preserves PDF quality. No recompression.
-
-Simple interface for merging. Wrapper around pdfjam.
 
 # CAVEATS
 

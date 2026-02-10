@@ -1,3 +1,7 @@
+# TAGLINE
+
+searches npm help documentation
+
 # TLDR
 
 **Search help topics**

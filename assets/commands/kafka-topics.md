@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages Kafka topics
+
 # TLDR
 
 **Create topic**

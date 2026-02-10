@@ -1,3 +1,7 @@
+# TAGLINE
+
+reads files from remote Windows systems via SMB by directly parsing the NTFS
+
 # TLDR
 
 **Read a file from a remote NTFS share**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+real-time reporting tool for Intel Core i3, i5, and i7 processors
+
 # TLDR
 
 **Start** i7z monitoring (requires root)

@@ -1,3 +1,7 @@
+# TAGLINE
+
+load testing tool for web applications
+
 # TLDR
 
 **Launch GUI**
@@ -59,8 +63,6 @@
 **JMeter** is a load testing tool for web applications. It simulates heavy loads on servers to test performance.
 
 The tool supports HTTP, JDBC, FTP, and other protocols. It provides graphical test design and result analysis.
-
-JMeter performs load testing.
 
 # CAVEATS
 

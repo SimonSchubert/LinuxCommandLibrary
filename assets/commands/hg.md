@@ -1,3 +1,7 @@
+# TAGLINE
+
+distributed version control system
+
 # TLDR
 
 **Initialize repository**
@@ -73,8 +77,6 @@ _COMMAND_
 **Mercurial** (hg) is a distributed version control system. It tracks changes in source code and supports branching, merging, and collaboration.
 
 Mercurial is similar to Git but with different command syntax and philosophy. It emphasizes simplicity and consistency in its interface.
-
-hg provides distributed version control.
 
 # CAVEATS
 

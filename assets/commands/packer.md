@@ -1,3 +1,7 @@
+# TAGLINE
+
+HashiCorp's tool for creating machine images across multiple platforms
+
 # TLDR
 
 **Build image from template**

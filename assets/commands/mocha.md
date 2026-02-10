@@ -1,3 +1,7 @@
+# TAGLINE
+
+JavaScript test framework
+
 # TLDR
 
 **Run tests**
@@ -56,8 +60,6 @@ _FILES_
 **mocha** is a JavaScript test framework. It runs in Node.js and browsers.
 
 The tool provides BDD/TDD testing styles. Supports async tests and many reporters.
-
-mocha runs JavaScript tests.
 
 # CAVEATS
 

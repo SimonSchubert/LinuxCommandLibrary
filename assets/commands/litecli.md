@@ -1,3 +1,7 @@
+# TAGLINE
+
+SQLite CLI with auto-completion
+
 # TLDR
 
 **Connect to database**
@@ -53,8 +57,6 @@ _DATABASE_
 **litecli** is a SQLite CLI with auto-completion. It provides syntax highlighting and intelligent suggestions.
 
 The tool offers a better interactive experience than sqlite3 with multiline editing and history.
-
-litecli is enhanced SQLite client.
 
 # CAVEATS
 

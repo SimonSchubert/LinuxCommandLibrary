@@ -40,7 +40,7 @@ function updateList(collapse) {
 function updatePanel(button) {
 	var panel = button.nextElementSibling;
 	if (button.classList.contains("active")) {
-		panel.style.display = "block";
+		panel.style.display = "flow-root";
 	} else {
 		panel.style.display = "none";
 	}

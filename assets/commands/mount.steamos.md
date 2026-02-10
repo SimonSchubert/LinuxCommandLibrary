@@ -1,3 +1,7 @@
+# TAGLINE
+
+mounts or unmounts SteamOS filesystem partitions, used primarily for accessing
+
 # TLDR
 
 **Mount** all necessary partitions from a device to a target directory

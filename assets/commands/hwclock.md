@@ -1,3 +1,7 @@
+# TAGLINE
+
+reads and sets the hardware clock, which is a battery-backed clock
+
 # TLDR
 
 Display the **current time** from the hardware clock

@@ -1,3 +1,7 @@
+# TAGLINE
+
+checks binary packages and source PKGBUILDs for common packaging
+
 # TLDR
 
 Check a **PKGBUILD** file for issues

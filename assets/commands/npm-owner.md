@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages package ownership
+
 # TLDR
 
 **List package owners**
@@ -38,8 +42,6 @@ _COMMAND_
 **npm owner** manages package ownership. Controls who can publish updates.
 
 The command modifies maintainers. Requires current owner privileges.
-
-npm owner manages maintainers.
 
 # CAVEATS
 

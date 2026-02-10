@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs npm install followed by npm test
+
 # TLDR
 
 **Install and test**
@@ -22,8 +26,6 @@
 **npm it** runs npm install followed by npm test. Shortcut for common workflow.
 
 The command combines install and test. Alias for npm install-test.
-
-npm it installs then tests.
 
 # CAVEATS
 

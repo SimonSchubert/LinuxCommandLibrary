@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates a new package
+
 # TLDR
 
 **Initialize new project**
@@ -47,10 +51,6 @@
 **npm init** creates a new package.json file. Without an initializer, it prompts for package details. With an initializer, it runs that package's setup process.
 
 Initializers like "react-app" are shorthand for "create-react-app".
-
-# EXAMPLES
-
-```bash
 # Interactive
 npm init
 # Answer prompts...

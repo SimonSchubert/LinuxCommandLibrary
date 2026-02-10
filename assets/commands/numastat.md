@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays memory statistics for NUMA systems
+
 # TLDR
 
 **Show NUMA statistics**

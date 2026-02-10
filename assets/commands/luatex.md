@@ -1,3 +1,7 @@
+# TAGLINE
+
+extended TeX engine with embedded Lua scripting
+
 # TLDR
 
 **Compile LaTeX document**

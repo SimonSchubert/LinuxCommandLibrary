@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line HTTP client from the LWP suite
+
 # TLDR
 
 **GET request**

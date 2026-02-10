@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages SSH and GPG agent processes
+
 # TLDR
 
 **Start SSH agent**
@@ -53,11 +57,9 @@ _KEYS_
 
 # DESCRIPTION
 
-**keychain** manages SSH and GPG agent processes. It reuses agents across login sessions.
+**keychain** is a front-end to ssh-agent and gpg-agent that manages long-running agent processes across login sessions. Rather than starting a new agent each time a shell is opened, keychain checks for an existing agent, reuses it if found, and only starts a new one when necessary, storing the agent's environment variables in files under `~/.keychain` so any shell can inherit them.
 
-The tool starts agents once and inherits them. It avoids repeated passphrase prompts across terminals.
-
-keychain manages SSH/GPG agents.
+This approach means you only need to enter your passphrase once after a reboot, and all subsequent terminal sessions, cron jobs, and scripts can use the cached keys without further prompting. The tool supports managing both SSH and GPG keys simultaneously via the `--agents` flag and outputs shell-evaluable commands that set the appropriate `SSH_AUTH_SOCK` and `GPG_AGENT_INFO` environment variables.
 
 # CAVEATS
 

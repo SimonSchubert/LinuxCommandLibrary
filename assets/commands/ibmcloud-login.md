@@ -1,3 +1,7 @@
+# TAGLINE
+
+authenticates to IBM Cloud
+
 # TLDR
 
 **Login interactively**

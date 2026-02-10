@@ -1,3 +1,7 @@
+# TAGLINE
+
+modifies images in place
+
 # TLDR
 
 **Resize images in place**
@@ -56,8 +60,6 @@ _FILES_
 **mogrify** modifies images in place. It's ImageMagick's batch processing tool.
 
 The tool transforms multiple images at once. Unlike convert, it overwrites originals.
-
-mogrify batch modifies images.
 
 # CAVEATS
 

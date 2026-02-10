@@ -1,3 +1,7 @@
+# TAGLINE
+
+modern terminal text editor
+
 # TLDR
 
 **Open file**
@@ -53,8 +57,6 @@ _FILES_
 **micro** is a modern terminal text editor. It provides intuitive keybindings and mouse support.
 
 The tool is easy to use like nano but more powerful. Supports syntax highlighting and plugins.
-
-micro is a modern terminal editor.
 
 # CAVEATS
 

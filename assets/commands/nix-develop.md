@@ -1,3 +1,7 @@
+# TAGLINE
+
+enters a development shell
+
 # TLDR
 
 **Enter development shell**
@@ -50,8 +54,6 @@ _INSTALLABLE_
 **nix develop** enters a development shell. It provides build dependencies.
 
 The tool sets up environment variables. Based on flake devShell or shell.nix.
-
-nix develop creates dev environment.
 
 # CAVEATS
 

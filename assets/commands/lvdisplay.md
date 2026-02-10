@@ -1,3 +1,7 @@
+# TAGLINE
+
+shows detailed information about LVM logical volumes including size
+
 # TLDR
 
 Display **all** logical volumes

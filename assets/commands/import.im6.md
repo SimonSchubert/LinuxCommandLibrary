@@ -1,3 +1,7 @@
+# TAGLINE
+
+ImageMagick 6 version of the import screen capture tool
+
 # TLDR
 
 **Capture entire screen**
@@ -42,8 +46,6 @@
 **import.im6** is the ImageMagick 6 version of the import screen capture tool. It captures X Window screenshots to various image formats.
 
 This legacy version is maintained for compatibility with scripts depending on ImageMagick 6 behavior.
-
-import.im6 is legacy ImageMagick screen capture.
 
 # CAVEATS
 

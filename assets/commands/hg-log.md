@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays repository commit history
+
 # TLDR
 
 **Show commit history**
@@ -59,8 +63,6 @@ _FILE_
 **hg log** displays repository commit history. It shows changesets with author, date, summary, and other metadata.
 
 The command supports filtering by file, branch, or revision range. Graph mode visualizes branch and merge structure.
-
-hg log shows commit history.
 
 # CAVEATS
 

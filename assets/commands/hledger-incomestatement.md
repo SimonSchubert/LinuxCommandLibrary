@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays an income statement showing revenues and expenses for the report
+
 # TLDR
 
 **Show income statement**

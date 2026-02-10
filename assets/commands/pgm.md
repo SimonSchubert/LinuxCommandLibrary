@@ -1,3 +1,7 @@
+# TAGLINE
+
+grayscale image format in the Netpbm family
+
 # TLDR
 
 **View PGM format info**

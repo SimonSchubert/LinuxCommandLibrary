@@ -1,3 +1,7 @@
+# TAGLINE
+
+PHP build tool
+
 # TLDR
 
 **Run default target**
@@ -49,8 +53,6 @@ _TARGET_
 **phing** is PHP build tool. Port of Apache Ant to PHP.
 
 The tool automates PHP builds. XML-based configuration.
-
-phing builds PHP projects.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+watches for and displays NetworkManager events in real-time
+
 # TLDR
 
 Start **monitoring** NetworkManager changes

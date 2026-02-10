@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays help information for OpenStack CLI commands
+
 # TLDR
 
 **Show general help**

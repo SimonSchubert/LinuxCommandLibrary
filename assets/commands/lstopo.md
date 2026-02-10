@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays hardware topology including CPUs, caches, memory, and I/O devices
+
 # TLDR
 
 **Show hardware topology**

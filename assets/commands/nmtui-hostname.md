@@ -1,3 +1,7 @@
+# TAGLINE
+
+set hostname via TUI
+
 # TLDR
 
 This command is an alias of [nmtui hostname](/man/nmtui).

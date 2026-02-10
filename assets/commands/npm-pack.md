@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates a tarball of a package exactly as it would be published
+
 # TLDR
 
 **Pack current package**

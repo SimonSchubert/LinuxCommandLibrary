@@ -1,3 +1,7 @@
+# TAGLINE
+
+symbolic link to **mount
+
 # TLDR
 
 This command is an alias of **mount.cifs** with SMB3 as the default protocol version.

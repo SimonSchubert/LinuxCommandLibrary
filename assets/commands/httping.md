@@ -1,3 +1,7 @@
+# TAGLINE
+
+measures the latency and throughput of a web server by sending HTTP requests
+
 # TLDR
 
 **Ping a URL**

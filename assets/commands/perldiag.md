@@ -1,3 +1,7 @@
+# TAGLINE
+
+perl documentation file containing all diagnostic messages that Perl can produce
+
 # TLDR
 
 **View all Perl diagnostics**
@@ -27,10 +31,6 @@
 **perldiag** is a Perl documentation file containing all diagnostic messages that Perl can produce. Each message includes explanation and suggested fixes.
 
 Access via perldoc or use diagnostics module for runtime explanations.
-
-# EXAMPLES
-
-```bash
 # Read full diagnostics
 perldoc perldiag
 

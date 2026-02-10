@@ -1,3 +1,7 @@
+# TAGLINE
+
+shell built-in that manages the hash table of recently executed commands
+
 # TLDR
 
 **Show command hash table**
@@ -46,8 +50,6 @@
 **hash** is a shell built-in that manages the hash table of recently executed commands. The shell uses this table to remember the full paths of commands, avoiding repeated PATH searches.
 
 When a command is executed, the shell stores its path in the hash table. Subsequent invocations use the cached path, improving performance.
-
-# EXAMPLES
 
 ```bash
 # View hash table

@@ -1,3 +1,7 @@
+# TAGLINE
+
+CLI for stacked diffs workflow
+
 # TLDR
 
 **Create new branch**
@@ -49,8 +53,6 @@ _COMMAND_
 **gt** (Graphite) is a CLI for stacked diffs workflow. It manages dependent branches and streamlines code review by organizing changes into logical stacks.
 
 The tool integrates with GitHub for pull request management. It simplifies rebasing and updating of branch stacks.
-
-gt manages stacked branches for code review.
 
 # CAVEATS
 

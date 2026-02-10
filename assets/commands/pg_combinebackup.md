@@ -1,3 +1,7 @@
+# TAGLINE
+
+merges incremental backups with a full backup
+
 # TLDR
 
 **Combine incremental backups**

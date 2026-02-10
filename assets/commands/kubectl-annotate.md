@@ -1,3 +1,7 @@
+# TAGLINE
+
+adds or updates annotations on Kubernetes resources
+
 # TLDR
 
 **Add annotation to resource**

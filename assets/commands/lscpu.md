@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays information about the CPU architecture gathered from /proc/cpuinfo
+
 # TLDR
 
 Display information about **all CPUs**

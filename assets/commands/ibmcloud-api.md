@@ -1,3 +1,7 @@
+# TAGLINE
+
+sets or displays the IBM Cloud API endpoint
+
 # TLDR
 
 **Show current API endpoint**

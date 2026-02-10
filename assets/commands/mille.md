@@ -1,3 +1,7 @@
+# TAGLINE
+
+card game Mille Bornes
+
 # TLDR
 
 **Play Mille Bornes**
@@ -29,8 +33,6 @@
 **mille** is the card game Mille Bornes. It's a classic racing card game in the terminal.
 
 The tool is part of bsdgames. Players race to reach 1000 miles while avoiding hazards.
-
-mille is Mille Bornes game.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+lists installed packages
+
 # TLDR
 
 **List installed packages**
@@ -57,8 +61,6 @@ _PACKAGE_
 **npm ls** lists installed packages. Shows dependency tree.
 
 The command displays package hierarchy. Identifies dependency versions.
-
-npm ls shows installed packages.
 
 # CAVEATS
 

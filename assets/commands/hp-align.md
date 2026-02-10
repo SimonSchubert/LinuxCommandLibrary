@@ -1,3 +1,7 @@
+# TAGLINE
+
+aligns print cartridges on HP printers
+
 # TLDR
 
 **Align print heads**
@@ -45,8 +49,6 @@
 **hp-align** aligns print cartridges on HP printers. It runs the alignment procedure to ensure optimal print quality.
 
 The tool supports automatic and interactive alignment modes. Interactive mode displays alignment patterns and asks for best match selection.
-
-hp-align calibrates HP printer heads.
 
 # CAVEATS
 

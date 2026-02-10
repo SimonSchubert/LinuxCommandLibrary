@@ -1,3 +1,7 @@
+# TAGLINE
+
+extracts RCS keywords from files
+
 # TLDR
 
 **Show RCS keywords**
@@ -39,8 +43,6 @@ _FILES_
 **ident** extracts RCS keywords from files. It finds and displays embedded version control information like $Id$ and $Revision$.
 
 The tool scans binary and text files for RCS keyword patterns. It's used to identify file versions in builds.
-
-ident shows RCS keywords in files.
 
 # CAVEATS
 

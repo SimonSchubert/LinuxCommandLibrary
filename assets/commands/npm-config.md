@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages npm configuration
+
 # TLDR
 
 **List all config**
@@ -60,8 +64,6 @@ _COMMAND_
 **npm config** manages npm configuration. Controls registry, proxy, and other settings.
 
 The command modifies .npmrc files. Per-project or global configuration.
-
-npm config manages settings.
 
 # CAVEATS
 

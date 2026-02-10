@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates device mapper entries for the partitions within a disk image or block
+
 # TLDR
 
 **Add** partition mappings and print them

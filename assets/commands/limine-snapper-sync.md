@@ -1,3 +1,7 @@
+# TAGLINE
+
+synchronizes Limine bootloader menu entries with Btrfs snapshots
+
 # TLDR
 
 Manually **synchronize Snapper snapshots** to create boot entries in Limine

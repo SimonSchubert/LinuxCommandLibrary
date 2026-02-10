@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs linting on Angular project source code
+
 # TLDR
 
 **Lint project**

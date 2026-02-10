@@ -1,3 +1,7 @@
+# TAGLINE
+
+high-performance DNS stub resolver for bulk lookups
+
 # TLDR
 
 **Resolve domains from file**

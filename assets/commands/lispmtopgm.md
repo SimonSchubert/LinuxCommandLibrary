@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts Lisp Machine bitmap format to PGM grayscale
+
 # TLDR
 
 **Convert Lisp Machine bitmap to PGM**

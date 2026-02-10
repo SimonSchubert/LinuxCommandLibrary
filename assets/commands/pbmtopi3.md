@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PBM bitmaps to Atari Degas PI3 high-resolution format
+
 # TLDR
 
 **Convert PBM to Atari Degas PI3 format**

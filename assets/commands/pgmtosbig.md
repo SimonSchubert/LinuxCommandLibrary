@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PGM images to SBIG format used by astronomical CCD cameras
+
 # TLDR
 
 **Convert PGM to SBIG format**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+simple command-line note-taking application
+
 # TLDR
 
 **Create new note**

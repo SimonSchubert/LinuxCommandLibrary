@@ -1,3 +1,7 @@
+# TAGLINE
+
+program to manipulate disk partitions
+
 # TLDR
 
 List partitions on **all block devices**

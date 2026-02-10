@@ -1,3 +1,7 @@
+# TAGLINE
+
+PHP micro-framework by Laravel
+
 # TLDR
 
 **Create new project**
@@ -44,8 +48,6 @@ _COMMAND_
 **lumen** is a PHP micro-framework by Laravel. It's designed for fast microservices and APIs.
 
 The framework provides routing, caching, and Eloquent ORM with minimal overhead.
-
-lumen is Laravel's micro-framework.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+provides interactive computing environments
+
 # TLDR
 
 **Start notebook server**
@@ -56,8 +60,6 @@
 **Jupyter** provides interactive computing environments. It runs notebook servers for code execution and documentation.
 
 The platform supports multiple languages through kernels. Notebooks combine code, output, and markdown.
-
-Jupyter runs interactive notebooks.
 
 # CAVEATS
 

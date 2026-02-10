@@ -1,3 +1,7 @@
+# TAGLINE
+
+puts an iOS device into recovery mode
+
 # TLDR
 
 **Enter recovery mode**
@@ -35,8 +39,6 @@ _UDID_
 **ideviceenterrecovery** puts an iOS device into recovery mode. Recovery mode is used for firmware restoration and troubleshooting.
 
 The tool sends the command to enter recovery via USB. The device must be paired and trusted.
-
-ideviceenterrecovery triggers iOS recovery.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+controls the Num Lock key state in X11 sessions
+
 # TLDR
 
 Show the current **number lock status**

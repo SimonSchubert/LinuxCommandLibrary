@@ -1,3 +1,7 @@
+# TAGLINE
+
+builds an RPM package using the Koji build system
+
 # TLDR
 
 Build from **src.rpm**

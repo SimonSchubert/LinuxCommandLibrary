@@ -1,3 +1,7 @@
+# TAGLINE
+
+web server and reverse proxy
+
 # TLDR
 
 **Start nginx**
@@ -64,8 +68,6 @@
 **nginx** is a web server and reverse proxy. It handles HTTP, HTTPS, and mail proxy.
 
 The tool serves static content. Supports load balancing and caching.
-
-nginx is high-performance web server.
 
 # CAVEATS
 

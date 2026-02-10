@@ -1,3 +1,7 @@
+# TAGLINE
+
+modern hex viewer for the terminal
+
 # TLDR
 
 **View file in hex**
@@ -59,8 +63,6 @@ _FILE_
 **hexyl** is a modern hex viewer for the terminal. It displays file contents with colored output distinguishing different byte types.
 
 The tool uses colors to highlight ASCII, non-ASCII, null bytes, and whitespace. It provides a clean, readable hex dump with offset and character views.
-
-hexyl displays colorful hex dumps.
 
 # CAVEATS
 

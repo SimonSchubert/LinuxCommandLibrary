@@ -1,3 +1,7 @@
+# TAGLINE
+
+fetches changes from Git remotes into a Jujutsu repository
+
 # TLDR
 
 **Fetch from default remote**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+sets system paper size
+
 # TLDR
 
 **Set default paper size**
@@ -29,8 +33,6 @@
 **paperconfig** sets system paper size. Configures default paper format.
 
 The tool modifies /etc/papersize. Part of libpaper.
-
-paperconfig configures paper.
 
 # CAVEATS
 

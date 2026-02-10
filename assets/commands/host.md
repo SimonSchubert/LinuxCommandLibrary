@@ -1,3 +1,7 @@
+# TAGLINE
+
+simple DNS lookup utility
+
 # TLDR
 
 **Lookup IP address**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates online books by writing Markdown files
+
 # TLDR
 
 **Create** an mdbook project in the current directory

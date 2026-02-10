@@ -1,3 +1,7 @@
+# TAGLINE
+
+short form of **pacman --query**, which queries the local package database
+
 # TLDR
 
 This command is an alias of **pacman --query**

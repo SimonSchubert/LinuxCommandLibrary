@@ -1,3 +1,7 @@
+# TAGLINE
+
+modern package management frontend for dpkg-based Linux distributions
+
 # TLDR
 
 Enter the **interactive** package management interface

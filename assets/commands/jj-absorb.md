@@ -1,3 +1,7 @@
+# TAGLINE
+
+automatically moves changes from the working copy into the appropriate
+
 # TLDR
 
 **Absorb changes into ancestor commits**

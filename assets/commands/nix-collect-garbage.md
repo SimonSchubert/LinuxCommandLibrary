@@ -1,3 +1,7 @@
+# TAGLINE
+
+removes unreferenced store paths from the Nix store
+
 # TLDR
 
 **Collect garbage**

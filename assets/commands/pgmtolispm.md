@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PGM images to Lisp Machine bitmap format
+
 # TLDR
 
 **Convert PGM to Lisp Machine format**

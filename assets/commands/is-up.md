@@ -1,3 +1,7 @@
+# TAGLINE
+
+checks if websites are accessible
+
 # TLDR
 
 **Check if site is up**
@@ -35,8 +39,6 @@ _URL_
 **is-up** checks if websites are accessible. It performs HTTP requests to verify site availability.
 
 The tool returns success if the site responds. Useful for quick uptime checks and scripting.
-
-is-up checks website availability.
 
 # CAVEATS
 

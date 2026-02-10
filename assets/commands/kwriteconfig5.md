@@ -1,3 +1,7 @@
+# TAGLINE
+
+writes values to KDE Plasma 5 configuration files
+
 # TLDR
 
 Set a **global configuration** key

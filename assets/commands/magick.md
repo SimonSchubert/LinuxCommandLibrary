@@ -1,3 +1,7 @@
+# TAGLINE
+
+primary command for ImageMagick 7+, replacing separate commands like
+
 # TLDR
 
 **Convert image format**

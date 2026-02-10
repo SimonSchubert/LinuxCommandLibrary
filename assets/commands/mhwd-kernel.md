@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages Linux kernel installation and removal on Manjaro Linux
+
 # TLDR
 
 List all **available kernels**

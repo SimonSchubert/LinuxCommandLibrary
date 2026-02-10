@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates project documentation website
+
 # TLDR
 
 **Generate project site**
@@ -53,8 +57,6 @@
 **mvn site** generates project documentation website. It creates HTML from project metadata.
 
 The goal produces reports, JavaDocs, and info pages. Configured via pom.xml reporting section.
-
-mvn site generates project docs.
 
 # CAVEATS
 

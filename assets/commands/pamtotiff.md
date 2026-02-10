@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PAM images to TIFF format
+
 # TLDR
 
 **Convert PAM to TIFF**

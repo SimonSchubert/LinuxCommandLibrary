@@ -1,3 +1,7 @@
+# TAGLINE
+
+manipulates package
+
 # TLDR
 
 **Get package.json field**
@@ -46,8 +50,6 @@ _COMMAND_
 **npm pkg** manipulates package.json fields. Read and write properties programmatically.
 
 The command modifies package.json. Useful for scripts and automation.
-
-npm pkg edits package.json.
 
 # CAVEATS
 

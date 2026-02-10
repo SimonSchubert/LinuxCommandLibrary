@@ -1,3 +1,7 @@
+# TAGLINE
+
+queries package metadata
+
 # TLDR
 
 **Search package**
@@ -55,8 +59,6 @@ _QUERY_
 **mamba repoquery** queries package metadata. It shows dependencies and reverse dependencies.
 
 The tool helps understand package relationships. Faster than conda search.
-
-mamba repoquery searches packages.
 
 # CAVEATS
 

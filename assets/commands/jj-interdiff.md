@@ -1,3 +1,7 @@
+# TAGLINE
+
+shows the difference between the changes introduced by two revisions
+
 # TLDR
 
 **Show diff between two revisions' changes**

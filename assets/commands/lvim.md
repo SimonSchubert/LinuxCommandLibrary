@@ -1,3 +1,7 @@
+# TAGLINE
+
+pre-configured Neovim distribution that provides an IDE-like experience out of
+
 # TLDR
 
 **Start LunarVim**

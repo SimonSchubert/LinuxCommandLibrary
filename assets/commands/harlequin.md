@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal-based SQL IDE supporting multiple database backends
+
 # TLDR
 
 **Connect to DuckDB database**

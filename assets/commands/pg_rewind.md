@@ -1,3 +1,7 @@
+# TAGLINE
+
+synchronizes a PostgreSQL cluster with another copy
+
 # TLDR
 
 **Rewind target to source**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+special shell that politely refuses login attempts
+
 # TLDR
 
 Set a user's **login shell to nologin** to prevent logging in

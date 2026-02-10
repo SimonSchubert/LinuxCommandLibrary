@@ -1,3 +1,7 @@
+# TAGLINE
+
+enhanced mail command
+
 # TLDR
 
 **Send email**
@@ -56,8 +60,6 @@ _RECIPIENTS_
 **mailx** is an enhanced mail command. It supports SMTP, attachments, and more features than basic mail.
 
 The tool is POSIX-compatible with extensions. It handles both sending and reading email.
-
-mailx sends and reads email.
 
 # CAVEATS
 

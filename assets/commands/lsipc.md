@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays information about System V IPC facilities including shared memory
+
 # TLDR
 
 Show **all IPC** facilities

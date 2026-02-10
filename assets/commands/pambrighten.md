@@ -1,3 +1,7 @@
+# TAGLINE
+
+adjusts brightness and saturation of PAM/PPM images using HSV color model
+
 # TLDR
 
 **Increase image brightness**

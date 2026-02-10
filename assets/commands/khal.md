@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal calendar application
+
 # TLDR
 
 **Show calendar**
@@ -53,8 +57,6 @@
 **khal** is a terminal calendar application. It reads and writes CalDAV calendars through vdirsyncer.
 
 The tool provides both command-line and interactive interfaces. It supports multiple calendars and recurring events.
-
-khal is CLI calendar application.
 
 # CAVEATS
 

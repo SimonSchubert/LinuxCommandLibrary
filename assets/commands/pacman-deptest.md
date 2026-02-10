@@ -1,3 +1,7 @@
+# TAGLINE
+
+checks each dependency specified and returns a list of dependencies that are
+
 # TLDR
 
 Print **package names** of dependencies that are not installed

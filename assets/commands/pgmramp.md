@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates grayscale gradient images
+
 # TLDR
 
 **Create horizontal gradient**

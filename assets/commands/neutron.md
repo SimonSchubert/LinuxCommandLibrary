@@ -1,3 +1,7 @@
+# TAGLINE
+
+openStack networking service
+
 # TLDR
 
 **List networks**
@@ -48,8 +52,6 @@
 # DESCRIPTION
 
 **Neutron** is the OpenStack networking service (now accessed via unified openstack client). It provides network connectivity as a service, managing networks, subnets, routers, and ports.
-
-Neutron supports various network topologies and plugins.
 
 # NETWORK TYPES
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PBM bitmaps to Zinc Interface Library format for GUI development
+
 # TLDR
 
 **Convert PBM to Zinc bitmap**

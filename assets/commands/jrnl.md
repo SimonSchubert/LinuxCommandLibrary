@@ -1,3 +1,7 @@
+# TAGLINE
+
+simple command-line journal application for recording daily thoughts
+
 # TLDR
 
 **Write a quick journal entry**

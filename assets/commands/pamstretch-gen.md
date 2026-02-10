@@ -1,3 +1,7 @@
+# TAGLINE
+
+scales images to exact dimensions using pamstretch for integer scaling
+
 # TLDR
 
 **Scale image to exact dimensions**

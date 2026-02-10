@@ -1,3 +1,7 @@
+# TAGLINE
+
+shows the status of modules in the Linux kernel
+
 # TLDR
 
 List all **loaded kernel modules**

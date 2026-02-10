@@ -1,3 +1,7 @@
+# TAGLINE
+
+downloads pictures, videos, captions, and metadata from Instagram profiles
+
 # TLDR
 
 **Download** a profile's posts

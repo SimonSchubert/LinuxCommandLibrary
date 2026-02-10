@@ -1,3 +1,7 @@
+# TAGLINE
+
+divides a change into multiple changes
+
 # TLDR
 
 **Split current change**
@@ -39,8 +43,6 @@ _PATHS_
 **jj split** divides a change into multiple changes. It separates modifications into logical units.
 
 The command supports interactive hunk selection. Split changes share the original parent.
-
-jj split divides changes.
 
 # CAVEATS
 

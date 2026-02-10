@@ -1,3 +1,7 @@
+# TAGLINE
+
+validates mailcap file syntax
+
 # TLDR
 
 **Check mailcap syntax**
@@ -39,8 +43,6 @@ _MAILCAP_
 **mcheck** validates mailcap file syntax. Mailcap defines how MIME types are handled.
 
 The tool identifies errors in mailcap configuration. Useful for debugging email attachment handling.
-
-mcheck validates mailcap files.
 
 # CAVEATS
 

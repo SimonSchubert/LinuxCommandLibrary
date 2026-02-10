@@ -1,3 +1,7 @@
+# TAGLINE
+
+provides a command-line interface to the Intelligent Platform Management
+
 # TLDR
 
 Start the **IPMI driver** for local connections

@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line utility that concatenates files or standard input and outputs
+
 # TLDR
 
 **Print text in rainbow colors**

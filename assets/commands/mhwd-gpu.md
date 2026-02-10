@@ -1,3 +1,7 @@
+# TAGLINE
+
+manjaro Linux utility for configuring graphics card settings, specifically
+
 # TLDR
 
 Show current **Xorg configuration path**

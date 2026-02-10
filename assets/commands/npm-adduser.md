@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates or verifies a user account in the npm registry
+
 # TLDR
 
 **Login to npm registry**

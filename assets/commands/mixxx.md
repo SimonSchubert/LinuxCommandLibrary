@@ -1,3 +1,7 @@
+# TAGLINE
+
+DJ mixing software
+
 # TLDR
 
 **Start Mixxx**
@@ -49,8 +53,6 @@ _FILE_
 **mixxx** is DJ mixing software. It provides digital DJ features with controller support.
 
 The tool offers beat detection, effects, and library management. Supports MIDI controllers.
-
-mixxx is DJ mixing software.
 
 # CAVEATS
 

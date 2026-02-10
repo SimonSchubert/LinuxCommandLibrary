@@ -1,3 +1,7 @@
+# TAGLINE
+
+moves and renames files and directories
+
 # TLDR
 
 **Move file**
@@ -60,8 +64,6 @@ _DESTINATION_
 **mv** moves and renames files and directories. It's a core Unix utility.
 
 The tool relocates files in the filesystem. Also used for renaming within same directory.
-
-mv moves and renames files.
 
 # CAVEATS
 

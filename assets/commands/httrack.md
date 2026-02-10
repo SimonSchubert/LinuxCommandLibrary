@@ -1,3 +1,7 @@
+# TAGLINE
+
+website copier that downloads websites to a local directory for offline browsing
+
 # TLDR
 
 **Mirror a website** to the current directory

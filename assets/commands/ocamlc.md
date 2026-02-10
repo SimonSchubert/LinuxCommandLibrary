@@ -1,3 +1,7 @@
+# TAGLINE
+
+OCaml bytecode compiler
+
 # TLDR
 
 **Compile to bytecode**

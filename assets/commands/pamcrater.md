@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates synthetic terrain with impact craters, useful for creating planetary
+
 # TLDR
 
 **Generate terrain with craters**

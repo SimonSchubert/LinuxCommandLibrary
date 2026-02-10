@@ -1,3 +1,7 @@
+# TAGLINE
+
+removes directories from MS-DOS filesystems
+
 # TLDR
 
 **Remove directory from mtools disk**
@@ -32,8 +36,6 @@ _MSDOSDIRECTORY_
 **mrd** removes directories from MS-DOS filesystems. It's part of the mtools package.
 
 The tool deletes directories on FAT drives. Works without mounting the filesystem.
-
-mrd is mtools directory remover.
 
 # CAVEATS
 

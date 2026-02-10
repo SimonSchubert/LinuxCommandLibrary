@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays the print queue status
+
 # TLDR
 
 **Show print queue**
@@ -49,8 +53,6 @@ _USER_
 **lpq** displays the print queue status. It shows pending jobs, their owners, and sizes.
 
 The tool is the BSD-style print queue viewer. Use it to check job status before printing.
-
-lpq shows print queue.
 
 # CAVEATS
 

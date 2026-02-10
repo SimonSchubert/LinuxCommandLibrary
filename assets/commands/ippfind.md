@@ -1,3 +1,7 @@
+# TAGLINE
+
+discovers IPP printers and services on the local network using DNS-SD
+
 # TLDR
 
 **Find all IPP printers** on the network

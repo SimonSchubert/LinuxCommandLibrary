@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PBM bitmaps to X10 bitmap format, which predates the current X11
+
 # TLDR
 
 **Convert PBM to X10 bitmap format**

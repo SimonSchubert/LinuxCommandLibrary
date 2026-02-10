@@ -1,3 +1,7 @@
+# TAGLINE
+
+reduces the size of a logical volume
+
 # TLDR
 
 Reduce volume to **specific size**

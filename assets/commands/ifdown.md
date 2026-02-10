@@ -1,3 +1,7 @@
+# TAGLINE
+
+brings down network interfaces that were previously configured with ifup
+
 # TLDR
 
 **Disable** a specific interface

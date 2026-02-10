@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast, cross-platform network scanner that scans IP addresses and ports
+
 # TLDR
 
 **Launch Angry IP Scanner** GUI

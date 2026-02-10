@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates and processes certificate signing requests
+
 # TLDR
 
 **Generate CSR with new key**

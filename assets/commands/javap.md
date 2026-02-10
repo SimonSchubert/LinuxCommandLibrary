@@ -1,3 +1,7 @@
+# TAGLINE
+
+disassembles Java class files
+
 # TLDR
 
 **Disassemble class file**
@@ -59,8 +63,6 @@ _CLASS_
 **javap** disassembles Java class files. It shows method signatures, fields, and optionally bytecode instructions.
 
 The tool is useful for understanding compiled Java code. It can analyze classes without source code access.
-
-javap disassembles Java classes.
 
 # CAVEATS
 

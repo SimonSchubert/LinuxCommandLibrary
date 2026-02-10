@@ -1,3 +1,7 @@
+# TAGLINE
+
+bundles edges in graphs
+
 # TLDR
 
 **Bundle edges in graph**
@@ -45,8 +49,6 @@ _FILE_
 **mingle** bundles edges in graphs. It reduces clutter in dense graph visualizations.
 
 The tool is part of Graphviz. It groups similar edges for cleaner display.
-
-mingle bundles graph edges.
 
 # CAVEATS
 

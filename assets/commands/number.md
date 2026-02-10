@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts numbers to English words
+
 # TLDR
 
 **Convert number to words**
@@ -35,8 +39,6 @@ _NUMBER_
 **number** converts numbers to English words. Part of BSD games.
 
 The tool spells out numeric values. Useful for check writing or education.
-
-number converts digits to words.
 
 # CAVEATS
 

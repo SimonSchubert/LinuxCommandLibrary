@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays the logged-in username
+
 # TLDR
 
 **Show current user**
@@ -25,8 +29,6 @@
 **npm whoami** displays the logged-in username. Verifies authentication.
 
 The command shows current user. Useful for debugging auth issues.
-
-npm whoami shows username.
 
 # CAVEATS
 

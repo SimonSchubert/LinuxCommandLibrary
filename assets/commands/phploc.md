@@ -1,3 +1,7 @@
+# TAGLINE
+
+measures PHP project size
+
 # TLDR
 
 **Measure project size**
@@ -45,8 +49,6 @@ _DIRECTORIES_
 **phploc** measures PHP project size. Lines of code and complexity.
 
 The tool provides code metrics. Part of PHP QA tools.
-
-phploc counts PHP lines.
 
 # CAVEATS
 

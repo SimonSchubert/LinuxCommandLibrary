@@ -1,3 +1,7 @@
+# TAGLINE
+
+assigns supplementary groups at login
+
 # TLDR
 
 **Enable group assignment**
@@ -23,8 +27,6 @@ Format: services ; ttys ; users ; times ; groups
 **pam_group** assigns supplementary groups at login. Time and terminal based.
 
 The module adds groups conditionally. Configured via group.conf.
-
-pam_group manages group membership.
 
 # CAVEATS
 

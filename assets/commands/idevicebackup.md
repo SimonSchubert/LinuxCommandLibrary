@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates and restores backups of iOS devices
+
 # TLDR
 
 **Create backup**

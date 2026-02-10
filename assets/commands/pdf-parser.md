@@ -1,3 +1,7 @@
+# TAGLINE
+
+analyzes PDF file structure
+
 # TLDR
 
 **Parse PDF structure**

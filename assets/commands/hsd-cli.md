@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line interface for Handshake daemon
+
 # TLDR
 
 **Show wallet info**
@@ -52,8 +56,6 @@ _COMMAND_
 **hsd-cli** is the command-line interface for Handshake daemon. Handshake is a decentralized naming protocol compatible with DNS.
 
 The tool manages wallets, names, and blockchain queries. It interacts with the hsd node for name registrations and transactions.
-
-hsd-cli manages Handshake blockchain.
 
 # CAVEATS
 

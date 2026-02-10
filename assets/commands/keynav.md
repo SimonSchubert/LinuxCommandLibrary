@@ -1,3 +1,7 @@
+# TAGLINE
+
+allows mouse cursor control using the keyboard
+
 # TLDR
 
 **Start keynav**

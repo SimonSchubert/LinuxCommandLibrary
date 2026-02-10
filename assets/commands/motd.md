@@ -1,3 +1,7 @@
+# TAGLINE
+
+displayed to users upon login
+
 # TLDR
 
 **Edit static MOTD**

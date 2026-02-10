@@ -1,3 +1,7 @@
+# TAGLINE
+
+stops a running Linux container
+
 # TLDR
 
 **Stop** container

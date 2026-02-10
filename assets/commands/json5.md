@@ -1,3 +1,7 @@
+# TAGLINE
+
+parses JSON5 format and outputs standard JSON
+
 # TLDR
 
 **Parse JSON5 to JSON**
@@ -46,8 +50,6 @@ _FILE_
 **json5** parses JSON5 format and outputs standard JSON. JSON5 extends JSON with comments, trailing commas, and unquoted keys.
 
 The tool converts more readable JSON5 configs to strict JSON. It validates and formats JSON5 input.
-
-json5 converts JSON5 to JSON.
 
 # CAVEATS
 

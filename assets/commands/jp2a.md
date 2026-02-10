@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts JPEG images to ASCII art
+
 # TLDR
 
 **Convert image to ASCII**
@@ -59,8 +63,6 @@ _FILE_
 **jp2a** converts JPEG images to ASCII art. It maps pixel brightness to characters for text-based display.
 
 The tool supports color output for terminals. It can process multiple images and URLs.
-
-jp2a creates ASCII art from images.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+collection of Python tools for analyzing Microsoft Office documents
+
 # TLDR
 
 **Analyze document with oleid**

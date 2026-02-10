@@ -1,3 +1,7 @@
+# TAGLINE
+
+determines the fastest network servers from a list of hosts by measuring
+
 # TLDR
 
 Choose the server with the **lowest latency**

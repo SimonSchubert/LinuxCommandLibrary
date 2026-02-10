@@ -1,3 +1,7 @@
+# TAGLINE
+
+midnight Commander's file manager mode
+
 # TLDR
 
 **Start file manager**
@@ -49,8 +53,6 @@ _PATH1_ _PATH2_
 **mc** is Midnight Commander's file manager mode. It provides dual-pane file navigation.
 
 The tool supports keyboard-driven operations, archive browsing, and remote filesystem access.
-
-mc.fm is Midnight Commander file manager.
 
 # CAVEATS
 

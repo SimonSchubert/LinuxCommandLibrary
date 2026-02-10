@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs TPC-B-like benchmarks on PostgreSQL databases
+
 # TLDR
 
 **Initialize benchmark database**

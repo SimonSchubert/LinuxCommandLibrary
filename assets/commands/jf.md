@@ -1,3 +1,7 @@
+# TAGLINE
+
+JFrog CLI for interacting with JFrog platform services
+
 # TLDR
 
 **Configure Artifactory**
@@ -53,8 +57,6 @@
 **jf** is the JFrog CLI for interacting with JFrog platform services. It manages artifacts in Artifactory and integrates with CI/CD.
 
 The tool supports all package types and registries. It handles uploads, downloads, builds, and security scanning.
-
-jf manages JFrog services.
 
 # CAVEATS
 

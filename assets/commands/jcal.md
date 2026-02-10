@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays a calendar in the Jalali format, similar to Unix **cal**
+
 # TLDR
 
 **Display current month**

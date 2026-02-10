@@ -1,3 +1,7 @@
+# TAGLINE
+
+designed to create a new system installation from scratch
+
 # TLDR
 
 Install **base** package, Linux kernel and firmware

@@ -1,3 +1,7 @@
+# TAGLINE
+
+wireless security testing tool
+
 # TLDR
 
 **Beacon flood attack**
@@ -52,8 +56,6 @@ _MODE_
 **mdk4** is a wireless security testing tool. It's the successor to mdk3 with additional features.
 
 The tool tests 802.11 network security and performs vulnerability assessment.
-
-mdk4 tests wireless security.
 
 # CAVEATS
 

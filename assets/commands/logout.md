@@ -1,3 +1,7 @@
+# TAGLINE
+
+exits a login shell
+
 # TLDR
 
 **Exit login shell**
@@ -18,8 +22,6 @@ _STATUS_
 **logout** exits a login shell. It terminates the current shell session and returns to the login prompt.
 
 The command is a shell builtin. It only works in login shells, not subshells.
-
-logout exits the login shell.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line tool for managing ISCSI initiator connections
+
 # TLDR
 
 Show **active sessions**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+python debugger
+
 # TLDR
 
 **Debug Python script**
@@ -37,8 +41,6 @@ Debugger commands:
 **pdb** is the Python debugger. Interactive debugging environment.
 
 The tool provides breakpoints and inspection. Part of Python standard library.
-
-pdb debugs Python code.
 
 # CAVEATS
 

@@ -56,15 +56,9 @@
 
 # DESCRIPTION
 
-**pixiecore** provides all-in-one network booting. It combines DHCP, TFTP, and HTTP for PXE.
+**pixiecore** is an all-in-one network boot server that combines DHCP/ProxyDHCP, TFTP, and HTTP services into a single binary for PXE booting machines on a local network. Unlike traditional PXE setups that require configuring separate DHCP, TFTP, and boot menu services, pixiecore handles the entire boot process internally and can operate alongside an existing DHCP server without any changes to the network's DHCP configuration.
 
-Static boot mode serves fixed kernel and initrd. All clients get the same configuration.
-
-API mode queries external service for boot config. This enables per-machine customization.
-
-Quick mode provides presets for common distributions. Minimal configuration needed.
-
-No external DHCP changes required. Pixiecore responds to PXE requests alongside existing DHCP.
+The tool offers three operating modes. In static boot mode, a fixed kernel and initrd are served to all clients with the same configuration. API mode delegates boot configuration to an external HTTP service, enabling per-machine customization based on MAC address or other identifiers, which is particularly useful for large-scale provisioning. Quick mode provides ready-made presets for common Linux distributions, requiring minimal configuration to get machines booting over the network.
 
 # CAVEATS
 

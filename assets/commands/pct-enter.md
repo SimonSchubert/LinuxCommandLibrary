@@ -1,3 +1,7 @@
+# TAGLINE
+
+opens a shell session inside a Proxmox LXC container
+
 # TLDR
 
 **Enter container shell**
@@ -23,8 +27,6 @@
 # DESCRIPTION
 
 **pct enter** opens a shell session inside a Proxmox LXC container. It provides direct console access without SSH, similar to docker exec.
-
-Part of the Proxmox VE container management tools.
 
 # EXAMPLE
 

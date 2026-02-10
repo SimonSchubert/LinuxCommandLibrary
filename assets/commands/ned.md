@@ -1,3 +1,7 @@
+# TAGLINE
+
+text editor
+
 # TLDR
 
 **Edit file**
@@ -32,8 +36,6 @@ _FILES_
 **ned** is a text editor. It provides simple text editing functionality.
 
 The tool is a minimal editor. Basic features for quick edits.
-
-ned is simple text editor.
 
 # CAVEATS
 

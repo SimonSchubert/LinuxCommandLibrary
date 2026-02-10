@@ -1,3 +1,7 @@
+# TAGLINE
+
+extracts AFM from PFB
+
 # TLDR
 
 **Convert PFB to AFM**
@@ -22,8 +26,6 @@ _FONT_
 **pf2afm** extracts AFM from PFB. Generates Adobe Font Metrics.
 
 The tool creates metric files. Part of Ghostscript.
-
-pf2afm extracts font metrics.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+queries Active Directory via LDAP to enumerate user accounts and their
+
 # TLDR
 
 **Enumerate all domain users** with their details

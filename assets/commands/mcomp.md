@@ -1,3 +1,7 @@
+# TAGLINE
+
+compares audio files byte by byte or acoustically
+
 # TLDR
 
 **Compare audio files**
@@ -42,8 +46,6 @@ _FILE1_ _FILE2_
 **mcomp** compares audio files byte by byte or acoustically. It identifies differences between audio.
 
 The tool can detect re-encodings, modifications, or verify audio integrity.
-
-mcomp compares audio files.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+samba network utility
+
 # TLDR
 
 **List shares on server**
@@ -56,8 +60,6 @@ _COMMAND_
 **net** is a Samba network utility. It provides Windows networking functions on Linux.
 
 The tool manages shares, users, and domains. Part of Samba suite.
-
-net is Samba network command.
 
 # CAVEATS
 

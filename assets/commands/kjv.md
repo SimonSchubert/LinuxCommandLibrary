@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line Bible reader providing access to the King James Version text
+
 # TLDR
 
 **List** all books

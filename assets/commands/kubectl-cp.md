@@ -1,3 +1,7 @@
+# TAGLINE
+
+copies files and directories between local filesystem and containers in pods
+
 # TLDR
 
 **Copy file to pod**

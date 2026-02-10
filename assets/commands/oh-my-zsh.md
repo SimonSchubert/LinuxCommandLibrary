@@ -1,3 +1,7 @@
+# TAGLINE
+
+framework for managing Zsh configuration
+
 # TLDR
 
 **Install Oh My Zsh**

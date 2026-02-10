@@ -1,3 +1,7 @@
+# TAGLINE
+
+are a Linux kernel feature that partitions kernel resources so that processes
+
 # TLDR
 
 **List all namespaces**

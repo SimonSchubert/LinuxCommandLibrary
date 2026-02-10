@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates shell completion scripts
+
 # TLDR
 
 **Generate bash completion**
@@ -26,8 +30,6 @@
 **npm completion** generates shell completion scripts. Enables tab completion for npm.
 
 The command outputs script to stdout. Append to shell rc file.
-
-npm completion enables tab-complete.
 
 # CAVEATS
 

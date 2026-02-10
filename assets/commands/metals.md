@@ -1,3 +1,7 @@
+# TAGLINE
+
+scala language server implementing the Language Server Protocol
+
 # TLDR
 
 **Start Metals server (VSCode)**

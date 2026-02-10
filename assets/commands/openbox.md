@@ -1,3 +1,7 @@
+# TAGLINE
+
+lightweight, highly configurable window manager
+
 # TLDR
 
 **Start Openbox**

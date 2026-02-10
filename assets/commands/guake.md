@@ -1,3 +1,7 @@
+# TAGLINE
+
+drop-down terminal for GNOME that provides quick access to a terminal
+
 # TLDR
 
 **Toggle** Guake visibility

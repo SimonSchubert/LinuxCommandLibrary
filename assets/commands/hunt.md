@@ -1,3 +1,7 @@
+# TAGLINE
+
+multiplayer terminal game where players hunt each other in a maze
+
 # TLDR
 
 **Start hunt game**
@@ -45,8 +49,6 @@
 **hunt** is a multiplayer terminal game where players hunt each other in a maze. Players shoot and dodge in text-based combat.
 
 The game connects to a huntd server where multiple players compete. It features walls, bombs, and maze navigation.
-
-hunt is a multiplayer hunting game.
 
 # CAVEATS
 

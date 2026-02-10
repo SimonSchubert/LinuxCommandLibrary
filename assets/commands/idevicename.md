@@ -1,3 +1,7 @@
+# TAGLINE
+
+gets or sets the name of an iOS device
+
 # TLDR
 
 **Get device name**
@@ -42,8 +46,6 @@ _NAME_
 **idevicename** gets or sets the name of an iOS device. Without argument it displays the current name.
 
 The tool changes the device name visible in iTunes and Finder. It requires the device to be paired and trusted.
-
-idevicename manages iOS device name.
 
 # CAVEATS
 

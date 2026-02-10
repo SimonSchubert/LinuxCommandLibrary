@@ -1,3 +1,7 @@
+# TAGLINE
+
+processes structured text data
+
 # TLDR
 
 **Convert CSV to JSON**
@@ -59,8 +63,6 @@ _VERBS_
 **mlr** (Miller) processes structured text data. It handles CSV, JSON, and other formats.
 
 The tool provides awk-like processing for structured data. Powerful for data transformation.
-
-mlr processes structured data.
 
 # CAVEATS
 

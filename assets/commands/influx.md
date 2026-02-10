@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line interface for InfluxDB time-series database
+
 # TLDR
 
 **Start interactive shell**
@@ -65,8 +69,6 @@
 **influx** is the command-line interface for InfluxDB time-series database. It provides an interactive shell for querying and managing data.
 
 The tool supports InfluxQL for querying time-series data. It can import, export, and manage databases and measurements.
-
-influx is the InfluxDB CLI.
 
 # CAVEATS
 

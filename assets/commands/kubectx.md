@@ -1,3 +1,7 @@
+# TAGLINE
+
+switches between Kubernetes contexts quickly
+
 # TLDR
 
 **List contexts**
@@ -47,11 +51,9 @@ _CONTEXT_
 
 # DESCRIPTION
 
-**kubectx** switches between Kubernetes contexts quickly. It simplifies multi-cluster management.
+**kubectx** is a utility for rapidly switching between Kubernetes contexts defined in your kubeconfig file. It provides a much faster alternative to running `kubectl config use-context` by reducing context switching to a single command, and it supports interactive fuzzy selection through fzf integration when no argument is provided.
 
-The tool provides faster context switching than kubectl config. It supports fzf for interactive selection.
-
-kubectx switches K8s contexts.
+The tool can list all available contexts, switch to a named context or toggle back to the previously active one with `-`, rename contexts, and delete them. It is particularly useful when managing multiple clusters, as it eliminates the verbose kubectl config commands that would otherwise be needed to navigate between development, staging, and production environments.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates block devices, character devices, or FIFOs as special files
+
 # TLDR
 
 Create a **block device** special file

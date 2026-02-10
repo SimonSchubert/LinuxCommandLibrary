@@ -1,3 +1,7 @@
+# TAGLINE
+
+changes the colors of an image while preserving luminance
+
 # TLDR
 
 **Colorize grayscale image**
@@ -30,8 +34,6 @@
 # DESCRIPTION
 
 **pamrecolor** changes the colors of an image while preserving luminance. It can colorize grayscale images or remap colors from one image using colors from another.
-
-Useful for tinting, colorizing, and artistic effects.
 
 # EXAMPLE
 

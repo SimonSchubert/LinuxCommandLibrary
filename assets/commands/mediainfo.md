@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays technical information about media files
+
 # TLDR
 
 **Show media info**
@@ -53,8 +57,6 @@ _FILE_
 **mediainfo** displays technical information about media files. It shows codec, bitrate, resolution, and metadata.
 
 The tool supports video, audio, and image formats. Essential for media file analysis.
-
-mediainfo shows media file info.
 
 # CAVEATS
 

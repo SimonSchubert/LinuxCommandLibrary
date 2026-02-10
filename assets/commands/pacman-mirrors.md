@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates and manages the pacman mirrorlist for Manjaro Linux
+
 # TLDR
 
 Generate **fastest** mirrorlist

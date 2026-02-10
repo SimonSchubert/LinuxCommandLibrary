@@ -1,3 +1,7 @@
+# TAGLINE
+
+reads a single line from standard input and writes it to standard output
+
 # TLDR
 
 **Read** a single line of input

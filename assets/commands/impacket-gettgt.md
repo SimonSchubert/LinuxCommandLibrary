@@ -1,3 +1,7 @@
+# TAGLINE
+
+requests a Kerberos Ticket Granting Ticket from an Active Directory domain
+
 # TLDR
 
 **Request a TGT** for a domain user with password

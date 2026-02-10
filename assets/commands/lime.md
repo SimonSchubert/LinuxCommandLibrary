@@ -1,3 +1,7 @@
+# TAGLINE
+
+open-source text editor inspired by Sublime Text
+
 # TLDR
 
 **Start Lime text editor**

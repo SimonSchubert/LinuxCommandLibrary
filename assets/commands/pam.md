@@ -1,3 +1,7 @@
+# TAGLINE
+
+pluggable Authentication Modules
+
 # TLDR
 
 **Check PAM configuration**
@@ -41,8 +45,6 @@ Configuration files in /etc/pam.d/:
 **PAM** is Pluggable Authentication Modules. Framework for system authentication.
 
 The system provides flexible authentication. Configured per-service.
-
-PAM handles authentication.
 
 # CAVEATS
 

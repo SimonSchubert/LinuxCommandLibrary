@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line benchmarking tool that measures command execution time
+
 # TLDR
 
 **Benchmark a command**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates printable booklets from PDF files by rearranging pages into printer
+
 # TLDR
 
 Create a **booklet** named file-book.pdf with sane defaults

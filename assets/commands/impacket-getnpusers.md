@@ -1,3 +1,7 @@
+# TAGLINE
+
+finds Active Directory users with "Do not require Kerberos preauthentication"
+
 # TLDR
 
 **Find AS-REP roastable users**

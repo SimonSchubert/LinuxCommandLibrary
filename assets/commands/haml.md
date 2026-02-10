@@ -1,3 +1,7 @@
+# TAGLINE
+
+templating language that compiles to HTML
+
 # TLDR
 
 **Convert HAML to HTML**

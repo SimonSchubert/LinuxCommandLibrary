@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays the addresses of the control plane and cluster services
+
 # TLDR
 
 **Display cluster info**

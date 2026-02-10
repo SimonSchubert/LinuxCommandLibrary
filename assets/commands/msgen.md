@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates English translation PO files
+
 # TLDR
 
 **Create English translation file**
@@ -42,8 +46,6 @@ _INPUTFILE_
 **msgen** creates English translation PO files. It copies msgid to msgstr for same-language translations.
 
 The tool generates base English files. Part of GNU gettext for i18n workflows.
-
-msgen creates English PO files.
 
 # CAVEATS
 

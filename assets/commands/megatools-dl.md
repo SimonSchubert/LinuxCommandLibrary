@@ -1,3 +1,7 @@
+# TAGLINE
+
+downloads files and folders from mega
+
 # TLDR
 
 **Download files** from a mega.nz link into the current directory

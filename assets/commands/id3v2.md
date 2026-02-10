@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line tool for viewing and editing ID3v2 tags in MP3 files
+
 # TLDR
 
 **List** all available genres

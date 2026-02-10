@@ -1,3 +1,7 @@
+# TAGLINE
+
+mounts iOS device filesystems via FUSE
+
 # TLDR
 
 **Mount iOS device**
@@ -45,8 +49,6 @@ _MOUNTPOINT_
 **ifuse** mounts iOS device filesystems via FUSE. It provides access to device storage, app documents, and containers.
 
 The tool requires device pairing and uses AFC protocol. It enables file transfer without iTunes or third-party apps.
-
-ifuse mounts iOS devices via FUSE.
 
 # CAVEATS
 

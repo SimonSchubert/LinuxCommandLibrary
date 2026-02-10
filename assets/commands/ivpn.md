@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line client for IVPN service
+
 # TLDR
 
 **Connect to VPN**
@@ -59,8 +63,6 @@
 **ivpn** is the command-line client for IVPN service. It manages VPN connections with privacy-focused features.
 
 The tool supports WireGuard and OpenVPN protocols. It includes a firewall to prevent leaks.
-
-ivpn manages IVPN connections.
 
 # CAVEATS
 

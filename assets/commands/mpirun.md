@@ -1,3 +1,7 @@
+# TAGLINE
+
+launches MPI parallel programs
+
 # TLDR
 
 **Run MPI program**

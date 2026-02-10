@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PBM bitmaps to BBN BitGraph terminal format
+
 # TLDR
 
 **Convert PBM to BBN BitGraph format**

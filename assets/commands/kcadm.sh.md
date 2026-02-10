@@ -1,3 +1,7 @@
+# TAGLINE
+
+keycloak Admin CLI
+
 # TLDR
 
 **Login to Keycloak**
@@ -59,8 +63,6 @@
 **kcadm.sh** is the Keycloak Admin CLI. It manages Keycloak identity and access management configurations.
 
 The tool provides full administrative access to Keycloak. It creates users, realms, clients, and roles.
-
-kcadm.sh manages Keycloak.
 
 # CAVEATS
 

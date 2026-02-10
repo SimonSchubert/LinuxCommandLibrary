@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays metadata and properties of PDF files
+
 # TLDR
 
 **Show PDF information**

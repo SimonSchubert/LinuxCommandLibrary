@@ -1,3 +1,7 @@
+# TAGLINE
+
+builds PHP versions from source for use with phpenv or standalone
+
 # TLDR
 
 **List available PHP versions**
@@ -37,10 +41,6 @@
 # DESCRIPTION
 
 **php-build** builds PHP versions from source for use with phpenv or standalone. It handles downloading, configuring, compiling, and installing multiple PHP versions.
-
-# EXAMPLES
-
-```bash
 # List versions
 php-build --definitions
 

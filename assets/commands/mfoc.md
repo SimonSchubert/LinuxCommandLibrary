@@ -1,3 +1,7 @@
+# TAGLINE
+
+cracks MIFARE Classic cards
+
 # TLDR
 
 **Recover keys**
@@ -49,8 +53,6 @@
 **mfoc** cracks MIFARE Classic cards. It recovers encryption keys using the nested authentication attack.
 
 The tool is for security research. It dumps card contents after key recovery.
-
-mfoc recovers MIFARE keys.
 
 # CAVEATS
 

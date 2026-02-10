@@ -1,3 +1,7 @@
+# TAGLINE
+
+executes SQL queries on Access databases
+
 # TLDR
 
 **Query database**
@@ -46,8 +50,6 @@ _DATABASE_
 **mdb-sql** executes SQL queries on Access databases. It provides SQL interface to MDB files.
 
 The tool is part of mdbtools. It supports basic SELECT, INSERT, UPDATE operations.
-
-mdb-sql queries Access databases.
 
 # CAVEATS
 

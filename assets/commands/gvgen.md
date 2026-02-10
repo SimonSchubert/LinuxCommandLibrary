@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates various types of graphs in DOT format
+
 # TLDR
 
 **Generate star graph**
@@ -58,8 +62,6 @@
 **gvgen** generates various types of graphs in DOT format. It creates standard graph structures useful for testing, visualization, and algorithms.
 
 The tool supports stars, grids, trees, complete graphs, cycles, and random graphs. Output is in Graphviz format for visualization.
-
-gvgen creates sample graphs for Graphviz.
 
 # CAVEATS
 

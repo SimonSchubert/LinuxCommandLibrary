@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates compressed filesystem trees
+
 # TLDR
 
 **Compress directory tree**
@@ -52,8 +56,6 @@ _OUTPUT_
 **mkzftree** creates compressed filesystem trees. It's used for creating zisofs images.
 
 The tool compresses files transparently for ISO images. Used with mkisofs.
-
-mkzftree creates compressed trees.
 
 # CAVEATS
 

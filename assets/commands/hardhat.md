@@ -1,3 +1,7 @@
+# TAGLINE
+
+ethereum development environment
+
 # TLDR
 
 **Create new project**

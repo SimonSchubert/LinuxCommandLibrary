@@ -1,3 +1,7 @@
+# TAGLINE
+
+helper for Discoverable Disk Images
+
 # TLDR
 
 **Mount** a Discoverable Disk Image

@@ -1,3 +1,7 @@
+# TAGLINE
+
+intercepts and records dynamic library calls made by a process and signals
+
 # TLDR
 
 **Trace** library calls

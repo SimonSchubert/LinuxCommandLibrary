@@ -1,3 +1,7 @@
+# TAGLINE
+
+reformats C source code according to specified style guidelines
+
 # TLDR
 
 **Format C source file**
@@ -62,8 +66,6 @@
 **indent** reformats C source code according to specified style guidelines. It handles indentation, brace placement, spacing, and line breaking.
 
 The tool supports predefined styles (K&R, GNU, BSD) and extensive customization. It can modify files in place or write to new files.
-
-indent formats C source code.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+wrapper around pacman, the Arch Linux package manager
+
 # TLDR
 
 **Search for package**

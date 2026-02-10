@@ -1,3 +1,7 @@
+# TAGLINE
+
+compresses and decompresses archives
+
 # TLDR
 
 **Compress files**
@@ -45,8 +49,6 @@
 **ouch** compresses and decompresses archives. Smart format detection.
 
 The tool handles multiple archive formats. Rust-based compression utility.
-
-ouch manages archive files.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+automated penetration testing framework
+
 # TLDR
 
 **Scan target for vulnerabilities**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+performs edge detection
+
 # TLDR
 
 **Detect edges**
@@ -22,8 +26,6 @@ _FILE_
 **pamedge** performs edge detection. Uses gradient-based method.
 
 The tool highlights edges in images. Part of Netpbm.
-
-pamedge detects image edges.
 
 # CAVEATS
 

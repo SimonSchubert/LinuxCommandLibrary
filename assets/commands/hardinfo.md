@@ -1,3 +1,7 @@
+# TAGLINE
+
+graphical system information and benchmark tool for Linux
+
 # TLDR
 
 Start **hardinfo** GUI

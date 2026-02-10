@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays the dependency tree of installed packages
+
 # TLDR
 
 **List installed packages**

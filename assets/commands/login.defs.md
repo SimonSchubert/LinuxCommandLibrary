@@ -1,3 +1,7 @@
+# TAGLINE
+
+configuration file for the shadow password suite
+
 # TLDR
 
 **Set password aging defaults**

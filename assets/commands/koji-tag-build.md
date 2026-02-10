@@ -1,3 +1,7 @@
+# TAGLINE
+
+applies a tag to one or more builds
+
 # TLDR
 
 **Tag** a build

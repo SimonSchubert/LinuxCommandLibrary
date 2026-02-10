@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts C header files to Perl headers
+
 # TLDR
 
 **Convert C header to Perl**
@@ -48,8 +52,6 @@ _FILES_
 **h2ph** converts C header files to Perl headers. It translates #define macros and constant definitions for use in Perl programs.
 
 The tool creates .ph files that Perl can require. It's used to access system constants defined in C headers from Perl code.
-
-h2ph converts C headers for Perl use.
 
 # CAVEATS
 

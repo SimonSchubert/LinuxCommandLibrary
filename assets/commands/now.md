@@ -1,3 +1,7 @@
+# TAGLINE
+
+was the original Vercel CLI
+
 # TLDR
 
 **Deploy project**
@@ -56,8 +60,6 @@ _COMMAND_
 **now** was the original Vercel CLI. Deploys applications to Vercel platform.
 
 The tool has been renamed to vercel. Legacy command still works.
-
-now is legacy Vercel CLI.
 
 # CAVEATS
 

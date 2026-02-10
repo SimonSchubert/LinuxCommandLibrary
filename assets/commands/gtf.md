@@ -1,3 +1,7 @@
+# TAGLINE
+
+calculates VESA Generalized Timing Formula modelines
+
 # TLDR
 
 **Generate modeline for 1920x1080@60Hz**
@@ -45,8 +49,6 @@ _REFRESH_
 **gtf** calculates VESA Generalized Timing Formula modelines. It generates the timing parameters needed for X11 configuration at specific resolutions.
 
 The tool outputs modelines suitable for xorg.conf. It's useful for setting up custom display modes not automatically detected.
-
-gtf calculates display timing modelines.
 
 # CAVEATS
 

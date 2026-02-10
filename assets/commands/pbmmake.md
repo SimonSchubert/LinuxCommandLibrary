@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates PBM images
+
 # TLDR
 
 **Create white bitmap**
@@ -38,8 +42,6 @@ _HEIGHT_
 **pbmmake** creates PBM images. Generates solid or pattern backgrounds.
 
 The tool makes blank bitmaps. Part of Netpbm.
-
-pbmmake creates bitmaps.
 
 # CAVEATS
 

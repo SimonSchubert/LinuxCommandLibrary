@@ -1,3 +1,7 @@
+# TAGLINE
+
+decodes Oak printer format files
+
 # TLDR
 
 **Decode Oak file**
@@ -35,8 +39,6 @@ _FILE_
 **oakdecode** decodes Oak printer format files. Converts to standard formats.
 
 The tool handles Oak proprietary format. Part of printer tools.
-
-oakdecode converts Oak files.
 
 # CAVEATS
 

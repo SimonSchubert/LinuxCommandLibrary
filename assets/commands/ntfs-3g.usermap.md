@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates Windows-Linux user mappings
+
 # TLDR
 
 **Create user mapping**
@@ -32,8 +36,6 @@ _DEVICE_
 **ntfs-3g.usermap** creates Windows-Linux user mappings. Maps SIDs to UIDs.
 
 The tool generates UserMapping file. Used for permission mapping.
-
-ntfs-3g.usermap maps users.
 
 # CAVEATS
 

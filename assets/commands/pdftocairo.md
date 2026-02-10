@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PDF pages to various image and vector formats using the Cairo
+
 # TLDR
 
 **Convert PDF to PNG**

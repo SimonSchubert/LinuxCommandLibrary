@@ -1,3 +1,7 @@
+# TAGLINE
+
+marks revisions as abandoned in Jujutsu
+
 # TLDR
 
 **Abandon current change**

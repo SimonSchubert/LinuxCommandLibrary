@@ -1,3 +1,7 @@
+# TAGLINE
+
+file format used by libpcap for storing network packet data
+
 # TLDR
 
 **Read pcap with tcpdump**
@@ -27,8 +31,6 @@
 # DESCRIPTION
 
 **pcap** (Packet Capture) is the file format used by libpcap for storing network packet data. It's the standard format for network captures, used by tcpdump, Wireshark, and many security tools.
-
-The newer pcapng format supports additional metadata.
 
 # FILE STRUCTURE
 

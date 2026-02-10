@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates API documentation from Java source code
+
 # TLDR
 
 **Generate documentation**
@@ -59,8 +63,6 @@
 **javadoc** generates API documentation from Java source code. It parses Javadoc comments and produces HTML pages.
 
 The tool creates navigable documentation with class hierarchies, method details, and cross-references. It's the standard Java documentation generator.
-
-javadoc generates Java API docs.
 
 # CAVEATS
 

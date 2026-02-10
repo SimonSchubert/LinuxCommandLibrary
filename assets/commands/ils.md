@@ -1,3 +1,7 @@
+# TAGLINE
+
+lists inode information from filesystem images
+
 # TLDR
 
 **List inodes**
@@ -52,8 +56,6 @@ _IMAGE_
 **ils** lists inode information from filesystem images. It's part of The Sleuth Kit for digital forensics.
 
 The tool shows inode metadata for allocated and deleted files. It's useful for file recovery and forensic analysis.
-
-ils lists filesystem inodes.
 
 # CAVEATS
 

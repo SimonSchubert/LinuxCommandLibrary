@@ -1,3 +1,7 @@
+# TAGLINE
+
+retrieves configuration values from Jujutsu config files
+
 # TLDR
 
 **Get config value**

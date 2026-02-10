@@ -1,3 +1,7 @@
+# TAGLINE
+
+elixir build tool
+
 # TLDR
 
 **Create new project**
@@ -56,8 +60,6 @@ _TASK_
 **mix** is the Elixir build tool. It manages projects, dependencies, and tasks.
 
 The tool creates projects, compiles code, and runs tests. Central to Elixir development.
-
-mix builds Elixir projects.
 
 # CAVEATS
 

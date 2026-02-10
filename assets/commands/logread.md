@@ -1,3 +1,7 @@
+# TAGLINE
+
+reads the logd ring buffer log on OpenWrt and similar embedded Linux systems
+
 # TLDR
 
 **Print** the log

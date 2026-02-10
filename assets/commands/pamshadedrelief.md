@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates shaded relief maps
+
 # TLDR
 
 **Create shaded relief**
@@ -25,8 +29,6 @@ _FILE_
 **pamshadedrelief** creates shaded relief maps. Renders 3D terrain effect.
 
 The tool simulates terrain lighting. Part of Netpbm.
-
-pamshadedrelief renders terrain.
 
 # CAVEATS
 

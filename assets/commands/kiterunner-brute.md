@@ -1,3 +1,7 @@
+# TAGLINE
+
+performs traditional wordlist-based bruteforce against API endpoints
+
 # TLDR
 
 **Bruteforce API endpoints**

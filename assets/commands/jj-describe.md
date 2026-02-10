@@ -1,3 +1,7 @@
+# TAGLINE
+
+updates the description of a change
+
 # TLDR
 
 **Describe current change**
@@ -46,8 +50,6 @@
 **jj describe** updates the description of a change. It sets or modifies the commit message equivalent.
 
 The command opens an editor by default or accepts inline messages. Descriptions can be updated at any time.
-
-jj describe sets change descriptions.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+extracts specific images from a multi-image PAM stream by index number
+
 # TLDR
 
 **Extract specific images from stream**

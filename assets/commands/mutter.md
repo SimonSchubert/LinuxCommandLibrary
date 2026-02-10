@@ -1,3 +1,7 @@
+# TAGLINE
+
+GNOME window manager
+
 # TLDR
 
 **Start Mutter**
@@ -46,8 +50,6 @@
 **mutter** is the GNOME window manager. It handles window management and compositing.
 
 The tool supports both X11 and Wayland. Core component of GNOME Shell.
-
-mutter is GNOME window manager.
 
 # CAVEATS
 

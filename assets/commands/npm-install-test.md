@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs npm install followed by npm test
+
 # TLDR
 
 **Install and test**

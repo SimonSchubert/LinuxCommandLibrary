@@ -1,3 +1,7 @@
+# TAGLINE
+
+shows differences between the current live configuration and the proposed
+
 # TLDR
 
 **Show diff against live configuration**

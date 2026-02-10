@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line JSON viewer with vim-like navigation
+
 # TLDR
 
 **View a JSON file**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+downloads videos from LinkedIn Learning
+
 # TLDR
 
 **Download LinkedIn video**
@@ -49,8 +53,6 @@ _URL_
 **llvd** downloads videos from LinkedIn Learning. It supports various quality levels and subtitle extraction.
 
 The tool requires LinkedIn credentials for authenticated access to learning content.
-
-llvd downloads LinkedIn videos.
 
 # CAVEATS
 

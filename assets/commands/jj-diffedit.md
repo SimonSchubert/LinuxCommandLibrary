@@ -1,3 +1,7 @@
+# TAGLINE
+
+opens a diff editor to interactively modify the changes in a revision
+
 # TLDR
 
 **Edit revision in diff editor**

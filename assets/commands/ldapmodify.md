@@ -1,3 +1,7 @@
+# TAGLINE
+
+modifies LDAP directory entries
+
 # TLDR
 
 **Modify entry from LDIF**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+tails logs from multiple pods simultaneously
+
 # TLDR
 
 **Tail pod logs**
@@ -53,11 +57,9 @@ _PATTERN_
 
 # DESCRIPTION
 
-**kubetail** tails logs from multiple pods simultaneously. It aggregates logs matching a pattern.
+**kubetail** is a bash script that aggregates and tails log output from multiple Kubernetes pods simultaneously. It matches pods by name pattern or label selector and streams their logs in a single terminal, using color-coded output to visually distinguish which lines come from which pod.
 
-The tool provides colored output to distinguish pods. It's useful for debugging distributed applications.
-
-kubetail tails multiple pod logs.
+The tool is especially useful when debugging distributed applications or microservices where relevant log entries are spread across several pod replicas. It supports filtering by namespace, targeting specific containers within multi-container pods, and displaying timestamps alongside log lines. Under the hood, kubetail spawns multiple `kubectl logs --follow` processes and merges their output.
 
 # CAVEATS
 

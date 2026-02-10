@@ -1,3 +1,7 @@
+# TAGLINE
+
+internet Archive command-line tool
+
 # TLDR
 
 **Download item**
@@ -59,8 +63,6 @@ _COMMAND_
 **ia** is the Internet Archive command-line tool. It provides access to downloading, uploading, and searching the archive.org collection.
 
 The tool supports bulk operations and scripting. It can manage metadata and files for archived items.
-
-ia interacts with Internet Archive.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+package manager for the Haxe programming language
+
 # TLDR
 
 **Install a library**

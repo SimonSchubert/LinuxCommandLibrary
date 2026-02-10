@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates an exFAT filesystem on a device
+
 # TLDR
 
 Create **exFAT** filesystem

@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line client for Atlassian Jira
+
 # TLDR
 
 **List issues**
@@ -53,8 +57,6 @@
 **jira** is a command-line client for Atlassian Jira. It provides interactive and scriptable access to issues and projects.
 
 The tool supports creating, viewing, and managing issues. It integrates with shell workflows for automation.
-
-jira manages Jira from terminal.
 
 # CAVEATS
 

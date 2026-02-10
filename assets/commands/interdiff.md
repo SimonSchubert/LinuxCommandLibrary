@@ -1,3 +1,7 @@
+# TAGLINE
+
+compares two unified diff files and generates a diff representing the changes
+
 # TLDR
 
 **Show differences between two patches**

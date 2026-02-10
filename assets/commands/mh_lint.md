@@ -1,3 +1,7 @@
+# TAGLINE
+
+checks MATLAB code for issues
+
 # TLDR
 
 **Check MATLAB code**
@@ -46,8 +50,6 @@ _FILES_
 **mh_lint** checks MATLAB code for issues. It identifies style violations and potential bugs.
 
 The tool is part of MISS_HIT. It enforces coding standards for MATLAB/Simulink projects.
-
-mh_lint checks MATLAB code.
 
 # CAVEATS
 

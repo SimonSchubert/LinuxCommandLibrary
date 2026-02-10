@@ -1,3 +1,7 @@
+# TAGLINE
+
+specialized HTTP packet sniffer
+
 # TLDR
 
 **Capture HTTP traffic**
@@ -52,8 +56,6 @@ _FILTER_
 **httpry** is a specialized HTTP packet sniffer. It captures and logs HTTP request and response metadata for analysis.
 
 The tool focuses on HTTP header parsing with customizable output. It's designed for HTTP-specific traffic analysis and logging.
-
-httpry sniffs HTTP packets.
 
 # CAVEATS
 

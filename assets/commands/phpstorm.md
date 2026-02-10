@@ -1,3 +1,7 @@
+# TAGLINE
+
+launches PhpStorm IDE
+
 # TLDR
 
 **Open project**
@@ -60,8 +64,6 @@ JetBrains PHP IDE. Professional development environment.
 Command-line launcher enables integration. Open from terminal.
 
 Diff mode compares files. Built-in comparison tool.
-
-Code inspection from CLI. Batch analysis possible.
 
 # CAVEATS
 

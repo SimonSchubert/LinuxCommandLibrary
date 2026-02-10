@@ -1,3 +1,7 @@
+# TAGLINE
+
+opens Jira resources in the default web browser
+
 # TLDR
 
 **Open issue in browser**
@@ -42,8 +46,6 @@ _ISSUE_
 **jira open** opens Jira resources in the default web browser. It provides quick access to issues, boards, and backlogs.
 
 The command translates issue keys or project identifiers to web URLs. It's faster than navigating through the web interface.
-
-jira open launches browser to Jira.
 
 # CAVEATS
 

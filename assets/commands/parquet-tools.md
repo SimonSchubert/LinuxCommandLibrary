@@ -1,3 +1,7 @@
+# TAGLINE
+
+inspects Apache Parquet files
+
 # TLDR
 
 **Show schema**

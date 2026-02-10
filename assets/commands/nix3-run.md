@@ -1,3 +1,7 @@
+# TAGLINE
+
+executes packages without installing
+
 # TLDR
 
 **Run package**
@@ -32,8 +36,6 @@ _ARGS_
 **nix3 run** executes packages without installing. Alternative name for nix run.
 
 The tool runs programs temporarily. Downloads and executes from store.
-
-nix3 run executes packages.
 
 # CAVEATS
 

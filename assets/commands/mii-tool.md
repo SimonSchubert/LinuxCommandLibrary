@@ -1,3 +1,7 @@
+# TAGLINE
+
+checks network link status
+
 # TLDR
 
 **Show interface status**
@@ -53,8 +57,6 @@ _INTERFACE_
 **mii-tool** checks network link status. It shows speed, duplex, and link state.
 
 The tool uses MII (Media Independent Interface) to query Ethernet adapters.
-
-mii-tool shows network link status.
 
 # CAVEATS
 

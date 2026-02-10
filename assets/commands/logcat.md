@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays Android system and application logs
+
 # TLDR
 
 **View all logs**

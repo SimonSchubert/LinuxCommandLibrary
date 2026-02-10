@@ -1,3 +1,7 @@
+# TAGLINE
+
+classic snake game that runs in the terminal using ncurses
+
 # TLDR
 
 **Start** a snake game

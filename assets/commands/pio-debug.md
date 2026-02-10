@@ -1,3 +1,7 @@
+# TAGLINE
+
+starts a debugging session for embedded projects
+
 # TLDR
 
 **Start debugging session**

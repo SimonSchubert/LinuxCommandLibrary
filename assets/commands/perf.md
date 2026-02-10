@@ -1,3 +1,7 @@
+# TAGLINE
+
+official Linux kernel profiling tool
+
 # TLDR
 
 Display **performance stats** for a command

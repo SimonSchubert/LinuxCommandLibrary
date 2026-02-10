@@ -1,3 +1,7 @@
+# TAGLINE
+
+text-based serial port communication program for Unix-like systems
+
 # TLDR
 
 Open **serial port**

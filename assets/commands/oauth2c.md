@@ -1,3 +1,7 @@
+# TAGLINE
+
+OAuth2 CLI client
+
 # TLDR
 
 **Get access token**
@@ -45,8 +49,6 @@
 **oauth2c** is an OAuth2 CLI client. Obtains access tokens interactively.
 
 The tool supports various OAuth2 flows. Useful for API testing.
-
-oauth2c handles OAuth2 authentication.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+benchmark tool that measures memory copy performance by allocating two memory
+
 # TLDR
 
 Run **3 memory bandwidth tests** with 512MB size

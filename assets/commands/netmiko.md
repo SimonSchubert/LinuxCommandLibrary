@@ -1,3 +1,7 @@
+# TAGLINE
+
+multi-vendor SSH library for Python that simplifies CLI interactions
+
 # TLDR
 
 **Connect and send command (Python)**

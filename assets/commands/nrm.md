@@ -1,3 +1,7 @@
+# TAGLINE
+
+npm registry manager
+
 # TLDR
 
 **List registries**
@@ -56,8 +60,6 @@ _COMMAND_
 **nrm** is npm registry manager. Quickly switch between npm registries.
 
 The tool manages registry URLs. Includes common registries preset.
-
-nrm manages npm registries.
 
 # CAVEATS
 

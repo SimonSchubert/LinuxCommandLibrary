@@ -1,3 +1,7 @@
+# TAGLINE
+
+checks PHP files for syntax errors in parallel
+
 # TLDR
 
 **Lint PHP files**

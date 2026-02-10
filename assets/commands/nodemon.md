@@ -1,3 +1,7 @@
+# TAGLINE
+
+automatically restarts Node
+
 # TLDR
 
 **Watch and restart Node app**
@@ -60,8 +64,6 @@ _SCRIPT_
 **nodemon** automatically restarts Node.js applications. Watches for file changes.
 
 The tool aids development. Restarts on save without manual intervention.
-
-nodemon auto-restarts Node apps.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PGM images to SBIG ST-4 autoguider format used by astronomical
+
 # TLDR
 
 **Convert PGM to SBIG ST-4 format**

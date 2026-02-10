@@ -1,3 +1,7 @@
+# TAGLINE
+
+provides standard Unix authentication
+
 # TLDR
 
 **Standard Unix authentication**
@@ -42,8 +46,6 @@
 **pam_unix** provides standard Unix authentication. Uses /etc/passwd and shadow.
 
 The module handles basic auth. Core PAM component.
-
-pam_unix is standard Unix auth.
 
 # CAVEATS
 

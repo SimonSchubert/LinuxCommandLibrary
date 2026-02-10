@@ -1,3 +1,7 @@
+# TAGLINE
+
+legacy PAM configuration file format where all services are configured
+
 # TLDR
 
 **Basic authentication entry**

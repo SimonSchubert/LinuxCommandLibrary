@@ -1,3 +1,7 @@
+# TAGLINE
+
+formats JavaScript, HTML, and CSS files with consistent indentation and style
+
 # TLDR
 
 **Beautify JavaScript file**

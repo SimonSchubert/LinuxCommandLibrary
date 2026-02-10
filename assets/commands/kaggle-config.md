@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages Kaggle CLI configuration settings
+
 # TLDR
 
 **Set configuration value**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays ink or toner levels for HP printers
+
 # TLDR
 
 **Show ink levels**
@@ -42,8 +46,6 @@
 **hp-levels** displays ink or toner levels for HP printers. It shows remaining supply levels as percentages or visual bars.
 
 The tool queries the printer's supply status. Watch mode provides real-time updates during printing operations.
-
-hp-levels shows ink/toner levels.
 
 # CAVEATS
 

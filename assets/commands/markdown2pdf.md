@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts Markdown documents to PDF
+
 # TLDR
 
 **Convert Markdown to PDF**

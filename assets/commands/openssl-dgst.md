@@ -1,3 +1,7 @@
+# TAGLINE
+
+calculates message digests of files
+
 # TLDR
 
 **Calculate SHA256 hash**

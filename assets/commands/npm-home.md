@@ -1,3 +1,7 @@
+# TAGLINE
+
+opens package homepage in browser
+
 # TLDR
 
 **Open package homepage**
@@ -29,8 +33,6 @@ _PACKAGES_
 **npm home** opens package homepage in browser. Uses homepage field from package.json.
 
 The command navigates to project website. Alias for npm docs.
-
-npm home opens homepage.
 
 # CAVEATS
 

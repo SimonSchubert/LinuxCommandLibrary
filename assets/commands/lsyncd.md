@@ -1,3 +1,7 @@
+# TAGLINE
+
+watches directories for changes and synchronizes them in real-time
+
 # TLDR
 
 **Sync directories locally**

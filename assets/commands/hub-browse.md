@@ -1,3 +1,7 @@
+# TAGLINE
+
+opens the GitHub repository page in your web browser
+
 # TLDR
 
 **Open repo in browser**

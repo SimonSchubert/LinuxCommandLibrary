@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages development tool versions
+
 # TLDR
 
 **Install tool**
@@ -56,8 +60,6 @@ _COMMAND_
 **mise** manages development tool versions. It's a polyglot runtime manager (successor to rtx).
 
 The tool handles Node.js, Python, Ruby, and more. Compatible with asdf plugins.
-
-mise manages tool versions.
 
 # CAVEATS
 

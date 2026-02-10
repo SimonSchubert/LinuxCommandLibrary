@@ -1,3 +1,7 @@
+# TAGLINE
+
+LLVM debugger
+
 # TLDR
 
 **Debug executable**
@@ -56,8 +60,6 @@ _PROGRAM_
 **lldb** is the LLVM debugger. It debugs C, C++, Objective-C, and Swift programs.
 
 The tool provides breakpoints, watchpoints, stepping, and memory inspection. It's the default debugger on macOS.
-
-lldb debugs compiled programs.
 
 # CAVEATS
 

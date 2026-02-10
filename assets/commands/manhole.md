@@ -1,3 +1,7 @@
+# TAGLINE
+
+provides remote debugging access to Python processes
+
 # TLDR
 
 **Connect to process**
@@ -39,8 +43,6 @@ _TARGET_
 **manhole** provides remote debugging access to Python processes. It opens an interactive Python shell.
 
 The tool connects to processes running the manhole library. Useful for debugging live applications.
-
-manhole debugs Python processes.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates supply chain attestations for build steps
+
 # TLDR
 
 **Start recording**
@@ -48,8 +52,6 @@
 **in-toto-record** creates supply chain attestations for build steps. It records materials before and products after a step, generating signed link metadata.
 
 The tool supports split recording where start and stop are separate commands. This allows recording steps that span multiple commands or sessions.
-
-in-toto-record creates supply chain attestations.
 
 # CAVEATS
 

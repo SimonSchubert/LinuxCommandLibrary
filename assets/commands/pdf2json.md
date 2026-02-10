@@ -1,3 +1,7 @@
+# TAGLINE
+
+extracts PDF content to JSON format
+
 # TLDR
 
 **Convert PDF to JSON**
@@ -40,8 +44,6 @@
 # DESCRIPTION
 
 **pdf2json** extracts PDF content to JSON format. It captures text, positions, fonts, and form fields, enabling programmatic access to PDF data.
-
-Useful for data extraction, indexing, and PDF analysis.
 
 # OUTPUT STRUCTURE
 

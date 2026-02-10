@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts a physical standby to logical replication subscriber
+
 # TLDR
 
 **Create subscriber from standby**

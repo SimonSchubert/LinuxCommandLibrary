@@ -1,3 +1,7 @@
+# TAGLINE
+
+deletes directories from MS-DOS filesystems
+
 # TLDR
 
 **Delete directory tree**
@@ -32,8 +36,6 @@ _DIRECTORIES_
 **mdeltree** deletes directories from MS-DOS filesystems. It removes directories and all contents.
 
 The tool is part of mtools. It's the MS-DOS equivalent of rm -rf for FAT filesystems.
-
-mdeltree deletes MS-DOS directories.
 
 # CAVEATS
 

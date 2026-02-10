@@ -1,3 +1,7 @@
+# TAGLINE
+
+configures input method framework for Linux desktops
+
 # TLDR
 
 **Configure input method**
@@ -49,8 +53,6 @@
 **im-config** configures input method framework for Linux desktops. It selects between IBus, Fcitx, SCIM, and other input systems.
 
 The tool manages X startup scripts for input method activation. It's used for setting up multilingual input.
-
-im-config selects input method framework.
 
 # CAVEATS
 

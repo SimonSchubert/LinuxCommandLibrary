@@ -1,3 +1,7 @@
+# TAGLINE
+
+removes print jobs from the queue
+
 # TLDR
 
 **Cancel all jobs**
@@ -46,8 +50,6 @@ _JOB_
 **lprm** removes print jobs from the queue. It cancels pending or processing jobs.
 
 The tool is the BSD-style job removal command. Users can only remove their own jobs unless root.
-
-lprm cancels print jobs.
 
 # CAVEATS
 

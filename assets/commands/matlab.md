@@ -1,3 +1,7 @@
+# TAGLINE
+
+launches MATLAB, a computing environment for numerical computation
+
 # TLDR
 
 **Start MATLAB**

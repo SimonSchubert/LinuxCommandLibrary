@@ -1,3 +1,7 @@
+# TAGLINE
+
+initializes a new PlatformIO project
+
 # TLDR
 
 **Initialize project in current directory**

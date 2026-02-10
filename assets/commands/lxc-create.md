@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates a new Linux container from a template
+
 # TLDR
 
 Create container **interactively**

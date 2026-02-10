@@ -1,3 +1,7 @@
+# TAGLINE
+
+extracts credentials from Windows systems via SAM, LSA secrets, cached
+
 # TLDR
 
 **Dump secrets from domain controller**

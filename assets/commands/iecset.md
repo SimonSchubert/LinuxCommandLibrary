@@ -1,3 +1,7 @@
+# TAGLINE
+
+configures IEC958 status bits on ALSA devices
+
 # TLDR
 
 **Show IEC958 status**
@@ -52,8 +56,6 @@ _COMMANDS_
 **iecset** configures IEC958 (S/PDIF) status bits on ALSA devices. It controls digital audio output characteristics.
 
 The tool sets professional/consumer mode, sample rates, and other S/PDIF parameters. It's used for digital audio configuration.
-
-iecset configures S/PDIF audio output.
 
 # CAVEATS
 

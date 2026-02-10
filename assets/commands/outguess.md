@@ -1,3 +1,7 @@
+# TAGLINE
+
+steganography tool that hides data in JPEG images
+
 # TLDR
 
 **Embed data in image**

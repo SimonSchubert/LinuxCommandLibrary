@@ -1,3 +1,7 @@
+# TAGLINE
+
+sets up a Linux swap area on a device or in a file
+
 # TLDR
 
 Set up a **swap area**

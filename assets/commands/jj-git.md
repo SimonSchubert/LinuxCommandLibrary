@@ -1,3 +1,7 @@
+# TAGLINE
+
+provides Git interoperability for Jujutsu
+
 # TLDR
 
 **Clone Git repository**
@@ -52,8 +56,6 @@
 **jj git** provides Git interoperability for Jujutsu. It enables working with Git remotes and converting between formats.
 
 The commands handle cloning, fetching, and pushing to Git servers. Jujutsu stores data in Git format internally.
-
-jj git enables Git interop.
 
 # CAVEATS
 

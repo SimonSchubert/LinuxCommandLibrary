@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages Jira sprints from the command line
+
 # TLDR
 
 **List sprints**
@@ -45,8 +49,6 @@
 **jira sprint** manages Jira sprints from the command line. It lists, views, and modifies sprint contents.
 
 The command integrates with Scrum boards. It enables sprint management without the web interface.
-
-jira sprint manages sprints.
 
 # CAVEATS
 

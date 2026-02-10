@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages SELinux contexts
+
 # TLDR
 
 **Set SELinux context**
@@ -39,8 +43,6 @@
 **pam_selinux** manages SELinux contexts. Sets security context on login.
 
 The module handles session context. Required for SELinux systems.
-
-pam_selinux sets security context.
 
 # CAVEATS
 

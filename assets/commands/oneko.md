@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays a cute cat that chases the mouse cursor around the screen
+
 # TLDR
 
 **Start oneko**

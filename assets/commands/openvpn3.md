@@ -1,3 +1,7 @@
+# TAGLINE
+
+next-generation OpenVPN client for Linux, providing a D-Bus based architecture
+
 # TLDR
 
 **Start** a new VPN session

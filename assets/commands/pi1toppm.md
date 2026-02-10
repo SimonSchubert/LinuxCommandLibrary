@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts Atari Degas PI1 low-resolution color images to PPM
+
 # TLDR
 
 **Convert Atari Degas PI1 to PPM**

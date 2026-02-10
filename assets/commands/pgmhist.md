@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays a grayscale histogram of a PGM image
+
 # TLDR
 
 **Show grayscale histogram**

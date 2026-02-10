@@ -1,3 +1,7 @@
+# TAGLINE
+
+sends and reads email
+
 # TLDR
 
 **Send email**
@@ -56,8 +60,6 @@ _RECIPIENTS_
 **mail** sends and reads email. It's a basic command-line mail user agent.
 
 The tool can send quick emails from scripts. It reads mail from local mailboxes.
-
-mail sends and reads email.
 
 # CAVEATS
 

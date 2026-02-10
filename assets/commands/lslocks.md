@@ -1,3 +1,7 @@
+# TAGLINE
+
+lists information about all file locks held on the local system
+
 # TLDR
 
 List **all locks**

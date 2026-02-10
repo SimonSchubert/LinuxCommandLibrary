@@ -1,3 +1,7 @@
+# TAGLINE
+
+netkit FTP client
+
 # TLDR
 
 **Connect to FTP server**
@@ -49,8 +53,6 @@ _HOST_
 **netkit-ftp** is the netkit FTP client. It transfers files over FTP protocol.
 
 The tool connects to FTP servers. Interactive command-line interface.
-
-netkit-ftp is traditional FTP client.
 
 # CAVEATS
 

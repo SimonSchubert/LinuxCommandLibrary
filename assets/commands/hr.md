@@ -1,3 +1,7 @@
+# TAGLINE
+
+prints horizontal rules in the terminal
+
 # TLDR
 
 **Print horizontal rule**
@@ -39,8 +43,6 @@ _CHARACTERS_
 **hr** prints horizontal rules in the terminal. It outputs a line of characters spanning the terminal width.
 
 The tool is useful for visual separation in scripts and terminal output. Multiple character patterns can create different line styles.
-
-hr draws horizontal lines in terminal.
 
 # CAVEATS
 

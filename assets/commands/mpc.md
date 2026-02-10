@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line client for MPD
+
 # TLDR
 
 **Show current song**
@@ -67,8 +71,6 @@ _COMMAND_
 **mpc** is a command-line client for MPD (Music Player Daemon). It controls music playback.
 
 The tool communicates with mpd daemon. Manages playlists, volume, and playback state.
-
-mpc is MPD command-line client.
 
 # CAVEATS
 

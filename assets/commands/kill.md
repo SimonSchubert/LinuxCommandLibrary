@@ -1,3 +1,7 @@
+# TAGLINE
+
+sends a signal to a process, usually to stop it
+
 # TLDR
 
 **Terminate** a program using the default SIGTERM signal

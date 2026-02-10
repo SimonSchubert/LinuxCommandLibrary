@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays MySQL server activity in real-time, similar to top for processes
+
 # TLDR
 
 **Monitor MySQL queries**

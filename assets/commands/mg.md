@@ -1,3 +1,7 @@
+# TAGLINE
+
+micro GNU Emacs-style editor
+
 # TLDR
 
 **Open file**
@@ -42,8 +46,6 @@ _FILES_
 **mg** is a micro GNU Emacs-style editor. It provides basic Emacs keybindings in a small package.
 
 The tool is lightweight and fast. It's the default editor on OpenBSD and available elsewhere.
-
-mg is a micro Emacs clone.
 
 # CAVEATS
 

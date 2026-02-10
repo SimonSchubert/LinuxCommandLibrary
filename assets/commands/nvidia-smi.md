@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line utility for monitoring and managing NVIDIA GPU devices
+
 # TLDR
 
 **Show GPU status**

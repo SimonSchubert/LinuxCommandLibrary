@@ -1,3 +1,7 @@
+# TAGLINE
+
+shows the evolution history of a change
+
 # TLDR
 
 **Show evolution log**
@@ -39,8 +43,6 @@
 **jj evolog** shows the evolution history of a change. It displays how a change has been modified over time.
 
 The command reveals rewriting, rebasing, and amendment history. It helps understand how changes evolved.
-
-jj evolog shows change evolution.
 
 # CAVEATS
 

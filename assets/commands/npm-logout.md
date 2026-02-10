@@ -1,3 +1,7 @@
+# TAGLINE
+
+removes authentication token
+
 # TLDR
 
 **Logout from npm**
@@ -32,8 +36,6 @@
 **npm logout** removes authentication token. Logs out from npm registry.
 
 The command clears credentials. Affects specified registry or default.
-
-npm logout removes auth.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+adds entries to an LDAP directory
+
 # TLDR
 
 **Add entry from LDIF file**

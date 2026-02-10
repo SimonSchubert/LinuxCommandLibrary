@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal AI assistant
+
 # TLDR
 
 **Ask AI**
@@ -53,8 +57,6 @@ _PROMPT_
 **mods** is a terminal AI assistant. It queries language models from the command line.
 
 The tool supports piping and formatting. Works with OpenAI and other providers.
-
-mods is CLI AI assistant.
 
 # CAVEATS
 

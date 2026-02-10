@@ -1,3 +1,7 @@
+# TAGLINE
+
+captures screenshots of websites at specified viewport sizes
+
 # TLDR
 
 **Screenshot a website**

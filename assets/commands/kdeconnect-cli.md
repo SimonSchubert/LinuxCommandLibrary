@@ -1,3 +1,7 @@
+# TAGLINE
+
+controls KDE Connect from the command line
+
 # TLDR
 
 **List devices**
@@ -59,8 +63,6 @@
 **kdeconnect-cli** controls KDE Connect from the command line. It connects Linux desktops with mobile devices.
 
 The tool sends files, notifications, and controls media. It enables phone integration from terminal.
-
-kdeconnect-cli connects to phones.
 
 # CAVEATS
 

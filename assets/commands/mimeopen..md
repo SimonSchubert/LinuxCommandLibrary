@@ -1,3 +1,7 @@
+# TAGLINE
+
+opens files with their associated applications
+
 # TLDR
 
 **Open file with default app**
@@ -49,8 +53,6 @@ _FILE_
 **mimeopen** opens files with their associated applications. It uses MIME types to determine handlers.
 
 The tool is part of perl-file-mimeinfo. It respects XDG MIME associations.
-
-mimeopen opens files by MIME type.
 
 # CAVEATS
 

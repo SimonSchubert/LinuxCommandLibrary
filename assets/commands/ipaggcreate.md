@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates IP address aggregates from network traffic dumps or pcap files
+
 # TLDR
 
 **Aggregate IP addresses from a dump file**

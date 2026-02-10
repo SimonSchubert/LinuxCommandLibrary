@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs nmcli as an agent daemon that responds to NetworkManager's
+
 # TLDR
 
 Register nmcli as a **secret agent** and listen for secret requests

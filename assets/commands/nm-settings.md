@@ -1,3 +1,7 @@
+# TAGLINE
+
+describes the properties available for NetworkManager connections
+
 # TLDR
 
 **View connection settings**

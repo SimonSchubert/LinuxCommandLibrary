@@ -1,3 +1,7 @@
+# TAGLINE
+
+prints the node_modules directory path
+
 # TLDR
 
 **Show local node_modules path**
@@ -25,8 +29,6 @@
 **npm root** prints the node_modules directory path. Shows where packages are installed.
 
 The command displays module location. Useful for scripts and debugging.
-
-npm root shows node_modules path.
 
 # CAVEATS
 

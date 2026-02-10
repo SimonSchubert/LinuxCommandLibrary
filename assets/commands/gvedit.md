@@ -1,3 +1,7 @@
+# TAGLINE
+
+qt-based graph editor and viewer for Graphviz
+
 # TLDR
 
 **Open gvedit**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+sets resource limits
+
 # TLDR
 
 **Enable resource limits**
@@ -34,8 +38,6 @@ Configuration in /etc/security/limits.conf.
 **pam_limits** sets resource limits. Enforces ulimit values on login.
 
 The module configures process limits. Uses limits.conf for settings.
-
-pam_limits enforces resource limits.
 
 # CAVEATS
 

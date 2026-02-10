@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates printer calibration and test pages as PBM images
+
 # TLDR
 
 **Generate printer test page**

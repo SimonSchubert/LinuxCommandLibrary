@@ -1,3 +1,7 @@
+# TAGLINE
+
+bootstraps Kubernetes clusters
+
 # TLDR
 
 **Initialize control plane**
@@ -53,11 +57,11 @@
 
 # DESCRIPTION
 
-**kubeadm** bootstraps Kubernetes clusters. It initializes control planes and joins worker nodes.
+**kubeadm** is the official Kubernetes cluster bootstrapping tool that automates the setup of a production-grade control plane. It handles the complex initialization process including generating TLS certificates for cluster components, configuring the kubelet, deploying the kube-apiserver, kube-controller-manager, and kube-scheduler as static pods, and installing cluster-essential add-ons like CoreDNS and kube-proxy.
 
-The tool handles certificates, kubelet config, and add-ons. It follows best practices for cluster setup.
+The workflow centers on two primary commands: `kubeadm init` to create a new control plane on the first node, and `kubeadm join` to add worker nodes or additional control plane nodes to an existing cluster using bootstrap tokens. The tool also manages cluster lifecycle operations such as upgrading Kubernetes versions across the cluster, rotating certificates, and resetting nodes back to a clean state.
 
-kubeadm bootstraps Kubernetes clusters.
+kubeadm follows Kubernetes best practices and conformance standards, but intentionally does not provision the underlying infrastructure or install a CNI network plugin, keeping it focused on cluster bootstrapping while remaining composable with other tools for complete cluster management.
 
 # CAVEATS
 

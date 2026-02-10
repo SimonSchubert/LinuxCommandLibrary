@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal 15-puzzle game
+
 # TLDR
 
 **Play 15 puzzle game**
@@ -25,8 +29,6 @@
 **nbfifteen** is a terminal 15-puzzle game. Slide tiles to arrange them in order.
 
 The tool is a classic sliding puzzle. Uses ncurses for display.
-
-nbfifteen is sliding puzzle game.
 
 # CAVEATS
 

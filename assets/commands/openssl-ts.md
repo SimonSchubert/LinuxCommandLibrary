@@ -1,3 +1,7 @@
+# TAGLINE
+
+handles RFC 3161 Time Stamping Authority operations
+
 # TLDR
 
 **Create timestamp request**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates Go code from Thrift or Protobuf IDL files
+
 # TLDR
 
 **Generate service code**
@@ -46,11 +50,9 @@ _IDL_FILE_
 
 # DESCRIPTION
 
-**kitex** generates Go code from Thrift or Protobuf IDL files. It creates server and client code for the Kitex RPC framework.
+**kitex** is a code generation tool for the Kitex high-performance RPC framework, part of ByteDance's open-source CloudWeGo ecosystem. It reads Thrift or Protocol Buffers interface definition language (IDL) files and generates Go scaffolding code for both servers and clients, including service interfaces, request/response types, serialization logic, and a runnable project skeleton.
 
-The tool is part of ByteDance's CloudWeGo ecosystem. It supports high-performance microservice development.
-
-kitex generates RPC service code.
+The generated code is designed for building Go microservices with features like connection pooling, load balancing, and circuit breaking built into the Kitex framework. By default, kitex produces both server and client code, but the `-client` flag restricts output to client stubs only. Custom code templates can be provided via the `-template` option to control the structure and style of the generated project.
 
 # CAVEATS
 

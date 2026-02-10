@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates and runs pods
+
 # TLDR
 
 **Run pod**
@@ -56,11 +60,11 @@ _NAME_
 
 # DESCRIPTION
 
-**kubectl run** creates and runs pods. It provides quick pod deployment for testing.
+**kubectl run** creates and starts a single pod in the cluster from a specified container image. It is designed for quick, ad-hoc pod creation and is commonly used for debugging, running one-off tasks, and testing container images without writing a full manifest file.
 
-The command generates pod specifications. Use dry-run to output YAML for modification.
+The command supports interactive mode with `-it` for attaching a terminal session directly to the container, which is useful for launching temporary troubleshooting pods with tools like busybox or curl. Combined with `--rm`, the pod is automatically deleted when the session ends. The `--dry-run=client -o yaml` pattern is frequently used to generate a pod manifest template that can be customized and applied separately.
 
-kubectl run creates pods quickly.
+In earlier Kubernetes versions, `kubectl run` could create deployments and other resource types, but it now exclusively creates standalone pods. For production workloads, use deployments, statefulsets, or jobs instead to get replication, rolling updates, and self-healing capabilities.
 
 # CAVEATS
 

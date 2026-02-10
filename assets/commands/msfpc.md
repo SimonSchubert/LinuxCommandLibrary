@@ -1,3 +1,7 @@
+# TAGLINE
+
+simplifies payload generation
+
 # TLDR
 
 **Generate Windows payload**
@@ -53,8 +57,6 @@ _LPORT_
 **msfpc** (MSFvenom Payload Creator) simplifies payload generation. It wraps msfvenom functionality.
 
 The tool creates common payloads quickly. Generates handlers and multi-format outputs.
-
-msfpc is MSFvenom payload helper.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+microPython remote control tool
+
 # TLDR
 
 **Connect to device**
@@ -64,8 +68,6 @@ _COMMAND_
 **mpremote** is the MicroPython remote control tool. It manages MicroPython devices.
 
 The tool copies files, runs code, and provides REPL access. Works over USB serial.
-
-mpremote is MicroPython device manager.
 
 # CAVEATS
 

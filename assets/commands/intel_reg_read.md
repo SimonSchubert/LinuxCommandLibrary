@@ -1,3 +1,7 @@
+# TAGLINE
+
+reads hardware registers from Intel GPUs
+
 # TLDR
 
 **Read specific register**
@@ -39,8 +43,6 @@ _REGISTER_
 **intel_reg_read** reads hardware registers from Intel GPUs. It provides direct access to GPU configuration registers.
 
 The tool can decode register bits into meaningful fields. Essential for low-level hardware debugging and driver development.
-
-intel_reg_read reads GPU registers.
 
 # CAVEATS
 

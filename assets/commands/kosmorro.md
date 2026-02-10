@@ -1,3 +1,7 @@
+# TAGLINE
+
+computes astronomical ephemerides including moon phases, planet
+
 # TLDR
 
 **Show today's ephemerides**

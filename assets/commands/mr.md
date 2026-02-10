@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages multiple version control repositories
+
 # TLDR
 
 **Update all repositories**
@@ -60,8 +64,6 @@ _COMMAND_
 **mr** (myrepos) manages multiple version control repositories. It runs commands across all repos.
 
 The tool works with git, svn, hg, and more. Configuration in ~/.mrconfig.
-
-mr is multiple repository manager.
 
 # CAVEATS
 

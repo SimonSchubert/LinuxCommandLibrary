@@ -1,3 +1,7 @@
+# TAGLINE
+
+wallpaper browser and setter for X Window desktops
+
 # TLDR
 
 **Browse** wallpapers from a directory

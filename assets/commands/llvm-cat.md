@@ -1,3 +1,7 @@
+# TAGLINE
+
+concatenates LLVM bitcode files into a single bitcode file
+
 # TLDR
 
 **Concatenate bitcode files**

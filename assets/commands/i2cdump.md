@@ -1,3 +1,7 @@
+# TAGLINE
+
+reads and displays all registers of an I2C device connected to a specified bus
+
 # TLDR
 
 **Dump** all registers of an I2C device

@@ -1,3 +1,7 @@
+# TAGLINE
+
+compresses files using the LZO library
+
 # TLDR
 
 **Compress file**

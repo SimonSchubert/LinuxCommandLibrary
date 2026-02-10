@@ -1,3 +1,7 @@
+# TAGLINE
+
+synchronizes IMAP mailboxes with local Maildir folders
+
 # TLDR
 
 **Sync all channels**

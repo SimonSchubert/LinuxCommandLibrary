@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs the stop script defined in package
+
 # TLDR
 
 **Stop application**

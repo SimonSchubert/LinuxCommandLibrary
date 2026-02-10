@@ -1,3 +1,7 @@
+# TAGLINE
+
+embeds or resets the BLAKE2B hash of a Limine configuration file into
+
 # TLDR
 
 **Embed** a config file's BLAKE2B hash into the Limine EFI executable

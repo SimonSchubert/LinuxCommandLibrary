@@ -1,3 +1,7 @@
+# TAGLINE
+
+saves changes to the repository as a new changeset
+
 # TLDR
 
 **Commit all changes**

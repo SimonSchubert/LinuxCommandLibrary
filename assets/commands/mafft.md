@@ -1,3 +1,7 @@
+# TAGLINE
+
+high-performance multiple sequence alignment program
+
 # TLDR
 
 **Align sequences (auto strategy)**

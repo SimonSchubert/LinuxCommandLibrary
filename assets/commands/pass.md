@@ -1,3 +1,7 @@
+# TAGLINE
+
+simple password manager that stores passwords in GPG-encrypted files organized
+
 # TLDR
 
 **Initialize password store** with GPG key

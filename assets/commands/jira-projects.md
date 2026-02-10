@@ -1,3 +1,7 @@
+# TAGLINE
+
+lists all accessible Jira projects
+
 # TLDR
 
 **List all projects**

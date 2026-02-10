@@ -1,3 +1,7 @@
+# TAGLINE
+
+impacket NTFS reader
+
 # TLDR
 
 **Read NTFS file**
@@ -38,8 +42,6 @@ _PATH_
 **ntfs-read.py** is an Impacket NTFS reader. Reads NTFS without mounting.
 
 The tool provides raw access. Part of Impacket security toolkit.
-
-ntfs-read.py reads NTFS directly.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+multithreaded PNG optimization tool written in Rust
+
 # TLDR
 
 **Optimize PNG file**

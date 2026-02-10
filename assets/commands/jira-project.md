@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages Jira projects from the command line
+
 # TLDR
 
 **List all projects**

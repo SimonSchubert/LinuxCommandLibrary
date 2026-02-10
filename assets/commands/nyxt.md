@@ -1,3 +1,7 @@
+# TAGLINE
+
+keyboard-oriented web browser
+
 # TLDR
 
 **Start browser**
@@ -45,8 +49,6 @@ _URL_
 **nyxt** is a keyboard-oriented web browser. Extensible with Common Lisp.
 
 The browser features programmable keybindings and commands. Inspired by Emacs and Vim.
-
-nyxt is a power user browser.
 
 # CAVEATS
 

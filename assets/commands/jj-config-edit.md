@@ -1,3 +1,7 @@
+# TAGLINE
+
+opens the Jujutsu configuration file in your default editor
+
 # TLDR
 
 **Edit user config in editor**

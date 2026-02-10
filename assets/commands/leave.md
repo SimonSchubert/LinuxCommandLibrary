@@ -1,3 +1,7 @@
+# TAGLINE
+
+reminds you when to leave
+
 # TLDR
 
 **Leave in 30 minutes**
@@ -33,8 +37,6 @@ _TIME_
 **leave** reminds you when to leave. It displays warnings as the time approaches.
 
 The tool runs in the background and prints reminders. Useful for meetings and appointments.
-
-leave reminds when to depart.
 
 # CAVEATS
 

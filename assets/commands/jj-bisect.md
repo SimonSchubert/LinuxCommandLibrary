@@ -1,3 +1,7 @@
+# TAGLINE
+
+performs binary search through commit history to find which commit introduced
+
 # TLDR
 
 **Start bisect session**

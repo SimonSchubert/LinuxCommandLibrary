@@ -1,3 +1,7 @@
+# TAGLINE
+
+validates whether provided credentials allow RDP access to a Windows system
+
 # TLDR
 
 **Check if RDP credentials are valid**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+system information fetcher written in Rust
+
 # TLDR
 
 **Display system information**

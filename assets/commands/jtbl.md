@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts JSON to ASCII tables for terminal display
+
 # TLDR
 
 **Display JSON as table**
@@ -49,8 +53,6 @@
 **jtbl** converts JSON to ASCII tables for terminal display. It formats JSON arrays as readable tables.
 
 The tool pairs well with jc for displaying command output. It supports Markdown output for documentation.
-
-jtbl displays JSON as tables.
 
 # CAVEATS
 

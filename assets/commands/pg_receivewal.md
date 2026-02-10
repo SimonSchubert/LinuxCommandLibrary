@@ -1,3 +1,7 @@
+# TAGLINE
+
+streams WAL from server to archive
+
 # TLDR
 
 **Receive WAL to directory**

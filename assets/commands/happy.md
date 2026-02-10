@@ -1,3 +1,7 @@
+# TAGLINE
+
+parser generator for Haskell, similar to yacc for C
+
 # TLDR
 
 **Generate parser from grammar**
@@ -48,8 +52,6 @@ _FILE_
 **Happy** is a parser generator for Haskell, similar to yacc for C. It takes a grammar specification and produces a Haskell parser module.
 
 The tool generates LALR parsers from BNF-like grammars. It integrates with Alex lexer generator for complete parsing solutions.
-
-Happy generates Haskell parsers from grammars.
 
 # CAVEATS
 

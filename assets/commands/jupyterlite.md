@@ -1,3 +1,7 @@
+# TAGLINE
+
+builds static JupyterLab sites that run entirely in the browser using
+
 # TLDR
 
 **Build JupyterLite site**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates EROFS images from a directory tree
+
 # TLDR
 
 Create an **EROFS filesystem** based on the root directory

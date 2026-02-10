@@ -1,3 +1,7 @@
+# TAGLINE
+
+starts applications with input method support
+
 # TLDR
 
 **Launch with input method**
@@ -35,8 +39,6 @@ _COMMAND_
 **im-launch** starts applications with input method support. It sets up environment variables for the selected input framework.
 
 The tool ensures applications can use IBus, Fcitx, or other input methods. It's useful for launching apps needing international input.
-
-im-launch starts apps with IM support.
 
 # CAVEATS
 

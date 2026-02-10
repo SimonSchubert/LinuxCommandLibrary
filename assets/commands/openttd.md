@@ -1,3 +1,7 @@
+# TAGLINE
+
+transport simulation
+
 # TLDR
 
 **Start game**
@@ -49,8 +53,6 @@
 **openttd** is OpenTTD transport simulation. Open source Transport Tycoon Deluxe.
 
 The game simulates transport company management. Multiplayer support.
-
-openttd plays transport simulation.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PBM bitmaps to Epson ESC/P2 printer format
+
 # TLDR
 
 **Convert PBM to Epson ESC/P2 format**

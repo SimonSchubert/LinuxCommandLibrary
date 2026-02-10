@@ -1,3 +1,7 @@
+# TAGLINE
+
+removes star from a package on npm registry
+
 # TLDR
 
 **Unstar a package**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs filter programs on terminal I/O
+
 # TLDR
 
 **Run filter on I/O**
@@ -28,8 +32,6 @@
 **pam_filter** runs filter programs on terminal I/O. Transforms input/output.
 
 The module filters user interaction. Experimental PAM feature.
-
-pam_filter processes I/O.
 
 # CAVEATS
 

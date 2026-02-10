@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates a copy of a Mercurial repository
+
 # TLDR
 
 **Clone repository**
@@ -52,8 +56,6 @@ _DEST_
 **hg clone** creates a copy of a Mercurial repository. It downloads the entire history and creates a working directory.
 
 The command supports various protocols including SSH, HTTP, and local paths. It can clone specific branches or revisions.
-
-hg clone copies Mercurial repositories.
 
 # CAVEATS
 

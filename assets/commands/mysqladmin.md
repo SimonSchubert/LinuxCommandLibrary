@@ -1,3 +1,7 @@
+# TAGLINE
+
+administers MySQL servers
+
 # TLDR
 
 **Check server status**
@@ -67,8 +71,6 @@ _COMMAND_
 **mysqladmin** administers MySQL servers. It performs administrative operations.
 
 The tool manages databases, users, and server state. Essential for DBA tasks.
-
-mysqladmin is MySQL admin tool.
 
 # CAVEATS
 

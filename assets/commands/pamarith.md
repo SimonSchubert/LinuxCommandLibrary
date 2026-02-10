@@ -1,3 +1,7 @@
+# TAGLINE
+
+performs arithmetic operations on two PAM/PNM images
+
 # TLDR
 
 **Add two images**
@@ -56,8 +60,6 @@
 # DESCRIPTION
 
 **pamarith** performs arithmetic operations on two PAM/PNM images. Images must have the same dimensions. Used for compositing, masking, and image comparison.
-
-Part of the Netpbm toolkit.
 
 # EXAMPLE
 

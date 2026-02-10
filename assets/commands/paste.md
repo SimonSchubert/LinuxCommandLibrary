@@ -1,3 +1,7 @@
+# TAGLINE
+
+merges lines from multiple files side by side
+
 # TLDR
 
 **Merge files side by side**

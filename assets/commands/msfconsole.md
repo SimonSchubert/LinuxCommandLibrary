@@ -1,3 +1,7 @@
+# TAGLINE
+
+metasploit Framework console
+
 # TLDR
 
 **Start Metasploit console**
@@ -53,8 +57,6 @@
 **msfconsole** is the Metasploit Framework console. It provides access to exploits and security tools.
 
 The tool is the primary Metasploit interface. Used for penetration testing and security research.
-
-msfconsole is Metasploit Framework CLI.
 
 # CAVEATS
 

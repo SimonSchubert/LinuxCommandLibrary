@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts images to Sixel format for terminal display
+
 # TLDR
 
 **Display image in terminal**
@@ -52,8 +56,6 @@ _FILE_
 **img2sixel** converts images to Sixel format for terminal display. Sixel enables inline graphics in compatible terminals.
 
 The tool supports various image formats and outputs Sixel escape sequences. It works with terminals like xterm, mlterm, and others.
-
-img2sixel displays images in terminals.
 
 # CAVEATS
 

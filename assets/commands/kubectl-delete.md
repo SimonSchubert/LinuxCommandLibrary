@@ -1,3 +1,7 @@
+# TAGLINE
+
+removes Kubernetes resources
+
 # TLDR
 
 **Delete pod**
@@ -56,11 +60,11 @@ _NAME_
 
 # DESCRIPTION
 
-**kubectl delete** removes Kubernetes resources. It deletes pods, deployments, services, and other objects.
+**kubectl delete** removes one or more resources from a Kubernetes cluster. It can target resources by name, label selector, or by referencing the same manifest files used to create them, making it straightforward to tear down everything defined in a YAML file or directory.
 
-The command respects grace periods for graceful shutdown. Force delete bypasses graceful termination.
+By default, the command sends a graceful termination signal and waits for the resource's grace period (typically 30 seconds for pods) before forcibly removing it. During this window, pods receive a SIGTERM and can perform cleanup operations like draining connections or saving state. The `--force --grace-period=0` flags bypass graceful shutdown and immediately remove the resource from the API server, which is useful for stuck pods but may cause data loss.
 
-kubectl delete removes resources.
+Deleting higher-level resources like deployments or statefulsets cascades to their managed pods by default. Deleting a namespace removes all resources within it, so this operation should be used with caution in shared environments.
 
 # CAVEATS
 

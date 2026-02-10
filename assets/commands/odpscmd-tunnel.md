@@ -1,3 +1,7 @@
+# TAGLINE
+
+handles bulk data transfer
+
 # TLDR
 
 **Upload data**
@@ -45,8 +49,6 @@
 **odpscmd tunnel** handles bulk data transfer. Uploads and downloads large datasets.
 
 The tool provides high-speed data channel. Part of odpscmd suite.
-
-odpscmd tunnel transfers data.
 
 # CAVEATS
 

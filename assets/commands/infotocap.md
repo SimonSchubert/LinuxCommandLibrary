@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts terminal descriptions from terminfo format to termcap format
+
 # TLDR
 
 **Convert terminfo to termcap**
@@ -42,8 +46,6 @@ _FILE_
 **infotocap** converts terminal descriptions from terminfo format to termcap format. It's the reverse of captoinfo.
 
 The tool enables compatibility with older applications requiring termcap. Some capabilities may not translate directly.
-
-infotocap converts terminfo to termcap.
 
 # CAVEATS
 

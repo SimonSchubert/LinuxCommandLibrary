@@ -1,3 +1,7 @@
+# TAGLINE
+
+java OpenStreetMap Editor, a feature-rich desktop application for editing
+
 # TLDR
 
 **Launch JOSM editor**

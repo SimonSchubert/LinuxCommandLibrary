@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal-based game
+
 # TLDR
 
 **Start the game**
@@ -39,8 +43,6 @@
 **moon-buggy** is a terminal-based game. Drive a buggy across the moon's surface jumping over craters.
 
 The tool is a simple arcade game. Use space to jump and controls to navigate obstacles.
-
-moon-buggy is terminal moon driving game.
 
 # CAVEATS
 

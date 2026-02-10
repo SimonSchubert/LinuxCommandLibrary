@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays information about the MATE desktop environment, including the version
+
 # TLDR
 
 Display MATE **version**

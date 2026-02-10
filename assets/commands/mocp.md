@@ -1,3 +1,7 @@
+# TAGLINE
+
+console-based audio player with an ncurses interface
+
 # TLDR
 
 **Launch** the MOC terminal UI

@@ -1,3 +1,7 @@
+# TAGLINE
+
+high-performance JDK with ahead-of-time native compilation and polyglot support
+
 # TLDR
 
 **Compile Java to native executable**

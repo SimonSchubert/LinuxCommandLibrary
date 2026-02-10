@@ -1,3 +1,7 @@
+# TAGLINE
+
+version 1
+
 # TLDR
 
 **Load Windows driver**
@@ -42,8 +46,6 @@ _DRIVER_
 **loadndisdriver-1.9** is version 1.9 of the NDIS driver loader. It loads Windows wireless drivers in Linux.
 
 This version-specific binary may be used when compatibility with older ndiswrapper is needed.
-
-loadndisdriver-1.9 loads NDIS drivers.
 
 # CAVEATS
 

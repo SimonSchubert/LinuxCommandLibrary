@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PAM/PNM images to QOI format
+
 # TLDR
 
 **Convert PAM to QOI format**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages Minecraft modpacks
+
 # TLDR
 
 **Initialize modpack**
@@ -60,8 +64,6 @@ Command-line modpack creation. No GUI required.
 Supports CurseForge and Modrinth. Downloads mods from both platforms.
 
 TOML-based pack format. Human-readable configuration.
-
-Exports to multiple formats. CurseForge, Modrinth, MultiMC.
 
 # CAVEATS
 

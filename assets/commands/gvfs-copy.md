@@ -1,3 +1,7 @@
+# TAGLINE
+
+copies files using GVFS
+
 # TLDR
 
 **Copy local file**
@@ -48,8 +52,6 @@ _DESTINATION_
 **gvfs-copy** copies files using GVFS (GNOME Virtual File System). It supports local files and remote URIs like SMB, FTP, and SSH.
 
 The tool handles network protocols transparently, copying files across different backends. It integrates with GNOME's file system abstraction.
-
-gvfs-copy copies files via GVFS backends.
 
 # CAVEATS
 

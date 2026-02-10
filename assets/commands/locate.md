@@ -1,3 +1,7 @@
+# TAGLINE
+
+searches a prebuilt database to find files matching a pattern, making it much
+
 # TLDR
 
 **Find** files by pattern

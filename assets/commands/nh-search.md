@@ -1,3 +1,7 @@
+# TAGLINE
+
+searches Nix packages interactively
+
 # TLDR
 
 **Search packages**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates Software Bill of Materials
+
 # TLDR
 
 **Generate SBOM**
@@ -40,8 +44,6 @@
 **npm sbom** generates Software Bill of Materials. Lists all dependencies.
 
 The command creates SBOM document. Supports SPDX and CycloneDX formats.
-
-npm sbom creates dependency manifest.
 
 # CAVEATS
 

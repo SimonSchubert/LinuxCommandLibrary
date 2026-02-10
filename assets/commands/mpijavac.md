@@ -1,3 +1,7 @@
+# TAGLINE
+
+compiles MPI Java programs
+
 # TLDR
 
 **Compile MPI Java program**

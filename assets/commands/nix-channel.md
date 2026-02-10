@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages Nix channel subscriptions
+
 # TLDR
 
 **List channels**
@@ -53,8 +57,6 @@
 **nix-channel** manages Nix channel subscriptions. Channels provide package sets.
 
 The tool handles channel URLs. Alternative to flakes for package sources.
-
-nix-channel manages package channels.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+dynamic linker/loader
+
 # TLDR
 
 **Run with library path**
@@ -43,8 +47,6 @@
 **ld.so** is the dynamic linker/loader. It loads shared libraries needed by programs at runtime.
 
 The loader resolves symbols and handles library dependencies. Environment variables control its behavior.
-
-ld.so loads shared libraries.
 
 # CAVEATS
 

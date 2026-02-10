@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays the hardware topology of the system in text format without requiring
+
 # TLDR
 
 Display the machine **topology in tree format**

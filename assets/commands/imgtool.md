@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages MCUboot firmware images
+
 # TLDR
 
 **Create MCUboot image**
@@ -48,8 +52,6 @@ _COMMAND_
 **imgtool** manages MCUboot firmware images. It creates, signs, and inspects bootloader-compatible images.
 
 The tool is essential for secure boot workflows. It handles image headers, signatures, and version information.
-
-imgtool manages MCUboot images.
 
 # CAVEATS
 

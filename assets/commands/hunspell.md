@@ -1,3 +1,7 @@
+# TAGLINE
+
+spell checker and morphological analyzer
+
 # TLDR
 
 **Check spelling**
@@ -55,8 +59,6 @@ _FILES_
 **Hunspell** is a spell checker and morphological analyzer. It's the default spell checker for many applications including LibreOffice and Firefox.
 
 The tool supports many languages with dictionary files. It can check files interactively or in batch mode for scripts.
-
-Hunspell checks spelling in many languages.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages PlatformIO libraries
+
 # TLDR
 
 **Search for libraries**

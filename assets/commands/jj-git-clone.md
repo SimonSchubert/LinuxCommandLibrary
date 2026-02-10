@@ -1,3 +1,7 @@
+# TAGLINE
+
+clones a Git repository into a Jujutsu workspace
+
 # TLDR
 
 **Clone repository**
@@ -35,8 +39,6 @@ _DIRECTORY_
 **jj git clone** clones a Git repository into a Jujutsu workspace. It fetches all branches and creates the jj internal structure.
 
 The colocate option keeps Git and jj data together. This enables using both tools on the same repository.
-
-jj git clone clones Git repos.
 
 # CAVEATS
 

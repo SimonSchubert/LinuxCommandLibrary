@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates logical backups of MySQL databases
+
 # TLDR
 
 **Dump database**

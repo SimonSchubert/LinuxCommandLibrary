@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line bibliography manager
+
 # TLDR
 
 **Add document from file**
@@ -57,8 +61,6 @@
 # DESCRIPTION
 
 **papis** is a command-line bibliography manager. It stores documents and metadata in a folder structure, supports multiple libraries, and integrates with editors and reference managers.
-
-Documents are stored with YAML metadata files.
 
 # LIBRARY STRUCTURE
 

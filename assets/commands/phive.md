@@ -1,3 +1,7 @@
+# TAGLINE
+
+PHAR Installation and Verification
+
 # TLDR
 
 **Install phar tool**
@@ -49,8 +53,6 @@
 **phive** is PHAR Installation and Verification. Manages PHP phar tools.
 
 The tool handles phar distribution. GPG signature verification.
-
-phive manages phar files.
 
 # CAVEATS
 

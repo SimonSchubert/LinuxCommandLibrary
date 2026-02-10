@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates a service for a resource
+
 # TLDR
 
 **Expose deployment**
@@ -49,11 +53,11 @@ _NAME_
 
 # DESCRIPTION
 
-**kubectl expose** creates a service for a resource. It makes pods accessible through a stable endpoint.
+**kubectl expose** creates a Kubernetes Service that provides stable network access to a set of pods managed by a deployment, replica set, pod, or other resource. It automatically generates the service configuration by inspecting the target resource's labels and port definitions, creating a selector-based service without requiring a manual manifest.
 
-The command generates service configurations automatically. It supports various service types.
+The command supports four service types: ClusterIP (default) for internal cluster access, NodePort for exposing the service on each node's IP at a static port, LoadBalancer for provisioning an external load balancer through the cloud provider, and ExternalName for mapping to a DNS name. The `--port` flag sets the service's listening port while `--target-port` specifies the container port to forward traffic to.
 
-kubectl expose creates services.
+This approach is convenient for quick service creation during development or prototyping. For production environments, defining services declaratively in manifest files alongside the workload definitions provides better reproducibility and version control.
 
 # CAVEATS
 

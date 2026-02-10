@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages Kaggle notebooks from the command line
+
 # TLDR
 
 **List kernels**

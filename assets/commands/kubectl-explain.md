@@ -1,3 +1,7 @@
+# TAGLINE
+
+shows resource and field documentation
+
 # TLDR
 
 **Explain resource**
@@ -43,8 +47,6 @@ _RESOURCE_
 **kubectl explain** shows resource and field documentation. It displays the schema for Kubernetes objects.
 
 The command helps write manifests correctly. It shows field types, defaults, and descriptions.
-
-kubectl explain shows resource docs.
 
 # CAVEATS
 

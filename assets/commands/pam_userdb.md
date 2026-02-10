@@ -1,3 +1,7 @@
+# TAGLINE
+
+authenticates against Berkeley DB
+
 # TLDR
 
 **Authenticate against DB**
@@ -35,8 +39,6 @@
 **pam_userdb** authenticates against Berkeley DB. Custom user database.
 
 The module uses DB files. Alternative to /etc/passwd.
-
-pam_userdb uses DB authentication.
 
 # CAVEATS
 

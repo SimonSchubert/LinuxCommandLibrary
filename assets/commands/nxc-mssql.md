@@ -1,3 +1,7 @@
+# TAGLINE
+
+tests Microsoft SQL Server credentials and executes queries
+
 # TLDR
 
 **Test MSSQL credentials**

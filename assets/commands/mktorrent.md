@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates BitTorrent metainfo files
+
 # TLDR
 
 **Create torrent from file**

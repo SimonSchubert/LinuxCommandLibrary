@@ -1,3 +1,7 @@
+# TAGLINE
+
+disassembler and debugger for analyzing binary executables
+
 # TLDR
 
 **Open binary in IDA**

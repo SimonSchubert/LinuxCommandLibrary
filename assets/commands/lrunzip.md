@@ -1,3 +1,7 @@
+# TAGLINE
+
+decompresses files compressed with lrzip
+
 # TLDR
 
 This command is an **alias** of lrzip --decompress

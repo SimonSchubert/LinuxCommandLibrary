@@ -1,3 +1,7 @@
+# TAGLINE
+
+music engraving program
+
 # TLDR
 
 **Compile music score**
@@ -56,8 +60,6 @@ _FILE_
 **lilypond** is a music engraving program. It compiles text-based music notation into beautiful sheet music.
 
 The tool produces publication-quality scores from a markup language. Output formats include PDF, PNG, PS, and SVG.
-
-lilypond engraves music notation.
 
 # CAVEATS
 

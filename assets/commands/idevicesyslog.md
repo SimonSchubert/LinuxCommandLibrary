@@ -1,3 +1,7 @@
+# TAGLINE
+
+streams the system log from iOS devices
+
 # TLDR
 
 **Stream system log**
@@ -52,8 +56,6 @@
 **idevicesyslog** streams the system log from iOS devices. It provides real-time access to device logs for debugging.
 
 The tool shows messages from all processes or filtered subsets. It's essential for iOS app development and debugging.
-
-idevicesyslog streams iOS device logs.
 
 # CAVEATS
 

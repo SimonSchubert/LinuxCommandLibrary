@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line tool for manipulating PDF documents
+
 # TLDR
 
 **Merge PDF files**

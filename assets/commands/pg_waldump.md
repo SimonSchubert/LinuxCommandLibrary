@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays WAL file contents in human-readable format
+
 # TLDR
 
 **Dump WAL file**

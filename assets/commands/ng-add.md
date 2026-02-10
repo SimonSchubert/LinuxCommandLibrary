@@ -1,3 +1,7 @@
+# TAGLINE
+
+adds npm packages with Angular schematics support to your project
+
 # TLDR
 
 **Add package to project**

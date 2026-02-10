@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates ext2, ext3, or ext4 filesystems on a device or partition
+
 # TLDR
 
 Create an **ext2 filesystem** on a partition

@@ -1,3 +1,7 @@
+# TAGLINE
+
+decompresses lzip files to standard output
+
 # TLDR
 
 **Decompress to stdout**

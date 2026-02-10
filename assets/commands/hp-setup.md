@@ -1,3 +1,7 @@
+# TAGLINE
+
+configures HP printers for Linux
+
 # TLDR
 
 **Setup HP printer**
@@ -49,8 +53,6 @@ _ADDRESS_
 **hp-setup** configures HP printers for Linux. It discovers, installs, and adds printers to the print system.
 
 The tool handles driver installation, queue creation, and basic configuration. It works with USB and network printers.
-
-hp-setup installs HP printers on Linux.
 
 # CAVEATS
 

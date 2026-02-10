@@ -1,3 +1,7 @@
+# TAGLINE
+
+prints and modifies Java VM configuration
+
 # TLDR
 
 **Show JVM flags**
@@ -56,8 +60,6 @@ _PID_
 **jinfo** prints and modifies Java VM configuration. It shows system properties and VM flags for running processes.
 
 The tool can dynamically change manageable flags. Useful for tuning JVM behavior without restart.
-
-jinfo shows JVM configuration.
 
 # CAVEATS
 

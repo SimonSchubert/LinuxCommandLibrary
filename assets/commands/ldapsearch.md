@@ -1,3 +1,7 @@
+# TAGLINE
+
+queries LDAP directories
+
 # TLDR
 
 **Search for user**

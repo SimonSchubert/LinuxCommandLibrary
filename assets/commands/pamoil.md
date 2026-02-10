@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates oil painting effect
+
 # TLDR
 
 **Apply oil painting effect**
@@ -25,8 +29,6 @@ _FILE_
 **pamoil** creates oil painting effect. Smears colors based on frequency.
 
 The tool applies artistic filter. Part of Netpbm.
-
-pamoil creates oil paint effect.
 
 # CAVEATS
 

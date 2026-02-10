@@ -1,3 +1,7 @@
+# TAGLINE
+
+1Password CLI
+
 # TLDR
 
 **Sign in**
@@ -56,8 +60,6 @@
 **op** is the 1Password CLI. Manages passwords and secrets from terminal.
 
 The tool provides secure credential access. Integrates with shells and scripts.
-
-op accesses 1Password vaults.
 
 # CAVEATS
 

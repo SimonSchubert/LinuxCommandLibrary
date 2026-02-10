@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages Java keystores and certificates
+
 # TLDR
 
 **Generate key pair**
@@ -56,11 +60,9 @@
 
 # DESCRIPTION
 
-**keytool** manages Java keystores and certificates. It generates keys, imports/exports certificates, and manages trust stores.
+**keytool** is a key and certificate management utility included with the Java Development Kit. It generates cryptographic key pairs, creates certificate signing requests (CSRs), imports and exports X.509 certificates, and manages keystores that store private keys and trusted certificate chains used by Java applications for SSL/TLS, code signing, and authentication.
 
-The tool is essential for SSL/TLS configuration. It handles keystore formats like JKS and PKCS12.
-
-keytool manages Java certificates.
+The tool supports multiple keystore formats including the legacy Java KeyStore (JKS) and the industry-standard PKCS#12 format. It is commonly used to configure HTTPS for Java-based web servers, establish trust relationships by importing CA certificates, and inspect the contents of existing keystores. Each entry in a keystore is identified by an alias, and access is protected by a store-level password with optional per-key passwords.
 
 # CAVEATS
 

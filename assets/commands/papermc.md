@@ -1,3 +1,7 @@
+# TAGLINE
+
+high-performance Minecraft server
+
 # TLDR
 
 **Start Minecraft server**
@@ -42,8 +46,6 @@
 **PaperMC** is a high-performance Minecraft server. Fork of Spigot with optimizations.
 
 The server provides improved performance. Plugin compatible with Bukkit/Spigot.
-
-papermc runs Minecraft servers.
 
 # CAVEATS
 

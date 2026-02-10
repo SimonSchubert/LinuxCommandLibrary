@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts tabular data from various formats to CSV
+
 # TLDR
 
 **Convert Excel to CSV**
@@ -49,8 +53,6 @@
 **in2csv** converts tabular data from various formats to CSV. It's part of the csvkit toolkit for working with CSV files.
 
 The tool handles Excel, JSON, fixed-width, and other formats. It enables piping data to other csvkit tools for analysis.
-
-in2csv converts data to CSV format.
 
 # CAVEATS
 

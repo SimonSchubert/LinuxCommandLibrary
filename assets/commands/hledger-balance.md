@@ -1,3 +1,7 @@
+# TAGLINE
+
+shows account balances from the journal
+
 # TLDR
 
 **Show all balances**
@@ -62,8 +66,6 @@ _PATTERNS_
 **hledger balance** shows account balances from the journal. It summarizes debits and credits across all matching accounts.
 
 The command supports filtering by account pattern, time period, and display format. It's the primary tool for checking financial status.
-
-hledger balance shows account balances.
 
 # CAVEATS
 

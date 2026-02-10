@@ -1,3 +1,7 @@
+# TAGLINE
+
+netExec, a network service exploitation tool
+
 # TLDR
 
 **SMB authentication check**
@@ -55,8 +59,6 @@ _TARGET_
 **nxc** is NetExec, a network service exploitation tool. Successor to CrackMapExec.
 
 The tool tests credentials across networks. Used for penetration testing.
-
-nxc executes network attacks.
 
 # CAVEATS
 

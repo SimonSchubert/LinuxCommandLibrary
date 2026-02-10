@@ -1,3 +1,7 @@
+# TAGLINE
+
+repairs corrupted images
+
 # TLDR
 
 **Fix corrupted image**
@@ -28,8 +32,6 @@ _FILE_
 **pamfix** repairs corrupted images. Fixes common PAM/PNM errors.
 
 The tool salvages damaged files. Part of Netpbm.
-
-pamfix repairs images.
 
 # CAVEATS
 

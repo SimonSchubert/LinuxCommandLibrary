@@ -1,3 +1,7 @@
+# TAGLINE
+
+controls enclosure LEDs for Intel RAID controllers and storage systems
+
 # TLDR
 
 Turn on **Locate** LED for devices

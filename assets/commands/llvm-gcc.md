@@ -1,3 +1,7 @@
+# TAGLINE
+
+GCC frontend for the LLVM compiler infrastructure
+
 # TLDR
 
 **Compile C program**

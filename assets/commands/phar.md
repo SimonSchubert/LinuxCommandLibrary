@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages PHP Archive files, which bundle PHP applications into single
+
 # TLDR
 
 **Add** files to a PHAR archive

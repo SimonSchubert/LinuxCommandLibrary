@@ -1,3 +1,7 @@
+# TAGLINE
+
+minIO Client
+
 # TLDR
 
 **List buckets**
@@ -56,8 +60,6 @@ _COMMAND_
 **mc** is the MinIO Client. It provides cloud storage operations for MinIO and S3-compatible services.
 
 The tool manages buckets, objects, and policies. Works with AWS S3, GCS, and MinIO servers.
-
-mc is MinIO/S3 client.
 
 # CAVEATS
 

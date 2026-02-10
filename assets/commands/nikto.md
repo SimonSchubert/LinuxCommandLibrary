@@ -1,3 +1,7 @@
+# TAGLINE
+
+web server vulnerability scanner
+
 # TLDR
 
 **Scan web server**
@@ -60,8 +64,6 @@
 **nikto** is a web server vulnerability scanner. It checks for dangerous files and misconfigurations.
 
 The tool tests for thousands of issues. Identifies outdated software and known vulnerabilities.
-
-nikto scans web servers.
 
 # CAVEATS
 

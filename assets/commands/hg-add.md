@@ -1,3 +1,7 @@
+# TAGLINE
+
+schedules files to be added to the repository on the next commit
+
 # TLDR
 
 **Add a specific file**

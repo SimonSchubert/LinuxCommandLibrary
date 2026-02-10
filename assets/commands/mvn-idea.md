@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates IntelliJ IDEA project files
+
 # TLDR
 
 **Generate IDEA project files**
@@ -56,8 +60,6 @@ _GOAL_
 **mvn idea** generates IntelliJ IDEA project files. It creates .ipr, .iml, and .iws files.
 
 The plugin converts Maven project to IDEA format. Modern IDEA imports pom.xml directly.
-
-mvn idea creates IDEA files.
 
 # CAVEATS
 

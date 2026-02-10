@@ -1,3 +1,7 @@
+# TAGLINE
+
+controls OpenNTPD
+
 # TLDR
 
 **Show NTP status**
@@ -45,8 +49,6 @@
 **ntpctl** controls OpenNTPD. Queries time synchronization status.
 
 The tool monitors NTP daemon state. Read-only control interface.
-
-ntpctl queries NTP status.
 
 # CAVEATS
 

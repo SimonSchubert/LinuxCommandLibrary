@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates a new Mercurial repository in the specified directory or current
+
 # TLDR
 
 **Create repository in current directory**

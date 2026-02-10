@@ -1,3 +1,7 @@
+# TAGLINE
+
+interactively prompts for new transactions and appends them to the journal file
+
 # TLDR
 
 **Add transactions interactively**

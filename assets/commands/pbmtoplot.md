@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PBM bitmaps to Unix plotformat
+
 # TLDR
 
 **Convert PBM to Unix plot format**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays the temperature of hard disk drives via S
+
 # TLDR
 
 Display **temperature** of a SATA drive

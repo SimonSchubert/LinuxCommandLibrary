@@ -1,3 +1,7 @@
+# TAGLINE
+
+migrates Android libraries from Support Library to AndroidX
+
 # TLDR
 
 **Convert AAR to AndroidX**
@@ -49,8 +53,6 @@
 **jetifier** migrates Android libraries from Support Library to AndroidX. It rewrites bytecode and resources to use new package names.
 
 The tool enables using older libraries with AndroidX projects. It processes AAR and JAR files automatically.
-
-jetifier converts to AndroidX.
 
 # CAVEATS
 

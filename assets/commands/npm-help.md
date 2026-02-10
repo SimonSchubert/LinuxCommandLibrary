@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays documentation for npm commands
+
 # TLDR
 
 **Get help on command**
@@ -36,8 +40,6 @@ _TOPIC_
 **npm help** displays documentation for npm commands. Opens man pages or browser.
 
 The command provides detailed help. Covers all npm functionality.
-
-npm help shows documentation.
 
 # CAVEATS
 

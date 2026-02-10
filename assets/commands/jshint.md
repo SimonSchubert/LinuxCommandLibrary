@@ -1,3 +1,7 @@
+# TAGLINE
+
+JavaScript code quality tool
+
 # TLDR
 
 **Lint JavaScript file**
@@ -53,8 +57,6 @@ _FILE_
 **JSHint** is a JavaScript code quality tool. It detects errors and potential problems in JavaScript.
 
 The tool is configurable to enforce coding standards. It integrates with editors and build systems.
-
-JSHint lints JavaScript code.
 
 # CAVEATS
 

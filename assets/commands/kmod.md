@@ -1,3 +1,7 @@
+# TAGLINE
+
+central utility for managing Linux kernel modules
+
 # TLDR
 
 **List** currently loaded kernel modules

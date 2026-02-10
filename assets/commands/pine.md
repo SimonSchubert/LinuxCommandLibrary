@@ -1,3 +1,7 @@
+# TAGLINE
+
+character-based email and news client
+
 # TLDR
 
 **Start Pine mail client**
@@ -41,8 +45,6 @@
 
 **pine** (Program for Internet News and Email) is a character-based email and news client. Developed at University of Washington, it was widely used for its user-friendly interface.
 
-Now succeeded by Alpine.
-
 # MAIN MENU
 
 ```
@@ -54,10 +56,6 @@ A  ADDRESS BOOK
 S  SETUP
 Q  QUIT
 ```
-
-# EXAMPLES
-
-```bash
 # Start Pine
 pine
 

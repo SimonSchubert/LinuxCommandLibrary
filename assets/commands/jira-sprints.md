@@ -1,3 +1,7 @@
+# TAGLINE
+
+lists sprints for a Jira project
+
 # TLDR
 
 **List all sprints**
@@ -42,8 +46,6 @@
 **jira sprints** lists sprints for a Jira project. It shows sprint names, states, and dates.
 
 The command provides an overview of sprint history and planning. It filters by state to focus on relevant sprints.
-
-jira sprints lists project sprints.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+modern alternative to xdg-utils for managing default applications on Linux
+
 # TLDR
 
 **Open** a URL in the default application

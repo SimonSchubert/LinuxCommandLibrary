@@ -1,3 +1,7 @@
+# TAGLINE
+
+paging program for viewing text files, designed as an alternative
+
 # TLDR
 
 **View a file**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+note-taking application
+
 # TLDR
 
 **Start KeepNote**
@@ -32,11 +36,9 @@ _NOTEBOOK_
 
 # DESCRIPTION
 
-**KeepNote** is a note-taking application. It organizes notes in hierarchical notebooks with rich text formatting.
+**KeepNote** is a desktop note-taking application that organizes notes into hierarchical, tree-structured notebooks with rich text formatting support. Notes can contain styled text, images, hyperlinks, and file attachments, making it suitable for research documentation, journaling, and technical notes. The GTK-based interface presents a familiar three-pane layout with a notebook tree, page list, and editor.
 
-The application supports images, links, and file attachments. Notebooks are stored as folders with HTML files.
-
-KeepNote organizes rich text notes.
+Notebooks are stored on disk as directories of HTML files and associated resources, which makes them easy to back up, version control, or browse outside of the application. Each note is a self-contained HTML document, so the data format remains accessible even without KeepNote installed. The application is written in Python and supports full-text search across all notes within a notebook.
 
 # CAVEATS
 

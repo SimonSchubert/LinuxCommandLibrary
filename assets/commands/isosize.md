@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays the size of ISO 9660 filesystem images by reading the volume descriptor
+
 # TLDR
 
 Display the **size** of an ISO file

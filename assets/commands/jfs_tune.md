@@ -1,3 +1,7 @@
+# TAGLINE
+
+adjusts parameters on JFS filesystems
+
 # TLDR
 
 **Show filesystem info**
@@ -45,8 +49,6 @@ _DEVICE_
 **jfs_tune** adjusts parameters on JFS filesystems. It sets labels, UUIDs, and other filesystem metadata.
 
 The tool works on unmounted filesystems. It's similar to tune2fs for ext filesystems.
-
-jfs_tune configures JFS parameters.
 
 # CAVEATS
 

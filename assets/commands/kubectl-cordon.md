@@ -1,3 +1,7 @@
+# TAGLINE
+
+marks a node as unschedulable
+
 # TLDR
 
 **Cordon node**
@@ -36,11 +40,11 @@ _NODE_
 
 # DESCRIPTION
 
-**kubectl cordon** marks a node as unschedulable. New pods won't be scheduled to cordoned nodes.
+**kubectl cordon** marks one or more Kubernetes nodes as unschedulable by setting the `node.kubernetes.io/unschedulable` taint on the node object. Once cordoned, the scheduler will not place any new pods on the node, but existing pods already running on it continue to operate normally and are not affected.
 
-The command is used before maintenance. Existing pods continue running until drained.
+Cordoning is typically the first step in a node maintenance workflow, followed by `kubectl drain` to gracefully evict the running pods. It is also useful for isolating a node that is exhibiting problems -- such as high resource usage or hardware errors -- while you investigate, without disrupting workloads already running there.
 
-kubectl cordon prevents new scheduling.
+To return a cordoned node to normal scheduling, use `kubectl uncordon`. The cordon state can be verified by checking the node's status with `kubectl get nodes`, where cordoned nodes display a `SchedulingDisabled` status.
 
 # CAVEATS
 

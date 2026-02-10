@@ -1,3 +1,7 @@
+# TAGLINE
+
+scans files for license information and copyright statements
+
 # TLDR
 
 **Check files for licenses**

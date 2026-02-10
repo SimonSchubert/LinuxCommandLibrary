@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line interface for Mullvad VPN, a privacy-focused VPN service
+
 # TLDR
 
 **Connect to VPN**

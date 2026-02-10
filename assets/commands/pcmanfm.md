@@ -1,3 +1,7 @@
+# TAGLINE
+
+lightweight file manager
+
 # TLDR
 
 **Open file manager**
@@ -46,8 +50,6 @@ _PATH_
 **pcmanfm** is a lightweight file manager. Part of LXDE desktop.
 
 The application provides file browsing. Desktop icon management.
-
-pcmanfm manages files.
 
 # CAVEATS
 

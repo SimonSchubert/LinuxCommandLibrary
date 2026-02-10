@@ -1,3 +1,7 @@
+# TAGLINE
+
+opens files and URLs on macOS
+
 # TLDR
 
 **Open file with default app**
@@ -56,8 +60,6 @@ _FILE_
 **open** opens files and URLs on macOS. Uses default or specified applications.
 
 The command launches applications with files. macOS specific utility.
-
-open launches files and URLs.
 
 # CAVEATS
 

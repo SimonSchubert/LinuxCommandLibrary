@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates a virtual monitor on KDE Plasma that can be accessed via VNC
+
 # TLDR
 
 Create a **virtual monitor** with VNC access

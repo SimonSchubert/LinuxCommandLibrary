@@ -1,3 +1,7 @@
+# TAGLINE
+
+compiles LLVM intermediate representation to machine code
+
 # TLDR
 
 **Compile LLVM IR to assembly**
@@ -53,11 +57,9 @@ _FILE_
 
 # DESCRIPTION
 
-**llc** compiles LLVM intermediate representation to machine code. It generates assembly or object files.
+**llc** is the LLVM static compiler that translates LLVM intermediate representation (IR) into native machine code. It accepts input in either LLVM bitcode (.bc) or human-readable LLVM assembly (.ll) format and produces target-specific assembly language or object files. As the backend stage of the LLVM compilation pipeline, llc performs instruction selection, register allocation, and machine-specific optimizations to generate efficient code for the target architecture.
 
-The tool is the LLVM static compiler. It's part of the compilation pipeline after optimization.
-
-llc compiles LLVM IR to native code.
+The tool supports a wide range of target architectures including x86, ARM, AArch64, MIPS, RISC-V, and others, selectable via the `-march` and `-mtriple` flags. Optimization levels from `-O0` (no optimization) through `-O3` (aggressive optimization) control how much effort llc spends on code improvement during compilation. Output can be either textual assembly (default) or a relocatable object file when using `-filetype=obj`, making llc useful both for inspecting generated code and for producing linkable artifacts directly.
 
 # CAVEATS
 

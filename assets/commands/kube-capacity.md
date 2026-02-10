@@ -1,3 +1,7 @@
+# TAGLINE
+
+provides a simple view of Kubernetes resource requests, limits, and utilization
+
 # TLDR
 
 **Show cluster capacity**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts text to and from Morse code
+
 # TLDR
 
 **Convert text to Morse code**
@@ -49,8 +53,6 @@ _TEXT_
 **morse** converts text to and from Morse code. It can produce audio output.
 
 The tool encodes and decodes Morse. Supports audio playback on capable terminals.
-
-morse converts text to Morse code.
 
 # CAVEATS
 

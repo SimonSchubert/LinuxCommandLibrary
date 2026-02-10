@@ -1,3 +1,7 @@
+# TAGLINE
+
+GNOME image viewer and browser
+
 # TLDR
 
 **Open image browser**
@@ -49,8 +53,6 @@ _FILES_
 **gThumb** is a GNOME image viewer and browser. It supports viewing, organizing, and editing photos with features like slideshows and batch operations.
 
 The application handles common image formats and provides tools for resizing, cropping, and color adjustment. It integrates with GNOME desktop.
-
-gThumb views and manages image collections.
 
 # CAVEATS
 

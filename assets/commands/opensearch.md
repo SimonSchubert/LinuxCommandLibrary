@@ -1,3 +1,7 @@
+# TAGLINE
+
+open-source search and analytics engine derived from Elasticsearch 7
+
 # TLDR
 
 **Start OpenSearch**

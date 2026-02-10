@@ -1,3 +1,7 @@
+# TAGLINE
+
+extracts specific fields from input
+
 # TLDR
 
 **Extract nth field**
@@ -39,8 +43,6 @@ _FIELDS_
 **nth** extracts specific fields from input. Simple alternative to awk/cut.
 
 The tool handles field extraction efficiently. Cleaner syntax than awk.
-
-nth extracts fields from text.
 
 # CAVEATS
 

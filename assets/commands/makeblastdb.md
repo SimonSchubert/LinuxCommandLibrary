@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates BLAST databases from FASTA sequences
+
 # TLDR
 
 **Create nucleotide database**

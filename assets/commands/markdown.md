@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts Markdown-formatted text to HTML
+
 # TLDR
 
 **Convert Markdown to HTML**

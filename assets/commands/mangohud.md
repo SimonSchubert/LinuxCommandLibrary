@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays a real-time monitoring overlay on Vulkan and OpenGL
+
 # TLDR
 
 Run application with **HUD overlay**

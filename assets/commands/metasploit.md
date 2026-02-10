@@ -1,3 +1,7 @@
+# TAGLINE
+
+penetration testing platform for developing, testing, and executing exploits
+
 # TLDR
 
 **Start Metasploit console**

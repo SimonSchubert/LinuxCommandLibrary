@@ -1,3 +1,7 @@
+# TAGLINE
+
+uses Linux's inotify API to efficiently watch files and directories for changes
+
 # TLDR
 
 **Watch** a specific file for events, exiting after the first one

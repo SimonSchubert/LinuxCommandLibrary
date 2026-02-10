@@ -1,3 +1,7 @@
+# TAGLINE
+
+lists account names from the journal
+
 # TLDR
 
 **List all accounts**

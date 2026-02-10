@@ -1,3 +1,7 @@
+# TAGLINE
+
+korn shell, combining features of sh and csh
+
 # TLDR
 
 **Start Korn shell**
@@ -56,8 +60,6 @@ _SCRIPT_
 **ksh** is the Korn shell, combining features of sh and csh. It provides advanced scripting with interactive editing.
 
 The shell supports command history, job control, and aliases. ksh93 is the most common version.
-
-ksh is the Korn shell.
 
 # CAVEATS
 

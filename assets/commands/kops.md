@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages production Kubernetes clusters
+
 # TLDR
 
 **Create cluster**
@@ -59,8 +63,6 @@
 **kops** manages production Kubernetes clusters. It creates, updates, and destroys clusters on cloud providers.
 
 The tool handles networking, node groups, and add-ons. It supports AWS, GCE, and other clouds.
-
-kops manages production K8s clusters.
 
 # CAVEATS
 

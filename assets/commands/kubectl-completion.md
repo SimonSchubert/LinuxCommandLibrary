@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates shell autocompletion scripts
+
 # TLDR
 
 **Generate bash completion**
@@ -46,8 +50,6 @@ _SHELL_
 **kubectl completion** generates shell autocompletion scripts. It enables tab completion for kubectl commands.
 
 The command outputs shell-specific completion code. Source it in your shell config for persistent completion.
-
-kubectl completion enables tab complete.
 
 # CAVEATS
 

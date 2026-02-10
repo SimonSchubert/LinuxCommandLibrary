@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays the current host's unique identifier as a 32-bit hexadecimal value
+
 # TLDR
 
 **Display the host ID**

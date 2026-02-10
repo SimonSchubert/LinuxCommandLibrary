@@ -1,3 +1,7 @@
+# TAGLINE
+
+expands Microsoft compressed files
+
 # TLDR
 
 **Expand compressed file**
@@ -29,8 +33,6 @@ _FILES_
 **msexpand** expands Microsoft compressed files. It handles files compressed with MS COMPRESS.EXE.
 
 The tool decompresses legacy Windows installation files. Part of cabextract/mscompress utilities.
-
-msexpand expands MS compressed files.
 
 # CAVEATS
 

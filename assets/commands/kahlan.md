@@ -1,3 +1,7 @@
+# TAGLINE
+
+BDD testing framework for PHP
+
 # TLDR
 
 **Run tests**
@@ -53,8 +57,6 @@
 **Kahlan** is a BDD testing framework for PHP. It uses a describe-it syntax similar to Jasmine/RSpec.
 
 The tool supports mocking, stubbing, and code coverage. It focuses on behavior-driven development.
-
-Kahlan is PHP BDD testing.
 
 # CAVEATS
 

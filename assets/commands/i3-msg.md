@@ -1,3 +1,7 @@
+# TAGLINE
+
+sends commands to a running i3 window manager
+
 # TLDR
 
 **Switch workspace**
@@ -50,8 +54,6 @@ _COMMAND_
 **i3-msg** sends commands to a running i3 window manager. It provides scriptable control over windows, workspaces, and layouts.
 
 The tool can execute any i3 command and query state information. It's essential for scripting and automation.
-
-i3-msg communicates with i3 WM.
 
 # CAVEATS
 

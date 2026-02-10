@@ -1,3 +1,7 @@
+# TAGLINE
+
+networking utility
+
 # TLDR
 
 **Listen on port**
@@ -67,8 +71,6 @@ _PORT_
 **nc** (netcat) is a networking utility. It reads and writes data across network connections.
 
 The tool creates TCP/UDP connections. Often called the "network Swiss army knife."
-
-nc is versatile network tool.
 
 # CAVEATS
 

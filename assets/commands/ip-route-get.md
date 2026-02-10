@@ -1,3 +1,7 @@
+# TAGLINE
+
+performs a route lookup and displays exactly which route the kernel would use
+
 # TLDR
 
 Print **route to destination**

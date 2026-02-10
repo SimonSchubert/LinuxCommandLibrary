@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages Nix user environments
+
 # TLDR
 
 **Install package**

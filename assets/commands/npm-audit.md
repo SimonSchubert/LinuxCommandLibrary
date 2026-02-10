@@ -1,3 +1,7 @@
+# TAGLINE
+
+scans for security vulnerabilities
+
 # TLDR
 
 **Audit dependencies**
@@ -53,8 +57,6 @@
 **npm audit** scans for security vulnerabilities. Checks packages against known issues.
 
 The command reports security advisories. Can automatically fix some issues.
-
-npm audit checks security.
 
 # CAVEATS
 

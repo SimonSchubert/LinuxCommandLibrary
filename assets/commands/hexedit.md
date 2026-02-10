@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal-based hex editor for viewing and editing binary files at the byte level
+
 # TLDR
 
 **Open a file** in hex editor

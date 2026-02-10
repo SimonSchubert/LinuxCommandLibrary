@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays system information with ASCII art
+
 # TLDR
 
 **Show system info**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+pre-mastering utility that generates ISO9660, Joliet, and HFS hybrid
+
 # TLDR
 
 Create an **ISO image** from a directory

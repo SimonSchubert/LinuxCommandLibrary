@@ -1,3 +1,7 @@
+# TAGLINE
+
+builds Nix packages
+
 # TLDR
 
 **Build expression**
@@ -42,8 +46,6 @@ _PATH_
 **nix-build** builds Nix packages. This is another documentation variant.
 
 The tool processes Nix files. Outputs to Nix store with result symlink.
-
-nix-build compiles Nix expressions.
 
 # CAVEATS
 

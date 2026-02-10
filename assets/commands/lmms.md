@@ -1,3 +1,7 @@
+# TAGLINE
+
+digital audio workstation
+
 # TLDR
 
 **Start LMMS**
@@ -53,8 +57,6 @@ _FILE_
 **lmms** is a digital audio workstation. It creates music with virtual instruments, samples, and effects.
 
 The tool provides piano roll, step sequencer, and automation. It supports VST and LADSPA plugins.
-
-lmms is music production software.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+server-side data processing pipeline that ingests data from multiple
+
 # TLDR
 
 **Start Logstash with a config file**

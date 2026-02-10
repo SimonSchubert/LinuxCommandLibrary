@@ -1,3 +1,7 @@
+# TAGLINE
+
+open-source voice chat application
+
 # TLDR
 
 **Start Mumble**
@@ -46,8 +50,6 @@ _URL_
 **mumble** is an open-source voice chat application. It provides low-latency voice communication.
 
 The tool is designed for gaming. Features positional audio and low latency.
-
-mumble is voice chat client.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+text-based email client
+
 # TLDR
 
 **Start Mutt**
@@ -56,8 +60,6 @@ _ADDRESS_
 **mutt** is a text-based email client. It's highly configurable with Vim-like keybindings.
 
 The tool supports IMAP, POP3, and local mail. Features threading, PGP, and MIME.
-
-mutt is terminal email client.
 
 # CAVEATS
 

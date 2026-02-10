@@ -1,3 +1,7 @@
+# TAGLINE
+
+rapidly creates distance trees from genome sequences using MinHash sketching
+
 # TLDR
 
 **Fastest method** to create a tree from fastq and/or fasta files using multiple threads

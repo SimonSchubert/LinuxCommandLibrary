@@ -1,3 +1,7 @@
+# TAGLINE
+
+opens a subshell in a package directory
+
 # TLDR
 
 **Explore package directory**
@@ -32,8 +36,6 @@ _COMMAND_
 **npm explore** opens a subshell in a package directory. Allows inspection of installed packages.
 
 The command changes to node_modules/package. Can run commands within package.
-
-npm explore enters package dir.
 
 # CAVEATS
 

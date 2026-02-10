@@ -1,3 +1,7 @@
+# TAGLINE
+
+CLI client for the Matrix communication protocol
+
 # TLDR
 
 **Login and create session**

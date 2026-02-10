@@ -1,3 +1,7 @@
+# TAGLINE
+
+searches for text patterns in PDF files, similar to grep but for PDFs
+
 # TLDR
 
 **Search for pattern in PDF**

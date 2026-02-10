@@ -1,3 +1,7 @@
+# TAGLINE
+
+splits a PDF into individual pages
+
 # TLDR
 
 **Extract all pages**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+tunneling tool
+
 # TLDR
 
 **Start Pangolin**
@@ -32,8 +36,6 @@ _SERVER_
 **pangolin** is a tunneling tool. Provides secure connections through firewalls.
 
 The tool creates encrypted tunnels. Network access through restrictive networks.
-
-pangolin creates tunnels.
 
 # CAVEATS
 

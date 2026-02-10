@@ -1,3 +1,7 @@
+# TAGLINE
+
+network authentication protocol
+
 # TLDR
 
 **Get ticket**
@@ -56,8 +60,6 @@ Kerberos commands: **kinit**, **klist**, **kdestroy**, **kpasswd**
 **Kerberos** is a network authentication protocol. It uses tickets to authenticate users and services.
 
 The protocol provides single sign-on across networked services. Common commands include kinit, klist, and kdestroy.
-
-Kerberos authenticates via tickets.
 
 # CAVEATS
 

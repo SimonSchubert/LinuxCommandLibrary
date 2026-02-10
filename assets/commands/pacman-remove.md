@@ -1,3 +1,7 @@
+# TAGLINE
+
+removes packages from an Arch Linux system
+
 # TLDR
 
 **Remove** package and dependencies

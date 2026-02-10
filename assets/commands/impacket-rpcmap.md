@@ -1,3 +1,7 @@
+# TAGLINE
+
+queries the RPC endpoint mapper on Windows systems to enumerate available RPC
+
 # TLDR
 
 **Enumerate RPC endpoints** on a target

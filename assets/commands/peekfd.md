@@ -1,3 +1,7 @@
+# TAGLINE
+
+monitors file descriptor activity
+
 # TLDR
 
 **Watch file descriptors**
@@ -45,8 +49,6 @@ _FD_
 **peekfd** monitors file descriptor activity. Shows process I/O.
 
 The tool intercepts fd operations. Part of psmisc.
-
-peekfd watches process I/O.
 
 # CAVEATS
 

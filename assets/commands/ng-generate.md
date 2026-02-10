@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates Angular artifacts using schematics
+
 # TLDR
 
 **Generate component**

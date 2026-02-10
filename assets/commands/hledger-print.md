@@ -1,3 +1,7 @@
+# TAGLINE
+
+outputs transactions from the journal
+
 # TLDR
 
 **Print all transactions**
@@ -52,8 +56,6 @@ _PATTERNS_
 **hledger print** outputs transactions from the journal. It reproduces transaction records, optionally filtered or transformed.
 
 The command is useful for extracting subsets of transactions or converting between formats. Output is valid journal syntax.
-
-hledger print outputs journal transactions.
 
 # CAVEATS
 

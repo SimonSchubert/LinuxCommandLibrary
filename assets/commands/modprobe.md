@@ -1,3 +1,7 @@
+# TAGLINE
+
+intelligently adds or removes modules from the Linux kernel
+
 # TLDR
 
 **Dry run** loading a module

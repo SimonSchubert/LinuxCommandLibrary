@@ -1,3 +1,7 @@
+# TAGLINE
+
+development platform for embedded systems
+
 # TLDR
 
 **Initialize new project**

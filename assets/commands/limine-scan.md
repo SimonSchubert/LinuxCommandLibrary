@@ -1,3 +1,7 @@
+# TAGLINE
+
+scan for Limine bootloader installations
+
 # TLDR
 
 This command is an alias of [limine-entry-tool --scan](/man/limine-entry-tool).

@@ -1,3 +1,7 @@
+# TAGLINE
+
+provides information about lintian tags
+
 # TLDR
 
 **Show tag information**
@@ -49,8 +53,6 @@ _TAG_
 **lintian-info** provides information about lintian tags. Tags identify specific issues in Debian packages.
 
 The tool explains what each tag means and how to fix the issue it represents.
-
-lintian-info explains lintian tags.
 
 # CAVEATS
 

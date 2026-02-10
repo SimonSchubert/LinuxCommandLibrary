@@ -1,3 +1,7 @@
+# TAGLINE
+
+static analyzer and linter for Lua
+
 # TLDR
 
 **Check Lua file**

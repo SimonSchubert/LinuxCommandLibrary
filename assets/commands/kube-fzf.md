@@ -1,3 +1,7 @@
+# TAGLINE
+
+provides fuzzy-finding commands for Kubernetes
+
 # TLDR
 
 **Interactive pod selection**
@@ -43,11 +47,9 @@ Commands: **findpod**, **tailpod**, **execpod**, **describepod**, **pfpod**
 
 # DESCRIPTION
 
-**kube-fzf** provides fuzzy-finding commands for Kubernetes. It wraps kubectl with fzf for interactive selection.
+**kube-fzf** is a set of shell functions that wrap common kubectl operations with fzf fuzzy-finding for interactive Kubernetes resource selection. Instead of typing exact pod names or copying them from `kubectl get pods` output, kube-fzf presents a searchable, filterable list of resources and executes the chosen kubectl command on the selected item.
 
-The tool enables quick pod selection without remembering names. It supports multiple kubectl operations.
-
-kube-fzf adds fuzzy find to kubectl.
+The package provides several purpose-built commands: `findpod` for locating and selecting pods, `tailpod` for streaming logs, `execpod` for opening a shell session inside a container, `describepod` for viewing pod details, and `pfpod` for setting up port forwarding. Each command queries the current Kubernetes context and namespace, presents matching pods through fzf's interactive interface, and passes the selection directly to the appropriate kubectl subcommand.
 
 # CAVEATS
 

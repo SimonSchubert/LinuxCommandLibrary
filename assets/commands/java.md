@@ -1,3 +1,7 @@
+# TAGLINE
+
+launches Java applications
+
 # TLDR
 
 **Run class file**
@@ -64,8 +68,6 @@ _CLASS_
 **java** launches Java applications. It loads and executes compiled bytecode in the Java Virtual Machine.
 
 The runtime handles memory management, threading, and platform abstraction. It supports both class files and JAR archives.
-
-java runs Java applications.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+package manager for Kubernetes
+
 # TLDR
 
 **Install chart**
@@ -66,8 +70,6 @@ _COMMAND_
 **Helm** is the package manager for Kubernetes. It manages charts, which are packages of pre-configured Kubernetes resources.
 
 Helm simplifies application deployment, versioning, and upgrades. It uses templating to customize deployments for different environments.
-
-Helm manages Kubernetes applications.
 
 # CAVEATS
 

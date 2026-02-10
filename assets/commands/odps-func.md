@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages MaxCompute user-defined functions
+
 # TLDR
 
 **List functions**
@@ -48,8 +52,6 @@
 **odps func** manages MaxCompute user-defined functions. Creates and lists UDFs.
 
 The tool handles function lifecycle. Part of ODPS CLI.
-
-odps func manages UDFs.
 
 # CAVEATS
 

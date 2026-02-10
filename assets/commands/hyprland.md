@@ -1,3 +1,7 @@
+# TAGLINE
+
+dynamic tiling Wayland compositor with smooth animations, eye-candy
+
 # TLDR
 
 **Start Hyprland**

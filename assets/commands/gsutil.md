@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line tool for Google Cloud Storage
+
 # TLDR
 
 **List buckets**
@@ -34,9 +38,9 @@
 
 # DESCRIPTION
 
-**gsutil** is a command-line tool for Google Cloud Storage. It manages buckets and objects, handling uploads, downloads, synchronization, and access control.
+**gsutil** is a command-line tool for interacting with Google Cloud Storage (GCS). It provides commands for creating and deleting buckets, uploading and downloading objects, synchronizing local directories with remote bucket paths, and managing access control lists (ACLs) and bucket policies. Objects are referenced using the `gs://bucket/path` URI scheme.
 
-The tool supports parallel operations, resumable transfers, and integrates with other Google Cloud services. It's the primary interface for Cloud Storage management.
+For large-scale operations, the `-m` flag enables parallel, multi-threaded execution of commands like `cp`, `mv`, `rm`, and `rsync`, significantly improving throughput when working with many files or large datasets. Transfers are resumable by default -- interrupted uploads and downloads can be retried without starting over. gsutil also supports server-side features such as object versioning, lifecycle management, and cross-bucket replication, and it authenticates through the Google Cloud SDK's credential system.
 
 # PARAMETERS
 

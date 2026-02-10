@@ -1,3 +1,7 @@
+# TAGLINE
+
+nim package manager
+
 # TLDR
 
 **Install package**
@@ -67,8 +71,6 @@ _COMMAND_
 **nimble** is the Nim package manager. It installs dependencies and manages projects.
 
 The tool handles package installation. Supports local and remote packages.
-
-nimble is Nim package manager.
 
 # CAVEATS
 

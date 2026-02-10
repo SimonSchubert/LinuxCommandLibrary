@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages instance flavors in OpenStack
+
 # TLDR
 
 **List flavors**

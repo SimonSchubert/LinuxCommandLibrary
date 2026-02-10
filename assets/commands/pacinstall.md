@@ -1,3 +1,7 @@
+# TAGLINE
+
+alias for **pactrans --install**, providing a convenient shorthand
+
 # TLDR
 
 This command is an **alias** of **pactrans --install**

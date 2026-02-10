@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays information about a Linux container including its state, PID, IP
+
 # TLDR
 
 Get container **info**

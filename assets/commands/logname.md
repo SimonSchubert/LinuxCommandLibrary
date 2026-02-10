@@ -1,3 +1,7 @@
+# TAGLINE
+
+prints the user's login name
+
 # TLDR
 
 **Print login name**
@@ -21,8 +25,6 @@
 **logname** prints the user's login name. It reads from the utmp file to determine the original login.
 
 Unlike whoami, logname shows the login name even after su or sudo commands.
-
-logname shows the login name.
 
 # CAVEATS
 

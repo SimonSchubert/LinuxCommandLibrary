@@ -1,3 +1,7 @@
+# TAGLINE
+
+stretches PAM/PNM images by pixel replication with interpolation
+
 # TLDR
 
 **Stretch image 2x**

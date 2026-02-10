@@ -1,3 +1,7 @@
+# TAGLINE
+
+graphical editor for NetworkManager connections
+
 # TLDR
 
 **Open connection editor**

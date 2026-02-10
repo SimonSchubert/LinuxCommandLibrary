@@ -1,3 +1,7 @@
+# TAGLINE
+
+display Manager
+
 # TLDR
 
 **Start MDM**
@@ -37,8 +41,6 @@
 **mdm** is the MDM Display Manager. It provides a graphical login screen for Linux Mint.
 
 The tool handles user authentication and session selection. Fork of GDM for Cinnamon/MATE.
-
-mdm is Mint display manager.
 
 # CAVEATS
 

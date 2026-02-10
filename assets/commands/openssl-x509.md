@@ -1,3 +1,7 @@
+# TAGLINE
+
+multi-purpose certificate utility
+
 # TLDR
 
 **View certificate details**

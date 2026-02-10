@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates API documentation from PHP source code
+
 # TLDR
 
 **Generate documentation**
@@ -43,10 +47,6 @@
 # DESCRIPTION
 
 **phpDocumentor** (phpdoc) generates API documentation from PHP source code. It parses DocBlock comments to create navigable HTML documentation.
-
-# EXAMPLES
-
-```bash
 # Basic documentation
 phpdoc -d ./src -t ./docs
 

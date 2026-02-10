@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates random noise images
+
 # TLDR
 
 **Create random noise bitmap**
@@ -35,8 +39,6 @@ _HEIGHT_
 **pbmnoise** creates random noise images. Generates random black and white pixels.
 
 The tool produces noise patterns. Part of Netpbm.
-
-pbmnoise generates noise.
 
 # CAVEATS
 

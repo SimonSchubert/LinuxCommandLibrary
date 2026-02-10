@@ -1,3 +1,7 @@
+# TAGLINE
+
+command runner similar to make but focused on running project-specific
+
 # TLDR
 
 **List available recipes**

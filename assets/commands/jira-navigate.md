@@ -1,3 +1,7 @@
+# TAGLINE
+
+opens various Jira views in your web browser
+
 # TLDR
 
 **Navigate to project**

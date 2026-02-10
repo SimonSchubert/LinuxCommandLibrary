@@ -1,3 +1,7 @@
+# TAGLINE
+
+wraps OSS applications for PulseAudio
+
 # TLDR
 
 **Run OSS app with PulseAudio**
@@ -41,8 +45,6 @@ _PROGRAM_
 **padsp** wraps OSS applications for PulseAudio. Provides compatibility layer.
 
 The tool redirects /dev/dsp access. Enables legacy audio apps.
-
-padsp enables OSS on PulseAudio.
 
 # CAVEATS
 

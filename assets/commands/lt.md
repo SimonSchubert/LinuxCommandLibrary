@@ -1,3 +1,7 @@
+# TAGLINE
+
+lists directory contents as a tree
+
 # TLDR
 
 **List files as tree**
@@ -53,8 +57,6 @@ _PATH_
 **lt** lists directory contents as a tree. It's an alias or alternative for tree-style listings.
 
 The tool displays hierarchical directory structure visually. May be an alias for lsd --tree or similar.
-
-lt shows directory tree.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages Machine Owner Keys stored in the shim database
+
 # TLDR
 
 Show if **Secure Boot is enabled**

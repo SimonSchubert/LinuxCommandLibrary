@@ -1,3 +1,7 @@
+# TAGLINE
+
+builds Arch Linux packages in a clean chroot environment
+
 # TLDR
 
 **Build package in chroot**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages the LVM devices file that controls which block devices LVM can
+
 # TLDR
 
 **List devices** recorded in the devices file

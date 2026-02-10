@@ -1,3 +1,7 @@
+# TAGLINE
+
+controls SELinux user access
+
 # TLDR
 
 **Check SELinux permits**
@@ -31,8 +35,6 @@ Configuration in /etc/security/sepermit.conf.
 **pam_sepermit** controls SELinux user access. Permit/deny based on SELinux user.
 
 The module restricts logins. Based on sepermit.conf rules.
-
-pam_sepermit filters SELinux users.
 
 # CAVEATS
 

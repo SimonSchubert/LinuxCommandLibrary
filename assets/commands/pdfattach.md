@@ -1,3 +1,7 @@
+# TAGLINE
+
+adds a new embedded file to an existing PDF file
+
 # TLDR
 
 **Add** attachment to PDF

@@ -1,3 +1,7 @@
+# TAGLINE
+
+tees stdin to multiple commands
+
 # TLDR
 
 **Pipe to multiple commands**
@@ -28,8 +32,6 @@ Each command receives a copy of stdin.
 **pee** tees stdin to multiple commands. Like tee but to processes.
 
 The tool duplicates input to commands. Part of moreutils.
-
-pee pipes to multiple commands.
 
 # CAVEATS
 

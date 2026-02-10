@@ -1,3 +1,7 @@
+# TAGLINE
+
+shows transactions and running balance for a single account in bank-statement
+
 # TLDR
 
 **Show account register**

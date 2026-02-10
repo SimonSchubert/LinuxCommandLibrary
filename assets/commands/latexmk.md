@@ -1,3 +1,7 @@
+# TAGLINE
+
+perl script that automates LaTeX document compilation
+
 # TLDR
 
 **Compile a LaTeX document** to PDF

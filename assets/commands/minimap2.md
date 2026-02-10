@@ -1,3 +1,7 @@
+# TAGLINE
+
+versatile sequence aligner for DNA and RNA sequences
+
 # TLDR
 
 **Map long reads to reference**

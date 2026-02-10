@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays PostgreSQL installation configuration
+
 # TLDR
 
 **Show all configuration**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+marks a package as favorite on npm registry
+
 # TLDR
 
 **Star a package**

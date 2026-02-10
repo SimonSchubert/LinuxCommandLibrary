@@ -1,3 +1,7 @@
+# TAGLINE
+
+interactive man-in-the-middle proxy for HTTP and HTTPS traffic
+
 # TLDR
 
 **Start mitmproxy** on the default port (8080)

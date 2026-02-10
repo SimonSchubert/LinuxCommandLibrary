@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs a dedicated Palworld game server on Linux
+
 # TLDR
 
 Start server with **default** settings

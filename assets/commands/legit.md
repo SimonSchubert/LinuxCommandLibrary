@@ -1,3 +1,7 @@
+# TAGLINE
+
+complementary command-line interface for Git that simplifies common workflows
+
 # TLDR
 
 **Switch** branch with auto-stash

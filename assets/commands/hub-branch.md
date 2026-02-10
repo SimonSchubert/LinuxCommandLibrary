@@ -1,3 +1,7 @@
+# TAGLINE
+
+same as **git branch** but extended with GitHub integration
+
 # TLDR
 
 **List local and remote branches**

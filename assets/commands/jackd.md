@@ -1,3 +1,7 @@
+# TAGLINE
+
+JACK audio server daemon
+
 # TLDR
 
 **Start JACK with ALSA driver**

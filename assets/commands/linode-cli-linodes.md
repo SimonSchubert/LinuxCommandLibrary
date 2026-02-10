@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages Linode virtual machine instances
+
 # TLDR
 
 **List all Linodes**
@@ -68,8 +72,6 @@ _SUBCOMMAND_
 **linode-cli linodes** manages Linode virtual machine instances. It handles creation, configuration, and lifecycle.
 
 The tool controls power state, resizing, cloning, and backups for Linode instances.
-
-linode-cli linodes manages instances.
 
 # CAVEATS
 

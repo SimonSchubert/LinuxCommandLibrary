@@ -1,3 +1,7 @@
+# TAGLINE
+
+adds an OCR text layer to scanned PDFs, making them searchable and selectable
+
 # TLDR
 
 **Add OCR layer to PDF**

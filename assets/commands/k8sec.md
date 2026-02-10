@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages Kubernetes secrets from the command line
+
 # TLDR
 
 **List secrets**
@@ -56,8 +60,6 @@
 **k8sec** manages Kubernetes secrets from the command line. It simplifies viewing and editing secret values.
 
 The tool decodes base64 automatically. It provides an easier interface than kubectl for secret management.
-
-k8sec manages Kubernetes secrets.
 
 # CAVEATS
 

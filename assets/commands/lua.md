@@ -1,3 +1,7 @@
+# TAGLINE
+
+programming language interpreter
+
 # TLDR
 
 **Start interactive interpreter**
@@ -56,8 +60,6 @@ _ARGS_
 **lua** is the Lua programming language interpreter. Lua is lightweight and embeddable.
 
 The tool runs Lua scripts and provides an interactive REPL. Commonly used for game scripting and configuration.
-
-lua interprets Lua programs.
 
 # CAVEATS
 

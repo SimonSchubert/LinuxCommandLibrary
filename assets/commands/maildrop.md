@@ -1,3 +1,7 @@
+# TAGLINE
+
+mail delivery agent with filtering
+
 # TLDR
 
 **Process mail with filter**
@@ -49,8 +53,6 @@ _FILTERFILE_
 **maildrop** is a mail delivery agent with filtering. It sorts incoming mail using rules.
 
 The tool delivers mail to maildirs or mboxes. Filter rules support conditions and actions.
-
-maildrop filters and delivers mail.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+extracts password hashes from encrypted PDF files for cracking
+
 # TLDR
 
 **Extract hash from PDF**

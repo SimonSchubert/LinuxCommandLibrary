@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays Linux Standard Base and distribution-specific information
+
 # TLDR
 
 Print **all information**

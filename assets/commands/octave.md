@@ -1,3 +1,7 @@
+# TAGLINE
+
+GNU Octave, a numerical computing language
+
 # TLDR
 
 **Start interactive session**
@@ -49,8 +53,6 @@ _FILE_
 **octave** is GNU Octave, a numerical computing language. MATLAB compatible.
 
 The tool provides matrix operations and plotting. Scientific computing environment.
-
-octave performs numerical computing.
 
 # CAVEATS
 

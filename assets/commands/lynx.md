@@ -1,3 +1,7 @@
+# TAGLINE
+
+text-based web browser
+
 # TLDR
 
 **Browse website**
@@ -56,8 +60,6 @@ _URL_
 **lynx** is a text-based web browser. It renders HTML in the terminal without graphics.
 
 The tool is useful for scripting, accessibility, and browsing on servers. Supports links and forms.
-
-lynx is a terminal web browser.
 
 # CAVEATS
 

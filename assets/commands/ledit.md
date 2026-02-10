@@ -1,3 +1,7 @@
+# TAGLINE
+
+provides line editing capabilities to programs that read from standard input
+
 # TLDR
 
 **Run command with line editing**

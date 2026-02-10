@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast, simple static blog framework
+
 # TLDR
 
 **Create new blog**
@@ -62,8 +66,6 @@ _COMMAND_
 **Hexo** is a fast, simple static blog framework. It uses Markdown for content and supports themes, plugins, and multiple deployment targets.
 
 The framework generates static HTML from Markdown posts. It's popular for developer blogs and documentation sites.
-
-Hexo generates static blog sites.
 
 # CAVEATS
 

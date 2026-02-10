@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages notification modes in the mako notification daemon
+
 # TLDR
 
 **List** all currently active modes

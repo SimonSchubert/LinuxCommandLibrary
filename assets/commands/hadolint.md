@@ -1,3 +1,7 @@
+# TAGLINE
+
+dockerfile linter that validates best practices and common mistakes
+
 # TLDR
 
 **Lint Dockerfile**
@@ -52,8 +56,6 @@ _DOCKERFILE_
 **Hadolint** is a Dockerfile linter that validates best practices and common mistakes. It uses ShellCheck to validate shell commands in RUN instructions.
 
 The tool checks for security issues, inefficient layering, and deprecated syntax. It helps create optimized, secure container images.
-
-Hadolint lints Dockerfiles for best practices.
 
 # CAVEATS
 

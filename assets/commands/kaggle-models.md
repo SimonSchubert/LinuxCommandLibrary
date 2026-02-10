@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages Kaggle machine learning models from the command line
+
 # TLDR
 
 **List models**

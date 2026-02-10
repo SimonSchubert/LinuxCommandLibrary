@@ -1,3 +1,7 @@
+# TAGLINE
+
+emulates a Bluetooth HCI device
+
 # TLDR
 
 **Start HCI emulator**
@@ -39,8 +43,6 @@
 **hciemu** emulates a Bluetooth HCI (Host Controller Interface) device. It creates virtual Bluetooth adapters for testing.
 
 The tool is useful for Bluetooth protocol testing and development. It enables testing Bluetooth applications without physical hardware.
-
-hciemu creates virtual Bluetooth adapters.
 
 # CAVEATS
 

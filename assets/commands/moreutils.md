@@ -1,3 +1,7 @@
+# TAGLINE
+
+collection of useful Unix utilities that don't quite fit anywhere else
+
 # TLDR
 
 **Sponge: absorb stdin then write**

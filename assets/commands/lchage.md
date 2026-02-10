@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays or changes user password expiration policy on systems using libuser
+
 # TLDR
 
 Display **password policy**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+MLT command-line video editor
+
 # TLDR
 
 **Play video**
@@ -53,8 +57,6 @@ _INPUT_
 **melt** is the MLT command-line video editor. It processes video with filters and transitions.
 
 The tool is MLT framework's utility. Used for scripted video editing and effects.
-
-melt processes video via MLT.
 
 # CAVEATS
 

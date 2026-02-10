@@ -1,3 +1,7 @@
+# TAGLINE
+
+package manager for OCaml libraries
+
 # TLDR
 
 **Compile with package**

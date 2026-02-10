@@ -1,3 +1,7 @@
+# TAGLINE
+
+document preparation system for high-quality typesetting
+
 # TLDR
 
 **Compile LaTeX document**

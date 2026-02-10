@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts Portable Document Format files to plain text
+
 # TLDR
 
 **Extract text** from a PDF to stdout

@@ -1,3 +1,7 @@
+# TAGLINE
+
+streams torrents directly
+
 # TLDR
 
 **Stream torrent**
@@ -49,8 +53,6 @@ _TORRENT_
 **peerflix** streams torrents directly. No download wait required.
 
 The tool provides streaming torrent playback. Node.js based.
-
-peerflix streams torrents.
 
 # CAVEATS
 

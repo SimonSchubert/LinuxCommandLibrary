@@ -1,3 +1,7 @@
+# TAGLINE
+
+configures Bluetooth devices
+
 # TLDR
 
 **Show all Bluetooth interfaces**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+lightweight web browser
+
 # TLDR
 
 **Open browser**
@@ -53,8 +57,6 @@ _URLS_
 **midori** is a lightweight web browser. It's designed for low resource usage.
 
 The tool is based on WebKitGTK. It's suitable for older hardware and minimal systems.
-
-midori is a lightweight browser.
 
 # CAVEATS
 

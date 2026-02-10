@@ -1,3 +1,7 @@
+# TAGLINE
+
+nix-based tool for managing user environment configuration declaratively
+
 # TLDR
 
 **Apply home configuration** from default location

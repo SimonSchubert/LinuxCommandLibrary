@@ -1,3 +1,7 @@
+# TAGLINE
+
+audits NTFS security descriptors
+
 # TLDR
 
 **Audit NTFS security**
@@ -35,8 +39,6 @@ _PATH_
 **ntfs-3g.secaudit** audits NTFS security descriptors. Checks permissions and ACLs.
 
 The tool inspects security settings. Part of ntfs-3g utilities.
-
-ntfs-3g.secaudit checks NTFS security.
 
 # CAVEATS
 

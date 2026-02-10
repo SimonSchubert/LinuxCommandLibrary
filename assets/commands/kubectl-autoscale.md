@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates a Horizontal Pod Autoscaler for a deployment, replica set
+
 # TLDR
 
 **Create HPA for deployment**

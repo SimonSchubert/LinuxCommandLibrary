@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts OpenLDAP schemas to LDIF
+
 # TLDR
 
 **Convert OpenLDAP schema**
@@ -35,8 +39,6 @@
 **oLschema2ldif** converts OpenLDAP schemas to LDIF. Migrates schema format.
 
 The tool transforms schema definitions. Used for LDAP configuration.
-
-oLschema2ldif converts schemas.
 
 # CAVEATS
 

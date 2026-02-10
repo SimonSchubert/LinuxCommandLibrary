@@ -1,3 +1,7 @@
+# TAGLINE
+
+retries a cancelled or failed task using the same parameters as the original
+
 # TLDR
 
 **Resubmit** a failed task

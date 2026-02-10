@@ -1,3 +1,7 @@
+# TAGLINE
+
+merges two PO files
+
 # TLDR
 
 **Merge translations with template**
@@ -52,8 +56,6 @@ _REF.POT_
 **msgmerge** merges two PO files. It's part of GNU gettext.
 
 The tool updates translations with new template. Preserves existing translations while adding new strings.
-
-msgmerge merges PO files.
 
 # CAVEATS
 

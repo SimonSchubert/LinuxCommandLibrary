@@ -1,3 +1,7 @@
+# TAGLINE
+
+shows flake metadata
+
 # TLDR
 
 **Show flake info**
@@ -32,8 +36,6 @@ _FLAKE-URL_
 **nix flake info** shows flake metadata. Displays inputs and description.
 
 The command shows flake URL. Lists locked inputs and revisions.
-
-nix flake info displays metadata.
 
 # CAVEATS
 

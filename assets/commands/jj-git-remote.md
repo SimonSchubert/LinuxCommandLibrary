@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages Git remotes for Jujutsu repositories
+
 # TLDR
 
 **Add remote**
@@ -42,8 +46,6 @@
 **jj git remote** manages Git remotes for Jujutsu repositories. It configures where to fetch and push changes.
 
 The commands mirror Git remote management. Changes are stored in Git format for compatibility.
-
-jj git remote manages remotes.
 
 # CAVEATS
 

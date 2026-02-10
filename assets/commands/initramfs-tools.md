@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages the initial RAM filesystem on Debian-based systems
+
 # TLDR
 
 **Update initramfs for current kernel**

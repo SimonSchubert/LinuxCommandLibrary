@@ -1,3 +1,7 @@
+# TAGLINE
+
+non-linear video editor for KDE
+
 # TLDR
 
 **Start Kdenlive**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+collects diagnostic information about the LVM2 subsystem for troubleshooting
+
 # TLDR
 
 Generate a **basic dump**

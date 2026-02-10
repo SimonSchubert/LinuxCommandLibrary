@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts images to the WebP format developed by Google
+
 # TLDR
 
 **Convert** an image to WebP format

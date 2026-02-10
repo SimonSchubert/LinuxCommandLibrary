@@ -1,3 +1,7 @@
+# TAGLINE
+
+checks whether NetworkManager reports the network as connected
+
 # TLDR
 
 Find out whether the **network is connected** and print the result

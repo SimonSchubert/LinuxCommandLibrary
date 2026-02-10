@@ -1,3 +1,7 @@
+# TAGLINE
+
+infrastructure monitoring system that tracks hosts, services, and network
+
 # TLDR
 
 **Verify configuration**

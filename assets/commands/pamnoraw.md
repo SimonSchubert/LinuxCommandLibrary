@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts binary PAM/PNM images to plain format
+
 # TLDR
 
 **Convert PAM to plain text format**

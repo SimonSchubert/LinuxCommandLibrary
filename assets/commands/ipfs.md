@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line interface for the InterPlanetary File System, a distributed
+
 # TLDR
 
 **Initialize IPFS repository**

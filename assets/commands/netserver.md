@@ -1,3 +1,7 @@
+# TAGLINE
+
+server for netperf testing
+
 # TLDR
 
 **Start netserver**
@@ -53,8 +57,6 @@
 **netserver** is the server for netperf testing. It receives network performance tests.
 
 The tool handles benchmark requests. Run on target machine for throughput tests.
-
-netserver is netperf test server.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+decompiles Android DEX bytecode to Java source
+
 # TLDR
 
 **Decompile APK**
@@ -56,8 +60,6 @@ _FILE_
 **jadx** decompiles Android DEX bytecode to Java source. It processes APK files directly including resources.
 
 The tool provides both CLI and GUI interfaces. It produces readable Java code from compiled Android apps.
-
-jadx decompiles Android apps to Java.
 
 # CAVEATS
 

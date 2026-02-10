@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages MinIO and S3 storage
+
 # TLDR
 
 **Set alias**
@@ -56,8 +60,6 @@ _COMMAND_
 **minio-client** (mc) manages MinIO and S3 storage. It provides file operations for object storage.
 
 The tool works with MinIO servers and AWS S3. Supports multiple cloud providers.
-
-minio-client manages object storage.
 
 # CAVEATS
 

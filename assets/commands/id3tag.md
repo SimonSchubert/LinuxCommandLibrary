@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line tool for viewing and editing ID3 tags in MP3 files
+
 # TLDR
 
 **View ID3 tags**

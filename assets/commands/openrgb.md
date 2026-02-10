@@ -1,3 +1,7 @@
+# TAGLINE
+
+controls RGB lighting
+
 # TLDR
 
 **Start GUI**
@@ -56,8 +60,6 @@
 **openrgb** controls RGB lighting. Supports many hardware brands.
 
 The tool provides unified RGB control. Cross-platform application.
-
-openrgb manages RGB lighting.
 
 # CAVEATS
 

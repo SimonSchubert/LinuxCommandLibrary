@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line tool for querying KScreen's status and display
+
 # TLDR
 
 Show **output information**

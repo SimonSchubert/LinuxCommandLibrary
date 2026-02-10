@@ -1,3 +1,7 @@
+# TAGLINE
+
+lightweight terminal emulator designed for the LXDE desktop environment
+
 # TLDR
 
 Open **terminal** window

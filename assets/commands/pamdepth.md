@@ -1,3 +1,7 @@
+# TAGLINE
+
+changes image bit depth
+
 # TLDR
 
 **Change bit depth**
@@ -29,8 +33,6 @@ _FILE_
 **pamdepth** changes image bit depth. Rescales pixel values.
 
 The tool converts between depths. Part of Netpbm.
-
-pamdepth adjusts bit depth.
 
 # CAVEATS
 

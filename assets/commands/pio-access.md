@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages access permissions for PlatformIO Registry packages
+
 # TLDR
 
 **Grant package access**

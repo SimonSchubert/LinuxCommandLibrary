@@ -1,3 +1,7 @@
+# TAGLINE
+
+controls magnetic tape drive operations, commonly used with LTO and other SCSI
+
 # TLDR
 
 Check **status** of a tape drive

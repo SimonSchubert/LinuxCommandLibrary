@@ -1,3 +1,7 @@
+# TAGLINE
+
+openSCAP scanner
+
 # TLDR
 
 **Scan system**
@@ -55,8 +59,6 @@
 **oscap** is the OpenSCAP scanner. Performs security compliance scanning.
 
 The tool evaluates systems against SCAP content. Generates reports and fixes.
-
-oscap scans for compliance.
 
 # CAVEATS
 

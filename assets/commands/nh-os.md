@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages NixOS system configurations
+
 # TLDR
 
 **Switch to new configuration**

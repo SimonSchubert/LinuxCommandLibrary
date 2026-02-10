@@ -1,3 +1,7 @@
+# TAGLINE
+
+exports data from MongoDB collections to JSON or CSV files
+
 # TLDR
 
 **Export collection to JSON**

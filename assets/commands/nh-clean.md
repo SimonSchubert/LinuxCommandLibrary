@@ -1,3 +1,7 @@
+# TAGLINE
+
+removes old Nix profile generations and runs garbage collection
+
 # TLDR
 
 **Clean user profile**

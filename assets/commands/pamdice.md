@@ -1,3 +1,7 @@
+# TAGLINE
+
+slices images into tiles
+
 # TLDR
 
 **Slice image into tiles**
@@ -34,8 +38,6 @@
 **pamdice** slices images into tiles. Creates multiple output files.
 
 The tool divides images into grid. Part of Netpbm.
-
-pamdice tiles images.
 
 # CAVEATS
 

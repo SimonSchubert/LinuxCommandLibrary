@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs local Kubernetes clusters
+
 # TLDR
 
 **Start cluster**
@@ -59,8 +63,6 @@ _COMMAND_
 **minikube** runs local Kubernetes clusters. It's designed for development and learning.
 
 The tool creates a single-node cluster on your machine. Supports multiple drivers.
-
-minikube runs local Kubernetes.
 
 # CAVEATS
 

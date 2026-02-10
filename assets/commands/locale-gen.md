@@ -1,3 +1,7 @@
+# TAGLINE
+
+compiles locale definitions from `/etc/locale
+
 # TLDR
 
 **Generate** locales from /etc/locale.gen

@@ -1,3 +1,7 @@
+# TAGLINE
+
+kubernetes command-line tool
+
 # TLDR
 
 **Get resources**
@@ -60,11 +64,9 @@
 
 # DESCRIPTION
 
-**kubectl** is the Kubernetes command-line tool. It communicates with the Kubernetes API to manage cluster resources.
+**kubectl** is the official command-line interface for Kubernetes, used to communicate with the cluster's API server to manage and inspect resources. It supports the full lifecycle of Kubernetes objects, including creating, reading, updating, and deleting resources such as pods, deployments, services, configmaps, and more through declarative manifests or imperative commands.
 
-The tool creates, inspects, updates, and deletes workloads. It's the primary interface for cluster administration.
-
-kubectl manages Kubernetes clusters.
+The tool reads connection details from a kubeconfig file, which defines clusters, users, and contexts that determine which cluster and namespace kubectl targets. Beyond basic resource management, kubectl provides capabilities for debugging with log retrieval and exec sessions, scaling workloads, rolling out updates, port-forwarding to pods, and applying configuration changes from YAML or JSON manifests. Role-based access control (RBAC) on the cluster side governs what operations each authenticated user may perform.
 
 # CAVEATS
 

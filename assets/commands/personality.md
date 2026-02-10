@@ -1,3 +1,7 @@
+# TAGLINE
+
+sets the process execution domain, affecting how the kernel handles the process
+
 # TLDR
 
 **Set execution domain**
@@ -38,11 +42,6 @@
 
 **personality** sets the process execution domain, affecting how the kernel handles the process. Used for compatibility with older programs or debugging.
 
-This is a Linux-specific system call wrapper.
-
-# EXAMPLES
-
-```bash
 # Disable ASLR for debugging
 setarch $(uname -m) -R gdb ./program
 

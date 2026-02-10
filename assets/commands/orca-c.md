@@ -1,3 +1,7 @@
+# TAGLINE
+
+livecoding environment
+
 # TLDR
 
 **Start Orca**
@@ -39,8 +43,6 @@ _FILE_
 **orca-c** is Orca livecoding environment. Creates music through visual programming.
 
 The tool provides a grid-based sequencer. Generates MIDI output.
-
-orca-c enables live coding music.
 
 # CAVEATS
 

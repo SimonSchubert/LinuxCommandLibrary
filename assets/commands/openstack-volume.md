@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages block storage volumes in OpenStack Cinder
+
 # TLDR
 
 **List volumes**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages configuration layers
+
 # TLDR
 
 **Create layer**
@@ -42,8 +46,6 @@
 **laydown** manages configuration layers. It organizes settings and files in composable layers.
 
 The tool enables modular configuration management. Layers can be applied and removed independently.
-
-laydown manages config layers.
 
 # CAVEATS
 

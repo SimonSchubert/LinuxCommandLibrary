@@ -1,3 +1,7 @@
+# TAGLINE
+
+executes a command while recording supply chain metadata
+
 # TLDR
 
 **Run and record command**
@@ -48,8 +52,6 @@
 **in-toto-run** executes a command while recording supply chain metadata. It captures materials before execution and products after, creating a signed link file.
 
 The tool is central to in-toto supply chain security. Each link provides cryptographic proof of what inputs and outputs a build step had.
-
-in-toto-run records build step attestations.
 
 # CAVEATS
 

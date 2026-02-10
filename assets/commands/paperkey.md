@@ -1,3 +1,7 @@
+# TAGLINE
+
+extracts printable GPG key data
+
 # TLDR
 
 **Extract secret from GPG key**
@@ -38,8 +42,6 @@
 **paperkey** extracts printable GPG key data. Creates paper backups.
 
 The tool enables offline key storage. Requires public key to restore.
-
-paperkey backs up GPG keys.
 
 # CAVEATS
 

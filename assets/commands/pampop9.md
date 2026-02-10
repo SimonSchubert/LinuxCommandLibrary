@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates Pop Art style image
+
 # TLDR
 
 **Apply Pop Art effect**
@@ -22,8 +26,6 @@ _FILE_
 **pampop9** creates Pop Art style image. Generates 3x3 grid of color variations.
 
 The tool produces Andy Warhol style output. Part of Netpbm.
-
-pampop9 creates pop art.
 
 # CAVEATS
 

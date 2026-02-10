@@ -1,3 +1,7 @@
+# TAGLINE
+
+merges two files on a common field
+
 # TLDR
 
 **Join on first field**
@@ -59,8 +63,6 @@ _FILE1_ _FILE2_
 **join** merges two files on a common field. It performs relational database-style joins on text files.
 
 Files must be sorted on the join field. The tool supports inner, left, and right join operations.
-
-join merges files on common field.
 
 # CAVEATS
 

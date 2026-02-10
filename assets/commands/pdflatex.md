@@ -1,3 +1,7 @@
+# TAGLINE
+
+compiles LaTeX documents directly to PDF format
+
 # TLDR
 
 **Compile LaTeX to PDF**

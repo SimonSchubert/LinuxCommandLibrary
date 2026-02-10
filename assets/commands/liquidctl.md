@@ -1,3 +1,7 @@
+# TAGLINE
+
+controls liquid coolers and RGB devices
+
 # TLDR
 
 **List devices**
@@ -56,8 +60,6 @@ _COMMAND_
 **liquidctl** controls liquid coolers and RGB devices. It manages pump speed, fan curves, and LED lighting.
 
 The tool supports many AIO coolers and RGB controllers from various manufacturers.
-
-liquidctl controls cooling hardware.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+daemon that manages network connections
+
 # TLDR
 
 **Show connection status**

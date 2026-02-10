@@ -1,3 +1,7 @@
+# TAGLINE
+
+graphical IRC client for Linux, Windows, and macOS
+
 # TLDR
 
 **Start HexChat**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+provides anonymous FTP authentication
+
 # TLDR
 
 **Enable anonymous FTP auth**
@@ -29,8 +33,6 @@
 **pam_ftp** provides anonymous FTP authentication. Uses email as password.
 
 The module validates email format passwords. For FTP services.
-
-pam_ftp handles FTP auth.
 
 # CAVEATS
 

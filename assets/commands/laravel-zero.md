@@ -1,3 +1,7 @@
+# TAGLINE
+
+micro-framework for console applications built on Laravel components
+
 # TLDR
 
 **Create new Laravel Zero application**

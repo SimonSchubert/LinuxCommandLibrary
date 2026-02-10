@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays information about object files
+
 # TLDR
 
 **Disassemble executable**

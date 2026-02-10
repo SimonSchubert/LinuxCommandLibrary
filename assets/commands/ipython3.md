@@ -1,3 +1,7 @@
+# TAGLINE
+
+enhanced interactive Python shell
+
 # TLDR
 
 **Start IPython shell**

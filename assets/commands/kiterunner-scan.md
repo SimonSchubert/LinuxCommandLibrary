@@ -1,3 +1,7 @@
+# TAGLINE
+
+performs API endpoint discovery
+
 # TLDR
 
 **Scan URL**
@@ -49,11 +53,9 @@ _TARGET_
 
 # DESCRIPTION
 
-**kr scan** performs API endpoint discovery. It sends requests based on wordlist patterns to find hidden endpoints.
+**kr scan** is the primary scanning subcommand of kiterunner, performing context-aware API endpoint discovery against a target URL. Rather than simply appending wordlist entries as path suffixes, it constructs full API requests with appropriate HTTP methods, content types, and route parameters based on patterns in the supplied wordlist, which makes it significantly more effective at identifying real API routes.
 
-The tool uses context-aware scanning to detect valid APIs. It supports various HTTP methods and content types.
-
-kr scan discovers API endpoints.
+The command supports Assetnote's pre-built knowledge base wordlists (via the -A flag) as well as custom wordlist files. You can control concurrency with -x, add authentication headers with -H, and filter out unwanted responses by status code. Results include the detected HTTP method, path, status code, and response size, providing a clear picture of the target's API surface.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+fills your terminal with the kind of fake "hacking" screens seen in movies
+
 # TLDR
 
 **Fill the console** with Hollywood technobabble

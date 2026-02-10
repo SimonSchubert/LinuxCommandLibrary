@@ -1,3 +1,7 @@
+# TAGLINE
+
+default file manager for the Cinnamon desktop environment
+
 # TLDR
 
 **Open** the home directory

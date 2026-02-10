@@ -1,3 +1,7 @@
+# TAGLINE
+
+graph stream editor, similar to awk for graphs
+
 # TLDR
 
 **Run gvpr script**
@@ -51,8 +55,6 @@ _FILES_
 **gvpr** is a graph stream editor, similar to awk for graphs. It processes Graphviz graphs using a pattern-action programming language.
 
 The tool can filter, transform, and analyze graphs. It supports node and edge selection, attribute manipulation, and graph restructuring.
-
-gvpr processes graphs with pattern-action programs.
 
 # CAVEATS
 

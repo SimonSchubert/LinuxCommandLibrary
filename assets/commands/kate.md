@@ -1,3 +1,7 @@
+# TAGLINE
+
+KDE Advanced Text Editor, a feature-rich text editor with syntax
+
 # TLDR
 
 **Open file in Kate**

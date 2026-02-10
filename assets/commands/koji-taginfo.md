@@ -1,3 +1,7 @@
+# TAGLINE
+
+prints basic information about one or more tags including the tag ID
+
 # TLDR
 
 Print **tag information**

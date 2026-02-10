@@ -1,3 +1,7 @@
+# TAGLINE
+
+shows a standard balance sheet report
+
 # TLDR
 
 **Show balance sheet**
@@ -58,8 +62,6 @@
 **hledger balancesheet** shows a standard balance sheet report. It displays assets, liabilities, and calculates net worth.
 
 The report follows accounting conventions with assets on one side and liabilities on the other. Net worth is assets minus liabilities.
-
-hledger balancesheet shows financial position.
 
 # CAVEATS
 

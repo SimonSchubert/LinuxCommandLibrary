@@ -1,3 +1,7 @@
+# TAGLINE
+
+removes metadata from files to protect privacy
+
 # TLDR
 
 **Remove metadata from file**

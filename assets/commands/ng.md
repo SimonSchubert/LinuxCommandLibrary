@@ -1,3 +1,7 @@
+# TAGLINE
+
+angular CLI
+
 # TLDR
 
 **Create new project**
@@ -64,8 +68,6 @@ _COMMAND_
 **ng** is the Angular CLI. It creates and manages Angular applications.
 
 The tool scaffolds projects. Handles building, testing, and deployment.
-
-ng is Angular framework CLI.
 
 # CAVEATS
 

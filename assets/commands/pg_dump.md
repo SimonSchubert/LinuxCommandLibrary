@@ -1,3 +1,7 @@
+# TAGLINE
+
+utility for backing up PostgreSQL databases
+
 # TLDR
 
 **Dump a database**

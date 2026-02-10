@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line tool for reconfiguring PulseAudio at runtime
+
 # TLDR
 
 **List sinks (outputs)**

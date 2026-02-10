@@ -1,3 +1,7 @@
+# TAGLINE
+
+handles ECryptfs encrypted home directories
+
 # TLDR
 
 **Auto-mount encrypted home**
@@ -26,8 +30,6 @@
 **pam_ecryptfs** handles eCryptfs encrypted home directories. Automatic mount on login.
 
 The module manages encryption keys. Part of eCryptfs suite.
-
-pam_ecryptfs manages encrypted homes.
 
 # CAVEATS
 

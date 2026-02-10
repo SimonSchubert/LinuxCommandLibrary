@@ -1,3 +1,7 @@
+# TAGLINE
+
+allows Windows WiFi drivers on Linux
+
 # TLDR
 
 **Install Windows driver**
@@ -53,8 +57,6 @@
 **ndiswrapper** allows Windows WiFi drivers on Linux. It wraps NDIS drivers for Linux use.
 
 The tool enables unsupported WiFi cards. Loads Windows .sys and .inf files.
-
-ndiswrapper uses Windows WiFi drivers.
 
 # CAVEATS
 

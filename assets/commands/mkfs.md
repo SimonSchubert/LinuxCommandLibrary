@@ -1,3 +1,7 @@
+# TAGLINE
+
+builds a Linux filesystem on a device, usually a hard disk partition
+
 # TLDR
 
 Build **ext2** filesystem (default)

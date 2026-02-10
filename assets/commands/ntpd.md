@@ -1,3 +1,7 @@
+# TAGLINE
+
+network Time Protocol daemon that synchronizes the system clock with remote
+
 # TLDR
 
 **Start** the daemon

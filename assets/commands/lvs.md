@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays information about logical volumes in a configurable table format
+
 # TLDR
 
 **List** logical volumes

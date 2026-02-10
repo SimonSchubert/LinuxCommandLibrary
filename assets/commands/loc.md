@@ -1,3 +1,7 @@
+# TAGLINE
+
+counts lines of code quickly
+
 # TLDR
 
 **Count lines in current directory**
@@ -53,8 +57,6 @@ _PATHS_
 **loc** counts lines of code quickly. It identifies languages and separates code, comments, and blanks.
 
 The tool is written in Rust for speed. It supports many programming languages.
-
-loc counts lines of code.
 
 # CAVEATS
 

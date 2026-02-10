@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs a command only if there is input
+
 # TLDR
 
 **Run command if input**
@@ -39,8 +43,6 @@ _ARGS_
 **ifne** runs a command only if there is input. It reads stdin and passes it to the command if non-empty.
 
 The tool is useful in pipelines where subsequent commands should only run when there's data. The -n flag inverts the behavior.
-
-ifne conditionally runs commands.
 
 # CAVEATS
 

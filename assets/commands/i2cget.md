@@ -1,3 +1,7 @@
+# TAGLINE
+
+reads a single register value from an I2C device
+
 # TLDR
 
 **Read** from a register of an I2C device

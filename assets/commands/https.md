@@ -1,3 +1,7 @@
+# TAGLINE
+
+alias or variant of HTTPie for HTTPS requests
+
 # TLDR
 
 **GET request over HTTPS**
@@ -55,8 +59,6 @@ _DATA_
 **https** is an alias or variant of HTTPie for HTTPS requests. It provides the same user-friendly interface with SSL/TLS by default.
 
 The tool emphasizes secure connections while maintaining HTTPie's intuitive syntax. It's useful for API testing over HTTPS.
-
-https is HTTPie defaulting to HTTPS.
 
 # CAVEATS
 

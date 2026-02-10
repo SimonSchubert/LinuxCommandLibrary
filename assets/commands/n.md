@@ -1,3 +1,7 @@
+# TAGLINE
+
+node
+
 # TLDR
 
 **Install latest Node.js**
@@ -67,8 +71,6 @@ _VERSION_
 **n** is a Node.js version manager. It installs and switches between Node.js versions.
 
 The tool manages multiple installations. Simple interface for version control.
-
-n is Node.js version manager.
 
 # CAVEATS
 

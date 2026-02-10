@@ -1,3 +1,7 @@
+# TAGLINE
+
+profiles Python memory allocations, tracking where memory is allocated
+
 # TLDR
 
 **Profile memory usage**

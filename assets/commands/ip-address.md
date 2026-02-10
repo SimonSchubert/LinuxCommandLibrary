@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages IP addresses on network interfaces
+
 # TLDR
 
 **List** all addresses

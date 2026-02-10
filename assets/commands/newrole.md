@@ -1,3 +1,7 @@
+# TAGLINE
+
+starts a new shell with a different SELinux security context
+
 # TLDR
 
 Start a new shell with a specific **SELinux role**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+short form of **pacman --database**, which operates on the package database
+
 # TLDR
 
 This command is an alias of **pacman --database**

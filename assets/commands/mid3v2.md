@@ -1,3 +1,7 @@
+# TAGLINE
+
+edits ID3v2 tags in MP3 files
+
 # TLDR
 
 **Show ID3 tags**

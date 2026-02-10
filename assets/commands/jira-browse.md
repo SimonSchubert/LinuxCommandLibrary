@@ -1,3 +1,7 @@
+# TAGLINE
+
+opens a Jira issue or project in your default web browser
+
 # TLDR
 
 **Open issue in browser**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs the "test" script defined in package
+
 # TLDR
 
 **Run tests**

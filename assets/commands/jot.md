@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates sequential or random data
+
 # TLDR
 
 **Generate sequence**
@@ -62,8 +66,6 @@ _STEP_
 **jot** generates sequential or random data. It produces numbers, characters, or formatted strings.
 
 The tool is useful for generating test data and sequences. It supports various output formats.
-
-jot generates data sequences.
 
 # CAVEATS
 

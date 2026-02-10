@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates or updates a tag pointing to a revision
+
 # TLDR
 
 **Create tag on current revision**

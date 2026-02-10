@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages password files for the Mosquitto MQTT broker
+
 # TLDR
 
 **Create password file with user**

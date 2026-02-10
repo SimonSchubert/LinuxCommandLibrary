@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays information about builds in the Koji build system
+
 # TLDR
 
 Print **basic information** about builds

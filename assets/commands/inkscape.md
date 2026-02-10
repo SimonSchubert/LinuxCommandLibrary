@@ -1,3 +1,7 @@
+# TAGLINE
+
+professional vector graphics editor
+
 # TLDR
 
 **Open file in GUI**
@@ -69,8 +73,6 @@
 **Inkscape** is a professional vector graphics editor. It supports SVG as native format and exports to PNG, PDF, EPS, and other formats.
 
 The application provides comprehensive drawing tools, path operations, and text handling. It can run headless for batch conversions.
-
-Inkscape is open-source vector editor.
 
 # CAVEATS
 

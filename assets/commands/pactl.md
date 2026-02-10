@@ -1,3 +1,7 @@
+# TAGLINE
+
+controls a running PulseAudio sound server from the command line
+
 # TLDR
 
 **List all audio sinks** (output devices)

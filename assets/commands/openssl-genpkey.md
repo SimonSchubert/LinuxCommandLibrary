@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates private keys for various algorithms
+
 # TLDR
 
 **Generate RSA private key**

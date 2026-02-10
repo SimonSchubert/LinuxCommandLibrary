@@ -1,3 +1,7 @@
+# TAGLINE
+
+helper script for managing Limine bootloader entries on UEFI systems
+
 # TLDR
 
 **Scan** for other active UEFI boot entries and add them to Limine menu

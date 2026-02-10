@@ -1,3 +1,7 @@
+# TAGLINE
+
+expands \\input and \\include commands in LaTeX documents, producing a single
+
 # TLDR
 
 **Expand includes in LaTeX file**

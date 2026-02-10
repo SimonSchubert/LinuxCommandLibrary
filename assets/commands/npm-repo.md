@@ -1,3 +1,7 @@
+# TAGLINE
+
+opens package repository in browser
+
 # TLDR
 
 **Open package repository**
@@ -29,8 +33,6 @@ _PACKAGES_
 **npm repo** opens package repository in browser. Uses repository field from package.json.
 
 The command navigates to source code. GitHub, GitLab, etc.
-
-npm repo opens source repository.
 
 # CAVEATS
 

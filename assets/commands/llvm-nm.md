@@ -1,3 +1,7 @@
+# TAGLINE
+
+lists symbols from object files, archives, and executables
+
 # TLDR
 
 **List symbols in object file**

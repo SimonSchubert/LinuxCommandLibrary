@@ -1,3 +1,7 @@
+# TAGLINE
+
+retrieves network interface information in a script-friendly format
+
 # TLDR
 
 **Get IP address**

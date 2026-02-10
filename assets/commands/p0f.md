@@ -1,3 +1,7 @@
+# TAGLINE
+
+performs passive OS fingerprinting
+
 # TLDR
 
 **Start fingerprinting**
@@ -49,8 +53,6 @@
 **p0f** performs passive OS fingerprinting. Identifies systems without active probing.
 
 The tool analyzes network traffic patterns. Detects OS, NAT, and more.
-
-p0f fingerprints passively.
 
 # CAVEATS
 

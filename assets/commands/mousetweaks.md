@@ -1,3 +1,7 @@
+# TAGLINE
+
+provides mouse accessibility features for GNOME
+
 # TLDR
 
 **Start mousetweaks**
@@ -46,8 +50,6 @@
 **mousetweaks** provides mouse accessibility features for GNOME. It enables dwell clicking and other aids.
 
 The tool assists users with motor impairments. Provides automatic clicking based on pointer dwelling.
-
-mousetweaks is GNOME mouse accessibility.
 
 # CAVEATS
 

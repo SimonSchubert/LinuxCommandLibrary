@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages PlatformIO organizations for team collaboration
+
 # TLDR
 
 **Create organization**

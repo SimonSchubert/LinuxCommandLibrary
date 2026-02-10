@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages IBM Cloud CLI configuration
+
 # TLDR
 
 **Show configuration**
@@ -52,8 +56,6 @@
 **ibmcloud config** manages IBM Cloud CLI configuration. It sets options for timeouts, output formatting, and behavior.
 
 The command stores settings for the current user. Settings persist across sessions and affect all ibmcloud commands.
-
-ibmcloud config sets CLI preferences.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+finds duplicate code in PHP projects
+
 # TLDR
 
 **Find duplicate code**

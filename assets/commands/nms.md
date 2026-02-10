@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates a decrypting text effect
+
 # TLDR
 
 **Decrypt text effect**
@@ -46,8 +50,6 @@
 **nms** creates a decrypting text effect. Inspired by movie hacking scenes.
 
 The tool animates text reveal. Fun terminal effect for presentations.
-
-nms is text decryption effect.
 
 # CAVEATS
 

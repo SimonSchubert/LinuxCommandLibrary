@@ -1,3 +1,7 @@
+# TAGLINE
+
+advanced DNS lookup utility from the Knot DNS project
+
 # TLDR
 
 **Query A record**

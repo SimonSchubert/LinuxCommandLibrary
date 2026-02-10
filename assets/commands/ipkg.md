@@ -1,3 +1,7 @@
+# TAGLINE
+
+lightweight package manager for embedded Linux systems
+
 # TLDR
 
 **Update package list**

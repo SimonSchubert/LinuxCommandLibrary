@@ -1,3 +1,7 @@
+# TAGLINE
+
+initiates a user session on the system
+
 # TLDR
 
 **Log in** as user

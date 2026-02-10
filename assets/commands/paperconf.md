@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays paper size information
+
 # TLDR
 
 **Show default paper size**
@@ -46,8 +50,6 @@ _PAPER_
 **paperconf** displays paper size information. Queries system paper settings.
 
 The tool shows dimensions and names. Part of libpaper.
-
-paperconf shows paper sizes.
 
 # CAVEATS
 

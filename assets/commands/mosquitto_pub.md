@@ -1,3 +1,7 @@
+# TAGLINE
+
+publishes messages to an MQTT broker
+
 # TLDR
 
 **Publish message to topic**
@@ -59,8 +63,6 @@
 **mosquitto_pub** publishes messages to an MQTT broker. It's part of the Mosquitto package.
 
 The tool sends single messages. Supports authentication, TLS, and various QoS levels.
-
-mosquitto_pub is MQTT publisher client.
 
 # CAVEATS
 

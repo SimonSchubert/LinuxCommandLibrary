@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays information about installed hardware detected by the kernel, reading
+
 # TLDR
 
 List **installed hardware**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays an animated wireframe or solid polyhedron bouncing around an X11 window
+
 # TLDR
 
 Display a **wireframe icosahedron** that changes position

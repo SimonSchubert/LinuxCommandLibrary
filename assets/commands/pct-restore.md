@@ -1,3 +1,7 @@
+# TAGLINE
+
+restores an LXC container from a Proxmox backup file
+
 # TLDR
 
 **Restore container from backup**
@@ -50,8 +54,6 @@
 # DESCRIPTION
 
 **pct restore** restores an LXC container from a Proxmox backup file. It can restore to a new VMID, different storage, or with modified settings.
-
-Backup files are typically created by vzdump.
 
 # EXAMPLE
 

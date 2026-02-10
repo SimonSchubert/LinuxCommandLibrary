@@ -1,3 +1,7 @@
+# TAGLINE
+
+encodes video from MPlayer
+
 # TLDR
 
 **Convert video**
@@ -49,8 +53,6 @@ _INPUT_
 **mencoder** encodes video from MPlayer. It converts between formats and applies filters.
 
 The tool is part of MPlayer project. Superseded by FFmpeg in many cases.
-
-mencoder encodes video.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates a new commit from the current working-copy changes in Jujutsu
+
 # TLDR
 
 **Create commit with message**

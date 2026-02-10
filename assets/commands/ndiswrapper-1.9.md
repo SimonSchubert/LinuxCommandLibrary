@@ -1,3 +1,7 @@
+# TAGLINE
+
+specific version of ndiswrapper
+
 # TLDR
 
 **Install Windows driver**
@@ -42,8 +46,6 @@
 **ndiswrapper-1.9** is a specific version of ndiswrapper. It uses Windows WiFi drivers on Linux.
 
 The tool wraps NDIS network drivers. This version maintained for compatibility.
-
-ndiswrapper-1.9 is versioned ndiswrapper.
 
 # CAVEATS
 

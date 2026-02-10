@@ -1,3 +1,7 @@
+# TAGLINE
+
+uploads coverage to Coveralls
+
 # TLDR
 
 **Upload coverage to Coveralls**
@@ -42,8 +46,6 @@
 **php-coveralls** uploads coverage to Coveralls. PHP code coverage reporting.
 
 The tool integrates with CI systems. Tracks test coverage over time.
-
-php-coveralls reports coverage.
 
 # CAVEATS
 

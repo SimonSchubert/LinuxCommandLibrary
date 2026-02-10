@@ -1,3 +1,7 @@
+# TAGLINE
+
+handles package installation, removal, and system upgrades using the ALPM
+
 # TLDR
 
 **Install** a package from repository

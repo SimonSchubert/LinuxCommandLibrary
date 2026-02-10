@@ -1,3 +1,7 @@
+# TAGLINE
+
+configures the dynamic linker run-time bindings
+
 # TLDR
 
 **Update** symlinks and rebuild cache

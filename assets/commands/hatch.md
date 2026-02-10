@@ -1,3 +1,7 @@
+# TAGLINE
+
+modern Python project manager
+
 # TLDR
 
 **Create new project**

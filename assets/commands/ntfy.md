@@ -1,3 +1,7 @@
+# TAGLINE
+
+sends push notifications via ntfy
+
 # TLDR
 
 **Send notification**
@@ -52,8 +56,6 @@
 **ntfy** sends push notifications via ntfy.sh service. Simple pub-sub messaging.
 
 The tool enables notifications to phones and desktops. Uses HTTP-based protocol.
-
-ntfy sends notifications anywhere.
 
 # CAVEATS
 

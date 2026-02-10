@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates composite images from multiple images arranged in a grid
+
 # TLDR
 
 **Create image montage**

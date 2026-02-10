@@ -1,3 +1,7 @@
+# TAGLINE
+
+reconfigures a NixOS system by building a new configuration
+
 # TLDR
 
 **Build and switch** to new configuration (make boot default)

@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates a compressed ROM filesystem inside a partition
+
 # TLDR
 
 Create **cramfs** from directory

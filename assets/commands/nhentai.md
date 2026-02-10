@@ -1,3 +1,7 @@
+# TAGLINE
+
+downloads galleries from nhentai
+
 # TLDR
 
 **Download by ID**
@@ -49,8 +53,6 @@
 **nhentai** downloads galleries from nhentai. It's a command-line downloader.
 
 The tool saves images locally. Supports batch downloading.
-
-nhentai is gallery downloader.
 
 # CAVEATS
 

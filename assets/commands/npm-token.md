@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages authentication tokens
+
 # TLDR
 
 **List tokens**
@@ -52,8 +56,6 @@ _COMMAND_
 **npm token** manages authentication tokens. Creates tokens for CI/CD.
 
 The command handles API tokens. Supports scoped permissions.
-
-npm token manages auth tokens.
 
 # CAVEATS
 

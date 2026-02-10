@@ -1,3 +1,7 @@
+# TAGLINE
+
+was an AI-powered code completion engine
+
 # TLDR
 
 **Start Kite engine**
@@ -42,8 +46,6 @@
 **Kite** was an AI-powered code completion engine. It provided intelligent autocomplete for multiple languages.
 
 The tool integrated with popular editors. It offered documentation and function signatures inline.
-
-Kite provided AI code completion.
 
 # CAVEATS
 

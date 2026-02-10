@@ -1,3 +1,7 @@
+# TAGLINE
+
+OSINT tool for collecting information about usernames across social
+
 # TLDR
 
 **Search username across sites**

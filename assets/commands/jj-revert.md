@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates a new commit that undoes the changes from specified revisions
+
 # TLDR
 
 **Revert changes from revision**

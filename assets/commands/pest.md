@@ -1,3 +1,7 @@
+# TAGLINE
+
+elegant PHP testing framework
+
 # TLDR
 
 **Run all tests**

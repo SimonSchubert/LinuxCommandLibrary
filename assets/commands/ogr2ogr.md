@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts vector geospatial data
+
 # TLDR
 
 **Convert shapefile to GeoJSON**
@@ -55,8 +59,6 @@ _SRC_
 **ogr2ogr** converts vector geospatial data. Supports many formats.
 
 The tool transforms between GIS formats. Part of GDAL suite.
-
-ogr2ogr converts vector data.
 
 # CAVEATS
 

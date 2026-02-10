@@ -1,3 +1,7 @@
+# TAGLINE
+
+interactive Ruby shell
+
 # TLDR
 
 **Start interactive Ruby**
@@ -56,8 +60,6 @@
 **irb** is the Interactive Ruby shell. It provides a REPL for evaluating Ruby expressions and exploring code.
 
 The shell supports tab completion, history, and multi-line input. It's the standard tool for Ruby experimentation.
-
-irb is the Ruby interactive shell.
 
 # CAVEATS
 

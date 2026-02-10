@@ -1,3 +1,7 @@
+# TAGLINE
+
+configuration file for pacman, the Arch Linux package manager
+
 # TLDR
 
 **Enable multilib repository**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PDF files to HTML, XML, or PNG format
+
 # TLDR
 
 **Convert** a PDF file to an HTML file

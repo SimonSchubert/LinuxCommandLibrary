@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates an initial ramdisk image for Linux
+
 # TLDR
 
 **Generate initramfs for current kernel**

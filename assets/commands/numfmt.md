@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts numbers to and from human-readable representations
+
 # TLDR
 
 **Convert bytes to human-readable**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+DNS server daemon from BIND
+
 # TLDR
 
 **Start** DNS server with default configuration

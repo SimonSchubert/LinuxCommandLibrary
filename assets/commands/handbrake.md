@@ -1,3 +1,7 @@
+# TAGLINE
+
+open-source video transcoder
+
 # TLDR
 
 **Convert video to MP4**

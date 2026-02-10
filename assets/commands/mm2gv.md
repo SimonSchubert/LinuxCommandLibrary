@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts Matrix Market format to Graphviz
+
 # TLDR
 
 **Convert matrix market to graph**
@@ -38,8 +42,6 @@ _FILE_
 **mm2gv** converts Matrix Market format to Graphviz. Matrix Market is a sparse matrix format.
 
 The tool is part of Graphviz. It enables visualization of sparse matrices as graphs.
-
-mm2gv converts matrices to graphs.
 
 # CAVEATS
 

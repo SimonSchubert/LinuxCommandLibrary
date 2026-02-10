@@ -1,3 +1,7 @@
+# TAGLINE
+
+intelligent shell history search tool that uses a small neural network
+
 # TLDR
 
 **Launch mcfly search**

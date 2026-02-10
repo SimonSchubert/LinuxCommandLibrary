@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs a command with modified scheduling priority
+
 # TLDR
 
 **Run with lower priority**
@@ -40,8 +44,6 @@ _COMMAND_
 **nice** runs a command with modified scheduling priority. Higher values mean lower priority.
 
 The tool adjusts process niceness. Values range from -20 (highest) to 19 (lowest).
-
-nice sets process priority.
 
 # CAVEATS
 

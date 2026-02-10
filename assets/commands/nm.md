@@ -1,3 +1,7 @@
+# TAGLINE
+
+lists symbols from object files
+
 # TLDR
 
 **List symbols**
@@ -63,8 +67,6 @@ _FILES_
 **nm** lists symbols from object files. Shows function and variable names.
 
 The tool inspects binaries. Essential for debugging and reverse engineering.
-
-nm lists binary symbols.
 
 # CAVEATS
 

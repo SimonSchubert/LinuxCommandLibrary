@@ -1,3 +1,7 @@
+# TAGLINE
+
+ends the current IBM Cloud CLI session
+
 # TLDR
 
 **Logout from IBM Cloud**
@@ -25,8 +29,6 @@
 **ibmcloud logout** ends the current IBM Cloud CLI session. It removes stored credentials and tokens.
 
 The command clears authentication state locally. Use before switching accounts or for security.
-
-ibmcloud logout ends CLI session.
 
 # CAVEATS
 

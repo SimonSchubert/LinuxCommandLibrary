@@ -1,3 +1,7 @@
+# TAGLINE
+
+queries OCSP responders
+
 # TLDR
 
 **Check certificate status**
@@ -48,8 +52,6 @@
 **openssl ocsp** queries OCSP responders. Checks certificate revocation status.
 
 The tool validates certificates online. Part of OpenSSL suite.
-
-openssl ocsp checks certificate status.
 
 # CAVEATS
 

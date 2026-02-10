@@ -1,3 +1,7 @@
+# TAGLINE
+
+copies standard input to the macOS clipboard
+
 # TLDR
 
 **Copy text to clipboard**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+searches for extended regular expression patterns in lzip-compressed files
+
 # TLDR
 
 **Search with extended regex**

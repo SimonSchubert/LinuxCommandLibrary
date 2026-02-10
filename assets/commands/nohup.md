@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs a command immune to hangups
+
 # TLDR
 
 **Run command immune to hangups**
@@ -36,8 +40,6 @@ _ARGUMENTS_
 **nohup** runs a command immune to hangups. Process continues after logout.
 
 The tool detaches from terminal. Output goes to nohup.out by default.
-
-nohup runs persistent commands.
 
 # CAVEATS
 

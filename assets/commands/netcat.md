@@ -1,3 +1,7 @@
+# TAGLINE
+
+versatile networking utility for reading and writing data across TCP and UDP
+
 # TLDR
 
 **Connect to a host** on a specific port

@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal file manager
+
 # TLDR
 
 **Start file manager**
@@ -46,8 +50,6 @@ _PATH_
 **lf** is a terminal file manager. It provides fast navigation with vim-like keybindings.
 
 The tool is written in Go for portability. It supports preview, bulk operations, and scripting.
-
-lf is terminal file manager.
 
 # CAVEATS
 

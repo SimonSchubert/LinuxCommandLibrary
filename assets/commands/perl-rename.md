@@ -1,3 +1,7 @@
+# TAGLINE
+
+renames files using Perl regular expressions
+
 # TLDR
 
 **Rename with regex substitution**

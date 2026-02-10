@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays the Graphics Translation Table for Intel GPUs
+
 # TLDR
 
 **Show GTT status**
@@ -32,8 +36,6 @@
 **intel_gtt** displays the Graphics Translation Table for Intel GPUs. The GTT maps graphics memory addresses to physical memory.
 
 The tool shows aperture usage and memory mappings. Useful for debugging memory allocation and GPU memory issues.
-
-intel_gtt shows GPU translation table.
 
 # CAVEATS
 

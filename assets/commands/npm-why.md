@@ -1,3 +1,7 @@
+# TAGLINE
+
+shows why a package is installed
+
 # TLDR
 
 **Explain why package installed**
@@ -28,8 +32,6 @@ _PACKAGE_
 **npm why** shows why a package is installed. Alias for npm explain.
 
 The command traces dependency paths. Shows all routes to package.
-
-npm why traces dependencies.
 
 # CAVEATS
 

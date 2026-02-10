@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line interface for Immich photo server
+
 # TLDR
 
 **Upload photos**
@@ -52,8 +56,6 @@ _COMMAND_
 **immich-cli** is the command-line interface for Immich photo server. It enables bulk uploads and server management.
 
 The tool authenticates with API keys and uploads photos/videos. It supports album assignment and duplicate detection.
-
-immich-cli manages Immich from terminal.
 
 # CAVEATS
 

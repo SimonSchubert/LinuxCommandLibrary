@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays and compares terminal capability descriptions from the terminfo
+
 # TLDR
 
 **Show current terminal capabilities**

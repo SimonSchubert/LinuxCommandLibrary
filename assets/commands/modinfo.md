@@ -1,3 +1,7 @@
+# TAGLINE
+
+extracts and displays information from Linux kernel modules
+
 # TLDR
 
 List **all attributes** of a module

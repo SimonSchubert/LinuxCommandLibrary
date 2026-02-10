@@ -1,3 +1,7 @@
+# TAGLINE
+
+blue light filter for Hyprland, the dynamic tiling Wayland compositor
+
 # TLDR
 
 **Start** the blue light filter service

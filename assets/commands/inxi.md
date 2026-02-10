@@ -1,3 +1,7 @@
+# TAGLINE
+
+system information script that provides detailed information about hardware
+
 # TLDR
 
 Print **basic** system summary

@@ -1,3 +1,7 @@
+# TAGLINE
+
+queries and controls the state of network links as seen by systemd-networkd
+
 # TLDR
 
 List all network **links** with status

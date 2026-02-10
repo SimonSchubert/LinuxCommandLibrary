@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates device URIs for HP printers
+
 # TLDR
 
 **Generate device URI**
@@ -45,8 +49,6 @@ _IP-ADDRESS_
 **hp-makeuri** generates device URIs for HP printers. It creates the proper URI format needed for CUPS printer configuration.
 
 The tool probes network or USB printers and constructs valid device identifiers. URIs are used with lpadmin and CUPS.
-
-hp-makeuri creates HPLIP device URIs.
 
 # CAVEATS
 

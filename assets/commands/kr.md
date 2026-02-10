@@ -1,3 +1,7 @@
+# TAGLINE
+
+krypton CLI for SSH key management
+
 # TLDR
 
 **Pair with phone**
@@ -46,11 +50,9 @@
 
 # DESCRIPTION
 
-**kr** is the Krypton CLI for SSH key management. It stores SSH keys on a smartphone instead of the computer.
+**kr** is the command-line interface for Krypton, a system that stores SSH and GPG private keys on a paired smartphone rather than on the computer. By keeping private keys on a separate device, Krypton provides a form of two-factor authentication for SSH connections: each login attempt triggers a push notification on the phone that must be approved before the connection proceeds.
 
-The tool pairs with the Krypton mobile app. SSH authentication requires phone approval for each connection.
-
-kr manages mobile SSH keys.
+The CLI handles pairing with the Krypton mobile app, generating keys on the phone, and copying the corresponding public key to remote servers. Once configured, kr integrates transparently with the local SSH agent so that standard ssh commands work without modification. The Krypton project has been deprecated, but the CLI and its architecture influenced later approaches to hardware-backed SSH key management.
 
 # CAVEATS
 

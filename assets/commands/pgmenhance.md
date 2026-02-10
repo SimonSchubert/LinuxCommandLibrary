@@ -1,3 +1,7 @@
+# TAGLINE
+
+sharpens PGM grayscale images using edge enhancement
+
 # TLDR
 
 **Enhance image sharpness**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+moves the working copy to the parent revision
+
 # TLDR
 
 **Move to parent revision**

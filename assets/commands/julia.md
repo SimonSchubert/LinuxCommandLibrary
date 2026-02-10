@@ -1,3 +1,7 @@
+# TAGLINE
+
+high-level, high-performance programming language for technical computing
+
 # TLDR
 
 **Start the Julia REPL**

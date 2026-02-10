@@ -1,3 +1,7 @@
+# TAGLINE
+
+moonshot AI's command-line agent for AI-driven coding and terminal operations
+
 # TLDR
 
 **Start an interactive session**

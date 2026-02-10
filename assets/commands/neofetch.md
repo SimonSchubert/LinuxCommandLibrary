@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line system information tool that displays information about your
+
 # TLDR
 
 **Display system information** with distro logo

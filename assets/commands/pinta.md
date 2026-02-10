@@ -1,3 +1,7 @@
+# TAGLINE
+
+simple image editing program
+
 # TLDR
 
 **Open Pinta**

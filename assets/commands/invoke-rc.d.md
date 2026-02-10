@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs System V init scripts on Debian systems
+
 # TLDR
 
 **Start a service**
@@ -52,8 +56,6 @@ _ACTION_
 **invoke-rc.d** runs System V init scripts on Debian systems. It provides a standard interface respecting runlevel policy.
 
 The tool checks policy-rc.d before executing actions. It's the recommended way to control services in maintainer scripts.
-
-invoke-rc.d controls Debian services.
 
 # CAVEATS
 

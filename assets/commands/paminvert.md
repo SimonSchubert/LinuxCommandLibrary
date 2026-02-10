@@ -1,3 +1,7 @@
+# TAGLINE
+
+produces a negative of a PAM or PNM image by inverting all pixel values
+
 # TLDR
 
 **Invert image colors**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal Spotify client
+
 # TLDR
 
 **Start ncspot**
@@ -32,8 +36,6 @@
 **ncspot** is a terminal Spotify client. It plays music through the Spotify API.
 
 The tool provides ncurses interface. Lightweight alternative to official client.
-
-ncspot is terminal Spotify player.
 
 # CAVEATS
 

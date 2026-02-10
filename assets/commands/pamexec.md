@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs a specified shell command on each image in a multi-image PAM stream
+
 # TLDR
 
 **Apply command to each image in stream**

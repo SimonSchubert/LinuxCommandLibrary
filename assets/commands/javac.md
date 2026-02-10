@@ -1,3 +1,7 @@
+# TAGLINE
+
+compiles Java source files into bytecode class files that run on the Java
+
 # TLDR
 
 **Compile a Java file**

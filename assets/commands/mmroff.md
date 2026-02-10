@@ -1,3 +1,7 @@
+# TAGLINE
+
+processes mm macro documents
+
 # TLDR
 
 **Process mm document**
@@ -36,8 +40,6 @@ _FILE_
 **mmroff** processes mm macro documents. mm is a groff macro package for memos.
 
 The tool formats documents using the memorandum macros. Part of groff.
-
-mmroff formats mm documents.
 
 # CAVEATS
 

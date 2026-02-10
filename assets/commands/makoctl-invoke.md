@@ -1,3 +1,7 @@
+# TAGLINE
+
+triggers actions on notifications displayed by the mako notification daemon
+
 # TLDR
 
 Invoke the **default action** on the most recent notification

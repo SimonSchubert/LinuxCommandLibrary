@@ -1,3 +1,7 @@
+# TAGLINE
+
+increases the size of a logical volume in LVM
+
 # TLDR
 
 Extend to **absolute** size

@@ -1,3 +1,7 @@
+# TAGLINE
+
+extracts a row or column from a PGM image and outputs the gray values
+
 # TLDR
 
 **Extract row or column slice from image**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+curses-based client for MPD
+
 # TLDR
 
 **Start ncmpc**

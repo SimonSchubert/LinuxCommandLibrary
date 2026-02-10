@@ -1,3 +1,7 @@
+# TAGLINE
+
+prints files to a printer
+
 # TLDR
 
 **Print file**
@@ -56,8 +60,6 @@ _FILES_
 **lp** prints files to a printer. It's the System V print command used with CUPS.
 
 The tool submits print jobs to the print queue. Options control copies, pages, and print quality.
-
-lp prints files.
 
 # CAVEATS
 

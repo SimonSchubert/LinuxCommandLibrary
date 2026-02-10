@@ -1,3 +1,7 @@
+# TAGLINE
+
+self-hosted implementation of the Tailscale control server
+
 # TLDR
 
 **Start the server**

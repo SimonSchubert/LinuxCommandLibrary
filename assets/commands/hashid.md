@@ -1,3 +1,7 @@
+# TAGLINE
+
+python tool that identifies hash types by analyzing their length and character
+
 # TLDR
 
 **Identify hash type**

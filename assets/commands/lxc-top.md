@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays real-time resource usage of LXC containers similar to top for processes
+
 # TLDR
 
 Start **lxc-top**

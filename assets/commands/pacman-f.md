@@ -1,3 +1,7 @@
+# TAGLINE
+
+short form of **pacman --files**, which queries the files database
+
 # TLDR
 
 This command is an alias of **pacman --files**

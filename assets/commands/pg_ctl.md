@@ -1,3 +1,7 @@
+# TAGLINE
+
+utility for initializing, starting, stopping, and controlling a PostgreSQL
+
 # TLDR
 
 **Start PostgreSQL**
@@ -56,10 +60,6 @@
 # DESCRIPTION
 
 **pg_ctl** is a utility for initializing, starting, stopping, and controlling a PostgreSQL database server. It's the preferred method for managing PostgreSQL services.
-
-# EXAMPLES
-
-```bash
 # Start with logging
 pg_ctl start -D /data -l /var/log/postgresql.log
 

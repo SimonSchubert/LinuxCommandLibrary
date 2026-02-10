@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays the state of files in the working directory
+
 # TLDR
 
 **Show all changed files**

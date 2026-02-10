@@ -1,3 +1,7 @@
+# TAGLINE
+
+lightweight notification daemon for Wayland compositors implementing
+
 # TLDR
 
 Start **notification daemon**

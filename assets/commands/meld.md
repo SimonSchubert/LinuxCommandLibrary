@@ -1,3 +1,7 @@
+# TAGLINE
+
+visual diff and merge tool
+
 # TLDR
 
 **Compare two files**
@@ -50,8 +54,6 @@ _FILES_
 **meld** is a visual diff and merge tool. It highlights differences between files or directories.
 
 The tool provides three-way comparison and merging. Integrates with version control systems.
-
-meld compares and merges files.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+utility for displaying and manipulating EXIF metadata in JPEG images
+
 # TLDR
 
 Show all **EXIF data**

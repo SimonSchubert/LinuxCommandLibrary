@@ -1,3 +1,7 @@
+# TAGLINE
+
+PAM debugging module
+
 # TLDR
 
 **Enable in PAM config**
@@ -40,8 +44,6 @@
 **pam_debug** is a PAM debugging module. Forces specific return values.
 
 The module aids PAM stack debugging. Not for production use.
-
-pam_debug tests PAM configurations.
 
 # CAVEATS
 

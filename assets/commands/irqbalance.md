@@ -1,3 +1,7 @@
+# TAGLINE
+
+distributes hardware interrupts across CPUs
+
 # TLDR
 
 **Start irqbalance**
@@ -52,8 +56,6 @@
 **irqbalance** distributes hardware interrupts across CPUs. It optimizes interrupt handling for multi-processor systems.
 
 The daemon monitors IRQ patterns and migrates them for better load distribution. It improves performance on multi-core systems.
-
-irqbalance distributes interrupts across CPUs.
 
 # CAVEATS
 

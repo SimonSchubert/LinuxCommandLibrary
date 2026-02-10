@@ -1,3 +1,7 @@
+# TAGLINE
+
+goals manage Maven dependencies
+
 # TLDR
 
 **Show dependency tree**
@@ -63,8 +67,6 @@ _GOAL_
 **mvn dependency** goals manage Maven dependencies. They analyze and display project dependencies.
 
 The plugin shows dependency tree. Helps identify conflicts and unused dependencies.
-
-mvn dependency manages deps.
 
 # CAVEATS
 

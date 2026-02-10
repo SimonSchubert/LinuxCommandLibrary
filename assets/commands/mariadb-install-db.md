@@ -1,3 +1,7 @@
+# TAGLINE
+
+initializes the MariaDB data directory and system tables
+
 # TLDR
 
 **Initialize MariaDB data directory**

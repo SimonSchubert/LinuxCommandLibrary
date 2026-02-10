@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates an XFS filesystem on a partition or device
+
 # TLDR
 
 Create **XFS filesystem** on partition

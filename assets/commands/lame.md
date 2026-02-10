@@ -1,3 +1,7 @@
+# TAGLINE
+
+high-quality MP3 encoder
+
 # TLDR
 
 **Encode to MP3**
@@ -62,8 +66,6 @@ _OUTPUT_
 **LAME** is a high-quality MP3 encoder. It produces excellent audio quality at various bitrates.
 
 The encoder supports constant and variable bitrate modes. It's widely regarded as the best open-source MP3 encoder.
-
-LAME encodes audio to MP3.
 
 # CAVEATS
 

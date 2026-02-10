@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PBM bitmaps to GraphOn terminal graphics format
+
 # TLDR
 
 **Convert PBM to GraphOn format**

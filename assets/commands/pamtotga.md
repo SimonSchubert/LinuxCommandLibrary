@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PAM/PNM images to TGA format
+
 # TLDR
 
 **Convert PAM to TGA format**

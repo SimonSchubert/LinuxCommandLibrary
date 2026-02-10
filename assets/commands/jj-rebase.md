@@ -1,3 +1,7 @@
+# TAGLINE
+
+moves commits to a new base in Jujutsu
+
 # TLDR
 
 **Rebase current change onto destination**

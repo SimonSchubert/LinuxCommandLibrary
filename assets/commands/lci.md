@@ -1,3 +1,7 @@
+# TAGLINE
+
+interpreter for LOLCODE, an esoteric programming language inspired by lolcat
+
 # TLDR
 
 **Run** a LOLCODE file

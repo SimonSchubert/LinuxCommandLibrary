@@ -1,3 +1,7 @@
+# TAGLINE
+
+suspends execution of the calling thread for the specified duration
+
 # TLDR
 
 **Sleep for 1 second (C code)**

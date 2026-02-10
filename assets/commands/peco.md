@@ -1,3 +1,7 @@
+# TAGLINE
+
+interactive filtering tool
+
 # TLDR
 
 **Interactive filter**
@@ -39,8 +43,6 @@
 **peco** is an interactive filtering tool. Select from stdin with fuzzy matching.
 
 The tool provides incremental search. Similar to fzf and percol.
-
-peco filters interactively.
 
 # CAVEATS
 

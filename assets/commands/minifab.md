@@ -1,3 +1,7 @@
+# TAGLINE
+
+simplifies Hyperledger Fabric network deployment
+
 # TLDR
 
 **Initialize Hyperledger Fabric network**

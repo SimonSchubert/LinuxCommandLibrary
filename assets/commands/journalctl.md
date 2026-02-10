@@ -1,3 +1,7 @@
+# TAGLINE
+
+queries and displays messages from the systemd journal
+
 # TLDR
 
 Show all messages with **priority level 3** (errors) from this boot

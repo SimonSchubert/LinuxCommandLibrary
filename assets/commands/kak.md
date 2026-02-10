@@ -1,3 +1,7 @@
+# TAGLINE
+
+modal text editor inspired by Vim
+
 # TLDR
 
 **Open file**
@@ -56,8 +60,6 @@ _FILE_
 **Kakoune** is a modal text editor inspired by Vim. It uses selection-first editing with multiple cursors.
 
 The editor provides instant visual feedback. It separates selection from action for intuitive editing.
-
-Kakoune is modal multi-cursor editor.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates npm-shrinkwrap
+
 # TLDR
 
 **Create shrinkwrap file**
@@ -25,8 +29,6 @@
 **npm shrinkwrap** creates npm-shrinkwrap.json. Locks dependency versions for publishing.
 
 The command creates publishable lockfile. Unlike package-lock.json, included in package.
-
-npm shrinkwrap locks versions.
 
 # CAVEATS
 

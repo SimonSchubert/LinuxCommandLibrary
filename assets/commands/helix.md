@@ -1,3 +1,7 @@
+# TAGLINE
+
+post-modern modal text editor inspired by Kakoune and Vim
+
 # TLDR
 
 **Open file**
@@ -55,8 +59,6 @@ _FILES_
 **Helix** is a post-modern modal text editor inspired by Kakoune and Vim. It features multiple selections, built-in LSP support, and tree-sitter integration.
 
 The editor provides syntax highlighting, auto-completion, and diagnostics out of the box. It uses selection-action model instead of verb-object.
-
-Helix is a modern terminal editor.
 
 # CAVEATS
 

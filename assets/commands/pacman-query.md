@@ -1,3 +1,7 @@
+# TAGLINE
+
+queries the local package database on Arch Linux systems
+
 # TLDR
 
 **List** all installed packages

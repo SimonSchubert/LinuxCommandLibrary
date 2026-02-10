@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates presentations from Markdown
+
 # TLDR
 
 **Convert to HTML**

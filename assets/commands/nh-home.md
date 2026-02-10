@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages home-manager configurations
+
 # TLDR
 
 **Switch home configuration**

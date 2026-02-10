@@ -1,3 +1,7 @@
+# TAGLINE
+
+scans PDF files for keywords that indicate potentially malicious content
+
 # TLDR
 
 **Analyze PDF structure**
@@ -40,8 +44,6 @@
 # DESCRIPTION
 
 **pdfid** scans PDF files for keywords that indicate potentially malicious content. It counts occurrences of JavaScript, embedded files, launch actions, and other suspicious elements.
-
-Essential tool for PDF malware analysis.
 
 # OUTPUT
 

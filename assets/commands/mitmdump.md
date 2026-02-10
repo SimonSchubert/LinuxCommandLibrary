@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line companion to mitmproxy, a powerful HTTPS proxy
+
 # TLDR
 
 **Start proxy on default port**

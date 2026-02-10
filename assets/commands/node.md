@@ -1,3 +1,7 @@
+# TAGLINE
+
+node
+
 # TLDR
 
 **Run JavaScript file**
@@ -64,8 +68,6 @@ _ARGUMENTS_
 **node** is the Node.js JavaScript runtime. It executes JavaScript outside browsers.
 
 The tool provides V8 engine access. Supports npm ecosystem and async I/O.
-
-node runs JavaScript server-side.
 
 # CAVEATS
 

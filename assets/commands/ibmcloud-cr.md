@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages IBM Cloud Container Registry
+
 # TLDR
 
 **Login to registry**
@@ -56,8 +60,6 @@ _COMMAND_
 **ibmcloud cr** manages IBM Cloud Container Registry. It provides private Docker image storage and vulnerability scanning.
 
 The tool handles namespaces, images, and registry authentication. It integrates with IBM Cloud Kubernetes Service.
-
-ibmcloud cr manages container registry.
 
 # CAVEATS
 

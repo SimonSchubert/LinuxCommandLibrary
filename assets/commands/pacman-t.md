@@ -1,3 +1,7 @@
+# TAGLINE
+
+short form of **pacman --deptest**, which checks if specified dependencies are
+
 # TLDR
 
 This command is an alias of **pacman --deptest**

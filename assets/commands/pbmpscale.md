@@ -1,3 +1,7 @@
+# TAGLINE
+
+scales PBM bitmaps by an integer factor with anti-aliasing, producing
+
 # TLDR
 
 **Scale bitmap with anti-aliasing**

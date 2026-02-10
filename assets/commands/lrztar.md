@@ -1,3 +1,7 @@
+# TAGLINE
+
+wrapper for lrzip that simplifies compression of directories
+
 # TLDR
 
 **Archive and compress** directory

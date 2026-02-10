@@ -1,3 +1,7 @@
+# TAGLINE
+
+opens an installed package's directory in the default editor
+
 # TLDR
 
 **Edit installed package**

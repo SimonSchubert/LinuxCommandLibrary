@@ -1,3 +1,7 @@
+# TAGLINE
+
+main configuration file for BIND, the most widely used DNS server software
+
 # TLDR
 
 **Basic options block**

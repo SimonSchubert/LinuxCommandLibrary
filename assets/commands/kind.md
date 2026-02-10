@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs Kubernetes clusters in Docker containers
+
 # TLDR
 
 **Create cluster**
@@ -56,11 +60,11 @@
 
 # DESCRIPTION
 
-**kind** runs Kubernetes clusters in Docker containers. It creates local clusters for development and testing.
+**kind** (Kubernetes IN Docker) creates and manages local Kubernetes clusters using Docker containers as nodes. Each cluster node runs as a separate Docker container with systemd, kubelet, and containerd inside it, providing a lightweight alternative to virtual machine-based solutions like minikube for local development and CI/CD testing.
 
-The tool uses Docker containers as cluster nodes. It supports multi-node clusters and custom configurations.
+The tool supports multi-node clusters including multiple control plane nodes for testing high-availability configurations, and accepts YAML configuration files to customize node counts, port mappings, mounted volumes, and Kubernetes feature gates. Local Docker images can be loaded directly into the cluster without pushing to a registry, which accelerates the inner development loop.
 
-kind runs Kubernetes in Docker.
+kind was created by the Kubernetes SIG Testing team and is used extensively in the Kubernetes project's own CI pipelines. It is optimized for fast cluster creation and teardown, making it well-suited for automated testing workflows, but is not intended for production use.
 
 # CAVEATS
 

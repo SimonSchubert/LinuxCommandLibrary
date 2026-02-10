@@ -1,3 +1,7 @@
+# TAGLINE
+
+sends local changesets to a remote repository
+
 # TLDR
 
 **Push to default remote**
@@ -56,8 +60,6 @@ _DEST_
 **hg push** sends local changesets to a remote repository. It transfers committed changes that the remote doesn't have.
 
 The command verifies the push won't create multiple heads unless forced. It supports pushing specific branches or revisions.
-
-hg push uploads changes to remote.
 
 # CAVEATS
 

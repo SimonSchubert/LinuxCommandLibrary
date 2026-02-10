@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays information about HP printers
+
 # TLDR
 
 **Show printer info**
@@ -42,8 +46,6 @@
 **hp-info** displays information about HP printers. It shows model, serial number, firmware version, and supported features.
 
 The tool queries the printer directly for detailed status. It helps identify printer capabilities and configuration.
-
-hp-info shows HP printer details.
 
 # CAVEATS
 

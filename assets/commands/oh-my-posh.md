@@ -1,3 +1,7 @@
+# TAGLINE
+
+prompt theme engine
+
 # TLDR
 
 **Initialize for shell**
@@ -49,8 +53,6 @@
 **oh-my-posh** is a prompt theme engine. Customizes shell prompts with themes.
 
 The tool provides rich prompt customization. Cross-shell compatible.
-
-oh-my-posh themes shell prompts.
 
 # CAVEATS
 

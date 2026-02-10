@@ -1,3 +1,7 @@
+# TAGLINE
+
+wrapper script around the scrot screenshot utility, designed for use
+
 # TLDR
 
 Capture **full screen** screenshot

@@ -1,3 +1,7 @@
+# TAGLINE
+
+self-hosted photo and video backup solution
+
 # TLDR
 
 **Start Immich server**
@@ -38,8 +42,6 @@ Configured via docker-compose.yml and .env file.
 **Immich** is a self-hosted photo and video backup solution. It provides Google Photos-like functionality with mobile apps and web interface.
 
 The platform supports face recognition, geolocation, and automatic organization. It's designed for personal photo management.
-
-Immich is self-hosted photo backup.
 
 # CAVEATS
 

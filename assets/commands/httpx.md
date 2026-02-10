@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast HTTP toolkit for probing web servers
+
 # TLDR
 
 **Probe live hosts**
@@ -59,8 +63,6 @@
 **httpx** is a fast HTTP toolkit for probing web servers. It checks for live hosts and extracts information like titles, status codes, and technologies.
 
 The tool is used in reconnaissance and security testing. It efficiently processes large lists of hosts with concurrent requests.
-
-httpx probes HTTP servers at scale.
 
 # CAVEATS
 

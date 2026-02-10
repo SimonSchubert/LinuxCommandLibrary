@@ -1,3 +1,7 @@
+# TAGLINE
+
+DLNA/UPnP media server
+
 # TLDR
 
 **Start server**
@@ -53,8 +57,6 @@
 **minidlna** is a DLNA/UPnP media server. It streams media to TVs and devices.
 
 The tool serves audio, video, and images. Compatible with most DLNA-capable devices.
-
-minidlna serves media over DLNA.
 
 # CAVEATS
 

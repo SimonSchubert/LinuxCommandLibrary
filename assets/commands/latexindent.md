@@ -1,3 +1,7 @@
+# TAGLINE
+
+formats LaTeX source code with consistent indentation
+
 # TLDR
 
 **Format LaTeX file**

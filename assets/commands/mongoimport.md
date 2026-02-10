@@ -1,3 +1,7 @@
+# TAGLINE
+
+imports data into MongoDB
+
 # TLDR
 
 **Import JSON file**
@@ -56,8 +60,6 @@
 **mongoimport** imports data into MongoDB. It supports JSON, CSV, and TSV formats.
 
 The tool bulk loads documents. Useful for data migration and seeding databases.
-
-mongoimport imports data to MongoDB.
 
 # CAVEATS
 

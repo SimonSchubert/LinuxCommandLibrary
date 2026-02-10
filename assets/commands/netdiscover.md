@@ -1,3 +1,7 @@
+# TAGLINE
+
+discovers network hosts using ARP
+
 # TLDR
 
 **Scan local network**
@@ -53,8 +57,6 @@
 **netdiscover** discovers network hosts using ARP. It finds active hosts on local network.
 
 The tool sends ARP requests. Shows MAC addresses and vendors.
-
-netdiscover finds hosts via ARP.
 
 # CAVEATS
 

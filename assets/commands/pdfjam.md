@@ -1,3 +1,7 @@
+# TAGLINE
+
+manipulates PDF pages using LaTeX and pdfpages
+
 # TLDR
 
 **Combine PDFs**

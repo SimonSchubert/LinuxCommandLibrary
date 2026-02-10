@@ -1,3 +1,7 @@
+# TAGLINE
+
+simple ICMP ping implementation using raw sockets via the Impacket library
+
 # TLDR
 
 **Send ICMP echo requests** to a target

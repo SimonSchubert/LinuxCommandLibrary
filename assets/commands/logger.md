@@ -1,3 +1,7 @@
+# TAGLINE
+
+adds entries to the system log
+
 # TLDR
 
 Log a **message**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+enlarges an image by an integer factor using pixel replication
+
 # TLDR
 
 **Enlarge image 2x**

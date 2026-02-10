@@ -1,3 +1,7 @@
+# TAGLINE
+
+nagios plugin for MQTT monitoring
+
 # TLDR
 
 **Check MQTT broker**
@@ -52,8 +56,6 @@
 **mqtt_check.py** is a Nagios plugin for MQTT monitoring. It checks MQTT broker availability.
 
 The tool verifies broker connectivity. Returns status codes for monitoring systems.
-
-mqtt_check.py is MQTT monitoring plugin.
 
 # CAVEATS
 

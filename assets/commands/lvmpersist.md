@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages SCSI persistent reservations on block devices used as LVM physical
+
 # TLDR
 
 Start PR on all PVs in a VG with a **local key** (exclusive access by default)

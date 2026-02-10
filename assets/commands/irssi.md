@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal-based IRC client known for its scriptability, themability
+
 # TLDR
 
 **Start irssi**

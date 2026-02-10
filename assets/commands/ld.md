@@ -1,3 +1,7 @@
+# TAGLINE
+
+GNU linker
+
 # TLDR
 
 **Link object files**
@@ -59,8 +63,6 @@ _FILES_
 **ld** is the GNU linker. It combines object files into executables or libraries.
 
 The linker resolves symbols and relocates code. It's typically invoked through gcc rather than directly.
-
-ld links object files.
 
 # CAVEATS
 

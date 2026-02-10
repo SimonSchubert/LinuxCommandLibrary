@@ -1,3 +1,7 @@
+# TAGLINE
+
+removes System V IPC resources
+
 # TLDR
 
 Delete shared memory segment by **ID**

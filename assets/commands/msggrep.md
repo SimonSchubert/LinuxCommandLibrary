@@ -1,3 +1,7 @@
+# TAGLINE
+
+searches PO files for messages
+
 # TLDR
 
 **Search for messages**
@@ -52,8 +56,6 @@ _INPUTFILE_
 **msggrep** searches PO files for messages. It's part of GNU gettext.
 
 The tool filters messages by pattern. Extracts matching entries to new PO file.
-
-msggrep searches PO files.
 
 # CAVEATS
 

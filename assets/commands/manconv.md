@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts man page encodings
+
 # TLDR
 
 **Convert encoding**
@@ -38,8 +42,6 @@ _FILE_
 **manconv** converts man page encodings. It transforms between character sets.
 
 The tool is part of man-db. Used to convert legacy man pages to UTF-8.
-
-manconv converts man page encodings.
 
 # CAVEATS
 

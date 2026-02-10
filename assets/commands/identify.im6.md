@@ -1,3 +1,7 @@
+# TAGLINE
+
+ImageMagick 6 version of identify
+
 # TLDR
 
 **Show image info**
@@ -42,8 +46,6 @@ _FILES_
 **identify.im6** is the ImageMagick 6 version of identify. It describes image format, dimensions, and characteristics.
 
 The tool provides the same functionality as identify but specifically from ImageMagick version 6. Both may coexist on systems.
-
-identify.im6 is ImageMagick 6 identify.
 
 # CAVEATS
 

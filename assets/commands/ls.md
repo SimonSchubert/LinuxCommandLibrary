@@ -1,3 +1,7 @@
+# TAGLINE
+
+lists directory contents
+
 # TLDR
 
 **List files**
@@ -66,8 +70,6 @@ _FILES_
 **ls** lists directory contents. It shows files, directories, and their attributes.
 
 The tool is one of the most used Unix commands. Options control format, sorting, and filtering.
-
-ls lists files and directories.
 
 # CAVEATS
 

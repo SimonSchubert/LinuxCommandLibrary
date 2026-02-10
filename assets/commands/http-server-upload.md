@@ -1,3 +1,7 @@
+# TAGLINE
+
+provides a simple HTTP server that accepts file uploads
+
 # TLDR
 
 **Start upload server**
@@ -42,8 +46,6 @@
 **http-server-upload** provides a simple HTTP server that accepts file uploads. It creates a web interface for uploading files to a specified directory.
 
 The tool is useful for quick file transfers without setting up full file sharing. Token authentication provides basic security.
-
-http-server-upload accepts file uploads.
 
 # CAVEATS
 

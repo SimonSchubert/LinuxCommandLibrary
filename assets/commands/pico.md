@@ -1,3 +1,7 @@
+# TAGLINE
+
+simple, user-friendly text editor originally developed as the composer
+
 # TLDR
 
 **Open a file** for editing

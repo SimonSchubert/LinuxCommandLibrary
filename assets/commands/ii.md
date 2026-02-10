@@ -1,3 +1,7 @@
+# TAGLINE
+
+minimalist filesystem-based IRC client
+
 # TLDR
 
 **Connect to IRC server**

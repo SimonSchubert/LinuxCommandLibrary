@@ -1,3 +1,7 @@
+# TAGLINE
+
+reads lines into a bash array
+
 # TLDR
 
 **Read file into array**
@@ -50,8 +54,6 @@ _ARRAY_
 **mapfile** reads lines into a bash array. It's a bash builtin for array population.
 
 The tool is also known as readarray. It efficiently reads files line by line into arrays.
-
-mapfile reads lines into array.
 
 # CAVEATS
 

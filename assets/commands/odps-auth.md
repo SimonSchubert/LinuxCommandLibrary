@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages MaxCompute authentication
+
 # TLDR
 
 **Login to ODPS**
@@ -48,8 +52,6 @@
 **odps auth** manages MaxCompute authentication. Configures access credentials.
 
 The tool handles login and credential storage. Part of ODPS CLI.
-
-odps auth manages credentials.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts images to PDF without re-encoding, preserving the original image
+
 # TLDR
 
 **Convert images to PDF**

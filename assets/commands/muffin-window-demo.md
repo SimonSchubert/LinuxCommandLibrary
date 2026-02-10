@@ -1,3 +1,7 @@
+# TAGLINE
+
+demonstrates Muffin window types
+
 # TLDR
 
 **Run window demo**
@@ -25,8 +29,6 @@
 **muffin-window-demo** demonstrates Muffin window types. It shows different window decorations.
 
 The tool displays sample windows. Used for testing and theme development.
-
-muffin-window-demo shows window types.
 
 # CAVEATS
 

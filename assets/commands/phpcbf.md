@@ -1,3 +1,7 @@
+# TAGLINE
+
+PHP Code Beautifier and Fixer
+
 # TLDR
 
 **Fix coding standards**
@@ -46,8 +50,6 @@ _FILES_
 **phpcbf** is PHP Code Beautifier and Fixer. Fixes coding standard violations.
 
 The tool auto-corrects style issues. Companion to phpcs.
-
-phpcbf fixes PHP style.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+robust toolkit for cryptographic operations, SSL/TLS protocols
+
 # TLDR
 
 **Generate a private key**

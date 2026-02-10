@@ -1,3 +1,7 @@
+# TAGLINE
+
+simple program to insert a module into the Linux kernel
+
 # TLDR
 
 **Insert** a kernel module

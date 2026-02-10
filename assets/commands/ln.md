@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates links between files
+
 # TLDR
 
 **Create symbolic link**
@@ -59,8 +63,6 @@ _LINKNAME_
 **ln** creates links between files. Hard links share the same inode; symbolic links are references.
 
 Symbolic links can span filesystems and link to directories. Hard links cannot.
-
-ln creates file links.
 
 # CAVEATS
 

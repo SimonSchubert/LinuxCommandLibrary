@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast, secure backup tool with encryption, deduplication, and compression
+
 # TLDR
 
 **Create a local repository**

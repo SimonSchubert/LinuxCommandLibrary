@@ -1,3 +1,7 @@
+# TAGLINE
+
+configures CUPS printers
+
 # TLDR
 
 **Add printer**
@@ -59,8 +63,6 @@
 **lpadmin** configures CUPS printers. It adds, modifies, and removes printer definitions.
 
 The tool manages printer queues, options, and drivers. Administrator access is required.
-
-lpadmin administers CUPS printers.
 
 # CAVEATS
 

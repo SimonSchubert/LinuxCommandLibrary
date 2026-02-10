@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages npm registry user profile
+
 # TLDR
 
 **Show profile**

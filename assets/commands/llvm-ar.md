@@ -1,3 +1,7 @@
+# TAGLINE
+
+archiver for creating and manipulating static library archives
+
 # TLDR
 
 **Create archive from object files**

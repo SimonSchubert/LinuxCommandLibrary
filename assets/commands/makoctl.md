@@ -1,3 +1,7 @@
+# TAGLINE
+
+controls the mako notification daemon
+
 # TLDR
 
 **List** current notifications

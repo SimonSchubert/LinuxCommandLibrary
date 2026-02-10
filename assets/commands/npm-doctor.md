@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs diagnostics to check npm environment health
+
 # TLDR
 
 **Run npm environment diagnostics**

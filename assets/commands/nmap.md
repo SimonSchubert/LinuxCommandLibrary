@@ -1,3 +1,7 @@
+# TAGLINE
+
+network Mapper
+
 # TLDR
 
 **Scan single host**
@@ -74,8 +78,6 @@ _TARGETS_
 **nmap** is the Network Mapper. It discovers hosts and services on networks.
 
 The tool performs port scanning. Essential for network security assessment.
-
-nmap is network scanner.
 
 # CAVEATS
 

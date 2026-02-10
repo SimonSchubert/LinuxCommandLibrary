@@ -1,3 +1,7 @@
+# TAGLINE
+
+reads values from KDE Plasma 5 configuration files
+
 # TLDR
 
 Read a key from **global configuration**

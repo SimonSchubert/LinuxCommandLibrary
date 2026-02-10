@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line tool for backing up and restoring Gmail
+
 # TLDR
 
 **Backup Gmail**
@@ -52,8 +56,6 @@
 **GYB** (Got Your Back) is a command-line tool for backing up and restoring Gmail. It downloads emails as standard mbox format.
 
 The tool uses Gmail API for reliable access. It supports incremental backups, label filtering, and search queries to select specific messages.
-
-GYB backs up Gmail to local storage.
 
 # CAVEATS
 

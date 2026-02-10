@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages IBM Cloud Kubernetes Service
+
 # TLDR
 
 **List clusters**
@@ -52,8 +56,6 @@ _COMMAND_
 **ibmcloud ks** manages IBM Cloud Kubernetes Service. It creates and manages Kubernetes clusters on IBM Cloud infrastructure.
 
 The tool handles cluster lifecycle, worker pools, and configuration. It integrates with kubectl for cluster access.
-
-ibmcloud ks manages Kubernetes clusters.
 
 # CAVEATS
 

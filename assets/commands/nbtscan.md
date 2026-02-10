@@ -1,3 +1,7 @@
+# TAGLINE
+
+scans networks for NetBIOS name information
+
 # TLDR
 
 **Scan network for NetBIOS names**
@@ -53,8 +57,6 @@ _TARGET_
 **nbtscan** scans networks for NetBIOS name information. It queries Windows/Samba hosts.
 
 The tool identifies Windows machines. Shows computer names and workgroups.
-
-nbtscan scans NetBIOS names.
 
 # CAVEATS
 

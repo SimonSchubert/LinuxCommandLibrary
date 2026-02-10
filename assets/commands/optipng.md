@@ -1,3 +1,7 @@
+# TAGLINE
+
+PNG optimizer that reduces file size without losing quality
+
 # TLDR
 
 **Optimize PNG file**

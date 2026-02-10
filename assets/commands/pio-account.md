@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages PlatformIO account authentication
+
 # TLDR
 
 **Login to PlatformIO account**

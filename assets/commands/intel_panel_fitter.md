@@ -1,3 +1,7 @@
+# TAGLINE
+
+controls the hardware scaler for Intel GPUs
+
 # TLDR
 
 **Show panel fitter status**
@@ -39,8 +43,6 @@
 **intel_panel_fitter** controls the hardware scaler for Intel GPUs. The panel fitter scales content to match display resolution.
 
 The tool shows current scaling settings and allows enabling/disabling hardware scaling. Useful for resolution mismatch debugging.
-
-intel_panel_fitter controls display scaling.
 
 # CAVEATS
 

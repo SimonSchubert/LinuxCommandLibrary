@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast network login cracker supporting many protocols
+
 # TLDR
 
 **Brute force SSH**
@@ -55,11 +59,9 @@ _SERVICE_
 
 # DESCRIPTION
 
-**Hydra** is a fast network login cracker supporting many protocols. It performs brute force attacks against remote authentication services.
+**Hydra** is a parallelized network login cracker used in authorized penetration testing and security auditing. It systematically attempts username and password combinations against remote authentication services, drawing credentials from user-supplied wordlists or single values. Multiple connection threads run in parallel (configurable with `-t`), allowing it to test a large number of combinations efficiently.
 
-The tool supports SSH, FTP, HTTP, SMB, databases, and many more protocols. It's used for authorized penetration testing and security auditing.
-
-Hydra brute forces network logins.
+Hydra supports over 50 protocols and services out of the box, including SSH, FTP, HTTP/HTTPS (basic auth, form-based, and digest), SMB, RDP, MySQL, PostgreSQL, SMTP, IMAP, LDAP, VNC, and many more. For web applications, its `http-post-form` and `http-get-form` modules accept custom request templates with placeholder markers for injecting credentials. Results can be saved to a file for later analysis, and the tool can resume interrupted sessions.
 
 # CAVEATS
 

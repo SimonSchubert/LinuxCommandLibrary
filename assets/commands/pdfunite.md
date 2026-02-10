@@ -1,3 +1,7 @@
+# TAGLINE
+
+merges multiple PDF files into a single document
+
 # TLDR
 
 **Merge PDF files**

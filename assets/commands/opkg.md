@@ -1,3 +1,7 @@
+# TAGLINE
+
+lightweight package manager used primarily on OpenWrt and other embedded Linux
+
 # TLDR
 
 **Install** a package

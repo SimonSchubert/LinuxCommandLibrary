@@ -1,3 +1,7 @@
+# TAGLINE
+
+loads output character translation maps
+
 # TLDR
 
 **Load screen map**
@@ -42,8 +46,6 @@ _MAPFILE_
 **mapscrn** loads output character translation maps. It sets up screen character mapping for consoles.
 
 The tool handles character set translation for virtual terminals. Used for non-ASCII display.
-
-mapscrn sets screen character maps.
 
 # CAVEATS
 

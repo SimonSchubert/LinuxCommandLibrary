@@ -1,3 +1,7 @@
+# TAGLINE
+
+visualizes package dependencies in a tree format
+
 # TLDR
 
 Print **dependency tree** of a package

@@ -1,3 +1,7 @@
+# TAGLINE
+
+introductory man page present in each section of the manual
+
 # TLDR
 
 **Read introduction to commands**
@@ -33,8 +37,6 @@ Section numbers in man pages:
 **intro** is an introductory man page present in each section of the manual. It provides an overview of that section's content.
 
 Each section intro explains the types of documentation found there. It helps newcomers understand man page organization.
-
-intro introduces manual sections.
 
 # CAVEATS
 

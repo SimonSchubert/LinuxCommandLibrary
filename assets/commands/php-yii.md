@@ -1,3 +1,7 @@
+# TAGLINE
+
+yii framework console
+
 # TLDR
 
 **Create new application**
@@ -46,8 +50,6 @@ _COMMAND_
 **yii** is the Yii framework console. Manages Yii PHP applications.
 
 The tool handles migrations, generators, and tasks. Part of Yii framework.
-
-yii manages Yii projects.
 
 # CAVEATS
 

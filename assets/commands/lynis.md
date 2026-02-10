@@ -1,3 +1,7 @@
+# TAGLINE
+
+security auditing tool for Unix-based systems
+
 # TLDR
 
 Check for **updates**

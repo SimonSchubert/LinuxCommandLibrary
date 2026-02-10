@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates an SMB server to share files
+
 # TLDR
 
 **Start SMB server sharing current directory**

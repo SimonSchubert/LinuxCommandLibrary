@@ -1,3 +1,7 @@
+# TAGLINE
+
+web browser with both text and graphics mode support
+
 # TLDR
 
 Browse in **graphics mode**

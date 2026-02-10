@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line tool for working with OpenStreetMap data
+
 # TLDR
 
 **Extract area from OSM file**

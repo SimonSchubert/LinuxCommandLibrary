@@ -1,3 +1,7 @@
+# TAGLINE
+
+minimal color picker for Wayland compositors using wlroots, particularly
+
 # TLDR
 
 **Pick** a color in hex format

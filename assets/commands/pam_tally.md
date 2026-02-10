@@ -1,3 +1,7 @@
+# TAGLINE
+
+counts login attempts
+
 # TLDR
 
 **Enable login counting (deprecated)**
@@ -42,8 +46,6 @@
 **pam_tally** counts login attempts. Locks accounts on failures.
 
 The module tracks failed logins. Deprecated, use pam_tally2.
-
-pam_tally counts login failures.
 
 # CAVEATS
 

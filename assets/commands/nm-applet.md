@@ -1,3 +1,7 @@
+# TAGLINE
+
+networkManager system tray applet
+
 # TLDR
 
 **Start network manager applet**
@@ -32,8 +36,6 @@
 **nm-applet** is the NetworkManager system tray applet. Provides GUI for network management.
 
 The tool shows network status. Allows connecting to WiFi and VPN.
-
-nm-applet is NetworkManager GUI.
 
 # CAVEATS
 

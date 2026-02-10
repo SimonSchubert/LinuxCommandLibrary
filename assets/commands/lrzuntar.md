@@ -1,3 +1,7 @@
+# TAGLINE
+
+extracts tar archives compressed with lrztar
+
 # TLDR
 
 This command is an **alias** of lrztar --decompress

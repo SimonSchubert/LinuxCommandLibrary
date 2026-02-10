@@ -1,3 +1,7 @@
+# TAGLINE
+
+native graph database platform for connected data
+
 # TLDR
 
 **Start Neo4j server**

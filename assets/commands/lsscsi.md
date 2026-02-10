@@ -1,3 +1,7 @@
+# TAGLINE
+
+lists SCSI devices and their attributes
+
 # TLDR
 
 **List** SCSI devices

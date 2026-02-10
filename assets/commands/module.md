@@ -1,3 +1,7 @@
+# TAGLINE
+
+provides a user interface to the Environment Modules package, enabling dynamic
+
 # TLDR
 
 Display **available modules**

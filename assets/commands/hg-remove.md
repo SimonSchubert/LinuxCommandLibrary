@@ -1,3 +1,7 @@
+# TAGLINE
+
+schedules files for removal from the repository
+
 # TLDR
 
 **Remove file**
@@ -52,8 +56,6 @@ _FILES_
 **hg remove** schedules files for removal from the repository. The files are deleted from the working directory and marked for removal on next commit.
 
 The -A flag records removal of files already deleted from the filesystem. Force removes modified files.
-
-hg remove schedules file deletion.
 
 # CAVEATS
 

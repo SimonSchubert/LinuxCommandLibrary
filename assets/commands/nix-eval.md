@@ -1,3 +1,7 @@
+# TAGLINE
+
+evaluates Nix expressions
+
 # TLDR
 
 **Evaluate expression**
@@ -53,8 +57,6 @@ _INSTALLABLE_
 **nix eval** evaluates Nix expressions. It outputs the evaluated value.
 
 The tool inspects Nix values. Useful for debugging and querying.
-
-nix eval evaluates expressions.
 
 # CAVEATS
 

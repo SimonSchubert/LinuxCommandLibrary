@@ -1,3 +1,7 @@
+# TAGLINE
+
+bumps package version
+
 # TLDR
 
 **Bump patch version**
@@ -53,8 +57,6 @@ _VERSION_
 **npm version** bumps package version. Updates package.json and creates git tag.
 
 The command manages version numbers. Follows semver conventions.
-
-npm version bumps versions.
 
 # CAVEATS
 

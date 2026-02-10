@@ -1,3 +1,7 @@
+# TAGLINE
+
+cancels one or more active tasks running on the Koji build system
+
 # TLDR
 
 Cancel a **task by ID**

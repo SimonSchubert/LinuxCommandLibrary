@@ -1,3 +1,7 @@
+# TAGLINE
+
+tezos baking daemon
+
 # TLDR
 
 **Start baker**

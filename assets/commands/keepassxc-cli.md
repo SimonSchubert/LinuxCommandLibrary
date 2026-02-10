@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line interface for KeePassXC password manager
+
 # TLDR
 
 **List entries in database**

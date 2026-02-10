@@ -1,3 +1,7 @@
+# TAGLINE
+
+searches for fixed strings in lzip-compressed files
+
 # TLDR
 
 **Search for fixed string**

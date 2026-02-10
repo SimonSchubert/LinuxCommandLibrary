@@ -1,3 +1,7 @@
+# TAGLINE
+
+extracts data from HTML using CSS selectors
+
 # TLDR
 
 **Extract elements by selector**
@@ -52,8 +56,6 @@ _SELECTOR_
 **htmlq** extracts data from HTML using CSS selectors. It's like jq for HTML, providing command-line HTML parsing.
 
 The tool reads HTML from stdin or files and outputs matching elements. It supports extracting text, attributes, and formatted HTML.
-
-htmlq queries HTML with CSS selectors.
 
 # CAVEATS
 

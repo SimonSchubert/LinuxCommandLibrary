@@ -1,3 +1,7 @@
+# TAGLINE
+
+handles plural forms in translations
+
 # TLDR
 
 **Translate with plural form**
@@ -45,8 +49,6 @@ _COUNT_
 **ngettext** handles plural forms in translations. It's part of GNU gettext.
 
 The tool selects correct plural form based on count. Language-specific plural rules.
-
-ngettext translates plurals.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+compiles main source code in a Maven project
+
 # TLDR
 
 **Compile project**

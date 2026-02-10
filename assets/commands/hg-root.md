@@ -1,3 +1,7 @@
+# TAGLINE
+
+prints the root directory of the Mercurial repository
+
 # TLDR
 
 **Show repository root**
@@ -22,8 +26,6 @@
 **hg root** prints the root directory of the Mercurial repository. It outputs the absolute path to the .hg directory's parent.
 
 The command is useful in scripts to locate the repository root regardless of current working directory. It fails if not in a repository.
-
-hg root shows repository root path.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+compiles Angular applications
+
 # TLDR
 
 **Build for production**
@@ -60,8 +64,6 @@ _PROJECT_
 **ng build** compiles Angular applications. It bundles code for deployment.
 
 The command handles TypeScript compilation. Produces optimized production bundles.
-
-ng build compiles Angular apps.
 
 # CAVEATS
 

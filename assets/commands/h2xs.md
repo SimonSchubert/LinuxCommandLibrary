@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates Perl extension module skeletons
+
 # TLDR
 
 **Create XS module skeleton**
@@ -51,8 +55,6 @@ _HEADERS_
 **h2xs** creates Perl extension module skeletons. It generates XS code to wrap C libraries, making them accessible from Perl.
 
 The tool creates directory structure, Makefile.PL, and stub files. It can generate bindings from C header files or create empty module templates.
-
-h2xs bootstraps Perl XS extensions.
 
 # CAVEATS
 

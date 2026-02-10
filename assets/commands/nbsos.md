@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal SOS game
+
 # TLDR
 
 **Play SOS game**
@@ -32,8 +36,6 @@
 **nbsos** is a terminal SOS game. Spell SOS to score points.
 
 The tool plays the classic word game. Players take turns placing S or O.
-
-nbsos is terminal SOS game.
 
 # CAVEATS
 

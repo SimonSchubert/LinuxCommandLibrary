@@ -1,3 +1,7 @@
+# TAGLINE
+
+applies mathematical functions
+
 # TLDR
 
 **Multiply pixel values**
@@ -38,8 +42,6 @@ _FILE_
 **pamfunc** applies mathematical functions. Transforms pixel values.
 
 The tool performs arithmetic on images. Part of Netpbm.
-
-pamfunc processes pixel values.
 
 # CAVEATS
 

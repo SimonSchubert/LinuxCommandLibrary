@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages virtual machine images in OpenStack Glance
+
 # TLDR
 
 **List images**

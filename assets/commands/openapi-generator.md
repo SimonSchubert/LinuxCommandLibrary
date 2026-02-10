@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates API clients, server stubs, and documentation from OpenAPI
+
 # TLDR
 
 **Generate client library**

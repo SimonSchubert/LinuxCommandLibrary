@@ -1,3 +1,7 @@
+# TAGLINE
+
+adds interactive filtering to any text
+
 # TLDR
 
 **Interactive filter for stdin**
@@ -42,10 +46,6 @@
 **percol** adds interactive filtering to any text. It reads lines from stdin or a file and provides an incremental search interface, outputting selected lines.
 
 Similar to fzf but with different keybindings and extensibility.
-
-# EXAMPLES
-
-```bash
 # Interactive file selection
 ls | percol | xargs cat
 

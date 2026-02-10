@@ -1,3 +1,7 @@
+# TAGLINE
+
+executes npm packages
+
 # TLDR
 
 **Run package command**
@@ -57,8 +61,6 @@ _ARGS_
 **npx** executes npm packages. Runs packages without global installation.
 
 The tool fetches and runs commands. Ideal for one-off tool usage.
-
-npx runs npm packages.
 
 # CAVEATS
 

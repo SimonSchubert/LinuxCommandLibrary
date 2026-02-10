@@ -1,3 +1,7 @@
+# TAGLINE
+
+restricts login by time
+
 # TLDR
 
 **Enable time-based access**
@@ -25,8 +29,6 @@ Time syntax: day/hour ranges
 **pam_time** restricts login by time. Configures access schedules.
 
 The module enforces time windows. Based on time.conf rules.
-
-pam_time controls access times.
 
 # CAVEATS
 

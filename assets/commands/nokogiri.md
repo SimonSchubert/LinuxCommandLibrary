@@ -1,3 +1,7 @@
+# TAGLINE
+
+ruby HTML/XML parser CLI
+
 # TLDR
 
 **Parse HTML file**
@@ -46,8 +50,6 @@ _FILE_OR_URL_
 **nokogiri** is a Ruby HTML/XML parser CLI. It provides document parsing and querying.
 
 The tool uses CSS and XPath selectors. Part of the Nokogiri Ruby gem.
-
-nokogiri parses HTML/XML.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+restores PostgreSQL databases from archives created by pg_dump
+
 # TLDR
 
 **Restore from custom format**
@@ -53,10 +57,6 @@
 # DESCRIPTION
 
 **pg_restore** restores PostgreSQL databases from archives created by pg_dump in custom, directory, or tar format. It cannot restore plain SQL dumps (use psql for those).
-
-# EXAMPLES
-
-```bash
 # Basic restore
 pg_restore -d mydb backup.dump
 

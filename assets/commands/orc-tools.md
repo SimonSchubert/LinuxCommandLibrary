@@ -1,3 +1,7 @@
+# TAGLINE
+
+collection of utilities for working with Apache ORC files
+
 # TLDR
 
 **Show ORC file metadata**

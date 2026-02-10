@@ -1,3 +1,7 @@
+# TAGLINE
+
+KDE-based RDP server that allows remote connections to a KDE Plasma
+
 # TLDR
 
 Start RDP server with **username and password**

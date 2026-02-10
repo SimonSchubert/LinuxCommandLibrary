@@ -1,3 +1,7 @@
+# TAGLINE
+
+queries DNS servers for hostname and IP information
+
 # TLDR
 
 **Lookup IP address**

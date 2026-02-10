@@ -1,3 +1,7 @@
+# TAGLINE
+
+extracts a rectangular region from a PAM or PNM image
+
 # TLDR
 
 **Cut region from image**
@@ -46,8 +50,6 @@
 # DESCRIPTION
 
 **pamcut** extracts a rectangular region from a PAM or PNM image. Coordinates can be specified from any corner using combinations of left/right and top/bottom.
-
-Part of the Netpbm toolkit.
 
 # EXAMPLE
 

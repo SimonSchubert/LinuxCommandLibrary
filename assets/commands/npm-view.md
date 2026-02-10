@@ -1,3 +1,7 @@
+# TAGLINE
+
+shows package registry information
+
 # TLDR
 
 **View package info**
@@ -53,8 +57,6 @@ _FIELD_
 **npm view** shows package registry information. Displays metadata from npm.
 
 The command queries registry. Shows versions, dependencies, and more.
-
-npm view shows package info.
 
 # CAVEATS
 

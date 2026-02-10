@@ -1,3 +1,7 @@
+# TAGLINE
+
+clones NTFS partitions efficiently
+
 # TLDR
 
 **Clone NTFS partition**
@@ -48,8 +52,6 @@
 **ntfsclone** clones NTFS partitions efficiently. Copies only used clusters.
 
 The tool creates space-efficient backups. Supports special image format for compression.
-
-ntfsclone clones NTFS volumes.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays information about previously executed commands from process
+
 # TLDR
 
 **Show recent commands**

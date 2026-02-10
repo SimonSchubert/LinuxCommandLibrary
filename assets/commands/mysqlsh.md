@@ -1,3 +1,7 @@
+# TAGLINE
+
+mySQL Shell client
+
 # TLDR
 
 **Start MySQL Shell**
@@ -63,8 +67,6 @@ _URI_
 **mysqlsh** is the MySQL Shell client. It provides SQL, JavaScript, and Python interfaces.
 
 The tool supports MySQL 8.0 features. Includes AdminAPI for cluster management.
-
-mysqlsh is modern MySQL client.
 
 # CAVEATS
 

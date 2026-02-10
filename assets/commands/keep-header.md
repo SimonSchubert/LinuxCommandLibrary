@@ -1,3 +1,7 @@
+# TAGLINE
+
+preserves the first line of a file while passing the remaining lines through
+
 # TLDR
 
 **Sort file keeping header**

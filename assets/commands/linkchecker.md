@@ -1,3 +1,7 @@
+# TAGLINE
+
+validates links in websites and documents
+
 # TLDR
 
 **Check website links**
@@ -56,8 +60,6 @@ _URL_
 **linkchecker** validates links in websites and documents. It finds broken links, redirects, and errors.
 
 The tool supports HTTP, HTTPS, FTP, and local files. It can check recursively and generate reports.
-
-linkchecker finds broken links.
 
 # CAVEATS
 

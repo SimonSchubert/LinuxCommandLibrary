@@ -1,3 +1,7 @@
+# TAGLINE
+
+node Version Manager
+
 # TLDR
 
 **Install Node.js version**
@@ -56,8 +60,6 @@
 **nvm** is Node Version Manager. Manages multiple Node.js installations.
 
 The tool enables version switching per project. Shell-based version management.
-
-nvm manages Node.js versions.
 
 # CAVEATS
 

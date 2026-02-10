@@ -1,3 +1,7 @@
+# TAGLINE
+
+ImageMagick 6 version of mogrify
+
 # TLDR
 
 **Resize images in place**
@@ -56,8 +60,6 @@ _FILES_
 **mogrify.im6** is the ImageMagick 6 version of mogrify. It modifies images in place.
 
 The tool provides batch image transformation. This is the legacy IM6 variant.
-
-mogrify.im6 is ImageMagick 6 batch processor.
 
 # CAVEATS
 

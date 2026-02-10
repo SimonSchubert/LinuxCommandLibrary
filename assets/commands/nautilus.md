@@ -1,3 +1,7 @@
+# TAGLINE
+
+default file manager for the GNOME desktop environment
+
 # TLDR
 
 **Launch** Nautilus file manager

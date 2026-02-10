@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays network configuration parameters for interfaces
+
 # TLDR
 
 Show **all** network configuration

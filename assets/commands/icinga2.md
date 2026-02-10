@@ -1,3 +1,7 @@
+# TAGLINE
+
+monitoring system that checks availability of hosts and services
+
 # TLDR
 
 **Check configuration**

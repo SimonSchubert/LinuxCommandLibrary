@@ -1,3 +1,7 @@
+# TAGLINE
+
+scans and lists all logical volumes in the system
+
 # TLDR
 
 List **all** logical volumes

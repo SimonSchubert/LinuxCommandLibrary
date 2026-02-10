@@ -1,3 +1,7 @@
+# TAGLINE
+
+adds cryptographic signatures to in-toto metadata files
+
 # TLDR
 
 **Sign a link file**
@@ -42,8 +46,6 @@
 **in-toto-sign** adds cryptographic signatures to in-toto metadata files. It signs both link files from build steps and layout files that define supply chain policies.
 
 Multiple signatures can be added for multi-party verification. The tool supports GPG and PEM key formats.
-
-in-toto-sign adds signatures to metadata.
 
 # CAVEATS
 

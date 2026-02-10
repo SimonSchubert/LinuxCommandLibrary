@@ -1,3 +1,7 @@
+# TAGLINE
+
+monitors disk I/O latency in real time, similar to how ping shows network
+
 # TLDR
 
 **Measure disk latency**

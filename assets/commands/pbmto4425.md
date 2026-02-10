@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PBM bitmaps to AT&T 4425 terminal display format
+
 # TLDR
 
 **Convert PBM to AT&T 4425 format**

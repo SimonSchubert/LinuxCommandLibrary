@@ -1,3 +1,7 @@
+# TAGLINE
+
+encodes and decodes JSON Web Tokens
+
 # TLDR
 
 **Decode JWT**
@@ -52,8 +56,6 @@
 **jwt** encodes and decodes JSON Web Tokens. It creates and verifies JWTs for authentication systems.
 
 The tool supports various signing algorithms. It displays token contents for debugging.
-
-jwt manages JSON Web Tokens.
 
 # CAVEATS
 

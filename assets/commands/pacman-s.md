@@ -1,3 +1,7 @@
+# TAGLINE
+
+short form of **pacman --sync**, which synchronizes packages
+
 # TLDR
 
 This command is an alias of **pacman --sync**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages Linode block storage volumes
+
 # TLDR
 
 **List volumes**
@@ -65,8 +69,6 @@ _SUBCOMMAND_
 **linode-cli volumes** manages Linode block storage volumes. Volumes provide persistent storage for instances.
 
 The tool creates, attaches, resizes, and manages block storage independent of Linode lifecycle.
-
-linode-cli volumes manages block storage.
 
 # CAVEATS
 

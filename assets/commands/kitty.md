@@ -1,3 +1,7 @@
+# TAGLINE
+
+GPU-accelerated terminal emulator
+
 # TLDR
 
 **Start kitty**
@@ -57,8 +61,6 @@ _COMMAND_
 **kitty** is a GPU-accelerated terminal emulator. It renders using OpenGL for smooth performance.
 
 The terminal supports images, ligatures, and extensible kitten programs. It's highly configurable and scriptable.
-
-kitty is GPU-based terminal.
 
 # CAVEATS
 

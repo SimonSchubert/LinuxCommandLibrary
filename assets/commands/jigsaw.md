@@ -1,3 +1,7 @@
+# TAGLINE
+
+xscreensaver module that loads an image, carves it up into jigsaw puzzle
+
 # TLDR
 
 **Run jigsaw screensaver on root window**

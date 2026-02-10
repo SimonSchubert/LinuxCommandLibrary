@@ -1,3 +1,7 @@
+# TAGLINE
+
+arranges multiple PDF pages onto single sheets
+
 # TLDR
 
 **Put 2 pages per sheet**
@@ -45,10 +49,6 @@
 **pdfnup** arranges multiple PDF pages onto single sheets (n-up printing). Useful for handouts, saving paper, or creating review copies.
 
 Part of the pdfjam suite using pdfpages LaTeX package.
-
-# EXAMPLES
-
-```bash
 # 2 pages per sheet (default)
 pdfnup document.pdf
 

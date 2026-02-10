@@ -1,3 +1,7 @@
+# TAGLINE
+
+lightweight VM manager for Ubuntu instances
+
 # TLDR
 
 **Launch a new Ubuntu instance**

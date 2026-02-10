@@ -1,3 +1,7 @@
+# TAGLINE
+
+deploys a Helm chart to a Kubernetes cluster, creating a new release
+
 # TLDR
 
 **Install a chart**

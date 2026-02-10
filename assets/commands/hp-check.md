@@ -1,3 +1,7 @@
+# TAGLINE
+
+verifies HPLIP installation and dependencies
+
 # TLDR
 
 **Check HPLIP status**
@@ -42,8 +46,6 @@
 **hp-check** verifies HPLIP installation and dependencies. It checks for missing packages, configuration issues, and printer connectivity.
 
 The tool can automatically install missing components on supported distributions. It helps diagnose and fix printing problems.
-
-hp-check diagnoses HPLIP installation.
 
 # CAVEATS
 

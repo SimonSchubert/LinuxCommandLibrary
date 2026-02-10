@@ -1,3 +1,7 @@
+# TAGLINE
+
+set registry
+
 # TLDR
 
 **Set registry**
@@ -50,8 +54,6 @@
 # DESCRIPTION
 
 **.npmrc** files configure npm behavior. They can exist at project level, user level (~/.npmrc), or global level. Settings cascade with project taking precedence.
-
-The file format is INI-style key=value pairs.
 
 # FILE LOCATIONS
 

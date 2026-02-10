@@ -1,3 +1,7 @@
+# TAGLINE
+
+moves the physical memory pages of a process from one set of NUMA
+
 # TLDR
 
 **Migrate pages from one node to another**
@@ -32,10 +36,6 @@
 **migratepages** moves the physical memory pages of a process from one set of NUMA nodes to another. This is useful for optimizing memory placement on NUMA systems.
 
 The command works on a running process and can migrate pages to improve memory locality.
-
-# EXAMPLES
-
-```bash
 # Migrate PID 1234 from node 0 to node 1
 migratepages 1234 0 1
 

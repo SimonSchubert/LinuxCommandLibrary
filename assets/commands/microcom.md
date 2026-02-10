@@ -1,3 +1,7 @@
+# TAGLINE
+
+minimalistic terminal program for accessing remote devices via serial
+
 # TLDR
 
 Open a **serial port** using the specified baud rate

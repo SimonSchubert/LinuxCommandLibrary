@@ -1,3 +1,7 @@
+# TAGLINE
+
+alibaba Cloud MaxCompute CLI
+
 # TLDR
 
 **Start interactive session**
@@ -42,8 +46,6 @@
 **odps** is Alibaba Cloud MaxCompute CLI. Runs SQL on big data platform.
 
 The tool provides command-line access to MaxCompute. Processes large datasets.
-
-odps queries MaxCompute data.
 
 # CAVEATS
 

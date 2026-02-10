@@ -1,3 +1,7 @@
+# TAGLINE
+
+idempotent command-line tool for managing /etc/hosts
+
 # TLDR
 
 **Add a host entry**

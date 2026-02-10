@@ -1,3 +1,7 @@
+# TAGLINE
+
+computer algebra system for symbolic mathematics
+
 # TLDR
 
 **Start Maxima**
@@ -49,20 +53,6 @@
 **Maxima** is a computer algebra system for symbolic mathematics. It can perform symbolic differentiation, integration, Taylor series, transforms, linear algebra, and more.
 
 Maxima is descended from Macsyma, one of the oldest computer algebra systems.
-
-# EXAMPLES
-
-```maxima
-(%i1) integrate(x^2, x);
-(%o1)                          x^3/3
-
-(%i2) diff(sin(x)*cos(x), x);
-(%o2)                    cos(x)^2 - sin(x)^2
-
-(%i3) solve(x^2 + 2*x + 1 = 0, x);
-(%o3)                         [x = -1]
-```
-
 # CAVEATS
 
 Syntax differs from other CAS. Output formatting can be complex. GUI (wxMaxima) recommended for interactive use.

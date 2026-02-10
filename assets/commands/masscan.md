@@ -1,3 +1,7 @@
+# TAGLINE
+
+fastest Internet port scanner, capable of scanning the entire Internet
+
 # TLDR
 
 **Scan single port**

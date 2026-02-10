@@ -1,3 +1,7 @@
+# TAGLINE
+
+builds Nix derivations
+
 # TLDR
 
 **Build default.nix**
@@ -39,8 +43,6 @@ _PATH_
 **nix-build** builds Nix derivations. This is an alternate documentation version.
 
 The tool evaluates Nix expressions. Produces store paths and result links.
-
-nix-build creates Nix packages.
 
 # CAVEATS
 

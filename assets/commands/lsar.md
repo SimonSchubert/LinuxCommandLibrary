@@ -1,3 +1,7 @@
+# TAGLINE
+
+lists the contents of archive files
+
 # TLDR
 
 **List archive contents**

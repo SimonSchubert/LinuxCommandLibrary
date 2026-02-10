@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays WAL summary file contents
+
 # TLDR
 
 **Show WAL summary**

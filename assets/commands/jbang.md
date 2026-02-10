@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs Java programs as scripts without build tools
+
 # TLDR
 
 **Run Java script**
@@ -56,8 +60,6 @@
 **jbang** runs Java programs as scripts without build tools. It handles dependencies, compilation, and execution automatically.
 
 The tool supports inline dependency declarations using comments. It enables shell-script style Java programming.
-
-jbang runs Java as scripts.
 
 # CAVEATS
 

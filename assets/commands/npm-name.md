@@ -1,3 +1,7 @@
+# TAGLINE
+
+checks if package names are available on npm
+
 # TLDR
 
 **Check if name available**
@@ -29,8 +33,6 @@ _NAMES_
 **npm-name** checks if package names are available on npm. Validates before publishing.
 
 The tool queries npm registry. Shows if name can be used.
-
-npm-name checks name availability.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+generic SMB client for listing shares and files, uploading
+
 # TLDR
 
 **Connect to SMB server**

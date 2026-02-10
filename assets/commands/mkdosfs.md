@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates MS-DOS FAT filesystems
+
 # TLDR
 
 **Create FAT filesystem**
@@ -53,8 +57,6 @@ _DEVICE_
 **mkdosfs** creates MS-DOS FAT filesystems. It formats devices with FAT12, FAT16, or FAT32.
 
 The tool is also known as mkfs.fat. Used for USB drives and compatibility.
-
-mkdosfs creates FAT filesystems.
 
 # CAVEATS
 

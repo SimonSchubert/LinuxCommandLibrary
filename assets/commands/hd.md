@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays file contents in hexadecimal format
+
 # TLDR
 
 **Display file in hex**
@@ -52,8 +56,6 @@ _FILE_
 **hd** displays file contents in hexadecimal format. It's equivalent to hexdump -C, showing both hex values and ASCII representation.
 
 The tool is useful for examining binary files, analyzing data formats, and debugging. It formats output in readable columns.
-
-hd displays files in hexadecimal format.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+enhanced interactive Python shell
+
 # TLDR
 
 **Start IPython**
@@ -34,9 +38,9 @@
 
 # DESCRIPTION
 
-**ipython** is an enhanced interactive Python shell. It provides features like syntax highlighting, tab completion, magic commands, and better introspection than the standard Python interpreter.
+**ipython** (Interactive Python) is an enhanced Python shell that extends the standard interpreter with features designed for productive exploratory programming. It provides automatic syntax highlighting, comprehensive tab completion for objects, modules, and file paths, inline docstring access with `?` and `??` suffixes, and a searchable input history that persists across sessions.
 
-The tool supports multiple frontends including terminal, Qt console, and notebooks. It's widely used in data science and scientific computing.
+A distinguishing feature is IPython's system of magic commands -- special directives prefixed with `%` (line magics) or `%%` (cell magics) -- that provide functionality outside of normal Python syntax, such as `%timeit` for benchmarking, `%run` for executing scripts, `%debug` for post-mortem debugging, and `%paste` for correctly handling indented code from the clipboard. IPython also integrates tightly with the scientific Python ecosystem, offering optional auto-import of NumPy and Matplotlib via `--pylab`, and serves as the default kernel for Jupyter notebooks.
 
 # PARAMETERS
 

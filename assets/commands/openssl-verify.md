@@ -1,3 +1,7 @@
+# TAGLINE
+
+verifies certificate chains against trusted CAs
+
 # TLDR
 
 **Verify certificate**
@@ -53,8 +57,6 @@
 # DESCRIPTION
 
 **openssl verify** verifies certificate chains against trusted CAs. It checks signatures, validity periods, and trust chains.
-
-Returns 0 for valid certificates, non-zero for invalid.
 
 # VERIFICATION CHECKS
 

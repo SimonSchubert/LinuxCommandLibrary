@@ -1,3 +1,7 @@
+# TAGLINE
+
+interactive MIFARE terminal
+
 # TLDR
 
 **Start interactive terminal**
@@ -46,8 +50,6 @@
 **mfterm** is an interactive MIFARE terminal. It reads, writes, and manipulates MIFARE Classic cards.
 
 The tool provides commands for sector operations, key management, and data analysis.
-
-mfterm manages MIFARE cards.
 
 # CAVEATS
 

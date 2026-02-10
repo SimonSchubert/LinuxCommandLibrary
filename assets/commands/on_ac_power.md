@@ -1,3 +1,7 @@
+# TAGLINE
+
+tests whether the system is running on AC power
+
 # TLDR
 
 **Check if on AC power**

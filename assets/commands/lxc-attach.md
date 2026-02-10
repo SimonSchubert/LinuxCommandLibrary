@@ -1,3 +1,7 @@
+# TAGLINE
+
+starts a process inside a running LXC container, effectively attaching a shell
+
 # TLDR
 
 **Attach** to container

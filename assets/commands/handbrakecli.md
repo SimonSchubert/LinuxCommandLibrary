@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line interface for HandBrake, a powerful open-source video transcoder
+
 # TLDR
 
 **Convert a video** using a preset

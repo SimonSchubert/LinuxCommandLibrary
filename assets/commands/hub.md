@@ -1,3 +1,7 @@
+# TAGLINE
+
+extends git with GitHub integration
+
 # TLDR
 
 **Clone repository**
@@ -59,8 +63,6 @@ _COMMAND_
 **hub** extends git with GitHub integration. It adds commands for pull requests, forks, issues, and other GitHub operations.
 
 The tool wraps git commands and adds GitHub-specific functionality. It can be aliased as git for seamless integration.
-
-hub adds GitHub features to git.
 
 # CAVEATS
 

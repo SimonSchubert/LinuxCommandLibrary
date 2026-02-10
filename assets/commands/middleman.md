@@ -1,3 +1,7 @@
+# TAGLINE
+
+static site generator built with Ruby
+
 # TLDR
 
 **Create new project**

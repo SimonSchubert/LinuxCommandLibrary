@@ -1,3 +1,7 @@
+# TAGLINE
+
+connects to named pipes on remote Windows systems via SMB
+
 # TLDR
 
 **Access named pipe** on a remote SMB share

@@ -1,3 +1,7 @@
+# TAGLINE
+
+plain text accounting tool
+
 # TLDR
 
 **Show balance**
@@ -62,8 +66,6 @@ _COMMAND_
 **hledger** is a plain text accounting tool. It reads journal files in ledger format and provides reports on personal or business finances.
 
 The tool supports double-entry accounting, multiple currencies, and various reports. It's cross-platform and highly scriptable.
-
-hledger manages plain text accounting.
 
 # CAVEATS
 

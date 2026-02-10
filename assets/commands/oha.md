@@ -1,3 +1,7 @@
+# TAGLINE
+
+HTTP load generator written in Rust, inspired by hey and rakyll/hey
+
 # TLDR
 
 **Send 100 requests to URL**

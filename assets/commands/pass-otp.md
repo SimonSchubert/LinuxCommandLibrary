@@ -1,3 +1,7 @@
+# TAGLINE
+
+extends pass with TOTP/HOTP support
+
 # TLDR
 
 **Generate OTP code**

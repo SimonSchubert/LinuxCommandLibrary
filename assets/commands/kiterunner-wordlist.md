@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages wordlists for Kiterunner API endpoint discovery
+
 # TLDR
 
 **List available wordlists**

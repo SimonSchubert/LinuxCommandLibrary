@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages the Nix store
+
 # TLDR
 
 **Query package dependencies**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+cinnamon desktop window manager
+
 # TLDR
 
 **Start Muffin window manager**
@@ -39,8 +43,6 @@
 **muffin** is the Cinnamon desktop window manager. It's a fork of Mutter.
 
 The tool handles window management and compositing. Core component of Cinnamon desktop.
-
-muffin is Cinnamon window manager.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line tool for detecting secrets and sensitive information in textual
+
 # TLDR
 
 **Scan a local directory** for secrets

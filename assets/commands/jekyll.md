@@ -1,3 +1,7 @@
+# TAGLINE
+
+static site generator
+
 # TLDR
 
 **Create new site**
@@ -56,8 +60,6 @@
 **Jekyll** is a static site generator. It transforms Markdown and Liquid templates into static HTML.
 
 The tool powers GitHub Pages. It supports blogs, documentation, and custom sites with themes and plugins.
-
-Jekyll generates static websites.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+GTK+ based SSH client for issuing commands to multiple servers
+
 # TLDR
 
 Connect to **multiple SSH servers**

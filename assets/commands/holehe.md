@@ -1,3 +1,7 @@
+# TAGLINE
+
+checks if an email is registered on various websites
+
 # TLDR
 
 **Check email registration**
@@ -45,8 +49,6 @@ _EMAIL_
 **holehe** checks if an email is registered on various websites. It uses password reset and registration functions to detect account existence.
 
 The tool is useful for OSINT and security testing. It checks hundreds of websites for email registration status.
-
-holehe finds email account registrations.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+parses and validates JSON input
+
 # TLDR
 
 **Parse generic JSON**
@@ -42,8 +46,6 @@
 **jc --json** parses and validates JSON input. It's the JSON passthrough parser in jc for format validation and normalization.
 
 The parser accepts JSON from stdin and outputs formatted JSON. Useful for validating or reformatting JSON data.
-
-jc --json validates JSON data.
 
 # CAVEATS
 

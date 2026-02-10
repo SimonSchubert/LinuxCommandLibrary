@@ -1,3 +1,7 @@
+# TAGLINE
+
+lists connected iOS device identifiers
+
 # TLDR
 
 **List connected devices**
@@ -42,8 +46,6 @@
 **idevice_id** lists connected iOS device identifiers. It detects iPhones, iPads, and iPods via USB or network.
 
 The tool provides UDIDs needed for other libimobiledevice commands. It's the first step in iOS device management.
-
-idevice_id lists iOS device IDs.
 
 # CAVEATS
 

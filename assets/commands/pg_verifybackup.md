@@ -1,3 +1,7 @@
+# TAGLINE
+
+verifies pg_basebackup integrity
+
 # TLDR
 
 **Verify backup**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+driver management tool for Vanilla OS
+
 # TLDR
 
 **Interactively install** drivers for a device

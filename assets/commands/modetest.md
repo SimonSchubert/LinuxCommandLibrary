@@ -1,3 +1,7 @@
+# TAGLINE
+
+diagnostic tool for testing and debugging Kernel Mode Setting functionality of
+
 # TLDR
 
 **List connectors** and their available modes for a specific driver

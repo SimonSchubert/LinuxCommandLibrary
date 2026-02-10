@@ -1,3 +1,7 @@
+# TAGLINE
+
+synchronizes pacman package databases with remote repositories
+
 # TLDR
 
 Update **all** sync databases

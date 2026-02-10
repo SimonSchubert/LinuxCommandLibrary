@@ -1,3 +1,7 @@
+# TAGLINE
+
+PHP testing framework
+
 # TLDR
 
 **Run all tests**
@@ -53,8 +57,6 @@ _FILES_
 **phpunit** is PHP testing framework. Unit and integration testing.
 
 The tool provides assertions and mocks. Standard PHP testing tool.
-
-phpunit runs PHP tests.
 
 # CAVEATS
 

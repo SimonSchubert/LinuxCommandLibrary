@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates a bcachefs filesystem on one or more devices
+
 # TLDR
 
 Create a **bcachefs filesystem** inside a partition

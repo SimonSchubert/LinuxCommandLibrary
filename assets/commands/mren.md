@@ -1,3 +1,7 @@
+# TAGLINE
+
+renames files and directories on MS-DOS filesystems
+
 # TLDR
 
 **Rename file on MS-DOS disk**
@@ -35,8 +39,6 @@ _TARGET_
 **mren** renames files and directories on MS-DOS filesystems. It's part of the mtools package.
 
 The tool works directly on FAT disks. Does not require mounting the filesystem.
-
-mren is mtools file renamer.
 
 # CAVEATS
 

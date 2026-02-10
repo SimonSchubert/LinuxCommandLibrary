@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages MaxCompute resources
+
 # TLDR
 
 **List resources**
@@ -48,8 +52,6 @@
 **odps resource** manages MaxCompute resources. Uploads JARs, files, and archives.
 
 The tool handles resource operations. Part of ODPS CLI.
-
-odps resource manages resources.
 
 # CAVEATS
 

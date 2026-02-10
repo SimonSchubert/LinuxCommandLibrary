@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays network statistics from /proc/net/netstat and /proc/net/snmp, showing
+
 # TLDR
 
 View network statistics **since last time** nstat was run

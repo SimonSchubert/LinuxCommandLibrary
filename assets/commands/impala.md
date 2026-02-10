@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal user interface for managing Wi-Fi networks
+
 # TLDR
 
 Launch in **station mode**

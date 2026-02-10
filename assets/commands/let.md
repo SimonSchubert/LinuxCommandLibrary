@@ -1,3 +1,7 @@
+# TAGLINE
+
+bash built-in for arithmetic evaluation
+
 # TLDR
 
 **Arithmetic assignment**
@@ -40,8 +44,6 @@ Operators:
 **let** is a Bash built-in for arithmetic evaluation. It performs integer math and comparisons.
 
 The command sets exit status based on expression result. Zero result returns exit code 1.
-
-let evaluates arithmetic.
 
 # CAVEATS
 

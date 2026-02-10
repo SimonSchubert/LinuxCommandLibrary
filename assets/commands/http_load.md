@@ -1,3 +1,7 @@
+# TAGLINE
+
+HTTP benchmarking tool that runs multiple HTTP fetches in parallel
+
 # TLDR
 
 Test with **20 requests/second** for 60 seconds

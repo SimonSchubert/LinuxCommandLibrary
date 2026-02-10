@@ -1,3 +1,7 @@
+# TAGLINE
+
+restores iptables IPv4 rules from a file created by iptables-save
+
 # TLDR
 
 **Restore** from file

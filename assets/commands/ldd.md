@@ -1,3 +1,7 @@
+# TAGLINE
+
+prints the shared objects required by each program or shared object
+
 # TLDR
 
 Display **shared library dependencies**

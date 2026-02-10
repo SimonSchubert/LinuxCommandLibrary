@@ -1,3 +1,7 @@
+# TAGLINE
+
+extracts image slices
+
 # TLDR
 
 **Extract horizontal slice**
@@ -28,8 +32,6 @@ _FILE_
 **pamslice** extracts image slices. Outputs pixel values along line.
 
 The tool creates profile data. Part of Netpbm.
-
-pamslice extracts profiles.
 
 # CAVEATS
 

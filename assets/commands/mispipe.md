@@ -1,3 +1,7 @@
+# TAGLINE
+
+pipes two commands but returns the exit status of the first command instead of
+
 # TLDR
 
 **Run pipeline returning first command exit status**

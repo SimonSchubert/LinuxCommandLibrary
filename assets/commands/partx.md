@@ -1,3 +1,7 @@
+# TAGLINE
+
+tells the Linux kernel about the presence and numbering of on-disk partitions
+
 # TLDR
 
 **List** the partitions on a block device or disk image

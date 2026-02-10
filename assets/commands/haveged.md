@@ -1,3 +1,7 @@
+# TAGLINE
+
+random number generator daemon that feeds the Linux kernel's entropy pool
+
 # TLDR
 
 **Start** haveged daemon

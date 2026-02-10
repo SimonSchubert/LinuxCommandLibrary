@@ -1,3 +1,7 @@
+# TAGLINE
+
+prints the local or global prefix path
+
 # TLDR
 
 **Show local prefix**
@@ -25,8 +29,6 @@
 **npm prefix** prints the local or global prefix path. Shows where packages are installed.
 
 The command displays installation directory. Useful for scripting.
-
-npm prefix shows install path.
 
 # CAVEATS
 

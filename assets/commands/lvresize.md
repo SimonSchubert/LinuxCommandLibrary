@@ -1,3 +1,7 @@
+# TAGLINE
+
+changes the size of a logical volume, either extending or reducing it
+
 # TLDR
 
 Set volume to **specific size**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+traces dependency relationships
+
 # TLDR
 
 **Show dependency path**
@@ -31,8 +35,6 @@ _DEPENDENCY_
 **nix3 why-depends** traces dependency relationships. Shows why packages depend on others.
 
 The tool debugs package closures. Helps reduce unnecessary dependencies.
-
-nix3 why-depends traces deps.
 
 # CAVEATS
 

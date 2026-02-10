@@ -1,3 +1,7 @@
+# TAGLINE
+
+informs the operating system kernel of partition table changes
+
 # TLDR
 
 **Notify** kernel of partition changes

@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts Interleaf image format to PPM
+
 # TLDR
 
 **Convert Interleaf to PPM**

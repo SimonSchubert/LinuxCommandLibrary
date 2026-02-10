@@ -1,3 +1,7 @@
+# TAGLINE
+
+SQL query builder for Node
+
 # TLDR
 
 **Initialize Knex project**

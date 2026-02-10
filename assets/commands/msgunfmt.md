@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts compiled gettext MO files back to human-readable PO format
+
 # TLDR
 
 **Convert MO to PO**

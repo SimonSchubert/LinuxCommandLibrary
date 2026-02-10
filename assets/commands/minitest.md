@@ -1,3 +1,7 @@
+# TAGLINE
+
+testing framework for Ruby that provides a complete suite of testing facilities
+
 # TLDR
 
 **Run all tests**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+simple text editor from the KDE project
+
 # TLDR
 
 **Open** a text file

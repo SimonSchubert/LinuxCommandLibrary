@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast build system
+
 # TLDR
 
 **Setup build directory**
@@ -56,8 +60,6 @@ _COMMAND_
 **meson** is a fast build system. It generates ninja build files from meson.build definitions.
 
 The tool provides simple syntax and fast configuration. Used by many open source projects.
-
-meson is a modern build system.
 
 # CAVEATS
 

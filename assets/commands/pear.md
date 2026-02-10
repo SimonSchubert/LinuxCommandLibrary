@@ -1,3 +1,7 @@
+# TAGLINE
+
+PHP Extension and Application Repository manager
+
 # TLDR
 
 **Install a package**
@@ -50,10 +54,6 @@
 # DESCRIPTION
 
 **pear** is the PHP Extension and Application Repository manager. It installs, upgrades, and manages PHP packages and extensions, predating Composer as PHP's primary package manager.
-
-# EXAMPLES
-
-```bash
 # Install package
 pear install Mail
 

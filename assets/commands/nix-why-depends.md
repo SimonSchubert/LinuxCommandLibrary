@@ -1,3 +1,7 @@
+# TAGLINE
+
+shows why a package depends on another
+
 # TLDR
 
 **Show dependency path**
@@ -35,8 +39,6 @@ _DEPENDENCY_
 **nix why-depends** shows why a package depends on another. Traces dependency paths.
 
 The tool debugs closures. Helps understand and reduce dependencies.
-
-nix why-depends traces deps.
 
 # CAVEATS
 

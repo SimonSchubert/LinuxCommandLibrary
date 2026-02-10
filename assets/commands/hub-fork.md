@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates a fork of a GitHub repository
+
 # TLDR
 
 **Fork current repository**
@@ -42,8 +46,6 @@ _REPOSITORY_
 **hub fork** creates a fork of a GitHub repository. It adds a remote pointing to your fork automatically.
 
 The command forks to your account or specified organization. It sets up the remote for pushing to your fork.
-
-hub fork creates GitHub repository forks.
 
 # CAVEATS
 

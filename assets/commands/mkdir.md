@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates directories with the specified names
+
 # TLDR
 
 **Create a directory**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+always returns failure
+
 # TLDR
 
 **Deny all authentication**
@@ -25,8 +29,6 @@ No parameters. Always returns failure.
 **pam_deny** always returns failure. Used to block authentication.
 
 The module denies all requests unconditionally. Security failsafe module.
-
-pam_deny blocks all access.
 
 # CAVEATS
 

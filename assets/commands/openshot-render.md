@@ -1,3 +1,7 @@
+# TAGLINE
+
+renders OpenShot projects
+
 # TLDR
 
 **Render project**
@@ -41,8 +45,6 @@ _OUTPUT_
 **openshot-render** renders OpenShot projects. Command-line export utility.
 
 The tool processes projects without GUI. Batch rendering support.
-
-openshot-render exports videos.
 
 # CAVEATS
 

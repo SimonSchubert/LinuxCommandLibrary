@@ -1,3 +1,7 @@
+# TAGLINE
+
+netExec VNC module
+
 # TLDR
 
 **Check VNC access**
@@ -42,8 +46,6 @@ _TARGET_
 **nxc vnc** is the NetExec VNC module. Tests VNC server security.
 
 The tool checks VNC authentication. Part of NetExec suite.
-
-nxc vnc tests VNC servers.
 
 # CAVEATS
 

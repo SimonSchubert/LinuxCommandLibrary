@@ -1,3 +1,7 @@
+# TAGLINE
+
+visualizes the dependency relationships between installed packages
+
 # TLDR
 
 Produce an **SVG and PNG** graph

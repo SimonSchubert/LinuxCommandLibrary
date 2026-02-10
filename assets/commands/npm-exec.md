@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs a command from a local or remote npm package
+
 # TLDR
 
 **Run local package binary**
@@ -46,10 +50,6 @@
 **npm exec** runs a command from a local or remote npm package. It's similar to npx but integrated into npm. The command can run locally installed packages or temporarily download and execute packages.
 
 Double dash (--) separates npm exec options from command arguments.
-
-# EXAMPLES
-
-```bash
 # Run local eslint
 npm exec eslint .
 

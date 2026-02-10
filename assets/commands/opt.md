@@ -1,3 +1,7 @@
+# TAGLINE
+
+LLVM optimizer
+
 # TLDR
 
 **Optimize LLVM bitcode**
@@ -49,8 +53,6 @@ _INPUT_
 **opt** is the LLVM optimizer. Runs optimization passes on bitcode.
 
 The tool transforms LLVM intermediate representation. Part of LLVM toolchain.
-
-opt optimizes LLVM bitcode.
 
 # CAVEATS
 

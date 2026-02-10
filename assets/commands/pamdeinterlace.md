@@ -1,3 +1,7 @@
+# TAGLINE
+
+extracts one field from an interlaced video frame, producing a half-height image
+
 # TLDR
 
 **Extract even field from interlaced video**

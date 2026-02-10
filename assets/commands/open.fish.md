@@ -1,3 +1,7 @@
+# TAGLINE
+
+in Fish shell opens files with default applications
+
 # TLDR
 
 **Open file**
@@ -30,8 +34,6 @@ _FILE_
 **open** in Fish shell opens files with default applications. Cross-platform wrapper.
 
 The function handles different operating systems. Part of Fish shell.
-
-open opens files in Fish.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+controls LXI compatible test equipment such as oscilloscopes, spectrum
+
 # TLDR
 
 **Discover** LXI devices on available networks

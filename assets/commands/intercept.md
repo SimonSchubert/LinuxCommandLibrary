@@ -1,3 +1,7 @@
+# TAGLINE
+
+reads raw input events from a Linux input device and outputs them to stdout
+
 # TLDR
 
 Read raw input events **exclusively** (system won't see them)

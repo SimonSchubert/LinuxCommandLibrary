@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays all Jujutsu configuration values
+
 # TLDR
 
 **List all config values**

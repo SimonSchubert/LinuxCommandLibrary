@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages GPU switching on laptops with Nvidia Optimus technology
+
 # TLDR
 
 **Switch** between different GPU modes

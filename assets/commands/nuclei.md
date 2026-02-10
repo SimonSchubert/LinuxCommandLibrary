@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast vulnerability scanner
+
 # TLDR
 
 **Scan target with all templates**
@@ -52,8 +56,6 @@
 **nuclei** is a fast vulnerability scanner. Uses YAML-based templates.
 
 The tool performs targeted scanning. Community-driven template library.
-
-nuclei scans for vulnerabilities.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PBM bitmaps to CMU window manager format
+
 # TLDR
 
 **Convert PBM to CMU window manager format**

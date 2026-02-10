@@ -1,3 +1,7 @@
+# TAGLINE
+
+graphical and command-line package manager for Arch-based
+
 # TLDR
 
 **Install** a package

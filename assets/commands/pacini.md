@@ -1,3 +1,7 @@
+# TAGLINE
+
+parses and queries INI-style configuration files in the format used by pacman
+
 # TLDR
 
 Show the **full parsed** configuration file

@@ -1,3 +1,7 @@
+# TAGLINE
+
+microsoft Build Engine
+
 # TLDR
 
 **Build solution**
@@ -60,8 +64,6 @@ _PROJECT_FILE_
 **msbuild** is the Microsoft Build Engine. It builds .NET applications and solutions.
 
 The tool processes project files. Supports parallel builds and custom targets.
-
-msbuild is Microsoft build system.
 
 # CAVEATS
 

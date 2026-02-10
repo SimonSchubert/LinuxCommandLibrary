@@ -1,3 +1,7 @@
+# TAGLINE
+
+applies gamma correction to images
+
 # TLDR
 
 **Apply gamma correction**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+determines and displays the search path used to find manual pages
+
 # TLDR
 
 Display **search path**

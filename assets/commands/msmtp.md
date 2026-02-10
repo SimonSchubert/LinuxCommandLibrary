@@ -1,3 +1,7 @@
+# TAGLINE
+
+lightweight SMTP client for sending email from the command line
+
 # TLDR
 
 **Send email**

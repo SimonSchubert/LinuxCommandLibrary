@@ -1,3 +1,7 @@
+# TAGLINE
+
+log analysis and reporting tool that summarizes logs from various services
+
 # TLDR
 
 Analyze logs for **date range** and detail

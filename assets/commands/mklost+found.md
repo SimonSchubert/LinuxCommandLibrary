@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates a lost+found directory in the current working directory
+
 # TLDR
 
 Create a **lost+found directory** in the current directory

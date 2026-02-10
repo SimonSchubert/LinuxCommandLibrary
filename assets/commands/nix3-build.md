@@ -1,3 +1,7 @@
+# TAGLINE
+
+builds derivations from flakes
+
 # TLDR
 
 **Build flake**
@@ -39,8 +43,6 @@ _INSTALLABLE_
 **nix3 build** builds derivations from flakes. Alternative name for nix build.
 
 The tool produces store paths. Creates result symlink to output.
-
-nix3 build compiles flakes.
 
 # CAVEATS
 

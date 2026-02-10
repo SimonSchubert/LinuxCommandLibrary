@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates binary exports of MongoDB databases
+
 # TLDR
 
 **Dump entire database**

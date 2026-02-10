@@ -1,3 +1,7 @@
+# TAGLINE
+
+checks whether the current kernel has the required features enabled for LXC
+
 # TLDR
 
 Check **current kernel** support

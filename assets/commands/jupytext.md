@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts Jupyter notebooks to text formats
+
 # TLDR
 
 **Convert notebook to Python**
@@ -49,8 +53,6 @@
 **Jupytext** converts Jupyter notebooks to text formats. It enables version control of notebooks as scripts or markdown.
 
 The tool maintains synchronization between formats. Paired notebooks auto-update when either file changes.
-
-Jupytext converts notebooks to text.
 
 # CAVEATS
 

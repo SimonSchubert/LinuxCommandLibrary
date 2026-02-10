@@ -1,3 +1,7 @@
+# TAGLINE
+
+lightweight Kubernetes distribution
+
 # TLDR
 
 **Start server**
@@ -56,8 +60,6 @@
 **K3s** is a lightweight Kubernetes distribution. It runs a full Kubernetes cluster with minimal resources.
 
 The tool packages Kubernetes, containerd, and Flannel in a single binary. It's designed for edge, IoT, and development.
-
-K3s is lightweight Kubernetes.
 
 # CAVEATS
 

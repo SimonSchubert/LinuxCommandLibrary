@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts a Sun icon file to PBM format
+
 # TLDR
 
 **Convert icon to PBM**

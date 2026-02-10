@@ -1,3 +1,7 @@
+# TAGLINE
+
+development server with live reload
+
 # TLDR
 
 **Start server in current directory**
@@ -53,11 +57,9 @@ _DIRECTORY_
 
 # DESCRIPTION
 
-**live-server** is a development server with live reload. It automatically refreshes browsers on file changes.
+**live-server** is a lightweight Node.js-based HTTP server designed for front-end development that automatically reloads the browser whenever files in the served directory change. It works by injecting a small script into HTML pages that opens a WebSocket connection back to the server, which triggers a page refresh when filesystem modifications are detected.
 
-The tool is useful for front-end development. It serves static files and injects reload script.
-
-live-server provides live reload.
+The server requires no configuration to get started and will serve the current directory by default, automatically opening your browser to the root page. You can customize the port, host binding, watched directories, and the initial page to open. Because it is intended strictly for development, it should not be used in production environments.
 
 # CAVEATS
 

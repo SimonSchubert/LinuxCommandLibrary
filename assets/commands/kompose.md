@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts Docker Compose files to Kubernetes resources
+
 # TLDR
 
 **Convert to Kubernetes**
@@ -56,11 +60,9 @@
 
 # DESCRIPTION
 
-**kompose** converts Docker Compose files to Kubernetes resources. It generates deployments, services, and other manifests.
+**kompose** is a conversion tool that translates Docker Compose files into Kubernetes resource manifests. It parses `docker-compose.yml` definitions and generates corresponding Deployments, Services, PersistentVolumeClaims, and other Kubernetes objects, providing a migration path for applications originally designed to run with Docker Compose.
 
-The tool simplifies migration from Compose to Kubernetes. It supports various output formats including Helm.
-
-kompose converts Compose to K8s.
+The tool supports multiple output formats including standard Kubernetes YAML, JSON, and Helm charts. It can also deploy converted resources directly to a cluster with `kompose up` or tear them down with `kompose down`. As a CNCF sandbox project, kompose handles common Compose directives such as port mappings, volumes, environment variables, and replica counts, though some Compose-specific features may require manual adjustment after conversion.
 
 # CAVEATS
 

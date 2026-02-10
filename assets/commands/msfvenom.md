@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates payloads for Metasploit
+
 # TLDR
 
 **List payloads**
@@ -63,8 +67,6 @@
 **msfvenom** generates payloads for Metasploit. It combines msfpayload and msfencode functionality.
 
 The tool creates shellcode and executables. Supports encoding and format conversion.
-
-msfvenom is Metasploit payload generator.
 
 # CAVEATS
 

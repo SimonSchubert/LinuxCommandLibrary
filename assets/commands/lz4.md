@@ -1,3 +1,7 @@
+# TAGLINE
+
+extremely fast lossless compression algorithm
+
 # TLDR
 
 **Compress file**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line Hacker News client
+
 # TLDR
 
 **Browse Hacker News**
@@ -62,8 +66,6 @@ _COMMAND_
 **hn** is a command-line Hacker News client. It displays stories, comments, and discussions from the popular tech news aggregator.
 
 The tool provides quick access to different story categories. It can open links and discussions in the default browser.
-
-hn browses Hacker News from terminal.
 
 # CAVEATS
 

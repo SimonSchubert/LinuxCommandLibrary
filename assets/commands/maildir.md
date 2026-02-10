@@ -1,3 +1,7 @@
+# TAGLINE
+
+mail storage format where each email is stored as a separate file in
+
 # TLDR
 
 **Create Maildir structure**

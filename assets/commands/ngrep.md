@@ -1,3 +1,7 @@
+# TAGLINE
+
+network grep
+
 # TLDR
 
 **Search packets for pattern**
@@ -63,8 +67,6 @@ _FILTER_
 **ngrep** is network grep. It searches network packets for patterns.
 
 The tool matches regex in packet payloads. Like grep for network traffic.
-
-ngrep searches network packets.
 
 # CAVEATS
 

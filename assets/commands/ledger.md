@@ -1,3 +1,7 @@
+# TAGLINE
+
+plain text accounting tool
+
 # TLDR
 
 **Show balance**
@@ -56,8 +60,6 @@
 **ledger** is a plain text accounting tool. It processes double-entry accounting journals.
 
 The tool generates reports from simple text files. It supports multiple currencies and commodities.
-
-ledger is plain text accounting.
 
 # CAVEATS
 

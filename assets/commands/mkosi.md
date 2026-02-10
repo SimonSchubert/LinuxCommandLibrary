@@ -1,3 +1,7 @@
+# TAGLINE
+
+builds customized, modern Linux OS images
+
 # TLDR
 
 Show current **build configuration** to verify what would be built

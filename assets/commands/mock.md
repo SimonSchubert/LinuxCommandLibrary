@@ -1,3 +1,7 @@
+# TAGLINE
+
+builds RPMs in clean chroot environments
+
 # TLDR
 
 **Build package in chroot**
@@ -56,8 +60,6 @@ _SRPM_
 **mock** builds RPMs in clean chroot environments. It isolates builds from the host system.
 
 The tool creates reproducible builds. Used for Fedora/RHEL package building.
-
-mock builds RPMs in chroot.
 
 # CAVEATS
 

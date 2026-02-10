@@ -1,3 +1,7 @@
+# TAGLINE
+
+just-In-Time compiler for Lua
+
 # TLDR
 
 **Start interactive interpreter**
@@ -56,8 +60,6 @@ _ARGS_
 **luajit** is a Just-In-Time compiler for Lua. It provides significantly faster execution than standard Lua.
 
 The tool is Lua 5.1 compatible with extensions. Widely used for high-performance Lua applications.
-
-luajit is a fast Lua JIT.
 
 # CAVEATS
 

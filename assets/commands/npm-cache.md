@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages the npm package cache
+
 # TLDR
 
 **Clear npm cache**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages virtual Kubernetes clusters and namespaces
+
 # TLDR
 
 **Start Loft**
@@ -56,8 +60,6 @@ _COMMAND_
 **loft** manages virtual Kubernetes clusters and namespaces. It provides self-service Kubernetes for teams.
 
 The tool enables multi-tenancy on shared clusters. It creates isolated virtual clusters quickly.
-
-loft manages virtual Kubernetes.
 
 # CAVEATS
 

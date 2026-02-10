@@ -1,3 +1,7 @@
+# TAGLINE
+
+copies files while setting permissions and ownership
+
 # TLDR
 
 **Copy file with permissions**

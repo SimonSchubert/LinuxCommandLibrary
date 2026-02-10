@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PAM images to PNM format
+
 # TLDR
 
 **Convert PAM to PNM format**

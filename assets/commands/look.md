@@ -1,3 +1,7 @@
+# TAGLINE
+
+uses binary search to find lines beginning with a given prefix in a sorted file
+
 # TLDR
 
 Find lines **starting with prefix**

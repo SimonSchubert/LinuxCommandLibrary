@@ -1,3 +1,7 @@
+# TAGLINE
+
+zero-configuration web application bundler
+
 # TLDR
 
 **Start development server**

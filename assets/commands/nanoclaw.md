@@ -1,3 +1,7 @@
+# TAGLINE
+
+lightweight personal AI assistant powered by Claude that runs in an isolated
+
 # TLDR
 
 **Start nanoclaw and run initial setup**

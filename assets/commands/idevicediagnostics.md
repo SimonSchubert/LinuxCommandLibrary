@@ -1,3 +1,7 @@
+# TAGLINE
+
+performs diagnostic commands on iOS devices
+
 # TLDR
 
 **Restart device**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+short form of **pacman --upgrade**, which upgrades or adds packages
+
 # TLDR
 
 This command is an alias of **pacman --upgrade**

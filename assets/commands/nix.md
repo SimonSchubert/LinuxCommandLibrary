@@ -1,3 +1,7 @@
+# TAGLINE
+
+package manager CLI
+
 # TLDR
 
 **Search packages**
@@ -64,8 +68,6 @@ _COMMAND_
 **nix** is the Nix package manager CLI. It provides reproducible package management.
 
 The tool handles builds and environments. Supports flakes for reproducibility.
-
-nix is functional package manager.
 
 # CAVEATS
 

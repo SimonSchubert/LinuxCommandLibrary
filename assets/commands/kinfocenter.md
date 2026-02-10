@@ -1,3 +1,7 @@
+# TAGLINE
+
+KDE information center application that displays detailed system
+
 # TLDR
 
 Open the **GUI**

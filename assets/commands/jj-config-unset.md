@@ -1,3 +1,7 @@
+# TAGLINE
+
+removes configuration values from Jujutsu config files
+
 # TLDR
 
 **Unset user config value**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages log files by rotating, compressing, removing, and mailing them
+
 # TLDR
 
 **Force** rotation manually

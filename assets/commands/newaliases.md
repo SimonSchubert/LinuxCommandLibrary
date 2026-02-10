@@ -1,3 +1,7 @@
+# TAGLINE
+
+rebuilds the aliases database from /etc/aliases
+
 # TLDR
 
 **Rebuild aliases database**

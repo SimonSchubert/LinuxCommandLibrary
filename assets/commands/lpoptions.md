@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages printer options
+
 # TLDR
 
 **Show default options**
@@ -53,8 +57,6 @@
 **lpoptions** manages printer options. It sets defaults for print jobs and displays available options.
 
 The tool configures user-specific or system-wide printer preferences like paper size and quality.
-
-lpoptions manages print options.
 
 # CAVEATS
 

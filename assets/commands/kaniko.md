@@ -1,3 +1,7 @@
+# TAGLINE
+
+builds container images from Dockerfiles inside containers or Kubernetes
+
 # TLDR
 
 **Build and push image** to registry

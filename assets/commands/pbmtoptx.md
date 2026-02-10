@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PBM bitmaps to Printronix printer graphics format
+
 # TLDR
 
 **Convert PBM to Printronix format**

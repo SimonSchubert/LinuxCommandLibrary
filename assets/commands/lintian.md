@@ -1,3 +1,7 @@
+# TAGLINE
+
+checks Debian packages for policy compliance
+
 # TLDR
 
 **Check Debian package**
@@ -56,8 +60,6 @@ _PACKAGES_
 **lintian** checks Debian packages for policy compliance. It identifies bugs, policy violations, and issues.
 
 The tool is essential for Debian maintainers. It checks both binary and source packages.
-
-lintian validates Debian packages.
 
 # CAVEATS
 

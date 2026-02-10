@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages the Samba user database, allowing administrators to add
+
 # TLDR
 
 **List** all Samba users with their settings

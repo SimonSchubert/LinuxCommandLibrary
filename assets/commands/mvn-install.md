@@ -1,3 +1,7 @@
+# TAGLINE
+
+builds the project and installs the artifact to the local Maven repository
+
 # TLDR
 
 **Install to local repository**

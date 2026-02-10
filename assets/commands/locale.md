@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays information about the current locale settings or lists available
+
 # TLDR
 
 Show current **locale settings**

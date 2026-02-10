@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts and filters OpenStreetMap data files
+
 # TLDR
 
 **Convert PBF to OSM XML**
@@ -54,8 +58,6 @@
 # DESCRIPTION
 
 **osmconvert** converts and filters OpenStreetMap data files. It handles conversion between OSM XML, PBF, and O5M formats, and can extract regions by bounding box or polygon.
-
-Much faster than osmosis for simple conversions.
 
 # BOUNDING BOX FORMAT
 

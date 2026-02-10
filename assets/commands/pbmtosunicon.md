@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PBM bitmaps to Sun icon format used for window icons on Sun
+
 # TLDR
 
 **Convert PBM to Sun icon format**

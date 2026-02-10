@@ -1,3 +1,7 @@
+# TAGLINE
+
+simple file server
+
 # TLDR
 
 **Serve current directory**
@@ -53,8 +57,6 @@ _PATH_
 **miniserve** is a simple file server. It serves files over HTTP with minimal setup.
 
 The tool supports uploads, authentication, and QR codes. Written in Rust for performance.
-
-miniserve serves files over HTTP.
 
 # CAVEATS
 

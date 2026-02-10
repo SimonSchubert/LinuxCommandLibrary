@@ -1,3 +1,7 @@
+# TAGLINE
+
+meta-package manager that unifies operations across Yay, Flatpak, and Snap
+
 # TLDR
 
 **Search** for a package

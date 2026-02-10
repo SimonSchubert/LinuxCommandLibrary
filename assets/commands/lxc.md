@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages Linux containers using the LXD REST API
+
 # TLDR
 
 **List** containers

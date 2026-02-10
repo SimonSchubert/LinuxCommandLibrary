@@ -1,3 +1,7 @@
+# TAGLINE
+
+always returns success
+
 # TLDR
 
 **Allow all authentication**
@@ -21,8 +25,6 @@ No parameters. Always returns success.
 **pam_permit** always returns success. Permits all access unconditionally.
 
 The module grants all requests. Security bypass module.
-
-pam_permit allows all access.
 
 # CAVEATS
 

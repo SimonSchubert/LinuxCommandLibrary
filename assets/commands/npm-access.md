@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages access levels for published packages on the npm registry
+
 # TLDR
 
 **Set package to public**
@@ -53,10 +57,6 @@
 **npm access** manages access levels for published packages on the npm registry. It controls whether packages are public or private and manages team permissions.
 
 This command is relevant for npm organizations and scoped packages.
-
-# EXAMPLES
-
-```bash
 # Make scoped package public
 npm access public @myorg/mypackage
 

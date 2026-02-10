@@ -1,3 +1,7 @@
+# TAGLINE
+
+CLI for IBM Cloud
+
 # TLDR
 
 **Login to IBM Cloud**
@@ -56,8 +60,6 @@ _COMMAND_
 **ibmcloud** is the CLI for IBM Cloud. It manages cloud resources, services, and infrastructure across IBM Cloud platform.
 
 The tool provides access to compute, storage, AI services, and Kubernetes. It supports plugins for extended functionality.
-
-ibmcloud manages IBM Cloud resources.
 
 # CAVEATS
 

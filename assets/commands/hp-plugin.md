@@ -1,3 +1,7 @@
+# TAGLINE
+
+installs the HP proprietary plugin
+
 # TLDR
 
 **Install plugin**
@@ -45,8 +49,6 @@
 **hp-plugin** installs the HP proprietary plugin. Some HP printers require this binary plugin for full functionality like scanning.
 
 The tool downloads and installs the plugin package. It must be run as root and requires network access.
-
-hp-plugin installs HP proprietary driver.
 
 # CAVEATS
 

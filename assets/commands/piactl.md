@@ -1,3 +1,7 @@
+# TAGLINE
+
+controls Private Internet Access VPN from the command line
+
 # TLDR
 
 **Connect to VPN**

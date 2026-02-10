@@ -1,3 +1,7 @@
+# TAGLINE
+
+emulates arcade game hardware
+
 # TLDR
 
 **Run arcade ROM**

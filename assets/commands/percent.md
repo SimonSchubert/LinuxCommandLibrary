@@ -1,3 +1,7 @@
+# TAGLINE
+
+**%** in shell context typically refers to job control, bringing background
+
 # TLDR
 
 **Bring most recent background job to foreground**
@@ -51,11 +55,6 @@ In arithmetic contexts **$(( ))**, **%** is the modulo operator, returning the r
 
 In prompt strings (PS1), **%** introduces escape sequences in zsh for dynamic prompt elements.
 
-In printf/strftime, **%** introduces format specifiers.
-
-# EXAMPLES
-
-```bash
 # Start background job
 sleep 100 &
 # [1] 12345

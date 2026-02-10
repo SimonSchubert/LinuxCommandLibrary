@@ -1,3 +1,7 @@
+# TAGLINE
+
+reports the most recent login of all users or a specified user by reading
+
 # TLDR
 
 Display most recent **login of all users**

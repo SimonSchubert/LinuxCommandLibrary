@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates inverted indexes for bibliographic databases
+
 # TLDR
 
 **Build bibliography index**
@@ -45,8 +49,6 @@
 **indxbib** creates inverted indexes for bibliographic databases. These indexes enable fast lookups by lkbib and refer.
 
 The tool processes refer-format bibliography files. The generated index files have extensions .ia, .ib, .ic.
-
-indxbib indexes bibliography databases.
 
 # CAVEATS
 

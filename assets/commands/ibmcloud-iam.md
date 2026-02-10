@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages Identity and Access Management
+
 # TLDR
 
 **List API keys**
@@ -52,8 +56,6 @@ _COMMAND_
 **ibmcloud iam** manages Identity and Access Management. It handles API keys, service IDs, access groups, and policies.
 
 The tool controls authentication and authorization for IBM Cloud resources. It enables secure service-to-service communication.
-
-ibmcloud iam manages identity/access.
 
 # CAVEATS
 

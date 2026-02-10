@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts command output to JSON format
+
 # TLDR
 
 **Parse command output**
@@ -57,8 +61,6 @@
 **jc** converts command output to JSON format. It parses standard Unix commands and produces structured data.
 
 The tool enables piping command output to JSON-aware tools like jq. It supports dozens of common commands.
-
-jc converts CLI output to JSON.
 
 # CAVEATS
 

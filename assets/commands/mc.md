@@ -1,3 +1,7 @@
+# TAGLINE
+
+midnight Commander, a visual file manager
+
 # TLDR
 
 **Start Midnight Commander**
@@ -56,8 +60,6 @@ _PATH1_ _PATH2_
 **mc** is Midnight Commander, a visual file manager. It provides dual-pane navigation and file operations.
 
 The tool handles copying, moving, deleting with keyboard shortcuts. Supports FTP, SFTP, and archives.
-
-mc is a visual file manager.
 
 # CAVEATS
 

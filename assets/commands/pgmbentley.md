@@ -1,3 +1,7 @@
+# TAGLINE
+
+applies the "Bentley effect" to PGM images, creating a melted/dripping
+
 # TLDR
 
 **Apply Bentley effect to grayscale image**

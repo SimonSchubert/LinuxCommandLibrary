@@ -1,3 +1,7 @@
+# TAGLINE
+
+encodes audio to Opus format
+
 # TLDR
 
 **Encode to Opus**
@@ -52,8 +56,6 @@ _OUTPUT_
 **opusenc** encodes audio to Opus format. High-quality lossy compression.
 
 The tool creates Opus files from WAV/FLAC. Part of opus-tools.
-
-opusenc creates Opus files.
 
 # CAVEATS
 

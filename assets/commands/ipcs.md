@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays information about System V IPC resources: shared memory
+
 # TLDR
 
 Show **all** active IPC facilities

@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays images directly in the terminal using various terminal graphics
+
 # TLDR
 
 **Display an image** in the terminal

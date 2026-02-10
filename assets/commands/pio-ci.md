@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs continuous integration builds for PlatformIO projects
+
 # TLDR
 
 **Build library in CI**

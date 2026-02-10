@@ -1,3 +1,7 @@
+# TAGLINE
+
+queries and changes the system hostname and related machine metadata
+
 # TLDR
 
 Show current **hostname** information

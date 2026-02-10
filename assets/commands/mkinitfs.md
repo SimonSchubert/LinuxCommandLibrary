@@ -1,3 +1,7 @@
+# TAGLINE
+
+collects files from the root filesystem and creates a compressed
+
 # TLDR
 
 Generate an **initramfs** with features from /etc/mkinitfs/mkinitfs.conf

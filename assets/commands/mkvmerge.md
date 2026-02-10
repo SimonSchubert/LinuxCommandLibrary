@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates Matroska files
+
 # TLDR
 
 **Merge files**
@@ -56,8 +60,6 @@ _INPUTS_
 **mkvmerge** creates Matroska (MKV) files. It combines video, audio, and subtitles.
 
 The tool is part of MKVToolNix. Supports many input formats and track manipulation.
-
-mkvmerge creates MKV files.
 
 # CAVEATS
 

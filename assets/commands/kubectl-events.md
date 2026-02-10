@@ -1,3 +1,7 @@
+# TAGLINE
+
+lists cluster events
+
 # TLDR
 
 **Show all events**
@@ -49,8 +53,6 @@
 **kubectl events** lists cluster events. Events record significant occurrences like pod scheduling and container starts.
 
 The command shows recent cluster activity. It's useful for monitoring and debugging cluster behavior.
-
-kubectl events shows cluster events.
 
 # CAVEATS
 

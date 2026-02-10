@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages ICE authorization entries
+
 # TLDR
 
 **List entries**
@@ -48,8 +52,6 @@ _COMMAND_
 **iceauth** manages ICE (Inter-Client Exchange) authorization entries. ICE is used for communication between X11 clients.
 
 The tool handles authentication records for X session managers and similar applications. It's analogous to xauth for X display connections.
-
-iceauth manages ICE protocol auth.
 
 # CAVEATS
 

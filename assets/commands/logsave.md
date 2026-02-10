@@ -1,3 +1,7 @@
+# TAGLINE
+
+executes a command and saves both stdout and stderr to a log file
+
 # TLDR
 
 **Save command output** to log

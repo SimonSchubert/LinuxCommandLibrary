@@ -1,3 +1,7 @@
+# TAGLINE
+
+mitmproxy with a web interface
+
 # TLDR
 
 **Start web interface**
@@ -53,8 +57,6 @@
 **mitmweb** is mitmproxy with a web interface. It intercepts and inspects HTTP/HTTPS traffic.
 
 The tool provides visual flow inspection. Used for debugging and security testing.
-
-mitmweb provides web-based proxy.
 
 # CAVEATS
 

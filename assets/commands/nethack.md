@@ -1,3 +1,7 @@
+# TAGLINE
+
+classic roguelike dungeon exploration game
+
 # TLDR
 
 **Start new game**

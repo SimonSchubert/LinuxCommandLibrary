@@ -1,3 +1,7 @@
+# TAGLINE
+
+switches the default Kubernetes namespace
+
 # TLDR
 
 **List namespaces**
@@ -36,11 +40,9 @@ _NAMESPACE_
 
 # DESCRIPTION
 
-**kubens** switches the default Kubernetes namespace. It simplifies namespace management without typing long kubectl commands.
+**kubens** is a utility for quickly switching the default Kubernetes namespace in the current context. It modifies the namespace field in your kubeconfig so that subsequent kubectl commands operate against the selected namespace without requiring the `-n` flag each time.
 
-The tool integrates with kubectx for complete cluster navigation. It supports fzf for interactive selection.
-
-kubens switches K8s namespaces.
+The tool lists all available namespaces when called without arguments and supports interactive fuzzy selection through fzf integration. It can also toggle back to the previously active namespace using `-`. Designed as a companion to kubectx, kubens completes the workflow for navigating multi-cluster, multi-namespace Kubernetes environments efficiently.
 
 # CAVEATS
 

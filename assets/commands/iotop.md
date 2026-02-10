@@ -1,3 +1,7 @@
+# TAGLINE
+
+top-like utility for monitoring disk I/O usage by processes in real-time
+
 # TLDR
 
 **Start iotop** (shows all processes)

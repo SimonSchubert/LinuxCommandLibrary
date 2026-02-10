@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates temporary development environments
+
 # TLDR
 
 **Enter shell with package**
@@ -53,8 +57,6 @@ _PATH_
 **nix-shell** creates temporary development environments. Provides packages without installing.
 
 The tool sets up shell with dependencies. Exits cleanly without system changes.
-
-nix-shell creates dev environments.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages Linode cloud infrastructure
+
 # TLDR
 
 **List Linodes**
@@ -53,8 +57,6 @@ _COMMAND_
 **linode-cli** manages Linode cloud infrastructure. It provides access to all Linode API features.
 
 The tool controls virtual machines, storage, networking, and DNS from the command line.
-
-linode-cli manages Linode cloud.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+captures screenshots in the MATE desktop environment
+
 # TLDR
 
 Create a **fullscreen** screenshot

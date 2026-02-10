@@ -1,3 +1,7 @@
+# TAGLINE
+
+formats text for terminal display
+
 # TLDR
 
 **Format document**
@@ -49,8 +53,6 @@ _FILES_
 **nroff** formats text for terminal display. Part of troff/groff system.
 
 The tool processes roff documents. Outputs plain text formatting.
-
-nroff formats text documents.
 
 # CAVEATS
 

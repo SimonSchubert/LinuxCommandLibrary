@@ -1,3 +1,7 @@
+# TAGLINE
+
+lists fonts used in PDF documents
+
 # TLDR
 
 **List fonts in PDF**

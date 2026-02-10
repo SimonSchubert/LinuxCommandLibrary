@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates secure tunnels to localhost
+
 # TLDR
 
 **Expose local port**
@@ -60,8 +64,6 @@ _COMMAND_
 **ngrok** creates secure tunnels to localhost. It exposes local servers to the internet.
 
 The tool provides public URLs. Useful for webhooks, demos, and testing.
-
-ngrok tunnels localhost to web.
 
 # CAVEATS
 

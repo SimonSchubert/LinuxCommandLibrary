@@ -1,3 +1,7 @@
+# TAGLINE
+
+web browser
+
 # TLDR
 
 **Start Opera browser**
@@ -46,8 +50,6 @@ _URL_
 **opera** is the Opera web browser. Chromium-based browser with built-in features.
 
 The browser includes VPN, ad blocker, and workspaces. Cross-platform.
-
-opera browses the web.
 
 # CAVEATS
 

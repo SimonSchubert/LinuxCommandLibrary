@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays and manipulates Logical Volume Manager configuration information
+
 # TLDR
 
 Display the **effective configuration** in use (after merging all config sources)

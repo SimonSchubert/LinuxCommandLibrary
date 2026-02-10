@@ -1,3 +1,7 @@
+# TAGLINE
+
+prepares a package for using libtool by copying necessary auxiliary files into
+
 # TLDR
 
 Initialize project for **libtool** with copy and force

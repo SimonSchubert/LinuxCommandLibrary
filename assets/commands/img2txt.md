@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts images to colored ASCII art, outputting text that reproduces
+
 # TLDR
 
 Convert image with specific output **width** (columns)

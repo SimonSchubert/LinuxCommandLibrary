@@ -1,3 +1,7 @@
+# TAGLINE
+
+list groups a user belongs to
+
 # TLDR
 
 This command is an alias of [lid](/man/lid).

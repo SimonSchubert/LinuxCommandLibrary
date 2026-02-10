@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages Linux software RAID arrays
+
 # TLDR
 
 **Create** RAID array

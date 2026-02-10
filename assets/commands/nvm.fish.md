@@ -1,3 +1,7 @@
+# TAGLINE
+
+node Version Manager for Fish shell
+
 # TLDR
 
 **Install Node.js version**
@@ -49,8 +53,6 @@
 **nvm.fish** is Node Version Manager for Fish shell. Native Fish implementation.
 
 The tool manages Node.js versions in Fish. Different from bash nvm.
-
-nvm.fish provides Fish-native nvm.
 
 # CAVEATS
 

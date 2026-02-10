@@ -1,3 +1,7 @@
+# TAGLINE
+
+FUSE filesystem for accessing MTP devices like Android phones
+
 # TLDR
 
 **Mount MTP device to directory**

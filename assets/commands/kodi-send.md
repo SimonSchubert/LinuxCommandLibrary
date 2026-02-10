@@ -1,3 +1,7 @@
+# TAGLINE
+
+sends commands to Kodi media center
+
 # TLDR
 
 **Send action**
@@ -40,11 +44,9 @@
 
 # DESCRIPTION
 
-**kodi-send** sends commands to Kodi media center. It uses the EventClient protocol for remote control.
+**kodi-send** is a command-line tool for remotely controlling a Kodi media center instance over the network. It communicates using the Kodi EventClient UDP protocol on port 9777 by default, sending action commands that simulate remote control button presses, navigation events, and media playback operations.
 
-The tool enables scripted media control. It supports playback, navigation, and system commands.
-
-kodi-send controls Kodi remotely.
+The tool supports a wide range of built-in Kodi actions including playback control (play, pause, stop, skip), volume adjustment, menu navigation (directional movement and selection), and media loading via URLs or file paths. Because it operates entirely from the command line, kodi-send is well suited for scripting automated media workflows, integrating Kodi with home automation systems, or building custom remote control interfaces.
 
 # CAVEATS
 

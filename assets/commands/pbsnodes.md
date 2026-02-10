@@ -1,3 +1,7 @@
+# TAGLINE
+
+queries and manages compute nodes in a PBS cluster
+
 # TLDR
 
 **List all nodes**
@@ -54,8 +58,6 @@
 # DESCRIPTION
 
 **pbsnodes** queries and manages compute nodes in a PBS (Portable Batch System) cluster. Administrators use it to check node status, mark nodes offline for maintenance, and view resource availability.
-
-Part of PBS Professional, OpenPBS, or TORQUE.
 
 # NODE STATES
 

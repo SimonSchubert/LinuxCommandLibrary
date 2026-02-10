@@ -1,3 +1,7 @@
+# TAGLINE
+
+configuration sets default author for new packages
+
 # TLDR
 
 **Set author name**
@@ -39,8 +43,6 @@
 **npm author** configuration sets default author for new packages. Used by npm init.
 
 The settings populate package.json author field. Saves time during initialization.
-
-npm author sets default author.
 
 # CAVEATS
 

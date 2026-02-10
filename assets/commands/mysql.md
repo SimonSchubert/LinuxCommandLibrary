@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line client
+
 # TLDR
 
 **Connect to database**
@@ -56,8 +60,6 @@ _DATABASE_
 **mysql** is the MySQL command-line client. It connects to MySQL/MariaDB servers.
 
 The tool executes SQL queries. Provides interactive and batch modes.
-
-mysql is MySQL CLI client.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PDF files to PostScript
+
 # TLDR
 
 **Convert PDF to PostScript**
@@ -40,8 +44,6 @@
 # DESCRIPTION
 
 **pdf2ps** converts PDF files to PostScript. PostScript is needed for certain printers and print workflows. The output quality and compatibility depend on the PostScript level selected.
-
-Part of the Ghostscript/Poppler utilities.
 
 # POSTSCRIPT LEVELS
 

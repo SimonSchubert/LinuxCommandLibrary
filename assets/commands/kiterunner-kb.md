@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages kiterunner knowledge bases
+
 # TLDR
 
 **List knowledge bases**
@@ -39,8 +43,6 @@
 **kr kb** manages kiterunner knowledge bases. Knowledge bases contain API route patterns for scanning.
 
 The tool downloads pre-built wordlists from Assetnote. Different KBs target different API types.
-
-kr kb manages API wordlists.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+formats mathematical equations for nroff
+
 # TLDR
 
 **Format equations for nroff**
@@ -35,8 +39,6 @@ _FILES_
 **neqn** formats mathematical equations for nroff. It's the ASCII version of eqn.
 
 The tool processes equation markup. Outputs text-based math formatting.
-
-neqn formats equations for terminal.
 
 # CAVEATS
 

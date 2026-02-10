@@ -1,3 +1,7 @@
+# TAGLINE
+
+queries dependency graph with selectors
+
 # TLDR
 
 **Query dependencies**
@@ -37,8 +41,6 @@ _SELECTOR_
 **npm query** queries dependency graph with selectors. CSS-like syntax for packages.
 
 The command filters dependencies. Powerful package searching.
-
-npm query searches packages.
 
 # CAVEATS
 

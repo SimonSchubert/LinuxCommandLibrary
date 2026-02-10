@@ -1,3 +1,7 @@
+# TAGLINE
+
+compiles message catalog files from human-readable PO format to binary MO
+
 # TLDR
 
 **Compile PO file to MO**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+controls the backlight brightness of laptop screens and other controllable
+
 # TLDR
 
 Get current **backlight** value

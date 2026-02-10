@@ -1,3 +1,7 @@
+# TAGLINE
+
+native CLI application that provides offline access to over **6200 Linux
+
 # TLDR
 
 **Start interactive mode** to browse commands, basics, and tips

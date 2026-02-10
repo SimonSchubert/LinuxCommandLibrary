@@ -1,3 +1,7 @@
+# TAGLINE
+
+removes tags from the repository
+
 # TLDR
 
 **Delete a tag**

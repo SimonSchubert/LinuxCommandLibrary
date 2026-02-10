@@ -1,3 +1,7 @@
+# TAGLINE
+
+executes commands on remote Windows systems via SMB
+
 # TLDR
 
 **Execute command on remote host**

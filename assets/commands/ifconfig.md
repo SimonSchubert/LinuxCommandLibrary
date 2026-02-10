@@ -1,3 +1,7 @@
+# TAGLINE
+
+configures network interfaces
+
 # TLDR
 
 **Show all interfaces**
@@ -56,8 +60,6 @@ _INTERFACE_
 **ifconfig** configures network interfaces. It displays and modifies IP addresses, netmasks, and interface status.
 
 The tool is being replaced by ip command but remains widely used. It shows interface statistics and configuration.
-
-ifconfig manages network interfaces.
 
 # CAVEATS
 

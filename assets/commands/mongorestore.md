@@ -1,3 +1,7 @@
+# TAGLINE
+
+restores MongoDB data from mongodump output
+
 # TLDR
 
 **Restore from dump directory**

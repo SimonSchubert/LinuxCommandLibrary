@@ -1,3 +1,7 @@
+# TAGLINE
+
+script that provides system power management and session control for the i3
+
 # TLDR
 
 **Log out** of i3

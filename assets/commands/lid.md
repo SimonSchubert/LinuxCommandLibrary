@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays a user's groups or a group's users
+
 # TLDR
 
 List **groups** for a user

@@ -1,3 +1,7 @@
+# TAGLINE
+
+AUR helper and pacman wrapper for Arch Linux
+
 # TLDR
 
 **Synchronize** and update all packages

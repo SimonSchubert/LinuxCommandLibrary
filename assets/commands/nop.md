@@ -1,3 +1,7 @@
+# TAGLINE
+
+no-operation command
+
 # TLDR
 
 **Do nothing**
@@ -25,8 +29,6 @@ _ARGUMENTS_
 **nop** is a no-operation command. It does nothing and exits successfully.
 
 The tool is a placeholder. Useful in scripts where a command is required but no action needed.
-
-nop does nothing.
 
 # CAVEATS
 

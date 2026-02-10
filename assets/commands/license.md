@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates open source license files
+
 # TLDR
 
 **List licenses**
@@ -50,8 +54,6 @@ _COMMAND_
 **license** generates open source license files. It supports common licenses like MIT, Apache, GPL, and BSD.
 
 The tool outputs license text to stdout. Redirect to create LICENSE files for projects.
-
-license generates license files.
 
 # CAVEATS
 

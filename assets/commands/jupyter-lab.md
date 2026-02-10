@@ -1,3 +1,7 @@
+# TAGLINE
+
+CLI for JupyterLab, the next-generation web interface for Project
+
 # TLDR
 
 **Start JupyterLab**

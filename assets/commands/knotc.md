@@ -1,3 +1,7 @@
+# TAGLINE
+
+control utility for Knot DNS server
+
 # TLDR
 
 **Check server status**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+administers Neo4j databases
+
 # TLDR
 
 **Dump database**
@@ -56,8 +60,6 @@ _COMMAND_
 **neo4j-admin** administers Neo4j databases. It handles backup, restore, and maintenance.
 
 The tool manages graph databases. Essential for Neo4j operations.
-
-neo4j-admin manages Neo4j database.
 
 # CAVEATS
 

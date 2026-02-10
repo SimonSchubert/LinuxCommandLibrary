@@ -1,3 +1,7 @@
+# TAGLINE
+
+open-source note-taking application supporting Markdown
+
 # TLDR
 
 **Start Joplin terminal app**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+login to Netlify
+
 # TLDR
 
 **Login to Netlify**
@@ -67,8 +71,6 @@ _COMMAND_
 **netlify** is the Netlify CLI. It deploys and manages sites on Netlify platform.
 
 The tool handles deployments. Supports serverless functions and local development.
-
-netlify is Netlify deployment CLI.
 
 # CAVEATS
 

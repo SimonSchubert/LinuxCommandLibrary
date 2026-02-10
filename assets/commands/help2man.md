@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates man pages from program --help and --version output
+
 # TLDR
 
 **Generate man page**
@@ -48,8 +52,6 @@ _EXECUTABLE_
 **help2man** generates man pages from program --help and --version output. It creates basic documentation automatically from existing help text.
 
 The tool produces minimal man pages suitable for programs with standard help output. Additional content can be included via include files.
-
-help2man creates man pages from --help output.
 
 # CAVEATS
 

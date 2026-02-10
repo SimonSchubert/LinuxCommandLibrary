@@ -1,3 +1,7 @@
+# TAGLINE
+
+controls the overall networking state managed by NetworkManager
+
 # TLDR
 
 Show the **networking status** of NetworkManager

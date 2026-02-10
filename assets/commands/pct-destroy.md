@@ -1,3 +1,7 @@
+# TAGLINE
+
+removes a Proxmox LXC container and its associated storage
+
 # TLDR
 
 **Destroy** container

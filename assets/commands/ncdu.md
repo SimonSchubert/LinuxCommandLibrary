@@ -1,3 +1,7 @@
+# TAGLINE
+
+interactive disk usage analyzer with an ncurses interface
+
 # TLDR
 
 **Analyze disk usage** of current directory

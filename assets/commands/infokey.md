@@ -1,3 +1,7 @@
+# TAGLINE
+
+compiles custom key bindings for the info reader
+
 # TLDR
 
 **Compile key bindings**
@@ -35,8 +39,6 @@ _FILE_
 **infokey** compiles custom key bindings for the info reader. It transforms text configuration into binary format.
 
 The input file defines key sequences and their actions. Custom bindings override default info navigation.
-
-infokey compiles info key bindings.
 
 # CAVEATS
 

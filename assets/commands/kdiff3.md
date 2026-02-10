@@ -1,3 +1,7 @@
+# TAGLINE
+
+file and directory comparison and merge tool
+
 # TLDR
 
 **Compare two files**

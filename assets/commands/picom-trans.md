@@ -1,3 +1,7 @@
+# TAGLINE
+
+sets window transparency for the picom compositor
+
 # TLDR
 
 **Set window transparency**

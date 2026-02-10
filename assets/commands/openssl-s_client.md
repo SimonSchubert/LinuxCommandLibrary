@@ -1,3 +1,7 @@
+# TAGLINE
+
+TLS/SSL client for testing and debugging connections
+
 # TLDR
 
 **Connect to HTTPS server**

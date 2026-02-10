@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal RSS/Atom feed reader forked from Newsbeuter
+
 # TLDR
 
 **Start newsboat**

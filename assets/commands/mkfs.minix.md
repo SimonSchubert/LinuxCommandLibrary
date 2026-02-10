@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates a Minix filesystem on a device, typically a hard disk partition
+
 # TLDR
 
 Create a **Minix filesystem** inside partition Y on device X

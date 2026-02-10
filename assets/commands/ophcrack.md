@@ -1,3 +1,7 @@
+# TAGLINE
+
+windows password cracker that uses rainbow tables to recover passwords from LM
+
 # TLDR
 
 **Crack passwords from a pwdump file** using rainbow tables

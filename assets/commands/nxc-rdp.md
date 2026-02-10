@@ -1,3 +1,7 @@
+# TAGLINE
+
+netExec RDP module
+
 # TLDR
 
 **Check RDP credentials**
@@ -48,8 +52,6 @@ _TARGET_
 **nxc rdp** is the NetExec RDP module. Tests Remote Desktop credentials.
 
 The tool validates RDP access. Part of NetExec suite.
-
-nxc rdp tests RDP servers.
 
 # CAVEATS
 

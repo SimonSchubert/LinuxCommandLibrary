@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs a program with namespaces of another process
+
 # TLDR
 
 Run command in **all namespaces** of a process

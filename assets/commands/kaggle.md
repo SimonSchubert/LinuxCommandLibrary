@@ -1,3 +1,7 @@
+# TAGLINE
+
+CLI for Kaggle, a data science competition platform
+
 # TLDR
 
 **Download competition files**

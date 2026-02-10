@@ -1,3 +1,7 @@
+# TAGLINE
+
+analyzes Microsoft Office documents to detect potential security issues
+
 # TLDR
 
 **Analyze Office document**

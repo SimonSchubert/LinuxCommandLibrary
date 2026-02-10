@@ -1,3 +1,7 @@
+# TAGLINE
+
+kotlin compiler
+
 # TLDR
 
 **Compile Kotlin file**
@@ -49,11 +53,9 @@ _FILES_
 
 # DESCRIPTION
 
-**kotlinc** is the Kotlin compiler. It compiles Kotlin source files to JVM bytecode.
+**kotlinc** is the command-line Kotlin compiler that translates Kotlin source files (.kt) into JVM bytecode. It can produce either standalone JAR files with the Kotlin runtime bundled via the `-include-runtime` flag, or output class files to a directory for integration with existing build pipelines.
 
-The compiler produces JAR files or class directories. It supports Java interop and various JVM targets.
-
-kotlinc compiles Kotlin code.
+The compiler supports full interoperability with Java, allowing Kotlin code to call Java libraries and vice versa. It accepts a target JVM version through the `-jvm-target` option, supports adding external dependencies via the classpath, and can compile multiple source files together. For larger projects, build tools like Gradle or Maven are typically preferred, but kotlinc is useful for quick compilation tasks, learning, and scripting workflows.
 
 # CAVEATS
 

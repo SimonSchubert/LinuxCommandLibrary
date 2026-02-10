@@ -1,3 +1,7 @@
+# TAGLINE
+
+pushes changes to Git remotes
+
 # TLDR
 
 **Push current bookmark**
@@ -46,8 +50,6 @@
 **jj git push** pushes changes to Git remotes. It converts jj bookmarks to Git branches for pushing.
 
 The command handles the translation between jj's model and Git refs. It supports selective or bulk pushing.
-
-jj git push pushes to Git.
 
 # CAVEATS
 

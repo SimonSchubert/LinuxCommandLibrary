@@ -1,3 +1,7 @@
+# TAGLINE
+
+CLI for NATS messaging system
+
 # TLDR
 
 **Publish a message**

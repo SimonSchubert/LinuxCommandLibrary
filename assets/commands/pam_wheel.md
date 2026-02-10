@@ -1,3 +1,7 @@
+# TAGLINE
+
+restricts su to wheel group
+
 # TLDR
 
 **Require wheel group for su**
@@ -39,8 +43,6 @@
 **pam_wheel** restricts su to wheel group. Controls root access.
 
 The module requires group membership. Traditional Unix security.
-
-pam_wheel limits su access.
 
 # CAVEATS
 

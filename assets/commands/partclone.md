@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates and restores partition images while skipping empty blocks, resulting
+
 # TLDR
 
 **Clone** partition to image file

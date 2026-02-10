@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages connected development boards
+
 # TLDR
 
 **List connected devices**

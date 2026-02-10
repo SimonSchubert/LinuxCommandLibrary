@@ -1,3 +1,7 @@
+# TAGLINE
+
+download files from Mega.nz
+
 # TLDR
 
 This command is an alias of [megatools-dl](/man/megatools-dl).

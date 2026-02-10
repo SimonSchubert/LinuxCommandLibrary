@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line interface to the MATE calculator, providing an interactive
+
 # TLDR
 
 Start an **interactive calculator** session

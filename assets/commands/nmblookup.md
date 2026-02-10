@@ -1,3 +1,7 @@
+# TAGLINE
+
+queries NetBIOS names and resolves them to IP addresses
+
 # TLDR
 
 **Lookup NetBIOS name**

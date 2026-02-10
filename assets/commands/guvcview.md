@@ -1,3 +1,7 @@
+# TAGLINE
+
+GTK+ webcam viewer and capture application
+
 # TLDR
 
 **Start webcam viewer**
@@ -52,8 +56,6 @@
 **guvcview** is a GTK+ webcam viewer and capture application. It works with UVC (USB Video Class) compatible webcams and provides controls for camera settings.
 
 The application supports video recording in various formats and photo capture. It exposes hardware controls like brightness, contrast, and exposure.
-
-guvcview views and captures from webcams.
 
 # CAVEATS
 

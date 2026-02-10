@@ -1,3 +1,7 @@
+# TAGLINE
+
+enables, disables, or verifies data checksums
+
 # TLDR
 
 **Enable checksums**

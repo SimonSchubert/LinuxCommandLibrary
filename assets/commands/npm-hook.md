@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages npm registry webhooks
+
 # TLDR
 
 **List hooks**
@@ -45,8 +49,6 @@ _COMMAND_
 **npm hook** manages npm registry webhooks. Triggers on package events.
 
 The command configures notifications. Useful for CI/CD integration.
-
-npm hook manages webhooks.
 
 # CAVEATS
 

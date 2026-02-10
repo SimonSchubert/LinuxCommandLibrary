@@ -1,3 +1,7 @@
+# TAGLINE
+
+interactive command-line HTTP client featuring autocomplete and syntax
+
 # TLDR
 
 Launch a session targeting **localhost**

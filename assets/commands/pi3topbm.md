@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts Atari Degas PI3 high-resolution monochrome images to PBM
+
 # TLDR
 
 **Convert Atari Degas PI3 to PBM**

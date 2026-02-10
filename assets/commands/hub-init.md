@@ -1,3 +1,7 @@
+# TAGLINE
+
+same as **git init** but extended with hub features
+
 # TLDR
 
 **Initialize repository and create on GitHub**

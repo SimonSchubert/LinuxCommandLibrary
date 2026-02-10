@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages kubeconfig files
+
 # TLDR
 
 **View config**
@@ -53,11 +57,9 @@
 
 # DESCRIPTION
 
-**kubectl config** manages kubeconfig files. It configures cluster access and switches between contexts.
+**kubectl config** manages kubeconfig files, which store the connection details, credentials, and preferences needed to interact with Kubernetes clusters. The kubeconfig file (located at ~/.kube/config by default, or specified via the KUBECONFIG environment variable) defines clusters, users, and contexts, where each context is a named combination of a cluster, a user, and an optional default namespace.
 
-The command handles multiple clusters and users. It modifies ~/.kube/config by default.
-
-kubectl config manages cluster access.
+The command provides subcommands for viewing the merged configuration, switching between contexts to target different clusters, setting default namespaces, and adding or modifying cluster and user entries. This is essential for developers and operators who work with multiple Kubernetes environments such as development, staging, and production clusters.
 
 # CAVEATS
 

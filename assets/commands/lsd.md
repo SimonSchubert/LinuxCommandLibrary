@@ -1,3 +1,7 @@
+# TAGLINE
+
+modern ls replacement
+
 # TLDR
 
 **List files**
@@ -63,8 +67,6 @@ _FILES_
 **lsd** is a modern ls replacement. It adds colors, icons, and a tree view to directory listings.
 
 The tool is written in Rust. It's compatible with ls while adding visual enhancements.
-
-lsd is ls with colors and icons.
 
 # CAVEATS
 

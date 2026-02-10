@@ -1,3 +1,7 @@
+# TAGLINE
+
+describes image format and characteristics
+
 # TLDR
 
 **Show image info**
@@ -49,8 +53,6 @@ _FILES_
 **identify** describes image format and characteristics. It shows dimensions, color depth, format, and other metadata.
 
 The tool is part of ImageMagick. It reads many image formats and provides detailed technical information about images.
-
-identify shows image information.
 
 # CAVEATS
 

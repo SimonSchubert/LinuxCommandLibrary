@@ -1,3 +1,7 @@
+# TAGLINE
+
+automates Laravel project creation
+
 # TLDR
 
 **Create new Laravel project**
@@ -52,8 +56,6 @@ _NAME_
 **lambo** automates Laravel project creation. It runs multiple setup steps with a single command.
 
 The tool handles git init, composer install, and common configurations. It streamlines new project setup.
-
-lambo creates Laravel projects.
 
 # CAVEATS
 

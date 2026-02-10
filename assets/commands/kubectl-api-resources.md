@@ -1,3 +1,7 @@
+# TAGLINE
+
+lists all resource types available in the Kubernetes cluster
+
 # TLDR
 
 **List all API resources**

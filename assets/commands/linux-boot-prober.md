@@ -1,3 +1,7 @@
+# TAGLINE
+
+probes a partition for bootable Linux operating systems
+
 # TLDR
 
 **Probe** partition for bootable systems

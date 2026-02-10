@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts text files from one character encoding to another
+
 # TLDR
 
 **Convert file** from UTF-8 to ISO-8859-1

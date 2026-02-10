@@ -1,3 +1,7 @@
+# TAGLINE
+
+finds vulnerabilities in dependencies
+
 # TLDR
 
 **Scan directory**
@@ -49,8 +53,6 @@
 **osv-scanner** finds vulnerabilities in dependencies. Uses OSV database.
 
 The tool scans lockfiles and SBOMs. Open source vulnerability detection.
-
-osv-scanner detects vulnerabilities.
 
 # CAVEATS
 

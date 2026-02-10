@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates JSON from shell arguments
+
 # TLDR
 
 **Create JSON object**
@@ -56,8 +60,6 @@ _KEY:=VALUE_
 **jo** creates JSON from shell arguments. It builds objects and arrays from command-line key-value pairs.
 
 The tool enables JSON generation in shell scripts. Type hints distinguish strings from numbers and booleans.
-
-jo generates JSON from shell.
 
 # CAVEATS
 

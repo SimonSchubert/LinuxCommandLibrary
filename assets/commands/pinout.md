@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays an ASCII diagram of the GPIO header on Raspberry Pi boards
+
 # TLDR
 
 Display **GPIO pinout** diagram

@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays directory contents in tree format using GVFS
+
 # TLDR
 
 **Show directory tree**
@@ -39,8 +43,6 @@ _LOCATION_
 **gvfs-tree** displays directory contents in tree format using GVFS. It shows hierarchical structure of local and remote directories.
 
 The tool visualizes directory trees across GVFS backends, providing a unified view of local and networked filesystems.
-
-gvfs-tree shows directory trees via GVFS.
 
 # CAVEATS
 

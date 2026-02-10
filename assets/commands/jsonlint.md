@@ -1,3 +1,7 @@
+# TAGLINE
+
+validates and formats JSON files
+
 # TLDR
 
 **Validate JSON file**

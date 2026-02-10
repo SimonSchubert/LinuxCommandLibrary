@@ -1,3 +1,7 @@
+# TAGLINE
+
+provides fast file synchronization and network forwarding for development
+
 # TLDR
 
 **Create sync session**

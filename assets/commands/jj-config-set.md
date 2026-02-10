@@ -1,3 +1,7 @@
+# TAGLINE
+
+sets configuration values in Jujutsu config files
+
 # TLDR
 
 **Set user config value**

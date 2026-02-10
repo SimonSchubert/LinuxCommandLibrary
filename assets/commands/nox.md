@@ -1,3 +1,7 @@
+# TAGLINE
+
+python automation tool similar to tox
+
 # TLDR
 
 **Run default session**
@@ -51,8 +55,6 @@
 # DESCRIPTION
 
 **Nox** is a Python automation tool similar to tox. It automates testing across multiple Python versions and manages virtual environments for test sessions.
-
-Sessions are defined in noxfile.py using Python functions.
 
 # NOXFILE EXAMPLE
 

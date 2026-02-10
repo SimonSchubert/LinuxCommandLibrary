@@ -1,3 +1,7 @@
+# TAGLINE
+
+JavaScript testing framework with focus on simplicity
+
 # TLDR
 
 **Run all tests**

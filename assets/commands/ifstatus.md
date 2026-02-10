@@ -1,3 +1,7 @@
+# TAGLINE
+
+OpenWRT utility that displays network interface status in JSON format
+
 # TLDR
 
 Display **interface status** in JSON format

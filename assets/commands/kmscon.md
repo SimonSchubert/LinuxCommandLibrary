@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal emulator that runs on the Linux console using the kernel mode setting
+
 # TLDR
 
 **Start** kmscon on the first available TTY

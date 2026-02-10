@@ -1,3 +1,7 @@
+# TAGLINE
+
+performs static code analysis on PlatformIO projects
+
 # TLDR
 
 **Run static analysis**

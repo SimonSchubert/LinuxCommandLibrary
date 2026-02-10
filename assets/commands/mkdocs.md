@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates documentation websites
+
 # TLDR
 
 **Create new project**
@@ -56,8 +60,6 @@ _COMMAND_
 **mkdocs** generates documentation websites. It builds static sites from Markdown files.
 
 The tool is designed for project documentation. Supports themes and plugins.
-
-mkdocs builds documentation sites.
 
 # CAVEATS
 

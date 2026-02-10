@@ -1,3 +1,7 @@
+# TAGLINE
+
+checks connectivity to npm registry
+
 # TLDR
 
 **Ping npm registry**

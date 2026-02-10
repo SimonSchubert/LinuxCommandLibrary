@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays information about image files
+
 # TLDR
 
 **Show image information**

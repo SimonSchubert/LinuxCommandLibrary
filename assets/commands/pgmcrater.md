@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates synthetic terrain with impact craters as grayscale heightmap
+
 # TLDR
 
 **Generate crater terrain**

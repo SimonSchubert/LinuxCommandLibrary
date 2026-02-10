@@ -1,3 +1,7 @@
+# TAGLINE
+
+queries the NTP daemon for status and configuration information
+
 # TLDR
 
 Start **ntpq in interactive mode**

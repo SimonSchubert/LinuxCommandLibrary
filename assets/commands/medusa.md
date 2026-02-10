@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast, parallel, modular login brute-forcer for network services
+
 # TLDR
 
 **Brute-force SSH login** with a password list

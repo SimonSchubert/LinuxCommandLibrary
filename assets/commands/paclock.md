@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages the libalpm database lock file used by pacman to prevent simultaneous
+
 # TLDR
 
 **Lock** the database

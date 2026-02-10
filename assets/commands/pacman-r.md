@@ -1,3 +1,7 @@
+# TAGLINE
+
+short form of **pacman --remove**, which removes packages from the system
+
 # TLDR
 
 This command is an alias of **pacman --remove**

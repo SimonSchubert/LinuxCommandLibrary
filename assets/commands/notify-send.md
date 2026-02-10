@@ -1,3 +1,7 @@
+# TAGLINE
+
+sends desktop notifications
+
 # TLDR
 
 **Send notification**
@@ -56,8 +60,6 @@ _BODY_
 **notify-send** sends desktop notifications. Uses the desktop notification system.
 
 The tool displays popup messages. Part of libnotify for GNOME and other desktops.
-
-notify-send creates desktop popups.
 
 # CAVEATS
 

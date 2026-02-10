@@ -1,3 +1,7 @@
+# TAGLINE
+
+merges vector datasets
+
 # TLDR
 
 **Merge shapefiles**
@@ -45,8 +49,6 @@
 **ogrmerge.py** merges vector datasets. Combines multiple files into one.
 
 The script consolidates geospatial data. Part of GDAL Python utilities.
-
-ogrmerge.py merges vector files.
 
 # CAVEATS
 

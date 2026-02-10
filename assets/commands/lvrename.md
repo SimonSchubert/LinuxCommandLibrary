@@ -1,3 +1,7 @@
+# TAGLINE
+
+renames a logical volume within its volume group
+
 # TLDR
 
 Rename using **full paths**

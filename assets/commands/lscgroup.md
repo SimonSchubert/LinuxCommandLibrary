@@ -1,3 +1,7 @@
+# TAGLINE
+
+lists cgroups in the system
+
 # TLDR
 
 **List all cgroups**
@@ -43,8 +47,6 @@ _CONTROLLER_
 **lscgroup** lists cgroups in the system. Cgroups control resource allocation for processes.
 
 The tool shows the cgroup hierarchy for controllers like cpu, memory, and blkio.
-
-lscgroup lists control groups.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+moves print jobs between queues
+
 # TLDR
 
 **Move job to another printer**
@@ -35,8 +39,6 @@ _DESTINATION_
 **lpmove** moves print jobs between queues. It transfers jobs from one printer to another.
 
 The tool is useful when a printer fails or needs maintenance. Jobs continue waiting in the new queue.
-
-lpmove transfers print jobs.
 
 # CAVEATS
 

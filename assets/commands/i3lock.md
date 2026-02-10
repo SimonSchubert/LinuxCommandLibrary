@@ -1,3 +1,7 @@
+# TAGLINE
+
+simple screen locker
+
 # TLDR
 
 **Lock screen**
@@ -59,8 +63,6 @@
 **i3lock** is a simple screen locker. It displays a blank screen or image and requires password to unlock.
 
 The locker integrates with i3 window manager but works with any X11 session. It provides security with minimal interface.
-
-i3lock locks the X11 screen.
 
 # CAVEATS
 

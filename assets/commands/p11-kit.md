@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages PKCS#11 modules
+
 # TLDR
 
 **List modules**
@@ -45,8 +49,6 @@
 **p11-kit** manages PKCS#11 modules. Provides unified access to crypto tokens.
 
 The tool configures module loading. Handles certificate extraction.
-
-p11-kit manages PKCS#11.
 
 # CAVEATS
 

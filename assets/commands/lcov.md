@@ -1,3 +1,7 @@
+# TAGLINE
+
+processes gcov code coverage data
+
 # TLDR
 
 **Capture coverage data**
@@ -56,8 +60,6 @@
 **lcov** processes gcov code coverage data. It collects and manipulates coverage information.
 
 The tool generates coverage reports from gcc/gcov data. Use genhtml to create HTML reports.
-
-lcov manages code coverage data.
 
 # CAVEATS
 

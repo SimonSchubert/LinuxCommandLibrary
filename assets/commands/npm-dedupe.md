@@ -1,3 +1,7 @@
+# TAGLINE
+
+reduces duplication in the package tree by moving dependencies higher
+
 # TLDR
 
 **Deduplicate dependencies**

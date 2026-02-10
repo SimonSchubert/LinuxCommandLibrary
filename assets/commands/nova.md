@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line client for OpenStack Compute, which manages virtual machine
+
 # TLDR
 
 **List VMs** on current tenant

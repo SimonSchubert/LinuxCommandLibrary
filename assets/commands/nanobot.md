@@ -1,3 +1,7 @@
+# TAGLINE
+
+ultra-lightweight open-source AI assistant built in approximately 4,000 lines
+
 # TLDR
 
 **Start an interactive session**

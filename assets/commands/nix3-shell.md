@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates shells with packages
+
 # TLDR
 
 **Enter shell with package**
@@ -32,8 +36,6 @@ _INSTALLABLES_
 **nix3 shell** creates shells with packages. Alternative to nix-shell -p.
 
 The tool provides temporary environments. Packages available immediately.
-
-nix3 shell creates temp shells.
 
 # CAVEATS
 

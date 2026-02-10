@@ -1,3 +1,7 @@
+# TAGLINE
+
+starts a built-in HTTP server for the repository
+
 # TLDR
 
 **Start HTTP server**
@@ -52,8 +56,6 @@
 **hg serve** starts a built-in HTTP server for the repository. It provides read access via web browser and clone/pull access for other clients.
 
 The server is convenient for quick sharing but not for production. It supports multiple repositories with configuration.
-
-hg serve starts local repository server.
 
 # CAVEATS
 

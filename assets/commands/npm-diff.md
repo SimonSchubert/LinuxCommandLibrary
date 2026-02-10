@@ -1,3 +1,7 @@
+# TAGLINE
+
+shows differences between package versions or between local package and registry
+
 # TLDR
 
 **Compare versions of package**

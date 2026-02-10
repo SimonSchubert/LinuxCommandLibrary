@@ -1,3 +1,7 @@
+# TAGLINE
+
+obtains Kerberos tickets from the Key Distribution Center
+
 # TLDR
 
 **Get Kerberos ticket**

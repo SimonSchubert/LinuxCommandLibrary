@@ -1,3 +1,7 @@
+# TAGLINE
+
+compiles MPI C programs
+
 # TLDR
 
 **Compile MPI C program**

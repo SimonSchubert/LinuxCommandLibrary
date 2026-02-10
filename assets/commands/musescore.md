@@ -1,3 +1,7 @@
+# TAGLINE
+
+free music notation software
+
 # TLDR
 
 **Open MuseScore**
@@ -53,8 +57,6 @@ _FILES_
 **musescore** is free music notation software. It creates, plays, and prints sheet music.
 
 The tool supports many formats. MIDI, MusicXML, PDF export. Professional features.
-
-musescore is music notation editor.
 
 # CAVEATS
 

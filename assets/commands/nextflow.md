@@ -1,3 +1,7 @@
+# TAGLINE
+
+workflow orchestration tool
+
 # TLDR
 
 **Run pipeline**
@@ -60,8 +64,6 @@ _COMMAND_
 **nextflow** is a workflow orchestration tool. It runs data-driven computational pipelines.
 
 The tool handles parallel execution. Supports cloud and HPC deployments.
-
-nextflow is scientific workflow manager.
 
 # CAVEATS
 

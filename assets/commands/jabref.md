@@ -1,3 +1,7 @@
+# TAGLINE
+
+open-source bibliography reference manager
+
 # TLDR
 
 **Start JabRef**

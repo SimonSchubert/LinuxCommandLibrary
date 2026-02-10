@@ -1,3 +1,7 @@
+# TAGLINE
+
+ImageMagick utility for capturing X Window screenshots
+
 # TLDR
 
 **Capture entire screen**
@@ -59,8 +63,6 @@
 **import** is an ImageMagick utility for capturing X Window screenshots. It can capture the entire screen, specific windows, or user-selected regions.
 
 The tool supports various output formats determined by file extension. It integrates with the ImageMagick processing pipeline for immediate manipulation.
-
-import captures X Window screenshots.
 
 # CAVEATS
 

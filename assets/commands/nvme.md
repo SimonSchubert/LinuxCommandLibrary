@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages NVMe devices
+
 # TLDR
 
 **List NVMe devices**
@@ -56,8 +60,6 @@
 **nvme** manages NVMe devices. Provides admin and I/O commands.
 
 The tool controls NVMe SSDs. Low-level device management.
-
-nvme administers NVMe drives.
 
 # CAVEATS
 

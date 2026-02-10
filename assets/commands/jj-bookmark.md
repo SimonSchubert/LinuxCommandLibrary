@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages named references to revisions in Jujutsu
+
 # TLDR
 
 **Create bookmark at current revision**

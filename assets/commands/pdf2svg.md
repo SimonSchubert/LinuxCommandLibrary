@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PDF files to Scalable Vector Graphics format
+
 # TLDR
 
 **Convert PDF page to SVG**
@@ -35,10 +39,6 @@
 **pdf2svg** converts PDF files to Scalable Vector Graphics (SVG) format. It preserves vector graphics, text, and formatting, making the output suitable for web use and editing.
 
 Uses Poppler and Cairo libraries for high-quality conversion.
-
-# EXAMPLES
-
-```bash
 # Convert first page
 pdf2svg document.pdf page1.svg
 

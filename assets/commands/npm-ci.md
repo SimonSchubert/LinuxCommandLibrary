@@ -1,3 +1,7 @@
+# TAGLINE
+
+installs from package-lock
+
 # TLDR
 
 **Clean install from lockfile**
@@ -39,8 +43,6 @@
 **npm ci** installs from package-lock.json exactly. Designed for CI environments.
 
 The command removes node_modules first. Faster and more deterministic than npm install.
-
-npm ci is clean install.
 
 # CAVEATS
 

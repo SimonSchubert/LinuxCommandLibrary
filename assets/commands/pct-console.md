@@ -1,3 +1,7 @@
+# TAGLINE
+
+attaches to a container's TTY console, providing direct terminal access
+
 # TLDR
 
 **Attach** to container console

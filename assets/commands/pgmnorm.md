@@ -1,3 +1,7 @@
+# TAGLINE
+
+normalizes contrast in PGM grayscale images
+
 # TLDR
 
 **Normalize image contrast**

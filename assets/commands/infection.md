@@ -1,3 +1,7 @@
+# TAGLINE
+
+PHP mutation testing framework
+
 # TLDR
 
 **Run mutation testing**
@@ -56,8 +60,6 @@
 **infection** is a PHP mutation testing framework. It modifies code to test the effectiveness of your test suite.
 
 The tool creates mutants (modified code) and runs tests against them. Surviving mutants indicate weak test coverage.
-
-infection performs PHP mutation testing.
 
 # CAVEATS
 

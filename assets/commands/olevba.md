@@ -1,3 +1,7 @@
+# TAGLINE
+
+extracts and analyzes VBA macros
+
 # TLDR
 
 **Analyze Office document**
@@ -49,8 +53,6 @@ _FILE_
 **olevba** extracts and analyzes VBA macros. Detects malicious Office documents.
 
 The tool examines embedded macros. Part of oletools security suite.
-
-olevba analyzes Office macros.
 
 # CAVEATS
 

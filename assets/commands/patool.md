@@ -1,3 +1,7 @@
+# TAGLINE
+
+portable archive file manager that provides a unified interface for numerous
+
 # TLDR
 
 **Extract** an archive

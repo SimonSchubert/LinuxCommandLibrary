@@ -1,3 +1,7 @@
+# TAGLINE
+
+shows package funding information
+
 # TLDR
 
 **Show funding info**
@@ -39,8 +43,6 @@ _PACKAGE_
 **npm fund** shows package funding information. Displays how to support maintainers.
 
 The command lists funding URLs. Helps support open source projects.
-
-npm fund shows funding info.
 
 # CAVEATS
 

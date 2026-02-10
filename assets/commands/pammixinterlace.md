@@ -1,3 +1,7 @@
+# TAGLINE
+
+blends adjacent lines to reduce interlacing artifacts in video frames
+
 # TLDR
 
 **Blend interlaced video fields**

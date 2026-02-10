@@ -1,3 +1,7 @@
+# TAGLINE
+
+numbers lines from files or standard input
+
 # TLDR
 
 **Number non-blank lines** in a file

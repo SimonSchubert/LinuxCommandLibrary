@@ -1,3 +1,7 @@
+# TAGLINE
+
+interactively searches bibliographic databases for groff/troff refer
+
 # TLDR
 
 **Search bibliography database**

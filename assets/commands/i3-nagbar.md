@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays a notification bar for the i3 window manager
+
 # TLDR
 
 **Display a warning message**

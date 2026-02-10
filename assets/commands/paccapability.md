@@ -1,3 +1,7 @@
+# TAGLINE
+
+queries and displays the capabilities supported by libalpm
+
 # TLDR
 
 List all **available capabilities**

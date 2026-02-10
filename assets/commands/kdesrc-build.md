@@ -1,3 +1,7 @@
+# TAGLINE
+
+tool for building KDE software from source repositories
+
 # TLDR
 
 **Initialize** kdesrc-build

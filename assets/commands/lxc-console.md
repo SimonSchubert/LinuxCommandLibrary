@@ -1,3 +1,7 @@
+# TAGLINE
+
+launches a console for the specified container
+
 # TLDR
 
 **Connect** to container console

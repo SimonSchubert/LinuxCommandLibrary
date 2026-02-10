@@ -1,3 +1,7 @@
+# TAGLINE
+
+flux image generation tool built natively on Apple's **MLX**
+
 # TLDR
 
 **Generate an image from a text prompt**

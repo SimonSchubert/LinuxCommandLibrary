@@ -1,3 +1,7 @@
+# TAGLINE
+
+finds the process IDs of the named programs and prints them on standard output
+
 # TLDR
 
 List all **process IDs** with given name

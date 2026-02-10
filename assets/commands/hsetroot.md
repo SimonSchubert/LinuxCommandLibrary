@@ -1,3 +1,7 @@
+# TAGLINE
+
+sets the X11 root window background
+
 # TLDR
 
 **Set solid color background**
@@ -65,10 +69,6 @@
 **hsetroot** sets the X11 root window background. It's commonly used with minimal window managers that don't include wallpaper functionality, like dwm, bspwm, or i3.
 
 The tool supports solid colors, images with various scaling modes, and gradients. It's lightweight and scriptable.
-
-# EXAMPLES
-
-```bash
 # Gradient background
 hsetroot -add "#1a1b26" -add "#24283b" -gradient 45
 

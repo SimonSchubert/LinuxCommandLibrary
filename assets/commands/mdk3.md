@@ -1,3 +1,7 @@
+# TAGLINE
+
+wireless security testing tool
+
 # TLDR
 
 **Beacon flood attack**
@@ -52,8 +56,6 @@ _MODE_
 **mdk3** is a wireless security testing tool. It tests 802.11 network resilience.
 
 The tool performs various attack simulations for security auditing. Requires authorization.
-
-mdk3 tests wireless security.
 
 # CAVEATS
 

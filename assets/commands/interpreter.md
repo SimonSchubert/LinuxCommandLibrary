@@ -1,3 +1,7 @@
+# TAGLINE
+
+provides a natural language interface for computers, allowing language models
+
 # TLDR
 
 **Start an interactive session**

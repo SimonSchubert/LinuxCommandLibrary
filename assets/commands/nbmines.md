@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal minesweeper game
+
 # TLDR
 
 **Play minesweeper**
@@ -42,8 +46,6 @@
 **nbmines** is a terminal minesweeper game. Reveal cells while avoiding mines.
 
 The tool is the classic minesweeper. ncurses-based interface.
-
-nbmines is terminal minesweeper.
 
 # CAVEATS
 

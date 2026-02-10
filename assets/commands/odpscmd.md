@@ -1,3 +1,7 @@
+# TAGLINE
+
+maxCompute Console
+
 # TLDR
 
 **Start interactive console**
@@ -45,8 +49,6 @@
 **odpscmd** is MaxCompute Console. Interactive CLI for Alibaba Cloud big data.
 
 The tool provides SQL execution and management. Java-based client.
-
-odpscmd interacts with MaxCompute.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+mySQL server daemon
+
 # TLDR
 
 **Start MySQL server**
@@ -60,8 +64,6 @@
 **mysqld** is the MySQL server daemon. It handles database storage and query processing.
 
 The tool is the core database engine. Manages connections, queries, and data.
-
-mysqld is MySQL server daemon.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+mySQL client with autocompletion
+
 # TLDR
 
 **Connect to database**
@@ -56,8 +60,6 @@ _DATABASE_
 **mycli** is a MySQL client with autocompletion. It provides syntax highlighting and smart completion.
 
 The tool enhances MySQL CLI experience. Shows completion suggestions as you type.
-
-mycli is enhanced MySQL client.
 
 # CAVEATS
 

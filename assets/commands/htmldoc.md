@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts HTML files to PDF or PostScript
+
 # TLDR
 
 **Convert HTML to PDF**

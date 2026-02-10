@@ -1,3 +1,7 @@
+# TAGLINE
+
+partition manipulation program that supports both MBR and GPT partition tables
+
 # TLDR
 
 Start **interactive mode** with the specified disk selected

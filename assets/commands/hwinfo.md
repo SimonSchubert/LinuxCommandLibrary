@@ -1,3 +1,7 @@
+# TAGLINE
+
+probes for hardware present in the system and provides detailed information
+
 # TLDR
 
 Display **all** hardware information

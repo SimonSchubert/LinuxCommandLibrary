@@ -1,3 +1,7 @@
+# TAGLINE
+
+ncurses-based GPU process monitor, similar to htop but for GPUs
+
 # TLDR
 
 **Monitor all GPUs**

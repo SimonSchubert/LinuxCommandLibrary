@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PAM/PNM images to GIF format
+
 # TLDR
 
 **Convert PAM to GIF**

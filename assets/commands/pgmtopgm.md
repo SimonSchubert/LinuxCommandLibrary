@@ -1,3 +1,7 @@
+# TAGLINE
+
+copies PGM images, normalizing format
+
 # TLDR
 
 **Copy PGM image**

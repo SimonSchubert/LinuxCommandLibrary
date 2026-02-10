@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates IVs files for testing WEP cracking
+
 # TLDR
 
 **Generate IVs file**
@@ -41,8 +45,6 @@
 **makeivs-ng** generates IVs files for testing WEP cracking. It creates sample data for aircrack-ng.
 
 The tool is part of the aircrack-ng suite. Used for testing and educational purposes.
-
-makeivs-ng creates test IVs.
 
 # CAVEATS
 

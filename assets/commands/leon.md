@@ -1,3 +1,7 @@
+# TAGLINE
+
+open-source personal AI assistant that runs on your own server
+
 # TLDR
 
 **Install the Leon CLI globally**

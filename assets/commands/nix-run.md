@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs programs from Nix packages
+
 # TLDR
 
 **Run package from nixpkgs**
@@ -43,8 +47,6 @@ _ARGS_
 **nix run** runs programs from Nix packages. No installation required.
 
 The tool fetches and runs packages. Temporary execution without pollution.
-
-nix run executes Nix packages.
 
 # CAVEATS
 

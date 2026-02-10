@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs MinIO object storage
+
 # TLDR
 
 **Start server**
@@ -46,8 +50,6 @@ _PATH_
 **minio server** runs MinIO object storage. MinIO is S3-compatible storage server.
 
 The tool provides high-performance object storage. Supports erasure coding and distributed mode.
-
-minio-server provides S3 storage.
 
 # CAVEATS
 

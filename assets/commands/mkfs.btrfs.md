@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates a Btrfs on one or more devices
+
 # TLDR
 
 Create **Btrfs filesystem** on partition

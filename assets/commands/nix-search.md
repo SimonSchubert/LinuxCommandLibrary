@@ -1,3 +1,7 @@
+# TAGLINE
+
+searches for packages in Nix flakes
+
 # TLDR
 
 **Search packages**

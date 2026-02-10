@@ -1,3 +1,7 @@
+# TAGLINE
+
+graphviz layout program for squarified treemaps
+
 # TLDR
 
 **Create treemap visualization**

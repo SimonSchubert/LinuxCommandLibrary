@@ -1,3 +1,7 @@
+# TAGLINE
+
+sends a signal to all processes running the specified command
+
 # TLDR
 
 **Terminate all processes** with a specific name

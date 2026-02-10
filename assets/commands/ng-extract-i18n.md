@@ -1,3 +1,7 @@
+# TAGLINE
+
+extracts internationalization messages from Angular templates
+
 # TLDR
 
 **Extract messages**

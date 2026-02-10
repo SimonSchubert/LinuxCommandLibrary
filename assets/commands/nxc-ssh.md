@@ -1,3 +1,7 @@
+# TAGLINE
+
+tests SSH credentials and executes commands
+
 # TLDR
 
 **Test SSH credentials**

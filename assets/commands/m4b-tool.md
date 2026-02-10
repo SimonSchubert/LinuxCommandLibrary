@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates and manipulates M4B audiobooks
+
 # TLDR
 
 **Merge audiobooks**
@@ -52,8 +56,6 @@ _INPUT_
 **m4b-tool** creates and manipulates M4B audiobooks. It merges, splits, and adds chapters.
 
 The tool converts audio files to M4B format with metadata and chapter markers.
-
-m4b-tool manages audiobooks.
 
 # CAVEATS
 

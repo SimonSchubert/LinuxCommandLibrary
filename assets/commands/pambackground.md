@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates a bitmap mask identifying background pixels in a PAM/PNM image
+
 # TLDR
 
 **Create background mask from image**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+removes packages from node_modules and optionally from package
+
 # TLDR
 
 **Uninstall package**

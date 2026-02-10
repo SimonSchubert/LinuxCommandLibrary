@@ -1,3 +1,7 @@
+# TAGLINE
+
+CLI for interacting with language models
+
 # TLDR
 
 **Chat with default model**
@@ -56,8 +60,6 @@ _PROMPT_
 **llm** is a CLI for interacting with language models. It supports multiple providers including OpenAI and local models.
 
 The tool manages conversations, templates, and API keys. It supports piping and scripting.
-
-llm accesses language models.
 
 # CAVEATS
 

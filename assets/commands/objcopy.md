@@ -1,3 +1,7 @@
+# TAGLINE
+
+copies the contents of an object file to another, optionally transforming it
+
 # TLDR
 
 **Copy** data to another file

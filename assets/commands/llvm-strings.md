@@ -1,3 +1,7 @@
+# TAGLINE
+
+extracts printable strings from binary files
+
 # TLDR
 
 **Extract strings from binary**

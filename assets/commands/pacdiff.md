@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages configuration file conflicts created by pacman during package upgrades
+
 # TLDR
 
 **Review files** that need maintenance in interactive mode

@@ -1,3 +1,7 @@
+# TAGLINE
+
+refers to Winbind's ID mapping functionality in Samba
+
 # TLDR
 
 **Configure in smb.conf**
@@ -28,8 +32,6 @@
 **idmapwb** refers to Winbind's ID mapping functionality in Samba. It translates Windows SIDs to Unix UIDs and GIDs.
 
 The component uses configurable backends like tdb, ad, or rfc2307. It enables Unix systems to work with Windows domain users.
-
-idmapwb handles Winbind ID mapping.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+searches for processes by name or attributes, returning their PIDs
+
 # TLDR
 
 **Find process by name**

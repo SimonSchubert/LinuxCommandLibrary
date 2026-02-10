@@ -1,3 +1,7 @@
+# TAGLINE
+
+launches JupyterLab, an interactive development environment
+
 # TLDR
 
 **Start JupyterLab server**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+removes notifications from the mako notification daemon
+
 # TLDR
 
 Dismiss **most recent** notification

@@ -1,3 +1,7 @@
+# TAGLINE
+
+provides a web interface for hledger
+
 # TLDR
 
 **Start web interface**
@@ -52,8 +56,6 @@
 **hledger-web** provides a web interface for hledger. It offers a browser-based way to view reports, add transactions, and manage journals.
 
 The interface includes charts, reports, and transaction entry forms. It can run locally or be served on a network.
-
-hledger-web provides web-based accounting.
 
 # CAVEATS
 

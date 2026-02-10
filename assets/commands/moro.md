@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line work hours tracker
+
 # TLDR
 
 **Start work timer**
@@ -60,8 +64,6 @@ _COMMAND_
 **moro** is a command-line work hours tracker. It records work time in a simple way.
 
 The tool tracks start and end times. Calculates total work hours and breaks.
-
-moro is CLI work time tracker.
 
 # CAVEATS
 

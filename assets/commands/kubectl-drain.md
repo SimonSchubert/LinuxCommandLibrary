@@ -1,3 +1,7 @@
+# TAGLINE
+
+evicts pods from a node for maintenance
+
 # TLDR
 
 **Drain node**
@@ -53,11 +57,11 @@ _NODE_
 
 # DESCRIPTION
 
-**kubectl drain** evicts pods from a node for maintenance. It safely relocates workloads before node updates.
+**kubectl drain** safely evicts all pods from a node in preparation for maintenance operations such as kernel upgrades, hardware repairs, or Kubernetes version updates. It first cordons the node to prevent new pods from being scheduled, then uses the Eviction API to gracefully terminate each pod, allowing their controllers to reschedule them onto other available nodes.
 
-The command cordons and evicts pods. DaemonSet and mirror pods require special handling.
+The command respects PodDisruptionBudgets (PDBs), which means it will block if evicting a pod would violate the application's availability requirements. DaemonSet-managed pods are not evicted by default since they are expected to run on every node; use `--ignore-daemonsets` to proceed without error. Pods with local storage (emptyDir volumes) also require explicit acknowledgment via `--delete-emptydir-data`, as their data will be lost.
 
-kubectl drain prepares nodes for maintenance.
+After maintenance is complete, the node must be uncordoned with `kubectl uncordon` to resume accepting new pod scheduling. A `--timeout` flag allows setting a maximum wait time for the drain to complete before it is aborted.
 
 # CAVEATS
 

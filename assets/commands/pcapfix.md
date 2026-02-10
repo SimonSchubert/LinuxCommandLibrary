@@ -1,3 +1,7 @@
+# TAGLINE
+
+repairs corrupted packet captures
+
 # TLDR
 
 **Fix corrupted pcap**
@@ -42,8 +46,6 @@ _FILE_
 **pcapfix** repairs corrupted packet captures. Fixes pcap and pcapng files.
 
 The tool recovers network captures. Handles truncation and corruption.
-
-pcapfix repairs captures.
 
 # CAVEATS
 

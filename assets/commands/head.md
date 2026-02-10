@@ -1,3 +1,7 @@
+# TAGLINE
+
+outputs the first 10 lines of each FILE to standard output
+
 # TLDR
 
 Display **first 10 lines** of a file

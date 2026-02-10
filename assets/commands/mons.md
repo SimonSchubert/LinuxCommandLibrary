@@ -1,3 +1,7 @@
+# TAGLINE
+
+POSIX-compliant shell script for managing multi-monitor displays on X
+
 # TLDR
 
 Enable only the **primary monitor**

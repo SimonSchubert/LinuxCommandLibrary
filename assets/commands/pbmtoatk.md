@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PBM bitmaps to ATK raster format
+
 # TLDR
 
 **Convert PBM to ATK format**

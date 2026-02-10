@@ -1,3 +1,7 @@
+# TAGLINE
+
+museScore music notation software
+
 # TLDR
 
 **Open MuseScore**
@@ -53,8 +57,6 @@ _FILES_
 **mscore** is the MuseScore music notation software. It creates and edits sheet music.
 
 The tool supports MIDI, MusicXML, and audio export. Professional notation features.
-
-mscore is MuseScore notation editor.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+prints the number of processing units available to the current process
+
 # TLDR
 
 **Print number of processing units**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+input method framework for Linux
+
 # TLDR
 
 **Start IBus daemon**
@@ -49,8 +53,6 @@ _COMMAND_
 **IBus** (Intelligent Input Bus) is an input method framework for Linux. It enables typing in languages requiring complex input like CJK.
 
 The framework manages input method engines and provides a unified interface. It supports many languages and input systems.
-
-IBus handles multilingual text input.
 
 # CAVEATS
 

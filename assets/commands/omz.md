@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages Oh My Zsh
+
 # TLDR
 
 **Update Oh My Zsh**
@@ -56,8 +60,6 @@
 **omz** manages Oh My Zsh. Updates framework and manages plugins.
 
 The tool controls Zsh configuration. Part of Oh My Zsh.
-
-omz manages Oh My Zsh.
 
 # CAVEATS
 

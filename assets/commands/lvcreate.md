@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates a logical volume in an existing volume group
+
 # TLDR
 
 Create **10 GB** volume

@@ -1,3 +1,7 @@
+# TAGLINE
+
+autojump shell function for quick directory navigation
+
 # TLDR
 
 **Jump to directory**
@@ -46,8 +50,6 @@ _PATTERN_
 **j** is the autojump shell function for quick directory navigation. It learns from your cd habits and jumps to frequently visited directories.
 
 The tool maintains a weighted database of directories. Partial names match against this database for fast navigation.
-
-j is autojump's directory jumper.
 
 # CAVEATS
 

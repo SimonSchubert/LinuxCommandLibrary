@@ -1,3 +1,7 @@
+# TAGLINE
+
+captures screenshots from iOS devices
+
 # TLDR
 
 **Take screenshot**
@@ -42,8 +46,6 @@ _OUTPUT_
 **idevicescreenshot** captures screenshots from iOS devices. It saves the current screen as a PNG or TIFF file.
 
 The tool requires the device to be paired and trusted. Screenshots are taken at device resolution.
-
-idevicescreenshot captures iOS screens.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages user authentication files for Apache HTTP Server's basic authentication
+
 # TLDR
 
 **Create a new password file** with a user

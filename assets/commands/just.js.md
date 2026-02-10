@@ -1,3 +1,7 @@
+# TAGLINE
+
+small, embeddable V8 JavaScript runtime for Linux
+
 # TLDR
 
 Start a **REPL** (interactive shell)

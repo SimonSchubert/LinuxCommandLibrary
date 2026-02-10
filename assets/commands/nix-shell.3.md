@@ -1,3 +1,7 @@
+# TAGLINE
+
+enters development environments
+
 # TLDR
 
 **Development shell**
@@ -42,8 +46,6 @@ _PATH_
 **nix-shell** enters development environments. Another documentation variant.
 
 The command loads shell.nix. Provides buildInputs and environment.
-
-nix-shell loads dev shells.
 
 # CAVEATS
 

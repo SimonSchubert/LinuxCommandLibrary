@@ -1,3 +1,7 @@
+# TAGLINE
+
+provides FUSE access to GVFS mounts
+
 # TLDR
 
 **Start FUSE bridge**
@@ -38,8 +42,6 @@ _MOUNTPOINT_
 **gvfsd-fuse** provides FUSE access to GVFS mounts. It creates a filesystem view of GVFS-mounted resources, enabling non-GVFS-aware applications to access remote files.
 
 The daemon bridges GVFS backends to the standard filesystem interface. It makes SMB shares, FTP sites, and other mounts visible as regular directories.
-
-gvfsd-fuse bridges GVFS to FUSE.
 
 # CAVEATS
 

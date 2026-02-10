@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs large language models locally
+
 # TLDR
 
 **Run a model**
@@ -56,8 +60,6 @@
 **ollama** runs large language models locally. Manages model downloads and serving.
 
 The tool provides local LLM inference. Supports various open models.
-
-ollama runs LLMs locally.
 
 # CAVEATS
 

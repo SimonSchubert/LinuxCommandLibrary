@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages Nix flakes
+
 # TLDR
 
 **Show flake outputs**
@@ -45,8 +49,6 @@ _COMMAND_
 **nix3 flake** manages Nix flakes. Alternative name for nix flake commands.
 
 The tool handles flake.nix files. Manages reproducible package definitions.
-
-nix3 flake manages flakes.
 
 # CAVEATS
 

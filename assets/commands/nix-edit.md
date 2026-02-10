@@ -1,3 +1,7 @@
+# TAGLINE
+
+opens the Nix expression for a package in your editor
+
 # TLDR
 
 **Edit package definition**

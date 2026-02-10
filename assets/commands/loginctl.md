@@ -1,3 +1,7 @@
+# TAGLINE
+
+controls the systemd login manager
+
 # TLDR
 
 Print all **current sessions**

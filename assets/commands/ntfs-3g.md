@@ -1,3 +1,7 @@
+# TAGLINE
+
+mounts NTFS filesystems with read-write support
+
 # TLDR
 
 **Mount NTFS partition**
@@ -49,8 +53,6 @@ _MOUNT_POINT_
 **ntfs-3g** mounts NTFS filesystems with read-write support. FUSE-based driver.
 
 The tool enables Linux NTFS access. Full read-write capability.
-
-ntfs-3g mounts NTFS partitions.
 
 # CAVEATS
 

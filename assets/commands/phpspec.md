@@ -1,3 +1,7 @@
+# TAGLINE
+
+PHP specification framework
+
 # TLDR
 
 **Run specifications**
@@ -46,8 +50,6 @@
 **phpspec** is PHP specification framework. Behavior-driven development tool.
 
 The tool uses SpecBDD methodology. Design-first approach.
-
-phpspec specifies behavior.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+minimal terminal multiplexer
+
 # TLDR
 
 **Start mtm**

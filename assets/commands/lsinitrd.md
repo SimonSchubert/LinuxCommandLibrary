@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays the contents of an initramfs image
+
 # TLDR
 
 Show contents of **current kernel** initramfs

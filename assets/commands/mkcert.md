@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates locally-trusted certificates
+
 # TLDR
 
 **Install local CA**
@@ -53,8 +57,6 @@ _DOMAINS_
 **mkcert** creates locally-trusted certificates. It simplifies HTTPS for development.
 
 The tool installs a local CA and generates trusted certificates. No browser warnings.
-
-mkcert creates dev certificates.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+lists dependencies between object files
+
 # TLDR
 
 **Find library dependencies**
@@ -30,8 +34,6 @@ _FILES_
 **lorder** lists dependencies between object files. It outputs pairs showing which files depend on others.
 
 The output is typically piped to tsort to determine correct ordering for static libraries.
-
-lorder finds object dependencies.
 
 # CAVEATS
 

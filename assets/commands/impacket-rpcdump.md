@@ -1,3 +1,7 @@
+# TAGLINE
+
+enumerates RPC endpoints on a target system
+
 # TLDR
 
 **Dump RPC endpoints**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+graphical file search utility for the MATE desktop environment
+
 # TLDR
 
 Search files containing a **specific string** in their name

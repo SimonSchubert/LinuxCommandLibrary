@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line tool for Chef infrastructure automation
+
 # TLDR
 
 **Bootstrap node**
@@ -56,8 +60,6 @@
 **knife** is the command-line tool for Chef infrastructure automation. It manages nodes, cookbooks, and Chef server.
 
 The tool bootstraps nodes for configuration management. It uploads recipes and queries infrastructure.
-
-knife manages Chef infrastructure.
 
 # CAVEATS
 

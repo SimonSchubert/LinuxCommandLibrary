@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays PostgreSQL cluster control information
+
 # TLDR
 
 **Show cluster control data**

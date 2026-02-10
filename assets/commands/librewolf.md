@@ -1,3 +1,7 @@
+# TAGLINE
+
+privacy-focused Firefox fork with enhanced security defaults
+
 # TLDR
 
 **Start LibreWolf**

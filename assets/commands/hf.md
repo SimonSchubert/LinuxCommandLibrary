@@ -1,3 +1,7 @@
+# TAGLINE
+
+official command-line interface for Hugging Face Hub
+
 # TLDR
 
 **Log in to Hugging Face** Hub

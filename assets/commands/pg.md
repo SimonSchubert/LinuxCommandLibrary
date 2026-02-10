@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays text files one page at a time, similar to more and less
+
 # TLDR
 
 **View** a file page by page

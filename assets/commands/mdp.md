@@ -1,3 +1,7 @@
+# TAGLINE
+
+presents markdown files as slides
+
 # TLDR
 
 **Present slides**
@@ -49,8 +53,6 @@ _FILE_
 **mdp** presents markdown files as slides. It renders presentations in the terminal.
 
 The tool uses markdown syntax for slides. Slide breaks are indicated by horizontal rules.
-
-mdp presents markdown slides.
 
 # CAVEATS
 

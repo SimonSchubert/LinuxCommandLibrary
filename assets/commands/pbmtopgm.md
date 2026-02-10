@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PBM bitmap to PGM grayscale by averaging pixel regions
+
 # TLDR
 
 **Convert bitmap to grayscale**

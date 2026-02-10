@@ -1,3 +1,7 @@
+# TAGLINE
+
+sets or displays the targeted account, region, resource group, and Cloud
+
 # TLDR
 
 **Show current target**

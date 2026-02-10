@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays bandwidth usage on a network interface, broken down by connection
+
 # TLDR
 
 Show **bandwidth usage** on default interface

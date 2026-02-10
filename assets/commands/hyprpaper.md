@@ -1,3 +1,7 @@
+# TAGLINE
+
+official wallpaper utility for Hyprland
+
 # TLDR
 
 Start the **hyprpaper service**

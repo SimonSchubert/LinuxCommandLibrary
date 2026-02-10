@@ -1,3 +1,7 @@
+# TAGLINE
+
+data warehouse system for Hadoop
+
 # TLDR
 
 **Start Hive shell**
@@ -52,8 +56,6 @@
 **Hive** is a data warehouse system for Hadoop. It provides SQL-like query language (HiveQL) for querying large datasets stored in HDFS.
 
 The tool translates queries to MapReduce, Tez, or Spark jobs. It's used for data analysis and ETL on big data platforms.
-
-Hive queries data in Hadoop using SQL.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+small, fast system fetch utility written in Nim
+
 # TLDR
 
 Display **system information**

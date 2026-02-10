@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays all tags in the repository
+
 # TLDR
 
 **List all tags**

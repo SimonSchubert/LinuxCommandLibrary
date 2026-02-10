@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates license text for open source projects
+
 # TLDR
 
 **Generate MIT license**
@@ -50,8 +54,6 @@ _NAME_
 **licensor** generates license text for open source projects. It supports SPDX license identifiers.
 
 The tool outputs properly formatted license text with copyright holder and year filled in.
-
-licensor generates license text.
 
 # CAVEATS
 

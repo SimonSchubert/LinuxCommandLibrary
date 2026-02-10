@@ -1,3 +1,7 @@
+# TAGLINE
+
+high-performance TCP/HTTP load balancer and proxy
+
 # TLDR
 
 **Start HAProxy**
@@ -58,9 +62,9 @@
 
 # DESCRIPTION
 
-**HAProxy** is a high-performance TCP/HTTP load balancer and proxy. It distributes traffic across multiple servers, providing high availability, health checking, and SSL termination.
+**HAProxy** (High Availability Proxy) is a high-performance TCP/HTTP load balancer and reverse proxy that distributes incoming traffic across pools of backend servers. Its configuration is organized around frontends (which accept client connections on bound addresses and ports) and backends (which define the set of servers that handle requests, along with the balancing algorithm -- round-robin, least-connections, source-hash, and others). Active health checks continuously probe backend servers and automatically remove unhealthy nodes from rotation.
 
-HAProxy is widely used in production environments for its reliability, performance, and extensive feature set including ACLs, rate limiting, and detailed statistics.
+Beyond basic load balancing, HAProxy provides SSL/TLS termination, HTTP header manipulation, content-based routing via ACLs, connection rate limiting, stick tables for session persistence, and a real-time statistics dashboard. It operates in an event-driven, single-process architecture that can handle hundreds of thousands of concurrent connections with low latency and minimal resource consumption, making it a standard choice for high-traffic production environments.
 
 # CONFIG EXAMPLE
 

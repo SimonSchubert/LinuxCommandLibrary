@@ -1,3 +1,7 @@
+# TAGLINE
+
+utility for automatic hardware detection and driver management on Manjaro Linux
+
 # TLDR
 
 List **available** drivers

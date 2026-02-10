@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates an ext4 filesystem on a device
+
 # TLDR
 
 Create **ext4** filesystem

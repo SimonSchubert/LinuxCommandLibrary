@@ -1,3 +1,7 @@
+# TAGLINE
+
+multi-purpose brute-forcer with modular design
+
 # TLDR
 
 **Brute-force FTP login**

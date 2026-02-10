@@ -1,3 +1,7 @@
+# TAGLINE
+
+OpenBSD version of netcat
+
 # TLDR
 
 **Listen on port**
@@ -63,8 +67,6 @@ _PORT_
 **nc.openbsd** is the OpenBSD version of netcat. It provides secure networking features.
 
 The tool supports proxies and IPv6. More features than traditional netcat.
-
-nc.openbsd is OpenBSD netcat.
 
 # CAVEATS
 

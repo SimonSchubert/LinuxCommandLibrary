@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages the Nix flake registry
+
 # TLDR
 
 **List registries**

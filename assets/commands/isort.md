@@ -1,3 +1,7 @@
+# TAGLINE
+
+sorts Python imports alphabetically and separates them into sections
+
 # TLDR
 
 **Sort imports in file**
@@ -56,8 +60,6 @@
 **isort** sorts Python imports alphabetically and separates them into sections. It follows PEP 8 guidelines for import organization.
 
 The tool groups imports by standard library, third-party, and local. It integrates with editors and CI pipelines.
-
-isort sorts Python imports.
 
 # CAVEATS
 

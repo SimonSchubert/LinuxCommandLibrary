@@ -1,3 +1,7 @@
+# TAGLINE
+
+detects edges in a PGM grayscale image using the Sobel edge detection algorithm
+
 # TLDR
 
 **Detect edges in image**
@@ -25,11 +29,6 @@
 
 **pgmedge** detects edges in a PGM grayscale image using the Sobel edge detection algorithm. Output is a PGM where bright pixels indicate edges.
 
-Part of the Netpbm toolkit for image processing.
-
-# EXAMPLES
-
-```bash
 # Basic edge detection
 pgmedge photo.pgm > edges.pgm
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+discovers and fingerprints IPsec VPN servers
+
 # TLDR
 
 **Scan for IKE hosts**
@@ -52,8 +56,6 @@ _TARGETS_
 **ike-scan** discovers and fingerprints IPsec VPN servers. It sends IKE packets and analyzes responses to identify VPN implementations.
 
 The tool performs IKE protocol scanning for security assessment. It identifies vendor, version, and supported transforms.
-
-ike-scan scans for IPsec VPN servers.
 
 # CAVEATS
 

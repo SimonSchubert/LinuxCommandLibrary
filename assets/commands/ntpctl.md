@@ -1,3 +1,7 @@
+# TAGLINE
+
+queries the OpenNTPD daemon for synchronization status
+
 # TLDR
 
 **Show synchronization status**

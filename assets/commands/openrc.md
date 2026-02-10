@@ -1,3 +1,7 @@
+# TAGLINE
+
+service manager for OpenRC-based systems, providing an alternative to systemd
+
 # TLDR
 
 Change to a **specific runlevel**

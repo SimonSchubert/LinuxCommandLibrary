@@ -1,3 +1,7 @@
+# TAGLINE
+
+locks all virtual consoles and prevents unauthorized access to the system
+
 # TLDR
 
 **Lock** all consoles

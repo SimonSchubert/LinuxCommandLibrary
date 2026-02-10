@@ -1,3 +1,7 @@
+# TAGLINE
+
+decodes OPL printer format
+
 # TLDR
 
 **Decode OPL file**
@@ -35,8 +39,6 @@ _FILE_
 **opldecode** decodes OPL printer format. Converts to standard formats.
 
 The tool handles OPL proprietary format. Part of foo2zjs printer tools.
-
-opldecode converts OPL files.
 
 # CAVEATS
 

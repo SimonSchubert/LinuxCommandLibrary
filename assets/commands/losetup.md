@@ -1,3 +1,7 @@
+# TAGLINE
+
+sets up and controls loop devices, which allow regular files to be
+
 # TLDR
 
 **List** all loop devices

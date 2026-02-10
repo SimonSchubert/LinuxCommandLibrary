@@ -1,3 +1,7 @@
+# TAGLINE
+
+mongoDB database server daemon
+
 # TLDR
 
 **Start MongoDB server**
@@ -60,8 +64,6 @@
 **mongod** is the MongoDB database server daemon. It handles data requests and manages data storage.
 
 The tool is the core database process. Supports replication, sharding, and authentication.
-
-mongod is MongoDB server daemon.
 
 # CAVEATS
 

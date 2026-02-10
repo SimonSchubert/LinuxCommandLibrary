@@ -1,3 +1,7 @@
+# TAGLINE
+
+notifies users of new mail
+
 # TLDR
 
 **Check for new mail**
@@ -39,8 +43,6 @@
 **pam_mail** notifies users of new mail. Checks mail spool at login.
 
 The module displays mail notifications. Session login feature.
-
-pam_mail checks for mail.
 
 # CAVEATS
 

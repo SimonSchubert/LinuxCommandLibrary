@@ -1,3 +1,7 @@
+# TAGLINE
+
+machine code playground
+
 # TLDR
 
 **Assemble to object file**

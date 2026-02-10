@@ -1,3 +1,7 @@
+# TAGLINE
+
+general-purpose key processing tool
+
 # TLDR
 
 **View private key details**

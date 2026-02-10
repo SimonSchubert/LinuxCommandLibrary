@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays groff output in an X11 window
+
 # TLDR
 
 **View groff document**
@@ -42,8 +46,6 @@ _FILE_
 **gxditview** displays groff output in an X11 window. It provides on-screen preview of formatted documents without printing.
 
 The tool reads groff's intermediate output format and renders it graphically. It's invoked by groff -X or can read ditroff output directly.
-
-gxditview previews groff output in X11.
 
 # CAVEATS
 

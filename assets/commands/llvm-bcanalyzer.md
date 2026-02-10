@@ -1,3 +1,7 @@
+# TAGLINE
+
+analyzes LLVM bitcode files
+
 # TLDR
 
 **Analyze bitcode file**

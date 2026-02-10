@@ -1,3 +1,7 @@
+# TAGLINE
+
+open source MQTT message broker
+
 # TLDR
 
 **Start MQTT broker**
@@ -53,8 +57,6 @@
 **mosquitto** is an open source MQTT message broker. It implements MQTT protocol versions 5.0, 3.1.1, and 3.1.
 
 The tool handles publish/subscribe messaging. Lightweight and suitable for IoT applications.
-
-mosquitto is MQTT message broker.
 
 # CAVEATS
 

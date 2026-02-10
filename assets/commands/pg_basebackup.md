@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates a base backup of a PostgreSQL cluster
+
 # TLDR
 
 **Create backup**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+adds transactions from CSV or other files to a journal
+
 # TLDR
 
 **Import transactions**
@@ -45,8 +49,6 @@ _FILES_
 **hledger import** adds transactions from CSV or other files to a journal. It uses rules files to map CSV columns to journal fields.
 
 The command detects duplicates and only imports new transactions by default. Rules files define field mappings and transformations.
-
-hledger import converts CSV to journal entries.
 
 # CAVEATS
 

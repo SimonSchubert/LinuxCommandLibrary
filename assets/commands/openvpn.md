@@ -1,3 +1,7 @@
+# TAGLINE
+
+open-source VPN solution using SSL/TLS for key exchange
+
 # TLDR
 
 **Connect using config file**

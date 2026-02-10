@@ -1,3 +1,7 @@
+# TAGLINE
+
+scans all SCSI, IDE, and other disks visible to the system and lists devices
+
 # TLDR
 
 **Scan all devices** that may be used as physical volumes

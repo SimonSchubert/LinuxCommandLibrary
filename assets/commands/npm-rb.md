@@ -1,3 +1,7 @@
+# TAGLINE
+
+rebuilds packages with native addons
+
 # TLDR
 
 **Rebuild all packages**
@@ -32,8 +36,6 @@ _PACKAGES_
 **npm rb** rebuilds packages with native addons. Alias for npm rebuild.
 
 The command recompiles binaries. Useful after Node.js version change.
-
-npm rb rebuilds native modules.
 
 # CAVEATS
 

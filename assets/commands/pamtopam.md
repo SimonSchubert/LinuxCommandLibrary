@@ -1,3 +1,7 @@
+# TAGLINE
+
+copies PAM images, normalizing format details
+
 # TLDR
 
 **Normalize PAM image format**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+simple animated GIF screen recorder for Linux
+
 # TLDR
 
 **Start recording**
@@ -40,10 +44,6 @@
 # DESCRIPTION
 
 **peek** is a simple animated GIF screen recorder for Linux. It provides an easy-to-use interface for creating screen recordings, particularly useful for documentation and bug reports.
-
-# EXAMPLES
-
-```bash
 # Start peek GUI
 peek
 

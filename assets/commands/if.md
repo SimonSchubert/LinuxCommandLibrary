@@ -1,3 +1,7 @@
+# TAGLINE
+
+shell conditional statement
+
 # TLDR
 
 **Basic if statement**
@@ -46,8 +50,6 @@ _CONDITION_
 **if** is a shell conditional statement. It executes commands based on the exit status of test conditions.
 
 The construct supports multiple conditions with elif and a fallback else clause. It's fundamental to shell scripting.
-
-if provides conditional execution.
 
 # CAVEATS
 

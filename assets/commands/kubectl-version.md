@@ -1,3 +1,7 @@
+# TAGLINE
+
+shows client and server versions
+
 # TLDR
 
 **Show versions**
@@ -43,8 +47,6 @@
 **kubectl version** shows client and server versions. It displays the kubectl and Kubernetes API server versions.
 
 The command verifies version compatibility. Client and server should be within one minor version.
-
-kubectl version shows versions.
 
 # CAVEATS
 

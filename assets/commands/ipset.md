@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates and manages IP sets, which are framework for storing IP
+
 # TLDR
 
 **Create** an empty IP set

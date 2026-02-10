@@ -1,3 +1,7 @@
+# TAGLINE
+
+resizes PAM/PNM images using high-quality resampling
+
 # TLDR
 
 **Scale to specific size**
@@ -47,8 +51,6 @@
 # DESCRIPTION
 
 **pamscale** resizes PAM/PNM images using high-quality resampling. It can scale by factor, to specific dimensions, or fit within a bounding box while preserving aspect ratio.
-
-Part of the Netpbm toolkit.
 
 # FILTERS
 

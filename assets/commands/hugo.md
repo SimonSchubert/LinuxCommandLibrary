@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast static site generator written in Go
+
 # TLDR
 
 **Create new site**
@@ -62,8 +66,6 @@ _COMMAND_
 **Hugo** is a fast static site generator written in Go. It builds websites from Markdown content using templates and themes.
 
 Hugo is extremely fast, building thousands of pages in seconds. It supports themes, taxonomies, and shortcodes for complex sites.
-
-Hugo generates static websites quickly.
 
 # CAVEATS
 

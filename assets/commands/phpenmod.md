@@ -1,3 +1,7 @@
+# TAGLINE
+
+enables PHP extensions on Debian-based systems by creating symbolic
+
 # TLDR
 
 **Enable** extension for all PHP versions and SAPIs

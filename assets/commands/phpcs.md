@@ -1,3 +1,7 @@
+# TAGLINE
+
+PHP CodeSniffer
+
 # TLDR
 
 **Check file**
@@ -49,8 +53,6 @@ _FILES_
 **phpcs** is PHP CodeSniffer. Detects coding standard violations.
 
 The tool checks code style. Supports PSR, PEAR, and custom standards.
-
-phpcs checks PHP style.
 
 # CAVEATS
 

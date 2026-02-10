@@ -1,3 +1,7 @@
+# TAGLINE
+
+opens a resource's configuration in your default editor
+
 # TLDR
 
 **Edit deployment in editor**

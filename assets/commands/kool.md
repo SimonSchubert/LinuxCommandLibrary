@@ -1,3 +1,7 @@
+# TAGLINE
+
+simplifies Docker-based development environments
+
 # TLDR
 
 **Start environment**
@@ -56,8 +60,6 @@
 **kool** simplifies Docker-based development environments. It wraps Docker Compose with developer-friendly commands.
 
 The tool provides presets for common frameworks. It standardizes workflows across projects.
-
-kool simplifies Docker development.
 
 # CAVEATS
 

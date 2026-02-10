@@ -1,3 +1,7 @@
+# TAGLINE
+
+minimal certificate authority application
+
 # TLDR
 
 **Sign certificate request**
@@ -53,8 +57,6 @@
 # DESCRIPTION
 
 **openssl ca** is a minimal certificate authority application. It signs certificate requests, maintains a database of issued certificates, and generates Certificate Revocation Lists.
-
-Intended for testing and small-scale PKI deployments.
 
 # CA SETUP
 

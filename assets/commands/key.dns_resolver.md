@@ -1,3 +1,7 @@
+# TAGLINE
+
+resolves DNS keys for the kernel keyring
+
 # TLDR
 
 **Resolve DNS key**
@@ -25,11 +29,9 @@ _DOMAIN_
 
 # DESCRIPTION
 
-**key.dns_resolver** resolves DNS keys for the kernel keyring. It's used for DNSSEC validation.
+**key.dns_resolver** is a Linux kernel utility that resolves DNS security keys and stores them in the kernel keyring. It is primarily used for DNSSEC validation, fetching DNSKEY and DS records from DNS servers and making them available to kernel subsystems that need to verify the authenticity of DNS responses.
 
-The tool fetches DNSKEY records and adds them to the kernel keyring. It supports DNS-based authentication.
-
-key.dns_resolver fetches DNS keys.
+The tool operates as a helper program invoked by the kernel's key management facility (request-key) rather than being called directly by users in most cases. When the kernel needs a DNS key for authentication purposes, it triggers key.dns_resolver to perform the lookup and populate the keyring automatically. This mechanism supports DNS-based authentication of named entities (DANE) and other security protocols that rely on cryptographic keys published in DNS.
 
 # CAVEATS
 

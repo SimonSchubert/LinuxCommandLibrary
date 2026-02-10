@@ -1,3 +1,7 @@
+# TAGLINE
+
+tezos blockchain client
+
 # TLDR
 
 **Get account balance**
@@ -49,8 +53,6 @@
 **octez-client** is the Tezos blockchain client. Manages accounts and transactions.
 
 The tool interacts with Tezos network. Supports smart contracts.
-
-octez-client manages Tezos accounts.
 
 # CAVEATS
 

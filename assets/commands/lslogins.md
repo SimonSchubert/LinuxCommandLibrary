@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays detailed information about user accounts on a Linux system including
+
 # TLDR
 
 Display **all users**

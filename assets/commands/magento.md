@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line interface for Magento/Adobe Commerce e-commerce platform
+
 # TLDR
 
 **List available commands**

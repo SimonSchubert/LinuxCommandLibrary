@@ -1,3 +1,7 @@
+# TAGLINE
+
+merges multiple laid-out graphs into a single combined graph
+
 # TLDR
 
 **Merge layout graphs**

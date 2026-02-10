@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts between terminal encoding and application encoding
+
 # TLDR
 
 **Run command with encoding conversion**
@@ -49,8 +53,6 @@ _COMMAND_
 **luit** converts between terminal encoding and application encoding. It enables UTF-8 terminals to run legacy apps.
 
 The tool acts as a filter between the terminal and the application, translating character encodings.
-
-luit converts terminal encodings.
 
 # CAVEATS
 

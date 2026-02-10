@@ -1,3 +1,7 @@
+# TAGLINE
+
+high-performance packet sniffer
+
 # TLDR
 
 **Capture packets**
@@ -56,8 +60,6 @@
 **netsniff-ng** is a high-performance packet sniffer. It uses zero-copy mechanisms for speed.
 
 The tool captures at line rate. Supports BPF filtering and pcap output.
-
-netsniff-ng is fast packet capture.
 
 # CAVEATS
 

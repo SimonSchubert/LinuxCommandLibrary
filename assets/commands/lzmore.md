@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays contents of lzip-compressed files using more
+
 # TLDR
 
 **View lzip-compressed file**

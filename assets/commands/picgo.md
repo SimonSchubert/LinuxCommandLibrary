@@ -1,3 +1,7 @@
+# TAGLINE
+
+uploads images to various image hosting services
+
 # TLDR
 
 **Upload image**

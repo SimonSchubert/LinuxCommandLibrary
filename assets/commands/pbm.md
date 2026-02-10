@@ -1,3 +1,7 @@
+# TAGLINE
+
+portable Bitmap format
+
 # TLDR
 
 **Convert to PBM**
@@ -27,8 +31,6 @@ Part of Netpbm toolkit.
 **PBM** is Portable Bitmap format. Binary 1-bit image format.
 
 The format stores black and white images. Part of Netpbm suite.
-
-PBM handles bitmap images.
 
 # CAVEATS
 

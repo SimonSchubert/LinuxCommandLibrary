@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates initial ramdisk environments for booting the Linux kernel
+
 # TLDR
 
 Perform a **dry run** (print what would be done)

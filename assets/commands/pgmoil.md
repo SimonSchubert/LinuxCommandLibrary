@@ -1,3 +1,7 @@
+# TAGLINE
+
+applies an oil painting effect to PGM images by selecting the most common gray
+
 # TLDR
 
 **Apply oil painting effect**

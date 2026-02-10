@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates and updates the manual page index caches
+
 # TLDR
 
 **Update** man page database

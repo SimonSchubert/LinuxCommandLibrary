@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs jobs in parallel, utilizing multiple CPU cores
+
 # TLDR
 
 **Run command on multiple inputs**

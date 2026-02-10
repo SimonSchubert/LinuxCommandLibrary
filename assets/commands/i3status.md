@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates a status line for use with i3bar, dzen2, xmobar, or similar status
+
 # TLDR
 
 Print the **status line** to stdout using default configuration

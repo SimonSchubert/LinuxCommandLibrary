@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates a mask bitmap from the outline of shapes in a PBM image
+
 # TLDR
 
 **Create mask from bitmap edges**

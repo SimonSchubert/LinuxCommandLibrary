@@ -1,3 +1,7 @@
+# TAGLINE
+
+compiles NSIS installer scripts
+
 # TLDR
 
 **Compile installer script**
@@ -53,8 +57,6 @@ _SCRIPT_
 **makensis** compiles NSIS installer scripts. NSIS creates Windows installers.
 
 The tool generates executable installers from script definitions. Used for Windows software distribution.
-
-makensis creates Windows installers.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+server daemon for the hunt game
+
 # TLDR
 
 **Start hunt server**
@@ -42,8 +46,6 @@
 **huntd** is the server daemon for the hunt game. It manages the game world and coordinates multiple players.
 
 The server creates the maze and handles player connections, shots, and scoring. Multiple players connect via the hunt client.
-
-huntd serves multiplayer hunt game.
 
 # CAVEATS
 

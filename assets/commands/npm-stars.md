@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays packages starred by a user
+
 # TLDR
 
 **List starred packages**

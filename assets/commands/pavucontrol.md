@@ -1,3 +1,7 @@
+# TAGLINE
+
+PulseAudio Volume Control
+
 # TLDR
 
 **Open volume control**
@@ -28,8 +32,6 @@
 **pavucontrol** is PulseAudio Volume Control. Graphical mixer for PulseAudio.
 
 The application controls per-application volumes. Stream and device management.
-
-pavucontrol adjusts audio levels.
 
 # CAVEATS
 

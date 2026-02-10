@@ -1,3 +1,7 @@
+# TAGLINE
+
+installs packages and their dependencies
+
 # TLDR
 
 **Install all dependencies**
@@ -55,8 +59,6 @@
 # DESCRIPTION
 
 **npm install** (or npm i) installs packages and their dependencies. Without arguments, it installs everything in package.json. With package names, it adds them to the project.
-
-The package-lock.json ensures reproducible installs.
 
 # VERSION RANGES
 

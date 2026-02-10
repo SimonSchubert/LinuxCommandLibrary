@@ -1,3 +1,7 @@
+# TAGLINE
+
+driver for Minolta PagePro printers
+
 # TLDR
 
 **Print file**
@@ -42,8 +46,6 @@ _FILE_
 **min12xxw** is a driver for Minolta PagePro printers. It converts print data for 12xxW series.
 
 The tool is a filter for CUPS. It handles Minolta-specific print protocols.
-
-min12xxw drives Minolta printers.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages npm organization membership
+
 # TLDR
 
 **List org members**
@@ -38,8 +42,6 @@ _COMMAND_
 **npm org** manages npm organization membership. Controls access to scoped packages.
 
 The command handles org teams. Requires org admin privileges.
-
-npm org manages organizations.
 
 # CAVEATS
 

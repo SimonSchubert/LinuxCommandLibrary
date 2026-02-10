@@ -1,3 +1,7 @@
+# TAGLINE
+
+parses JSON in shell scripts
+
 # TLDR
 
 **Extract key**
@@ -56,8 +60,6 @@
 **jshon** parses JSON in shell scripts. It provides simple extraction and manipulation primitives.
 
 The tool chains operations for complex queries. It's designed for shell pipeline integration.
-
-jshon parses JSON for shell.
 
 # CAVEATS
 

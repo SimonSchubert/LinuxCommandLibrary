@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line tool for reading and writing to KDE Wallet
+
 # TLDR
 
 List **all entries** in Passwords folder

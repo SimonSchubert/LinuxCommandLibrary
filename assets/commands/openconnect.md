@@ -1,3 +1,7 @@
+# TAGLINE
+
+SSL VPN client
+
 # TLDR
 
 **Connect to VPN**
@@ -49,8 +53,6 @@ _SERVER_
 **openconnect** is an SSL VPN client. Compatible with Cisco AnyConnect.
 
 The tool establishes VPN connections. Supports multiple protocols.
-
-openconnect connects to VPNs.
 
 # CAVEATS
 

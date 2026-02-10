@@ -1,3 +1,7 @@
+# TAGLINE
+
+single-file executable that bundles llama
+
 # TLDR
 
 **Run llamafile**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+assembler that reads LLVM assembly language and outputs LLVM bitcode
+
 # TLDR
 
 **Assemble LLVM IR to bitcode**

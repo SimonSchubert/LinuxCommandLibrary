@@ -1,3 +1,7 @@
+# TAGLINE
+
+attaches serial line input devices to the Linux input layer
+
 # TLDR
 
 Attach a **Pulse8 CEC** device

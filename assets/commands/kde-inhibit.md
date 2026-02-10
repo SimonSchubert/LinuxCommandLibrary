@@ -1,3 +1,7 @@
+# TAGLINE
+
+temporarily inhibits various KDE Plasma desktop functions while a specified
+
 # TLDR
 
 Inhibit **power management** while command runs

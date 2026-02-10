@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates new Maven projects from templates
+
 # TLDR
 
 **Generate project from archetype**

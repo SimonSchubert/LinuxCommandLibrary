@@ -1,3 +1,7 @@
+# TAGLINE
+
+improves MySQL security after installation
+
 # TLDR
 
 **Run secure installation wizard**

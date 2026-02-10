@@ -1,3 +1,7 @@
+# TAGLINE
+
+unix port of 7-Zip, providing high-ratio compression
+
 # TLDR
 
 **Extract archive**

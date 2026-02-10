@@ -1,3 +1,7 @@
+# TAGLINE
+
+nushell, a modern shell with structured data
+
 # TLDR
 
 **Start Nushell**
@@ -49,8 +53,6 @@ _SCRIPT_
 **nu** is Nushell, a modern shell with structured data. Treats output as tables.
 
 The shell uses pipelines of structured data. Inspired by PowerShell and functional languages.
-
-nu provides a new shell paradigm.
 
 # CAVEATS
 

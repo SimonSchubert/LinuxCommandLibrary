@@ -1,3 +1,7 @@
+# TAGLINE
+
+temporarily suspends PulseAudio to allow another application exclusive access
+
 # TLDR
 
 Suspend PulseAudio while running **JACK**

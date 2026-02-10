@@ -1,3 +1,7 @@
+# TAGLINE
+
+image optimization tool
+
 # TLDR
 
 **Compress images in place**

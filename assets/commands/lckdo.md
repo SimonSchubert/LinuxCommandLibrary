@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs commands with file locking
+
 # TLDR
 
 **Run with lock**
@@ -42,11 +46,9 @@ _COMMAND_
 
 # DESCRIPTION
 
-**lckdo** runs commands with file locking. It prevents concurrent execution of the same task.
+**lckdo** executes a command while holding an exclusive file lock, ensuring that only one instance of the command runs at a time. This is particularly valuable for cron jobs and scheduled tasks where overlapping executions could cause data corruption or resource contention.
 
-The tool is useful for cron jobs. It ensures only one instance runs at a time.
-
-lckdo runs with exclusive lock.
+The tool acquires an exclusive lock on the specified lock file before running the command, and releases it when the command completes. By default it waits for the lock to become available, but you can use -n to fail immediately if the lock is held, or -w to set a timeout. Note that lckdo is deprecated in favor of `flock`, which provides the same functionality and is available as part of the standard util-linux package.
 
 # CAVEATS
 

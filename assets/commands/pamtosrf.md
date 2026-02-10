@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PAM images to SRF format used for custom vehicle icons on Garmin GPS
+
 # TLDR
 
 **Convert PAM to SRF format**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+JPEG encoder that optimizes for visual quality at small file sizes
+
 # TLDR
 
 **Compress JPEG**
@@ -45,8 +49,6 @@ _OUTPUT_
 **Guetzli** is a JPEG encoder that optimizes for visual quality at small file sizes. It uses a perceptual model to achieve 20-30% smaller files than libjpeg.
 
 The tool is computationally intensive, trading encoding time for better compression. It maintains visual quality while reducing file size significantly.
-
-Guetzli creates optimized JPEG images.
 
 # CAVEATS
 

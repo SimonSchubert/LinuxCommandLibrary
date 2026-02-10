@@ -1,3 +1,7 @@
+# TAGLINE
+
+provides a unified interface to various spell checkers
+
 # TLDR
 
 **Check file with default checker**
@@ -42,8 +46,6 @@
 **ispell-wrapper** provides a unified interface to various spell checkers. It wraps aspell, hunspell, or ispell with consistent options.
 
 The wrapper chooses the best available checker automatically. It allows scripts to work regardless of which checker is installed.
-
-ispell-wrapper unifies spell checkers.
 
 # CAVEATS
 

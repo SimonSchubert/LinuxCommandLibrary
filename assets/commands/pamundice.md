@@ -1,3 +1,7 @@
+# TAGLINE
+
+reassembles tiled images
+
 # TLDR
 
 **Reassemble tiled images**
@@ -34,8 +38,6 @@
 **pamundice** reassembles tiled images. Reverse of pamdice operation.
 
 The tool combines image tiles. Part of Netpbm.
-
-pamundice joins tiles.
 
 # CAVEATS
 

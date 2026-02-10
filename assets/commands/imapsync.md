@@ -1,3 +1,7 @@
+# TAGLINE
+
+synchronizes IMAP mailboxes between servers
+
 # TLDR
 
 **Sync mailboxes**
@@ -55,8 +59,6 @@
 **imapsync** synchronizes IMAP mailboxes between servers. It copies emails, folders, and flags from source to destination.
 
 The tool handles mail migrations and backups. It supports incremental sync, filtering, and various authentication methods.
-
-imapsync migrates IMAP mailboxes.
 
 # CAVEATS
 

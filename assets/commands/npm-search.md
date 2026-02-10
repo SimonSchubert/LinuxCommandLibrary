@@ -1,3 +1,7 @@
+# TAGLINE
+
+searches the npm registry for packages matching the given terms
+
 # TLDR
 
 **Search for packages**

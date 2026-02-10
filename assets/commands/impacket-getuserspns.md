@@ -1,3 +1,7 @@
+# TAGLINE
+
+finds and requests Kerberos service tickets for user accounts with SPNs
+
 # TLDR
 
 **Find Kerberoastable accounts**

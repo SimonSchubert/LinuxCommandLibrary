@@ -1,3 +1,7 @@
+# TAGLINE
+
+checks the registry for newer versions of installed packages
+
 # TLDR
 
 **Check outdated packages**

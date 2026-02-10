@@ -1,3 +1,7 @@
+# TAGLINE
+
+neovim, a modern Vim fork
+
 # TLDR
 
 **Open file**
@@ -59,8 +63,6 @@ _FILE_
 **nvim** is Neovim, a modern Vim fork. Extensible text editor with Lua support.
 
 The editor provides improved architecture over Vim. Better plugin system and async support.
-
-nvim is hyperextensible Vim.
 
 # CAVEATS
 

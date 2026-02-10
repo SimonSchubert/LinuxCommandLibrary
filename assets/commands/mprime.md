@@ -1,3 +1,7 @@
+# TAGLINE
+
+great Internet Mersenne Prime Search client
+
 # TLDR
 
 **Start Prime95 (interactive)**

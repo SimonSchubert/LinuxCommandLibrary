@@ -1,3 +1,7 @@
+# TAGLINE
+
+dumps files in various formats
+
 # TLDR
 
 **Dump file in octal**
@@ -59,8 +63,6 @@ _FILE_
 **od** dumps files in various formats. Shows octal, hex, or ASCII.
 
 The tool displays file contents byte-by-byte. Useful for binary analysis.
-
-od displays file contents.
 
 # CAVEATS
 

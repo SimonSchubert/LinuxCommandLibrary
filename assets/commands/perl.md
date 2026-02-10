@@ -1,3 +1,7 @@
+# TAGLINE
+
+interpreter
+
 # TLDR
 
 **Run Perl script**
@@ -56,8 +60,6 @@ _PROGRAM_
 **perl** is the Perl interpreter. Practical Extraction and Report Language.
 
 The language excels at text processing. Powerful regex support.
-
-perl runs Perl programs.
 
 # CAVEATS
 

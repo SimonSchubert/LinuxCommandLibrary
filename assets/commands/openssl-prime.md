@@ -1,3 +1,7 @@
+# TAGLINE
+
+tests numbers for primality or generates prime numbers
+
 # TLDR
 
 **Check if number is prime**

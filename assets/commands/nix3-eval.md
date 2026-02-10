@@ -1,3 +1,7 @@
+# TAGLINE
+
+new Nix 3
+
 # TLDR
 
 **Evaluate Nix expression**
@@ -52,11 +56,6 @@
 
 **nix eval** is the new Nix 3.x command for evaluating Nix expressions. It replaces nix-instantiate --eval with a cleaner interface and flake support.
 
-The command evaluates expressions and prints the result.
-
-# EXAMPLES
-
-```bash
 # Simple expression
 nix eval --expr 'builtins.length [1 2 3]'
 # Output: 3

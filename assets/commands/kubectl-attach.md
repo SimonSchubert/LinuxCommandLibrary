@@ -1,3 +1,7 @@
+# TAGLINE
+
+attaches to a running container in a pod
+
 # TLDR
 
 **Attach to running container**

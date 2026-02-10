@@ -1,3 +1,7 @@
+# TAGLINE
+
+netExec NFS module
+
 # TLDR
 
 **Enumerate NFS shares**
@@ -42,8 +46,6 @@ _TARGET_
 **nxc nfs** is the NetExec NFS module. Enumerates NFS server exports.
 
 The tool identifies accessible shares. Part of NetExec suite.
-
-nxc nfs scans NFS servers.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages distribution tags for packages
+
 # TLDR
 
 **List tags for package**

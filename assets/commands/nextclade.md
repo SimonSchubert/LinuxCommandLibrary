@@ -1,3 +1,7 @@
+# TAGLINE
+
+analyzes viral genome sequences, assigning clades, calling mutations
+
 # TLDR
 
 **Analyze sequences**

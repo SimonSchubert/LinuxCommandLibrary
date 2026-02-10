@@ -1,3 +1,7 @@
+# TAGLINE
+
+LLVM-based D compiler
+
 # TLDR
 
 **Compile D program**
@@ -56,8 +60,6 @@ _FILES_
 **ldc** is the LLVM-based D compiler. It compiles D language source code to native executables.
 
 The compiler produces fast code using LLVM optimizations. It's one of the main D compilers alongside DMD.
-
-ldc compiles D language code.
 
 # CAVEATS
 

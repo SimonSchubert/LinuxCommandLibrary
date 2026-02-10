@@ -1,3 +1,7 @@
+# TAGLINE
+
+plan 9's make replacement
+
 # TLDR
 
 **Build default target**
@@ -53,8 +57,6 @@ _TARGET_
 **mk** is Plan 9's make replacement. It provides similar functionality with cleaner syntax.
 
 The tool reads mkfiles for build instructions. Simpler than traditional make.
-
-mk is Plan 9 make tool.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+watches for network state changes in real-time and reports them to stdout
+
 # TLDR
 
 **Monitor** all network state changes

@@ -1,3 +1,7 @@
+# TAGLINE
+
+reverses the last repository operation
+
 # TLDR
 
 **Undo last operation**
@@ -33,8 +37,6 @@ _COUNT_
 **jj undo** reverses the last repository operation. It restores the previous state from the operation log.
 
 The command enables safe experimentation with history. Any jj operation can be undone.
-
-jj undo reverses operations.
 
 # CAVEATS
 

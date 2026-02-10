@@ -1,3 +1,7 @@
+# TAGLINE
+
+removes a package from registry
+
 # TLDR
 
 **Unpublish package version**
@@ -35,8 +39,6 @@ _PACKAGE_
 **npm unpublish** removes a package from registry. Use with extreme caution.
 
 The command deletes published packages. Limited by npm policies.
-
-npm unpublish removes packages.
 
 # CAVEATS
 

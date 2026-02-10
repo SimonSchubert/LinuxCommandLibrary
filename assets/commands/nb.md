@@ -1,3 +1,7 @@
+# TAGLINE
+
+note-taking and knowledge base CLI
+
 # TLDR
 
 **Create new note**
@@ -67,8 +71,6 @@ _COMMAND_
 **nb** is a note-taking and knowledge base CLI. It manages notes, bookmarks, and tasks.
 
 The tool uses plain text files. Git-backed with encryption support.
-
-nb is CLI note-taking app.
 
 # CAVEATS
 

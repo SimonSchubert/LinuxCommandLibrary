@@ -1,3 +1,7 @@
+# TAGLINE
+
+IPython-enhanced Python debugger
+
 # TLDR
 
 **Start ipdb debugger**

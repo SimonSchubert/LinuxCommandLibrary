@@ -1,3 +1,7 @@
+# TAGLINE
+
+extracts detailed information about the hardware configuration of the machine
+
 # TLDR
 
 Launch **GUI** (if available)

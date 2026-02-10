@@ -1,3 +1,7 @@
+# TAGLINE
+
+remote terminal application
+
 # TLDR
 
 **Connect to remote host**
@@ -53,8 +57,6 @@ _USER@HOST_
 **mosh** (Mobile Shell) is a remote terminal application. It handles intermittent connectivity.
 
 The tool uses UDP for connection. Provides local echo and roaming. More resilient than SSH alone.
-
-mosh is mobile-friendly remote shell.
 
 # CAVEATS
 

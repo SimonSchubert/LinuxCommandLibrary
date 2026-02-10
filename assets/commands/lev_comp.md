@@ -1,3 +1,7 @@
+# TAGLINE
+
+calculates Levenshtein distance between strings
+
 # TLDR
 
 **Compare strings**
@@ -35,8 +39,6 @@ _STRING1_ _STRING2_
 **lev_comp** calculates Levenshtein distance between strings. The distance measures edit operations needed.
 
 The tool compares string similarity. Lower distance means more similar strings.
-
-lev_comp measures string distance.
 
 # CAVEATS
 

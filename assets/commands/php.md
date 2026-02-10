@@ -1,3 +1,7 @@
+# TAGLINE
+
+interpreter
+
 # TLDR
 
 **Run PHP script**
@@ -60,8 +64,6 @@ _FILE_
 **php** is the PHP interpreter. Server-side scripting language.
 
 The tool runs PHP scripts. Web and CLI applications.
-
-php executes PHP code.
 
 # CAVEATS
 

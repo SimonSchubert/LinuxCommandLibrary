@@ -1,3 +1,7 @@
+# TAGLINE
+
+text-mode web browser for the terminal
+
 # TLDR
 
 **Visit** a website

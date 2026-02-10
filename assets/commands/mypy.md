@@ -1,3 +1,7 @@
+# TAGLINE
+
+static type checker for Python
+
 # TLDR
 
 **Type check file**
@@ -57,8 +61,6 @@ _FILES_
 **mypy** is a static type checker for Python. It validates type annotations.
 
 The tool catches type errors before runtime. Supports gradual typing adoption.
-
-mypy is Python type checker.
 
 # CAVEATS
 

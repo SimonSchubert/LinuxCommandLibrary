@@ -1,3 +1,7 @@
+# TAGLINE
+
+provides a shebang-capable scripting interface for R
+
 # TLDR
 
 **Run R expression**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates Unix /etc/group from Windows
+
 # TLDR
 
 **List local groups**
@@ -46,8 +50,6 @@
 **mkgroup** generates Unix /etc/group from Windows. It's part of Cygwin for Windows integration.
 
 The tool converts Windows group information to Unix format. Used for Cygwin setup.
-
-mkgroup generates group file.
 
 # CAVEATS
 

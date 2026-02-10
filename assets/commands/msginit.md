@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates a new PO file from a POT file
+
 # TLDR
 
 **Create PO file from POT**

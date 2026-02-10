@@ -1,3 +1,7 @@
+# TAGLINE
+
+apache Maven build tool
+
 # TLDR
 
 **Build project**
@@ -67,8 +71,6 @@ _GOALS_
 **mvn** is the Apache Maven build tool. It manages Java project builds and dependencies.
 
 The tool uses POM files for configuration. Handles compilation, testing, and packaging.
-
-mvn is Maven build automation.
 
 # CAVEATS
 

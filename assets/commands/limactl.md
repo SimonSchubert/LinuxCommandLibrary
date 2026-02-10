@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages Lima virtual machines on macOS
+
 # TLDR
 
 **Create and start default VM**

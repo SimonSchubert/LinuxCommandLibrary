@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal audio player
+
 # TLDR
 
 **Start MOC**
@@ -63,8 +67,6 @@ _FILES_
 **moc** (Music On Console) is a terminal audio player. It uses a client-server architecture.
 
 The tool plays in background. Supports many formats via plugins. ncurses interface.
-
-moc is terminal music player.
 
 # CAVEATS
 

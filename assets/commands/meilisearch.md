@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast, typo-tolerant search engine
+
 # TLDR
 
 **Start server**

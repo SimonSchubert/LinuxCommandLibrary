@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal interface for hledger
+
 # TLDR
 
 **Start TUI**
@@ -55,8 +59,6 @@ _PATTERNS_
 **hledger-ui** is a terminal interface for hledger. It provides an interactive way to explore accounts, transactions, and reports.
 
 The TUI supports navigation, drilling down into accounts, and switching between different views. It watches files for live updates.
-
-hledger-ui provides terminal accounting interface.
 
 # CAVEATS
 

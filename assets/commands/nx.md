@@ -1,3 +1,7 @@
+# TAGLINE
+
+build system for monorepos
+
 # TLDR
 
 **Run target**
@@ -56,8 +60,6 @@
 **nx** is a build system for monorepos. Optimizes build and test workflows.
 
 The tool provides smart rebuilds and caching. Supports multiple frameworks.
-
-nx manages monorepo projects.
 
 # CAVEATS
 

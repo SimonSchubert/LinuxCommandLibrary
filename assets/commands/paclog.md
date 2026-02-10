@@ -1,3 +1,7 @@
+# TAGLINE
+
+filters and displays entries from the pacman log file
+
 # TLDR
 
 Display the **entire pacman log**

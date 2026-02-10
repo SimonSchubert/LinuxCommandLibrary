@@ -1,3 +1,7 @@
+# TAGLINE
+
+attempts to compensate for uneven lighting or shadows in scanned
+
 # TLDR
 
 **Remove uneven lighting from scan**

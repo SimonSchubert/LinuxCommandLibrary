@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates a solid color PGM grayscale image of specified dimensions
+
 # TLDR
 
 **Create solid gray image**
@@ -38,11 +42,6 @@
 
 **pgmmake** creates a solid color PGM grayscale image of specified dimensions. The gray value is a fraction where 0.0 is black and 1.0 is white.
 
-Useful for creating backgrounds, masks, or test images.
-
-# EXAMPLES
-
-```bash
 # 50% gray 100x100 image
 pgmmake 0.5 100 100 > gray.pgm
 

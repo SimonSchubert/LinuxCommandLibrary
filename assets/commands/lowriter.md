@@ -1,3 +1,7 @@
+# TAGLINE
+
+word processor component of LibreOffice
+
 # TLDR
 
 **Start Writer**

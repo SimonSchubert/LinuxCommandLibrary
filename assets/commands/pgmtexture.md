@@ -1,3 +1,7 @@
+# TAGLINE
+
+calculates Haralick texture features from a PGM image using gray level
+
 # TLDR
 
 **Calculate image texture measures**

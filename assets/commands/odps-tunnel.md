@@ -1,3 +1,7 @@
+# TAGLINE
+
+transfers data to/from MaxCompute
+
 # TLDR
 
 **Upload data to table**
@@ -45,8 +49,6 @@
 **odps tunnel** transfers data to/from MaxCompute. High-speed data channel.
 
 The tool provides bulk data operations. Part of ODPS CLI.
-
-odps tunnel transfers data.
 
 # CAVEATS
 

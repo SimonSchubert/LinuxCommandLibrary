@@ -1,3 +1,7 @@
+# TAGLINE
+
+enters development shells
+
 # TLDR
 
 **Enter dev shell**
@@ -35,8 +39,6 @@ _INSTALLABLE_
 **nix3 develop** enters development shells. Alternative name for nix develop.
 
 The tool provides build dependencies. Based on flake devShells output.
-
-nix3 develop creates dev env.
 
 # CAVEATS
 

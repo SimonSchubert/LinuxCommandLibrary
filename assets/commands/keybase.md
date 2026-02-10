@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line client for Keybase, providing end-to-end encrypted chat, file
+
 # TLDR
 
 **Login to Keybase**

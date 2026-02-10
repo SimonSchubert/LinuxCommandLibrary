@@ -1,3 +1,7 @@
+# TAGLINE
+
+icarus Verilog compiler
+
 # TLDR
 
 **Compile Verilog file**
@@ -56,8 +60,6 @@
 **iverilog** is the Icarus Verilog compiler. It compiles Verilog HDL to simulation executables.
 
 The tool supports IEEE Verilog standards. Output runs with vvp simulator for verification and testing.
-
-iverilog compiles Verilog designs.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates Debian chroots from one or more mirrors
+
 # TLDR
 
 Create a **Debian Stable** directory chroot

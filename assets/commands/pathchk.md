@@ -1,3 +1,7 @@
+# TAGLINE
+
+checks pathnames for validity and portability
+
 # TLDR
 
 **Check path for POSIX portability**

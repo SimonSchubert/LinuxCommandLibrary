@@ -1,3 +1,7 @@
+# TAGLINE
+
+renders text as PBM bitmap using PostScript fonts via Ghostscript
+
 # TLDR
 
 **Render text using PostScript fonts**

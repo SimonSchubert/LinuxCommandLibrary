@@ -1,3 +1,7 @@
+# TAGLINE
+
+build automation and project management tool for Java
+
 # TLDR
 
 **Compile project**

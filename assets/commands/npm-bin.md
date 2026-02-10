@@ -1,3 +1,7 @@
+# TAGLINE
+
+prints the folder where npm will install executables
+
 # TLDR
 
 **Show local bin directory**

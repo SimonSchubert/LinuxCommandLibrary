@@ -1,3 +1,7 @@
+# TAGLINE
+
+rearranges PDF pages for booklet printing
+
 # TLDR
 
 **Create booklet from PDF**

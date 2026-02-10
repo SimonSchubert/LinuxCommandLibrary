@@ -1,3 +1,7 @@
+# TAGLINE
+
+decompresses files compressed by gzip, zip, compress, or pack
+
 # TLDR
 
 **Decompress a file**

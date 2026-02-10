@@ -1,3 +1,7 @@
+# TAGLINE
+
+calculates MATLAB code metrics
+
 # TLDR
 
 **Calculate metrics**
@@ -46,8 +50,6 @@ _FILES_
 **mh_metric** calculates MATLAB code metrics. It measures complexity, lines, and other quality indicators.
 
 The tool is part of MISS_HIT. It provides cyclomatic complexity and function metrics.
-
-mh_metric measures MATLAB metrics.
 
 # CAVEATS
 

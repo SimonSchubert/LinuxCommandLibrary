@@ -1,3 +1,7 @@
+# TAGLINE
+
+changes attributes or the activation state of logical volumes in LVM
+
 # TLDR
 
 **Activate** logical volume

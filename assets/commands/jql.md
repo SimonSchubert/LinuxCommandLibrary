@@ -1,3 +1,7 @@
+# TAGLINE
+
+JSON query language tool written in Rust
+
 # TLDR
 
 **Query JSON**
@@ -43,8 +47,6 @@ _SELECTORS_
 **jql** is a JSON query language tool written in Rust. It provides a simple syntax for extracting data from JSON.
 
 The tool focuses on simplicity over jq's complexity. Queries use a straightforward dot notation.
-
-jql extracts data from JSON.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+computes and displays decimal digits of Archimedes' constant Pi
+
 # TLDR
 
 Display **100 digits** of Pi

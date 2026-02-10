@@ -1,3 +1,7 @@
+# TAGLINE
+
+netExec WinRM module
+
 # TLDR
 
 **Check WinRM credentials**
@@ -48,8 +52,6 @@ _TARGET_
 **nxc winrm** is the NetExec WinRM module. Tests Windows Remote Management.
 
 The tool validates WinRM access and executes commands. Part of NetExec suite.
-
-nxc winrm tests WinRM servers.
 
 # CAVEATS
 

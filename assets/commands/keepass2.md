@@ -1,3 +1,7 @@
+# TAGLINE
+
+free, open-source password manager that stores passwords in an encrypted
+
 # TLDR
 
 **Open KeePass**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+text-to-speech synthesizer using the SVOX Pico engine
+
 # TLDR
 
 **Convert text to speech**
@@ -32,8 +36,6 @@
 
 **pico2wave** is a text-to-speech synthesizer using the SVOX Pico engine. It converts text to a WAV audio file, supporting multiple languages.
 
-Small, efficient TTS suitable for embedded systems.
-
 # LANGUAGES
 
 ```
@@ -44,10 +46,6 @@ es-ES  - Spanish
 fr-FR  - French
 it-IT  - Italian
 ```
-
-# EXAMPLES
-
-```bash
 # Basic synthesis
 pico2wave -w hello.wav "Hello, how are you?"
 

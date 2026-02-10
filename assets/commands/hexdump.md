@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays file contents in hexadecimal, decimal, octal, or ASCII formats
+
 # TLDR
 
 Print the **hexadecimal representation** of a file

@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PDF to PostScript format
+
 # TLDR
 
 **Convert PDF to PostScript**
@@ -46,10 +50,6 @@
 # DESCRIPTION
 
 **pdftops** converts PDF to PostScript format. Part of Poppler utilities, it produces higher quality output than pdf2ps from Ghostscript for most documents.
-
-# EXAMPLES
-
-```bash
 # Basic conversion
 pdftops document.pdf document.ps
 

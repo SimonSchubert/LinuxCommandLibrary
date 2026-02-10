@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates and appends to squashfs filesystems
+
 # TLDR
 
 Create a **squashfs filesystem** from files and directories

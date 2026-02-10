@@ -1,3 +1,7 @@
+# TAGLINE
+
+searches bibliographic databases
+
 # TLDR
 
 **Search bibliographic databases**
@@ -42,8 +46,6 @@ _KEYS_
 **lkbib** searches bibliographic databases. It finds references matching keywords in refer-style databases.
 
 The tool is part of groff and works with refer for formatting citations in documents.
-
-lkbib searches bibliography databases.
 
 # CAVEATS
 

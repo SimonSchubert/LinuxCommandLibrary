@@ -1,3 +1,7 @@
+# TAGLINE
+
+validates Prometheus alerting and recording rules
+
 # TLDR
 
 **Lint Prometheus rules**

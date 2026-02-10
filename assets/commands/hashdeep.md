@@ -1,3 +1,7 @@
+# TAGLINE
+
+computes multiple cryptographic hashes simultaneously for files and directories
+
 # TLDR
 
 **Compute MD5 and SHA-256 hashes** of files recursively

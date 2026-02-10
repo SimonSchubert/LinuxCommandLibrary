@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast, command-line image resizer and rotator for JPEG and PNG files
+
 # TLDR
 
 **Resize** images or directories to specific resolution

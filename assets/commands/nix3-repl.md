@@ -1,3 +1,7 @@
+# TAGLINE
+
+starts interactive Nix shell
+
 # TLDR
 
 **Start REPL**
@@ -29,8 +33,6 @@ _FILES_
 **nix3 repl** starts interactive Nix shell. Alternative name for nix repl.
 
 The tool evaluates expressions. Tab completion and history available.
-
-nix3 repl is interactive shell.
 
 # CAVEATS
 

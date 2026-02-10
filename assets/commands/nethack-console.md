@@ -1,3 +1,7 @@
+# TAGLINE
+
+classic roguelike dungeon exploration game where you descend through the Mazes
+
 # TLDR
 
 **Start NetHack**

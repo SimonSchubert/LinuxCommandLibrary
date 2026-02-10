@@ -1,3 +1,7 @@
+# TAGLINE
+
+mass moves and renames files
+
 # TLDR
 
 **Rename with pattern**
@@ -49,8 +53,6 @@ _TO_
 **mmv** mass moves and renames files. It uses patterns to transform filenames.
 
 The tool handles complex renaming operations. Supports wildcards and transformations.
-
-mmv renames files by pattern.
 
 # CAVEATS
 

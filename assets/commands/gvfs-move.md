@@ -1,3 +1,7 @@
+# TAGLINE
+
+moves files using GVFS
+
 # TLDR
 
 **Move local file**
@@ -45,8 +49,6 @@ _DESTINATION_
 **gvfs-move** moves files using GVFS. It supports local files and remote URIs, handling moves across different backends transparently.
 
 The tool provides atomic moves within the same filesystem and copy-then-delete for cross-filesystem moves. It integrates with GNOME's VFS.
-
-gvfs-move moves files via GVFS backends.
 
 # CAVEATS
 

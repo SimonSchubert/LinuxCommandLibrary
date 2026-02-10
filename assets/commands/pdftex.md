@@ -1,3 +1,7 @@
+# TAGLINE
+
+teX engine
+
 # TLDR
 
 **Compile TeX to PDF**
@@ -53,8 +57,6 @@ Extended from original TeX. Adds PDF primitives.
 Direct PDF generation. No DVI intermediate.
 
 Microtypographic extensions. Better text appearance.
-
-Foundation for pdfLaTeX. Most LaTeX uses this engine.
 
 # CAVEATS
 

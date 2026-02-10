@@ -1,3 +1,7 @@
+# TAGLINE
+
+laTeX package for including external PDF documents
+
 # TLDR
 
 **Include PDF in LaTeX**

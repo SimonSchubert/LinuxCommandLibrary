@@ -1,3 +1,7 @@
+# TAGLINE
+
+designed for compressing large files
+
 # TLDR
 
 Compress with **LZMA** (default)

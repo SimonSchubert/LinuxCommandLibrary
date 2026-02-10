@@ -1,3 +1,7 @@
+# TAGLINE
+
+detects malicious VBA macros in Microsoft Office documents
+
 # TLDR
 
 **Scan document for macros**

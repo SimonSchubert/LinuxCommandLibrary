@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts JFIF/JPEG images to Netpbm PNM format
+
 # TLDR
 
 **Convert JPEG to PNM**

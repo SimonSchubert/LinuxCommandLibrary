@@ -1,3 +1,7 @@
+# TAGLINE
+
+saves complete webpages as single HTML files
+
 # TLDR
 
 **Save webpage as single HTML file**

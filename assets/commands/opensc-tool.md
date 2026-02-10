@@ -1,3 +1,7 @@
+# TAGLINE
+
+diagnostic tool for smart cards
+
 # TLDR
 
 **List readers**

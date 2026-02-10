@@ -1,3 +1,7 @@
+# TAGLINE
+
+oh My Fish, a Fish shell framework
+
 # TLDR
 
 **Install package**
@@ -56,8 +60,6 @@
 **omf** is Oh My Fish, a Fish shell framework. Manages plugins and themes.
 
 The tool extends Fish shell functionality. Community package ecosystem.
-
-omf manages Fish plugins.
 
 # CAVEATS
 

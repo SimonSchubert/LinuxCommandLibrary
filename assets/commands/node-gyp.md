@@ -1,3 +1,7 @@
+# TAGLINE
+
+cross-platform build tool for compiling Node
+
 # TLDR
 
 **Configure project**

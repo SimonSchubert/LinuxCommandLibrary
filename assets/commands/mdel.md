@@ -1,3 +1,7 @@
+# TAGLINE
+
+deletes files from MS-DOS filesystems
+
 # TLDR
 
 **Delete file from MS-DOS disk**
@@ -36,8 +40,6 @@ _FILES_
 **mdel** deletes files from MS-DOS filesystems. It's part of the mtools package.
 
 The tool removes files from FAT filesystems without mounting. Works with floppies and USB drives.
-
-mdel deletes MS-DOS files.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+searches back through the /var/log/wtmp file and displays a list of all users
+
 # TLDR
 
 View **all login** history

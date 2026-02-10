@@ -1,3 +1,7 @@
+# TAGLINE
+
+lightweight image viewer for Wayland and X11, designed for use with tiling
+
 # TLDR
 
 **View** multiple images

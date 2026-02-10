@@ -1,3 +1,7 @@
+# TAGLINE
+
+blocks until conditions are met
+
 # TLDR
 
 **Wait for pod ready**
@@ -50,11 +54,9 @@ _RESOURCE_
 
 # DESCRIPTION
 
-**kubectl wait** blocks until conditions are met. It waits for resources to reach desired states.
+**kubectl wait** blocks execution until one or more Kubernetes resources reach a specified condition, making it an essential synchronization primitive for shell scripts, CI/CD pipelines, and automation workflows. Rather than polling with repeated `kubectl get` calls, it efficiently watches the resource and returns as soon as the condition is satisfied or the timeout expires.
 
-The command is useful in scripts and CI/CD. It supports various conditions and JSON path checks.
-
-kubectl wait blocks on conditions.
+The command supports built-in condition checks such as `condition=Ready` and `condition=Available`, resource deletion events via `--for=delete`, and arbitrary field matching through JSONPath expressions like `jsonpath='{.status.phase}'=Running`. It can target individual resources by name or groups of resources matched by label selectors, and always defaults to a 30-second timeout unless overridden with --timeout.
 
 # CAVEATS
 

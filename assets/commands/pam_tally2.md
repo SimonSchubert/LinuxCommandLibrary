@@ -1,3 +1,7 @@
+# TAGLINE
+
+tracks login attempts
+
 # TLDR
 
 **Enable login attempt tracking**
@@ -45,8 +49,6 @@
 **pam_tally2** tracks login attempts. Locks accounts after failed attempts.
 
 The module prevents brute force attacks. Successor to pam_tally.
-
-pam_tally2 counts login failures.
 
 # CAVEATS
 

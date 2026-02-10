@@ -1,3 +1,7 @@
+# TAGLINE
+
+netExec LDAP module
+
 # TLDR
 
 **Authenticate to LDAP**
@@ -55,8 +59,6 @@ _TARGET_
 **nxc ldap** is the NetExec LDAP module. Tests Active Directory via LDAP.
 
 The tool enumerates and attacks AD. Used for domain penetration testing.
-
-nxc ldap tests Active Directory.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+viral genome sequence alignment tool
+
 # TLDR
 
 **Align sequences to reference**

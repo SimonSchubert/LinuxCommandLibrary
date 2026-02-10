@@ -1,3 +1,7 @@
+# TAGLINE
+
+prints Java thread stack traces for a given Java process
+
 # TLDR
 
 **Print thread dump for Java process**

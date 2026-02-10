@@ -1,3 +1,7 @@
+# TAGLINE
+
+dedicated server runs a headless game server for the asymmetric multiplayer
+
 # TLDR
 
 Start a server with **default settings**

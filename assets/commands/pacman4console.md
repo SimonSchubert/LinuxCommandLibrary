@@ -1,3 +1,7 @@
+# TAGLINE
+
+text-based console game inspired by the original Pacman arcade game
+
 # TLDR
 
 Start a game at **Level 1**

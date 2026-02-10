@@ -1,3 +1,7 @@
+# TAGLINE
+
+POSIX archiver
+
 # TLDR
 
 **Create archive**
@@ -49,8 +53,6 @@
 **pax** is the POSIX archiver. Combines tar and cpio functionality.
 
 The tool creates and extracts archives. Portable archive exchange format.
-
-pax handles archives.
 
 # CAVEATS
 

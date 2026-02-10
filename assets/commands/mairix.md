@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast mail indexing and searching tool for Maildir and MH mailboxes
+
 # TLDR
 
 **Index mail folders**

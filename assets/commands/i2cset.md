@@ -1,3 +1,7 @@
+# TAGLINE
+
+writes a value to a specified register of an I2C device
+
 # TLDR
 
 **Write** to a register of an I2C device

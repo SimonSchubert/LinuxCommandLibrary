@@ -1,3 +1,7 @@
+# TAGLINE
+
+performs print head cleaning on HP printers
+
 # TLDR
 
 **Clean print heads**
@@ -42,8 +46,6 @@
 **hp-clean** performs print head cleaning on HP printers. It removes dried ink and debris to restore print quality.
 
 The tool supports multiple cleaning levels. Higher levels are more thorough but consume more ink. Level 1 is usually sufficient.
-
-hp-clean maintains HP printer heads.
 
 # CAVEATS
 

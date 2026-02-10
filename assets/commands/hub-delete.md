@@ -1,3 +1,7 @@
+# TAGLINE
+
+deletes a GitHub repository
+
 # TLDR
 
 **Delete repository**
@@ -32,8 +36,6 @@ _REPOSITORY_
 **hub delete** deletes a GitHub repository. Without arguments, it deletes the repository associated with the current directory.
 
 The command requires confirmation unless forced. It permanently removes the repository including all issues, PRs, and wiki.
-
-hub delete removes GitHub repositories.
 
 # CAVEATS
 

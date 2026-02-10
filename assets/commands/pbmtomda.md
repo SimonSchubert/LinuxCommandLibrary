@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PBM bitmaps to Microdesign Area format for Amstrad PCW
+
 # TLDR
 
 **Convert PBM to Microdesign Area format**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+decodes Lava encoded files
+
 # TLDR
 
 **Decode lava format**
@@ -35,8 +39,6 @@ _FILE_
 **lavadecode** decodes Lava encoded files. Lava is a simple obfuscation format.
 
 The tool reverses basic encoding schemes. It's useful for analyzing obfuscated content.
-
-lavadecode decodes Lava format.
 
 # CAVEATS
 

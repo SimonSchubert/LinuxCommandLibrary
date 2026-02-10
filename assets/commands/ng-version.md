@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays Angular CLI and package versions
+
 # TLDR
 
 **Show Angular versions**
@@ -25,8 +29,6 @@
 **ng version** displays Angular CLI and package versions. It shows all Angular-related dependencies.
 
 The command helps with debugging. Shows Node.js and npm versions too.
-
-ng version shows Angular versions.
 
 # CAVEATS
 

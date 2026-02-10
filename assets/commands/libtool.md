@@ -1,3 +1,7 @@
+# TAGLINE
+
+generic library support script that hides the complexity of using shared
+
 # TLDR
 
 **Compile** source to libtool object

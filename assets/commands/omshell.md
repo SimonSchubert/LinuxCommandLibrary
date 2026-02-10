@@ -1,3 +1,7 @@
+# TAGLINE
+
+provides OMAPI shell interface
+
 # TLDR
 
 **Start OMAPI shell**
@@ -48,8 +52,6 @@
 **omshell** provides OMAPI shell interface. Manages ISC DHCP server.
 
 The tool interacts with dhcpd via OMAPI. Allows runtime modifications.
-
-omshell controls DHCP server.
 
 # CAVEATS
 

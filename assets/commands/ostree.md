@@ -1,3 +1,7 @@
+# TAGLINE
+
+version control system for binary files, optimized for managing operating
+
 # TLDR
 
 **Initialize** a repository

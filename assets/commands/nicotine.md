@@ -1,3 +1,7 @@
+# TAGLINE
+
+graphical client for the Soulseek peer-to-peer file sharing network
+
 # TLDR
 
 **Start Nicotine+**

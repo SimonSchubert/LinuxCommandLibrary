@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages Kaggle datasets from the command line
+
 # TLDR
 
 **List datasets**

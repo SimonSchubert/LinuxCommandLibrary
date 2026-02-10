@@ -1,3 +1,7 @@
+# TAGLINE
+
+modeless text editor
+
 # TLDR
 
 **Edit file**
@@ -39,8 +43,6 @@ _FILES_
 **moe** is a modeless text editor. It provides a simpler alternative to vi/emacs.
 
 The tool uses common keybindings. No mode switching required.
-
-moe is modeless text editor.
 
 # CAVEATS
 

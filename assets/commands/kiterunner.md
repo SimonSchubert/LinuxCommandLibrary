@@ -1,3 +1,7 @@
+# TAGLINE
+
+discovers API endpoints through context-aware scanning
+
 # TLDR
 
 **Scan API**
@@ -49,11 +53,9 @@
 
 # DESCRIPTION
 
-**kiterunner** discovers API endpoints through context-aware scanning. It uses wordlists designed for API route discovery.
+**kiterunner** is a context-aware content discovery tool designed specifically for finding API endpoints on web applications. Unlike traditional directory brute-forcing tools that simply append paths to a base URL, kiterunner understands API routing conventions and sends requests that mimic legitimate API calls, including appropriate HTTP methods, headers, and content types for each candidate route.
 
-The tool sends requests mimicking real API calls. It's effective for finding hidden API endpoints.
-
-kiterunner discovers API endpoints.
+The tool ships with curated wordlists from Assetnote that are tailored for common API frameworks such as Rails, Django, Express, and Spring. It supports both a `scan` mode for intelligent API-aware discovery and a `brute` mode for traditional directory enumeration, giving security professionals flexibility during reconnaissance and penetration testing engagements.
 
 # CAVEATS
 

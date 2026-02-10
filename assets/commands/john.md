@@ -1,3 +1,7 @@
+# TAGLINE
+
+the Ripper, a password security auditing tool
+
 # TLDR
 
 **Crack password file**
@@ -56,8 +60,6 @@ _PASSWORD_FILES_
 **john** is John the Ripper, a password security auditing tool. It detects weak passwords through various cracking methods.
 
 The tool supports many hash formats and attack modes. It's used for security testing and password audits.
-
-john audits password security.
 
 # CAVEATS
 

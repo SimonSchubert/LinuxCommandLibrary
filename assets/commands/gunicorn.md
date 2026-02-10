@@ -1,3 +1,7 @@
+# TAGLINE
+
+python WSGI HTTP server for Unix
+
 # TLDR
 
 **Run a WSGI application**
@@ -91,15 +95,11 @@
 
 # DESCRIPTION
 
-**Gunicorn** (Green Unicorn) is a Python WSGI HTTP server for Unix. It's designed to serve Python web applications in production, handling multiple concurrent requests through a pre-fork worker model.
+**Gunicorn** (Green Unicorn) is a Python WSGI HTTP server for Unix systems, designed to serve web applications in production using a pre-fork worker model. A master process manages a pool of worker processes, each of which independently handles incoming requests. The application is specified as **module:variable** (e.g., `myapp:app` for Flask or `myproject.wsgi:application` for Django), and the recommended worker count is **(2 x CPU cores) + 1** to balance concurrency against memory usage.
 
-The application module is specified as **module:variable** where module is a Python module path and variable is the WSGI callable (typically named **app** or **application**). For Flask apps: **myapp:app**. For Django: **myproject.wsgi:application**.
+The default synchronous worker handles one request at a time per process, which is suitable for CPU-bound applications. For I/O-bound workloads with many concurrent connections, async worker classes such as `gevent` or `eventlet` use cooperative multithreading to multiplex thousands of connections within fewer processes, while the `gthread` worker uses OS threads. Workers that exceed the configurable timeout are automatically killed and restarted by the master process, providing resilience against hung requests.
 
-Worker processes handle requests independently. The recommended number of workers is **(2 × CPU cores) + 1**. More workers handle more concurrent requests but use more memory. The default sync worker handles one request at a time per worker.
-
-Async workers (gevent, eventlet) enable handling many concurrent connections per worker, ideal for I/O-bound applications. The gthread worker uses threads within each process.
-
-In production, Gunicorn typically runs behind a reverse proxy like Nginx, which handles SSL termination, static files, and request buffering. The proxy communicates with Gunicorn via HTTP or Unix socket.
+In production, Gunicorn typically runs behind a reverse proxy like Nginx, which handles SSL termination, static file serving, and request buffering. Communication between the proxy and Gunicorn occurs over HTTP or a Unix domain socket.
 
 # CAVEATS
 

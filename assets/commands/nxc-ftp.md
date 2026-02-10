@@ -1,3 +1,7 @@
+# TAGLINE
+
+netExec FTP module
+
 # TLDR
 
 **Check FTP credentials**
@@ -48,8 +52,6 @@ _TARGET_
 **nxc ftp** is the NetExec FTP module. Tests FTP server security.
 
 The tool checks credentials and access. Part of NetExec suite.
-
-nxc ftp tests FTP servers.
 
 # CAVEATS
 

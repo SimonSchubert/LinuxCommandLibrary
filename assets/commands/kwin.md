@@ -1,3 +1,7 @@
+# TAGLINE
+
+window manager for KDE Plasma
+
 # TLDR
 
 **Start KWin (X11)**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+instantiates Nix expressions, producing store derivations
+
 # TLDR
 
 **Instantiate expression**
@@ -52,10 +56,6 @@
 **nix-instantiate** instantiates Nix expressions, producing store derivations. With --eval, it evaluates expressions and prints results.
 
 This is useful for debugging and testing Nix expressions.
-
-# EXAMPLES
-
-```bash
 # Evaluate expression
 nix-instantiate --eval -E 'let x = 1; in x + 1'
 # Output: 2

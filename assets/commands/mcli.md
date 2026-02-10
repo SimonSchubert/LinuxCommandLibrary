@@ -1,3 +1,7 @@
+# TAGLINE
+
+minecraft server management CLI
+
 # TLDR
 
 **List servers**
@@ -53,8 +57,6 @@ _COMMAND_
 **mcli** is a Minecraft server management CLI. It manages multiple Minecraft server instances.
 
 The tool handles starting, stopping, backups, and configuration of game servers.
-
-mcli manages Minecraft servers.
 
 # CAVEATS
 

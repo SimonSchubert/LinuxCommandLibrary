@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates and validates one-time passwords for two-factor authentication
+
 # TLDR
 
 **Generate TOTP code from secret**

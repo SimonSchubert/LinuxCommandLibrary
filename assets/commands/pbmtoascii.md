@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PBM bitmap images to ASCII art
+
 # TLDR
 
 **Convert PBM to ASCII art**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays Link Layer Discovery Protocol information collected by the lldpd daemon
+
 # TLDR
 
 Display **neighbor data**

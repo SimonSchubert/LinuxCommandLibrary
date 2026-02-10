@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates a new Hakyll static site project with a basic structure
+
 # TLDR
 
 **Create a new Hakyll site**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+go-based alternative CLI for Immich
+
 # TLDR
 
 **Upload photos**
@@ -55,8 +59,6 @@ _PATH_
 **immich-go** is a Go-based alternative CLI for Immich. It provides efficient bulk uploads with Google Photos Takeout support.
 
 The tool handles date parsing from various metadata sources. It's faster than the official CLI for large uploads.
-
-immich-go is fast Immich uploader.
 
 # CAVEATS
 

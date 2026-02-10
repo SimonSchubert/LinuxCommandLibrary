@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates audio connections between JACK ports
+
 # TLDR
 
 **Connect output to input**
@@ -39,10 +43,6 @@ _destination_port_
 **jack_connect** creates audio connections between JACK ports. JACK (JACK Audio Connection Kit) provides low-latency audio routing between applications.
 
 The command links output ports to input ports, enabling audio to flow between applications. Use **jack_lsp** to list available ports and **jack_disconnect** to remove connections.
-
-# EXAMPLES
-
-```bash
 # List available ports
 jack_lsp
 

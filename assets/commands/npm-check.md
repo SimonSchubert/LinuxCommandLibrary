@@ -1,3 +1,7 @@
+# TAGLINE
+
+checks for outdated and unused packages
+
 # TLDR
 
 **Check for updates**
@@ -53,8 +57,6 @@
 **npm-check** checks for outdated and unused packages. Provides interactive updates.
 
 The tool shows update availability. Identifies unused dependencies.
-
-npm-check audits packages.
 
 # CAVEATS
 

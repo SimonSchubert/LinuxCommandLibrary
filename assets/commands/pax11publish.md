@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages PulseAudio X11 settings
+
 # TLDR
 
 **Publish PulseAudio to X11**
@@ -39,8 +43,6 @@
 **pax11publish** manages PulseAudio X11 settings. Publishes server info to X properties.
 
 The tool enables X11 session audio. Part of PulseAudio.
-
-pax11publish manages X11 audio.
 
 # CAVEATS
 

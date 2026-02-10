@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates Go code from OpenAPI 3
+
 # TLDR
 
 **Generate Go server code**

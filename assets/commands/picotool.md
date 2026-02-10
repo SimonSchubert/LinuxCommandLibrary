@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages Raspberry Pi Pico and RP2040 devices
+
 # TLDR
 
 **Show device info**

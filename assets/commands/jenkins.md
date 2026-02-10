@@ -1,3 +1,7 @@
+# TAGLINE
+
+continuous integration and delivery server
+
 # TLDR
 
 **Start Jenkins**
@@ -49,8 +53,6 @@
 **Jenkins** is a continuous integration and delivery server. It automates building, testing, and deploying software.
 
 The platform supports pipelines, plugins, and distributed builds. It integrates with version control and deployment systems.
-
-Jenkins automates CI/CD workflows.
 
 # CAVEATS
 

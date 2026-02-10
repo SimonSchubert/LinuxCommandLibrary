@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates NTFS filesystems
+
 # TLDR
 
 **Create NTFS filesystem**
@@ -56,8 +60,6 @@ _DEVICE_
 **mkntfs** creates NTFS filesystems. NTFS is Windows' native filesystem.
 
 The tool is part of ntfs-3g/ntfsprogs. Creates compatible NTFS volumes.
-
-mkntfs creates NTFS filesystems.
 
 # CAVEATS
 

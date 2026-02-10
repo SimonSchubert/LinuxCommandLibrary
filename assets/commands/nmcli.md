@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line client for NetworkManager
+
 # TLDR
 
 List all **NetworkManager connections**

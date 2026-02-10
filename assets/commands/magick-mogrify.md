@@ -1,3 +1,7 @@
+# TAGLINE
+
+modifies images in place
+
 # TLDR
 
 **Resize images in place**

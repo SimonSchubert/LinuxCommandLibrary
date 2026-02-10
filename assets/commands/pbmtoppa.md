@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PBM bitmaps to HP PPA format for certain HP DeskJet printers
+
 # TLDR
 
 **Convert PBM to HP PPA format**

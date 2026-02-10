@@ -1,3 +1,7 @@
+# TAGLINE
+
+executes an Architect target defined in angular
+
 # TLDR
 
 **Run architect target**

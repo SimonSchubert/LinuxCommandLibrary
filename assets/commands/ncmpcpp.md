@@ -1,3 +1,7 @@
+# TAGLINE
+
+ncurses-based MPD client
+
 # TLDR
 
 **Start ncmpcpp**

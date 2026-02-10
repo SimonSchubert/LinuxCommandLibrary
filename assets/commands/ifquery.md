@@ -1,3 +1,7 @@
+# TAGLINE
+
+queries network interface configuration
+
 # TLDR
 
 **Query interface config**
@@ -45,8 +49,6 @@ _INTERFACE_
 **ifquery** queries network interface configuration. It reads /etc/network/interfaces and shows interface settings.
 
 The tool is part of ifupdown package on Debian systems. It helps verify network configuration without changes.
-
-ifquery shows interface configuration.
 
 # CAVEATS
 

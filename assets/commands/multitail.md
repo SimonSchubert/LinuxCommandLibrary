@@ -1,3 +1,7 @@
+# TAGLINE
+
+allows viewing multiple log files in a single terminal window
+
 # TLDR
 
 **Follow multiple files**

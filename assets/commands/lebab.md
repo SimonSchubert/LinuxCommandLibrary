@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts JavaScript code from ES5 to ES6/ES2015+
+
 # TLDR
 
 **Convert ES5 to ES6**

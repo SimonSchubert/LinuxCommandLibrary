@@ -1,3 +1,7 @@
+# TAGLINE
+
+free, open-source office productivity suite including word processor
+
 # TLDR
 
 **Open a document**

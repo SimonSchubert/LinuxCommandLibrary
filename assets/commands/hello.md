@@ -1,3 +1,7 @@
+# TAGLINE
+
+friendly greeting program
+
 # TLDR
 
 **Print hello world**
@@ -42,8 +46,6 @@
 **GNU Hello** is a friendly greeting program. It serves as an example of GNU coding standards and a template for new GNU packages.
 
 The program demonstrates proper use of gettext, autoconf, and other GNU infrastructure. It's useful for testing and learning.
-
-hello prints a friendly greeting.
 
 # CAVEATS
 

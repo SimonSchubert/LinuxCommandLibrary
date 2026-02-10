@@ -1,3 +1,7 @@
+# TAGLINE
+
+examines and extracts information from ISO 9660 filesystem images
+
 # TLDR
 
 **List** all files in an ISO image

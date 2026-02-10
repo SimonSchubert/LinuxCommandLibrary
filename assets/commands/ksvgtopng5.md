@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts SVG files to PNG format at a specified resolution
+
 # TLDR
 
 Convert **SVG to PNG**

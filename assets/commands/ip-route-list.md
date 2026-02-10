@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays entries from the kernel routing tables
+
 # TLDR
 
 Display the **main** routing table

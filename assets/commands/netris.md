@@ -1,3 +1,7 @@
+# TAGLINE
+
+network-capable Tetris game
+
 # TLDR
 
 **Play Tetris solo**
@@ -46,8 +50,6 @@
 **netris** is a network-capable Tetris game. Play solo or against others over network.
 
 The tool provides classic Tetris gameplay. Supports head-to-head competition.
-
-netris is networked Tetris game.
 
 # CAVEATS
 

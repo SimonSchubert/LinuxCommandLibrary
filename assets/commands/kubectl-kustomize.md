@@ -1,3 +1,7 @@
+# TAGLINE
+
+builds a kustomization target from a directory containing kustomization
+
 # TLDR
 
 **Build kustomization from directory**

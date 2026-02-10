@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages NetworkManager connection profiles
+
 # TLDR
 
 List all **NetworkManager connections**

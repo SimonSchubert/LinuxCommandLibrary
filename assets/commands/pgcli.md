@@ -1,3 +1,7 @@
+# TAGLINE
+
+enhanced PostgreSQL client with auto-completion and syntax highlighting
+
 # TLDR
 
 **Connect to database**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+scans the system for packages with broken shared library links
+
 # TLDR
 
 Find packages with **broken library links**

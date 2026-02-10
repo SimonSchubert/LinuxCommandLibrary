@@ -1,3 +1,7 @@
+# TAGLINE
+
+PAM configuration file that sets resource limits for users and groups
+
 # TLDR
 
 **Set maximum open files for user**

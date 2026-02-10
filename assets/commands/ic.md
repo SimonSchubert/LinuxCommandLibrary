@@ -1,3 +1,7 @@
+# TAGLINE
+
+context switcher for various tools
+
 # TLDR
 
 **Show current context**
@@ -42,8 +46,6 @@ _CONTEXT_
 **ic** is a context switcher for various tools. Different implementations exist for kubectl contexts, AWS profiles, and other multi-environment tools.
 
 The tool simplifies switching between configurations. It provides quick access to different environments or clusters.
-
-ic switches tool contexts.
 
 # CAVEATS
 

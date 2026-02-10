@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal UI for Kubernetes
+
 # TLDR
 
 **Start k9s**
@@ -53,8 +57,6 @@
 **k9s** is a terminal UI for Kubernetes. It provides real-time cluster management with keyboard navigation.
 
 The tool displays pods, deployments, services, and more. It supports logs, exec, and resource editing.
-
-k9s is a Kubernetes TUI.
 
 # CAVEATS
 

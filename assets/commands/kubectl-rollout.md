@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages deployment rollouts
+
 # TLDR
 
 **Check rollout status**
@@ -60,11 +64,9 @@
 
 # DESCRIPTION
 
-**kubectl rollout** manages deployment rollouts. It controls the update process for workloads.
+**kubectl rollout** manages the lifecycle of rolling updates for Kubernetes workloads including deployments, daemon sets, and stateful sets. It provides subcommands to monitor the progress of an ongoing rollout, inspect revision history, and trigger rollbacks to previous versions when issues are detected.
 
-The command enables rollbacks, pauses, and restarts. It shows revision history for tracking.
-
-kubectl rollout manages deployments.
+The command also supports pausing and resuming rollouts, which is useful for performing canary-style deployments where you want to verify a partial update before allowing it to proceed. The `restart` subcommand triggers a new rolling restart of all pods without changing the pod template, which is helpful for picking up ConfigMap or Secret changes. Each rollout is tracked as a numbered revision, enabling precise rollbacks with --to-revision.
 
 # CAVEATS
 

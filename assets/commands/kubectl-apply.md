@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates or updates Kubernetes resources
+
 # TLDR
 
 **Apply manifest**
@@ -53,11 +57,11 @@
 
 # DESCRIPTION
 
-**kubectl apply** creates or updates Kubernetes resources. It uses declarative configuration to manage resources.
+**kubectl apply** creates or updates Kubernetes resources using declarative configuration files. It compares the desired state defined in YAML or JSON manifests against the current state of the cluster and makes only the necessary changes to reconcile any differences, using a three-way merge strategy that considers the last-applied configuration, the live state, and the new manifest.
 
-The command compares desired state with current state. It's the recommended way to manage Kubernetes resources.
+The command accepts manifests from local files, directories, URLs, or Kustomize overlays, making it well-suited for GitOps workflows where cluster state is version-controlled. It supports both client-side and server-side apply modes, with server-side apply providing better conflict detection when multiple actors manage the same resource through field ownership tracking.
 
-kubectl apply manages resources declaratively.
+This is the recommended approach for managing Kubernetes resources in production, as it preserves changes made by other controllers and allows incremental updates without replacing entire resource definitions.
 
 # CAVEATS
 

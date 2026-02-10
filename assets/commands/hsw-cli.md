@@ -1,3 +1,7 @@
+# TAGLINE
+
+handshake wallet client
+
 # TLDR
 
 **Show wallet info**
@@ -58,8 +62,6 @@ _COMMAND_
 **hsw-cli** is the Handshake wallet client. It connects to the wallet service for managing HNS wallets and transactions.
 
 The tool handles wallet creation, balance queries, and address generation. It separates wallet functions from the main node.
-
-hsw-cli manages Handshake wallets.
 
 # CAVEATS
 

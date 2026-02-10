@@ -1,3 +1,7 @@
+# TAGLINE
+
+video motion detection software
+
 # TLDR
 
 **Start motion detection**
@@ -53,8 +57,6 @@
 **motion** is a video motion detection software. It monitors camera feeds for movement.
 
 The tool captures images and video when motion detected. Supports multiple cameras and streaming.
-
-motion is video motion detector.
 
 # CAVEATS
 

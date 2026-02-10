@@ -1,3 +1,7 @@
+# TAGLINE
+
+automates Inkscape exports for batch processing
+
 # TLDR
 
 **Export all layers**
@@ -52,8 +56,6 @@
 **inkmake** automates Inkscape exports for batch processing. It exports layers or objects from SVG files to various formats.
 
 The tool is useful for generating icons, assets, or multiple sizes from a single source. It wraps Inkscape's export capabilities.
-
-inkmake batch exports Inkscape SVGs.
 
 # CAVEATS
 

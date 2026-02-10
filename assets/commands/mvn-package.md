@@ -1,3 +1,7 @@
+# TAGLINE
+
+builds the project and creates a distributable package
+
 # TLDR
 
 **Build package**

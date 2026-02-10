@@ -1,3 +1,7 @@
+# TAGLINE
+
+GUI version of Vim
+
 # TLDR
 
 **Open file in GUI vim**
@@ -58,8 +62,6 @@ _FILES_
 **gvim** is the GUI version of Vim. It provides all Vim functionality with graphical menus, mouse support, and system clipboard integration.
 
 The editor supports the same commands and plugins as terminal Vim. It offers visual features like toolbar, scrollbars, and configurable fonts.
-
-gvim is Vim with a graphical interface.
 
 # CAVEATS
 

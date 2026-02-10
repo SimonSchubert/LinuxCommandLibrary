@@ -1,3 +1,7 @@
+# TAGLINE
+
+extracts images embedded in PDF files
+
 # TLDR
 
 **Extract images from PDF**

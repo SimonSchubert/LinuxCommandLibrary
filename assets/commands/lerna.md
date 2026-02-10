@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages JavaScript monorepos
+
 # TLDR
 
 **Initialize monorepo**
@@ -63,8 +67,6 @@
 **Lerna** manages JavaScript monorepos. It handles multiple packages in a single repository.
 
 The tool coordinates versioning and publishing. It links local dependencies and runs scripts across packages.
-
-Lerna manages JS monorepos.
 
 # CAVEATS
 

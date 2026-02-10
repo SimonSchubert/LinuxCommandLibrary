@@ -1,3 +1,7 @@
+# TAGLINE
+
+lists files on NTFS partitions
+
 # TLDR
 
 **List directory contents**
@@ -45,8 +49,6 @@ _DEVICE_
 **ntfsls** lists files on NTFS partitions. Works without mounting.
 
 The tool provides directory listings directly. Similar to ls command.
-
-ntfsls lists NTFS contents.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+compresses files using multiple processors
+
 # TLDR
 
 **Compress file using multiple processors**

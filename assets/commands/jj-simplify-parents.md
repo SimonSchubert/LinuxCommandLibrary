@@ -1,3 +1,7 @@
+# TAGLINE
+
+removes redundant parent edges from merge commits
+
 # TLDR
 
 **Simplify parent relationships**

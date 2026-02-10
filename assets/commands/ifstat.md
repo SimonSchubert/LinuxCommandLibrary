@@ -1,3 +1,7 @@
+# TAGLINE
+
+reports network interface statistics in a format similar to vmstat or iostat
+
 # TLDR
 
 View network interface statistics **since last query**

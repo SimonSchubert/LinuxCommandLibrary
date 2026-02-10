@@ -1,3 +1,7 @@
+# TAGLINE
+
+screenshot utility designed specifically for the Hyprland Wayland compositor
+
 # TLDR
 
 Select and screenshot a **region**

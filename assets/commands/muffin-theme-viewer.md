@@ -1,3 +1,7 @@
+# TAGLINE
+
+previews Muffin window manager themes
+
 # TLDR
 
 **View theme**
@@ -25,8 +29,6 @@ _THEME_
 **muffin-theme-viewer** previews Muffin window manager themes. It displays window decorations.
 
 The tool shows how themes look. Useful for theme development and selection.
-
-muffin-theme-viewer previews themes.
 
 # CAVEATS
 

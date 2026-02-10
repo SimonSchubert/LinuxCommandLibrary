@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates Debian live system images
+
 # TLDR
 
 **Initialize live build**
@@ -52,8 +56,6 @@
 **lb** (live-build) creates Debian live system images. It builds bootable ISO images.
 
 The tool supports customization of packages, configs, and hooks. It's the standard tool for Debian live images.
-
-lb builds Debian live images.
 
 # CAVEATS
 

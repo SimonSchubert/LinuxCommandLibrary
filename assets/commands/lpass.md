@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line interface for LastPass password manager
+
 # TLDR
 
 **Login to LastPass**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates a new Angular workspace and generates an initial application
+
 # TLDR
 
 **Create a new Angular workspace**

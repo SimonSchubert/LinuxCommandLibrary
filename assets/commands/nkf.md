@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts Japanese text encodings
+
 # TLDR
 
 **Convert to UTF-8**
@@ -56,8 +60,6 @@ _FILES_
 **nkf** (Network Kanji Filter) converts Japanese text encodings. Handles UTF-8, Shift-JIS, EUC-JP.
 
 The tool auto-detects encodings. Essential for Japanese text processing.
-
-nkf converts Japanese encodings.
 
 # CAVEATS
 

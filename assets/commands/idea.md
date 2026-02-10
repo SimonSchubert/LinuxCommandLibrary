@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line launcher for IntelliJ IDEA
+
 # TLDR
 
 **Open project**
@@ -53,8 +57,6 @@ _FILES_
 **idea** is the command-line launcher for IntelliJ IDEA. It opens files, projects, and invokes IDE features from the terminal.
 
 The tool supports diff, merge, and project navigation. It integrates with git and other tools requiring an editor.
-
-idea launches IntelliJ IDEA from CLI.
 
 # CAVEATS
 

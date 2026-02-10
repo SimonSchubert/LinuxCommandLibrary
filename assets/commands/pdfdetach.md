@@ -1,3 +1,7 @@
+# TAGLINE
+
+lists or extracts embedded files from a PDF file
+
 # TLDR
 
 **List** all attachments in PDF

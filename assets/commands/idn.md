@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts internationalized domain names
+
 # TLDR
 
 **Encode to Punycode**
@@ -49,8 +53,6 @@ _STRINGS_
 **idn** converts internationalized domain names. It encodes Unicode domains to ASCII-compatible Punycode and decodes back.
 
 The tool implements IDNA standards for domain name internationalization. It handles non-ASCII characters in domain names.
-
-idn converts internationalized domains.
 
 # CAVEATS
 

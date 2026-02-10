@@ -1,3 +1,7 @@
+# TAGLINE
+
+mono C# compiler
+
 # TLDR
 
 **Compile C# file**
@@ -53,8 +57,6 @@ _FILES_
 **mcs** is the Mono C# compiler. It compiles C# source code to .NET assemblies.
 
 The tool is part of the Mono project. It supports C# language specifications.
-
-mcs compiles C# code.
 
 # CAVEATS
 

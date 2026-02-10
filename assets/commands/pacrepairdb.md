@@ -1,3 +1,7 @@
+# TAGLINE
+
+fixes corrupted database entries in the libalpm database
+
 # TLDR
 
 Perform a **basic repair** on a specific package

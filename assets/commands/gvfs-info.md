@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays file information using GVFS
+
 # TLDR
 
 **Show file information**
@@ -45,8 +49,6 @@ _LOCATION_
 **gvfs-info** displays file information using GVFS. It shows attributes like size, type, permissions, and custom metadata for local and remote files.
 
 The tool accesses files through GVFS backends, providing unified information across different protocols like SMB, FTP, and local filesystems.
-
-gvfs-info shows file attributes via GVFS.
 
 # CAVEATS
 

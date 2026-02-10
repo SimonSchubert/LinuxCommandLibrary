@@ -1,3 +1,7 @@
+# TAGLINE
+
+phylogenetic analysis tool for maximum likelihood tree inference
+
 # TLDR
 
 **Run phylogenetic analysis**

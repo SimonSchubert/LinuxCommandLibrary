@@ -1,3 +1,7 @@
+# TAGLINE
+
+documents Perl regular expressions, one of the most powerful regex
+
 # TLDR
 
 **View Perl regex documentation**
@@ -49,10 +53,6 @@ m/pattern/i     # Case insensitive
 /x  - Extended (allow whitespace)
 /o  - Compile once
 ```
-
-# EXAMPLES
-
-```perl
 # Match and capture
 if ($text =~ /(\d+)/) {
     print "Found: $1\n";

@@ -1,3 +1,7 @@
+# TAGLINE
+
+removes logical volumes from a volume group
+
 # TLDR
 
 Remove **specific** volume

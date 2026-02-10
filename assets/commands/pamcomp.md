@@ -1,3 +1,7 @@
+# TAGLINE
+
+composites two images
+
 # TLDR
 
 **Composite images**
@@ -41,8 +45,6 @@ _BASE_
 **pamcomp** composites two images. Overlays with transparency support.
 
 The tool combines PAM/PNM images. Part of Netpbm.
-
-pamcomp composites images.
 
 # CAVEATS
 

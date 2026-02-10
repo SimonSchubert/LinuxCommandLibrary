@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays the file system path to Jujutsu configuration files
+
 # TLDR
 
 **Show user config path**

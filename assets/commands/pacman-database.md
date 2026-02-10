@@ -1,3 +1,7 @@
+# TAGLINE
+
+operates directly on the package database, allowing modification of package
+
 # TLDR
 
 Mark as **dependency**

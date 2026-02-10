@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays message of the day
+
 # TLDR
 
 **Display message of the day**
@@ -36,8 +40,6 @@
 **pam_motd** displays message of the day. Shows /etc/motd on login.
 
 The module presents login messages. Supports dynamic MOTD generation.
-
-pam_motd shows login messages.
 
 # CAVEATS
 

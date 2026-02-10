@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages pairing with iOS devices
+
 # TLDR
 
 **Pair with device**
@@ -52,8 +56,6 @@ _COMMAND_
 **idevicepair** manages pairing with iOS devices. Pairing establishes trust between computer and device.
 
 The tool handles the trust dialog workflow. Pairing is required before most device operations work.
-
-idevicepair manages iOS device pairing.
 
 # CAVEATS
 

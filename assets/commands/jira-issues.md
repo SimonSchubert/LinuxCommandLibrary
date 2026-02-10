@@ -1,3 +1,7 @@
+# TAGLINE
+
+lists Jira issues from the command line
+
 # TLDR
 
 **List all issues**

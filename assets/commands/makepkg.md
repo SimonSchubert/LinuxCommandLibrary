@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates Arch Linux packages from PKGBUILD files
+
 # TLDR
 
 **Build** package

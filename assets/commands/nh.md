@@ -1,3 +1,7 @@
+# TAGLINE
+
+nix helper tool
+
 # TLDR
 
 **Build NixOS configuration**
@@ -56,8 +60,6 @@ _COMMAND_
 **nh** is a Nix helper tool. It simplifies NixOS and home-manager operations.
 
 The tool wraps common Nix commands. Provides better output and UX.
-
-nh is Nix operations helper.
 
 # CAVEATS
 

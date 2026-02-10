@@ -1,3 +1,7 @@
+# TAGLINE
+
+queries and changes the system locale and keyboard layout settings
+
 # TLDR
 
 Show current **locale and keymap** settings

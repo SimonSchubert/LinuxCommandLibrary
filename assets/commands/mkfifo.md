@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates named pipes
+
 # TLDR
 
 **Create named pipe**
@@ -39,8 +43,6 @@ _NAME_
 **mkfifo** creates named pipes (FIFOs). Named pipes allow inter-process communication.
 
 The tool creates special files for piping between processes. Data flows first-in-first-out.
-
-mkfifo creates named pipes.
 
 # CAVEATS
 

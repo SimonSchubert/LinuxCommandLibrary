@@ -1,3 +1,7 @@
+# TAGLINE
+
+manipulates display settings on KDE Plasma
+
 # TLDR
 
 Show **display outputs**

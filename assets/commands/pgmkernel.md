@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates convolution kernels as PGM images for use with pnmconvol
+
 # TLDR
 
 **Generate convolution kernel**

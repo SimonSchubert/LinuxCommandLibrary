@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages and displays network interface statistics
+
 # TLDR
 
 Show **all** interface statistics

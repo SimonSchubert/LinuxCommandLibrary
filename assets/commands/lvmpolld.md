@@ -1,3 +1,7 @@
+# TAGLINE
+
+LVM poll daemon that supervises long-running LVM operations such
+
 # TLDR
 
 Start the daemon in the **foreground**

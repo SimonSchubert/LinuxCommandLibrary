@@ -1,3 +1,7 @@
+# TAGLINE
+
+netlify CLI shorthand
+
 # TLDR
 
 **Start development server**
@@ -52,8 +56,6 @@
 **ntl** is the Netlify CLI shorthand. Manages deployments and development.
 
 The tool provides Netlify platform access. Alias for netlify command.
-
-ntl manages Netlify sites.
 
 # CAVEATS
 

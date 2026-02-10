@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays detailed information about connected iOS devices
+
 # TLDR
 
 **Show all device information**

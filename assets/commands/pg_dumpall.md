@@ -1,3 +1,7 @@
+# TAGLINE
+
+extracts all PostgreSQL databases including cluster-wide objects like roles
+
 # TLDR
 
 **Dump all databases**
@@ -51,10 +55,6 @@
 **pg_dumpall** extracts all PostgreSQL databases including cluster-wide objects like roles and tablespaces. Unlike pg_dump, it handles the entire cluster.
 
 Output is a SQL script that can be restored with psql.
-
-# EXAMPLES
-
-```bash
 # Full cluster backup
 pg_dumpall -U postgres > all_databases.sql
 

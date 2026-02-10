@@ -1,3 +1,7 @@
+# TAGLINE
+
+encodes files into MIME format for email transmission
+
 # TLDR
 
 **Encode file as MIME**

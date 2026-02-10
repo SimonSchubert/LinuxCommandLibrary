@@ -1,3 +1,7 @@
+# TAGLINE
+
+enhanced shell history browser
+
 # TLDR
 
 **Launch hstr**

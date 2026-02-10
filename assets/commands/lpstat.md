@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays status information about the current print service
+
 # TLDR
 
 **Show all printers**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+lightweight bar based on XCB
+
 # TLDR
 
 **Start bar reading from stdin**

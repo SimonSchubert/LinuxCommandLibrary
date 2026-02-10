@@ -1,3 +1,7 @@
+# TAGLINE
+
+checks authorization permissions
+
 # TLDR
 
 **Check if action is allowed**
@@ -56,8 +60,6 @@
 **kubectl auth** checks authorization permissions. It verifies what actions are allowed for users and service accounts.
 
 The command tests RBAC policies. It's useful for debugging access issues and auditing permissions.
-
-kubectl auth checks permissions.
 
 # CAVEATS
 

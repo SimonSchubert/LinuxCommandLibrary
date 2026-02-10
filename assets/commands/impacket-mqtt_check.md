@@ -1,3 +1,7 @@
+# TAGLINE
+
+simple tool that checks if an MQTT broker allows connections, optionally
+
 # TLDR
 
 **Check MQTT broker** for anonymous access

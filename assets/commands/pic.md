@@ -1,3 +1,7 @@
+# TAGLINE
+
+troff preprocessor for drawing diagrams
+
 # TLDR
 
 **Process pic to troff**

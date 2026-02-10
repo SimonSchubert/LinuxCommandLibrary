@@ -1,3 +1,7 @@
+# TAGLINE
+
+initializes a Jujutsu repository with Git backend
+
 # TLDR
 
 **Initialize jj in existing Git repo**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+programming language compiler
+
 # TLDR
 
 **Compile to executable**
@@ -63,8 +67,6 @@ _COMMAND_
 **nim** is the Nim programming language compiler. It compiles to C, JavaScript, and other backends.
 
 The tool produces efficient executables. Features Python-like syntax with static typing.
-
-nim compiles Nim programs.
 
 # CAVEATS
 

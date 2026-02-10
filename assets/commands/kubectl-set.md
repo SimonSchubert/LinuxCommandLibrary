@@ -1,3 +1,7 @@
+# TAGLINE
+
+updates resource fields
+
 # TLDR
 
 **Set image**
@@ -49,8 +53,6 @@
 **kubectl set** updates resource fields. It modifies specific aspects of running workloads.
 
 The command is faster than full apply for targeted changes. It triggers rollouts for deployments.
-
-kubectl set updates resource fields.
 
 # CAVEATS
 

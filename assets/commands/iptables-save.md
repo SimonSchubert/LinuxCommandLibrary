@@ -1,3 +1,7 @@
+# TAGLINE
+
+dumps the current iptables IPv4 configuration to stdout or a file
+
 # TLDR
 
 **Print** all rules

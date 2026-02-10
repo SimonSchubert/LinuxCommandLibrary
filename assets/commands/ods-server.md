@@ -1,3 +1,7 @@
+# TAGLINE
+
+openDNSSEC signer daemon
+
 # TLDR
 
 **Start ODS server**
@@ -42,8 +46,6 @@
 **ods-server** is the OpenDNSSEC signer daemon. Signs DNS zones with DNSSEC.
 
 The daemon handles zone signing operations. Part of OpenDNSSEC suite.
-
-ods-server signs DNS zones.
 
 # CAVEATS
 

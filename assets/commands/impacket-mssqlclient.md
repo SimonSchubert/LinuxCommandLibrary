@@ -1,3 +1,7 @@
+# TAGLINE
+
+connects to Microsoft SQL Server databases for executing queries and database
+
 # TLDR
 
 **Connect to MSSQL server**

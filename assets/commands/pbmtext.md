@@ -1,3 +1,7 @@
+# TAGLINE
+
+renders text as a PBM bitmap image
+
 # TLDR
 
 **Create text image**

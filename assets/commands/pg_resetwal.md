@@ -1,3 +1,7 @@
+# TAGLINE
+
+resets write-ahead log and control information
+
 # TLDR
 
 **Reset WAL (dry run)**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+identifies Kubernetes secrets that are not referenced by any pods
+
 # TLDR
 
 **Detect unused secrets in cluster**

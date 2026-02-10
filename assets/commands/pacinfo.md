@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays detailed information about packages from the pacman database
+
 # TLDR
 
 Display information about a **specific package**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal pager program used to view the contents of text files one
+
 # TLDR
 
 **View a file**

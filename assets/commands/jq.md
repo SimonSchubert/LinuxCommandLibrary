@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line JSON processor
+
 # TLDR
 
 **Pretty print JSON**
@@ -60,11 +64,9 @@ _FILE_
 
 # DESCRIPTION
 
-**jq** is a command-line JSON processor. It filters, transforms, and formats JSON data.
+**jq** is a lightweight, command-line JSON processor often described as "sed for JSON." It reads JSON input from files or standard input, applies a filter expression, and writes the transformed result to standard output. Filters can be chained together with the pipe operator (`|`), enabling multi-step transformations that extract fields, restructure objects, compute values, and aggregate arrays in a single invocation.
 
-The tool uses a powerful query language for JSON manipulation. It supports complex transformations and data extraction.
-
-jq processes and transforms JSON.
+The filter language supports object and array indexing (`.foo`, `.[0]`), iteration (`.[]`), conditionals (`if-then-else`), comparison and logic operators, built-in functions like `map`, `select`, `group_by`, and `sort_by`, as well as string interpolation and regular expressions. This makes jq well suited for tasks like extracting nested values from API responses, converting JSON records into CSV, or reshaping data for downstream tools. Output can be pretty-printed (the default), compacted with `-c` for piping, or emitted as raw strings with `-r` for shell integration.
 
 # CAVEATS
 

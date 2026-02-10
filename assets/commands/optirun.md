@@ -1,3 +1,7 @@
+# TAGLINE
+
+bumblebee project's tool for running applications on NVIDIA Optimus laptops
+
 # TLDR
 
 **Run application with NVIDIA GPU**

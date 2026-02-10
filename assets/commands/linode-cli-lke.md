@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages Linode Kubernetes Engine clusters
+
 # TLDR
 
 **List clusters**
@@ -65,8 +69,6 @@ _SUBCOMMAND_
 **linode-cli lke** manages Linode Kubernetes Engine clusters. LKE provides managed Kubernetes.
 
 The tool creates clusters, manages node pools, and retrieves kubeconfig for kubectl access.
-
-linode-cli lke manages Kubernetes.
 
 # CAVEATS
 

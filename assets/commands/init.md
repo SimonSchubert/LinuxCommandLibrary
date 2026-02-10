@@ -1,3 +1,7 @@
+# TAGLINE
+
+parent of all processes on the system, responsible for starting and stopping
+
 # TLDR
 
 Set system to **graphical** environment (runlevel 5)

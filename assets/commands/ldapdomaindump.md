@@ -1,3 +1,7 @@
+# TAGLINE
+
+extracts Active Directory information via LDAP, including users
+
 # TLDR
 
 Dump domain info with **credentials**

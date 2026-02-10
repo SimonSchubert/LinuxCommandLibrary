@@ -1,3 +1,7 @@
+# TAGLINE
+
+marks a package version as deprecated on the npm registry
+
 # TLDR
 
 **Deprecate package version**
@@ -33,10 +37,6 @@
 **npm deprecate** marks a package version as deprecated on the npm registry. Users installing deprecated versions will see a warning message.
 
 This is commonly used to discourage use of old or vulnerable versions while still allowing installation.
-
-# EXAMPLES
-
-```bash
 # Deprecate specific version
 npm deprecate my-package@1.0.0 "Critical bug, please upgrade"
 

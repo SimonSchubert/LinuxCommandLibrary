@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays help information for Koji commands
+
 # TLDR
 
 Display **all available commands**

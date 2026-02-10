@@ -1,3 +1,7 @@
+# TAGLINE
+
+performs SMB protocol operations for security testing
+
 # TLDR
 
 **Check SMB access**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+launcher for Pharo Smalltalk, a modern, open-source Smalltalk environment
+
 # TLDR
 
 **Launch Pharo image**
@@ -40,10 +44,6 @@
 # DESCRIPTION
 
 **pharo** is the launcher for Pharo Smalltalk, a modern, open-source Smalltalk environment. Pharo uses image-based persistence where the entire environment state is saved.
-
-# EXAMPLES
-
-```bash
 # Launch GUI
 pharo-ui Pharo.image
 

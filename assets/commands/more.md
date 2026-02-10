@@ -1,3 +1,7 @@
+# TAGLINE
+
+filter for paging through text one screenful at a time
+
 # TLDR
 
 **Open a file** for paging

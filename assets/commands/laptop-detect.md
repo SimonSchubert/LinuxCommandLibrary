@@ -1,3 +1,7 @@
+# TAGLINE
+
+attempts to determine whether the system is a laptop or desktop computer
+
 # TLDR
 
 **Detect** if running on a laptop (exit code 0) or desktop (exit code 1)

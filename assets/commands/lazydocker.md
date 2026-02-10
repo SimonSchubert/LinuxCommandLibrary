@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal UI for managing Docker containers, images, volumes, and networks
+
 # TLDR
 
 **Start lazydocker**

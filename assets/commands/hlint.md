@@ -1,3 +1,7 @@
+# TAGLINE
+
+tool for suggesting improvements to Haskell source code
+
 # TLDR
 
 Display **suggestions** for a Haskell file

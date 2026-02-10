@@ -1,3 +1,7 @@
+# TAGLINE
+
+edge browser for Linux
+
 # TLDR
 
 **Open browser**
@@ -53,8 +57,6 @@ _URL_
 **microsoft-edge** is Microsoft Edge browser for Linux. It's based on Chromium.
 
 The tool provides web browsing with Microsoft services integration. Supports extensions and sync.
-
-microsoft-edge is Edge browser.
 
 # CAVEATS
 

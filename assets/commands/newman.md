@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs Postman collections from CLI
+
 # TLDR
 
 **Run Postman collection**
@@ -60,8 +64,6 @@ _COLLECTION_
 **newman** runs Postman collections from CLI. It automates API testing.
 
 The tool executes request collections. Supports CI/CD integration.
-
-newman is Postman CLI runner.
 
 # CAVEATS
 

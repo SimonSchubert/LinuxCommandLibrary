@@ -1,3 +1,7 @@
+# TAGLINE
+
+checks whether files contain valid UTF-8 encoded text
+
 # TLDR
 
 **Check if file is valid UTF-8**

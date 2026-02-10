@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages Linode account events
+
 # TLDR
 
 **List events**
@@ -52,8 +56,6 @@ _SUBCOMMAND_
 **linode-cli events** manages Linode account events. Events track actions and changes in your infrastructure.
 
 The tool shows notifications about instance creation, reboots, resizes, and other activities.
-
-linode-cli events tracks account activity.
 
 # CAVEATS
 

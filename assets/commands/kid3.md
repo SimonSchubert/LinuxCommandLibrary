@@ -1,3 +1,7 @@
+# TAGLINE
+
+audio tag editor supporting MP3, Ogg Vorbis, FLAC, MPC, MP4/AAC, and other
+
 # TLDR
 
 **Start Kid3**

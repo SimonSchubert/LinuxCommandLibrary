@@ -1,3 +1,7 @@
+# TAGLINE
+
+real-time media server and proxy that supports multiple streaming protocols
+
 # TLDR
 
 **Run** MediaMTX

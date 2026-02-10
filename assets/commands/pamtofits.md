@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PAM/PNM images to FITS format used in astronomy
+
 # TLDR
 
 **Convert PAM to FITS format**

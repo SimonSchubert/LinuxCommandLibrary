@@ -1,3 +1,7 @@
+# TAGLINE
+
+inspects PlatformIO project configuration and metadata
+
 # TLDR
 
 **Show project configuration**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PGM grayscale images to PBM bitmap
+
 # TLDR
 
 **Convert grayscale to bitmap**

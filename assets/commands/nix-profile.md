@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages user package profiles in Nix
+
 # TLDR
 
 **List installed packages**

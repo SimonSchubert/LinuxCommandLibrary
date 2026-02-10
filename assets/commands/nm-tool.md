@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays NetworkManager information
+
 # TLDR
 
 **Show network status**
@@ -25,8 +29,6 @@
 **nm-tool** displays NetworkManager information. Shows network connections and status.
 
 The tool queries NetworkManager. Deprecated in favor of nmcli.
-
-nm-tool shows network info.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+compares two lzip-compressed files and shows differences
+
 # TLDR
 
 **Compare two lzip-compressed files**

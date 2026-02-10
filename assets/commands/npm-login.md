@@ -1,3 +1,7 @@
+# TAGLINE
+
+authenticates with an npm registry
+
 # TLDR
 
 **Login to npm registry**

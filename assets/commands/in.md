@@ -1,3 +1,7 @@
+# TAGLINE
+
+simple command scheduler that runs commands after a specified delay
+
 # TLDR
 
 **Schedule command**
@@ -42,8 +46,6 @@ _COMMAND_
 **in** is a simple command scheduler that runs commands after a specified delay. It provides an alternative to at with simpler time syntax.
 
 The tool backgrounds the sleep and command execution. Output is typically mailed or discarded.
-
-in schedules commands with delay.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+launches the Minecraft game
+
 # TLDR
 
 **Launch Minecraft**
@@ -46,8 +50,6 @@
 **minecraft** launches the Minecraft game. The launcher manages versions and profiles.
 
 The tool downloads game files and manages Java runtime. Supports mods and custom configurations.
-
-minecraft launches the game.
 
 # CAVEATS
 

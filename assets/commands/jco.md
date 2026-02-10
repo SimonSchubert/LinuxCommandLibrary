@@ -1,3 +1,7 @@
+# TAGLINE
+
+JavaScript tooling for WebAssembly Components
+
 # TLDR
 
 **Transpile WASM component**
@@ -52,8 +56,6 @@
 **jco** is JavaScript tooling for WebAssembly Components. It transpiles WASM components to JavaScript for browser/Node.js use.
 
 The tool works with the component model standard. It generates JavaScript bindings and TypeScript definitions.
-
-jco transpiles WASM components to JS.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+filters JSON using Python expressions
+
 # TLDR
 
 **Filter JSON with Python**
@@ -56,8 +60,6 @@ _EXPRESSION_
 **jello** filters JSON using Python expressions. The input JSON is available as underscore (_) variable.
 
 The tool combines jq-like filtering with Python's full expression power. It handles both JSON and JSON Lines.
-
-jello filters JSON with Python.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+attaches a filesystem found on a device to the directory tree
+
 # TLDR
 
 Show all **mounted filesystems**

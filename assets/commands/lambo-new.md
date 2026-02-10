@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates new Laravel projects with automation
+
 # TLDR
 
 **Create Laravel project**
@@ -52,8 +56,6 @@ _NAME_
 **lambo new** creates new Laravel projects with automation. It combines multiple setup steps into one command.
 
 The command handles git initialization, dependency installation, and configuration. It opens the project in your editor.
-
-lambo new bootstraps Laravel apps.
 
 # CAVEATS
 

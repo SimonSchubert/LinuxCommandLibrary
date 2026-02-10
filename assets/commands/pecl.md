@@ -1,3 +1,7 @@
+# TAGLINE
+
+PHP Extension Community Library manager
+
 # TLDR
 
 **Install extension**
@@ -53,8 +57,6 @@
 **pecl** is PHP Extension Community Library manager. Installs PHP extensions.
 
 The tool manages compiled extensions. Part of PEAR.
-
-pecl installs PHP extensions.
 
 # CAVEATS
 

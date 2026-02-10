@@ -1,3 +1,7 @@
+# TAGLINE
+
+dock panel for KDE Plasma that provides an alternative to the default Plasma
+
 # TLDR
 
 **Clear** QML cache

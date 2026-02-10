@@ -1,3 +1,7 @@
+# TAGLINE
+
+analyzes Java class dependencies
+
 # TLDR
 
 **Analyze class dependencies**
@@ -56,8 +60,6 @@ _PATH_
 **jdeps** analyzes Java class dependencies. It shows which packages and modules a JAR depends on.
 
 The tool helps with Java module migration. It identifies use of internal JDK APIs that may break in future versions.
-
-jdeps analyzes Java dependencies.
 
 # CAVEATS
 

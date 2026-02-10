@@ -1,3 +1,7 @@
+# TAGLINE
+
+JSON pretty printer from Perl
+
 # TLDR
 
 **Pretty print JSON**
@@ -49,8 +53,6 @@
 **json_pp** is a JSON pretty printer from Perl. It reads JSON from stdin and outputs formatted JSON.
 
 The tool provides basic formatting and validation. It's often pre-installed on systems with Perl.
-
-json_pp formats JSON output.
 
 # CAVEATS
 

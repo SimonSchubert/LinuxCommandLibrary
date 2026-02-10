@@ -1,3 +1,7 @@
+# TAGLINE
+
+sets or resets simulated GPS location on iOS devices
+
 # TLDR
 
 **Set device location**

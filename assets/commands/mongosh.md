@@ -1,3 +1,7 @@
+# TAGLINE
+
+modern MongoDB shell
+
 # TLDR
 
 **Connect to local database**
@@ -60,8 +64,6 @@ _CONNECTION_STRING_
 **mongosh** is the modern MongoDB shell. It provides JavaScript interface with enhanced features.
 
 The tool replaces legacy mongo shell. Includes syntax highlighting, autocomplete, and snippets.
-
-mongosh is modern MongoDB shell.
 
 # CAVEATS
 

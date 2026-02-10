@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages user-defined functions
+
 # TLDR
 
 **List functions**
@@ -48,8 +52,6 @@
 **odpscmd func** manages user-defined functions. Creates and manages UDFs.
 
 The tool handles MaxCompute functions. Part of odpscmd suite.
-
-odpscmd func manages UDFs.
 
 # CAVEATS
 

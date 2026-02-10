@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays and edits MP3 file ID3 tags
+
 # TLDR
 
 **Show MP3 info**
@@ -63,8 +67,6 @@ _FILES_
 **mp3info** displays and edits MP3 file ID3 tags. It's a lightweight tag editor.
 
 The tool reads ID3v1 tags. Shows bitrate, duration, and other technical info.
-
-mp3info is MP3 tag viewer/editor.
 
 # CAVEATS
 

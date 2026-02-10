@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts grayscale images to black and white using dithering
+
 # TLDR
 
 **Dither to black and white**

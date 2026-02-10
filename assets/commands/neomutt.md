@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal email client
+
 # TLDR
 
 **Start NeoMutt**
@@ -56,8 +60,6 @@ _ADDRESS_
 **neomutt** is a terminal email client. It's a feature-rich fork of Mutt.
 
 The tool adds modern features. Supports IMAP, POP3, SMTP, and local mail.
-
-neomutt is enhanced Mutt fork.
 
 # CAVEATS
 

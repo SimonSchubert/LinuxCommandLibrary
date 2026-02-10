@@ -1,3 +1,7 @@
+# TAGLINE
+
+convenience alias for **pactrans --remove** that removes packages
+
 # TLDR
 
 This command is an alias of **pactrans --remove**

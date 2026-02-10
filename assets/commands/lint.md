@@ -1,3 +1,7 @@
+# TAGLINE
+
+classic static analysis tool for C programs
+
 # TLDR
 
 **Check C program**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays the mail queue
+
 # TLDR
 
 **Show mail queue**
@@ -32,8 +36,6 @@
 **mailq** displays the mail queue. It shows messages waiting to be delivered.
 
 The tool is usually a symlink to sendmail or postfix. It lists queued, deferred, and held mail.
-
-mailq shows queued mail.
 
 # CAVEATS
 

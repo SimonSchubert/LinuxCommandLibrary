@@ -1,3 +1,7 @@
+# TAGLINE
+
+parallel implementation of bzip2 compression
+
 # TLDR
 
 **Compress file**

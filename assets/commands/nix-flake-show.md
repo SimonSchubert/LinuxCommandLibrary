@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays flake outputs
+
 # TLDR
 
 **Show flake outputs**
@@ -39,8 +43,6 @@ _FLAKE-URL_
 **nix flake show** displays flake outputs. Shows packages, apps, and devShells.
 
 The command lists available attributes. Tree view of flake structure.
-
-nix flake show lists outputs.
 
 # CAVEATS
 

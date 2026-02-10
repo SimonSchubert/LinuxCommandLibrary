@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages organization teams
+
 # TLDR
 
 **List teams**
@@ -49,8 +53,6 @@ _COMMAND_
 **npm team** manages organization teams. Controls package access groups.
 
 The command handles team membership. Part of npm organizations feature.
-
-npm team manages org teams.
 
 # CAVEATS
 

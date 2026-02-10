@@ -1,3 +1,7 @@
+# TAGLINE
+
+generic non-JVM producer and consumer for Apache Kafka
+
 # TLDR
 
 **Consume messages from topic**

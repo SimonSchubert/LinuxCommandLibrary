@@ -1,3 +1,7 @@
+# TAGLINE
+
+checks whether a given directory or file is a filesystem mountpoint
+
 # TLDR
 
 **Check** if a directory is a mountpoint

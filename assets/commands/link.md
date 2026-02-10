@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates a hard link between files
+
 # TLDR
 
 **Create hard link**
@@ -25,8 +29,6 @@ _FILE2_
 **link** creates a hard link between files. Unlike ln, it only creates hard links and takes exactly two arguments.
 
 The tool creates an additional directory entry pointing to the same inode. Both names reference the same file data.
-
-link creates hard links.
 
 # CAVEATS
 

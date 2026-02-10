@@ -1,3 +1,7 @@
+# TAGLINE
+
+decodes Intel GPU error states from kernel logs
+
 # TLDR
 
 **Decode GPU error from dmesg**
@@ -32,8 +36,6 @@
 **intel_error_decode** decodes Intel GPU error states from kernel logs. It translates hardware register dumps into human-readable information.
 
 The tool parses GPU hang information to identify failing batches and instructions. Essential for debugging graphics driver issues.
-
-intel_error_decode decodes GPU errors.
 
 # CAVEATS
 

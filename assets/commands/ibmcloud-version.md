@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays the IBM Cloud CLI version
+
 # TLDR
 
 **Show version**
@@ -25,8 +29,6 @@
 **ibmcloud version** displays the IBM Cloud CLI version. It shows the installed CLI version and SDK information.
 
 The command helps verify installation and check for updates. Use before reporting issues.
-
-ibmcloud version shows CLI version.
 
 # CAVEATS
 

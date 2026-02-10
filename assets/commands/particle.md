@@ -1,3 +1,7 @@
+# TAGLINE
+
+controls Particle IoT devices
+
 # TLDR
 
 **Login to Particle**

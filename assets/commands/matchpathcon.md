@@ -1,3 +1,7 @@
+# TAGLINE
+
+looks up the default SELinux security context for a given file path
+
 # TLDR
 
 Lookup the **persistent security context** setting of an absolute path

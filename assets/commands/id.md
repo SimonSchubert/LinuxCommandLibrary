@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays user and group identity information
+
 # TLDR
 
 **Show current user info**
@@ -56,8 +60,6 @@ _USER_
 **id** displays user and group identity information. It shows UID, GID, and supplementary groups for users.
 
 The command is useful for verifying permissions and group memberships. It can query any user or the current user by default.
-
-id shows user and group identities.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+waits for filesystem events using Linux's inotify interface
+
 # TLDR
 
 **Watch file for changes**
@@ -59,8 +63,6 @@
 **inotifywait** waits for filesystem events using Linux's inotify interface. It exits when specified events occur on watched paths.
 
 The tool enables event-driven scripts that react to file changes. It supports monitoring files, directories, and recursive watching.
-
-inotifywait monitors filesystem events.
 
 # CAVEATS
 

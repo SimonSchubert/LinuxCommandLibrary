@@ -1,3 +1,7 @@
+# TAGLINE
+
+CLI for Heroku platform-as-a-service
+
 # TLDR
 
 **Login**
@@ -66,8 +70,6 @@ _COMMAND_
 **heroku** is the CLI for Heroku platform-as-a-service. It manages applications, addons, and infrastructure on Heroku cloud.
 
 The tool handles deployment, scaling, logging, and configuration. It integrates with Git for deployments and supports multiple languages.
-
-heroku manages Heroku cloud applications.
 
 # CAVEATS
 

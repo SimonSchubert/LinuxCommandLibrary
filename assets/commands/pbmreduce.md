@@ -1,3 +1,7 @@
+# TAGLINE
+
+reduces PBM bitmap size by an integer factor
+
 # TLDR
 
 **Reduce bitmap by factor**

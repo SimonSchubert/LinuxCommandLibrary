@@ -1,3 +1,7 @@
+# TAGLINE
+
+submits print jobs
+
 # TLDR
 
 **Print file**
@@ -56,8 +60,6 @@ _FILES_
 **lpr** submits print jobs. It's the BSD-style print command used with CUPS.
 
 The tool queues files for printing. Options control destination, copies, and formatting.
-
-lpr prints files.
 
 # CAVEATS
 

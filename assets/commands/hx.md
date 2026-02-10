@@ -1,3 +1,7 @@
+# TAGLINE
+
+command for Helix editor
+
 # TLDR
 
 **Open file**
@@ -52,8 +56,6 @@ _FILES_
 **hx** is the command for Helix editor. Helix is a post-modern modal editor with built-in LSP support and tree-sitter integration.
 
 The editor uses selection-first editing model inspired by Kakoune. It provides syntax highlighting, completions, and diagnostics out of the box.
-
-hx launches Helix text editor.
 
 # CAVEATS
 

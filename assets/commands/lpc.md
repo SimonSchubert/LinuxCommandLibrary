@@ -1,3 +1,7 @@
+# TAGLINE
+
+controls line printers
+
 # TLDR
 
 **Show printer status**
@@ -59,8 +63,6 @@ _PRINTER_
 **lpc** controls line printers. It shows status and controls printer queues.
 
 The tool is the line printer control program from BSD, now implemented by CUPS.
-
-lpc controls printer queues.
 
 # CAVEATS
 

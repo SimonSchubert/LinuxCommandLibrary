@@ -1,3 +1,7 @@
+# TAGLINE
+
+GCC wrapper that compiles programs against musl libc instead of glibc
+
 # TLDR
 
 **Compile program with musl libc**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+lists directory contents using GVFS
+
 # TLDR
 
 **List directory**
@@ -49,8 +53,6 @@ _LOCATION_
 **gvfs-ls** lists directory contents using GVFS. It works with local directories and remote URIs, providing consistent listing across backends.
 
 The tool shows file names and optionally detailed attributes. It supports network protocols like SMB, FTP, SSH, and WebDAV.
-
-gvfs-ls lists directories via GVFS backends.
 
 # CAVEATS
 

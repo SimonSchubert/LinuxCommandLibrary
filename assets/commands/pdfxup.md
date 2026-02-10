@@ -1,3 +1,7 @@
+# TAGLINE
+
+arranges multiple PDF pages onto single sheets
+
 # TLDR
 
 Create **2-up** PDF

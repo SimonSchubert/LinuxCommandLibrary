@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PAM images with alpha channel to PNG format, preserving transparency
+
 # TLDR
 
 **Convert RGBA PAM to PNG with transparency**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays details of a change
+
 # TLDR
 
 **Show current change**
@@ -49,8 +53,6 @@ _REVISION_
 **jj show** displays details of a change. It shows the description, author, and diff.
 
 The command provides comprehensive change information. Templates customize output format.
-
-jj show displays change details.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+disables PHP extensions on Debian-based systems by removing the symbolic link
+
 # TLDR
 
 **Disable** extension for all PHP versions and SAPIs

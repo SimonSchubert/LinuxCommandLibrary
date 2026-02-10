@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts Graphviz DOT format to GML
+
 # TLDR
 
 **Convert DOT to GML**
@@ -32,8 +36,6 @@ _FILES_
 **gv2gml** converts Graphviz DOT format to GML (Graph Modelling Language). GML is an interchange format used by various graph analysis tools.
 
 The tool preserves graph structure during conversion. It's useful for exporting Graphviz graphs to other applications like yEd or Gephi.
-
-gv2gml converts Graphviz to GML format.
 
 # CAVEATS
 

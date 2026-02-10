@@ -1,3 +1,7 @@
+# TAGLINE
+
+portable x86 and x86-64 assembler using Intel syntax
+
 # TLDR
 
 **Assemble to object file**

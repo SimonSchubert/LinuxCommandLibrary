@@ -1,3 +1,7 @@
+# TAGLINE
+
+upgrades PostgreSQL to a new major version in place
+
 # TLDR
 
 **Upgrade cluster**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+CLI for Keycloak, an open-source identity and access management
+
 # TLDR
 
 **Start Keycloak in development mode**

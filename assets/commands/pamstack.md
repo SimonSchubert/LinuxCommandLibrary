@@ -1,3 +1,7 @@
+# TAGLINE
+
+combines multiple single-plane images into a multi-plane PAM
+
 # TLDR
 
 **Stack images as layers**

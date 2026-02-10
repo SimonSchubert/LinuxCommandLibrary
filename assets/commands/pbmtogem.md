@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PBM bitmaps to GEM IMG format
+
 # TLDR
 
 **Convert PBM to GEM IMG format**

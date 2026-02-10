@@ -1,3 +1,7 @@
+# TAGLINE
+
+bash builtin command that displays or manipulates the command history list
+
 # TLDR
 
 **Display command history** with line numbers

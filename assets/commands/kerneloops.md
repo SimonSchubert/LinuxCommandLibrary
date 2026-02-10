@@ -1,3 +1,7 @@
+# TAGLINE
+
+collects and submits kernel crash information
+
 # TLDR
 
 **Start kerneloops daemon**
@@ -35,8 +39,6 @@
 **kerneloops** collects and submits kernel crash information. It monitors for kernel oops messages and sends them for analysis.
 
 The daemon helps developers identify kernel bugs. Submitted data aids in kernel debugging.
-
-kerneloops reports kernel crashes.
 
 # CAVEATS
 

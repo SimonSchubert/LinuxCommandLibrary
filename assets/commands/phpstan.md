@@ -1,3 +1,7 @@
+# TAGLINE
+
+performs static analysis on PHP code, finding bugs without running the code
+
 # TLDR
 
 **Analyze source directory**

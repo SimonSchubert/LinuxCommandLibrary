@@ -1,3 +1,7 @@
+# TAGLINE
+
+transfers files via OBEX protocol
+
 # TLDR
 
 **List files on device**
@@ -52,8 +56,6 @@
 **obexftp** transfers files via OBEX protocol. Supports Bluetooth and USB.
 
 The tool enables file exchange with mobile devices. Part of OpenOBEX.
-
-obexftp transfers files via OBEX.
 
 # CAVEATS
 

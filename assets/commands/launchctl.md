@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages launchd services on macOS
+
 # TLDR
 
 **List loaded services**

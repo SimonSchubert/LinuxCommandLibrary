@@ -1,3 +1,7 @@
+# TAGLINE
+
+removes a tag from one or more builds
+
 # TLDR
 
 **Remove tag** from a build

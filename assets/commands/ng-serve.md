@@ -1,3 +1,7 @@
+# TAGLINE
+
+builds an Angular application and starts a development server
+
 # TLDR
 
 **Start development server**

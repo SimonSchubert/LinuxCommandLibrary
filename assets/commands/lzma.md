@@ -1,3 +1,7 @@
+# TAGLINE
+
+compresses files using the Lempel-Ziv-Markov chain Algorithm
+
 # TLDR
 
 **Compress file**

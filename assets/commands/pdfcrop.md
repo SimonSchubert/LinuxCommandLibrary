@@ -1,3 +1,7 @@
+# TAGLINE
+
+automatically detects and removes margins from PDF pages using
+
 # TLDR
 
 **Automatically detect and remove** margins from each page

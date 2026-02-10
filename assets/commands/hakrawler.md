@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast web crawler for gathering URLs and JavaScript file references
+
 # TLDR
 
 **Crawl single URL**

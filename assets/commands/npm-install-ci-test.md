@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs npm ci followed by npm test
+
 # TLDR
 
 **Clean install and test**

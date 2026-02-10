@@ -1,3 +1,7 @@
+# TAGLINE
+
+classic word-guessing game
+
 # TLDR
 
 **Start hangman game**
@@ -35,8 +39,6 @@
 **hangman** is a classic word-guessing game. Players guess letters to reveal a hidden word before making too many wrong guesses.
 
 The game displays the gallows and tracks incorrect guesses. It uses the system dictionary or a custom word list for challenges.
-
-hangman is the classic word guessing game.
 
 # CAVEATS
 

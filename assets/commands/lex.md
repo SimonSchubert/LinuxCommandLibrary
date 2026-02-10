@@ -1,3 +1,7 @@
+# TAGLINE
+
+lexical analyzer generator that is traditionally aliased to **flex** on most
+
 # TLDR
 
 This command is an **alias** of flex

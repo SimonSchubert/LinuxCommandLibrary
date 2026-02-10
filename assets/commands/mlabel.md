@@ -1,3 +1,7 @@
+# TAGLINE
+
+adds, displays, or removes volume labels on MS-DOS FAT and VFAT filesystems
+
 # TLDR
 
 **Set a volume label** on a FAT/VFAT filesystem

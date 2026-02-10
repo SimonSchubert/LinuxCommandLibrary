@@ -1,3 +1,7 @@
+# TAGLINE
+
+server-side music player
+
 # TLDR
 
 **Start MPD**
@@ -53,8 +57,6 @@ _CONFIG_FILE_
 **mpd** (Music Player Daemon) is a server-side music player. It plays audio and manages playlists.
 
 The tool runs as a daemon. Clients like mpc or ncmpcpp connect to control playback.
-
-mpd is music server daemon.
 
 # CAVEATS
 

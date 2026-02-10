@@ -1,3 +1,7 @@
+# TAGLINE
+
+recovers deleted files from hard disks, memory cards, and other storage media
+
 # TLDR
 
 Run PhotoRec on a **device**

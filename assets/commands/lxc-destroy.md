@@ -1,3 +1,7 @@
+# TAGLINE
+
+deletes a Linux container and its configuration
+
 # TLDR
 
 **Delete** container

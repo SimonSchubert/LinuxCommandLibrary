@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays KDE dialog boxes from shell scripts, enabling graphical user
+
 # TLDR
 
 Display **message box**

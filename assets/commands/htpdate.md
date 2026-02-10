@@ -1,3 +1,7 @@
+# TAGLINE
+
+synchronizes the local system time using HTTP headers from web servers
+
 # TLDR
 
 **Synchronize** date and time

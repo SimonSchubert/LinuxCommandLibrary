@@ -1,3 +1,7 @@
+# TAGLINE
+
+concatenates and merges gettext PO files
+
 # TLDR
 
 **Concatenate PO files**

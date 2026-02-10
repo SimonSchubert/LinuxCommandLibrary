@@ -1,3 +1,7 @@
+# TAGLINE
+
+opens package documentation in browser
+
 # TLDR
 
 **Open package docs**
@@ -29,8 +33,6 @@ _PACKAGES_
 **npm docs** opens package documentation in browser. Reads homepage from package.json.
 
 The command navigates to docs URL. Alias for npm home with docs preference.
-
-npm docs opens documentation.
 
 # CAVEATS
 

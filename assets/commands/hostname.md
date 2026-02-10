@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays or sets the system's host name
+
 # TLDR
 
 **Display the current hostname**

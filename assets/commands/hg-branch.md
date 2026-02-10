@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages named branches in Mercurial
+
 # TLDR
 
 **Show current branch**

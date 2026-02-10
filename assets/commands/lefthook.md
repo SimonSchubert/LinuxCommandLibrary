@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast and powerful Git hooks manager written in Go
+
 # TLDR
 
 **Install git hooks**

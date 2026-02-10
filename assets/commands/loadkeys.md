@@ -1,3 +1,7 @@
+# TAGLINE
+
+loads the kernel keymap for the Linux console
+
 # TLDR
 
 Load **keyboard layout**

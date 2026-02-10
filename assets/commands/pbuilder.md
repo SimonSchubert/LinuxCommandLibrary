@@ -1,3 +1,7 @@
+# TAGLINE
+
+builds Debian packages in chroot
+
 # TLDR
 
 **Create base tarball**
@@ -49,8 +53,6 @@
 **pbuilder** builds Debian packages in chroot. Clean build environment.
 
 The tool ensures reproducible builds. Isolated from host system.
-
-pbuilder builds packages cleanly.
 
 # CAVEATS
 

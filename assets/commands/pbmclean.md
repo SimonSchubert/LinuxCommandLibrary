@@ -1,3 +1,7 @@
+# TAGLINE
+
+removes isolated pixels
+
 # TLDR
 
 **Remove noise from bitmap**
@@ -35,8 +39,6 @@ _FILE_
 **pbmclean** removes isolated pixels. Cleans up noisy bitmaps.
 
 The tool removes speckles. Part of Netpbm.
-
-pbmclean removes noise.
 
 # CAVEATS
 

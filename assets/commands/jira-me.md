@@ -1,3 +1,7 @@
+# TAGLINE
+
+lists issues assigned to the current user
+
 # TLDR
 
 **List my issues**
@@ -46,8 +50,6 @@
 **jira me** lists issues assigned to the current user. It provides a quick view of personal workload.
 
 The command filters by default to show open issues. Additional filters narrow results by project or status.
-
-jira me shows assigned issues.
 
 # CAVEATS
 

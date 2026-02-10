@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays network connections, routing tables, interface statistics, masquerade
+
 # TLDR
 
 **Show all connections** and listening ports

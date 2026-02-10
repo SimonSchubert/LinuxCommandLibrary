@@ -1,3 +1,7 @@
+# TAGLINE
+
+finds files by searching a pre-built database rather than scanning
+
 # TLDR
 
 **Find files by name**

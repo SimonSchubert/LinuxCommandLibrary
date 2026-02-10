@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal memory matching game
+
 # TLDR
 
 **Play memory game**
@@ -25,8 +29,6 @@
 **nbmemoblocks** is a terminal memory matching game. Match pairs of blocks.
 
 The tool trains memory skills. Uses ncurses interface.
-
-nbmemoblocks is memory game.
 
 # CAVEATS
 

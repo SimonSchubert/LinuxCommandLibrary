@@ -1,3 +1,7 @@
+# TAGLINE
+
+utility that spins down external hard disks after a period of idle time
+
 # TLDR
 
 **Start** the hd-idle service with default settings (10 minute idle time)

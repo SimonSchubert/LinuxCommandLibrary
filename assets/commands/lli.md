@@ -1,3 +1,7 @@
+# TAGLINE
+
+executes LLVM bitcode using a JIT compiler
+
 # TLDR
 
 **Run LLVM bitcode**
@@ -50,11 +54,9 @@ _ARGS_
 
 # DESCRIPTION
 
-**lli** executes LLVM bitcode using a JIT compiler. It runs compiled LLVM IR directly without generating executables.
+**lli** directly executes programs in LLVM bitcode (.bc) or LLVM assembly (.ll) format using a just-in-time (JIT) compiler. Rather than producing a standalone executable on disk, lli compiles the LLVM IR to native machine code in memory at runtime and immediately begins execution, making it a convenient tool for quickly testing and prototyping LLVM IR without a separate compilation and linking step.
 
-The tool supports both JIT compilation and interpretation. Useful for testing LLVM IR.
-
-lli executes LLVM bitcode.
+The tool supports two execution engines: the JIT compiler (default), which translates functions to native code on demand for near-native performance, and a slower interpreter mode enabled with `-force-interpreter`. The JIT backend can be selected between MCJIT and the newer ORC engine via the `-jit-kind` flag. Program arguments can be passed after the bitcode filename, allowing lli to run LLVM programs just like native executables.
 
 # CAVEATS
 

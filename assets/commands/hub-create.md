@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates a new GitHub repository and adds it as a remote
+
 # TLDR
 
 **Create new GitHub repository**

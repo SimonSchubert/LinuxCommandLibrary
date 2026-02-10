@@ -1,3 +1,7 @@
+# TAGLINE
+
+netExec WMI module
+
 # TLDR
 
 **Check WMI credentials**
@@ -48,8 +52,6 @@ _TARGET_
 **nxc wmi** is the NetExec WMI module. Executes via Windows Management Instrumentation.
 
 The tool uses WMI for remote execution. Part of NetExec suite.
-
-nxc wmi executes via WMI.
 
 # CAVEATS
 

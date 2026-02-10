@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates password hashes suitable for /etc/shadow or similar uses
+
 # TLDR
 
 **Generate password hash**

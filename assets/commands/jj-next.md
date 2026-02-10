@@ -1,3 +1,7 @@
+# TAGLINE
+
+moves the working copy to a child change
+
 # TLDR
 
 **Move to child change**
@@ -39,8 +43,6 @@ _COUNT_
 **jj next** moves the working copy to a child change. It navigates forward in the change history.
 
 The command is useful for reviewing changes in sequence. Combined with prev, it enables navigation through history.
-
-jj next moves to child changes.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages Multi-Instance GPU configurations on supported NVIDIA GPUs
+
 # TLDR
 
 **List MIG devices**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+queries an ID database to find tokens matching a specified pattern
+
 # TLDR
 
 List all **tokens and their file locations** in the ID database

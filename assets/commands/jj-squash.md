@@ -1,3 +1,7 @@
+# TAGLINE
+
+combines a commit's changes into its parent in Jujutsu
+
 # TLDR
 
 **Squash into parent**

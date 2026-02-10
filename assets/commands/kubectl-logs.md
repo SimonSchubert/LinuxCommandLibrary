@@ -1,3 +1,7 @@
+# TAGLINE
+
+prints container logs from a pod
+
 # TLDR
 
 **View pod logs**
@@ -50,7 +54,9 @@
 
 # DESCRIPTION
 
-**kubectl logs** prints container logs from a pod. Supports following logs in real-time, viewing previous container instances, and filtering by time. Essential for debugging and monitoring applications.
+**kubectl logs** retrieves and displays the standard output and standard error streams from containers running inside Kubernetes pods. It is one of the primary tools for debugging application behavior, diagnosing crashes, and monitoring runtime output in a cluster environment.
+
+The command supports real-time log streaming with the -f flag, similar to `tail -f`, and can target a specific container within a multi-container pod using the -c option. You can also view logs from a previous container instance (useful for inspecting crash loops via --previous), limit output to recent entries with --tail, or filter by time window using --since and --since-time. When used with label selectors, it can aggregate logs across multiple pods simultaneously.
 
 # SEE ALSO
 

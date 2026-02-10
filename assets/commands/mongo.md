@@ -1,3 +1,7 @@
+# TAGLINE
+
+legacy MongoDB shell
+
 # TLDR
 
 **Connect to local database**
@@ -56,8 +60,6 @@ _DB_ADDRESS_
 **mongo** is the legacy MongoDB shell. It provides interactive JavaScript interface to MongoDB.
 
 The tool connects to mongod instances. Supports queries, administration, and scripting.
-
-mongo is legacy MongoDB shell.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+muPDF command-line tool
+
 # TLDR
 
 **Convert PDF to images**
@@ -56,8 +60,6 @@ _COMMAND_
 **mutool** is the MuPDF command-line tool. It manipulates PDF and other document formats.
 
 The tool renders, converts, and processes documents. Lightweight and fast.
-
-mutool is MuPDF document tool.
 
 # CAVEATS
 

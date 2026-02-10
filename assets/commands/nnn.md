@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal file manager
+
 # TLDR
 
 **Start file manager**
@@ -60,8 +64,6 @@ _DIRECTORY_
 **nnn** is a terminal file manager. Fast, minimal, and keyboard-driven.
 
 The tool navigates directories. Supports plugins and file operations.
-
-nnn is fast file manager.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+open-source programmer for TL866II+, TL866A, and TL866CS devices
+
 # TLDR
 
 **Read chip to file**

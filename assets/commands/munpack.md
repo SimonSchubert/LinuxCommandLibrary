@@ -1,3 +1,7 @@
+# TAGLINE
+
+extracts files from MIME-encoded messages
+
 # TLDR
 
 **Extract MIME attachments**

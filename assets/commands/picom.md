@@ -1,3 +1,7 @@
+# TAGLINE
+
+standalone compositor for X11 window managers
+
 # TLDR
 
 **Start compositor**

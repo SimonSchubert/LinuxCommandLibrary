@@ -1,3 +1,7 @@
+# TAGLINE
+
+ODBC command-line SQL client
+
 # TLDR
 
 **Connect to data source**
@@ -59,8 +63,6 @@ _PASSWORD_
 **isql** is an ODBC command-line SQL client. It connects to any database with an ODBC driver.
 
 The tool executes SQL queries interactively or from files. It provides database-agnostic access through ODBC.
-
-isql is an ODBC SQL client.
 
 # CAVEATS
 

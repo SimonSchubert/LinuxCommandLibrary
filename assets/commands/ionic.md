@@ -1,3 +1,7 @@
+# TAGLINE
+
+CLI manages Ionic Framework projects
+
 # TLDR
 
 **Create new app**
@@ -56,8 +60,6 @@
 **Ionic** CLI manages Ionic Framework projects. It creates hybrid mobile apps using web technologies.
 
 The tool integrates with Capacitor or Cordova for native functionality. It provides development server, build tools, and code generation.
-
-Ionic builds cross-platform mobile apps.
 
 # CAVEATS
 

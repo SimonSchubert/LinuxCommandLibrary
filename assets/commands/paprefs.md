@@ -1,3 +1,7 @@
+# TAGLINE
+
+PulseAudio preferences GUI
+
 # TLDR
 
 **Open PulseAudio preferences**
@@ -17,8 +21,6 @@ No command-line parameters. GUI application.
 **paprefs** is PulseAudio preferences GUI. Configures network and module settings.
 
 The application manages PulseAudio options. Network streaming and discovery.
-
-paprefs configures PulseAudio.
 
 # CAVEATS
 

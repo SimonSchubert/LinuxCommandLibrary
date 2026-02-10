@@ -1,3 +1,7 @@
+# TAGLINE
+
+community collection of Nextflow pipelines
+
 # TLDR
 
 **List pipelines**
@@ -60,8 +64,6 @@ _COMMAND_
 **nf-core** is a community collection of Nextflow pipelines. It provides curated bioinformatics workflows.
 
 The tool manages pipeline downloads. Ensures best practices and reproducibility.
-
-nf-core is curated Nextflow pipelines.
 
 # CAVEATS
 

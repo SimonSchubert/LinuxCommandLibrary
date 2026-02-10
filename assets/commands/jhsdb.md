@@ -1,3 +1,7 @@
+# TAGLINE
+
+java HotSpot Serviceability Agent debugger
+
 # TLDR
 
 **Attach debugger to process**
@@ -59,8 +63,6 @@
 **jhsdb** is the Java HotSpot Serviceability Agent debugger. It analyzes JVM processes and core dumps.
 
 The tool provides low-level JVM debugging capabilities. It can inspect heap, stack, and internal structures.
-
-jhsdb debugs JVM processes.
 
 # CAVEATS
 

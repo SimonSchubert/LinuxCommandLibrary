@@ -1,3 +1,7 @@
+# TAGLINE
+
+compresses executable files while keeping them executable
+
 # TLDR
 
 **Compress** an executable file in-place

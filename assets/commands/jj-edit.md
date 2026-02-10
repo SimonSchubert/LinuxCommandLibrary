@@ -1,3 +1,7 @@
+# TAGLINE
+
+sets the working copy to a specific revision for editing
+
 # TLDR
 
 **Edit specific revision**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+lossless data compressor using the LZMA algorithm
+
 # TLDR
 
 **Compress file**

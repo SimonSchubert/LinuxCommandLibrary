@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates and uses PAR2 files for data recovery
+
 # TLDR
 
 **Create recovery files**

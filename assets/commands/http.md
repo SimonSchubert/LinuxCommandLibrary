@@ -1,3 +1,7 @@
+# TAGLINE
+
+user-friendly HTTP client
+
 # TLDR
 
 **GET request**
@@ -62,8 +66,6 @@ _DATA_
 **HTTPie** (http) is a user-friendly HTTP client. It provides intuitive syntax, colorized output, and JSON support for API interaction.
 
 The tool simplifies making HTTP requests from the command line. It automatically formats responses and supports sessions and authentication.
-
-HTTPie is a friendly HTTP client.
 
 # CAVEATS
 

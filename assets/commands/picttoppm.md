@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts Macintosh PICT images to PPM
+
 # TLDR
 
 **Convert Macintosh PICT to PPM**

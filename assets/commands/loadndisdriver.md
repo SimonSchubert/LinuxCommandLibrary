@@ -1,3 +1,7 @@
+# TAGLINE
+
+loads Windows NDIS drivers in Linux
+
 # TLDR
 
 **Load Windows driver**
@@ -42,8 +46,6 @@ _DRIVER_
 **loadndisdriver** loads Windows NDIS drivers in Linux. It enables Windows wireless drivers through ndiswrapper.
 
 The tool is used when Linux native drivers are unavailable. It translates Windows driver calls.
-
-loadndisdriver loads NDIS drivers.
 
 # CAVEATS
 

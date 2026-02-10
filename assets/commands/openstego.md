@@ -1,3 +1,7 @@
+# TAGLINE
+
+steganography tool for hiding data within images
+
 # TLDR
 
 **Embed data in image**
@@ -56,8 +60,6 @@
 # DESCRIPTION
 
 **OpenStego** is a steganography tool for hiding data within images. It can embed secret messages in cover images and extract them later, with optional encryption.
-
-Also supports digital watermarking for image authentication.
 
 # SUPPORTED FORMATS
 

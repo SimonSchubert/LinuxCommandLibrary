@@ -1,3 +1,7 @@
+# TAGLINE
+
+key remapping daemon that operates at the kernel level using evdev
+
 # TLDR
 
 **Start** and enable the keyd service

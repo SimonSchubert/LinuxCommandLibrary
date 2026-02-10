@@ -1,3 +1,7 @@
+# TAGLINE
+
+reads documentation in GNU's texinfo format
+
 # TLDR
 
 **Read manual for command**
@@ -56,8 +60,6 @@ _MENU-ITEM_
 **info** reads documentation in GNU's texinfo format. It provides hypertext navigation through structured documentation.
 
 The reader supports navigation between nodes, menus, and cross-references. It offers more features than man pages including search and index.
-
-info reads GNU texinfo documentation.
 
 # CAVEATS
 

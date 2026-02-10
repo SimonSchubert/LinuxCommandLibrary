@@ -1,3 +1,7 @@
+# TAGLINE
+
+lists available printers and printer drivers known to CUPS
+
 # TLDR
 
 **List available printers**

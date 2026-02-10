@@ -1,3 +1,7 @@
+# TAGLINE
+
+LLVM's integrated tester
+
 # TLDR
 
 **Run tests**
@@ -53,11 +57,9 @@ _TESTS_
 
 # DESCRIPTION
 
-**lit** is LLVM's integrated tester. It runs test suites with configurable execution and output.
+**lit** (LLVM Integrated Tester) is a portable test execution framework designed for running compiler and tool test suites. It discovers test files in directory trees, executes them according to configurable test formats, and reports results with support for parallel execution across multiple threads. Tests are typically small scripts with embedded RUN lines that specify the commands to execute and CHECK lines that define expected output patterns.
 
-The tool supports multiple test formats and parallel execution. It's used throughout LLVM projects.
-
-lit runs LLVM test suites.
+The framework supports multiple test formats including ShTest (shell-script-style tests interpreted by lit itself), GoogleTest binaries, and custom formats defined through Python configuration files. Each test directory contains a `lit.cfg` or `lit.cfg.py` file that specifies the test format, available substitutions, and environment configuration. Although lit was built for LLVM's own test infrastructure, it is a general-purpose tool that can be used to test any command-line program.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates ReiserFS filesystems
+
 # TLDR
 
 **Create ReiserFS filesystem**
@@ -49,8 +53,6 @@ _DEVICE_
 **mkreiserfs** creates ReiserFS filesystems. ReiserFS is a journaling filesystem.
 
 The tool formats partitions with ReiserFS. Known for handling small files efficiently.
-
-mkreiserfs creates ReiserFS.
 
 # CAVEATS
 

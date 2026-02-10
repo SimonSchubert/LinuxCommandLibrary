@@ -1,3 +1,7 @@
+# TAGLINE
+
+queries and displays pacman's configuration as it would be parsed by pacman
+
 # TLDR
 
 Show **full parsed** pacman configuration

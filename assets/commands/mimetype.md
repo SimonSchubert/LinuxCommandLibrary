@@ -1,3 +1,7 @@
+# TAGLINE
+
+determines the MIME type of files using the shared-mime-info database
+
 # TLDR
 
 Print the **MIME type** of a given file

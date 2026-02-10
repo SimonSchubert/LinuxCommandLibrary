@@ -1,3 +1,7 @@
+# TAGLINE
+
+samba ID mapping backend using RFC 2307 LDAP schema
+
 # TLDR
 
 **Configure in smb.conf**
@@ -34,8 +38,6 @@
 **idmap_rfc2307** is a Samba ID mapping backend using RFC 2307 LDAP schema. It maps Windows SIDs to Unix UIDs/GIDs stored in LDAP.
 
 The backend reads uidNumber and gidNumber attributes from Active Directory or LDAP. It provides consistent ID mapping across systems.
-
-idmap_rfc2307 maps IDs via LDAP.
 
 # CAVEATS
 

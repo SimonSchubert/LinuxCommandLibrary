@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts Palm Pilot image format to PNM
+
 # TLDR
 
 **Convert Palm image to PNM**

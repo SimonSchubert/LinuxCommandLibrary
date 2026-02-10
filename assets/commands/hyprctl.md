@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line control utility for Hyprland, a dynamic tiling Wayland compositor
+
 # TLDR
 
 **Reload** Hyprland configuration

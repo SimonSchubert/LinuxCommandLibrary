@@ -1,3 +1,7 @@
+# TAGLINE
+
+distributed event streaming platform
+
 # TLDR
 
 **Start Kafka server**

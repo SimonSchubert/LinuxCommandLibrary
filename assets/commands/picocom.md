@@ -1,3 +1,7 @@
+# TAGLINE
+
+minimal serial port terminal emulator
+
 # TLDR
 
 **Connect to serial port**

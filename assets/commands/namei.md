@@ -1,3 +1,7 @@
+# TAGLINE
+
+follows a pathname until a terminal point is found, displaying each component
+
 # TLDR
 
 **Resolve pathnames** following symbolic links

@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line interface for managing Pi-hole, a network-level
+
 # TLDR
 
 Check Pi-hole **status**

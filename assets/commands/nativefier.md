@@ -1,3 +1,7 @@
+# TAGLINE
+
+wraps websites as desktop applications using Electron
+
 # TLDR
 
 **Create app from website**

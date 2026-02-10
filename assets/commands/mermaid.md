@@ -1,3 +1,7 @@
+# TAGLINE
+
+renders Mermaid diagrams from text definitions to images
+
 # TLDR
 
 **Generate diagram from file**

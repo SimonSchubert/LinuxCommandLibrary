@@ -1,3 +1,7 @@
+# TAGLINE
+
+computes and verifies MD5 message digests
+
 # TLDR
 
 **Calculate MD5 hash** of a file

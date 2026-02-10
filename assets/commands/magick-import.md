@@ -1,3 +1,7 @@
+# TAGLINE
+
+captures screenshots from X11 displays
+
 # TLDR
 
 **Capture screenshot**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PBM bitmaps to MacPaint format for classic Macintosh
+
 # TLDR
 
 **Convert PBM to MacPaint format**

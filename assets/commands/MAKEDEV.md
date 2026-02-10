@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates device files in /dev
+
 # TLDR
 
 **Create standard devices**
@@ -49,8 +53,6 @@ _DEVICE_
 **MAKEDEV** creates device files in /dev. It sets up device nodes with correct permissions and types.
 
 The tool is largely obsolete with udev. Used in static /dev setups or initial ramdisks.
-
-MAKEDEV creates device files.
 
 # CAVEATS
 

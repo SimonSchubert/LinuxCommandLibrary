@@ -1,3 +1,7 @@
+# TAGLINE
+
+GNU Ubiquitous Intelligent Language for Extensions
+
 # TLDR
 
 **Start interactive REPL**
@@ -55,8 +59,6 @@ _ARGS_
 **Guile** is the GNU Ubiquitous Intelligent Language for Extensions. It's a Scheme implementation used for scripting and extending applications.
 
 Guile provides full Scheme functionality plus extensions for practical programming. It's designed to be embeddable in C/C++ applications.
-
-Guile is GNU's Scheme interpreter.
 
 # CAVEATS
 

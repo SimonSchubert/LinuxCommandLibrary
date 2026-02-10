@@ -1,3 +1,7 @@
+# TAGLINE
+
+plugin manager for kubectl, the Kubernetes command-line tool
+
 # TLDR
 
 **Update the plugin index**

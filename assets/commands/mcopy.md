@@ -1,3 +1,7 @@
+# TAGLINE
+
+copies files to/from MS-DOS filesystems
+
 # TLDR
 
 **Copy file to MS-DOS disk**
@@ -56,8 +60,6 @@ _TARGET_
 **mcopy** copies files to/from MS-DOS filesystems. It's part of the mtools package.
 
 The tool accesses FAT filesystems without mounting. Useful for floppy disks and USB drives.
-
-mcopy copies MS-DOS files.
 
 # CAVEATS
 

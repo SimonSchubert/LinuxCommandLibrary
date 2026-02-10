@@ -1,3 +1,7 @@
+# TAGLINE
+
+improves Git hooks management for JavaScript projects
+
 # TLDR
 
 **Initialize husky**
@@ -45,8 +49,6 @@ _COMMAND_
 **Husky** improves Git hooks management for JavaScript projects. It enables running linters, tests, and other scripts on commit and push.
 
 The tool simplifies hook configuration in package.json. It's widely used with lint-staged for pre-commit code quality checks.
-
-Husky manages Git hooks for npm projects.
 
 # CAVEATS
 

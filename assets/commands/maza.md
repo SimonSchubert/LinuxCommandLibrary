@@ -1,3 +1,7 @@
+# TAGLINE
+
+local ad blocker that works by modifying /etc/hosts
+
 # TLDR
 
 **Enable ad blocking**

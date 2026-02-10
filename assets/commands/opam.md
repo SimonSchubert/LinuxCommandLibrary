@@ -1,3 +1,7 @@
+# TAGLINE
+
+OCaml Package Manager
+
 # TLDR
 
 **Initialize opam**
@@ -56,8 +60,6 @@
 **opam** is the OCaml Package Manager. Manages OCaml libraries and compilers.
 
 The tool handles package installation and dependency resolution. Supports switches.
-
-opam manages OCaml packages.
 
 # CAVEATS
 

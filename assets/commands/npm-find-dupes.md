@@ -1,3 +1,7 @@
+# TAGLINE
+
+searches for duplicate packages in node_modules
+
 # TLDR
 
 **Find duplicate packages**

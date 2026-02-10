@@ -1,3 +1,7 @@
+# TAGLINE
+
+advanced, portable, multiprotocol bootloader supporting BIOS and UEFI systems
+
 # TLDR
 
 Install on **MBR disk**

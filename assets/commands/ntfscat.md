@@ -1,3 +1,7 @@
+# TAGLINE
+
+reads a file from an NTFS volume and outputs it to stdout
+
 # TLDR
 
 **Extract file from NTFS**
@@ -42,10 +46,6 @@
 **ntfscat** reads a file from an NTFS volume and outputs it to stdout. It can extract files by path or inode number, and can access NTFS alternate data streams.
 
 Useful for forensics and data recovery from NTFS partitions.
-
-# EXAMPLES
-
-```bash
 # Extract file
 ntfscat /dev/sda1 /Users/user/document.txt > recovered.txt
 

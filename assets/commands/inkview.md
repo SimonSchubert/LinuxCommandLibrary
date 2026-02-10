@@ -1,3 +1,7 @@
+# TAGLINE
+
+simple SVG viewer bundled with Inkscape
+
 # TLDR
 
 **View SVG file**
@@ -35,8 +39,6 @@ _FILE_
 **inkview** is a simple SVG viewer bundled with Inkscape. It displays SVG files in a window for quick preview.
 
 The viewer supports slideshow mode for presenting multiple SVGs. It renders using Inkscape's engine for accurate display.
-
-inkview previews SVG files.
 
 # CAVEATS
 

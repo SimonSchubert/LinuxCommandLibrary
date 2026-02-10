@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays information about shell builtin commands
+
 # TLDR
 
 **Get help for builtin**
@@ -43,8 +47,6 @@ _PATTERN_
 **help** displays information about shell builtin commands. It's a Bash builtin that provides documentation for commands built into the shell.
 
 The command shows usage, options, and descriptions for Bash builtins. It's useful for learning about commands like cd, export, and source.
-
-help documents Bash builtin commands.
 
 # CAVEATS
 

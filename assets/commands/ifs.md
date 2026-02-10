@@ -1,3 +1,7 @@
+# TAGLINE
+
+shell variable controlling word splitting
+
 # TLDR
 
 **Set field separator**
@@ -30,8 +34,6 @@
 **IFS** (Internal Field Separator) is a shell variable controlling word splitting. It defines characters used to split strings into fields.
 
 The default IFS is space, tab, and newline. Changing IFS affects read, for loops, and word splitting behavior.
-
-IFS controls shell word splitting.
 
 # CAVEATS
 

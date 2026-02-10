@@ -1,3 +1,7 @@
+# TAGLINE
+
+executes a command in a container running in a pod
+
 # TLDR
 
 **Execute command in pod**
@@ -36,7 +40,9 @@
 
 # DESCRIPTION
 
-**kubectl exec** executes a command in a container running in a pod. Similar to docker exec. The double dash (--) separates kubectl options from the command to execute.
+**kubectl exec** runs a command directly inside a container that is part of a running Kubernetes pod, functioning similarly to `docker exec`. It establishes a connection to the container's runtime environment through the Kubernetes API server and kubelet, allowing you to inspect files, run diagnostics, or open an interactive shell session.
+
+The double dash (--) is required to separate kubectl flags from the command and its arguments that should be passed to the container. When combined with -i (stdin) and -t (tty) flags, it provides a fully interactive terminal session. For pods with multiple containers, the -c flag lets you specify which container to target.
 
 # SEE ALSO
 

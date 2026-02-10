@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates ephemeral debug containers
+
 # TLDR
 
 **Debug pod**
@@ -49,11 +53,9 @@ _RESOURCE_
 
 # DESCRIPTION
 
-**kubectl debug** creates ephemeral debug containers. It attaches debugging tools to running pods or nodes.
+**kubectl debug** creates ephemeral containers within running pods or nodes for interactive troubleshooting without modifying the original pod specification. This is especially useful for debugging minimal or distroless container images that lack shells and diagnostic tools, as the debug container can be based on a full-featured image like busybox or alpine while sharing the target pod's network and process namespaces.
 
-The command enables inspection without modifying pod specs. It supports copying pods for safe debugging.
-
-kubectl debug adds debug containers.
+The command supports several debugging strategies. An ephemeral container can be injected directly into an existing pod, or the pod can be copied with `--copy-to` to create an isolated debug clone that leaves the original workload undisturbed. For node-level troubleshooting, `kubectl debug node/` creates a privileged pod on the specified node with the host filesystem mounted, providing access to the node's operating system for diagnosing system-level issues. The `--share-processes` flag enables process namespace sharing so the debug container can see and interact with processes in other containers within the same pod.
 
 # CAVEATS
 

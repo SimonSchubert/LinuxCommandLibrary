@@ -1,3 +1,7 @@
+# TAGLINE
+
+markdown-based note-taking application
+
 # TLDR
 
 **Start Notable**

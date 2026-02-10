@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages Nix flakes
+
 # TLDR
 
 **Show flake info**
@@ -60,8 +64,6 @@ _COMMAND_
 **nix flake** manages Nix flakes. Flakes provide reproducible, hermetic packages.
 
 The tool handles flake.nix files. Manages inputs and outputs.
-
-nix flake manages flakes.
 
 # CAVEATS
 

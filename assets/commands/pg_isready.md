@@ -1,3 +1,7 @@
+# TAGLINE
+
+checks PostgreSQL server connection readiness
+
 # TLDR
 
 **Check if server is ready**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+lists information about all available or specified block devices
+
 # TLDR
 
 List all storage devices in a **tree-like format**

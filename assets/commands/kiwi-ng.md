@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line tool for building Linux operating system images
+
 # TLDR
 
 **Build image from description**

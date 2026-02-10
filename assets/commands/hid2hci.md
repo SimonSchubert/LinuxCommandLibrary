@@ -1,3 +1,7 @@
+# TAGLINE
+
+switches Bluetooth USB dongles between HID and HCI modes
+
 # TLDR
 
 **Switch device to HCI mode**
@@ -41,8 +45,6 @@
 **hid2hci** switches Bluetooth USB dongles between HID and HCI modes. Some devices boot in HID mode and need switching to function as Bluetooth controllers.
 
 The tool is needed for certain USB Bluetooth adapters that start in keyboard/mouse mode. After switching, bluez can use the device.
-
-hid2hci switches Bluetooth USB modes.
 
 # CAVEATS
 

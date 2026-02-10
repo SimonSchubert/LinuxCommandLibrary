@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts Samba debug logs to pcap format
+
 # TLDR
 
 **Convert Samba log to pcap**
@@ -39,8 +43,6 @@ _LOGFILE_
 **log2pcap** converts Samba debug logs to pcap format. The pcap files can be analyzed with Wireshark.
 
 The tool extracts packet data from Samba's debug output for network analysis and troubleshooting.
-
-log2pcap converts logs to pcap.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+allows the system to boot directly into a new kernel without going
+
 # TLDR
 
 **Load** a new kernel

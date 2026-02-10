@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays Perl documentation
+
 # TLDR
 
 **View module documentation**
@@ -49,8 +53,6 @@ _TOPIC_
 **perldoc** displays Perl documentation. Accesses POD format docs.
 
 The tool browses Perl documentation. Core and module docs.
-
-perldoc shows Perl docs.
 
 # CAVEATS
 

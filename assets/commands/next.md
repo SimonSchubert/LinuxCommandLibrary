@@ -1,3 +1,7 @@
+# TAGLINE
+
+next
+
 # TLDR
 
 **Create Next.js app**
@@ -60,8 +64,6 @@ _COMMAND_
 **next** is the Next.js CLI. It develops and builds React applications.
 
 The tool provides server-side rendering. Supports static generation and API routes.
-
-next is Next.js framework CLI.
 
 # CAVEATS
 

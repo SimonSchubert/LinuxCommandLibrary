@@ -1,3 +1,7 @@
+# TAGLINE
+
+scans I2C buses to detect connected devices
+
 # TLDR
 
 List **active I2C buses**

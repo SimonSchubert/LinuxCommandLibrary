@@ -1,3 +1,7 @@
+# TAGLINE
+
+static code analysis tool for HTML
+
 # TLDR
 
 **Lint HTML file**
@@ -49,8 +53,6 @@ _FILES_
 **HTMLHint** is a static code analysis tool for HTML. It checks for common mistakes, deprecated elements, and best practices.
 
 The tool enforces consistent HTML style and catches potential issues. It supports custom rules and configuration files.
-
-HTMLHint lints HTML for errors.
 
 # CAVEATS
 

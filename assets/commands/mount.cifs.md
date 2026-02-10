@@ -1,3 +1,7 @@
+# TAGLINE
+
+mounts CIFS or SMB network shares on Linux
+
 # TLDR
 
 **Mount SMB share** with username (prompts for password)

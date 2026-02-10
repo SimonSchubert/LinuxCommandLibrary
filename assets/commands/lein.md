@@ -1,3 +1,7 @@
+# TAGLINE
+
+clojure build tool
+
 # TLDR
 
 **Create new project**
@@ -63,8 +67,6 @@
 **Leiningen** is the Clojure build tool. It manages projects, dependencies, and builds.
 
 The tool provides templates for project creation. It integrates with Maven repositories.
-
-lein manages Clojure projects.
 
 # CAVEATS
 

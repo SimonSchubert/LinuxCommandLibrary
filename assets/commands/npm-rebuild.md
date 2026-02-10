@@ -1,3 +1,7 @@
+# TAGLINE
+
+rebuilds native addon modules for the current Node
+
 # TLDR
 
 **Rebuild all native modules**

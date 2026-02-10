@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts an Img-whatnot image file to PPM format
+
 # TLDR
 
 **Convert IMG to PPM**

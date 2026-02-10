@@ -1,3 +1,7 @@
+# TAGLINE
+
+flips and rotates PAM/PNM images
+
 # TLDR
 
 **Flip horizontally**

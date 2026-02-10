@@ -1,3 +1,7 @@
+# TAGLINE
+
+video Editor
+
 # TLDR
 
 **Start OpenShot**
@@ -32,8 +36,6 @@ _FILE_
 **openshot-qt** is OpenShot Video Editor. Non-linear video editing software.
 
 The application provides video editing with timeline. Supports many formats.
-
-openshot-qt edits video projects.
 
 # CAVEATS
 

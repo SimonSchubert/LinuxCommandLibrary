@@ -1,3 +1,7 @@
+# TAGLINE
+
+sets the architecture execution domain to 32-bit and runs the specified program
+
 # TLDR
 
 This command is an **alias** of setarch

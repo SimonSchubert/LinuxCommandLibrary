@@ -1,3 +1,7 @@
+# TAGLINE
+
+opens the package's bug tracker URL in a web browser
+
 # TLDR
 
 **Open package bugs page**

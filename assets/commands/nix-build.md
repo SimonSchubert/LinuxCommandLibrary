@@ -1,3 +1,7 @@
+# TAGLINE
+
+builds Nix expressions
+
 # TLDR
 
 **Build default.nix**
@@ -60,8 +64,6 @@ _PATH_
 **nix-build** builds Nix expressions. It creates derivations and builds them.
 
 The tool produces output in /nix/store. Creates result symlink by default.
-
-nix-build builds Nix packages.
 
 # CAVEATS
 

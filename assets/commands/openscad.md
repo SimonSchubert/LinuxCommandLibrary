@@ -1,3 +1,7 @@
+# TAGLINE
+
+3D CAD modeler
+
 # TLDR
 
 **Open file in GUI**
@@ -49,8 +53,6 @@ _FILE_
 **openscad** is a 3D CAD modeler. Uses scripting language for solid modeling.
 
 The tool creates parametric 3D models. Exports to STL for printing.
-
-openscad models 3D objects.
 
 # CAVEATS
 

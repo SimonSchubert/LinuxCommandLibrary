@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays HDMI and DisplayPort InfoFrame data
+
 # TLDR
 
 **Show HDMI infoframes**
@@ -32,8 +36,6 @@
 **intel_infoframes** displays HDMI and DisplayPort InfoFrame data. InfoFrames carry metadata about video format, audio, and HDCP.
 
 The tool shows AVI, audio, and vendor-specific infoframes. Useful for debugging HDMI/DP handshake issues.
-
-intel_infoframes shows display metadata.
 
 # CAVEATS
 

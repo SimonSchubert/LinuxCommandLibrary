@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs K3s Kubernetes clusters in Docker
+
 # TLDR
 
 **Create cluster**
@@ -56,8 +60,6 @@
 **k3d** runs K3s Kubernetes clusters in Docker. It provides fast local Kubernetes environments for development.
 
 The tool manages multiple clusters easily. It maps ports and volumes from containers to host.
-
-k3d runs K3s in Docker.
 
 # CAVEATS
 

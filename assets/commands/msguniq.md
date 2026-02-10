@@ -1,3 +1,7 @@
+# TAGLINE
+
+removes duplicate translations from PO files
+
 # TLDR
 
 **Remove duplicate messages**
@@ -52,8 +56,6 @@ _INPUTFILE_
 **msguniq** removes duplicate translations from PO files. It's part of GNU gettext.
 
 The tool unifies message entries. Handles duplicates by combining or selecting.
-
-msguniq deduplicates PO files.
 
 # CAVEATS
 

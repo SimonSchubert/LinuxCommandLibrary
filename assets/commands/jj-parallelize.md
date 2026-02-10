@@ -1,3 +1,7 @@
+# TAGLINE
+
+restructures a series of sequential commits to be parallel siblings
+
 # TLDR
 
 **Make revisions parallel**

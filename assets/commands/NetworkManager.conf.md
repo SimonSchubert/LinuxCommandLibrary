@@ -1,3 +1,7 @@
+# TAGLINE
+
+main configuration file for NetworkManager
+
 # TLDR
 
 **Basic configuration**

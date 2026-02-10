@@ -1,3 +1,7 @@
+# TAGLINE
+
+uses ICMP ECHO_REQUEST packets to test network connectivity to a host
+
 # TLDR
 
 **Ping a host** continuously

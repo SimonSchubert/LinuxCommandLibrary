@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages MaxCompute authentication
+
 # TLDR
 
 **Configure authentication**
@@ -48,8 +52,6 @@
 **odpscmd auth** manages MaxCompute authentication. Configures access keys.
 
 The tool handles credential storage. Part of odpscmd suite.
-
-odpscmd auth manages credentials.
 
 # CAVEATS
 

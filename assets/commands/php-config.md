@@ -1,3 +1,7 @@
+# TAGLINE
+
+provides information about PHP's compile-time configuration
+
 # TLDR
 
 **Show PHP include directory**
@@ -52,10 +56,6 @@
 # DESCRIPTION
 
 **php-config** provides information about PHP's compile-time configuration. Essential for building PHP extensions and modules.
-
-# EXAMPLES
-
-```bash
 # Get extension directory
 php-config --extension-dir
 

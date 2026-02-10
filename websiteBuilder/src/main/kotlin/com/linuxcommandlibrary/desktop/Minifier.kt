@@ -8,7 +8,7 @@ class Minifier {
     fun minifyScriptsAndSheets(isRelease: Boolean) {
         val scriptsDir = File("html/scripts")
         scriptsDir.mkdir()
-        val scripts = File("desktop/src/main/resources/scripts")
+        val scripts = File("websiteBuilder/src/main/resources/scripts")
         scripts.listFiles()?.forEach {
             if (it.isFile) {
                 val file = File(scriptsDir, it.name)
@@ -23,7 +23,7 @@ class Minifier {
         }
         val styleSheetsDir = File("html/stylesheets")
         styleSheetsDir.mkdir()
-        val stylesheets = File("desktop/src/main/resources/stylesheets")
+        val stylesheets = File("websiteBuilder/src/main/resources/stylesheets")
         stylesheets.listFiles()?.forEach {
             if (it.isFile) {
                 val file = File(styleSheetsDir, it.name)

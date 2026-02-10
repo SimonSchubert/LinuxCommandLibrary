@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates PHP documentation
+
 # TLDR
 
 **Generate documentation**
@@ -39,8 +43,6 @@
 **phpdox** generates PHP documentation. API documentation generator.
 
 The tool creates HTML docs from source. Uses PHPDoc comments.
-
-phpdox documents PHP.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+searches for patterns in lzip-compressed files
+
 # TLDR
 
 **Search in lzip-compressed file**

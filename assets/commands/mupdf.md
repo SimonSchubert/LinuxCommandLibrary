@@ -1,3 +1,7 @@
+# TAGLINE
+
+lightweight PDF, XPS, and EPUB viewer
+
 # TLDR
 
 **Open PDF file**

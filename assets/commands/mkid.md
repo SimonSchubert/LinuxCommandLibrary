@@ -1,3 +1,7 @@
+# TAGLINE
+
+builds an identifier database for source code files, enabling fast searches
+
 # TLDR
 
 Build an **ID database** for the current directory

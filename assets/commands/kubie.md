@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages Kubernetes contexts with isolated shells
+
 # TLDR
 
 **Switch context**
@@ -47,11 +51,9 @@
 
 # DESCRIPTION
 
-**kubie** manages Kubernetes contexts with isolated shells. Each context switch spawns a new shell.
+**kubie** is a Kubernetes context and namespace manager that isolates each context switch in its own shell session. Unlike kubectx, which modifies the global kubeconfig state, kubie spawns a new subshell with environment variables pointing to a temporary kubeconfig, so each terminal window can independently operate against a different cluster and namespace without interfering with others.
 
-The tool prevents context pollution. Multiple terminals can use different contexts simultaneously.
-
-kubie manages isolated K8s contexts.
+This isolation model prevents a common source of errors in multi-cluster workflows where a context switch in one terminal unexpectedly affects commands running in another. Kubie can also list available contexts and namespaces, execute one-off commands against a specific context, and integrates with fzf for interactive selection. It is written in Rust for fast startup and minimal overhead.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+orchestrates application deployment and management
+
 # TLDR
 
 **Bootstrap controller**
@@ -56,8 +60,6 @@
 **Juju** orchestrates application deployment and management. It deploys applications as charms across clouds and bare metal.
 
 The tool manages complex application topologies. It handles scaling, relations, and configuration.
-
-Juju orchestrates cloud services.
 
 # CAVEATS
 

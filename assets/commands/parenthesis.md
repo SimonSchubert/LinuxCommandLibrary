@@ -1,3 +1,7 @@
+# TAGLINE
+
+parentheses **** in shell have several distinct uses depending on context:
+
 # TLDR
 
 **Run commands in a subshell**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+validates PAM/PNM image files
+
 # TLDR
 
 **Validate PAM file**

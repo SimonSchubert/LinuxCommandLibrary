@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates RSA private keys
+
 # TLDR
 
 **Generate 2048-bit RSA key**

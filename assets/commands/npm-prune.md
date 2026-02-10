@@ -1,3 +1,7 @@
+# TAGLINE
+
+removes packages not in dependencies
+
 # TLDR
 
 **Remove extraneous packages**
@@ -39,8 +43,6 @@
 **npm prune** removes packages not in dependencies. Cleans up extraneous packages.
 
 The command removes unlisted modules. Useful after dependency changes.
-
-npm prune cleans node_modules.
 
 # CAVEATS
 

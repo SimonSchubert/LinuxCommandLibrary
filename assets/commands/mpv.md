@@ -1,3 +1,7 @@
+# TAGLINE
+
+modern media player based on MPlayer and mplayer2
+
 # TLDR
 
 **Play video file**
@@ -64,8 +68,6 @@ _FILE_
 **mpv** is a modern media player based on MPlayer and mplayer2. It plays video and audio.
 
 The tool supports many formats. Scriptable with Lua and JavaScript. Highly configurable.
-
-mpv is modern media player.
 
 # CAVEATS
 

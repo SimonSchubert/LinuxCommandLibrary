@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts MGR window system bitmap format to PBM
+
 # TLDR
 
 **Convert MGR bitmap to PBM**

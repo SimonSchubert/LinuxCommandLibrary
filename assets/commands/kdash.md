@@ -1,3 +1,7 @@
+# TAGLINE
+
+fast terminal dashboard for Kubernetes written in Rust
+
 # TLDR
 
 **Launch Kubernetes dashboard**

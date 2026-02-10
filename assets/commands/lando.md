@@ -1,3 +1,7 @@
+# TAGLINE
+
+provides Docker-based development environments
+
 # TLDR
 
 **Initialize project**
@@ -63,8 +67,6 @@
 **Lando** provides Docker-based development environments. It creates consistent local development setups.
 
 The tool supports many frameworks with recipes. It handles networking, services, and tooling automatically.
-
-Lando simplifies Docker development.
 
 # CAVEATS
 

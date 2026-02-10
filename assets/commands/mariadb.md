@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line client for MariaDB database server
+
 # TLDR
 
 **Connect to database**

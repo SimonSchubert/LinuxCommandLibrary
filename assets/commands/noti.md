@@ -1,3 +1,7 @@
+# TAGLINE
+
+triggers notifications when commands complete
+
 # TLDR
 
 **Notify when command completes**
@@ -53,8 +57,6 @@ _COMMAND_
 **noti** triggers notifications when commands complete. Supports multiple services.
 
 The tool alerts on completion. Works with Slack, Pushover, and native notifications.
-
-noti notifies on command completion.
 
 # CAVEATS
 

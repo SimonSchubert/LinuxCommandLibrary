@@ -1,3 +1,7 @@
+# TAGLINE
+
+provides debugging and programming for embedded systems
+
 # TLDR
 
 **Start with config file**

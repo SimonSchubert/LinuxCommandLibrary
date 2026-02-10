@@ -1,3 +1,7 @@
+# TAGLINE
+
+logs TTY keystrokes
+
 # TLDR
 
 **Enable TTY auditing**
@@ -35,8 +39,6 @@
 **pam_tty_audit** logs TTY keystrokes. Enables session auditing.
 
 The module records terminal input. Requires audit daemon.
-
-pam_tty_audit audits sessions.
 
 # CAVEATS
 

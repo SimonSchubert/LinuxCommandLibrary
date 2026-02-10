@@ -1,3 +1,7 @@
+# TAGLINE
+
+powerful media player
+
 # TLDR
 
 **Play video file**
@@ -60,8 +64,6 @@ _FILE_
 **mplayer** is a powerful media player. It plays almost any audio and video format.
 
 The tool supports many codecs. Keyboard controlled with extensive command-line options.
-
-mplayer is versatile media player.
 
 # CAVEATS
 

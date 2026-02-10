@@ -1,3 +1,7 @@
+# TAGLINE
+
+moves/renames files on MS-DOS filesystems
+
 # TLDR
 
 **Move file on MS-DOS disk**
@@ -39,8 +43,6 @@ _TARGET_
 **mmove** moves/renames files on MS-DOS filesystems. It's part of mtools.
 
 The tool works on FAT filesystems without mounting. Like mv for DOS disks.
-
-mmove moves MS-DOS files.
 
 # CAVEATS
 

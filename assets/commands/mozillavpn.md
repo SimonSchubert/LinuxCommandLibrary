@@ -1,3 +1,7 @@
+# TAGLINE
+
+mozilla's VPN client
+
 # TLDR
 
 **Connect to VPN**
@@ -56,8 +60,6 @@ _COMMAND_
 **mozillavpn** is Mozilla's VPN client. It provides secure network connection through WireGuard protocol.
 
 The tool encrypts internet traffic. Offers multiple server locations worldwide.
-
-mozillavpn is Mozilla VPN client.
 
 # CAVEATS
 

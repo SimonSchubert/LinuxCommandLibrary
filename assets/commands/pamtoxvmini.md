@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PAM/PNM images to XV visual schnauzer thumbnail format
+
 # TLDR
 
 **Convert PAM to XV thumbnail**

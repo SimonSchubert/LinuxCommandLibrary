@@ -1,3 +1,7 @@
+# TAGLINE
+
+package manager for Ubuntu and Debian-based distributions that brings AUR-like
+
 # TLDR
 
 **Search** the package database for a package

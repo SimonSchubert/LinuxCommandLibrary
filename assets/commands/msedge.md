@@ -1,3 +1,7 @@
+# TAGLINE
+
+launches Microsoft Edge browser from command line
+
 # TLDR
 
 **Open Microsoft Edge**

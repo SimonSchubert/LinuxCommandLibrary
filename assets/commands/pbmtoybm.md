@@ -1,3 +1,7 @@
+# TAGLINE
+
+converts PBM bitmaps to Bennet Yee's "face" format used by the YBM face
+
 # TLDR
 
 **Convert PBM to Bennet Yee "face" format**

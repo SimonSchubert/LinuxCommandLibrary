@@ -1,3 +1,7 @@
+# TAGLINE
+
+runs source code generation plugins
+
 # TLDR
 
 **Generate sources**

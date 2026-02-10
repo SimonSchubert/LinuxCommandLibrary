@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates temporary disposable emails
+
 # TLDR
 
 **Generate temp email**
@@ -59,8 +63,6 @@ _COMMAND_
 **mailsy** creates temporary disposable emails. It generates random addresses for receiving mail.
 
 The tool is useful for sign-ups and testing. Addresses are automatically deleted after a period.
-
-mailsy manages temp emails.
 
 # CAVEATS
 

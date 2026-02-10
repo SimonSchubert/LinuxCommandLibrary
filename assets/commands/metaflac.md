@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line FLAC metadata editor
+
 # TLDR
 
 **List all metadata**
@@ -61,8 +65,6 @@
 # DESCRIPTION
 
 **metaflac** is the command-line FLAC metadata editor. It can list, add, remove, and modify metadata in FLAC files including Vorbis comments and embedded pictures.
-
-metaflac operates without re-encoding the audio data.
 
 # TAG FORMAT
 

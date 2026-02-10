@@ -1,3 +1,7 @@
+# TAGLINE
+
+terminal-based Google Hangouts client
+
 # TLDR
 
 **Start Google Hangouts client**
@@ -45,8 +49,6 @@
 **hangups** is a terminal-based Google Hangouts client. It provides chat functionality from the command line with a text user interface.
 
 The application supports conversations, notifications, and multimedia sharing. It uses Google's authentication for secure access.
-
-hangups provides terminal Google Hangouts.
 
 # CAVEATS
 

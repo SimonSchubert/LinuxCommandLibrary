@@ -1,3 +1,7 @@
+# TAGLINE
+
+uploads images to Imgur from the command line
+
 # TLDR
 
 **Upload image**

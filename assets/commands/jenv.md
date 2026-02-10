@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages multiple Java JDK installations and sets JAVA_HOME automatically
+
 # TLDR
 
 **Add a JDK**

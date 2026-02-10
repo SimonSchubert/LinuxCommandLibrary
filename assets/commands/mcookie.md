@@ -1,3 +1,7 @@
+# TAGLINE
+
+generates a 128-bit random hexadecimal number
+
 # TLDR
 
 Generate **random number**

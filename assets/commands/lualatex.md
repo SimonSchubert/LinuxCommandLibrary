@@ -1,3 +1,7 @@
+# TAGLINE
+
+teX engine that combines LaTeX with the Lua programming language
+
 # TLDR
 
 **Compile LaTeX document**

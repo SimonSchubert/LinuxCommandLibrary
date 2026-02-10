@@ -1,3 +1,7 @@
+# TAGLINE
+
+configures NVIDIA graphics driver settings
+
 # TLDR
 
 **Open settings GUI**
@@ -51,8 +55,6 @@
 # DESCRIPTION
 
 **nvidia-settings** configures NVIDIA graphics driver settings. It provides a GUI and command-line interface for adjusting display, performance, and GPU settings.
-
-Settings are saved to ~/.nvidia-settings-rc.
 
 # COMMON ATTRIBUTES
 

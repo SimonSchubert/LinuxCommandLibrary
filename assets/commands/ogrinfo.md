@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays vector data information
+
 # TLDR
 
 **Show file info**
@@ -52,8 +56,6 @@ _LAYER_
 **ogrinfo** displays vector data information. Shows layers, fields, and features.
 
 The tool inspects geospatial files. Part of GDAL suite.
-
-ogrinfo inspects vector data.
 
 # CAVEATS
 

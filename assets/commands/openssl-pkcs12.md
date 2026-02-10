@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates and parses PKCS#12 files
+
 # TLDR
 
 **Create PKCS12 from cert and key**

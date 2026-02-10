@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages multiple Erlang/OTP installations
+
 # TLDR
 
 **List available releases**
@@ -53,8 +57,6 @@
 **kerl** manages multiple Erlang/OTP installations. It builds and installs different versions side by side.
 
 The tool handles compilation from source. Activation scripts set up the environment for each version.
-
-kerl manages Erlang versions.
 
 # CAVEATS
 

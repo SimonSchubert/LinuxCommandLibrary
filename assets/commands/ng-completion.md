@@ -1,3 +1,7 @@
+# TAGLINE
+
+sets up shell autocompletion for Angular CLI commands
+
 # TLDR
 
 **Enable shell completion**

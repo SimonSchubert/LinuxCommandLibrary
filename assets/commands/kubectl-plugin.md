@@ -1,3 +1,7 @@
+# TAGLINE
+
+manages kubectl plugins
+
 # TLDR
 
 **List installed plugins**
@@ -28,8 +32,6 @@
 **kubectl plugin** manages kubectl plugins. Plugins extend kubectl with custom commands.
 
 The command discovers plugins in PATH matching kubectl-* pattern. Install plugins via krew or manually.
-
-kubectl plugin lists extensions.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+package manager for Arch Linux
+
 # TLDR
 
 **Synchronize** and update all packages

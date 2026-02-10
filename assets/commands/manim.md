@@ -1,3 +1,7 @@
+# TAGLINE
+
+creates mathematical animations
+
 # TLDR
 
 **Render scene**
@@ -56,8 +60,6 @@ _SCENE_
 **manim** creates mathematical animations. It renders Python-defined scenes to video.
 
 The tool animates mathematical concepts with LaTeX support. Created for educational videos.
-
-manim animates mathematics.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays MS-DOS filesystem information
+
 # TLDR
 
 **Show disk info**
@@ -32,8 +36,6 @@ _DRIVE_
 **minfo** displays MS-DOS filesystem information. It shows disk geometry and FAT details.
 
 The tool is part of mtools. It reports boot sector and filesystem parameters.
-
-minfo shows MS-DOS disk info.
 
 # CAVEATS
 

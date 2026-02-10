@@ -1,3 +1,7 @@
+# TAGLINE
+
+command-line interface for Hetzner Cloud
+
 # TLDR
 
 **List servers**
@@ -56,8 +60,6 @@ _COMMAND_
 **hcloud** is the command-line interface for Hetzner Cloud. It manages cloud servers, images, volumes, and networks.
 
 The tool provides complete control over Hetzner Cloud infrastructure. It supports automation and scripting for cloud resource management.
-
-hcloud manages Hetzner Cloud resources.
 
 # CAVEATS
 

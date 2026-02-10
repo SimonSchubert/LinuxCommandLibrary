@@ -1,3 +1,7 @@
+# TAGLINE
+
+displays image file information
+
 # TLDR
 
 **Show image info**
@@ -32,8 +36,6 @@ _FILE_
 **pamfile** displays image file information. Shows dimensions, depth, and format.
 
 The tool describes Netpbm files. Part of Netpbm suite.
-
-pamfile shows image info.
 
 # CAVEATS
 

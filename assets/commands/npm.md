@@ -1,3 +1,7 @@
+# TAGLINE
+
+node Package Manager
+
 # TLDR
 
 **Install dependencies**
@@ -71,8 +75,6 @@ _COMMAND_
 **npm** is the Node Package Manager. It manages JavaScript packages and dependencies.
 
 The tool handles package.json. Largest software registry in the world.
-
-npm is Node package manager.
 
 # CAVEATS
 
