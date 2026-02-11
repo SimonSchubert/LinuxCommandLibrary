@@ -71,7 +71,7 @@ class MainMenuScreen(terminal: Terminal) : Screen {
             }
         }
 
-        "q", "Escape" -> ScreenResult.Exit
+        "q", "Escape", "h" -> ScreenResult.Exit
 
         "1" -> ScreenResult.Navigate(SearchScreen())
 
