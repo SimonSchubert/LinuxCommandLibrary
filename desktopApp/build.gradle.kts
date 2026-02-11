@@ -7,13 +7,6 @@ plugins {
     alias(libs.plugins.compose.compiler)
 }
 
-// Force consistent Skiko version to resolve native library conflicts
-configurations.all {
-    resolutionStrategy {
-        force("org.jetbrains.skiko:skiko-awt-runtime-macos-arm64:0.9.4.2")
-    }
-}
-
 group = "com.linuxcommandlibrary"
 version = libs.versions.appVersion.get()
 
