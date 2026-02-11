@@ -56,7 +56,7 @@ class BasicCategoriesScreen : Screen {
             ScreenResult.Stay
         }
 
-        "Enter" -> {
+        "Enter", "l" -> {
             val selected = list.selectedValue
             if (selected != null) {
                 ScreenResult.Navigate(BasicDetailScreen(selected.id, selected.title))
@@ -65,7 +65,7 @@ class BasicCategoriesScreen : Screen {
             }
         }
 
-        "q", "Escape" -> ScreenResult.Back
+        "q", "Escape", "h" -> ScreenResult.Back
 
         else -> {
             // Handle number keys for direct selection
