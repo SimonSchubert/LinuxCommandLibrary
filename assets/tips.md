@@ -46,6 +46,9 @@ Example: Find out your external IP.
 ## Permanent aliases
 Use aliases between sessions or even distros.
 
+Find out what shell you have: 
+```[echo](/man/echo) $0```
+
 Bash
 ```[vim](/man/vim) ~/.bashrc```
 
@@ -67,6 +70,10 @@ Automatically execute several commands in a row. Regardless of whether one of th
 Separated by double ampersands, the next command is executed only if the previous one was executed successfully.
 
 ```command1 && command2```
+
+Separated by double pipes, the next command is executed only if the previous one failed.
+
+```command1 || command2```
 
 ## Command syntax
 To find out the syntax of a command, it is best to check the manual page:
@@ -95,6 +102,11 @@ A very useful tool that gives you general examples of how to use commands is TLD
 | **ctrl + _** | Undo |
 | **meta + f** | Forward one word |
 | **meta + b** | Back one word |
+
+These are for the default emacs mode.
+There is also a [vim](/man/vim) mode:
+
+```bindkey -v```
 
 ## Redirection
 You can redirect standard input, output and error by adding these sequences after a command.
