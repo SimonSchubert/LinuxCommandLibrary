@@ -1,3 +1,7 @@
+# TAGLINE
+
+Send messages to logged-in users
+
 # TLDR
 
 **Send** a message to a user on a specific terminal

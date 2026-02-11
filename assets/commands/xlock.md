@@ -1,3 +1,7 @@
+# TAGLINE
+
+Lock X display with screensaver
+
 # TLDR
 
 **Lock screen immediately**

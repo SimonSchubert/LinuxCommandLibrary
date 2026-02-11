@@ -1,3 +1,7 @@
+# TAGLINE
+
+Wait for arbitrary processes to terminate
+
 # TLDR
 
 Wait for **processes** to exit

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fast TLS certificate and cipher probing
+
 # TLDR
 
 **Check TLS**
@@ -50,15 +54,9 @@
 
 # DESCRIPTION
 
-**tlsx** probes TLS configurations. It analyzes certificates.
+**tlsx** is a fast TLS probing tool that connects to hosts and inspects their TLS configurations, certificates, and supported cipher suites. It can extract certificate details including subject names, Subject Alternative Names (SANs), expiration dates, and issuer information.
 
-Certificate inspection. Subject, SAN, expiry.
-
-Cipher enumeration. Supported algorithms.
-
-Mass scanning. Multiple hosts.
-
-Fast and parallel. Efficient probing.
+The tool supports scanning multiple hosts in parallel from a file list, making it suitable for large-scale TLS reconnaissance. Output can be formatted as JSON for integration with other security tools. It is part of the ProjectDiscovery toolkit commonly used in security assessments.
 
 # CAVEATS
 

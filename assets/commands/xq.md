@@ -1,3 +1,7 @@
+# TAGLINE
+
+XML processor using jq syntax
+
 # TLDR
 
 **Convert XML to JSON**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interactive ugrep pattern search alias
+
 # TLDR
 
 **Search pattern**
@@ -50,15 +54,11 @@
 
 # DESCRIPTION
 
-**ug** is ugrep alias. It searches text patterns.
+**ug** is the interactive query alias for **ugrep**, a fast pattern search tool. When invoked as ug, it launches ugrep's interactive query UI by default, allowing real-time search refinement as you type the pattern.
 
-Fast searching. Optimized engine.
+The interactive mode displays results instantly and updates as the query changes, making it useful for exploratory code searching. It supports the same extensive feature set as ugrep including Boolean queries, fuzzy matching, and searching within archives.
 
-Interactive mode. Query UI.
-
-Multiple formats. Text, binary, archive.
-
-grep compatible. Similar options.
+See **ugrep** for full documentation of search options and capabilities.
 
 # CAVEATS
 

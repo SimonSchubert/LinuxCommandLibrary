@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove dependencies from a uv project
+
 # TLDR
 
 **Remove dependency**

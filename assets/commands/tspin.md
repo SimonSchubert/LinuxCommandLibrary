@@ -1,3 +1,7 @@
+# TAGLINE
+
+Log file syntax highlighter and viewer
+
 # TLDR
 
 **View log file**
@@ -36,15 +40,11 @@
 
 # DESCRIPTION
 
-**tspin** highlights log files. It colorizes output.
+**tspin** is a log file viewer that automatically applies syntax highlighting to make logs more readable. It detects common log formats and colorizes elements like timestamps, log levels, IP addresses, URLs, and JSON structures without requiring manual configuration.
 
-Automatic detection. Log format recognition.
+Follow mode (**-f**) monitors log files in real time, highlighting new entries as they appear, similar to **tail -f** but with color. The tool can also read from standard input via pipes, integrating into existing logging pipelines.
 
-Syntax highlighting. Colored output.
-
-Follow mode. Real-time monitoring.
-
-JSON support. Structured logs.
+A built-in pager allows scrolling through log files interactively. Custom highlighting rules can be defined through a configuration file for non-standard log formats.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+WordPress security vulnerability scanner
+
 # TLDR
 
 **Scan WordPress site**

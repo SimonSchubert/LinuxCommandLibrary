@@ -1,3 +1,7 @@
+# TAGLINE
+
+Simple HTTP file server with upload support
+
 # TLDR
 
 **Start server**
@@ -43,15 +47,11 @@
 
 # DESCRIPTION
 
-**updog** serves files. It's a SimpleHTTPServer replacement.
+**updog** is a Python-based HTTP file server designed as a modern replacement for Python's built-in SimpleHTTPServer. It serves files from a directory with a clean web interface that supports browsing, downloading, and optionally uploading files.
 
-File listing. Browse and download.
+The server provides features beyond basic file serving, including password protection for access control, SSL/HTTPS support, and a responsive web interface. File uploads can be enabled with the **--upload** flag, making it useful for quickly transferring files between machines on a local network.
 
-Upload support. Receive files.
-
-Password protection. Basic security.
-
-Modern interface. Clean design.
+updog is intended for development and ad-hoc file sharing, not production use. It starts quickly with sensible defaults and can be customized with command-line options for port, directory, authentication, and encryption.
 
 # CAVEATS
 

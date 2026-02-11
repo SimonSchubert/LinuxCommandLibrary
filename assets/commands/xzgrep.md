@@ -1,3 +1,7 @@
+# TAGLINE
+
+Search xz compressed files with grep
+
 # TLDR
 
 **Search pattern in xz file**

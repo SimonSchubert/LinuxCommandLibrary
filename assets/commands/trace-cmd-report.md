@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display recorded kernel trace data
+
 # TLDR
 
 Display **recorded** trace

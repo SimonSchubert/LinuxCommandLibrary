@@ -1,3 +1,7 @@
+# TAGLINE
+
+Search and play YouTube videos with fzf
+
 # TLDR
 
 **Search** with thumbnails

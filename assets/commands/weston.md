@@ -1,3 +1,7 @@
+# TAGLINE
+
+Reference Wayland compositor
+
 # TLDR
 
 **Start Weston compositor** (requires seat access)

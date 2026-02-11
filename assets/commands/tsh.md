@@ -1,3 +1,7 @@
+# TAGLINE
+
+Teleport unified infrastructure access client
+
 # TLDR
 
 **Log in to Teleport cluster**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Configure X11 display outputs
+
 # TLDR
 
 **Query** current display configuration

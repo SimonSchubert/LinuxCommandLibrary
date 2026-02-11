@@ -1,3 +1,7 @@
+# TAGLINE
+
+Standalone WebAssembly runtime
+
 # TLDR
 
 **Run a WebAssembly file**

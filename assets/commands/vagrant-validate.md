@@ -1,3 +1,7 @@
+# TAGLINE
+
+Validate Vagrantfile syntax
+
 # TLDR
 
 **Validate Vagrantfile**

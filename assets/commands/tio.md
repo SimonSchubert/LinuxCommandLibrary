@@ -1,3 +1,7 @@
+# TAGLINE
+
+Simple serial device terminal emulator
+
 # TLDR
 
 **Connect to serial device**
@@ -52,7 +56,9 @@
 
 # DESCRIPTION
 
-**tio** is a simple serial terminal emulator. Connects to serial devices with auto-connect on device discovery. Modern alternative to minicom and screen for serial communication.
+**tio** is a simple serial device terminal emulator designed as a modern, user-friendly alternative to minicom and screen for serial communication. It connects to serial ports with sensible defaults (115200 baud, 8N1) and supports automatic reconnection when a device is plugged in or becomes available.
+
+The tool provides essential serial communication features including configurable baud rates, data bits, stop bits, parity settings, local echo, session logging, and timestamps. The prefix key **Ctrl+t** provides access to in-session commands, with **Ctrl+t q** to quit.
 
 # CAVEATS
 

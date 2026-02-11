@@ -1,3 +1,7 @@
+# TAGLINE
+
+Share terminal sessions over the web
+
 # TLDR
 
 **Share a bash shell** over the web

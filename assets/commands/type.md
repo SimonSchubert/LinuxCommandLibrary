@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display how a command name is interpreted
+
 # TLDR
 
 **Show the type** of a command

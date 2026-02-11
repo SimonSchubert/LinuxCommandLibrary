@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage initial RAM filesystem images
+
 # TLDR
 
 **Create** a new initramfs for a specific kernel version

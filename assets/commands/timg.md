@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display images and videos in terminal
+
 # TLDR
 
 **Display an image** in the terminal

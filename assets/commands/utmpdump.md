@@ -1,3 +1,7 @@
+# TAGLINE
+
+Dump utmp and wtmp login accounting files
+
 # TLDR
 
 **Dump** wtmp file to stdout

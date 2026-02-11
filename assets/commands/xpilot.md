@@ -1,3 +1,7 @@
+# TAGLINE
+
+Multiplayer space combat game
+
 # TLDR
 
 **Start the game** and connect to a server

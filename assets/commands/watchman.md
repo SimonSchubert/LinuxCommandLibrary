@@ -1,3 +1,7 @@
+# TAGLINE
+
+File watching service for large codebases
+
 # TLDR
 
 **Watch a directory**

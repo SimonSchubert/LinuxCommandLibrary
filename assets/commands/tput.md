@@ -1,3 +1,7 @@
+# TAGLINE
+
+Query and set terminal capabilities
+
 # TLDR
 
 **Set bold text**

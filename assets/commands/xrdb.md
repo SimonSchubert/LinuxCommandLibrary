@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage X server resource database
+
 # TLDR
 
 **Start** xrdb in interactive mode

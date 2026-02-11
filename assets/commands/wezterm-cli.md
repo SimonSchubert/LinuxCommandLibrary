@@ -1,3 +1,7 @@
+# TAGLINE
+
+WezTerm terminal control CLI
+
 # TLDR
 
 **Start new terminal**

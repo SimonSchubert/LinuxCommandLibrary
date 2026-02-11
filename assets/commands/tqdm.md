@@ -1,3 +1,7 @@
+# TAGLINE
+
+Add progress bars to command pipelines
+
 # TLDR
 
 **Add progress bar to pipeline**
@@ -43,15 +47,9 @@
 
 # DESCRIPTION
 
-**tqdm** adds progress bars. It wraps pipe streams.
+**tqdm** (from Arabic "taqaddum" meaning progress) adds progress bars to command-line pipelines by wrapping standard input/output streams. It displays real-time statistics including iteration speed, elapsed time, and estimated time remaining.
 
-Progress indication. Visual feedback.
-
-Speed estimation. Rate display.
-
-ETA calculation. Time remaining.
-
-Python library too. Dual interface.
+The tool works as both a CLI pipe wrapper and a Python library. In CLI mode, it counts lines or bytes passing through and renders a visual progress bar on stderr. When **--total** is specified, it shows a percentage-based progress bar; otherwise it displays a simple counter with speed estimation.
 
 # CAVEATS
 

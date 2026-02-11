@@ -1,3 +1,7 @@
+# TAGLINE
+
+Safely edit password files with locking
+
 # TLDR
 
 Edit **password** file

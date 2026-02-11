@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fast Rust-based static site generator
+
 # TLDR
 
 **Create a new site**

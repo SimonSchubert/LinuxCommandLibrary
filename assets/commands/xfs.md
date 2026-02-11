@@ -1,3 +1,7 @@
+# TAGLINE
+
+X Window System font server
+
 # TLDR
 
 **Start font server**

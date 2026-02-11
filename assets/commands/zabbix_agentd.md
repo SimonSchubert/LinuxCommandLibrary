@@ -1,3 +1,7 @@
+# TAGLINE
+
+Zabbix monitoring agent daemon
+
 # TLDR
 
 **Start agent**
@@ -43,15 +47,11 @@
 
 # DESCRIPTION
 
-**zabbix_agentd** collects metrics. It's the Zabbix agent.
+**zabbix_agentd** is the Zabbix monitoring agent daemon that collects system metrics and sends them to a Zabbix server or proxy. It gathers data on CPU, memory, disk, network, and other system resources using built-in item keys.
 
-System monitoring. Collect data.
+The agent supports two operating modes: passive mode where the server queries the agent on demand, and active mode where the agent initiates connections and sends data at configured intervals. Custom monitoring can be added through user parameters, which define commands that the agent executes to collect application-specific metrics.
 
-Custom items. User parameters.
-
-Active and passive. Both modes.
-
-Remote commands. Execute actions.
+The **-t** flag tests individual item keys for troubleshooting, and **-p** prints all supported items with their current values. Runtime control commands via **-R** allow changing log levels and reloading configuration without restarting the daemon.
 
 # CAVEATS
 

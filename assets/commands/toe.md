@@ -1,3 +1,7 @@
+# TAGLINE
+
+List terminfo terminal type entries
+
 # TLDR
 
 **List all terminal types**

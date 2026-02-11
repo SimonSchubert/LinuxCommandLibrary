@@ -1,3 +1,7 @@
+# TAGLINE
+
+Command-line client for Valkey data store
+
 # TLDR
 
 **Connect to server**
@@ -50,15 +54,9 @@
 
 # DESCRIPTION
 
-**valkey-cli** connects to Valkey. It's the CLI client.
+**valkey-cli** is the command-line interface for interacting with a Valkey server. It provides both an interactive REPL mode for exploring data and a non-interactive mode for scripting and automation. The client uses the same protocol as Redis, making it compatible with existing Redis workflows.
 
-Redis-compatible. Same protocol.
-
-Interactive mode. REPL interface.
-
-Command execution. Direct queries.
-
-Scripting support. Pipe commands.
+Commands can be passed directly on the command line or piped from files and other programs. The client supports cluster mode for connecting to sharded deployments, database selection, authentication, and TLS connections.
 
 # CAVEATS
 

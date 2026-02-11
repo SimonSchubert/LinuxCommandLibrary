@@ -1,3 +1,7 @@
+# TAGLINE
+
+Git-based dotfiles manager
+
 # TLDR
 
 **Initialize a new dotfiles repository**

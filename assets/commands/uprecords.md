@@ -1,5 +1,11 @@
 # TLDR
 
+# TAGLINE
+
+Display historical system uptime records
+
+# TLDR
+
 Display **top 10** uptime records
 
 ```uprecords```

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Share files via command-line uploads
+
 # TLDR
 
 **Upload file**
@@ -40,15 +44,11 @@
 
 # DESCRIPTION
 
-**transfer.sh** shares files. It's a file sharing service.
+**transfer.sh** is a file sharing service designed for easy command-line use. Files are uploaded via standard HTTP PUT requests using curl, and the service returns a unique download URL that can be shared with others. No account or registration is required for basic uploads.
 
-Simple uploading. curl compatible.
+Uploads can be configured with expiration times and download limits through HTTP headers, giving control over how long files remain available and how many times they can be downloaded. Files are automatically deleted after the specified expiration period. The service also supports encryption by piping files through GPG before uploading.
 
-Expiration support. Auto-delete.
-
-Download limits. Control access.
-
-No registration. Anonymous uploads.
+Transfer.sh can be self-hosted as an open-source Go application or used through the public instance at transfer.sh. It supports uploads up to several gigabytes and provides delete URLs for manual removal of uploaded files.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Decode uuencoded binary files
+
 # TLDR
 
 **Decode a uuencoded file**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate directory trees in markdown format
+
 # TLDR
 
 **Generate markdown tree**
@@ -40,15 +44,11 @@
 
 # DESCRIPTION
 
-**treemd** generates directory trees. It outputs as markdown.
+**treemd** generates directory tree representations formatted as markdown, making it easy to include project structure documentation in README files and other markdown documents. The output uses markdown-compatible indentation and formatting that renders correctly on platforms like GitHub.
 
-Markdown formatted. Copy to docs.
+Patterns can be excluded to skip directories like node_modules or build artifacts that clutter the tree output. Depth limiting controls how many levels deep the tree displays, keeping documentation focused on the relevant structure.
 
-Excludes configurable. Skip unwanted.
-
-Depth limiting. Control detail.
-
-Documentation ready. README trees.
+The output can be redirected to a file or piped into other commands for integration into documentation workflows.
 
 # CAVEATS
 

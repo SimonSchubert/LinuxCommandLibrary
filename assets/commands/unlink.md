@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove a single file via system call
+
 # TLDR
 
 **Remove file**
@@ -25,15 +29,11 @@ _file_
 
 # DESCRIPTION
 
-**unlink** removes a single file. It calls the unlink syscall.
+**unlink** removes a single file by directly calling the unlink(2) system call. It provides a minimal interface for file removal, accepting exactly one filename argument with no options for recursion, prompting, or force overwriting.
 
-Single file only. No directories.
+The command removes the directory entry for the specified file and decrements its link count. If no other hard links point to the same inode and no processes have the file open, the file's data is freed. For files with multiple hard links, only the specified link is removed while the data remains accessible through other links.
 
-Atomic operation. System call.
-
-No options. Simple interface.
-
-Removes hard links. Decrements link count.
+Unlike **rm**, unlink cannot remove directories and does not accept multiple files or glob patterns. This simplicity makes it predictable and safe for scripting where removing exactly one file is intended, with no risk of accidentally matching extra files through pattern expansion.
 
 # CAVEATS
 

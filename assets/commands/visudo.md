@@ -1,3 +1,7 @@
+# TAGLINE
+
+Safely edit sudoers configuration
+
 # TLDR
 
 **Edit sudoers file**

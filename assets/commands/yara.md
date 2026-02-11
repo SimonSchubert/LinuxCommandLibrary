@@ -1,3 +1,7 @@
+# TAGLINE
+
+Pattern matching for malware detection
+
 # TLDR
 
 **Scan file with rules**

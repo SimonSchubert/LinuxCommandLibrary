@@ -1,3 +1,7 @@
+# TAGLINE
+
+Verilog to C++ simulation compiler
+
 # TLDR
 
 **Lint Verilog**
@@ -46,15 +50,9 @@
 
 # DESCRIPTION
 
-**verilator** compiles Verilog. It generates C++ code.
+**verilator** converts synthesizable Verilog and SystemVerilog designs into optimized C++ or SystemC models. The generated code compiles to native executables that run significantly faster than interpreted simulators, making it one of the fastest open-source Verilog simulators available.
 
-Fast simulation. Compiled speed.
-
-Lint checking. Find errors.
-
-Waveform support. VCD output.
-
-SystemVerilog. Partial support.
+The tool also functions as a lint checker with **--lint-only**, catching common coding errors and style issues without generating simulation code. Waveform tracing can be enabled with **--trace** to produce VCD files for viewing in waveform viewers like GTKWave.
 
 # CAVEATS
 

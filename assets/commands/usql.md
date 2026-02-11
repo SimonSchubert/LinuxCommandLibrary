@@ -1,3 +1,7 @@
+# TAGLINE
+
+Universal command-line database client
+
 # TLDR
 
 **Connect to PostgreSQL**

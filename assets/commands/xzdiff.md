@@ -1,3 +1,7 @@
+# TAGLINE
+
+Show differences in xz compressed files
+
 # TLDR
 
 **Show differences in xz files**

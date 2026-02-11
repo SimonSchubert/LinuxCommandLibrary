@@ -1,3 +1,7 @@
+# TAGLINE
+
+Filter or count adjacent duplicate lines
+
 # TLDR
 
 **Remove adjacent duplicate lines**

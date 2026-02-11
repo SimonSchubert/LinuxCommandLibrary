@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage dotfiles with multiple Git repos
+
 # TLDR
 
 **Initialize repo**
@@ -50,15 +54,9 @@
 
 # DESCRIPTION
 
-**vcsh** manages dotfiles. It uses Git for configs.
+**vcsh** manages configuration files (dotfiles) using multiple Git repositories that all share the same working directory ($HOME). Each repository tracks a separate set of files, allowing modular organization of shell configs, editor settings, and other dotfiles.
 
-Multiple repos in $HOME. Overlapping paths.
-
-Git-based. Full version control.
-
-Bare repository. No working directory copy.
-
-Modular configs. Separate concerns.
+The tool uses bare Git repositories to avoid conflicts between repos that coexist in the same directory. The **enter** command opens a subshell scoped to a specific repository, while running git commands directly against a named repo is also supported.
 
 # CAVEATS
 

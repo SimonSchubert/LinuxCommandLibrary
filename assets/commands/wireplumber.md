@@ -1,3 +1,7 @@
+# TAGLINE
+
+Session and policy manager for PipeWire
+
 # TLDR
 
 **Enable** with systemd

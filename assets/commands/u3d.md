@@ -1,3 +1,7 @@
+# TAGLINE
+
+Unity Editor version manager
+
 # TLDR
 
 **List installed versions**
@@ -46,15 +50,9 @@
 
 # DESCRIPTION
 
-**u3d** manages Unity installations. It's a version manager.
+**u3d** is a command-line tool for managing multiple Unity Editor installations side by side. It can list available versions, install specific releases, and launch Unity with a particular version, making it straightforward to work on projects requiring different Unity versions.
 
-Multiple versions. Install side by side.
-
-Command-line builds. CI/CD ready.
-
-Cross-platform. macOS, Linux, Windows.
-
-License management. Activate headless.
+The tool is especially useful in CI/CD environments where Unity builds need to run headlessly. It handles license activation, version discovery, and build execution from the command line. Cross-platform support covers macOS, Linux, and Windows.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Roguelike dungeon crawler in Middle Earth
+
 # TLDR
 
 **Start the game**

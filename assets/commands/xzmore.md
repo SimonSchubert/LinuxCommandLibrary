@@ -1,3 +1,7 @@
+# TAGLINE
+
+Page through xz compressed files
+
 # TLDR
 
 **View xz compressed file**

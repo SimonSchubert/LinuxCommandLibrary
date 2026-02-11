@@ -1,3 +1,7 @@
+# TAGLINE
+
+Detach filesystems from mount points
+
 # TLDR
 
 **Unmount** a filesystem by device path

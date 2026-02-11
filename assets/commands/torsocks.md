@@ -1,3 +1,7 @@
+# TAGLINE
+
+Transparently route traffic through Tor
+
 # TLDR
 
 **Run** command using Tor

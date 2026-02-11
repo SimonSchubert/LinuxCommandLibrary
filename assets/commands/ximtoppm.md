@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert XIM images to PPM format
+
 # TLDR
 
 **Convert XIM to PPM**

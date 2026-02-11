@@ -1,3 +1,7 @@
+# TAGLINE
+
+Strip custom sections from WebAssembly files
+
 # TLDR
 
 **Strip all custom sections**

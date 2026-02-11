@@ -1,3 +1,7 @@
+# TAGLINE
+
+Vue.js project management CLI
+
 # TLDR
 
 **Create new project**
@@ -67,17 +71,11 @@
 
 # DESCRIPTION
 
-**vue** CLI manages Vue.js projects. It creates, configures, and builds apps.
+**vue** is the command-line interface for Vue CLI, providing tools for creating, configuring, and managing Vue.js application projects. It scaffolds new projects with interactive prompts or saved presets, setting up build tooling, linting, testing, and other development infrastructure automatically.
 
-Project creation scaffolds Vue apps. Interactive prompts or presets.
+The CLI includes a graphical user interface accessible via `vue ui` for visually managing projects, plugins, dependencies, and build tasks in a browser. Plugins can be added to existing projects to integrate features like Vue Router, Vuex state management, TypeScript support, and testing frameworks.
 
-GUI provides visual management. Plugins, dependencies, tasks.
-
-Plugins extend functionality. Router, Vuex, TypeScript, etc.
-
-Single file serving enables prototyping. Quick component development.
-
-Webpack inspection shows configuration. Debug build settings.
+For rapid prototyping, `vue serve` and `vue build` can compile individual Vue single-file components without requiring a full project setup. The `vue inspect` command displays the resolved webpack configuration, which is helpful for debugging build issues.
 
 # CAVEATS
 

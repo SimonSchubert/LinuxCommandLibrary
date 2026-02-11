@@ -1,3 +1,7 @@
+# TAGLINE
+
+GNU Windows resource compiler
+
 # TLDR
 
 **Compile resource script** to COFF object file

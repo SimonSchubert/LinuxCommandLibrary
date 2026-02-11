@@ -1,3 +1,7 @@
+# TAGLINE
+
+Advanced IRC bouncer daemon
+
 # TLDR
 
 Run **initial setup**
@@ -36,9 +40,11 @@ Enable on **boot**
 
 # DESCRIPTION
 
-**znc** is an IRC bouncer that stays connected to IRC servers when you disconnect. It buffers messages and plays them back when you reconnect.
+**znc** is an IRC bouncer that maintains a persistent connection to IRC servers on your behalf. When you disconnect your IRC client, ZNC stays connected and buffers all messages, channel activity, and notifications, then plays them back when you reconnect.
 
-The bouncer supports multiple networks, users, and features like SSL and modules.
+ZNC supports multiple simultaneous IRC networks and multiple user accounts, making it suitable for both personal use and shared installations. It provides SSL/TLS encryption, a web-based administration interface, and an extensive module system for features like logging, automated responses, and client-side scripting.
+
+Initial configuration is performed interactively with the **-c** flag, which walks through network, user, and port setup. After configuration, ZNC runs as a background daemon by default.
 
 # CAVEATS
 

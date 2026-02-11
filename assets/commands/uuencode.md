@@ -1,3 +1,7 @@
+# TAGLINE
+
+Encode binary files to ASCII text
+
 # TLDR
 
 **Encode a binary file** for transmission

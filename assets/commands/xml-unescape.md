@@ -1,3 +1,7 @@
+# TAGLINE
+
+Decode XML entities to characters
+
 # TLDR
 
 **Unescape XML entities**

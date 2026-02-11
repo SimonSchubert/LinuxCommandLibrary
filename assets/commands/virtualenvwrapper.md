@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convenience wrappers for virtualenv
+
 # TLDR
 
 **Create virtual environment**
@@ -54,15 +58,11 @@
 
 # DESCRIPTION
 
-**virtualenvwrapper** enhances virtualenv. It adds convenience.
+**virtualenvwrapper** is a set of shell extensions that enhance the standard virtualenv tool for managing Python virtual environments. It provides convenient wrapper commands for creating, activating, switching between, and deleting environments, all from a centralized location rather than scattered across project directories.
 
-Centralized location. All envs in one place.
+The core workflow revolves around the `workon` command for listing and switching environments, `mkvirtualenv` for creation, and `rmvirtualenv` for deletion. All environments are stored in a single configurable directory (typically `~/.virtualenvs`), making them easy to find and manage regardless of where project code resides.
 
-Easy switching. workon command.
-
-Project association. Link to directories.
-
-Hooks support. Custom scripts.
+The tool also supports project directory association, allowing automatic directory changes when activating an environment, and provides hook scripts that run at key lifecycle events such as environment creation, activation, and deactivation for custom automation.
 
 # CAVEATS
 

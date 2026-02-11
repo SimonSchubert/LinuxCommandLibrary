@@ -1,3 +1,7 @@
+# TAGLINE
+
+Next-generation frontend build tool
+
 # TLDR
 
 **Start the development server**

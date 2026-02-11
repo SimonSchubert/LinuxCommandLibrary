@@ -1,3 +1,7 @@
+# TAGLINE
+
+KDE drop-down terminal emulator
+
 # TLDR
 
 **Start** yakuake

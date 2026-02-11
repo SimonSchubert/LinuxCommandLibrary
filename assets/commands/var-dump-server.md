@@ -1,3 +1,7 @@
+# TAGLINE
+
+Symfony PHP variable dump receiver
+
 # TLDR
 
 **Start server**
@@ -29,15 +33,9 @@
 
 # DESCRIPTION
 
-**var-dump-server** receives dumps. It's for Symfony VarDumper.
+**var-dump-server** starts a server that collects and displays variable dumps from PHP applications using the Symfony VarDumper component. Instead of dumping variables directly into the browser or console output, the application sends them to this centralized server for structured display.
 
-Debug server. Receive var dumps.
-
-Centralized output. Remote debugging.
-
-Formatted display. Structured output.
-
-Symfony component. PHP debugging.
+This approach keeps debug output separate from application responses, making it particularly useful for debugging API endpoints, AJAX requests, and command-line scripts. The server formats dumps with syntax highlighting and collapsible structures, providing a cleaner debugging experience than inline var_dump output.
 
 # CAVEATS
 

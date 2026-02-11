@@ -1,3 +1,7 @@
+# TAGLINE
+
+Shut down a running Vagrant machine
+
 # TLDR
 
 **Stop VM**

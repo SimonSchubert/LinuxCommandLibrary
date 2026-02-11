@@ -1,3 +1,7 @@
+# TAGLINE
+
+Storage device management D-Bus daemon
+
 # TLDR
 
 **Daemon is started automatically by D-Bus or systemd**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Graphical manual page viewer
+
 # TLDR
 
 **Start** xman

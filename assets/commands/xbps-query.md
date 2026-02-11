@@ -1,3 +1,7 @@
+# TAGLINE
+
+Query Void Linux package information
+
 # TLDR
 
 **Search** for a package in remote repositories

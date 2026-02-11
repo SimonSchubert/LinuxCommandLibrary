@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compute transitive reduction of directed graphs
+
 # TLDR
 
 **Compute transitive reduction** of a graph

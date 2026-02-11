@@ -1,3 +1,7 @@
+# TAGLINE
+
+Vim-like modal document viewer
+
 # TLDR
 
 **Open** file

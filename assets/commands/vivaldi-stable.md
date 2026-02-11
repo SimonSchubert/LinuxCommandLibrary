@@ -1,3 +1,7 @@
+# TAGLINE
+
+Customizable Chromium-based web browser
+
 # TLDR
 
 This command is an alias of **chromium**.

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Search xz files with extended regex
+
 # TLDR
 
 **Search pattern in xz files (extended regex)**

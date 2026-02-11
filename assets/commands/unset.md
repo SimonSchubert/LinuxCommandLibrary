@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove shell variables or functions
+
 # TLDR
 
 **Unset variable**
@@ -29,15 +33,11 @@ _name_
 
 # DESCRIPTION
 
-**unset** removes shell variables. It's a builtin.
+**unset** is a shell builtin that removes variables and function definitions from the current shell environment. By default it removes variables, but with the **-f** flag it removes function definitions instead.
 
-Variable removal. Clear from environment.
+Unsetting a variable removes it completely from the environment, unlike setting it to an empty string which leaves the variable defined but empty. This distinction matters for scripts that check whether a variable exists versus whether it has a value. Unsetting exported variables also removes them from the environment inherited by child processes.
 
-Function removal. Delete definitions.
-
-Shell scope. Current shell only.
-
-Clean environment. Remove unwanted.
+Changes made by unset only affect the current shell session. Variables and functions defined in shell startup files like ~/.bashrc will be restored when a new shell session starts. Read-only variables cannot be unset.
 
 # CAVEATS
 

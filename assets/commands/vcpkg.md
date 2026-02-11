@@ -1,3 +1,7 @@
+# TAGLINE
+
+C/C++ cross-platform package manager
+
 # TLDR
 
 **Search for a package**

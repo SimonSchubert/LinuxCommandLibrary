@@ -1,3 +1,7 @@
+# TAGLINE
+
+Wayland event viewer for input debugging
+
 # TLDR
 
 Monitor **all** events

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fast async terminal file manager
+
 # TLDR
 
 **Start file manager**

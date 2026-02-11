@@ -1,3 +1,7 @@
+# TAGLINE
+
+Render HTML and CSS to PDF and PNG
+
 # TLDR
 
 **Convert HTML to PDF**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Report older kernel version string
+
 # TLDR
 
 This command is an alias of **setarch uname26**.

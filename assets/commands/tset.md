@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal initialization and reset utility
+
 # TLDR
 
 **Initialize the terminal** using $TERM

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Open files in read-only Vim mode
+
 # TLDR
 
 **Open a file in read-only mode**

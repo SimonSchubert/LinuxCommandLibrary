@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run commands on gzip-compressed files
+
 # TLDR
 
 **Run command on compressed file**

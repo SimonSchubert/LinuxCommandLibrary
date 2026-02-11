@@ -1,3 +1,7 @@
+# TAGLINE
+
+Quick Google answers from the terminal
+
 # TLDR
 
 **Search** using Google

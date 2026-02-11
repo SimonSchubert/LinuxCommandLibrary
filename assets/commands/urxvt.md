@@ -1,5 +1,11 @@
 # TLDR
 
+# TAGLINE
+
+Lightweight Unicode terminal emulator for X11
+
+# TLDR
+
 Open new **window**
 
 ```urxvt```

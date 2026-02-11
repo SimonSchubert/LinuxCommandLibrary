@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal typing speed trainer
+
 # TLDR
 
 **Start typing**
@@ -36,15 +40,9 @@
 
 # DESCRIPTION
 
-**typeinc** is a typing trainer. It measures speed.
+**typeinc** is a terminal-based typing practice application that measures typing speed in words per minute and tracks accuracy through error counting. It provides a distraction-free environment for improving keyboard skills directly in the terminal.
 
-Speed measurement. WPM calculation.
-
-Accuracy tracking. Error counting.
-
-Custom texts. Practice anything.
-
-Terminal-based. Distraction-free.
+Tests can use built-in word lists or custom text files for practicing specific content. Duration and word count limits can be configured to create short drills or extended practice sessions. Results are displayed upon completion with detailed statistics.
 
 # CAVEATS
 

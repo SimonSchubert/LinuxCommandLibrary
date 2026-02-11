@@ -1,3 +1,7 @@
+# TAGLINE
+
+Set X root window appearance
+
 # TLDR
 
 **Set solid background color**

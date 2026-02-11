@@ -59,6 +59,7 @@ import kotlinx.html.unsafe
 import kotlinx.html.visit
 import org.json.JSONArray
 import org.json.JSONObject
+import org.json.JSONWriter
 import java.io.File
 import java.io.PrintStream
 import java.util.Locale
@@ -81,6 +82,9 @@ import kotlin.text.startsWith
 */
 
 data class Ad(val imageUrl: String, val url: String, val backgroundColor: String)
+
+val jsonString = File("products_dataset.json").readText()
+val products = JSONArray(jsonString)
 
 fun main() {
     val minifier = Minifier()
@@ -274,6 +278,9 @@ class WebsiteBuilder {
                                                 style = "background-image: url(\"images/${getIconResourceForTitle(categoryTitle)}\");"
                                             }
                                             h2 {
+                                                if (categoryTitle == "Cryptocurrencies") {
+                                                    style = "    line-break: anywhere;"
+                                                }
                                                 text(categoryTitle)
                                             }
                                         }
@@ -313,15 +320,15 @@ class WebsiteBuilder {
         "Emacs" -> "icon-emacs.svg"
         "Nano" -> "icon-nano.svg"
         "Pico" -> "icon-pico.svg"
-        "Crypto currencies" -> "icon-bitcoin.svg"
+        "Cryptocurrencies" -> "icon-bitcoin.svg"
         "Input" -> "icon-mouse.svg"
         "JSON" -> "icon-json.svg"
         "Fun" -> "icon-fun.svg"
-        "VIM Texteditor" -> "icon-text-edit.svg"
-        "Emacs Texteditor" -> "icon-text-edit.svg"
-        "Nano Texteditor" -> "icon-text-edit.svg"
-        "Pico Texteditor" -> "icon-text-edit.svg"
-        "Micro Texteditor" -> "icon-text-edit.svg"
+        "VIM Text Editor" -> "icon-text-edit.svg"
+        "Emacs Text Editor" -> "icon-text-edit.svg"
+        "Nano Text Editor" -> "icon-text-edit.svg"
+        "Pico Text Editor" -> "icon-text-edit.svg"
+        "Micro Text Editor" -> "icon-text-edit.svg"
         else -> ""
     }
 
@@ -669,7 +676,8 @@ class WebsiteBuilder {
                                 }
                             }
 
-                            command.sections.sortedBy { it.getSortPriority() }
+                            command.sections.filter { it.title.uppercase() != "TAGLINE" }
+                                .sortedBy { it.getSortPriority() }
                                 .forEach { section ->
                                     h2 {
                                         onClick = "togglePanel(this)"
@@ -855,10 +863,14 @@ class WebsiteBuilder {
                     p { +"For EU Users: If you are located in the European Union, you have the right to access, correct, or delete any personal data we may hold about you. Since we do not collect personal data through tracking or forms, no such data is stored." }
                     p { +"Cookie Consent (Future): If we introduce cookies for advertising in the future, we will implement a cookie consent mechanism for EU users to ensure compliance with GDPR." }
 
-                    h2 { +"4. Contact Us" }
+                    h2 { +"4.Language Detection for Amazon Links" }
+                    p { +"We use your browser's preferred language setting (for example de-DE, en-US, fr-FR) only in your browser to automatically show Amazon affiliate products and links from the most relevant Amazon store (such as Amazon.de for German users or Amazon.com for English users)." }
+                    p { +"This information is never collected, stored, sent to our servers, or logged. It is processed entirely on your device." }
+
+                    h2 { +"5. Contact Us" }
                     p { +"If you have any questions or concerns about this Privacy Policy, you can contact us at [your email address]." }
 
-                    h2 { +"5. Changes to This Policy" }
+                    h2 { +"6. Changes to This Policy" }
                     p { +"We may update this Privacy Policy from time to time, especially if we introduce new features or services that affect data handling (e.g., Google AdSense). Any changes will be posted on this page with an updated 'Last Updated' date." }
                 }
 
@@ -1193,7 +1205,6 @@ class WebsiteBuilder {
         Ad("digitalocean-vertical.webp", "/digitalocean-2025", "#173a62"),
         Ad("proton-free-vertical.webp", "/proton-free-2025", "#01a4e8"),
         Ad("proton-paid-vertical.webp", "/proton-paid-2025", "#f1c522"),
-        Ad("beelink-vertical-1.webp", "/beelink", "#01a4e8"),
     )
     val horizontalAds = listOf(
         Ad("beelink-horizontal-1.webp", "/beelink", "#e47617"),
@@ -1221,38 +1232,46 @@ class WebsiteBuilder {
             randomAds[1].let { ad ->
                 div {
                     classes = setOf("side-panel")
-                    style = "background-color: ${ad.backgroundColor}"
-                    a {
-                        href = ad.url
-                        img {
-                            src = "/images/af/${ad.imageUrl}"
-                            width = "200"
-                        }
-                    }
+                    style = "width: 200px"
+
+                    products("column")
                 }
             }
         }
         return this
     }
 
-    private fun FlowContent.footer(showAd: Boolean = true): FlowContent {
-        if (showAd) {
-            val randomAds = horizontalAds.shuffled().firstOrNull()
-            randomAds?.let { ad ->
-                div {
-                    classes = setOf("bottom-panel")
-                    style = "background-color: ${ad.backgroundColor}; display: block;"
+    private fun FlowContent.products(direction: String) {
+        div {
+            classes = setOf("products-grid")
+            attributes["data-dir"] = direction
+            style = "display: flex; flex-direction: $direction; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: center; padding: 10px 0;"
 
-                    a(ad.url) {
-                        target = ATarget.blank
-                        img {
-                            style = "max-width: calc(100% - 4px);"
-                            src = "/images/af/${ad.imageUrl}"
-                            attributes["loading"] = "lazy"
-                            width = "600"
-                        }
+            div {
+                style = "width: 100%"
+                div {
+                    style = "width: 180px; padding: 12px 0 4px 0; border-bottom: 2px solid #e45151; margin-bottom: 8px; margin: auto"
+
+                    h2 {
+                        style = "margin: 0; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: #ffffff; display: flex; align-items: center; gap: 6px;"
+                        +"> TERMINAL_GEAR"
+                    }
+
+                    p {
+                        style = "margin: 4px 0 0 0; font-size: 10px; color: #999; font-weight: 400; font-style: italic;"
+                        +"Curated for the Linux community"
                     }
                 }
+            }
+        }
+    }
+
+    private fun FlowContent.footer(showAd: Boolean = true): FlowContent {
+        if (showAd) {
+            div {
+                classes = setOf("bottom-panel")
+                style = "background-color: unset;"
+                products("row")
             }
         }
         footer {
@@ -1367,7 +1386,58 @@ class WebsiteBuilder {
 //                }
 //            }
         }
+        if (showAd) {
+            productsScript()
+        }
         return this
+    }
+
+    private fun FlowContent.productsScript() {
+        val grouped = mutableMapOf<String, MutableList<JSONObject>>()
+        for (i in 0 until products.length()) {
+            val obj = products.getJSONObject(i)
+            val country = obj.getString("country")
+            grouped.getOrPut(country) { mutableListOf() }.add(obj)
+        }
+        val jsData = buildString {
+            append("var P={")
+            grouped.entries.forEachIndexed { idx, (country, items) ->
+                if (idx > 0) append(",")
+                append(country)
+                append(":[")
+                items.forEachIndexed { jIdx, obj ->
+                    if (jIdx > 0) append(",")
+                    append("{t:")
+                    append(JSONWriter.valueToString(obj.getString("title")))
+                    append(",i:")
+                    append(JSONWriter.valueToString(obj.getString("imageUrl")))
+                    append(",p:")
+                    append(JSONWriter.valueToString(obj.getString("price")))
+                    append(",u:")
+                    append(JSONWriter.valueToString(obj.getString("redirectUrl")))
+                    append("}")
+                }
+                append("]")
+            }
+            append("};")
+        }
+        script {
+            unsafe {
+                raw(
+                    jsData +
+                        """
+function E(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+var l=(navigator.language||'').toLowerCase();
+var c=l.startsWith('de')?'de':l.startsWith('fr')?'fr':'us';
+var items=P[c]||P['us'];
+for(var i=items.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var tmp=items[i];items[i]=items[j];items[j]=tmp;}
+var sel=items.slice(0,3);
+var grids=document.querySelectorAll('.products-grid');
+for(var g=0;g<grids.length;g++){var h='';for(var k=0;k<sel.length;k++){var s=sel[k];h+='<a href="'+E(s.u)+'" target="_blank" rel="noopener noreferrer" style="display:flex;flex-direction:column;text-decoration:none;overflow:hidden;border-radius:10px;width:180px;background-color:#2a2a2a;border:1px solid #333;transition:transform 0.2s ease,border-color 0.2s ease;">'+'<img src="'+E(s.i)+'" alt="'+E(s.t)+'" style="width:180px;height:150px;display:block;object-fit:cover;border-bottom:1px solid #333;">'+'<div style="padding:10px;display:flex;flex-direction:column;gap:6px;">'+'<p style="margin:0;font-size:11px;font-weight:600;line-height:1.4;color:#eeeeee;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;height:30px;">'+E(s.t)+'</p>'+'<span style="font-size:14px;font-weight:800;color:#4ade80;">'+E(s.p)+'</span>'+'</div></a>';}grids[g].insertAdjacentHTML('beforeend',h);}
+""",
+                )
+            }
+        }
     }
 
     private fun FlowContent.tooltip(): FlowContent {

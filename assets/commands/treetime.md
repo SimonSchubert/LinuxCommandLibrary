@@ -1,3 +1,7 @@
+# TAGLINE
+
+Ancestral sequence reconstruction and molecular clocks
+
 # TLDR
 
 Infer **ancestral** sequences

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Mono ASP.NET development web server
+
 # TLDR
 
 **Start server**
@@ -53,15 +57,9 @@
 
 # DESCRIPTION
 
-**xsp** is Mono's ASP.NET web server. It hosts .NET web apps.
+**xsp** is a lightweight standalone web server included with the Mono project for hosting ASP.NET applications on Linux and other Unix-like systems. It serves as a development and testing server, providing a quick way to run ASP.NET WebForms and MVC applications without requiring a full web server setup.
 
-Standalone server. Development use.
-
-ASP.NET hosting. WebForms, MVC.
-
-HTTPS support. Certificate based.
-
-Lightweight. Testing focused.
+The server supports HTTPS via PKCS#12 certificate files and can bind to specific addresses and ports. For production deployments, xsp should be replaced with mod_mono behind Apache or a similar reverse proxy configuration that provides better performance and security.
 
 # CAVEATS
 

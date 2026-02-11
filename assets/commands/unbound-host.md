@@ -1,3 +1,7 @@
+# TAGLINE
+
+DNS lookup utility using Unbound resolver
+
 # TLDR
 
 **Look up a hostname**

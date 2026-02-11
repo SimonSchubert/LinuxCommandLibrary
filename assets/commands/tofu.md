@@ -1,3 +1,7 @@
+# TAGLINE
+
+Open-source infrastructure as code tool
+
 # TLDR
 
 **Initialize directory**
@@ -53,15 +57,9 @@
 
 # DESCRIPTION
 
-**tofu** manages infrastructure. It's OpenTofu, a Terraform fork.
+**tofu** (OpenTofu) is an open-source infrastructure-as-code tool forked from Terraform, allowing you to define cloud and on-premises resources in declarative HCL configuration files. It supports major cloud providers including AWS, GCP, and Azure through a provider plugin system.
 
-Infrastructure as code. Declarative config.
-
-Multi-cloud support. AWS, GCP, Azure.
-
-State management. Track resources.
-
-Plan before apply. Preview changes.
+The workflow follows an init-plan-apply cycle: **init** downloads providers and modules, **plan** previews proposed changes, and **apply** creates or modifies the actual infrastructure. State is tracked in a state file that maps configuration to real resources, enabling incremental updates and safe destruction with **destroy**.
 
 # CAVEATS
 

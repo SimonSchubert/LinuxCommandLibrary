@@ -1,3 +1,7 @@
+# TAGLINE
+
+Ubuntu graphical software update manager
+
 # TLDR
 
 **Launch the Software Updater** GUI

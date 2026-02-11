@@ -1,3 +1,7 @@
+# TAGLINE
+
+VirusTotal command-line interface
+
 # TLDR
 
 **Scan file**
@@ -50,15 +54,11 @@
 
 # DESCRIPTION
 
-**vt** queries VirusTotal. It's the official CLI.
+**vt** is the official command-line interface for VirusTotal, the online service that analyzes files and URLs for malware using dozens of antivirus engines and security tools. It provides direct access to VirusTotal's scanning and intelligence capabilities from the terminal.
 
-Malware scanning. Multiple engines.
+The tool can submit files and URLs for scanning, retrieve analysis reports by file hash or URL, search the VirusTotal database for known threats, and download samples for research. Results include detection verdicts from multiple antivirus engines, behavioral analysis data, and community reputation scores.
 
-URL checking. Website reputation.
-
-Hash lookups. Known malware.
-
-API access. Full VirusTotal features.
+All operations require a VirusTotal API key, with rate limits depending on the account tier. The CLI supports both free and premium API features, making it useful for security analysts, incident responders, and automated threat detection workflows.
 
 # CAVEATS
 

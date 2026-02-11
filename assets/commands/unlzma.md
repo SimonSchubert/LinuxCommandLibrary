@@ -1,3 +1,7 @@
+# TAGLINE
+
+Decompress LZMA compressed files
+
 # TLDR
 
 **Decompress file**
@@ -43,15 +47,11 @@
 
 # DESCRIPTION
 
-**unlzma** decompresses LZMA files. It extracts .lzma.
+**unlzma** decompresses files that were compressed with the LZMA (Lempel-Ziv-Markov chain Algorithm) compression format. It is functionally equivalent to running **xz --format=lzma --decompress** and is provided as a convenience command within the xz-utils package.
 
-LZMA decompression. High ratio format.
+By default, unlzma replaces the compressed .lzma file with the decompressed output, removing the original. The **-k** flag preserves the original compressed file, and **-c** writes the decompressed data to standard output for piping to other commands.
 
-Equivalent to xz --format=lzma. Same tool.
-
-Single file decompression. In-place.
-
-Legacy format support. LZMA1 algorithm.
+The LZMA format is a legacy compression format that has been largely superseded by the XZ format, which uses the improved LZMA2 algorithm with better multi-threading support. unlzma remains useful for decompressing older archives and for compatibility with systems that still use the .lzma format.
 
 # CAVEATS
 

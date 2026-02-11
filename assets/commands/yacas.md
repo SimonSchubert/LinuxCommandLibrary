@@ -1,3 +1,7 @@
+# TAGLINE
+
+Free computer algebra system
+
 # TLDR
 
 **Start calculator**
@@ -36,15 +40,9 @@
 
 # DESCRIPTION
 
-**yacas** is computer algebra. It does symbolic math.
+**yacas** (Yet Another Computer Algebra System) is a free symbolic mathematics program that provides an interactive environment for algebraic computation. It supports symbolic manipulation of expressions, equation solving, calculus operations including derivatives and integrals, and linear algebra.
 
-Symbolic computation. Algebra system.
-
-Calculus support. Derivatives, integrals.
-
-Equation solving. Algebraic solutions.
-
-Programmable. Scripting support.
+The system includes its own scripting language for defining custom functions and mathematical procedures. It can be used interactively at the command line or by running script files, and supports both exact symbolic computation and numerical evaluation.
 
 # CAVEATS
 

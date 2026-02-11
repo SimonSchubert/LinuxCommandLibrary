@@ -1,3 +1,7 @@
+# TAGLINE
+
+Video format conversion framework
+
 # TLDR
 
 **Transcode video**
@@ -46,15 +50,9 @@
 
 # DESCRIPTION
 
-**transcode** converts video formats. It's a transcoding framework.
+**transcode** is a video processing framework for converting between video and audio formats. It supports multiple codecs and provides filtering capabilities including resizing, cropping, and deinterlacing.
 
-Multiple codecs. Various formats.
-
-Filtering included. Resize, crop.
-
-Audio extraction. Separate tracks.
-
-Batch capable. Process multiple.
+The tool can extract audio tracks separately, process files in batch mode, and apply various transformations during conversion. It has been largely superseded by FFmpeg, which offers broader format support and more active development.
 
 # CAVEATS
 

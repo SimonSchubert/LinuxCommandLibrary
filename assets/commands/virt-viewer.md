@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display VM graphical console
+
 # TLDR
 
 **Connect to VM**
@@ -43,15 +47,11 @@
 
 # DESCRIPTION
 
-**virt-viewer** displays VM console. It connects to VMs.
+**virt-viewer** is a lightweight graphical console client for viewing the display of virtual machines managed by libvirt. It connects to running VMs and renders their graphical output in a native window, providing a simple alternative to the full virt-manager application when only console access is needed.
 
-SPICE and VNC. Protocol support.
+The tool supports both SPICE and VNC display protocols, automatically detecting the appropriate connection method from the VM's configuration. Remote connections are supported through SSH tunneling, allowing users to securely access VM consoles on remote hypervisors without exposing display ports directly.
 
-Remote connection. SSH tunneling.
-
-Full screen mode. Dedicated display.
-
-USB redirection. Pass devices.
+Additional features include full-screen mode for dedicated display use, USB device redirection for passing local hardware to the guest, shared clipboard support, and automatic screen resolution adjustment. The viewer can also wait for a VM to start before connecting, making it useful in scripted or automated workflows.
 
 # CAVEATS
 

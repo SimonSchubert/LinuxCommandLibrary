@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create virtual Kubernetes clusters
+
 # TLDR
 
 **Create cluster**
@@ -50,15 +54,9 @@
 
 # DESCRIPTION
 
-**vcluster** creates virtual clusters. It runs on Kubernetes.
+**vcluster** creates lightweight virtual Kubernetes clusters that run inside existing Kubernetes clusters. Each virtual cluster has its own API server and control plane but shares the underlying host cluster's compute resources and networking.
 
-Virtual clusters. K8s in K8s.
-
-Lightweight. Share host resources.
-
-Isolated. Separate control plane.
-
-Multi-tenancy. Team separation.
+This approach provides full Kubernetes isolation for multi-tenancy, development, and testing without the overhead of separate physical clusters. Virtual clusters are created in seconds and can be paused to free resources when not in use.
 
 # CAVEATS
 

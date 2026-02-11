@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Vagrant plugins and extensions
+
 # TLDR
 
 **List plugins**

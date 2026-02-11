@@ -1,3 +1,7 @@
+# TAGLINE
+
+TLP power management status reports
+
 # TLDR
 
 Generate **full** status report

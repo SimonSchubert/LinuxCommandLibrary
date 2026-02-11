@@ -1,3 +1,7 @@
+# TAGLINE
+
+Hexadecimal dump and reverse tool
+
 # TLDR
 
 **Create a hex dump** of a file

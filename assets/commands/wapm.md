@@ -1,3 +1,7 @@
+# TAGLINE
+
+WebAssembly package manager
+
 # TLDR
 
 **Install package**
@@ -50,15 +54,11 @@
 
 # DESCRIPTION
 
-**wapm** manages WebAssembly packages. It's the WAPM CLI.
+**wapm** is the package manager for WebAssembly modules, providing commands to install, run, search, and publish packages from the wapm.io registry. It works with the Wasmer runtime to execute WebAssembly packages on any platform.
 
-Package manager for WASM. Install and run.
+Packages installed through wapm contain pre-compiled WebAssembly modules that run in a sandboxed environment, making them portable across operating systems and architectures. The registry hosts a variety of tools and libraries compiled to WebAssembly from languages like Rust, C, and AssemblyScript.
 
-WebAssembly modules. Cross-platform.
-
-Registry access. wapm.io.
-
-Run anywhere. WASM portability.
+Publishing packages requires a wapm.io account and a wapm.toml manifest file describing the package metadata, entry points, and dependencies.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display hardware watchdog timer status
+
 # TLDR
 
 **Display** the watchdog status

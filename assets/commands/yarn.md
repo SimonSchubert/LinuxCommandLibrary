@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fast JavaScript dependency manager
+
 # TLDR
 
 **Install all dependencies** from package.json

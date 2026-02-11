@@ -1,3 +1,7 @@
+# TAGLINE
+
+Suspend running Vagrant machines
+
 # TLDR
 
 **Suspend VM**

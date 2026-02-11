@@ -1,3 +1,7 @@
+# TAGLINE
+
+Real-time terminal plotting from stdin
+
 # TLDR
 
 **Plot** values from stdin

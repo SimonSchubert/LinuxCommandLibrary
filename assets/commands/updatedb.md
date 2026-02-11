@@ -1,3 +1,7 @@
+# TAGLINE
+
+Build filename database for locate searches
+
 # TLDR
 
 **Refresh** database
@@ -31,6 +35,11 @@
 **updatedb** creates or updates the database used by the locate command. It scans the filesystem and builds an index of all filenames for fast searching.
 
 The command is usually run daily by cron to keep the database current. Manual execution is needed to index newly created files before the next scheduled update.
+
+# CONFIGURATION
+
+**/etc/updatedb.conf**
+> Controls which paths, filesystem types, and file patterns are included or excluded from the database.
 
 # CAVEATS
 

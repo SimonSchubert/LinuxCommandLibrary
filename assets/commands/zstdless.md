@@ -1,3 +1,7 @@
+# TAGLINE
+
+View zstd compressed files with pager
+
 # TLDR
 
 **View zstd compressed file**
@@ -10,7 +14,9 @@
 
 # DESCRIPTION
 
-**zstdless** views zstd compressed files with paging. Decompresses and pipes to less. Supports full less navigation. Use for browsing compressed log files and data.
+**zstdless** allows viewing of Zstandard (.zst) compressed files using the **less** pager. It decompresses the file on the fly and pipes the output to less, providing the full interactive navigation experience including forward and backward scrolling, searching, and line jumping.
+
+This is particularly useful for browsing compressed log files and data without needing to decompress them to disk first. It is part of the zstd suite of compression utilities.
 
 # SEE ALSO
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Open source Verilog RTL synthesis framework
+
 # TLDR
 
 **Run synthesis on Verilog file**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage ZIP file comments
+
 # TLDR
 
 **Show file comments**
@@ -32,15 +36,11 @@
 
 # DESCRIPTION
 
-**zipnote** reads and writes ZIP file comments. It manages metadata.
+**zipnote** reads and writes comments stored in ZIP archives. ZIP files support per-file comments and an overall archive comment, and zipnote provides a way to view and modify these metadata fields from the command line.
 
-Read mode outputs comments. Each file's comment shown.
+In read mode (the default), zipnote outputs a structured listing of all filenames and their associated comments. The output uses a specific format with **@** markers separating entries, which can be redirected to a file for editing.
 
-Output format is structured. File names and comments separated.
-
-Write mode updates comments. Reads modified format.
-
-Archive comments also handled. Overall archive description.
+In write mode (**-w**), zipnote reads the modified structured format from standard input and updates the archive's comments accordingly. This workflow allows batch editing of comments across all files in an archive. zipnote is part of the Info-ZIP suite of utilities.
 
 # FORMAT
 

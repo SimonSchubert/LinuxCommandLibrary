@@ -1,3 +1,7 @@
+# TAGLINE
+
+Configurable multi-language source code formatter
+
 # TLDR
 
 **Format a file** and output to stdout
@@ -89,6 +93,14 @@
 Configuration is controlled through a configuration file with hundreds of options. The default location is **$UNCRUSTIFY_CONFIG** or **~/.uncrustify.cfg**. Generate a starting configuration with **--show-config** and customize incrementally.
 
 uncrustify can process single files, file lists, or entire source trees. It supports in-place editing with optional backups.
+
+# CONFIGURATION
+
+**$UNCRUSTIFY_CONFIG**
+> Environment variable specifying the path to the configuration file.
+
+**~/.uncrustify.cfg**
+> Default user configuration file used when no -c option or environment variable is set.
 
 # CAVEATS
 

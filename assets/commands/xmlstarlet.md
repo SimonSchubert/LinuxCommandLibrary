@@ -1,3 +1,7 @@
+# TAGLINE
+
+Command-line XML processing toolkit
+
 # TLDR
 
 **Select nodes** using an XPath expression

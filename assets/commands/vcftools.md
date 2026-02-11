@@ -1,3 +1,7 @@
+# TAGLINE
+
+Analyze genomic variant call format files
+
 # TLDR
 
 **Filter VCF file** by chromosome and output new VCF

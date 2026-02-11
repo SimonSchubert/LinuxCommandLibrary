@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage portable virtual development environments
+
 # TLDR
 
 **Initialize new Vagrantfile**

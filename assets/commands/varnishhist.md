@@ -1,3 +1,7 @@
+# TAGLINE
+
+Live Varnish request latency histogram
+
 # TLDR
 
 **Display request histogram**

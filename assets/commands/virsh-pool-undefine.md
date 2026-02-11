@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove storage pool definition
+
 # TLDR
 
 **Undefine storage pool**

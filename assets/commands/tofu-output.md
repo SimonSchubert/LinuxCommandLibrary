@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display OpenTofu state output values
+
 # TLDR
 
 **Show all outputs**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Encrypted storage volume manager
+
 # TLDR
 
 **Create** a new tomb (100 MB)

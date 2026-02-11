@@ -1,3 +1,7 @@
+# TAGLINE
+
+Decompress zstd files to stdout
+
 # TLDR
 
 **Decompress to stdout**
@@ -14,7 +18,9 @@
 
 # DESCRIPTION
 
-**zstdcat** decompresses zstd files to stdout. Equivalent to zstd -dc. Useful for piping compressed data without creating files. Supports multiple input files concatenated to stdout.
+**zstdcat** decompresses Zstandard (.zst) compressed files and writes the output to standard output, equivalent to running **zstd -dc**. This makes it useful for piping compressed data into other commands without creating intermediate decompressed files on disk.
+
+When given multiple input files, zstdcat decompresses them in sequence and concatenates the output to stdout. It is part of the zstd suite of compression utilities.
 
 # SEE ALSO
 

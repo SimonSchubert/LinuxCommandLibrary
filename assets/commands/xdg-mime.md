@@ -1,3 +1,7 @@
+# TAGLINE
+
+Query and manage MIME type associations
+
 # TLDR
 
 **Display** the MIME type of a file

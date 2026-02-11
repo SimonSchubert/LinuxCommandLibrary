@@ -1,3 +1,7 @@
+# TAGLINE
+
+Simple and fast image viewer
+
 # TLDR
 
 **View** an image

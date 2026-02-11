@@ -1,3 +1,7 @@
+# TAGLINE
+
+Trezor hardware wallet command-line interface
+
 # TLDR
 
 **List connected Trezor devices**

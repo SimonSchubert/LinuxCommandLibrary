@@ -1,3 +1,7 @@
+# TAGLINE
+
+AI-powered speech recognition and transcription
+
 # TLDR
 
 **Transcribe audio file**

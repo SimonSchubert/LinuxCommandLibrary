@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run Python tools in ephemeral environments
+
 # TLDR
 
 **Run Python tool**
@@ -36,15 +40,11 @@ _package_
 
 # DESCRIPTION
 
-**uvx** runs Python tools. It's part of uv.
+**uvx** is a shorthand for **uv tool run** that executes Python command-line tools in temporary, isolated environments without permanently installing them. It is similar to **pipx run** but leverages uv's Rust-based resolver for dramatically faster execution.
 
-Ephemeral environments. No permanent install.
+Each invocation creates an ephemeral virtual environment, installs the requested tool and its dependencies, runs the command, and then discards the environment. This ensures tools don't conflict with each other or with project dependencies. Specific versions can be pinned using the **@version** syntax.
 
-Fast installation. Rust-based uv.
-
-Version pinning. Specific versions.
-
-Similar to pipx run. Quick execution.
+uvx is part of the uv Python package manager ecosystem and is useful for running one-off tools like linters, formatters, and code generators without cluttering the system with permanent installations.
 
 # CAVEATS
 

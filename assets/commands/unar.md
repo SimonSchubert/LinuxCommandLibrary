@@ -1,3 +1,7 @@
+# TAGLINE
+
+Universal multi-format archive extractor
+
 # TLDR
 
 **Extract archive**

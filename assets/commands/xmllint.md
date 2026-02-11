@@ -1,3 +1,7 @@
+# TAGLINE
+
+Parse and validate XML documents
+
 # TLDR
 
 **Check if an XML file is well-formed**

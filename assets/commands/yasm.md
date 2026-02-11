@@ -1,3 +1,7 @@
+# TAGLINE
+
+Modular x86 and AMD64 assembler
+
 # TLDR
 
 **Assemble to ELF64 object file**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compare gzip-compressed files line-by-line
+
 # TLDR
 
 **Compare compressed files**
@@ -36,15 +40,11 @@
 
 # DESCRIPTION
 
-**zdiff** compares compressed files. It's diff for gzip.
+**zdiff** compares gzip-compressed files line-by-line without requiring manual decompression. It works like **diff** but transparently handles .gz files, decompressing them on the fly before comparing.
 
-Gzip comparison. Decompress and diff.
+All standard diff output formats are supported: unified (**-u**), context (**-c**), and side-by-side (**-y**). Any options accepted by diff can be passed through to zdiff.
 
-All diff options. Same functionality.
-
-Convenience tool. Automatic decompression.
-
-Part of gzip. Standard tool.
+The command is part of the gzip package and serves as a convenience wrapper. For byte-by-byte comparison of compressed files, use **zcmp** instead.
 
 # CAVEATS
 

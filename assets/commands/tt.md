@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal-based typing speed test
+
 # TLDR
 
 **Start a typing test** with default 50 words

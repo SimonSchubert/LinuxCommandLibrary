@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert X11 bitmap to PBM format
+
 # TLDR
 
 **Convert XBM to PBM**

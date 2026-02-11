@@ -1,3 +1,7 @@
+# TAGLINE
+
+Repeatedly output a string
+
 # TLDR
 
 **Output 'y' repeatedly** (for auto-confirming prompts)

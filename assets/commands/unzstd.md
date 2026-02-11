@@ -1,3 +1,7 @@
+# TAGLINE
+
+Decompress Zstandard compressed files
+
 # TLDR
 
 **Decompress file**
@@ -43,15 +47,11 @@
 
 # DESCRIPTION
 
-**unzstd** decompresses Zstandard files. It extracts .zst.
+**unzstd** decompresses files that were compressed with the Zstandard (zstd) algorithm. It is functionally equivalent to running **zstd --decompress** and is provided as a convenience command within the zstd package.
 
-Fast decompression. Very fast algorithm.
+Zstandard offers very fast decompression speeds while achieving compression ratios comparable to zlib. By default, unzstd replaces the compressed .zst file with the decompressed output. The **-k** flag preserves the original, and **-c** writes to standard output for piping.
 
-Equivalent to zstd -d. Same tool.
-
-Modern format. Facebook developed.
-
-High speed. Optimized decompression.
+Developed by Facebook (now Meta) and released in 2016, Zstandard has been adopted by the Linux kernel, package managers like pacman and apt, and many other tools as a modern replacement for gzip that provides both better compression and faster decompression.
 
 # CAVEATS
 

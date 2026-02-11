@@ -1,3 +1,7 @@
+# TAGLINE
+
+OAuth-enabled curl for Twitter API
+
 # TLDR
 
 **Authorize account**
@@ -43,15 +47,11 @@
 
 # DESCRIPTION
 
-**twurl** is curl for Twitter. It handles OAuth.
+**twurl** is an OAuth-enabled curl replacement specifically designed for the Twitter (X) API. It handles the OAuth authentication handshake automatically, allowing developers to make authenticated API requests without manually managing tokens in each request.
 
-Automatic authentication. No manual tokens.
+After initial authorization with consumer key and secret, twurl stores credentials and signs all subsequent requests. Multiple accounts can be authorized and switched between, making it easy to test API calls across different users. All Twitter API endpoints are accessible via standard HTTP methods.
 
-Twitter API access. All endpoints.
-
-Multiple accounts. Switch between them.
-
-Request building. Headers and body.
+Requests support custom headers and JSON request bodies for POST operations. The tool is particularly useful for API exploration and debugging during Twitter application development.
 
 # CAVEATS
 

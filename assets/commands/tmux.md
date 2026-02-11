@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal multiplexer with session persistence
+
 # TLDR
 
 **Start a new session**
@@ -91,6 +95,14 @@ tmux is widely used for remote server administration, pair programming, and mana
 **z**: Zoom pane (toggle)
 **[**: Enter copy mode
 **?**: List all key bindings
+
+# CONFIGURATION
+
+**~/.tmux.conf**
+> User configuration file for key bindings, status bar customization, default options, and plugin settings. Loaded automatically on server start.
+
+**/etc/tmux.conf**
+> System-wide configuration applied to all users.
 
 # CAVEATS
 

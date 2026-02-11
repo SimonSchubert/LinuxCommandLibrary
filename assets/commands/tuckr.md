@@ -1,3 +1,7 @@
+# TAGLINE
+
+Symlink-based dotfile manager
+
 # TLDR
 
 **Deploy dotfiles**
@@ -43,15 +47,11 @@
 
 # DESCRIPTION
 
-**tuckr** manages dotfiles. It uses symlinks.
+**tuckr** is a dotfile manager that organizes configuration files into logical groups and deploys them as symlinks. Each group represents a set of related dotfiles (such as vim, zsh, or git), allowing selective deployment of configurations across different machines.
 
-Group-based organization. Logical grouping.
+The deploy command creates symlinks from the dotfile repository to their expected locations in the home directory. Groups can be deployed individually or all at once, and the status command shows which groups are currently linked. The remove command cleanly unlinks deployed symlinks.
 
-Selective deployment. Choose what to link.
-
-Status tracking. See what's linked.
-
-Simple design. Easy to use.
+The tool uses a simple directory structure where each subdirectory represents a group, mirroring the home directory layout within it.
 
 # CAVEATS
 

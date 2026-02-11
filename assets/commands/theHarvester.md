@@ -1,3 +1,7 @@
+# TAGLINE
+
+OSINT email and subdomain gatherer
+
 # TLDR
 
 **Search for emails and subdomains** of a domain using all sources

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extremely fast Python package and project manager
+
 # TLDR
 
 **Create a new Python project**

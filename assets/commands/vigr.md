@@ -1,3 +1,7 @@
+# TAGLINE
+
+Safely edit group files with locking
+
 # TLDR
 
 Edit the **group** file

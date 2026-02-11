@@ -1,3 +1,7 @@
+# TAGLINE
+
+AI-powered image upscaling with Vulkan
+
 # TLDR
 
 **Upscale image**
@@ -46,15 +50,11 @@
 
 # DESCRIPTION
 
-**waifu2x-ncnn-vulkan** upscales images. It uses AI neural networks.
+**waifu2x-ncnn-vulkan** is an AI-powered image upscaling and denoising tool that uses convolutional neural networks to enlarge images while preserving detail. It is particularly effective for anime-style artwork and illustrations, producing cleaner results than traditional interpolation methods.
 
-Anime-style upscaling. Best for illustrations.
+The tool supports 2x upscaling and multiple noise reduction levels for removing JPEG compression artifacts. It uses the ncnn neural network inference framework with Vulkan GPU acceleration, enabling fast processing on a wide range of graphics hardware without requiring CUDA or specific vendor drivers.
 
-Denoising included. Remove compression artifacts.
-
-Vulkan GPU acceleration. Fast processing.
-
-NCNN backend. Mobile-optimized inference.
+Processing can be tuned with tile size options to manage GPU memory usage for large images, and specific GPUs can be selected on multi-GPU systems. Input and output support common image formats including PNG, JPEG, and WebP.
 
 # CAVEATS
 

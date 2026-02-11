@@ -1,3 +1,7 @@
+# TAGLINE
+
+Search gzip-compressed files with extended regex
+
 # TLDR
 
 **Search for pattern in gzipped file**

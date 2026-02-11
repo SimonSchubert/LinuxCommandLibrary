@@ -1,3 +1,7 @@
+# TAGLINE
+
+LZMA2 compression utility
+
 # TLDR
 
 **Compress a file**

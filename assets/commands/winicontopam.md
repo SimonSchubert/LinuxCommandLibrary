@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert Windows icons to PAM format
+
 # TLDR
 
 **Convert Windows icon to PAM**

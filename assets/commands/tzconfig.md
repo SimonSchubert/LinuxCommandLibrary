@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interactive system timezone configuration
+
 # TLDR
 
 **Configure timezone**
@@ -15,15 +19,9 @@
 
 # DESCRIPTION
 
-**tzconfig** sets system timezone. It's interactive.
+**tzconfig** is an interactive Debian utility for configuring the system timezone. It presents a menu-based interface that guides users through selecting a geographic region and city to determine the correct timezone, then updates the system-wide timezone configuration by modifying **/etc/localtime**.
 
-Timezone selection. Region and city.
-
-System-wide setting. Updates /etc/localtime.
-
-Menu-based interface. Easy selection.
-
-Debian-based tool. Distribution specific.
+This tool has been deprecated on systemd-based systems in favor of **timedatectl**, which provides timezone management along with broader time and date configuration capabilities. On older Debian systems without systemd, **dpkg-reconfigure tzdata** is the preferred alternative.
 
 # CAVEATS
 

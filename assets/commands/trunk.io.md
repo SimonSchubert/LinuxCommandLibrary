@@ -1,3 +1,7 @@
+# TAGLINE
+
+Unified code quality linting and formatting
+
 # TLDR
 
 **Initialize trunk in project**

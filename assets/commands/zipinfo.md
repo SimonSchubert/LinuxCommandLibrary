@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display ZIP archive information
+
 # TLDR
 
 **Show archive info**

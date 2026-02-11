@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display torrent file metadata
+
 # TLDR
 
 **Show torrent information**

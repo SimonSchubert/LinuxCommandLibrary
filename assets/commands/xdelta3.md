@@ -1,3 +1,7 @@
+# TAGLINE
+
+VCDIFF binary delta encoding
+
 # TLDR
 
 **Create delta**
@@ -49,17 +53,9 @@
 
 # DESCRIPTION
 
-**xdelta3** creates and applies binary deltas. It uses VCDIFF format.
+**xdelta3** creates and applies binary delta patches using the VCDIFF format defined in RFC 3284. Encoding compares a source file with a target file and produces a compact delta that captures only the differences, while decoding reconstructs the target by applying the delta to the original source.
 
-Encoding computes differences. Delta file captures changes.
-
-Decoding reconstructs target. Applies delta to source.
-
-Compression levels trade speed for size. Higher = smaller but slower.
-
-Streaming mode handles large files. Memory efficient.
-
-Self-contained patches possible. Source embedded in delta.
+Compression levels from 0 to 9 trade processing speed for smaller delta sizes. A streaming mode processes data in chunks, enabling memory-efficient handling of very large files. Self-contained patches can be created without requiring the original source file for decoding, embedding the necessary data within the delta itself.
 
 # CAVEATS
 

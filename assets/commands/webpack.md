@@ -1,3 +1,7 @@
+# TAGLINE
+
+Static module bundler for JavaScript
+
 # TLDR
 
 **Build the project** using default configuration

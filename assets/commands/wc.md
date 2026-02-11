@@ -1,3 +1,7 @@
+# TAGLINE
+
+Count lines, words, and bytes in files
+
 # TLDR
 
 **Count lines, words, and bytes**

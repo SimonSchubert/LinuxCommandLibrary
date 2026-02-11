@@ -1,3 +1,7 @@
+# TAGLINE
+
+Locate binary, source, and man page files
+
 # TLDR
 
 Locate **binary, source, and man pages** for SSH

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display ZFS pool health status
+
 # TLDR
 
 **Show status of all pools**

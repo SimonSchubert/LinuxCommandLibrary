@@ -1,3 +1,7 @@
+# TAGLINE
+
+Pause execution for microseconds
+
 # TLDR
 
 **Sleep microseconds**
@@ -23,15 +27,11 @@ _microseconds_
 
 # DESCRIPTION
 
-**usleep** sleeps in microseconds. It pauses execution.
+**usleep** pauses execution for a specified number of microseconds (millionths of a second). It provides finer timing granularity than the standard **sleep** command, which traditionally only accepted whole seconds.
 
-Microsecond precision. Fine timing.
+The command takes a single argument representing the number of microseconds to pause. For example, usleep 500000 pauses for half a second, and usleep 1000 pauses for one millisecond.
 
-Script delays. Short pauses.
-
-Simple interface. One argument.
-
-Legacy command. Use sleep with decimals.
+On modern Linux systems, usleep is largely obsolete because GNU **sleep** accepts fractional seconds (e.g., sleep 0.5). The usleep command was historically provided by the initscripts package and may not be available on all distributions.
 
 # CAVEATS
 

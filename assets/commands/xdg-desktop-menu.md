@@ -1,3 +1,7 @@
+# TAGLINE
+
+Install desktop menu entries
+
 # TLDR
 
 **Install** application to menu

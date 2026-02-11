@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extract files from shell archives
+
 # TLDR
 
 **Extract a shell archive**

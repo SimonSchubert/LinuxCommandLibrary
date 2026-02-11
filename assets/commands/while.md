@@ -1,3 +1,7 @@
+# TAGLINE
+
+Shell loop with conditional execution
+
 # TLDR
 
 **Basic while loop**

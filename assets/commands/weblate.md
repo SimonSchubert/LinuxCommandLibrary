@@ -1,3 +1,7 @@
+# TAGLINE
+
+Weblate translation management client
+
 # TLDR
 
 **List projects (using wlc client)**

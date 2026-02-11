@@ -1,3 +1,7 @@
+# TAGLINE
+
+TeX Live package manager
+
 # TLDR
 
 **Update TeX Live**
@@ -67,15 +71,11 @@
 
 # DESCRIPTION
 
-**tlmgr** (TeX Live Manager) manages TeX Live packages. It installs, updates, and removes LaTeX packages.
+**tlmgr** (TeX Live Manager) is the package manager for the TeX Live distribution, handling installation, updates, and removal of LaTeX packages and fonts. It automatically resolves dependencies when installing new packages and can update the entire distribution with **update --all**.
 
-Update keeps packages current. Run periodically for latest versions.
+The tool provides search and information commands to explore the thousands of available packages by name or description. Packages can be backed up before changes and restored if an update causes problems. The **--self** flag updates tlmgr itself separately from other packages.
 
-Installation adds new packages. Dependencies resolved automatically.
-
-Search finds packages by name or description. Explore available packages.
-
-Backup saves packages before changes. Restore if needed.
+Running **tlmgr** requires a native TeX Live installation rather than a distribution-packaged version, as Linux distribution packages typically manage TeX packages through their own package manager instead.
 
 # CAVEATS
 

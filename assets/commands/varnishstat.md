@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display Varnish cache statistics
+
 # TLDR
 
 **Display live statistics**

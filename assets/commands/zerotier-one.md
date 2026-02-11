@@ -1,3 +1,7 @@
+# TAGLINE
+
+ZeroTier virtual networking service daemon
+
 # TLDR
 
 **Start service in foreground**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Set or display shell resource limits
+
 # TLDR
 
 **Show all limits**
@@ -50,15 +54,11 @@
 
 # DESCRIPTION
 
-**ulimit** controls resource limits. It's a shell builtin.
+**ulimit** is a shell builtin that controls resource limits for the current shell session and any processes it spawns. It can set limits on CPU time, memory usage, open file descriptors, process count, file sizes, and other system resources.
 
-Process limits. CPU, memory, files.
+Each resource has a soft limit (the effective limit that can be raised by the user up to the hard limit) and a hard limit (the ceiling that only root can raise). Without the **-H** or **-S** flag, ulimit shows and sets the soft limit by default.
 
-Soft and hard limits. User vs system.
-
-Per-session settings. Shell scope.
-
-Security control. Resource management.
+These limits are important for preventing runaway processes from consuming all system resources and for configuring applications that need higher limits, such as database servers requiring more open file descriptors.
 
 # CAVEATS
 

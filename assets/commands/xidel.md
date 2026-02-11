@@ -1,3 +1,7 @@
+# TAGLINE
+
+HTML/XML/JSON data extraction tool
+
 # TLDR
 
 **Extract with XPath**
@@ -57,17 +61,11 @@
 
 # DESCRIPTION
 
-**xidel** extracts data from HTML/XML/JSON. It supports XPath, XQuery, and CSS.
+**xidel** is a command-line tool for extracting and querying data from HTML, XML, and JSON documents. It supports multiple query languages including XPath, XQuery, and CSS selectors, making it versatile for a wide range of data extraction tasks from both local files and remote URLs.
 
-XPath expressions query document structure. Powerful selection.
+XPath and XQuery expressions allow precise navigation of document structure, while CSS selectors provide a familiar syntax for those accustomed to web development. For JSON documents, xidel uses a path-based syntax to navigate object hierarchies. Multiple extraction expressions can be combined in a single invocation for complex data gathering.
 
-CSS selectors are familiar. Same as browser styling.
-
-JSON querying uses path syntax. Navigate object trees.
-
-Link following enables spidering. Traverse and extract.
-
-Multiple expressions combine results. Complex extractions.
+The tool includes a link-following mode that enables web spidering, where xidel can traverse links on pages and apply extraction expressions to each visited page. Output can be formatted as plain text, JSON, or other structured formats, making it suitable for integration into data processing pipelines.
 
 # CAVEATS
 

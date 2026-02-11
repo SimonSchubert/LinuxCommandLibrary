@@ -1,3 +1,7 @@
+# TAGLINE
+
+Jump to frequently used directories
+
 # TLDR
 
 **Jump to most frecent directory matching pattern**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Cross-platform Lua-based build system
+
 # TLDR
 
 **Create new project**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extract WPA handshakes from capture files
+
 # TLDR
 
 **Clean capture file**
@@ -22,15 +26,9 @@ _input_
 
 # DESCRIPTION
 
-**wpaclean** cleans WPA captures. It extracts handshakes.
+**wpaclean** extracts WPA handshake data from wireless packet capture files, producing cleaned output files containing only the EAPOL authentication frames needed for offline password analysis. This significantly reduces file size by removing all non-handshake traffic.
 
-EAPOL extraction. Only handshakes.
-
-File size reduction. Remove noise.
-
-Multiple inputs. Combine captures.
-
-Aircrack-ng suite. Wireless tool.
+Multiple input capture files can be processed and combined into a single cleaned output file. The tool is part of the aircrack-ng suite and is typically used to prepare capture files before running them through aircrack-ng or hashcat for WPA password recovery during authorized security assessments.
 
 # CAVEATS
 

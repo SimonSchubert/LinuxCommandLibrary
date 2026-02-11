@@ -1,3 +1,7 @@
+# TAGLINE
+
+Report non-free packages on Debian systems
+
 # TLDR
 
 **List** non-free packages

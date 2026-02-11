@@ -1,3 +1,7 @@
+# TAGLINE
+
+Web Application Firewall detection and bypass
+
 # TLDR
 
 **Detect WAF**
@@ -46,15 +50,11 @@
 
 # DESCRIPTION
 
-**whatwaf** detects WAFs. It identifies firewall type.
+**whatwaf** is a security tool that detects Web Application Firewalls (WAFs) protecting websites and suggests potential bypass techniques. It sends various payloads to the target and analyzes responses to fingerprint the specific WAF product in use.
 
-WAF fingerprinting. Identify protection.
+Beyond detection, whatwaf provides tamper scripts and evasion suggestions tailored to the identified WAF, helping penetration testers understand what protections they need to work around during authorized assessments. Custom payloads can be specified for targeted testing.
 
-Bypass suggestions. Evasion techniques.
-
-Multiple payloads. Detection accuracy.
-
-Security research. Penetration testing.
+The tool supports batch scanning from URL files, Tor network routing for anonymous testing, and JSON output for integration with other security tools. It is intended exclusively for authorized security testing and research.
 
 # CAVEATS
 

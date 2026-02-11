@@ -1,3 +1,7 @@
+# TAGLINE
+
+X11 mouse-tracking eyes demo
+
 # TLDR
 
 **Launch** xeyes

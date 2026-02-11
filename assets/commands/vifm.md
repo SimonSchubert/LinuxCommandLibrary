@@ -1,3 +1,7 @@
+# TAGLINE
+
+Vim-like dual-pane file manager
+
 # TLDR
 
 **Start vifm**

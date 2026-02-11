@@ -1,3 +1,7 @@
+# TAGLINE
+
+Hackable terminal file explorer
+
 # TLDR
 
 **Start xplr**

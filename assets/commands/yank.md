@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interactively select and copy terminal output
+
 # TLDR
 
 **Select and copy**
@@ -36,15 +40,11 @@
 
 # DESCRIPTION
 
-**yank** copies terminal output. It selects interactively.
+**yank** reads input from a pipe or file and presents it in a terminal selection interface. The user navigates lines or fields with arrow keys, selects the desired text, and yank copies it to the clipboard or passes it to a specified command.
 
-Interactive selection. Pick text to copy.
+By default, input is split into lines. The **-d** option sets a custom delimiter for splitting input into selectable fields, useful for extracting specific columns from structured output. The **-l** option forces line-by-line splitting regardless of content.
 
-Clipboard integration. Copy selected.
-
-Custom delimiters. Split on anything.
-
-Pipe-friendly. Works with other tools.
+Clipboard integration works through an external command such as **xclip** or **xsel**, specified after **--**. On systems with X11, the **-x** flag provides a shortcut for X clipboard access. The tool is designed to fit naturally into Unix pipelines, accepting input from any command that writes to stdout.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Network traffic statistics collection daemon
+
 # TLDR
 
 **Start the daemon**

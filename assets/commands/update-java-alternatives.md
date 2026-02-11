@@ -1,3 +1,7 @@
+# TAGLINE
+
+Switch between installed Java versions
+
 # TLDR
 
 **List all installed Java versions**

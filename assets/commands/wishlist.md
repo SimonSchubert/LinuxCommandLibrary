@@ -1,3 +1,7 @@
+# TAGLINE
+
+SSH directory and host browser
+
 # TLDR
 
 **Start SSH multiplexer**
@@ -29,15 +33,9 @@
 
 # DESCRIPTION
 
-**wishlist** is an SSH directory. It lists accessible hosts.
+**wishlist** is an SSH directory that provides a terminal user interface for browsing and connecting to configured SSH hosts. It presents a searchable menu of available servers, allowing quick selection and connection without remembering hostnames or typing full SSH commands.
 
-SSH menu. Browse and connect.
-
-YAML configuration. Define hosts.
-
-TUI interface. Terminal UI.
-
-Charm ecosystem. Go-based.
+Hosts are defined in a YAML configuration file with connection details like hostname, port, and user. The tool is part of the Charm ecosystem and runs as an SSH server itself, meaning users can access their host directory by connecting to wishlist over SSH from any machine.
 
 # CAVEATS
 

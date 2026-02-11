@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert HTML pages to PDF
+
 # TLDR
 
 **Convert HTML to PDF**

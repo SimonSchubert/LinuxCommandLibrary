@@ -1,3 +1,7 @@
+# TAGLINE
+
+Visual network traceroute with TUI
+
 # TLDR
 
 **Trace route**
@@ -47,15 +51,11 @@
 
 # DESCRIPTION
 
-**trip** traces network paths. It's a TUI traceroute.
+**trip** is a modern network diagnostic tool that combines traceroute functionality with a text-based user interface for real-time visualization. It continuously traces the network path to a destination, displaying hop-by-hop latency statistics in an interactive terminal display.
 
-Visual interface. Real-time display.
+The tool supports multiple protocols including ICMP, UDP, and TCP, allowing probing through different network paths and firewall configurations. A chart view provides latency visualization over time, making it easy to spot intermittent connectivity issues and jitter patterns.
 
-Multiple protocols. ICMP, UDP, TCP.
-
-Charts and graphs. Latency visualization.
-
-Continuous tracing. Ongoing monitoring.
+Reverse DNS resolution can be enabled to show hostnames for each hop. The continuous tracing mode keeps running and updating statistics, making it useful for ongoing network monitoring and troubleshooting.
 
 # CAVEATS
 

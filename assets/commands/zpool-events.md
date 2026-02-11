@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display ZFS pool event log
+
 # TLDR
 
 **Show pool events**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+TypeORM database migration and entity CLI
+
 # TLDR
 
 **Initialize project**
@@ -50,15 +54,11 @@
 
 # DESCRIPTION
 
-**typeorm** manages ORM tasks. It's TypeORM CLI.
+**typeorm** is the command-line interface for TypeORM, a TypeScript and JavaScript ORM that supports PostgreSQL, MySQL, SQLite, and other databases. It provides tools for managing database migrations, generating entity scaffolds, and synchronizing schema changes.
 
-Migration management. Database versioning.
+Migrations track database schema changes as versioned files that can be applied and reverted. The **migration:generate** command automatically creates migration files by comparing the current entities to the database state. Schema sync provides a simpler alternative that directly updates the database to match entity definitions.
 
-Entity generation. Create models.
-
-Schema sync. Auto-update DB.
-
-Multiple databases. PostgreSQL, MySQL, etc.
+The CLI also supports initializing new projects with boilerplate configuration and entity files.
 
 # CAVEATS
 

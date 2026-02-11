@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interactive frontend for wpa_supplicant
+
 # TLDR
 
 **Scan** for available networks

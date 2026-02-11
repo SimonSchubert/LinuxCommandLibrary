@@ -1,3 +1,7 @@
+# TAGLINE
+
+Command-line Todoist service client
+
 # TLDR
 
 **Add task**
@@ -53,15 +57,9 @@
 
 # DESCRIPTION
 
-**todoist** manages Todoist tasks. It's a CLI for the service.
+**todoist** is a command-line client for the Todoist task management service, providing terminal access to your cloud-synced task lists. Tasks can be created with natural language due dates like "tomorrow" or "next week," organized into projects, and assigned priority levels.
 
-Cloud sync. Access everywhere.
-
-Natural dates. "tomorrow", "next week".
-
-Project organization. Group tasks.
-
-Priority support. Four levels.
+The tool syncs with the Todoist cloud service, so changes made from the CLI are immediately available on all other devices. An API token is required for authentication and is typically configured on first use.
 
 # CAVEATS
 

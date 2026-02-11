@@ -1,3 +1,7 @@
+# TAGLINE
+
+SQL queries on structured data files
+
 # TLDR
 
 **Query CSV**
@@ -47,15 +51,11 @@
 
 # DESCRIPTION
 
-**trdsql** queries structured files. It uses SQL syntax.
+**trdsql** executes SQL queries directly against structured data files such as CSV, JSON, and LTSV without importing them into a database first. File names are used as table names in SQL statements, making it straightforward to filter, aggregate, and transform data using familiar SQL syntax.
 
-Multiple formats. CSV, JSON, LTSV.
+The tool supports joining data across multiple files, enabling relational queries between different data sources in a single command. Input and output formats can be specified independently, allowing conversion between formats as a side effect of querying.
 
-SQL queries. Full SQL support.
-
-Join support. Combine files.
-
-Various databases. SQLite, PostgreSQL, MySQL.
+Under the hood, trdsql uses SQLite as the default query engine but can also connect to PostgreSQL and MySQL for more advanced SQL features. Headers in CSV files can be used as column names with the **-ih** flag.
 
 # CAVEATS
 

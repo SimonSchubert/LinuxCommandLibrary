@@ -1,3 +1,7 @@
+# TAGLINE
+
+Kubernetes cluster backup and restore
+
 # TLDR
 
 **Create backup**
@@ -64,17 +68,9 @@
 
 # DESCRIPTION
 
-**velero** backs up Kubernetes clusters. It protects resources and persistent volumes.
+**velero** provides backup and restore capabilities for Kubernetes clusters. It captures cluster resource definitions and persistent volume snapshots, storing them in cloud object storage such as S3, GCS, or Azure Blob Storage.
 
-Backups capture cluster state. Resources and volume snapshots included.
-
-Restores recreate from backups. Disaster recovery and migration.
-
-Schedules automate backups. Cron expressions define timing.
-
-Storage providers include S3, GCS, Azure. Also supports Minio.
-
-Namespace filtering targets specific resources. Selective backup and restore.
+Backups can be created on demand or automated with cron-based schedules. Restores recreate resources from backups, supporting both full cluster recovery and selective restoration by namespace or resource type. The tool is commonly used for disaster recovery, cluster migration, and pre-upgrade snapshots.
 
 # CAVEATS
 

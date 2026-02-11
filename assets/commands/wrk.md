@@ -1,3 +1,7 @@
+# TAGLINE
+
+Modern HTTP benchmarking tool
+
 # TLDR
 
 **Benchmark a URL** with default settings

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Simulate input on X11 and Wayland
+
 # TLDR
 
 Start **daemon**

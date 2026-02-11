@@ -1,3 +1,7 @@
+# TAGLINE
+
+Portable shell environment over SSH
+
 # TLDR
 
 **Connect to a host** with your portable shell

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage ZoneMinder surveillance daemons
+
 # TLDR
 
 **Run ZoneMinder console**

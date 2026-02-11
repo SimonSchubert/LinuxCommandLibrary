@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display VDPAU video acceleration capabilities
+
 # TLDR
 
 **Display VDPAU capabilities**

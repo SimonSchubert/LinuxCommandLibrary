@@ -1,3 +1,7 @@
+# TAGLINE
+
+Combine YUV component files to PPM
+
 # TLDR
 
 **Combine YUV component files to PPM**

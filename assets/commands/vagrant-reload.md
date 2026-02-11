@@ -1,3 +1,7 @@
+# TAGLINE
+
+Restart Vagrant machine with updated config
+
 # TLDR
 
 **Reload VM**

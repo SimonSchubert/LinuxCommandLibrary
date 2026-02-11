@@ -1,3 +1,7 @@
+# TAGLINE
+
+Dynamic system performance tuning daemon
+
 # TLDR
 
 **Start the tuned daemon**
@@ -73,6 +77,17 @@
 The daemon can operate in static mode (applying fixed settings from a profile) or dynamic mode (adjusting settings based on real-time system activity). Profiles are stored in /etc/tuned/ and /usr/lib/tuned/.
 
 Management is done through tuned-adm, which communicates with the daemon to switch profiles and query status. Custom profiles can be created by extending existing ones or defining new tuning rules.
+
+# CONFIGURATION
+
+**/etc/tuned/tuned-main.conf**
+> Main daemon configuration controlling dynamic tuning, update interval, and logging.
+
+**/etc/tuned/**_profile_**/tuned.conf**
+> Custom profile definitions with kernel, disk, and CPU tuning parameters.
+
+**/usr/lib/tuned/**
+> System-provided default profiles directory.
 
 # CAVEATS
 

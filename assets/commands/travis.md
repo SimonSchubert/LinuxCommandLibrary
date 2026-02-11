@@ -1,3 +1,7 @@
+# TAGLINE
+
+Travis CI command-line interface
+
 # TLDR
 
 **Login to Travis CI**
@@ -67,17 +71,11 @@
 
 # DESCRIPTION
 
-**travis** CLI manages Travis CI. It configures and monitors CI/CD.
+**travis** is the official command-line client for Travis CI, a continuous integration and deployment service. It provides programmatic access to CI operations including repository management, build monitoring, secret encryption, and configuration validation, all from the terminal.
 
-Login authenticates with GitHub. Required for most operations.
+Authentication is handled through GitHub OAuth tokens, and most operations require being logged in. The CLI can enable or disable CI for repositories, view build status and logs, restart builds, and manage encrypted environment variables. The encrypt command generates per-repository encrypted strings that can be safely committed to version control.
 
-Enable activates CI for repository. Adds webhook for builds.
-
-Encryption protects secrets. Environment variables encrypted per-repo.
-
-Lint validates .travis.yml. Catches configuration errors.
-
-Log viewing shows build output. Debug failed builds.
+The lint subcommand validates `.travis.yml` configuration files to catch syntax errors and misconfiguration before pushing. The CLI also supports managing caches, viewing branch status, and interacting with the Travis CI API directly.
 
 # CAVEATS
 

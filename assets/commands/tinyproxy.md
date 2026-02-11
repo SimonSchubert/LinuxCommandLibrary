@@ -1,3 +1,7 @@
+# TAGLINE
+
+Lightweight HTTP and HTTPS proxy daemon
+
 # TLDR
 
 **Start tinyproxy** with the default configuration
@@ -51,6 +55,14 @@ The daemon supports basic HTTP proxying, HTTPS via CONNECT method, upstream prox
 Configuration is done through a configuration file (typically /etc/tinyproxy/tinyproxy.conf) that specifies the listening port, allowed clients, log settings, and filtering rules. Tinyproxy provides a built-in statistics page accessible by requesting the stathost (default: tinyproxy.stats).
 
 Signals can control the running daemon: SIGHUP triggers garbage collection on connections, and standard signals handle graceful shutdown.
+
+# CONFIGURATION
+
+**/etc/tinyproxy/tinyproxy.conf**
+> Main configuration file specifying listening port, allowed clients, log settings, upstream proxies, filtering rules, and access control lists.
+
+**-c** _file_
+> Use an alternate configuration file at runtime.
 
 # CAVEATS
 

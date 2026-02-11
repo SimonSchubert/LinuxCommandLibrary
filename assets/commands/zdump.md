@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display timezone information
+
 # TLDR
 
 Print **timezone** info

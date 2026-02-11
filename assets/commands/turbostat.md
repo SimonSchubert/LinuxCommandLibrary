@@ -1,3 +1,7 @@
+# TAGLINE
+
+Report CPU frequency, power, and idle statistics
+
 # TLDR
 
 **Display** statistics every 5 seconds

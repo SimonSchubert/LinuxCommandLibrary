@@ -1,3 +1,7 @@
+# TAGLINE
+
+Batch convert camera RAW photos
+
 # TLDR
 
 **Convert RAW to JPEG**
@@ -43,15 +47,11 @@
 
 # DESCRIPTION
 
-**ufraw-batch** converts RAW photos. It's batch processing.
+**ufraw-batch** is the batch processing mode of UFRaw (Unidentified Flying Raw), a tool for reading and converting camera RAW image files. It processes multiple RAW files non-interactively, applying adjustments like white balance, exposure compensation, and color correction before converting to JPEG, TIFF, or PNG output formats.
 
-RAW format support. Camera formats.
+The tool supports RAW formats from most major camera manufacturers through the dcraw library. Adjustments can be specified via command-line options or loaded from previously saved UFRaw settings files, enabling consistent processing across large sets of images.
 
-Color correction. White balance.
-
-Exposure adjustment. Light tweaks.
-
-Batch processing. Multiple files.
+Output quality, compression, and bit depth are configurable. The tool integrates with GIMP as a plugin for interactive RAW editing.
 
 # CAVEATS
 

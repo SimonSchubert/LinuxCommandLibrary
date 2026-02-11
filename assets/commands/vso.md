@@ -1,3 +1,7 @@
+# TAGLINE
+
+Vanilla OS system operator tool
+
 # TLDR
 
 Check for **updates**

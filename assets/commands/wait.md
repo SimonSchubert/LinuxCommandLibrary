@@ -1,3 +1,7 @@
+# TAGLINE
+
+Wait for background processes to complete
+
 # TLDR
 
 **Wait for all background jobs** to complete

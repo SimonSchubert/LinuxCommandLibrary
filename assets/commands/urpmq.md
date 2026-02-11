@@ -1,5 +1,11 @@
 # TLDR
 
+# TAGLINE
+
+Query Mageia package information
+
+# TLDR
+
 Display package **info**
 
 ```urpmq -i [package]```

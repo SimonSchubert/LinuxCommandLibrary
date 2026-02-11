@@ -1,3 +1,7 @@
+# TAGLINE
+
+Record terminal sessions as GIFs
+
 # TLDR
 
 **Record terminal**
@@ -52,15 +56,9 @@
 
 # DESCRIPTION
 
-**vhs** creates terminal recordings as GIFs. It uses declarative tape files.
+**vhs** creates terminal recordings as GIFs, WebM, or MP4 files from declarative script files called tapes. Tape files define a sequence of actions such as typing text, pressing keys, and waiting, producing reproducible recordings that can be regenerated consistently.
 
-Tape files script interactions. Type, wait, and key commands.
-
-Output formats include GIF, WebM, MP4. High-quality recordings.
-
-Themes customize appearance. Many terminal themes available.
-
-Reproducible recordings are simple. Same tape produces same output.
+The tool renders a virtual terminal and captures frames, so recordings look clean regardless of the actual terminal environment. Themes, font sizes, and window dimensions are configurable within the tape file. This makes VHS ideal for creating documentation demos, README GIFs, and tutorial content.
 
 # EXAMPLE TAPE
 

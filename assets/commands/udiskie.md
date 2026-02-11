@@ -1,3 +1,7 @@
+# TAGLINE
+
+Automounter for removable media devices
+
 # TLDR
 
 Start with **tray** and notifications

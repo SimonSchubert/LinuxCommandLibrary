@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal typing speed test
+
 # TLDR
 
 **Start typing test**
@@ -33,15 +37,9 @@
 
 # DESCRIPTION
 
-**wpm** measures typing speed. It's a typing test.
+**wpm** is a terminal-based typing speed test that measures words per minute and accuracy. It presents text passages for the user to type, tracking speed and error rate in a distraction-free terminal environment.
 
-Words per minute. Speed measurement.
-
-Accuracy tracking. Error counting.
-
-Custom texts. Practice anything.
-
-Terminal-based. Distraction-free.
+Custom text files can be provided for practice with specific content, and test duration or word count can be configured. The tool is useful for practicing touch typing and benchmarking typing performance over time.
 
 # CAVEATS
 

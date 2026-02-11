@@ -1,3 +1,7 @@
+# TAGLINE
+
+Show package security support status
+
 # TLDR
 
 Display **unsupported** package count

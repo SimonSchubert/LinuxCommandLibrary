@@ -1,3 +1,7 @@
+# TAGLINE
+
+Build MIME type cache for desktop applications
+
 # TLDR
 
 **Update the MIME type cache** for the default directories

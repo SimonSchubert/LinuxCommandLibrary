@@ -1,3 +1,7 @@
+# TAGLINE
+
+Auto-hide idle mouse cursor on X11
+
 # TLDR
 
 **Hide cursor after idle**
@@ -43,15 +47,11 @@
 
 # DESCRIPTION
 
-**unclutter** hides mouse cursor. It removes idle pointer.
+**unclutter** automatically hides the mouse cursor on X11 desktops after a configurable period of inactivity. When the user moves the mouse, the cursor immediately reappears, making the hiding completely transparent during normal use.
 
-Automatic hiding. After inactivity.
+The tool is particularly useful for presentations, kiosk displays, and keyboard-focused workflows where a stationary mouse pointer is a visual distraction. It can run as a background daemon and supports excluding specific windows from cursor hiding, allowing the cursor to remain visible in applications that need it.
 
-Reappears on movement. Transparent to user.
-
-Window exclusions. Keep visible.
-
-X11 utility. Desktop environment.
+Two main implementations exist: the original X11 version and **unclutter-xfixes**, which uses the XFixes extension for a more modern approach. Both serve the same purpose but differ in implementation details and compatibility with compositing window managers.
 
 # CAVEATS
 

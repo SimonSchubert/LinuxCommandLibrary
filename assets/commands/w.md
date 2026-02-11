@@ -1,3 +1,7 @@
+# TAGLINE
+
+Show logged-in users and activity
+
 # TLDR
 
 **Show who is logged in** and what they're doing

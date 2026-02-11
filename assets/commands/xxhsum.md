@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fast non-cryptographic hash checksums
+
 # TLDR
 
 Calculate **checksum**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert HP ThinkJet to PBM format
+
 # TLDR
 
 **Convert HP ThinkJet to PBM**

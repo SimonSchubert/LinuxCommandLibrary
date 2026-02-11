@@ -1,3 +1,7 @@
+# TAGLINE
+
+Format OpenTofu configuration files
+
 # TLDR
 
 **Format current directory**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Query Raspberry Pi hardware status
+
 # TLDR
 
 List all **commands**

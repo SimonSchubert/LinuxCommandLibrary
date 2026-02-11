@@ -1,3 +1,7 @@
+# TAGLINE
+
+Opinionated JavaScript and TypeScript linter
+
 # TLDR
 
 **Lint JavaScript**
@@ -43,15 +47,9 @@
 
 # DESCRIPTION
 
-**xo** lints JavaScript. It's opinionated ESLint.
+**xo** is an opinionated JavaScript and TypeScript linter built on top of ESLint. It provides a zero-configuration linting experience with a curated set of strict rules designed to enforce consistent, high-quality code without requiring manual ESLint setup.
 
-Zero config. Works out of the box.
-
-TypeScript support. Built-in.
-
-Prettier integration. Code formatting.
-
-Strict rules. High quality code.
+The tool includes built-in TypeScript support and optional Prettier integration for combined linting and formatting. The **--fix** option automatically corrects fixable issues, while **--space** switches from the default tab indentation to spaces. By defaulting to strict, well-chosen rules, xo eliminates the need for teams to debate and configure linting rules individually.
 
 # CAVEATS
 

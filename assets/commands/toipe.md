@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal-based typing speed test
+
 # TLDR
 
 **Start typing test**
@@ -36,15 +40,9 @@
 
 # DESCRIPTION
 
-**toipe** is a typing test. It runs in the terminal.
+**toipe** is a terminal-based typing speed test that measures words per minute (WPM) and accuracy. It presents randomly selected words from configurable word lists and tracks errors as you type in a clean, distraction-free interface.
 
-Measure typing speed. WPM calculation.
-
-Multiple word lists. Different difficulties.
-
-Clean interface. Distraction-free.
-
-Accuracy tracking. Error counting.
+Multiple word lists are available for different skill levels and purposes, viewable with **--list**. The number of words per test can be adjusted with **-n** to create shorter practice sessions or longer endurance tests.
 
 # CAVEATS
 

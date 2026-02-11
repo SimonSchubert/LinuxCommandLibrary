@@ -1,3 +1,7 @@
+# TAGLINE
+
+Validating recursive caching DNS resolver
+
 # TLDR
 
 **Start the unbound DNS server**
@@ -57,6 +61,17 @@ Unlike forwarding resolvers, Unbound is a full recursive resolver that can query
 Configuration is done through /etc/unbound/unbound.conf, which controls listening interfaces, access control, DNSSEC settings, cache sizes, and performance tuning. Unbound can operate as a local resolver for a single machine or as a network-wide DNS server.
 
 Related utilities include **unbound-control** for runtime management, **unbound-checkconf** for configuration validation, **unbound-anchor** for DNSSEC root key management, and **unbound-host** for DNS lookups.
+
+# CONFIGURATION
+
+**/etc/unbound/unbound.conf**
+> Main configuration file controlling listening interfaces, access control, DNSSEC settings, cache sizes, and forwarding rules.
+
+**/etc/unbound/unbound.conf.d/**
+> Directory for additional configuration fragments included by the main config.
+
+**/var/lib/unbound/root.key**
+> DNSSEC root trust anchor file managed by unbound-anchor.
 
 # CAVEATS
 

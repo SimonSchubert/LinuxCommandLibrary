@@ -1,3 +1,7 @@
+# TAGLINE
+
+Vue-powered static documentation generator
+
 # TLDR
 
 **Start development server**

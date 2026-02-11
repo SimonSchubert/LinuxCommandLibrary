@@ -1,3 +1,7 @@
+# TAGLINE
+
+Linux kernel Ftrace tracing frontend
+
 # TLDR
 
 Display tracing **status**

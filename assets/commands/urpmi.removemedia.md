@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove package repositories in Mageia Linux
+
 # TLDR
 
 **Remove** a medium

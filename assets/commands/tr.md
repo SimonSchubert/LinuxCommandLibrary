@@ -1,3 +1,7 @@
+# TAGLINE
+
+Translate or delete characters
+
 # TLDR
 
 **Translate characters** (lowercase to uppercase)

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Bidirectional file synchronization tool
+
 # TLDR
 
 **Sync directories**
@@ -46,15 +50,11 @@
 
 # DESCRIPTION
 
-**unison** synchronizes files. It's bidirectional sync.
+**unison** is a file synchronization tool that propagates changes in both directions between two directory replicas. Unlike one-way sync tools like rsync, unison detects modifications on both sides and reconciles them, making it suitable for keeping directories in sync across multiple machines.
 
-Two-way sync. Changes both directions.
+When conflicts arise from both replicas being modified, unison detects the conflict and presents options for resolution rather than silently overwriting changes. It can synchronize over SSH for remote directories or work with local paths. The tool tracks file state between synchronizations, so it only transfers files that have actually changed.
 
-Conflict detection. Manual resolution.
-
-SSH support. Remote sync.
-
-Profiles. Save configurations.
+Unison supports profiles that save synchronization configurations for repeated use, including path filters, ignore patterns, and connection settings. It runs on Unix, macOS, and Windows, and requires the same version of unison on both sides of a synchronization.
 
 # CAVEATS
 

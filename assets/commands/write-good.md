@@ -1,3 +1,7 @@
+# TAGLINE
+
+English prose linter for documentation
+
 # TLDR
 
 **Check a file** for prose issues

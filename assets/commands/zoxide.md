@@ -1,3 +1,7 @@
+# TAGLINE
+
+Smarter cd command that learns directory habits
+
 # TLDR
 
 **Jump to highest ranked directory matching pattern**

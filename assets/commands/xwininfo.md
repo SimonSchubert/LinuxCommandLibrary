@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display X11 window information
+
 # TLDR
 
 **Get window info by clicking**
@@ -50,15 +54,9 @@
 
 # DESCRIPTION
 
-**xwininfo** shows window info. It queries X properties.
+**xwininfo** displays detailed information about X11 windows, including geometry (size and position), window ID, depth, visual class, and colormap. When run without arguments, it presents a crosshair cursor for interactive window selection by clicking.
 
-Window geometry. Size and position.
-
-Window ID. Identification.
-
-Tree display. Window hierarchy.
-
-Click to select. Interactive mode.
+Specific windows can be targeted using **-id** for a window ID, **-name** for a window title, or **-root** for the root window. The **-tree** option displays the complete window hierarchy, showing how windows are nested within each other. The tool is commonly used for debugging window managers and scripting X11 window operations.
 
 # CAVEATS
 

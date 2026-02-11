@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extract translatable strings from source code
+
 # TLDR
 
 **Extract strings from C**
@@ -53,15 +57,11 @@
 
 # DESCRIPTION
 
-**xgettext** extracts translatable strings. It creates .pot template files.
+**xgettext** extracts translatable strings from source code files and produces Portable Object Template (.pot) files used in the GNU gettext internationalization workflow. It scans source files for function calls that mark strings for translation, such as **_()**, **gettext()**, and **N_()**, and collects them into a template that translators can use as a starting point.
 
-Language detection or specification. C, Python, Shell, PHP, etc.
+The tool supports a wide range of programming languages including C, C++, Python, Shell, PHP, Java, Perl, and many others. It can auto-detect the source language from file extensions or accept an explicit language specification via the **-L** option. Custom extraction keywords can be defined with **-k** to match project-specific translation functions.
 
-Keywords identify translatable functions. _(), gettext(), N_().
-
-Comments guide translators. Context and instructions preserved.
-
-Output is POT format. Template for translations.
+The output .pot file preserves source file locations, translator comments (extracted with **--add-comments**), and message context. This template serves as the basis for creating language-specific .po files with **msginit** and keeping them updated with **msgmerge** as the source code evolves.
 
 # CAVEATS
 

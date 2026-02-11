@@ -1,3 +1,7 @@
+# TAGLINE
+
+Graphical TeX Live Manager interface
+
 # TLDR
 
 **Start graphical interface**

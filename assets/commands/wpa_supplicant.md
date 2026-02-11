@@ -1,3 +1,7 @@
+# TAGLINE
+
+WPA/WPA2 wireless network authentication
+
 # TLDR
 
 **Start with config**
@@ -42,15 +46,11 @@
 
 # DESCRIPTION
 
-**wpa_supplicant** handles WiFi authentication. It manages WPA/WPA2.
+**wpa_supplicant** is the standard wireless network authentication daemon for Linux systems. It implements WPA, WPA2, and WPA3 security protocols, handling the key negotiation and authentication process required to connect to protected wireless networks.
 
-Wireless security. WPA/WPA2/WPA3.
+The daemon supports both personal (PSK) and enterprise (802.1X/EAP) authentication methods, and can manage multiple configured networks with automatic selection based on signal strength and priority. Configuration is defined in a config file specifying network SSIDs, security settings, and credentials.
 
-Enterprise support. 802.1X.
-
-Multiple networks. Network selection.
-
-Low-level tool. Usually via NetworkManager.
+On most desktop Linux systems, wpa_supplicant runs as a backend service managed by NetworkManager or systemd-networkd rather than being invoked directly by users.
 
 # CAVEATS
 

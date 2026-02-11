@@ -1,3 +1,7 @@
+# TAGLINE
+
+Build and execute commands from stdin
+
 # TLDR
 
 **Run command with arguments from stdin**

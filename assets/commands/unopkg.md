@@ -1,3 +1,7 @@
+# TAGLINE
+
+LibreOffice extension package manager
+
 # TLDR
 
 **Add** extension

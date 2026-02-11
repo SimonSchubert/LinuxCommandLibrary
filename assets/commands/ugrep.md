@@ -1,3 +1,7 @@
+# TAGLINE
+
+Ultra-fast grep with interactive query mode
+
 # TLDR
 
 **Search pattern**
@@ -50,15 +54,11 @@
 
 # DESCRIPTION
 
-**ugrep** searches text fast. It's a modern grep.
+**ugrep** is a high-performance text search tool designed as a modern replacement for grep with extended capabilities. It provides an interactive query mode with real-time results, Boolean search operators (AND, OR, NOT), fuzzy matching for approximate patterns, and the ability to search inside compressed archives and binary files.
 
-Interactive UI. Query mode.
+The tool is grep-compatible and supports POSIX, Perl, and fixed-string pattern syntax. It can search recursively through directories with file type filtering, output results in various formats including JSON and CSV, and display context around matches.
 
-Archive searching. ZIP, tar, etc.
-
-Boolean queries. AND, OR, NOT.
-
-Fuzzy matching. Approximate search.
+Archive searching handles ZIP, tar, gzip, bzip2, and other compressed formats transparently. The interactive query UI (invoked via the **ug** alias) allows refining searches in real time.
 
 # CAVEATS
 

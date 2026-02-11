@@ -1,3 +1,7 @@
+# TAGLINE
+
+Shrink or extend file size
+
 # TLDR
 
 **Set a file to a specific size** (creates if doesn't exist)

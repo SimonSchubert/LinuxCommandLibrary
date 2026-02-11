@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal Matrix falling code animation
+
 # TLDR
 
 **Start Matrix rain**
@@ -50,15 +54,11 @@
 
 # DESCRIPTION
 
-**unimatrix** shows Matrix effect. It displays falling characters.
+**unimatrix** is a Python script that simulates the iconic falling character rain effect from the Matrix films directly in the terminal. It displays columns of characters scrolling downward at varying speeds, creating the distinctive green-on-black cascading effect.
 
-Terminal animation. Matrix-style rain.
+The animation is highly customizable, with options to control scroll speed, color, character boldness, and the character set used for the falling streams. It supports a wide range of Unicode characters including Latin, Greek, Cyrillic, and CJK scripts, allowing for varied visual effects beyond the traditional katakana characters.
 
-Customizable. Colors, speed, chars.
-
-Unicode support. Various symbols.
-
-Screen saver style. Background effect.
+unimatrix can be used as a screensaver, terminal decoration, or simply for entertainment. It supports asynchronous scrolling where each column moves independently, creating a more organic visual effect similar to the films.
 
 # CAVEATS
 

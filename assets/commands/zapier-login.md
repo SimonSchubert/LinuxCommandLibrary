@@ -1,3 +1,7 @@
+# TAGLINE
+
+Authenticate with Zapier platform
+
 # TLDR
 
 **Login to Zapier**

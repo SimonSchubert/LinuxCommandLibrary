@@ -1,3 +1,7 @@
+# TAGLINE
+
+Standard X11 terminal emulator
+
 # TLDR
 
 Open terminal with a **title**

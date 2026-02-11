@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert Unix line endings to DOS format
+
 # TLDR
 
 **Convert a file** from Unix to DOS line endings

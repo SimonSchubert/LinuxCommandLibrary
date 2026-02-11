@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate Zapier integration boilerplate code
+
 # TLDR
 
 **Scaffold trigger**

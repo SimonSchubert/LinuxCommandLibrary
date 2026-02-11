@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extract main text content from web pages
+
 # TLDR
 
 **Extract text from URL**
@@ -50,15 +54,9 @@
 
 # DESCRIPTION
 
-**trafilatura** extracts web content. It gets main text.
+**trafilatura** extracts the main text content from web pages, automatically removing navigation, ads, headers, footers, and other boilerplate elements. It can fetch pages from URLs directly or process local HTML files.
 
-Boilerplate removal. Just the content.
-
-Multiple formats. Text, XML, JSON.
-
-Metadata extraction. Dates, authors.
-
-Language detection. Multilingual.
+Output is available in plain text, XML, or JSON formats. The tool also extracts metadata such as publication dates, authors, and page titles. Batch processing mode handles multiple URLs from a list file, making it suitable for web scraping and corpus building workflows.
 
 # CAVEATS
 

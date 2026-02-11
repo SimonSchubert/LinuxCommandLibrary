@@ -1,3 +1,7 @@
+# TAGLINE
+
+Libvirt virtualization management CLI
+
 # TLDR
 
 **List running VMs**
@@ -67,17 +71,9 @@
 
 # DESCRIPTION
 
-**virsh** manages libvirt virtualization. It controls VMs on KVM, QEMU, Xen.
+**virsh** is the command-line interface for managing virtual machines through the libvirt virtualization API. It provides unified control over KVM, QEMU, Xen, and other hypervisors, handling domain lifecycle operations, storage pools, virtual networks, and snapshots.
 
-Domain listing shows VM status. Running, paused, shut off.
-
-Start and stop manage VM lifecycle. Graceful or forced options.
-
-Console access provides serial connection. Exit with Ctrl+].
-
-Domain definition uses XML. Persistent configuration.
-
-Network and storage also managed. Complete virtualization control.
+Domains (VMs) can be started, stopped, paused, and migrated. The **console** command provides serial access to running VMs (exit with Ctrl+]). Domain configurations are defined in XML and can be created, modified, and exported. The tool also manages storage pools, volumes, and virtual networks for complete virtualization infrastructure control.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage default command symlinks for alternatives
+
 # TLDR
 
 **Add** a symbolic link

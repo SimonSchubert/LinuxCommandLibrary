@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display brief man page descriptions
+
 # TLDR
 
 Display a **description** from a man page

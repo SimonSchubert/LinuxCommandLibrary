@@ -1,3 +1,7 @@
+# TAGLINE
+
+Highly configurable modal text editor
+
 # TLDR
 
 **Open a file in vim**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display XML structure as directory listing
+
 # TLDR
 
 **List XML directory**

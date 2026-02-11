@@ -1,3 +1,7 @@
+# TAGLINE
+
+Detect VMware virtual machine environment
+
 # TLDR
 
 Check if running in **VMware**

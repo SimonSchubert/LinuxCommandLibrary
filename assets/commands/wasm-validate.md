@@ -1,3 +1,7 @@
+# TAGLINE
+
+Validate WebAssembly binary files
+
 # TLDR
 
 **Validate a WebAssembly file**

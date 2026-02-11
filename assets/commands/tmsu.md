@@ -1,3 +1,7 @@
+# TAGLINE
+
+Tag-based file organization system
+
 # TLDR
 
 **Tag files**
@@ -50,15 +54,9 @@
 
 # DESCRIPTION
 
-**tmsu** tags files. It provides a tag-based filesystem.
+**tmsu** (Tag My Stuff Unix) is a file tagging tool that lets you organize files by assigning arbitrary tags rather than relying solely on directory hierarchies. Tags and file associations are stored in a local SQLite database, keeping the actual files untouched.
 
-File tagging system. Organize by tags.
-
-Query by tags. Boolean expressions.
-
-FUSE mount support. Virtual directories.
-
-SQLite storage. Local database.
+Files can be queried using tag-based expressions with boolean operators (and, or, not), making it easy to find files matching specific criteria. The **mount** command provides a FUSE virtual filesystem where tagged files appear organized into directories by tag, enabling integration with standard file management tools.
 
 # CAVEATS
 

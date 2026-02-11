@@ -1,3 +1,7 @@
+# TAGLINE
+
+V programming language compiler
+
 # TLDR
 
 **Compile file**
@@ -50,15 +54,11 @@
 
 # DESCRIPTION
 
-**v** compiles V language. It's the V compiler.
+**v** is the compiler for the V programming language, a statically typed systems language designed for simplicity and fast compilation. It compiles V source code to native machine code via C, achieving near-instant build times even for large projects.
 
-Fast compilation. Near-instant builds.
+The compiler includes a built-in code formatter, test runner, REPL, and package manager. V emphasizes memory safety through features like no null pointers, immutable variables by default, and optional garbage collection. It provides seamless C interoperability, allowing direct calls to C libraries without bindings.
 
-Simple syntax. C-like but simpler.
-
-Memory safety. No null pointers.
-
-C interop. Call C directly.
+Production builds with the **-prod** flag enable additional optimizations. The compiler can also generate C source code for portability to platforms without a V compiler available.
 
 # CAVEATS
 

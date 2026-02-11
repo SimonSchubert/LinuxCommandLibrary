@@ -1,3 +1,7 @@
+# TAGLINE
+
+Customizable Chromium-based web browser
+
 # TLDR
 
 **Start browser**
@@ -43,15 +47,11 @@
 
 # DESCRIPTION
 
-**vivaldi** is a web browser. It's highly customizable.
+**vivaldi** is a feature-rich, Chromium-based web browser designed for power users who want extensive control over their browsing experience. It supports modern web standards through its Chromium engine while adding a highly customizable user interface on top.
 
-Chromium-based. Web standards.
+The browser includes advanced tab management features such as tab stacking, tab tiling for side-by-side viewing, and a tab bar that can be placed on any edge of the window. Built-in productivity tools include a notes panel, email client, calendar, feed reader, and translation service, reducing the need for separate applications or extensions.
 
-Tab management. Stacking, tiling.
-
-Built-in tools. Notes, mail, calendar.
-
-Extensive customization. UI flexibility.
+Nearly every aspect of the interface can be customized, from keyboard shortcuts and mouse gestures to toolbar layouts and color themes. The browser also supports command chaining, custom search engines, and a web panel sidebar for keeping frequently used sites accessible.
 
 # CAVEATS
 

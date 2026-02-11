@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage YubiKey OpenPGP keys
+
 # TLDR
 
 **Show OpenPGP info**

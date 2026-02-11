@@ -1,3 +1,7 @@
+# TAGLINE
+
+Deprecated Arch Linux AUR helper
+
 # TLDR
 
 **Update** all packages

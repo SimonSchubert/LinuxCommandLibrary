@@ -1,3 +1,7 @@
+# TAGLINE
+
+Print current effective username
+
 # TLDR
 
 **Print the current username**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Nested X server within a window
+
 # TLDR
 
 **Start nested X server on display :1**

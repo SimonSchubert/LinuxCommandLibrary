@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display XML namespace information
+
 # TLDR
 
 **Show namespace information**

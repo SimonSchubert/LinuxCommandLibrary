@@ -1,3 +1,7 @@
+# TAGLINE
+
+Read barcodes from image files
+
 # TLDR
 
 **Scan image for barcodes**

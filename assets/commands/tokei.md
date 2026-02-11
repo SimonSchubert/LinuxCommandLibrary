@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fast source code line counter
+
 # TLDR
 
 **Count lines of code**

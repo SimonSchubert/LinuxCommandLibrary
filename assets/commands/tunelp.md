@@ -1,3 +1,7 @@
+# TAGLINE
+
+Configure parallel port device parameters
+
 # TLDR
 
 Check **status** of parallel port

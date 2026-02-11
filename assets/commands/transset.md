@@ -1,3 +1,7 @@
+# TAGLINE
+
+Set X11 window transparency
+
 # TLDR
 
 **Set window transparency by clicking**

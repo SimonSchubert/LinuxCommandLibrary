@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run GUI Docker containers securely
+
 # TLDR
 
 **Run GUI app**
@@ -43,15 +47,9 @@
 
 # DESCRIPTION
 
-**x11docker** runs GUI containers. It handles X11 forwarding.
+**x11docker** runs graphical applications from Docker containers with secure X11 display forwarding. It provides isolated display access using multiple backends including Xephyr, Xpra, and nxagent, preventing containers from accessing the host's X server directly.
 
-Docker GUI apps. Secure display.
-
-Multiple backends. Xephyr, Xpra, etc.
-
-Security focused. Isolated display.
-
-Feature-rich. GPU, audio, clipboard.
+The tool supports GPU hardware acceleration, PulseAudio integration, and clipboard sharing between the container and host. This security-focused approach allows running untrusted GUI applications in containers while maintaining display isolation from the host desktop environment.
 
 # CAVEATS
 

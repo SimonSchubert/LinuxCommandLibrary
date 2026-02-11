@@ -1,3 +1,7 @@
+# TAGLINE
+
+Simple command-line task management
+
 # TLDR
 
 **Add task**
@@ -50,15 +54,9 @@
 
 # DESCRIPTION
 
-**todo** manages task lists. It's a simple todo app.
+**todo** is a simple command-line task manager for creating, listing, completing, and removing tasks. It provides a minimal interface for quick task entry and progress tracking without the complexity of full-featured project management tools.
 
-Command-line tasks. Quick entry.
-
-Task completion. Track progress.
-
-Simple interface. Minimal features.
-
-Various implementations. Different tools named todo.
+Multiple implementations exist under the name "todo," each with slightly different features and storage backends. The core workflow is consistent: add tasks with descriptions, mark them done when completed, and clear finished items from the list.
 
 # CAVEATS
 

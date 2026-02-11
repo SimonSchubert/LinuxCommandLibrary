@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extract files from squashfs filesystems
+
 # TLDR
 
 **Extract** to squashfs-root

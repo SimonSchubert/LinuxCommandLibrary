@@ -1,3 +1,7 @@
+# TAGLINE
+
+Broadcast messages to all logged-in users
+
 # TLDR
 
 **Send** a message to all logged-in users

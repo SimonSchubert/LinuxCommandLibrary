@@ -1,3 +1,7 @@
+# TAGLINE
+
+Detect steganography in PNG and BMP images
+
 # TLDR
 
 **Analyze image**
@@ -53,17 +57,11 @@
 
 # DESCRIPTION
 
-**zsteg** detects steganography in images. It finds hidden data in PNG and BMP.
+**zsteg** detects and extracts data hidden through steganography in PNG and BMP image files. It analyzes multiple color channels (RGB, alpha, and individual colors) across various bit depths to identify concealed content such as text, embedded files, and binary patterns.
 
-Multiple channels analyzed. RGB, alpha, individual colors.
+The tool's primary focus is LSB (Least Significant Bit) steganography, where data is hidden in the least significant bits of pixel color values. The **-a** flag performs a comprehensive check across all common methods and channel combinations, while the **-E** flag extracts data from a specific channel and bit configuration.
 
-LSB extraction is primary focus. Least significant bits hide data.
-
-Automatic detection finds common methods. Text, files, patterns.
-
-Extraction outputs hidden content. Specify channel and method.
-
-CTF-oriented tool. Competition steganography challenges.
+zsteg is widely used in CTF (Capture The Flag) competitions for solving steganography challenges and in forensic analysis of suspicious image files. It is written in Ruby.
 
 # CAVEATS
 

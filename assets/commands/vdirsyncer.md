@@ -1,3 +1,7 @@
+# TAGLINE
+
+Synchronize calendars and contacts
+
 # TLDR
 
 **Discover collections from servers**

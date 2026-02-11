@@ -1,3 +1,7 @@
+# TAGLINE
+
+XFCE screenshot capture utility
+
 # TLDR
 
 Launch **GUI**

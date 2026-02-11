@@ -1,3 +1,7 @@
+# TAGLINE
+
+X11 screen saver and locker
+
 # TLDR
 
 **Start the screensaver daemon**

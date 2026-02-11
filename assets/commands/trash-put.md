@@ -1,3 +1,7 @@
+# TAGLINE
+
+Move files to the trash
+
 # TLDR
 
 This command is an **alias** of **trash**

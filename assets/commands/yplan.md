@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate LaTeX yearly daily planner
+
 # TLDR
 
 Create **daily planner**

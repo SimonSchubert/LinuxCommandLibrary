@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert XML to various output formats
+
 # TLDR
 
 **Convert to HTML**
@@ -43,15 +47,11 @@ _format_
 
 # DESCRIPTION
 
-**xmlto** converts XML documents. It uses XSL stylesheets.
+**xmlto** is a frontend tool for converting XML documents to various output formats using XSL stylesheets. It supports generating HTML, PDF, man pages, plain text, and other formats from XML source files, with particular strength in processing DocBook documentation.
 
-Multiple formats. HTML, PDF, man, etc.
+The tool acts as a wrapper around XSLT processors and formatting backends, handling the details of stylesheet selection and tool invocation. Custom stylesheets can be provided with the **-x** option to override the default conversion behavior and tailor the output to specific requirements.
 
-DocBook support. Documentation conversion.
-
-Stylesheet customization. Modify output.
-
-Frontend tool. Wraps other tools.
+xmlto is commonly used in software documentation workflows where source documentation is maintained in DocBook XML format and needs to be published in multiple output formats for different audiences.
 
 # CAVEATS
 

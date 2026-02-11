@@ -1,3 +1,7 @@
+# TAGLINE
+
+Serialize code repositories for LLM consumption
+
 # TLDR
 
 **Serialize current directory** for LLM consumption

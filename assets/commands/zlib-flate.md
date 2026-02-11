@@ -1,3 +1,7 @@
+# TAGLINE
+
+Raw zlib deflate compression utility
+
 # TLDR
 
 **Compress data**
@@ -29,15 +33,11 @@
 
 # DESCRIPTION
 
-**zlib-flate** compresses with zlib. It uses raw deflate.
+**zlib-flate** performs raw zlib deflate compression and decompression. It reads from standard input and writes to standard output, making it well suited for use in shell pipelines.
 
-Raw deflate format. No headers.
+The tool produces raw deflate format without gzip or zlib headers, which distinguishes it from utilities like **gzip** or **zcat**. Compression levels from 1 (fastest) to 9 (best compression) can be specified with the **-compress=** option.
 
-Stdin/stdout. Pipe-based.
-
-Simple interface. Compress/uncompress.
-
-Part of qpdf. Utility tool.
+zlib-flate is included as a utility in the **QPDF** package. It is useful for working with raw deflate streams such as those found in PDF file internals or other formats that use zlib compression without wrapper headers.
 
 # CAVEATS
 

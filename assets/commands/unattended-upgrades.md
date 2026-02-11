@@ -1,3 +1,7 @@
+# TAGLINE
+
+Automatic security update installer
+
 # TLDR
 
 **Run unattended upgrades** manually
@@ -60,6 +64,17 @@ The tool is configured through apt configuration files, primarily /etc/apt/apt.c
 Configuration options include email notifications, automatic removal of unused dependencies, automatic reboots if required, and blacklisting specific packages from automatic updates. The tool logs its activity to /var/log/unattended-upgrades/.
 
 Both **unattended-upgrades** and **unattended-upgrade** commands work identically; one is a symlink to the other.
+
+# CONFIGURATION
+
+**/etc/apt/apt.conf.d/50unattended-upgrades**
+> Main configuration specifying allowed origins, package blacklists, email notifications, and reboot behavior.
+
+**/etc/apt/apt.conf.d/20auto-upgrades**
+> Controls whether automatic updates and unattended upgrades are enabled.
+
+**/var/log/unattended-upgrades/**
+> Log directory containing upgrade history and debug information.
 
 # CAVEATS
 

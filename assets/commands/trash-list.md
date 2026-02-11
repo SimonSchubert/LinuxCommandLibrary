@@ -1,3 +1,7 @@
+# TAGLINE
+
+List files in the trash
+
 # TLDR
 
 This command is documented with **trash**

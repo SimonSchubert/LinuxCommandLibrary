@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate fake X11 input events
+
 # TLDR
 
 **Simulate key press**

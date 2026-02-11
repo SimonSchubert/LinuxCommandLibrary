@@ -1,3 +1,7 @@
+# TAGLINE
+
+Disable zsh shell options
+
 # TLDR
 
 **Disable option**
@@ -34,15 +38,11 @@ _option_
 
 # DESCRIPTION
 
-**unsetopt** disables zsh options. It's a zsh builtin.
+**unsetopt** is a zsh builtin that disables shell options, serving as the counterpart to **setopt**. It controls various aspects of zsh behavior including filename globbing, command correction, history handling, and prompt expansion.
 
-Option control. Disable features.
+When called without arguments, unsetopt displays all options that are currently unset. Option names are case-insensitive and underscores in option names are ignored, so **extendedglob**, **EXTENDED_GLOB**, and **ExtendedGlob** all refer to the same option.
 
-Zsh specific. Not in bash.
-
-Many options. Shell behavior.
-
-Session scope. Current shell.
+Changes only affect the current shell session unless added to zsh configuration files like ~/.zshrc. This command is specific to zsh and has no equivalent in bash, which uses **shopt -u** for a similar purpose with different option names.
 
 # CAVEATS
 

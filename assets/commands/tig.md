@@ -1,3 +1,7 @@
+# TAGLINE
+
+Text-mode interface for Git
+
 # TLDR
 
 **Open the repository browser** (main view)

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Search xz files for fixed strings
+
 # TLDR
 
 **Search fixed string in xz files**

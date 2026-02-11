@@ -1,3 +1,7 @@
+# TAGLINE
+
+Record kernel trace to file
+
 # TLDR
 
 Record with specific **plugin**

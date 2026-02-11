@@ -1,3 +1,7 @@
+# TAGLINE
+
+Erase filesystem signatures from devices
+
 # TLDR
 
 **Display** signatures

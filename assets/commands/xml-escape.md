@@ -1,3 +1,7 @@
+# TAGLINE
+
+Escape special XML characters
+
 # TLDR
 
 **Escape XML special characters**

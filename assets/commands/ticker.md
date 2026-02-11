@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal stock and crypto price tracker
+
 # TLDR
 
 **Watch stock prices** in real time

@@ -1,5 +1,11 @@
 # TLDR
 
+# TAGLINE
+
+Create new user accounts
+
+# TLDR
+
 Create a **new user**
 
 ```sudo useradd username```
@@ -85,6 +91,17 @@ Create a **system user** without home directory
 
 **-D**
 > Display or modify default values
+
+# CONFIGURATION
+
+**/etc/default/useradd**
+> Default values for home directory base, shell, group, expiry, and skeleton directory.
+
+**/etc/login.defs**
+> System-wide user account creation policies including UID/GID ranges, password aging, and home directory creation settings.
+
+**/etc/skel/**
+> Skeleton directory whose contents are copied to new home directories when created with -m.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Scan barcodes from webcam video
+
 # TLDR
 
 **Scan** barcodes

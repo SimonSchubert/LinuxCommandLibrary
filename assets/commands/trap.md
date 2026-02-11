@@ -1,3 +1,7 @@
+# TAGLINE
+
+Handle shell signals and cleanup
+
 # TLDR
 
 **List** available signal names

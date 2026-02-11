@@ -1,3 +1,7 @@
+# TAGLINE
+
+TypeScript to JavaScript compiler
+
 # TLDR
 
 **Compile a TypeScript file** to JavaScript

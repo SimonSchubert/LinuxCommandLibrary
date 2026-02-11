@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage system performance tuning profiles
+
 # TLDR
 
 **List** available profiles

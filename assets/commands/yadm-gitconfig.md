@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage yadm repository git configuration
+
 # TLDR
 
 **Show yadm git config**

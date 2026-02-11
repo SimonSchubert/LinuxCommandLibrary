@@ -1,3 +1,7 @@
+# TAGLINE
+
+PyTorch distributed training launcher
+
 # TLDR
 
 **Run distributed training** on a single node with 4 GPUs

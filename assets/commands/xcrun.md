@@ -1,3 +1,7 @@
+# TAGLINE
+
+Locate and run macOS developer tools
+
 # TLDR
 
 **Find the path** to a developer tool

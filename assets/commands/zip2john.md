@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extract password hashes from ZIP files
+
 # TLDR
 
 **Extract hash from ZIP**

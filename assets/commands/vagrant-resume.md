@@ -1,3 +1,7 @@
+# TAGLINE
+
+Resume a suspended Vagrant machine
+
 # TLDR
 
 **Resume suspended VM**

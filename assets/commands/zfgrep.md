@@ -1,3 +1,7 @@
+# TAGLINE
+
+Search gzip-compressed files for fixed strings
+
 # TLDR
 
 **Search for literal string in gzipped file**

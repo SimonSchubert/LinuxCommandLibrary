@@ -1,3 +1,7 @@
+# TAGLINE
+
+List all Vagrant environments system-wide
+
 # TLDR
 
 **Show all VMs**

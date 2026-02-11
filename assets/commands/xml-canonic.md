@@ -1,3 +1,7 @@
+# TAGLINE
+
+Produce canonical XML form
+
 # TLDR
 
 **Canonicalize XML**

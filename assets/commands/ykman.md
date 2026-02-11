@@ -1,3 +1,7 @@
+# TAGLINE
+
+YubiKey device management CLI
+
 # TLDR
 
 **List YubiKeys**
@@ -64,17 +68,11 @@
 
 # DESCRIPTION
 
-**ykman** manages YubiKey devices. It configures all YubiKey applications.
+**ykman** (YubiKey Manager) is the official CLI from Yubico for managing all aspects of YubiKey hardware security tokens. It provides a unified interface to configure and interact with the various applications available on the device.
 
-OATH manages TOTP/HOTP. Store and generate codes.
+The **oath** subcommand manages TOTP and HOTP accounts, storing two-factor authentication secrets on the hardware and generating one-time codes. The **fido** subcommand handles FIDO2/WebAuthn credentials for passwordless authentication, including PIN management and resident key storage. The **piv** subcommand manages X.509 certificates for smart card operations, and **openpgp** configures PGP keys for signing, encryption, and SSH authentication.
 
-FIDO2 handles WebAuthn. Passwordless authentication.
-
-PIV manages certificates. Smart card functionality.
-
-OpenPGP configures GPG. Sign, encrypt, authenticate.
-
-Device info shows capabilities. Serial, firmware, applications.
+The **config** subcommand controls device-level settings such as enabling or disabling USB and NFC interfaces for specific applications. The **info** and **list** commands display device details including serial number, firmware version, and available applications. The **-d** flag selects a specific device when multiple YubiKeys are connected.
 
 # CAVEATS
 

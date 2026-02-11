@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extract RAR archive files
+
 # TLDR
 
 **Extract archive**

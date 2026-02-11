@@ -1,3 +1,7 @@
+# TAGLINE
+
+Google Python code formatter
+
 # TLDR
 
 **Format a Python file** and print to stdout

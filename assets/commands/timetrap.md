@@ -1,3 +1,7 @@
+# TAGLINE
+
+Simple command-line time tracking
+
 # TLDR
 
 **Start timer**
@@ -57,15 +61,11 @@
 
 # DESCRIPTION
 
-**timetrap** tracks time. It's a simple timesheet.
+**timetrap** is a simple command-line time tracking tool that uses a clock in/out model. You start a timer with **in** and stop it with **out**, and entries are stored in a local SQLite database for reliable, portable storage.
 
-Clock in/out model. Start and stop.
+Time entries are organized into sheets, which act as separate timesheets for different projects or clients. Switching between sheets with the **sheet** command makes it easy to track time across multiple activities without mixing entries.
 
-Multiple sheets. Project separation.
-
-Reporting included. Time summaries.
-
-SQLite storage. Local database.
+The **display** command shows logged entries with calculated durations, and reporting features provide time summaries for billing or review. Entries can be edited after the fact to correct mistakes or add notes.
 
 # CAVEATS
 

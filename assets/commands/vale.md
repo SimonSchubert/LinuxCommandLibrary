@@ -1,3 +1,7 @@
+# TAGLINE
+
+Syntax-aware prose linter
+
 # TLDR
 
 **Lint files** in current directory

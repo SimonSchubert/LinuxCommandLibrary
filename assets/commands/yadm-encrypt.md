@@ -1,3 +1,7 @@
+# TAGLINE
+
+Encrypt sensitive dotfiles with yadm
+
 # TLDR
 
 **Encrypt sensitive files**

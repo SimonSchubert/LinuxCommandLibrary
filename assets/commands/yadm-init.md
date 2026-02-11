@@ -1,3 +1,7 @@
+# TAGLINE
+
+Initialize new yadm dotfiles repository
+
 # TLDR
 
 **Initialize yadm repository**

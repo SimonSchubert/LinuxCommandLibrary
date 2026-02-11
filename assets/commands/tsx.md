@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fast TypeScript execution with esbuild
+
 # TLDR
 
 **Run a TypeScript file**

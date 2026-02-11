@@ -1,3 +1,7 @@
+# TAGLINE
+
+Web application fuzzing tool
+
 # TLDR
 
 **Fuzz URL parameter**
@@ -59,15 +63,11 @@
 
 # DESCRIPTION
 
-**wfuzz** fuzzes web applications. It brute-forces parameters, directories, and more.
+**wfuzz** is a web application security testing tool that performs brute-force discovery of directories, parameters, forms, and other injection points. It replaces the FUZZ keyword in URLs, headers, or POST data with entries from wordlists or other payload sources.
 
-FUZZ keyword marks injection point. Payloads replace FUZZ.
+Multiple injection points can be used simultaneously with FUZ2Z, FUZ3Z markers, allowing combined username and password attacks or multi-parameter fuzzing. Response filtering by status code, line count, word count, or character count hides uninteresting results and highlights anomalies that may indicate vulnerabilities.
 
-Multiple fuzz points use FUZ2Z, FUZ3Z. Combine wordlists.
-
-Filtering hides uninteresting responses. Focus on anomalies.
-
-Payloads include files, ranges, encoders. Flexible input.
+Payload sources include wordlist files, numeric ranges, and encoded variants. Multi-threading speeds up testing, and colored output makes results easier to scan. The tool is commonly used for directory enumeration, parameter discovery, and authentication testing in authorized security assessments.
 
 # CAVEATS
 

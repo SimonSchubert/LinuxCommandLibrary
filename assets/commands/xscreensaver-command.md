@@ -1,3 +1,7 @@
+# TAGLINE
+
+Control running xscreensaver daemon
+
 # TLDR
 
 **Activate screensaver immediately**

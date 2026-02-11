@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage XDG default application settings
+
 # TLDR
 
 **Print** the default web browser

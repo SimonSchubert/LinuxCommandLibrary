@@ -1,3 +1,7 @@
+# TAGLINE
+
+Virtual input device event writer
+
 # TLDR
 
 **Preview** device description (dry-run)

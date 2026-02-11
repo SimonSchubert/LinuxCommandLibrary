@@ -1,3 +1,7 @@
+# TAGLINE
+
+Move files to recoverable trash
+
 # TLDR
 
 **Send** a file to the trash

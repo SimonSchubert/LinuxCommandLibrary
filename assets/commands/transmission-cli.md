@@ -1,3 +1,7 @@
+# TAGLINE
+
+Command-line BitTorrent downloader
+
 # TLDR
 
 **Download a torrent**

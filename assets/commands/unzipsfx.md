@@ -1,5 +1,11 @@
 # TLDR
 
+# TAGLINE
+
+Create self-extracting ZIP executables
+
+# TLDR
+
 Create **self-extracting** binary
 
 ```cat $(which unzipsfx) [path/to/archive.zip] > [filename] && chmod 755 [filename]```

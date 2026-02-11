@@ -1,3 +1,7 @@
+# TAGLINE
+
+Uptime record tracking daemon
+
 # TLDR
 
 **Start the daemon**

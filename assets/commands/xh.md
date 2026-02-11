@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fast and friendly HTTP client
+
 # TLDR
 
 **Make GET request**

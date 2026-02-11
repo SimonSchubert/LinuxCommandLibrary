@@ -1,3 +1,7 @@
+# TAGLINE
+
+List currently logged-in usernames
+
 # TLDR
 
 **Show logged in users**
@@ -25,15 +29,11 @@ _file_
 
 # DESCRIPTION
 
-**users** shows logged in users. It lists usernames.
+**users** prints a compact, space-separated list of usernames currently logged into the system. If a user has multiple login sessions, their name appears once for each session.
 
-Simple output. Space-separated names.
+The command reads from /var/run/utmp by default to determine who is logged in. An alternate utmp-format file can be specified as an argument, such as /var/log/wtmp to see historical logins.
 
-Current sessions. Who's logged in.
-
-Reads utmp. Login database.
-
-Minimal information. Names only.
+Unlike **who** and **w**, which provide detailed information about each session, users produces minimal output suitable for quick checks or scripting where only the list of logged-in usernames is needed.
 
 # CAVEATS
 

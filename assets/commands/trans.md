@@ -1,3 +1,7 @@
+# TAGLINE
+
+Command-line language translator
+
 # TLDR
 
 **Translate text** to your default language

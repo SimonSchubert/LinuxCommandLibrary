@@ -1,3 +1,7 @@
+# TAGLINE
+
+Text-based web browser and pager
+
 # TLDR
 
 **Open a URL**

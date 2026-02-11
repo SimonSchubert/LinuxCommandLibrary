@@ -1,3 +1,7 @@
+# TAGLINE
+
+Validate and reformat HTML markup
+
 # TLDR
 
 **Clean HTML file**
@@ -67,15 +71,9 @@
 
 # DESCRIPTION
 
-**tidy** validates and reformats HTML. It fixes markup errors and improves consistency.
+**tidy** validates and reformats HTML documents, detecting markup errors such as missing closing tags, improper nesting, and deprecated elements. It can automatically fix many common problems while producing consistently formatted output with standardized indentation and line wrapping.
 
-Validation finds errors and warnings. Missing tags, improper nesting detected.
-
-Reformatting standardizes output. Consistent indentation and wrapping.
-
-XHTML conversion creates stricter output. Valid XML from HTML.
-
-Error mode shows problems without reformatting. Quick validation check.
+The tool can convert HTML to XHTML (**-asxhtml**) for stricter XML-compliant output, or reformat in place with **-m**. Error-only mode (**-e**) reports problems without modifying the document, useful for quick validation checks. Output wrapping width is configurable with the **-w** flag.
 
 # CAVEATS
 

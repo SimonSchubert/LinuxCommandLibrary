@@ -1,3 +1,7 @@
+# TAGLINE
+
+X11 authorization credential management
+
 # TLDR
 
 Use specific **authority** file

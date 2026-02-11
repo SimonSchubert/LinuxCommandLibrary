@@ -1,3 +1,7 @@
+# TAGLINE
+
+Host-based filesystem integrity monitoring
+
 # TLDR
 
 **Initialize the database** (create baseline)
@@ -78,6 +82,23 @@ The tool operates in several modes: initialization creates the baseline database
 Tripwire uses two encryption keys: a site key for organization-wide policies and a local key unique to each server. This allows centralized policy management while maintaining per-server database security.
 
 Exit codes from integrity checking indicate what changed: 0 (no changes), 1 (files added), 2 (files modified), 4 (files deleted), 8 (errors).
+
+# CONFIGURATION
+
+**/etc/tripwire/tw.cfg**
+> Main configuration file specifying database location, report directory, and mail settings.
+
+**/etc/tripwire/tw.pol**
+> Policy file defining which files and directories to monitor and what attributes to check.
+
+**/var/lib/tripwire/$(HOSTNAME).twd**
+> Baseline database file containing recorded filesystem state.
+
+**TRIPWIRE_SITE_KEY**
+> Path to the site key used for signing policy and configuration files.
+
+**TRIPWIRE_LOCAL_KEY**
+> Path to the local key used for signing the database and reports.
 
 # CAVEATS
 

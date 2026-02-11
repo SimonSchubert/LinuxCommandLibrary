@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate Telegram themes from pywal
+
 # TLDR
 
 Generate with **wal** palette

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Show duration of ttyrec recordings
+
 # TLDR
 
 **Show duration of a recording**

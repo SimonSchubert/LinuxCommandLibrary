@@ -1,3 +1,7 @@
+# TAGLINE
+
+Zsh plugin manager with parallel loading
+
 # TLDR
 
 **Load a plugin from GitHub**

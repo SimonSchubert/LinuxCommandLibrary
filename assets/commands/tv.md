@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal viewer for tabular data
+
 # TLDR
 
 **View CSV**
@@ -43,15 +47,11 @@
 
 # DESCRIPTION
 
-**tv** views tabular data. It's a table viewer.
+**tv** is a terminal viewer for tabular data that displays CSV, TSV, and JSON files as formatted, column-aligned tables. It automatically detects the input format and renders the data with proper alignment for easy reading in the terminal.
 
-CSV/TSV support. Common formats.
+Custom delimiters can be specified for non-standard formats, and the **--no-header** flag handles files without a header row. The tool supports limiting output to a specified number of rows for previewing large datasets.
 
-Terminal display. Formatted tables.
-
-Column alignment. Readable output.
-
-JSON support. Structured data.
+Output is optimized for terminal display, adjusting column widths based on content and available terminal space.
 
 # CAVEATS
 

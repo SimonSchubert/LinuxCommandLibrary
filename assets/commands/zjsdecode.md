@@ -1,3 +1,7 @@
+# TAGLINE
+
+Decode zlib-compressed JavaScript from PDFs
+
 # TLDR
 
 **Decode Zlib-compressed JavaScript**

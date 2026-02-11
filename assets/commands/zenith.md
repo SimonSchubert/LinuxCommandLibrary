@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal system monitor with historical data
+
 # TLDR
 
 **Start zenith**

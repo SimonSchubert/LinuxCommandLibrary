@@ -1,3 +1,7 @@
+# TAGLINE
+
+Register existing VM with VirtualBox
+
 # TLDR
 
 **Register VM**

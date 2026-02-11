@@ -1,3 +1,7 @@
+# TAGLINE
+
+Weblate command-line client
+
 # TLDR
 
 **List projects**
@@ -46,15 +50,9 @@
 
 # DESCRIPTION
 
-**wlc** controls Weblate. It's the CLI client.
+**wlc** is the command-line client for Weblate, an open-source web-based translation management system. It provides access to Weblate's API for managing translation projects, downloading and uploading translation files, and committing changes from the terminal.
 
-Translation management. Upload/download.
-
-Project listing. Browse translations.
-
-Commit changes. Push to Weblate.
-
-API access. Full control.
+The tool supports listing projects and components, viewing translation status, and performing bulk operations across multiple translation files. It requires a Weblate server URL and API key for authentication, which can be stored in a configuration file for convenience.
 
 # CAVEATS
 

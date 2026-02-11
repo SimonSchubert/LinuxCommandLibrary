@@ -1,3 +1,7 @@
+# TAGLINE
+
+Universal archive extraction wrapper
+
 # TLDR
 
 **Extract archive**
@@ -36,15 +40,11 @@
 
 # DESCRIPTION
 
-**unp** extracts any archive. It detects format automatically.
+**unp** is a universal archive extraction tool that automatically detects the format of an archive and calls the appropriate decompression program. Instead of remembering different commands for tar, gzip, bzip2, zip, rar, 7z, and dozens of other formats, users can simply run unp on any archive file.
 
-Format detection. Automatic handling.
+The tool works as a Perl wrapper script that inspects file headers and extensions to determine the correct extraction method. It supports a wide range of formats including tar, gz, bz2, xz, zip, rar, 7z, arj, lha, deb, rpm, and cpio, delegating to the appropriate underlying tool for each format.
 
-Many formats. zip, tar, gz, bz2, etc.
-
-Simple interface. One command for all.
-
-Perl-based tool. Wrapper script.
+By default, unp extracts to the current directory. It can optionally create a subdirectory for the extracted contents to prevent cluttering the working directory, and supports simulation mode to preview what would be extracted without actually writing files.
 
 # SUPPORTED FORMATS
 

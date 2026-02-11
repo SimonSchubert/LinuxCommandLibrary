@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert WebAssembly to portable C code
+
 # TLDR
 
 **Convert to C**
@@ -32,15 +36,11 @@
 
 # DESCRIPTION
 
-**wasm2c** converts WASM to C. It transpiles modules.
+**wasm2c** is a tool from the WABT (WebAssembly Binary Toolkit) that translates WebAssembly binary modules into portable C source code. The generated C code can be compiled with any standard C compiler, enabling WebAssembly modules to run natively without a WebAssembly runtime.
 
-Portable C output. Compile anywhere.
+The tool produces both a C source file containing the translated module logic and an optional header file with function declarations and type definitions. A custom module name can be specified to control the naming of generated symbols, which is useful when linking multiple translated modules together.
 
-No WASM runtime needed. Native execution.
-
-Header generation. API definitions.
-
-Part of WABT. WebAssembly tools.
+This approach is useful for embedding WebAssembly functionality in C/C++ projects, running WebAssembly on platforms without a runtime, or analyzing module behavior through the generated source code.
 
 # CAVEATS
 

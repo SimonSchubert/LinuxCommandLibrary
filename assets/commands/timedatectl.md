@@ -1,3 +1,7 @@
+# TAGLINE
+
+Control system time and timezone
+
 # TLDR
 
 Show current **time and date** settings

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Initialize a new Python project with uv
+
 # TLDR
 
 **Initialize new project**

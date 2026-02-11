@@ -1,3 +1,7 @@
+# TAGLINE
+
+.NET microservice development and deployment tool
+
 # TLDR
 
 **Run application**
@@ -46,15 +50,11 @@
 
 # DESCRIPTION
 
-**tye** runs microservices. It's a development tool.
+**Tye** is an experimental development tool from Microsoft that simplifies running and deploying .NET microservice applications. It orchestrates multiple services locally, starting them together with a single command and providing a web dashboard for monitoring their status, logs, and endpoints.
 
-Multi-service orchestration. Run together.
+The tool handles service discovery automatically, allowing microservices to find each other without manual configuration of ports and addresses. Building and containerizing services is streamlined for deployment to Kubernetes clusters.
 
-Dashboard included. Service monitoring.
-
-Kubernetes deployment. Easy deploy.
-
-.NET focused. Service discovery.
+Configuration is defined in a **tye.yaml** file that lists services, their dependencies, and deployment settings.
 
 # CAVEATS
 

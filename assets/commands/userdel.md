@@ -1,3 +1,7 @@
+# TAGLINE
+
+Delete user accounts from the system
+
 # TLDR
 
 **Remove** a user

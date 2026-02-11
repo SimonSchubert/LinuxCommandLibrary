@@ -1,3 +1,7 @@
+# TAGLINE
+
+Send Wake-on-LAN magic packets
+
 # TLDR
 
 Send **WoL** packet

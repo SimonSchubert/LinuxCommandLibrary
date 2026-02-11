@@ -1,3 +1,7 @@
+# TAGLINE
+
+Wayland screen color temperature adjuster
+
 # TLDR
 
 **Start with location**
@@ -42,15 +46,9 @@
 
 # DESCRIPTION
 
-**wlsunset** adjusts screen color. It's a Wayland redshift.
+**wlsunset** is a day/night screen color temperature daemon for Wayland compositors built on wlroots. It automatically adjusts display color temperature based on the time of day, shifting to warmer tones in the evening to reduce blue light exposure.
 
-Day/night cycle. Automatic adjustment.
-
-Sunrise/sunset calculation. Location-based.
-
-Blue light reduction. Evening warmth.
-
-Wayland native. wlroots compositors.
+Sunrise and sunset times are calculated from the provided geographic coordinates, creating a smooth transition between configurable day and night color temperatures. The gamma value can also be adjusted for additional display tuning. The tool runs as a background daemon and is the Wayland-native equivalent of redshift or f.lux.
 
 # CAVEATS
 

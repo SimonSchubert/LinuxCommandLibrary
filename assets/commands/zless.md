@@ -1,3 +1,7 @@
+# TAGLINE
+
+View compressed files with less pager
+
 # TLDR
 
 **View a gzip compressed file**

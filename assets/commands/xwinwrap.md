@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run programs as desktop background
+
 # TLDR
 
 Run **video** as background

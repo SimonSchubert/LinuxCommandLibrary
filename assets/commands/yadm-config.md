@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage yadm configuration settings
+
 # TLDR
 
 **List configuration**

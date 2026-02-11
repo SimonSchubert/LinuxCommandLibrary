@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert Windows icons to PPM format
+
 # TLDR
 
 **Convert Windows icon to PPM**

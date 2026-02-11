@@ -1,3 +1,7 @@
+# TAGLINE
+
+Lightweight Emacs clone
+
 # TLDR
 
 **Start** editor

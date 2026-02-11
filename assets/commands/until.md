@@ -1,3 +1,7 @@
+# TAGLINE
+
+Shell loop executing until condition becomes true
+
 # TLDR
 
 **Loop until condition**
@@ -22,15 +26,11 @@
 
 # DESCRIPTION
 
-**until** loops until true. It's opposite of while.
+**until** is a shell loop construct that repeatedly executes a block of commands as long as a condition evaluates to false. It is the logical opposite of **while**, which loops while a condition is true. The loop body executes at least once if the condition starts as false, and stops as soon as the condition becomes true.
 
-Condition checking. Loop while false.
+The most common use of until is polling for a condition to become true, such as waiting for a network host to come online, a file to appear, or a process to start. Combined with **sleep**, it provides a simple way to implement retry logic in shell scripts.
 
-Shell keyword. Not a command.
-
-Same as while with negated condition. Semantic difference.
-
-Common patterns. Wait for events.
+The exit status of an until loop is the exit status of the last command executed in the body. If the body never executes because the condition is already true, the exit status is zero.
 
 # CAVEATS
 

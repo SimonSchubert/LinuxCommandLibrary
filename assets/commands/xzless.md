@@ -1,3 +1,7 @@
+# TAGLINE
+
+View xz compressed files with paging
+
 # TLDR
 
 **View xz compressed file**

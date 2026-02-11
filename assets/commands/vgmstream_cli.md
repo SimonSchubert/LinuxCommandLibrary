@@ -1,3 +1,7 @@
+# TAGLINE
+
+Decode video game audio formats
+
 # TLDR
 
 **Convert to WAV**
@@ -56,15 +60,9 @@
 
 # DESCRIPTION
 
-**vgmstream_cli** decodes video game audio formats. Supports hundreds of formats.
+**vgmstream_cli** decodes audio files from video games into standard WAV format or plays them directly. It supports hundreds of proprietary audio formats used across game consoles and engines, including ADX, HCA, FSB, BRSTM, and many more.
 
-Game audio decoder. Many formats.
-
-Loop support. Accurate playback.
-
-Subsong extraction. Multi-track files.
-
-Metadata display. Format information.
+The tool handles game-specific features like seamless looping, subsong extraction from multi-track archives, and accurate sample-level playback. Metadata mode displays format details, sample rate, and loop points without decoding the audio.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Cloudflare Workers CLI tool
+
 # TLDR
 
 **Create a new Worker project**

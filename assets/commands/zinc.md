@@ -1,3 +1,7 @@
+# TAGLINE
+
+Lightweight full-text search engine
+
 # TLDR
 
 **Start Zinc server**

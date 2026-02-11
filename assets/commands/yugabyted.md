@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage YugabyteDB distributed SQL clusters
+
 # TLDR
 
 **Start local cluster**

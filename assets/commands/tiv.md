@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display images in terminal using ANSI
+
 # TLDR
 
 **Display an image**

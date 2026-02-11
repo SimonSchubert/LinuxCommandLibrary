@@ -1,3 +1,7 @@
+# TAGLINE
+
+Send Wake-on-LAN magic packets
+
 # TLDR
 
 **Wake computer**
@@ -40,15 +44,11 @@
 
 # DESCRIPTION
 
-**wakeonlan** sends Wake-on-LAN magic packets. It powers on remote computers.
+**wakeonlan** sends Wake-on-LAN (WoL) magic packets to power on remote computers over the network. A magic packet is a specially formatted UDP broadcast containing the target machine's MAC address repeated 16 times, which the network interface card recognizes even while the system is powered off.
 
-Magic packets contain the target MAC. Repeated 16 times in specific format.
+The tool sends packets to the network broadcast address on UDP port 9 by default, reaching sleeping hosts on the local subnet. A custom broadcast address can be specified for directed broadcasts across subnets, and an alternative port can be used for systems configured on port 7.
 
-Broadcast address reaches sleeping hosts. Local network or directed broadcast.
-
-Port 9 is standard. Some systems use port 7.
-
-File input enables multiple hosts. One MAC per line.
+Multiple machines can be woken at once by reading MAC addresses from a file with one address per line. The target computer must have WoL support enabled in its BIOS/UEFI settings and network interface driver, and must remain physically connected to the network.
 
 # REQUIREMENTS
 

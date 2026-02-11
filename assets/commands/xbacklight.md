@@ -1,3 +1,7 @@
+# TAGLINE
+
+Adjust screen backlight brightness
+
 # TLDR
 
 Get current **brightness**

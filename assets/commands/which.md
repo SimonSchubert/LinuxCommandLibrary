@@ -1,3 +1,7 @@
+# TAGLINE
+
+Locate executable in PATH
+
 # TLDR
 
 **Find the path of a command**

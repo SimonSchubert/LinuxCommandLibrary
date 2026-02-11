@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compile Vala source to C or binaries
+
 # TLDR
 
 **Compile to C**
@@ -39,15 +43,9 @@
 
 # DESCRIPTION
 
-**vala** compiles Vala language. It generates C code.
+**vala** compiles Vala source code into C and optionally into native executables. Vala provides a modern, C#-like syntax with features such as type inference, lambda expressions, and signals while compiling down to plain C code that uses the GObject type system.
 
-GNOME-oriented. GObject-based.
-
-C code generation. Then compiles with gcc.
-
-Modern syntax. C# like.
-
-Library binding. Use C libraries.
+The compiler generates C source files that can be compiled with any standard C compiler. This approach gives Vala programs native performance with no runtime overhead while allowing seamless interoperability with existing C libraries. The **--pkg** flag links against system libraries discovered through pkg-config.
 
 # CAVEATS
 

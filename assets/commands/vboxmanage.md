@@ -1,3 +1,7 @@
+# TAGLINE
+
+VirtualBox command-line management interface
+
 # TLDR
 
 **List VMs**
@@ -53,15 +57,9 @@
 
 # DESCRIPTION
 
-**vboxmanage** controls VirtualBox. It's the CLI interface.
+**vboxmanage** is the command-line interface for Oracle VirtualBox, providing complete control over virtual machine creation, configuration, and operation. It exposes every feature available in the graphical interface and many that are only accessible from the command line.
 
-VM management. Create, start, stop.
-
-Configuration. Settings modification.
-
-Snapshots. State saving.
-
-Full control. All VirtualBox features.
+The tool uses subcommands for different operations: **createvm** and **modifyvm** for setup, **startvm** and **controlvm** for runtime management, **snapshot** for state saving, and **list** for querying registered objects. It is essential for headless server environments, scripted VM provisioning, and automation workflows where GUI access is unavailable.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal dialog boxes for shell scripts
+
 # TLDR
 
 Display a simple **message** box

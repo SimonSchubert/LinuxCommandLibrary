@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert XWD screenshots to PNM format
+
 # TLDR
 
 **Convert XWD to PNM**

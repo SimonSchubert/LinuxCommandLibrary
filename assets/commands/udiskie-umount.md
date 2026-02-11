@@ -1,3 +1,7 @@
+# TAGLINE
+
+Safely unmount removable devices
+
 # TLDR
 
 **Unmount** a device

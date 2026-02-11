@@ -1,3 +1,7 @@
+# TAGLINE
+
+Vala programming language compiler
+
 # TLDR
 
 **Compile program**
@@ -46,15 +50,9 @@
 
 # DESCRIPTION
 
-**valac** is the Vala compiler. It compiles to C then native.
+**valac** is the official compiler for the Vala programming language. It performs a two-step compilation process, first translating Vala source code into C, then invoking a C compiler to produce native binaries. This design provides native performance while offering a high-level, object-oriented syntax.
 
-Two-step compilation. Vala to C to binary.
-
-Package system. --pkg for dependencies.
-
-GObject integration. Object-oriented.
-
-GNOME development. GTK applications.
+The compiler integrates with the GObject type system and uses pkg-config for dependency management via the **--pkg** flag. It is commonly used for GNOME and GTK application development, and can also generate GObject Introspection data for language bindings and C header files for library interoperability.
 
 # CAVEATS
 

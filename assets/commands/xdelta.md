@@ -1,3 +1,7 @@
+# TAGLINE
+
+Binary delta compression and patching
+
 # TLDR
 
 **Create delta**
@@ -49,17 +53,9 @@
 
 # DESCRIPTION
 
-**xdelta** creates binary differences. It generates small patches between files.
+**xdelta** creates and applies binary delta patches between two versions of a file. The delta command compares an old file with a new file and produces a compact patch file containing only the differences, which is typically much smaller than distributing the full new file.
 
-Delta creation compares old and new. Output is much smaller than full file.
-
-Patching reconstructs new file. Requires old file and patch.
-
-VCDIFF format is standardized. Interoperable with other tools.
-
-Useful for software updates. Distribute patches instead of full files.
-
-Compression reduces patch size. Higher levels take more time.
+The patch command reconstructs the new file by applying the delta to the original file. Configurable compression levels trade processing time for smaller patch sizes. The tool is commonly used for software update distribution, ROM patching, and efficient file synchronization where only changes need to be transmitted.
 
 # CAVEATS
 

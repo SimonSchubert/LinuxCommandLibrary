@@ -1,3 +1,7 @@
+# TAGLINE
+
+Headless BitTorrent client daemon
+
 # TLDR
 
 **Start the daemon**
@@ -92,6 +96,17 @@ The daemon supports magnet links, DHT, peer exchange, encryption, and bandwidth 
 The web interface (default: http://localhost:9091) provides a graphical way to manage torrents. For command-line control, use transmission-remote to add, remove, and manage torrents.
 
 Stop the daemon before editing settings.json manually, as changes are overwritten on exit.
+
+# CONFIGURATION
+
+**~/.config/transmission-daemon/settings.json**
+> Main configuration file in JSON format containing all daemon settings including download paths, speed limits, peer options, and RPC authentication.
+
+**-g**, **--config-dir** _dir_
+> Override the default configuration directory location.
+
+**TRANSMISSION_HOME**
+> Environment variable to override the default config directory path.
 
 # CAVEATS
 

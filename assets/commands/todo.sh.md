@@ -1,3 +1,7 @@
+# TAGLINE
+
+Plain-text todo.txt task manager
+
 # TLDR
 
 **Add task**
@@ -50,15 +54,9 @@
 
 # DESCRIPTION
 
-**todo.sh** manages todo.txt files. It's Gina Trapani's system.
+**todo.sh** is a shell script for managing tasks in the todo.txt plain text format created by Gina Trapani. Tasks are stored one per line with support for priorities (A-Z), project tags (+project), and context tags (@context), making the file both human-readable and easily parseable.
 
-Plain text format. Human readable.
-
-Priority support. (A), (B), (C).
-
-Project and context tags. @context +project.
-
-Shell script. Portable and simple.
+The tool provides commands for adding, completing, prioritizing, and archiving tasks. Completed items can be moved to a done.txt archive to keep the active list clean. The plain text format ensures portability and compatibility with any text editor or sync service.
 
 # CAVEATS
 

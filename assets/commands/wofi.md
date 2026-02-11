@@ -1,3 +1,7 @@
+# TAGLINE
+
+Wayland application launcher
+
 # TLDR
 
 Show **apps** list

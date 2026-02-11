@@ -1,3 +1,7 @@
+# TAGLINE
+
+Tag-based time interval tracking
+
 # TLDR
 
 **Start tracking**
@@ -57,15 +61,19 @@
 
 # DESCRIPTION
 
-**timew** tracks time intervals. It's Timewarrior.
+**timew** (Timewarrior) is a command-line time tracking tool that records work intervals with flexible tag-based categorization. You start tracking with **start** and one or more tags describing the activity, then **stop** when finished. The **track** command allows logging past intervals retroactively.
 
-Tag-based tracking. Flexible categorization.
+Reporting is built in, with the **summary** command providing time breakdowns filterable by date ranges using hint syntax like **:day**, **:week**, or **:month**. Data can also be exported for use with external reporting tools.
 
-Reporting built-in. Summaries and exports.
+Timewarrior integrates with Taskwarrior to automatically track time when tasks are started and stopped, providing a combined task and time management workflow.
 
-Taskwarrior integration. Combined workflow.
+# CONFIGURATION
 
-Interval tracking. Start/stop or specify.
+**~/.timewarrior/timewarrior.cfg**
+> Main configuration file for themes, exclusions (holidays, weekends), and report settings.
+
+**~/.timewarrior/data/**
+> Directory containing time tracking interval data files.
 
 # CAVEATS
 

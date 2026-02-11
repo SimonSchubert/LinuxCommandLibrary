@@ -1,3 +1,7 @@
+# TAGLINE
+
+GTK dialog tool for shell scripts
+
 # TLDR
 
 **Display an info dialog**

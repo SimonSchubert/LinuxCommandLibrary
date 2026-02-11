@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage ZeroTier virtual network connections
+
 # TLDR
 
 **Show node status**

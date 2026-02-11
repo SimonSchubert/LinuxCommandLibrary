@@ -1,3 +1,7 @@
+# TAGLINE
+
+Cloudflare WARP VPN client CLI
+
 # TLDR
 
 **Connect**
@@ -50,15 +54,11 @@
 
 # DESCRIPTION
 
-**warp-cli** controls Cloudflare WARP. It manages VPN connection.
+**warp-cli** is the command-line interface for managing Cloudflare WARP, a VPN and secure DNS service that encrypts traffic between the device and Cloudflare's network. It provides commands to connect, disconnect, check status, and configure the WARP client.
 
-Cloudflare VPN. Secure connection.
+The client supports multiple connection modes including full WARP VPN mode that routes all traffic through Cloudflare's network, and DNS-over-HTTPS mode that only encrypts DNS queries for private name resolution. A WARP+ premium tier offers optimized routing through Cloudflare's Argo network for improved performance.
 
-DNS over HTTPS. Private DNS.
-
-Multiple modes. WARP, WARP+, DoH.
-
-Free tier available. Premium options.
+Device registration is required before first use, and the warp-svc daemon must be running for the CLI to function. The tool is available on Linux, macOS, and Windows.
 
 # CAVEATS
 

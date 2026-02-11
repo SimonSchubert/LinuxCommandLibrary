@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert TIFF images to PNM format
+
 # TLDR
 
 **Convert TIFF to PNM**

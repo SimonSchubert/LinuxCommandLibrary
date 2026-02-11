@@ -1,3 +1,7 @@
+# TAGLINE
+
+Unicode TeX engine with system fonts
+
 # TLDR
 
 **Compile document**
@@ -32,15 +36,11 @@
 
 # DESCRIPTION
 
-**xetex** is a TeX engine. It supports Unicode natively.
+**XeTeX** is an extended TeX typesetting engine that adds native Unicode and modern font support to the traditional TeX system. Unlike classic TeX engines that are limited to 8-bit encodings, XeTeX handles the full range of Unicode characters natively, making it suitable for multilingual documents and scripts from any writing system.
 
-Unicode support. Full UTF-8.
+One of XeTeX's most significant features is its ability to use system-installed fonts directly, including OpenType and TrueType fonts, without requiring TeX-specific font installations. This gives authors access to the full range of fonts available on their system, along with advanced OpenType features such as ligatures, stylistic alternates, and font variations.
 
-System fonts. Use installed fonts.
-
-PDF output. Direct generation.
-
-OpenType features. Font variations.
+XeTeX produces PDF output directly through the xdvipdfmx backend. It is commonly used through the **xelatex** wrapper which provides the familiar LaTeX macro layer on top of the XeTeX engine, combining LaTeX's document structuring capabilities with XeTeX's Unicode and font handling.
 
 # CAVEATS
 

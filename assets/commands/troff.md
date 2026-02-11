@@ -1,3 +1,7 @@
+# TAGLINE
+
+GNU roff typesetting processor
+
 # TLDR
 
 **Format a document** using the man macro package

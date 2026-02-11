@@ -1,5 +1,11 @@
 # TLDR
 
+# TAGLINE
+
+Share USB devices over IP networks
+
+# TLDR
+
 List **local** devices
 
 ```usbip list -l```

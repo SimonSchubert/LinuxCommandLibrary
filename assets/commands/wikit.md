@@ -1,3 +1,7 @@
+# TAGLINE
+
+Wikipedia summaries from the terminal
+
 # TLDR
 
 **Search Wikipedia**
@@ -47,17 +51,9 @@
 
 # DESCRIPTION
 
-**wikit** fetches Wikipedia summaries. Quick access to encyclopedia content.
+**wikit** is a command-line tool that fetches Wikipedia article summaries directly in the terminal. By default it displays the first paragraph of the matching article, providing a quick overview of any topic without leaving the command line.
 
-Default shows first paragraph. Brief overview of topic.
-
-Full article mode shows more. Extended content displayed.
-
-Language selection uses other Wikipedias. Many languages available.
-
-Browser mode opens full page. Read complete article online.
-
-Disambiguation handles ambiguous queries. Multiple meanings listed.
+The full article mode displays extended content beyond the opening summary. Language selection allows querying any of Wikipedia's language editions, and browser mode opens the complete article in a web browser for full reading. When a query matches multiple articles, disambiguation mode lists all possible meanings so you can refine your search.
 
 # CAVEATS
 

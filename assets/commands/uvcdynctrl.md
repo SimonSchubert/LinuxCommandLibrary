@@ -1,3 +1,7 @@
+# TAGLINE
+
+Control UVC webcam dynamic settings
+
 # TLDR
 
 **List** cameras

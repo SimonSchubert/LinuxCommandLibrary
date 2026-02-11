@@ -1,3 +1,7 @@
+# TAGLINE
+
+Multithreaded zstd compression
+
 # TLDR
 
 **Compress with multithreading**
@@ -39,7 +43,9 @@
 
 # DESCRIPTION
 
-**zstdmt** is zstd with multithreading enabled by default. Compresses using multiple CPU cores for faster throughput. Equivalent to zstd -T0. Produces compatible output.
+**zstdmt** is the multithreaded variant of the zstd compression utility. It automatically uses all available CPU cores for compression, equivalent to running **zstd -T0**, providing significantly faster throughput on multi-core systems.
+
+The compressed output is fully compatible with standard zstd files and can be decompressed by any zstd-compatible tool. All standard zstd options for compression levels, decompression, and file handling are supported.
 
 # SEE ALSO
 

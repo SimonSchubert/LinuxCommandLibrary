@@ -1,3 +1,7 @@
+# TAGLINE
+
+X11 compatibility layer for Wayland
+
 # TLDR
 
 **Start rootless** (typical usage by compositor)

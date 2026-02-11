@@ -1,3 +1,7 @@
+# TAGLINE
+
+Initialize new Zapier integration project
+
 # TLDR
 
 **Initialize new integration**

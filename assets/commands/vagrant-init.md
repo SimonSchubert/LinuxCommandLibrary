@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create a new Vagrantfile configuration
+
 # TLDR
 
 **Initialize with default box**

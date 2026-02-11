@@ -1,3 +1,7 @@
+# TAGLINE
+
+Zapier integration development CLI
+
 # TLDR
 
 **Login**
@@ -50,15 +54,11 @@
 
 # DESCRIPTION
 
-**zapier** builds integrations. It's the Zapier CLI.
+**zapier** is the official command-line interface for developing integrations on the Zapier automation platform. It provides tools for creating, testing, validating, and deploying custom integrations that connect third-party applications.
 
-Integration development. Build apps.
+The development workflow starts with **zapier init** to scaffold a new project, followed by defining triggers, actions, and searches in JavaScript. The **test** command runs integration tests locally, and **validate** checks the integration against Zapier's schema requirements before deployment.
 
-Testing included. Validate actions.
-
-Deployment. Push to Zapier.
-
-Automation platform. Connect apps.
+Once ready, **zapier push** uploads the integration to Zapier's platform where it becomes available for users to incorporate into their automated workflows. The **promote** command makes a specific version publicly available.
 
 # CAVEATS
 

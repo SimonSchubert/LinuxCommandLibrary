@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage YubiKey FIDO2 credentials
+
 # TLDR
 
 **Show FIDO info**

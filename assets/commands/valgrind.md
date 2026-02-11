@@ -1,3 +1,7 @@
+# TAGLINE
+
+Memory debugging and profiling framework
+
 # TLDR
 
 **Check for memory leaks**

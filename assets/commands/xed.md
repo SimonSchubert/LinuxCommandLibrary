@@ -1,3 +1,7 @@
+# TAGLINE
+
+Cinnamon desktop text editor
+
 # TLDR
 
 **Start** editor

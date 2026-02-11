@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal typing test with language modes
+
 # TLDR
 
 **Start typing test with default words**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Validate Zapier integration configuration
+
 # TLDR
 
 **Validate integration**

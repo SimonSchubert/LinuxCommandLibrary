@@ -1,3 +1,7 @@
+# TAGLINE
+
+File Ubuntu bug reports via Apport
+
 # TLDR
 
 This command is an alias of **apport-bug**.

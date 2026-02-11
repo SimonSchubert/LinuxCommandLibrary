@@ -1,3 +1,7 @@
+# TAGLINE
+
+X11 keyboard and mouse automation
+
 # TLDR
 
 **Search** for windows by name

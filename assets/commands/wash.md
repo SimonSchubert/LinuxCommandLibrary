@@ -1,3 +1,7 @@
+# TAGLINE
+
+wasmCloud development and management CLI
+
 # TLDR
 
 **Create new WebAssembly component project**

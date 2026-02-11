@@ -1,3 +1,7 @@
+# TAGLINE
+
+Modern tree replacement with editor integration
+
 # TLDR
 
 **Show directory tree**
@@ -50,15 +54,11 @@
 
 # DESCRIPTION
 
-**tre** shows directory trees. It's a modern tree replacement.
+**tre** is a modern replacement for the classic tree command, written in Rust. It displays directory structures in a tree format with additional features designed for developer workflows, including editor integration and gitignore awareness.
 
-Editor integration. Open file by number.
+The editor integration mode (**-e**) numbers each file in the output and creates a shell alias that opens the corresponding file in your editor by number. Portable path mode (**-p**) outputs paths that can be directly copied and pasted into other commands.
 
-Portable paths. Copy-paste ready.
-
-Clean output. Modern design.
-
-Gitignore aware. Respects ignores.
+By default, tre respects `.gitignore` rules, filtering out ignored files for a cleaner view of project structures. Hidden files are excluded unless explicitly requested with **-a**.
 
 # CAVEATS
 

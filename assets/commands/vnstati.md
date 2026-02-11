@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate network traffic graph images
+
 # TLDR
 
 Output a **summary** of the last 2 months, days, and all-time

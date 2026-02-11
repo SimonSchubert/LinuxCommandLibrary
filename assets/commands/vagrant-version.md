@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display installed Vagrant version
+
 # TLDR
 
 **Show Vagrant version**

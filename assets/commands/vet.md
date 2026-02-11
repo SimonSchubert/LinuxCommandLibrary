@@ -1,3 +1,7 @@
+# TAGLINE
+
+Go static analysis tool
+
 # TLDR
 
 **Check package**
@@ -43,15 +47,9 @@
 
 # DESCRIPTION
 
-**go vet** checks Go code. It finds bugs and issues.
+**go vet** performs static analysis on Go source code to find common programming mistakes that the compiler does not catch. It checks for issues such as incorrect printf format strings, unreachable code, suspicious function calls, and misuse of sync primitives.
 
-Static analysis. No execution.
-
-Common mistakes. Printf args, etc.
-
-Build tag checking. Correct constraints.
-
-Part of Go tools. Standard tool.
+The tool is part of the standard Go toolchain and runs without executing the code. It is typically used alongside tests and linters as part of a continuous integration workflow to catch bugs early in development.
 
 # CAVEATS
 

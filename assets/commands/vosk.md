@@ -1,3 +1,7 @@
+# TAGLINE
+
+Offline speech recognition toolkit
+
 # TLDR
 
 **Transcribe audio to text file**

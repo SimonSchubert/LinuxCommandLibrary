@@ -1,3 +1,7 @@
+# TAGLINE
+
+TiDB component and cluster manager
+
 # TLDR
 
 **Start local TiDB playground**

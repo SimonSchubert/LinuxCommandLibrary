@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compile terminfo terminal descriptions
+
 # TLDR
 
 **Compile** and install terminfo

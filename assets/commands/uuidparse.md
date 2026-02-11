@@ -1,3 +1,7 @@
+# TAGLINE
+
+Parse and display UUID information
+
 # TLDR
 
 **Parse** UUIDs

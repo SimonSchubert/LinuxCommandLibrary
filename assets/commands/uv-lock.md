@@ -1,3 +1,7 @@
+# TAGLINE
+
+Resolve and lock project dependencies
+
 # TLDR
 
 **Create/update lockfile**

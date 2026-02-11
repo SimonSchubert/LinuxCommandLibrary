@@ -1,3 +1,7 @@
+# TAGLINE
+
+VNC-accessible virtual X server
+
 # TLDR
 
 **Start VNC server on display :1**

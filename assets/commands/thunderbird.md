@@ -1,3 +1,7 @@
+# TAGLINE
+
+Mozilla email and calendar client
+
 # TLDR
 
 **Start Thunderbird**
@@ -50,17 +54,9 @@
 
 # DESCRIPTION
 
-**thunderbird** is an email client. It's Mozilla's mail application.
+**thunderbird** is Mozilla's free, open-source email client that supports multiple email accounts, calendar integration, an address book, RSS feed reading, and built-in OpenPGP encryption for secure messaging.
 
-Email management. Multiple accounts.
-
-Calendar integration. Lightning addon.
-
-Address book. Contact management.
-
-RSS reader. News feeds.
-
-Encryption support. OpenPGP built-in.
+The application supports IMAP, POP3, and SMTP protocols, and can be extended with add-ons for additional functionality. It uses profiles to store settings and data, manageable through the **-ProfileManager** flag, and can be launched in **-safe-mode** to troubleshoot issues with extensions.
 
 # CAVEATS
 

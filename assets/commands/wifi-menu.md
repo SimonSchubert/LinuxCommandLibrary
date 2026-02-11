@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interactive wireless network connection dialog
+
 # TLDR
 
 Connect **interactively**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Wine graphical configuration tool
+
 # TLDR
 
 **Open Wine configuration**

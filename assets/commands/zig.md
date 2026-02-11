@@ -1,3 +1,7 @@
+# TAGLINE
+
+Systems programming language and compiler
+
 # TLDR
 
 **Compile and run a file**

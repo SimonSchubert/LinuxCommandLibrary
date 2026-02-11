@@ -1,3 +1,7 @@
+# TAGLINE
+
+Validate TLDR page formatting
+
 # TLDR
 
 **Lint file**
@@ -43,15 +47,9 @@
 
 # DESCRIPTION
 
-**tldr-lint** validates TLDR pages. It checks formatting.
+**tldr-lint** validates TLDR pages against the project's formatting guidelines, checking for structural correctness, proper markdown syntax, and style compliance. Each rule is identified by a code (e.g., TLDR001) and can be selectively ignored with the **-I** flag.
 
-TLDR page validation. Format compliance.
-
-Multiple rules. Structure and style.
-
-Directory scanning. Batch checking.
-
-CI integration. Automated validation.
+The tool can lint individual files or scan entire directories for batch validation, making it suitable for CI pipelines that enforce consistent page formatting across the tldr-pages repository. Output formats include plain text and JSON for integration with other tools.
 
 # CAVEATS
 

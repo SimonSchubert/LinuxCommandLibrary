@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remote control interface for Unbound DNS resolver
+
 # TLDR
 
 **Check server status**

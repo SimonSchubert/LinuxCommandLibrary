@@ -1,3 +1,7 @@
+# TAGLINE
+
+Set default paper size for TeX programs
+
 # TLDR
 
 **Show current paper size**

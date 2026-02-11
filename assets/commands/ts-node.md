@@ -1,3 +1,7 @@
+# TAGLINE
+
+TypeScript execution environment for Node.js
+
 # TLDR
 
 **Run TypeScript file**
@@ -69,17 +73,11 @@
 
 # DESCRIPTION
 
-**ts-node** executes TypeScript directly without precompilation. It compiles TypeScript on-the-fly and runs the result.
+**ts-node** is a TypeScript execution engine for Node.js that compiles and runs TypeScript files on-the-fly without a separate build step. By default it performs full type checking at runtime, reporting type errors before execution begins.
 
-Type checking happens at runtime by default. Errors are reported before execution starts.
+The **--transpile-only** mode skips type checking for significantly faster startup, which is useful during development when your editor already provides type feedback. ESM mode (**--esm**) handles ES module imports and is needed when working with import/export syntax natively. The built-in REPL provides an interactive TypeScript environment for experimentation.
 
-Transpile-only mode skips type checking for faster startup. Type errors aren't caught but execution is quicker.
-
-ESM mode handles ES module imports. It's required when using import/export syntax without bundling.
-
-The REPL provides interactive TypeScript execution. Code is type-checked and executed immediately.
-
-Integration with ts-node-dev or nodemon enables automatic restart on file changes during development.
+Configuration is loaded from tsconfig.json by default, and a custom config can be specified with **-P**. The tool integrates well with development workflows using ts-node-dev or nodemon for automatic restart on file changes.
 
 # CAVEATS
 

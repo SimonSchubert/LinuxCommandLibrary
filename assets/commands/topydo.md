@@ -1,3 +1,7 @@
+# TAGLINE
+
+Feature-rich todo.txt task manager
+
 # TLDR
 
 **List tasks**
@@ -50,15 +54,9 @@
 
 # DESCRIPTION
 
-**topydo** manages todo.txt files. It's a powerful CLI.
+**topydo** is a feature-rich command-line todo list manager that uses the todo.txt format while adding capabilities like recurring tasks, relative date handling, and task dependencies. It maintains full compatibility with other todo.txt tools and clients.
 
-todo.txt compatible. Standard format.
-
-Recurrence support. Repeating tasks.
-
-Relative dates. Flexible scheduling.
-
-Interactive prompt. Continuous mode.
+The interactive **prompt** mode provides a continuous session for managing tasks without restarting the tool. Tasks can be postponed with relative date expressions like "1w" for one week, and recurring tasks automatically create new instances when completed.
 
 # CAVEATS
 

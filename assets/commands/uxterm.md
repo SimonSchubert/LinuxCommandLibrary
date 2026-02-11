@@ -1,3 +1,7 @@
+# TAGLINE
+
+Launch xterm with Unicode UTF-8 support
+
 # TLDR
 
 **Start Unicode terminal**

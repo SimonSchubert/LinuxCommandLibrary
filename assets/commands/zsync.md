@@ -1,3 +1,7 @@
+# TAGLINE
+
+Partial differential file downloader over HTTP
+
 # TLDR
 
 **Download** file

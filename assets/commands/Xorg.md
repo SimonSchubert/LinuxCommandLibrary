@@ -1,3 +1,7 @@
+# TAGLINE
+
+X Window System display server
+
 # TLDR
 
 **Start X server** on default display

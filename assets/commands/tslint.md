@@ -1,3 +1,7 @@
+# TAGLINE
+
+Deprecated TypeScript linter
+
 # TLDR
 
 **Lint files**
@@ -47,15 +51,11 @@
 
 # DESCRIPTION
 
-**tslint** lints TypeScript. It checks code quality.
+**TSLint** was a static analysis tool for TypeScript that checked code for readability, maintainability, and functional correctness. It enforced configurable rules covering style conventions, potential errors, and best practices.
 
-Rule-based checking. Configurable rules.
+The tool supported automatic fixing of many rule violations and integrated with editors and CI systems. Configuration was managed through a tslint.json file that specified which rules to enable and their severity levels.
 
-Auto-fixing. Correct issues.
-
-Integration ready. Editor plugins.
-
-Deprecated now. Use ESLint.
+TSLint was deprecated in 2019 in favor of **ESLint** with the **typescript-eslint** plugin, which provides the same TypeScript linting capabilities within the more widely adopted ESLint ecosystem.
 
 # CAVEATS
 

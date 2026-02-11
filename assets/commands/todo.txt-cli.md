@@ -1,3 +1,7 @@
+# TAGLINE
+
+Shell-based todo.txt task management
+
 # TLDR
 
 **Add a new task**

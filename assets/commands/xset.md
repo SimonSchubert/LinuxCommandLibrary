@@ -1,3 +1,7 @@
+# TAGLINE
+
+Configure X server preferences
+
 # TLDR
 
 **Disable** screensaver

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interactive X11 font selector
+
 # TLDR
 
 **Launch font selector**

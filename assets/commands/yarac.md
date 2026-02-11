@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compile YARA rules to binary
+
 # TLDR
 
 **Compile rules**
@@ -29,15 +33,11 @@
 
 # DESCRIPTION
 
-**yarac** compiles YARA rules. It creates optimized binaries.
+**yarac** compiles YARA rule source files into an optimized binary format. Precompiled rules load significantly faster than parsing source files each time, which matters when scanning large file sets or running rules on production systems.
 
-Rule compilation. Faster scanning.
+Multiple rule files can be combined into a single compiled output, consolidating an entire rule set into one deployable binary. External variables can be defined at compile time with **-d** to parameterize rules without modifying the source.
 
-Precompiled rules. Deploy ready.
-
-Multiple inputs. Combine rules.
-
-Part of YARA. Malware tool.
+Compiled rule files are not portable across different YARA versions, so rules must be recompiled after upgrading YARA. The **-w** flag enables warnings during compilation to catch potential issues in rule definitions before deployment.
 
 # CAVEATS
 

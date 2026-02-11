@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display WebAssembly binary file information
+
 # TLDR
 
 **Show all information**

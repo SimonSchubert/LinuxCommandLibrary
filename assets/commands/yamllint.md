@@ -1,3 +1,7 @@
+# TAGLINE
+
+YAML syntax and style linter
+
 # TLDR
 
 **Lint a YAML file**

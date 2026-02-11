@@ -1,3 +1,7 @@
+# TAGLINE
+
+Execute command periodically and display output
+
 # TLDR
 
 **Execute a command every 2 seconds** (default)

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Next-generation wget with HTTP/2 support
+
 # TLDR
 
 **Download file**
@@ -67,17 +71,11 @@
 
 # DESCRIPTION
 
-**wget2** is the next generation of wget. It adds HTTP/2 and parallel downloads.
+**wget2** is the next-generation version of GNU Wget, rebuilt to support modern protocols and parallel downloading. It adds native HTTP/2 support with multiplexed streams, enabling more efficient communication with servers that support the protocol.
 
-Parallel downloading speeds up multiple files. Connections reused.
+Parallel downloading fetches multiple files simultaneously over reused connections, significantly speeding up batch downloads compared to the sequential approach of the original wget. Recursive downloading and website mirroring are supported with the same familiar -r and -m flags.
 
-HTTP/2 support improves efficiency. Multiplexed streams.
-
-Recursive downloading mirrors sites. Depth and scope controllable.
-
-Resume continues interrupted downloads. Range requests used.
-
-Compatibility with wget maintained. Same basic interface.
+The tool maintains command-line compatibility with wget for basic operations like downloading files, resuming interrupted transfers, and recursive mirroring, while improving performance through its modernized network stack.
 
 # CAVEATS
 

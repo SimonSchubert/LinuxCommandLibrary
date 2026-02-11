@@ -1,3 +1,7 @@
+# TAGLINE
+
+Prepend timestamps to command output lines
+
 # TLDR
 
 **Add timestamps** to command output

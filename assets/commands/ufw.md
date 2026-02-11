@@ -1,3 +1,7 @@
+# TAGLINE
+
+Uncomplicated Firewall management interface
+
 # TLDR
 
 **Enable** ufw
@@ -111,6 +115,20 @@ Deny **UDP** traffic on port range
 
 **logging low|medium|high|full**
 > Set logging verbosity level
+
+# CONFIGURATION
+
+**/etc/ufw/ufw.conf**
+> Main configuration file controlling enable/disable state, logging level, and IPv6 support.
+
+**/etc/ufw/before.rules**
+> Custom iptables rules applied before ufw-managed rules.
+
+**/etc/ufw/after.rules**
+> Custom iptables rules applied after ufw-managed rules.
+
+**/etc/default/ufw**
+> Default policy settings and input/output/forward policy configuration.
 
 # CAVEATS
 

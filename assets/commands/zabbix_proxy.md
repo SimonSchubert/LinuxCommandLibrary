@@ -1,3 +1,7 @@
+# TAGLINE
+
+Distributed Zabbix monitoring data proxy
+
 # TLDR
 
 **Start proxy daemon**

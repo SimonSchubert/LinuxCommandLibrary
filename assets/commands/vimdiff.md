@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compare files side-by-side in Vim
+
 # TLDR
 
 **Compare two files** side by side

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Graphical interface for Nmap scanner
+
 # TLDR
 
 **Launch GUI**

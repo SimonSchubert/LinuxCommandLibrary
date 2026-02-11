@@ -1,3 +1,7 @@
+# TAGLINE
+
+Delete storage pool data
+
 # TLDR
 
 **Delete pool storage**

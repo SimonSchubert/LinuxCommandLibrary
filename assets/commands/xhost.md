@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage X server access control
+
 # TLDR
 
 **Display** the current access control list

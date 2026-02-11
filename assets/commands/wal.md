@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate color schemes from images
+
 # TLDR
 
 **Generate colors from image**
@@ -50,15 +54,11 @@
 
 # DESCRIPTION
 
-**wal** generates color schemes. It uses pywal.
+**wal** (pywal) generates color schemes by extracting dominant colors from wallpaper images and applies them to the terminal emulator, shell, and other applications. It creates a cohesive visual theme across the desktop environment based on a single source image.
 
-Image-based colors. Extract palette.
+The extracted color palette is applied to terminal colors in real time and can be used to generate configuration files for other programs through a template system. This allows applications like i3, polybar, rofi, and many others to automatically adopt the same color scheme.
 
-Terminal colors. Apply to shell.
-
-Template support. Generate configs.
-
-Theme cache. Quick switching.
+Generated themes are cached for quick switching, and previous color schemes can be restored on login. Both light and dark color variants are supported, and the wallpaper-setting step can be skipped when only the colors are needed.
 
 # CAVEATS
 

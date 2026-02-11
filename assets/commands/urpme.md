@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove packages on Mageia Linux
+
 # TLDR
 
 **Uninstall** package

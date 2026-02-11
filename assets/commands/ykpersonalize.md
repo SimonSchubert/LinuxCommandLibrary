@@ -1,3 +1,7 @@
+# TAGLINE
+
+Configure YubiKey authentication slots
+
 # TLDR
 
 **Show YubiKey status**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display Vulkan GPU and driver information
+
 # TLDR
 
 **Show Vulkan information summary**

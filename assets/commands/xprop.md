@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display X11 window properties
+
 # TLDR
 
 **Click to select a window** and display its properties

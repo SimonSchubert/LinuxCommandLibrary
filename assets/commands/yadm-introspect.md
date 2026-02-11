@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display internal yadm information
+
 # TLDR
 
 **Show yadm configuration**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create and modify ZIP archives
+
 # TLDR
 
 **Create a ZIP archive**

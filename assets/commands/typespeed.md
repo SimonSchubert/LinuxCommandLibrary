@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal typing speed game
+
 # TLDR
 
 **Start the game**

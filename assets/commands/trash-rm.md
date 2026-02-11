@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove specific files from trash
+
 # TLDR
 
 This command is documented with **trash**

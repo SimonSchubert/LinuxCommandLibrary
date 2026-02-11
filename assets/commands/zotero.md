@@ -1,3 +1,7 @@
+# TAGLINE
+
+Open-source reference management software
+
 # TLDR
 
 **Launch Zotero**

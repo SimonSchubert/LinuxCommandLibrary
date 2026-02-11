@@ -1,3 +1,7 @@
+# TAGLINE
+
+Query domain and IP registration information
+
 # TLDR
 
 **Look up domain registration info**

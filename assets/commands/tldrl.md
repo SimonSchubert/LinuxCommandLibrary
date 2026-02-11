@@ -1,3 +1,7 @@
+# TAGLINE
+
+Rust-based TLDR pages client
+
 # TLDR
 
 **Show page**
@@ -43,15 +47,9 @@
 
 # DESCRIPTION
 
-**tldrl** displays TLDR pages. It's a TLDR client.
+**tldrl** is a fast, Rust-based client for accessing TLDR pages, the community-maintained collection of simplified command-line documentation focused on practical examples. It caches pages locally for offline access and quick lookups.
 
-Simplified man pages. Practical examples.
-
-Local caching. Offline access.
-
-Platform support. OS-specific pages.
-
-Fast lookups. Rust implementation.
+The client supports platform-specific pages for Linux, macOS, and Windows, and provides search functionality to find relevant commands by keyword. The cache can be updated with **--update** to fetch the latest pages from the TLDR repository.
 
 # CAVEATS
 

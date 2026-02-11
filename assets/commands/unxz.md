@@ -1,3 +1,7 @@
+# TAGLINE
+
+Decompress XZ compressed files
+
 # TLDR
 
 **Decompress file**
@@ -43,15 +47,11 @@
 
 # DESCRIPTION
 
-**unxz** decompresses XZ files. It extracts .xz.
+**unxz** decompresses files that were compressed with the XZ format, which uses the LZMA2 algorithm for high compression ratios. It is functionally equivalent to running **xz --decompress** and is provided as a convenience command within the xz-utils package.
 
-XZ decompression. High compression ratio.
+By default, unxz replaces the compressed .xz file with the decompressed output, removing the original. The **-k** flag preserves the original compressed file, and **-c** writes decompressed data to standard output for piping to other commands.
 
-Equivalent to xz -d. Same tool.
-
-Replaces original. Unless -k used.
-
-LZMA2 algorithm. Modern compression.
+XZ is widely used in the Linux ecosystem for distributing source code tarballs, kernel sources, and package archives due to its excellent compression ratio. While decompression is fast, XZ compression is slower and more memory-intensive than alternatives like gzip or zstd.
 
 # CAVEATS
 

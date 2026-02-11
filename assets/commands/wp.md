@@ -1,3 +1,7 @@
+# TAGLINE
+
+WordPress command-line management tool
+
 # TLDR
 
 **Show WordPress info**
@@ -57,17 +61,9 @@
 
 # DESCRIPTION
 
-**wp** (WP-CLI) manages WordPress from command line. It handles all WordPress administration.
+**wp** (WP-CLI) is the official command-line interface for WordPress administration. It provides complete control over WordPress installations from the terminal, including core updates, plugin and theme management, user administration, and database operations.
 
-Core updates and management. Install, update, verify.
-
-Plugin and theme operations. Install, activate, delete.
-
-User administration. Create, modify, delete users.
-
-Database operations. Export, import, search-replace.
-
-Content management. Posts, pages, comments.
+Common workflows include installing and activating plugins, creating users with specific roles, exporting and importing databases, and performing search-replace operations across the database for tasks like domain migration. The tool can also manage posts, pages, comments, and virtually every aspect of a WordPress site without needing a web browser.
 
 # CAVEATS
 

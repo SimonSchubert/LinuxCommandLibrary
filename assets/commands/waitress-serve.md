@@ -1,3 +1,7 @@
+# TAGLINE
+
+Pure-Python WSGI production server
+
 # TLDR
 
 **Serve WSGI app**
@@ -43,15 +47,11 @@
 
 # DESCRIPTION
 
-**waitress-serve** runs WSGI applications. It's a production server.
+**waitress-serve** is a production-quality WSGI server for Python web applications, implemented entirely in pure Python with no C extension dependencies. It serves frameworks like Flask, Django, and Pyramid and runs on any platform including Windows, Linux, and macOS.
 
-Pure Python. No dependencies.
+The server uses a multi-threaded architecture with a configurable number of worker threads to handle concurrent requests. It accepts connections on a TCP port or Unix socket and supports URL prefix configuration for applications mounted at sub-paths behind a reverse proxy.
 
-Windows compatible. Cross-platform.
-
-Production ready. Stable and tested.
-
-Thread-based. Multiple workers.
+Waitress is designed to be simple and reliable for production deployments, requiring minimal configuration while providing solid performance. It is commonly used behind a reverse proxy like Nginx for static file serving and SSL termination.
 
 # CAVEATS
 

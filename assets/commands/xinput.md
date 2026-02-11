@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage X11 input devices
+
 # TLDR
 
 **List** all input devices

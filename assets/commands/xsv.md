@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fast CSV command-line toolkit
+
 # TLDR
 
 **Display CSV headers**

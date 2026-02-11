@@ -1,3 +1,7 @@
+# TAGLINE
+
+Ultralytics object detection and computer vision
+
 # TLDR
 
 **Run detection**
@@ -49,15 +53,11 @@
 
 # DESCRIPTION
 
-**yolo** runs Ultralytics YOLO. It does object detection.
+**yolo** is the CLI for Ultralytics YOLOv8, a state-of-the-art computer vision framework. It provides commands for object detection, instance segmentation, and image classification tasks from the terminal.
 
-Object detection. Find objects.
+The tool supports a complete workflow: **train** builds models from datasets, **val** evaluates model accuracy, **predict** runs inference on images or video, and **export** converts models to deployment formats like ONNX and TensorRT. The **track** mode performs multi-object tracking on video streams.
 
-Segmentation. Pixel-level.
-
-Classification. Categorize images.
-
-Real-time. Fast inference.
+Each command accepts a task type (detect, segment, classify) and a mode. Pre-trained models can be used directly for inference, or fine-tuned on custom datasets. GPU acceleration is supported through PyTorch for real-time performance.
 
 # CAVEATS
 

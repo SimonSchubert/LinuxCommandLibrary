@@ -1,3 +1,7 @@
+# TAGLINE
+
+Update XDG user directory configuration
+
 # TLDR
 
 **Change** XDG's DESKTOP directory to a specified directory

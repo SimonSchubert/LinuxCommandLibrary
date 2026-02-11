@@ -1,3 +1,7 @@
+# TAGLINE
+
+Secret and credential scanner for code
+
 # TLDR
 
 **Scan git repository**

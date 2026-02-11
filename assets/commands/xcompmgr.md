@@ -1,3 +1,7 @@
+# TAGLINE
+
+X11 compositing window manager
+
 # TLDR
 
 **Start with default settings** (shadows and fading)

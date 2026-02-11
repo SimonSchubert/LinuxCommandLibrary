@@ -1,3 +1,7 @@
+# TAGLINE
+
+HashiCorp secrets management tool
+
 # TLDR
 
 **Start the Vault server** in development mode

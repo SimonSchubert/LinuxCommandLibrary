@@ -1,3 +1,7 @@
+# TAGLINE
+
+Record terminal sessions with timing
+
 # TLDR
 
 **Record terminal session** to default file (ttyrecord)

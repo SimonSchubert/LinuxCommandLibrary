@@ -1,3 +1,7 @@
+# TAGLINE
+
+Wallpaper-based colorscheme manager
+
 # TLDR
 
 **Add wallpaper to collection**

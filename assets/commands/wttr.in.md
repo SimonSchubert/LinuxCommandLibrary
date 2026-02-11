@@ -1,3 +1,7 @@
+# TAGLINE
+
+Console weather forecast service
+
 # TLDR
 
 **Get weather for current location** (based on IP)

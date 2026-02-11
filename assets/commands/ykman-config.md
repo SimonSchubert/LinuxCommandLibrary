@@ -1,3 +1,7 @@
+# TAGLINE
+
+Configure YubiKey device settings
+
 # TLDR
 
 **Show device info**

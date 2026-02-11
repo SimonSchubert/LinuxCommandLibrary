@@ -1,3 +1,7 @@
+# TAGLINE
+
+Build Rust projects for WebAssembly
+
 # TLDR
 
 **Build Rust project for WebAssembly**

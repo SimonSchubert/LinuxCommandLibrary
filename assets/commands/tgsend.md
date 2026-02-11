@@ -1,3 +1,7 @@
+# TAGLINE
+
+Send Telegram messages via bot API
+
 # TLDR
 
 **Send message**
@@ -50,15 +54,9 @@
 
 # DESCRIPTION
 
-**tgsend** sends Telegram messages. It uses Bot API.
+**tgsend** sends messages, files, and photos to Telegram chats using the Telegram Bot API. It is designed for automation and scripting, enabling notifications, alerts, and file delivery from the command line or cron jobs.
 
-Bot messaging. Automated sends.
-
-File attachments. Documents, photos.
-
-Caption support. Media with text.
-
-Silent messages. No notification.
+Messages can be sent to specific chats using their ID, and media attachments can include captions via the **-m** flag. The **-s** flag sends messages silently without triggering a notification on the recipient's device. A bot token is required and can be passed via the **-t** flag or environment configuration.
 
 # CAVEATS
 

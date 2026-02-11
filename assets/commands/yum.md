@@ -1,3 +1,7 @@
+# TAGLINE
+
+Red Hat package manager
+
 # TLDR
 
 This command is an alias for **dnf** on modern distros.

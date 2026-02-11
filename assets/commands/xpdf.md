@@ -1,3 +1,7 @@
+# TAGLINE
+
+Lightweight X11 PDF viewer
+
 # TLDR
 
 **Open PDF file**

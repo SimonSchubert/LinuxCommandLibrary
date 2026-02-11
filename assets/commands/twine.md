@@ -1,3 +1,7 @@
+# TAGLINE
+
+Upload Python packages to PyPI
+
 # TLDR
 
 **Upload package to PyPI**
@@ -76,6 +80,17 @@ TestPyPI allows testing the upload process without affecting the real PyPI. Pack
 Authentication uses username/password, API tokens, or keyring integration. API tokens are recommended for security.
 
 HTTPS is always used for uploads. Previous tools allowed insecure uploads, which twine explicitly prevents.
+
+# CONFIGURATION
+
+**~/.pypirc**
+> Repository credentials and URLs for PyPI, TestPyPI, and custom indexes.
+
+**TWINE_USERNAME**
+> Environment variable for authentication username.
+
+**TWINE_PASSWORD**
+> Environment variable for authentication password or API token.
 
 # CAVEATS
 

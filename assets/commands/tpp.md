@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal-based text presentations
+
 # TLDR
 
 **Run a presentation**

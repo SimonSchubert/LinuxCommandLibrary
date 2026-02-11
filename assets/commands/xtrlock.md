@@ -1,3 +1,7 @@
+# TAGLINE
+
+Transparent X display screen locker
+
 # TLDR
 
 **Lock** display

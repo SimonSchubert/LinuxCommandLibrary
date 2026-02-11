@@ -1,3 +1,7 @@
+# TAGLINE
+
+Lightweight YAML and JSON processor
+
 # TLDR
 
 **Read a value** from a YAML file

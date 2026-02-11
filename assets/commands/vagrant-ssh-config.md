@@ -1,3 +1,7 @@
+# TAGLINE
+
+Output SSH configuration for Vagrant VMs
+
 # TLDR
 
 **Show SSH config**

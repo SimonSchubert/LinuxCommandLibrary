@@ -1,3 +1,7 @@
+# TAGLINE
+
+Optimize WebAssembly binary modules
+
 # TLDR
 
 **Optimize WASM**
@@ -46,15 +50,11 @@
 
 # DESCRIPTION
 
-**wasm-opt** optimizes WebAssembly. It's part of Binaryen.
+**wasm-opt** is a WebAssembly optimizer from the Binaryen toolkit that applies various optimization passes to reduce module size and improve execution speed. It processes .wasm binary files and outputs optimized versions suitable for production deployment.
 
-Size reduction. Smaller modules.
+Optimization levels range from -O (standard) through -O4 (maximum), with each level enabling progressively more aggressive transformations. The -Os flag optimizes specifically for code size, which is important for web delivery where download size affects load time. Available passes include dead code elimination, inlining, constant folding, and many WebAssembly-specific optimizations.
 
-Speed optimization. Faster execution.
-
-Multiple passes. Various optimizations.
-
-Validation included. Check correctness.
+The tool can also validate modules for specification conformance and print module contents in text format for inspection. It is commonly used as a post-processing step in WebAssembly build pipelines after compilation from source languages.
 
 # CAVEATS
 

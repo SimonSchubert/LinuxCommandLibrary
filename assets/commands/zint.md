@@ -1,3 +1,7 @@
+# TAGLINE
+
+Multi-format barcode generator
+
 # TLDR
 
 **Generate QR code**

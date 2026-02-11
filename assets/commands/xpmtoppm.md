@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert XPM pixmaps to PPM format
+
 # TLDR
 
 **Convert XPM to PPM**

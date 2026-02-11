@@ -1,3 +1,7 @@
+# TAGLINE
+
+Network connection viewer and monitor
+
 # TLDR
 
 **Show network connections**
@@ -46,15 +50,11 @@
 
 # DESCRIPTION
 
-**trawl** shows network connections. It's a network monitoring tool.
+**trawl** is a network connection viewer that displays information about active TCP connections on a system. It shows details including local and remote addresses, connection state, and the processes associated with each connection.
 
-Connection display. Active sockets.
+The watch mode provides continuous updates, refreshing the connection list at regular intervals for real-time monitoring. Connections can be filtered by process ID to focus on a specific application's network activity, and the listening-only mode shows sockets waiting for incoming connections.
 
-Process association. What's connecting.
-
-Watch mode. Continuous updates.
-
-Clean output. Easy to read.
+Output is designed to be clean and readable, with options for numeric display to avoid DNS resolution delays.
 
 # CAVEATS
 

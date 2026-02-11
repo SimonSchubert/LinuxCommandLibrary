@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert Wireless Bitmap to PBM format
+
 # TLDR
 
 **Convert WBMP to PBM**

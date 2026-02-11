@@ -1,3 +1,7 @@
+# TAGLINE
+
+Keyboard-driven mouse cursor control
+
 # TLDR
 
 Run in **normal** mode

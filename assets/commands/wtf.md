@@ -1,3 +1,7 @@
+# TAGLINE
+
+Acronym lookup and expansion
+
 # TLDR
 
 **Expand** acronym

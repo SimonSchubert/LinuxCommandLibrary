@@ -1,3 +1,7 @@
+# TAGLINE
+
+Unicode-aware LaTeX to PDF compiler
+
 # TLDR
 
 **Compile LaTeX document to PDF**

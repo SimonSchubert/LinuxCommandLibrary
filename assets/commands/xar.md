@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extensible archive format tool
+
 # TLDR
 
 **Create archive**
@@ -46,15 +50,9 @@
 
 # DESCRIPTION
 
-**xar** creates XAR archives. It's extensible archive format.
+**xar** (eXtensible ARchive) creates and extracts archives using a format developed by Apple, primarily used for macOS installer packages. The format uses an XML-based table of contents that supports rich metadata and multiple compression algorithms per file.
 
-Apple-developed. macOS packages.
-
-XML table of contents. Metadata rich.
-
-Compression options. Multiple algorithms.
-
-Signature support. Code signing.
+The archive format also includes signature support for code signing and integrity verification. While primarily associated with macOS, xar is available on Linux for working with macOS package files and other XAR archives.
 
 # CAVEATS
 

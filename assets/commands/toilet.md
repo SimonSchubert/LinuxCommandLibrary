@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display colorful ASCII art text banners
+
 # TLDR
 
 Generate **ASCII art** for text

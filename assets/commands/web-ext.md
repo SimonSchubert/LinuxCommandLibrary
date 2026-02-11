@@ -1,3 +1,7 @@
+# TAGLINE
+
+Firefox WebExtension development tool
+
 # TLDR
 
 **Run extension in Firefox**
@@ -63,15 +67,11 @@
 
 # DESCRIPTION
 
-**web-ext** develops Firefox extensions. It runs, builds, and signs extensions.
+**web-ext** is Mozilla's official command-line tool for developing, testing, and publishing Firefox WebExtensions. It streamlines the extension development workflow by providing commands for running, building, linting, and signing extensions.
 
-Run mode launches Firefox with extension loaded. Auto-reloads on changes.
+The run command launches Firefox with the extension temporarily loaded and automatically reloads it when source files change, enabling rapid development iteration. The build command packages the extension into a .zip file ready for submission to addons.mozilla.org (AMO), and the lint command checks for common issues like manifest errors and deprecated API usage.
 
-Building creates distribution zip. Ready for submission.
-
-Linting checks for common issues. Manifest errors, deprecated APIs.
-
-Signing submits to Mozilla. Required for distribution outside AMO.
+The sign command submits the extension to Mozilla for signing, which is required for distribution outside AMO. Authentication requires an AMO API key and secret obtained from the Firefox developer portal.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Insert text editor into pipelines
+
 # TLDR
 
 **Edit pipe content**
@@ -27,15 +31,9 @@
 
 # DESCRIPTION
 
-**vipe** inserts an editor into a pipeline. It captures stdin, opens editor, outputs result.
+**vipe** inserts a text editor into a Unix pipeline. It reads standard input into a temporary file, opens it in the editor specified by the EDITOR or VISUAL environment variable, and writes the edited content to standard output when the editor exits.
 
-Data flows into editor. Make changes interactively.
-
-Save and quit sends to stdout. Continue pipeline processing.
-
-Useful for manual transformation. Fix data before processing.
-
-Debug pipelines interactively. Inspect and modify mid-stream.
+This allows interactive modification of data flowing through a pipeline, which is useful for manually fixing input before it reaches the next command, debugging pipeline data, or performing one-off transformations that are easier to do in an editor than with sed or awk.
 
 # EXAMPLE
 

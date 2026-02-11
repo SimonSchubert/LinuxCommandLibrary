@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert Unix line endings to classic Mac format
+
 # TLDR
 
 **Change** the line endings of a file to macOS-style

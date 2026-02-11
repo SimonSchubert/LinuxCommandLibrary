@@ -1,3 +1,7 @@
+# TAGLINE
+
+Rust WebAssembly application bundler
+
 # TLDR
 
 **Build project**
@@ -46,15 +50,16 @@
 
 # DESCRIPTION
 
-**trunk** builds Rust web apps. It's for WASM projects.
+**Trunk** is a build tool for Rust WebAssembly applications that handles compilation, bundling, and serving. It compiles Rust code to WebAssembly, processes assets like CSS and JavaScript, and generates the HTML and JavaScript glue code needed to run WASM modules in the browser.
 
-WASM bundling. Rust to WebAssembly.
+The development server provides hot reloading, automatically rebuilding and refreshing the browser when source files change. Release builds apply optimizations including WASM size reduction for production deployment.
 
-Asset pipeline. CSS, JS handling.
+Trunk integrates with wasm-bindgen for JavaScript interop and works with frameworks like Yew, Leptos, and Seed. Configuration is managed through a Trunk.toml file in the project root.
 
-Dev server. Hot reloading.
+# CONFIGURATION
 
-Build optimization. Release mode.
+**Trunk.toml**
+> Project configuration file specifying build options, proxy settings, and asset pipeline rules.
 
 # CAVEATS
 

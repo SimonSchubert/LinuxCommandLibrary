@@ -1,3 +1,7 @@
+# TAGLINE
+
+KubeVela application delivery CLI
+
 # TLDR
 
 **Deploy application**
@@ -50,15 +54,9 @@
 
 # DESCRIPTION
 
-**vela** manages KubeVela apps. It's the CLI client.
+**vela** is the command-line client for KubeVela, an application delivery platform built on the Open Application Model (OAM). It manages the full lifecycle of applications on Kubernetes, from deployment and scaling to monitoring and rollback.
 
-Application deployment. OAM-based.
-
-Kubernetes native. Cloud resources.
-
-Traits and policies. Extend behavior.
-
-Multi-cluster. Deploy anywhere.
+Applications are defined with components, traits, and policies that abstract away infrastructure complexity. The platform supports multi-cluster deployment, allowing applications to be distributed across different Kubernetes clusters and cloud providers from a single definition.
 
 # CAVEATS
 

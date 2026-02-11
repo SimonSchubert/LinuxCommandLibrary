@@ -1,3 +1,7 @@
+# TAGLINE
+
+High-performance monorepo build system
+
 # TLDR
 
 **Run task**
@@ -64,17 +68,11 @@
 
 # DESCRIPTION
 
-**turbo** (Turborepo) runs monorepo tasks efficiently. It caches and parallelizes builds.
+**Turborepo** is a high-performance build system for JavaScript and TypeScript monorepos. It executes tasks like build, test, and lint across multiple packages while respecting inter-package dependencies and maintaining topological order automatically.
 
-Task running respects dependencies. topological order maintained.
+The tool uses content-aware hashing to cache task outputs, skipping work when inputs haven't changed. This caching works locally and can be shared across a team via remote caching, so developers don't rebuild what others have already built. The **--filter** flag targets specific packages for focused development.
 
-Caching skips unchanged work. Content hashing identifies changes.
-
-Filtering targets specific packages. Patterns select subsets.
-
-Graph visualization shows structure. Understand task relationships.
-
-Remote caching shares across team. Avoid rebuilding others' work.
+Configuration is defined in **turbo.json** at the repository root, specifying task dependencies and caching behavior. The **--graph** flag visualizes the dependency structure, and **prune** creates minimal subsets of the monorepo for efficient deployment.
 
 # CAVEATS
 

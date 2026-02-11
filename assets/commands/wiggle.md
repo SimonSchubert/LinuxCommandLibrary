@@ -1,3 +1,7 @@
+# TAGLINE
+
+Apply rejected patches with conflict resolution
+
 # TLDR
 
 **Apply rejected patch**
@@ -39,15 +43,11 @@
 
 # DESCRIPTION
 
-**wiggle** applies failed patches. It handles conflicts.
+**wiggle** applies patches that have been rejected by the standard patch utility due to minor conflicts between the patch context and the current file. Where patch requires exact context matching, wiggle performs word-level analysis to find where changes should be applied even when surrounding lines have shifted or been modified.
 
-Rejected patch recovery. When patch fails.
+The tool supports three-way merging of files and can work with both unified diff files and .rej reject files produced by failed patch operations. When conflicts cannot be resolved automatically, an interactive browse mode lets users review and resolve remaining conflicts manually.
 
-Word-level analysis. Finer granularity.
-
-Three-way merge. Combine changes.
-
-Interactive mode. Browse conflicts.
+This makes wiggle particularly valuable for maintaining long-lived patch series against evolving codebases, where patches frequently fail to apply cleanly due to unrelated changes in nearby code.
 
 # CAVEATS
 

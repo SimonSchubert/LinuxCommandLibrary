@@ -1,3 +1,7 @@
+# TAGLINE
+
+Open files with preferred application
+
 # TLDR
 
 Open **current directory** in file explorer

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Ethereum smart contract development framework
+
 # TLDR
 
 **Initialize project**
@@ -67,17 +71,22 @@
 
 # DESCRIPTION
 
-**truffle** develops Ethereum smart contracts. It provides complete development workflow.
+**Truffle** is a development framework for Ethereum smart contracts that provides a complete workflow from compilation through deployment and testing. It compiles Solidity contracts into bytecode and ABI artifacts, manages deployment through ordered migration scripts, and supports both JavaScript and Solidity test suites.
 
-Compilation converts Solidity to bytecode. Artifacts contain ABI and bytecode.
+The built-in development blockchain (truffle develop) provides a local Ethereum environment with instant transactions and pre-funded accounts, eliminating gas costs during development. The interactive console connects to any configured network and allows direct interaction with deployed contracts.
 
-Migrations deploy contracts. Scripts run in order.
+Projects are organized with a standard directory structure including contracts, migrations, and test directories. Network configurations in truffle-config.js define deployment targets from local development to public testnets and mainnet.
 
-Testing verifies contract behavior. JavaScript and Solidity tests.
+# CONFIGURATION
 
-Development blockchain runs locally. Instant transactions, no gas costs.
+**truffle-config.js**
+> Main project configuration defining network endpoints, compiler settings, and migration options.
 
-Console interacts with contracts. Call functions directly.
+**contracts/**
+> Directory containing Solidity smart contract source files.
+
+**migrations/**
+> Directory containing numbered deployment scripts executed in order.
 
 # CAVEATS
 

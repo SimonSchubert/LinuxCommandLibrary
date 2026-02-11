@@ -1,3 +1,7 @@
+# TAGLINE
+
+Simplified Debian package management wrapper
+
 # TLDR
 
 **Update** package list

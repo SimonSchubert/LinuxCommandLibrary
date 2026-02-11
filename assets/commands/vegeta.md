@@ -1,3 +1,7 @@
+# TAGLINE
+
+HTTP load testing tool
+
 # TLDR
 
 **Attack endpoint**
@@ -59,17 +63,9 @@
 
 # DESCRIPTION
 
-**vegeta** performs HTTP load testing. It generates constant request rates.
+**vegeta** is an HTTP load testing tool that sends requests at a constant, configurable rate. The **attack** command generates traffic and streams binary results to stdout, which can be piped to **report** for statistical analysis or **plot** for HTML visualization.
 
-Attack sends requests at specified rate. Results streamed to stdout.
-
-Report analyzes attack results. Latency percentiles, success rates.
-
-Plotting creates visual charts. HTML output with graphs.
-
-Target files define requests. Multiple endpoints tested.
-
-Piping enables workflow chaining. Attack to report to plot.
+This pipeline design allows flexible composition of load test workflows. Target definitions support multiple endpoints, HTTP methods, headers, and request bodies. Reports include latency percentiles, success rates, and throughput metrics, making it straightforward to identify performance regressions and capacity limits.
 
 # CAVEATS
 

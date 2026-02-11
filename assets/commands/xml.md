@@ -1,3 +1,7 @@
+# TAGLINE
+
+XMLStarlet command-line XML toolkit
+
 # TLDR
 
 **Validate XML**
@@ -46,15 +50,11 @@
 
 # DESCRIPTION
 
-**xml** is XMLStarlet. It processes XML.
+**xml** is the main command of XMLStarlet, a comprehensive command-line XML toolkit for querying, editing, validating, and transforming XML documents. It provides a set of subcommands that cover common XML processing tasks without requiring a full programming language.
 
-Validation. Schema checking.
+Key subcommands include **val** for validating XML against DTDs or schemas, **fo** for pretty-printing and reformatting XML, **sel** for selecting data using XPath expressions, **ed** for editing XML elements and attributes in place, and **tr** for applying XSLT transformations. Each subcommand has its own set of options tailored to its specific operation.
 
-Formatting. Pretty printing.
-
-XPath queries. Select data.
-
-XSLT transform. Apply stylesheets.
+XMLStarlet is designed for shell scripting and automation, allowing XML processing tasks to be integrated into pipelines and build scripts. It reads from files or stdin and writes to stdout, following Unix conventions for composability.
 
 # CAVEATS
 

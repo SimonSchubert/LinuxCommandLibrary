@@ -1,3 +1,7 @@
+# TAGLINE
+
+Journaling archiver with high compression
+
 # TLDR
 
 **Create archive**

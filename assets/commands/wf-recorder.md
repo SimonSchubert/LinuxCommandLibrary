@@ -1,3 +1,7 @@
+# TAGLINE
+
+Screen recording for Wayland compositors
+
 # TLDR
 
 **Record** to MP4 file

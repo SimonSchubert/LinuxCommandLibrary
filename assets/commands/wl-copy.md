@@ -1,3 +1,7 @@
+# TAGLINE
+
+Copy data to Wayland clipboard
+
 # TLDR
 
 **Copy text** to the clipboard

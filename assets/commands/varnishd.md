@@ -1,3 +1,7 @@
+# TAGLINE
+
+Varnish HTTP reverse proxy cache daemon
+
 # TLDR
 
 **Start with default backend**

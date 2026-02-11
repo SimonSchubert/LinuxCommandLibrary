@@ -1,3 +1,7 @@
+# TAGLINE
+
+Web technology fingerprinting and identification
+
 # TLDR
 
 **Scan website**
@@ -50,15 +54,11 @@
 
 # DESCRIPTION
 
-**whatweb** identifies websites. It fingerprints technologies.
+**whatweb** is a web scanner that identifies technologies used by websites, including content management systems, web frameworks, server software, JavaScript libraries, and analytics platforms. It sends requests to target URLs and analyzes responses to fingerprint the specific products and versions in use.
 
-Technology detection. CMS, frameworks.
+The tool uses a plugin-based architecture with over 1,800 plugins for recognizing different technologies. Four aggression levels control scanning intensity, from passive analysis of a single page request to aggressive testing that makes additional requests to probe for specific technologies.
 
-Plugin-based. Extensible.
-
-Multiple aggression levels. Passive to aggressive.
-
-Various outputs. JSON, XML, SQL.
+Output can be formatted as JSON, XML, verbose text, or SQL for database storage. Multiple URLs can be scanned in a single run, and the tool supports authentication, custom headers, and proxy configuration for testing behind login pages or through intermediary servers.
 
 # CAVEATS
 

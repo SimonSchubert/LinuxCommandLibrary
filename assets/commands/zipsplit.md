@@ -1,3 +1,7 @@
+# TAGLINE
+
+Split ZIP archive into smaller parts
+
 # TLDR
 
 **Split** archive

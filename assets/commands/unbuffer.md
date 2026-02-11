@@ -1,3 +1,7 @@
+# TAGLINE
+
+Disable output buffering for commands
+
 # TLDR
 
 **Run command with unbuffered output**

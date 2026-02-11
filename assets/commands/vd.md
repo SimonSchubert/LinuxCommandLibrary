@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal-based data exploration spreadsheet
+
 # TLDR
 
 **Open a CSV file**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal user interface for Reddit
+
 # TLDR
 
 **Launch Reddit browser**
@@ -43,15 +47,11 @@
 
 # DESCRIPTION
 
-**tuir** browses Reddit. It's a terminal interface.
+**tuir** (Terminal UI for Reddit) provides a full-featured Reddit browsing experience in the terminal. It displays subreddits, posts, and threaded comments in an ncurses-based interface navigated with vim-style keybindings.
 
-TUI for Reddit. Browse in terminal.
+The tool supports core Reddit interactions including voting, commenting, subscribing to subreddits, and opening links in an external browser or media viewer. Multiple subreddits can be browsed, and posts can be sorted by hot, new, top, and controversial.
 
-Subreddit navigation. Multi-reddit support.
-
-Comment viewing. Threaded display.
-
-Voting support. Upvote/downvote.
+Authentication via OAuth allows access to subscriptions, saved posts, and user-specific features. Themes can be customized to match terminal color schemes.
 
 # KEY BINDINGS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Classic Unix visual text editor
+
 # TLDR
 
 **Open a file**

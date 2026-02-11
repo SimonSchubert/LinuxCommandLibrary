@@ -1,3 +1,7 @@
+# TAGLINE
+
+Cryptocurrency mining software
+
 # TLDR
 
 **Mine to a pool** with wallet address

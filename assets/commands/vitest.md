@@ -1,3 +1,7 @@
+# TAGLINE
+
+Vite-native JavaScript testing framework
+
 # TLDR
 
 **Run tests** in watch mode (default in development)

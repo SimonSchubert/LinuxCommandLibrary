@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manipulate WebP metadata and animation
+
 # TLDR
 
 **Extract frame from animation**
@@ -43,15 +47,11 @@
 
 # DESCRIPTION
 
-**webpmux** manipulates WebP files. It handles metadata and animation.
+**webpmux** is a tool from Google's libwebp library for manipulating WebP image files at the container level. It can extract and set metadata profiles (ICC color, XMP, EXIF), extract individual frames from animated WebP files, and combine frames into animations.
 
-Extract frames. From animated WebP.
+The tool operates on the WebP container format without re-encoding the image data, making operations fast and lossless. Metadata can be stripped from files to reduce size, or added to include color management and descriptive information.
 
-Metadata handling. ICC, XMP, EXIF.
-
-Animation creation. Combine frames.
-
-Part of libwebp. Google tool.
+For animated WebP files, individual frames can be extracted as separate WebP images, and frame timing and looping parameters can be inspected with the info command.
 
 # CAVEATS
 

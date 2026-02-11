@@ -1,3 +1,7 @@
+# TAGLINE
+
+SUSE system configuration tool
+
 # TLDR
 
 **Launch YaST graphical interface**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+WebSocket client and server for the terminal
+
 # TLDR
 
 **Connect to a WebSocket server**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Build Xcode projects from command line
+
 # TLDR
 
 **Build a project** with default settings

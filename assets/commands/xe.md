@@ -1,3 +1,7 @@
+# TAGLINE
+
+Simple command execution from stdin
+
 # TLDR
 
 **Execute for each line**
@@ -43,15 +47,11 @@
 
 # DESCRIPTION
 
-**xe** executes commands. It's like xargs.
+**xe** is a simple command execution tool designed as a more intuitive alternative to xargs. It reads input line by line from stdin and executes a specified command for each line, using **{}** as a placeholder for the input value.
 
-Simple replacement. For xargs.
+The tool supports parallel execution through the **-j** option, allowing multiple jobs to run concurrently for improved throughput. It can also accept arguments directly via **-a** instead of reading from stdin, and supports null-delimited input with **-0** for handling filenames with spaces or special characters.
 
-Parallel execution. Multiple jobs.
-
-Clean syntax. Easier placeholders.
-
-Stream processing. Pipe-friendly.
+Compared to xargs, xe provides a cleaner syntax with simpler placeholder substitution and more predictable behavior. It is designed to work naturally in shell pipelines, making it straightforward to process streams of data by applying commands to each input element.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display and modify TeX Live configuration
+
 # TLDR
 
 **Show configuration**

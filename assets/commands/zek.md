@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate Go structs from XML documents
+
 # TLDR
 
 **Generate Go struct from XML file**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Lightweight standalone system tray panel
+
 # TLDR
 
 **Run** trayer

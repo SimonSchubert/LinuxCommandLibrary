@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert pixel art to SVG vectors
+
 # TLDR
 
 **Convert pixel art**
@@ -29,15 +33,9 @@
 
 # DESCRIPTION
 
-**vectorize-pixelart** converts pixel art. It creates SVG vectors.
+**vectorize-pixelart** converts pixel art images into scalable vector graphics (SVG). Unlike general-purpose image tracers, it is specifically designed for pixel art, preserving the sharp edges and clean geometric shapes that define the style.
 
-Pixel-perfect vectors. Sharp edges.
-
-Scale independent. Infinite zoom.
-
-SVG output. Standard format.
-
-Designed for pixel art. Not photos.
+The resulting SVG files can be scaled to any resolution without blurring or aliasing artifacts. This makes the tool useful for preparing pixel art assets for high-resolution displays, print media, or web use where crisp rendering at multiple sizes is needed.
 
 # CAVEATS
 

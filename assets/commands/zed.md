@@ -1,3 +1,7 @@
+# TAGLINE
+
+ZFS event monitoring daemon
+
 # TLDR
 
 **Start zed in foreground mode**

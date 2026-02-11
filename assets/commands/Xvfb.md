@@ -1,3 +1,7 @@
+# TAGLINE
+
+Virtual framebuffer X server
+
 # TLDR
 
 **Start virtual display**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+View gzip-compressed file contents
+
 # TLDR
 
 **View contents** of a gzipped file

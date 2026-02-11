@@ -1,3 +1,7 @@
+# TAGLINE
+
+Build custom Caddy with modules
+
 # TLDR
 
 **Build Caddy with modules**
@@ -39,15 +43,9 @@
 
 # DESCRIPTION
 
-**xcaddy** builds custom Caddy. It compiles with modules.
+**xcaddy** is a build tool for creating custom Caddy web server binaries with additional modules compiled in. It uses the Go toolchain to compile Caddy from source with the specified plugins included, producing a single binary with all desired functionality.
 
-Plugin compilation. Add modules.
-
-Version selection. Specific Caddy.
-
-Development mode. Run without building.
-
-Go-based building. Uses Go toolchain.
+The build command compiles a specific Caddy version with one or more modules, while the run command temporarily builds and runs Caddy with the specified modules for development and testing without producing a permanent binary. Multiple modules can be included using repeated --with flags.
 
 # CAVEATS
 

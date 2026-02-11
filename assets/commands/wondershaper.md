@@ -1,3 +1,7 @@
+# TAGLINE
+
+Simple network bandwidth limiter
+
 # TLDR
 
 **Limit bandwidth**
@@ -36,15 +40,9 @@
 
 # DESCRIPTION
 
-**wondershaper** limits bandwidth. It shapes traffic.
+**wondershaper** is a simple shell script that limits network bandwidth on a per-interface basis using Linux traffic control. It provides an easy way to set download and upload speed limits in kilobits per second without needing to understand the complex tc command syntax directly.
 
-Download/upload limits. Set in kbps.
-
-Interface-based. Per network device.
-
-Simple interface. Easy bandwidth control.
-
-Script-based. Uses tc commands.
+The tool works by applying traffic shaping rules to the specified network interface. Limits can be displayed, set, or cleared with straightforward commands. It is commonly used for testing applications under bandwidth-constrained conditions or for preventing a single machine from saturating a shared network connection.
 
 # CAVEATS
 

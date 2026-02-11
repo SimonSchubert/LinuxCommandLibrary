@@ -1,5 +1,11 @@
 # TLDR
 
+# TAGLINE
+
+Regenerate GRUB bootloader configuration
+
+# TLDR
+
 This command is an alias for **grub-mkconfig --output /boot/grub/grub.cfg**.
 
 **View** documentation for the original command

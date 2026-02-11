@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage ZFS storage pools
+
 # TLDR
 
 **List all pools**

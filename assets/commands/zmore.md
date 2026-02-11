@@ -1,3 +1,7 @@
+# TAGLINE
+
+View compressed files with more pager
+
 # TLDR
 
 **View a compressed file** one screen at a time

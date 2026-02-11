@@ -1,3 +1,7 @@
+# TAGLINE
+
+Verify TeX Live installation integrity
+
 # TLDR
 
 **Check installation**

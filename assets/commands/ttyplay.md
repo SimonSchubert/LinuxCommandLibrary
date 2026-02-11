@@ -1,3 +1,7 @@
+# TAGLINE
+
+Replay terminal sessions recorded by ttyrec
+
 # TLDR
 
 **Play a recorded session**

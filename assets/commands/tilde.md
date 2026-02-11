@@ -1,3 +1,7 @@
+# TAGLINE
+
+Shell tilde expansion shorthand
+
 # TLDR
 
 **Home directory**

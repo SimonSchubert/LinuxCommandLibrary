@@ -1,3 +1,7 @@
+# TAGLINE
+
+Modern terminal workspace multiplexer
+
 # TLDR
 
 **Start a new session**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert HTML pages to images
+
 # TLDR
 
 **Convert an HTML file** to PNG

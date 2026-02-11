@@ -1,3 +1,7 @@
+# TAGLINE
+
+Secure file transfer with human-readable codes
+
 # TLDR
 
 **Send a file**

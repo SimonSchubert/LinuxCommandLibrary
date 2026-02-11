@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate WPA pre-shared key from passphrase
+
 # TLDR
 
 **Compute** WPA-PSK key reading passphrase from stdin

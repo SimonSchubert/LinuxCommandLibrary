@@ -1,5 +1,11 @@
 # TLDR
 
+# TAGLINE
+
+Query system power and battery information
+
+# TLDR
+
 Display **power** information
 
 ```upower -d```

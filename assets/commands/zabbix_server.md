@@ -1,3 +1,7 @@
+# TAGLINE
+
+Central Zabbix monitoring server daemon
+
 # TLDR
 
 **Start server**
@@ -39,15 +43,11 @@
 
 # DESCRIPTION
 
-**zabbix_server** runs Zabbix server. It processes monitoring.
+**zabbix_server** is the central daemon of the Zabbix monitoring system. It receives monitoring data from agents and proxies, evaluates trigger conditions, processes alerts, and stores historical data in its backend database.
 
-Central server. Data collection.
+The server coordinates all monitoring activity: it schedules checks, processes incoming data, detects threshold violations, and sends notifications through configured media types (email, SMS, scripts, webhooks). It requires a database backend (MySQL, PostgreSQL, or Oracle) for storing configuration and collected metrics.
 
-Alert processing. Notifications.
-
-Data storage. Database backend.
-
-Web frontend. Separate component.
+The web frontend is a separate component that connects to the same database, providing the graphical interface for configuration and visualization. Runtime control commands via **-R** allow reloading configuration caches and adjusting log levels without restarting the service.
 
 # CAVEATS
 

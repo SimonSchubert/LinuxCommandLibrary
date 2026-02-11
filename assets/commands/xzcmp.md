@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compare xz compressed files
+
 # TLDR
 
 **Compare xz compressed files**

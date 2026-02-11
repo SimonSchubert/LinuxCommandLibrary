@@ -1,3 +1,7 @@
+# TAGLINE
+
+Filter TSV files by column values
+
 # TLDR
 
 **Filter by column value**
@@ -46,15 +50,11 @@
 
 # DESCRIPTION
 
-**tsv-filter** filters TSV files. It selects rows.
+**tsv-filter** selects rows from tab-separated value files based on column conditions. It supports both numeric comparisons (equal, greater than, less than) and string operations (contains, exact match), allowing precise filtering of structured data.
 
-Column-based filtering. Numeric and string.
+Multiple conditions can be combined, and they are joined with AND logic by default — all conditions must match for a row to be included. The **--invert** flag reverses the selection to output non-matching rows instead.
 
-Multiple conditions. AND logic.
-
-Fast processing. D language speed.
-
-Part of tsv-utils. Data processing suite.
+Part of the **tsv-utils** suite, tsv-filter is written in D for high performance on large datasets. Column numbers are 1-based, and the **-H** flag enables header-aware processing.
 
 # CAVEATS
 

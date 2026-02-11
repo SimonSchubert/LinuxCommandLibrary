@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display storage pool details
+
 # TLDR
 
 **Show pool information**

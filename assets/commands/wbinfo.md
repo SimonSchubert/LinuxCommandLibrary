@@ -1,3 +1,7 @@
+# TAGLINE
+
+Query Winbind for domain information
+
 # TLDR
 
 **List domain users**

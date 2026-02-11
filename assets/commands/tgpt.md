@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal AI chatbot client
+
 # TLDR
 
 **Ask question**
@@ -50,15 +54,9 @@
 
 # DESCRIPTION
 
-**tgpt** chats with AI models. It's a terminal GPT client.
+**tgpt** is a terminal-based client for interacting with AI language models from multiple providers including OpenAI, Anthropic, and others. It supports one-shot prompts, interactive conversation mode (**-i**), and specialized code generation mode (**-c**).
 
-Multiple providers. OpenAI, Anthropic, etc.
-
-Code generation mode. Programming help.
-
-Interactive chat. Conversation mode.
-
-Image generation. DALL-E support.
+The tool can also generate images using models like DALL-E via the **-img** flag. Some providers work without requiring API keys, while others need keys configured for authentication. Multiline input mode (**-m**) allows composing longer prompts directly in the terminal.
 
 # CAVEATS
 

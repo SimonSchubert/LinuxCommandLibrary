@@ -1,3 +1,7 @@
+# TAGLINE
+
+Print system and kernel information
+
 # TLDR
 
 **Show all system information**

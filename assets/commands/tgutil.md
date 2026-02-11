@@ -1,3 +1,7 @@
+# TAGLINE
+
+TigerGraph database administration utilities
+
 # TLDR
 
 **Show utility help**
@@ -39,15 +43,9 @@
 
 # DESCRIPTION
 
-**tgutil** provides TigerGraph utilities. It manages database operations.
+**tgutil** provides administrative utilities for TigerGraph graph database installations. It handles core operations including database backup and restore, system status monitoring, and configuration management.
 
-Backup and restore. Data protection.
-
-Administrative tasks. Database maintenance.
-
-Configuration management. Settings control.
-
-Utility commands. Various operations.
+The tool is used by database administrators to perform maintenance tasks on local TigerGraph deployments, offering command-line access to operations that would otherwise require the web-based admin interface.
 
 # CAVEATS
 

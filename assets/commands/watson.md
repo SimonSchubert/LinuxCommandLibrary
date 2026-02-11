@@ -1,3 +1,7 @@
+# TAGLINE
+
+Command-line time tracking tool
+
 # TLDR
 
 **Start tracking**
@@ -67,17 +71,11 @@
 
 # DESCRIPTION
 
-**watson** tracks time from the command line. It logs work on projects with tags.
+**watson** is a command-line time tracking tool that records work sessions on named projects with optional tags for categorization. Starting a timer associates the current time with a project and tags, and stopping it saves a completed time frame with the calculated duration.
 
-Starting records project and time. Tags categorize work.
+The log command displays tracked entries chronologically, with filters for viewing today's work, the current week, or a specific date range. Reports aggregate time by project, showing total hours spent on each project and its tags over a given period.
 
-Stopping saves the frame. Duration calculated.
-
-Log shows chronological entries. Filter by day, week, month.
-
-Reports aggregate by project. Time totals summarized.
-
-Edit modifies entries. Fix mistakes or add details.
+Past entries can be added retroactively, existing entries can be edited to correct mistakes, and the cancel command discards the currently running timer without saving it.
 
 # CAVEATS
 

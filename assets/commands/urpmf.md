@@ -1,5 +1,11 @@
 # TLDR
 
+# TAGLINE
+
+Search Mageia package files and metadata
+
+# TLDR
+
 Search packages containing **file**
 
 ```urpmf [filename]```

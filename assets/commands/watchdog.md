@@ -1,3 +1,7 @@
+# TAGLINE
+
+System health monitoring and reset daemon
+
 # TLDR
 
 **Start watchdog daemon**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+LALR parser generator for C
+
 # TLDR
 
 **Generate a parser** from a grammar file

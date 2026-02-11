@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal weather forecast with ASCII art
+
 # TLDR
 
 **Show 3-day forecast for current location**

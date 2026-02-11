@@ -1,5 +1,11 @@
 # TLDR
 
+# TAGLINE
+
+Modify user account attributes
+
+# TLDR
+
 Change **username**
 
 ```sudo usermod -l new_username username```

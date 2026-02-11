@@ -1,3 +1,7 @@
+# TAGLINE
+
+In-memory key-value data store server
+
 # TLDR
 
 **Start server with defaults**

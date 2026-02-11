@@ -1,3 +1,7 @@
+# TAGLINE
+
+Encrypt or decrypt ZIP archives
+
 # TLDR
 
 **Encrypt ZIP file**
@@ -42,17 +46,11 @@
 
 # DESCRIPTION
 
-**zipcloak** encrypts or decrypts ZIP archives. It adds password protection.
+**zipcloak** encrypts or decrypts ZIP archives by adding or removing password protection. When encrypting, it prompts for a password and applies encryption to all files within the archive. When decrypting with the **-d** flag, it removes encryption after verifying the original password.
 
-Encryption prompts for password. All files in archive encrypted.
+By default, zipcloak modifies the archive in place, replacing the original file. The **-O** option allows writing the encrypted or decrypted result to a new file, preserving the original archive unchanged.
 
-Decryption removes password. Requires original password.
-
-Output option preserves original. Creates new encrypted file.
-
-In-place mode modifies archive. Original replaced.
-
-Standard ZIP encryption used. Compatible with most tools.
+zipcloak uses standard ZIP encryption (PKZIP), which is widely compatible with most ZIP tools and operating systems. It is part of the Info-ZIP suite of utilities.
 
 # CAVEATS
 

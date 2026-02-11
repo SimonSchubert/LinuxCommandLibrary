@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interactive terminal HTTP client
+
 # TLDR
 
 **Start interactive HTTP client**
@@ -29,15 +33,9 @@
 
 # DESCRIPTION
 
-**wuzz** is an HTTP inspector. It's interactive.
+**wuzz** is an interactive HTTP inspection tool with a terminal user interface. It provides a keyboard-driven environment for building HTTP requests, setting headers and body content, and viewing formatted responses without leaving the terminal.
 
-TUI interface. Keyboard-driven.
-
-Request building. Headers, body.
-
-Response viewing. Formatted output.
-
-History support. Previous requests.
+The tool maintains a history of previous requests for easy re-execution and modification. It serves as a lightweight alternative to graphical tools like Postman for quick API testing and debugging directly from the command line.
 
 # CAVEATS
 

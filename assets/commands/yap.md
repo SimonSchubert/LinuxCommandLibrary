@@ -1,3 +1,7 @@
+# TAGLINE
+
+Bidirectional text pager
+
 # TLDR
 
 **View file contents**

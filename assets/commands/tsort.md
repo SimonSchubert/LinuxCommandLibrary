@@ -1,3 +1,7 @@
+# TAGLINE
+
+Topological sort of dependency pairs
+
 # TLDR
 
 **Sort dependencies**
@@ -18,15 +22,11 @@
 
 # DESCRIPTION
 
-**tsort** performs topological sorting. It orders items respecting dependencies.
+**tsort** performs topological sorting on a set of dependency pairs read from standard input or a file. Each line contains two whitespace-separated items where the first item depends on the second. The output lists all items in an order where every dependency appears before the items that depend on it.
 
-Input is pairs of items. First depends on second.
+The tool is commonly used in build systems to determine compilation order, in package managers to resolve installation sequences, and in any scenario where items must be processed in dependency order. If the input contains cycles (circular dependencies), tsort reports an error since no valid ordering exists.
 
-Output lists items in order. Dependencies come before dependents.
-
-Cycles are reported as errors. Circular dependencies can't be sorted.
-
-Common for build systems. Determine compilation order.
+Input with a single item on a line introduces that item without declaring a dependency, ensuring it appears in the output.
 
 # INPUT FORMAT
 

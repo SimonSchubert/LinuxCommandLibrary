@@ -1,3 +1,7 @@
+# TAGLINE
+
+Simplified curl wrapper for downloading
+
 # TLDR
 
 **Download file**
@@ -33,15 +37,11 @@
 
 # DESCRIPTION
 
-**wcurl** is a curl wrapper. It simplifies downloads.
+**wcurl** is a thin wrapper around curl that provides sensible defaults for the common task of downloading files. It automatically enables a progress bar, follows redirects, and uses the remote filename for output, eliminating the need to specify common curl flags for simple downloads.
 
-Sensible defaults. Good for downloading.
+Resume support allows continuing interrupted downloads without manually configuring curl's range options. Multiple URLs can be specified to download several files in sequence, and a custom output filename can be provided when the remote name is not suitable.
 
-Progress bar. Visual feedback.
-
-Resume support. Continue partial.
-
-Simpler than curl. Fewer options needed.
+The tool is designed for users who frequently use curl for downloads but find its default behavior (outputting to stdout with no progress indicator) inconvenient for that use case.
 
 # CAVEATS
 

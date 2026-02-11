@@ -1,3 +1,7 @@
+# TAGLINE
+
+Improve Graphviz graph aspect ratio
+
 # TLDR
 
 **Adjust graph layout**
@@ -36,15 +40,11 @@
 
 # DESCRIPTION
 
-**unflatten** improves graph layout. It adjusts for drawing.
+**unflatten** is a Graphviz preprocessor that improves the aspect ratio of directed graphs by breaking up long chains of nodes. It works by staggering the nodes in chains, converting some edges to increase the width of the graph relative to its height.
 
-Chain breaking. Avoid long chains.
+The tool is designed to be used as a preprocessing step before the **dot** layout engine. When a graph has many nodes arranged in long vertical chains, dot tends to produce very tall, narrow layouts. Running unflatten first adjusts the graph structure so that dot produces a more balanced, readable result.
 
-Better aesthetics. Improved readability.
-
-Preprocessor for dot. Use before layout.
-
-Part of Graphviz. Graph tools.
+Options control the maximum chain length before staggering occurs and whether leaf nodes should be fanned out. The tool reads DOT format input and produces modified DOT output that can be piped directly into dot or other Graphviz layout engines.
 
 # CAVEATS
 

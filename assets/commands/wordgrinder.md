@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal word processor for focused writing
+
 # TLDR
 
 **Start WordGrinder**
@@ -43,17 +47,9 @@ _document_
 
 # DESCRIPTION
 
-**wordgrinder** is a word processor for the terminal. It focuses on writing, not formatting.
+**wordgrinder** is a terminal-based word processor designed for focused, distraction-free writing. It emphasizes content over appearance, providing document structure through styles like headings, paragraphs, and lists rather than visual formatting controls.
 
-Document structure uses styles. Headings, paragraphs, lists defined.
-
-Distraction-free writing environment. Full screen text editing.
-
-Export to multiple formats. HTML, LaTeX, Markdown, ODT.
-
-Native format preserves structure. .wg files save completely.
-
-Simple but powerful. Focus on content over appearance.
+Documents are saved in the native .wg format that preserves full structure, and can be exported to HTML, LaTeX, Markdown, ODT, and plain text. The full-screen editing environment keeps attention on the writing itself, with keyboard shortcuts for navigation and style changes.
 
 # CAVEATS
 

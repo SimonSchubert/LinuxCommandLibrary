@@ -1,3 +1,7 @@
+# TAGLINE
+
+Automate tmux session configuration
+
 # TLDR
 
 **Start project**
@@ -90,6 +94,11 @@ Layout presets handle common pane arrangements. Custom layouts specify exact pan
 Project files live in ~/.config/tmuxinator. They're portable across machines and can be version controlled.
 
 Starting a project creates or attaches to the tmux session. Subsequent starts attach without recreating.
+
+# CONFIGURATION
+
+**~/.config/tmuxinator/*.yml**
+> Project configuration files in YAML format defining session layouts, windows, panes, and startup commands.
 
 # CAVEATS
 

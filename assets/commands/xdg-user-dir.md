@@ -1,3 +1,7 @@
+# TAGLINE
+
+Query XDG user directory paths
+
 # TLDR
 
 Show **home** directory

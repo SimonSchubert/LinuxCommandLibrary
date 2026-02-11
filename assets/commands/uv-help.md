@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display uv command help information
+
 # TLDR
 
 **Show general help**

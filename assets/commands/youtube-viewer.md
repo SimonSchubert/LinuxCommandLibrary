@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal YouTube search and playback client
+
 # TLDR
 
 **Search videos**
@@ -57,17 +61,11 @@
 
 # DESCRIPTION
 
-**youtube-viewer** searches and plays YouTube videos. It's a terminal-based YouTube client.
+**youtube-viewer** is a command-line client for searching, streaming, and downloading YouTube videos directly from the terminal. It queries the YouTube API, presents numbered search results, and launches your chosen media player for playback.
 
-Search returns numbered results. Select to play.
+Multiple video players are supported including mpv, VLC, and MPlayer, configurable with the **--player** option. Audio-only mode (**-n**) streams just the audio track, reducing bandwidth usage. The **-d** flag downloads videos locally instead of streaming them.
 
-Multiple players supported. MPV, VLC, MPlayer.
-
-Download saves videos locally. Various formats.
-
-Audio mode skips video. Lower bandwidth.
-
-Channel browsing shows uploads. Explore creators.
+Channel browsing (**-c**) lists uploads from specific creators, and **-t** shows currently trending videos. Resolution can be controlled with **-r** and fullscreen playback enabled with **-f**.
 
 # CAVEATS
 

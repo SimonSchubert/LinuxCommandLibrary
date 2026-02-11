@@ -1,3 +1,7 @@
+# TAGLINE
+
+Yazi file manager CLI companion
+
 # TLDR
 
 **Install a plugin** or theme package

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Arch Linux AUR package helper
+
 # TLDR
 
 **Sync** and update all AUR packages

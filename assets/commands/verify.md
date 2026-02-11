@@ -1,3 +1,7 @@
+# TAGLINE
+
+Validate X.509 certificate chains
+
 # TLDR
 
 **Verify a certificate** against system CA store

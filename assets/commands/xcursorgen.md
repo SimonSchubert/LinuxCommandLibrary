@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create X cursor files from images
+
 # TLDR
 
 Create cursor from **config**

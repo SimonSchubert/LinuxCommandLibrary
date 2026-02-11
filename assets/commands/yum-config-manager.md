@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage yum repository configuration
+
 # TLDR
 
 This command is an alias of [dnf config-manager](/man/dnf%20config-manager).

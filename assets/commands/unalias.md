@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove shell command aliases
+
 # TLDR
 
 **Remove alias**
@@ -26,15 +30,9 @@ _name_
 
 # DESCRIPTION
 
-**unalias** removes shell aliases. It's a builtin.
+**unalias** is a shell builtin that removes previously defined command aliases. It can remove specific aliases by name or all aliases at once with the **-a** flag.
 
-Alias removal. Undefine shortcuts.
-
-All at once. Clear everything.
-
-Session scope. Current shell only.
-
-Debugging help. Test without alias.
+The removal only affects the current shell session. Aliases defined in shell startup files like ~/.bashrc will be restored when a new shell is started. This makes unalias useful for temporarily bypassing an alias to test the underlying command's behavior or for debugging shell configuration issues.
 
 # CAVEATS
 

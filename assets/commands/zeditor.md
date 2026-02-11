@@ -1,3 +1,7 @@
+# TAGLINE
+
+Launch Zed code editor from terminal
+
 # TLDR
 
 **Open file**
@@ -33,15 +37,11 @@
 
 # DESCRIPTION
 
-**zeditor** opens Zed editor. It's the CLI launcher.
+**zeditor** is the command-line launcher for Zed, a modern code editor written in Rust. It opens files and directories in the Zed graphical editor from the terminal.
 
-Modern editor. Fast and minimal.
+Files can be opened at specific line numbers using the **file:line** syntax. The **--new** flag opens a new editor window instead of reusing an existing one, and **--wait** blocks the terminal until the editor window is closed, useful for git commit messages and other tools that invoke an editor.
 
-Rust-based. High performance.
-
-Collaborative. Real-time editing.
-
-AI features. Code assistance.
+Zed itself is a high-performance editor featuring real-time collaborative editing, integrated AI code assistance, and a minimal interface designed for speed.
 
 # CAVEATS
 

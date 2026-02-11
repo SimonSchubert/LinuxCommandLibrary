@@ -1,3 +1,7 @@
+# TAGLINE
+
+Download music with automatic metadata tagging
+
 # TLDR
 
 **Download song with metadata**

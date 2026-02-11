@@ -1,3 +1,7 @@
+# TAGLINE
+
+Find archived URLs from multiple sources
+
 # TLDR
 
 **Find URLs for domain**
@@ -39,15 +43,11 @@
 
 # DESCRIPTION
 
-**waymore** finds archived URLs. It searches web archives.
+**waymore** is a reconnaissance tool that discovers URLs and archived responses for a domain by querying multiple web archive sources including the Wayback Machine and Common Crawl. It provides broader coverage than tools that query only a single archive.
 
-Wayback Machine. Historical URLs.
+The tool operates in two modes: URL mode extracts known URLs for the target domain from archive indices, while response mode retrieves the actual archived page contents. Results can be filtered to exclude common file types and irrelevant content.
 
-Common Crawl. Web archive search.
-
-URL extraction. For recon.
-
-Security research. Bug bounty.
+Multi-threaded processing speeds up large queries, and output can be saved to files for further analysis. The tool is commonly used in security research and bug bounty programs for discovering forgotten endpoints, old API paths, and removed content.
 
 # CAVEATS
 

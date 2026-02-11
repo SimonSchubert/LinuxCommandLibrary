@@ -1,3 +1,7 @@
+# TAGLINE
+
+Lock Linux virtual console sessions
+
 # TLDR
 
 **Lock** current console

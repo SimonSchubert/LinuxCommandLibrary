@@ -1,3 +1,7 @@
+# TAGLINE
+
+List connected X11 client applications
+
 # TLDR
 
 **List X clients**
@@ -36,15 +40,9 @@
 
 # DESCRIPTION
 
-**xlsclients** lists X clients. It shows running X apps.
+**xlsclients** lists the client applications currently connected to an X display server. For each client, it shows the window name and the command used to launch it, providing a quick overview of what X11 applications are running.
 
-Window listing. Running applications.
-
-Display info. Which apps connected.
-
-Debug tool. X11 troubleshooting.
-
-Part of xorg-apps. Standard X tool.
+The tool is useful for debugging X11 sessions, identifying which applications are consuming display resources, and verifying that expected clients are connected. The **-a** option shows clients across all screens, while **-l** provides a long format with additional detail about each client's machine name and command line.
 
 # CAVEATS
 

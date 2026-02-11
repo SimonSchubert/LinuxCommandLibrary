@@ -1,3 +1,7 @@
+# TAGLINE
+
+Configure xscreensaver preferences
+
 # TLDR
 
 **Open screensaver settings**

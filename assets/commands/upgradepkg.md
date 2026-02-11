@@ -1,3 +1,7 @@
+# TAGLINE
+
+Upgrade Slackware packages
+
 # TLDR
 
 **Upgrade** a package

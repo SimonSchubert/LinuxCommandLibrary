@@ -1,3 +1,7 @@
+# TAGLINE
+
+Optimize PNG files with Zopfli compression
+
 # TLDR
 
 **Optimize PNG**
@@ -57,17 +61,11 @@
 
 # DESCRIPTION
 
-**zopflipng** optimizes PNG files. It uses Zopfli compression.
+**zopflipng** optimizes PNG files using the Zopfli compression algorithm, which produces deflate-compatible output that works everywhere standard PNG files do. It typically achieves 3-8% smaller files compared to standard PNG optimization tools.
 
-Zopfli is deflate-compatible. Works everywhere PNG works.
+The tool strips metadata chunks by default for maximum size reduction, though specific chunks can be preserved with the **--keepchunks** option. A lossy transparency mode (**--lossy_transparent**) further reduces file size by optimizing invisible fully-transparent pixels without any visible quality change.
 
-Smaller files than standard tools. 3-8% typical reduction.
-
-Lossy mode optimizes transparency. Invisible changes, smaller files.
-
-Slow but effective. Designed for final optimization.
-
-Metadata stripped by default. Keep chunks if needed.
+zopflipng is intentionally slow, trading compression time for smaller output. It is designed for final-stage optimization in build pipelines rather than interactive use. The **-m** flag enables additional iterations for even better compression at the cost of more processing time.
 
 # CAVEATS
 

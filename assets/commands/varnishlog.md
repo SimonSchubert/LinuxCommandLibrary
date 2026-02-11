@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display Varnish HTTP request logs
+
 # TLDR
 
 **Show live logs**
@@ -50,15 +54,9 @@
 
 # DESCRIPTION
 
-**varnishlog** shows Varnish logs. It displays VSL data.
+**varnishlog** reads the Varnish Shared Memory Log (VSL) and displays detailed request and response information in real time. It shows the full lifecycle of HTTP transactions including client requests, backend fetches, cache decisions, and response headers.
 
-Real-time viewing. Live request logs.
-
-Powerful filtering. VSL query language.
-
-Request tracing. Full transaction.
-
-Debugging tool. Cache analysis.
+The tool provides powerful filtering through the VSL query language, allowing you to isolate specific transactions by status code, URL pattern, or any logged field. Client-side (-c) and backend-side (-b) views can be shown independently, and grouping modes organize output by request, session, or raw log entries. This makes it the primary debugging tool for understanding Varnish cache behavior.
 
 # CAVEATS
 

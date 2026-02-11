@@ -1,3 +1,7 @@
+# TAGLINE
+
+Assemble WebAssembly text to binary
+
 # TLDR
 
 **Compile WAT to WASM**
@@ -43,15 +47,11 @@
 
 # DESCRIPTION
 
-**wat2wasm** assembles WebAssembly. It compiles text to binary.
+**wat2wasm** is an assembler from the WABT (WebAssembly Binary Toolkit) that compiles WebAssembly Text Format (WAT) files into binary WebAssembly (.wasm) modules. It is the counterpart to wasm2wat, which performs the reverse conversion.
 
-Text to binary. WAT to WASM.
+The tool validates the input WAT source against the WebAssembly specification during compilation, reporting syntax and type errors before producing output. A validate-only mode can check files without generating binary output, which is useful in build pipelines.
 
-Validation included. Check errors.
-
-Debug info option. Names in output.
-
-Part of WABT. Standard tool.
+The --debug-names option embeds function and variable names from the WAT source into the binary as custom sections, making the output easier to debug in browsers and other tools that display named symbols.
 
 # CAVEATS
 

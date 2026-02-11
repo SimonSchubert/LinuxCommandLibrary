@@ -1,3 +1,7 @@
+# TAGLINE
+
+Nested X server in a window
+
 # TLDR
 
 **Start nested X server**
@@ -43,15 +47,11 @@ _:display_
 
 # DESCRIPTION
 
-**Xephyr** runs nested X server. It's X in a window.
+**Xephyr** is a kdrive-based X server that runs as a window inside an existing X session. It creates a fully functional, isolated X display that appears as a regular window on your desktop, allowing you to run a complete X environment within it.
 
-Window manager testing. Safe testing.
+The primary use case for Xephyr is testing and developing window managers, desktop environments, and X11 applications in a sandboxed environment. Developers can start a new window manager inside Xephyr without disrupting their current desktop session, making it safe to experiment with configurations and test changes.
 
-Display isolation. Separate X server.
-
-Development tool. Test configurations.
-
-Kdrive-based. Lightweight.
+Xephyr supports configurable screen resolutions, fullscreen mode, multiple virtual screens, and resizable windows. It provides complete display isolation from the host X server, so applications running inside Xephyr cannot interact with the host display.
 
 # CAVEATS
 

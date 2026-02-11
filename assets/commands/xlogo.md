@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display X Window System logo
+
 # TLDR
 
 **Display X logo**

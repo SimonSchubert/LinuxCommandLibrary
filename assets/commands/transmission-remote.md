@@ -1,3 +1,7 @@
+# TAGLINE
+
+Control Transmission daemon remotely
+
 # TLDR
 
 **List all torrents**

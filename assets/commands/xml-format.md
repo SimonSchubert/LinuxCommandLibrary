@@ -1,3 +1,7 @@
+# TAGLINE
+
+Pretty-print XML documents
+
 # TLDR
 
 **Format XML file**

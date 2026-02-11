@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create or change VNC password files
+
 # TLDR
 
 **Set VNC password for current user**

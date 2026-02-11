@@ -1,3 +1,7 @@
+# TAGLINE
+
+Lightweight Zsh plugin manager
+
 # TLDR
 
 **Load Oh My Zsh**

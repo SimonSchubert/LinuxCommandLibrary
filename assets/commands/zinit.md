@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fast Zsh plugin manager with Turbo mode
+
 # TLDR
 
 **Load a plugin** from GitHub

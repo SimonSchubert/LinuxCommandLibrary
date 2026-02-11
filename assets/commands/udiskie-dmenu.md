@@ -1,3 +1,7 @@
+# TAGLINE
+
+Dmenu-based device mount/unmount interface
+
 # TLDR
 
 **Launch** mount/unmount menu

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Lightweight X11 wallpaper setter
+
 # TLDR
 
 **Set wallpaper centered**

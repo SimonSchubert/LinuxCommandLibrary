@@ -1,3 +1,7 @@
+# TAGLINE
+
+XFCE graphical file manager
+
 # TLDR
 
 Open **current** directory

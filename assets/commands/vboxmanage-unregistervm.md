@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove VM from VirtualBox registry
+
 # TLDR
 
 **Unregister VM**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create Vue.js projects from templates
+
 # TLDR
 
 **Create project from template**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Quick WireGuard VPN tunnel setup
+
 # TLDR
 
 **Set up** a VPN tunnel

@@ -1,5 +1,11 @@
 # TLDR
 
+# TAGLINE
+
+Query systemd user and group database
+
+# TLDR
+
 List all **users**
 
 ```userdbctl user```

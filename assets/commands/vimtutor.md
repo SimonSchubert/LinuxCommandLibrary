@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interactive Vim tutorial
+
 # TLDR
 
 **Start vim tutor**

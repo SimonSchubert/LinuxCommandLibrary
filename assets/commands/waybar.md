@@ -1,3 +1,7 @@
+# TAGLINE
+
+Customizable status bar for Wayland
+
 # TLDR
 
 **Start waybar**

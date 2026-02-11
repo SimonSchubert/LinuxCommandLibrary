@@ -1,3 +1,7 @@
+# TAGLINE
+
+Deploy to Vercel hosting platform
+
 # TLDR
 
 **Deploy project**

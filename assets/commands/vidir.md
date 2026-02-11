@@ -1,3 +1,7 @@
+# TAGLINE
+
+Edit filenames in a text editor
+
 # TLDR
 
 **Edit filenames in editor**
@@ -42,17 +46,9 @@ _directory_
 
 # DESCRIPTION
 
-**vidir** edits filenames in a text editor. It opens file list for editing.
+**vidir** opens a list of filenames in a text editor, where each line contains a number and a filename. Editing the filenames renames the corresponding files, and deleting lines removes them. All changes are applied when you save and quit the editor.
 
-Each line shows a number and filename. Modify filenames to rename.
-
-Deleting lines removes files. Empty lines are ignored.
-
-Changing numbers reorders (if supported). Some versions support this.
-
-Save and quit applies changes. All renames happen at once.
-
-Useful for batch renaming. Editor features like search/replace available.
+This approach leverages familiar editor features like search-and-replace, macros, and multi-cursor editing for powerful batch renaming operations that would be tedious with individual **mv** commands.
 
 # EXAMPLE
 

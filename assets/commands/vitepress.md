@@ -1,3 +1,7 @@
+# TAGLINE
+
+Vite-powered static site generator
+
 # TLDR
 
 **Start development server**

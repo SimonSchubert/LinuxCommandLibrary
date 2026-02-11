@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display YubiKey device information
+
 # TLDR
 
 **Show YubiKey info**
@@ -39,15 +43,11 @@
 
 # DESCRIPTION
 
-**ykinfo** shows YubiKey info. It queries the device.
+**ykinfo** queries a connected YubiKey device and displays its identification information. It can report the serial number, firmware version, and supported capabilities of the hardware token.
 
-Device identification. Serial number.
+The **-a** flag shows all available information at once. Individual flags like **-s** (serial), **-v** (version), and **-c** (capabilities) display specific details. Quiet mode (**-q**) outputs values without labels for use in scripts.
 
-Firmware version. Check capabilities.
-
-Multiple keys. Select by serial.
-
-Diagnostic tool. Troubleshooting.
+When multiple YubiKeys are connected, the tool can select a specific device by serial number. It is part of the **yubikey-personalization** package and is useful for diagnostics, inventory, and scripting around YubiKey management.
 
 # CAVEATS
 

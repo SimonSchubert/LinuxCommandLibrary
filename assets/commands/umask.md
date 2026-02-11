@@ -1,3 +1,7 @@
+# TAGLINE
+
+Set default file creation permission mask
+
 # TLDR
 
 **Show current mask**
@@ -34,15 +38,11 @@ _mode_
 
 # DESCRIPTION
 
-**umask** sets file creation mask. It affects permissions.
+**umask** is a shell builtin that sets or displays the file creation mask, which controls the default permissions assigned to newly created files and directories. The mask specifies which permission bits to remove from the maximum default permissions (666 for files, 777 for directories).
 
-Default permissions. New files and directories.
+For example, a umask of 022 removes write permission for group and others, resulting in files created with 644 and directories with 755. A more restrictive umask of 077 removes all permissions for group and others.
 
-Octal notation. Bits to remove.
-
-Shell builtin. Session scope.
-
-Security setting. Restrict access.
+The umask can be specified in octal notation (e.g., 022) or symbolic notation (e.g., u=rwx,g=rx,o=rx). Changes apply only to the current shell session unless set in shell profile files like ~/.bashrc.
 
 # COMMON VALUES
 

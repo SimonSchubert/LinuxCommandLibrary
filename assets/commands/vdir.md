@@ -1,3 +1,7 @@
+# TAGLINE
+
+List directory contents in long format
+
 # TLDR
 
 **List directory**
@@ -43,15 +47,9 @@
 
 # DESCRIPTION
 
-**vdir** lists directory contents. It's like ls -l.
+**vdir** lists directory contents in long format by default, equivalent to running **ls -l**. It displays file permissions, owner, group, size, modification time, and name for each entry.
 
-Verbose listing. Long format default.
-
-Same as ls -l. Detailed output.
-
-GNU coreutils. Standard tool.
-
-Column output. File details.
+The command is part of GNU coreutils and accepts the same options as **ls**. It exists as a convenience for users who prefer verbose directory listings without having to specify the **-l** flag.
 
 # CAVEATS
 

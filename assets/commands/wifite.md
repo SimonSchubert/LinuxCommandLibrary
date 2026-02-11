@@ -1,3 +1,7 @@
+# TAGLINE
+
+Automated wireless network security auditing
+
 # TLDR
 
 **Start wifite** in interactive mode

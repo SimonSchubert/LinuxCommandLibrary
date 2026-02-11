@@ -1,3 +1,7 @@
+# TAGLINE
+
+Universal cross-platform package manager wrapper
+
 # TLDR
 
 **Install package**
@@ -50,15 +54,11 @@
 
 # DESCRIPTION
 
-**upt** is a universal package tool. It wraps package managers.
+**upt** (Universal Package Tool) provides a single, consistent command-line interface that wraps the native package manager on any system. It automatically detects which package manager is available and translates upt commands into the appropriate native commands for apt, pacman, brew, and others.
 
-Single interface. Works with any PM.
+This allows users and scripts to use the same commands across different Linux distributions and macOS without needing to remember the syntax differences between package managers. Commands like **install**, **remove**, **search**, and **upgrade** work identically regardless of the underlying system.
 
-Detects system. apt, pacman, brew, etc.
-
-Consistent commands. Same across systems.
-
-Cross-platform. Linux, macOS.
+The tool delegates all actual package operations to the native package manager, so it does not introduce any compatibility layers or alternative package formats. Root privileges may be required depending on the underlying package manager's requirements.
 
 # CAVEATS
 

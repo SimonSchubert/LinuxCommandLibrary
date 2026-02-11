@@ -1,3 +1,7 @@
+# TAGLINE
+
+Laravel local development environment for macOS
+
 # TLDR
 
 **Install Valet**

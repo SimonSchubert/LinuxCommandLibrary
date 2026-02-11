@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display Vagrant machine state
+
 # TLDR
 
 **Show VM status**

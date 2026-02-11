@@ -1,3 +1,7 @@
+# TAGLINE
+
+Vulkan spinning cube demo application
+
 # TLDR
 
 **Run Vulkan demo**
@@ -39,15 +43,11 @@
 
 # DESCRIPTION
 
-**vkcube** tests Vulkan. It shows a spinning cube.
+**vkcube** is a simple demo application from the Vulkan SDK that displays a spinning 3D cube rendered using the Vulkan graphics API. It serves as a quick verification tool to confirm that Vulkan drivers and libraries are correctly installed and functioning on the system.
 
-Vulkan demo. Graphics test.
+The application opens a window showing a textured cube rotating continuously. If the cube renders and spins smoothly, it indicates that the GPU, Vulkan driver, and display system are working together properly. Options allow selecting a specific GPU, setting the presentation mode, and limiting the number of rendered frames.
 
-Driver verification. Is Vulkan working?
-
-Simple benchmark. Frame timing.
-
-Part of Vulkan SDK. Standard test.
+As part of the official Vulkan-Tools package maintained by the Khronos Group, vkcube is the C implementation of the demo (vkcubepp is the C++ version). It is commonly used as a first diagnostic step when troubleshooting Vulkan support on Linux systems.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Configure Wacom tablet settings
+
 # TLDR
 
 **List** devices

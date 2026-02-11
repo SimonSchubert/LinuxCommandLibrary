@@ -1,3 +1,7 @@
+# TAGLINE
+
+Lock packages to specific versions
+
 # TLDR
 
 **Lock a package** to its currently installed version

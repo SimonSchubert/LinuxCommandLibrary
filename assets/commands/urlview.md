@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interactive URL selector from text files
+
 # TLDR
 
 **Extract URLs from a file** and display menu

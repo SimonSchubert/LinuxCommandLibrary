@@ -1,3 +1,7 @@
+# TAGLINE
+
+Translate underline sequences for terminals
+
 # TLDR
 
 **Display** file with underlines

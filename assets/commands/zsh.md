@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extended Bourne shell with advanced features
+
 # TLDR
 
 **Start an interactive zsh shell**

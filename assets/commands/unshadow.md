@@ -1,5 +1,11 @@
 # TLDR
 
+# TAGLINE
+
+Merge passwd and shadow files for auditing
+
+# TLDR
+
 Combine **system** passwd and shadow
 
 ```sudo unshadow /etc/passwd /etc/shadow```

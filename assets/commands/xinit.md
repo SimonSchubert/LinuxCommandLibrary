@@ -1,3 +1,7 @@
+# TAGLINE
+
+Start X Window System server
+
 # TLDR
 
 **Start X with the default window manager**

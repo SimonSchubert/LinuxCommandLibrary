@@ -1,3 +1,7 @@
+# TAGLINE
+
+Streaming torrent client for the terminal
+
 # TLDR
 
 **Download torrent**
@@ -66,15 +70,11 @@
 
 # DESCRIPTION
 
-**webtorrent** downloads and streams torrents. It works in browsers and Node.js.
+**webtorrent** is a torrent client that can download files to disk or stream them directly to media players like VLC and mpv while the download is still in progress. It supports both traditional BitTorrent peers and WebRTC-based browser peers.
 
-Download mode saves to disk. Standard torrent behavior.
+The download command saves torrent contents to a specified directory, while streaming options like --vlc or --mpv open the media in the corresponding player as data arrives. Casting to Chromecast and AirPlay devices is also supported for streaming to TV screens.
 
-Streaming plays while downloading. VLC, mpv, or cast devices.
-
-Seeding shares files via torrent. Creates swarm for distribution.
-
-WebRTC support enables browser peers. Works alongside BitTorrent.
+The seed command shares local files over the BitTorrent network, and the create command generates new .torrent files. The tool accepts magnet links, torrent files, and info hashes as input.
 
 # CAVEATS
 

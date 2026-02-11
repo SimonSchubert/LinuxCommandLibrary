@@ -1,3 +1,7 @@
+# TAGLINE
+
+Force-close X11 windows by clicking
+
 # TLDR
 
 **Kill window by clicking**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Apache Thrift cross-language code generator
+
 # TLDR
 
 **Generate code** for a specific language from a Thrift file

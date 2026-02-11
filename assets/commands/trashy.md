@@ -1,3 +1,7 @@
+# TAGLINE
+
+Rust-based command-line trash utility
+
 # TLDR
 
 Move a specific **file** to the trash

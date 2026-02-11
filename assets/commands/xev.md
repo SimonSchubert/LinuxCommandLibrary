@@ -1,3 +1,7 @@
+# TAGLINE
+
+X11 event monitoring tool
+
 # TLDR
 
 **Start xev**
@@ -51,17 +55,11 @@
 
 # DESCRIPTION
 
-**xev** displays X11 events. It shows what the X server receives.
+**xev** is an X11 event monitoring utility that displays all events received by a window. When launched, it opens a small window and prints detailed information about every X event that occurs within it, including key presses, mouse movements, button clicks, window exposure, and focus changes.
 
-Window opens to capture events. Click, type, move mouse.
+The tool is primarily used for debugging X11 input issues and discovering keycodes for keyboard configuration. Each event is printed with full details including keycodes, key symbols, coordinates, modifier states, and timestamps. This makes it invaluable for setting up key bindings in window managers or diagnosing input problems.
 
-Event details are printed. Keycodes, coordinates, modifiers.
-
-Useful for debugging input. Find keycodes for configuration.
-
-Window ID mode monitors other windows. Spy on specific applications.
-
-Root mode catches global events. Display-wide monitoring.
+Events can be filtered by type using the **-event** option to show only keyboard, mouse, button, or motion events. The **-id** option monitors events on a specific existing window, while **-root** captures events on the root window for display-wide monitoring.
 
 # CAVEATS
 

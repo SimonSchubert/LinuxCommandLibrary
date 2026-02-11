@@ -1,3 +1,7 @@
+# TAGLINE
+
+List available kernel trace events
+
 # TLDR
 
 List available **tracers**

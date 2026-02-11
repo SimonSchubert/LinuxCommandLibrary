@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extensible terminal-based chat client
+
 # TLDR
 
 **Start WeeChat**

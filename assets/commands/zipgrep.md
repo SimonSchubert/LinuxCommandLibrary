@@ -1,3 +1,7 @@
+# TAGLINE
+
+Search inside ZIP archives
+
 # TLDR
 
 **Search in ZIP**
@@ -56,15 +60,11 @@ _members_
 
 # DESCRIPTION
 
-**zipgrep** searches inside ZIP archives. It greps without extracting.
+**zipgrep** searches for text patterns inside ZIP archives without requiring manual extraction. It works as a shell wrapper around **unzip** and **egrep**, piping decompressed file contents through pattern matching to display results in a familiar grep-like format.
 
-Pattern matching uses egrep. Regular expressions supported.
+Pattern matching supports extended regular expressions through egrep. The output shows the matching filename and line for each hit, similar to running grep on extracted contents. Optional member arguments restrict the search to specific files within the archive.
 
-File specification limits search. Only named members searched.
-
-Output shows file and match. Like grep on extracted contents.
-
-Useful for large archives. No extraction needed.
+Standard grep options like **-i** for case-insensitive matching, **-n** for line numbers, **-c** for match counts, and **-l** for listing matching filenames are all supported. zipgrep is part of the Info-ZIP suite of utilities.
 
 # CAVEATS
 

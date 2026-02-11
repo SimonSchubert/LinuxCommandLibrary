@@ -1,3 +1,7 @@
+# TAGLINE
+
+Software MIDI synthesizer and converter
+
 # TLDR
 
 **Play a MIDI file**
@@ -77,6 +81,17 @@
 The program supports Standard MIDI files (.mid), Recomposer files (.rcp, .r36, .g18, .g36), and module files (.mod). It uses Gravis Ultrasound-compatible patch files or SoundFonts (.sf2) to synthesize audio from MIDI data.
 
 TiMidity++ offers multiple interfaces including a dumb terminal interface, ncurses-based interface, GTK+ GUI, and can run as an ALSA sequencer client or MIDI server. This flexibility makes it useful for both playback and as a system-wide MIDI synthesizer.
+
+# CONFIGURATION
+
+**/etc/timidity/timidity.cfg**
+> System-wide configuration specifying SoundFont and patch file paths, default output mode, and audio settings.
+
+**~/.timidity.cfg**
+> Per-user configuration overrides.
+
+**-c** _file_
+> Load an additional configuration file at runtime.
 
 # CAVEATS
 

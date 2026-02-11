@@ -1,3 +1,7 @@
+# TAGLINE
+
+Build Vue.js applications for production
+
 # TLDR
 
 **Build for production**

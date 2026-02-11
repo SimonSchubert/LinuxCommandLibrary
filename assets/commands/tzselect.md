@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interactive timezone name selector
+
 # TLDR
 
 **Select** timezone interactively

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Drop-down terminal emulator
+
 # TLDR
 
 **Start Tilda terminal**

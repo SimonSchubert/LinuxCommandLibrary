@@ -1,3 +1,7 @@
+# TAGLINE
+
+Simplified community-maintained man pages
+
 # TLDR
 
 **Show tldr page for a command**

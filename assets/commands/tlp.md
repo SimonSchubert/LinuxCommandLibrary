@@ -1,3 +1,7 @@
+# TAGLINE
+
+Advanced laptop power management
+
 # TLDR
 
 **Start** (apply power settings)
@@ -38,6 +42,14 @@ Apply **AC** settings
 **tlp** is an advanced power management tool for Linux that optimizes battery life on laptops. It automatically applies power-saving settings when on battery and performance settings when on AC power.
 
 Settings are configured in `/etc/tlp.conf` and cover CPU frequency, disk spin-down, USB autosuspend, WiFi power saving, and more.
+
+# CONFIGURATION
+
+**/etc/tlp.conf**
+> Main configuration file defining power profiles for AC and battery modes, covering CPU governor, disk settings, USB autosuspend, WiFi power saving, and more.
+
+**/etc/tlp.d/*.conf**
+> Drop-in configuration directory for modular overrides.
 
 # CAVEATS
 

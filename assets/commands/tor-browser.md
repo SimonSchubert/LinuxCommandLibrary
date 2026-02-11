@@ -1,3 +1,7 @@
+# TAGLINE
+
+Privacy-focused anonymous web browser
+
 # TLDR
 
 **Launch Tor Browser**

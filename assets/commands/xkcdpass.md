@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate memorable XKCD-style passphrases
+
 # TLDR
 
 **Generate passphrase**

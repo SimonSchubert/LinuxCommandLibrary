@@ -1,3 +1,7 @@
+# TAGLINE
+
+Modify X11 key and pointer mappings
+
 # TLDR
 
 **Swap** left-click and right-click on the pointer

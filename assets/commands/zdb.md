@@ -1,3 +1,7 @@
+# TAGLINE
+
+ZFS pool debugging and diagnostics tool
+
 # TLDR
 
 **Display pool configuration**

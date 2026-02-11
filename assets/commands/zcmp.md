@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compare gzip-compressed files byte-by-byte
+
 # TLDR
 
 **Compare compressed files**
@@ -29,15 +33,11 @@
 
 # DESCRIPTION
 
-**zcmp** compares compressed files. It's cmp for gzip.
+**zcmp** compares gzip-compressed files byte-by-byte without requiring manual decompression. It works like **cmp** but transparently handles .gz files, decompressing them on the fly for comparison.
 
-Gzip file comparison. Without decompressing.
+By default, zcmp reports only the first difference found. The **-l** flag shows all differing byte positions and values. Silent mode (**-s**) suppresses all output and communicates only through exit codes: 0 if files are identical, 1 if they differ.
 
-Byte-by-byte. Like cmp.
-
-Exit codes. 0=same, 1=differ.
-
-Convenience wrapper. Uses zdiff.
+The command is part of the gzip package and acts as a convenience wrapper. For line-by-line comparison of compressed files, use **zdiff** instead.
 
 # CAVEATS
 

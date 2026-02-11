@@ -1,3 +1,7 @@
+# TAGLINE
+
+Mistral AI command-line coding assistant
+
 # TLDR
 
 **Start an interactive session**

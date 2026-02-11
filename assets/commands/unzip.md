@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extract files from ZIP archives
+
 # TLDR
 
 **Extract files** to current directory

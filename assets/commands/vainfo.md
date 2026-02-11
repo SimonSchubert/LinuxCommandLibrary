@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display VA-API video acceleration info
+
 # TLDR
 
 **Show VA-API info**
@@ -29,15 +33,9 @@
 
 # DESCRIPTION
 
-**vainfo** shows VA-API support. It displays capabilities.
+**vainfo** displays information about the Video Acceleration API (VA-API) support available on the system. It queries the GPU driver and reports which video encoding and decoding profiles are supported, such as H.264, HEVC, VP9, and AV1.
 
-Hardware video acceleration. GPU encoding/decoding.
-
-Supported profiles. H.264, HEVC, etc.
-
-Driver information. Vendor and version.
-
-Diagnostic tool. Check VA-API setup.
+The output includes the VA-API driver name, version, and a list of supported profiles with their entry points (encoding, decoding, video processing). This information is essential for diagnosing hardware video acceleration issues and verifying that the correct VA-API driver is loaded for the GPU.
 
 # CAVEATS
 

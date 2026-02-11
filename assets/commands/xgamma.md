@@ -1,3 +1,7 @@
+# TAGLINE
+
+Adjust X11 display gamma correction
+
 # TLDR
 
 **Display current gamma values**

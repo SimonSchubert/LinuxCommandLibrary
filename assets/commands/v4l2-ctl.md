@@ -1,3 +1,7 @@
+# TAGLINE
+
+Control and query Video4Linux2 devices
+
 # TLDR
 
 **List** all video devices

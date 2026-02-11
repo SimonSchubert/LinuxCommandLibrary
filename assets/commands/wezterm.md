@@ -1,3 +1,7 @@
+# TAGLINE
+
+GPU-accelerated terminal emulator
+
 # TLDR
 
 **Start terminal**

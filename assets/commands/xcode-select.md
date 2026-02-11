@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage macOS developer tool directories
+
 # TLDR
 
 **Install command line developer tools**

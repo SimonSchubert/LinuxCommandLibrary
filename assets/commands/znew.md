@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert compress (.Z) files to gzip format
+
 # TLDR
 
 **Convert .Z file to .gz**

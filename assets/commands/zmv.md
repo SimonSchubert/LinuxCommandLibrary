@@ -1,3 +1,7 @@
+# TAGLINE
+
+Batch rename files using zsh patterns
+
 # TLDR
 
 **Rename files lowercase to uppercase**

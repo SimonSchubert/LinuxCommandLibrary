@@ -1,3 +1,7 @@
+# TAGLINE
+
+Measure command execution time
+
 # TLDR
 
 **Measure execution time of a command**

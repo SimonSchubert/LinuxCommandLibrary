@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compact VM disk image files
+
 # TLDR
 
 Create **compressed** sparse image

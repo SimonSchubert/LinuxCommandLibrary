@@ -1,3 +1,7 @@
+# TAGLINE
+
+Classic X11 Tab Window Manager
+
 # TLDR
 
 **Start window manager**
@@ -36,15 +40,16 @@
 
 # DESCRIPTION
 
-**twm** is a window manager. It's Tab Window Manager.
+**twm** (Tab Window Manager) is a minimal window manager for the X Window System. It provides basic window management functionality including title bars, borders, window resizing, and iconification using a small memory footprint.
 
-Classic X11 WM. Minimal and simple.
+The window manager is highly configurable through the **~/.twmrc** configuration file, which defines key bindings, menus, title bar buttons, and window appearance. It supports virtual screens for organizing workspaces.
 
-Window decorations. Title bars, borders.
+As part of the standard X.Org distribution, twm serves as a fallback window manager when no other is configured. Its minimalism makes it suitable for resource-constrained environments and as a base for understanding X11 window management.
 
-Virtual screens. Workspace support.
+# CONFIGURATION
 
-Highly configurable. .twmrc file.
+**~/.twmrc**
+> Main configuration file defining key bindings, menus, title bar buttons, colors, and window behavior.
 
 # CAVEATS
 

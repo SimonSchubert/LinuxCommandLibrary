@@ -1,3 +1,7 @@
+# TAGLINE
+
+JetBrains JavaScript IDE launcher
+
 # TLDR
 
 **Open project**
@@ -43,15 +47,11 @@
 
 # DESCRIPTION
 
-**webstorm** launches WebStorm IDE. It opens projects and files.
+**webstorm** is the command-line launcher for JetBrains WebStorm, a professional IDE for JavaScript and web development. It opens projects, files, and directories directly from the terminal, with options to specify the line and column position for precise cursor placement.
 
-JetBrains IDE. JavaScript development.
+The launcher supports opening files in an existing WebStorm instance or forcing a new window, and includes a diff mode for side-by-side file comparison. The --wait flag blocks the terminal until the file is closed, making it suitable for use as a Git editor or merge tool.
 
-Command-line launcher. Editor integration.
-
-Diff mode. File comparison.
-
-Project opening. Directory-based.
+The command is typically installed via WebStorm's "Create Command-line Launcher" option in the Tools menu, which places it in the system PATH.
 
 # CAVEATS
 

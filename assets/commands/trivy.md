@@ -1,3 +1,7 @@
+# TAGLINE
+
+Comprehensive security vulnerability scanner
+
 # TLDR
 
 **Scan a container image** for vulnerabilities

@@ -1,3 +1,7 @@
+# TAGLINE
+
+SSH into Vagrant virtual machines
+
 # TLDR
 
 **SSH into VM**

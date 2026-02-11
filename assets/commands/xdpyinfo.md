@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display X server information
+
 # TLDR
 
 **Display X server information**

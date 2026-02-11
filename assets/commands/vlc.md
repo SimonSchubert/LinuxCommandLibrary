@@ -1,3 +1,7 @@
+# TAGLINE
+
+Cross-platform multimedia player and streamer
+
 # TLDR
 
 **Play a media file**

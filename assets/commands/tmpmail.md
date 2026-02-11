@@ -1,3 +1,7 @@
+# TAGLINE
+
+Temporary disposable email from terminal
+
 # TLDR
 
 **Generate address**
@@ -47,15 +51,9 @@
 
 # DESCRIPTION
 
-**tmpmail** provides temporary email. It creates disposable addresses.
+**tmpmail** generates temporary, disposable email addresses and lets you check their inbox directly from the terminal. It is useful for signing up for services without exposing your real email address to potential spam.
 
-Disposable addresses. Avoid spam.
-
-Browser-free checking. Terminal inbox.
-
-Multiple domains. Choose provider.
-
-Clipboard support. Easy copying.
+The tool creates addresses on supported temporary email domains and retrieves incoming messages for viewing in the terminal or a browser. The current address can be copied to the clipboard with **-c** for quick pasting into registration forms.
 
 # CAVEATS
 

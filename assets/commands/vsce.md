@@ -1,3 +1,7 @@
+# TAGLINE
+
+VS Code extension manager CLI
+
 # TLDR
 
 **Package extension**
@@ -60,17 +64,11 @@
 
 # DESCRIPTION
 
-**vsce** manages VS Code extensions. It packages and publishes to the marketplace.
+**vsce** (Visual Studio Code Extension Manager) is the official command-line tool for packaging, publishing, and managing VS Code extensions on the Visual Studio Marketplace. It handles the full lifecycle of extension development from local packaging to public distribution.
 
-Packaging creates .vsix file. Install locally or distribute.
+The packaging command bundles an extension project into a .vsix file that can be installed locally or shared directly. Publishing uploads the packaged extension to the Visual Studio Marketplace, with support for automatic version bumping using semver increments (major, minor, patch).
 
-Publishing uploads to marketplace. Version bumping automatic.
-
-Publisher identity required. Create or login to publish.
-
-Show displays metadata. Stars, downloads, description.
-
-Listing reveals package contents. Verify before publishing.
+A publisher identity is required for marketplace operations, which can be created through the tool or the marketplace web interface. Authentication uses Azure DevOps personal access tokens. The tool also provides commands for listing package contents before publishing and displaying extension metadata such as download counts and ratings.
 
 # CAVEATS
 

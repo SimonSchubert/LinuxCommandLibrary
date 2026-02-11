@@ -1,3 +1,7 @@
+# TAGLINE
+
+Build shared MIME-Info database cache
+
 # TLDR
 
 **Update system MIME database**

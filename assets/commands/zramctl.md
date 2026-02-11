@@ -1,3 +1,7 @@
+# TAGLINE
+
+Set up and control zram devices
+
 # TLDR
 
 **Check** if zram is enabled

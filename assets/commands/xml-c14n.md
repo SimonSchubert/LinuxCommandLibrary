@@ -1,3 +1,7 @@
+# TAGLINE
+
+Canonicalize XML documents
+
 # TLDR
 
 **Canonicalize XML**

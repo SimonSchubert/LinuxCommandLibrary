@@ -1,3 +1,7 @@
+# TAGLINE
+
+Haskell type-safe web framework CLI
+
 # TLDR
 
 **Create project**
@@ -39,15 +43,11 @@
 
 # DESCRIPTION
 
-**yesod** is a Haskell web framework. It provides tooling.
+**yesod** is the command-line tool for the Yesod web framework, which builds type-safe web applications in Haskell. It provides project scaffolding, development server management, and deployment bundling.
 
-Project scaffolding. Quick start.
+The **init** command creates a new project with a complete directory structure, configuration, and dependencies. The **devel** subcommand starts a development server that watches for file changes and recompiles automatically, providing live reload during development.
 
-Development server. Live reload.
-
-Type-safe routes. Compile-time checking.
-
-Deployment support. Keter bundles.
+Route handlers can be added with **add-handler**, which generates boilerplate code following Yesod conventions. The **keter** command packages the application into a deployment bundle for the Keter web application deployment system.
 
 # CAVEATS
 

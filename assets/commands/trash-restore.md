@@ -1,3 +1,7 @@
+# TAGLINE
+
+Restore files from the trash
+
 # TLDR
 
 This command is documented with **trash**

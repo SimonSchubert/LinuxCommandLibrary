@@ -1,3 +1,7 @@
+# TAGLINE
+
+Capture still images from UVC webcams
+
 # TLDR
 
 **Capture a single image** from webcam

@@ -1,3 +1,7 @@
+# TAGLINE
+
+SUSE and openSUSE package manager
+
 # TLDR
 
 **Synchronize** list of packages and versions available

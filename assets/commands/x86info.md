@@ -1,3 +1,7 @@
+# TAGLINE
+
+Detailed x86 CPU diagnostic information
+
 # TLDR
 
 **Display all CPU information**

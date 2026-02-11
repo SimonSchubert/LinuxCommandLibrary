@@ -1,3 +1,7 @@
+# TAGLINE
+
+Anonymizing onion routing network daemon
+
 # TLDR
 
 Start **Tor** client
@@ -53,6 +57,14 @@ Display **version** information
 
 **--quiet**
 > Only log errors during startup
+
+# CONFIGURATION
+
+**/etc/tor/torrc**
+> Main configuration file specifying SOCKS port, relay settings, hidden services, bridge configuration, and logging options.
+
+**-f** _file_
+> Use an alternate configuration file at runtime.
 
 # CAVEATS
 

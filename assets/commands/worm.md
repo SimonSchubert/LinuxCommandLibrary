@@ -1,3 +1,7 @@
+# TAGLINE
+
+Classic terminal snake game
+
 # TLDR
 
 **Start the worm game**

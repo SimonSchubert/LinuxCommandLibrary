@@ -1,3 +1,7 @@
+# TAGLINE
+
+Command-line Todoist client in Rust
+
 # TLDR
 
 **Import** projects

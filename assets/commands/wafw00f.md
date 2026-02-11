@@ -1,3 +1,7 @@
+# TAGLINE
+
+Web Application Firewall detection tool
+
 # TLDR
 
 **Detect WAF**
@@ -53,15 +57,11 @@
 
 # DESCRIPTION
 
-**wafw00f** identifies Web Application Firewalls. It sends crafted requests and analyzes responses.
+**wafw00f** is a security tool that identifies Web Application Firewalls (WAFs) protecting websites. It works by sending specially crafted HTTP requests and analyzing the responses for signatures and behaviors characteristic of specific WAF products.
 
-Detection fingerprints WAF products. ModSecurity, Cloudflare, AWS WAF, etc.
+The tool can detect a wide range of commercial and open-source WAFs including Cloudflare, AWS WAF, Akamai, F5 BIG-IP, ModSecurity, Imperva, Sucuri, and many others. In its default mode it stops after identifying the first WAF, while the all-detection mode tests against every known WAF fingerprint for thorough analysis.
 
-Multiple URLs can be tested. Batch processing from file.
-
-All mode tests against every WAF. Thorough but slower.
-
-Proxy support routes through interceptors. Useful with Burp Suite.
+Multiple URLs can be tested in batch from an input file, and proxy support allows routing traffic through interception tools like Burp Suite. The tool is designed for authorized penetration testing and security assessments to help identify protection measures before deeper testing.
 
 # DETECTED WAFS
 

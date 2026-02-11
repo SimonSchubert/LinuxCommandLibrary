@@ -1,5 +1,11 @@
 # TLDR
 
+# TAGLINE
+
+Update Mageia package repository lists
+
+# TLDR
+
 Update **all** enabled media
 
 ```urpmi.update -a```

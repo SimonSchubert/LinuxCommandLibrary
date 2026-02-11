@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run command with time limit
+
 # TLDR
 
 **Run a command with a time limit** (30 seconds)

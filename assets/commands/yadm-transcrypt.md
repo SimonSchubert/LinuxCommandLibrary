@@ -1,3 +1,7 @@
+# TAGLINE
+
+Transparent encryption for yadm files
+
 # TLDR
 
 **Initialize transcrypt**

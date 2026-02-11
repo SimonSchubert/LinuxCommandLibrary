@@ -1,3 +1,7 @@
+# TAGLINE
+
+Decompress xz files to stdout
+
 # TLDR
 
 **View contents** of an xz compressed file

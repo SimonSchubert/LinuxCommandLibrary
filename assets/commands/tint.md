@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal-based Tetris clone
+
 # TLDR
 
 **Start the game**

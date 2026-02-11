@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compress executable files for distribution
+
 # TLDR
 
 **Compress executable**

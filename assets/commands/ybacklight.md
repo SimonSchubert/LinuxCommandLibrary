@@ -1,3 +1,7 @@
+# TAGLINE
+
+Screen backlight brightness control
+
 # TLDR
 
 **Get brightness**
@@ -36,15 +40,11 @@
 
 # DESCRIPTION
 
-**ybacklight** controls backlight. It adjusts screen brightness.
+**ybacklight** controls the display backlight brightness from the command line. It provides a simple interface for getting, setting, and adjusting the screen brightness level as a percentage value.
 
-Brightness control. Percentage values.
+Brightness can be set to an absolute percentage with **-set**, or adjusted relative to the current level with **-inc** and **-dec**. The **-get** option queries the current brightness level.
 
-Increase/decrease. Relative changes.
-
-Simple interface. Backlight management.
-
-Alternative to xbacklight. Y version.
+The tool serves as an alternative to **xbacklight**, providing similar functionality for systems where xbacklight does not work correctly due to driver or hardware differences.
 
 # CAVEATS
 

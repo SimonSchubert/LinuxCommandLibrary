@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interactive grep with editor integration
+
 # TLDR
 
 **Search pattern**
@@ -43,15 +47,9 @@
 
 # DESCRIPTION
 
-**vgrep** searches with editor integration. It opens results.
+**vgrep** is a pager for grep results that assigns an index number to each match, allowing you to quickly open specific results in your editor by number. It respects .gitignore rules by default and provides both batch and interactive modes.
 
-Index-based access. Select by number.
-
-Editor integration. Open matches.
-
-Interactive mode. Navigate results.
-
-Git-aware. Respects .gitignore.
+In interactive mode (**-s**), results can be browsed and opened directly. The **--show** flag opens a previously indexed result without re-running the search, making it efficient for navigating through matches in a codebase.
 
 # CAVEATS
 

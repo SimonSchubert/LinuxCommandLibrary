@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display directory contents in tree format
+
 # TLDR
 
 **Display directory tree**

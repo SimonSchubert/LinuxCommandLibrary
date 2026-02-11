@@ -1,3 +1,7 @@
+# TAGLINE
+
+Show system uptime and load averages
+
 # TLDR
 
 **Show system uptime** and load averages

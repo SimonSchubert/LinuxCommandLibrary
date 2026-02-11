@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interactive Graphviz graph viewer
+
 # TLDR
 
 **Open a dot file** in the interactive viewer

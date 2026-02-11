@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create BitTorrent torrent files
+
 # TLDR
 
 **Create a torrent with a tracker**

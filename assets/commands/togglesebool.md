@@ -1,3 +1,7 @@
+# TAGLINE
+
+Toggle SELinux boolean values
+
 # TLDR
 
 **Toggle** a SELinux boolean

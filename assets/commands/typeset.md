@@ -1,3 +1,7 @@
+# TAGLINE
+
+Declare shell variables with attributes
+
 # TLDR
 
 **Declare an integer variable**

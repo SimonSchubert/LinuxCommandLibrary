@@ -1,3 +1,7 @@
+# TAGLINE
+
+Graphical desktop cow message display
+
 # TLDR
 
 Display cow with **message**

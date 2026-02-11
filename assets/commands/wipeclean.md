@@ -1,3 +1,7 @@
+# TAGLINE
+
+Animated terminal screen clearing
+
 # TLDR
 
 **Clean terminal**
@@ -29,15 +33,9 @@
 
 # DESCRIPTION
 
-**wipeclean** clears terminal. It adds animation.
+**wipeclean** is a fun alternative to the clear command that clears the terminal screen with visual animations instead of simply scrolling content away. Multiple animation styles are available, each providing a different visual effect as the screen content is wiped.
 
-Animated clear. Visual effect.
-
-Multiple animations. Different styles.
-
-Fun alternative to clear. Decorative.
-
-Terminal eye candy. Just for fun.
+The animation speed can be adjusted to control how quickly the clearing effect plays out. It is purely decorative and serves no functional advantage over the standard clear command, but adds a bit of visual flair to terminal workflows.
 
 # CAVEATS
 

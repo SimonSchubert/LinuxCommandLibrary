@@ -1,3 +1,7 @@
+# TAGLINE
+
+XFCE terminal emulator
+
 # TLDR
 
 **Open** new terminal

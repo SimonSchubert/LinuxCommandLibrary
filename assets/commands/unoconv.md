@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert documents between formats via LibreOffice
+
 # TLDR
 
 **Convert document to PDF**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Lightweight BitTorrent client suite
+
 # TLDR
 
 **Start GTK client**
@@ -57,15 +61,11 @@
 
 # DESCRIPTION
 
-**Transmission** is a lightweight BitTorrent client. Multiple interfaces share the same backend.
+**Transmission** is a lightweight, cross-platform BitTorrent client known for its simplicity and low resource usage. All of its interface variants — GTK, Qt, web, CLI, and daemon — share the same core backend engine, providing consistent behavior regardless of how the client is accessed.
 
-GUI clients provide visual interface. GTK and Qt versions available.
+The desktop GUI clients (transmission-gtk and transmission-qt) offer a graphical interface for managing torrents. For headless servers, transmission-daemon runs in the background and can be controlled through a built-in web interface or the transmission-remote command-line tool. The standalone transmission-cli provides simple single-torrent downloading without requiring a daemon.
 
-Daemon mode runs headlessly. Control via web interface or CLI.
-
-Remote commands manage the daemon. Add torrents, check status.
-
-CLI mode downloads directly. Simple single-torrent usage.
+Additional utilities include transmission-create for building new torrent files, transmission-show for inspecting torrent metadata, and transmission-edit for modifying existing torrent files. The suite supports features like peer exchange, DHT, magnet links, encryption, and bandwidth scheduling.
 
 # CAVEATS
 

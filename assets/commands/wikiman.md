@@ -1,3 +1,7 @@
+# TAGLINE
+
+Offline documentation search aggregator
+
 # TLDR
 
 **Search documentation**
@@ -60,17 +64,11 @@
 
 # DESCRIPTION
 
-**wikiman** searches offline documentation. It aggregates multiple sources.
+**wikiman** is an offline documentation search tool that aggregates multiple sources including man pages, Arch Wiki, Gentoo Wiki, and TLDR pages into a single searchable interface. Queries are matched across all configured sources simultaneously, with results ranked by relevance using fuzzy matching.
 
-Query searches all configured sources. Results ranked by relevance.
+Source filtering allows narrowing searches to specific documentation types, such as only wiki articles or only man pages. Results can be viewed in a terminal pager or opened in a browser with full HTML formatting preserved for wiki content.
 
-Source filtering focuses search. Limit to wiki or man pages.
-
-Interactive HTML opens in browser. Full formatting preserved.
-
-Offline access works without network. Downloaded sources used.
-
-Sync updates documentation. Pull latest from sources.
+All documentation is stored locally after an initial sync, enabling fast searches without network access. The sync command updates the local cache with the latest content from each configured source.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Word-by-word file comparison tool
+
 # TLDR
 
 **Compare files word-by-word**
@@ -56,15 +60,11 @@
 
 # DESCRIPTION
 
-**wdiff** compares files word by word. Unlike diff, it highlights word-level changes.
+**wdiff** compares two files on a word-by-word basis rather than line-by-line like traditional diff. This makes it particularly useful for comparing prose and text documents where changes often involve individual words within paragraphs rather than entire lines.
 
-Deleted words marked with [-...-]. Inserted words marked with {+...+}.
+By default, deleted words are enclosed in `[-...-]` markers and inserted words in `{+...+}` markers, making changes easy to spot in the output. These markers can be customized with ANSI escape codes to produce colored output highlighting additions and deletions visually.
 
-Statistics show change counts. Words deleted, inserted, common.
-
-Markers are customizable. Use ANSI codes for colors.
-
-Useful for text documents. Prose comparison clearer than line diff.
+The statistics mode shows counts of deleted, inserted, and common words along with percentage changes. Case-insensitive comparison is available for situations where capitalization differences should be ignored.
 
 # CAVEATS
 

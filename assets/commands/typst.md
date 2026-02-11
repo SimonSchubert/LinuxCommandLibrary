@@ -1,3 +1,7 @@
+# TAGLINE
+
+Modern typesetting system and compiler
+
 # TLDR
 
 **Compile document to PDF**

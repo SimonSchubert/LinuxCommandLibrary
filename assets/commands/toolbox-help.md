@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display Toolbx help information
+
 # TLDR
 
 Display **manual**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display GTK dialogs from shell scripts
+
 # TLDR
 
 **Display** the default question dialog
