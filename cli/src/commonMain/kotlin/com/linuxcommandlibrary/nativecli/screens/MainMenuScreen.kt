@@ -62,7 +62,7 @@ class MainMenuScreen(terminal: Terminal) : Screen {
             ScreenResult.Stay
         }
 
-        "Enter" -> {
+        "Enter", "l" -> {
             when (list.selectedValue) {
                 MainMenuItem.COMMANDS -> ScreenResult.Navigate(SearchScreen())
                 MainMenuItem.BASICS -> ScreenResult.Navigate(BasicCategoriesScreen())
