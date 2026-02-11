@@ -107,7 +107,7 @@ class BasicDetailScreen(
             ScreenResult.Stay
         }
 
-        "q", "Escape", "Enter" -> ScreenResult.Back
+        "q", "Escape", "Enter", "h" -> ScreenResult.Back
 
         else -> ScreenResult.Stay
     }
