@@ -1,3 +1,7 @@
+# TAGLINE
+
+Private certificate authority server
+
 # TLDR
 
 **Initialize new CA**
@@ -117,6 +121,20 @@ Provisioners authenticate certificate requests. Types include ACME, OIDC, JWK, X
 Renewal with **step ca renew** extends certificate lifetime. Pair with **step-renewer** daemon for automatic renewal. Revocation invalidates certificates before expiration.
 
 step-ca supports ACME protocol, enabling integration with certbot and other ACME clients for automated certificate issuance.
+
+# CONFIGURATION
+
+**$(step path)/config/ca.json**
+> Main CA server configuration defining address, database, TLS settings, and authority parameters.
+
+**$(step path)/config/defaults.json**
+> Default client settings including CA URL and fingerprint.
+
+**$(step path)/certs/**
+> Directory containing root and intermediate CA certificates.
+
+**$(step path)/secrets/**
+> Directory containing CA private keys (root and intermediate).
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Calculate color distance transform map
+
 # TLDR
 
 **Calculate distance transform**

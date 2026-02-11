@@ -1,3 +1,7 @@
+# TAGLINE
+
+View files in read-only nano editor
+
 # TLDR
 
 **View file read-only**
@@ -39,15 +43,11 @@
 
 # DESCRIPTION
 
-**rnano** is read-only nano. It prevents modifications.
+**rnano** is the read-only mode of the nano text editor, typically implemented as a symlink that invokes nano with the **-v** (view) flag. It provides a familiar nano interface for viewing files while preventing any accidental modifications, making it suitable for inspecting configuration files and logs.
 
-View files safely. No accidental edits.
+All of nano's navigation features remain available, including scrolling, line jumping with **+LINE**, syntax highlighting, line number display with **-l**, and smooth scrolling with **-S**. The editor simply refuses any modification commands, so users can browse safely without risk of unintended changes.
 
-Same interface as nano. Familiar navigation.
-
-Syntax highlighting works. Colored output.
-
-Good for viewing configs. Safe inspection.
+This is analogous to the relationship between **vi** and **view**, providing a read-only variant of a familiar editor.
 
 # CAVEATS
 

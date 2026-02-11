@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert RPM packages to cpio archives
+
 # TLDR
 
 **Convert** an RPM package to a cpio archive

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run make in Sailfish build environment
+
 # TLDR
 
 **Build project with make**

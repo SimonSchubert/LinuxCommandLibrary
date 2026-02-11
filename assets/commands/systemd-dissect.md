@@ -1,3 +1,7 @@
+# TAGLINE
+
+Inspect and mount disk images
+
 # TLDR
 
 **Show** general image information

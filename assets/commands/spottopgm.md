@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert SPOT satellite images to PGM
+
 # TLDR
 
 **Convert SPOT satellite image to PGM**
@@ -10,7 +14,7 @@
 
 # DESCRIPTION
 
-**spottopgm** converts SPOT satellite image format to PGM. SPOT satellites capture Earth observation imagery. Part of Netpbm toolkit.
+**spottopgm** converts images in the SPOT satellite format to PGM (Portable Graymap) format. The SPOT format is used by imagery from the SPOT (Satellite Pour l'Observation de la Terre) Earth observation satellite system, which captures high-resolution imagery for cartography, agriculture, and environmental monitoring. This tool is part of the Netpbm image processing toolkit, which provides converters between many image formats.
 
 # SEE ALSO
 

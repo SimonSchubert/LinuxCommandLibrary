@@ -1,3 +1,7 @@
+# TAGLINE
+
+Visualize PipeWire graph as Graphviz DOT
+
 # TLDR
 
 Generate a graph to **pw.dot** file

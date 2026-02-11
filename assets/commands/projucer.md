@@ -1,3 +1,7 @@
+# TAGLINE
+
+JUCE audio framework project manager
+
 # TLDR
 
 **Open project**
@@ -47,15 +51,11 @@
 
 # DESCRIPTION
 
-**Projucer** manages JUCE projects. It generates IDE project files.
+**Projucer** is the project management tool for the JUCE framework, used to create and maintain cross-platform audio applications and plugins. It reads **.jucer** project files that define source files, modules, and build targets, then generates native IDE projects for Xcode, Visual Studio, Linux Makefiles, and other build systems.
 
-JUCE framework tool. Audio application development.
+The tool handles JUCE module management, allowing developers to add, remove, and configure framework modules that provide audio processing, GUI components, networking, and other functionality. When the project file changes, **--resave** regenerates all IDE files to keep them in sync.
 
-Cross-platform generation. Xcode, Visual Studio, Makefiles.
-
-Module management included. Add JUCE modules easily.
-
-GUI and CLI modes. Interactive or automated.
+Projucer operates both as a graphical IDE for interactive development and as a command-line tool for CI/CD automation. The CLI mode supports creating new projects, regenerating build files, and querying project status without launching the GUI.
 
 # CAVEATS
 

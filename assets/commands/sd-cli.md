@@ -1,3 +1,7 @@
+# TAGLINE
+
+Stable Diffusion image generation CLI
+
 # TLDR
 
 **Generate an image from a text prompt**

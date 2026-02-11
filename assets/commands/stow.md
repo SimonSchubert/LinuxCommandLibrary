@@ -1,3 +1,7 @@
+# TAGLINE
+
+Symlink farm manager for dotfiles
+
 # TLDR
 
 **Stow a package** (create symlinks)

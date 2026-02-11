@@ -1,3 +1,7 @@
+# TAGLINE
+
+Scaffold Rails application components from templates
+
 # TLDR
 
 **Generate model**
@@ -42,7 +46,9 @@
 
 # DESCRIPTION
 
-**rails generate** creates files from templates. Scaffolds models, controllers, views, and migrations. Core Rails workflow for adding application components.
+**rails generate** creates boilerplate files from templates for common Rails application components. It scaffolds models with database migrations, controllers with associated views and routes, and full CRUD interfaces through the scaffold generator, following Rails naming conventions and directory structure automatically.
+
+Each generator produces the appropriate set of files including source code, test stubs, and configuration entries. The **--pretend** flag previews what would be created without writing files, and **--skip-routes** prevents automatic route additions. Custom generators can be created to match project-specific patterns, and the inverse operation **rails destroy** removes all files a generator created.
 
 # SEE ALSO
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+RDF data storage and processing libraries
+
 # TLDR
 
 **Parse RDF file**
@@ -29,7 +33,9 @@ Redland RDF Libraries and utilities
 
 # DESCRIPTION
 
-**Redland** is a set of libraries for RDF (Resource Description Framework) processing. It provides parsing, storage, querying (SPARQL), and serialization of RDF data.
+**Redland** is a set of C libraries and command-line utilities for working with RDF (Resource Description Framework) data. It provides comprehensive support for parsing, storing, querying via SPARQL, and serializing RDF across multiple formats including RDF/XML, Turtle, N-Triples, and N-Quads.
+
+The toolkit includes **rapper** for format conversion and validation, **roqet** for executing SPARQL queries, and **rdfproc** for managing persistent RDF stores. These tools can be combined in pipelines for batch processing of semantic web data.
 
 # EXAMPLES
 

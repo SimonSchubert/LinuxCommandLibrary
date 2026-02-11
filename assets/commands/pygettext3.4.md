@@ -1,3 +1,7 @@
+# TAGLINE
+
+Python 3.4 translatable string extraction
+
 # TLDR
 
 **Extract translatable strings**
@@ -32,11 +36,9 @@ _FILES_
 
 # DESCRIPTION
 
-**pygettext3.4** extracts translatable strings from Python 3.4. i18n tool.
+**pygettext3.4** is the Python 3.4 version of pygettext, which extracts translatable strings from Python source files and generates POT (Portable Object Template) files for internationalization. It scans for strings wrapped in **_()**, **gettext()**, and similar marker functions.
 
-The tool creates POT files. Internationalization helper.
-
-pygettext3.4 extracts strings.
+This version-specific binary targets Python 3.4 code. For current development, use the latest **pygettext** or the more feature-rich **xgettext** and **Babel** alternatives.
 
 # CAVEATS
 

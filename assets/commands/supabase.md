@@ -1,3 +1,7 @@
+# TAGLINE
+
+Supabase local development and deployment CLI
+
 # TLDR
 
 **Initialize project**
@@ -67,15 +71,11 @@
 
 # DESCRIPTION
 
-**supabase** CLI manages Supabase projects. It provides local development and deployment tools.
+**supabase** is the command-line interface for managing Supabase projects, an open-source Firebase alternative built on PostgreSQL. It provides tools for local development, database migration management, type generation, and deployment to hosted Supabase projects.
 
-Local development runs full stack. PostgreSQL, Auth, Storage, and Edge Functions.
+The local development environment runs a complete Supabase stack using Docker, including PostgreSQL, authentication services, object storage, realtime subscriptions, and Edge Functions. This allows developing and testing against a production-equivalent environment without needing a remote project.
 
-Migrations version database schema. Track changes in git.
-
-Type generation creates TypeScript types. Database schema to code types.
-
-Linking connects to hosted project. Deploy local changes to production.
+Database migrations track schema changes in version control. The CLI can generate TypeScript types from the database schema for type-safe client code. Linking connects the local project to a hosted Supabase instance for deploying migrations and Edge Functions to production.
 
 # CAVEATS
 

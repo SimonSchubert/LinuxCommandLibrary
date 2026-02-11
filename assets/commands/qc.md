@@ -1,3 +1,7 @@
+# TAGLINE
+
+Quick command-line calculator
+
 # TLDR
 
 **Quick calculator**
@@ -23,11 +27,9 @@ _EXPRESSION_
 
 # DESCRIPTION
 
-**qc** is a quick command-line calculator. Simple arithmetic tool.
+**qc** is a lightweight command-line calculator for quickly evaluating mathematical expressions from the terminal. It accepts arithmetic expressions as arguments and prints the result, or runs interactively for multiple calculations in sequence.
 
-The tool evaluates expressions. Basic math operations.
-
-qc calculates quickly.
+The tool supports standard operations including addition, subtraction, multiplication, division, and parentheses for grouping. It provides a faster alternative to launching a full calculator like **bc** or **qalc** when only simple arithmetic is needed.
 
 # CAVEATS
 

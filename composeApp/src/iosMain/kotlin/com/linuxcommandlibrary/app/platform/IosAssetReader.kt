@@ -16,7 +16,7 @@ class IosAssetReader : AssetReader {
             val bundlePath = NSBundle.mainBundle.resourcePath ?: return emptyList()
             val indexPath = "$bundlePath/assets/$path/index.txt"
             val content = NSString.stringWithContentsOfFile(indexPath, NSUTF8StringEncoding, null)
-            content?.toString()?.lines()?.filter { it.isNotBlank() } ?: emptyList()
+            content?.lines()?.filter { it.isNotBlank() } ?: emptyList()
         } catch (e: Exception) {
             emptyList()
         }
@@ -27,7 +27,7 @@ class IosAssetReader : AssetReader {
             // Assets are bundled under "assets" folder
             val bundlePath = NSBundle.mainBundle.resourcePath ?: return null
             val filePath = "$bundlePath/assets/$path"
-            NSString.stringWithContentsOfFile(filePath, NSUTF8StringEncoding, null)?.toString()
+            NSString.stringWithContentsOfFile(filePath, NSUTF8StringEncoding, null)
         } catch (e: Exception) {
             null
         }

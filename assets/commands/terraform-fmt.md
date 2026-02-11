@@ -1,3 +1,7 @@
+# TAGLINE
+
+Format Terraform configuration files
+
 # TLDR
 
 **Format current directory**

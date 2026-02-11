@@ -1,3 +1,7 @@
+# TAGLINE
+
+Classic dungeon crawling adventure game
+
 # TLDR
 
 **Start a new game**

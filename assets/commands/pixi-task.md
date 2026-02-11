@@ -1,3 +1,7 @@
+# TAGLINE
+
+Define and manage Pixi project tasks
+
 # TLDR
 
 **Add task to project**

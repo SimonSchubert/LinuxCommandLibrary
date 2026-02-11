@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interactive SQL client for multiple databases
+
 # TLDR
 
 **Connect to database**
@@ -49,15 +53,9 @@
 
 # DESCRIPTION
 
-**rsql** is a SQL client. It connects to various databases.
+**rsql** is a command-line SQL client written in Rust that provides a unified interface for connecting to multiple database types including PostgreSQL, MySQL, and SQLite. It supports both interactive mode for exploratory queries and batch mode for running SQL files and single commands from scripts.
 
-Multi-database support. PostgreSQL, MySQL, SQLite.
-
-Formatted output options. CSV, JSON, tables.
-
-Interactive and batch modes. Query or script.
-
-Written in Rust. Fast and efficient.
+Output can be formatted as CSV, JSON, or formatted tables, making it suitable for both human reading and data pipeline integration. The **-d** flag specifies a database connection URL, while **-c** executes a query directly and **-f** runs a SQL file against the specified database.
 
 # CAVEATS
 

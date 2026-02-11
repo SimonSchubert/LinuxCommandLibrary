@@ -1,3 +1,7 @@
+# TAGLINE
+
+Enlarge PNM images by pixel replication
+
 # TLDR
 
 **Enlarge image 2x**

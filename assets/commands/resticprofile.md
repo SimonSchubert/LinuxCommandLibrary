@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage restic backup profiles and schedules
+
 # TLDR
 
 **Run backup**
@@ -78,15 +82,16 @@
 
 # DESCRIPTION
 
-**resticprofile** manages restic backup configurations. It provides profiles for different backup scenarios.
+**resticprofile** is a configuration wrapper for the restic backup tool that organizes backup settings into named profiles. Each profile defines a repository location, backup paths, exclusion patterns, retention policies, and scheduling rules, allowing complex backup strategies to be managed through a single configuration file rather than lengthy command-line arguments.
 
-Profiles define repositories, paths, and options. Multiple profiles handle different backup needs.
+The tool integrates with system schedulers to automate backup operations. On Linux it creates systemd timers or cron jobs, and on macOS it uses launchd. Retention policies can differ between profiles, so frequently changing data can have short retention while archives keep longer histories. Pre- and post-operation hooks enable notifications, database dumps before backup, and cleanup tasks after completion.
 
-Scheduling creates system timers or cron jobs. Backups run automatically.
+All standard restic commands (backup, forget, prune, restore, snapshots) can be run through resticprofile with profile-specific settings automatically applied. The **generate** command creates starter configuration templates.
 
-Retention policies are profile-specific. Different data gets different retention.
+# CONFIGURATION
 
-Hooks run before and after operations. Useful for notifications and cleanup.
+**profiles.conf** / **profiles.toml** / **profiles.yaml**
+> Default configuration file (searched in current directory) defining backup profiles, repositories, schedules, and retention policies. Format auto-detected by extension.
 
 # CAVEATS
 

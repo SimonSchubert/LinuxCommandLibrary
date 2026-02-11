@@ -1,3 +1,7 @@
+# TAGLINE
+
+Scala build tool for JVM projects
+
 # TLDR
 
 **Start an interactive sbt shell** in the current project

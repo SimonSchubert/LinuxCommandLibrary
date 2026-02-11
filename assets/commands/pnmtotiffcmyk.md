@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert PNM to CMYK TIFF for printing
+
 # TLDR
 
 **Convert PNM to CMYK TIFF**
@@ -22,7 +26,9 @@
 
 # DESCRIPTION
 
-**pnmtotiffcmyk** converts PNM images to CMYK TIFF format for print production. Performs RGB to CMYK color separation. Part of Netpbm toolkit.
+**pnmtotiffcmyk** converts PNM images to CMYK (Cyan, Magenta, Yellow, Key/Black) TIFF format for professional print production. It performs the RGB to CMYK color space conversion required by commercial printing processes.
+
+The **-ucr** (Under Color Removal) and **-gcr** (Gray Component Replacement) options control how the black channel is generated from the CMY components, affecting ink usage and print quality. Part of the Netpbm toolkit.
 
 # SEE ALSO
 

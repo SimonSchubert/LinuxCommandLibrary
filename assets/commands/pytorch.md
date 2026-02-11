@@ -1,3 +1,7 @@
+# TAGLINE
+
+Deep learning framework with GPU acceleration
+
 # TLDR
 
 **Install PyTorch**
@@ -65,6 +69,14 @@ CUDA_VISIBLE_DEVICES=0,1 python train.py
 # Check GPU memory
 python -c "import torch; print(torch.cuda.memory_summary())"
 ```
+
+# CONFIGURATION
+
+**CUDA_VISIBLE_DEVICES**
+> Environment variable controlling which GPUs are visible to PyTorch, used to restrict training to specific devices.
+
+**TORCH_HOME**
+> Environment variable setting the directory for cached models and datasets (default ~/.cache/torch).
 
 # CAVEATS
 

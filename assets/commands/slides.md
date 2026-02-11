@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal-based markdown presentation tool
+
 # TLDR
 
 **Start a presentation** from a markdown file

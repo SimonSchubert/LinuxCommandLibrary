@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal-based Markdown slide presenter
+
 # TLDR
 
 **Start presentation**
@@ -39,11 +43,9 @@ _FILE_
 
 # DESCRIPTION
 
-**presenterm** runs terminal presentations from Markdown. TUI presenter.
+**presenterm** is a terminal-based presentation tool that renders Markdown files as slide decks directly in the terminal. Slides are separated by horizontal rules in the Markdown source, and the tool supports syntax-highlighted code blocks, images (in supported terminals), and multiple built-in themes.
 
-The tool renders slides in terminal. Supports syntax highlighting.
-
-presenterm presents Markdown.
+Watch mode automatically reloads the presentation when the source file changes, enabling a live editing workflow. Slides can also be exported to PDF for sharing outside the terminal.
 
 # CAVEATS
 

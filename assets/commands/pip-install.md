@@ -1,3 +1,7 @@
+# TAGLINE
+
+Install Python packages from PyPI and other sources
+
 # TLDR
 
 **Install package**
@@ -62,7 +66,11 @@
 
 # DESCRIPTION
 
-**pip install** installs Python packages from PyPI or other sources. Supports version specifiers, requirements files, local paths, Git URLs, and wheel files. The primary method for adding Python dependencies.
+**pip install** installs Python packages from the Python Package Index (PyPI) and other sources. It handles dependency resolution, downloading, building from source if needed, and placing packages into the target environment.
+
+Packages can be specified by name, version constraints (**==**, **>=**, **~=**), requirements files, local directories, Git URLs, or wheel files. Use **-e** for editable installs during development, which creates a link to the source directory rather than copying files. The **--user** flag installs to the user site-packages directory without requiring root privileges.
+
+By default, pip resolves and installs all dependencies. Use **--no-deps** to skip dependency installation for tighter control. The **--pre** flag includes pre-release and development versions in the resolution process. Custom package indexes can be specified with **-i** for private registries.
 
 # SEE ALSO
 

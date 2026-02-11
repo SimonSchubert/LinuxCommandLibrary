@@ -1,3 +1,7 @@
+# TAGLINE
+
+Search PyPI for packages (deprecated)
+
 # TLDR
 
 **Search for packages**

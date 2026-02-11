@@ -1,3 +1,7 @@
+# TAGLINE
+
+Sign RPM packages with GPG keys
+
 # TLDR
 
 **Sign RPM package**
@@ -71,11 +75,11 @@ rpm -K package.rpm
 
 # CONFIGURATION
 
-```bash
-# ~/.rpmmacros
-%_gpg_name Your Name <email@example.com>
-%_gpg_path /home/user/.gnupg
-```
+**~/.rpmmacros**
+> User-level RPM macro file where **%_gpg_name** sets the default signing identity and **%_gpg_path** specifies the GnuPG keyring directory.
+
+**/etc/rpm/macros**
+> System-wide RPM macro overrides for signing defaults shared across all users.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Install project dependencies from lock file
+
 # TLDR
 
 **Install all dependencies**

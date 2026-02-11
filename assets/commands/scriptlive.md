@@ -1,3 +1,7 @@
+# TAGLINE
+
+Re-execute recorded terminal sessions live
+
 # TLDR
 
 Execute a **typescript** in real-time
@@ -33,9 +37,9 @@ Execute with **maximum delay** between commands
 
 # DESCRIPTION
 
-**scriptlive** executes a terminal session recorded by the script command. Unlike scriptreplay which only displays output, scriptlive actually re-executes the commands.
+**scriptlive** re-executes a terminal session that was previously recorded by the **script** command. Unlike **scriptreplay** which only displays recorded output passively, scriptlive actually runs the commands in a live shell, reproducing the session's actions with their real effects.
 
-This is useful for demonstrations and recreating terminal sessions.
+The tool uses timing data to pace command execution, matching the original session's rhythm. Speed can be adjusted with the **--divisor** option for faster or slower execution, and **--maxdelay** caps the wait between commands to skip long pauses. This is useful for automated demonstrations, reproducing test scenarios, and recreating specific terminal workflows.
 
 # CAVEATS
 

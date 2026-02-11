@@ -1,3 +1,7 @@
+# TAGLINE
+
+Swiss Army Knife for SMTP testing
+
 # TLDR
 
 Send **test email** to a server

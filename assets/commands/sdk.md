@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage parallel SDK versions for JVM languages
+
 # TLDR
 
 **List all available candidates** (Java, Scala, Kotlin, etc.)
@@ -90,6 +94,17 @@
 Supported candidates include **Java** (multiple distributions like Temurin, Zulu, GraalVM), **Scala**, **Kotlin**, **Groovy**, **Maven**, **Gradle**, **Ant**, **sbt**, **Spring Boot**, **Spark**, and many more. SDKMAN automatically manages **JAVA_HOME** and **PATH** environment variables.
 
 Project-specific versions can be configured using **.sdkmanrc** files. With **sdkman_auto_env=true** in the config, SDKMAN automatically switches versions when entering a project directory.
+
+# CONFIGURATION
+
+**~/.sdkman/etc/config**
+> SDKMAN configuration file controlling auto-answer, auto-env, color, and other settings.
+
+**.sdkmanrc**
+> Per-project file specifying required SDK versions. SDKMAN automatically switches versions when entering the directory if **sdkman_auto_env=true** is set.
+
+**SDKMAN_DIR**
+> Environment variable overriding the default SDKMAN installation directory (~/.sdkman).
 
 # CAVEATS
 

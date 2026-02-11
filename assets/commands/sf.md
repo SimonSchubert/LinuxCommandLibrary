@@ -1,3 +1,7 @@
+# TAGLINE
+
+Salesforce development command-line interface
+
 # TLDR
 
 **Log in to a Salesforce org** via web browser
@@ -110,6 +114,17 @@
 The CLI uses a hierarchical command structure where commands are grouped by topic (org, project, data, apex, package). Most commands accept a **--target-org** flag to specify which org to operate on, and **--json** for machine-readable output.
 
 Configuration is stored in **~/.sf/** and project-specific settings in **sfdx-project.json**. Orgs can be aliased for convenience using **sf alias set**.
+
+# CONFIGURATION
+
+**~/.sf/**
+> User-level configuration directory storing authentication tokens, org connections, and CLI settings.
+
+**sfdx-project.json**
+> Project-level configuration file defining source paths, namespace, API version, and package dependencies.
+
+**SF_ACCESS_TOKEN**
+> Environment variable for providing an org access token directly.
 
 # CAVEATS
 

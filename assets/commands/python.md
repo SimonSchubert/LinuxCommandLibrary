@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interpreted general-purpose programming language
+
 # TLDR
 
 **Run Python script**
@@ -56,11 +60,9 @@ _ARGS_
 
 # DESCRIPTION
 
-**python** is the Python interpreter. General-purpose programming language.
+**python** is the interpreter for the Python programming language, executing scripts or starting an interactive REPL session. It supports procedural, object-oriented, and functional programming styles, and is widely used for scripting, web development, data analysis, automation, and scientific computing.
 
-The tool runs Python code. Scripting and application development.
-
-python executes Python.
+When invoked without arguments, it starts an interactive read-eval-print loop for experimentation. With a script file as argument, it compiles and executes the code. The **-m** flag runs installed modules as scripts, enabling built-in utilities like HTTP servers, JSON formatters, and package management through pip. On many systems, **python** may refer to Python 2; use **python3** explicitly for Python 3.
 
 # CAVEATS
 

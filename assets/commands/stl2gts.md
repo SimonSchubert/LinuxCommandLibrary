@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert STL 3D meshes to GTS format
+
 # TLDR
 
 **Convert STL to GTS**
@@ -29,15 +33,11 @@
 
 # DESCRIPTION
 
-**stl2gts** converts STL to GTS. It transforms mesh formats.
+**stl2gts** converts 3D mesh files from the widely-used STL (Stereolithography) format into GTS (GNU Triangulated Surface) format. STL files represent 3D surfaces as collections of triangular facets and are commonly used in CAD software, 3D printing, and computational geometry.
 
-STL is common 3D format. Triangulated surfaces.
+The GTS format is designed for efficient manipulation and analysis of triangulated surfaces. Unlike STL, GTS stores topological information about vertex and edge connectivity, enabling operations like mesh refinement, boolean operations, and surface analysis that would be difficult with raw triangle soup.
 
-GTS is GNU Triangulated Surface. Analysis format.
-
-Reads from stdin. Writes to stdout.
-
-Part of GTS library. Mesh processing.
+The tool reads STL data from standard input and writes GTS output to standard output, following the Unix pipeline convention. It is part of the GTS Library toolkit, which provides a collection of utilities for triangulated surface mesh processing and computational geometry.
 
 # CAVEATS
 

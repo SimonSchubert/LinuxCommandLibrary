@@ -1,3 +1,7 @@
+# TAGLINE
+
+Transform SVG files into React components
+
 # TLDR
 
 **Convert SVG to React**
@@ -50,15 +54,11 @@
 
 # DESCRIPTION
 
-**svgr** transforms SVG to React. It generates components.
+**svgr** transforms SVG files into React components, generating JSX code that can be imported and used directly in React applications. This eliminates the need to manage separate SVG asset files and enables dynamic styling and prop-based customization of icons and illustrations.
 
-React component output. JSX format.
+The tool supports TypeScript output with proper type definitions, named and default exports, and various component patterns. Batch conversion processes entire directories of SVG files into a component library with an automatic index file. Custom templates control the exact shape of generated component code.
 
-TypeScript support. Type definitions.
-
-Batch conversion. Directory processing.
-
-Customizable templates. Control output.
+SVGR integrates with webpack, Rollup, and other bundlers as a loader/plugin, and also works as a standalone CLI or Node.js API. It optionally runs SVGO optimization before generating components.
 
 # CAVEATS
 

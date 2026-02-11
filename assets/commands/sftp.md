@@ -1,3 +1,7 @@
+# TAGLINE
+
+Secure interactive file transfer over SSH
+
 # TLDR
 
 **Connect to a remote server**
@@ -87,6 +91,17 @@ Unlike FTP, SFTP encrypts all data including credentials and file contents. It u
 The interface supports both interactive use and batch mode (**-b**) for scripting. Tab completion works for both local and remote paths in most implementations.
 
 SFTP can transfer binary and text files without mode switches and preserves file attributes like permissions and timestamps.
+
+# CONFIGURATION
+
+**~/.ssh/config**
+> SSH client configuration file; settings like Host aliases, IdentityFile, ProxyJump, and Port apply to sftp connections.
+
+**~/.ssh/known_hosts**
+> Database of accepted server host keys, shared with ssh and scp.
+
+**/etc/ssh/ssh_config**
+> System-wide SSH client configuration applied to all users.
 
 # CAVEATS
 

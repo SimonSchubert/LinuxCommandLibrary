@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extremely fast Python linter and formatter
+
 # TLDR
 
 **Check current directory**
@@ -90,6 +94,17 @@ The formatter is Black-compatible, providing consistent code style. It integrate
 Configuration in pyproject.toml or ruff.toml customizes behavior. Per-file ignores and extends support complex project needs.
 
 Fix mode modifies files automatically. Unsafe fixes may change behavior and require separate opt-in.
+
+# CONFIGURATION
+
+**pyproject.toml** `[tool.ruff]`
+> Ruff configuration section in the standard Python project file, defining rule selections, line length, per-file ignores, and target Python version.
+
+**ruff.toml**
+> Standalone Ruff configuration file as an alternative to pyproject.toml.
+
+**.ruff.toml**
+> Hidden variant of the standalone configuration file, searched in parent directories.
 
 # CAVEATS
 

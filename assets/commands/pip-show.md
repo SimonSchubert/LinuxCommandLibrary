@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display metadata for installed packages
+
 # TLDR
 
 **Show package information**

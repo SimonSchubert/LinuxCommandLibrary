@@ -1,3 +1,7 @@
+# TAGLINE
+
+Wrapper around rm that prevents deleting important files
+
 # TLDR
 
 **Delete a file** with protection against blacklisted paths
@@ -46,6 +50,14 @@ Protected paths are configured in **/etc/safe-rm.conf** for system-wide protecti
 
 To use safe-rm as the default rm, create a symlink in a directory that precedes /bin in your PATH:
 ```ln -s /usr/bin/safe-rm /usr/local/bin/rm```
+
+# CONFIGURATION
+
+**/etc/safe-rm.conf**
+> System-wide list of protected paths, one per line. Deletion of any listed path is blocked.
+
+**~/.safe-rm**
+> Per-user list of additional protected paths.
 
 # CAVEATS
 

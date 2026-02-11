@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Slurm cluster event triggers
+
 # TLDR
 
 **Register** a trigger for system events

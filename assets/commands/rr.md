@@ -1,3 +1,7 @@
+# TAGLINE
+
+Record and replay program execution for debugging
+
 # TLDR
 
 **Record program execution**
@@ -53,17 +57,11 @@
 
 # DESCRIPTION
 
-**rr** records and replays execution. It enables deterministic debugging.
+**rr** is a lightweight recording and deterministic replay tool for debugging on Linux. It records a program's execution — including all system calls, signals, and thread scheduling decisions — so that the exact same execution can be replayed any number of times for debugging, producing identical behavior every run.
 
-Record once, debug many. Reproduce bugs reliably.
+During replay, rr integrates with GDB to provide a standard debugging interface enhanced with time-travel capabilities. Developers can step backwards through execution, set reverse breakpoints, and navigate to any point in the recorded trace, making it dramatically easier to find the root cause of bugs that are difficult to reproduce.
 
-Time-travel debugging. Step backwards through execution.
-
-Integrates with GDB. Standard debugging interface.
-
-Low overhead recording. Near native speed.
-
-Chaos mode finds races. Randomizes scheduling.
+The **--chaos** flag randomizes thread scheduling during recording to help expose concurrency bugs and race conditions that might not appear under normal scheduling. Recording imposes low overhead, typically running at near-native speed, making it practical for real-world debugging workflows.
 
 # CAVEATS
 

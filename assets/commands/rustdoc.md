@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate documentation from Rust source code
+
 # TLDR
 
 **Generate documentation**

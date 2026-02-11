@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display pressed keys on screen for screencasts
+
 # TLDR
 
 Display **key presses** on screen
@@ -34,7 +38,11 @@ Display in **fixed** position with geometry
 
 # DESCRIPTION
 
-**screenkey** is a screencast tool that displays pressed keys on screen. It is useful for screencasts, tutorials, and demonstrations to show viewers what keys are being pressed.
+**screenkey** is a screencast tool that displays pressed keys as an overlay on screen, making keyboard input visible to viewers during screencasts, tutorials, and live demonstrations. It captures all keystrokes system-wide and renders them in a customizable floating window.
+
+The display supports multiple modifier key formats (Emacs, Mac, Windows style), configurable positioning, custom fonts and colors, and adjustable opacity. Mouse button clicks can also be shown alongside keyboard input. The overlay window can be placed at fixed screen positions or use custom geometry.
+
+A settings GUI is available via **--show-settings** for interactive configuration. The tool integrates with X11 and runs as a background process, showing keys as they are pressed and fading them after a configurable timeout.
 
 # PARAMETERS
 

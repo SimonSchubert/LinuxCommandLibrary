@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate man pages from simple markup
+
 # TLDR
 
 **Generate man page**
@@ -18,15 +22,11 @@
 
 # DESCRIPTION
 
-**scdoc** generates roff-format man pages from a simple syntax. It provides readable source for documentation.
+**scdoc** generates roff-format man pages from a simple, readable markup syntax. Rather than writing raw roff macros, authors use a lightweight format with markdown-like headers, paragraphs, and lists that compiles to properly formatted manual pages.
 
-Input uses a lightweight markup. Headers, paragraphs, and lists have simple syntax.
+The first line of each document defines metadata including the command name and section number. Sections are marked with **#** headers matching standard man page conventions (NAME, SYNOPSIS, DESCRIPTION, etc.). Text formatting uses **\*bold\*** and **\_italic\_** syntax, and the output is standard roff that can be rendered directly by the **man** command.
 
-Output is roff suitable for man. The man command renders it directly.
-
-Document metadata comes from first line. Name and section number defined there.
-
-Sections use markdown-like headers. # for top-level sections in man pages.
+The tool reads from stdin and writes to stdout, fitting naturally into build system pipelines. This makes it straightforward to integrate into project build processes where documentation is compiled alongside code.
 
 # SYNTAX
 

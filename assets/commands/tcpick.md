@@ -1,3 +1,7 @@
+# TAGLINE
+
+TCP stream sniffer and analyzer
+
 # TLDR
 
 Capture traffic on **interface**, host, and port

@@ -1,3 +1,7 @@
+# TAGLINE
+
+FAT filesystem bootloader installer
+
 # TLDR
 
 **Install SYSLINUX on FAT filesystem**
@@ -82,6 +86,11 @@ The bootloader consists of a boot sector and the **ldlinux.sys** file. Configura
 For ext2/3/4 and btrfs filesystems, use **extlinux** instead. Since version 4.00, EXTLINUX and SYSLINUX share the same codebase.
 
 After installation, create a syslinux.cfg file in the installation directory to configure boot entries.
+
+# CONFIGURATION
+
+**syslinux.cfg**
+> Boot configuration file specifying kernel images, boot parameters, menu entries, and timeout settings. Located in the root or installation subdirectory of the FAT filesystem.
 
 # CAVEATS
 

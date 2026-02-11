@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminate active PPPoE connection
+
 # TLDR
 
 **Stop PPPoE connection**

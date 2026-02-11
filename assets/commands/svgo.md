@@ -1,3 +1,7 @@
+# TAGLINE
+
+Node.js-based SVG optimization tool
+
 # TLDR
 
 **Optimize SVG**
@@ -64,15 +68,16 @@
 
 # DESCRIPTION
 
-**svgo** optimizes SVG files. It reduces file size while preserving appearance.
+**svgo** (SVG Optimizer) is a Node.js-based tool for optimizing SVG files through a plugin architecture. Each plugin handles a specific optimization such as removing metadata, simplifying path data, merging redundant elements, cleaning up attributes, or removing empty containers.
 
-Multiple plugins handle different optimizations. Remove metadata, simplify paths, merge elements.
+Plugins can be individually enabled or disabled through a configuration file or command-line flags, allowing fine-grained control over which optimizations are applied. The multipass option runs optimizations repeatedly until no further improvements are found. Folder mode batch-processes entire directories of SVG files.
 
-Configuration customizes behavior. Enable or disable specific optimizations.
+SVGO is widely used in front-end build pipelines and icon library workflows to minimize SVG file sizes before deployment. Pretty-print mode reformats output for readability when human-editable SVGs are needed.
 
-Folder mode batch processes SVGs. Entire icon sets optimized.
+# CONFIGURATION
 
-Pretty output formats for readability. Human-friendly indentation.
+**svgo.config.js**
+> Project configuration file defining enabled/disabled plugins and their options.
 
 # CAVEATS
 

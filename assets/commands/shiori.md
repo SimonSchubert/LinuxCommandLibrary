@@ -1,3 +1,7 @@
+# TAGLINE
+
+Self-hosted bookmark manager with web interface
+
 # TLDR
 
 **Start server**
@@ -70,15 +74,16 @@
 
 # DESCRIPTION
 
-**shiori** is a bookmark manager with web interface. It saves readable content from web pages.
+**shiori** is a self-hosted bookmark manager that saves web pages for offline reading. When a URL is added, shiori downloads the page, extracts readable content using a readability algorithm, and stores both the original HTML and a clean text version in its database.
 
-Adding bookmarks downloads and parses content. Readable text is extracted and stored.
+Bookmarks support full-text search across titles, URLs, and saved content, making it easy to find previously saved pages. Tags provide additional organization, and the built-in web interface offers a visual way to browse, edit, and manage the collection.
 
-Full-text search finds bookmarks by content. Title, URL, and text are indexed.
+Data can be imported from and exported to standard bookmark HTML files for interoperability with browsers and other bookmark managers. The CLI provides the same functionality as the web interface for scripting and automation.
 
-Web interface provides visual management. Browse, edit, and organize bookmarks.
+# CONFIGURATION
 
-Tags organize bookmarks by topic. Multiple tags per bookmark supported.
+**SHIORI_DIR**
+> Environment variable setting the data directory for the database and archived pages (default: ~/.local/share/shiori).
 
 # CAVEATS
 

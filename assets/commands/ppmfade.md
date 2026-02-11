@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create fade transition between images
+
 # TLDR
 
 **Create fade transition**
@@ -35,11 +39,9 @@
 
 # DESCRIPTION
 
-**ppmfade** creates fade transitions between images. Animation tool.
+**ppmfade** generates a sequence of PPM frames that create a fade transition between two images. The output is a series of numbered files that can be assembled into an animation or video sequence.
 
-The tool generates interpolated frames. Part of Netpbm.
-
-ppmfade creates transitions.
+Multiple fade modes are available, including crossfade between two images, fade to black, and fade to white. The number of intermediate frames controls the transition speed and smoothness. Part of the Netpbm toolkit.
 
 # CAVEATS
 

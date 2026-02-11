@@ -1,3 +1,7 @@
+# TAGLINE
+
+PDF manipulation command-line utilities
+
 # TLDR
 
 **Extract text from PDF**

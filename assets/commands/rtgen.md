@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate rainbow tables for password cracking
+
 # TLDR
 
 **Generate rainbow table**

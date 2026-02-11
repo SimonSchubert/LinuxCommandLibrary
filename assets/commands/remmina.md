@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remote desktop client application
+
 # TLDR
 
 **Launch Remmina**
@@ -74,6 +78,14 @@ SPICE  - Virtual machine display
 NX     - NoMachine protocol
 SFTP   - Secure file transfer
 ```
+
+# CONFIGURATION
+
+**~/.local/share/remmina/**
+> Directory containing saved connection profiles as .remmina files, each storing server address, protocol, credentials, and display settings.
+
+**~/.config/remmina/remmina.pref**
+> Global preferences file controlling default behavior, keyboard shortcuts, appearance, and plugin settings.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fast and secure deduplicated backup tool
+
 # TLDR
 
 **Initialize a repository**

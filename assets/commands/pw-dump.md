@@ -1,3 +1,7 @@
+# TAGLINE
+
+Export PipeWire state as JSON
+
 # TLDR
 
 Print **JSON representation** of PipeWire's current state

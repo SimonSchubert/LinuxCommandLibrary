@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run Ruff linter on Python code
+
 # TLDR
 
 **Check current directory**
@@ -46,7 +50,9 @@
 
 # DESCRIPTION
 
-**ruff check** runs the Ruff linter on Python files. Extremely fast Python linter written in Rust. Compatible with Flake8, isort, and other tools. Enforces code quality rules.
+**ruff check** is the linting subcommand of Ruff, an extremely fast Python linter written in Rust. It analyzes Python source files for style violations, potential bugs, and code quality issues, implementing rule sets from Flake8, isort, pyupgrade, and many other established Python tools in a single unified interface.
+
+The **--fix** flag automatically corrects fixable violations in place, while **--select** and **--ignore** control which rule categories are active. Watch mode re-checks files on every save, providing real-time feedback during development. Output formats include plain text, JSON, and GitHub Actions annotations for CI integration.
 
 # SEE ALSO
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate shell completion scripts for pueue
+
 # TLDR
 
 **Generate bash completions**
@@ -23,11 +27,7 @@ _SHELL_
 
 # DESCRIPTION
 
-**pueue completions** generates shell completions. Tab completion support.
-
-The tool creates completion scripts. Improves CLI usability.
-
-pueue completions enables autocomplete.
+**pueue completions** generates shell tab-completion scripts for pueue commands. It outputs completion definitions to stdout for bash, zsh, fish, or PowerShell, which should be redirected to the appropriate shell completion directory for automatic loading.
 
 # CAVEATS
 

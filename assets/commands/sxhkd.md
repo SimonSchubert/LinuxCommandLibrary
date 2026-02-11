@@ -1,3 +1,7 @@
+# TAGLINE
+
+Simple X11 hotkey daemon
+
 # TLDR
 
 **Start sxhkd** with default configuration
@@ -64,6 +68,11 @@ Configuration is read from **~/.config/sxhkd/sxhkdrc** by default. Each binding 
 Key features include chorded bindings (sequences like **super + a ; b**), key release events (prefix keysym with **@**), and pointer buttons (**button1-button24**). Sequences with **{a,b,c}** expand to multiple bindings.
 
 Commands execute via **$SXHKD_SHELL** or **$SHELL**. Send **SIGUSR1** to reload configuration and **SIGUSR2** to toggle hotkey grabbing.
+
+# CONFIGURATION
+
+**~/.config/sxhkd/sxhkdrc**
+> Default configuration file defining hotkey bindings and their associated commands.
 
 # CAVEATS
 

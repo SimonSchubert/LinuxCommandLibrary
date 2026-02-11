@@ -1,3 +1,7 @@
+# TAGLINE
+
+Submit jobs to batch queue systems
+
 # TLDR
 
 **Submit** script with defaults

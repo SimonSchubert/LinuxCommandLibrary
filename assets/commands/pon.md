@@ -1,3 +1,7 @@
+# TAGLINE
+
+Initiate PPP dial-up connections
+
 # TLDR
 
 **Start PPP connection**
@@ -26,11 +30,9 @@ _PROVIDER_
 
 # DESCRIPTION
 
-**pon** initiates PPP connections. Starts dial-up networking.
+**pon** initiates a PPP (Point-to-Point Protocol) connection using a named provider configuration. Provider configurations are stored in **/etc/ppp/peers/** and define the connection parameters including phone number, authentication, and modem settings.
 
-The tool connects via modem. Uses provider configurations.
-
-pon starts PPP.
+Without a provider argument, it uses the default provider. The **debug** option enables verbose logging to syslog. Use **poff** to terminate the connection.
 
 # CAVEATS
 

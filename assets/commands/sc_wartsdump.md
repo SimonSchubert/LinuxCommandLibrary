@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display raw contents of scamper warts files
+
 # TLDR
 
 **Display raw warts file contents**

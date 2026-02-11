@@ -1,3 +1,7 @@
+# TAGLINE
+
+Format and lint shell scripts
+
 # TLDR
 
 **Format shell script**

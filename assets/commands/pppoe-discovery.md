@@ -1,3 +1,7 @@
+# TAGLINE
+
+Discover PPPoE access concentrators
+
 # TLDR
 
 **Discover PPPoE servers**
@@ -32,11 +36,9 @@
 
 # DESCRIPTION
 
-**pppoe-discovery** discovers PPPoE access concentrators. Diagnostic tool.
+**pppoe-discovery** sends PPPoE Active Discovery Initiation (PADI) packets on a network interface to find available PPPoE access concentrators. It reports the names and services offered by any responding concentrators without actually establishing a connection.
 
-The tool finds available DSL endpoints. Network discovery.
-
-pppoe-discovery finds servers.
+This diagnostic tool is useful for verifying that a DSL modem or network is properly configured and that the ISP's access concentrator is reachable before attempting a full PPPoE connection.
 
 # CAVEATS
 

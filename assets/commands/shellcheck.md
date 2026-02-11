@@ -1,3 +1,7 @@
+# TAGLINE
+
+Static analysis tool for shell scripts
+
 # TLDR
 
 **Check a shell script**
@@ -85,6 +89,11 @@ Integration is available for most editors (VS Code, Vim, Emacs, Sublime) and CI 
 **SC2006**: Use $(...) instead of backticks
 **SC2035**: Use ./\* so patterns don't expand to options
 **SC2164**: Use cd ... || exit in case cd fails
+
+# CONFIGURATION
+
+**.shellcheckrc**
+> Project-level configuration file for default options, disabled warnings, and shell dialect. Also read from ~/.shellcheckrc.
 
 # CAVEATS
 

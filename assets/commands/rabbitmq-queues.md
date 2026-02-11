@@ -1,3 +1,7 @@
+# TAGLINE
+
+Inspect and manage RabbitMQ queues
+
 # TLDR
 
 **List queues**

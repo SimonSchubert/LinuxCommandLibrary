@@ -1,3 +1,7 @@
+# TAGLINE
+
+Diagnose RabbitMQ node and cluster health
+
 # TLDR
 
 **Check node health**

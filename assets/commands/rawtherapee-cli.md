@@ -1,3 +1,7 @@
+# TAGLINE
+
+Batch process RAW photos from the command line
+
 # TLDR
 
 **Convert RAW to JPEG**
@@ -75,6 +79,17 @@ Processing profiles (.pp3) can be:
 - Created in RawTherapee GUI
 - Found in /usr/share/rawtherapee/profiles/
 - Sidecar files (filename.pp3)
+
+# CONFIGURATION
+
+**/usr/share/rawtherapee/profiles/**
+> System-wide processing profiles (.pp3) providing preset development settings for different styles and corrections.
+
+**~/.config/RawTherapee/profiles/**
+> User-created processing profiles saved from the RawTherapee GUI.
+
+**Sidecar .pp3 files**
+> Per-image processing profiles stored alongside the RAW file (e.g., photo.CR2.pp3), automatically applied when no explicit profile is specified.
 
 # CAVEATS
 

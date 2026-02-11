@@ -1,3 +1,7 @@
+# TAGLINE
+
+Build RPM packages from spec files
+
 # TLDR
 
 Build **binary and source** packages
@@ -78,6 +82,17 @@ Build for **specific architecture**
 
 **--with/--without OPTION**
 > Enable or disable configure options
+
+# CONFIGURATION
+
+**~/.rpmmacros**
+> User-level macro definitions overriding system defaults, commonly used to set **%_topdir** for the build tree location.
+
+**/etc/rpm/macros**
+> System-wide macro overrides for all users on the machine.
+
+**/usr/lib/rpm/macros**
+> Default RPM macro definitions shipped with the rpm package, defining build paths, compiler flags, and platform defaults.
 
 # CAVEATS
 

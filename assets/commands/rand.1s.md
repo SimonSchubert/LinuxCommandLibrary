@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate cryptographically secure random bytes
+
 # TLDR
 
 **Generate 32 random bytes** in hexadecimal

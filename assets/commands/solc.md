@@ -1,3 +1,7 @@
+# TAGLINE
+
+Solidity smart contract compiler
+
 # TLDR
 
 **Compile a Solidity file** and output bytecode

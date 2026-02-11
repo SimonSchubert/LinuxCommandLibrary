@@ -1,3 +1,7 @@
+# TAGLINE
+
+Format Python code with Ruff
+
 # TLDR
 
 **Format current directory**
@@ -36,7 +40,9 @@
 
 # DESCRIPTION
 
-**ruff format** formats Python code. Fast Python formatter written in Rust. Black-compatible formatting style. Part of the Ruff toolkit for Python code quality.
+**ruff format** is the code formatting subcommand of Ruff, providing a Black-compatible Python formatter written in Rust. It enforces consistent code style by reformatting Python source files according to opinionated rules covering indentation, line length, string quoting, and whitespace.
+
+The **--check** flag validates formatting without modifying files, returning a non-zero exit code if changes would be made, which is useful for CI pipelines. The **--diff** flag displays the exact changes that would be applied. Configuration options like **--line-length** can be set per-project in pyproject.toml or ruff.toml.
 
 # SEE ALSO
 

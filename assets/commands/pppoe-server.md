@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run PPPoE access concentrator server
+
 # TLDR
 
 **Start PPPoE server**
@@ -35,11 +39,9 @@
 
 # DESCRIPTION
 
-**pppoe-server** runs PPPoE access concentrator. Server component.
+**pppoe-server** implements a PPPoE access concentrator that accepts incoming PPPoE client connections on a specified network interface. It assigns IP addresses from a configured pool and spawns pppd instances to handle each client session.
 
-The tool accepts PPPoE client connections. DSL server functionality.
-
-pppoe-server provides access.
+This is used by ISPs and in lab environments to provide PPPoE-based broadband service. Parameters control the listening interface, local and remote IP address ranges, maximum concurrent sessions, and the advertised service name.
 
 # CAVEATS
 

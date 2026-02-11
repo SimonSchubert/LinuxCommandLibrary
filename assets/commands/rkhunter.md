@@ -1,3 +1,7 @@
+# TAGLINE
+
+Scan system for rootkits and vulnerabilities
+
 # TLDR
 
 **Check** system for rootkits
@@ -55,6 +59,17 @@ Display **help**
 **rkhunter** (Rootkit Hunter) scans Linux systems for rootkits, backdoors, and local exploits. It checks for hidden files, suspicious kernel modules, modified binaries, and other signs of compromise.
 
 The tool maintains a database of known malware signatures and file checksums, comparing current system state against known-good values.
+
+# CONFIGURATION
+
+**/etc/rkhunter.conf**
+> Main configuration file controlling scan behavior, whitelisted files, update mirrors, and notification settings.
+
+**/var/lib/rkhunter/db/**
+> Database directory containing malware signatures, file property hashes, and known-good checksums used for comparison during scans.
+
+**/var/log/rkhunter.log**
+> Default log file where scan results and warnings are recorded.
 
 # CAVEATS
 

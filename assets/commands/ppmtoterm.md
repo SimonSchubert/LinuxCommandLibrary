@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display PPM images as colored terminal text
+
 # TLDR
 
 **Display image in terminal**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fast encrypted deduplicated backup tool
+
 # TLDR
 
 **Initialize repository**
@@ -78,15 +82,22 @@
 
 # DESCRIPTION
 
-**rustic** is a Rust implementation of restic backup. It provides fast, encrypted backups.
+**rustic** is a fast backup tool written in Rust that is fully compatible with the restic repository format. It provides encrypted, deduplicated backups using AES-256 encryption with authenticated tags, ensuring data confidentiality and integrity at rest.
 
-Encryption protects data at rest. AES-256 encryption with authenticated tags.
+The tool uses content-defined chunking and deduplication so that only unique data chunks are stored, significantly reducing storage requirements for incremental backups. Multiple storage backends are supported including local filesystems, S3-compatible object storage, SFTP, and REST servers.
 
-Deduplication saves storage space. Only unique chunks are stored.
+Retention policies specified through **forget** with keep rules (daily, weekly, monthly) automate snapshot cleanup. The **prune** command reclaims space by removing data chunks no longer referenced by any snapshot.
 
-Multiple backends support various storage. Local, S3, SFTP, and REST servers.
+# CONFIGURATION
 
-Retention policies automate cleanup. Keep rules specify what to preserve.
+**~/.config/rustic/rustic.toml**
+> Main configuration file defining default repository location, password source, backup paths, and retention policies.
+
+**RUSTIC_REPOSITORY**
+> Environment variable specifying the default repository location.
+
+**RUSTIC_PASSWORD**
+> Environment variable providing the repository password.
 
 # CAVEATS
 

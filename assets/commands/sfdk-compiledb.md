@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate compilation database for Sailfish projects
+
 # TLDR
 
 **Generate compilation database**

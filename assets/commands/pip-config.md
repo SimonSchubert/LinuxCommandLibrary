@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage pip configuration files and settings
+
 # TLDR
 
 **List configuration**
@@ -55,7 +59,25 @@
 
 # DESCRIPTION
 
-**pip config** manages pip's configuration files. Configure index URLs, trusted hosts, and other pip settings. Settings can be per-user, site-wide, or global.
+**pip config** manages pip's configuration files at different scopes. It provides a command-line interface for reading, writing, and editing pip settings without manually locating and editing INI-format configuration files.
+
+Configuration is organized into three levels: global (system-wide), user (per-account), and site (per-virtualenv). Settings cascade so that more specific scopes override broader ones. Common settings include custom package index URLs, trusted hosts for private registries, and default installation options.
+
+Use **pip config list** to see all active settings and their sources, or **pip config debug** to display the full search path and which files exist. The **edit** subcommand opens the appropriate config file in your default editor.
+
+# CONFIGURATION
+
+**~/.config/pip/pip.conf** (Linux), **~/Library/Application Support/pip/pip.conf** (macOS), **%APPDATA%\pip\pip.ini** (Windows)
+> User-level configuration file.
+
+**/etc/pip.conf** (Linux/macOS), **C:\ProgramData\pip\pip.ini** (Windows)
+> Global system-wide configuration file.
+
+**$VIRTUAL_ENV/pip.conf**
+> Site-level configuration file within a virtual environment.
+
+**PIP_CONFIG_FILE**
+> Environment variable to override the default config file location.
 
 # SEE ALSO
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Toggle service watchdog monitoring
+
 # TLDR
 
 Show **watchdog** status

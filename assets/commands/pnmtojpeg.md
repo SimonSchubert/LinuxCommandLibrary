@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert PNM images to JPEG format
+
 # TLDR
 
 **Convert PNM to JPEG**
@@ -39,7 +43,9 @@
 
 # DESCRIPTION
 
-**pnmtojpeg** converts PNM images to JPEG format. Part of Netpbm toolkit. Supports quality control, progressive encoding, and optimization.
+**pnmtojpeg** converts PNM (PBM, PGM, PPM) images to JPEG/JFIF format. The **-quality** option controls the compression-to-quality tradeoff, with higher values producing larger files with better image quality.
+
+The **-progressive** option creates progressive JPEGs that render in increasing detail during loading. The **-optimize** flag reduces file size by computing optimal Huffman coding tables. The **-grayscale** option forces single-channel output even for color inputs. Part of the Netpbm toolkit.
 
 # SEE ALSO
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display Linux console font glyphs
+
 # TLDR
 
 **Display the current console font** in a table

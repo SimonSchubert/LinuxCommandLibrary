@@ -1,3 +1,7 @@
+# TAGLINE
+
+Slurm job step manager daemon
+
 # TLDR
 
 Start the daemon (typically **invoked automatically**)

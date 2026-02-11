@@ -1,3 +1,7 @@
+# TAGLINE
+
+Install Python CLI apps in isolated environments
+
 # TLDR
 
 **Install application in isolated environment**
@@ -100,6 +104,17 @@ The run command executes applications without permanent installation. It downloa
 Inject adds extra packages to an application's environment. This is useful when an application has plugins or optional dependencies that need to be installed together.
 
 The ensurepath command configures shell PATH to include pipx binary locations. This is typically needed once after initial pipx installation.
+
+# CONFIGURATION
+
+**PIPX_HOME**
+> Override the base directory for pipx data (default: ~/.local/pipx).
+
+**PIPX_BIN_DIR**
+> Override the directory for application symlinks (default: ~/.local/bin).
+
+**PIPX_DEFAULT_PYTHON**
+> Set the default Python interpreter for new environments.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Command-line task queue manager
+
 # TLDR
 
 **Add command to queue**
@@ -56,11 +60,14 @@
 
 # DESCRIPTION
 
-**pueue** is a command-line task manager. Queue and manage shell commands.
+**pueue** is a command-line task queue manager that schedules and runs shell commands sequentially or in parallel in the background. Tasks are added to a queue and executed by the **pueued** daemon, which persists across terminal sessions and system reboots.
 
-The tool runs tasks sequentially or in parallel. Background process manager.
+The tool provides task lifecycle management including pausing, resuming, killing, and restarting tasks. Task output is captured and can be followed in real time with **follow** or reviewed later with **log**. Groups allow organizing tasks into separate queues with independent parallelism settings.
 
-pueue queues tasks.
+# CONFIGURATION
+
+**~/.config/pueue/pueue.yml**
+> Client and daemon configuration file defining default parallelism, callback commands, and daemon socket path.
 
 # CAVEATS
 

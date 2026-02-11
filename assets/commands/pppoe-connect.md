@@ -1,3 +1,7 @@
+# TAGLINE
+
+Establish PPPoE DSL connection
+
 # TLDR
 
 **Start PPPoE connection**
@@ -19,11 +23,9 @@ _CONFIG_
 
 # DESCRIPTION
 
-**pppoe-connect** establishes PPPoE connection using config file. Wrapper script.
+**pppoe-connect** is a wrapper script that establishes a PPPoE (PPP over Ethernet) connection using the settings defined in a configuration file, typically **/etc/ppp/pppoe.conf**. It coordinates between the pppoe client and pppd daemon to bring up a DSL broadband connection.
 
-The tool initiates DSL connections. Uses pppoe-start configuration.
-
-pppoe-connect starts DSL.
+The script reads connection parameters including interface, authentication credentials, and PPP options from the config file. It is the counterpart to **pppoe-stop** for terminating the connection.
 
 # CAVEATS
 

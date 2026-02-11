@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display RCS file revision history
+
 # TLDR
 
 **Show file history**

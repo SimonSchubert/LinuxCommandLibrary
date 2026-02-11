@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fast recursive text search with smart defaults
+
 # TLDR
 
 **Search for a pattern** in current directory

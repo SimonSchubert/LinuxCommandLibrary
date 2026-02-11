@@ -1,3 +1,7 @@
+# TAGLINE
+
+Multi-pod Kubernetes log tailing
+
 # TLDR
 
 **Tail pod logs**
@@ -64,15 +68,11 @@
 
 # DESCRIPTION
 
-**stern** tails logs from multiple Kubernetes pods. It aggregates logs matching a pattern.
+**stern** allows you to tail log output from multiple Kubernetes pods and containers simultaneously. It accepts a pod name query (which can be a regular expression) and streams log lines from all matching pods, automatically including new pods as they appear and removing terminated ones.
 
-Pod queries match by name pattern. Regex supported for complex matching.
+Each pod and container is assigned a distinct color in the output, making it easy to visually distinguish which log lines come from which source. Stern supports filtering by namespace, container name, and label selectors, and can output logs in various formats including JSON for structured processing.
 
-Container filtering focuses on specific containers. Useful in multi-container pods.
-
-Color coding distinguishes pods. Each pod gets different color.
-
-Real-time streaming shows new logs. Follows as pods scale.
+The tool is particularly useful for debugging microservices where related functionality spans multiple pods or deployments. Unlike `kubectl logs`, which can only follow a single pod at a time, stern aggregates logs across any number of matching pods and gracefully handles pod restarts and scaling events in real time.
 
 # CAVEATS
 

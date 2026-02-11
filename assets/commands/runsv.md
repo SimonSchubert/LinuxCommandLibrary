@@ -1,3 +1,7 @@
+# TAGLINE
+
+Supervise a single runit service process
+
 # TLDR
 
 **Supervise a service**

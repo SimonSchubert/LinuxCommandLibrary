@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage multiple Perl installations
+
 # TLDR
 
 **List installed versions**
@@ -84,6 +88,20 @@ Installation uses Perl-Build to compile from source. Build options can customize
 cpanm installation provides a module installer that works with all managed Perl versions. Run rehash after installing modules with executables.
 
 The design mirrors rbenv, providing consistent version management across languages for developers familiar with that pattern.
+
+# CONFIGURATION
+
+**~/.plenv/versions/**
+> Directory containing installed Perl versions.
+
+**~/.plenv/version**
+> Global Perl version setting file.
+
+**.perl-version**
+> Per-directory Perl version file for project-specific settings.
+
+**PLENV_VERSION**
+> Environment variable to override the active Perl version.
 
 # CAVEATS
 

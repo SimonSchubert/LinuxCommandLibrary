@@ -1,3 +1,7 @@
+# TAGLINE
+
+Inspect package index version information
+
 # TLDR
 
 **List available versions**

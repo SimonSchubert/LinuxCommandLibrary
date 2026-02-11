@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage udev hardware database
+
 # TLDR
 
 **Update** hardware database

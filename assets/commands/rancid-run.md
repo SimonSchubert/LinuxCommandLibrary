@@ -1,3 +1,7 @@
+# TAGLINE
+
+Collect and version-control network device configurations
+
 # TLDR
 
 **Run RANCID for all groups**
@@ -65,6 +69,17 @@ add password router1.example.com {password}
 # 4. Run
 rancid-run groupname
 ```
+
+# CONFIGURATION
+
+**/etc/rancid/rancid.conf**
+> Main configuration defining device groups, version control system, and working directory paths.
+
+**~/.cloginrc**
+> Device login credentials file specifying usernames, passwords, and enable passwords for each network device.
+
+**router.db**
+> Per-group device inventory listing hostnames, device types (cisco, juniper, etc.), and up/down status.
 
 # CAVEATS
 

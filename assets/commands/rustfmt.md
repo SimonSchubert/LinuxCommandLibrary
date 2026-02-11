@@ -1,3 +1,7 @@
+# TAGLINE
+
+Format Rust source code automatically
+
 # TLDR
 
 **Format a Rust file**
@@ -79,12 +83,19 @@ When used with Cargo (`cargo fmt`), it formats all files in the project automati
 **--color** _when_
 > Color output (auto, always, never).
 
-# CONFIGURATION OPTIONS
+# CONFIGURATION
 
-**max_width**: Maximum line width (default 100)
-**tab_spaces**: Spaces per tab (default 4)
-**use_small_heuristics**: Heuristics for width
-**edition**: Rust edition to use
+**rustfmt.toml** / **.rustfmt.toml**
+> Project-level configuration file at the project root defining formatting rules such as max_width, tab_spaces, edition, and use_small_heuristics.
+
+**max_width**
+> Maximum line width before wrapping (default 100).
+
+**tab_spaces**
+> Number of spaces per indentation level (default 4).
+
+**edition**
+> Rust edition to use for parsing (2015, 2018, 2021).
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Scheme programming language interpreter
+
 # TLDR
 
 **Start REPL**
@@ -43,15 +47,11 @@
 
 # DESCRIPTION
 
-**scheme** runs Scheme programs. It provides a Lisp dialect.
+**scheme** is an interpreter for the Scheme programming language, a minimalist dialect of Lisp emphasizing functional programming, lexical scoping, and first-class procedures. It provides both an interactive REPL for experimentation and the ability to run Scheme source files directly.
 
-Interactive REPL. Experiment with code.
+Scheme's design follows the R5RS and R7RS language standards, providing a small but powerful core with features like proper tail recursion, continuations, and hygienic macros. The interactive REPL allows evaluating expressions immediately, making it well-suited for learning, prototyping, and exploring algorithms.
 
-Functional programming language. First-class functions.
-
-R5RS/R7RS compatible. Standard Scheme.
-
-Various implementations exist. MIT Scheme, Chez, Guile.
+The **scheme** command may refer to different implementations depending on the system, including MIT/GNU Scheme, Chez Scheme, or GNU Guile. Each implementation offers its own extensions beyond the standard, so behavior and available libraries may vary.
 
 # CAVEATS
 

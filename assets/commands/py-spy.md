@@ -1,3 +1,7 @@
+# TAGLINE
+
+Low-overhead sampling profiler for Python
+
 # TLDR
 
 **Profile running process**
@@ -42,11 +46,9 @@
 
 # DESCRIPTION
 
-**py-spy** is sampling profiler for Python. Low overhead profiling.
+**py-spy** is a sampling profiler for Python programs that works by reading the process memory of a running Python interpreter without requiring any code modifications or restarts. This approach introduces minimal overhead, making it suitable for profiling production workloads.
 
-The tool profiles without code changes. Creates flame graphs.
-
-py-spy profiles Python.
+The **top** subcommand provides a live view of where Python is spending time, similar to the Unix **top** utility. The **record** subcommand generates flame graphs in SVG, speedscope, or raw format for detailed analysis, and **dump** captures stack traces from all threads at a single point in time. Written in Rust, py-spy supports CPython interpreters and can attach to already-running processes by PID.
 
 # CAVEATS
 

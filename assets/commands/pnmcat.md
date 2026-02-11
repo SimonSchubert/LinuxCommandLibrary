@@ -1,3 +1,7 @@
+# TAGLINE
+
+Concatenate PNM images horizontally or vertically
+
 # TLDR
 
 **Concatenate horizontally**

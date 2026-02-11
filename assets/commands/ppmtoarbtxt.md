@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert PPM to custom text formats
+
 # TLDR
 
 **Convert PPM to text using template**

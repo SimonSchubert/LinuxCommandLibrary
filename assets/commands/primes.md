@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate prime numbers in a range
+
 # TLDR
 
 **Generate primes in range**
@@ -26,11 +30,9 @@ _STOP_
 
 # DESCRIPTION
 
-**primes** generates prime numbers in a range. BSD utility.
+**primes** generates and prints all prime numbers within a specified numeric range. Given a start and stop value, it outputs one prime per line, making it easy to pipe into other commands for counting, filtering, or further processing.
 
-The tool lists prime numbers. Mathematical utility.
-
-primes finds prime numbers.
+This classic BSD utility is available on macOS natively and on Linux as part of the bsdgames package. It uses an efficient sieve algorithm for fast generation of primes even for large ranges.
 
 # CAVEATS
 

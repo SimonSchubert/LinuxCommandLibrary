@@ -1,3 +1,7 @@
+# TAGLINE
+
+Record terminal session to file
+
 # TLDR
 
 **Record** a new session to a file named "typescript"

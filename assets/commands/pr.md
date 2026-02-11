@@ -1,3 +1,7 @@
+# TAGLINE
+
+Paginate and format text for printing
+
 # TLDR
 
 **Format file for printing**
@@ -49,11 +53,9 @@ _FILES_
 
 # DESCRIPTION
 
-**pr** formats text for printing. Paginates and columnates.
+**pr** formats text files for printing by adding page headers (with filename and date), footers, page breaks, and line numbers. It can arrange text into multiple columns and control page dimensions including length, width, and margins.
 
-The tool adds headers and footers. Prepares files for output.
-
-pr formats for printing.
+This traditional Unix utility is useful for preparing plain text documents for printing or for creating formatted multi-column layouts from single-column input. It reads from files or stdin and writes to stdout.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Retrieve next SNMP OID value sequentially
+
 # TLDR
 
 **Get next OID value**

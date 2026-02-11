@@ -1,3 +1,7 @@
+# TAGLINE
+
+Shut down and power off system
+
 # TLDR
 
 **Power off** the system

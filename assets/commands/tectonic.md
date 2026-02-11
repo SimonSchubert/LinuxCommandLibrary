@@ -1,3 +1,7 @@
+# TAGLINE
+
+Modernized self-contained LaTeX engine
+
 # TLDR
 
 **Compile LaTeX document**
@@ -72,17 +76,11 @@
 
 # DESCRIPTION
 
-**tectonic** is a modernized LaTeX engine. It downloads packages automatically, runs the right number of times, and produces reproducible output.
+**tectonic** is a modernized, self-contained LaTeX engine that automatically downloads packages, runs the correct number of compilation passes, and produces reproducible output. Unlike traditional TeX distributions, it requires no separate TeX Live installation — missing packages are fetched from the network on demand.
 
-Automatic package management fetches missing packages from the network. No separate TeX Live installation is required.
+The engine automatically handles the multiple compilation passes that LaTeX typically requires for resolving references, tables of contents, bibliographies, and cross-references. Watch mode (**--watch**) recompiles whenever source files change, providing live preview when paired with a PDF viewer.
 
-The engine runs multiple passes automatically. References, tables of contents, and bibliographies are resolved without manual reruns.
-
-Reproducible builds ensure the same input produces identical output. This is important for collaborative writing and version control.
-
-Watch mode recompiles when files change. Combined with a PDF viewer, this provides live preview during editing.
-
-Bundles are self-contained package collections. They enable offline compilation with known package versions.
+Tectonic uses bundles — self-contained package collections — to ensure reproducible builds where the same input always produces identical output. The **--only-cached** flag enables offline compilation using previously downloaded packages. This approach makes Tectonic well-suited for CI/CD pipelines and collaborative writing projects under version control.
 
 # CAVEATS
 

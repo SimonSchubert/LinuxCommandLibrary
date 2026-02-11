@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert PNM to Solitaire recorder format
+
 # TLDR
 
 **Convert PNM to Solitaire image**

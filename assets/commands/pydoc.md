@@ -1,3 +1,7 @@
+# TAGLINE
+
+View Python module documentation
+
 # TLDR
 
 **View module documentation**
@@ -43,11 +47,9 @@ _MODULE_
 
 # DESCRIPTION
 
-**pydoc** displays Python documentation. Built-in help system.
+**pydoc** is Python's built-in documentation tool that displays module documentation generated from docstrings and introspection. It can show documentation for modules, classes, functions, and keywords in the terminal, search across all installed modules with **-k**, or generate static HTML files with **-w**.
 
-The tool shows module docs. Generates HTML documentation.
-
-pydoc shows Python help.
+The **-p** flag starts a local HTTP documentation server that provides a browsable interface to all installed Python modules, and **-b** opens this server automatically in the default web browser. pydoc is part of the Python standard library and provides the same functionality as the interactive **help()** function.
 
 # CAVEATS
 

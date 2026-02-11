@@ -1,3 +1,7 @@
+# TAGLINE
+
+Replay captured network traffic
+
 # TLDR
 
 **Replay pcap**
@@ -46,15 +50,11 @@
 
 # DESCRIPTION
 
-**tcpreplay** replays network traffic. It sends pcap files.
+**tcpreplay** replays previously captured network traffic from pcap files back onto the network. It reads packet captures produced by tools like tcpdump or Wireshark and transmits them through a specified network interface at controlled rates.
 
-Traffic generation. Testing and debugging.
+The tool provides flexible speed control: traffic can be replayed at the original recorded speed, at a fixed rate in Mbps, at a speed multiplier, or at maximum wire speed with **--topspeed**. The **--loop** option repeats the capture file multiple times, and **-K** preloads the entire file into memory for consistent high-speed replay.
 
-Rate control. Specify bandwidth.
-
-Loop support. Continuous playback.
-
-Network testing. Stress and security.
+Common use cases include testing network devices like firewalls and IDS/IPS systems, stress-testing network infrastructure, reproducing network issues for debugging, and benchmarking network applications under realistic traffic conditions.
 
 # CAVEATS
 

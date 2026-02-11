@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create bitmap mask from color selection
+
 # TLDR
 
 **Create mask for color**

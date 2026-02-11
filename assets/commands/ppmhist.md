@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display color histogram of PPM images
+
 # TLDR
 
 **Show color histogram**

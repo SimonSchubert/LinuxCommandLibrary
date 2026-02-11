@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove an installed Rust toolchain
+
 # TLDR
 
 **Uninstall toolchain**

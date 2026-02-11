@@ -1,3 +1,7 @@
+# TAGLINE
+
+Change reported architecture for program execution
+
 # TLDR
 
 **Run** a command as if the machine architecture is i686

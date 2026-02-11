@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display pip environment debugging information
+
 # TLDR
 
 **Show debug information**

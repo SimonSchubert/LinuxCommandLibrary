@@ -1,3 +1,7 @@
+# TAGLINE
+
+Configuration extension for /etc
+
 # TLDR
 
 This command is an alias of [systemd-sysext](/man/systemd-sysext).

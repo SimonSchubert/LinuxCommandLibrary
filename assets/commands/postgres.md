@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run PostgreSQL database server process
+
 # TLDR
 
 **Start PostgreSQL server**
@@ -72,6 +76,20 @@ Single-user mode bypasses normal startup for maintenance. It's used for recovery
 The data directory contains all database files. It must be initialized with initdb before first use and is not portable between major versions.
 
 Logging options help diagnose problems. Statement logging shows all SQL. Connection logging tracks client access.
+
+# CONFIGURATION
+
+**postgresql.conf**
+> Main configuration file in the data directory controlling memory allocation, connection limits, logging, query planner settings, WAL behavior, and replication.
+
+**pg_hba.conf**
+> Host-based authentication file controlling which users can connect from which hosts using which authentication methods (trust, md5, scram-sha-256, cert).
+
+**pg_ident.conf**
+> User name mapping file for external authentication systems, mapping OS usernames to PostgreSQL roles.
+
+**PGDATA**
+> Environment variable specifying the data directory path, used as default when **-D** is not provided.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate build files for Qt projects
+
 # TLDR
 
 **Generate Makefile from .pro file**

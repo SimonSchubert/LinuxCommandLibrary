@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extract printable text from binary files
+
 # TLDR
 
 **Find printable strings** in a file

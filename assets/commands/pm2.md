@@ -1,3 +1,7 @@
+# TAGLINE
+
+Production process manager for Node.js
+
 # TLDR
 
 **Start application**
@@ -57,11 +61,20 @@
 
 # DESCRIPTION
 
-**pm2** is Node.js process manager. Production process management.
+**pm2** is a production process manager for Node.js applications. It keeps applications running continuously with automatic restart on crashes, built-in load balancing via cluster mode, and centralized log management.
 
-The tool handles clustering, logs, and monitoring. Auto-restart on crash.
+The tool provides a monitoring dashboard (**monit**), process listing, log viewing, and startup script generation for system boot persistence. It can manage multiple applications simultaneously, each with independent configurations for instances, environment variables, and restart strategies.
 
-pm2 manages Node.js apps.
+# CONFIGURATION
+
+**ecosystem.config.js**
+> Application configuration file defining processes, environment variables, and deployment settings.
+
+**~/.pm2/**
+> PM2 home directory containing logs, process database, and module data.
+
+**PM2_HOME**
+> Environment variable to override the default PM2 home directory.
 
 # CAVEATS
 

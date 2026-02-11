@@ -1,3 +1,7 @@
+# TAGLINE
+
+Cross-platform Unix init scheme with service supervision
+
 # TLDR
 
 **Start runit init**
@@ -67,6 +71,23 @@ Logging integrates with svlogd. Per-service log rotation and management.
 - `/etc/service/name/run` - Service script
 - `/etc/service/name/log/run` - Logger script
 - `/etc/service/name/supervise/` - Status directory
+
+# CONFIGURATION
+
+**/etc/service/**
+> Default service directory where symlinks to service definitions are placed. Each subdirectory represents a supervised service.
+
+**/etc/sv/**
+> Service definition directory containing run scripts and optional log/run scripts for each service.
+
+**/etc/runit/1**
+> Stage 1 script executed during system initialization before services start.
+
+**/etc/runit/2**
+> Stage 2 script that starts the service supervisor (typically runsvdir).
+
+**/etc/runit/3**
+> Stage 3 script executed during system shutdown for cleanup tasks.
 
 # CAVEATS
 

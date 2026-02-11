@@ -1,3 +1,7 @@
+# TAGLINE
+
+Pluggable natural language linter
+
 # TLDR
 
 **Lint markdown files**

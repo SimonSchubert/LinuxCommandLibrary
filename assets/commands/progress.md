@@ -1,3 +1,7 @@
+# TAGLINE
+
+Show progress of running coreutils commands
+
 # TLDR
 
 **Show progress of running coreutils commands**

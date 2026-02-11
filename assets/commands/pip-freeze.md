@@ -1,3 +1,7 @@
+# TAGLINE
+
+Output installed packages in requirements format
+
 # TLDR
 
 **List installed packages**

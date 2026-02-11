@@ -1,3 +1,7 @@
+# TAGLINE
+
+Execute commands in virtual environment
+
 # TLDR
 
 **Run command in virtual environment**
@@ -30,11 +34,9 @@ _ARGS_
 
 # DESCRIPTION
 
-**poetry run** executes commands in the project virtual environment. Activates env automatically.
+**poetry run** executes a command within the project's virtual environment without requiring manual activation. It automatically locates and uses the correct virtual environment for the current project.
 
-The tool runs scripts and tools. No manual activation needed.
-
-poetry run executes in venv.
+This is the recommended way to run project scripts, test suites, and installed tools. For example, `poetry run pytest` runs tests using the project's dependencies, and `poetry run python script.py` executes a script with the project's Python interpreter. An alternative is **poetry shell** for an interactive session.
 
 # CAVEATS
 

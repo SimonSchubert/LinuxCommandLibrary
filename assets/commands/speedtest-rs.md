@@ -1,3 +1,7 @@
+# TAGLINE
+
+Rust-based internet speed test tool
+
 # TLDR
 
 **Run speed test**
@@ -50,15 +54,9 @@
 
 # DESCRIPTION
 
-**speedtest-rs** tests internet speed. It's written in Rust.
+**speedtest-rs** is a Rust implementation of an internet speed test client compatible with Speedtest.net servers. It measures download speed, upload speed, and ping latency using the same server infrastructure as the original speedtest-cli.
 
-Uses Speedtest.net servers. Standard methodology.
-
-Download and upload tests. Measure bandwidth.
-
-Latency measurement. Ping to server.
-
-Fast and efficient. Rust implementation.
+As a compiled Rust binary, it offers fast startup and low resource usage compared to Python-based alternatives. The tool provides the same core functionality including server listing, server selection by ID, simple output mode, and the ability to skip download or upload tests independently.
 
 # CAVEATS
 

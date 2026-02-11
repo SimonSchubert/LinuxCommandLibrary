@@ -1,3 +1,7 @@
+# TAGLINE
+
+Bootstrap installer script for rustup
+
 # TLDR
 
 **Install rustup**

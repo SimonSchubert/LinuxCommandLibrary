@@ -1,3 +1,7 @@
+# TAGLINE
+
+Resolve absolute canonical file paths
+
 # TLDR
 
 **Get absolute path** of a file

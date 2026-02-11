@@ -1,3 +1,7 @@
+# TAGLINE
+
+Validate password strength against policy
+
 # TLDR
 
 **Check password strength**

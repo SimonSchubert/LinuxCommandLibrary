@@ -1,3 +1,7 @@
+# TAGLINE
+
+Debug and monitor MIDI events
+
 # TLDR
 
 Listen for and dump all **incoming MIDI** events

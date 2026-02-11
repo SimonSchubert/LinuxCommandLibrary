@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate beautiful source code images
+
 # TLDR
 
 **Generate code image from file**

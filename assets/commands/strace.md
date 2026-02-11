@@ -1,3 +1,7 @@
+# TAGLINE
+
+Trace system calls and signals
+
 # TLDR
 
 **Attach** to a running process

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal-based spreadsheet calculator
+
 # TLDR
 
 **Start sc** with a new spreadsheet

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Search for ROP and JOP gadgets in binaries
+
 # TLDR
 
 **Find gadgets**

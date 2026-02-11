@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert Garmin SRF vehicle images to PAM
+
 # TLDR
 
 **Convert Garmin SRF to PAM**
@@ -10,7 +14,7 @@
 
 # DESCRIPTION
 
-**srftopam** converts Garmin SRF (vehicle image) format to PAM. SRF is used for custom vehicle icons on Garmin GPS devices. Part of Netpbm toolkit.
+**srftopam** converts images in the Garmin SRF (Sun Raster Format variant used for vehicle icons) to PAM (Portable Arbitrary Map) format. The SRF format is used for custom vehicle icons displayed on Garmin GPS navigation devices. This tool is part of the Netpbm image processing toolkit, which provides converters between many image formats.
 
 # SEE ALSO
 

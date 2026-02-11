@@ -1,3 +1,7 @@
+# TAGLINE
+
+AST-based structural code search tool
+
 # TLDR
 
 **Search for a pattern** in the current directory

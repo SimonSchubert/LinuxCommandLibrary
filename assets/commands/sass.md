@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compile Sass and SCSS stylesheets to CSS
+
 # TLDR
 
 **Compile SCSS to CSS**

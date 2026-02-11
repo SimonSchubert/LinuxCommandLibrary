@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display file and filesystem metadata
+
 # TLDR
 
 **Display file status**

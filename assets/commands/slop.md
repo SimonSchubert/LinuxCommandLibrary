@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interactive screen region selection for X11
+
 # TLDR
 
 Get a **screen selection** and output geometry

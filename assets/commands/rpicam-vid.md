@@ -1,3 +1,7 @@
+# TAGLINE
+
+Record video from Raspberry Pi camera
+
 # TLDR
 
 **Capture** a 10 second video

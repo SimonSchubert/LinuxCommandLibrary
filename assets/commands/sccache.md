@@ -1,3 +1,7 @@
+# TAGLINE
+
+Shared compilation cache for C/C++ and Rust
+
 # TLDR
 
 **Start server**
@@ -55,25 +59,25 @@
 **--dist-status**
 > Show distributed status.
 
-# ENVIRONMENT
+# CONFIGURATION
 
 **SCCACHE_DIR**
-> Local cache directory.
+> Local cache directory path (default: ~/.cache/sccache).
 
 **SCCACHE_CACHE_SIZE**
-> Cache size limit.
+> Maximum local cache size (e.g., "10G").
 
 **SCCACHE_REDIS**
-> Redis server URL.
+> Redis server URL for shared caching across machines.
 
 **SCCACHE_BUCKET**
-> S3 bucket name.
+> S3 bucket name for AWS-based shared caching.
 
 **SCCACHE_GCS_BUCKET**
-> Google Cloud Storage bucket.
+> Google Cloud Storage bucket for GCS-based shared caching.
 
 **RUSTC_WRAPPER**
-> Set to sccache for Rust.
+> Set to "sccache" to enable caching for Rust builds via cargo.
 
 # DESCRIPTION
 

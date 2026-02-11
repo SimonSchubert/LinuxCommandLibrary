@@ -1,3 +1,7 @@
+# TAGLINE
+
+PHP task runner framework
+
 # TLDR
 
 **List tasks**
@@ -50,15 +54,11 @@
 
 # DESCRIPTION
 
-**robo** runs PHP tasks. It's a task runner framework.
+**robo** is a PHP task runner framework that uses an object-oriented approach to define automation tasks. Tasks are written as PHP class methods in a **RoboFile.php**, providing full access to PHP's language features and ecosystem for build automation, deployment, and development workflows.
 
-Defines tasks in PHP. Object-oriented approach.
+The framework includes built-in tasks for common operations like file manipulation (copy, move, watch), running shell commands, SSH remote execution, and parallel task execution. The **--simulate** flag enables dry-run mode to preview what commands would be executed without actually running them, which is useful for testing complex task sequences.
 
-Built-in file operations. Copy, move, watch.
-
-SSH and exec support. Remote commands.
-
-Parallel execution. Run tasks concurrently.
+Robo integrates naturally with Composer-based PHP projects and serves a similar role to Make, Rake, or Gulp for the PHP ecosystem.
 
 # CAVEATS
 

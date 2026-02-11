@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display files with pride flag colors
+
 # TLDR
 
 Print file in **pride colors**

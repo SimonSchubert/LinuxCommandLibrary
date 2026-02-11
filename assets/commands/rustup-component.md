@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Rust toolchain components
+
 # TLDR
 
 **List available components**

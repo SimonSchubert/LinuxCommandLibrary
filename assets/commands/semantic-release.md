@@ -1,3 +1,7 @@
+# TAGLINE
+
+Automate versioning and package publishing
+
 # TLDR
 
 **Run semantic-release** in the current project
@@ -70,6 +74,23 @@
 The tool follows the Semantic Versioning specification: fix commits trigger patch releases, feat commits trigger minor releases, and commits with BREAKING CHANGE trigger major releases. It integrates with npm, GitHub, GitLab, and other platforms through a plugin system.
 
 Configuration can be provided via **package.json**, **.releaserc** file, **release.config.js**, or CLI arguments. By default, it releases from **main** or **master** branches, with support for pre-release channels (alpha, beta) and maintenance branches.
+
+# CONFIGURATION
+
+**.releaserc**
+> Project-level configuration file (JSON or YAML) specifying branches, plugins, and release options.
+
+**release.config.js**
+> JavaScript configuration file alternative for programmatic release configuration.
+
+**package.json** (release key)
+> Configuration can also be embedded under the "release" key in package.json.
+
+**GH_TOKEN** / **GITHUB_TOKEN**
+> GitHub authentication token for creating releases and commenting on issues.
+
+**NPM_TOKEN**
+> npm authentication token for publishing packages to the registry.
 
 # CAVEATS
 

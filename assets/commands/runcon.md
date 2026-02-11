@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run commands with specified SELinux context
+
 # TLDR
 
 Print current **security context**

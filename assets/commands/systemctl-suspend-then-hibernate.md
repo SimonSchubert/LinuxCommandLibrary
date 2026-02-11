@@ -1,3 +1,7 @@
+# TAGLINE
+
+Suspend then auto-hibernate after delay
+
 # TLDR
 
 **Suspend then hibernate**

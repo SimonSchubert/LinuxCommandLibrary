@@ -1,3 +1,7 @@
+# TAGLINE
+
+Reinitialize terminal to sane state
+
 # TLDR
 
 **Reinitialize** the current terminal

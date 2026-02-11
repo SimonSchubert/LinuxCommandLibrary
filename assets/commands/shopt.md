@@ -1,3 +1,7 @@
+# TAGLINE
+
+Toggle Bash shell behavior options
+
 # TLDR
 
 **List all shell options** with their status

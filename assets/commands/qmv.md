@@ -1,3 +1,7 @@
+# TAGLINE
+
+Rename files using a text editor
+
 # TLDR
 
 **Rename files in editor**
@@ -53,15 +57,9 @@
 
 # DESCRIPTION
 
-**qmv** (quick move) renames files using a text editor. Edit filenames in your preferred editor.
+**qmv** (quick move) opens a list of filenames in a text editor, allowing you to rename files by editing their names directly. After saving and closing the editor, all modified filenames are applied as rename operations, making it easy to perform batch renames using familiar editor features like search-and-replace, macros, and multi-cursor editing.
 
-The file list opens in an editor. Modify destination names and save.
-
-Dual column format shows source and target. Clear visualization of the rename.
-
-After saving, renames are executed. Only changed lines result in renames.
-
-Complex renames are easy with editor features. Search and replace, macros, and multi-cursor.
+The default dual-column format shows original and destination names side by side for clear visualization of changes. Alternative formats show destination names only or original names only. Only lines that differ between source and destination trigger actual renames, so unchanged files are left untouched.
 
 # CAVEATS
 

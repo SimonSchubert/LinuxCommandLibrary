@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert PPM to Mitsubishi printer format
+
 # TLDR
 
 **Convert PPM to Mitsubishi printer format**

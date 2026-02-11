@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert PPM images to JPEG format
+
 # TLDR
 
 **Convert PPM to JPEG**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Clang static analyzer build integration tool
+
 # TLDR
 
 **Analyze build**
@@ -60,15 +64,9 @@
 
 # DESCRIPTION
 
-**scan-build** wraps build commands with static analysis. It uses Clang's static analyzer.
+**scan-build** wraps build commands to run Clang's static analyzer on each compiled source file. It intercepts compilation, analyzing C, C++, and Objective-C code for bugs including null pointer dereferences, memory leaks, use-after-free errors, and API misuse without executing the code.
 
-Build interception captures compile commands. Each file is analyzed during build.
-
-Checkers detect various bug types. Null pointers, memory leaks, API misuse found.
-
-HTML reports show bug details. Path visualization explains how bugs occur.
-
-Additional checkers can be enabled. Security and alpha checkers provide more coverage.
+Analysis results are presented as HTML reports with interactive path visualizations showing the exact sequence of events leading to each bug. Additional checker categories can be enabled with **-enable-checker** for deeper analysis including security vulnerabilities and experimental checks. The **--status-bugs** flag returns a non-zero exit code when bugs are found, useful for CI integration.
 
 # CAVEATS
 

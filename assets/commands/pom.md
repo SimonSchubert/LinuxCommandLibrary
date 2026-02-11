@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display the phase of the moon
+
 # TLDR
 
 **Show phase of moon**
@@ -23,11 +27,9 @@ _DATE_
 
 # DESCRIPTION
 
-**pom** displays the phase of the moon. BSD calendar utility.
+**pom** displays the current phase of the moon, showing the percentage of illumination and the phase name (new, first quarter, full, last quarter). It can also calculate moon phases for specific dates.
 
-The tool shows lunar phases. Calculates moon cycle.
-
-pom shows moon phase.
+When given one or two dates in YYYYMMDD format, it shows the moon phase for that date or range. This is a BSD utility available on macOS and BSD systems.
 
 # CAVEATS
 

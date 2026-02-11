@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run qmake in Sailfish build environment
+
 # TLDR
 
 **Run qmake in build environment**

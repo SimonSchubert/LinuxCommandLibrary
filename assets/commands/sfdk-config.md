@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Sailfish SDK configuration settings
+
 # TLDR
 
 **Show current configuration**

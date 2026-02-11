@@ -1,3 +1,7 @@
+# TAGLINE
+
+Delete jobs from batch queue systems
+
 # TLDR
 
 **Delete job**

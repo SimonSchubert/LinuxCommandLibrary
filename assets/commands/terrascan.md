@@ -1,3 +1,7 @@
+# TAGLINE
+
+Static security scanner for IaC
+
 # TLDR
 
 **Initialize Terrascan** (download policies)

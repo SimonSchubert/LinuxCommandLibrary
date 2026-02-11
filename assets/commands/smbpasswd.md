@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Samba user passwords and accounts
+
 # TLDR
 
 **Change** current user's SMB password

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Stolon PostgreSQL HA cluster manager
+
 # TLDR
 
 **Get cluster status**
@@ -46,15 +50,11 @@
 
 # DESCRIPTION
 
-**stolonctl** manages Stolon clusters. It controls PostgreSQL HA.
+**stolonctl** is the command-line management interface for Stolon, a cloud-native PostgreSQL high-availability manager. It provides administrative control over Stolon clusters, including viewing cluster status, initializing new clusters, updating configuration specifications, and triggering manual failovers.
 
-Cluster administration. Status and config.
+The tool communicates with Stolon's store backend (typically etcd or Consul) to read and modify cluster state. The cluster specification defines replication settings, synchronous replication policies, automatic failover behavior, and PostgreSQL configuration parameters. Changes applied through stolonctl are picked up by the Stolon components (sentinels, keepers, and proxies) running in the cluster.
 
-Initialization support. Bootstrap clusters.
-
-Specification management. Update settings.
-
-Failover control. Manual failover.
+Stolonctl is essential for day-to-day operations such as inspecting which keeper is the current master, forcing a failover to a different keeper, and adjusting cluster parameters without downtime. It is commonly deployed alongside Kubernetes-based Stolon installations but also works with standalone deployments.
 
 # CAVEATS
 

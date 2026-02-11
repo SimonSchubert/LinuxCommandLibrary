@@ -1,3 +1,7 @@
+# TAGLINE
+
+Console dictionary using StarDict format
+
 # TLDR
 
 **Look up word**
@@ -80,6 +84,17 @@ Fuzzy search finds similar words when exact matches fail. This helps with spelli
 Multiple dictionaries can be searched simultaneously. Results from all are shown unless a specific dictionary is selected.
 
 Output formatting supports terminal display and programmatic processing. JSON output enables integration with other tools.
+
+# CONFIGURATION
+
+**~/.stardict/dic/**
+> Default user dictionary directory where StarDict format dictionaries are stored.
+
+**/usr/share/stardict/dic/**
+> System-wide dictionary directory.
+
+**STARDICT_DATA_DIR**
+> Environment variable overriding the default dictionary data directory.
 
 # CAVEATS
 

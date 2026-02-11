@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Proxmox VE virtual machines
+
 # TLDR
 
 **List** all VMs
@@ -72,6 +76,14 @@
 
 **--purge**
 > Remove all related resources when destroying
+
+# CONFIGURATION
+
+**/etc/pve/qemu-server/<vmid>.conf**
+> Per-VM configuration file containing hardware settings, disk definitions, network interfaces, and boot options.
+
+**/etc/pve/datacenter.cfg**
+> Cluster-wide datacenter configuration affecting default VM settings and migration behavior.
 
 # CAVEATS
 

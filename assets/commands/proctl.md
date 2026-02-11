@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage project licenses and language configs
+
 # TLDR
 
 List available **licenses**

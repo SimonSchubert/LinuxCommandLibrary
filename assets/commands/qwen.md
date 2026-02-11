@@ -1,3 +1,7 @@
+# TAGLINE
+
+CLI for Alibaba's Qwen AI models
+
 # TLDR
 
 **Chat with Qwen**
@@ -29,11 +33,9 @@ _PROMPT_
 
 # DESCRIPTION
 
-**qwen** is CLI for Qwen AI models. Alibaba AI assistant.
+**qwen** is a command-line interface for interacting with Alibaba Cloud's Qwen series of large language models. It provides an interactive chat experience directly from the terminal, supporting both conversational prompts and single-shot queries for quick answers.
 
-The tool provides AI chat interface. Large language model access.
-
-qwen chats with AI.
+The tool connects to Alibaba's DashScope API to access various Qwen model variants, including Qwen Turbo for fast responses and larger models for more complex reasoning tasks. Temperature and other sampling parameters can be adjusted to control response creativity and determinism.
 
 # CAVEATS
 

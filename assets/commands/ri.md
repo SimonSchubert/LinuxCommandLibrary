@@ -1,3 +1,7 @@
+# TAGLINE
+
+View Ruby API documentation
+
 # TLDR
 
 **View class documentation**

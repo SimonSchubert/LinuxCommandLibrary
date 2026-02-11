@@ -1,3 +1,7 @@
+# TAGLINE
+
+Apply KDE Plasma desktop themes
+
 # TLDR
 
 List **available** desktop themes

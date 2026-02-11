@@ -1,3 +1,7 @@
+# TAGLINE
+
+Inspect PipeWire SPA plugin details
+
 # TLDR
 
 Display information about a **SPA plugin**

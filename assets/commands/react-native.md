@@ -1,3 +1,7 @@
+# TAGLINE
+
+Build native mobile apps using React
+
 # TLDR
 
 **Create new project**
@@ -67,15 +71,9 @@
 
 # DESCRIPTION
 
-**react-native** CLI manages React Native mobile app development. It builds native iOS and Android apps from JavaScript.
+**react-native** is the command-line interface for React Native, a framework that enables building native iOS and Android mobile applications using JavaScript and React. It manages the full development lifecycle from project creation through building, running, and debugging apps on simulators, emulators, and physical devices.
 
-Metro bundler serves JavaScript to running apps. Hot reloading enables rapid development.
-
-Platform commands build and launch apps. Simulators or connected devices are targeted.
-
-Doctor checks environment setup. Xcode, Android SDK, and dependencies are verified.
-
-Linking connects native modules. Some libraries require native code integration.
+The CLI starts the Metro bundler, which serves JavaScript bundles to running apps and enables hot reloading for rapid development iteration. Platform-specific commands (**run-android**, **run-ios**) compile native code and deploy to target devices. The **doctor** command verifies that the development environment is correctly configured, checking for Xcode, Android SDK, Node.js, and required dependencies.
 
 # CAVEATS
 

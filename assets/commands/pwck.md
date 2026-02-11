@@ -1,3 +1,7 @@
+# TAGLINE
+
+Verify password file integrity and consistency
+
 # TLDR
 
 **Check password file integrity**
@@ -39,11 +43,9 @@ _SHADOW_
 
 # DESCRIPTION
 
-**pwck** verifies password file integrity. Checks for consistency.
+**pwck** verifies the integrity of **/etc/passwd** and **/etc/shadow** files by checking for proper formatting, valid field values, and internal consistency. It detects problems like duplicate usernames, invalid UIDs/GIDs, missing home directories, and entries that don't match between the password and shadow files.
 
-The tool finds duplicate entries. Validates user database.
-
-pwck checks passwd files.
+By default pwck prompts to delete invalid entries, but the **-r** flag runs in read-only mode for auditing without making changes. The command is part of **shadow-utils** and is typically run by administrators after manual edits to password files or as part of system health checks.
 
 # CAVEATS
 

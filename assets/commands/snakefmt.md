@@ -1,3 +1,7 @@
+# TAGLINE
+
+Format Snakemake workflow files
+
 # TLDR
 
 **Format Snakefile**
@@ -57,15 +61,11 @@
 
 # DESCRIPTION
 
-**snakefmt** formats Snakemake workflow files. It enforces consistent style.
+**snakefmt** is an opinionated code formatter for Snakemake workflow files. It enforces a consistent style across Snakefiles and associated rules files, handling both standard Python syntax and Snakemake-specific extensions like **rule**, **checkpoint**, and **module** blocks.
 
-Snakefiles use Python syntax with extensions. The formatter handles both.
+The formatter is built on top of Python's **black** formatter, using the same default line length of 88 characters and similar formatting philosophy. It understands Snakemake's domain-specific syntax, correctly formatting rule parameters like **input**, **output**, **params**, and **shell** while preserving semantic meaning.
 
-Check mode verifies formatting. Non-zero exit if changes needed.
-
-Diff mode shows what would change. Preview before modifying.
-
-Line length controls wrapping. Default is 88 (Black-style).
+Check mode (**--check**) verifies formatting without modifying files, returning a non-zero exit code if changes are needed, which is useful for CI pipelines. Diff mode (**--diff**) previews the exact changes that would be made before committing to them.
 
 # CAVEATS
 

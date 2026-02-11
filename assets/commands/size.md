@@ -1,3 +1,7 @@
+# TAGLINE
+
+List binary object file section sizes
+
 # TLDR
 
 Display section sizes of an **executable**

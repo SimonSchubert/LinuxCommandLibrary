@@ -1,3 +1,7 @@
+# TAGLINE
+
+Adjust screen color temperature for eye comfort
+
 # TLDR
 
 **Start redshift** with automatic location detection
@@ -79,6 +83,11 @@ During the day, the screen maintains normal color temperature (around 5500-6500K
 Location can be determined automatically using geolocation services (geoclue) or specified manually. The program runs continuously, adjusting temperature throughout the day based on calculated sunrise and sunset times.
 
 Different backends support different display systems: **randr** for X11, **wayland** for Wayland compositors, and **drm** for console/framebuffer.
+
+# CONFIGURATION
+
+**~/.config/redshift/redshift.conf**
+> User configuration file specifying default location, temperature ranges, brightness, adjustment method, and transition settings.
 
 # CAVEATS
 

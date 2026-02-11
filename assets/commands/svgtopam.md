@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert SVG graphics to PAM raster format
+
 # TLDR
 
 **Convert SVG to PAM**

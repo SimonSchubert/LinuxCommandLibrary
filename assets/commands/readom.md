@@ -1,3 +1,7 @@
+# TAGLINE
+
+Read or write data on optical media
+
 # TLDR
 
 **Create an ISO image** from a CD/DVD

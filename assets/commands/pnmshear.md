@@ -1,3 +1,7 @@
+# TAGLINE
+
+Shear PNM images horizontally
+
 # TLDR
 
 **Shear image horizontally**
@@ -25,7 +29,9 @@ _angle_
 
 # DESCRIPTION
 
-**pnmshear** shears PNM images by a specified angle. Creates parallelogram-shaped output. Part of Netpbm toolkit for geometric transformations.
+**pnmshear** applies a horizontal shear transformation to PNM images, sliding each row by an amount proportional to its distance from the center. The result is a parallelogram-shaped image where the shear angle is specified in degrees.
+
+Anti-aliasing is applied by default for smooth results. The **-background** option sets the fill color for newly exposed areas, and **-noantialias** disables smoothing. Part of the Netpbm toolkit.
 
 # SEE ALSO
 

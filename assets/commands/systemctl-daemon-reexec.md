@@ -1,3 +1,7 @@
+# TAGLINE
+
+Re-execute systemd manager binary
+
 # TLDR
 
 **Reexecute** systemd manager

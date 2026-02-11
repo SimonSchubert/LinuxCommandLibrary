@@ -1,3 +1,7 @@
+# TAGLINE
+
+Open-source optical character recognition engine
+
 # TLDR
 
 **Extract text from image**
@@ -93,6 +97,14 @@ Output formats include plain text, searchable PDF (text layer over image), hOCR 
 Image quality greatly affects results. Best results come from: high resolution (300+ DPI), good contrast, straight alignment, minimal noise. Preprocessing with ImageMagick or similar can help.
 
 Language data files (traineddata) must be installed separately. Custom training can create models for specific fonts, historical documents, or specialized text.
+
+# CONFIGURATION
+
+**TESSDATA_PREFIX**
+> Environment variable specifying the directory containing language data files (traineddata); defaults to the tessdata directory within the Tesseract installation
+
+**--tessdata-dir** _PATH_
+> Command-line override for the language data directory location
 
 # CAVEATS
 

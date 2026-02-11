@@ -1,3 +1,7 @@
+# TAGLINE
+
+Sequelize ORM migration and model CLI
+
 # TLDR
 
 **Initialize sequelize**
@@ -63,15 +67,19 @@
 
 # DESCRIPTION
 
-**sequelize-cli** manages Sequelize ORM projects. It handles models, migrations, and seeds.
+**sequelize-cli** manages Sequelize ORM projects, providing scaffolding for models, migrations, and seed files. The **init** command creates the standard project structure with config, models, migrations, and seeders directories.
 
-Initialization creates project structure. Config, models, migrations, and seeders directories.
+Models define database table mappings with typed attributes, and the CLI generates both the model file and an initial migration. Migrations version the database schema using up and down functions, allowing incremental schema changes that can be applied or reverted. Seeds populate tables with initial or test data.
 
-Models define database tables. Attributes specify columns and types.
+The CLI supports PostgreSQL, MySQL, MariaDB, SQLite, and Microsoft SQL Server through Sequelize's database abstraction layer.
 
-Migrations version database schema. Up and down functions for changes.
+# CONFIGURATION
 
-Seeds populate initial data. Development and testing data setup.
+**config/config.json**
+> Database connection configuration for development, test, and production environments, specifying host, port, username, password, dialect, and database name.
+
+**.sequelizerc**
+> Project-level configuration file overriding default paths for models, migrations, seeders, and config directories.
 
 # CAVEATS
 

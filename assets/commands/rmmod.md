@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove loaded kernel modules
+
 # TLDR
 
 **Remove** a kernel module

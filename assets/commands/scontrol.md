@@ -1,3 +1,7 @@
+# TAGLINE
+
+View and modify Slurm configuration and state
+
 # TLDR
 
 **Show** information for a job

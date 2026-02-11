@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Solo FIDO2 security keys
+
 # TLDR
 
 **Connect to device**
@@ -53,15 +57,11 @@
 
 # DESCRIPTION
 
-**solo** manages Solo keys. It's for FIDO2 security keys.
+**solo** is the command-line management tool for Solo FIDO2 security keys, open-source hardware authenticators used for passwordless login and two-factor authentication. It handles firmware updates, credential management, and device diagnostics.
 
-Firmware updates. Keep device current.
+The tool can list connected Solo devices, update their firmware, generate FIDO2 credentials for specific domains, and test device functionality. The wink command flashes the device LED to help identify a specific key when multiple are connected.
 
-Credential management. Generate and store.
-
-Device testing. Wink to identify.
-
-Open source key. Auditable security.
+Solo keys are fully open-source (both hardware and firmware), allowing independent security audits. The CLI tool is Python-based and communicates with the key over USB HID.
 
 # CAVEATS
 

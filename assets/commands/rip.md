@@ -1,3 +1,7 @@
+# TAGLINE
+
+Safely delete files with undo support
+
 # TLDR
 
 **Delete file safely**
@@ -51,15 +55,11 @@
 
 # DESCRIPTION
 
-**rip** is a safer rm alternative. Files go to a "graveyard" instead of permanent deletion.
+**rip** (Rm ImProved) is a safer alternative to rm that moves deleted files to a "graveyard" directory instead of permanently removing them. The graveyard preserves the original filesystem path structure, making it straightforward to restore files to their exact original locations when needed.
 
-The graveyard stores deleted files. Original paths are preserved for restoration.
+The **--seance** command lists all files currently in the graveyard along with their original paths and deletion timestamps. The **--unbury** command restores files, either the most recently deleted item or a specific named file. When graveyard contents are no longer needed, **--decompose** permanently removes them to reclaim disk space.
 
-Seance lists what's been deleted. Shows path and deletion time.
-
-Unbury restores files to original location. Specific files or last deleted.
-
-Decompose permanently removes graveyard contents. Use when sure files aren't needed.
+The graveyard location defaults to /tmp/graveyard-$USER but can be customized with the **--graveyard** flag. The tool handles directories recursively and provides an **--inspect** option to preview files before deletion.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+File integrity checking and host intrusion detection
+
 # TLDR
 
 **Initialize the file integrity database**
@@ -61,6 +65,14 @@
 The system operates in three modes: **init** creates a baseline database, **check** compares current file states against the baseline, and **update** refreshes the database. Samhain can detect hidden processes, rogue SUID executables, and kernel-level compromises.
 
 For multi-host environments, Samhain uses a client-server architecture where **yule** serves as the central log server and configuration host. Configuration is stored in **/etc/samhainrc**.
+
+# CONFIGURATION
+
+**/etc/samhainrc**
+> Main configuration file defining monitored directories, file attributes to check, logging targets, and severity levels.
+
+**/var/lib/samhain/samhain_file**
+> Default location of the file integrity baseline database.
 
 # CAVEATS
 

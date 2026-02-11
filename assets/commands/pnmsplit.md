@@ -1,3 +1,7 @@
+# TAGLINE
+
+Split multi-image PNM files into separate files
+
 # TLDR
 
 **Split multi-image PNM file**
@@ -25,11 +29,9 @@ _OUTPUT_
 
 # DESCRIPTION
 
-**pnmsplit** splits multi-image PNM files. Separates concatenated images.
+**pnmsplit** splits a multi-image PNM stream into individual files. PNM files can contain multiple images concatenated together, and this tool extracts each one into a separate output file.
 
-The tool extracts individual frames. Useful for animation processing.
-
-pnmsplit separates images.
+The output filename pattern must contain a **%d** format specifier (or variant like **%03d**) which is replaced with the image sequence number starting from 0. The **-padname** option controls zero-padding width for the numbering. This is useful for processing animation frames or batch image sequences. Part of the Netpbm toolkit.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Restore files from dump backup archives
+
 # TLDR
 
 **Restore files from a dump archive** interactively

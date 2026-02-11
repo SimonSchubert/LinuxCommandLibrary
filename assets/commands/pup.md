@@ -1,3 +1,7 @@
+# TAGLINE
+
+Parse HTML using CSS selectors
+
 # TLDR
 
 **Extract element by selector**
@@ -46,11 +50,11 @@ _SELECTORS_
 
 # DESCRIPTION
 
-**pup** parses HTML with CSS selectors. Command-line HTML processor.
+**pup** is a command-line tool for parsing and extracting data from HTML documents using CSS selectors. It reads HTML from standard input and applies selectors to filter elements, making it straightforward to extract structured data from web pages when combined with tools like **curl** or **wget**.
 
-The tool extracts elements from HTML. Similar to jq for HTML.
+Selectors follow standard CSS syntax including element names, classes, IDs, attributes, and pseudo-classes. Special display functions like **text{}** extract text content, **attr{name}** retrieves attribute values, and **json{}** outputs matching elements as structured JSON. Multiple selectors can be chained to navigate nested document structures.
 
-pup queries HTML.
+pup fills a similar role to **jq** but for HTML rather than JSON, providing a lightweight alternative to full-featured scraping frameworks for quick data extraction tasks in shell scripts and pipelines.
 
 # CAVEATS
 

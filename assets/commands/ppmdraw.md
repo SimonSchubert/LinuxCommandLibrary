@@ -1,3 +1,7 @@
+# TAGLINE
+
+Draw shapes and text on PPM images
+
 # TLDR
 
 **Draw on PPM image with script**

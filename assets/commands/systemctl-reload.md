@@ -1,3 +1,7 @@
+# TAGLINE
+
+Reload service configuration without restart
+
 # TLDR
 
 **Reload** a service's configuration

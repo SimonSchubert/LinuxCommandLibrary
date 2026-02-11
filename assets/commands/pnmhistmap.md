@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate pixel value histogram images
+
 # TLDR
 
 **Create histogram visualization**
@@ -28,7 +32,9 @@
 
 # DESCRIPTION
 
-**pnmhistmap** creates a visual histogram of pixel values in a PNM image. Output is a grayscale image showing value distribution. Part of Netpbm toolkit.
+**pnmhistmap** creates a visual histogram image showing the distribution of pixel values in a PNM image. The output is a PNM image where the horizontal axis represents sample values and the vertical axis shows how many pixels have each value.
+
+For color images, separate histograms are drawn for each channel. The **-width** and **-height** options control the output image dimensions. The **-white** flag uses a white background instead of the default black, and **-verbose** prints statistical information about the distribution. Part of the Netpbm toolkit.
 
 # SEE ALSO
 

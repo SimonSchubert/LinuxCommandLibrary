@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate shell completions for rustup
+
 # TLDR
 
 **Generate bash completions**

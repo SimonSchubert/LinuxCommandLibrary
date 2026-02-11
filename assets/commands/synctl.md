@@ -1,3 +1,7 @@
+# TAGLINE
+
+Matrix Synapse homeserver control interface
+
 # TLDR
 
 **Start Synapse server**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage FSFE REUSE software licensing compliance
+
 # TLDR
 
 **Check compliance**
@@ -53,15 +57,11 @@
 
 # DESCRIPTION
 
-**reuse** manages software licensing. It ensures REUSE compliance.
+**reuse** is a tool for managing software licensing according to the FSFE REUSE specification, which ensures every file in a project has clear, machine-readable copyright and license information. It helps developers add standardized SPDX license headers to source files and validates that the entire project meets compliance requirements.
 
-FSFE REUSE specification. Clear licensing for projects.
+The **lint** command checks a project for REUSE compliance, verifying that all files have proper license and copyright annotations. The **annotate** command adds or updates SPDX headers in source files, automatically adapting the comment style to match the file type. License texts can be downloaded with **reuse download** using standard SPDX identifiers like MIT, Apache-2.0, or GPL-3.0-or-later.
 
-Adds license headers. Standard copyright format.
-
-Generates SPDX files. Machine-readable licensing.
-
-Validates compliance. CI/CD integration ready.
+The tool also generates SPDX Software Bill of Materials files with the **spdx** command, providing a complete machine-readable inventory of all licenses and copyrights in the project. This output integrates well with CI/CD pipelines and compliance auditing workflows.
 
 # CAVEATS
 

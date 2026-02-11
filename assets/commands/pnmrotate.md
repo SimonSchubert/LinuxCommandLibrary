@@ -1,3 +1,7 @@
+# TAGLINE
+
+Rotate PNM images by any angle
+
 # TLDR
 
 **Rotate image**
@@ -29,7 +33,9 @@ _angle_
 
 # DESCRIPTION
 
-**pnmrotate** rotates PNM images by any angle. Uses anti-aliasing by default for smooth rotation. Part of Netpbm toolkit.
+**pnmrotate** rotates PNM images by an arbitrary angle specified in degrees. The output image is enlarged as needed to contain the full rotated result, with new areas filled by the background color.
+
+Anti-aliasing is applied by default for smooth edges; use **-noantialias** to disable it for faster processing or when working with binary images. The **-background** option sets the fill color for areas outside the rotated image. Part of the Netpbm toolkit.
 
 # SEE ALSO
 

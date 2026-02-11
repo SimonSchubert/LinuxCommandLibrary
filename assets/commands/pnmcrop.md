@@ -1,3 +1,7 @@
+# TAGLINE
+
+Automatically crop borders from PNM images
+
 # TLDR
 
 **Crop borders from image**
@@ -48,11 +52,9 @@ _FILE_
 
 # DESCRIPTION
 
-**pnmcrop** removes borders from PNM images. Part of Netpbm toolkit.
+**pnmcrop** automatically detects and removes uniform-color borders from PNM images. It identifies rows and columns at the edges that consist entirely of the border color and trims them.
 
-The tool detects uniform color borders. Removes padding automatically.
-
-pnmcrop trims images.
+By default it detects the border color automatically, but **-white** and **-black** force specific border colors. Individual sides can be cropped selectively with **-left**, **-right**, **-top**, and **-bottom** flags. Part of the Netpbm toolkit.
 
 # CAVEATS
 

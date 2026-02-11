@@ -1,3 +1,7 @@
+# TAGLINE
+
+Dim PPM image by brightness factor
+
 # TLDR
 
 **Dim image**
@@ -26,11 +30,9 @@ _FILE_
 
 # DESCRIPTION
 
-**ppmdim** dims PPM images. Reduces brightness.
+**ppmdim** reduces the brightness of a PPM image by multiplying each pixel value by the specified factor. A factor of 1.0 leaves the image unchanged, while 0.0 produces a completely black image.
 
-The tool darkens images by factor. Part of Netpbm.
-
-ppmdim reduces brightness.
+This is the complement of **ppmflash**, which brightens toward white. Both tools are useful for creating fade-to-black or fade-to-white animation effects when applied with varying factors across a sequence of frames. Part of the Netpbm toolkit.
 
 # CAVEATS
 

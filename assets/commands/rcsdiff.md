@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compare RCS file revisions
+
 # TLDR
 
 **Compare working file with latest revision**
@@ -50,15 +54,9 @@
 
 # DESCRIPTION
 
-**rcsdiff** compares RCS revisions. It shows differences between versions.
+**rcsdiff** compares revisions of files managed by the Revision Control System (RCS). Without a **-r** flag, it compares the current working file against the latest checked-in revision, showing local modifications. With one **-r** flag it compares the working file against a specific revision, and with two **-r** flags it compares two historical revisions directly.
 
-Without revision, compares working file. Against latest checked in.
-
-Two revisions compare those versions. Historical comparison.
-
-Supports standard diff formats. Unified, context, normal.
-
-Part of RCS version control. File-based versioning.
+The tool supports all standard diff output formats including unified (**-u**), context (**-c**), side-by-side (**-y**), and normal diff. It passes through options to the underlying diff command, making it a convenient wrapper for comparing version-controlled file histories.
 
 # CAVEATS
 

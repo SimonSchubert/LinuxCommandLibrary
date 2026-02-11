@@ -1,3 +1,7 @@
+# TAGLINE
+
+Ruby programming language interpreter
+
 # TLDR
 
 **Start an interactive Ruby session** (IRB)
@@ -92,6 +96,23 @@ Ruby emphasizes programmer happiness and productivity with elegant syntax. Every
 The **-e** option allows quick one-liners without creating a file. Combined with **-n** or **-p**, Ruby becomes a powerful text processing tool similar to awk or perl.
 
 For interactive exploration, use **irb** (Interactive Ruby) or **pry** for enhanced REPL features.
+
+# CONFIGURATION
+
+**RUBYLIB**
+> Colon-separated list of directories prepended to the default load path ($LOAD_PATH).
+
+**RUBYOPT**
+> Default command-line options applied to every ruby invocation (e.g., -w for warnings).
+
+**GEM_HOME**
+> Directory where gems are installed, overriding the default gem path.
+
+**GEM_PATH**
+> Colon-separated list of directories to search for installed gems.
+
+**BUNDLE_GEMFILE**
+> Path to the Gemfile used by Bundler, overriding automatic detection.
 
 # CAVEATS
 

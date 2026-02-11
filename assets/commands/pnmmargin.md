@@ -1,3 +1,7 @@
+# TAGLINE
+
+Add solid color borders to PNM images
+
 # TLDR
 
 **Add border around image**
@@ -28,7 +32,9 @@ _size_
 
 # DESCRIPTION
 
-**pnmmargin** adds a solid color border around a PNM image. Part of Netpbm toolkit.
+**pnmmargin** adds a uniform solid-color border around all four sides of a PNM image. The border width is specified in pixels and is applied equally on all sides.
+
+By default the border color is white. Use **-color** to specify a custom color, or the shortcuts **-white** and **-black** for common choices. This is a convenience wrapper around pnmpad. Part of the Netpbm toolkit.
 
 # SEE ALSO
 

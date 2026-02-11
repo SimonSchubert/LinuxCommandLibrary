@@ -1,3 +1,7 @@
+# TAGLINE
+
+TELNET protocol client
+
 # TLDR
 
 **Connect to a host** on default port (23)

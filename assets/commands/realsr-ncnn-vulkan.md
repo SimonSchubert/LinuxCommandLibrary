@@ -1,3 +1,7 @@
+# TAGLINE
+
+AI-powered image upscaling with GPU acceleration
+
 # TLDR
 
 **Upscale image**

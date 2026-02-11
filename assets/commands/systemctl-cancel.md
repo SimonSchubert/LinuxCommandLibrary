@@ -1,3 +1,7 @@
+# TAGLINE
+
+Cancel pending systemd jobs
+
 # TLDR
 
 **Cancel** job by ID

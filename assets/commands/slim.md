@@ -1,3 +1,7 @@
+# TAGLINE
+
+Lightweight Ruby HTML template compiler
+
 # TLDR
 
 **Convert a Slim template** to HTML

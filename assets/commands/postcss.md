@@ -1,3 +1,7 @@
+# TAGLINE
+
+Transform CSS with JavaScript plugins
+
 # TLDR
 
 **Process CSS file**
@@ -63,15 +67,19 @@
 
 # DESCRIPTION
 
-**postcss** transforms CSS with JavaScript plugins. It enables modern CSS features and optimization.
+**postcss** is a tool for transforming CSS with JavaScript plugins. Rather than being a preprocessor itself, it provides a framework where plugins perform specific transformations on the CSS abstract syntax tree. Popular plugins include Autoprefixer for adding vendor prefixes, cssnano for minification, and postcss-preset-env for using future CSS syntax today.
 
-Plugins perform specific transformations. Autoprefixer adds vendor prefixes, cssnano minifies, and others.
+Plugins are chained together in a configuration file (postcss.config.js) or specified on the command line. Each plugin receives the parsed CSS, applies its transformation, and passes the result to the next plugin. This modular approach allows teams to compose exactly the processing pipeline they need.
 
-Configuration files define plugin chains. Standard postcss.config.js or package.json settings.
+Watch mode reprocesses files automatically when changes are detected, integrating into development workflows. Source maps preserve the mapping between transformed and original CSS for debugging in browser developer tools.
 
-Watch mode enables development workflow. Files are reprocessed on changes.
+# CONFIGURATION
 
-Source maps track transformations. Original CSS locations are preserved for debugging.
+**postcss.config.js** (or **.postcssrc**, **postcss.config.mjs**)
+> Plugin configuration file defining the processing pipeline. Lists plugins in order with their options. Searched upward from the input file directory.
+
+**package.json** `"postcss"` field
+> Alternative location for PostCSS configuration within the project manifest.
 
 # CAVEATS
 

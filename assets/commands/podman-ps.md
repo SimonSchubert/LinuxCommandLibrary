@@ -1,3 +1,7 @@
+# TAGLINE
+
+List containers and their status
+
 # TLDR
 
 **List running containers**
@@ -46,11 +50,9 @@
 
 # DESCRIPTION
 
-**podman ps** lists containers. Shows container status.
+**podman ps** lists containers managed by Podman, showing container ID, image, command, creation time, status, ports, and names. By default, only running containers are shown; use **-a** to include stopped containers.
 
-The tool displays running processes. Docker ps compatible.
-
-podman ps shows containers.
+The **--format** option accepts Go templates for custom output formatting. Use **-q** for just container IDs (useful for scripting), **-l** for the most recently created container, and **-n** to limit to the last N containers. Docker ps compatible.
 
 # CAVEATS
 

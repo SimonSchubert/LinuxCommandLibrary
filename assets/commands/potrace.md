@@ -1,3 +1,7 @@
+# TAGLINE
+
+Trace bitmaps into vector graphics
+
 # TLDR
 
 **Convert bitmap to SVG**
@@ -52,7 +56,9 @@
 
 # DESCRIPTION
 
-**potrace** transforms bitmaps into vector graphics by tracing the edges. It produces smooth, scalable output from raster images like logos and line art.
+**potrace** transforms bitmap images into smooth, scalable vector graphics by tracing the boundaries between black and white regions. It uses an optimal polygon-fitting algorithm to produce clean curves, making it ideal for converting logos, line art, scanned drawings, and other high-contrast images into SVG, PDF, EPS, or PostScript format.
+
+The tool accepts PBM, PGM, PPM, and BMP input formats. Tuning parameters control corner detection (alphamax) and speckle suppression (turdsize) to balance accuracy against smoothness. For photographs or color images, preprocessing with threshold or edge-detection tools is needed first.
 
 # EXAMPLES
 

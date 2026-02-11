@@ -1,3 +1,7 @@
+# TAGLINE
+
+Initialize version control for network device configs
+
 # TLDR
 
 **Initialize CVS repositories** for all defined RANCID groups
@@ -21,6 +25,17 @@ RANCID is a network device configuration management tool that automatically back
 The command reads the LIST_OF_GROUPS variable from **/etc/rancid/rancid.conf** and creates the corresponding directory structure under the RANCID home directory (typically /var/lib/rancid). Each group gets its own subdirectory with CVS working directories.
 
 Run this command after initial RANCID installation and whenever new device groups are added to the configuration. Existing groups are not overwritten when the command is rerun.
+
+# CONFIGURATION
+
+**/etc/rancid/rancid.conf**
+> Main RANCID configuration defining LIST_OF_GROUPS, RCSSYS (cvs or svn), mail aliases, and working directory paths.
+
+**router.db**
+> Per-group device inventory file listing device hostnames, types, and status (up/down) for configuration collection.
+
+**RCSSYS**
+> Variable in rancid.conf selecting the version control backend (cvs or svn).
 
 # CAVEATS
 

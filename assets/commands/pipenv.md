@@ -1,3 +1,7 @@
+# TAGLINE
+
+Python dependency management with virtual environments
+
 # TLDR
 
 **Create virtual environment and install packages**
@@ -103,6 +107,26 @@ Virtual environments are created automatically per project. The shell command ac
 Security features include hash verification of packages and vulnerability scanning via check command. The graph command visualizes the dependency tree, helping understand transitive dependencies.
 
 Pipenv integrates with .env files, automatically loading environment variables. This keeps secrets separate from code while making them available during development.
+
+# CONFIGURATION
+
+**Pipfile**
+> Project dependency specification file in the project root.
+
+**Pipfile.lock**
+> Lockfile with pinned versions and hashes for reproducible installs.
+
+**.env**
+> Environment variables file automatically loaded by pipenv.
+
+**PIPENV_VENV_IN_PROJECT**
+> Create virtual environment inside project directory when set.
+
+**PIPENV_NO_INHERIT**
+> Do not inherit parent shell's environment variables.
+
+**PIPENV_CACHE_DIR**
+> Override the default pip cache directory location.
 
 # CAVEATS
 

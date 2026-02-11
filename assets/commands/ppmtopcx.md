@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert PPM images to PCX format
+
 # TLDR
 
 **Convert PPM to PCX**

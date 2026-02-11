@@ -1,3 +1,7 @@
+# TAGLINE
+
+Cross-platform shell and scripting language
+
 # TLDR
 
 **Start PowerShell**
@@ -94,6 +98,17 @@ PowerShell integrates with .NET, providing access to its entire library. Variabl
 Profiles (~/.config/powershell/profile.ps1 on Linux) customize the environment. Functions, aliases, and variables defined in profiles persist across sessions.
 
 The language supports advanced features: classes, modules, remoting, jobs (background tasks), and workflows. It's equally capable as an interactive shell and for automation scripting.
+
+# CONFIGURATION
+
+**~/.config/powershell/profile.ps1** (Linux/macOS), **$HOME\Documents\PowerShell\profile.ps1** (Windows)
+> User profile script executed on every session start. Defines functions, aliases, variables, and prompt customizations.
+
+**$PROFILE.AllUsersAllHosts**
+> System-wide profile for all users, typically in the PowerShell installation directory.
+
+**PSModulePath**
+> Environment variable listing directories where PowerShell searches for modules.
 
 # CAVEATS
 

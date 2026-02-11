@@ -1,3 +1,7 @@
+# TAGLINE
+
+Batch scan from automatic document feeder
+
 # TLDR
 
 **Scan all pages from the document feeder**

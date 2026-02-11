@@ -1,3 +1,7 @@
+# TAGLINE
+
+Start and monitor runit service directory
+
 # TLDR
 
 **Start supervising services**
@@ -44,6 +48,11 @@ The -P flag sets process groups. Enables signal delivery to all service processe
 - Create symlink in dir: service starts
 - Remove symlink: service stops
 - sv command controls individual services
+
+# CONFIGURATION
+
+**SVDIR**
+> Environment variable specifying the service directory path, used as the default when no directory argument is given.
 
 # CAVEATS
 

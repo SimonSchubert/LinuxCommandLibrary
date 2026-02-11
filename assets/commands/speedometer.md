@@ -1,3 +1,7 @@
+# TAGLINE
+
+Real-time network traffic ASCII graphs
+
 # TLDR
 
 Show **network traffic** graph for an interface

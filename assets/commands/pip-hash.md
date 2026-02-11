@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compute hash digests of package archives
+
 # TLDR
 
 **Calculate package hash**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Control MPRIS media players from command line
+
 # TLDR
 
 **Toggle** play/pause

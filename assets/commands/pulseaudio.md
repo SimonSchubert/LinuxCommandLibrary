@@ -1,3 +1,7 @@
+# TAGLINE
+
+Sound server for Linux desktop audio
+
 # TLDR
 
 **Check** if running
@@ -52,6 +56,17 @@ List available **modules**
 **pulseaudio** is a sound server that provides a software mixing layer between applications and audio hardware. It allows multiple applications to share audio devices and provides features like per-application volume control.
 
 The daemon runs per-user and is typically started automatically by desktop sessions. It supports network audio streaming and various audio processing modules.
+
+# CONFIGURATION
+
+**~/.config/pulse/default.pa**
+> Per-user startup script that loads modules, sets default sinks/sources, and configures audio routing.
+
+**/etc/pulse/daemon.conf**
+> System-wide daemon settings controlling sample rate, buffer sizes, resampling method, and resource limits.
+
+**/etc/pulse/default.pa**
+> System-wide startup script defining which modules to load and their configuration.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Configure rustup settings and defaults
+
 # TLDR
 
 **Set default host**

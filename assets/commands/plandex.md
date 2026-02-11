@@ -1,3 +1,7 @@
+# TAGLINE
+
+AI coding agent for complex multi-file tasks
+
 # TLDR
 
 **Start the interactive REPL**
@@ -76,6 +80,17 @@
 The tool uses a cumulative diff review sandbox that keeps AI-generated changes separate from your project files until you're ready to apply them. This allows easy rollback and debugging. Plandex supports multiple AI providers including Anthropic, OpenAI, Google, and open-source models.
 
 Key features include automated debugging of terminal commands, fast project map generation with tree-sitter (30+ languages), and configurable autonomy levels from full automation to step-by-step review. The REPL mode offers fuzzy auto-complete for commands and file loading.
+
+# CONFIGURATION
+
+**~/.plandex-home/**
+> Plandex data directory for plans, context, and settings.
+
+**OPENAI_API_KEY**
+> API key for OpenAI models.
+
+**ANTHROPIC_API_KEY**
+> API key for Anthropic Claude models.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Automate infrastructure deployment with Python
+
 # TLDR
 
 **Deploy to servers**
@@ -42,11 +46,23 @@ _OPERATIONS_
 
 # DESCRIPTION
 
-**pyinfra** automates infrastructure with Python. Configuration management.
+**pyinfra** automates infrastructure provisioning and configuration management using Python. Deploy scripts are written as regular Python files that describe desired system state through operations like installing packages, managing files, configuring services, and executing commands across groups of servers.
 
-The tool deploys to servers. Agentless automation.
+The tool connects to targets over SSH without requiring agents on remote machines, making it lightweight to adopt. An inventory file defines target hosts and groups, while deploy scripts specify what operations to run. The **--dry** flag previews changes before applying them, and the **fact** command gathers system information from targets for conditional logic in deployments.
 
-pyinfra manages infrastructure.
+# CONFIGURATION
+
+**inventory.py**
+> Default inventory file defining target hosts, groups, and connection details for deployments.
+
+**deploy.py**
+> Default deploy script containing operations to execute on target hosts.
+
+**group_data/*.py**
+> Group-specific data files providing variables for host groups defined in the inventory.
+
+**config.py**
+> Project-level configuration for SSH settings, sudo behavior, and operation defaults.
 
 # CAVEATS
 

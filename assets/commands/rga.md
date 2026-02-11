@@ -1,3 +1,7 @@
+# TAGLINE
+
+Search inside PDFs, archives, and documents
+
 # TLDR
 
 **Search in all files**
@@ -69,15 +73,19 @@
 
 # DESCRIPTION
 
-**rga** (ripgrep-all) extends ripgrep to search within files. It handles PDFs, Office documents, and archives.
+**rga** (ripgrep-all) extends ripgrep to search inside file formats that plain text search cannot reach, including PDFs, Word documents, Excel spreadsheets, PowerPoint presentations, zip archives, tar files, e-books, and even SQLite databases. It uses format-specific adapters backed by external tools like pdftotext and pandoc to extract searchable text from these files.
 
-Adapters extract text from different formats. External tools like pdftotext are used.
+Extracted text is cached on disk so that subsequent searches over the same files are nearly instantaneous. The tool can descend into compressed archives, searching nested files without manual extraction. All standard ripgrep features are available, including regex patterns, colored output, context lines, and file type filtering, providing a consistent search interface regardless of the underlying file format.
 
-Caching speeds up repeated searches. Extracted text is stored for reuse.
+When optional dependencies like tesseract are available, rga can perform OCR on image files to make even scanned documents searchable.
 
-Archive searching descends into compressed files. Nested archives are handled.
+# CONFIGURATION
 
-Ripgrep features apply: regex, colors, context. Same interface for all file types.
+**~/.cache/rga/**
+> Cache directory storing extracted text from binary file formats. Speeds up repeated searches over the same files.
+
+**--rga-cache-max-blob-len**
+> Controls the maximum file size for caching extracted text. Files larger than this threshold are re-extracted on each search.
 
 # CAVEATS
 

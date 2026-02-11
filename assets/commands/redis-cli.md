@@ -1,3 +1,7 @@
+# TAGLINE
+
+Command-line interface for Redis servers
+
 # TLDR
 
 **Connect to local Redis server**

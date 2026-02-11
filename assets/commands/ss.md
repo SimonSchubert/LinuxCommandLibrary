@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display socket statistics and connections
+
 # TLDR
 
 Show all **TCP/UDP/RAW/UNIX sockets**

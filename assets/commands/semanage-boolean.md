@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage persistent SELinux boolean settings
+
 # TLDR
 
 **List** all boolean settings

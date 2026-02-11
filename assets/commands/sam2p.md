@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert raster images to EPS or PDF
+
 # TLDR
 
 **Convert image to PDF**

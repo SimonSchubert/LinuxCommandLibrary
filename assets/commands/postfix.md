@@ -1,3 +1,7 @@
+# TAGLINE
+
+Control the Postfix mail system
+
 # TLDR
 
 **Check** configuration
@@ -64,6 +68,20 @@ Check **status**
 **postfix** is the control program for the Postfix mail transfer agent. It manages starting, stopping, and reconfiguring the mail system components.
 
 Postfix is designed for security and performance, running multiple separate processes with minimal privileges. The control program coordinates these processes.
+
+# CONFIGURATION
+
+**/etc/postfix/main.cf**
+> Primary configuration file defining hostname, domain, relay settings, network restrictions, TLS, and all major Postfix parameters.
+
+**/etc/postfix/master.cf**
+> Defines Postfix service components (smtpd, cleanup, local, etc.) and their process limits, chroot settings, and command-line options.
+
+**/etc/postfix/virtual**
+> Virtual alias mapping for email address rewriting. Requires **postmap** to rebuild the database after changes.
+
+**/etc/postfix/transport**
+> Controls mail routing by destination domain. Requires **postmap** after editing.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Sailfish OS build dependencies
+
 # TLDR
 
 **List build dependencies**

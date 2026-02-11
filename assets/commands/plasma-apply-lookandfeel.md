@@ -1,3 +1,7 @@
+# TAGLINE
+
+Apply KDE Plasma global themes
+
 # TLDR
 
 List **available** global themes

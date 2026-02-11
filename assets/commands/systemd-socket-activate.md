@@ -1,3 +1,7 @@
+# TAGLINE
+
+Test socket activation for services
+
 # TLDR
 
 **Activate** a service when a socket is connected

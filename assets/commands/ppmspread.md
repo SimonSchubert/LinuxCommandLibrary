@@ -1,3 +1,7 @@
+# TAGLINE
+
+Randomly displace pixels for noise effect
+
 # TLDR
 
 **Spread pixels randomly**
@@ -26,11 +30,9 @@ _FILE_
 
 # DESCRIPTION
 
-**ppmspread** randomly displaces pixels. Creates noise/blur effect.
+**ppmspread** randomly displaces each pixel in a PPM image to a new position within the specified radius, creating a scattered, noise-like blur effect. Larger spread amounts produce more diffuse results while small amounts add subtle texture.
 
-The tool produces scattered appearance. Part of Netpbm.
-
-ppmspread disperses pixels.
+Unlike Gaussian blur which averages pixels, spread preserves individual pixel colors but randomizes their positions, producing a distinctive frosted glass or pointillist appearance. Part of the Netpbm toolkit.
 
 # CAVEATS
 

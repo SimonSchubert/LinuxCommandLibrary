@@ -1,3 +1,7 @@
+# TAGLINE
+
+Broadcast files to Slurm job allocation nodes
+
 # TLDR
 
 **Send** a file to all allocated nodes

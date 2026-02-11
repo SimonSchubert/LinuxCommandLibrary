@@ -1,3 +1,7 @@
+# TAGLINE
+
+Python game development library
+
 # TLDR
 
 **Install Pygame**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Rebuild PostgreSQL database indexes
+
 # TLDR
 
 **Reindex database**

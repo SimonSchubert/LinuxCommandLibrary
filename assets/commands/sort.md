@@ -1,3 +1,7 @@
+# TAGLINE
+
+Sort lines of text files
+
 # TLDR
 
 **Sort a file alphabetically**

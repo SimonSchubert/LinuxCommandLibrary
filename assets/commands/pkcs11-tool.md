@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage PKCS#11 cryptographic tokens and smart cards
+
 # TLDR
 
 **List tokens**
@@ -49,11 +53,9 @@
 
 # DESCRIPTION
 
-**pkcs11-tool** manages PKCS#11 tokens. Smart card and HSM operations.
+**pkcs11-tool** interacts with PKCS#11 cryptographic tokens such as smart cards, USB security keys, and hardware security modules (HSMs). It can list available slots and objects, generate key pairs, sign and verify data, and initialize tokens.
 
-The tool interacts with cryptographic tokens. Part of OpenSC.
-
-pkcs11-tool manages tokens.
+Part of the OpenSC project, it communicates with tokens through PKCS#11 library modules. Different token types require their specific PKCS#11 library, specified with the **--module** option. Operations on private objects typically require PIN authentication.
 
 # CAVEATS
 

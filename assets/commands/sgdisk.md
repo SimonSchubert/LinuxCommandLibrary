@@ -1,3 +1,7 @@
+# TAGLINE
+
+Scriptable GPT partition table manager
+
 # TLDR
 
 **Show partition table**
@@ -67,15 +71,11 @@
 
 # DESCRIPTION
 
-**sgdisk** manages GPT partition tables. It's the scriptable version of gdisk.
+**sgdisk** is the command-line, scriptable counterpart to the interactive **gdisk** partitioning tool, designed for manipulating GUID Partition Table (GPT) disk layouts. It performs all operations through flags and arguments rather than an interactive menu, making it ideal for use in scripts, automated provisioning, and disk imaging workflows.
 
-Partition creation uses flexible notation. Size with +, from start with 0.
+Partition creation uses flexible notation where sizes can be specified with **+** prefixes for relative sizing and **0** to fill remaining space. Type codes such as **8300** (Linux filesystem), **EF00** (EFI System Partition), and **8200** (Linux swap) identify the purpose of each partition. Multiple operations can be chained in a single command to build complete partition layouts atomically.
 
-Type codes identify partition purpose. 8300 for Linux, EF00 for EFI.
-
-Backup preserves partition layout. Restore recreates exact table.
-
-Multiple operations chain together. Build complex layouts in one command.
+The tool also supports backing up and restoring entire partition tables, converting MBR disks to GPT, and verifying table integrity. All changes are written in a single operation when the command completes successfully.
 
 # CAVEATS
 

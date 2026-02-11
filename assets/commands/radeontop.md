@@ -1,3 +1,7 @@
+# TAGLINE
+
+Monitor AMD Radeon GPU utilization in real time
+
 # TLDR
 
 Show **GPU utilization**

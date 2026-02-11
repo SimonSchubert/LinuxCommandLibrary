@@ -1,3 +1,7 @@
+# TAGLINE
+
+Wait for a Proxmox VM to stop
+
 # TLDR
 
 **Wait** until the virtual machine is stopped

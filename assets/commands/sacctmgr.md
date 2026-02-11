@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Slurm accounts, users, and clusters
+
 # TLDR
 
 **Show** current configuration

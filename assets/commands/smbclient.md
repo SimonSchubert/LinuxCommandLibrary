@@ -1,3 +1,7 @@
+# TAGLINE
+
+FTP-like client for SMB/CIFS shares
+
 # TLDR
 
 **Connect** to a share

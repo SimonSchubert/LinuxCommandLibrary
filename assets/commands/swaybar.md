@@ -1,3 +1,7 @@
+# TAGLINE
+
+Default status bar for Sway compositor
+
 # TLDR
 
 **Start swaybar** (usually started by sway)

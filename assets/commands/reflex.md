@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run commands when files change
+
 # TLDR
 
 **Watch and run command**
@@ -69,6 +73,11 @@ Service mode runs a long-running process. The process restarts on changes.
 Exclusions ignore vendor directories or build output. Prevents unnecessary rebuilds.
 
 Configuration files define complex watch rules. Multiple watchers in one file.
+
+# CONFIGURATION
+
+**.reflex**
+> Project-level configuration file defining watch rules, one per line, with regex patterns and commands. Loaded automatically when present in the current directory.
 
 # CAVEATS
 

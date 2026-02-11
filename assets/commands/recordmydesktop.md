@@ -1,3 +1,7 @@
+# TAGLINE
+
+Record desktop screen to video file
+
 # TLDR
 
 **Record full screen**
@@ -48,7 +52,9 @@
 
 # DESCRIPTION
 
-**recordmydesktop** captures desktop video and audio to Ogg Theora/Vorbis format. It's a lightweight screen recorder for Linux X11 sessions.
+**recordmydesktop** is a lightweight screen recorder for Linux X11 sessions that captures desktop video and audio to Ogg Theora/Vorbis format. It can record the full screen, a specific window selected by ID, or a rectangular region defined by position and dimensions.
+
+Audio is captured from the default ALSA or OSS input device and can be disabled with **--no-sound**. Recording is stopped with Ctrl+C, after which the tool encodes the captured frames into the final output file. The **--on-the-fly-encoding** option encodes during recording to reduce post-processing time at the cost of higher CPU usage.
 
 # EXAMPLES
 

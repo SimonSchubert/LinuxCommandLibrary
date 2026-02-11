@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run commands on dedicated Nvidia GPU
+
 # TLDR
 
 Run command on **dedicated Nvidia GPU**

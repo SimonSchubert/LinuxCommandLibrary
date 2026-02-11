@@ -1,3 +1,7 @@
+# TAGLINE
+
+Protein query to nucleotide database search
+
 # TLDR
 
 **Search a protein query** against a nucleotide database

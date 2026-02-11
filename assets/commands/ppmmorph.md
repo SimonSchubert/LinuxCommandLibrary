@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create morphing sequence between images
+
 # TLDR
 
 **Morph between two images**

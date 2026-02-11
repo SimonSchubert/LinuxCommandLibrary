@@ -1,3 +1,7 @@
+# TAGLINE
+
+Apply embossed relief effect to images
+
 # TLDR
 
 **Create embossed relief effect**
@@ -15,11 +19,9 @@ _FILE_
 
 # DESCRIPTION
 
-**ppmrelief** creates embossed relief effect. Edge detection filter.
+**ppmrelief** applies a convolution filter to a PPM image that creates an embossed relief effect, giving the image a three-dimensional chiseled appearance. Edges in the original image appear as raised ridges lit from one direction, while flat areas become a neutral gray.
 
-The tool produces 3D-like appearance. Part of Netpbm.
-
-ppmrelief embosses images.
+The effect works by computing the difference between adjacent pixels, which highlights edges while suppressing uniform regions. Part of the Netpbm toolkit.
 
 # CAVEATS
 

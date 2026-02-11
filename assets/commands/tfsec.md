@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terraform static security scanner
+
 # TLDR
 
 **Scan the current directory** for security issues

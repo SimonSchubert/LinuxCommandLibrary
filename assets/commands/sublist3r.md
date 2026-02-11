@@ -1,3 +1,7 @@
+# TAGLINE
+
+Subdomain enumeration using search engines
+
 # TLDR
 
 **Enumerate subdomains**
@@ -57,15 +61,11 @@
 
 # DESCRIPTION
 
-**sublist3r** discovers subdomains using search engines. It's an OSINT reconnaissance tool.
+**sublist3r** is an OSINT reconnaissance tool that discovers subdomains of a target domain by querying multiple search engines and data sources. It aggregates results from Google, Bing, Yahoo, Baidu, Ask, Netcraft, VirusTotal, and other sources to build a comprehensive list of subdomains.
 
-Multiple search engines are queried. Google, Bing, Yahoo, Baidu, and others.
+Beyond passive search engine enumeration, sublist3r can perform active DNS bruteforce using common subdomain wordlists. It also includes port scanning capabilities to identify which discovered subdomains have live services running on specified ports, helping prioritize targets during security assessments.
 
-VirusTotal integration finds additional subdomains. Historical DNS data included.
-
-Bruteforce mode tries common names. Wordlist-based discovery.
-
-Port scanning checks discovered hosts. Identify live services.
+The tool is designed for authorized penetration testing and bug bounty reconnaissance. Multi-threading support allows faster enumeration, and results can be saved to files for further processing by other security tools.
 
 # CAVEATS
 

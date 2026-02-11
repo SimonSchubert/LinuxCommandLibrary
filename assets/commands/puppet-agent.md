@@ -1,3 +1,7 @@
+# TAGLINE
+
+Apply configuration from Puppet server
+
 # TLDR
 
 **Run agent once**
@@ -56,15 +60,20 @@
 
 # DESCRIPTION
 
-**puppet agent** runs Puppet configuration. It enforces desired state.
+**puppet agent** is the client component of the Puppet configuration management system. It connects to a Puppet server, retrieves a compiled catalog of the desired system state, and applies the necessary changes to bring the local machine into compliance. The agent handles SSL certificate management, fact submission via Facter, and detailed reporting of applied changes.
 
-Connects to Puppet server. Downloads and applies catalog.
+In daemon mode, the agent runs as a background service and checks in with the server at a configurable interval, typically every 30 minutes. For manual operations, **--test** performs a single run with verbose output, while **--noop** previews what changes would be made without actually applying them. The agent can be temporarily disabled with a lock message to prevent runs during maintenance windows.
 
-Test mode for manual runs. Single execution with output.
+# CONFIGURATION
 
-Noop mode previews changes. No actual modifications.
+**/etc/puppetlabs/puppet/puppet.conf**
+> Agent configuration including server hostname, run interval, environment, certificate name, and splay settings.
 
-Daemon mode for continuous. Runs periodically.
+**/etc/puppetlabs/puppet/ssl/**
+> SSL certificate directory containing the agent's private key, signed certificate, and CA certificate for server authentication.
+
+**/opt/puppetlabs/puppet/cache/state/agent_disabled.lock**
+> Lock file created when the agent is disabled, containing the disable message as JSON.
 
 # CAVEATS
 

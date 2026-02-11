@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage OpenRC init system services
+
 # TLDR
 
 Show service **status**

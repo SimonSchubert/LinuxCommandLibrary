@@ -1,5 +1,11 @@
 # TLDR
 
+# TAGLINE
+
+Generate translated documents from PO files
+
+# TLDR
+
 **Convert** a translated PO file back to a document
 
 ```po4a-translate --format [text] --master [path/to/master.doc] --po [path/to/result.po] --localized [path/to/translated.txt]```

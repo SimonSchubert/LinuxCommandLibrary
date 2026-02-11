@@ -1,3 +1,7 @@
+# TAGLINE
+
+Open-source machine emulator and virtualizer
+
 # TLDR
 
 **Run virtual machine**
@@ -46,11 +50,9 @@
 
 # DESCRIPTION
 
-**qemu** is machine emulator and virtualizer. Runs virtual machines.
+**QEMU** (Quick EMUlator) is an open-source machine emulator and virtualizer that can run operating systems for any supported architecture on any host. It provides full system emulation including CPU, memory, storage, and peripheral devices, supporting architectures like x86, ARM, RISC-V, MIPS, PowerPC, and others.
 
-The tool emulates various architectures. Full system virtualization.
-
-qemu virtualizes systems.
+When combined with KVM (Kernel-based Virtual Machine) on Linux, QEMU achieves near-native performance by using hardware virtualization extensions. Without KVM, it uses dynamic binary translation for full software emulation, which is slower but works across platforms. QEMU disk images support multiple formats (qcow2, raw, vmdk) with features like snapshots, thin provisioning, and backing files.
 
 # CAVEATS
 

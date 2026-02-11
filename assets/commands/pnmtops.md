@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert PNM images to PostScript
+
 # TLDR
 
 **Convert PNM to PostScript**
@@ -45,7 +49,9 @@
 
 # DESCRIPTION
 
-**pnmtops** converts PNM images to PostScript. Part of Netpbm toolkit. Can create standalone PS or EPS files suitable for embedding.
+**pnmtops** converts PNM images to PostScript format, suitable for printing or embedding in documents. The output can be either a full-page PostScript document or an Encapsulated PostScript (EPS) file.
+
+The **-dpi** and **-scale** options control the output size, while **-width** and **-height** set maximum dimensions. Use **-nocenter**, **-noturn**, and **-nosetpage** together to create minimal EPS suitable for inclusion in other documents. Part of the Netpbm toolkit.
 
 # SEE ALSO
 

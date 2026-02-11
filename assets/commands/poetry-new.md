@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create new Python project structure
+
 # TLDR
 
 **Create new project**
@@ -32,11 +36,9 @@ _PATH_
 
 # DESCRIPTION
 
-**poetry new** creates new Python project. Generates project structure.
+**poetry new** scaffolds a new Python project directory with a standard structure including **pyproject.toml**, a package directory, and a tests directory. This provides a ready-to-use project layout.
 
-The tool scaffolds projects. Creates pyproject.toml and directories.
-
-poetry new starts projects.
+The **--src** flag uses the `src/` layout pattern where the package lives under a `src/` subdirectory. The **--name** option allows the package name to differ from the directory name. For adding Poetry to an existing project, use **poetry init** instead.
 
 # CAVEATS
 

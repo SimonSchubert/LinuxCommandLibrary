@@ -1,3 +1,7 @@
+# TAGLINE
+
+Pipe live streams to media players
+
 # TLDR
 
 **Open stream in default player**
@@ -95,6 +99,14 @@ Platform support includes Twitch, YouTube, and hundreds of other sites. Plugin a
 Twitch-specific features include ad skipping, low-latency mode, and OAuth authentication for subscriber streams. Configuration can be saved in ~/.config/streamlink/config.
 
 HTTP options enable accessing streams behind authentication or with custom headers, handling various DRM and geo-restriction scenarios.
+
+# CONFIGURATION
+
+**~/.config/streamlink/config**
+> Main configuration file for default options, player settings, and plugin parameters.
+
+**~/.config/streamlink/plugins/**
+> Directory for custom or third-party stream extraction plugins.
 
 # CAVEATS
 

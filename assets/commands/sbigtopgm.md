@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert SBIG CCD camera images to PGM format
+
 # TLDR
 
 **Convert SBIG to PGM**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Read data from CD/DVD optical discs
+
 # TLDR
 
 **Read** a CD and copy to a file

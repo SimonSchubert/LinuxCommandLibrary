@@ -1,3 +1,7 @@
+# TAGLINE
+
+Build Debian packages in clean chroot environments
+
 # TLDR
 
 **Build package**
@@ -46,15 +50,9 @@
 
 # DESCRIPTION
 
-**sbuild** builds Debian packages. It uses clean chroot environments.
+**sbuild** builds Debian packages inside clean chroot environments managed by schroot, ensuring reproducible results by starting from a pristine base system for each build. Build dependencies are installed fresh each time, eliminating contamination from previous builds or the host system.
 
-Reproducible builds. Clean environment each time.
-
-Cross-architecture support. Build for other platforms.
-
-Buildd compatible. Same as Debian infrastructure.
-
-Schroot-based isolation. Safe building.
+The tool supports cross-architecture builds, allowing packages to be compiled for different platforms like arm64 or armhf from an x86 host. It is compatible with the Debian buildd infrastructure, meaning packages built with sbuild match the same build process used by official Debian archive builders.
 
 # CAVEATS
 

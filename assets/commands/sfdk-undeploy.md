@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove deployed apps from devices
+
 # TLDR
 
 **Remove deployed application**

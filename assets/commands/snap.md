@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage sandboxed snap packages
+
 # TLDR
 
 **Search** for a package

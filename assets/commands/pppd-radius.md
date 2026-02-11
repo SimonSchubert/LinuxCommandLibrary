@@ -1,3 +1,7 @@
+# TAGLINE
+
+RADIUS authentication plugin for PPP daemon
+
 # TLDR
 
 **Start PPP with RADIUS authentication**
@@ -25,11 +29,9 @@
 
 # DESCRIPTION
 
-**pppd-radius** enables RADIUS authentication for PPP. Plugin for pppd.
+**pppd-radius** is a plugin for the PPP daemon that enables RADIUS (Remote Authentication Dial-In User Service) authentication. Instead of using local credentials files, pppd delegates authentication and accounting to a central RADIUS server.
 
-The tool authenticates via RADIUS servers. Enterprise authentication.
-
-pppd-radius adds RADIUS support.
+This is commonly used by ISPs and enterprise networks to centrally manage dial-up, DSL, and VPN user authentication. The plugin communicates with RADIUS servers using a shared secret for secure credential exchange.
 
 # CAVEATS
 

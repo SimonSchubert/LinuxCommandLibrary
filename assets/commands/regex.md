@@ -1,3 +1,7 @@
+# TAGLINE
+
+Regular expression syntax reference
+
 # TLDR
 
 This is a reference page for regular expression syntax, not a standalone command.

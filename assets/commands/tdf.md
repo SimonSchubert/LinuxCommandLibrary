@@ -1,3 +1,7 @@
+# TAGLINE
+
+Render TheDraw ANSI font text
+
 # TLDR
 
 **View TheDraw file**
@@ -39,15 +43,9 @@
 
 # DESCRIPTION
 
-**tdf** renders TheDraw fonts. It displays ANSI art text.
+**tdf** renders text using TheDraw font files (.tdf), a format originating from the BBS era for creating colorful ANSI art text banners. Each TDF file can contain multiple fonts, and specific fonts can be selected by name.
 
-TheDraw font support. Classic BBS format.
-
-Text rendering. ASCII art output.
-
-Multiple fonts per file. Select by name.
-
-Terminal output. ANSI colors.
+The tool reads TheDraw font definitions and uses them to transform plain text into large, stylized ANSI art rendered with colors and special characters. The **-l** flag lists all available fonts within a TDF file, making it easy to browse font collections before rendering.
 
 # CAVEATS
 

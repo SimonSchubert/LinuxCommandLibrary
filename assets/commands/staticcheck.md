@@ -1,3 +1,7 @@
+# TAGLINE
+
+Advanced Go static analysis linter
+
 # TLDR
 
 **Analyze all packages** in current module

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Analyze system boot-up performance
+
 # TLDR
 
 **Print** the last system startup time

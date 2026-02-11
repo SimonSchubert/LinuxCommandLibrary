@@ -1,3 +1,7 @@
+# TAGLINE
+
+Background service for snap package management
+
 # TLDR
 
 **Start the snapd service**

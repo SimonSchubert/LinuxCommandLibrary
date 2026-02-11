@@ -1,3 +1,7 @@
+# TAGLINE
+
+Enter single-user rescue mode
+
 # TLDR
 
 Enter **rescue** mode

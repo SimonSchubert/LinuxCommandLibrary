@@ -1,3 +1,7 @@
+# TAGLINE
+
+Detect code smells in Ruby source files
+
 # TLDR
 
 **Check Ruby code for smells**
@@ -43,7 +47,9 @@
 
 # DESCRIPTION
 
-**Reek** is a code smell detector for Ruby. It analyzes Ruby code and reports potential design problems like long methods, feature envy, and data clumps.
+**Reek** is a static analysis tool that detects code smells in Ruby source files, reporting potential design problems such as long methods, feature envy, data clumps, and excessive parameter lists. It examines code structure and naming patterns to identify areas that may benefit from refactoring, based on principles from Martin Fowler's refactoring catalog.
+
+Output can be formatted as text, YAML, JSON, or HTML for integration with CI pipelines and code review workflows. Individual smell types can be included or excluded with **--only** and **--except**, and project-wide configuration in **.reek.yml** allows tuning thresholds and excluding paths.
 
 # EXAMPLES
 

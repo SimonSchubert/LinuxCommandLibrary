@@ -1,3 +1,7 @@
+# TAGLINE
+
+Resize ext2/ext3/ext4 filesystems
+
 # TLDR
 
 Resize to **maximum** possible size

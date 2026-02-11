@@ -1,3 +1,7 @@
+# TAGLINE
+
+Lightweight terminal RSS feed reader
+
 # TLDR
 
 **Start Snownews** RSS reader
@@ -79,6 +83,14 @@
 Snownews maintains a local cache to minimize network traffic and supports HTTP proxies, HTTP authentication (basic and digest), and cookies. Feed URLs can be imported from OPML files for easy migration from other readers.
 
 By default, URLs in feeds are opened with a text-mode browser like Lynx, but this can be configured to use any browser. Configuration files are stored in **~/.snownews/** including the URL list and settings.
+
+# CONFIGURATION
+
+**~/.snownews/urls**
+> List of subscribed feed URLs, one per line.
+
+**~/.snownews/browser**
+> Script or command used to open URLs from feed items.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Windows registry editor via Wine
+
 # TLDR
 
 **Open registry editor**
@@ -43,15 +47,11 @@
 
 # DESCRIPTION
 
-**regedit** edits Windows registry. On Linux, it runs under Wine.
+**regedit** is the Windows Registry Editor, available on Linux through the Wine compatibility layer. It provides a graphical interface for browsing, searching, and modifying the hierarchical Windows registry database that stores configuration settings for Windows applications running under Wine.
 
-GUI registry editor. Browse and modify keys.
+The tool supports importing and exporting registry files in the standard .reg format, enabling batch configuration changes and backup of registry sections. The **/S** flag allows silent imports for scripting, while **/E** exports specific registry keys and their subtrees. These operations are essential for configuring Windows applications that rely on registry settings to function correctly under Wine.
 
-Import REG files. Apply registry settings.
-
-Export for backup. Save registry sections.
-
-Wine compatibility layer. Windows apps on Linux.
+On Linux, regedit manages Wine's emulated registry stored in the user's Wine prefix directory. Changes made through regedit affect how Windows applications behave within the Wine environment, making it a key tool for troubleshooting compatibility issues.
 
 # CAVEATS
 

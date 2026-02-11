@@ -1,3 +1,7 @@
+# TAGLINE
+
+Collection of classic logic games
+
 # TLDR
 
 **Launch puzzle collection**

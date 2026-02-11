@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run commands with a specific Rust toolchain
+
 # TLDR
 
 **Run command with toolchain**

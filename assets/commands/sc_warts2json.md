@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert scamper warts files to JSON format
+
 # TLDR
 
 **Convert warts to JSON format**

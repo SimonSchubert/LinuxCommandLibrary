@@ -1,3 +1,7 @@
+# TAGLINE
+
+Find usernames across social networks
+
 # TLDR
 
 Search for a username and **save results** to file

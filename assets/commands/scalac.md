@@ -1,3 +1,7 @@
+# TAGLINE
+
+Scala source code compiler
+
 # TLDR
 
 **Compile a Scala source file**
@@ -74,6 +78,14 @@
 By default, class files are placed in the same directory as their source files. Use **-d** to specify an alternate output directory or JAR file. The compiler integrates with Java classes via the classpath mechanism.
 
 Options are categorized by prefix: **-W** for warnings, **-V** for verbose output, **-X** for extended options, and **-Y** for private/experimental options.
+
+# CONFIGURATION
+
+**JAVA_HOME**
+> Path to the JDK installation used by the Scala compiler.
+
+**JAVA_OPTS**
+> Additional JVM options passed to the compiler process (e.g., memory settings).
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Query CRUX Linux package database
+
 # TLDR
 
 List **installed packages** and versions

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fast port scanner written in Rust
+
 # TLDR
 
 **Scan target**

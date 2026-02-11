@@ -1,3 +1,7 @@
+# TAGLINE
+
+Open user's preferred text editor
+
 # TLDR
 
 Open a **file** in the default editor

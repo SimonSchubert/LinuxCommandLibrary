@@ -1,3 +1,7 @@
+# TAGLINE
+
+Toggle SELinux enforcing and permissive modes
+
 # TLDR
 
 **Put** SELinux in enforcing mode

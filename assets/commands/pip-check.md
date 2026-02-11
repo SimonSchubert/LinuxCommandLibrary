@@ -1,3 +1,7 @@
+# TAGLINE
+
+Verify installed package dependency compatibility
+
 # TLDR
 
 **Check for broken dependencies**

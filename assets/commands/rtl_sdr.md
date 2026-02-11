@@ -1,3 +1,7 @@
+# TAGLINE
+
+Capture raw radio samples with RTL-SDR dongle
+
 # TLDR
 
 **Capture to file**
@@ -60,17 +64,11 @@
 
 # DESCRIPTION
 
-**rtl_sdr** captures radio signals using RTL-SDR dongles. These are low-cost software-defined radio receivers.
+**rtl_sdr** captures raw radio signals using RTL-SDR dongles, which are inexpensive USB devices based on the RTL2832U chipset originally designed for DVB-T television reception. By reading raw I/Q (in-phase/quadrature) samples from the device, it enables software-defined radio experimentation across a wide frequency range, typically 24 MHz to 1766 MHz depending on the tuner chip.
 
-Frequency range typically 24-1766 MHz. The actual range depends on the tuner chip.
+The tool writes raw 8-bit I/Q sample data to a file or stdout, which can then be processed by other applications to decode various signal types including FM radio, ADS-B aircraft tracking, weather satellites, and pager systems. The sample rate parameter controls the bandwidth captured, with higher rates covering more spectrum but requiring more USB bandwidth and storage.
 
-Sample rate determines bandwidth captured. Higher rates capture more spectrum.
-
-Gain adjustment controls receiver sensitivity. Auto-gain or manual values.
-
-Output is raw I/Q samples. Post-processing decodes various signals.
-
-PPM correction compensates for oscillator error. Calibrate using known signal.
+Gain and frequency correction parameters help optimize reception quality. Setting gain to zero enables automatic gain control, while manual values allow fine-tuning for specific signals. The PPM correction compensates for the oscillator frequency error inherent in low-cost dongles, which can be calibrated against a known reference signal.
 
 # CAVEATS
 

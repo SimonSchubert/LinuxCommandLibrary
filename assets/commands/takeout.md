@@ -1,3 +1,7 @@
+# TAGLINE
+
+Docker-based development service manager
+
 # TLDR
 
 **Enable service**
@@ -50,15 +54,11 @@
 
 # DESCRIPTION
 
-**takeout** manages development services. It uses Docker.
+**takeout** is a CLI tool that simplifies managing development dependencies using Docker containers. Instead of installing databases and services directly on your machine, Takeout runs them as isolated Docker containers that can be enabled or disabled with simple commands.
 
-Database services. MySQL, PostgreSQL, Redis.
+Supported services include MySQL, PostgreSQL, MariaDB, Redis, Memcached, Elasticsearch, MeiliSearch, MinIO, and many more. Each service runs in its own container with sensible defaults, and Takeout handles port mapping, volume persistence, and container lifecycle management automatically.
 
-Simple interface. Enable and disable.
-
-Docker-based. Container management.
-
-Laravel focused. PHP development.
+Created by **Tighten** for the Laravel ecosystem, Takeout works well for any PHP development workflow and beyond. The **enable** command pulls and starts a service container with an interactive prompt for version and configuration, while **disable** stops and removes it. The **start** and **stop** commands control all enabled services at once.
 
 # CAVEATS
 

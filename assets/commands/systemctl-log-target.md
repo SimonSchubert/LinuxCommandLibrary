@@ -1,3 +1,7 @@
+# TAGLINE
+
+Get or set systemd log destination
+
 # TLDR
 
 Show **current** log target

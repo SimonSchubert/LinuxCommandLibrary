@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert PostScript and PDF to PNM format
+
 # TLDR
 
 **Convert PostScript to PNM**

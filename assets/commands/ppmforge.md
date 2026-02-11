@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate fractal terrain and cloud images
+
 # TLDR
 
 **Generate fractal terrain**
@@ -42,11 +46,9 @@
 
 # DESCRIPTION
 
-**ppmforge** generates fractal images. Creates terrain, clouds, planets.
+**ppmforge** generates fractal-based images using procedural algorithms, producing realistic terrain, cloud, and planetary surface images. The terrain mode creates elevation-colored landscapes with water, while the cloud mode generates atmospheric patterns.
 
-The tool produces procedural images. Part of Netpbm.
-
-ppmforge creates fractals.
+A random seed parameter allows reproducible generation, and mesh size controls the level of fractal detail. The night mode creates star field images. Output dimensions are configurable independently for width and height. Part of the Netpbm toolkit.
 
 # CAVEATS
 

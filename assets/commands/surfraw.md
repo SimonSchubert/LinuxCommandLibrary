@@ -1,3 +1,7 @@
+# TAGLINE
+
+Search websites from the command line
+
 # TLDR
 
 **Search Google**
@@ -61,15 +65,11 @@
 
 # DESCRIPTION
 
-**surfraw** (Shell Users' Revolutionary Front Rage Against the Web) searches websites from CLI.
+**surfraw** (Shell Users' Revolutionary Front Rage Against the Web) provides a command-line interface for searching websites and web services. It uses a plugin system called "elvi" where each elvi defines the search interface for a specific website such as Google, Wikipedia, DuckDuckGo, or GitHub.
 
-Elvi are search plugins. Each defines a search engine interface.
+The tool constructs search URLs from command-line arguments and opens them in a configured web browser. Print mode outputs the constructed URL instead of opening a browser, enabling piping to other commands or scripts. Both graphical and text-mode browsers are supported.
 
-Print mode outputs URLs. Pipe to other commands or scripts.
-
-Browser selection controls destination. Text or graphical browsers.
-
-Custom elvi extend functionality. Write scripts for any site.
+Custom elvi can be written as simple shell scripts to add support for any website with a query-based URL pattern. The tool ships with dozens of pre-configured elvi for popular search engines, reference sites, and package repositories.
 
 # CAVEATS
 

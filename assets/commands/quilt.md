@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage ordered series of patches
+
 # TLDR
 
 **Create new patch**
@@ -53,11 +57,9 @@
 
 # DESCRIPTION
 
-**quilt** manages patch series. Patch queue management.
+**quilt** manages an ordered series of patches against a source tree, allowing patches to be applied, removed, and updated independently. It maintains a **series** file listing patches in order and a **patches/** directory containing the patch files, providing a structured workflow for maintaining modifications on top of upstream code.
 
-The tool handles multiple patches. Used in packaging.
-
-quilt manages patches.
+The typical workflow involves creating a new patch with **new**, registering files to track with **add**, making changes, then saving the patch with **refresh**. Patches can be applied incrementally with **push** and removed with **pop**, and the entire series can be reordered or edited. Quilt is widely used in Linux distribution packaging to maintain downstream patches against upstream source.
 
 # CAVEATS
 

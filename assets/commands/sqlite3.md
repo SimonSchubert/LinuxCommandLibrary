@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interactive SQLite database shell
+
 # TLDR
 
 **Open or create a database**

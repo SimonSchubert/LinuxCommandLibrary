@@ -1,3 +1,7 @@
+# TAGLINE
+
+Stripe payment platform developer CLI
+
 # TLDR
 
 **Login to Stripe**
@@ -64,15 +68,11 @@
 
 # DESCRIPTION
 
-**stripe** manages Stripe payment integration from CLI. It simplifies development and testing.
+**stripe** is the official command-line interface for the Stripe payment platform, designed to streamline development and testing of payment integrations. It provides direct access to the Stripe API, allowing developers to create and manage resources like customers, payment intents, and subscriptions without writing code.
 
-Webhook listening receives events locally. Forwards production events to development server.
+A key feature is webhook listening, which receives Stripe events locally and forwards them to a development server. This eliminates the need for public URLs during development. The trigger command simulates specific events like successful payments or failed charges, enabling thorough testing of webhook handlers.
 
-Event triggering tests integrations. Simulates various payment scenarios.
-
-API access creates and manages resources. Customers, payments, subscriptions.
-
-Log tailing shows real-time activity. Debug integration issues.
+The CLI also provides real-time log tailing for monitoring API requests and responses, and can open the Stripe dashboard directly. Authentication is handled through the login command, which manages API keys and supports both test and live modes.
 
 # CAVEATS
 

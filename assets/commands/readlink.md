@@ -1,3 +1,7 @@
+# TAGLINE
+
+Resolve symbolic links and canonical paths
+
 # TLDR
 
 **Print the target of a symbolic link**

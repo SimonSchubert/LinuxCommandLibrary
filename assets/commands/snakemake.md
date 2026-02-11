@@ -1,3 +1,7 @@
+# TAGLINE
+
+Reproducible workflow management system
+
 # TLDR
 
 **Run a workflow** from a Snakefile

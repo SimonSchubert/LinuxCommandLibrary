@@ -1,3 +1,7 @@
+# TAGLINE
+
+Optimize and normalize PostScript files
+
 # TLDR
 
 **Optimize PostScript file**
@@ -25,11 +29,9 @@ _OUTPUT_
 
 # DESCRIPTION
 
-**ps2ps** optimizes and normalizes PostScript files. Part of Ghostscript.
+**ps2ps** optimizes and normalizes PostScript files by reading them through the Ghostscript interpreter and rewriting the output as clean, canonical PostScript. This process can reduce file size, resolve compatibility issues, and simplify complex PostScript code for use with printers or other tools that struggle with the original.
 
-The tool cleans PS files. Reduces file size.
-
-ps2ps optimizes PostScript.
+The tool is part of the Ghostscript suite and is essentially a wrapper around **gs** with PostScript output enabled. If no output filename is given, the result is written to stdout.
 
 # CAVEATS
 

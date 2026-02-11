@@ -1,3 +1,7 @@
+# TAGLINE
+
+Randomly shift image rows horizontally
+
 # TLDR
 
 **Shift image horizontally**
@@ -25,11 +29,9 @@ _FILE_
 
 # DESCRIPTION
 
-**ppmshift** randomly shifts image rows horizontally. Distortion effect.
+**ppmshift** randomly shifts each row of a PPM image horizontally by a random amount up to the specified maximum. This creates a glitch-like distortion effect where the image appears to have horizontal tearing or displacement.
 
-The tool creates glitch-like effects. Part of Netpbm.
-
-ppmshift distorts images.
+A random seed option allows reproducible results. The effect is similar to analog video signal interference or digital glitch art. Part of the Netpbm toolkit.
 
 # CAVEATS
 

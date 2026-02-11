@@ -1,3 +1,7 @@
+# TAGLINE
+
+Adjust stream buffering of commands
+
 # TLDR
 
 **Line buffered stdout**
@@ -47,15 +51,9 @@
 
 # DESCRIPTION
 
-**stdbuf** adjusts stream buffering of commands. It controls when output is flushed.
+**stdbuf** runs a command with modified standard stream buffering. When programs detect their output is going to a pipe rather than a terminal, they typically switch from line-buffered to fully-buffered output, which delays output. stdbuf overrides this behavior using LD_PRELOAD to intercept buffering calls.
 
-Line buffering flushes after each newline. Useful for real-time log viewing.
-
-Unbuffered output flushes immediately. No delay but higher overhead.
-
-Piping often enables full buffering. stdbuf overrides this behavior.
-
-Useful with grep, awk, and other filters. See output without waiting for buffer fill.
+The three modes are: line-buffered (**L**) which flushes after each newline, unbuffered (**0**) which flushes immediately, and a specific buffer size. This is particularly useful when piping output through filters like **grep** or **awk** where real-time output is needed rather than waiting for the buffer to fill.
 
 # CAVEATS
 

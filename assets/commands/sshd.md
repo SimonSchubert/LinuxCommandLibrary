@@ -63,15 +63,22 @@
 
 # DESCRIPTION
 
-**sshd** is the OpenSSH server daemon. It listens for SSH connections and authenticates users.
+**sshd** is the OpenSSH server daemon that listens for incoming SSH connections, authenticates users, and provides encrypted remote shell access, file transfer, and port forwarding services. It is the server-side counterpart to the **ssh** client.
 
-Configuration file controls behavior. Authentication methods, access controls, and features.
+The daemon supports multiple authentication methods including public key, password, keyboard-interactive, and GSSAPI/Kerberos. Access can be restricted by user, group, and source address through configuration directives. Features like X11 forwarding, agent forwarding, and TCP port forwarding are individually controllable.
 
-Debug mode helps troubleshoot connections. Multiple -d flags increase verbosity.
+Debug mode (**-d**) runs a single connection in the foreground with verbose output for troubleshooting, while **-t** validates the configuration file for syntax errors before restarting the service. Foreground mode (**-D**) is commonly used in container environments where the daemon should not detach from the controlling process.
 
-Test mode validates configuration. Catches errors before restart.
+# CONFIGURATION
 
-Foreground mode is useful for containers. Daemon doesn't detach from terminal.
+**/etc/ssh/sshd_config**
+> Main configuration file controlling authentication methods, access restrictions, port, protocol options, forwarding permissions, and logging.
+
+**/etc/ssh/ssh_host_*_key**
+> Host key files (RSA, Ed25519, ECDSA) used to identify the server to connecting clients.
+
+**/etc/ssh/sshd_config.d/**
+> Drop-in configuration directory for modular configuration snippets (included via Include directive).
 
 # CAVEATS
 

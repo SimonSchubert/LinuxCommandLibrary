@@ -1,3 +1,7 @@
+# TAGLINE
+
+Query and manage macOS package receipts
+
 # TLDR
 
 **List installed packages**
@@ -49,7 +53,11 @@
 
 # DESCRIPTION
 
-**pkgutil** is macOS's package receipt utility. It queries the package database, verifies installations, and manages package receipts without removing files.
+**pkgutil** is macOS's package receipt management utility. It queries the installer database to list installed packages, show package metadata, verify installation integrity, and list files belonging to a package.
+
+The **--forget** command removes a package receipt from the database without deleting any installed files, useful for cleaning up stale entries. The **--expand** command extracts a .pkg archive for inspection. Package identifiers use reverse-DNS notation (e.g., com.apple.pkg.Safari).
+
+Note that pkgutil manages receipts only - it cannot install or uninstall packages. Use **installer** for installation and manual removal for uninstallation.
 
 # EXAMPLES
 

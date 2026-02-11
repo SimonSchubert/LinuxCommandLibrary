@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate decorative pattern images
+
 # TLDR
 
 **Create checkerboard pattern**

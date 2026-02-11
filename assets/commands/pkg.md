@@ -1,3 +1,7 @@
+# TAGLINE
+
+FreeBSD binary package manager
+
 # TLDR
 
 **Install package**
@@ -53,11 +57,17 @@
 
 # DESCRIPTION
 
-**pkg** is FreeBSD package manager. Binary package management.
+**pkg** is the official binary package manager for FreeBSD. It handles installation, removal, upgrading, and searching of pre-built packages from FreeBSD repositories, replacing the older pkg_add tools.
 
-The tool handles software installation. FreeBSD ports packages.
+The tool resolves dependencies automatically, manages a local package database, and supports multiple repositories. It can also lock packages to prevent upgrades, audit installed packages for security vulnerabilities, and create packages from installed ports.
 
-pkg manages FreeBSD packages.
+# CONFIGURATION
+
+**/usr/local/etc/pkg.conf**
+> Main configuration file for pkg behavior and default settings.
+
+**/usr/local/etc/pkg/repos/**
+> Repository configuration directory with per-repo .conf files.
 
 # CAVEATS
 

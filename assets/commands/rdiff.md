@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compute and apply rsync-style file deltas
+
 # TLDR
 
 **Create signature file**

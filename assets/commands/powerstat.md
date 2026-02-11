@@ -1,3 +1,7 @@
+# TAGLINE
+
+Measure system power consumption statistics
+
 # TLDR
 
 Measure power with **defaults**

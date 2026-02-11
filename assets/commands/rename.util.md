@@ -1,3 +1,7 @@
+# TAGLINE
+
+Rename files using string substitution
+
 # TLDR
 
 Rename files using **simple substitutions**

@@ -49,15 +49,9 @@
 
 # DESCRIPTION
 
-**st-flash** programs STM32. It uses ST-Link debugger.
+**st-flash** is a command-line tool for reading, writing, and erasing the flash memory of STM32 microcontrollers through an ST-Link programmer/debugger. It is part of the open-source stlink toolset.
 
-Flash memory operations. Read, write, erase.
-
-Direct binary flashing. No ELF headers.
-
-Address specification. Memory map aware.
-
-Part of stlink tools. Open source.
+The tool works with raw binary files and requires explicit memory addresses for read and write operations. The flash base address for most STM32 devices is **0x8000000**. Write verification can be enabled with **--verify** to confirm the programmed data matches the input file. The erase command clears the entire flash memory, and reset restarts the microcontroller after programming.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run Salt modules locally on a minion
+
 # TLDR
 
 **Run state locally**

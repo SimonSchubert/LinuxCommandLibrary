@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extract MIME attachments from email messages
+
 # TLDR
 
 Extract attachments to **current directory**

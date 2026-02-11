@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert encoding for groff input processing
+
 # TLDR
 
 **Convert encoding for groff**
@@ -32,11 +36,9 @@ _FILES_
 
 # DESCRIPTION
 
-**preconv** converts encoding for groff input. Preprocessor.
+**preconv** is a groff preprocessor that converts input files from various character encodings (UTF-8, Latin-1, etc.) into a format that groff can process. It translates non-ASCII characters into groff escape sequences, enabling groff to handle Unicode and other multi-byte encodings.
 
-The tool handles Unicode input. Part of groff suite.
-
-preconv encodes for groff.
+The tool is typically invoked automatically by groff when needed, but can also be used explicitly in preprocessing pipelines. It detects the input encoding from BOM markers, coding tags, or locale settings.
 
 # CAVEATS
 

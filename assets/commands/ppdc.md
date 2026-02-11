@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compile CUPS PPD printer driver files
+
 # TLDR
 
 **Compile PPD files**
@@ -32,11 +36,9 @@ _SOURCE_
 
 # DESCRIPTION
 
-**ppdc** compiles CUPS PPD driver files. Creates printer definitions.
+**ppdc** compiles CUPS printer driver source files (.drv) into PPD (PostScript Printer Description) files. PPD files describe a printer's capabilities including supported paper sizes, resolutions, color modes, and optional features, and are used by CUPS to generate appropriate print job data.
 
-The tool generates PPD files. Part of CUPS printing system.
-
-ppdc compiles drivers.
+The driver source format provides a compact way to define multiple printer models in a single file with shared options and model-specific overrides. The compiled PPD files can be placed in the CUPS model directory for automatic printer detection and setup.
 
 # CAVEATS
 

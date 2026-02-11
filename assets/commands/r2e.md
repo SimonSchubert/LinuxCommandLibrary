@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert RSS feeds to email messages
+
 # TLDR
 
 **Convert RSS to email**
@@ -43,11 +47,9 @@
 
 # DESCRIPTION
 
-**r2e** converts RSS feeds to email. Feed to email bridge.
+**r2e** (rss2email) monitors RSS and Atom feeds and delivers new entries as individual email messages to a specified address. It bridges the gap between web-based content syndication and email-based reading workflows, allowing users to follow blogs, news sites, and other feeds through their existing mail client.
 
-The tool sends feed updates via email. RSS aggregation.
-
-r2e emails RSS.
+The tool maintains state between runs to track which entries have already been sent, so each invocation of **r2e run** only delivers new items. Feeds are managed with **add**, **list**, and **delete** subcommands, and the initial configuration created by **r2e new** sets the default recipient address. It supports both SMTP delivery and local sendmail for dispatching messages.
 
 # CAVEATS
 

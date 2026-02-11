@@ -1,3 +1,7 @@
+# TAGLINE
+
+Prometheus configuration and query utility
+
 # TLDR
 
 **Check Prometheus config syntax**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create thumbnail contact sheets from images
+
 # TLDR
 
 **Create image index**

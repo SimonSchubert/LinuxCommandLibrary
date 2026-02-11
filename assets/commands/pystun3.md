@@ -1,3 +1,7 @@
+# TAGLINE
+
+Discover NAT type using STUN protocol
+
 # TLDR
 
 **Check NAT type**
@@ -50,15 +54,9 @@
 
 # DESCRIPTION
 
-**pystun3** tests NAT type. It uses STUN protocol.
+**pystun3** is a STUN (Session Traversal Utilities for NAT) client that discovers the type of NAT between a host and the internet. It communicates with a STUN server to determine the NAT classification (full cone, restricted cone, port restricted, or symmetric) and reports the external IP address and mapped port.
 
-Determines NAT characteristics. Full cone, symmetric, etc.
-
-Shows external IP address. Mapped address from STUN.
-
-Useful for VoIP/P2P setup. Identifies connectivity issues.
-
-Python 3 compatible. Modern STUN client.
+Understanding NAT type is essential for configuring VoIP, video conferencing, and peer-to-peer applications that require direct connections between hosts. The tool can target specific STUN servers, bind to particular network interfaces, and output results in JSON format for scripting.
 
 # CAVEATS
 

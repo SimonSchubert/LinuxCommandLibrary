@@ -1,3 +1,7 @@
+# TAGLINE
+
+Command-line interface for Plesk hosting panel
+
 # TLDR
 
 **Show version**
@@ -40,11 +44,9 @@
 
 # DESCRIPTION
 
-**plesk** manages Plesk hosting panel. Web hosting automation.
+**plesk** is the command-line interface for the Plesk web hosting control panel. It provides access to domain management, backup operations, service control, and system diagnostics without using the web interface.
 
-The tool controls domains, mail, and services. CLI interface.
-
-plesk manages hosting.
+The **bin** subcommand runs individual Plesk utilities for specific tasks like domain configuration, database management, and mail setup. The **repair** command diagnoses and fixes common installation issues.
 
 # CAVEATS
 

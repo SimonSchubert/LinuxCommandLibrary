@@ -1,3 +1,7 @@
+# TAGLINE
+
+Verify PNG file integrity and structure
+
 # TLDR
 
 **Check PNG file**
@@ -46,11 +50,9 @@ _FILE_
 
 # DESCRIPTION
 
-**pngcheck** verifies PNG file integrity. Checks CRC and structure.
+**pngcheck** verifies the integrity and structure of PNG, JNG, and MNG image files. It validates CRC checksums, checks chunk ordering, and reports any structural errors or corruption in the file format.
 
-The tool validates PNG format. Also handles JNG and MNG.
-
-pngcheck validates PNGs.
+In verbose mode, it displays detailed information about each chunk including dimensions, color type, bit depth, and compression method. The **-t** option extracts embedded text metadata from PNG text chunks.
 
 # CAVEATS
 

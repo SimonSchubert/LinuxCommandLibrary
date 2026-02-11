@@ -1,5 +1,11 @@
 # TLDR
 
+# TAGLINE
+
+Synchronize PO files with changed documents
+
+# TLDR
+
 **Update** a PO file according to the modification of its origin file
 
 ```po4a-updatepo --format [text] --master [path/to/master.txt] --po [path/to/result.po]```

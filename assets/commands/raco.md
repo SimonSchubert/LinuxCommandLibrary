@@ -1,3 +1,7 @@
+# TAGLINE
+
+Racket package and project management tool
+
 # TLDR
 
 **Install package**

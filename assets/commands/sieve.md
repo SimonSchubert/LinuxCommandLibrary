@@ -1,3 +1,7 @@
+# TAGLINE
+
+Email filtering with Sieve language
+
 # TLDR
 
 **Compile and check** a Sieve script for errors

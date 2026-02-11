@@ -1,3 +1,7 @@
+# TAGLINE
+
+Toggle SteamOS filesystem write protection
+
 # TLDR
 
 **Disable** read-only mode (make filesystem writable)

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Audit PHP dependencies for known vulnerabilities
+
 # TLDR
 
 **Check project**
@@ -39,15 +43,9 @@
 
 # DESCRIPTION
 
-**security-checker** audits PHP dependencies. It finds known vulnerabilities.
+**security-checker** audits PHP project dependencies for known security vulnerabilities by analyzing the **composer.lock** file against the FriendsOfPHP security advisories database. It identifies installed packages with published CVEs or security issues.
 
-Checks composer.lock file. Analyzes installed packages.
-
-Uses FriendsOfPHP database. Known vulnerability list.
-
-CI/CD integration ready. Exit codes for automation.
-
-Multiple output formats. JSON for parsing.
+The tool returns a non-zero exit code when vulnerabilities are found, making it suitable for CI/CD pipeline integration as a gate check. Output is available in text, JSON, and YAML formats for both human review and programmatic processing by other tools.
 
 # CAVEATS
 

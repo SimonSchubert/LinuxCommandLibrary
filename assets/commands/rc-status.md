@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display OpenRC service and runlevel status
+
 # TLDR
 
 **Show** a summary of services and their status

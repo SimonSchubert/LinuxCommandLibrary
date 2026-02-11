@@ -1,3 +1,7 @@
+# TAGLINE
+
+Apply gamma correction to PPM images
+
 # TLDR
 
 **Apply gamma correction**

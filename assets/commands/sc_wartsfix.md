@@ -1,3 +1,7 @@
+# TAGLINE
+
+Repair corrupted scamper warts files
+
 # TLDR
 
 **Repair corrupted warts file**

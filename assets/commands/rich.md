@@ -1,3 +1,7 @@
+# TAGLINE
+
+Render rich text and markdown in terminal
+
 # TLDR
 
 **View markdown file**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+File carving and data recovery tool
+
 # TLDR
 
 **Carve files from image**
@@ -48,6 +52,11 @@ The tool extracts files from disk images or devices regardless of filesystem sta
 
 **-r**
 > Find only matching files.
+
+# CONFIGURATION
+
+**scalpel.conf**
+> Configuration file defining file types to carve by specifying headers, footers, maximum sizes, and case sensitivity for each file signature.
 
 # CAVEATS
 

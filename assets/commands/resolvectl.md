@@ -1,3 +1,7 @@
+# TAGLINE
+
+Query and manage systemd-resolved DNS settings
+
 # TLDR
 
 Show **DNS settings**

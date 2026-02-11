@@ -1,3 +1,7 @@
+# TAGLINE
+
+Rename files and replace text with patterns
+
 # TLDR
 
 **Rename with pattern**
@@ -56,15 +60,11 @@
 
 # DESCRIPTION
 
-**repren** renames files and replaces text. It handles complex patterns.
+**repren** is a versatile batch tool for renaming files and performing search-and-replace operations across multiple files using regular expressions or literal patterns. It can apply several replacement rules simultaneously from a patterns file, making it efficient for large-scale refactoring tasks like renaming variables, updating imports, or reorganizing file structures.
 
-Multi-pattern support. Apply many changes at once.
+A key feature is case-preserving replacement, which automatically maintains the capitalization style of the original text. For example, replacing "foo" with "bar" will also convert "Foo" to "Bar" and "FOO" to "BAR". The **--dry-run** flag shows all planned changes without modifying any files, allowing safe verification before committing to batch operations.
 
-Case-preserving replacements. Maintains capitalization style.
-
-Regex or literal matching. Flexible pattern syntax.
-
-Safe with dry-run. Preview before applying.
+The tool supports both file content replacement and file/directory renaming with the **--rename** flag. Patterns can use full Python regular expressions with capture groups, or literal strings with **--literal** for straightforward substitutions.
 
 # CAVEATS
 

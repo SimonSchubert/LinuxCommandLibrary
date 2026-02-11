@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create and manage QEMU disk images
+
 # TLDR
 
 **Create disk image**
@@ -49,11 +53,9 @@
 
 # DESCRIPTION
 
-**qemu-img** manages QEMU disk images. Image creation and manipulation.
+**qemu-img** is the QEMU disk image utility for creating, converting, resizing, and inspecting virtual machine disk images. It supports multiple formats including qcow2, raw, vmdk, vdi, and vhd, making it essential for managing virtual machine storage and migrating between hypervisors.
 
-The tool creates and converts images. Supports various formats.
-
-qemu-img handles disk images.
+The **create** command builds new images with optional thin provisioning, while **convert** transforms between formats and can compress or encrypt output. The **info** command displays image metadata including format, virtual size, and snapshot details. Snapshots within qcow2 images can be created and managed for point-in-time recovery.
 
 # CAVEATS
 

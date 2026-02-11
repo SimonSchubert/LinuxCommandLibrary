@@ -1,3 +1,7 @@
+# TAGLINE
+
+HPC container runtime without root privileges
+
 # TLDR
 
 **Run container**
@@ -53,15 +57,11 @@
 
 # DESCRIPTION
 
-**singularity** runs containers. It's designed for HPC.
+**Singularity** (now **Apptainer**) is a container runtime designed for high-performance computing (HPC) environments where Docker's root-privilege model is not practical. Containers run as the invoking user without requiring a daemon or elevated privileges, making it safe for shared multi-tenant clusters.
 
-No daemon required. Simple execution model.
+Unlike Docker, Singularity integrates tightly with the host system by default, sharing the user's home directory, network, and other filesystems. This makes it straightforward to use existing data and tools inside containers. Images are stored as single SIF files that are portable and can be built from Docker images, definition files, or pulled directly from registries.
 
-Runs as user. No root needed to run.
-
-Host integration. Shares filesystems.
-
-Reproducible science. Portable environments.
+The tool enables reproducible science by packaging complete software environments into immutable containers that produce consistent results across different computing systems.
 
 # CAVEATS
 

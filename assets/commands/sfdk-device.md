@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Sailfish OS development devices
+
 # TLDR
 
 **List available devices**

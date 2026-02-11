@@ -1,3 +1,7 @@
+# TAGLINE
+
+Equalize histogram of PNM images
+
 # TLDR
 
 **Equalize histogram**

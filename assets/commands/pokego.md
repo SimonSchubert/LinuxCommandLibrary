@@ -1,5 +1,11 @@
 # TLDR
 
+# TAGLINE
+
+Display Pokemon ASCII art in terminal
+
+# TLDR
+
 Print specific **Pokémon**
 
 ```pokego --name [charizard]```

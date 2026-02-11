@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fast recursive text search tool
+
 # TLDR
 
 **Search pattern**
@@ -67,17 +71,11 @@
 
 # DESCRIPTION
 
-**rg** (ripgrep) searches fast. It respects gitignore.
+**ripgrep** (rg) is a line-oriented search tool that recursively searches directories for regex patterns, optimized for speed through a Rust implementation and parallel directory traversal. It is typically several times faster than traditional grep, ag, or ack for searching large codebases.
 
-Faster than grep. Rust implementation.
+Smart defaults make it productive out of the box: it automatically respects .gitignore rules, skips binary files and hidden directories, and provides colored output with line numbers. These defaults eliminate the need for complex exclude patterns that are common with recursive grep usage. The **--hidden** flag includes hidden files, and **-u** flags progressively disable filters for unrestricted searching.
 
-Smart defaults. Skips binary files.
-
-Respects .gitignore. No manual excludes needed.
-
-Colored output. Easy to read.
-
-Unicode support. Full regex syntax.
+Ripgrep supports full Unicode-aware regex syntax, PCRE2 patterns via **-P**, literal string matching with **-F**, and word boundary matching with **-w**. File type filters (**-t**) cover dozens of common programming languages and can be customized.
 
 # CAVEATS
 

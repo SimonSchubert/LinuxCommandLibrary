@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manipulate SAM/BAM/CRAM sequence alignment files
+
 # TLDR
 
 **View BAM file**

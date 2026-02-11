@@ -1,3 +1,7 @@
+# TAGLINE
+
+Stand-alone X11 system tray
+
 # TLDR
 
 **Start stalonetray** with default settings
@@ -86,6 +90,11 @@
 The tray supports the freedesktop.org System Tray Protocol and XEMBED specification for embedding application icons. It can be positioned anywhere on screen and configured to reserve space (struts) so other windows don't overlap it.
 
 Configuration can be done via command-line options or a configuration file at **~/.stalonetrayrc**. The file uses keyword-argument pairs with command-line options taking precedence.
+
+# CONFIGURATION
+
+**~/.stalonetrayrc**
+> Default configuration file using keyword-argument pairs matching command-line option names (e.g., background #2e3440, icon_size 24).
 
 # CAVEATS
 

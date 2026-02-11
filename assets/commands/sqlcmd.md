@@ -1,3 +1,7 @@
+# TAGLINE
+
+SQL Server command-line query tool
+
 # TLDR
 
 **Connect to SQL Server** locally

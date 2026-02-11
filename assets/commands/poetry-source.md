@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage package repository sources
+
 # TLDR
 
 **Add package source**
@@ -36,11 +40,9 @@
 
 # DESCRIPTION
 
-**poetry source** manages package repositories. Configures alternative sources.
+**poetry source** manages package repository sources in **pyproject.toml**. It allows adding private or alternative package indexes alongside or instead of the default PyPI.
 
-The tool adds private repositories. Manages PyPI alternatives.
-
-poetry source configures repos.
+The **--priority** option controls how sources are used: **primary** sources are checked first, **supplemental** sources are checked only for packages not found in primary sources, and **explicit** sources are only used when a package specifically references them. Use **show** to list configured sources.
 
 # CAVEATS
 

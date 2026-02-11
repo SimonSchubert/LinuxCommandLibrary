@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert RLA/RPF images to PAM format
+
 # TLDR
 
 **Convert RLA/RPF to PAM**

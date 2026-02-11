@@ -1,3 +1,7 @@
+# TAGLINE
+
+Steel Bank Common Lisp compiler and runtime
+
 # TLDR
 
 **Start REPL**
@@ -96,6 +100,14 @@ Creating executables uses sb-ext:save-lisp-and-die, dumping an image including l
 SBCL includes the SB-* extension packages: threading (sb-thread), networking (sb-bsd-sockets), FFI (sb-alien), and more. These extend standard Common Lisp.
 
 The type system enables optional type declarations for optimization. The compiler provides detailed notes about optimization opportunities.
+
+# CONFIGURATION
+
+**~/.sbclrc**
+> User initialization file loaded at startup, commonly used to configure Quicklisp, set optimization policies, and define startup behavior.
+
+**/etc/sbclrc**
+> System-wide initialization file loaded before the user init file.
 
 # CAVEATS
 

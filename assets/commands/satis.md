@@ -1,3 +1,7 @@
+# TAGLINE
+
+Static Composer repository generator
+
 # TLDR
 
 **Build repository**
@@ -46,15 +50,9 @@
 
 # DESCRIPTION
 
-**satis** builds Composer repositories. It creates static mirrors.
+**satis** generates static Composer package repositories, providing a self-hosted alternative to Packagist for distributing private PHP packages. It reads a JSON configuration file that defines which repositories and packages to include, then generates static files that can be served by any web server.
 
-Private Packagist alternative. Host your packages.
-
-Static file generation. No server needed.
-
-Mirrors public packages. Local cache.
-
-Selective mirroring. Choose specific packages.
+The generated repository acts as a local mirror and cache for both private and public packages. Teams can selectively mirror specific packages from Packagist or other sources, reducing external dependencies and improving install speeds. Since the output is purely static files, no special server-side software is required beyond a basic HTTP server.
 
 # CAVEATS
 

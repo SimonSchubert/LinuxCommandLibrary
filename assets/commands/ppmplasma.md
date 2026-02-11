@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate colorful plasma fractal images
+
 # TLDR
 
 **Generate plasma pattern**

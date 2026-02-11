@@ -1,3 +1,7 @@
+# TAGLINE
+
+Publish packages to PyPI or repositories
+
 # TLDR
 
 **Publish to PyPI**
@@ -39,11 +43,9 @@
 
 # DESCRIPTION
 
-**poetry publish** uploads package to PyPI or custom repository. Publishes distributions.
+**poetry publish** uploads built distribution packages (wheel and sdist) to PyPI or a custom repository. The **--build** flag builds the package before publishing in a single step.
 
-The tool handles authentication. Uploads wheel and sdist.
-
-poetry publish releases packages.
+Use **-r** to specify an alternative repository configured via **poetry config**. Authentication can be provided via **-u**/**-p** flags, a configured token, or the keyring. The **--dry-run** flag simulates the upload without actually publishing.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Authorization framework for system privileges
+
 # TLDR
 
 **Check action authorization**
@@ -29,11 +33,20 @@
 
 # DESCRIPTION
 
-**polkit** (PolicyKit) provides authorization framework. Controls system-wide privileges.
+**polkit** (PolicyKit) is an authorization framework that allows non-privileged processes to communicate with privileged ones. It provides fine-grained control over system-wide privileges, enabling desktop applications to perform administrative tasks with proper user authorization.
 
-The tool manages fine-grained permissions. Alternative to sudo for desktop.
+Unlike sudo which grants full root access, polkit defines specific actions (like mounting disks or changing network settings) and policies controlling who can perform them. The framework consists of **pkexec** (execute privileged commands), **pkaction** (list actions), and **pkcheck** (check authorization).
 
-polkit authorizes actions.
+# CONFIGURATION
+
+**/usr/share/polkit-1/actions/**
+> System-wide policy action definition files in XML format.
+
+**/etc/polkit-1/rules.d/**
+> Local authorization rules in JavaScript format (polkit >= 0.106).
+
+**/etc/polkit-1/localauthority/**
+> Legacy .pkla authorization files for older polkit versions.
 
 # CAVEATS
 

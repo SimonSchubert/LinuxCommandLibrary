@@ -1,3 +1,7 @@
+# TAGLINE
+
+Find and handle duplicate files efficiently
+
 # TLDR
 
 **Find duplicates**
@@ -60,17 +64,9 @@
 
 # DESCRIPTION
 
-**rdfind** finds duplicate files efficiently. It uses checksum comparison for accuracy.
+**rdfind** (redundant data find) efficiently locates duplicate files across one or more directory trees using a multi-phase detection algorithm. It first groups files by size, then computes partial checksums on the first bytes of same-sized files, and finally performs full checksums only on files that still match, making it fast even on large file sets.
 
-Multi-phase detection is fast. Size comparison first, then partial hash, then full hash.
-
-Hardlink mode saves space by linking duplicates. Files share same disk blocks.
-
-Symlink mode creates symbolic links. Originals preserved, duplicates become links.
-
-Results file lists all duplicates found. Enables manual review before action.
-
-Dry run shows what would happen. Safe testing before deletion.
+Once duplicates are identified, rdfind can delete them, replace them with hardlinks (saving disk space while keeping the same path), or replace them with symbolic links. A results file lists all duplicates found for manual review, and the **-dryrun** flag simulates operations without modifying the filesystem. The first file encountered in the argument order is always kept as the original.
 
 # CAVEATS
 

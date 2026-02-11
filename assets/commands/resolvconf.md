@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage DNS resolver configuration dynamically
+
 # TLDR
 
 **Update DNS configuration**
@@ -49,15 +53,25 @@
 
 # DESCRIPTION
 
-**resolvconf** manages /etc/resolv.conf dynamically. It aggregates DNS configurations from multiple sources.
+**resolvconf** is a framework for dynamically managing the system's DNS resolver configuration in **/etc/resolv.conf**. Rather than allowing individual network tools to overwrite the file, resolvconf aggregates DNS information from multiple sources such as DHCP clients, VPN connections, and NetworkManager, then generates a unified resolv.conf based on priority ordering.
 
-Interfaces register their DNS servers. DHCP, VPN, and NetworkManager contribute.
+Each network interface registers its DNS servers and search domains through resolvconf using the **-a** flag, and removes them with **-d** when the connection terminates. The framework determines the final configuration by combining all registered inputs, with earlier-registered interfaces taking higher priority. Static entries can be added through head and tail configuration files that are prepended or appended to the generated output.
 
-Priority ordering determines final configuration. Earlier interfaces have higher priority.
+Several implementations exist, including openresolv and the Debian resolvconf package, each with slightly different features. On systemd-based systems, **systemd-resolved** may provide similar functionality and can coexist or conflict with resolvconf depending on configuration.
 
-The generated resolv.conf combines all inputs. Head and tail files add static content.
+# CONFIGURATION
 
-Deletion removes interface contribution. Useful when connection terminates.
+**/etc/resolv.conf**
+> Generated output file containing the aggregated DNS resolver configuration. Managed by resolvconf and should not be edited manually.
+
+**/etc/resolvconf/resolv.conf.d/head**
+> Static content prepended to the generated resolv.conf.
+
+**/etc/resolvconf/resolv.conf.d/tail**
+> Static content appended to the generated resolv.conf.
+
+**/etc/resolvconf/interface-order**
+> Defines the priority ordering of network interfaces for DNS resolution.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Slurm central management daemon
+
 # TLDR
 
 **Clear** all previous state from last checkpoint
@@ -47,6 +51,14 @@
 **slurmctld** is the central management daemon for Slurm. It monitors all other Slurm daemons and resources, accepts work (jobs) from users, and allocates computing resources to those jobs.
 
 The controller maintains the state of the entire cluster including node availability, job queues, and resource allocations. It is typically run on a dedicated management node.
+
+# CONFIGURATION
+
+**/etc/slurm/slurm.conf**
+> Main Slurm configuration file defining cluster nodes, partitions, scheduling policies, and controller settings.
+
+**/etc/slurm/cgroup.conf**
+> Control group configuration for resource isolation and accounting.
 
 # CAVEATS
 

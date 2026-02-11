@@ -1,3 +1,7 @@
+# TAGLINE
+
+AWS Serverless Application Model CLI
+
 # TLDR
 
 **Initialize** a serverless application

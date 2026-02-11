@@ -1,3 +1,7 @@
+# TAGLINE
+
+Python 3 documentation browser
+
 # TLDR
 
 **View module documentation**

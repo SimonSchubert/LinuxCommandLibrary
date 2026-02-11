@@ -1,3 +1,7 @@
+# TAGLINE
+
+Screen locker for Sway Wayland compositor
+
 # TLDR
 
 **Lock screen**
@@ -57,15 +61,11 @@
 
 # DESCRIPTION
 
-**swaylock** locks the screen on Sway and Wayland compositors. It provides secure session locking.
+**swaylock** is a screen locking utility for Sway and other Wayland compositors, providing secure session locking with PAM-based authentication. It renders a lock screen over all outputs and requires the user's password to unlock.
 
-Password authentication unlocks. PAM integration for system auth.
+The lock screen background can be customized with solid colors or images, with per-output image support for multi-monitor setups. An indicator ring shows the current state: idle, typing, password verification, and incorrect password. The swaylock-effects fork adds additional visual effects like blur.
 
-Background customization sets visual. Images or solid colors.
-
-Indicator shows typing state. Clear, password, wrong feedback.
-
-Daemonize mode returns immediately. Lock persists in background.
+The daemonize flag causes swaylock to fork to the background after the lock screen is displayed, which is essential when used with swayidle's before-sleep event to ensure the screen is locked before the system suspends.
 
 # CAVEATS
 

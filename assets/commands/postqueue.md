@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage the Postfix mail queue
+
 # TLDR
 
 **List mail queue**
@@ -39,7 +43,9 @@
 
 # DESCRIPTION
 
-**postqueue** manages the Postfix mail queue. It displays queue contents and triggers delivery attempts. Unlike postsuper, it can be run by regular users.
+**postqueue** manages the Postfix mail queue, providing safe access to queue operations for regular users without requiring root privileges. It displays queued messages with their IDs, sizes, arrival times, senders, and recipients, and can trigger delivery retry attempts.
+
+The flush option forces immediate delivery attempts for all deferred mail or for a specific destination site. JSON output mode makes queue data easily parseable for monitoring scripts. For advanced queue management like deleting or holding individual messages, the privileged **postsuper** command is needed instead.
 
 # EXAMPLES
 

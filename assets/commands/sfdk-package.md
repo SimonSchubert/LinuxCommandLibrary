@@ -1,3 +1,7 @@
+# TAGLINE
+
+Build RPM packages for Sailfish apps
+
 # TLDR
 
 **Create RPM package**

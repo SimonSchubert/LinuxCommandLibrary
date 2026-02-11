@@ -1,3 +1,7 @@
+# TAGLINE
+
+Web search from the terminal
+
 # TLDR
 
 **Search the web** using the default provider (presearch)

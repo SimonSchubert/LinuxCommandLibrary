@@ -1,3 +1,7 @@
+# TAGLINE
+
+SQLite database manipulation CLI and library
+
 # TLDR
 
 **Import JSON into SQLite**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Send stdin input to running pueue tasks
+
 # TLDR
 
 **Send input to task**
@@ -26,11 +30,7 @@ _INPUT_
 
 # DESCRIPTION
 
-**pueue send** sends input to running task. Stdin simulation.
-
-The tool provides interactive input. For tasks requiring user input.
-
-pueue send writes to stdin.
+**pueue send** writes text to the stdin of a running task, enabling interaction with commands that prompt for user input. This is useful for tasks that require confirmation or data entry while running in the background pueue queue.
 
 # CAVEATS
 

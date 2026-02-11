@@ -1,3 +1,7 @@
+# TAGLINE
+
+Hackable tiling window manager in Python
+
 # TLDR
 
 **Start** the window manager

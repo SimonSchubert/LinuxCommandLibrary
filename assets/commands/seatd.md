@@ -1,3 +1,7 @@
+# TAGLINE
+
+Minimal seat management daemon for Wayland
+
 # TLDR
 
 **Start seatd** with default settings
@@ -55,7 +59,7 @@ The daemon operates over a UNIX domain socket, with **libseat** providing the cl
 
 Seat management allows applications like Wayland compositors to access privileged devices (graphics cards, input devices) without requiring root privileges, improving security while maintaining functionality.
 
-# ENVIRONMENT
+# CONFIGURATION
 
 **SEATD_VTBOUND**
 > When set to "0", the seat will not be bound to a virtual terminal.

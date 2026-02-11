@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compile Slim templates to HTML
+
 # TLDR
 
 **Compile Slim to HTML**
@@ -43,15 +47,11 @@
 
 # DESCRIPTION
 
-**slimrb** compiles Slim templates. It generates HTML.
+**slimrb** is the command-line compiler for the Slim template language, a lightweight Ruby templating engine that reduces HTML markup to its essential parts. It reads Slim files and renders them to HTML, ERB, or raw Ruby code for inspection and debugging.
 
-Slim is minimalist. Clean template syntax.
+Slim uses indentation-based nesting and eliminates closing tags, producing templates that are significantly shorter than equivalent HTML or ERB. The compiler supports pretty-printed output for debugging, Rails-compatible code generation, and conversion to ERB format for use in contexts that don't support Slim directly.
 
-Ruby templating. ERB alternative.
-
-Pretty printing available. Readable output.
-
-Rails integration. Framework support.
+The tool integrates with Ruby's Tilt template interface and works with Rails, Sinatra, and other Rack-based frameworks. Plugins can extend the syntax with logic-less templates, translation support, and other features.
 
 # CAVEATS
 

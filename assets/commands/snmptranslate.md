@@ -1,3 +1,7 @@
+# TAGLINE
+
+Translate between SNMP OID formats
+
 # TLDR
 
 **Translate a numeric OID** to its textual name

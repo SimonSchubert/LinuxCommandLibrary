@@ -1,3 +1,7 @@
+# TAGLINE
+
+Split audio files using CUE sheets
+
 # TLDR
 
 Split a **WAV file** using a CUE sheet

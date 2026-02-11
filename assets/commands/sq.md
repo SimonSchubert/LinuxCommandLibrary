@@ -1,3 +1,7 @@
+# TAGLINE
+
+Modern Sequoia OpenPGP command-line tool
+
 # TLDR
 
 **Generate key**
@@ -53,15 +57,11 @@
 
 # DESCRIPTION
 
-**sq** is Sequoia PGP CLI. It manages OpenPGP operations.
+**sq** is the command-line interface for Sequoia PGP, a modern OpenPGP implementation written in Rust. It provides key generation, encryption, decryption, signing, and signature verification following the OpenPGP standard.
 
-Modern PGP implementation. Written in Rust.
+The tool supports standard PGP workflows including key pair generation with user IDs, file encryption for recipients using public keys, and detached or inline signatures. The **inspect** subcommand allows examining OpenPGP packet structures for debugging and verification purposes.
 
-Key generation and management. Standard operations.
-
-Encryption and signing. OpenPGP compatible.
-
-Packet inspection. Debug PGP data.
+Sequoia PGP was developed by former GnuPG contributors as a memory-safe, modular alternative to traditional PGP implementations. sq aims to provide a cleaner command-line interface while maintaining full OpenPGP compatibility.
 
 # CAVEATS
 

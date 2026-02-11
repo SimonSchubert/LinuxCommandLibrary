@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create and query Postfix lookup tables
+
 # TLDR
 
 **Create hash database from text file**
@@ -42,7 +46,9 @@
 
 # DESCRIPTION
 
-**postmap** creates and queries Postfix lookup tables. It converts plain text files to indexed database format (hash, btree, etc.) for efficient lookups by the Postfix mail system.
+**postmap** creates and queries Postfix lookup tables. It converts plain text files containing key-value pairs into indexed database formats (hash, btree, dbm) for efficient lookups by the Postfix mail system. Common uses include virtual alias maps, transport maps, and access control tables.
+
+After editing a text lookup file, postmap must be run to rebuild the corresponding .db file that Postfix actually reads. The query mode (-q) allows testing individual lookups, and the show mode (-s) displays all entries, both useful for verifying that mappings work as expected before applying them to live mail delivery.
 
 # EXAMPLES
 

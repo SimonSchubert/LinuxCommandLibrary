@@ -1,3 +1,7 @@
+# TAGLINE
+
+Peer-to-peer continuous file synchronization
+
 # TLDR
 
 **Start syncthing**
@@ -92,6 +96,14 @@ Conflict handling creates copies when the same file is modified on multiple devi
 Selective sync allows ignoring files via patterns. File watching detects changes immediately on most platforms. Periodic scanning catches any missed changes.
 
 Syncthing runs as a daemon, typically starting at login or as a system service. Multiple instances can run with different home directories.
+
+# CONFIGURATION
+
+**~/.config/syncthing/config.xml**
+> Main configuration file defining devices, shared folders, and sync settings.
+
+**STTRACE**
+> Environment variable to enable debug tracing for specific subsystems.
 
 # CAVEATS
 

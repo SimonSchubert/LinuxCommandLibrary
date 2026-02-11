@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert binary PNM to plain ASCII format
+
 # TLDR
 
 **Convert PNM to plain ASCII format**

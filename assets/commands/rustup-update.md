@@ -1,3 +1,7 @@
+# TAGLINE
+
+Update installed Rust toolchains
+
 # TLDR
 
 **Update all toolchains**

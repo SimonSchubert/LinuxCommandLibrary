@@ -1,3 +1,7 @@
+# TAGLINE
+
+Format tables for groff and troff
+
 # TLDR
 
 **Process a file containing tables** through tbl and groff

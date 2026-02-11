@@ -1,3 +1,7 @@
+# TAGLINE
+
+Optimize PNG files for smaller size
+
 # TLDR
 
 **Optimize PNG**
@@ -46,11 +50,9 @@ _OUTPUT_
 
 # DESCRIPTION
 
-**pngcrush** optimizes PNG files. Reduces file size.
+**pngcrush** optimizes PNG files by testing multiple compression strategies and selecting the smallest result. The optimization is completely lossless - the image data is preserved exactly while reducing file size through better compression parameters.
 
-The tool recompresses PNG data. Lossless optimization.
-
-pngcrush compresses PNGs.
+The **-brute** option tries all filter and compression combinations for maximum reduction at the cost of processing time. The **-rem** option strips metadata chunks like text comments, timestamps, and color profiles to further reduce size.
 
 # CAVEATS
 

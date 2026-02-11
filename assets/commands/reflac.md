@@ -1,3 +1,7 @@
+# TAGLINE
+
+Re-encode FLAC audio files
+
 # TLDR
 
 **Re-encode FLAC files**
@@ -50,15 +54,11 @@
 
 # DESCRIPTION
 
-**reflac** re-encodes FLAC files. It optimizes compression.
+**reflac** is a batch tool for re-encoding FLAC audio files with updated compression settings. It recursively processes directories of FLAC files, applying the specified compression level while preserving all metadata tags, ensuring no audio data is lost during the process.
 
-Parallel processing supported. Fast batch operations.
+The tool supports parallel processing via the **-j** option, significantly speeding up operations on large music libraries. Compression levels range from **-0** (fastest) to **-8** (smallest file size), matching the standard FLAC encoder options. The **--verify** flag enables integrity checking by decoding each re-encoded file and comparing it against the original audio data.
 
-Preserves metadata tags. No data loss.
-
-Useful for upgrading compression. Old FLACs to new format.
-
-Verification ensures integrity. Decodes and compares.
+This is particularly useful when upgrading a FLAC collection encoded with older or suboptimal compression settings to take advantage of improved encoding in newer FLAC versions, reducing storage requirements without any quality loss.
 
 # CAVEATS
 

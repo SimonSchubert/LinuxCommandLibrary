@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal-based ncurses Sudoku game
+
 # TLDR
 
 **Start a new Sudoku game**

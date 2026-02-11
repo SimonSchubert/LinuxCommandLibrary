@@ -1,3 +1,7 @@
+# TAGLINE
+
+Configure PPP dial-up connections interactively
+
 # TLDR
 
 **Configure PPP connection**
@@ -19,11 +23,9 @@
 
 # DESCRIPTION
 
-**pppconfig** configures PPP dial-up connections. Interactive setup tool.
+**pppconfig** is an interactive text-based tool for configuring PPP (Point-to-Point Protocol) dial-up connections on Debian systems. It guides users through setting up modem parameters, phone numbers, authentication credentials, and connection options.
 
-The tool creates provider files. Manages modem settings.
-
-pppconfig sets up PPP.
+The tool creates provider configuration files in **/etc/ppp/peers/** that can be used with **pon** and **poff** to start and stop connections. It handles both PAP and CHAP authentication methods and can configure multiple ISP profiles.
 
 # CAVEATS
 

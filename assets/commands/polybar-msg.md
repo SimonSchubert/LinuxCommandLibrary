@@ -1,3 +1,7 @@
+# TAGLINE
+
+Send IPC messages to running Polybar
+
 # TLDR
 
 **Send action to module**

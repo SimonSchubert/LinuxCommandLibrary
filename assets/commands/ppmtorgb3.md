@@ -1,3 +1,7 @@
+# TAGLINE
+
+Split PPM into separate RGB channel files
+
 # TLDR
 
 **Split PPM into RGB component files**

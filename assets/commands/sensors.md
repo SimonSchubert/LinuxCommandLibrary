@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display hardware sensor readings
+
 # TLDR
 
 **Show** current readings of all sensor chips
@@ -42,6 +46,14 @@
 **sensors** displays the current readings of all sensor chips supported by libsensors. This includes CPU temperatures, fan speeds, voltages, and other hardware monitoring data.
 
 The output is organized by chip, showing adapter type and individual sensor readings with current values, limits, and alarm status.
+
+# CONFIGURATION
+
+**/etc/sensors3.conf**
+> Main configuration file for libsensors, defining chip-specific label overrides, compute expressions, and alarm limits.
+
+**/etc/sensors.d/**
+> Directory for additional sensor configuration files that supplement the main configuration.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert TGA images to PPM format
+
 # TLDR
 
 **Convert TGA to PPM**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Execute programs with PolicyKit privilege escalation
+
 # TLDR
 
 Run command as **root**
@@ -32,6 +36,14 @@ Run as **specific user**
 **pkexec** executes programs as another user with privilege escalation via PolicyKit. Unlike sudo, it integrates with the desktop environment and can show graphical authentication dialogs when available.
 
 Authorization decisions are based on PolicyKit policies, allowing fine-grained control over which users can run which programs with elevated privileges. Actions can be configured to require authentication or be allowed without it.
+
+# CONFIGURATION
+
+**/usr/share/polkit-1/actions/**
+> PolicyKit action definition files controlling authorization rules.
+
+**/etc/polkit-1/rules.d/**
+> Local authorization rules that override default policies.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Process bibliographic references in troff documents
+
 # TLDR
 
 **Process a document with bibliographic references**

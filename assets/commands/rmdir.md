@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove empty directories
+
 # TLDR
 
 **Remove an empty directory**

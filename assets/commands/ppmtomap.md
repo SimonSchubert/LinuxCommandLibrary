@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extract colormap from PPM image
+
 # TLDR
 
 **Extract colormap from image**

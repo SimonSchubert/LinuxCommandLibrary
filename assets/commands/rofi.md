@@ -1,3 +1,7 @@
+# TAGLINE
+
+Application launcher and window switcher
+
 # TLDR
 
 Show **application** launcher
@@ -65,6 +69,17 @@ Use as **dmenu** replacement
 **rofi** is a versatile application launcher and window switcher. It provides a searchable interface for launching programs, switching windows, running commands, and more.
 
 The tool is highly customizable with themes and supports scripting via the dmenu mode. It's popular in tiling window manager setups as a replacement for dmenu.
+
+# CONFIGURATION
+
+**~/.config/rofi/config.rasi**
+> Main configuration file in rasi format, controlling modes, keybindings, matching behavior, and default settings.
+
+**~/.config/rofi/themes/**
+> Directory for custom theme files that control appearance, colors, fonts, and layout.
+
+**~/.local/share/rofi/themes/**
+> Additional theme search path for user-installed themes.
 
 # CAVEATS
 

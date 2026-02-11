@@ -1,3 +1,7 @@
+# TAGLINE
+
+Record terminal sessions as GIF
+
 # TLDR
 
 **Start recording**
@@ -50,17 +54,9 @@
 
 # DESCRIPTION
 
-**terminalizer** records terminal sessions. It creates GIF animations.
+**terminalizer** records terminal sessions and renders them as GIF animations for sharing in documentation, README files, and tutorials. It captures both keystrokes and terminal output, storing recordings in an editable YAML format.
 
-Records keystrokes. Captures output.
-
-Editable recordings. YAML format.
-
-GIF generation. Share as image.
-
-Online sharing. terminalizer.com.
-
-Customizable appearance. Colors, fonts.
+Recordings can be played back in the terminal, rendered to GIF, or shared online via terminalizer.com. The YAML format allows editing timing, removing mistakes, and customizing the appearance including colors, fonts, window frame style, and dimensions before rendering the final animation.
 
 # CAVEATS
 

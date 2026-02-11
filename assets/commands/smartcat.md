@@ -1,3 +1,7 @@
+# TAGLINE
+
+AI-powered Unix pipe text processor
+
 # TLDR
 
 **Process text with AI**
@@ -68,6 +72,17 @@ Prompt templates define reusable transformations. Templates are stored in the co
 Supports multiple providers: OpenAI, Anthropic, Mistral, Ollama, and OpenAI-compatible APIs. Configuration is via a TOML file at `~/.config/smartcat/`.
 
 Install via `cargo install smartcat`. The command is `sc` for quick typing.
+
+# CONFIGURATION
+
+**~/.config/smartcat/conversation.toml**
+> Main configuration file defining API keys, default model, prompt templates, and provider settings.
+
+**OPENAI_API_KEY**
+> API key for OpenAI provider.
+
+**ANTHROPIC_API_KEY**
+> API key for Anthropic provider.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Open-source Smalltalk virtual machine
+
 # TLDR
 
 **Start Squeak** with default image

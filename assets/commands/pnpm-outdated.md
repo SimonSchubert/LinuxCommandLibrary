@@ -1,3 +1,7 @@
+# TAGLINE
+
+List outdated pnpm packages
+
 # TLDR
 
 **Check outdated packages**
@@ -50,15 +54,9 @@
 
 # DESCRIPTION
 
-**pnpm outdated** checks for outdated packages. It compares installed vs latest.
+**pnpm outdated** checks for packages that have newer versions available by comparing installed versions against the registry. It displays a table showing the current, wanted (matching semver range), and latest versions for each outdated package.
 
-Shows current and latest versions. Identifies update candidates.
-
-Color-coded output. Red for major, yellow for minor.
-
-Workspace support with recursive. Check all packages at once.
-
-Faster than npm outdated. Uses pnpm's efficient algorithms.
+The output uses color coding to distinguish major (red) from minor (yellow) version bumps. Use **--prod** or **--dev** to filter by dependency type, **-g** for global packages, and **-r** to check all workspace packages in a monorepo. The **--long** flag shows additional details including the package homepage.
 
 # CAVEATS
 

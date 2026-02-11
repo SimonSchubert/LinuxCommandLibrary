@@ -1,3 +1,7 @@
+# TAGLINE
+
+Preview available FIGlet fonts
+
 # TLDR
 
 **Show all fonts**
@@ -26,15 +30,9 @@ _text_
 
 # DESCRIPTION
 
-**showfigfonts** previews all figlet fonts. It renders sample text in each available font.
+**showfigfonts** previews all available FIGlet fonts by rendering sample text in each one, making it easy to visually compare styles and select the right font for ASCII art. By default, each font's own name is used as the sample text, but custom text can be specified as an argument.
 
-Default text shows font name. Custom text can be specified.
-
-Font directories can be specified. Shows fonts from any location.
-
-Useful for font selection. Find the right style for your ASCII art.
-
-Output shows font name and rendering. Easy visual comparison.
+The **-d** option allows previewing fonts from any directory, not just the default FIGlet font path. Output shows the font name followed by the rendered text for each installed font, providing a convenient catalog for font selection.
 
 # CAVEATS
 

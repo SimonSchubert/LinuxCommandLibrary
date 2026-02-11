@@ -1,3 +1,7 @@
+# TAGLINE
+
+OpenLDAP stand-alone directory server
+
 # TLDR
 
 **Start slapd** with default configuration
@@ -77,6 +81,17 @@
 slapd supports multiple backends for data storage (including MDB, HDB, BDB, and LDAP proxy), overlays for extending functionality (like access logging, password policies, and replication), and various authentication mechanisms including SASL.
 
 Configuration can be provided via the traditional **slapd.conf** file or the newer **cn=config** LDAP-based configuration in **slapd.d/**. The daemon typically starts at boot and runs as a background service.
+
+# CONFIGURATION
+
+**/etc/openldap/slapd.conf**
+> Traditional flat-file configuration for backends, schemas, ACLs, and database settings.
+
+**/etc/openldap/slapd.d/**
+> LDAP-based configuration directory (cn=config) that can be modified at runtime without restart.
+
+**/etc/openldap/schema/**
+> Schema definition files for LDAP object classes and attributes.
 
 # CAVEATS
 

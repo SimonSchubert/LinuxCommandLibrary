@@ -1,3 +1,7 @@
+# TAGLINE
+
+Pop directory from shell directory stack
+
 # TLDR
 
 **Pop directory from stack**
@@ -33,11 +37,9 @@
 
 # DESCRIPTION
 
-**popd** removes directories from the stack. Returns to previous directory.
+**popd** removes the top directory from the shell's directory stack and changes to the new top directory. This complements **pushd**, which adds directories to the stack.
 
-The tool complements pushd. Manages directory history.
-
-popd navigates directories.
+Use **+N** or **-N** to remove a specific entry from the stack by position. The **-n** flag removes the entry without actually changing the current directory. Use **dirs** to view the current stack contents. This is a shell built-in available in bash, zsh, and other shells.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Replay recorded terminal session output
+
 # TLDR
 
 **Replay** a typescript at original speed

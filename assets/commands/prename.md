@@ -1,3 +1,7 @@
+# TAGLINE
+
+Rename files using Perl expressions
+
 # TLDR
 
 **Rename with Perl expression**

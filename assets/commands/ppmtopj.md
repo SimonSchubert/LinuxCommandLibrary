@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert PPM to HP PaintJet format
+
 # TLDR
 
 **Convert PPM to HP PaintJet format**

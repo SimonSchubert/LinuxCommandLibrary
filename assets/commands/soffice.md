@@ -1,3 +1,7 @@
+# TAGLINE
+
+LibreOffice suite launcher and converter
+
 # TLDR
 
 **Open LibreOffice**
@@ -57,15 +61,11 @@
 
 # DESCRIPTION
 
-**soffice** launches LibreOffice. It handles documents.
+**soffice** is the main launcher for LibreOffice, the open-source office productivity suite. It can open documents in Writer (word processing), Calc (spreadsheets), Impress (presentations), Draw (vector graphics), and other components based on the file type or explicit module selection.
 
-Full office suite. Writer, Calc, Impress.
+The **--headless** flag runs LibreOffice without a graphical interface, enabling server-side document processing and scripting. Combined with **--convert-to**, it provides powerful batch document conversion between formats including PDF, DOCX, XLSX, HTML, and many others.
 
-Headless mode for scripting. No GUI needed.
-
-Format conversion. Many formats supported.
-
-Batch processing. Convert multiple files.
+Headless mode is commonly used in automated pipelines to convert documents, generate PDFs from templates, or perform mail merges without user interaction. Multiple files can be processed in a single invocation, and the output directory can be specified with **--outdir**.
 
 # CAVEATS
 

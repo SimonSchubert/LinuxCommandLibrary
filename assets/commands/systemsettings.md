@@ -1,3 +1,7 @@
+# TAGLINE
+
+KDE Plasma system settings GUI
+
 # TLDR
 
 Open settings **GUI**

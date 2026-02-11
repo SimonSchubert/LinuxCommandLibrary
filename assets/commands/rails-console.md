@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interactive Ruby console with Rails loaded
+
 # TLDR
 
 **Start an interactive console** with the Rails application loaded

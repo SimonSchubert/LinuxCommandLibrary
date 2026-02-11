@@ -1,3 +1,7 @@
+# TAGLINE
+
+Suckless simple terminal emulator
+
 # TLDR
 
 **Open** a terminal

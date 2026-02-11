@@ -1,3 +1,7 @@
+# TAGLINE
+
+Plain-text markdown note-taking with cloud sync
+
 # TLDR
 
 **Start QOwnNotes**
@@ -29,11 +33,9 @@
 
 # DESCRIPTION
 
-**qownnotes** is plain-text note taking application. Markdown notes with Nextcloud sync.
+**QOwnNotes** is a plain-text note-taking application that stores notes as standard Markdown files on disk. Notes are fully portable and can be edited with any text editor, while QOwnNotes provides a rich interface with syntax highlighting, a preview panel, tagging, note searching, and hierarchical folder organization.
 
-The tool manages markdown notes. Syncs via ownCloud/Nextcloud.
-
-qownnotes takes notes.
+Optional integration with ownCloud or Nextcloud enables cloud synchronization across devices, including server-side encryption and versioning. The application also supports scripting for custom workflows, Vim keybindings, and portable mode for running from removable media.
 
 # CAVEATS
 

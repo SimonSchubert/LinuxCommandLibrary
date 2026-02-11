@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extract Windows password hashes for auditing
+
 # TLDR
 
 **Dump Windows password hashes**

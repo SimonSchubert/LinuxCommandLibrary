@@ -1,3 +1,7 @@
+# TAGLINE
+
+Restricted mode of the Bash shell
+
 # TLDR
 
 **Start restricted shell**
@@ -32,17 +36,9 @@
 
 # DESCRIPTION
 
-**rbash** is restricted bash. It limits user actions.
+**rbash** is a restricted mode of the Bash shell that limits user actions to prevent unauthorized system access. When invoked as rbash (or via **bash -r**), it disables directory changes with cd, prevents modification of PATH, SHELL, ENV, and BASH_ENV variables, and blocks output redirection with >, >>, and related operators.
 
-Cannot change directory. cd command disabled.
-
-Cannot modify PATH. Environment locked.
-
-Cannot redirect output. No > or >> allowed.
-
-Cannot use slash in commands. No /bin/command.
-
-Used for limited accounts. Secure shell access.
+The restrictions also prevent commands containing slashes (blocking direct paths like /bin/command), use of the exec builtin, and importing of functions from the environment. This makes it useful for providing limited shell access to untrusted users when combined with a carefully controlled PATH containing only approved commands.
 
 # RESTRICTIONS
 

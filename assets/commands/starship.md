@@ -1,3 +1,7 @@
+# TAGLINE
+
+Cross-shell customizable prompt in Rust
+
 # TLDR
 
 **Initialize for bash**
@@ -81,6 +85,14 @@ Presets provide ready-made configurations. They range from minimal to informatio
 Speed is a priority. The prompt renders quickly even with many modules enabled. Timings command helps identify slow modules.
 
 The prompt is cross-platform, working on Linux, macOS, and Windows. Configuration is portable across systems.
+
+# CONFIGURATION
+
+**~/.config/starship.toml**
+> Main configuration file defining enabled modules, display format, colors, and per-module settings.
+
+**STARSHIP_CONFIG**
+> Environment variable to specify an alternate configuration file path.
 
 # CAVEATS
 

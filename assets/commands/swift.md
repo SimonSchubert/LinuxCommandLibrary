@@ -1,3 +1,7 @@
+# TAGLINE
+
+Swift language compiler and package manager
+
 # TLDR
 
 **Start REPL**

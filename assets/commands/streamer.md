@@ -1,3 +1,7 @@
+# TAGLINE
+
+Capture video from V4L devices
+
 # TLDR
 
 **Capture a single JPEG image**

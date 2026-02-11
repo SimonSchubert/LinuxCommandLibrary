@@ -1,3 +1,7 @@
+# TAGLINE
+
+Visualize molecular 3D structures
+
 # TLDR
 
 **Launch PyMOL GUI**

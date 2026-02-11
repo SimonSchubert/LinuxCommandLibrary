@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert PPM to Atari Degas PI1 format
+
 # TLDR
 
 **Convert PPM to Atari Degas PI1**

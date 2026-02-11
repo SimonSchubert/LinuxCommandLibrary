@@ -1,3 +1,7 @@
+# TAGLINE
+
+Check AC power connection status
+
 # TLDR
 
 Check **AC power** status

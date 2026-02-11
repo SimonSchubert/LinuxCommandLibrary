@@ -1,3 +1,7 @@
+# TAGLINE
+
+Scan images from SANE-compatible scanners
+
 # TLDR
 
 **List** available scanners

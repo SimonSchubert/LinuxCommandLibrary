@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage SELinux network interface types
+
 # TLDR
 
 **List** all interface type definitions

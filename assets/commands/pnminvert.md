@@ -1,3 +1,7 @@
+# TAGLINE
+
+Invert colors of PNM images
+
 # TLDR
 
 **Invert image colors**
@@ -19,11 +23,9 @@ _FILE_
 
 # DESCRIPTION
 
-**pnminvert** inverts the colors of PNM images. Creates negative.
+**pnminvert** produces a photographic negative of a PNM image by inverting all pixel values. Each sample value is replaced with the maximum value minus the original value, effectively swapping light and dark.
 
-The tool swaps light and dark values. Works with all PNM types.
-
-pnminvert creates negatives.
+The tool works with all PNM types: PBM (black/white bits are flipped), PGM (grayscale values are inverted), and PPM (each color channel is independently inverted). Part of the Netpbm toolkit; superseded by **paminvert**.
 
 # CAVEATS
 

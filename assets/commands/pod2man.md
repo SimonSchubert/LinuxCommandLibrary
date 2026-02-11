@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert Perl POD documentation to man pages
+
 # TLDR
 
 **Convert POD to man page**
@@ -38,11 +42,9 @@ _FILE_
 
 # DESCRIPTION
 
-**pod2man** converts Perl POD to man page format. Part of Perl distribution.
+**pod2man** converts Perl POD (Plain Old Documentation) into Unix manual page format (nroff/troff). The output can be installed as system man pages or viewed with the **man** command.
 
-The tool creates Unix manual pages. Generates nroff/troff output.
-
-pod2man creates man pages.
+The **--section** option sets the man page section number, **--name** overrides the page name, and **--release** adds version information. The **--center** option sets the centered header text. Part of the standard Perl distribution, commonly used in Perl module build systems.
 
 # CAVEATS
 

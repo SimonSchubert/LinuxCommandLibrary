@@ -1,3 +1,7 @@
+# TAGLINE
+
+Simulate dice rolls with RPG notation
+
 # TLDR
 
 **Roll dice**
@@ -47,15 +51,9 @@ _TxNdS_
 
 # DESCRIPTION
 
-**roll** simulates dice rolls. It parses dice notation.
+**roll** is a command-line dice roller that parses standard RPG dice notation in the **NdS** format, where N is the number of dice and S is the number of sides. It supports modifiers (**+** or **-**) for adding or subtracting fixed values, and the **TxNdS** format for rolling the same expression multiple times.
 
-Standard RPG notation. NdS format.
-
-Modifiers supported. Add or subtract.
-
-Multiple expressions. Roll different dice.
-
-Verbose shows each. Individual die results.
+Multiple dice expressions can be specified on a single command line. The **-v** flag shows individual die results in addition to the total sum, while **-s** outputs only the final sum. Common RPG dice like d4, d6, d8, d10, d12, d20, and d100 (percentile) are all supported through the flexible notation.
 
 # CAVEATS
 

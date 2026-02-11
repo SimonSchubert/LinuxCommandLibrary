@@ -1,3 +1,7 @@
+# TAGLINE
+
+Connect device to Tailscale network
+
 # TLDR
 
 **Connect to Tailscale**

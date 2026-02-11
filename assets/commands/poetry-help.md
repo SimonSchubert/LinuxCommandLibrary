@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display Poetry command help
+
 # TLDR
 
 **Show general help**
@@ -23,11 +27,9 @@ _COMMAND_
 
 # DESCRIPTION
 
-**poetry help** displays help information. Shows command usage.
+**poetry help** displays help information for Poetry commands, showing available options, arguments, and usage examples. When called without arguments, it shows general Poetry help; when given a command name, it shows detailed help for that specific command.
 
-The tool provides documentation. Describes available options.
-
-poetry help shows usage.
+This is equivalent to using the **--help** flag on any Poetry command.
 
 # CAVEATS
 

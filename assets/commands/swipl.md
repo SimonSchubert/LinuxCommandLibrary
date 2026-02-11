@@ -1,3 +1,7 @@
+# TAGLINE
+
+SWI-Prolog logic programming interpreter
+
 # TLDR
 
 **Start interactive**
@@ -46,15 +50,11 @@
 
 # DESCRIPTION
 
-**swipl** runs SWI-Prolog. It's a Prolog interpreter.
+**swipl** is the interpreter and compiler for SWI-Prolog, one of the most comprehensive and widely used Prolog implementations. It provides an interactive REPL for querying facts and rules, loading Prolog source files, and compiling standalone executables.
 
-Interactive REPL. Query facts and rules.
+SWI-Prolog includes an extensive standard library with support for constraint logic programming (CLP), definite clause grammars, multi-threading, HTTP server framework, and interfaces to databases and other languages. It supports both interactive development and deployment as compiled applications.
 
-Comprehensive library. Built-in predicates.
-
-Constraint solving. CLP support.
-
-Web frameworks. HTTP server.
+The system can execute goals from the command line, load source files, and create standalone executables using the -c flag. It is widely used in academic research, natural language processing, and knowledge representation systems.
 
 # CAVEATS
 

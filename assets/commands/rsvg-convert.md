@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert SVG images to other formats
+
 # TLDR
 
 **Convert SVG to PNG**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Raspberry Pi OTP private keys
+
 # TLDR
 
 Read the **OTP private key**

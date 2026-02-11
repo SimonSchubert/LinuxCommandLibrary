@@ -1,3 +1,7 @@
+# TAGLINE
+
+Protocol Buffers compiler and code generator
+
 # TLDR
 
 **Generate Python code** from a .proto file
@@ -30,11 +34,11 @@
 
 # DESCRIPTION
 
-Yay is a Pacman wrapper with AUR support. It passes options to Makepkg and Pacman after resolving packages to install/upgrade.
+**protoc** is the official compiler for Google's Protocol Buffers, a language-neutral serialization framework. It reads **.proto** definition files that describe structured data formats and generates language-specific source code for serializing and deserializing that data efficiently in C++, Java, Python, Go, and many other languages through plugins.
 
-#  DESCRIPTION
+The compiler resolves imports between .proto files using search paths specified with **-I** (or **--proto_path**), and can generate code for multiple target languages in a single invocation. It also supports encoding and decoding protocol buffer messages on the command line for debugging and testing purposes.
 
-**protoc** is the official compiler for Google's Protocol Buffers that translates .proto definition files into efficient, language-specific code for serialization and deserialization.
+protoc is a core component of the gRPC ecosystem, where .proto files define both data structures and service interfaces for remote procedure calls.
 
 # OPTIONS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert PNM to Utah RLE format
+
 # TLDR
 
 **Convert PNM to Utah RLE format**

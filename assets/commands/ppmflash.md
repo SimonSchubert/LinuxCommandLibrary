@@ -1,3 +1,7 @@
+# TAGLINE
+
+Brighten PPM image toward white
+
 # TLDR
 
 **Brighten image by factor**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Capture PPPoE packets for debugging
+
 # TLDR
 
 **Sniff PPPoE traffic**
@@ -22,11 +26,9 @@
 
 # DESCRIPTION
 
-**pppoe-sniff** captures PPPoE packets for debugging. Diagnostic tool.
+**pppoe-sniff** captures and displays PPPoE discovery and session packets on a network interface for diagnostic purposes. It shows PADI, PADO, PADR, PADS, and PADT packets exchanged between PPPoE clients and access concentrators.
 
-The tool monitors PPPoE traffic. Troubleshooting helper.
-
-pppoe-sniff captures packets.
+This tool is useful for troubleshooting PPPoE connection failures by verifying that discovery packets are being sent and responses received. The verbose mode provides additional detail about packet contents.
 
 # CAVEATS
 

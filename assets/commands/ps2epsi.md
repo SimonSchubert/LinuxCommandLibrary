@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert PostScript to Encapsulated PostScript
+
 # TLDR
 
 **Convert PS to EPSI**
@@ -22,11 +26,9 @@ _OUTPUT_
 
 # DESCRIPTION
 
-**ps2epsi** converts PostScript to EPSI format. Adds preview image.
+**ps2epsi** converts PostScript files to Encapsulated PostScript Interchange (EPSI) format by adding an ASCII preview image header. The EPSI format embeds a low-resolution bitmap preview that applications can display without a PostScript interpreter, making it useful for document layout programs that need to show a visual placeholder.
 
-The tool creates Encapsulated PS with preview. Part of Ghostscript.
-
-ps2epsi adds previews.
+The tool is part of the Ghostscript suite and uses Ghostscript internally to render the preview image. If no output filename is given, the output file is named after the input with an **.epsi** extension.
 
 # CAVEATS
 

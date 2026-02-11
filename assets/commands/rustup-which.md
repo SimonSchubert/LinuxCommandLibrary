@@ -1,3 +1,7 @@
+# TAGLINE
+
+Show path to Rust toolchain binaries
+
 # TLDR
 
 **Find cargo path**

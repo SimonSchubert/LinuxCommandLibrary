@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display SELinux security contexts
+
 # TLDR
 
 Get **current execution** context

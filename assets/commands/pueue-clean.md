@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove finished tasks from pueue queue
+
 # TLDR
 
 **Clean finished tasks**
@@ -26,11 +30,7 @@
 
 # DESCRIPTION
 
-**pueue clean** removes finished tasks from queue. Cleanup utility.
-
-The tool removes completed entries. Maintains clean queue.
-
-pueue clean clears finished.
+**pueue clean** removes finished tasks (both successful and failed) from the pueue task queue, keeping the status display uncluttered. Use **--successful-only** to retain failed tasks for investigation while clearing completed ones.
 
 # CAVEATS
 

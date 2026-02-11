@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage SELinux file context labeling rules
+
 # TLDR
 
 **List** all file labeling rules

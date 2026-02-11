@@ -1,3 +1,7 @@
+# TAGLINE
+
+Check pnpm dependencies for vulnerabilities
+
 # TLDR
 
 **Run security audit**
@@ -39,11 +43,9 @@
 
 # DESCRIPTION
 
-**pnpm audit** checks for security vulnerabilities. Scans dependencies.
+**pnpm audit** scans project dependencies for known security vulnerabilities using the npm advisory database. It reports affected packages, severity levels, and available patched versions.
 
-The tool reports known security issues. Integrates with npm registry.
-
-pnpm audit finds vulnerabilities.
+The **--fix** option attempts to automatically update vulnerable packages to safe versions. Use **--prod** or **--dev** to limit scanning to production or development dependencies respectively. The **--audit-level** option sets the minimum severity threshold for reporting (low, moderate, high, critical).
 
 # CAVEATS
 

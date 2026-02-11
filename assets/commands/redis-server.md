@@ -1,3 +1,7 @@
+# TAGLINE
+
+In-memory data structure store and cache server
+
 # TLDR
 
 **Start Redis server** with default configuration
@@ -79,6 +83,17 @@ Redis supports two persistence modes: RDB snapshots (point-in-time snapshots at 
 The server supports replication for high availability, with replicas automatically syncing from a master. Redis Sentinel provides automatic failover, while Redis Cluster enables horizontal scaling across multiple nodes.
 
 Configuration can be specified via command-line options or a configuration file. Command-line options override config file settings.
+
+# CONFIGURATION
+
+**/etc/redis/redis.conf**
+> Main server configuration file controlling bind address, port, persistence mode, memory limits, replication, and security settings.
+
+**--save** _seconds_ _changes_
+> RDB snapshot trigger: save dataset if at least N changes occur within N seconds. Multiple save rules can be specified.
+
+**--appendonly yes**
+> Enable AOF (Append Only File) persistence, logging every write operation for stronger durability than RDB snapshots alone.
 
 # CAVEATS
 

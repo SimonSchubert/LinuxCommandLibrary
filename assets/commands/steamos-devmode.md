@@ -1,3 +1,7 @@
+# TAGLINE
+
+Enable SteamOS developer mode
+
 # TLDR
 
 **Enable** developer mode

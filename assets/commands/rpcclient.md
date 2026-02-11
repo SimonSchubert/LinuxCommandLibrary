@@ -1,3 +1,7 @@
+# TAGLINE
+
+Execute MS-RPC commands on remote Windows hosts
+
 # TLDR
 
 **Connect** to a remote host

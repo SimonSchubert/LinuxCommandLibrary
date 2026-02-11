@@ -50,15 +50,9 @@
 
 # DESCRIPTION
 
-**st-info** shows STM32 info. It queries via ST-Link.
+**st-info** queries information from STM32 microcontrollers connected via an ST-Link programmer/debugger. It reports device identification details including chip ID, device description, flash memory size, SRAM size, and the programmer's serial number.
 
-Device identification. Chip type and variant.
-
-Memory information. Flash and SRAM sizes.
-
-Programmer details. Serial number.
-
-Debugging connection. Verify setup.
+The tool is useful for verifying hardware connections, identifying unknown STM32 variants, and confirming memory sizes before programming. The **--probe** option provides a comprehensive summary of all connected devices. It is part of the open-source stlink toolset.
 
 # CAVEATS
 

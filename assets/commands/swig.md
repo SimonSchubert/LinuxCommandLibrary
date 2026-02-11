@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate language bindings for C/C++ code
+
 # TLDR
 
 **Generate Python wrapper**
@@ -49,15 +53,11 @@
 
 # DESCRIPTION
 
-**swig** wraps C/C++ for other languages. It generates bindings.
+**swig** (Simplified Wrapper and Interface Generator) generates wrapper code that allows C and C++ libraries to be called from other programming languages. It reads interface definition files (.i) that describe which functions, classes, and types to expose, and produces the glue code needed for the target language.
 
-Multiple target languages. Python, Java, Ruby, etc.
+Supported target languages include Python, Java, Ruby, Perl, PHP, Lua, Go, JavaScript, C#, and many others. SWIG handles automatic type conversion and data marshaling between C/C++ and the target language, including complex types, pointers, arrays, and object-oriented constructs like inheritance and templates.
 
-Interface file syntax. Describe what to wrap.
-
-Automatic type conversion. Data marshaling.
-
-Supports classes. Object-oriented wrapping.
+Interface files use a syntax similar to C/C++ header files with additional SWIG directives for controlling the wrapping process. SWIG can also parse actual C/C++ header files directly for simpler cases.
 
 # CAVEATS
 

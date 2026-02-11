@@ -1,3 +1,7 @@
+# TAGLINE
+
+Resolve hostnames to IP addresses
+
 # TLDR
 
 **Resolve** a hostname to an IP address

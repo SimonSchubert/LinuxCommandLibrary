@@ -1,3 +1,7 @@
+# TAGLINE
+
+i3-compatible tiling Wayland compositor
+
 # TLDR
 
 **Start sway** from a TTY
@@ -71,6 +75,17 @@
 Sway can be launched directly from a TTY or via a Wayland-compatible display manager. The configuration file is typically located at **~/.config/sway/config**, with the default template at **/etc/sway/config**. Sway communicates with clients via an IPC socket specified in the **SWAYSOCK** environment variable.
 
 The compositor uses wlroots as its Wayland library and supports features like multiple outputs, workspaces, floating and tiling layouts, keyboard and mouse bindings, and integration with status bars like waybar and swaybar.
+
+# CONFIGURATION
+
+**~/.config/sway/config**
+> Main user configuration file defining keybindings, outputs, inputs, window rules, and startup commands.
+
+**/etc/sway/config**
+> System-wide default configuration template.
+
+**SWAYSOCK**
+> Environment variable pointing to the IPC socket for communicating with the running Sway instance.
 
 # CAVEATS
 

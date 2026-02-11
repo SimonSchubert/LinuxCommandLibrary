@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate Ruby documentation from source code
+
 # TLDR
 
 **Generate documentation**

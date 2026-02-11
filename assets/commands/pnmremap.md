@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remap image colors to a specified palette
+
 # TLDR
 
 **Remap image to palette**
@@ -38,11 +42,9 @@ _FILE_
 
 # DESCRIPTION
 
-**pnmremap** remaps image colors to a palette. Reduces color count.
+**pnmremap** replaces each pixel's color in a PNM image with the closest matching color from a specified palette image. This is useful for forcing an image to use only a specific set of colors, such as when targeting a limited-color display format.
 
-The tool quantizes to specified colors. Supports dithering methods.
-
-pnmremap remaps colors.
+The **-floyd** option enables Floyd-Steinberg error diffusion dithering for smoother visual results. The palette is provided via **-mapfile** as a PNM image where each unique pixel color represents one allowed color. Part of the Netpbm toolkit.
 
 # CAVEATS
 

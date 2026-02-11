@@ -1,3 +1,7 @@
+# TAGLINE
+
+Look up Kubernetes RBAC roles for users
+
 # TLDR
 
 **Find roles for user**
@@ -50,15 +54,14 @@
 
 # DESCRIPTION
 
-**rbac-lookup** finds Kubernetes RBAC bindings for subjects. It answers "what can this user/account do?"
+**rbac-lookup** queries a Kubernetes cluster to find all RBAC role bindings associated with a given subject, answering the question "what permissions does this user, group, or service account have?" It searches both ClusterRoleBindings and namespace-scoped RoleBindings to provide a complete picture of a subject's access across the cluster.
 
-User lookups find human operator permissions. Shows which roles are bound.
+The tool supports lookups by user identity, group membership, and service account name via the **--kind** flag. Wide output format (**-o wide**) displays detailed binding information including the namespace, role type, and source binding for each permission grant. This makes it particularly useful for security audits and troubleshooting access issues in clusters with complex RBAC configurations.
 
-Service account lookups check workload permissions. Important for security audits.
+# CONFIGURATION
 
-Group lookups show inherited permissions. RBAC groups aggregate access.
-
-Wide output shows binding details. Namespace, role type, and source displayed.
+**~/.kube/config**
+> Default kubeconfig file specifying cluster connections, authentication credentials, and context selection. Override with **-k** flag.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Check unit boot enablement state
+
 # TLDR
 
 Check **enablement** state

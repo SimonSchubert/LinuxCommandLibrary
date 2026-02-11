@@ -1,3 +1,7 @@
+# TAGLINE
+
+Move stashed tasks into the pueue queue
+
 # TLDR
 
 **Enqueue stashed task**
@@ -26,11 +30,7 @@ _TASK_IDS_
 
 # DESCRIPTION
 
-**pueue enqueue** adds stashed tasks to queue. Activates paused tasks.
-
-The tool moves tasks from stash. Queues for execution.
-
-pueue enqueue activates tasks.
+**pueue enqueue** moves stashed tasks into the active queue for execution. Tasks that were added with **--stashed** or moved to stash with **pueue stash** can be activated with this command. An optional **--delay** defers execution by a specified duration.
 
 # CAVEATS
 

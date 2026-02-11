@@ -1,3 +1,7 @@
+# TAGLINE
+
+Idle management daemon for Sway
+
 # TLDR
 
 **Lock screen on idle**
@@ -49,15 +53,11 @@
 
 # DESCRIPTION
 
-**swayidle** manages idle behavior for Sway. It triggers actions based on inactivity.
+**swayidle** is an idle management daemon for the Sway Wayland compositor that triggers commands based on user inactivity. It supports multiple timeout events that execute commands after specified periods of idle time, enabling staged power management such as dimming the screen, locking, and eventually suspending.
 
-Timeout actions run after idle period. Lock screen, suspend, etc.
+Resume actions execute when user activity is detected after a timeout, allowing reversal of timeout effects like turning displays back on. The before-sleep and after-resume events integrate with systemd sleep/wake cycles, commonly used to ensure the screen is locked before the system suspends.
 
-Resume actions reverse timeout effects. Re-enable displays.
-
-Sleep integration handles suspend/resume. Lock before sleep is common.
-
-Multiple timeouts enable staged actions. Dim, then lock, then suspend.
+Lock and unlock events respond to session lock signals from logind, enabling coordination with external lock requests such as those from the system settings or other applications.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Get or set systemd log verbosity
+
 # TLDR
 
 Show **current** log level

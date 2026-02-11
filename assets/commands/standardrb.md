@@ -1,3 +1,7 @@
+# TAGLINE
+
+Zero-configuration Ruby style linter
+
 # TLDR
 
 **Lint Ruby files** in current directory

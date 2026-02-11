@@ -1,3 +1,7 @@
+# TAGLINE
+
+Measure internet connection speed
+
 # TLDR
 
 **Run speed test**
@@ -39,15 +43,11 @@
 
 # DESCRIPTION
 
-**speed-test** measures internet connection speed. It tests download and upload throughput.
+**speed-test** measures internet connection performance by testing download speed, upload speed, and ping latency against speedtest.net servers. It automatically selects the nearest server to provide representative results.
 
-Download speed shows incoming bandwidth. Measured against speed test servers.
+The tool displays results in megabits per second (Mbps) by default, with an option to show bytes per second instead. JSON output mode is available for integration with monitoring scripts and dashboards.
 
-Upload speed shows outgoing bandwidth. Important for video calls and uploads.
-
-Ping shows network latency. Lower is better for real-time applications.
-
-Server selection is automatic. Nearest server typically chosen.
+Results reflect the connection speed between your device and the selected test server, which may differ from speeds to other destinations due to network routing, congestion, and ISP peering arrangements.
 
 # OUTPUT
 

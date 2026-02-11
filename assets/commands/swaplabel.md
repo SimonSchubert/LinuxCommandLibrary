@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display or change swap area label and UUID
+
 # TLDR
 
 **Display** the current label and UUID of a swap area

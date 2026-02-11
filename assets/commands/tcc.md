@@ -1,3 +1,7 @@
+# TAGLINE
+
+Tiny C Compiler
+
 # TLDR
 
 **Compile and run**
@@ -72,17 +76,11 @@
 
 # DESCRIPTION
 
-**tcc** (Tiny C Compiler) compiles C extremely fast. It can compile and run C code as if it were a scripting language.
+**tcc** (Tiny C Compiler) is an extremely fast C compiler that can also serve as a C script interpreter. Its primary feature is compilation speed — TCC compiles several times faster than GCC, making it suitable for rapid development iterations and using C as a scripting language.
 
-Compilation speed is the primary feature. TCC compiles several times faster than GCC. This enables interactive development.
+The **-run** flag compiles source code directly into memory and executes it immediately without creating intermediate object files or executables. Arguments after **--** are passed to the compiled program. This enables workflows where C files are treated like scripts, including use in shebangs.
 
-Run mode compiles to memory and executes immediately. No intermediate files are created. Arguments after -- pass to the program.
-
-The compiler supports most C99 features. Some GCC extensions are implemented for compatibility.
-
-Bounds checking catches buffer overflows at runtime. This helps debug memory errors without external tools.
-
-TCC can compile itself, demonstrating its capability to handle real-world code despite its small size.
+TCC supports most of the C99 standard along with common GCC extensions for compatibility. It can generate executables, object files, and shared libraries. A built-in bounds checker (**-b**) catches buffer overflows and out-of-bounds access at runtime without requiring external tools like Valgrind. Despite its small size, TCC is capable enough to compile itself.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Count words in LaTeX documents
+
 # TLDR
 
 **Count words**
@@ -50,15 +54,9 @@
 
 # DESCRIPTION
 
-**texcount** counts words in LaTeX. It understands TeX syntax.
+**texcount** counts words in LaTeX documents by properly parsing TeX syntax rather than counting all whitespace-separated tokens. It distinguishes between text words, header words, caption words, and mathematical formulas, providing accurate counts that exclude macro names and formatting commands.
 
-Text vs macro separation. Accurate counts.
-
-Section breakdown. Subcounts per chapter.
-
-Equation counting. Separate math.
-
-Multiple file support. Include handling.
+The **-sub** option breaks down counts by section, chapter, or other structural elements, which is useful for tracking progress on individual parts of a document. Multiple files can be processed together with **-merge**, and **-inc** follows \\input and \\include directives to count included files. Output formats include plain text, HTML, and verbose mode showing how each word was classified.
 
 # CAVEATS
 

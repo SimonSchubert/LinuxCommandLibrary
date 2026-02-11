@@ -1,3 +1,7 @@
+# TAGLINE
+
+Python 2.7 documentation viewer
+
 # TLDR
 
 **View Python 2.7 documentation**
@@ -32,11 +36,9 @@ _MODULE_
 
 # DESCRIPTION
 
-**pydoc2.7** is pydoc for Python 2.7. Documentation viewer.
+**pydoc2.7** is the Python 2.7 version of the pydoc documentation tool. It displays module documentation, searches installed packages, and can serve documentation via a local HTTP server, specifically for the Python 2.7 interpreter and its installed libraries.
 
-The tool shows Python 2 docs. Version-specific pydoc.
-
-pydoc2.7 documents Python 2.
+This version-specific binary exists on systems with multiple Python versions installed. Since Python 2 has reached end of life, users should migrate to **pydoc3** for active Python development.
 
 # CAVEATS
 

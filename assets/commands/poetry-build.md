@@ -1,3 +1,7 @@
+# TAGLINE
+
+Build Python distribution packages
+
 # TLDR
 
 **Build package**
@@ -23,11 +27,9 @@
 
 # DESCRIPTION
 
-**poetry build** builds distributable packages. Creates wheel and sdist.
+**poetry build** creates distributable Python packages from the current project. By default it generates both a wheel (.whl) and a source distribution (sdist/tarball) in the **dist/** directory.
 
-The tool packages Python projects. Generates distribution files.
-
-poetry build creates packages.
+Use **-f wheel** to build only the wheel format or **-f sdist** for only the source distribution. The build process uses the project metadata from **pyproject.toml** including name, version, dependencies, and entry points.
 
 # CAVEATS
 

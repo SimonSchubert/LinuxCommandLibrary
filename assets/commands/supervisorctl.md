@@ -1,3 +1,7 @@
+# TAGLINE
+
+Control Supervisor managed processes
+
 # TLDR
 
 **Show status**
@@ -64,17 +68,11 @@
 
 # DESCRIPTION
 
-**supervisorctl** controls supervisor daemon. It manages long-running processes.
+**supervisorctl** is the command-line client for controlling processes managed by the supervisord daemon. It provides commands to start, stop, restart, and monitor long-running processes, as well as view their status and log output.
 
-Status shows running processes. PID, uptime, and state displayed.
+The status command displays all managed processes with their state (RUNNING, STOPPED, FATAL), PID, and uptime. Individual processes or process groups can be controlled independently. The reread command detects configuration file changes, and update applies those changes without restarting unaffected processes.
 
-Start and stop control individual processes. Groups can be managed together.
-
-Reread detects config changes. Update applies them without full restart.
-
-Tail shows process output. Useful for debugging.
-
-Interactive mode provides shell. Tab completion available.
+The tool can operate in single-command mode or as an interactive shell with tab completion. The tail command streams process stdout/stderr output in real time, useful for debugging application issues. Configuration changes typically follow a reread-then-update workflow to safely apply modifications.
 
 # CAVEATS
 

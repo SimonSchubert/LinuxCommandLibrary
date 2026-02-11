@@ -1,3 +1,7 @@
+# TAGLINE
+
+Mail delivery agent with recipe-based filtering
+
 # TLDR
 
 **Deliver mail using recipes**
@@ -48,6 +52,17 @@ action
 ```
 
 **Flags**: H=header, B=body, h=header to pipe, b=body to pipe
+
+# CONFIGURATION
+
+**~/.procmailrc**
+> User-level recipe file defining mail filtering rules, delivery actions, and variable settings like MAILDIR and LOGFILE.
+
+**~/.forward**
+> Mail forwarding file that pipes incoming mail to procmail, typically containing `"|IFS=' ' && exec /usr/bin/procmail -f- || exit 75"`.
+
+**/etc/procmailrc**
+> System-wide recipe file applied to all users before individual .procmailrc rules.
 
 # CAVEATS
 

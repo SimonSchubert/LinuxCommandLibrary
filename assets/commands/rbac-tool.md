@@ -1,3 +1,7 @@
+# TAGLINE
+
+Analyze and visualize Kubernetes RBAC policies
+
 # TLDR
 
 **Analyze RBAC permissions**
@@ -77,6 +81,11 @@ rbac-tool gen --from-audit audit.log
 --outformat html   # Interactive HTML
 --outformat json   # JSON
 ```
+
+# CONFIGURATION
+
+**~/.kube/config**
+> Default kubeconfig file specifying cluster connections and authentication. Used by rbac-tool to connect to the target cluster.
 
 # CAVEATS
 

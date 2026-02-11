@@ -1,3 +1,7 @@
+# TAGLINE
+
+Query library compiler and linker flags
+
 # TLDR
 
 **Get compiler flags**
@@ -50,11 +54,17 @@ _PACKAGES_
 
 # DESCRIPTION
 
-**pkg-config** provides library compile/link flags. Build system helper.
+**pkg-config** retrieves compiler and linker flags needed to build software against installed libraries. It reads metadata from **.pc** files that libraries install, providing the correct include paths, library paths, and link flags.
 
-The tool retrieves library metadata. Used in build scripts.
+Build systems like autotools, CMake, and Meson use pkg-config to locate libraries portably. The **--cflags** flag returns compiler flags (include paths), **--libs** returns linker flags, and **--modversion** shows the installed version. Version constraints can be checked with **--atleast-version**.
 
-pkg-config finds libraries.
+# CONFIGURATION
+
+**PKG_CONFIG_PATH**
+> Colon-separated list of additional directories to search for .pc files.
+
+**PKG_CONFIG_LIBDIR**
+> Override the default .pc file search path entirely.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Safely remove outdated kernel packages
+
 # TLDR
 
 **Remove old kernels**
@@ -29,11 +33,9 @@
 
 # DESCRIPTION
 
-**purge-old-kernels** removes old kernel packages. Disk cleanup utility.
+**purge-old-kernels** removes old Linux kernel packages from Ubuntu and Debian systems to reclaim disk space, particularly in the **/boot** partition. Over time, kernel upgrades accumulate previous versions that are no longer needed, and this utility automates their safe removal.
 
-The tool frees /boot space. Ubuntu/Debian utility.
-
-purge-old-kernels cleans kernels.
+By default the tool keeps the currently running kernel and one or two previous versions as fallback, configurable with the **--keep** option. The **--dry-run** flag previews which packages would be removed without making changes. The command is part of the **byobu** package on Ubuntu systems and requires root privileges to uninstall kernel packages through the system package manager.
 
 # CAVEATS
 

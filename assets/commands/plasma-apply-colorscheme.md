@@ -1,3 +1,7 @@
+# TAGLINE
+
+Apply KDE Plasma color schemes
+
 # TLDR
 
 **List** available color schemes

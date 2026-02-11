@@ -1,3 +1,7 @@
+# TAGLINE
+
+Scala programming language interpreter and REPL
+
 # TLDR
 
 **Start REPL**

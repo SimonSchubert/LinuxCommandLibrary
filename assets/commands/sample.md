@@ -1,3 +1,7 @@
+# TAGLINE
+
+Profile a running process by sampling call stacks
+
 # TLDR
 
 **Sample a process by PID** for 10 seconds

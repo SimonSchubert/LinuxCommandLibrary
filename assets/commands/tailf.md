@@ -1,3 +1,7 @@
+# TAGLINE
+
+Deprecated, use tail -f
+
 # TLDR
 
 This command has been superseded by [tail](/man/tail) -f.

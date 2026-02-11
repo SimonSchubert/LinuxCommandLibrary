@@ -1,3 +1,7 @@
+# TAGLINE
+
+Start X Window System session
+
 # TLDR
 
 **Start** an X session
@@ -36,6 +40,14 @@
 **startx** is a front-end to xinit that provides a convenient way to start an X session. It reads the user's .xinitrc file (or the system default if none exists) to determine what programs to run.
 
 Typically startx runs a window manager or desktop environment and sets up the X display.
+
+# CONFIGURATION
+
+**~/.xinitrc**
+> User startup script executed by startx to launch a window manager or desktop environment.
+
+**/etc/X11/xinit/xinitrc**
+> System-wide default startup script used when no user .xinitrc exists.
 
 # CAVEATS
 

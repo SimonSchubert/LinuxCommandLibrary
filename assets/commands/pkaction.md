@@ -1,3 +1,7 @@
+# TAGLINE
+
+List and inspect PolicyKit authorization actions
+
 # TLDR
 
 **List all actions**
@@ -36,7 +40,11 @@
 
 # DESCRIPTION
 
-**pkaction** lists and displays PolicyKit actions. PolicyKit controls fine-grained access to system operations, and pkaction shows what actions are available and their authentication requirements.
+**pkaction** lists and displays PolicyKit (polkit) authorization actions registered on the system. Each action represents a privileged operation such as rebooting, mounting disks, or installing packages, along with the authentication requirements for different session types.
+
+In verbose mode, it shows the description, vendor, and implicit authorization levels for each action. These levels determine whether an operation is allowed, denied, or requires authentication for active, inactive, and any-user sessions.
+
+This tool is useful for system administrators to understand what privileged operations are available and how they are configured, or to verify that custom polkit rules are correctly installed.
 
 # EXAMPLES
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Show unit properties in machine format
+
 # TLDR
 
 Show **manager** properties

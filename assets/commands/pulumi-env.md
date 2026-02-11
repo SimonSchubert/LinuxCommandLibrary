@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Pulumi ESC environments and secrets
+
 # TLDR
 
 **Open environment in console**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+RIP routing protocol daemon
+
 # TLDR
 
 **Start RIP daemon**
@@ -59,14 +63,8 @@ router rip
 
 # CONFIGURATION
 
-```
-# /etc/quagga/ripd.conf
-router rip
-  network 10.0.0.0/8
-  network 192.168.1.0/24
-  version 2
-  redistribute connected
-```
+**/etc/quagga/ripd.conf** / **/etc/frr/ripd.conf**
+> Main configuration file defining RIP networks, version, redistribution rules, and interface settings. Location depends on whether Quagga or FRRouting is installed.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Shadowsocks local SOCKS5 proxy client
+
 # TLDR
 
 **Start client**
@@ -55,15 +59,19 @@
 
 # DESCRIPTION
 
-**ss-local** is the Shadowsocks local client. It creates a SOCKS5 proxy that tunnels through a Shadowsocks server.
+**ss-local** is the local client component of Shadowsocks, an encrypted proxy protocol. It listens on a local port as a SOCKS5 proxy server, encrypting all traffic and forwarding it through a remote Shadowsocks server to bypass network filtering.
 
-Local port receives SOCKS5 connections. Traffic is encrypted and forwarded to the server.
+Applications configured to use the local SOCKS5 proxy have their traffic encrypted using methods such as AES-256-GCM or ChaCha20-Poly1305 before it leaves the local machine. The encryption method and password must match the remote server configuration. UDP relay mode (**-u**) enables proxying of UDP traffic for applications like DNS resolution and gaming.
 
-Encryption methods include AES-GCM and ChaCha20. Server and client must match.
+Connection parameters can be specified on the command line or stored in a JSON configuration file for convenience.
 
-UDP relay enables UDP proxy. Useful for DNS and gaming.
+# CONFIGURATION
 
-Config file simplifies repeated use. JSON format with all parameters.
+**/etc/shadowsocks-libev/config.json**
+> System-wide configuration file specifying server address, port, password, encryption method, and local listening settings.
+
+**~/.shadowsocks/config.json**
+> Per-user configuration file with the same JSON format as the system-wide config.
 
 # CAVEATS
 

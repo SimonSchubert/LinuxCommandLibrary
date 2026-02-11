@@ -1,3 +1,7 @@
+# TAGLINE
+
+Write OS images to SD cards for Raspberry Pi
+
 # TLDR
 
 **Start Raspberry Pi Imager**
@@ -52,15 +56,11 @@
 
 # DESCRIPTION
 
-**rpi-imager** writes operating system images to SD cards for Raspberry Pi. It's the official imaging tool from the Raspberry Pi Foundation.
+**rpi-imager** is the official Raspberry Pi Foundation tool for writing operating system images to SD cards and USB drives. It offers both a graphical interface for interactive use and a **--cli** mode for scripted, headless image writing.
 
-GUI mode provides easy image selection. Official and custom images can be written.
+A key feature is pre-boot configuration: options like **--enable-ssh**, **--hostname**, **--wifi-ssid**, and **--wifi-password** inject settings into the image before first boot, enabling headless Raspberry Pi setup without ever connecting a monitor or keyboard. Additional customization includes locale, timezone, and first-run scripts for automated provisioning.
 
-Pre-configuration sets up headless operation. SSH, WiFi, and hostname configured before first boot.
-
-Image verification ensures write integrity. Corruption is detected before use.
-
-Advanced options configure locale and keyboard. First-run customization available.
+The tool downloads and caches official Raspberry Pi OS images along with third-party operating systems, and verifies write integrity by comparing checksums after writing to detect SD card corruption.
 
 # CAVEATS
 

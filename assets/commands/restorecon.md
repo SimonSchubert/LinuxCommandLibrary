@@ -1,3 +1,7 @@
+# TAGLINE
+
+Restore SELinux security contexts on files
+
 # TLDR
 
 **Restore** the security context of a file or directory

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Schedule system wake from sleep using RTC alarm
+
 # TLDR
 
 **Show** alarm status

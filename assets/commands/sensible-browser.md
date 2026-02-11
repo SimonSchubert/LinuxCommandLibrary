@@ -1,3 +1,7 @@
+# TAGLINE
+
+Open user's preferred web browser
+
 # TLDR
 
 Open a **new window** of the default browser

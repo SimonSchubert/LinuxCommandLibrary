@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compile Swift source code to executables
+
 # TLDR
 
 **Compile a Swift source file**

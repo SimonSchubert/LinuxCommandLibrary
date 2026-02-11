@@ -1,3 +1,7 @@
+# TAGLINE
+
+Query and parse RPM spec files
+
 # TLDR
 
 List **binary packages** from a spec file

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Monitor PipeWire objects in real-time
+
 # TLDR
 
 **Monitor** the default PipeWire instance

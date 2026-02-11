@@ -1,3 +1,7 @@
+# TAGLINE
+
+Rasterize SVG vector graphics to PNG
+
 # TLDR
 
 **Convert SVG to PNG**
@@ -39,15 +43,9 @@
 
 # DESCRIPTION
 
-**svg2png** converts SVG to PNG. It rasterizes vectors.
+**svg2png** converts SVG vector graphics files to PNG raster images. It rasterizes the scalable vector content at a specified resolution, producing pixel-based output suitable for web use, documentation, or any context requiring bitmap images.
 
-Resolution control. Specify dimensions.
-
-Scale support. Multiply original size.
-
-Background color. Transparent by default.
-
-Batch capable. Multiple files.
+Output dimensions can be controlled by specifying width, height, or a scale factor relative to the original SVG viewport size. The background is transparent by default, preserving alpha channel information from the SVG source. Various implementations exist based on different rendering libraries such as librsvg or Node.js-based engines.
 
 # CAVEATS
 

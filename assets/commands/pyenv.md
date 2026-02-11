@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage multiple Python versions
+
 # TLDR
 
 **List available Python versions**
@@ -86,6 +90,20 @@ The tool is essential for developers who need to test code against multiple Pyth
 
 **root**
 > Show pyenv installation root.
+
+# CONFIGURATION
+
+**~/.pyenv/**
+> Root directory containing installed Python versions, shims, and pyenv plugins.
+
+**.python-version**
+> Per-directory file specifying the Python version to use, created by `pyenv local`.
+
+**~/.pyenv/version**
+> Global default Python version file, set by `pyenv global`.
+
+**PYENV_ROOT**
+> Environment variable overriding the default pyenv installation directory.
 
 # CAVEATS
 

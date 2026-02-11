@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display Pulumi environment diagnostics
+
 # TLDR
 
 **Show Pulumi version and environment info**

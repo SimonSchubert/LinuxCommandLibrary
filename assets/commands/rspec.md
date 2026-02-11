@@ -1,3 +1,7 @@
+# TAGLINE
+
+Ruby behavior-driven development testing framework
+
 # TLDR
 
 **Run all specs**

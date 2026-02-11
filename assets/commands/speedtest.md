@@ -1,3 +1,7 @@
+# TAGLINE
+
+Official Ookla internet speed test CLI
+
 # TLDR
 
 **Run speed test**
@@ -50,15 +54,11 @@
 
 # DESCRIPTION
 
-**speedtest** measures internet speed. It's official Ookla CLI.
+**speedtest** is the official command-line interface from Ookla for measuring internet connection performance. It tests download speed, upload speed, latency (ping), and jitter by connecting to Ookla's global network of test servers.
 
-Download and upload. Bandwidth measurement.
+The tool automatically selects the nearest server for testing, though specific servers can be chosen by ID. Results include detailed metrics about connection quality, and structured output formats (JSON, CSV) enable integration with monitoring scripts and dashboards.
 
-Latency and jitter. Connection quality.
-
-Server selection. Choose test location.
-
-Structured output. JSON for automation.
+First-run usage requires accepting the Ookla license agreement and GDPR terms. The CLI is a compiled binary distributed separately from the Python-based speedtest-cli, and uses Ookla's native testing methodology for more accurate results.
 
 # CAVEATS
 

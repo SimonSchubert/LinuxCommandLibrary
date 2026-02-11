@@ -1,3 +1,7 @@
+# TAGLINE
+
+SSH and Telnet terminal emulator
+
 # TLDR
 
 **Connect to SSH server**
@@ -49,11 +53,20 @@ _HOST_
 
 # DESCRIPTION
 
-**putty** is SSH and Telnet client. Cross-platform terminal emulator.
+**PuTTY** is a free terminal emulator and network file transfer application supporting SSH, Telnet, SCP, and serial connections. Originally developed for Windows where no built-in SSH client existed, it has become one of the most widely used remote access tools and is also available on Linux and macOS.
 
-The tool provides secure connections. Popular Windows SSH client.
+PuTTY stores connection profiles as saved sessions, allowing quick access to frequently used servers with preconfigured settings for port, protocol, key authentication, and terminal appearance. It uses its own **PPK** key format, though keys can be converted to and from OpenSSH format using the companion **puttygen** tool. The PuTTY suite includes **plink** for command-line connections, **pscp** and **psftp** for file transfer, and **pageant** for SSH agent key management.
 
-putty connects remotely.
+# CONFIGURATION
+
+**~/.putty/sessions/**
+> Saved session profiles containing connection settings, port, protocol, key file path, and terminal configuration.
+
+**~/.putty/sshhostkeys**
+> Cache of SSH host keys for known servers, used to detect man-in-the-middle attacks.
+
+**~/.putty/sshkeys/**
+> Directory for private key files in PPK format used for public key authentication.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compile shell scripts to binary executables
+
 # TLDR
 
 **Compile shell script**
@@ -56,15 +60,11 @@
 
 # DESCRIPTION
 
-**shc** compiles shell scripts to binaries. It provides basic source code protection.
+**shc** converts shell scripts into compiled binary executables by encrypting the script content and wrapping it in auto-generated C code. The resulting C source is compiled with the system's C compiler to produce a standalone binary that decrypts and executes the original script at runtime.
 
-The script is encrypted and wrapped in C code. Compilation produces an executable.
+The tool provides basic source code obfuscation rather than true security, since the script can be recovered from the binary with sufficient effort. Optional features include expiration dates that make the binary refuse to run after a specified date, and strict mode that binds the binary to the current host to prevent redistribution. Relaxed mode (**-r**) allows the binary to run on different systems.
 
-Expiration dates limit script lifetime. Useful for time-limited distribution.
-
-Relaxed mode allows running on different systems. Strict mode binds to current host.
-
-The .x.c intermediate file contains C source. Can be inspected or modified.
+An intermediate **.x.c** file containing the generated C source is produced alongside the binary and can be inspected, modified, or compiled manually with different options.
 
 # CAVEATS
 

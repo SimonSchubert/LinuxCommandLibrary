@@ -1,3 +1,7 @@
+# TAGLINE
+
+Secure file deletion with overwriting
+
 # TLDR
 
 **Securely delete file**
@@ -60,15 +64,9 @@
 
 # DESCRIPTION
 
-**srm** (secure rm) overwrites files before deletion. It prevents data recovery.
+**srm** (secure rm) deletes files by overwriting their contents before unlinking, making data recovery significantly more difficult than with standard **rm**. It offers multiple security levels: simple mode (**-s**) performs a single overwrite pass for speed, medium mode (**-m**) uses 7 passes based on the DoD 5220.22-M standard, and the default Gutmann mode (**-z**) performs 38 passes with various patterns designed to defeat magnetic force microscopy.
 
-Simple mode does one overwrite. Fast but less secure.
-
-Default mode uses Gutmann method. Multiple patterns prevent recovery.
-
-Medium mode balances security and speed. Seven overwrite passes.
-
-Recursive mode handles directories. All contents securely deleted.
+The tool handles recursive directory deletion with **-r** and supports force mode (**-f**) to skip confirmation prompts. File names are also overwritten before deletion to prevent recovery of filenames from directory entries.
 
 # CAVEATS
 

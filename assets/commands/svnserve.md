@@ -1,3 +1,7 @@
+# TAGLINE
+
+Lightweight Subversion repository server
+
 # TLDR
 
 **Start as daemon** serving repositories

@@ -1,5 +1,11 @@
 # TLDR
 
+# TAGLINE
+
+Control systemd services and system
+
+# TLDR
+
 Show all **running services**
 
 ```systemctl status```

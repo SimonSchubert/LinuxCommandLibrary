@@ -1,3 +1,7 @@
+# TAGLINE
+
+Enhanced interactive Python REPL
+
 # TLDR
 
 **Start Python REPL**
@@ -36,11 +40,14 @@ _FILE_
 
 # DESCRIPTION
 
-**ptpython** is an advanced Python REPL. Enhanced interactive Python.
+**ptpython** is an enhanced Python REPL built on the **prompt_toolkit** library. It provides syntax highlighting, multi-line editing, autocompletion, mouse support, and vi/emacs key bindings, offering a significantly improved interactive experience over the default Python shell.
 
-The tool provides syntax highlighting and completion. Better than default REPL.
+Features include function signature display, input validation, clipboard support, and the ability to embed ptpython in existing applications. The **ptipython** variant combines ptpython's UI with IPython's magic commands and features.
 
-ptpython enhances Python.
+# CONFIGURATION
+
+**~/.config/ptpython/config.py**
+> Python configuration file for customizing key bindings, color scheme, completion behavior, and other REPL settings.
 
 # CAVEATS
 

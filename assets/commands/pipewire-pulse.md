@@ -1,3 +1,7 @@
+# TAGLINE
+
+PulseAudio compatibility layer for PipeWire
+
 # TLDR
 
 Start **PulseAudio compatible** daemon
@@ -36,6 +40,14 @@ Display **help**
 **pipewire-pulse** provides PulseAudio protocol compatibility for PipeWire. It allows applications written for PulseAudio to work seamlessly with PipeWire without modification, listening on the same socket as PulseAudio would.
 
 The daemon translates PulseAudio protocol messages to PipeWire operations, maintaining compatibility with existing applications while leveraging PipeWire's improved architecture and lower latency.
+
+# CONFIGURATION
+
+**/etc/pipewire/pipewire-pulse.conf**
+> System-wide PipeWire-Pulse configuration file.
+
+**~/.config/pipewire/pipewire-pulse.conf.d/**
+> User-level drop-in directory for configuration overrides.
 
 # CAVEATS
 

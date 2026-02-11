@@ -1,3 +1,7 @@
+# TAGLINE
+
+Automatic subtitle downloader for videos
+
 # TLDR
 
 **Download subtitles for video**
@@ -61,15 +65,11 @@
 
 # DESCRIPTION
 
-**subliminal** downloads subtitles for video files. It searches multiple providers automatically.
+**subliminal** automatically downloads subtitles for video files by searching multiple online providers simultaneously. It uses video file hashing to accurately identify content, matching the exact release version for well-synchronized subtitles rather than relying solely on filename matching.
 
-Video hashing identifies content accurately. Matches exact releases.
+The tool queries multiple subtitle providers including OpenSubtitles, Addic7ed, Podnapisi, and others, increasing the likelihood of finding subtitles. If one provider fails, it falls back to others automatically. Languages are specified using ISO 639-1 codes, and multiple languages can be requested in a single command.
 
-Multiple providers increase success rate. Falls back if one fails.
-
-Language codes are ISO 639-1. Common: en, es, fr, de.
-
-Recursive scanning handles directories. Processes entire media libraries.
+Subliminal can recursively scan entire directories to process media libraries in batch. It skips videos that already have subtitles unless forced to re-download. Provider authentication can be configured for access to premium subtitle sources with higher download limits.
 
 # CAVEATS
 

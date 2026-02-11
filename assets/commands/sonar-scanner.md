@@ -1,3 +1,7 @@
+# TAGLINE
+
+SonarQube static code analysis scanner
+
 # TLDR
 
 **Run analysis**
@@ -66,6 +70,17 @@ Analysis results upload to server. Web interface shows findings.
 Multiple languages supported. Java, JavaScript, Python, and many others.
 
 CI integration automates scanning. Run on every build or pull request.
+
+# CONFIGURATION
+
+**sonar-project.properties**
+> Project-level configuration file defining project key, source directories, language, and exclusion patterns.
+
+**SONAR_TOKEN**
+> Environment variable for authentication token to SonarQube or SonarCloud.
+
+**SONAR_HOST_URL**
+> Environment variable specifying the SonarQube server URL.
 
 # CAVEATS
 

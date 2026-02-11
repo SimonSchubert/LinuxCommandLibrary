@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interactive PHP shell and runtime debugger
+
 # TLDR
 
 **Start PHP REPL**
@@ -36,11 +40,14 @@
 
 # DESCRIPTION
 
-**psysh** is PHP interactive shell (REPL). Developer console.
+**psysh** is a modern interactive PHP shell (REPL) that provides a powerful developer console with syntax highlighting, tab completion, and inline documentation. It allows executing PHP code interactively, inspecting variables, and testing snippets without creating script files.
 
-The tool provides runtime debugging. Interactive PHP execution.
+PsySH also functions as a runtime debugger when integrated into applications. By calling `eval(\Psy\sh())` in code, developers can drop into an interactive debugging session with access to the current scope's variables and context. It serves as the foundation for Laravel's **tinker** command.
 
-psysh runs PHP interactively.
+# CONFIGURATION
+
+**~/.config/psysh/config.php**
+> PHP configuration file for customizing the REPL behavior, including default includes, readline settings, and output pager.
 
 # CAVEATS
 

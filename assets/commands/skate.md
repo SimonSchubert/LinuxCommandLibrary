@@ -1,3 +1,7 @@
+# TAGLINE
+
+Personal command-line key-value store
+
 # TLDR
 
 **Set a value**
@@ -64,15 +68,9 @@
 
 # DESCRIPTION
 
-**skate** is a personal key-value store. It provides simple storage from the command line.
+**skate** is a personal key-value store that provides simple, fast storage directly from the command line. It stores arbitrary text data such as API keys, notes, code snippets, and configuration values, accessible by named keys.
 
-Key-value pairs store any text data. API keys, notes, snippets, etc.
-
-Multiple databases organize data. Switch with -d flag.
-
-GitHub gist sync backs up data. Share across machines.
-
-Stdin support enables piping. Store command output directly.
+Data can be organized across multiple named databases using the **-d** flag. The **sync** command backs up data to a GitHub Gist, enabling sharing across machines. Values can be set from command arguments or piped from stdin, making it easy to store command output directly.
 
 # CAVEATS
 

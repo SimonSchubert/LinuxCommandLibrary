@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create printable paper globe strips
+
 # TLDR
 
 **Create globe strips**
@@ -25,11 +29,9 @@ _OUTPUT_
 
 # DESCRIPTION
 
-**ppmglobe** creates globe construction strips. From map projection.
+**ppmglobe** converts an equirectangular map projection image into a set of tapered strips that can be printed, cut out, and assembled into a paper globe. The number of strips determines how many pieces the globe is divided into, with more strips producing a smoother sphere.
 
-The tool generates printable strips. For paper globe construction.
-
-ppmglobe makes globe pieces.
+The input image should be in equirectangular (plate carrée) projection, where longitude maps linearly to the x-axis and latitude to the y-axis. Each output strip is saved as a separate numbered PPM file. Part of the Netpbm toolkit.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compute and verify SHA-512 checksums
+
 # TLDR
 
 **Calculate the SHA512 checksum** of a file

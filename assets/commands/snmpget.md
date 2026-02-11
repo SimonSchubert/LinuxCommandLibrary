@@ -1,3 +1,7 @@
+# TAGLINE
+
+Retrieve SNMP object values from agents
+
 # TLDR
 
 **Get a single OID value** using SNMPv2c
@@ -79,6 +83,20 @@
 The tool supports SNMPv1, SNMPv2c, and SNMPv3. SNMPv1 and v2c use community strings for simple authentication, while SNMPv3 provides robust security with authentication (MD5/SHA) and encryption (DES/AES) options.
 
 OIDs can be specified numerically (e.g., **.1.3.6.1.2.1.1.1.0**) or using MIB names (e.g., **sysDescr.0**). Scalar values require a **.0** index suffix. Without it, snmpget will return an error.
+
+# CONFIGURATION
+
+**/etc/snmp/snmp.conf**
+> System-wide SNMP client configuration including default version, community strings, and MIB search paths.
+
+**~/.snmp/snmp.conf**
+> Per-user SNMP client configuration overriding system defaults.
+
+**MIBS**
+> Environment variable specifying which MIB modules to load (colon-separated list, or ALL).
+
+**MIBDIRS**
+> Environment variable specifying directories to search for MIB files.
 
 # CAVEATS
 

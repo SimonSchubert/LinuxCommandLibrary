@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert PNM to SGI image format
+
 # TLDR
 
 **Convert PNM to SGI image**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Encrypt secrets in structured config files
+
 # TLDR
 
 **Encrypt file**
@@ -68,6 +72,17 @@ The tool supports multiple key sources including AWS KMS, GCP KMS, Azure Key Vau
 
 **--output-type** _type_
 > Output format.
+
+# CONFIGURATION
+
+**.sops.yaml**
+> Project-level configuration defining default encryption keys and rules for matching files to specific key sets.
+
+**SOPS_AGE_KEY_FILE**
+> Path to the age private key file for decryption (default: ~/.config/sops/age/keys.txt).
+
+**SOPS_AGE_KEY**
+> Age private key provided directly as an environment variable.
 
 # CAVEATS
 

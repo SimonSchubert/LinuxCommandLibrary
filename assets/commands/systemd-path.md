@@ -1,3 +1,7 @@
+# TAGLINE
+
+Query systemd file hierarchy paths
+
 # TLDR
 
 **Display** a list of known paths and their values

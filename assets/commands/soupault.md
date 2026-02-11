@@ -1,3 +1,7 @@
+# TAGLINE
+
+HTML-native static site generator
+
 # TLDR
 
 **Build site**
@@ -50,15 +54,11 @@
 
 # DESCRIPTION
 
-**soupault** is a static site generator. It transforms HTML.
+**soupault** is a static site generator and HTML processor that works directly with HTML files rather than using a template language. It takes plain HTML as input, manipulates the DOM tree using CSS selectors, and outputs modified HTML, making it compatible with any existing HTML content.
 
-HTML-in, HTML-out. No template language.
+The tool uses a widget system configured in TOML to perform transformations like inserting content into pages, generating tables of contents, and adding metadata. Custom widgets can be written in Lua for project-specific processing needs.
 
-Widget system. Extensible with Lua.
-
-DOM manipulation. CSS selectors.
-
-Preserves structure. Minimal assumptions.
+Unlike most static site generators, soupault makes no assumptions about site structure or content format. It can process existing HTML sites without conversion, making it suitable for both new projects and migrating legacy websites.
 
 # CAVEATS
 

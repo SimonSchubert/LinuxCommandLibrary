@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compare contents of Slackware packages
+
 # TLDR
 
 **Compare** two packages

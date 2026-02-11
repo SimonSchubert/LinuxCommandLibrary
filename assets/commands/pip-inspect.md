@@ -1,3 +1,7 @@
+# TAGLINE
+
+Output installed package metadata as JSON
+
 # TLDR
 
 **Inspect installed packages**

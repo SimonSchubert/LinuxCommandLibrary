@@ -1,3 +1,7 @@
+# TAGLINE
+
+Capture raw sensor data from Raspberry Pi camera
+
 # TLDR
 
 **Capture** raw video for specific duration (milliseconds)

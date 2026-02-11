@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove installed packages on CRUX Linux
+
 # TLDR
 
 **Remove** an installed package

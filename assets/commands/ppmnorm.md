@@ -1,3 +1,7 @@
+# TAGLINE
+
+Normalize PPM image contrast range
+
 # TLDR
 
 **Normalize image contrast**
@@ -31,11 +35,9 @@ _FILE_
 
 # DESCRIPTION
 
-**ppmnorm** normalizes PPM image contrast. Stretches histogram.
+**ppmnorm** normalizes the contrast of a PPM image by stretching its color histogram to use the full available range. Dark images are brightened and washed-out images gain contrast, making it a quick automatic enhancement tool.
 
-The tool enhances contrast automatically. Part of Netpbm.
-
-ppmnorm normalizes colors.
+The black and white percentile parameters control how aggressively the ends of the histogram are clipped before stretching, preventing outlier pixels from limiting the enhancement. This is an alias for **pnmnorm** operating in color mode. Part of the Netpbm toolkit.
 
 # CAVEATS
 

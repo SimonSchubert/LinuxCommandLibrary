@@ -1,3 +1,7 @@
+# TAGLINE
+
+Command-line client for Review Board code review
+
 # TLDR
 
 **Post a new review request** for uncommitted changes
@@ -80,6 +84,14 @@
 The most common workflow involves **rbt post** to upload changes for review, then **rbt land** to merge approved changes. The tool automatically generates diffs and detects repository configuration, minimizing manual steps.
 
 Configuration is typically stored in a **.reviewboardrc** file in the repository root, containing the server URL and repository settings. This allows team members to share consistent configuration.
+
+# CONFIGURATION
+
+**.reviewboardrc**
+> Per-repository configuration file specifying the Review Board server URL, repository name, and default settings for review requests.
+
+**REVIEWBOARD_URL**
+> Environment variable specifying the Review Board server URL as an alternative to .reviewboardrc.
 
 # CAVEATS
 

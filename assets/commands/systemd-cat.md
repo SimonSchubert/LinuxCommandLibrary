@@ -1,3 +1,7 @@
+# TAGLINE
+
+Connect command output to journal
+
 # TLDR
 
 **Write** the output of a command to the journal

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Crystal language dependency manager
+
 # TLDR
 
 **Install dependencies**
@@ -67,15 +71,17 @@
 
 # DESCRIPTION
 
-**shards** is the Crystal language package manager. It manages dependencies defined in shard.yml.
+**shards** is the official dependency manager for the Crystal programming language, similar to Bundler for Ruby or npm for JavaScript. It reads project dependencies from a **shard.yml** file that defines package metadata, version constraints, and development dependencies.
 
-shard.yml defines project metadata and dependencies. Similar to Gemfile or package.json.
+Dependencies are resolved from Git repositories, with GitHub being the most common source. The **shard.lock** file pins exact versions to ensure reproducible builds across environments. The **build** command compiles Crystal projects and places executables in the **bin/** directory, while **install** and **update** manage the dependency lifecycle.
 
-Lock files ensure reproducible builds. shard.lock pins exact versions.
+# CONFIGURATION
 
-Building compiles Crystal projects. Executables output to bin/.
+**shard.yml**
+> Project-level configuration file defining name, version, dependencies, and development dependencies.
 
-Git repositories serve as shard sources. GitHub and other hosts supported.
+**shard.lock**
+> Lock file pinning exact dependency versions for reproducible builds.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Text-to-speech via Speech Dispatcher
+
 # TLDR
 
 **Speak text aloud**

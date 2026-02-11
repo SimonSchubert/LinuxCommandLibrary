@@ -1,3 +1,7 @@
+# TAGLINE
+
+Apply gamma correction to PNM images
+
 # TLDR
 
 **Apply gamma correction**
@@ -36,11 +40,9 @@ _FILE_
 
 # DESCRIPTION
 
-**pnmgamma** applies gamma correction to PNM images. Adjusts brightness curve.
+**pnmgamma** applies gamma correction to PNM images, adjusting the brightness curve by raising each pixel value to a power function. Values greater than 1 brighten the image while values less than 1 darken it.
 
-The tool modifies tonal response. Used for display calibration.
-
-pnmgamma corrects gamma.
+Per-channel gamma values can be specified separately for red, green, and blue. The **-ungamma** option reverses a previously applied gamma correction. Part of the Netpbm toolkit; superseded by **pamgamma**.
 
 # CAVEATS
 

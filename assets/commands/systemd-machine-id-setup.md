@@ -1,3 +1,7 @@
+# TAGLINE
+
+Initialize the machine ID
+
 # TLDR
 
 **Print** the generated or committed machine ID

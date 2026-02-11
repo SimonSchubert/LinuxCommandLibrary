@@ -1,3 +1,7 @@
+# TAGLINE
+
+Analyze and explain SELinux denial messages
+
 # TLDR
 
 **Analyze** all recent SELinux denials

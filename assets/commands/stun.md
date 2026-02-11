@@ -1,3 +1,7 @@
+# TAGLINE
+
+Test NAT traversal and external addressing
+
 # TLDR
 
 **Test NAT type**
@@ -39,15 +43,11 @@
 
 # DESCRIPTION
 
-**stun** tests NAT traversal. It queries STUN servers.
+**stun** is a STUN (Session Traversal Utilities for NAT) client that queries STUN servers to determine NAT type and discover external addressing information. It sends binding requests to a STUN server and analyzes the responses to classify the NAT behavior of the network the client is behind.
 
-NAT type detection. Full cone, symmetric, etc.
+The tool can identify various NAT types including full cone, restricted cone, port-restricted cone, and symmetric NAT. It also reports the external IP address and port mapping as seen by the STUN server, which is essential information for peer-to-peer connectivity.
 
-External IP discovery. Mapped address.
-
-Port mapping. External port.
-
-VoIP troubleshooting. SIP connectivity.
+This is useful for troubleshooting VoIP and SIP connectivity issues, diagnosing WebRTC connection failures, and understanding network topology. The NAT type directly affects whether peer-to-peer connections can be established, with symmetric NAT being the most restrictive.
 
 # CAVEATS
 

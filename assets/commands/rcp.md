@@ -1,3 +1,7 @@
+# TAGLINE
+
+Copy files between hosts over the network
+
 # TLDR
 
 Copy a **file** to a remote host

@@ -1,3 +1,7 @@
+# TAGLINE
+
+PolicyKit authorization daemon
+
 # TLDR
 
 **Start PolicyKit daemon**
@@ -29,11 +33,9 @@
 
 # DESCRIPTION
 
-**polkitd** is the PolicyKit daemon. Handles authorization requests.
+**polkitd** is the PolicyKit authorization daemon that processes authorization requests from applications. It evaluates policy rules defined in JavaScript or .pkla files to determine whether a user or process is authorized to perform a specific action.
 
-The tool processes policy rules. Manages privilege elevation.
-
-polkitd handles auth requests.
+The daemon is typically started automatically by D-Bus or systemd when an authorization check is needed. The **--debug** flag enables verbose logging for troubleshooting policy issues.
 
 # CAVEATS
 

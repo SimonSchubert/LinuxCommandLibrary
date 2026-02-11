@@ -1,3 +1,7 @@
+# TAGLINE
+
+Node.js ORM with type-safe database access
+
 # TLDR
 
 **Initialize Prisma**

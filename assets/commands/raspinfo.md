@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display Raspberry Pi hardware and software info
+
 # TLDR
 
 Display **system information**

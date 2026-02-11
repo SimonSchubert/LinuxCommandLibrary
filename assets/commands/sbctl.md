@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage UEFI Secure Boot keys and signing
+
 # TLDR
 
 Show current **secure boot status**
@@ -63,6 +67,11 @@ Show current **secure boot status**
 **sbctl** is a user-friendly secure boot key manager. It simplifies creating, enrolling, and managing custom secure boot keys and signing EFI binaries.
 
 Custom keys allow booting only signed kernels and bootloaders, enhancing system security.
+
+# CONFIGURATION
+
+**/var/lib/sbctl/**
+> Default directory storing generated secure boot keys (PK, KEK, db) and the database of signed files.
 
 # CAVEATS
 

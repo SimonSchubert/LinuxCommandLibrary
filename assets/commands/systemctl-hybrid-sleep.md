@@ -1,3 +1,7 @@
+# TAGLINE
+
+Suspend to both RAM and disk
+
 # TLDR
 
 Enter **hybrid sleep**

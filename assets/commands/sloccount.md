@@ -1,3 +1,7 @@
+# TAGLINE
+
+Count source lines and estimate effort
+
 # TLDR
 
 **Count lines in directory**

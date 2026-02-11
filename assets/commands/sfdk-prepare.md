@@ -1,3 +1,7 @@
+# TAGLINE
+
+Prepare sources for Sailfish builds
+
 # TLDR
 
 **Prepare sources for build**

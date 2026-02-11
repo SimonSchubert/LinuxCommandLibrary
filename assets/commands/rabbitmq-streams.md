@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage RabbitMQ stream queues
+
 # TLDR
 
 **List streams**

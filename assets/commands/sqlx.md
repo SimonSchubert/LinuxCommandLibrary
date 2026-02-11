@@ -1,3 +1,7 @@
+# TAGLINE
+
+Rust SQL toolkit with compile-time checks
+
 # TLDR
 
 **Create database**
@@ -50,15 +54,19 @@
 
 # DESCRIPTION
 
-**sqlx** manages SQL in Rust. It's compile-time checked SQL.
+**sqlx** is a command-line tool for the SQLx Rust SQL toolkit that provides database migration management and compile-time query verification. It supports PostgreSQL, MySQL, MariaDB, and SQLite.
 
-Migration management. Version control schema.
+The migration system creates versioned SQL scripts that track schema changes, with commands to create, run, and revert migrations. The **prepare** command caches query metadata to a JSON file, enabling compile-time type checking of SQL queries in Rust code without requiring a live database connection during builds.
 
-Offline mode support. Cached query data.
+A **DATABASE_URL** environment variable or **.env** file must specify the database connection string for all operations.
 
-Compile-time verification. Type-safe queries.
+# CONFIGURATION
 
-Multiple databases. Postgres, MySQL, SQLite.
+**DATABASE_URL**
+> Environment variable specifying the database connection string (e.g., postgres://user:pass@host/db, sqlite:data.db).
+
+**.env**
+> Project-level file where DATABASE_URL can be defined; automatically loaded by sqlx commands.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Programmable configuration language from Apple
+
 # TLDR
 
 **Evaluate Pkl file**
@@ -43,11 +47,9 @@
 
 # DESCRIPTION
 
-**pkl** is Apple's configuration language. Programmable configuration.
+**pkl** is a programmable configuration language developed by Apple. It evaluates .pkl files and generates output in multiple formats including JSON, YAML, XML, and property lists, combining the readability of static configuration with the power of a programming language.
 
-The tool generates JSON, YAML, and more. Type-safe configuration.
-
-pkl evaluates config files.
+Pkl provides type safety, validation, and code reuse through classes and modules, catching configuration errors at evaluation time rather than at deployment. The REPL mode allows interactive exploration and testing of configuration expressions.
 
 # CAVEATS
 

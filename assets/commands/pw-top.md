@@ -1,3 +1,7 @@
+# TAGLINE
+
+Real-time PipeWire performance statistics
+
 # TLDR
 
 Display **interactive** view

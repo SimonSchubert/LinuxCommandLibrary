@@ -1,3 +1,7 @@
+# TAGLINE
+
+Salt managed node agent daemon
+
 # TLDR
 
 **Start the Salt minion daemon** in the foreground
@@ -63,6 +67,17 @@
 On startup, the minion generates a key pair and sends its public key to the master for acceptance. Once accepted, the minion subscribes to the master's ZeroMQ publish socket to receive commands. Configuration is stored in **/etc/salt/minion** or the **/etc/salt/minion.d/** directory.
 
 The minion can also run in masterless mode using **salt-call --local**, enabling local configuration management without a master. Setting **master_type: disable** allows running beacons and engines without master connectivity.
+
+# CONFIGURATION
+
+**/etc/salt/minion**
+> Main minion configuration file defining the master address, minion ID, grains, and module settings.
+
+**/etc/salt/minion.d/**
+> Directory for additional configuration files merged with the main config, applied alphabetically.
+
+**/var/log/salt/minion**
+> Default minion log file location.
 
 # CAVEATS
 

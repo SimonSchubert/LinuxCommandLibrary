@@ -1,3 +1,7 @@
+# TAGLINE
+
+Enter minimal emergency recovery mode
+
 # TLDR
 
 Enter **emergency** mode

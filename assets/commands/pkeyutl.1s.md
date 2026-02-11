@@ -1,3 +1,7 @@
+# TAGLINE
+
+Perform low-level public key operations
+
 # TLDR
 
 **Sign data**
@@ -45,11 +49,9 @@
 
 # DESCRIPTION
 
-**openssl pkeyutl** performs public key operations. Sign, verify, encrypt, decrypt.
+**openssl pkeyutl** performs low-level public key cryptographic operations including signing, verification, encryption, and decryption. Unlike higher-level OpenSSL commands, it operates directly on raw data without hashing or padding abstractions.
 
-The tool handles raw key operations. Low-level crypto utility.
-
-openssl pkeyutl does key ops.
+This tool works with any key type supported by OpenSSL and is algorithm-agnostic. It is useful for custom cryptographic workflows where fine-grained control over the signing or encryption process is needed, such as working with specific padding schemes or key agreement protocols.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Enumerate SMB share permissions and access
+
 # TLDR
 
 **List shares on host**

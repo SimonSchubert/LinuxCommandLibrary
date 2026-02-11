@@ -1,3 +1,7 @@
+# TAGLINE
+
+Query and filter GNU recutils database records
+
 # TLDR
 
 **Select all records** from a recfile

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage container registry images and tags
+
 # TLDR
 
 **List tags for an image**
@@ -92,6 +96,14 @@ The tool excels at copying images between registries, transferring only layers t
 Regctl supports multi-platform images, OCI artifacts, and can work with OCI Layout directories as local registry equivalents. It automatically imports credentials from Docker CLI configuration.
 
 Common workflows include inspecting remote images, copying between registries, managing tags, checking rate limits, and exporting/importing images for offline transfer.
+
+# CONFIGURATION
+
+**~/.regctl/config.json**
+> Main configuration file storing registry credentials, default settings, and registry-specific options.
+
+**~/.docker/config.json**
+> Docker CLI credential store, automatically imported by regctl for registry authentication.
 
 # CAVEATS
 

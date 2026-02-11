@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Pixi package manager configuration
+
 # TLDR
 
 **Show configuration**
@@ -42,7 +46,17 @@
 
 # DESCRIPTION
 
-**pixi config** manages Pixi package manager configuration. Configure default channels, cache locations, and other settings. Pixi is a fast Conda-compatible package manager written in Rust.
+**pixi config** manages Pixi package manager configuration at global and project levels. It provides a command-line interface for reading, writing, and editing settings without manually editing TOML files.
+
+Configuration controls default channels, authentication tokens, cache directories, and other Pixi behaviors. Global settings apply to all projects while local settings in pixi.toml override them per project.
+
+# CONFIGURATION
+
+**~/.pixi/config.toml**
+> Global configuration file for all Pixi operations.
+
+**pixi.toml**
+> Project-level configuration in the project root directory.
 
 # SEE ALSO
 

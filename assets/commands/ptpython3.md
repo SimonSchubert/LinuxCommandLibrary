@@ -1,3 +1,7 @@
+# TAGLINE
+
+Enhanced interactive Python 3 REPL
+
 # TLDR
 
 **Start Python 3 REPL**
@@ -29,11 +33,9 @@ _FILE_
 
 # DESCRIPTION
 
-**ptpython3** is ptpython for Python 3. Enhanced Python 3 REPL.
+**ptpython3** is the Python 3 variant of ptpython, an enhanced interactive REPL with syntax highlighting, autocompletion, multi-line editing, and vi/emacs key bindings built on the **prompt_toolkit** library.
 
-The tool provides syntax highlighting. Python 3 specific version.
-
-ptpython3 runs Python 3.
+On modern systems where Python 3 is the default, **ptpython** and **ptpython3** are typically identical. The separate binary exists for systems where both Python 2 and Python 3 are installed side by side.
 
 # CAVEATS
 

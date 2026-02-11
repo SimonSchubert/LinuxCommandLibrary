@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display current working directory path
+
 # TLDR
 
 **Print working directory**
@@ -26,11 +30,9 @@
 
 # DESCRIPTION
 
-**pwd** prints current working directory. Shows absolute path.
+**pwd** prints the absolute path of the current working directory. It is one of the most basic shell commands, used to confirm your location in the filesystem when navigating between directories.
 
-The tool displays current location. Essential navigation command.
-
-pwd shows directory.
+The **-P** flag resolves symbolic links to display the physical path, while **-L** (the default in most shells) preserves symbolic link components in the path. Both a shell built-in version and a standalone binary from GNU coreutils exist; the built-in is used by default in interactive shells.
 
 # CAVEATS
 

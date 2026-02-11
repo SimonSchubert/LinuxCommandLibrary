@@ -1,3 +1,7 @@
+# TAGLINE
+
+Combine RGB component files into PPM image
+
 # TLDR
 
 **Combine RGB components into PPM**

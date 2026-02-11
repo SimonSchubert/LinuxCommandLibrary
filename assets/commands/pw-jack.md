@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run JACK applications on PipeWire
+
 # TLDR
 
 Run a command with its arguments using **PipeWire**

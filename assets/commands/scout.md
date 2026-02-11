@@ -1,3 +1,7 @@
+# TAGLINE
+
+Navigate and search Chef server data
+
 # TLDR
 
 **Search for a binary in available packages**

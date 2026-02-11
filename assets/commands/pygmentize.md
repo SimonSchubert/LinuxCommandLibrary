@@ -1,3 +1,7 @@
+# TAGLINE
+
+Syntax highlight source code
+
 # TLDR
 
 **Highlight code file**
@@ -50,11 +54,9 @@ _FILE_
 
 # DESCRIPTION
 
-**pygmentize** highlights source code syntax. Python library CLI.
+**pygmentize** is the command-line interface for the Pygments syntax highlighting library. It reads source code files and outputs syntax-highlighted versions in various formats including terminal ANSI colors, HTML, LaTeX, RTF, and SVG, supporting over 500 programming languages and markup formats.
 
-The tool colorizes code output. Supports many languages and formats.
-
-pygmentize highlights code.
+The tool auto-detects the input language from file extensions or can be specified explicitly with **-l**. Output format is set with **-f**, and visual themes are controlled with **-S** for generating CSS stylesheets. pygmentize is widely used for generating highlighted code in documentation, blogs, and presentations.
 
 # CAVEATS
 

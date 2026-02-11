@@ -1,3 +1,7 @@
+# TAGLINE
+
+Switch SteamOS between gaming and desktop
+
 # TLDR
 
 Switch to **desktop** mode

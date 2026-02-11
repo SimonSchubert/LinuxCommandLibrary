@@ -1,3 +1,7 @@
+# TAGLINE
+
+Transfer files between devices via QR codes
+
 # TLDR
 
 **Send** files or directories

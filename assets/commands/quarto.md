@@ -1,3 +1,7 @@
+# TAGLINE
+
+Scientific and technical publishing system
+
 # TLDR
 
 **Render document to output format**

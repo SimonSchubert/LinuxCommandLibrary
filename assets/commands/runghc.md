@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run Haskell programs without compilation
+
 # TLDR
 
 **Run Haskell script**
@@ -36,9 +40,9 @@
 
 # DESCRIPTION
 
-**runghc** runs Haskell programs without compiling them first. It's useful for scripts and quick tests, invoking GHC to compile to memory and execute immediately.
+**runghc** runs Haskell source files directly without a separate compilation step, making it ideal for scripting and quick prototyping. It invokes GHC (Glasgow Haskell Compiler) behind the scenes to compile the program to a temporary location and execute it immediately, providing a scripting-like experience for Haskell code.
 
-Part of GHC (Glasgow Haskell Compiler).
+The tool supports shebang lines (#!/usr/bin/env runghc), enabling Haskell files to be used as executable scripts. Command-line arguments after the filename are passed to the Haskell program, and GHC options can be specified before a **--** separator. The synonym **runhaskell** is also available.
 
 # EXAMPLES
 

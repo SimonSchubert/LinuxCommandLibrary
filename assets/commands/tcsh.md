@@ -1,3 +1,7 @@
+# TAGLINE
+
+Enhanced C shell with editing
+
 # TLDR
 
 **Start an interactive tcsh shell**
@@ -92,6 +96,20 @@
 Interactive shells read **~/.tcshrc** (or ~/.cshrc) on startup. Login shells additionally read **~/.login** and execute **~/.logout** on exit. The shell supports command history with **!** syntax, aliases, and shell variables.
 
 Features include filename completion with Tab, command history editing, directory stack manipulation with **pushd/popd**, and programmable completions for commands and arguments.
+
+# CONFIGURATION
+
+**~/.tcshrc**
+> Primary startup file read by all interactive tcsh shells; falls back to ~/.cshrc if not found
+
+**~/.login**
+> Read by login shells after ~/.tcshrc; typically sets environment variables and runs login-time commands
+
+**~/.logout**
+> Executed when a login shell exits
+
+**~/.cshdirs**
+> Saved directory stack restored on startup when savedirs shell variable is set
 
 # CAVEATS
 

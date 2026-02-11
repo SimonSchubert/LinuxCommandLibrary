@@ -1,3 +1,7 @@
+# TAGLINE
+
+Command-line client for PackageKit
+
 # TLDR
 
 **Install** a package

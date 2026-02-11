@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display installed package information
+
 # TLDR
 
 **List installed packages**
@@ -46,11 +50,9 @@ _PACKAGE_
 
 # DESCRIPTION
 
-**poetry show** displays installed packages. Shows dependency information.
+**poetry show** displays information about installed packages in the project. Without arguments, it lists all installed packages with their versions and descriptions. When given a package name, it shows detailed information including dependencies and available versions.
 
-The tool lists project dependencies. Displays version details.
-
-poetry show lists packages.
+The **--tree** flag displays the dependency tree showing how packages relate to each other. The **--outdated** flag highlights packages with newer versions available, and **--top-level** shows only direct project dependencies.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert color PPM images to grayscale
+
 # TLDR
 
 **Convert color to grayscale**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Conceal messages in text file whitespace
+
 # TLDR
 
 **Extract** message from file

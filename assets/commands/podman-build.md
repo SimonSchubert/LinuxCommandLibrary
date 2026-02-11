@@ -1,3 +1,7 @@
+# TAGLINE
+
+Build container images from Containerfiles
+
 # TLDR
 
 **Build from Containerfile**
@@ -45,11 +49,9 @@ _PATH_
 
 # DESCRIPTION
 
-**podman build** builds container images from Containerfiles. Docker-compatible.
+**podman build** creates container images from a Containerfile (or Dockerfile) in the specified build context directory. It is compatible with Docker build syntax and supports multi-stage builds, build arguments, and layer caching.
 
-The tool creates OCI images. Supports multi-stage builds.
-
-podman build creates images.
+Under the hood, it uses Buildah for the actual image building process. The **--no-cache** flag forces rebuilding all layers, **--build-arg** passes build-time variables, and **--squash** merges all layers into a single layer. The output is an OCI-compliant container image.
 
 # CAVEATS
 

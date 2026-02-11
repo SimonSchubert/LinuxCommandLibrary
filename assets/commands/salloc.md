@@ -1,3 +1,7 @@
+# TAGLINE
+
+Allocate Slurm cluster resources interactively
+
 # TLDR
 
 Start an **interactive shell** on a cluster node

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Archive and compress files
+
 # TLDR
 
 **Create an archive** from files

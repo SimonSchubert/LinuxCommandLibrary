@@ -1,3 +1,7 @@
+# TAGLINE
+
+Alternative file downloader written in Rust
+
 # TLDR
 
 **Download** URL contents to file

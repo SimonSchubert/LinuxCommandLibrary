@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal-based classic snake game
+
 # TLDR
 
 **Start** the game

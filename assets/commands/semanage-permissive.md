@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage per-domain SELinux permissive mode
+
 # TLDR
 
 **List** all process types in permissive mode

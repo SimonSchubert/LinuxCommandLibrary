@@ -1,3 +1,7 @@
+# TAGLINE
+
+Solana blockchain command-line interface
+
 # TLDR
 
 **Check wallet balance**
@@ -119,6 +123,14 @@
 The CLI connects to Solana clusters via JSON-RPC. Three main clusters are available: **mainnet-beta** (production), **testnet** (testing), and **devnet** (development). Configuration is stored in **~/.config/solana/cli/config.yml**.
 
 Keypairs for signing transactions can be generated with **solana-keygen** and are typically stored as JSON files. The CLI is the primary interface for Solana validators and program developers.
+
+# CONFIGURATION
+
+**~/.config/solana/cli/config.yml**
+> CLI configuration file storing default RPC URL, keypair path, and commitment level.
+
+**~/.config/solana/id.json**
+> Default keypair file for signing transactions.
 
 # CAVEATS
 

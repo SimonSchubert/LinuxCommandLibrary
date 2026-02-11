@@ -1,3 +1,7 @@
+# TAGLINE
+
+Command-line task and todo manager
+
 # TLDR
 
 **Add a new task**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Encrypted messaging desktop application
+
 # TLDR
 
 **Start Signal Desktop**

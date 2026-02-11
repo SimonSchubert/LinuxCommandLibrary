@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create and manage RAR compressed archives
+
 # TLDR
 
 **Create archive**

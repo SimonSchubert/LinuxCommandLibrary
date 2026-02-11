@@ -1,3 +1,7 @@
+# TAGLINE
+
+Open-source STM32 programming toolset
+
 # TLDR
 
 **Flash firmware to STM32**

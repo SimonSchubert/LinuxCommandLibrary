@@ -1,3 +1,7 @@
+# TAGLINE
+
+Command-line tool for Amazon S3 management
+
 # TLDR
 
 **Configure s3cmd** (interactive setup)

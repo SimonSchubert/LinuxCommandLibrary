@@ -1,3 +1,7 @@
+# TAGLINE
+
+Print files using MIME type handlers
+
 # TLDR
 
 **Print** any file using default run-mailcap tool

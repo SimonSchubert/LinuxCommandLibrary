@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create a new Pulumi project from template
+
 # TLDR
 
 **Create new project interactively**

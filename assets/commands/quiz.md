@@ -1,3 +1,7 @@
+# TAGLINE
+
+Educational quiz game from BSD games
+
 # TLDR
 
 **Start quiz game**
@@ -29,11 +33,9 @@ _CATEGORIES_
 
 # DESCRIPTION
 
-**quiz** is educational quiz game. Tests knowledge.
+**quiz** is an educational quiz game from the BSD games collection that tests knowledge across various categories. It presents questions from built-in databases and checks answers interactively, covering topics such as geography, history, science, and language.
 
-The tool asks questions. BSD games utility.
-
-quiz tests knowledge.
+Categories can be specified as arguments to focus on particular subjects, and the **-l** flag lists all available quiz databases installed on the system.
 
 # CAVEATS
 

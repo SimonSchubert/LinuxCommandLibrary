@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display Adobe Font Metrics information
+
 # TLDR
 
 **Display AFM font metrics**
@@ -19,11 +23,9 @@ _FONT_
 
 # DESCRIPTION
 
-**printafm** displays Adobe Font Metrics information. Font inspection tool.
+**printafm** displays detailed metrics from Adobe Font Metrics (AFM) files, including character widths, bounding boxes, kerning pairs, and other typographic properties. AFM files accompany PostScript Type 1 fonts and describe their dimensions for use in page layout and typesetting.
 
-The tool shows font properties. Part of Ghostscript.
-
-printafm reads AFM files.
+This Ghostscript utility is useful for inspecting font properties when debugging PostScript or PDF rendering, or when developing applications that need to calculate text dimensions for layout purposes.
 
 # CAVEATS
 

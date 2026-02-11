@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compile PRQL queries to SQL
+
 # TLDR
 
 **Compile PRQL to SQL**
@@ -36,11 +40,11 @@
 
 # DESCRIPTION
 
-**prqlc** compiles PRQL query language to SQL. Query transpiler.
+**prqlc** is the compiler for PRQL (Pipelined Relational Query Language), a modern query language designed as a more readable and composable alternative to SQL. It transpiles PRQL source code into standard SQL that can be executed against any supported database.
 
-The tool converts PRQL syntax. Modern query language.
+PRQL uses a pipeline syntax where data transformations are chained with the pipe operator, making complex queries easier to read and write than equivalent nested SQL. The compiler supports multiple SQL dialects through the **--target** option, generating database-specific SQL for PostgreSQL, MySQL, SQLite, BigQuery, and others.
 
-prqlc generates SQL.
+The **fmt** subcommand formats PRQL source code for consistent style, and the compiler accepts input from files or stdin for use in build pipelines.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Snowflake cloud data warehouse CLI client
+
 # TLDR
 
 **Connect to Snowflake**
@@ -56,15 +60,19 @@
 
 # DESCRIPTION
 
-**snowsql** is Snowflake's command-line client. It connects to Snowflake cloud data warehouse.
+**snowsql** is the official command-line client for Snowflake, a cloud-based data warehouse platform. It provides an interactive SQL shell for querying, managing databases, and performing administrative tasks on Snowflake accounts.
 
-Connection requires account and credentials. Password prompted or stored in config.
+Connections require a Snowflake account name and credentials, which can be provided on the command line, entered interactively, or stored in a configuration file. The client supports specifying database, schema, warehouse, and role context at connection time.
 
-SQL execution runs queries directly. Results display in terminal.
+SQL queries can be executed interactively in the shell, passed directly via **-q**, or run from script files with **-f** for batch automation. Output can be formatted as tables, CSV, TSV, or other formats using the **-o output_format** option, making it useful for data export and pipeline integration.
 
-File execution runs SQL scripts. Batch processing and automation.
+# CONFIGURATION
 
-Output formats include CSV, TSV, and table. Export data directly.
+**~/.snowsql/config**
+> Connection profiles, default settings, and stored credentials for SnowSQL sessions.
+
+**SNOWSQL_ACCOUNT**
+> Environment variable specifying the default Snowflake account name.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Alias for pulumi destroy
+
 # TLDR
 
 **Destroy all resources (alias)**

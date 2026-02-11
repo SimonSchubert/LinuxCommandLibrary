@@ -1,3 +1,7 @@
+# TAGLINE
+
+Restart the system
+
 # TLDR
 
 **Reboot** the system

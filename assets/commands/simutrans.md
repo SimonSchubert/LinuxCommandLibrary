@@ -1,3 +1,7 @@
+# TAGLINE
+
+Open-source transportation simulation game
+
 # TLDR
 
 **Start Simutrans** normally
@@ -99,6 +103,14 @@
 The game supports extensive modding through "paksets" which define vehicles, buildings, and game rules. Popular paksets include pak64, pak128, and pak192.comic, each offering different visual styles and gameplay complexity.
 
 Configuration files are stored in **~/.simutrans** on Linux. The game can be played in single-player, freeplay mode, or as a multiplayer server allowing multiple players to collaborate or compete on the same map.
+
+# CONFIGURATION
+
+**~/.simutrans/**
+> User data directory containing saved games, settings, screenshots, and installed paksets.
+
+**~/.simutrans/simuconf.tab**
+> Main configuration file for display, network, and gameplay settings.
 
 # CAVEATS
 

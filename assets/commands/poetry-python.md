@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Python interpreter selection
+
 # TLDR
 
 **List available Python versions**
@@ -22,11 +26,9 @@
 
 # DESCRIPTION
 
-**poetry python** manages Python environments. Shows available interpreters.
+**poetry python** provides information about Python interpreters available on the system. The **list** subcommand shows all discovered Python versions, and **info** displays details about the currently active Python interpreter.
 
-The tool helps select Python versions. Displays environment details.
-
-poetry python manages interpreters.
+This helps identify which Python versions are available for use with **poetry env use** when creating virtual environments for a project.
 
 # CAVEATS
 

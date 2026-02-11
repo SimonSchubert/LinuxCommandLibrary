@@ -1,3 +1,7 @@
+# TAGLINE
+
+Browse Reddit in the terminal
+
 # TLDR
 
 **Launch Reddit Terminal Viewer**
@@ -80,9 +84,8 @@ q       - Quit
 
 # CONFIGURATION
 
-```
-~/.config/rtv/rtv.cfg
-```
+**~/.config/rtv/rtv.cfg**
+> Main configuration file controlling default subreddit, keybindings, browser, editor, and display preferences.
 
 # CAVEATS
 

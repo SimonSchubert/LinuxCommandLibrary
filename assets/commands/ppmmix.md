@@ -1,3 +1,7 @@
+# TAGLINE
+
+Blend two PPM images together
+
 # TLDR
 
 **Mix two images**
@@ -29,11 +33,9 @@ _FILE2_
 
 # DESCRIPTION
 
-**ppmmix** blends two PPM images. Linear interpolation.
+**ppmmix** blends two PPM images together using linear interpolation. The mixing factor controls the contribution of each image: a factor of 0.0 produces entirely the first image, 1.0 produces entirely the second, and values between create a proportional blend.
 
-The tool creates crossfade effects. Part of Netpbm.
-
-ppmmix blends images.
+Both input images must have the same dimensions. This tool is useful for creating crossfade effects, image compositing, and generating intermediate frames for transitions. Part of the Netpbm toolkit.
 
 # CAVEATS
 

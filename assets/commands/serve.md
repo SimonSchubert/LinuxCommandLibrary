@@ -1,3 +1,7 @@
+# TAGLINE
+
+Static file server for local development
+
 # TLDR
 
 **Serve current directory**
@@ -53,15 +57,9 @@
 
 # DESCRIPTION
 
-**serve** runs a static file server. It's quick local hosting.
+**serve** is a zero-configuration static file server for local development, created by Vercel. It serves the contents of a directory over HTTP with no setup required — just run **serve** in any directory to start hosting files.
 
-Zero configuration. Just run and serve.
-
-SPA mode supported. Redirect to index.html.
-
-CORS enabled easily. Cross-origin requests.
-
-HTTPS support. With certificate files.
+Single-page application (SPA) mode redirects all routes to **index.html**, making it suitable for testing client-side routing. CORS can be enabled with a single flag for cross-origin API testing. HTTPS is supported through SSL certificate and key files for testing secure connections locally.
 
 # CAVEATS
 

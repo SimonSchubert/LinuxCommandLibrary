@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove dependencies from a Poetry project
+
 # TLDR
 
 **Remove a dependency**
@@ -36,11 +40,9 @@ _PACKAGES_
 
 # DESCRIPTION
 
-**poetry remove** removes dependencies from project. Updates pyproject.toml.
+**poetry remove** removes one or more dependencies from the project, updating both **pyproject.toml** and the lock file. It also uninstalls the packages and any orphaned transitive dependencies from the virtual environment.
 
-The tool uninstalls packages. Cleans dependency tree.
-
-poetry remove deletes deps.
+Use **-G** to remove from a specific dependency group (e.g., dev, test). The **--dry-run** flag shows what would be removed without making changes.
 
 # CAVEATS
 

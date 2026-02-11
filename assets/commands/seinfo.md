@@ -1,3 +1,7 @@
+# TAGLINE
+
+Query and examine SELinux policy components
+
 # TLDR
 
 **Display policy statistics** for the current system policy

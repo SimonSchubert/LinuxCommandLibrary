@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create delta files between package versions
+
 # TLDR
 
 **Create delta package**
@@ -25,11 +29,9 @@ _NEW_PKG_
 
 # DESCRIPTION
 
-**pkgdelta** creates delta packages. Reduces download size for updates.
+**pkgdelta** creates binary delta files between two versions of an Arch Linux package. The resulting delta file contains only the differences, significantly reducing the download size needed for package upgrades compared to downloading the full new package.
 
-The tool generates binary diffs. Part of Arch Linux pacman.
-
-pkgdelta makes update deltas.
+Part of the pacman package manager suite, it uses the xdelta3 algorithm to compute efficient binary diffs. Delta packages are applied with xdelta3 to reconstruct the new package from the old one and the delta file.
 
 # CAVEATS
 

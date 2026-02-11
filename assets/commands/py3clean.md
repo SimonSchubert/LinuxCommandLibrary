@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove Python 3 compiled bytecode files
+
 # TLDR
 
 **Clean Python 3 bytecode**

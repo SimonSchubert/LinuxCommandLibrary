@@ -1,3 +1,7 @@
+# TAGLINE
+
+Alter process scheduling priority
+
 # TLDR
 
 **Set** the absolute priority of a running process

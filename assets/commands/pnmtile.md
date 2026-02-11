@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create tiled patterns from PNM images
+
 # TLDR
 
 **Create tiled pattern from image**

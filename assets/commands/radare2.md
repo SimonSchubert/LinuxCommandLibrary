@@ -1,3 +1,7 @@
+# TAGLINE
+
+Reverse engineering and binary analysis framework
+
 # TLDR
 
 **Open binary for analysis**
@@ -125,6 +129,17 @@ Visual modes provide cursor-based navigation and graph views. Function graphs sh
 Debugging integrates natively, attaching to processes or launching programs. Breakpoints, stepping, register manipulation, and memory inspection work across supported platforms.
 
 Scripting uses r2pipe for external automation (Python, JavaScript, etc.) or internal radare2 scripts. Extensive plugin API enables custom analysis.
+
+# CONFIGURATION
+
+**~/.radare2rc**
+> Startup configuration file executed on launch, containing default settings and commands to run automatically.
+
+**-e key=value**
+> Runtime configuration variables controlling analysis depth, display format, and tool behavior. Use `e??` inside r2 to list all options.
+
+**~/.local/share/radare2/projects/**
+> Project files saving analysis state including function names, comments, and flags for resuming work on a binary.
 
 # CAVEATS
 

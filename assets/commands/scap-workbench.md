@@ -1,3 +1,7 @@
+# TAGLINE
+
+GUI for SCAP security compliance scanning
+
 # TLDR
 
 **Launch SCAP Workbench**

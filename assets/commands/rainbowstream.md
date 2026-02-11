@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal-based Twitter client with streaming
+
 # TLDR
 
 **Start rainbowstream**
@@ -73,15 +77,17 @@
 
 # DESCRIPTION
 
-**rainbowstream** is a terminal Twitter client with color output. It provides full Twitter functionality from the command line.
+**rainbowstream** is a terminal-based Twitter client that provides real-time streaming of tweets with colorful, syntax-highlighted output. It connects to the Twitter Streaming API to display new tweets as they arrive, automatically updating the timeline without manual refreshing.
 
-Real-time streaming shows new tweets as they arrive. Timeline updates automatically.
+The interactive shell offers a complete set of commands for posting tweets, replying, retweeting, liking, following users, and searching. Color themes highlight usernames, hashtags, and URLs for readability, while inline image preview renders pictures as ASCII art directly in the terminal. The client supports all major Twitter interactions from a single command-line session.
 
-Interactive mode provides a Twitter shell. Commands manage posting, following, and interaction.
+# CONFIGURATION
 
-Color themes make tweets readable. Syntax highlighting for usernames and hashtags.
+**~/.rainbow_oauth**
+> OAuth credentials file storing Twitter API access tokens for authentication.
 
-Image preview displays inline pictures. ASCII art rendering in terminal.
+**~/.rainbow_config.json**
+> User configuration file controlling color themes, display settings, image preview, and notification preferences.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Haskell build tool and project manager
+
 # TLDR
 
 **Create new project**

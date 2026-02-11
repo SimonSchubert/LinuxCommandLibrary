@@ -1,3 +1,7 @@
+# TAGLINE
+
+List installed Python 3 interpreter versions
+
 # TLDR
 
 **List installed Python 3 versions**
@@ -39,11 +43,9 @@
 
 # DESCRIPTION
 
-**py3versions** lists Python 3 interpreter versions. Debian utility.
+**py3versions** reports information about Python 3 interpreter versions available on Debian and Ubuntu systems. It distinguishes between installed versions, supported versions for the distribution, and the default version used by the system.
 
-The tool shows available Python versions. Package management helper.
-
-py3versions lists Python 3.
+The tool is part of Debian's **python3-minimal** package and is primarily used by packaging tools and maintainer scripts to determine which Python versions to compile against or clean up. The **-i** flag shows installed versions, **-s** shows supported versions, and **-d** shows the default.
 
 # CAVEATS
 

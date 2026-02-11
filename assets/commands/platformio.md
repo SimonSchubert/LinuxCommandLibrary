@@ -1,3 +1,7 @@
+# TAGLINE
+
+Embedded development platform and build system
+
 # TLDR
 
 **Initialize project**
@@ -72,6 +76,17 @@ The tool supports Arduino, ESP32, STM32, and hundreds of other boards with integ
 
 **-e** _env_
 > Specific environment.
+
+# CONFIGURATION
+
+**platformio.ini**
+> Project configuration file defining board targets, frameworks, library dependencies, and build options.
+
+**~/.platformio/**
+> PlatformIO home directory containing installed platforms, packages, and global settings.
+
+**PLATFORMIO_CORE_DIR**
+> Environment variable to override the PlatformIO home directory location.
 
 # CAVEATS
 

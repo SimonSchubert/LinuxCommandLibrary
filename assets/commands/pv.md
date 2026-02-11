@@ -1,3 +1,7 @@
+# TAGLINE
+
+Monitor data transfer through pipes
+
 # TLDR
 
 **Show transfer progress**
@@ -52,11 +56,9 @@ _FILES_
 
 # DESCRIPTION
 
-**pv** monitors data through a pipe. Pipe viewer utility.
+**pv** (Pipe Viewer) monitors the progress of data flowing through a Unix pipeline. It can be inserted between any two commands in a pipe to display a progress bar, transfer rate, elapsed time, estimated time of arrival, and percentage complete.
 
-The tool shows transfer progress. Progress bar for pipes.
-
-pv visualizes pipelines.
+When given a file as input, pv can calculate the total size and show meaningful progress percentages. For streams of unknown size, use the **-s** flag to specify the expected size. The **-L** option limits transfer rate, which is useful for throttling operations. Multiple **-N** flags can name different pv instances in complex pipelines to track each stage independently. pv is commonly used to add visual feedback to operations like disk imaging with **dd**, database imports, or large file transfers.
 
 # CAVEATS
 

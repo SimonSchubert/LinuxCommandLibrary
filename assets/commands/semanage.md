@@ -1,3 +1,7 @@
+# TAGLINE
+
+SELinux persistent policy management tool
+
 # TLDR
 
 **Set** or unset a SELinux boolean
@@ -65,6 +69,14 @@
 **semanage** is the SELinux Policy Management tool for configuring persistent security policy settings. Unlike **setsebool** or **chcon**, changes made with semanage persist across reboots.
 
 The tool manages booleans, file contexts, ports, network interfaces, and user mappings. It provides granular control over SELinux policy without requiring policy source modification.
+
+# CONFIGURATION
+
+**/etc/selinux/*/policy/**
+> SELinux policy store directory containing the active policy modules and local customizations.
+
+**/var/lib/selinux/**
+> Policy module database storing installed and locally modified policy components.
 
 # CAVEATS
 

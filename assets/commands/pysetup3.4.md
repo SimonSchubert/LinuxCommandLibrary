@@ -1,3 +1,7 @@
+# TAGLINE
+
+Deprecated Python 3.4 package installer
+
 # TLDR
 
 **Install package (deprecated)**
@@ -25,11 +29,9 @@ _COMMAND_
 
 # DESCRIPTION
 
-**pysetup3.4** was Python 3.4 packaging tool. Deprecated distutils2 tool.
+**pysetup3.4** was a package installation and management tool included with Python 3.4 as part of the distutils2 packaging effort. It provided commands for installing, removing, and managing Python packages before pip became the standard package manager.
 
-The tool installed packages. Replaced by pip.
-
-pysetup3.4 is deprecated.
+The tool has been deprecated and replaced entirely by **pip**. It should not be used for new projects, and legacy systems still relying on it should migrate to pip for package management.
 
 # CAVEATS
 

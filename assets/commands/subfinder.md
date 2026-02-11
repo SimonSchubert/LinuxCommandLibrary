@@ -1,3 +1,7 @@
+# TAGLINE
+
+Passive subdomain discovery tool
+
 # TLDR
 
 **Find subdomains**
@@ -68,6 +72,11 @@ The tool is designed for authorized security assessments and bug bounty hunting.
 
 **-rl** _n_
 > Rate limit.
+
+# CONFIGURATION
+
+**~/.config/subfinder/provider-config.yaml**
+> API keys and credentials for data sources such as Shodan, Censys, SecurityTrails, and VirusTotal.
 
 # CAVEATS
 

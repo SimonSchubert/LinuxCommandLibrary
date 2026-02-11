@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert PNM images to PNG format
+
 # TLDR
 
 **Convert PNM to PNG**
@@ -39,7 +43,9 @@
 
 # DESCRIPTION
 
-**pnmtopng** converts PNM (PBM/PGM/PPM) images to PNG format. Part of Netpbm toolkit. Supports alpha channels, compression, and interlacing.
+**pnmtopng** converts PNM (PBM, PGM, PPM) images to PNG format with lossless compression. It automatically selects the optimal PNG color type based on the input image.
+
+The **-alpha** option attaches a separate PGM file as an alpha transparency channel. The **-compression** level (0-9) controls the deflate compression effort, and **-interlace** creates Adam7 interlaced PNGs for progressive display. The **-transparent** option designates a specific color as fully transparent. Part of the Netpbm toolkit; superseded by **pamtopng**.
 
 # SEE ALSO
 

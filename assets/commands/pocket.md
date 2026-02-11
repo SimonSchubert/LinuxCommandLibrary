@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Pocket read-later service from terminal
+
 # TLDR
 
 **Add URL to Pocket**

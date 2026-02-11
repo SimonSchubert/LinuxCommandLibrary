@@ -1,3 +1,7 @@
+# TAGLINE
+
+Record audio to file via PipeWire
+
 # TLDR
 
 This command is an alias of **pw-cat --record**

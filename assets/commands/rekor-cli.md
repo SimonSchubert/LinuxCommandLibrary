@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interact with Sigstore transparency log
+
 # TLDR
 
 **Upload entry**
@@ -75,6 +79,11 @@ Search finds entries by artifact, email, or hash. Proves when signatures were cr
 Verification checks artifacts against the log. Confirms signature validity and timing.
 
 Log info shows tree size and root hash. Enables verification of log integrity.
+
+# CONFIGURATION
+
+**REKOR_REKOR_SERVER**
+> Environment variable to set the default Rekor server URL, overriding the built-in public instance at rekor.sigstore.dev.
 
 # CAVEATS
 

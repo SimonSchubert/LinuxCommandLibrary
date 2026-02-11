@@ -1,3 +1,7 @@
+# TAGLINE
+
+Monitor and manage PipeWire metadata
+
 # TLDR
 
 Show metadata in **default** name

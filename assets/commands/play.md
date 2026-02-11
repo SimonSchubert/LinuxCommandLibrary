@@ -1,3 +1,7 @@
+# TAGLINE
+
+Play audio files with effects via SoX
+
 # TLDR
 
 **Play audio file**
@@ -43,11 +47,9 @@ _EFFECTS_
 
 # DESCRIPTION
 
-**play** plays audio files. Part of SoX audio toolkit.
+**play** plays audio files from the command line with optional real-time effects processing. Part of the SoX (Sound eXchange) audio toolkit, it supports a wide range of formats including WAV, MP3, FLAC, OGG, and many others.
 
-The tool supports many formats. Real-time effects.
-
-play plays audio.
+Audio effects such as reverb, echo, speed change, volume adjustment, and equalization can be chained together on the command line. Multiple files can be concatenated for sequential playback.
 
 # CAVEATS
 

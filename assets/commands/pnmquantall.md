@@ -1,3 +1,7 @@
+# TAGLINE
+
+Quantize multiple images to shared palette
+
 # TLDR
 
 **Quantize multiple images to same palette**

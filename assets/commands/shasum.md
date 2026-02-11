@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compute and verify SHA message digests
+
 # TLDR
 
 **Calculate SHA-1 hash**
@@ -66,17 +70,11 @@
 
 # DESCRIPTION
 
-**shasum** computes and verifies SHA message digests. SHA hashes are cryptographic fingerprints used for file integrity verification.
+**shasum** is a unified Perl-based utility for computing and verifying SHA message digests across all algorithm variants. The **-a** option selects the algorithm: SHA-1 (default), SHA-224, SHA-256, SHA-384, SHA-512, and the truncated SHA-512/224 and SHA-512/256 variants. SHA-256 is the most commonly used for software distribution verification and security applications.
 
-Algorithm selection chooses hash size. SHA-256 is commonly used for downloads and security. SHA-1 is legacy but still used in some contexts.
+In check mode (**-c**), shasum reads a file containing previously generated checksums and verifies each listed file against its recorded hash, reporting success or failure. Output format shows the hash followed by the filename, with BSD-style output (**--tag**) additionally including the algorithm name. Both formats are understood during verification.
 
-Check mode verifies files against recorded hashes. It reads a checksum file and confirms each listed file matches its hash.
-
-Output format shows hash followed by filename. BSD-style output includes the algorithm name. Both formats are understood for verification.
-
-Binary mode is recommended for non-text files. It ensures consistent hashing across platforms.
-
-Stdin processing enables hashing command output or piped data without intermediate files.
+This command is the standard SHA utility on macOS and systems with Perl installed, providing equivalent functionality to the separate **sha1sum**, **sha256sum**, and **sha512sum** commands found in GNU coreutils.
 
 # CAVEATS
 

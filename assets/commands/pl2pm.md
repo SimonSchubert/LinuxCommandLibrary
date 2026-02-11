@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert Perl4 libraries to Perl5 modules
+
 # TLDR
 
 **Convert Perl4 library to module**
@@ -21,11 +25,9 @@ Output goes to stdout.
 
 # DESCRIPTION
 
-**pl2pm** converts Perl4 libraries to Perl5 modules. Migration helper.
+**pl2pm** converts Perl 4 library files (.pl) to Perl 5 module format (.pm). It performs basic syntactic transformations such as adding package declarations, converting require statements, and updating subroutine definitions to follow Perl 5 module conventions.
 
-The tool updates old Perl code. Part of Perl distribution.
-
-pl2pm converts Perl4 to Perl5.
+Part of the standard Perl distribution, the conversion is approximate and the output typically requires manual review and adjustment to produce fully functional Perl 5 modules.
 
 # CAVEATS
 

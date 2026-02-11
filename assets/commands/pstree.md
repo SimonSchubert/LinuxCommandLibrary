@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display running processes as a tree
+
 # TLDR
 
 Display a **tree of all processes**

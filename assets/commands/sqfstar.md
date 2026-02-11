@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create squashfs filesystem from tar archives
+
 # TLDR
 
 Create squashfs from **tar archive**

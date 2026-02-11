@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Pixi project settings and platforms
+
 # TLDR
 
 **Initialize new project**

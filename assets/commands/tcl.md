@@ -1,3 +1,7 @@
+# TAGLINE
+
+Tcl scripting language shell
+
 # TLDR
 
 **Start an interactive Tcl shell**

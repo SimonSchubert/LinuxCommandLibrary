@@ -1,3 +1,7 @@
+# TAGLINE
+
+Bulk rename files with patterns
+
 # TLDR
 
 **Search and replace** in filenames

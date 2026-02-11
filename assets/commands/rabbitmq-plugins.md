@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage RabbitMQ broker plugins
+
 # TLDR
 
 **List plugins**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Multiplayer terminal Tetris game
+
 # TLDR
 
 **Connect to a server**

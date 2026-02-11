@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display Poetry debugging information
+
 # TLDR
 
 **Show debug information**
@@ -22,11 +26,9 @@
 
 # DESCRIPTION
 
-**poetry debug** provides debugging information. Shows system and environment details.
+**poetry debug** provides diagnostic information for troubleshooting Poetry issues. The **info** subcommand displays Poetry version, Python version, system platform, and virtual environment details.
 
-The tool helps troubleshoot issues. Displays configuration state.
-
-poetry debug aids troubleshooting.
+The **resolve** subcommand performs dependency resolution in debug mode, showing the solver's decision process. This is useful for diagnosing version conflicts or understanding why specific package versions were selected.
 
 # CAVEATS
 

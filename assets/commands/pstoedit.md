@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert PostScript and PDF to vector formats
+
 # TLDR
 
 Convert PDF page to **PNG or JPEG**

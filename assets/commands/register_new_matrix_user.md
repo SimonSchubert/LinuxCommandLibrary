@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create users on Matrix homeserver
+
 # TLDR
 
 Create a user **interactively**
@@ -35,6 +39,11 @@ Create admin user **non-interactively**
 **register_new_matrix_user** registers new users on a Matrix homeserver when open registration has been disabled. It reads the shared secret from the homeserver configuration to authorize user creation.
 
 This is the official way to create users on a Synapse server with closed registration.
+
+# CONFIGURATION
+
+**homeserver.yaml**
+> Synapse homeserver configuration file containing the **registration_shared_secret** used to authorize user creation. Path specified with **--config**.
 
 # CAVEATS
 

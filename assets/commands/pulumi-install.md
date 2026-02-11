@@ -1,3 +1,7 @@
+# TAGLINE
+
+Install Pulumi project dependencies and plugins
+
 # TLDR
 
 **Install project dependencies**

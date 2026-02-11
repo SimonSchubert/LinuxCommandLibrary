@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compute and verify SHA-224 checksums
+
 # TLDR
 
 **Calculate SHA224 hash**
@@ -36,7 +40,9 @@
 
 # DESCRIPTION
 
-**sha224sum** computes SHA-224 message digest. Part of SHA-2 family with 224-bit output. Used for file integrity verification. Less common than SHA-256.
+**sha224sum** computes and verifies SHA-224 cryptographic hash values, producing a 224-bit (56-character hexadecimal) message digest. It is part of the SHA-2 family of hash functions and operates identically to **sha256sum** in usage, differing only in output length and the underlying truncation of the hash.
+
+SHA-224 is less commonly used than SHA-256 but provides adequate security for applications where a shorter hash is preferred, such as certain certificate signature schemes. With no FILE argument or when FILE is **-**, input is read from standard input. In check mode (**-c**), previously generated checksums are verified against current file contents.
 
 # SEE ALSO
 

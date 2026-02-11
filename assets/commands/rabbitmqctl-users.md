@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage RabbitMQ users and permissions
+
 # TLDR
 
 **List users**

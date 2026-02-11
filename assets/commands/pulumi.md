@@ -1,3 +1,7 @@
+# TAGLINE
+
+Infrastructure as code with general-purpose languages
+
 # TLDR
 
 **Create new project**
@@ -69,6 +73,17 @@ The tool provisions resources across AWS, Azure, GCP, Kubernetes, and many other
 
 **--diff**
 > Show detailed diff.
+
+# CONFIGURATION
+
+**Pulumi.yaml**
+> Project definition file specifying the project name, runtime language, and description.
+
+**Pulumi.<stack>.yaml**
+> Per-stack configuration file containing config values and encrypted secrets.
+
+**PULUMI_ACCESS_TOKEN**
+> Environment variable for authenticating with the Pulumi Cloud backend without interactive login.
 
 # CAVEATS
 

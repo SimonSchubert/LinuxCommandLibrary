@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Pulumi provider plugins
+
 # TLDR
 
 **List installed plugins**

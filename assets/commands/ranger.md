@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal file manager with vim keybindings
+
 # TLDR
 
 **Start ranger** in the current directory
@@ -73,6 +77,20 @@ Ranger includes **rifle**, a file opener that automatically selects appropriate 
 **m**_x_: Set bookmark x
 **\`**_x_: Jump to bookmark x
 **S**: Open shell in current directory
+
+# CONFIGURATION
+
+**~/.config/ranger/rc.conf**
+> Main configuration file controlling keybindings, settings, and startup commands.
+
+**~/.config/ranger/rifle.conf**
+> File opener rules defining which applications handle each file type.
+
+**~/.config/ranger/scope.sh**
+> File preview script determining how files are previewed in the third column.
+
+**~/.config/ranger/commands.py**
+> Custom Python commands extending ranger's built-in functionality.
 
 # CAVEATS
 

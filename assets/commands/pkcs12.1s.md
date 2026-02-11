@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create and parse PKCS#12 certificate bundles
+
 # TLDR
 
 **Create PKCS#12 file**
@@ -45,11 +49,9 @@
 
 # DESCRIPTION
 
-**openssl pkcs12** manages PKCS#12 files. Certificate bundle format.
+**openssl pkcs12** creates and parses PKCS#12 (.p12/.pfx) files, which bundle a private key with its corresponding certificate and optional CA chain into a single password-protected file. This format is widely used for transporting credentials between systems.
 
-The tool creates and extracts .p12/.pfx files. Certificate with key.
-
-openssl pkcs12 handles bundles.
+In export mode (**-export**), it combines a PEM key and certificate into a PKCS#12 archive. In parse mode (default), it extracts certificates and keys from an existing archive. Filters like **-clcerts**, **-cacerts**, **-nocerts**, and **-nokeys** control which components are extracted.
 
 # CAVEATS
 

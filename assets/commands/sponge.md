@@ -1,3 +1,7 @@
+# TAGLINE
+
+Soak up stdin before writing to file
+
 # TLDR
 
 **Overwrite file with pipeline output**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Relay PPPoE traffic between interfaces
+
 # TLDR
 
 **Start PPPoE relay**
@@ -32,11 +36,9 @@
 
 # DESCRIPTION
 
-**pppoe-relay** relays PPPoE traffic between interfaces. Bridge tool.
+**pppoe-relay** forwards PPPoE discovery and session packets between network interfaces, acting as a relay agent between PPPoE clients and access concentrators on different network segments. This allows clients on one subnet to connect to a PPPoE server on another.
 
-The tool forwards PPPoE packets. Connects separate networks.
-
-pppoe-relay bridges PPPoE.
+The relay listens on both server-side and client-side interfaces, transparently forwarding PPPoE control and data traffic. Multiple client interfaces can be specified to serve several network segments through a single access concentrator.
 
 # CAVEATS
 

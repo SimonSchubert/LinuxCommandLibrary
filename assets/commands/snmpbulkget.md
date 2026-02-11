@@ -1,3 +1,7 @@
+# TAGLINE
+
+Bulk retrieve SNMP MIB values efficiently
+
 # TLDR
 
 **Bulk get MIB values**
@@ -35,7 +39,11 @@
 
 # DESCRIPTION
 
-**snmpbulkget** retrieves multiple MIB values efficiently using SNMP GETBULK operation. Faster than multiple get requests for retrieving table data. Part of Net-SNMP suite.
+**snmpbulkget** retrieves multiple MIB values from an SNMP agent in a single request using the GETBULK operation introduced in SNMPv2c. This is significantly more efficient than issuing multiple individual GET or GETNEXT requests, especially when retrieving large tables or sequential OID ranges.
+
+The **-Cn** (non-repeaters) parameter specifies how many of the initial OIDs should be retrieved with a simple GETNEXT, while **-Cr** (max-repetitions) controls how many successive values to fetch for the remaining OIDs. This combination allows mixing scalar and tabular data retrieval in a single request.
+
+The tool is part of the **Net-SNMP** suite and requires SNMPv2c or SNMPv3, as the GETBULK operation is not available in SNMPv1.
 
 # SEE ALSO
 

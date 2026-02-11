@@ -1,3 +1,7 @@
+# TAGLINE
+
+Output last part of files
+
 # TLDR
 
 **Show last 10 lines** of a file

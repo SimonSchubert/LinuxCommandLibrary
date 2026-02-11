@@ -1,3 +1,7 @@
+# TAGLINE
+
+Caching HTTP proxy server
+
 # TLDR
 
 **Start squid**
@@ -66,15 +70,22 @@
 
 # DESCRIPTION
 
-**squid** is a caching HTTP proxy. It accelerates web access and provides content filtering.
+**squid** is a caching proxy server supporting HTTP, HTTPS, FTP, and other protocols. It operates as both a forward proxy for client internet access and a reverse proxy (accelerator) for web servers, caching frequently requested content to reduce bandwidth usage and improve response times.
 
-Forward proxy serves client requests. Caches responses for faster repeat access.
+The server uses Access Control Lists (ACLs) to filter traffic, authenticate users, restrict access to specific sites or content types, and enforce bandwidth limits. Cache storage is configurable with both memory and disk backends, supporting hierarchical caching with parent and sibling proxies.
 
-Reverse proxy accelerates web servers. Offloads content delivery.
+Configuration is managed through a comprehensive configuration file that defines listening ports, ACL rules, cache policies, authentication schemes, and logging behavior. The **-k** flag sends management commands to a running instance for operations like configuration reload, log rotation, and graceful shutdown.
 
-Access control lists filter traffic. Block sites, limit bandwidth, authenticate users.
+# CONFIGURATION
 
-Cache management optimizes storage. Disk and memory caching configurable.
+**/etc/squid/squid.conf**
+> Main configuration file defining listening ports, ACL rules, cache policies, authentication helpers, and logging settings.
+
+**/var/spool/squid/**
+> Default disk cache directory for cached web content.
+
+**/var/log/squid/**
+> Log directory containing access.log, cache.log, and store.log.
 
 # CAVEATS
 

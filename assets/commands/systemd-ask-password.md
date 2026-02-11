@@ -1,3 +1,7 @@
+# TAGLINE
+
+Query user for system password
+
 # TLDR
 
 **Query** a system password with a specific prompt

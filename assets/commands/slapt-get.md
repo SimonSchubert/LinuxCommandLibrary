@@ -1,3 +1,7 @@
+# TAGLINE
+
+APT-like package manager for Slackware
+
 # TLDR
 
 **Update** the list of available packages
@@ -59,6 +63,11 @@
 **slapt-get** is an APT-like package management system for Slackware Linux. It provides dependency resolution and mirrors the familiar apt-get workflow for managing packages.
 
 Package sources are configured in the slapt-getrc configuration file.
+
+# CONFIGURATION
+
+**/etc/slapt-get/slapt-getrc**
+> Main configuration file defining package source URLs, cache directory, and excluded packages.
 
 # CAVEATS
 

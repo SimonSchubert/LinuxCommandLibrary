@@ -1,3 +1,7 @@
+# TAGLINE
+
+Stop the pueue daemon process
+
 # TLDR
 
 **Shutdown pueue daemon**

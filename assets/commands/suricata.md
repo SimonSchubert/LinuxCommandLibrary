@@ -1,3 +1,7 @@
+# TAGLINE
+
+Network intrusion detection and prevention engine
+
 # TLDR
 
 **Start in IDS mode** on an interface
@@ -103,6 +107,17 @@ Suricata can operate in three modes: IDS (passive monitoring), IPS (inline block
 The engine uses multi-threading for high-performance packet processing and supports Lua scripting for custom detection logic. It is compatible with Snort rules and can process the Emerging Threats ruleset.
 
 Output formats include EVE JSON for SIEM integration, fast log, unified2, and various protocol-specific logs.
+
+# CONFIGURATION
+
+**/etc/suricata/suricata.yaml**
+> Main configuration file defining network interfaces, rule paths, logging, and detection settings.
+
+**/etc/suricata/rules/**
+> Directory containing detection rule files in Snort-compatible format.
+
+**/var/log/suricata/**
+> Default log directory for EVE JSON, fast log, and alert output.
 
 # CAVEATS
 

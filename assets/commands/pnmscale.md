@@ -1,3 +1,7 @@
+# TAGLINE
+
+Resize PNM images by scaling
+
 # TLDR
 
 **Scale by factor**

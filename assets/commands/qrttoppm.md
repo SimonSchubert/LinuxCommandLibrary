@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert QRT ray tracer output to PPM
+
 # TLDR
 
 **Convert QRT ray tracer output to PPM**
@@ -10,7 +14,7 @@
 
 # DESCRIPTION
 
-**qrttoppm** converts QRT ray tracer format to PPM. QRT was an early ray tracing program. Part of Netpbm toolkit.
+**qrttoppm** converts images from the QRT ray tracer output format to PPM (Portable Pixmap) format. QRT was an early ray tracing program, and this tool is part of the Netpbm image processing toolkit, enabling legacy QRT renders to be converted into a widely supported format for viewing or further processing.
 
 # SEE ALSO
 

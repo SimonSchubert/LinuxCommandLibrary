@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display TigerGraph system information
+
 # TLDR
 
 **Show system info**
@@ -36,15 +40,9 @@
 
 # DESCRIPTION
 
-**tginfo** shows TigerGraph information. It displays system status.
+**tginfo** displays diagnostic information about a local TigerGraph graph database installation. It reports system details including version numbers, configuration settings, graph statistics such as vertex and edge counts, and license information including expiration dates and enabled features.
 
-System information. Version, config.
-
-Graph statistics. Vertices, edges.
-
-License details. Expiration, features.
-
-Diagnostic tool. Troubleshooting.
+The tool is primarily used for troubleshooting and monitoring TigerGraph deployments, providing a quick overview of the database system's state from the command line.
 
 # CAVEATS
 

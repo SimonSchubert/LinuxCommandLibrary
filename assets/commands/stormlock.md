@@ -1,3 +1,7 @@
+# TAGLINE
+
+Distributed locking with lease expiration
+
 # TLDR
 
 **Acquire lock**
@@ -46,15 +50,11 @@
 
 # DESCRIPTION
 
-**stormlock** provides distributed locks. It coordinates processes.
+**stormlock** provides distributed locking primitives for coordinating access to shared resources across multiple processes and services. It uses a lease-based model where locks automatically expire after a configurable time-to-live, preventing deadlocks caused by crashed or unresponsive processes.
 
-Lease-based locking. Auto-expiration.
+The tool supports multiple storage backends including Redis and etcd, allowing it to integrate with existing infrastructure. The basic workflow involves acquiring a lock by name (which returns a lease ID), performing the protected operation, and then releasing the lock using the lease ID. The TTL mechanism ensures that locks are eventually freed even if the holder fails to release them.
 
-Multiple backends. Redis, etcd, etc.
-
-Distributed coordination. Across services.
-
-Simple interface. Acquire and release.
+Stormlock is designed for simple distributed coordination scenarios such as preventing concurrent deployments, serializing database migrations, or ensuring only one instance of a batch job runs at a time across a cluster of machines.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create silent screencasts and GIFs
+
 # TLDR
 
 **Launch** silentcast

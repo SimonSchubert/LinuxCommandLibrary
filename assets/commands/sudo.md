@@ -1,3 +1,7 @@
+# TAGLINE
+
+Execute commands with elevated privileges
+
 # TLDR
 
 **Run a command as root**
@@ -107,6 +111,17 @@
 After successful authentication, sudo caches credentials for a grace period (typically 5 minutes), allowing subsequent commands without re-entering the password. Use **-k** to invalidate this cache.
 
 The **sudoers** file controls who can run what commands on which hosts. Users can be granted full root access or restricted to specific commands. The **visudo** command should be used to edit sudoers safely.
+
+# CONFIGURATION
+
+**/etc/sudoers**
+> Main policy file defining which users can run which commands. Edit with visudo only.
+
+**/etc/sudoers.d/**
+> Drop-in directory for modular sudo policy files.
+
+**SUDO_EDITOR**
+> Environment variable specifying the editor for sudoedit.
 
 # CAVEATS
 

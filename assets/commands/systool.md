@@ -1,3 +1,7 @@
+# TAGLINE
+
+Sysfs device information viewer
+
 # TLDR
 
 List **bus** device attributes

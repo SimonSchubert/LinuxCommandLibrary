@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert PPM to X puzzle image format
+
 # TLDR
 
 **Convert PPM to X puzzle format**

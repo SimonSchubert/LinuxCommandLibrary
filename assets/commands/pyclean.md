@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove Python compiled bytecode files
+
 # TLDR
 
 **Remove bytecode files**
@@ -36,11 +40,9 @@ _DIRECTORY_
 
 # DESCRIPTION
 
-**pyclean** removes Python bytecode files. Cleanup utility.
+**pyclean** removes Python compiled bytecode files (**.pyc**) and **__pycache__** directories from a specified directory tree or Debian package. This is useful for cleaning up stale bytecode after Python version changes, reducing disk usage, or preparing clean source distributions.
 
-The tool deletes .pyc and __pycache__. Disk space cleanup.
-
-pyclean removes bytecode.
+The tool is part of Debian's Python packaging infrastructure and can target specific packages with the **-p** flag or recursively clean arbitrary directories. Since Python regenerates bytecode files automatically on import, removing them has no lasting effect beyond temporarily increasing the next import time.
 
 # CAVEATS
 

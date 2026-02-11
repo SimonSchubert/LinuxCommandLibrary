@@ -1,3 +1,7 @@
+# TAGLINE
+
+FUSE filesystem for SMB network browsing
+
 # TLDR
 
 **Mount** SMB shares at a mountpoint

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Switch to new root filesystem during boot
+
 # TLDR
 
 **Switch** to a new root filesystem and start init

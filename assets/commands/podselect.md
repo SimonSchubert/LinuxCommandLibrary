@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extract sections from Perl POD files
+
 # TLDR
 
 **Extract specific sections from POD**
@@ -26,11 +30,9 @@ _FILES_
 
 # DESCRIPTION
 
-**podselect** extracts sections from Perl POD documentation. Part of Perl.
+**podselect** extracts specific named sections from Perl POD (Plain Old Documentation) files. It filters the POD content and outputs only the sections matching the **-section** arguments.
 
-The tool filters POD content. Selects specific sections.
-
-podselect extracts sections.
+Multiple **-section** flags can be specified to extract several sections at once. This is useful for extracting individual sections like NAME, SYNOPSIS, or DESCRIPTION from larger POD documents. Part of the standard Perl distribution.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Enable shadow password storage
+
 # TLDR
 
 **Convert to shadow passwords**
@@ -19,11 +23,9 @@
 
 # DESCRIPTION
 
-**pwconv** creates shadow password file from passwd. Enables shadow passwords.
+**pwconv** creates or updates the **/etc/shadow** file from **/etc/passwd**, migrating password hashes from the world-readable passwd file to the root-only-readable shadow file. This is a fundamental security measure that prevents unprivileged users from accessing password hashes for offline cracking.
 
-The tool migrates password hashes. Security enhancement.
-
-pwconv enables shadow.
+The command is part of **shadow-utils** and is typically run once during initial system setup or when converting a legacy system to shadow passwords. It preserves existing shadow entries and only adds or updates entries as needed.
 
 # CAVEATS
 

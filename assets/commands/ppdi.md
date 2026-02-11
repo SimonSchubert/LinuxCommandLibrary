@@ -1,3 +1,7 @@
+# TAGLINE
+
+Import PPD files into CUPS driver format
+
 # TLDR
 
 **Import PPD files**
@@ -29,11 +33,9 @@ _FILES_
 
 # DESCRIPTION
 
-**ppdi** imports PPD files into CUPS driver format. Part of CUPS.
+**ppdi** imports existing PPD (PostScript Printer Description) files into the CUPS driver source format (.drv). This is the reverse operation of **ppdc**, allowing administrators to convert standalone PPD files into the compact driver source format for easier maintenance and distribution.
 
-The tool converts PPD to drv format. Reverse of ppdc.
-
-ppdi imports PPD files.
+The imported driver source files can then be edited to add new printer models or modify options, and recompiled with ppdc. This workflow simplifies managing large collections of printer definitions by consolidating them into shared driver source files.
 
 # CAVEATS
 

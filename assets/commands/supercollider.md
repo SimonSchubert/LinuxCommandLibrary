@@ -1,3 +1,7 @@
+# TAGLINE
+
+Audio synthesis programming language interpreter
+
 # TLDR
 
 **Start the SuperCollider interpreter**

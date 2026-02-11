@@ -1,3 +1,7 @@
+# TAGLINE
+
+Add text labels to PPM images
+
 # TLDR
 
 **Add text label to image**

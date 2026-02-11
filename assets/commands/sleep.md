@@ -1,3 +1,7 @@
+# TAGLINE
+
+Pause execution for specified duration
+
 # TLDR
 
 Delay in **seconds**

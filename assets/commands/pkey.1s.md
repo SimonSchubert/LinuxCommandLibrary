@@ -1,3 +1,7 @@
+# TAGLINE
+
+Process and convert public and private keys
+
 # TLDR
 
 **View public key**
@@ -42,11 +46,9 @@
 
 # DESCRIPTION
 
-**openssl pkey** processes public/private keys. Generic key utility.
+**openssl pkey** is a unified key processing utility that handles public and private keys regardless of algorithm type (RSA, EC, DSA, Ed25519, etc.). It replaces the older algorithm-specific commands like **openssl rsa** and **openssl ec**.
 
-The tool handles various key types. RSA, EC, DSA support.
-
-openssl pkey manages keys.
+The tool can extract public keys from private keys with **-pubout**, convert between PEM and DER formats, display key parameters with **-text**, and remove or add passphrase encryption. It works with any key type that OpenSSL supports.
 
 # CAVEATS
 

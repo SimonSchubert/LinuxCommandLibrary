@@ -1,3 +1,7 @@
+# TAGLINE
+
+Render images in terminal using ANSI colors
+
 # TLDR
 
 **Display image in terminal**
@@ -53,15 +57,11 @@
 
 # DESCRIPTION
 
-**pixterm** renders images in the terminal using ANSI escape codes. It converts images to colored text.
+**pixterm** renders images directly in the terminal using ANSI escape codes and Unicode half-block characters. Each text character cell represents two vertical pixels, achieving higher resolution than character-only renderers.
 
-Unicode half-block characters provide higher resolution. Two pixel rows fit in one text line.
+Color depth can be set to 24-bit true color for maximum quality or 8-bit (256 colors) for broader terminal compatibility. Dithering algorithms improve gradient and color transition rendering at the cost of processing time.
 
-Color depth affects quality and compatibility. 24-bit mode uses true color, 8-bit uses 256 palette.
-
-Dithering improves gradient rendering. Different algorithms trade speed for quality.
-
-Output can be saved as ANSI text. Works in any terminal that supports colors.
+Output is standard ANSI text that can be redirected to a file for later display. The scale and cell size parameters control how the image maps to terminal dimensions.
 
 # CAVEATS
 

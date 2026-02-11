@@ -1,3 +1,7 @@
+# TAGLINE
+
+Initialize new Sailfish OS projects
+
 # TLDR
 
 **Initialize new project**

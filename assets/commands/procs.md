@@ -1,3 +1,7 @@
+# TAGLINE
+
+Modern Rust-based process viewer
+
 # TLDR
 
 **List all processes**
@@ -93,6 +97,11 @@ Watch mode (-w) provides top-like real-time updates. Combined with sorting, it h
 Search works by keyword matching against multiple fields: process name, command line, user. Filters provide more precise control using expressions like "cpu gt 10" or "user eq root".
 
 Configuration file (~/.config/procs/config.toml) allows customizing columns, colors, and default options.
+
+# CONFIGURATION
+
+**~/.config/procs/config.toml**
+> User configuration file defining default columns, color themes, sort order, and display options.
 
 # CAVEATS
 

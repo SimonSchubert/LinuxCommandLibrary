@@ -1,3 +1,7 @@
+# TAGLINE
+
+Ruby on Rails web application framework CLI
+
 # TLDR
 
 **Create a new Rails application**
@@ -90,6 +94,23 @@
 The command operates in two contexts: outside an application (primarily **rails new** for creating projects) and inside an application directory (all other commands). Within a project, commands are typically invoked via **bin/rails** to ensure the correct bundled version is used.
 
 Rails emphasizes convention over configuration, and its CLI reflects this by providing generators that create boilerplate code following Rails conventions. The framework integrates database management, testing, asset compilation, and server operation into cohesive command-line workflows.
+
+# CONFIGURATION
+
+**config/database.yml**
+> Database connection settings for each environment (development, test, production), specifying adapter, host, credentials, and pool size.
+
+**config/routes.rb**
+> Application URL routing definitions mapping HTTP methods and paths to controller actions.
+
+**config/application.rb**
+> Main application configuration including framework defaults, middleware, and autoload paths.
+
+**config/environments/**
+> Per-environment settings files (development.rb, test.rb, production.rb) controlling caching, logging, and asset behavior.
+
+**RAILS_ENV**
+> Environment variable selecting the active environment (defaults to development).
 
 # CAVEATS
 

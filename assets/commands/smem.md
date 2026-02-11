@@ -1,3 +1,7 @@
+# TAGLINE
+
+Report memory usage with proportional metrics
+
 # TLDR
 
 **Print** memory usage for current processes

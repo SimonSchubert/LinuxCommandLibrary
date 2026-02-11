@@ -1,3 +1,7 @@
+# TAGLINE
+
+Process PKCS#7 certificate chain structures
+
 # TLDR
 
 **View PKCS#7 structure**
@@ -42,11 +46,9 @@
 
 # DESCRIPTION
 
-**openssl pkcs7** processes PKCS#7 structures. Certificate chain format.
+**openssl pkcs7** processes PKCS#7 structures (.p7b files), which contain certificate chains without private keys. This format is commonly used to distribute CA certificate bundles and intermediate certificates.
 
-The tool handles .p7b files. Extracts certificates from chains.
-
-openssl pkcs7 manages chains.
+The **-print_certs** option extracts individual PEM certificates from the chain. Format conversion between PEM and DER encodings is supported with **-inform** and **-outform**. The **-text** option displays the structure in human-readable form.
 
 # CAVEATS
 

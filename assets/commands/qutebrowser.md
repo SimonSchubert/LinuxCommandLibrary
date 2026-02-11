@@ -1,3 +1,7 @@
+# TAGLINE
+
+Keyboard-driven web browser with vim keybindings
+
 # TLDR
 
 **Start browser**

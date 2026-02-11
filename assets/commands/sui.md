@@ -1,3 +1,7 @@
+# TAGLINE
+
+Sui blockchain command-line interface
+
 # TLDR
 
 **Start local network**
@@ -50,15 +54,11 @@
 
 # DESCRIPTION
 
-**sui** interacts with Sui blockchain. It's the CLI tool.
+**sui** is the command-line interface for interacting with the Sui blockchain, a Layer 1 blockchain that uses the Move programming language for smart contracts. It provides tools for managing wallets, deploying and interacting with Move packages, executing transactions, and running a local development network.
 
-Smart contract deployment. Move packages.
+The CLI encompasses several subcommands including client operations for wallet management and transactions, move commands for building and testing smart contracts, and keytool for cryptographic key management. It supports connecting to devnet, testnet, and mainnet environments.
 
-Transaction management. Send and query.
-
-Key management. Wallets and addresses.
-
-Local development. Test network.
+A local network can be started for development and testing, providing a self-contained Sui environment without requiring connection to public networks. Gas budget management is integral to all transactions on the Sui blockchain.
 
 # CAVEATS
 

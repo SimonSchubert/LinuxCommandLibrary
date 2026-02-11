@@ -1,3 +1,7 @@
+# TAGLINE
+
+.NET strong name key management tool
+
 # TLDR
 
 **Create key pair**
@@ -46,15 +50,11 @@
 
 # DESCRIPTION
 
-**sn** manages strong names. It's for .NET assemblies.
+**sn** (Strong Name tool) creates and manages cryptographic key pairs used for signing .NET assemblies. Strong naming gives an assembly a unique identity by combining its name, version number, culture information, and a public key, preventing conflicts between assemblies with the same simple name.
 
-Key pair generation. Signing assemblies.
+The tool generates RSA key pairs for signing, extracts public keys for distribution without exposing the private key, and displays public key tokens (a short hash used as a compact identifier). It can also verify that an assembly's strong name signature is valid and re-sign assemblies with a different key pair.
 
-Public key extraction. Distribution without private.
-
-Token display. Short form identifier.
-
-Part of .NET SDK. Assembly management.
+Strong naming is part of the .NET Framework and Mono runtime. While still supported, Microsoft now recommends NuGet package signing for most scenarios, and strong naming is primarily used for legacy compatibility and Global Assembly Cache (GAC) registration.
 
 # CAVEATS
 

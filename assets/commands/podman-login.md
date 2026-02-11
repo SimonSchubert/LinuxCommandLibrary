@@ -1,3 +1,7 @@
+# TAGLINE
+
+Authenticate with container registries
+
 # TLDR
 
 **Login to Docker Hub**

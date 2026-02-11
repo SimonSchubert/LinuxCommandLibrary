@@ -1,3 +1,7 @@
+# TAGLINE
+
+Open shell in Sailfish build environment
+
 # TLDR
 
 **Open shell in build environment**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Enable swap devices and files
+
 # TLDR
 
 Show **swap information**

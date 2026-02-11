@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate and update the dependency lock file
+
 # TLDR
 
 **Generate lock file**
@@ -26,11 +30,9 @@
 
 # DESCRIPTION
 
-**poetry lock** generates poetry.lock file. Resolves and locks dependencies.
+**poetry lock** resolves all dependencies defined in **pyproject.toml** and writes the exact resolved versions to **poetry.lock**. This lock file ensures that every installation uses identical package versions for reproducible builds.
 
-The tool creates reproducible builds. Locks exact versions.
-
-poetry lock freezes deps.
+The **--no-update** flag regenerates the lock file format without updating dependency versions. The **--check** flag verifies that the existing lock file is consistent with pyproject.toml without modifying anything. Note that this command only updates the lock file; run **poetry install** afterward to actually install packages.
 
 # CAVEATS
 

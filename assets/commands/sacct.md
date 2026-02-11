@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display Slurm job accounting information
+
 # TLDR
 
 Display **recent jobs** with default fields

@@ -1,3 +1,7 @@
+# TAGLINE
+
+HTTP/HTTPS proxy for traffic capture
+
 # TLDR
 
 **Start proxy server**
@@ -63,15 +67,11 @@
 
 # DESCRIPTION
 
-**proxify** is a simple HTTP/HTTPS proxy for traffic capture. It logs and dumps web traffic.
+**proxify** is a lightweight HTTP/HTTPS proxy designed for capturing and logging web traffic during security testing. It intercepts requests and responses, dumping headers and bodies to the console or organized output directories for later analysis.
 
-Request and response bodies are captured. Useful for analyzing application traffic.
+Pattern matching options filter captured traffic by request or response body content, allowing testers to focus on specific content types or keywords of interest. Upstream proxy support enables chaining through tools like Burp Suite or mitmproxy for more advanced inspection.
 
-Pattern matching filters interesting traffic. Focus on specific content types or keywords.
-
-Upstream proxy chains through another proxy. Enables integration with other security tools.
-
-Output organization saves traffic by domain. Easy to review captured data.
+The tool is developed by ProjectDiscovery and integrates with their security testing toolkit. Traffic is saved organized by domain, making it straightforward to review captured data from specific targets.
 
 # CAVEATS
 

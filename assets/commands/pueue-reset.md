@@ -1,3 +1,7 @@
+# TAGLINE
+
+Reset pueue daemon to clean state
+
 # TLDR
 
 **Reset pueue state**

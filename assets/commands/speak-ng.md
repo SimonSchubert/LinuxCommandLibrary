@@ -1,3 +1,7 @@
+# TAGLINE
+
+eSpeak NG text-to-speech synthesizer
+
 # TLDR
 
 **Speak text**
@@ -53,15 +57,11 @@
 
 # DESCRIPTION
 
-**speak-ng** speaks text aloud. It's a text-to-speech engine.
+**speak-ng** is the command-line interface for eSpeak NG, a compact open-source text-to-speech synthesizer supporting over 100 languages and accents. It uses formant synthesis to generate speech from phoneme rules, producing intelligible output with a small footprint.
 
-Multiple languages. Many voice options.
+The tool reads text from command-line arguments, files, or stdin and outputs audio through the system sound device or saves it as WAV files. Voice characteristics including speed (words per minute), pitch, and volume are adjustable. SSML (Speech Synthesis Markup Language) input is supported for fine-grained control over pronunciation and prosody.
 
-Phoneme-based synthesis. Formant generation.
-
-SSML support. Speech markup.
-
-WAV output. Save audio files.
+eSpeak NG is widely used in accessibility tools, embedded systems, and as a backend for Speech Dispatcher. Its compact size and broad language support make it the default speech synthesizer on many Linux distributions.
 
 # CAVEATS
 

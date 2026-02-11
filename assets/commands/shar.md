@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create self-extracting shell archives
+
 # TLDR
 
 Create a **basic shell archive**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display remote disk usage via SNMP
+
 # TLDR
 
 **Show disk usage via SNMP**
@@ -32,7 +36,11 @@
 
 # DESCRIPTION
 
-**snmpdf** displays disk usage information from remote hosts via SNMP. Similar to df command but retrieves data over network using SNMP protocol. Part of Net-SNMP suite.
+**snmpdf** displays disk space and storage usage from remote hosts by querying SNMP agents, providing functionality similar to the **df** command but over the network. It reads the Host Resources MIB (hrStorageTable) to report filesystem sizes, used space, and availability.
+
+The tool queries storage entries including physical disks, RAM, virtual memory, and other storage types reported by the SNMP agent. The **-Ch** flag formats output in human-readable sizes, and **-Cu** includes all storage types rather than just physical filesystems.
+
+snmpdf is part of the **Net-SNMP** suite and is useful for monitoring disk usage across many hosts from a central location without requiring SSH access or agents beyond the standard SNMP daemon.
 
 # SEE ALSO
 

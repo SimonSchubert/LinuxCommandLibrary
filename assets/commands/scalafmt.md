@@ -1,3 +1,7 @@
+# TAGLINE
+
+Opinionated Scala code formatter
+
 # TLDR
 
 **Format files**
@@ -60,15 +64,14 @@
 
 # DESCRIPTION
 
-**scalafmt** formats Scala source code. It enforces consistent code style.
+**scalafmt** is an opinionated code formatter for Scala that enforces consistent style across projects. It reformats source code according to configurable rules covering line length, indentation, alignment, and import ordering, supporting both Scala 2 and Scala 3 syntax through dialect configuration.
 
-Configuration defines formatting rules. Line length, indentation, and alignment settings.
+The **--check** mode verifies formatting without modifying files, returning a non-zero exit code when changes would be made, which is useful for CI pipeline enforcement. The **-i** (in-place) mode directly modifies files during development. Configuration is defined in a **.scalafmt.conf** file at the project root using HOCON format.
 
-Check mode verifies formatting. Useful in CI pipelines.
+# CONFIGURATION
 
-In-place mode modifies files directly. Convenient for development.
-
-Scala 2 and 3 syntax supported. Dialect configured per project.
+**.scalafmt.conf**
+> Project-level configuration file in HOCON format defining formatting rules including maxColumn, dialect, align settings, and rewrite rules.
 
 # CAVEATS
 

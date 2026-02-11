@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage TigerGraph Cloud instances
+
 # TLDR
 
 **List instances**
@@ -46,15 +50,9 @@
 
 # DESCRIPTION
 
-**tgcloud** manages TigerGraph Cloud. It's the CLI for cloud instances.
+**tgcloud** is the command-line interface for managing TigerGraph Cloud graph database instances. It provides programmatic control over cloud-hosted TigerGraph deployments, enabling instance lifecycle management including creation, deletion, starting, stopping, and status monitoring.
 
-Instance management. Create, delete, start.
-
-Cloud operations. Remote database.
-
-Graph database. TigerGraph service.
-
-API access. Programmatic control.
+The tool is designed for automation and scripting workflows, allowing DevOps teams to manage TigerGraph Cloud infrastructure from the terminal or CI/CD pipelines without using the web console.
 
 # CAVEATS
 

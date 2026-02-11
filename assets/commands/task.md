@@ -1,3 +1,7 @@
+# TAGLINE
+
+Command-line task management system
+
 # TLDR
 
 **Add a new task**
@@ -105,6 +109,20 @@
 Tasks can have attributes like **project**, **priority** (H/M/L), **due** dates, **tags**, **wait** dates, and user-defined attributes. Filters allow selecting tasks based on any combination of attributes. Reports provide customizable views of task data.
 
 Configuration is stored in **~/.taskrc** and task data in **~/.task/**. These locations can be overridden via environment variables **TASKRC** and **TASKDATA**. All commands can be abbreviated as long as the prefix is unique.
+
+# CONFIGURATION
+
+**~/.taskrc**
+> Main configuration file controlling reports, colors, aliases, and default behaviors
+
+**~/.task/**
+> Default data directory containing task database, undo log, and backlog for sync
+
+**TASKRC**
+> Environment variable to override the configuration file location
+
+**TASKDATA**
+> Environment variable to override the data directory location
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Apply TV scan line effect to images
+
 # TLDR
 
 **Apply TV scan line effect**

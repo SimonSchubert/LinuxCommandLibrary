@@ -1,3 +1,7 @@
+# TAGLINE
+
+Capture still images from Raspberry Pi camera
+
 # TLDR
 
 Capture with **different encoding** format

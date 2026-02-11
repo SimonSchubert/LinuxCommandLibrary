@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display Pokemon ANSI art in terminal
+
 # TLDR
 
 **Display random Pokemon**

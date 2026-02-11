@@ -1,3 +1,7 @@
+# TAGLINE
+
+Play audio files through PipeWire
+
 # TLDR
 
 This command is an **alias** of **pw-cat --playback**

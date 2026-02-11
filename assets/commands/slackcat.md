@@ -1,3 +1,7 @@
+# TAGLINE
+
+Pipe command output to Slack channels
+
 # TLDR
 
 **Send message**
@@ -50,15 +54,9 @@
 
 # DESCRIPTION
 
-**slackcat** sends to Slack. It pipes output to channels.
+**slackcat** pipes command-line output and files directly to Slack channels, bridging terminal workflows with team communication. It accepts input from stdin, command arguments, or file uploads, sending the content as messages or file snippets to a specified channel.
 
-Command output to Slack. Integrate with scripts.
-
-File uploads supported. Share snippets.
-
-Stream mode available. Continuous output.
-
-Tee mode preserves output. Send and display.
+Stream mode (**--stream**) sends output continuously as it arrives, useful for tailing log files into Slack in real time. Tee mode (**--tee**) simultaneously prints output to stdout and sends it to Slack, preserving normal terminal behavior while sharing with the team.
 
 # CAVEATS
 

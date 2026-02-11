@@ -1,3 +1,7 @@
+# TAGLINE
+
+Completely prevent unit from starting
+
 # TLDR
 
 **Mask** a service (prevent it from being started)

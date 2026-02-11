@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Rust cross-compilation targets
+
 # TLDR
 
 **List targets**

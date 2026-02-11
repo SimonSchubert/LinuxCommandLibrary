@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal countdown timer and stopwatch
+
 # TLDR
 
 **Countdown timer**
@@ -50,15 +54,9 @@
 
 # DESCRIPTION
 
-**termdown** shows countdown timers. It runs in terminal.
+**termdown** displays countdown timers and stopwatches in the terminal using large figlet-style text for high visibility. It accepts time in various formats including seconds, minutes (e.g., **5m**), hours (e.g., **1h30m**), or a specific target time (e.g., **14:30**).
 
-Large figlet display. Easy to see.
-
-Multiple time formats. Minutes, seconds, time.
-
-Sound support. Alert when done.
-
-Stopwatch mode. Count up.
+The timer can play a sound file when it reaches zero, blink the display, and show a custom title. A critical threshold option changes the display color when time is running low. The **-s** flag switches to stopwatch mode, counting upward instead of down.
 
 # CAVEATS
 

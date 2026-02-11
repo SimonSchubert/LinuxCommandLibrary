@@ -1,3 +1,7 @@
+# TAGLINE
+
+Pack repository into AI-friendly format
+
 # TLDR
 
 **Pack repository**
@@ -50,15 +54,16 @@
 
 # DESCRIPTION
 
-**repomix** packs repositories for AI. It creates single-file context.
+**repomix** packs an entire code repository into a single text file optimized for use as context in AI language model conversations. It concatenates source files with clear file boundary markers and a directory tree summary, making it easy for LLMs to understand the full structure and content of a codebase.
 
-Concatenates source files. Optimal for LLM input.
+The tool automatically respects .gitignore rules to skip irrelevant files like dependencies and build artifacts. Include and exclude patterns provide fine-grained control over which files are packed. Built-in token counting estimates how much of an LLM's context window the output will consume, helping users stay within model limits.
 
-Respects gitignore. Skips ignored files.
+Output formats include plain text, XML, and Markdown, each with clear file delimiters and optional metadata headers. The tool can be configured via a **repomix.config.json** file for consistent usage across a project.
 
-Token counting included. Estimates context usage.
+# CONFIGURATION
 
-Multiple output formats. Plain, XML, Markdown.
+**repomix.config.json**
+> Project-level configuration file specifying default output format, include/exclude patterns, and output filename. Loaded automatically from the repository root.
 
 # CAVEATS
 

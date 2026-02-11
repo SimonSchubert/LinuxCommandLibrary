@@ -76,6 +76,11 @@ The server encrypts all traffic between client and server using modern cryptogra
 
 Configuration can be provided via command-line arguments or a JSON file. The JSON format supports additional options like multiple server ports and plugin configuration.
 
+# CONFIGURATION
+
+**/etc/shadowsocks-libev/config.json**
+> System-wide JSON configuration file specifying server address, port, password, encryption method, timeout, and optional plugin settings.
+
 # CAVEATS
 
 Avoid deprecated stream ciphers (rc4-md5, aes-cfb, etc.) as they lack authentication. Use AEAD ciphers for security. Running as root is not recommended; use **-a** to drop privileges. TCP fast open requires kernel support and may be blocked by some networks. Check local laws regarding proxy software usage.

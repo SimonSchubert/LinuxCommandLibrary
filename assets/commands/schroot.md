@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run commands in managed chroot environments
+
 # TLDR
 
 **List** available chroots
@@ -64,6 +68,17 @@ Start **interactive shell** as specific user
 **schroot** runs commands or starts interactive shells in different root directory environments. It provides more features and customization than basic chroot, including session management and user mapping.
 
 Configured via /etc/schroot/schroot.conf, it supports multiple chroot types and configurations.
+
+# CONFIGURATION
+
+**/etc/schroot/schroot.conf**
+> Main configuration file defining available chroot environments, their types, locations, and access permissions.
+
+**/etc/schroot/chroot.d/**
+> Directory for individual chroot definition files, allowing modular configuration.
+
+**/etc/schroot/setup.d/**
+> Directory containing setup scripts executed when sessions begin and end, handling mount points, networking, and environment preparation.
 
 # CAVEATS
 

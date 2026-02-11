@@ -1,3 +1,7 @@
+# TAGLINE
+
+Build desktop apps with web technologies
+
 # TLDR
 
 **Initialize a new Tauri project**

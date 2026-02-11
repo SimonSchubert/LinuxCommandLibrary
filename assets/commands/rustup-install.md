@@ -1,3 +1,7 @@
+# TAGLINE
+
+Install a specific Rust toolchain
+
 # TLDR
 
 **Install toolchain**

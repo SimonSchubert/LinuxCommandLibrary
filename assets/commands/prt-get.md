@@ -1,3 +1,7 @@
+# TAGLINE
+
+Package manager for CRUX Linux
+
 # TLDR
 
 **Install** a package

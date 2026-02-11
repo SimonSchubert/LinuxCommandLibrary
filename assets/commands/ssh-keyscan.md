@@ -43,7 +43,9 @@
 
 # DESCRIPTION
 
-**ssh-keyscan** gathers SSH public host keys. Collects keys for adding to known_hosts. Useful for automating SSH host key distribution and verification.
+**ssh-keyscan** is a utility for gathering SSH public host keys from remote servers. It connects to each specified host and retrieves the server's public keys, outputting them in a format suitable for appending to **~/.ssh/known_hosts** or **/etc/ssh/ssh_known_hosts** files.
+
+The tool is primarily used for automating host key distribution in environments where manually accepting host keys during first connection is impractical. It can scan multiple hosts in parallel, read host lists from files, and filter by key type (RSA, Ed25519, ECDSA). The **-H** option hashes hostnames in the output for additional privacy.
 
 # SEE ALSO
 

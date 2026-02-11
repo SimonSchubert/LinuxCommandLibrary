@@ -1,3 +1,7 @@
+# TAGLINE
+
+Deprecated Debian Python module manager
+
 # TLDR
 
 **Register Python modules (deprecated)**
@@ -15,11 +19,9 @@ _ACTION_
 
 # DESCRIPTION
 
-**pycentral** managed Python modules. Debian packaging tool (deprecated).
+**pycentral** was a Debian tool for managing Python module installations across multiple Python interpreter versions. It handled byte-compilation and module registration for Debian packages containing Python code.
 
-The tool handled module installation. Replaced by dh-python.
-
-pycentral is deprecated.
+The tool has been deprecated and replaced by **dh-python** and **pybuild**, which provide more modern and maintainable approaches to Python packaging on Debian-based systems. Existing packages using pycentral should be migrated to dh-python.
 
 # CAVEATS
 

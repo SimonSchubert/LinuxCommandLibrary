@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fast LaTeX source code formatter
+
 # TLDR
 
 **Format file**
@@ -43,15 +47,9 @@
 
 # DESCRIPTION
 
-**tex-fmt** formats LaTeX files. It standardizes whitespace.
+**tex-fmt** is a fast LaTeX source code formatter written in Rust that standardizes indentation and whitespace in .tex files. It ensures consistent formatting across documents and teams by applying configurable indentation rules to LaTeX environments, commands, and structures.
 
-Consistent indentation. Clean formatting.
-
-Check mode for CI. Verify without changing.
-
-Configurable rules. Customize style.
-
-Fast formatting. Rust implementation.
+The **-w** flag writes changes in place, while **--check** mode verifies formatting without modifying files, making it suitable for CI pipelines. Configuration can be provided via a TOML file to customize indentation width, tab handling, and other style preferences.
 
 # CAVEATS
 

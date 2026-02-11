@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert SBIG ST-4 autoguider images to PGM
+
 # TLDR
 
 **Convert SBIG ST-4 to PGM**

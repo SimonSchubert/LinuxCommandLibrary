@@ -1,3 +1,7 @@
+# TAGLINE
+
+Wayland wallpaper setter for Sway
+
 # TLDR
 
 **Set wallpaper**
@@ -52,15 +56,11 @@
 
 # DESCRIPTION
 
-**swaybg** sets wallpapers for Sway and wlroots compositors. It's the standard Wayland background setter.
+**swaybg** sets desktop wallpapers for Sway and other wlroots-based Wayland compositors. It supports displaying image files with various scaling modes (stretch, fill, fit, center, tile) or setting a solid background color using hex codes.
 
-Image mode displays wallpaper. Various scaling options available.
+Different wallpapers can be assigned to individual outputs by specifying the output name, enabling per-monitor backgrounds in multi-display setups. The tool runs as a persistent background process; to change the wallpaper, the running instance must be killed and a new one started with the desired settings.
 
-Color mode sets solid background. Hex color codes supported.
-
-Output targeting sets per-monitor wallpapers. Different wallpapers on each display.
-
-Runs as daemon. Kill to change wallpaper.
+Swaybg is typically launched from the Sway configuration file using an `exec` directive, ensuring the wallpaper is set automatically when the compositor starts.
 
 # CAVEATS
 

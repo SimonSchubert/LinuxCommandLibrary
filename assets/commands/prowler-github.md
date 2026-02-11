@@ -1,3 +1,7 @@
+# TAGLINE
+
+GitHub organization security assessment
+
 # TLDR
 
 **Run GitHub security assessment**

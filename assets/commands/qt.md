@@ -1,3 +1,7 @@
+# TAGLINE
+
+Cross-platform C++ application framework tools
+
 # TLDR
 
 **Create Qt project**

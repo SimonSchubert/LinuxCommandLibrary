@@ -1,3 +1,7 @@
+# TAGLINE
+
+Sync files to and from cloud storage
+
 # TLDR
 
 **Configure a new remote** interactively
@@ -95,6 +99,17 @@ The **sync** command makes the destination identical to the source, including de
 Configuration is stored in **~/.config/rclone/rclone.conf** and created interactively with **rclone config**. Each remote has a name used as a prefix (e.g., **gdrive:**) in commands.
 
 The **mount** command exposes cloud storage as a local filesystem using FUSE, enabling standard file operations on remote storage.
+
+# CONFIGURATION
+
+**~/.config/rclone/rclone.conf**
+> Main configuration file storing remote definitions with provider type, credentials, and options. Created interactively via **rclone config**.
+
+**RCLONE_CONFIG**
+> Environment variable overriding the default configuration file path.
+
+**RCLONE_CONFIG_PASS**
+> Environment variable providing the password for an encrypted configuration file.
 
 # CAVEATS
 

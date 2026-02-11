@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interactively configure PPPoE connection
+
 # TLDR
 
 **Configure PPPoE connection**
@@ -18,11 +22,9 @@ Interactive configuration tool.
 
 # DESCRIPTION
 
-**pppoe-setup** configures PPPoE DSL connection interactively. Setup wizard.
+**pppoe-setup** is an interactive script that guides the user through configuring a PPPoE DSL broadband connection. It prompts for the network interface, ISP username and password, DNS settings, and firewall options.
 
-The tool creates pppoe.conf file. Prompts for credentials and settings.
-
-pppoe-setup configures DSL.
+The configuration is saved to **/etc/ppp/pppoe.conf** and related files, which are then used by **pppoe-connect** and **pppoe-start** to establish the connection. Run this once during initial DSL setup or when changing ISP settings.
 
 # CAVEATS
 

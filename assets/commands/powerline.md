@@ -1,3 +1,7 @@
+# TAGLINE
+
+Statusline plugin for shells and editors
+
 # TLDR
 
 **Start daemon**
@@ -38,7 +42,9 @@
 
 # DESCRIPTION
 
-**Powerline** is a statusline plugin for vim, tmux, and shell prompts. It provides informative, beautiful status displays with Git status, virtualenv, and other contextual information.
+**Powerline** is a statusline plugin for vim, tmux, zsh, bash, and other applications. It provides informative, visually appealing status displays showing contextual information such as Git branch and status, Python virtualenv, current working directory, hostname, and battery level.
+
+The tool runs as a daemon process for performance, communicating with shell prompts and editor plugins via a client. Configuration files in **~/.config/powerline/** control themes, color schemes, and which segments appear in each context. A powerline-compatible font is required for the special glyphs used in the status bar separators.
 
 # EXAMPLES
 
@@ -72,6 +78,17 @@ fi
 # In ~/.tmux.conf
 source /usr/share/powerline/bindings/tmux/powerline.conf
 ```
+
+# CONFIGURATION
+
+**~/.config/powerline/config.json**
+> Main configuration file defining default theme, colorscheme, and per-extension overrides for shell, tmux, vim, and other contexts.
+
+**~/.config/powerline/themes/**
+> Theme files controlling which segments appear in each statusline context (shell prompt, tmux status bar, vim statusline).
+
+**~/.config/powerline/colorschemes/**
+> Color scheme files mapping segment highlight groups to terminal colors.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert PPM to Atari Neochrome format
+
 # TLDR
 
 **Convert PPM to Atari Neochrome**

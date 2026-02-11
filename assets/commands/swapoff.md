@@ -1,3 +1,7 @@
+# TAGLINE
+
+Disable swap devices and files
+
 # TLDR
 
 **Disable** a swap area

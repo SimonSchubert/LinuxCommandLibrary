@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert Perl POD documentation to HTML
+
 # TLDR
 
 **Convert POD to HTML**
@@ -41,11 +45,9 @@ _FILE_
 
 # DESCRIPTION
 
-**pod2html** converts Perl POD documentation to HTML. Part of Perl distribution.
+**pod2html** converts Perl POD (Plain Old Documentation) files into HTML pages with hyperlinked cross-references. It generates a table of contents from section headings and converts POD formatting directives into appropriate HTML markup.
 
-The tool creates web-viewable documentation. Generates hyperlinked pages.
-
-pod2html creates HTML docs.
+The **--title** option sets the HTML page title, and **--css** adds a stylesheet link. Use **--index** or **--noindex** to control table of contents generation. Part of the standard Perl distribution.
 
 # CAVEATS
 

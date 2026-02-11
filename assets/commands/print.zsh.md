@@ -1,3 +1,7 @@
+# TAGLINE
+
+Zsh enhanced text output built-in
+
 # TLDR
 
 **Print text**
@@ -46,11 +50,9 @@
 
 # DESCRIPTION
 
-**print** is zsh's built-in print command. Enhanced output utility.
+**print** in zsh is an enhanced built-in command for text output that extends the ksh version with additional features. It supports printf-style formatting via **-f**, prompt expansion with **-P** (for displaying prompt escape sequences like %~ for the current directory), and can print array elements one per line with **-l**.
 
-The tool provides flexible text output. More features than echo.
-
-print outputs in zsh.
+The command provides reliable text output behavior compared to echo, whose handling of backslash escapes and option-like arguments varies across shells. Output can be directed to specific file descriptors with **-u** for writing to stderr or other open descriptors.
 
 # CAVEATS
 

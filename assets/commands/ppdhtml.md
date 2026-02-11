@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate HTML from PPD printer files
+
 # TLDR
 
 **Convert PPD to HTML**
@@ -19,11 +23,9 @@ _FILE_
 
 # DESCRIPTION
 
-**ppdhtml** converts PPD files to HTML documentation. Part of CUPS.
+**ppdhtml** converts CUPS PPD (PostScript Printer Description) files into human-readable HTML documentation. The generated HTML pages describe the printer's supported options, paper sizes, resolutions, and other capabilities defined in the PPD file.
 
-The tool creates readable printer docs. Generates HTML from PPD.
-
-ppdhtml documents printers.
+This is useful for creating reference documentation for printer drivers or for reviewing the options available for a particular printer model without manually parsing the PPD file format. Output is written to stdout and can be redirected to an HTML file.
 
 # CAVEATS
 

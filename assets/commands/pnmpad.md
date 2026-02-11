@@ -1,3 +1,7 @@
+# TAGLINE
+
+Add padding to PNM images
+
 # TLDR
 
 **Add padding to image**
@@ -44,11 +48,9 @@ _FILE_
 
 # DESCRIPTION
 
-**pnmpad** adds borders to PNM images. Extends canvas size.
+**pnmpad** adds padding (blank space) around PNM images, extending the canvas size without scaling the original content. Padding can be added independently to each side using **-left**, **-right**, **-top**, and **-bottom**.
 
-The tool pads images with color. Useful for resizing canvas.
-
-pnmpad adds borders.
+Alternatively, **-width** and **-height** specify the desired output dimensions, centering the original image within the new canvas. The **-color** option sets the padding color (default is black). This is the inverse of pnmcrop. Part of the Netpbm toolkit.
 
 # CAVEATS
 

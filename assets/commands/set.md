@@ -1,3 +1,7 @@
+# TAGLINE
+
+Set shell options and positional parameters
+
 # TLDR
 
 **Enable strict mode** (exit on error, undefined variables, pipeline failures)

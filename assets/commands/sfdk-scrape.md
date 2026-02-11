@@ -1,3 +1,7 @@
+# TAGLINE
+
+Retrieve app metadata from Jolla Store
+
 # TLDR
 
 **Scrape store metadata**

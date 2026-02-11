@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compute legacy file checksums
+
 # TLDR
 
 **Calculate checksum**

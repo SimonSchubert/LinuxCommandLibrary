@@ -1,3 +1,7 @@
+# TAGLINE
+
+Calendar and reminder system
+
 # TLDR
 
 **Show reminders**
@@ -87,6 +91,11 @@ remind -z ~/.reminders &
 # HTML calendar
 remind -pp ~/.reminders | rem2html > cal.html
 ```
+
+# CONFIGURATION
+
+**~/.reminders**
+> Default reminder file containing REM statements that define events, recurring schedules, and timed alerts using Remind's scripting language.
 
 # CAVEATS
 

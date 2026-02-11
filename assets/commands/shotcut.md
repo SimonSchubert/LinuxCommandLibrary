@@ -1,3 +1,7 @@
+# TAGLINE
+
+Free cross-platform video editor
+
 # TLDR
 
 **Open Shotcut**
@@ -43,17 +47,9 @@
 
 # DESCRIPTION
 
-**shotcut** is a video editor. It's free and cross-platform.
+**Shotcut** is a free, open-source, cross-platform video editor that provides non-linear editing with a timeline-based workflow. It supports a wide range of audio and video formats natively through its FFmpeg backend, allowing files to be placed directly on the timeline without import or transcoding.
 
-Non-linear editing. Timeline-based workflow.
-
-Wide format support. FFmpeg backend.
-
-Native timeline editing. No import required.
-
-Filter effects included. Video and audio.
-
-GPU acceleration. Faster rendering.
+The editor includes a comprehensive set of video and audio filters for effects, color correction, transitions, and compositing. GPU acceleration via OpenGL is available for faster preview and rendering on supported hardware. Projects are saved in MLT XML format and can export to numerous output formats and codecs.
 
 # CAVEATS
 

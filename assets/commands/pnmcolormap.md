@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate color palette from PNM images
+
 # TLDR
 
 **Generate color map with N colors**

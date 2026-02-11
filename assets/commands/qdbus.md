@@ -1,3 +1,7 @@
+# TAGLINE
+
+Query and interact with D-Bus services
+
 # TLDR
 
 **List D-Bus services**
@@ -42,11 +46,9 @@ _METHOD_
 
 # DESCRIPTION
 
-**qdbus** interacts with D-Bus services. Qt D-Bus tool.
+**qdbus** is a Qt-based command-line tool for interacting with D-Bus services on Linux desktops. It can list available services, browse their object hierarchies, read and write properties, and call methods, making it useful for debugging, scripting, and integrating with desktop applications.
 
-The tool calls methods and properties. Introspects services.
-
-qdbus queries D-Bus.
+When invoked without arguments, it lists all services on the session bus. Adding a service name shows its object paths, and adding an object path shows its interfaces and methods. The **--system** flag switches to the system bus for interacting with system-level services like NetworkManager or systemd.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert Python source to syntax-highlighted HTML
+
 # TLDR
 
 **Convert Python to HTML**
@@ -19,11 +23,9 @@ _FILE_
 
 # DESCRIPTION
 
-**pyhtmlizer** converts Python source to syntax-highlighted HTML. Twisted utility.
+**pyhtmlizer** converts Python source code files into syntax-highlighted HTML documents. It is distributed as part of the Twisted framework's utility collection and uses Twisted's internal tokenizer to parse Python syntax and apply color-coded markup.
 
-The tool generates colored HTML. Part of Twisted framework.
-
-pyhtmlizer creates HTML from Python.
+The generated HTML preserves the structure of the original source with colored keywords, strings, comments, and identifiers. Output goes to stdout by default, making it easy to redirect into an HTML file for embedding in documentation or web pages.
 
 # CAVEATS
 

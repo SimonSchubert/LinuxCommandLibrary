@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display Pokemon sprites in terminal
+
 # TLDR
 
 **Display Pokemon sprite**
@@ -36,11 +40,9 @@ _POKEMON_
 
 # DESCRIPTION
 
-**pokeget** displays Pokemon sprites in terminal. ASCII art from PokeAPI.
+**pokeget** displays Pokemon sprites as colored ASCII art in the terminal. Pokemon can be specified by name or Pokedex number. Sprites are fetched from PokeAPI.
 
-The tool shows colorful Pokemon. Terminal eye candy.
-
-pokeget shows Pokemon.
+The **--shiny** flag shows the shiny color variant, **--form** displays alternate forms (mega evolutions, regional forms), and **--big** renders a larger sprite. Popular for customizing terminal startup screens.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage encrypted volume mappings
+
 # TLDR
 
 **Attach** (open) encrypted volume

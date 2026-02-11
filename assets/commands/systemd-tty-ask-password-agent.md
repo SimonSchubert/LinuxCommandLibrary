@@ -1,3 +1,7 @@
+# TAGLINE
+
+Handle boot-time password requests
+
 # TLDR
 
 **List** pending password requests

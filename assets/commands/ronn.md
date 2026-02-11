@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert markdown to man pages and HTML
+
 # TLDR
 
 **Convert to man page**

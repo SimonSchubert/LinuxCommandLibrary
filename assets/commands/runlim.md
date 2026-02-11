@@ -1,3 +1,7 @@
+# TAGLINE
+
+Measure and limit resource usage of commands
+
 # TLDR
 
 Print **time and memory** usage of a command

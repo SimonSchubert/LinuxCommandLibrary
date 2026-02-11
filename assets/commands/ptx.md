@@ -1,3 +1,7 @@
+# TAGLINE
+
+Produce permuted keyword-in-context index
+
 # TLDR
 
 Generate index with **line references**

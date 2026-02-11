@@ -1,3 +1,7 @@
+# TAGLINE
+
+Python dependency management and packaging tool
+
 # TLDR
 
 **Create new project**
@@ -60,11 +64,20 @@
 
 # DESCRIPTION
 
-**poetry** is Python dependency management and packaging tool. Uses pyproject.toml.
+**poetry** is a Python dependency management and packaging tool that uses **pyproject.toml** as its single configuration file. It handles dependency resolution, virtual environment management, building, and publishing packages to PyPI.
 
-The tool manages virtual environments. Handles dependency resolution.
+Poetry creates isolated virtual environments for each project and uses a lock file (**poetry.lock**) to ensure reproducible installations across different machines. Key commands include **install** (install dependencies), **add**/**remove** (manage dependencies), **run** (execute in venv), and **shell** (activate venv).
 
-poetry manages Python projects.
+# CONFIGURATION
+
+**pyproject.toml**
+> Project configuration file containing dependencies, metadata, build system settings, and Poetry-specific settings under `[tool.poetry]`.
+
+**poetry.lock**
+> Lock file ensuring reproducible dependency resolution across installations.
+
+**~/.config/pypoetry/config.toml**
+> Global Poetry configuration including virtualenv settings, repository credentials, and cache paths.
 
 # CAVEATS
 

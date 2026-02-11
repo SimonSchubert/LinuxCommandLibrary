@@ -1,3 +1,7 @@
+# TAGLINE
+
+PostgreSQL interactive terminal client
+
 # TLDR
 
 **Connect to database**
@@ -56,11 +60,22 @@ _DBNAME_
 
 # DESCRIPTION
 
-**psql** is PostgreSQL interactive terminal. Database client.
+**psql** is the official interactive terminal for PostgreSQL. It provides a command-line interface for connecting to databases, executing SQL queries, and managing database objects. In interactive mode, it offers features like tab completion, command history, and formatted output for query results.
 
-The tool executes SQL queries. Manages PostgreSQL databases.
+Beyond interactive use, psql can execute SQL files with **-f** and run individual commands with **-c**, making it suitable for scripting and automation. Built-in backslash commands (like **\dt** for tables, **\d** for describing objects, and **\l** for listing databases) provide quick access to database metadata without writing SQL.
 
-psql queries PostgreSQL.
+Connection parameters can be specified via command-line flags, environment variables (**PGHOST**, **PGUSER**, **PGDATABASE**, **PGPORT**), or the **~/.pgpass** file for password-free authentication.
+
+# CONFIGURATION
+
+**~/.pgpass**
+> Password file for automatic authentication, containing lines in the format `hostname:port:database:username:password`.
+
+**~/.psqlrc**
+> Startup file executed when psql launches, used to set formatting options, custom prompts, and default settings.
+
+**PGHOST**, **PGUSER**, **PGDATABASE**, **PGPORT**
+> Environment variables for default connection parameters.
 
 # CAVEATS
 

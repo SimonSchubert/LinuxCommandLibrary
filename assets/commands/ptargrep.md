@@ -1,3 +1,7 @@
+# TAGLINE
+
+Search for patterns inside tar archives
+
 # TLDR
 
 **Search in tar archive**

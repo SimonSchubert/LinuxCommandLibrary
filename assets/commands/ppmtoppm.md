@@ -1,3 +1,7 @@
+# TAGLINE
+
+Normalize and copy PPM image format
+
 # TLDR
 
 **Copy and normalize PPM image**

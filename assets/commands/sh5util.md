@@ -1,3 +1,7 @@
+# TAGLINE
+
+Merge Slurm HDF5 profiling data
+
 # TLDR
 
 **Merge** HDF5 files for a job

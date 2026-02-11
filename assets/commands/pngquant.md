@@ -1,3 +1,7 @@
+# TAGLINE
+
+Lossy PNG compression via color quantization
+
 # TLDR
 
 **Compress PNG with quality range**

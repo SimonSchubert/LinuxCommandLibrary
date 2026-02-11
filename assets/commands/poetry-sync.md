@@ -1,3 +1,7 @@
+# TAGLINE
+
+Synchronize environment with lock file
+
 # TLDR
 
 **Sync dependencies with lock file**
@@ -36,11 +40,9 @@
 
 # DESCRIPTION
 
-**poetry sync** synchronizes environment with lock file. Ensures exact versions.
+**poetry sync** strictly synchronizes the virtual environment to match the **poetry.lock** file exactly. Unlike **poetry install**, it also removes any packages present in the environment that are not listed in the lock file.
 
-The tool removes extra packages. Matches lock file exactly.
-
-poetry sync aligns environment.
+This is useful for ensuring clean, reproducible environments in CI/CD pipelines or production deployments. Use **--dry-run** to preview changes before applying them.
 
 # CAVEATS
 

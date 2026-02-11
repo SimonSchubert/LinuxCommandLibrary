@@ -1,3 +1,7 @@
+# TAGLINE
+
+Simplified CLI for HashiCorp Vault
+
 # TLDR
 
 **Write secret**
@@ -53,15 +57,11 @@
 
 # DESCRIPTION
 
-**safe** manages Vault secrets. It provides a friendly CLI.
+**safe** is a user-friendly command-line interface for HashiCorp Vault that simplifies common secret management operations. It wraps the Vault API with intuitive commands for reading, writing, and organizing secrets without needing to understand the full Vault CLI syntax.
 
-Simplified Vault operations. Easy secret management.
+The tool supports multiple authentication methods including LDAP, GitHub tokens, and direct token authentication. Once targeted and authenticated against a Vault server, secrets can be managed using simple commands like **set**, **get**, and **rm**. The **tree** command provides a hierarchical view of all secret paths for easy browsing.
 
-Multiple auth methods. LDAP, token, GitHub.
-
-Tree view of secrets. Browse hierarchy.
-
-Export and import. Backup secrets.
+Secrets can be exported and imported for backup purposes or migration between Vault instances. The **target** command manages connections to multiple Vault servers, allowing quick switching between environments.
 
 # CAVEATS
 

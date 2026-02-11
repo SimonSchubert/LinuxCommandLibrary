@@ -1,3 +1,7 @@
+# TAGLINE
+
+Insert records into GNU recutils databases
+
 # TLDR
 
 **Insert record**
@@ -42,9 +46,9 @@
 
 # DESCRIPTION
 
-**recins** inserts records into GNU recutils files. Fields and values can be specified on command line or read from stdin.
+**recins** adds new records to GNU recutils plain-text database files. Fields and values can be specified on the command line with repeated **-f** and **-v** flags, or records can be piped in from stdin in standard recfile format (key-value pairs separated by blank lines).
 
-Part of GNU recutils.
+The **-t** flag assigns a record type, **-r** replaces an existing record instead of appending, and **-S** sorts records after insertion. The file is created automatically if it does not exist. Part of the GNU recutils toolkit.
 
 # EXAMPLES
 

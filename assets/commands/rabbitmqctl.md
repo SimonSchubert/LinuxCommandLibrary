@@ -1,3 +1,7 @@
+# TAGLINE
+
+Command-line tool for managing RabbitMQ
+
 # TLDR
 
 **List queues**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Encode PPM image sequences to MPEG video
+
 # TLDR
 
 **Create MPEG from PPM frames**

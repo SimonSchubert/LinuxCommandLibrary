@@ -1,3 +1,7 @@
+# TAGLINE
+
+Ruby static code analyzer and formatter
+
 # TLDR
 
 **Check current directory**
@@ -90,6 +94,17 @@ Configuration in .rubocop.yml customizes rules. Cops can be enabled, disabled, o
 The auto-gen-config command creates a todo file ignoring current violations. This enables gradual adoption in existing projects.
 
 Integration with editors shows issues in real-time. CI integration enforces style on pull requests.
+
+# CONFIGURATION
+
+**.rubocop.yml**
+> Project-level configuration file defining enabled cops, custom parameters, file exclusions, and style preferences.
+
+**~/.rubocop.yml**
+> User-level default configuration applied when no project config is found.
+
+**.rubocop_todo.yml**
+> Auto-generated file listing current violations to be ignored, created by --auto-gen-config for gradual adoption.
 
 # CAVEATS
 

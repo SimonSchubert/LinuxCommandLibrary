@@ -1,3 +1,7 @@
+# TAGLINE
+
+Show current Pulumi user and backend
+
 # TLDR
 
 **Show current user**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Query SCSI device inquiry data
+
 # TLDR
 
 **Query SCSI device** information

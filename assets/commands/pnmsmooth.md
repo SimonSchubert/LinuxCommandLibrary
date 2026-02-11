@@ -1,3 +1,7 @@
+# TAGLINE
+
+Smooth and blur PNM images
+
 # TLDR
 
 **Smooth/blur image**

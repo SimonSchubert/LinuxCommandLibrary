@@ -1,3 +1,7 @@
+# TAGLINE
+
+Add dependencies to a Poetry project
+
 # TLDR
 
 **Add a dependency**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Node.js version manager for PowerShell
+
 # TLDR
 
 **List Node versions (PowerShell)**
@@ -39,11 +43,9 @@
 
 # DESCRIPTION
 
-**ps-nvm** is Node Version Manager for PowerShell. Windows node management.
+**ps-nvm** is a Node.js version manager designed natively for PowerShell on Windows. It allows installing, switching between, and managing multiple Node.js versions on a single system, similar to nvm on Unix but built specifically for the PowerShell environment.
 
-The tool manages Node.js versions. PowerShell native.
-
-ps-nvm switches Node versions.
+The tool downloads and manages Node.js binaries, adjusting the system PATH to point to the selected version. A default version can be set to persist across new PowerShell sessions.
 
 # CAVEATS
 

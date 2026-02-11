@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert PostScript image data to PGM
+
 # TLDR
 
 **Convert PostScript image to PGM**

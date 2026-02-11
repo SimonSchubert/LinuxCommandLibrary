@@ -1,3 +1,7 @@
+# TAGLINE
+
+Cross-distribution package manager wrapper
+
 # TLDR
 
 **Search packages**
@@ -39,11 +43,9 @@
 
 # DESCRIPTION
 
-**pkgz** is a package manager wrapper. Simplified package operations.
+**pkgz** is a package manager wrapper that provides a unified command interface across Linux distributions. It translates common operations like install, search, and update into the appropriate commands for the underlying package manager (apt, dnf, pacman, zypper, etc.).
 
-The tool abstracts package managers. Cross-distribution compatibility.
-
-pkgz manages packages.
+This allows users and scripts to use a single set of commands regardless of which distribution is running, simplifying cross-distribution workflows and documentation.
 
 # CAVEATS
 

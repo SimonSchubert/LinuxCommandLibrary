@@ -1,3 +1,7 @@
+# TAGLINE
+
+Slurm compute node daemon
+
 # TLDR
 
 **Report** node rebooted when daemon restarts (for testing)

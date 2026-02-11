@@ -1,3 +1,7 @@
+# TAGLINE
+
+Rename multiple files
+
 # TLDR
 
 **rename** can refer to multiple commands with the same name

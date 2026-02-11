@@ -1,3 +1,7 @@
+# TAGLINE
+
+Cancel an ongoing Pulumi stack update
+
 # TLDR
 
 **Cancel current update**

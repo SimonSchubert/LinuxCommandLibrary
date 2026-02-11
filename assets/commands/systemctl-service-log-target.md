@@ -1,3 +1,7 @@
+# TAGLINE
+
+Get or set per-service log destination
+
 # TLDR
 
 Show service **log target**

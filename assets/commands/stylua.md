@@ -1,3 +1,7 @@
+# TAGLINE
+
+Opinionated Lua code formatter
+
 # TLDR
 
 **Format file**
@@ -86,6 +90,11 @@ Diff mode shows what would change. This helps review formatting before applying 
 The formatter handles various Lua versions and can be configured for game-specific variants like Roblox Luau.
 
 Integration with editors enables format-on-save. CI integration ensures consistent style across contributions.
+
+# CONFIGURATION
+
+**stylua.toml** or **.stylua.toml**
+> Project configuration file specifying formatting rules such as column width, indent type, quote style, and call parentheses behavior.
 
 # CAVEATS
 

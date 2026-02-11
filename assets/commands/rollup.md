@@ -1,3 +1,7 @@
+# TAGLINE
+
+Bundle JavaScript modules for distribution
+
 # TLDR
 
 **Bundle JavaScript**
@@ -59,6 +63,11 @@ The tool produces efficient bundles for libraries and applications, supporting m
 
 **--no-treeshake**
 > Disable tree shaking.
+
+# CONFIGURATION
+
+**rollup.config.js** / **rollup.config.mjs**
+> Project-level configuration file defining input entry points, output formats, plugins, and external dependencies. Loaded automatically with **-c** or by specifying a path.
 
 # CAVEATS
 

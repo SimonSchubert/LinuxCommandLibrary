@@ -1,3 +1,7 @@
+# TAGLINE
+
+PuTTY command-line SSH connection tool
+
 # TLDR
 
 **Connect to SSH server**
@@ -46,11 +50,9 @@ _HOST_
 
 # DESCRIPTION
 
-**plink** is PuTTY's command-line SSH client. Remote command execution.
+**plink** is the command-line SSH connection tool from the PuTTY suite. It provides non-interactive SSH access for executing remote commands, port forwarding, and scripted SSH operations.
 
-The tool provides SSH connectivity. Part of PuTTY suite.
-
-plink connects via SSH.
+Unlike the interactive PuTTY terminal, plink is designed for automation and batch operations. It supports SSH key authentication using PuTTY's .ppk key format. The **-batch** flag disables all interactive prompts, making it suitable for scripts and cron jobs.
 
 # CAVEATS
 

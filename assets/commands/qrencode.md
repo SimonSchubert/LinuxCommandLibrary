@@ -1,3 +1,7 @@
+# TAGLINE
+
+Encode text into QR code images
+
 # TLDR
 
 **Generate QR code to terminal**
@@ -46,11 +50,9 @@ _STRING_
 
 # DESCRIPTION
 
-**qrencode** generates QR code images. Versatile QR encoder.
+**qrencode** is a command-line QR code generator built on the libqrencode library. It encodes text into QR codes and outputs them in multiple formats including PNG, SVG, EPS, ANSI terminal art, and ASCII, making it suitable for both display and print use cases.
 
-The tool supports multiple formats. Full QR code generation.
-
-qrencode creates QR codes.
+Options control the error correction level (L/M/Q/H), QR version (which determines capacity and physical size), and module size for raster output. Input can come from command-line arguments or standard input, supporting integration into scripts and pipelines.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Set KDE Plasma desktop wallpaper
+
 # TLDR
 
 **Apply** a wallpaper

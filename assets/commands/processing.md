@@ -1,3 +1,7 @@
+# TAGLINE
+
+Visual arts programming language and IDE
+
 # TLDR
 
 **Launch Processing IDE**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Encrypted secret management service CLI
+
 # TLDR
 
 **Write secret**
@@ -53,15 +57,11 @@
 
 # DESCRIPTION
 
-**secrethub** manages secrets. It provides secure credential storage.
+**secrethub** was a secret management service CLI that provided secure credential storage with end-to-end encryption and a zero-knowledge architecture. Secrets were organized in repositories using a path-based hierarchy (org/repo/secret) and encrypted client-side before transmission.
 
-End-to-end encryption. Zero-knowledge architecture.
+The **run** command injected secrets into environment variables for a child process, keeping credentials out of config files and shell history. Template injection via **inject** generated configuration files with secrets substituted from references, enabling secure deployment workflows.
 
-Environment injection. Run commands with secrets.
-
-Template injection. Generate config files.
-
-Access control built-in. Team sharing.
+Built-in access control allowed team sharing of secrets with granular permissions. The service was acquired by 1Password and has been discontinued; users should migrate to alternatives like 1Password, HashiCorp Vault, or similar tools.
 
 # CAVEATS
 

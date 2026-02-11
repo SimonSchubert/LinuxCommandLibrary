@@ -1,3 +1,7 @@
+# TAGLINE
+
+Multi-system emulator and game frontend
+
 # TLDR
 
 Start **menu** mode
@@ -56,6 +60,17 @@ Display **version**
 **retroarch** is a frontend for emulators, game engines, and media players based on the libretro API. It provides a unified interface for playing retro games across many platforms.
 
 The tool uses interchangeable "cores" for different systems (NES, SNES, PlayStation, etc.) with features like shaders, netplay, achievements, and input remapping.
+
+# CONFIGURATION
+
+**~/.config/retroarch/retroarch.cfg**
+> Main configuration file controlling video, audio, input, directory paths, and default core settings.
+
+**~/.config/retroarch/cores/**
+> Directory containing libretro core shared libraries (.so files) for each emulated system.
+
+**~/.config/retroarch/config/**
+> Per-core and per-game override configuration files that supplement the main config.
 
 # CAVEATS
 

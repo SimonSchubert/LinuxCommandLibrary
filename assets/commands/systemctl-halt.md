@@ -1,3 +1,7 @@
+# TAGLINE
+
+Shut down and halt the system
+
 # TLDR
 
 **Halt** the system

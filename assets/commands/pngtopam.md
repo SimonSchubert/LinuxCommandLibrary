@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert PNG images to PAM format
+
 # TLDR
 
 **Convert PNG to PAM**

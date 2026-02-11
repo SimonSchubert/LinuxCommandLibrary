@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage encrypted service credentials
+
 # TLDR
 
 **Encrypt** file with name

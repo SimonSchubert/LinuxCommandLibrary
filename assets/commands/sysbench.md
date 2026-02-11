@@ -1,3 +1,7 @@
+# TAGLINE
+
+Multi-threaded system benchmark tool
+
 # TLDR
 
 **CPU benchmark**
@@ -84,17 +88,11 @@
 
 # DESCRIPTION
 
-**sysbench** benchmarks system performance including CPU, memory, I/O, and databases. It provides consistent measurements for comparison.
+**sysbench** is a multi-threaded benchmarking tool for evaluating system performance across CPU, memory, file I/O, and database workloads. It provides consistent, reproducible measurements that allow meaningful comparisons between different hardware configurations, kernel versions, or tuning parameters.
 
-CPU tests measure computational throughput. They use prime number calculations to stress processors.
+The tool includes built-in test types for common benchmarks. CPU tests stress processors using prime number calculations to measure computational throughput. Memory tests measure bandwidth and latency across sequential and random access patterns. File I/O tests support multiple modes including sequential writes, sequential reads, and random read/write mixes, requiring a preparation step to create test files before running and a cleanup step afterward.
 
-Memory tests measure bandwidth and latency. Results show transfer rates for sequential and random access patterns.
-
-File I/O tests require preparation to create test files. Different modes test sequential, random, and mixed patterns.
-
-Database benchmarks test OLTP (Online Transaction Processing) workloads. They simulate real application queries against MySQL or PostgreSQL.
-
-Multi-threaded tests show how performance scales with parallelism. This reveals bottlenecks and contention.
+Database benchmarks simulate OLTP (Online Transaction Processing) workloads against MySQL or PostgreSQL, executing realistic mixes of select, insert, update, and delete queries. All test types support multi-threaded execution to measure how performance scales with parallelism, revealing bottlenecks and contention points. Custom Lua scripts can define additional workloads beyond the built-in tests.
 
 # CAVEATS
 

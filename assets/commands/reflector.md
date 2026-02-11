@@ -1,3 +1,7 @@
+# TAGLINE
+
+Retrieve and filter Arch Linux mirror lists
+
 # TLDR
 
 Sort by **speed** and save
@@ -52,6 +56,17 @@ Display **help**
 **reflector** retrieves and filters the latest Arch Linux mirrorlist. It can test mirror speed and sort by various criteria, then save an optimized mirrorlist for pacman.
 
 The tool is useful for finding fast, reliable mirrors for your location. It can be run periodically via systemd timer to keep the mirrorlist current.
+
+# CONFIGURATION
+
+**/etc/xdg/reflector/reflector.conf**
+> Default configuration file with persistent options for country, protocol, sort method, and output path. Referenced with **@** prefix on the command line.
+
+**reflector.service** / **reflector.timer**
+> Systemd units for running reflector automatically on a schedule to keep the mirrorlist current.
+
+**/etc/pacman.d/mirrorlist**
+> Output destination for the generated mirror list, used by pacman for package downloads.
 
 # CAVEATS
 

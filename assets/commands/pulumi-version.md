@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display installed Pulumi CLI version
+
 # TLDR
 
 **Show Pulumi version**

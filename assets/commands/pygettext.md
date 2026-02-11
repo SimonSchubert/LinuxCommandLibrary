@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extract translatable strings from Python code
+
 # TLDR
 
 **Extract translatable strings**

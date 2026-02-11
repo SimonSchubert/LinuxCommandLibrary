@@ -1,3 +1,7 @@
+# TAGLINE
+
+Control runit-supervised services
+
 # TLDR
 
 **Check status** of a service

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Slurm cluster usage report generator
+
 # TLDR
 
 Show **cluster utilization** (parsable format)

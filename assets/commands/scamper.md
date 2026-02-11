@@ -1,3 +1,7 @@
+# TAGLINE
+
+Internet measurement tool for traceroute and probing
+
 # TLDR
 
 **Traceroute**
@@ -66,15 +70,9 @@
 
 # DESCRIPTION
 
-**scamper** performs Internet measurements. It's designed for large-scale network research.
+**scamper** is a network measurement tool designed for large-scale Internet research. It supports multiple probing techniques including traceroute, ping, DNS lookups, alias resolution, and load-balanced path detection, running them efficiently against many targets with configurable parallelism and rate limiting.
 
-Multiple probing techniques available. Traceroute, ping, and specialized measurements.
-
-Warts output format stores rich data. Includes timing, responses, and metadata.
-
-Rate limiting controls probe intensity. Prevents overwhelming networks.
-
-Parallelism handles many targets. Designed for Internet-scale measurement.
+Results are stored in the warts binary format, which captures rich metadata including precise timing, ICMP responses, and measurement parameters. Companion tools (sc_warts2json, sc_warts2csv, etc.) convert warts data into common formats for analysis. Rate limiting controls prevent overwhelming target networks while maintaining measurement throughput.
 
 # CAVEATS
 

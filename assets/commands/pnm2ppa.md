@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert PNM images to HP PPA printer format
+
 # TLDR
 
 **Convert PNM to PPA**
@@ -35,11 +39,9 @@ _FILE_
 
 # DESCRIPTION
 
-**pnm2ppa** converts PNM to HP PPA format. Printer protocol for HP inkjets.
+**pnm2ppa** converts PNM images to HP PPA (Printer Performance Architecture) format used by certain HP DeskJet inkjet printers (700/800 series). These printers lack standard PCL or PostScript support and require a host-based driver to render pages.
 
-The tool generates printer data. For HP DeskJet 700/800 series.
-
-pnm2ppa converts to PPA.
+The tool generates the raw printer data stream, which can be sent directly to the printer device or piped through the print spooler. Paper size and resolution options control the output formatting.
 
 # CAVEATS
 

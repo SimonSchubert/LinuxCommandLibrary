@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate documentation from reStructuredText
+
 # TLDR
 
 **Build HTML documentation**
@@ -68,15 +72,19 @@
 
 # DESCRIPTION
 
-**sphinx-build** generates documentation from reStructuredText sources. It's the standard Python documentation tool.
+**sphinx-build** is the build command for Sphinx, the standard documentation generator for Python projects. It reads reStructuredText or MyST Markdown source files and produces output in various formats including HTML websites, LaTeX/PDF documents, ePub ebooks, and Unix man pages.
 
-Builders produce different output formats. HTML, PDF, and ePub common.
+The build process is controlled by a **conf.py** configuration file in the source directory, which defines the project name, theme, enabled extensions, and output settings. Sphinx supports automatic cross-referencing between documents, index generation, and code syntax highlighting. The **autodoc** extension can extract documentation directly from Python docstrings.
 
-Configuration in conf.py controls behavior. Themes, extensions, and settings.
+Multiple builders are available, selected with the **-b** flag. Incremental builds only process changed files by default; the **-E** flag forces a complete rebuild. Parallel building with **-j** speeds up large documentation projects.
 
-Cross-referencing links documents together. Indexes generated automatically.
+# CONFIGURATION
 
-Extensions add features. Autodoc extracts from docstrings.
+**conf.py**
+> Sphinx configuration file in the source directory defining project metadata, theme, extensions, template paths, and build options.
+
+**SPHINXOPTS**
+> Environment variable for passing additional options to sphinx-build when invoked through Makefiles.
 
 # CAVEATS
 

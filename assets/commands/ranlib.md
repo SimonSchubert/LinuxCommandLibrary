@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate index for static library archives
+
 # TLDR
 
 **Generate index for archive**
@@ -22,9 +26,9 @@
 
 # DESCRIPTION
 
-**ranlib** generates an index to the contents of a static library archive (.a file). This index speeds up linking by allowing the linker to quickly find symbols.
+**ranlib** generates or updates the symbol table index in a static library archive (.a file), enabling the linker to quickly locate symbols without scanning every object file in the archive. Without this index, the linker must process object files in order and may fail to resolve symbols that appear in a later object file than the one referencing them.
 
-Modern ar typically includes ranlib functionality, but ranlib remains useful for updating indexes on existing archives.
+While modern versions of **ar** automatically create this index when building archives (equivalent to **ar -s**), ranlib remains useful for regenerating indexes on archives that have been modified or transferred between systems. The **-U** flag provides an efficient update mode that only rebuilds the index if the archive contents have changed.
 
 # PARAMETERS
 

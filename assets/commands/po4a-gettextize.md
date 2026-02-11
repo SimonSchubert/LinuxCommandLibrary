@@ -1,5 +1,11 @@
 # TLDR
 
+# TAGLINE
+
+Extract translatable strings to PO files
+
+# TLDR
+
 **Convert** a text file to PO format
 
 ```po4a-gettextize --format [text] --master [path/to/master.txt] --po [path/to/result.po]```

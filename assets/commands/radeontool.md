@@ -1,3 +1,7 @@
+# TAGLINE
+
+Control ATI Radeon hardware settings
+
 # TLDR
 
 **Turn off the laptop backlight**

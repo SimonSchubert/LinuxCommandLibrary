@@ -1,3 +1,7 @@
+# TAGLINE
+
+Establish PPTP VPN tunnel connections
+
 # TLDR
 
 **Connect to PPTP VPN**
@@ -32,11 +36,9 @@ _SERVER_
 
 # DESCRIPTION
 
-**pptp** establishes PPTP VPN connections. Point-to-Point Tunneling Protocol.
+**pptp** establishes VPN connections using the Point-to-Point Tunneling Protocol. It creates an encrypted tunnel to a remote PPTP server by wrapping PPP sessions inside GRE (Generic Routing Encapsulation) packets, allowing secure communication over the internet.
 
-The tool creates encrypted tunnels. Legacy VPN protocol.
-
-pptp connects to VPN.
+The client works in conjunction with **pppd** which handles the PPP negotiation and authentication within the tunnel. PPTP is considered a legacy protocol with known security weaknesses, and modern alternatives like OpenVPN or WireGuard are recommended for new deployments.
 
 # CAVEATS
 

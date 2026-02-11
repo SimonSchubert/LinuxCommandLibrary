@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interactive AWS CloudFormation deployment tool
+
 # TLDR
 
 **List all CloudFormation stacks** in the current region

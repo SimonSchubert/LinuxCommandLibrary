@@ -1,3 +1,7 @@
+# TAGLINE
+
+Filesystem snapshot management for Btrfs
+
 # TLDR
 
 List snapshot **configurations**
@@ -94,6 +98,14 @@ Show **differences** between snapshots
 **snapper** is a filesystem snapshot management tool primarily used with Btrfs. It creates, compares, and manages snapshots, enabling system rollback and file recovery. Snapper supports automatic snapshot timelines with configurable retention policies.
 
 Each configuration manages snapshots for a specific subvolume or logical volume. Snapshots can be created manually or automatically before/after system changes. The cleanup algorithms automatically remove old snapshots based on age or count limits.
+
+# CONFIGURATION
+
+**/etc/snapper/configs/**
+> Per-subvolume configuration files defining snapshot types, cleanup algorithms, and retention policies (timeline and number limits).
+
+**/etc/sysconfig/snapper**
+> Global snapper settings including the list of active configurations (SNAPPER_CONFIGS).
 
 # CAVEATS
 

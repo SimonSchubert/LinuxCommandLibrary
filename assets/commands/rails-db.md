@@ -1,3 +1,7 @@
+# TAGLINE
+
+Open database console for Rails application
+
 # TLDR
 
 **Open a database console** for the current environment

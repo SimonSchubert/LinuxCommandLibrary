@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove container images from local storage
+
 # TLDR
 
 **Remove an image**
@@ -36,11 +40,9 @@ _IMAGE_
 
 # DESCRIPTION
 
-**podman rmi** removes container images. Deletes local images.
+**podman rmi** removes one or more container images from local storage, freeing disk space. By default, images that are currently in use by a container cannot be removed.
 
-The tool frees disk space. Removes unused images.
-
-podman rmi deletes images.
+Use **-f** (force) to remove images even if containers reference them. The **-a** flag removes all images. The **--ignore** flag silently skips images that don't exist instead of returning an error.
 
 # CAVEATS
 

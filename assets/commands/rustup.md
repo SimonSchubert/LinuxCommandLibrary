@@ -1,3 +1,7 @@
+# TAGLINE
+
+Rust toolchain installer and manager
+
 # TLDR
 
 **Install Rust toolchain**
@@ -95,6 +99,20 @@ rustup also handles updating Rust, ensuring all installed toolchains stay curren
 
 **doc**
 > Open Rust documentation.
+
+# CONFIGURATION
+
+**~/.rustup/**
+> Root directory for all rustup data including installed toolchains, components, and metadata.
+
+**rust-toolchain.toml**
+> Per-project file specifying the required Rust toolchain version, components, and targets. Rustup automatically installs the specified toolchain when entering the directory.
+
+**RUSTUP_HOME**
+> Environment variable overriding the default rustup installation directory.
+
+**RUSTUP_TOOLCHAIN**
+> Environment variable overriding the active toolchain for the current session.
 
 # CAVEATS
 

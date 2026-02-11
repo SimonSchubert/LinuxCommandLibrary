@@ -1,3 +1,7 @@
+# TAGLINE
+
+Recursive grep through directories
+
 # TLDR
 
 **Search recursively**
@@ -53,15 +57,11 @@
 
 # DESCRIPTION
 
-**rgrep** is recursive grep. It searches directories automatically.
+**rgrep** is a convenience wrapper equivalent to **grep -r**, providing recursive text searching through directory trees. It traverses all subdirectories from the specified path, searching file contents for the given pattern using standard grep regular expression syntax.
 
-Equivalent to grep -r. Convenience wrapper.
+All standard grep options work with rgrep, including case-insensitive search (**-i**), line numbers (**-n**), listing matching files only (**-l**), and inverted matching (**-v**). The **--exclude-dir** and **--include** flags allow filtering which files and directories are searched, which is important for skipping large directories like node_modules or build output.
 
-Searches all files below. Traverses subdirectories.
-
-Standard grep options. Same flags work.
-
-Found on many systems. Default installation.
+On most GNU/Linux systems, rgrep is installed by default as part of the GNU grep package. For better performance on large codebases, consider using ripgrep (**rg**) which is significantly faster and automatically respects .gitignore rules.
 
 # CAVEATS
 

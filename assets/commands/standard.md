@@ -1,3 +1,7 @@
+# TAGLINE
+
+Zero-configuration JavaScript style linter
+
 # TLDR
 
 **Check code**
@@ -50,15 +54,9 @@
 
 # DESCRIPTION
 
-**standard** enforces JavaScript style. It's opinionated linting.
+**standard** is a zero-configuration JavaScript linter and formatter that enforces a fixed set of style rules. Built on top of ESLint, it eliminates the need for project-specific .eslintrc files by providing a single, opinionated style guide that includes rules like no semicolons, 2-space indentation, and single quotes.
 
-Zero configuration. No .eslintrc needed.
-
-Automatic formatting. Fix with --fix.
-
-Based on ESLint. Standard style rules.
-
-Popular convention. Many projects use it.
+The **--fix** flag automatically corrects fixable issues in place. The tool can lint files passed as arguments or recursively scan the current directory. Custom parsers like babel-eslint can be specified for projects using experimental JavaScript syntax.
 
 # CAVEATS
 

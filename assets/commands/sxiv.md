@@ -1,3 +1,7 @@
+# TAGLINE
+
+Simple lightweight X11 image viewer
+
 # TLDR
 
 **Open** an image

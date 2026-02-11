@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display URL routing table for Rails application
+
 # TLDR
 
 **List all routes** in the application

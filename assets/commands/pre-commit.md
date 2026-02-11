@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage multi-language git hook scripts
+
 # TLDR
 
 **Install hooks into repository**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Control and manage the Prosody XMPP server
+
 # TLDR
 
 **Start server**
@@ -73,15 +77,11 @@
 
 # DESCRIPTION
 
-**prosodyctl** manages the Prosody XMPP/Jabber server. It handles service control and user management.
+**prosodyctl** is the administration tool for the Prosody XMPP/Jabber server, providing service control, user management, and configuration validation from the command line. It can start, stop, restart, and reload the server, with reload applying configuration changes without disconnecting users.
 
-User management creates and removes accounts. Password changes are immediate.
+User management commands handle XMPP account lifecycle: creating accounts with **adduser**, removing them with **deluser**, and resetting passwords with **passwd**. All user operations use JID (Jabber ID) format like **user@domain.com**.
 
-Configuration checking validates setup. This catches errors before restart.
-
-Certificate commands manage TLS. Import, generate, and check certificates.
-
-Service control integrates with init systems. Start, stop, and reload operations.
+The **check** command validates the Prosody configuration, DNS records, and TLS certificates before applying changes, catching common setup errors. Certificate management commands help import, generate, and inspect TLS certificates needed for secure XMPP connections.
 
 # CAVEATS
 

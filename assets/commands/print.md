@@ -1,3 +1,7 @@
+# TAGLINE
+
+Shell built-in text output command
+
 # TLDR
 
 **Print text (zsh/ksh)**
@@ -39,11 +43,9 @@ _ARGS_
 
 # DESCRIPTION
 
-**print** outputs text to stdout. Shell built-in command.
+**print** is a shell built-in command available in ksh and zsh that outputs text to stdout. It provides more control than **echo**, supporting escape sequence processing, output to specific file descriptors, and suppression of the trailing newline.
 
-The tool is more powerful than echo. Available in ksh and zsh.
-
-print displays text.
+The **-u** option directs output to a numbered file descriptor (useful for writing to stderr or other open descriptors), while **-l** prints each argument on a separate line. Unlike echo, print's behavior is consistent and not affected by argument values that look like options.
 
 # CAVEATS
 

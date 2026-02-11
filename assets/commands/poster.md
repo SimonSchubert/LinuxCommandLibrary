@@ -1,3 +1,7 @@
+# TAGLINE
+
+Scale PostScript images to poster size
+
 # TLDR
 
 **Scale to poster size**
@@ -42,7 +46,9 @@
 
 # DESCRIPTION
 
-**poster** scales PostScript images to larger sizes, splitting them across multiple pages for printing on regular printers and assembling into posters.
+**poster** scales PostScript images to larger sizes, splitting them across multiple pages for printing on regular printers and assembling into posters. It calculates the optimal tiling of the target poster size onto the available media size, handling page overlap and alignment marks.
+
+The tool supports standard paper sizes (A0-A4, letter, legal), grid specifications (2x2A4, 3x3letter), and custom dimensions in centimeters or inches. Cut marks can be added to guide physical assembly of the printed tiles. An overlap margin ensures clean joins between adjacent pages.
 
 # EXAMPLES
 

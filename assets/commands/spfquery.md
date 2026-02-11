@@ -1,3 +1,7 @@
+# TAGLINE
+
+Validate SPF email authentication records
+
 # TLDR
 
 **Check SPF record**
@@ -42,15 +46,11 @@
 
 # DESCRIPTION
 
-**spfquery** validates SPF records. It checks email authorization.
+**spfquery** validates Sender Policy Framework (SPF) records by checking whether a given IP address is authorized to send email on behalf of a domain. It queries the domain's DNS SPF record and evaluates the sending IP against the published policy.
 
-Sender Policy Framework. Email authentication.
+The tool returns standard SPF result codes: pass, fail, softfail, neutral, none, temperror, or permerror. It is useful for mail server administrators to debug SPF configurations, verify that DNS records are correct, and troubleshoot email delivery issues caused by SPF failures.
 
-Checks IP authorization. Against domain policy.
-
-Returns SPF result. Pass, fail, neutral, etc.
-
-Mail server debugging. Test configurations.
+As part of the **libspf2** library, spfquery implements the full SPF specification including mechanism evaluation, macro expansion, and redirect/include processing.
 
 # CAVEATS
 

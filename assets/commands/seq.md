@@ -1,3 +1,7 @@
+# TAGLINE
+
+Print a sequence of numbers
+
 # TLDR
 
 **Generate numbers from 1 to 10**

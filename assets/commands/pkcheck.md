@@ -1,3 +1,7 @@
+# TAGLINE
+
+Check PolicyKit authorization for actions
+
 # TLDR
 
 **Check authorization**
@@ -35,11 +39,9 @@
 
 # DESCRIPTION
 
-**pkcheck** checks PolicyKit authorization. Verifies action permissions.
+**pkcheck** queries the PolicyKit (polkit) daemon to determine whether a specific process or user is authorized to perform a given action. It returns an exit code indicating whether the authorization is granted, denied, or requires authentication.
 
-The tool queries polkit daemon. Used for privilege checks.
-
-pkcheck verifies authorization.
+The tool is primarily used in scripts and system services to check permissions before performing privileged operations. With **--allow-user-interaction**, it can trigger an authentication dialog, prompting the user for credentials when the action requires it.
 
 # CAVEATS
 

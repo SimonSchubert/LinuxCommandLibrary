@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert PPM to Atari Spectrum 512 format
+
 # TLDR
 
 **Convert PPM to Atari Spectrum 512**

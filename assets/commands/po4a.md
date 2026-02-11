@@ -1,5 +1,11 @@
 # TLDR
 
+# TAGLINE
+
+Maintain documentation translations via PO files
+
+# TLDR
+
 Update PO files and documents from **config** file
 
 ```po4a [path/to/config_file]```

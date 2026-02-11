@@ -1,3 +1,7 @@
+# TAGLINE
+
+Capture JPEG images from Raspberry Pi camera
+
 # TLDR
 
 **Capture** an image and save to file

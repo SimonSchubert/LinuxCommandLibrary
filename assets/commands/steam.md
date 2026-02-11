@@ -1,3 +1,7 @@
+# TAGLINE
+
+Valve gaming platform client
+
 # TLDR
 
 **Launch Steam**
@@ -68,15 +72,9 @@
 
 # DESCRIPTION
 
-**Steam** is Valve's gaming platform client. It manages game libraries, updates, and social features.
+**Steam** is Valve's gaming platform client for Linux, providing game library management, automatic updates, social features, and the Steam Workshop for community content. Games and applications are identified by app IDs, which can be used with steam:// URLs for direct launching, installation, and file verification.
 
-Game launching uses app IDs. Find IDs in store URLs or library.
-
-Big Picture mode provides controller-friendly interface. Designed for TV and Steam Deck.
-
-Offline mode plays games without internet. Some games require online.
-
-Proton enables Windows games on Linux. Compatibility layer built into Steam.
+Big Picture mode provides a controller-friendly, full-screen interface designed for TVs and the Steam Deck. On Linux, Steam includes **Proton**, a Wine-based compatibility layer that enables running many Windows games natively. Offline mode allows playing downloaded games without an internet connection.
 
 # CAVEATS
 

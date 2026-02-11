@@ -1,3 +1,7 @@
+# TAGLINE
+
+SICStus Prolog development system
+
 # TLDR
 
 **Start SICStus Prolog** interactive interpreter

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Add drop shadow effect to images
+
 # TLDR
 
 **Add drop shadow**
@@ -35,11 +39,9 @@ _FILE_
 
 # DESCRIPTION
 
-**ppmshadow** adds drop shadow to images. Creates shadow effects.
+**ppmshadow** adds a drop shadow effect to a PPM image, creating the appearance of the image floating above a background. The shadow is created by blurring a darkened copy of the image and placing it offset behind the original.
 
-The tool produces shadowed output. Part of Netpbm.
-
-ppmshadow adds shadows.
+The blur radius controls shadow softness, while x and y offsets control the apparent light direction. The **-t** option creates a translucent shadow that allows the background to show through. Part of the Netpbm toolkit.
 
 # CAVEATS
 

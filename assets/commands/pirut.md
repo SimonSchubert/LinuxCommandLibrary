@@ -1,3 +1,7 @@
+# TAGLINE
+
+Graphical frontend for yum package manager
+
 # TLDR
 
 Launch **pirut** graphical package manager

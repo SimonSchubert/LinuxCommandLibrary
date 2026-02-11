@@ -1,3 +1,7 @@
+# TAGLINE
+
+Minimalist command-line IRC client
+
 # TLDR
 
 Connect to **default server** with username from $USER

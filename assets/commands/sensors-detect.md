@@ -1,3 +1,7 @@
+# TAGLINE
+
+Detect hardware monitoring sensor chips
+
 # TLDR
 
 **Run interactively** to detect hardware monitoring chips

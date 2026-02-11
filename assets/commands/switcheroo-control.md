@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage hybrid graphics GPU switching
+
 # TLDR
 
 **List available GPUs**

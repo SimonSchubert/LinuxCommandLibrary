@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage project version numbers
+
 # TLDR
 
 **Show current version**
@@ -46,11 +50,9 @@ _VERSION_
 
 # DESCRIPTION
 
-**poetry version** manages project version. Updates pyproject.toml version.
+**poetry version** displays or updates the project version in **pyproject.toml**. Without arguments, it shows the current version. With a bump rule (**major**, **minor**, **patch**, **premajor**, **preminor**, **prepatch**, **prerelease**) or an explicit version string, it updates the version accordingly.
 
-The tool bumps version numbers. Supports semantic versioning.
-
-poetry version sets versions.
+The **--short** flag outputs only the version number without the project name. Use **--dry-run** to preview the version change without modifying the file.
 
 # CAVEATS
 

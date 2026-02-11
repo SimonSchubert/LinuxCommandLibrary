@@ -1,3 +1,7 @@
+# TAGLINE
+
+Initialize Sailfish OS build environment
+
 # TLDR
 
 **Initialize build environment**

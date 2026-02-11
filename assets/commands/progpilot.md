@@ -1,3 +1,7 @@
+# TAGLINE
+
+Static security analyzer for PHP code
+
 # TLDR
 
 **Scan PHP files**
@@ -61,15 +65,16 @@
 
 # DESCRIPTION
 
-**progpilot** performs static security analysis on PHP code. It detects vulnerabilities through dataflow analysis.
+**progpilot** performs static security analysis on PHP code by tracing the flow of user-controlled data through the application. It uses taint analysis to identify points where unsanitized input reaches dangerous functions such as database queries, shell commands, or HTML output, flagging potential SQL injection, XSS, command injection, and path traversal vulnerabilities.
 
-Taint tracking follows user input through code. Dangerous function calls with tainted data are flagged.
+The analysis works by modeling sources (where user input enters), sinks (where dangerous operations occur), and sanitizers (functions that neutralize tainted data). All three are configurable through a YAML configuration file, allowing teams to define custom security rules, add application-specific sensitive functions, and suppress false positives.
 
-Configuration customizes analysis rules. Sensitive functions and sanitizers are definable.
+Output includes the vulnerability type, file location, and affected code path. JSON output mode enables integration with CI/CD pipelines for automated security checks during development.
 
-Output includes vulnerability location and type. JSON format enables CI/CD integration.
+# CONFIGURATION
 
-Sources, sinks, and sanitizers are configurable. Custom security rules extend detection.
+**progpilot.yml** (or custom path via **--configuration**)
+> YAML configuration file defining sources, sinks, sanitizers, include/exclude paths, and custom vulnerability rules for the analysis.
 
 # CAVEATS
 

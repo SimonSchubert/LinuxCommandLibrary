@@ -1,3 +1,7 @@
+# TAGLINE
+
+Salt central management daemon
+
 # TLDR
 
 **Start the Salt master daemon** in the foreground
@@ -60,6 +64,20 @@
 The master listens on two ports: 4505 for publishing commands to minions via ZeroMQ, and 4506 for receiving returns and file server requests. Configuration is stored in **/etc/salt/master**.
 
 Key components include the job cache for tracking command execution, the file server for distributing states and files, and the PKI infrastructure for secure minion authentication. The master supports worker threads for handling large numbers of minions.
+
+# CONFIGURATION
+
+**/etc/salt/master**
+> Main master configuration file controlling worker threads, file server roots, pillar data, and network settings.
+
+**/etc/salt/master.d/**
+> Directory for additional configuration files that are merged with the main master config.
+
+**/srv/salt/**
+> Default file server root directory for Salt states, formulas, and files served to minions.
+
+**/srv/pillar/**
+> Default directory for pillar data providing secure per-minion configuration variables.
 
 # CAVEATS
 

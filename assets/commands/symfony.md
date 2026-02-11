@@ -1,3 +1,7 @@
+# TAGLINE
+
+Symfony PHP framework development CLI
+
 # TLDR
 
 **Create new project**
@@ -64,15 +68,11 @@
 
 # DESCRIPTION
 
-**symfony** CLI manages Symfony PHP projects. It provides local development tools.
+**symfony** is the official command-line tool for managing Symfony PHP framework projects. It provides project scaffolding, a built-in local development server with PHP support, and wrappers for common Symfony console commands.
 
-Project creation scaffolds Symfony apps. Full webapp or minimal skeleton.
+Project creation offers templates ranging from minimal microservice skeletons to full web applications with pre-configured bundles. The local development server includes automatic HTTPS via locally-trusted certificates, PHP version management, and Docker service integration for databases and other dependencies.
 
-Local server includes PHP. No separate server configuration needed.
-
-Console wrapper runs Symfony commands. Cache clear, migrations, etc.
-
-Security checking finds vulnerable dependencies. Updates recommended.
+The console wrapper executes Symfony console commands (cache clearing, database migrations, route listing) with automatic environment detection. Security checking scans project dependencies against known vulnerability databases and recommends updates.
 
 # CAVEATS
 

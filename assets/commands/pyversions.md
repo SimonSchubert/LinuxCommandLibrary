@@ -1,3 +1,7 @@
+# TAGLINE
+
+List available Python interpreter versions on Debian
+
 # TLDR
 
 **List installed Python versions**
@@ -39,11 +43,9 @@
 
 # DESCRIPTION
 
-**pyversions** lists Python interpreter versions. Debian utility.
+**pyversions** is a Debian-specific utility that reports information about Python 2 interpreter versions available on the system. It can list installed versions, supported versions, the default version, and versions requested by packages through their debian/control metadata.
 
-The tool shows available Python versions. Package management helper.
-
-pyversions lists Python.
+The tool is primarily used by Debian packaging infrastructure and maintainer scripts to determine which Python versions to build against or depend on. It is part of the **python-minimal** package and has a Python 3 counterpart in **py3versions**.
 
 # CAVEATS
 

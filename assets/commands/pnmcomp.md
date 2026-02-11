@@ -1,3 +1,7 @@
+# TAGLINE
+
+Composite PNM images with transparency
+
 # TLDR
 
 **Composite images**
@@ -38,11 +42,9 @@ _BACKGROUND_
 
 # DESCRIPTION
 
-**pnmcomp** composites PNM images. Layer with transparency.
+**pnmcomp** composites two PNM images by overlaying one on top of another with optional alpha transparency. An alpha mask (PGM file) controls the blending between overlay and background pixels.
 
-The tool combines images. Part of Netpbm.
-
-pnmcomp layers images.
+Position offsets (**-xoff**, **-yoff**) control where the overlay is placed on the background. Part of the Netpbm toolkit; superseded by **pamcomp** in newer versions.
 
 # CAVEATS
 

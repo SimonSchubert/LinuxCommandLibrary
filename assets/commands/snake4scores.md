@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display snake4 game high scores
+
 # TLDR
 
 Show the **high scores**

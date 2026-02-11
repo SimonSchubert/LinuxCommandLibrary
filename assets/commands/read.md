@@ -1,3 +1,7 @@
+# TAGLINE
+
+Read a line of input into shell variables
+
 # TLDR
 
 **Read a line** into a variable

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Single-user mode root login prompt
+
 # TLDR
 
 **Start** sulogin on the default console

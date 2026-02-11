@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Salt minion authentication keys
+
 # TLDR
 
 **List all keys** (accepted, pending, and rejected)
@@ -84,6 +88,14 @@
 **salt-key** manages Salt minion public keys on a Salt master server. In SaltStack's architecture, minions use public-key cryptography to authenticate with the master. When a minion first connects, it sends its public key to the master, which must be explicitly accepted before communication can occur.
 
 Keys exist in three states: unaccepted (pending), accepted, or rejected. The salt-key command allows administrators to list, accept, reject, and delete keys. Fingerprint verification enables secure identification of minions before accepting their keys.
+
+# CONFIGURATION
+
+**/etc/salt/pki/master/**
+> Directory containing accepted, pending, and rejected minion public keys managed by salt-key.
+
+**/etc/salt/master**
+> Master configuration file where key acceptance policies and auto-sign settings are defined.
 
 # CAVEATS
 

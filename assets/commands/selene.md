@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fast Lua linter written in Rust
+
 # TLDR
 
 **Lint Lua files** in the current directory
@@ -96,6 +100,14 @@
 Configuration is done via a **selene.toml** file where you can enable or disable specific lints, set their severity levels, and configure standard library definitions. The linter integrates well with editors and CI/CD pipelines through its JSON output modes.
 
 selene is particularly popular in the Roblox development community but works for any Lua project. It can be extended with custom lint rules and standard library definitions.
+
+# CONFIGURATION
+
+**selene.toml**
+> Project-level configuration file specifying enabled lints, severity levels, standard library definitions, and file exclude patterns.
+
+**std**
+> Configuration key in selene.toml specifying the Lua standard library variant (e.g., "lua51", "lua52", "luau", or a custom definition file).
 
 # CAVEATS
 

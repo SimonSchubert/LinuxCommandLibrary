@@ -1,3 +1,7 @@
+# TAGLINE
+
+Export GNU recutils records to CSV format
+
 # TLDR
 
 **Convert recfile to CSV**
@@ -39,9 +43,9 @@
 
 # DESCRIPTION
 
-**rec2csv** converts GNU recutils record files to CSV format. Recfiles are human-readable text databases; this tool enables export to spreadsheet-compatible format.
+**rec2csv** converts GNU recutils plain-text database files into CSV format for import into spreadsheets, databases, or other tools that consume tabular data. It reads recfile records (structured as key-value pairs separated by blank lines) and outputs them as comma-separated rows with optional column headers via the **-H** flag.
 
-Part of GNU recutils.
+The **-t** flag selects a specific record type when a recfile contains multiple types, and **-f** limits output to specified fields. It can be combined with **recsel** in a pipeline to first filter records before converting to CSV. Part of the GNU recutils toolkit.
 
 # EXAMPLES
 

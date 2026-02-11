@@ -1,3 +1,7 @@
+# TAGLINE
+
+Safely power off or reboot the system
+
 # TLDR
 
 **Power off** immediately

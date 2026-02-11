@@ -1,3 +1,7 @@
+# TAGLINE
+
+Steam locomotive animation for typo correction
+
 # TLDR
 
 **Display a steam locomotive** animation

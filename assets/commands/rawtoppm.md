@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert raw RGB data to PPM format
+
 # TLDR
 
 **Convert raw RGB to PPM**
@@ -31,7 +35,9 @@ _height_
 
 # DESCRIPTION
 
-**rawtoppm** converts raw RGB data to PPM format. Supports various RGB interleaving modes. Part of Netpbm toolkit.
+**rawtoppm** converts raw RGB color data into Portable Pixmap (PPM) format by interpreting a byte stream as red, green, and blue pixel values arranged according to specified image dimensions. The tool handles different memory layouts for the color channels: the default expects pixel-interleaved data (RGBRGB...), while **-interrow** reads row-interleaved data where each color plane is stored as a complete row before the next.
+
+Since raw data contains no metadata, both width and height must be specified as arguments. The **-headerskip** option skips non-image data at the beginning of the file. It is part of the Netpbm image processing toolkit.
 
 # SEE ALSO
 

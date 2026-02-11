@@ -1,3 +1,7 @@
+# TAGLINE
+
+Roll virtual dice from the command line
+
 # TLDR
 
 Roll a single **20 sided** dice

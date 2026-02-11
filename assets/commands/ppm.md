@@ -1,3 +1,7 @@
+# TAGLINE
+
+Portable Pixmap color image format
+
 # TLDR
 
 **PPM format overview**
@@ -23,11 +27,9 @@ _FILE_
 
 # DESCRIPTION
 
-**ppm** is the Portable Pixmap format. Color image format in Netpbm.
+**PPM** (Portable Pixmap) is the color image format in the Netpbm family. Each pixel is stored as an RGB triplet, with values ranging from 0 to a specified maximum. The format exists in two variants: plain (ASCII text, human-readable) and raw (binary, compact).
 
-The format stores RGB pixel data. Plain text or binary.
-
-ppm defines color images.
+PPM serves as the common interchange format for color images in Netpbm pipelines. Numerous tools convert to and from PPM, allowing image processing by chaining simple single-purpose utilities. PGM handles grayscale and PBM handles bitmaps in the same family.
 
 # CAVEATS
 

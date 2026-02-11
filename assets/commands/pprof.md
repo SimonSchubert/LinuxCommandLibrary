@@ -1,3 +1,7 @@
+# TAGLINE
+
+Visualize and analyze profiling data
+
 # TLDR
 
 **Start web interface**

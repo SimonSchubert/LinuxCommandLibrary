@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run commands on multiple hosts in parallel
+
 # TLDR
 
 **Run command on multiple hosts**

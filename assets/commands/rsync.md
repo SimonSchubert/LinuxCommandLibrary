@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fast incremental file transfer and synchronization
+
 # TLDR
 
 **Sync a local directory to another location**

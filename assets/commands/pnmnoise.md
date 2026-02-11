@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate random color noise images
+
 # TLDR
 
 **Create color noise image**

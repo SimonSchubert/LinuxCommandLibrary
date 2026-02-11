@@ -1,3 +1,7 @@
+# TAGLINE
+
+Genomic position file indexer
+
 # TLDR
 
 **Index a VCF file**

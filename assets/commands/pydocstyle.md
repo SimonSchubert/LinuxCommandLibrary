@@ -1,3 +1,7 @@
+# TAGLINE
+
+Check Python docstring conventions
+
 # TLDR
 
 **Check docstrings**
@@ -75,6 +79,17 @@ Error codes identify specific issues. D100 series for modules, D200 for formatti
 Source display shows problematic code. Helps identify and fix issues quickly.
 
 Configuration files set project defaults. pyproject.toml and setup.cfg supported.
+
+# CONFIGURATION
+
+**pyproject.toml**
+> Project configuration with a `[tool.pydocstyle]` section for convention, match patterns, and ignore/select rules.
+
+**setup.cfg**
+> Alternative project configuration with a `[pydocstyle]` section supporting the same options.
+
+**.pydocstyle**
+> Standalone configuration file for pydocstyle settings.
 
 # CAVEATS
 

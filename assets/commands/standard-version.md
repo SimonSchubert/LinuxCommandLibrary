@@ -1,3 +1,7 @@
+# TAGLINE
+
+Automated semantic versioning from commits
+
 # TLDR
 
 **Release new version**
@@ -50,15 +54,9 @@
 
 # DESCRIPTION
 
-**standard-version** automates versioning. It follows conventional commits.
+**standard-version** automates semantic versioning and changelog generation for Node.js projects based on the Conventional Commits specification. It analyzes commit messages (feat, fix, BREAKING CHANGE) to determine whether to bump the major, minor, or patch version.
 
-Automatic version bumps. Based on commit types.
-
-Changelog generation. From commit messages.
-
-Git tag creation. Semantic versions.
-
-Conventional commits. feat, fix, breaking.
+The tool updates the version in package.json, generates or updates a CHANGELOG.md from commit messages, creates a git commit with the version bump, and tags it with the new version number. A dry run mode previews changes without modifying files. Pre-release tags (alpha, beta, rc) are supported for staged releases.
 
 # CAVEATS
 

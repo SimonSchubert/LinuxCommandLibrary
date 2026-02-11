@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert byte values to human-readable strings
+
 # TLDR
 
 **Convert bytes to human readable**
@@ -23,11 +27,9 @@ _BYTES_
 
 # DESCRIPTION
 
-**pretty-bytes** converts bytes to human-readable strings. Size formatter.
+**pretty-bytes** converts raw byte values into human-readable strings with appropriate unit suffixes (kB, MB, GB, TB, etc.). It automatically selects the best unit for readability, making large numbers easier to understand at a glance.
 
-The tool outputs KB, MB, GB notation. Node.js CLI utility.
-
-pretty-bytes formats sizes.
+This Node.js CLI utility is useful in scripts and pipelines where file sizes or data amounts need to be displayed in a user-friendly format rather than as raw numbers.
 
 # CAVEATS
 

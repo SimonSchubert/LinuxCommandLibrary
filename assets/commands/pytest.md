@@ -1,3 +1,7 @@
+# TAGLINE
+
+Python testing framework with fixtures and plugins
+
 # TLDR
 
 **Run all tests**
@@ -102,6 +106,20 @@ Parameterization runs tests with multiple inputs using @pytest.mark.parametrize.
 The plugin ecosystem extends functionality: pytest-cov for coverage, pytest-xdist for parallel execution, pytest-mock for mocking, and hundreds more. Plugins install via pip and activate automatically.
 
 Assertion introspection provides detailed failure messages without special assertion methods. Standard Python assert statements work with rich comparison displays.
+
+# CONFIGURATION
+
+**pytest.ini**
+> Primary configuration file for test discovery paths, markers, command-line defaults, and plugin settings.
+
+**pyproject.toml**
+> Project configuration with a `[tool.pytest.ini_options]` section supporting the same options as pytest.ini.
+
+**setup.cfg**
+> Alternative configuration file with a `[tool:pytest]` section for test settings.
+
+**conftest.py**
+> Per-directory fixture and plugin file automatically loaded by pytest, used to define shared fixtures, hooks, and test configuration.
 
 # CAVEATS
 

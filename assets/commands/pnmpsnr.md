@@ -1,3 +1,7 @@
+# TAGLINE
+
+Calculate peak signal-to-noise ratio between images
+
 # TLDR
 
 **Compare two images (PSNR)**
@@ -22,11 +26,9 @@ _FILE2_
 
 # DESCRIPTION
 
-**pnmpsnr** calculates PSNR between two PNM images. Quality metric.
+**pnmpsnr** calculates the Peak Signal-to-Noise Ratio (PSNR) between two PNM images. PSNR is a standard metric for measuring image quality, commonly used to evaluate the fidelity of compressed or processed images against the original.
 
-The tool measures image similarity. Higher values indicate closer match.
-
-pnmpsnr compares images.
+Higher PSNR values (measured in decibels) indicate greater similarity between the images. Typical values range from 30-50 dB for acceptable quality. Both images must have the same dimensions. Part of the Netpbm toolkit.
 
 # CAVEATS
 

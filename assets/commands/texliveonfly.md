@@ -1,3 +1,7 @@
+# TAGLINE
+
+Auto-install missing LaTeX packages
+
 # TLDR
 
 **Compile with auto-install**
@@ -39,15 +43,9 @@
 
 # DESCRIPTION
 
-**texliveonfly** installs packages on demand. It compiles and fetches.
+**texliveonfly** compiles LaTeX documents while automatically installing any missing packages from the TeX Live repository. When the compiler encounters an undefined package, texliveonfly detects the error, uses **tlmgr** to install the required package, and retries compilation until all dependencies are satisfied.
 
-Automatic package installation. Missing packages fetched.
-
-Works with TeX Live. Uses tlmgr.
-
-Multiple engines. pdflatex, xelatex, etc.
-
-Iterative compilation. Installs until complete.
+The tool works with any TeX Live engine including pdflatex, xelatex, and lualatex, selectable via the **--compiler** flag. Additional compiler arguments can be passed through **--arguments**. The **--dry-run** flag shows which packages would be installed without actually performing the installation.
 
 # CAVEATS
 

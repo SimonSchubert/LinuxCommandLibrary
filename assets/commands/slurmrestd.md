@@ -1,3 +1,7 @@
+# TAGLINE
+
+Slurm REST API interface daemon
+
 # TLDR
 
 Start REST API on a **port**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Sailfish OS emulator instances
+
 # TLDR
 
 **Start emulator**

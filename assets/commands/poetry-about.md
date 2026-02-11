@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display Poetry version information
+
 # TLDR
 
 **Show Poetry version and environment**

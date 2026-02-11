@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fast disk-efficient Node.js package manager
+
 # TLDR
 
 **Install dependencies**
@@ -56,11 +60,20 @@
 
 # DESCRIPTION
 
-**pnpm** is a fast, disk-efficient Node.js package manager. Uses content-addressable storage.
+**pnpm** is a fast, disk-efficient package manager for Node.js that uses a content-addressable storage system. Instead of copying packages into each project's node_modules, pnpm creates hard links from a single global store, dramatically reducing disk usage when multiple projects share the same dependencies.
 
-The tool manages JavaScript dependencies. Hard links shared packages.
+It provides a strict node_modules structure that prevents accessing undeclared dependencies, improving project reliability. The CLI is largely compatible with npm, supporting **install**, **add**, **remove**, **update**, and **run** commands with similar syntax. Workspace support via **-r** (recursive) enables managing monorepo projects.
 
-pnpm manages packages.
+# CONFIGURATION
+
+**.npmrc**
+> Project-level or user-level configuration file for registry URLs, authentication tokens, and pnpm-specific settings like `store-dir` and `strict-peer-dependencies`.
+
+**~/.local/share/pnpm/store/** (Linux), **~/Library/pnpm/store/** (macOS)
+> Content-addressable package store shared across all projects.
+
+**pnpm-workspace.yaml**
+> Defines workspace packages for monorepo setups.
 
 # CAVEATS
 

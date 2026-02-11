@@ -1,3 +1,7 @@
+# TAGLINE
+
+View Slurm job queue status
+
 # TLDR
 
 **View** the job queue

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Smart directory changer with learning
+
 # TLDR
 
 **Change to bookmarked directory**
@@ -43,15 +47,11 @@
 
 # DESCRIPTION
 
-**scd** provides smart cd. It bookmarks and learns directories.
+**scd** is a smart directory changer that enhances shell navigation through bookmarks and directory usage learning. It replaces the standard **cd** command with an intelligent alternative that remembers frequently visited paths and supports fuzzy matching, so partial directory names are enough to navigate.
 
-Fuzzy matching support. Partial names work.
+The bookmark system allows saving important directories by name for instant access. When navigating without an exact match, scd uses its learned history of directory visits to suggest the most likely target, ranking results by frequency and recency of use.
 
-Learns frequent directories. Auto-suggestions.
-
-Bookmark system. Save important paths.
-
-Shell integration. Replaces cd.
+Shell integration makes scd a transparent replacement for cd in bash, zsh, and other shells. Once configured, it intercepts directory changes to build its knowledge base while providing the same familiar interface.
 
 # CAVEATS
 

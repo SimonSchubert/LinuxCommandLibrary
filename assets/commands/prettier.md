@@ -1,3 +1,7 @@
+# TAGLINE
+
+Opinionated multi-language code formatter
+
 # TLDR
 
 **Format a file**
@@ -49,11 +53,17 @@ _FILES_
 
 # DESCRIPTION
 
-**prettier** is an opinionated code formatter. Supports many languages.
+**prettier** is an opinionated code formatter that enforces a consistent style by parsing code and reprinting it with its own rules. It supports JavaScript, TypeScript, CSS, HTML, JSON, Markdown, YAML, GraphQL, and many other languages through plugins.
 
-The tool formats JS, CSS, HTML, and more. Enforces consistent style.
+The tool deliberately limits configuration options to minimize style debates in teams. Files can be formatted in place with **--write** or checked for conformance with **--check**, making it suitable for both local development and CI pipelines.
 
-prettier formats code.
+# CONFIGURATION
+
+**.prettierrc** (or **.prettierrc.json**, **.prettierrc.yaml**, **prettier.config.js**)
+> Project configuration file defining formatting options like tab width, semicolons, quote style, trailing commas, and print width. Searched upward from the formatted file.
+
+**.prettierignore**
+> Glob patterns for files and directories that Prettier should skip, similar to .gitignore format.
 
 # CAVEATS
 

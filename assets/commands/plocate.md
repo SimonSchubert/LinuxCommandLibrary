@@ -1,3 +1,7 @@
+# TAGLINE
+
+Find files quickly using indexed database
+
 # TLDR
 
 **Find files by name**
@@ -88,6 +92,14 @@ Pattern matching is substring by default: "foo" matches "/path/to/foobar.txt". U
 The -e option verifies files still exist before displaying, filtering out stale entries from recently deleted files. This adds overhead but ensures accurate results.
 
 plocate uses a more compact database format than mlocate and employs posting lists for fast searching. The same updatedb database works with both tools.
+
+# CONFIGURATION
+
+**/var/lib/plocate/plocate.db**
+> Default database file containing the indexed filesystem.
+
+**/etc/updatedb.conf**
+> Configuration for updatedb controlling which paths and filesystems to index.
 
 # CAVEATS
 

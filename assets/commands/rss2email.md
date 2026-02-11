@@ -1,3 +1,7 @@
+# TAGLINE
+
+Forward RSS feed items to email
+
 # TLDR
 
 **Initialize configuration**

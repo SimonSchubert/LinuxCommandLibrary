@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interactive SIP traffic analyzer
+
 # TLDR
 
 **Capture SIP traffic**
@@ -60,15 +64,11 @@
 
 # DESCRIPTION
 
-**sngrep** analyzes SIP (VoIP) traffic interactively. It displays call flows and message details.
+**sngrep** is a terminal-based tool for capturing and analyzing SIP (Session Initiation Protocol) traffic used in VoIP systems. It provides an interactive ncurses interface that displays active SIP dialogs, call flow diagrams with directional arrows, and full message content including headers and body.
 
-Real-time capture shows active calls. Filter by method, source, or destination.
+The tool captures SIP packets in real time from network interfaces or reads previously captured pcap files for offline analysis. Filters narrow results by SIP method, source or destination address, and custom BPF expressions. Captured traffic can be saved to pcap format for later review or sharing with other analysis tools.
 
-Call flow diagrams visualize signaling. Arrows show message direction.
-
-Message details show full SIP content. Headers and body inspectable.
-
-Pcap file support enables offline analysis. Record for later review.
+Call flow visualization is the tool's standout feature, showing the sequence of SIP messages (INVITE, 200 OK, ACK, BYE) between endpoints with timing information. This makes it particularly effective for diagnosing VoIP call setup failures, registration problems, and codec negotiation issues.
 
 # INTERFACE CONTROLS
 

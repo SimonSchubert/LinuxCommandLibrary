@@ -1,3 +1,7 @@
+# TAGLINE
+
+Check Python dependencies for known vulnerabilities
+
 # TLDR
 
 **Scan the current project** for vulnerable dependencies

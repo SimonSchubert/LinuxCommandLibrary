@@ -1,3 +1,7 @@
+# TAGLINE
+
+RISC-V reference ISA simulator
+
 # TLDR
 
 **Run simulator**
@@ -46,15 +50,11 @@
 
 # DESCRIPTION
 
-**spike** simulates RISC-V. It's the reference emulator.
+**spike** is the official RISC-V ISA (Instruction Set Architecture) reference simulator. It provides instruction-accurate emulation of RISC-V processors, supporting both RV32 and RV64 base integer instruction sets along with standard extensions including M (multiply/divide), A (atomic), F/D (floating-point), and C (compressed).
 
-RISC-V ISA simulator. Instruction-accurate.
+The simulator includes an interactive debug mode for stepping through instructions, setting breakpoints, and inspecting registers and memory. It supports multi-core SMP simulation with configurable processor counts and memory layouts, making it suitable for testing both bare-metal firmware and operating system kernels.
 
-Multiple extensions. RV32/64, M, A, F, D, C.
-
-Debug mode included. Step through code.
-
-Multi-core support. SMP simulation.
+As the reference implementation maintained by the RISC-V project, spike serves as the golden model for verifying hardware implementations and compiler output against the specification.
 
 # CAVEATS
 

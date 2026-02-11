@@ -1,3 +1,7 @@
+# TAGLINE
+
+Utility-first CSS framework CLI
+
 # TLDR
 
 **Build CSS from input file**

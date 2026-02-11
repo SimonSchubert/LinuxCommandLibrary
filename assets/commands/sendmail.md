@@ -1,3 +1,7 @@
+# TAGLINE
+
+Send email via mail transfer agent
+
 # TLDR
 
 **Send an email** from command line
@@ -82,6 +86,17 @@ Subject: Test Email
 
 This is the message body.
 ```
+
+# CONFIGURATION
+
+**/etc/mail/sendmail.cf**
+> Main sendmail configuration file (or equivalent for Postfix/Exim compatibility layer).
+
+**/etc/aliases**
+> Mail alias database mapping local addresses to recipients or programs.
+
+**/var/spool/mqueue/**
+> Mail queue directory holding messages awaiting delivery.
 
 # CAVEATS
 

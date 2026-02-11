@@ -1,3 +1,7 @@
+# TAGLINE
+
+Deprecated DNS resolver, use resolvectl
+
 # TLDR
 
 **View** documentation for the renamed command

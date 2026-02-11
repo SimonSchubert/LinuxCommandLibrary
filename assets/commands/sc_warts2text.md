@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert scamper warts files to readable text
+
 # TLDR
 
 **Convert warts to human-readable text**

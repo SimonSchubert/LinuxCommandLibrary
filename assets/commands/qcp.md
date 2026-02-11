@@ -1,3 +1,7 @@
+# TAGLINE
+
+Copy files with progress display
+
 # TLDR
 
 **Copy with progress**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fast Rust-based JavaScript and TypeScript compiler
+
 # TLDR
 
 **Compile file**
@@ -46,15 +50,16 @@
 
 # DESCRIPTION
 
-**swc** compiles JavaScript/TypeScript. It's a fast Rust compiler.
+**swc** (Speedy Web Compiler) is a JavaScript and TypeScript compiler written in Rust, designed as a significantly faster alternative to Babel. It handles transpilation, JSX transformation, TypeScript stripping, and minification in a single tool.
 
-Babel alternative. Much faster.
+The compiler supports modern JavaScript features, downlevel compilation to older targets, and React JSX transformation. TypeScript files are compiled by stripping types without performing type checking, making it much faster than tsc for builds where type checking is handled separately.
 
-TypeScript support. No tsc needed.
+SWC can process individual files, entire directories with watch mode for development, and generates source maps for debugging. It is used as the compilation engine by tools like Next.js and Parcel.
 
-JSX transformation. React support.
+# CONFIGURATION
 
-Minification included. Production builds.
+**.swcrc**
+> Project configuration file in JSON format defining compilation target, module type, JSX settings, and minification options.
 
 # CAVEATS
 

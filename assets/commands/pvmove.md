@@ -1,3 +1,7 @@
+# TAGLINE
+
+Migrate LVM data between physical volumes
+
 # TLDR
 
 **Move data between physical volumes**
@@ -42,11 +46,9 @@ _DEST_
 
 # DESCRIPTION
 
-**pvmove** moves data between LVM physical volumes. Online data migration.
+**pvmove** migrates data between LVM physical volumes while the logical volumes remain online and accessible. This enables live storage migration, allowing administrators to replace disks, rebalance storage, or evacuate a physical volume before removing it from a volume group.
 
-The tool relocates extents. Part of LVM2.
-
-pvmove migrates LVM data.
+When called with a source and destination physical volume, pvmove relocates all physical extents from the source to the destination. If no destination is specified, LVM automatically distributes the data across available physical volumes in the same volume group. The **-n** flag restricts the move to a specific logical volume. Operations can be run in the background with **-b** and aborted with **--abort** if needed.
 
 # CAVEATS
 

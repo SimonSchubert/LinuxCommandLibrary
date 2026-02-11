@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal-based Tetris game
+
 # TLDR
 
 **Start a game** of tetris

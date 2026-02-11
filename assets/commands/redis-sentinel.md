@@ -1,3 +1,7 @@
+# TAGLINE
+
+High availability monitoring for Redis clusters
+
 # TLDR
 
 **Start Sentinel**
@@ -22,7 +26,9 @@
 
 # DESCRIPTION
 
-**Redis Sentinel** provides high availability for Redis through monitoring, notification, automatic failover, and configuration provider. It monitors master and replica instances.
+**Redis Sentinel** provides high availability for Redis deployments through continuous monitoring, automatic failover, and notification. It watches master and replica instances, and when a master becomes unreachable and a quorum of Sentinel processes agrees it is down, it automatically promotes a replica to master and reconfigures the remaining replicas to use the new master.
+
+Sentinel also acts as a configuration provider, allowing clients to discover the current master address for a named service. Multiple Sentinel instances (at least three recommended) form a distributed system that reaches consensus on failover decisions, preventing split-brain scenarios.
 
 # EXAMPLES
 
@@ -48,14 +54,17 @@ redis-cli -p 26379 sentinel failover mymaster
 
 # CONFIGURATION
 
-```
-# sentinel.conf
-port 26379
-sentinel monitor mymaster 127.0.0.1 6379 2
-sentinel down-after-milliseconds mymaster 5000
-sentinel failover-timeout mymaster 60000
-sentinel parallel-syncs mymaster 1
-```
+**/etc/redis/sentinel.conf**
+> Main Sentinel configuration file defining monitored masters, quorum thresholds, and failover parameters.
+
+**sentinel monitor** _name_ _host_ _port_ _quorum_
+> Define a master to monitor with the minimum number of Sentinels that must agree it is down before failover.
+
+**sentinel down-after-milliseconds** _name_ _ms_
+> Time in milliseconds a master must be unreachable before being considered down.
+
+**sentinel failover-timeout** _name_ _ms_
+> Maximum time for a failover operation to complete before being considered failed.
 
 # QUORUM
 

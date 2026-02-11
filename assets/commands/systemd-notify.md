@@ -1,3 +1,7 @@
+# TAGLINE
+
+Notify service manager about status changes
+
 # TLDR
 
 **Notify** systemd that the service has completed initialization

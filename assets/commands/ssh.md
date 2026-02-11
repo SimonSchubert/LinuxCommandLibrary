@@ -100,6 +100,17 @@ Port forwarding creates encrypted tunnels for other traffic. Local forwarding (*
 
 Configuration in **~/.ssh/config** can define hosts with custom settings (port, user, identity file, proxy), making complex connections simple.
 
+# CONFIGURATION
+
+**~/.ssh/config**
+> Per-user configuration file defining host aliases, default ports, usernames, identity files, proxy settings, and other connection options.
+
+**~/.ssh/known_hosts**
+> Database of previously verified host keys, used to detect server impersonation.
+
+**/etc/ssh/ssh_config**
+> System-wide SSH client configuration applied to all users.
+
 # CAVEATS
 
 First connection to a new host shows a fingerprint warning. Verify the fingerprint through a trusted channel before accepting.

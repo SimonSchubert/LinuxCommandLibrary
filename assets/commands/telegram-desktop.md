@@ -1,3 +1,7 @@
+# TAGLINE
+
+Telegram messaging desktop client
+
 # TLDR
 
 **Start Telegram**
@@ -43,17 +47,9 @@
 
 # DESCRIPTION
 
-**telegram-desktop** is Telegram client. It's the official desktop app.
+**telegram-desktop** is the official desktop client for the Telegram messaging platform. It provides access to all Telegram features including text messages, voice and video calls, media sharing, and channels from a native desktop application.
 
-Messaging application. Text, voice, media.
-
-End-to-end encryption. Secret chats.
-
-Group chats. Up to 200,000 members.
-
-File sharing. Large file support.
-
-Cross-platform sync. All devices.
+The client supports group chats with up to 200,000 members, secret chats with end-to-end encryption, file transfers up to 2GB per file, and seamless synchronization across all devices. It is built with Qt and runs on Linux, macOS, and Windows, with data stored in a configurable working directory.
 
 # CAVEATS
 

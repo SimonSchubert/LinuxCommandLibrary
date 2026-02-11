@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert Solitaire images to PNM format
+
 # TLDR
 
 **Convert Solitaire image to PNM**

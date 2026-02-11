@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create and start containers from images
+
 # TLDR
 
 **Run a container**
@@ -56,11 +60,9 @@ _IMAGE_
 
 # DESCRIPTION
 
-**podman run** runs a container from an image. Primary container execution command.
+**podman run** creates and starts a new container from a specified image. It is the primary command for launching containers, supporting interactive sessions (**-it**), background execution (**-d**), port mapping (**-p**), volume mounts (**-v**), and environment variables (**-e**).
 
-The tool creates and starts containers. Docker run compatible.
-
-podman run starts containers.
+The **--rm** flag automatically removes the container when it exits. The **--name** option assigns a human-readable name. By default, Podman runs containers rootlessly without requiring a daemon, making it a drop-in replacement for docker run.
 
 # CAVEATS
 

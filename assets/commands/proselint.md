@@ -1,3 +1,7 @@
+# TAGLINE
+
+Linter for English prose style
+
 # TLDR
 
 **Check text file**
@@ -50,6 +54,11 @@ The tool draws on advice from style guides and editorial best practices, providi
 # CHECKS
 
 Clichés, jargon, weasel words, redundancy, sexism, consistency, typography, hedging, archaisms, mixed metaphors, and more.
+
+# CONFIGURATION
+
+**~/.config/proselint/config** (or **.proselintrc**)
+> JSON configuration file to enable or disable specific checks, such as cliches, jargon, redundancy, and typography rules.
 
 # CAVEATS
 

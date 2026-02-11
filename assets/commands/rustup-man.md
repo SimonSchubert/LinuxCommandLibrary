@@ -1,3 +1,7 @@
+# TAGLINE
+
+View man pages for Rust tools
+
 # TLDR
 
 **Open man page**

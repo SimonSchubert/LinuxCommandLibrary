@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Apple iOS simulators
+
 # TLDR
 
 **List all simulators** and runtimes

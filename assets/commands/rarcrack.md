@@ -1,3 +1,7 @@
+# TAGLINE
+
+Brute-force password recovery for archives
+
 # TLDR
 
 **Crack RAR password**
@@ -44,17 +48,9 @@
 
 # DESCRIPTION
 
-**rarcrack** recovers passwords from encrypted archives. It uses brute-force testing of password combinations.
+**rarcrack** recovers passwords from encrypted RAR, ZIP, and 7Z archives using brute-force testing of all possible character combinations. It systematically tries passwords of increasing length from a configurable character set, with the archive type either auto-detected from the file extension or explicitly specified.
 
-Archive type is auto-detected or specified. RAR, ZIP, and 7Z formats supported.
-
-Character sets limit the search space. Knowing password composition speeds recovery.
-
-Multi-threading uses available CPU cores. More threads increase speed.
-
-Progress is saved automatically. Interrupted sessions resume from last position.
-
-XML status file tracks current position. Delete to restart from beginning.
+The tool automatically saves progress to an XML status file alongside the archive, allowing interrupted sessions to resume from the last tested position without starting over. Multi-threading distributes password testing across available CPU cores for faster throughput. Narrowing the character set with **--charset** significantly reduces the search space when the password composition is partially known.
 
 # CAVEATS
 

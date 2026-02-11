@@ -1,3 +1,7 @@
+# TAGLINE
+
+SMART disk monitoring daemon
+
 # TLDR
 
 **Start smartd** in the foreground
@@ -54,6 +58,14 @@
 The daemon polls devices at configurable intervals (default 30 minutes), logging changes to SMART attributes via syslog. It can send email alerts, run custom scripts, or execute tests when problems are detected.
 
 Configuration is stored in **/etc/smartd.conf**, listing devices to monitor with their options. Without a config file, smartd scans and monitors all SMART-capable devices.
+
+# CONFIGURATION
+
+**/etc/smartd.conf**
+> Main configuration file listing devices to monitor and their check options, alert actions, and test schedules.
+
+**/etc/default/smartmontools**
+> Startup options for the smartd daemon on Debian-based systems.
 
 # CAVEATS
 

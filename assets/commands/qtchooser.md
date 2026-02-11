@@ -1,3 +1,7 @@
+# TAGLINE
+
+Switch between multiple Qt installations
+
 # TLDR
 
 **List** available Qt versions
@@ -47,9 +51,20 @@ Display **help**
 
 The tool wraps Qt development binaries (qmake, moc, uic, etc.) and directs them to the selected Qt installation based on configuration files or command-line options.
 
+# CONFIGURATION
+
+**/usr/share/qtchooser/**
+> System-wide Qt version configuration files, each specifying bin and lib paths for a Qt installation.
+
+**~/.config/qtchooser/**
+> User-level Qt version configuration files overriding system defaults.
+
+**QT_SELECT**
+> Environment variable selecting the default Qt version (e.g., qt5, qt6).
+
 # CAVEATS
 
-Configuration stored in /usr/share/qtchooser/ or ~/.config/qtchooser/. Default version can be set via QT_SELECT environment variable. Not all distributions use qtchooser.
+Not all distributions use qtchooser.
 
 # HISTORY
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Change color depth of PNM images
+
 # TLDR
 
 **Change image depth**
@@ -26,11 +30,9 @@ _FILE_
 
 # DESCRIPTION
 
-**pnmdepth** changes the depth of PNM images. Scales sample values.
+**pnmdepth** changes the maximum sample value (color depth) of PNM images by proportionally rescaling all pixel values. For example, converting from maxval 65535 (16-bit) to 255 (8-bit) scales each sample value accordingly.
 
-The tool adjusts bit depth. Useful for format conversion.
-
-pnmdepth scales values.
+This is useful for reducing file size by lowering bit depth or for ensuring compatibility with tools that expect specific depth values. Part of the Netpbm toolkit; superseded by **pamdepth**.
 
 # CAVEATS
 

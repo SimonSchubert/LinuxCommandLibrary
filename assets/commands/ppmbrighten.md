@@ -1,3 +1,7 @@
+# TAGLINE
+
+Adjust PPM image brightness and saturation
+
 # TLDR
 
 **Increase brightness**

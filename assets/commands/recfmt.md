@@ -1,3 +1,7 @@
+# TAGLINE
+
+Format GNU recutils records with templates
+
 # TLDR
 
 **Format records with template**

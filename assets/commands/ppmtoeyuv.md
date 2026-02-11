@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert PPM to Encoder YUV format
+
 # TLDR
 
 **Convert PPM to Encoder YUV**

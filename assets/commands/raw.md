@@ -1,3 +1,7 @@
+# TAGLINE
+
+Bind raw character devices to block devices
+
 # TLDR
 
 **Bind** a raw character device to a block device

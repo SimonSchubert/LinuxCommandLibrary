@@ -1,3 +1,7 @@
+# TAGLINE
+
+Submit and query Arch package usage statistics
+
 # TLDR
 
 **Submit** installed package data

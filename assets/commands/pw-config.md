@@ -1,3 +1,7 @@
+# TAGLINE
+
+Inspect PipeWire configuration files and sections
+
 # TLDR
 
 List all **configuration files** that will be used

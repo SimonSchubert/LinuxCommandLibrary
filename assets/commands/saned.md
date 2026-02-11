@@ -1,3 +1,7 @@
+# TAGLINE
+
+Network scanner sharing daemon
+
 # TLDR
 
 **Run saned in standalone daemon mode**
@@ -51,6 +55,14 @@
 The daemon can run standalone with **-a** or be managed by inetd/xinetd. Access control is configured in **/etc/sane.d/saned.conf**, which lists allowed hostnames, IP addresses, or CIDR subnets. Connections from localhost are always permitted.
 
 Clients configure the server address in their **/etc/sane.d/net.conf** file to access remote scanners transparently through the network backend.
+
+# CONFIGURATION
+
+**/etc/sane.d/saned.conf**
+> Access control file listing hostnames, IP addresses, or CIDR subnets allowed to connect to the scanner daemon.
+
+**/etc/sane.d/net.conf**
+> Client-side configuration listing remote saned servers to connect to for network scanning.
 
 # CAVEATS
 

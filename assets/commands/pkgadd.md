@@ -1,3 +1,7 @@
+# TAGLINE
+
+Install packages on CRUX Linux
+
 # TLDR
 
 **Install** a local package

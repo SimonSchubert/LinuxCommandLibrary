@@ -1,3 +1,7 @@
+# TAGLINE
+
+Show Sailfish emulator device model details
+
 # TLDR
 
 **Show device model details**

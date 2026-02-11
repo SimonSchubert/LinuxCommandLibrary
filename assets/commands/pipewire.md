@@ -1,3 +1,7 @@
+# TAGLINE
+
+Low-latency multimedia processing daemon
+
 # TLDR
 
 Start **PipeWire** daemon
@@ -39,6 +43,20 @@ Display **help**
 **pipewire** is a modern multimedia processing daemon that handles audio and video streams. It provides low-latency capture and playback, replacing both PulseAudio for consumer audio and JACK for professional audio applications.
 
 The daemon manages connections between applications and devices, handles format conversion, and provides a graph-based routing model. It's typically started automatically by systemd user services.
+
+# CONFIGURATION
+
+**/etc/pipewire/pipewire.conf**
+> System-wide PipeWire configuration file.
+
+**~/.config/pipewire/pipewire.conf.d/**
+> User-level configuration drop-in directory for overrides.
+
+**/etc/pipewire/pipewire.conf.d/**
+> System-level drop-in directory for additional configuration fragments.
+
+**PIPEWIRE_RUNTIME_DIR**
+> Override the runtime directory for PipeWire sockets.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display information about ELF binary files
+
 # TLDR
 
 Display **all information** about ELF file

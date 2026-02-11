@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert PPM to DEC Sixel terminal format
+
 # TLDR
 
 **Convert PPM to Sixel**

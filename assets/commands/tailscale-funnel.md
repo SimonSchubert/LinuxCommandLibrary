@@ -1,3 +1,7 @@
+# TAGLINE
+
+Expose local services to internet
+
 # TLDR
 
 **Expose local port to internet**
@@ -36,7 +40,9 @@
 
 # DESCRIPTION
 
-**tailscale funnel** exposes local services to the public internet. Creates HTTPS endpoint accessible outside Tailscale network. Managed TLS certificates included.
+**tailscale funnel** exposes local services to the public internet through your Tailscale node. Unlike **tailscale serve** which only makes services available within your tailnet, Funnel creates a publicly accessible HTTPS endpoint that anyone on the internet can reach.
+
+Tailscale automatically provisions and manages TLS certificates for the endpoint, so traffic is encrypted without manual certificate setup. Services can be mapped to specific URL paths using **--set-path**, allowing multiple local services to be exposed under different routes. The **off** subcommand disables the funnel, and **status** shows the current configuration.
 
 # CAVEATS
 

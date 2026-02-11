@@ -1,3 +1,7 @@
+# TAGLINE
+
+Add or remove OpenRC services from runlevels
+
 # TLDR
 
 **List** enabled services

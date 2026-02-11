@@ -1,3 +1,7 @@
+# TAGLINE
+
+Alias for shnsplit audio splitter
+
 # TLDR
 
 This command is an alias of **shnsplit**

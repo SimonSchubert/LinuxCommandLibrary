@@ -1,3 +1,7 @@
+# TAGLINE
+
+Text-to-speech server daemon
+
 # TLDR
 
 **Start speech-dispatcher** daemon
@@ -69,6 +73,17 @@
 The daemon listens for client connections and dispatches text to configured speech synthesis modules such as eSpeak NG, Festival, Piper, or others. It supports features like adjustable speech rate, pitch, volume, voice selection, and multiple languages.
 
 Applications communicate with speech-dispatcher through client libraries (libspeechd) or the **spd-say** command-line utility. User-specific configuration is stored in **~/.config/speech-dispatcher/** while system configuration resides in **/etc/speech-dispatcher/**.
+
+# CONFIGURATION
+
+**/etc/speech-dispatcher/speechd.conf**
+> System-wide configuration for default output module, voice, language, and audio settings.
+
+**~/.config/speech-dispatcher/speechd.conf**
+> Per-user configuration overriding system defaults.
+
+**/etc/speech-dispatcher/modules/**
+> Output module configuration files for each speech synthesizer backend (espeak-ng.conf, festival.conf, etc.).
 
 # CAVEATS
 

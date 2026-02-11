@@ -1,3 +1,7 @@
+# TAGLINE
+
+Unofficial Bitwarden CLI password manager
+
 # TLDR
 
 **Login to vault**
@@ -80,15 +84,17 @@
 
 # DESCRIPTION
 
-**rbw** is an unofficial Bitwarden CLI client. It provides fast, Unix-friendly password access.
+**rbw** is an unofficial command-line Bitwarden client designed for Unix-style workflows, outputting passwords directly to stdout for easy integration with scripts, dmenu, rofi, and other tools. It communicates with Bitwarden servers through a background agent daemon (**rbw-agent**) that caches the decrypted vault locally for fast retrieval.
 
-Vault syncs with Bitwarden servers. Entries are cached locally for speed.
+The **get** command retrieves passwords by entry name, while the **--field** flag accesses specific fields like usernames, TOTP codes, or custom notes. The **generate** command creates random passwords and stores them directly in the vault. Vault synchronization with **rbw sync** keeps the local cache current with the server.
 
-Get command outputs password to stdout. Integrates with scripts and dmenu.
+# CONFIGURATION
 
-Field selection retrieves username, TOTP, or notes. Full entry data available.
+**~/.config/rbw/config.json**
+> Client configuration specifying the Bitwarden server URL, email address, lock timeout, and pinentry program for master password entry.
 
-Generation creates and stores passwords. Configurable length and character sets.
+**rbw-agent**
+> Background daemon that maintains the decrypted vault in memory. Started automatically on first rbw command and locks after the configured timeout.
 
 # CAVEATS
 

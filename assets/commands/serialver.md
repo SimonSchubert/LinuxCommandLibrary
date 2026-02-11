@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compute Java serialization version UID
+
 # TLDR
 
 **Get serial version UID**
@@ -29,15 +33,9 @@
 
 # DESCRIPTION
 
-**serialver** returns serialVersionUID. It helps Java serialization.
+**serialver** computes and displays the serialVersionUID for Java classes that implement the Serializable interface. This UID is a hash derived from the class structure (fields, methods, interfaces) and is used by Java's serialization mechanism to verify that sender and receiver of a serialized object have compatible class definitions.
 
-Computes UID for class. Based on class structure.
-
-Used for Serializable classes. Version compatibility.
-
-Part of JDK tools. Standard Java utility.
-
-Helps migration. Maintain compatibility.
+When a class does not explicitly declare a serialVersionUID, the JVM computes one automatically at runtime. Using serialver to obtain and hardcode this value in the class source prevents incompatible class version errors when the class structure changes in ways that remain compatible with older serialized forms.
 
 # CAVEATS
 

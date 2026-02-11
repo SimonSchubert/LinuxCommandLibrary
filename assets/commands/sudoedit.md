@@ -1,3 +1,7 @@
+# TAGLINE
+
+Safely edit files with elevated privileges
+
 # TLDR
 
 **Edit file as root**

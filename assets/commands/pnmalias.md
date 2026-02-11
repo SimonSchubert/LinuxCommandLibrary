@@ -1,3 +1,7 @@
+# TAGLINE
+
+Anti-alias edges in PNM images
+
 # TLDR
 
 **Anti-alias image edges**

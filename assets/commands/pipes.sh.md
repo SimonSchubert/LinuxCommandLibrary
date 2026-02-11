@@ -1,3 +1,7 @@
+# TAGLINE
+
+Animated pipes terminal screensaver
+
 # TLDR
 
 **Run pipes animation**
@@ -60,15 +64,11 @@
 
 # DESCRIPTION
 
-**pipes.sh** displays animated pipes in the terminal. It's a classic screensaver-style animation.
+**pipes.sh** displays animated pipes growing across the terminal as a screensaver-style animation. Pipes start from screen edges, extend in random directions, and turn at random intervals, creating increasingly complex patterns.
 
-Pipes grow from edges and turn randomly. Multiple pipes create complex patterns.
+Multiple pipes can run simultaneously, each in a different color. Various character sets provide different visual styles, from simple ASCII box-drawing to Unicode block characters. Color modes range from monochrome to full rainbow cycling.
 
-Color modes vary from monochrome to rainbow. Different character sets provide visual variety.
-
-Frame rate controls animation speed. Higher values create smoother animation.
-
-Reset clears screen periodically. This prevents excessive visual clutter.
+The frame rate flag controls animation smoothness and CPU usage. A periodic reset clears the screen to prevent visual clutter from accumulated pipe trails.
 
 # CAVEATS
 

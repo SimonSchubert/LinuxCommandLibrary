@@ -1,3 +1,7 @@
+# TAGLINE
+
+Add readline editing to any command
+
 # TLDR
 
 **Add readline to command**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Plan 9 command shell for Unix
+
 # TLDR
 
 **Start an interactive rc shell**

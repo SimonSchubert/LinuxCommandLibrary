@@ -1,3 +1,7 @@
+# TAGLINE
+
+Lightweight Spotify Connect daemon
+
 # TLDR
 
 **Start spotifyd** with default configuration
@@ -81,6 +85,14 @@
 Unlike the full Spotify desktop client, spotifyd has no graphical interface and minimal resource usage. It can be controlled from any Spotify client (mobile app, web player, or desktop app) using Spotify Connect. For local control, it pairs well with terminal interfaces like **spotify-tui** (spt).
 
 Configuration is typically done via a file at **~/.config/spotifyd/spotifyd.conf** containing credentials and playback settings. A Spotify Premium account is required for streaming.
+
+# CONFIGURATION
+
+**~/.config/spotifyd/spotifyd.conf**
+> Main configuration file defining Spotify credentials, audio backend, device name, bitrate, volume settings, and cache location.
+
+**/etc/spotifyd.conf**
+> System-wide configuration used when running spotifyd as a system service.
 
 # CAVEATS
 

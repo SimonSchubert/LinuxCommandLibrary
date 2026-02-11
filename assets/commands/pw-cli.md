@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage PipeWire objects from command line
+
 # TLDR
 
 **List** objects by type

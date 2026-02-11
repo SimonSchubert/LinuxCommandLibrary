@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminate PPP dial-up connections
+
 # TLDR
 
 **Disconnect PPP connection**
@@ -29,11 +33,9 @@ _PROVIDER_
 
 # DESCRIPTION
 
-**poff** terminates PPP connections. Complementary to pon.
+**poff** terminates PPP (Point-to-Point Protocol) connections established by **pon**. Without arguments, it disconnects the default provider; a provider name can be specified to target a specific connection.
 
-The tool disconnects dial-up. Manages PPP sessions.
-
-poff stops PPP.
+The **-a** flag disconnects all active PPP connections. The **-r** flag reconnects automatically after disconnecting. This is a convenience wrapper around sending signals to the pppd daemon.
 
 # CAVEATS
 

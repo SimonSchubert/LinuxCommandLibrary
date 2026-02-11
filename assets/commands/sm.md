@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display fullscreen text messages
+
 # TLDR
 
 Display a **message** fullscreen

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Self-hosted AI coding assistant
+
 # TLDR
 
 **Start Tabby server** with GPU acceleration

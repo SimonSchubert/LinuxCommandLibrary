@@ -1,3 +1,7 @@
+# TAGLINE
+
+Sublime Text command-line launcher
+
 # TLDR
 
 **Open a file** in Sublime Text

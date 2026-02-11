@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compute and verify SHA-1 checksums
+
 # TLDR
 
 **Calculate the SHA1 checksum** of a file

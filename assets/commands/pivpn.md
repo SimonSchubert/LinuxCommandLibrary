@@ -1,3 +1,7 @@
+# TAGLINE
+
+Simple OpenVPN and WireGuard server manager
+
 # TLDR
 
 **Add** new client device
@@ -52,6 +56,17 @@ Show **connected** clients and statistics
 **pivpn** simplifies OpenVPN or WireGuard server management on Linux, particularly Raspberry Pi. It handles certificate generation, client configuration, and connection management through an interactive menu system.
 
 Originally designed for Raspberry Pi, it works on any Debian-based system. It automates the complex setup of VPN servers with security-hardened configurations.
+
+# CONFIGURATION
+
+**/etc/pivpn/**
+> PiVPN configuration directory with setup variables and protocol settings.
+
+**/etc/openvpn/** or **/etc/wireguard/**
+> VPN server configuration files managed by PiVPN depending on chosen protocol.
+
+**/home/\<user\>/ovpns/** or **/home/\<user\>/configs/**
+> Generated client configuration files for distribution.
 
 # CAVEATS
 

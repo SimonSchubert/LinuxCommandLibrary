@@ -1,3 +1,7 @@
+# TAGLINE
+
+Reset all units to preset defaults
+
 # TLDR
 
 Reset **all** units to preset defaults

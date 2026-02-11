@@ -1,3 +1,7 @@
+# TAGLINE
+
+Optimize and clean SVG files
+
 # TLDR
 
 **Optimize an SVG file**

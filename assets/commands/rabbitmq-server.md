@@ -1,3 +1,7 @@
+# TAGLINE
+
+Open-source message broker server
+
 # TLDR
 
 **Start RabbitMQ server**

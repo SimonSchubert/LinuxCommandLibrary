@@ -1,3 +1,7 @@
+# TAGLINE
+
+Apply configuration patches to Sailfish projects
+
 # TLDR
 
 **Apply configuration patch**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+High-precision scientific calculator
+
 # TLDR
 
 **Launch calculator**
@@ -25,17 +29,11 @@ _file_
 
 # DESCRIPTION
 
-**speedcrunch** is a scientific calculator. It runs as a desktop app.
+**SpeedCrunch** is a high-precision desktop scientific calculator designed for keyboard-driven operation. It evaluates mathematical expressions typed into an input line, supporting variables, custom functions, and a comprehensive built-in function library covering trigonometry, statistics, and more.
 
-High-precision math. Arbitrary precision.
+The interface features syntax highlighting for expressions, auto-completion for function names, and a scrollable history of previous calculations. Results are computed with arbitrary precision, and the application supports unit conversions between common measurement systems.
 
-Syntax highlighted. Expression editing.
-
-Variable support. Store values.
-
-Function library. Math, trig, etc.
-
-History navigation. Review calculations.
+Sessions can be saved and restored from files, preserving calculation history and defined variables. SpeedCrunch is cross-platform, built with Qt, and available for Linux, Windows, and macOS.
 
 # FEATURES
 

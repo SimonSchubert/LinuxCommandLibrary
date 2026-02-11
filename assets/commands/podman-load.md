@@ -1,3 +1,7 @@
+# TAGLINE
+
+Load container images from archives
+
 # TLDR
 
 **Load image from archive**
@@ -26,11 +30,9 @@
 
 # DESCRIPTION
 
-**podman load** loads images from OCI archives. Restores saved images.
+**podman load** restores container images from tar archives previously created by podman save or docker save. Unlike podman import, it preserves all image layers, metadata, tags, and build history.
 
-The tool imports image archives. Preserves layers and metadata.
-
-podman load restores images.
+The archive can be read from a file with **-i** or piped from stdin. This is the standard way to transfer complete images between systems without using a registry.
 
 # CAVEATS
 

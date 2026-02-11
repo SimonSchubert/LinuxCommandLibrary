@@ -1,3 +1,7 @@
+# TAGLINE
+
+Query Gentoo Portage package database
+
 # TLDR
 
 Display **environment variable** value

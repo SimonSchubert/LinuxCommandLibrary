@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage installed Rust toolchains
+
 # TLDR
 
 **List toolchains**

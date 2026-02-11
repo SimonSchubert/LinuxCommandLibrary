@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage RabbitMQ cluster membership and status
+
 # TLDR
 
 **Show cluster status**

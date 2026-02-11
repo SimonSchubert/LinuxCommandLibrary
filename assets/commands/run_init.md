@@ -1,3 +1,7 @@
+# TAGLINE
+
+Execute programs in a freshly created init namespace
+
 # TLDR
 
 **Run** a script in init context

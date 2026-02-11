@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert PPM to HP LaserJet format
+
 # TLDR
 
 **Convert PPM to HP LaserJet format**

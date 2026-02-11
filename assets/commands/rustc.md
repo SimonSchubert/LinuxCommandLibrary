@@ -1,3 +1,7 @@
+# TAGLINE
+
+Rust programming language compiler
+
 # TLDR
 
 **Compile a Rust file**

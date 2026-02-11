@@ -1,3 +1,7 @@
+# TAGLINE
+
+Deploy serverless functions to cloud providers
+
 # TLDR
 
 **Create new service**
@@ -93,6 +97,17 @@ Local invocation tests functions without deployment. This speeds up development 
 Logs stream function output from cloud providers. They show invocations, errors, and execution details.
 
 Plugins extend functionality: custom domains, monitoring, optimization, and framework integrations.
+
+# CONFIGURATION
+
+**serverless.yml**
+> Main service configuration file defining functions, events, resources, plugins, and provider settings.
+
+**~/.serverlessrc**
+> User-level configuration for tracking and telemetry preferences.
+
+**AWS_ACCESS_KEY_ID** / **AWS_SECRET_ACCESS_KEY**
+> AWS credentials for deployment (or configured via AWS CLI profiles).
 
 # CAVEATS
 

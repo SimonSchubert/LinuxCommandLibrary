@@ -1,3 +1,7 @@
+# TAGLINE
+
+Configure and manage PPTP VPN tunnels
+
 # TLDR
 
 **Create PPTP tunnel**
@@ -38,11 +42,9 @@
 
 # DESCRIPTION
 
-**pptpsetup** configures PPTP VPN tunnels. Setup helper script.
+**pptpsetup** is a helper script that simplifies creating and managing PPTP VPN tunnel configurations. It generates the necessary peer configuration files in **/etc/ppp/peers/** and stores authentication credentials in the appropriate secrets files.
 
-The tool creates peer configuration files. Manages credentials.
-
-pptpsetup creates tunnels.
+The **--encrypt** option enables MPPE encryption for the tunnel. Tunnels can be started with **pon** and stopped with **poff** using the tunnel name created by pptpsetup.
 
 # CAVEATS
 

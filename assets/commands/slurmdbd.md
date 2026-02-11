@@ -1,3 +1,7 @@
+# TAGLINE
+
+Slurm database accounting daemon
+
 # TLDR
 
 Run in **foreground** mode with logging to stdout
@@ -67,6 +71,14 @@ The daemon handles database connections, manages accounting data storage, and pr
 
 **SIGUSR2**
 > Reread log level and reopen log file (useful for logrotate)
+
+# CONFIGURATION
+
+**/etc/slurm/slurmdbd.conf**
+> Database daemon configuration specifying database connection parameters, authentication settings, and logging options.
+
+**/etc/slurm/slurm.conf**
+> Main Slurm configuration referenced for cluster-wide settings and AccountingStorageHost.
 
 # CAVEATS
 

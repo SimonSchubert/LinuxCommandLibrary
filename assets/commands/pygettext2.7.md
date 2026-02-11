@@ -1,3 +1,7 @@
+# TAGLINE
+
+Python 2.7 translatable string extraction
+
 # TLDR
 
 **Extract translatable strings**
@@ -32,11 +36,9 @@ _FILES_
 
 # DESCRIPTION
 
-**pygettext2.7** extracts translatable strings from Python 2.7. i18n tool.
+**pygettext2.7** is the Python 2.7 version of pygettext, which extracts translatable strings from Python source files and generates POT (Portable Object Template) files for internationalization. It scans for strings wrapped in **_()**, **gettext()**, and similar marker functions.
 
-The tool creates POT files. Internationalization helper.
-
-pygettext2.7 extracts strings.
+This version-specific binary targets Python 2.7 code. For Python 3 projects, use the corresponding **pygettext3** or the more feature-rich **xgettext** and **Babel** alternatives.
 
 # CAVEATS
 

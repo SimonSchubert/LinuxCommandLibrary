@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display help pages for zsh builtins
+
 # TLDR
 
 **Display help for a command**

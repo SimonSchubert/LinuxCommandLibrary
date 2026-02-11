@@ -1,3 +1,7 @@
+# TAGLINE
+
+Interactive Slackware package management tool
+
 # TLDR
 
 Launch **interactive** package tool

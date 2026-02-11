@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate multi-color gradient images
+
 # TLDR
 
 **Generate rainbow gradient**
@@ -32,11 +36,9 @@ _COLORS_
 
 # DESCRIPTION
 
-**ppmrainbow** creates color gradient images. Multi-color spectrums.
+**ppmrainbow** creates a horizontal color gradient image that smoothly transitions through the specified color stops. Any number of named colors can be provided, and the tool interpolates between them evenly across the image width.
 
-The tool generates rainbow effects. Part of Netpbm.
-
-ppmrainbow makes gradients.
+This is useful for creating gradient backgrounds, color bars for testing, or decorative elements. The **-norepeat** option prevents the gradient from wrapping back to the first color. Part of the Netpbm toolkit.
 
 # CAVEATS
 

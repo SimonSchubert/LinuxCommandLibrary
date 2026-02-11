@@ -1,3 +1,7 @@
+# TAGLINE
+
+Monitor RSS feeds like tail monitors files
+
 # TLDR
 
 **Follow RSS feed**
@@ -56,15 +60,9 @@
 
 # DESCRIPTION
 
-**rsstail** monitors RSS feeds. It works like tail for feeds.
+**rsstail** monitors RSS feeds from the command line, functioning like **tail -f** for web feeds. It periodically checks specified feed URLs and prints new items as they appear, providing a simple way to track updates without a full feed reader.
 
-Continuous monitoring. Checks for new items.
-
-Multiple feeds supported. Monitor several sources.
-
-Configurable output. Title, description, links.
-
-Background monitoring. Stay updated.
+Multiple feeds can be monitored simultaneously using repeated **-u** flags, and the check interval is configurable with **-i** (in seconds). Output can include titles, descriptions (**-d**), links (**-l**), and timestamps (**-p**), or just titles by default. The **-1** flag performs a single check and exits, useful for scripted feed polling.
 
 # CAVEATS
 

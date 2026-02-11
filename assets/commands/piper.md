@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fast local neural text-to-speech engine
+
 # TLDR
 
 **Synthesize speech**
@@ -59,15 +63,11 @@
 
 # DESCRIPTION
 
-**piper** is a fast, local neural text-to-speech system. It generates natural-sounding speech from text.
+**piper** is a fast, local neural text-to-speech system that generates natural-sounding speech from text using ONNX-based voice models. It runs entirely offline after model download, requiring no internet connection or cloud API.
 
-Models are language and voice specific. Many voices available for common languages.
+Each model is trained for a specific language and voice. Multi-speaker models support selecting different voice variants via speaker ID. The length_scale and noise_scale parameters control speaking rate and variation, allowing fine-tuning of output characteristics.
 
-Processing is local and fast. No internet connection required after model download.
-
-Multi-speaker models support different voices. Speaker ID selects voice variant.
-
-Rate and variation parameters tune output. Length scale adjusts speaking speed.
+Input is read from stdin and output as WAV audio. JSON input mode enables structured text processing with per-utterance settings. Models are available for many languages through the Piper project's model repository.
 
 # CAVEATS
 

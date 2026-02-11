@@ -1,3 +1,7 @@
+# TAGLINE
+
+Combine multiple images into a montage
+
 # TLDR
 
 **Create image montage**

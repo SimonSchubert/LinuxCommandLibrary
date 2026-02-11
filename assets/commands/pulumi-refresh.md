@@ -1,3 +1,7 @@
+# TAGLINE
+
+Sync stack state with cloud resources
+
 # TLDR
 
 **Refresh state from cloud**

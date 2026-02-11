@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extract translatable strings from PPD files
+
 # TLDR
 
 **Extract strings for translation**
@@ -22,11 +26,9 @@ _FILES_
 
 # DESCRIPTION
 
-**ppdpo** extracts translatable strings from PPD files. Creates PO files.
+**ppdpo** extracts translatable strings from CUPS PPD files or driver source files (.drv) and generates GNU gettext PO (Portable Object) files for localization. The extracted strings include option names, group labels, and other user-visible text that translators can localize into different languages.
 
-The tool supports localization. Part of CUPS.
-
-ppdpo extracts strings.
+The resulting PO files follow standard gettext format and can be edited with translation tools like poedit or Weblate. Once translated, the localized strings are compiled back into PPD files using ppdc and ppdmerge.
 
 # CAVEATS
 

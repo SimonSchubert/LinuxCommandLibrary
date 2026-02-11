@@ -1,3 +1,7 @@
+# TAGLINE
+
+Kernel random number generator devices
+
 # TLDR
 
 **Read 16 random bytes** from /dev/urandom

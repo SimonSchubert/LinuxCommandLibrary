@@ -1,3 +1,7 @@
+# TAGLINE
+
+HTTP load testing and benchmarking tool
+
 # TLDR
 
 **Test a URL** with default settings (15 concurrent users)
@@ -95,6 +99,14 @@ The tool operates in three modes: **regression** (sequential URL testing), **int
 By default, each simulated user pauses randomly between requests to simulate realistic traffic. The **-d** option controls this delay range, while **-b** eliminates it entirely for pure throughput testing.
 
 Configuration is stored in **~/.siege/siege.conf**. URLs can be specified on the command line or in a file with **-f**, supporting POST data and custom headers.
+
+# CONFIGURATION
+
+**~/.siege/siege.conf**
+> User configuration file for default concurrency, delay, logging, protocol version, and other settings. Generated with **siege.config**.
+
+**~/.siege/urls.txt**
+> Default URL file used when no **-f** option or URL argument is provided.
 
 # CAVEATS
 

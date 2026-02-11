@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage temporary files and directories
+
 # TLDR
 
 **Create** files and directories as specified in configuration

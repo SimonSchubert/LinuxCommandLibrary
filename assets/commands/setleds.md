@@ -1,3 +1,7 @@
+# TAGLINE
+
+Control keyboard LED indicators on consoles
+
 # TLDR
 
 **Turn on NumLock LED**

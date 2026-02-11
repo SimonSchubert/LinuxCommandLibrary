@@ -1,3 +1,7 @@
+# TAGLINE
+
+Cancel Slurm jobs by ID or filter
+
 # TLDR
 
 **Cancel** a job by ID

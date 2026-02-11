@@ -1,3 +1,7 @@
+# TAGLINE
+
+Validate and pretty-print JSON data
+
 # TLDR
 
 **Pretty print JSON**
@@ -39,11 +43,9 @@ _FILE_
 
 # DESCRIPTION
 
-**python -m json.tool** validates and pretty-prints JSON. Built-in formatter.
+**python -m json.tool** is a built-in Python module that validates and pretty-prints JSON data. It reads JSON from a file argument or standard input, checks for syntax errors, and outputs a formatted version with proper indentation for readability.
 
-The tool formats JSON output. Validates JSON syntax.
-
-json.tool formats JSON.
+The tool is useful for quickly inspecting API responses, configuration files, or any JSON output piped from other commands. Options control key sorting, indentation depth, and compact output mode. Since it ships with Python's standard library, it requires no additional installation.
 
 # CAVEATS
 

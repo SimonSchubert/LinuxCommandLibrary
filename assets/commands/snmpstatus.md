@@ -1,3 +1,7 @@
+# TAGLINE
+
+Retrieve SNMP agent status summary
+
 # TLDR
 
 **Show host status**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage SELinux port type labels
+
 # TLDR
 
 **List** all port labeling rules

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Security-aware file location database
+
 # TLDR
 
 **Find file**
@@ -50,15 +54,11 @@
 
 # DESCRIPTION
 
-**slocate** finds files securely. It respects permissions.
+**slocate** (Secure Locate) is a permission-aware version of the **locate** command that searches a pre-built database of file paths. Unlike standard locate, slocate only returns files that the searching user has permission to access, preventing information disclosure about file structures in restricted directories.
 
-Secure locate. Permission-aware searches.
+The tool maintains a database indexed by file path, providing near-instant search results compared to real-time filesystem traversal with **find**. The database is typically updated periodically via cron, and supports both glob-style patterns and regular expressions for flexible matching.
 
-Database indexed. Fast lookups.
-
-Regular expressions. Pattern matching.
-
-Updates automatically. Cron scheduled.
+slocate has been largely superseded by **mlocate**, which uses a more efficient database format and is the default on most modern Linux distributions. Both provide the same security-aware behavior of filtering results based on the caller's file permissions.
 
 # CAVEATS
 

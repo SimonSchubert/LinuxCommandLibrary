@@ -1,3 +1,7 @@
+# TAGLINE
+
+Web application security scanner
+
 # TLDR
 
 **Scan a website** with default settings

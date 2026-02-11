@@ -1,3 +1,7 @@
+# TAGLINE
+
+Install and manage Android SDK packages
+
 # TLDR
 
 **List available packages**
@@ -60,15 +64,19 @@
 
 # DESCRIPTION
 
-**sdkmanager** manages Android SDK components. It installs platforms, build tools, and other packages.
+**sdkmanager** manages Android SDK components from the command line, installing, updating, and removing platform packages, build tools, system images, and other SDK components. It is the headless counterpart to Android Studio's SDK Manager.
 
-Platform packages provide API versions. android-34 for Android 14, etc.
+Packages are identified by string paths like **platforms;android-34** for platform APIs, **build-tools;34.0.0** for compilation tools, and **system-images;android-34;google_apis;x86_64** for emulator images. Multiple packages can be installed in a single command.
 
-Build tools compile and package apps. Version matching is important.
+License acceptance is required before installing packages. Running **--licenses** interactively accepts all pending licenses, which is essential for automated CI/CD setups where the SDK needs to be provisioned non-interactively.
 
-System images enable emulators. Choose architecture and API level.
+# CONFIGURATION
 
-License acceptance is required. Run --licenses before automated installs.
+**ANDROID_HOME**
+> Environment variable specifying the root directory of the Android SDK installation.
+
+**ANDROID_SDK_ROOT**
+> Alternative to ANDROID_HOME for specifying the SDK location (deprecated in favor of ANDROID_HOME).
 
 # CAVEATS
 

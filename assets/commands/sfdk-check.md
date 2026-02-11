@@ -1,3 +1,7 @@
+# TAGLINE
+
+Validate Sailfish OS projects for issues
+
 # TLDR
 
 **Check project for issues**

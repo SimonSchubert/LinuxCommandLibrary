@@ -1,3 +1,7 @@
+# TAGLINE
+
+Crack password hashes using rainbow tables
+
 # TLDR
 
 **Crack a single hash** using rainbow tables

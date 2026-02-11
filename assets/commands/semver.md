@@ -1,3 +1,7 @@
+# TAGLINE
+
+Validate and manipulate semantic version strings
+
 # TLDR
 
 **Check if version is valid**
@@ -64,15 +68,9 @@
 
 # DESCRIPTION
 
-**semver** validates and manipulates semantic version strings. It follows semver.org specification.
+**semver** validates, compares, and manipulates semantic version strings following the semver.org specification. It provides version incrementing (bumping major, minor, patch, or prerelease components), range matching using NPM-style range syntax, and version sorting.
 
-Version incrementing bumps major, minor, or patch. Prerelease versions add suffix.
-
-Range matching tests version satisfaction. NPM-style ranges supported.
-
-Coercion handles non-standard versions. Converts 1.2 to 1.2.0.
-
-Sorting orders versions correctly. Higher versions sort later.
+Range matching tests whether versions satisfy constraints like **>=1.0.0 <2.0.0**, **^1.2.3**, or **~1.2.3**, using the same range syntax as npm's package.json version specifiers. Coercion converts non-standard version strings like "v1.2" into valid semver format (1.2.0). Multiple versions passed as arguments are printed in sorted order.
 
 # CAVEATS
 

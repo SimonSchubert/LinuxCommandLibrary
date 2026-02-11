@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert PNM to FIASCO wavelet format
+
 # TLDR
 
 **Convert PNM to FIASCO format**

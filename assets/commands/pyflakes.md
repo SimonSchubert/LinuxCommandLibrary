@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fast static error checker for Python
+
 # TLDR
 
 **Check Python file for errors**
@@ -23,11 +27,9 @@ _FILES_
 
 # DESCRIPTION
 
-**pyflakes** analyzes Python code for errors. Static analysis tool.
+**pyflakes** is a fast, lightweight static analysis tool that checks Python source files for common errors without executing them. It detects issues like undefined names, unused imports, redefined variables, and other logical mistakes that would cause runtime failures.
 
-The tool finds undefined names and imports. Fast and simple checker.
-
-pyflakes finds Python errors.
+Unlike **pylint** or **flake8**, pyflakes focuses exclusively on error detection and does not check code style or formatting. This narrow scope makes it significantly faster and produces no false positives for stylistic choices, making it well-suited for integration into editors and pre-commit hooks where speed matters.
 
 # CAVEATS
 

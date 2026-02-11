@@ -1,3 +1,7 @@
+# TAGLINE
+
+Play MIDI files via ALSA sequencer
+
 # TLDR
 
 **Play MIDI file**
@@ -35,11 +39,9 @@ _FILE_
 
 # DESCRIPTION
 
-**pmidi** plays MIDI files. ALSA sequencer interface.
+**pmidi** plays standard MIDI files through the ALSA sequencer interface. It sends MIDI events to a specified output port, which can be a hardware synthesizer, software synth like FluidSynth or TiMidity, or any ALSA MIDI device.
 
-The tool sends MIDI to hardware/software synths. Simple player.
-
-pmidi plays MIDI.
+Use **-l** to list available MIDI ports and **-p** to select the target port for playback. The tool provides straightforward MIDI file playback without the overhead of a full media player.
 
 # CAVEATS
 

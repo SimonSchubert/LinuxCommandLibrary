@@ -1,3 +1,7 @@
+# TAGLINE
+
+Disable shadow password storage
+
 # TLDR
 
 **Revert shadow passwords**
@@ -19,11 +23,9 @@
 
 # DESCRIPTION
 
-**pwunconv** converts from shadow to traditional passwords. Removes shadow file.
+**pwunconv** reverses the shadow password setup by moving password hashes from **/etc/shadow** back into **/etc/passwd** and removing the shadow file. This is the inverse of **pwconv** and effectively disables shadow password protection on the system.
 
-The tool reverts password storage. Reverse of pwconv.
-
-pwunconv disables shadow.
+The command is part of **shadow-utils** and is rarely used in practice since shadow passwords are a fundamental security feature on modern Linux systems. Removing shadow protection makes password hashes readable by all users, significantly weakening system security.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Apply KDE Plasma cursor themes
+
 # TLDR
 
 List **available** cursor themes

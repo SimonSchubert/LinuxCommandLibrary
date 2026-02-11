@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage SysV init services
+
 # TLDR
 
 List the **name and status** of all services

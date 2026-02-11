@@ -1,3 +1,7 @@
+# TAGLINE
+
+Infrastructure as code provisioning tool
+
 # TLDR
 
 **Initialize a Terraform working directory**
@@ -99,6 +103,23 @@ Configuration is written in HCL (HashiCorp Configuration Language) defining reso
 The workflow is: **init** (setup), **plan** (preview), **apply** (execute). State is tracked in **terraform.tfstate**, enabling Terraform to know what exists and what needs changing.
 
 Workspaces allow managing multiple environments (dev, staging, prod) from the same configuration with different state files.
+
+# CONFIGURATION
+
+**terraform.tfvars**
+> Default variable values file, automatically loaded when present in the working directory
+
+**\*.auto.tfvars**
+> Additional variable files automatically loaded alphabetically
+
+**~/.terraformrc** or **%APPDATA%/terraform.rc**
+> CLI configuration file for provider installation methods, credentials, and plugin cache
+
+**TF_VAR_name**
+> Environment variables prefixed with TF_VAR_ set input variable values
+
+**TF_CLI_CONFIG_FILE**
+> Override the default CLI configuration file location
 
 # CAVEATS
 

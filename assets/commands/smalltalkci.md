@@ -1,3 +1,7 @@
+# TAGLINE
+
+Continuous integration for Smalltalk projects
+
 # TLDR
 
 **Run tests**
@@ -43,15 +47,11 @@
 
 # DESCRIPTION
 
-**smalltalkci** tests Smalltalk projects. It runs CI for Smalltalk.
+**smalltalkci** provides continuous integration testing for Smalltalk projects across multiple dialects including Squeak, Pharo, GemStone/S, and Moose. It automates the process of downloading the appropriate Smalltalk virtual machine, loading project code, running tests, and reporting results.
 
-Multiple dialects supported. Squeak, Pharo, GemStone.
+Configuration is defined in a **.smalltalk.ston** file using STON (Smalltalk Object Notation) format, specifying which Smalltalk platform to use, packages to load, and test classes to run. The tool integrates with GitHub Actions, Travis CI, and other CI/CD platforms.
 
-Configuration in STON. Project settings.
-
-GitHub Actions ready. CI/CD integration.
-
-Headless testing. No GUI required.
+Tests run in headless mode by default, requiring no graphical display. Debug mode provides additional output for troubleshooting failed builds, and a custom Smalltalk image can be specified for projects with specific environment requirements.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Wayland region selection tool
+
 # TLDR
 
 **Select a region** and print it to stdout

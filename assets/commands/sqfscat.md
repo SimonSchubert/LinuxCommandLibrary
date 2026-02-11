@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extract files from squashfs to stdout
+
 # TLDR
 
 Display contents of **files** from squashfs

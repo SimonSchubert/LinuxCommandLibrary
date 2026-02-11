@@ -1,3 +1,7 @@
+# TAGLINE
+
+Web reconnaissance and OSINT framework
+
 # TLDR
 
 **Start recon-ng** interactive console
@@ -91,6 +95,14 @@
 The framework uses workspaces to organize reconnaissance projects, with each workspace maintaining its own database of collected data (domains, hosts, contacts, credentials, etc.). Modules can query this data and add new findings, building comprehensive intelligence profiles.
 
 Modules cover various reconnaissance categories: discovery (subdomain enumeration, port scanning), recon (WHOIS, DNS records, social media), import (data ingestion), and reporting (HTML, JSON, Excel exports). Many modules integrate with external APIs (Shodan, VirusTotal, HaveIBeenPwned) requiring API keys.
+
+# CONFIGURATION
+
+**~/.recon-ng/workspaces/**
+> Workspace directories containing per-project SQLite databases with collected hosts, contacts, domains, and credentials.
+
+**keys add** _name_ _value_
+> API keys for external services (Shodan, VirusTotal, HaveIBeenPwned, etc.) stored in the workspace database and required by many modules.
 
 # CAVEATS
 

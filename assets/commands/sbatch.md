@@ -1,3 +1,7 @@
+# TAGLINE
+
+Submit batch jobs to the Slurm scheduler
+
 # TLDR
 
 **Submit** batch job

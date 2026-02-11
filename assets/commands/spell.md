@@ -1,3 +1,7 @@
+# TAGLINE
+
+Classic Unix spell-checking utility
+
 # TLDR
 
 **Check spelling** in a file

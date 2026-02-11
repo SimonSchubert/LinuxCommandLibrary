@@ -1,3 +1,7 @@
+# TAGLINE
+
+Attach to a running Slurm job step
+
 # TLDR
 
 **Attach** to a job step

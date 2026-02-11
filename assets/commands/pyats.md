@@ -1,3 +1,7 @@
+# TAGLINE
+
+Cisco network test automation framework
+
 # TLDR
 
 **Run test script**
@@ -63,15 +67,9 @@
 
 # DESCRIPTION
 
-**pyats** is Cisco's network test automation framework. It automates network device testing and validation.
+**pyats** (Python Automated Test System) is Cisco's open-source network test automation framework for validating network device configurations and behavior. It uses YAML testbed files to define network topology, device connections, and credentials, providing a structured approach to automated network testing.
 
-Testbeds define network topology. Devices, connections, and credentials are specified.
-
-Parsing extracts structured data from CLI output. Genie parsers handle many show commands.
-
-Learning captures device state. Features like interfaces, routing, and VLANs.
-
-Diff compares states over time. Changes are highlighted for troubleshooting.
+The framework includes a powerful parsing engine (Genie) that converts unstructured CLI output from show commands into structured Python dictionaries across hundreds of device types. The **learn** feature captures comprehensive device state for features like interfaces, routing tables, and VLANs, while **diff** compares snapshots taken at different times to identify configuration drift or changes after maintenance windows.
 
 # CAVEATS
 

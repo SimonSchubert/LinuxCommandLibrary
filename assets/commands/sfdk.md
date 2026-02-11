@@ -1,3 +1,7 @@
+# TAGLINE
+
+Sailfish OS application development toolkit
+
 # TLDR
 
 **Build package**
@@ -53,15 +57,9 @@
 
 # DESCRIPTION
 
-**sfdk** develops Sailfish OS apps. It's the SDK command line.
+**sfdk** is the command-line interface for the Sailfish OS SDK, providing tools for developing, building, and deploying Sailfish OS applications. It handles project scaffolding from templates, cross-compilation for ARM and x86 targets, and deployment to physical devices or emulators.
 
-Project scaffolding. Create app templates.
-
-Cross-compilation support. Build for ARM.
-
-Device deployment. Install and run.
-
-Emulator support. Test without hardware.
+The toolkit integrates with Qt/QML build systems (qmake, cmake) and manages the build environment including target SDK installations and build dependencies. Applications can be tested on emulated devices without requiring physical hardware, streamlining the development cycle.
 
 # CAVEATS
 

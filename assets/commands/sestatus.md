@@ -1,3 +1,7 @@
+# TAGLINE
+
+Report SELinux status and configuration
+
 # TLDR
 
 **Print** current SELinux status

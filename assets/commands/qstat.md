@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display batch job queue status
+
 # TLDR
 
 **Show all jobs**

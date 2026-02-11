@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display information about PE executable files
+
 # TLDR
 
 Display **all information** about a PE file

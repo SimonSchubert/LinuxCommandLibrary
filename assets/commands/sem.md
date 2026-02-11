@@ -1,3 +1,7 @@
+# TAGLINE
+
+Counting semaphore for parallel job control
+
 # TLDR
 
 **Run a command** with default semaphore (mutex, one at a time)

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terraform wrapper for DRY configurations
+
 # TLDR
 
 **Initialize modules**
@@ -87,6 +91,17 @@ Dependencies between modules are managed automatically. run-all executes command
 Before and after hooks run custom commands around Terraform operations. This enables validation, notifications, and cleanup.
 
 Lock file management handles concurrent access. Multiple team members can work safely on shared infrastructure.
+
+# CONFIGURATION
+
+**terragrunt.hcl**
+> Module-level configuration file defining Terraform source, inputs, dependencies, and backend settings
+
+**TERRAGRUNT_CONFIG**
+> Environment variable to override the default configuration file path
+
+**TERRAGRUNT_DOWNLOAD**
+> Environment variable to set the directory where Terragrunt downloads Terraform source code
 
 # CAVEATS
 

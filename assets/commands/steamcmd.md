@@ -1,3 +1,7 @@
+# TAGLINE
+
+Steam command-line dedicated server tool
+
 # TLDR
 
 **Start interactive mode**
@@ -53,15 +57,9 @@
 
 # DESCRIPTION
 
-**steamcmd** is Steam's command-line client. It manages dedicated game servers.
+**steamcmd** is Valve's command-line Steam client designed for automated management of dedicated game servers. It supports downloading, installing, updating, and validating game server files without requiring the full Steam graphical client.
 
-Anonymous login works for many servers. Some require Steam account ownership.
-
-App IDs identify games and servers. Different from store IDs sometimes.
-
-Batch mode chains commands with +. Each + starts a new command.
-
-Validation checks file integrity. Repairs corrupted installations.
+Commands are prefixed with **+** and can be chained for batch operation. Anonymous login is sufficient for most dedicated server downloads, while some content requires authentication with a Steam account that owns the game. The **+app_update** command handles both initial installation and subsequent updates, with **validate** verifying file integrity and repairing corrupted installations.
 
 # COMMON APP IDS
 

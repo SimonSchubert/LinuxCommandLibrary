@@ -1,3 +1,7 @@
+# TAGLINE
+
+Lightweight XMPP/Jabber chat server
+
 # TLDR
 
 **Start Prosody**

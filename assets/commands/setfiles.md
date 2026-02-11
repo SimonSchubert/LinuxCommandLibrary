@@ -1,3 +1,7 @@
+# TAGLINE
+
+Set SELinux file security contexts from policy
+
 # TLDR
 
 Set file contexts according to the **default policy**

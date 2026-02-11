@@ -1,3 +1,7 @@
+# TAGLINE
+
+Intuitive find-and-replace command-line tool
+
 # TLDR
 
 **Replace text** in a file

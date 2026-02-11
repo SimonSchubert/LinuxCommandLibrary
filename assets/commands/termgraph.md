@@ -1,3 +1,7 @@
+# TAGLINE
+
+Draw graphs in the terminal
+
 # TLDR
 
 **Create bar chart from file**

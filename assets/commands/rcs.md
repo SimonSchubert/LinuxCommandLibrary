@@ -1,3 +1,7 @@
+# TAGLINE
+
+Revision Control System for file versioning
+
 # TLDR
 
 **Initialize RCS for a file** (check in initial version)

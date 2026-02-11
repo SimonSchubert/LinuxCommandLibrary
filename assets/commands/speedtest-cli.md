@@ -1,3 +1,7 @@
+# TAGLINE
+
+Command-line internet speed test client
+
 # TLDR
 
 **Run speed test**
@@ -70,15 +74,11 @@
 
 # DESCRIPTION
 
-**speedtest-cli** tests internet speed from command line. It uses Speedtest.net servers.
+**speedtest-cli** is a Python-based command-line tool for testing internet bandwidth using Speedtest.net infrastructure. It measures download speed, upload speed, and ping latency against Ookla's worldwide server network.
 
-Simple mode shows key metrics. Ping, download, upload in minimal format.
+The tool supports multiple output modes including simple (single-line metrics), JSON, and CSV for scripting and monitoring integration. A share option generates a URL to an image of the results on Speedtest.net. Specific test servers can be selected by ID, and individual tests (download or upload) can be skipped to speed up partial measurements.
 
-Server selection targets specific locations. List shows nearby servers.
-
-Share generates result image URL. Easy sharing of results.
-
-Machine-readable output enables automation. JSON and CSV formats.
+The tool uses HTTPS connections by default with the **--secure** flag and can show results in bytes per second instead of bits. It is community-maintained and distinct from Ookla's official **speedtest** CLI binary.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Merge RCS file revisions
+
 # TLDR
 
 **Merge revisions into working file**
@@ -39,15 +43,9 @@
 
 # DESCRIPTION
 
-**rcsmerge** merges RCS revisions. It combines changes between versions.
+**rcsmerge** performs a three-way merge of RCS file revisions, incorporating changes made between two specified revisions into the current working file. It identifies a common ancestor revision and applies the differences to produce a merged result, similar to how modern version control systems handle branch merging.
 
-Three-way merge operation. Common ancestor and two descendants.
-
-Modifies working file. Or prints merged result.
-
-Conflict markers inserted. Manual resolution needed.
-
-Part of RCS version control. File-based versioning.
+By default the merge modifies the working file in place, but the **-p** flag prints the merged result to stdout instead. When conflicting changes are detected, conflict markers are inserted into the output and must be resolved manually before the file can be checked back in.
 
 # CAVEATS
 

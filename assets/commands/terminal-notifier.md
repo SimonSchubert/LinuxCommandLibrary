@@ -1,3 +1,7 @@
+# TAGLINE
+
+Send macOS notifications from command line
+
 # TLDR
 
 **Send a basic notification**

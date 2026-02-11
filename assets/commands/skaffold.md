@@ -1,3 +1,7 @@
+# TAGLINE
+
+Automate Kubernetes development workflows
+
 # TLDR
 
 **Initialize skaffold**
@@ -70,15 +74,11 @@
 
 # DESCRIPTION
 
-**skaffold** automates Kubernetes development workflow. It handles building, pushing, and deploying.
+**Skaffold** automates the Kubernetes development workflow by handling the build, push, and deploy cycle for containerized applications. The **dev** command watches source files for changes and automatically rebuilds images and redeploys to the cluster on each save, providing a rapid inner development loop.
 
-Dev mode watches for changes. Rebuilds and redeploys automatically on save.
+The tool integrates with multiple build systems including Docker, Jib, and Cloud Native Buildpacks, and supports deployment via kubectl, Helm, and kustomize. Profiles allow customizing the pipeline for different environments such as development, staging, and production, each with different image registries, build configurations, and deployment targets.
 
-Build integrates with Docker, Jib, Buildpacks. Multi-builder configurations supported.
-
-Profiles customize for environments. Dev, staging, prod with different settings.
-
-Port forwarding provides local access. Services available on localhost.
+Port forwarding automatically exposes deployed services on localhost, and the **debug** command configures remote debugging for supported languages.
 
 # CAVEATS
 

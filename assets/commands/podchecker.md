@@ -1,3 +1,7 @@
+# TAGLINE
+
+Validate Perl POD documentation syntax
+
 # TLDR
 
 **Check POD syntax**
@@ -29,11 +33,9 @@ _FILES_
 
 # DESCRIPTION
 
-**podchecker** validates Perl POD documentation syntax. Part of Perl distribution.
+**podchecker** validates the syntax of Perl POD (Plain Old Documentation) files, reporting errors such as unknown formatting codes, mismatched begin/end blocks, and malformed headings.
 
-The tool finds formatting errors. Reports documentation problems.
-
-podchecker validates POD.
+It checks for both hard errors that would cause incorrect rendering and warnings about questionable constructs. Use **-warnings** to control the level of warning output. Part of the standard Perl distribution.
 
 # CAVEATS
 

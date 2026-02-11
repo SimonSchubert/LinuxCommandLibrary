@@ -1,3 +1,7 @@
+# TAGLINE
+
+View files using mailcap MIME handlers
+
 # TLDR
 
 **View** a file using mailcap entry

@@ -1,3 +1,7 @@
+# TAGLINE
+
+AI-powered terminal assistant from AWS
+
 # TLDR
 
 **Start an interactive chat session**
@@ -78,6 +82,14 @@
 The tool offers two assistance features: an autocomplete dropdown menu showing available command options, and inline suggestions appearing as gray ghost text as you type. It supports natural language translation to shell commands via **q translate** and interactive coding sessions via **q chat**.
 
 Available for macOS and Linux, it integrates with terminals including macOS Terminal, iTerm2, and VS Code's built-in terminal.
+
+# CONFIGURATION
+
+**~/.aws/credentials**
+> AWS credentials file required for authentication with Amazon Q Developer services.
+
+**Q_LOG_LEVEL**
+> Environment variable controlling logging verbosity, set to **debug** for troubleshooting.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Check if SELinux is enabled on the system
+
 # TLDR
 
 **Check** if SELinux is enabled (no output)

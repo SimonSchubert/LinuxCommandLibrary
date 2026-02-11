@@ -1,3 +1,7 @@
+# TAGLINE
+
+POSIX-compliant command interpreter
+
 # TLDR
 
 **Start an interactive shell**
@@ -76,6 +80,17 @@ The shell reads commands from standard input, a file, or the **-c** argument. It
 **Functions**: name() { commands; }
 **Tests**: [ condition ], test condition
 **Arithmetic**: $((expression))
+
+# CONFIGURATION
+
+**~/.profile**
+> Per-user login shell initialization file, executed for login shells.
+
+**/etc/profile**
+> System-wide login shell initialization file, executed before ~/.profile.
+
+**ENV**
+> Environment variable pointing to a file executed at interactive shell startup.
 
 # CAVEATS
 

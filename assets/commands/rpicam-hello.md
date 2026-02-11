@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display Raspberry Pi camera preview
+
 # TLDR
 
 Display camera preview for **specific time** (milliseconds)

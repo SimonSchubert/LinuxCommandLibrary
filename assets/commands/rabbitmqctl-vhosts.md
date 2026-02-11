@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage RabbitMQ virtual hosts
+
 # TLDR
 
 **List virtual hosts**

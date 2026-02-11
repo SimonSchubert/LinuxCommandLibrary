@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert PNM images to TIFF format
+
 # TLDR
 
 **Convert PNM to TIFF**
@@ -45,7 +49,9 @@
 
 # DESCRIPTION
 
-**pnmtotiff** converts PNM images to TIFF format. Part of Netpbm toolkit. Supports various compression methods and multi-page TIFF files.
+**pnmtotiff** converts PNM images to TIFF (Tagged Image File Format), widely used for high-quality image storage and print workflows. Multiple compression methods are supported including LZW, JPEG, PackBits, and Group 3 fax encoding.
+
+The **-append** option allows building multi-page TIFF files by appending images to an existing file. The **-resolution** option embeds DPI metadata for print sizing. Part of the Netpbm toolkit; superseded by **pamtotiff**.
 
 # SEE ALSO
 

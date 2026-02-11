@@ -1,3 +1,7 @@
+# TAGLINE
+
+Gitea command-line client
+
 # TLDR
 
 **Log in to a Gitea instance**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Execute packages without installing them
+
 # TLDR
 
 **Run package without installing**
@@ -35,11 +39,9 @@ _PACKAGE_
 
 # DESCRIPTION
 
-**pnpx** executes packages without permanent installation. Part of pnpm.
+**pnpx** executes npm packages without permanently installing them, similar to npx. It downloads the package to a temporary location, runs the specified command, and cleans up afterward.
 
-The tool runs one-off commands. Downloads and executes packages.
-
-pnpx executes packages.
+This is an alias for **pnpm dlx**. Use **-p** to specify a package name when the executable name differs from the package name. The **@version** suffix allows running a specific package version.
 
 # CAVEATS
 

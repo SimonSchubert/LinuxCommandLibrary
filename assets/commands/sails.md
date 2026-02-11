@@ -1,3 +1,7 @@
+# TAGLINE
+
+MVC web framework for Node.js
+
 # TLDR
 
 **Create new app**
@@ -60,15 +64,11 @@
 
 # DESCRIPTION
 
-**Sails.js** is an MVC framework for Node.js. It provides conventions for building APIs and web apps.
+**Sails.js** is an MVC web framework for Node.js, inspired by Ruby on Rails. It provides conventions and scaffolding for rapidly building REST APIs and web applications with a familiar structure of models, views, and controllers.
 
-Blueprints auto-generate REST APIs. Models get CRUD endpoints automatically.
+A standout feature is Blueprints, which auto-generate RESTful API endpoints for models with full CRUD operations. Combined with the Waterline ORM, which supports MySQL, PostgreSQL, MongoDB, and other databases through a unified interface, applications can be prototyped with minimal code.
 
-Waterline ORM works with multiple databases. MySQL, PostgreSQL, MongoDB supported.
-
-Socket.io integration enables real-time features. Blueprints work over WebSockets too.
-
-Policies provide access control. Middleware-like hooks protect routes.
+Built-in Socket.io integration enables real-time features, allowing Blueprint routes to work over both HTTP and WebSockets. Policies provide middleware-like access control for protecting routes and enforcing authentication.
 
 # CAVEATS
 

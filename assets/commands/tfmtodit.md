@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert TeX font metrics for groff
+
 # TLDR
 
 **Create a font description file** from a TeX font metrics file

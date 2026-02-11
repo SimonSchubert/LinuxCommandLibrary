@@ -1,3 +1,7 @@
+# TAGLINE
+
+Find duplicate files and filesystem lint
+
 # TLDR
 
 **Find duplicates in directory**

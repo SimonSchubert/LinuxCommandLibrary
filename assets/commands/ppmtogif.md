@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert PPM images to GIF format
+
 # TLDR
 
 **Convert PPM to GIF**

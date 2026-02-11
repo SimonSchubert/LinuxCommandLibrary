@@ -1,3 +1,7 @@
+# TAGLINE
+
+WireGuard-based mesh VPN
+
 # TLDR
 
 **Connect to network**

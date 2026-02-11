@@ -1,3 +1,7 @@
+# TAGLINE
+
+JavaScript-based Solidity compiler
+
 # TLDR
 
 **Compile contract**
@@ -50,15 +54,11 @@
 
 # DESCRIPTION
 
-**solcjs** compiles Solidity. It's the JavaScript compiler.
+**solcjs** is a JavaScript/WebAssembly implementation of the Solidity compiler, installable via npm. It compiles Solidity smart contracts into EVM bytecode and ABI (Application Binary Interface) definitions needed for deploying and interacting with contracts on Ethereum and compatible blockchains.
 
-Smart contract compilation. Ethereum development.
+The compiler produces bytecode (**--bin**) for deployment and ABI JSON (**--abi**) that describes the contract's functions and events for client interaction. The optimizer reduces bytecode size and gas costs when enabled.
 
-Bytecode generation. Deploy to blockchain.
-
-ABI for interaction. Contract interface.
-
-Node.js based. npm installable.
+solcjs provides the same core compilation functionality as the native **solc** compiler but runs in Node.js environments, making it easy to integrate into JavaScript-based development workflows and build tools like Truffle and Hardhat. It is somewhat slower than the native compiler and may lack some advanced features.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Resolve file inclusions in roff documents
+
 # TLDR
 
 **Process a file** and replace .so requests with included file contents

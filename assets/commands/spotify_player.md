@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal-based Spotify TUI client
+
 # TLDR
 
 **Start player**
@@ -39,17 +43,22 @@
 
 # DESCRIPTION
 
-**spotify_player** plays Spotify. It's a TUI client.
+**spotify_player** is a terminal-based Spotify client that provides a full-featured TUI (Text User Interface) for browsing, searching, and playing music from a Spotify Premium account. It uses vim-style keybindings and a modal interface for efficient keyboard-driven navigation.
 
-Terminal interface. Keyboard navigation.
+The player supports Spotify Connect, allowing it to control playback on other devices or act as a playback target. Features include library browsing, playlist management, search, lyrics display, and artist/album exploration. A daemon mode enables headless operation for use as a Spotify Connect receiver.
 
-Spotify Connect support. Control other devices.
+Built on the **librespot** library for Spotify protocol support, it stores configuration and cache data in **~/.config/spotify-player/**. Custom themes and keybindings can be configured through TOML configuration files.
 
-Search and browse. Full library access.
+# CONFIGURATION
 
-Lyrics display. Song lyrics.
+**~/.config/spotify-player/app.toml**
+> Main configuration file controlling playback settings, keybindings, theme, default device, and UI layout.
 
-Vim-style bindings. Modal interface.
+**~/.config/spotify-player/theme.toml**
+> Custom color theme definitions for the TUI interface.
+
+**~/.cache/spotify-player/**
+> Cache directory for audio data and Spotify session tokens.
 
 # CAVEATS
 

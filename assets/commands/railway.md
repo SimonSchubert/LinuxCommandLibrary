@@ -1,3 +1,7 @@
+# TAGLINE
+
+Deploy and manage apps on Railway platform
+
 # TLDR
 
 **Login to Railway**
@@ -96,6 +100,14 @@
 The CLI supports zero-configuration deployments by automatically detecting project types and configuring build settings. It integrates with git workflows and can deploy from local directories or connected repositories.
 
 A key feature is the ability to run local development with production environment variables using **railway run**, ensuring consistency between development and deployed environments.
+
+# CONFIGURATION
+
+**~/.railway/config.json**
+> Local authentication and project linking configuration storing API tokens and project references.
+
+**RAILWAY_TOKEN**
+> Environment variable for API authentication, used in CI/CD pipelines where interactive login is unavailable.
 
 # CAVEATS
 

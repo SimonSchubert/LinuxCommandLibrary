@@ -1,3 +1,7 @@
+# TAGLINE
+
+Control BIND DNS server remotely
+
 # TLDR
 
 **Reload BIND configuration**
@@ -89,19 +93,14 @@ rndc zonestatus example.com
 
 # CONFIGURATION
 
-```bash
-# /etc/rndc.conf
-key "rndc-key" {
-    algorithm hmac-sha256;
-    secret "base64secret==";
-};
+**/etc/rndc.conf**
+> Main configuration file defining the authentication key, default server address, and port for connecting to named.
 
-options {
-    default-key "rndc-key";
-    default-server 127.0.0.1;
-    default-port 953;
-};
-```
+**/etc/rndc.key**
+> Shared HMAC key file used to authenticate rndc commands with the BIND server. Generated with **rndc-confgen**.
+
+**/etc/named.conf**
+> BIND server configuration must include a matching **controls** block with the same key to accept rndc connections.
 
 # CAVEATS
 

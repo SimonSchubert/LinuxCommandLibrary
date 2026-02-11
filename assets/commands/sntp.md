@@ -1,3 +1,7 @@
+# TAGLINE
+
+Simple Network Time Protocol client
+
 # TLDR
 
 **Query time from an NTP server**

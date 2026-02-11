@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display and change terminal line settings
+
 # TLDR
 
 **Show all settings**

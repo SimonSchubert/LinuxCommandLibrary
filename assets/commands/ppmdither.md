@@ -1,3 +1,7 @@
+# TAGLINE
+
+Reduce colors with dithering patterns
+
 # TLDR
 
 **Dither image**
@@ -35,11 +39,9 @@ _FILE_
 
 # DESCRIPTION
 
-**ppmdither** dithers PPM images. Reduces color count with dithering.
+**ppmdither** reduces the number of colors in a PPM image using dithering, which simulates unavailable colors by arranging available colors in patterns that appear blended at a distance. The number of levels per color channel can be specified independently for red, green, and blue.
 
-The tool creates dithered output. Part of Netpbm.
-
-ppmdither reduces colors.
+The default uses ordered dithering, while the **-fs** option selects Floyd-Steinberg error diffusion dithering which generally produces higher quality results with less visible patterning. Unlike quantization (ppmquant), dithering does not choose optimal colors but distributes error across neighboring pixels. Part of the Netpbm toolkit.
 
 # CAVEATS
 

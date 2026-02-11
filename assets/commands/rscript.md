@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run R scripts non-interactively
+
 # TLDR
 
 **Run R script**
@@ -46,15 +50,11 @@
 
 # DESCRIPTION
 
-**Rscript** runs R scripts. It's for non-interactive execution.
+**Rscript** is the non-interactive command-line interface for running R scripts and expressions. It is designed for scripting and automation, providing direct execution of R code files with proper exit codes and shebang support (#!/usr/bin/env Rscript) for use as executable scripts.
 
-Shebang compatible. Add #!/usr/bin/env Rscript.
+The **-e** flag evaluates inline R expressions, useful for one-liners and pipeline integration. Command-line arguments passed after the script name are accessible within R via **commandArgs()**. The **--vanilla** flag suppresses loading of saved workspaces and startup files for clean, reproducible execution.
 
-Command arguments accessible. Via commandArgs().
-
-Faster than R CMD BATCH. Direct execution.
-
-Returns proper exit codes. Scripting friendly.
+Rscript is faster and more convenient than the older **R CMD BATCH** approach, as it writes output directly to stdout/stderr and returns meaningful exit codes for integration with shell scripts and CI/CD pipelines.
 
 # CAVEATS
 

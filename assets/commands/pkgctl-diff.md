@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compare Arch package file differences
+
 # TLDR
 
 Compare package files in **tar content list** mode (default)

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display pueue task output logs
+
 # TLDR
 
 **Show task log**
@@ -33,11 +37,7 @@ _TASK_IDS_
 
 # DESCRIPTION
 
-**pueue log** displays task output logs. Shows command output.
-
-The tool retrieves stored output. For finished or running tasks.
-
-pueue log shows output.
+**pueue log** displays the captured stdout and stderr output of pueue tasks, both running and finished. By default it shows the last few lines; use **--full** to see complete output or **--lines** to control the number of lines displayed.
 
 # CAVEATS
 

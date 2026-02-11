@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove installed Sailfish OS emulators
+
 # TLDR
 
 **Remove emulator**

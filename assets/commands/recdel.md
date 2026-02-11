@@ -1,3 +1,7 @@
+# TAGLINE
+
+Delete records from GNU recutils databases
+
 # TLDR
 
 **Delete matching records**
@@ -39,9 +43,9 @@
 
 # DESCRIPTION
 
-**recdel** deletes records from GNU recutils files matching a selection expression. It modifies the file in place unless outputting to stdout.
+**recdel** removes records from GNU recutils plain-text database files that match a given selection expression. It supports the same expression syntax as **recsel**, including equality, regex matching, comparison operators, and logical combinators, allowing precise targeting of records to delete.
 
-Part of GNU recutils.
+By default it modifies the file in place, but output can be redirected to stdout for safe previewing. The **-c** flag prompts for confirmation before each deletion, and **-n** limits the operation to the first N matching records. Part of the GNU recutils toolkit.
 
 # EXAMPLES
 

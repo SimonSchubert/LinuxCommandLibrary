@@ -1,3 +1,7 @@
+# TAGLINE
+
+Integrated development environment for Qt
+
 # TLDR
 
 **Start Qt Creator**

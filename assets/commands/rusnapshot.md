@@ -1,3 +1,7 @@
+# TAGLINE
+
+Rsync-based filesystem snapshot backup tool
+
 # TLDR
 
 **Create** a snapshot using configuration file
@@ -59,6 +63,11 @@ Create a **read-write** snapshot
 **rusnapshot** is a BTRFS snapshotting utility written in Rust. It provides automated snapshot creation, management, and restoration for BTRFS filesystems.
 
 Configuration is done via TOML files specifying snapshot locations, retention policies, and schedules.
+
+# CONFIGURATION
+
+**config.toml**
+> TOML configuration file specifying snapshot source paths, destination subvolume, retention policies, and snapshot kinds (hourly, daily, weekly, monthly).
 
 # CAVEATS
 

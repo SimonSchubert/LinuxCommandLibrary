@@ -1,3 +1,7 @@
+# TAGLINE
+
+Replace specific colors in PPM images
+
 # TLDR
 
 **Change specific color**
@@ -32,11 +36,9 @@ _FILE_
 
 # DESCRIPTION
 
-**ppmchange** replaces colors in PPM images. Color substitution tool.
+**ppmchange** replaces specific colors in PPM images with new colors. Multiple color substitutions can be specified in a single invocation by providing pairs of old and new colors on the command line.
 
-The tool changes specific colors. Part of Netpbm.
-
-ppmchange swaps colors.
+By default, only exact color matches are replaced. The **-closeness** option allows fuzzy matching by specifying a tolerance value, useful when working with images that have slight color variations due to compression or anti-aliasing. Part of the Netpbm toolkit.
 
 # CAVEATS
 

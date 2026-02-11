@@ -1,3 +1,7 @@
+# TAGLINE
+
+View TeX package documentation
+
 # TLDR
 
 **Open package documentation**
@@ -53,15 +57,9 @@
 
 # DESCRIPTION
 
-**texdoc** finds and opens TeX/LaTeX documentation. It searches the TeX Live documentation tree.
+**texdoc** finds and opens documentation for TeX and LaTeX packages installed in the TeX Live distribution. Given a package name, it locates the corresponding PDF manual or documentation file and opens it in the default viewer.
 
-Package names find their docs. Most packages have PDF manuals.
-
-List mode shows all matches. Multiple docs may exist.
-
-Interactive mode lets you choose. Select from numbered list.
-
-Search mode does full-text search. Finds docs mentioning query.
+The **-l** flag lists all matching documentation files when multiple exist for a package. Interactive mode (**-I**) presents a numbered list for selection. Search mode (**-s**) performs a broader search across the documentation tree, finding documents that mention the query term even if they don't match the package name directly. The **-f** flag shows file paths without opening them.
 
 # CAVEATS
 

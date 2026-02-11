@@ -1,3 +1,7 @@
+# TAGLINE
+
+Side-by-side file comparison and merge
+
 # TLDR
 
 **Compare files side by side**

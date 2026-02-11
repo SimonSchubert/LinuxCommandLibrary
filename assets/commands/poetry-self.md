@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Poetry installation and plugins
+
 # TLDR
 
 **Update Poetry**
@@ -36,11 +40,9 @@
 
 # DESCRIPTION
 
-**poetry self** manages Poetry installation. Updates and configures Poetry itself.
+**poetry self** manages the Poetry installation itself, separate from project dependencies. The **update** subcommand upgrades Poetry to the latest version, while **add** and **remove** manage Poetry plugins.
 
-The tool handles plugins. Self-manages the installation.
-
-poetry self updates Poetry.
+The **show** subcommand lists installed plugins and their versions. Plugins extend Poetry's functionality with additional commands or behaviors. This operates on Poetry's own environment, not the project's virtual environment.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fast cross-platform conda package manager
+
 # TLDR
 
 **Initialize new project**
@@ -106,6 +110,20 @@ Multi-platform support generates separate lockfiles per platform, enabling the s
 Tasks defined in pixi.toml provide npm-like scripting. Commands like test, build, and lint are configured once and run with pixi run. Task dependencies chain commands together.
 
 Global installations (pixi global install) work like pipx, creating isolated environments for CLI tools. This keeps development tools separate from project dependencies.
+
+# CONFIGURATION
+
+**pixi.toml**
+> Project configuration file defining dependencies, tasks, and channels.
+
+**pixi.lock**
+> Lockfile with pinned versions for reproducible environments per platform.
+
+**~/.pixi/config.toml**
+> Global configuration for default channels, authentication, and cache settings.
+
+**PIXI_HOME**
+> Override the default Pixi home directory.
 
 # CAVEATS
 

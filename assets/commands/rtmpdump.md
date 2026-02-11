@@ -1,3 +1,7 @@
+# TAGLINE
+
+Download RTMP streaming media
+
 # TLDR
 
 **Download RTMP stream**
@@ -62,15 +66,11 @@
 
 # DESCRIPTION
 
-**rtmpdump** downloads RTMP (Real-Time Messaging Protocol) streams. It captures live and on-demand video.
+**rtmpdump** downloads media streams using the Real-Time Messaging Protocol (RTMP), which was originally developed by Adobe for Flash-based streaming. It connects to RTMP servers and saves the stream data to a local file, supporting both live broadcasts and on-demand video content.
 
-RTMP URLs specify server and stream. Playpath may be separate from base URL.
+The tool handles the full RTMP handshake and protocol negotiation, including SWF (Shockwave Flash) verification when servers require it. RTMP URLs consist of a server address, application path, and playpath, which may need to be specified separately. For live streams, the **-v** flag enables live mode where recording continues until the stream ends or the user interrupts.
 
-Live mode handles streaming content. Recording continues until stream ends or stopped.
-
-SWF verification bypasses some protections. Player URL may be required for verification.
-
-Resume continues interrupted downloads. Useful for long streams on unstable connections.
+Interrupted downloads can be resumed with the **--resume** flag, which is particularly useful for long recordings over unreliable connections. The tool outputs FLV (Flash Video) format by default, which can be converted to other formats using tools like ffmpeg.
 
 # CAVEATS
 

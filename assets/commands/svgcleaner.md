@@ -1,3 +1,7 @@
+# TAGLINE
+
+Lossless SVG file optimizer
+
 # TLDR
 
 **Clean SVG**
@@ -43,15 +47,11 @@
 
 # DESCRIPTION
 
-**svgcleaner** optimizes SVG files. It removes unnecessary data.
+**svgcleaner** performs lossless optimization of SVG files, reducing file size without altering their visual appearance. It removes unnecessary metadata, editor artifacts, unused definitions, and redundant attributes that bloat SVG files exported from graphic editors.
 
-Removes metadata. Smaller files.
+The tool simplifies path data, optimizes geometry, merges compatible elements, and removes empty groups and containers. Multiple optimization passes can be applied for maximum size reduction. Optimization presets allow choosing between conservative and aggressive cleaning levels.
 
-Simplifies paths. Optimizes geometry.
-
-Merges elements. Reduce complexity.
-
-Lossless optimization. Same visual output.
+Written in Rust for performance, svgcleaner is particularly effective at cleaning SVGs produced by editors like Inkscape, Adobe Illustrator, and Sketch, which often embed substantial editor-specific metadata and redundant styling information.
 
 # CAVEATS
 

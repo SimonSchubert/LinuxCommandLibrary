@@ -1,3 +1,7 @@
+# TAGLINE
+
+Open local Rust documentation in browser
+
 # TLDR
 
 **Open Rust documentation**

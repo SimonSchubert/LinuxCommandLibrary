@@ -1,3 +1,7 @@
+# TAGLINE
+
+Enlarge PNM images by interpolation
+
 # TLDR
 
 **Interpolate image (scale up)**
@@ -26,11 +30,9 @@ _FILE_
 
 # DESCRIPTION
 
-**pnminterp** enlarges PNM images by interpolation. Smooth scaling method.
+**pnminterp** enlarges PNM images by an integer factor using bilinear interpolation. Unlike simple pixel replication (as done by pnmenlarge), interpolation produces smoother results by computing weighted averages of neighboring pixels.
 
-The tool scales by integer factor. Uses bilinear interpolation.
-
-pnminterp enlarges images.
+The scaling factor must be a positive integer, producing an output image that is N times larger in each dimension. This tool is a simplified interface to pamscale's interpolation mode. Part of the Netpbm toolkit; superseded by **pamscale**.
 
 # CAVEATS
 

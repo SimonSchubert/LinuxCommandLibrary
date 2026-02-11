@@ -1,3 +1,7 @@
+# TAGLINE
+
+Package Pygame games for web browsers
+
 # TLDR
 
 **Package game for web**
@@ -46,15 +50,9 @@
 
 # DESCRIPTION
 
-**pygbag** packages Pygame for web. It creates WebAssembly builds.
+**pygbag** packages Pygame applications for deployment in web browsers by compiling Python code to WebAssembly using Emscripten and Pyodide. The resulting build runs directly in modern browsers without plugins, making it straightforward to share Python games and multimedia applications online.
 
-Converts Python games to browser. No plugins required.
-
-Uses Pyodide and Emscripten. Python in WebAssembly.
-
-Development server included. Test locally before deploy.
-
-Async Python support. Event loop for web.
+The tool includes a built-in development server for local testing before deployment. Games must use async Python patterns with **asyncio** to work within the browser's event loop model. pygbag handles asset bundling, HTML template generation, and the WebAssembly compilation pipeline, producing a self-contained web application from a standard Pygame project.
 
 # CAVEATS
 

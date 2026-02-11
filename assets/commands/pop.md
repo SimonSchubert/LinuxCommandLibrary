@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove top value from stack
+
 # TLDR
 
 **Pop value from stack (Forth)**
@@ -18,11 +22,9 @@ Stack operation command.
 
 # DESCRIPTION
 
-**pop** removes top value from stack. Common in stack-based languages.
+**pop** removes and discards the top value from a stack. It is a fundamental operation in stack-based programming languages and calculators like Forth and dc.
 
-The tool is used in Forth, dc, and similar. Stack manipulation primitive.
-
-pop removes stack top.
+In shell contexts, the related command **popd** performs a similar operation on the shell's directory stack. The pop operation is the complement of push.
 
 # CAVEATS
 

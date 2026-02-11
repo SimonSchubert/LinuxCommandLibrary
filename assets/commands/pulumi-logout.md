@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove stored Pulumi backend credentials
+
 # TLDR
 
 **Logout from current backend**

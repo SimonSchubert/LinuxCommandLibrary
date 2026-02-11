@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert reStructuredText to HTML
+
 # TLDR
 
 **Convert RST to HTML**

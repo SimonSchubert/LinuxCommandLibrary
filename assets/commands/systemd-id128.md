@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate and print 128-bit identifiers
+
 # TLDR
 
 **Generate** a new random identifier

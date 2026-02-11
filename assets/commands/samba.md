@@ -1,3 +1,7 @@
+# TAGLINE
+
+SMB/CIFS file sharing and Active Directory server
+
 # TLDR
 
 **Start the Samba AD DC daemon** in the foreground
@@ -54,6 +58,14 @@
 The suite consists of several components: **smbd** handles file and print services, **nmbd** provides NetBIOS name resolution and browsing, **winbindd** handles user and group lookups, and **samba** itself acts as an AD domain controller when configured.
 
 Configuration is managed through **/etc/samba/smb.conf**, which defines shares, authentication, and network settings. Samba can integrate with existing Windows domains or serve as a complete replacement for Windows Server AD infrastructure.
+
+# CONFIGURATION
+
+**/etc/samba/smb.conf**
+> Main Samba configuration file defining shares, authentication methods, network settings, and domain controller parameters.
+
+**/var/lib/samba/**
+> Samba state directory containing databases for user accounts, group mappings, and domain data.
 
 # CAVEATS
 

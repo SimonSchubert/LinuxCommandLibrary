@@ -1,3 +1,7 @@
+# TAGLINE
+
+Modern terminal file manager
+
 # TLDR
 
 **Open the file manager** in the current directory
@@ -55,6 +59,17 @@ The interface displays file listings with icons (requires Nerd Font), metadata p
 Key navigation uses vim-style bindings by default: **h/j/k/l** for movement, **y** to copy, **p** to paste, **d** to delete, and **enter** to open. Press **>** to open the command prompt for SPF-specific commands like **split** to open additional panels.
 
 Configuration files control hotkeys, themes, and behavior. Files are stored in **~/.config/superfile/** on Linux and macOS. Themes and border styles are fully customizable.
+
+# CONFIGURATION
+
+**~/.config/superfile/config.toml**
+> Main configuration file controlling keybindings, default sort order, display options, and panel behavior.
+
+**~/.config/superfile/theme.toml**
+> Theme configuration defining colors, border styles, and icon settings.
+
+**~/.config/superfile/hotkeys.toml**
+> Custom keybinding overrides for navigation and file operations.
 
 # CAVEATS
 

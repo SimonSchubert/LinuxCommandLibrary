@@ -1,3 +1,7 @@
+# TAGLINE
+
+Scan frequency spectrum with RTL-SDR dongle
+
 # TLDR
 
 **Scan frequency range**

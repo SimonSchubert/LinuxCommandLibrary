@@ -1,3 +1,7 @@
+# TAGLINE
+
+Benchmark Redis server performance
+
 # TLDR
 
 **Run default benchmark**
@@ -70,15 +74,9 @@
 
 # DESCRIPTION
 
-**redis-benchmark** measures Redis server performance. It simulates clients running various commands.
+**redis-benchmark** measures Redis server performance by simulating multiple clients concurrently executing various commands. By default it tests a standard set of operations including SET, GET, INCR, LPUSH, LPOP, and others, reporting requests per second for each command type.
 
-Multiple commands are tested by default. SET, GET, INCR, LPUSH, and others.
-
-Concurrency tests parallel connections. Higher client counts stress the server more.
-
-Pipelining batches requests. This tests throughput without network round-trip latency.
-
-Data size affects memory and network. Larger payloads test different bottlenecks.
+The **-c** flag controls the number of concurrent client connections, while **-n** sets the total request count. Pipelining with **-P** batches multiple requests per round-trip, testing raw throughput independent of network latency. The **-d** flag adjusts the data payload size to benchmark different workload patterns, and **-t** limits testing to specific commands.
 
 # CAVEATS
 

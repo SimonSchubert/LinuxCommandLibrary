@@ -1,3 +1,7 @@
+# TAGLINE
+
+Command-line screenshot capture for X11
+
 # TLDR
 
 Capture a **screenshot** and save with current date as filename

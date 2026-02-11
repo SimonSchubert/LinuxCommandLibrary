@@ -1,3 +1,7 @@
+# TAGLINE
+
+Collect and report system activity statistics
+
 # TLDR
 
 Report **I/O statistics** every second
@@ -88,6 +92,14 @@ Report **disk** statistics
 
 **-j {ID|LABEL|PATH|UUID}**
 > Display persistent device names
+
+# CONFIGURATION
+
+**/var/log/sa/**
+> Directory containing binary system activity data files collected by sadc, named sa01-sa31 by day of month.
+
+**/etc/sysstat/sysstat**
+> Sysstat configuration file controlling data collection intervals, retention, and compression settings.
 
 # CAVEATS
 

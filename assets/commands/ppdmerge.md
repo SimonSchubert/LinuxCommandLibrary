@@ -1,3 +1,7 @@
+# TAGLINE
+
+Merge multiple PPD printer files
+
 # TLDR
 
 **Merge PPD files**
@@ -22,11 +26,9 @@ _FILES_
 
 # DESCRIPTION
 
-**ppdmerge** merges multiple PPD files. Combines language variants.
+**ppdmerge** merges multiple PPD (PostScript Printer Description) files into a single multi-language PPD file. This is primarily used to combine localized versions of a printer driver so that a single PPD file supports multiple languages, with CUPS selecting the appropriate translation based on the user's locale.
 
-The tool creates multi-language PPD. Part of CUPS.
-
-ppdmerge combines PPD files.
+The input files should be variants of the same printer definition differing only in their translated strings. The merged output contains all language variants, reducing the number of PPD files that need to be distributed and installed.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Administer Rspamd spam filtering daemon
+
 # TLDR
 
 **Check configuration**

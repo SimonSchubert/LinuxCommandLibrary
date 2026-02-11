@@ -1,3 +1,7 @@
+# TAGLINE
+
+Official Proton VPN command-line client
+
 # TLDR
 
 **Sign in** to Proton VPN

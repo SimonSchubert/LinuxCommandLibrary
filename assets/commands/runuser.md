@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run commands as a different user
+
 # TLDR
 
 Run command as **different user**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Static analysis tool for PHP type safety
+
 # TLDR
 
 **Analyze project**
@@ -90,6 +94,14 @@ Baselines record existing issues to ignore. New code must pass analysis while le
 The alter mode automatically fixes certain issues like adding return types or parameter types. This accelerates migration to stricter typing.
 
 Psalm understands complex PHP patterns including generics, union types, and template types through PHPDoc syntax.
+
+# CONFIGURATION
+
+**psalm.xml** (or **psalm.xml.dist**)
+> Project configuration file defining error level, analysis scope, excluded directories, plugin loading, and issue severity overrides. Created with **--init**.
+
+**baseline.xml**
+> Baseline file recording existing issues to ignore, allowing strict analysis on new code while deferring legacy fixes. Generated with **--set-baseline**.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Directly manipulate stack state
+
 # TLDR
 
 **Delete resource from state**

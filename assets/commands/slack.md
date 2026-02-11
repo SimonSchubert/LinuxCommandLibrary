@@ -1,3 +1,7 @@
+# TAGLINE
+
+Slack app development command-line interface
+
 # TLDR
 
 **Create a new Slack app** from a template

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display information about PNM image files
+
 # TLDR
 
 **Show image information**
@@ -26,11 +30,9 @@ _FILES_
 
 # DESCRIPTION
 
-**pnmfile** displays information about PNM images. Shows dimensions and type.
+**pnmfile** displays information about PNM image files including the format type (PBM, PGM, or PPM), dimensions (width and height), maximum sample value, and whether the file uses ASCII or binary encoding.
 
-The tool reports image format. Identifies PBM, PGM, PPM types.
-
-pnmfile describes images.
+The **-machine** flag outputs in a parseable format suitable for scripting. Part of the Netpbm toolkit; superseded by **pamfile**.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+List open Internet and Unix domain sockets
+
 # TLDR
 
 Show **all sockets** (IPv4 and IPv6, listening and connected)

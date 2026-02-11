@@ -1,3 +1,7 @@
+# TAGLINE
+
+Configure X11 keyboard layouts
+
 # TLDR
 
 Set the keyboard layout to **French AZERTY**
@@ -77,6 +81,14 @@ Set layout for a specific **input device**
 **setxkbmap** configures keyboard layouts for the X Window System using the X Keyboard Extension (XKB). It builds keymaps from components stored in **/usr/share/X11/xkb** and applies them to the current X session.
 
 The command supports multiple keyboard layouts that can be switched using configurable key combinations (options). Common switching options include **grp:alt_shift_toggle**, **grp:caps_toggle**, and **grp:win_space_toggle**.
+
+# CONFIGURATION
+
+**/usr/share/X11/xkb/**
+> System XKB data directory containing layout definitions, rules, symbols, and keycodes.
+
+**/etc/X11/xorg.conf.d/**
+> Drop-in configuration directory for persistent keyboard layout settings via X.Org.
 
 # CAVEATS
 

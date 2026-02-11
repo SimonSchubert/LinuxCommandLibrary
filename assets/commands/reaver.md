@@ -1,3 +1,7 @@
+# TAGLINE
+
+WPS brute-force attack tool for WiFi networks
+
 # TLDR
 
 **Scan for WPS-enabled access points** using wash

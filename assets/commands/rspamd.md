@@ -1,3 +1,7 @@
+# TAGLINE
+
+Advanced spam filtering daemon
+
 # TLDR
 
 **Start Rspamd**
@@ -70,11 +74,14 @@ rspamc -v < message.eml
 
 # CONFIGURATION
 
-```
-/etc/rspamd/rspamd.conf     - Main config
-/etc/rspamd/local.d/        - Local overrides
-/etc/rspamd/override.d/     - Full overrides
-```
+**/etc/rspamd/rspamd.conf**
+> Main configuration file defining workers, modules, and global settings.
+
+**/etc/rspamd/local.d/**
+> Directory for local configuration overrides that merge with default settings. Preferred location for custom rules.
+
+**/etc/rspamd/override.d/**
+> Directory for full configuration overrides that completely replace default settings for specified modules.
 
 # PORTS
 

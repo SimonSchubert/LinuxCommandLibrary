@@ -1,3 +1,7 @@
+# TAGLINE
+
+IPv4 and IPv6 subnet calculator
+
 # TLDR
 
 **Calculate subnet**
@@ -60,15 +64,9 @@
 
 # DESCRIPTION
 
-**sipcalc** calculates IP subnet information. It handles both IPv4 and IPv6.
+**sipcalc** is an advanced IP subnet calculator that handles both IPv4 and IPv6 addresses. Given an address with a prefix length or netmask, it displays the network address, broadcast address, host range, and other details in both CIDR and traditional netmask notation.
 
-Address analysis shows network, broadcast, and host range. CIDR and netmask formats supported.
-
-Subnet splitting divides networks. Calculates new ranges for specified prefix length.
-
-Interface mode reads system addresses. Shows configuration of network interfaces.
-
-Binary output shows bit-level details. Useful for learning and verification.
+The subnet splitting option (**-s**) divides a network into smaller subnets at a specified prefix length, showing all resulting ranges. Interface mode accepts a network interface name instead of an address, reading the system's configured addresses for analysis. The **-b** option adds binary representations for bit-level understanding of subnet boundaries.
 
 # CAVEATS
 

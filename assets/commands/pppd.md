@@ -1,3 +1,7 @@
+# TAGLINE
+
+Point-to-Point Protocol connection daemon
+
 # TLDR
 
 **Start PPP connection**
@@ -45,11 +49,23 @@ _SPEED_
 
 # DESCRIPTION
 
-**pppd** is the Point-to-Point Protocol daemon. Manages PPP connections.
+**pppd** is the Point-to-Point Protocol daemon that establishes and manages PPP network connections over serial links, modems, and Ethernet. It handles link negotiation, authentication (PAP, CHAP, EAP), IP address assignment, and DNS configuration.
 
-The tool handles dial-up and DSL. Core PPP implementation.
+The daemon is typically invoked through helper scripts like **pon** or **pppoe-connect** rather than directly. Provider configuration files in **/etc/ppp/peers/** define connection parameters for different ISPs or VPN endpoints. Plugins extend functionality for PPPoE, RADIUS authentication, and other protocols.
 
-pppd manages PPP links.
+# CONFIGURATION
+
+**/etc/ppp/peers/**
+> Provider configuration files defining connection parameters for each ISP or VPN endpoint. Invoked via `pppd call <provider>`.
+
+**/etc/ppp/pap-secrets**, **/etc/ppp/chap-secrets**
+> Authentication credential files for PAP and CHAP protocols, containing username, server, and password entries.
+
+**/etc/ppp/options**
+> Global default options applied to all PPP connections. Per-device options can be placed in **/etc/ppp/options.<device>**.
+
+**/etc/ppp/ip-up**, **/etc/ppp/ip-down**
+> Scripts executed when the PPP link comes up or goes down, used for routing, firewall, and DNS updates.
 
 # CAVEATS
 

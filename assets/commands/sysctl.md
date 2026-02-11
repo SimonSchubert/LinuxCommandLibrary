@@ -1,3 +1,7 @@
+# TAGLINE
+
+View and modify kernel parameters
+
 # TLDR
 
 **Show** all available variables and their values
@@ -52,6 +56,14 @@
 **sysctl** is used to examine and modify kernel parameters at runtime. Parameters available are listed under **/proc/sys/** and can be read or written using this tool.
 
 Common categories include **kernel.** (core kernel settings), **net.** (networking), **vm.** (virtual memory), and **fs.** (filesystem). Changes made with sysctl are temporary unless persisted to configuration files.
+
+# CONFIGURATION
+
+**/etc/sysctl.conf**
+> Main configuration file for persistent kernel parameter settings, loaded at boot.
+
+**/etc/sysctl.d/*.conf**
+> Drop-in directory for modular kernel parameter configuration files.
 
 # CAVEATS
 

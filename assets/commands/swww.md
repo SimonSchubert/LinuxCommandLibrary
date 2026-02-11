@@ -1,3 +1,7 @@
+# TAGLINE
+
+Animated Wayland wallpaper daemon
+
 # TLDR
 
 **Initialize** the daemon

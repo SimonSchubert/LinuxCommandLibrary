@@ -1,3 +1,7 @@
+# TAGLINE
+
+Configure and query serial port settings
+
 # TLDR
 
 Print **all information** about a serial device

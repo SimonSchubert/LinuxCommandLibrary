@@ -1,3 +1,7 @@
+# TAGLINE
+
+GPU-accelerated WPA/WPA2 password auditing
+
 # TLDR
 
 Display **benchmark** speed

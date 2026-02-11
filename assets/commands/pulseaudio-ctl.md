@@ -1,3 +1,7 @@
+# TAGLINE
+
+Simple PulseAudio volume control commands
+
 # TLDR
 
 **Increase** volume by 5%

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fast source code search tool in Go
+
 # TLDR
 
 **Search for pattern**
@@ -49,11 +53,9 @@ _PATH_
 
 # DESCRIPTION
 
-**pt** is the Platinum Searcher. Fast code search tool.
+**pt** (the Platinum Searcher) is a fast code search tool written in Go, similar to **ag** (The Silver Searcher) and **ack**. It recursively searches directory trees for text patterns, automatically skipping files listed in **.gitignore** and other VCS ignore files.
 
-The tool searches source code quickly. Similar to ag.
-
-pt searches code.
+The tool is designed for searching source code in large projects. It supports filtering by file type, word-boundary matching, and context display around matches. Being written in Go gives it good cross-platform support with a single static binary.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Summarize system process accounting data
+
 # TLDR
 
 Display **executable invocations** per user

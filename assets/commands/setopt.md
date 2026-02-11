@@ -1,3 +1,7 @@
+# TAGLINE
+
+Enable zsh shell options
+
 # TLDR
 
 **Enable an option** in zsh

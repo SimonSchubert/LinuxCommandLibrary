@@ -1,3 +1,7 @@
+# TAGLINE
+
+Stream editor for text transformations
+
 # TLDR
 
 **Substitute** all occurrences of "apple" with "mango" on all lines

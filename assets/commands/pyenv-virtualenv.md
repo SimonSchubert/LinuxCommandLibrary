@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Python virtual environments with pyenv
+
 # TLDR
 
 **Create virtualenv**
@@ -55,15 +59,9 @@
 
 # DESCRIPTION
 
-**pyenv-virtualenv** extends pyenv with virtualenv management. It creates isolated Python environments.
+**pyenv-virtualenv** is a pyenv plugin that manages Python virtual environments alongside pyenv's version management. It creates isolated environments tied to specific Python versions, each with its own independent set of installed packages, and integrates them seamlessly into pyenv's version-switching workflow.
 
-Virtualenvs are created from specific Python versions. Each has independent package installations.
-
-Activation sets the environment. Deactivation returns to the previous state.
-
-Local setting auto-activates when entering directories. The .python-version file controls this.
-
-Integration with pyenv means seamless version switching. Virtualenvs appear as pyenv versions.
+Virtual environments created with this plugin appear as regular pyenv versions and can be activated using **pyenv activate** or auto-activated by setting a local version with **pyenv local**. When a **.python-version** file references a virtualenv name, entering that directory automatically activates the environment and leaving it deactivates, providing a frictionless per-project workflow.
 
 # CAVEATS
 

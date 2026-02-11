@@ -1,3 +1,7 @@
+# TAGLINE
+
+Open-source cheminformatics and molecular toolkit
+
 # TLDR
 
 **Import RDKit in Python**

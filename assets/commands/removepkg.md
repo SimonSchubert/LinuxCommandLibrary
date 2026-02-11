@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove Slackware packages
+
 # TLDR
 
 **Remove** a package

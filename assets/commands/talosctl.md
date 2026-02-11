@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Talos Linux Kubernetes nodes
+
 # TLDR
 
 **Generate configuration**
@@ -58,15 +62,22 @@
 
 # DESCRIPTION
 
-**talosctl** manages Talos Linux Kubernetes nodes. Talos is an immutable OS for Kubernetes.
+**talosctl** is the command-line tool for managing Talos Linux, a minimal and immutable operating system purpose-built for running Kubernetes. It provides complete lifecycle management for Talos nodes, from initial configuration generation through ongoing cluster operations.
 
-Configuration generation creates machine configs. Control plane and worker configs.
+The **gen config** command creates machine configuration files for control plane and worker nodes, including certificates and secrets needed for secure cluster communication. The **apply-config** command pushes these configurations to nodes, and **bootstrap** initializes the etcd cluster on the first control plane node to start the Kubernetes cluster.
 
-Bootstrap initializes the cluster. First control plane node starts etcd.
+For day-to-day operations, talosctl provides a **dashboard** for monitoring node health and resource usage, **services** for inspecting running system services, and **logs** for viewing service output. The **kubeconfig** command retrieves cluster credentials for use with kubectl. All communication with nodes uses mutual TLS authentication configured through the talosconfig file.
 
-Dashboard shows node status. Resources, services, and health.
+# CONFIGURATION
 
-Kubeconfig retrieves cluster access. Connect with kubectl.
+**~/.talos/config**
+> Default talosconfig file containing cluster endpoints, node addresses, and TLS credentials for authenticating with Talos nodes
+
+**--talosconfig** _FILE_
+> Override the default config file location via command-line flag
+
+**TALOSCONFIG**
+> Environment variable to specify an alternative talosconfig file path
 
 # CAVEATS
 

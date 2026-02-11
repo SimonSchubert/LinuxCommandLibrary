@@ -1,3 +1,7 @@
+# TAGLINE
+
+Reduce PPM image color count
+
 # TLDR
 
 **Reduce to N colors**

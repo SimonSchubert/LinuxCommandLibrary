@@ -1,3 +1,7 @@
+# TAGLINE
+
+RPM package manager for Red Hat systems
+
 # TLDR
 
 **Query** package version

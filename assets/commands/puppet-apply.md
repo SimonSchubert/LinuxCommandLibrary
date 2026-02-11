@@ -1,3 +1,7 @@
+# TAGLINE
+
+Apply Puppet manifests locally
+
 # TLDR
 
 **Apply manifest**
@@ -46,11 +50,17 @@ _MANIFEST_
 
 # DESCRIPTION
 
-**puppet apply** applies Puppet manifests locally. Standalone configuration.
+**puppet apply** executes Puppet manifests directly on the local system without requiring a Puppet server. It compiles and applies the specified manifest file, making it ideal for standalone configuration management, testing manifests during development, and bootstrapping systems before they join a Puppet infrastructure.
 
-The tool executes configuration code. No master required.
+The command accepts manifest files written in Puppet's declarative DSL or inline code via the **-e** flag. It supports **--noop** for dry-run previews of changes, **--verbose** and **--debug** for detailed execution output, and **--modulepath** for specifying where to find Puppet modules. Since it operates independently of a server, puppet apply is commonly used in container image builds, Vagrant provisioning, and one-off system configuration tasks.
 
-puppet apply configures locally.
+# CONFIGURATION
+
+**/etc/puppetlabs/puppet/puppet.conf**
+> Configuration file controlling module paths, log level, environment settings, and other Puppet behavior for local apply runs.
+
+**/etc/puppetlabs/code/modules/**
+> Default module path searched when resolving classes and defined types referenced in manifests.
 
 # CAVEATS
 

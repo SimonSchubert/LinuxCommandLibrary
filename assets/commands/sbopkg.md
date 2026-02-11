@@ -1,3 +1,7 @@
+# TAGLINE
+
+SlackBuilds.org package management tool
+
 # TLDR
 
 **Synchronize with the SlackBuilds.org repository**

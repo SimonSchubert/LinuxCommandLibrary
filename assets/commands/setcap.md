@@ -1,3 +1,7 @@
+# TAGLINE
+
+Set file capabilities for fine-grained privileges
+
 # TLDR
 
 Set **capability**

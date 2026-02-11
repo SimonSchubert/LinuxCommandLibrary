@@ -1,3 +1,7 @@
+# TAGLINE
+
+Switch between Qt installation versions
+
 # TLDR
 
 **Show current Qt version**
@@ -61,24 +65,17 @@ qtchooser -run-tool=qmake -qt=5 --version
 
 # CONFIGURATION
 
-```bash
-# System configs
-/usr/share/qtchooser/
+**/usr/share/qtchooser/**
+> System-wide Qt version configuration files, each specifying bin and lib paths for a Qt installation.
 
-# User config
-~/.config/qtchooser/
+**~/.config/qtchooser/**
+> User-level Qt version configuration files overriding system defaults.
 
-# Config file format (qt5.conf):
-/usr/lib/qt5/bin
-/usr/lib/qt5/lib
-```
+**QT_SELECT**
+> Environment variable selecting the default Qt version (e.g., qt5, qt6).
 
-# ENVIRONMENT
-
-```bash
-QT_SELECT=qt5     # Default version
-QTCHOOSER_NO_GLOBAL_DIR=1  # Ignore system configs
-```
+**QTCHOOSER_NO_GLOBAL_DIR**
+> Environment variable to ignore system-wide configuration directory when set to 1.
 
 # CAVEATS
 

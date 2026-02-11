@@ -1,3 +1,7 @@
+# TAGLINE
+
+Set terminal environment to match window size
+
 # TLDR
 
 **Resize** the terminal

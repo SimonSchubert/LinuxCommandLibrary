@@ -1,3 +1,7 @@
+# TAGLINE
+
+Compile Pug templates to HTML
+
 # TLDR
 
 **Compile Pug to HTML**

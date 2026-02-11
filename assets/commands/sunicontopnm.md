@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert Sun icon images to PNM format
+
 # TLDR
 
 **Convert Sun icon to PNM**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Analyze Python code for errors and style
+
 # TLDR
 
 **Check Python file**
@@ -46,11 +50,23 @@ _MODULES_
 
 # DESCRIPTION
 
-**pylint** analyzes Python code for errors and style. Comprehensive linter.
+**pylint** is a comprehensive static analysis tool that checks Python code for programming errors, coding standard violations, and code smells. It inspects modules without running them, reporting issues organized by category: conventions (C), refactoring suggestions (R), warnings (W), errors (E), and fatal problems (F), each with a numeric code for precise filtering.
 
-The tool checks code quality. Reports violations and suggestions.
+The tool is highly configurable through **.pylintrc** files or **pyproject.toml** sections, allowing teams to enable, disable, or customize individual checks to match project standards. It also produces an overall code quality score out of 10, making it useful for tracking code health over time in CI pipelines. Plugins extend its analysis to frameworks like Django and SQLAlchemy.
 
-pylint lints Python.
+# CONFIGURATION
+
+**.pylintrc**
+> Project-level configuration file for enabling/disabling checks, setting thresholds, and defining coding standards.
+
+**pyproject.toml**
+> Project configuration with a `[tool.pylint]` section supporting the same options as .pylintrc.
+
+**setup.cfg**
+> Alternative configuration file with a `[pylint]` section for check settings.
+
+**~/.pylintrc**
+> User-level default configuration applied when no project config is found.
 
 # CAVEATS
 

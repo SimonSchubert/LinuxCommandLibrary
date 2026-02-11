@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage SELinux policy modules
+
 # TLDR
 
 **List** all installed policy modules

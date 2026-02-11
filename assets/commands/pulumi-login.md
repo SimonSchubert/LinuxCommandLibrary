@@ -1,3 +1,7 @@
+# TAGLINE
+
+Authenticate with a Pulumi state backend
+
 # TLDR
 
 **Login to Pulumi Cloud**

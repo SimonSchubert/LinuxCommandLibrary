@@ -1,3 +1,7 @@
+# TAGLINE
+
+CLI and TUI mixer for PulseAudio
+
 # TLDR
 
 **Launch TUI mixer**

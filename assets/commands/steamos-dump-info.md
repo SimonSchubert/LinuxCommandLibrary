@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display SteamOS system diagnostics
+
 # TLDR
 
 View SteamOS **system information**

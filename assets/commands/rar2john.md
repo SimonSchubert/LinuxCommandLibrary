@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extract password hashes from RAR archives
+
 # TLDR
 
 **Extract hash from RAR file**
@@ -18,9 +22,9 @@
 
 # DESCRIPTION
 
-**rar2john** extracts password hashes from encrypted RAR archives for cracking with John the Ripper. It supports RAR3 and RAR5 encryption formats.
+**rar2john** extracts password hashes from encrypted RAR archives into a format suitable for offline password recovery with John the Ripper or Hashcat. It reads the archive's encryption metadata and outputs a hash string containing the cryptographic parameters needed to verify password guesses without repeatedly accessing the original archive file.
 
-Part of John the Ripper suite.
+The tool supports both RAR3 and RAR5 encryption formats, which use different key derivation algorithms. Multiple archives can be processed in a single invocation, with each hash line prefixed by the source filename. It is part of the John the Ripper jumbo suite and is typically used in authorized security auditing and password recovery scenarios.
 
 # EXAMPLES
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Simple modern file encryption tool
+
 # TLDR
 
 **Encrypt file with passphrase**

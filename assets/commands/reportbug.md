@@ -1,3 +1,7 @@
+# TAGLINE
+
+Report bugs in Debian packages
+
 # TLDR
 
 Generate a **bug report** about a package

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert source code to syntax-highlighted output
+
 # TLDR
 
 **Highlight a source file** to HTML

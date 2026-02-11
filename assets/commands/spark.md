@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate sparkline graphs from numbers
+
 # TLDR
 
 **Generate sparkline**
@@ -22,15 +26,11 @@
 
 # DESCRIPTION
 
-**spark** generates sparklines from numbers. It creates mini bar charts in the terminal.
+**spark** generates sparkline graphs from a list of numbers, rendering them as Unicode block characters (▁▂▃▄▅▆▇█) in the terminal. Values are mapped proportionally across eight height levels, with the minimum value getting the shortest bar and the maximum the tallest.
 
-Numbers convert to Unicode block characters. Higher values show taller bars.
+Numbers can be provided as command-line arguments, piped via stdin, or read from a file. Input supports comma-separated, space-separated, and newline-separated formats, making it easy to integrate with other Unix tools through pipes.
 
-Stdin support enables piping. Numbers can be comma or newline separated.
-
-Visual data representation in text. Useful for quick trend visualization.
-
-Output uses standard text. Works in any terminal.
+The output is plain text using standard Unicode characters, so it works in any terminal that supports Unicode. Sparklines are useful for visualizing trends in data at a glance without requiring a full graphing tool.
 
 # CHARACTERS
 

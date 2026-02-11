@@ -1,3 +1,7 @@
+# TAGLINE
+
+API development and testing platform
+
 # TLDR
 
 **Launch Postman**
@@ -44,7 +48,9 @@
 
 # DESCRIPTION
 
-**Postman** is an API development platform with a GUI for designing, testing, and documenting APIs. **Newman** is its command-line companion for running collections in CI/CD.
+**Postman** is an API development platform providing a graphical interface for designing, testing, and documenting HTTP APIs. It organizes requests into collections that can include test scripts, environment variables, and pre-request hooks for building comprehensive API test suites.
+
+**Newman** is the command-line companion for running Postman collections outside the GUI. It enables automated API testing in CI/CD pipelines, supporting environment files, data-driven iterations with CSV or JSON data, and multiple output reporters for integration with test reporting systems.
 
 # EXAMPLES
 

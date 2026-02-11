@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert raw grayscale data to PGM format
+
 # TLDR
 
 **Convert raw grayscale to PGM**
@@ -31,7 +35,9 @@ _height_
 
 # DESCRIPTION
 
-**rawtopgm** converts raw grayscale data to PGM format. Requires knowing image dimensions. Part of Netpbm toolkit.
+**rawtopgm** converts raw grayscale byte data into Portable Graymap (PGM) format by interpreting a stream of pixel values according to specified image dimensions. Since raw data contains no metadata, the width and height must be provided as arguments so the tool knows how to arrange the bytes into a proper image grid.
+
+The **-headerskip** option allows skipping file headers that precede the actual pixel data, and **-bpp** handles 16-bit samples for higher dynamic range images. It is part of the Netpbm image processing toolkit.
 
 # SEE ALSO
 

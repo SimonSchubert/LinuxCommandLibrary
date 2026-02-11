@@ -1,3 +1,7 @@
+# TAGLINE
+
+Search Arch repositories for file ownership
+
 # TLDR
 
 **Synchronize** pkgfile database

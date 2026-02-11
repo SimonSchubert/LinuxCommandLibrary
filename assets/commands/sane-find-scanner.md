@@ -1,3 +1,7 @@
+# TAGLINE
+
+Detect SCSI and USB scanner devices
+
 # TLDR
 
 **Find all SCSI and USB scanners**

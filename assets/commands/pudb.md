@@ -1,3 +1,7 @@
+# TAGLINE
+
+Full-screen console Python debugger
+
 # TLDR
 
 **Debug Python script**

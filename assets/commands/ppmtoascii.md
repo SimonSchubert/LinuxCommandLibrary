@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert PPM images to ASCII art
+
 # TLDR
 
 **Convert PPM to ASCII art**

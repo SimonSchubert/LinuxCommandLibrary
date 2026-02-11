@@ -1,3 +1,7 @@
+# TAGLINE
+
+Record audio from sound input devices
+
 # TLDR
 
 **Record audio** to a file from the default input

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Analyze and optimize power consumption
+
 # TLDR
 
 **Calibrate** power measurements

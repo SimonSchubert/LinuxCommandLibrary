@@ -1,3 +1,7 @@
+# TAGLINE
+
+Start the Rails development web server
+
 # TLDR
 
 **Start the Rails development server**

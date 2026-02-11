@@ -1,3 +1,7 @@
+# TAGLINE
+
+Walk SNMP MIB trees retrieving all values
+
 # TLDR
 
 **Walk entire MIB**
@@ -59,15 +63,11 @@
 
 # DESCRIPTION
 
-**snmpwalk** retrieves SNMP data from network devices. It walks MIB trees fetching all values.
+**snmpwalk** retrieves a subtree of management values from an SNMP agent by issuing successive GETNEXT requests. Starting from a specified OID, it walks through the MIB tree and displays all values until it reaches the end of the subtree, providing a comprehensive view of device management data.
 
-Community strings authenticate v1/v2c. Default is often "public" for read.
+The tool supports SNMPv1, v2c, and v3. For v1 and v2c, community strings provide authentication, with "public" being a common read-only default. SNMPv3 adds robust security through username-based authentication (MD5/SHA) and encryption (DES/AES).
 
-SNMPv3 provides encryption and authentication. Username and passphrases required.
-
-OID starting points limit scope. System, interfaces, or specific branches.
-
-Output formatting options help parsing. Numeric OIDs for scripting.
+The starting OID determines the scope of the walk. Walking from the root retrieves all available data, while specifying a subtree like **system** or **interfaces** limits results. Output formatting options like **-On** (numeric OIDs) and **-Oq** (quick print) make output easier to parse in scripts.
 
 # CAVEATS
 

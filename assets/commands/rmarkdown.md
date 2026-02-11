@@ -1,3 +1,7 @@
+# TAGLINE
+
+Render R Markdown documents to various formats
+
 # TLDR
 
 **Render R Markdown to HTML**

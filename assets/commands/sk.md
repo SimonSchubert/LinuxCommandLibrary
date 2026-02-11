@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fast fuzzy finder written in Rust
+
 # TLDR
 
 **Start skim** to interactively select from input

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Customize Spotify desktop client
+
 # TLDR
 
 **Apply customizations**
@@ -69,15 +73,22 @@
 
 # DESCRIPTION
 
-**spicetify** customizes the Spotify desktop client. It injects themes and extensions.
+**spicetify** is a command-line tool for customizing the Spotify desktop client by injecting custom CSS themes, JavaScript extensions, and custom apps. It modifies the Spotify client files to apply visual and functional changes.
 
-Backup creates restore point. Required before first customization.
+Before first use, a backup of the original Spotify installation must be created with **spicetify backup**. Themes control the visual appearance and color scheme, while extensions add functionality such as lyrics display, keyboard shortcuts, and playlist management features. A community marketplace provides a curated collection of themes and extensions.
 
-Themes change visual appearance. Community themes available.
+The **watch** command enables a development mode that applies changes in real time as theme or extension files are modified. Configuration is stored in a TOML file and managed through the **spicetify config** command.
 
-Extensions add features. Lyrics, keyboard shortcuts, and more.
+# CONFIGURATION
 
-Watch mode enables development. Changes apply immediately.
+**~/.config/spicetify/config-xpui.ini**
+> Main configuration file storing the active theme, color scheme, enabled extensions, custom apps, and Spotify installation path.
+
+**~/.config/spicetify/Themes/**
+> Directory containing theme folders, each with a color.ini and user.css file defining the visual customization.
+
+**~/.config/spicetify/Extensions/**
+> Directory for JavaScript extension files that add functionality to the Spotify client.
 
 # CAVEATS
 

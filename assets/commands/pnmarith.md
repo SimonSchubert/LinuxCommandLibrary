@@ -1,3 +1,7 @@
+# TAGLINE
+
+Perform pixel arithmetic on PNM images
+
 # TLDR
 
 **Add two images**

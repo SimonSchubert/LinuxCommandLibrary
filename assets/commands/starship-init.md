@@ -1,3 +1,7 @@
+# TAGLINE
+
+Initialize Starship prompt for shells
+
 # TLDR
 
 **Initialize for bash**

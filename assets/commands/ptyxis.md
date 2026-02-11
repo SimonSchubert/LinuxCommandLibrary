@@ -1,3 +1,7 @@
+# TAGLINE
+
+Container-oriented GNOME terminal emulator
+
 # TLDR
 
 Open **new window**

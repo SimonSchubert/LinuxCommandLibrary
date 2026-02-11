@@ -1,3 +1,7 @@
+# TAGLINE
+
+Show installed Rust toolchains and active version
+
 # TLDR
 
 **Show installed toolchains**

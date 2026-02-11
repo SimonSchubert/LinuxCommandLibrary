@@ -1,3 +1,7 @@
+# TAGLINE
+
+Multi-cloud security assessment tool
+
 # TLDR
 
 **Run AWS security audit**
@@ -63,15 +67,11 @@
 
 # DESCRIPTION
 
-**prowler** performs security assessments on cloud environments. It checks against CIS benchmarks and best practices.
+**prowler** performs automated security assessments on cloud environments by running hundreds of checks against CIS benchmarks, compliance frameworks (GDPR, HIPAA, PCI-DSS), and provider-specific best practices. It supports AWS, Azure, GCP, Kubernetes, GitHub, and Microsoft 365, adapting its checks to each platform's security model.
 
-AWS scanning covers IAM, S3, EC2, RDS, and many services. Hundreds of security checks are included.
+Scans can be targeted to specific services, individual checks, or severity levels to focus on the most critical findings. Output is available in JSON, CSV, and HTML formats for integration with security dashboards and CI/CD pipelines.
 
-Multi-cloud support includes Azure and GCP. Similar checks adapted for each provider.
-
-Output formats include JSON, CSV, and HTML. Reports integrate with security dashboards.
-
-Severity filtering focuses on critical issues. Prioritize findings by risk level.
+The tool requires read-only credentials for the target environment and uses the provider's standard authentication (AWS profiles, Azure service principals, GCP service accounts).
 
 # CAVEATS
 

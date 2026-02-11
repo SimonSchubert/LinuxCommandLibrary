@@ -1,3 +1,7 @@
+# TAGLINE
+
+Minimalist suckless WebKit web browser
+
 # TLDR
 
 **Open a URL**

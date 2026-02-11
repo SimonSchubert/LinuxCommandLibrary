@@ -1,3 +1,7 @@
+# TAGLINE
+
+Browser automation and testing library
+
 # TLDR
 
 **Install Puppeteer**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Rank Arch Linux pacman mirrors by speed
+
 # TLDR
 
 **Rank** mirrorlist
@@ -43,9 +47,9 @@ Show **response times** only
 
 # DESCRIPTION
 
-**rankmirrors** tests Arch Linux package mirrors for connection speed and response time, then outputs a sorted mirrorlist. Faster mirrors appear first in the output.
+**rankmirrors** tests Arch Linux pacman package mirrors by measuring connection speed and response time, then outputs a sorted mirrorlist with the fastest mirrors first. It connects to each mirror in the input file, downloads a small test file, and ranks results by transfer rate, helping users optimize package download performance for their geographic location.
 
-The tool is useful for optimizing package download speeds by selecting the fastest mirrors for your location. Output can be redirected to update the system mirrorlist.
+The output follows the standard mirrorlist format and can be redirected to replace **/etc/pacman.d/mirrorlist** directly. The **-n** flag limits output to only the top N fastest mirrors, and **-t** displays raw response times for comparison without generating a new mirrorlist.
 
 # CAVEATS
 

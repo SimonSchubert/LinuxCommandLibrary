@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display help for rustup commands
+
 # TLDR
 
 **Show help**

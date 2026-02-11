@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create simple plots from data files
+
 # TLDR
 
 **Plot from file**
@@ -32,11 +36,9 @@ _FILE_
 
 # DESCRIPTION
 
-**plot** creates simple plots from data. Command-line plotting utility.
+**plot** is a simple command-line utility for creating graphs and charts from tabular text data. It reads data from files or stdin and renders plots in various output formats including PNG and terminal display.
 
-The tool generates graphs from text data. Various output formats.
-
-plot graphs data.
+For basic data visualization needs, plot provides a quick way to generate graphs without the complexity of full-featured tools like gnuplot.
 
 # CAVEATS
 

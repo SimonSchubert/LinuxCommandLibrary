@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display audio file format information
+
 # TLDR
 
 **Show file info**

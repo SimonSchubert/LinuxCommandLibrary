@@ -1,3 +1,7 @@
+# TAGLINE
+
+Query RPC service registrations
+
 # TLDR
 
 Show **full table** of all RPC services on localhost

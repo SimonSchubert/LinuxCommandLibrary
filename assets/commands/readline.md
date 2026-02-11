@@ -1,3 +1,7 @@
+# TAGLINE
+
+Line editing and input history library
+
 # TLDR
 
 **View readline keybindings**

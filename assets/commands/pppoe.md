@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage PPP over Ethernet connections
+
 # TLDR
 
 **Start PPPoE connection**
@@ -35,11 +39,9 @@
 
 # DESCRIPTION
 
-**pppoe** manages PPP over Ethernet connections. DSL client component.
+**pppoe** is the user-space PPP over Ethernet client that establishes PPPoE sessions for DSL broadband connections. It handles the discovery and session phases of the PPPoE protocol, communicating with the ISP's access concentrator over a specified Ethernet interface.
 
-The tool establishes PPPoE sessions. For broadband connections.
-
-pppoe handles DSL links.
+The tool is typically invoked indirectly through **pppoe-connect** or **pppoe-start** wrapper scripts rather than called directly. It works in conjunction with **pppd** which handles the PPP negotiation once the Ethernet session is established.
 
 # CAVEATS
 

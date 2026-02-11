@@ -1,3 +1,7 @@
+# TAGLINE
+
+Count translation statistics in PO files
+
 # TLDR
 
 **Count translation statistics**
@@ -39,11 +43,9 @@ _FILES_
 
 # DESCRIPTION
 
-**pocount** counts translation statistics in PO files. Part of translate-toolkit.
+**pocount** counts translation statistics in PO (Portable Object) files, reporting the number of translated, fuzzy, and untranslated strings and words. It provides a quick overview of translation progress for localization projects.
 
-The tool shows word and string counts. Reports translation progress.
-
-pocount analyzes translations.
+Output can be formatted as a short summary (**--short**), CSV (**--csv**), or full detail (**--full**). The **--incomplete** flag filters to only show files that still need translation work. Part of the **translate-toolkit** suite.
 
 # CAVEATS
 

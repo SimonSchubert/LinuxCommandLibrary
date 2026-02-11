@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal music player with vim bindings
+
 # TLDR
 
 Open to **specific** directory

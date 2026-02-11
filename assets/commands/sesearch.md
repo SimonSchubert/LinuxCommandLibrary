@@ -1,3 +1,7 @@
+# TAGLINE
+
+Search and analyze SELinux policy rules
+
 # TLDR
 
 Search for all **allow rules** in the policy

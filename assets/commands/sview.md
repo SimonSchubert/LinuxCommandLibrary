@@ -1,3 +1,7 @@
+# TAGLINE
+
+Graphical Slurm cluster state viewer
+
 # TLDR
 
 Start the **Slurm GUI**

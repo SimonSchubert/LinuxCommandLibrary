@@ -1,3 +1,7 @@
+# TAGLINE
+
+Analyze PipeWire performance and latency
+
 # TLDR
 
 **Profile** the default instance, logging to profile.log

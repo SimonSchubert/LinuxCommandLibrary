@@ -1,3 +1,7 @@
+# TAGLINE
+
+Pause pueue task queue processing
+
 # TLDR
 
 **Pause all tasks**
@@ -36,11 +40,7 @@ _TASK_IDS_
 
 # DESCRIPTION
 
-**pueue pause** pauses task execution. Stops queue processing.
-
-The tool halts task startup. Running tasks continue.
-
-pueue pause stops queue.
+**pueue pause** pauses the task queue, preventing new tasks from starting. Currently running tasks continue to completion unless individually paused. Use **--wait** to let running tasks finish before pausing takes effect, or **--group** to pause only a specific task group.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Redpanda streaming topics and clusters
+
 # TLDR
 
 **Create topic**
@@ -53,15 +57,11 @@
 
 # DESCRIPTION
 
-**rpk** manages Redpanda clusters. It's the CLI tool for Redpanda.
+**rpk** is the command-line interface for Redpanda, a Kafka-compatible streaming data platform. It provides commands for managing topics, producing and consuming messages, administering clusters, and configuring Redpanda nodes, using a syntax familiar to users of Kafka's CLI tools.
 
-Kafka-compatible commands. Similar to kafka-topics.
+Topic operations include creating, deleting, describing, and listing topics, as well as producing messages to and consuming messages from topics for testing and debugging. Cluster commands provide health checks, configuration inspection, and broker management. The tool also handles ACL (Access Control List) management and consumer group operations.
 
-Topic management included. Create, delete, describe.
-
-Message production/consumption. Test streaming.
-
-Cluster administration. Configuration and health.
+The **-X** flag passes client properties like authentication credentials and TLS settings, and **--brokers** specifies the cluster endpoints to connect to.
 
 # CAVEATS
 

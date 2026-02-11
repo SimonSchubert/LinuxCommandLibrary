@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display keyboard keycodes and scancodes
+
 # TLDR
 
 **View** keycodes in decimal

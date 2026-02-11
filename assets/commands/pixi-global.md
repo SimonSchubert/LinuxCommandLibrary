@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage globally installed Pixi packages
+
 # TLDR
 
 **Install package globally**

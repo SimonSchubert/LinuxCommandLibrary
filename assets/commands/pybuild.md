@@ -1,3 +1,7 @@
+# TAGLINE
+
+Build Python packages for Debian
+
 # TLDR
 
 **Build Python package**
@@ -42,11 +46,9 @@
 
 # DESCRIPTION
 
-**pybuild** builds Python packages for Debian. Packaging helper.
+**pybuild** is a Debian helper tool that builds and installs Python packages as part of the Debian packaging process. It wraps various Python build systems including setuptools, flit, poetry, and meson-python, providing a unified interface for the **dh-python** debhelper sequence.
 
-The tool wraps build systems. Part of dh-python.
-
-pybuild builds Python packages.
+The tool automatically detects the appropriate build system from the source package and handles building for multiple Python versions when required. It is typically invoked indirectly through debhelper rules rather than used directly, but can be called manually for debugging packaging issues.
 
 # CAVEATS
 

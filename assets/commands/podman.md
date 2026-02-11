@@ -1,3 +1,7 @@
+# TAGLINE
+
+Daemonless container engine for OCI containers
+
 # TLDR
 
 **Run a container**
@@ -63,11 +67,23 @@
 
 # DESCRIPTION
 
-**podman** is a daemonless container engine. Docker-compatible CLI.
+**podman** is a daemonless, rootless container engine that manages OCI-compliant containers and images. Unlike Docker, it does not require a background daemon process, and containers can run entirely as an unprivileged user.
 
-The tool manages containers without root. OCI-compliant runtime.
+The CLI is designed to be drop-in compatible with Docker, supporting familiar commands like **run**, **build**, **pull**, **ps**, **stop**, and **rm**. Podman also supports pods (groups of containers sharing namespaces), which align with Kubernetes pod concepts. Developed by Red Hat, it uses Buildah for image building and crun/runc as the container runtime.
 
-podman runs containers.
+# CONFIGURATION
+
+**/etc/containers/registries.conf**
+> System-wide container registry configuration including search registries and mirrors.
+
+**/etc/containers/storage.conf**
+> Storage driver and path configuration for container images and layers.
+
+**/etc/containers/containers.conf**
+> Default container runtime settings including resource limits, logging, and network configuration.
+
+**~/.config/containers/**
+> User-level overrides for rootless Podman configuration.
 
 # CAVEATS
 

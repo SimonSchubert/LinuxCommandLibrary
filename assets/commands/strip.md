@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove symbols from object files
+
 # TLDR
 
 **Strip** all symbols from a file (in place)

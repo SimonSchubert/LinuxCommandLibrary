@@ -1,3 +1,7 @@
+# TAGLINE
+
+Find ROP gadgets in binary executables
+
 # TLDR
 
 **Find gadgets in binary**

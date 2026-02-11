@@ -1,3 +1,7 @@
+# TAGLINE
+
+Portable Anymap image format family
+
 # TLDR
 
 **View PNM info**
@@ -27,11 +31,9 @@ Part of Netpbm toolkit.
 
 # DESCRIPTION
 
-**PNM** is Portable Anymap format. Umbrella for PBM, PGM, PPM.
+**PNM** (Portable Anymap) is an umbrella term for the Netpbm image format family: PBM (bitmap, black and white), PGM (graymap, grayscale), and PPM (pixmap, color). These formats use simple, human-readable headers followed by pixel data in either ASCII or binary encoding.
 
-The format provides simple image storage. Text and binary variants.
-
-PNM handles bitmap images.
+PNM serves as the intermediate format in the Netpbm toolkit, where images are converted to PNM, processed with various pnm* tools, and then converted to the desired output format. The simplicity of PNM makes it easy to generate and parse programmatically.
 
 # CAVEATS
 

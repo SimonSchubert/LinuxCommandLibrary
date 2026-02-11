@@ -1,3 +1,7 @@
+# TAGLINE
+
+Store and retrieve secrets via desktop keyring
+
 # TLDR
 
 **Store** a secret with label

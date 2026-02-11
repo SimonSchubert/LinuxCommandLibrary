@@ -1,3 +1,7 @@
+# TAGLINE
+
+Query and convert data files via CLI
+
 # TLDR
 
 **Read and display CSV file**

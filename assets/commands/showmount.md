@@ -1,3 +1,7 @@
+# TAGLINE
+
+Query NFS server export information
+
 # TLDR
 
 **Show exports**
@@ -43,15 +47,9 @@
 
 # DESCRIPTION
 
-**showmount** queries NFS mount information. It shows exported filesystems and current mounts.
+**showmount** queries an NFS server's mount daemon to display information about exported filesystems and active mounts. The **-e** option lists all exported directories along with their access permissions and allowed client hosts, which is the most common usage for discovering available NFS shares.
 
-Export listing shows available shares. Includes access permissions and allowed hosts.
-
-Directory listing shows what's mounted. Currently active NFS mounts displayed.
-
-All mounts shows host and directory pairs. Useful for auditing NFS usage.
-
-Without host, queries localhost. Shows local NFS server configuration.
+The **-d** option shows only directories that are currently mounted by clients, while **-a** displays all active mount points as host:directory pairs, useful for auditing NFS usage and identifying connected clients. Without a host argument, the command queries the local machine's NFS server.
 
 # CAVEATS
 

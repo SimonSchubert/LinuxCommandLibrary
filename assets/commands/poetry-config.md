@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage Poetry configuration settings
+
 # TLDR
 
 **List configuration**
@@ -43,11 +47,9 @@ _VALUE_
 
 # DESCRIPTION
 
-**poetry config** manages Poetry configuration. Sets global and local settings.
+**poetry config** reads and writes Poetry configuration settings including virtual environment preferences, repository URLs, and authentication tokens. Use **--list** to view all current settings.
 
-The tool configures repositories. Manages authentication tokens.
-
-poetry config sets options.
+Settings are stored globally by default. The **--local** flag creates a **poetry.toml** file in the project directory for project-specific overrides. Common settings include `virtualenvs.in-project`, `repositories`, and `pypi-token`. Use **--unset** to remove a configuration key.
 
 # CAVEATS
 

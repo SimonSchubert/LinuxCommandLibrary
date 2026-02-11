@@ -1,3 +1,7 @@
+# TAGLINE
+
+Real-time terminal text communication
+
 # TLDR
 
 **Talk** to local user

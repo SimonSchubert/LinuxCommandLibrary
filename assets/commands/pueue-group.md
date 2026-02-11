@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage pueue task execution groups
+
 # TLDR
 
 **List groups**
@@ -30,11 +34,7 @@
 
 # DESCRIPTION
 
-**pueue group** manages task groups. Organizes parallel execution.
-
-The tool creates execution groups. Separates workflows.
-
-pueue group organizes tasks.
+**pueue group** manages task execution groups, which allow organizing tasks into separate queues with independent parallelism settings. Groups can be created with **add** and removed with **remove**. Each group runs its tasks independently, so a CPU-bound group can be limited to one task while an I/O-bound group runs many in parallel.
 
 # CAVEATS
 

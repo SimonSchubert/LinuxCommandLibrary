@@ -1,3 +1,7 @@
+# TAGLINE
+
+MATE desktop text editor
+
 # TLDR
 
 **Start** the editor

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate random identity data
+
 # TLDR
 
 Display a **random name** and address

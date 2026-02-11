@@ -1,3 +1,7 @@
+# TAGLINE
+
+Reset SteamOS to factory settings
+
 # TLDR
 
 Begin **factory reset**

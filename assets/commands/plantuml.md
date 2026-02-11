@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate UML diagrams from text descriptions
+
 # TLDR
 
 **Generate diagram**

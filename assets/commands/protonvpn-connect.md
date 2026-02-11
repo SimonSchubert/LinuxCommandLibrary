@@ -1,3 +1,7 @@
+# TAGLINE
+
+Establish Proton VPN connections
+
 # TLDR
 
 Connect using the **fastest server** available

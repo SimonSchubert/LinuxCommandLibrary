@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal task and note board
+
 # TLDR
 
 **Display all tasks and notes**

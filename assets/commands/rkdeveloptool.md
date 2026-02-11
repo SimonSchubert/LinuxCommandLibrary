@@ -1,3 +1,7 @@
+# TAGLINE
+
+Flash firmware to Rockchip devices via USB
+
 # TLDR
 
 **List devices**
@@ -53,15 +57,11 @@
 
 # DESCRIPTION
 
-**rkdeveloptool** flashes Rockchip devices. It communicates via USB.
+**rkdeveloptool** is a Linux utility for flashing firmware to Rockchip ARM SoC devices (RK3399, RK3328, RK3288, and others) via USB. It communicates with the device's bootrom when the device is placed in maskrom mode, a special recovery state entered by shorting specific pins or holding a button during power-on.
 
-Development tool for SoCs. RK3399, RK3328, etc.
+The flashing process typically involves two steps: first loading a boot loader with the **db** command, then writing the system image at the appropriate offset with **wl**. The tool can also read back flash contents, query flash chip information, and erase the entire storage. It serves as an open-source Linux alternative to Rockchip's Windows-based flashing tools.
 
-Maskrom mode required. Device in special state.
-
-Boot loader must load first. Then write images.
-
-Linux alternative to rkflashtool. Open source.
+Root or appropriate USB permissions are required to communicate with the device. The **ld** command verifies that the device is detected and in the correct mode before proceeding with write operations.
 
 # CAVEATS
 

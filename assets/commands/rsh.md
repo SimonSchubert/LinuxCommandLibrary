@@ -1,3 +1,7 @@
+# TAGLINE
+
+Execute commands on remote hosts via remote shell
+
 # TLDR
 
 Execute a **command** on a remote host

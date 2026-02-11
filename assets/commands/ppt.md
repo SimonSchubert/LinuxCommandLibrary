@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display text as ASCII paper tape art
+
 # TLDR
 
 **Convert to paper tape format**
@@ -23,11 +27,9 @@ _TEXT_
 
 # DESCRIPTION
 
-**ppt** outputs paper tape representation. ASCII art display.
+**ppt** converts text input into an ASCII art representation of punched paper tape, the storage medium used by early computers and teleprinters. Each character is displayed as a row of holes (dots) corresponding to its binary encoding.
 
-The tool creates retro paper tape visuals. BSD games utility.
-
-ppt simulates paper tape.
+This novelty utility is part of the BSD games collection and serves as both entertainment and an educational tool for understanding historical data encoding formats.
 
 # CAVEATS
 

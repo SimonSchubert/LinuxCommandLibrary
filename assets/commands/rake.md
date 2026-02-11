@@ -1,3 +1,7 @@
+# TAGLINE
+
+Ruby build automation and task runner
+
 # TLDR
 
 **List all available tasks**

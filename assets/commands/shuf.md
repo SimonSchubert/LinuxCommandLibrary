@@ -1,3 +1,7 @@
+# TAGLINE
+
+Randomly shuffle input lines
+
 # TLDR
 
 **Shuffle lines of a file**

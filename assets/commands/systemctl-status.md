@@ -1,3 +1,7 @@
+# TAGLINE
+
+Show runtime status of units
+
 # TLDR
 
 Show the **status** of a systemd unit

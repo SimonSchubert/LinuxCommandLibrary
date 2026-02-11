@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extract information from binary files
+
 # TLDR
 
 **Show binary info**

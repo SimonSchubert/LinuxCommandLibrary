@@ -1,3 +1,7 @@
+# TAGLINE
+
+Block system sleep or shutdown
+
 # TLDR
 
 **List** all active inhibition locks

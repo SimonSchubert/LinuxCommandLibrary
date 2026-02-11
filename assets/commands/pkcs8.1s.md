@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert private keys to PKCS#8 format
+
 # TLDR
 
 **Convert to PKCS#8**
@@ -42,11 +46,9 @@
 
 # DESCRIPTION
 
-**openssl pkcs8** converts private key formats. PKCS#8 key format.
+**openssl pkcs8** converts private keys between traditional OpenSSL format and the standardized PKCS#8 format. PKCS#8 is a widely supported container format for private keys that works across different cryptographic libraries and programming languages.
 
-The tool handles key format conversion. Standard key container.
-
-openssl pkcs8 converts keys.
+The **-topk8** flag converts from traditional to PKCS#8 format. Keys can be encrypted with various ciphers using **-v2** or left unencrypted with **-nocrypt**. Without **-topk8**, the tool reads PKCS#8 input and outputs in traditional format.
 
 # CAVEATS
 

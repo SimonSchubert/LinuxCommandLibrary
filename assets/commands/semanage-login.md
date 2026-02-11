@@ -1,3 +1,7 @@
+# TAGLINE
+
+Map Linux users to SELinux users
+
 # TLDR
 
 **List** all login mappings

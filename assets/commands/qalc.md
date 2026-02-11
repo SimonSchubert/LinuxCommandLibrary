@@ -1,3 +1,7 @@
+# TAGLINE
+
+Command-line calculator with unit conversion
+
 # TLDR
 
 **Calculate expression**
@@ -40,11 +44,9 @@ _EXPRESSION_
 
 # DESCRIPTION
 
-**qalc** is powerful command-line calculator. Unit conversion and math.
+**qalc** is the command-line interface to the Qalculate library, providing a powerful calculator with support for mathematical expressions, unit conversions, currency exchange, and symbolic computation. It handles everything from basic arithmetic to complex expressions involving trigonometric functions, logarithms, integrals, and physical constants.
 
-The tool handles complex calculations. Supports physical units.
-
-qalc calculates expressions.
+A standout feature is built-in awareness of physical units and currencies, allowing natural expressions like "5 kilometers to miles" or "100 USD to EUR". Exchange rates can be updated automatically. In interactive mode, qalc provides a persistent session with command history and tab completion.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+STM32 GDB server via ST-Link
+
 # TLDR
 
 **Start GDB server**
@@ -46,15 +50,9 @@
 
 # DESCRIPTION
 
-**st-util** runs GDB server. It connects ST-Link to GDB.
+**st-util** starts a GDB server that bridges the GNU Debugger (GDB) to STM32 microcontrollers through an ST-Link programmer/debugger. It implements the GDB remote serial protocol, allowing standard GDB commands for setting breakpoints, stepping through code, and inspecting memory and registers.
 
-Remote debugging. GDB protocol.
-
-Connects to STM32. Via ST-Link.
-
-Semihosting support. Printf to debugger.
-
-Standard GDB port. Connect with arm-gdb.
+By default, the server listens on port 4242 for GDB connections. Multi-target mode (**-m**) supports debugging multiple ST-Link devices simultaneously. Semihosting enables the target firmware to perform I/O operations (such as printf) through the debug connection. It is part of the open-source stlink toolset.
 
 # CAVEATS
 

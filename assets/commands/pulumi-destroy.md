@@ -1,3 +1,7 @@
+# TAGLINE
+
+Delete all resources in a Pulumi stack
+
 # TLDR
 
 **Destroy all resources**

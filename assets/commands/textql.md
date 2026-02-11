@@ -1,3 +1,7 @@
+# TAGLINE
+
+Execute SQL queries on CSV files
+
 # TLDR
 
 **Query CSV**
@@ -46,15 +50,9 @@
 
 # DESCRIPTION
 
-**textql** queries text files with SQL. It treats files as tables.
+**textql** allows running SQL queries against structured text files such as CSV and TSV. It loads files into an in-memory SQLite database, treating each file as a table, and executes standard SQL queries against them.
 
-SQL against CSV. Familiar query syntax.
-
-Header support. Column names.
-
-SQLite backend. Full SQL support.
-
-Multiple files. Join tables.
+When **-header** is specified, the first row is used for column names; otherwise columns are named c0, c1, etc. Multiple files can be loaded simultaneously and joined using SQL JOIN syntax. The **-save-to** option persists the imported data to a SQLite database file for further analysis. Custom delimiters are supported with the **-dlm** flag.
 
 # CAVEATS
 

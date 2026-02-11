@@ -1,3 +1,7 @@
+# TAGLINE
+
+Switch system power profiles
+
 # TLDR
 
 **List** available power profiles

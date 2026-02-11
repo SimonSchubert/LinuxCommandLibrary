@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert PPM images to BMP format
+
 # TLDR
 
 **Convert PPM to BMP**

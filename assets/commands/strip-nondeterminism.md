@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove non-deterministic data for reproducible builds
+
 # TLDR
 
 **Strip file**
@@ -43,15 +47,11 @@
 
 # DESCRIPTION
 
-**strip-nondeterminism** removes non-determinism. It enables reproducible builds.
+**strip-nondeterminism** removes sources of non-determinism from files to enable reproducible builds. Build artifacts often contain embedded timestamps, user IDs, file ordering variations, and other metadata that differ between builds even when the source code is identical. This tool normalizes those elements so that building the same source always produces bit-identical output.
 
-Removes timestamps. From archives.
+The tool supports multiple file formats including ZIP archives, JAR files, PNG images, gzip files, and ar archives. For each format, it identifies and strips or normalizes the specific metadata fields that introduce non-determinism, such as modification timestamps in archive entries or creation dates in PNG headers.
 
-Normalizes metadata. Consistent output.
-
-Multiple formats. ZIP, JAR, PNG, etc.
-
-Reproducible builds. Same input, same output.
+It is part of the Debian Reproducible Builds infrastructure and is commonly integrated into build systems as a post-processing step. A fixed timestamp can be provided to replace variable ones, typically sourced from the SOURCE_DATE_EPOCH environment variable.
 
 # CAVEATS
 

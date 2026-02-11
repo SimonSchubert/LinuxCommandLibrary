@@ -1,3 +1,7 @@
+# TAGLINE
+
+Reverse characters in each line
+
 # TLDR
 
 **Reverse** text typed into terminal (interactive mode)

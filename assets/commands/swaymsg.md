@@ -1,3 +1,7 @@
+# TAGLINE
+
+Send IPC commands to Sway compositor
+
 # TLDR
 
 **Send command**
@@ -60,15 +64,11 @@
 
 # DESCRIPTION
 
-**swaymsg** communicates with Sway window manager. It sends commands and queries state.
+**swaymsg** is the IPC (Inter-Process Communication) client for the Sway Wayland compositor. It sends commands and queries to a running Sway instance via the IPC socket, enabling scripted control of window management operations like moving, resizing, and focusing windows.
 
-Commands control window management. Move, resize, focus operations.
+Query message types (get_workspaces, get_outputs, get_tree) return JSON data describing the current compositor state, which can be parsed with tools like jq. This makes swaymsg useful for building custom status bars, automation scripts, and workspace management tools.
 
-Get queries return JSON data. Parse with jq for specific info.
-
-Monitor mode watches events. See changes in real-time.
-
-Socket path defaults to SWAYSOCK. Override for specific instance.
+Monitor mode subscribes to Sway events and prints them in real time, useful for debugging and building reactive scripts. The IPC socket path defaults to the SWAYSOCK environment variable set by Sway.
 
 # CAVEATS
 

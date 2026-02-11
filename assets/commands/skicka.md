@@ -1,3 +1,7 @@
+# TAGLINE
+
+Command-line Google Drive client
+
 # TLDR
 
 **Upload file**
@@ -53,15 +57,9 @@
 
 # DESCRIPTION
 
-**skicka** manages Google Drive. It's a CLI client.
+**skicka** is a command-line client for Google Drive that provides Unix-like file operations including upload, download, listing, directory creation, and deletion. It supports recursive operations for transferring entire folder hierarchies.
 
-Upload and download. Sync files.
-
-Encryption support. Local encryption.
-
-Recursive operations. Folder transfers.
-
-Written in Go. Single binary.
+A notable feature is client-side encryption (**-encrypt**), which encrypts files locally before uploading to Google Drive, ensuring that stored data remains private even from the cloud provider. The tool is written in Go and distributed as a single binary.
 
 # CAVEATS
 

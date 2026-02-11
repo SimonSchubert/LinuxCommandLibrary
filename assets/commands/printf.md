@@ -1,3 +1,7 @@
+# TAGLINE
+
+Format and print data with specifiers
+
 # TLDR
 
 **Print formatted output**
@@ -49,11 +53,11 @@ _ARGUMENTS_
 
 # DESCRIPTION
 
-**printf** formats and prints data. C-style formatted output.
+**printf** formats and prints data according to a format string, similar to the C library function of the same name. The format string can contain literal text, escape sequences like **\n** and **\t**, and conversion specifiers such as **%s** for strings, **%d** for integers, **%f** for floating-point numbers, and **%x** for hexadecimal.
 
-The tool provides precise output control. Standard Unix command.
+Unlike **echo**, printf provides precise control over output formatting and behaves consistently across shells and platforms. If more arguments are provided than the format string consumes, the format string is reused, making it easy to process lists. The command does not append a trailing newline unless explicitly included with **\n** in the format string.
 
-printf formats output.
+printf is part of GNU coreutils and is also available as a shell built-in in most shells. It is the preferred tool for generating formatted output in portable shell scripts.
 
 # CAVEATS
 

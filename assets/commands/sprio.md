@@ -1,3 +1,7 @@
+# TAGLINE
+
+Slurm job scheduling priority viewer
+
 # TLDR
 
 View priority factors for **all pending jobs**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal speed reading with RSVP
+
 # TLDR
 
 Read text at **specific speed**

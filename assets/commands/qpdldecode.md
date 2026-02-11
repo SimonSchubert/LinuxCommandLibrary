@@ -1,3 +1,7 @@
+# TAGLINE
+
+Decode Samsung QPDL printer data format
+
 # TLDR
 
 **Decode QPDL printer format**
@@ -22,11 +26,9 @@ _FILE_
 
 # DESCRIPTION
 
-**qpdldecode** decodes Samsung QPDL print format. Printer data extraction.
+**qpdldecode** decodes data in Samsung's proprietary QPDL (Quick Page Description Language) print format, converting it to standard image formats like PBM for analysis or reprocessing. It is distributed as part of the SpliX driver package for Samsung laser printers.
 
-The tool converts QPDL to images. Part of splix.
-
-qpdldecode extracts print data.
+The tool can also display metadata about QPDL files without converting them, using the **-i** flag to show page count, resolution, and other format details.
 
 # CAVEATS
 

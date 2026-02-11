@@ -1,3 +1,7 @@
+# TAGLINE
+
+Escape strings for systemd unit names
+
 # TLDR
 
 **Escape** the given text

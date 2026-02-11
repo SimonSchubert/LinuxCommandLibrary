@@ -1,3 +1,7 @@
+# TAGLINE
+
+Scan Kubernetes clusters for issues
+
 # TLDR
 
 **Scan Kubernetes cluster**
@@ -43,11 +47,9 @@
 
 # DESCRIPTION
 
-**popeye** scans Kubernetes clusters for issues. Reports misconfigurations.
+**popeye** scans a live Kubernetes cluster and reports potential issues, misconfigurations, and resource problems. It checks pods, services, deployments, and other resources against best practices and common pitfalls.
 
-The tool identifies problems. Checks resource health and best practices.
-
-popeye sanitizes clusters.
+Results are color-coded by severity (OK, info, warning, error). Use **-n** to scan a specific namespace, **-o** for machine-readable output formats (JSON, YAML, HTML), and **--save** to write reports to disk. All operations are read-only.
 
 # CAVEATS
 

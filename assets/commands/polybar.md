@@ -1,3 +1,7 @@
+# TAGLINE
+
+Customizable status bar for X11 window managers
+
 # TLDR
 
 **Start polybar with default bar**
@@ -98,6 +102,14 @@ The bar is divided into left, center, and right sections. Modules can display te
 Custom script modules execute external commands and display output. IPC modules enable real-time updates from external programs via polybar-msg.
 
 Multiple bars can run simultaneously on different monitors. The -m flag lists available outputs for multi-monitor configuration.
+
+# CONFIGURATION
+
+**~/.config/polybar/config.ini**
+> Main configuration file in INI format defining bars, modules, colors, and fonts.
+
+**~/.config/polybar/launch.sh**
+> Common launch script for starting polybar with window manager.
 
 # CAVEATS
 

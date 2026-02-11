@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate shell completion scripts for Pulumi
+
 # TLDR
 
 **Generate bash completions**

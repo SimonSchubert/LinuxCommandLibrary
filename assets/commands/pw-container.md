@@ -1,3 +1,7 @@
+# TAGLINE
+
+Run apps in isolated PipeWire security contexts
+
 # TLDR
 
 Create a **new security context** and print its socket address

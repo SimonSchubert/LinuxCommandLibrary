@@ -1,3 +1,7 @@
+# TAGLINE
+
+Sui blockchain wallet and transaction client
+
 # TLDR
 
 **Check active address**

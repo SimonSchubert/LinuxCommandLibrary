@@ -1,3 +1,7 @@
+# TAGLINE
+
+Cross-browser automation and testing framework
+
 # TLDR
 
 **Install browsers**
@@ -83,6 +87,14 @@ test('basic test', async ({ page }) => {
   await expect(page).toHaveTitle(/Example/);
 });
 ```
+
+# CONFIGURATION
+
+**playwright.config.ts** or **playwright.config.js**
+> Project configuration file defining browsers, test directories, timeouts, and reporter settings.
+
+**PLAYWRIGHT_BROWSERS_PATH**
+> Environment variable to override the browser binary download location.
 
 # CAVEATS
 

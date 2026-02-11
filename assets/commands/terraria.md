@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terraria dedicated game server
+
 # TLDR
 
 Start **interactive** server setup

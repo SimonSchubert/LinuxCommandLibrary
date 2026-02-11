@@ -1,3 +1,7 @@
+# TAGLINE
+
+Initialize basic system settings
+
 # TLDR
 
 **Operate** on a specified directory instead of the host system

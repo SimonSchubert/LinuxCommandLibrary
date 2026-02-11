@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate SteamOS factory reset configuration
+
 # TLDR
 
 Generate factory reset **configuration**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display disk usage and quota limits
+
 # TLDR
 
 **Show user quota**
@@ -46,11 +50,9 @@ _USER_
 
 # DESCRIPTION
 
-**quota** displays disk usage and limits. User and group quotas.
+**quota** displays current disk usage and limits for users or groups on filesystems where quotas are enabled. It reads the kernel's quota subsystem to report how much space and how many inodes a user or group has consumed, alongside the configured soft and hard limits.
 
-The tool shows quota status. Reports disk usage limits.
-
-quota shows disk limits.
+When soft limits are exceeded, the tool shows the remaining grace period before enforcement takes effect. Running without arguments displays the calling user's quotas across all mounted filesystems, while the **-u** and **-g** flags query specific users or groups. The **-v** flag reports on all quota-enabled filesystems, including those where no space is currently consumed.
 
 # CAVEATS
 

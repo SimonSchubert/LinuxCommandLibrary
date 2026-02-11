@@ -1,3 +1,7 @@
+# TAGLINE
+
+Social engineering penetration testing framework
+
 # TLDR
 
 **Launch the Social Engineering Toolkit**
@@ -67,9 +71,8 @@
 
 # CONFIGURATION
 
-Configuration file: **/etc/setoolkit/set.config**
-
-Key settings include Apache server toggle, web interface port, email settings, and Metasploit integration paths.
+**/etc/setoolkit/set.config**
+> Main configuration file controlling Apache server toggle, web interface port, email settings, and Metasploit integration paths.
 
 # DESCRIPTION
 

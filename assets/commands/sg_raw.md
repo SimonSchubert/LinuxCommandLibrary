@@ -1,3 +1,7 @@
+# TAGLINE
+
+Send raw SCSI commands to devices
+
 # TLDR
 
 **Send SCSI command**
@@ -49,15 +53,11 @@
 
 # DESCRIPTION
 
-**sg_raw** sends raw SCSI commands. It provides low-level access.
+**sg_raw** sends arbitrary SCSI command descriptor blocks (CDBs) to a device and displays the response. It provides the lowest level of access to SCSI devices, allowing direct transmission of any command without interpretation or validation by the utility itself.
 
-Direct CDB transmission. Command descriptor blocks.
+The tool supports all SCSI data transfer phases: commands that read data from the device (**-r**), commands that write data to the device (**-s** with **-i**), and commands with no data transfer. Response data can be displayed in hexadecimal, saved to a file, or output in binary format for further processing.
 
-Read and write data. Transfer phases.
-
-Device testing. Debugging SCSI.
-
-Part of sg3_utils. Linux SCSI tools.
+As part of the **sg3_utils** package, sg_raw is primarily used for device testing, debugging SCSI protocol issues, and sending vendor-specific commands that are not covered by the higher-level sg3_utils utilities.
 
 # CAVEATS
 

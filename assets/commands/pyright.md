@@ -1,3 +1,7 @@
+# TAGLINE
+
+Static type checker for Python
+
 # TLDR
 
 **Type check project**
@@ -62,6 +66,14 @@ The tool implements the Python type system from PEP 484 and subsequent typing PE
 
 **--createstub** _package_
 > Generate stub files.
+
+# CONFIGURATION
+
+**pyrightconfig.json**
+> Project-level configuration for type checking strictness, include/exclude paths, Python version, and platform targeting.
+
+**pyproject.toml**
+> Project configuration with a `[tool.pyright]` section supporting the same options as pyrightconfig.json.
 
 # CAVEATS
 

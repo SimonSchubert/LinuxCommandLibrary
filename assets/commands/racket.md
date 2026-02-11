@@ -1,3 +1,7 @@
+# TAGLINE
+
+General-purpose multi-paradigm programming language
+
 # TLDR
 
 **Start REPL**

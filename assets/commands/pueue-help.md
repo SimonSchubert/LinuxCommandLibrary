@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display pueue command help information
+
 # TLDR
 
 **Show general help**
@@ -23,11 +27,7 @@ _COMMAND_
 
 # DESCRIPTION
 
-**pueue help** displays help information. Shows command usage.
-
-The tool provides documentation. Lists available commands.
-
-pueue help shows usage.
+**pueue help** displays usage information for pueue commands. Called without arguments, it lists all available subcommands and global options. With a specific command name, it shows detailed help for that subcommand including all its flags and parameters.
 
 # CAVEATS
 

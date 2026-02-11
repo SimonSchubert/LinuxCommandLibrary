@@ -1,3 +1,7 @@
+# TAGLINE
+
+Enable unit auto-start at boot
+
 # TLDR
 
 **Enable** a service to run on boot

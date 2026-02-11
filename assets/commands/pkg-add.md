@@ -1,3 +1,7 @@
+# TAGLINE
+
+Install packages on OpenBSD and NetBSD
+
 # TLDR
 
 **Install package from repository**

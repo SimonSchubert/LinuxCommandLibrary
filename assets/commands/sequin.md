@@ -1,3 +1,7 @@
+# TAGLINE
+
+Stream database changes via change data capture
+
 # TLDR
 
 **Start consumer**
@@ -46,15 +50,9 @@
 
 # DESCRIPTION
 
-**sequin** streams database changes. It captures CDC events.
+**sequin** is a change data capture (CDC) tool that streams real-time database changes from PostgreSQL. It captures inserts, updates, and deletes as they happen and delivers them to consumers via HTTP webhooks or message queues.
 
-Postgres CDC tool. Change data capture.
-
-Real-time streaming. Database to queue.
-
-Consumer management. Process changes.
-
-HTTP webhooks supported. Flexible delivery.
+Consumers subscribe to specific streams of changes and process them in order. The tool manages consumer state, tracking which changes have been delivered and acknowledged. This enables building event-driven architectures and keeping downstream systems synchronized with database state.
 
 # CAVEATS
 

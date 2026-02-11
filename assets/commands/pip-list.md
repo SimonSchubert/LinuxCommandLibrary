@@ -1,3 +1,7 @@
+# TAGLINE
+
+List installed Python packages with versions
+
 # TLDR
 
 **List installed packages**

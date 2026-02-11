@@ -1,3 +1,7 @@
+# TAGLINE
+
+Raspberry Pi system configuration utility
+
 # TLDR
 
 Start **raspi-config** utility
@@ -22,6 +26,14 @@ Configuration options include network settings, display options, interface enabl
 - **Performance Options**: GPU memory, fan control, overlay filesystem
 - **Localization Options**: locale, timezone, keyboard, WLAN country
 - **Advanced Options**: expand filesystem, network proxy, boot order
+
+# CONFIGURATION
+
+**/boot/firmware/config.txt**
+> Hardware configuration file controlling GPU memory, display settings, overlays, and boot parameters modified by raspi-config.
+
+**/etc/default/locale**
+> System locale settings managed through the localization menu.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Runit logging daemon with auto-rotation
+
 # TLDR
 
 **Start logging to a directory**

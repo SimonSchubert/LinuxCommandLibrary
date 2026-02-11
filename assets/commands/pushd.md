@@ -1,3 +1,7 @@
+# TAGLINE
+
+Navigate directories using a stack
+
 # TLDR
 
 **Push directory to stack**
@@ -40,11 +44,9 @@ _DIR_
 
 # DESCRIPTION
 
-**pushd** pushes directory onto stack. Directory navigation tool.
+**pushd** is a shell built-in that changes the current directory while saving the previous directory on a stack. This allows quick navigation between multiple working directories without needing to remember or retype full paths.
 
-The tool enables quick directory switching. Shell built-in.
-
-pushd saves directories.
+When called with a directory argument, pushd changes to that directory and pushes the old directory onto the stack. Called without arguments, it swaps the top two directories on the stack. The **-n** flag adds a directory to the stack without actually changing to it. Use **dirs** to view the current stack contents, **popd** to return to the previous directory, and **+N** or **-N** notation to rotate to specific stack positions.
 
 # CAVEATS
 

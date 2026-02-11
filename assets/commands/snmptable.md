@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display SNMP MIB data in table format
+
 # TLDR
 
 **Display SNMP table**

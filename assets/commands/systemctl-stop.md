@@ -1,3 +1,7 @@
+# TAGLINE
+
+Stop systemd units
+
 # TLDR
 
 **Stop** a unit

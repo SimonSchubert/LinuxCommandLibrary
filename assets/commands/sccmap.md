@@ -1,3 +1,7 @@
+# TAGLINE
+
+Find strongly connected components in Graphviz graphs
+
 # TLDR
 
 **Find strongly connected components**
@@ -39,15 +43,9 @@
 
 # DESCRIPTION
 
-**sccmap** finds strongly connected components. It analyzes directed graphs.
+**sccmap** decomposes directed graphs into their strongly connected components (SCCs), where each SCC is a maximal set of nodes in which every node is reachable from every other node. It reads DOT format graphs and outputs each component as a separate subgraph.
 
-Part of Graphviz tools. Graph decomposition.
-
-Extracts SCCs from graph. Groups related nodes.
-
-Statistics output available. Component sizes and counts.
-
-Useful for large graphs. Identify structure.
+With the **-v** flag, it reports statistics including the number and sizes of components, which is useful for understanding the structure of large directed graphs. Part of the Graphviz graph visualization package.
 
 # CAVEATS
 

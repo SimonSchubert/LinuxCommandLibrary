@@ -1,3 +1,7 @@
+# TAGLINE
+
+Set the default Rust toolchain
+
 # TLDR
 
 **Set default toolchain**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal multiplexer with persistent sessions
+
 # TLDR
 
 **Start a new screen session**
@@ -102,6 +106,17 @@ Each screen session can contain multiple windows, each running its own shell or 
 Sessions persist even when you disconnect, whether intentionally or due to network issues. This makes screen invaluable for running processes on remote servers that must survive connection drops.
 
 Copy mode allows scrolling through terminal history and copying text between windows or to the clipboard.
+
+# CONFIGURATION
+
+**~/.screenrc**
+> Per-user configuration file for setting default options, key bindings, startup windows, and visual settings.
+
+**/etc/screenrc**
+> System-wide configuration file applied to all users before the per-user file.
+
+**SCREENDIR**
+> Environment variable overriding the default directory for session sockets (default: /tmp/screens/S-username).
 
 # CAVEATS
 

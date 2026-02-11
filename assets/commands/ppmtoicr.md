@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert PPM to NCSA ICR format
+
 # TLDR
 
 **Convert PPM to NCSA ICR format**

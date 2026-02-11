@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage the rustup installation itself
+
 # TLDR
 
 **Update rustup**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Suspend system to RAM
+
 # TLDR
 
 **Suspend to RAM**

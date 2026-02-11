@@ -1,3 +1,7 @@
+# TAGLINE
+
+Check Python code against PEP 8 style
+
 # TLDR
 
 **Check Python file**
@@ -107,6 +111,17 @@ Configuration files (setup.cfg, tox.ini, .pycodestyle) define project-wide setti
 The tool doesn't fix issues automatically. Use autopep8 or black for automatic formatting.
 
 Integration with editors shows issues in real-time. CI pipelines catch style violations before merge.
+
+# CONFIGURATION
+
+**setup.cfg**
+> Project configuration file with a `[pycodestyle]` section for setting max-line-length, ignore, and select options.
+
+**tox.ini**
+> Alternative project configuration file supporting the same `[pycodestyle]` section options.
+
+**~/.config/pycodestyle**
+> User-level configuration file for default settings applied when no project config is found.
 
 # CAVEATS
 

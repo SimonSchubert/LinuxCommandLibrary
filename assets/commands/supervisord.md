@@ -1,3 +1,7 @@
+# TAGLINE
+
+Process control and auto-restart daemon
+
 # TLDR
 
 **Start supervisord**
@@ -49,17 +53,19 @@
 
 # DESCRIPTION
 
-**supervisord** is a process control daemon. It manages long-running processes and restarts them on failure.
+**supervisord** is a process control daemon that manages long-running processes, automatically restarting them if they crash or exit unexpectedly. It is widely used to run application servers, background workers, and other services that need reliable process supervision.
 
-Configuration defines processes. Program sections specify commands and settings.
+The configuration file defines programs with their commands, environment variables, user permissions, and restart policies. Programs can be organized into groups for coordinated management. The daemon captures stdout and stderr from managed processes, writing them to log files with configurable rotation.
 
-Auto-restart ensures reliability. Crashed processes restart automatically.
+Event listeners allow custom scripts to respond to process state changes such as crashes or transitions. The daemon communicates with supervisorctl through a Unix socket or TCP connection, and provides an optional web interface for process management.
 
-Process groups organize related services. Start and stop together.
+# CONFIGURATION
 
-Logging captures stdout/stderr. Rotation configurable.
+**/etc/supervisor/supervisord.conf**
+> Main configuration file defining programs, groups, logging, and socket settings.
 
-Event listeners enable custom actions. Respond to process events.
+**/etc/supervisor/conf.d/*.conf**
+> Drop-in directory for individual program configuration files.
 
 # CAVEATS
 

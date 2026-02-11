@@ -1,3 +1,7 @@
+# TAGLINE
+
+KDE Plasma desktop shell and panels
+
 # TLDR
 
 **Restart** plasmashell via systemd

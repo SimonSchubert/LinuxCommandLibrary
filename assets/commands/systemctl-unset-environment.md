@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove service manager environment variables
+
 # TLDR
 
 **Unset** environment variable

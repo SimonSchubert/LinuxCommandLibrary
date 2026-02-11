@@ -1,3 +1,7 @@
+# TAGLINE
+
+Hide data within image and audio files
+
 # TLDR
 
 **Embed** data in an image

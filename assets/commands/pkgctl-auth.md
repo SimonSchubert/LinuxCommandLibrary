@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage pkgctl service authentication
+
 # TLDR
 
 **Authenticate** pkgctl with the GitLab instance

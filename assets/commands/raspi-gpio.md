@@ -1,3 +1,7 @@
+# TAGLINE
+
+Query and set Raspberry Pi GPIO pin states
+
 # TLDR
 
 **Show all GPIO states**

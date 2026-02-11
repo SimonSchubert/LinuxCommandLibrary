@@ -1,3 +1,7 @@
+# TAGLINE
+
+AI-powered shell assistant using ChatGPT
+
 # TLDR
 
 **Ask a question**
@@ -60,17 +64,22 @@
 
 # DESCRIPTION
 
-**sgpt** (Shell GPT) provides CLI access to ChatGPT. It specializes in command-line tasks.
+**sgpt** (Shell GPT) is a command-line interface for interacting with OpenAI's ChatGPT models, optimized for developer and system administration workflows. It operates in several modes: general queries for quick answers, shell mode (**-s**) for generating executable commands with explanations, and code mode (**-c**) for producing programming solutions with automatic language detection.
 
-Shell mode generates executable commands. Describes what the command does.
+Chat sessions maintain conversation context across multiple invocations, allowing follow-up questions and iterative refinement. Roles customize the AI's behavior for specific tasks, with predefined roles for common scenarios and support for user-defined custom roles.
 
-Code mode produces programming solutions. Language detected from context.
+The tool integrates naturally with Unix pipelines, accepting input via stdin to process file contents, command output, or any streamed data through AI analysis. This makes it useful for tasks like summarizing logs, explaining error messages, or generating documentation from code.
 
-Chat sessions maintain conversation context. Continue discussions across calls.
+# CONFIGURATION
 
-Roles customize AI behavior. Predefined and custom roles available.
+**OPENAI_API_KEY**
+> Environment variable providing the OpenAI API key for authentication.
 
-Piping integrates with Unix workflows. Process file contents with AI.
+**~/.config/shell_gpt/.sgptrc**
+> Configuration file for default model, temperature, cache settings, and other preferences.
+
+**~/.config/shell_gpt/roles/**
+> Directory containing custom role definitions as text files.
 
 # CAVEATS
 

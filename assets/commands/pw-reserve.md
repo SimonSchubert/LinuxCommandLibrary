@@ -1,3 +1,7 @@
+# TAGLINE
+
+Reserve audio devices for exclusive use
+
 # TLDR
 
 **Reserve** a device (audio devices only)

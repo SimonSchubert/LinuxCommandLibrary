@@ -1,3 +1,7 @@
+# TAGLINE
+
+Scale images using fixed-point arithmetic
+
 # TLDR
 
 **Scale image using fixed-point math**
@@ -25,7 +29,9 @@ _scale_
 
 # DESCRIPTION
 
-**pnmscalefixed** scales PNM images using faster fixed-point arithmetic instead of floating-point. Less accurate but faster than pamscale. Part of Netpbm toolkit.
+**pnmscalefixed** scales PNM images using fixed-point integer arithmetic instead of floating-point math. This makes it faster than pamscale on systems without hardware floating-point support, at the cost of slightly reduced accuracy.
+
+The tool accepts a scale factor or target dimensions via **-width** and **-height**. For most modern systems, pamscale is preferred for better quality. Part of the Netpbm toolkit.
 
 # SEE ALSO
 

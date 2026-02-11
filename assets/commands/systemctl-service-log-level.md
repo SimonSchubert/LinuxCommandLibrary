@@ -1,3 +1,7 @@
+# TAGLINE
+
+Get or set per-service log level
+
 # TLDR
 
 Show service **log level**

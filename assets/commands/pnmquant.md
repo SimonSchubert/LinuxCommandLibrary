@@ -1,3 +1,7 @@
+# TAGLINE
+
+Reduce color count in PNM images
+
 # TLDR
 
 **Reduce colors**
@@ -35,7 +39,9 @@ _ncolors_
 
 # DESCRIPTION
 
-**pnmquant** reduces the number of colors in a PNM image. Uses median-cut quantization algorithm. Part of Netpbm toolkit for color reduction.
+**pnmquant** reduces the number of colors in a PNM image to a specified count using the median-cut color quantization algorithm. This is useful for preparing images for formats with limited color palettes or for reducing file size.
+
+The **-fs** option enables Floyd-Steinberg dithering to simulate more colors by distributing quantization error to neighboring pixels. The **-mapfile** option allows quantizing to a pre-defined color palette from another image. Part of the Netpbm toolkit; wrapper around **pnmcolormap** and **pnmremap**.
 
 # SEE ALSO
 

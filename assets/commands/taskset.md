@@ -1,3 +1,7 @@
+# TAGLINE
+
+Set process CPU affinity
+
 # TLDR
 
 **Get** a running process' CPU affinity by PID

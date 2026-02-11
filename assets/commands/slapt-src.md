@@ -1,3 +1,7 @@
+# TAGLINE
+
+Build and install SlackBuild packages
+
 # TLDR
 
 **Update** the list of available slackbuilds
@@ -64,6 +68,11 @@
 **slapt-src** automates building packages from SlackBuilds, providing a workflow similar to binary package management with **slapt-get**. It handles querying, retrieving, building, and installing SlackBuild packages from configured repositories.
 
 SlackBuild sources are configured in the **slapt-srcrc** configuration file, which specifies repository locations (SOURCE), build directory (BUILDDIR), package extension (PKGEXT), and package tag (PKGTAG).
+
+# CONFIGURATION
+
+**/etc/slapt-get/slapt-srcrc**
+> Configuration file defining SlackBuild repository URLs (SOURCE), build directory (BUILDDIR), package extension (PKGEXT), and package tag (PKGTAG).
 
 # CAVEATS
 

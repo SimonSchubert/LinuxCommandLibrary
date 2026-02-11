@@ -1,3 +1,7 @@
+# TAGLINE
+
+Concurrent Ruby web server
+
 # TLDR
 
 **Start Puma server**

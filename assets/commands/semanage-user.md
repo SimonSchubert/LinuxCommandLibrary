@@ -1,3 +1,7 @@
+# TAGLINE
+
+Manage SELinux user definitions and roles
+
 # TLDR
 
 **List** all SELinux users

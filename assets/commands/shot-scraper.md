@@ -1,3 +1,7 @@
+# TAGLINE
+
+Automated website screenshot tool
+
 # TLDR
 
 **Take a screenshot** of a webpage

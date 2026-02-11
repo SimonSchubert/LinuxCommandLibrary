@@ -1,3 +1,7 @@
+# TAGLINE
+
+Automated Slackware package management tool
+
 # TLDR
 
 **Update the package list** from mirrors
@@ -87,6 +91,17 @@
 Before use, configure a mirror in **/etc/slackpkg/mirrors** by uncommenting one entry. Run **slackpkg update** to download the package list. The blacklist feature in /etc/slackpkg/blacklist prevents specific packages from being modified.
 
 slackpkg provides both menu-based and command-line interfaces. Set DIALOG=off in /etc/slackpkg/slackpkg.conf for console-only operation.
+
+# CONFIGURATION
+
+**/etc/slackpkg/mirrors**
+> Mirror list file; uncomment exactly one mirror URL to use as the package source.
+
+**/etc/slackpkg/blacklist**
+> List of packages to exclude from install, upgrade, and removal operations.
+
+**/etc/slackpkg/slackpkg.conf**
+> Main configuration file for dialog mode, proxy settings, and download options.
 
 # CAVEATS
 

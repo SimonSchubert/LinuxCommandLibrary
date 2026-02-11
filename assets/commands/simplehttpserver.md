@@ -1,3 +1,7 @@
+# TAGLINE
+
+Serve files via Python HTTP server
+
 # TLDR
 
 **Serve current directory**
@@ -39,15 +43,9 @@ _port_
 
 # DESCRIPTION
 
-**SimpleHTTPServer** serves static files. It's built into Python.
+**SimpleHTTPServer** is a Python standard library module that launches a basic HTTP server for serving static files from the current directory. It requires no installation or configuration, making it ideal for quick file sharing, local development, and testing.
 
-Quick file sharing. No installation needed.
-
-Python 2 module name. Python 3 is http.server.
-
-Directory listing. Browse files in browser.
-
-GET requests only. Basic functionality.
+In Python 2, the module is invoked as **python -m SimpleHTTPServer**, while Python 3 renamed it to **python3 -m http.server**. The server provides directory listings in a web browser and handles GET requests for file downloads. It binds to all interfaces on port 8000 by default, but the port and bind address can be customized.
 
 # CAVEATS
 

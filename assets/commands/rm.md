@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove files and directories
+
 # TLDR
 
 **Remove a file**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Daemon to restore SELinux contexts on file creation
+
 # TLDR
 
 Start the **restorecond** daemon
@@ -50,6 +54,14 @@ Check the **status** of the restorecond service
 **restorecond** is an SELinux daemon that monitors file creation events using inotify and automatically restores proper SELinux security contexts to newly created files. This is useful for directories where files are frequently created with incorrect contexts by applications that don't set contexts properly.
 
 The daemon reads its configuration from /etc/selinux/restorecond.conf, which lists files and directories to watch. When a file matching the configuration is created or modified, restorecond applies the correct context based on SELinux policy.
+
+# CONFIGURATION
+
+**/etc/selinux/restorecond.conf**
+> Lists file paths and directories to watch for creation events. One path per line; created files matching these paths have their SELinux contexts automatically restored.
+
+**/etc/selinux/restorecond_user.conf**
+> Per-user watch list used when restorecond runs with the **-u** flag to monitor the user's home directory.
 
 # CAVEATS
 

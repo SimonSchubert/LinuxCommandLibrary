@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display system info with ASCII distro logo
+
 # TLDR
 
 **Display system information** with distro logo

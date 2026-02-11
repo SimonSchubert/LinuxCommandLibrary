@@ -1,3 +1,7 @@
+# TAGLINE
+
+Modern Scala command-line runner and build tool
+
 # TLDR
 
 **Run Scala script**

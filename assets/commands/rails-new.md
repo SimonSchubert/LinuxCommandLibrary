@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create a new Ruby on Rails application
+
 # TLDR
 
 **Create a new Rails application**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Generate Tarsnap encryption keys
+
 # TLDR
 
 **Generate new key**

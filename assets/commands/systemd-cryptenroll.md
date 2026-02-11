@@ -1,3 +1,7 @@
+# TAGLINE
+
+Enroll LUKS2 disk unlock methods
+
 # TLDR
 
 Enroll new **password**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remote execution and configuration management system
+
 # TLDR
 
 **Ping all minions**
@@ -67,15 +71,11 @@ _FUNCTION_
 
 # DESCRIPTION
 
-**salt** manages infrastructure with Salt remote execution. Commands run across many minions simultaneously.
+**salt** is the primary command-line interface for SaltStack, a remote execution and configuration management system. It sends commands from the Salt master to minions (managed nodes), executing them in parallel across potentially thousands of systems simultaneously and returning results.
 
-Targeting selects which minions execute. Glob, regex, grain, and compound matching available.
+Targeting determines which minions receive commands, using glob patterns (default), regular expressions (**-E**), grain-based matching (**-G**) for targeting by OS or hardware properties, or compound expressions (**-C**) combining multiple criteria. Execution modules provide hundreds of functions covering package management, file operations, service control, and system administration.
 
-Execution modules provide functions. cmd.run, pkg.install, file.managed, and many more.
-
-States define desired configuration. Declarative approach to infrastructure.
-
-Grains are minion metadata. OS, hardware, and custom properties.
+States define the desired configuration of systems declaratively using YAML files. The **state.apply** function ensures minions converge to the defined state, making Salt suitable for both ad-hoc command execution and systematic infrastructure management.
 
 # CAVEATS
 

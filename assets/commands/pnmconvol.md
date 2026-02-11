@@ -1,3 +1,7 @@
+# TAGLINE
+
+Apply convolution filters to PNM images
+
 # TLDR
 
 **Apply convolution matrix**
@@ -35,11 +39,9 @@ _INPUT_
 
 # DESCRIPTION
 
-**pnmconvol** applies convolution filters. Image processing kernels.
+**pnmconvol** applies convolution matrix filters to PNM images for effects like blurring, sharpening, and edge detection. The convolution kernel can be specified as a PGM file or inline with the **-matrix** option.
 
-The tool performs matrix convolution. Blur, sharpen, edge detect.
-
-pnmconvol filters images.
+Each output pixel is computed as the weighted sum of surrounding input pixels according to the kernel values. Part of the Netpbm toolkit for image processing.
 
 # CAVEATS
 

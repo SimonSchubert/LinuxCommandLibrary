@@ -1,3 +1,7 @@
+# TAGLINE
+
+Expressive CSS preprocessor compiler
+
 # TLDR
 
 **Compile Stylus file to CSS**

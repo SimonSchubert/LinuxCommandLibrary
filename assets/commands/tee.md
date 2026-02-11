@@ -1,3 +1,7 @@
+# TAGLINE
+
+Read stdin and write to files
+
 # TLDR
 
 **Write stdin to file and stdout**

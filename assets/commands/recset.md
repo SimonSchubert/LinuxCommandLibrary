@@ -1,3 +1,7 @@
+# TAGLINE
+
+Update field values in GNU recutils databases
+
 # TLDR
 
 **Update field value**
@@ -42,9 +46,9 @@
 
 # DESCRIPTION
 
-**recset** modifies field values in GNU recutils files. It can update existing fields or add new ones based on selection criteria.
+**recset** modifies field values in GNU recutils plain-text database files, updating existing fields or adding new ones based on selection expressions. It uses the same expression syntax as **recsel** to target specific records, then sets the specified field to a new value.
 
-Part of GNU recutils.
+The **-a** flag adds the field only to records where it does not already exist, and **-n** limits updates to the first N matching records. Without a selection expression, all records in the file are updated. The file is modified in place. Part of the GNU recutils toolkit.
 
 # EXAMPLES
 

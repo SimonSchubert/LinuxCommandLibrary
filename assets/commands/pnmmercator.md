@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert between map projections for images
+
 # TLDR
 
 **Apply Mercator projection**
@@ -19,7 +23,9 @@
 
 # DESCRIPTION
 
-**pnmmercator** converts between equirectangular and Mercator map projections. Useful for world map transformations. Part of Netpbm toolkit.
+**pnmmercator** converts PNM images between equirectangular (plate carr&eacute;e) and Mercator map projections. The input image is treated as a map where rows correspond to latitude lines and columns to longitude lines.
+
+The forward transform converts equirectangular to Mercator projection, stretching areas near the poles. The **-inverse** option reverses this, converting from Mercator back to equirectangular. Part of the Netpbm toolkit.
 
 # SEE ALSO
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Adjust colors to NTSC broadcast safe range
+
 # TLDR
 
 **Convert to NTSC-safe colors**
@@ -25,11 +29,9 @@ _FILE_
 
 # DESCRIPTION
 
-**ppmntsc** adjusts colors to NTSC broadcast safe range. Video compliance.
+**ppmntsc** adjusts the colors in a PPM image to fall within the legal range for NTSC television broadcast. Colors that exceed the NTSC signal limits are clipped to the nearest legal value, preventing artifacts like blooming and color bleeding on broadcast displays.
 
-The tool clips illegal colors. Part of Netpbm.
-
-ppmntsc makes broadcast safe.
+The **-pal** option switches to PAL broadcast limits instead. The verbose mode reports how many pixels were adjusted and by how much, helping assess whether the source image is significantly out of gamut. Part of the Netpbm toolkit.
 
 # CAVEATS
 

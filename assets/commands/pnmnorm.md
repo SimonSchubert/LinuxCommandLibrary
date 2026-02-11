@@ -1,3 +1,7 @@
+# TAGLINE
+
+Normalize contrast in PNM images
+
 # TLDR
 
 **Normalize image contrast**
@@ -38,11 +42,9 @@ _FILE_
 
 # DESCRIPTION
 
-**pnmnorm** normalizes contrast in PNM images. Stretches histogram.
+**pnmnorm** normalizes the contrast of PNM images by stretching the histogram to use the full dynamic range. It finds the darkest and brightest pixel values and linearly maps them to the minimum and maximum possible values.
 
-The tool maximizes dynamic range. Auto-adjusts brightness levels.
-
-pnmnorm enhances contrast.
+The **-bpercent** and **-wpercent** options control how aggressively the black and white points are clipped, ignoring a percentage of outlier pixels at each end. The **-midvalue** option preserves a specific middle gray value during the normalization. Part of the Netpbm toolkit.
 
 # CAVEATS
 

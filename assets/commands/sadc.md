@@ -1,3 +1,7 @@
+# TAGLINE
+
+System activity data collector backend
+
 # TLDR
 
 Write **10 records** at one-second intervals to a binary file

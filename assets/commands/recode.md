@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert text between character encodings
+
 # TLDR
 
 **Convert a file from Latin-1 to UTF-8**

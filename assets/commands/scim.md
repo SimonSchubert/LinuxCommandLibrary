@@ -1,3 +1,7 @@
+# TAGLINE
+
+Terminal spreadsheet with vim keybindings
+
 # TLDR
 
 **Open spreadsheet**
@@ -39,17 +43,11 @@
 
 # DESCRIPTION
 
-**scim** is a spreadsheet calculator. It runs in the terminal.
+**scim** (sc-im) is a terminal-based spreadsheet calculator with vim-like keybindings and a modal interface. It provides a lightweight alternative to graphical spreadsheet applications, running entirely within an ncurses terminal interface for fast, keyboard-driven operation.
 
-Vim-like keybindings. Modal interface.
+The spreadsheet supports formulas, mathematical functions, cell references, and ranges similar to conventional spreadsheet software. Files can be imported from and exported to CSV, TSV, and Excel formats, allowing interoperability with other tools. The native **.sc** format preserves all formulas and formatting.
 
-Supports formulas. Mathematical calculations.
-
-Imports CSV and Excel. Multiple formats.
-
-Ncurses interface. Terminal-based GUI.
-
-Lightweight and fast. No GUI overhead.
+Navigation and editing follow vim conventions: **h/j/k/l** for movement, **i** for insert mode, **=** for formula entry, and **:** for commands like save and quit. This modal approach enables efficient keyboard-only workflows without reaching for a mouse.
 
 # KEY BINDINGS
 

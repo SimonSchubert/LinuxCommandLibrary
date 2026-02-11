@@ -1,3 +1,7 @@
+# TAGLINE
+
+Deploy Sailfish apps to devices or emulators
+
 # TLDR
 
 **Deploy application to device**

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display Slurm controller diagnostic information
+
 # TLDR
 
 Show **all performance counters**

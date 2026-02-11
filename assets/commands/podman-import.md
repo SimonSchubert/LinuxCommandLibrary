@@ -1,3 +1,7 @@
+# TAGLINE
+
+Create container image from filesystem tarball
+
 # TLDR
 
 **Import tarball as image**
@@ -32,11 +36,9 @@ _REFERENCE_
 
 # DESCRIPTION
 
-**podman import** creates image from filesystem tarball. Imports root filesystem.
+**podman import** creates a new container image from a filesystem tarball (or URL). Unlike podman load, which restores a previously saved image with all its layers and metadata, import creates a flat single-layer image from a root filesystem archive.
 
-The tool converts tarballs to images. Creates container-ready images.
-
-podman import creates images.
+The **--change** option allows applying Dockerfile instructions (like CMD, ENTRYPOINT, ENV) to the imported image. This is typically used with archives created by podman export or other tools that produce root filesystem tarballs.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Validate pyproject.toml configuration
+
 # TLDR
 
 **Check pyproject.toml validity**
@@ -19,11 +23,9 @@
 
 # DESCRIPTION
 
-**poetry check** validates pyproject.toml structure. Checks configuration.
+**poetry check** validates the structure and content of the **pyproject.toml** file, ensuring that required fields are present and properly formatted. It catches configuration errors before they cause problems during install or build operations.
 
-The tool finds configuration errors. Validates project setup.
-
-poetry check validates config.
+The **--lock** option additionally verifies that the **poetry.lock** file is consistent with pyproject.toml and up-to-date. This is useful in CI pipelines to ensure the lock file hasn't drifted.
 
 # CAVEATS
 

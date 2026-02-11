@@ -1,3 +1,7 @@
+# TAGLINE
+
+High-performance Cassandra-compatible NoSQL database
+
 # TLDR
 
 **Start CQL shell**
@@ -124,6 +128,17 @@
 ScyllaDB's shard-per-core architecture eliminates locking between CPU cores. The **--smp** flag controls core allocation. Configuration differs from Cassandra, using scylla.yaml.
 
 ScyllaDB Alternator provides DynamoDB-compatible API, accessible via AWS SDK tools instead of cqlsh.
+
+# CONFIGURATION
+
+**/etc/scylla/scylla.yaml**
+> Main ScyllaDB configuration file for cluster settings, networking, storage, and tuning parameters.
+
+**/etc/scylla/cassandra-rackdc.properties**
+> Datacenter and rack configuration for topology-aware replication.
+
+**~/.cassandra/cqlshrc**
+> CQL shell configuration file for connection defaults, formatting, and authentication.
 
 # CAVEATS
 

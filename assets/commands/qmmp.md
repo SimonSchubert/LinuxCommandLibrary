@@ -1,3 +1,7 @@
+# TAGLINE
+
+Qt-based audio player with Winamp skins
+
 # TLDR
 
 **Open qmmp**

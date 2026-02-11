@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove tasks from the pueue queue
+
 # TLDR
 
 **Remove task**
@@ -23,11 +27,7 @@ _TASK_IDS_
 
 # DESCRIPTION
 
-**pueue remove** removes tasks from queue. Deletes finished or queued tasks.
-
-The tool clears specific tasks. Cannot remove running tasks.
-
-pueue remove deletes tasks.
+**pueue remove** deletes specific tasks from the pueue queue by their task IDs. Only queued, stashed, or finished tasks can be removed; running tasks must be killed first with **pueue kill** before removal. Use **pueue clean** to bulk-remove all finished tasks instead.
 
 # CAVEATS
 

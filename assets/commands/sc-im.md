@@ -1,3 +1,7 @@
+# TAGLINE
+
+Vim-like terminal spreadsheet calculator
+
 # TLDR
 
 **Start sc-im** with a new spreadsheet

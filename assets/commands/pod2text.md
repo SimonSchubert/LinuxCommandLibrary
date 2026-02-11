@@ -1,3 +1,7 @@
+# TAGLINE
+
+Convert Perl POD documentation to plain text
+
 # TLDR
 
 **Convert POD to plain text**
@@ -39,11 +43,9 @@ _FILE_
 
 # DESCRIPTION
 
-**pod2text** converts Perl POD to plain text. Part of Perl distribution.
+**pod2text** converts Perl POD (Plain Old Documentation) into formatted plain text suitable for terminal display. It renders headings, lists, code blocks, and other POD formatting into readable ASCII output.
 
-The tool renders documentation for terminals. Creates readable output.
-
-pod2text creates text output.
+The **-w** option sets the output width in columns, **-l** enables loose paragraph formatting with extra spacing, and **-c** enables ANSI color output for enhanced terminal readability. Part of the standard Perl distribution.
 
 # CAVEATS
 

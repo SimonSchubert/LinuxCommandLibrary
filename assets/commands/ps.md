@@ -1,3 +1,7 @@
+# TAGLINE
+
+Report running process status
+
 # TLDR
 
 **List all processes**
@@ -59,11 +63,11 @@
 
 # DESCRIPTION
 
-**ps** reports process status. Shows running processes.
+**ps** reports a snapshot of currently running processes on the system. It displays information such as process ID, user, CPU and memory usage, command name, and runtime for each process, providing a point-in-time view of system activity.
 
-The tool displays system processes. Essential system utility.
+The command accepts options in two distinct styles: BSD syntax (without dashes, e.g., **aux**) and POSIX syntax (with dashes, e.g., **-ef**). Both produce similar output but differ in column defaults and filtering behavior. The **-o** option allows fully custom output formats, selecting specific fields like pid, ppid, command, and resource usage.
 
-ps lists processes.
+Common usage patterns include **ps aux** to list all processes with detailed info, **ps -ef --forest** to show the process hierarchy as a tree, and **ps -p** to inspect a specific process by PID.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display environment variable values
+
 # TLDR
 
 **Print all environment variables**

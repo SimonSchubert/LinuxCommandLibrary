@@ -1,3 +1,7 @@
+# TAGLINE
+
+Python 3.4 documentation viewer
+
 # TLDR
 
 **View Python 3.4 documentation**
@@ -32,11 +36,9 @@ _MODULE_
 
 # DESCRIPTION
 
-**pydoc3.4** is pydoc for Python 3.4. Documentation viewer.
+**pydoc3.4** is the Python 3.4 version of the pydoc documentation tool. It displays module documentation, searches installed packages, and can serve documentation via a local HTTP server, specifically for the Python 3.4 interpreter and its installed libraries.
 
-The tool shows Python 3.4 docs. Version-specific pydoc.
-
-pydoc3.4 documents Python 3.4.
+This version-specific binary exists on systems with multiple Python versions installed. For current development, use the latest **pydoc3** instead.
 
 # CAVEATS
 

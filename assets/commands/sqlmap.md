@@ -1,3 +1,7 @@
+# TAGLINE
+
+Automated SQL injection detection tool
+
 # TLDR
 
 **Test a URL for SQL injection**

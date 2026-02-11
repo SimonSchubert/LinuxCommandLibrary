@@ -1,3 +1,7 @@
+# TAGLINE
+
+Statistical computing and graphics language
+
 # TLDR
 
 **Start R interpreter**
@@ -46,11 +50,9 @@ _FILE_
 
 # DESCRIPTION
 
-**R** is statistical computing language. Data analysis and graphics.
+**R** is a language and interactive environment for statistical computing, data analysis, and graphics. It provides a wide variety of statistical techniques including linear and nonlinear modeling, time-series analysis, classification, and clustering, along with a powerful system for producing publication-quality plots and visualizations.
 
-The tool provides interactive environment. Statistical programming.
-
-R analyzes data.
+The interactive console supports exploratory data analysis with immediate feedback, while scripts can be executed non-interactively via **--file** or through the companion **Rscript** command. R's package ecosystem on CRAN offers thousands of contributed libraries extending its capabilities across fields from bioinformatics to econometrics. The workspace system saves objects between sessions, though **--no-save** and **--vanilla** flags allow clean stateless execution for reproducible workflows.
 
 # CAVEATS
 

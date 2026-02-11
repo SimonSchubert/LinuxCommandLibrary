@@ -1,3 +1,7 @@
+# TAGLINE
+
+Access SCSI device mode page information
+
 # TLDR
 
 **Display INQUIRY data** for a SCSI device

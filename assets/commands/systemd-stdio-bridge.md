@@ -1,3 +1,7 @@
+# TAGLINE
+
+Bridge stdio to D-Bus connection
+
 # TLDR
 
 Forward to **system** bus

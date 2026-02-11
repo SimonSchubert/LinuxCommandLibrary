@@ -1,3 +1,7 @@
+# TAGLINE
+
+Open-source BitTorrent client with web interface
+
 # TLDR
 
 **Launch qBittorrent GUI**
@@ -70,10 +74,11 @@ Default: http://localhost:8080
 
 # CONFIGURATION
 
-```
-~/.config/qBittorrent/   # Linux config
-~/.local/share/qBittorrent/  # Downloads history
-```
+**~/.config/qBittorrent/**
+> Main configuration directory containing settings, RSS feeds, and web UI preferences.
+
+**~/.local/share/qBittorrent/**
+> Data directory storing download history, torrent resume data, and logs.
 
 # CAVEATS
 

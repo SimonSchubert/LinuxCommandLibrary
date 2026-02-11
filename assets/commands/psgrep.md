@@ -1,3 +1,7 @@
+# TAGLINE
+
+Search for processes by name pattern
+
 # TLDR
 
 **Search processes by name**
@@ -32,11 +36,9 @@ _PATTERN_
 
 # DESCRIPTION
 
-**psgrep** searches for processes by name. Combines ps and grep.
+**psgrep** is a convenience wrapper that combines **ps** and **grep** to search for running processes by name or pattern. It filters the process list and displays matching entries, automatically excluding the grep process itself from the results to avoid false matches.
 
-The tool finds running processes. Convenient wrapper.
-
-psgrep finds processes.
+The tool provides a simpler alternative to the `ps aux | grep pattern` idiom. On many systems, the built-in **pgrep** command offers similar functionality with more options.
 
 # CAVEATS
 

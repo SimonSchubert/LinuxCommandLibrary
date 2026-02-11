@@ -1,3 +1,7 @@
+# TAGLINE
+
+Alias for stop
+
 # TLDR
 
 This command is an alias of [systemctl stop](/man/systemctl-stop).

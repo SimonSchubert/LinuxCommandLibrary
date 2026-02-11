@@ -1,3 +1,7 @@
+# TAGLINE
+
+Original TeX typesetting engine
+
 # TLDR
 
 **Compile document**
@@ -39,15 +43,9 @@
 
 # DESCRIPTION
 
-**tex** typesets documents. It's the original TeX engine.
+**tex** is the original TeX typesetting engine created by Donald Knuth. It reads plain TeX source files and produces DVI (Device Independent) output, which can then be converted to PostScript, PDF, or other formats using tools like dvips or dvipdfm.
 
-Plain TeX format. No LaTeX macros.
-
-DVI output. Device independent.
-
-Mathematical typesetting. High quality.
-
-Foundation for LaTeX. Base system.
+TeX uses the plain TeX macro format by default, which provides basic typesetting commands without the higher-level abstractions of LaTeX. It excels at mathematical typesetting, producing publication-quality output for equations, formulas, and technical documents. TeX serves as the foundation upon which LaTeX, ConTeXt, and other macro packages are built.
 
 # CAVEATS
 

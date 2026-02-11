@@ -1,3 +1,7 @@
+# TAGLINE
+
+AWS SQS queue management CLI
+
 # TLDR
 
 **List queues**
@@ -53,15 +57,9 @@
 
 # DESCRIPTION
 
-**sqsc** manages AWS SQS. It's a CLI for queues.
+**sqsc** is a command-line client for Amazon Simple Queue Service (SQS). It provides queue management operations including creating queues, sending and receiving messages, deleting processed messages, and purging queues.
 
-Simple queue operations. Send and receive.
-
-Message management. Delete after processing.
-
-Queue administration. Create and purge.
-
-AWS credentials required. Standard configuration.
+The tool uses standard AWS credential configuration for authentication. It supports common SQS workflows such as sending messages to queue URLs, receiving batches of messages for processing, and deleting messages by receipt handle after successful processing.
 
 # CAVEATS
 

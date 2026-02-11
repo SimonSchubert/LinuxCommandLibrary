@@ -1,3 +1,7 @@
+# TAGLINE
+
+Graphical editor for gettext PO translations
+
 # TLDR
 
 **Open translation file**

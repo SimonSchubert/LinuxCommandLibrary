@@ -1,3 +1,7 @@
+# TAGLINE
+
+Apply non-linear smoothing filters to images
+
 # TLDR
 
 **Apply non-linear filter**
@@ -18,7 +22,9 @@ _radius_
 
 # DESCRIPTION
 
-**pnmnlfilt** applies non-linear filters to PNM images. Provides alpha-trimmed mean and edge-preserving smoothing. Part of Netpbm toolkit.
+**pnmnlfilt** applies non-linear filters to PNM images for noise reduction while preserving edges. The filter type is controlled by the alpha parameter: values near 0 produce an alpha-trimmed mean filter (noise reduction), values near 0.5 produce an optimal estimation filter, and values near 1 produce an edge enhancement filter.
+
+The radius parameter controls the filter's spatial extent. Larger radii produce stronger smoothing but may blur fine details. This tool is useful for removing noise without destroying sharp edges, unlike simple convolution filters. Part of the Netpbm toolkit.
 
 # SEE ALSO
 

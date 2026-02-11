@@ -1,3 +1,7 @@
+# TAGLINE
+
+Handle RPM configuration file conflicts
+
 # TLDR
 
 List leftover files and **interactively choose** actions

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Extract rectangular region from PNM images
+
 # TLDR
 
 **Cut rectangular region**

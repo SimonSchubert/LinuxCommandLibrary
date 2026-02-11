@@ -1,3 +1,7 @@
+# TAGLINE
+
+Google memory and hardware stress tester
+
 # TLDR
 
 **Run memory stress**
@@ -46,15 +50,11 @@
 
 # DESCRIPTION
 
-**stressapptest** tests system stability. It stresses memory and I/O.
+**stressapptest** (Stressful Application Test) is a memory and hardware verification tool developed by Google to find errors in memory subsystems, disk I/O, and other hardware components. It generates realistic high-load patterns that exercise the memory bus, cache hierarchy, and storage pathways to expose intermittent hardware faults.
 
-Memory testing. Find hardware errors.
+The tool allocates a configurable amount of memory and continuously writes data patterns, reads them back, and verifies correctness. This approach is effective at detecting ECC memory errors, faulty DIMM modules, memory controller issues, and thermal throttling problems. File I/O tests can be included to stress disk and storage controller hardware simultaneously.
 
-I/O stress included. Disk testing.
-
-ECC error detection. Memory reliability.
-
-Thermal testing. Heat generation.
+Stressapptest is particularly useful for qualifying new hardware, burn-in testing servers before production deployment, and diagnosing systems that exhibit intermittent crashes or data corruption under load.
 
 # CAVEATS
 

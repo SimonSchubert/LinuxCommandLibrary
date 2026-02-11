@@ -1,3 +1,7 @@
+# TAGLINE
+
+Display Slurm cluster partition and node status
+
 # TLDR
 
 **Show** a quick summary overview of the cluster

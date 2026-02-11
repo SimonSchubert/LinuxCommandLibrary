@@ -1,3 +1,7 @@
+# TAGLINE
+
+Switch user identity or run commands
+
 # TLDR
 
 **Switch** to superuser (root)

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Update Raspberry Pi bootloader EEPROM firmware
+
 # TLDR
 
 Print **current EEPROM** information

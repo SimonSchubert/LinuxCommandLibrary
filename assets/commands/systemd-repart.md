@@ -1,3 +1,7 @@
+# TAGLINE
+
+Declarative disk partition management
+
 # TLDR
 
 **Grow** partitions automatically

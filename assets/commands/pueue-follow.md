@@ -1,3 +1,7 @@
+# TAGLINE
+
+Stream pueue task output in real-time
+
 # TLDR
 
 **Follow task output**
@@ -26,11 +30,7 @@ _TASK_ID_
 
 # DESCRIPTION
 
-**pueue follow** streams task output in real-time. Live output view.
-
-The tool shows running task output. Similar to tail -f.
-
-pueue follow shows live output.
+**pueue follow** streams the stdout and stderr output of a running task in real-time, similar to **tail -f**. Without a task ID, it follows the most recently started task. The **--lines** option controls how many lines of existing output to display initially.
 
 # CAVEATS
 

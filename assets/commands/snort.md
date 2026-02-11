@@ -1,3 +1,7 @@
+# TAGLINE
+
+Network intrusion detection and prevention system
+
 # TLDR
 
 **Sniffer mode**
@@ -66,15 +70,19 @@
 
 # DESCRIPTION
 
-**snort** is a network intrusion detection system. It analyzes traffic against rule sets.
+**snort** is an open-source network intrusion detection and prevention system (IDS/IPS) that performs real-time traffic analysis and packet logging. It examines network traffic against a set of user-defined rules to detect attacks, probes, and suspicious activity.
 
-Sniffer mode displays packets. Simple network monitoring.
+The tool operates in three modes: sniffer mode displays packets on the console, logger mode records traffic to pcap files for offline analysis, and IDS mode applies detection rules and generates alerts. Rules use a flexible language that matches on protocol, content patterns, flow direction, and other packet characteristics.
 
-Logger mode records traffic. Creates pcap files for analysis.
+Snort can operate inline as an IPS to actively block detected threats, or passively as an IDS that only monitors and alerts. Its rule format has become an industry standard, with thousands of community and commercial rules available for detecting known vulnerabilities, malware, and policy violations.
 
-IDS mode applies rules. Alerts on suspicious activity.
+# CONFIGURATION
 
-Rules define detection logic. Protocol, content, and flow matching.
+**/etc/snort/snort.conf**
+> Main configuration file defining network variables, preprocessors, output plugins, and rule paths.
+
+**/etc/snort/rules/**
+> Directory containing detection rule files loaded by the configuration.
 
 # CAVEATS
 

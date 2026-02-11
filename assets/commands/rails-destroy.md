@@ -1,3 +1,7 @@
+# TAGLINE
+
+Remove files created by Rails generators
+
 # TLDR
 
 **Remove model**
@@ -39,7 +43,9 @@
 
 # DESCRIPTION
 
-**rails destroy** removes files created by Rails generators. Reverses the effect of rails generate. Removes related files, routes, and test files.
+**rails destroy** is the inverse of **rails generate**, removing all files and modifications that a generator previously created. It deletes model files, controllers, views, migrations, test files, and route entries that were scaffolded, cleanly undoing the generator's work without leaving orphaned code.
+
+The **--pretend** flag previews which files would be removed without actually deleting anything, allowing verification before committing to the operation. The command accepts the same generator names and arguments as **rails generate**, making it straightforward to reverse any previous scaffolding operation.
 
 # SEE ALSO
 

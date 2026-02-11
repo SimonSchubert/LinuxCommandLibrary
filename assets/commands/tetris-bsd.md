@@ -1,3 +1,7 @@
+# TAGLINE
+
+BSD Tetris game for terminals
+
 # TLDR
 
 **Start a game** of tetris

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Privacy-enhancing filtering web proxy
+
 # TLDR
 
 **Start privoxy**
