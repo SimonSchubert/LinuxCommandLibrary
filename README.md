@@ -11,6 +11,12 @@ The app currently has **7713** manual pages, **23+** basic categories and a bunc
 
 Native CLI and GUI binaries for Linux, macOS, and Windows are available in [Releases](https://github.com/SimonSchubert/LinuxCommandLibrary/releases).
 
+#### Homebrew
+
+GUI: ```brew install --cask simonschubert/tap/linux-command-library```
+
+CLI: ```brew install simonschubert/tap/linux-command-library-cli```
+
 ### Android screenshots
 
 <p>
