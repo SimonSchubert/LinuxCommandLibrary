@@ -60,6 +60,9 @@ List available **audio devices**
 **-v, --verbose**
 > Verbose mode; show PCM structure and setup
 
+**-i, --interactive**
+> Allow interactive operation via stdin (pause/resume with space or enter key)
+
 # CONFIGURATION
 
 **/etc/asound.conf**

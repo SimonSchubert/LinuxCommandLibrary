@@ -110,7 +110,7 @@ OpenAI terminal-based coding agent
 
 **Codex** is OpenAI's official terminal-based coding agent. It launches into a full-screen terminal UI that can read your repository, suggest and implement code changes, and execute commands while you iterate conversationally.
 
-The tool maintains security through OS-level sandboxing with three safety modes: **read-only** (consultative, no changes), **auto** (default, asks before touching files outside workspace), and **full access** (unrestricted, use with caution). Model-generated commands run in isolated environments using macOS seatbelt or Linux Landlock.
+The tool maintains security through OS-level sandboxing with three safety modes: **read-only** (consultative, no changes), **workspace-write** (default, asks before touching files outside workspace), and **danger-full-access** (unrestricted, use with caution). Model-generated commands run in isolated environments using macOS seatbelt or Linux Landlock.
 
 Codex integrates with ChatGPT Plus, Pro, Business, and Enterprise subscriptions, or can be used with API credits. It supports cloud tasks for offloading complex work and provides MCP integration for extended capabilities.
 

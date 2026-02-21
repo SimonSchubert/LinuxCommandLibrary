@@ -40,7 +40,7 @@ When adding a user to a group, it modifies /etc/group to include the user as a m
 **--system**
 > Create a system group (GID from system range)
 
-**--force-badname**
+**--allow-bad-names**
 > Allow group names that don't conform to naming conventions
 
 **--conf** _file_

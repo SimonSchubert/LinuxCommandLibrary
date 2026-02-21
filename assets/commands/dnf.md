@@ -42,7 +42,7 @@ Find which packages **provide** a command
 
 # DESCRIPTION
 
-**dnf** (Dandified YUM) is the package manager for Fedora 41+, RHEL 10, and related distributions. It is the successor to YUM and provides improved dependency resolution, performance, and a more consistent interface.
+**dnf** (Dandified YUM) is the package manager for Fedora, RHEL, and related distributions. It has been the default since Fedora 22, with DNF5 becoming the default in Fedora 41+. It is the successor to YUM and provides improved dependency resolution, performance, and a more consistent interface.
 
 # PARAMETERS
 

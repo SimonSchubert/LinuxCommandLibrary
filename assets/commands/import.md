@@ -4,11 +4,11 @@ ImageMagick utility for capturing X Window screenshots
 
 # TLDR
 
-**Capture entire screen**
+**Capture window by click** (interactive crosshair selector)
 
 ```import screenshot.png```
 
-**Capture window by click**
+**Capture entire screen**
 
 ```import -window root screenshot.png```
 

@@ -1,6 +1,6 @@
 # TAGLINE
 
-AI-powered terminal coding agent by xAI
+AI-powered terminal coding agent using xAI's API
 
 # TLDR
 

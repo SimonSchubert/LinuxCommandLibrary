@@ -68,12 +68,6 @@ universal data selector for querying and modifying structured data
 **--pretty**
 > Pretty-print output for readability
 
-**-c**, **--compact**
-> Compact output without formatting
-
-**-m**, **--multiple**
-> Select multiple values matching the selector
-
 **-n**, **--null**
 > Output null values explicitly
 

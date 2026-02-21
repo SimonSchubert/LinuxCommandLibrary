@@ -44,7 +44,7 @@ The tool is optimized for speed, using multiple threads and memory-mapped I/O. I
 > Case insensitive search
 
 **-s**, **--case-sensitive**
-> Case sensitive search (default)
+> Case sensitive search
 
 **-v**, **--invert-match**
 > Invert the match

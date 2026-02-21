@@ -88,7 +88,7 @@ dpkg does not handle dependencies automatically. Use **apt** or **apt-get** for 
 
 # HISTORY
 
-**dpkg** was created for the **Debian** project in **1994** by Ian Murdock and Matt Welsh. It remains the foundation of package management on Debian-based systems.
+**dpkg** was originally created for the **Debian** project in **1994** by **Ian Murdock**, then rewritten in C by **Ian Jackson** who became its primary developer. It remains the foundation of package management on Debian-based systems.
 
 # SEE ALSO
 

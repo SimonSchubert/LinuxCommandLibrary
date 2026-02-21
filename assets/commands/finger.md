@@ -20,7 +20,7 @@ display user information and status
 
 ```finger -l [username]```
 
-**Show office info** only
+**Short format** output
 
 ```finger -s [username]```
 

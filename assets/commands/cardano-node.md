@@ -107,7 +107,7 @@ Running a full node requires significant disk space (over 100GB for mainnet) and
 
 # HISTORY
 
-Cardano-node was developed by **Input Output Hong Kong (IOHK)** as part of the Cardano blockchain project founded by Charles Hoskinson. The project launched its mainnet in **September 2017** with the Byron era. Major upgrades include the **Shelley** era in **2020** introducing staking and decentralization, **Alonzo** in **2021** adding smart contracts, and continued development through the Basho and Voltaire eras. The node is written in **Haskell** and implements peer-reviewed cryptographic protocols.
+Cardano-node was developed by **Input Output Global (IOG)**, formerly IOHK, as part of the Cardano blockchain project founded by Charles Hoskinson. The project launched its mainnet in **September 2017** with the Byron era. Major upgrades include the **Shelley** era in **2020** introducing staking and decentralization, **Alonzo** in **2021** adding smart contracts, and continued development through the Basho and Voltaire eras. The node is written in **Haskell** and implements peer-reviewed cryptographic protocols.
 
 # SEE ALSO
 

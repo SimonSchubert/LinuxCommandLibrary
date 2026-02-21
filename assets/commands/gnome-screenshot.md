@@ -77,7 +77,7 @@ Screenshots are saved to ~/Pictures by default. The tool integrates with the GNO
 
 # CAVEATS
 
-Border effect functionality is deprecated and defaults to "none". Standard GTK+ command-line options are also supported.
+Border effect functionality is deprecated and defaults to "none". **gnome-screenshot is deprecated since GNOME 42** (March 2022); GNOME Shell's built-in screenshot tool (PrtSc) is the replacement. Non-functional under GNOME 49+ Wayland.
 
 # HISTORY
 

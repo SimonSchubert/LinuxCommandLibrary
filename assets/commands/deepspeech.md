@@ -84,7 +84,7 @@ Accuracy depends on audio quality and acoustic similarity to training data. Mode
 
 # HISTORY
 
-DeepSpeech was developed by **Mozilla** starting in **2017** as part of their Common Voice project to create open-source voice technology. Based on research by Baidu, it used recurrent neural networks for speech recognition. Mozilla discontinued active development in **2021** after layoffs, but the project was forked and continued by the community as **Coqui STT**.
+DeepSpeech was developed by **Mozilla** starting in **2017** as part of their Common Voice project to create open-source voice technology. Based on research by Baidu, it used recurrent neural networks for speech recognition. Mozilla discontinued active development in **2020** after layoffs, but the project was forked and continued by the community as **Coqui STT**.
 
 # SEE ALSO
 

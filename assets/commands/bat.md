@@ -16,7 +16,7 @@ Cat clone with syntax highlighting and Git integration
 
 ```bat -A [file.txt]```
 
-**Page** output
+**Plain** output (no decorations)
 
 ```bat -p [file.log]```
 
@@ -88,7 +88,7 @@ The tool provides a more user-friendly file viewing experience for developers an
 
 # CAVEATS
 
-Not a drop-in cat replacement for scripts (use cat for pipelines). Slower than cat on large files. Themes require true color terminal. Some syntax highlighting requires additional setup.
+Not a drop-in cat replacement for scripts (use cat for pipelines). Slower than cat on large files. Themes require true color terminal. On Debian/Ubuntu, the binary is installed as **batcat** due to a naming conflict with another package.
 
 # HISTORY
 

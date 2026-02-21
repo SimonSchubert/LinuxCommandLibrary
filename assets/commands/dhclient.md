@@ -24,9 +24,9 @@ ISC DHCP client for dynamic network configuration
 
 ```dhclient -cf [/etc/dhcp/dhclient.conf] [eth0]```
 
-**Request specific IP** address
+**Contact specific DHCP server**
 
-```dhclient -s [192.168.1.100] [eth0]```
+```dhclient -s [192.168.1.1] [eth0]```
 
 # SYNOPSIS
 
@@ -53,7 +53,7 @@ _INTERFACE_
 > Use specified lease file.
 
 **-s** _ADDRESS_
-> Request specific IP address.
+> Specify DHCP server address to contact.
 
 **-4**
 > Use DHCPv4 only.

@@ -1,6 +1,6 @@
 # TAGLINE
 
-interactive process viewer and system monitor, designed as an enhanced
+interactive process viewer and system monitor
 
 # TLDR
 

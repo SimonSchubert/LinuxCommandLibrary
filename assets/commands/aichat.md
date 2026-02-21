@@ -22,7 +22,7 @@ Chat with AI models from the terminal
 
 **Start interactive chat session**
 
-```aichat -i```
+```aichat```
 
 **Use a role/persona**
 
@@ -47,17 +47,8 @@ Chat with AI models from the terminal
 **-e**, **--execute**
 > Execute mode: translate natural language to shell commands.
 
-**-i**, **--interactive**
-> Start interactive chat REPL.
-
 **--file** _FILE_
 > Include file in the conversation.
-
-**-w**, **--wrap** _COLS_
-> Wrap output at column width.
-
-**-H**, **--no-highlight**
-> Disable syntax highlighting.
 
 **-S**, **--no-stream**
 > Disable streaming output.
@@ -77,7 +68,7 @@ Chat with AI models from the terminal
 
 In chat mode, it provides a REPL with conversation history, multi-line input, and syntax highlighting. Execute mode translates natural language descriptions into shell commands and optionally runs them. RAG mode indexes documents for question-answering over local files.
 
-Roles define reusable personas and system prompts. Built-in roles include coder, shell, and translator. Custom roles are defined in the configuration file.
+Roles define reusable personas and system prompts. Built-in roles include %code%, %shell%, %explain-shell%, and %functions%. Custom roles are defined as individual files in the roles configuration directory.
 
 The tool supports function calling, allowing AI models to invoke defined tools. Sessions persist conversations across invocations. Multiple providers and models can be configured simultaneously.
 
@@ -88,8 +79,8 @@ Install via `cargo install aichat`, Homebrew, or download binaries.
 **~/.config/aichat/config.yaml**
 > Main configuration file for model settings, API keys, roles, and default parameters.
 
-**~/.config/aichat/roles.yaml**
-> Custom role definitions with system prompts and parameters.
+**~/.config/aichat/roles/**
+> Directory of custom role definitions, each as an individual file.
 
 # CAVEATS
 

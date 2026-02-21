@@ -1,6 +1,6 @@
 # TAGLINE
 
-JSON transformation tool with query language
+data transformation tool with query language
 
 # TLDR
 
@@ -36,7 +36,7 @@ _FILE_
 
 # DESCRIPTION
 
-**emuto** is a JSON transformation tool using a jq-like query language. It processes JSON data through expressions that select, filter, and transform data structures.
+**emuto** is a data transformation tool using a jq-like query language. It processes JSON, CSV, TSV, DSV, and plain text through expressions that select, filter, and transform data structures.
 
 The expression language supports object access, array operations, mapping, and filtering. It provides a functional approach to JSON manipulation.
 

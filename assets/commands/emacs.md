@@ -135,7 +135,7 @@ Emacs has a steep learning curve with its extensive keyboard shortcuts. The defa
 
 # HISTORY
 
-Emacs was created by **Richard Stallman** at MIT in **1976**, evolving from earlier editor macros for the TECO editor. GNU Emacs, the most widely used implementation, was first released in **1985** and became the flagship project of the GNU Project. The name originally stood for "**E**ditor **MAC**ro**S**". Emacs inspired the free software movement and remains one of the oldest actively developed software projects. Its rival **vi** sparked the famous "editor wars" among Unix users.
+The original EMACS was created at MIT in **1976** by **David A. Moon**, **Guy L. Steele Jr.**, and **Richard Stallman**, evolving from editor macros for the TECO editor. GNU Emacs, the most widely used implementation, was first released in **1985** and became the flagship project of the GNU Project. The name originally stood for "**E**ditor **MAC**ro**S**". Emacs inspired the free software movement and remains one of the oldest actively developed software projects. Its rival **vi** sparked the famous "editor wars" among Unix users.
 
 # SEE ALSO
 

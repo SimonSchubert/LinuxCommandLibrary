@@ -10,7 +10,36 @@ Terminal-based resource monitor with GPU support
 
 # SYNOPSIS
 
-**btop**
+**btop** [_options_]
+
+# PARAMETERS
+
+**-p**, **--preset** _0-9_
+> Start with a preset layout
+
+**-u**, **--update** _ms_
+> Set initial update rate in milliseconds
+
+**-f**, **--filter** _filter_
+> Set initial process filter
+
+**-t**, **--tty**
+> Force tty mode
+
+**-l**, **--low-color**
+> 256 colors only (no true color)
+
+**-c**, **--config** _file_
+> Path to config file
+
+**-d**, **--debug**
+> Debug mode
+
+**-V**, **--version**
+> Show version
+
+**-h**, **--help**
+> Show help
 
 # DESCRIPTION
 
@@ -74,7 +103,7 @@ Requires modern terminal with true color support. GPU monitoring needs appropria
 
 # HISTORY
 
-**btop++** was created by Jakob Palme (aristocratos) in **2021** as a C++ rewrite of bpytop, providing significantly better performance and additional features.
+**btop++** was created by **Jakob P. Liljenberg** (aristocratos) in **2021** as a C++ rewrite of bpytop, providing significantly better performance and additional features.
 
 # SEE ALSO
 

@@ -57,7 +57,7 @@ high-performance password recovery tool that uses CPU, GPU, and other hardware
 > Rule file for word mangling
 
 **-D**, **--opencl-device-types** _NUM_
-> Device types (1=CPU, 2=GPU, 3=FPGA)
+> Device types (1=CPU, 2=GPU, 3=FPGA/DSP/Co-Processor)
 
 **-w**, **--workload-profile** _NUM_
 > Workload profile (1=low, 2=default, 3=high, 4=nightmare)

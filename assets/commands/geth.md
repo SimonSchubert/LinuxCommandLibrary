@@ -34,7 +34,7 @@ _COMMAND_
 > Subcommand: console, attach, account, etc.
 
 **--syncmode** _MODE_
-> Sync mode: full, snap, light.
+> Sync mode: full, snap (light mode is deprecated post-Merge).
 
 **--datadir** _PATH_
 > Data directory.
@@ -61,7 +61,7 @@ _COMMAND_
 
 **geth** (go-ethereum) is the official Go implementation of the Ethereum protocol. It runs a full Ethereum node, enabling blockchain synchronization, transaction validation, mining operations, and smart contract deployment.
 
-The client provides multiple sync modes: "snap" for fast syncing with state snapshots, "full" for complete blockchain validation, and "light" for minimal storage requirements. It exposes JSON-RPC APIs over HTTP, WebSocket, and IPC for application integration.
+The client provides multiple sync modes: "snap" for fast syncing with state snapshots and "full" for complete blockchain validation. Light sync mode is deprecated and non-functional since the Merge to proof-of-stake. It exposes JSON-RPC APIs over HTTP, WebSocket, and IPC for application integration.
 
 geth includes an interactive JavaScript console for direct blockchain interaction, account management for creating and managing Ethereum wallets, and support for both mainnet and test networks. It's the most widely used Ethereum client for running production nodes and development environments.
 

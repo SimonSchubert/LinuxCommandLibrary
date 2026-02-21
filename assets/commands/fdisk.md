@@ -58,7 +58,7 @@ Start the **interactive** partition manipulator
 
 # CAVEATS
 
-**Dangerous**: Changes are written when you press 'w'. Double-check before writing. Use **parted** for partitions larger than 2TB or for GPT tables.
+**Dangerous**: Changes are written when you press 'w'. Double-check before writing. Modern fdisk supports GPT natively. MBR partition tables (not fdisk) are limited to 2TB; use GPT for larger disks.
 
 # HISTORY
 

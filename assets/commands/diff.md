@@ -168,7 +168,7 @@ Large files can be slow. Binary files show as "differ" without details. Whitespa
 
 # HISTORY
 
-**diff** was created by Doug McIlroy and colleagues at Bell Labs around **1974**, with the algorithm published by Hunt and McIlroy in **1976**.
+**diff** was written by **James W. Hunt** and **Doug McIlroy** at Bell Labs around **1974**, with the algorithm published in their joint paper in **1976**.
 
 # SEE ALSO
 

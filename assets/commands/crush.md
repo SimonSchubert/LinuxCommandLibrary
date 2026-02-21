@@ -93,7 +93,7 @@ Requires API keys from supported providers set via environment variables (ANTHRO
 
 # HISTORY
 
-Crush was developed by **Charmbracelet**, a company known for creating engaging terminal applications. It was previously known as OpenCode AI before being renamed to Crush. The project is released under the FSL-1.1-MIT license (MIT-compatible) and has gained over 8,900 GitHub stars. Version 0.4.0 was released in August 2025.
+Crush was developed by **Charmbracelet**, a company known for creating engaging terminal applications. It originated from a project by Kujtim Hoxha that was briefly associated with the OpenCode name before Charmbracelet rebranded their version as Crush, with the OpenCode name continuing as a separate fork. The project is released under the FSL-1.1-MIT license (MIT-compatible) and has gained over 8,900 GitHub stars. Version 0.4.0 was released in August 2025.
 
 # SEE ALSO
 

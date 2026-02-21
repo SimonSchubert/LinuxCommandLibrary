@@ -37,7 +37,7 @@ The tool provides both simple and full mixer interfaces. The simple interface (c
 # PARAMETERS
 
 **-c card**
-> Select card number (format: hw:N)
+> Select card number (e.g., 0, 1, 2)
 
 **-D device**
 > Select device name (default: 'default')

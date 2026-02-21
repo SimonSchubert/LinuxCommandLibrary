@@ -20,7 +20,7 @@ terminal-based Matrix digital rain effect
 
 ```cmatrix -a```
 
-**Adjust the scrolling speed** (0-10, higher is faster)
+**Adjust the scrolling speed** (0-9, higher is faster)
 
 ```cmatrix -s -u [2]```
 
@@ -68,7 +68,7 @@ terminal-based Matrix digital rain effect
 > Print version information and exit
 
 **-u** _delay_
-> Screen update delay (0-10, default 4)
+> Screen update delay (0-9, default 4)
 
 **-C** _color_
 > Use specified color (green, red, blue, white, yellow, cyan, magenta, black)

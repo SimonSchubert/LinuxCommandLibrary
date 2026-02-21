@@ -90,7 +90,7 @@ Silent failures by default (use -f to change). Large downloads show progress by 
 
 # HISTORY
 
-**curl** was created by Daniel Stenberg in **1997** (originally httpget), becoming one of the most widely used command-line tools for data transfer.
+**curl** originated in **1996** as httpget (by Rafael Sagula, with Daniel Stenberg contributing), was renamed to urlget in 1997 when FTP support was added, and became **curl** with version 4.0 in **March 1998**. It is one of the most widely used command-line tools for data transfer.
 
 # SEE ALSO
 

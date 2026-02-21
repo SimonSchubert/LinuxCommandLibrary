@@ -98,7 +98,7 @@ Basic vs extended regex syntax differences. Binary files may produce unexpected 
 
 # HISTORY
 
-grep was created by **Ken Thompson** at **Bell Labs** in **1974**. It was inspired by the g/re/p command in ed. GNU grep is the most widely used implementation today.
+grep was created by **Ken Thompson** at **Bell Labs** in **1973**. It was inspired by the g/re/p command in ed. GNU grep is the most widely used implementation today.
 
 # SEE ALSO
 

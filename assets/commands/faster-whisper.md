@@ -79,7 +79,7 @@ The tool supports all Whisper model sizes. Larger models are more accurate but s
 
 Voice activity detection (VAD) filtering skips silent sections, improving both speed and accuracy. Language detection is automatic but specifying the language avoids detection overhead.
 
-Install via pip (`pip install faster-whisper`). CTranslate2 handles model conversion automatically. GPU acceleration requires CUDA toolkit.
+The base library is installed via `pip install faster-whisper` (Python API only). For CLI usage, install a wrapper such as `pip install faster-whisper-cli` or `pip install whisper-ctranslate2`. CTranslate2 handles model conversion automatically. GPU acceleration requires CUDA toolkit.
 
 # CAVEATS
 

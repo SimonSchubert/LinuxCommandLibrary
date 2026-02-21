@@ -74,7 +74,7 @@ Filter messages by **facility**
 
 # CAVEATS
 
-Requires root privileges on most systems. The **-w**, **-T**, and **-H** options are available in kernels 3.5.0 and newer.
+Requires root privileges on most systems. The **-w** (follow) option requires kernel 3.5.0+ (for /dev/kmsg). The **-T** and **-H** options are util-linux userspace features and do not require a specific kernel version.
 
 # HISTORY
 

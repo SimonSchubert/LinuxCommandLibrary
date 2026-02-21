@@ -20,9 +20,9 @@ extended regex pattern searcher
 
 ```egrep -r "[pattern]" [directory]```
 
-**Search for multiple** patterns
+**Search for multiple** patterns (alternation)
 
-```egrep "[pattern1|pattern2]" [file.txt]```
+```egrep "[pattern1]|[pattern2]" [file.txt]```
 
 **Count matches**
 

@@ -16,9 +16,9 @@ node-based workflow system for Stable Diffusion
 
 ```python [main.py] --cpu```
 
-**Start in headless mode** (API only, no browser)
+**Start without auto-opening browser**
 
-```python [main.py] --dont-print-server```
+```python [main.py] --disable-auto-launch```
 
 **Use specific GPU**
 
@@ -80,7 +80,7 @@ The API accepts workflow JSON, enabling headless batch generation and integratio
 
 An extensive ecosystem of custom nodes adds capabilities: video generation, face restoration, upscaling, IP-Adapter, and more. Custom nodes are installed into the `custom_nodes/` directory.
 
-Install via pip (`pip install comfyui`) or clone the repository. Models are placed in the `models/` directory tree.
+Install via comfy-cli (`pip install comfy-cli && comfy install`) or clone the repository and install requirements. Models are placed in the `models/` directory tree.
 
 # CAVEATS
 

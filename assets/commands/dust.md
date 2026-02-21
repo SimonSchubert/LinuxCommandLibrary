@@ -16,7 +16,7 @@ intuitive disk usage analyzer with visualization
 
 ```dust [/path/to/directory]```
 
-**Show disk usage** including hidden files
+**Show sizes in SI units** (powers of 1000)
 
 ```dust -H```
 
@@ -65,8 +65,8 @@ The tool is written in Rust for performance and handles large directory trees ef
 **-f**, **--files-only**
 > Only show files, not directories.
 
-**-H**, **--no-hidden**
-> Exclude hidden files.
+**-H**, **--si**
+> Print sizes in SI units (powers of 1000 instead of 1024).
 
 **-p**, **--no-percent-bars**
 > Hide percentage bars.

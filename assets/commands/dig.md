@@ -164,7 +164,7 @@ Requires network connectivity. Default uses system DNS. Complex output for begin
 
 # HISTORY
 
-**dig** was developed by Steve Hotz and Paul Mockapetris in the late **1980s**, becoming part of BIND and the standard DNS debugging tool.
+**dig** was developed by **Steve Hotz** at USC's Information Sciences Institute in **1989**, becoming part of BIND and the standard DNS debugging tool.
 
 # SEE ALSO
 

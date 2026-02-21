@@ -55,16 +55,19 @@ The tool reads packet capture files containing wireless traffic, identifies encr
 > Quiet mode (no status display)
 
 **-S**
-> Show real-time statistics
+> WPA cracking speed test (benchmark)
 
 **-p** _threads_
 > Number of CPU threads to use
 
 **-K**
-> Use Korek attack for WEP (faster)
+> Use KoreK attack instead of PTW for WEP cracking (PTW is the faster modern default)
 
-**-x** / **-y**
-> Disable brute-force for last bytes (WEP)
+**-x**
+> Disable last keybyte brute-force (WEP). -x1 enables (default), -x2 brute-forces last two keybytes
+
+**-y**
+> Experimental single brute-force attack, used when standard attacks fail with over 1 million IVs
 
 # CAVEATS
 

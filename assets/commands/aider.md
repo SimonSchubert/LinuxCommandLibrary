@@ -40,13 +40,13 @@ The tool integrates with git, can automatically commit changes, and understands 
 > AI model to use (gpt-4, gpt-3.5-turbo, claude-3-opus, etc.)
 
 **--architect**
-> Use architect mode for high-level planning
+> Use architect mode: an architect model proposes changes, then a separate editor model implements the file edits
 
 **--edit-format** _format_
 > Edit format: diff, whole, diff-fenced
 
 **--auto-commits**
-> Automatically commit AI changes
+> Automatically commit AI changes (enabled by default)
 
 **--no-auto-commits**
 > Disable automatic commits

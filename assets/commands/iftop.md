@@ -68,7 +68,7 @@ Requires root privileges or appropriate capabilities for packet capture. High-ba
 
 # HISTORY
 
-iftop was written by Paul Warren and Chris Sherlock, inspired by the top utility. It was first released in **2002** and has become a standard tool for real-time network bandwidth monitoring.
+iftop was written by **Paul Warren**, inspired by the top utility. It was first released in **2002** and has become a standard tool for real-time network bandwidth monitoring.
 
 # SEE ALSO
 

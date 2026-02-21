@@ -86,7 +86,7 @@ Limited environment variables. No output unless redirected or mailed. Time is in
 
 # HISTORY
 
-**cron** was created by Ken Thompson in **1975** for Unix Version 7, with the crontab interface added later to allow user-level scheduling.
+**cron** was included in **Version 7 Unix** (1979). The **crontab** interface was added to allow user-level scheduling without requiring direct file editing.
 
 # SEE ALSO
 

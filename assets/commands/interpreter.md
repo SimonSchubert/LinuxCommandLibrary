@@ -49,16 +49,16 @@ provides a natural language interface for computers, allowing language models
 > Specify which model to use (e.g., gpt-4o, claude-3-sonnet)
 
 **--local**
-> Use Code Llama for local code interpretation
+> Use a local model via Ollama or LM Studio for code interpretation
 
 **--fast**
-> Enable GPT-3.5 Turbo for quicker responses
+> Use a faster, smaller model for quicker responses
 
 **--verbose**
 > Activate verbose mode for detailed output
 
 **--os**
-> Enable OS mode powered by Anthropic
+> Enable OS mode for controlling your computer (mouse, keyboard, screen)
 
 **--max_tokens** _N_
 > Maximum tokens for model output

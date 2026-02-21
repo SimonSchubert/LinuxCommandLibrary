@@ -111,7 +111,7 @@ Hash algorithms like MD5 and SHA-1 have known collision vulnerabilities and shou
 
 # HISTORY
 
-hashdeep was written by **Jesse Kornblum** and **Simson Garfinkel** as part of the **md5deep** package of forensic hashing tools. First released in **2003**, it was designed for digital forensics investigators who needed to verify file integrity and detect tampering. The multi-hash capability was added to address weaknesses in individual algorithms. The project is commonly used in law enforcement digital forensics and enterprise data integrity verification.
+hashdeep was written by **Jesse Kornblum** as part of the **md5deep** package of forensic hashing tools. First released in **2003**, it was designed for digital forensics investigators who needed to verify file integrity and detect tampering. The multi-hash capability was added to address weaknesses in individual algorithms. The project is commonly used in law enforcement digital forensics and enterprise data integrity verification.
 
 # SEE ALSO
 

@@ -44,7 +44,10 @@ The tool works by comparing system binaries against known signatures of rootkit 
 > Quiet mode, show infections only
 
 **-x**
-> Expert mode, show additional info
+> Expert mode: outputs raw strings from analyzed binary files for manual inspection
+
+**-e**
+> Exclude known false positive files/directories
 
 **-r** _dir_
 > Use alternate root directory

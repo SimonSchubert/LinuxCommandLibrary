@@ -1,12 +1,12 @@
 # TAGLINE
 
-converts images to the WebP format developed by Google
+create animated WebP files from a sequence of input images
 
 # TLDR
 
-**Convert** an image to WebP format
+**Create animated WebP** from image sequence
 
-```img2webp [path/to/image] -o [path/to/output.webp]```
+```img2webp [frame1.png] [frame2.png] [frame3.png] -o [animation.webp]```
 
 # SYNOPSIS
 
@@ -21,7 +21,7 @@ converts images to the WebP format developed by Google
 > Use lossy compression
 
 **-lossless**
-> Use lossless compression (default for PNG input)
+> Use lossless compression (default)
 
 **-q** _QUALITY_
 > Quality factor (0-100, default 75)
@@ -37,9 +37,9 @@ converts images to the WebP format developed by Google
 
 # DESCRIPTION
 
-**img2webp** converts images to the WebP format developed by Google. WebP provides superior compression compared to JPEG and PNG while maintaining good visual quality, making it ideal for web images.
+**img2webp** creates animated WebP files from a sequence of input images. Each input frame can have individual compression settings (lossy or lossless) and duration. For single-image conversion to WebP, use **cwebp** instead.
 
-The tool supports both lossy and lossless compression modes. It can also create animated WebP images from multiple input frames.
+The tool supports both lossy and lossless compression modes per frame, with configurable animation loop count and frame durations.
 
 # CAVEATS
 

@@ -68,7 +68,7 @@ Only captures unencrypted traffic (HTTP). Requires root/promiscuous access. HTTP
 
 # HISTORY
 
-driftnet was created by **Chris Sherlock** as a demonstration of network traffic visibility. It highlights the privacy implications of unencrypted communications and is used in security awareness training.
+driftnet was created by **Chris Lightfoot** as a demonstration of network traffic visibility. It highlights the privacy implications of unencrypted communications and is used in security awareness training.
 
 # SEE ALSO
 

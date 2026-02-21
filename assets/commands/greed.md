@@ -36,7 +36,7 @@ Text-based interface. Requires terminal with cursor support. Game state not save
 
 # HISTORY
 
-greed was created as a Unix terminal game, inspired by similar number-eating puzzle games. It became popular in the BSD games collection.
+greed was originally created by **Matt Day** and is maintained by **Eric S. Raymond**. It is a standalone terminal game, not part of the BSD games collection.
 
 # SEE ALSO
 

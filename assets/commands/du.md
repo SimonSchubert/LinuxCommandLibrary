@@ -36,7 +36,7 @@ The tool walks directory hierarchies and sums the disk space used by each file, 
 
 du is commonly combined with sort to identify the largest space consumers. Patterns like "du -h | sort -hr | head" reveal the top disk space users, essential for troubleshooting full filesystems or planning cleanup operations.
 
-The command reports disk usage (actual blocks consumed) rather than apparent file size, which matters for sparse files and filesystems with compression. Hard links are counted multiple times (once per link), potentially overstating actual disk usage. The -x option prevents crossing filesystem boundaries, useful for analyzing specific filesystems without including mounted subdirectories.
+The command reports disk usage (actual blocks consumed) rather than apparent file size, which matters for sparse files and filesystems with compression. Hard links to the same inode are counted only once by default (use -l to count each link separately). The -x option prevents crossing filesystem boundaries, useful for analyzing specific filesystems without including mounted subdirectories.
 
 # PARAMETERS
 
@@ -133,7 +133,7 @@ diff before.txt after.txt
 
 # CAVEATS
 
-Slow on large directories. Doesn't show actual disk usage (sparse files, compression). Crosses filesystem boundaries by default (use -x). Counts hard links multiple times. May require root for some directories. Output ordering not guaranteed without sort.
+Slow on large directories. Doesn't show actual disk usage (sparse files, compression). Crosses filesystem boundaries by default (use -x). Counts hard links once by default (use -l for per-link counting). May require root for some directories. Output ordering not guaranteed without sort.
 
 # HISTORY
 

@@ -86,7 +86,7 @@ Deprecated in favor of bluetoothctl. Requires root for configuration. Changes ma
 
 # HISTORY
 
-**hciconfig** is part of **BlueZ**, the official Linux Bluetooth stack. BlueZ was created by **Qualcomm** and later maintained by **Intel** and the community. While hciconfig is being phased out, it remains useful for low-level Bluetooth configuration.
+**hciconfig** is part of **BlueZ**, the official Linux Bluetooth stack. BlueZ was created by **Maxim Krasnyansky** and **Marcel Holtmann**, and is maintained by the community with Intel contributions. While hciconfig is being phased out, it remains useful for low-level Bluetooth configuration.
 
 # SEE ALSO
 

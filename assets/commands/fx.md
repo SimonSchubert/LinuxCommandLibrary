@@ -12,9 +12,9 @@ interactive JSON viewer and processor
 
 ```cat [data.json] | fx '.items'```
 
-**Filter with JavaScript**
+**Filter with expression**
 
-```cat [data.json] | fx 'x => x.filter(i => i.active)'```
+```cat [data.json] | fx '.[] | select(.active)'```
 
 **Select multiple fields**
 
@@ -31,7 +31,7 @@ interactive JSON viewer and processor
 # PARAMETERS
 
 _EXPRESSIONS_
-> JavaScript expressions or dot notation paths.
+> Dot notation paths or fx expression syntax.
 
 **.**
 > Pretty print JSON.
@@ -47,11 +47,11 @@ _EXPRESSIONS_
 
 # DESCRIPTION
 
-**fx** is a command-line JSON processing tool with interactive browsing. It combines jq-like filtering with JavaScript expression support for flexible data manipulation.
+**fx** is a command-line JSON processing tool written in Go with interactive browsing. It provides jq-like filtering with its own expression syntax for flexible data manipulation.
 
-In interactive mode, fx provides a navigable tree view of JSON data. Expression mode allows piping data through JavaScript transformations. Multiple expressions chain together.
+In interactive mode, fx provides a navigable tree view of JSON data. Expression mode allows piping data through transformations. Multiple expressions chain together.
 
-fx handles streaming JSON, object manipulation, and data extraction with familiar JavaScript syntax.
+fx handles streaming JSON, object manipulation, and data extraction.
 
 # CAVEATS
 

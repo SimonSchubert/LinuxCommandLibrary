@@ -111,7 +111,7 @@ GPU mining for Bitcoin is no longer profitable due to the dominance of ASIC mine
 
 # HISTORY
 
-BFGMiner was forked from **CGMiner** in **2012** by Luke Dashjr to focus on FPGA and ASIC support while maintaining modularity. The name stands for "**B**itcoin **F**an **G**uy Miner" (a reference to the developer's involvement in mining hardware cooling solutions). It became popular for its extensive hardware support and remote API capabilities. Development continues on GitHub with support for modern mining hardware.
+BFGMiner was forked from **CGMiner** in **2012** by Luke Dashjr to focus on FPGA and ASIC support while maintaining modularity. The name is a backronym for "**B**asically a **F**reaking **G**ood Miner." It became popular for its extensive hardware support and remote API capabilities. Development continues on GitHub with support for modern mining hardware.
 
 # SEE ALSO
 

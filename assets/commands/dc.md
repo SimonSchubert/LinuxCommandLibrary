@@ -67,7 +67,7 @@ RPN syntax can be unintuitive for users accustomed to infix notation. Error mess
 
 # HISTORY
 
-dc is one of the oldest Unix utilities, written by **Robert Morris** at Bell Labs around **1969-1971**. It predates the C programming language and was originally implemented in B. The bc calculator was later written as a preprocessor for dc.
+dc is one of the oldest Unix utilities, written by **Lorinda Cherry** and **Robert Morris** at Bell Labs around **1969-1971**. It predates the C programming language and was originally implemented in B. The bc calculator was later written as a preprocessor for dc.
 
 # SEE ALSO
 
