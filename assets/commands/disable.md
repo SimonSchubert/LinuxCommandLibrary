@@ -4,7 +4,7 @@ Disable shell builtins or other named elements
 
 # TLDR
 
-**Disable a shell builtin**
+**Disable a shell builtin** so the external version is used instead
 
 ```disable [builtin_name]```
 
@@ -12,17 +12,21 @@ Disable shell builtins or other named elements
 
 ```disable -f [function_name]```
 
+**Disable a regular alias**
+
+```disable -a [alias_name]```
+
 **Disable a reserved word**
 
 ```disable -r [reserved_word]```
 
-**List all disabled builtins**
+**Disable a glob pattern operator** like ~ or #
+
+```disable -p '[operator]'```
+
+**List all currently disabled builtins**
 
 ```disable```
-
-**Re-enable a disabled builtin**
-
-```enable [builtin_name]```
 
 # SYNOPSIS
 
@@ -31,36 +35,36 @@ Disable shell builtins or other named elements
 # PARAMETERS
 
 **-a**
-> Disable aliases
+> Act on regular or global aliases
 
 **-f**
-> Disable shell functions
+> Act on shell functions
 
 **-m**
-> Treat arguments as patterns for matching
+> Treat arguments as glob patterns for matching multiple elements at once (patterns should be quoted)
 
 **-p**
-> Disable shell parameters (variables)
+> Act on elements of the shell's pattern (globbing) syntax, such as **?**, **\***, **[**, **~**, **^**, and **#**
 
 **-r**
-> Disable reserved words
+> Act on reserved words
 
 **-s**
-> Disable suffix aliases (zsh)
+> Act on suffix aliases
 
 # DESCRIPTION
 
-**disable** is a zsh builtin that prevents named elements from being used. When a builtin is disabled, the shell will search **$PATH** for an external command of the same name instead. This is useful for forcing the use of an external version of a command over the shell builtin, such as using an external **echo** or **test** instead of the builtin version.
+**disable** is a zsh builtin that temporarily deactivates named hash table elements. By default it operates on builtins: when a builtin is disabled, the shell will search **$PATH** for an external command of the same name instead. This is useful for forcing the use of an external version of a command over the shell builtin, such as using an external **echo** or **test** instead of the builtin version.
 
-Disabled elements can be re-enabled with the **enable** builtin.
+The command extends beyond builtins to aliases (**-a**), functions (**-f**), reserved words (**-r**), suffix aliases (**-s**), and even glob pattern operators (**-p**). When invoked without arguments, it lists all disabled elements from the corresponding hash table. Disabled elements can be re-enabled with the **enable** builtin.
 
 # CAVEATS
 
-Only available in zsh. In bash, the equivalent functionality is provided by **enable -n**. Disabling critical builtins like **cd** or **exit** can make the shell difficult to use. The effect does not persist across shell sessions unless added to shell configuration files.
+Only available in **zsh**. In **bash**, the equivalent functionality for builtins is provided by **enable -n**, but bash does not support disabling aliases, functions, reserved words, or glob operators this way. Disabling critical builtins like **cd** or **exit** can make the shell difficult to use. The effect does not persist across shell sessions unless added to **~/.zshrc** or another configuration file.
 
 # HISTORY
 
-The concept of disabling builtins was introduced in **bash** with the **enable -n** syntax. **Zsh** provides the dedicated **disable** command as part of its more modular approach to shell configuration, extending the concept to functions, aliases, and reserved words.
+The concept of selectively disabling builtins originated in **bash** with the **enable -n** syntax. **Zsh** provides the dedicated **disable** command as part of its more modular approach to shell configuration, extending the concept to functions, aliases, reserved words, suffix aliases, and glob pattern operators.
 
 # SEE ALSO
 
