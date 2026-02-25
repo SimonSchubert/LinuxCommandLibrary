@@ -21,7 +21,9 @@
 
 ## AI Assistants
 ```[openclaw](/man/openclaw)```
+```[zeroclaw](/man/zeroclaw)```
 ```[nanobot](/man/nanobot)```
+```[picoclaw](/man/picoclaw)```
 ```[nanoclaw](/man/nanoclaw)```
 ```[leon](/man/leon)```
 

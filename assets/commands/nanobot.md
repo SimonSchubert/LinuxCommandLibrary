@@ -1,98 +1,82 @@
 # TAGLINE
 
-ultra-lightweight open-source AI assistant built in approximately 4,000 lines
+Ultra-lightweight personal AI assistant
 
 # TLDR
 
-**Start an interactive session**
+**Initialize** configuration and set up credentials
 
-```nanobot```
+```nanobot onboard```
 
-**Send a one-off command**
+**Start an interactive** CLI chat session with the AI agent
 
-```nanobot "[task]"```
+```nanobot agent```
 
-**Run with a specific local model**
+**Start the multi-channel gateway** for chat platform integrations
 
-```nanobot --model [model_name]```
+```nanobot gateway```
 
-**Start in server mode for Telegram integration**
+**Authenticate** with a chat platform (e.g. WhatsApp QR linking)
 
-```nanobot serve --telegram```
-
-**Schedule a recurring task**
-
-```nanobot schedule "[task]" --cron "[cron_expression]"```
-
-**List active scheduled tasks**
-
-```nanobot tasks```
+```nanobot channels login```
 
 # SYNOPSIS
 
-**nanobot** [_options_] [_command_]
-
-**nanobot** **serve** [_options_]
-
-**nanobot** **schedule** [_options_]
+**nanobot** [_command_] [_options_]
 
 # PARAMETERS
 
-_COMMAND_
-> Natural language task or instruction for the AI assistant.
+**onboard**
+> Initialize configuration and set up the environment for first-time use. Creates config at **~/.nanobot/config.json**.
 
-**serve**
-> Start nanobot in server mode for messaging platform integration.
+**agent**
+> Start an interactive CLI chat session with the AI agent.
 
-**--telegram**
-> Enable Telegram bot integration.
+**gateway**
+> Run the multi-channel gateway to connect chat platforms such as Telegram, Discord, WhatsApp, Slack, and others.
 
-**--whatsapp**
-> Enable WhatsApp integration.
-
-**schedule**
-> Create a scheduled or recurring task.
-
-**--cron** _EXPRESSION_
-> Cron expression for task scheduling.
-
-**tasks**
-> List all active scheduled tasks.
-
-**--model** _MODEL_
-> Specify the local LLM to use.
-
-**--local**
-> Force fully local operation without external APIs.
-
-**--port** _PORT_
-> Port number for server mode (default: 3000).
-
-**--verbose**
-> Enable verbose logging output.
-
-**--help**
-> Display help information.
-
-**--version**
-> Display version information.
+**channels login**
+> Authenticate with chat platforms, primarily used for WhatsApp QR-code linking.
 
 # DESCRIPTION
 
-**nanobot** is an ultra-lightweight open-source AI assistant built in approximately 4,000 lines of code. It supports interaction through messaging platforms including Telegram and WhatsApp, enabling voice and text-based communication from any device.
+**nanobot** is an ultra-lightweight personal AI assistant that delivers core agent functionality in approximately 4,000 lines of Python code. It connects closed and open-source LLMs to a local coding agent that can run commands, read logs, execute scripts, and search files on your machine.
 
-The assistant runs local language models for privacy-focused operation and can execute scheduled tasks autonomously using cron expressions. It supports multi-step task automation, reminders, and conversational interaction without requiring cloud AI services.
+Nanobot supports multiple LLM providers including OpenRouter, Anthropic (Claude), OpenAI (GPT), DeepSeek, Google Gemini, Groq, and custom OpenAI-compatible endpoints. It integrates with chat platforms such as Telegram, Discord, WhatsApp, Feishu, Slack, Email, QQ, DingTalk, and Mochat, allowing the agent to be accessed from various messaging services via the gateway command.
 
-nanobot is designed to be simple to deploy and extend, with minimal dependencies and a small footprint suitable for running on low-resource hardware including Raspberry Pi devices.
+The tool uses MCP (Model Context Protocol) for extending capabilities with external tools and services.
+
+# CONFIGURATION
+
+Configuration is stored in **~/.nanobot/config.json**. Run **nanobot onboard** for interactive setup.
+
+Minimal configuration requires a provider API key and model selection:
+
+```
+{
+  "providers": {
+    "openrouter": {
+      "apiKey": "sk-or-v1-xxx"
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": "anthropic/claude-opus-4-5"
+    }
+  }
+}
+```
+
+Supported providers: **openrouter**, **anthropic**, **openai**, **deepseek**, **groq**, **gemini**, **minimax**, and **custom** (any OpenAI-compatible endpoint).
 
 # CAVEATS
 
-Messaging platform integrations require API tokens from their respective services. Running local models requires sufficient RAM and compute resources. Scheduled tasks persist only while the server process is running unless configured with a process manager.
+Nanobot executes commands on your local machine with your user permissions. Always review agent actions before granting broad tool access. The tool requires network access for LLM API calls and chat platform integrations. Provider API keys are stored in plaintext in the config file.
 
 # HISTORY
 
-nanobot was created by **the HKUDS research group** (Data Intelligence Lab at the University of Hong Kong). It was designed as a minimalist alternative to larger AI assistant frameworks, emphasizing simplicity and local-first operation. The project gained attention for achieving broad AI assistant functionality in a remarkably small codebase.
+Nanobot was developed by **HKUDS** (Hong Kong University Data Science Lab) as an ultra-lightweight alternative to larger AI coding assistants. First released in **2025**, it aimed to provide core agent functionality with a minimal codebase, emphasizing research-readiness and a clean, modifiable architecture. The project gained traction as an accessible entry point for developers exploring agentic AI workflows.
 
 # SEE ALSO
 
-[openclaw](/man/openclaw)(1), [claude](/man/claude)(1), [ollama](/man/ollama)(1), [llm](/man/llm)(1)
+[picoclaw](/man/picoclaw)(1), [claude](/man/claude)(1)
