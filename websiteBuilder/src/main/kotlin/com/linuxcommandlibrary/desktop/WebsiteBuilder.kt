@@ -312,7 +312,7 @@ class WebsiteBuilder {
         "Network" -> "icon-network_card.svg"
         "Search & Find" -> "icon-search.svg"
         "GIT" -> "icon-git.svg"
-        "SSH" -> "icon-console.svg"
+        "SSH" -> "icon-vpn_key.svg"
         "Video & Audio" -> "icon-video_trimming.svg"
         "Package manager" -> "icon-package.svg"
         "Hacking tools" -> "icon-skull.svg"
@@ -321,6 +321,11 @@ class WebsiteBuilder {
         "Emacs" -> "icon-emacs.svg"
         "Nano" -> "icon-nano.svg"
         "Pico" -> "icon-pico.svg"
+        "Text Processing" -> "icon-file_edit.svg"
+        "Compression & Archiving" -> "icon-file_download.svg"
+        "Shell Scripting" -> "icon-console.svg"
+        "Tmux" -> "icon-restore_window.svg"
+        "Regular Expressions" -> "icon-loupe.svg"
         "Cryptocurrencies" -> "icon-bitcoin.svg"
         "Input" -> "icon-mouse.svg"
         "JSON" -> "icon-json.svg"
@@ -1260,7 +1265,8 @@ class WebsiteBuilder {
                 }
                 script {
                     unsafe {
-                        raw("""
+                        raw(
+                            """
                             (function() {
                                 var ua = navigator.userAgent || '';
                                 var link = document.getElementById('app-link');
@@ -1270,7 +1276,8 @@ class WebsiteBuilder {
                                     link.href = 'https://apps.apple.com/us/app/kai-ai/id6758148023';
                                 }
                             })();
-                        """.trimIndent())
+                            """.trimIndent(),
+                        )
                     }
                 }
                 // products("row")

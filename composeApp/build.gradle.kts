@@ -130,16 +130,18 @@ tasks.matching { it.name.contains("link") && it.name.contains("Ios") }.configure
 // Task to regenerate assets/commands/index.txt from the .md files in that directory
 tasks.register("updateCommandIndex") {
     val commandsDir = file("${rootProject.projectDir}/assets/commands")
-    val indexFile = file("${commandsDir}/index.txt")
+    val indexFile = file("$commandsDir/index.txt")
 
     inputs.dir(commandsDir)
     outputs.file(indexFile)
 
     doLast {
-        val entries = commandsDir.listFiles { f -> f.extension == "md" }
-            ?.map { it.name }
-            ?.sorted()
-            ?: emptyList()
+        val entries =
+            commandsDir
+                .listFiles { f -> f.extension == "md" }
+                ?.map { it.name }
+                ?.sorted()
+                ?: emptyList()
         indexFile.writeText(entries.joinToString("\n") + "\n")
         println("Updated commands/index.txt with ${entries.size} entries")
     }

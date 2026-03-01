@@ -1,5 +1,6 @@
 .DS_Store
 aitools.md
+compressionarchiving.md
 cryptocurrencies.md
 emacstexteditor.md
 filesfolders.md
@@ -15,11 +16,15 @@ oneliners.md
 packagemanager.md
 picotexteditor.md
 printing.md
+regularexpressions.md
 searchfind.md
+shellscripting.md
 ssh.md
 systemcontrol.md
 systeminformation.md
 terminalgames.md
+textprocessing.md
+tmux.md
 usersgroups.md
 videoaudio.md
 vimtexteditor.md
