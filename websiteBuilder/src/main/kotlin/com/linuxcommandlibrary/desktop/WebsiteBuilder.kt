@@ -94,9 +94,8 @@ fun main() {
     folder.mkdir()
 
     websiteBuilder.createCommandsHtmlFile(folder)
-    websiteBuilder.createBasicsHtmlFile(folder)
 
-    return
+    websiteBuilder.createBasicsHtmlFile(folder)
 
     websiteBuilder.createBasicHtmlFiles(File(folder, "basic"))
 
