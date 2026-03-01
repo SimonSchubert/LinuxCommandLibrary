@@ -94,8 +94,10 @@ fun main() {
     folder.mkdir()
 
     websiteBuilder.createCommandsHtmlFile(folder)
-
     websiteBuilder.createBasicsHtmlFile(folder)
+
+    return
+
     websiteBuilder.createBasicHtmlFiles(File(folder, "basic"))
 
     websiteBuilder.createTipsHtmlFile(folder)
@@ -1248,8 +1250,31 @@ class WebsiteBuilder {
         if (showAd) {
             div {
                 classes = setOf("bottom-panel")
-                style = "background-color: unset;"
-                products("row")
+                style = "background-color: #5e2cbd;"
+                a {
+                    id = "app-link"
+                    href = "https://github.com/SimonSchubert/Kai"
+                    img {
+                        src = "/images/af/kai-1-horizontal.webp"
+                        height = "160"
+                    }
+                }
+                script {
+                    unsafe {
+                        raw("""
+                            (function() {
+                                var ua = navigator.userAgent || '';
+                                var link = document.getElementById('app-link');
+                                if (/android/i.test(ua)) {
+                                    link.href = 'https://play.google.com/store/apps/details?id=com.inspiredandroid.kai';
+                                } else if (/iPhone|iPad|iPod|Macintosh|Mac OS/i.test(ua)) {
+                                    link.href = 'https://apps.apple.com/us/app/kai-ai/id6758148023';
+                                }
+                            })();
+                        """.trimIndent())
+                    }
+                }
+                // products("row")
             }
         }
         footer {
