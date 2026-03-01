@@ -430,30 +430,8 @@ class WebsiteBuilder {
                                                 text(group.description)
                                             }
                                         }
-                                        // Render sections using HtmlMarkdownRenderer
-                                        val isTextEditor = listOf(
-                                            "VIM Texteditor",
-                                            "Emacs Texteditor",
-                                            "Nano Texteditor",
-                                            "Pico Texteditor",
-                                            "Micro Texteditor",
-                                        ).contains(categoryTitle)
-
-                                        if (isTextEditor) {
-                                            // Render text editor keybindings as a table
-                                            table {
-                                                group.sections.filterIsInstance<TipSectionElement.Code>().forEach { codeSection ->
-                                                    tr {
-                                                        td {
-                                                            text(codeSection.command)
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        } else {
-                                            unsafe {
-                                                +HtmlMarkdownRenderer.renderSections(group.sections)
-                                            }
+                                        unsafe {
+                                            +HtmlMarkdownRenderer.renderSections(group.sections)
                                         }
                                     }
                                 }
@@ -493,11 +471,11 @@ class WebsiteBuilder {
         "Package manager" -> "Install, update, upgrade, remove packages on Linux"
         "Hacking tools" -> "Hacking, forensics and exploitation tools for Linux"
         "Terminal games" -> "Terminal games on Linux"
-        "VIM Texteditor" -> "Working with vim on the Linux command line"
-        "Emacs Texteditor" -> "Working with emacs on the Linux command line"
-        "Nano Texteditor" -> "Working with nano on the Linux command line"
-        "Pico Texteditor" -> "Working with pico on the Linux command line"
-        "Micro Texteditor" -> "Working with micro on the Linux command line"
+        "VIM Text Editor" -> "Working with vim on the Linux command line"
+        "Emacs Text Editor" -> "Working with emacs on the Linux command line"
+        "Nano Text Editor" -> "Working with nano on the Linux command line"
+        "Pico Text Editor" -> "Working with pico on the Linux command line"
+        "Micro Text Editor" -> "Working with micro on the Linux command line"
         "Crypto currencies" -> "Miners, wallets and trading bots for Linux"
         "Input" -> "Type keys and move mouse via the Linux command line"
         "JSON" -> "Print, select, modify, delete and create json files on cmd"
@@ -525,11 +503,11 @@ class WebsiteBuilder {
         "Package manager" -> "linux,install,file,repository,find,package,upgrade"
         "Hacking tools" -> "linux,password,forensics,sniffing,spoofing,exploit,vulnerability"
         "Crypto currencies" -> "linux,minters,wallets,coin,trading,bots"
-        "VIM Texteditor" -> "linux,insert,search,edit,replace,navigation"
-        "Emacs Texteditor" -> "linux,emacs,usage,buffers,navigation"
-        "Nano Texteditor" -> "linux,nano,info,navigation,edit,input,output"
-        "Pico Texteditor" -> "linux,pico,navigation,usage,input,output"
-        "Micro Texteditor" -> "linux,pico,navigation,usage,input,output"
+        "VIM Text Editor" -> "linux,insert,search,edit,replace,navigation"
+        "Emacs Text Editor" -> "linux,emacs,usage,buffers,navigation"
+        "Nano Text Editor" -> "linux,nano,info,navigation,edit,input,output"
+        "Pico Text Editor" -> "linux,pico,navigation,usage,input,output"
+        "Micro Text Editor" -> "linux,pico,navigation,usage,input,output"
         "Terminal games" -> "linux,terminal,games,list,rogue"
         else -> "linux"
     }

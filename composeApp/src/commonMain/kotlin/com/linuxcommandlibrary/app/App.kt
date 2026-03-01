@@ -69,6 +69,8 @@ import com.linuxcommandlibrary.app.ui.screens.AppInfoDialog
 import com.linuxcommandlibrary.app.ui.screens.BookmarkFeedbackDialog
 import com.linuxcommandlibrary.app.ui.screens.basiccategories.BasicCategoriesScreen
 import com.linuxcommandlibrary.app.ui.screens.basiccategories.BasicCategoriesViewModel
+import com.linuxcommandlibrary.app.ui.screens.basicgroups.BasicEditorScreen
+import com.linuxcommandlibrary.app.ui.screens.basicgroups.BasicEditorViewModel
 import com.linuxcommandlibrary.app.ui.screens.basicgroups.BasicGroupsScreen
 import com.linuxcommandlibrary.app.ui.screens.basicgroups.BasicGroupsViewModel
 import com.linuxcommandlibrary.app.ui.screens.commanddetail.CommandDetailScreen
@@ -263,8 +265,14 @@ fun LinuxApp(initialDeeplink: String? = null) {
 
                 composable<Route.BasicGroups> { backStackEntry ->
                     val route = backStackEntry.toRoute<Route.BasicGroups>()
-                    val viewModel: BasicGroupsViewModel = koinInject { parametersOf(route.categoryId) }
-                    BasicGroupsScreen(viewModel = viewModel, onNavigate = onNavigate)
+                    val basicsRepository: BasicsRepository = koinInject()
+                    if (basicsRepository.isTextEditor(route.categoryId)) {
+                        val viewModel: BasicEditorViewModel = koinInject { parametersOf(route.categoryId) }
+                        BasicEditorScreen(viewModel = viewModel, onNavigate = onNavigate)
+                    } else {
+                        val viewModel: BasicGroupsViewModel = koinInject { parametersOf(route.categoryId) }
+                        BasicGroupsScreen(viewModel = viewModel, onNavigate = onNavigate)
+                    }
                 }
 
                 composable<Route.CommandDetail> {

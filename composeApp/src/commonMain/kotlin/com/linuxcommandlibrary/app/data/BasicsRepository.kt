@@ -1,5 +1,6 @@
 package com.linuxcommandlibrary.app.data
 
+import com.linuxcommandlibrary.shared.BasicInfo
 import com.linuxcommandlibrary.shared.MarkdownParser
 import com.linuxcommandlibrary.shared.basicsSortOrder
 import com.linuxcommandlibrary.shared.platform.AssetReader
@@ -64,6 +65,15 @@ class BasicsRepository(private val assetReader: AssetReader) {
 
         return Pair(groups, commandsByGroupId)
     }
+
+    fun getBasicInfo(categoryId: String): BasicInfo? = try {
+        val content = assetReader.readFile("basics/$categoryId.md") ?: return null
+        MarkdownParser.parseBasic(content)
+    } catch (e: Exception) {
+        null
+    }
+
+    fun isTextEditor(categoryId: String): Boolean = categoryId.endsWith("texteditor")
 
     private fun parseCommandLine(line: String): Pair<String, String> {
         val codeContent = line.trim().removeSurrounding("```")

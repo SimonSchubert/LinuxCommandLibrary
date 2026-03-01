@@ -5,6 +5,7 @@ import com.linuxcommandlibrary.app.data.CommandsRepository
 import com.linuxcommandlibrary.app.data.DataManager
 import com.linuxcommandlibrary.app.data.TipsRepository
 import com.linuxcommandlibrary.app.ui.screens.basiccategories.BasicCategoriesViewModel
+import com.linuxcommandlibrary.app.ui.screens.basicgroups.BasicEditorViewModel
 import com.linuxcommandlibrary.app.ui.screens.basicgroups.BasicGroupsViewModel
 import com.linuxcommandlibrary.app.ui.screens.commanddetail.CommandDetailViewModel
 import com.linuxcommandlibrary.app.ui.screens.commandlist.CommandListViewModel
@@ -24,6 +25,7 @@ val commonModule = module {
     single { TipsRepository(get()) }
 
     factory { BasicCategoriesViewModel(get(), get()) }
+    factory { params -> BasicEditorViewModel(params.get(), get(), get()) }
     factory { params -> BasicGroupsViewModel(params.get(), get(), get()) }
     factory { params -> CommandDetailViewModel(params.get(), get(), get(), get()) }
     factory { TipsViewModel(get(), get()) }
