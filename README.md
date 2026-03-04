@@ -2,7 +2,7 @@
 
 ![Icon](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandLibrary/master/art/web_hi_res_144.png)
 
-The app currently has **7770** manual pages, **23+** basic categories and a bunch of general terminal tips. It works 100% offline, doesn't need an internet connection and has no tracking software.
+The app currently has **7892** manual pages, **28+** basic categories and a bunch of general terminal tips. It works 100% offline, doesn't need an internet connection and has no tracking software.
 
 [![App Store](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/app_store_badge.png)](https://apps.apple.com/us/app/linux-command-library/id1219649976)
 [![Play Store](https://raw.githubusercontent.com/SimonSchubert/LinuxCommandBibliotheca/master/art/play_store_badge.png)](https://play.google.com/store/apps/details?id=com.inspiredandroid.linuxcommandbibliotheca)
@@ -46,7 +46,7 @@ CLI: ```brew install simonschubert/tap/linux-command-library-cli```
 
 #### Categories
 
-One-liners, AI tools, System information, System control, Users & Groups, Files & Folders, Input, Printing, JSON, Network, Search & Find, GIT, SSH, Video & Audio, Package manager, Hacking tools, Terminal games, Cryptocurrencies, VIM Text Editor, Emacs Text Editor, Nano Text Editor, Pico Text Editor, Micro Text Editor
+One-liners, AI tools, System information, System control, Users & Groups, Files & Folders, Input, Printing, JSON, Network, Search & Find, GIT, SSH, Video & Audio, Package manager, Text Processing, Compression & Archiving, Hacking tools, Terminal games, Cryptocurrencies, Shell Scripting, Tmux, Regular Expressions, VIM Text Editor, Emacs Text Editor, Nano Text Editor, Pico Text Editor, Micro Text Editor
 
 #### Tips
 

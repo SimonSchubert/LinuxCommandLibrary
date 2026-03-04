@@ -380,6 +380,15 @@ font-size: 12px;
     color: black !important;
 }
 
+.panel > div {
+	margin: 1em 0;
+}
+
+.panel > div > .code-wrapper {
+	margin-top: 4px;
+	margin-bottom: 8px;
+}
+
 .panel a {
    font-weight: bold;
    color: #F44336;

@@ -22,6 +22,7 @@ local.properties
 processed.txt
 instructions-tldr.md
 instructions-man.md
+instructions-improve.md
 products_dataset.json
 instructions-config.md
 commands.txt

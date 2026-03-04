@@ -703,6 +703,14 @@ class WebsiteBuilder {
                                                 }
                                             }
 
+                                            "TLDR" -> {
+                                                div {
+                                                    unsafe {
+                                                        +HtmlMarkdownRenderer.renderSections(section.elements)
+                                                    }
+                                                }
+                                            }
+
                                             else -> {
                                                 // Use HtmlMarkdownRenderer for all other sections
                                                 p {
