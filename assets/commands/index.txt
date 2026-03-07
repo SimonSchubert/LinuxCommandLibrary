@@ -2183,8 +2183,8 @@ flexget.md
 flips.md
 flit.md
 flite.md
-flock.md
 float.md
+flock.md
 flow.md
 flox.md
 fls.md
