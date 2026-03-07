@@ -1,6 +1,6 @@
 [versions]
 agp = "9.0.1"
-appVersion = "3.5.15"
+appVersion = "3.5.16"
 androidVersionCode = "140"
 kotlin = "2.3.10"
 composeMultiplatform = "1.10.2"
