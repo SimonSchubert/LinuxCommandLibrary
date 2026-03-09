@@ -232,6 +232,7 @@ apport.md
 appres.md
 apptainer-build.md
 apptainer-cache.md
+apptainer-config.md
 apptainer-delete.md
 apptainer-exec.md
 apptainer-inspect.md
