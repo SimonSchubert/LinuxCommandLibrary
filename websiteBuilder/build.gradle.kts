@@ -20,3 +20,15 @@ kotlin {
         }
     }
 }
+
+tasks.register<JavaExec>("runFdroidInfoBuilder") {
+    classpath = sourceSets["main"].runtimeClasspath
+    mainClass.set("com.linuxcommandlibrary.desktop.FdroiInfoBuilderKt")
+    workingDir = rootProject.projectDir
+}
+
+tasks.register<JavaExec>("runMarkdownBuilder") {
+    classpath = sourceSets["main"].runtimeClasspath
+    mainClass.set("com.linuxcommandlibrary.desktop.MarkdownBuilderKt")
+    workingDir = rootProject.projectDir
+}
