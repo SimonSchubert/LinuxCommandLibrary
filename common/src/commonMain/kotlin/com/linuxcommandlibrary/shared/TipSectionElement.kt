@@ -10,6 +10,7 @@ sealed class TextElement {
     data class Bold(val text: String) : TextElement()
     data class Italic(val text: String) : TextElement()
     data class Man(val man: String) : TextElement()
+    data class Link(val text: String, val action: String) : TextElement()
 }
 
 /**

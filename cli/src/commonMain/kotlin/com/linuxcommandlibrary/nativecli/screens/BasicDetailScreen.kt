@@ -62,6 +62,7 @@ class BasicDetailScreen(
             is com.linuxcommandlibrary.shared.TextElement.Bold -> Theme.boldText(element.text)
             is com.linuxcommandlibrary.shared.TextElement.Italic -> Theme.italicText(element.text)
             is com.linuxcommandlibrary.shared.TextElement.Man -> element.man
+            is com.linuxcommandlibrary.shared.TextElement.Link -> element.text
         }
     }
 

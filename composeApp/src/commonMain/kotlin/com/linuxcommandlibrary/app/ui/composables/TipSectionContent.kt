@@ -1,16 +1,20 @@
 package com.linuxcommandlibrary.app.ui.composables
 
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.text.ClickableText
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.LinkAnnotation
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -20,6 +24,8 @@ import com.linuxcommandlibrary.shared.TipSectionElement
 fun buildTextElementString(
     elements: List<TextElement>,
     textColor: Color = Color.Unspecified,
+    linkColor: Color = Color.Unspecified,
+    onNavigate: ((String) -> Unit)? = null,
 ): AnnotatedString = buildAnnotatedString {
     elements.forEach { textElement ->
         when (textElement) {
@@ -38,6 +44,36 @@ fun buildTextElementString(
             }
 
             is TextElement.Man -> append(textElement.man)
+
+            is TextElement.Link -> {
+                if (onNavigate != null) {
+                    val start = this.length
+                    withStyle(
+                        style = SpanStyle(
+                            color = linkColor,
+                            fontWeight = FontWeight.Bold,
+                            textDecoration = TextDecoration.Underline,
+                        ),
+                    ) {
+                        append(textElement.text)
+                    }
+                    val end = this.length
+                    addLink(
+                        LinkAnnotation.Clickable(
+                            tag = "action:${textElement.action}",
+                            linkInteractionListener = {
+                                onNavigate("action:${textElement.action}")
+                            },
+                        ),
+                        start,
+                        end,
+                    )
+                } else {
+                    withStyle(style = SpanStyle(fontWeight = FontWeight.Bold, color = textColor)) {
+                        append(textElement.text)
+                    }
+                }
+            }
         }
     }
 }
@@ -49,11 +85,12 @@ fun TipSectionContent(
     textColor: Color = Color.Unspecified,
     commandVerticalPadding: Dp = 0.dp,
 ) {
+    val linkColor = MaterialTheme.colors.primary
     sections.forEach { section ->
         when (section) {
             is TipSectionElement.Text -> {
-                val annotatedString = remember(section.elements, textColor) {
-                    buildTextElementString(section.elements, textColor)
+                val annotatedString = remember(section.elements, textColor, linkColor) {
+                    buildTextElementString(section.elements, textColor, linkColor, onNavigate)
                 }
                 Text(
                     text = annotatedString,

@@ -52,6 +52,7 @@ class TipDetailScreen(private val tip: TipInfo) : Screen {
             is TextElement.Bold -> Theme.boldText(element.text)
             is TextElement.Italic -> Theme.italicText(element.text)
             is TextElement.Man -> element.man
+            is TextElement.Link -> element.text
         }
     }
 

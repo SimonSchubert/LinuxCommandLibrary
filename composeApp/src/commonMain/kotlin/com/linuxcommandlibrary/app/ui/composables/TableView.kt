@@ -105,6 +105,8 @@ fun TableView(
                                             end,
                                         )
                                     }
+
+                                    is TextElement.Link -> append(element.text)
                                 }
                             }
                         }
@@ -126,5 +128,6 @@ private fun List<TextElement>.toPlainText(): String = this.joinToString("") { el
         is TextElement.Bold -> element.text
         is TextElement.Italic -> element.text
         is TextElement.Man -> element.man
+        is TextElement.Link -> element.text
     }
 }

@@ -63,6 +63,7 @@ import androidx.navigation.toRoute
 import com.linuxcommandlibrary.app.data.BasicsRepository
 import com.linuxcommandlibrary.app.data.CommandsRepository
 import com.linuxcommandlibrary.app.platform.backIcon
+import com.linuxcommandlibrary.app.platform.rememberOpenAppAction
 import com.linuxcommandlibrary.app.ui.composables.AppIcon
 import com.linuxcommandlibrary.app.ui.composables.rememberIconPainter
 import com.linuxcommandlibrary.app.ui.screens.AppInfoDialog
@@ -128,11 +129,16 @@ fun LinuxApp(initialDeeplink: String? = null) {
     }
     val showSearch = rememberSaveable { mutableStateOf(false) }
 
-    val onNavigate: (String) -> Unit = remember(navController) {
+    val openAppAction = rememberOpenAppAction()
+    val onNavigate: (String) -> Unit = remember(navController, openAppAction) {
         { route ->
-            val dest = parseRoute(route)
-            if (dest != null) {
-                navController.navigate(dest)
+            if (route.startsWith("action:")) {
+                openAppAction(route.removePrefix("action:"))
+            } else {
+                val dest = parseRoute(route)
+                if (dest != null) {
+                    navController.navigate(dest)
+                }
             }
         }
     }

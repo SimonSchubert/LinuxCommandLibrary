@@ -44,6 +44,7 @@ object HtmlMarkdownRenderer {
         is TextElement.Bold -> "<b>${element.text.escapeHtml()}</b>"
         is TextElement.Italic -> "<i>${element.text.escapeHtml()}</i>"
         is TextElement.Man -> """<a href="/man/${element.man}" title="${element.man} man page">${element.man}</a>"""
+        is TextElement.Link -> "<b>${element.text.escapeHtml()}</b>"
     }
 
     private fun renderCode(code: TipSectionElement.Code): String {
@@ -88,6 +89,7 @@ object HtmlMarkdownRenderer {
                     is TextElement.Bold -> element.text.isNotBlank()
                     is TextElement.Italic -> element.text.isNotBlank()
                     is TextElement.Man -> true
+                    is TextElement.Link -> element.text.isNotBlank()
                 }
             }
         }
