@@ -1,6 +1,6 @@
 # TAGLINE
 
-(Network Automation and Programmability Abstraction Layer with Multivendor
+Network automation library with multivendor support
 
 # TLDR
 
@@ -70,4 +70,4 @@ NAPALM was created by **David Barroso** and others at Spotify in **2015** to sim
 
 # SEE ALSO
 
-[netmiko](/man/netmiko)(1), [ansible](/man/ansible)(1), [nornir](/man/nornir)(1)
+[netmiko](/man/netmiko)(1), [ansible](/man/ansible)(1)

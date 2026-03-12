@@ -1,5 +1,3 @@
-# TLDR
-
 # TAGLINE
 
 Regenerate GRUB bootloader configuration

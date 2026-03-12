@@ -18,5 +18,5 @@ Convert color PPM images to grayscale
 
 # SEE ALSO
 
-[pgmtoppm](/man/pgmtoppm)(1), [ppmtopbm](/man/ppmtopbm)(1)
+[pgmtoppm](/man/pgmtoppm)(1)
 

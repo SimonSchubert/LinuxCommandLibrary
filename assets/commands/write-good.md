@@ -65,11 +65,11 @@ English prose linter for documentation
 **--no-cliches**
 > Disable cliche detection.
 
-**--no-eprime**
-> Disable E-Prime checking (forms of "to be").
+**--yes-eprime**
+> Enable E-Prime checking, flagging forms of "to be" (disabled by default).
 
 **--parse**
-> Parse text from stdin.
+> Enable parse-friendly output with Unix exit codes.
 
 # DESCRIPTION
 

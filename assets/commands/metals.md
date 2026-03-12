@@ -72,4 +72,4 @@ Metals was created by **Ólafur Páll Geirsson** at the **Scala Center** in **20
 
 # SEE ALSO
 
-[scala](/man/scala)(1), [sbt](/man/sbt)(1), [bloop](/man/bloop)(1), [coursier](/man/coursier)(1)
+[scala](/man/scala)(1), [sbt](/man/sbt)(1)

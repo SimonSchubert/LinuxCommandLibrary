@@ -55,4 +55,4 @@ Only works with LightDM display manager. Other display managers (GDM, SDDM) have
 
 # SEE ALSO
 
-[lightdm](/man/lightdm)(1), [loginctl](/man/loginctl)(1)
+[loginctl](/man/loginctl)(1)

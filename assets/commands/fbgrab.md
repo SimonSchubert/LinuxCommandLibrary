@@ -92,4 +92,4 @@ The **-c** option may require root privileges or the CAP_SYS_TTY_CONFIG capabili
 
 # SEE ALSO
 
-[scrot](/man/scrot)(1), [import](/man/import)(1), [xwd](/man/xwd)(1), [screenshot](/man/screenshot)(1)
+[scrot](/man/scrot)(1), [import](/man/import)(1)

@@ -1,5 +1,3 @@
-# TLDR
-
 # TAGLINE
 
 Control systemd services and system
@@ -110,4 +108,4 @@ Some commands require root privileges. The **--user** flag manages per-user serv
 
 # SEE ALSO
 
-[systemd](/man/systemd)(1), [journalctl](/man/journalctl)(1), [systemd.unit](/man/systemd.unit)(5), [systemd.service](/man/systemd.service)(5)
+[journalctl](/man/journalctl)(1)

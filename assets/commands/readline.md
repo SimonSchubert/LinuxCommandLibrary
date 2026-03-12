@@ -86,4 +86,4 @@ GNU Readline was written by **Brian Fox** for the GNU Project, becoming the stan
 
 # SEE ALSO
 
-[bash](/man/bash)(1), [inputrc](/man/inputrc)(5), [bind](/man/bind)(1)
+[bash](/man/bash)(1), [bind](/man/bind)(1)

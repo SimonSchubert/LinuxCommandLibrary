@@ -60,4 +60,4 @@ Not all ABC features may translate perfectly to LilyPond. Complex ABC constructs
 
 # SEE ALSO
 
-[lilypond](/man/lilypond)(1), [midi2ly](/man/midi2ly)(1), [musicxml2ly](/man/musicxml2ly)(1)
+[lilypond](/man/lilypond)(1)

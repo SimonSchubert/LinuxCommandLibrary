@@ -80,4 +80,4 @@ SICStus Prolog is commercial software requiring a valid license. When executing 
 
 # SEE ALSO
 
-[swipl](/man/swipl)(1), [gprolog](/man/gprolog)(1), [prolog](/man/prolog)(1)
+[swipl](/man/swipl)(1), [gprolog](/man/gprolog)(1)

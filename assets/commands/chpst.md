@@ -95,4 +95,4 @@ Changing user requires root privileges. Resource limits are per-process; child p
 
 # SEE ALSO
 
-[runsv](/man/runsv)(8), [runsvdir](/man/runsvdir)(8), [sv](/man/sv)(8), [setuidgid](/man/setuidgid)(8)
+[runsv](/man/runsv)(8), [runsvdir](/man/runsvdir)(8), [sv](/man/sv)(8)

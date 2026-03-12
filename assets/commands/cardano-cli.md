@@ -95,4 +95,4 @@ Requires a running and synced cardano-node. Socket path must be accessible. Tran
 
 # SEE ALSO
 
-[cardano-node](/man/cardano-node)(1), [cardano-wallet](/man/cardano-wallet)(1), [cardano-address](/man/cardano-address)(1)
+[cardano-node](/man/cardano-node)(1), [cardano-wallet](/man/cardano-wallet)(1)

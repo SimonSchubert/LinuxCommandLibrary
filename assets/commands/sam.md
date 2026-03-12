@@ -10,11 +10,7 @@ AWS Serverless Application Model CLI
 
 Initialize with specific **runtime**
 
-```sam init -r python3.7```
-
-**Package** a SAM application
-
-```sam package```
+```sam init --runtime [python3.12]```
 
 **Build** Lambda function code
 
@@ -24,9 +20,17 @@ Run serverless application **locally**
 
 ```sam local start-api```
 
-**Deploy** an AWS SAM application
+**Invoke** a Lambda function locally
 
-```sam deploy```
+```sam local invoke [FunctionName]```
+
+**Deploy** with guided prompts
+
+```sam deploy --guided```
+
+**Validate** a SAM template
+
+```sam validate```
 
 # SYNOPSIS
 
@@ -37,20 +41,35 @@ Run serverless application **locally**
 **init**
 > Initialize a new serverless application
 
-**-r**, **--runtime** _runtime_
-> Specify Lambda runtime (python3.7, nodejs18.x, etc.)
-
-**package**
-> Package application for deployment
-
 **build**
 > Build Lambda function code
+
+**deploy**
+> Deploy application to AWS
+
+**delete**
+> Delete a deployed application and its resources
+
+**validate**
+> Validate a SAM template
+
+**sync**
+> Sync local changes to a deployed application
+
+**logs**
+> Fetch and display Lambda function logs
+
+**local invoke**
+> Invoke a Lambda function locally
 
 **local start-api**
 > Run API Gateway locally
 
-**deploy**
-> Deploy application to AWS
+**local start-lambda**
+> Start a local Lambda endpoint
+
+**local generate-event**
+> Generate sample event payloads for testing
 
 # DESCRIPTION
 

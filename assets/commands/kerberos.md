@@ -71,4 +71,4 @@ Kerberos was developed at **MIT** as part of Project Athena. Version 5 is the cu
 
 # SEE ALSO
 
-[kinit](/man/kinit)(1), [klist](/man/klist)(1), [kdestroy](/man/kdestroy)(1), [kpasswd](/man/kpasswd)(1)
+[kinit](/man/kinit)(1)

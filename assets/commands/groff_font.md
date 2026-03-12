@@ -60,4 +60,4 @@ Font availability depends on device. Custom fonts need proper installation. Post
 
 # SEE ALSO
 
-[groff](/man/groff)(1), [troff](/man/troff)(1), [afmtodit](/man/afmtodit)(1), [groff_out](/man/groff_out)(5)
+[groff](/man/groff)(1), [troff](/man/troff)(1), [afmtodit](/man/afmtodit)(1)

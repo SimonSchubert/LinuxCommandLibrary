@@ -76,4 +76,4 @@ Must be run under Sway compositor. Limited system tray support compared to stand
 
 # SEE ALSO
 
-[sway](/man/sway)(1), [i3status](/man/i3status)(1), [waybar](/man/waybar)(1), [i3bar](/man/i3bar)(1)
+[sway](/man/sway)(1), [i3status](/man/i3status)(1), [waybar](/man/waybar)(1)

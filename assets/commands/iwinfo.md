@@ -68,4 +68,4 @@ iwinfo was developed for OpenWrt to provide a consistent interface for wireless 
 
 # SEE ALSO
 
-[iw](/man/iw)(8), [uci](/man/uci)(1), [wifi](/man/wifi)(1)
+[iw](/man/iw)(8), [uci](/man/uci)(1)

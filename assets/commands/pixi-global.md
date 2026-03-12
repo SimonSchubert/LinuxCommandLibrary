@@ -16,9 +16,17 @@ Manage globally installed Pixi packages
 
 ```pixi global remove [package]```
 
-**Upgrade global packages**
+**Update all global packages**
 
-```pixi global upgrade --all```
+```pixi global update --all```
+
+**Sync** manifest with installed environments
+
+```pixi global sync```
+
+**Edit** the global manifest file
+
+```pixi global edit```
 
 # SYNOPSIS
 
@@ -27,19 +35,31 @@ Manage globally installed Pixi packages
 # PARAMETERS
 
 **install** _package_
-> Install package globally.
+> Install a package in a globally accessible location and expose its executables.
+
+**uninstall** _environment_
+> Uninstall a global environment.
 
 **list**
-> List global packages.
+> List global environments with their dependencies and exposed commands.
+
+**add** _package_
+> Add dependencies to a global environment.
 
 **remove** _package_
-> Remove global package.
+> Remove dependencies from a global environment.
 
-**upgrade** _package_
-> Upgrade global package.
+**update** _package_
+> Update packages in global environments. Use **--all** to update all.
 
-**--all**
-> Apply to all packages.
+**sync**
+> Synchronize the global manifest with installed environments.
+
+**edit**
+> Open the global manifest file in your editor.
+
+**expose**
+> Manage exposure of binaries in global environments.
 
 # DESCRIPTION
 

@@ -71,4 +71,4 @@ Push is a core **Mercurial** command for distributed collaboration since version
 
 # SEE ALSO
 
-[hg](/man/hg)(1), [hg-pull](/man/hg-pull)(1), [hg-outgoing](/man/hg-outgoing)(1)
+[hg](/man/hg)(1), [hg-pull](/man/hg-pull)(1)

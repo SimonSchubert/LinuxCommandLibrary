@@ -8,17 +8,25 @@ Print file access events on **all** filesystems
 
 ```sudo fatrace```
 
-Limit to specific **program** name
+Limit to a specific **command** name
 
-```sudo fatrace [-C|--command] [program_name]```
+```sudo fatrace -C [program_name]```
 
 Print events on **current mount** only
 
-```sudo fatrace [-c|--current-mount]```
+```sudo fatrace -c```
 
 Add **timestamps** to output
 
-```sudo fatrace [-t|--timestamp]```
+```sudo fatrace -t```
+
+Show only **read and write** events
+
+```sudo fatrace -f RW```
+
+Stop after **10 seconds** and write to file
+
+```sudo fatrace -s [10] -o [output.log]```
 
 # SYNOPSIS
 
@@ -26,26 +34,35 @@ Add **timestamps** to output
 
 # DESCRIPTION
 
-**fatrace** reports file access events from the kernel's fanotify interface. It shows which processes are accessing which files in real-time.
+**fatrace** reports file access events from the kernel's fanotify interface. It shows which processes are accessing which files in real-time, helping identify processes causing unnecessary disk activity or wake-ups.
 
 Useful for debugging, security monitoring, and understanding application file access patterns.
 
 # PARAMETERS
 
-**-C, --command** _name_
-> Only report for specific command
+**-c**, **--current-mount**
+> Only record events on the partition/mount of the current directory.
 
-**-c, --current-mount**
-> Only report current mount
+**-C**, **--command** _COMMAND_
+> Show only events for this command name.
 
-**-t, --timestamp**
-> Add timestamps
+**-f**, **--filter** _TYPES_
+> Show only the given event types: C (close), R (read), O (open), W (write), D (delete), + (create), < (move).
 
-**-p, --pid** _pid_
-> Filter by process ID
+**-o**, **--output** _FILE_
+> Write events to the given file instead of standard output.
 
-**-f, --filter** _types_
-> Filter event types (R, W, O, C)
+**-p**, **--ignore-pid** _PID_
+> Ignore events for this process ID. Can be specified multiple times.
+
+**-s**, **--seconds** _SECONDS_
+> Stop after the given number of seconds.
+
+**-t**, **--timestamp**
+> Add timestamps to events. Specify twice for epoch format.
+
+**-h**, **--help**
+> Print help and exit.
 
 # CAVEATS
 

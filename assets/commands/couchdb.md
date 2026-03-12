@@ -58,6 +58,12 @@ Document-oriented NoSQL database server
 **-r** _SECONDS_
 > Respawn CouchDB after crash with delay.
 
+**-s**
+> Display the status of a background CouchDB process.
+
+**-k**
+> Kill a background CouchDB process (will respawn if -r is set).
+
 **-a** _ARGS_
 > Additional Erlang VM arguments.
 

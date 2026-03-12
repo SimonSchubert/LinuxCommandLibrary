@@ -12,15 +12,15 @@ Animated pipes terminal screensaver
 
 ```pipes.sh -p [5]```
 
-**Set frame rate**
+**Set frame rate** (default: 75)
 
-```pipes.sh -f [60]```
+```pipes.sh -f [75]```
 
-**Random colors**
+**Set pipe colors** (0-7, multiple allowed)
 
-```pipes.sh -c [1]```
+```pipes.sh -c 1 2 3```
 
-**Set pipe types**
+**Set pipe type** (0=heavy, 1=arc, 2=light, 3=double, 4=ASCII)
 
 ```pipes.sh -t [0]```
 
@@ -34,30 +34,42 @@ Animated pipes terminal screensaver
 
 # SYNOPSIS
 
-**pipes.sh** [_-p n_] [_-f fps_] [_-c mode_] [_-t type_] [_options_]
+**pipes.sh** [_options_...]
 
 # PARAMETERS
 
 **-p** _N_
-> Number of pipes.
+> Number of pipes (default: 1).
 
 **-f** _FPS_
-> Target frame rate.
+> Frame rate (default: 75).
 
-**-c** _MODE_
-> Color mode.
+**-c** _COLOR_
+> Colors of pipes as space-separated values 0-7 (default: 1 2 3 4 5 6 7 0).
 
 **-t** _TYPE_
-> Pipe character set.
+> Pipe type: 0=heavy, 1=arc, 2=light, 3=double, 4=ASCII box, 5=slashes, 6=dots, 7=circles, 8=railway, 9=knobby.
 
-**-r** _N_
-> Reset after N characters.
+**-s** _N_
+> Probability of straight fitting, 5-15 (default: 13).
+
+**-r** _LIMIT_
+> Reset drawing after LIMIT characters (default: 2000).
 
 **-R**
-> Random starting point.
+> Randomize starting position and direction.
 
 **-B**
-> No bold.
+> Disable bold effect.
+
+**-C**
+> Disable color.
+
+**-K**
+> No change of colors and types when hitting screen edges.
+
+**-v**
+> Print version number.
 
 **-h**
 > Show help.

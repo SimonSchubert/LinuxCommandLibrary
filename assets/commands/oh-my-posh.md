@@ -31,28 +31,41 @@ prompt theme engine
 # PARAMETERS
 
 **init** _SHELL_
-> Initialize for shell.
-
-**print** _SEGMENT_
-> Print prompt segment.
+> Generate shell initialization script (bash, zsh, fish, powershell, cmd, nu).
 
 **get themes**
-> List themes.
+> List available themes.
+
+**get shell**
+> Display current shell information.
+
+**config export**
+> Export current theme configuration.
+
+**config migrate**
+> Migrate configuration to current version format.
+
+**font install**
+> Install a Nerd Font.
+
+**cache clear**
+> Clear the prompt cache.
+
+**upgrade**
+> Update oh-my-posh to the latest version.
+
+**toggle** _segment_
+> Enable or disable a specific prompt segment.
 
 **debug**
-> Debug prompt.
+> Show prompt rendering diagnostics.
 
 **--config** _FILE_
-> Configuration file.
-
-**--help**
-> Display help information.
+> Path to configuration file (JSON, YAML, or TOML).
 
 # DESCRIPTION
 
-**oh-my-posh** is a prompt theme engine. Customizes shell prompts with themes.
-
-The tool provides rich prompt customization. Cross-shell compatible.
+**oh-my-posh** is a cross-platform prompt theme engine that renders customizable shell prompts using configurable segments for git status, language versions, execution time, and more. It works with bash, zsh, fish, PowerShell, cmd, and nu.
 
 # CAVEATS
 

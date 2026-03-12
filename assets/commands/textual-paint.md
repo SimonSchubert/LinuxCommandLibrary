@@ -30,4 +30,4 @@ MS Paint in your terminal
 
 # SEE ALSO
 
-[chafa](/man/chafa)(1), [moebius](/man/moebius)(1), [figlet](/man/figlet)(1)
+[chafa](/man/chafa)(1), [figlet](/man/figlet)(1)

@@ -97,4 +97,4 @@ Check_MK was created by **Mathias Kettner** in **2008** as an extension to Nagio
 
 # SEE ALSO
 
-[nagios](/man/nagios)(8), [icinga2](/man/icinga2)(8), [prometheus](/man/prometheus)(1), [zabbix](/man/zabbix)(1)
+[nagios](/man/nagios)(8), [icinga2](/man/icinga2)(8), [prometheus](/man/prometheus)(1)

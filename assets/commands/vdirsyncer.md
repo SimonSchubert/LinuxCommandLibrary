@@ -76,4 +76,4 @@ Initial discover is required before sync. Google CardDAV has known issues with d
 
 # SEE ALSO
 
-[khal](/man/khal)(1), [khard](/man/khard)(1), [calcurse](/man/calcurse)(1)
+[khal](/man/khal)(1), [calcurse](/man/calcurse)(1)

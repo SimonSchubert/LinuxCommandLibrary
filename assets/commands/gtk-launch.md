@@ -1,6 +1,6 @@
 # TAGLINE
 
-launches applications using their
+Launch an application using its desktop file
 
 # TLDR
 

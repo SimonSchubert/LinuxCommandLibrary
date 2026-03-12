@@ -77,4 +77,4 @@ Samba was created by **Andrew Tridgell** in **1992** as a reverse-engineered imp
 
 # SEE ALSO
 
-[smbd](/man/smbd)(8), [nmbd](/man/nmbd)(8), [smbclient](/man/smbclient)(1), [testparm](/man/testparm)(1)
+[smbclient](/man/smbclient)(1)

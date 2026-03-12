@@ -55,4 +55,4 @@ Part of **Proton VPN** CLI client for Linux, developed by Proton AG for secure i
 
 # SEE ALSO
 
-[protonvpn](/man/protonvpn)(1), [openvpn](/man/openvpn)(8), [wireguard](/man/wireguard)(8)
+[protonvpn](/man/protonvpn)(1), [openvpn](/man/openvpn)(8)

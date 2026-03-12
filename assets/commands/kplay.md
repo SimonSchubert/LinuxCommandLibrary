@@ -40,4 +40,4 @@ Requires a running Kafka cluster and properly configured profiles. Authenticatio
 
 # SEE ALSO
 
-[kaskade](/man/kaskade)(1), [kafkactl](/man/kafkactl)(1)
+[kaskade](/man/kaskade)(1)

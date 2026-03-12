@@ -51,4 +51,4 @@ Hooks are not version-controlled in .git/hooks. Use tools like Husky or pre-comm
 
 # SEE ALSO
 
-[git](/man/git)(1), [githooks](/man/githooks)(5), [husky](/man/husky)(1), [pre-commit](/man/pre-commit)(1)
+[git](/man/git)(1), [husky](/man/husky)(1), [pre-commit](/man/pre-commit)(1)

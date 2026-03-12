@@ -97,4 +97,4 @@ Requires exclusive lock on the table during operation, blocking all other access
 
 # SEE ALSO
 
-[psql](/man/psql)(1), [vacuumdb](/man/vacuumdb)(1), [reindexdb](/man/reindexdb)(1), [pg_repack](/man/pg_repack)(1)
+[psql](/man/psql)(1), [vacuumdb](/man/vacuumdb)(1), [reindexdb](/man/reindexdb)(1)

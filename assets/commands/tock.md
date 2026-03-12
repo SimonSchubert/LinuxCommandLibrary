@@ -51,4 +51,4 @@ UNIX only due to termios usage.
 
 # SEE ALSO
 
-[tty-clock](/man/tty-clock)(1), [peaclock](/man/peaclock)(1), [clock](/man/clock)(1)
+[date](/man/date)(1)

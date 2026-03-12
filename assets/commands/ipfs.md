@@ -1,6 +1,6 @@
 # TAGLINE
 
-command-line interface for the InterPlanetary File System, a distributed
+InterPlanetary File System distributed peer-to-peer CLI
 
 # TLDR
 
@@ -93,5 +93,5 @@ command-line interface for the InterPlanetary File System, a distributed
 
 # SEE ALSO
 
-[ipget](/man/ipget)(1), [wget](/man/wget)(1)
+[wget](/man/wget)(1)
 

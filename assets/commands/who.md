@@ -77,7 +77,7 @@ Show logged-in users
 
 The basic output shows username, terminal line, and login time. Additional options reveal idle time, process IDs, and message status (whether the user accepts write/talk messages).
 
-**who am i** (or **whoami**) shows information about the current session only, useful for determining your identity especially after **su** or in scripts.
+**who am i** shows information about the original login session. Unlike **whoami** (which shows the effective user), **who am i** displays the user who originally logged in, even after **su** to another account.
 
 The command can read historical login data from **/var/log/wtmp** to show past logins.
 

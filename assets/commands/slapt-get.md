@@ -58,6 +58,18 @@ APT-like package manager for Slackware
 **--autoclean**
 > Remove only obsolete packages from cache
 
+**--dist-upgrade**
+> Upgrade to a newer Slackware release
+
+**--list**
+> Display all available packages from configured sources
+
+**--installed**
+> List all currently installed packages
+
+**--remove-obsolete**
+> Mark non-downloadable packages for removal (used with --remove or --dist-upgrade)
+
 # DESCRIPTION
 
 **slapt-get** is an APT-like package management system for Slackware Linux. It provides dependency resolution and mirrors the familiar apt-get workflow for managing packages.

@@ -68,8 +68,20 @@ The tool is useful for troubleshooting search issues, reclaiming disk space used
 **check**
 > Find and index unindexed files
 
+**index** _file..._
+> Manually index specific files
+
+**clear** _file..._
+> Remove specific files from the index
+
+**config**
+> Modify Baloo configuration
+
 **monitor**
 > Monitor indexer activity
+
+**failed**
+> List files that could not be indexed
 
 # CONFIGURATION
 
@@ -86,4 +98,4 @@ Purging the index requires re-indexing all files which can take time. The indexe
 
 # SEE ALSO
 
-[kfind](/man/kfind)(1), [locate](/man/locate)(1)
+[locate](/man/locate)(1)

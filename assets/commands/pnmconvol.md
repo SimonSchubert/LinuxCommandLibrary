@@ -23,19 +23,25 @@ Apply convolution filters to PNM images
 # PARAMETERS
 
 _CONVOLUTION_
-> Matrix file or specification.
+> Convolution matrix as a PGM file.
 
 _INPUT_
-> Input PNM file.
+> Input PNM image file.
 
 **-matrix** _SPEC_
-> Inline matrix.
+> Specify convolution matrix inline (e.g., "1,1,1;1,1,1;1,1,1").
+
+**-matrixfile** _FILE_
+> Read convolution matrix from a file.
 
 **-normalize**
-> Normalize output.
+> Scale weights to sum to one, preserving overall image brightness.
 
-**--help**
-> Display help.
+**-bias** _n_
+> Amount to add to each convolved sample value, useful for handling negative results.
+
+**-nooffset**
+> Normalize matrix values by dividing by maxval instead of using offset calculations.
 
 # DESCRIPTION
 

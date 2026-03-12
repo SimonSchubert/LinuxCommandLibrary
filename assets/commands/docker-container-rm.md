@@ -31,7 +31,7 @@ remove one or more containers
 # PARAMETERS
 
 **-f**, **--force**
-> Force removal of running container.
+> Force the removal of a running container (uses SIGKILL).
 
 **-v**, **--volumes**
 > Remove anonymous volumes.

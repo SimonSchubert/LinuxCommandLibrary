@@ -69,6 +69,18 @@ The tool reads packet capture files containing wireless traffic, identifies encr
 **-y**
 > Experimental single brute-force attack, used when standard attacks fail with over 1 million IVs
 
+**-z**
+> Use PTW attack for WEP cracking (default)
+
+**-D**, **--wep-decloak**
+> WEP decloak mode, skips broken keystreams
+
+**-M** _num_
+> Maximum number of IVs to use for WEP cracking
+
+**-1**, **--oneshot**
+> Run only one try to crack key with PTW
+
 # CAVEATS
 
 For authorized security testing only. WPA/WPA2 cracking requires a captured 4-way handshake. Success depends on wordlist quality; complex passwords may be uncrackable. GPU-accelerated tools like hashcat are faster for WPA.

@@ -18,7 +18,7 @@ Get **placement group** statistics
 
 **Create** a storage pool
 
-```ceph osd pool create [pool_name] [page_number]```
+```ceph osd pool create [pool_name] [pg_num]```
 
 **Delete** a storage pool
 
@@ -92,4 +92,4 @@ Requires proper Ceph configuration and authentication. Cluster operations may ta
 
 # SEE ALSO
 
-[cephadm](/man/cephadm)(8), [rbd](/man/rbd)(8), [rados](/man/rados)(8)
+[cephadm](/man/cephadm)(8)

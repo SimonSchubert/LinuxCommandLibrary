@@ -20,9 +20,13 @@ Google Chrome web browser
 
 ```google-chrome --new-window [url]```
 
-**Headless mode**
+**Headless screenshot**
 
 ```google-chrome --headless --screenshot [url]```
+
+**Save page as PDF**
+
+```google-chrome --headless --print-to-pdf [url]```
 
 # SYNOPSIS
 
@@ -46,13 +50,25 @@ _URLS_
 > Disable GPU acceleration.
 
 **--screenshot**
-> Take screenshot (headless).
+> Take screenshot in headless mode.
+
+**--print-to-pdf**
+> Save page as PDF in headless mode.
+
+**--no-sandbox**
+> Disable the sandbox security model (needed in some container environments).
+
+**--disable-extensions**
+> Start without any installed extensions.
+
+**--proxy-server** _URL_
+> Set a proxy server for the browser.
+
+**--window-size** _W,H_
+> Set the initial window size.
 
 **--user-data-dir** _DIR_
 > Profile directory.
-
-**--help**
-> Display help information.
 
 # DESCRIPTION
 
