@@ -1,0 +1,5 @@
+Add dynamic color/theme support for Android
+Add new commands
+Add "Build Debian Linux on Android 15+" section to tips
+Upgrade SDKs and dependencies
+Add Play Store build automatization

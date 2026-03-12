@@ -21,7 +21,9 @@ brew install --cask simonschubert/tap/linux-command-library
 
 CLI:
 
-```brew install simonschubert/tap/linux-command-library-cli```
+```
+brew install simonschubert/tap/linux-command-library-cli
+```
 
 ### Android screenshots
 
