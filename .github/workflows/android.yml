@@ -361,57 +361,57 @@ jobs:
           fetch-depth: 0
 
       - name: Download APK Artifact
-        uses: actions/download-artifact@v4.1.7
+        uses: actions/download-artifact@v4
         with:
           name: signed-apk
 
       - name: Download CLI Linux x64 Artifact
-        uses: actions/download-artifact@v4.1.7
+        uses: actions/download-artifact@v4
         with:
           name: cli-linux-x64
 
       - name: Download CLI Linux arm64 Artifact
-        uses: actions/download-artifact@v4.1.7
+        uses: actions/download-artifact@v4
         with:
           name: cli-linux-arm64
 
       - name: Download CLI macOS x64 Artifact
-        uses: actions/download-artifact@v4.1.7
+        uses: actions/download-artifact@v4
         with:
           name: cli-macos-x64
 
       - name: Download CLI macOS arm64 Artifact
-        uses: actions/download-artifact@v4.1.7
+        uses: actions/download-artifact@v4
         with:
           name: cli-macos-arm64
 
       - name: Download CLI Windows x64 Artifact
-        uses: actions/download-artifact@v4.1.7
+        uses: actions/download-artifact@v4
         with:
           name: cli-windows-x64
 
       - name: Download DMG Artifact
-        uses: actions/download-artifact@v4.1.7
+        uses: actions/download-artifact@v4
         with:
           name: dmg-package
 
       - name: Download MSI Artifact
-        uses: actions/download-artifact@v4.1.7
+        uses: actions/download-artifact@v4
         with:
           name: msi-package
 
       - name: Download DEB Artifact
-        uses: actions/download-artifact@v4.1.7
+        uses: actions/download-artifact@v4
         with:
           name: deb-package
 
       - name: Download RPM Artifact
-        uses: actions/download-artifact@v4.1.7
+        uses: actions/download-artifact@v4
         with:
           name: rpm-package
 
       - name: Download AppImage Artifact
-        uses: actions/download-artifact@v4.1.7
+        uses: actions/download-artifact@v4
         with:
           name: appimage-package
 
