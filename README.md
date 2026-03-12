@@ -15,7 +15,9 @@ Native CLI and GUI binaries for Linux, macOS, and Windows are available in [Rele
 
 GUI:
 
-```brew install --cask simonschubert/tap/linux-command-library```
+```
+brew install --cask simonschubert/tap/linux-command-library
+```
 
 CLI:
 

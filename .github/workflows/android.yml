@@ -296,6 +296,60 @@ jobs:
           name: appimage-package
           path: LinuxCommandLibrary-*.AppImage
 
+  play-store:
+    name: Upload AAB to Play Store
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - name: Set execution flag for gradlew
+        run: chmod +x gradlew
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+      - name: Decode keystore
+        run: echo "${{ secrets.KEYSTORE_B64 }}" | base64 --decode > /tmp/keystore.jks
+      - name: Decode service account key
+        run: echo "${{ secrets.SERVICE_ACCOUNT_JSON }}" | base64 --decode > fastlane/play-store-key.json
+      - name: Extract changelog for Play Store
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          VERSION_CODE=$(grep "androidVersionCode" gradle/libs.versions.toml | head -1 | sed 's/.*= *"\([0-9]*\)".*/\1/')
+          CHANGELOG_DIR="fastlane/metadata/android/en-US/changelogs"
+          mkdir -p "$CHANGELOG_DIR"
+          if [ -f CHANGELOG.md ]; then
+            sed -n "/^## v${VERSION}/,/^## v/{ /^## v${VERSION}/d; /^## v/d; p; }" CHANGELOG.md > "$CHANGELOG_DIR/${VERSION_CODE}.txt"
+          fi
+          if [ ! -s "$CHANGELOG_DIR/${VERSION_CODE}.txt" ]; then
+            PREVIOUS_TAG=$(git tag --sort=-creatordate | grep -v "^${GITHUB_REF_NAME}$" | head -n1)
+            if [ -z "$PREVIOUS_TAG" ]; then
+              git log --pretty=format:"- %s" "${GITHUB_REF_NAME}" > "$CHANGELOG_DIR/${VERSION_CODE}.txt"
+            else
+              git log --pretty=format:"- %s" "${PREVIOUS_TAG}..${GITHUB_REF_NAME}" --no-merges > "$CHANGELOG_DIR/${VERSION_CODE}.txt"
+            fi
+          fi
+          # Play Store changelog limit is 500 characters
+          truncate -s '<500' "$CHANGELOG_DIR/${VERSION_CODE}.txt" 2>/dev/null || true
+      - name: Build signed AAB
+        run: ./gradlew bundleRelease --stacktrace
+        env:
+          KEYSTORE_FILE: /tmp/keystore.jks
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+      - name: Deploy to Play Store
+        run: bundle exec fastlane android deploy
+
   release:
     name: Release All Platforms
     needs: [apk, cli-linux, cli-macos, cli-windows, dmg, msi, deb, rpm, appimage]

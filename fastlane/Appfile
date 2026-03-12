@@ -1,0 +1,2 @@
+package_name("com.inspiredandroid.linuxcommandbibliotheca")
+json_key_file("fastlane/play-store-key.json")
