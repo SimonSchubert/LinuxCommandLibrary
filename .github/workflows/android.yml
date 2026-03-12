@@ -42,7 +42,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: signed-apk
-          path: android/build/outputs/apk/release/android-release-unsigned-signed.apk
+          path: android/build/outputs/apk/release/android-release-signed.apk
 
   cli-linux:
     name: Build CLI (Linux)
@@ -436,7 +436,7 @@ jobs:
       - name: Rename assets
         run: |
           VERSION="${GITHUB_REF_NAME#v}"
-          mv android-release-unsigned-signed.apk "LinuxCommandLibrary-${VERSION}-android.apk"
+          mv android-release-signed.apk "LinuxCommandLibrary-${VERSION}-android.apk"
           mv *.dmg "LinuxCommandLibrary-${VERSION}-macos.dmg"
           mv *.msi "LinuxCommandLibrary-${VERSION}-windows.msi"
           mv *.deb "LinuxCommandLibrary-${VERSION}-linux.deb"
