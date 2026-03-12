@@ -303,6 +303,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Download APK Artifact
         uses: actions/download-artifact@v4.1.7
@@ -362,145 +364,36 @@ jobs:
       - name: List downloaded files (for debugging)
         run: ls -la
 
-      - name: Get DMG filename
-        id: dmg
-        run: echo "file=$(ls *.dmg | head -n1)" >> $GITHUB_OUTPUT
+      - name: Extract changelog
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          if [ -f CHANGELOG.md ]; then
+            sed -n "/^## v${VERSION}/,/^## v/{ /^## v${VERSION}/d; /^## v/d; p; }" CHANGELOG.md > changelog.txt
+          fi
+          if [ ! -s changelog.txt ]; then
+            PREVIOUS_TAG=$(git tag --sort=-creatordate | grep -v "^${GITHUB_REF_NAME}$" | head -n1)
+            if [ -z "$PREVIOUS_TAG" ]; then
+              git log --pretty=format:"- %s" "${GITHUB_REF_NAME}" > changelog.txt
+            else
+              git log --pretty=format:"- %s" "${PREVIOUS_TAG}..${GITHUB_REF_NAME}" --no-merges > changelog.txt
+            fi
+          fi
 
-      - name: Get MSI filename
-        id: msi
-        run: echo "file=$(ls *.msi | head -n1)" >> $GITHUB_OUTPUT
-
-      - name: Get DEB filename
-        id: deb
-        run: echo "file=$(ls *.deb | head -n1)" >> $GITHUB_OUTPUT
-
-      - name: Get RPM filename
-        id: rpm
-        run: echo "file=$(ls *.rpm | head -n1)" >> $GITHUB_OUTPUT
-
-      - name: Get AppImage filename
-        id: appimage
-        run: echo "file=$(ls *.AppImage | head -n1)" >> $GITHUB_OUTPUT
-
-      - name: Get version
-        id: get_version
-        run: echo "version=${GITHUB_REF_NAME#v}" >> $GITHUB_OUTPUT
+      - name: Rename assets
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          mv android-release-unsigned-signed.apk "LinuxCommandLibrary-${VERSION}-android.apk"
+          mv *.dmg "LinuxCommandLibrary-${VERSION}-macos.dmg"
+          mv *.msi "LinuxCommandLibrary-${VERSION}-windows.msi"
+          mv *.deb "LinuxCommandLibrary-${VERSION}-linux.deb"
+          mv *.rpm "LinuxCommandLibrary-${VERSION}-linux.rpm"
+          mv *.AppImage "LinuxCommandLibrary-${VERSION}-linux.AppImage"
 
       - name: Create Github Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-
-      - name: Upload APK to Github Release
-        uses: actions/upload-release-asset@v1.0.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: android-release-unsigned-signed.apk
-          asset_name: LinuxCommandLibrary-${{ steps.get_version.outputs.version }}-android.apk
-          asset_content_type: application/zip
-
-      - name: Upload CLI Linux x64 to Github Release
-        uses: actions/upload-release-asset@v1.0.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: cli-linux-x64.zip
-          asset_name: LinuxCommandLibrary-${{ steps.get_version.outputs.version }}-cli-linux-x64.zip
-          asset_content_type: application/zip
-
-      - name: Upload CLI Linux arm64 to Github Release
-        uses: actions/upload-release-asset@v1.0.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: cli-linux-arm64.zip
-          asset_name: LinuxCommandLibrary-${{ steps.get_version.outputs.version }}-cli-linux-arm64.zip
-          asset_content_type: application/zip
-
-      - name: Upload CLI macOS x64 to Github Release
-        uses: actions/upload-release-asset@v1.0.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: cli-macos-x64.zip
-          asset_name: LinuxCommandLibrary-${{ steps.get_version.outputs.version }}-cli-macos-x64.zip
-          asset_content_type: application/zip
-
-      - name: Upload CLI macOS arm64 to Github Release
-        uses: actions/upload-release-asset@v1.0.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: cli-macos-arm64.zip
-          asset_name: LinuxCommandLibrary-${{ steps.get_version.outputs.version }}-cli-macos-arm64.zip
-          asset_content_type: application/zip
-
-      - name: Upload CLI Windows x64 to Github Release
-        uses: actions/upload-release-asset@v1.0.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: cli-windows-x64.zip
-          asset_name: LinuxCommandLibrary-${{ steps.get_version.outputs.version }}-cli-windows-x64.zip
-          asset_content_type: application/zip
-
-      - name: Upload DMG to Github Release
-        uses: actions/upload-release-asset@v1.0.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ${{ steps.dmg.outputs.file }}
-          asset_name: LinuxCommandLibrary-${{ steps.get_version.outputs.version }}-macos.dmg
-          asset_content_type: application/octet-stream
-
-      - name: Upload MSI to Github Release
-        uses: actions/upload-release-asset@v1.0.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ${{ steps.msi.outputs.file }}
-          asset_name: LinuxCommandLibrary-${{ steps.get_version.outputs.version }}-windows.msi
-          asset_content_type: application/octet-stream
-
-      - name: Upload DEB to Github Release
-        uses: actions/upload-release-asset@v1.0.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ${{ steps.deb.outputs.file }}
-          asset_name: LinuxCommandLibrary-${{ steps.get_version.outputs.version }}-linux.deb
-          asset_content_type: application/octet-stream
-
-      - name: Upload RPM to Github Release
-        uses: actions/upload-release-asset@v1.0.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ${{ steps.rpm.outputs.file }}
-          asset_name: LinuxCommandLibrary-${{ steps.get_version.outputs.version }}-linux.rpm
-          asset_content_type: application/octet-stream
-
-      - name: Upload AppImage to Github Release
-        uses: actions/upload-release-asset@v1.0.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ${{ steps.appimage.outputs.file }}
-          asset_name: LinuxCommandLibrary-${{ steps.get_version.outputs.version }}-linux.AppImage
-          asset_content_type: application/octet-stream
+          name: Release ${{ github.ref_name }}
+          body_path: changelog.txt
+          files: |
+            LinuxCommandLibrary-*
+            cli-*.zip
