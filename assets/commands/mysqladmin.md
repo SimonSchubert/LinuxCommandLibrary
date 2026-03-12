@@ -63,14 +63,20 @@ _COMMAND_
 **drop** _DB_
 > Drop database.
 
+**flush-privileges**
+> Reload grant tables.
+
+**extended-status**
+> Show server status variables.
+
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**mysqladmin** administers MySQL servers. It performs administrative operations.
+**mysqladmin** is a command-line client for performing administrative operations on MySQL servers. It can check server status, create and drop databases, reload privileges, flush logs, and shut down the server.
 
-The tool manages databases, users, and server state. Essential for DBA tasks.
+Common administrative tasks include checking if the server is alive (**ping**), viewing server variables and status counters (**variables**, **extended-status**), reloading grant tables after permission changes (**flush-privileges**), and monitoring active connections (**processlist**).
 
 # CAVEATS
 

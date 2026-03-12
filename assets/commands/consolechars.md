@@ -76,4 +76,4 @@ Only affects Linux virtual consoles (tty1-tty6), not terminal emulators in graph
 
 # SEE ALSO
 
-[setfont](/man/setfont)(8), [showconsolefont](/man/showconsolefont)(1), [loadkeys](/man/loadkeys)(1), [vconsole.conf](/man/vconsole.conf)(5)
+[setfont](/man/setfont)(8), [showconsolefont](/man/showconsolefont)(1), [loadkeys](/man/loadkeys)(1)

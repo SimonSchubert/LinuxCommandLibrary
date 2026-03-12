@@ -1,6 +1,6 @@
 # TAGLINE
 
-version 1
+Load Windows NDIS network drivers on Linux
 
 # TLDR
 

@@ -27,7 +27,10 @@ installs from package-lock
 # PARAMETERS
 
 **--production**
-> Skip devDependencies.
+> Skip devDependencies (npm 6; use --omit=dev in npm 7+).
+
+**--omit** _TYPE_
+> Omit dependency type (dev, optional, peer).
 
 **--legacy-peer-deps**
 > Ignore peer dep conflicts.
@@ -40,9 +43,9 @@ installs from package-lock
 
 # DESCRIPTION
 
-**npm ci** installs from package-lock.json exactly. Designed for CI environments.
+**npm ci** performs a clean install of dependencies based exactly on the package-lock.json file. It is designed for automated environments like CI/CD pipelines where reproducibility is critical.
 
-The command removes node_modules first. Faster and more deterministic than npm install.
+The command deletes any existing node_modules directory before installing, ensuring a clean state. Unlike **npm install**, it never modifies the lockfile — if package.json and package-lock.json are out of sync, it fails with an error rather than silently updating.
 
 # CAVEATS
 

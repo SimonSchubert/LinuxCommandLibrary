@@ -1,5 +1,3 @@
-# TLDR
-
 # TAGLINE
 
 Create new user accounts

@@ -45,6 +45,12 @@ Manage remote repository connections
 **set-url** _NAME_ _URL_
 > Change remote URL.
 
+**prune** _NAME_
+> Remove stale tracking branches.
+
+**get-url** _NAME_
+> Show URL for remote.
+
 **-v**, **--verbose**
 > Show URLs.
 

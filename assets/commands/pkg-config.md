@@ -52,6 +52,12 @@ _PACKAGES_
 **--list-all**
 > List packages.
 
+**--atleast-version** _VERSION_
+> Exit successfully if version is at least VERSION.
+
+**--print-errors**
+> Show errors when package not found.
+
 # DESCRIPTION
 
 **pkg-config** retrieves compiler and linker flags needed to build software against installed libraries. It reads metadata from **.pc** files that libraries install, providing the correct include paths, library paths, and link flags.
@@ -72,7 +78,7 @@ Requires .pc files. PKG_CONFIG_PATH for custom locations.
 
 # HISTORY
 
-pkg-config was created to **simplify library** compilation and linking.
+pkg-config was created by **James Henstridge** around **2001** as part of the freedesktop.org project to simplify library compilation and linking. It is widely used in autotools, CMake, and Meson build systems.
 
 # SEE ALSO
 

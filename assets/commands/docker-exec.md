@@ -59,6 +59,10 @@ The most common use case is opening an interactive shell for debugging with **do
 
 The **--privileged** flag grants extended capabilities useful for system administration tasks, though it should be used cautiously as it reduces container isolation.
 
+# CAVEATS
+
+The container must be running. Commands inherit the container's environment. Use **-it** together for interactive shells. The **--privileged** flag reduces container isolation and should be used sparingly.
+
 # SEE ALSO
 
 [docker-container-exec](/man/docker-container-exec)(1), [docker-run](/man/docker-run)(1)

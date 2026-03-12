@@ -61,11 +61,23 @@ Show mapping **status**
 **luksHeaderBackup** _device_
 > Backup LUKS header to a file
 
+**isLuks** _device_
+> Check if device is a LUKS volume
+
+**benchmark**
+> Benchmark encryption algorithms
+
 **--type** _type_
 > Specify encryption type (luks, luks2, plain)
 
 **--cipher** _cipher_
 > Encryption cipher specification
+
+**--key-size** _bits_
+> Encryption key size in bits
+
+**--hash** _hash_
+> Hash algorithm for LUKS header
 
 # CONFIGURATION
 
@@ -78,7 +90,7 @@ Losing all passphrases means permanent data loss. Always backup LUKS headers. Fo
 
 # HISTORY
 
-**cryptsetup** is the standard Linux disk encryption management tool, supporting dm-crypt, LUKS, and LUKS2 formats.
+**cryptsetup** was created by **Jana Saout** (dm-crypt) and **Clemens Fruhwirth** (LUKS). LUKS was introduced in **2004** to provide a standard on-disk format for encrypted volumes. LUKS2 was added in 2017 with improved header flexibility and Argon2 key derivation.
 
 # SEE ALSO
 

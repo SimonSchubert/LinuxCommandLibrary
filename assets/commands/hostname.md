@@ -103,4 +103,4 @@ The hostname command has been part of Unix systems since the early BSD releases 
 
 # SEE ALSO
 
-[hostnamectl](/man/hostnamectl)(1), [domainname](/man/domainname)(1), [hosts](/man/hosts)(5), [gethostname](/man/gethostname)(2)
+[hostnamectl](/man/hostnamectl)(1), [domainname](/man/domainname)(1)

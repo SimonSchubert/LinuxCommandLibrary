@@ -57,8 +57,20 @@ _PATH_
 **-d** _N_, **--max-depth** _N_
 > Maximum search depth.
 
-**--help**
-> Display help information.
+**-g**, **--glob**
+> Use glob pattern instead of regex.
+
+**-E** _PATTERN_, **--exclude** _PATTERN_
+> Exclude entries matching pattern.
+
+**-S** _SIZE_, **--size** _SIZE_
+> Filter by size (e.g., +1m, -100k).
+
+**--changed-within** _DATE_
+> Filter by modification time.
+
+**-c**, **--color** _WHEN_
+> When to use colors (auto, always, never).
 
 # DESCRIPTION
 

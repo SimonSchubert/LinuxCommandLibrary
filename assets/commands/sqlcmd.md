@@ -113,4 +113,4 @@ Starting with SQL Server 2025, mandatory encryption (**-Nm**) is the default, wh
 
 # SEE ALSO
 
-[mssql-cli](/man/mssql-cli)(1), [psql](/man/psql)(1), [mysql](/man/mysql)(1), [bcp](/man/bcp)(1)
+[mssql-cli](/man/mssql-cli)(1), [psql](/man/psql)(1), [mysql](/man/mysql)(1)

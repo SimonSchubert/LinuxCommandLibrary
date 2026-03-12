@@ -53,6 +53,10 @@ Input format is one user per line as **username:password** with no spaces around
 
 Requires root privileges. Passwords passed via command line may be visible in process listings. Consider using encrypted passwords or secure input methods in scripts. DES encryption is considered weak.
 
+# HISTORY
+
+**chpasswd** is part of the **shadow-utils** package for batch password management.
+
 # SEE ALSO
 
 [passwd](/man/passwd)(1), [usermod](/man/usermod)(8), [useradd](/man/useradd)(8)

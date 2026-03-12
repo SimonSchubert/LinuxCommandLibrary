@@ -20,9 +20,9 @@ programming language interpreter
 
 ```lua [script.lua] [arg1] [arg2]```
 
-**Check syntax only**
+**Show version**
 
-```lua -p [script.lua]```
+```lua -v```
 
 **Interactive after script**
 
@@ -49,17 +49,20 @@ _ARGS_
 **-l** _MODULE_
 > Require module.
 
-**-p**
-> Parse only (syntax check).
+**-v**
+> Show version information.
+
+**-W**
+> Turn warnings on.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**lua** is the Lua programming language interpreter. Lua is lightweight and embeddable.
+**lua** is the interpreter for the Lua programming language. Lua is a lightweight, high-performance, embeddable scripting language designed for extending applications. It features automatic memory management, first-class functions, and a simple but powerful data structuring mechanism (tables).
 
-The tool runs Lua scripts and provides an interactive REPL. Commonly used for game scripting and configuration.
+The interpreter runs Lua scripts and provides an interactive REPL for testing code. Lua is widely used for game scripting (World of Warcraft, Roblox), embedded systems, configuration (Neovim, Nginx via OpenResty), and as an extension language in applications like Redis and Wireshark.
 
 # CAVEATS
 

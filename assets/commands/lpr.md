@@ -57,9 +57,9 @@ _FILES_
 
 # DESCRIPTION
 
-**lpr** submits print jobs. It's the BSD-style print command used with CUPS.
+**lpr** submits files for printing. It sends one or more files to the default printer or a printer specified with **-P**. Files are queued and printed in the order submitted.
 
-The tool queues files for printing. Options control destination, copies, and formatting.
+On modern Linux systems, lpr is provided by **CUPS** (Common Unix Printing System). Without arguments, it reads from stdin, making it useful in pipelines (e.g., `ls | lpr`). Printer options like paper size and duplex can be set with **-o**.
 
 # CAVEATS
 

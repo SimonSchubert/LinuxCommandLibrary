@@ -70,6 +70,15 @@ The tool handles HTTP/HTTPS, FTP, SFTP, BitTorrent, and Metalink, with extensive
 **--dht-listen-port** _port_
 > DHT port for BitTorrent
 
+**-j** _n_
+> Maximum number of parallel downloads (default: 5)
+
+**--seed-time** _minutes_
+> Seed time in minutes for BitTorrent (0 = no seeding)
+
+**-i** _file_, **--input-file** _file_
+> Read URLs from file
+
 **-q**, **--quiet**
 > Quiet mode
 
@@ -84,7 +93,7 @@ aria2c is the same as aria2; the c stands for command-line. Server may limit con
 
 # HISTORY
 
-aria2c has been the primary interface for aria2 since the project's start around **2006**.
+**aria2** was created by **Tatsuhiro Tsujikawa** and first released around **2006**. It is written in C++ and supports HTTP/HTTPS, FTP, SFTP, BitTorrent, and Metalink.
 
 # SEE ALSO
 

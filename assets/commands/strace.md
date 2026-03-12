@@ -64,7 +64,7 @@ Trace **network** operations with child processes
 > Display summary along with normal output
 
 **-t, -tt, -ttt**
-> Add timestamps (relative, absolute, absolute with usec)
+> Add timestamps (-t: HH:MM:SS, -tt: with microseconds, -ttt: epoch seconds)
 
 **-T, --syscall-times**
 > Show time spent in each system call
@@ -84,6 +84,12 @@ Trace **network** operations with child processes
 **-Z, --failed-only**
 > Show only failed system calls
 
+**-P, --trace-path path**
+> Trace only syscalls accessing given path
+
+**-k, --stack-traces**
+> Print stack trace for each system call
+
 **-u, --user username**
 > Run command as specified user
 
@@ -94,6 +100,8 @@ Trace **network** operations with child processes
 **%process**: Process operations (fork, exec, etc.)
 **%memory**: Memory mapping operations
 **%signal**: Signal-related calls
+**%ipc**: IPC operations (msgget, semop, etc.)
+**%desc**: File descriptor operations (read, write, select, etc.)
 
 # CAVEATS
 

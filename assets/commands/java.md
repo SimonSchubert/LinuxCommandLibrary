@@ -57,6 +57,18 @@ _CLASS_
 **-D** _PROP=VAL_
 > Set system property.
 
+**-Xss** _SIZE_
+> Thread stack size.
+
+**-ea**, **--enableassertions**
+> Enable assertions.
+
+**--enable-preview**
+> Enable preview language features.
+
+**-verbose** _:class|:gc|:jni_
+> Enable verbose output.
+
 **-version**
 > Show version information.
 
@@ -65,9 +77,9 @@ _CLASS_
 
 # DESCRIPTION
 
-**java** launches Java applications. It loads and executes compiled bytecode in the Java Virtual Machine.
+**java** launches Java applications by loading and executing compiled bytecode in the Java Virtual Machine (JVM). It supports class files, JAR archives, and since Java 11, single source-file programs.
 
-The runtime handles memory management, threading, and platform abstraction. It supports both class files and JAR archives.
+The JVM handles memory management (garbage collection), threading, and platform abstraction. Memory is configured via **-Xms** (initial heap), **-Xmx** (max heap), and **-Xss** (stack size). System properties (**-D**) configure application behavior at runtime.
 
 # CAVEATS
 

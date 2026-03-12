@@ -96,6 +96,10 @@ For archive distribution, consider xz's memory requirements on target systems. L
 
 xz format is not compatible with gzip or bzip2. Use appropriate tools (**gzip**, **bzip2**) for those formats.
 
+# HISTORY
+
+**xz** was developed by **Lasse Collin** and **Igor Pavlov** (LZMA SDK). The xz format and liblzma were released in **2009** as successors to the LZMA format used by 7-Zip. xz is now widely used for compressing Linux kernel tarballs and package archives.
+
 # SEE ALSO
 
 [gzip](/man/gzip)(1), [bzip2](/man/bzip2)(1), [zstd](/man/zstd)(1), [tar](/man/tar)(1), [xzcat](/man/xzcat)(1)

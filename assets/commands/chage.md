@@ -84,4 +84,4 @@ Root privileges are required except when using **-l** to list your own informati
 
 # SEE ALSO
 
-[passwd](/man/passwd)(1), [shadow](/man/shadow)(5), [usermod](/man/usermod)(8)
+[passwd](/man/passwd)(1), [usermod](/man/usermod)(8), [chpasswd](/man/chpasswd)(8)

@@ -58,9 +58,28 @@ converts between image formats and applies transformations
 **-flop**
 > Flip horizontally.
 
+**-strip**
+> Remove metadata (EXIF, profiles).
+
+**-density** _DPI_
+> Set image resolution.
+
+**-gravity** _type_
+> Set placement gravity (Center, NorthWest, etc.).
+
 # DESCRIPTION
 
-**magick convert** converts between image formats and applies transformations. Part of ImageMagick. Supports hundreds of formats including PNG, JPEG, GIF, TIFF, PDF, and WebP. Provides extensive image manipulation capabilities.
+**magick convert** converts between image formats and applies transformations as part of the **ImageMagick** suite. It supports hundreds of formats including PNG, JPEG, GIF, TIFF, PDF, SVG, and WebP.
+
+Operations can be chained on a single command line, applying multiple transformations in sequence. The tool reads the input image, applies all specified operations in order, and writes the result to the output file. The output format is determined by the file extension.
+
+# CAVEATS
+
+In ImageMagick 7, the standalone `convert` command is deprecated in favor of `magick convert` or simply `magick`. Memory usage can be high for large images. PDF operations require Ghostscript.
+
+# HISTORY
+
+**ImageMagick** was created by **John Cristy** in **1987** at DuPont. The convert command has been the primary image conversion tool throughout its history.
 
 # SEE ALSO
 

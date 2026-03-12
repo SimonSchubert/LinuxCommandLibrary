@@ -68,5 +68,5 @@ mosquitto was created as an **Eclipse Foundation** project providing open source
 
 # SEE ALSO
 
-[mosquitto_pub](/man/mosquitto_pub)(1), [mosquitto_sub](/man/mosquitto_sub)(1), [mqtt](/man/mqtt)(1)
+[mosquitto_pub](/man/mosquitto_pub)(1), [mosquitto_sub](/man/mosquitto_sub)(1)
 

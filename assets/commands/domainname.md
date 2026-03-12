@@ -50,4 +50,4 @@ Different from DNS domain name. Setting is not persistent by default. NIS is dep
 
 # SEE ALSO
 
-[hostname](/man/hostname)(1), [dnsdomainname](/man/dnsdomainname)(1), [nisdomainname](/man/nisdomainname)(1), [ypbind](/man/ypbind)(1)
+[hostname](/man/hostname)(1), [dnsdomainname](/man/dnsdomainname)(1)

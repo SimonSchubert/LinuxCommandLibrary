@@ -71,4 +71,4 @@ Using **xhost +** is a security risk as it allows any host to connect. For secur
 
 # SEE ALSO
 
-[xauth](/man/xauth)(1), [X](/man/X)(7), [ssh](/man/ssh)(1)
+[xauth](/man/xauth)(1), [ssh](/man/ssh)(1)

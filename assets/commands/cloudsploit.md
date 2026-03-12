@@ -84,4 +84,4 @@ CloudSploit was created by **Aqua Security** (originally CloudSploit Inc., acqui
 
 # SEE ALSO
 
-[prowler](/man/prowler)(1), [scout-suite](/man/scout-suite)(1), [steampipe](/man/steampipe)(1)
+[prowler](/man/prowler)(1), [scout-suite](/man/scout-suite)(1)

@@ -54,6 +54,18 @@ Go programming language toolchain
 **doc**
 > Show documentation.
 
+**install**
+> Compile and install packages.
+
+**generate**
+> Run code generators.
+
+**clean**
+> Remove build cache and binaries.
+
+**env**
+> Print Go environment variables.
+
 **--help**
 > Display help information.
 

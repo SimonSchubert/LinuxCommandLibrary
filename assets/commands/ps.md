@@ -28,6 +28,14 @@ Report running process status
 
 ```ps -eLf```
 
+**Sort by memory usage** (descending)
+
+```ps aux --sort=-%mem```
+
+**Select processes by command name**
+
+```ps -C [nginx]```
+
 # SYNOPSIS
 
 **ps** [_options_]
@@ -60,6 +68,15 @@ Report running process status
 
 **-o** _FORMAT_
 > Custom output.
+
+**-L**
+> Show threads with LWP and NLWP columns.
+
+**-C** _CMD_
+> Select by command name.
+
+**--sort** _KEY_
+> Sort output (e.g., --sort=-%mem).
 
 # DESCRIPTION
 

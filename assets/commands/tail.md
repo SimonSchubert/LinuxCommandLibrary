@@ -83,6 +83,10 @@ For large files, tail is efficient—it seeks to near the end rather than readin
 
 The **+** syntax for -n and -c counts from the beginning (1-indexed for lines, 0-indexed for bytes). **tail -n +1** outputs the entire file.
 
+# HISTORY
+
+**tail** originated in **AT&T Unix** Version 1 (1971). It is part of POSIX and GNU coreutils on Linux.
+
 # SEE ALSO
 
 [head](/man/head)(1), [less](/man/less)(1), [cat](/man/cat)(1), [multitail](/man/multitail)(1)

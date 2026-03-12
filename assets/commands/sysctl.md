@@ -69,6 +69,10 @@ Common categories include **kernel.** (core kernel settings), **net.** (networki
 
 Changes are lost on reboot unless saved to **/etc/sysctl.conf** or files in **/etc/sysctl.d/**. Some parameters are read-only. Incorrect values can destabilize the system. Requires root privileges to modify values.
 
+# HISTORY
+
+**sysctl** is part of **procps** (now procps-ng). It provides a convenient interface to the /proc/sys virtual filesystem for reading and writing kernel parameters at runtime.
+
 # SEE ALSO
 
-[sysctl.conf](/man/sysctl.conf)(5), [proc](/man/proc)(5), [systemd-sysctl](/man/systemd-sysctl)(8)
+[proc](/man/proc)(5)

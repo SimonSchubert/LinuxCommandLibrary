@@ -59,7 +59,7 @@ Slow for very large files. Part of xz-utils. Single-threaded by default.
 
 # HISTORY
 
-**unxz** is part of **xz-utils**, equivalent to running xz with decompression mode.
+**unxz** is part of **XZ Utils**, created by **Lasse Collin** and first released in **2009** as the successor to LZMA Utils. The XZ format has become the standard compression for Linux kernel sources and many source tarballs.
 
 # SEE ALSO
 

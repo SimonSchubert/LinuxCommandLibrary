@@ -53,8 +53,8 @@ compare two sorted files line by line
 **--nocheck-order**
 > Skip sort order verification
 
-**--output-delimiter** _str_
-> Separate columns with string
+**--output-delimiter=** _STR_
+> Separate columns with STR
 
 **--total**
 > Output summary counts
@@ -79,6 +79,10 @@ unique_to_file1
 # CAVEATS
 
 Input files must be sorted. Use process substitution for unsorted files: comm <(sort f1) <(sort f2). Comparisons follow LC_COLLATE rules.
+
+# HISTORY
+
+**comm** originated in **AT&T Unix** Version 4 (1973). It is part of GNU coreutils on Linux.
 
 # SEE ALSO
 

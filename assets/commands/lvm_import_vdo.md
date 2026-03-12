@@ -1,6 +1,6 @@
 # TAGLINE
 
-converts a VDO volume created with the standalone VDO manager into
+Convert a standalone VDO volume into an LVM-managed VDO logical volume
 
 # TLDR
 
@@ -66,4 +66,4 @@ This operation is **irreversible**; the original VDO volume format cannot be res
 
 # SEE ALSO
 
-[lvm](/man/lvm)(8), [lvcreate](/man/lvcreate)(8), [vdo](/man/vdo)(8), [lvmvdo](/man/lvmvdo)(7)
+[lvm](/man/lvm)(8), [lvcreate](/man/lvcreate)(8), [vdo](/man/vdo)(8)

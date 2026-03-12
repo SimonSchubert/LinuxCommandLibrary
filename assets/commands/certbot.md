@@ -75,8 +75,20 @@ Certificates are valid for 90 days. The renew command should be run regularly (t
 **--dry-run**
 > Test without saving
 
+**--standalone**
+> Use built-in web server for validation
+
 **--test-cert**
 > Use staging server (untrusted certificates)
+
+**--non-interactive**
+> Run without user interaction
+
+**--agree-tos**
+> Agree to terms of service
+
+**-m**, **--email** _email_
+> Email for account registration
 
 # CONFIGURATION
 

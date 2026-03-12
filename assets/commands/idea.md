@@ -68,4 +68,4 @@ idea is the CLI launcher for **JetBrains IntelliJ IDEA**, a popular Java IDE.
 
 # SEE ALSO
 
-[code](/man/code)(1), [vim](/man/vim)(1), [eclipse](/man/eclipse)(1)
+[code](/man/code)(1), [vim](/man/vim)(1)

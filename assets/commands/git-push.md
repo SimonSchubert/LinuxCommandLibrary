@@ -57,8 +57,11 @@ _REFSPEC_
 **--dry-run**
 > Show what would be pushed.
 
-**--help**
-> Display help information.
+**--no-verify**
+> Skip pre-push hooks.
+
+**-o** _option_, **--push-option** _option_
+> Transmit option to server-side hooks.
 
 # DESCRIPTION
 

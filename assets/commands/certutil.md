@@ -112,4 +112,4 @@ Requires nss-tools package. Use sql: prefix for modern databases. Handles sensit
 
 # SEE ALSO
 
-[openssl](/man/openssl)(1), [pk12util](/man/pk12util)(1), [modutil](/man/modutil)(1)
+[openssl](/man/openssl)(1), [modutil](/man/modutil)(1)

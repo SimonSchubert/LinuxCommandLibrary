@@ -58,11 +58,11 @@ Unison supports profiles that save synchronization configurations for repeated u
 
 # CAVEATS
 
-Same version both ends. Conflicts need attention. Initial sync slow.
+Both sides must run the same version of unison; version mismatches cause failures. Conflicts require manual attention. Initial synchronization can be slow for large directory trees.
 
 # HISTORY
 
-**Unison** was developed at the University of Pennsylvania as a file synchronization tool supporting bidirectional sync.
+**Unison** was developed by **Benjamin Pierce** at the University of Pennsylvania, first released around **2001**. It is written in OCaml and based on research in file synchronization theory.
 
 # SEE ALSO
 

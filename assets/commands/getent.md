@@ -77,4 +77,4 @@ getent has been part of the GNU C Library (glibc) since the implementation of th
 
 # SEE ALSO
 
-[id](/man/id)(1), [groups](/man/groups)(1), [host](/man/host)(1), [nsswitch.conf](/man/nsswitch.conf)(5)
+[id](/man/id)(1), [groups](/man/groups)(1), [host](/man/host)(1)

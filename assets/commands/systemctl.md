@@ -108,4 +108,4 @@ Some commands require root privileges. The **--user** flag manages per-user serv
 
 # SEE ALSO
 
-[journalctl](/man/journalctl)(1)
+[journalctl](/man/journalctl)(1), [service](/man/service)(8)

@@ -51,6 +51,15 @@ _FILES_
 **-w** _WIDTH_
 > Page width.
 
+**-m**
+> Merge files side by side.
+
+**-t**
+> Omit headers and footers.
+
+**-s** _CHAR_
+> Separate columns with character.
+
 # DESCRIPTION
 
 **pr** formats text files for printing by adding page headers (with filename and date), footers, page breaks, and line numbers. It can arrange text into multiple columns and control page dimensions including length, width, and margins.
@@ -59,11 +68,11 @@ This traditional Unix utility is useful for preparing plain text documents for p
 
 # CAVEATS
 
-Standard Unix utility. Part of coreutils.
+Default page length is 66 lines (for 11-inch paper). Headers include filename and date by default. Input must be text; binary files produce unpredictable output.
 
 # HISTORY
 
-pr is a **traditional Unix** text formatting utility.
+pr has been part of Unix since the early **1970s** at Bell Labs, originally used to prepare text files for line printers. It is specified in **POSIX** and included in GNU coreutils.
 
 # SEE ALSO
 

@@ -56,6 +56,10 @@ Resources are typically loaded from **~/.Xresources** or **~/.Xdefaults** at X s
 
 Changes only affect newly started applications. Use **-merge** to preserve existing settings when adding new ones. The file is processed by cpp by default, allowing use of #include and #define. Part of the X.Org utilities.
 
+# HISTORY
+
+**xrdb** has been part of the X Window System since the early releases in the mid-**1980s**, providing a way to configure application appearance and behavior before modern desktop environments existed.
+
 # SEE ALSO
 
-[X](/man/X)(7), [Xresources](/man/Xresources)(5), [xset](/man/xset)(1)
+[xset](/man/xset)(1)

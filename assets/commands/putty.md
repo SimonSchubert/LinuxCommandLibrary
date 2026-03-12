@@ -74,7 +74,7 @@ Uses PPK key format. Also available on Linux.
 
 # HISTORY
 
-PuTTY was created by **Simon Tatham** for Windows SSH connections.
+PuTTY was created by **Simon Tatham** and first released in **1999**. It became the standard SSH client on Windows, where no built-in SSH client was available until Windows 10 (2018).
 
 # SEE ALSO
 

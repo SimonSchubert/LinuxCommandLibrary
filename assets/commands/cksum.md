@@ -88,6 +88,10 @@ checksum byte_count filename
 
 CRC32 is not cryptographically secure. Use SHA256 or stronger for security-critical verification. Reads stdin when no file given or file is -.
 
+# HISTORY
+
+**cksum** was standardized in **POSIX.2** (1992). It is part of GNU coreutils. The **--algorithm** option for SHA/MD5 was added in GNU coreutils **9.0** (2021).
+
 # SEE ALSO
 
 [md5sum](/man/md5sum)(1), [sha256sum](/man/sha256sum)(1), [sum](/man/sum)(1)

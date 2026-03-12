@@ -43,4 +43,4 @@ exit is a fundamental POSIX shell builtin, present since the original Bourne she
 
 # SEE ALSO
 
-[return](/man/return)(1), [bash](/man/bash)(1), [trap](/man/trap)(1)
+[bash](/man/bash)(1), [trap](/man/trap)(1)

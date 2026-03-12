@@ -77,4 +77,4 @@ Timezone names must follow IANA database. Fuzzy matching may return unexpected r
 
 # SEE ALSO
 
-[date](/man/date)(1), [tzselect](/man/tzselect)(1), [timedatectl](/man/timedatectl)(1), [worldtimebuddy.com](https://www.worldtimebuddy.com/)
+[date](/man/date)(1), [tzselect](/man/tzselect)(1), [timedatectl](/man/timedatectl)(1)

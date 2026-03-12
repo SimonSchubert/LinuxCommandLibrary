@@ -81,4 +81,4 @@ Complex configuration for advanced setups. Requires root/network admin privilege
 
 # SEE ALSO
 
-[birdc](/man/birdc)(8), [bgpd](/man/bgpd)(8), [quagga](/man/quagga)(8)
+[birdc](/man/birdc)(8), [bgpd](/man/bgpd)(8)

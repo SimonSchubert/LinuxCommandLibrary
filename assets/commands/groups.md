@@ -33,9 +33,9 @@ _USERS_
 
 # DESCRIPTION
 
-**groups** displays the groups a user belongs to. Without arguments, it shows groups for the current user.
+**groups** displays the group memberships for a user. Without arguments, it shows groups for the current user. The primary group is listed first, followed by supplementary groups.
 
-The command reads from /etc/group and the user's supplementary group list. It shows both primary and secondary group memberships.
+The command reads from **/etc/group** and the user's supplementary group list. It is equivalent to **id -Gn** but with simpler output formatting.
 
 # CAVEATS
 

@@ -95,4 +95,4 @@ Common Workflow Language was developed by a community effort starting in **2014*
 
 # SEE ALSO
 
-[cwltool](/man/cwltool)(1), [snakemake](/man/snakemake)(1), [nextflow](/man/nextflow)(1), [toil](/man/toil)(1)
+[snakemake](/man/snakemake)(1), [nextflow](/man/nextflow)(1)

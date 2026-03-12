@@ -56,11 +56,11 @@ Options control the error correction level (L/M/Q/H), QR version (which determin
 
 # CAVEATS
 
-libqrencode based. Multiple output formats.
+Maximum data capacity depends on QR version and error correction level. Higher error correction reduces capacity. Binary data may need **-8** flag for 8-bit mode.
 
 # HISTORY
 
-qrencode uses **libqrencode** for QR code generation.
+qrencode was written by **Kentaro Fukuchi** and is built on the **libqrencode** library. It provides command-line QR code generation in various output formats.
 
 # SEE ALSO
 

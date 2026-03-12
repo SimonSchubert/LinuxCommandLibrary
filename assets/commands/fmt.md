@@ -91,4 +91,4 @@ Does not preserve exact spacing or formatting. May break intentionally formatted
 
 # SEE ALSO
 
-[fold](/man/fold)(1), [pr](/man/pr)(1), [par](/man/par)(1), [nroff](/man/nroff)(1), [groff](/man/groff)(1)
+[fold](/man/fold)(1), [pr](/man/pr)(1), [nroff](/man/nroff)(1), [groff](/man/groff)(1)

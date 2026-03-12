@@ -70,7 +70,7 @@ smartctl is part of smartmontools and is essential for system administrators mon
 > Show log (error, selftest, selective).
 
 **-t** _test_, **--test=** _test_
-> Run test (short, long, conveyance, select).
+> Run test (short, long, conveyance, selective, offline).
 
 **-s** _on|off_
 > Enable/disable SMART.
@@ -84,8 +84,8 @@ smartctl is part of smartmontools and is essential for system administrators mon
 **-x**, **--xall**
 > Show all extended information.
 
-**-q** _type_
-> Quiet output (errorsonly, silent).
+**-q** _type_, **--quietmode=** _type_
+> Quiet output (errorsonly, silent, noserial).
 
 # KEY ATTRIBUTES
 

@@ -52,14 +52,20 @@ _INTERFACE_
 **mtu** _SIZE_
 > Set MTU size.
 
+**-a**
+> Display all interfaces, even if down.
+
+**hw** _class_ _address_
+> Set hardware (MAC) address.
+
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**ifconfig** configures network interfaces. It displays and modifies IP addresses, netmasks, and interface status.
+**ifconfig** configures network interfaces. It displays and modifies IP addresses, netmasks, and interface status. Without arguments, it shows all active interfaces. With **-a**, it shows all interfaces including those that are down.
 
-The tool is being replaced by ip command but remains widely used. It shows interface statistics and configuration.
+The tool is part of **net-tools** and is being replaced by the **ip** command from iproute2, but remains widely used on many systems.
 
 # CAVEATS
 
@@ -67,7 +73,7 @@ Deprecated for ip command. Part of net-tools. Root needed for changes.
 
 # HISTORY
 
-ifconfig is a traditional **Unix** network configuration tool, now superseded by **iproute2** ip command.
+**ifconfig** has been part of Unix networking since **4.2BSD** (1983). On Linux it is part of the **net-tools** package, now largely superseded by **iproute2**.
 
 # SEE ALSO
 

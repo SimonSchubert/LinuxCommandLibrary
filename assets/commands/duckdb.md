@@ -114,4 +114,4 @@ In-memory databases are lost when the process exits. Write operations lock the d
 
 # SEE ALSO
 
-[sqlite3](/man/sqlite3)(1), [psql](/man/psql)(1), [clickhouse-client](/man/clickhouse-client)(1), [csvq](/man/csvq)(1)
+[sqlite3](/man/sqlite3)(1), [psql](/man/psql)(1), [csvq](/man/csvq)(1)

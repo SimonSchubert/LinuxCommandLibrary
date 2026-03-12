@@ -78,11 +78,11 @@ Run with **verbose** output
 
 # CAVEATS
 
-This tool is explicitly not a benchmarking tool. Values support time suffixes (s, m, h, d, y) and size suffixes (B, K, M, G). Running excessive stress tests may cause system instability.
+This tool is explicitly not a benchmarking tool. Numbers may be suffixed with s, m, h, d, y (time) or B, K, M, G (size). Running excessive stress tests may cause system instability.
 
 # HISTORY
 
-**stress** was designed to test system stability under load conditions. The related **stress-ng** tool provides more stress test options and metrics.
+**stress** was written by **Amos Waterland** as a simple workload generator for POSIX systems. The related **stress-ng** tool by Colin Ian King provides many more stressor types and metrics.
 
 # SEE ALSO
 

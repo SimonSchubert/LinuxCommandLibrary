@@ -62,14 +62,26 @@ _FILES_
 **-r**
 > Reverse sort order.
 
-**--help**
-> Display help information.
+**-1**
+> One file per line.
+
+**-d**
+> List directories themselves, not contents.
+
+**--color** _WHEN_
+> Colorize output (auto, always, never).
+
+**-i**
+> Print inode number.
+
+**-F**, **--classify**
+> Append indicator (/ for dirs, * for executables).
 
 # DESCRIPTION
 
-**ls** lists directory contents. It shows files, directories, and their attributes.
+**ls** lists directory contents. Without arguments, it lists the current directory. With **-l**, it shows permissions, owner, size, and modification time for each entry.
 
-The tool is one of the most used Unix commands. Options control format, sorting, and filtering.
+Entries are sorted alphabetically by default. Sorting can be changed with **-t** (time), **-S** (size), or **-r** (reverse). The **--color** option highlights files by type (directories, executables, symlinks).
 
 # CAVEATS
 

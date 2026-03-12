@@ -66,6 +66,18 @@ List **devices**
 **trust** _address_
 > Mark device as trusted
 
+**untrust** _address_
+> Remove trust from device
+
+**info** _address_
+> Show device information
+
+**discoverable** _on|off_
+> Set controller discoverability
+
+**agent** _on|off|capability_
+> Register or unregister agent
+
 **help**
 > Show available commands
 

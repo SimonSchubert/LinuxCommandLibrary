@@ -53,14 +53,17 @@ _ARGS_
 **-c** _CMD_
 > Command to run.
 
+**-y**, **--yes**
+> Automatically confirm prompts.
+
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**npx** executes npm packages. Runs packages without global installation.
+**npx** executes npm package binaries. It first checks local **node_modules/.bin**, then globally installed packages, and finally downloads the package temporarily if not found.
 
-The tool fetches and runs commands. Ideal for one-off tool usage.
+Common uses include running project scaffolding tools (create-react-app, create-next-app), one-off utilities, and testing different package versions without installing them globally.
 
 # CAVEATS
 

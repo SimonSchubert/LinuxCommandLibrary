@@ -50,17 +50,17 @@ _TO_
 
 # DESCRIPTION
 
-**mmv** mass moves and renames files. It uses patterns to transform filenames.
+**mmv** performs mass file moves, copies, appends, and links using shell-like wildcard patterns. It matches source files with a **from** pattern containing wildcards, then constructs target names using a **to** pattern where **#1**, **#2**, etc. refer to the text matched by each wildcard in the source pattern.
 
-The tool handles complex renaming operations. Supports wildcards and transformations.
+Special substitutions in the target pattern include **#l** and **#u** for lowercase and uppercase conversion. The tool plans all operations before executing, detecting and resolving collisions and cycles.
 
 # CAVEATS
 
-Different pattern syntax. Preview first. Powerful but complex.
+Pattern syntax differs from standard shell globbing. Always preview with **-n** before executing. Quoting patterns is essential to prevent shell expansion.
 
 # HISTORY
 
-mmv was created for **mass file renaming** using pattern matching and substitution.
+mmv was written by **Vladimir Lanin** and published in **1990**. It provides mass file operations using pattern matching and substitution.
 
 # SEE ALSO
 

@@ -12,7 +12,7 @@ list, edit, and re-execute shell commands
 
 ```fc -l```
 
-**List commands with** numbers
+**List commands without** numbers
 
 ```fc -ln [10] [20]```
 

@@ -57,9 +57,28 @@ Emulate x86_64 systems with QEMU
 **-vnc** _display_
 > Enable VNC server.
 
+**-cpu** _model_
+> CPU model to emulate.
+
+**-drive** _options_
+> Define a drive (file, format, if, media).
+
+**-serial** _device_
+> Redirect serial port.
+
 # DESCRIPTION
 
-**qemu-system-x86_64** emulates x86_64 systems. Full system emulator for running operating systems. Supports KVM hardware acceleration on Linux for near-native performance.
+**qemu-system-x86_64** is a full-system emulator for the x86_64 architecture. It can run complete operating systems including Linux, Windows, and BSD. With **KVM** hardware acceleration on Linux, it achieves near-native performance.
+
+QEMU emulates CPU, memory, storage, network, and display devices. It supports multiple disk image formats (qcow2, raw, vmdk), various network configurations, and both graphical and serial console output. It is the backend for higher-level virtualization tools like libvirt, virt-manager, and Proxmox.
+
+# CAVEATS
+
+KVM requires hardware virtualization support (Intel VT-x/AMD-V) and the kvm kernel module. Without KVM, emulation is significantly slower. High memory and CPU allocation may impact the host system.
+
+# HISTORY
+
+**QEMU** was created by **Fabrice Bellard** and first released in **2003**. KVM hardware acceleration was merged into the Linux kernel in **2007**, making QEMU the standard userspace component of Linux virtualization.
 
 # SEE ALSO
 

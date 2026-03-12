@@ -95,6 +95,10 @@ False positives occur, especially with system libraries. Use suppression files t
 
 Valgrind doesn't work well with JIT compilers or custom memory allocators without additional configuration.
 
+# HISTORY
+
+**Valgrind** was created by **Julian Seward** and first released in **2002**. The name comes from the entrance to Valhalla in Norse mythology. It has become the standard memory debugging tool for C/C++ on Linux.
+
 # SEE ALSO
 
 [gdb](/man/gdb)(1), [strace](/man/strace)(1), [ltrace](/man/ltrace)(1), [asan](/man/asan)(7)
