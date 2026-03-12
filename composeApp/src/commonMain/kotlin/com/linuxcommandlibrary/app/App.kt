@@ -105,7 +105,7 @@ fun App(initialDeeplink: String? = null) {
         Box(
             modifier = Modifier
                 .fillMaxSize()
-                .background(MaterialTheme.colors.primary)
+                .background(LocalCustomColors.current.topBarBackground)
                 .statusBarsPadding()
                 .background(LocalCustomColors.current.navBarBackground)
                 .navigationBarsPadding()
@@ -363,8 +363,9 @@ private fun GenericTopBar(
                 overflow = TextOverflow.Ellipsis,
             )
         },
-        backgroundColor = MaterialTheme.colors.primary,
-        contentColor = Color.White,
+        backgroundColor = LocalCustomColors.current.topBarBackground,
+        contentColor = LocalCustomColors.current.topBarContent,
+        elevation = 0.dp,
         navigationIcon = if (showBackIcon) {
             {
                 IconButton(
@@ -422,8 +423,9 @@ private fun DetailTopBar(
                 overflow = TextOverflow.Ellipsis,
             )
         },
-        backgroundColor = MaterialTheme.colors.primary,
-        contentColor = Color.White,
+        backgroundColor = LocalCustomColors.current.topBarBackground,
+        contentColor = LocalCustomColors.current.topBarContent,
+        elevation = 0.dp,
         navigationIcon = {
             IconButton(
                 modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
@@ -476,10 +478,11 @@ private fun SearchTopBar(
 ) {
     val focusRequester = remember { FocusRequester() }
 
+    val topBarContent = LocalCustomColors.current.topBarContent
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .background(MaterialTheme.colors.primary)
+            .background(LocalCustomColors.current.topBarBackground)
             .heightIn(min = 56.dp)
             .padding(horizontal = 4.dp),
         verticalAlignment = Alignment.CenterVertically,
@@ -495,7 +498,7 @@ private fun SearchTopBar(
                 Icon(
                     imageVector = backIcon,
                     contentDescription = "Back",
-                    tint = Color.White,
+                    tint = topBarContent,
                 )
             }
             OutlinedTextField(
@@ -505,17 +508,17 @@ private fun SearchTopBar(
                     .weight(1f)
                     .focusRequester(focusRequester)
                     .padding(start = 8.dp, end = 8.dp),
-                placeholder = { Text("Search...", color = Color.White.copy(alpha = 0.7f)) },
-                textStyle = MaterialTheme.typography.subtitle1.copy(color = Color.White),
+                placeholder = { Text("Search...", color = topBarContent.copy(alpha = 0.7f)) },
+                textStyle = MaterialTheme.typography.subtitle1.copy(color = topBarContent),
                 colors = TextFieldDefaults.outlinedTextFieldColors(
-                    textColor = Color.White,
-                    cursorColor = Color.White,
+                    textColor = topBarContent,
+                    cursorColor = topBarContent,
                     focusedBorderColor = Color.Transparent,
                     unfocusedBorderColor = Color.Transparent,
                     disabledBorderColor = Color.Transparent,
                     backgroundColor = Color.Transparent,
-                    trailingIconColor = LocalContentColor.current.copy(alpha = LocalContentAlpha.current),
-                    placeholderColor = LocalContentColor.current.copy(alpha = 0.7f),
+                    trailingIconColor = topBarContent.copy(alpha = LocalContentAlpha.current),
+                    placeholderColor = topBarContent.copy(alpha = 0.7f),
                 ),
                 maxLines = 1,
                 singleLine = true,
@@ -528,7 +531,7 @@ private fun SearchTopBar(
                     Icon(
                         imageVector = Icons.Filled.Close,
                         contentDescription = "Clear",
-                        tint = Color.White,
+                        tint = topBarContent,
                     )
                 }
             }
@@ -539,10 +542,10 @@ private fun SearchTopBar(
                     .weight(1f)
                     .padding(start = 16.dp)
                     .semantics { contentDescription = "TopAppBarTitle" },
-                style = MaterialTheme.typography.h6.copy(color = LocalContentColor.current),
+                style = MaterialTheme.typography.h6,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
-                color = Color.White,
+                color = topBarContent,
             )
             IconButton(
                 modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
@@ -551,7 +554,7 @@ private fun SearchTopBar(
                 Icon(
                     imageVector = Icons.Filled.Search,
                     contentDescription = "Search",
-                    tint = Color.White,
+                    tint = topBarContent,
                 )
             }
         }

@@ -17,8 +17,13 @@ import com.linuxcommandlibrary.app.resources.Res
 import com.linuxcommandlibrary.app.resources.share_tech_mono
 import org.jetbrains.compose.resources.Font
 
+val BrandRed = Color(0xFFe45151)
+val BrandDarkRed = Color(0xFFc62828)
+
 data class CustomColors(
     val navBarBackground: Color = Color(0xFF00695C),
+    val topBarBackground: Color = BrandRed,
+    val topBarContent: Color = Color.White,
 )
 
 val LocalCustomColors = compositionLocalOf { CustomColors() }
@@ -27,18 +32,19 @@ val LocalCustomColors = compositionLocalOf { CustomColors() }
 fun LinuxTheme(content: @Composable () -> Unit) {
     val darkMode = isSystemInDarkTheme()
     val darkColors = darkColors(
-        primary = Color(0xFFe45151),
+        primary = BrandRed,
         secondary = Color.White,
         background = Color(0xFF262626),
         surface = Color(0xFF262626),
     )
     val lightColors = lightColors(
-        primary = Color(0xFFe45151),
+        primary = BrandRed,
         secondary = Color.Black,
         background = Color.White,
         surface = Color.White,
     )
-    val colorSchema = if (darkMode) darkColors else lightColors
+    val dynamicColors = dynamicThemeColors(darkMode)
+    val colorSchema = dynamicColors?.colors ?: if (darkMode) darkColors else lightColors
 
     val techMonoFont = FontFamily(
         Font(Res.font.share_tech_mono),
@@ -55,7 +61,7 @@ fun LinuxTheme(content: @Composable () -> Unit) {
         subtitle2 = codeTextStyle,
     )
 
-    val customColors = if (darkMode) {
+    val customColors = dynamicColors?.customColors ?: if (darkMode) {
         CustomColors(
             navBarBackground = Color(0xFF2D2D2D),
         )
