@@ -324,7 +324,7 @@ jobs:
           CHANGELOG_DIR="fastlane/metadata/android/en-US/changelogs"
           mkdir -p "$CHANGELOG_DIR"
           if [ -f CHANGELOG.md ]; then
-            sed -n "/^## v${VERSION}/,/^## v/{ /^## v${VERSION}/d; /^## v/d; p; }" CHANGELOG.md > "$CHANGELOG_DIR/${VERSION_CODE}.txt"
+            sed -n "/^## v${VERSION}/,/^## v/{ /^## v${VERSION}/d; /^## v/d; /^###/d; /^$/d; s/^- //; p; }" CHANGELOG.md > "$CHANGELOG_DIR/${VERSION_CODE}.txt"
           fi
           if [ ! -s "$CHANGELOG_DIR/${VERSION_CODE}.txt" ]; then
             PREVIOUS_TAG=$(git tag --sort=-creatordate | grep -v "^${GITHUB_REF_NAME}$" | head -n1)

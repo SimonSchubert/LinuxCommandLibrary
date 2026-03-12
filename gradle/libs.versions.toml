@@ -1,5 +1,5 @@
 [versions]
-agp = "9.0.1"
+agp = "9.1.0"
 appVersion = "3.6.0"
 androidVersionCode = "143"
 kotlin = "2.3.10"
