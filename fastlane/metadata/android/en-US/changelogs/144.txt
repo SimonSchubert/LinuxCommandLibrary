@@ -1,0 +1,2 @@
+Improve command detail quality
+Upgrade AGP and Gradle

@@ -1,3 +1,9 @@
+## v3.6.1 — 2026-03-14
+
+### Improvements
+- Improve command detail quality
+- Upgrade AGP and Gradle
+
 ## v3.6.0 — 2026-03-12
 
 ### Features
