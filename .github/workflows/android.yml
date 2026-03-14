@@ -437,6 +437,11 @@ jobs:
         run: |
           VERSION="${GITHUB_REF_NAME#v}"
           mv android-release-signed.apk "LinuxCommandLibrary-${VERSION}-android.apk"
+          mv cli-macos-arm64.zip "LinuxCommandLibrary-${VERSION}-cli-macos-arm64.zip"
+          mv cli-macos-x64.zip "LinuxCommandLibrary-${VERSION}-cli-macos-x64.zip"
+          mv cli-linux-x64.zip "LinuxCommandLibrary-${VERSION}-cli-linux-x64.zip"
+          mv cli-linux-arm64.zip "LinuxCommandLibrary-${VERSION}-cli-linux-arm64.zip"
+          mv cli-windows-x64.zip "LinuxCommandLibrary-${VERSION}-cli-windows-x64.zip"
           mv *.dmg "LinuxCommandLibrary-${VERSION}-macos.dmg"
           mv *.msi "LinuxCommandLibrary-${VERSION}-windows.msi"
           mv *.deb "LinuxCommandLibrary-${VERSION}-linux.deb"
@@ -450,4 +455,3 @@ jobs:
           body_path: changelog.txt
           files: |
             LinuxCommandLibrary-*
-            cli-*.zip
