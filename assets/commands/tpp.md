@@ -8,17 +8,9 @@ Terminal-based text presentations
 
 ```tpp [presentation.tpp]```
 
-**Convert a presentation** to LaTeX
+**Export a presentation** to LaTeX
 
 ```tpp -l [output.tex] [presentation.tpp]```
-
-**Show help information**
-
-```tpp --help```
-
-**Show version**
-
-```tpp --version```
 
 # SYNOPSIS
 

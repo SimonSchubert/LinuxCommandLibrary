@@ -60,4 +60,4 @@ Changes affect the entire Wine prefix unless application-specific rules are set.
 
 # SEE ALSO
 
-[wine](/man/wine)(1), [wineboot](/man/wineboot)(1), [regedit](/man/regedit)(1), [winetricks](/man/winetricks)(1)
+[wine](/man/wine)(1), [regedit](/man/regedit)(1), [winetricks](/man/winetricks)(1)

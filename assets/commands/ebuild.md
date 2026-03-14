@@ -74,9 +74,36 @@ While emerge is used for normal package management, ebuild gives fine-grained co
 **merge**
 > All steps combined
 
+**unmerge**
+> Remove from live filesystem
+
+**setup**
+> Run pre-build setup phase
+
+**prepare**
+> Run source preparation (patches, etc.)
+
+**configure**
+> Run configure phase
+
+**test**
+> Run package tests
+
+**prerm**
+> Execute pre-removal tasks
+
+**postrm**
+> Execute post-removal tasks
+
+**postinst**
+> Execute post-installation tasks
+
+**digest**
+> Create manifest (legacy alias for manifest)
+
 # CAVEATS
 
-Gentoo-specific. For normal package management, use emerge. Ebuild files require specific directory structure in portage tree.
+Gentoo-specific. For normal package management, use **emerge**. Ebuild files require specific directory structure in portage tree. By default, ebuild executes all phases in order up to the specified one, skipping phases already completed in a previous invocation.
 
 # SEE ALSO
 

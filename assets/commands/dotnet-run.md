@@ -50,7 +50,13 @@ build and execute .NET projects
 > Skip package restore.
 
 **--launch-profile** _NAME_
-> Launch profile to use.
+> Launch profile to use from launchSettings.json.
+
+**--no-launch-profile**
+> Do not use any launch profile.
+
+**--arch** _ARCH_
+> Target architecture (e.g., x86, x64, arm64).
 
 **--** _ARGS_
 > Arguments to pass to application.
@@ -81,4 +87,4 @@ dotnet run is part of the **.NET CLI** providing streamlined development iterati
 
 # SEE ALSO
 
-[dotnet](/man/dotnet)(1), [dotnet-build](/man/dotnet-build)(1), [dotnet-watch](/man/dotnet-watch)(1)
+[dotnet](/man/dotnet)(1), [dotnet-build](/man/dotnet-build)(1), [dotnet-test](/man/dotnet-test)(1)

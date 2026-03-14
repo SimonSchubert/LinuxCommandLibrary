@@ -47,10 +47,16 @@ Go import line management and formatting
 > Comma-separated prefixes for local packages.
 
 **-e**
-> Report all errors.
+> Report all errors (not just the first 10 on different lines).
+
+**-format-only**
+> Do not fix imports; only format the code. In this mode goimports is effectively gofmt with grouped imports.
+
+**-v**
+> Verbose logging.
 
 **-srcdir** _dir_
-> Source directory for import resolution.
+> Choose imports as if source code is from the specified directory.
 
 # DESCRIPTION
 
@@ -60,4 +66,4 @@ Imports are grouped with standard library first, then third-party packages, and 
 
 # SEE ALSO
 
-[gofmt](/man/gofmt)(1), [go-fmt](/man/go-fmt)(1)
+[gofmt](/man/gofmt)(1), [go-fmt](/man/go-fmt)(1), [gofumpt](/man/gofumpt)(1)

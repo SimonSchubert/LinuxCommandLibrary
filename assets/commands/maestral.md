@@ -90,6 +90,9 @@ lightweight Dropbox client for Linux and macOS
 **config**
 > Show configuration.
 
+**-c, --config-name** _NAME_
+> Configuration name for managing multiple Dropbox accounts.
+
 # DESCRIPTION
 
 **maestral** is a lightweight Dropbox client for Linux and macOS. It provides file synchronization without the heavy resource usage of the official client.
@@ -112,4 +115,4 @@ No GUI by default - CLI only (optional GUI available). Some Dropbox features not
 
 # SEE ALSO
 
-[rclone](/man/rclone)(1), [syncthing](/man/syncthing)(1), [dropbox](/man/dropbox)(1)
+[rclone](/man/rclone)(1), [syncthing](/man/syncthing)(1)

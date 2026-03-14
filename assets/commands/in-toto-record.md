@@ -33,19 +33,43 @@ creates supply chain attestations for build steps
 > Finish recording step.
 
 **-n** _NAME_
-> Step name.
+> Step name (used to associate link with layout step).
 
-**-k** _KEY_
-> Signing key file.
+**-k** _KEY_, **--signing-key** _KEY_
+> Path to signing key file.
+
+**-g** _ID_, **--gpg** _ID_
+> GPG keyid used to sign the resulting link metadata.
+
+**--gpg-home** _PATH_
+> Path to GPG home directory.
 
 **-m** _MATERIALS_
-> Input materials paths.
+> Input materials paths (used with start).
 
 **-p** _PRODUCTS_
-> Output products paths.
+> Output products paths (used with stop).
 
-**--help**
-> Display help information.
+**-d** _DIR_
+> Directory to store resulting link metadata (used with stop).
+
+**--exclude** _PATTERN_
+> Path patterns to exclude from recording.
+
+**--base-path** _PATH_
+> Base path for relative material/product paths.
+
+**--lstrip-paths** _PREFIX_
+> Left-strip path prefix before storing in link metadata.
+
+**--use-dsse**
+> Use DSSE envelope format for signing.
+
+**-v**
+> Verbose output.
+
+**-q**
+> Quiet mode.
 
 # DESCRIPTION
 
@@ -63,4 +87,4 @@ in-toto-record is part of **in-toto**, a framework for supply chain integrity de
 
 # SEE ALSO
 
-[in-toto-run](/man/in-toto-run)(1), [in-toto-sign](/man/in-toto-sign)(1), [in-toto-verify](/man/in-toto-verify)(1)
+[in-toto-run](/man/in-toto-run)(1), [in-toto-sign](/man/in-toto-sign)(1)

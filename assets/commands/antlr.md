@@ -45,7 +45,7 @@ Generate parsers from grammar files
 > Location to search for imported grammars and token files
 
 **-Dlanguage=**_lang_
-> Target language: Java, Python3, CSharp, JavaScript, Go, Cpp, Swift
+> Target language: Java (default), Python3, CSharp, JavaScript, TypeScript, Go, Cpp, Swift, Dart, PHP
 
 **-package** _name_
 > Package or namespace for generated code

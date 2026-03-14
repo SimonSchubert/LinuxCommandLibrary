@@ -8,17 +8,17 @@ joystick testing tool that displays real-time axis and button states
 
 ```jstest [/dev/input/js0]```
 
-**Test with non-blocking mode**
+**Test in one-line mode** showing immediate status
 
 ```jstest --normal [/dev/input/js0]```
 
-**Select specific joystick**
+**Test using event** output mode
 
-```jstest --select [/dev/input/js1]```
+```jstest --event [/dev/input/js0]```
 
-**List joysticks**
+**Test in non-blocking** event mode
 
-```ls /dev/input/js*```
+```jstest --nonblock [/dev/input/js0]```
 
 # SYNOPSIS
 
@@ -27,20 +27,26 @@ joystick testing tool that displays real-time axis and button states
 # PARAMETERS
 
 _device_
-> Joystick device path.
+> Joystick device path (e.g., /dev/input/js0).
 
 **--normal**
-> Non-blocking test mode.
+> One-line mode showing immediate axis and button status.
 
-**--select**
-> Wait for input before testing.
+**--old**
+> Same as --normal but using the 0.x compatibility interface.
 
 **--event**
-> Event interface mode.
+> Print events as they come in.
+
+**--nonblock**
+> Same as --event but in non-blocking mode.
+
+**--select**
+> Same as --event but using select(2) system call.
 
 # DESCRIPTION
 
-**jstest** is a joystick testing tool that displays real-time axis and button states. It reads input from Linux joystick devices and shows values as they change.
+**jstest** can be used to test all the features of the Linux joystick API, including non-blocking and select(2) access, as well as version 0.x compatibility mode. It reads input from Linux joystick devices (/dev/input/js*) and shows axis and button values as they change.
 
 The tool is useful for verifying joystick functionality, calibration, and troubleshooting input issues. It works with gamepads, flight sticks, and other game controllers.
 
@@ -65,4 +71,4 @@ jstest is part of the **joystick** package for Linux, providing basic input devi
 
 # SEE ALSO
 
-[jscal](/man/jscal)(1), [evtest](/man/evtest)(1), [inputattach](/man/inputattach)(1)
+[evtest](/man/evtest)(1), [inputattach](/man/inputattach)(1)

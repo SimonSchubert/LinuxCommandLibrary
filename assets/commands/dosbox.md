@@ -55,7 +55,7 @@ DOS emulator for classic games and applications
 > Exit DOSBox when the program terminates.
 
 **-machine** _type_
-> Emulate a specific machine type (hercules, cga, tandy, pcjr, ega, vga, svga_s3).
+> Emulate a specific machine type (hercules, cga, tandy, pcjr, ega, vgaonly, svga_s3).
 
 **-noconsole**
 > Start without the console window (Windows only).
@@ -65,6 +65,12 @@ DOS emulator for classic games and applications
 
 **-noautoexec**
 > Skip the [autoexec] section in the config file.
+
+**-scaler** _scaler_
+> Use the specified scaler for graphics output.
+
+**-securemode**
+> Run in secure mode, disabling mount and other potentially dangerous commands.
 
 **-userconf**
 > Load user configuration file.
@@ -103,4 +109,4 @@ Not all DOS software is compatible; very old or very demanding programs may not 
 
 # SEE ALSO
 
-[dosemu](/man/dosemu)(1), [qemu](/man/qemu)(1), [wine](/man/wine)(1), [86box](/man/86box)(1)
+[qemu](/man/qemu)(1), [wine](/man/wine)(1)

@@ -1,6 +1,6 @@
 # TAGLINE
 
-runs processes with a specific NUMA scheduling or memory placement policy
+Run processes with a specific NUMA scheduling or memory placement policy
 
 # TLDR
 
@@ -80,6 +80,12 @@ Prefer memory allocation on a **specific node**
 **--touch**
 > Enforce policy immediately rather than on access
 
+**--strict**
+> Error if pages already faulted with conflicting policy
+
+**-V, --version**
+> Print version and exit
+
 # CAVEATS
 
 NUMA policies only make sense on multi-node systems. Node numbering starts at 0. The special value "all" can be used to specify all nodes.
@@ -90,4 +96,4 @@ NUMA policies only make sense on multi-node systems. Node numbering starts at 0.
 
 # SEE ALSO
 
-[migratepages](/man/migratepages)(8), [numastat](/man/numastat)(8), [set_mempolicy](/man/set_mempolicy)(2), [mbind](/man/mbind)(2)
+[migratepages](/man/migratepages)(8), [numastat](/man/numastat)(8), [mbind](/man/mbind)(2)

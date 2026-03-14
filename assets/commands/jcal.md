@@ -18,11 +18,19 @@ displays a calendar in the Jalali format, similar to Unix **cal**
 
 **Display specific month and year**
 
-```jcal [1402] [5]```
+```jcal [5] [1402]```
 
 **Display full year**
 
-```jcal -y [1402]```
+```jcal -y```
+
+**Display with Farsi numbers and names**
+
+```jcal -p```
+
+**Display with English weekday names**
+
+```jcal -e```
 
 # SYNOPSIS
 
@@ -40,13 +48,27 @@ displays a calendar in the Jalali format, similar to Unix **cal**
 > Display entire year.
 
 **-j**
-> Display Julian days.
+> Display Julian days (days numbered from Farvardin 1).
+
+**-p**
+> Display Farsi numbers and names.
+
+**-P**
+> Display year based on Pahlavi epoch.
+
+**-e**
+> Display English names for weekdays.
+
+**-V**
+> Display version.
 
 # DESCRIPTION
 
 **jcal** displays a calendar in the Jalali (Persian) format, similar to Unix **cal** for Gregorian calendars. The Jalali calendar is a solar calendar used in Iran and Afghanistan. Part of the jcal/libjalali package. Current day is highlighted.
 
+A single parameter specifies the year (1-9999). Two parameters denote the month (1-12) and year. The year must be fully specified: "jcal 90" will not display a calendar for 1390.
+
 # SEE ALSO
 
-[jdate](/man/jdate)(1), [cal](/man/cal)(1)
+[cal](/man/cal)(1)
 

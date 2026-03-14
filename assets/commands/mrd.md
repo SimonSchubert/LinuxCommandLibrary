@@ -47,5 +47,5 @@ mrd is part of **mtools**, providing MS-DOS filesystem access on Unix systems si
 
 # SEE ALSO
 
-[mdir](/man/mdir)(1), [mmd](/man/mmd)(1), [mcopy](/man/mcopy)(1)
+[mmd](/man/mmd)(1), [mcopy](/man/mcopy)(1), [mdel](/man/mdel)(1)
 

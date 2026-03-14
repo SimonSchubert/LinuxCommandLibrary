@@ -4,7 +4,7 @@ Identify block device attributes
 
 # TLDR
 
-List **all partitions**
+List **all** block devices with attributes
 
 ```sudo blkid```
 
@@ -19,6 +19,18 @@ Get the **UUID** of a specific partition
 Get the **filesystem type** of a partition
 
 ```sudo blkid -s TYPE -o value [/dev/sdXY]```
+
+Look up device by **label**
+
+```sudo blkid -L [mylabel]```
+
+Look up device by **UUID**
+
+```sudo blkid -U [uuid]```
+
+**Probe** device bypassing cache
+
+```sudo blkid -p [/dev/sdXY]```
 
 # SYNOPSIS
 
@@ -56,6 +68,15 @@ Get the **filesystem type** of a partition
 
 **-i, --info**
 > Print I/O limits (sector size, etc.)
+
+**-t, --match-token** _NAME=value_
+> Search for block devices with tokens named NAME that have the specified value
+
+**-n, --match-types** _list_
+> Restrict probing to a comma-separated list of superblock types
+
+**-u, --usages** _list_
+> Restrict probing to a comma-separated list of usage types (filesystem, raid, crypto, other)
 
 # CONFIGURATION
 

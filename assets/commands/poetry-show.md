@@ -4,15 +4,15 @@ Display installed package information
 
 # TLDR
 
-**List installed packages**
+**List all installed packages**
 
 ```poetry show```
 
-**Show package details**
+**Show details for a specific package**
 
 ```poetry show [package]```
 
-**Show dependency tree**
+**Show the full dependency tree**
 
 ```poetry show --tree```
 
@@ -20,9 +20,17 @@ Display installed package information
 
 ```poetry show --top-level```
 
-**Show outdated packages**
+**Show outdated packages with latest versions**
 
-```poetry show --outdated```
+```poetry show --outdated --latest```
+
+**Show why a package is required**
+
+```poetry show --why [package]```
+
+**Output package list as JSON**
+
+```poetry show --format json```
 
 # SYNOPSIS
 
@@ -37,16 +45,22 @@ _PACKAGE_
 > Show dependency tree.
 
 **--top-level**
-> Only top-level deps.
+> Only show top-level dependencies.
 
 **--outdated**
 > Show outdated packages.
 
 **--latest**
-> Show latest versions.
+> Show latest available versions.
+
+**--why**
+> Show whether packages are a direct dependency or required by other packages.
 
 **-a**, **--all**
-> Show all packages.
+> Show all packages including development dependencies.
+
+**-f**, **--format** _FORMAT_
+> Output format: text (default) or json. Cannot be combined with --tree.
 
 # DESCRIPTION
 

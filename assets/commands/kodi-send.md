@@ -4,23 +4,27 @@ sends commands to Kodi media center
 
 # TLDR
 
-**Send action**
+**Send an action**
 
 ```kodi-send --action="[PlayPause]"```
 
-**Send to specific host**
+**Send to a specific host**
 
 ```kodi-send --host=[192.168.1.100] --action="[Stop]"```
 
-**Control volume**
+**Send a notification**
 
-```kodi-send --action="[VolumeUp]"```
+```kodi-send --notification="[Backup complete]"```
 
-**Navigate**
+**Send multiple actions as a macro with delays**
 
-```kodi-send --action="[Up|Down|Left|Right|Select]"```
+```kodi-send --action="[Up]" --delay=[500] --action="[Select]"```
 
-**Open URL**
+**Send a key press event**
+
+```kodi-send --button="[KB_Return]"```
+
+**Open a media URL**
 
 ```kodi-send --action="PlayMedia([url])"```
 
@@ -30,14 +34,35 @@ sends commands to Kodi media center
 
 # PARAMETERS
 
-**--action** _ACTION_
-> Action to send.
+**-a**, **--action** _ACTION_
+> Action to send. Can be specified multiple times to create a macro.
+
+**--button** _BUTTON_
+> Send a key press event. Can be specified multiple times.
 
 **--host** _HOST_
-> Kodi host address.
+> Kodi host address (default localhost).
 
 **--port** _PORT_
-> Kodi port (default 9777).
+> Kodi EventClient port (default 9777).
+
+**--notification** _MESSAGE_
+> Send a notification to Kodi.
+
+**--log** _MESSAGE_
+> Send a log message to Kodi.
+
+**--loglevel** _LEVEL_
+> Log level when using --log (default LOGDEBUG).
+
+**--mouse** _X,Y_
+> Send mouse position to Kodi.
+
+**-d**, **--delay** _T_
+> Wait for T milliseconds. Can be used between actions to create macros.
+
+**--keymap** _KEYMAP_
+> Specify a custom keymap.
 
 **--help**
 > Display help information.
@@ -58,4 +83,4 @@ kodi-send is part of **Kodi** (formerly XBMC) event client tools for remote medi
 
 # SEE ALSO
 
-[kodi](/man/kodi)(1), [xbmc](/man/xbmc)(1)
+[curl](/man/curl)(1)

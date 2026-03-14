@@ -4,75 +4,86 @@ High QPS DNS benchmark tool
 
 # TLDR
 
-**Benchmark** DNS server with default settings
+**Benchmark a DNS server** with A queries for a domain
 
-```dnspyre [target_server]```
+```dnspyre --server [8.8.8.8] [example.com]```
 
-**Run** high QPS test with concurrent connections
+**Run a high concurrency benchmark** for 60 seconds
 
-```dnspyre [server] --duration 60s --concurrency 100```
+```dnspyre --server [8.8.8.8] --duration 60s --concurrency [100] [example.com]```
 
-**Test** specific query types
+**Benchmark with a fixed number of queries**
 
-```dnspyre [server] --query A --query AAAA```
+```dnspyre --server [8.8.8.8] --number [1000] [example.com]```
 
-**Load** queries from file
+**Test specific query types**
 
-```dnspyre [server] --file [queries.txt]```
+```dnspyre --server [8.8.8.8] --type A --type AAAA [example.com]```
+
+**Load queries from a file**
+
+```dnspyre --server [8.8.8.8] @[path/to/queries.txt]```
+
+**Benchmark using DNS over HTTPS**
+
+```dnspyre --server https://dns.google/dns-query --doh-method post [example.com]```
 
 # SYNOPSIS
 
-**dnspyre** [_options_] [_target_server_]
+**dnspyre** [_options_] _queries_...
 
 # PARAMETERS
 
-**-d, --duration** _DURATION_
-> Test duration (default: 1m)
+**-s**, **--server** _ADDR_
+> DNS server address to benchmark.
 
-**-c, --concurrency** _N_
-> Number of concurrent connections (default: 1)
+**-n**, **--number** _N_
+> Number of query repetitions (mutually exclusive with --duration).
 
-**-r, --rate** _N_
-> Queries per second per connection
+**-d**, **--duration** _DURATION_
+> Test duration (default: 1m, mutually exclusive with --number).
 
-**-q, --query** _TYPE_
-> DNS query type: A, AAAA, MX, TXT, etc.
+**-c**, **--concurrency** _N_
+> Number of concurrent connections (default: 1).
 
-**-f, --file** _FILE_
-> File containing query names (one per line)
-
-**--server** _ADDR_
-> DNS server address (can also be positional)
+**-t**, **--type** _TYPE_
+> DNS query type: A, AAAA, CNAME, MX, TXT, HTTPS, etc. Can be specified multiple times.
 
 **--tcp**
-> Use TCP instead of UDP
+> Use TCP instead of UDP.
 
-**--tls**
-> Use DNS over TLS
+**--dot**
+> Use DNS over TLS (DoT).
 
-**--https**
-> Use DNS over HTTPS
+**--doh-method** _METHOD_
+> Use DNS over HTTPS with GET or POST method.
+
+**--doh-protocol** _PROTO_
+> HTTP protocol version for DoH (1.1, 2, 3).
+
+**--doq**
+> Use DNS over QUIC (DoQ).
 
 **--recurse**
-> Set recursion desired flag
+> Set the recursion desired flag (default: on).
 
-**-o, --output** _FORMAT_
-> Output format: text, json, csv
+**--probability** _FLOAT_
+> Probability of sending each query (0.0-1.0).
 
-**-v, --verbose**
-> Enable verbose output
+**--progress**
+> Show progress bar (default: on).
 
-**-h, --help**
-> Display help and exit
+**-o**, **--output** _FORMAT_
+> Output format: text, json, csv.
 
-**--version**
-> Display version and exit
+**-v**, **--verbose**
+> Enable verbose output.
 
 # DESCRIPTION
 
-**dnspyre** is a high-performance DNS benchmarking tool designed to test DNS servers under heavy load. It can simulate thousands of concurrent queries per second and provides detailed statistics on response times, error rates, and throughput.
+**dnspyre** is a high-performance DNS benchmarking tool designed to stress test DNS servers under heavy load. It can simulate thousands of concurrent queries per second and provides detailed statistics on response times, error rates, and throughput. It was originally forked from dnstrace but has been extensively rewritten and enhanced.
 
-The tool supports multiple DNS transport protocols including UDP, TCP, DNS over TLS (DoT), and DNS over HTTPS (DoH). It's useful for capacity planning, performance testing, and comparing DNS server configurations.
+Queries can be specified as domain names directly, loaded from local files using **@file-path**, or fetched from HTTP URLs. Multiple query sources can be combined in a single run. The tool supports UDP, TCP, DNS over TLS (DoT), DNS over HTTPS (DoH), and DNS over QUIC (DoQ).
 
 # OUTPUT METRICS
 
@@ -84,12 +95,12 @@ The tool supports multiple DNS transport protocols including UDP, TCP, DNS over 
 
 # CAVEATS
 
-High QPS tests may overwhelm target servers. Requires careful rate limiting to avoid being rate-blocked. Network conditions significantly affect results. DNS caching on intermediate resolvers may skew results.
+High QPS tests may overwhelm target servers. The --duration and --number options are mutually exclusive. Network conditions and DNS caching on intermediate resolvers may skew results.
 
 # HISTORY
 
-**dnspyre** was developed as a modern alternative to traditional DNS benchmarking tools, providing better concurrency control and support for modern DNS protocols like DoT and DoH.
+**dnspyre** was developed by **Tantalor93** as a modern fork of dnstrace, adding support for modern DNS protocols (DoT, DoH, DoQ) and improved concurrency control.
 
 # SEE ALSO
 
-[dig](/man/dig)(1), [nslookup](/man/nslookup)(1), [dnsperf](/man/dnsperf)(1), [q](/man/q)(1)
+[dig](/man/dig)(1), [nslookup](/man/nslookup)(1), [q](/man/q)(1)

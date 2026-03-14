@@ -8,21 +8,25 @@ STM32 GDB server via ST-Link
 
 ```st-util```
 
-**Custom port**
+**Start on a specific port**
 
 ```st-util -p [4242]```
 
-**Verbose mode**
+**Start with verbose output**
 
 ```st-util -v```
 
-**Multi mode**
+**Start in multi-target mode**
 
 ```st-util -m```
 
-**Specify serial**
+**Connect to a specific ST-Link by serial number**
 
 ```st-util --serial [serial-number]```
+
+**Start with semihosting enabled**
+
+```st-util --semihosting```
 
 # SYNOPSIS
 
@@ -56,11 +60,11 @@ By default, the server listens on port 4242 for GDB connections. Multi-target mo
 
 # CAVEATS
 
-ST-Link required. One device by default. Port must be free.
+Requires an ST-Link programmer/debugger connected via USB. Only one ST-Link device is supported by default; use **-m** or **--serial** for multiple devices. The default port (4242) must not be in use by another process. Root or udev rules may be needed for USB access.
 
 # HISTORY
 
-**st-util** is part of **stlink**, providing a GDB server for debugging STM32 microcontrollers via ST-Link.
+**st-util** is part of the **stlink** open-source toolset, originally created by **texane** and now maintained by the stlink-org community.
 
 # SEE ALSO
 

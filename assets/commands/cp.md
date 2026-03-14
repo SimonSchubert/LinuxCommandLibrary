@@ -1,32 +1,38 @@
 # TAGLINE
 
-File and directory copy utility
+Copy files and directories
 
 # TLDR
 
-**Copy** file
+**Copy a file to a destination**
 
-```cp [source.txt] [destination.txt]```
+```cp [path/to/source.txt] [path/to/destination.txt]```
 
-**Copy** directory
+**Copy a directory recursively**
 
-```cp -r [source_dir] [dest_dir]```
+```cp -r [path/to/source_dir] [path/to/dest_dir]```
 
-**Copy** with backup
+**Copy with interactive prompt before overwrite**
 
-```cp --backup [source] [dest]```
+```cp -i [path/to/source] [path/to/dest]```
 
-**Preserve** attributes
+**Preserve mode, ownership, and timestamps**
 
-```cp -p [source] [dest]```
+```cp -p [path/to/source] [path/to/dest]```
 
-**Interactive** mode
+**Archive copy (preserve all attributes, recursive)**
 
-```cp -i [source] [dest]```
+```cp -a [path/to/source_dir] [path/to/dest_dir]```
+
+**Copy multiple files to a directory**
+
+```cp [file1] [file2] [file3] [path/to/dest_dir/]```
 
 # SYNOPSIS
 
-**cp** [_options_] _source_ _destination_
+**cp** [_options_] [**-T**] _source_ _dest_
+**cp** [_options_] _source..._ _directory_
+**cp** [_options_] **-t** _directory_ _source..._
 
 # DESCRIPTION
 
@@ -66,8 +72,20 @@ The command is a fundamental tool for file management on Unix systems.
 **-s**, **--symbolic-link**
 > Symbolic link instead of copy
 
-**--backup**
+**-t**, **--target-directory** _DIR_
+> Copy all sources into DIR
+
+**-T**, **--no-target-directory**
+> Treat destination as a normal file
+
+**--backup**[=_CONTROL_]
 > Backup existing files
+
+**-d**
+> Same as --no-dereference --preserve=links
+
+**--preserve**=_ATTR_LIST_
+> Preserve specified attributes (mode,ownership,timestamps,context,links,xattr,all)
 
 # WORKFLOW
 
@@ -112,7 +130,7 @@ cp -ru source/ destination/
 
 # CAVEATS
 
-Without -r, cannot copy directories. Overwrites by default (use -i for safety). -p doesn't always preserve all attributes. Large recursive copies can be slow. Sparse files may not be handled efficiently. Symlinks copied as links or dereferenced depending on options.
+Without -r, cannot copy directories. Overwrites by default (use -i for safety). When -n and -i are both given, the last one takes precedence. -p doesn't always preserve all attributes (use --preserve=all for everything). Large recursive copies can be slow. Sparse files may not be handled efficiently without --sparse=always. Symlinks are copied as links or dereferenced depending on options.
 
 # HISTORY
 
@@ -120,4 +138,4 @@ Without -r, cannot copy directories. Overwrites by default (use -i for safety). 
 
 # SEE ALSO
 
-[mv](/man/mv)(1), [rm](/man/rm)(1), [rsync](/man/rsync)(1), [install](/man/install)(1)
+[mv](/man/mv)(1), [rm](/man/rm)(1), [ln](/man/ln)(1), [rsync](/man/rsync)(1), [install](/man/install)(1), [dd](/man/dd)(1)

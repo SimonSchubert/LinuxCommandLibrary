@@ -1,6 +1,6 @@
 # TAGLINE
 
-Manage MySQL and PostgreSQL-compatible relational database clusters
+Manage Amazon Aurora relational database clusters via AWS CLI
 
 # TLDR
 
@@ -86,7 +86,19 @@ Manage MySQL and PostgreSQL-compatible relational database clusters
 > Security groups for network access
 
 **--engine-mode** _mode_
-> provisioned or serverless
+> provisioned or serverless.
+
+**--serverless-v2-scaling-configuration** _config_
+> Min/max ACU capacity for Aurora Serverless v2.
+
+**--storage-type** _type_
+> Storage type: aurora (standard) or aurora-iopt1 (I/O-Optimized).
+
+**--manage-master-user-password**
+> Let AWS Secrets Manager manage the master password.
+
+**--skip-final-snapshot**
+> Skip creating a final snapshot when deleting a cluster.
 
 # DESCRIPTION
 

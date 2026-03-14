@@ -99,7 +99,7 @@ The tool uses a graph-theoretic approach to find optimal embedding positions. De
 
 # CAVEATS
 
-Cover file capacity depends on file size and content; **info** command shows available space. Heavily compressed images have less embedding capacity. Strong passphrases are essential for security. The cover file is modified in place unless **-sf** specifies output.
+Cover file capacity depends on file size and content; **info** command shows available space. Only JPEG, BMP, WAV, and AU formats are supported as cover files. Heavily compressed images have less embedding capacity. Strong passphrases are essential for security. The cover file is modified in place unless **-sf** specifies a separate output.
 
 # HISTORY
 

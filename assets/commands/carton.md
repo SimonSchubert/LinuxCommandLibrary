@@ -16,7 +16,7 @@ Perl module dependency manager
 
 ```carton exec [perl script.pl]```
 
-**Run a Plack application**
+**Run a Plack application with local dependencies**
 
 ```carton exec plackup [app.psgi]```
 
@@ -24,11 +24,23 @@ Perl module dependency manager
 
 ```carton list```
 
-**Install with deployment mode**
+**Show dependency tree**
+
+```carton tree```
+
+**Check if all dependencies are satisfied**
+
+```carton check```
+
+**Install exact versions from cpanfile.snapshot (deployment mode)**
 
 ```carton install --deployment```
 
-**Bundle dependencies into vendor directory**
+**Install from cached archives (offline)**
+
+```carton install --cached```
+
+**Bundle dependencies into vendor/cache directory**
 
 ```carton bundle```
 

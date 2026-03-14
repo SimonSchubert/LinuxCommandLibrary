@@ -35,36 +35,60 @@ mono C# compiler
 # PARAMETERS
 
 _FILES_
-> C# source files.
+> C# source files to compile.
 
-**-out** _FILE_
+**-out:**_FILE_
 > Output file name.
 
-**-target** _TYPE_
-> Output type (exe, library, module).
+**-target:**_TYPE_
+> Output type: **exe** (console app, default), **library** (DLL), **module**, or **winexe** (GUI app).
 
-**-r** _ASSEMBLY_
-> Reference assembly.
+**-r:**_ASSEMBLY_
+> Reference an external assembly.
 
 **-debug**
-> Include debug info.
+> Emit debugging information.
+
+**-optimize**
+> Enable compiler optimizations.
+
+**-define:**_SYMBOL_
+> Define a preprocessor symbol.
+
+**-pkg:**_PACKAGE_
+> Reference packages registered with pkg-config.
+
+**-recurse:**_PATTERN_
+> Compile all files matching the pattern recursively.
+
+**-warn:**_LEVEL_
+> Set warning level (0-4, default 4).
+
+**-warnaserror**
+> Treat warnings as errors.
+
+**-nowarn:**_NUMBERS_
+> Suppress specified warning numbers.
+
+**-langversion:**_VERSION_
+> Specify C# language version (e.g., default, latest, ISO-1, ISO-2, 3-7).
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**mcs** is the Mono C# compiler. It compiles C# source code to .NET assemblies.
+**mcs** is the Mono C# compiler. It compiles C# source code into Common Intermediate Language (CIL) assemblies that run on the Mono or .NET runtime. It supports C# language versions up to C# 7.
 
-The tool is part of the Mono project. It supports C# language specifications.
+Options use a colon separator (e.g., `-out:file.exe`, `-target:library`) following Microsoft csc conventions, though the alternate syntax with a space is also accepted in many cases.
 
 # CAVEATS
 
-Part of Mono framework. .NET compatibility varies. Being replaced by Roslyn.
+Part of the Mono framework. The Mono project has been largely superseded by .NET (Core/.NET 5+) and the Roslyn-based **csc** compiler. New projects should prefer **dotnet build** or **csc**. Language support stops at C# 7; newer C# features require Roslyn.
 
 # HISTORY
 
-mcs is the **Mono** project's C# compiler, providing cross-platform .NET compilation.
+**mcs** is the **Mono** project's C# compiler, originally written by **Miguel de Icaza** and the Mono team. It was one of the first open-source implementations of the C# compiler, enabling .NET development on Linux and macOS before Microsoft open-sourced .NET.
 
 # SEE ALSO
 

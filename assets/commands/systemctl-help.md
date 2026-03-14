@@ -4,7 +4,7 @@ Show manual pages for units
 
 # TLDR
 
-Show **manual** for unit
+Show **manual** for a unit
 
 ```systemctl help [unit]```
 
@@ -12,7 +12,7 @@ Show manuals for **multiple** units
 
 ```systemctl help [unit1 unit2 ...]```
 
-Show manual for **user** unit
+Show manual for a **user** unit
 
 ```systemctl help [unit] --user```
 
@@ -20,7 +20,7 @@ Show without **pager**
 
 ```systemctl help [unit] --no-pager```
 
-Show manual by **PID**
+Show manual for the unit owning a **PID**
 
 ```systemctl help [pid]```
 

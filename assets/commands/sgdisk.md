@@ -67,7 +67,19 @@ Scriptable GPT partition table manager
 > Restore table.
 
 **-L**, **--list-types**
-> List type codes.
+> List known partition type codes.
+
+**-i**, **--info** _PART_
+> Show detailed information about a partition.
+
+**-v**, **--verify**
+> Verify disk's GPT data structures.
+
+**-Z**, **--zap-all**
+> Destroy both GPT and MBR data structures.
+
+**-g**, **--mbrtogpt**
+> Convert MBR to GPT.
 
 # DESCRIPTION
 
@@ -79,7 +91,7 @@ The tool also supports backing up and restoring entire partition tables, convert
 
 # CAVEATS
 
-Destructive operations are immediate. Wrong device destroys data. No MBR support.
+Destructive operations are immediate and cannot be undone. Specifying the wrong device will destroy data. Only works with GPT partition tables (use fdisk for MBR). Use `-b` to back up the partition table before making changes.
 
 # HISTORY
 

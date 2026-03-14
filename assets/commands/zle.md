@@ -128,4 +128,4 @@ ZLE is a fundamental component of zsh, the Z Shell, originally written by **Paul
 
 # SEE ALSO
 
-[zsh](/man/zsh)(1), [bindkey](/man/bindkey)(1), [vared](/man/vared)(1)
+[zsh](/man/zsh)(1), [bindkey](/man/bindkey)(1)

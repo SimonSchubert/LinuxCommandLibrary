@@ -28,9 +28,17 @@ professional vector graphics editor
 
 ```inkscape [input.svg] --export-area-page -o [output.png]```
 
+**Export drawing area only (crop to content)**
+
+```inkscape [input.svg] -D -o [output.png]```
+
 **Run without GUI**
 
 ```inkscape --export-type=[png] [input.svg]```
+
+**Run batch actions from command line**
+
+```inkscape --actions="open:[input.svg];export-filename:[output.png];export-do" --batch-process```
 
 # SYNOPSIS
 
@@ -51,19 +59,34 @@ professional vector graphics editor
 > Export resolution.
 
 **--export-type** _TYPE_
-> Export format (png, pdf, eps, ps, svg).
+> Export format (png, pdf, eps, ps, svg, emf, wmf). Comma-separated for multiple.
 
-**--export-area-page**
-> Export entire page.
+**-C**, **--export-area-page**
+> Export entire page area.
 
-**--export-area-drawing**
-> Export drawing bounds only.
+**-D**, **--export-area-drawing**
+> Export drawing bounding box only (crop to content).
 
-**--export-id** _ID_
-> Export specific object by ID.
+**-i**, **--export-id** _ID_
+> Export specific object by ID. Semicolon-separated for multiple.
+
+**-l**, **--export-plain-svg**
+> Export as plain SVG without Inkscape-specific namespaces.
+
+**-T**, **--export-text-to-path**
+> Convert text objects to paths on export.
+
+**--actions** _ACTIONS_
+> Execute semicolon-separated actions for batch processing.
+
+**--shell**
+> Enter interactive command line shell mode.
 
 **--batch-process**
-> Process files without GUI.
+> Process files and close without GUI.
+
+**--pdf-page** _N_
+> Page number to import from multi-page PDF (starting from 1).
 
 **--help**
 > Display help information.
@@ -76,7 +99,7 @@ The application provides comprehensive drawing tools, path operations, and text 
 
 # CAVEATS
 
-Large files may be slow. Some SVG features unsupported. Command line changed in 1.0.
+Large files may be slow. Some SVG features are unsupported. The command-line interface changed significantly in version 1.0 (old flags like `-e` and `-A` were replaced).
 
 # HISTORY
 
@@ -84,4 +107,4 @@ Inkscape was forked from **Sodipodi** in 2003. It became the leading open-source
 
 # SEE ALSO
 
-[inkview](/man/inkview)(1), [convert](/man/convert)(1), [rsvg-convert](/man/rsvg-convert)(1), [gimp](/man/gimp)(1)
+[inkview](/man/inkview)(1), [convert](/man/convert)(1), [rsvg-convert](/man/rsvg-convert)(1), [svgo](/man/svgo)(1), [gimp](/man/gimp)(1)

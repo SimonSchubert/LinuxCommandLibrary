@@ -4,19 +4,23 @@ static site generator optimized for documentation
 
 # TLDR
 
-**Create a new Docusaurus site**
+**Create a new Docusaurus site** using the classic template
 
 ```npx create-docusaurus@latest [my-website] classic```
 
-**Start development server**
+**Start the development server** (with hot reload)
 
 ```npx docusaurus start```
 
-**Build for production**
+**Start on a specific port**
+
+```npx docusaurus start --port [8080]```
+
+**Build the site for production**
 
 ```npx docusaurus build```
 
-**Serve built site locally**
+**Serve the production build locally**
 
 ```npx docusaurus serve```
 
@@ -24,11 +28,11 @@ static site generator optimized for documentation
 
 ```npx docusaurus deploy```
 
-**Clear build cache**
+**Clear generated files and caches**
 
 ```npx docusaurus clear```
 
-**Generate new doc page**
+**Tag a new documentation version**
 
 ```npx docusaurus docs:version [1.0]```
 
@@ -54,22 +58,25 @@ static site generator optimized for documentation
 > Clear generated files and caches.
 
 **swizzle** _theme_ _component_
-> Eject or wrap a theme component.
+> Eject or wrap a theme component for customization (interactive).
 
 **docs:version** _version_
-> Create new documentation version.
+> Tag the current docs as a new version snapshot.
 
 **write-translations**
-> Extract translatable strings.
+> Extract translatable strings to JSON translation files.
 
 **write-heading-ids**
-> Add heading IDs to markdown files.
+> Add explicit heading IDs to Markdown documents.
 
 **--locale** _locale_
-> Specify locale for command.
+> Specify locale for the command.
 
 **--config** _path_
-> Use custom config file.
+> Use a custom configuration file.
+
+**--out-dir** _path_
+> Custom output directory for build (default: build/).
 
 # DESCRIPTION
 
@@ -103,7 +110,7 @@ my-website/
 
 # CAVEATS
 
-Requires Node.js 18+. Large sites may have slow build times. Custom React components need familiarity with React. Swizzling (customizing) theme components may break on upgrades. Search requires additional setup (Algolia or local search plugin).
+Requires Node.js 18+. Large sites may have slow build times. Custom React components need familiarity with React. Swizzling (customizing) theme components may break on version upgrades. Full-text search requires additional setup (Algolia DocSearch or a local search plugin).
 
 # HISTORY
 

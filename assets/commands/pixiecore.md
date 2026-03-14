@@ -12,11 +12,11 @@ All-in-one PXE network boot server
 
 ```pixiecore boot [vmlinuz] [initrd.img] --cmdline "[console=ttyS0]"```
 
-**Serve via API**
+**Serve boot config via API** endpoint
 
 ```pixiecore api [http://localhost:8080]```
 
-**Quick PXE boot**
+**Quick boot** a preset distribution
 
 ```pixiecore quick [ubuntu] --cmdline "[auto=true]"```
 
@@ -53,7 +53,10 @@ All-in-one PXE network boot server
 > HTTP port.
 
 **--dhcp-no-bind**
-> Don't bind DHCP ports.
+> Don't bind DHCP ports (use alongside existing DHCP server).
+
+**--log-timestamps**
+> Add timestamps to log output.
 
 **--debug**
 > Debug output.

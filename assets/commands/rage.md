@@ -76,7 +76,7 @@ Multiple recipients allow group encryption. Any recipient can decrypt.
 
 # CAVEATS
 
-Age format, not compatible with GPG. Key management is manual. No key servers.
+Uses the age format; not compatible with GPG. Key management is manual with no key servers or web of trust. Requires the recipient's public key or a passphrase for encryption.
 
 # HISTORY
 

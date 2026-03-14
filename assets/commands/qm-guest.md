@@ -66,7 +66,7 @@ Execute with **stdin** forwarding
 
 # CAVEATS
 
-Requires the QEMU Guest Agent to be installed and running inside the VM. The guest agent must be enabled in the VM configuration. Network-independent communication occurs through a virtio serial device.
+Requires the QEMU Guest Agent (qemu-guest-agent) to be installed and running inside the VM. The guest agent must be enabled in the VM configuration (Agent: Enabled). Communication occurs through a virtio serial device, independent of network connectivity.
 
 # HISTORY
 

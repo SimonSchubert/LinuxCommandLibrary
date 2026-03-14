@@ -30,7 +30,7 @@ Automatic security update installer
 
 # SYNOPSIS
 
-**unattended-upgrades** [**-d**] [**-v**] [**--dry-run**] [**--minimal-upgrade-steps**]
+**unattended-upgrades** [**-d**] [**-v**] [**--dry-run**] [**--minimal_upgrade_steps**]
 
 # PARAMETERS
 
@@ -46,11 +46,11 @@ Automatic security update installer
 **--apt-debug**
 > Enable detailed APT/LibAPT output for debugging.
 
-**--minimal-upgrade-steps**
-> Perform upgrade in minimal steps, allowing cancellation with SIGINT. This is the default.
+**--minimal_upgrade_steps**
+> Perform upgrade in minimal steps, allowing cancellation with SIGTERM between packages. This is the default.
 
-**--no-minimal-upgrade-steps**
-> Perform upgrade without minimal steps.
+**--no-minimal_upgrade_steps**
+> Perform upgrade without minimal steps (all packages at once).
 
 **-h**, **--help**
 > Display help message.

@@ -46,7 +46,7 @@ Syntax-aware prose linter
 > Use specified configuration file (.vale.ini).
 
 **--ext** _extension_
-> Limit linting to files with specific extension.
+> Specify file extension for stdin input (e.g., `.md`, `.rst`).
 
 **--glob** _pattern_
 > Include files matching glob pattern.

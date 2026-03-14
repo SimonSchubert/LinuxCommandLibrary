@@ -26,9 +26,9 @@ Suspend then auto-hibernate after delay
 
 # DESCRIPTION
 
-**systemctl suspend-then-hibernate** first suspends the system to RAM, then automatically hibernates after a configured delay. This provides fast wake-up when used shortly after suspension, while protecting against data loss if battery depletes.
+**systemctl suspend-then-hibernate** first suspends the system to RAM, then automatically wakes up and hibernates to disk after a configured delay. This provides fast wake-up when used shortly after suspension, while protecting against data loss if the battery depletes during extended sleep.
 
-The delay before hibernation is configured in `/etc/systemd/sleep.conf` via the `HibernateDelaySec=` option.
+The delay before hibernation is configured in **/etc/systemd/sleep.conf** via the **HibernateDelaySec=** option (default varies by distribution).
 
 # CAVEATS
 

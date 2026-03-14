@@ -37,10 +37,13 @@ migrates Android libraries from Support Library to AndroidX
 > Output file.
 
 **-r**, **--reversed**
-> Reverse (AndroidX to Support).
+> Reverse conversion (AndroidX to Support Library).
 
 **-l**
 > List class mappings.
+
+**-c** _FILE_
+> Custom configuration file for mappings.
 
 **-v**
 > Verbose output.
@@ -56,7 +59,7 @@ The tool enables using older libraries with AndroidX projects. It processes AAR 
 
 # CAVEATS
 
-Part of Android SDK. One-way migration preferred. Some libraries incompatible.
+Part of Android SDK. Forward migration (Support to AndroidX) is preferred. Some libraries may not be fully compatible. Jetifier is considered legacy as most libraries have migrated to AndroidX natively.
 
 # HISTORY
 
@@ -64,4 +67,4 @@ jetifier was created by **Google** to assist in the Android Support Library to A
 
 # SEE ALSO
 
-[gradle](/man/gradle)(1), [android](/man/android)(1)
+[gradle](/man/gradle)(1)

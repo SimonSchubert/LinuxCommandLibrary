@@ -45,7 +45,10 @@ The command is useful for setting variables temporarily or debugging environment
 > Change directory before running command
 
 **-S** _string_
-> Process and split string into arguments
+> Process and split string into arguments (useful in shebang lines)
+
+**-v**, **--verbose**
+> Print verbose information for each processing step
 
 # WORKFLOW
 
@@ -129,7 +132,7 @@ command  # VAR is available
 
 # CAVEATS
 
-Variables set with env don't persist after command exits. Shell built-ins may not be accessible with env. PATH must be set for clean environment. Quotes needed for values with spaces. Different from the export shell built-in.
+Variables set with env don't persist after command exits. Shell built-ins (like `cd`, `alias`) cannot be run via env since it uses `execvp`. When using `-i`, PATH must be explicitly set for commands to be found. Values containing spaces must be quoted. The `-C` and `-S` options are GNU extensions not available on all platforms.
 
 # HISTORY
 

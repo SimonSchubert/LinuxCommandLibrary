@@ -1,28 +1,32 @@
 # TAGLINE
 
-executes SQL queries on Access databases
+SQL interface to MDB Tools for Access databases
 
 # TLDR
 
-**Query database**
+**Start interactive SQL session**
 
 ```mdb-sql [database.mdb]```
 
-**Execute SQL**
+**Execute SQL from stdin**
 
-```echo "[SELECT * FROM table]" | mdb-sql [database.mdb]```
+```echo "SELECT * FROM [table_name]" | mdb-sql [database.mdb]```
 
-**Interactive mode**
+**Pretty print output** (ASCII table format)
 
 ```mdb-sql -p [database.mdb]```
 
-**Specify delimiter**
+**Execute SQL from a file**
 
-```mdb-sql -d [,] [database.mdb]```
+```mdb-sql -i [query.sql] [database.mdb]```
 
-**No headers**
+**Specify column delimiter** and suppress headers
 
-```mdb-sql -H [database.mdb]```
+```mdb-sql -d [,] -H [database.mdb]```
+
+**Write output to file**
+
+```mdb-sql -o [output.csv] [database.mdb]```
 
 # SYNOPSIS
 
@@ -31,29 +35,47 @@ executes SQL queries on Access databases
 # PARAMETERS
 
 _DATABASE_
-> Microsoft Access database file.
+> Microsoft Access database file (.mdb or .accdb).
 
-**-p**
-> Pretty print output.
+**-H**, **--no-header**
+> Suppress column header row.
 
-**-d** _DELIM_
-> Field delimiter.
+**-F**, **--no-footer**
+> Suppress footer row.
 
-**-H**
-> Suppress headers.
+**-p**, **--no-pretty-print**
+> Tab-separated output instead of ASCII table format.
 
-**--help**
-> Display help information.
+**-d**, **--delimiter** _DELIM_
+> Use alternative column delimiter.
+
+**-i**, **--input** _FILE_
+> Read SQL from input file.
+
+**-o**, **--output** _FILE_
+> Write results to output file.
+
+**--version**
+> Print mdbtools version and exit.
+
+# INTERACTIVE COMMANDS
+
+**list tables**: List available tables in the database.
+**describe table** _name_: Display column information for a table.
+**go**: Execute the current SQL batch.
+**reset**: Clear the current SQL batch.
+**connect** _database_: Connect to a database (or switch databases).
+**disconnect**: Disconnect from the current database.
 
 # DESCRIPTION
 
-**mdb-sql** executes SQL queries on Access databases. It provides SQL interface to MDB files.
+**mdb-sql** provides an SQL interface to Microsoft Access databases. It can run interactively or process SQL from stdin or files. SQL batches are terminated with the **go** command in interactive mode.
 
-The tool is part of mdbtools. It supports basic SELECT, INSERT, UPDATE operations.
+The tool is part of the **mdbtools** suite. It supports SELECT queries against MDB/ACCDB files.
 
 # CAVEATS
 
-Limited SQL support. Part of mdbtools. May not support all Access features.
+Limited SQL support compared to full Access SQL. Part of mdbtools. May not support all Access features or data types.
 
 # HISTORY
 
@@ -61,5 +83,5 @@ mdb-sql is part of **mdbtools** for accessing Microsoft Access databases on Linu
 
 # SEE ALSO
 
-[mdbtools](/man/mdbtools)(1), [mdb-tables](/man/mdb-tables)(1), [mdb-export](/man/mdb-export)(1)
+[mdbtools](/man/mdbtools)(1)
 

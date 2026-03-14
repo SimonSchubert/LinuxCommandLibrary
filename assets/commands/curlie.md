@@ -8,7 +8,7 @@ Send a **GET** request
 
 ```curlie [httpbin.org/get]```
 
-Send a **POST** request
+Send a **POST** request with JSON data
 
 ```curlie post [httpbin.org/post] [name=john] [age:=25]```
 
@@ -18,7 +18,15 @@ Send GET request with **query parameters**
 
 Send request with **custom header**
 
-```curlie get [httpbin.org/get] [header-name:header-value]```
+```curlie [httpbin.org/get] [X-Custom-Header:value]```
+
+**Upload a file**
+
+```curlie post [httpbin.org/post] < [file.json]```
+
+**Pass curl options** directly
+
+```curlie -k https://[self-signed.example.com/api]```
 
 # SYNOPSIS
 
@@ -51,11 +59,16 @@ _url_
 > HTTP header
 
 **-v**
-> Verbose output
+> Verbose output (show request headers).
+
+**-I**, **--head**
+> Send HEAD request.
+
+All curl options are supported and passed through directly.
 
 # CAVEATS
 
-Requires curl to be installed. Some advanced curl options may not have httpie-style equivalents and must be passed directly.
+Requires curl to be installed. All curl options are available but passed through as-is. Curlie formats JSON output automatically.
 
 # SEE ALSO
 

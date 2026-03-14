@@ -1,26 +1,26 @@
 # TAGLINE
 
-display mail sender information
+Display mail sender information from a mailbox
 
 # TLDR
 
-**Show mail senders**
+**Show all mail senders** in your mailbox
 
 ```from```
 
-**Show for specific** user
+**Show senders for a specific user**
 
 ```from [username]```
 
-**Show sender and** subject
+**Show sender and subject lines**
 
 ```from -s```
 
-**Count messages**
+**Count the number of messages**
 
 ```from -c```
 
-**Check specific mailbox**
+**Check a specific mailbox file**
 
 ```from -f [/var/mail/user]```
 
@@ -31,38 +31,30 @@ display mail sender information
 # PARAMETERS
 
 _USER_
-> Username to check mail for.
+> Username to check mail for (reads their system mailbox).
 
 **-s**
-> Show Subject line with sender.
+> Show the Subject line along with the sender.
 
 **-c**
-> Print count of messages only.
+> Print only the count of messages.
 
 **-f** _FILE_
-> Mailbox file to read.
-
-**-n**
-> Don't check for new mail.
-
-**--help**
-> Display help information.
+> Read from the specified mailbox file instead of the default.
 
 # DESCRIPTION
 
-**from** displays the mail header summary showing who mail is from. It reads the system mailbox and shows sender information for each message.
+**from** displays a summary of the "From" lines in a mailbox, showing who mail is from. It reads the system mailbox (typically /var/mail/username) and displays sender information for each message.
 
-The tool provides a quick overview of pending mail without opening a mail client. With -s, it shows subjects for quick scanning of message content.
-
-from is useful for checking mail status in shell scripts or quick terminal checks.
+The tool provides a quick overview of pending mail without opening a full mail client. With **-s**, it also shows subject lines for quick scanning of message content. This is useful for checking mail status in shell scripts, cron jobs, or quick terminal checks.
 
 # CAVEATS
 
-Only works with mbox format mailboxes. May not work with modern mail systems. Limited to local mail.
+Only works with mbox format mailboxes. May not work with modern mail delivery systems (Maildir, IMAP). Limited to local mail stored in traditional Unix mbox files.
 
 # HISTORY
 
-from is a classic **BSD utility** for checking local mail. It predates modern mail systems and works with traditional Unix mbox files.
+**from** is a classic **BSD utility** for checking local mail, originating from 4.2BSD. It predates modern mail systems and works with traditional Unix mbox format files.
 
 # SEE ALSO
 

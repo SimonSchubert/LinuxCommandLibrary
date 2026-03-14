@@ -4,21 +4,25 @@ Force stop a Proxmox virtual machine
 
 # TLDR
 
-**Stop** VM immediately
+**Stop a VM** immediately
 
-```qm stop vm_id```
+```qm stop [vm_id]```
 
-Stop with **timeout**
+**Stop with a timeout** (wait up to N seconds)
 
-```qm stop --timeout 10 vm_id```
+```qm stop [vm_id] --timeout [30]```
 
-**Skip lock** (root only)
+**Skip lock check** (root only)
 
-```qm stop --skiplock true vm_id```
+```qm stop [vm_id] --skiplock true```
 
-**Keep** storage volumes active
+**Keep storage volumes active** after stopping
 
-```qm stop --keepActive true vm_id```
+```qm stop [vm_id] --keepActive true```
+
+**Override a pending shutdown** and stop immediately
+
+```qm stop [vm_id] --overrule-shutdown true```
 
 # SYNOPSIS
 
@@ -31,27 +35,23 @@ Stop with **timeout**
 # PARAMETERS
 
 **vmid**
-> The numeric ID of the virtual machine
+> The numeric ID of the virtual machine.
 
 **--timeout** _seconds_
-> Wait for the VM to stop for the specified number of seconds
+> Wait for the VM to stop for the specified number of seconds.
 
 **--skiplock** _boolean_
-> Skip the lock check (only root can use this option)
+> Skip the lock check (only root can use this option).
 
 **--keepActive** _boolean_
-> Do not deactivate storage volumes after stopping
+> Do not deactivate storage volumes after stopping.
 
-**--migratedfrom** _node_
-> Used internally for migration cleanup
+**--overrule-shutdown** _boolean_
+> Override a still-running shutdown task to force an immediate stop.
 
 # CAVEATS
 
 This is a forceful stop that does not cleanly shut down the guest operating system. Use **qm shutdown** for a graceful shutdown via ACPI. Data loss may occur if unsaved data exists in the guest.
-
-# HISTORY
-
-**qm stop** is part of the **Proxmox VE** virtualization platform for managing QEMU/KVM virtual machines.
 
 # SEE ALSO
 

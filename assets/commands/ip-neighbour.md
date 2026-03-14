@@ -56,7 +56,13 @@ Display the **neighbour/ARP table**
 > Lookup single entry
 
 **nud** _STATE_
-> Neighbour state: permanent, noarp, reachable, stale, etc.
+> Neighbour state: permanent, noarp, reachable, stale, none, incomplete, delay, probe, failed.
+
+**proxy** _ADDR_
+> Manage proxy ARP/NDP entries.
+
+**to** _PREFIX_
+> Filter entries by address prefix (used with show/flush).
 
 # DESCRIPTION
 

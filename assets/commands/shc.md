@@ -10,7 +10,7 @@ Compile shell scripts to binary executables
 
 **Set expiration date**
 
-```shc -e [31/12/2025] -f [script.sh]```
+```shc -e [31/12/2026] -f [script.sh]```
 
 **Set expiration message**
 
@@ -24,39 +24,58 @@ Compile shell scripts to binary executables
 
 ```shc -r -f [script.sh]```
 
+**Hardened untraceable** binary
+
+```shc -U -H -f [script.sh]```
+
 **Verbose output**
 
 ```shc -v -f [script.sh]```
 
 # SYNOPSIS
 
-**shc** [_-f script_] [_-o output_] [_-e date_] [_-m message_] [_options_]
+**shc** [**-f** _script_] [**-o** _output_] [**-e** _date_] [**-m** _message_] [**-r**] [**-U**] [**-H**] [**-v**]
 
 # PARAMETERS
 
 **-f** _SCRIPT_
-> Input script.
+> Input shell script to compile
 
 **-o** _FILE_
-> Output binary.
+> Output binary filename
 
 **-e** _DATE_
-> Expiration date.
+> Expiration date in dd/mm/yyyy format
 
 **-m** _MESSAGE_
-> Expiration message.
+> Message to display upon expiration (default: "Please contact your provider")
 
 **-r**
-> Relaxed security.
+> Relaxed security, allow redistributable binary across systems
 
 **-v**
-> Verbose.
-
-**-T**
-> Allow tracing.
+> Verbose compilation output
 
 **-U**
-> Untraceable mode.
+> Make binary untraceable (blocks truss, strace, ltrace, etc.)
+
+**-H**
+> Hardening: extra protection against dumping, code injection, and ptrace
+
+**-S**
+> Switch on setuid for root callable programs
+
+**-B**
+> Compile for BusyBox
+
+**-D**
+> Switch on debug exec calls
+
+**-i** _inline_option_
+> Inline option for the shell interpreter
+
+**-x** _command_
+> Exec command, as a printf format
 
 # DESCRIPTION
 

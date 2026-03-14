@@ -16,11 +16,15 @@ displays the print queue status
 
 ```lpq -a```
 
-**Show long listing**
+**Show long listing** with detailed info
 
 ```lpq -l```
 
-**Continuous updates**
+**Show queue for a specific user**
+
+```lpq -P [printer] [username]```
+
+**Continuous updates** every N seconds
 
 ```lpq +[5]```
 
@@ -50,9 +54,9 @@ _USER_
 
 # DESCRIPTION
 
-**lpq** displays the print queue status. It shows pending jobs, their owners, and sizes.
+**lpq** displays the current print queue status, showing pending and active jobs along with their owners, job IDs, file names, and sizes. Without arguments, it shows the default printer's queue.
 
-The tool is the BSD-style print queue viewer. Use it to check job status before printing.
+The tool provides the BSD-style interface for viewing print queues, now typically implemented by CUPS. It is useful for checking job status, diagnosing stuck queues, and monitoring print activity.
 
 # CAVEATS
 

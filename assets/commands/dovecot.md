@@ -8,55 +8,66 @@ secure IMAP and POP3 email server
 
 ```dovecot```
 
-**Check configuration**
+**Run in foreground** (do not daemonize)
+
+```dovecot -F```
+
+**Show non-default configuration** settings
 
 ```dovecot -n```
 
-**Show full configuration**
+**Show full configuration** (all settings)
 
 ```dovecot -a```
 
-**Reload configuration**
+**Use alternate configuration** file
+
+```dovecot -c [/path/to/dovecot.conf]```
+
+**Reload configuration** without restarting
 
 ```dovecot reload```
 
-**Stop Dovecot**
+**Stop Dovecot** daemon
 
 ```dovecot stop```
 
-**Show running version**
+**Show version**
 
 ```dovecot --version```
 
 # SYNOPSIS
 
-**dovecot** [_options_]
+**dovecot** [_options_] [_command_]
 
 # PARAMETERS
 
+**-F**
+> Run in foreground, do not daemonize
+
 **-n**
-> Print non-default configuration.
+> Print non-default configuration and exit
 
 **-a**
-> Print all configuration.
+> Print all configuration settings and exit
 
-**-c** _CONFIG_
-> Use specified configuration file.
+**-c** _config_file_
+> Use specified configuration file instead of /etc/dovecot/dovecot.conf
+
+**-p**
+> Prompt for SSL key password on startup
 
 **reload**
-> Reload configuration.
+> Reload configuration without restarting
 
 **stop**
-> Stop daemon.
+> Stop the running daemon
 
 **--build-options**
-> Show build options.
+> Show build options and exit
 
 **--version**
-> Show version.
-
-**--help**
-> Display help information.
+> Show version and exit
 
 # CONFIGURATION
 
@@ -70,13 +81,13 @@ secure IMAP and POP3 email server
 
 **Dovecot** is an open-source IMAP and POP3 email server for Unix-like systems. It provides secure, fast, and standards-compliant access to email stored on the server.
 
-The server supports various authentication methods, virtual users, and mailbox formats including Maildir and mbox. It's designed for both small and large-scale deployments with features like quota management and full-text search.
+The server supports various authentication methods, virtual users, and mailbox formats including Maildir and mbox. It is designed for both small and large-scale deployments with features like quota management and full-text search.
 
-Dovecot's modular architecture allows plugins for LDAP authentication, Sieve filtering, and integration with other mail system components.
+Dovecot's modular architecture allows plugins for LDAP authentication, Sieve filtering, and integration with other mail system components. The **-F** flag is commonly used in container environments or with process supervisors.
 
 # CAVEATS
 
-Requires proper configuration before use. Certificate setup needed for TLS. Permission issues common with mailbox access. Complex setups may need multiple config files.
+Requires proper configuration before use. TLS certificate setup needed for secure connections. Permission issues common with mailbox access. Use **dovecot -n** to verify configuration before deploying changes.
 
 # HISTORY
 
@@ -84,4 +95,4 @@ Dovecot was created by **Timo Sirainen** and first released in **2002**. It was 
 
 # SEE ALSO
 
-[postfix](/man/postfix)(1), [doveadm](/man/doveadm)(1), [sievec](/man/sievec)(1)
+[postfix](/man/postfix)(1), [doveadm](/man/doveadm)(1)

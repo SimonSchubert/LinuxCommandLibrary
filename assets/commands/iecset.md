@@ -1,12 +1,16 @@
 # TAGLINE
 
-configures IEC958 status bits on ALSA devices
+Set or dump IEC958 (S/PDIF) status bits on ALSA devices
 
 # TLDR
 
-**Show IEC958 status**
+**Show current IEC958 status**
 
 ```iecset```
+
+**Dump status as AES bytes**
+
+```iecset -x```
 
 **Set professional mode**
 
@@ -18,11 +22,15 @@ configures IEC958 status bits on ALSA devices
 
 **Set sample rate**
 
-```iecset rate 48000```
+```iecset rate [48000]```
 
-**Use specific card**
+**Use a specific sound card**
 
 ```iecset -c [1]```
+
+**Read commands from stdin**
+
+```iecset -i```
 
 # SYNOPSIS
 
@@ -30,32 +38,50 @@ configures IEC958 status bits on ALSA devices
 
 # PARAMETERS
 
-_COMMANDS_
-> Status bit commands.
-
 **pro** _on|off_
-> Professional mode.
+> Professional mode (true) or consumer mode (false).
 
 **audio** _on|off_
-> Audio mode.
+> Audio mode (true) or non-audio mode (false).
 
 **rate** _RATE_
-> Sample rate.
+> Sample rate in Hz.
+
+**emphasis** _0|1|2_
+> Emphasis: 0 = none, 1 = 50/15us, 2 = CCITT.
+
+**copyright** _on|off_
+> Copyright flag (consumer mode only).
+
+**category** _VALUE_
+> Category code 0-0x7f (consumer mode only).
+
+**lock** _on|off_
+> Rate lock (professional mode only).
+
+**sbits** _VALUE_
+> Sample bits: 2 = 20bit, 4 = 24bit, 6 = undefined (professional mode only).
 
 **-c** _CARD_
-> Sound card number.
+> Sound card index number.
 
 **-D** _DEVICE_
 > Device name.
 
-**--help**
-> Display help information.
+**-n** _INDEX_
+> IEC958 control element index for multiple IEC958 devices.
+
+**-x**
+> Dump status in AESx byte format.
+
+**-i**
+> Read command sequences from stdin.
 
 # DESCRIPTION
 
-**iecset** configures IEC958 (S/PDIF) status bits on ALSA devices. It controls digital audio output characteristics.
+**iecset** sets or dumps IEC958 (S/PDIF) status bits on ALSA devices. When started without commands, it shows the current IEC958 status in a human-readable form.
 
-The tool sets professional/consumer mode, sample rates, and other S/PDIF parameters. It's used for digital audio configuration.
+The tool controls professional/consumer mode, sample rates, emphasis, and other S/PDIF parameters for digital audio output.
 
 # CAVEATS
 

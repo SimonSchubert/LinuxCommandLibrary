@@ -42,4 +42,4 @@ When an image is removed, Docker also removes any untagged parent images that ar
 
 # SEE ALSO
 
-[docker-rmi](/man/docker-rmi)(1), [docker-image-prune](/man/docker-image-prune)(1)
+[docker-rmi](/man/docker-rmi)(1), [docker-image-ls](/man/docker-image-ls)(1)

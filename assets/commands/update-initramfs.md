@@ -35,14 +35,23 @@ Manage initial RAM filesystem images
 **-d**
 > Delete an existing initramfs
 
-**-k _version_**
-> Specify kernel version (or "all" for all versions)
+**-k** _version_
+> Specify kernel version (default: latest). Use "all" for all versions.
+
+**-t**
+> Take over a custom initramfs with a newer one.
 
 **-v**
 > Verbose mode
 
-**-b _directory_**
+**-b** _directory_
 > Set alternate boot directory
+
+**-h, --help**
+> Print help and exit.
+
+**--version**
+> Print version of the underlying initrd generation tool.
 
 # DESCRIPTION
 

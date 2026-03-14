@@ -20,6 +20,14 @@ Store settings for **specific card**
 
 ```sudo alsactl init```
 
+Restore using a **specific state file**
+
+```sudo alsactl -f [/path/to/asound.state] restore```
+
+**Monitor** driver events
+
+```sudo alsactl monitor```
+
 Restore with **debug output**
 
 ```sudo alsactl -d restore```
@@ -52,13 +60,25 @@ The tool is typically called automatically during system startup and shutdown to
 > Monitor driver events
 
 **-f** _file_
-> Configuration file (default: /var/lib/alsa/asound.state)
+> State file (default: /var/lib/alsa/asound.state)
 
 **-d**
 > Debug mode
 
 **-F**
-> Force restore even if card is busy
+> Force restore, try to restore as many controls as possible
+
+**-g**, **--ignore**
+> Ignore missing soundcards (no error message or exit code)
+
+**-P**, **--pedantic**
+> Don't restore mismatching control elements
+
+**-I**, **--no-init-fallback**
+> Don't initialize cards if restore fails
+
+**-r**, **--runstate** _file_
+> Save restore/init state to file for error reporting
 
 # CONFIGURATION
 

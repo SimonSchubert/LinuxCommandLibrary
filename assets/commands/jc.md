@@ -53,14 +53,36 @@ converts command output to JSON format
 **-q**, **--quiet**
 > Suppress warnings.
 
+**-m**, **--monochrome**
+> Disable colored output.
+
+**-M**, **--meta-out**
+> Include metadata in output (timestamp, parser name, exit codes).
+
+**-C**, **--force-color**
+> Force colored output even when piping.
+
+**-d**, **--debug**
+> Enable debug mode (use -dd for verbose).
+
+**-y**, **--yaml-out**
+> Output in YAML format instead of JSON.
+
+**-s**, **--slurp**
+> Combine multiple lines into a JSON array.
+
+**-u**, **--unbuffer**
+> Disable output buffering for streaming.
+
+**-v**, **--version**
+> Display version information.
+
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**jc** converts command output to JSON format. It parses standard Unix commands and produces structured data.
-
-The tool enables piping command output to JSON-aware tools like jq. It supports dozens of common commands.
+**jc** converts the output of dozens of standard Unix commands into structured JSON or YAML format, enabling piping to JSON-aware tools like jq for automated processing and scripting.
 
 # CAVEATS
 
@@ -72,4 +94,4 @@ jc was created by **Kelly Brazil** to enable JSON-based automation from traditio
 
 # SEE ALSO
 
-[jq](/man/jq)(1), [jo](/man/jo)(1), [gron](/man/gron)(1), [miller](/man/mlr)(1)
+[jq](/man/jq)(1), [jo](/man/jo)(1), [gron](/man/gron)(1), [mlr](/man/mlr)(1)

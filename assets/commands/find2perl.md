@@ -1,24 +1,24 @@
 # TAGLINE
 
-translate find commands to Perl scripts
+Translate find command lines to equivalent Perl code
 
 # TLDR
 
-**Convert find to** Perl
+**Convert a find command to a Perl script**
 
 ```find2perl [directory] -name "[*.txt]"```
 
-**Generate script with** execution
+**Generate a script with -exec translation**
 
 ```find2perl [.] -type f -exec cat {} \;```
 
-**Complex find expression**
+**Translate a complex find expression and save to a file**
 
-```find2perl [/var] -mtime +[30] -name "[*.log]"```
+```find2perl [/var] -mtime +[30] -name "[*.log]" > [cleanup.pl]```
 
-**Output to file**
+**Run the generated Perl script directly**
 
-```find2perl [.] -name "[*.bak]" > [cleanup.pl]```
+```find2perl [.] -name "[*.bak]" | perl```
 
 # SYNOPSIS
 
@@ -30,39 +30,43 @@ _PATHS_
 > Starting directories to search.
 
 _PREDICATES_
-> find-style expressions.
+> find-style expressions translated to Perl equivalents.
 
 **-name** _PATTERN_
-> Match filename pattern.
+> Match filename against shell glob pattern.
 
 **-type** _TYPE_
-> File type (f, d, l).
+> File type: f (regular file), d (directory), l (symbolic link).
 
 **-mtime** _N_
-> Modification time.
+> Modification time in days (+N older, -N newer, N exactly).
+
+**-size** _N_
+> File size.
 
 **-exec** _CMD_
-> Execute command.
+> Execute command on matching files.
 
 **-print**
-> Print matching paths.
+> Print matching paths (default action).
+
+**-depth**
+> Process directory contents before the directory itself.
 
 # DESCRIPTION
 
-**find2perl** translates find command expressions into equivalent Perl scripts. The generated script uses File::Find and produces the same results as the find command.
+**find2perl** translates find command expressions into equivalent Perl scripts using the File::Find module. The generated Perl code typically runs faster than the original find command and can be modified to add custom processing beyond what find supports.
 
-The tool helps users migrate from find to Perl for complex file processing tasks. The generated Perl code can be modified to add custom processing beyond what find supports.
-
-find2perl bridges shell scripting and Perl programming for file system operations.
+The tool helps users migrate from shell-based find commands to Perl for complex file processing tasks. The output is a complete Perl script that can be piped directly to perl or saved and modified.
 
 # CAVEATS
 
-Not all find options supported. Generated code may need cleanup. Deprecated in newer Perl versions.
+Not all find predicates are supported. The generated code may need manual cleanup for edge cases. find2perl was **removed from Perl core in version 5.22.0** (2015) and deprecated since Perl 5.20.0. It is available separately from CPAN as the **App::find2perl** distribution.
 
 # HISTORY
 
-find2perl was included with **Perl** as a utility for translating find commands. It helped users understand Perl's File::Find module and convert existing shell scripts.
+find2perl was included with **Perl** as a utility for translating find commands. It was removed from the Perl core distribution in **Perl 5.22.0** and must now be installed separately from CPAN.
 
 # SEE ALSO
 
-[find](/man/find)(1), [perl](/man/perl)(1), [File::Find](/man/File::Find)(3pm)
+[find](/man/find)(1), [perl](/man/perl)(1)

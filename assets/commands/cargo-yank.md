@@ -48,11 +48,17 @@ Requires authentication via cargo login.
 **--token** _token_
 > API token
 
+**-h**, **--help**
+> Print help information
+
 **-v**, **--verbose**
 > Verbose output
 
 **-q**, **--quiet**
 > Suppress output
+
+**--color** _WHEN_
+> Coloring: auto, always, never
 
 # BEHAVIOR
 

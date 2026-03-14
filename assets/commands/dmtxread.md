@@ -16,13 +16,13 @@ Data Matrix barcode decoder
 
 ```dmtxread -v [image.png]```
 
-**Limit search to specific region**
-
-```dmtxread -x [100] -y [100] -W [200] -H [200] [image.png]```
-
-**Set timeout for scanning**
+**Set timeout for scanning** (in milliseconds)
 
 ```dmtxread -m [5000] [image.png]```
+
+**Stop after decoding** N barcodes
+
+```dmtxread -N [1] [image.png]```
 
 **Output newline-separated** (for multiple codes)
 
@@ -46,18 +46,6 @@ Data Matrix barcode decoder
 
 **-m**, **--milliseconds** _ms_
 > Maximum scan time in milliseconds.
-
-**-x**, **--x-min** _pixels_
-> X coordinate of scan region origin.
-
-**-y**, **--y-min** _pixels_
-> Y coordinate of scan region origin.
-
-**-W**, **--width** _pixels_
-> Width of scan region.
-
-**-H**, **--height** _pixels_
-> Height of scan region.
 
 **-N**, **--stop-after** _n_
 > Stop after decoding n barcodes.

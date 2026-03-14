@@ -30,27 +30,51 @@ Generate color schemes from images
 
 # SYNOPSIS
 
-**wal** [_-i image_] [_-l_] [_-n_] [_--theme name_] [_options_]
+**wal** [_-a alpha_] [_-b background_] [_-i image_] [_-l_] [_-n_] [_--theme name_] [_options_]
 
 # PARAMETERS
 
 **-i** _IMAGE_
-> Input image.
+> Input image or directory of images.
 
 **-l**
-> Light colors.
+> Generate light colorscheme.
 
 **-n**
-> Skip wallpaper.
+> Skip setting the wallpaper.
 
 **--theme** _NAME_
-> Use theme.
+> Use a theme file (use without argument to list themes).
 
 **-R**
-> Restore last.
+> Restore previous colorscheme.
 
 **-c**
-> Clear cache.
+> Delete all cached colorschemes.
+
+**-a** _ALPHA_
+> Set terminal background transparency (URxvt only).
+
+**-b** _COLOR_
+> Custom background color to use.
+
+**--backend** _BACKEND_
+> Color backend to use (use without argument to list backends).
+
+**--saturate** _0.0-1.0_
+> Set color saturation level.
+
+**-o** _SCRIPT_
+> External script to run after wal finishes.
+
+**-q**
+> Quiet mode, suppress output.
+
+**-s**
+> Skip changing colors in terminals.
+
+**-t**
+> Skip changing colors in TTY.
 
 # DESCRIPTION
 

@@ -81,9 +81,15 @@ Check a Rust package for errors without compiling
 **--no-default-features**
 > Disable default features
 
+**--message-format** _FMT_
+> Error format: human, json, short
+
+**--future-incompat-report**
+> Output future incompatibility report
+
 # CAVEATS
 
-Some errors only appear during full code generation and won't be caught by cargo check. For complete error checking, use cargo build. The --profile test enables test cfg and checks test code.
+Some errors only appear during full code generation and won't be caught by cargo check. For complete error checking, use `cargo build`. The `--profile test` enables test cfg and checks test code. Significantly faster than `cargo build` for quick iteration.
 
 # SEE ALSO
 

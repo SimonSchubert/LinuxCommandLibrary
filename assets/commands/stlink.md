@@ -72,6 +72,18 @@ Open-source STM32 programming toolset
 **--descr** (st-info)
 > Display description of connected target.
 
+**--flash** (st-info)
+> Display amount of flash memory available.
+
+**--sram** (st-info)
+> Display amount of SRAM available.
+
+**--pagesize** (st-info)
+> Display flash page size.
+
+**--serial** (st-info)
+> Display serial code of the programmer.
+
 # DESCRIPTION
 
 **stlink** is an open source toolset for programming and debugging STM32 microcontrollers using ST-LINK programmers. It provides command-line utilities that work with ST-LINK/V1, V2, V2-1, V3, and compatible clone programmers.
@@ -90,4 +102,4 @@ The **stlink** project was created as an open source alternative to STMicroelect
 
 # SEE ALSO
 
-[openocd](/man/openocd)(1), [avrdude](/man/avrdude)(1), [dfu-util](/man/dfu-util)(1)
+[openocd](/man/openocd)(1), [avrdude](/man/avrdude)(1)

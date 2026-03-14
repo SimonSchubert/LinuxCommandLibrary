@@ -59,7 +59,7 @@ NUM may have a multiplier suffix: b (512), kB (1000), K (1024), MB (1000*1000), 
 
 # HISTORY
 
-**head** is part of GNU **coreutils**, providing basic file viewing utilities since early Unix systems.
+**head** has been part of Unix since early versions and is included in GNU **coreutils**.
 
 # SEE ALSO
 

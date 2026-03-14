@@ -10,7 +10,7 @@ Manipulate SAM/BAM/CRAM sequence alignment files
 
 **Convert SAM to BAM**
 
-```samtools view -bS [alignment.sam] > [alignment.bam]```
+```samtools view -b [alignment.sam] -o [alignment.bam]```
 
 **Sort BAM file**
 
@@ -78,11 +78,17 @@ Manipulate SAM/BAM/CRAM sequence alignment files
 **fastq**
 > Extract FASTQ from BAM.
 
+**collate**
+> Shuffle and group alignments by name.
+
+**calmd**
+> Recalculate MD/NM tags.
+
 **-b**
 > Output BAM format.
 
 **-S**
-> Input is SAM (deprecated, auto-detected).
+> Input is SAM (ignored, format is auto-detected).
 
 **-o** _FILE_
 > Output file.

@@ -72,7 +72,7 @@ Large files may be slow. Complex formatting lost. Line structure ignored.
 
 # HISTORY
 
-**wdiff** was written for comparing text documents. It provides human-readable differences for prose content.
+**wdiff** was created as part of GNU and is maintained as a standalone GNU package. It provides word-level differences suited for prose and natural language text where line-based diff output is hard to read.
 
 # SEE ALSO
 

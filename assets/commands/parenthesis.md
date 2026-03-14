@@ -1,6 +1,6 @@
 # TAGLINE
 
-parentheses **** in shell have several distinct uses depending on context:
+Shell parentheses for subshells, arrays, and arithmetic
 
 # TLDR
 

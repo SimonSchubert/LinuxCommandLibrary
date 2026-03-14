@@ -16,6 +16,10 @@ Unicode TeX engine with system fonts
 
 ```xetex -interaction=nonstopmode [document.tex]```
 
+**Output to specific directory**
+
+```xetex -output-directory=[path/to/dir] [document.tex]```
+
 # SYNOPSIS
 
 **xetex** [_-interaction mode_] [_-jobname name_] [_options_] _file_
@@ -32,7 +36,13 @@ Unicode TeX engine with system fonts
 > Output location.
 
 **-halt-on-error**
-> Stop on error.
+> Stop on first error.
+
+**-no-pdf**
+> Generate XDV output instead of PDF.
+
+**-synctex=**_NUMBER_
+> Enable SyncTeX for editor integration (1 to enable).
 
 # DESCRIPTION
 
@@ -44,12 +54,12 @@ XeTeX produces PDF output directly through the xdvipdfmx backend. It is commonly
 
 # CAVEATS
 
-Different from pdfTeX. Font handling differs. fontspec package useful.
+Input files must use UTF-8 encoding. The `fontspec` package is recommended for font selection when using XeLaTeX. Some pdfTeX-specific packages (e.g., `microtype` features) have limited support. The `-no-pdf` flag produces XDV (extended DVI) output that can be processed separately with `xdvipdfmx`.
 
 # HISTORY
 
-**XeTeX** was created by **Jonathan Kew** to add native Unicode and modern font support to TeX.
+**XeTeX** was created by **Jonathan Kew** in **2004** to add native Unicode and modern font support to TeX. It was originally developed for macOS using Apple's AAT font technology, later extending support to OpenType via ICU and HarfBuzz on all platforms.
 
 # SEE ALSO
 
-[xelatex](/man/xelatex)(1), [pdflatex](/man/pdflatex)(1), [luatex](/man/luatex)(1)
+[xelatex](/man/xelatex)(1), [pdflatex](/man/pdflatex)(1), [luatex](/man/luatex)(1), [pdftex](/man/pdftex)(1), [latex](/man/latex)(1)

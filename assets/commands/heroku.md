@@ -32,6 +32,14 @@ CLI for Heroku platform-as-a-service
 
 ```heroku ps:scale web=[2]```
 
+**Set environment variable**
+
+```heroku config:set [KEY]=[VALUE] -a [app-name]```
+
+**List apps**
+
+```heroku apps```
+
 # SYNOPSIS
 
 **heroku** _command_ [_options_]
@@ -57,10 +65,19 @@ _COMMAND_
 > Process management.
 
 **config**
-> Environment variables.
+> Manage environment variables.
+
+**addons**
+> Manage add-ons.
+
+**apps**
+> Manage applications.
 
 **-a**, **--app** _APP_
-> Target application.
+> Target application name.
+
+**-r**, **--remote** _REMOTE_
+> Git remote of app to use.
 
 **--help**
 > Display help information.
@@ -77,7 +94,7 @@ Requires Heroku account. Some features require payment. Rate limits apply.
 
 # HISTORY
 
-Heroku CLI was developed by **Salesforce** to manage applications on the Heroku platform, first launched in **2007**.
+Heroku was originally launched in **2007** for Ruby applications and was acquired by **Salesforce** in **2010**. The CLI tool provides command-line management of the platform.
 
 # SEE ALSO
 

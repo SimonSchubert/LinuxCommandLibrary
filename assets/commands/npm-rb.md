@@ -1,6 +1,6 @@
 # TAGLINE
 
-rebuilds packages with native addons
+Rebuild packages with native addons
 
 # TLDR
 
@@ -15,6 +15,10 @@ rebuilds packages with native addons
 **Rebuild global packages**
 
 ```npm rb -g```
+
+**Rebuild multiple specific packages**
+
+```npm rb [package1] [package2]```
 
 # SYNOPSIS
 
@@ -33,19 +37,15 @@ _PACKAGES_
 
 # DESCRIPTION
 
-**npm rb** rebuilds packages with native addons. Alias for npm rebuild.
+**npm rb** is an alias for **npm rebuild**. It recompiles native addon modules (C/C++ bindings) using node-gyp.
 
-The command recompiles binaries. Useful after Node.js version change.
+Commonly needed after upgrading Node.js versions, as native addons are compiled against a specific Node.js ABI. Also useful after manually modifying a package's source code in node_modules.
 
 # CAVEATS
 
-Alias for npm rebuild. Affects native addons. May require build tools.
-
-# HISTORY
-
-npm rb provides **native module rebuilding** when Node.js version or system changes.
+Alias for npm rebuild. Requires build tools (make, gcc/g++ or equivalent) to be installed. Only affects packages with native addons; pure JavaScript packages are unaffected.
 
 # SEE ALSO
 
-[npm](/man/npm)(1), [npm-rebuild](/man/npm-rebuild)(1), [node-gyp](/man/node-gyp)(1)
+[npm](/man/npm)(1), [npm-rebuild](/man/npm-rebuild)(1), [npm-install](/man/npm-install)(1), [node-gyp](/man/node-gyp)(1)
 

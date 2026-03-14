@@ -20,9 +20,9 @@ Vim-like terminal spreadsheet calculator
 
 ```sc-im --xlsx_readformulas [file.xlsx]```
 
-**Run in quiet mode** without info/error messages
+**Save results to a file** without the ncurses interface
 
-```sc-im --quiet [file]```
+```sc-im --nocurses --output=[output.csv] [file.xlsx]```
 
 **Run a script and quit** after loading
 
@@ -35,40 +35,40 @@ Vim-like terminal spreadsheet calculator
 # PARAMETERS
 
 **--sheet=**_SHEET_
-> Open specific sheet from XLSX file (name or number, default: 1)
+> Open specific sheet from XLSX file (name or number, default: 1).
 
 **--version**
-> Print version number and enabled features, then exit
+> Print version number and enabled features, then exit.
 
 **--nocurses**
-> Run interactively without the ncurses interface
+> Run interactively without the ncurses interface.
 
 **--output=**_FILE_
-> Save results to specified file
+> Save results to specified file.
 
 **--quit_afterload**
-> Quit after loading files; useful for running scripts
+> Quit after loading files; useful for running scripts.
 
 **--quiet**
-> Suppress info, error, and debug messages
+> Suppress info, error, and debug messages.
 
 **--autocalc**
-> Enable automatic recalculation
+> Enable automatic recalculation.
 
 **--numeric**
-> Digit starts numeric value instead of command multiplier
+> Digit starts numeric value instead of command multiplier.
 
 **--half_page_scroll**
-> Scroll half page instead of full page
+> Scroll half page instead of full page with Ctrl-f/Ctrl-b.
 
 **--newline_action=**_VAL_
-> Cursor movement after entry (j for down, l for right)
+> Cursor movement after entry (j for down, l for right).
 
 **--external_functions**
-> Enable external functions
+> Enable external functions.
 
 **--xlsx_readformulas**
-> Import formulas from XLSX rather than final cell values
+> Import formulas from XLSX rather than final cell values.
 
 # DESCRIPTION
 

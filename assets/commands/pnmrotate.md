@@ -1,6 +1,6 @@
 # TAGLINE
 
-Rotate PNM images by any angle
+Rotate PNM images by an arbitrary angle
 
 # TLDR
 
@@ -14,7 +14,7 @@ Rotate PNM images by any angle
 
 **Rotate without anti-aliasing**
 
-```pnmrotate -noantialias [90] [input.pnm] > [output.pnm]```
+```pnmrotate -noantialias [30] [input.pnm] > [output.pnm]```
 
 # SYNOPSIS
 
@@ -23,21 +23,21 @@ Rotate PNM images by any angle
 # PARAMETERS
 
 _angle_
-> Rotation angle in degrees.
+> Rotation angle in degrees (must be between -90 and 90). Measured counter-clockwise.
 
 **-background** _color_
-> Background fill color.
+> Background fill color. By default, pnmrotate selects what appears to be the background color of the original image.
 
 **-noantialias**
-> Disable anti-aliasing.
+> Disable anti-aliasing. Simply moves pixels instead of synthesizing output pixels from multiple input pixels.
 
 # DESCRIPTION
 
-**pnmrotate** rotates PNM images by an arbitrary angle specified in degrees. The output image is enlarged as needed to contain the full rotated result, with new areas filled by the background color.
+**pnmrotate** rotates PNM images by an arbitrary angle specified in degrees (between -90 and 90, measured counter-clockwise). The output image is enlarged as needed to contain the full rotated result, with new areas filled by the background color.
 
-Anti-aliasing is applied by default for smooth edges; use **-noantialias** to disable it for faster processing or when working with binary images. The **-background** option sets the fill color for areas outside the rotated image. Part of the Netpbm toolkit.
+Anti-aliasing is applied by default for smooth edges; use **-noantialias** to disable it for faster processing or when working with binary images. For rotations that are multiples of 90 degrees, use **pamflip** instead. Part of the Netpbm toolkit.
 
 # SEE ALSO
 
-[pnmflip](/man/pnmflip)(1), [pnmshear](/man/pnmshear)(1)
+[pamflip](/man/pamflip)(1), [pnmflip](/man/pnmflip)(1), [pnmshear](/man/pnmshear)(1)
 

@@ -34,10 +34,13 @@ Terminal system monitor with historical data
 > History database path.
 
 **-r**, **--refresh-rate** _ms_
-> Refresh rate in milliseconds. Default: 2000.
+> Refresh rate in milliseconds (default: 2000).
 
 **--disable-gpu**
 > Disable GPU monitoring.
+
+**--disable-history**
+> Disable history collection.
 
 **--graphics-mode** _mode_
 > Graphics mode: unicode (default), plain.
@@ -92,6 +95,12 @@ Terminal system monitor with historical data
 **m**
 > Toggle memory view modes.
 
+**dd**
+> Send SIGTERM to selected process.
+
+**dk**
+> Send SIGKILL to selected process.
+
 # DESCRIPTION
 
 **zenith** is a terminal system monitor focusing on historical data visualization. It stores metrics in SQLite for reviewing past system state.
@@ -110,8 +119,8 @@ GPU support depends on drivers and hardware. Database can grow over time. Some m
 
 # HISTORY
 
-zenith was created by **Benjamin Sago** (bensadeh) and first released around **2019**. Written in Rust, it was designed to combine real-time monitoring with historical analysis. The project distinguishes itself from other monitors by storing and visualizing historical metrics.
+zenith was created by **Benjamin Vaisvil** and first released around **2019**. Written in Rust, it was designed to combine real-time monitoring with historical analysis. The project distinguishes itself from other monitors by storing and visualizing historical metrics.
 
 # SEE ALSO
 
-[htop](/man/htop)(1), [btm](/man/btm)(1), [gtop](/man/gtop)(1), [glances](/man/glances)(1)
+[htop](/man/htop)(1), [top](/man/top)(1), [btm](/man/btm)(1), [gtop](/man/gtop)(1), [glances](/man/glances)(1)

@@ -30,7 +30,7 @@ Convert from **stdin**
 
 # SYNOPSIS
 
-**unrtf** [_options_] [_file..._]
+**unrtf** [_--html_|_--text_|_--vt_|_--latex_|_--rtf_] [_options_] [_file..._]
 
 # PARAMETERS
 

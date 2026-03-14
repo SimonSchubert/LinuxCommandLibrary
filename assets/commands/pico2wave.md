@@ -16,9 +16,13 @@ text-to-speech synthesizer using the SVOX Pico engine
 
 ```pico2wave -l fr-FR -w [output.wav] "[Bonjour le monde]"```
 
-**Pipe to audio player**
+**Synthesize text from a file**
 
-```pico2wave -w /dev/stdout "[text]" | aplay```
+```pico2wave -w [output.wav] "$(cat [text.txt])"```
+
+**Play directly via temporary file**
+
+```pico2wave -w /tmp/speech.wav "[text]" && aplay /tmp/speech.wav```
 
 # SYNOPSIS
 
@@ -45,18 +49,6 @@ de-DE  - German
 es-ES  - Spanish
 fr-FR  - French
 it-IT  - Italian
-```
-# Basic synthesis
-pico2wave -w hello.wav "Hello, how are you?"
-
-# German
-pico2wave -l de-DE -w german.wav "Guten Tag"
-
-# Play directly
-pico2wave -w /tmp/speech.wav "Hello" && aplay /tmp/speech.wav
-
-# From file
-pico2wave -w output.wav "$(cat text.txt)"
 ```
 
 # CAVEATS

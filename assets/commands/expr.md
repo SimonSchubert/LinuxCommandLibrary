@@ -8,11 +8,15 @@ evaluate arithmetic and string expressions in shell
 
 ```expr [5] + [3]```
 
+**Multiply** (escape the operator)
+
+```expr [5] \* [3]```
+
 **String length**
 
 ```expr length "[string]"```
 
-**Substring extraction**
+**Substring extraction** (1-indexed)
 
 ```expr substr "[string]" [1] [5]```
 
@@ -20,9 +24,13 @@ evaluate arithmetic and string expressions in shell
 
 ```expr "[string]" : '[regex]'```
 
-**Compare values**
+**Compare values** (escape the operator)
 
 ```expr [10] \> [5]```
+
+**Find index** of first character match
+
+```expr index "[string]" "[chars]"```
 
 # SYNOPSIS
 
@@ -49,10 +57,19 @@ _EXPRESSION_
 > Find first occurrence of characters.
 
 **match** _STRING_ _REGEX_
-> Pattern match and extract.
+> Pattern match (same as STRING : REGEX).
+
+**|**
+> Logical OR: ARG1 | ARG2 returns ARG1 if non-null and non-zero, else ARG2.
+
+**&**
+> Logical AND: ARG1 & ARG2 returns ARG1 if both are non-null and non-zero, else 0.
 
 **--help**
 > Display help information.
+
+**--version**
+> Display version information.
 
 # DESCRIPTION
 

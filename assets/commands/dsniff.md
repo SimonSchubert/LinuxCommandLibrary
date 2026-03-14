@@ -16,9 +16,17 @@ network password sniffer
 
 ```sudo dsniff -i [eth0] -w [output.txt]```
 
-**Sniff specific protocols**
+**Enable automatic protocol detection**
 
 ```sudo dsniff -i [eth0] -m```
+
+**Read from a previously saved session file**
+
+```dsniff -r [savefile]```
+
+**Sniff with custom trigger definitions**
+
+```sudo dsniff -i [eth0] -t [80/tcp=http]```
 
 # SYNOPSIS
 
@@ -52,12 +60,27 @@ dsniff was designed for authorized network security auditing and penetration tes
 **-c**
 > Perform half-duplex TCP stream reassembly.
 
+**-s** _snaplen_
+> Analyze at most the first snaplen bytes of each TCP connection (default 1024).
+
+**-f** _services_
+> Load trigger definitions from a services configuration file.
+
+**-t** _trigger[,...]_
+> Load triggers from a comma-separated list, specified as port/proto=service.
+
+**-r** _savefile_
+> Read previously captured sessions from a saved file.
+
 **-d**
 > Enable debugging.
 
+_expression_
+> Specify a tcpdump(8) filter expression to select traffic to sniff.
+
 # SUPPORTED PROTOCOLS
 
-FTP, Telnet, HTTP, POP, IMAP, LDAP, rlogin, RPC, SNMP, NFS, X11, IRC, AIM, CVS, Citrix, Oracle, PostgreSQL, Sybase, Microsoft SQL
+FTP, Telnet, SMTP, HTTP, POP, poppass, NNTP, IMAP, SNMP, LDAP, Rlogin, RIP, OSPF, PPTP MS-CHAP, NFS, VRRP, YP/NIS, SOCKS, X11, CVS, IRC, AIM, ICQ, Napster, PostgreSQL, Meeting Maker, Citrix ICA, Symantec pcAnywhere, NAI Sniffer, Microsoft SMB, Oracle SQL*Net, Sybase, Microsoft SQL
 
 # CAVEATS
 
@@ -69,4 +92,4 @@ Only for authorized security testing. Encrypted protocols (SSH, HTTPS) not captu
 
 # SEE ALSO
 
-[tcpdump](/man/tcpdump)(1), [wireshark](/man/wireshark)(1), [arpspoof](/man/arpspoof)(1), [ettercap](/man/ettercap)(1)
+[tcpdump](/man/tcpdump)(1), [wireshark](/man/wireshark)(1), [arpspoof](/man/arpspoof)(1), [ettercap](/man/ettercap)(8), [tcpreplay](/man/tcpreplay)(1)

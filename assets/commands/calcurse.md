@@ -12,17 +12,29 @@ Print **appointments and events** for today
 
 ```calcurse -a```
 
-**Sync** keeping remote objects (removes local)
+Print **todo list**
 
-```calcurse-caldav --init=keep-remote```
+```calcurse -t```
 
-**Sync** keeping local objects (removes remote)
+Print **next upcoming appointment**
 
-```calcurse-caldav --init=keep-local```
+```calcurse -n```
 
-**Two-way sync** local and remote
+Print appointments for a **specific date**
 
-```calcurse-caldav --init=two-way```
+```calcurse -d [MM/DD/YYYY]```
+
+Print appointments for the **next N days**
+
+```calcurse -r [7]```
+
+**Import** an iCal file
+
+```calcurse -i [calendar.ics]```
+
+**Export** data to iCal format
+
+```calcurse -x ical > [calendar.ics]```
 
 # SYNOPSIS
 
@@ -49,10 +61,19 @@ The interactive interface shows a monthly calendar, appointments list, and todo 
 > Print next appointment
 
 **-r, --range** _days_
-> Print appointments within range
+> Print appointments within range of days
+
+**-i** _file_
+> Import iCal (.ics) data from file
+
+**-x** _format_
+> Export data (ical or pcal format)
 
 **-c** _file_
-> Use alternate configuration file
+> Use alternate calendar file
+
+**-D, --directory** _dir_
+> Use alternate data directory
 
 # SUBCOMMANDS
 

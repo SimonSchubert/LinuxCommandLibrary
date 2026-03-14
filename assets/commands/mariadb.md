@@ -32,6 +32,10 @@ command-line client for MariaDB database server
 
 ```mariadb --ssl -u [user] -p [database]```
 
+**Import SQL dump while showing progress**
+
+```mariadb -u [user] -p [database] < [dump.sql]```
+
 # SYNOPSIS
 
 **mariadb** [_-u user_] [_-p_] [_-h host_] [_-e command_] [_options_] [_database_]
@@ -69,10 +73,13 @@ command-line client for MariaDB database server
 > Output as table.
 
 **--ssl**
-> Enable SSL.
+> Enable SSL for the connection.
+
+**--quick**
+> Don't cache result set, print row by row. Useful for large result sets.
 
 **-A**, **--no-auto-rehash**
-> Disable auto-completion.
+> Disable auto-completion for faster startup.
 
 **--safe-updates**
 > Prevent accidental large updates.
@@ -104,4 +111,4 @@ Password on command line visible in process list - use -p without argument. Larg
 
 # SEE ALSO
 
-[mariadb-dump](/man/mariadb-dump)(1), [mysql](/man/mysql)(1), [mysqldump](/man/mysqldump)(1), [mariadb-admin](/man/mariadb-admin)(1)
+[mysql](/man/mysql)(1), [mysqldump](/man/mysqldump)(1), [mysqladmin](/man/mysqladmin)(1)

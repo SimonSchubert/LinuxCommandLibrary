@@ -28,6 +28,14 @@ Manage restic backup profiles and schedules
 
 ```resticprofile forget```
 
+**Unschedule all profiles**
+
+```resticprofile unschedule --all```
+
+**Check repository integrity**
+
+```resticprofile -n [profile] check```
+
 **List snapshots**
 
 ```resticprofile snapshots```
@@ -57,6 +65,12 @@ Manage restic backup profiles and schedules
 **--dry-run**
 > Simulate only.
 
+**-l**, **--log** _FILE_
+> Log to file.
+
+**--no-ansi**
+> Disable ANSI color output.
+
 # COMMANDS
 
 **backup**
@@ -80,6 +94,18 @@ Manage restic backup profiles and schedules
 **init**
 > Initialize repository.
 
+**check**
+> Verify repository integrity.
+
+**show**
+> Display parsed configuration.
+
+**unschedule**
+> Remove scheduled tasks.
+
+**status**
+> Show scheduled job status.
+
 # DESCRIPTION
 
 **resticprofile** is a configuration wrapper for the restic backup tool that organizes backup settings into named profiles. Each profile defines a repository location, backup paths, exclusion patterns, retention policies, and scheduling rules, allowing complex backup strategies to be managed through a single configuration file rather than lengthy command-line arguments.
@@ -95,7 +121,7 @@ All standard restic commands (backup, forget, prune, restore, snapshots) can be 
 
 # CAVEATS
 
-Requires restic installed. Config file format specific to resticprofile. Scheduler varies by OS.
+Requires restic to be installed separately. Configuration file format is specific to resticprofile and not interchangeable with restic's own options. The system scheduler used varies by OS: systemd timers on Linux, launchd on macOS, and Task Scheduler on Windows.
 
 # HISTORY
 
@@ -103,4 +129,4 @@ Requires restic installed. Config file format specific to resticprofile. Schedul
 
 # SEE ALSO
 
-[restic](/man/restic)(1), [borgbackup](/man/borgbackup)(1), [cron](/man/cron)(1)
+[restic](/man/restic)(1), [borgbackup](/man/borgbackup)(1), [cron](/man/cron)(1), [crontab](/man/crontab)(1)

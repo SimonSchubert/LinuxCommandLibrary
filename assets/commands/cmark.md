@@ -24,9 +24,17 @@ CommonMark Markdown parser and renderer
 
 ```cmark --smart [input.md]```
 
-**Validate and show AST**
+**Convert to groff man page** format
+
+```cmark --to man [input.md]```
+
+**Validate UTF-8** and replace invalid sequences
 
 ```cmark --validate-utf8 [input.md]```
+
+**Render with hard line breaks**
+
+```cmark --hardbreaks [input.md]```
 
 # SYNOPSIS
 
@@ -49,6 +57,15 @@ CommonMark Markdown parser and renderer
 **--hardbreaks**
 > Render soft breaks as hard breaks.
 
+**--nobreaks**
+> Render soft breaks as spaces.
+
+**--width** _N_
+> Wrap text at N columns (default 0, no wrap). Only affects commonmark and man output.
+
+**--sourcepos**
+> Include source position information in output.
+
 # DESCRIPTION
 
 **cmark** is the reference C implementation of CommonMark, a strongly specified and highly compatible variant of Markdown. It parses Markdown input and converts it to various output formats including HTML, XML, groff man pages, CommonMark, and LaTeX.
@@ -56,6 +73,10 @@ CommonMark Markdown parser and renderer
 The parser is designed for correctness and performance, strictly following the CommonMark specification to eliminate the ambiguities present in the original Markdown description. This makes it suitable for applications that require predictable, consistent rendering across different tools.
 
 cmark reads from files or standard input and writes to standard output, making it easy to integrate into pipelines. The **--smart** option provides typographic enhancements like curly quotes and em-dashes, while **--safe** strips potentially dangerous raw HTML from input.
+
+# HISTORY
+
+**cmark** is the reference C implementation of the **CommonMark** specification, developed by John MacFarlane and contributors starting in **2014**. CommonMark was created to provide a formal, unambiguous specification for Markdown.
 
 # SEE ALSO
 

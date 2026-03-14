@@ -26,23 +26,26 @@ Display keyboard keycodes and scancodes
 
 # PARAMETERS
 
-**-s, --scancodes**
-> Display scancodes in hexadecimal
+**-s**, **--scancodes**
+> Display scancodes in hexadecimal.
 
-**-k, --keycodes**
-> Display keycodes in decimal (default)
+**-k**, **--keycodes**
+> Display keycodes in decimal (default mode).
 
-**-a, --ascii**
-> Display keycodes in ASCII, decimal, and hexadecimal
+**-a**, **--ascii**
+> Display key values in ASCII, decimal, and hexadecimal.
 
-**-h, --help**
-> Display help message
+**-h**, **--help**
+> Display help message.
+
+**-V**, **--version**
+> Print version number and exit.
 
 # DESCRIPTION
 
-**showkey** displays the keycode of pressed keys on the keyboard. This is useful for debugging keyboard-related issues, key remapping, and understanding keyboard input at a low level.
+**showkey** prints to standard output either the scan codes, the keycode, or the ASCII code of each key pressed. This is useful for debugging keyboard-related issues, key remapping, and understanding keyboard input at a low level.
 
-The program runs until 10 seconds pass without any key press, or until Ctrl+D is pressed (in ASCII mode).
+In scancode and keycode modes, the program runs until 10 seconds have elapsed since the last key press or release event. In ASCII mode, the program terminates when the user types Ctrl+D.
 
 # CAVEATS
 
@@ -50,4 +53,4 @@ Must be run as root or with sudo. Only works on the Linux console, not in termin
 
 # SEE ALSO
 
-[loadkeys](/man/loadkeys)(1), [dumpkeys](/man/dumpkeys)(1), [xmodmap](/man/xmodmap)(1)
+[loadkeys](/man/loadkeys)(1), [dumpkeys](/man/dumpkeys)(1), [getkeycodes](/man/getkeycodes)(1), [xmodmap](/man/xmodmap)(1)

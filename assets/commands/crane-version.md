@@ -1,10 +1,10 @@
 # TAGLINE
 
-display version information
+Display crane version information
 
 # TLDR
 
-**Show crane version**
+**Show the crane version**
 
 ```crane version```
 
@@ -14,8 +14,8 @@ display version information
 
 # DESCRIPTION
 
-**crane version** displays the version information for the crane CLI tool.
+**crane version** displays the version information for the crane CLI tool. Crane is a tool for interacting with remote container images and registries, part of the google/go-containerregistry project.
 
 # SEE ALSO
 
-[crane](/man/crane)(1)
+[crane](/man/crane)(1), [crane-cp](/man/crane-cp)(1)

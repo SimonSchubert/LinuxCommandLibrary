@@ -1,6 +1,6 @@
 # TAGLINE
 
-Navigate and search Chef server data
+Search packages by binaries, modules, and other attributes on openSUSE
 
 # TLDR
 
@@ -69,4 +69,4 @@ Scout was developed by the **openSUSE** project to provide helpful suggestions w
 
 # SEE ALSO
 
-[zypper](/man/zypper)(8), [cnf](/man/cnf)(1), [pkgfile](/man/pkgfile)(1), [apt-file](/man/apt-file)(1)
+[zypper](/man/zypper)(8), [pkgfile](/man/pkgfile)(1), [apt-file](/man/apt-file)(1)

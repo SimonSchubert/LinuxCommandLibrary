@@ -12,9 +12,9 @@ Schedule recurring Slurm cluster jobs
 
 ```scrontab -e```
 
-Edit **specific user's** crontab
+Edit **specific user's** crontab (requires root)
 
-```scrontab --user=user_id -e```
+```scrontab -u user_id -e```
 
 **Remove** current crontab
 
@@ -33,8 +33,8 @@ Edit **specific user's** crontab
 **-e**
 > Edit crontab
 
-**--user** _id_
-> Operate on specific user's crontab
+**-u** _user_, **--user** _user_
+> Operate on specific user's crontab (requires root)
 
 **-r**
 > Remove crontab
@@ -58,4 +58,4 @@ Part of **Slurm** workload manager, providing periodic job scheduling for HPC en
 
 # SEE ALSO
 
-[sbatch](/man/sbatch)(1), [crontab](/man/crontab)(1), [scontrol](/man/scontrol)(1)
+[sbatch](/man/sbatch)(1), [crontab](/man/crontab)(1), [scontrol](/man/scontrol)(1), [squeue](/man/squeue)(1)

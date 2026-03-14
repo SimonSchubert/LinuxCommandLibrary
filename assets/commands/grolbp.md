@@ -23,34 +23,37 @@ Groff Canon LBP printer driver
 # PARAMETERS
 
 _FILE_
-> Groff intermediate output.
+> Groff intermediate output file.
 
-**-c** _N_
-> Number of copies.
+**-c** _N_, **--copies** _N_
+> Print N copies of each page.
 
-**-F** _DIR_
-> Font directory.
+**-F** _DIR_, **--fontdir** _DIR_
+> Prepend directory to the font search path.
 
-**-l**
-> Landscape orientation.
+**-l**, **--landscape**
+> Format the document in landscape orientation.
 
-**-o** _PAGES_
-> Page selection.
+**-o** _ORIENTATION_, **--orientation** _ORIENTATION_
+> Set orientation to portrait or landscape.
 
-**-p** _SIZE_
-> Paper size.
+**-p** _SIZE_, **--papersize** _SIZE_
+> Set paper size (A4, letter, legal, executive).
 
-**-w** _WIDTH_
-> Line width.
+**-w** _WIDTH_, **--linewidth** _WIDTH_
+> Set default line thickness in thousandths of an em (default: 40).
+
+**-v**, **--version**
+> Print version number.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**grolbp** is a groff output driver for Canon CAPSL laser beam printers. It generates output compatible with Canon LBP printer series, supporting various paper sizes, orientations, and copy counts.
+**grolbp** is a groff output driver that produces output in CAPSL and VDM format suitable for Canon LBP-4 and LBP-8 series laser printers. It supports various paper sizes, orientations, and copy counts.
 
-The driver produces printer-specific commands for direct printing to Canon LBP hardware.
+The driver processes groff intermediate output and produces printer-specific commands for direct printing to Canon LBP hardware.
 
 # CAVEATS
 

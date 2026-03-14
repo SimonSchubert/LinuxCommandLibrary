@@ -87,6 +87,15 @@ HTTP load testing and benchmarking tool
 **-L**, **--log** _file_
 > Write results to specified log file
 
+**-m**, **--mark** _"string"_
+> Log a marker message before stats; useful for identifying test runs
+
+**-R**, **--rc** _file_
+> Use alternative configuration file
+
+**--no-follow**
+> Do not follow 3xx redirects
+
 **-C**, **--config**
 > Display current configuration settings
 

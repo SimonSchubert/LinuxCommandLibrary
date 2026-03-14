@@ -1,6 +1,6 @@
 # TAGLINE
 
-manages multiple Node
+Manage multiple Node.js versions
 
 # TLDR
 

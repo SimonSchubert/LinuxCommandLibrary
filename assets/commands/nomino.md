@@ -8,46 +8,71 @@ Batch rename utility for developers
 
 ```nomino -r "[regex]" "[output_pattern]"```
 
-**Dry run** to preview changes
+**Preview changes without renaming**
 
-```nomino -r "[regex]" "[output_pattern]" -p```
+```nomino -q -r "[regex]" "[output_pattern]"```
 
 **Sort files and rename with ascending numbers**
 
-```nomino -s "[sort_order]" "[output_pattern]"```
+```nomino -s asc "[output_pattern]"```
 
-**Generate a JSON map** of renames
+**Generate a JSON map of renames**
 
-```nomino -r "[regex]" "[output_pattern]" -g [map.json]```
+```nomino -g [map.json] -r "[regex]" "[output_pattern]"```
+
+**Rename using a JSON map file**
+
+```nomino -m [map.json]```
+
+**Rename in a specific directory**
+
+```nomino -d [/path/to/dir] -r "[regex]" "[output_pattern]"```
 
 # SYNOPSIS
 
-**nomino** [_options_] _output_ [_source_]
+**nomino** [_options_] [[_source_] _output_]...
 
 # PARAMETERS
 
 **-r**, **--regex** _PATTERN_
-> Regex pattern to match filenames (RE2 syntax).
+> Regex pattern to match filenames.
 
 **-s**, **--sort** _ORDER_
-> Sort files naturally in ascending or descending order.
+> Sort files naturally by name (asc or desc) and rename using enumerator.
 
-**-p**, **--print**
-> Dry run — preview changes without renaming.
+**-m**, **--map** _PATH_
+> Use a JSON map file for renaming files.
 
-**-g**, **--generate** _FILE_
-> Generate a JSON map of the rename operations.
+**-g**, **--generate** _PATH_
+> Store a JSON map file after renaming.
 
-**-e**, **--extension**
-> Preserve file extensions during rename.
+**-d**, **--dir** _PATH_
+> Set the working directory.
+
+**-E**, **--no-extension**
+> Do not preserve file extensions in sort and regex modes.
+
+**-k**, **--mkdir**
+> Recursively create parent directories of output if missing.
+
+**-q**, **--quiet**
+> Do not print the map table to stdout.
+
+**--depth** _DEPTH_
+> Override inferred subdirectory depth in regex mode.
+
+**--max-depth** _DEPTH_
+> Set maximum subdirectory depth in regex mode.
 
 # DESCRIPTION
 
-**nomino** is an async batch rename utility for developers. It supports regex-based pattern matching, natural sorting, file extension preservation, dry-run mode, and JSON map generation for documenting rename operations.
+**nomino** is a batch rename utility for developers. It supports regex-based pattern matching, natural sorting, JSON map generation, and directory creation for documenting and executing rename operations.
+
+File extensions are preserved by default in sort and regex modes unless **-E** is used.
 
 # CAVEATS
 
-Uses RE2 regex syntax. Always use dry-run mode (**-p**) to preview changes before executing.
+Always preview changes with **-q** before executing. File extensions are preserved by default in sort and regex modes.
 
 # HISTORY
 

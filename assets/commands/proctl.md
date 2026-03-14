@@ -66,7 +66,7 @@ Create new license **template**
 
 **proctl** manages project licenses and language configurations. It provides templated license management with interactive selection, making it easy to add or switch licenses in projects.
 
-The tool supports custom license templates and integrates with fzf for fuzzy selection of licenses and languages.
+The tool supports custom license templates and integrates with fzf for fuzzy selection of licenses and languages. Configuration is stored in **~/.config/license.conf** (auto-generated on first launch or with **-new-config**).
 
 # CAVEATS
 
@@ -74,8 +74,8 @@ Requires fzf for interactive menus. License templates stored in user configurati
 
 # HISTORY
 
-**proctl** was created by **CreativeCodeCat** to streamline project license management, particularly useful for developers who work on multiple projects with different licensing requirements.
+**proctl** was created by **HeCodes2Much** (CreativeCodeCat) to streamline project license management, particularly useful for developers who work on multiple projects with different licensing requirements.
 
 # SEE ALSO
 
-[license](/man/license)(1), [fzf](/man/fzf)(1)
+[licensor](/man/licensor)(1), [fzf](/man/fzf)(1)

@@ -20,9 +20,17 @@ Command-line calendar with color and iCal support
 
 ```carl -w```
 
-**Load** events from an iCal file
+**Display** previous, current, and next month
 
-```carl --ical [path/to/calendar.ics]```
+```carl -3```
+
+**Display** with agenda listing events
+
+```carl -a```
+
+**Display** Julian day numbers
+
+```carl -j```
 
 # SYNOPSIS
 
@@ -39,17 +47,35 @@ Command-line calendar with color and iCal support
 **-w**
 > Show ISO week numbers.
 
-**--ical** _FILE_
-> Load events from an iCal (.ics) file.
+**-1, --one**
+> Display single month output (default).
+
+**-3, --three**
+> Display previous, current, and next month.
+
+**-n, --months** _NUMBER_
+> Display current and following months.
+
+**-s, --sunday**
+> Display Sunday as first day of week.
+
+**-j, --julian**
+> Display Julian dates (days numbered from January 1).
+
+**-a, --agenda**
+> Display event agenda below the calendar.
 
 **--theme** _THEME_
 > Set the color theme.
 
+**--themestyletype** _TYPE_
+> Use "dark" or "light" background theme styles.
+
 # DESCRIPTION
 
-**carl** is a command-line calendar tool that displays colorful, formatted calendars in the terminal. It supports loading and displaying events from **iCal** (.ics) files, highlighting dates with events. The output uses colors and formatting for improved readability compared to the traditional **cal** command.
+**carl** is a command-line calendar tool written in Rust that displays colorful, formatted calendars in the terminal. It tries to mimic various cal(1) implementations but adds enhanced features like colors and iCal support. The output uses colors and formatting for improved readability compared to the traditional **cal** command.
 
-Carl can display single months, full years, and highlight the current date. When iCal files are loaded, event dates are marked in the calendar view.
+Carl can display single months, multiple months, full years, and highlight the current date. iCal files are configured via a config file (config.toml) using `[[ical]]` sections, and event dates are highlighted in the calendar view. The `--agenda` flag lists event summaries below the calendar.
 
 # CAVEATS
 

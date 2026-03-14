@@ -37,12 +37,27 @@ Collect and analyze SSL/TLS certificate information
 **-c**
 > Output results in CSV format.
 
-**-s** _SOCKS_
+**-S**
+> Output summary only.
+
+**-x**
+> Export results as HTML file.
+
+**-J**
+> Export JSON individually per host.
+
+**-v**
+> Enable verbose output for troubleshooting.
+
+**-t** _TIMEOUT_
+> Connection timeout in seconds.
+
+**-s** _HOST:PORT_
 > Use a SOCKS proxy for connections.
 
 # DESCRIPTION
 
-**ssl-checker** is a script that collects SSL/TLS information from hosts. It can check certificate expiration dates, analyze security vulnerabilities, and export results in JSON, CSV, or HTML formats. It also supports SOCKS proxy connections.
+**ssl-checker** is a Python script that collects SSL/TLS information from hosts. It can check certificate expiration dates, issuer details, and cipher suites. It supports security vulnerability analysis, SOCKS proxy connections, and exports results in JSON, CSV, or HTML formats.
 
 # HISTORY
 
@@ -50,4 +65,4 @@ Collect and analyze SSL/TLS certificate information
 
 # SEE ALSO
 
-[openssl](/man/openssl)(1), [testssl.sh](/man/testssl.sh)(1), [certigo](/man/certigo)(1)
+[openssl](/man/openssl)(1), [testssl](/man/testssl)(1)

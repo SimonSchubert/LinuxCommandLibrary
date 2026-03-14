@@ -4,62 +4,68 @@ Smart directory changer with learning
 
 # TLDR
 
-**Change to bookmarked directory**
+**Change to a directory** matching a pattern
 
-```scd [bookmark]```
+```scd [pattern]```
 
-**Add bookmark**
+**Add directories** to the index
 
-```scd --add [name]```
+```scd -a [path/to/directory]```
 
-**List bookmarks**
+**Recursively add directories** to the index
 
-```scd --list```
+```scd -ar [path/to/directory]```
 
-**Remove bookmark**
+**Create a directory alias**
 
-```scd --remove [name]```
+```scd --alias=[name]```
 
-**Search and jump**
+**Remove a directory alias**
 
-```scd [partial-match]```
+```scd --unalias=[name]```
+
+**Show verbose directory rankings**
+
+```scd -v [pattern]```
 
 # SYNOPSIS
 
-**scd** [_--add name_] [_--list_] [_--remove name_] [_bookmark_]
+**scd** [_options_] [_pattern_...]
 
 # PARAMETERS
 
-**--add** _NAME_
-> Add current as bookmark.
+**-a, --add**
+> Add specified directories to the directory index.
 
-**--list**
-> Show all bookmarks.
+**-r, --recursive**
+> Apply --add or --unindex recursively.
 
-**--remove** _NAME_
-> Delete bookmark.
+**--alias**=_NAME_
+> Create alias for the current or specified directory, stored in ~/.scdalias.zsh.
 
-**-a**
-> All matching dirs.
+**--unalias**=_NAME_
+> Remove an alias definition.
 
-**--help**
-> Show help.
+**--unindex**
+> Remove specified directories from the index.
+
+**-v, --verbose**
+> Display directory rank in the selection menu.
+
+**-h, --help**
+> Show help message.
 
 # DESCRIPTION
 
-**scd** is a smart directory changer that enhances shell navigation through bookmarks and directory usage learning. It replaces the standard **cd** command with an intelligent alternative that remembers frequently visited paths and supports fuzzy matching, so partial directory names are enough to navigate.
+**scd** is a Z shell script for changing to any directory with a few keystrokes. It keeps a history of visited directories, which serves as an index of known paths. The directory index is updated after every cd command and can also be filled manually with **scd -a**.
 
-The bookmark system allows saving important directories by name for instant access. When navigating without an exact match, scd uses its learned history of directory visits to suggest the most likely target, ranking results by frequency and recency of use.
+To switch to a directory, scd needs just a few fragments of the desired path to match against the index. A selection menu is displayed when there are several matches, with preference given to recently visited paths. Permanent directory aliases can be created for instant access.
 
-Shell integration makes scd a transparent replacement for cd in bash, zsh, and other shells. Once configured, it intercepts directory changes to build its knowledge base while providing the same familiar interface.
+scd is available as an oh-my-zsh plugin and also works with bash through shell integration.
 
 # CAVEATS
 
-Requires shell setup. History-based learning. Shell-specific config.
-
-# HISTORY
-
-**scd** provides smart directory changing with bookmarks and learning capabilities, enhancing shell navigation.
+Primarily a zsh script; bash support requires separate setup. History-based learning needs time to build a useful index.
 
 # SEE ALSO
 

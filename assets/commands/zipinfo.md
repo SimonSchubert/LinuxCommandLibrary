@@ -42,34 +42,37 @@ Display ZIP archive information
 > Filenames only, one per line.
 
 **-2**
-> Filenames only (like -1).
+> Filenames only, allows headers (-h), totals (-t), and comments (-z).
 
 **-s**
-> Short Unix format.
+> Short Unix ls -l format (default).
 
 **-m**
-> Medium Unix format.
+> Medium format: adds compression factor percentage.
 
 **-l**
-> Long Unix format.
+> Long format: shows compressed size in bytes.
 
 **-h**
-> Header info.
+> Print archive header (name, size, file count).
 
 **-t**
-> Totals.
+> Print totals (file count, total sizes, compression ratio).
 
 **-T**
-> Decimal timestamps.
+> Print timestamps in sortable decimal format (yymmdd.hhmmss).
 
 **-z**
-> Archive comment.
+> Print archive comment.
 
 **-v**
-> Verbose (all available info).
+> Verbose multi-page format with all available info.
+
+**-M**
+> Pipe output through internal pager (like more).
 
 **-x** _PATTERN_
-> Exclude files.
+> Exclude files matching pattern.
 
 # OUTPUT FIELDS
 

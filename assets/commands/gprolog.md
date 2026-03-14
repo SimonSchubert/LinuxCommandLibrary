@@ -64,8 +64,14 @@ GNU Prolog supports ISO Prolog with extensions for constraint logic programming,
 # Compile to executable
 gplc program.pl -o program
 
-# With optimization
-gplc --fast-math program.pl -o program
+# Produce WAM file
+gplc -W program.pl
+
+# Strip executable
+gplc program.pl -o program -s
+
+# Compile without top-level
+gplc --no-top-level program.pl -o program
 ```
 
 # CAVEATS
@@ -78,4 +84,4 @@ GNU Prolog was created by **Daniel Diaz** at INRIA, first released in **1996**. 
 
 # SEE ALSO
 
-[swipl](/man/swipl)(1), [sicstus](/man/sicstus)(1), [prolog](/man/prolog)(1)
+[swipl](/man/swipl)(1), [sicstus](/man/sicstus)(1)

@@ -62,20 +62,29 @@ React-based static site generator
 # PARAMETERS
 
 **-H**, **--host** _host_
-> Development server host.
+> Development server host (default: localhost).
 
 **-p**, **--port** _port_
-> Development server port.
+> Development server port (default: 8000).
+
+**-o**, **--open**
+> Open the site in the default browser.
 
 **--prefix-paths**
-> Build with path prefix.
+> Build with path prefix (requires pathPrefix in gatsby-config).
+
+**--no-uglify**
+> Build without uglifying JS bundles (for debugging).
+
+**--verbose**
+> Turn on verbose output.
 
 # CONFIGURATION
 
-**gatsby-config.js**
+**gatsby-config.js** (or **gatsby-config.ts**)
 > Main configuration file for plugins, site metadata, and build settings.
 
-**gatsby-node.js**
+**gatsby-node.js** (or **gatsby-node.ts**)
 > Node API configuration for dynamic page creation and build-time customization.
 
 # DESCRIPTION
@@ -92,7 +101,7 @@ Build times can be slow for large sites. GraphQL layer has learning curve. Some 
 
 # HISTORY
 
-Gatsby was created by **Kyle Mathews** in **2015** as a modern static site generator. It gained popularity for combining React with GraphQL and was acquired by **Netlify** in **2023**. The framework helped popularize the Jamstack architecture.
+Gatsby was created by **Kyle Mathews** in **2015** as a modern static site generator. It gained popularity for combining React with GraphQL and was acquired by **Netlify** in **February 2023**. The framework helped popularize the Jamstack architecture. Gatsby 5, released in **November 2022**, introduced the Slice API and partial hydration.
 
 # SEE ALSO
 

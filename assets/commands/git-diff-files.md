@@ -27,19 +27,25 @@ Compare working tree files to index
 # PARAMETERS
 
 **--raw**
-> Raw diff format.
+> Raw diff format (default).
 
 **--quiet**
-> Exit with 1 if differences.
+> Exit with 1 if there are differences, 0 otherwise. Disables output.
 
 **-p**, **--patch**
-> Generate patch.
+> Generate patch output.
 
 **--stat**
-> Show diffstat.
+> Show diffstat summary.
 
 **--name-only**
-> Show changed file names.
+> Show only names of changed files.
+
+**--name-status**
+> Show names and status (added, modified, deleted) of changed files.
+
+**-0**
+> Omit diff output for unmerged entries, just show "Unmerged".
 
 # DESCRIPTION
 
@@ -49,4 +55,4 @@ This command is part of Git's plumbing layer, designed for scripting and automat
 
 # SEE ALSO
 
-[git-diff](/man/git-diff)(1), [git-diff-index](/man/git-diff-index)(1)
+[git-diff](/man/git-diff)(1), [git-diff-index](/man/git-diff-index)(1), [git-diff-tree](/man/git-diff-tree)(1)

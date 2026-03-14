@@ -40,7 +40,10 @@ _FILES_
 > Compile only, no linking.
 
 **-Wall**
-> Enable all warnings.
+> Enable common warnings.
+
+**-Wextra**
+> Enable additional warnings beyond -Wall.
 
 **-g**
 > Generate debug info.
@@ -48,8 +51,8 @@ _FILES_
 **-O** _LEVEL_
 > Optimization level (0-3, s, fast).
 
-**-std** _STANDARD_
-> C++ standard (c++11, c++14, c++17, c++20).
+**-std=**_STANDARD_
+> C++ standard (c++11, c++14, c++17, c++20, c++23).
 
 **-I** _PATH_
 > Include path.
@@ -81,4 +84,4 @@ g++ is part of **GCC** (GNU Compiler Collection), originally written by Richard 
 
 # SEE ALSO
 
-[gcc](/man/gcc)(1), [clang++](/man/clang++)(1), [make](/man/make)(1)
+[gcc](/man/gcc)(1), [clang++](/man/clang++)(1), [ld](/man/ld)(1), [make](/man/make)(1), [gdb](/man/gdb)(1)

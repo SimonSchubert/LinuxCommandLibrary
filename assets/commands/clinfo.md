@@ -16,13 +16,13 @@ OpenCL platform and device information tool
 
 ```clinfo --raw```
 
-**Display specific property**
-
-```clinfo --prop [CL_DEVICE_NAME]```
-
 **Display offline devices**
 
 ```clinfo --offline```
+
+**Display output in JSON format**
+
+```clinfo --json```
 
 # SYNOPSIS
 
@@ -36,17 +36,23 @@ OpenCL platform and device information tool
 **--raw**
 > Raw output format.
 
-**-a**, **--all**
-> Show all properties including unsupported.
+**-a**, **--all-props**
+> Try to retrieve all properties, even those not officially supported.
+
+**-A**, **--always-all-props**
+> Like -a, but also shows errors for unsupported properties.
 
 **--offline**
 > Show offline devices.
 
-**--prop** _name_
-> Show specific property value.
+**--json**
+> Output raw data in JSON format (experimental).
 
 **-h**, **--human**
 > Human-readable format (default).
+
+**-v**, **--version**
+> Show program version.
 
 # DESCRIPTION
 

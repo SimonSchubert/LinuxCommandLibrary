@@ -79,7 +79,7 @@ For rapid prototyping, `vue serve` and `vue build` can compile individual Vue si
 
 # CAVEATS
 
-Vue CLI for Vue 2/3. Vite recommended for new Vue 3. Node.js required.
+Vue CLI is in maintenance mode for Vue 2/3 projects. For new Vue 3 projects, **create-vue** (backed by Vite) is the recommended scaffolding tool. Requires Node.js 8.9 or higher (Node.js 10+ recommended).
 
 # HISTORY
 
@@ -87,4 +87,4 @@ Vue CLI for Vue 2/3. Vite recommended for new Vue 3. Node.js required.
 
 # SEE ALSO
 
-[npm](/man/npm)(1), [vite](/man/vite)(1), [node](/man/node)(1)
+[npm](/man/npm)(1), [vite](/man/vite)(1), [node](/man/node)(1), [vue-serve](/man/vue-serve)(1), [yarn](/man/yarn)(1)

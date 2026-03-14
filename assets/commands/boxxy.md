@@ -48,8 +48,11 @@ The tool is designed to manage applications that create dotfiles or directories 
 **--scan**
 > Scan home directory and suggest rules
 
-**--context** _path_
-> Set context directory for rule application
+**-v, --verbose**
+> Enable verbose output
+
+**-h, --help**
+> Display help and exit
 
 # CONFIGURATION
 
@@ -76,4 +79,4 @@ Requires Linux namespaces support (Linux kernel). Rules must specify mode when t
 
 # SEE ALSO
 
-[firejail](/man/firejail)(1), [bubblewrap](/man/bubblewrap)(1), [unshare](/man/unshare)(1)
+[firejail](/man/firejail)(1), [bwrap](/man/bwrap)(1), [unshare](/man/unshare)(1)

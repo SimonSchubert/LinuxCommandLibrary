@@ -8,21 +8,25 @@ Exoscale identity and access management
 
 ```exo iam api-key list```
 
-**Create API key**
+**Create API key** with a role
 
-```exo iam api-key create [name]```
+```exo iam api-key create [name] [role-name]```
 
 **Delete API key**
 
 ```exo iam api-key delete [key_id]```
 
-**List roles**
+**List IAM roles**
 
 ```exo iam role list```
 
-**Show current identity**
+**Create an IAM role**
 
-```exo iam whoami```
+```exo iam role create [role-name] --policy [policy.json]```
+
+**Show organization policy**
+
+```exo iam org-policy show```
 
 # SYNOPSIS
 
@@ -30,34 +34,35 @@ Exoscale identity and access management
 
 # PARAMETERS
 
-_RESOURCE_
-> Resource type: api-key, role.
+**api-key** _ACTION_
+> Manage API keys (list, create, delete).
 
-_ACTION_
-> Operation: list, create, delete, show.
+**api-key create** _NAME_ _ROLE_
+> Create new API key with the specified role.
 
-**api-key create** _NAME_
-> Create new API key.
+**api-key list**
+> List all API keys.
 
 **api-key delete** _ID_
-> Delete API key.
+> Delete an API key.
 
-**role list**
-> List IAM roles.
+**role** _ACTION_
+> Manage IAM roles (list, create, delete, show, update).
 
-**whoami**
-> Show current identity.
+**role create** _NAME_ **--policy** _FILE_
+> Create a new IAM role with a policy file.
+
+**org-policy** _ACTION_
+> Manage organization IAM policy (show, reset).
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**exo iam** manages identity and access management for Exoscale. It handles API keys used for authentication and roles for access control.
+**exo iam** manages identity and access management for Exoscale cloud. It handles API keys used for authentication and roles for access control.
 
-API keys provide programmatic access to Exoscale resources. Keys can be scoped with roles to limit permissions. whoami confirms the current authenticated identity.
-
-IAM management is essential for securing cloud infrastructure access.
+API keys provide programmatic access to Exoscale resources. Each key is attached to a role that defines its permissions via a policy. Roles contain policies that specify allowed and denied operations across services such as compute, dns, dbaas, sos, and block-storage. The org-policy subcommand manages the organization-level default policy.
 
 # CAVEATS
 

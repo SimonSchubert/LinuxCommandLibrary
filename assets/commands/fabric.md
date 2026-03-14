@@ -4,25 +4,29 @@ Python SSH automation and deployment tool
 
 # TLDR
 
-**Run command on remote host**
+**Run a shell command on a remote host**
 
 ```fab -H [host] -- [command]```
 
-**Run task from fabfile**
+**Run a task defined in fabfile.py**
 
 ```fab [taskname]```
 
-**Run task on specific host**
+**Run a task on a specific host**
 
 ```fab -H [user@host] [taskname]```
 
-**List available tasks**
+**List all available tasks**
 
 ```fab --list```
 
-**Run with specific identity file**
+**Run a task using a specific SSH key**
 
 ```fab -i [~/.ssh/key] -H [host] [taskname]```
+
+**Show detailed help for a specific task**
+
+```fab -d [taskname]```
 
 # SYNOPSIS
 
@@ -89,4 +93,4 @@ Fabric was created by **Jeff Forcier** in **2009** as a simpler alternative to C
 
 # SEE ALSO
 
-[ansible](/man/ansible)(1), [paramiko](/man/paramiko)(1), [ssh](/man/ssh)(1), [invoke](/man/invoke)(1)
+[ansible](/man/ansible)(1), [ssh](/man/ssh)(1)

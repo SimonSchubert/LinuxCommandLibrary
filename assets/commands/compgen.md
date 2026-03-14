@@ -42,7 +42,7 @@ generate completion matches in bash
 
 # DESCRIPTION
 
-**compgen** generates completion matches for word. Bash builtin used for programmable completion. Outputs words matching specified criteria to stdout.
+**compgen** is a Bash builtin that generates possible completion matches for a word. It is primarily used inside programmable completion functions but is also useful interactively for discovering available commands, functions, variables, and other shell entities. When given a word argument, only matches starting with that word are shown.
 
 # PARAMETERS
 

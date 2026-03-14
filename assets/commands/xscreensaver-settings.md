@@ -8,13 +8,21 @@ Configure xscreensaver preferences
 
 ```xscreensaver-settings```
 
-**Preview specific screensaver**
+**Open settings with debug output**
 
-```xscreensaver-settings -prefs```
+```xscreensaver-settings --debug```
 
 # SYNOPSIS
 
-**xscreensaver-settings** [_options_]
+**xscreensaver-settings** [**--display** _host:display.screen_] [**--debug**]
+
+# PARAMETERS
+
+**--display** _host:display.screen_
+> The X display to use for both the settings window and the controlled xscreensaver daemon
+
+**--debug**
+> Print diagnostics to stderr
 
 # DESCRIPTION
 

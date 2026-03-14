@@ -42,8 +42,23 @@ Uptime record tracking daemon
 **-p** _file_
 > Use specified PID file.
 
-**-d**
-> Don't fork to background (debug mode).
+**-e** _email_
+> Send email at milestones and new records.
+
+**-i** _interval_
+> Set loop interval in seconds.
+
+**-m** _count_
+> Log a maximum of count entries.
+
+**-t** _timespec_
+> Set minimum uptime to be considered a record.
+
+**-b**
+> Create bootid and exit.
+
+**-v**
+> Show version information.
 
 # UPRECORDS PARAMETERS
 
@@ -96,4 +111,4 @@ Only records uptimes after installation. Requires daemon to be running to track 
 
 # SEE ALSO
 
-[uptime](/man/uptime)(1), [last](/man/last)(1), [who](/man/who)(1)
+[uprecords](/man/uprecords)(1), [uptime](/man/uptime)(1), [last](/man/last)(1), [who](/man/who)(1)

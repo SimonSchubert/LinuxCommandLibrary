@@ -12,6 +12,10 @@ Terminal dashboard from shell commands with YAML configuration
 
 ```sampler -c [config.yml] -e "[VAR=value]"```
 
+**Launch with multiple environment variables**
+
+```sampler -c [config.yml] -e "[VAR1=value1]" -e "[VAR2=value2]"```
+
 # SYNOPSIS
 
 **sampler** **-c** _config.yml_ [_options_]
@@ -38,4 +42,4 @@ Windows support is experimental. Linux requires **libasound2-dev** for audio ale
 
 # SEE ALSO
 
-[wtfutil](/man/wtfutil)(1), [grafana](/man/grafana)(1), [glances](/man/glances)(1)
+[glances](/man/glances)(1), [htop](/man/htop)(1)

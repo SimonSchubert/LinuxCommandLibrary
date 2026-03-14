@@ -12,7 +12,7 @@ Console weather forecast service
 
 ```curl wttr.in/[Paris]```
 
-**Get weather for a location** with spaces
+**Get weather for a landmark** or named location
 
 ```curl "wttr.in/~[Eiffel Tower]"```
 
@@ -66,14 +66,26 @@ _location_
 **?q**
 > Quiet version without "Weather report" header.
 
+**?Q**
+> Superquiet version (no "Weather report" text, no city name).
+
 **?format=**_string_
-> Custom format for one-line output. Example: format=3 for short summary.
+> Custom format for one-line output. Presets: 1-4. Custom: %c (condition), %t (temperature), %w (wind), %h (humidity), %l (location), %m (moon phase).
 
 **?T**
 > Disable terminal sequences (for piping).
 
+**?F**
+> Do not show the "Follow" line.
+
+**?d**
+> Restrict output to standard console font glyphs.
+
+**?M**
+> Show wind speed in m/s.
+
 **?lang=**_code_
-> Set language (e.g., lang=de for German).
+> Set language (e.g., lang=de for German). Also available as subdomain: fr.wttr.in.
 
 **.png**
 > Return weather as PNG image instead of text.
@@ -82,7 +94,7 @@ _location_
 
 **wttr.in** is a console-oriented weather forecast service accessed via HTTP clients like curl, wget, or httpie. It provides weather information in ASCII art format directly in the terminal, requiring no installation.
 
-The service supports various location types: city names, airport codes, GPS coordinates, area codes, and even domain names (to get weather for the server's location). Without a location, it uses your IP address to determine location.
+The service supports various location types: city names, 3-letter airport codes, GPS coordinates, area codes, domain names (prefixed with @), and landmarks (prefixed with ~). Without a location, it uses your IP address to determine location.
 
 Output can be customized for different use cases: full 3-day forecasts, current conditions only, one-line format for status bars (tmux, shell prompts), or PNG images. The v2 endpoint (v2.wttr.in) provides expanded data including historical information.
 

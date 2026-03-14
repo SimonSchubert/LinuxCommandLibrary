@@ -1,6 +1,6 @@
 # TAGLINE
 
-KDE-based RDP server that allows remote connections to a KDE Plasma
+KDE-based RDP server for remote connections to a KDE Plasma desktop
 
 # TLDR
 
@@ -28,7 +28,13 @@ Share a **specific monitor**
 > Share specific monitor by index number
 
 **--port** _PORT_
-> Listen on specified port
+> Listen on specified port (default: 3389)
+
+**--certificate** _FILE_
+> TLS certificate file for encrypted connections
+
+**--certificate-key** _FILE_
+> TLS certificate private key file
 
 # DESCRIPTION
 
@@ -46,4 +52,4 @@ krdpserver is part of the KRDP project developed by KDE for native RDP server su
 
 # SEE ALSO
 
-[krdc](/man/krdc)(1), [xrdp](/man/xrdp)(8), [vncserver](/man/vncserver)(1)
+[vncserver](/man/vncserver)(1)

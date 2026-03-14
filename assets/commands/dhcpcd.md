@@ -4,13 +4,29 @@ DHCP and DHCPv6 client daemon
 
 # TLDR
 
-**Release** all address leases
+**Obtain a lease** on a specific interface
+
+```sudo dhcpcd [eth0]```
+
+**Release** all address leases and exit
 
 ```sudo dhcpcd -k```
 
-**Request** new leases
+**Request** new leases (rebind)
 
 ```sudo dhcpcd -n```
+
+**Configure IPv4 only**
+
+```sudo dhcpcd -4 [eth0]```
+
+**Configure IPv6 only**
+
+```sudo dhcpcd -6 [eth0]```
+
+**Test mode** (don't configure, just print variables)
+
+```sudo dhcpcd -T [eth0]```
 
 # SYNOPSIS
 
@@ -41,8 +57,23 @@ dhcpcd is commonly used as the default network configuration tool on many Linux 
 **-B, --nobackground**
 > Don't run in background
 
+**-4, --ipv4only**
+> Only configure IPv4
+
+**-6, --ipv6only**
+> Only configure IPv6
+
+**-b, --background**
+> Background immediately
+
+**-S, --static** _value_
+> Configure a static DHCP value (e.g., ip_address, routers, domain_name_servers)
+
+**-s, --inform** _address_
+> Send DHCP INFORM instead of DISCOVER/REQUEST
+
 **-T, --test**
-> Test mode, don't configure
+> Test mode, don't configure interfaces
 
 # CONFIGURATION
 

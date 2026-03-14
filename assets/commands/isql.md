@@ -12,21 +12,25 @@ ODBC command-line SQL client
 
 ```isql [dsn_name] [username] [password]```
 
-**Execute query from file**
+**Connect with verbose error output**
 
-```isql [dsn] -i [query.sql]```
+```isql -v [dsn_name]```
 
-**Output to file**
+**Run in batch mode (no headers)**
 
-```isql [dsn] < [query.sql] > [output.txt]```
+```isql -b [dsn_name] < [query.sql]```
 
-**Verbose mode**
+**Use custom column delimiter**
 
-```isql -v [dsn]```
+```isql -d0x2C [dsn_name]```
 
-**No header output**
+**Output as HTML table**
 
-```isql -b [dsn]```
+```isql -w [dsn_name]```
+
+**Use column headers with delimiter**
+
+```isql -b -c -d0x09 [dsn_name]```
 
 # SYNOPSIS
 
@@ -44,19 +48,40 @@ _PASSWORD_
 > Database password.
 
 **-v**
-> Verbose mode.
+> Verbose mode with full error descriptions.
 
 **-b**
-> Batch mode (no headers).
+> Batch mode (no headers, no prompts).
 
-**-d** _DELIM_
-> Column delimiter.
+**-d** _HEX_
+> Column delimiter as hex code (e.g., 0x09 for TAB, 0x2C for comma).
 
-**-i** _FILE_
-> Input file.
+**-c**
+> Output column names on first row (with -d or -x).
 
-**--help**
-> Display help information.
+**-w**
+> Format output as HTML table.
+
+**-n**
+> Use newline processing (multi-line SQL terminated with GO).
+
+**-e**
+> Use SQLExecDirect instead of Prepare.
+
+**-k**
+> Use SQLDriverConnect.
+
+**-3**
+> Use ODBC 3 calls.
+
+**-L** _NUM_
+> Maximum characters per field (default: 300).
+
+**-q**
+> Wrap character fields in double quotes.
+
+**--version**
+> Print version and exit.
 
 # DESCRIPTION
 
@@ -74,4 +99,4 @@ isql is part of **unixODBC**, providing command-line database access through the
 
 # SEE ALSO
 
-[odbcinst](/man/odbcinst)(1), [psql](/man/psql)(1), [mysql](/man/mysql)(1), [sqlcmd](/man/sqlcmd)(1)
+[psql](/man/psql)(1), [mysql](/man/mysql)(1), [sqlcmd](/man/sqlcmd)(1)

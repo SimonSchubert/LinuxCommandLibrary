@@ -91,6 +91,9 @@ Buck supports many languages including C++, Java, Python, Go, Rust, and others t
 **-v** _verbosity_
 > Verbosity level (0-10).
 
+**--show-full-output**
+> Show full output paths including hash.
+
 **--help**
 > Show help information.
 

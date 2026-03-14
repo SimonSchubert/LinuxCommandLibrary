@@ -32,6 +32,14 @@ Search for **file** in packages
 
 ```prt-get fsearch [filename]```
 
+Show packages with **available updates**
+
+```prt-get diff```
+
+Show **info** about a package
+
+```prt-get info [package]```
+
 # SYNOPSIS
 
 **prt-get** [**install**|**depinst**|**upgrade**|**remove**|**search**|**sysup**] [_options_] [_package_]
@@ -65,6 +73,18 @@ Search for **file** in packages
 **diff**
 > Show packages with available updates
 
+**listinst**
+> List installed packages
+
+**dependent**
+> List packages depending on a package
+
+**lock**
+> Lock a package to prevent upgrades
+
+**unlock**
+> Unlock a previously locked package
+
 # PARAMETERS
 
 **-fr**
@@ -75,6 +95,15 @@ Search for **file** in packages
 
 **-im**
 > Ignore MD5 mismatches
+
+**-v**
+> Show version in search results
+
+**-vv**
+> Show version and description in search results
+
+**--all**
+> Include locked packages in output
 
 # DESCRIPTION
 

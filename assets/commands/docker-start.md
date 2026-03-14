@@ -32,11 +32,20 @@ start stopped containers
 **-i**, **--interactive**
 > Attach container's STDIN.
 
+**--detach-keys** _string_
+> Override the key sequence for detaching a container.
+
+**--checkpoint** _string_
+> Restore from this checkpoint.
+
+**--checkpoint-dir** _string_
+> Use a custom checkpoint storage directory.
+
 # DESCRIPTION
 
 **docker start** starts one or more stopped containers. Containers retain their configuration from when they were created or last run.
 
 # SEE ALSO
 
-[docker-container-start](/man/docker-container-start)(1), [docker-stop](/man/docker-stop)(1)
+[docker-container-start](/man/docker-container-start)(1), [docker-run](/man/docker-run)(1)
 

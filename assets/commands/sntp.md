@@ -52,11 +52,17 @@ Simple Network Time Protocol client
 **-M** _threshold_
 > Slew if offset is less than threshold milliseconds, otherwise step
 
+**-t** _seconds_
+> Timeout to wait for responses (default: 5)
+
 **-d**, **--debug-level**
-> Increase debug verbosity
+> Increase debug verbosity (can be specified multiple times)
 
 **-K** _file_, **--kod**=_file_
 > KoD (Kiss-of-Death) history file
+
+**-c**, **--concurrent**
+> Allow concurrent queries to resolved IPs (for hosts on different machines)
 
 # DESCRIPTION
 
@@ -72,7 +78,7 @@ Stepping the clock can disrupt applications depending on monotonic time. Slewing
 
 # HISTORY
 
-sntp implements RFC 2030 (Simple Network Time Protocol), which superseded RFC 1769. It is part of the NTP reference implementation but has been largely superseded by more robust alternatives like chrony.
+sntp implements RFC 4330 (Simple Network Time Protocol Version 4). It is part of the NTP reference implementation but has been largely superseded by more robust alternatives like chrony and systemd-timesyncd.
 
 # SEE ALSO
 

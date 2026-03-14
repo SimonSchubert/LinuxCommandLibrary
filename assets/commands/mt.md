@@ -1,6 +1,6 @@
 # TAGLINE
 
-controls magnetic tape drive operations, commonly used with LTO and other SCSI
+Control magnetic tape drive operations
 
 # TLDR
 
@@ -44,7 +44,7 @@ Write **EOF mark** at current position
 **-h**
 > List available commands
 
-**-v, --version**
+**-V, --version**
 > Display version information
 
 # OPERATIONS
@@ -84,6 +84,9 @@ Write **EOF mark** at current position
 
 **retension**
 > Rewind, wind to end, rewind again (conditions tape)
+
+**setblk _size_**
+> Set hardware block size in bytes (0 for variable)
 
 **seek _block_**
 > Seek to specified block number (SCSI)

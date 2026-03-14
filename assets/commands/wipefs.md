@@ -1,6 +1,6 @@
 # TAGLINE
 
-Erase filesystem signatures from devices
+Erase filesystem, RAID, or partition-table signatures from devices
 
 # TLDR
 
@@ -16,13 +16,21 @@ Wipe device and **partitions**
 
 ```sudo wipefs -a /dev/sda*```
 
-**Dry run**
+**Dry run** to show what would be done
 
 ```sudo wipefs -a -n /dev/sda```
+
+**Wipe** signatures and create a backup
+
+```sudo wipefs -a -b /dev/sda```
 
 **Force** wipe mounted device
 
 ```sudo wipefs -a -f /dev/sda```
+
+**Output** signatures in JSON format
+
+```sudo wipefs -J /dev/sda```
 
 # SYNOPSIS
 
@@ -53,11 +61,20 @@ Wipe device and **partitions**
 > Wipe only specified signature types
 
 **-q, --quiet**
-> Suppress output
+> Suppress output messages after successful signature wipe
+
+**-p, --parsable**
+> Print out in parsable format instead of printable
+
+**-J, --json**
+> Use JSON output format
+
+**-O, --output** _list_
+> Specify which output columns to print
 
 # CAVEATS
 
-This command removes filesystem identification signatures but does not securely erase data. For complete data destruction, use **blkdiscard** or overwrite with **dd**. Wiping a mounted filesystem can cause data loss.
+This command removes filesystem identification signatures but does not erase the filesystem itself or any other data from the device. For complete data destruction, use **blkdiscard** or overwrite with **dd**. Wiping a mounted filesystem can cause data loss. The **--force** flag is required to erase nested partition tables on non-whole disk devices.
 
 # HISTORY
 
@@ -65,4 +82,4 @@ This command removes filesystem identification signatures but does not securely 
 
 # SEE ALSO
 
-[blkid](/man/blkid)(8), [lsblk](/man/lsblk)(8), [blkdiscard](/man/blkdiscard)(8)
+[blkid](/man/blkid)(8), [lsblk](/man/lsblk)(8), [blkdiscard](/man/blkdiscard)(8), [dd](/man/dd)(1), [fdisk](/man/fdisk)(8)

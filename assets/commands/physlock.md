@@ -53,7 +53,7 @@ Authentication is required from the current user or root to unlock. This makes i
 
 # CAVEATS
 
-Does not lock graphical displays (use with screen locker). Requires PAM for authentication. Detach mode useful for suspend/hibernate scripts. SysRq disable only effective if kernel supports it.
+Does not lock graphical displays; use alongside a screen locker (e.g., i3lock, slock) for X11/Wayland sessions. Requires PAM for authentication. Detach mode (**-d**) is useful in suspend/hibernate scripts (e.g., systemd sleep hooks). SysRq disable is only effective if the kernel has CONFIG_MAGIC_SYSRQ enabled. Must be run as root or with appropriate permissions.
 
 # HISTORY
 

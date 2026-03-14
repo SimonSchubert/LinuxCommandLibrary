@@ -16,9 +16,17 @@ Read tree information into index
 
 ```git read-tree --prefix=[dir/] [tree-ish]```
 
+**Merge and update working tree**
+
+```git read-tree -m -u [base] [ours] [theirs]```
+
 **Reset index**
 
 ```git read-tree --reset HEAD```
+
+**Dry run to check for errors**
+
+```git read-tree -n -m [tree-ish]```
 
 # SYNOPSIS
 
@@ -42,7 +50,22 @@ _TREE-ISH_
 > Read into subdirectory.
 
 **-i**
-> Only update index.
+> Only update index, do not check working tree.
+
+**-n**, **--dry-run**
+> Check for errors without updating the index or working tree.
+
+**-v**
+> Show progress of checking files out.
+
+**--trivial**
+> Only perform merge for trivial cases, leave conflicts unresolved.
+
+**--aggressive**
+> Resolve more cases internally during three-way merge.
+
+**--index-output** _FILE_
+> Write results to specified file instead of $GIT_INDEX_FILE.
 
 **--help**
 > Display help information.
@@ -63,4 +86,4 @@ git read-tree is a core **Git** plumbing command implementing index manipulation
 
 # SEE ALSO
 
-[git-write-tree](/man/git-write-tree)(1), [git-ls-tree](/man/git-ls-tree)(1), [git-checkout](/man/git-checkout)(1)
+[git-write-tree](/man/git-write-tree)(1), [git-ls-tree](/man/git-ls-tree)(1), [git-checkout](/man/git-checkout)(1), [git-merge](/man/git-merge)(1)

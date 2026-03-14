@@ -59,6 +59,12 @@ Create **binary** keymap
 **-u, --unicode**
 > Force Unicode mode
 
+**-s, --clearstrings**
+> Clear kernel string table
+
+**-c, --clearcompose**
+> Clear kernel accent table
+
 # CAVEATS
 
 Only affects Linux virtual consoles, not X11 or Wayland. Requires root privileges. Changes are temporary and reset on reboot.

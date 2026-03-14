@@ -8,21 +8,17 @@ HTTP proxy and network traffic monitor
 
 ```charles```
 
-**Start and begin recording immediately**
-
-```charles -config [config.xml]```
-
-**Start with specific port**
-
-```charles -port [8888]```
-
-**Start in headless mode**
+**Start in headless mode** (no GUI)
 
 ```charles -headless```
 
-**Export session to file**
+**Start with a custom configuration file**
 
-```charles -export [session.chls]```
+```charles -headless -config [config.xml]```
+
+**Start with throttling enabled**
+
+```charles -throttling```
 
 # SYNOPSIS
 
@@ -33,23 +29,11 @@ HTTP proxy and network traffic monitor
 **-config** _file_
 > Load configuration from specified file.
 
-**-port** _port_
-> HTTP proxy port (default: 8888).
-
-**-socks-port** _port_
-> SOCKS proxy port.
-
 **-headless**
-> Run without GUI.
+> Run without GUI. Use the web interface at http://control.charles/ for control.
 
-**-export** _file_
-> Export session to file.
-
-**-import** _file_
-> Import session from file.
-
-**-session** _file_
-> Load session file on startup.
+**-throttling**
+> Start with bandwidth throttling enabled.
 
 # PROXY CONFIGURATION
 

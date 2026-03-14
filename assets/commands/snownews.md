@@ -35,6 +35,12 @@ Lightweight terminal RSS feed reader
 **--update**
 > Update all feeds on startup.
 
+**--charset** _charset_
+> Force a specific character set if auto-detection fails.
+
+**--cursor**
+> Always display the cursor on screen.
+
 **--help**
 > Display help information.
 

@@ -16,17 +16,13 @@ Set a profile to audit mode from a **specific directory**
 
 ```sudo aa-audit -d /path/to/profiles [profile_name]```
 
-**Remove** audit mode for a profile
-
-```sudo aa-audit -r [profile_name]```
-
 Set a profile to audit mode **without reloading** it
 
 ```sudo aa-audit --no-reload [profile_name]```
 
 # SYNOPSIS
 
-**aa-audit** _executable_ [_executable_ ...] [_-d /path/to/profiles_] [_--no-reload_] [_-r_]
+**aa-audit** _executable_ [_executable_ ...] [_-d /path/to/profiles_] [_--no-reload_]
 
 # DESCRIPTION
 
@@ -39,9 +35,6 @@ Set a profile to audit mode **without reloading** it
 
 **--no-reload**
 > Prevents automatic profile reloading after modifications
-
-**-r, --remove**
-> Deactivates audit mode for the specified profile(s)
 
 **-h, --help**
 > Display help information

@@ -49,7 +49,7 @@ TypeScript to JavaScript compiler
 > Watch input files and recompile on changes
 
 **-t**, **--target** _version_
-> ECMAScript target version (ES3, ES5, ES2015, ES2020, ESNext)
+> ECMAScript target version (ES5, ES2015, ES2020, ES2022, ESNext)
 
 **--outDir** _directory_
 > Redirect output to specified directory
@@ -69,14 +69,26 @@ TypeScript to JavaScript compiler
 **--declaration**
 > Generate .d.ts declaration files
 
+**--module** _system_
+> Module system: commonjs, es2015, es2020, esnext, node16, nodenext
+
+**--moduleResolution** _strategy_
+> Module resolution strategy: node, nodenext, bundler
+
+**--incremental**
+> Enable incremental compilation for faster rebuilds
+
 **--skipLibCheck**
 > Skip type checking of declaration files
 
-**--strictNullChecks**
-> Enable strict null checks
+**--esModuleInterop**
+> Enable interoperability between CommonJS and ES Modules
 
-**--noImplicitAny**
-> Raise error on expressions with implied any type
+**--resolveJsonModule**
+> Allow importing .json files
+
+**--jsx** _mode_
+> JSX handling: react, react-jsx, react-jsxdev, preserve
 
 **--init**
 > Initialize a tsconfig.json file
@@ -99,7 +111,7 @@ Watch mode (**-w**) monitors source files and recompiles automatically when chan
 
 # CAVEATS
 
-tsc requires Node.js and is typically installed via npm (**npm install -g typescript**). Compilation options on the command line override tsconfig.json settings. Large projects may have slow compile times; consider using **--incremental** for faster rebuilds.
+tsc requires Node.js and is typically installed via npm (**npm install -g typescript**). Compilation options on the command line override tsconfig.json settings. When files are specified on the command line, **tsconfig.json** is ignored (use **-p** to use a config file). Large projects may have slow compile times; consider using **--incremental** or **--noEmit** for type-check-only workflows.
 
 # HISTORY
 

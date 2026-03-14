@@ -4,21 +4,25 @@
 
 # TLDR
 
-**Generate desktop file**
+**Generate a desktop file from a PKGBUILD** in the current directory
+
+```gendesk```
+
+**Generate a desktop file with package name**
 
 ```gendesk -n --pkgname=[appname]```
 
-**With custom name**
+**Generate with a custom display name**
 
 ```gendesk --name="[App Name]" --pkgname=[appname]```
 
-**Specify exec**
+**Specify the exec command and categories**
 
-```gendesk --pkgname=[app] --exec="[/usr/bin/app %U]"```
+```gendesk --pkgname=[app] --exec="[/usr/bin/app %U]" --categories="[Development;IDE]"```
 
-**Add categories**
+**Generate a terminal application entry**
 
-```gendesk --pkgname=[app] --categories="[Development;IDE]"```
+```gendesk --pkgname=[app] --terminal```
 
 # SYNOPSIS
 
@@ -27,41 +31,53 @@
 # PARAMETERS
 
 **--pkgname** _NAME_
-> Package name.
+> Package name (used for filename and defaults).
 
 **--name** _NAME_
-> Display name.
+> Application display name.
 
 **--exec** _CMD_
-> Command to execute.
+> Command to execute (supports field codes like %U, %F).
 
 **--categories** _LIST_
-> Application categories.
+> Semicolon-separated application categories (e.g., Development;IDE).
 
 **--comment** _TEXT_
-> Description comment.
+> Short description comment.
+
+**--genericname** _NAME_
+> Generic name for the application (e.g., "Text Editor").
+
+**--mimetype** _LIST_
+> Semicolon-separated MIME types the application can open.
+
+**--terminal**
+> Set Terminal=true in the desktop file.
+
+**--path** _DIR_
+> Working directory for the application.
 
 **-n**
-> Don't include Name if same as pkgname.
+> Don't include Name field if same as pkgname.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**gendesk** generates .desktop files for Linux applications. It creates the freedesktop.org standard desktop entries used by launchers and menus.
+**gendesk** generates .desktop files for Linux applications following the freedesktop.org Desktop Entry specification. It can read values from a PKGBUILD file in the current directory or accept them as command-line flags.
 
-The tool simplifies creating desktop files for packaging by generating entries with proper formatting. It handles icon references, categories, and exec paths.
+The tool simplifies creating desktop files during package building by generating entries with proper formatting, handling icon references, categories, MIME types, and exec paths. Supported PKGBUILD variables include _name, _genericname, _comment, _mimetype, _exec, and _categories.
 
-gendesk is commonly used in Arch Linux package building.
+gendesk is commonly used in Arch Linux package building (PKGBUILDs).
 
 # CAVEATS
 
-Primarily for Arch Linux packaging. Desktop file standards may vary. Manual tweaking may be needed.
+Primarily designed for Arch Linux packaging workflows. Desktop file standards may vary between environments. Manual tweaking may be needed for complex entries.
 
 # HISTORY
 
-gendesk was created for **Arch Linux** packaging to simplify .desktop file generation during package builds, reducing boilerplate in PKGBUILDs.
+gendesk was created by **Alexander F. Rodseth** for **Arch Linux** packaging to simplify .desktop file generation during package builds, reducing boilerplate in PKGBUILDs.
 
 # SEE ALSO
 

@@ -19,10 +19,16 @@ Set default for an **alternative boot directory** for next boot
 # PARAMETERS
 
 _entry_
-> Menu entry number (0-indexed), name, or identifier
+> Menu entry number (0-indexed), full entry name, or identifier.
 
 **--boot-directory** _DIR_
-> Use alternative boot directory instead of /boot
+> Find GRUB images under DIR/grub instead of the default /boot/grub.
+
+**-h**, **--help**
+> Print help message and exit.
+
+**-V**, **--version**
+> Print version information and exit.
 
 # DESCRIPTION
 
@@ -39,7 +45,7 @@ This is useful for one-time boots into recovery mode, alternative kernels, or ot
 
 # CAVEATS
 
-Requires GRUB_DEFAULT=saved in /etc/default/grub and subsequent grub-mkconfig to function. The setting is stored in grubenv, which must be writable. Only affects the immediate next boot.
+Requires **GRUB_DEFAULT=saved** in /etc/default/grub and a subsequent **grub-mkconfig** run to function. The setting is stored in grubenv, which must be writable. Only affects the immediate next boot. When GRUB cannot write to the environment block (e.g., on MDRAID or LVM), the chosen entry may remain the default even after reboot.
 
 # HISTORY
 

@@ -12,9 +12,9 @@ Retrieves or sets Angular CLI configuration values
 
 ```ng config [jsonPath] [value]```
 
-**Get the default collection** (schematic)
+**Get the schematic collections**
 
-```ng config cli.defaultCollection```
+```ng config cli.schematicCollections```
 
 **Set the default package manager**
 
@@ -41,7 +41,7 @@ _value_
 > New value to set at the specified JSON path. If omitted, the current value is printed.
 
 **--global**, **-g**
-> Access the global CLI configuration (~/.angular-cli.json) instead of the project-level angular.json.
+> Access the global Angular CLI configuration instead of the project-level angular.json.
 
 **--help**
 > Display help information.

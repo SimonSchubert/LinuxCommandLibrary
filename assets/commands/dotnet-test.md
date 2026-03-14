@@ -47,8 +47,11 @@ test runner for .NET projects
 **--no-restore**
 > Don't restore before testing.
 
+**-c**, **--configuration** _CONFIG_
+> Build configuration (e.g., Debug, Release).
+
 **-v**, **--verbosity** _level_
-> Verbosity (quiet, minimal, normal, detailed).
+> Verbosity (quiet, minimal, normal, detailed, diagnostic).
 
 **--logger** _logger_
 > Test logger.
@@ -70,5 +73,5 @@ The command discovers test methods through framework-specific attributes, execut
 
 # SEE ALSO
 
-[dotnet-build](/man/dotnet-build)(1), [dotnet-run](/man/dotnet-run)(1)
+[dotnet](/man/dotnet)(1), [dotnet-build](/man/dotnet-build)(1), [dotnet-run](/man/dotnet-run)(1)
 

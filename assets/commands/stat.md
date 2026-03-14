@@ -66,6 +66,9 @@ stat is useful for scripting when specific file attributes are needed, or for in
 **-c** _format_, **--format=** _format_
 > Use custom format string.
 
+**--printf=** _format_
+> Like --format, but interpret backslash escapes and no trailing newline.
+
 # FORMAT SEQUENCES (FILE)
 
 **%a**: Access rights in octal

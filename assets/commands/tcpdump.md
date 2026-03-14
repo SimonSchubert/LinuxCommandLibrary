@@ -98,13 +98,27 @@ tcpdump is essential for network troubleshooting, security analysis, and protoco
 **-q**
 > Quick output (less protocol info).
 
-**-D**
+**-D**, **--list-interfaces**
 > List available interfaces.
+
+**-t**
+> Don't print timestamp on each line.
+
+**-tt**
+> Print unformatted timestamp on each line.
+
+**-p**, **--no-promiscuous-mode**
+> Don't put the interface into promiscuous mode.
+
+**-F** _file_
+> Use file as input for the filter expression.
 
 # FILTER EXPRESSIONS
 
 **host** _ip_: Filter by host
+**net** _cidr_: Filter by subnet
 **port** _num_: Filter by port
+**portrange** _lo-hi_: Filter by port range
 **src/dst**: Source or destination
 **tcp/udp/icmp**: Protocol types
 **and/or/not**: Boolean operators
@@ -120,4 +134,4 @@ Requires root privileges. Packet capture can impact performance on high-traffic 
 
 # SEE ALSO
 
-[wireshark](/man/wireshark)(1), [tshark](/man/tshark)(1), [ngrep](/man/ngrep)(1), [pcap](/man/pcap)(3)
+[wireshark](/man/wireshark)(1), [tshark](/man/tshark)(1), [ngrep](/man/ngrep)(1), [iftop](/man/iftop)(1)

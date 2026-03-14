@@ -38,8 +38,14 @@ _FILE_
 **-geometry** _GEOMETRY_
 > Window geometry.
 
-**-delay** _SECONDS_
-> Slideshow delay.
+**-delay** _TICKS_
+> Slideshow delay in hundredths of a second between images.
+
+**-density** _GEOMETRY_
+> Set image rendering resolution (DPI).
+
+**-rotate** _DEGREES_
+> Rotate image by specified degrees.
 
 **-help**
 > Display help information.
@@ -62,4 +68,4 @@ The .im6 suffix was added when **ImageMagick 7** introduced breaking changes fro
 
 # SEE ALSO
 
-[display](/man/display)(1), [convert.im6](/man/convert.im6)(1), [identify.im6](/man/identify.im6)(1)
+[display](/man/display)(1), [identify.im6](/man/identify.im6)(1)

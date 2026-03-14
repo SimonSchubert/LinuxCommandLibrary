@@ -48,12 +48,21 @@ decodes Opus audio files to WAV or raw PCM
 **--no-dither**
 > Disable dithering.
 
+**--force-wav**
+> Force including a WAV header on output (even for non-standard rates).
+
 **--packet-loss** _%_
-> Simulate packet loss.
+> Simulate packet loss percentage for testing.
+
+**--quiet**
+> Suppress program output.
+
+**--save-range** _FILE_
+> Save decoder range data to file for debugging.
 
 # DESCRIPTION
 
-**opusdec** decodes Opus audio files to WAV or raw PCM. Opus is a versatile audio codec designed for both speech and music, widely used in WebRTC and streaming.
+**opusdec** decodes Opus audio files to WAV or raw PCM. If no output file is specified, opusdec attempts to play the audio directly. Use `-` for stdin/stdout. Opus is a versatile audio codec designed for both speech and music, widely used in WebRTC and streaming.
 
 # EXAMPLE
 
@@ -78,4 +87,4 @@ Opus was developed by the **IETF** Codec Working Group, standardized as RFC 6716
 
 # SEE ALSO
 
-[opusenc](/man/opusenc)(1), [opusinfo](/man/opusinfo)(1), [ffmpeg](/man/ffmpeg)(1)
+[opusenc](/man/opusenc)(1), [ffmpeg](/man/ffmpeg)(1)

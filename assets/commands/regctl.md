@@ -78,8 +78,11 @@ Manage container registry images and tags
 **registry login** _registry_
 > Authenticate with a registry
 
+**registry ratelimit** _registry_
+> Check rate limit status for a registry
+
 **--platform** _os/arch_
-> Filter by platform (linux/amd64, linux/arm64)
+> Filter by platform (e.g., linux/amd64, linux/arm64)
 
 **--format** _template_
 > Output format (Go template)

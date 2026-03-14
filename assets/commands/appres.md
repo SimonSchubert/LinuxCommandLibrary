@@ -1,24 +1,28 @@
 # TAGLINE
 
-Display X application resource settings.
+Display X application resource settings
 
 # TLDR
 
-**Show** resources for an application
+**Show** resources for an application by class name
 
 ```appres [XTerm]```
 
-Show resources with **class**
+Show resources with **class and instance** name
 
 ```appres [XTerm] [xterm]```
 
-Show **specific resource**
+Show **specific resource** by filtering output
 
 ```appres [Emacs] | grep [font]```
 
+Show resources for a **specific widget** path
+
+```appres [XTerm] [xterm] -xrm "*VT100*"```
+
 # SYNOPSIS
 
-**appres** [_class_] [_instance_]
+**appres** [_class_ [_instance_]] [**-xrm** _resourcestring_]
 
 # DESCRIPTION
 
@@ -32,7 +36,10 @@ This is useful for debugging X11 application appearance and behavior, understand
 > Application class name (typically capitalized)
 
 **instance**
-> Application instance name
+> Application instance name (typically lowercase)
+
+**-xrm** _resourcestring_
+> Add extra resource string for matching
 
 # CAVEATS
 
@@ -44,4 +51,4 @@ Only applies to X11 applications using Xlib resources. Modern toolkit applicatio
 
 # SEE ALSO
 
-[xrdb](/man/xrdb)(1), [xprop](/man/xprop)(1), [editres](/man/editres)(1)
+[xrdb](/man/xrdb)(1), [xprop](/man/xprop)(1)

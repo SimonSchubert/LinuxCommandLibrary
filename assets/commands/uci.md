@@ -32,6 +32,14 @@ OpenWrt unified configuration interface
 
 ```uci revert [config]```
 
+**Add a value** to a list option
+
+```uci add_list [network.lan.dns]=[8.8.8.8]```
+
+**Show pending changes**
+
+```uci changes```
+
 # SYNOPSIS
 
 **uci** _COMMAND_ [_ARGUMENTS_...]
@@ -41,29 +49,44 @@ OpenWrt unified configuration interface
 **get** _CONFIG.SECTION.OPTION_
 > Fetch a value
 
-**show** _CONFIG_
+**show** [_CONFIG_]
 > List all options and values
 
 **set** _CONFIG.SECTION.OPTION=VALUE_
 > Set a configuration value
 
 **add** _CONFIG_ _SECTION_
-> Add a new section
+> Add a new anonymous section
 
 **delete** _CONFIG.SECTION[.OPTION]_
 > Delete section or option
 
-**commit** _CONFIG_
+**rename** _CONFIG.SECTION[.OPTION]=NAME_
+> Rename a section or option
+
+**add_list** _CONFIG.SECTION.OPTION=VALUE_
+> Add a value to a list option
+
+**del_list** _CONFIG.SECTION.OPTION=VALUE_
+> Remove a value from a list option
+
+**commit** [_CONFIG_]
 > Write changes to configuration file
 
 **revert** _CONFIG_
 > Discard uncommitted changes
 
+**changes** [_CONFIG_]
+> Display pending uncommitted changes
+
+**export** [_CONFIG_]
+> Export configuration in machine-readable format
+
 # DESCRIPTION
 
 **uci** (Unified Configuration Interface) manages OpenWrt configuration files. It provides a standardized way to read and modify the UCI configuration format used throughout OpenWrt.
 
-Configuration is organized into files, sections, and options. Changes are staged and must be committed to take effect. The revert command discards uncommitted changes.
+Configuration files are stored in **/etc/config/** and are organized into files, sections, and options. Changes are staged in a temporary location and must be committed to take effect. The revert command discards uncommitted changes.
 
 # CAVEATS
 

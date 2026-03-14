@@ -36,13 +36,13 @@ _FILE_
 > Generate info file.
 
 **-g**
-> Use GHC extensions.
+> Use GHC extensions for faster parsers.
 
 **-a**
-> Generate array-based parser.
+> Generate array-based parser (smaller but slower).
 
 **-c**
-> Generate GHC parser.
+> Generate GHC-specific parser using GHC primitives.
 
 **--help**
 > Display help information.
@@ -63,4 +63,4 @@ Happy was created for **Haskell** as an equivalent to yacc/bison, widely used in
 
 # SEE ALSO
 
-[alex](/man/alex)(1), [ghc](/man/ghc)(1), [yacc](/man/yacc)(1)
+[alex](/man/alex)(1), [ghc](/man/ghc)(1), [yacc](/man/yacc)(1), [bison](/man/bison)(1)

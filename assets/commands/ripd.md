@@ -10,15 +10,19 @@ RIP routing protocol daemon
 
 **Start with config file**
 
-```ripd -f [/etc/quagga/ripd.conf]```
+```ripd -d -f [/etc/frr/ripd.conf]```
 
-**Connect to running daemon**
+**Connect to running daemon via VTY**
 
 ```vtysh -d ripd```
 
-**Debug mode**
+**Start with VTY bound to localhost**
 
 ```ripd -d -A 127.0.0.1```
+
+**Open interactive terminal session**
+
+```ripd -t```
 
 # SYNOPSIS
 
@@ -27,16 +31,25 @@ RIP routing protocol daemon
 # PARAMETERS
 
 **-d**, **--daemon**
-> Run as daemon.
+> Run as daemon, forking to background after initialization.
 
 **-f**, **--config_file** _file_
-> Configuration file.
+> Configuration file (default: /etc/frr/ripd.conf).
+
+**-t**, **--terminal**
+> Open an interactive VTY session on the terminal.
 
 **-A**, **--vty_addr** _addr_
 > VTY bind address.
 
 **-P**, **--vty_port** _port_
-> VTY port.
+> VTY port (default: 2602). Set to 0 to disable.
+
+**-i**, **--pid_file** _file_
+> PID file path (default: /var/run/frr/ripd.pid).
+
+**-z**, **--zclient_path** _path_
+> Override ZAPI socket path for zebra communication.
 
 **-u**, **--user** _user_
 > Run as user.
@@ -52,7 +65,7 @@ RIP routing protocol daemon
 
 ```bash
 # Start daemon
-ripd -d -f /etc/quagga/ripd.conf
+ripd -d -f /etc/frr/ripd.conf
 
 # Connect via vtysh
 vtysh
@@ -63,12 +76,12 @@ router rip
 
 # CONFIGURATION
 
-**/etc/quagga/ripd.conf** / **/etc/frr/ripd.conf**
-> Main configuration file defining RIP networks, version, redistribution rules, and interface settings. Location depends on whether Quagga or FRRouting is installed.
+**/etc/frr/ripd.conf** (FRRouting) / **/etc/quagga/ripd.conf** (Quagga)
+> Main configuration file defining RIP networks, version, redistribution rules, and interface settings.
 
 # CAVEATS
 
-Part of Quagga or FRRouting. Requires zebra daemon. RIP has slow convergence. Use OSPF for larger networks.
+Part of FRRouting (or legacy Quagga). Requires the zebra daemon to be running. RIP has a maximum hop count of 15 and slow convergence. Use OSPF for larger networks.
 
 # HISTORY
 

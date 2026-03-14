@@ -4,7 +4,7 @@ Long-range compression for large files
 
 # TLDR
 
-**Compress file**
+**Compress a file (removes original)**
 
 ```rzip [file]```
 
@@ -12,17 +12,25 @@ Long-range compression for large files
 
 ```rzip -k [file]```
 
-**Decompress file**
+**Decompress a file**
 
 ```rzip -d [file.rz]```
 
-**Set compression level**
+**Set maximum compression level**
 
-```rzip -[9] [file]```
+```rzip -9 [file]```
 
-**Verbose output**
+**Compress with progress display**
 
-```rzip -v [file]```
+```rzip -P [file]```
+
+**Compress to a specific output file**
+
+```rzip -o [output.rz] [file]```
+
+**Force overwrite of existing files**
+
+```rzip -f [file]```
 
 # SYNOPSIS
 
@@ -30,68 +38,47 @@ Long-range compression for large files
 
 # PARAMETERS
 
-**-d**, **--decompress**
-> Decompress.
+**-d**
+> Decompress. Automatically set if the program is invoked as `runzip`.
 
-**-k**, **--keep**
-> Keep input files.
+**-k**
+> Keep input files after compression or decompression.
 
-**-f**, **--force**
-> Force overwrite.
+**-f**
+> Force overwrite of existing output files.
+
+**-o** _filename_
+> Specify output file name. Cannot be used with multiple input files.
+
+**-S** _suffix_
+> Set the compression suffix. Default is `.rz`.
+
+**-P**
+> Show percentage progress while compressing.
 
 **-0** to **-9**
-> Compression level.
+> Compression level from fastest (0) to best (9). Default is 6.
 
-**-v**, **--verbose**
-> Verbose output.
+**-V**
+> Show version number.
 
-**-L**, **--level** _n_
-> Compression level.
-
-**-o** _file_
-> Output file.
+**-h**
+> Print a help summary.
 
 # DESCRIPTION
 
-**rzip** is a compression program designed for large files. It uses a rolling-window algorithm similar to rsync, then bzip2, achieving good compression on files with repeated sequences.
+**rzip** is a compression program designed for large files. It operates in two stages: first, it finds and encodes large chunks of duplicated data over potentially very long distances (up to nearly a gigabyte) using a rolling-checksum algorithm similar to rsync. Second, it uses bzip2 to compress the output of the first stage.
 
-# EXAMPLES
-
-```bash
-# Compress file
-rzip largefile.tar
-
-# Keep original
-rzip -k database.sql
-
-# Maximum compression
-rzip -9 bigdata.csv
-
-# Decompress
-rzip -d file.rz
-
-# Force overwrite
-rzip -f -k important.dat
-
-# Verbose
-rzip -v -9 archive.tar
-```
-
-# CHARACTERISTICS
-
-- Excellent for large files with repetition
-- Uses rolling checksum (rsync algorithm)
-- Final compression with bzip2
-- Memory-intensive
+The long-range matching makes rzip particularly effective on files with repeated content spread far apart, which standard compressors cannot exploit.
 
 # CAVEATS
 
-High memory usage. Best for files >10MB. Cannot decompress standard gzip/bzip2.
+High memory usage proportional to file size. Cannot compress or decompress from standard input or standard output due to the nature of the algorithm. Best suited for files larger than 10 MB. Deletes the source file by default after successful compression or decompression (use -k to keep).
 
 # HISTORY
 
-rzip was written by **Andrew Tridgell** (rsync author) to efficiently compress large files with long-distance redundancy.
+rzip was written by **Andrew Tridgell** (author of rsync and Samba) to efficiently compress large files with long-distance redundancy.
 
 # SEE ALSO
 
-[lrzip](/man/lrzip)(1), [bzip2](/man/bzip2)(1), [gzip](/man/gzip)(1), [xz](/man/xz)(1)
+[lrzip](/man/lrzip)(1), [bzip2](/man/bzip2)(1), [gzip](/man/gzip)(1), [xz](/man/xz)(1), [rsync](/man/rsync)(1)

@@ -16,9 +16,9 @@ manages configuration profiles for LXD containers and virtual machines
 
 ```lxc profile edit [profile_name]```
 
-Edit a specific profile **importing configuration** from a file
+**Create** a new profile
 
-```lxc < [config.yaml] profile edit [profile_name]```
+```lxc profile create [profile_name]```
 
 **Launch** a new container with specific profiles
 
@@ -52,14 +52,29 @@ Edit a specific profile **importing configuration** from a file
 **copy _source_ _dest_**
 > Copy a profile to a new name
 
-**assign _container_ _profiles_**
-> Set the profiles for a container (comma-separated list)
+**rename _old_ _new_**
+> Rename a profile
 
-**add _container_ _profile_**
-> Add a profile to a container's existing profiles
+**assign _instance_ _profiles_**
+> Set the profiles for an instance (comma-separated list)
 
-**remove _container_ _profile_**
-> Remove a profile from a container
+**add _instance_ _profile_**
+> Add a profile to an instance's existing profiles
+
+**remove _instance_ _profile_**
+> Remove a profile from an instance
+
+**set _profile_ _key_ _value_**
+> Set a profile configuration key
+
+**get _profile_ _key_**
+> Get a profile configuration value
+
+**device add _profile_ _device_ _type_ [_options_]**
+> Add a device to a profile
+
+**device remove _profile_ _device_**
+> Remove a device from a profile
 
 # DESCRIPTION
 
@@ -75,4 +90,4 @@ Profile changes don't automatically apply to running containers; restart the con
 
 # SEE ALSO
 
-[lxc](/man/lxc)(1), [lxc-create](/man/lxc-create)(1), [lxc-start](/man/lxc-start)(1), [lxc-config](/man/lxc-config)(1)
+[lxc](/man/lxc)(1), [lxc-create](/man/lxc-create)(1), [lxc-start](/man/lxc-start)(1), [lxc-ls](/man/lxc-ls)(1)

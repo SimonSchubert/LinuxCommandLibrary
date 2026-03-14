@@ -20,7 +20,11 @@ Trace a program by **PID**
 
 ```sudo bpftrace -e 'tracepoint:raw_syscalls:sys_enter /pid == 123/ { @[comm] = count(); }'```
 
-**Dry run** and display eBPF output
+**Trace a child** command until it exits
+
+```sudo bpftrace -c '[command]' -e 'tracepoint:raw_syscalls:sys_enter { @[comm] = count(); }'```
+
+**Dry run** and display compiled eBPF
 
 ```sudo bpftrace -d -e '[one_line_program]'```
 
@@ -40,8 +44,8 @@ Programs can attach to tracepoints, kprobes, uprobes, and other probe types to c
 
 # PARAMETERS
 
-**-l**
-> List available probes
+**-l** [_SEARCH_]
+> List probes matching a search pattern (supports wildcards)
 
 **-e** _program_
 > Execute a one-liner program
@@ -49,14 +53,26 @@ Programs can attach to tracepoints, kprobes, uprobes, and other probe types to c
 **-d**
 > Dry run; show compiled eBPF without executing
 
-**-p** _pid_
-> Enable USDT probes for the specified PID
+**-p** _PID_
+> Attach to process or filter by PID
+
+**-c** _COMMAND_
+> Run command as a child process; bpftrace exits when it terminates
 
 **-v**
 > Verbose output
 
+**-q**
+> Quiet mode; suppress non-error messages
+
 **-V, --version**
 > Display version information
+
+**--unsafe**
+> Allow unsafe operations like system() calls
+
+**--info**
+> Print information about kernel features and bpftrace build
 
 # CAVEATS
 

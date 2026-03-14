@@ -4,21 +4,29 @@ Search xz compressed files with grep
 
 # TLDR
 
-**Search pattern in xz file**
+**Search for a pattern in an xz-compressed file**
 
 ```xzgrep "[pattern]" [file.xz]```
 
-**Search recursively**
+**Search case-insensitively**
 
-```xzgrep -r "[pattern]" [directory]```
+```xzgrep -i "[pattern]" [file.xz]```
 
-**Count matches**
+**Count matching lines**
 
 ```xzgrep -c "[pattern]" [file.xz]```
 
-**Show line numbers**
+**Show line numbers with matches**
 
 ```xzgrep -n "[pattern]" [file.xz]```
+
+**List files containing a match**
+
+```xzgrep -l "[pattern]" [*.xz]```
+
+**Search using extended regular expressions**
+
+```xzgrep -E "[regex_pattern]" [file.xz]```
 
 # SYNOPSIS
 
@@ -27,31 +35,36 @@ Search xz compressed files with grep
 # PARAMETERS
 
 **-i**
-> Case insensitive.
+> Case insensitive search.
 
 **-n**
 > Show line numbers.
 
 **-c**
-> Count matches.
+> Count matching lines.
 
 **-l**
-> List matching files.
+> List only filenames containing matches.
 
-**-r**
-> Recursive search.
+**-v**
+> Invert match (show non-matching lines).
 
 **-E**
-> Extended regex (egrep).
+> Use extended regular expressions (like egrep).
 
 **-F**
-> Fixed strings (fgrep).
+> Use fixed strings instead of regular expressions (like fgrep).
+
+**-h**
+> Suppress filename prefix on output.
+
+**-H**
+> Always print filename prefix.
 
 # DESCRIPTION
 
-**xzgrep** searches xz compressed files. Decompresses and greps without creating temporary files. Supports all grep options and patterns.
+**xzgrep** searches xz, lzma, and lzip compressed files for lines matching a pattern. It decompresses the data on the fly and passes it to grep, without creating temporary files on disk. All standard grep options are supported. Also available as **xzegrep** and **xzfgrep** variants.
 
 # SEE ALSO
 
-[xz](/man/xz)(1), [grep](/man/grep)(1), [zgrep](/man/zgrep)(1)
-
+[xz](/man/xz)(1), [grep](/man/grep)(1), [zgrep](/man/zgrep)(1), [lzgrep](/man/lzgrep)(1)

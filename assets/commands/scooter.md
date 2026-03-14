@@ -4,21 +4,29 @@ Interactive find-and-replace in the terminal
 
 # TLDR
 
-**Launch interactive search in the current directory**
+**Launch interactive find-and-replace in the current directory**
 
 ```scooter```
 
 **Search in a specific directory**
 
-```scooter [../foo/bar]```
+```scooter [path/to/directory]```
 
-**Process text from stdin**
-
-```echo "hello world" | scooter```
-
-**Pre-populate search and replace fields**
+**Pre-populate search and replace fields and start searching immediately**
 
 ```scooter --search-text "[old]" --replace-text "[new]" --immediate-search```
+
+**Search using literal strings instead of regex**
+
+```scooter --fixed-strings```
+
+**Include hidden files in the search**
+
+```scooter --hidden```
+
+**Search only specific file types**
+
+```scooter --files-to-include "[*.py,*.js]"```
 
 # SYNOPSIS
 
@@ -52,6 +60,9 @@ Interactive find-and-replace in the terminal
 
 **--files-to-exclude** _GLOB_
 > Comma-separated glob patterns to exclude.
+
+**--immediate-search**
+> Start searching immediately when combined with --search-text.
 
 # DESCRIPTION
 

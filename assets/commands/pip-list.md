@@ -24,6 +24,14 @@ List installed Python packages with versions
 
 ```pip list --editable```
 
+**List packages not required by others**
+
+```pip list --not-required```
+
+**Exclude a package from output**
+
+```pip list --exclude [pip] --exclude [setuptools]```
+
 # SYNOPSIS
 
 **pip** **list** [_options_]
@@ -50,6 +58,18 @@ List installed Python packages with versions
 
 **--not-required**
 > Show packages not required by others.
+
+**--exclude** _pkg_
+> Exclude specified package from output (can be repeated).
+
+**--path** _dir_
+> Restrict to packages in specified installation path.
+
+**--exclude-editable**
+> Exclude editable packages from output.
+
+**--include-editable**
+> Include editable packages in output.
 
 # DESCRIPTION
 

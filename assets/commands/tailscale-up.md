@@ -54,11 +54,40 @@ Connect device to Tailscale network
 **--authkey** _key_
 > Pre-auth key.
 
+**--accept-dns**
+> Accept DNS configuration from the admin console.
+
+**--advertise-routes** _CIDR_
+> Expose physical subnet routes to the tailnet.
+
+**--advertise-tags** _TAGS_
+> Give tagged permissions to this device.
+
+**--force-reauth**
+> Force re-authentication.
+
+**--reset**
+> Reset unspecified settings to their defaults.
+
+**--qr**
+> Generate a QR code for the login URL.
+
+**--exit-node-allow-lan-access**
+> Allow LAN access while using an exit node.
+
+**--operator** _USER_
+> Unix username to operate tailscaled without sudo.
+
+**--timeout** _DURATION_
+> Maximum wait time for service initialization.
+
 # DESCRIPTION
 
-**tailscale up** connects the device to a Tailscale network. Authenticates and joins the tailnet. First run opens browser for authentication unless authkey provided.
+**tailscale up** connects the device to a Tailscale network. Authenticates and joins the tailnet. First run opens browser for authentication unless authkey is provided.
+
+To change settings on an already-connected device, prefer **tailscale set** which only updates specified flags, whereas **tailscale up** applies OS defaults for all unspecified flags.
 
 # SEE ALSO
 
-[tailscale](/man/tailscale)(1), [tailscale-down](/man/tailscale-down)(1), [tailscale-set](/man/tailscale-set)(1)
+[tailscale](/man/tailscale)(1), [tailscale-set](/man/tailscale-set)(1)
 

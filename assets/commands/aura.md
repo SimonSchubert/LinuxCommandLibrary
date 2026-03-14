@@ -6,11 +6,11 @@ Secure, multilingual package manager for Arch Linux and the AUR.
 
 **Search** AUR packages
 
-```aura -As keyword```
+```aura -As [keyword]```
 
 **Install** from AUR
 
-```aura -A package```
+```aura -A [package]```
 
 **Update** AUR packages
 
@@ -18,7 +18,7 @@ Secure, multilingual package manager for Arch Linux and the AUR.
 
 Install from **official** repos
 
-```aura -S package```
+```aura -S [package]```
 
 **Sync** and upgrade official packages
 
@@ -26,7 +26,15 @@ Install from **official** repos
 
 **Remove** package and dependencies
 
-```aura -Rsu package```
+```aura -Rsu [package]```
+
+**Save** current package state
+
+```aura -B```
+
+**Restore** a saved package state
+
+```aura -Br```
 
 Remove **orphan** packages
 
@@ -63,6 +71,9 @@ Remove **orphan** packages
 **-u, --unneeded**
 > Remove unneeded packages
 
+**-B, --backup**
+> Save or restore package state snapshots
+
 **-O, --orphans**
 > List orphan packages
 
@@ -71,6 +82,9 @@ Remove **orphan** packages
 
 **-k, --diff**
 > Show PKGBUILD diff before building
+
+**--hotedit**
+> Edit PKGBUILD before building
 
 **--delmakedeps**
 > Remove make dependencies after install

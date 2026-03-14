@@ -76,4 +76,4 @@ ImageMagick was created by John Cristy in **1990**. Version 6 was a long-standin
 
 # SEE ALSO
 
-[composite](/man/composite)(1), [convert.im6](/man/convert.im6)(1), [mogrify.im6](/man/mogrify.im6)(1), [magick](/man/magick)(1)
+[composite](/man/composite)(1), [convert](/man/convert)(1), [mogrify.im6](/man/mogrify.im6)(1), [magick](/man/magick)(1)

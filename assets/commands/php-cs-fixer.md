@@ -1,6 +1,6 @@
 # TAGLINE
 
-fixes PHP coding standards
+Automatically fix PHP coding standards issues
 
 # TLDR
 
@@ -12,55 +12,74 @@ fixes PHP coding standards
 
 ```php-cs-fixer fix [file.php]```
 
-**Dry run**
+**Dry run** showing what would change
 
 ```php-cs-fixer fix --dry-run```
 
-**Show diff**
+**Show diff** of changes
 
 ```php-cs-fixer fix --diff```
 
-**Use specific rules**
+**Use specific rule set**
 
 ```php-cs-fixer fix --rules=@PSR12```
 
+**Fix with verbose output**
+
+```php-cs-fixer fix -v```
+
+**List available rules**
+
+```php-cs-fixer list-files```
+
 # SYNOPSIS
 
-**php-cs-fixer** [_command_] [_options_]
+**php-cs-fixer** _command_ [_options_] [_path_]
 
 # PARAMETERS
 
 **fix** [_PATH_]
-> Fix coding standards.
+> Fix coding standards in the given path or current directory.
 
 **--dry-run**
-> Don't modify files.
+> Don't modify files, only show what would change.
 
 **--diff**
-> Show changes.
+> Show a diff of applied changes.
 
 **--rules** _RULES_
-> Coding standard rules.
+> Coding standard rules or rule sets (e.g., @PSR12, @Symfony).
 
 **--config** _FILE_
-> Configuration file.
+> Path to configuration file.
 
-**--help**
-> Display help.
+**--allow-risky** _yes|no_
+> Allow risky rules that may change code behavior.
+
+**--using-cache** _yes|no_
+> Enable or disable caching (default: yes).
+
+**--cache-file** _FILE_
+> Path to cache file (default: .php-cs-fixer.cache).
+
+**--format** _FORMAT_
+> Output format (txt, json, checkstyle, gitlab, junit, xml).
+
+**--stop-on-violation**
+> Stop execution on first violation.
 
 # DESCRIPTION
 
-**php-cs-fixer** fixes PHP coding standards. Enforces consistent style.
+**PHP CS Fixer** automatically fixes PHP code to follow coding standards. It supports PSR-1, PSR-2, PSR-12, Symfony, and custom rule sets. The tool parses PHP files, applies configured fixers, and rewrites files with corrected formatting.
 
-The tool automatically formats code. Supports PSR standards.
+# CONFIGURATION
+
+**.php-cs-fixer.php** or **.php-cs-fixer.dist.php**
+> PHP configuration file defining rules, finders, and project-specific settings. Searched in the current directory by default.
 
 # CAVEATS
 
-Configuration via .php-cs-fixer.php. Rule sets customizable.
-
-# HISTORY
-
-PHP CS Fixer was created for **automatic PHP coding standards** enforcement.
+Risky fixers may change code behavior and must be explicitly allowed. Configuration via PHP file provides more flexibility than command-line rules.
 
 # SEE ALSO
 

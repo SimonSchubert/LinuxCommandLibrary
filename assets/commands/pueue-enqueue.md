@@ -34,13 +34,9 @@ _TASK_IDS_
 
 # CAVEATS
 
-Task must be stashed first. Part of pueue.
-
-# HISTORY
-
-pueue enqueue provides **stash to queue** task movement.
+Tasks must be in the stashed state before they can be enqueued. Use **pueue stash** to stash running or queued tasks, or add tasks with **pueue add --stashed** to create them in the stashed state.
 
 # SEE ALSO
 
-[pueue](/man/pueue)(1), [pueue-stash](/man/pueue-stash)(1)
+[pueue](/man/pueue)(1), [pueue-stash](/man/pueue-stash)(1), [pueue-add](/man/pueue-add)(1), [pueue-status](/man/pueue-status)(1)
 

@@ -24,9 +24,13 @@ syntax-highlighting pager for diffs
 
 ```delta --syntax-theme [Dracula] [file1.txt] [file2.txt]```
 
-**Show word-level diff**
+**Highlight word-level changes**
 
-```delta --word-diff [file1.txt] [file2.txt]```
+```delta --word-diff-regex '\w+' [file1.txt] [file2.txt]```
+
+**Enable hyperlinks in output**
+
+```delta --hyperlinks [file1.txt] [file2.txt]```
 
 **Configure as git pager**
 
@@ -50,8 +54,20 @@ _FILE1_ _FILE2_
 **--syntax-theme** _THEME_
 > Syntax highlighting theme.
 
-**--word-diff**
-> Highlight word-level changes.
+**--word-diff-regex** _REGEX_
+> Highlight word-level changes using regex to define words.
+
+**--hyperlinks**
+> Render commit hashes, file paths, and line numbers as terminal hyperlinks.
+
+**--features** _NAMES_
+> Activate named feature sets defined in gitconfig.
+
+**--paging** _auto|always|never_
+> Control pager usage.
+
+**--true-color** _auto|always|never_
+> Control 24-bit RGB color output.
 
 **--navigate**
 > Enable navigation with n/N keys.

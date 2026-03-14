@@ -82,27 +82,29 @@ Command-line interface to the Calibre ebook database
 # PARAMETERS
 
 **--library-path**=_path_
-> Path to Calibre library
+> Path to Calibre library (directory containing metadata.db)
 
 **--with-library**=_url_
-> Connect to Content server
+> Connect to a Calibre Content server (e.g., http://localhost:8080)
+
+**--username**=_user_
+> Username for Content server authentication
+
+**--password**=_pass_
+> Password for Content server authentication
 
 **-f**, **--field**=_name:value_
-> Set metadata field
+> Set metadata field (used with set_metadata)
 
 **--as-opf**
-> Output metadata as OPF
+> Output metadata as OPF XML
 
 **--for-machine**
-> Output in JSON format
-
-# OUTPUT FIELDS
-
-Available fields: title, authors, publisher, pubdate, rating, series, tags, formats, identifiers, isbn, languages, comments, cover, uuid
+> Output in JSON format (machine-readable)
 
 # CAVEATS
 
-Book IDs can be found using search command. Arguments with spaces must be quoted. On macOS, tools are inside calibre.app bundle.
+Book IDs can be found using the **list** or **search** commands. Arguments with spaces must be quoted. On macOS, command-line tools are inside the calibre.app bundle at `/Applications/calibre.app/Contents/MacOS/`. The Calibre GUI should not be running when using calibredb on a local library, or use **--with-library** to connect via the Content server instead.
 
 # SEE ALSO
 

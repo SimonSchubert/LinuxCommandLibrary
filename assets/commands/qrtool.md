@@ -16,9 +16,17 @@ Command-line utility for encoding and decoding QR codes
 
 ```qrtool decode [image.png]```
 
+**Encode as SVG with custom colors**
+
+```qrtool encode "[text]" -t svg --foreground "#000000" --background "#ffffff" -o [output.svg]```
+
 **Generate a Micro QR code**
 
 ```qrtool encode "[text]" --variant micro -o [output.png]```
+
+**Read from stdin and output QR code**
+
+```echo "[text]" | qrtool encode -o [output.png]```
 
 # SYNOPSIS
 
@@ -46,6 +54,12 @@ Command-line utility for encoding and decoding QR codes
 
 **--background** _COLOR_
 > Background color in CSS format.
+
+**-v**, **--symbol-version** _VERSION_
+> QR code symbol version (size). Auto-selected if omitted.
+
+**--margin** _WIDTH_
+> Width of margin around the QR code (default: 4 for normal, 2 for others).
 
 # DESCRIPTION
 

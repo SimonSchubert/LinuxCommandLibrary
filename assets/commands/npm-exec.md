@@ -31,41 +31,32 @@ runs a command from a local or remote npm package
 # PARAMETERS
 
 **-p**, **--package** _pkg_
-> Package to install.
+> Package to install (can be specified multiple times).
 
-**-c** _cmd_
-> Shell command to run.
+**-c**, **--call** _cmd_
+> Shell command to run in the package environment.
 
 **-y**, **--yes**
-> Skip confirmation prompts.
+> Skip confirmation prompts for remote packages.
 
 **--no**
-> Skip if package needs download.
+> Refuse to install packages not already available locally.
 
-**--call** _cmd_
-> Execute shell command.
+**-w**, **--workspace** _name_
+> Run in the context of the specified workspace.
+
+**--workspaces**
+> Run in the context of all configured workspaces.
 
 # DESCRIPTION
 
-**npm exec** runs a command from a local or remote npm package. It's similar to npx but integrated into npm. The command can run locally installed packages or temporarily download and execute packages.
+**npm exec** runs a command from a local or remote npm package. It's similar to npx but integrated into npm. The command can run locally installed packages or temporarily download and execute packages from the registry.
 
-Double dash (--) separates npm exec options from command arguments.
-# Run local eslint
-npm exec eslint .
-
-# Run with specific package
-npm exec -p typescript -- tsc --version
-
-# Run create-react-app
-npm exec -- create-react-app my-app
-
-# Multiple packages
-npm exec -p cowsay -p lolcatjs -c "cowsay hi | lolcat"
-```
+Double dash (--) separates npm exec options from the command and its arguments. Without --, npm may interpret arguments as its own options. When run without positional arguments or --call, it opens an interactive shell with the package environment configured.
 
 # CAVEATS
 
-Different from npx in some behaviors. Use -- to separate args. May prompt for remote packages.
+Unlike npx, npm exec requires -- before the command when passing arguments. May prompt for confirmation when downloading remote packages unless -y or --no is specified.
 
 # HISTORY
 

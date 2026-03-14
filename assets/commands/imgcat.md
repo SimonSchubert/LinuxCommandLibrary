@@ -1,6 +1,6 @@
 # TAGLINE
 
-displays images directly in the terminal using various terminal graphics
+Display images inline in the terminal
 
 # TLDR
 
@@ -16,21 +16,17 @@ displays images directly in the terminal using various terminal graphics
 
 ```curl -s [https://example.com/image.jpg] | imgcat```
 
-**Display with specific width**
+**Display with specific width** in character cells
 
-```imgcat --width [80] [image.png]```
+```imgcat -w [80] [image.png]```
 
-**Display preserving aspect ratio** at specific height
+**Display at specific height** in character cells
 
-```imgcat --height [24] [image.png]```
+```imgcat -H [24] [image.png]```
 
-**Display image inline** (iTerm2)
+**Read image from stdin**
 
-```imgcat -p [image.png]```
-
-**Display with depth** (color depth)
-
-```imgcat --depth [24] [image.png]```
+```curl -s [https://example.com/image.jpg] | imgcat -```
 
 # SYNOPSIS
 
@@ -39,22 +35,13 @@ displays images directly in the terminal using various terminal graphics
 # PARAMETERS
 
 **-w**, **--width** _n_
-> Output width in characters or pixels.
+> Output width in character cells.
 
-**-h**, **--height** _n_
-> Output height in characters or pixels.
+**-H**, **--height** _n_
+> Output height in character cells.
 
-**-d**, **--depth** _n_
-> Color depth (8, 16, 24).
-
-**-p**, **--preserve-aspect-ratio**
-> Maintain original aspect ratio.
-
-**-r**, **--no-remote**
-> Don't output files from remote URLs.
-
-**-u**, **--url**
-> Treat argument as URL.
+**-R**, **--no-stretch**
+> Do not stretch the image to fill the available space.
 
 **--version**
 > Show version information.
@@ -64,19 +51,15 @@ displays images directly in the terminal using various terminal graphics
 
 # DESCRIPTION
 
-**imgcat** displays images directly in the terminal using various terminal graphics protocols. Different implementations exist for different terminals: the original for iTerm2, and others supporting Kitty graphics protocol, Sixel, or fallback to block characters.
+**imgcat** displays images inline in the terminal. Multiple implementations exist: the original iTerm2 shell script uses the iTerm2 inline images protocol, while standalone versions (such as the one from posva or the one bundled with iTerm2) support additional options.
 
-The iTerm2 version uses the iTerm2 inline images protocol, which supports full-color images with transparency. The image is encoded in base64 and sent via escape sequences, rendering inline with text output.
+The image is encoded in base64 and sent via escape sequences, rendering inline with text output. This allows quick image previewing during development, viewing images over SSH sessions, and integrating visual output into command-line workflows.
 
-For terminals supporting the Kitty graphics protocol (Kitty, Ghostty, etc.), images are displayed at high resolution using a similar mechanism. Sixel-capable terminals (xterm, mlterm, some others) use a legacy but widely compatible graphics format.
-
-Fallback implementations convert images to Unicode block characters or braille patterns for terminals without graphics support, providing a low-resolution but universal display method.
-
-The tool is commonly used for quick image preview during development, viewing images over SSH sessions, and integrating visual output into command-line workflows.
+Note that there are several distinct tools named "imgcat" with different flag sets. The parameters listed here reflect common options but may vary by implementation.
 
 # CAVEATS
 
-Terminal must support a graphics protocol (iTerm2, Kitty, Sixel, etc.). Functionality varies significantly between implementations. Large images may slow terminal rendering. SSH sessions may not support graphics without port forwarding or special configuration. Not all image formats are supported by all implementations.
+Terminal must support an inline image protocol (iTerm2, Kitty, Sixel). Functionality and flags vary significantly between implementations. Large images may slow terminal rendering. SSH sessions may not support inline images without special configuration.
 
 # HISTORY
 

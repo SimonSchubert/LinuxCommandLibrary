@@ -4,21 +4,21 @@ Lightweight full-text search engine
 
 # TLDR
 
-**Start Zinc server**
+**Start Zinc server with initial admin credentials**
 
-```zinc```
+```ZINC_FIRST_ADMIN_USER=[admin] ZINC_FIRST_ADMIN_PASSWORD=[password] zinc```
 
 **Start on specific port**
 
-```zinc --port [4080]```
+```ZINC_SERVER_PORT=[4080] zinc```
 
 **Start with custom data directory**
 
-```zinc --data-dir [/var/lib/zinc]```
+```ZINC_DATA_PATH=[/var/lib/zinc] zinc```
 
-**Start with authentication**
+**Ingest data via API**
 
-```ZINC_FIRST_ADMIN_USER=[admin] ZINC_FIRST_ADMIN_PASSWORD=[password] zinc```
+```curl -u [admin:password] -X POST http://localhost:4080/api/[index]/_doc -d '{"field": "value"}'```
 
 # SYNOPSIS
 
@@ -26,17 +26,7 @@ Lightweight full-text search engine
 
 # PARAMETERS
 
-**--port** _port_
-> HTTP port to listen on (default: 4080)
-
-**--data-dir** _path_
-> Directory for data storage
-
-**--sentry-dsn** _dsn_
-> Sentry DSN for error tracking
-
-**--prometheus**
-> Enable Prometheus metrics endpoint
+Note: ZincSearch (now OpenObserve) is primarily configured via environment variables rather than command-line flags.
 
 # ENVIRONMENT
 
@@ -60,13 +50,13 @@ Lightweight full-text search engine
 
 # DESCRIPTION
 
-**Zinc** is a lightweight, full-text search engine designed as an alternative to Elasticsearch. It provides log search and analytics with significantly lower resource requirements.
+**ZincSearch** (formerly Zinc) is a lightweight, full-text search engine designed as an alternative to Elasticsearch. It provides log search and analytics with significantly lower resource requirements.
 
-Zinc features a web UI for management, REST API compatible with Elasticsearch's search syntax, and supports various data ingestion methods including bulk insert and fluentd/fluent-bit integration.
+ZincSearch features a web UI for management, REST API compatible with Elasticsearch's search syntax, and supports various data ingestion methods including bulk insert and fluentd/fluent-bit integration.
 
-The search engine is written in Go and uses BlugeSearch as its indexing library. It runs as a single binary with embedded storage, requiring no external dependencies.
+The search engine is written in Go and uses Bluge as its indexing library. It runs as a single binary with embedded storage, requiring no external dependencies.
 
-Common use cases include log aggregation, application search, and replacing Elasticsearch in resource-constrained environments.
+Common use cases include log aggregation, application search, and replacing Elasticsearch in resource-constrained environments. The project has since evolved into **OpenObserve**.
 
 # CAVEATS
 

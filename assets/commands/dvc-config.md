@@ -4,23 +4,27 @@ manage DVC configuration settings
 
 # TLDR
 
-**Set configuration** value
+**Set a configuration value**
 
 ```dvc config [core.remote] [myremote]```
 
-**Get configuration** value
+**Get a configuration value**
 
 ```dvc config [core.remote]```
 
-**Set global config**
+**Set a global configuration value**
 
 ```dvc config --global [core.autostage] true```
 
-**List all config**
+**Set a project-level (local) configuration value**
+
+```dvc config --local [core.remote] [myremote]```
+
+**List all configuration entries**
 
 ```dvc config --list```
 
-**Unset config value**
+**Unset a configuration value**
 
 ```dvc config --unset [core.remote]```
 
@@ -43,15 +47,18 @@ _VALUE_
 > Use system configuration.
 
 **--local**
-> Use repository configuration.
+> Use project-level configuration (.dvc/config.local, Git-ignored).
+
+**--project**
+> Use project-level configuration (.dvc/config, tracked by Git).
 
 **--list**, **-l**
-> List all configuration.
+> List all configuration entries.
 
 **--unset**
-> Remove configuration entry.
+> Remove a configuration entry.
 
-**--help**
+**-h**, **--help**
 > Display help information.
 
 # CONFIGURATION
@@ -64,11 +71,11 @@ _VALUE_
 
 # DESCRIPTION
 
-**dvc config** manages DVC configuration at local, global, and system levels. Configuration controls behavior including default remote, caching, and automation settings.
+**dvc config** manages DVC configuration at project, local, global, and system levels. Configuration controls behavior including default remote storage, caching, and automation settings.
 
-Local configuration applies to the current repository, global to the current user, and system to all users. Local settings override global, which override system.
+Configuration precedence from highest to lowest: local (Git-ignored), project (Git-tracked), global (user), system. Common configuration sections include `core` (remote, autostage), `cache` (type, dir), and `remote` (url, credentials).
 
-Common configurations include setting the default remote storage and enabling auto-staging of .dvc files with Git.
+Setting `core.autostage` to true automatically stages .dvc file changes with Git, reducing manual steps. The default remote is set with `core.remote`.
 
 # CAVEATS
 
@@ -80,4 +87,4 @@ dvc config follows conventions from **Git config**, providing familiar configura
 
 # SEE ALSO
 
-[dvc](/man/dvc)(1), [git-config](/man/git-config)(1)
+[dvc](/man/dvc)(1), [dvc-init](/man/dvc-init)(1), [git-config](/man/git-config)(1)

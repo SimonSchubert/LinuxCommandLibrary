@@ -4,42 +4,51 @@ automated WEP key recovery tool
 
 # TLDR
 
-**Start with interface**
+**Start with interface** and buddy server
 
-```sudo easside-ng -i [wlan0]```
+```sudo easside-ng -f [wlan0] -s [buddy_ip]```
 
-**Specify source MAC**
+**Target a specific BSSID**
 
-```sudo easside-ng -i [wlan0] -m [00:11:22:33:44:55]```
+```sudo easside-ng -f [wlan0] -s [buddy_ip] -v [00:11:22:33:44:55]```
 
-**Target specific channel**
+**Lock to a specific channel**
 
-```sudo easside-ng -i [wlan0] -c [6]```
+```sudo easside-ng -f [wlan0] -s [buddy_ip] -c [6]```
 
-**Specify buddy server**
+**Determine Internet IP** only
 
-```sudo easside-ng -i [wlan0] -s [buddy_ip]```
+```sudo easside-ng -f [wlan0] -s [buddy_ip] -n```
 
 # SYNOPSIS
 
-**easside-ng** [_options_] **-i** _interface_
+**easside-ng** [_options_] **-f** _interface_ **-s** _buddy_ip_
 
 # PARAMETERS
 
-**-i** _interface_
-> Wireless interface to use.
+**-f** _interface_
+> Wireless interface to use (mandatory).
+
+**-s** _ip_
+> Buddy-ng server IP address (mandatory).
+
+**-v** _mac_
+> Victim BSSID (target access point MAC address).
 
 **-m** _mac_
 > Source MAC address.
 
+**-i** _ip_
+> Source IP address.
+
+**-r** _ip_
+> Router IP address.
+
 **-c** _channel_
-> Target channel.
+> Lock card to this channel.
 
-**-s** _ip_
-> Buddy server IP address.
-
-**-v**
-> Verbose mode.
+**-n**
+> Determine Internet IP only.
 
 **-h**
 > Display help.

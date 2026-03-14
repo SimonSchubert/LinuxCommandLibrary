@@ -6,23 +6,23 @@ manages log files by rotating, compressing, removing, and mailing them
 
 **Force** rotation manually
 
-```logrotate [path/to/logrotate.conf] --force```
+```sudo logrotate --force [/etc/logrotate.conf]```
 
-Run with **custom mail** command
+**Debug mode** - show what would happen without making changes
 
-```logrotate [path/to/logrotate.conf] --mail /usr/bin/mail```
+```logrotate --debug [/etc/logrotate.conf]```
 
-Run **without state** file
+**Verbose** rotation
 
-```logrotate [path/to/logrotate.conf] --state /dev/null```
+```sudo logrotate --verbose [/etc/logrotate.conf]```
 
-**Skip state** file check
+Use a **custom state** file
 
-```logrotate [path/to/logrotate.conf] --skip-state-lock```
+```sudo logrotate --state [/var/lib/logrotate/status] [/etc/logrotate.conf]```
 
 **Log verbose** output to file
 
-```logrotate [path/to/logrotate.conf] --log [path/to/log]```
+```sudo logrotate --verbose --log [/var/log/logrotate.log] [/etc/logrotate.conf]```
 
 # SYNOPSIS
 
@@ -34,30 +34,27 @@ Run **without state** file
 
 # PARAMETERS
 
-**-f, --force**
-> Force rotation even if not needed
+**-f**, **--force**
+> Force rotation even if conditions are not met
 
-**--mail COMMAND**
-> Command to mail logs
+**-d**, **--debug**
+> Debug mode; show what would happen without making changes
 
-**--state FILE**
-> State file path
+**-v**, **--verbose**
+> Verbose output
 
-**--skip-state-lock**
-> Skip state file locking
+**-s**, **--state** _FILE_
+> Use alternate state file (default: /var/lib/logrotate/status)
 
-**--log FILE**
+**-l**, **--log** _FILE_
 > Log verbose output to file
 
-**-d, --debug**
-> Debug mode (don't make changes)
-
-**-v, --verbose**
-> Verbose output
+**--mail** _COMMAND_
+> Use specified command to mail logs
 
 # CAVEATS
 
-Configuration files in /etc/logrotate.d/ are included by the main config. State file tracks rotation history.
+Configuration files in /etc/logrotate.d/ are included by the main config. The state file tracks when each log was last rotated. Typically run daily via cron or systemd timer.
 
 # SEE ALSO
 

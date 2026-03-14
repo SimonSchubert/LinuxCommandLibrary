@@ -69,6 +69,30 @@ Filter messages by **facility**
 **-n, --console-level level**
 > Set level of messages printed to console
 
+**-k, --kernel**
+> Print kernel messages only
+
+**-u, --userspace**
+> Print userspace messages only
+
+**--time-format** _format_
+> Timestamp format: ctime, reltime, delta, iso, raw
+
+**--since** _time_
+> Display records since the specified time
+
+**--until** _time_
+> Display records until the specified time
+
+**-J, --json**
+> Output in JSON format
+
+**-t, --notime**
+> Do not print kernel timestamps
+
+**-r, --raw**
+> Print raw message buffer with log-level prefixes
+
 **-x, --decode**
 > Decode facility and level to human-readable prefixes
 

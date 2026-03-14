@@ -67,7 +67,7 @@ Print the path to a project's Cargo.toml
 
 # CAVEATS
 
-Useful for scripts and tooling that need to find project root. The -C option (nightly) allows changing working directory before searching.
+Useful for scripts and tooling that need to find the project root. Returns exit code 101 if no Cargo.toml is found in the current or any parent directory.
 
 # SEE ALSO
 

@@ -8,6 +8,10 @@ dynamic tiling window manager
 
 ```exec dwm```
 
+**Set dwm status bar** text
+
+```xsetroot -name "[status text]"```
+
 **Restart dwm** in place
 
 ```kill -HUP $(pidof dwm)```
@@ -24,10 +28,25 @@ Windows are organized into tags (similar to workspaces). The master/stack layout
 
 dwm is designed to be extremely small (under 2000 lines of code) and fast, following the suckless philosophy of simplicity and efficiency.
 
+# DEFAULT KEYBINDINGS
+
+**Mod1-Shift-Enter** - Open terminal
+**Mod1-p** - Launch dmenu
+**Mod1-j** / **Mod1-k** - Focus next/previous window
+**Mod1-h** / **Mod1-l** - Resize master area
+**Mod1-Enter** - Promote focused window to master
+**Mod1-t** - Tiled layout
+**Mod1-f** - Floating layout
+**Mod1-m** - Monocle layout
+**Mod1-Shift-c** - Close focused window
+**Mod1-Shift-q** - Quit dwm
+**Mod1-[1-9]** - Switch to tag 1-9
+**Mod1-Shift-[1-9]** - Move window to tag 1-9
+
 # CONFIGURATION
 
 **config.h**
-> Source-level configuration file that must be edited and recompiled to change keybindings, colors, layouts, bar settings, rules, and behavior.
+> Source-level configuration file that must be edited and recompiled to change keybindings, colors, layouts, bar settings, rules, and behavior. Mod1 is Alt by default.
 
 # CAVEATS
 

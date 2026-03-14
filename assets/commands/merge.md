@@ -42,10 +42,19 @@ _FILE3_
 > Quiet mode.
 
 **-A**
-> Use diff3 markers.
+> Output conflicts using diff3 -A style (most verbose).
 
-**--help**
-> Display help information.
+**-E**
+> Output conflicts using diff3 -E style (default).
+
+**-e**
+> Like -E, but does not warn about conflicts.
+
+**-L** _LABEL_
+> Use label instead of filename in conflict markers. May be given up to three times.
+
+**-V**
+> Print RCS version number.
 
 # DESCRIPTION
 

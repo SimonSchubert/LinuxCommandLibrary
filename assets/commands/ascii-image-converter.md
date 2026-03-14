@@ -20,13 +20,25 @@ Save to **file**
 
 ```ascii-image-converter [image.png] > [output.txt]```
 
-Use **custom characters**
+Use **custom character map** (darkest to lightest)
 
-```ascii-image-converter -c " .:-=+*#%@" [image.png]```
+```ascii-image-converter -m " .:-=+*#%@" [image.png]```
+
+Convert using **braille** characters
+
+```ascii-image-converter -b [image.png]```
+
+Set **specific dimensions** (width,height)
+
+```ascii-image-converter -d [80],[40] [image.png]```
+
+Save as **PNG image**
+
+```ascii-image-converter -s [output_dir] -C [image.png]```
 
 # SYNOPSIS
 
-**ascii-image-converter** [_-W width_] [_-C_] [_-c chars_] [_options_] _image_
+**ascii-image-converter** [_options_] _image_
 
 # DESCRIPTION
 
@@ -36,33 +48,69 @@ The tool supports various image formats and can produce colored output using ANS
 
 # PARAMETERS
 
-**-W** _width_
-> Output width in characters
-
-**-H** _height_
-> Output height in characters
-
 **-C**, **--color**
-> Enable colored output
-
-**-c** _chars_
-> Custom character set (dark to light)
+> Display with colors from the original image
 
 **-b**, **--braille**
-> Use Braille characters
+> Use Braille characters instead of ASCII
 
-**-f**, **--full**
-> Full block characters
+**-g**, **--grayscale**
+> Display in grayscale colors
 
 **-n**, **--negative**
 > Invert colors
 
+**-c**, **--complex**
+> Use a wider range of ASCII characters for more detail
+
+**-m** _chars_, **--map** _chars_
+> Custom character string (darkest to lightest)
+
+**-d** _width_,_height_, **--dimensions** _width_,_height_
+> Set width and height in character lengths
+
+**-W** _width_, **--width** _width_
+> Set width; height calculated by aspect ratio
+
+**-H** _height_, **--height** _height_
+> Set height; width calculated by aspect ratio
+
+**-f**, **--full**
+> Fit to terminal width while maintaining aspect ratio
+
+**-x**, **--flipX**
+> Flip horizontally
+
+**-y**, **--flipY**
+> Flip vertically
+
 **--dither**
-> Apply dithering
+> Apply dithering for braille art
+
+**--threshold** _value_
+> Threshold (0-255) for braille pixel comparison
+
+**--color-bg**
+> Apply color to character backgrounds instead of foregrounds
+
+**-s** _dir_, **--save-img** _dir_
+> Save output as PNG image
+
+**--save-txt** _dir_
+> Save output as TXT file
+
+**--save-gif** _dir_
+> Save converted GIF as ASCII art GIF
+
+**--only-save**
+> Suppress terminal output when saving
+
+**--formats**
+> Display supported input image formats
 
 # CAVEATS
 
-Output quality depends on terminal font and size. Colored output requires terminal with ANSI support. Wide images need large terminal widths.
+Output quality depends on terminal font and size. Colored output requires a terminal with 24-bit or 8-bit ANSI color support. Braille characters require UTF-8 terminal support. Wide images need large terminal widths.
 
 # HISTORY
 
@@ -70,4 +118,4 @@ Output quality depends on terminal font and size. Colored output requires termin
 
 # SEE ALSO
 
-[jp2a](/man/jp2a)(1), [libcaca](/man/libcaca)(1), [img2txt](/man/img2txt)(1)
+[jp2a](/man/jp2a)(1), [img2txt](/man/img2txt)(1)

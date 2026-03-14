@@ -1,6 +1,6 @@
 # TAGLINE
 
-Google Container Registry management tool
+GCR-enhanced container image management tool
 
 # TLDR
 
@@ -75,11 +75,11 @@ Google Container Registry management tool
 
 # DESCRIPTION
 
-**gcrane** is a Google Container Registry-specific variant of crane with enhanced features for GCR and Artifact Registry. It provides richer output for listing operations and garbage collection support not available in standard crane.
+**gcrane** is a Google Container Registry-specific variant of **crane** with enhanced features for GCR and Artifact Registry. It implements a superset of crane commands plus GCR-specific operations.
 
-Key enhancements over crane include recursive copying with **-r** flag (useful for backups, geo-replication, or mass renaming), detailed repository exploration, and the ability to identify untagged images for cleanup.
+Key enhancements over crane include recursive copying with **-r** flag (useful for backups, geo-replication, or mass renaming), detailed repository exploration with richer ls output, and the ability to identify untagged images for cleanup via the **gc** command.
 
-gcrane implements a superset of crane commands plus GCR-specific operations. It relies on GCR implementation details that may not be consistent with the general registry specification.
+gcrane relies on GCR implementation details that may not be consistent with the general OCI registry specification.
 
 # CAVEATS
 

@@ -4,9 +4,13 @@ CLI for the Cradle PHP framework
 
 # TLDR
 
-**Install Cradle** framework
+**Install the Cradle framework**
 
 ```cradle install```
+
+**Install and force override files**
+
+```cradle install -f```
 
 **Create a new module**
 
@@ -16,7 +20,7 @@ CLI for the Cradle PHP framework
 
 ```cradle migrate```
 
-**Generate model from database** table
+**Generate model from a database table**
 
 ```cradle make:model [table_name]```
 
@@ -28,10 +32,6 @@ CLI for the Cradle PHP framework
 
 ```cradle cache:clear```
 
-**List available commands**
-
-```cradle list```
-
 # SYNOPSIS
 
 **cradle** _command_ [_options_] [_arguments_]
@@ -39,7 +39,7 @@ CLI for the Cradle PHP framework
 # PARAMETERS
 
 **install**
-> Install the Cradle framework and dependencies.
+> Install the Cradle framework and dependencies. Supports `-f`/`--force` to override files, `--skip-sql`, `--skip-versioning`, `--skip-mkdir`, `--skip-chmod`.
 
 **serve**
 > Start the built-in development server.
@@ -62,8 +62,8 @@ CLI for the Cradle PHP framework
 **queue:work**
 > Process jobs from the queue.
 
-**list**
-> Display all available commands.
+**connect** _NAME_
+> Connect to a configured server.
 
 **--help**
 > Display help for a command.

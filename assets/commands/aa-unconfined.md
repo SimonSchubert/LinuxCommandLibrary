@@ -4,17 +4,21 @@ Find network-listening processes without AppArmor profiles
 
 # TLDR
 
-List **unconfined processes** using the ss command (default)
+**List unconfined processes** with open network sockets (using ss by default)
 
 ```sudo aa-unconfined```
 
-Use **netstat** instead of ss to detect open network sockets
+**Use netstat** instead of ss to detect open network sockets
 
 ```sudo aa-unconfined --with-netstat```
 
-Show all processes with TCP/UDP ports and **no profiles** (paranoid mode)
+**Show all processes** from /proc with TCP/UDP ports without confinement
 
 ```sudo aa-unconfined --paranoid```
+
+**Show only server processes** (those with listening sockets)
+
+```sudo aa-unconfined --show=server```
 
 # SYNOPSIS
 
@@ -29,16 +33,19 @@ This tool is useful for identifying services that may benefit from AppArmor conf
 # PARAMETERS
 
 **--paranoid**
-> Examines all processes from the /proc filesystem that have active TCP or UDP ports without AppArmor confinement
+> Examines all processes from the /proc filesystem that have active TCP or UDP ports without AppArmor confinement. Equivalent to --show=all.
+
+**--show=**_MODE_
+> Determines the set of processes displayed: all (all processes), network (processes with any sockets), server (processes with listening sockets), client (processes with non-listening sockets).
 
 **--with-ss**
-> Uses the ss(8) utility to identify network socket listeners (default)
+> Uses the ss(8) utility to identify network socket listeners (default).
 
 **--with-netstat**
-> Uses the netstat(8) command for network socket discovery instead of ss
+> Uses the netstat(8) command for network socket discovery instead of ss. Used as fallback when ss is not available.
 
-**-h, --help**
-> Display help information
+**-h**, **--help**
+> Display help information.
 
 # CAVEATS
 

@@ -8,17 +8,17 @@ opens files with their associated applications
 
 ```mimeopen [file.pdf]```
 
-**Choose application**
+**Ask which application** to use
 
-```mimeopen -a [file.pdf]```
+```mimeopen --ask [file.pdf]```
 
-**Open with specific app**
+**Set the default application** for the MIME type
 
 ```mimeopen -d [file.pdf]```
 
-**Ask every time**
+**Show the MIME type** without opening
 
-```mimeopen --ask [file.pdf]```
+```mimeopen --no-ask [file.pdf]```
 
 **No forking**
 
@@ -33,26 +33,26 @@ opens files with their associated applications
 _FILE_
 > File to open.
 
-**-a**
-> Choose from all applications.
+**--ask**
+> Prompt to choose an application from known handlers.
 
 **-d**
-> Set default application.
-
-**--ask**
-> Always ask.
+> Set the default application for this MIME type.
 
 **-n**
-> No fork (wait for app).
+> No fork; wait for the application to exit.
+
+**--no-ask**
+> Print the MIME type without opening the file.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**mimeopen** opens files with their associated applications. It uses MIME types to determine handlers.
+**mimeopen** opens files with their associated applications using MIME types to determine the appropriate handler. It queries the XDG MIME database to find registered applications for the file's type.
 
-The tool is part of perl-file-mimeinfo. It respects XDG MIME associations.
+The tool is part of the **File::MimeInfo** Perl module (perl-file-mimeinfo package). It reads and respects XDG MIME associations configured in `~/.config/mimeapps.list` and system defaults.
 
 # CAVEATS
 

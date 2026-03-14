@@ -8,66 +8,86 @@ Crystal language dependency manager
 
 ```shards install```
 
-**Update dependencies**
+**Update all dependencies**
 
 ```shards update```
 
-**Add dependency**
+**Build project targets**
 
-```shards add [package-name]```
+```shards build```
+
+**Check for outdated dependencies**
+
+```shards outdated```
+
+**Initialize a new shard.yml**
+
+```shards init```
 
 **List installed shards**
 
 ```shards list```
 
-**Build project**
+**Install without development dependencies**
 
-```shards build```
+```shards install --production```
 
-**Check outdated shards**
+**Verify dependencies are installed and satisfied**
 
-```shards outdated```
-
-**Initialize new project**
-
-```shards init```
-
-**Lock dependencies**
-
-```shards lock```
+```shards check```
 
 # SYNOPSIS
 
 **shards** _command_ [_options_] [_args_]
 
-# PARAMETERS
+# SUBCOMMANDS
 
 **install**
-> Install dependencies.
+> Resolve and install dependencies into the lib folder.
 
 **update**
-> Update dependencies.
+> Re-resolve and update all dependencies, regenerating shard.lock.
 
-**add** _NAME_
-> Add dependency.
+**build** [_targets_]
+> Build specified targets into the bin/ directory. Builds all if none specified.
 
-**list**
-> Show installed.
-
-**build**
-> Build project.
-
-**outdated**
-> Check for updates.
+**check**
+> Verify that all dependencies are installed and requirements are satisfied.
 
 **init**
-> Create shard.yml.
+> Create a default shard.yml in the current directory.
 
-**lock**
-> Generate lock file.
+**list**
+> Show installed shards and their versions.
+
+**outdated**
+> List dependencies that have newer versions available.
+
+**version**
+> Print the current shard version from shard.yml.
+
+# PARAMETERS
+
+**--production**
+> Skip development dependencies and only use locked versions.
 
 **--without-development**
-> Skip dev dependencies.
+> Skip development dependencies during install.
+
+**--skip-postinstall**
+> Skip running postinstall scripts.
+
+**--skip-executables**
+> Skip installing executables.
+
+**-q**, **--quiet**
+> Decrease log verbosity, printing only warnings and errors.
+
+**-v**, **--verbose**
+> Increase log verbosity.
+
+**--jobs** _N_
+> Number of parallel download jobs.
 
 # DESCRIPTION
 

@@ -8,17 +8,9 @@ Docker TUI inspired by k9s
 
 ```ducker```
 
-**Connect** to specific Docker context
+**Export default configuration file**
 
-```ducker --context [context_name]```
-
-**View** specific resource type on startup
-
-```ducker --view [pods|containers|images|volumes]```
-
-**Use** specific namespace
-
-```ducker --namespace [namespace]```
+```ducker --export-default-config```
 
 # SYNOPSIS
 
@@ -26,32 +18,20 @@ Docker TUI inspired by k9s
 
 # PARAMETERS
 
-**--context** _CONTEXT_
-> Docker context to use
-
-**--view** _VIEW_
-> Initial view: pods, containers, images, volumes, networks
-
-**--namespace** _NS_
-> Namespace filter
-
-**--readonly**
-> Start in read-only mode
-
-**-c, --config** _FILE_
-> Configuration file path
-
-**-v, --version**
-> Display version and exit
+**-e, --export-default-config**
+> Write default config to the default location, overwriting any existing config
 
 **-h, --help**
 > Display help and exit
+
+**-V, --version**
+> Display version and exit
 
 # DESCRIPTION
 
 **ducker** is a terminal user interface for Docker inspired by the Kubernetes tool k9s. It provides an efficient, keyboard-driven interface for managing Docker containers, images, volumes, and networks without typing long Docker commands.
 
-The tool features a familiar UI pattern for those coming from k9s, with resource views, filtering, shortcuts for common actions, and real-time updates. It supports both Docker and Docker Compose environments.
+The tool features a familiar UI pattern for those coming from k9s, with resource views, filtering, shortcuts for common actions, and real-time updates. It is configured via a YAML file (typically `~/.config/ducker/config.yaml` on Linux).
 
 # KEYBINDINGS
 
@@ -93,7 +73,7 @@ The tool features a familiar UI pattern for those coming from k9s, with resource
 
 # CAVEATS
 
-Requires Docker daemon access. Some features require elevated permissions. Podman compatibility may vary. Complex Docker Compose setups may have limited support. Terminal must support the full range of characters used in the UI.
+Requires Docker daemon access. When installing with cargo, use `--locked` to avoid upstream dependency breakage. Terminal must support the full range of characters used in the UI.
 
 # HISTORY
 
@@ -101,4 +81,4 @@ Requires Docker daemon access. Some features require elevated permissions. Podma
 
 # SEE ALSO
 
-[docker](/man/docker)(1), [k9s](/man/k9s)(1), [lazydocker](/man/lazydocker)(1), [dtop](/man/dtop)(1)
+[docker](/man/docker)(1), [k9s](/man/k9s)(1), [lazydocker](/man/lazydocker)(1), [oxker](/man/oxker)(1)

@@ -14,9 +14,9 @@ Swap queue positions of two pueue tasks
 
 # DESCRIPTION
 
-**pueue switch** swaps the queue positions of two tasks. Both tasks must be queued (not running or completed). Useful for reordering task execution priority.
+**pueue switch** swaps the queue positions of two tasks. Both tasks must be in queued or stashed state (not running or completed). Useful for reordering task execution priority without removing and re-adding tasks.
 
 # SEE ALSO
 
-[pueue](/man/pueue)(1), [pueue-status](/man/pueue-status)(1)
+[pueue](/man/pueue)(1), [pueue-status](/man/pueue-status)(1), [pueue-enqueue](/man/pueue-enqueue)(1), [pueue-stash](/man/pueue-stash)(1)
 

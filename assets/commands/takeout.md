@@ -8,6 +8,14 @@ Docker-based development service manager
 
 ```takeout enable [mysql]```
 
+**Enable service** with default settings
+
+```takeout enable [mysql] --default```
+
+**Enable multiple** services
+
+```takeout enable [mysql] [redis] [meilisearch]```
+
 **Disable service**
 
 ```takeout disable [mysql]```
@@ -34,11 +42,14 @@ Docker-based development service manager
 
 # PARAMETERS
 
-**enable**
-> Enable service.
+**enable** _SERVICE..._
+> Enable and start a service container with interactive prompts.
 
-**disable**
-> Disable service.
+**disable** _SERVICE_
+> Stop and remove a service container.
+
+**--default**
+> Accept default parameters when enabling (skip prompts).
 
 **start**
 > Start services.

@@ -46,4 +46,4 @@ Requires GTK+-2.0 libraries. Some GTK themes have difficulty displaying large nu
 
 # SEE ALSO
 
-[squeue](/man/squeue)(1), [sinfo](/man/sinfo)(1), [scontrol](/man/scontrol)(1), [sacct](/man/sacct)(1)
+[squeue](/man/squeue)(1), [sinfo](/man/sinfo)(1), [scontrol](/man/scontrol)(1), [sacct](/man/sacct)(1), [sbatch](/man/sbatch)(1)

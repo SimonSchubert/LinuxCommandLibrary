@@ -28,6 +28,10 @@ Resolve absolute canonical file paths
 
 ```realpath [file1] [file2] [file3]```
 
+**Require all path components to exist**
+
+```realpath -e [path/to/file]```
+
 **Quiet mode** (suppress errors)
 
 ```realpath -q [file]```

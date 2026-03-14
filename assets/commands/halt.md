@@ -36,8 +36,11 @@ Write the wtmp shutdown entry **without halting**
 **--reboot**
 > Reboot the machine (equivalent to reboot)
 
+**--halt**
+> Halt the machine, regardless of which command is invoked
+
 **-f**, **--force**
-> Halt immediately without init/systemd
+> Force immediate halt without contacting the init system
 
 **-w**, **--wtmp-only**
 > Only write wtmp record, don't actually halt

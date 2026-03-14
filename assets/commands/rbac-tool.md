@@ -4,23 +4,23 @@ Analyze and visualize Kubernetes RBAC policies
 
 # TLDR
 
-**Analyze RBAC permissions**
-
-```rbac-tool analysis```
-
-**Visualize RBAC**
-
-```rbac-tool viz```
-
-**Show who can perform action**
+**Show who can perform an action on a resource**
 
 ```rbac-tool who-can [get] [pods]```
 
-**Generate policy**
+**Visualize RBAC as HTML**
 
-```rbac-tool gen```
+```rbac-tool viz --outformat html > [rbac.html]```
 
-**Audit RBAC**
+**Look up permissions for a specific subject**
+
+```rbac-tool lookup -e [user@example.com]```
+
+**Generate RBAC policy from audit log**
+
+```rbac-tool gen --from-audit [audit.log]```
+
+**Audit RBAC for security issues**
 
 ```rbac-tool audit```
 
@@ -97,4 +97,4 @@ rbac-tool was created to help Kubernetes administrators understand and manage co
 
 # SEE ALSO
 
-[kubectl](/man/kubectl)(1), [kubeaudit](/man/kubeaudit)(1), [kube-hunter](/man/kube-hunter)(1)
+[kubectl](/man/kubectl)(1), [kubeaudit](/man/kubeaudit)(1)

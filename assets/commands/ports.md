@@ -18,7 +18,7 @@ Show **differences** between installed and ports
 
 # SYNOPSIS
 
-**ports** [**-u**] [**-l**] [**-d**]
+**ports** [**-u**|**-l**|**-d**]
 
 # PARAMETERS
 
@@ -39,7 +39,7 @@ The differences option helps identify packages that need updating or are install
 
 # CAVEATS
 
-CRUX-specific tool. Requires network access for updates. Configuration in /etc/ports/. Does not build or install packages directly.
+CRUX-specific tool. Requires network access for updates. Driver configuration files are in `/etc/ports/`. Does not build or install packages directly; use **prt-get** or **pkgmk** for that.
 
 # HISTORY
 

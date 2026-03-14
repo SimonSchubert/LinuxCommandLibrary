@@ -4,7 +4,7 @@ Web technology fingerprinting and identification
 
 # TLDR
 
-**Scan website**
+**Scan a website**
 
 ```whatweb [https://example.com]```
 
@@ -12,45 +12,64 @@ Web technology fingerprinting and identification
 
 ```whatweb -v [url]```
 
-**Aggressive scan**
+**Aggressive scan** (makes additional requests per target)
 
-```whatweb -a [3] [url]```
+```whatweb -a 3 [url]```
 
-**Output to file**
-
-```whatweb --log-verbose=[output.txt] [url]```
-
-**Multiple URLs**
-
-```whatweb [url1] [url2]```
-
-**JSON output**
+**Save results as JSON**
 
 ```whatweb --log-json=[output.json] [url]```
 
+**Scan multiple URLs**
+
+```whatweb [url1] [url2]```
+
+**Scan with custom user agent and threads**
+
+```whatweb --user-agent "[custom-agent]" -t [10] [url]```
+
+**Follow redirects only within the same site**
+
+```whatweb --follow-redirect=same-site [url]```
+
 # SYNOPSIS
 
-**whatweb** [_-v_] [_-a level_] [_--log-verbose file_] _urls_
+**whatweb** [_options_] _urls_
 
 # PARAMETERS
 
 **-v**
-> Verbose output.
+> Verbose output showing detailed plugin results.
 
-**-a** _LEVEL_
-> Aggression (1-4).
+**-a**, **--aggression** _LEVEL_
+> Aggression level: **1** (stealthy, single request, default), **3** (aggressive, additional requests on match), **4** (heavy, many requests per target). Level 2 is unused.
 
 **--log-verbose** _FILE_
-> Verbose log.
+> Log verbose output to a file.
 
 **--log-json** _FILE_
-> JSON output.
+> Log output in JSON format.
 
-**-q**
-> Quiet mode.
+**--log-xml** _FILE_
+> Log output in XML format.
+
+**-q**, **--quiet**
+> Quiet mode; suppress output to stdout.
 
 **--user-agent** _UA_
-> Custom UA.
+> Set a custom User-Agent string.
+
+**-t**, **--max-threads** _N_
+> Number of simultaneous threads. Default: 25.
+
+**--follow-redirect** _WHEN_
+> When to follow redirects: never, http-only, meta-only, same-site, or always (default).
+
+**--cookie** _COOKIE_
+> Provide cookies (e.g., 'name=value; name2=value2').
+
+**--proxy** _HOST:PORT_
+> Use an HTTP proxy for requests.
 
 # DESCRIPTION
 
@@ -62,11 +81,7 @@ Output can be formatted as JSON, XML, verbose text, or SQL for database storage.
 
 # CAVEATS
 
-Authorized use only. May be detected. Ruby required.
-
-# HISTORY
-
-**WhatWeb** was created for web reconnaissance, identifying technologies and features on websites.
+Only use on systems you are authorized to scan. Aggressive modes may be detected by intrusion detection systems. Requires Ruby.
 
 # SEE ALSO
 

@@ -34,6 +34,9 @@ create new Fossil repository
 **--template** _repo_
 > Use template repository.
 
+**--date-override** _datetime_
+> Override initial check-in date.
+
 # DESCRIPTION
 
 **fossil init** creates a new Fossil repository file. The repository is a single SQLite database that contains all history, wiki, tickets, and project metadata.
@@ -44,5 +47,5 @@ Repository settings include project name, description, and admin credentials. Th
 
 # SEE ALSO
 
-[fossil-clone](/man/fossil-clone)(1), [fossil-open](/man/fossil-open)(1)
+[fossil](/man/fossil)(1)
 

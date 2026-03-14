@@ -14,7 +14,7 @@ converts MTV ray tracer format to PPM
 
 # DESCRIPTION
 
-**mtvtoppm** converts MTV ray tracer format to PPM. MTV was an early ray tracing program that produced simple image output. Part of Netpbm toolkit.
+**mtvtoppm** reads an MTV ray tracer image file as input and produces a PPM image as output. MTV refers to the output format of the MTV ray tracer program by Mark T. VandeWettering (named after his initials). The format is a simple uncompressed truecolor raster format. Files typically use the .pic or .mtv extension. Part of the Netpbm toolkit.
 
 # SEE ALSO
 

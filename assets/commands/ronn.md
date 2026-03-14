@@ -52,7 +52,16 @@ Convert markdown to man pages and HTML
 > Manual name.
 
 **--organization** _org_
-> Organization.
+> Organization name for footer.
+
+**--date** _YYYY-MM-DD_
+> Published date for footer.
+
+**-w**
+> Show troff warnings on stderr.
+
+**-W**
+> Disable troff warnings.
 
 # DESCRIPTION
 

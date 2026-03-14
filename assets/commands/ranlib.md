@@ -8,13 +8,13 @@ Generate index for static library archives
 
 ```ranlib [libfoo.a]```
 
-**Update index if needed**
+**Generate index using actual timestamps** (non-deterministic mode)
 
 ```ranlib -U [libfoo.a]```
 
-**Don't warn about old archives**
+**Generate index in deterministic mode** (reproducible builds)
 
-```ranlib -c [libfoo.a]```
+```ranlib -D [libfoo.a]```
 
 **Process multiple archives**
 
@@ -28,27 +28,27 @@ Generate index for static library archives
 
 **ranlib** generates or updates the symbol table index in a static library archive (.a file), enabling the linker to quickly locate symbols without scanning every object file in the archive. Without this index, the linker must process object files in order and may fail to resolve symbols that appear in a later object file than the one referencing them.
 
-While modern versions of **ar** automatically create this index when building archives (equivalent to **ar -s**), ranlib remains useful for regenerating indexes on archives that have been modified or transferred between systems. The **-U** flag provides an efficient update mode that only rebuilds the index if the archive contents have changed.
+While modern versions of **ar** automatically create this index when building archives (equivalent to **ar -s**), ranlib remains useful for regenerating indexes on archives that have been modified or transferred between systems.
 
 # PARAMETERS
 
 **-c**
-> Don't warn for old archives.
+> Don't warn when the library has to be created (for compatibility).
 
 **-D**
-> Deterministic mode.
+> Operate in deterministic mode. Use zero for UIDs, GIDs, and timestamps. Enabled by default on some systems.
 
 **-U**
-> Update only if needed.
+> Do not operate in deterministic mode; use actual UIDs, GIDs, timestamps, and file modes.
 
 **-t**
-> Update timestamps.
+> Update the timestamp of the symbol map of an archive.
 
 **-v**
 > Verbose output.
 
 **-V**
-> Print version.
+> Print version information.
 
 # CAVEATS
 

@@ -12,9 +12,17 @@ Keep only **two newest** kernels
 
 ```sudo eclean-kernel -n 2```
 
+**Preview** what would be removed
+
+```sudo eclean-kernel -p -n 2```
+
 Remove kernels with **confirmation**
 
-```sudo eclean-kernel -a -n 2```
+```sudo eclean-kernel -A -n 2```
+
+Remove all kernels **not referenced** by bootloader
+
+```sudo eclean-kernel -a```
 
 # SYNOPSIS
 
@@ -31,19 +39,31 @@ The tool handles all kernel-related components including the kernel image, Syste
 # PARAMETERS
 
 **-l, --list-kernels**
-> List all installed kernels
+> List all installed kernels and exit
 
-**-n, --num** _n_
-> Number of kernels to keep
+**-n** _NUM_
+> Keep N newest kernels
+
+**-A, --ask**
+> Ask before removing each kernel
 
 **-a, --all**
-> Ask before each removal
+> Remove all kernels unless referenced by bootloader
+
+**-d, --destructive**
+> Destructive mode: remove kernels even when referenced by bootloader
 
 **-p, --pretend**
-> Show what would be removed
+> Print kernels to be removed and exit
 
-**--no-mount**
-> Don't mount /boot if unmounted
+**-b, --bootloader** _BOOTLOADER_
+> Bootloader used (auto, lilo, grub2, grub, yaboot, symlinks)
+
+**-x, --exclude** _KERNEL_
+> Exclude a specific kernel from removal
+
+**--no-bootloader-update**
+> Do not update bootloader configuration after removal
 
 # CAVEATS
 

@@ -31,7 +31,7 @@ BSD Tetris game for terminals
 # PARAMETERS
 
 **-l** _level_
-> Set the starting level (2-9). Higher levels make blocks fall faster.
+> Set the starting level (default: 2). Higher levels make blocks fall faster (blocks fall N times per second at level N).
 
 **-k** _keys_
 > Customize control keys. Provide six characters for: left, rotate, right, drop, pause, quit.
@@ -52,7 +52,7 @@ Scoring awards one point per block placed and one point per space dropped. The f
 
 # CAVEATS
 
-The game must be played on a CRT-compatible terminal. The vi-style default controls may be unfamiliar to users expecting arrow keys. The speed increases as the game progresses regardless of initial level selection.
+The game must be played on a CRT-compatible terminal. The vi-style default controls may be unfamiliar to users expecting arrow keys.
 
 # HISTORY
 
@@ -60,4 +60,4 @@ The original Tetris was created by **Alexey Pajitnov** in **1984** in the Soviet
 
 # SEE ALSO
 
-[tetris](/man/tetris)(6), [bcd](/man/bcd)(6), [snake](/man/snake)(6), [worm](/man/worm)(6)
+[tetris](/man/tetris)(6), [bcd](/man/bcd)(6), [worm](/man/worm)(6)

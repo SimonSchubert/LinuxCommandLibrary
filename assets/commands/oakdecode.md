@@ -1,54 +1,60 @@
 # TAGLINE
 
-decodes Oak printer format files
+decode an OAKT printer stream into human readable form
 
 # TLDR
 
-**Decode Oak file**
+**Decode an OAKT printer stream from a file**
 
-```oakdecode [file.oak]```
+```oakdecode < [file.prn]```
 
-**Decode with output**
+**Decode and save decompressed planes as PBM files**
 
-```oakdecode [file.oak] -o [output]```
+```oakdecode -d [basename] < [file.prn]```
 
-**Show file info**
+**Decode and save raw planes as JBIG files**
 
-```oakdecode -i [file.oak]```
+```oakdecode -r [basename] < [file.prn]```
+
+**Decode with file offsets shown in output**
+
+```oakdecode -o < [file.prn]```
+
+**Decode without displaying image records**
+
+```oakdecode -i < [file.prn]```
 
 # SYNOPSIS
 
-**oakdecode** [_options_] _file_
+**oakdecode** [_options_] <_OAKT-file_
 
 # PARAMETERS
 
-_FILE_
-> Oak format file to decode.
+**-d** _BASENAME_
+> Save decompressed planes as .pbm files with specified basename.
 
-**-o** _OUTPUT_
-> Output file.
+**-r** _BASENAME_
+> Save raw planes as .jbg files with specified basename.
 
 **-i**
-> Show file information.
+> Suppress display of image records in output.
 
-**--help**
-> Display help information.
+**-o**
+> Include file offsets in the output.
+
+**-D** _LEVEL_
+> Set debug verbosity level (default: 0).
 
 # DESCRIPTION
 
-**oakdecode** decodes Oak printer format files. Converts to standard formats.
+**oakdecode** decodes an OAKT printer stream into human readable form. It is designed for printers that use the OAKT printer language, such as the HP Color LaserJet 1500. The tool reads the printer stream from standard input and outputs decoded records showing page setup, compression information, and image data in a readable format.
 
-The tool handles Oak proprietary format. Part of printer tools.
+The tool is part of the foo2oak printer driver suite and is primarily used for debugging and analyzing OAKT format print jobs.
 
 # CAVEATS
 
-Printer-specific format. May require additional libraries.
-
-# HISTORY
-
-oakdecode was created to **decode Oak printer format** files to standard formats.
+Reads from standard input only. Specific to the OAKT printer language used by certain HP Color LaserJet models.
 
 # SEE ALSO
 
-[foo2oak](/man/foo2oak)(1), [gs](/man/gs)(1)
-
+[foo2oak](/man/foo2oak)(1), [foo2oak-wrapper](/man/foo2oak-wrapper)(1)

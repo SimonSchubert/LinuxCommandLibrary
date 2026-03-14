@@ -45,6 +45,9 @@ _PR-NUMBER_
 **-q** _QUERY_, **--jq** _QUERY_
 > Filter JSON output with jq syntax.
 
+**-t**, **--template** _TEMPLATE_
+> Format output using a Go template.
+
 **--help**
 > Display help information.
 

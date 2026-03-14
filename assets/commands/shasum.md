@@ -50,20 +50,29 @@ Compute and verify SHA message digests
 **-t**
 > Text mode (default).
 
-**-p**
-> Portable mode.
+**-U**, **--UNIVERSAL**
+> Read in Universal Newlines mode (produces same digest on Windows/Unix/Mac).
+
+**-0**, **--01**
+> Read in BITS mode (ASCII '0' interpreted as 0-bit, '1' as 1-bit).
 
 **-s**, **--status**
-> Status only (with -c).
+> Status only, don't output anything (with -c).
+
+**--ignore-missing**
+> Don't fail or report status for missing files (with -c).
+
+**-q**, **--quiet**
+> Don't print OK for each successfully verified file (with -c).
 
 **-w**, **--warn**
-> Warn about improper lines.
+> Warn about improperly formatted checksum lines.
 
 **--strict**
 > Exit non-zero for improperly formatted lines.
 
 **--tag**
-> BSD-style output.
+> BSD-style output including algorithm name.
 
 **-h**, **--help**
 > Show help.
@@ -86,4 +95,4 @@ SHA-1 is cryptographically weakened - use SHA-256+ for security. Hash verificati
 
 # SEE ALSO
 
-[sha256sum](/man/sha256sum)(1), [md5sum](/man/md5sum)(1), [openssl](/man/openssl)(1), [b2sum](/man/b2sum)(1)
+[sha1sum](/man/sha1sum)(1), [sha256sum](/man/sha256sum)(1), [md5sum](/man/md5sum)(1), [openssl](/man/openssl)(1), [b2sum](/man/b2sum)(1)

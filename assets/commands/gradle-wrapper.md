@@ -10,13 +10,21 @@ Gradle version-pinning wrapper generator
 
 **Specify Gradle version**
 
-```gradle wrapper --gradle-version [8.5]```
+```gradle wrapper --gradle-version [9.4.0]```
 
-**Use distribution type**
+**Use distribution type (bin or all)**
 
 ```gradle wrapper --distribution-type [all]```
 
-**Run with wrapper**
+**Upgrade wrapper version using existing wrapper**
+
+```./gradlew wrapper --gradle-version [9.4.0]```
+
+**Specify distribution with SHA-256 verification**
+
+```gradle wrapper --gradle-version [9.4.0] --gradle-distribution-sha256-sum [checksum]```
+
+**Run project build with wrapper**
 
 ```./gradlew build```
 
@@ -34,6 +42,9 @@ Gradle version-pinning wrapper generator
 
 **--gradle-distribution-url** _URL_
 > Custom distribution URL.
+
+**--gradle-distribution-sha256-sum** _HASH_
+> SHA-256 checksum for distribution verification.
 
 **--help**
 > Display help information.

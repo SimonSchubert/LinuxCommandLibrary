@@ -12,9 +12,9 @@ Protocol Buffers compiler and code generator
 
 ```protoc --java_out=[path/to/output_directory] --proto_path=[path/to/import_search_path] [input_file.proto]```
   
-**Generate code for multiple languages**
+**Generate Go code** using a plugin
 
-```protoc --csharp_out=[path/to/c#_output_directory] --js_out=[path/to/js_output_directory] [input_file.proto]```
+```protoc --go_out=[path/to/output_directory] --go_opt=paths=source_relative [input_file.proto]```
 
 **Encode** a text-format message into a **protocol message** from a .proto file
 
@@ -62,11 +62,19 @@ protoc is a core component of the gRPC ecosystem, where .proto files define both
 
 > Show summary of options.
 
+**--go_out=**_OUT_DIR_
+
+> Enable generation of Go bindings and store them in  _OUT_DIR_ (requires protoc-gen-go plugin).
+
+**--plugin=**_NAME=PATH_
+
+> Specify an external plugin executable for code generation.
+
 **--version**
 
 > Show version of program.
 
-Note that at least one of the  **--cpp_out**,  **--java_out**  and  **--python_out**  options must be given (otherwise the program has nothing to do). Its also possible to specify more than one.
+At least one output option (e.g. **--cpp_out**, **--java_out**, **--python_out**, **--go_out**) must be given. Multiple outputs can be specified in a single invocation.
 
 # CAVEAT
 
@@ -74,8 +82,8 @@ Finicky path resolution: it demands precise --proto_path (-I) flags for all .pro
 
 # HISTORY
 
-Initially developed internally at **Google in 2001** as a way to handle structured data serialization more efficiently than XML, with the first public release occurring in **2008** under an open-source license. The protoc compiler itself evolved alongside, starting as a C++-based tool and expanding to support multiple languages like Java, Python, and Go through generated code stubs. Over the years, it has seen continuous updates, with version 3 introducing significant syntax changes in **2016** and recent iterations up to **2026 focusing** on performance optimizations, nanoPB for embedded systems, and better integration with gRPC.
+Initially developed internally at **Google in 2001** as a way to handle structured data serialization more efficiently than XML, with the first public release occurring in **2008** under an open-source license. The protoc compiler itself evolved alongside, starting as a C++-based tool and expanding to support multiple languages like Java, Python, and Go through generated code stubs. Over the years, it has seen continuous updates, with version 3 introducing significant syntax changes in **2016** and recent iterations focusing on performance optimizations and better integration with gRPC.
 
 # SEE ALSO
 
-[buff](/man/buff)(1)
+[buff](/man/buff)(1), [grpc](/man/grpc)(1)

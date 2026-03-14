@@ -53,22 +53,25 @@ Pronounceable passwords are easier to remember but potentially less secure. Rand
 > Number of passwords to generate
 
 **-M** _mode_
-> Character classes: S=special, N=numeric, C=capital, L=lowercase
+> Character classes: S=special, N=numeric, C=capital, L=lowercase. Prefix with uppercase to require the class.
 
 **-E** _chars_
 > Exclude specific characters
 
-**-c** _file_
-> Check against dictionary file
+**-r** _file_
+> Check against dictionary file for password filtering
+
+**-t**
+> Print pronunciation for pronounceable passwords
 
 **-q**
 > Quiet mode (passwords only)
 
 **-s**
-> Prompt for random seed
+> Prompt for random seed from keyboard input
 
 **-l**
-> Spell pronounceable passwords
+> Spell generated passwords phonetically
 
 # CAVEATS
 

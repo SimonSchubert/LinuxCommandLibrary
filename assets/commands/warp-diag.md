@@ -1,20 +1,20 @@
 # TAGLINE
 
-Cloudflare WARP diagnostic tool
+Cloudflare WARP diagnostic and troubleshooting tool
 
 # TLDR
 
-**Run diagnostics**
+**Run full diagnostics** and create a zip report
 
 ```warp-diag```
 
-**Run with verbose output**
+**Run diagnostics and save** to a specific directory
 
-```warp-diag -v```
+```warp-diag --output [path/to/directory]```
 
-**Output to file**
+**Run diagnostics** without browser-based feedback
 
-```warp-diag -o [diagnostic_report.txt]```
+```warp-diag --no-open```
 
 # SYNOPSIS
 
@@ -22,18 +22,21 @@ Cloudflare WARP diagnostic tool
 
 # PARAMETERS
 
-**-v**, **--verbose**
-> Verbose output.
+**--output** _directory_
+> Save diagnostic zip file to the specified directory.
 
-**-o** _file_
-> Output to file.
-
-**--json**
-> Output in JSON format.
+**--no-open**
+> Do not automatically open the feedback URL in a browser after collection.
 
 # DESCRIPTION
 
-**warp-diag** runs diagnostics for Cloudflare WARP client. Tests connectivity, checks configuration, and helps troubleshoot connection issues. Part of Cloudflare WARP VPN client.
+**warp-diag** collects diagnostic information for the Cloudflare WARP client and packages it into a zip file. It gathers WARP client logs, system network configuration, DNS settings, connectivity test results, and client state to help troubleshoot connection issues.
+
+The generated zip file can be shared with Cloudflare support for analysis. The tool may also open a browser to submit feedback directly to Cloudflare.
+
+# CAVEATS
+
+Requires the Cloudflare WARP client (warp-svc) to be installed. Some diagnostics may require root/administrator access. The zip file may contain sensitive network configuration details.
 
 # SEE ALSO
 

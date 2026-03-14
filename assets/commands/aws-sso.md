@@ -24,6 +24,10 @@ Authenticate with IAM Identity Center for federated access.
 
 ```aws sso get-role-credentials --account-id [account-id] --role-name [role-name] --access-token [token]```
 
+**Configure an SSO profile** interactively
+
+```aws configure sso```
+
 # SYNOPSIS
 
 **aws sso** _subcommand_ [_options_]

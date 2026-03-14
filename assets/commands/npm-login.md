@@ -37,13 +37,13 @@ authenticates with an npm registry
 > Associate login with scope.
 
 **--auth-type** _type_
-> Authentication type.
+> Authentication type (legacy, web).
 
 # DESCRIPTION
 
 **npm login** (also npm adduser) authenticates with an npm registry. Credentials are stored in ~/.npmrc and used for publishing and accessing private packages.
 
-For npm.js, this enables publishing packages and accessing private organization packages.
+For npmjs.com, this enables publishing packages and accessing private organization packages. The command `npm adduser` is an alias for `npm login`.
 
 # AUTHENTICATION FLOW
 
@@ -78,4 +78,4 @@ npm login has been part of npm since its early versions, evolving to support 2FA
 
 # SEE ALSO
 
-[npm](/man/npm)(1), [npm-publish](/man/npm-publish)(1), [npm-whoami](/man/npm-whoami)(1), [npm-token](/man/npm-token)(1)
+[npm](/man/npm)(1), [npm-publish](/man/npm-publish)(1), [npm-whoami](/man/npm-whoami)(1), [npm-token](/man/npm-token)(1), [npm-logout](/man/npm-logout)(1)

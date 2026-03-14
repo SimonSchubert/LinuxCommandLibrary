@@ -51,6 +51,15 @@ Attach with **error filter** for specific task
 **-v, --verbose**
 > Increase verbosity of messages
 
+**--pty**
+> Execute task zero in pseudo terminal. Not compatible with filter options
+
+**--layout**
+> Print task layout information and exit without attaching
+
+**-V, --version**
+> Display Slurm version number and exit
+
 # CAVEATS
 
 Only the job owner can attach to a job step. The job must be in a running state. Not all MPI implementations support attachment.
@@ -61,4 +70,4 @@ Only the job owner can attach to a job step. The job must be in a running state.
 
 # SEE ALSO
 
-[srun](/man/srun)(1), [sbatch](/man/sbatch)(1), [squeue](/man/squeue)(1), [scontrol](/man/scontrol)(1)
+[srun](/man/srun)(1), [sbatch](/man/sbatch)(1), [squeue](/man/squeue)(1), [scontrol](/man/scontrol)(1), [scancel](/man/scancel)(1)

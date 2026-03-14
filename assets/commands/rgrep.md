@@ -49,11 +49,17 @@ Recursive grep through directories
 **-v**
 > Invert match.
 
+**-w**
+> Match whole words only.
+
 **--exclude-dir** _DIR_
 > Skip directory.
 
 **--include** _GLOB_
 > Include pattern.
+
+**--exclude** _GLOB_
+> Exclude files matching pattern.
 
 # DESCRIPTION
 
@@ -65,11 +71,7 @@ On most GNU/Linux systems, rgrep is installed by default as part of the GNU grep
 
 # CAVEATS
 
-Follows symlinks. May be slow on large trees. Consider ripgrep for speed.
-
-# HISTORY
-
-**rgrep** is typically an alias or wrapper for **grep -r**, providing convenient recursive searching in GNU grep.
+By default follows symlinks on the command line. May be slow on large trees. Deprecated in GNU grep in favor of **grep -r**, but still provided for backward compatibility. Consider ripgrep (**rg**) for better performance on large codebases.
 
 # SEE ALSO
 

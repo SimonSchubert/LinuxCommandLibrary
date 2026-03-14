@@ -16,9 +16,9 @@ Show current **secure boot status**
 
 ```sbctl enroll-keys -m```
 
-**Auto-setup** based on configuration
+**List** files in the signing database
 
-```sbctl setup --setup```
+```sbctl list-files```
 
 **Sign** an EFI binary and save to database
 
@@ -62,6 +62,15 @@ Show current **secure boot status**
 **verify**
 > Verify EFI executables are signed
 
+**list-files**
+> List files in the signing database
+
+**remove-file** _file_
+> Remove a file from the signing database
+
+**setup**
+> Automated setup of secure boot (create keys, sign, enroll)
+
 # DESCRIPTION
 
 **sbctl** is a user-friendly secure boot key manager. It simplifies creating, enrolling, and managing custom secure boot keys and signing EFI binaries.
@@ -70,12 +79,12 @@ Custom keys allow booting only signed kernels and bootloaders, enhancing system 
 
 # CONFIGURATION
 
-**/var/lib/sbctl/**
+**/usr/share/secureboot/**
 > Default directory storing generated secure boot keys (PK, KEK, db) and the database of signed files.
 
 # CAVEATS
 
-Not enrolling Microsoft certificates can brick some systems with Option ROMs. Keys are stored in /var/lib/sbctl by default.
+Not enrolling Microsoft certificates (the **-m** flag) can brick some systems with Option ROMs that require Microsoft-signed drivers. Keys are stored in /usr/share/secureboot by default. Requires root privileges for all operations.
 
 # HISTORY
 

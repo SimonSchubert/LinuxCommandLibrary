@@ -4,31 +4,31 @@ CLI for Drupal code generation and site management
 
 # TLDR
 
-**Generate module** boilerplate
-
-```drupal generate:module```
-
-**Generate controller**
-
-```drupal generate:controller```
-
-**Clear all caches**
-
-```drupal cache:rebuild```
-
-**List available commands**
+**List all available commands**
 
 ```drupal list```
 
-**Install module**
+**Generate module scaffolding** (interactive)
+
+```drupal generate:module```
+
+**Generate a controller class**
+
+```drupal generate:controller```
+
+**Clear and rebuild all caches**
+
+```drupal cache:rebuild```
+
+**Install and enable a module**
 
 ```drupal module:install [module_name]```
 
-**Update database**
+**Run pending database updates**
 
 ```drupal update:execute```
 
-**Check system status**
+**Check site status and configuration**
 
 ```drupal site:status```
 
@@ -72,15 +72,15 @@ _COMMAND_
 
 # DESCRIPTION
 
-**Drupal Console** is a CLI tool for generating boilerplate code, interacting with, and debugging Drupal applications. It accelerates development through code generation and provides utilities for common tasks.
+**Drupal Console** is a CLI tool for generating boilerplate code, interacting with, and debugging Drupal 8+ applications. Built on the Symfony Console component, it accelerates development through code generation and provides utilities for common administrative tasks.
 
 The generate commands create scaffolding for modules, plugins, controllers, forms, and other Drupal components following best practices. Interactive prompts guide through configuration options.
 
-Drupal Console also provides debugging tools, cache management, and database operations from the command line.
+Drupal Console also provides debugging tools, cache management, configuration import/export, and database operations from the command line.
 
 # CAVEATS
 
-Requires Drupal 8+ installation. Must run from Drupal root. Some commands need database access. Being superseded by Drush for many tasks.
+Requires Drupal 8+ installation. Must be run from the Drupal root directory. Some commands require database access. The project is no longer actively maintained; **Drush** has adopted many of its features and is the recommended CLI tool for modern Drupal development.
 
 # HISTORY
 

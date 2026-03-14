@@ -8,21 +8,21 @@ discovers URL parameters by mining web archives
 
 ```paramspider -d [example.com]```
 
-**Output to file**
+**Exclude specific file extensions**
 
-```paramspider -d [example.com] -o [output.txt]```
+```paramspider -d [example.com] --exclude [woff,css,js,png,jpg]```
 
-**Exclude specific extensions**
-
-```paramspider -d [example.com] --exclude [woff,css,js]```
-
-**Use custom placeholder**
+**Use custom placeholder for parameter values**
 
 ```paramspider -d [example.com] -p "[FUZZ]"```
 
 **Set output directory**
 
-```paramspider -d [example.com] --output [results/]```
+```paramspider -d [example.com] -o [results/]```
+
+**Spider a list of domains from a file**
+
+```paramspider -l [domains.txt]```
 
 # SYNOPSIS
 
@@ -33,17 +33,23 @@ discovers URL parameters by mining web archives
 **-d**, **--domain** _domain_
 > Target domain.
 
-**-o**, **--output** _file_
-> Output file.
+**-l**, **--list** _file_
+> File containing a list of domains.
+
+**-o**, **--output** _dir_
+> Output directory (default: ./results).
 
 **--exclude** _exts_
-> Exclude extensions.
+> Exclude URLs with specific extensions (comma-separated).
 
 **-p**, **--placeholder** _str_
-> Parameter placeholder.
+> Placeholder for parameter values (default: FUZZ).
+
+**--level** _level_
+> Find nested parameters (e.g., high).
 
 **-q**, **--quiet**
-> Quiet mode.
+> Quiet mode, suppress URL output to screen.
 
 **-s**, **--subs**
 > Include subdomains.

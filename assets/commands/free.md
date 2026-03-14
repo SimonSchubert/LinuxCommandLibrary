@@ -12,11 +12,12 @@ Display memory in **human-readable** units
 
 ```free -h```
 
-Display memory in **bytes/KB/MB/GB**
+Display memory in **megabytes**
 
-```free -b```
-```free -k```
 ```free -m```
+
+Display memory in **gigabytes**
+
 ```free -g```
 
 **Refresh** the output every 2 seconds
@@ -26,6 +27,14 @@ Display memory in **bytes/KB/MB/GB**
 Display **totals** line
 
 ```free -t```
+
+Display **wide** output separating buffers and cache
+
+```free -hw```
+
+Repeat output every 2 seconds, **5 times**
+
+```free -s 2 -c 5```
 
 # SYNOPSIS
 
@@ -77,4 +86,4 @@ Part of the **procps** (or procps-ng) package, which provides process monitoring
 
 # SEE ALSO
 
-[top](/man/top)(1), [htop](/man/htop)(1), [vmstat](/man/vmstat)(8), [cat /proc/meminfo](/man/proc)(5)
+[top](/man/top)(1), [htop](/man/htop)(1), [vmstat](/man/vmstat)(8), [sar](/man/sar)(1)

@@ -1,6 +1,6 @@
 # TAGLINE
 
-Connect command output to journal
+Connect command output to the systemd journal
 
 # TLDR
 
@@ -39,8 +39,8 @@ Connect command output to journal
 **--stderr-priority _level_**
 > Priority level for stderr messages
 
-**--level-prefix**
-> Interpret priority prefixes in log output
+**--level-prefix** _BOOL_
+> Interpret sd-daemon(3) style priority prefixes in log output (default: true)
 
 **-h, --help**
 > Display help information
@@ -53,8 +53,8 @@ When run with a command, both stdout and stderr are captured. When used as a pip
 
 # CAVEATS
 
-When used in a pipeline, only the piped output is captured. The identifier defaults to "cat" in pipe mode. Priority levels follow syslog conventions.
+When used in a pipeline, only the piped output is captured. The identifier defaults to the name of the invoked program, or "cat" in pipe mode. Priority levels follow syslog conventions (0=emerg through 7=debug).
 
 # SEE ALSO
 
-[journalctl](/man/journalctl)(1), [systemd-journald](/man/systemd-journald)(8), [logger](/man/logger)(1)
+[journalctl](/man/journalctl)(1), [logger](/man/logger)(1), [systemctl](/man/systemctl)(1)

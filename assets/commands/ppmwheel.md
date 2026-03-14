@@ -23,15 +23,13 @@ _DIAMETER_
 
 # DESCRIPTION
 
-**ppmwheel** generates HSV color wheel image. Color picker visualization.
+**ppmwheel** generates a PPM image of an HSV color wheel with the specified diameter in pixels. The output is a square image with the color wheel centered. Hue varies around the circumference, saturation varies from center to edge, and value is constant at maximum.
 
-The tool creates circular color gradient. Part of Netpbm.
-
-ppmwheel makes color wheels.
+Part of the Netpbm suite of image manipulation tools.
 
 # CAVEATS
 
-Creates square image. Part of Netpbm suite.
+Output is always a square PPM image. Pipe through other Netpbm tools or ImageMagick to convert to other formats.
 
 # HISTORY
 

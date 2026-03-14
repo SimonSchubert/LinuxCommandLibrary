@@ -28,6 +28,10 @@ lists Kubernetes resources
 
 ```kubectl get pods -A```
 
+**Filter by label**
+
+```kubectl get pods -l [app=nginx]```
+
 **Custom columns**
 
 ```kubectl get pods -o custom-columns=NAME:.metadata.name,STATUS:.status.phase```
@@ -59,6 +63,18 @@ _NAME_
 **-n** _NAMESPACE_
 > Target namespace.
 
+**--sort-by** _JSONPATH_
+> Sort list output by the specified JSONPath expression.
+
+**--field-selector** _SELECTOR_
+> Filter by field selector (e.g., status.phase=Running).
+
+**--show-labels**
+> Show labels in the last column of output.
+
+**--no-headers**
+> Omit table headers from output.
+
 **--help**
 > Display help information.
 
@@ -80,4 +96,4 @@ kubectl get is the primary resource listing command for **Kubernetes** cluster i
 
 # SEE ALSO
 
-[kubectl](/man/kubectl)(1), [kubectl-describe](/man/kubectl-describe)(1), [kubectl-watch](/man/kubectl-watch)(1)
+[kubectl](/man/kubectl)(1), [kubectl-describe](/man/kubectl-describe)(1), [kubectl-apply](/man/kubectl-apply)(1)

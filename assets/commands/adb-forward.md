@@ -8,7 +8,7 @@ Android device port forwarder
 
 ```adb forward tcp:[8080] tcp:[8080]```
 
-Forward to a **Unix domain socket**
+Forward to a **Unix abstract domain socket**
 
 ```adb forward tcp:[8080] localabstract:[socket_name]```
 
@@ -23,6 +23,10 @@ Forward to a **Unix domain socket**
 Remove **all** forwards
 
 ```adb forward --remove-all```
+
+Forward to a **specific device** by serial number
+
+```adb -s [serial] forward tcp:[8080] tcp:[8080]```
 
 # SYNOPSIS
 
@@ -39,19 +43,22 @@ Common uses include debugging apps with remote debuggers, accessing development 
 # PARAMETERS
 
 **tcp:**_port_
-> TCP port number
+> TCP port number. Remote may be "tcp:0" to pick any open port.
 
 **localabstract:**_name_
-> Unix domain socket in abstract namespace
+> Unix domain socket in abstract namespace.
 
 **localreserved:**_name_
-> Unix domain socket in reserved namespace
+> Unix domain socket in reserved namespace.
 
 **localfilesystem:**_name_
-> Unix domain socket in filesystem namespace
+> Unix domain socket in filesystem namespace.
 
 **jdwp:**_pid_
-> JDWP (Java Debug Wire Protocol) for process ID
+> JDWP (Java Debug Wire Protocol) for process ID.
+
+**vsock:**_CID:port_
+> vsock address (CID and port).
 
 **--no-rebind**
 > Fail if local port is already forwarded

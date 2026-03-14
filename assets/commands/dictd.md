@@ -50,8 +50,20 @@ dictd databases are typically in the dictd format created by dictfmt, which conv
 **--limit** _n_
 > Maximum concurrent connections.
 
+**-i**, **--inetd**
+> Run in inetd mode, communicating on stdin/stdout. Implies --fast-start.
+
 **--foreground**
 > Don't daemonize.
+
+**--depth** _length_
+> Override the depth keyword from configuration.
+
+**--delay** _seconds_
+> Override the delay keyword from configuration.
+
+**--fast-start**
+> Skip preloading of database indexes at startup.
 
 **--log** _type_
 > Logging type (syslog, stderr).
@@ -67,8 +79,8 @@ dictd databases are typically in the dictd format created by dictfmt, which conv
 
 # CONFIGURATION
 
-**/etc/dictd/dictd.conf**
-> Server configuration file specifying dictionary database locations, access controls, and server behavior.
+**/etc/dictd/dictd.conf** (or **/etc/dictd.conf**)
+> Server configuration file specifying dictionary database locations, access controls, and server behavior. The file is read at startup and re-read on SIGHUP.
 
 # CAVEATS
 
@@ -80,4 +92,4 @@ Requires dictionary database files. Port 2628 may need firewall rules. Large dic
 
 # SEE ALSO
 
-[dict](/man/dict)(1), [dictfmt](/man/dictfmt)(1), [dictzip](/man/dictzip)(1)
+[dict](/man/dict)(1)

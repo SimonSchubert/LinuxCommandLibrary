@@ -65,8 +65,17 @@ Change **user ID** before processing
 **--generate-openapi-spec**
 > Output JSON OpenAPI schema and exit
 
+**--yaml-compact**
+> Output YAML in compact format
+
+**--yaml-pretty**
+> Output YAML in pretty readable format
+
+**--disable-user-check**
+> Disable check that slurmrestd is not running as root or SlurmUser
+
 **-v**
-> Verbose mode (up to 6 levels)
+> Verbose mode (up to 6 levels with -vvvvvv)
 
 **-V**
 > Print version information
@@ -86,7 +95,7 @@ Requires proper Slurm configuration and authentication setup. JWT authentication
 
 # HISTORY
 
-**slurmrestd** was added to Slurm in version **20.02** (released **2020**) to provide modern REST API access for programmatic cluster interaction. It enables integration with web interfaces, monitoring systems, and automation tools. Maintained by **SchedMD** as part of the core Slurm distribution.
+**slurmrestd** was added to Slurm in version **20.02** (released **2020**) to provide modern REST API access for programmatic cluster interaction. It enables integration with web interfaces, monitoring systems, and automation tools. Maintained by **SchedMD** as part of the core Slurm distribution. The section number is 8 (system administration).
 
 # SEE ALSO
 

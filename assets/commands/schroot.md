@@ -14,7 +14,7 @@ Run **command** in specific chroot
 
 Run command with **options** in chroot
 
-```schroot --chroot chroot_name command -- command_options```
+```schroot --chroot chroot_name -- command command_options```
 
 Run command in **all** chroots
 
@@ -42,26 +42,41 @@ Start **interactive shell** as specific user
 
 # PARAMETERS
 
-**--list**
-> List available chroots
+**-l**, **--list**
+> List available chroots.
 
-**--chroot** _name_
-> Specify chroot environment
+**-c** _NAME_, **--chroot** _NAME_
+> Specify chroot environment.
 
-**--user** _user_
-> Run as specified user
+**-u** _USER_, **--user** _USER_
+> Run as specified user.
 
-**--all**
-> Run in all available chroots
+**-a**, **--all**
+> Run in all available chroots.
 
 **--begin-session**
-> Start new session
+> Start new session.
 
 **--run-session**
-> Connect to existing session
+> Connect to existing session.
 
 **--end-session**
-> Terminate session
+> Terminate session.
+
+**-i**, **--info**
+> Display detailed information about specified chroots.
+
+**-d** _DIR_, **--directory** _DIR_
+> Change to directory inside the chroot before running command.
+
+**-p**, **--preserve-environment**
+> Preserve the user's environment inside the chroot.
+
+**-q**, **--quiet**
+> Show less output.
+
+**-v**, **--verbose**
+> Show more output.
 
 # DESCRIPTION
 

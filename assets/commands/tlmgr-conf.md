@@ -43,7 +43,7 @@ _option_ _value_
 
 # DESCRIPTION
 
-**tlmgr conf** displays and modifies TeX Live configuration. Shows paths, settings, and allows changing tlmgr options. Part of TeX Live Manager.
+**tlmgr conf** displays and modifies TeX Live configuration settings. It can show paths, directories, and option values for the various TeX Live subsystems (texmf, tlmgr, updmap). When given an option and value, it modifies the configuration. Part of the TeX Live Manager.
 
 # SEE ALSO
 

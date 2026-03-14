@@ -1,6 +1,6 @@
 # TAGLINE
 
-reads lines into a bash array
+Read lines from stdin into a bash array
 
 # TLDR
 
@@ -47,23 +47,32 @@ _ARRAY_
 > Remove trailing delimiters.
 
 **-d** _DELIM_
-> Use delimiter instead of newline.
+> Use delimiter instead of newline (bash 4.4+).
+
+**-O** _ORIGIN_
+> Start assigning at array index ORIGIN (default: 0).
+
+**-C** _CALLBACK_
+> Call CALLBACK after reading each line.
+
+**-c** _QUANTUM_
+> Call CALLBACK every QUANTUM lines (default: 5000).
 
 # DESCRIPTION
 
-**mapfile** reads lines into a bash array. It's a bash builtin for array population.
+**mapfile** (also known as **readarray**) is a bash builtin that reads lines from standard input into an indexed array variable. Without a variable name, it uses the default array `MAPFILE`.
 
-The tool is also known as readarray. It efficiently reads files line by line into arrays.
+It is significantly faster than a `while read` loop for reading files into arrays, as it is implemented as a builtin rather than running in a subshell.
 
 # CAVEATS
 
-Bash-specific builtin. Not available in sh. Alias is readarray.
+Bash-specific builtin (bash 4.0+). Not available in sh or other POSIX shells. The `-d` option requires bash 4.4 or later. Cannot read from a pipe in a subshell context -- use process substitution (`< <(command)`) instead of piping (`command | mapfile`).
 
 # HISTORY
 
-mapfile was added to **Bash 4.0** as a builtin for efficiently reading files into arrays.
+**mapfile** was added to **Bash 4.0** (released 2009) as a builtin for efficiently reading files into arrays. The `-d` delimiter option was added in **Bash 4.4**.
 
 # SEE ALSO
 
-[readarray](/man/readarray)(1), [read](/man/read)(1), [bash](/man/bash)(1)
+[read](/man/read)(1), [bash](/man/bash)(1)
 

@@ -4,29 +4,37 @@ Display information about ELF binary files
 
 # TLDR
 
-Display **all information** about ELF file
+Display **all information** about an ELF file
 
 ```readelf -a /path/to/binary```
 
-Display all **headers**
+Display all **headers** (file, program, and section)
 
-```readelf --headers /path/to/binary```
+```readelf -e /path/to/binary```
 
-Display **symbol table**
+Display the **symbol table**
 
-```readelf --symbols /path/to/binary```
+```readelf -s /path/to/binary```
 
-Display **ELF header**
+Display the **dynamic symbol table**
 
-```readelf --file-header /path/to/binary```
+```readelf --dyn-syms /path/to/binary```
 
 Display **section headers**
 
-```readelf --section-headers /path/to/binary```
+```readelf -S /path/to/binary```
 
-Display **program headers**
+Display **relocation** entries
 
-```readelf --program-headers /path/to/binary```
+```readelf -r /path/to/binary```
+
+Display the contents of a **section** as hex bytes
+
+```readelf -x .text /path/to/binary```
+
+Display the contents of a **section** as printable strings
+
+```readelf -p .rodata /path/to/binary```
 
 # SYNOPSIS
 
@@ -71,21 +79,36 @@ Display **program headers**
 **-V, --version-info**
 > Display version sections
 
+**-x** _section_, **--hex-dump=**_section_
+> Display section contents as hexadecimal bytes
+
+**-p** _section_, **--string-dump=**_section_
+> Display section contents as printable strings
+
+**-u, --unwind**
+> Display unwind table information
+
 **-w, --debug-dump**
 > Display DWARF debug sections
 
+**-I, --histogram**
+> Display a histogram of bucket list lengths for symbol tables
+
 **-W, --wide**
-> Allow wide output lines
+> Allow wide output (do not break lines at 80 columns)
 
 **-C, --demangle**
-> Decode C++ symbol names
+> Decode (demangle) low-level symbol names into user-level names
 
 **-z, --decompress**
-> Decompress sections before display
+> Decompress sections before displaying their contents
+
+**-H, --help**
+> Display usage information
 
 # CAVEATS
 
-Unlike objdump, readelf operates independently of the BFD library and may provide different information. It only works with ELF format files.
+Unlike objdump, readelf operates independently of the BFD library and may show different output. It only works with ELF format files and cannot disassemble code.
 
 # HISTORY
 
@@ -93,4 +116,4 @@ Unlike objdump, readelf operates independently of the BFD library and may provid
 
 # SEE ALSO
 
-[objdump](/man/objdump)(1), [nm](/man/nm)(1), [strings](/man/strings)(1), [elf](/man/elf)(5)
+[objdump](/man/objdump)(1), [nm](/man/nm)(1), [strings](/man/strings)(1), [strip](/man/strip)(1), [size](/man/size)(1), [elf](/man/elf)(5)

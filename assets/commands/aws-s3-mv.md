@@ -59,13 +59,37 @@ The source and destination can be a LocalPath or an S3Uri (s3://bucket-name/key)
 > Set access control list: private, public-read, public-read-write, authenticated-read
 
 **--storage-class** _value_
-> Specify storage class: STANDARD, REDUCED_REDUNDANCY, STANDARD_IA, GLACIER
+> Specify storage class: STANDARD, REDUCED_REDUNDANCY, STANDARD_IA, ONEZONE_IA, INTELLIGENT_TIERING, GLACIER, DEEP_ARCHIVE, GLACIER_IR
 
 **--sse** _value_
 > Enable server-side encryption: AES256 or aws:kms
 
+**--sse-kms-key-id** _value_
+> Customer-managed AWS KMS key ID for server-side encryption
+
+**--content-type** _value_
+> Explicit content type for the object (overrides mime type guessing)
+
+**--metadata** _map_
+> Key-value metadata pairs to attach to the object
+
+**--cache-control** _value_
+> Specifies caching behavior along the request/reply chain
+
 **--no-overwrite**
 > Prevent overwriting existing files at the destination
+
+**--only-show-errors**
+> Display only errors and warnings in output
+
+**--no-progress**
+> Do not display the file transfer progress
+
+**--follow-symlinks** | **--no-follow-symlinks**
+> Whether to follow symbolic links when uploading (default: follow)
+
+**--no-guess-mime-type**
+> Do not try to guess the mime type for uploaded files
 
 **--validate-same-s3-paths**
 > Verify source and destination resolve to different locations (safety check)

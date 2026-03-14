@@ -6,7 +6,11 @@ Manage package manager configurations for apx subsystems
 
 Interactively **create** a new package manager configuration
 
-```apx pkgmanagers create```
+```apx pkgmanagers new```
+
+**Create** a package manager with specific commands
+
+```apx pkgmanagers new --name [name] --install '[install_cmd]' --remove '[remove_cmd]' --update '[update_cmd]'```
 
 **List** all available package manager configurations
 
@@ -32,22 +36,31 @@ User-created package manager configurations are stored in **~/.local/share/apx/p
 
 # SUBCOMMANDS
 
-**create**
-> Interactively create a new package manager configuration
+**new**
+> Create a new package manager configuration (interactively or with flags).
 
 **list**
-> Display all available package manager configurations
+> Display all available package manager configurations.
 
 **rm**
-> Remove a package manager configuration
+> Remove a package manager configuration.
 
 **show**
-> Display details about a specific package manager
+> Display details about a specific package manager.
 
 # PARAMETERS
 
 **--name** _string_
-> Specify the package manager name for rm operations
+> Specify the package manager name.
+
+**--install** _string_
+> The install command for the package manager.
+
+**--remove** _string_
+> The remove command for the package manager.
+
+**--update** _string_
+> The update command for the package manager.
 
 # SEE ALSO
 

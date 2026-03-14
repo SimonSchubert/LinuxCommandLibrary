@@ -56,8 +56,11 @@ GnuPG 2 encryption and digital signatures
 **-a**, **--armor**
 > ASCII armored output.
 
-**--gen-key**, **--full-generate-key**
-> Generate key pair.
+**--gen-key**
+> Generate key pair with default settings.
+
+**--full-generate-key**
+> Generate key pair with full options (algorithm, size, expiry).
 
 **--list-keys**
 > List public keys.
@@ -71,8 +74,23 @@ GnuPG 2 encryption and digital signatures
 **--import** _file_
 > Import keys.
 
+**--delete-keys** _keyid_
+> Delete public key from keyring.
+
+**--delete-secret-keys** _keyid_
+> Delete secret key from keyring.
+
 **--keyserver** _server_
 > Keyserver to use.
+
+**-o**, **--output** _file_
+> Write output to file instead of stdout.
+
+**--clearsign**
+> Make a cleartext signature.
+
+**--detach-sign**
+> Make a detached signature.
 
 # DESCRIPTION
 
@@ -98,4 +116,4 @@ GnuPG was created by **Werner Koch** in **1997** as a free replacement for PGP. 
 
 # SEE ALSO
 
-[gpg](/man/gpg)(1), [gpg-agent](/man/gpg-agent)(1), [gpgconf](/man/gpgconf)(1)
+[gpg](/man/gpg)(1), [gpgconf](/man/gpgconf)(1)

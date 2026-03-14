@@ -34,7 +34,7 @@ Display system info with ASCII distro logo
 
 # SYNOPSIS
 
-**screenfetch** [_-v_] [_-o 'OPTIONS'_] [_-d '+STEAM quance'_] [_-n_] [_-N_] [_-t_] [_-p_] [_-s_] [_-c string_] [_-D distro_] [_-A distro_] [_-E_] [_-V_] [_-h_]
+**screenfetch** [_-v_] [_-o 'OPTIONS'_] [_-n_] [_-N_] [_-t_] [_-p_] [_-s_] [_-c string_] [_-D distro_] [_-A distro_] [_-E_] [_-V_] [_-h_]
 
 # PARAMETERS
 

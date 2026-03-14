@@ -26,50 +26,21 @@ Unmount removable devices without root
 
 # PARAMETERS
 
-**--lazy**, **-l**
-> Lazy unmount (detach now, cleanup later).
+**-l**, **--lazy**
+> Lazy unmount (detach filesystem now, clean up when no longer busy). Use with caution as it may cause data loss.
 
 **--luks-force**
-> Force LUKS close.
+> Force LUKS close even if pmount did not open the device.
 
-**--debug**, **-d**
-> Debug output.
+**-d**, **--debug**
+> Enable verbose debug messages.
+
+**--version**
+> Print version number and exit.
 
 # DESCRIPTION
 
-**pumount** is the counterpart to pmount for unmounting removable devices without root privileges. It handles encrypted volumes and ensures proper cleanup.
-
-Part of the pmount package for user-mountable removable media.
-
-# EXAMPLES
-
-```bash
-# Unmount by device
-pumount /dev/sdb1
-
-# Unmount by mount point
-pumount /media/usb
-
-# Lazy unmount (busy device)
-pumount --lazy /dev/sdb1
-
-# Unmount encrypted drive
-pumount /dev/mapper/sdb1
-
-# Debug mode
-pumount -d /dev/sdc1
-```
-
-# COMMON ERRORS
-
-```bash
-# Device busy
-pumount --lazy /dev/sdb1
-
-# Or find what's using it
-lsof +D /media/usb
-fuser -m /media/usb
-```
+**pumount** is the counterpart to pmount for unmounting removable devices without root privileges. It is a wrapper around the standard umount that permits normal users to unmount removable devices without a matching /etc/fstab entry. It handles encrypted dm-crypt/LUKS volumes and ensures proper cleanup. It also supports unmounting devices that have been brutally removed.
 
 # CAVEATS
 

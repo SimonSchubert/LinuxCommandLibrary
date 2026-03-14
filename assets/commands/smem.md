@@ -4,21 +4,29 @@ Report memory usage with proportional metrics
 
 # TLDR
 
-**Print** memory usage for current processes
+**Show** memory usage for current user's processes
 
 ```smem```
 
-**Print** memory usage for every user on the system
+**Show** memory usage per user
 
 ```smem --users```
 
-**Print** memory usage for a specified user
+**Filter** by username
 
 ```smem --userfilter [username]```
 
-**Print** system memory information
+**Show** system-wide memory information
 
 ```smem --system```
+
+**Sort** by PSS (proportional set size)
+
+```smem --sort pss```
+
+Show as **percentages**
+
+```smem --percent```
 
 # SYNOPSIS
 

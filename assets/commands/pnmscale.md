@@ -1,6 +1,6 @@
 # TAGLINE
 
-Resize PNM images by scaling
+Scale PNM images (obsoleted by pamscale)
 
 # TLDR
 
@@ -42,13 +42,16 @@ Resize PNM images by scaling
 > Reduce by integer factor.
 
 **-xysize** _x_ _y_
-> Fit within dimensions.
+> Fit within dimensions (synonym for -xyfit in pamscale).
+
+**-pixels** _n_
+> Scale to a given total number of pixels.
 
 # DESCRIPTION
 
-**pnmscale** scales PNM images up or down. It uses pixel mixing for smooth results when scaling down. Obsoleted by pamscale with more features.
+**pnmscale** scales PNM images up or down. It uses pixel mixing for smooth results when scaling down. This command was obsoleted by **pamscale** as of Netpbm 10.20 (January 2004) and removed in Netpbm 10.46 (March 2009). Use **pamscale** for new work, which is backward-compatible and supports PAM images.
 
-Part of Netpbm toolkit.
+Part of the Netpbm toolkit.
 
 # EXAMPLES
 
@@ -71,7 +74,7 @@ jpegtopnm photo.jpg | pnmscale 0.25 | pnmtojpeg > thumb.jpg
 
 # CAVEATS
 
-Use pamscale for new work. Pixel mixing can blur. Integer reduction is faster.
+Obsoleted by pamscale; use pamscale for new work. Pixel mixing can blur. Integer reduction (-reduce) is faster than fractional scaling.
 
 # HISTORY
 

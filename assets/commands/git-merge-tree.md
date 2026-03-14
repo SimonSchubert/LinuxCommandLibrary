@@ -1,25 +1,28 @@
 # TAGLINE
 
-Preview merge without modifying tree
+Perform merge without touching index or working tree
 
 # TLDR
 
-**Show merge result**
+**Preview merge result** (modern mode, Git 2.38+)
+
+```git merge-tree [branch1] [branch2]```
+
+**Perform a three-way merge** with explicit base (deprecated mode)
 
 ```git merge-tree [base] [branch1] [branch2]```
 
-**Check merge without merging**
+**Check for merge conflicts and show informational messages**
 
-```git merge-tree --write-tree [branch1] [branch2]```
+```git merge-tree --write-tree --messages [branch1] [branch2]```
 
 # SYNOPSIS
 
-**git merge-tree** [_options_] _base_ _branch1_ _branch2_
+**git merge-tree** [**--write-tree**] [_options_] _branch1_ _branch2_
+
+**git merge-tree** [**--trivial-merge**] _base_ _branch1_ _branch2_
 
 # PARAMETERS
-
-_BASE_
-> Common ancestor commit.
 
 _BRANCH1_
 > First branch to merge.
@@ -27,28 +30,35 @@ _BRANCH1_
 _BRANCH2_
 > Second branch to merge.
 
+_BASE_
+> Common ancestor commit (deprecated trivial-merge mode only).
+
 **--write-tree**
-> Modern mode: write result tree.
+> Modern mode (default since Git 2.38): automatically finds the merge base and writes a result tree object. Reports conflicts via exit code and stdout.
 
 **--trivial-merge**
-> Only trivial merges.
+> Deprecated mode: reads three trees and outputs trivial merge results. Requires explicit base.
 
-**--help**
-> Display help information.
+**--[no-]messages**
+> Write informational messages such as "Auto-merging" and CONFLICT notices. Default: included when conflicts exist.
+
+**--name-only**
+> In the output, show only filenames instead of full merge details.
+
+**-z**
+> Use NUL characters as line terminators instead of newlines (for scripting).
 
 # DESCRIPTION
 
 **git merge-tree** performs a three-way merge without touching the index or working tree. It shows what a merge would produce, making it useful for previewing merges or performing scripted merge analysis.
 
-The traditional mode requires specifying the base commit explicitly. Modern mode (`--write-tree`, added in Git 2.38) automatically finds the merge base and reports conflicts without actually merging, making it ideal for CI pipelines and automation scripts.
+The modern mode (default since Git 2.38) automatically finds the merge base, writes a result tree object, and reports conflicts. The exit code indicates success (0) or conflicts (1). This makes it ideal for CI pipelines and automation scripts that need to check mergeability without modifying any files.
+
+The deprecated trivial-merge mode requires specifying the base commit explicitly and only handles trivial merges.
 
 # CAVEATS
 
-Plumbing command. Output format varies by mode. Modern mode added in Git 2.38.
-
-# HISTORY
-
-git merge-tree is a **Git** plumbing command enhanced in **Git 2.38** with --write-tree mode for easier programmatic merge testing.
+Plumbing command primarily intended for scripting. Output format differs between modern and deprecated modes. Modern mode requires Git 2.38 or later.
 
 # SEE ALSO
 

@@ -39,14 +39,17 @@ Display fstab-compatible output based on **specified identifier**
 **-t** _TAG_
 > Use specified tag: LABEL, UUID, PARTLABEL, or PARTUUID
 
+**-f** _FILTER_
+> Restrict output to mountpoints matching the given prefix filter.
+
 **-p**
-> Exclude pseudofs mounts (default)
+> Exclude pseudofs mounts (default behavior).
 
 **-P**
-> Include pseudofs mounts
+> Include pseudofs mounts.
 
-**-f** _FILE_
-> Use specified fstab file as base
+**-h**
+> Display usage and options.
 
 # DESCRIPTION
 

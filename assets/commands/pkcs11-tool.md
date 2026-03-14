@@ -4,25 +4,33 @@ Manage PKCS#11 cryptographic tokens and smart cards
 
 # TLDR
 
-**List tokens**
+**List available token slots**
 
 ```pkcs11-tool --list-token-slots```
 
-**List objects on token**
+**List objects on a token**
 
 ```pkcs11-tool --list-objects```
 
-**Generate key pair**
+**List supported mechanisms**
 
-```pkcs11-tool --keypairgen --key-type rsa:2048 --label [keyname]```
+```pkcs11-tool --list-mechanisms```
 
-**Sign data**
+**Generate an RSA key pair**
 
-```pkcs11-tool --sign -m RSA-PKCS --input [data] --output [signature]```
+```pkcs11-tool --login --keypairgen --key-type rsa:2048 --label [keyname]```
 
-**Initialize token**
+**Sign data with a key**
 
-```pkcs11-tool --init-token --label [label]```
+```pkcs11-tool --login --sign -m RSA-PKCS --id [key_id] --input [data] --output [signature]```
+
+**Initialize a token**
+
+```pkcs11-tool --init-token --label [label] --so-pin [so_pin]```
+
+**Use a specific PKCS#11 library module**
+
+```pkcs11-tool --module [/usr/lib/libpkcs11.so] --list-objects```
 
 # SYNOPSIS
 
@@ -34,19 +42,49 @@ Manage PKCS#11 cryptographic tokens and smart cards
 > List available slots.
 
 **--list-objects**
-> List token objects.
+> List objects on the token. Can filter with --label, --id, or --type.
+
+**--list-mechanisms**
+> List mechanisms supported by the token.
 
 **--keypairgen**
-> Generate key pair.
+> Generate a key pair on the token.
 
 **--sign**
 > Sign data.
 
+**--verify**
+> Verify signed data.
+
 **--init-token**
-> Initialize token.
+> Initialize a token.
+
+**--init-pin**
+> Initialize the user PIN (first-time setup).
+
+**--change-pin**
+> Change the user PIN.
+
+**--login**, **-l**
+> Authenticate to the token before performing operations.
+
+**--pin** _PIN_
+> Supply the PIN on the command line.
+
+**--key-type** _spec_
+> Key type and length (e.g., rsa:2048, EC:prime256v1).
+
+**--id** _ID_
+> Object ID (hex).
+
+**--label** _LABEL_
+> Object label.
+
+**--slot** _ID_
+> Specify the slot to use.
 
 **--module** _LIB_
-> PKCS#11 library.
+> PKCS#11 library to load.
 
 **--help**
 > Display help.

@@ -33,11 +33,11 @@ Report repository object counts and sizes
 
 # DESCRIPTION
 
-**git count-objects** reports the number of unpacked objects and their disk consumption. It helps understand repository size and identify when garbage collection might be beneficial.
+**git count-objects** reports the number of unpacked object files and their disk consumption, to help decide when it is a good time to repack.
 
-The verbose mode (**-v**) shows packed objects, prunable objects, and size breakdowns including pack file count and total size. This information helps diagnose repository bloat and determine when **git gc** should be run.
+The verbose mode (**-v**) shows a detailed breakdown: count (loose objects), size (disk space of loose objects in KiB), in-pack (number of packed objects), packs (number of pack files), size-pack (disk space of packs in KiB), prune-packable (loose objects also present in packs), and garbage (files in the object directory that are neither valid loose objects nor valid packs).
 
-The **-H** flag presents sizes in human-readable format (KB, MB, GB), making it easier to assess storage at a glance without manual unit conversion.
+The **-H** flag presents sizes in human-readable format (KiB, MiB, GiB), making it easier to assess storage at a glance without manual unit conversion.
 
 # CAVEATS
 

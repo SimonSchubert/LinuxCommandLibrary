@@ -20,6 +20,10 @@ package repository searcher
 
 ```conda search --info [package_name]```
 
+**Search for a specific platform**
+
+```conda search --platform [linux-64] [package_name]```
+
 # SYNOPSIS
 
 **conda** **search** [_options_] [_query_]
@@ -32,8 +36,17 @@ package repository searcher
 **--info**
 > Show detailed package information.
 
+**--platform** _subdir_
+> Search for the given platform (e.g., osx-64, linux-64, win-64). Default is the current platform.
+
+**-O**, **--override-channels**
+> Do not search default or .condarc channels; only search specified channels.
+
 **--json**
 > Output in JSON format.
+
+**-v**, **--verbose**
+> Use once for info, twice for debug, three times for trace.
 
 # CONFIGURATION
 

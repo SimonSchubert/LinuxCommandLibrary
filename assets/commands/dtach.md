@@ -20,7 +20,13 @@ minimal detachable terminal session manager
 
 ```dtach -A [/tmp/session.sock] [command]```
 
-**Detach key** (default Ctrl+\)
+**Set custom detach key**
+
+```dtach -c [/tmp/session.sock] -e '^a' [command]```
+
+**Create session with no detach key**
+
+```dtach -c [/tmp/session.sock] -E [command]```
 
 # SYNOPSIS
 

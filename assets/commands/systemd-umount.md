@@ -4,11 +4,17 @@ Alias for systemd-mount --umount
 
 # TLDR
 
-This command is an alias for **systemd-mount --umount**.
+**Unmount** a filesystem by mount point
 
-**View** documentation for the original command
+```systemd-umount [/mnt/usb]```
 
-```tldr systemd-mount```
+**Unmount** a filesystem by device path
+
+```systemd-umount [/dev/sdb1]```
+
+**Unmount** and discover the mount point automatically
+
+```systemd-umount --discover [/dev/sdb1]```
 
 # SYNOPSIS
 
@@ -16,10 +22,18 @@ This command is an alias for **systemd-mount --umount**.
 
 # DESCRIPTION
 
-**systemd-umount** is an alias for **systemd-mount --umount**. It unmounts filesystems that were mounted using systemd-mount or transient systemd mount units.
+**systemd-umount** is equivalent to **systemd-mount --umount**. It unmounts filesystems by creating transient systemd `.mount` units that handle the unmount operation. It can unmount by mount point path or device path.
 
-See the **systemd-mount** documentation for full details on usage and options.
+See the **systemd-mount** documentation for full details on options.
+
+# PARAMETERS
+
+**--discover**
+> Discover the mount point for a device automatically
+
+**--no-block**
+> Do not wait for the unmount operation to complete
 
 # SEE ALSO
 
-[systemd-mount](/man/systemd-mount)(1), [umount](/man/umount)(8)
+[systemd-mount](/man/systemd-mount)(1), [umount](/man/umount)(8), [mount](/man/mount)(8)

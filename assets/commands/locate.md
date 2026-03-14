@@ -1,6 +1,6 @@
 # TAGLINE
 
-searches a prebuilt database to find files matching a pattern, making it much
+searches a prebuilt database to find files matching a pattern
 
 # TLDR
 
@@ -12,9 +12,21 @@ Find **case-insensitive**
 
 ```locate -i "[pattern]"```
 
-Find by **exact filename**
+Find by **exact filename** (basename only)
 
-```locate "*/[filename]"```
+```locate -b "\[filename]"```
+
+**Limit** output to a specific number of results
+
+```locate -l [10] "[pattern]"```
+
+**Count** the number of matching entries
+
+```locate -c "[pattern]"```
+
+**Display** database statistics
+
+```locate -S```
 
 **Update** the database
 
@@ -51,10 +63,19 @@ Find by **exact filename**
 **--regex**
 > Use extended regex pattern
 
+**-d, --database** _DBPATH_
+> Search in specified database instead of the default
+
+**-S, --statistics**
+> Print statistics about each database and exit
+
+**-w, --wholename**
+> Match against the whole path name (default behavior)
+
 # CAVEATS
 
 Database is updated periodically, so recently created files may not be found. Run `updatedb` to refresh the database manually.
 
 # SEE ALSO
 
-[find](/man/find)(1), [updatedb](/man/updatedb)(1), [mlocate](/man/mlocate)(1)
+[find](/man/find)(1), [updatedb](/man/updatedb)(1), [mlocate](/man/mlocate)(1), [plocate](/man/plocate)(1)

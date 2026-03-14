@@ -1,64 +1,74 @@
 # TAGLINE
 
-bundles edges in graphs
+fast edge bundling for graphs
 
 # TLDR
 
-**Bundle edges in graph**
+**Bundle edges in a graph and write output**
 
 ```mingle -o [output.gv] [input.gv]```
 
-**Set edge compatibility**
+**Bundle using force-directed method**
 
-```mingle -c [0.8] [input.gv]```
+```mingle -m 0 [input.gv]```
 
-**Set step size**
+**Set edge compatibility measure (distance-based)**
 
-```mingle -k [4] [input.gv]```
+```mingle -c 0 [input.gv]```
 
-**Output format**
+**Set maximum turning angle in degrees**
 
-```mingle -T [png] -o [output.png] [input.gv]```
+```mingle -a [40] [input.gv]```
+
+**Output in simple schematic format**
+
+```mingle -T simple -o [output.gv] [input.gv]```
+
+**Enable verbose tracing**
+
+```mingle -v [input.gv]```
 
 # SYNOPSIS
 
-**mingle** [_options_] _file_
+**mingle** [_options_] [_file_]
 
 # PARAMETERS
 
-_FILE_
-> Input graph file.
+**-m** _k_
+> Bundling method: 0 = force-directed, 1 = agglomerative ink saving (default if available), 2 = cluster plus ink saving.
 
-**-o** _FILE_
-> Output file.
+**-a** _k_
+> Maximum turning angle in degrees (non-negative real, default 40).
 
-**-c** _VALUE_
-> Edge compatibility threshold.
+**-c** _v_
+> Compatibility measure: 0 = distance (default), 1 = full compatibility. Only used with force-directed bundling.
 
-**-k** _STEPS_
-> Number of iterations.
+**-i** _k_
+> Maximum iterative divisions in force-directed bundling.
 
-**-T** _FORMAT_
-> Output format.
+**-r** _k_
+> Maximum recursion level for agglomerative method (default 100).
 
-**--help**
-> Display help information.
+**-T** _fmt_
+> Output format: "gv" attaches drawing info to input graph, "simple" outputs schematic representation.
+
+**-v** [_k_]
+> Verbose level for tracing (default 1 if no value given).
+
+**-?**
+> Print usage and exit.
 
 # DESCRIPTION
 
-**mingle** bundles edges in graphs. It reduces clutter in dense graph visualizations.
+**mingle** performs fast edge bundling on graphs. It reduces visual clutter in dense graph visualizations by grouping similar edges together into bundles.
 
-The tool is part of Graphviz. It groups similar edges for cleaner display.
+Part of the Graphviz suite, mingle reads a graph in DOT format and produces output with bundled edges. It supports multiple bundling algorithms including force-directed and agglomerative ink saving methods.
 
 # CAVEATS
 
-Part of Graphviz. For dense graphs. May hide individual edges.
-
-# HISTORY
-
-mingle is part of **Graphviz** for edge bundling in graph visualizations.
+Part of Graphviz. Output is always in DOT format. May obscure individual edge paths in dense graphs.
 
 # SEE ALSO
 
-[dot](/man/dot)(1), [neato](/man/neato)(1), [sfdp](/man/sfdp)(1)
+[dot](/man/dot)(1), [neato](/man/neato)(1), [sfdp](/man/sfdp)(1), [fdp](/man/fdp)(1)
 

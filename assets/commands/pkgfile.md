@@ -53,8 +53,23 @@ Search with **version** display
 **-v, --verbose**
 > Show package version
 
-**-r, --repo _repo_**
+**-R, --repo** _repo_
 > Search specific repository
+
+**-g, --glob**
+> Enable shell-style glob pattern matching
+
+**-r, --regex**
+> Enable regular expression matching
+
+**-d, --directories**
+> Include directories in search results
+
+**-q, --quiet**
+> Suppress error messages
+
+**-0, --null**
+> Delimit output with null bytes
 
 # DESCRIPTION
 

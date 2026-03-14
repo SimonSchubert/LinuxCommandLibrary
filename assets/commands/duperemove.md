@@ -47,13 +47,22 @@ An extent is a contiguous area of storage allocated for a file.
 **--cpu-threads** _n_
 > CPU thread count for hash comparison
 
+**-h**
+> Print human-readable sizes
+
 **-v**
 > Verbose output
 
+**--dedupe-options=**_OPTIONS_
+> Comma-separated dedupe options (e.g., partial, same)
+
+**-b** _SIZE_
+> Block size for hashing (default: 128K)
+
 # CAVEATS
 
-Only works on filesystems supporting extent-level deduplication (Btrfs, XFS). Deduplication is handled by the kernel. Using hashfile reduces memory usage and enables incremental scans.
+Only works on filesystems supporting extent-level deduplication (Btrfs, XFS). Deduplication is handled by the kernel via the `FIDEDUPERANGE` ioctl. Using a hashfile is strongly recommended for large datasets as it reduces memory usage and enables incremental scans across runs. Without `-d`, the tool only reports duplicates without deduplicating. Read-only files can still be deduplicated since dedup operates at the filesystem level.
 
 # SEE ALSO
 
-[btrfs](/man/btrfs)(8), [fdupes](/man/fdupes)(1)
+[btrfs](/man/btrfs)(8), [fdupes](/man/fdupes)(1), [rmlint](/man/rmlint)(1)

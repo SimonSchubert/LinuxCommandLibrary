@@ -12,6 +12,10 @@ Display Vagrant VM port forwarding mappings
 
 ```vagrant port [name]```
 
+**Show host port for a specific guest port**
+
+```vagrant port --guest [80]```
+
 # SYNOPSIS
 
 **vagrant** **port** [_options_] [_name_]
@@ -19,10 +23,10 @@ Display Vagrant VM port forwarding mappings
 # PARAMETERS
 
 **--guest** _port_
-> Show mapping for specific guest port.
+> Show only the host port that maps to the specified guest port. Returns an error if the port is not forwarded. Useful for scripting.
 
 **--machine-readable**
-> Machine-readable output.
+> Machine-readable output format for automation.
 
 # DESCRIPTION
 

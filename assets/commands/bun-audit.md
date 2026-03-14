@@ -8,6 +8,18 @@ Scan dependencies for known security vulnerabilities
 
 ```bun audit```
 
+**Only report high and critical** vulnerabilities
+
+```bun audit --audit-level=high```
+
+**Audit only production dependencies**
+
+```bun audit --prod```
+
+**Ignore a specific vulnerability** by CVE ID
+
+```bun audit --ignore [CVE-2023-12345]```
+
 **Output audit results** in JSON format
 
 ```bun audit --json```
@@ -19,7 +31,16 @@ Scan dependencies for known security vulnerabilities
 # PARAMETERS
 
 **--json**
-> Output results in JSON format.
+> Output results in JSON format
+
+**--audit-level**=_level_
+> Minimum severity to report: low, moderate, high, or critical
+
+**--prod**
+> Only audit production dependencies, ignoring devDependencies
+
+**--ignore** _CVE_
+> Ignore a specific vulnerability by CVE ID (can be specified multiple times)
 
 # DESCRIPTION
 
@@ -29,7 +50,7 @@ The command reports vulnerabilities categorized by severity: low, moderate, high
 
 # CAVEATS
 
-Only catches known, documented vulnerabilities. Does not detect zero-day exploits, malware, misconfigurations, or issues in deeply nested transitive dependencies. A clean audit report does not guarantee complete security.
+Only catches known, documented vulnerabilities. Does not detect zero-day exploits, malware, misconfigurations, or issues in deeply nested transitive dependencies. A clean audit report does not guarantee complete security. Requires a bun.lock file to be present.
 
 # HISTORY
 

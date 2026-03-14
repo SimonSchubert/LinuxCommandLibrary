@@ -4,17 +4,25 @@ Advanced laptop power management
 
 # TLDR
 
-**Start** (apply power settings)
+**Start** and apply power settings for current power source
 
 ```sudo tlp start```
 
-Apply **battery** settings
+Apply **battery** profile regardless of power source
 
 ```sudo tlp bat```
 
-Apply **AC** settings
+Apply **AC** profile regardless of power source
 
 ```sudo tlp ac```
+
+Enable **USB autosuspend** for all devices
+
+```sudo tlp usb```
+
+Show **disk device IDs** for configuration
+
+```sudo tlp diskid```
 
 # SYNOPSIS
 

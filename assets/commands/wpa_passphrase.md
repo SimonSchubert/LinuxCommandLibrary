@@ -12,6 +12,10 @@ Generate WPA pre-shared key from passphrase
 
 ```wpa_passphrase [SSID] [passphrase]```
 
+**Generate and append** to wpa_supplicant configuration
+
+```wpa_passphrase [SSID] [passphrase] >> /etc/wpa_supplicant/wpa_supplicant.conf```
+
 # SYNOPSIS
 
 **wpa_passphrase** _ssid_ [_passphrase_]
@@ -36,4 +40,4 @@ Providing the passphrase on the command line exposes it in process listings and 
 
 # SEE ALSO
 
-[wpa_supplicant](/man/wpa_supplicant)(8), [wpa_cli](/man/wpa_cli)(8), [wpa_supplicant.conf](/man/wpa_supplicant.conf)(5)
+[wpa_supplicant](/man/wpa_supplicant)(8), [wpa_cli](/man/wpa_cli)(8)

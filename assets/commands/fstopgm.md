@@ -18,7 +18,11 @@ Usenix FaceSaver to PGM converter
 
 The conversion reads from standard input and writes to standard output, making it suitable for pipeline operations with other Netpbm tools.
 
+# CAVEATS
+
+The Usenix FaceSaver format is obsolete and rarely encountered today. This tool is part of the Netpbm suite and may not be included in all Netpbm distributions. Input must be in valid FaceSaver format or the conversion will fail.
+
 # SEE ALSO
 
-[pgmtofs](/man/pgmtofs)(1), [pgm](/man/pgm)(5)
+[pgmtofs](/man/pgmtofs)(1), [netpbm](/man/netpbm)(1)
 

@@ -1,6 +1,6 @@
 # TAGLINE
 
-headless multiplayer game server
+Headless multiplayer game server
 
 # TLDR
 
@@ -12,7 +12,11 @@ headless multiplayer game server
 
 ```[path/to]/factorio --start-server [path/to/save_file.zip]```
 
-Create save with **specific settings**
+**Start server with settings**
+
+```[path/to]/factorio --start-server [path/to/save_file.zip] --server-settings [path/to/server-settings.json]```
+
+Create save with **specific map settings**
 
 ```[path/to]/factorio --create [path/to/save.zip] --map-gen-settings [path/to/map_gen_settings.json] --map-settings [path/to/map_settings.json]```
 
@@ -52,11 +56,26 @@ Used for dedicated Factorio servers and automated testing.
 > Display help
 
 **--port** _number_
-> Server port number
+> Server port number (default: 34197).
+
+**--server-settings** _file_
+> Server configuration JSON file (name, description, visibility, passwords).
+
+**--server-adminlist** _file_
+> JSON file listing admin usernames.
+
+**--server-banlist** _file_
+> JSON file listing banned usernames.
+
+**--console-log** _file_
+> Write server console output to a log file.
+
+**--mod-directory** _dir_
+> Override mod directory path.
 
 # CAVEATS
 
-Requires Factorio game installation. Server settings configured via JSON files. Headless mode requires no X server. Commercial game with separate license.
+Requires Factorio game installation. Server settings configured via JSON files. Headless mode requires no X server. Commercial game with separate license. Default port is 34197/UDP.
 
 # SEE ALSO
 

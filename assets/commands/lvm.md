@@ -1,6 +1,6 @@
 # TAGLINE
 
-linux Logical Volume Manager, providing flexible disk management through
+Linux Logical Volume Manager tools
 
 # TLDR
 
@@ -66,8 +66,35 @@ Display **logical volumes**
 **lvreduce**
 > Reduce a logical volume
 
+**pvs**
+> Report information about physical volumes
+
+**vgs**
+> Report information about volume groups
+
+**lvs**
+> Report information about logical volumes
+
+**pvremove**
+> Remove a physical volume
+
+**vgremove**
+> Remove a volume group
+
 **help** _command_
 > Display help for a specific command
+
+**-d, --debug**
+> Enable verbose debugging output (repeat up to 6 times to increase)
+
+**-v, --verbose**
+> Set verbose level (repeat from 1 to 3 to increase)
+
+**-t, --test**
+> Run in test mode (don't update metadata)
+
+**-y, --yes**
+> Answer yes to all confirmation prompts
 
 # CAVEATS
 
@@ -79,4 +106,4 @@ LVM requires physical volumes to be initialized before use. Reducing volumes req
 
 # SEE ALSO
 
-[lvcreate](/man/lvcreate)(8), [lvextend](/man/lvextend)(8), [vgcreate](/man/vgcreate)(8), [pvcreate](/man/pvcreate)(8)
+[lvcreate](/man/lvcreate)(8), [lvextend](/man/lvextend)(8), [vgcreate](/man/vgcreate)(8), [pvcreate](/man/pvcreate)(8), [pvs](/man/pvs)(8), [vgs](/man/vgs)(8), [lvs](/man/lvs)(8)

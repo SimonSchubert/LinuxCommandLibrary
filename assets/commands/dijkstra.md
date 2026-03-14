@@ -4,13 +4,21 @@ shortest path graph algorithm filter
 
 # TLDR
 
-**Check Graphviz graph** for proper layout
+**Compute shortest path from a source node in a graph**
 
-```dijkstra [input.dot]```
+```dijkstra -p [source_node] [input.dot]```
 
-**Output processed graph**
+**Output distance matrix for all pairs of nodes**
+
+```dijkstra -d [input.dot]```
+
+**Write processed graph to output file**
 
 ```dijkstra [input.dot] -o [output.dot]```
+
+**Compute shortest paths and output to file**
+
+```dijkstra -p [source_node] -o [output.dot] [input.dot]```
 
 # SYNOPSIS
 
@@ -20,6 +28,9 @@ shortest path graph algorithm filter
 
 **-o** _file_
 > Output file.
+
+**-p** _node_
+> Set source node for shortest path computation.
 
 **-d**
 > Output distance matrix.
@@ -34,4 +45,4 @@ This utility is part of the Graphviz suite and is primarily used for network ana
 
 # SEE ALSO
 
-[dot](/man/dot)(1), [neato](/man/neato)(1), [graphviz](/man/graphviz)(1)
+[dot](/man/dot)(1), [neato](/man/neato)(1), [sfdp](/man/sfdp)(1)

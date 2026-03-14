@@ -18,11 +18,11 @@ modular CSS minifier built on PostCSS
 
 **Minify with source maps**
 
-```cssnano [input.css] [output.css] --map```
+```cssnano [input.css] [output.css] -s```
 
-**Use lite preset** (faster, less aggressive)
+**Disable a specific optimization**
 
-```cssnano [input.css] [output.css] --preset lite```
+```cssnano [input.css] [output.css] --no-[featureName]```
 
 # SYNOPSIS
 
@@ -30,17 +30,11 @@ modular CSS minifier built on PostCSS
 
 # PARAMETERS
 
-**--preset** _name_
-> Optimization preset: default, lite, advanced.
+**--sourcemap, -s**
+> Generate a sourcemap within the minified output.
 
-**--map**
-> Generate source maps.
-
-**--no-map**
-> Disable source maps.
-
-**-o**, **--output** _file_
-> Output file.
+**--no-[featureName]**
+> Disable any individual processor module by its name.
 
 **--config** _file_
 > PostCSS configuration file.
@@ -82,4 +76,4 @@ cssnano was created by **Ben Briggs** and first released in **2015**. Built on P
 
 # SEE ALSO
 
-[postcss](/man/postcss)(1), [autoprefixer](/man/autoprefixer)(1), [clean-css](/man/clean-css)(1)
+[postcss](/man/postcss)(1), [autoprefixer](/man/autoprefixer)(1)

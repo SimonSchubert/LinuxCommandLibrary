@@ -32,7 +32,7 @@ Build and execute commands from stdin
 
 ```find . -name "*.tmp" | xargs -p rm```
 
-**Run even with empty input**
+**Skip execution if input is empty** (GNU extension)
 
 ```echo "" | xargs -r echo "not empty"```
 

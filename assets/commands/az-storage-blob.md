@@ -89,6 +89,15 @@ The command group supports uploading, downloading, copying, and managing blob pr
 **--pattern** _value_
 > Glob pattern for batch operations
 
+**--overwrite**
+> Overwrite existing blob on upload (default: false)
+
+**--auth-mode** _value_
+> Authentication mode: login (Azure AD) or key
+
+**-o**, **--output** _value_
+> Output format: json, table, tsv, yaml, jsonc, none
+
 # CAVEATS
 
 Authentication is required via **--account-key**, **--sas-token**, **--connection-string**, or **--auth-mode login**. Archive tier blobs must be rehydrated before access. Batch operations respect patterns but do not recursively traverse virtual directories by default. Delete operations mark blobs for deletion; soft-delete policies may allow recovery.

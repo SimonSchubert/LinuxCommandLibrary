@@ -21,8 +21,11 @@ traditional GNOME desktop panel and taskbar
 **--replace**
 > Replace running panel.
 
+**--version**
+> Print version information and exit
+
 **--help**
-> Display help information.
+> Display help information
 
 # DESCRIPTION
 
@@ -40,4 +43,4 @@ gnome-panel was the main **GNOME 2** panel, now maintained as part of GNOME Flas
 
 # SEE ALSO
 
-[gnome-shell](/man/gnome-shell)(1), [gnome-session](/man/gnome-session)(1)
+[gnome-calculator](/man/gnome-calculator)(1), [gnome-screenshot](/man/gnome-screenshot)(1)

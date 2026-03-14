@@ -45,13 +45,13 @@ lock-free cloud backup with deduplication
 **init** _snapshot_id storage_
 > Initialize a new repository with the specified snapshot ID and storage location.
 
-**backup** [_-stats_] [_-threads n_]
+**backup** [_-stats_] [_-threads n_] [_-hash_] [_-t tag_]
 > Create a new backup snapshot.
 
-**restore** [_-r revision_] [_-overwrite_]
+**restore** [_-r revision_] [_-overwrite_] [_-delete_]
 > Restore files from a snapshot.
 
-**list** [_-all_] [_-files_]
+**list** [_-all_] [_-id snapshot_id_] [_-files_]
 > List available snapshots.
 
 **prune** [_-keep spec_] [_-id snapshot_id_]

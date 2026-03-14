@@ -4,13 +4,17 @@ Expose local services to internet
 
 # TLDR
 
-**Expose local port to internet**
+**Expose a local service** on port 8080 to the internet
 
-```tailscale funnel [443]```
+```tailscale funnel [8080]```
 
-**Expose specific port with path**
+**Expose a local HTTPS proxy** target to the internet
 
-```tailscale funnel --set-path /api localhost:8080```
+```tailscale funnel https+insecure://localhost:[8443]```
+
+**Expose on a specific port** (443, 8443, or 10000)
+
+```tailscale funnel --serve-port [8443] [3000]```
 
 **Turn off funnel**
 
@@ -20,23 +24,33 @@ Expose local services to internet
 
 ```tailscale funnel status```
 
+**Run in background** mode
+
+```tailscale funnel --bg [8080]```
+
 # SYNOPSIS
 
 **tailscale** **funnel** [_options_] _target_
 
 # PARAMETERS
 
-**--set-path** _path_
-> URL path for service.
-
 **--bg**
 > Run in background.
+
+**--serve-port** _port_
+> The public-facing port (443, 8443, or 10000; default 443).
+
+**--set-path** _path_
+> Mount the service at a specific URL path.
 
 **off**
 > Disable funnel.
 
 **status**
-> Show funnel status.
+> Show current funnel configuration.
+
+**reset**
+> Reset all funnel configuration.
 
 # DESCRIPTION
 
@@ -46,9 +60,9 @@ Tailscale automatically provisions and manages TLS certificates for the endpoint
 
 # CAVEATS
 
-Exposes services to the public internet. Use with caution.
+Exposes services to the public internet -- use with caution. Funnel must be enabled in the Tailscale admin console ACL policy. Only ports 443, 8443, and 10000 are supported for public-facing endpoints.
 
 # SEE ALSO
 
-[tailscale](/man/tailscale)(1), [tailscale-serve](/man/tailscale-serve)(1)
+[tailscale](/man/tailscale)(1), [tailscale-up](/man/tailscale-up)(1), [ngrok](/man/ngrok)(1)
 

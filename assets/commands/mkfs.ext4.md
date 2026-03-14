@@ -1,6 +1,6 @@
 # TAGLINE
 
-creates an ext4 filesystem on a device
+Create an ext4 filesystem on a device
 
 # TLDR
 
@@ -12,47 +12,68 @@ Create with **volume label**
 
 ```sudo mkfs.ext4 -L [label] /dev/sdXY```
 
-Create with **specific owner**
+Create with **reduced reserved blocks** (1% instead of 5%)
 
-```sudo mkfs.ext4 -E root_owner=[uid]:[gid] /dev/sdXY```
+```sudo mkfs.ext4 -m [1] /dev/sdXY```
+
+Create with **specific block size**
+
+```sudo mkfs.ext4 -b [4096] /dev/sdXY```
+
+Create with **specific owner** and UUID
+
+```sudo mkfs.ext4 -E root_owner=[uid]:[gid] -U [uuid] /dev/sdXY```
+
+**Quiet** creation (for scripts)
+
+```sudo mkfs.ext4 -q /dev/sdXY```
 
 # SYNOPSIS
 
-**mkfs.ext4** [_options_] _device_
+**mkfs.ext4** [_options_] _device_ [_blocks-count_]
 
 # DESCRIPTION
 
-**mkfs.ext4** creates an ext4 filesystem on a device. ext4 is the default Linux filesystem, offering journaling, large file support, and excellent performance.
+**mkfs.ext4** creates an ext4 filesystem on a device. ext4 is the default Linux filesystem, offering journaling, large file support, and excellent performance. It is equivalent to **mke2fs -t ext4**.
 
 # PARAMETERS
 
-**-L LABEL**
-> Set volume label (max 16 characters)
+**-L** _LABEL_
+> Set volume label (max 16 characters).
 
-**-E OPTIONS**
-> Extended options (root_owner=uid:gid)
+**-b** _BLOCKSIZE_
+> Set block size in bytes (1024, 2048, or 4096).
 
-**-b BLOCKSIZE**
-> Set block size (1024, 2048, 4096)
+**-m** _PERCENT_
+> Reserved blocks percentage for super-user (default: 5%).
+
+**-i** _BYTES_PER_INODE_
+> Set bytes per inode ratio.
+
+**-N** _INODES_
+> Set number of inodes.
+
+**-U** _UUID_
+> Set filesystem UUID.
+
+**-E** _OPTIONS_
+> Extended options (comma-separated), e.g. root_owner=uid:gid, discard, stride=N, stripe-width=N.
 
 **-j**
-> Create journal (default for ext4)
+> Create ext3 journal (default for ext4).
 
-**-i BYTES_PER_INODE**
-> Set bytes per inode ratio
+**-c**
+> Check the device for bad blocks before creating the filesystem.
 
-**-N INODES**
-> Set number of inodes
+**-F**
+> Force creation even if the device is not a block special device or appears in use.
 
-**-m PERCENT**
-> Reserved blocks percentage (default: 5)
-
-**-U UUID**
-> Set filesystem UUID
+**-q**
+> Quiet execution.
 
 # CAVEATS
 
-All data on device will be lost. Part of e2fsprogs package. Default reserved blocks (5%) can be reduced for non-root filesystems.
+All data on device will be lost. Part of e2fsprogs package. Default reserved blocks (5%) can be reduced for non-root filesystems with **-m**. Use **-F** twice to force creation on a mounted device.
 
 # SEE ALSO
 

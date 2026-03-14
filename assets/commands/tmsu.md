@@ -16,7 +16,7 @@ Tag-based file organization system
 
 ```tmsu files [tag]```
 
-**Find by multiple tags**
+**Find by multiple tags** (boolean query)
 
 ```tmsu files [tag1] and [tag2]```
 
@@ -24,9 +24,17 @@ Tag-based file organization system
 
 ```tmsu untag [file] [tag]```
 
-**Mount virtual filesystem**
+**Mount virtual filesystem** organized by tags
 
 ```tmsu mount [mountpoint]```
+
+**Show tags** for a specific file
+
+```tmsu tags [file]```
+
+**Check status** of tagged files
+
+```tmsu status```
 
 # SYNOPSIS
 
@@ -35,22 +43,31 @@ Tag-based file organization system
 # PARAMETERS
 
 **tag**
-> Add tags.
+> Add tags to files or directories.
 
-**tags**
-> List tags.
+**tags** [_file_]
+> List all tags, or list tags for a specific file.
 
-**files**
-> Query files.
+**files** _query_
+> Query files matching tag expressions (supports and, or, not).
 
 **untag**
-> Remove tags.
+> Remove tags from files.
 
-**mount**
-> Mount FUSE fs.
+**mount** _mountpoint_
+> Mount a FUSE virtual filesystem organized by tags.
 
-**rename**
-> Rename tag.
+**rename** _old_ _new_
+> Rename a tag.
+
+**delete** _tag_
+> Delete a tag and all its file associations.
+
+**merge** _tags_ _target_
+> Merge multiple tags into a single tag.
+
+**status**
+> List file tagging status (tagged, modified, missing).
 
 # DESCRIPTION
 
@@ -68,4 +85,4 @@ FUSE needed for mount. Database per directory. Go-based tool.
 
 # SEE ALSO
 
-[find](/man/find)(1), [locate](/man/locate)(1), [tag](/man/tag)(1)
+[find](/man/find)(1), [locate](/man/locate)(1)

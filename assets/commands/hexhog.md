@@ -10,13 +10,13 @@ Configurable hex viewer and editor
 
 # SYNOPSIS
 
-**hexhog** [_options_] _file_
+**hexhog** [_file_]
 
 # DESCRIPTION
 
-**hexhog** is a configurable hex viewer and editor for the terminal. It provides basic hex editing features including editing, deleting, and inserting bytes, as well as selecting and copy/pasting byte ranges. The interface displays offset addresses, hex values, and ASCII representation in a customizable layout.
+**hexhog** is a configurable hex viewer and editor for the terminal, written in Rust. It provides basic hex editing features including editing, deleting, and inserting bytes, as well as selecting and copy/pasting byte ranges. The interface displays offset addresses, hex values, and ASCII representation in a customizable layout.
 
-The tool allows configuration of color themes and key bindings to suit different workflows.
+Color themes and key bindings can be configured. Byte types such as null, printable ASCII, whitespace, and extended characters are displayed with distinct colors.
 
 # CAVEATS
 
@@ -24,7 +24,7 @@ Primarily designed for smaller binary files. Very large files may impact perform
 
 # HISTORY
 
-**hexhog** was created by **DVDTSB** and provides a simple, configurable approach to hex editing in the terminal.
+**hexhog** was created by **DVDTSB** and provides a simple, configurable approach to hex editing in the terminal. The source is available on GitHub at **github.com/DVDTSB/hexhog**.
 
 # SEE ALSO
 

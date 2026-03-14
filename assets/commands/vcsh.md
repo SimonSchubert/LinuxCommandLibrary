@@ -28,29 +28,58 @@ Manage dotfiles with multiple Git repos
 
 ```vcsh status```
 
+**List tracked files**
+
+```vcsh list-tracked [reponame]```
+
+**Pull all repos**
+
+```vcsh pull```
+
 # SYNOPSIS
 
-**vcsh** [_init|clone|list|enter_] [_reponame_] [_args_]
+**vcsh** [_init|clone|list|enter|run|pull|push_] [_reponame_] [_args_]
 
 # PARAMETERS
 
-**init**
-> Initialize repo.
+**init** _reponame_
+> Initialize an empty repo.
 
-**clone**
-> Clone repo.
+**clone** _url_ [_reponame_]
+> Clone from URL.
 
 **list**
-> List repos.
+> List all repos.
 
-**enter**
-> Shell in repo.
+**list-tracked** [_reponame_]
+> List tracked files.
 
-**run**
-> Run command.
+**list-untracked** [**-a**] [**-r**]
+> List untracked files. -a shows all, -r is recursive.
 
-**status**
-> Show status.
+**enter** _reponame_
+> Spawn subshell with $GIT_DIR set.
+
+**run** _reponame_ _command_
+> Run command with $GIT_DIR and $GIT_WORK_TREE set.
+
+**pull**
+> Pull from all repos.
+
+**push**
+> Push all repos.
+
+**rename** _old_ _new_
+> Rename a repository.
+
+**status** [_reponame_]
+> Show status of all or one repo.
+
+**write-gitignore** _reponame_
+> Write .gitignore.d/reponame via git ls-files.
+
+**delete** _reponame_
+> Delete a repository.
 
 # DESCRIPTION
 
@@ -68,4 +97,4 @@ Learning curve. Git knowledge needed. Bare repos can confuse.
 
 # SEE ALSO
 
-[git](/man/git)(1), [stow](/man/stow)(1), [yadm](/man/yadm)(1), [chezmoi](/man/chezmoi)(1)
+[git](/man/git)(1), [mr](/man/mr)(1), [stow](/man/stow)(1), [yadm](/man/yadm)(1), [chezmoi](/man/chezmoi)(1)

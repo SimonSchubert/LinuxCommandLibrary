@@ -114,4 +114,4 @@ Cluster creation takes several minutes. Classic resize creates a new cluster and
 
 # SEE ALSO
 
-[aws](/man/aws)(1), [aws-redshift-data](/man/aws-redshift-data)(1), [psql](/man/psql)(1), [aws-s3](/man/aws-s3)(1)
+[aws](/man/aws)(1), [psql](/man/psql)(1), [aws-s3](/man/aws-s3)(1)

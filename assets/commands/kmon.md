@@ -12,9 +12,17 @@ Linux kernel manager and activity monitor
 
 ```kmon -t [ms]```
 
-**Set the accent color**
+**Set the main color**
 
 ```kmon -c [color]```
+
+**Launch with Unicode block titles**
+
+```kmon -u```
+
+**Launch with reversed module list**
+
+```kmon -r```
 
 # SYNOPSIS
 
@@ -26,13 +34,19 @@ Linux kernel manager and activity monitor
 > Set the refresh rate of the terminal UI in milliseconds.
 
 **-c**, **--color** _COLOR_
-> Set the highlighting color. Supported: black, red, green, yellow, blue, magenta, cyan, white.
+> Set the main color [default: darkgray]. Supported: black, red, green, yellow, blue, magenta, cyan, gray, darkgray, lightred, lightgreen, lightyellow, lightblue, lightmagenta, lightcyan, white, or a hex value.
 
 **-a**, **--accent-color** _COLOR_
-> Set the default text color.
+> Set the accent color [default: white].
+
+**-r**, **--reverse**
+> Reverse the kernel module list.
 
 **-u**, **--unicode**
-> Show Unicode symbols for the block title.
+> Show Unicode symbols for the block titles.
+
+**-E**, **--regex**
+> Interpret the module search query as a regular expression.
 
 # DESCRIPTION
 

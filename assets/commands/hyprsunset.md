@@ -35,16 +35,19 @@ Start with specific **temperature** and **gamma**
 # PARAMETERS
 
 **-t**, **--temperature** _KELVIN_
-> Set color temperature in Kelvin (lower is warmer)
+> Set color temperature in Kelvin (lower is warmer, default: 6000K)
 
 **-g**, **--gamma** _PERCENT_
-> Set gamma percentage
+> Set gamma percentage (default: 100%)
+
+**--identity**
+> Disable temperature adjustments; only gamma changes take effect
 
 # DESCRIPTION
 
 **hyprsunset** is a blue light filter for Hyprland, the dynamic tiling Wayland compositor. It adjusts screen color temperature to reduce blue light emission, which can help reduce eye strain and improve sleep quality during evening computer use.
 
-The service can be configured via **~/.config/hypr/hyprsunset.conf** or command-line options. Once running, settings can be adjusted dynamically using hyprctl commands without restarting the service.
+Once running, settings can be adjusted dynamically using hyprctl commands without restarting the service. This method is preferred over screen shaders as it will not be captured via recording or screenshots.
 
 Lower temperature values (e.g., 3000K-4000K) produce warmer, more orange-tinted colors suitable for night use. The default 6000K represents standard daylight white.
 

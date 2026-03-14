@@ -53,10 +53,10 @@ Create **bootable ISO** with El Torito boot image
 > Allow full 31-character filenames (not MS-DOS compatible)
 
 **-b _boot_image_**
-> Specify El Torito boot image (1200, 1440, or 2880 KB floppy)
+> Specify El Torito boot image path relative to the source directory.
 
 **-no-emul-boot**
-> Use no emulation boot mode for bootable ISOs
+> Use no-emulation boot mode (boot image is not a floppy image).
 
 **-boot-info-table**
 > Insert boot information table at offset 8 in boot image
@@ -73,11 +73,14 @@ Create **bootable ISO** with El Torito boot image
 **-hide-joliet _glob_**
 > Hide files from Joliet tree only
 
+**-udf**
+> Generate a UDF filesystem in addition to ISO9660.
+
 **-quiet**
-> Minimize verbose output
+> Minimize verbose output.
 
 **-print-size**
-> Calculate and display filesystem size in sectors
+> Calculate and display filesystem size in sectors.
 
 # DESCRIPTION
 

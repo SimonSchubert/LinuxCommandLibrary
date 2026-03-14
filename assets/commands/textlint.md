@@ -124,4 +124,4 @@ Requires Node.js and npm. Rules must be installed separately. Configuration comp
 
 # SEE ALSO
 
-[eslint](/man/eslint)(1), [markdownlint](/man/markdownlint)(1), [vale](/man/vale)(1), [proselint](/man/proselint)(1)
+[eslint](/man/eslint)(1), [vale](/man/vale)(1), [markdownlint](/man/markdownlint)(1), [proselint](/man/proselint)(1)

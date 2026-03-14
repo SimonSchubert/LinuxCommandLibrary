@@ -1,12 +1,16 @@
 # TAGLINE
 
-lists the characteristics of the system's available memory including block
+List the ranges of available memory with their online status
 
 # TLDR
 
 List **memory information**
 
 ```lsmem```
+
+List **all individual memory blocks**
+
+```lsmem --all```
 
 Output as **JSON**
 
@@ -16,13 +20,21 @@ Show sizes in **bytes**
 
 ```lsmem --bytes```
 
+Show **only the summary**
+
+```lsmem --summary=only```
+
+Select specific **output columns**
+
+```lsmem --output [RANGE,SIZE,STATE,REMOVABLE]```
+
 # SYNOPSIS
 
 **lsmem** [_options_]
 
 # DESCRIPTION
 
-**lsmem** lists the characteristics of the system's available memory including block sizes, states, and zones. It provides detailed information about memory modules and their configuration.
+**lsmem** lists the ranges of available memory with their online status. The listed memory blocks correspond to the memory block representation in sysfs. The command also shows the memory block size and the amount of memory in online and offline state. Part of **util-linux**.
 
 # PARAMETERS
 
@@ -44,8 +56,14 @@ Show sizes in **bytes**
 **-r, --raw**
 > Raw output without formatting
 
-**--summary**
-> Print only summary information
+**--summary** [_WHEN_]
+> Control summary output: never, always, only.
+
+**-S, --split** _LIST_
+> Columns to split memory blocks: STATE, REMOVABLE, NODE, ZONES, or none.
+
+**-s, --sysroot** _DIR_
+> Gather memory data for another Linux instance.
 
 # CAVEATS
 

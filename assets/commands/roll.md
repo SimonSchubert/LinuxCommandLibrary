@@ -16,13 +16,21 @@ Simulate dice rolls with RPG notation
 
 ```roll [3x4d6]```
 
-**Verbose output**
+**Verbose output showing each die**
 
 ```roll -v [2d6]```
+
+**Sum only output**
+
+```roll -s [2d6]```
 
 **Roll percentile**
 
 ```roll [1d100]```
+
+**Roll with negative modifier**
+
+```roll [1d20-2]```
 
 **Multiple dice expressions**
 
@@ -65,4 +73,4 @@ Random source varies. Not cryptographically secure. Fun utility only.
 
 # SEE ALSO
 
-[random](/man/random)(1), [shuf](/man/shuf)(1)
+[rolldice](/man/rolldice)(6), [shuf](/man/shuf)(1)

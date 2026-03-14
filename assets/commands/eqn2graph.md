@@ -10,7 +10,7 @@ Equation description to graphic image converter
 
 **Specify output format**
 
-```echo "[equation]" | eqn2graph -format [svg]```
+```echo "[equation]" | eqn2graph --format [svg]```
 
 **Set font size**
 
@@ -22,7 +22,7 @@ Equation description to graphic image converter
 
 # PARAMETERS
 
-**-format** _FORMAT_
+**--format** _FORMAT_
 > Output format: png, svg, pdf, etc.
 
 **-s** _SIZE_
@@ -44,7 +44,7 @@ eqn2graph is useful for generating standalone equation images without full docum
 
 # CAVEATS
 
-Requires groff and image conversion tools. Output quality depends on settings. Complex equations may need adjustment. Limited to eqn syntax.
+Requires groff and an image conversion tool (typically GraphicsMagick or ImageMagick). The default output format is PNG. Uses eqn syntax, not LaTeX math notation.
 
 # HISTORY
 
@@ -52,4 +52,4 @@ eqn2graph is part of the **groff** suite, providing a convenient way to generate
 
 # SEE ALSO
 
-[eqn](/man/eqn)(1), [groff](/man/groff)(1), [pic2graph](/man/pic2graph)(1)
+[eqn](/man/eqn)(1), [groff](/man/groff)(1)

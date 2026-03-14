@@ -1,6 +1,6 @@
 # TAGLINE
 
-provides a curses-based interface for configuring network connections managed
+curses-based TUI for NetworkManager
 
 # TLDR
 
@@ -49,7 +49,11 @@ Without arguments, nmtui presents a main menu with options to edit connections, 
 
 # CAVEATS
 
-Requires NetworkManager as the network management daemon. Terminal must support curses (most do). Some advanced options available in nmcli or graphical tools may not be exposed in nmtui. Changes take effect immediately when saved.
+Requires NetworkManager as the network management daemon. Terminal must support curses (most do). Some advanced options available in nmcli or graphical tools may not be exposed in nmtui. Changes take effect immediately when saved. Requires root or appropriate polkit privileges for modifying connections.
+
+# HISTORY
+
+**nmtui** was introduced as part of **NetworkManager 0.9.10** in **2014** to provide a lightweight text-mode alternative to the GNOME network settings GUI and the nmcli command-line tool.
 
 # SEE ALSO
 

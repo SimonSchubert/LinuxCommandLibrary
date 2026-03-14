@@ -38,36 +38,39 @@ manages npm configuration
 
 # PARAMETERS
 
-_COMMAND_
-> Config subcommand.
-
-**list**
-> Show configuration.
+**set** _KEY=VALUE_
+> Set a config value.
 
 **get** _KEY_
-> Get value.
+> Echo a config value to stdout.
 
-**set** _KEY_ _VALUE_
-> Set value.
+**list**
+> Show all config settings. Use **-l** to show defaults. Use **--json** for JSON output.
 
 **delete** _KEY_
-> Remove setting.
+> Remove a key from all configuration files.
 
 **edit**
-> Open editor.
+> Open the config file in an editor. Use **--global** to edit the global config.
 
-**--help**
-> Display help information.
+**fix**
+> Repair invalid configuration entries.
+
+**-g**, **--global**
+> Operate on the global configuration file.
+
+**--location** _user|global|project_
+> Target a specific configuration level.
 
 # DESCRIPTION
 
-**npm config** manages npm configuration. Controls registry, proxy, and other settings.
+**npm config** manages npm configuration across multiple levels. It reads settings from the command line, environment variables, and .npmrc files (project, user, and global).
 
-The command modifies .npmrc files. Per-project or global configuration.
+Configuration files are plain ini-formatted lists of key = value pairs. Environment variables prefixed with **npm_config_** are also recognized as configuration settings.
 
 # CAVEATS
 
-Multiple .npmrc locations. Project overrides global. Credentials stored here.
+Multiple .npmrc locations exist with a precedence order: project > user > global > defaults. Credentials and tokens may be stored in .npmrc files.
 
 # HISTORY
 

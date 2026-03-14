@@ -1,24 +1,20 @@
 # TAGLINE
 
-generates PHP documentation
+Generate PHP API documentation from source code
 
 # TLDR
 
-**Generate documentation**
+**Generate documentation** using default config
 
 ```phpdox```
 
-**Use specific config**
+**Use specific config** file
 
 ```phpdox -f [phpdox.xml]```
 
-**Verbose output**
+**Show version**
 
-```phpdox -v```
-
-**Generate for directory**
-
-```phpdox --directory [src/]```
+```phpdox --version```
 
 # SYNOPSIS
 
@@ -27,30 +23,26 @@ generates PHP documentation
 # PARAMETERS
 
 **-f** _FILE_
-> Configuration file.
+> Use specified XML configuration file.
 
-**-v**
-> Verbose output.
-
-**--directory** _DIR_
-> Source directory.
+**--version**
+> Display application version.
 
 **--help**
-> Display help.
+> Display help information.
 
 # DESCRIPTION
 
-**phpdox** generates PHP documentation. API documentation generator.
+**phpDox** generates PHP API documentation from source code using standard technologies (SRC, DOCBLOCK, XML and XSLT). It parses PHP source files, extracts PHPDoc comment blocks, and produces HTML documentation. Configuration is defined in an XML file (typically **phpdox.xml**).
 
-The tool creates HTML docs from source. Uses PHPDoc comments.
+# CONFIGURATION
+
+**phpdox.xml**
+> XML configuration file specifying source directories, output paths, template settings, and build targets. Required for operation.
 
 # CAVEATS
 
-Requires XML configuration. PHPDoc comments recommended.
-
-# HISTORY
-
-phpDox was created for **generating PHP API documentation** from source.
+Requires an XML configuration file. PHPDoc comment blocks in source code are recommended for useful output. The project is no longer actively maintained.
 
 # SEE ALSO
 

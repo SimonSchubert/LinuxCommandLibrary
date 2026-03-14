@@ -60,8 +60,14 @@ Solana blockchain command-line interface
 **--skip-seed-phrase-validation**
 > Skip validation of seed phrases.
 
+**--commitment** _LEVEL_
+> Return information at the selected commitment level (processed, confirmed, finalized).
+
 **--use-quic**
 > Use QUIC protocol when sending transactions.
+
+**--ws** _URL_
+> WebSocket URL for the Solana cluster.
 
 **--output** _FORMAT_
 > Output format: json, json-compact.
@@ -140,6 +146,3 @@ Airdrops are only available on devnet and testnet, not mainnet. Transactions req
 
 **Solana** was founded by Anatoly Yakovenko in **2017** and launched its mainnet beta in **2020**. The CLI has been the primary tool for interacting with Solana since its inception. Development transitioned from Solana Labs to **Anza** (the Agave client) in **2024**, with the CLI continuing as the first place new functionality is deployed. Solana is known for high throughput and low transaction costs.
 
-# SEE ALSO
-
-[solana-keygen](/man/solana-keygen)(1), [anchor](/man/anchor)(1), [spl-token](/man/spl-token)(1)

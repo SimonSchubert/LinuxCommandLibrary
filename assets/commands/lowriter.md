@@ -75,4 +75,4 @@ LibreOffice Writer evolved from OpenOffice.org Writer, which originated from Sta
 
 # SEE ALSO
 
-[libreoffice](/man/libreoffice)(1), [localc](/man/localc)(1), [loimpress](/man/loimpress)(1), [unoconv](/man/unoconv)(1)
+[libreoffice](/man/libreoffice)(1), [unoconv](/man/unoconv)(1)

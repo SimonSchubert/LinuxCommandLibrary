@@ -68,13 +68,31 @@ Command-line interface for the Ghost publishing platform
 **doctor**
 > Check installation.
 
+**run**
+> Start Ghost without process manager (for debugging).
+
+**backup**
+> Create a zip backup of site data.
+
+**uninstall**
+> Remove Ghost installation and data.
+
 # PARAMETERS
 
 **--production**
 > Run in production mode.
 
+**-D**, **--development**
+> Run in development mode.
+
 **-d**, **--dir** _path_
 > Installation directory.
+
+**--enable**
+> Restart Ghost automatically on server reboot.
+
+**--no-prompt**
+> Skip confirmation prompts.
 
 # DESCRIPTION
 
@@ -92,4 +110,4 @@ The CLI automates database setup, SSL certificate installation, systemd service 
 
 # SEE ALSO
 
-[node](/man/node)(1), [npm](/man/npm)(1)
+[node](/man/node)(1), [npm](/man/npm)(1), [nginx](/man/nginx)(1), [systemctl](/man/systemctl)(1)

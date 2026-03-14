@@ -10,7 +10,7 @@ Optimize and clean SVG files
 
 **Optimize with maximum compression**
 
-```scour -i [input.svg] -o [output.svg] --enable-id-stripping --enable-comment-stripping --shorten-ids```
+```scour -i [input.svg] -o [output.svg] --enable-viewboxing --enable-id-stripping --enable-comment-stripping --shorten-ids --indent=none```
 
 **Remove metadata and editor data**
 
@@ -54,6 +54,15 @@ Optimize and clean SVG files
 
 **--remove-metadata**
 > Remove metadata elements
+
+**--enable-viewboxing**
+> Enable automatic viewBox creation from width/height
+
+**--keep-editor-data**
+> Preserve Inkscape, Sodipodi, or Adobe Illustrator data
+
+**--no-renderer-workaround**
+> Disable renderer bug workarounds
 
 **--indent**=_type_
 > Indentation type: none, space, tab

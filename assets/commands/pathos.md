@@ -10,15 +10,17 @@ TUI for editing and managing your PATH environment variable
 
 # SYNOPSIS
 
-**pathos** [_options_]
+**pathos**
 
 # DESCRIPTION
 
 **pathos** is a terminal user interface for interactively editing your shell's PATH environment variable. It lets you reorder, add, and remove directories with color-coded indicators: yellow for the current position, red for non-existent directories, and aqua for duplicates. Changes are written to **~/pathos.sh** which must be sourced to take effect.
 
+The tool is designed to clean up PATH variables that accumulate in shell resource files like **.zshrc** and **.bashrc**. It builds a revised `export $PATH` statement when you save.
+
 # CAVEATS
 
-Changes do not apply automatically. You must source **~/pathos.sh** in your shell configuration for modifications to persist.
+Changes do not apply automatically. You must source **~/pathos.sh** in your shell configuration for modifications to persist. Install via `go install github.com/chip/pathos@latest`.
 
 # HISTORY
 

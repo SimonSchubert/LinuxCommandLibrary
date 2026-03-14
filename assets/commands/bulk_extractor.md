@@ -1,6 +1,6 @@
 # TAGLINE
 
-Extract structured data from disk images for digital forensics
+High-performance digital forensics data extraction tool
 
 # TLDR
 
@@ -64,7 +64,7 @@ The tool processes data in parallel across multiple CPU cores, making it signifi
 > Page size (default: 16777216)
 
 **-M** _depth_
-> Maximum recursion depth (default: 12)
+> Maximum recursion depth (default: 7)
 
 **-R**
 > Recursively scan directory
@@ -77,6 +77,9 @@ The tool processes data in parallel across multiple CPU cores, making it signifi
 
 **-Y** _start-end_
 > Scan specific byte range
+
+**-z** _pagestart_
+> Start processing at a specific page number
 
 **-Z**
 > Wipe output directory before starting
@@ -94,6 +97,10 @@ Creates **report.xml** with Digital Forensics XML metadata about the run. Indivi
 # CAVEATS
 
 Output directory must not exist or use -Z to wipe. Processing large images requires significant disk space for output. Some scanners may produce false positives requiring manual review.
+
+# HISTORY
+
+**bulk_extractor** was created by **Simson Garfinkel** at the Naval Postgraduate School, first released around **2011**. It is widely used in law enforcement and incident response for forensic data extraction.
 
 # SEE ALSO
 

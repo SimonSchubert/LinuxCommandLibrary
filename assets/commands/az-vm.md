@@ -6,7 +6,7 @@ Manage Azure virtual machines
 
 **Create** virtual machine
 
-```az vm create --resource-group [MyRG] --name [MyVM] --image [UbuntuLTS]```
+```az vm create --resource-group [MyRG] --name [MyVM] --image [Ubuntu2204]```
 
 **List** VMs
 
@@ -50,7 +50,10 @@ The command group enables full lifecycle management of Azure compute resources.
 > Start VM
 
 **stop**
-> Stop (deallocate) VM
+> Stop VM (still incurs compute charges)
+
+**deallocate**
+> Deallocate VM (stops billing for compute)
 
 **restart**
 > Restart VM
@@ -68,7 +71,7 @@ The command group enables full lifecycle management of Azure compute resources.
 > VM name
 
 **--image**
-> OS image (UbuntuLTS, Win2019Datacenter, etc.)
+> OS image (Ubuntu2204, Win2022Datacenter, etc.)
 
 **--size**
 > VM size (Standard_B2s, Standard_D2s_v3, etc.)
@@ -86,7 +89,7 @@ The command group enables full lifecycle management of Azure compute resources.
 
 ```bash
 # Create Ubuntu VM with SSH key
-az vm create -g MyRG -n MyVM --image UbuntuLTS --ssh-key-values ~/.ssh/id_rsa.pub
+az vm create -g MyRG -n MyVM --image Ubuntu2204 --ssh-key-values ~/.ssh/id_rsa.pub
 
 # Get VM IP address
 az vm show -g MyRG -n MyVM -d --query publicIps -o tsv
@@ -100,7 +103,7 @@ az vm run-command invoke -g MyRG -n MyVM --command-id RunShellScript --scripts "
 
 # CAVEATS
 
-Creating VMs incurs costs. Stopping (not deallocating) still charges for compute. Some VM sizes not available in all regions. Deleting VM doesn't delete associated resources (disks, NICs) by default.
+Creating VMs incurs costs. **az vm stop** does not deallocate -- use **az vm deallocate** to stop billing for compute. Some VM sizes are not available in all regions. Deleting a VM does not delete associated resources (disks, NICs) by default. The **UbuntuLTS** image alias was deprecated in 2023; use **Ubuntu2204** or similar instead.
 
 # HISTORY
 

@@ -24,9 +24,9 @@ modern Python project manager
 
 ```hatch publish```
 
-**Show project info**
+**Show or bump project version**
 
-```hatch status```
+```hatch version```
 
 # SYNOPSIS
 
@@ -66,9 +66,9 @@ modern Python project manager
 
 # DESCRIPTION
 
-**Hatch** is a modern Python project manager. It handles project creation, building, publishing, environment management, and testing in a unified tool.
+**Hatch** is a modern, extensible Python project manager. It handles project creation, building, publishing, environment management, and testing in a unified tool. It is the official build backend recommended by the Python Packaging Authority (PyPA).
 
-Hatch uses pyproject.toml for configuration and supports PEP standards. It provides reproducible environments and multi-environment testing.
+Hatch uses pyproject.toml for configuration and supports current PEP standards. It provides reproducible environments and multi-environment testing via configurable matrices.
 
 # PYPROJECT.TOML
 

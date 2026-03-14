@@ -60,7 +60,7 @@ Use **geoip** mirrors
 
 # CAVEATS
 
-After running pacman-mirrors, always synchronize and upgrade with **sudo pacman -Syyu**. Switching branches may introduce instability. The unstable branch tracks Arch Linux more closely.
+After generating a new mirrorlist, synchronize and upgrade with **sudo pacman -Syyu**. Switching branches (stable → testing → unstable) may introduce instability. The unstable branch tracks Arch Linux repositories more closely. Manjaro-specific; not available on Arch Linux (use **reflector** instead).
 
 # HISTORY
 

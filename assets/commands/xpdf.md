@@ -12,7 +12,7 @@ Lightweight X11 PDF viewer
 
 ```xpdf [document.pdf] [5]```
 
-**Set initial zoom**
+**Set initial zoom** (percent, "page", "width")
 
 ```xpdf -z [150] [document.pdf]```
 
@@ -20,9 +20,13 @@ Lightweight X11 PDF viewer
 
 ```xpdf -fullscreen [document.pdf]```
 
-**Open with password**
+**Open with owner password**
 
 ```xpdf -opw [owner_password] [document.pdf]```
+
+**Reverse video** (dark background) mode
+
+```xpdf -rv [document.pdf]```
 
 **Remote control mode**
 
@@ -52,11 +56,14 @@ Lightweight X11 PDF viewer
 **-g** _GEOMETRY_
 > Window geometry.
 
+**-rv**
+> Reverse video mode.
+
 **-papercolor** _COLOR_
 > Paper background color.
 
 **-mattecolor** _COLOR_
-> Matte color.
+> Matte color around page area.
 
 **-cfg** _FILE_
 > Config file.
@@ -103,7 +110,7 @@ Remote mode enables control from scripts. Commands sent to the named instance op
 
 Configuration through ~/.xpdfrc customizes appearance and behavior. Font paths, colors, and key bindings are adjustable.
 
-The xpdf package includes command-line tools: pdftotext, pdftops, pdfinfo, and pdfimages. These are widely used independent of the viewer.
+The xpdf package includes command-line tools: [pdftotext](/man/pdftotext)(1), [pdftops](/man/pdftops)(1), [pdfinfo](/man/pdfinfo)(1), and [pdfimages](/man/pdfimages)(1). These are widely used independent of the viewer.
 
 # CAVEATS
 

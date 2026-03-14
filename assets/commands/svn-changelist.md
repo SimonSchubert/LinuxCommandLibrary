@@ -35,17 +35,26 @@ _targets_
 **--remove**
 > Remove from changelist.
 
-**--recursive**
-> Apply recursively.
-
 **--depth** _depth_
-> Operation depth.
+> Operation depth: empty, files, immediates, infinity.
+
+**--targets** _file_
+> Read target paths from file, one per line.
+
+**--quiet**, **-q**
+> Suppress normal output.
 
 # DESCRIPTION
 
-**svn changelist** organizes working copy files into named groups. Enables selective commits and operations on file subsets. Part of Subversion version control.
+**svn changelist** (alias: **cl**) organizes working copy files into named groups called changelists. This enables selective commits and other operations on file subsets without affecting other modified files. A file can belong to only one changelist at a time.
+
+Changelists are purely a client-side organizational mechanism and do not affect the repository. They persist across working copy operations until explicitly removed.
+
+# CAVEATS
+
+Changelists apply only to files, not directories. A file can belong to at most one changelist. Changelists are local to the working copy and not shared with other users.
 
 # SEE ALSO
 
-[svn](/man/svn)(1), [svn-commit](/man/svn-commit)(1)
+[svn](/man/svn)(1), [svnadmin](/man/svnadmin)(1)
 

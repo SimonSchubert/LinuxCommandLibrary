@@ -16,6 +16,14 @@ CLI and TUI mixer for PulseAudio
 
 ```pulsemixer --set-volume [50]```
 
+**Change volume by relative amount**
+
+```pulsemixer --change-volume [+10]```
+
+**Change volume with a maximum cap**
+
+```pulsemixer --change-volume [+10] --max-volume [100]```
+
 **Mute/unmute**
 
 ```pulsemixer --toggle-mute```
@@ -23,6 +31,10 @@ CLI and TUI mixer for PulseAudio
 **List sinks**
 
 ```pulsemixer --list-sinks```
+
+**Set volume on a specific sink**
+
+```pulsemixer --id [sink-1] --set-volume [75]```
 
 # SYNOPSIS
 
@@ -54,8 +66,29 @@ CLI and TUI mixer for PulseAudio
 **--list-sources**
 > List input devices.
 
+**--change-volume** _+-n_
+> Change volume by a relative amount.
+
+**--set-volume-all** _n:n_
+> Set volume for every channel separately.
+
+**--max-volume** _n_
+> Cap volume at n when using --change-volume.
+
 **--id** _id_
 > Target specific sink/source.
+
+**--server** _server_
+> Connect to a specific PulseAudio server.
+
+**--color** _n_
+> Colorize output (0=none, 1=selected, 2=full).
+
+**--no-mouse**
+> Disable mouse support in TUI.
+
+**-l**, **--list**
+> List all sinks, sources, and sink inputs.
 
 # DESCRIPTION
 
@@ -83,11 +116,14 @@ vol=$(pulsemixer --get-volume | cut -d' ' -f1)
 # TUI KEYS
 
 ```
-h/l, Left/Right - Adjust volume
-j/k, Up/Down    - Select
-m               - Toggle mute
-1-9             - Set volume 10%-90%
-q, Esc          - Quit
+h/l, Left/Right  - Adjust volume
+j/k, Up/Down     - Select
+m                - Toggle mute
+Space            - Lock/unlock channels
+1-9, 0           - Set volume 10%-90%, 100%
+Enter            - Context menu
+F1/F2/F3         - Switch mode (output/input/cards)
+q, Esc           - Quit
 ```
 
 # CAVEATS

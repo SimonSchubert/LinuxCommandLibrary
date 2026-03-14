@@ -28,10 +28,6 @@ Sublime Text command-line launcher
 
 ```subl -w [path/to/file]```
 
-**Compare two files** side-by-side
-
-```subl -d [file1] [file2]```
-
 **Open from stdin**
 
 ```echo "[text]" | subl -```
@@ -54,17 +50,11 @@ Sublime Text command-line launcher
 **-b**, **--background**
 > Open files without activating the application window.
 
-**-d**, **--diff**
-> Compare two files side-by-side, highlighting differences.
-
 **--project** _project_
 > Load a specific .sublime-project or .sublime-workspace file.
 
 **--command** _command_
 > Execute a Sublime Text internal command (e.g., **save_all**, **build**).
-
-**-e**, **--encoding** _encoding_
-> Specify character encoding when opening files (e.g., utf-8, latin1).
 
 **--safe-mode**
 > Launch in a sandboxed clean environment without plugins.
@@ -80,9 +70,9 @@ Sublime Text command-line launcher
 
 # DESCRIPTION
 
-**subl** is the command-line interface for Sublime Text, a popular cross-platform text editor. It allows opening files and directories, comparing files, and integrating with Unix tools like git and subversion.
+**subl** is the command-line interface for Sublime Text, a popular cross-platform text editor. It allows opening files and directories from the terminal and integrating with Unix tools like git and subversion.
 
-Files can include a **:line** or **:line:column** suffix to open at a specific location (1-based). The tool can read from stdin using **-** and write edits to stdout. When used with **-w**, it blocks until files are closed, making it suitable as an external editor for version control systems.
+Files can include a **:line** or **:line:column** suffix to open at a specific location (1-based). The tool can read from stdin using **-**. When used with **-w**, it blocks until files are closed, making it suitable as an external editor for version control systems (e.g., `EDITOR='subl -w' git commit`).
 
 # CAVEATS
 

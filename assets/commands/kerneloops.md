@@ -8,13 +8,17 @@ collects and submits kernel crash information
 
 ```sudo kerneloops```
 
-**Check for oops**
+**Run in debug mode** without daemonizing
 
-```kerneloops -d```
+```kerneloops --debug```
 
-**Submit manually**
+**Parse a specific file** for kernel oops messages
 
-```kerneloops -s [oops_file]```
+```kerneloops --file [/var/log/messages]```
+
+**Run in foreground** without becoming a daemon
+
+```kerneloops --nodaemon```
 
 # SYNOPSIS
 
@@ -22,27 +26,24 @@ collects and submits kernel crash information
 
 # PARAMETERS
 
-**-d**
-> Debug mode.
+**--debug**
+> Enable debug mode with additional diagnostic output.
 
-**-s** _FILE_
-> Submit specific oops file.
+**--file** _filename_
+> Parse the specified file as if it were /var/log/messages.
 
-**--version**
-> Show version.
-
-**--help**
-> Display help information.
+**--nodaemon**
+> Do not daemonize; run in the foreground.
 
 # DESCRIPTION
 
-**kerneloops** collects and submits kernel crash information. It monitors for kernel oops messages and sends them for analysis.
+**kerneloops** collects kernel crash information (oops messages) and submits the extracted signatures to the oops.kernel.org website for statistical analysis and presentation to Linux kernel developers.
 
-The daemon helps developers identify kernel bugs. Submitted data aids in kernel debugging.
+The daemon monitors /var/log/messages for kernel oops data and automatically submits it. Configuration is stored in /etc/kerneloops.conf.
 
 # CAVEATS
 
-Privacy considerations. Requires network. Daemon runs as root.
+Submitted oops data may contain kernel state information. Requires network connectivity to submit reports to oops.kernel.org. The daemon typically runs as root.
 
 # HISTORY
 
@@ -50,4 +51,4 @@ kerneloops was created by **Intel** to collect kernel crash data and help identi
 
 # SEE ALSO
 
-[dmesg](/man/dmesg)(1), [journalctl](/man/journalctl)(1), [kdump](/man/kdump)(8)
+[dmesg](/man/dmesg)(1), [journalctl](/man/journalctl)(1)

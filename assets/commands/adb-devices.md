@@ -1,6 +1,6 @@
 # TAGLINE
 
-connected Android device lister
+list connected Android devices
 
 # TLDR
 

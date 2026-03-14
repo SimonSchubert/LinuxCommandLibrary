@@ -1,6 +1,6 @@
 # TAGLINE
 
-converts vector geospatial data
+Convert vector geospatial data between formats
 
 # TLDR
 
@@ -12,61 +12,76 @@ converts vector geospatial data
 
 ```ogr2ogr -f "ESRI Shapefile" [output.shp] [input.json]```
 
-**Reproject data**
+**Reproject data to WGS84**
 
 ```ogr2ogr -t_srs EPSG:4326 [output.shp] [input.shp]```
 
-**Import to PostGIS**
+**Import shapefile into PostGIS**
 
 ```ogr2ogr -f "PostgreSQL" PG:"dbname=[db]" [input.shp]```
 
-**Select specific fields**
+**Filter features with a WHERE clause**
 
-```ogr2ogr -select [field1,field2] [output] [input]```
+```ogr2ogr -where "[population > 10000]" [output.shp] [input.shp]```
+
+**Append to an existing dataset**
+
+```ogr2ogr -append -f "PostgreSQL" PG:"dbname=[db]" [input.shp]```
 
 # SYNOPSIS
 
-**ogr2ogr** [_options_] _dst_ _src_
+**ogr2ogr** [_options_] _dst_datasource_ _src_datasource_ [_layer_]
 
 # PARAMETERS
 
-_DST_
-> Destination dataset.
+_DST_DATASOURCE_
+> Destination dataset (file path, database connection string, etc.).
 
-_SRC_
+_SRC_DATASOURCE_
 > Source dataset.
 
 **-f** _FORMAT_
-> Output format.
+> Output format name (e.g., "GeoJSON", "ESRI Shapefile", "PostgreSQL", "GPKG").
 
 **-t_srs** _SRS_
-> Target coordinate system.
+> Target spatial reference system (e.g., EPSG:4326).
 
 **-s_srs** _SRS_
-> Source coordinate system.
+> Source spatial reference system (override if not defined in source).
 
 **-select** _FIELDS_
-> Select fields.
+> Comma-separated list of fields to copy from the source.
 
 **-where** _EXPR_
-> Filter expression.
+> SQL WHERE clause to filter features from the source.
 
-**--help**
-> Display help information.
+**-sql** _STATEMENT_
+> SQL statement to execute against the source for feature selection.
+
+**-overwrite**
+> Delete and recreate the output layer if it already exists.
+
+**-append**
+> Append to an existing layer instead of creating a new one.
+
+**-update**
+> Open existing output datasource in update mode.
+
+**-nln** _NAME_
+> Assign a new name to the output layer.
+
+**-nlt** _TYPE_
+> Define the geometry type for the output layer.
 
 # DESCRIPTION
 
-**ogr2ogr** converts vector geospatial data. Supports many formats.
+**ogr2ogr** converts vector geospatial data between file formats, databases, and web services. It is part of the **GDAL/OGR** library and supports over 80 vector formats including Shapefile, GeoJSON, GeoPackage, PostGIS, KML, and GML.
 
-The tool transforms between GIS formats. Part of GDAL suite.
+Beyond simple format conversion, ogr2ogr can reproject coordinates between spatial reference systems, filter features by attribute or spatial extent, select specific fields, and transform geometry types.
 
 # CAVEATS
 
-Part of GDAL. Format support varies. Coordinate system important.
-
-# HISTORY
-
-ogr2ogr is part of **GDAL/OGR** library for geospatial data processing.
+Part of the GDAL suite and must be installed separately. Format support depends on how GDAL was compiled. Coordinate system reprojection requires correct SRS definitions. Large datasets may require significant memory.
 
 # SEE ALSO
 

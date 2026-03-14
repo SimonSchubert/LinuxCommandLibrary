@@ -62,6 +62,15 @@ Configurable TUI clipboard manager for Unix
 **-clear-all**
 > Wipe the entire clipboard history including pinned items.
 
+**-clear-images**
+> Wipe all images from clipboard history.
+
+**-clear-text**
+> Wipe all text items from clipboard history.
+
+**-clean**
+> Sanitize existing text entries and remove orphaned image entries.
+
 **-kill**
 > Kill any existing background listener processes.
 
@@ -70,6 +79,9 @@ Configurable TUI clipboard manager for Unix
 
 **-v**
 > Print the version.
+
+**keep**
+> Keep the TUI open after selecting an item to copy.
 
 **-help**
 > Display help information.

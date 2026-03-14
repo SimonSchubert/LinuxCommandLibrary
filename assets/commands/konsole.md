@@ -10,15 +10,19 @@ Open terminal in a **specific directory**
 
 **Execute** a command and keep window open
 
-```konsole --noclose -e "[command]"```
+```konsole --noclose -e [command]```
 
-Open a **new tab**
+Open a **new tab** in an existing window
 
 ```konsole --new-tab```
 
-Start in **background mode**
+Start in **background mode** (Ctrl+Shift+F12 to show)
 
 ```konsole --background-mode```
+
+Use a specific **profile**
+
+```konsole --profile [profile_name]```
 
 # SYNOPSIS
 
@@ -46,6 +50,21 @@ Start in **background mode**
 
 **--separate**
 > Run in separate process
+
+**--show-tabbar**
+> Show the tab bar
+
+**--hide-tabbar**
+> Hide the tab bar
+
+**--show-menubar**
+> Show the menu bar
+
+**--hide-menubar**
+> Hide the menu bar
+
+**--fullscreen**
+> Start in fullscreen mode
 
 # DESCRIPTION
 

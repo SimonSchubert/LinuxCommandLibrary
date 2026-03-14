@@ -16,17 +16,17 @@ Compile Sass and SCSS stylesheets to CSS
 
 ```sass --watch [src/scss]:[dist/css]```
 
-**Compile with source maps**
+**Compile without source maps**
 
-```sass --source-map [input.scss] [output.css]```
+```sass --no-source-map [input.scss] [output.css]```
 
 **Compile compressed** (minified)
 
 ```sass --style=compressed [input.scss] [output.css]```
 
-**Check syntax without output**
+**Compile from stdin**
 
-```sass --check [input.scss]```
+```sass --stdin --style=compressed```
 
 **Use specific load path**
 
@@ -34,7 +34,7 @@ Compile Sass and SCSS stylesheets to CSS
 
 # SYNOPSIS
 
-**sass** [_--watch_] [_--style format_] [_--source-map_] [_--load-path path_] [_input_] [_output_]
+**sass** [_options_] [_input.scss_] [_output.css_]
 
 # PARAMETERS
 
@@ -65,7 +65,7 @@ Compile Sass and SCSS stylesheets to CSS
 **--update**
 > Only compile changed files.
 
-**--check**, **--stop-on-error**
+**--stop-on-error**
 > Stop after first error.
 
 **--color** / **--no-color**

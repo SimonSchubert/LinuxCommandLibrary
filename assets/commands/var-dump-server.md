@@ -4,17 +4,17 @@ Symfony PHP variable dump receiver
 
 # TLDR
 
-**Start server**
+**Start server on the default address**
 
 ```var-dump-server```
 
-**Custom port**
+**Start on a custom host and port**
 
 ```var-dump-server --host=[127.0.0.1:9912]```
 
-**HTML format**
+**Output dumps in HTML format to a file**
 
-```var-dump-server --format=html```
+```var-dump-server --format=html > [dump.html]```
 
 # SYNOPSIS
 
@@ -23,10 +23,10 @@ Symfony PHP variable dump receiver
 # PARAMETERS
 
 **--host** _ADDR_
-> Bind address.
+> Bind address and port (default: 127.0.0.1:9912, or the VAR_DUMPER_SERVER env var).
 
 **--format** _FMT_
-> Output format.
+> Output format (cli or html).
 
 **--help**
 > Show help.

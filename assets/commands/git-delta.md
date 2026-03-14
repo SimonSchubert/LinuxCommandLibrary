@@ -12,9 +12,13 @@ List files that differ between branches
 
 ```git delta main```
 
-**Show added files**
+**Show only added files**
 
 ```git delta [branch] --added```
+
+**Show only modified files**
+
+```git delta [branch] --modified```
 
 # SYNOPSIS
 
@@ -30,6 +34,9 @@ _BRANCH2_
 
 **--added**
 > Show only added files.
+
+**--modified**
+> Show only modified files.
 
 **--removed**
 > Show only removed files.
@@ -53,4 +60,4 @@ git delta in **git-extras** provides file-level branch diff. Note: There's also 
 
 # SEE ALSO
 
-[git-diff](/man/git-diff)(1), [git-log](/man/git-log)(1)
+[git-diff](/man/git-diff)(1), [git-log](/man/git-log)(1), [delta](/man/delta)(1)

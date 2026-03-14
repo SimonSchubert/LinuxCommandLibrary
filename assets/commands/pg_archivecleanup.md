@@ -22,18 +22,27 @@ removes old WAL archive files no longer needed by standby servers
 
 # PARAMETERS
 
-**-d**
-> Debug output.
+**-b**, **--clean-backup-history**
+> Remove backup history files as well.
 
-**-n**
-> Dry run (show what would be removed).
+**-d**, **--debug**
+> Print debug logging output on stderr.
 
-**-x** _extension_
-> File extension for compressed files.
+**-n**, **--dry-run**
+> Print the names of files that would be removed (dry run).
+
+**-V**, **--version**
+> Print version and exit.
+
+**-x**, **--strip-extension** _extension_
+> Strip this extension from filenames before deciding if they should be deleted. Useful for compressed archives (e.g., .gz, .bz2).
+
+**-?**, **--help**
+> Show help and exit.
 
 # DESCRIPTION
 
-**pg_archivecleanup** removes old WAL archive files no longer needed by standby servers. Typically used as archive_cleanup_command in recovery.conf. Maintains WAL archive size.
+**pg_archivecleanup** removes old WAL archive files no longer needed by standby servers. It is typically used as **archive_cleanup_command** in **postgresql.conf** (or recovery.conf in older versions). It removes all WAL files older than the specified _oldestkeptwalfile_.
 
 # SEE ALSO
 

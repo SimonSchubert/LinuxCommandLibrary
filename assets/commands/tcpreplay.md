@@ -58,7 +58,7 @@ Common use cases include testing network devices like firewalls and IDS/IPS syst
 
 # CAVEATS
 
-Root required. Raw socket access. May disrupt networks.
+Requires root for raw socket access. Replaying traffic on a production network can cause disruption. The interface specified with **-i** must be up. For editing packets before replay, use **tcprewrite**.
 
 # HISTORY
 

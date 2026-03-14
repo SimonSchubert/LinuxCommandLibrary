@@ -4,9 +4,13 @@ Benchmark Proxmox host performance
 
 # TLDR
 
-Show **CPU and hard disk performance** data
+Benchmark **root filesystem** performance
 
 ```pveperf```
+
+Benchmark a **specific mount point**
+
+```pveperf [/mnt/storage]```
 
 # SYNOPSIS
 
@@ -19,13 +23,13 @@ _path_
 
 # DESCRIPTION
 
-**pveperf** runs a quick benchmark to measure CPU and storage performance on a Proxmox VE host. It tests CPU performance using BogoMIPS calculations and storage performance with sequential and random read/write tests.
+**pveperf** runs a quick benchmark to measure CPU and storage performance on a Proxmox VE host. It reports CPU BOGOMIPS, regex processing speed (REGEX/SECOND), hard disk size, buffered read speed, average seek time, fsync rate (FSYNCS/SECOND), and DNS resolution times (external and internal).
 
-The results help identify potential performance bottlenecks and verify that storage meets minimum requirements for virtualization workloads. Default test runs on the root filesystem mount point.
+The results help identify potential performance bottlenecks and verify that storage meets minimum requirements for virtualization workloads. The fsync rate is particularly important for database and VM disk performance. Default test runs on the root filesystem mount point.
 
 # CAVEATS
 
-Benchmark results are approximate and may vary between runs. For accurate storage benchmarking, consider dedicated tools like fio. Results should be interpreted in context of workload requirements.
+Benchmark results are approximate and may vary between runs. For accurate storage benchmarking, consider dedicated tools like [fio](/man/fio)(1). Results should be interpreted in context of workload requirements. Requires root privileges.
 
 # HISTORY
 

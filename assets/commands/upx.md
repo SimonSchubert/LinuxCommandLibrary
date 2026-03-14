@@ -1,6 +1,6 @@
 # TAGLINE
 
-Compress executable files for distribution
+Ultimate Packer for eXecutables
 
 # TLDR
 
@@ -36,6 +36,10 @@ Compress executable files for distribution
 
 ```upx -q [program]```
 
+**Compress to a different output file**
+
+```upx -o [packed_program] [program]```
+
 # SYNOPSIS
 
 **upx** [_-d_] [_-t_] [_-l_] [_--best_] [_-1..-9_] [_options_] _files_
@@ -46,10 +50,13 @@ Compress executable files for distribution
 > Compression level (1=fast, 9=best).
 
 **--best**
-> Best compression.
+> Alias for -9, best compression ratio.
 
 **--brute**
-> Try all methods (slow).
+> Try all compression methods and filters (very slow).
+
+**--ultra-brute**
+> Even more exhaustive search (extremely slow).
 
 **-d**
 > Decompress.

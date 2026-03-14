@@ -8,25 +8,29 @@ starts a local development server with live reload
 
 ```hugo server```
 
-**With drafts**
+**Include draft content**
 
 ```hugo server -D```
 
-**Custom port**
+**Start on a custom port**
 
 ```hugo server -p [8080]```
 
-**Bind to all interfaces**
+**Bind to all interfaces** (accessible from other devices on the network)
 
-```hugo server --bind [0.0.0.0]```
+```hugo server --bind 0.0.0.0```
 
 **Disable live reload**
 
 ```hugo server --disableLiveReload```
 
-**With polling**
+**Navigate to changes** automatically in the browser
 
-```hugo server --poll [1000ms]```
+```hugo server --navigateToChanged```
+
+**Build and serve with a specific base URL**
+
+```hugo server --baseURL [http://example.com]```
 
 # SYNOPSIS
 
@@ -35,40 +39,58 @@ starts a local development server with live reload
 # PARAMETERS
 
 **-D**, **--buildDrafts**
-> Include draft posts.
+> Include draft content.
+
+**-E**, **--buildExpired**
+> Include expired content.
+
+**-F**, **--buildFuture**
+> Include content with future publish dates.
 
 **-p**, **--port** _PORT_
-> Server port.
+> Server port (default: 1313).
 
 **--bind** _ADDR_
-> Listen address.
+> Listen address (default: 127.0.0.1).
+
+**-b**, **--baseURL** _URL_
+> Hostname and path to the root.
 
 **--disableLiveReload**
-> Disable live reload.
+> Disable automatic live reloading of browser.
+
+**--navigateToChanged**
+> Navigate to changed content file on live reload.
 
 **--poll** _DURATION_
-> Use polling for changes.
+> Use polling with this period for file change detection (e.g., 700ms).
 
 **-w**, **--watch**
-> Watch for changes.
+> Watch for changes and rebuild (default: true).
+
+**--noHTTPCache**
+> Prevent HTTP caching.
+
+**--renderStaticToDisk**
+> Serve static files from disk and dynamic files from memory.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**hugo server** starts a local development server with live reload. It watches for file changes and automatically rebuilds the site.
+**hugo server** starts a local development server with live reload. It watches for file changes and automatically rebuilds the site, then signals connected browsers to refresh via injected JavaScript.
 
-The server provides fast iteration during development. Live reload refreshes browsers automatically when content changes.
+The server renders content to memory by default for speed. It defaults to **localhost:1313** and enables watching/live reload automatically.
 
 # CAVEATS
 
-Development only. Not for production. Memory usage with large sites.
+Intended for development only, not production use. The **--bind 0.0.0.0** option exposes the server on all network interfaces. Memory usage can be significant with large sites since content is rendered to memory. Use **--poll** in environments where filesystem events are unreliable (e.g., Docker, network mounts).
 
 # HISTORY
 
-hugo server is the built-in development server for **Hugo** static site generator.
+hugo server is the built-in development server for **Hugo**, the open-source static site generator written in Go.
 
 # SEE ALSO
 
-[hugo](/man/hugo)(1), [jekyll-serve](/man/jekyll-serve)(1), [live-server](/man/live-server)(1)
+[hugo](/man/hugo)(1), [live-server](/man/live-server)(1)

@@ -4,54 +4,50 @@ generates license text for open source projects
 
 # TLDR
 
-**Generate MIT license**
+**Generate MIT license** with a copyright holder name
 
-```licensor MIT```
+```licensor MIT "[Your Name]"```
 
-**Generate Apache license**
+**Generate Apache license** and save to file
 
-```licensor Apache-2.0```
+```licensor Apache-2.0 > LICENSE```
 
 **Generate GPL license**
 
 ```licensor GPL-3.0```
 
-**Save to LICENSE file**
+**Generate license** with exception expression
 
-```licensor MIT -o LICENSE```
+```licensor "Apache-2.0 WITH LLVM-exception" --skip-optional```
 
 **List available licenses**
 
-```licensor --list```
-
-**With custom name**
-
-```licensor MIT "[Your Name]"```
+```licensor --licenses```
 
 # SYNOPSIS
 
-**licensor** [_options_] _license_ [_name_]
+**licensor** _license_ [_name_] [_options_]
 
 # PARAMETERS
 
 _LICENSE_
-> License identifier (MIT, Apache-2.0, GPL-3.0, etc.).
+> SPDX license identifier (MIT, Apache-2.0, GPL-3.0, etc.). Supports exception expressions.
 
 _NAME_
-> Copyright holder name.
+> Copyright holder name (optional, for licenses that include it).
 
-**-o** _FILE_
-> Output to file.
+**--licenses**
+> List all available SPDX license identifiers.
 
-**--list**
-> List available licenses.
+**--skip-optional**
+> Omit optional sections from the license text.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**licensor** generates license text for open source projects. It supports SPDX license identifiers.
+**licensor** writes license text to stdout given an SPDX license identifier. All licenses are compiled into the binary. If the provided ID isn't found, similar ones will be suggested.
 
 The tool outputs properly formatted license text with copyright holder and year filled in.
 
@@ -61,7 +57,7 @@ Uses SPDX identifiers. Rust-based tool. May need installation via cargo.
 
 # HISTORY
 
-licensor is a **Rust-based** license text generator using SPDX license identifiers for standardized open source licensing.
+licensor was created by **Raphael Theriault** (raftario) as a **Rust-based** license text generator using SPDX license identifiers.
 
 # SEE ALSO
 

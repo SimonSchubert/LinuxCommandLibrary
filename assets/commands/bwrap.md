@@ -12,6 +12,14 @@ Give access to **devices, process info, and tmpfs**
 
 ```bwrap --dev-bind /dev /dev --proc /proc --ro-bind / / --tmpfs /tmp [/bin/bash]```
 
+**Run with no network access**
+
+```bwrap --unshare-net --ro-bind / / --dev /dev --proc /proc [/bin/bash]```
+
+**Run isolated process** that dies when parent exits
+
+```bwrap --unshare-all --die-with-parent --ro-bind / / --dev /dev --proc /proc [command]```
+
 # SYNOPSIS
 
 **bwrap** [_options_] _command_ [_arguments_]
@@ -47,6 +55,54 @@ The tool is commonly used by Flatpak and other sandboxing systems to isolate app
 
 **--unshare-user**
 > Create new user namespace
+
+**--unshare-all**
+> Unshare all available namespaces
+
+**--unshare-ipc**
+> Create new IPC namespace
+
+**--unshare-uts**
+> Create new UTS namespace
+
+**--unshare-cgroup**
+> Create new cgroup namespace
+
+**--symlink** _SRC_ _DEST_
+> Create a symbolic link
+
+**--dev** _DEST_
+> Mount new devtmpfs at destination
+
+**--dir** _DEST_
+> Create a directory
+
+**--setenv** _VAR_ _VALUE_
+> Set environment variable
+
+**--unsetenv** _VAR_
+> Remove environment variable
+
+**--chdir** _DIR_
+> Change working directory
+
+**--hostname** _HOSTNAME_
+> Set custom hostname (requires --unshare-uts)
+
+**--die-with-parent**
+> Kill sandbox when parent process dies
+
+**--new-session**
+> Create new terminal session via setsid()
+
+**--cap-add** _CAP_
+> Add Linux capability
+
+**--cap-drop** _CAP_
+> Drop Linux capability
+
+**--seccomp** _FD_
+> Load seccomp rules from file descriptor
 
 # CAVEATS
 

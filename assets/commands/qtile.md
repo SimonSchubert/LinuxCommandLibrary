@@ -18,15 +18,15 @@ Show **resource usage** information
 
 **Run command** on specific group
 
-```qtile run-cmd --group groupname --float xterm```
+```qtile run-cmd --group [groupname] --float xterm```
 
 **Restart** the window manager
 
 ```qtile cmd-obj --object cmd --function restart```
 
-Execute a **shell command**
+Start with **Wayland** backend
 
-```qtile shell -c "lazy.spawn('xterm')"```
+```qtile start --backend wayland```
 
 # SYNOPSIS
 
@@ -40,6 +40,9 @@ Execute a **shell command**
 
 **start**
 > Start the window manager (run from .xsession or similar)
+
+**start --backend** _BACKEND_
+> Start with specified backend (x11 or wayland)
 
 **check**
 > Check configuration file for errors (default: ~/.config/qtile/config.py)
@@ -56,16 +59,16 @@ Execute a **shell command**
 **shell**
 > Open interactive Python shell for qtile control
 
-**--group GROUP**
+**--group** _GROUP_
 > Specify the group (workspace) for run-cmd
 
 **--float**
 > Launch window as floating
 
-**--object OBJECT**
+**--object** _OBJECT_
 > Specify object for cmd-obj
 
-**--function FUNCTION**
+**--function** _FUNCTION_
 > Specify function to call for cmd-obj
 
 # CAVEATS

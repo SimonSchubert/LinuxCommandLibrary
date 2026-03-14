@@ -8,9 +8,13 @@ manage Docker Swarm cluster nodes
 
 ```docker node ls```
 
-**Inspect a node**
+**Inspect a node** in pretty format
 
-```docker node inspect [node]```
+```docker node inspect --pretty [node]```
+
+**List tasks running** on a node
+
+```docker node ps [node]```
 
 **Promote node to manager**
 
@@ -20,15 +24,15 @@ manage Docker Swarm cluster nodes
 
 ```docker node demote [node]```
 
-**Update node availability**
+**Drain** a node (stop scheduling tasks)
 
-```docker node update --availability [drain] [node]```
+```docker node update --availability drain [node]```
 
 **Add label to node**
 
 ```docker node update --label-add [key=value] [node]```
 
-**Remove a node**
+**Remove a node** from swarm
 
 ```docker node rm [node]```
 
@@ -61,7 +65,7 @@ manage Docker Swarm cluster nodes
 
 # DESCRIPTION
 
-**docker node** manages Swarm nodes. Nodes are Docker hosts participating in a swarm cluster. Only works when the Docker daemon is running in swarm mode. Managers coordinate cluster operations while workers execute tasks. Node management includes controlling availability, labels for task placement constraints, and role assignments.
+**docker node** manages Swarm nodes. Nodes are Docker hosts participating in a swarm cluster. Only works when the Docker daemon is running in swarm mode. Managers coordinate cluster operations while workers execute tasks. Node management includes controlling availability (active, pause, drain), labels for task placement constraints, and role assignments (manager/worker).
 
 # SEE ALSO
 

@@ -46,7 +46,7 @@ The generated Cargo.toml includes the package name, version, and Rust edition. T
 > Package name (defaults to directory name)
 
 **--edition** _year_
-> Rust edition (2015, 2018, 2021, 2024)
+> Rust edition (2015, 2018, 2021, 2024). Defaults to latest stable edition.
 
 **--vcs** _type_
 > Version control system (git, hg, pijul, fossil, none)
@@ -72,7 +72,7 @@ project_name/
 
 # CAVEATS
 
-Use cargo init for existing directories. Default edition is 2024 in recent Rust versions.
+Use `cargo init` for existing directories. Package names must use only alphanumeric characters, hyphens, or underscores.
 
 # SEE ALSO
 

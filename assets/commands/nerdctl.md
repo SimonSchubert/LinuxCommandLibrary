@@ -84,29 +84,38 @@ docker-compatible CLI for containerd, the industry-standard container runtime
 
 # PARAMETERS
 
-**-a, --all**
+**-a**, **--all**
 > Show all containers (default: running only)
 
-**-it, --interactive --tty**
-> Interactive mode with pseudo-TTY
+**-i**, **--interactive**
+> Keep STDIN open
 
-**-d, --detach**
+**-t**, **--tty**
+> Allocate a pseudo-TTY
+
+**-d**, **--detach**
 > Run container in background
 
-**--name _name_**
+**--name** _name_
 > Assign name to container
 
-**-p, --publish _port_**
-> Publish container port
+**-p**, **--publish** _port_
+> Publish container port (host:container)
 
-**-v, --volume _mount_**
-> Bind mount a volume
+**-v**, **--volume** _mount_
+> Bind mount a volume (host:container)
 
-**-f, --follow**
+**-f**, **--follow**
 > Follow log output
 
 **--rm**
 > Remove container after exit
+
+**-e**, **--env** _VAR=VALUE_
+> Set environment variable
+
+**--network** _network_
+> Connect to a network
 
 # DESCRIPTION
 

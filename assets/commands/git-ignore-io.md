@@ -8,21 +8,25 @@ Generate gitignore from templates
 
 ```git ignore-io [Python]```
 
-**Generate for multiple**
+**Generate for multiple types**
 
 ```git ignore-io [Python] [macOS] [vim]```
 
-**List available templates**
+**Append to .gitignore** in current directory
 
-```git ignore-io --list```
+```git ignore-io -a [Python] [vim]```
+
+**Replace .gitignore** in current directory
+
+```git ignore-io -r [Python] [macOS]```
+
+**List available templates** in table format
+
+```git ignore-io -l```
 
 **Search templates**
 
-```git ignore-io --search [node]```
-
-**Append to gitignore**
-
-```git ignore-io [Python] >> .gitignore```
+```git ignore-io -s [node]```
 
 # SYNOPSIS
 
@@ -33,11 +37,26 @@ Generate gitignore from templates
 _TEMPLATES_
 > Template names from gitignore.io.
 
-**--list**, **-l**
-> List available templates.
+**-a**, **--append** _TYPES_
+> Append new content to .gitignore under current directory.
 
-**--search** _TERM_, **-s** _TERM_
-> Search templates.
+**-r**, **--replace** _TYPES_
+> Replace .gitignore in current directory with new content.
+
+**-l**, **--list-in-table**
+> List available templates in table format.
+
+**-L**, **--list-alphabetically**
+> List available templates alphabetically.
+
+**-s**, **--search** _WORD_
+> Search for a word in available types.
+
+**-t**, **--show-update-time**
+> Show the last modified time of the cached type list.
+
+**-u**, **--update-list**
+> Update the cached type list.
 
 **--help**
 > Display help information.
@@ -58,4 +77,4 @@ git ignore-io is part of **git-extras**, providing command-line access to **giti
 
 # SEE ALSO
 
-[git-ignore](/man/git-ignore)(1), [gibo](/man/gibo)(1), [gitignore](/man/gitignore)(5)
+[git-ignore](/man/git-ignore)(1), [gibo](/man/gibo)(1), [git-extras](/man/git-extras)(1)

@@ -45,18 +45,19 @@ Python deterministic profiler
 > Sort output by specified column.
 
 **-m** _module_
-> Profile a module instead of script.
+> Profile a module instead of a script.
 
 # SORT OPTIONS
 
-**calls**: Number of calls
-**cumtime**: Cumulative time (including subcalls)
-**cumulative**: Alias for cumtime
-**tottime**: Total time in function (excluding subcalls)
-**time**: Alias for tottime
-**ncalls**: Number of calls
-**name**: Function name
+**calls** / **ncalls**: Number of calls
+**cumulative** / **cumtime**: Cumulative time (including subcalls)
+**tottime** / **time**: Total time in function (excluding subcalls)
 **filename**: File name
+**module**: Module name
+**name** / **nfl**: Function name (name/file/line)
+**pcalls**: Primitive call count
+**stdname**: Standard name
+**line**: Line number
 
 # DESCRIPTION
 
@@ -92,4 +93,4 @@ cProfile was added to Python in version **2.5** (2006) as a faster alternative t
 
 # SEE ALSO
 
-[profile](/man/profile)(3py), [timeit](/man/timeit)(1), [py-spy](/man/py-spy)(1), [line_profiler](/man/line_profiler)(1)
+[py-spy](/man/py-spy)(1), [python](/man/python)(1)

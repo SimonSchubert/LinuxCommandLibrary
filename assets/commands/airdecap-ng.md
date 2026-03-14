@@ -45,7 +45,10 @@ The tool can also strip 802.11 wireless headers to convert captures to standard 
 > Access point MAC address filter
 
 **-l**
-> Remove 802.11 header (don't decrypt)
+> Remove 802.11 header (don't decrypt, just convert to ethernet format).
+
+**-k** _pmk_
+> Use the specified Pairwise Master Key (in hex) instead of passphrase.
 
 # CAVEATS
 
@@ -57,4 +60,4 @@ For WPA decryption, you need the passphrase AND the SSID. The capture file must 
 
 # SEE ALSO
 
-[aircrack-ng](/man/aircrack-ng)(1), [wireshark](/man/wireshark)(1), [tcpdump](/man/tcpdump)(1)
+[aircrack-ng](/man/aircrack-ng)(1), [airodump-ng](/man/airodump-ng)(1), [wireshark](/man/wireshark)(1), [tcpdump](/man/tcpdump)(1)

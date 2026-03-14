@@ -1,6 +1,6 @@
 # TAGLINE
 
-test fingerprint authentication
+verify a fingerprint against enrolled prints
 
 # TLDR
 
@@ -20,10 +20,6 @@ Verify a **specific fingerprint** for a **specific user**
 
 ```fprintd-verify -f [finger_name] [username]```
 
-**Fail** the process if a fingerprint doesn't match
-
-```fprintd-verify --g-fatal-warnings```
-
 Display **help**
 
 ```fprintd-verify -h```
@@ -37,21 +33,18 @@ Display **help**
 **-f**, **--finger** _FINGER_
 > Specify which finger to verify: left-thumb, left-index-finger, left-middle-finger, left-ring-finger, left-little-finger, right-thumb, right-index-finger, right-middle-finger, right-ring-finger, right-little-finger
 
-**--g-fatal-warnings**
-> Exit with error code if verification fails
-
 **-h**, **--help**
 > Display help message
 
 # DESCRIPTION
 
-**fprintd-verify** tests enrolled fingerprints against the fprintd database. It prompts the user to scan their finger and reports whether the scan matches any enrolled fingerprint.
+**fprintd-verify** tests enrolled fingerprints against the fprintd database. It prompts the user to scan their finger and reports whether the scan matches any enrolled fingerprint. It communicates with the fprintd daemon over D-Bus.
 
 This is useful for testing fingerprint enrollment quality and troubleshooting authentication issues. Without specifying a finger, the system attempts to match against any enrolled finger.
 
 # CAVEATS
 
-Verification success depends on scan quality and may require multiple attempts. Environmental factors like moisture or dirt on the sensor can affect results. This command is for testing; actual authentication uses PAM integration.
+Verification success depends on scan quality and may require multiple attempts. Environmental factors like moisture or dirt on the sensor can affect results. This command is for testing purposes; actual login authentication uses the PAM module **pam_fprintd**. The fprintd daemon must be running for this command to work.
 
 # SEE ALSO
 

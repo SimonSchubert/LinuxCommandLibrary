@@ -4,29 +4,33 @@ official CLI for JFrog platform
 
 # TLDR
 
-**Configure server**
+**Configure a server connection**
 
 ```jfrog config add [server-id]```
 
-**Upload to Artifactory**
+**Upload artifacts to Artifactory**
 
 ```jfrog rt upload [file] [repo/path/]```
 
-**Download from Artifactory**
+**Download artifacts from Artifactory**
 
 ```jfrog rt download [repo/path/]```
 
-**Build integration**
+**Publish build info**
 
-```jfrog rt build-publish [name] [number]```
+```jfrog rt build-publish [build-name] [build-number]```
 
 **Scan for vulnerabilities**
 
-```jfrog xr scan [path]```
+```jfrog audit```
 
-**Docker operations**
+**Push a Docker image**
 
-```jfrog docker push [image] [repo]```
+```jfrog docker push [image:tag] [repo]```
+
+**Search for artifacts**
+
+```jfrog rt search [repo/path/]```
 
 # SYNOPSIS
 
@@ -40,8 +44,8 @@ official CLI for JFrog platform
 **rt**
 > Artifactory commands.
 
-**xr**
-> Xray security scanning.
+**audit**
+> Security scanning and vulnerability detection.
 
 **docker**
 > Container registry.

@@ -4,23 +4,31 @@ Incremental bisect-style merging
 
 # TLDR
 
-**Start incremental merge**
+**Start an incremental merge** of a branch
 
 ```git imerge start --name=[merge-name] [branch]```
 
-**Continue merge**
+**Start an incremental rebase** onto current branch
+
+```git imerge rebase [branch]```
+
+**Continue resolving** after fixing a conflict
 
 ```git imerge continue```
 
-**Show merge status**
+**Show visual merge** progress diagram
 
 ```git imerge diagram```
 
-**Finish merge**
+**Finish the merge** when all conflicts are resolved
 
 ```git imerge finish```
 
-**Abort merge**
+**List all in-progress** incremental merges
+
+```git imerge list```
+
+**Abort and remove** the incremental merge
 
 ```git imerge remove```
 
@@ -33,23 +41,56 @@ Incremental bisect-style merging
 **start**
 > Begin incremental merge.
 
+**merge**
+> Start an incremental merge (shorthand for start --goal merge).
+
+**rebase**
+> Start an incremental rebase (shorthand for start --goal rebase).
+
 **continue**
 > Continue resolving conflicts.
 
 **finish**
-> Complete merge.
+> Complete the incremental merge.
 
 **remove**
-> Abort incremental merge.
+> Abort and remove incremental merge state.
 
 **diagram**
-> Show visual merge status.
+> Show visual merge status grid.
+
+**list**
+> List all in-progress incremental merges.
+
+**autofill**
+> Attempt to fill in all merge blocks automatically.
+
+**simplify**
+> Simplify the merge history after finishing.
+
+**init**
+> Initialize an imerge from existing merge state.
+
+**record**
+> Record the result of a merge done manually.
+
+**drop**
+> Drop a commit from the merge.
+
+**revert**
+> Revert a commit in the merge.
 
 **--name** _NAME_
-> Merge branch name.
+> Name for the incremental merge.
 
 **--goal** _GOAL_
-> Merge goal (merge, rebase, etc.).
+> Merge goal: merge, rebase, rebase-with-history, border, border-with-history.
+
+**--first-parent**
+> Handle first-parent history only.
+
+**--force**
+> Force start even if one is already in progress.
 
 **--help**
 > Display help information.

@@ -63,7 +63,22 @@ ANSI Common Lisp implementation
 > Use modern (lowercase) symbol case.
 
 **-ansi**
-> ANSI Common Lisp mode.
+> Comply with ANSI Common Lisp standard.
+
+**-traditional**
+> Use traditional (pre-ANSI) behavior.
+
+**-norc**
+> Do not load the user RC file (~/.clisprc.lisp).
+
+**-repl**
+> Start a REPL regardless of other options.
+
+**-on-error** _action_
+> Action on error: debug, exit, abort, appease.
+
+**-disable-readline**
+> Do not use GNU readline for input.
 
 **--help**
 > Display help.
@@ -89,4 +104,4 @@ CLISP was originally developed by **Bruno Haible** and **Michael Stoll** startin
 
 # SEE ALSO
 
-[sbcl](/man/sbcl)(1), [ecl](/man/ecl)(1), [ccl](/man/ccl)(1), [quicklisp](/man/quicklisp)(1)
+[sbcl](/man/sbcl)(1), [ecl](/man/ecl)(1), [quicklisp](/man/quicklisp)(1)

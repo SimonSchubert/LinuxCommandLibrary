@@ -12,9 +12,9 @@ Generate with **specific template**
 
 ```autoconf -o [configure] [configure.ac]```
 
-Generate from **configure.in** (old)
+**Trace** a specific macro in configure.ac
 
-```autoconf configure.in > configure```
+```autoconf --trace=[AC_CHECK_LIB]```
 
 Show **version**
 
@@ -48,7 +48,10 @@ Autoconf is part of the GNU Build System (autotools), used by thousands of open 
 > Verbose output
 
 **--trace=**_macro_
-> Trace macro calls
+> Trace macro calls in configure.ac
+
+**-B** _dir_
+> Prepend directory to search path
 
 # WORKFLOW
 
@@ -67,4 +70,4 @@ Requires M4 macro processor. Complex syntax based on M4. Generated configure scr
 
 # SEE ALSO
 
-[automake](/man/automake)(1), [autoreconf](/man/autoreconf)(1), [configure](/man/configure)(1)
+[automake](/man/automake)(1), [autoreconf](/man/autoreconf)(1), [configure](/man/configure)(1), [m4](/man/m4)(1), [libtool](/man/libtool)(1)

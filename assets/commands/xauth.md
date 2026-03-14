@@ -4,73 +4,119 @@ X11 authorization credential management
 
 # TLDR
 
-Use specific **authority** file
-
-```xauth -f [path/to/file]```
-
-Display **info**
-
-```xauth info```
-
-**List** all entries
+**List all authorization entries**
 
 ```xauth list```
 
-**Add** authorization
+**Display authority file info**
 
-```xauth add [display_name] [protocol_name] [key]```
+```xauth info```
 
-**Remove** authorization
+**Add an authorization entry**
+
+```xauth add [display_name] [protocol_name] [hex_key]```
+
+**Generate a new authorization entry via the server**
+
+```xauth generate [display_name] [protocol_name]```
+
+**Remove an authorization entry**
 
 ```xauth remove [display_name]```
 
-**Extract** current display
+**Extract entry for the current display to a file**
 
-```xauth extract - $DISPLAY```
+```xauth extract [path/to/file] $DISPLAY```
 
-**Merge** from file
+**Merge entries from a file**
 
-```cat [path/to/file] | xauth merge -```
+```xauth merge [path/to/file]```
+
+**Use a specific authority file**
+
+```xauth -f [path/to/file] list```
 
 # SYNOPSIS
 
-**xauth** [_OPTIONS_] [_COMMAND_]
+**xauth** [_options_] [_command_ [_args_]]
 
 # COMMANDS
 
-**info**
-> Display authority file information
+**add** _DISPLAY_ _PROTOCOL_ _HEXKEY_
+> Add an authorization entry for the indicated display.
 
-**list**
-> List authorization entries
-
-**add** _DISPLAY_ _PROTOCOL_ _KEY_
-> Add authorization entry
+**generate** _DISPLAY_ _PROTOCOL_ [_options_]
+> Contact the server to generate and add an authorization entry.
 
 **remove** _DISPLAY_
-> Remove authorization entry
+> Remove matching authorization entries.
+
+**list** [_DISPLAY_]
+> List authorization entries (all if no display specified).
+
+**nlist** [_DISPLAY_]
+> List entries in numeric format.
 
 **extract** _FILE_ _DISPLAY_
-> Extract entry to file
+> Write authorization entries to a file.
 
-**merge** _FILE_
-> Merge entries from file
+**nextract** _FILE_ _DISPLAY_
+> Extract entries in numeric format for non-binary transmission.
+
+**merge** _FILE_...
+> Read and merge authorization entries from files.
+
+**nmerge** _FILE_...
+> Merge entries in numeric format.
+
+**source** _FILE_
+> Execute xauth commands from a script file.
+
+**info**
+> Display information about the authority file.
+
+**exit**
+> Save changes and exit.
+
+**quit**
+> Exit without saving changes.
+
+**help**
+> List available commands.
 
 # PARAMETERS
 
 **-f** _FILE_
-> Use specified authority file
+> Use the specified authority file instead of ~/.Xauthority.
+
+**-v**
+> Verbose mode. Print status messages for operations.
+
+**-q**
+> Quiet mode. Suppress unsolicited status messages.
+
+**-i**
+> Ignore authority file locks.
+
+**-b**
+> Attempt to break stale authority file locks.
+
+**-n**
+> Do not resolve hostnames; display stored addresses directly.
+
+**-V**
+> Display the xauth version number.
 
 # DESCRIPTION
 
-**xauth** edits and displays the authorization information used for connecting to X servers. It manages the ~/.Xauthority file which contains credentials for X11 authentication.
+**xauth** edits and displays the authorization information used for connecting to X servers. It manages the ~/.Xauthority file (or the file specified by the XAUTHORITY environment variable) which contains credentials for X11 authentication.
 
-The tool is used for X11 forwarding, remote display access, and managing X security.
+The tool is commonly used to extract authorization records from one machine and merge them on another for remote display access, X11 forwarding over SSH, and managing X security.
 
 # CAVEATS
 
-Authority files contain sensitive credentials. X11 forwarding requires proper xauth setup. File permissions should be restrictive.
+Authority files contain sensitive credentials and should have restrictive permissions (readable only by the owner). X11 forwarding with SSH requires proper xauth setup. The program does not contact the X server except when the `generate` command is used.
 
 # SEE ALSO
 
-[xhost](/man/xhost)(1), [ssh](/man/ssh)(1)
+[xhost](/man/xhost)(1), [ssh](/man/ssh)(1), [xdpyinfo](/man/xdpyinfo)(1)

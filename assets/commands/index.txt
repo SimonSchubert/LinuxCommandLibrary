@@ -239,6 +239,7 @@ apptainer-inspect.md
 apptainer-overlay.md
 apptainer-pull.md
 apptainer-push.md
+apptainer-registry.md
 apptainer-run-help.md
 apptainer-run.md
 apptainer-search.md
@@ -3864,6 +3865,7 @@ lid.libuser.md
 lid.md
 light.md
 lighthouse.md
+lightpanda.md
 lilypond.md
 lima.md
 limactl.md
@@ -5023,6 +5025,7 @@ ouch.md
 outguess.md
 outside.md
 ov.md
+owut.md
 ox.md
 oxipng.md
 oxker.md
@@ -7575,6 +7578,7 @@ unzipsfx.md
 unzstd.md
 up.md
 update-alternatives.md
+update-ca-certificates.md
 update-ca-trust.md
 update-desktop-database.md
 update-grub.md

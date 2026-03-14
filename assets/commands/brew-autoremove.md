@@ -39,7 +39,7 @@ brew cleanup                # Remove cached downloads
 
 # PREVENTING REMOVAL
 
-To prevent a formula from being removed by autoremove, mark it as "installed on request":
+To prevent a formula from being removed by autoremove, reinstall it explicitly to mark it as "installed on request":
 
 ```brew install formula```
 

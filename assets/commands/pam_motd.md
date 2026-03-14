@@ -37,19 +37,15 @@ displays message of the day
 
 # DESCRIPTION
 
-**pam_motd** displays message of the day. Shows /etc/motd on login.
+**pam_motd** is a PAM module that displays the "message of the day" to users upon login. By default it shows the contents of **/etc/motd**. It can also run executable scripts in a motd directory (e.g., **/etc/update-motd.d/**) to generate dynamic messages showing system information, security updates, or custom notices.
 
-The module presents login messages. Supports dynamic MOTD generation.
+The module is configured in PAM service files (typically **/etc/pam.d/login** or **/etc/pam.d/sshd**) as a **session** module. It is always marked **optional** so that login succeeds even if the MOTD cannot be displayed.
 
 # CAVEATS
 
-Session module. Can run scripts. Multiple file support.
-
-# HISTORY
-
-pam_motd displays the **message of the day** for login sessions.
+Scripts in **motd_dir** run as root during login, so they must be carefully audited. Long-running scripts will delay the login process. The **noupdate** option prevents script execution but still displays static MOTD files.
 
 # SEE ALSO
 
-[pam](/man/pam)(8), [motd](/man/motd)(5), [update-motd](/man/update-motd)(5)
+[pam](/man/pam)(8), [motd](/man/motd)(5)
 

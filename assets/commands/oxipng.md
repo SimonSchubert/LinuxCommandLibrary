@@ -12,9 +12,9 @@ multithreaded PNG optimization tool written in Rust
 
 ```oxipng -o max [image.png]```
 
-**Optimize preserving original**
+**Optimize and write to a different file**
 
-```oxipng [input.png] -o [output.png]```
+```oxipng --out [output.png] [input.png]```
 
 **Optimize all PNGs in directory**
 
@@ -46,7 +46,7 @@ multithreaded PNG optimization tool written in Rust
 > Optimization level (0-6, max).
 
 **-s**, **--strip** _MODE_
-> Strip metadata: none, safe, all.
+> Strip metadata: none, safe (non-rendering metadata), all (everything non-critical). -s alone is shorthand for --strip safe.
 
 **-a**, **--alpha**
 > Additional alpha optimizations.
@@ -76,10 +76,13 @@ multithreaded PNG optimization tool written in Rust
 > Keep backup of original file.
 
 **-f** _NUM_, **--filters** _NUM_
-> Filter strategies to try (0-5).
+> Filter strategies to try (0=None, 1=Sub, 2=Up, 3=Average, 4=Paeth, 5=MinSum, 6=Entropy, 7=Bigrams, 8=BigEnt, 9=Brute). Supports comma-separated lists or ranges (e.g., 0-5).
 
-**-z**, **--zopfli**
-> Use Zopfli for better compression (slower).
+**-Z**, **--zopfli**
+> Use Zopfli for better compression (much slower).
+
+**--timeout** _seconds_
+> Maximum time to spend optimizing a single file.
 
 **--check**
 > Verify output integrity.

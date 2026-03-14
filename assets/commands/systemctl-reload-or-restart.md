@@ -34,9 +34,9 @@ For **user** units
 
 # DESCRIPTION
 
-**systemctl reload-or-restart** attempts to reload a unit's configuration if the unit supports reloading, otherwise it restarts the unit. This is useful for applying configuration changes when you don't know if the service supports hot reloading.
+**systemctl reload-or-restart** reloads one or more units if they support it. If not, it stops and then starts them instead. If the units are not running yet, they will be started.
 
-If the unit supports `ExecReload=`, configuration is reloaded without interrupting the service. Otherwise, the unit is stopped and started again.
+This is useful for applying configuration changes when you don't know whether a service supports hot reloading. If the unit has `ExecReload=` defined, configuration is reloaded without interrupting the service. Otherwise, the unit is stopped and started again.
 
 # CAVEATS
 

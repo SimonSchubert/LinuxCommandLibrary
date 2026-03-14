@@ -59,8 +59,23 @@ Erlang runtime system and interactive shell
 **-eval** _EXPR_
 > Evaluate expression at startup.
 
+**-run** _MOD_ [_FUNC_ [_ARGS_]]
+> Similar to -s but passes arguments as a list of strings.
+
 **-config** _FILE_
-> Configuration file.
+> Application configuration file (sys.config).
+
+**-detached**
+> Start the Erlang runtime system detached from the controlling terminal.
+
+**-heart**
+> Start a heartbeat monitoring process.
+
+**+P** _NUM_
+> Set maximum number of concurrent processes (default 262144).
+
+**+K** _true|false_
+> Enable or disable kernel poll (epoll/kqueue).
 
 # CONFIGURATION
 
@@ -88,4 +103,4 @@ Erlang was developed at **Ericsson** starting in **1986** by **Joe Armstrong**, 
 
 # SEE ALSO
 
-[erlc](/man/erlc)(1), [elixir](/man/elixir)(1), [rebar3](/man/rebar3)(1)
+[erlc](/man/erlc)(1), [elixir](/man/elixir)(1)

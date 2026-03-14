@@ -1,6 +1,6 @@
 # TAGLINE
 
-glamorous AI coding agent TUI
+Glamorous AI coding agent for the terminal
 
 # TLDR
 

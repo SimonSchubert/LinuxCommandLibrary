@@ -49,7 +49,13 @@ Manage DNS resolver configuration dynamically
 > Exclude interfaces.
 
 **-p**
-> Show head file.
+> Mark interface resolv.conf as private.
+
+**-m** _metric_
+> Set interface metric for priority ordering.
+
+**-f**
+> Ignore non-existent interface.
 
 # DESCRIPTION
 
@@ -83,4 +89,4 @@ May conflict with systemd-resolved. Distribution implementations vary. Some use 
 
 # SEE ALSO
 
-[systemd-resolved](/man/systemd-resolved)(1), [dhclient](/man/dhclient)(1), [nmcli](/man/nmcli)(1)
+[systemd-resolve](/man/systemd-resolve)(1), [resolvectl](/man/resolvectl)(1), [dhclient](/man/dhclient)(1), [nmcli](/man/nmcli)(1)

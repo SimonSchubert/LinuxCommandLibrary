@@ -46,9 +46,7 @@ _DEVICE_
 
 # DESCRIPTION
 
-**ntfsls** lists files on NTFS partitions. Works without mounting.
-
-The tool provides directory listings directly. Similar to ls command.
+**ntfsls** lists the contents of directories on NTFS partitions without mounting the filesystem. It reads the NTFS structures directly from the block device, providing an ls-like interface for examining NTFS volumes.
 
 # CAVEATS
 

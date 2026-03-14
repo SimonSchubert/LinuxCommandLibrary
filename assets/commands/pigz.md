@@ -28,9 +28,9 @@ compresses files using multiple processors
 
 ```pigz -c [file] > [file.gz]```
 
-**Compress all files in directory**
+**Compress files recursively in a directory**
 
-```pigz [*.log]```
+```pigz -r [directory/]```
 
 **Test compressed file integrity**
 

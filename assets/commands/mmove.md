@@ -4,19 +4,19 @@ moves/renames files on MS-DOS filesystems
 
 # TLDR
 
-**Move file on MS-DOS disk**
+**Move/rename a file on an MS-DOS disk**
 
 ```mmove [a:oldname] [a:newname]```
 
-**Move to directory**
+**Move a file to a directory on the disk**
 
 ```mmove [a:file.txt] [a:dir/]```
 
-**Move multiple files**
+**Move multiple files matching a wildcard**
 
 ```mmove [a:*.txt] [a:backup/]```
 
-**Verbose output**
+**Move with verbose output**
 
 ```mmove -v [a:file] [a:newfile]```
 
@@ -27,32 +27,27 @@ moves/renames files on MS-DOS filesystems
 # PARAMETERS
 
 _SOURCE_
-> Source file on MS-DOS disk.
+> Source file(s) on an MS-DOS filesystem. Drive letter prefix (e.g., a:) specifies the device.
 
 _TARGET_
-> Target location.
+> Target filename or directory.
 
 **-v**
 > Verbose output.
 
-**--help**
-> Display help information.
+**-D** _conflict_handling_
+> Specify what to do on filename conflicts: o (overwrite), r (rename), s (skip), a (autorename).
 
 # DESCRIPTION
 
-**mmove** moves/renames files on MS-DOS filesystems. It's part of mtools.
+**mmove** moves or renames files on MS-DOS (FAT) filesystems without needing to mount them first. It is part of the **mtools** package, which provides a set of utilities to access FAT filesystems from Unix.
 
-The tool works on FAT filesystems without mounting. Like mv for DOS disks.
+Source and target must be on the same MS-DOS filesystem. Cross-device moves are not supported -- use **mcopy** and **mdel** instead.
 
 # CAVEATS
 
-Part of mtools. FAT filesystem only. Same disk only.
-
-# HISTORY
-
-mmove is part of **mtools**, providing file moving functionality for MS-DOS filesystems on Unix.
+Only works on FAT filesystems. Cannot move files between different drives. Drive mappings are configured in **/etc/mtools.conf** or **~/.mtoolsrc**.
 
 # SEE ALSO
 
 [mcopy](/man/mcopy)(1), [mdel](/man/mdel)(1), [mren](/man/mren)(1)
-

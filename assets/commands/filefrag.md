@@ -55,10 +55,16 @@ Useful for identifying files that may benefit from defragmentation.
 **-x**
 > Show extended attribute mappings
 
+**-B**
+> Force use of the older FIBMAP ioctl instead of FIEMAP (for testing)
+
+**-e**
+> Print output in extent format, even for block-mapped files
+
 # CAVEATS
 
-Part of e2fsprogs. Works best on ext2/ext3/ext4 but supports other filesystems. Number of extents indicates fragmentation level.
+Part of e2fsprogs. Works best on ext2/ext3/ext4 but supports other filesystems via FIEMAP ioctl. A file with 1 extent is not fragmented; more extents indicate higher fragmentation.
 
 # SEE ALSO
 
-[e4defrag](/man/e4defrag)(8), [xfs_bmap](/man/xfs_bmap)(8)
+[e4defrag](/man/e4defrag)(8)

@@ -20,9 +20,17 @@ Set system timezone automatically via IP geolocation
 
 **tzupdate** [_options_]
 
+# PARAMETERS
+
+**-p**
+> Print the detected timezone without changing system settings
+
+**-i** _IP_
+> Use the specified IP address instead of auto-detecting
+
 # DESCRIPTION
 
-**tzupdate** geolocates your IP address, determines the correct timezone, and updates the system's local timezone. It queries multiple geolocation services in parallel and protects against invalid results. Useful for automatically configuring timezone on servers or fresh installations.
+**tzupdate** geolocates your IP address, determines the correct timezone, and updates the system's local timezone. It queries geolocation services and protects against invalid results. Useful for automatically configuring timezone on servers or fresh installations. Typically requires root privileges to update the system timezone.
 
 # HISTORY
 

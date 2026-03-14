@@ -1,6 +1,6 @@
 # TAGLINE
 
-displays information about System V IPC resources: shared memory
+display information about System V IPC resources
 
 # TLDR
 
@@ -10,19 +10,19 @@ Show **all** active IPC facilities
 
 Show active shared **memory** segments
 
-```ipcs --shmems```
+```ipcs -m```
 
 Show active message **queues**
 
-```ipcs --queues```
+```ipcs -q```
 
 Show active **semaphores**
 
-```ipcs --semaphores```
+```ipcs -s```
 
-Show details for **specific resource** by ID
+Show details for **specific shared memory** segment by ID
 
-```ipcs --shmems -i [resource_id]```
+```ipcs -m -i [shmid]```
 
 Show system **limits**
 
@@ -46,13 +46,13 @@ Show **last access times**
 
 # PARAMETERS
 
-**--shmems**
+**-m**, **--shmems**
 > Show shared memory segments
 
-**--queues**
+**-q**, **--queues**
 > Show message queues
 
-**--semaphores**
+**-s**, **--semaphores**
 > Show semaphore sets
 
 **-i**, **--id** _ID_

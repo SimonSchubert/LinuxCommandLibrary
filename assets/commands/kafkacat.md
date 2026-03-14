@@ -28,6 +28,14 @@ command-line Kafka producer and consumer
 
 ```kafkacat -C -b [localhost:9092] -t [topic] -f '[%T] %k: %s\n'```
 
+**Produce with key** using delimiter
+
+```echo "[key]:[value]" | kafkacat -P -b [localhost:9092] -t [topic] -K ":"```
+
+**Consume N messages** and exit
+
+```kafkacat -C -b [localhost:9092] -t [topic] -c [10]```
+
 # SYNOPSIS
 
 **kafkacat** [_options_]
@@ -67,8 +75,11 @@ command-line Kafka producer and consumer
 **-e**
 > Exit at end of topic.
 
+**-G** _group_ _topic_
+> Consumer group mode (high-level balanced consumer).
+
 **-X** _property=value_
-> Set librdkafka property.
+> Set librdkafka property (e.g., security.protocol=SSL).
 
 # DESCRIPTION
 
@@ -95,4 +106,4 @@ kafkacat was created by **Magnus Edenhill**, who also created librdkafka. It's b
 
 # SEE ALSO
 
-[kafka](/man/kafka)(1), [kafka-topics](/man/kafka-topics)(1)
+[kcat](/man/kcat)(1), [kafka](/man/kafka)(1), [kafka-topics](/man/kafka-topics)(1)

@@ -54,4 +54,4 @@ First startup may be slow while building database. Deck imports can be large. Sy
 
 # SEE ALSO
 
-[mnemosyne](/man/mnemosyne)(1), [org-drill](/man/org-drill)(1)
+[man](/man/man)(1)

@@ -56,10 +56,19 @@ The tool helps organize and enable/disable bash customizations modularly.
 > Update Bash-it framework
 
 **reload**
-> Reload bash profile
+> Reload bash profile.
 
 **doctor**
-> Run diagnostics
+> Run diagnostics.
+
+**help** _type_
+> Show help for installed aliases, plugins, or completions.
+
+**migrate**
+> Migrate Bash-it structure to the latest version.
+
+**profile**
+> Manage Bash-it profiles.
 
 # COMPONENT TYPES
 
@@ -122,4 +131,4 @@ Requires manual installation and configuration. Can slow shell startup if too ma
 
 # SEE ALSO
 
-[bash](/man/bash)(1), [oh-my-zsh](/man/oh-my-zsh)(1), [bash](/man/bash)(1)
+[bash](/man/bash)(1), [oh-my-zsh](/man/oh-my-zsh)(1)

@@ -32,6 +32,10 @@ CLI for managing development containers
 
 ```devcontainer templates apply -t [python]```
 
+**Show resolved configuration as JSON**
+
+```devcontainer read-configuration --workspace-folder [.] --include-merged-configuration```
+
 # SYNOPSIS
 
 **devcontainer** _command_ [_options_]
@@ -59,8 +63,17 @@ _COMMAND_
 **features list**
 > List available dev container features.
 
+**templates apply** **-t** _template_
+> Apply a dev container template to the workspace.
+
+**run-user-commands**
+> Run user commands (postCreateCommand, etc.) in the container.
+
 **--help**
 > Display help information.
+
+**--version**
+> Display version information.
 
 # DESCRIPTION
 

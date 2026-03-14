@@ -19,11 +19,14 @@ Decode XML entities to characters
 # PARAMETERS
 
 _text_
-> Text with XML entities.
+> Text with XML entities. If not provided, reads from standard input.
+
+**--help**
+> Display usage information.
 
 # DESCRIPTION
 
-**xml unescape** converts XML entities back to characters. Part of xmlstarlet toolkit. Decodes &lt; &gt; &amp; &apos; &quot; to their original characters.
+**xml unescape** (also `xml unesc`) converts XML entities back to their original characters. Part of the XMLStarlet toolkit. Decodes &amp;lt; &amp;gt; &amp;amp; &amp;apos; &amp;quot; and numeric character references to their original characters.
 
 # SEE ALSO
 

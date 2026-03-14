@@ -26,9 +26,15 @@ TUI to filter JSON and JSON Lines with Python syntax
 
 In queries, **_** represents the loaded JSON as a Python dict or list. Both dot notation and bracket notation can be used to access key names. The Editor uses standard **Emacs** key bindings. jellex uses **jello** on the backend to execute queries.
 
+# KEY BINDINGS
+
+**CTRL-\\** — Toggle focus between Editor, Viewer, and Schema
+**CTRL-S** — Toggle Schema window visibility
+**CTRL-Q** or **CTRL-C** — Exit program
+
 # CAVEATS
 
-Requires Python and the jello library. Uses Python syntax rather than jq syntax, which may be unfamiliar to jq users but accessible to Python developers.
+Requires Python and the jello library. Uses Python syntax rather than jq syntax, which may be unfamiliar to jq users but accessible to Python developers. Reserved Python keywords must use bracket notation (e.g., `_["get"]`).
 
 # HISTORY
 
@@ -36,4 +42,4 @@ Requires Python and the jello library. Uses Python syntax rather than jq syntax,
 
 # SEE ALSO
 
-[jq](/man/jq)(1), [fx](/man/fx)(1), [jaq](/man/jaq)(1)
+[jq](/man/jq)(1), [jello](/man/jello)(1), [fx](/man/fx)(1), [jaq](/man/jaq)(1)

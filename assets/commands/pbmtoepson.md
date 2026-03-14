@@ -18,15 +18,21 @@ converts PBM bitmaps to Epson printer control codes for direct printing
 
 # PARAMETERS
 
-**-protocol** _type_
-> Output protocol (escp, escp9).
+**-protocol** _TYPE_
+> Output protocol: **escp** (newer ESC/P) or **escp9** (older 9-pin ESC/P). Default is escp.
 
-**-dpi** _n_
-> Print resolution.
+**-dpi** _N_
+> Horizontal print density in dots per inch. Allowed values: 60, 72, 80, 90, 120, 144, 240.
+
+**-adjacent**
+> Force adjacent dot printing.
+
+**-nonadjacent**
+> Force non-adjacent dot printing.
 
 # DESCRIPTION
 
-**pbmtoepson** converts PBM bitmaps to Epson printer control codes for direct printing. Supports ESC/P and ESC/P 9-pin protocols. Part of Netpbm toolkit.
+**pbmtoepson** reads a PBM image as input and produces a stream of Epson printer graphics as output. Supports ESC/P and ESC/P 9-pin protocols. For the newer ESC/P2 protocol, use **pbmtoescp2** instead. Part of the Netpbm toolkit.
 
 # SEE ALSO
 

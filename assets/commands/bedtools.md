@@ -24,6 +24,14 @@ Analyze and manipulate genomic interval data
 
 ```bedtools subtract -a [all.bed] -b [exclude.bed]```
 
+**Find closest** features
+
+```bedtools closest -a [query.bed] -b [reference.bed]```
+
+**Extract FASTA sequences** for intervals
+
+```bedtools getfasta -fi [genome.fa] -bed [regions.bed]```
+
 # SYNOPSIS
 
 **bedtools** _command_ [_options_]
@@ -66,6 +74,15 @@ The tool is essential for genomics research and comparative analysis of genomic 
 **bamtobed**
 > Convert BAM to BED
 
+**slop**
+> Extend intervals by a specified number of bases
+
+**flank**
+> Create flanking intervals for each feature
+
+**complement**
+> Return intervals not covered by features
+
 # COMMON PARAMETERS
 
 **-a** _file_
@@ -88,6 +105,15 @@ The tool is essential for genomics research and comparative analysis of genomic 
 
 **-s**
 > Require same strand
+
+**-S**
+> Require opposite strand
+
+**-sorted**
+> Use sorted algorithm for large files (lower memory)
+
+**-i** _file_
+> Input file (used by merge, sort, etc.)
 
 # WORKFLOW
 

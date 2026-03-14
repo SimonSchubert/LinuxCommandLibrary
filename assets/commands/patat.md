@@ -31,6 +31,9 @@ Terminal-based presentations using Pandoc Markdown
 **-d**, **--dump**
 > Output all slides to stdout for debugging.
 
+**--version**
+> Display version information.
+
 # DESCRIPTION
 
 **patat** (Presentations Atop The ANSI Terminal) is a feature-rich, terminal-based presentation tool built on Pandoc. It supports images, evaluating code snippets, syntax highlighting, speaker notes, theming, and progressive slide reveals. Slides are separated by Markdown headers, and configuration can be embedded in the YAML front matter.

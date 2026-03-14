@@ -4,25 +4,37 @@ Lint and enforce commit message conventions
 
 # TLDR
 
-**Lint last commit**
+**Lint the most recent commit**
 
 ```gitlint```
 
-**Lint specific commit**
+**Lint a specific commit**
 
 ```gitlint --commit [commit-hash]```
 
-**Lint commit range**
+**Lint a range of commits**
 
 ```gitlint --commits [HEAD~5..HEAD]```
 
-**Generate config**
+**Lint a message from stdin**
+
+```echo "Fix bug" | gitlint --stdin-msg```
+
+**Generate a default config file**
 
 ```gitlint generate-config```
 
-**Install hook**
+**Install as a commit-msg git hook**
 
 ```gitlint install-hook```
+
+**Uninstall the commit-msg hook**
+
+```gitlint uninstall-hook```
+
+**Lint with a specific config file**
+
+```gitlint --config [.gitlint] --commits [main..HEAD]```
 
 # SYNOPSIS
 
@@ -31,42 +43,63 @@ Lint and enforce commit message conventions
 # PARAMETERS
 
 **--commit** _SHA_
-> Check specific commit.
+> Check a specific commit.
 
 **--commits** _RANGE_
-> Check commit range.
+> Check a range of commits.
 
-**generate-config**
-> Create .gitlint config file.
+**--stdin-msg**
+> Read commit message from stdin instead of git log.
 
-**install-hook**
-> Install commit-msg hook.
+**--msg-filename** _FILE_
+> Read commit message from a file.
+
+**-c** _RULE.OPTION=VALUE_
+> Set a rule option on the command line.
 
 **--config** _FILE_
-> Use config file.
+> Use a specific config file.
+
+**--ignore** _RULES_
+> Comma-separated list of rules to ignore.
+
+**--contrib** _RULES_
+> Comma-separated list of contrib rules to enable (e.g., contrib-title-conventional-commits).
+
+**--debug**
+> Enable debug output.
 
 **--help**
 > Display help information.
+
+# COMMANDS
+
+**generate-config**
+> Create a default .gitlint configuration file.
+
+**install-hook**
+> Install gitlint as a git commit-msg hook.
+
+**uninstall-hook**
+> Remove the gitlint commit-msg hook.
 
 # DESCRIPTION
 
 **gitlint** enforces commit message conventions by checking that messages follow configured rules for format, length, and content. This ensures consistent, readable commit history across a project.
 
-Rules cover title length, body formatting, and conventional commit patterns. It can run as a commit-msg hook for immediate feedback during commits.
+Default rules include title max length (72 chars), title not ending with a period, body max line length (80 chars), and a blank line between title and body. Contrib rules add support for Conventional Commits and other formats.
+
+Custom Python rules can be written to enforce project-specific conventions. The tool integrates naturally into CI pipelines by linting commit ranges with **--commits**.
 
 # CONFIGURATION
 
 **.gitlint**
-> Project-level configuration file defining commit message rules, ignored rules, and custom settings.
+> Project-level configuration file defining commit message rules, ignored rules, and custom settings. Uses INI format with sections for each rule.
 
 # CAVEATS
 
-Python tool. Rules are configurable. May need customization for project conventions.
-
-# HISTORY
-
-gitlint was created to enforce commit message standards, supporting various conventions including Conventional Commits.
+Requires Python 3. When used as a hook, only the latest commit message is checked. The **--commits** flag is needed for CI to check all commits in a branch. Custom rules require writing Python classes.
 
 # SEE ALSO
 
-[git-commit](/man/git-commit)(1), [commitlint](/man/commitlint)(1)
+[git-commit](/man/git-commit)(1), [pre-commit](/man/pre-commit)(1)

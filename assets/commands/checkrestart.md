@@ -8,21 +8,25 @@ find processes using outdated shared libraries
 
 ```sudo checkrestart```
 
-**Show verbose output**
+**Show verbose output with deleted file details**
 
 ```sudo checkrestart -v```
 
-**Check a specific package**
+**Only report processes belonging to a package**
 
-```sudo checkrestart -p [package_name]```
+```sudo checkrestart -p```
 
-**Show all processes** not just services
+**Show terse output suitable for monitoring tools**
 
-```sudo checkrestart -a```
+```sudo checkrestart -t```
 
-**Output in machine-readable format**
+**Output in machine-readable tab-separated format**
 
 ```sudo checkrestart -m```
+
+**Exclude a specific package from results**
+
+```sudo checkrestart -i [package_name]```
 
 # SYNOPSIS
 
@@ -31,21 +35,42 @@ find processes using outdated shared libraries
 # PARAMETERS
 
 **-v**, **--verbose**
-> Verbose output showing detailed information.
+> Verbose output, enables -f and shows reasons for exclusions.
 
-**-p**, **--package** _name_
-> Check only specific package.
+**-f**, **--show-files**
+> List the deleted files and which program is using them.
 
-**-a**, **--all**
-> Show all processes, not just services.
+**-d**, **--debug**
+> Include debugging details in output, enables -v.
+
+**-t**, **--terse**
+> Terse single-line output suitable for Nagios and similar monitoring tools.
 
 **-m**, **--machine**
-> Machine-readable output format.
+> Machine-readable output; each line is tab-separated.
 
-**-n**, **--nopager**
-> Disable pager for output.
+**-p**, **--package**
+> Only report processes that belong to a package.
 
-**--help**
+**-a**, **--all**
+> Prevent exclude.conf and local-exclude.conf from being read.
+
+**-n**, **--no-lsof**
+> Do not use lsof(8) even if available.
+
+**-i** _REGEXP_, **--exclude-package** _REGEXP_
+> Ignore services associated with the matching package name.
+
+**-x** [_TYPE:_]_REGEXP_, **--exclude** [_TYPE:_]_REGEXP_
+> Exclude items matching the pattern (types: package, unit, program, pid, file).
+
+**-e** _PID_
+> Exclude processes with this PID.
+
+**-b** _FILE_, **--blocklistfile** _FILE_
+> Ignore deleted files matching patterns in FILE.
+
+**-h**, **--help**
 > Display help information.
 
 # DESCRIPTION

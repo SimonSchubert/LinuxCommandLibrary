@@ -4,13 +4,9 @@ attaches to a container's TTY console, providing direct terminal access
 
 # TLDR
 
-**Attach** to container console
+**Attach** to container console by ID
 
-```pct console 100```
-
-**Detach** from console
-
-```Ctrl+a q```
+```pct console [100]```
 
 # SYNOPSIS
 
@@ -27,7 +23,7 @@ attaches to a container's TTY console, providing direct terminal access
 
 # CAVEATS
 
-Use Ctrl+a followed by q to detach from the console without terminating the session. The container must be running to attach to its console. For command execution without interactive terminal, use **pct exec** instead.
+Press **Ctrl+a** then **q** to detach from the console without terminating the session. The container must be running. For non-interactive command execution, use **pct exec** instead. For entering the container's namespace directly, use **pct enter**.
 
 # HISTORY
 

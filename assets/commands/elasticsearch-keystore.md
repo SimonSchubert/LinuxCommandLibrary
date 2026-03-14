@@ -8,17 +8,29 @@ Manage encrypted Elasticsearch secure settings
 
 ```elasticsearch-keystore create```
 
+**Create a password-protected keystore**
+
+```elasticsearch-keystore create -p```
+
 **List settings**
 
 ```elasticsearch-keystore list```
 
-**Add setting**
+**Add setting** (prompts for value)
 
 ```elasticsearch-keystore add [setting.name]```
+
+**Add setting from stdin**
+
+```echo "[value]" | elasticsearch-keystore add --stdin [setting.name]```
 
 **Add setting from file**
 
 ```elasticsearch-keystore add-file [setting.name] [file]```
+
+**Show a setting value**
+
+```elasticsearch-keystore show [setting.name]```
 
 **Remove setting**
 
@@ -52,6 +64,9 @@ Manage encrypted Elasticsearch secure settings
 **show**
 > Display setting value.
 
+**has-passwd**
+> Check if keystore is password-protected.
+
 **upgrade**
 > Upgrade keystore format.
 
@@ -60,11 +75,26 @@ Manage encrypted Elasticsearch secure settings
 
 # PARAMETERS
 
-**-s**, **--stdin**
-> Read value from stdin.
+**--stdin**
+> Read setting value from stdin (used with add).
 
 **-f**, **--force**
-> Overwrite existing setting.
+> Overwrite existing setting without prompting.
+
+**-p**
+> Prompt for password when creating keystore.
+
+**-o** _file_
+> Output file (used with show).
+
+**-h**, **--help**
+> Display help.
+
+**-s**, **--silent**
+> Show minimal output.
+
+**-v**, **--verbose**
+> Show verbose output.
 
 # DESCRIPTION
 

@@ -20,14 +20,6 @@ Apache Pulsar cluster administration tool
 
 ```pulsar-admin topics create persistent://[tenant]/[namespace]/[topic]```
 
-**Produce a message**
-
-```pulsar-client produce [topic] -m "[message]"```
-
-**Consume messages**
-
-```pulsar-client consume [topic] -s [subscription] -n [10]```
-
 **Get topic stats**
 
 ```pulsar-admin topics stats [topic]```
@@ -36,11 +28,17 @@ Apache Pulsar cluster administration tool
 
 ```pulsar-admin brokers list [cluster]```
 
+**Create a tenant**
+
+```pulsar-admin tenants create [tenant]```
+
+**Set namespace retention policy**
+
+```pulsar-admin namespaces set-retention [tenant/namespace] --size [10G] --time [3d]```
+
 # SYNOPSIS
 
 **pulsar-admin** _command_ [_options_]
-
-**pulsar-client** produce|consume [_options_]
 
 # ADMIN COMMANDS
 
@@ -70,30 +68,18 @@ Apache Pulsar cluster administration tool
 **--admin-url** _url_
 > Pulsar admin service URL.
 
-**--url** _url_
-> Broker service URL (for client).
-
 **--auth-plugin** _class_
 > Authentication plugin class.
 
 **--auth-params** _params_
 > Authentication parameters.
 
-**-m**, **--messages** _message_
-> Message content for produce.
-
-**-s**, **--subscription** _name_
-> Subscription name for consume.
-
-**-n**, **--num-messages** _count_
-> Number of messages to consume.
-
-**-r**, **--rate** _msgs/sec_
-> Message rate limit.
+**--tls-trust-certs-filepath** _path_
+> Path to TLS trust certificates file.
 
 # DESCRIPTION
 
-**pulsar-admin** manages Apache Pulsar clusters, handling tenants, namespaces, topics, and cluster configuration. **pulsar-client** provides simple produce/consume operations.
+**pulsar-admin** manages Apache Pulsar clusters, handling tenants, namespaces, topics, and cluster configuration. It provides administrative control over the entire Pulsar infrastructure.
 
 Pulsar's multi-tenancy model organizes resources: clusters contain tenants, tenants contain namespaces, namespaces contain topics. Each level has configurable policies.
 
@@ -113,4 +99,4 @@ Apache Pulsar was originally developed at **Yahoo!** and open-sourced in **2016*
 
 # SEE ALSO
 
-[kafka-console-producer](/man/kafka-console-producer)(1), [nats](/man/nats)(1), [rabbitmqctl](/man/rabbitmqctl)(1)
+[nats](/man/nats)(1), [rabbitmqctl](/man/rabbitmqctl)(1)

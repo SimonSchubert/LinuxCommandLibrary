@@ -20,7 +20,7 @@ Display GIF images and animations in an X11 window
 
 ```gifview -f [5] [image.gif]```
 
-**View without window decoration**
+**View with unoptimized frames** for faithful display
 
 ```gifview -U [image.gif]```
 
@@ -43,10 +43,31 @@ _FILES_
 > Display specific frame.
 
 **-U**, **--unoptimize**
-> Unoptimize for display.
+> Unoptimize for faithful frame display.
+
+**--min-delay** _DELAY_
+> Minimum delay between frames in centiseconds (default 0).
+
+**--no-interactive**, **+e**
+> Ignore mouse and keyboard input.
 
 **-w** _WINDOW_
-> Use existing window.
+> Display in an existing X window.
+
+**--new-window** _WINDOW_
+> Display in a new child of an existing X window.
+
+**--geometry** _GEOMETRY_
+> Set window size and position.
+
+**--title** _TITLE_
+> Set the window title.
+
+**--install-colormap**
+> Use a private colormap.
+
+**--version**
+> Print version number and exit.
 
 **--help**
 > Display help information.

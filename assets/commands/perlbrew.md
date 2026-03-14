@@ -69,17 +69,41 @@ manages multiple Perl installations in user space
 **exec** _CMD_
 > Run command with Perl version.
 
+**uninstall** _VERSION_
+> Uninstall a Perl version.
+
+**alias** _create_ _name_ _alias_
+> Give a Perl installation a new name.
+
+**info**
+> Show perlbrew installation info.
+
 **install-cpanm**
 > Install cpanminus.
 
+**install-multiple**
+> Install multiple versions and flavors.
+
 **self-upgrade**
-> Upgrade perlbrew.
+> Upgrade perlbrew itself.
+
+**clean**
+> Purge tarballs and build directories.
 
 **--notest**
 > Skip tests during install.
 
+**--thread**
+> Build Perl with usethreads enabled.
+
 **-j** _N_
 > Parallel build jobs.
+
+**-q**, **--quiet**
+> Suppress informative output.
+
+**-v**, **--verbose**
+> More verbose output.
 
 # DESCRIPTION
 

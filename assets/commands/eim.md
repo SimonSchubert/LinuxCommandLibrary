@@ -1,24 +1,32 @@
 # TAGLINE
 
-Erlang version manager
+ESP-IDF Installation Manager
 
 # TLDR
 
-**Run Erlang installation** manager
+**Install a specific ESP-IDF version**
 
-```eim install [version]```
+```eim install -i [v5.3.2]```
 
-**List available versions**
+**Install interactively** (with prompts)
+
+```eim install -i [v5.3.2] -n false```
+
+**List installed ESP-IDF versions**
 
 ```eim list```
 
-**Activate version**
+**Select a version as active** for IDE use
 
-```eim activate [version]```
+```eim select [version]```
 
-**Show current version**
+**Rename an installed version**
 
-```eim current```
+```eim rename [old_name] [new_name]```
+
+**Remove a specific ESP-IDF version**
+
+```eim remove [version]```
 
 # SYNOPSIS
 
@@ -27,39 +35,49 @@ Erlang version manager
 # PARAMETERS
 
 _COMMAND_
-> Operation: install, list, activate, current, etc.
+> Operation: install, list, select, rename, remove, run, purge.
 
-**install** _VERSION_
-> Install Erlang version.
+**install** [**-i** _version_]
+> Install an ESP-IDF version. Runs non-interactively (headless) by default.
 
 **list**
-> List available versions.
+> List installed ESP-IDF versions.
 
-**activate** _VERSION_
-> Set active version.
+**select** _version_
+> Set the active ESP-IDF version (updates eim_idf.json for IDE integration).
 
-**current**
-> Show current version.
+**rename** _old_ _new_
+> Rename an installed ESP-IDF version.
+
+**remove** _version_
+> Remove a specific ESP-IDF version.
+
+**run** _version_ _command_
+> Run a command in the context of a specific ESP-IDF version.
+
+**purge**
+> Remove all ESP-IDF installations.
+
+**-n** _bool_
+> Set interactive mode (true/false, default: true for headless install).
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**eim** (Erlang Installation Manager) manages multiple Erlang/OTP installations, allowing easy switching between versions for development and testing.
+**eim** (ESP-IDF Installation Manager) is a cross-platform tool by Espressif for managing ESP-IDF (Espressif IoT Development Framework) installations. It handles downloading, installing, and switching between multiple ESP-IDF versions for ESP32 development.
 
-The tool handles downloading, building, and switching between Erlang versions. This is useful when projects require specific Erlang versions or when testing compatibility.
-
-Similar to tools like nvm for Node.js, eim simplifies Erlang version management.
+The tool supports both interactive and non-interactive (headless) installation modes, making it suitable for both manual setup and CI/CD automation. It integrates with IDEs through the eim_idf.json configuration file.
 
 # CAVEATS
 
-Build times vary by version. Requires build dependencies. Disk space for multiple versions. May need Elixir rebuild after switching.
+Requires build dependencies for the ESP-IDF toolchain. Installation may take significant time and disk space. The **purge** command removes all installed versions irreversibly.
 
 # HISTORY
 
-eim is one of several Erlang version management tools in the ecosystem, providing command-line management of Erlang/OTP installations for developers working with multiple versions.
+**eim** was developed by **Espressif Systems** as a streamlined installer for the ESP-IDF development framework, replacing manual setup procedures.
 
 # SEE ALSO
 
-[erl](/man/erl)(1), [kerl](/man/kerl)(1), [asdf](/man/asdf)(1)
+[asdf](/man/asdf)(1)

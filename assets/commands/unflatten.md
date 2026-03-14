@@ -4,21 +4,25 @@ Improve Graphviz graph aspect ratio
 
 # TLDR
 
-**Adjust graph layout**
+**Adjust graph layout** and write to output file
 
 ```unflatten [input.dot] -o [output.dot]```
 
-**Set chain limit**
+**Stagger leaf edge lengths** between 1 and the specified limit
 
 ```unflatten -l [3] [input.dot]```
 
-**Fan out**
+**Fan out nodes** with indegree and outdegree of 1 (requires -l)
 
-```unflatten -f [input.dot]```
+```unflatten -f -l [3] [input.dot]```
 
-**Chain length**
+**Form disconnected nodes** into chains of up to the specified length
 
 ```unflatten -c [5] [input.dot]```
+
+**Pipe through dot** for improved layout
+
+```unflatten -l [4] [input.dot] | dot -Tpng -o [output.png]```
 
 # SYNOPSIS
 
@@ -26,17 +30,17 @@ Improve Graphviz graph aspect ratio
 
 # PARAMETERS
 
-**-l** _LIMIT_
-> Stagger depth.
+**-l** _len_
+> Stagger the minimum length of leaf edges between 1 and _len_
 
 **-f**
-> Fan out leaves.
+> Fan out nodes whose indegree and outdegree are both 1 (only works with -l)
 
-**-c** _LEN_
-> Chain length.
+**-c** _len_
+> Form disconnected nodes into chains of up to _len_ nodes
 
-**-o** _FILE_
-> Output file.
+**-o** _file_
+> Write output to _file_ instead of stdout
 
 # DESCRIPTION
 
@@ -48,7 +52,7 @@ Options control the maximum chain length before staggering occurs and whether le
 
 # CAVEATS
 
-Preprocessing tool. Use with dot. Graphviz required.
+Designed as a preprocessing step before the **dot** layout engine. The **-f** option has no effect without **-l**. Graphviz must be installed.
 
 # HISTORY
 

@@ -6,15 +6,15 @@ switches Bluetooth USB dongles between HID and HCI modes
 
 **Switch device to HCI mode**
 
-```sudo hid2hci --method=dell [vendor]:[product]```
+```sudo hid2hci --mode=hci --method=csr --devpath=[/sys/devices/...]```
 
-**Switch Dell device**
+**Switch Dell device to HCI mode**
 
-```sudo hid2hci --method=dell --devpath=/dev/bus/usb/[bus]/[device]```
+```sudo hid2hci --mode=hci --method=dell --devpath=[/sys/devices/...]```
 
-**Restore HID mode**
+**Restore device to HID mode**
 
-```sudo hid2hci --tohid --devpath=[device-path]```
+```sudo hid2hci --mode=hid --method=csr --devpath=[/sys/devices/...]```
 
 # SYNOPSIS
 
@@ -22,20 +22,14 @@ switches Bluetooth USB dongles between HID and HCI modes
 
 # PARAMETERS
 
+**--mode** _MODE_
+> Target mode to switch the device to: hid or hci.
+
 **--method** _METHOD_
-> Switching method (dell, csr).
+> Vendor-specific switching method (csr, csr2, logitech-hdi, dell).
 
 **--devpath** _PATH_
-> USB device path.
-
-**--tohid**
-> Switch to HID mode.
-
-**--tohci**
-> Switch to HCI mode.
-
-**-v**, **--verbose**
-> Verbose output.
+> Device path in /sys.
 
 **--help**
 > Display help information.
@@ -56,4 +50,4 @@ hid2hci was developed as part of **BlueZ** to handle USB Bluetooth adapters with
 
 # SEE ALSO
 
-[bluetoothctl](/man/bluetoothctl)(1), [hciconfig](/man/hciconfig)(1), [usb_modeswitch](/man/usb_modeswitch)(1)
+[bluetoothctl](/man/bluetoothctl)(1), [hciconfig](/man/hciconfig)(1)

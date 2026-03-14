@@ -1,10 +1,10 @@
 # TAGLINE
 
-C++ unused header and code finder
+C++ unused code and header finder
 
 # TLDR
 
-**Find unused includes** in a directory
+**Find problems** in a directory
 
 ```cppclean [path/to/source]```
 
@@ -12,9 +12,17 @@ C++ unused header and code finder
 
 ```cppclean [file1.cpp] [file2.cpp]```
 
-**Include additional paths**
+**Include additional header search paths**
 
 ```cppclean --include-path [/path/to/includes] [source/]```
+
+**Run with verbose output**
+
+```cppclean --verbose [path/to/source]```
+
+**Suppress output messages**
+
+```cppclean --quiet [path/to/source]```
 
 # SYNOPSIS
 
@@ -22,24 +30,25 @@ C++ unused header and code finder
 
 # DESCRIPTION
 
-**cppclean** finds problems in C++ source that slow development and increase compilation time. It detects unused #include directives, unnecessary headers, and other issues that bloat build times without contributing to functionality.
+**cppclean** finds problems in C++ source that slow development in large code bases, including various forms of unused code. It detects unnecessary #include directives in header files, unused forward declarations, functions declared but not defined, and classes with virtual methods but no virtual destructor.
 
-The tool analyzes code to identify which headers can be safely removed, reducing compilation dependencies and speeding up incremental builds. It also finds forward declarations that could replace full includes, further optimizing compile times.
-
-By cleaning up unused includes and identifying unnecessary dependencies, cppclean helps maintain lean, efficient C++ codebases and improves developer productivity through faster build cycles.
+The tool identifies which headers can be safely removed, reducing compilation dependencies and speeding up incremental builds. It also detects inconsistent casing in #include paths (e.g., `foo.h` vs `Foo.h`) and global/static data that may cause problems with threads.
 
 # PARAMETERS
 
 **--include-path** _path_
-> Additional include search paths.
+> Additional include search path (like gcc -I). Can be specified multiple times. Not recursive.
 
-**--exclude** _pattern_
-> Exclude files matching pattern.
+**--verbose**
+> Enable verbose output for debugging.
+
+**--quiet**
+> Suppress output messages.
 
 # CAVEATS
 
-May report false positives for conditionally compiled code. Results should be verified before removing includes.
+May report false positives for conditionally compiled code (e.g., `#ifdef` blocks). Results should be verified before removing includes. Detection of unnecessary includes in source files (not headers) is limited.
 
 # SEE ALSO
 
-[clang-tidy](/man/clang-tidy)(1), [include-what-you-use](/man/include-what-you-use)(1)
+[clang-tidy](/man/clang-tidy)(1), [gcc](/man/gcc)(1), [cmake](/man/cmake)(1)

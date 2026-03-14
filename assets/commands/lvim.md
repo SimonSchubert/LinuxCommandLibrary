@@ -1,6 +1,6 @@
 # TAGLINE
 
-pre-configured Neovim distribution that provides an IDE-like experience out of
+pre-configured Neovim distribution with IDE-like features
 
 # TLDR
 
@@ -110,8 +110,8 @@ Requires Neovim 0.9.0 or higher, along with git, make, pip, npm, node, cargo, an
 
 # HISTORY
 
-LunarVim was created in **2021** by Christian Chiarulli as a way to provide a batteries-included Neovim experience. It gained popularity as a more approachable alternative to building a custom Neovim configuration from scratch. The project emphasizes community-driven development with an active Discord community and regular releases. Version 1.4 was released in **May 2024**.
+LunarVim was created in **2021** by **Christian Chiarulli** as a way to provide a batteries-included Neovim experience. It gained popularity as a more approachable alternative to building a custom Neovim configuration from scratch. Note: the project has been **archived** and is no longer actively maintained as of **2024**.
 
 # SEE ALSO
 
-[neovim](/man/neovim)(1), [lazyvim](/man/lazyvim)(1), [spacevim](/man/spacevim)(1), [vim](/man/vim)(1)
+[nvim](/man/nvim)(1), [vim](/man/vim)(1)

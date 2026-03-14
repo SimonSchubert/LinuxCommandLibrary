@@ -28,6 +28,14 @@ JFrog CLI for interacting with JFrog platform services
 
 ```jf docker push [image:tag] [repo]```
 
+**Run Xray scan** on a build
+
+```jf xr scan --watches "[watch_name]"```
+
+**Show server configuration**
+
+```jf config show```
+
 # SYNOPSIS
 
 **jf** _command_ [_options_]
@@ -49,14 +57,23 @@ JFrog CLI for interacting with JFrog platform services
 **pip** _CMD_
 > Python registry commands.
 
+**xr** _CMD_
+> Xray security scanning commands.
+
+**go** _CMD_
+> Go registry commands.
+
+**--server-id** _ID_
+> Server ID from configured servers.
+
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**jf** is the JFrog CLI for interacting with JFrog platform services. It manages artifacts in Artifactory and integrates with CI/CD.
+**jf** is the JFrog CLI for interacting with JFrog platform services including Artifactory, Xray, Distribution, and Pipelines. It manages artifact upload/download, build info collection, security scanning, and CI/CD integration.
 
-The tool supports all package types and registries. It handles uploads, downloads, builds, and security scanning.
+The tool supports all major package types (Maven, npm, Docker, Go, Python, NuGet, etc.) and provides both interactive and automation-friendly interfaces. The `rt` subcommand prefix targets Artifactory operations specifically.
 
 # CAVEATS
 

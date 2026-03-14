@@ -23,22 +23,25 @@ Show **both** panes
 # PARAMETERS
 
 **-helpfile** _FILE_
-> Open manual page from file
+> Use specified helpfile instead of the default
 
 **-bothshown**
-> Show both directory and manual page panes
+> Show both directory and manual page panes simultaneously
 
 **-notopbox**
-> Start without top menu box
+> Start without the top menu box with the three buttons
 
 **-geometry** _WxH+X+Y_
-> Window geometry
+> Set size and location of the top menu window
+
+**-pagesize** _WxH+X+Y_
+> Set size and location of manual page windows
 
 # DESCRIPTION
 
-**xman** is a graphical manual page viewer for the X Window System. It provides a browsable interface to man pages with a directory listing of available pages.
+**xman** is a manual page browser for the X Window System. It provides a graphical interface to man pages with a directory listing of available pages organized by section. The initial window is intentionally small so it can be left running throughout a login session. Pressing Control-S opens a prompt for a specific manual page to display.
 
-The interface includes navigation through manual sections and search functionality.
+The **MANPATH** environment variable controls the search path for manual pages.
 
 # HISTORY
 

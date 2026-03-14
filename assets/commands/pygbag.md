@@ -20,6 +20,10 @@ Package Pygame games for web browsers
 
 ```pygbag --archive [name] [path/to/game]```
 
+**Specify custom port for dev server**
+
+```pygbag --port [8000] [path/to/game]```
+
 **Specify template**
 
 ```pygbag --template [template.html] [path/to/game]```
@@ -42,11 +46,17 @@ Package Pygame games for web browsers
 **--template** _FILE_
 > Custom HTML template.
 
+**--port** _PORT_
+> Port for the development server (default: 8000).
+
 **--cdn** _URL_
 > CDN base URL.
 
 **--title** _TITLE_
 > Page title.
+
+**--ume_block** _SIZE_
+> Set the maximum cache block size.
 
 # DESCRIPTION
 
@@ -56,7 +66,7 @@ The tool includes a built-in development server for local testing before deploym
 
 # CAVEATS
 
-Not all Python libraries work. Async code required. Large download size.
+Not all Python libraries are supported in the WebAssembly environment; C extensions must be specifically compiled for Emscripten. The main game loop must use `asyncio` with `await asyncio.sleep(0)` for browser compatibility. The entry point must be named `main.py`. Resulting builds can be large due to the Python runtime being included.
 
 # HISTORY
 

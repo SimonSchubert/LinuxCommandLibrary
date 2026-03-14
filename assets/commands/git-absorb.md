@@ -52,6 +52,12 @@ Automatically create fixup commits for staged changes
 **-w**, **--whole-file**
 > Match changes to commits that last touched the file.
 
+**--one-fixup-per-commit**
+> Only create one fixup per commit; on conflict, use the first hunk.
+
+**--squash-instead-of-fixup**
+> Create squash commits instead of fixup commits.
+
 **-h**, **--help**
 > Print help information.
 
@@ -75,7 +81,7 @@ Only considers staged changes (git index). Cannot absorb changes that span multi
 
 # HISTORY
 
-Git-absorb was created by **Stephen Chung** as a Rust port of Facebook's **hg absorb** command for Mercurial. It became popular in stacked diff workflows where maintaining clean commit history is essential.
+Git-absorb was created by **Stephen Jung** (tummychow) as a Rust port of Facebook's **hg absorb** command for Mercurial. It became popular in stacked diff workflows where maintaining clean commit history is essential.
 
 # SEE ALSO
 

@@ -8,9 +8,25 @@ List **all available packages**
 
 ```pacsift```
 
-Filter packages that **provide** a given package
+Filter packages that **satisfy** a dependency
 
 ```pacsift --satisfies [package]```
+
+Search **installed packages** by name
+
+```pacsift --local --name [pattern]```
+
+Find **orphan** packages
+
+```pacsift --local --orphans```
+
+Find **explicitly installed** packages
+
+```pacsift --local --explicit```
+
+Combine filters with **exact** matching
+
+```pacsift --exact --repo [extra] --name [package]```
 
 # SYNOPSIS
 
@@ -42,6 +58,18 @@ Filter packages that **provide** a given package
 **--depends _pkg_**
 > Filter packages that depend on something
 
+**--exact**
+> Match values exactly
+
+**--regex**
+> Treat values as extended case-insensitive regular expressions
+
+**--invert**
+> Return packages that do NOT match
+
+**--any**
+> Return the union rather than the intersection of matches
+
 **--installed**
 > Show only installed packages
 
@@ -50,6 +78,9 @@ Filter packages that **provide** a given package
 
 **--orphans**
 > Show orphan packages
+
+**--null**[=_sep_]
+> Set alternate separator for stdin values (default: NUL)
 
 # DESCRIPTION
 

@@ -1,12 +1,12 @@
 # TAGLINE
 
-prints memory maps for Java processes
+prints memory-related statistics for Java processes
 
 # TLDR
 
-**Print heap summary**
+**Print class loader statistics**
 
-```jmap -heap [pid]```
+```jmap -clstats [pid]```
 
 **Dump heap to file**
 
@@ -33,36 +33,36 @@ prints memory maps for Java processes
 _PID_
 > Target Java process ID.
 
-**-heap**
-> Print heap summary.
+**-clstats** _pid_
+> Print class loader statistics of the Java heap.
 
-**-histo**
-> Print object histogram.
+**-finalizerinfo** _pid_
+> Print information on objects awaiting finalization.
 
-**-dump:**_OPTIONS_
-> Dump heap to file.
+**-histo**[**:live**]
+> Print histogram of the Java object heap. With :live, counts only live objects.
+
+**-dump:**_options_
+> Dump the Java heap. Sub-options:
 
 **:live**
 > Only live objects.
 
 **:format=b**
-> Binary format.
+> Binary hprof format.
 
 **:file=**_FILE_
-> Output file.
-
-**--help**
-> Display help information.
+> Output file path.
 
 # DESCRIPTION
 
-**jmap** prints memory maps for Java processes. It generates heap dumps and object histograms.
+**jmap** prints memory-related statistics for Java processes. It generates heap dumps, object histograms, and class loader statistics.
 
-The tool is essential for memory analysis and leak detection. Heap dumps can be analyzed with tools like MAT.
+The tool is essential for memory analysis and leak detection. Heap dumps can be analyzed with tools like Eclipse MAT or VisualVM.
 
 # CAVEATS
 
-Part of JDK. May pause application. Large heaps create large dumps.
+Part of JDK. This command is experimental and unsupported; it may not be available in future JDK releases. May pause the application during heap dump. Large heaps create large dump files.
 
 # HISTORY
 
@@ -70,4 +70,4 @@ jmap has been part of the **JDK** since Java 5, providing memory analysis capabi
 
 # SEE ALSO
 
-[jhat](/man/jhat)(1), [jstack](/man/jstack)(1), [jinfo](/man/jinfo)(1), [jcmd](/man/jcmd)(1)
+[jhat](/man/jhat)(1), [jstack](/man/jstack)(1), [jinfo](/man/jinfo)(1)

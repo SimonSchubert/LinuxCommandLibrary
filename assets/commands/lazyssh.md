@@ -4,7 +4,7 @@ Terminal-based interactive SSH manager
 
 # TLDR
 
-**Launch the SSH manager**
+**Launch the SSH manager UI**
 
 ```lazyssh```
 
@@ -30,4 +30,4 @@ Requires an existing SSH configuration file. Relies on the system's OpenSSH bina
 
 # SEE ALSO
 
-[ssh](/man/ssh)(1), [ssh-config](/man/ssh-config)(5)
+[ssh](/man/ssh)(1)

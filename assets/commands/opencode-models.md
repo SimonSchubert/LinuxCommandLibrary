@@ -14,7 +14,9 @@ List available OpenCode AI models
 
 # DESCRIPTION
 
-**opencode models** lists all available AI models from the configured providers. OpenCode supports 75+ providers including OpenAI, Anthropic Claude, Google Gemini, AWS Bedrock, Groq, Azure OpenAI, OpenRouter, and local models via Ollama. The output shows model names, providers, and availability based on current authentication.
+**opencode models** lists all available AI models from the configured providers in OpenCode, an open-source AI coding assistant. It shows model names, providers, and availability based on current API key configuration. Supported providers include OpenAI, Anthropic, Google Gemini, AWS Bedrock, Groq, Azure OpenAI, OpenRouter, and local models via Ollama.
+
+This subcommand is useful for verifying which models are accessible before starting a coding session.
 
 # SEE ALSO
 

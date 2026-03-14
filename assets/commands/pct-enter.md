@@ -1,62 +1,46 @@
 # TAGLINE
 
-opens a shell session inside a Proxmox LXC container
+Open a shell session inside a Proxmox LXC container
 
 # TLDR
 
-**Enter container shell**
+**Enter an interactive shell in a container**
 
 ```pct enter [VMID]```
 
-**Enter as specific user**
+**Run a single command inside a container** (use pct exec)
 
-```pct enter [VMID] --user [root]```
+```pct exec [VMID] -- [ls -la]```
 
 # SYNOPSIS
 
-**pct enter** _vmid_ [_options_]
+**pct enter** _vmid_
 
 # PARAMETERS
 
 **vmid**
-> Container ID.
-
-**--user** _name_
-> User to login as.
+> Numeric container ID (e.g., 100).
 
 # DESCRIPTION
 
-**pct enter** opens a shell session inside a Proxmox LXC container. It provides direct console access without SSH, similar to docker exec.
-
-# EXAMPLE
-
-```bash
-# Enter container 100
-pct enter 100
-
-# Enter as root
-pct enter 100 --user root
-
-# Run single command
-pct exec 100 -- ls -la
-```
+**pct enter** opens an interactive shell session inside a running Proxmox LXC container. It provides direct console access without SSH, similar to **lxc-attach** or **docker exec**. For running non-interactive single commands, use **pct exec** instead.
 
 # RELATED COMMANDS
 
 ```
-pct enter   - Interactive shell
-pct exec    - Run single command
-pct console - Console access
+pct enter   - Interactive shell session
+pct exec    - Run a single command in a container
+pct console - Full console access (login prompt)
 ```
 
 # CAVEATS
 
-Container must be running. Requires Proxmox VE. Use pct exec for non-interactive commands.
+The container must be running. Requires Proxmox VE host access. Use **pct exec** for non-interactive or scripted commands.
 
 # HISTORY
 
-pct commands are part of **Proxmox VE**, developed by Proxmox Server Solutions GmbH for managing LXC containers in their virtualization platform.
+pct commands are part of **Proxmox VE**, developed by **Proxmox Server Solutions GmbH** for managing LXC containers in their virtualization platform.
 
 # SEE ALSO
 
-[pct](/man/pct)(1), [pct-list](/man/pct-list)(1), [lxc-attach](/man/lxc-attach)(1)
+[pct](/man/pct)(1), [pct-exec](/man/pct-exec)(1), [pct-console](/man/pct-console)(1), [pct-list](/man/pct-list)(1), [lxc-attach](/man/lxc-attach)(1)

@@ -18,15 +18,19 @@ Fast, scalable multi-language build system
 
 **Query** dependencies
 
-```bazel query ["deps(//path/to:target)"]```
+```bazel query "deps([//path/to:target])"```
 
 **Clean** build artifacts
 
 ```bazel clean```
 
-Build **all**
+Build **all** targets recursively
 
 ```bazel build //...```
+
+**Info** about build environment
+
+```bazel info```
 
 # SYNOPSIS
 
@@ -52,11 +56,20 @@ The tool is designed for monorepos and projects requiring strict dependency mana
 **query** _expression_
 > Query build graph
 
+**cquery** _expression_
+> Query configured build graph (post-analysis)
+
+**aquery** _expression_
+> Query action graph
+
 **clean**
 > Remove build artifacts
 
 **fetch** _target_
 > Fetch external dependencies
+
+**info**
+> Show build environment info
 
 **--jobs** _n_
 > Number of parallel jobs
@@ -118,4 +131,4 @@ Steep learning curve. Requires BUILD files throughout project. Initial setup com
 
 # SEE ALSO
 
-[make](/man/make)(1), [ninja](/man/ninja)(1), [buck](/man/buck)(1)
+[make](/man/make)(1), [ninja](/man/ninja)(1), [buck](/man/buck)(1), [gradle](/man/gradle)(1), [cmake](/man/cmake)(1)

@@ -28,6 +28,10 @@ Create a new Rust package in an existing directory
 
 ```cargo init --edition [2021]```
 
+**Initialize in a specific directory**
+
+```cargo init [path/to/dir]```
+
 # SYNOPSIS
 
 **cargo init** [_options_] [_path_]
@@ -39,28 +43,31 @@ Create a new Rust package in an existing directory
 # PARAMETERS
 
 **--bin**
-> Create binary target with src/main.rs (default)
+> Create binary target with src/main.rs (default).
 
 **--lib**
-> Create library target with src/lib.rs
+> Create library target with src/lib.rs.
 
 **--name** _name_
-> Set package name (defaults to directory name)
+> Set package name (defaults to directory name).
 
 **--edition** _year_
-> Rust edition (2015, 2018, 2021, 2024)
+> Rust edition (2015, 2018, 2021, 2024).
 
 **--vcs** _type_
-> Initialize version control (git, hg, pijul, fossil, none)
+> Initialize version control (git, hg, pijul, fossil, none).
 
 **--registry** _name_
-> Registry for publishing
+> Registry for publishing.
+
+**--force**
+> Force overwrite of existing Cargo.toml or src directory.
 
 **-v**, **--verbose**
-> Verbose output
+> Verbose output.
 
 **-q**, **--quiet**
-> Suppress output
+> Suppress output.
 
 # GENERATED FILES
 

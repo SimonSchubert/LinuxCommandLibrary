@@ -31,7 +31,7 @@ Freeze **all** running units
 
 # CAVEATS
 
-Frozen units remain in memory but cannot execute. Use "systemctl thaw" to resume frozen units. Not all units support freezing. This requires cgroup v2 freezer support in the kernel.
+Frozen units remain in memory but cannot execute. Use "systemctl thaw" to resume frozen units. Only service, scope, and slice unit types support freezing. Requires cgroup v2 (unified hierarchy) support in the kernel.
 
 # HISTORY
 

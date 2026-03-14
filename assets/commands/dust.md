@@ -1,6 +1,6 @@
 # TAGLINE
 
-intuitive disk usage analyzer with visualization
+Intuitive disk usage analyzer with visualization
 
 # TLDR
 
@@ -22,7 +22,7 @@ intuitive disk usage analyzer with visualization
 
 **Show only files** (not directories)
 
-```dust -f```
+```dust -F```
 
 **Show apparent size** instead of disk usage
 
@@ -32,7 +32,7 @@ intuitive disk usage analyzer with visualization
 
 ```dust -r```
 
-**Show disk usage** without percentages
+**Show disk usage** without percentage bars
 
 ```dust -p```
 
@@ -62,8 +62,8 @@ The tool is written in Rust for performance and handles large directory trees ef
 **-s**, **--apparent-size**
 > Show apparent size instead of disk usage.
 
-**-f**, **--files-only**
-> Only show files, not directories.
+**-f**
+> Show file count instead of size.
 
 **-H**, **--si**
 > Print sizes in SI units (powers of 1000 instead of 1024).
@@ -77,7 +77,19 @@ The tool is written in Rust for performance and handles large directory trees ef
 **-b**, **--no-bars**
 > Hide bars entirely.
 
-**-i**, **--ignore-directory** _name_
+**-D**, **--only-dir**
+> Only show directories, not files.
+
+**-F**, **--only-file**
+> Only show files, not directories.
+
+**-e** _regex_, **--filter** _regex_
+> Filter by regular expression.
+
+**-v** _regex_, **--invert-filter** _regex_
+> Exclude items matching regex.
+
+**-X**, **--ignore-directory** _name_
 > Ignore specified directory.
 
 **-x**, **--one-filesystem**
@@ -85,6 +97,9 @@ The tool is written in Rust for performance and handles large directory trees ef
 
 **-j**, **--threads** _n_
 > Number of threads to use.
+
+**-z** _size_, **--min-size** _size_
+> Minimum size to display (e.g., 1M).
 
 # CAVEATS
 
@@ -96,4 +111,4 @@ Results may differ from du due to block size vs apparent size differences. Very 
 
 # SEE ALSO
 
-[du](/man/du)(1), [ncdu](/man/ncdu)(1), [duf](/man/duf)(1), [df](/man/df)(1)
+[du](/man/du)(1), [ncdu](/man/ncdu)(1), [duf](/man/duf)(1), [df](/man/df)(1), [tree](/man/tree)(1)

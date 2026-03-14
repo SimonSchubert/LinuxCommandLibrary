@@ -38,13 +38,22 @@ _FILE_
 > Center header text.
 
 **--date** _DATE_
-> Date for footer.
+> Date for left-hand footer (default: input file modification date).
+
+**--utf8**
+> Assume UTF-8 encoding for input.
+
+**--stderr**
+> Print errors to stderr.
+
+**--fixed** _FONT_
+> Fixed-width font for verbatim text.
 
 # DESCRIPTION
 
-**pod2man** converts Perl POD (Plain Old Documentation) into Unix manual page format (nroff/troff). The output can be installed as system man pages or viewed with the **man** command.
+**pod2man** is a front-end for Pod::Man, converting Perl POD (Plain Old Documentation) into Unix manual page format (*roff). The output can be displayed with **nroff** via **man**, or printed with **troff**.
 
-The **--section** option sets the man page section number, **--name** overrides the page name, and **--release** adds version information. The **--center** option sets the centered header text. Part of the standard Perl distribution, commonly used in Perl module build systems.
+If no input file is given, it reads from STDIN. If no output file is given, it writes to STDOUT. The default center header is "User Contributed Perl Documentation". Part of the standard Perl distribution, commonly used in module build systems.
 
 # CAVEATS
 
@@ -56,5 +65,5 @@ pod2man was created for **generating man pages** from Perl documentation.
 
 # SEE ALSO
 
-[pod2html](/man/pod2html)(1), [pod2text](/man/pod2text)(1), [man](/man/man)(1)
+[pod2html](/man/pod2html)(1), [pod2text](/man/pod2text)(1), [man](/man/man)(1), [nroff](/man/nroff)(1)
 

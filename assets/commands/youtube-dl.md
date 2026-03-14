@@ -84,6 +84,21 @@ Download videos from YouTube and other sites
 **-j**, **--dump-json**
 > Print video info as JSON without downloading.
 
+**--cookies** _FILE_
+> Read cookies from a Netscape cookie file for authenticated access.
+
+**--proxy** _URL_
+> Use specified HTTP/HTTPS/SOCKS proxy.
+
+**--geo-bypass**
+> Bypass geographic restriction via faking X-Forwarded-For header.
+
+**-u** _USER_, **--username** _USER_
+> Login with account username.
+
+**-p** _PASS_, **--password** _PASS_
+> Login with account password.
+
 **-v**, **--verbose**
 > Print debug information.
 
@@ -96,7 +111,7 @@ Download videos from YouTube and other sites
 
 The output filename can be customized using templates with metadata variables. Configuration options can be stored in **~/.config/youtube-dl/config** or **/etc/youtube-dl.conf** for persistent settings.
 
-The tool requires Python 2.6+ or 3.2+ and works on Linux, macOS, and Windows.
+The tool requires Python and works on Linux, macOS, and Windows.
 
 # CAVEATS
 

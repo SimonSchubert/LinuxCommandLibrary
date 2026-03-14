@@ -29,7 +29,7 @@ GitHub CLI configuration guidance for MinTTY terminal on Windows
 
 **gh-mintty** provides GitHub CLI configuration guidance for MinTTY, the terminal emulator used by Git Bash on Windows. MinTTY has specific requirements for interactive prompts and pseudo-terminal handling that can affect **gh** behavior.
 
-The documentation addresses common issues like authentication prompts, interactive selections, and color output. Some features may require configuration adjustments or alternative approaches when running in MinTTY.
+The documentation addresses common issues like authentication prompts, interactive selections, and color output. Workarounds include reinstalling Git for Windows with "Enable experimental support for pseudo consoles" checked, or using a different terminal emulator like Windows Terminal.
 
 # CAVEATS
 
@@ -41,4 +41,4 @@ MinTTY documentation was added to **GitHub CLI** to address Windows terminal com
 
 # SEE ALSO
 
-[gh](/man/gh)(1), [gh-config](/man/gh-config)(1), [mintty](/man/mintty)(1)
+[gh](/man/gh)(1), [gh-config](/man/gh-config)(1)

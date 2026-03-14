@@ -39,18 +39,30 @@ Display **mounted** removable devices
 **-w, --read-write**
 > Force read-write mount
 
+**-s, --sync**
+> Mount with sync option (no write caching)
+
+**-A, --noatime**
+> Mount with noatime option
+
 **-u, --umask _mask_**
 > Set umask for mount
 
 **-e, --exec**
-> Allow execution of binaries
+> Allow execution of binaries (default: noexec)
+
+**-c, --charset _charset_**
+> Set I/O character set (default: utf8 in UTF-8 locale)
+
+**-d, --debug**
+> Enable verbose debug messages
 
 **label**
 > Mount point name under /media/
 
 # DESCRIPTION
 
-**pmount** allows regular users to mount removable devices without root privileges. It mounts to /media/ with the device name or specified label as mount point.
+**pmount** allows regular users to mount removable devices without root privileges. It mounts to /media/ with the device name or specified label as mount point. Default mount flags are: async,atime,nodev,noexec,noauto,nosuid,user,rw.
 
 The tool enforces security restrictions: only devices in /media can be mounted, and dangerous options like suid are disabled. It's designed for desktop environments lacking automatic mounting.
 

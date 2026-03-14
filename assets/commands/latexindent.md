@@ -24,9 +24,13 @@ formats LaTeX source code with consistent indentation
 
 ```latexindent -s [document.tex]```
 
-**Check only (no modification)**
+**Send backup and log files to a different directory**
 
-```latexindent -c [document.tex]```
+```latexindent -c [path/to/cruft/dir/] [document.tex]```
+
+**Overwrite only if content changed**
+
+```latexindent -wd [document.tex]```
 
 # SYNOPSIS
 
@@ -35,31 +39,34 @@ formats LaTeX source code with consistent indentation
 # PARAMETERS
 
 **-w**, **--overwrite**
-> Overwrite original file.
+> Overwrite original file (backup is created first).
+
+**-wd**, **--overwriteIfDifferent**
+> Overwrite original file only if the indented text differs.
 
 **-o** _file_
 > Output to specific file.
 
 **-l** [_file_]
-> Use local settings file.
+> Use local settings YAML file (default: localSettings.yaml).
 
 **-s**, **--silent**
-> Silent mode.
+> Silent mode; suppress terminal output.
 
 **-c** _dir_
-> Check mode, use directory for cruft.
+> Send backup files and indent.log to the specified directory instead of the current directory.
 
 **-m**, **--modifylinebreaks**
-> Modify line breaks.
+> Modify line breaks according to settings.
 
 **-g** _file_
-> Log file location.
+> Specify log file location.
 
 **--replacement**
-> Enable replacement mode.
+> Enable replacement mode for string/regex substitutions.
 
 **-y** _yaml_
-> Settings in YAML format.
+> Provide YAML settings inline (e.g., -y="defaultIndent: '  '").
 
 # DESCRIPTION
 

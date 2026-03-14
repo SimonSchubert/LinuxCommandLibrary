@@ -8,23 +8,23 @@ creates secure tunnels to localhost
 
 ```ngrok http [8080]```
 
-**Expose with subdomain**
+**Expose with custom domain**
 
-```ngrok http --subdomain=[myapp] [8080]```
+```ngrok http --domain=[myapp.ngrok-free.app] [8080]```
 
 **TCP tunnel**
 
 ```ngrok tcp [22]```
 
-**Inspect traffic**
-
-```ngrok http [8080] --inspect```
-
-**Start with config**
+**Start named tunnel from config**
 
 ```ngrok start [tunnel-name]```
 
-**Show authtoken**
+**Start all tunnels from config**
+
+```ngrok start --all```
+
+**Set authentication token**
 
 ```ngrok config add-authtoken [token]```
 
@@ -32,42 +32,62 @@ creates secure tunnels to localhost
 
 ```ngrok tls [443]```
 
+**Check configuration file validity**
+
+```ngrok config check```
+
+**Diagnose connectivity**
+
+```ngrok diagnose```
+
 # SYNOPSIS
 
 **ngrok** [_command_] [_options_]
 
 # PARAMETERS
 
-_COMMAND_
-> ngrok command.
-
 **http** _PORT_
-> HTTP tunnel to port.
+> Create HTTP tunnel to local port.
 
 **tcp** _PORT_
-> TCP tunnel.
+> Create TCP tunnel.
 
 **tls** _PORT_
-> TLS tunnel.
+> Create TLS tunnel (does not terminate TLS).
+
+**start** _name_
+> Start named tunnel(s) from configuration file.
 
 **config** _SUBCOMMAND_
-> Configuration commands.
+> Manage ngrok configuration (add-authtoken, check, edit).
 
-**--subdomain** _NAME_
-> Custom subdomain.
+**diagnose**
+> Run connectivity diagnostics to ngrok service.
+
+**service** _action_
+> Manage ngrok as a system service (install, start, stop, restart, uninstall).
+
+**--domain** _NAME_
+> Custom domain for tunnel endpoint.
+
+**--region** _REGION_
+> Region for tunnel (us, eu, ap, au, sa, jp, in).
+
+**--log** _path_
+> Write logs to file or "stdout"/"stderr".
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**ngrok** creates secure tunnels to localhost. It exposes local servers to the internet.
+**ngrok** creates secure tunnels from a public endpoint to a locally running service. It exposes local servers to the internet through a public URL without deploying or configuring firewalls.
 
-The tool provides public URLs. Useful for webhooks, demos, and testing.
+Common use cases include webhook development, demo presentations, testing mobile backends, and remote access to local services. The web inspection interface (default at localhost:4040) allows real-time traffic inspection and replay.
 
 # CAVEATS
 
-Free tier has limitations. Account required for features. URLs change on restart.
+Free tier has connection limits and randomized URLs that change on restart. An account and authtoken are required for most features. The --subdomain flag was replaced by --domain in newer versions.
 
 # HISTORY
 

@@ -38,9 +38,12 @@ combines a commit's changes into its parent in Jujutsu
 **-m**, **--message** _msg_
 > New commit message.
 
+**--keep-emptied**
+> Keep the emptied source commit instead of abandoning it.
+
 # DESCRIPTION
 
-**jj squash** combines a commit's changes into its parent in Jujutsu. The squashed commit becomes empty and can be abandoned. Use **-i** to select which changes to squash.
+**jj squash** combines a commit's changes into its parent (or a specified destination) in Jujutsu. The squashed commit becomes empty and can be abandoned. Use **-i** to interactively select which changes to squash.
 
 # SEE ALSO
 

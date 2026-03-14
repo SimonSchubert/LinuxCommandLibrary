@@ -8,13 +8,17 @@ Open to **specific** directory
 
 ```termusic [path/to/directory]```
 
-Disable **album cover**
+Disable **album cover** display
 
-```termusic -c [path/to/file]```
+```termusic -c```
 
 Display **help**
 
 ```termusic --help```
+
+**Scan** library and update database
+
+```termusic scan```
 
 # SYNOPSIS
 
@@ -24,6 +28,15 @@ Display **help**
 
 **-c**
 > Disable showing album cover
+
+**-m** _DEPTH_
+> Max depth of folder scanning (default: 4)
+
+**scan**
+> Scan library and update database
+
+**config**
+> Open config in editor
 
 **--help**
 > Display help information
@@ -43,6 +56,12 @@ Configuration is stored in `~/.config/termusic/config.toml` where default direct
 **Space** - Pause/resume
 
 **n/p** - Next/previous track
+
+**s** - Toggle shuffle
+
+**f** - Seek forward
+
+**F1** - Help
 
 **q** - Quit
 

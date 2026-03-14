@@ -92,11 +92,23 @@ The tool is used by Android Studio, the Android Gradle plugin, and Google Play t
 **--ks** _file_
 > Path to keystore for signing
 
+**--ks-pass** _pass_
+> Keystore password (pass:password or file:/path)
+
 **--ks-key-alias** _alias_
 > Key alias in keystore
 
+**--key-pass** _pass_
+> Key password (pass:password or file:/path)
+
 **--connected-device**
-> Use specification from connected device
+> Build APKs for the connected device
+
+**--local-testing**
+> Add metadata for local feature module testing
+
+**--overwrite**
+> Overwrite existing output file
 
 # CAVEATS
 

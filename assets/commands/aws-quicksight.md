@@ -70,6 +70,18 @@ QuickSight supports connections to various data sources including S3, Athena, Re
 **list-data-sources**
 > List configured data sources
 
+**list-data-sets**
+> List all datasets in the account
+
+**delete-dashboard**
+> Delete a dashboard
+
+**update-dashboard**
+> Update an existing dashboard
+
+**describe-data-source**
+> Get data source details
+
 # CAVEATS
 
 SPICE datasets have storage limits based on subscription tier. Dashboard refresh depends on data source refresh schedules. Embedded dashboards require proper CORS and domain configuration. User management is separate from IAM; QuickSight has its own user registry.

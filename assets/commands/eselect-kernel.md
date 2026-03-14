@@ -4,25 +4,36 @@ Kernel source symlink manager for Gentoo
 
 # TLDR
 
-**List** available kernel symlink targets
+**List** available kernel source targets
 
 ```eselect kernel list```
 
-**Set** the /usr/src/linux symlink
+**Set** the /usr/src/linux symlink by number
 
-```eselect kernel set [name|number]```
+```eselect kernel set [number]```
 
-**Show** current kernel symlink
+**Set** the /usr/src/linux symlink by name
+
+```eselect kernel set [linux-6.1.0-gentoo]```
+
+**Show** current kernel symlink target
 
 ```eselect kernel show```
-
-**Update** symlink to running kernel
-
-```eselect kernel update```
 
 # SYNOPSIS
 
 **eselect kernel** _action_ [_options_]
+
+# PARAMETERS
+
+**list**
+> List available kernel sources with numbers, asterisk marks current selection
+
+**set** _target_
+> Set /usr/src/linux symlink to target (name or number from list)
+
+**show**
+> Display the current symlink target
 
 # DESCRIPTION
 
@@ -30,23 +41,9 @@ Kernel source symlink manager for Gentoo
 
 When multiple kernel source versions are installed (common during kernel upgrades or testing), this tool provides an easy way to switch between them without manually recreating the symlink. This is particularly important for maintaining external modules like graphics drivers or virtualization software that must be compiled against the correct kernel sources matching the running or target kernel version.
 
-# PARAMETERS
-
-**list**
-> List available kernel sources
-
-**set** _target_
-> Set symlink to target
-
-**show**
-> Display current symlink target
-
-**update**
-> Set symlink to running kernel
-
 # CAVEATS
 
-Gentoo Linux specific. Requires kernel sources to be installed. Changes affect kernel module compilation paths.
+Gentoo Linux specific. Requires kernel sources to be installed via emerge. Changes affect kernel module compilation paths. Does not affect the currently running kernel, only which source tree is pointed to by /usr/src/linux.
 
 # SEE ALSO
 

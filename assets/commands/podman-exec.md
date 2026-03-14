@@ -42,40 +42,30 @@ Execute commands inside running containers
 > Working directory.
 
 **-d**, **--detach**
-> Run in background.
+> Run in background. Prints the exec session ID and exits immediately.
+
+**--detach-keys** _sequence_
+> Key sequence for detaching from the container (default: ctrl-p,ctrl-q).
+
+**--env-file** _file_
+> Read environment variables from a line-delimited file.
+
+**-l**, **--latest**
+> Use the most recently created container instead of specifying a name or ID.
+
+**--preserve-fds** _N_
+> Pass N additional file descriptors (beyond stdin/stdout/stderr) to the process.
 
 **--privileged**
-> Extended privileges.
+> Give extended privileges to the command.
 
 # DESCRIPTION
 
 **podman exec** runs a command inside a running container. It's essential for debugging, maintenance, and interacting with container processes.
 
-# EXAMPLES
-
-```bash
-# Interactive bash shell
-podman exec -it mycontainer bash
-
-# Run command as root
-podman exec -u 0 mycontainer id
-
-# Check process list
-podman exec mycontainer ps aux
-
-# Set working directory
-podman exec -w /app mycontainer ls
-
-# Run with environment
-podman exec -e DEBUG=1 mycontainer ./app
-
-# Detached execution
-podman exec -d mycontainer ./background-task
-```
-
 # CAVEATS
 
-Container must be running. Command must exist in container. Rootless Podman has user namespace limitations.
+Container must be running. Command must exist in the container image. Rootless Podman has user namespace limitations. The **--latest** flag is not supported on remote clients.
 
 # HISTORY
 
@@ -83,4 +73,4 @@ podman exec is part of **Podman**, the daemonless container engine developed by 
 
 # SEE ALSO
 
-[podman-run](/man/podman-run)(1), [podman-attach](/man/podman-attach)(1), [podman-logs](/man/podman-logs)(1), [docker-exec](/man/docker-exec)(1)
+[podman-run](/man/podman-run)(1), [podman](/man/podman)(1), [docker-exec](/man/docker-exec)(1)

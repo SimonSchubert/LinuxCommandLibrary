@@ -69,6 +69,21 @@ Output **raw** format
 **-i, --interpret**
 > Interpret numeric values (UIDs, syscalls, etc.)
 
+**-k, --key** _key_
+> Search for events matching the specified audit key
+
+**-p, --pid** _pid_
+> Search by process ID
+
+**-sc, --syscall** _syscall_
+> Search by system call name or number
+
+**-x, --executable** _path_
+> Search for events matching the executable path
+
+**--input-logs**
+> Read from specific audit log files
+
 # CONFIGURATION
 
 **/etc/audit/auditd.conf**

@@ -23,15 +23,22 @@ project-to-project reference adder
 # PARAMETERS
 
 **-f**, **--framework** _framework_
-> Add reference only for specific framework.
+> Add reference only for specific target framework.
+
+**--interactive**
+> Allow the command to prompt for input.
 
 # DESCRIPTION
 
 **dotnet add reference** adds project-to-project (P2P) references to a project file, creating build-time dependencies between projects in a solution. Referenced projects are automatically built before the referencing project, ensuring correct build order.
 
-P2P references enable code sharing within a solution while maintaining clear dependency boundaries. The command modifies the project file to include the reference path, which can be relative or absolute.
+P2P references enable code sharing within a solution while maintaining clear dependency boundaries. The command modifies the `.csproj` (or `.fsproj`, `.vbproj`) file to add `<ProjectReference>` elements with relative paths to the referenced projects.
+
+# CAVEATS
+
+Circular references are not allowed and will produce an error. The referenced project must exist. Use `dotnet list reference` to verify existing references.
 
 # SEE ALSO
 
-[dotnet-remove-reference](/man/dotnet-remove-reference)(1), [dotnet-list-reference](/man/dotnet-list-reference)(1)
+[dotnet](/man/dotnet)(1), [dotnet-build](/man/dotnet-build)(1), [dotnet-add-package](/man/dotnet-add-package)(1)
 

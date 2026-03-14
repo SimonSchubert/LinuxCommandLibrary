@@ -89,4 +89,4 @@ Compiz was created by **David Reveman** at Novell and first released in **2006**
 
 # SEE ALSO
 
-[ccsm](/man/ccsm)(1), [metacity](/man/metacity)(1), [mutter](/man/mutter)(1), [kwin](/man/kwin)(1)
+[mutter](/man/mutter)(1), [kwin](/man/kwin)(1), [openbox](/man/openbox)(1), [picom](/man/picom)(1)

@@ -24,6 +24,14 @@ Run with **secrets** from file
 
 ```act --secret-file [.secrets]```
 
+**Dry run** to see what would be executed
+
+```act -n```
+
+Run with a specific **platform image**
+
+```act -P ubuntu-latest=catthehacker/ubuntu:act-latest```
+
 # SYNOPSIS
 
 **act** [_-W workflow_] [_-j job_] [_-e event_] [_--secret-file file_] [_options_]
@@ -55,7 +63,19 @@ The tool supports most GitHub Actions features including matrix builds, secrets,
 > Load environment variables from file
 
 **-P** _platform_, **--platform** _platform_
-> Custom Docker image for platform (e.g., ubuntu-latest=nektos/act-environments-ubuntu:18.04)
+> Custom Docker image for platform (e.g., ubuntu-latest=catthehacker/ubuntu:act-latest)
+
+**--input** _input_
+> Set a workflow input (KEY=VALUE)
+
+**--input-file** _file_
+> Load workflow inputs from file
+
+**--matrix** _matrix_
+> Select specific matrix configuration to run
+
+**--action-offline-mode**
+> Don't pull images or fetch remote actions if already cached
 
 **-l**, **--list**
 > List available workflows and jobs

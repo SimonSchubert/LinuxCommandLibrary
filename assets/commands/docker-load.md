@@ -27,14 +27,14 @@ load Docker images from tar archives
 # PARAMETERS
 
 **-i**, **--input** _file_
-> Read from tar archive file.
+> Read from a tar archive file instead of STDIN. The tarball may be compressed with gzip, bzip2, or xz.
 
 **-q**, **--quiet**
-> Suppress load output.
+> Suppress the load output and progress bar.
 
 # DESCRIPTION
 
-**docker load** loads an image from a tar archive or STDIN. Restores both images and tags saved by docker save. This command is the counterpart to docker save, enabling image transfer between systems without using a registry. Useful for air-gapped environments or offline distribution.
+**docker load** loads an image from a tar archive or STDIN. Restores both images and tags saved by **docker save**. This command is the counterpart to docker save, enabling image transfer between systems without using a registry. Useful for air-gapped environments or offline distribution.
 
 # SEE ALSO
 

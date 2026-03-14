@@ -12,9 +12,21 @@ validate PostScript Printer Description files
 
 ```cupstestppd -v [file.ppd]```
 
+**Test with detailed conformance and all PPD information**
+
+```cupstestppd -vv [file.ppd]```
+
 **Quiet mode** (only errors)
 
 ```cupstestppd -q [file.ppd]```
+
+**Test from stdin**
+
+```cat [file.ppd] | cupstestppd -```
+
+**Test with relaxed conformance** requirements
+
+```cupstestppd -r [file.ppd]```
 
 # SYNOPSIS
 
@@ -23,20 +35,29 @@ validate PostScript Printer Description files
 # PARAMETERS
 
 **-v**
-> Verbose output.
+> Detailed conformance testing results.
+
+**-vv**
+> Display all PPD information in addition to detailed conformance results.
 
 **-q**
 > Quiet mode, only show errors.
 
-**-W** _level_
-> Set warning level (none, relaxed, all).
+**-r**
+> Relaxed conformance: treat common whitespace, control character, and formatting problems as non-fatal.
+
+**-W** _category_
+> Report errors as warnings for a category: filters, profiles, sizes, translations, all, or none.
+
+**-I** _category_
+> Ignore errors for a category: filename or filters.
 
 **-R** _root_
 > Set alternate root directory.
 
 # DESCRIPTION
 
-**cupstestppd** validates PostScript Printer Description (PPD) files for use with CUPS. It checks for conformance issues and common errors.
+**cupstestppd** tests the conformance of PPD files to the Adobe PostScript Printer Description file format specification version 4.3. It can also be used to list the supported options and available fonts in a PPD file. It accepts filenames on the command line or reads from standard input when given a dash (-) argument.
 
 Exit code 0 indicates a valid PPD file.
 

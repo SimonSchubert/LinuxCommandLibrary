@@ -115,4 +115,4 @@ Apptainer is the continuation of the **Singularity** project after it joined the
 
 # SEE ALSO
 
-[apptainer](/man/apptainer)(1), [apptainer-shell](/man/apptainer-shell)(1), [apptainer-run](/man/apptainer-run)(1), [apptainer-build](/man/apptainer-build)(1), [docker](/man/docker)(1)
+[apptainer](/man/apptainer)(1), [apptainer-shell](/man/apptainer-shell)(1), [apptainer-run](/man/apptainer-run)(1), [apptainer-build](/man/apptainer-build)(1), [apptainer-pull](/man/apptainer-pull)(1), [docker](/man/docker)(1)

@@ -4,6 +4,10 @@ Syntax-aware Git merge conflict resolver
 
 # TLDR
 
+**Register mergiraf as a Git merge driver**
+
+```mergiraf register```
+
 **Use as a Git merge driver** (configure in .gitattributes)
 
 ```*.rs merge=mergiraf```
@@ -12,9 +16,43 @@ Syntax-aware Git merge conflict resolver
 
 ```mergiraf resolve [path/to/conflicted_file]```
 
+**Resolve with explicit language** specification
+
+```mergiraf resolve -L [rust] [path/to/conflicted_file]```
+
+**Review mergiraf's automatic resolution**
+
+```mergiraf review [path/to/file]```
+
+**List supported languages**
+
+```mergiraf languages```
+
 # SYNOPSIS
 
 **mergiraf** _command_ [_options_] [_file_]
+
+# SUBCOMMANDS
+
+**resolve**
+> Attempt to resolve merge conflicts in a file.
+
+**review**
+> Review mergiraf's automatic conflict resolution.
+
+**register**
+> Register mergiraf as a Git merge driver in global git config.
+
+**languages**
+> List supported languages and file extensions.
+
+**report**
+> Generate an archive to reproduce a faulty merge.
+
+# PARAMETERS
+
+**-L, --language** _LANG_
+> Specify language by name or file extension.
 
 # DESCRIPTION
 
@@ -24,7 +62,7 @@ It operates as a drop-in driver for **git merge**, **git rebase**, and **cherry-
 
 # CAVEATS
 
-Cannot resolve all conflicts — semantic conflicts that require understanding program logic still need manual resolution. Language support varies by file type.
+Cannot resolve all conflicts — semantic conflicts that require understanding program logic still need manual resolution. Language support varies by file type. For best results, use Git v2.44.0 or newer.
 
 # HISTORY
 

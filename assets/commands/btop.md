@@ -8,6 +8,22 @@ Terminal-based resource monitor with GPU support
 
 ```btop```
 
+Start with a specific **update rate** in milliseconds
+
+```btop -u [500]```
+
+Start with a **process filter**
+
+```btop -f [process_name]```
+
+Start with a **preset** layout (0-9)
+
+```btop -p [0]```
+
+Start in **TTY mode** (16 colors, ANSI graph symbols)
+
+```btop -t```
+
 # SYNOPSIS
 
 **btop** [_options_]
@@ -32,8 +48,20 @@ Terminal-based resource monitor with GPU support
 **-c**, **--config** _file_
 > Path to config file
 
+**--force-utf**
+> Force start even if no UTF-8 locale was detected
+
+**--themes-dir** _dir_
+> Path to custom themes directory
+
+**+t**
+> Force disable tty mode
+
+**--default-config**
+> Print default config to standard output
+
 **-d**, **--debug**
-> Debug mode
+> Start in debug mode with additional logs
 
 **-V**, **--version**
 > Show version

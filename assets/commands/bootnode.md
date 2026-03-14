@@ -14,7 +14,7 @@ Ethereum network bootstrap node
 
 **Run on specific address** and port
 
-```bootnode -nodekey [node.key] -addr [192.168.1.1:30303]```
+```bootnode -nodekey [node.key] -addr [192.168.1.1:30301]```
 
 **Write node URL** to file
 
@@ -70,4 +70,4 @@ bootnode was developed as part of the **go-ethereum** project by the Ethereum Fo
 
 # SEE ALSO
 
-[geth](/man/geth)(1), [enode](/man/enode)(1)
+[geth](/man/geth)(1)

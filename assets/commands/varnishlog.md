@@ -8,9 +8,9 @@ Display Varnish HTTP request logs
 
 ```varnishlog```
 
-**Filter by tag**
+**Include only specific tag**
 
-```varnishlog -I [ReqURL]```
+```varnishlog -i [ReqURL]```
 
 **Filter by query**
 
@@ -30,27 +30,39 @@ Display Varnish HTTP request logs
 
 # SYNOPSIS
 
-**varnishlog** [_-c_] [_-b_] [_-q query_] [_-I tag_] [_options_]
+**varnishlog** [_-c_] [_-b_] [_-q query_] [_-i tag_] [_options_]
 
 # PARAMETERS
 
 **-c**
-> Client side.
+> Show client-side transactions only.
 
 **-b**
-> Backend side.
+> Show backend-side transactions only.
 
 **-q** _QUERY_
-> VSL query.
+> VSL query expression to filter transactions.
 
-**-I** _TAG_
-> Include tag.
+**-i** _TAGLIST_
+> Include only records with specified tags (comma-separated).
+
+**-I** _TAGREGEX_
+> Include only records matching tag and regex pattern.
+
+**-x** _TAGLIST_
+> Exclude records with specified tags.
+
+**-X** _TAGREGEX_
+> Exclude records matching tag and regex pattern.
 
 **-g** _MODE_
-> Grouping mode.
+> Grouping mode (raw, vxid, request, session).
 
 **-d**
-> Process old entries.
+> Process old log entries first.
+
+**-w** _FILENAME_
+> Write output to file.
 
 # DESCRIPTION
 
@@ -60,7 +72,7 @@ The tool provides powerful filtering through the VSL query language, allowing yo
 
 # CAVEATS
 
-Varnish specific. VSL knowledge helpful. Running Varnish needed.
+Requires a running Varnish instance. Familiarity with VSL query language is helpful for effective filtering. Output can be very verbose without filters.
 
 # HISTORY
 

@@ -32,6 +32,10 @@ Smarter cd command that learns directory habits
 
 ```zoxide query -ls```
 
+**Generate shell initialization (add to shell profile)**
+
+```eval "$(zoxide init [bash|zsh|fish])"```
+
 # SYNOPSIS
 
 **zoxide** _subcommand_ [_options_] [_arguments_]

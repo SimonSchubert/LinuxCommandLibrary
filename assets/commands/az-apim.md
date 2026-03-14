@@ -77,6 +77,9 @@ Manage Azure API Management services
 **nv**
 > Manage Named Values for configuration.
 
+**apply-network-updates**
+> Update virtual network settings of the API Management service.
+
 # DESCRIPTION
 
 **az apim** manages Azure API Management services, which provide a way to create consistent and modern API gateways for existing back-end services. It handles API creation, versioning, documentation, security policies, rate limiting, and developer portal management.

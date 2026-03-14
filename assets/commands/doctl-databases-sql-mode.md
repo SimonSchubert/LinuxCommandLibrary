@@ -4,13 +4,17 @@ manage MySQL SQL mode settings
 
 # TLDR
 
-**Get SQL mode**
+**Get current SQL mode** for a database cluster
 
 ```doctl databases sql-mode get [cluster_id]```
 
-**Set SQL mode**
+**Set SQL mode** for a database cluster
 
-```doctl databases sql-mode set [cluster_id] [modes...]```
+```doctl databases sql-mode set [cluster_id] [ANSI_QUOTES] [STRICT_TRANS_TABLES]```
+
+**Set SQL mode with output format**
+
+```doctl databases sql-mode get [cluster_id] --format [SQLMode]```
 
 # SYNOPSIS
 
@@ -19,19 +23,27 @@ manage MySQL SQL mode settings
 # SUBCOMMANDS
 
 **get**
-> Get current SQL mode.
+> Get current SQL mode for a MySQL database cluster.
 
 **set**
-> Set SQL mode.
+> Set SQL mode for a MySQL database cluster. Provide one or more modes as space-separated arguments.
+
+# PARAMETERS
+
+**--format** _columns_
+> Columns for output in a comma-separated list.
+
+**--no-header**
+> Return raw data with no headers.
 
 # DESCRIPTION
 
 **doctl databases sql-mode** manages SQL mode settings for MySQL managed database clusters on DigitalOcean. SQL modes control how MySQL handles query syntax validation, data type conversions, and error conditions.
 
-Different SQL modes affect database behavior significantly. For example, STRICT_TRANS_TABLES rejects invalid data rather than silently converting it, ANSI_QUOTES changes how identifiers are quoted, and NO_ZERO_DATE prevents use of '0000-00-00' dates. These modes help enforce data integrity standards and ensure compatibility with specific application requirements or database migration scenarios.
+Common SQL modes include STRICT_TRANS_TABLES (reject invalid data), ANSI_QUOTES (treat double quotes as identifier quotes), NO_ZERO_DATE (disallow '0000-00-00' dates), and ONLY_FULL_GROUP_BY (require GROUP BY to include all non-aggregated columns).
 
-Understanding and configuring SQL modes is important for database compatibility, especially when migrating from other database systems or maintaining strict data validation requirements.
+Setting SQL modes replaces the existing configuration entirely rather than appending to it. To add a mode, first retrieve the current modes with **get**, then include them all in the **set** command.
 
 # SEE ALSO
 
-[doctl-databases](/man/doctl-databases)(1)
+[doctl-databases](/man/doctl-databases)(1), [doctl](/man/doctl)(1), [mysql](/man/mysql)(1)

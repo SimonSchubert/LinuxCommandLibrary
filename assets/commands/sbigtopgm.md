@@ -14,7 +14,7 @@ Convert SBIG CCD camera images to PGM format
 
 # DESCRIPTION
 
-**sbigtopgm** converts SBIG (Santa Barbara Instrument Group) astronomical CCD camera images to PGM format. Part of Netpbm toolkit.
+**sbigtopgm** reads an image file in the native SBIG (Santa Barbara Instrument Group) Type 3 format used by astronomical CCD cameras and produces a PGM (portable graymap) image as output. If no file is specified, it reads from standard input. The program handles variations in the SBIG format including flexible header capitalization and line endings. Part of the Netpbm toolkit.
 
 # SEE ALSO
 

@@ -26,7 +26,19 @@ verify all PHP dependencies are declared
 > Output format: text, json.
 
 **--config-file** _file_
-> Path to configuration file.
+> Path to configuration file. Default: composer-require-checker.json if present.
+
+**--composer-vendor-dir** _dir_
+> Path to Composer vendor directory. Default: ./vendor.
+
+**--exclude** _path_
+> Exclude files or directories from analysis. Can be used multiple times.
+
+**--dump-configuration**
+> Dump the default configuration to stdout.
+
+**-v**, **--verbose**
+> Increase verbosity. Use -vv or -vvv for more detail.
 
 # DESCRIPTION
 

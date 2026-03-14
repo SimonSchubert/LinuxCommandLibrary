@@ -24,6 +24,14 @@ manages Kubernetes contexts with isolated shells
 
 ```kubie ctx [context] -n [namespace]```
 
+**Execute a command** in a specific context without spawning a shell
+
+```kubie exec [context] [namespace] -- [kubectl get pods]```
+
+**Show current context info**
+
+```kubie info ctx```
+
 **Exit kubie shell**
 
 ```exit```
@@ -43,8 +51,11 @@ manages Kubernetes contexts with isolated shells
 **-n** _NAMESPACE_
 > Specify namespace.
 
-**exec** _CONTEXT_ _CMD_
-> Execute in context.
+**exec** _CONTEXT_ _NAMESPACE_ **--** _CMD_
+> Execute command in context without spawning a shell.
+
+**info** _ITEM_
+> Show current context (ctx) or namespace (ns).
 
 **--help**
 > Display help information.
@@ -57,7 +68,7 @@ This isolation model prevents a common source of errors in multi-cluster workflo
 
 # CAVEATS
 
-Spawns subshells. Different from kubectx approach. Rust-based.
+Each context switch spawns a subshell, so deeply nested switches increase shell depth. Requires kubeconfig files to be accessible. Supports fzf for interactive selection if installed.
 
 # HISTORY
 

@@ -8,29 +8,22 @@ display DVD media information
 
 ```dvd+rw-mediainfo [/dev/dvd]```
 
-**Show drive** capabilities
-
-```dvd+rw-mediainfo -d [/dev/dvd]```
-
 # SYNOPSIS
 
-**dvd+rw-mediainfo** [_options_] _device_
+**dvd+rw-mediainfo** _device_
 
 # PARAMETERS
 
 _DEVICE_
-> DVD drive device path.
-
-**-d**
-> Show drive capabilities.
+> DVD/BD drive device path (e.g., /dev/dvd, /dev/sr0).
 
 # DESCRIPTION
 
-**dvd+rw-mediainfo** displays detailed information about DVD media currently in the drive. It reports disc type, capacity, booktype, write speed, and current usage status.
+**dvd+rw-mediainfo** displays detailed information about optical media (DVD/BD) currently in the drive and the drive itself. It reports disc type, capacity, booktype, write speed, and current usage status.
 
-The output includes manufacturer information, disc state (empty, appendable, complete), and layer information for dual-layer media. This helps verify disc compatibility and available capacity before burning.
+The output includes manufacturer information, disc state (empty, appendable, complete), and layer information for dual-layer media. This helps verify disc compatibility and available capacity before burning. It is especially useful for debugging, and its output should be included when reporting bugs in dvd+rw-tools.
 
-Drive capability query shows supported formats, speeds, and features of the optical drive.
+This program does not accept any command-line options beyond the device path.
 
 # CAVEATS
 

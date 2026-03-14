@@ -43,6 +43,10 @@ This is not an executable command but a reference document explaining where file
 - /etc/systemd for local overrides
 - Merged /usr (bin, sbin, lib merged)
 
+# CAVEATS
+
+This is a documentation page, not an executable command. The hierarchy described is specific to systemd-based distributions and may differ on other Linux systems.
+
 # SEE ALSO
 
-[hier](/man/hier)(7), [systemd](/man/systemd)(1), [file-hierarchy](/man/file-hierarchy)(7)
+[mount](/man/mount)(8), [umount](/man/umount)(8)

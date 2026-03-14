@@ -24,17 +24,17 @@ CLI for CircleCI continuous integration platform
 
 ```circleci project create```
 
-**List contexts**
-
-```circleci context list [github] [org-name]```
-
 **List orbs**
 
 ```circleci orb list```
 
-**Get namespace info**
+**Follow a project**
 
-```circleci namespace info [namespace]```
+```circleci follow```
+
+**Open CircleCI in browser**
+
+```circleci open```
 
 # SYNOPSIS
 

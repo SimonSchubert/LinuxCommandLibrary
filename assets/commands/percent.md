@@ -1,6 +1,6 @@
 # TAGLINE
 
-**%** in shell context typically refers to job control, bringing background
+**%** in shell context refers to job control, bringing background jobs to the foreground
 
 # TLDR
 
@@ -47,27 +47,13 @@
 
 # DESCRIPTION
 
-**%** in shell context typically refers to job control, bringing background jobs to the foreground. It's shorthand for the **fg** command.
+**%** in shell context refers to job control, bringing background jobs to the foreground. It's shorthand for the **fg** command.
 
 When a command is suspended (Ctrl+Z) or run in background (&), it gets a job number. The **%** notation provides quick access to these jobs.
 
 In arithmetic contexts **$(( ))**, **%** is the modulo operator, returning the remainder of integer division.
 
 In prompt strings (PS1), **%** introduces escape sequences in zsh for dynamic prompt elements.
-
-# Start background job
-sleep 100 &
-# [1] 12345
-
-# Bring to foreground
-%1
-
-# In arithmetic
-remainder=$((17 % 5))  # Result: 2
-
-# In zsh prompt (show current directory)
-PS1='%~ $ '
-```
 
 # CAVEATS
 

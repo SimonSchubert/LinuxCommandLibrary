@@ -12,6 +12,10 @@ Static Composer repository generator
 
 ```satis build [satis.json] [output-dir] [package1] [package2]```
 
+**Build without user interaction** (e.g. for CI)
+
+```satis build -n [satis.json] [output-dir]```
+
 **Initialize config**
 
 ```satis init [satis.json]```
@@ -47,6 +51,9 @@ Static Composer repository generator
 
 **-v**
 > Verbose output.
+
+**-q**
+> Quiet output.
 
 # DESCRIPTION
 

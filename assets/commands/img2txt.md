@@ -1,6 +1,6 @@
 # TAGLINE
 
-converts images to colored ASCII art, outputting text that reproduces
+Convert images to colored text-based art
 
 # TLDR
 
@@ -20,9 +20,9 @@ Set output **font height**
 
 ```img2txt -y [14] [path/to/image]```
 
-Adjust image **brightness**
+Convert image to **HTML** format
 
-```img2txt -b [2] [path/to/image]```
+```img2txt -f html [path/to/image] > [output.html]```
 
 # SYNOPSIS
 
@@ -37,23 +37,29 @@ Adjust image **brightness**
 > Set output height in lines
 
 **-x**, **--font-width** _PIXELS_
-> Set assumed font width for aspect ratio
+> Set assumed font width for aspect ratio (default 6)
 
 **-y**, **--font-height** _PIXELS_
-> Set assumed font height for aspect ratio
+> Set assumed font height for aspect ratio (default 10)
 
 **-b**, **--brightness** _VALUE_
 > Adjust brightness (default 1.0)
 
 **-c**, **--contrast** _VALUE_
-> Adjust contrast
+> Adjust contrast (default 1.0)
+
+**-g**, **--gamma** _VALUE_
+> Adjust gamma (default 1.0)
+
+**-d**, **--dither** _ALGORITHM_
+> Dithering algorithm (none, ordered2, ordered4, ordered8, random, fstein)
 
 **-f**, **--format** _FORMAT_
-> Output format (ansi, html, irc, etc.)
+> Output format: ansi, utf8, html, html3, irc, bbfr, ps, svg, tga, caca
 
 # DESCRIPTION
 
-**img2txt** converts images to colored ASCII art, outputting text that reproduces the image using character patterns and terminal colors. It is part of the libcaca library, which provides ASCII art rendering.
+**img2txt** converts images to colored text-based art using character patterns and terminal colors. It is part of the **libcaca** library. It supports PNG, JPEG, GIF, BMP, and other common image formats. Default output is 60 columns wide with height calculated to preserve aspect ratio.
 
 The tool can produce output in various formats including ANSI terminal codes, HTML, IRC color codes, and plain text. The resulting ASCII art can be displayed in terminals or embedded in documents.
 
@@ -67,4 +73,4 @@ img2txt is part of libcaca, a graphics library for text terminals created by Sam
 
 # SEE ALSO
 
-[cacaview](/man/cacaview)(1), [jp2a](/man/jp2a)(1), [aview](/man/aview)(1)
+[cacaview](/man/cacaview)(1), [jp2a](/man/jp2a)(1)

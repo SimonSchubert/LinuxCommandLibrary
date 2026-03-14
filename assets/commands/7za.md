@@ -63,7 +63,7 @@ standalone file archiver from the 7-Zip family
 > Compression level (0-9)
 
 **-t**_type_
-> Archive type (7z, zip, gzip, bzip2, tar)
+> Archive type (7z, zip, gzip, bzip2, xz, tar)
 
 **-r**
 > Recurse subdirectories
@@ -71,11 +71,20 @@ standalone file archiver from the 7-Zip family
 **-y**
 > Assume yes to queries
 
+**-si**
+> Read from stdin
+
+**-so**
+> Write to stdout
+
+**-mhe=on**
+> Encrypt archive headers (7z format)
+
 # DESCRIPTION
 
 **7za** is the standalone version of the 7-Zip command-line tool. Unlike **7z** which may use external plugins, 7za includes all codecs in a single executable.
 
-7za supports fewer formats than the full 7z but is more portable as a single binary. It handles 7z, ZIP, GZIP, BZIP2, TAR, and XZ formats.
+7za supports fewer formats than the full 7z but is more portable as a single binary. It handles 7z, ZIP, GZIP, BZIP2, XZ, TAR, and CAB formats.
 
 The command syntax is identical to **7z**. For scripts that only need common formats, 7za is often preferred for its simplicity and reliability.
 

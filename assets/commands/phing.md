@@ -1,6 +1,6 @@
 # TAGLINE
 
-PHP build tool
+PHP build tool based on Apache Ant
 
 # TLDR
 
@@ -16,13 +16,25 @@ PHP build tool
 
 ```phing -f [build.xml] [target]```
 
-**List targets**
+**List available targets**
 
 ```phing -l```
 
-**Set property**
+**Set a property value**
 
 ```phing -D[name]=[value] [target]```
+
+**Run with verbose output**
+
+```phing -verbose [target]```
+
+**Run in debug mode**
+
+```phing -debug [target]```
+
+**Specify a logger**
+
+```phing -logger phing.listener.DefaultLogger [target]```
 
 # SYNOPSIS
 
@@ -31,38 +43,50 @@ PHP build tool
 # PARAMETERS
 
 _TARGET_
-> Build target to execute.
+> Build target to execute. If omitted, the default target is run.
 
 **-f** _FILE_
-> Build file.
+> Use the specified build file instead of the default build.xml.
 
 **-l**
-> List targets.
+> List available targets in the build file.
 
 **-D**_PROP_**=**_VALUE_
-> Set property.
+> Set a build property to a given value, overriding the build file.
 
-**-v**
-> Verbose output.
+**-verbose**
+> Produce verbose output for debugging.
 
-**-q**
-> Quiet mode.
+**-debug**
+> Produce debug-level output.
+
+**-q**, **-quiet**
+> Suppress most output, only show errors.
+
+**-logger** _CLASS_
+> Specify a custom logger class.
+
+**-logfile** _FILE_
+> Write output to a log file.
+
+**-find** _FILE_
+> Search parent directories for the build file.
 
 # DESCRIPTION
 
-**phing** is PHP build tool. Port of Apache Ant to PHP.
+**phing** (PHing Is Not GNU make) is a PHP project build tool based on Apache Ant. It uses XML build files to define targets and tasks for automating PHP project workflows such as compilation, testing, packaging, and deployment.
 
-The tool automates PHP builds. XML-based configuration.
+Phing provides a rich set of built-in tasks for file operations, PHP-specific tasks (PHPUnit, PHP_CodeSniffer, phpDocumentor), version control integration, and archive creation. Custom tasks can be written in PHP.
 
 # CAVEATS
 
-Requires PHP. XML build files. Ant-like syntax.
+Requires PHP CLI. Build files use XML format with Ant-like syntax. Task names and attributes are case-sensitive. The default build file is build.xml in the current directory.
 
 # HISTORY
 
-Phing (PHing Is Not GNU make) is a **PHP port of Apache Ant**.
+Phing was originally created by **Andreas Aderhold** in 2002 as a PHP port of Apache Ant. The name is a recursive acronym: PHing Is Not GNU make.
 
 # SEE ALSO
 
-[ant](/man/ant)(1), [make](/man/make)(1), [composer](/man/composer)(1)
+[ant](/man/ant)(1), [make](/man/make)(1), [composer](/man/composer)(1), [php](/man/php)(1)
 

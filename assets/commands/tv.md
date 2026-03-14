@@ -55,11 +55,11 @@ Output is optimized for terminal display, adjusting column widths based on conte
 
 # CAVEATS
 
-Various tools named tv. Check which installed. Rust implementation.
+Multiple tools share the name "tv". This refers to the Rust-based tidy-viewer/tv tool. Large files may be truncated to fit terminal dimensions.
 
 # HISTORY
 
-**tv** is a terminal viewer for tabular data formats like CSV, TSV, and JSON.
+**tv** (tidy-viewer) is a Rust-based CLI tool for rendering tabular data in the terminal.
 
 # SEE ALSO
 

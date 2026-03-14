@@ -1,6 +1,6 @@
 # TAGLINE
 
-monitors system input/output device loading by observing the time devices are
+Report CPU and I/O statistics for devices and partitions
 
 # TLDR
 
@@ -22,7 +22,11 @@ Display **disk statistics** with names
 
 Display **extended** disk statistics
 
-```iostat -xN sda```
+```iostat -x```
+
+Display extended stats for a **specific device**
+
+```iostat -xN [sda]```
 
 Display reports every **2 seconds**
 
@@ -31,6 +35,14 @@ Display reports every **2 seconds**
 Display **5 reports** at 2-second intervals
 
 ```iostat 2 5```
+
+Display in **JSON format**
+
+```iostat -o JSON```
+
+Omit the **first boot report** and show only active devices
+
+```iostat -yz 2```
 
 # SYNOPSIS
 
@@ -88,7 +100,13 @@ Display **5 reports** at 2-second intervals
 > Print sizes in human-readable format
 
 **--pretty**
-> Pretty-print device names
+> Pretty-print device names.
+
+**-s**
+> Display short (narrow) report fitting 80-column screens.
+
+**-V**
+> Print version number and exit.
 
 # CAVEATS
 

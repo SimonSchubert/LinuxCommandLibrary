@@ -31,8 +31,11 @@ _TARGET_
 **-v**
 > Verbose mode.
 
-**--help**
-> Display help information.
+**-D** _conflictoption_
+> Specify what to do when a name collision occurs (autorename, overwrite, skip).
+
+**-o**
+> Overwrite existing files without prompting.
 
 # DESCRIPTION
 
@@ -50,5 +53,5 @@ mren is part of **mtools**, the MS-DOS filesystem utilities collection for Unix 
 
 # SEE ALSO
 
-[mcopy](/man/mcopy)(1), [mmove](/man/mmove)(1), [mdir](/man/mdir)(1)
+[mcopy](/man/mcopy)(1), [mmove](/man/mmove)(1), [mdel](/man/mdel)(1)
 

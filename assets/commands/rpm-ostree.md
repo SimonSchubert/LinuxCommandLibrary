@@ -51,6 +51,27 @@ Show **deployment status**
 **override**
 > Override base packages
 
+**deploy**
+> Create new deployment from a specific version/branch/commit
+
+**kargs**
+> Manage kernel boot arguments
+
+**initramfs**
+> Handle client-side initramfs regeneration
+
+**cleanup**
+> Remove pending deployments and cached data
+
+**db** _subcommand_
+> RPM database operations (diff, list, version)
+
+**cancel**
+> Stop a pending transaction
+
+**apply-live**
+> Apply changes to the booted deployment without reboot
+
 # PARAMETERS
 
 **-r, --reboot**
@@ -64,6 +85,21 @@ Show **deployment status**
 
 **--cache-only**
 > Use only cached data
+
+**--idempotent**
+> Skip operation if the request is already applied
+
+**--allow-inactive**
+> Permit packages that are already in the base layer
+
+**--apply-live**
+> Apply changes to booted deployment without reboot
+
+**--download-only**
+> Fetch packages without deploying
+
+**-n**, **--dry-run**
+> Preview changes without executing
 
 # DESCRIPTION
 

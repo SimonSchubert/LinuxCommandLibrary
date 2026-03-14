@@ -28,6 +28,18 @@ Create and start containers from images
 
 ```podman run --name [mycontainer] [image]```
 
+**Run with environment variable**
+
+```podman run -e [VAR=value] [image]```
+
+**Run and auto-remove on exit**
+
+```podman run --rm -it [image] [command]```
+
+**Run with custom network**
+
+```podman run --network [network_name] [image]```
+
 # SYNOPSIS
 
 **podman run** [_options_] _image_ [_command_]
@@ -56,7 +68,31 @@ _IMAGE_
 > Environment variable.
 
 **--rm**
-> Remove after exit.
+> Remove container after exit.
+
+**--network** _MODE_
+> Set network mode (bridge, host, none, or custom network name).
+
+**--restart** _POLICY_
+> Restart policy (no, on-failure[:max], always, unless-stopped).
+
+**-w**, **--workdir** _DIR_
+> Working directory inside the container.
+
+**--user** _USER_
+> Run as specified user (name or UID[:GID]).
+
+**--cap-add** _CAP_
+> Add Linux capabilities.
+
+**--cap-drop** _CAP_
+> Drop Linux capabilities.
+
+**--entrypoint** _CMD_
+> Override image entrypoint.
+
+**--label** _KEY=VALUE_
+> Set metadata label on container.
 
 # DESCRIPTION
 
@@ -66,11 +102,11 @@ The **--rm** flag automatically removes the container when it exits. The **--nam
 
 # CAVEATS
 
-Rootless by default. Docker-compatible flags.
+Runs rootless by default without requiring a daemon. Most Docker CLI flags are compatible. Some features (e.g., certain network modes) may behave differently in rootless mode.
 
 # HISTORY
 
-podman run provides **container execution** as a Docker-compatible command.
+**podman run** was introduced as part of the Podman project by Red Hat, providing a daemonless, Docker-compatible container runtime.
 
 # SEE ALSO
 

@@ -26,7 +26,7 @@ Convert Bio-Rad confocal microscope images to PGM format
 
 # SYNOPSIS
 
-**bioradtopgm** [**-imagenum** _n_] [**-truegrayscale**] [_bioradfile_]
+**bioradtopgm** [**-imagenum** _n_] [**-truegrayscale**] [**-quiet**] [_bioradfile_]
 
 # PARAMETERS
 
@@ -35,6 +35,9 @@ Convert Bio-Rad confocal microscope images to PGM format
 
 **-truegrayscale**
 > Preserve original intensity values without scaling. Important for scientific applications requiring photometric accuracy.
+
+**-quiet**
+> Suppress informational messages on standard error.
 
 # DESCRIPTION
 

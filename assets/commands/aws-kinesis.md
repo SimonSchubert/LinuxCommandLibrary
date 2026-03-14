@@ -81,6 +81,15 @@ Data streams consist of shards that provide throughput capacity. Each shard supp
 **register-stream-consumer**
 > Register an enhanced fan-out consumer
 
+**merge-shards**
+> Merge two adjacent shards
+
+**split-shard**
+> Split a shard into two
+
+**list-tags-for-stream**
+> List tags for a stream
+
 # CAVEATS
 
 Shard iterators expire after 5 minutes. Each shard has throughput limits; exceeding them causes throttling. Record size is limited to 1 MB. GetRecords returns up to 10 MB or 10,000 records per call. Enhanced fan-out consumers have additional costs but dedicated throughput.

@@ -4,13 +4,13 @@ Validate Vagrantfile syntax
 
 # TLDR
 
-**Validate Vagrantfile**
+**Validate the Vagrantfile in the current directory**
 
 ```vagrant validate```
 
-**Validate with specific file**
+**Validate while ignoring provider-specific configuration**
 
-```vagrant validate -p [path]```
+```vagrant validate -p```
 
 # SYNOPSIS
 
@@ -18,15 +18,12 @@ Validate Vagrantfile syntax
 
 # PARAMETERS
 
-**-p**, **--path** _path_
-> Path to Vagrantfile.
-
-**--ignore-provider**
-> Skip provider validation.
+**-p**, **--ignore-provider**
+> Ignore provider-specific configuration options during validation.
 
 # DESCRIPTION
 
-**vagrant validate** checks Vagrantfile for syntax errors. Validates configuration without creating machines. Useful for CI/CD pipelines and pre-commit checks.
+**vagrant validate** checks the Vagrantfile for syntax errors. It validates the configuration without creating or modifying machines, making it useful for CI/CD pipelines and pre-commit checks. If valid, it prints "Vagrantfile validated successfully."
 
 # SEE ALSO
 

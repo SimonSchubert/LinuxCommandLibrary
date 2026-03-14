@@ -41,7 +41,7 @@ _MAX-LEN_
 > Maximum length of generated strings.
 
 _CHARSET_
-> Characters to use for generation (default: lowercase letters).
+> Characters to use for generation (default: lowercase alphabet).
 
 **-o** _FILE_
 > Output to file instead of stdout.
@@ -59,13 +59,28 @@ _CHARSET_
 > Generate permutations of specified words.
 
 **-d** _NUM_
-> Limit duplicate characters.
+> Limit consecutive duplicate characters.
+
+**-e** _STRING_
+> Stop generating words at the specified string.
+
+**-f** _FILE_ _CHARSET_
+> Read character set from a file (e.g., charset.lst).
+
+**-i**
+> Invert output so the first character changes most often.
+
+**-l** _CHARS_
+> Treat characters as literals in the -t pattern (overrides @,%^).
 
 **-s** _STRING_
 > Start at specified string (for resuming).
 
+**-u**
+> Disable the print-percentage thread.
+
 **-z** _COMP_
-> Compress output (gzip, bzip2, lzma).
+> Compress output (gzip, bzip2, lzma, 7z).
 
 # DESCRIPTION
 

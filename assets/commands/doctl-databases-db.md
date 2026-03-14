@@ -20,6 +20,10 @@ manage individual databases within a cluster
 
 ```doctl databases db get [cluster_id] [db_name]```
 
+**List databases** with JSON output
+
+```doctl databases db list [cluster_id] --output json```
+
 # SYNOPSIS
 
 **doctl** **databases** **db** _command_ [_options_]
@@ -48,5 +52,5 @@ The command handles database creation, listing, and deletion within the cluster.
 
 # SEE ALSO
 
-[doctl-databases](/man/doctl-databases)(1), [doctl-databases-user](/man/doctl-databases-user)(1)
+[doctl-databases](/man/doctl-databases)(1), [doctl-databases-user](/man/doctl-databases-user)(1), [doctl-databases-pool](/man/doctl-databases-pool)(1), [doctl](/man/doctl)(1)
 

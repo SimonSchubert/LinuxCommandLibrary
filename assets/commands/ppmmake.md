@@ -18,18 +18,21 @@ Create solid color PPM images
 
 # SYNOPSIS
 
-**ppmmake** _color_ _width_ _height_
+**ppmmake** [**-maxval** _val_] _color_ _width_ _height_
 
 # PARAMETERS
 
 _COLOR_
-> Color specification.
+> Color specification: name (red, blue), hex (#rrggbb), or RGB triplet (rgb:rr/gg/bb).
 
 _WIDTH_
-> Image width.
+> Image width in pixels.
 
 _HEIGHT_
-> Image height.
+> Image height in pixels.
+
+**-maxval** _val_
+> Maximum color component value in the output image (default 255).
 
 # DESCRIPTION
 
@@ -39,7 +42,7 @@ This is useful for creating background images, test patterns, or blank canvases 
 
 # CAVEATS
 
-Color names or RGB values. Part of Netpbm suite.
+Output is raw PPM format written to stdout; redirect to a file or pipe to another Netpbm tool. Part of the Netpbm suite.
 
 # HISTORY
 
@@ -47,5 +50,5 @@ ppmmake was created as part of **Netpbm** for solid image generation.
 
 # SEE ALSO
 
-[ppm](/man/ppm)(5), [pgmmake](/man/pgmmake)(1), [pbmmake](/man/pbmmake)(1)
+[ppm](/man/ppm)(5), [pgmmake](/man/pgmmake)(1), [pbmmake](/man/pbmmake)(1), [pnmtopng](/man/pnmtopng)(1)
 

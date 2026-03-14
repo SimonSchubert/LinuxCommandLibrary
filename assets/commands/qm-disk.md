@@ -4,21 +4,21 @@ Manage Proxmox VM disk images
 
 # TLDR
 
-Add **n gigabytes** to a virtual disk
+Add **10 gigabytes** to a virtual disk
 
-```qm disk resize 100 scsi0 +10G```
+```qm disk resize [100] scsi0 +10G```
 
-**Move** a virtual disk
+**Move** a virtual disk to different storage
 
-```qm disk move 100 destination index```
+```qm disk move [100] scsi0 [local-lvm]```
 
-Move and **delete previous** copy
+Move and **delete** the original copy
 
-```qm disk move --delete 100 destination index```
+```qm disk move [100] scsi0 [local-lvm] --delete```
 
 **Import** a disk image with specific format
 
-```qm disk import 100 path/to/disk.vmdk storage_name --format qcow2```
+```qm disk import [100] [/path/to/disk.vmdk] [local-lvm] --format qcow2```
 
 **Rescan** all storages and update disk sizes
 
@@ -30,7 +30,7 @@ Perform a **dry-run** rescan
 
 Rescan for a **specific VM**
 
-```qm disk rescan --vmid 100```
+```qm disk rescan --vmid [100]```
 
 # SYNOPSIS
 
@@ -39,28 +39,31 @@ Rescan for a **specific VM**
 # PARAMETERS
 
 **resize** _vmid_ _disk_ _size_
-> Resize a disk (use +nG to add space)
+> Resize a disk (use +nG to add space). Shrinking is not supported.
 
-**move** _vmid_ _destination_ _index_
-> Move disk to different storage
+**move** _vmid_ _disk_ _storage_
+> Move disk to different storage or different VM.
 
 **import** _vmid_ _source_ _storage_
-> Import external disk image
+> Import external disk image as unused disk.
 
 **rescan** [_options_]
-> Rescan storages for disk changes
+> Rescan storages for disk changes.
 
 **--format** _format_
-> Disk format (qcow2, raw, vmdk)
+> Target disk image format (qcow2, raw, vmdk).
 
 **--delete**
-> Delete source after move
+> Delete source after move.
 
 **--dryrun**
-> Preview changes without applying
+> Preview changes without applying.
 
 **--vmid** _id_
-> Target specific VM for rescan
+> Target specific VM for rescan.
+
+**--disk** _disk_id_
+> Assign specific disk ID (e.g. scsi0, sata1) on import.
 
 # DESCRIPTION
 

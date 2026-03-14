@@ -8,17 +8,41 @@ TUI for monitoring and managing Celery workers and tasks
 
 ```lazycelery```
 
-**Run initial setup**
+**Run interactive setup**
 
-```lazycelery setup```
+```lazycelery init```
+
+**Override the broker URL**
+
+```lazycelery --broker [redis://localhost:6379/0]```
+
+**Show current configuration**
+
+```lazycelery config```
 
 **Update the broker URL**
 
-```lazycelery config broker [url]```
+```lazycelery set-broker [redis://localhost:6379/0]```
+
+**Set refresh interval** in milliseconds
+
+```lazycelery set-refresh [1000]```
+
+**Use custom config file**
+
+```lazycelery --config [~/.config/lazycelery/config.toml]```
 
 # SYNOPSIS
 
 **lazycelery** [_command_] [_options_]
+
+# PARAMETERS
+
+**--broker** _URL_
+> Override the broker URL for this session.
+
+**--config** _FILE_
+> Use a custom configuration file.
 
 # DESCRIPTION
 
@@ -28,7 +52,7 @@ Features include real-time worker monitoring, queue management with message coun
 
 # CAVEATS
 
-Currently supports Redis-based Celery brokers. Requires a running Celery infrastructure to connect to.
+Currently supports Redis-based Celery brokers. Requires a running Celery infrastructure to connect to. Install via `cargo install lazycelery` or Homebrew.
 
 # HISTORY
 
@@ -36,4 +60,4 @@ Currently supports Redis-based Celery brokers. Requires a running Celery infrast
 
 # SEE ALSO
 
-[celery](/man/celery)(1), [lazydocker](/man/lazydocker)(1)
+[lazydocker](/man/lazydocker)(1)

@@ -12,13 +12,17 @@ PBM to ZjStream converter for HP and Minolta printers
 
 ```foo2zjs -r [600] < [input.pbm] > [output.prn]```
 
-**Set paper size**
+**Set paper size (1=letter, 9=A4, 5=legal)**
 
-```foo2zjs -p [letter] < [input.pbm] > [output.prn]```
+```foo2zjs -p [9] < [input.pbm] > [output.prn]```
 
 **Color mode**
 
 ```foo2zjs -c < [input.ppm] > [output.prn]```
+
+**Print multiple copies**
+
+```foo2zjs -n [3] < [input.pbm] > [output.prn]```
 
 # SYNOPSIS
 
@@ -29,20 +33,23 @@ PBM to ZjStream converter for HP and Minolta printers
 **-r** _DPI_
 > Resolution (300, 600, 1200).
 
-**-p** _PAPER_
-> Paper size (letter, a4, legal).
+**-p** _CODE_
+> Paper size code: 1=letter, 5=legal, 7=executive, 9=A4, 11=A5, 13=B5. Default is 1.
 
 **-c**
-> Color mode.
+> Color mode (input must be PPM).
 
 **-m** _MEDIA_
-> Media type.
+> Media type code.
 
 **-n** _COPIES_
 > Number of copies.
 
 **-d** _DUPLEX_
-> Duplex mode.
+> Duplex mode: 1=off, 2=long edge, 3=short edge.
+
+**-g** _XPIXxYPIX_
+> Page dimensions in pixels (default 10200x6600).
 
 **--help**
 > Display help information.

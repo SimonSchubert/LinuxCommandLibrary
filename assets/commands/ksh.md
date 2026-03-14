@@ -1,6 +1,6 @@
 # TAGLINE
 
-korn shell, combining features of sh and csh
+Korn shell, combining features of sh and csh
 
 # TLDR
 
@@ -8,25 +8,29 @@ korn shell, combining features of sh and csh
 
 ```ksh```
 
-**Run script**
+**Run a script**
 
 ```ksh [script.ksh]```
 
-**Run command**
+**Run a command string**
 
 ```ksh -c "[command]"```
 
-**Login shell**
+**Start a login shell**
 
 ```ksh -l```
 
-**Restricted shell**
+**Start a restricted shell**
 
 ```ksh -r```
 
-**POSIX mode**
+**Enable POSIX compliance mode**
 
 ```ksh -o posix```
+
+**Enable vi-style line editing**
+
+```ksh -o vi```
 
 # SYNOPSIS
 
@@ -41,33 +45,51 @@ _SCRIPT_
 > Execute command string.
 
 **-l**
-> Login shell.
+> Login shell (reads profile files).
 
 **-r**
-> Restricted shell.
+> Restricted shell (limits operations like cd and path changes).
+
+**-s**
+> Read commands from standard input.
 
 **-o** _OPTION_
-> Set shell option.
+> Set shell option (e.g., vi, emacs, posix, noclobber, errexit).
+
+**+o** _OPTION_
+> Unset shell option.
 
 **-i**
-> Interactive shell.
+> Force interactive shell mode.
+
+**-n**
+> Read commands but do not execute them (syntax check).
+
+**-x**
+> Print commands and arguments as they are executed (trace mode).
+
+**-e**
+> Exit immediately if a command exits with non-zero status.
+
+**-v**
+> Print shell input lines as they are read.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**ksh** is the Korn shell, combining features of sh and csh. It provides advanced scripting with interactive editing.
+**ksh** is the Korn shell, combining features of the Bourne shell (sh) and C shell (csh). It provides advanced scripting capabilities with interactive command-line editing, command history, job control, and aliases.
 
-The shell supports command history, job control, and aliases. ksh93 is the most common version.
+The shell supports both vi and emacs editing modes, associative and indexed arrays, arithmetic evaluation, coprocesses, and pattern matching. ksh93 is the most widely used version; ksh2020 is a more recent release.
 
 # CAVEATS
 
-Multiple implementations exist. Different from bash in subtle ways. POSIX compatible.
+Multiple implementations exist (ksh88, ksh93, mksh, pdksh). Behavior may differ subtly between implementations and from bash. POSIX compatible when invoked with `-o posix`.
 
 # HISTORY
 
-The Korn shell was created by **David Korn** at Bell Labs in the 1980s, influencing many modern shells.
+The Korn shell was created by **David Korn** at **Bell Labs** in the early **1980s**, influencing many modern shells including bash and zsh.
 
 # SEE ALSO
 

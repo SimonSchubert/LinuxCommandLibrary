@@ -1,6 +1,6 @@
 # TAGLINE
 
-Built-in Jest-compatible test runner
+Bun's built-in Jest-compatible test runner
 
 # TLDR
 
@@ -73,7 +73,13 @@ Tests execute with the Bun runtime, providing significantly improved performance
 > Stop after n test failures
 
 **--rerun-each** _n_
-> Run each test n times
+> Run each test n times.
+
+**--preload** _module_
+> Preload a module before tests run.
+
+**--only**
+> Only run tests marked with `test.only`.
 
 # TEST FILE PATTERNS
 

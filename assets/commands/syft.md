@@ -55,6 +55,12 @@ Generate software bill of materials from images
 **--source-version** _version_
 > Set version of target being analyzed.
 
+**--file** _path_
+> Write output to file instead of stdout.
+
+**--from** _source_
+> Explicitly specify the source type (e.g., docker, registry, dir).
+
 **-t**, **--template** _file_
 > Path to Go template file for custom output.
 
@@ -66,6 +72,9 @@ Generate software bill of materials from images
 
 **--select-catalogers** _list_
 > Add, remove, and filter catalogers.
+
+**--exclude** _glob_
+> Exclude paths from scanning (can be repeated).
 
 **-c**, **--config** _file_
 > Path to configuration file.

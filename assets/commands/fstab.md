@@ -62,6 +62,7 @@ ro          - Read-only
 noexec      - Don't allow execution
 nosuid      - Ignore setuid bits
 noatime     - Don't update access times
+user        - Allow non-root users to mount
 ```
 
 # CAVEATS
@@ -70,4 +71,4 @@ Errors can prevent boot. Always test with `mount -a` before reboot. Use UUID or 
 
 # SEE ALSO
 
-[mount](/man/mount)(8), [findmnt](/man/findmnt)(8), [blkid](/man/blkid)(8), [systemd.mount](/man/systemd.mount)(5)
+[mount](/man/mount)(8), [findmnt](/man/findmnt)(8), [blkid](/man/blkid)(8)

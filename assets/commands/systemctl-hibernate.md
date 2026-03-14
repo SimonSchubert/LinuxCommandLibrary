@@ -4,15 +4,15 @@ Hibernate system to disk
 
 # TLDR
 
-**Hibernate** immediately
+**Hibernate** the system immediately
 
 ```systemctl hibernate```
 
-**Force** hibernate (ignore inhibitors)
+**Force** hibernation, ignoring inhibitors
 
 ```systemctl hibernate --force```
 
-Hibernate without **wall message**
+Hibernate without sending a **wall message** to logged-in users
 
 ```systemctl hibernate --no-wall```
 
@@ -27,10 +27,13 @@ Hibernate without **wall message**
 # PARAMETERS
 
 **-f, --force**
-> Force hibernation even if inhibitors are present (programs blocking sleep)
+> Force hibernation even if inhibitors are present (programs blocking sleep). When specified twice, the operation is executed without contacting the login manager.
 
 **--no-wall**
 > Do not send wall message to logged-in users before hibernating
+
+**-i, --ignore-inhibitors**
+> Ignore inhibitor locks when performing the hibernate operation
 
 # CAVEATS
 
@@ -42,4 +45,4 @@ Requires sufficient swap space to hold the contents of RAM. The system must supp
 
 # SEE ALSO
 
-[systemctl](/man/systemctl)(1), [systemctl-suspend](/man/systemctl-suspend)(1), [systemctl-poweroff](/man/systemctl-poweroff)(1)
+[systemctl](/man/systemctl)(1), [systemctl-suspend](/man/systemctl-suspend)(1), [systemctl-hybrid-sleep](/man/systemctl-hybrid-sleep)(1), [systemctl-suspend-then-hibernate](/man/systemctl-suspend-then-hibernate)(1), [systemctl-poweroff](/man/systemctl-poweroff)(1)

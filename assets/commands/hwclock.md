@@ -16,6 +16,18 @@ Write **hardware time to system** clock
 
 ```sudo hwclock -s```
 
+**Set hardware clock** to a specific time
+
+```sudo hwclock --set --date="2025-01-15 14:30:00"```
+
+Set hardware clock to **UTC mode**
+
+```sudo hwclock --systohc --utc```
+
+Set hardware clock to **local time** mode (for dual-boot with Windows)
+
+```sudo hwclock --systohc --localtime```
+
 # SYNOPSIS
 
 **hwclock** [_options_]
@@ -43,8 +55,11 @@ Write **hardware time to system** clock
 **--adjust**
 > Adjust for systematic drift
 
-**--debug**
-> Show debug information
+**--verbose**
+> Show detailed information about what hwclock is doing
+
+**--test**
+> Dry run; show what would be done without modifying anything
 
 **-f**, **--rtc** _FILE_
 > Use specified RTC device (default: /dev/rtc0)
@@ -67,4 +82,4 @@ hwclock has been the standard Linux utility for hardware clock management since 
 
 # SEE ALSO
 
-[timedatectl](/man/timedatectl)(1), [date](/man/date)(1), [ntpd](/man/ntpd)(8), [chrony](/man/chrony)(8)
+[timedatectl](/man/timedatectl)(1), [date](/man/date)(1), [ntpd](/man/ntpd)(1), [chrony](/man/chrony)(1)

@@ -104,4 +104,4 @@ Requires Spotify Premium for playback. Authentication may require OAuth setup in
 
 # SEE ALSO
 
-[spotify-tui](/man/spotify-tui)(1), [ncspot](/man/ncspot)(1), [mopidy](/man/mopidy)(1)
+[ncspot](/man/ncspot)(1)

@@ -4,29 +4,33 @@ manipulates the MAC address of network interfaces
 
 # TLDR
 
-**Show** MAC addresses
+**Show** current and permanent MAC addresses
 
-```macchanger -s eth0```
+```macchanger -s [eth0]```
 
-Set **random** MAC
+Set **random** MAC address
 
-```macchanger -r eth0```
+```sudo macchanger -r [eth0]```
 
-Random with **BIA** flag
+Set random MAC with **burned-in address** flag
 
-```macchanger -r -b eth0```
+```sudo macchanger -r -b [eth0]```
 
-Set **specific** MAC
+Set a **specific** MAC address
 
-```macchanger -m XX:XX:XX:XX:XX:XX eth0```
+```sudo macchanger -m [XX:XX:XX:XX:XX:XX] [eth0]```
 
-List **vendors**
+Set a random MAC from the **same vendor**
+
+```sudo macchanger -a [eth0]```
+
+**Reset** to permanent hardware MAC
+
+```sudo macchanger -p [eth0]```
+
+List known **vendor** MAC prefixes
 
 ```macchanger -l```
-
-**Reset** to permanent
-
-```macchanger -p eth0```
 
 # SYNOPSIS
 
@@ -68,7 +72,7 @@ The interface must be down before changing MAC on most systems. Changes are not 
 
 # HISTORY
 
-**macchanger** is a GNU utility for MAC address manipulation, commonly used for privacy and network testing.
+**macchanger** was written by **Alvaro Lopez Ortega** and is commonly used for privacy and network testing on Linux systems.
 
 # SEE ALSO
 

@@ -8,21 +8,54 @@ Securely transfer files between computers with TUI
 
 ```tran```
 
-**Send a file to a remote computer**
+**Open TUI in a specific directory**
 
-```tran send [file]```
+```tran --start-dir [/path/to/dir]```
+
+**Send a file or directory to a remote computer**
+
+```tran send [file_or_directory]```
 
 **Receive files from a remote computer**
 
 ```tran receive [password]```
 
+**Authenticate with GitHub**
+
+```tran auth login```
+
+**Sync tran config file**
+
+```tran sync start```
+
 # SYNOPSIS
 
-**tran** [_options_] _command_
+**tran** [_options_] [_command_]
+
+# PARAMETERS
+
+**--start-dir** _path_
+> Set the starting directory for the TUI.
+
+# SUBCOMMANDS
+
+**send** _file_or_directory_
+> Send a file or directory to a remote computer.
+
+**receive** _password_
+> Receive files from a remote computer using a password.
+
+**auth login**
+> Authenticate with GitHub.
+
+**sync start**
+> Sync your tran config file.
 
 # DESCRIPTION
 
 **tran** is a command-line tool and TUI that allows secure transfer and sending of files and directories between computers. It provides a file browser interface for selecting files and uses password-based authentication for receiving transfers.
+
+Configuration is stored in **~/.tran/tran.yml**.
 
 # HISTORY
 
@@ -30,4 +63,4 @@ Securely transfer files between computers with TUI
 
 # SEE ALSO
 
-[croc](/man/croc)(1), [magic-wormhole](/man/magic-wormhole)(1), [portal](/man/portal)(1)
+[croc](/man/croc)(1), [portal](/man/portal)(1)

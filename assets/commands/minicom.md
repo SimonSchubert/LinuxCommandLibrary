@@ -49,6 +49,21 @@ Display **help**
 **-o, --noinit**
 > Skip modem initialization
 
+**-w, --wrap**
+> Enable line wrapping
+
+**-H, --displayhex**
+> Display output in hexadecimal
+
+**-S, --script SCRIPT**
+> Run script at startup
+
+**-7, --7bit**
+> Force 7bit mode
+
+**-8, --8bit**
+> Force 8bit mode
+
 **-h, --help**
 > Display help information
 
@@ -58,6 +73,8 @@ Display **help**
 **Ctrl+A Z**: Help menu
 **Ctrl+A S**: Send file
 **Ctrl+A L**: Log capture toggle
+**Ctrl+A O**: Configure minicom
+**Ctrl+A W**: Toggle line wrap
 
 # CAVEATS
 

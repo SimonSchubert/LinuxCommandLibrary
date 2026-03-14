@@ -4,21 +4,21 @@ Create or change VNC password files
 
 # TLDR
 
-**Set VNC password for current user**
+**Set VNC password for current user (interactive prompt)**
 
 ```vncpasswd```
 
-**Set password to specific file**
+**Set password to a specific file**
 
 ```vncpasswd [~/.vnc/passwd]```
 
-**Create password from stdin**
+**Create password from stdin using filter mode**
 
 ```echo "[password]" | vncpasswd -f > [~/.vnc/passwd]```
 
-**Set view-only password**
+**Set both full-control and view-only passwords from stdin**
 
-```vncpasswd -viewonly [~/.vnc/viewpasswd]```
+```printf "[password]\n[viewpassword]\n" | vncpasswd -f > [~/.vnc/passwd]```
 
 # SYNOPSIS
 
@@ -27,21 +27,18 @@ Create or change VNC password files
 # PARAMETERS
 
 **-f**
-> Filter mode: read plain text from stdin, write encrypted to stdout.
+> Filter mode: read plain-text password from stdin, write encrypted version to stdout. Short or empty passwords are silently accepted in this mode.
 
-**-viewonly**
-> Set view-only password (no input allowed).
-
-**-t**
-> Write to stdout for testing.
+_passwd-file_
+> Path to the password file. Defaults to $XDG_CONFIG_HOME/tigervnc/passwd or ~/.vnc/passwd depending on VNC implementation.
 
 # DESCRIPTION
 
 **vncpasswd** creates or changes VNC password files used by VNC servers for authentication. When run without arguments, it prompts for a password and stores it in ~/.vnc/passwd.
 
-Passwords must be at least 6 characters. Only the first 8 characters are significant due to the DES-based encoding used. The stored password is obfuscated but not securely encrypted.
+Passwords must be at least 6 characters in interactive mode (the -f filter mode accepts any length). Only the first 8 characters are significant due to the DES-based encoding used. The stored password is obfuscated but not securely encrypted.
 
-The filter mode (-f) reads plain-text passwords from stdin and outputs encrypted versions to stdout, useful for scripted password file creation. Up to two passwords can be provided: full-control and view-only.
+The filter mode (-f) reads plain-text passwords from stdin and outputs encrypted versions to stdout, useful for scripted password file creation. Up to two passwords can be provided separated by newlines: the first for full-control and the second for view-only access.
 
 # SECURITY
 

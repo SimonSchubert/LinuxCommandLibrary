@@ -45,7 +45,7 @@ Reboot into **firmware** setup
 
 **systemctl reboot** restarts the system, gracefully stopping all services and unmounting filesystems before initiating a hardware reset.
 
-The `--firmware-setup` option sets a flag that tells the firmware to enter setup mode on next boot, useful for accessing BIOS/UEFI settings without key timing.
+The **--firmware-setup** option sets an EFI variable that tells the firmware to enter setup mode on next boot, useful for accessing UEFI settings without needing to press a key at the right time.
 
 # CAVEATS
 

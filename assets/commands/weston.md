@@ -18,11 +18,11 @@ Reference Wayland compositor
 
 **Start in windowed mode** under X11
 
-```weston --backend=x11-backend.so```
+```weston --backend=x11```
 
 **Start nested** inside another Wayland compositor
 
-```weston --backend=wayland-backend.so```
+```weston --backend=wayland```
 
 **Specify display socket name**
 
@@ -48,7 +48,7 @@ Reference Wayland compositor
 > Wayland socket name for clients to connect.
 
 **--config**=_file_
-> Path to configuration file. Default is /etc/xdg/weston/weston.ini.
+> Path to configuration file. Default is $XDG_CONFIG_HOME/weston.ini or ~/.config/weston/weston.ini.
 
 **--modules**=_module_
 > Load additional modules.
@@ -94,4 +94,4 @@ Requires Linux kernel mode setting (KMS) for native operation. Running directly 
 
 # SEE ALSO
 
-[sway](/man/sway)(1), [wayland](/man/wayland)(7), [Xwayland](/man/Xwayland)(1), [seatd](/man/seatd)(1)
+[sway](/man/sway)(1), [Xwayland](/man/Xwayland)(1), [xrandr](/man/xrandr)(1)

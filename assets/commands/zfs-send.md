@@ -50,7 +50,7 @@ Generate ZFS snapshot replication streams
 > Generate replication stream (all descendants, clones, properties).
 
 **-D**
-> Deduplicate the stream.
+> Generate a deduplicated stream. Deprecated in OpenZFS 2.1 and ignored.
 
 **-L**
 > Generate larger blocks in stream if available.
@@ -68,10 +68,10 @@ Generate ZFS snapshot replication streams
 > Include dataset properties in stream.
 
 **-b**
-> Include properties that are in local source.
+> Send only properties that are received or local source.
 
 **-h**
-> Include snapshot holds.
+> Include holds in the replication stream.
 
 **-n**
 > Dry run, don't generate stream.
@@ -102,4 +102,4 @@ Incremental receives require the base snapshot to exist at destination. Replicat
 
 # SEE ALSO
 
-[zfs-receive](/man/zfs-receive)(8), [zfs-snapshot](/man/zfs-snapshot)(8), [zfs](/man/zfs)(8), [zpool](/man/zpool)(8)
+[zfs-receive](/man/zfs-receive)(8), [zfs](/man/zfs)(8), [zpool](/man/zpool)(8)

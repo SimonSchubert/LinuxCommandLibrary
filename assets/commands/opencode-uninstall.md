@@ -22,4 +22,4 @@ This operation is **irreversible**. All local session data, configuration, and c
 
 # SEE ALSO
 
-[opencode](/man/opencode)(1), [opencode-upgrade](/man/opencode-upgrade)(1)
+[opencode](/man/opencode)(1), [opencode-upgrade](/man/opencode-upgrade)(1), [opencode-models](/man/opencode-models)(1)

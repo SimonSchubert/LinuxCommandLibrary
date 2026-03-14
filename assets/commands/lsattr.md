@@ -20,9 +20,17 @@ Show **hidden** files
 
 ```lsattr -a```
 
-List **directory** attributes
+List **directory** attributes (not its contents)
 
-```lsattr -d```
+```lsattr -d [path/to/dir]```
+
+Show attributes with **long names**
+
+```lsattr -l [path/to/file]```
+
+List attributes with **version numbers**
+
+```lsattr -v [path/to/file]```
 
 # SYNOPSIS
 
@@ -46,12 +54,18 @@ List **directory** attributes
 **-v**
 > List file's version/generation number
 
+**-p**
+> List file's project number
+
 **-l**
-> Use long names instead of single character
+> Use long names instead of single character abbreviations
+
+**-V**
+> Display the program version
 
 # CAVEATS
 
-Only shows attributes on filesystems that support extended attributes. The output format shows attribute letters followed by the filename.
+Only shows attributes on filesystems that support extended attributes (ext2/ext3/ext4, btrfs). The output format shows attribute flags as single characters (e.g., i for immutable, a for append-only) with a dash (-) for unset flags, followed by the filename.
 
 # HISTORY
 

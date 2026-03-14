@@ -36,13 +36,9 @@ Unlike Gaussian blur which averages pixels, spread preserves individual pixel co
 
 # CAVEATS
 
-Random displacement. Part of Netpbm suite.
-
-# HISTORY
-
-ppmspread was created as part of **Netpbm** for pixel dispersion effects.
+Only accepts PPM format input. Use **pnmtoppm** to convert from other formats first. The amount parameter specifies the maximum displacement in any direction; actual displacement for each pixel is random within that range.
 
 # SEE ALSO
 
-[ppm](/man/ppm)(5), [ppmshift](/man/ppmshift)(1), [pnmnoise](/man/pnmnoise)(1)
+[ppmshift](/man/ppmshift)(1), [pnmnoise](/man/pnmnoise)(1), [netpbm](/man/netpbm)(1)
 

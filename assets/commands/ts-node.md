@@ -28,13 +28,17 @@ TypeScript execution environment for Node.js
 
 ```ts-node -e "console.log('Hello')"```
 
-**Print transpiled code**
+**Transpile with SWC** (fastest mode)
 
-```ts-node --print "1 + 1"```
+```ts-node --swc [script.ts]```
+
+**Print evaluated expression**
+
+```ts-node -p "1 + 1"```
 
 # SYNOPSIS
 
-**ts-node** [_-P config_] [_--transpile-only_] [_--esm_] [_options_] [_file_] [_args_]
+**ts-node** [_-P config_] [_--transpile-only_] [_--swc_] [_--esm_] [_options_] [_file_] [_args_]
 
 # PARAMETERS
 
@@ -62,20 +66,38 @@ TypeScript execution environment for Node.js
 **--skip-project**
 > Skip loading tsconfig.json.
 
-**--compiler** _NAME_
-> TypeScript compiler to use.
+**--swc**
+> Transpile with SWC for faster startup. Implies --transpileOnly.
+
+**--files**
+> Load files, include, and exclude from tsconfig.json on startup.
+
+**-C** _NAME_, **--compiler** _NAME_
+> TypeScript compiler to use (default: typescript).
+
+**-D** _CODES_, **--ignoreDiagnostics** _CODES_
+> Ignore TypeScript diagnostics by code.
 
 **--emit**
-> Write compiled files.
+> Write compiled output files to .ts-node directory.
 
 **-i**, **--interactive**
-> Force REPL.
+> Force REPL even if stdin is not a terminal.
+
+**--skipIgnore**
+> Skip ignore checks, allowing compilation of files in node_modules.
+
+**-O** _JSON_, **--compilerOptions** _JSON_
+> Merge JSON compiler options with tsconfig.
+
+**--showConfig**
+> Print resolved tsconfig.json and exit.
 
 # DESCRIPTION
 
 **ts-node** is a TypeScript execution engine for Node.js that compiles and runs TypeScript files on-the-fly without a separate build step. By default it performs full type checking at runtime, reporting type errors before execution begins.
 
-The **--transpile-only** mode skips type checking for significantly faster startup, which is useful during development when your editor already provides type feedback. ESM mode (**--esm**) handles ES module imports and is needed when working with import/export syntax natively. The built-in REPL provides an interactive TypeScript environment for experimentation.
+The **--transpile-only** mode skips type checking for significantly faster startup, which is useful during development when your editor already provides type feedback. The **--swc** flag uses the SWC transpiler (written in Rust) for an even greater speed improvement, and implies --transpileOnly. ESM mode (**--esm**) handles ES module imports and is needed when working with import/export syntax natively. The built-in REPL provides an interactive TypeScript environment for experimentation.
 
 Configuration is loaded from tsconfig.json by default, and a custom config can be specified with **-P**. The tool integrates well with development workflows using ts-node-dev or nodemon for automatic restart on file changes.
 

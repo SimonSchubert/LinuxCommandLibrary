@@ -39,11 +39,17 @@ _id_
 **-r**, **--remote** _name_
 > Connect to remote PipeWire instance
 
+**-N**, **--no-colors**
+> Disable color output.
+
 **-C**, **--color** _mode_
-> Color mode (never, always, auto)
+> Color mode: never, always, or auto.
+
+**--version**
+> Show version information.
 
 **-h**, **--help**
-> Display help message
+> Display help message.
 
 # DESCRIPTION
 
@@ -61,4 +67,4 @@ Part of **PipeWire**, providing introspection capabilities for the multimedia fr
 
 # SEE ALSO
 
-[pw-cli](/man/pw-cli)(1), [pw-dot](/man/pw-dot)(1), [pw-mon](/man/pw-mon)(1)
+[pw-cli](/man/pw-cli)(1), [pw-dot](/man/pw-dot)(1), [pw-mon](/man/pw-mon)(1), [pw-top](/man/pw-top)(1)

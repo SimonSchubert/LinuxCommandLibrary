@@ -20,7 +20,7 @@ provides a natural language interface for computers, allowing language models
 
 ```interpreter --local```
 
-**Enable fast mode with GPT-3.5**
+**Enable fast mode with a smaller model**
 
 ```interpreter --fast```
 
@@ -49,7 +49,7 @@ provides a natural language interface for computers, allowing language models
 > Specify which model to use (e.g., gpt-4o, claude-3-sonnet)
 
 **--local**
-> Use a local model via Ollama or LM Studio for code interpretation
+> Use a local model for code interpretation (via Ollama, LM Studio, jan.ai, etc.)
 
 **--fast**
 > Use a faster, smaller model for quicker responses

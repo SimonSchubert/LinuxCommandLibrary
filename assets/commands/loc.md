@@ -4,29 +4,37 @@ counts lines of code quickly
 
 # TLDR
 
-**Count lines in current directory**
+**Count lines of code in the current directory**
 
 ```loc```
 
-**Count in specific directory**
+**Count lines of code in a specific directory**
 
-```loc [src/]```
+```loc [path/to/directory]```
 
-**Exclude directories**
+**Show per-file statistics**
 
-```loc --exclude [test/,vendor/]```
+```loc --files```
 
-**Show detailed stats**
+**Exclude files matching a regex pattern**
 
-```loc -d```
+```loc --exclude [test]```
 
-**Count specific languages**
+**Count only files matching a regex pattern**
 
-```loc --include [rs,go]```
+```loc --include [\.rs$]```
 
-**Output as JSON**
+**Sort output by a specific column**
 
-```loc --output-type json```
+```loc --sort [code]```
+
+**Include files ignored by .gitignore**
+
+```loc -u```
+
+**Include hidden files and directories as well**
+
+```loc -uu```
 
 # SYNOPSIS
 
@@ -35,36 +43,32 @@ counts lines of code quickly
 # PARAMETERS
 
 _PATHS_
-> Directories or files to analyze.
+> Directories or files to analyze. Defaults to the current directory.
 
-**--exclude** _DIRS_
-> Directories to exclude.
+**--files**
+> Display statistics for each individual file parsed.
 
-**--include** _LANGS_
-> Languages to include.
+**--sort** _COLUMN_
+> Sort results by the specified column (e.g., code, comment, lines, blank). Default is code in descending order.
 
-**-d**
-> Show detailed breakdown.
+**--include** _REGEX_
+> Count only files matching the specified regex pattern.
 
-**--output-type** _FORMAT_
-> Output format (text, json).
+**--exclude** _REGEX_
+> Exclude files matching the specified regex pattern.
 
-**--help**
-> Display help information.
+**-u**
+> Unrestricted mode. Disregard .gitignore and .ignore files. Use twice (-uu) to also include hidden files and directories.
 
 # DESCRIPTION
 
-**loc** counts lines of code quickly. It identifies languages and separates code, comments, and blanks.
+**loc** counts lines of code quickly. It identifies programming languages and separates code, comments, and blank lines. By default, it respects .gitignore and .ignore files and skips hidden files and directories.
 
-The tool is written in Rust for speed. It supports many programming languages.
+The tool is written in Rust for speed and can process large codebases significantly faster than alternatives like cloc.
 
 # CAVEATS
 
-Results may differ from other counters. Language detection heuristic. Rust-based tool.
-
-# HISTORY
-
-loc was created as a fast **Rust-based** alternative to cloc and other lines-of-code counting tools.
+Results may differ from other line counters due to differing language detection heuristics and comment-parsing rules. The project is no longer actively maintained.
 
 # SEE ALSO
 

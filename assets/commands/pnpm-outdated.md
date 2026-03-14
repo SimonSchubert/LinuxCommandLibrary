@@ -46,11 +46,17 @@ List outdated pnpm packages
 **--long**
 > Show extended info.
 
-**--recursive**, **-r**
+**-r**, **--recursive**
 > Check all workspace packages.
 
 **--filter** _PATTERN_
-> Filter packages.
+> Filter packages in workspace.
+
+**--no-table**
+> Print outdated dependencies as a list.
+
+**--compatible**
+> Show only versions that satisfy semver ranges in package.json.
 
 # DESCRIPTION
 

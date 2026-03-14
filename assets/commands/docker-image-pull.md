@@ -1,6 +1,6 @@
 # TAGLINE
 
-download images from a registry
+Download images from a registry
 
 # TLDR
 
@@ -19,6 +19,10 @@ download images from a registry
 **Pull by digest**
 
 ```docker image pull [image]@[sha256:digest]```
+
+**Pull for a specific platform**
+
+```docker image pull --platform [linux/arm64] [image]:[tag]```
 
 **Pull from specific registry**
 
@@ -52,4 +56,4 @@ Images can be pulled by tag for version-specific deployments or by SHA256 digest
 
 # SEE ALSO
 
-[docker-pull](/man/docker-pull)(1), [docker-image-push](/man/docker-image-push)(1)
+[docker-pull](/man/docker-pull)(1), [docker-image](/man/docker-image)(1), [docker-image-ls](/man/docker-image-ls)(1)

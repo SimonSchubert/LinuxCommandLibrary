@@ -50,6 +50,21 @@ Submit to specific **queue**
 **-m _events_**
 > Email on events (b=begin, e=end, a=abort)
 
+**-V**
+> Export all environment variables to the job
+
+**-I**
+> Submit as interactive job
+
+**-S _path_**
+> Shell to use for the job script
+
+**-a _date_time_**
+> Defer execution until specified date/time
+
+**-v _variable_list_**
+> Export specific environment variables to the job
+
 # DESCRIPTION
 
 **qsub** submits batch jobs to TORQUE or PBS (Portable Batch System) queue managers. It's used in high-performance computing clusters to schedule jobs for execution when resources become available.

@@ -1,6 +1,6 @@
 # TAGLINE
 
-creates and manages IP sets, which are framework for storing IP
+Create and manage IP address sets for firewall rules
 
 # TLDR
 
@@ -27,6 +27,14 @@ creates and manages IP sets, which are framework for storing IP
 **List** all IP sets
 
 ```ipset list```
+
+**Test** if an IP is in a set
+
+```ipset test [set_name] [192.168.1.25]```
+
+**Restore** IP sets from file
+
+```ipset restore < [path/to/ip_set]```
 
 # SYNOPSIS
 
@@ -55,12 +63,21 @@ creates and manages IP sets, which are framework for storing IP
 **restore**
 > Restore sets from saved output
 
+**test** _NAME_ _ENTRY_
+> Test if an entry is in a set
+
 **flush** [_NAME_]
 > Clear all entries from a set
 
+**-exist**
+> Ignore errors when adding already existing entries or deleting non-existing entries
+
+**-quiet**
+> Suppress output
+
 # DESCRIPTION
 
-**ipset** creates and manages IP sets, which are framework for storing IP addresses, networks, ports, and combinations thereof. Sets can be referenced in iptables/nftables rules for efficient matching against large lists.
+**ipset** creates and manages IP sets, a framework for storing IP addresses, networks, ports, and combinations thereof. Sets can be referenced in iptables/nftables rules for efficient matching against large lists.
 
 Different set types support different entry formats: hash:ip for individual addresses, hash:net for CIDR ranges, hash:ip,port for address-port combinations. Sets use hash tables for O(1) lookup performance.
 
@@ -74,4 +91,4 @@ ipset was developed by Jozsef Kadlecsik to provide efficient set-based matching 
 
 # SEE ALSO
 
-[iptables](/man/iptables)(8), [nft](/man/nft)(8), [firewalld](/man/firewalld)(1)
+[iptables](/man/iptables)(8), [nft](/man/nft)(8), [firewall-cmd](/man/firewall-cmd)(1)

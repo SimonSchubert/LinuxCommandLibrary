@@ -20,7 +20,7 @@ ext2/ext3/ext4 filesystem backup utility
 
 ```dump -0uf [/dev/st0] [/home]```
 
-**List files in dump archive**
+**List files in dump archive** (using restore)
 
 ```restore -tf [backup.dump]```
 
@@ -89,4 +89,4 @@ dump dates back to early Unix at **Bell Labs** in the **1970s**. It was one of t
 
 # SEE ALSO
 
-[restore](/man/restore)(1), [tar](/man/tar)(1), [rsync](/man/rsync)(1), [dd](/man/dd)(1)
+[tar](/man/tar)(1), [rsync](/man/rsync)(1), [dd](/man/dd)(1)

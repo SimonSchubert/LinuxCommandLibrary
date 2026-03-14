@@ -4,13 +4,21 @@ Initialize disks for LVM use
 
 # TLDR
 
-**Initialize** physical volume
+**Initialize** a partition as a physical volume
 
-```sudo pvcreate /dev/sda1```
+```sudo pvcreate /dev/[sda1]```
 
-**Force** creation
+**Initialize multiple** devices at once
 
-```sudo pvcreate -f /dev/sda1```
+```sudo pvcreate /dev/[sdb1] /dev/[sdc1]```
+
+**Force** creation without confirmation prompts
+
+```sudo pvcreate -ff /dev/[sda1]```
+
+**Initialize with a specific** metadata size
+
+```sudo pvcreate --metadatasize [512k] /dev/[sda1]```
 
 # SYNOPSIS
 
@@ -38,7 +46,22 @@ Initialize disks for LVM use
 > Align data to a multiple of this size
 
 **-u, --uuid** _uuid_
-> Specify UUID for the physical volume
+> Specify UUID for the physical volume. Required when restoring a backup with vgcfgrestore.
+
+**--pvmetadatacopies** _0|1|2_
+> Number of metadata areas on this PV (0, 1, or 2).
+
+**--dataalignmentoffset** _size_
+> Shift the start of the data area by this offset.
+
+**--bootloaderareasize** _size_
+> Reserve space for a bootloader between the LVM metadata and data area.
+
+**--labelsector** _number_
+> Sector number where the LVM label is written (default 1).
+
+**--setphysicalvolumesize** _size_
+> Override the detected device size.
 
 # CAVEATS
 
@@ -50,4 +73,4 @@ All existing data on the device will be overwritten. The device should not be mo
 
 # SEE ALSO
 
-[lvm](/man/lvm)(8), [vgcreate](/man/vgcreate)(8), [pvdisplay](/man/pvdisplay)(8), [pvremove](/man/pvremove)(8)
+[lvm](/man/lvm)(8), [vgcreate](/man/vgcreate)(8), [pvdisplay](/man/pvdisplay)(8), [pvremove](/man/pvremove)(8), [pvs](/man/pvs)(8), [pvscan](/man/pvscan)(8), [lvcreate](/man/lvcreate)(8)

@@ -24,6 +24,14 @@ GitHub official command line interface
 
 ```gh repo create [name] --public```
 
+**View and check out a pull request**
+
+```gh pr checkout [pr_number]```
+
+**View workflow run status**
+
+```gh run list```
+
 **Open repo in browser**
 
 ```gh browse```
@@ -54,6 +62,24 @@ GitHub official command line interface
 
 **workflow**
 > Manage GitHub Actions workflows.
+
+**run**
+> View and manage workflow runs.
+
+**release**
+> Manage releases.
+
+**codespace**
+> Manage GitHub Codespaces.
+
+**secret**
+> Manage secrets for GitHub Actions.
+
+**extension**
+> Manage gh CLI extensions.
+
+**api**
+> Make authenticated GitHub API requests.
 
 **--help**
 > Display help information.
@@ -87,4 +113,4 @@ gh was released by **GitHub** in **2020** as the successor to hub. It's written 
 
 # SEE ALSO
 
-[git](/man/git)(1), [hub](/man/hub)(1), [gh-auth](/man/gh-auth)(1), [gh-pr](/man/gh-pr)(1)
+[git](/man/git)(1), [hub](/man/hub)(1), [gh-auth](/man/gh-auth)(1), [gh-pr](/man/gh-pr)(1), [gh-issue](/man/gh-issue)(1), [gh-repo](/man/gh-repo)(1), [gh-run](/man/gh-run)(1), [gh-release](/man/gh-release)(1)

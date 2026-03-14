@@ -59,6 +59,9 @@ Display **current status**
 **info**
 > Show available features
 
+**rebind**
+> Rebind SR-IOV virtual functions to their driver
+
 # PARAMETERS
 
 **--debug**
@@ -68,7 +71,10 @@ Display **current status**
 > Use alternate root directory
 
 **--timeout _seconds_**
-> Timeout for try command before rollback
+> Timeout for try command before rollback [default=120]
+
+**--config-file _path_**
+> Use a specific configuration file
 
 # CONFIGURATION
 
@@ -91,7 +97,7 @@ The abstraction layer allows the same configuration to work with different netwo
 
 # CAVEATS
 
-YAML syntax errors prevent configuration from applying. The try command requires a timeout or manual confirmation. Backend must be installed (NetworkManager or systemd-networkd). Changes to configuration files require apply to take effect.
+YAML syntax errors prevent configuration from applying. The try command defaults to a 120-second timeout before automatic rollback if not confirmed. A backend must be installed (NetworkManager or systemd-networkd). Changes to configuration files require **apply** to take effect.
 
 # HISTORY
 

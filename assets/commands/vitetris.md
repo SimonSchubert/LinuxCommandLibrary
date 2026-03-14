@@ -49,6 +49,15 @@ Terminal-based Tetris game
 **connect** _host:port_
 > Connect to a remote player for network play. Host can be an IP address or hostname.
 
+**-help**
+> Print help and exit. Use **-help game** for game options and **-help term** for terminal options.
+
+**-js0** _device_, **-js1** _device_
+> Specify joystick device for player 1 or 2.
+
+**-name** _NAME_
+> Set player name for network play.
+
 # DESCRIPTION
 
 **vitetris** is a terminal-based Tetris clone with gameplay similar to early Nintendo Tetris games. It features configurable controls, a high score table, two-player mode with garbage lines, network play, and joystick support on Linux.

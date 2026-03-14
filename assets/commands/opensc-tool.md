@@ -52,8 +52,23 @@ diagnostic tool for smart cards
 **-r** _reader_
 > Use specific reader.
 
+**-n**, **--name**
+> Print the name of the inserted card (driver).
+
+**--serial**
+> Print the card serial number (ICCSN) in hex.
+
+**-D**, **--list-drivers**
+> List all installed card drivers.
+
+**-c** _driver_, **--card-driver** _driver_
+> Use specified card driver instead of auto-detection.
+
+**-w**, **--wait**
+> Wait for a card to be inserted.
+
 **-v**, **--verbose**
-> Verbose output.
+> Verbose output (specify multiple times for debug output).
 
 # DESCRIPTION
 
@@ -83,4 +98,4 @@ OpenSC was started to provide open-source smart card support on Unix systems, su
 
 # SEE ALSO
 
-[pkcs15-tool](/man/pkcs15-tool)(1), [pkcs11-tool](/man/pkcs11-tool)(1), [pcscd](/man/pcscd)(8)
+[pkcs11-tool](/man/pkcs11-tool)(1)

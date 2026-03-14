@@ -55,11 +55,20 @@ simultaneous SSH to multiple hosts
 **-t** _title_
 > Set window title.
 
+**-a** _command_
+> Run a command in each session immediately after connecting.
+
+**-p** _port_
+> Override the default SSH port.
+
+**-Q**
+> Do not close cssh when the last terminal exits.
+
 **-q**
 > Quiet mode, suppress warnings.
 
 **-d**
-> Enable debug output.
+> Enable debug output (can be repeated up to level 4).
 
 # CONFIGURATION
 

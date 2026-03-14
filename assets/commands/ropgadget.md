@@ -16,9 +16,9 @@ Find ROP gadgets in binary executables
 
 ```ROPgadget --binary [binary] --re "[pop.*ret]"```
 
-**Show only unique gadgets**
+**Filter out gadgets with bad bytes in address**
 
-```ROPgadget --binary [binary] --nojop```
+```ROPgadget --binary [binary] --badbytes "[0a|0d|00]"```
 
 **Limit gadget depth**
 
@@ -53,17 +53,26 @@ Find ROP gadgets in binary executables
 **--depth** _N_
 > Gadget instruction depth.
 
+**--badbytes** _BYTES_
+> Reject gadgets containing specific bytes in their address (e.g., "0a|0d|00").
+
+**--opcode** _OPCODES_
+> Search for specific opcodes in executable segments.
+
+**--offset** _OFFSET_
+> Add offset to gadget addresses.
+
 **--nojop**
-> No JOP gadgets.
+> Exclude JOP (Jump-Oriented Programming) gadgets.
 
 **--nosys**
-> No syscall gadgets.
+> Exclude syscall gadgets.
 
 **--multibr**
-> Multiple branches.
+> Enable multiple branch gadgets.
 
 **--all**
-> All sections.
+> Search all sections, not just executable ones.
 
 # DESCRIPTION
 

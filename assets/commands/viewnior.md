@@ -4,21 +4,21 @@ Simple and fast image viewer
 
 # TLDR
 
-**View** an image
+**Open an image file**
 
-```viewnior path/to/image.jpg```
+```viewnior [path/to/image.jpg]```
 
-View in **fullscreen** mode
+**Open an image in fullscreen mode**
 
-```viewnior --fullscreen path/to/image.jpg```
+```viewnior --fullscreen [path/to/image.jpg]```
 
-View as **slideshow**
+**Start a slideshow from an image or directory**
 
-```viewnior --slideshow path/to/image.jpg```
+```viewnior --slideshow [path/to/image.jpg]```
 
-View all images in a **folder**
+**Browse all images in a directory**
 
-```viewnior path/to/folder/```
+```viewnior [path/to/folder/]```
 
 # SYNOPSIS
 
@@ -31,20 +31,20 @@ View all images in a **folder**
 # PARAMETERS
 
 **--fullscreen**
-> Start the viewer in fullscreen mode
+> Start the viewer in fullscreen mode.
 
 **--slideshow**
-> Launch in slideshow mode
-
-**-?, --help**
-> Display help information and exit
+> Launch in slideshow mode.
 
 **--version**
-> Show version information and exit
+> Show version information and exit.
+
+**-?, --help**
+> Display help information and exit.
 
 # CAVEATS
 
-Viewnior supports common image formats through GDK-Pixbuf. Navigation between images in a folder uses arrow keys or mouse. The slideshow interval can be configured in the preferences.
+Supports common image formats through GDK-Pixbuf (JPEG, PNG, GIF, BMP, SVG, etc.). Navigate between images in a folder with arrow keys or mouse scroll. Slideshow interval is configured in the preferences dialog.
 
 # HISTORY
 

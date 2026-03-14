@@ -1,32 +1,32 @@
 # TAGLINE
 
-Partially check out only specified directories
+Reduce working tree to a subset of tracked files
 
 # TLDR
 
-**Initialize sparse checkout**
-
-```git sparse-checkout init```
-
-**Set sparse directories**
+**Enable sparse checkout and set directories** (cone mode)
 
 ```git sparse-checkout set [dir1] [dir2]```
 
-**Add to sparse checkout**
+**Add more directories to sparse checkout**
 
 ```git sparse-checkout add [dir]```
 
-**List sparse patterns**
+**List current sparse patterns**
 
 ```git sparse-checkout list```
 
-**Disable sparse checkout**
+**Reapply sparse patterns** after config changes
+
+```git sparse-checkout reapply```
+
+**Disable sparse checkout** and restore all files
 
 ```git sparse-checkout disable```
 
-**Use cone mode**
+**Check which paths match sparse rules**
 
-```git sparse-checkout init --cone```
+```echo "[path/to/file]" | git sparse-checkout check-rules```
 
 # SYNOPSIS
 
@@ -35,36 +35,48 @@ Partially check out only specified directories
 # SUBCOMMANDS
 
 **init**
-> Initialize sparse checkout.
+> Deprecated. Use set instead to enable and configure sparse checkout.
 
 **set**
-> Set patterns.
+> Define which directories/patterns to include in the working tree.
 
 **add**
-> Add patterns.
+> Add additional directories/patterns to the sparse checkout.
 
 **list**
-> List patterns.
+> List the current sparse checkout patterns.
 
 **disable**
-> Disable sparse checkout.
+> Disable sparse checkout and restore all files.
 
 **reapply**
-> Reapply patterns.
+> Reapply patterns after manual config changes.
+
+**check-rules**
+> Check if paths match the current sparsity rules.
 
 # PARAMETERS
 
 **--cone**
-> Use cone mode (faster).
+> Use cone mode for directory-based patterns (default, faster).
 
 **--no-cone**
-> Use full pattern mode.
+> Use full pattern mode for arbitrary gitignore-style patterns.
+
+**--sparse-index**
+> Enable sparse index format for improved performance.
+
+**--no-sparse-index**
+> Disable sparse index format for compatibility with external tools.
+
+**--stdin**
+> Read patterns from stdin (one per line) instead of arguments.
 
 # DESCRIPTION
 
 **git sparse-checkout** enables partial repository checkouts, where only specified directories and files are materialized in the working tree. This significantly reduces working directory size for large monorepos.
 
-Cone mode (recommended) restricts patterns to directory-based inclusion, which is faster and simpler than full pattern matching.
+Cone mode (the default) restricts patterns to directory-based inclusion, which is faster and simpler than full pattern matching. In cone mode, the set and add subcommands accept directory names rather than arbitrary gitignore patterns.
 
 # CONFIGURATION
 
@@ -73,4 +85,4 @@ Cone mode (recommended) restricts patterns to directory-based inclusion, which i
 
 # SEE ALSO
 
-[git-read-tree](/man/git-read-tree)(1), [git-checkout](/man/git-checkout)(1)
+[git-read-tree](/man/git-read-tree)(1), [git-checkout](/man/git-checkout)(1), [git-clone](/man/git-clone)(1), [git-worktree](/man/git-worktree)(1)

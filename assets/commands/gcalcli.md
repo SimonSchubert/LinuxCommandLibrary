@@ -4,7 +4,7 @@ command-line interface for Google Calendar
 
 # TLDR
 
-**Show agenda**
+**Show agenda** for the next 5 days
 
 ```gcalcli agenda```
 
@@ -12,25 +12,29 @@ command-line interface for Google Calendar
 
 ```gcalcli list```
 
-**Show calendar view**
+**Show weekly calendar view**
 
 ```gcalcli calw```
 
-**Show month view**
+**Show monthly calendar view**
 
 ```gcalcli calm```
 
-**Add event**
+**Add event** with details
 
-```gcalcli add --title "[title]" --when "[tomorrow 2pm]" --duration [60]```
+```gcalcli add --title "[title]" --when "[tomorrow 2pm]" --duration [60] --where "[location]"```
 
-**Quick add event**
+**Quick add event** using natural language
 
 ```gcalcli quick "[Meeting tomorrow at 3pm]"```
 
 **Search events**
 
 ```gcalcli search "[query]"```
+
+**Import events** from an ICS file
+
+```gcalcli import [path/to/events.ics]```
 
 **Delete event**
 
@@ -69,6 +73,12 @@ command-line interface for Google Calendar
 **edit**
 > Edit an event.
 
+**import**
+> Import events from an ics/vcal file.
+
+**remind**
+> Execute a command if event occurs within a specified time.
+
 # PARAMETERS
 
 **--calendar** _name_
@@ -83,10 +93,25 @@ command-line interface for Google Calendar
 **--duration** _minutes_
 > Event duration.
 
+**--where** _location_
+> Event location.
+
+**--lineart** _type_
+> Line art style: fancy, unicode, or ascii.
+
+**--nocache**
+> Execute command without using cache.
+
+**--locale** _LOCALE_
+> Set locale for date/time output.
+
+**--refresh**
+> Delete and refresh cached data.
+
 # CONFIGURATION
 
 **~/.gcalclirc**
-> Main configuration file containing OAuth credentials, calendar settings, and display preferences.
+> Configuration file with commonly-used CLI options, one per line. Can also use @file syntax to load options from any file.
 
 **~/.gcalcli_oauth**
 > OAuth 2.0 credentials for Google Calendar API access.

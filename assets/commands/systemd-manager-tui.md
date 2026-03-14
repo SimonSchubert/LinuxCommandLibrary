@@ -14,7 +14,13 @@ TUI for managing systemd services via D-Bus
 
 # DESCRIPTION
 
-**systemd-manager-tui** is a terminal user interface for managing systemd services. It supports viewing logs, listing services, viewing properties, editing unit files, and controlling service lifecycle (start, stop, restart, mask, unmask, enable, disable) using the D-Bus API. Features Vim-like navigation and system/user unit switching.
+**systemd-manager-tui** is a terminal user interface for managing systemd services. It supports viewing logs, listing services, viewing properties, editing unit files, and controlling service lifecycle (start, stop, restart, mask, unmask, enable, disable) using the D-Bus API.
+
+Features Vim-like keyboard navigation and system/user unit switching. The interface is designed for keyboard-only operation.
+
+# CAVEATS
+
+Requires a running systemd system and D-Bus. Written in Rust.
 
 # HISTORY
 

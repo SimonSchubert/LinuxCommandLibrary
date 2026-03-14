@@ -64,4 +64,4 @@ grub-mount is part of GRUB 2, providing a FUSE-based mounting interface using GR
 
 # SEE ALSO
 
-[grub-probe](/man/grub-probe)(8), [mount](/man/mount)(8), [fusermount](/man/fusermount)(1)
+[grub-probe](/man/grub-probe)(8), [grub-install](/man/grub-install)(8), [grub-mkconfig](/man/grub-mkconfig)(8), [mount](/man/mount)(8), [fusermount](/man/fusermount)(1)

@@ -1,6 +1,6 @@
 # TAGLINE
 
-mySQL client with autocompletion
+MySQL client with autocompletion and syntax highlighting
 
 # TLDR
 
@@ -28,6 +28,14 @@ mySQL client with autocompletion
 
 ```mycli -h [host] -P [3306] -u [user] [database]```
 
+**Execute a query and exit**
+
+```mycli -u [user] -e "SELECT * FROM [table]" [database]```
+
+**Output results as CSV**
+
+```mycli -u [user] -e "SELECT * FROM [table]" --csv [database]```
+
 # SYNOPSIS
 
 **mycli** [_options_] [_database_]
@@ -52,24 +60,46 @@ _DATABASE_
 **-S** _SOCKET_
 > Unix socket path.
 
+**-D** _DATABASE_
+> Database name to connect to.
+
+**-e** _COMMAND_
+> Execute command and quit.
+
+**-R** _PROMPT_
+> Customize the prompt format.
+
+**--csv**
+> Output results in CSV format (batch mode).
+
+**--table**
+> Output results in table format (batch mode).
+
+**--auto-vertical-output**
+> Automatically switch to vertical output when result is wider than terminal.
+
+**--myclirc** _FILE_
+> Path to configuration file (default: ~/.myclirc).
+
+**-V**, **--version**
+> Display version information.
+
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**mycli** is a MySQL client with autocompletion. It provides syntax highlighting and smart completion.
-
-The tool enhances MySQL CLI experience. Shows completion suggestions as you type.
+**mycli** is a command-line client for MySQL, MariaDB, and Percona with smart autocompletion and syntax highlighting. It provides context-aware completion for SQL keywords, table names, column names, and functions as you type.
 
 # CAVEATS
 
-Python-based. Requires MySQL connection. Tab completion for tables/columns.
+Python-based; requires a running MySQL/MariaDB/Percona server to connect to. Configuration is stored in ~/.myclirc.
 
 # HISTORY
 
-mycli was created as a **user-friendly** MySQL CLI with autocompletion, inspired by pgcli.
+mycli was created by **Amjith Ramanujam** as a user-friendly MySQL CLI with autocompletion, inspired by **pgcli**.
 
 # SEE ALSO
 
-[mysql](/man/mysql)(1), [pgcli](/man/pgcli)(1), [litecli](/man/litecli)(1)
+[mysql](/man/mysql)(1), [mariadb](/man/mariadb)(1), [mysqldump](/man/mysqldump)(1), [pgcli](/man/pgcli)(1), [litecli](/man/litecli)(1)
 

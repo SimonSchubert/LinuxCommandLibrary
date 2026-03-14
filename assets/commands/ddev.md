@@ -1,6 +1,6 @@
 # TAGLINE
 
-Docker-based PHP development environment manager
+Docker-based local development environment manager
 
 # TLDR
 
@@ -28,17 +28,21 @@ Docker-based PHP development environment manager
 
 ```ddev composer [install]```
 
-**Run database command**
-
-```ddev mysql```
-
 **Import database**
 
-```ddev import-db --src=[database.sql.gz]```
+```ddev import-db --file=[database.sql.gz]```
+
+**Execute a command in the web container**
+
+```ddev exec [command]```
 
 **Show project status**
 
 ```ddev describe```
+
+**List all DDEV projects**
+
+```ddev list```
 
 # SYNOPSIS
 
@@ -82,6 +86,15 @@ Docker-based PHP development environment manager
 **list**
 > List all DDEV projects.
 
+**restart**
+> Restart the project containers.
+
+**delete**
+> Remove project information (does not delete code).
+
+**snapshot**
+> Create a database snapshot.
+
 # CONFIGURATION
 
 **.ddev/config.yaml**
@@ -92,7 +105,7 @@ Docker-based PHP development environment manager
 
 # DESCRIPTION
 
-**ddev** is an open-source local PHP development environment based on Docker. It provides pre-configured stacks for PHP applications including Drupal, WordPress, Laravel, TYPO3, Magento, and generic PHP projects, eliminating the complexity of manually configuring web servers, databases, and PHP versions.
+**ddev** is an open-source local development environment based on Docker. It provides pre-configured stacks for PHP applications including Drupal, WordPress, Laravel, TYPO3, Magento, and also supports Python and Node.js projects, eliminating the complexity of manually configuring web servers, databases, and language runtimes.
 
 The tool automatically provisions containers with appropriate versions of PHP, web server (nginx or Apache), database (MySQL, MariaDB, or PostgreSQL), and common services like Redis and Mailhog. Configuration is stored in .ddev/config.yaml, making development environments reproducible and shareable across teams.
 

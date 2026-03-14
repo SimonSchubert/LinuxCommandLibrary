@@ -49,7 +49,19 @@ restores an LXC container from a Proxmox backup file
 > Unprivileged container.
 
 **--rootfs** _spec_
-> Root filesystem spec.
+> Root filesystem spec (e.g., local-lvm:20 for 20GB).
+
+**--memory** _MB_
+> Set container memory limit.
+
+**--pool** _name_
+> Add the container to the specified resource pool.
+
+**--force** _bool_
+> Allow overwriting existing container.
+
+**--ignore-unpack-errors** _bool_
+> Ignore errors during backup unpacking.
 
 # DESCRIPTION
 
@@ -75,4 +87,4 @@ pct restore is part of **Proxmox VE**'s backup and restore infrastructure, worki
 
 # SEE ALSO
 
-[pct](/man/pct)(1), [vzdump](/man/vzdump)(1), [qmrestore](/man/qmrestore)(1)
+[pct](/man/pct)(1), [pct-enter](/man/pct-enter)(1), [vzdump](/man/vzdump)(1), [qmrestore](/man/qmrestore)(1)

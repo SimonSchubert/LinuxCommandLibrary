@@ -20,13 +20,17 @@ filters JSON using Python expressions
 
 ```cat [data.json] | jello -p```
 
-**Initialize empty dict**
+**Print JSON schema** in grep-able format
 
-```jello -i 'result = {}'```
+```cat [data.json] | jello -s```
 
-**Output as lines**
+**Output as lines** (for bash array assignment)
 
 ```cat [data.json] | jello -l '_.items'```
+
+**Load input from a file** instead of stdin
+
+```jello -f [data.json] '_.name'```
 
 # SYNOPSIS
 
@@ -46,13 +50,31 @@ _EXPRESSION_
 **-r**, **--raw**
 > Raw string output.
 
-**-c**
-> Compact output.
+**-c**, **--compact**
+> Compact JSON output (no pretty printing).
 
-**-i**
-> Initialize mode.
+**-C**
+> Force color output even when using pipes.
 
-**--help**
+**-m**, **--mono**
+> Monochrome output (no colors).
+
+**-n**, **--nulls**
+> Print selected null values.
+
+**-s**, **--schema**
+> Print the JSON schema in grep-able format.
+
+**-t**, **--types**
+> Print type annotations in schema view.
+
+**-f** _FILE_
+> Load input data from a JSON file.
+
+**-q** _FILE_
+> Load query from a file.
+
+**-h**, **--help**
 > Display help information.
 
 # DESCRIPTION

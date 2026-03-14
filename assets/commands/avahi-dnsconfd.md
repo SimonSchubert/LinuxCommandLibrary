@@ -82,4 +82,4 @@ Requires avahi-daemon to be running first. The action script must be properly co
 
 # SEE ALSO
 
-[avahi-daemon](/man/avahi-daemon)(8), [avahi-browse](/man/avahi-browse)(1), [systemd-resolved](/man/systemd-resolved)(8)
+[avahi-daemon](/man/avahi-daemon)(8), [avahi-browse](/man/avahi-browse)(1)

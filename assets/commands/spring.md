@@ -10,29 +10,29 @@ Spring Boot application framework CLI
 
 **Create with specific options**
 
-```spring init --build=[gradle] --java-version=[17] --name=[myapp] [myapp]```
+```spring init --build=[gradle] --java-version=[17] --packaging=[war] [myapp.zip]```
 
-**Run Spring Boot application**
-
-```./mvnw spring-boot:run```
-
-**Run with Gradle**
-
-```./gradlew bootRun```
-
-**Package as JAR**
-
-```./mvnw package```
-
-**Build native image**
-
-```./mvnw -Pnative native:compile```
-
-**List available dependencies**
+**List available dependencies and options**
 
 ```spring init --list```
 
-**Show version**
+**Encode a password** using bcrypt
+
+```spring encodepassword [password]```
+
+**Run Spring Boot application** with Maven wrapper
+
+```./mvnw spring-boot:run```
+
+**Run with Gradle** wrapper
+
+```./gradlew bootRun```
+
+**Package as executable JAR**
+
+```./mvnw package```
+
+**Show CLI version**
 
 ```spring --version```
 
@@ -49,6 +49,9 @@ Spring Boot application framework CLI
 **init** [_options_] [_location_]
 > Create new project from start.spring.io.
 
+**encodepassword** [_options_] _password_
+> Encode a password for use with Spring Security.
+
 **shell**
 > Start interactive shell.
 
@@ -61,10 +64,10 @@ Spring Boot application framework CLI
 # INIT OPTIONS
 
 **-d**, **--dependencies** _list_
-> Project dependencies.
+> Comma-separated list of dependency identifiers.
 
 **-b**, **--build** _type_
-> Build system: maven, gradle.
+> Build system: maven (default), gradle.
 
 **-j**, **--java-version** _version_
 > Java version: 17, 21.
@@ -82,13 +85,22 @@ Spring Boot application framework CLI
 > Maven artifact ID.
 
 **-p**, **--packaging** _type_
-> Packaging: jar, war.
+> Packaging: jar (default), war.
+
+**-v**, **--version** _version_
+> Project version (e.g. '0.0.1-SNAPSHOT').
 
 **--boot-version** _version_
 > Spring Boot version.
 
+**-x**, **--extract**
+> Extract the project archive.
+
+**-f**, **--force**
+> Force overwrite of existing files.
+
 **--list**
-> List available options.
+> List available options and dependencies.
 
 # MAVEN/GRADLE GOALS
 
@@ -96,7 +108,7 @@ Spring Boot application framework CLI
 > Run application.
 
 **spring-boot:build-image** / **bootBuildImage**
-> Build container image.
+> Build OCI container image.
 
 **package** / **bootJar**
 > Create executable JAR.
@@ -109,7 +121,7 @@ Spring Boot application framework CLI
 
 # DESCRIPTION
 
-**spring** CLI and Spring Boot Maven/Gradle plugins manage Spring Boot applications. The CLI scaffolds new projects; plugins handle building and running.
+**spring** CLI and Spring Boot Maven/Gradle plugins manage Spring Boot applications. The CLI scaffolds new projects and encodes passwords; plugins handle building and running. The **run** command was removed in Spring Boot 3.0.
 
 **spring init** fetches project templates from start.spring.io with selected dependencies. Dependencies like web, data-jpa, security add starters that auto-configure functionality.
 
@@ -121,12 +133,12 @@ Native image support via GraalVM compiles to native executables with **-Pnative*
 
 # CAVEATS
 
-CLI primarily for project creation; Maven/Gradle for ongoing development. Auto-configuration may conflict with custom config. Native image requires additional metadata. DevTools should be excluded from production.
+The **spring run** command was removed in Spring Boot 3.0; use Maven/Gradle plugins to run applications. CLI is primarily for project creation. Auto-configuration may conflict with custom config. Native image requires additional metadata. DevTools should be excluded from production.
 
 # HISTORY
 
-Spring Boot was created by **Pivotal** (now VMware) team led by **Phil Webb** and released in **2014**. It simplified Spring Framework development with convention over configuration. Spring Boot 2.0 (2018) updated to Spring Framework 5. Version 3.0 (2022) required Java 17 and added native compilation support. Spring Boot is the most widely used Java application framework.
+Spring Boot was created by **Pivotal** (now VMware) team led by **Phil Webb** and released in **2014**. It simplified Spring Framework development with convention over configuration. Spring Boot 2.0 (2018) updated to Spring Framework 5. Version 3.0 (2022) required Java 17, removed the CLI **run** command, and added native compilation support. Spring Boot is the most widely used Java application framework.
 
 # SEE ALSO
 
-[mvn](/man/mvn)(1), [gradle](/man/gradle)(1), [micronaut](/man/micronaut)(1), [quarkus](/man/quarkus)(1)
+[mvn](/man/mvn)(1), [gradle](/man/gradle)(1), [quarkus](/man/quarkus)(1)

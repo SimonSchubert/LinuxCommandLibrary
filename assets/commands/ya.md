@@ -4,21 +4,25 @@ Yazi file manager CLI companion
 
 # TLDR
 
-**Install a plugin** or theme package
+**Install a plugin** or flavor package
 
-```ya pack -a [owner/repo]```
+```ya pkg add [owner/repo]```
 
 **Update all installed packages**
 
-```ya pack -u```
+```ya pkg upgrade```
 
 **Delete a package**
 
-```ya pack -d [owner/repo]```
+```ya pkg delete [owner/repo]```
 
 **List installed packages**
 
-```ya pack -l```
+```ya pkg list```
+
+**Install packages from package.toml**
+
+```ya pkg install```
 
 **Publish a message** to yazi
 
@@ -38,37 +42,37 @@ Yazi file manager CLI companion
 
 # SUBCOMMANDS
 
-**pack**
-> Package manager for plugins and themes
+**pkg**
+> Package manager for plugins and flavors.
 
 **pub**
-> Publish a message to a yazi instance
+> Publish a message to a yazi instance.
 
 **emit**
-> Emit a command to a yazi instance
+> Emit a command to a yazi instance.
 
-# PACK OPTIONS
+# PKG SUBCOMMANDS
 
-**-a**, **--add** _package_
-> Install a package (owner/repo format)
+**pkg add** _package_ [_package_...]
+> Install packages (owner/repo format).
 
-**-u**, **--upgrade**
-> Update all installed packages
+**pkg upgrade**
+> Update all installed packages.
 
-**-d**, **--delete** _package_
-> Remove an installed package
+**pkg delete** _package_ [_package_...]
+> Remove installed packages.
 
-**-l**, **--list**
-> List installed packages
+**pkg list**
+> List installed packages.
 
-**-i**, **--install**
-> Install packages from package.toml
+**pkg install**
+> Install locked versions from package.toml.
 
 # DESCRIPTION
 
 **ya** (yazi-cli) is the command-line companion tool for **Yazi**, a fast terminal file manager written in Rust. It provides package management for plugins and themes, and enables communication with running Yazi instances.
 
-The package manager downloads plugins and themes from GitHub repositories. Packages are specified in **owner/repo** format (e.g., **yazi-rs/plugins**). Installed packages are listed in **~/.config/yazi/package.toml**.
+The package manager downloads plugins and flavors from GitHub repositories. Packages are specified in **owner/repo** format (e.g., **yazi-rs/plugins**). Installed packages are tracked in **~/.config/yazi/package.toml**.
 
 The **pub** and **emit** commands allow external scripts to interact with a running Yazi instance, enabling automation and integration with other tools. These verify that the receiver exists and has the necessary capabilities.
 
@@ -76,7 +80,7 @@ ya is installed alongside the main **yazi** file manager binary.
 
 # CAVEATS
 
-ya requires an active internet connection for package operations. Some packages may require specific Yazi versions. The tool is in beta alongside Yazi and may have breaking changes between versions.
+ya requires an active internet connection for package operations. The **ya** version must match the installed **yazi** version. Some packages may require specific Yazi versions.
 
 # HISTORY
 

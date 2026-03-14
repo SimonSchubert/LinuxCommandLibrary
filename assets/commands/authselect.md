@@ -140,4 +140,4 @@ Using **--force** is required when switching from manually configured systems. D
 
 # SEE ALSO
 
-[sssd](/man/sssd)(8), [pam](/man/pam)(8), [nsswitch.conf](/man/nsswitch.conf)(5), [realm](/man/realm)(8)
+[pam](/man/pam)(8)

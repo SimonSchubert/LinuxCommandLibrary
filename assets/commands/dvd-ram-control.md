@@ -56,4 +56,4 @@ dvd-ram-control provides management for **DVD-RAM** media, a rewritable format d
 
 # SEE ALSO
 
-[dvd+rw-mediainfo](/man/dvd+rw-mediainfo)(1), [mkudffs](/man/mkudffs)(8)
+[dvd+rw-mediainfo](/man/dvd+rw-mediainfo)(1)

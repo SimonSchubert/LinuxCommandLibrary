@@ -102,11 +102,17 @@ lightweight VM manager for Ubuntu instances
 **--cloud-init** _FILE_
 > Cloud-init configuration file.
 
+**--network** _SPEC_
+> Add a network interface to the instance.
+
+**--bridged**
+> Add a network interface bridged to the default bridge.
+
 # DESCRIPTION
 
 **Multipass** is a lightweight VM manager for Ubuntu instances. Developed by Canonical, it provides a fast way to launch Ubuntu virtual machines on Linux, macOS, and Windows, optimized for cloud-style workflows.
 
-Instances boot quickly from cached cloud images. The hypervisor backend varies by platform: QEMU or LXD on Linux, Hyperkit or QEMU on macOS, and Hyper-V on Windows. Instances get DHCP networking with host connectivity out of the box.
+Instances boot quickly from cached cloud images. The hypervisor backend varies by platform: QEMU or LXD on Linux, QEMU (with Hypervisor.framework) on macOS, and Hyper-V on Windows. Instances get DHCP networking with host connectivity out of the box.
 
 Cloud-init support enables automated provisioning. You can pass cloud-init YAML to install packages, configure users, run scripts, and more during first boot - matching cloud deployment workflows locally.
 
@@ -116,7 +122,7 @@ The tool is particularly useful for testing Ubuntu server configurations, develo
 
 # CAVEATS
 
-Ubuntu images only - other distributions not supported. Requires hardware virtualization support. Hypervisor conflicts possible (VirtualBox, Docker Desktop). Default instance resources are modest. Network bridge configuration varies by backend. Some features require specific hypervisor backends.
+Primarily Ubuntu images, though other images may be available via URL. Requires hardware virtualization support. Hypervisor conflicts possible (VirtualBox, Docker Desktop). Default instance resources are modest (1 CPU, 1 GB RAM, 5 GB disk). Network bridge configuration varies by backend. Some features require specific hypervisor backends.
 
 # HISTORY
 

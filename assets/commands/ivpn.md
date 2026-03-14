@@ -28,6 +28,14 @@ command-line client for IVPN service
 
 ```ivpn firewall -on```
 
+**Log in** to IVPN account
+
+```ivpn login [account_id]```
+
+**Connect to fastest** server
+
+```ivpn connect -fastest```
+
 # SYNOPSIS
 
 **ivpn** _command_ [_options_]
@@ -55,6 +63,12 @@ command-line client for IVPN service
 **-fastest**
 > Connect to fastest server.
 
+**login** _ACCOUNT_ID_
+> Authenticate with IVPN account.
+
+**logout**
+> Log out from IVPN account.
+
 **--help**
 > Display help information.
 
@@ -74,4 +88,4 @@ ivpn CLI is the official client for **IVPN**, a privacy-focused VPN service base
 
 # SEE ALSO
 
-[wg](/man/wg)(1), [openvpn](/man/openvpn)(8), [wireguard](/man/wireguard)(8)
+[wg](/man/wg)(1), [openvpn](/man/openvpn)(8)

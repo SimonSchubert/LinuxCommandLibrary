@@ -59,6 +59,15 @@ displays statistics about NFS activity
 **-z**, **--zero**
 > Zero statistics.
 
+**-l**, **--list**
+> Print statistics in list format.
+
+**-o**, **--since**
+> Show statistics since last reset with nfsstat -z.
+
+**-S**, **--sort** _field_
+> Sort NFS stats by field.
+
 # DESCRIPTION
 
 **nfsstat** displays statistics about NFS (Network File System) activity. It shows RPC and NFS statistics for both client and server operations.

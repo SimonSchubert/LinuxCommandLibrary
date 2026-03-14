@@ -1,6 +1,6 @@
 # TAGLINE
 
-same as **git init** but extended with hub features
+Initialize a git repository and add a GitHub remote
 
 # TLDR
 
@@ -19,7 +19,7 @@ same as **git init** but extended with hub features
 # PARAMETERS
 
 **-g**
-> Create .gitignore with GitHub templates.
+> After initializing, create a "USER/REPO" repository on GitHub and add it as the "origin" remote.
 
 **--bare**
 > Create bare repository.
@@ -32,11 +32,11 @@ same as **git init** but extended with hub features
 
 # DESCRIPTION
 
-**hub init** is the same as **git init** but extended with hub features. Typically used with **hub create** to initialize a local repository and create a matching GitHub repository in one workflow.
+**hub init** creates a git repository as with git-init(1) and adds remote "origin" at "git@github.com:USER/REPOSITORY.git". With the **-g** flag, it also creates the GitHub repository. Typically used with **hub create** to initialize a local repository and create a matching GitHub repository in one workflow.
 
 # CAVEATS
 
-Hub is deprecated. Consider using **git init** and **gh repo create** instead.
+Hub is no longer maintained. Consider using **git init** and **gh repo create** instead.
 
 # SEE ALSO
 

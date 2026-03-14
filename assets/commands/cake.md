@@ -76,17 +76,6 @@ dotnet new tool-manifest
 dotnet tool install Cake.Tool
 ```
 
-# SCRIPT EXAMPLE
-
-```csharp
-Task("Build")
-    .Does(() => {
-        DotNetBuild("./src/Project.sln");
-    });
-
-RunTarget("Build");
-```
-
 # CAVEATS
 
 Requires .NET SDK installed. By convention, executes build.cake in current directory. Supports MSBuild, .NET CLI, NuGet, and many other tools through addins.

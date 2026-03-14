@@ -50,26 +50,29 @@ OSINT email and subdomain gatherer
 **-f** _filename_
 > Output filename to save results (HTML/XML format).
 
-**-s** _start_
+**-S** _start_
 > Start result number for search pagination.
 
 **-e** _server_
 > Use a specific DNS server for lookups.
 
-**-t**
-> Perform DNS TLD expansion brute force.
-
 **-p**
-> Perform port scan on discovered hosts (requires nmap).
+> Route requests through a proxy server.
 
-**--dns-lookup**
-> Perform DNS lookups on all discovered hosts.
+**-s**
+> Use Shodan to query discovered hosts.
 
-**--dns-brute**
-> Perform DNS brute force on the domain.
+**-c**
+> Verify discovered hosts via HTTP/HTTPS.
 
-**--shodan-lookup**
-> Query Shodan for open ports on discovered hosts.
+**-n**
+> Enable DNS server lookup.
+
+**-r** [_file_]
+> Perform reverse DNS lookups on discovered ranges.
+
+**-w** _wordlist_
+> DNS brute force using a wordlist for subdomain discovery.
 
 **--take-over**
 > Check for possible subdomain takeover vulnerabilities.
@@ -84,7 +87,7 @@ OSINT email and subdomain gatherer
 
 **theHarvester** is an open-source intelligence (OSINT) tool used during reconnaissance in penetration testing and red team assessments. It gathers publicly available information about a target domain including email addresses, subdomains, hostnames, employee names, and open ports.
 
-The tool queries multiple data sources including search engines, certificate databases, DNS databases, and security-focused services. Results can be saved for further analysis. Many advanced sources require API keys configured in **~/.theharvester/api-keys.yaml**.
+The tool queries multiple data sources including search engines, certificate databases, DNS databases, and security-focused services. Results can be saved for further analysis. Many advanced sources require API keys configured in the **api-keys.yaml** file within the theHarvester installation directory.
 
 # CAVEATS
 

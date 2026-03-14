@@ -1,6 +1,6 @@
 # TAGLINE
 
-Show unit properties in machine format
+Show unit properties in machine-readable format
 
 # TLDR
 
@@ -18,11 +18,15 @@ Show **unit** properties
 
 Show **specific** properties
 
-```systemctl show [unit] -p [Wants,Conflicts,...]```
+```systemctl show [unit] -p [MainPID,ActiveState]```
+
+Show only the **value** of a specific property
+
+```systemctl show [unit] -p [MainPID] --value```
 
 Include **empty** properties
 
-```systemctl show -a```
+```systemctl show -a [unit]```
 
 # SYNOPSIS
 
@@ -39,6 +43,9 @@ Include **empty** properties
 **-p, --property=** _NAME_
 > Show only specified properties
 
+**--value**
+> Print only the value, skip property name and "=" (useful with -p)
+
 **--no-pager**
 > Disable pager
 
@@ -50,13 +57,19 @@ The output is suitable for parsing by scripts. Use `systemctl status` for human-
 
 # COMMON PROPERTIES
 
-**ActiveState** - Current state (active, inactive, failed)
+**ActiveState** - Current state (active, inactive, failed, activating, deactivating)
 
-**LoadState** - Load state (loaded, not-found, error)
+**LoadState** - Load state (loaded, not-found, error, masked)
+
+**SubState** - More fine-grained state (running, dead, exited, etc.)
 
 **MainPID** - Main process ID
 
 **ExecMainStartTimestamp** - Start time
+
+**Wants, Requires, Conflicts** - Unit dependency properties
+
+**FragmentPath** - Path to the unit file
 
 # CAVEATS
 

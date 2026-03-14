@@ -35,25 +35,25 @@ Render images in terminal using ANSI colors
 # PARAMETERS
 
 **-s** _SCALE_
-> Scale factor.
+> Scale factor for the image.
 
 **-tc** _N_
-> Character columns per pixel.
+> Terminal columns to use for rendering width.
 
 **-tr** _N_
-> Character rows per pixel.
+> Terminal rows to use for rendering height.
 
 **-d** _DEPTH_
-> Color depth (8, 24bit).
+> Color depth: 8 (256 colors) or 24 (true color).
 
 **-m** _MODE_
-> Dithering mode.
+> Dithering mode. Renders using block elements with different shades or ASCII characters.
 
 **-noresize**
-> Don't resize image.
+> Don't resize image to fit terminal.
 
 **-matte** _COLOR_
-> Background color.
+> Background matte color for transparent images.
 
 # DESCRIPTION
 

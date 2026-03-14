@@ -62,11 +62,11 @@ Uses midpoint displacement algorithm:
 
 # CAVEATS
 
-Fixed color palette. For grayscale, pipe through ppmtopgm. Part of Netpbm.
+Fixed color palette. For grayscale output, pipe through [ppmtopgm](/man/ppmtopgm). Part of the Netpbm toolkit. Different random seeds produce different patterns.
 
 # HISTORY
 
-ppmplasma is part of **Netpbm**, implementing the plasma cloud algorithm popular in demoscene and computer graphics.
+ppmplasma is part of **Netpbm**, implementing the plasma cloud algorithm (midpoint displacement) popular in demoscene and computer graphics since the 1990s.
 
 # SEE ALSO
 

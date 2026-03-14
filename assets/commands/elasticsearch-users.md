@@ -51,18 +51,20 @@ Manage file-based Elasticsearch users
 
 # PARAMETERS
 
-**-p**, **--password** _pass_
-> User password.
+**-p** _pass_
+> User password (must be at least 6 characters). If omitted, prompts interactively.
 
-**-r**, **--roles** _roles_
-> Comma-separated roles.
+**-r** _roles_
+> Comma-separated list of roles. With **useradd**, assigns roles. With **roles**, removes roles.
 
-**-a**, **--add** _roles_
-> Add roles.
+**-a** _roles_
+> Add comma-separated roles (used with **roles** subcommand).
 
 # DESCRIPTION
 
-**elasticsearch-users** manages file-based users for Elasticsearch. These users are stored locally and don't require an external authentication system.
+**elasticsearch-users** manages file-based users for Elasticsearch's native realm. These users are stored locally in the node's configuration directory and don't require an external authentication system. The tool is part of the Elasticsearch security features.
+
+When listing users, only those registered on the local node are shown. In a multi-node cluster, file-based users must be managed on each node separately.
 
 # SEE ALSO
 

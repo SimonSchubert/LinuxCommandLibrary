@@ -1,10 +1,10 @@
 # TAGLINE
 
-Migrate from another package manager
+Migrate from another package manager to Bun
 
 # TLDR
 
-**Migrate from npm/yarn** to Bun
+**Migrate from npm/yarn/pnpm to Bun**
 
 ```bun pm migrate```
 
@@ -14,14 +14,14 @@ Migrate from another package manager
 
 # DESCRIPTION
 
-**bun pm migrate** converts a project from npm or yarn to use Bun's package manager. It reads existing lockfiles (package-lock.json or yarn.lock) and creates a bun.lock file.
+**bun pm migrate** converts a project from npm, yarn, or pnpm to use Bun's package manager. It reads existing lockfiles (package-lock.json, yarn.lock, or pnpm-lock.yaml) and creates a bun.lock file, preserving the resolved dependency versions from the original lockfile.
 
-This preserves your resolved dependency versions while switching to Bun's faster package management.
+Note that `bun install` also performs automatic lockfile migration when no bun.lock exists, so this command is primarily useful for explicit one-time migration without installing packages.
 
 # CAVEATS
 
-Review the generated bun.lock to ensure dependency resolution matches expectations. Some edge cases may require manual adjustment.
+Review the generated bun.lock to ensure dependency resolution matches expectations. Some edge cases with complex dependency trees may require manual adjustment. The original lockfile is preserved and can be removed manually after verification.
 
 # SEE ALSO
 
-[bun](/man/bun)(1), [bun-pm](/man/bun-pm)(1), [bun-install](/man/bun-install)(1)
+[bun](/man/bun)(1), [bun-pm](/man/bun-pm)(1), [bun-install](/man/bun-install)(1), [npm](/man/npm)(1), [yarn](/man/yarn)(1), [pnpm](/man/pnpm)(1)

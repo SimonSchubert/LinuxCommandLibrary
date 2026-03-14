@@ -24,9 +24,13 @@ Silences command output unless it fails
 
 ```0 1 * * * chronic backup```
 
+**Run a backup script, showing output only if it fails or produces stderr**
+
+```chronic -ve /usr/local/bin/backup.sh```
+
 # SYNOPSIS
 
-**chronic** [_options_] _command_
+**chronic** [-ve] _command_ ...
 
 # DESCRIPTION
 
@@ -63,4 +67,4 @@ Part of moreutils package. Better than redirecting to /dev/null because you stil
 
 # SEE ALSO
 
-[moreutils](/man/moreutils)(1), [cron](/man/cron)(8), [sponge](/man/sponge)(1)
+[moreutils](/man/moreutils)(1), [cron](/man/cron)(8), [crontab](/man/crontab)(1), [sponge](/man/sponge)(1), [ts](/man/ts)(1)

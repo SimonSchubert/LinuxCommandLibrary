@@ -38,29 +38,50 @@ kubernetes command-line tool
 
 # PARAMETERS
 
-**get** _TYPE_
-> List resources.
+**get** _TYPE_ [_NAME_]
+> List resources of specified type.
 
 **describe** _TYPE_ _NAME_
-> Show resource details.
+> Show detailed information about a resource.
 
 **apply** **-f** _FILE_
-> Apply configuration.
+> Apply configuration from file or directory.
 
 **delete** _TYPE_ _NAME_
-> Delete resource.
+> Delete a resource.
 
-**logs** _POD_
-> Show pod logs.
+**logs** _POD_ [**-c** _container_]
+> Show pod logs, optionally for a specific container.
 
-**exec** _POD_
-> Execute in container.
+**exec** [**-it**] _POD_ **--** _COMMAND_
+> Execute command in a container.
 
-**-n** _NAMESPACE_
+**port-forward** _POD_ _LOCAL:REMOTE_
+> Forward local port to pod port.
+
+**scale** _TYPE/NAME_ **--replicas**=_N_
+> Scale a resource to N replicas.
+
+**create** _TYPE_ _NAME_
+> Create a resource imperatively.
+
+**edit** _TYPE_ _NAME_
+> Edit a resource in your default editor.
+
+**-n**, **--namespace** _NAMESPACE_
 > Target namespace.
 
-**--help**
-> Display help information.
+**-o**, **--output** _FORMAT_
+> Output format: json, yaml, wide, name.
+
+**-l**, **--selector** _LABEL_
+> Filter by label selector.
+
+**--context** _CONTEXT_
+> Kubeconfig context to use.
+
+**-A**, **--all-namespaces**
+> List resources across all namespaces.
 
 # DESCRIPTION
 

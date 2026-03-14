@@ -1,38 +1,46 @@
 # TAGLINE
 
-compares two lzip-compressed files byte by byte
+compare compressed files byte by byte
 
 # TLDR
 
-**Compare two lzip-compressed files**
+**Compare two compressed files**
 
 ```lzcmp [file1.lz] [file2.lz]```
 
 **Compare with verbose output**
 
-```lzcmp -l [file1.lz] [file2.lz]```
+```lzcmp -l [file1.xz] [file2.xz]```
 
 **Compare silently**
 
-```lzcmp -s [file1.lz] [file2.lz]```
+```lzcmp -s [file1.gz] [file2.gz]```
+
+**Compare compressed file with its uncompressed original**
+
+```lzcmp [file.lz]```
 
 # SYNOPSIS
 
-**lzcmp** [_options_] _file1_ _file2_
+**lzcmp** [_cmp_options_] _file1_ [_file2_]
 
 # PARAMETERS
 
 **-l**
-> Print byte number and values for differences.
+> Print byte number and differing byte values.
 
 **-s**
-> Silent mode, exit status only.
+> Silent mode, output nothing, return exit status only.
+
+All options are passed directly to **cmp**(1).
 
 # DESCRIPTION
 
-**lzcmp** compares two lzip-compressed files byte by byte. Equivalent to running cmp on the decompressed contents. Returns exit status 0 if identical, 1 if different, 2 on error.
+**lzcmp** invokes cmp(1) on compressed files. It supports files compressed with xz, lzma, gzip, bzip2, and lzip. If only one file is specified, it is compared against a file with the compression suffix stripped. If two files are specified, both are decompressed as needed and fed to cmp. The exit status from cmp is preserved: 0 if identical, 1 if different, 2 on error.
+
+The name lzcmp is provided for backward compatibility with LZMA Utils.
 
 # SEE ALSO
 
-[lzip](/man/lzip)(1), [lzdiff](/man/lzdiff)(1), [cmp](/man/cmp)(1)
+[cmp](/man/cmp)(1), [lzdiff](/man/lzdiff)(1), [xzcmp](/man/xzcmp)(1), [zcmp](/man/zcmp)(1), [lzip](/man/lzip)(1), [xz](/man/xz)(1)
 

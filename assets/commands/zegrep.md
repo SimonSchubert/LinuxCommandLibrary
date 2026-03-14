@@ -20,9 +20,9 @@ Search gzip-compressed files with extended regex
 
 ```zegrep "[pattern]" [file1.gz] [file2.gz]```
 
-**Extended regex search**
+**Extended regex search (alternation, quantifiers)**
 
-```zegrep "[foo|bar]+" [file.gz]```
+```zegrep "(foo|bar)+" [file.gz]```
 
 # SYNOPSIS
 
@@ -65,7 +65,7 @@ Multiple patterns can be specified with **-e** or by separating with **|** in th
 
 zegrep decompresses files to search them, which uses CPU. For large compressed files, this may be slow.
 
-Only gzip compression is supported. For other formats, use **bzgrep** (bzip2), **xzgrep** (xz), or **zstdgrep** (zstd).
+Only gzip compression is supported. For other formats, use **bzgrep** (bzip2) or **xzgrep** (xz).
 
 Memory usage scales with decompressed file size as the file must be processed through the decompressor.
 
@@ -73,4 +73,4 @@ On some systems, zegrep is a script wrapper around zcat and egrep.
 
 # SEE ALSO
 
-[zgrep](/man/zgrep)(1), [zfgrep](/man/zfgrep)(1), [zcat](/man/zcat)(1), [grep](/man/grep)(1), [egrep](/man/egrep)(1), [gzip](/man/gzip)(1)
+[zgrep](/man/zgrep)(1), [zfgrep](/man/zfgrep)(1), [zcat](/man/zcat)(1), [grep](/man/grep)(1), [egrep](/man/egrep)(1), [gzip](/man/gzip)(1), [bzgrep](/man/bzgrep)(1), [xzgrep](/man/xzgrep)(1)

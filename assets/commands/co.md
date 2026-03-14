@@ -59,6 +59,9 @@ RCS revision checkout
 **-p**
 > Print the revision to stdout instead of creating a working file.
 
+**-j**_JOINLIST_
+> Generate new revision by merging differences between revisions.
+
 **-k**_SUBST_
 > Set keyword substitution mode (kv, kvl, k, o, b, v).
 
@@ -67,6 +70,12 @@ RCS revision checkout
 
 **-w**_LOGIN_
 > Check out the latest revision checked in by LOGIN.
+
+**-T**
+> Set the working file's modification time to the revision's check-in time.
+
+**-V**
+> Print RCS version number.
 
 # DESCRIPTION
 
@@ -78,7 +87,7 @@ RCS stores revision history in special files (typically ending in **,v**) and co
 
 # CAVEATS
 
-RCS operates on individual files rather than repositories. Locks are advisory and depend on user cooperation. The working file's timestamp is set to the revision's check-in time by default. Checking out an already-locked file requires the lock owner to release it.
+RCS operates on individual files rather than repositories. Locks are advisory and depend on user cooperation. The working file's timestamp is set to the revision's check-in time by default. Checking out an already-locked file requires the lock owner to release it or use **rcs -u** to break the lock.
 
 # HISTORY
 

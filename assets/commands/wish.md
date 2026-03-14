@@ -64,7 +64,7 @@ In interactive mode, wish displays "%" prompt. Commands are executed after compl
 
 # CAVEATS
 
-Requires X11 display. Tk applications look dated without theming. Some distributions use versioned names like wish8.6.
+Requires a display server (X11 or Wayland with XWayland). Tk applications look dated without theming (ttk themed widgets improve this). Some distributions use versioned names like wish8.6. On macOS, Tk uses Aqua natively.
 
 # HISTORY
 
@@ -72,4 +72,4 @@ Requires X11 display. Tk applications look dated without theming. Some distribut
 
 # SEE ALSO
 
-[tclsh](/man/tclsh)(1), [tk](/man/tk)(n), [gitk](/man/gitk)(1), [tkcon](/man/tkcon)(1)
+[gitk](/man/gitk)(1), [xdotool](/man/xdotool)(1)

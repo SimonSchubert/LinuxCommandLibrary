@@ -41,25 +41,52 @@ One notable difference is key format: dbclient uses Dropbear's own key format ra
 # PARAMETERS
 
 **-p** _port_
-> Connect to specified port
+> Connect to specified port (default: 22)
 
 **-i** _keyfile_
-> Identity key file (Dropbear format)
+> Identity key file (Dropbear format); multiple allowed
+
+**-l** _user_
+> Login as user on the remote host
 
 **-t**
-> Allocate a TTY
+> Allocate a PTY
+
+**-T**
+> Don't allocate a PTY
 
 **-A**
-> Forward authentication agent
+> Forward authentication agent connections
 
-**-L** _port:host:port_
+**-L** _listenport:host:port_
 > Local port forwarding
 
-**-R** _port:host:port_
+**-R** _listenport:host:port_
 > Remote port forwarding
 
+**-g**
+> Allow non-local hosts to connect to forwarded ports
+
 **-N**
-> Don't request a shell
+> Don't request a remote shell
+
+**-f**
+> Fork into the background after authentication
+
+**-y**
+> Always accept unknown hostkeys without prompting
+
+**-W** _windowsize_
+> Per-channel receive window buffer size
+
+**-K** _seconds_
+> Keepalive interval in seconds
+
+**-c** _cipherlist_
+> Comma-separated list of ciphers to enable
+
+**-m** _MAClist_
+> Comma-separated list of MACs to enable
 
 # CAVEATS
 

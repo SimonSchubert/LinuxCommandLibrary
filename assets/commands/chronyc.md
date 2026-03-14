@@ -77,14 +77,26 @@ Command-line interface for the chrony NTP daemon
 **-n**
 > Don't resolve hostnames
 
+**-N**
+> Print original hostnames as specified in config, not reverse DNS
+
 **-c**
 > CSV output format
 
 **-m**
-> Allow multiple commands
+> Allow multiple commands on one line
+
+**-4**
+> Resolve hostnames to IPv4 addresses only
+
+**-6**
+> Resolve hostnames to IPv6 addresses only
 
 **-h** _host_
 > Connect to remote chronyd
+
+**-p** _port_
+> Specify port for remote chronyd connection
 
 # CONFIGURATION
 

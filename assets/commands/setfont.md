@@ -89,4 +89,4 @@ Only works on Linux virtual consoles (TTYs), not in terminal emulators like xter
 
 # SEE ALSO
 
-[showconsolefont](/man/showconsolefont)(8), [loadkeys](/man/loadkeys)(1), [consolechars](/man/consolechars)(8), [vconsole.conf](/man/vconsole.conf)(5)
+[showconsolefont](/man/showconsolefont)(8), [loadkeys](/man/loadkeys)(1), [consolechars](/man/consolechars)(8)

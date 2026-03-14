@@ -1,32 +1,32 @@
 # TAGLINE
 
-benchmark tool that measures memory copy performance by allocating two memory
+Memory bandwidth benchmark tool
 
 # TLDR
 
-Run **3 memory bandwidth tests** with 512MB size
+Run **3 iterations** of all tests with 512 MiB arrays
 
 ```mbw -n 3 512```
 
-Run tests with 512MB, output **only statistics**, not averages
+Run tests with 512 MiB, **quiet mode** suppressing averages
 
 ```mbw -n 3 -q -a 512```
 
-Run **memcpy test** 3 times with 512MB size, only display statistics
+Run **memcpy test** 3 times with 512 MiB, only display statistics
 
 ```mbw -n 3 -q -t0 512```
 
-Run memcpy test 10 times with **1024 byte blocks** allocated 8192MB of memory
+Run **mcblock test** 10 times with **1024 byte blocks** using 8192 MiB arrays
 
 ```mbw -n 10 -q -t2 -b 1024 8192```
 
-Run dumb test with 2048MB size, **run forever**
+Run dumb test with 2048 MiB, **run forever**
 
 ```mbw -n 0 -t1 -q 2048```
 
 # SYNOPSIS
 
-**mbw** [_options_] _size_MB_
+**mbw** [_options_] _size_in_MiB_
 
 # PARAMETERS
 
@@ -37,13 +37,16 @@ Run dumb test with 2048MB size, **run forever**
 > Quiet mode; show only statistics, suppress per-iteration output
 
 **-a**
-> Show averages only
+> Suppress printing averages
 
 **-t _type_**
 > Test type: 0=memcpy, 1=dumb (byte-by-byte), 2=mcblock (block copy)
 
 **-b _bytes_**
-> Block size for mcblock test
+> Block size in bytes for mcblock test (-t2)
+
+**-h**
+> Show quick help
 
 # DESCRIPTION
 
@@ -63,4 +66,4 @@ mbw was written by Andras Horvath as a simple tool to test memory bandwidth, par
 
 # SEE ALSO
 
-[memtester](/man/memtester)(1), [stress-ng](/man/stress-ng)(1), [sysbench](/man/sysbench)(1), [lmbench](/man/lmbench)(1)
+[memtester](/man/memtester)(1), [stress-ng](/man/stress-ng)(1), [sysbench](/man/sysbench)(1)

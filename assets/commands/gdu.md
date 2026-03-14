@@ -1,6 +1,6 @@
 # TAGLINE
 
-fast disk usage analyzer with ncurses interface
+Fast disk usage analyzer with interactive TUI
 
 # TLDR
 
@@ -57,8 +57,8 @@ fast disk usage analyzer with ncurses interface
 **-X**, **--ignore-dirs-pattern** _regex_
 > Ignore directories matching regex patterns.
 
-**-o**, **--output-file** _format_
-> Output format: text, json, csv (implies -n).
+**-o**, **--output-file** _file_
+> Export results to a file (use with format flag).
 
 **-f**, **--input-file** _file_
 > Read from exported JSON file instead of scanning.

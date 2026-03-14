@@ -14,11 +14,11 @@ Send **specific signal**
 
 Send signal to **main process** only
 
-```systemctl kill -s SIGHUP --kill-whom main [unit]```
+```systemctl kill --kill-whom=main -s SIGHUP [unit]```
 
-**List** available signals
+Kill processes of a **user** service
 
-```systemctl kill -s help```
+```systemctl --user kill [unit]```
 
 # SYNOPSIS
 
@@ -30,7 +30,7 @@ Send signal to **main process** only
 > Signal to send (name or number, default: SIGTERM)
 
 **--kill-whom=** _WHO_
-> Which processes to kill: main, control, or all (default: all)
+> Which processes to kill: main, control, or all (default: all). Older systemd versions use `--kill-who`.
 
 **--user**
 > Kill user service processes
@@ -51,4 +51,4 @@ The **kill** subcommand provides direct signal delivery to unit processes, usefu
 
 # SEE ALSO
 
-[systemctl-stop](/man/systemctl-stop)(1), [kill](/man/kill)(1), [signal](/man/signal)(7)
+[systemctl](/man/systemctl)(1), [systemctl-stop](/man/systemctl-stop)(1), [systemctl-restart](/man/systemctl-restart)(1), [kill](/man/kill)(1)

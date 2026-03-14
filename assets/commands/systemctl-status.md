@@ -8,47 +8,31 @@ Show the **status** of a systemd unit
 
 ```systemctl status [unit].service```
 
-Show the status of **failed** units
-
-```systemctl status --failed```
-
-**List all** running services
+Show **system overview** status
 
 ```systemctl status```
 
-List **all units** in the system
+Show status of **multiple units**
 
-```systemctl status -a```
+```systemctl status [unit1] [unit2]```
 
-List all units of a **specific type**
+Show status by **PID**
 
-```systemctl status -t [service|timer|socket|target]```
+```systemctl status [pid]```
 
-List all units with a **specific state**
+Show status with more **journal lines**
 
-```systemctl status --state [active|inactive|failed]```
+```systemctl status -n [50] [unit]```
 
 Show the status of a **user unit**
 
-```systemctl status [unit] --user```
+```systemctl status --user [unit]```
 
 # SYNOPSIS
 
 **systemctl** [_OPTIONS_...] **status** [_PATTERN_...|_PID_...]
 
 # PARAMETERS
-
-**-a**, **--all**
-> Show all loaded units regardless of state
-
-**-t**, **--type=**_TYPE_
-> Filter by unit type (service, socket, target, timer, etc.)
-
-**--state=**_STATE_
-> Filter by state (active, inactive, failed, etc.)
-
-**--failed**
-> Show only failed units
 
 **--user**
 > Query user service manager instead of system
@@ -62,6 +46,9 @@ Show the status of a **user unit**
 **--no-pager**
 > Do not pipe output to pager
 
+**-l**, **--full**
+> Do not ellipsize unit names, process tree entries, or journal output
+
 # DESCRIPTION
 
 **systemctl status** displays the current state of systemd units including services, sockets, targets, and timers. It shows whether units are active, enabled, or have failed, along with recent log entries from the journal.
@@ -70,4 +57,4 @@ Without arguments, it shows an overview of system state. With a unit name, it pr
 
 # SEE ALSO
 
-[systemctl](/man/systemctl)(1), [systemctl-start](/man/systemctl-start)(1), [journalctl](/man/journalctl)(1)
+[systemctl](/man/systemctl)(1), [systemctl-start](/man/systemctl-start)(1), [systemctl-restart](/man/systemctl-restart)(1), [journalctl](/man/journalctl)(1)

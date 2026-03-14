@@ -46,4 +46,4 @@ grub-glue-efi was developed as part of **GNU GRUB** to support universal EFI boo
 
 # SEE ALSO
 
-[grub-install](/man/grub-install)(8), [grub-mkimage](/man/grub-mkimage)(1), [grub](/man/grub)(8)
+[grub-install](/man/grub-install)(8), [grub](/man/grub)(8)

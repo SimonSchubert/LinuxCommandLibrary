@@ -44,7 +44,7 @@ Conceal with **compression and password**
 > Show approximate storage capacity
 
 **-p** _password_
-> Encrypt/decrypt with password (up to 1170 characters)
+> Encrypt/decrypt with password using ICE cipher in cipher-feedback mode
 
 **-l** _line-length_
 > Maximum line length (default: 80)
@@ -54,6 +54,12 @@ Conceal with **compression and password**
 
 **-m** _message_
 > Conceal specified text string
+
+**-V, --version**
+> Display version information
+
+**-h, --help**
+> Display usage information
 
 # DESCRIPTION
 

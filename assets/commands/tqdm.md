@@ -40,10 +40,22 @@ Add progress bars to command pipelines
 > Description prefix.
 
 **--bytes**
-> Byte mode.
+> Byte counting mode.
 
 **--null**
-> Null separator.
+> Use null character as line separator.
+
+**--ncols** _N_
+> Width of the progress bar output.
+
+**--ascii**
+> Use ASCII characters for the progress bar instead of unicode.
+
+**--colour** _COLOUR_
+> Progress bar colour (e.g., red, green, #00ff00).
+
+**--mininterval** _SECONDS_
+> Minimum display update interval (default: 0.1).
 
 # DESCRIPTION
 

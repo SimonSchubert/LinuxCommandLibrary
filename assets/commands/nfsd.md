@@ -12,17 +12,21 @@ handles NFS requests from clients
 
 ```sudo systemctl enable nfs-server```
 
-**Restart NFS services**
+**Start with a specific number of threads**
 
-```sudo systemctl restart nfs-server```
+```sudo rpc.nfsd [16]```
 
-**Check status**
+**Disable NFS version 3**
+
+```sudo rpc.nfsd -N 3```
+
+**Check NFS server status**
 
 ```sudo systemctl status nfs-server```
 
-**Manually start nfsd**
+**Start with specific port and RDMA support**
 
-```sudo rpc.nfsd [8]```
+```sudo rpc.nfsd -p [2049] -r```
 
 # SYNOPSIS
 
@@ -31,19 +35,34 @@ handles NFS requests from clients
 # PARAMETERS
 
 **nprocs**
-> Number of server threads.
+> Number of server threads (default: 8).
 
 **-d**, **--debug**
 > Debug mode.
 
+**-H**, **--host** _addr_
+> Specify a particular hostname or address to accept NFS requests on. By default, all known network addresses are used.
+
 **-p**, **--port** _port_
-> NFS port.
+> Specify a different port to listen on for NFS requests (default: 2049).
+
+**-r**, **--rdma** [_port_]
+> Enable RDMA transport on the specified port (default: 20049).
 
 **-N**, **--no-nfs-version** _ver_
-> Disable NFS version.
+> Disable a specific NFS version (e.g., 3, 4, 4.1, 4.2).
 
 **-V**, **--nfs-version** _ver_
-> Enable NFS version.
+> Enable a specific NFS version.
+
+**-s**, **--syslog**
+> Log error messages to syslog instead of stderr.
+
+**-T**, **--no-tcp**
+> Disable TCP connections from clients.
+
+**-U**, **--no-udp**
+> Disable UDP connections from clients.
 
 # DESCRIPTION
 
@@ -69,7 +88,7 @@ The number of threads determines how many concurrent requests can be handled.
 
 # CAVEATS
 
-Requires rpcbind. Firewall must allow NFS ports. NFSv4 uses single port (2049). Security through exports and Kerberos.
+Requires rpcbind (except for NFSv4-only configurations). Firewall must allow NFS ports. NFSv4 uses a single port (2049). Security is managed through /etc/exports and optionally Kerberos authentication. The default of 8 threads should be tuned based on workload.
 
 # HISTORY
 
@@ -77,4 +96,4 @@ NFS was developed at **Sun Microsystems** by a team led by **Russel Sandberg** i
 
 # SEE ALSO
 
-[exportfs](/man/exportfs)(8), [showmount](/man/showmount)(8), [mount.nfs](/man/mount.nfs)(8), [rpcbind](/man/rpcbind)(8)
+[showmount](/man/showmount)(8), [rpcbind](/man/rpcbind)(8), [nfsstat](/man/nfsstat)(8)

@@ -38,7 +38,7 @@ john --wordlist=/usr/share/wordlists/rockyou.txt rar.hash
 # Show cracked password
 john --show rar.hash
 
-# Use hashcat instead
+# Use hashcat instead (RAR5 mode 13000, RAR3 mode 12500)
 rar2john archive.rar | cut -d: -f2 > hash.txt
 hashcat -m 13000 hash.txt wordlist.txt
 ```

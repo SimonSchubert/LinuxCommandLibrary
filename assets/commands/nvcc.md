@@ -55,7 +55,7 @@ NVIDIA's CUDA compiler driver
 > GPU code generation.
 
 **-gencode** _SPEC_
-> Architecture/code pair.
+> Architecture/code pair (e.g., arch=compute_75,code=sm_75).
 
 **-ptx**
 > Generate PTX assembly.
@@ -80,6 +80,12 @@ NVIDIA's CUDA compiler driver
 
 **--dryrun**
 > Show commands without executing.
+
+**-Xcompiler** _options_
+> Pass options directly to the host compiler.
+
+**--std** _standard_
+> C++ standard (e.g., c++14, c++17).
 
 **-v**, **--verbose**
 > Verbose output.
@@ -111,4 +117,4 @@ Requires NVIDIA GPU and drivers. Architecture mismatch causes runtime errors. De
 
 # SEE ALSO
 
-[cuda-gdb](/man/cuda-gdb)(1), [nvidia-smi](/man/nvidia-smi)(1), [gcc](/man/gcc)(1), [clang](/man/clang)(1)
+[nvidia-smi](/man/nvidia-smi)(1), [cuda-gdb](/man/cuda-gdb)(1), [gcc](/man/gcc)(1), [clang](/man/clang)(1)

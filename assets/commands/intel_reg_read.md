@@ -4,33 +4,37 @@ reads hardware registers from Intel GPUs
 
 # TLDR
 
-**Read specific register**
+**Read a specific register by address**
 
-```sudo intel_reg_read [0x70000]```
+```sudo intel_reg read [0x70000]```
 
 **Read multiple registers**
 
-```sudo intel_reg_read [0x70000] [0x70004]```
+```sudo intel_reg read [0x70000] [0x70004]```
 
-**Read with decode**
+**Decode register bits into named fields**
 
-```sudo intel_reg_read -d [0x70000]```
+```sudo intel_reg read --decode [0x70000]```
 
-**Dump register range**
+**Dump all known registers**
 
-```sudo intel_reg_read --all```
+```sudo intel_reg read --all```
+
+**Dump registers with decoding**
+
+```sudo intel_reg read --all --decode```
 
 # SYNOPSIS
 
-**intel_reg_read** [_options_] _register_...
+**intel_reg** **read** [_options_] [_register_...]
 
 # PARAMETERS
 
 _REGISTER_
-> Register address in hex.
+> Register address in hex (e.g., 0x70000).
 
-**-d**
-> Decode register bits.
+**--decode**
+> Decode register bits into named fields.
 
 **--all**
 > Dump all known registers.
@@ -40,9 +44,9 @@ _REGISTER_
 
 # DESCRIPTION
 
-**intel_reg_read** reads hardware registers from Intel GPUs. It provides direct access to GPU configuration registers.
+**intel_reg read** is a subcommand of `intel_reg` that reads hardware registers from Intel GPUs. It provides direct access to GPU configuration registers for debugging and development.
 
-The tool can decode register bits into meaningful fields. Essential for low-level hardware debugging and driver development.
+The tool can decode register bits into meaningful named fields when used with the `--decode` flag.
 
 # CAVEATS
 
@@ -54,4 +58,4 @@ intel_reg_read is part of **intel-gpu-tools**, created for Intel graphics driver
 
 # SEE ALSO
 
-[intel_reg_write](/man/intel_reg_write)(1), [intel_gtt](/man/intel_gtt)(1), [intel_gpu_top](/man/intel_gpu_top)(1)
+[intel_gtt](/man/intel_gtt)(1)

@@ -4,21 +4,25 @@ gettext infrastructure initialization tool
 
 # TLDR
 
-**Initialize gettext in** project
+**Initialize gettext** infrastructure in current project
 
 ```gettextize```
 
-**Copy files instead** of symlink
+**Copy files** instead of creating symlinks
 
 ```gettextize --copy```
 
-**Force overwrite**
+**Force overwrite** of existing files
 
-```gettextize --force```
+```gettextize -f```
 
-**Non-interactive mode**
+**Dry run** to see what would be done without making changes
 
-```gettextize --no-changelog```
+```gettextize -n```
+
+**Specify a PO directory** with existing translations
+
+```gettextize --po-dir=[po]```
 
 # SYNOPSIS
 
@@ -29,20 +33,29 @@ gettext infrastructure initialization tool
 _DIRECTORY_
 > Project directory (default: current).
 
-**--copy**
-> Copy files instead of symlinking.
+**-f, --force**
+> Force writing of new files even if old ones exist.
 
-**--force**
-> Overwrite existing files.
+**--copy**
+> Copy files instead of symlinking (default behavior).
+
+**--symlink**
+> Make symbolic links instead of copying files.
+
+**-n, --dry-run**
+> Print modifications but don't perform them.
 
 **--no-changelog**
-> Don't update ChangeLog.
+> Don't update or create ChangeLog files.
 
-**--intl**
-> Include libintl sources.
+**--po-dir**=_DIR_
+> Specify directory containing PO files. Can be given multiple times.
 
 **--help**
 > Display help information.
+
+**--version**
+> Display version information.
 
 # DESCRIPTION
 
@@ -62,4 +75,4 @@ gettextize is part of **GNU gettext**, providing project initialization for the 
 
 # SEE ALSO
 
-[gettext](/man/gettext)(1), [xgettext](/man/xgettext)(1), [autoconf](/man/autoconf)(1)
+[gettext](/man/gettext)(1), [xgettext](/man/xgettext)(1), [msgfmt](/man/msgfmt)(1), [autoconf](/man/autoconf)(1)

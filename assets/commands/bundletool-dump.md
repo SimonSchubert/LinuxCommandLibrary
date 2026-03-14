@@ -60,6 +60,12 @@ Inspect Android App Bundle contents
 **--values**
 > Include resource values in output.
 
+**--module** _name_
+> Specify a module in the bundle to dump from.
+
+**--output-file** _path_
+> Write output to a file instead of stdout.
+
 # DESCRIPTION
 
 **bundletool dump** analyzes the internal structure and metadata of Android App Bundles (.aab) and APK files. It's part of Google's bundletool, the underlying tool used by Android Studio and Google Play to build and process App Bundles.

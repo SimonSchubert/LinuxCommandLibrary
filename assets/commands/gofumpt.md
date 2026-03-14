@@ -4,25 +4,29 @@ Stricter Go code formatter
 
 # TLDR
 
-**Format file**
+**Format a Go file and print result to stdout**
 
 ```gofumpt [file.go]```
 
-**Format in place**
+**Format a file in place**
 
 ```gofumpt -w [file.go]```
 
-**Format directory**
+**Format all Go files in the current directory recursively**
 
 ```gofumpt -w .```
 
-**Check formatting**
+**Show a diff of formatting changes without applying**
 
 ```gofumpt -d [file.go]```
 
-**Extra formatting rules**
+**Format with extra opinionated rules**
 
 ```gofumpt -extra [file.go]```
+
+**Read from stdin and format**
+
+```cat [file.go] | gofumpt```
 
 # SYNOPSIS
 
@@ -34,19 +38,22 @@ _FILES_
 > Go files to format.
 
 **-w**
-> Write to file.
+> Write result to the source file instead of stdout.
 
 **-d**
-> Show diff.
+> Display diffs instead of rewriting files.
 
-**-s**
-> Simplify code.
+**-e**
+> Report all errors (not just the first 10 per file).
 
 **-extra**
-> Enable extra rules.
+> Enable extra formatting rules (e.g., enforce short case bodies on one line).
 
-**--help**
-> Display help information.
+**-l**
+> List files whose formatting differs from gofumpt's.
+
+**-version**
+> Print the version and exit.
 
 # DESCRIPTION
 
@@ -56,7 +63,7 @@ The **-extra** flag enables even more opinionated rules for tighter code formatt
 
 # CAVEATS
 
-Stricter than gofmt. May conflict with project style. Configure editors accordingly.
+Stricter than gofmt -- code formatted by gofumpt is always valid gofmt output, but not vice versa. May conflict with project conventions. Most editors support gofumpt as a drop-in replacement for gofmt via settings.
 
 # HISTORY
 

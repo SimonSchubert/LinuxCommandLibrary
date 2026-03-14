@@ -22,11 +22,11 @@ _pagenum_
 > Test page number (1-3).
 
 **-a4**
-> Generate A4 size instead of letter.
+> Generate A4 size instead of US letter (default).
 
 # DESCRIPTION
 
-**pbmpage** generates printer calibration and test pages as PBM images. Different page numbers produce different test patterns. Part of Netpbm toolkit.
+**pbmpage** generates printer calibration and test pages as PBM images at 600 dpi resolution. Different page numbers produce different test patterns useful for calibrating margins, alignment, and print quality. The default output is for US letter paper; use **-a4** for A4 size. Part of the Netpbm toolkit.
 
 # SEE ALSO
 

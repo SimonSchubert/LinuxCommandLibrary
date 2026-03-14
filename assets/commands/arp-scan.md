@@ -16,13 +16,17 @@ Scan with **interface**
 
 ```sudo arp-scan -I [eth0] -l```
 
-Scan showing **vendor** information
+Scan a specific **IP range**
 
-```sudo arp-scan -l --resolve```
+```sudo arp-scan [192.168.1.1-192.168.1.50]```
 
-**Quiet** output (IPs only)
+**Quiet** output (responding hosts only)
 
 ```sudo arp-scan -l -q```
+
+Scan using a **custom source** MAC address
+
+```sudo arp-scan -l --srcaddr=[00:11:22:33:44:55]```
 
 # SYNOPSIS
 
@@ -45,23 +49,23 @@ The tool shows IP addresses, MAC addresses, and optionally vendor names from the
 **-q**, **--quiet**
 > Quiet mode (only show responding hosts)
 
-**-r** _n_, **--retry** _n_
-> Retry count
+**-r** _n_, **--retry**=_n_
+> Number of retries per host (default 2).
 
-**-t** _ms_, **--timeout** _ms_
-> Timeout per host
+**-t** _ms_, **--timeout**=_ms_
+> Timeout in milliseconds per host (default 500).
 
-**--resolve**
-> Resolve MAC to vendor name
-
-**-g**, **--bandwidth** _bps_
-> Limit bandwidth
-
-**-N**, **--no-resolve**
-> Don't resolve addresses
+**-B**, **--bandwidth**=_bps_
+> Limit outbound bandwidth (e.g., 256000).
 
 **-x**, **--ignoredups**
-> Ignore duplicate responses
+> Ignore duplicate ARP responses.
+
+**--srcaddr**=_mac_
+> Set the source MAC address in outgoing packets.
+
+**-D**, **--destaddr**=_mac_
+> Set the destination MAC address (default ff:ff:ff:ff:ff:ff).
 
 # CONFIGURATION
 

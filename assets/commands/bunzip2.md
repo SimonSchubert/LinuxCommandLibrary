@@ -4,21 +4,25 @@ Decompress bzip2 compressed files
 
 # TLDR
 
-**Decompress** file
+**Decompress** a file (removes the .bz2 original)
 
 ```bunzip2 [file.txt.bz2]```
 
-**Keep** compressed file
+**Decompress** keeping the compressed file
 
 ```bunzip2 -k [file.txt.bz2]```
 
-**Decompress** to stdout
+**Decompress** to stdout (useful for piping)
 
-```bunzip2 -c [file.txt.bz2]```
+```bunzip2 -c [file.txt.bz2] > [file.txt]```
 
-**Test** integrity
+**Test** file integrity without decompressing
 
 ```bunzip2 -t [file.txt.bz2]```
+
+**Force** overwrite of existing output files
+
+```bunzip2 -f [file.txt.bz2]```
 
 # SYNOPSIS
 
@@ -50,21 +54,8 @@ The tool is a companion to bzip2 for extracting compressed files.
 **-q**, **--quiet**
 > Suppress warnings
 
-# WORKFLOW
-
-```bash
-# Decompress (removes .bz2)
-bunzip2 file.txt.bz2
-
-# Decompress keeping original
-bunzip2 -k file.txt.bz2
-
-# Decompress to stdout
-bunzip2 -c file.txt.bz2 > file.txt
-
-# Test without extracting
-bunzip2 -t file.txt.bz2
-```
+**-s**, **--small**
+> Reduce memory usage at the cost of speed (uses about 2.5 MB per file)
 
 # CAVEATS
 
@@ -76,4 +67,4 @@ Removes original .bz2 file unless -k used. Requires memory proportional to compr
 
 # SEE ALSO
 
-[bzip2](/man/bzip2)(1), [bzcat](/man/bzcat)(1), [gunzip](/man/gunzip)(1)
+[bzip2](/man/bzip2)(1), [bzcat](/man/bzcat)(1), [gunzip](/man/gunzip)(1), [xz](/man/xz)(1)

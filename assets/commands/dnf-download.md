@@ -1,48 +1,60 @@
 # TAGLINE
 
-download RPM packages without installing
+Download RPM packages without installing
 
 # TLDR
 
-**Download** package to current directory
+**Download a package** to the current directory
 
 ```dnf download [package]```
 
-Download to **specific directory**
+**Download to a specific directory**
 
 ```dnf download [package] --destdir [path/to/directory]```
 
-**Print URL** instead of downloading
+**Download a package and all its dependencies**
+
+```dnf download --resolve [package]```
+
+**Download the source RPM** of a package
+
+```dnf download --source [package]```
+
+**Print the URL** instead of downloading
 
 ```dnf download --url [package]```
 
 # SYNOPSIS
 
-**dnf download** [_options_] _package_
+**dnf download** [_options_] _package_ [_package_...]
 
 # DESCRIPTION
 
-**dnf download** downloads RPM packages from DNF repositories without installing them. Part of dnf-plugins-core.
-
-Useful for obtaining packages for offline installation or inspection.
+**dnf download** downloads RPM packages from configured DNF repositories without installing them. It is part of the **dnf-plugins-core** package. Useful for obtaining packages for offline installation, inspection, or distributing to air-gapped systems.
 
 # PARAMETERS
 
 **--destdir** _dir_
-> Download destination directory
+> Download destination directory. Defaults to the current directory.
 
 **--url**
-> Print URL instead of downloading
+> Print the download URL to stdout instead of downloading.
 
 **--source**
-> Download source RPM
+> Download the source RPM instead of the binary package. Enables source repositories automatically.
 
 **--resolve**
-> Download dependencies too
+> Also download all uninstalled dependencies of the specified packages.
+
+**--alldeps**
+> When used with --resolve, download all dependencies (including already installed ones).
+
+**--arch** _arch_
+> Limit to packages of the given architecture.
 
 # CAVEATS
 
-Requires dnf-plugins-core. Destination directory must exist when using --destdir. Downloaded packages are not automatically installed.
+Requires **dnf-plugins-core** to be installed. Downloaded packages are not automatically installed. When using --resolve, only missing dependencies are downloaded by default.
 
 # SEE ALSO
 

@@ -12,24 +12,48 @@ Convert PPM to HP PaintJet format
 
 ```ppmtopj -gamma [1.0] [input.ppm] > [output.pj]```
 
+**Center the image on an 8.5 by 11 page**
+
+```ppmtopj -center [input.ppm] > [output.pj]```
+
+**Use run-length encoding**
+
+```ppmtopj -rle [input.ppm] > [output.pj]```
+
+**Apply dithering render mode**
+
+```ppmtopj -render dither [input.ppm] > [output.pj]```
+
 # SYNOPSIS
 
-**ppmtopj** [_options_] [_file_]
+**ppmtopj** [**-gamma** _val_] [**-xpos** _val_] [**-ypos** _val_] [**-back** dark|lite] [**-rle**] [**-center**] [**-render** _mode_] [_ppmfile_]
 
 # PARAMETERS
 
-**-gamma** _n_
-> Gamma correction value.
+**-gamma** _val_
+> Gamma correction value (default 0).
 
-**-xres** _n_
-> Horizontal resolution.
+**-xpos** _val_
+> Move by val pixels in the x direction.
 
-**-yres** _n_
-> Vertical resolution.
+**-ypos** _val_
+> Move by val pixels in the y direction.
+
+**-back** dark|lite
+> Enhance foreground by indicating if background is light or dark.
+
+**-rle**
+> Run-length encode the image (may result in larger images).
+
+**-center**
+> Center the image on an 8.5 by 11 page.
+
+**-render** _mode_
+> Internal rendering algorithm: none, snap, bw, dither (default), diffuse, monodither, monodiffuse, clusterdither, monoclusterdither.
 
 # DESCRIPTION
 
-**ppmtopj** converts PPM images to HP PaintJet printer format for direct printing. Part of Netpbm toolkit.
+**ppmtopj** reads a PPM image and converts it to HP PaintJet printer format for direct printing. For best results, the input should be in 8-color RGB form (binary combinations of full-on and full-off primaries). Part of the Netpbm toolkit.
 
 # SEE ALSO
 

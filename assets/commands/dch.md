@@ -62,6 +62,18 @@ _MESSAGE_
 **-n**, **--nmu**
 > Non-maintainer upload increment.
 
+**-b**, **--force-bad-version**
+> Allow a version that is lower than the current.
+
+**-p**, **--preserve**
+> Preserve directory name for package name.
+
+**-r**, **--release**
+> Finalize entry for release (set distribution and timestamp).
+
+**--create**
+> Create a new changelog file.
+
 **--help**
 > Display help information.
 
@@ -83,4 +95,4 @@ dch is part of **devscripts**, a collection of tools for Debian package maintain
 
 # SEE ALSO
 
-[debchange](/man/debchange)(1), [dpkg-buildpackage](/man/dpkg-buildpackage)(1), [dput](/man/dput)(1)
+[debchange](/man/debchange)(1), [dpkg-buildpackage](/man/dpkg-buildpackage)(1), [dpkg](/man/dpkg)(1)

@@ -18,5 +18,5 @@ Convert QRT ray tracer output to PPM
 
 # SEE ALSO
 
-[mtvtoppm](/man/mtvtoppm)(1), [rawtoppm](/man/rawtoppm)(1)
+[mtvtoppm](/man/mtvtoppm)(1), [rawtoppm](/man/rawtoppm)(1), [ppmtopgm](/man/ppmtopgm)(1)
 

@@ -64,4 +64,4 @@ Translation packages can be large as they contain neural network models. The pac
 
 # SEE ALSO
 
-[translate-shell](/man/translate-shell)(1), [pip](/man/pip)(1)
+[argos-translate](/man/argos-translate)(1), [trans](/man/trans)(1), [pip](/man/pip)(1)

@@ -1,6 +1,6 @@
 # TAGLINE
 
-keyboard scancode-to-keycode mapping display
+Print the kernel scancode-to-keycode mapping table
 
 # TLDR
 
@@ -26,7 +26,7 @@ getkeycodes is useful for debugging keyboard issues and understanding key mappin
 
 # CAVEATS
 
-Requires console access. Output format is dense. Shows kernel-level mapping only.
+Requires access to the Linux console (will not work in X11 or Wayland terminal emulators). Output format is dense with hexadecimal scan codes and decimal key codes. Shows kernel-level mapping only, not X11 or desktop keymaps.
 
 # HISTORY
 
@@ -34,4 +34,4 @@ getkeycodes is part of the **kbd** package, providing keyboard utilities for Lin
 
 # SEE ALSO
 
-[setkeycodes](/man/setkeycodes)(1), [showkey](/man/showkey)(1), [dumpkeys](/man/dumpkeys)(1)
+[showkey](/man/showkey)(1), [dumpkeys](/man/dumpkeys)(1), [loadkeys](/man/loadkeys)(1)

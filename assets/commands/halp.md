@@ -12,7 +12,7 @@ CLI tool to get help with CLI tools
 
 ```halp plz [command]```
 
-**Check a specific argument**
+**Check a specific argument for a command**
 
 ```halp --check [--flag] [command]```
 

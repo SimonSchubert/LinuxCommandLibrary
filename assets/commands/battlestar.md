@@ -4,11 +4,11 @@ Text-based science fiction adventure game
 
 # TLDR
 
-**Start** Battlestar game
+**Start a new Battlestar game**
 
 ```battlestar```
 
-**Restore** a saved game
+**Restore a saved game from a file**
 
 ```battlestar -r [savefile]```
 
@@ -25,10 +25,10 @@ The game uses a parser-based input system where players type natural language co
 # PARAMETERS
 
 **-r**
-> Restore a previously saved game
+> Restore a previously saved game.
 
 _file_
-> Name of saved game file to restore
+> Name of saved game file to restore.
 
 # COMMANDS
 
@@ -43,7 +43,7 @@ _file_
 
 # CAVEATS
 
-Text-only interface. Requires understanding of adventure game conventions. Parser can be finicky. Part of the bsd-games package.
+Text-only interface. Requires understanding of adventure game conventions. Parser can be finicky about phrasing. Part of the bsd-games package, which may not be installed by default.
 
 # HISTORY
 

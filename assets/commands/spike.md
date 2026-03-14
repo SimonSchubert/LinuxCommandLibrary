@@ -8,21 +8,25 @@ RISC-V reference ISA simulator
 
 ```spike [program.elf]```
 
-**With ISA extension**
+**With ISA extension** specification
 
-```spike --isa=[rv64gc] [program.elf]```
+```spike --isa=rv64gc [program.elf]```
 
 **Interactive debug**
 
 ```spike -d [program.elf]```
 
-**Multiple cores**
+**Simulate with 4 cores**
 
-```spike -p[4] [program.elf]```
+```spike -p4 [program.elf]```
 
-**With memory size**
+**With memory configuration** (base:size)
 
-```spike -m[0x80000000:0x10000000] [program.elf]```
+```spike -m0x80000000:0x10000000 [program.elf]```
+
+**Log executed instructions**
+
+```spike -l --isa=rv64gc [program.elf]```
 
 # SYNOPSIS
 
@@ -46,7 +50,22 @@ RISC-V reference ISA simulator
 > Start address.
 
 **-l**
-> Log instructions.
+> Log executed instructions
+
+**-g**
+> Track histogram of PCs
+
+**-h**
+> Print help message
+
+**--ic=** _S:W:B_
+> Instantiate instruction cache (sets:ways:blocksize)
+
+**--dc=** _S:W:B_
+> Instantiate data cache (sets:ways:blocksize)
+
+**--l2=** _S:W:B_
+> Instantiate L2 cache (sets:ways:blocksize)
 
 # DESCRIPTION
 
@@ -58,7 +77,7 @@ As the reference implementation maintained by the RISC-V project, spike serves a
 
 # CAVEATS
 
-Instruction-level only. No cycle accuracy. Development tool.
+Instruction-level simulation only; no cycle accuracy. Intended as a development and verification tool, not for performance estimation.
 
 # HISTORY
 

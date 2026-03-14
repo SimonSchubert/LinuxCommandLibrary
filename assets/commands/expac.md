@@ -48,14 +48,27 @@ Useful for scripting, package analysis, and generating custom package reports. P
 > Human-readable sizes (K, M, G)
 
 **-d, --delim** _string_
-> Delimiter between packages
+> Delimiter between packages (default: newline)
 
 **-l, --listdelim** _string_
-> Delimiter for list items
+> Delimiter for list items (default: two spaces)
+
+**-t, --timefmt** _format_
+> Time output format string passed to strftime(3) (default: %c)
+
+**-1, --readone**
+> Stop after first match
+
+**-p, --file** _pkgfile_
+> Query a package file instead of the database
+
+# FORMAT SPECIFIERS
+
+Common format specifiers: %n (name), %v (version), %d (description), %D (depends), %E (depends, no version), %O (optional deps), %o (optional deps, no descriptions), %N (required by), %P (provides), %H (conflicts), %G (groups), %m (install size), %k (download size), %r (repo), %u (URL), %a (architecture), %l (install date), %w (install reason), %F (files).
 
 # CAVEATS
 
-Arch Linux and derivatives only. Format strings use % specifiers. Part of the pacman ecosystem.
+Arch Linux and derivatives only. Format strings use % specifiers. Part of the pacman ecosystem. Use -H to format sizes in human-readable units (K, M, G, T).
 
 # SEE ALSO
 

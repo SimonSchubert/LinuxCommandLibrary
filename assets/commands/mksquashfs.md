@@ -24,9 +24,13 @@ Exclude files matching **regex pattern**
 
 ```mksquashfs [path/to/source] [filesystem.squashfs] -regex -e "[pattern]"```
 
-Set custom **block size** (default 128KB, max 1MB)
+Set custom **block size** (default 128 Kbytes, max 1 Mbyte)
 
 ```mksquashfs [path/to/source] [filesystem.squashfs] -b [256K]```
+
+Create a **new** filesystem without appending
+
+```mksquashfs [path/to/source] [filesystem.squashfs] -noappend```
 
 # SYNOPSIS
 
@@ -38,7 +42,7 @@ Set custom **block size** (default 128KB, max 1MB)
 > Compression algorithm: gzip (default), lzo, lz4, xz, zstd, lzma
 
 **-b _size_**
-> Data block size; default 128KB, maximum 1MB
+> Data block size; default 128 Kbytes, maximum 1 Mbyte. K/M suffixes supported
 
 **-e _items_**
 > Exclude specified files and directories
@@ -72,6 +76,24 @@ Set custom **block size** (default 128KB, max 1MB)
 
 **-noF**
 > Disable fragment compression
+
+**-noX**
+> Disable extended attribute compression
+
+**-no-compression**
+> Disable all compression
+
+**-noappend**
+> Do not append to existing filesystem; create a new one
+
+**-info**
+> Print files written to filesystem
+
+**-no-recovery**
+> Do not generate a recovery file
+
+**-recover _file_**
+> Recover filesystem using a recovery file
 
 **-xattrs**
 > Store extended attributes (default)

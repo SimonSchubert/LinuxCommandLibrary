@@ -51,7 +51,7 @@ Convert termcap descriptions to terminfo format
 
 # DESCRIPTION
 
-**captoinfo** converts termcap terminal capability descriptions into the terminfo format. For each termcap entry found in the input file, an equivalent terminfo description is written to standard output.
+**captoinfo** converts termcap terminal capability descriptions into the terminfo format. For each termcap entry found in the input file, an equivalent terminfo description is written to standard output. It also translates some obsolete, nonstandard capabilities into standard (SVr4/XSI Curses) terminfo capabilities.
 
 If no files are specified, captoinfo reads from the file named in the **TERMCAP** environment variable and extracts only the entry for the terminal named in **TERM**. If TERMCAP is not set, it reads from /etc/termcap by default.
 

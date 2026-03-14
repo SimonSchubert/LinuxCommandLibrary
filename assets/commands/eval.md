@@ -4,21 +4,25 @@ shell builtin for dynamic command execution
 
 # TLDR
 
-**Evaluate and execute** arguments
-
-```eval "[echo \$HOME]"```
-
 **Execute dynamically** built command
 
 ```cmd="ls -la"; eval "$cmd"```
 
-**Expand variables** twice
+**Expand variables** twice (variable indirection)
 
 ```var="PATH"; eval "echo \$$var"```
 
-**Execute command** from variable
+**Set a variable** with a dynamic name
 
-```action="date"; eval "$action"```
+```key="myvar"; eval "$key=hello"; echo "$myvar"```
+
+**Execute a command stored** in a variable with pipes
+
+```cmd="ps aux | grep bash"; eval "$cmd"```
+
+**Use eval with command substitution**
+
+```eval "$(ssh-agent -s)"```
 
 # SYNOPSIS
 
@@ -31,11 +35,11 @@ _ARGUMENT_
 
 # DESCRIPTION
 
-**eval** is a shell builtin that concatenates its arguments, performs shell expansions, and executes the result as a command. It enables dynamic command construction and double expansion of variables.
+**eval** is a POSIX special shell builtin that concatenates its arguments separated by spaces, then reads and executes the resulting string as a shell command. This enables dynamic command construction and double expansion of variables.
 
-The command is useful when command strings are built programmatically or stored in variables. It allows variable indirection (accessing a variable whose name is in another variable).
+The command is useful when command strings are built programmatically or stored in variables. It allows variable indirection (accessing a variable whose name is in another variable). A common real-world use is initializing ssh-agent with `eval "$(ssh-agent -s)"`.
 
-eval's two-pass evaluation makes it powerful but also potentially dangerous with untrusted input.
+If there are no arguments or only null arguments, eval returns exit status 0. Otherwise it returns the exit status of the executed command.
 
 # CAVEATS
 
@@ -43,8 +47,8 @@ Security risk with untrusted input. Can execute arbitrary commands. Debugging ev
 
 # HISTORY
 
-eval is a standard POSIX shell builtin, present in Bourne shell and all its derivatives. It provides essential metaprogramming capabilities for shell scripts.
+**eval** is a standard POSIX special shell builtin defined in **IEEE Std 1003.1** (POSIX.1), present in the original Bourne shell and all its derivatives including bash, zsh, ksh, and dash. It provides essential metaprogramming capabilities for shell scripts.
 
 # SEE ALSO
 
-[bash](/man/bash)(1), [sh](/man/sh)(1), [exec](/man/exec)(1)
+[bash](/man/bash)(1), [sh](/man/sh)(1), [exec](/man/exec)(1), [set](/man/set)(1)

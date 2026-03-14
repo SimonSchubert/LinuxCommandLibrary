@@ -4,25 +4,25 @@ JSON query language tool written in Rust
 
 # TLDR
 
-**Query JSON**
+**Query a top-level field**
 
-```cat [data.json] | jql '".name"'```
+```cat [data.json] | jql '"name"'```
 
 **Extract nested field**
 
-```cat [data.json] | jql '".users[0].name"'```
+```cat [data.json] | jql '"users".[0]."name"'```
 
-**Array operations**
+**Select multiple fields**
 
-```cat [data.json] | jql '".items|length"'```
+```cat [data.json] | jql '"name" "age"'```
 
-**Multiple queries**
+**Raw string output** (no JSON quotes)
 
-```cat [data.json] | jql '".name" ".age"'```
+```cat [data.json] | jql -r '"name"'```
 
-**Raw output**
+**Read from file** instead of stdin
 
-```cat [data.json] | jql -r '".name"'```
+```jql '"name"' [data.json]```
 
 # SYNOPSIS
 
@@ -31,26 +31,29 @@ JSON query language tool written in Rust
 # PARAMETERS
 
 _SELECTORS_
-> JQL query expressions.
+> JQL query expressions (keys must be double-quoted).
 
 **-r**, **--raw-output**
-> Raw string output.
+> Output raw strings without JSON double-quotes.
 
-**-i** _FILE_
-> Input file.
+**-s**, **--stream**
+> Read a stream of JSON lines (one JSON object per line).
 
-**--help**
+**-h**, **--help**
 > Display help information.
+
+**-V**, **--version**
+> Display version information.
 
 # DESCRIPTION
 
-**jql** is a JSON query language tool written in Rust. It provides a simple syntax for extracting data from JSON.
+**jql** is a JSON query language CLI tool written in Rust. It provides a simple syntax for extracting and manipulating JSON data. Key selectors must be double-quoted to be JSON-compliant.
 
-The tool focuses on simplicity over jq's complexity. Queries use a straightforward dot notation.
+The tool focuses on simplicity over jq's complexity. It supports dot notation for nesting, array indexing with ranges, flattening with **..**, and multiple selectors in a single query. Input is read from stdin or a file argument.
 
 # CAVEATS
 
-Different syntax from jq. Rust-based. Simpler but less powerful.
+Syntax is different from jq and not interchangeable. Key selectors must always be double-quoted. The tool consumes JSON input and outputs JSON back; use **-r** for raw strings.
 
 # HISTORY
 

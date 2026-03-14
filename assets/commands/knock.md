@@ -4,21 +4,25 @@ client component of port knocking
 
 # TLDR
 
+**Knock on a sequence of ports**
+
+```knock [hostname] [port1] [port2] [port3]```
+
 **Knock** on ports with specified protocol
 
-```knock [hostname] [port]:tcp```
+```knock [hostname] [port]:tcp [port]:udp```
 
-Knock using **UDP**
+**Knock using UDP** as default protocol
 
-```knock -u [hostname] [port]```
+```knock -u [hostname] [port1] [port2] [port3]```
 
-Force **IPv4** or **IPv6**
+**Knock with a delay** between each knock (in milliseconds)
 
-```knock -4 [hostname] [port]```
+```knock -d [500] [hostname] [port1] [port2]```
 
-Display **verbose** output
+**Display verbose** output while knocking
 
-```knock -v [hostname] [port]```
+```knock -v [hostname] [port1] [port2] [port3]```
 
 # SYNOPSIS
 

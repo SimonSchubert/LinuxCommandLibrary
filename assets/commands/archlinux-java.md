@@ -20,7 +20,7 @@ Switch between installed Java environments on Arch Linux
 
 ```archlinux-java unset```
 
-**Fix** invalid configuration
+**Fix** an invalid or broken default Java configuration
 
 ```archlinux-java fix```
 
@@ -30,7 +30,7 @@ Switch between installed Java environments on Arch Linux
 
 # DESCRIPTION
 
-**archlinux-java** is an Arch Linux utility for switching between installed Java environments. It manages symbolic links to set the default Java version system-wide.
+**archlinux-java** is an Arch Linux utility for switching between installed Java environments. It manages symbolic links at /usr/lib/jvm/default and /usr/lib/jvm/default-runtime to set the default Java version system-wide. It is provided by the **java-runtime-common** package.
 
 # PARAMETERS
 
@@ -47,11 +47,11 @@ Switch between installed Java environments on Arch Linux
 > Remove the default Java environment setting
 
 **fix**
-> Fix an invalid or broken default Java environment configuration
+> Fix an invalid or broken default Java environment configuration. If no default is set, looks for valid environments and sets one automatically, preferring OpenJDK.
 
 # CAVEATS
 
-Java environments are typically installed in /usr/lib/jvm/. The default environment is set via symlinks at /usr/lib/jvm/default and /usr/lib/jvm/default-runtime. Changes take effect for new shell sessions.
+Requires root privileges for **set**, **unset**, and **fix** commands. Java environments are installed in /usr/lib/jvm/. Changes take effect for new shell sessions. The JAVA_ENV argument for **set** must match the directory name under /usr/lib/jvm/ (e.g., java-17-openjdk, java-21-openjdk).
 
 # HISTORY
 

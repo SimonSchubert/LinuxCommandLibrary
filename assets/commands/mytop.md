@@ -16,7 +16,7 @@ displays MySQL server activity in real-time, similar to top for processes
 
 ```mytop -h [hostname] -u [user] -p [password]```
 
-**Slow query mode**
+**Slow query mode** (threshold in seconds)
 
 ```mytop -s [5]```
 
@@ -24,9 +24,17 @@ displays MySQL server activity in real-time, similar to top for processes
 
 ```mytop -i```
 
-**Specify refresh interval**
+**Specify refresh interval** in seconds
 
 ```mytop --delay [3]```
+
+**Batch mode** (run once and exit)
+
+```mytop --batch```
+
+**Connect via socket**
+
+```mytop -S [/var/run/mysqld/mysqld.sock]```
 
 # SYNOPSIS
 
@@ -61,8 +69,14 @@ displays MySQL server activity in real-time, similar to top for processes
 **--color**
 > Use ANSI color.
 
+**-S** _SOCKET_
+> MySQL socket path.
+
 **--batch**
-> Batch mode (no updates).
+> Batch mode (run once, no screen clearing).
+
+**--nocolor**
+> Disable ANSI color output.
 
 # KEY COMMANDS
 
@@ -103,7 +117,7 @@ Connection to remote servers enables monitoring multiple databases from one loca
 
 # CAVEATS
 
-Requires MySQL PROCESS privilege. Some features need SUPER privilege. Not actively maintained - consider alternatives like innotop. May not support all MariaDB features.
+Requires MySQL PROCESS privilege. Some features need SUPER privilege. Not actively maintained -- consider alternatives like innotop. May not support all MariaDB features. Configuration can also be read from ~/.mytop file.
 
 # HISTORY
 
@@ -111,4 +125,4 @@ Requires MySQL PROCESS privilege. Some features need SUPER privilege. Not active
 
 # SEE ALSO
 
-[innotop](/man/innotop)(1), [mysql](/man/mysql)(1), [mysqladmin](/man/mysqladmin)(1), [pt-query-digest](/man/pt-query-digest)(1)
+[mysql](/man/mysql)(1), [mysqladmin](/man/mysqladmin)(1)

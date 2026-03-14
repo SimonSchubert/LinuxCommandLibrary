@@ -24,6 +24,18 @@ Manage GitHub Actions workflows from the command line
 
 ```gh workflow disable [workflow-name]```
 
+**Run a workflow with input parameters**
+
+```gh workflow run [workflow-name] -f [key]=[value]```
+
+**Run a workflow on a specific branch**
+
+```gh workflow run [workflow-name] --ref [branch-name]```
+
+**View workflow runs in web browser**
+
+```gh workflow view [workflow-name] --web```
+
 # SYNOPSIS
 
 **gh workflow** _command_ [_options_]
@@ -48,11 +60,23 @@ Manage GitHub Actions workflows from the command line
 **-r** _REF_, **--ref** _REF_
 > Branch or tag for workflow run.
 
-**-f** _FIELD=VALUE_, **--field** _FIELD=VALUE_
-> Input parameters for workflow.
+**-f** _KEY=VALUE_
+> String input parameters for workflow run.
 
-**--help**
-> Display help information.
+**-F** _KEY=VALUE_
+> Input parameters from file or stdin (use @file or - for stdin).
+
+**-w**, **--web**
+> Open workflow in the web browser.
+
+**-a**, **--all**
+> Include disabled workflows when listing.
+
+**-L**, **--limit** _N_
+> Maximum number of items to list (default 50).
+
+**--json** _FIELDS_
+> Output results in JSON format with specified fields.
 
 # DESCRIPTION
 

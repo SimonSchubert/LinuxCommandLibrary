@@ -22,7 +22,7 @@ Rust linter for catching common mistakes
 
 **Allow specific lint**
 
-```cargo clippy -- -A clippy::[lint_name]```
+```cargo clippy -- -A clippy::needless_return```
 
 **Show all available lints**
 
@@ -83,7 +83,7 @@ Clippy integrates with Cargo and analyzes code during compilation, providing act
 
 # CAVEATS
 
-Some lints may have false positives. Pedantic lints can be noisy. Automatic fixes should be reviewed. May conflict with rustfmt on some suggestions.
+Some lints may produce false positives. The **pedantic** category is intentionally noisy and should be selectively enabled. Automatic fixes from **--fix** should be reviewed before committing. Clippy suggestions may occasionally conflict with **rustfmt** formatting.
 
 # HISTORY
 

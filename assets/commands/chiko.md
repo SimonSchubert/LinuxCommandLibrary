@@ -75,7 +75,7 @@ The **-plaintext** flag defaults to true, meaning connections are unencrypted by
 
 # HISTORY
 
-**chiko** was created by **Felix Angga** and is written in Go under the MIT license. The current version is v0.1.3 (November 2025). It was built to provide a developer-friendly visual alternative to the raw **grpcurl** command-line tool. Available via Homebrew and Go install.
+**chiko** was created by **Felix Angga** and is written in Go under the MIT license. It was built to provide a developer-friendly visual alternative to the raw **grpcurl** command-line tool. Available via Homebrew and Go install.
 
 # SEE ALSO
 

@@ -81,20 +81,41 @@ Common use cases include port forwarding, protocol conversion, debugging network
 **STDIO** or **-**
 > Standard input/output.
 
+**FILE:** _path_
+> Open a file for reading and writing.
+
+**PIPE:** _path_
+> Create or connect to a named pipe.
+
+**SOCKS4:** _host_ **:** _port_
+> SOCKS4 proxy connection.
+
 **fork**
-> Handle multiple connections.
+> Handle multiple connections (address option).
 
 **reuseaddr**
-> Allow address reuse.
+> Allow address reuse (address option).
 
 **verify=** _0|1_
-> SSL certificate verification.
+> SSL certificate verification (address option).
 
 **-d** **-d**
-> Verbose debugging output.
+> Verbose debugging output (repeat for more detail, up to -d -d -d -d).
 
 **-v**
 > Verbose data transfer logging.
+
+**-t** _TIMEOUT_
+> Total inactivity timeout in seconds.
+
+**-T** _TIMEOUT_
+> Transfer timeout in seconds.
+
+**-u**
+> Unidirectional mode (left to right only).
+
+**-U**
+> Unidirectional mode (right to left only).
 
 # CAVEATS
 

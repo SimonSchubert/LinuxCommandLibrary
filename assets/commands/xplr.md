@@ -38,13 +38,22 @@ Hackable terminal file explorer
 > Configuration file.
 
 **--print-pwd-as-result**
-> Print current dir on exit.
+> Print current directory on exit instead of focused path.
 
 **-C** _NAME=VALUE_
-> Override config.
+> Override config value.
 
 **--read-only**
-> Read-only mode.
+> Read-only mode (disables all write operations).
+
+**--vroot** _PATH_
+> Set virtual root to restrict navigation boundary.
+
+**-m** _MSG_
+> Send a message to xplr for processing.
+
+**-M** _MSG_
+> Send a message to xplr without quoting the value.
 
 **--version**, **-V**
 > Show version.

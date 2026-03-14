@@ -8,9 +8,17 @@ resource limit query and management interface
 
 ```ulimit -a```
 
-**Get specific limit (shell)**
+**Get specific limit (open files)**
 
 ```ulimit -n```
+
+**Show resource limits of a process**
+
+```prlimit --pid [pid]```
+
+**Set open file limit for a command**
+
+```prlimit --nofile=4096 [command]```
 
 # SYNOPSIS
 

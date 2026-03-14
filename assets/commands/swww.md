@@ -4,35 +4,35 @@ Animated Wayland wallpaper daemon
 
 # TLDR
 
-**Initialize** the daemon
+**Start the wallpaper daemon**
 
 ```swww-daemon```
 
-**Set** wallpaper
+**Set a wallpaper image**
 
 ```swww img [path/to/image]```
 
-Set wallpaper on **specific outputs**
+**Set wallpaper on specific monitors**
 
 ```swww img -o [output1,output2] [path/to/image]```
 
-**Restore** last wallpaper
+**Restore the last set wallpaper**
 
 ```swww restore```
 
-**Query** output information
+**Query current output and wallpaper information**
 
 ```swww query```
 
-**Kill** daemon
+**Stop the daemon**
 
 ```swww kill```
 
-Set with **transition effect**
+**Set wallpaper with a transition effect**
 
-```swww img --transition-type [wipe] [path/to/image]```
+```swww img --transition-type [wipe] --transition-duration [1] [path/to/image]```
 
-**Clear** screen with color
+**Clear the screen with a solid color**
 
 ```swww clear [RRGGBB]```
 

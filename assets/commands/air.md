@@ -14,7 +14,7 @@ Live-reloading development server for Go applications
 
 **Run with arguments** passed to the built binary
 
-```air [server] --port [8080]```
+```air -- [--port] [8080]```
 
 **Use a custom configuration** file
 
@@ -24,9 +24,9 @@ Live-reloading development server for Go applications
 
 ```air --build.cmd "go build -o bin/api cmd/run.go" --build.bin "./bin/api"```
 
-**Separate air arguments from binary arguments** with --
+**Show help**
 
-```air -- -h```
+```air -h```
 
 # SYNOPSIS
 
@@ -50,6 +50,15 @@ Live-reloading development server for Go applications
 
 **--build.entrypoint** _PATH_
 > Set the entrypoint for the binary.
+
+**--build.exclude_dir** _DIRS_
+> Comma-separated list of directories to exclude from watching.
+
+**--build.include_ext** _EXTS_
+> Comma-separated list of file extensions to watch (default: go,tpl,tmpl,html).
+
+**--build.delay** _MS_
+> Delay in milliseconds before rebuilding after a change (default: 1000).
 
 **-d**
 > Enable debug mode with verbose output.

@@ -8,9 +8,9 @@ Decode and display BIOS data structures
 
 ```sudo biosdecode```
 
-**Decode BIOS from a binary dump**
+**Read BIOS data from a binary dump file**
 
-```sudo biosdecode --from-dump [bios.bin]```
+```sudo biosdecode --dev-mem [bios.bin]```
 
 **Display version information**
 
@@ -22,19 +22,19 @@ Decode and display BIOS data structures
 
 # DESCRIPTION
 
-**biosdecode** parses the BIOS memory and displays information about various BIOS data structures including SMBIOS (System Management BIOS), DMI (Desktop Management Interface), and other firmware tables.
+**biosdecode** parses the BIOS memory and prints information about all structures it knows of, including SMBIOS (System Management BIOS), DMI (Desktop Management Interface), ACPI, PNP (Plug and Play), BIOS32, PIR (PCI IRQ Routing), and vendor-specific structures (Compaq, IBM, Fujitsu, Sony).
 
-The tool reads from system memory to extract manufacturer information, hardware configuration, and BIOS capabilities. It provides a lower-level view compared to **dmidecode**.
+For more detailed SMBIOS/DMI output, use **dmidecode** instead.
 
 # PARAMETERS
 
-**--from-dump** _file_
-> Read BIOS data from a binary dump file instead of live memory
+**-d**, **--dev-mem** _FILE_
+> Read memory from device FILE instead of default /dev/mem
 
-**--version**
+**-V**, **--version**
 > Display version information and exit
 
-**--help**
+**-h**, **--help**
 > Display help message
 
 # CAVEATS

@@ -59,6 +59,9 @@ modern Python web framework CLI
 **--app** _name_
 > Application variable name. Default: app.
 
+**--reload-dir** _path_
+> Directory to watch for file changes (dev mode).
+
 **--proxy-headers**
 > Trust X-Forwarded headers.
 
@@ -87,4 +90,4 @@ FastAPI was created by **Sebastián Ramírez** and first released in **December 
 
 # SEE ALSO
 
-[uvicorn](/man/uvicorn)(1), [gunicorn](/man/gunicorn)(1), [flask](/man/flask)(1), [django](/man/django)(1)
+[uvicorn](/man/uvicorn)(1), [gunicorn](/man/gunicorn)(1), [flask](/man/flask)(1), [django-admin](/man/django-admin)(1)

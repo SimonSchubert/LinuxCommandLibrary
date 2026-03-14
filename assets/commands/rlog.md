@@ -59,11 +59,23 @@ Display RCS file revision history
 **-b**
 > Default branch only.
 
+**-R**
+> Print RCS file name only.
+
+**-N**
+> Do not print symbolic names.
+
 **-L**
-> Ignore locked revisions.
+> Ignore RCS files with no locks set.
 
 **-l**
 > Locked revisions only.
+
+**-V**
+> Print RCS version number.
+
+**-z** _zone_
+> Specify date output format and default time zone.
 
 # DESCRIPTION
 

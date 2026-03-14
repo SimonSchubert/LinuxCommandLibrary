@@ -18,7 +18,21 @@ Uptime monitoring CLI with alerting support
 
 # SYNOPSIS
 
-**updo** monitor [_options_] _URL_...
+**updo** **monitor** [_options_] _URL_...
+
+# PARAMETERS
+
+**--refresh** _seconds_
+> Refresh interval in seconds (default: 5).
+
+**--timeout** _seconds_
+> Request timeout in seconds (default: 10).
+
+**--webhook-url** _url_
+> Webhook URL for alerts (Slack or Discord).
+
+**--assert-status** _code_
+> Expected HTTP status code (default: 200).
 
 # DESCRIPTION
 

@@ -8,13 +8,21 @@ Minimal file lister with Vim key bindings
 
 ```jjj```
 
+**Launch jjj** in a specific directory
+
+```jjj [path/to/directory]```
+
 **Navigate and select a file** to pipe to another command
 
 ```jjj | xargs [command]```
 
+**Change to a selected directory**
+
+```cd $(jjj .)```
+
 # SYNOPSIS
 
-**jjj** [_options_]
+**jjj** [_path_]
 
 # DESCRIPTION
 
@@ -24,9 +32,12 @@ The tool is designed for fast filesystem navigation directly from the command li
 
 # KEY BINDINGS
 
-**j/k** — Move down/up
-**Enter** — Select file
-**q** — Quit
+**j/k** or **Arrow keys** — Move down/up
+**h** — Go to parent directory
+**l** — Enter directory
+**Enter** or **Spacebar** — Exit and return selected path
+**r** — Refresh current folder view
+**q** or **Esc** — Quit
 
 # CAVEATS
 
@@ -34,8 +45,8 @@ Minimal feature set by design. Does not support file operations like copy, move,
 
 # HISTORY
 
-**jjj** was created by **Simone Poggiali** (gibbok) and is written in **Rust**.
+**jjj** was created by **Simone Poggiali** (gibbok) and is written in **C** using the ncurses library.
 
 # SEE ALSO
 
-[ls](/man/ls)(1), [lf](/man/lf)(1), [ranger](/man/ranger)(1)
+[ls](/man/ls)(1), [lf](/man/lf)(1), [ranger](/man/ranger)(1), [nnn](/man/nnn)(1), [vifm](/man/vifm)(1)

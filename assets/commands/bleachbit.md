@@ -16,13 +16,21 @@ List **cleaners**
 
 ```bleachbit -l```
 
-**Preview** cleanup
+**Preview** cleanup for specific cleaners
 
-```bleachbit -p --preset cleaner.option```
+```bleachbit -p [system.cache] [system.tmp]```
 
-**Perform** cleanup
+**Perform** cleanup for specific cleaners
 
-```bleachbit -c --preset cleaner.option```
+```bleachbit -c [system.cache] [system.tmp]```
+
+**Clean all** presets configured in the GUI
+
+```bleachbit -c --preset```
+
+**Wipe free disk space** on a partition
+
+```bleachbit --wipe-free-space [path/to/mount_point]```
 
 # SYNOPSIS
 
@@ -52,7 +60,19 @@ The tool can also securely shred individual files to prevent recovery. It provid
 > Perform cleanup operation
 
 **--preset**
-> Use specified cleaner presets
+> Use cleaner options configured in the graphical interface
+
+**-o, --overwrite**
+> Overwrite files to hide contents
+
+**--wipe-free-space** _path_
+> Wipe free disk space in the given path's partition
+
+**--sysinfo**
+> Show system information
+
+**--all-but-warning**
+> Enable all cleaners except those with warnings
 
 # CAVEATS
 
@@ -60,7 +80,7 @@ Preview before cleaning to avoid deleting important data. Shredding files is slo
 
 # HISTORY
 
-**bleachbit** is an open-source disk cleanup tool, similar to CCleaner on Windows.
+**bleachbit** was created by **Andrew Ziem** and first released in **2008**. It is an open-source disk cleanup tool, often compared to CCleaner on Windows. Written in Python, it runs on Linux and Windows.
 
 # SEE ALSO
 

@@ -33,16 +33,22 @@ Part of the NCBI EDirect utilities for programmatic access to biological databas
 # PARAMETERS
 
 **-dbs**
-> List all database names
+> List all database names.
 
 **-db** _database_
-> Specify database to query
+> Specify database to query.
 
 **-fields**
-> Show available search fields
+> Show available search fields for the database.
 
 **-links**
-> Show available database links
+> Show available cross-database links.
+
+**-help**
+> Print usage information.
+
+**-email** _address_
+> E-mail address to send with requests.
 
 # CAVEATS
 
@@ -50,4 +56,4 @@ Part of the edirect package from NCBI. Requires internet connection. Output is i
 
 # SEE ALSO
 
-[esearch](/man/esearch)(1), [elink](/man/elink)(1), [efetch](/man/efetch)(1)
+[esearch](/man/esearch)(1), [elink](/man/elink)(1)

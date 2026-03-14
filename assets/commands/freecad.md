@@ -12,17 +12,21 @@ open-source parametric 3D CAD modeler
 
 ```freecad [model.FCStd]```
 
-**Run Python script**
+**Start in console mode** (no GUI)
+
+```freecad -c```
+
+**Run a Python script** in console mode
 
 ```freecad -c [script.py]```
 
-**Start without GUI**
-
-```freecadcmd```
-
-**Export to STEP**
+**Import and export** a file to a different format
 
 ```freecadcmd [model.FCStd] -o [output.step]```
+
+**Add an additional module path**
+
+```freecad -M [path/to/modules] [model.FCStd]```
 
 # SYNOPSIS
 
@@ -33,23 +37,26 @@ open-source parametric 3D CAD modeler
 _file_
 > File to open (.FCStd, .step, .iges, etc.).
 
-**-c** _script_
-> Run Python script in console mode.
+**-c**, **--console**
+> Start in console mode without GUI. Optionally followed by a Python script to execute.
 
-**--console**
-> Start in console mode (no GUI).
+**-o** _file_
+> Output/export file (used with freecadcmd for format conversion).
 
 **-t**, **--run-test** _module_
-> Run tests.
+> Run the specified test module.
 
 **--write-log**
-> Write log file.
+> Write a log file to FreeCAD_Std.log in the user home directory.
 
 **-M** _path_
-> Add module path.
+> Add an additional module search path.
+
+**-u** _file_
+> Use the specified user configuration file.
 
 **-v**, **--version**
-> Show version.
+> Show version information.
 
 # CONFIGURATION
 

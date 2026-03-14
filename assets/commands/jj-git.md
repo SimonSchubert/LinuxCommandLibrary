@@ -4,25 +4,33 @@ provides Git interoperability for Jujutsu
 
 # TLDR
 
-**Clone Git repository**
+**Clone a Git repository**
 
 ```jj git clone [url]```
 
-**Fetch from remote**
+**Initialize jj in an existing Git repository (colocated)**
+
+```jj git init --colocate```
+
+**Fetch from all remotes**
 
 ```jj git fetch```
 
-**Push to remote**
+**Push current branch to remote**
 
 ```jj git push```
 
-**Import Git refs**
+**Import Git refs into jj**
 
 ```jj git import```
 
-**Export to Git refs**
+**Export jj refs to Git**
 
 ```jj git export```
+
+**Add a Git remote**
+
+```jj git remote add [name] [url]```
 
 # SYNOPSIS
 
@@ -30,40 +38,45 @@ provides Git interoperability for Jujutsu
 
 # PARAMETERS
 
-**clone** _URL_
-> Clone Git repository.
+**clone** _URL_ [_DESTINATION_]
+> Clone a Git repository and create a jj repo.
+
+**init** [_DESTINATION_]
+> Create a new Git-backed jj repository.
 
 **fetch**
-> Fetch from remotes.
+> Fetch from Git remotes.
 
 **push**
-> Push to remote.
+> Push to a Git remote.
 
 **import**
-> Import Git refs.
+> Import Git refs (branches, tags) into jj's internal state.
 
 **export**
-> Export to Git refs.
+> Export jj refs to Git refs.
+
+**remote** _subcommand_
+> Manage Git remotes (add, remove, list, rename).
 
 **--remote** _NAME_
-> Remote name.
+> Specify remote name.
+
+**--branch** _BRANCH_
+> Specify branch (for push/fetch).
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**jj git** provides Git interoperability for Jujutsu. It enables working with Git remotes and converting between formats.
+**jj git** provides Git interoperability for Jujutsu (jj), a modern version control system. It enables cloning, fetching, pushing, and managing remotes on Git servers.
 
-The commands handle cloning, fetching, and pushing to Git servers. Jujutsu stores data in Git format internally.
+Jujutsu uses Git as its storage backend, so all explicit Git interop commands live under the **git** subcommand. The **init --colocate** option allows using jj alongside an existing .git directory, keeping both in sync.
 
 # CAVEATS
 
-Subcommand of jj. Git backend required. Some Git features differ.
-
-# HISTORY
-
-jj git is part of **Jujutsu**, providing seamless integration with Git repositories and hosting services.
+Subcommand of jj. Requires Git backend. Some Git workflows (e.g., staging area) are handled differently by jj.
 
 # SEE ALSO
 

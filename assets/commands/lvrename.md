@@ -32,6 +32,9 @@ Rename with **auto-confirm**
 **-A, --autobackup y|n**
 > Auto backup metadata
 
+**--noudevsync**
+> Disable udev synchronisation
+
 **-t, --test**
 > Test mode (don't apply changes)
 

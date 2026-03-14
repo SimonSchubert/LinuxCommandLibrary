@@ -4,15 +4,15 @@ calculates Levenshtein distance between strings
 
 # TLDR
 
-**Compare strings**
+**Compare two strings and show the distance**
 
 ```lev_comp "[string1]" "[string2]"```
 
-**Show distance**
+**Compare strings with detailed distance output**
 
 ```lev_comp -d "[string1]" "[string2]"```
 
-**Case insensitive**
+**Compare strings case-insensitively**
 
 ```lev_comp -i "[String1]" "[string2]"```
 
@@ -29,20 +29,20 @@ _STRING1_ _STRING2_
 > Show Levenshtein distance.
 
 **-i**
-> Case insensitive.
+> Case insensitive comparison.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**lev_comp** calculates Levenshtein distance between strings. The distance measures edit operations needed.
+**lev_comp** calculates the Levenshtein distance between two strings. The distance represents the minimum number of single-character edit operations (insertions, deletions, or substitutions) needed to transform one string into the other.
 
-The tool compares string similarity. Lower distance means more similar strings.
+A lower distance means the strings are more similar. A distance of zero means the strings are identical.
 
 # CAVEATS
 
-Specific implementation. May not be widely available. Simple edit distance.
+This is a niche utility and may not be available in standard package repositories. Only handles simple edit distance without support for weighted operations or transpositions.
 
 # HISTORY
 

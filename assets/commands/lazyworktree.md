@@ -16,15 +16,44 @@ Git worktree management CLI and TUI for the terminal
 
 ```lazyworktree list```
 
+**Delete a worktree**
+
+```lazyworktree delete [branch_name]```
+
+**Run a command in a worktree**
+
+```lazyworktree exec [branch_name] -- [command]```
+
+**Rename the current worktree**
+
+```lazyworktree rename [new_name]```
+
 # SYNOPSIS
 
 **lazyworktree** [_command_] [_options_]
+
+# SUBCOMMANDS
+
+**create**
+> Create a new worktree from a branch, PR/MR, or issue.
+
+**list**
+> List all worktrees.
+
+**delete**
+> Delete a worktree without launching the TUI.
+
+**rename**
+> Rename a worktree (single argument renames current directory's worktree).
+
+**exec**
+> Run a command or trigger a custom command key action in a worktree.
 
 # DESCRIPTION
 
 **lazyworktree** is a terminal UI for managing Git worktrees with a keyboard-first workflow. It supports creating, renaming, removing, absorbing, and pruning merged worktrees, as well as staging, committing, diffing, pushing, syncing, and cherry-picking directly from the TUI.
 
-Features include CI/CD integration with GitHub Actions and GitLab CI (viewing check status, reading logs, restarting jobs), terminal multiplexer support for tmux and zellij sessions per worktree, and markdown-based task notes with interactive taskboard.
+Features include CI/CD integration with GitHub Actions and GitLab CI (viewing check status, reading logs, restarting jobs), terminal multiplexer support for tmux and zellij sessions per worktree, OCI container execution (docker/podman), and markdown-based task notes with interactive taskboard.
 
 # CAVEATS
 

@@ -10,11 +10,16 @@ Detect Debian installer system architecture
 
 # SYNOPSIS
 
-**archdetect**
+**archdetect** [**-g**]
+
+# PARAMETERS
+
+**-g**
+> Guess a generic subarchitecture that may be compatible with this machine, useful for new subarchitectures not yet recognized.
 
 # DESCRIPTION
 
-**archdetect** determines the system's architecture and subarchitecture in the format used by Debian installer. It outputs a string like "amd64/generic" or "i386/486".
+**archdetect** displays the current machine architecture and subarchitecture in the format used by the Debian installer. The architecture corresponds to that built into dpkg and describes CPU (and possibly kernel) types. The subarchitecture distinguishes machines with different boot arrangements.
 
 This is primarily used by the Debian installer to determine which kernel and packages to install.
 

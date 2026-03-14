@@ -36,20 +36,18 @@ _VERSION_
 
 # DESCRIPTION
 
-**get-nodeversions** lists available Node.js versions for installation. It queries the Node.js release server to show available versions.
+**get-nodeversions** lists available Node.js versions for installation. It queries the Node.js release server to show available versions, and is part of the **ps-nvm** (PowerShell Node Version Manager) module.
 
-The tool helps identify which Node.js versions are available when using version managers like nvm or fnm. It can filter by LTS status or major version.
-
-get-nodeversions simplifies finding the right Node.js version to install.
+The tool helps identify which Node.js versions are available when using version managers. It can filter by LTS status or major version number.
 
 # CAVEATS
 
-Requires network access. LTS designation changes over time.
+Requires network access to query the Node.js release server. LTS designation changes over time. This command is specific to ps-nvm; other version managers use different commands (e.g., `nvm ls-remote`).
 
 # HISTORY
 
-get-nodeversions is a utility script commonly included with Node.js version managers, providing version discovery functionality.
+get-nodeversions is a utility provided by the **ps-nvm** PowerShell module for Node.js version management.
 
 # SEE ALSO
 
-[nvm](/man/nvm)(1), [fnm](/man/fnm)(1), [node](/man/node)(1)
+[nvm](/man/nvm)(1), [fnm](/man/fnm)(1), [node](/man/node)(1), [ps-nvm](/man/ps-nvm)(1)

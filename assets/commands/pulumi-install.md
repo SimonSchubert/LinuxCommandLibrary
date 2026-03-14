@@ -4,26 +4,50 @@ Install Pulumi project dependencies and plugins
 
 # TLDR
 
-**Install project dependencies**
+**Install project dependencies and plugins**
 
 ```pulumi install```
 
-**Install specific plugin**
+**Install without language dependencies**
 
-```pulumi install plugin [name] [version]```
+```pulumi install --no-dependencies```
+
+**Install without plugins**
+
+```pulumi install --no-plugins```
+
+**Reinstall all plugins even if they exist**
+
+```pulumi install --reinstall```
+
+**Install with custom parallelism**
+
+```pulumi install --parallel [8]```
 
 # SYNOPSIS
 
-**pulumi** **install** [_command_] [_options_]
+**pulumi** **install** [_options_]
 
 # PARAMETERS
 
-**plugin** _name_ _version_
-> Install specific plugin.
+**--no-dependencies**
+> Skip installing language dependencies.
+
+**--no-plugins**
+> Skip installing plugins.
+
+**--reinstall**
+> Reinstall plugins even if they already exist.
+
+**--parallel** _int_
+> Max number of concurrent installs (default 4).
+
+**--use-language-version-tools**
+> Use language version tools to setup and install the language runtime.
 
 # DESCRIPTION
 
-**pulumi install** installs dependencies for a Pulumi project. Downloads required plugins and language-specific dependencies. Run after cloning a project or updating dependencies.
+**pulumi install** installs packages and plugins required by your Pulumi program or policy pack. If your **Pulumi.yaml** file contains a 'packages' section, this command automatically installs SDKs for all declared packages. Run after cloning a project or updating dependencies.
 
 # SEE ALSO
 

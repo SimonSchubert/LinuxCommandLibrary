@@ -16,9 +16,9 @@ SonarQube static code analysis scanner
 
 ```sonar-scanner -Dsonar.host.url=[http://localhost:9000]```
 
-**With token**
+**With authentication token**
 
-```sonar-scanner -Dsonar.login=[token]```
+```sonar-scanner -Dsonar.token=[token]```
 
 **Set source directory**
 
@@ -54,10 +54,13 @@ SonarQube static code analysis scanner
 
 **sonar.projectKey** - Project identifier
 **sonar.host.url** - Server URL
-**sonar.login** - Auth token
+**sonar.token** - Authentication token (replaces deprecated sonar.login)
 **sonar.sources** - Source directories
 **sonar.language** - Language
 **sonar.exclusions** - Exclude patterns
+**sonar.inclusions** - Include patterns
+**sonar.sourceEncoding** - Source file encoding (default: system encoding)
+**sonar.verbose** - Enable verbose output (true/false)
 
 # DESCRIPTION
 
@@ -92,4 +95,4 @@ Requires SonarQube/Cloud instance. Token needed for upload. Large projects take 
 
 # SEE ALSO
 
-[sonarqube](/man/sonarqube)(1), [eslint](/man/eslint)(1), [phpstan](/man/phpstan)(1)
+[eslint](/man/eslint)(1), [phpstan](/man/phpstan)(1)

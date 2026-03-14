@@ -1,6 +1,6 @@
 # TAGLINE
 
-midnight Commander, a visual file manager
+Midnight Commander, a visual file manager
 
 # TLDR
 
@@ -8,11 +8,7 @@ midnight Commander, a visual file manager
 
 ```mc```
 
-**Start in directory**
-
-```mc [/path/to/dir]```
-
-**Two directories**
+**Start with two directories in panels**
 
 ```mc [dir1] [dir2]```
 
@@ -20,13 +16,17 @@ midnight Commander, a visual file manager
 
 ```mc -b```
 
-**View file**
+**View a file using the internal viewer**
 
 ```mc -v [file]```
 
-**Edit file**
+**Edit a file using the internal editor**
 
 ```mc -e [file]```
+
+**Disable mouse support**
+
+```mc -d```
 
 # SYNOPSIS
 
@@ -35,39 +35,94 @@ midnight Commander, a visual file manager
 # PARAMETERS
 
 _PATH1_ _PATH2_
-> Directories for panels.
+> Directories for left and right panels.
 
-**-b**
-> Black and white mode.
+**-a**, **--stickchars**
+> Disable graphic characters for line drawing.
 
-**-c**
-> Color mode.
+**-b**, **--nocolor**
+> Force black and white display.
 
-**-v** _FILE_
-> View file only.
+**-c**, **--color**
+> Force color mode.
+
+**-C** _arg_, **--colors=**_arg_
+> Specify a different color set.
+
+**-d**, **--nomouse**
+> Disable mouse support.
 
 **-e** _FILE_
-> Edit file only.
+> Start the internal editor on the specified file.
 
-**-d**
-> Disable mouse support.
+**-v** _FILE_
+> Start the internal viewer on the specified file.
+
+**-s**, **--slow**
+> Slow terminal mode.
+
+**-u**, **--nosubshell**
+> Disable concurrent subshell.
+
+**-S** _arg_, **--skin=**_arg_
+> Specify skin name.
 
 **--help**
 > Display help information.
 
+# KEYBOARD COMMANDS
+
+**F1**
+> Help.
+
+**F3**
+> View file.
+
+**F4**
+> Edit file.
+
+**F5**
+> Copy file or directory.
+
+**F6**
+> Move/rename file or directory.
+
+**F7**
+> Create directory.
+
+**F8**
+> Delete file or directory.
+
+**F9**
+> Access top menu bar.
+
+**F10**
+> Quit.
+
+**Tab**
+> Switch between panels.
+
+**Ctrl+O**
+> Toggle between panels and shell.
+
+**Alt+Enter**
+> Copy selected filename to command line.
+
 # DESCRIPTION
 
-**mc** is Midnight Commander, a visual file manager. It provides dual-pane navigation and file operations.
+**mc** (Midnight Commander) is a visual file manager with a dual-pane interface. It provides file operations like copying, moving, renaming, and deleting through function keys and menus.
 
-The tool handles copying, moving, deleting with keyboard shortcuts. Supports FTP, SFTP, and archives.
+Supports browsing archives (tar, zip, rpm, etc.) as virtual filesystems, remote connections via FTP, SFTP, and SMB, and a built-in text editor and file viewer.
+
+The subshell integration (Ctrl+O) allows switching between the file manager and a full command line without leaving mc.
 
 # CAVEATS
 
-Terminal-based. Function keys used extensively. Some terminals need configuration.
+Function keys are used extensively and may conflict with terminal emulator shortcuts. Some terminals may need key remapping. The subshell requires a compatible shell (bash, zsh, or fish).
 
 # HISTORY
 
-Midnight Commander was created in 1994 by **Miguel de Icaza** as a Unix clone of Norton Commander.
+Midnight Commander was created in **1994** by **Miguel de Icaza** as a Unix clone of Norton Commander.
 
 # SEE ALSO
 

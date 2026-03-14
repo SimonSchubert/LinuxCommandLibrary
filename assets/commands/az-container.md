@@ -84,7 +84,22 @@ ACI is ideal for isolated containers, simple applications, task automation, and 
 > DNS name label for the public IP
 
 **--os-type** _value_
-> Operating system type: Linux or Windows
+> Operating system type: Linux or Windows (default: Linux)
+
+**--ip-address** _value_
+> IP address type: Public or Private
+
+**--restart-policy** _value_
+> Restart policy: Always, OnFailure, or Never (default: Always)
+
+**-e**, **--environment-variables** _key=value_
+> Environment variables (space-separated key=value pairs)
+
+**--secure-environment-variables** _key=value_
+> Secure environment variables (not shown in logs or portal)
+
+**--registry-login-server** _value_
+> Private container registry login server
 
 # CAVEATS
 

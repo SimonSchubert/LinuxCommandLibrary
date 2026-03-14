@@ -1,6 +1,6 @@
 # TAGLINE
 
-controls the backlight brightness of laptop screens and other controllable
+controls the backlight brightness of laptop screens and other devices
 
 # TLDR
 
@@ -48,15 +48,24 @@ Get current **backlight** value
 **-I**
 > Restore previously saved brightness
 
+**-N PERCENT**
+> Set minimum brightness cap
+
+**-P**
+> Get minimum brightness cap
+
 **-L**
 > List available devices
 
 **-s DEVICE**
 > Select specific device
 
+**-r**
+> Interpret values in raw mode (device-specific values instead of percent)
+
 # CAVEATS
 
-May require udev rules for non-root access. Works with devices exposed through /sys/class/backlight.
+May require udev rules for non-root access. Works with devices exposed through /sys/class/backlight. The minimum brightness cap (-N) prevents the display from going completely dark on controllers that turn off at 0.
 
 # SEE ALSO
 

@@ -1,6 +1,6 @@
 # TAGLINE
 
-enhanced interactive Python shell
+Enhanced interactive Python shell
 
 # TLDR
 
@@ -16,21 +16,21 @@ enhanced interactive Python shell
 
 ```ipython --profile=[name]```
 
-**Run code and enter shell**
+**Run code and enter interactive shell**
 
-```ipython -i -c "[code]"```
+```ipython -i -c "[import numpy as np; arr = np.array([1,2,3])]"```
 
-**Start notebook server**
+**Start with no startup banner**
 
-```ipython notebook```
+```ipython --no-banner```
 
-**Create profile**
+**Create a named profile**
 
 ```ipython profile create [name]```
 
-**Show configuration**
+**Start the debugger on exceptions**
 
-```ipython --help-all```
+```ipython --pdb```
 
 # SYNOPSIS
 
@@ -59,6 +59,9 @@ A distinguishing feature is IPython's system of magic commands -- special direct
 **--no-banner**
 > Suppress startup banner.
 
+**--automagic**
+> Enable calling magic commands without the % prefix.
+
 **--pdb**
 > Start debugger on exception.
 
@@ -77,9 +80,14 @@ A distinguishing feature is IPython's system of magic commands -- special direct
 **%load**: Load code from file
 **%edit**: Edit in external editor
 
+# CONFIGURATION
+
+**~/.ipython/profile_default/ipython_config.py**
+> Default profile configuration for customizing startup behavior, magics, extensions, and key bindings.
+
 # CAVEATS
 
-Heavier than standard Python. Magic syntax not pure Python. Profile migration may be needed between versions.
+Heavier than standard Python. Magic commands are not valid Python syntax. Profile configuration may need migration between major versions. The **ipython notebook** subcommand was removed; use **jupyter notebook** instead.
 
 # HISTORY
 

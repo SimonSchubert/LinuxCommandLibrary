@@ -1,6 +1,6 @@
 # TAGLINE
 
-lists information about all available or specified block devices
+List information about block devices
 
 # TLDR
 
@@ -31,6 +31,14 @@ Use **ASCII characters** for tree formatting
 Add extra columns to output
 
 ```lsblk -o NAME,SIZE,FSTYPE,MOUNTPOINT,MODEL```
+
+Output in **JSON** format
+
+```lsblk -J```
+
+List information about a **specific device**
+
+```lsblk /dev/sda```
 
 # SYNOPSIS
 
@@ -72,8 +80,17 @@ Add extra columns to output
 **-p, --paths**
 > Print full device paths
 
+**-d, --nodeps**
+> Don't print holder devices or slaves (show only top-level devices)
+
 **-J, --json**
 > Output in JSON format
+
+**-S, --scsi**
+> Output SCSI device information
+
+**-r, --raw**
+> Use raw output format
 
 # AVAILABLE COLUMNS
 
@@ -89,4 +106,4 @@ Part of **util-linux** package. Provides a more readable alternative to /proc/pa
 
 # SEE ALSO
 
-[blkid](/man/blkid)(8), [fdisk](/man/fdisk)(8), [findmnt](/man/findmnt)(8), [df](/man/df)(1)
+[blkid](/man/blkid)(8), [fdisk](/man/fdisk)(8), [findmnt](/man/findmnt)(8), [df](/man/df)(1), [mount](/man/mount)(8), [parted](/man/parted)(8)

@@ -64,13 +64,19 @@ The tool is useful for visual regression testing, detecting changes in rendered 
 **-dissimilarity-threshold** _value_
 > Threshold for subimage matching.
 
+**-verbose**
+> Display detailed comparison information and computed metrics.
+
 # METRICS
 
-**AE**: Absolute Error (pixel count)
-**RMSE**: Root Mean Square Error
-**MAE**: Mean Absolute Error
-**PSNR**: Peak Signal to Noise Ratio
-**SSIM**: Structural Similarity Index
+**AE**: Absolute Error (count of differing pixels)
+**RMSE**: Root Mean Square Error (0 = identical)
+**MAE**: Mean Absolute Error (0 = identical)
+**MSE**: Mean Squared Error
+**PSNR**: Peak Signal to Noise Ratio (higher = more similar)
+**SSIM**: Structural Similarity Index (1 = identical)
+**NCC**: Normalized Cross Correlation (default metric)
+**PHASH**: Perceptual Hash
 
 # CAVEATS
 

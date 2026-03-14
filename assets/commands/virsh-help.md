@@ -4,17 +4,25 @@ Display virsh command help
 
 # TLDR
 
-**Show all commands**
+**List all available commands** grouped by category
 
 ```virsh help```
 
-**Help for specific command**
+**Show detailed help for a specific command**
 
-```virsh help [command]```
+```virsh help [start]```
 
-**List domain commands**
+**List all domain management commands**
 
 ```virsh help domain```
+
+**List all network commands**
+
+```virsh help network```
+
+**List all storage pool commands**
+
+```virsh help pool```
 
 # SYNOPSIS
 
@@ -22,11 +30,20 @@ Display virsh command help
 
 # PARAMETERS
 
+_command_
+> Show detailed help for a specific virsh command.
+
 **domain**
-> Domain management commands.
+> Domain (virtual machine) management commands.
+
+**interface**
+> Host interface commands.
 
 **network**
-> Network commands.
+> Virtual network commands.
+
+**nodedev**
+> Host device commands.
 
 **pool**
 > Storage pool commands.
@@ -34,9 +51,15 @@ Display virsh command help
 **volume**
 > Storage volume commands.
 
+**snapshot**
+> Domain snapshot commands.
+
+**monitor**
+> Connection and event monitoring commands.
+
 # DESCRIPTION
 
-**virsh help** displays help for virsh commands. Shows command syntax, options, and descriptions. Commands are grouped by category (domain, network, storage).
+**virsh help** displays help for virsh commands and command groups. When called without arguments, it lists all commands grouped by category with a keyword for each group. When given a command name, it shows detailed usage, options, and description for that command. When given a group keyword, it lists only the commands in that group.
 
 # SEE ALSO
 

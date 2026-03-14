@@ -52,18 +52,27 @@ _MENU-ITEM_
 **-w**, **--where**
 > Print location of info file.
 
+**--all**
+> Use all matching manuals.
+
+**--subnodes**
+> Recursively output menu items.
+
+**-k** _STRING_, **--index-search** _STRING_
+> Look up STRING in all indices of all manuals.
+
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**info** reads documentation in GNU's texinfo format. It provides hypertext navigation through structured documentation.
+**info** reads documentation in GNU's texinfo format. It provides hypertext navigation through structured documentation organized as nodes in a tree.
 
-The reader supports navigation between nodes, menus, and cross-references. It offers more features than man pages including search and index.
+The reader supports navigation between nodes, menus, and cross-references. Common navigation keys: **n** (next node), **p** (previous node), **u** (up), **l** (last visited), **q** (quit), **/** or **s** (search), **Tab** (next link), **Enter** (follow link).
 
 # CAVEATS
 
-Not all software has info pages. Navigation keys differ from man. Emacs-style keybindings.
+Not all software has info pages. Navigation keys differ from man. Uses Emacs-style keybindings by default. The **--apropos** search can be slow as it scans all info files.
 
 # HISTORY
 
@@ -71,4 +80,4 @@ info was created as part of the **GNU project** to provide richer documentation 
 
 # SEE ALSO
 
-[man](/man/man)(1), [pinfo](/man/pinfo)(1), [texinfo](/man/texinfo)(5), [install-info](/man/install-info)(1)
+[man](/man/man)(1)

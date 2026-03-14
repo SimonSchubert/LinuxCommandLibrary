@@ -8,13 +8,17 @@ Create machine accounts in Active Directory
 
 ```addcomputer.py [domain]/[user]:[password] -computer-name [hostname]```
 
-Specify **domain controller**
+Specify **domain controller** IP
 
 ```addcomputer.py [domain]/[user]:[password] -dc-ip [192.168.1.1] -computer-name [hostname]```
 
-Use **pass-the-hash**
+Use **pass-the-hash** authentication
 
 ```addcomputer.py [domain]/[user] -hashes :[NTHASH] -computer-name [hostname]```
+
+Add computer with a **specific password** using LDAP method
+
+```addcomputer.py [domain]/[user]:[password] -computer-name [hostname] -computer-pass [password] -method LDAPS```
 
 # SYNOPSIS
 
@@ -37,8 +41,8 @@ This capability is useful in penetration testing for setting up resource-based c
 **-computer-pass** _password_
 > Password for the computer account
 
-**-method** _SAMR|LDAP_
-> Protocol to use for adding the computer
+**-method** _SAMR|LDAPS_
+> Protocol to use for adding the computer (default: SAMR)
 
 **-hashes** _LMHASH:NTHASH_
 > Authenticate using NT hash
@@ -48,6 +52,9 @@ This capability is useful in penetration testing for setting up resource-based c
 
 **-no-pass**
 > Don't prompt for password
+
+**-dc-host** _hostname_
+> Hostname of the domain controller
 
 # CAVEATS
 
@@ -59,4 +66,4 @@ Part of the Impacket suite maintained by SecureAuth, this tool gained prominence
 
 # SEE ALSO
 
-[add-computer.py](/man/add-computer.py)(1), [rbcd.py](/man/rbcd.py)(1), [getST.py](/man/getST.py)(1)
+[add-computer.py](/man/add-computer.py)(1), [impacket-getnpusers](/man/impacket-getnpusers)(1)

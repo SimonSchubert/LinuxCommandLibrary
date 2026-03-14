@@ -53,13 +53,25 @@ Walk SNMP MIB trees retrieving all values
 > Privacy passphrase.
 
 **-On**
-> Numeric OIDs.
+> Display OIDs numerically.
 
 **-Oq**
-> Quick output.
+> Quick print (removes type information).
 
 **-Ov**
-> Values only.
+> Display values only, without OID prefix.
+
+**-Cr**
+> Do not check returned OIDs are increasing (for buggy agents).
+
+**-Cc**
+> Do not check returned OIDs for correct subtree.
+
+**-t** _TIMEOUT_
+> Timeout in seconds for each request (default 1).
+
+**-r** _RETRIES_
+> Number of retries (default 5).
 
 # DESCRIPTION
 

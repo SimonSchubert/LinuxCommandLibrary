@@ -88,7 +88,7 @@ micasa requires a terminal with mouse and keyboard support. The optional LLM fea
 
 # HISTORY
 
-**micasa** (Spanish for "my house") was created by **Phillip Cloud** as an open-source Go project hosted on GitHub. It was designed as a privacy-first alternative to cloud-based home management apps, keeping all data local in a single SQLite database.
+**micasa** (Spanish for "my house") was created by **Phillip Cloud** (cpcloud) as an open-source Go project hosted on GitHub. It was designed as a privacy-first alternative to cloud-based home management apps, keeping all data local in a single SQLite database. The TUI design is inspired by VisiData.
 
 # SEE ALSO
 

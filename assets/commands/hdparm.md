@@ -69,12 +69,24 @@ Set **idle timeout**
 **-T**
 > Test cache read speed
 
+**-g**
+> Display drive geometry (cylinders, heads, sectors, size)
+
+**-M** [_value_]
+> Get or set Automatic Acoustic Management (0=off, 128=quiet, 254=fast)
+
+**-W** [_value_]
+> Get or set write-caching (0=off, 1=on)
+
+**-F**
+> Flush drive write cache
+
 **--security-erase** _password_
-> Secure erase the drive
+> Secure erase the drive (WARNING: destroys all data)
 
 # CAVEATS
 
-Some features require kernel and hardware support. APM values 1-127 allow spindown while 128-254 keep the drive spinning. Sleep mode may require power cycling to recover.
+Some features require kernel and hardware support. APM values 1-127 allow spindown while 128-254 keep the drive spinning. Sleep mode (-Y) may require power cycling to recover. When no options are given, -acdgkmur is assumed.
 
 # HISTORY
 

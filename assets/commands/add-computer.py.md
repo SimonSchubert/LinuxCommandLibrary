@@ -38,16 +38,34 @@ This is commonly used in penetration testing for resource-based constrained dele
 > Password for the computer account (auto-generated if not specified)
 
 **-method** _method_
-> Method to add computer: SAMR or LDAP
+> Method to add computer: SAMR or LDAPS (default SAMR).
+
+**-dc-host** _hostname_
+> Domain controller hostname (FQDN). If omitted, derived from the domain argument.
+
+**-baseDN** _dn_
+> Distinguished name base in LDAP. If omitted, derived from the domain.
+
+**-domain-netbios** _name_
+> Domain NetBIOS name when the forest handles multiple domains.
+
+**-no-add**
+> Only change an existing computer account password without adding a new one.
 
 **-k**
-> Use Kerberos authentication (requires ccache)
+> Use Kerberos authentication (requires KRB5CCNAME ccache).
 
 **-no-pass**
-> Don't prompt for password (use with -k)
+> Don't prompt for password (use with -k).
 
 **-hashes** _LMHASH:NTHASH_
-> Use NTLM hash for authentication
+> Use NTLM hash for pass-the-hash authentication.
+
+**-aesKey** _key_
+> AES128 or AES256 hex key for Kerberos pass-the-key authentication.
+
+**-debug**
+> Enable verbose debug output.
 
 # CAVEATS
 

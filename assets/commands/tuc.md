@@ -34,7 +34,7 @@ Enhanced text field cutting and splitting
 
 **Format output with template**
 
-```echo "[a,b,c]" | tuc -d ',' -f '{1} - {2}'```
+```echo "[a,b,c]" | tuc -d ',' --format '{1} - {2}'```
 
 # SYNOPSIS
 
@@ -84,8 +84,14 @@ Enhanced text field cutting and splitting
 **-z**, **--zero-terminated**
 > Use NUL instead of newline as line terminator
 
+**--format** _template_
+> Format output using field placeholders like {1}, {2}
+
 **--json**
 > Output fields as JSON array
+
+**--no-mmap**
+> Disable memory mapping
 
 # DESCRIPTION
 

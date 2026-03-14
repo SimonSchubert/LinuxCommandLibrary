@@ -38,7 +38,7 @@ GRV reads the repository directly rather than shelling out to git commands, resu
 
 # CAVEATS
 
-GRV is no longer actively maintained. It reads git repository data directly, so very large repositories may use significant memory. Custom themes and key bindings require editing the **.grvrc** file. Does not support write operations like committing or pushing.
+GRV is no longer actively maintained (last release 2019). It reads git repository data directly using libgit2, so very large repositories may use significant memory. Read-only; does not support write operations like committing or pushing. Consider **lazygit** or **gitui** as actively maintained alternatives.
 
 # HISTORY
 

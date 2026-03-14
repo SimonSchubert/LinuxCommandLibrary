@@ -99,4 +99,4 @@ F2FS was developed by **Samsung Electronics** and introduced in the **Linux kern
 
 # SEE ALSO
 
-[mkfs](/man/mkfs)(8), [fsck.f2fs](/man/fsck.f2fs)(8), [dump.f2fs](/man/dump.f2fs)(8), [resize.f2fs](/man/resize.f2fs)(8)
+[mkfs](/man/mkfs)(8), [mkfs.ext4](/man/mkfs.ext4)(8), [mkfs.btrfs](/man/mkfs.btrfs)(8)

@@ -34,7 +34,7 @@ Multi-threaded system benchmark tool
 
 # SYNOPSIS
 
-**sysbench** [_test_] [_--threads n_] [_options_] [_prepare_|_run_|_cleanup_]
+**sysbench** _test_ [_options_] [**prepare**|**run**|**cleanup**]
 
 # PARAMETERS
 
@@ -54,13 +54,13 @@ Multi-threaded system benchmark tool
 > Read-only database test.
 
 **--threads** _N_
-> Number of threads.
+> Number of threads (default: 1).
 
 **--time** _SECONDS_
-> Test duration.
+> Test duration (default: 10).
 
 **--events** _N_
-> Max events.
+> Maximum number of events (default: 0, unlimited).
 
 **--file-total-size** _SIZE_
 > Total file size.

@@ -1,14 +1,14 @@
 # TAGLINE
 
-Trash CLI written in Go
+Trash CLI tool written in Go
 
 # TLDR
 
-**Move to trash**
+**Move files to trash**
 
-```gomi [file.txt]```
+```gomi [file1] [file2]```
 
-**Restore file**
+**Interactively restore a file from trash**
 
 ```gomi -r```
 
@@ -16,7 +16,7 @@ Trash CLI written in Go
 
 ```gomi -l```
 
-**Empty trash**
+**Empty the trash permanently**
 
 ```gomi --empty```
 
@@ -27,33 +27,32 @@ Trash CLI written in Go
 # PARAMETERS
 
 _FILES_
-> Files to move to trash.
+> Files or directories to move to trash.
 
 **-r**, **--restore**
-> Interactive restore.
+> Interactively select and restore files from trash.
 
 **-l**, **--list**
-> List trash contents.
+> List all files currently in the trash.
 
 **--empty**
-> Empty the trash.
+> Permanently delete all files in the trash.
 
 **--help**
 > Display help information.
 
+**--version**
+> Display version information.
+
 # DESCRIPTION
 
-**gomi** is a trash CLI written in Go that moves files to a trash directory instead of permanently deleting them. It implements the FreeDesktop.org trash specification, providing an undo mechanism for file deletion.
+**gomi** is a trash CLI written in Go that moves files to a trash directory instead of permanently deleting them. It provides an undo mechanism for file deletion with an interactive fuzzy-finder restore interface powered by fzf-style selection.
 
-The tool enables recovery of accidentally deleted files through an interactive restore interface and provides trash management commands for listing and emptying.
+The tool uses the XDG Trash specification on Linux and integrates with system trash on macOS. Files can be restored to their original location through the interactive restore interface.
 
 # CAVEATS
 
-Files still use disk space. Different from rm. Trash may need periodic cleaning.
-
-# HISTORY
-
-gomi was created as a Go implementation of a trash-cli alternative with a focus on simplicity.
+Trashed files still consume disk space until the trash is emptied. Behavior differs from `rm` which permanently deletes files. Cross-filesystem trashing may copy files instead of moving them. Trash should be emptied periodically to reclaim space.
 
 # SEE ALSO
 

@@ -43,13 +43,13 @@ _FILE_
 
 # DESCRIPTION
 
-**infotocap** converts terminal descriptions from terminfo format to termcap format. It's the reverse of captoinfo.
+**infotocap** converts terminal descriptions from terminfo format to termcap format. It is implemented as a link to **tic**(1) with the **-C** option implied. It is the reverse of **captoinfo**.
 
-The tool enables compatibility with older applications requiring termcap. Some capabilities may not translate directly.
+The tool enables compatibility with older applications requiring termcap format. Since it invokes tic internally, other tic options such as **-1**, **-f**, **-v**, **-w**, and **-x** can also be used.
 
 # CAVEATS
 
-Some terminfo features lack termcap equivalents. Part of ncurses. Output may need manual adjustment.
+Some terminfo capabilities have no termcap equivalents and cannot be converted. Part of ncurses. Output may need manual adjustment for complex terminal descriptions.
 
 # HISTORY
 
@@ -57,4 +57,4 @@ infotocap is part of **ncurses**, providing conversion between terminal descript
 
 # SEE ALSO
 
-[captoinfo](/man/captoinfo)(1), [tic](/man/tic)(1), [infocmp](/man/infocmp)(1), [terminfo](/man/terminfo)(5)
+[captoinfo](/man/captoinfo)(1), [tic](/man/tic)(1), [infocmp](/man/infocmp)(1)

@@ -20,11 +20,11 @@ fast, secure backup tool with encryption, deduplication, and compression
 
 ```kopia snapshot list```
 
-**Restore a snapshot** to a directory
+**Restore a snapshot to a directory**
 
 ```kopia restore [snapshot_id] [/path/to/restore]```
 
-**Mount snapshots** as filesystem
+**Mount snapshots as a FUSE filesystem**
 
 ```kopia mount all [/mnt/kopia]```
 
@@ -57,7 +57,7 @@ fast, secure backup tool with encryption, deduplication, and compression
 **snapshot list** [_path_]
 > List snapshots, optionally filtered by source.
 
-**snapshot restore** _id_ _target_
+**restore** _id_ _target_
 > Restore snapshot to directory.
 
 **mount** _snapshots_ _mountpoint_

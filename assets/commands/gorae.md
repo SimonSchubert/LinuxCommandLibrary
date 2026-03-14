@@ -82,4 +82,4 @@ Requires external viewer for reading. Cover display depends on terminal capabili
 
 # SEE ALSO
 
-[zathura](https://pwmt.org/projects/zathura/), [calibre](https://calibre-ebook.com/), [pdftotext](/man/pdftotext)(1)
+[zathura](/man/zathura)(1), [pdftotext](/man/pdftotext)(1)

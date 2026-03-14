@@ -53,13 +53,13 @@ _OUTPUT_
 
 # DESCRIPTION
 
-**mkzftree** creates compressed filesystem trees. It's used for creating zisofs images.
+**mkzftree** creates compressed directory trees suitable for use with transparent decompression on ISO 9660 (zisofs) filesystems. Files in the output tree are individually compressed using zlib, and the directory structure is preserved.
 
-The tool compresses files transparently for ISO images. Used with mkisofs.
+The compressed trees are designed to be used with **mkisofs** (or **genisoimage**) with the `-z` option to create ISO images where files are transparently decompressed at read time on Linux systems with zisofs support.
 
 # CAVEATS
 
-Part of zisofs-tools. For ISO creation. Linux specific.
+Part of **zisofs-tools**. Transparent decompression requires Linux kernel zisofs support. Only useful for ISO 9660 filesystem creation; not a general-purpose compression tool.
 
 # HISTORY
 
@@ -67,5 +67,5 @@ mkzftree is part of **zisofs-tools** for creating transparent compression on ISO
 
 # SEE ALSO
 
-[mkisofs](/man/mkisofs)(1), [genisoimage](/man/genisoimage)(1), [zisofs](/man/zisofs)(8)
+[mkisofs](/man/mkisofs)(1), [genisoimage](/man/genisoimage)(1)
 

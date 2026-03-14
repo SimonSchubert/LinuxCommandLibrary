@@ -4,7 +4,7 @@ configures and displays parameters of wireless network interfaces
 
 # TLDR
 
-Show **all** interfaces
+Show **all** wireless interfaces
 
 ```iwconfig```
 
@@ -12,13 +12,21 @@ Show **specific** interface
 
 ```iwconfig wlan0```
 
-Set **ESSID**
+Set **ESSID** (network name)
 
-```iwconfig wlan0 essid network_name```
+```iwconfig wlan0 essid [network_name]```
 
-Set **mode**
+Set **operating mode**
 
-```iwconfig wlan0 mode Managed```
+```iwconfig wlan0 mode [Managed]```
+
+Set **channel**
+
+```iwconfig wlan0 channel [6]```
+
+Set **transmit power**
+
+```iwconfig wlan0 txpower [20]```
 
 # SYNOPSIS
 
@@ -54,8 +62,20 @@ Set **mode**
 **sens** _threshold_
 > Set sensitivity threshold
 
+**retry** _limit_
+> Set maximum MAC retransmission retry limit
+
+**rts** _threshold_
+> Set RTS/CTS handshake threshold
+
+**frag** _threshold_
+> Set maximum fragment size
+
+**power** _mode_
+> Set power management mode
+
 **key** _key_
-> Set WEP encryption key (deprecated)
+> Set WEP encryption key (deprecated, insecure)
 
 # CAVEATS
 
@@ -67,4 +87,4 @@ iwconfig is deprecated in favor of iw. WEP encryption is insecure and should not
 
 # SEE ALSO
 
-[iw](/man/iw)(8), [iwlist](/man/iwlist)(8), [wpa_supplicant](/man/wpa_supplicant)(8)
+[iw](/man/iw)(8), [iwlist](/man/iwlist)(8), [ifconfig](/man/ifconfig)(8), [wpa_supplicant](/man/wpa_supplicant)(8)

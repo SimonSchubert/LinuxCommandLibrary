@@ -28,6 +28,14 @@ Descriptive statistics calculator for CSV columns
 
 ```csvstat --type [data.csv]```
 
+**Output statistics as JSON**
+
+```csvstat --json [data.csv]```
+
+**Show column names and indices**
+
+```csvstat -n [data.csv]```
+
 # SYNOPSIS
 
 **csvstat** [_options_] _file_
@@ -70,11 +78,35 @@ The tool reports counts, unique values, min/max, mean, median, standard deviatio
 **--count**
 > Show row count only.
 
+**--sum**
+> Show sum values only.
+
+**--len**
+> Show max string length only.
+
+**--nulls**
+> Show null value counts only.
+
+**--csv**
+> Output results as CSV table.
+
+**--json**
+> Output results as JSON.
+
+**-n**
+> Show column names and indices only.
+
 **-d** _char_
 > Field delimiter.
 
+**-e** _encoding_
+> Character encoding of the input file.
+
 **-y** _n_
-> Sniff limit for type detection.
+> Sniff limit for type detection (0 to disable).
+
+**-I**
+> Disable type inference; treat all columns as text.
 
 # CAVEATS
 

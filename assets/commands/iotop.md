@@ -1,6 +1,6 @@
 # TAGLINE
 
-top-like utility for monitoring disk I/O usage by processes in real-time
+Top-like utility for monitoring disk I/O usage by processes in real-time
 
 # TLDR
 
@@ -73,7 +73,10 @@ top-like utility for monitoring disk I/O usage by processes in real-time
 > Add timestamp to each line (batch mode).
 
 **-q**, **--quiet**
-> Suppress header lines (batch mode).
+> Suppress header lines (batch mode). Use twice to suppress column names too.
+
+**--no-help**
+> Suppress interactive help line.
 
 # INTERACTIVE KEYS
 
@@ -116,7 +119,7 @@ Requires root privileges. Kernel must have IO accounting enabled (CONFIG_TASK_IO
 
 # HISTORY
 
-**iotop** was written by Guillaume Chazarain and released around **2007**. It was created to fill the gap in Linux monitoring tools - while CPU and memory monitoring had top, disk I/O monitoring lacked an equivalent. The tool relies on kernel features added in Linux 2.6.20.
+**iotop** was written by Guillaume Chazarain and first released around **2007**. It was created to fill the gap in Linux monitoring tools -- while CPU and memory monitoring had top, disk I/O monitoring lacked an equivalent. The tool relies on kernel features (taskstats) added in Linux 2.6.20. An alternative Rust-based reimplementation called **iotop-c** exists with a similar interface.
 
 # SEE ALSO
 

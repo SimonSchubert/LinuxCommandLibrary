@@ -38,41 +38,35 @@ Scala programming language interpreter and REPL
 
 # PARAMETERS
 
-**-cp** _PATH_
-> Set classpath.
+**-cp**, **-classpath** _PATH_
+> Set classpath for class files and libraries.
 
 **-e** _EXPR_
-> Evaluate expression.
+> Evaluate expression and print the result.
 
 **-J** _FLAG_
-> Pass flag to JVM.
+> Pass flag to JVM (e.g., -J-Xmx2g).
 
 **-deprecation**
 > Show deprecation warnings.
 
 **-explain**
-> Explain errors in detail.
+> Explain errors in detail with additional context.
 
 **-feature**
-> Show feature warnings.
+> Show feature warnings for advanced language features.
 
 **-help**
 > Show help.
-
-**-print-lines**
-> Show line numbers.
-
-**-source** _VERSION_
-> Source compatibility version.
 
 **-version**
 > Show version.
 
 **-X**
-> Show advanced options.
+> Show advanced compiler options.
 
 **-Y**
-> Show private options.
+> Show private compiler options.
 
 # DESCRIPTION
 

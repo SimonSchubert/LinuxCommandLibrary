@@ -60,7 +60,7 @@ Numbers can be floating-point: **1.5m** = 90 seconds
 
 # DESCRIPTION
 
-**timeout** runs a command with a specified time limit. If the command doesn't complete within the duration, timeout sends a signal (SIGTERM by default) to terminate it.
+**timeout** runs a command with a specified time limit. If the command does not complete within the duration, timeout sends a signal (SIGTERM by default) to terminate it. Part of GNU coreutils.
 
 The default signal (SIGTERM) allows processes to clean up before exiting. For processes that ignore SIGTERM, use **--kill-after** to send SIGKILL after an additional grace period.
 

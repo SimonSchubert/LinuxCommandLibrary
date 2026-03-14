@@ -78,4 +78,4 @@ pueue parallel is part of **pueue** by **Arne Beer**, providing task queue manag
 
 # SEE ALSO
 
-[pueue](/man/pueue)(1), [pueue-add](/man/pueue-add)(1), [pueue-group](/man/pueue-group)(1)
+[pueue](/man/pueue)(1), [pueue-add](/man/pueue-add)(1), [pueue-group](/man/pueue-group)(1), [pueue-status](/man/pueue-status)(1)

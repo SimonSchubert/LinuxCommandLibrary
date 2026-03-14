@@ -84,4 +84,4 @@ The **docker image** command group provides comprehensive image lifecycle manage
 
 # SEE ALSO
 
-[docker-images](/man/docker-images)(1), [docker-pull](/man/docker-pull)(1), [docker-build](/man/docker-build)(1)
+[docker](/man/docker)(1), [docker-image-ls](/man/docker-image-ls)(1), [docker-image-rm](/man/docker-image-rm)(1), [docker-image-pull](/man/docker-image-pull)(1)

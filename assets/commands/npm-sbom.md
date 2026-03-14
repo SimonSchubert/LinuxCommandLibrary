@@ -1,28 +1,32 @@
 # TAGLINE
 
-generates Software Bill of Materials
+Generate a Software Bill of Materials for the project
 
 # TLDR
 
-**Generate SBOM**
+**Generate SBOM** in default format
 
 ```npm sbom```
 
-**SPDX format**
+**Generate in SPDX** format
 
 ```npm sbom --sbom-format spdx```
 
-**CycloneDX format**
+**Generate in CycloneDX** format
 
 ```npm sbom --sbom-format cyclonedx```
 
 **Output to file**
 
-```npm sbom > [sbom.json]```
+```npm sbom --sbom-format cyclonedx > [sbom.json]```
 
-**Include dev deps**
+**Omit dev dependencies**
 
 ```npm sbom --omit dev```
+
+**Use only package-lock.json** (ignore node_modules)
+
+```npm sbom --package-lock-only```
 
 # SYNOPSIS
 
@@ -31,27 +35,27 @@ generates Software Bill of Materials
 # PARAMETERS
 
 **--sbom-format** _FORMAT_
-> Output format (spdx, cyclonedx).
+> Output format: spdx or cyclonedx.
 
 **--omit** _TYPE_
-> Omit dependency type.
+> Omit dependency type (dev, optional, peer).
 
-**--help**
-> Display help information.
+**--package-lock-only**
+> Use package-lock.json only, ignoring node_modules.
+
+**--workspace** _name_
+> Run in the context of a specific workspace.
+
+**--workspaces**
+> Run for all configured workspaces.
 
 # DESCRIPTION
 
-**npm sbom** generates Software Bill of Materials. Lists all dependencies.
-
-The command creates SBOM document. Supports SPDX and CycloneDX formats.
+**npm sbom** generates a Software Bill of Materials (SBOM) listing all dependencies of the current project. It supports the **SPDX** and **CycloneDX** formats, which are industry standards for documenting software supply chain components. The output includes package names, versions, licenses, and dependency relationships.
 
 # CAVEATS
 
-Added in npm 9. Supply chain security. Multiple formats supported.
-
-# HISTORY
-
-npm sbom was added to support **software supply chain security** initiatives.
+Requires npm 9.5.0 or later. A package-lock.json or node_modules must exist. The --sbom-format option is required for usable output.
 
 # SEE ALSO
 

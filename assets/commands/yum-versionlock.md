@@ -51,10 +51,10 @@ Lock packages to specific versions
 > Remove all version locks from the system.
 
 **exclude** _package_
-> Add packages to the exclude list based on wildcards or patterns.
+> Disallow currently available versions of the packages matching the given wildcards.
 
 **status**
-> Show whether the versionlock plugin is enabled and functioning.
+> List any available updates that are currently blocked by versionlock.
 
 # DESCRIPTION
 

@@ -81,7 +81,28 @@ Manage GitHub releases and distribution assets
 > Mark as prerelease.
 
 **--generate-notes**
-> Auto-generate notes.
+> Auto-generate notes from commits and PRs.
+
+**--target** _branch_
+> Target branch or commit SHA for tag creation.
+
+**--latest**
+> Mark as latest release.
+
+**--verify-tag**
+> Abort if tag does not already exist.
+
+**-R**, **--repo** _OWNER/REPO_
+> Select a different repository.
+
+**-p**, **--pattern** _pattern_
+> Download only assets matching glob pattern.
+
+**--archive** _format_
+> Download source archive (zip or tar.gz).
+
+**--clobber**
+> Overwrite existing assets of the same name (upload).
 
 # DESCRIPTION
 

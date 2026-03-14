@@ -86,7 +86,10 @@ The tool uses a headless browser (Playwright) to render images through the Carbo
 > Run browser in headful mode
 
 **--engine** _name_
-> Rendering engine (default: chromium)
+> Rendering engine: chromium, firefox, or webkit (default: chromium)
+
+**--skip-display**
+> Don't display the image in the terminal
 
 # CONFIGURATION
 
@@ -99,4 +102,4 @@ Requires Node.js and npm. Uses headless browser (Playwright) for rendering. Inte
 
 # SEE ALSO
 
-[silicon](/man/silicon)(1), [freeze](/man/freeze)(1)
+[silicon](/man/silicon)(1)

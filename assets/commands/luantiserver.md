@@ -8,13 +8,21 @@ runs a dedicated Luanti game server
 
 ```luantiserver```
 
-**Start with specific world**
+**Start with specific world** and game
 
-```luantiserver --world [/path/to/world]```
+```luantiserver --world [/path/to/world] --gameid [minetest_game]```
 
 **Start on specific port**
 
 ```luantiserver --port [30000]```
+
+**Start with interactive terminal** and verbose logging
+
+```luantiserver --terminal --verbose```
+
+**Start with custom config** and logfile
+
+```luantiserver --config [/path/to/minetest.conf] --logfile [/path/to/server.log]```
 
 # SYNOPSIS
 
@@ -25,23 +33,58 @@ runs a dedicated Luanti game server
 **--world** _path_
 > World directory path.
 
-**--port** _port_
-> Server port (default 30000).
+**--worldname** _name_
+> Set world path by name.
 
-**--gameid** _id_
-> Game ID to use.
+**--port** _port_
+> Set network port (UDP). Default is 30000.
+
+**--gameid** _id_ | **list**
+> Set game ID to use, or list available games.
 
 **--config** _file_
-> Configuration file.
+> Load configuration from specified file.
 
 **--logfile** _file_
-> Log output file.
+> Set logfile path ('' for no logging).
+
+**--terminal**
+> Display an interactive terminal over ncurses during execution.
+
+**--info**
+> Print more information to console.
+
+**--verbose**
+> Print even more information to console.
+
+**--trace**
+> Print enormous amounts of information to console.
+
+**--quiet**
+> Print only errors to console.
+
+**--migrate** _backend_
+> Migrate from current map backend to another.
+
+**--help**
+> Print allowed options and exit.
+
+**--version**
+> Print version information and exit.
 
 # DESCRIPTION
 
-**luantiserver** runs a dedicated Luanti game server. Luanti is the new name for Minetest. Hosts multiplayer voxel game worlds with full mod support.
+**luantiserver** runs a dedicated Luanti game server. Luanti (formerly Minetest) is an open source voxel game-creation platform. The server hosts multiplayer worlds with full mod support, using UDP on port 30000 by default.
+
+# CAVEATS
+
+Luanti only uses UDP protocol; all other traffic can be safely dropped by a firewall. The --terminal option requires compilation with ncurses support.
+
+# HISTORY
+
+Luanti was originally known as **Minetest** and was renamed in **2024**. It is an open source voxel game engine and platform with an active modding community.
 
 # SEE ALSO
 
-[minetestserver](/man/minetestserver)(1), [minetest](/man/minetest)(1)
+[luanti](/man/luanti)(1), [minetestserver](/man/minetestserver)(1), [minetest](/man/minetest)(1)
 

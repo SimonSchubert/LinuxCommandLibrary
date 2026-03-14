@@ -16,6 +16,10 @@ List installed packages
 
 ```bun list --json```
 
+**Search for a specific package**
+
+```bun list [package_name]```
+
 # SYNOPSIS
 
 **bun** **list** [_options_]

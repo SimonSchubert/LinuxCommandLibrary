@@ -43,6 +43,12 @@ _PROGRAM_
 **--csh-syntax**
 > Output C shell compatible syntax.
 
+**--auto-syntax**
+> Detect shell type from SHELL variable and use appropriate syntax.
+
+**--binary-syntax**
+> Output bus address and PID in binary format.
+
 **--autolaunch** _MACHINEID_
 > Enable autolaunch with specified machine ID.
 
@@ -52,11 +58,14 @@ _PROGRAM_
 **--exit-with-x11**
 > Exit when X11 connection closes.
 
-**--config-file** _FILE_
-> Use specified configuration file.
+**--close-stderr**
+> Close stderr before starting the daemon.
 
-**--help**
-> Display help information.
+**--config-file** _FILE_
+> Use specified configuration file instead of --session.
+
+**--version**
+> Print the version of dbus-launch.
 
 # DESCRIPTION
 
@@ -76,4 +85,4 @@ dbus-launch is part of the **D-Bus** reference implementation, created by **Red 
 
 # SEE ALSO
 
-[dbus-daemon](/man/dbus-daemon)(1), [dbus-send](/man/dbus-send)(1), [dbus-cleanup-sockets](/man/dbus-cleanup-sockets)(1)
+[dbus-daemon](/man/dbus-daemon)(1), [dbus-send](/man/dbus-send)(1), [dbus-monitor](/man/dbus-monitor)(1), [dbus-cleanup-sockets](/man/dbus-cleanup-sockets)(1)

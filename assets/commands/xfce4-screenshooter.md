@@ -50,8 +50,14 @@ Capture and **open** in program
 **-d, --delay** _SECONDS_
 > Wait before capturing
 
-**-s, --save** _DIRECTORY_
-> Save to directory
+**-m, --mouse**
+> Include mouse cursor in the screenshot
+
+**--no-border**
+> Remove window border from the screenshot
+
+**-s, --save** _PATH_
+> Save to file path or directory
 
 **-c, --clipboard**
 > Copy to clipboard

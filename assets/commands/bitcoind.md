@@ -41,8 +41,14 @@ Running a full node contributes to Bitcoin network decentralization and allows t
 **-datadir=**_dir_
 > Data directory
 
-**-testnet**
-> Use testnet
+**-chain=**_chain_
+> Select chain: main, testnet4, signet, regtest (default: main)
+
+**-testnet4**
+> Use testnet4 network
+
+**-signet**
+> Use signet network
 
 **-regtest**
 > Regression test mode
@@ -62,6 +68,12 @@ Running a full node contributes to Bitcoin network decentralization and allows t
 **-rpcport=**_port_
 > RPC port
 
+**-server**
+> Accept command line and JSON-RPC commands
+
+**-blocksonly**
+> Reduce bandwidth by not relaying transactions
+
 # CONFIGURATION
 
 **~/.bitcoin/bitcoin.conf**
@@ -69,7 +81,7 @@ Running a full node contributes to Bitcoin network decentralization and allows t
 
 # SYSTEM REQUIREMENTS
 
-- **Disk**: ~500 GB (full blockchain)
+- **Disk**: ~600 GB+ (full blockchain)
 - **RAM**: 2 GB minimum, 4 GB recommended
 - **Network**: Unlimited or high cap
 - **Bandwidth**: ~20 GB/month upload
@@ -102,7 +114,7 @@ bitcoin-cli stop
 
 # CAVEATS
 
-Initial sync takes days/weeks. Large disk space required (unless pruned). High bandwidth usage. Keep wallet.dat backed up securely. RPC should not be exposed to internet. Requires consistent uptime for full node benefits.
+Initial sync takes days/weeks. Large disk space required (unless pruned). High bandwidth usage. Keep wallet backups secure. RPC should not be exposed to internet. The -testnet flag (testnet3) was deprecated in v28 and removed in v30; use -testnet4 or -signet instead.
 
 # HISTORY
 

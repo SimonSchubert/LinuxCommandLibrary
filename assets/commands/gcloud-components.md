@@ -20,9 +20,9 @@ Google Cloud SDK component manager
 
 ```gcloud components remove [component-id]```
 
-**Reinstall component**
+**Install multiple components**
 
-```gcloud components reinstall [component-id]```
+```gcloud components install [kubectl] [gke-gcloud-auth-plugin]```
 
 # SYNOPSIS
 
@@ -45,9 +45,6 @@ _COMMAND_
 **remove** _COMPONENT_
 > Uninstall component.
 
-**reinstall** _COMPONENT_
-> Reinstall component.
-
 **--help**
 > Display help information.
 
@@ -62,10 +59,6 @@ The update command keeps all installed components current with the latest featur
 # CAVEATS
 
 Updates may change behavior. Some components have dependencies. Admin rights may be needed.
-
-# HISTORY
-
-gcloud components is part of the **Google Cloud SDK** management system, enabling modular installation of only the tools you need.
 
 # SEE ALSO
 

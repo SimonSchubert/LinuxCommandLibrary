@@ -59,11 +59,17 @@ Cisco network test automation framework
 **create**
 > Create configurations.
 
+**logs**
+> Manage test logs.
+
 **--testbed** _FILE_
 > Testbed YAML file.
 
 **--device** _NAME_
 > Specific device.
+
+**--output** _DIR_
+> Output directory for results.
 
 # DESCRIPTION
 

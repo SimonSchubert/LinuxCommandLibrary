@@ -63,9 +63,15 @@ Create files and update timestamps
 **-h**, **--no-dereference**
 > Affect symbolic link instead of referenced file
 
+**--time**=_WORD_
+> Change the specified time: _access_, _atime_, _use_ are equivalent to **-a**; _modify_, _mtime_ are equivalent to **-m**
+
+**-f**
+> Ignored; provided for compatibility with BSD versions of touch
+
 # DESCRIPTION
 
-**touch** updates file access and modification timestamps. If the file doesn't exist, touch creates an empty file (unless **-c** is specified).
+**touch** updates file access and modification timestamps. If the file doesn't exist, touch creates an empty file (unless **-c** or **-h** is specified).
 
 Common uses include creating empty files, updating timestamps to trigger make rebuilds, and setting specific times for testing or archival purposes.
 
@@ -90,4 +96,4 @@ Touch cannot change ctime (inode change time); it's always set to current time b
 
 # SEE ALSO
 
-[stat](/man/stat)(1), [date](/man/date)(1), [ls](/man/ls)(1), [mkdir](/man/mkdir)(1)
+[stat](/man/stat)(1), [date](/man/date)(1), [ls](/man/ls)(1), [mkdir](/man/mkdir)(1), [chmod](/man/chmod)(1)

@@ -1,6 +1,6 @@
 # TAGLINE
 
-PBM to LAVAFLOW converter for Konica Minolta printers
+Convert Ghostscript pbmraw or bitcmyk format into a LAVAFLOW printer stream
 
 # TLDR
 
@@ -26,34 +26,41 @@ PBM to LAVAFLOW converter for Konica Minolta printers
 
 # PARAMETERS
 
-**-r** _DPI_
-> Resolution (300, 600, 1200).
+**-r** _XRESxYRES_
+> Set resolution in pixels/inch (default 1200x600).
+
+**-g** _XPIXxYPIX_
+> Set page dimensions in pixels (default 10200x6600).
 
 **-p** _PAPER_
-> Paper size (letter, a4, legal).
+> Paper code to send to printer (default 2 for letter).
 
 **-c**
-> Color mode.
+> Force color mode.
 
 **-m** _MEDIA_
-> Media type.
+> Media type code to send to printer (default 0).
 
 **-n** _COPIES_
-> Number of copies.
+> Number of copies (default 1).
 
 **-d** _DUPLEX_
-> Duplex mode.
+> Duplex code (1=off, 2=long-edge, 3=short-edge).
 
-**--help**
-> Display help information.
+**-s** _SOURCE_
+> Source (InputSlot) code (default 255, auto).
+
+**-t**
+> Draft mode. Every other pixel is white.
+
+**-S** _PLANE_
+> Output a single color plane for debugging.
 
 # DESCRIPTION
 
-**foo2lava** converts PBM/PPM images to LAVAFLOW protocol for Konica Minolta magicolor printers. It encodes raster data in the proprietary format these printers expect.
+**foo2lava** converts Ghostscript pbmraw, bitcmyk, or pksmraw output formats to monochrome or color LAVAFLOW or OPL streams for Konica Minolta magicolor printers.
 
-The tool handles grayscale and color printing, managing the printer-specific page setup and encoding. It serves as a CUPS filter backend for supported printers.
-
-foo2lava enables Linux printing on magicolor 2530 DL, 2490 MF, and similar models.
+Supported printers include the magicolor 2530 DL, 2490 MF, and other Zenographics-based LAVAFLOW printers. It serves as a backend for the foo2lava-wrapper CUPS filter.
 
 # CAVEATS
 

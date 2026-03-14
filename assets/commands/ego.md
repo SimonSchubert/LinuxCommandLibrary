@@ -36,7 +36,7 @@ Funtoo system personality manager
 
 **ego** is Funtoo's official system personality management tool. It provides a unified interface for synchronizing repositories, managing profiles, updating bootloader configuration, and accessing Funtoo documentation.
 
-Replaces several separate tools with a single coherent interface.
+Available modules include: **sync**, **profile**, **query**, **doc**, **boot**, **kit**, and **config**. Replaces several separate tools with a single coherent interface.
 
 # PARAMETERS
 
@@ -57,6 +57,12 @@ Replaces several separate tools with a single coherent interface.
 
 **query bug** _package_
 > Query bugs for package
+
+**kit**
+> Display kit information
+
+**config**
+> View and modify /etc/ego.conf settings
 
 # CONFIGURATION
 

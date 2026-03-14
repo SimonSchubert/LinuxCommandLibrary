@@ -24,6 +24,10 @@ Manage simplified virtual servers, databases, and storage.
 
 ```aws lightsail create-instance-snapshot --instance-name [my-instance] --instance-snapshot-name [my-snapshot]```
 
+**Open ports** on an instance
+
+```aws lightsail open-instance-public-ports --instance-name [my-instance] --port-info fromPort=[80],toPort=[80],protocol=[tcp]```
+
 **Allocate a static IP** and attach to instance
 
 ```aws lightsail allocate-static-ip --static-ip-name [my-ip] && aws lightsail attach-static-ip --static-ip-name [my-ip] --instance-name [my-instance]```
@@ -76,6 +80,18 @@ Lightsail offers instances, containers, managed databases, object storage, load 
 
 **create-load-balancer**
 > Create a load balancer
+
+**open-instance-public-ports**
+> Open firewall ports on an instance
+
+**delete-instance**
+> Delete an instance
+
+**get-bundles**
+> List available instance bundles (plans)
+
+**get-blueprints**
+> List available OS/app blueprints
 
 # CAVEATS
 

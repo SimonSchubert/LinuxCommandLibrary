@@ -8,21 +8,21 @@ Install **build dependencies** for a spec file
 
 ```dnf builddep [path/to/specification.spec]```
 
-Install dependencies, **ignoring unavailable**
+Install dependencies from a **source RPM**
+
+```dnf builddep [path/to/package.src.rpm]```
+
+Install dependencies, **skipping unavailable** packages
 
 ```dnf builddep --skip-unavailable [path/to/specification.spec]```
 
-**Define RPM macro**
+**Define RPM macro** during dependency resolution
 
-```dnf builddep -D '[expression]'```
+```dnf builddep -D '[macro expression]' [path/to/specification.spec]```
 
-Specify **.spec file** path
+Install dependencies for a **package name** from repositories
 
-```dnf builddep --spec [argument]```
-
-Specify **.rpm file** path
-
-```dnf builddep --srpm [argument]```
+```dnf builddep [package_name]```
 
 # SYNOPSIS
 
@@ -37,23 +37,23 @@ Essential for building RPM packages from source.
 # PARAMETERS
 
 **--skip-unavailable**
-> Ignore unavailable packages
+> Skip build dependencies not available in repositories.
 
-**-D, --define** _macro_
-> Define RPM macro
+**-D**, **--define** _macro_
+> Define RPM macro when parsing spec files (not applied to SRPMs).
 
-**--spec** _file_
-> Use spec file
+**--spec**
+> Treat arguments as .spec files.
 
-**--srpm** _file_
-> Use source RPM
+**--srpm**
+> Treat arguments as source RPM files.
 
 **--help-cmd**
-> Display help
+> Display help for this command.
 
 # CAVEATS
 
-Requires dnf-plugins-core. Build dependencies may include many packages. Root privileges typically required.
+Requires dnf-plugins-core. Build dependencies may include many packages. Root privileges typically required. The --skip-broken option is not honored by builddep.
 
 # SEE ALSO
 

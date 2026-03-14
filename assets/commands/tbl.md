@@ -16,9 +16,9 @@ Format tables for groff and troff
 
 ```cat [file.roff] | tbl```
 
-**Show version information**
+**Process a man page** containing tables
 
-```tbl --version```
+```tbl [page.man] | nroff -man | less```
 
 **Enable AT&T compatibility mode**
 

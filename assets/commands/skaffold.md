@@ -72,6 +72,38 @@ Automate Kubernetes development workflows
 **-n**, **--namespace** _NS_
 > Kubernetes namespace.
 
+**--default-repo** _REPO_
+> Default image repository (overrides global config).
+
+**--kube-context** _CTX_
+> Deploy to specified Kubernetes context.
+
+**--tail**
+> Stream logs from deployed objects (default: true in dev mode).
+
+**--port-forward**
+> Port-forward exposed container ports within pods.
+
+**--trigger** _MODE_
+> Change detection trigger: polling, notify, or manual (default: notify).
+
+# COMMANDS
+
+**verify**
+> Run verification tests against deployments.
+
+**test**
+> Run tests against built application images.
+
+**apply**
+> Apply hydrated manifests to a cluster.
+
+**diagnose**
+> Run a diagnostic on Skaffold configuration.
+
+**fix**
+> Update old configuration to a newer schema version.
+
 # DESCRIPTION
 
 **Skaffold** automates the Kubernetes development workflow by handling the build, push, and deploy cycle for containerized applications. The **dev** command watches source files for changes and automatically rebuilds images and redeploys to the cluster on each save, providing a rapid inner development loop.
@@ -90,4 +122,4 @@ Requires Kubernetes cluster. Docker or alternative builder needed. Learning curv
 
 # SEE ALSO
 
-[kubectl](/man/kubectl)(1), [docker](/man/docker)(1), [helm](/man/helm)(1)
+[kubectl](/man/kubectl)(1), [docker](/man/docker)(1), [helm](/man/helm)(1), [devspace](/man/devspace)(1)

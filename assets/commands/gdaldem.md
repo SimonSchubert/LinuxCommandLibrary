@@ -4,25 +4,29 @@ analyzes and visualizes terrain elevation
 
 # TLDR
 
-**Generate hillshade**
+**Generate a hillshade** from a DEM
 
 ```gdaldem hillshade [dem.tif] [hillshade.tif]```
 
-**Create slope map**
+**Create a slope map** in degrees
 
 ```gdaldem slope [dem.tif] [slope.tif]```
 
-**Generate aspect**
+**Generate an aspect map**
 
 ```gdaldem aspect [dem.tif] [aspect.tif]```
 
-**Color relief**
+**Create color relief** using a color table file
 
 ```gdaldem color-relief [dem.tif] [colors.txt] [relief.tif]```
 
-**Custom azimuth**
+**Generate hillshade with custom** light direction and altitude
 
 ```gdaldem hillshade -az [315] -alt [45] [dem.tif] [hillshade.tif]```
+
+**Compute Terrain Ruggedness Index**
+
+```gdaldem TRI [dem.tif] [tri.tif]```
 
 # SYNOPSIS
 
@@ -46,7 +50,16 @@ _OUTPUT_
 > Light altitude for hillshade.
 
 **-s** _SCALE_
-> Vertical exaggeration.
+> Ratio of vertical to horizontal units (e.g., 111120 for feet with degree coordinates).
+
+**-z** _FACTOR_
+> Vertical exaggeration factor.
+
+**-of** _FORMAT_
+> Output raster format (default: GTiff).
+
+**-compute_edges**
+> Compute values at raster edges and nodata boundaries.
 
 **--help**
 > Display help information.
@@ -69,4 +82,4 @@ gdaldem is part of **GDAL** (Geospatial Data Abstraction Library), providing DEM
 
 # SEE ALSO
 
-[gdal_contour](/man/gdal_contour)(1), [gdalinfo](/man/gdalinfo)(1)
+[gdal_contour](/man/gdal_contour)(1), [gdalinfo](/man/gdalinfo)(1), [ogr2ogr](/man/ogr2ogr)(1)

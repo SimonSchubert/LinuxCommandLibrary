@@ -76,4 +76,4 @@ The **float** builtin was introduced in **zsh** as a convenience shorthand for *
 
 # SEE ALSO
 
-[typeset](/man/typeset)(1), [declare](/man/declare)(1), [integer](/man/integer)(1), [readonly](/man/readonly)(1), [zsh](/man/zsh)(1)
+[typeset](/man/typeset)(1), [declare](/man/declare)(1), [readonly](/man/readonly)(1), [zsh](/man/zsh)(1)

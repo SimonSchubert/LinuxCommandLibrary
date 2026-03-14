@@ -12,7 +12,7 @@ Launch xterm with Unicode UTF-8 support
 
 ```uxterm -geometry [80x24]```
 
-**Start with specific font**
+**Start with specific font (ISO 10646-1 encoded)**
 
 ```uxterm -fn [fixed]```
 
@@ -62,11 +62,11 @@ All xterm options are passed through. Common options include:
 
 The wrapper uses the system locale to determine character encoding. If no locale is set, it defaults to en_US. The locale utility verifies system support for the selected locale before starting.
 
-All command-line arguments pass directly to xterm. The -class and -u8 options should not be specified as they are set by the wrapper. Font configuration uses ISO 10646-1 encoded fonts.
+All command-line arguments pass directly to xterm. The **-class** and **-u8** options should not be specified as they are set by the wrapper. Font configuration uses ISO 10646-1 encoded fonts.
 
 # CAVEATS
 
-Requires locale with UTF-8 support. Needs appropriate Unicode fonts installed (xfonts-base on Debian). Results may be unexpected if locale doesn't support UTF-8. X11 only.
+Requires locale with UTF-8 support. Needs appropriate Unicode fonts installed (xfonts-base on Debian). May produce unexpected results if the current locale does not support UTF-8 character encoding. X11 only.
 
 # HISTORY
 
@@ -74,4 +74,4 @@ Requires locale with UTF-8 support. Needs appropriate Unicode fonts installed (x
 
 # SEE ALSO
 
-[xterm](/man/xterm)(1), [locale](/man/locale)(1), [koi8rxterm](/man/koi8rxterm)(1)
+[xterm](/man/xterm)(1), [locale](/man/locale)(1)

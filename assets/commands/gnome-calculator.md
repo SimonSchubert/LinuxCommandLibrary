@@ -8,9 +8,13 @@ Launch the **GNOME Calculator GUI**
 
 ```gnome-calculator```
 
-**Solve** the specified equation without launching the GUI
+**Solve** an equation without launching the GUI
 
-```gnome-calculator --solve [2^5 * 2 + 5]```
+```gnome-calculator --solve "[2^5 * 2 + 5]"```
+
+Launch in **programming mode**
+
+```gnome-calculator --mode programming```
 
 Display **version**
 

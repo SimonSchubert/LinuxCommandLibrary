@@ -47,11 +47,17 @@ Command-line BitTorrent downloader
 **-u** _limit_
 > Set maximum upload speed in KB/s. 0 means unlimited.
 
+**-f** _script_
+> Run a script when the torrent finishes downloading.
+
 **-g**, **--config-dir** _dir_
 > Directory for configuration files. Allows sharing config between different Transmission clients.
 
 **-m**
 > Do not seed after download completes; exit immediately.
+
+**-p**, **--port** _port_
+> Set the port to listen for incoming peers. Default: 51413.
 
 **-w** _dir_
 > Directory to save downloaded files. Defaults to current directory.
@@ -85,4 +91,4 @@ transmission-cli handles only one torrent at a time and is not designed for cont
 
 # SEE ALSO
 
-[transmission-daemon](/man/transmission-daemon)(1), [transmission-remote](/man/transmission-remote)(1), [transmission-gtk](/man/transmission-gtk)(1)
+[transmission-daemon](/man/transmission-daemon)(1), [transmission-remote](/man/transmission-remote)(1)

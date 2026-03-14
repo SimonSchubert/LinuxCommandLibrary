@@ -4,13 +4,13 @@ checks connectivity to npm registry
 
 # TLDR
 
-**Ping npm registry**
+**Ping default npm registry**
 
 ```npm ping```
 
 **Ping custom registry**
 
-```npm ping --registry [url]```
+```npm ping --registry [https://registry.example.com]```
 
 # SYNOPSIS
 
@@ -19,11 +19,15 @@ checks connectivity to npm registry
 # PARAMETERS
 
 **--registry** _url_
-> Registry URL to ping.
+> Registry URL to ping (default: https://registry.npmjs.org).
 
 # DESCRIPTION
 
-**npm ping** checks connectivity to npm registry. Verifies authentication if configured. Useful for diagnosing registry connection issues.
+**npm ping** pings the configured or specified npm registry and verifies authentication if credentials are configured. It outputs the registry URL and response time on success, or an error on failure. Useful for diagnosing registry connectivity issues, verifying custom registry configurations, and troubleshooting npm authentication.
+
+# CAVEATS
+
+Requires network connectivity. If authentication is configured, the ping also verifies token validity.
 
 # SEE ALSO
 

@@ -10,11 +10,11 @@ Reboot a Proxmox virtual machine
 
 Reboot with **timeout** of 10 seconds
 
-```qm reboot --timeout 10 100```
+```qm reboot 100 --timeout 10```
 
 # SYNOPSIS
 
-**qm reboot** [_options_] _vmid_
+**qm reboot** _vmid_ [_options_]
 
 # PARAMETERS
 

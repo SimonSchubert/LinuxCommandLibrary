@@ -12,17 +12,25 @@ Next-generation Zabbix monitoring agent
 
 ```zabbix_agent2 -c [/etc/zabbix/zabbix_agent2.conf]```
 
-**Test configuration**
+**Test a specific item key**
 
 ```zabbix_agent2 -t [system.cpu.load]```
 
-**Print all items**
+**Print all supported items**
 
 ```zabbix_agent2 -p```
 
-**Run remote command**
+**Validate configuration file**
+
+```zabbix_agent2 -T```
+
+**Change log level at runtime**
 
 ```zabbix_agent2 -R [log_level_increase]```
+
+**Reload user parameters at runtime**
+
+```zabbix_agent2 -R userparameter_reload```
 
 # SYNOPSIS
 
@@ -30,23 +38,29 @@ Next-generation Zabbix monitoring agent
 
 # PARAMETERS
 
-**-c** _file_
-> Configuration file path.
+**-c**, **--config** _file_
+> Use alternate configuration file instead of the default one.
 
 **-f**
 > Run in foreground.
 
-**-t** _item_
-> Test specific item key.
+**-p**, **--print**
+> Print known items and exit.
 
-**-p**
-> Print supported items.
+**-t** _item-key_
+> Test a single item key and exit.
 
-**-R** _command_
-> Runtime control command.
+**-T**, **--test-config**
+> Validate configuration file and exit.
 
-**-V**
-> Show version.
+**-R**, **--runtime-control** _option_
+> Perform administrative functions. Options: log_level_increase, log_level_decrease, userparameter_reload, metrics, version, help.
+
+**-h**, **--help**
+> Display help and exit.
+
+**-V**, **--version**
+> Display version information and exit.
 
 # DESCRIPTION
 
@@ -54,5 +68,5 @@ Next-generation Zabbix monitoring agent
 
 # SEE ALSO
 
-[zabbix_agentd](/man/zabbix_agentd)(1), [zabbix_sender](/man/zabbix_sender)(1)
+[zabbix_agentd](/man/zabbix_agentd)(1), [zabbix_get](/man/zabbix_get)(1), [zabbix_proxy](/man/zabbix_proxy)(1), [zabbix_server](/man/zabbix_server)(1)
 

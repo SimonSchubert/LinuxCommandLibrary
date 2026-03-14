@@ -16,13 +16,17 @@ lightweight minimalist web browser
 
 ```dillo [file.html]```
 
-**Open in fullscreen** mode
+**Open in fullwindow mode** (hide address bar, menu, and buttons)
 
 ```dillo -f [url]```
 
-**Use specific geometry**
+**Open with specific window geometry**
 
 ```dillo -g [800x600] [url]```
+
+**Open in local mode** (don't load remote images or follow redirections)
+
+```dillo -l [path/to/file.html]```
 
 # SYNOPSIS
 
@@ -36,11 +40,14 @@ _URL_
 _FILE_
 > Local HTML file to open.
 
-**-f**, **--fullscreen**
-> Start in fullscreen mode.
+**-f**, **--fullwindow**
+> Start in fullwindow mode, hiding the address bar, navigation buttons, menu, and status bar.
 
-**-g** _WxH_
-> Window geometry (width x height).
+**-g** _WxH[+X+Y]_
+> Window geometry (width x height and optional position).
+
+**-l**, **--local**
+> Don't load remote images or stylesheets, or follow redirections.
 
 **-v**, **--version**
 > Display version information.

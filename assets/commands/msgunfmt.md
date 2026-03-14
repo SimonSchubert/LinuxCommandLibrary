@@ -37,6 +37,15 @@ converts compiled gettext MO files back to human-readable PO format
 **--output-encoding** _enc_
 > Output character encoding.
 
+**--no-wrap**
+> Do not break long message lines.
+
+**--sort-output**
+> Generate sorted output.
+
+**-v, --verbose**
+> Increase verbosity level.
+
 # DESCRIPTION
 
 **msgunfmt** converts compiled gettext MO (machine object) files back to human-readable PO (portable object) format. Also extracts translations from Java ResourceBundle classes. Part of GNU gettext.

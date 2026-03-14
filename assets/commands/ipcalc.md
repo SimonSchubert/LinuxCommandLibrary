@@ -1,6 +1,6 @@
 # TAGLINE
 
-calculates IP network information
+Calculate IP network information
 
 # TLDR
 
@@ -52,7 +52,7 @@ _netmask_
 > Validate address.
 
 **--class**
-> Show address class.
+> Show address class (A, B, C, D, or E).
 
 **--minaddr**
 > Show minimum host address.
@@ -62,6 +62,12 @@ _netmask_
 
 **-4**, **-6**
 > Force IPv4/IPv6.
+
+**-r**, **--random-private**
+> Generate a random private address for given prefix length.
+
+**--no-decorate**
+> Print output without decoration (suitable for scripting).
 
 # DESCRIPTION
 
@@ -84,7 +90,7 @@ Hosts:     254
 
 # CAVEATS
 
-Different versions exist with varying features. Some features may not be available. IPv6 support varies by implementation.
+Two distinct implementations exist: the Red Hat version (ipcalc from initscripts) and the newer ipcalc by Nikos Mavrogiannopoulos. They have different options and features. The `-s` subnet splitting and `-c` check options are only available in certain versions. IPv6 support is available in the newer implementation only.
 
 # SEE ALSO
 

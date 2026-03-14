@@ -40,18 +40,14 @@ _COUNT_
 
 # DESCRIPTION
 
-**git undo** removes the last commit(s) while keeping changes in the working directory. It is a safer alternative to `git reset` that defaults to preserving work.
+**git undo** removes the last commit(s) while keeping changes in the working directory (unstaged). It is a convenient wrapper around `git reset` that defaults to a mixed reset, preserving all work.
 
-The command makes it easy to fix mistakes, amend commits, or restructure recent history. Different modes control whether changes remain staged or unstaged.
+Without arguments, it undoes the most recent commit. Pass a number to undo multiple commits. Use **--soft** to keep changes staged, or **--hard** to discard them entirely.
 
 # CAVEATS
 
-Part of git-extras package. Only affects local commits. --hard discards changes permanently.
-
-# HISTORY
-
-git undo is part of **git-extras**, providing a friendlier interface to the common reset operation.
+Part of the **git-extras** package and must be installed separately. Only affects local commits that have not been pushed. **--hard** discards changes permanently and cannot be easily recovered.
 
 # SEE ALSO
 
-[git-reset](/man/git-reset)(1), [git-revert](/man/git-revert)(1)
+[git-reset](/man/git-reset)(1), [git-revert](/man/git-revert)(1), [git-extras](/man/git-extras)(1)

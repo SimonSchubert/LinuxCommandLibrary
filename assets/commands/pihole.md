@@ -1,6 +1,6 @@
 # TAGLINE
 
-command-line interface for managing Pi-hole, a network-level
+command-line interface for managing Pi-hole, a network-level ad blocker
 
 # TLDR
 
@@ -46,7 +46,7 @@ View **real-time log**
 
 # DESCRIPTION
 
-**pihole** is the command-line interface for managing Pi-hole, a network-level advertisement and tracker blocking application that acts as a DNS sinkhole.
+**pihole** is the command-line interface for managing Pi-hole, a network-level ad and tracker blocking application that acts as a DNS sinkhole.
 
 # PARAMETERS
 

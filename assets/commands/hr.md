@@ -4,53 +4,35 @@ prints horizontal rules in the terminal
 
 # TLDR
 
-**Print horizontal rule**
+**Print a horizontal rule using the default # character**
 
 ```hr```
 
-**Print with specific character**
+**Print a horizontal rule with a specific character**
 
 ```hr [=]```
 
-**Print double line**
+**Print multiple horizontal rules with different characters**
 
 ```hr [#] [-]```
 
-**Custom width**
+**Print a horizontal rule with a multi-character pattern**
 
-```hr -w [40] [*]```
+```hr [-#-]```
 
 # SYNOPSIS
 
-**hr** [_options_] [_characters_]
-
-# PARAMETERS
-
-_CHARACTERS_
-> Character(s) to use for rule.
-
-**-w** _WIDTH_
-> Rule width.
-
-**-c** _CHAR_
-> Character to use.
-
-**--help**
-> Display help information.
+**hr** [_characters_ ...]
 
 # DESCRIPTION
 
-**hr** prints horizontal rules in the terminal. It outputs a line of characters spanning the terminal width.
+**hr** prints horizontal rules spanning the terminal width. Each argument is used as a character or pattern to repeat across one line. If no argument is given, **#** is used by default. Multiple arguments produce multiple lines, one per argument.
 
-The tool is useful for visual separation in scripts and terminal output. Multiple character patterns can create different line styles.
+The terminal width is determined by `tput cols`, falling back to the **COLUMNS** environment variable or 80 columns if neither is available.
 
 # CAVEATS
 
-Width based on terminal size. Simple utility. Multiple implementations exist.
-
-# HISTORY
-
-hr is a simple terminal utility for creating horizontal dividers in terminal output.
+Multiple implementations of **hr** exist with different features. The most common (LuRsT/hr) is a pure Bash script with no flags or options. Other implementations may support additional features like color or width control.
 
 # SEE ALSO
 

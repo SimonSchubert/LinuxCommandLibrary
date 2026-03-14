@@ -45,14 +45,20 @@ Global Assembly Cache management utility
 **-ul** _listfile_
 > Uninstall assemblies from list file.
 
-**-package** _name_
-> Package name for installation.
+**-us** _assembly_
+> Uninstall assembly using its full name from the assembly file.
 
-**-gacdir** _dir_
-> Specify GAC directory.
+**-package** _name_
+> Package name for installation; creates a symlink in prefix/lib/mono/NAME/.
+
+**-check_refs**
+> Check that installed assembly doesn't reference non-strong-named assemblies.
 
 **-root** _dir_
-> Root directory for operations.
+> Root directory prefix for GAC operations.
+
+**-gacdir** _dir_
+> Specify GAC directory (deprecated, use -root instead).
 
 # DESCRIPTION
 

@@ -8,25 +8,29 @@ Start **menu** mode
 
 ```retroarch```
 
+**Load a ROM** with a specific core
+
+```retroarch -L [path/to/core.so] [path/to/rom]```
+
 Start in **fullscreen**
 
 ```retroarch -f```
-
-List **compiled features**
-
-```retroarch --features```
 
 Use specific **config** file
 
 ```retroarch -c [path/to/config]```
 
+**Load content** with verbose logging
+
+```retroarch -v -L [path/to/core.so] [path/to/rom]```
+
+List **compiled features**
+
+```retroarch --features```
+
 Display **help**
 
 ```retroarch -h```
-
-Display **version**
-
-```retroarch --version```
 
 # SYNOPSIS
 
@@ -51,6 +55,12 @@ Display **version**
 
 **-v, --verbose**
 > Verbose logging
+
+**-s, --save _slot_**
+> Load save state from specified slot
+
+**--appendconfig _file_**
+> Append extra config file (overrides values in main config)
 
 **-h, --help**
 > Display help

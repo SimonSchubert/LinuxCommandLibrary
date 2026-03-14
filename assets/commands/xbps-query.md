@@ -4,25 +4,33 @@ Query Void Linux package information
 
 # TLDR
 
-**Search** for a package in remote repositories
+**Search for a package** in remote repositories
 
-```xbps-query -s [regex|keyword] --repository --regex```
+```xbps-query -Rs [keyword]```
 
-**Show** information about an installed package
+**Show information** about an installed package
 
 ```xbps-query -S [package]```
 
-**Show** information about a package in remote repositories
+**Show information** about a package in remote repositories
 
-```xbps-query -S [package] --repository```
+```xbps-query -RS [package]```
 
-**List** packages registered in the package database
+**List all installed** packages
 
 ```xbps-query -l```
 
-**List** explicitly installed packages
+**List explicitly installed** packages (not dependencies)
 
 ```xbps-query -m```
+
+**List files** installed by a package
+
+```xbps-query -f [package]```
+
+**Show dependencies** of an installed package
+
+```xbps-query -x [package]```
 
 # SYNOPSIS
 
@@ -30,35 +38,38 @@ Query Void Linux package information
 
 # PARAMETERS
 
-**-s, --search _pattern_**
-> Search for packages matching pattern
+**-s** _pattern_
+> Search for packages matching pattern.
 
-**-S, --show _package_**
-> Show package information
+**-S** _package_
+> Show detailed package information.
 
-**-l, --list-pkgs**
-> List all installed packages
+**-l**
+> List all installed packages.
 
-**-m, --list-manual-pkgs**
-> List explicitly installed packages (not dependencies)
+**-m**
+> List explicitly installed packages (not dependencies).
 
-**-L, --list-repos**
-> List configured repositories
+**-L**
+> List configured repositories.
 
-**-f, --files _package_**
-> List files installed by package
+**-f** _package_
+> List files installed by package.
 
-**-x, --deps _package_**
-> Show package dependencies
+**-x** _package_
+> Show package dependencies.
 
-**-X, --revdeps _package_**
-> Show reverse dependencies
+**-X** _package_
+> Show reverse dependencies.
 
-**--repository**
-> Query remote repositories instead of local
+**-R**, **--repository**
+> Query remote repositories instead of local.
 
 **--regex**
-> Enable regex pattern matching
+> Enable regex pattern matching for search.
+
+**-p** _property_
+> Show specific property (e.g., version, description).
 
 # DESCRIPTION
 

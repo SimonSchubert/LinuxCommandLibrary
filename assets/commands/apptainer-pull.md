@@ -34,30 +34,36 @@ Pull a container **without using the cache**
 
 # SYNOPSIS
 
-**apptainer pull** [_options_] _image_ _URI_
+**apptainer pull** [_options_] [_output_] _URI_
 
 # DESCRIPTION
 
-**apptainer pull** downloads container images from remote registries and converts them to the SIF (Singularity Image Format). Supported sources include Docker Hub (**docker://**), the Sylabs Container Library (**library://**), OCI registries (**oras://**), and Shub (**shub://**).
+**apptainer pull** downloads container images from remote registries and converts them to the SIF (Singularity Image Format). Supported sources include Docker Hub (**docker://**), the Sylabs Container Library (**library://**), OCI registries (**oras://**), Shub (**shub://**), and HTTP/HTTPS URLs.
 
 Downloaded images are cached locally to speed up subsequent operations. The resulting SIF file is portable and can be run on any system with Apptainer installed.
 
 # PARAMETERS
 
 **--arch** _architecture_
-> Pull image for a specific CPU architecture
+> Pull image for a specific CPU architecture.
 
-**-F, --force**
-> Overwrite an existing local image file
+**--arch-variant** _variant_
+> Pull image for a specific architecture variant (e.g., 6 for armv6).
+
+**-F**, **--force**
+> Overwrite an existing local image file.
 
 **--sandbox**
-> Create a writable directory instead of a SIF file
+> Create a writable directory instead of a SIF file.
 
 **--disable-cache**
-> Do not use or update the image cache
+> Do not use or update the image cache.
 
 **--no-https**
-> Use HTTP instead of HTTPS for downloads
+> Use HTTP instead of HTTPS for downloads.
+
+**--dir** _path_
+> Download images to the specified directory.
 
 # CONFIGURATION
 

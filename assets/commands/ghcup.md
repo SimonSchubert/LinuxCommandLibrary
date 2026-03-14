@@ -24,15 +24,19 @@ Universal installer for the Haskell toolchain
 
 ```ghcup install hls```
 
-**List installed tools**
+**List available and installed tools**
 
 ```ghcup list```
+
+**Remove a GHC version**
+
+```ghcup rm ghc [9.4.7]```
 
 **Interactive TUI**
 
 ```ghcup tui```
 
-**Upgrade ghcup**
+**Upgrade ghcup itself**
 
 ```ghcup upgrade```
 
@@ -63,8 +67,11 @@ Universal installer for the Haskell toolchain
 **whereis**
 > Show tool location.
 
+**run**
+> Run a command with a specific toolchain version.
+
 **gc**
-> Garbage collect.
+> Garbage collect old versions.
 
 # PARAMETERS
 

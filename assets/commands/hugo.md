@@ -14,19 +14,23 @@ fast static site generator written in Go
 
 **Create new content**
 
-```hugo new [posts/my-post.md]```
+```hugo new content [posts/my-post.md]```
 
 **Start development server**
 
 ```hugo server```
 
-**Build with drafts**
+**Build with drafts included**
 
 ```hugo --buildDrafts```
 
-**Build for production**
+**Build for production with minification**
 
 ```hugo --minify```
+
+**Build to a specific directory**
+
+```hugo -d [/path/to/output]```
 
 # SYNOPSIS
 
@@ -34,32 +38,44 @@ fast static site generator written in Go
 
 # PARAMETERS
 
-_COMMAND_
-> Subcommand to run.
+**new content**
+> Create new content file.
 
-**new**
-> Create new content.
+**new site**
+> Create a new site scaffold.
 
 **server**
-> Start dev server.
+> Start built-in development server.
 
-**build**
-> Build site (default).
+**-b**, **--baseURL** _URL_
+> Hostname and path to the root.
 
-**--buildDrafts**
-> Include drafts.
+**-D**, **--buildDrafts**
+> Include content marked as draft.
+
+**-E**, **--buildExpired**
+> Include expired content.
+
+**-F**, **--buildFuture**
+> Include content with future publish dates.
+
+**-d**, **--destination** _DIR_
+> Filesystem path to write files to.
 
 **--minify**
-> Minify output.
+> Minify supported output formats (HTML, XML, etc.).
 
-**-D**
-> Include drafts.
+**--gc**
+> Run cleanup tasks after the build (remove unused cache files).
 
-**-t** _THEME_
-> Use theme.
+**--cleanDestinationDir**
+> Remove files from destination not found in static directories.
 
-**--help**
-> Display help information.
+**-t**, **--theme** _THEME_
+> Theme to use.
+
+**--logLevel** _LEVEL_
+> Log level (debug, info, warn, error).
 
 # DESCRIPTION
 
@@ -73,7 +89,7 @@ Go-template syntax learning curve. Theme compatibility varies. No dynamic conten
 
 # HISTORY
 
-Hugo was created by **Steve Francia** in **2013** as a fast alternative to Jekyll, written in Go.
+Hugo was created by **Steve Francia** in **2013** as a fast alternative to Jekyll, written in Go. Note: `hugo new` for creating content is deprecated; use `hugo new content` instead.
 
 # SEE ALSO
 

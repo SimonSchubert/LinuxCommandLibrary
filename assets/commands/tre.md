@@ -14,7 +14,7 @@ Modern tree replacement with editor integration
 
 **Limit depth**
 
-```tre -L [2]```
+```tre -l [2]```
 
 **With editor integration**
 
@@ -24,33 +24,54 @@ Modern tree replacement with editor integration
 
 ```tre [path/to/directory]```
 
+**Show only directories**
+
+```tre -d```
+
+**Output as JSON**
+
+```tre -j```
+
+**Exclude paths matching a regex**
+
+```tre -E [pattern]```
+
 **Portable paths**
 
 ```tre -p```
 
 # SYNOPSIS
 
-**tre** [_-a_] [_-L depth_] [_-e_] [_options_] [_path_]
+**tre** [_-a_] [_-l depth_] [_-e_] [_options_] [_path_]
 
 # PARAMETERS
 
-**-a**
-> Include hidden.
+**-a, --all**
+> Include hidden files.
 
-**-L** _DEPTH_
+**-d, --directories**
+> Only list directories.
+
+**-l, --limit** _DEPTH_
 > Maximum depth.
 
-**-e**
-> Editor integration.
+**-e, --editor** [_COMMAND_]
+> Editor integration (numbers files, creates aliases).
 
-**-p**
-> Portable paths.
+**-E, --exclude** _PATTERN_
+> Exclude paths matching a regex. Repeatable.
 
-**-s**
-> Simple output.
+**-j, --json**
+> Output JSON instead of tree diagram.
 
-**--help**
-> Show help.
+**-p, --portable**
+> Portable absolute paths in editor aliases.
+
+**-s, --simple**
+> Ignore .gitignore rules.
+
+**-c, --color** _WHEN_
+> Color output: automatic, always, never.
 
 # DESCRIPTION
 
@@ -62,11 +83,7 @@ By default, tre respects `.gitignore` rules, filtering out ignored files for a c
 
 # CAVEATS
 
-Different from tree. Rust implementation. Editor feature unique.
-
-# HISTORY
-
-**tre** was created as a modern replacement for tree with editor integration for quick file access.
+Not a drop-in replacement for **tree** — uses different flag names (e.g. **-l** instead of **-L** for depth). Respects .gitignore by default, which can be disabled with **-s**.
 
 # SEE ALSO
 

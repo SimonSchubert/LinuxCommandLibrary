@@ -42,25 +42,32 @@ Send IPC commands to Sway compositor
 > Message type.
 
 **-m**, **--monitor**
-> Monitor for responses.
+> Monitor for responses until killed. Can only be used with the subscribe message type.
+
+**-p**, **--pretty**
+> Use pretty output even when not using a tty.
 
 **-r**, **--raw**
-> Raw output.
+> Use raw JSON output even when using a tty.
 
 **-q**, **--quiet**
-> Quiet mode.
+> Send the IPC message but do not print the response.
 
 **-s**, **--socket** _PATH_
-> Socket path.
+> Use the specified socket path instead of SWAYSOCK environment variable.
 
 # MESSAGE TYPES
 
-**get_workspaces** - List workspaces
-**get_outputs** - List outputs
-**get_tree** - Window tree
-**get_marks** - Window marks
-**get_bar_config** - Bar config
-**get_version** - Sway version
+**get_workspaces** - List workspaces and their status
+**get_outputs** - List outputs and their properties
+**get_tree** - JSON-encoded layout tree of all windows, containers, outputs, and workspaces
+**get_marks** - List of window marks
+**get_bar_config** - Bar configuration
+**get_version** - Sway version information
+**get_inputs** - List current inputs
+**get_seats** - List seats and assigned devices
+**get_binding_modes** - List configured binding modes
+**subscribe** - Subscribe to event types (use with -m)
 
 # DESCRIPTION
 

@@ -31,11 +31,32 @@ resets write-ahead log and control information
 **-f**, **--force**
 > Force reset.
 
-**-e** _xid_
+**-e**, **--epoch** _epoch_
+> Set next transaction ID epoch.
+
+**-x**, **--next-transaction-id** _xid_
 > Set next transaction ID.
 
-**-l** _walfile_
+**-o**, **--next-oid** _oid_
+> Set next OID.
+
+**-m**, **--multixact-ids** _mxid,mxid_
+> Set next and oldest multitransaction ID.
+
+**-O**, **--multixact-offset** _mxoff_
+> Set next multitransaction offset.
+
+**-c**, **--commit-timestamp-ids** _xid,xid_
+> Set oldest and newest transaction IDs for commit timestamps.
+
+**-u**, **--oldest-transaction-id** _xid_
+> Set oldest unfrozen transaction ID.
+
+**-l**, **--next-wal-file** _walfile_
 > Force minimum WAL starting location.
+
+**--wal-segsize** _size_
+> Set WAL segment size in megabytes.
 
 # DESCRIPTION
 
@@ -43,7 +64,7 @@ resets write-ahead log and control information
 
 # CAVEATS
 
-Use only as last resort. May cause data loss. Server must be stopped.
+Use only as a last resort when WAL is corrupted or pg_controldata shows inconsistencies. May cause data loss and transaction integrity issues. The PostgreSQL server must be stopped before running.
 
 # SEE ALSO
 

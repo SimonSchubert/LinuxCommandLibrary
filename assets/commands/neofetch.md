@@ -1,6 +1,6 @@
 # TAGLINE
 
-command-line system information tool that displays information about your
+command-line system information tool with ASCII art
 
 # TLDR
 

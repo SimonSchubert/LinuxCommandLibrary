@@ -1,10 +1,10 @@
 # TAGLINE
 
-Search Exploit Database archive locally
+search Exploit Database archive locally
 
 # TLDR
 
-**Search for exploits** by keywords
+**Search for exploits by keywords**
 
 ```searchsploit [apache] [struts]```
 
@@ -28,13 +28,25 @@ Search Exploit Database archive locally
 
 ```searchsploit -x [39446]```
 
+**Show the full path to an exploit and copy to clipboard**
+
+```searchsploit -p [39446]```
+
 **Output results as JSON**
 
 ```searchsploit -j [linux kernel] [3.2]```
 
+**Show Exploit-DB.com URLs instead of local paths**
+
+```searchsploit -w [apache] [remote]```
+
 **Exclude terms from results**
 
 ```searchsploit [linux kernel] --exclude="(PoC)|/dos/"```
+
+**Search using Nmap XML output**
+
+```searchsploit --nmap [scan_results.xml]```
 
 **Update the database**
 
@@ -77,14 +89,26 @@ Search Exploit Database archive locally
 **-j**, **--json**
 > Output in JSON format
 
-**-w**
-> Show exploit-db.com URLs
+**-w**, **--www**
+> Show Exploit-DB.com URLs instead of local paths
 
 **--cve** _ID_
 > Search by CVE identifier
 
-**--id** _ID_
-> Search by Exploit-DB ID
+**--id**
+> Display EDB-ID rather than local path
+
+**--nmap** _FILE_
+> Search using Nmap XML service version output
+
+**-o**, **--overflow**
+> Allow title overflow in columns
+
+**-v**, **--verbose**
+> Display extended information
+
+**--disable-colour**
+> Remove color highlighting from output
 
 **-u**, **--update**
 > Update local database

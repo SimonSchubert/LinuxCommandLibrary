@@ -12,17 +12,25 @@ Animated version control history visualization
 
 ```gource [/path/to/repo]```
 
-**Output video**
+**Run in fullscreen mode**
 
-```gource -o - | ffmpeg -i - [output.mp4]```
+```gource -f```
+
+**Output PPM stream and pipe to ffmpeg for video**
+
+```gource -1280x720 -o - | ffmpeg -y -r 60 -f image2pipe -vcodec ppm -i - -vcodec libx264 -pix_fmt yuv420p [output.mp4]```
 
 **Set time scale**
 
 ```gource --seconds-per-day [0.1]```
 
-**Hide filenames**
+**Hide specific elements**
 
-```gource --hide filenames```
+```gource --hide filenames,mouse,progress```
+
+**Visualize with a date range**
+
+```gource --start-date "[2024-01-01]" --stop-date "[2024-12-31]"```
 
 # SYNOPSIS
 
@@ -31,24 +39,42 @@ Animated version control history visualization
 # PARAMETERS
 
 _PATH_
-> Repository path.
+> Repository path (defaults to current directory).
 
-**-o** _FILE_
-> Output to file (- for pipe).
+**-o**, **--output-ppm-stream** _FILE_
+> Output PPM image stream to file ('-' for stdout). Used with ffmpeg for video creation.
+
+**-r**, **--output-framerate** _FPS_
+> Framerate of output (25, 30, 60). Used with --output-ppm-stream.
+
+**-WIDTHxHEIGHT**, **--viewport** _WIDTHxHEIGHT_
+> Set viewport size (e.g., 1280x720).
 
 **--seconds-per-day** _SEC_
-> Speed of animation.
+> Time in seconds for each day of history (default: 10).
 
 **--hide** _ELEMENTS_
-> Hide elements.
+> Hide display elements (comma-separated): bloom, date, dirnames, files, filenames, mouse, progress, root, tree, users, usernames.
 
-**-s** _SEC_, **--start-date** _DATE_
-> Start date.
+**--start-date** _DATE_
+> Start at a date (YYYY-MM-DD format).
+
+**--stop-date** _DATE_
+> Stop at a date.
 
 **-f**, **--fullscreen**
 > Fullscreen mode.
 
-**--help**
+**--title** _TITLE_
+> Set a title.
+
+**--load-config** _FILE_
+> Load a configuration file.
+
+**--save-config** _FILE_
+> Save current options to a configuration file.
+
+**-h**, **--help**
 > Display help information.
 
 # DESCRIPTION
@@ -59,7 +85,7 @@ The tool supports Git, SVN, Mercurial, and Bazaar repositories. Output can be pi
 
 # CAVEATS
 
-OpenGL required. Large repos may be slow. Customize for best results.
+Requires OpenGL. Large repositories with many files or commits may be slow to render. The output stream uses uncompressed PPM format, so piped video files can be very large before encoding. Use --seconds-per-day and --hide to optimize for large repos.
 
 # HISTORY
 

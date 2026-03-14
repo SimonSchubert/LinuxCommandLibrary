@@ -28,35 +28,50 @@ toolkit for image manipulation
 
 **netpbm** [_tool_] [_options_] [_files_]
 
-# PARAMETERS
-
-_TOOL_
-> Specific netpbm utility.
+# COMMON TOOLS
 
 **jpegtopnm**
-> Convert JPEG to portable format.
+> Convert JPEG to PNM format.
 
 **pngtopam**
-> Convert PNG to PAM.
+> Convert PNG to PAM format.
+
+**pnmtojpeg**
+> Convert PNM to JPEG format.
+
+**pnmtopng**
+> Convert PNM to PNG format.
+
+**ppmtogif**
+> Convert PPM to GIF format.
+
+**giftopnm**
+> Convert GIF to PNM format.
 
 **pamscale**
-> Scale images.
+> Scale (resize) images.
 
 **pamflip**
-> Flip/rotate images.
+> Flip or rotate images.
 
-**--help**
-> Display help information.
+**pnmcrop**
+> Crop whitespace from edges.
+
+**ppmbrighten**
+> Adjust brightness and saturation.
+
+**pnmcat**
+> Concatenate images side by side or vertically.
 
 # DESCRIPTION
 
-**netpbm** is a toolkit for image manipulation. It includes many utilities for format conversion.
+**netpbm** is a toolkit of over 350 separate programs for manipulation of graphic images, including conversion between about 100 graphics formats. The programs use PNM (Portable Any Map) and PAM as intermediate formats for pipeline-based image processing.
 
-The tools work with portable bitmap formats. Pipeline-based image processing.
+The tools are designed for command-line use and pipeline composition. A typical workflow converts an input format to PNM, applies transformations, then converts to an output format. Each tool does one thing, and they are most powerful when combined in shell pipelines.
 
 # CAVEATS
 
-Collection of tools. PNM/PAM intermediate format. Command-line based.
+Not an interactive tool. Requires converting to/from PNM/PAM intermediate formats. Individual tools have separate man pages. Some tools have been superseded by newer equivalents (e.g., pnmtopng replaces ppmtogif for many use cases).
 
 # HISTORY
 

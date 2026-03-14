@@ -23,7 +23,7 @@ improves MySQL security after installation
 # PARAMETERS
 
 **--socket** _path_
-> Unix socket file.
+> Unix socket file for connections to localhost.
 
 **--host** _host_
 > MySQL server hostname.
@@ -31,15 +31,26 @@ improves MySQL security after installation
 **--port** _port_
 > TCP/IP port number.
 
-**--user** _user_
-> MySQL username.
+**--user**, **-u** _user_
+> MySQL username for connecting to the server.
 
 **--defaults-file** _file_
-> Configuration file.
+> Read only the specified option file.
+
+**--no-defaults**
+> Do not read any option files.
+
+**--use-default**
+> Execute noninteractively using default answers. Useful for unattended installation.
+
+**--password**, **-p** _password_
+> The current password for connecting.
 
 # DESCRIPTION
 
-**mysql_secure_installation** improves MySQL security after installation. Interactive wizard that sets root password, removes anonymous users, disables remote root login, and removes test database. Recommended for new installations.
+**mysql_secure_installation** improves MySQL security after installation. The interactive wizard performs the following steps: set or change the root password, remove anonymous users, disallow remote root login, remove the test database, and reload privilege tables. It is recommended for all new installations.
+
+The program reads the **[mysql_secure_installation]** and **[client]** groups from option files.
 
 # SEE ALSO
 

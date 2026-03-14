@@ -1,6 +1,6 @@
 # TAGLINE
 
-Vertical CSV file concatenator
+Vertically concatenate CSV files
 
 # TLDR
 
@@ -8,19 +8,23 @@ Vertical CSV file concatenator
 
 ```csvstack [file1.csv] [file2.csv] > [combined.csv]```
 
-**Stack with group column**
+**Stack with a grouping column to identify source files**
 
 ```csvstack -g [source1,source2] [file1.csv] [file2.csv]```
 
-**Name the group column**
+**Name the grouping column**
 
 ```csvstack -g [a,b] -n [source] [file1.csv] [file2.csv]```
 
-**Stack files without headers**
+**Stack using filenames as group values automatically**
+
+```csvstack --filenames [file1.csv] [file2.csv]```
+
+**Stack files that have no header row**
 
 ```csvstack -H [file1.csv] [file2.csv]```
 
-**Stack with different delimiters**
+**Stack semicolon-delimited files**
 
 ```csvstack -d ";" [file1.csv] [file2.csv]```
 
@@ -67,4 +71,4 @@ All files should have matching columns for clean output. Missing columns filled 
 
 # SEE ALSO
 
-[csvcut](/man/csvcut)(1), [csvlook](/man/csvlook)(1), [cat](/man/cat)(1), [csvjoin](/man/csvjoin)(1)
+[csvcut](/man/csvcut)(1), [csvlook](/man/csvlook)(1), [csvjoin](/man/csvjoin)(1), [csvgrep](/man/csvgrep)(1), [csvstat](/man/csvstat)(1)

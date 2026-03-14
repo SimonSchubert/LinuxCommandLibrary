@@ -31,11 +31,7 @@ _TASK_IDS_
 
 # CAVEATS
 
-Kill running tasks first. Part of pueue.
-
-# HISTORY
-
-pueue remove provides **task removal** from queue.
+Running tasks cannot be removed directly; use **pueue kill** first. Removing a task deletes its log output permanently.
 
 # SEE ALSO
 

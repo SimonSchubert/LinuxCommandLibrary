@@ -20,9 +20,17 @@ Create and manage QEMU disk images
 
 ```qemu-img resize [disk.qcow2] +[10G]```
 
-**Create snapshot**
+**Create a snapshot**
 
 ```qemu-img snapshot -c [snapshot1] [disk.qcow2]```
+
+**Check image** for consistency errors
+
+```qemu-img check [disk.qcow2]```
+
+**List snapshots** in an image
+
+```qemu-img snapshot -l [disk.qcow2]```
 
 # SYNOPSIS
 
@@ -43,13 +51,34 @@ Create and manage QEMU disk images
 > Resize image.
 
 **snapshot**
-> Manage snapshots.
+> Manage snapshots (-c create, -a apply, -d delete, -l list).
+
+**check**
+> Perform consistency check (qcow2, qed, vdi only).
+
+**commit**
+> Commit changes from an overlay image to its backing file.
+
+**compare**
+> Compare two disk images.
+
+**rebase**
+> Change the backing file of an image.
+
+**map**
+> Display allocation map of an image.
 
 **-f** _FORMAT_
-> Image format.
+> Input image format (raw, qcow2, vmdk, vdi, vhd, etc.).
 
 **-O** _FORMAT_
-> Output format.
+> Output format for convert.
+
+**-p**
+> Display progress bar.
+
+**-q**
+> Quiet mode; suppress non-error output.
 
 # DESCRIPTION
 
@@ -59,11 +88,7 @@ The **create** command builds new images with optional thin provisioning, while 
 
 # CAVEATS
 
-Part of QEMU suite. Various format options.
-
-# HISTORY
-
-qemu-img is part of **QEMU** for disk image management.
+Part of the QEMU suite (qemu-utils package). Shrinking images with resize requires the guest filesystem to be resized first. Only qcow2, qed, and vdi formats support consistency checks.
 
 # SEE ALSO
 

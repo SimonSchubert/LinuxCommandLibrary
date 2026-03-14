@@ -8,17 +8,17 @@ Compute and report repository size metrics
 
 ```git-sizer```
 
-**Verbose output**
+**Verbose output** showing all statistics
 
 ```git-sizer -v```
 
-**JSON output**
+**JSON output** for machine processing
 
 ```git-sizer --json```
 
-**Show thresholds**
+**Show only critical** statistics
 
-```git-sizer --threshold=[1]```
+```git-sizer --threshold=[30]```
 
 # SYNOPSIS
 
@@ -27,22 +27,25 @@ Compute and report repository size metrics
 # PARAMETERS
 
 **-v**, **--verbose**
-> Verbose output.
+> Report all statistics, equivalent to --threshold=0
 
 **--json**
-> JSON output format.
+> JSON output format
+
+**--json-version** _n_
+> JSON format version (1 or 2)
 
 **--threshold** _n_
-> Minimum concern level (0-30).
+> Minimum concern level to report (0=all, 1=default, 30=critical only)
 
-**--names**
-> Show example names.
+**--no-progress**
+> Suppress progress output
 
 # DESCRIPTION
 
 **git-sizer** computes various size metrics for a Git repository, identifying potential performance problems such as oversized files, deep histories, or wide directory trees.
 
-The tool reports metrics with concern levels, helping maintainers understand whether their repository structure may cause issues with cloning, fetching, or general Git operations.
+The tool reports metrics with concern levels shown as asterisks (*), helping maintainers understand whether their repository structure may cause issues with cloning, fetching, or general Git operations. It must be run from within a Git repository.
 
 # SEE ALSO
 

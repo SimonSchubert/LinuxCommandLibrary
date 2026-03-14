@@ -4,29 +4,37 @@ Manage ZoneMinder surveillance daemons
 
 # TLDR
 
-**Run ZoneMinder console**
+**Start the ZoneMinder system**
 
-```zm```
+```sudo zmpkg.pl start```
 
-**Start ZoneMinder**
+**Stop the ZoneMinder system**
 
-```sudo zmdc.pl start```
+```sudo zmpkg.pl stop```
+
+**Check system status**
+
+```zmpkg.pl status```
+
+**Start a specific daemon**
+
+```sudo zmdc.pl start [zmc] -m [monitor_id]```
 
 **Check daemon status**
 
 ```zmdc.pl status```
 
-**Control ZoneMinder**
+**Query monitor status**
 
-```zmpkg.pl [start|stop|restart|status]```
+```zmu -m [monitor_id] -q```
 
 # SYNOPSIS
 
 **zm** [_subcommand_]
 
-**zmpkg.pl** [**start**|**stop**|**restart**|**status**]
+**zmpkg.pl** [**start**|**stop**|**restart**|**status**|**logrot**|**version**]
 
-**zmdc.pl** [**start**|**stop**|**status**] [_daemon_]
+**zmdc.pl** [**start**|**stop**|**status**|**check**|**startup**|**shutdown**] [_daemon_]
 
 # DESCRIPTION
 

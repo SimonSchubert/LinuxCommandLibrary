@@ -79,6 +79,15 @@ Common use cases include rebalancing after adding or removing devices, convertin
 **soft**
 > Skip chunks already matching the target profile
 
+**devid=** _id_
+> Balance only chunks on the given device
+
+**drange=** _start..end_
+> Balance only chunks overlapping byte range
+
+**-f**
+> Force reducing metadata integrity (e.g., raid1 to single)
+
 # CAVEATS
 
 A full balance rewrites all data and is very slow. Use filters to target only necessary chunks. Balance requires free space to relocate data. Converting RAID profiles on a busy system may take a long time.
@@ -89,4 +98,4 @@ A full balance rewrites all data and is very slow. Use filters to target only ne
 
 # SEE ALSO
 
-[btrfs](/man/btrfs)(8), [btrfs-device](/man/btrfs-device)(8), [mkfs.btrfs](/man/mkfs.btrfs)(8)
+[btrfs](/man/btrfs)(8), [btrfs-device](/man/btrfs-device)(8), [btrfs-filesystem](/man/btrfs-filesystem)(8), [btrfs-scrub](/man/btrfs-scrub)(8), [mkfs.btrfs](/man/mkfs.btrfs)(8)

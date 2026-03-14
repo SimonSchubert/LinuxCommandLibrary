@@ -27,13 +27,13 @@ Show **snapshot** configuration
 # PARAMETERS
 
 **vmid**
-> The numeric ID of the container
+> The unique numeric ID of the container (integer, 100 to 999999999)
 
 **--current**
-> Show currently running configuration instead of saved
+> Get current values instead of pending values (boolean, default 0)
 
 **--snapshot** _name_
-> Display configuration from a specific snapshot
+> Fetch configuration values from a given snapshot
 
 # CAVEATS
 
@@ -45,4 +45,4 @@ The default output shows saved configuration with pending changes. Use **--curre
 
 # SEE ALSO
 
-[pct](/man/pct)(1), [pct-set](/man/pct-set)(1)
+[pct](/man/pct)(1), [pct-set](/man/pct-set)(1), [pct-list](/man/pct-list)(1), [pct-status](/man/pct-status)(1)

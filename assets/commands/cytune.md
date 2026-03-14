@@ -50,7 +50,10 @@ _TTY_
 > Set the default timeout value.
 
 **-g**
-> Get settings in numeric format.
+> Get current threshold and timeout values in numeric format.
+
+**-G**
+> Get default threshold and flush timeout values.
 
 **-q**
 > Quiet mode (no output on success).
@@ -59,9 +62,9 @@ _TTY_
 
 **cytune** is a utility for tuning the interrupt threshold and timeout parameters for Cyclades serial drivers. These parameters affect how the driver buffers data before triggering an interrupt, balancing latency against CPU overhead.
 
-The threshold value determines how many characters accumulate in the hardware buffer before an interrupt is generated. Higher values reduce interrupt overhead but increase latency. The timeout ensures data is delivered even when the threshold isn't reached.
+Each serial line on a Cyclades card has a 12-byte FIFO for input and output. The threshold specifies how many characters must be present in the FIFO before an interrupt is raised. Higher values reduce interrupt overhead but increase latency. The timeout ensures data is delivered even when the threshold isn't reached.
 
-These tuning parameters are important for high-speed serial communication where the balance between throughput and responsiveness affects application behavior.
+Default thresholds are set based on baud rate when the tty is opened (e.g., threshold 10 for 50-4800 baud, 8 for 9600, 4 for 19200, 2 for 38400, 1 for 57600+).
 
 # CAVEATS
 

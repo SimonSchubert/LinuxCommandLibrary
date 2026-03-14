@@ -6,50 +6,49 @@ F5 BIG-IP SSL VPN client
 
 **Open** a new VPN connection
 
-```sudo f5fpc --start```
+```sudo f5fpc -s -x -t [https://host.example.com]```
 
-Open VPN connection to **specific host**
+**Show current VPN status**
 
-```sudo f5fpc --start --host [host.example.com]```
-
-Specify **username**
-
-```sudo f5fpc --start --host [host.example.com] --username [user]```
-
-Show current **VPN status**
-
-```sudo f5fpc --info```
+```sudo f5fpc -i```
 
 **Shutdown** VPN connection
 
-```sudo f5fpc --stop```
+```sudo f5fpc -o```
+
+**Connect with specific certificate**
+
+```sudo f5fpc -s -x -t [https://host.example.com] -C [/path/to/cert.pem]```
 
 # SYNOPSIS
 
 **f5fpc** [_options_]
+
+# PARAMETERS
+
+**-s**
+> Start VPN connection
+
+**-o**
+> Stop VPN connection
+
+**-i**
+> Display connection status
+
+**-t** _url_
+> VPN server URL
+
+**-x**
+> Use browser-based authentication
+
+**-C** _cert_
+> Client certificate file
 
 # DESCRIPTION
 
 **f5fpc** is the F5 BIG-IP Edge Client for SSL VPN connections. It establishes secure VPN tunnels to F5 network access servers.
 
 Proprietary commercial VPN client for enterprise networks.
-
-# PARAMETERS
-
-**--start**
-> Start VPN connection
-
-**--stop**
-> Stop VPN connection
-
-**--info**
-> Display connection status
-
-**--host** _hostname_
-> VPN server hostname
-
-**--username** _user_
-> Username for authentication
 
 # CAVEATS
 

@@ -34,7 +34,7 @@ _directory_
 
 # DESCRIPTION
 
-**EasyTAG** is a graphical application for viewing and editing audio file metadata (tags). It supports MP3, FLAC, Ogg Vorbis, MP4/AAC, and other common audio formats.
+**EasyTAG** is a graphical application for viewing and editing audio file metadata (tags). It supports MP3, MP2, MP4/AAC, FLAC, Ogg Vorbis, Ogg Speex, Ogg Opus, MusePack, Monkey's Audio, and WavPack files.
 
 The application provides batch tagging, filename to tag conversion, tag to filename renaming, and CDDB lookup for automatic metadata retrieval. It's useful for organizing music libraries and fixing incorrect or missing tags.
 

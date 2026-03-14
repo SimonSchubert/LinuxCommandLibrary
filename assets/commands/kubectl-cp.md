@@ -20,6 +20,14 @@ copies files and directories between local filesystem and containers in pods
 
 ```kubectl cp [localdir] [pod-name]:[/remote/dir]```
 
+**Copy from pod in specific namespace**
+
+```kubectl cp [namespace]/[pod-name]:[/path/in/container] [localfile]```
+
+**Copy without preserving permissions**
+
+```kubectl cp [localfile] [pod-name]:[path] --no-preserve```
+
 # SYNOPSIS
 
 **kubectl** **cp** _src_ _dest_ [_options_]
@@ -33,7 +41,10 @@ copies files and directories between local filesystem and containers in pods
 > Kubernetes namespace.
 
 **--no-preserve**
-> Do not preserve file permissions.
+> Do not preserve file ownership and permissions.
+
+**--retries** _int_
+> Number of retries on network errors (default: 0).
 
 # DESCRIPTION
 
@@ -41,7 +52,7 @@ copies files and directories between local filesystem and containers in pods
 
 # CAVEATS
 
-Requires tar to be installed in the container. Large file transfers may be slow as data is streamed through the API server.
+Requires tar to be installed in the container. If tar is missing, the copy will fail. Large file transfers may be slow as data is streamed through the API server. Symlinks in copied directories are not followed. The namespace/pod format uses `/` as separator (e.g., `mynamespace/mypod:/path`).
 
 # SEE ALSO
 

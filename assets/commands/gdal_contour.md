@@ -20,6 +20,10 @@ generates contour lines from elevation data
 
 ```gdal_contour -f "GeoJSON" -i [10] [dem.tif] [contours.geojson]```
 
+**Generate 3D contour polygons**
+
+```gdal_contour -p -3d -a [elev] -i [50] [dem.tif] [contours.shp]```
+
 # SYNOPSIS
 
 **gdal_contour** [_options_] _input_ _output_
@@ -45,10 +49,25 @@ _OUTPUT_
 > Output format.
 
 **-b** _BAND_
-> Source band number.
+> Source band number (default: 1).
 
-**--help**
-> Display help information.
+**-3d**
+> Force production of 3D vectors instead of 2D.
+
+**-p**
+> Generate contour polygons rather than contour lines.
+
+**-off** _OFFSET_
+> Offset from zero relative to which to interpret intervals.
+
+**-snodata** _VALUE_
+> Input nodata value to ignore.
+
+**-nln** _NAME_
+> Output layer name.
+
+**-q**
+> Quiet mode, suppress progress output.
 
 # DESCRIPTION
 

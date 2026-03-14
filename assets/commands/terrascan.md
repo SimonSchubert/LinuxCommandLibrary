@@ -70,7 +70,7 @@ Static security scanner for IaC
 > Policy type: all, aws, azure, gcp, k8s.
 
 **-o**, **--output** _format_
-> Output format: human, json, yaml, xml.
+> Output format: human, json, yaml, xml, junit-xml, sarif.
 
 **-r**, **--remote-type** _type_
 > Remote type: git.
@@ -113,4 +113,4 @@ Requires Go or pre-built binary. Policy updates require running init. Some polic
 
 # SEE ALSO
 
-[tfsec](/man/tfsec)(1), [checkov](/man/checkov)(1), [tflint](/man/tflint)(1), [opa](/man/opa)(1)
+[tfsec](/man/tfsec)(1), [checkov](/man/checkov)(1)

@@ -20,6 +20,10 @@ Check from **stdin**
 
 ```echo "speling errror" | aspell list```
 
+**Check a TeX/LaTeX file** (ignoring TeX commands)
+
+```aspell --mode=tex check [file.tex]```
+
 Create **personal dictionary**
 
 ```aspell --lang=[en] create master [./custom.rws] < [wordlist.txt]```
@@ -41,6 +45,9 @@ The tool supports multiple languages, personal dictionaries, and has better sugg
 
 **list**
 > List misspelled words from stdin
+
+**pipe**
+> Output misspelled words with position info (used by editors)
 
 **-c** _file_
 > Same as check (GNU ispell compatibility)

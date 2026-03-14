@@ -32,6 +32,14 @@ Search for an **installed** package
 
 ```sudo aptitude full-upgrade```
 
+**Simulate** an install without making changes
+
+```sudo aptitude install -s [package]```
+
+**Show why** a package is installed
+
+```aptitude why [package]```
+
 **Hold** a package to prevent automatic upgrades
 
 ```sudo aptitude hold '?installed([package])'```
@@ -85,6 +93,42 @@ Search for an **installed** package
 **autoclean**
 > Remove old downloaded package files
 
+**why package**
+> Explain why a package is installed or required
+
+**why-not package**
+> Explain why a package cannot be installed
+
+**download package**
+> Download .deb file without installing
+
+**reinstall package**
+> Reinstall an already-installed package
+
+**versions package**
+> List available versions of a package
+
+**forbid-version package**
+> Prevent upgrade to a specific package version
+
+**markauto package**
+> Mark package as automatically installed
+
+**unmarkauto package**
+> Mark package as manually installed
+
+**-s**, **--simulate**
+> Preview changes without applying them
+
+**-y**, **--assume-yes**
+> Skip confirmation prompts
+
+**-D**, **--show-deps**
+> Show explanations for automatic installations and removals
+
+**-V**, **--show-versions**
+> Display package version details in listings
+
 # CONFIGURATION
 
 **~/.aptitude/config**
@@ -106,4 +150,4 @@ Created as an alternative to apt-get with more advanced features. First released
 
 # SEE ALSO
 
-[apt](/man/apt)(8), [apt-get](/man/apt-get)(8), [dpkg](/man/dpkg)(1)
+[apt](/man/apt)(8), [apt-get](/man/apt-get)(8), [dpkg](/man/dpkg)(1), [nala](/man/nala)(8)

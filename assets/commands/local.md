@@ -4,25 +4,29 @@ bash builtin that declares variables with local scope within a function
 
 # TLDR
 
-**Declare local variable**
+**Declare a local variable**
 
 ```local [varname]```
 
-**Declare with initial value**
+**Declare a local variable with an initial value**
 
 ```local [varname]="[value]"```
 
-**Declare integer variable**
+**Declare a local integer variable**
 
 ```local -i [count]=0```
 
-**Declare array**
+**Declare a local indexed array**
 
 ```local -a [array]=([a] [b] [c])```
 
-**Declare readonly local**
+**Declare a local readonly variable**
 
 ```local -r [constant]="[value]"```
+
+**Inherit attributes and value from a variable in the surrounding scope**
+
+```local -I [varname]```
 
 # SYNOPSIS
 
@@ -49,13 +53,19 @@ bash builtin that declares variables with local scope within a function
 > Make readonly.
 
 **-n**
-> Name reference.
+> Name reference to another variable.
+
+**-x**
+> Mark for export to child processes.
+
+**-I**
+> Inherit attributes and value from a variable with the same name at a surrounding scope.
 
 # DESCRIPTION
 
 **local** is a bash builtin that declares variables with local scope within a function. Local variables are not visible outside the function where they are declared.
 
-Using local prevents function variables from polluting or conflicting with the global namespace.
+Using local prevents function variables from polluting or conflicting with the global namespace. The return status is zero unless local is used outside a function, an invalid name is supplied, or the variable is readonly.
 
 # EXAMPLE
 
@@ -74,4 +84,4 @@ Only valid inside functions. Not POSIX-compliant (use typeset for portability). 
 
 # SEE ALSO
 
-[declare](/man/declare)(1), [typeset](/man/typeset)(1), [export](/man/export)(1), [readonly](/man/readonly)(1)
+[declare](/man/declare)(1), [typeset](/man/typeset)(1), [export](/man/export)(1), [readonly](/man/readonly)(1), [unset](/man/unset)(1), [bash](/man/bash)(1)

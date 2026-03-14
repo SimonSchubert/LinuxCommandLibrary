@@ -4,21 +4,21 @@ Browser exploitation framework for penetration testing
 
 # TLDR
 
-**Start BeEF server**
+**Start the BeEF server with default configuration**
 
 ```beef-xss```
 
-**Start with custom config**
+**Start with a custom configuration file**
 
 ```beef-xss -c [/path/to/config.yaml]```
 
-**Reset database**
+**Start with verbose output**
+
+```beef-xss -v```
+
+**Reset the BeEF database and start fresh**
 
 ```beef-xss -x```
-
-**Show help**
-
-```beef-xss -h```
 
 # SYNOPSIS
 

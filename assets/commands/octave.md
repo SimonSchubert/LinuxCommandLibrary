@@ -4,25 +4,29 @@ GNU Octave, a numerical computing language
 
 # TLDR
 
-**Start interactive session**
+**Start an interactive session** (with GUI)
 
 ```octave```
 
-**Run script**
-
-```octave [script.m]```
-
-**Execute expression**
-
-```octave --eval "[expression]"```
-
-**Run without GUI**
+**Start an interactive CLI session** without GUI
 
 ```octave --no-gui```
 
-**Silent mode**
+**Run a script file**
 
-```octave --quiet [script.m]```
+```octave [path/to/script.m]```
+
+**Evaluate an expression and exit**
+
+```octave --eval "[diag([1,2,3])]"```
+
+**Run a script quietly** (suppress startup messages)
+
+```octave --quiet [path/to/script.m]```
+
+**Run in batch mode** (non-interactive, for scripts)
+
+```octave --no-gui --silent [path/to/script.m]```
 
 # SYNOPSIS
 
@@ -31,36 +35,54 @@ GNU Octave, a numerical computing language
 # PARAMETERS
 
 _FILE_
-> Script file to execute.
+> Script file (.m) to execute.
 
-**--eval** _EXPR_
-> Evaluate expression.
+**--eval** _CODE_
+> Evaluate CODE and exit (unless --persist is also given).
+
+**--gui**
+> Start the graphical user interface.
 
 **--no-gui**
-> Run without GUI.
+> Use the command-line interface instead of the GUI.
 
-**--quiet**, **-q**
-> Suppress startup messages.
+**-q**, **--quiet**, **--silent**
+> Suppress the startup message and version info.
 
-**--interactive**, **-i**
-> Force interactive mode.
+**-i**, **--interactive**
+> Force interactive mode (useful when running via pipes or remote shells).
+
+**--no-init-file**
+> Don't read the ~/.octaverc or .octaverc initialization files.
+
+**--persist**
+> Stay interactive after --eval or running a script file.
+
+**--path** _dir_
+> Add directory to the head of the function search path.
+
+**--jit-compiler**
+> Enable the JIT compiler for accelerating loops.
 
 **--help**
 > Display help information.
 
+**--version**
+> Display version information.
+
 # DESCRIPTION
 
-**octave** is GNU Octave, a numerical computing language. MATLAB compatible.
+**GNU Octave** is a high-level interpreted language primarily intended for numerical computations. It provides a convenient command-line interface and GUI for solving linear and nonlinear problems numerically, and is largely compatible with MATLAB.
 
-The tool provides matrix operations and plotting. Scientific computing environment.
+Octave features extensive tools for matrix operations, solving systems of equations, numerical integration, statistics, optimization, and 2D/3D plotting. It can be extended with packages from Octave Forge and supports calling C, C++, and Fortran code.
 
 # CAVEATS
 
-MATLAB compatibility varies. Large memory for big matrices. GUI optional.
+MATLAB compatibility is extensive but not complete; some MATLAB toolbox functions are unavailable or behave differently. Large matrix operations can consume significant memory. The JIT compiler is experimental in some versions.
 
 # HISTORY
 
-GNU Octave was created by **John W. Eaton** as a free MATLAB alternative.
+GNU Octave was created by **John W. Eaton** beginning in **1988** as a companion to a chemical reactor design textbook. It was first released as a standalone application in **1993** and is developed as a GNU project.
 
 # SEE ALSO
 

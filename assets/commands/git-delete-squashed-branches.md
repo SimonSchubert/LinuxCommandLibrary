@@ -14,11 +14,11 @@ Remove branches that were squash-merged
 
 # DESCRIPTION
 
-**git delete-squashed-branches** deletes branches that have been squash-merged into the current branch. Part of git-extras, it detects branches whose commits were combined and merged as a single commit, which Git's standard --merged flag cannot identify.
+**git delete-squashed-branches** deletes local branches that have been squash-merged into the current branch. Part of **git-extras**, it detects branches whose commits were combined and merged as a single squash commit, which Git's standard **--merged** flag cannot identify.
 
-Squash merging creates a new commit combining all branch changes, leaving the original branch commits technically unmerged. This causes branch accumulation since git branch --merged won't flag them for deletion. The command uses heuristics to detect when a branch's changes exist in the target branch despite differing commit history.
+Squash merging creates a new commit combining all branch changes, leaving the original branch commits technically unmerged. This causes branch accumulation since **git branch --merged** won't flag them for deletion. The command uses tree comparison heuristics to detect when a branch's changes exist in the target branch despite differing commit history.
 
-This tool is essential for platforms like GitHub and GitLab that default to squash merging, where manual branch cleanup becomes tedious.
+Particularly useful for workflows on GitHub and GitLab where squash merging is the default merge strategy.
 
 # SEE ALSO
 

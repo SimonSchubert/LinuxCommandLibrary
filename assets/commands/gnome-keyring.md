@@ -45,8 +45,17 @@ secure password and key storage daemon
 **-f**, **--foreground**
 > Run in foreground.
 
+**--unlock**
+> Read a password from stdin and unlock the login keyring, or create it if it does not exist.
+
 **-l**, **--login**
-> Read login password from stdin.
+> Read login password from stdin (used by PAM).
+
+**-C**, **--control-directory** _directory_
+> Directory for creating communication sockets.
+
+**-V**, **--version**
+> Print version and exit.
 
 # DESCRIPTION
 
@@ -75,4 +84,4 @@ GNOME Keyring was created for the GNOME desktop to provide secure credential sto
 
 # SEE ALSO
 
-[secret-tool](/man/secret-tool)(1), [ssh-agent](/man/ssh-agent)(1), [seahorse](/man/seahorse)(1)
+[secret-tool](/man/secret-tool)(1), [ssh-agent](/man/ssh-agent)(1), [gpg](/man/gpg)(1)

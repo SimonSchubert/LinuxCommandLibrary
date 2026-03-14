@@ -49,17 +49,41 @@ interactive spell checker
 **-n**
 > nroff/troff mode.
 
+**-H**
+> HTML mode.
+
+**-b**
+> Create a backup file (.bak) of the input file.
+
+**-x**
+> Don't create a backup file.
+
+**-B**
+> Report run-together words as spelling errors.
+
+**-C**
+> Consider run-together words as legal compounds.
+
+**-M**
+> Display a one-line mini-menu of options at the bottom of the screen.
+
+**-N**
+> Suppress the mini-menu.
+
+**-S**
+> Sort the list of guesses by probable correctness.
+
 **-p** _FILE_
 > Personal dictionary file.
 
-**--help**
-> Display help information.
+**-L** _LINES_
+> Number of context lines to display.
 
 # DESCRIPTION
 
-**ispell** is an interactive spell checker. It highlights misspellings and offers corrections for text files.
+**ispell** is an interactive spell checker. It highlights misspellings and offers corrections for text files. In interactive mode, each misspelled word is displayed with context, and the user can choose a suggested correction, type a replacement, or add the word to a personal dictionary.
 
-The tool supports multiple languages and formats. It can run interactively or in batch mode for scripting.
+The tool supports multiple languages and input formats including plain text, TeX/LaTeX, nroff/troff, and HTML. It can run interactively or in pipe mode (-a) for scripting and integration with other programs.
 
 # CAVEATS
 

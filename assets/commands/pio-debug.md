@@ -1,6 +1,6 @@
 # TAGLINE
 
-starts a debugging session for embedded projects
+Start a debugging session for PlatformIO embedded projects
 
 # TLDR
 
@@ -16,6 +16,10 @@ starts a debugging session for embedded projects
 
 ```pio debug --interface=gdb```
 
+**Debug with specific project directory**
+
+```pio debug -d [path/to/project]```
+
 # SYNOPSIS
 
 **pio debug** [_options_]
@@ -23,20 +27,28 @@ starts a debugging session for embedded projects
 # PARAMETERS
 
 **-e**, **--environment** _name_
-> Debug environment.
+> Target environment from platformio.ini.
 
 **--interface** _type_
 > Debugger interface (gdb).
 
 **-d**, **--project-dir** _dir_
-> Project directory.
+> Path to PlatformIO project directory (default: current).
 
 **--upload-port** _port_
-> Upload port.
+> Upload port for the target board.
+
+**-v**, **--verbose**
+> Verbose output for troubleshooting.
+
+**--project-conf** _path_
+> Path to a specific platformio.ini file.
 
 # DESCRIPTION
 
-**pio debug** starts a debugging session for embedded projects. Connects to on-chip debuggers, sets breakpoints, and inspects variables. Integrates with GDB and IDE debug interfaces.
+**pio debug** prepares a PlatformIO project for debugging or launches a debug server. It connects to on-chip debuggers (JTAG/SWD), enables setting breakpoints, stepping through code, and inspecting variables on embedded hardware.
+
+The binary shortcut **piodebuggdb** is equivalent to `pio debug --interface=gdb`. Debug builds use the `debug_build_flags` from platformio.ini (typically `-O0 -g3 -ggdb3` for full symbol information).
 
 # SEE ALSO
 

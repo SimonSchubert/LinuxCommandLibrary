@@ -16,9 +16,13 @@ Use in **script conditionals**
 
 **apm_available**
 
+# PARAMETERS
+
+This command takes no arguments.
+
 # DESCRIPTION
 
-**apm_available** tests whether Advanced Power Management (APM) support is available on the current system. It returns exit status 0 if APM is supported and 1 if not.
+**apm_available** tests whether Advanced Power Management (APM) support is available on the current system by checking for the /proc/apm file. It returns exit status 0 if APM is supported and 1 if not.
 
 This utility is useful in scripts that need to choose between APM and ACPI for power management queries.
 

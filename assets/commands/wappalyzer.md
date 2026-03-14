@@ -6,7 +6,7 @@ Identify technologies used on websites
 
 **Scan a single URL**
 
-```wappalyzer -i [https://example.com]```
+```wappalyzer -i https://example.com```
 
 **Scan URLs from file**
 
@@ -14,11 +14,11 @@ Identify technologies used on websites
 
 **Export results to JSON**
 
-```wappalyzer -i [https://example.com] -oJ [results.json]```
+```wappalyzer -i https://example.com -oJ [results.json]```
 
 **Using webanalyze (Go version)**
 
-```webanalyze -host [https://example.com]```
+```webanalyze -host https://example.com```
 
 **Update technology fingerprints**
 

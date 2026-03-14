@@ -4,13 +4,17 @@ Browse for mDNS/DNS-SD network services
 
 # TLDR
 
-**List** services with addresses
+**Browse all** services and resolve addresses
 
-```avahi-browse -a -r -l```
+```avahi-browse -a -r```
 
-List for **scripts** (parsable)
+Browse all services, **terminate** after dump (for scripts)
 
 ```avahi-browse -a -t -p```
+
+Browse for a **specific service type**
+
+```avahi-browse _http._tcp```
 
 List **domains**
 
@@ -18,7 +22,11 @@ List **domains**
 
 Search specific **domain**
 
-```avahi-browse -a --domain=example.local```
+```avahi-browse -a --domain=[example.local]```
+
+Browse and ignore **local** services
+
+```avahi-browse -a -r -l```
 
 # SYNOPSIS
 
@@ -53,6 +61,15 @@ By default, the tool runs continuously and displays services as they appear or d
 **--domain** _domain_
 > Limit search to a specific domain
 
+**-f, --no-fail**
+> Don't fail if the daemon is not running; wait until it appears
+
+**-k, --no-db-lookup**
+> Don't look up service types in the service type database
+
+**-b, --dump-db**
+> Dump the service type database
+
 **-v, --verbose**
 > Enable verbose output
 
@@ -66,4 +83,4 @@ Requires the Avahi daemon to be running. Services must be advertised via mDNS to
 
 # SEE ALSO
 
-[avahi-resolve](/man/avahi-resolve)(1), [avahi-daemon](/man/avahi-daemon)(8)
+[avahi-resolve](/man/avahi-resolve)(1), [avahi-publish](/man/avahi-publish)(1), [avahi-daemon](/man/avahi-daemon)(8)

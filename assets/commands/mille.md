@@ -8,41 +8,36 @@ card game Mille Bornes
 
 ```mille```
 
-**Play against computer**
+**Resume a saved game** from file
 
-```mille -c```
-
-**Show help**
-
-```mille -h```
+```mille [path/to/savefile]```
 
 # SYNOPSIS
 
-**mille** [_options_]
+**mille** [_file_]
 
 # PARAMETERS
 
-**-c**
-> Play against computer.
-
-**-h**
-> Show help.
+_file_
+> Saved game file to resume.
 
 # DESCRIPTION
 
-**mille** is the card game Mille Bornes. It's a classic racing card game in the terminal.
+**mille** plays a two-handed game of Mille Bornes against the computer. Players race to reach 1000 miles while playing hazard cards on the opponent and using remedies and safeties.
 
-The tool is part of bsdgames. Players race to reach 1000 miles while avoiding hazards.
+During play, you can pick cards from the deck, play or discard cards by typing their number, toggle hand sorting, save the game with 'S', or redraw the screen with Ctrl-L.
+
+Part of the **bsdgames** package.
 
 # CAVEATS
 
-Part of bsdgames. Terminal-based. Two-player or vs computer.
+Part of bsdgames. Terminal-based. The game interface uses a text-based card display with keyboard controls.
 
 # HISTORY
 
-mille is part of **bsdgames**, implementing the French card game Mille Bornes (1954).
+mille is part of **bsdgames**, implementing the French card game Mille Bornes (1954). The original code was written by Ken Arnold.
 
 # SEE ALSO
 
-[canfield](/man/canfield)(6), [cribbage](/man/cribbage)(6), [bsdgames](/man/bsdgames)(6)
+[canfield](/man/canfield)(6), [bsdgames](/man/bsdgames)(6)
 

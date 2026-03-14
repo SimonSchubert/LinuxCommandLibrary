@@ -41,19 +41,28 @@ Filter expressions allow you to select which log messages to display based on ta
 # PARAMETERS
 
 **-v** _format_
-> Output format: brief, process, tag, thread, raw, time, threadtime, long
+> Output format: brief, process, tag, thread, raw, time, threadtime (default), long
 
 **-b** _buffer_
 > Log buffer: main, system, radio, events, crash, all
 
 **-c**
-> Clear the log buffers
+> Clear the log buffers and exit
 
 **-d**
 > Dump log and exit (don't block)
 
 **-f** _file_
 > Write output to file
+
+**-g**
+> Print the size of the specified log buffer and exit
+
+**-n** _count_
+> Set the maximum number of rotated logs (default 4, requires -r)
+
+**-r** _kbytes_
+> Rotate log every kbytes of output (default 16, requires -f)
 
 **-s**
 > Set default filter to silent (equivalent to *:S)

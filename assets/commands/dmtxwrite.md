@@ -12,25 +12,29 @@ Data Matrix barcode encoder
 
 ```dmtxwrite -o [output.png] < [data.txt]```
 
-**Set output image size**
+**Set module (cell) size in pixels**
 
-```echo "[text]" | dmtxwrite -d [300] -o [output.png]```
+```echo "[text]" | dmtxwrite -d [5] -o [output.png]```
+
+**Set margin size in pixels**
+
+```echo "[text]" | dmtxwrite -m [10] -o [output.png]```
 
 **Create SVG output**
 
 ```echo "[text]" | dmtxwrite -o [output.svg]```
 
-**Set module (cell) size**
-
-```echo "[text]" | dmtxwrite -m [5] -o [output.png]```
-
-**Add margin around barcode**
-
-```echo "[text]" | dmtxwrite -M [10] -o [output.png]```
-
 **Use specific symbol size**
 
 ```echo "[text]" | dmtxwrite -s s -o [output.png]```
+
+**Print codeword listing instead of barcode**
+
+```echo "[text]" | dmtxwrite -c```
+
+**Set image print resolution (DPI)**
+
+```echo "[text]" | dmtxwrite -R [300] -o [output.png]```
 
 # SYNOPSIS
 
@@ -39,34 +43,37 @@ Data Matrix barcode encoder
 # PARAMETERS
 
 **-o**, **--output** _file_
-> Output filename (format from extension).
+> Output filename. Default is standard output.
 
-**-d**, **--resolution** _dpi_
-> Image resolution in DPI.
-
-**-m**, **--module** _pixels_
+**-d**, **--module** _pixels_
 > Module (cell) size in pixels.
 
-**-M**, **--margin** _pixels_
+**-m**, **--margin** _pixels_
 > Margin size in pixels.
 
 **-s**, **--symbol-size** _size_
-> Symbol size: s(quare), r(ectangle), or NxN.
+> Symbol size: s(quare auto), r(ectangle auto), or RxC (e.g., 24x24).
 
 **-e**, **--encoding** _scheme_
-> Encoding scheme: b(est), a(scii), c(40), etc.
+> Encodation scheme: b(est), a(scii) [default], c(40), t(ext), x(12), e(difact), 8 (Base 256).
+
+**-R**, **--resolution** _dpi_
+> Image print resolution in DPI.
 
 **-f**, **--format** _format_
-> Output format: png, tif, gif, pdf, svg.
+> Output format: png [default], tif, gif, pdf, svg.
 
-**-b**, **--background** _color_
-> Background color.
+**-c**, **--codewords**
+> Print codeword listing instead of creating barcode image.
 
-**-c**, **--foreground** _color_
-> Foreground color.
+**-M**, **--mosaic**
+> Create non-standard Data Mosaic barcode.
 
 **-v**, **--verbose**
 > Verbose output.
+
+**-V**, **--version**
+> Print version information.
 
 # DESCRIPTION
 

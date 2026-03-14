@@ -20,7 +20,7 @@ multi-threaded antivirus scanning daemon
 
 ```clamd --config-check```
 
-**Reload virus database**
+**Reload virus database** without restarting
 
 ```clamdscan --reload```
 
@@ -34,21 +34,21 @@ multi-threaded antivirus scanning daemon
 
 The daemon listens on a Unix socket or TCP port and accepts commands to scan files, directories, or data streams. Multiple clients can connect simultaneously, making it suitable for email servers, file servers, and web applications.
 
-clamd is commonly used with mail transfer agents (Postfix, Exim, Sendmail), web proxies, and file upload handlers to provide real-time malware scanning.
+clamd is commonly used with mail transfer agents (Postfix, Exim, Sendmail), web proxies, and file upload handlers to provide real-time malware scanning. Clients interact with clamd using **clamdscan** or by sending commands directly to the socket.
 
 # PARAMETERS
 
-**-c** _file_, **--config-file=** _file_
-> Use specified configuration file.
+**-c** _file_, **--config-file=**_file_
+> Use specified configuration file (default: /etc/clamav/clamd.conf).
 
-**--foreground**
-> Run in foreground, don't daemonize.
+**-F**, **--foreground**
+> Run in foreground, do not daemonize.
 
 **--debug**
-> Enable debug mode.
+> Enable debug messages.
 
 **--config-check**
-> Check configuration and exit.
+> Read configuration, check for errors, and exit.
 
 **-h**, **--help**
 > Display help.
@@ -59,11 +59,11 @@ clamd is commonly used with mail transfer agents (Postfix, Exim, Sendmail), web 
 # CONFIGURATION
 
 **/etc/clamav/clamd.conf**
-> Daemon configuration including socket type, scan limits, thread count, and logging options.
+> Daemon configuration including socket type (LocalSocket or TCPSocket), scan limits (MaxFileSize, MaxScanSize), thread count (MaxThreads), and logging options (LogFile, LogSyslog).
 
 # CAVEATS
 
-Requires regular virus database updates via freshclam. Memory usage depends on database size (typically 1-2GB). Socket permissions must allow client access. Self-check may fail if TCP connections are rate-limited. Performance depends on available memory and CPU.
+Requires regular virus database updates via **freshclam**. Memory usage depends on database size (typically 1-2 GB of RAM). Socket permissions must allow client access. The **Example** directive in clamd.conf must be removed or commented out before the daemon will start. Performance depends on available memory and CPU cores.
 
 # HISTORY
 
@@ -71,4 +71,4 @@ Requires regular virus database updates via freshclam. Memory usage depends on d
 
 # SEE ALSO
 
-[clamscan](/man/clamscan)(1), [clamdscan](/man/clamdscan)(1), [freshclam](/man/freshclam)(1), [clamd.conf](/man/clamd.conf)(5)
+[clamscan](/man/clamscan)(1), [clamdscan](/man/clamdscan)(1), [freshclam](/man/freshclam)(1)

@@ -20,6 +20,10 @@ Query domain and IP registration data
 
 ```rdap -j [example.com]```
 
+**WHOIS-style output**
+
+```rdap -w [example.com]```
+
 **Verbose output**
 
 ```rdap -v [example.com]```
@@ -31,19 +35,25 @@ Query domain and IP registration data
 # PARAMETERS
 
 **-j**, **--json**
-> JSON output.
+> Output JSON, pretty-printed
+
+**-r**, **--raw**
+> Output raw server response
+
+**-w**, **--whois**
+> Output WHOIS style (domain queries only)
 
 **-v**, **--verbose**
-> Verbose mode.
+> Print verbose messages on stderr
 
-**-s** _server_
-> Use specific RDAP server.
+**-s**, **--server**=_URL_
+> Use specific RDAP server
 
-**-t** _type_
-> Query type (domain, ip, autnum).
+**-T**, **--timeout**=_SECS_
+> Timeout after specified seconds (default: 30)
 
-**--raw**
-> Raw response.
+**-k**, **--insecure**
+> Disable SSL certificate verification
 
 # DESCRIPTION
 
@@ -74,11 +84,12 @@ rdap 2001:4860:4860::8888
 # QUERY TYPES
 
 ```
-domain   - Domain registration
-ip       - IP address/network
-autnum   - Autonomous System Number
-entity   - Registrant entity
+domain     - Domain registration
+ip         - IP address/network
+autnum     - Autonomous System Number
+entity     - Registrant entity
 nameserver - Name server
+url        - Direct RDAP URL
 ```
 
 # CAVEATS

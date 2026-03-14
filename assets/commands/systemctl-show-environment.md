@@ -4,13 +4,17 @@ Display service manager environment
 
 # TLDR
 
-Show **system** environment
+Show **system** service manager environment
 
 ```systemctl show-environment```
 
-Show **user** environment
+Show **user** service manager environment
 
 ```systemctl show-environment --user```
+
+**Filter** for a specific variable
+
+```systemctl show-environment | grep [PATH]```
 
 # SYNOPSIS
 
@@ -26,9 +30,9 @@ Show **user** environment
 
 # DESCRIPTION
 
-**systemctl show-environment** displays all environment variables set in the systemd service manager's environment block. These variables are passed to all services started by the manager.
+**systemctl show-environment** displays all environment variables set in the systemd service manager's environment block. These variables are inherited by all services started by the manager.
 
-The output shows one variable per line in NAME=VALUE format.
+The output shows one variable per line in NAME=VALUE format. Use **systemctl set-environment** to add variables and **systemctl unset-environment** to remove them.
 
 # CAVEATS
 

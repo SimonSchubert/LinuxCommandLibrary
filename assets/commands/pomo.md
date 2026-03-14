@@ -1,6 +1,6 @@
 # TAGLINE
 
-Simple, customizable Pomodoro timer for your terminal
+Simple, customizable Pomodoro timer for the terminal
 
 # TLDR
 
@@ -26,6 +26,17 @@ Simple, customizable Pomodoro timer for your terminal
 
 **pomo** _command_
 
+# PARAMETERS
+
+_duration_
+> Work session length (default: 25m). Accepts formats like 30m, 1h.
+
+_break_duration_
+> Break length after work session (default: 5m).
+
+**stats**
+> Show productivity statistics with weekly charts and heatmap.
+
 # DESCRIPTION
 
 **pomo** is a terminal-based Pomodoro timer with customizable work and break intervals, real-time progress visualization, ASCII art displays, and cross-platform desktop notifications. It tracks productivity statistics with weekly charts and a GitHub-style activity heatmap.
@@ -33,7 +44,3 @@ Simple, customizable Pomodoro timer for your terminal
 # HISTORY
 
 **pomo** was created by **Bahaaio** and is written in **Go**.
-
-# SEE ALSO
-
-[timer](/man/timer)(1)

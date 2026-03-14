@@ -1,28 +1,32 @@
 # TAGLINE
 
-runs Kotlin scripts and provides a REPL
+Run Kotlin scripts and provide a REPL
 
 # TLDR
 
-**Run Kotlin script**
+**Run a Kotlin script**
 
-```kotlin [script.kts]```
+```kotlin script.kts```
 
-**Run with arguments**
+**Run a script with arguments**
 
-```kotlin [script.kts] [arg1] [arg2]```
+```kotlin script.kts [arg1] [arg2]```
 
-**REPL mode**
+**Start the interactive REPL**
 
 ```kotlin```
 
-**Execute expression**
+**Evaluate an expression**
 
 ```kotlin -e "println(\"Hello\")"```
 
-**Include classpath**
+**Run a script with additional classpath JARs**
 
-```kotlin -cp [lib.jar] [script.kts]```
+```kotlin -cp [lib.jar] script.kts```
+
+**Pass JVM options** (e.g., increase memory)
+
+```kotlin -J-Xmx512m script.kts```
 
 # SYNOPSIS
 
@@ -40,7 +44,13 @@ _SCRIPT_
 > Classpath.
 
 **-J** _ARG_
-> Pass argument to JVM.
+> Pass argument to JVM (e.g., -J-Xmx512m).
+
+**-nowarn**
+> Suppress warning messages.
+
+**-version**
+> Display the Kotlin version.
 
 **--help**
 > Display help information.

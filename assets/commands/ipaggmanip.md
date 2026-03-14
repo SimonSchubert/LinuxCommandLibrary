@@ -1,6 +1,6 @@
 # TAGLINE
 
-manipulates IP address aggregate files created by **ipaggcreate**
+Manipulate IP address aggregate files created by ipaggcreate
 
 # TLDR
 
@@ -47,6 +47,9 @@ manipulates IP address aggregate files created by **ipaggcreate**
 
 **--prefix** _LENGTH_
 > Re-aggregate with different prefix length
+
+**-o** _FILE_
+> Write output to file instead of stdout
 
 # DESCRIPTION
 

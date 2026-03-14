@@ -47,4 +47,4 @@ The System V init process originated in **AT&T Unix System V** released in 1983.
 
 # SEE ALSO
 
-[systemctl](/man/systemctl)(1), [journalctl](/man/journalctl)(1), [grub](/man/grub)(8)
+[systemctl](/man/systemctl)(1), [journalctl](/man/journalctl)(1), [init](/man/init)(1), [grub](/man/grub)(1)

@@ -12,9 +12,13 @@ Check correctness of a Cargo.toml manifest
 
 ```cargo verify-project --manifest-path [path/to/Cargo.toml]```
 
-**Verify offline**
+**Verify with locked dependencies**
 
-```cargo verify-project --offline```
+```cargo verify-project --locked```
+
+**Verify offline** (no network access)
+
+```cargo verify-project --frozen```
 
 # SYNOPSIS
 
@@ -29,22 +33,28 @@ This command is useful in CI/CD pipelines and pre-commit hooks for catching mani
 # PARAMETERS
 
 **--manifest-path** _path_
-> Path to Cargo.toml
+> Path to Cargo.toml file.
 
 **--locked**
-> Assert Cargo.lock is up-to-date
+> Assert that Cargo.lock is up-to-date.
 
 **--frozen**
-> Assert Cargo.lock is up-to-date and no network
+> Assert that Cargo.lock is up-to-date and prevent network access.
 
 **--offline**
-> Don't access network
+> Run without accessing the network.
 
 **-v**, **--verbose**
-> Verbose output
+> Use verbose output.
 
 **-q**, **--quiet**
-> Suppress output
+> Suppress cargo output messages.
+
+**--config** _KEY=VALUE_
+> Override a Cargo configuration value.
+
+**-C** _path_
+> Change to directory before executing.
 
 # OUTPUT
 
@@ -61,22 +71,14 @@ This command is useful in CI/CD pipelines and pre-commit hooks for catching mani
 # EXIT STATUS
 
 **0**
-> Manifest is valid
+> Manifest is valid.
 
 **1**
-> Manifest is invalid
-
-# VALIDATION
-
-Checks:
-- Syntax correctness
-- Valid dependency specifications
-- Proper metadata formatting
-- Required fields present
+> Manifest is invalid.
 
 # CAVEATS
 
-Useful for CI/CD pipelines and pre-commit hooks. Does not verify dependencies exist, only manifest syntax.
+Does not verify that dependencies actually exist on a registry, only that the manifest syntax is well-formed. Useful for CI/CD pipelines and pre-commit hooks.
 
 # SEE ALSO
 

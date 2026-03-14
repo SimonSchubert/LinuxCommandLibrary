@@ -1,68 +1,94 @@
 # TAGLINE
 
-finds vulnerabilities in dependencies
+Scan dependencies for known vulnerabilities using the OSV database
 
 # TLDR
 
-**Scan directory**
+**Scan a directory recursively**
 
-```osv-scanner -r [directory]```
+```osv-scanner scan -r [directory]```
 
-**Scan lockfile**
+**Scan a specific lockfile**
 
-```osv-scanner --lockfile=[package-lock.json]```
+```osv-scanner scan --lockfile [package-lock.json]```
 
-**Scan SBOM**
+**Scan an SBOM file**
 
-```osv-scanner --sbom=[sbom.json]```
+```osv-scanner scan --sbom [sbom.json]```
 
-**Output as JSON**
+**Output results as JSON**
 
-```osv-scanner -r [directory] --json```
+```osv-scanner scan -r [directory] --format json```
 
-**Scan specific ecosystem**
+**Scan a Docker image**
 
-```osv-scanner --lockfile=requirements.txt```
+```osv-scanner scan --docker [image:tag]```
+
+**Scan and generate a guided remediation report**
+
+```osv-scanner fix -r [directory]```
 
 # SYNOPSIS
 
-**osv-scanner** [_options_] [_targets_]
+**osv-scanner** _command_ [_options_] [_targets_]
 
 # PARAMETERS
 
-**-r** _DIR_
-> Scan directory recursively.
+**scan**
+> Scan dependencies for vulnerabilities.
+
+**fix**
+> Generate guided remediation suggestions.
+
+**-r**, **--recursive** _DIR_
+> Scan directory recursively for lockfiles and manifests.
 
 **--lockfile** _FILE_
-> Scan specific lockfile.
+> Scan a specific lockfile (auto-detects ecosystem).
 
 **--sbom** _FILE_
-> Scan SBOM file.
+> Scan an SBOM file (supports SPDX and CycloneDX).
 
-**--json**
-> JSON output.
+**--docker** _IMAGE_
+> Scan a Docker image for vulnerabilities.
+
+**--format** _FORMAT_
+> Output format: table (default), json, markdown, sarif.
 
 **--config** _FILE_
-> Configuration file.
+> Path to osv-scanner.toml configuration file.
+
+**--call-analysis**
+> Enable call graph analysis to filter unreachable vulnerabilities (Go, Rust).
+
+**--no-ignore**
+> Do not respect ignore entries in the config file.
+
+**--verbosity** _LEVEL_
+> Set verbosity level: error, warn, info, verbose.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**osv-scanner** finds vulnerabilities in dependencies. Uses OSV database.
+**osv-scanner** scans project dependencies for known vulnerabilities by querying the **OSV.dev** database, which aggregates vulnerability data from multiple sources including GitHub Advisory Database, PyPI, RubyGems, and crates.io.
 
-The tool scans lockfiles and SBOMs. Open source vulnerability detection.
+The tool automatically detects and parses lockfiles from most major package ecosystems including npm, pip, Go modules, Cargo, Maven, NuGet, and more. It can also scan SBOM files in SPDX or CycloneDX formats and Docker container images.
+
+The **fix** subcommand provides guided remediation by suggesting version upgrades that resolve detected vulnerabilities while minimizing breaking changes.
+
+Call graph analysis (supported for Go and Rust) can reduce false positives by determining whether vulnerable code paths are actually reachable from the project.
 
 # CAVEATS
 
-Requires network access. Database coverage varies. Google maintained.
+Requires network access to query the OSV.dev database. Vulnerability coverage depends on data submitted to OSV by various ecosystems. Call graph analysis is only available for Go and Rust projects.
 
 # HISTORY
 
-osv-scanner was created by **Google** for scanning dependencies against OSV database.
+osv-scanner was released by **Google** in **December 2022** as a frontend for the OSV.dev vulnerability database. It was designed to provide a free, open-source alternative for dependency scanning. The **fix** subcommand for guided remediation was added in 2024.
 
 # SEE ALSO
 
-[npm-audit](/man/npm-audit)(1), [trivy](/man/trivy)(1), [grype](/man/grype)(1)
+[npm-audit](/man/npm-audit)(1), [trivy](/man/trivy)(1), [grype](/man/grype)(1), [snyk](/man/snyk)(1)
 

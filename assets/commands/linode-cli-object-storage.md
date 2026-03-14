@@ -10,7 +10,7 @@ manages Linode Object Storage
 
 **Create bucket**
 
-```linode-cli object-storage buckets-create --cluster [us-east-1] --label [my-bucket]```
+```linode-cli object-storage buckets-create --region [us-east] --label [my-bucket]```
 
 **Delete bucket**
 
@@ -45,8 +45,8 @@ manages Linode Object Storage
 **keys-create**
 > Create access key.
 
-**--cluster** _id_
-> Cluster/region ID.
+**--region** _id_
+> Region ID (replaces deprecated --cluster).
 
 **--label** _name_
 > Bucket or key label.

@@ -1,35 +1,25 @@
 # TAGLINE
 
-Create uniquely named archives with branch and commit information
+Export the current HEAD of the git repository to a zip archive
 
 # TLDR
 
-**Create archive with branch name**
+**Create archive of current branch**
 
 ```git archive-file```
 
-**Create archive from specific branch**
-
-```git archive-file --branch [main]```
-
 # SYNOPSIS
 
-**git** **archive-file** [_options_]
-
-# PARAMETERS
-
-**--branch** _name_
-> Branch to archive.
+**git** **archive-file**
 
 # DESCRIPTION
 
-**git archive-file** is a git-extras utility that automates the creation of archive files with descriptive filenames. It generates zip archives whose names include the branch name and current commit hash, ensuring each archive is uniquely identifiable.
+**git archive-file** is a git-extras utility that exports the current HEAD of the repository into a zip archive with a descriptive filename. The generated filename includes the repository name and branch name (e.g., "project.main.zip"), or on a detached HEAD such as a tag, uses the tag name (e.g., "project.1.0.0.zip").
 
-This command simplifies the workflow of creating release snapshots and distribution packages by eliminating the need to manually construct meaningful archive names. The generated filename format typically follows patterns like "project-branch-commithash.zip", making it easy to track which code version an archive contains.
+The command takes no arguments or options. It always archives the current HEAD and writes the zip file to the current directory.
 
-The tool is particularly valuable in continuous integration pipelines and release processes where automated, uniquely-named artifact generation is required.
+As of git-extras 6.4, the assumed default branch name changed from master to main.
 
 # SEE ALSO
 
 [git-archive](/man/git-archive)(1), [git-extras](/man/git-extras)(1)
-

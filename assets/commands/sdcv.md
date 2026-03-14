@@ -34,7 +34,7 @@ Console dictionary using StarDict format
 
 # SYNOPSIS
 
-**sdcv** [_-u dict_] [_-n_] [_-e_] [_--data-dir dir_] [_options_] [_word_]
+**sdcv** [_-u dict_] [_-n_] [_-e_] [_-j_] [_--data-dir dir_] [_options_] [_word_]
 
 # PARAMETERS
 
@@ -50,13 +50,13 @@ Console dictionary using StarDict format
 **-e**, **--exact-search**
 > Exact matches only.
 
-**-f**, **--fuzzy-search**
-> Fuzzy search.
+**-x**, **--only-data-dir**
+> Only use dictionaries in data-dir, do not search in user and system directories.
 
 **--data-dir** _DIR_
 > Dictionary data directory.
 
-**--json**
+**-j**, **--json**
 > JSON output.
 
 **--color**
@@ -67,6 +67,9 @@ Console dictionary using StarDict format
 
 **--utf8-output**
 > UTF-8 output.
+
+**-v**, **--version**
+> Display version and exit.
 
 **-h**, **--help**
 > Show help.
@@ -96,13 +99,22 @@ Output formatting supports terminal display and programmatic processing. JSON ou
 **STARDICT_DATA_DIR**
 > Environment variable overriding the default dictionary data directory.
 
+**SDCV_PAGER**
+> Environment variable to specify a pager for output display.
+
+**SDCV_HISTFILE**
+> Environment variable to set the history file location.
+
+**~/.sdcv_ordering**
+> File specifying dictionary ordering for search results.
+
 # CAVEATS
 
 Requires dictionary files to be installed. Quality varies by dictionary. Some dictionaries are large. Character encoding issues possible.
 
 # HISTORY
 
-**sdcv** is the console version of **StarDict**, an open-source dictionary project started in **2003** by **Hu Zheng**. StarDict became popular for its cross-platform GUI, and sdcv extended it to command-line users.
+**sdcv** is the console version of **StarDict**, an open-source dictionary project started in **2003** by **Hu Zheng**. StarDict became popular for its cross-platform GUI, and sdcv extended it to command-line users. The current maintained version is by **Evgeniy Dushistov** on GitHub.
 
 # SEE ALSO
 

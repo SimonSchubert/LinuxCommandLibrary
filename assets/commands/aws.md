@@ -1,6 +1,6 @@
 # TAGLINE
 
-Unified command-line interface for Amazon Web Services.
+Unified command-line interface for Amazon Web Services
 
 # TLDR
 
@@ -27,6 +27,14 @@ Unified command-line interface for Amazon Web Services.
 Use **specific profile**
 
 ```aws --profile [production] s3 ls```
+
+**Configure** AWS credentials
+
+```aws configure```
+
+**Filter output** with JMESPath query
+
+```aws ec2 describe-instances --query "Reservations[*].Instances[*].[InstanceId,State.Name]" --output table```
 
 # SYNOPSIS
 
@@ -93,4 +101,4 @@ The **AWS CLI** was released by Amazon in **2013** to provide a unified interfac
 
 # SEE ALSO
 
-[aws-configure](/man/aws-configure)(1), [aws-vault](/man/aws-vault)(1), [terraform](/man/terraform)(1)
+[aws-configure](/man/aws-configure)(1), [aws-s3](/man/aws-s3)(1), [aws-vault](/man/aws-vault)(1), [terraform](/man/terraform)(1)

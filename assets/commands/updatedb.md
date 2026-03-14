@@ -30,6 +30,21 @@ Build filename database for locate searches
 **-o, --output** _FILE_
 > Write to specified database file
 
+**-U, --database-root** _PATH_
+> Store only results from the subtree rooted at PATH
+
+**-e, --add-prunepaths** _PATHS_
+> Add entries to PRUNEPATHS
+
+**-n, --add-prunenames** _NAMES_
+> Add entries to PRUNENAMES
+
+**-l, --require-visibility** _FLAG_
+> Control visibility checking (0 or 1)
+
+**--prune-bind-mounts** _FLAG_
+> Override bind mount pruning (yes or no)
+
 # DESCRIPTION
 
 **updatedb** creates or updates the database used by the locate command. It scans the filesystem and builds an index of all filenames for fast searching.
@@ -47,4 +62,4 @@ Requires root privileges for full filesystem access. Initial scan can take sever
 
 # SEE ALSO
 
-[locate](/man/locate)(1), [mlocate](/man/mlocate)(1)
+[locate](/man/locate)(1), [mlocate](/man/mlocate)(1), [plocate](/man/plocate)(1)

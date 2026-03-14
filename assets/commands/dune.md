@@ -50,26 +50,29 @@ composable build system for OCaml projects
 **clean**
 > Remove build artifacts.
 
-**runtest** _test_
-> Run specific test.
-
 **init** _component_ _name_
-> Initialize new component (project, library, executable).
+> Initialize new component (project, library, executable, test).
 
 **fmt**
-> Format source code.
+> Format source code using ocamlformat.
 
 **promote**
 > Promote expected test outputs.
 
-**--watch**
-> Rebuild on file changes.
+**cache**
+> Manage the shared build artifact cache.
+
+**install**
+> Install packages defined in the project.
+
+**--watch**, **-w**
+> Rebuild continuously on file changes.
 
 **--force**
-> Force rebuild of targets.
+> Force rebuild of all targets.
 
-**--release**
-> Build in release mode.
+**--verbose**
+> Display full command lines of executed programs.
 
 # CONFIGURATION
 
@@ -106,7 +109,7 @@ Projects are configured with **dune** files using an S-expression syntax. Dune i
 
 # CAVEATS
 
-Requires OCaml or Reason compiler. Build artifacts are in _build directory. Dune files use S-expression syntax, not YAML or TOML. Package management requires opam. Large projects benefit from dune-workspace files.
+Requires OCaml or Reason compiler. Build artifacts go in the _build directory. Dune files use S-expression syntax, not YAML or TOML. Package management requires opam.
 
 # HISTORY
 

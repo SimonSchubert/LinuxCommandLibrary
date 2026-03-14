@@ -47,8 +47,17 @@ The command typically requires root privileges to change ownership to other user
 **-h**, **--no-dereference**
 > Affect symbolic links instead of targets
 
-**--from=**_current_owner_
-> Change only if current owner matches
+**-f**, **--silent**, **--quiet**
+> Suppress most error messages
+
+**--from=**_current_owner_[:_current_group_]
+> Change only if current owner and/or group matches
+
+**--preserve-root**
+> Fail to operate recursively on /
+
+**--no-preserve-root**
+> Do not treat / specially (default)
 
 # OWNERSHIP FORMAT
 

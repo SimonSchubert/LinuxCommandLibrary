@@ -14,19 +14,19 @@ Layer 2 network protocol attack framework
 
 **Launch DHCP starvation attack**
 
-```sudo yersinia dhcp -attack 1 -interface [eth0]```
+```sudo yersinia dhcp -attack 1 -i [eth0]```
 
 **Send STP BPDU** to claim root bridge
 
-```sudo yersinia stp -attack 4 -interface [eth0]```
+```sudo yersinia stp -attack 4 -i [eth0]```
 
 **Start DTP attack** to enable trunking
 
-```sudo yersinia dtp -attack 1 -interface [eth0]```
+```sudo yersinia dtp -attack 1 -i [eth0]```
 
 **Flood CDP table**
 
-```sudo yersinia cdp -attack 1 -interface [eth0]```
+```sudo yersinia cdp -attack 1 -i [eth0]```
 
 **Start network daemon** on port 12000
 
@@ -53,23 +53,29 @@ Layer 2 network protocol attack framework
 **-D**
 > Start as network daemon (telnet server on port 12000)
 
+**-d**
+> Enable debug mode.
+
 **-e**
-> Execute attack without interactive mode
+> Execute attack without interactive mode.
 
 **-i** _INTERFACE_
-> Network interface to use
+> Network interface to use.
 
 **-l** _FILE_
-> Log output to file
+> Log output to file.
+
+**-c** _FILE_
+> Read configuration from file.
 
 **-r** _FILE_
-> Read packets from pcap file
+> Read packets from pcap file.
 
 **-w** _FILE_
-> Write packets to pcap file
+> Write packets to pcap file.
 
 **-attack** _NUM_
-> Attack number to execute
+> Attack number to execute.
 
 # PROTOCOLS
 
@@ -93,6 +99,12 @@ Layer 2 network protocol attack framework
 
 **dot1q**
 > 802.1Q VLAN hopping attacks
+
+**dot1x**
+> 802.1X port-based authentication attacks
+
+**mpls**
+> MPLS label switching attacks
 
 **isl**
 > Inter-Switch Link Protocol attacks

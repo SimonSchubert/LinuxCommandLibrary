@@ -69,4 +69,4 @@ Not the same as "manually installed" - shows packages with no dependents. A manu
 
 # SEE ALSO
 
-[brew](/man/brew)(1), [brew-list](/man/brew-list)(1), [brew-deps](/man/brew-deps)(1), [brew-autoremove](/man/brew-autoremove)(1)
+[brew](/man/brew)(1), [brew-list](/man/brew-list)(1), [brew-autoremove](/man/brew-autoremove)(1)

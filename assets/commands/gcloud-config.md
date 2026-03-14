@@ -4,25 +4,37 @@ gcloud CLI configuration management
 
 # TLDR
 
-**List configurations**
+**Set the default project**
 
-```gcloud config configurations list```
+```gcloud config set project [project-id]```
 
-**Create configuration**
+**Set the default Compute Engine region and zone**
 
-```gcloud config configurations create [name]```
+```gcloud config set compute/region [us-central1] && gcloud config set compute/zone [us-central1-a]```
 
-**Set property**
-
-```gcloud config set [project] [project-id]```
-
-**Get property**
+**Get the value of a property**
 
 ```gcloud config get-value [project]```
 
-**List all properties**
+**Unset a property**
+
+```gcloud config unset [compute/zone]```
+
+**List all properties in the active configuration**
 
 ```gcloud config list```
+
+**Create a new named configuration**
+
+```gcloud config configurations create [name]```
+
+**Activate a named configuration**
+
+```gcloud config configurations activate [name]```
+
+**List all configurations**
+
+```gcloud config configurations list```
 
 # SYNOPSIS
 
@@ -30,23 +42,32 @@ gcloud CLI configuration management
 
 # PARAMETERS
 
-_COMMAND_
-> Operation: set, get-value, list, configurations.
+**set** _SECTION/PROPERTY_ _VALUE_
+> Set a configuration property to a given value.
 
-**set** _PROPERTY_ _VALUE_
-> Set configuration property.
+**get-value** _SECTION/PROPERTY_
+> Print the value of a property.
 
-**get-value** _PROPERTY_
-> Get property value.
+**unset** _SECTION/PROPERTY_
+> Remove a property from the active configuration.
 
 **list**
-> List all properties.
+> List all properties in the active configuration.
 
-**configurations** _SUBCMD_
-> Manage named configurations.
+**configurations create** _NAME_
+> Create a new named configuration.
 
-**unset** _PROPERTY_
-> Remove property setting.
+**configurations activate** _NAME_
+> Switch to a named configuration.
+
+**configurations delete** _NAME_
+> Delete a named configuration. Cannot delete the active configuration.
+
+**configurations describe** _NAME_
+> Display details of a named configuration.
+
+**configurations list**
+> List all available configurations.
 
 **--help**
 > Display help information.
@@ -61,7 +82,7 @@ Named configurations enable managing multiple independent sets of properties, ma
 
 # CAVEATS
 
-Per-command options override config. Configuration is user-specific. Some properties require valid values.
+Per-command options override config. Configuration is user-specific. Some properties require valid values. The active configuration cannot be deleted.
 
 # HISTORY
 
@@ -69,4 +90,4 @@ gcloud config is part of the **Google Cloud SDK** configuration system, providin
 
 # SEE ALSO
 
-[gcloud](/man/gcloud)(1), [gcloud-auth](/man/gcloud-auth)(1)
+[gcloud](/man/gcloud)(1), [gcloud-auth](/man/gcloud-auth)(1), [gcloud-init](/man/gcloud-init)(1), [gcloud-components](/man/gcloud-components)(1)

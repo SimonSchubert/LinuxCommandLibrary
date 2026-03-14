@@ -68,7 +68,7 @@ Edit to:
 
 # CAVEATS
 
-Part of moreutils package. Careful with deletions. Test on copies first.
+Part of the **moreutils** package. Deleting a line removes the file permanently. Do not change the line numbers at the beginning of each line. Use **-v** to see what operations are performed.
 
 # HISTORY
 

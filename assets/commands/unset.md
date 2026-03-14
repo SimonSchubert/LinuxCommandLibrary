@@ -12,9 +12,13 @@ Remove shell variables or functions
 
 ```unset -f [function_name]```
 
-**Unset multiple**
+**Unset multiple variables**
 
 ```unset [VAR1] [VAR2]```
+
+**Unset variable explicitly (not function)**
+
+```unset -v [VARIABLE]```
 
 # SYNOPSIS
 
@@ -28,8 +32,11 @@ Remove shell variables or functions
 **-v**
 > Unset variable (default).
 
+**-n**
+> Unset the nameref variable itself rather than the variable it references.
+
 _name_
-> Name to unset.
+> Name(s) to unset.
 
 # DESCRIPTION
 
@@ -41,7 +48,7 @@ Changes made by unset only affect the current shell session. Variables and funct
 
 # CAVEATS
 
-Shell builtin. Cannot unset readonly. Current session only.
+Shell builtin (POSIX). Cannot unset readonly variables (returns error). Changes only affect the current shell session. The -n option is a bash extension, not available in all POSIX shells.
 
 # HISTORY
 

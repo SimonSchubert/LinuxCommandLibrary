@@ -53,7 +53,7 @@ This command is typically run as part of the installation process but can be man
 
 # CAVEATS
 
-Requires root privileges. Incorrect use may render the system unbootable. The --force flag should be used with caution as it bypasses safety checks.
+Requires root privileges. Incorrect use may render the system unbootable. The --force flag bypasses safety checks and should be used with caution. This command is specific to SteamOS 3.x on Steam Deck and compatible hardware.
 
 # HISTORY
 

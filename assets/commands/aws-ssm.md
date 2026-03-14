@@ -14,7 +14,7 @@ Manage Systems Manager sessions, commands, and parameters.
 
 **Run a command** on instances
 
-```aws ssm send-command --document-name "AWS-RunShellScript" --targets Key=instanceids,Values=[i-xxxxxxxx] --parameters commands=["echo hello"]```
+```aws ssm send-command --document-name "AWS-RunShellScript" --targets "Key=instanceids,Values=[i-xxxxxxxx]" --parameters 'commands=["echo hello"]'```
 
 **Get parameter** from Parameter Store
 
@@ -79,11 +79,17 @@ The SSM Agent must be installed on instances for most operations. It comes pre-i
 **delete-parameter**
 > Remove a parameter.
 
+**get-document**
+> Get SSM document contents.
+
 **describe-document**
 > Get SSM document details.
 
 **list-documents**
 > List available SSM documents.
+
+**describe-patches**
+> List information about patches.
 
 **--target** _instance-id_
 > Target instance for session.
@@ -108,6 +114,12 @@ The SSM Agent must be installed on instances for most operations. It comes pre-i
 
 **--with-decryption**
 > Decrypt SecureString parameters.
+
+**--overwrite**
+> Overwrite existing parameter value.
+
+**--recursive**
+> Retrieve parameters recursively by path.
 
 # CAVEATS
 

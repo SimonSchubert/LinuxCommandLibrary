@@ -28,6 +28,18 @@ Display **user information** (interactive)
 
 ```rpcclient $> queryuser username```
 
+**Enumerate domain groups** (interactive)
+
+```rpcclient $> enumdomgroups```
+
+**Look up SID** by name (interactive)
+
+```rpcclient $> lookupnames username```
+
+**Get server info** (interactive)
+
+```rpcclient $> srvinfo```
+
 **Create** a domain user (interactive)
 
 ```rpcclient $> createdomuser username```
@@ -53,6 +65,15 @@ Display **user information** (interactive)
 **-c**, **--command** _commands_
 > Execute semicolon-separated commands
 
+**-A**, **--authentication-file** _file_
+> Read credentials from file (username, password, domain)
+
+**-k**, **--kerberos**
+> Use Kerberos authentication
+
+**-I**, **--dest-ip** _ip_
+> Specify destination IP address
+
 # DESCRIPTION
 
 **rpcclient** is an MS-RPC client tool from the Samba suite. It allows executing RPC commands against Windows systems and Samba servers for user management, enumeration, and administration.
@@ -69,4 +90,4 @@ Part of **Samba** suite, providing Windows interoperability tools for Unix syste
 
 # SEE ALSO
 
-[smbclient](/man/smbclient)(1), [net](/man/net)(8)
+[smbclient](/man/smbclient)(1), [net](/man/net)(8), [enum4linux](/man/enum4linux)(1), [nmap](/man/nmap)(1)

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Gather SSH public host keys from servers
+
 # TLDR
 
 **Scan host for keys**
@@ -16,9 +20,13 @@
 
 ```ssh-keyscan -f [hosts_file]```
 
-**Append to known_hosts**
+**Append to known_hosts with hashed hostnames**
 
-```ssh-keyscan [hostname] >> ~/.ssh/known_hosts```
+```ssh-keyscan -H [hostname] >> ~/.ssh/known_hosts```
+
+**Print keys as SSHFP DNS records**
+
+```ssh-keyscan -D [hostname]```
 
 # SYNOPSIS
 
@@ -26,20 +34,38 @@
 
 # PARAMETERS
 
-**-t** _type_
-> Key type (rsa, ed25519, ecdsa).
+**-4**
+> Force IPv4 addresses only.
 
-**-p** _port_
-> SSH port.
+**-6**
+> Force IPv6 addresses only.
+
+**-c**
+> Request certificates from target hosts instead of plain keys.
+
+**-D**
+> Print keys found as SSHFP DNS records.
 
 **-f** _file_
-> Read hosts from file.
+> Read hosts from file (use `-` for stdin).
 
 **-H**
-> Hash hostnames in output.
+> Hash hostnames and addresses in output.
+
+**-p** _port_
+> Connect to specified port on the remote host.
+
+**-q**
+> Quiet mode; suppress comments in output.
+
+**-t** _type_
+> Key type to fetch: rsa, ed25519, ecdsa, ecdsa-sk, or ed25519-sk. Multiple types can be separated by commas.
 
 **-T** _timeout_
-> Connection timeout.
+> Connection timeout in seconds (default 5).
+
+**-v**
+> Verbose mode; print debugging messages.
 
 # DESCRIPTION
 

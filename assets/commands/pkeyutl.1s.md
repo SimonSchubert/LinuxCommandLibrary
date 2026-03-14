@@ -27,39 +27,66 @@ Perform low-level public key operations
 # PARAMETERS
 
 **-sign**
-> Sign operation.
+> Sign the input data and output the signed result.
 
 **-verify**
-> Verify signature.
+> Verify the input data against a signature file.
+
+**-verifyrecover**
+> Verify and recover the original signed data.
 
 **-encrypt**
-> Encrypt data.
+> Encrypt the input data using a public key.
 
 **-decrypt**
-> Decrypt data.
+> Decrypt the input data using a private key.
+
+**-derive**
+> Derive a shared secret using peer key.
 
 **-in** _FILE_
-> Input file.
-
-**-inkey** _FILE_
-> Key file.
+> Input file (stdin if not specified).
 
 **-out** _FILE_
-> Output file.
+> Output file (stdout if not specified).
+
+**-inkey** _FILE_
+> Input key file (private key by default).
+
+**-sigfile** _FILE_
+> Signature file for verify operations.
+
+**-pubin**
+> Input key is a public key.
+
+**-certin**
+> Input is a certificate containing a public key.
+
+**-keyform** _PEM|DER|ENGINE_
+> Key format.
+
+**-pkeyopt** _opt:value_
+> Set algorithm-specific option (e.g. rsa_padding_mode:oaep).
+
+**-hexdump**
+> Hex dump the output data.
+
+**-asn1parse**
+> Parse the ASN.1 output data.
 
 # DESCRIPTION
 
-**openssl pkeyutl** performs low-level public key cryptographic operations including signing, verification, encryption, and decryption. Unlike higher-level OpenSSL commands, it operates directly on raw data without hashing or padding abstractions.
+**openssl pkeyutl** performs low-level public key cryptographic operations including signing, verification, encryption, decryption, and key derivation. Unlike higher-level OpenSSL commands, it operates directly on raw data without hashing or padding abstractions.
 
 This tool works with any key type supported by OpenSSL and is algorithm-agnostic. It is useful for custom cryptographic workflows where fine-grained control over the signing or encryption process is needed, such as working with specific padding schemes or key agreement protocols.
 
 # CAVEATS
 
-Part of OpenSSL. Low-level operations. Algorithm specific options.
+Part of OpenSSL. Low-level operations require understanding of the underlying algorithm. RSA padding mode defaults to PKCS#1. Algorithm-specific options are set via **-pkeyopt**.
 
 # HISTORY
 
-openssl pkeyutl provides **public key operations** across algorithms.
+openssl pkeyutl provides **public key operations** across algorithms. It supersedes the older **rsautl** command for RSA-specific operations.
 
 # SEE ALSO
 

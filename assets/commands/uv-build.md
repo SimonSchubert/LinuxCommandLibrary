@@ -20,29 +20,57 @@ Build Python packages from source
 
 ```uv build --out-dir [dist]```
 
+**Build both sdist and wheel**
+
+```uv build --sdist --wheel```
+
+**Build a specific package** in a workspace
+
+```uv build --package [mypackage]```
+
+**Build from a specific source directory**
+
+```uv build [src/]```
+
 # SYNOPSIS
 
-**uv** **build** [_options_]
+**uv** **build** [_options_] [_src_]
 
 # PARAMETERS
 
 **--wheel**
-> Build wheel only.
+> Build wheel (binary distribution) only.
 
 **--sdist**
 > Build source distribution only.
 
 **--out-dir** _dir_
-> Output directory.
+> Output directory. Default: dist/.
 
 **--no-build-isolation**
-> Disable build isolation.
+> Disable build isolation (use existing environment).
+
+**--package** _name_
+> Build a specific package within the current workspace.
+
+**--build-constraint** _requirement_
+> Constrain versions of build requirements.
+
+**--require-hashes**
+> Require hashes for build dependencies for reproducibility.
+
+**--python** _version_
+> Python interpreter to use for build.
 
 # DESCRIPTION
 
-**uv build** builds Python packages from source. Creates wheel and/or source distribution packages. Supports PEP 517/518 build systems.
+**uv build** builds Python packages from source into distributable wheel and/or source distribution packages. It supports PEP 517/518 build systems.
+
+By default, uv build builds the project in the current directory and places artifacts in a dist/ subdirectory. Both wheel and sdist are produced by default; use **--wheel** or **--sdist** to build only one.
+
+The **uv build backend** integrates tightly with uv and provides reasonable defaults requiring zero configuration for most projects.
 
 # SEE ALSO
 
-[uv](/man/uv)(1), [uv-publish](/man/uv-publish)(1)
+[uv](/man/uv)(1), [uv-publish](/man/uv-publish)(1), [pip](/man/pip)(1), [build](/man/build)(1)
 

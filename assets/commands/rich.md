@@ -16,7 +16,11 @@ Render rich text and markdown in terminal
 
 ```python -m rich.json [file.json]```
 
-**Show colors**
+**Show available spinners**
+
+```python -m rich.spinner```
+
+**Show color palette**
 
 ```python -m rich.color```
 
@@ -28,10 +32,6 @@ Render rich text and markdown in terminal
 
 ```python -m rich```
 
-**Inspect object**
-
-```python -m rich.inspect [module]```
-
 # SYNOPSIS
 
 **python -m rich** [_module_] [_options_] [_file_]
@@ -39,22 +39,25 @@ Render rich text and markdown in terminal
 # MODULES
 
 **rich.markdown** _FILE_
-> Render markdown.
+> Render markdown file.
 
 **rich.syntax** _FILE_
-> Syntax highlighting.
+> Syntax highlight source code file.
 
 **rich.json** _FILE_
-> Pretty print JSON.
+> Pretty print JSON file.
 
 **rich.color**
-> Show color palette.
+> Show terminal color palette.
+
+**rich.spinner**
+> Display available spinner animations.
 
 **rich.emoji**
 > List emoji codes.
 
-**rich.inspect** _OBJECT_
-> Inspect Python object.
+**rich.tree**
+> Demonstrate tree rendering.
 
 # DESCRIPTION
 
@@ -70,7 +73,7 @@ Color display shows terminal capabilities. Helps verify what your terminal suppo
 
 # CAVEATS
 
-Python package, not standalone CLI. Terminal must support colors. Some features need true color.
+Requires the `rich` Python package (`pip install rich`). Terminal must support ANSI colors. Some features need true color support. A separate standalone CLI tool `rich-cli` is also available via `pip install rich-cli`.
 
 # HISTORY
 

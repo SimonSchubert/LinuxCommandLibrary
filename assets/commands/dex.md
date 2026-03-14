@@ -24,9 +24,9 @@ Preview **desktop entry property**
 
 ```dex -p Name [path/to/file.desktop]```
 
-**Create** a desktop entry
+**Create** a desktop entry for an executable
 
-```dex -c [path/to/file.desktop]```
+```dex -c [/usr/bin/program]```
 
 Execute in **specific terminal**
 
@@ -67,7 +67,7 @@ Useful for window managers that don't have built-in autostart support.
 
 # CAVEATS
 
-Desktop entries must comply with XDG specification. Some entries may require specific desktop environments. Part of the dex package.
+Desktop entries must comply with XDG specification. Some entries may require specific desktop environments. Autostart directories default to `~/.config/autostart` and `/etc/xdg/autostart`.
 
 # SEE ALSO
 

@@ -4,11 +4,11 @@ Open-source message broker server
 
 # TLDR
 
-**Start RabbitMQ server**
+**Start RabbitMQ server** in foreground
 
 ```rabbitmq-server```
 
-**Start in background**
+**Start in background** (detached)
 
 ```rabbitmq-server -detached```
 
@@ -16,9 +16,17 @@ Open-source message broker server
 
 ```RABBITMQ_NODENAME=[rabbit@hostname] rabbitmq-server```
 
-**Start via systemctl**
+**Start via systemd**
 
 ```sudo systemctl start rabbitmq-server```
+
+**Enable management plugin** for web UI
+
+```rabbitmq-plugins enable rabbitmq_management```
+
+**Check server status**
+
+```rabbitmqctl status```
 
 # SYNOPSIS
 
@@ -27,66 +35,49 @@ Open-source message broker server
 # PARAMETERS
 
 **-detached**
-> Run in background.
+> Run the server in the background (daemonize).
+
+**-n** _NODE_
+> Specify the node name (alternative to RABBITMQ_NODENAME).
 
 # DESCRIPTION
 
-**rabbitmq-server** starts the RabbitMQ message broker. RabbitMQ implements AMQP (Advanced Message Queuing Protocol) and supports multiple messaging protocols.
+**rabbitmq-server** starts the RabbitMQ message broker, a widely-used open-source message queue system. RabbitMQ implements AMQP 0-9-1 (Advanced Message Queuing Protocol) and also supports MQTT, STOMP, and AMQP 1.0 via plugins.
 
-Usually managed via systemd or init scripts.
+The server is typically managed via systemd or init scripts in production. It listens on port **5672** for AMQP connections by default. The management plugin provides a web UI on port **15672** for monitoring queues, exchanges, and connections.
 
-# EXAMPLES
-
-```bash
-# Start server
-rabbitmq-server
-
-# Start detached
-rabbitmq-server -detached
-
-# Via systemd
-sudo systemctl start rabbitmq-server
-sudo systemctl enable rabbitmq-server
-
-# Check status
-sudo systemctl status rabbitmq-server
-rabbitmqctl status
-```
-
-# ENVIRONMENT VARIABLES
-
-```bash
-RABBITMQ_NODENAME=rabbit@hostname
-RABBITMQ_NODE_PORT=5672
-RABBITMQ_CONFIG_FILE=/etc/rabbitmq/rabbitmq
-RABBITMQ_LOG_BASE=/var/log/rabbitmq
-```
+RabbitMQ supports clustering for high availability, virtual hosts for multi-tenancy, and various exchange types (direct, topic, fanout, headers) for flexible message routing.
 
 # CONFIGURATION
 
-```bash
-# /etc/rabbitmq/rabbitmq.conf
-listeners.tcp.default = 5672
-management.tcp.port = 15672
-default_user = guest
-default_pass = guest
-```
+**/etc/rabbitmq/rabbitmq.conf**
+> Main configuration file (new sysctl-style format). Controls listeners, users, resource limits, and cluster settings.
 
-# PORTS
+**/etc/rabbitmq/advanced.config**
+> Advanced Erlang-term configuration for options not available in rabbitmq.conf.
 
-```
-5672  - AMQP
-15672 - Management UI
-25672 - Clustering
-```
+**/etc/rabbitmq/rabbitmq-env.conf**
+> Environment variable overrides for node name, ports, config paths, and log locations.
+
+**RABBITMQ_NODENAME**
+> Node name (default: rabbit@hostname).
+
+**RABBITMQ_NODE_PORT**
+> AMQP port (default: 5672).
+
+**RABBITMQ_CONFIG_FILE**
+> Path to configuration file (without extension).
+
+**RABBITMQ_LOG_BASE**
+> Directory for log files (default: /var/log/rabbitmq).
 
 # CAVEATS
 
-Requires Erlang runtime. Default guest user only works on localhost. Enable management plugin for web UI.
+Requires the Erlang/OTP runtime. The default **guest** user can only connect from localhost for security. Enable the management plugin (**rabbitmq-plugins enable rabbitmq_management**) for the web UI. File descriptor limits may need to be increased for production workloads.
 
 # HISTORY
 
-RabbitMQ was developed by **Rabbit Technologies Ltd**, acquired by **SpringSource** (VMware), originally released in 2007.
+RabbitMQ was originally developed by **Rabbit Technologies Ltd** using Erlang and first released in **2007**. The company was acquired by **SpringSource** (later VMware) in 2010. It is now maintained by **Broadcom** (via VMware) and remains one of the most widely deployed message brokers.
 
 # SEE ALSO
 

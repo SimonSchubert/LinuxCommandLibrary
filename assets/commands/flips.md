@@ -36,7 +36,10 @@ IPS and BPS patch creation and application
 > Use BPS format instead of IPS.
 
 **--exact**
-> Create exact BPS patch.
+> Create exact BPS patch (slower but guarantees smallest possible output).
+
+**--ips**
+> Use IPS format explicitly.
 
 # DESCRIPTION
 
@@ -49,4 +52,3 @@ Flips can create patches by comparing original and modified files, then apply th
 # SEE ALSO
 
 [bsdiff](/man/bsdiff)(1), [xdelta](/man/xdelta)(1)
-

@@ -28,6 +28,14 @@ Provision infrastructure from declarative templates.
 
 ```aws cloudformation create-change-set --stack-name [my-stack] --change-set-name [my-changes] --template-body file://[template.yaml]```
 
+**Deploy a template** (creates or updates stack with change set)
+
+```aws cloudformation deploy --template-file [template.yaml] --stack-name [my-stack] --capabilities CAPABILITY_IAM```
+
+**List all stacks** and their statuses
+
+```aws cloudformation list-stacks --stack-status-filter CREATE_COMPLETE UPDATE_COMPLETE```
+
 **Package a template** with local artifacts and upload to S3
 
 ```aws cloudformation package --template-file [template.yaml] --s3-bucket [my-bucket] --output-template-file [packaged.yaml]```
@@ -71,6 +79,9 @@ CloudFormation manages resources as **stacks**, creating, updating, and deleting
 **deploy**
 > Deploy a template with automatic change set creation
 
+**list-stacks**
+> List stacks with optional status filtering
+
 **detect-stack-drift**
 > Check for configuration drift from template
 
@@ -84,4 +95,4 @@ AWS CloudFormation launched in **February 2011** as one of the first infrastruct
 
 # SEE ALSO
 
-[aws](/man/aws)(1), [aws-ec2](/man/aws-ec2)(1), [aws-s3](/man/aws-s3)(1), [terraform](/man/terraform)(1)
+[aws](/man/aws)(1), [aws-ec2](/man/aws-ec2)(1), [aws-s3](/man/aws-s3)(1), [aws-iam](/man/aws-iam)(1), [terraform](/man/terraform)(1)

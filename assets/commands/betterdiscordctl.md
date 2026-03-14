@@ -46,7 +46,10 @@ The tool handles installation, updates, and removal of BetterDiscord across diff
 > Remove BetterDiscord
 
 **status**
-> Show current BetterDiscord status
+> Show current Discord patch state
+
+**self-upgrade**
+> Upgrade betterdiscordctl itself
 
 # PARAMETERS
 
@@ -58,6 +61,18 @@ The tool handles installation, updates, and removal of BetterDiscord across diff
 
 **-p, --d-appdir** _path_
 > Specify custom Discord app directory
+
+**-v, --verbose**
+> Increase verbosity
+
+**-q, --quiet**
+> Decrease verbosity
+
+**-V, --version**
+> Display version and exit
+
+**-h, --help**
+> Display help message and exit
 
 # CAVEATS
 

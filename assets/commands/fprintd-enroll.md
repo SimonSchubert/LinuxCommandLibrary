@@ -31,7 +31,10 @@ Display **help**
 # PARAMETERS
 
 **-f**, **--finger** _FINGER_
-> Specify which finger to enroll: left-thumb, left-index-finger, left-middle-finger, left-ring-finger, left-little-finger, right-thumb, right-index-finger, right-middle-finger, right-ring-finger, right-little-finger
+> Specify which finger to enroll: left-thumb, left-index-finger, left-middle-finger, left-ring-finger, left-little-finger, right-thumb, right-index-finger, right-middle-finger, right-ring-finger, right-little-finger. Default: right-index-finger.
+
+**--help**
+> Display help message.
 
 # DESCRIPTION
 

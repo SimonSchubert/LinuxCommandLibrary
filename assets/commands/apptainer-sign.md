@@ -1,6 +1,6 @@
 # TAGLINE
 
-Cryptographically sign container images
+Cryptographically sign SIF container images
 
 # TLDR
 
@@ -54,4 +54,4 @@ A PGP key pair or X.509 certificate must be configured before signing. The priva
 
 # SEE ALSO
 
-[apptainer](/man/apptainer)(1), [apptainer-verify](/man/apptainer-verify)(1), [gpg](/man/gpg)(1)
+[apptainer](/man/apptainer)(1), [apptainer-verify](/man/apptainer-verify)(1), [apptainer-pull](/man/apptainer-pull)(1), [gpg](/man/gpg)(1)

@@ -1,6 +1,6 @@
 # TAGLINE
 
-Cancel print jobs
+cancel CUPS print jobs
 
 # TLDR
 

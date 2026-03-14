@@ -105,6 +105,12 @@ Convert HTML pages to PDF
 **--no-images**
 > Don't load images.
 
+**--lowquality**
+> Generate lower quality PDF/PS to reduce file size.
+
+**--encoding** _ENCODING_
+> Set the default text encoding.
+
 # DESCRIPTION
 
 **wkhtmltopdf** converts HTML to PDF using the WebKit rendering engine. It renders pages as a browser would, then outputs to PDF.
@@ -129,4 +135,4 @@ Based on old QtWebKit - some modern CSS/JS may not work. Project is no longer ma
 
 # SEE ALSO
 
-[weasyprint](/man/weasyprint)(1), [chromium](/man/chromium)(1), [pandoc](/man/pandoc)(1), [htmldoc](/man/htmldoc)(1)
+[wkhtmltoimage](/man/wkhtmltoimage)(1), [weasyprint](/man/weasyprint)(1), [chromium](/man/chromium)(1), [pandoc](/man/pandoc)(1), [htmldoc](/man/htmldoc)(1)

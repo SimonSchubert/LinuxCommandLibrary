@@ -14,7 +14,7 @@ Convert PPM to Atari Degas PI1 format
 
 # DESCRIPTION
 
-**ppmtopi1** converts PPM images to Atari Degas PI1 low-resolution color format for Atari ST computers. Part of Netpbm toolkit.
+**ppmtopi1** reads a PPM image as input and produces an Atari Degas .pi1 file as output. PI1 is the low-resolution (320x200, 16 colors) format used by Degas on Atari ST computers. There are no command-line options. Part of the Netpbm toolkit.
 
 # SEE ALSO
 

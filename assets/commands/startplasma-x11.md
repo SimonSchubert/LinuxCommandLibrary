@@ -38,4 +38,4 @@ Requires an X server to be running or started via xinit/startx. X11 has inherent
 
 # SEE ALSO
 
-[startplasma-wayland](/man/startplasma-wayland)(1), [kwin_x11](/man/kwin_x11)(1), [plasmashell](/man/plasmashell)(1), [startx](/man/startx)(1), [xinit](/man/xinit)(1)
+[startplasma-wayland](/man/startplasma-wayland)(1), [plasmashell](/man/plasmashell)(1), [startx](/man/startx)(1), [xinit](/man/xinit)(1)

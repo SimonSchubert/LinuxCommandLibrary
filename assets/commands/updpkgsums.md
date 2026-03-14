@@ -4,33 +4,40 @@ Update source checksums in Arch PKGBUILD files
 
 # TLDR
 
-**Update** checksums in PKGBUILD
+**Update checksums in PKGBUILD** in the current directory
 
 ```updpkgsums```
+
+**Update checksums in a specific PKGBUILD** file
+
+```updpkgsums [path/to/PKGBUILD]```
+
+**Update checksums without colored output**
+
+```updpkgsums -m```
 
 Display **help**
 
 ```updpkgsums -h```
 
-Display **version**
-
-```updpkgsums -v```
-
 # SYNOPSIS
 
-**updpkgsums** [_OPTIONS_]
+**updpkgsums** [_OPTIONS_] [_build file_]
 
 # PARAMETERS
 
-**-h, --help**
-> Display help information
+**-h**, **--help**
+> Display help information.
 
-**-v, --version**
-> Display version information
+**-m**, **--nocolor**
+> Do not colorize output.
+
+**-V**, **--version**
+> Display version information.
 
 # DESCRIPTION
 
-**updpkgsums** updates the checksums of source files in a PKGBUILD. It downloads the sources (if needed) and calculates new checksums, updating the PKGBUILD file.
+**updpkgsums** performs an in-place update of the checksums in a PKGBUILD file. It downloads the sources (if needed) and calculates new checksums, updating the PKGBUILD file. Defaults to the PKGBUILD in the current directory if no file is specified.
 
 Unless a preexisting hashing algorithm is already specified in the PKGBUILD, SHA256 will be used for the new checksums.
 

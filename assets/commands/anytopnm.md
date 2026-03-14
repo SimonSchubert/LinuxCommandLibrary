@@ -1,6 +1,6 @@
 # TAGLINE
 
-Convert any image format to PNM
+Convert any image format to PNM (Netpbm)
 
 # TLDR
 
@@ -27,8 +27,8 @@ PNM is an intermediate format in the Netpbm toolkit, useful for image processing
 **-v**
 > Verbose output showing conversion steps
 
-**file**
-> Input image file (or stdin if omitted)
+_file_
+> Input image file (uses stdin if omitted, but stdin must be seekable)
 
 # CAVEATS
 
@@ -40,4 +40,4 @@ Depends on having the correct format-specific converter installed. Some formats 
 
 # SEE ALSO
 
-[pnmtopng](/man/pnmtopng)(1), [pnmtojpeg](/man/pnmtojpeg)(1), [convert](/man/convert)(1)
+[pnmtopng](/man/pnmtopng)(1), [pnmtojpeg](/man/pnmtojpeg)(1), [netpbm](/man/netpbm)(1), [convert](/man/convert)(1)

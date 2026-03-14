@@ -55,11 +55,20 @@ Display **count** of bounced messages
 **-z**
 > Match frozen messages only
 
+**-x**
+> Match non-frozen messages only
+
+**-b**
+> Brief format output
+
+**-R**
+> Reverse output order
+
 # DESCRIPTION
 
-**exiqgrep** is a Perl script for searching the Exim mail queue. It filters queue output by sender, recipient, age, and other criteria.
+**exiqgrep** is a Perl script for searching the Exim mail queue. It filters queue output by sender, recipient, age, frozen state, and other criteria. At least one selection option or **-c** must be given.
 
-Useful for managing mail queues and identifying problematic messages.
+Commonly used with **exim -Mrm** to remove matching messages from the queue.
 
 # CAVEATS
 
@@ -67,4 +76,4 @@ Exim mail server specific. Patterns use Perl regular expressions. Requires appro
 
 # SEE ALSO
 
-[exim](/man/exim)(8), [exim_dumpdb](/man/exim_dumpdb)(8)
+[exim](/man/exim)(8)

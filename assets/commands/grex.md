@@ -8,21 +8,25 @@ Regex generator from example strings
 
 ```grex [foo] [bar] [baz]```
 
+**Convert digits to** `\d`
+
+```grex -d [test1] [test2]```
+
+**Convert whitespace to** `\s` **and words to** `\w`
+
+```grex -s -w [example1] [example2]```
+
 **Case insensitive matching**
 
 ```grex -i [example1] [example2]```
 
-**Allow digits**
+**Generate without start/end anchors**
 
-```grex -d [test1] [test2]```
+```grex --no-anchors [examples...]```
 
-**Escape special characters**
+**Read examples from file** (one per line)
 
-```grex -e [example]```
-
-**Output with anchors**
-
-```grex --with-anchors [examples...]```
+```grex -f [examples.txt]```
 
 # SYNOPSIS
 
@@ -33,35 +37,50 @@ Regex generator from example strings
 _TEST-STRINGS_
 > Example strings to generate regex from.
 
-**-d**, **--digit**
-> Convert digits to \d.
+**-d**, **--digits**
+> Convert Unicode decimal digits to \d.
 
-**-s**, **--space**
-> Convert spaces to \s.
+**-D**, **--non-digits**
+> Convert non-digit characters to \D.
 
-**-w**, **--word**
-> Convert alphanumerics to \w.
+**-s**, **--spaces**
+> Convert Unicode whitespace to \s.
+
+**-S**, **--non-spaces**
+> Convert non-whitespace characters to \S.
+
+**-w**, **--words**
+> Convert Unicode word characters to \w.
+
+**-W**, **--non-words**
+> Convert non-word characters to \W.
 
 **-i**, **--ignore-case**
-> Case insensitive matching.
+> Generate case-insensitive regex.
 
 **-e**, **--escape**
-> Escape all non-ASCII chars.
+> Replace all non-ASCII characters with unicode escape sequences.
 
-**--with-anchors**
-> Add start/end anchors.
+**-r**, **--repetitions**
+> Detect repeated substrings and convert to quantifier notation.
 
-**-r**, **--repetition**
-> Detect repetitions.
+**--no-anchors**
+> Remove ^ and $ anchors (anchors are added by default).
+
+**-f**, **--file** _FILE_
+> Read test strings from a file (one per line).
+
+**-o**, **--output** _FILE_
+> Write generated regex to a file.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**grex** generates regular expressions from user-provided test strings. It analyzes the input examples and produces a regex that matches all of them.
+**grex** generates regular expressions from user-provided test strings. It analyzes the input examples and produces a regex that matches all of them. By default, the generated regex includes ^ and $ anchors.
 
-The tool supports various character class conversions and can detect patterns like repetitions. It is useful for quickly creating regexes without manual pattern analysis.
+The tool supports various character class conversions (\d, \s, \w and their inverses), repetition detection, and case-insensitive matching. It is useful for quickly creating regexes without manual pattern analysis.
 
 # CAVEATS
 

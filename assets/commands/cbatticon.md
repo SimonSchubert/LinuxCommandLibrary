@@ -8,9 +8,9 @@ Show the **battery icon** in the system tray
 
 ```cbatticon```
 
-Set the **update interval** to 20 seconds
+Set the **update interval** in seconds (default: 5)
 
-```cbatticon -u [20]```
+```cbatticon -u [10]```
 
 List available **icon types**
 
@@ -44,26 +44,35 @@ The tool is designed for minimal window managers and desktop environments that d
 
 # PARAMETERS
 
-**-u, --update-interval** _seconds_
-> Update interval in seconds
+**-u**, **--update-interval** _seconds_
+> Update interval in seconds (default: 5).
 
-**-i, --icon-type** _type_
-> Icon style: standard, notification, or symbolic
+**-i**, **--icon-type** _type_
+> Icon style: standard, notification, or symbolic.
 
-**-t, --list-icon-types**
-> List available icon types
+**-t**, **--list-icon-types**
+> List available icon types.
 
-**-p, --list-power-supplies**
-> List available power supplies
+**-p**, **--list-power-supplies**
+> List available power supplies.
 
-**-r, --critical-level** _percent_
-> Set critical battery level percentage
+**-r**, **--critical-level** _percent_
+> Set critical battery level percentage (default: 5%).
 
-**-c, --command-critical-level** _cmd_
-> Command to run at critical level
+**-c**, **--command-critical-level** _cmd_
+> Command to execute when critical level is reached.
 
-**-l, --low-level** _percent_
-> Set low battery level percentage
+**-o**, **--command-low-level** _cmd_
+> Command to execute when low level is reached.
+
+**-l**, **--low-level** _percent_
+> Set low battery level percentage.
+
+**-x**, **--command-left-click** _cmd_
+> Command to execute when left clicking on the tray icon.
+
+**-d**, **--debug**
+> Display debug information.
 
 # CAVEATS
 

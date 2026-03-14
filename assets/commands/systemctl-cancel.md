@@ -32,6 +32,9 @@ Cancel **user** job
 **--system**
 > Cancel jobs in the system manager (default)
 
+**-H**, **--host** _user@host_
+> Execute the operation on a remote host over SSH
+
 # DESCRIPTION
 
 **systemctl cancel** cancels one or more pending jobs in the systemd service manager. Jobs represent pending operations like starting, stopping, or restarting units. When called without arguments, all pending jobs are cancelled.

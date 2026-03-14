@@ -12,13 +12,21 @@ adds cryptographic signatures to in-toto metadata files
 
 ```in-toto-sign -k [key] -f [root.layout]```
 
-**Add signature to existing**
+**Append** signature to existing signatures
 
 ```in-toto-sign -k [key] -f [file] -a```
 
-**Output to specific file**
+**Output** signed metadata to a specific file
 
 ```in-toto-sign -k [key] -f [input] -o [output]```
+
+**Verify** signatures on a metadata file
+
+```in-toto-sign --verify -k [key.pub] -f [file]```
+
+**Sign** with a GPG key
+
+```in-toto-sign -g [gpg_keyid] -f [file]```
 
 # SYNOPSIS
 
@@ -38,8 +46,26 @@ adds cryptographic signatures to in-toto metadata files
 **-o** _OUTPUT_
 > Output file path.
 
+**-g** [_KEYID ..._]
+> GPG keyids used to sign or verify
+
+**--gpg-home** _PATH_
+> GPG home directory path
+
+**--verify**
+> Verify signatures instead of signing
+
+**-v**
+> Verbose output
+
+**-q**
+> Quiet output
+
+**--version**
+> Show version information
+
 **--help**
-> Display help information.
+> Display help information
 
 # DESCRIPTION
 
@@ -57,4 +83,4 @@ in-toto-sign is part of **in-toto**, developed at **NYU** Secure Systems Lab for
 
 # SEE ALSO
 
-[in-toto-run](/man/in-toto-run)(1), [in-toto-record](/man/in-toto-record)(1), [in-toto-verify](/man/in-toto-verify)(1)
+[in-toto-run](/man/in-toto-run)(1), [in-toto-record](/man/in-toto-record)(1)

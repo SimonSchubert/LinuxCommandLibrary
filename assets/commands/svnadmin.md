@@ -125,4 +125,4 @@ Operates only on local repositories, not URLs. Dump files can be very large for 
 
 # SEE ALSO
 
-[svn](/man/svn)(1), [svnserve](/man/svnserve)(8), [svnlook](/man/svnlook)(1), [svnsync](/man/svnsync)(1)
+[svn](/man/svn)(1), [svnserve](/man/svnserve)(8)

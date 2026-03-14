@@ -1,41 +1,41 @@
 # TAGLINE
 
-Establish PPPoE DSL connection
+Manage a PPPoE DSL connection
 
 # TLDR
 
-**Start PPPoE connection**
+**Start PPPoE connection with default config**
 
-```pppoe-connect```
+```sudo pppoe-connect```
 
-**Connect with specific config**
+**Connect with a specific config file**
 
-```pppoe-connect [/etc/ppp/pppoe.conf]```
+```sudo pppoe-connect [/etc/sysconfig/network-scripts/ifcfg-ppp0]```
 
 # SYNOPSIS
 
-**pppoe-connect** [_config_]
+**pppoe-connect** [_config_file_]
 
 # PARAMETERS
 
-_CONFIG_
-> Configuration file path.
+_CONFIG_FILE_
+> Configuration file path. Defaults to /etc/sysconfig/network-scripts/ifcfg-ppp0.
 
 # DESCRIPTION
 
-**pppoe-connect** is a wrapper script that establishes a PPPoE (PPP over Ethernet) connection using the settings defined in a configuration file, typically **/etc/ppp/pppoe.conf**. It coordinates between the pppoe client and pppd daemon to bring up a DSL broadband connection.
+**pppoe-connect** is a shell script that manages a PPPoE (PPP over Ethernet) connection using the Roaring Penguin user-space PPPoE client. It reads a configuration file, brings up the connection, and automatically re-establishes it if it drops, logging reconnection events to syslog.
 
-The script reads connection parameters including interface, authentication credentials, and PPP options from the config file. It is the counterpart to **pppoe-stop** for terminating the connection.
+Each time the connection drops, pppoe-connect executes /etc/ppp/pppoe-lost if it exists. Normally you should use **pppoe-start** instead of invoking pppoe-connect directly.
 
 # CAVEATS
 
-Requires configured pppoe.conf. Uses pppd internally.
+Requires configured pppoe.conf and pppd. Normally invoked via pppoe-start rather than directly. Multiple connections supported with different config files using different PIDFILE settings.
 
 # HISTORY
 
-pppoe-connect is a **wrapper script** for PPPoE connection management.
+pppoe-connect is part of the **Roaring Penguin PPPoE** client package.
 
 # SEE ALSO
 
-[pppoe](/man/pppoe)(8), [pppoe-setup](/man/pppoe-setup)(8), [pppoe-stop](/man/pppoe-stop)(8)
+[pppoe](/man/pppoe)(8), [pppoe-setup](/man/pppoe-setup)(8), [pppoe-stop](/man/pppoe-stop)(8), [pppd](/man/pppd)(8)
 

@@ -60,10 +60,19 @@ Secure file deletion with overwrite patterns
 > Quick wipe with specified number of passes
 
 **-a**
-> Wipe files but abort on errors
+> Abort on errors instead of continuing
 
 **-k**
-> Keep files after wiping (don't delete)
+> Keep files after wiping (don't unlink)
+
+**-Z**
+> Single-pass zero overwrite (fast but less secure)
+
+**-l** _LENGTH_
+> Set file size limit for wiping
+
+**-e**
+> Use exact file size (do not round up to wipe slack space)
 
 # DESCRIPTION
 

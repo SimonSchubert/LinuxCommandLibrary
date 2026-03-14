@@ -68,7 +68,7 @@ Output includes compiled assemblies (.dll), debug symbols, and any content files
 
 # CAVEATS
 
-Incremental builds may miss some changes. Clean builds with dotnet clean if needed. Framework targeting requires compatible SDK. Build errors stop the process.
+Incremental builds may miss some changes; use **dotnet clean** before rebuilding if needed. Multi-targeting requires listing frameworks in the project file. The default configuration is Debug unless **-c Release** is specified.
 
 # HISTORY
 
@@ -76,4 +76,4 @@ dotnet build is part of the **.NET CLI** introduced with .NET Core. It provides 
 
 # SEE ALSO
 
-[dotnet](/man/dotnet)(1), [dotnet-clean](/man/dotnet-clean)(1), [dotnet-publish](/man/dotnet-publish)(1)
+[dotnet](/man/dotnet)(1), [dotnet-publish](/man/dotnet-publish)(1)

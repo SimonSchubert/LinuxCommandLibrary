@@ -49,10 +49,10 @@ Steel Bank Common Lisp compiler and runtime
 > Load Lisp file.
 
 **--eval** _EXPR_
-> Evaluate expression.
+> Evaluate expression. Can be specified multiple times.
 
 **--quit**
-> Exit after processing.
+> Exit after processing all --load and --eval options.
 
 **--core** _CORE_
 > Use specified core file.

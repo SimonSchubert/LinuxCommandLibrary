@@ -64,11 +64,27 @@ distributed key-value store management
 **-base64**
 > Encode/decode values as base64.
 
+**-detailed**
+> Provide additional metadata about the key.
+
+**-separator** _STRING_
+> String to use as separator for key listing (default: "/").
+
+**-cas**
+> Perform a Check-And-Set operation (requires -modify-index).
+
+**-http-addr** _ADDRESS_
+> Address of the Consul agent (default: "http://127.0.0.1:8500").
+
 # DESCRIPTION
 
 **consul kv** manages Consul's key-value store, a distributed data store for configuration and service discovery. Values can be strings, JSON, or binary data.
 
-Part of HashiCorp Consul, the KV store is commonly used for dynamic configuration, feature flags, and service coordination.
+Part of HashiCorp Consul, the KV store is commonly used for dynamic configuration, feature flags, and service coordination. Keys are organized hierarchically using `/` as a separator, similar to a filesystem path structure. Values can be up to 512 KB in size.
+
+# CAVEATS
+
+The KV store is not designed for bulk data storage; there is a 512 KB limit per value. Recursive deletes (`consul kv delete -recurse`) are irreversible. Export/import uses JSON format and includes metadata. ACL tokens may be required depending on Consul configuration.
 
 # SEE ALSO
 

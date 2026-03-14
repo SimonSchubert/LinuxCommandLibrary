@@ -28,6 +28,10 @@ PostgreSQL user creation utility
 
 ```createuser -r [username]```
 
+**Create user with no login privilege (role only)**
+
+```createuser --no-login [rolename]```
+
 # SYNOPSIS
 
 **createuser** [_options_] [_username_]
@@ -73,8 +77,14 @@ The tool can create users with various privileges including superuser status, da
 **-i**, **--inherit**
 > Role inherits privileges.
 
+**--no-login**
+> Role cannot log in (useful for group roles).
+
 **--replication**
 > Allow replication connections.
+
+**--connection-limit** _n_
+> Maximum concurrent connections for the role (-1 for unlimited).
 
 # CAVEATS
 
@@ -86,4 +96,4 @@ Requires appropriate privileges to create roles. Superuser creation requires sup
 
 # SEE ALSO
 
-[dropuser](/man/dropuser)(1), [psql](/man/psql)(1), [createdb](/man/createdb)(1), [pg_dump](/man/pg_dump)(1)
+[dropuser](/man/dropuser)(1), [psql](/man/psql)(1), [createdb](/man/createdb)(1), [dropdb](/man/dropdb)(1), [pg_dump](/man/pg_dump)(1)

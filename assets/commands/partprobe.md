@@ -14,7 +14,11 @@ Show **summary** of changes
 
 **Dry run** with summary
 
-```sudo partprobe -s -d```
+```sudo partprobe -d -s```
+
+**Probe a specific device**
+
+```sudo partprobe /dev/[sda]```
 
 # SYNOPSIS
 
@@ -31,6 +35,12 @@ Show **summary** of changes
 
 **-s, --summary**
 > Show a summary of devices and their partitions
+
+**-h, --help**
+> Show help message
+
+**-v, --version**
+> Show version
 
 # CAVEATS
 

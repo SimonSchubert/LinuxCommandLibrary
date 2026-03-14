@@ -59,6 +59,12 @@ Start in **quiet** mode
 **-r**
 > Read-only mode - do not attempt repairs
 
+**-d**
+> Print separate statistics for each device in the filesystem
+
+**-R**
+> Raw print mode - print statistics without units
+
 # CAVEATS
 
 Scrub can be I/O intensive and may impact system performance. On RAID configurations, scrub can repair errors from redundant copies. Single-disk setups can detect but not repair errors.
@@ -69,4 +75,4 @@ Scrub can be I/O intensive and may impact system performance. On RAID configurat
 
 # SEE ALSO
 
-[btrfs](/man/btrfs)(8), [btrfs-balance](/man/btrfs-balance)(8)
+[btrfs](/man/btrfs)(8), [btrfs-balance](/man/btrfs-balance)(8), [btrfs-check](/man/btrfs-check)(8)

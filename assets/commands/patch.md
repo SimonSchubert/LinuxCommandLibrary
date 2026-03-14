@@ -86,6 +86,9 @@ patch is essential for software development, applying updates to source code, an
 **--verbose**
 > Output debugging information.
 
+**-V** _method_, **--version-control=** _method_
+> Backup versioning method (simple, numbered, existing).
+
 **-E**, **--remove-empty-files**
 > Remove empty files after patching.
 

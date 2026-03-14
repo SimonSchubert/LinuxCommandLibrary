@@ -4,25 +4,29 @@ command-line client for Google Drive
 
 # TLDR
 
-**List files**
+**List files in root**
 
-```gdrive list```
+```gdrive files list```
 
-**Upload file**
+**Upload a file**
 
-```gdrive upload [file.txt]```
+```gdrive files upload [file.txt]```
 
-**Download file**
+**Download a file by ID**
 
-```gdrive download [file_id]```
+```gdrive files download [file_id]```
 
-**Create folder**
+**Create a folder**
 
-```gdrive mkdir [foldername]```
+```gdrive files mkdir [foldername]```
 
-**Share file**
+**List available Google Drive accounts**
 
-```gdrive share [file_id]```
+```gdrive account list```
+
+**Show file info**
+
+```gdrive files info [file_id]```
 
 # SYNOPSIS
 
@@ -30,39 +34,25 @@ command-line client for Google Drive
 
 # PARAMETERS
 
-_COMMAND_
-> Operation: list, upload, download, mkdir, share, etc.
+**files**
+> File operations: list, upload, download, info, mkdir, delete, export.
 
-**list**
-> List files and folders.
+**account**
+> Account management: add, list, switch, remove.
 
-**upload** _FILE_
-> Upload file.
-
-**download** _ID_
-> Download file by ID.
-
-**mkdir** _NAME_
-> Create folder.
-
-**share** _ID_
-> Share file.
-
-**sync**
-> Synchronize folder.
+**about**
+> Show Drive account information.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**gdrive** is an unofficial command-line client for Google Drive, providing comprehensive file management capabilities directly from the terminal. Unlike gdown which focuses on downloads, gdrive offers full bidirectional operations including uploading, downloading, listing, sharing, deleting, and synchronizing files and folders.
+**gdrive** is a command-line client for Google Drive, providing file management capabilities directly from the terminal. Unlike gdown which focuses on downloads, gdrive offers full bidirectional operations including uploading, downloading, listing, sharing, and deleting files and folders.
 
-The tool authenticates using OAuth 2.0, storing credentials locally after initial authorization. Once authenticated, it provides terminal access to your entire Google Drive, enabling scriptable operations for backup automation, CI/CD workflows, and programmatic file management.
+The tool authenticates using a service account or OAuth 2.0, storing credentials locally after initial authorization. It supports multiple Google accounts that can be added and switched between. Once authenticated, it provides terminal access to your Google Drive, enabling scriptable operations for backup automation and programmatic file management.
 
-gdrive supports advanced operations like folder synchronization (similar to rsync), recursive uploads and downloads, setting file permissions and sharing, searching Drive contents, and managing trash. It can output results in various formats for integration with other tools and scripts.
-
-As an unofficial third-party client, gdrive fills the gap left by Google's lack of an official Linux command-line client. It's particularly valuable for server environments, automated workflows, and users who prefer terminal-based file management. However, being unofficial means it's subject to Google API limitations and quota restrictions.
+gdrive v3 uses a subcommand structure (e.g., **gdrive files list**, **gdrive files upload**). It fills the gap left by Google's lack of an official Linux command-line client, making it valuable for server environments, automated workflows, and terminal-based file management.
 
 # CAVEATS
 

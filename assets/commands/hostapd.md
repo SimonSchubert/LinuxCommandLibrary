@@ -16,9 +16,9 @@ user-space daemon for wireless access points and authentication servers
 
 ```sudo hostapd -B [hostapd.conf]```
 
-**Test configuration**
+**Start with debug and timestamps**
 
-```hostapd -t [hostapd.conf]```
+```sudo hostapd -dt [hostapd.conf]```
 
 # SYNOPSIS
 
@@ -42,19 +42,22 @@ The tool transforms a wireless interface into an access point, handling client c
 > More verbose debug.
 
 **-t**
-> Include timestamps in debug.
+> Include timestamps in debug output.
+
+**-v**
+> Display version information and exit.
 
 **-K**
-> Include key data in debug.
+> Include key data in debug output.
 
 **-g** _socket_
-> Global control interface.
+> Global control interface path.
 
 **-P** _pidfile_
-> PID file.
+> PID file path.
 
 **-f** _logfile_
-> Log file.
+> Redirect output to log file.
 
 # CONFIG OPTIONS
 
@@ -76,4 +79,4 @@ Requires AP-capable wireless card. Configuration complex. Driver support varies.
 
 # SEE ALSO
 
-[wpa_supplicant](/man/wpa_supplicant)(1), [iw](/man/iw)(1), [iwconfig](/man/iwconfig)(1), [dnsmasq](/man/dnsmasq)(1)
+[iw](/man/iw)(1), [iwconfig](/man/iwconfig)(1), [wpa_supplicant](/man/wpa_supplicant)(1), [dnsmasq](/man/dnsmasq)(1)

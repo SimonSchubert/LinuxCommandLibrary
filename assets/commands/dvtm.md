@@ -8,21 +8,21 @@ dynamic virtual terminal manager
 
 ```dvtm```
 
-**Start with specific shell**
+**Set modifier key** to Ctrl+a
 
-```dvtm -s [/bin/zsh]```
+```dvtm -m ^a```
 
-**Attach to existing session**
+**Enable mouse support**
 
-```dvtm -a```
+```dvtm -M```
 
-**Start with specific layout**
+**Set scrollback history** buffer size
 
-```dvtm -l [tile]```
+```dvtm -h [5000]```
 
-**Use status command**
+**Use a status FIFO** for the status bar
 
-```dvtm -c "[date]"```
+```dvtm -s [/tmp/dvtm-status]```
 
 # SYNOPSIS
 
@@ -41,26 +41,29 @@ The tool provides dynamic layouts, tagging, and keyboard-driven window managemen
 
 # PARAMETERS
 
-**-s** _shell_
-> Shell to use for windows.
-
-**-a**
-> Attach to running session.
+**-v**
+> Print version and exit.
 
 **-M**
 > Toggle default mouse support.
 
 **-m** _mod_
-> Modifier key (default Ctrl+g).
+> Modifier key (default: Ctrl+g).
 
-**-l** _layout_
-> Default layout.
+**-d** _delay_
+> Escape sequence delay in milliseconds for ncurses.
 
-**-c** _cmd_
-> Status bar command.
+**-h** _lines_
+> Scrollback history buffer size.
 
 **-t** _title_
-> Window title.
+> Set terminal title.
+
+**-s** _status-fifo_
+> Named pipe to read status bar content from.
+
+**-c** _cmd_
+> Command to pipe into the status FIFO.
 
 # DEFAULT KEYS
 

@@ -4,13 +4,17 @@ Delete both local and remote tags
 
 # TLDR
 
-**Delete local and remote tag**
+**Delete a local and remote tag**
 
 ```git delete-tag [tag_name]```
 
+**Delete multiple tags at once**
+
+```git delete-tag [tag1] [tag2]```
+
 # SYNOPSIS
 
-**git** **delete-tag** _tag_
+**git** **delete-tag** _tag_ [_tag_...]
 
 # DESCRIPTION
 
@@ -20,4 +24,4 @@ Tags typically mark release points or significant commits, but occasionally need
 
 # SEE ALSO
 
-[git-tag](/man/git-tag)(1), [git-extras](/man/git-extras)(1)
+[git-tag](/man/git-tag)(1), [git-extras](/man/git-extras)(1), [git-push](/man/git-push)(1), [git-delete-branch](/man/git-delete-branch)(1)

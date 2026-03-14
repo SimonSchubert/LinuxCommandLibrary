@@ -31,11 +31,17 @@ The new image is staged and becomes active on the next reboot. The previous depl
 **--transport** _type_
 > Image source type: registry (default), containers-storage, oci-archive
 
+**--enforce-container-sigpolicy**
+> Require container signatures per /etc/containers/policy.json
+
 **--retain**
 > Keep the current deployment as a rollback option
 
 **--no-signature-verification**
 > Skip signature verification (use with caution)
+
+**--quiet**, **-q**
+> Suppress output
 
 # CAVEATS
 
@@ -43,4 +49,4 @@ Switching to incompatible images may result in a non-bootable system. Ensure the
 
 # SEE ALSO
 
-[bootc](/man/bootc)(1), [podman](/man/podman)(1), [skopeo](/man/skopeo)(1)
+[bootc](/man/bootc)(1), [podman](/man/podman)(1), [skopeo](/man/skopeo)(1), [rpm-ostree](/man/rpm-ostree)(1)

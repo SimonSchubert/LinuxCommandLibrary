@@ -20,6 +20,14 @@ Containerd command-line client
 
 ```ctr images tag [source_image]:[source_tag] [target_image]:[target_tag]```
 
+**List images** in Kubernetes namespace
+
+```ctr -n k8s.io images list```
+
+**Run** a container
+
+```ctr run [docker.io/library/alpine:latest] [my-container]```
+
 # SYNOPSIS
 
 **ctr** [_global options_] _command_ [_arguments_]
@@ -30,7 +38,7 @@ Containerd command-line client
 
 Unlike Docker CLI, ctr is designed for debugging and direct containerd interaction rather than general use. Kubernetes typically uses containerd through crictl instead.
 
-# PARAMETERS
+# SUBCOMMANDS
 
 **containers list**
 > List all containers
@@ -52,6 +60,35 @@ Unlike Docker CLI, ctr is designed for debugging and direct containerd interacti
 
 **run** _image_ _container_id_
 > Run a container
+
+**tasks list**
+> List running tasks
+
+**tasks kill** _container_id_
+> Kill a running task
+
+**snapshots list**
+> List snapshots
+
+**namespaces list**
+> List namespaces
+
+**content fetch** _ref_
+> Fetch content from remote
+
+# PARAMETERS
+
+**-n**, **--namespace** _namespace_
+> Namespace to use. Default: default. Kubernetes uses k8s.io.
+
+**--address** _address_
+> Address for containerd's GRPC server.
+
+**--connect-timeout** _duration_
+> Timeout for connecting to containerd.
+
+**--debug**
+> Enable debug output in logs.
 
 # CAVEATS
 

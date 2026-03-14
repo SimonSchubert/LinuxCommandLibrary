@@ -63,4 +63,4 @@ ppmmorph is part of **Netpbm**, implementing the morphing technique popularized 
 
 # SEE ALSO
 
-[xmorph](/man/xmorph)(1), [pnmpaste](/man/pnmpaste)(1), [ppmfade](/man/ppmfade)(1), [netpbm](/man/netpbm)(1)
+[pnmpaste](/man/pnmpaste)(1), [ppmfade](/man/ppmfade)(1), [netpbm](/man/netpbm)(1)

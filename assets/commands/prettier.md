@@ -20,9 +20,13 @@ Opinionated multi-language code formatter
 
 ```prettier --parser [typescript] [file]```
 
-**Show diff**
+**List files that differ** from Prettier formatting
 
-```prettier --write --list-different [file.js]```
+```prettier --list-different "[**/*.js]"```
+
+**Format with no semicolons** and single quotes
+
+```prettier --write --no-semi --single-quote [file.js]```
 
 # SYNOPSIS
 
@@ -49,7 +53,31 @@ _FILES_
 > Use single quotes.
 
 **--tab-width** _N_
-> Tab width.
+> Spaces per indentation level (default: 2).
+
+**--print-width** _N_
+> Line length to wrap at (default: 80).
+
+**--trailing-comma** _MODE_
+> Trailing commas: all, es5, or none (default: all).
+
+**--no-semi**
+> Do not print semicolons.
+
+**--use-tabs**
+> Indent with tabs instead of spaces.
+
+**--list-different**, **-l**
+> Print filenames of files that differ from formatting.
+
+**--no-config**
+> Do not look for a configuration file.
+
+**--ignore-unknown**, **-u**
+> Ignore unknown files matched by patterns.
+
+**--prose-wrap** _MODE_
+> Wrapping in markdown: always, never, or preserve (default: preserve).
 
 # DESCRIPTION
 
@@ -67,11 +95,11 @@ The tool deliberately limits configuration options to minimize style debates in 
 
 # CAVEATS
 
-Node.js required. Opinionated defaults.
+Requires Node.js. Opinionated with deliberately limited configuration options to minimize style debates. Ignores files in node_modules by default.
 
 # HISTORY
 
-Prettier was created for **consistent code formatting** across projects.
+Prettier was created by **James Long** in **2017** for consistent code formatting across projects.
 
 # SEE ALSO
 

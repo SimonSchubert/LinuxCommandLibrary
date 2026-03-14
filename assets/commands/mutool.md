@@ -49,17 +49,48 @@ _COMMAND_
 **clean**
 > Rewrite PDF file.
 
-**-o** _FILE_
-> Output file.
+**convert**
+> Transform files between formats.
 
-**--help**
-> Display help information.
+**extract**
+> Retrieve images and font files from a PDF.
+
+**pages**
+> Output page size and orientation information.
+
+**poster**
+> Divide pages into tiles for large-format printing.
+
+**show**
+> Print specified objects and streams to stdout.
+
+**run**
+> Execute a JavaScript program with MuPDF access.
+
+**create**
+> Generate a new PDF from graphics command input.
+
+**-o** _FILE_
+> Output file (used by draw, merge, and other subcommands).
+
+**-r** _RESOLUTION_
+> Rendering resolution in DPI (default: 72, for draw).
+
+**-F** _FORMAT_
+> Enforce specific output format (for draw).
+
+**-w** _WIDTH_
+> Page rendering width in pixels (for draw).
+
+**-h** _HEIGHT_
+> Page rendering height in pixels (for draw).
+
+**-p** _PASSWORD_
+> Password for encrypted files.
 
 # DESCRIPTION
 
-**mutool** is the MuPDF command-line tool. It manipulates PDF and other document formats.
-
-The tool renders, converts, and processes documents. Lightweight and fast.
+**mutool** is the MuPDF command-line tool for manipulating PDF and other document formats. It can render pages to images, extract text and images, merge and split PDFs, and run JavaScript programs with MuPDF bindings. Lightweight and fast.
 
 # CAVEATS
 

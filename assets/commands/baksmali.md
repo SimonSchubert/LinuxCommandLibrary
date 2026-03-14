@@ -4,57 +4,70 @@ Android DEX file disassembler
 
 # TLDR
 
-**Disassemble** DEX file
+**Disassemble** a DEX file
 
-```baksmali [classes.dex]```
+```baksmali disassemble [classes.dex]```
 
-Disassemble to **specific directory**
+Disassemble to a **specific directory**
 
-```baksmali -o [output/] [classes.dex]```
+```baksmali disassemble -o [output/] [classes.dex]```
 
-**Specify** API level
+**Specify** API level for disassembly
 
-```baksmali -a [28] [classes.dex]```
+```baksmali disassemble -a [28] [classes.dex]```
 
-**Disassemble** APK
+**List** available subcommands
 
-```baksmali -x [app.apk]```
+```baksmali --help```
+
+**List DEX classes** without disassembling
+
+```baksmali list classes [classes.dex]```
 
 # SYNOPSIS
 
-**baksmali** [_options_] _dex-file_
+**baksmali** _command_ [_options_] _dex-file_
 
 # DESCRIPTION
 
 **baksmali** is a disassembler for Android DEX (Dalvik Executable) files. It converts DEX bytecode into smali assembly language, enabling analysis, modification, and reverse engineering of Android applications.
 
-The tool is the counterpart to smali, together forming a complete assembler/disassembler suite for Android.
+The tool is the counterpart to smali, together forming a complete assembler/disassembler suite for Android. Since version 2.0, baksmali uses a subcommand-based interface.
 
 # PARAMETERS
 
+**disassemble** (or **d**)
+> Disassemble a DEX file into smali files.
+
+**list** _type_
+> List items (classes, methods, fields, etc.) from a DEX file.
+
+**deodex** (or **x**)
+> Deodex an odex/oat file.
+
 **-o**, **--output** _dir_
-> Output directory (default: out/)
+> Output directory (default: out/).
 
 **-a**, **--api-level** _level_
-> API level for disassembly
-
-**-x**, **--extract**
-> Extract and disassemble APK
+> API level for disassembly.
 
 **-j**, **--jobs** _num_
-> Number of threads
+> Number of threads for parallel processing.
 
-**-d**, **--bootclasspath** _jar_
-> Bootclasspath for analysis
+**-b**, **--bootclasspath** _classpath_
+> Colon-separated bootclasspath jars for analysis.
 
-**-c**, **--bootclasspath-dir** _dir_
-> Directory containing framework files
+**-d**, **--bootclasspath-dir** _dir_
+> Directory containing framework files.
 
 **--no-debug-info**
-> Don't write debug information
+> Don't write debug information (.local, .param, .line directives).
 
 **--use-locals**
-> Output local variable information
+> Use .locals directive instead of .registers.
+
+**--classes** _LIST_
+> Comma-separated list of classes to disassemble.
 
 # FEATURES
 
@@ -69,13 +82,10 @@ The tool is the counterpart to smali, together forming a complete assembler/disa
 
 ```bash
 # Disassemble DEX
-baksmali classes.dex
-
-# Disassemble APK
-baksmali -x app.apk
+baksmali disassemble classes.dex
 
 # Reassemble with smali
-smali out/ -o new-classes.dex
+smali assemble out/ -o new-classes.dex
 ```
 
 # CAVEATS
@@ -88,4 +98,4 @@ Requires Java runtime. Obfuscated code produces hard-to-read output. API level a
 
 # SEE ALSO
 
-[smali](/man/smali)(1), [apktool](/man/apktool)(1), [dex2jar](/man/dex2jar)(1)
+[apktool](/man/apktool)(1), [dex2jar](/man/dex2jar)(1), [jadx](/man/jadx)(1)

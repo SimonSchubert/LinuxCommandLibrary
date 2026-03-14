@@ -1,6 +1,6 @@
 # TAGLINE
 
-manages Lima virtual machines on macOS
+manages Lima Linux virtual machines
 
 # TLDR
 
@@ -56,12 +56,30 @@ manages Lima virtual machines on macOS
 **copy** _src_ _dest_
 > Copy files to/from VM.
 
+**edit** _name_
+> Edit an instance configuration.
+
+**snapshot** _subcommand_
+> Manage instance snapshots (apply, create, delete, list).
+
+**disk** _subcommand_
+> Manage additional disks (create, delete, list, resize).
+
+**protect** _name_
+> Protect an instance from accidental removal.
+
+**unprotect** _name_
+> Remove protection from an instance.
+
+**factory-reset** _name_
+> Factory reset an instance.
+
 **--name** _name_
 > Specify VM name.
 
 # DESCRIPTION
 
-**limactl** manages Lima (Linux Machines) virtual machines on macOS. Creates Linux VMs with automatic file sharing and port forwarding. Supports containerd/nerdctl for container workloads. Alternative to Docker Desktop for macOS.
+**limactl** manages Lima (Linux Machines) virtual machines on macOS, Linux, and NetBSD. Creates Linux VMs with automatic file sharing and port forwarding. Supports containerd/nerdctl for container workloads.
 
 # SEE ALSO
 

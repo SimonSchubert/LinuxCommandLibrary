@@ -32,9 +32,13 @@ CLI for Linkerd, a lightweight service mesh for Kubernetes
 
 ```linkerd viz top deploy/[name]```
 
-**Check proxy status** for a pod
+**Check proxy status** for a namespace
 
-```linkerd diagnostics proxy-status [pod-name]```
+```linkerd diagnostics proxy-metrics -n [namespace] [pod-name]```
+
+**Generate Linkerd upgrade manifest**
+
+```linkerd upgrade | kubectl apply -f -```
 
 # SYNOPSIS
 
@@ -120,6 +124,12 @@ CLI for Linkerd, a lightweight service mesh for Kubernetes
 
 **--verbose**
 > Enable verbose output.
+
+**--as** _user_
+> Impersonate a Kubernetes user.
+
+**-o**, **--output** _format_
+> Output format: table, json, yaml.
 
 # DESCRIPTION
 

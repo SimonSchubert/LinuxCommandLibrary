@@ -81,6 +81,30 @@ HashiCorp secrets management tool
 **server**
 > Start a Vault server.
 
+**token** _subcommand_
+> Manage tokens (capabilities, create, lookup, renew, revoke).
+
+**policy** _subcommand_
+> Manage policies (delete, fmt, list, read, write).
+
+**audit** _subcommand_
+> Manage audit devices (disable, enable, list).
+
+**lease** _subcommand_
+> Manage leases (lookup, renew, revoke).
+
+**read** _path_
+> Read data from Vault.
+
+**write** _path_ _data_
+> Write data to Vault.
+
+**delete** _path_
+> Delete data from Vault.
+
+**list** _path_
+> List data from Vault.
+
 **path-help** _path_
 > Show help for a specific API path.
 

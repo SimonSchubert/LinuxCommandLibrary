@@ -27,22 +27,43 @@ Import existing cloud resources into Pulumi
 # PARAMETERS
 
 **-f**, **--file** _file_
-> Import from JSON file.
+> Import resources from a JSON file.
 
 **-o**, **--out** _file_
-> Output generated code.
+> Output generated code to file.
 
 **--protect**
-> Protect imported resources.
+> Protect imported resources (default: true).
+
+**--generate-code**
+> Generate code for imported resources (default: true).
 
 **--parent** _urn_
 > Parent resource URN.
 
+**--provider** _urn_
+> Provider resource URN.
+
 **-s**, **--stack** _name_
 > Target stack.
 
+**-p**, **--parallel** _n_
+> Allow P resource operations to run in parallel.
+
 **-y**, **--yes**
-> Skip confirmation.
+> Skip confirmation prompts.
+
+**-m**, **--message** _msg_
+> Optional message for the update operation.
+
+**--from** _converter_
+> Invoke a converter to import resources.
+
+**-d**, **--debug**
+> Enable debug logging.
+
+**-j**, **--json**
+> Emit output as JSON.
 
 # DESCRIPTION
 

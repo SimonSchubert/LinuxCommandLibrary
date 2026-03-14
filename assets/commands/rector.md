@@ -12,9 +12,13 @@ Automated PHP code refactoring and upgrades
 
 ```vendor/bin/rector process [src/] --dry-run```
 
-**Specific rule**
+**Use a specific configuration file**
 
 ```vendor/bin/rector process [src/] --config [rector.php]```
+
+**Run only a single rule**
+
+```vendor/bin/rector process [src/] --only [TypedPropertyFromAssignsRector]```
 
 **Show available rules**
 
@@ -45,7 +49,10 @@ Automated PHP code refactoring and upgrades
 > Create config file.
 
 **list-rules**
-> Show available rules.
+> Show available rules. Accepts **--config** to check a specific config file.
+
+**setup**
+> Generate a custom rule with boilerplate, including psr-4 paths.
 
 **--dry-run**
 > Show changes without applying.
@@ -54,10 +61,19 @@ Automated PHP code refactoring and upgrades
 > Configuration file.
 
 **--clear-cache**
-> Clear cache.
+> Clear cache before processing.
+
+**--only** _RULE_
+> Run only a single specified rule class.
+
+**--output-format** _FORMAT_
+> Output format (e.g., **json**) for piping results to other tools.
 
 **-v**, **--verbose**
 > Verbose output.
+
+**--debug**
+> Print nested exception traces.
 
 # DESCRIPTION
 

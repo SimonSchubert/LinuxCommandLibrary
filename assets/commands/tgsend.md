@@ -64,7 +64,7 @@ Bot token required. Chat ID needed. Rate limits apply.
 
 # HISTORY
 
-**tgsend** sends messages via Telegram Bot API, useful for notifications and automation.
+**tgsend** is a lightweight CLI tool for sending messages via the Telegram Bot API, commonly used for alerting and automation in DevOps workflows.
 
 # SEE ALSO
 

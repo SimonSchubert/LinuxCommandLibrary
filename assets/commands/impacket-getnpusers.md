@@ -4,21 +4,25 @@ finds Active Directory users with "Do not require Kerberos preauthentication"
 
 # TLDR
 
-**Find AS-REP roastable users**
+**Find AS-REP roastable users** from a users file
 
 ```impacket-GetNPUsers [domain]/ -dc-ip [dc-ip] -usersfile [users.txt]```
 
-**Get hash for specific user**
+**Get hash for specific user** without credentials
 
 ```impacket-GetNPUsers [domain]/[user] -dc-ip [dc-ip] -no-pass```
 
-**Request with format for hashcat**
+**Request hashes** in hashcat format and save to file
 
-```impacket-GetNPUsers [domain]/ -dc-ip [dc-ip] -usersfile [users.txt] -format hashcat```
+```impacket-GetNPUsers [domain]/ -dc-ip [dc-ip] -usersfile [users.txt] -format hashcat -outputfile [hashes.txt]```
 
-**Output to file**
+**Enumerate via LDAP** with credentials
 
-```impacket-GetNPUsers [domain]/ -dc-ip [dc-ip] -usersfile [users.txt] -outputfile [hashes.txt]```
+```impacket-GetNPUsers [domain]/[user]:[password] -dc-ip [dc-ip] -request```
+
+**Use Kerberos authentication** from ccache
+
+```impacket-GetNPUsers [domain]/[user] -dc-ip [dc-ip] -k -no-pass```
 
 # SYNOPSIS
 
@@ -27,23 +31,43 @@ finds Active Directory users with "Do not require Kerberos preauthentication"
 # PARAMETERS
 
 **-dc-ip** _ip_
-> Domain controller IP.
+> Domain controller IP address.
 
 **-usersfile** _file_
-> File with usernames.
+> File with usernames to test (one per line).
 
 **-no-pass**
-> Request without password.
+> Don't ask for password (useful with -k or anonymous queries).
+
+**-request**
+> Request TGT hashes for vulnerable users (default: only list them).
 
 **-format** _type_
-> Hash format (hashcat/john).
+> Hash output format: hashcat or john (default: hashcat).
 
 **-outputfile** _file_
-> Save hashes to file.
+> Save hashes to file instead of stdout.
+
+**-k**
+> Use Kerberos authentication from ccache (KRB5CCNAME).
+
+**-hashes** _LMHASH:NTHASH_
+> Authenticate using NTLM hashes instead of password.
+
+**-aesKey** _KEY_
+> AES key to use for Kerberos authentication.
+
+**-ts**
+> Add timestamp to logging output.
+
+**-debug**
+> Turn on debug output.
 
 # DESCRIPTION
 
-**impacket-GetNPUsers** finds Active Directory users with "Do not require Kerberos preauthentication" set. Part of the Impacket toolkit. Requests AS-REP tickets that can be cracked offline (AS-REP Roasting). For authorized security testing only.
+**impacket-GetNPUsers** lists and requests TGTs for Active Directory users with "Do not require Kerberos preauthentication" set (UF_DONT_REQUIRE_PREAUTH). This enables AS-REP Roasting: the retrieved hashes can be cracked offline with hashcat or John the Ripper.
+
+Without **-usersfile**, the script queries LDAP to automatically enumerate vulnerable accounts (requires valid credentials). With **-usersfile**, it tests each username without needing domain credentials. Part of the Impacket toolkit. For authorized security testing only.
 
 # SEE ALSO
 

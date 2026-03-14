@@ -4,47 +4,38 @@ Cross-platform TUI database management tool
 
 # TLDR
 
-**Connect** to a database
+**Launch gobang** with default config
 
-```gobang [connection-string]```
+```gobang```
 
-**Connect** with saved connection
+**Launch with a custom config file**
 
-```gobang -c [connection-name]```
+```gobang -c [path/to/config.toml]```
 
-**List** saved connections
+**Display help**
 
-```gobang --list-connections```
+```gobang -h```
 
 # SYNOPSIS
 
-**gobang** [_options_] [_connection-string_]
+**gobang** [_options_]
 
 # PARAMETERS
 
-**-c, --connection** _NAME_
-> Use saved connection
+**-c**, **--config-path** _PATH_
+> Set the config file path.
 
-**--list-connections**
-> List all saved connections
+**-h**, **--help**
+> Display help and exit.
 
-**--add-connection**
-> Add new connection interactively
-
-**--delete-connection** _NAME_
-> Delete saved connection
-
-**-v, --version**
-> Display version and exit
-
-**-h, --help**
-> Display help and exit
+**-V**, **--version**
+> Display version and exit.
 
 # DESCRIPTION
 
-**gobang** is a terminal-based database management tool supporting MySQL, PostgreSQL, and SQLite. It provides an interactive TUI for browsing databases, running queries, and managing tables.
+**gobang** is a cross-platform terminal-based database management tool written in Rust, supporting MySQL, PostgreSQL, and SQLite. It provides an interactive TUI for browsing databases, running queries, and managing tables.
 
-The tool features a query editor with syntax highlighting, result display in table format, and saved connection management.
+Database connections are configured in a TOML config file (default: **~/.config/gobang/config.toml**). The tool features a SQL editor with syntax highlighting and result display in table format.
 
 # KEYBINDINGS
 
@@ -82,4 +73,4 @@ Requires database credentials. Large query results may impact performance. Some 
 
 # SEE ALSO
 
-[psql](/man/psql)(1), [mysql](/man/mysql)(1), [litecli](https://litecli.com/), [pgcli](https://www.pgcli.com/)
+[psql](/man/psql)(1), [mysql](/man/mysql)(1), [litecli](/man/litecli)(1), [pgcli](/man/pgcli)(1)

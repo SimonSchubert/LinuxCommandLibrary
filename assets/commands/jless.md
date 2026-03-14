@@ -44,11 +44,20 @@ command-line JSON viewer with vim-like navigation
 **--yaml**
 > Parse input as YAML instead of JSON.
 
+**--json**
+> Parse input as JSON (default).
+
 **--truncate**
 > Truncate long strings in display.
 
 **--scrolloff** _lines_
 > Minimum lines above/below cursor.
+
+**-n**, **--line-numbers**
+> Show line numbers.
+
+**-N**, **--no-line-numbers**
+> Hide line numbers.
 
 **-h**, **--help**
 > Display help information.

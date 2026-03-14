@@ -20,6 +20,14 @@ PostScript/PDF to HP ZjStream wrapper script
 
 ```foo2hp2600-wrapper -r [600] [file.ps]```
 
+**Print multiple copies**
+
+```foo2hp2600-wrapper -n [3] [file.ps]```
+
+**Monochrome printing**
+
+```foo2hp2600-wrapper [file.ps]```
+
 # SYNOPSIS
 
 **foo2hp2600-wrapper** [_options_] [_files_...]
@@ -42,7 +50,13 @@ _FILES_
 > Number of copies.
 
 **-m** _MEDIA_
-> Media type.
+> Media type (plain, thick, envelope, transparency).
+
+**-s** _SOURCE_
+> Paper source tray.
+
+**-2**
+> Duplex (two-sided) printing.
 
 **--help**
 > Display help information.

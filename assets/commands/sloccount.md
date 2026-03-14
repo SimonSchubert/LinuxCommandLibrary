@@ -60,8 +60,26 @@ The tool helps measure project size, estimate development effort, and track code
 **--overhead** _rate_
 > Overhead rate.
 
+**--cached**
+> Use cached results from a previous run instead of recalculating.
+
+**--append**
+> Add to existing data directory instead of clearing it.
+
+**--follow**
+> Follow symbolic links.
+
+**--autogen**
+> Count auto-generated source files (normally excluded).
+
+**--multiproject**
+> Treat directories as separate projects.
+
+**--filecount**
+> Show file counts.
+
 **--datadir** _dir_
-> Data directory.
+> Data directory (default: ~/.slocdata).
 
 **--addlang** _lang_
 > Add language.

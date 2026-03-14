@@ -4,13 +4,17 @@ File descriptor transport helper for Git
 
 # TLDR
 
-**Use file descriptors for git**
+**Clone using file descriptors** for input and output
 
 ```git clone "fd::[fd-in],[fd-out]"```
 
-**Use with pre-opened connections**
+**Fetch using pre-opened** file descriptor connections
 
 ```git fetch "fd::17,18"```
+
+**Use a single file descriptor** for both input and output
+
+```git fetch "fd::17"```
 
 # SYNOPSIS
 
@@ -19,30 +23,25 @@ File descriptor transport helper for Git
 # PARAMETERS
 
 _URL_
-> fd:: URL with file descriptors.
+> fd:: URL in the format fd::in[,out].
 
-_FD-IN_
-> Input file descriptor.
+**in**
+> File descriptor number for reading from the remote. If out is omitted, this descriptor is used for both directions.
 
-_FD-OUT_
-> Output file descriptor.
-
-**--help**
-> Display help information.
+**out**
+> File descriptor number for writing to the remote.
 
 # DESCRIPTION
 
-**git-remote-fd** is a remote helper that uses file descriptors for communication. The fd:: URL scheme allows Git to communicate over pre-established connections rather than opening new ones.
+**git-remote-fd** is a Git remote helper program that uses pre-opened file descriptors for communication instead of establishing its own connections. When a URL in the form `fd::in[,out]` is used, Git invokes this helper to transfer data over the specified file descriptors.
 
-This enables integration with connection brokers, process supervisors, or other systems that manage connections externally. File descriptors must be pre-opened before invoking Git.
+If only one file descriptor is provided, it is used for both reading and writing. If two are given separated by a comma, the first is used for reading from the remote and the second for writing.
+
+This enables integration with connection brokers, process supervisors, or custom transport layers that manage connections externally. The file descriptors must be opened before invoking Git.
 
 # CAVEATS
 
-Advanced use case. File descriptors must be pre-opened. Used through fd:: URLs.
-
-# HISTORY
-
-git-remote-fd is a **Git** remote helper for scenarios requiring pre-established communication channels.
+This is an advanced, low-level feature. File descriptors must be pre-opened by the calling process. Not suitable for everyday Git workflows; primarily useful for embedding Git in applications that manage their own connections.
 
 # SEE ALSO
 

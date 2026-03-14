@@ -53,9 +53,6 @@ Static analysis tool for shell scripts
 **--enable** _checks_
 > Enable optional checks (all, require-variable-braces, etc.)
 
-**-o**, **--enable**
-> Enable specific optional checks
-
 **-x**, **--external-sources**
 > Follow and check sourced files
 
@@ -68,8 +65,11 @@ Static analysis tool for shell scripts
 **-V**, **--version**
 > Display version
 
+**-C**, **--color** _when_
+> Colorize output (auto, always, never).
+
 **--wiki-link-count** _n_
-> Include wiki links for first n warnings
+> Include wiki links for first n warnings.
 
 # DESCRIPTION
 
@@ -103,6 +103,10 @@ Some legitimate shell patterns trigger warnings. Review each warning before disa
 
 The **--external-sources** option requires caution as it can execute arbitrary code when checking scripts that source files.
 
+# HISTORY
+
+**ShellCheck** was created by **Vidar Holen** and first released around **2012**. It is written in **Haskell** and has become the de facto standard linter for shell scripts, widely integrated into CI pipelines and editor plugins.
+
 # SEE ALSO
 
-[bash](/man/bash)(1), [sh](/man/sh)(1), [lint](/man/lint)(1)
+[bash](/man/bash)(1), [sh](/man/sh)(1), [lint](/man/lint)(1), [ksh](/man/ksh)(1)

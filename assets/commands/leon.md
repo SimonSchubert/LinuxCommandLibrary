@@ -1,6 +1,6 @@
 # TAGLINE
 
-open-source personal AI assistant that runs on your own server
+Open-source personal AI assistant that runs on your own server
 
 # TLDR
 
@@ -12,21 +12,21 @@ open-source personal AI assistant that runs on your own server
 
 ```leon create birth```
 
+**Create an instance from the develop branch**
+
+```leon create birth --develop```
+
 **Start Leon**
 
 ```leon start```
 
-**Check Leon status**
+**Check that the setup is correct**
 
-```leon status```
+```leon check```
 
-**Display installed skills**
+**View instance information**
 
-```leon skills```
-
-**Stop a running Leon instance**
-
-```leon stop```
+```leon info```
 
 # SYNOPSIS
 
@@ -40,20 +40,23 @@ open-source personal AI assistant that runs on your own server
 **start**
 > Start the Leon server and enable interaction.
 
-**stop**
-> Stop a running Leon instance.
-
-**status**
-> Display current status of the Leon instance.
-
-**skills**
-> List all installed skills and their status.
-
 **check**
-> Verify that system requirements are met.
+> Verify that the setup completed successfully.
+
+**info**
+> View details about a Leon instance.
+
+**delete**
+> Remove a Leon instance.
 
 **update**
 > Update Leon to the latest version.
+
+**run**
+> Execute npm scripts within a Leon instance.
+
+**help**
+> Display available commands.
 
 **--help**
 > Display help information.
@@ -65,9 +68,9 @@ open-source personal AI assistant that runs on your own server
 
 **Leon** is an open-source personal AI assistant that runs on your own server. It provides a skills-based architecture where each capability is a modular skill that can be installed, configured, and extended independently.
 
-Leon supports voice interaction for hands-free operation and text-based input through its web interface. It runs on Node.js with a Python runtime for skill execution, making it cross-platform across Linux, macOS, and Windows.
+Leon supports voice interaction and text-based input through its web interface. It runs on Node.js with a Python runtime for skill execution, making it cross-platform across Linux, macOS, and Windows.
 
-The assistant is designed for self-hosting, keeping all data and processing on your own infrastructure. Skills cover categories such as productivity, utilities, and information retrieval. Developers can create custom skills to extend Leon's capabilities.
+The assistant is designed for self-hosting, keeping all data and processing on your own infrastructure. Skills cover categories such as productivity, utilities, and information retrieval. Developers can create custom skills to extend Leon's capabilities. The CLI companion helps with setup and management of Leon instances.
 
 # CAVEATS
 
@@ -79,4 +82,4 @@ Leon was created by **Louis Grenard** and first released in **2019**. The projec
 
 # SEE ALSO
 
-[openclaw](/man/openclaw)(1), [nanobot](/man/nanobot)(1), [nanoclaw](/man/nanoclaw)(1), [claude](/man/claude)(1)
+[npm](/man/npm)(1), [node](/man/node)(1)

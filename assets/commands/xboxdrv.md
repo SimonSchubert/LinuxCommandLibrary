@@ -28,6 +28,14 @@ Userspace Xbox controller driver
 
 ```sudo xboxdrv --list-controller```
 
+**Map triggers as buttons** instead of axes
+
+```sudo xboxdrv --trigger-as-button```
+
+**Set custom deadzone** for analog sticks
+
+```sudo xboxdrv --deadzone [4000]```
+
 # SYNOPSIS
 
 **xboxdrv** [_options_]

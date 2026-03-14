@@ -24,6 +24,14 @@ Display the **status** of the most recent cloud-init run
 
 ```cloud-init clean```
 
+**Analyze** cloud-init boot performance
+
+```cloud-init analyze show```
+
+**Validate** a cloud-config file
+
+```cloud-init schema --config-file [path/to/config.yaml]```
+
 # SYNOPSIS
 
 **cloud-init** [_options_] _command_ [_arguments_]
@@ -38,6 +46,15 @@ The tool supports cloud-config YAML for declarative configuration, shell scripts
 
 # PARAMETERS
 
+**init**
+> Initialize cloud-init and perform initial modules
+
+**modules**
+> Activate modules using a given configuration key
+
+**single**
+> Run a single module
+
 **status**
 > Report cloud-init status
 
@@ -45,13 +62,19 @@ The tool supports cloud-config YAML for declarative configuration, shell scripts
 > Query instance metadata
 
 **clean**
-> Remove logs and artifacts
+> Remove logs and artifacts to allow re-run on next boot
 
 **collect-logs**
-> Gather debugging information
+> Gather debugging information into a tarball
+
+**analyze**
+> Analyze cloud-init boot performance
 
 **schema**
 > Validate cloud-config files
+
+**features**
+> List defined features supported by this version
 
 # CONFIGURATION
 
@@ -71,4 +94,4 @@ Primarily useful in cloud/virtual environments with metadata services. Running c
 
 # SEE ALSO
 
-[cloud-config](/man/cloud-config)(5), [systemctl](/man/systemctl)(1)
+[systemctl](/man/systemctl)(1)

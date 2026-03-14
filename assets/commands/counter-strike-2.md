@@ -4,21 +4,21 @@ Multiplayer FPS dedicated server
 
 # TLDR
 
-Run a game with **one map**
+Run a **casual game server**
 
-```[path/to]/cs2 -dedicated +map [de_dust2]```
+```[path/to]/cs2 -dedicated +game_type 0 +game_mode 0 +map [de_dust2]```
 
-Run with **maximum players** specified
+Run a **competitive game server**
 
-```[path/to]/cs2 -dedicated +map [de_dust2] -maxplayers [64]```
+```[path/to]/cs2 -dedicated +game_type 0 +game_mode 1 +map [de_dust2]```
 
-Run with specific **IP and port**
+Run with specific **IP, port, and max players**
 
-```[path/to]/cs2 -dedicated +map [de_dust2] -ip [1.2.3.4] -port [27015]```
+```[path/to]/cs2 -dedicated +map [de_dust2] -ip [1.2.3.4] -port [27015] -maxplayers [10]```
 
-**Shut down** the server (interactive)
+Run with **Steam authentication token**
 
-```quit```
+```[path/to]/cs2 -dedicated +map [de_dust2] +sv_setsteamaccount [token]```
 
 # SYNOPSIS
 
@@ -35,10 +35,19 @@ Server performance depends on player count, tick rate, and available system reso
 # PARAMETERS
 
 **-dedicated**
-> Run as dedicated server
+> Run as dedicated server (headless, no GUI)
 
 **+map** _mapname_
-> Specify the map to load
+> Specify the map to load (e.g., de_dust2, de_mirage)
+
+**+game_type** _type_
+> Game type (0 = Classic, 1 = Arms Race/Demolition/Deathmatch)
+
+**+game_mode** _mode_
+> Game mode (varies by game_type, e.g., 0 = Casual, 1 = Competitive)
+
+**+mapgroup** _group_
+> Map group to use (e.g., mg_active, mg_allclassic)
 
 **-maxplayers** _count_
 > Maximum number of players
@@ -48,6 +57,12 @@ Server performance depends on player count, tick rate, and available system reso
 
 **-port** _port_
 > Server port (default: 27015)
+
+**-insecure**
+> Disable VAC anti-cheat
+
+**+sv_setsteamaccount** _token_
+> Game Server Login Token for Steam authentication
 
 # CONSOLE COMMANDS
 

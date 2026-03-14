@@ -26,4 +26,4 @@ Requires network access to a Proxmox VE instance and valid authentication creden
 
 # SEE ALSO
 
-[ssh](/man/ssh)(1), [virsh](/man/virsh)(1)
+[ssh](/man/ssh)(1), [virsh](/man/virsh)(1), [virsh-help](/man/virsh-help)(1)

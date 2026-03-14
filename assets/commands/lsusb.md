@@ -1,6 +1,6 @@
 # TAGLINE
 
-displays information about USB buses in the system and devices connected to them
+Display information about USB buses and connected devices
 
 # TLDR
 
@@ -43,8 +43,8 @@ Filter by **vendor:product** ID
 **-d [vendor]:[product]**
 > Show only devices with specified vendor/product ID (hexadecimal)
 
-**-D device**
-> Display information about specific device file (requires root)
+**-D** _device_
+> Display information about a specific device file (e.g., /dev/bus/usb/001/002)
 
 **-t, --tree**
 > Display USB device hierarchy as tree
@@ -62,4 +62,4 @@ Verbose output (**-v**) and some device details require root privileges. Device 
 
 # SEE ALSO
 
-[lspci](/man/lspci)(8), [usb-devices](/man/usb-devices)(1), [udevadm](/man/udevadm)(8)
+[lspci](/man/lspci)(8), [udevadm](/man/udevadm)(8)

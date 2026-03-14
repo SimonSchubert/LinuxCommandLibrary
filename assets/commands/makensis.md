@@ -8,25 +8,29 @@ compiles NSIS installer scripts
 
 ```makensis [script.nsi]```
 
-**Verbose output**
+**Compile with maximum verbosity**
 
-```makensis -V[4] [script.nsi]```
+```makensis /V4 [script.nsi]```
 
-**Define symbol**
+**Define a symbol**
 
-```makensis -D[NAME=value] [script.nsi]```
+```makensis /D[NAME=value] [script.nsi]```
 
-**Include path**
+**Add include path**
 
-```makensis -I[/path/to/includes] [script.nsi]```
+```makensis /I[/path/to/includes] [script.nsi]```
 
-**Output file**
+**Log compiler output to file**
 
-```makensis -O[installer.exe] [script.nsi]```
+```makensis /O[logfile.txt] [script.nsi]```
 
-**Show help**
+**Treat warnings as errors**
 
-```makensis -HELP```
+```makensis /WX [script.nsi]```
+
+**Show help for a command**
+
+```makensis /CMDHELP [command]```
 
 # SYNOPSIS
 
@@ -35,32 +39,51 @@ compiles NSIS installer scripts
 # PARAMETERS
 
 _SCRIPT_
-> NSIS script file (.nsi).
+> NSIS script file (.nsi). Use **-** for stdin.
 
-**-V** _LEVEL_
-> Verbosity level (0-4).
+**/V** _LEVEL_
+> Verbosity level: 0=none, 1=errors, 2=warnings, 3=info, 4=all.
 
-**-D** _NAME=VALUE_
-> Define symbol.
+**/D** _NAME[=VALUE]_
+> Define a symbol for the script preprocessor.
 
-**-I** _DIR_
-> Add include path.
+**/I** _DIR_
+> Add an include path for !include directives.
 
-**-O** _FILE_
-> Output file name.
+**/O** _FILE_
+> Log compiler output to file.
 
-**-HELP**
-> Show help.
+**/X** _"command param"_
+> Execute NSIS command inline.
+
+**/NOCONFIG**
+> Disable inclusion of nsisconf.nsh.
+
+**/NOCD**
+> Disable changing directory to the .nsi file location.
+
+**/WX**
+> Treat warnings as errors.
+
+**/P** _LEVEL_
+> Compiler priority: 0=idle, 1=below normal, 2=normal, 3=above normal, 4=high, 5=realtime.
+
+**/CMDHELP** [_command_]
+> Print help for a specific command, or all commands.
+
+**/HDRINFO**
+> Print makensis compile-time options.
+
+**/PPO**
+> Run preprocessor only, print result to stdout.
 
 # DESCRIPTION
 
-**makensis** compiles NSIS installer scripts. NSIS creates Windows installers.
-
-The tool generates executable installers from script definitions. Used for Windows software distribution.
+**makensis** compiles NSIS (Nullsoft Scriptable Install System) scripts into Windows installer executables. It runs natively on Linux, macOS, and Windows, making it useful for cross-platform build pipelines.
 
 # CAVEATS
 
-Windows installer format. Can run on Linux via Wine. NSIS script syntax required.
+Generates Windows-format installers. NSIS script syntax must be learned separately. On Linux, options use / prefix (e.g., /V4) not - prefix.
 
 # HISTORY
 
@@ -68,5 +91,5 @@ NSIS (Nullsoft Scriptable Install System) was created by **Nullsoft**, makers of
 
 # SEE ALSO
 
-[wine](/man/wine)(1), [innosetup](/man/innosetup)(1)
+[wine](/man/wine)(1)
 

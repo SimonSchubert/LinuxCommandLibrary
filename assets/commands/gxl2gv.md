@@ -36,9 +36,11 @@ _FILES_
 
 # DESCRIPTION
 
-**gxl2gv** converts GXL (Graph eXchange Language) to Graphviz DOT format. It enables importing XML-based graph data into the Graphviz ecosystem.
+**gxl2gv** converts between graphs represented in GXL (Graph eXchange Language) and in the GV language. It enables importing XML-based graph data into the Graphviz ecosystem.
 
-The tool translates GXL's XML representation to DOT syntax. It's the inverse of gv2gxl for format interchange.
+Unless a conversion type is specified using a flag, gxl2gv deduces the type of conversion from the suffix of the input file: a ".gv" suffix causes conversion from GV to GXL, and a ".gxl" suffix causes conversion from GXL to GV. When input is from a pipe, the conversion type is inferred from the executable name.
+
+GXL supports a richer graph model than GV. gxl2gv maps GXL constructs into analogous GV constructs when possible; otherwise the GXL information is stored as an attribute.
 
 # CAVEATS
 

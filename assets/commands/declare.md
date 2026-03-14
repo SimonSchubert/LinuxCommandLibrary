@@ -78,6 +78,9 @@ bash builtin for declaring variables with attributes
 **-x**
 > Export to environment.
 
+**-I**
+> Inherit attributes and value from variable of same name at surrounding scope (bash 5.1+).
+
 **-p**
 > Display attributes and values.
 

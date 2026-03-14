@@ -16,9 +16,21 @@ Prompt for **yes/no** question
 
 ```dialog --yesno "[Continue?]" 7 40```
 
-Display **help**
+Display a **menu** selection
 
-```dialog```
+```dialog --menu "[Choose one:]" 15 40 4 1 "[Option A]" 2 "[Option B]" 3 "[Option C]" 2>[output.txt]```
+
+Display a **checklist** with multiple selections
+
+```dialog --checklist "[Select items:]" 15 40 4 1 "[Item A]" on 2 "[Item B]" off 3 "[Item C]" on 2>[output.txt]```
+
+Show a **progress bar**
+
+```dialog --gauge "[Installing...]" 7 40 0```
+
+Display a **password** input box
+
+```dialog --passwordbox "[Enter password:]" 8 40 2>[output.txt]```
 
 # SYNOPSIS
 
@@ -49,16 +61,44 @@ Output is written to stderr (or a specified file), while exit status indicates w
 **--checklist** _text_ _height_ _width_ _list-height_ _tag_ _item_ _status_...
 > Checkbox selection
 
-**--radiolist**
-> Radio button selection
+**--radiolist** _text_ _height_ _width_ _list-height_ _tag_ _item_ _status_...
+> Radio button selection (single choice)
+
+**--gauge** _text_ _height_ _width_ _percent_
+> Progress bar display
+
+**--passwordbox** _text_ _height_ _width_
+> Password input (hidden characters)
+
+**--fselect** _filepath_ _height_ _width_
+> File selection dialog
+
+**--calendar** _text_ _height_ _width_ _day_ _month_ _year_
+> Calendar date selection
 
 **--title** _title_
 > Set dialog title
+
+**--backtitle** _title_
+> Set background title at top of screen
+
+**--clear**
+> Clear screen on exit
+
+**--colors**
+> Enable embedded color codes in dialog text
+
+**--output-fd** _fd_
+> Output to specified file descriptor instead of stderr
 
 # CAVEATS
 
 Output goes to stderr by default; redirect with 2>file. Exit status: 0=OK/Yes, 1=Cancel/No, 255=ESC. For graphical dialogs, see zenity or kdialog.
 
+# HISTORY
+
+**dialog** was originally written by **Savio Lam** in **1994** and has been maintained by **Thomas E. Dickey** since **1999**. It is based on the ncurses library and has become the standard tool for creating text-mode user interfaces in shell scripts, widely used in Linux distribution installers and configuration tools.
+
 # SEE ALSO
 
-[whiptail](/man/whiptail)(1), [zenity](/man/zenity)(1), [gum](/man/gum)(1)
+[whiptail](/man/whiptail)(1), [zenity](/man/zenity)(1), [kdialog](/man/kdialog)(1), [gum](/man/gum)(1)

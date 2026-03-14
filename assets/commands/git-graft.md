@@ -1,46 +1,39 @@
 # TAGLINE
 
-Merge branch and delete immediately
+Merge a branch and delete it immediately
 
 # TLDR
 
-**Graft branch into history**
+**Graft** a branch into the current branch
 
-```git graft [branch]```
+```git graft [feature-branch]```
 
-**Graft onto specific commit**
+**Graft** a branch into a specific **destination** branch
 
-```git graft [branch] [base-commit]```
+```git graft [feature-branch] [dest-branch]```
 
 # SYNOPSIS
 
-**git graft** _branch_ [_base_]
+**git graft** _src-branch_ [_dest-branch_]
 
 # PARAMETERS
 
-_BRANCH_
-> Branch to graft.
+_src-branch_
+> The branch to merge and then delete
 
-_BASE_
-> Base commit (default: branch point).
-
-**--help**
-> Display help information.
+_dest-branch_
+> The branch to merge into (defaults to the current branch)
 
 # DESCRIPTION
 
 **git graft** merges a branch then immediately deletes it, combining git merge followed by git branch -d into a single operation. It is useful for incorporating completed feature branches into the main history while cleaning up branch clutter.
 
-Part of the git-extras suite, the command simplifies the common merge-and-delete workflow for branches that should become part of history without keeping the branch reference.
+Part of the **git-extras** suite, the command simplifies the common merge-and-delete workflow for branches that should become part of history without keeping the branch reference.
 
 # CAVEATS
 
-Part of git-extras package. Branch deleted after merge. Use for completed work only.
-
-# HISTORY
-
-git graft is part of **git-extras**, providing a convenience wrapper for the common merge-then-delete pattern.
+Requires the **git-extras** package. The source branch is deleted after merge. Only use for completed work where the branch reference is no longer needed. The merge must be a clean fast-forward or merge commit; conflicts will cause failure.
 
 # SEE ALSO
 
-[git-merge](/man/git-merge)(1), [git-branch](/man/git-branch)(1)
+[git-merge](/man/git-merge)(1), [git-branch](/man/git-branch)(1), [git-extras](/man/git-extras)(1)

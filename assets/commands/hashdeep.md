@@ -115,4 +115,4 @@ hashdeep was written by **Jesse Kornblum** as part of the **md5deep** package of
 
 # SEE ALSO
 
-[md5sum](/man/md5sum)(1), [sha256sum](/man/sha256sum)(1), [sha1deep](/man/sha1deep)(1), [md5deep](/man/md5deep)(1)
+[md5sum](/man/md5sum)(1), [sha256sum](/man/sha256sum)(1)

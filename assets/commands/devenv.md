@@ -12,21 +12,29 @@ declarative development environments with Nix
 
 ```devenv shell```
 
-**Start background services**
+**Start background processes** (databases, servers, etc.)
 
 ```devenv up```
 
-**Stop background services**
+**Start processes detached** in the background
 
-```devenv down```
+```devenv processes up```
 
 **Run a command in the environment**
 
 ```devenv shell -- [command]```
 
-**Update devenv**
+**Search for a package** in nixpkgs
+
+```devenv search [package_name]```
+
+**Update inputs and lockfile**
 
 ```devenv update```
+
+**Run project tests**
+
+```devenv test```
 
 # SYNOPSIS
 
@@ -43,17 +51,35 @@ declarative development environments with Nix
 **up**
 > Start background processes.
 
-**down**
+**processes up**
+> Start processes in the background.
+
+**processes down**
 > Stop background processes.
 
 **update**
-> Update devenv and inputs.
+> Update devenv inputs and lockfile.
+
+**search** _name_
+> Search for packages in nixpkgs.
+
+**test**
+> Run project tests defined in devenv.nix.
+
+**container**
+> Build, copy, or run a container.
+
+**build**
+> Build any attribute in devenv.nix.
 
 **gc**
-> Garbage collect old environments.
+> Garbage collect old shell generations.
 
 **info**
 > Show environment information.
+
+**repl**
+> Launch interactive REPL for inspecting configuration.
 
 # DESCRIPTION
 
@@ -66,10 +92,13 @@ The tool supports running services in the background, automatic environment acti
 # CONFIGURATION
 
 **devenv.nix**
-> Main configuration file defining packages, services, environment variables, and shell hooks.
+> Main configuration file defining packages, languages, services, environment variables, scripts, and shell hooks.
 
 **devenv.yaml**
-> Optional configuration for inputs and project metadata.
+> Configuration for Nix inputs (nixpkgs version, additional flakes) and project imports.
+
+**devenv.lock**
+> Lock file pinning exact input versions for reproducibility.
 
 # CAVEATS
 

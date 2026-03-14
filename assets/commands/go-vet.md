@@ -37,10 +37,22 @@ _PACKAGES_
 > JSON output.
 
 **-c** _N_
-> Number of errors to show.
+> Display offending line with N lines of context.
 
-**--help**
-> Display help information.
+**-v**
+> Verbose output.
+
+**-n**
+> Print commands but do not run them.
+
+**-x**
+> Print the commands as they are executed.
+
+**-vettool** _prog_
+> Select a different analysis tool.
+
+**-tags** _TAGS_
+> Build tags.
 
 # DESCRIPTION
 
@@ -50,7 +62,7 @@ The tool runs multiple analyzers that check for common mistakes. It is part of t
 
 # CAVEATS
 
-Not exhaustive. False positives possible. Use with tests and code review.
+Not exhaustive; false positives are possible. Use alongside tests and code review. Run `go help vet` for full documentation. Additional analyzers (like shadow) require `-vettool`.
 
 # HISTORY
 

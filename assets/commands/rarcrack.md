@@ -30,18 +30,18 @@ Brute-force password recovery for archives
 
 # SYNOPSIS
 
-**rarcrack** [_--type format_] [_--threads n_] [_--charset chars_] [_options_] _archive_
+**rarcrack** _archive_ [_--type_ _format_] [_--threads_ _n_] [_--charset_ _chars_]
 
 # PARAMETERS
 
 **--type** _FORMAT_
-> Archive type (rar, zip, 7z).
+> Archive type (rar, zip, 7z). Auto-detected from file extension if not specified.
 
 **--threads** _N_
-> Number of threads.
+> Number of threads for parallel password testing.
 
 **--charset** _CHARS_
-> Characters to try.
+> Characters to use in brute-force attempts. Narrowing this reduces search space significantly.
 
 **-h**, **--help**
 > Show help.

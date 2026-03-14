@@ -73,17 +73,13 @@ Universal command-line database client
 
 # DESCRIPTION
 
-**usql** is a universal database CLI. It connects to PostgreSQL, MySQL, SQLite, SQL Server, Oracle, and many other databases with a consistent interface.
+**usql** is a universal command-line interface for SQL databases. It connects to PostgreSQL, MySQL, SQLite, SQL Server, Oracle, and many other databases (including NoSQL databases) with a consistent psql-inspired interface.
 
-Connection strings follow URL format. The scheme identifies the database type: postgres://, mysql://, sqlite:, mssql://, oracle://, etc.
+Connection strings follow URL format. The scheme identifies the database type: postgres://, mysql://, sqlite:, mssql://, oracle://, etc. When no scheme is given, usql auto-detects: directories use PostgreSQL, regular files use SQLite3 or DuckDB.
 
-The interface mirrors psql. Backslash commands work across databases: \\l lists databases, \\dt lists tables, \\d describes objects.
+Backslash commands work across databases: \\l lists databases, \\dt lists tables, \\d describes objects, \\drivers lists available database drivers.
 
-Multiple databases can be managed from one tool. This simplifies workflows involving different database systems.
-
-Query output can be formatted as tables, CSV, JSON, or other formats. This enables data export and processing.
-
-Tab completion assists with table and column names. History persists across sessions.
+Query output can be formatted as tables, CSV, JSON, or other formats. Tab completion assists with table and column names, and history persists across sessions.
 
 # CAVEATS
 

@@ -36,6 +36,9 @@ Cinnamon supports extensive customization through applets (panel widgets), deskl
 **--display** _DISPLAY_
 > X display to use
 
+**--debug**
+> Enable debug output
+
 **--version**
 > Display version information
 
@@ -51,4 +54,4 @@ Cinnamon does not support using a different window manager; Muffin is integral t
 
 # SEE ALSO
 
-[cinnamon-session](/man/cinnamon-session)(1), [cinnamon-settings](/man/cinnamon-settings)(1), [muffin](/man/muffin)(1)
+[muffin](/man/muffin)(1), [nemo](/man/nemo)(1)

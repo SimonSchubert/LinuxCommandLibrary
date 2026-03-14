@@ -18,15 +18,11 @@ Simplified community-maintained man pages
 
 **Show page for specific platform**
 
-```tldr --platform=[linux|osx|windows] [command]```
+```tldr -p [linux] [command]```
 
-**Show a random page**
+**Search for pages matching** a keyword
 
-```tldr --random```
-
-**Render a local markdown file**
-
-```tldr --render [file.md]```
+```tldr --search [keyword]```
 
 # SYNOPSIS
 
@@ -42,12 +38,6 @@ Simplified community-maintained man pages
 
 **-p**, **--platform** _platform_
 > Show page for specific platform (linux, osx, windows, sunos, android)
-
-**-r**, **--random**
-> Show a random page
-
-**--render** _file_
-> Render a local markdown file as tldr page
 
 **-L**, **--language** _lang_
 > Show page in specified language

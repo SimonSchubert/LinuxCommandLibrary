@@ -20,7 +20,7 @@ python workflow engine for building complex pipelines of batch jobs
 
 ```luigi --module [mymodule] [MyTask] --workers [4]```
 
-**Show task graph**
+**Run with local scheduler** (no central scheduler needed)
 
 ```luigi --module [mymodule] [MyTask] --local-scheduler```
 
@@ -40,10 +40,16 @@ python workflow engine for building complex pipelines of batch jobs
 > Use local instead of central scheduler.
 
 **--scheduler-host** _host_
-> Central scheduler host.
+> Central scheduler hostname.
+
+**--scheduler-port** _port_
+> Central scheduler port (default 8082).
 
 **--log-level** _level_
-> Logging level.
+> Logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL).
+
+**--help**
+> Display available options and task parameters.
 
 # DESCRIPTION
 
@@ -72,7 +78,7 @@ class MyTask(luigi.Task):
 
 # CAVEATS
 
-Central scheduler recommended for production. No built-in triggering (use cron). Targets define completion. Python 3 required.
+Central scheduler recommended for production. No built-in triggering (use cron). Targets define task completion. Python 3 required. Parameter names with underscores must use hyphens on the command line (e.g., --my-parameter for my_parameter).
 
 # HISTORY
 
@@ -80,4 +86,4 @@ Luigi was developed at **Spotify** and open-sourced in **2012** for managing com
 
 # SEE ALSO
 
-[airflow](/man/airflow)(1), [prefect](/man/prefect)(1), [dask](/man/dask)(1), [celery](/man/celery)(1)
+[airflow](/man/airflow)(1), [prefect](/man/prefect)(1)

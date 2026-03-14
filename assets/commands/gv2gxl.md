@@ -18,31 +18,33 @@ converts Graphviz DOT format to GXL
 
 # SYNOPSIS
 
-**gv2gxl** [_options_] [_files_]
+**gv2gxl** [**-gd?**] [**-o** _outfile_] [_files_]
 
 # PARAMETERS
 
-_FILES_
-> Input DOT/GV files.
-
-**-o** _FILE_
-> Output GXL file.
+**-g**
+> Force input to be treated as GV format and generate GXL output, ignoring file extension
 
 **-d**
-> Output directed graph.
+> Force input to be treated as GXL format and generate GV output, ignoring file extension
+
+**-o** _outfile_
+> Write output to the specified file instead of stdout
 
 **-?**
-> Display help information.
+> Display usage information and exit
 
 # DESCRIPTION
 
-**gv2gxl** converts Graphviz DOT format to GXL (Graph eXchange Language). GXL is an XML-based format for graph interchange.
+**gv2gxl** converts between graphs represented in GXL (Graph eXchange Language) and Graphviz GV/DOT format. GXL is an XML-based format for graph interchange.
 
-The tool translates graph structure to XML representation. It's useful for processing graphs with XML tools or exchanging with other graph systems.
+Unless a conversion type is specified with **-g** or **-d**, the tool deduces the conversion direction from the input file suffix: a ".gv" suffix converts from GV to GXL, and a ".gxl" suffix converts from GXL to GV. When input is from a pipe with no flags, the conversion direction is determined by the executable name: **gv2gxl** converts from GV to GXL.
+
+The commands **dot2gxl**, **gv2gxl**, and **gxl2dot** are aliases of **gxl2gv**.
 
 # CAVEATS
 
-Part of Graphviz package. XML output can be verbose. Some attributes may not convert.
+The conversion can only handle one graph per GXL file. Applying gxl2gv followed by gv2gxl is semantically equivalent to the identity operator.
 
 # HISTORY
 

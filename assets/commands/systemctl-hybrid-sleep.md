@@ -34,9 +34,14 @@ Sleep without **wall** message
 
 If power is maintained, the system wakes quickly from RAM. If power is lost, the system can still recover from the hibernation image on disk. This provides the best of both worlds at the cost of longer sleep time.
 
+# CONFIGURATION
+
+**/etc/systemd/sleep.conf**
+> Controls hybrid sleep behavior via HybridSleepMode, HybridSleepState, and AllowHybridSleep settings.
+
 # CAVEATS
 
-Requires both suspend and hibernate to be supported by hardware. Takes longer than regular suspend due to writing hibernation image. Requires sufficient swap space for hibernation. May not work with secure boot enabled.
+Requires both suspend and hibernate to be supported by hardware. Takes longer than regular suspend due to writing the hibernation image to disk. Requires sufficient swap space for hibernation. May not work with secure boot enabled on some systems.
 
 # HISTORY
 
@@ -44,4 +49,4 @@ Hybrid sleep was added to address the risk of data loss during suspend when lapt
 
 # SEE ALSO
 
-[systemctl-suspend](/man/systemctl-suspend)(1), [systemctl-hibernate](/man/systemctl-hibernate)(1), [systemctl](/man/systemctl)(1)
+[systemctl-suspend](/man/systemctl-suspend)(1), [systemctl-hibernate](/man/systemctl-hibernate)(1), [systemctl-suspend-then-hibernate](/man/systemctl-suspend-then-hibernate)(1), [systemctl](/man/systemctl)(1)

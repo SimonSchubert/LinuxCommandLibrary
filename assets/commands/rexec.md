@@ -12,7 +12,7 @@ Specify the **remote username**
 
 ```rexec -u username -h remote_host ps aux```
 
-Redirect **stdin from /dev/null**
+Suppress **error stream** creation
 
 ```rexec -n -h remote_host ls -l```
 
@@ -36,13 +36,16 @@ Specify the **remote port**
 > Specify remote port
 
 **-n**, **--noerr**
-> Redirect stdin from /dev/null
+> Do not create a separate error stream
+
+**-d**, **--password** _password_
+> Specify password (use '-' to read from stdin)
 
 # DESCRIPTION
 
-**rexec** executes commands on a remote host using the rexec protocol. It provides basic remote command execution capabilities.
+**rexec** executes commands on a remote host using the rexec protocol (TCP port 512). It authenticates with a username and password, then runs the specified command on the remote system.
 
-Note: rexec transmits data in plain text and is insecure. Use SSH for encrypted remote command execution.
+Note: rexec transmits credentials and data in plain text and is insecure. Use SSH for encrypted remote command execution.
 
 # CAVEATS
 

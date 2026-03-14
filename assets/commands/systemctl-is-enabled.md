@@ -32,6 +32,9 @@ Show **targets** and symlinks
 **-l, --full**
 > Show installation targets and symlink paths
 
+**--system**
+> Check system units (default)
+
 **--user**
 > Check user units
 
@@ -53,6 +56,10 @@ Exit code 0 indicates the unit is enabled or will start at boot via other means.
 
 **indirect** - Enabled through another unit
 
+**generated** - Generated dynamically by a generator tool
+
+**alias** - Name is an alias for another unit
+
 # CAVEATS
 
 "Enabled" means configured to start, not currently running. Use `is-active` to check runtime state. Static units have no [Install] section and can only be started as dependencies.
@@ -63,4 +70,4 @@ The **is-enabled** subcommand provides a scriptable way to check boot configurat
 
 # SEE ALSO
 
-[systemctl-is-active](/man/systemctl-is-active)(1), [systemctl-enable](/man/systemctl-enable)(1), [systemctl-disable](/man/systemctl-disable)(1)
+[systemctl](/man/systemctl)(1), [systemctl-is-active](/man/systemctl-is-active)(1), [systemctl-enable](/man/systemctl-enable)(1), [systemctl-disable](/man/systemctl-disable)(1), [systemctl-status](/man/systemctl-status)(1)

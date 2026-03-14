@@ -32,7 +32,7 @@ Create isolated Python environments
 
 ```deactivate```
 
-**Create with specific seed packages**
+**Create with latest seed packages**
 
 ```virtualenv --download [venv]```
 
@@ -77,8 +77,11 @@ virtualenv is the original virtual environment tool for Python, predating the bu
 **--copies**
 > Use copies instead of symlinks.
 
+**--prompt** _text_
+> Custom prompt prefix for the activated environment.
+
 **--activators** _list_
-> Activators to generate.
+> Activators to generate (comma-separated: bash, fish, cshell, powershell, etc.).
 
 **-v**, **--verbose**
 > Increase verbosity.

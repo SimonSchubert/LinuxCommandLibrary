@@ -20,6 +20,10 @@ Create with **network**
 
 ```pct create 100 local:vztmpl/distro.tar.zst --rootfs local-lvm:4 --net0 name=eth0,bridge=vmbr0,ip=dhcp```
 
+Create **unprivileged** container with CPU and swap limits
+
+```pct create 100 local:vztmpl/distro.tar.zst --rootfs local-lvm:4 --unprivileged 1 --cores 2 --swap 512```
+
 Create and **start** immediately
 
 ```pct create 100 local:vztmpl/distro.tar.zst --rootfs local-lvm:4 --start```
@@ -55,8 +59,20 @@ Create and **start** immediately
 **--net**_N_ _config_
 > Network interface configuration
 
+**--cores** _number_
+> Number of CPU cores assigned to the container
+
+**--swap** _megabytes_
+> Swap memory limit in MB (default: 512)
+
+**--unprivileged** _0|1_
+> Create as unprivileged container (1, recommended for security)
+
+**--ssh-public-keys** _filepath_
+> SSH public keys for root user authentication
+
 **--features** _list_
-> Enable features like nesting
+> Enable features like nesting, keyctl, fuse, mknod
 
 **--start**
 > Start container after creation
@@ -71,4 +87,4 @@ Templates must be downloaded or uploaded to Proxmox storage first. The container
 
 # SEE ALSO
 
-[pct](/man/pct)(1), [pct-clone](/man/pct-clone)(1), [pct-destroy](/man/pct-destroy)(1)
+[pct](/man/pct)(1), [pct-clone](/man/pct-clone)(1), [pct-enter](/man/pct-enter)(1), [pct-destroy](/man/pct-destroy)(1)

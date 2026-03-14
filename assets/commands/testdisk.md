@@ -24,21 +24,31 @@ Recover lost partitions and boot sectors
 
 ```sudo testdisk /cmd [/dev/sdX] [commands]```
 
+**List partitions** on a device
+
+```sudo testdisk /list [/dev/sdX]```
+
 **Specify a directory** for recovered files
 
 ```sudo testdisk /d [path/to/recovery_dir] /cmd [/dev/sdX] [commands]```
 
 # SYNOPSIS
 
-**testdisk** [_/log_] [_/debug_] [_/d recup_dir_] [_/cmd device commands_] [_device|image_]
+**testdisk** [_/log_] [_/logname file.log_] [_/debug_] [_/d recup_dir_] [_/cmd device commands_] [_device|image_]
 
 # PARAMETERS
 
 **/log**
 > Create a testdisk.log file recording all operations and analysis results.
 
+**/logname** _file.log_
+> Specify a custom log file name instead of the default testdisk.log.
+
 **/debug**
 > Enable debug mode with additional detailed output.
+
+**/list**
+> Display partition information for the specified device or image.
 
 **/d** _recup_dir_
 > Specify the directory to store recovered files (should be on a different device than the one being recovered).
@@ -66,7 +76,7 @@ Root privileges are required when working with physical disk devices. When recov
 
 # HISTORY
 
-TestDisk was created by **Christophe Grenier** and initially developed as a partition repair tool for DOS, which explains its **/flag** command-line syntax. The project became part of **CGSecurity** and was open-sourced under the GPL. It is bundled with **PhotoRec**, a file carving tool for recovering files regardless of file system. The current version 7.2 supports modern partition schemes and file systems.
+TestDisk was created by **Christophe Grenier** and initially developed as a partition repair tool for DOS, which explains its **/flag** command-line syntax. The project became part of **CGSecurity** and was open-sourced under the GPL. It is bundled with **PhotoRec**, a file carving tool for recovering files regardless of file system.
 
 # SEE ALSO
 

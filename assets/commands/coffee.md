@@ -91,7 +91,7 @@ CoffeeScript compiles to readable JavaScript that follows best practices. Source
 
 # CAVEATS
 
-CoffeeScript 2 outputs modern JavaScript (ES6+) which may require transpilation for older browsers. The significant whitespace requires consistent indentation. Some JavaScript features like async/await have CoffeeScript syntax that differs from JavaScript conventions.
+CoffeeScript 2 outputs modern JavaScript (ES6+) which may require transpilation for older browsers via **--transpile**. Significant whitespace requires consistent indentation (spaces or tabs, but not mixed). CoffeeScript usage has declined significantly since ES6 adopted many of its features natively.
 
 # HISTORY
 

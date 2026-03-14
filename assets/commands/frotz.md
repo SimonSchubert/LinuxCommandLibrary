@@ -8,7 +8,7 @@ Z-machine interactive fiction interpreter
 
 ```frotz [game.z5]```
 
-**Play with specific screen size**
+**Set screen width and height**
 
 ```frotz -w [80] -h [24] [game.z5]```
 
@@ -16,13 +16,13 @@ Z-machine interactive fiction interpreter
 
 ```dfrotz [game.z5]```
 
-**Save transcript**
+**Load a saved game on startup**
 
-```frotz -r [transcript.txt] [game.z5]```
+```frotz -L [savefile] [game.z5]```
 
-**Use specific font size**
+**Restrict file access to a directory**
 
-```frotz -s [14] [game.z5]```
+```frotz -R [/path/to/directory] [game.z5]```
 
 # SYNOPSIS
 
@@ -42,30 +42,42 @@ The tool provides terminal and graphical interfaces for playing these games, wit
 **-h** _rows_
 > Screen height.
 
-**-s** _size_
-> Font size (graphical mode).
+**-d**
+> Disable color output.
 
-**-r** _file_
-> Record transcript to file.
+**-e**
+> Enable sound effects.
 
-**-p** _file_
-> Playback recorded commands.
+**-i**
+> Ignore fatal Z-machine errors.
 
-**-a**
-> Watch commands during playback.
+**-l** _n_
+> Left margin in characters.
 
-**-l** _file_
-> Command log file.
+**-r** _n_
+> Right margin in characters.
 
-**-c** _n_
-> Context lines for scrollback.
+**-p**
+> Plain ASCII output only (no accented characters).
+
+**-x**
+> Expand abbreviations "g", "x", "z" to "again", "examine", "wait".
+
+**-L** _file_
+> Load a saved game file on startup.
 
 **-R** _directory_
-> Restricted path for file access.
+> Restrict file read/write to specified directory.
+
+**-S** _n_
+> Set transcript width (0 to disable line splitting).
+
+**-Z** _n_
+> Error checking mode (0=none, 1=first, 2=all, 3=exit on error; default 1).
 
 # CAVEATS
 
-Some games require specific Z-machine versions. Graphics limited in terminal mode. Color support depends on terminal. Save format not always portable.
+Some games require specific Z-machine versions. Color support depends on terminal capabilities. Save format may not be portable between different interpreters. Three variants exist: **frotz** (curses), **dfrotz** (dumb terminal), and **sfrotz** (SDL graphical).
 
 # HISTORY
 
@@ -73,4 +85,4 @@ Some games require specific Z-machine versions. Graphics limited in terminal mod
 
 # SEE ALSO
 
-[zork](/man/zork)(1), [inform](/man/inform)(1), [tads](/man/tads)(1), [glulxe](/man/glulxe)(1)
+[nethack](/man/nethack)(6)

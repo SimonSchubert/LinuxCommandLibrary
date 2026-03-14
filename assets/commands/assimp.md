@@ -4,7 +4,7 @@ Import and convert 3D model file formats
 
 # TLDR
 
-**Convert** 3D model format
+**Convert** a 3D model between formats
 
 ```assimp export [input.fbx] [output.obj]```
 
@@ -19,6 +19,14 @@ List **supported formats**
 Extract **embedded textures**
 
 ```assimp extract [model.fbx]```
+
+**Convert** with a specific output format
+
+```assimp export [input.fbx] [output.glb] -f [glb2]```
+
+**Dump** model structure for debugging
+
+```assimp dump [model.fbx]```
 
 # SYNOPSIS
 
@@ -50,6 +58,9 @@ The tool supports formats including OBJ, FBX, COLLADA, glTF, STL, and dozens mor
 **exportinfo**
 > List export formats
 
+**dump** _file_
+> Dump model data to text for debugging
+
 **version**
 > Show version
 
@@ -66,4 +77,4 @@ The **Open Asset Import Library** was created around **2008** to provide a unifi
 
 # SEE ALSO
 
-[blender](/man/blender)(1), [meshlab](/man/meshlab)(1)
+[blender](/man/blender)(1), [meshlab](/man/meshlab)(1), [meshlabserver](/man/meshlabserver)(1)

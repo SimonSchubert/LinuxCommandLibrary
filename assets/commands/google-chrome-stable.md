@@ -4,7 +4,27 @@ Google Chrome stable release browser
 
 # TLDR
 
-This command is an alias of **chromium**
+**Open a URL**
+
+```google-chrome-stable [https://example.com]```
+
+**Open in incognito mode**
+
+```google-chrome-stable --incognito [https://example.com]```
+
+**Open in headless mode** and print to PDF
+
+```google-chrome-stable --headless --print-to-pdf=[output.pdf] [https://example.com]```
+
+**Start with remote debugging** enabled
+
+```google-chrome-stable --remote-debugging-port=[9222]```
+
+**Disable all extensions**
+
+```google-chrome-stable --disable-extensions```
+
+View `chromium` for additional options
 
 ```tldr chromium```
 

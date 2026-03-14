@@ -1,64 +1,64 @@
 # TAGLINE
 
-dynamic load balancing for parallel applications
+dynamic load balancing library and tools for HPC parallel applications
 
 # TLDR
 
-**Run DLB load balancing**
+**List CPU affinity of all DLB processes**
 
-```dlb [command]```
+```dlb_taskset --list```
 
-**Show DLB status**
+**Set CPU affinity for a DLB process**
 
-```dlb status```
+```dlb_taskset --set [0-3] --pid [pid]```
 
-**Configure load balancing** parameters
+**Borrow CPUs for a new application**
 
-```dlb configure --mode [dynamic]```
+```dlb_taskset --borrow --set [0-7] -- [application]```
 
 **Display help information**
 
-```dlb --help```
+```dlb_taskset --help```
 
 # SYNOPSIS
 
-**dlb** [_options_] _command_ [_args_]
+**dlb_taskset** [_options_] [**--**] [_command_]
 
 # PARAMETERS
 
-_COMMAND_
-> DLB operation to perform.
+**--list**
+> List CPU affinity of all DLB processes.
 
-**status**
-> Show current status.
+**--set** _MASK_
+> Set CPU affinity mask for a process.
 
-**configure**
-> Set configuration options.
+**--pid** _PID_
+> Specify process ID to operate on.
 
-**--mode** _MODE_
-> Load balancing mode.
+**--borrow**
+> Borrow CPUs instead of stealing; CPUs are returned when the application ends.
 
-**--verbose**
-> Verbose output.
+**--color** _WHEN_
+> Colorize output (yes, auto, no).
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**dlb** (Dynamic Load Balancing) is a library and runtime for load balancing in parallel applications. It enables dynamic redistribution of computational work across processes or threads to improve efficiency.
+**DLB** (Dynamic Load Balancing) is a library that dynamically redistributes computational resources among processes within the same shared memory node. It improves load balance of the outer level of parallelism (e.g., MPI) by adjusting resources at the inner level (e.g., OpenMP).
 
-DLB addresses load imbalance in HPC applications where work distribution varies over time. By allowing processes to share computational resources dynamically, it improves parallel efficiency without requiring application redesign.
+DLB provides three main components: **LeWI** (Lend When Idle) redistributes unused CPUs between processes, **DROM** (Dynamic Resource Ownership Manager) manages CPU affinity, and **TALP** (Tracking Application Live Performance) gathers performance data.
 
-The library integrates with MPI applications and supports various programming models. The dlb command provides runtime control and monitoring of DLB-enabled applications.
+The **dlb_taskset** command-line tool manages CPU affinity of DLB-enabled processes and can launch new applications with specific CPU assignments.
 
 # CAVEATS
 
-Requires DLB-enabled applications. Effectiveness depends on application characteristics. Some overhead for load monitoring. Best suited for iterative applications with varying workloads.
+Requires DLB-enabled applications linked against the DLB library. Best suited for iterative HPC applications with varying workloads. Processes must run on the same shared memory node.
 
 # HISTORY
 
-DLB was developed at the **Barcelona Supercomputing Center (BSC)** for high-performance computing applications. It provides dynamic load balancing capabilities for parallel applications running on supercomputers and clusters.
+DLB was developed at the **Barcelona Supercomputing Center (BSC)** for high-performance computing applications. It is distributed under the **LGPL-3.0** license.
 
 # SEE ALSO
 

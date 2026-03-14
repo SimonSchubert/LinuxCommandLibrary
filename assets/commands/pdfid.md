@@ -38,8 +38,14 @@ scans PDF files for keywords that indicate potentially malicious content
 **-d**
 > Disarm (remove /JS and /Launch).
 
-**-p** _plugin_
-> Use plugin.
+**-n**
+> Only show counts that are non-zero.
+
+**-f**
+> Force analysis even without valid %PDF header.
+
+**-p** _PLUGIN_
+> Use specified plugin for additional analysis.
 
 # DESCRIPTION
 
@@ -80,4 +86,4 @@ pdfid was created by **Didier Stevens** as part of his PDF analysis tools for se
 
 # SEE ALSO
 
-[pdf-parser](/man/pdf-parser)(1), [peepdf](/man/peepdf)(1), [pdfinfo](/man/pdfinfo)(1)
+[pdf-parser](/man/pdf-parser)(1), [pdfinfo](/man/pdfinfo)(1)

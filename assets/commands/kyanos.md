@@ -12,11 +12,23 @@ eBPF-based network analysis and tracing tool
 
 ```kyanos watch --port [port]```
 
+**Watch traffic filtered by process ID**
+
+```kyanos watch --pids [1234]```
+
+**Watch traffic filtered by container ID**
+
+```kyanos watch --container-id [abc123]```
+
+**Watch Redis traffic filtered by key**
+
+```kyanos watch redis --keys [my-key1,my-key2]```
+
 **Show network statistics**
 
 ```kyanos stat```
 
-**Show an overview** of external dependencies
+**Show an overview of external dependencies**
 
 ```kyanos overview```
 

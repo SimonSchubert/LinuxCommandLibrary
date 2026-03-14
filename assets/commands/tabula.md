@@ -50,7 +50,10 @@ Extract tables from PDF documents
 > Guess table areas.
 
 **-l**
-> Force lattice mode.
+> Force lattice mode (tables with ruling lines).
+
+**-s**
+> Force stream mode (tables without ruling lines).
 
 # DESCRIPTION
 
@@ -62,7 +65,7 @@ Tabula runs as a Java application and can process specific pages or entire docum
 
 # CAVEATS
 
-Java required. Table detection varies. Complex tables may fail.
+Requires Java Runtime Environment. Table detection accuracy varies by PDF layout; manually specifying **-l** (lattice) or **-s** (stream) mode often improves results. Cannot extract tables from scanned/image-based PDFs (use OCR tools first).
 
 # HISTORY
 

@@ -1,6 +1,6 @@
 # TAGLINE
 
-manages general NetworkManager settings and provides status information about
+Manage general NetworkManager settings and status
 
 # TLDR
 

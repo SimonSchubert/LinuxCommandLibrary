@@ -20,6 +20,10 @@ Show only the **commit ID** (machine-readable)
 
 ```flatpak remote-info --show-commit [remote_name] [com.example.app]```
 
+Show the **metadata** of a remote application
+
+```flatpak remote-info --show-metadata [remote_name] [com.example.app]```
+
 Show information for a specific **architecture**
 
 ```flatpak remote-info --arch [x86_64] [remote_name] [com.example.app]```
@@ -90,4 +94,4 @@ Part of the **Flatpak** project developed by Alexander Larsson at Red Hat. Flatp
 
 # SEE ALSO
 
-[flatpak](/man/flatpak)(1), [flatpak-info](/man/flatpak-info)(1), [flatpak-remote-ls](/man/flatpak-remote-ls)(1), [flatpak-update](/man/flatpak-update)(1)
+[flatpak](/man/flatpak)(1), [flatpak-update](/man/flatpak-update)(1), [flatpak-install](/man/flatpak-install)(1)

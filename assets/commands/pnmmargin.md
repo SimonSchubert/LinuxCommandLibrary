@@ -30,13 +30,16 @@ _size_
 **-black**
 > Black border.
 
+**-plain**
+> Produce output in plain PNM format.
+
 # DESCRIPTION
 
 **pnmmargin** adds a uniform solid-color border around all four sides of a PNM image. The border width is specified in pixels and is applied equally on all sides.
 
-By default the border color is white. Use **-color** to specify a custom color, or the shortcuts **-white** and **-black** for common choices. This is a convenience wrapper around pnmpad. Part of the Netpbm toolkit.
+If no color option is specified, the program makes a guess. Use **-color** to specify a custom color, or the shortcuts **-white** and **-black** for common choices. This is a convenience wrapper around **pnmpad**. For different margins on each side, use **pnmpad** directly. To remove borders, use **pamcut**. Part of the Netpbm toolkit.
 
 # SEE ALSO
 
-[pnmpad](/man/pnmpad)(1), [pamcut](/man/pamcut)(1)
+[pnmpad](/man/pnmpad)(1), [pamcut](/man/pamcut)(1), [pnmcat](/man/pnmcat)(1), [pnmcrop](/man/pnmcrop)(1)
 

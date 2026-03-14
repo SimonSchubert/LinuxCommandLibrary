@@ -4,25 +4,33 @@ Rust WebAssembly application bundler
 
 # TLDR
 
-**Build project**
+**Build the project**
 
 ```trunk build```
+
+**Build for release** with optimizations
+
+```trunk build --release```
 
 **Serve with hot reload**
 
 ```trunk serve```
 
-**Watch for changes**
+**Serve on a specific port and address**
+
+```trunk serve --port [3000] --address [0.0.0.0]```
+
+**Serve with a backend proxy**
+
+```trunk serve --proxy-backend=http://localhost:[9000]/api/```
+
+**Watch for changes and rebuild**
 
 ```trunk watch```
 
 **Clean build artifacts**
 
 ```trunk clean```
-
-**Build for release**
-
-```trunk build --release```
 
 # SYNOPSIS
 
@@ -31,22 +39,34 @@ Rust WebAssembly application bundler
 # PARAMETERS
 
 **build**
-> Build project.
+> Build the project, compiling Rust to WASM and bundling assets.
 
 **serve**
-> Development server.
+> Start development server with hot reloading.
 
 **watch**
-> Watch and rebuild.
+> Watch for file changes and rebuild automatically.
 
 **clean**
-> Remove artifacts.
+> Remove build artifacts (dist directory).
 
 **--release**
-> Release build.
+> Enable release optimizations including WASM size reduction.
 
 **--public-url** _URL_
-> Public URL prefix.
+> Public URL prefix for asset paths.
+
+**--port** _PORT_
+> Port for the dev server (default: 8080).
+
+**--address** _ADDR_
+> Address to bind the dev server to.
+
+**--proxy-backend** _URL_
+> Proxy requests to a backend server. The URI path of the URL determines the proxy path.
+
+**--proxy-rewrite** _URI_
+> Alternative URI on which to listen for proxy requests.
 
 # DESCRIPTION
 

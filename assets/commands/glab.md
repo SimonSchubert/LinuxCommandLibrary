@@ -4,7 +4,11 @@ Official GitLab CLI tool
 
 # TLDR
 
-**Create merge request**
+**Authenticate with GitLab**
+
+```glab auth login```
+
+**Create a merge request**
 
 ```glab mr create```
 
@@ -12,25 +16,25 @@ Official GitLab CLI tool
 
 ```glab mr list```
 
-**View merge request**
+**View a merge request**
 
 ```glab mr view [number]```
 
-**Create issue**
+**Create an issue**
 
 ```glab issue create```
 
-**List issues**
-
-```glab issue list```
-
-**Clone repository**
+**Clone a repository**
 
 ```glab repo clone [owner/repo]```
 
 **View CI/CD pipelines**
 
 ```glab ci list```
+
+**Make a raw API request**
+
+```glab api [/projects/:id/issues]```
 
 # SYNOPSIS
 
@@ -39,28 +43,40 @@ Official GitLab CLI tool
 # PARAMETERS
 
 **mr** _subcommand_
-> Merge request operations (create, list, view, merge, close).
+> Merge request operations (create, list, view, merge, close, checkout, approve).
 
 **issue** _subcommand_
-> Issue operations (create, list, view, close).
+> Issue operations (create, list, view, close, reopen, note).
 
 **repo** _subcommand_
-> Repository operations (clone, fork, view).
+> Repository operations (clone, fork, view, archive).
 
 **ci** _subcommand_
-> CI/CD operations (list, view, run, trace).
+> CI/CD pipeline operations (list, view, run, trace, retry).
 
 **auth** _subcommand_
 > Authentication (login, status, logout).
+
+**release** _subcommand_
+> Manage releases (create, list, view, delete).
 
 **config** _subcommand_
 > Configuration management.
 
 **api** _endpoint_
-> Raw API access.
+> Make authenticated API requests to GitLab.
 
-**--repo**, **-R** _repo_
-> Target repository.
+**snippet** _subcommand_
+> Create and manage code snippets.
+
+**variable** _subcommand_
+> Manage CI/CD variables.
+
+**label** _subcommand_
+> Manage project labels.
+
+**-R** _repo_, **--repo** _repo_
+> Target repository (owner/repo format).
 
 # DESCRIPTION
 

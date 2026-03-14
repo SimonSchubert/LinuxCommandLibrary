@@ -4,29 +4,29 @@ Convert PPM images to ASCII art
 
 # TLDR
 
-**Convert PPM to ASCII art**
+**Convert PPM to ASCII art** (default 1x2 cell size)
 
 ```ppmtoascii [input.ppm]```
 
-**Convert with custom size**
+**Convert with 2x4 cell size** for more detail
 
-```ppmtoascii -1x2 [input.ppm]```
+```ppmtoascii -2x4 [input.ppm]```
 
 # SYNOPSIS
 
-**ppmtoascii** [_options_] [_file_]
+**ppmtoascii** [_-1x2_|_-2x4_] [_file_]
 
 # PARAMETERS
 
 **-1x2**
-> 1x2 cell size.
+> Each character represents 1 pixel across by 2 pixels down. This is the default.
 
 **-2x4**
-> 2x4 cell size.
+> Each character represents 2 pixels across by 4 pixels down, giving more detail.
 
 # DESCRIPTION
 
-**ppmtoascii** converts color PPM images to ASCII art. Renders images using colored or grayscale text characters. Part of Netpbm toolkit.
+**ppmtoascii** reads a PPM image and produces ASCII art as output, with ANSI terminal control characters for color when displayed on a color text terminal. Part of the Netpbm toolkit.
 
 # SEE ALSO
 

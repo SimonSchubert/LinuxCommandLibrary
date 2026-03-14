@@ -4,19 +4,23 @@ captures screenshots from iOS devices
 
 # TLDR
 
-**Take screenshot**
+**Take a screenshot and save to a file**
 
 ```idevicescreenshot [screenshot.png]```
 
-**Auto-name screenshot**
+**Take a screenshot with auto-generated filename**
 
 ```idevicescreenshot```
 
-**Target specific device**
+**Take a screenshot from a specific device by UDID**
 
 ```idevicescreenshot -u [udid] [output.png]```
 
-**Debug mode**
+**Take a screenshot over network connection**
+
+```idevicescreenshot -n [output.png]```
+
+**Enable debug output**
 
 ```idevicescreenshot -d [output.png]```
 
@@ -27,34 +31,30 @@ captures screenshots from iOS devices
 # PARAMETERS
 
 _OUTPUT_
-> Output filename.
+> Output filename. If omitted, generates a timestamped filename.
 
 **-u** _UDID_
-> Target device by UDID.
+> Target device by its unique device identifier (UDID).
 
 **-n**
-> Use network connection.
+> Use network connection instead of USB.
 
 **-d**, **--debug**
-> Debug output.
+> Enable debug output.
 
-**--help**
+**-h**, **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**idevicescreenshot** captures screenshots from iOS devices. It saves the current screen as a PNG or TIFF file.
+**idevicescreenshot** captures screenshots from connected iOS devices. It saves the current screen as a PNG or TIFF file depending on the device and iOS version. The tool communicates with the device's screenshot service via the usbmuxd protocol.
 
-The tool requires the device to be paired and trusted. Screenshots are taken at device resolution.
+The device must be paired and trusted before screenshots can be taken. Use **idevicepair** to manage device pairing.
 
 # CAVEATS
 
-Part of libimobiledevice. Device must be paired. Some apps may block screenshots.
-
-# HISTORY
-
-idevicescreenshot is part of **libimobiledevice** for iOS device screen capture.
+Part of the **libimobiledevice** suite. The device must be paired and trusted. The output format (PNG vs TIFF) depends on the iOS version. DRM-protected content may appear as black in screenshots.
 
 # SEE ALSO
 
-[idevice_id](/man/idevice_id)(1), [idevicepair](/man/idevicepair)(1), [scrcpy](/man/scrcpy)(1)
+[idevice_id](/man/idevice_id)(1), [idevicepair](/man/idevicepair)(1), [ideviceinfo](/man/ideviceinfo)(1), [scrcpy](/man/scrcpy)(1)

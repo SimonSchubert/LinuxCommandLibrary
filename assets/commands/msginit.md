@@ -39,7 +39,13 @@ creates a new PO file from a POT file
 > Don't prompt for translator info.
 
 **--no-wrap**
-> Don't wrap lines.
+> Don't wrap long lines.
+
+**-w** _NUMBER_
+> Set output page width (default: 79).
+
+**--properties-output**
+> Write a Java ResourceBundle in .properties format.
 
 # DESCRIPTION
 
@@ -69,7 +75,7 @@ msginit -i messages.pot -o de.po -l de_DE.UTF-8
 
 # CAVEATS
 
-POT file must exist first. Locale must be valid system locale. May prompt for translator email.
+POT file must exist first (typically created by xgettext). Locale must be a valid system locale. By default, msginit prompts for the translator's email address; use **--no-translator** to skip in automated scripts. The output PO file contains all strings marked as untranslated (empty msgstr).
 
 # HISTORY
 

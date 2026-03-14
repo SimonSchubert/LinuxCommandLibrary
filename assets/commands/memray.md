@@ -1,6 +1,6 @@
 # TAGLINE
 
-profiles Python memory allocations, tracking where memory is allocated
+Python memory profiler that tracks allocations
 
 # TLDR
 
@@ -102,4 +102,4 @@ Tracking overhead slows execution. Large profiles consume disk space. Native tra
 
 # SEE ALSO
 
-[py-spy](/man/py-spy)(1), [tracemalloc](/man/tracemalloc)(3), [valgrind](/man/valgrind)(1), [heaptrack](/man/heaptrack)(1)
+[py-spy](/man/py-spy)(1), [valgrind](/man/valgrind)(1)

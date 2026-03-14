@@ -1,6 +1,6 @@
 # TAGLINE
 
-teX engine
+TeX engine that produces PDF output directly
 
 # TLDR
 
@@ -46,25 +46,36 @@ teX engine
 > Stop on first error.
 
 **-ini**
-> Initialize format.
+> Initialize (create) a format file for faster loading.
+
+**-fmt** _FORMAT_
+> Use the specified format file instead of the default.
+
+**-file-line-error**
+> Print error messages with file name and line number.
+
+**-synctex** _NUMBER_
+> Generate SyncTeX data for editor integration (1 to enable).
+
+**-shell-escape**
+> Enable \write18 for running external commands.
+
+**-no-shell-escape**
+> Disable \write18 (default).
 
 # DESCRIPTION
 
-**pdftex** is a TeX engine. It produces PDF directly.
+**pdfTeX** is a TeX engine that produces PDF output directly from TeX source, without an intermediate DVI stage. It extends Knuth's original TeX with PDF-specific primitives and microtypographic features such as margin kerning (character protrusion) and font expansion (hz-optimization) for improved text appearance.
 
-Extended from original TeX. Adds PDF primitives.
-
-Direct PDF generation. No DVI intermediate.
-
-Microtypographic extensions. Better text appearance.
+pdfTeX processes plain TeX by default. For LaTeX documents, use **pdflatex** instead, which is pdfTeX with the LaTeX format preloaded.
 
 # CAVEATS
 
-Plain TeX by default. Use pdflatex for LaTeX. Large documents may need multiple runs.
+Processes plain TeX by default; use pdflatex for LaTeX documents. Large documents with cross-references, table of contents, or bibliography may need multiple compilation runs. The `-shell-escape` flag allows arbitrary command execution and should be used with caution.
 
 # HISTORY
 
-**pdfTeX** was developed by **Hàn Thế Thành** as his PhD project. It extended TeX to output PDF directly.
+**pdfTeX** was developed by **Han The Thanh** as his PhD thesis project at Masaryk University in the Czech Republic, first released in **1996**. It extended TeX to output PDF directly and introduced microtypographic features. pdfTeX became the default engine in most TeX distributions.
 
 # SEE ALSO
 

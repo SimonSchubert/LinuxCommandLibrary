@@ -10,7 +10,7 @@ open and map LUKS encrypted volume
 
 Use a **keyfile** instead of passphrase
 
-```cryptsetup open -k [path/to/file] [/dev/sdXY] [mapping_name]```
+```cryptsetup open -d [path/to/keyfile] [/dev/sdXY] [mapping_name]```
 
 Enable **TRIM** support for SSDs
 
@@ -36,7 +36,7 @@ After opening, the mapped device can be mounted or used with LVM, filesystem cre
 
 # PARAMETERS
 
-**-k, --key-file** _file_
+**-d, --key-file** _file_
 > Use keyfile instead of passphrase
 
 **--allow-discards**
@@ -49,7 +49,7 @@ After opening, the mapped device can be mounted or used with LVM, filesystem cre
 > Open in read-only mode
 
 **--type** _type_
-> Specify device type (luks, luks1, luks2, plain, tcrypt)
+> Specify device type (luks, luks1, luks2, plain, tcrypt, bitlk)
 
 # CAVEATS
 
@@ -57,4 +57,4 @@ With TRIM enabled, minimal data leakage about freed blocks may occur, potentiall
 
 # SEE ALSO
 
-[cryptsetup](/man/cryptsetup)(8), [cryptsetup-close](/man/cryptsetup-close)(8), [cryptsetup-luksformat](/man/cryptsetup-luksformat)(8)
+[cryptsetup](/man/cryptsetup)(8), [cryptsetup-luksformat](/man/cryptsetup-luksformat)(8)

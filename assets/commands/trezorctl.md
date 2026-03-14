@@ -79,7 +79,13 @@ Trezor hardware wallet command-line interface
 > Update device firmware to the latest version.
 
 **set safety-checks** _strict_|_prompt_
-> Set safety check level. Strict enforces full security; prompt allows overrides.
+> Set safety check level. Strict enforces full validation; prompt allows user overrides.
+
+**crypto get-public-key** **-n** _path_
+> Get public key at the specified BIP32 derivation path.
+
+**ethereum get-address** **-n** _path_
+> Get Ethereum address at the specified derivation path.
 
 **-v**, **--verbose**
 > Enable verbose output.
@@ -97,7 +103,7 @@ All sensitive operations require physical confirmation on the device, maintainin
 
 # CAVEATS
 
-Requires Python 3.9 or higher and libusb. On Linux, udev rules must be configured for device detection. Some operations like device wipe are irreversible; ensure seed phrase backup before proceeding. The device must be connected and unlocked for most commands.
+Requires Python 3.8 or higher and libusb. On Linux, udev rules must be installed for device detection (provided by the `trezor-common` package). Some operations like device wipe are irreversible; ensure seed phrase backup before proceeding. The device must be connected and unlocked for most commands. Install via `pip install trezor`.
 
 # HISTORY
 

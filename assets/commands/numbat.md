@@ -16,6 +16,10 @@ High-precision scientific calculator with physical units
 
 ```numbat -e "5 km -> miles"```
 
+**Run a numbat script file**
+
+```numbat [path/to/script.nbt]```
+
 # SYNOPSIS
 
 **numbat** [_options_] [_file_]
@@ -24,6 +28,12 @@ High-precision scientific calculator with physical units
 
 **-e** _EXPRESSION_
 > Evaluate an expression and print the result.
+
+**--no-prelude**
+> Do not load the standard prelude (math functions, constants, unit definitions).
+
+**--no-pretty**
+> Disable pretty-printing of expressions in output.
 
 # DESCRIPTION
 

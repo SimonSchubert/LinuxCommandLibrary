@@ -38,35 +38,53 @@ Generate build files for Qt projects
 
 # PARAMETERS
 
-**-o** _FILE_
-> Output file name.
+**-o** _file_
+> Write output to file. If not specified, qmake chooses a suitable name.
 
-**-spec** _SPEC_
-> Platform specification.
+**-spec** _spec_
+> Use spec as path to platform and compiler information, overriding QMAKESPEC.
 
 **-makefile**
-> Generate Makefile (default).
+> Generate Makefile (default mode).
 
 **-project**
-> Generate .pro file.
+> Generate a .pro project file from source files in the current directory.
 
-**-tp** _TYPE_
-> Target project type.
+**-tp** _type_
+> Target project type (e.g., vc for Visual Studio).
 
-**-query** [_VAR_]
-> Query Qt configuration.
+**-query** [_var_]
+> Query Qt configuration variables. Without var, lists all values.
 
-**CONFIG+=**_VALUE_
-> Add configuration option.
+**-set** _var_ _value_
+> Set a persistent Qt configuration variable.
+
+**-unset** _var_
+> Unset a persistent Qt configuration variable.
+
+**CONFIG+=**_value_
+> Add configuration option (e.g., debug, release, static).
 
 **-r**, **--recursive**
-> Process subdirectories.
+> Process subdirectories recursively.
+
+**-after**
+> Process command line assignments after project file.
+
+**-early**
+> Process command line assignments before project file.
+
+**-t** _template_
+> Override the TEMPLATE variable.
 
 **-d**
-> Debug mode.
+> Enable debug output. Multiple -d flags increase verbosity.
 
 **-v**
-> Version information.
+> Display version information.
+
+**-h**, **--help**
+> Display help information.
 
 # DESCRIPTION
 
@@ -88,7 +106,7 @@ Being replaced by CMake for new Qt6 projects. Shadow builds recommended for clea
 
 # HISTORY
 
-**qmake** has been Qt's build system since the early **1990s**, developed by Trolltech (now The Qt Company). While CMake became the primary build system for Qt 6, qmake remains supported and widely used.
+**qmake** has been Qt's build system since the late **1990s**, developed by Trolltech (now The Qt Company). While CMake became the primary build system for Qt 6, qmake remains supported and widely used for existing projects.
 
 # SEE ALSO
 

@@ -16,9 +16,9 @@ Static security analyzer for PHP code
 
 ```progpilot --configuration [config.yml] [src/]```
 
-**JSON output**
+**Scan with custom include and exclude paths**
 
-```progpilot --json [src/]```
+```progpilot --include [app/] --exclude [vendor/] [src/]```
 
 **Output to file**
 
@@ -82,7 +82,7 @@ Static analysis has false positives. Complex code paths may be missed. PHP versi
 
 # HISTORY
 
-**progpilot** was created for PHP security auditing. It uses static taint analysis to identify security vulnerabilities in web applications.
+**progpilot** was created by **designsecurity** as an open-source PHP static security analyzer. It uses taint analysis techniques to trace user-controlled data through application code.
 
 # SEE ALSO
 

@@ -63,6 +63,12 @@ Terminal-based typing speed test
 **-csv**
 > Output results in CSV format
 
+**-raw**
+> Raw output mode for scripting
+
+**-showwpm**
+> Display live WPM while typing
+
 **-help**
 > Display help information
 

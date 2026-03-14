@@ -31,19 +31,28 @@ Free cross-platform video editor
 # PARAMETERS
 
 **--gpu**
-> Enable GPU processing.
+> Use GPU processing.
 
 **--fullscreen**
-> Start fullscreen.
+> Fill the screen with the Shotcut window.
 
 **--noupgrade**
-> Disable upgrade check.
+> Hide upgrade prompt and menu item.
+
+**--glaxnimate**
+> Run Glaxnimate instead of Shotcut.
+
+**--clear-recent**
+> Clear recent files on exit.
 
 **--appdata** _DIR_
-> Data directory.
+> Specify directory for app configuration and data.
 
-**--help**
-> Show help.
+**-h**, **--help**
+> Display help.
+
+**-v**, **--version**
+> Display version information.
 
 # DESCRIPTION
 
@@ -53,7 +62,7 @@ The editor includes a comprehensive set of video and audio filters for effects, 
 
 # CAVEATS
 
-Learning curve moderate. GPU varies by hardware. Resource intensive.
+GPU processing varies by hardware and may not be available on all systems. Resource intensive for high-resolution or multi-track projects. Does not support command-line rendering; use **melt** for batch/scripted exports.
 
 # HISTORY
 

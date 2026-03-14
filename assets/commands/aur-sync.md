@@ -1,6 +1,6 @@
 # TAGLINE
 
-Download, build, and add AUR packages to a local repository.
+Download, build, and add AUR packages to a local repository
 
 # TLDR
 
@@ -12,17 +12,21 @@ Download, build, and add AUR packages to a local repository.
 
 ```aur sync -u```
 
-**Clean** build files after install
+**Build in a clean chroot**
 
-```aur sync -C [package]```
+```aur sync -c [package]```
 
-Install **without viewing** PKGBUILD and without confirmation
+**Sync without viewing** PKGBUILD and without confirmation
 
-```aur sync --noview -n [package]```
+```aur sync --noview --noconfirm [package]```
 
 Upgrade but **ignore** specific packages
 
-```aur sync -u --ignore [package1,package2,...]```
+```aur sync -u --ignore [package1] --ignore [package2]```
+
+**Rebuild** a package regardless of version
+
+```aur sync -f [package]```
 
 # SYNOPSIS
 
@@ -30,36 +34,48 @@ Upgrade but **ignore** specific packages
 
 # DESCRIPTION
 
-**aur sync** is the primary command in aurutils for downloading, building, and adding AUR packages to a local repository. It resolves AUR dependencies, fetches PKGBUILDs, builds packages in a clean chroot, and updates the local repository database.
+**aur sync** is the primary command in **aurutils** for downloading, building, and adding AUR packages to a local pacman repository. It resolves AUR dependencies, fetches PKGBUILDs, builds packages, and updates the local repository database.
 
-By default, it opens PKGBUILDs in **vifm** for review before building. This behavior can be disabled with **--noview** for automated workflows.
+By default, it opens PKGBUILDs for review using the file manager specified by **AUR_PAGER** (or **vifm**) before building. This behavior can be disabled with **--noview** for automated workflows.
 
 # PARAMETERS
 
-**-u, --upgrades**
+**-u**, **--upgrades**
 > Check for and build upgrades to installed AUR packages
 
-**-C, --clean**
-> Remove build files after successful package creation
+**-c**, **--chroot**
+> Build packages in a clean chroot using aur-chroot
 
-**-n, --noconfirm**
-> Do not prompt for dependency installation confirmation
+**-f**, **--force**
+> Force rebuild regardless of version
+
+**-n**, **--noconfirm**
+> Do not prompt for confirmation
 
 **--noview**
-> Skip PKGBUILD review in vifm
+> Skip PKGBUILD review
 
-**--ignore** _packages_
-> Comma-separated list of packages to skip during upgrades
+**--ignore** _package_
+> Skip a package during upgrades (repeatable)
 
-**-c, --chroot**
-> Build packages in a clean chroot (default)
+**-d**, **--database** _name_
+> Use specified local repository database
 
 **--no-ver**
-> Disable version checking
+> Disable version checking (rebuild all)
+
+**--no-ver-argv**
+> Disable version checking for command-line arguments only
+
+**--provides**
+> Consider provides when resolving dependencies
+
+**-S**, **--sign**
+> Sign built packages with GPG
 
 # CAVEATS
 
-Requires a properly configured local repository and devtools for chroot builds. PKGBUILD review is important for security; use **--noview** cautiously. AUR packages are user-submitted and not officially vetted.
+Requires a properly configured local pacman repository and **devtools** for chroot builds. PKGBUILD review is critical for security; use **--noview** cautiously since AUR packages are user-submitted and not officially vetted. The **--ignore** flag takes one package per flag (not comma-separated).
 
 # SEE ALSO
 

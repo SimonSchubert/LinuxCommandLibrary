@@ -24,9 +24,13 @@ audits Kubernetes clusters and manifests for security vulnerabilities
 
 ```kubeaudit all -f [manifest.yaml] -p json```
 
-**List auditors**
+**Audit specific namespace**
 
-```kubeaudit --help```
+```kubeaudit all -n [namespace]```
+
+**Autofix a manifest file**
+
+```kubeaudit autofix -f [manifest.yaml]```
 
 # SYNOPSIS
 
@@ -52,8 +56,11 @@ audits Kubernetes clusters and manifests for security vulnerabilities
 **-p**, **--format** _format_
 > Output format: logrus, json, sarif.
 
+**--kubeconfig** _path_
+> Path to kubeconfig file.
+
 **--minSeverity** _level_
-> Minimum severity to report.
+> Minimum severity to report (error, warning, info).
 
 # AUDITORS
 
@@ -66,6 +73,8 @@ limits           Resource limits
 hostns           Host namespace usage
 seccomp          Seccomp profile
 apparmor         AppArmor profile
+image            Image tag requirements
+automountServiceAccountToken  Service account token
 ```
 
 # DESCRIPTION

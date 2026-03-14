@@ -47,13 +47,13 @@ Set with **fade** effect
 
 # DESCRIPTION
 
-**xbacklight** adjusts backlight brightness using the X RandR extension. It provides a simple interface for getting and setting screen brightness on laptops.
+**xbacklight** adjusts backlight brightness using the X RandR extension's backlight property. When called without arguments, it prints the current brightness level as a percentage. The **-set**, **-inc**, and **-dec** options modify the brightness.
 
-The time and steps parameters enable smooth fade transitions when changing brightness.
+The **-time** and **-steps** parameters enable smooth fade transitions, spreading the brightness change over the specified duration.
 
 # CAVEATS
 
-X11 only. Requires RandR backlight support. May not work on all hardware or with proprietary drivers. Alternative tools like brightnessctl may work better.
+X11 only; does not work with Wayland. Requires the RandR backlight property to be exposed by the display driver. Many modern laptops and proprietary drivers (e.g., NVIDIA) do not expose this property. Use **brightnessctl** or **light** as more reliable alternatives that work via sysfs.
 
 # SEE ALSO
 

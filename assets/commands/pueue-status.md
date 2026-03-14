@@ -16,6 +16,10 @@ Display pueue task queue state
 
 ```pueue status --json```
 
+**Show full task details**
+
+```pueue status --full```
+
 # SYNOPSIS
 
 **pueue** **status** [_options_]
@@ -28,11 +32,14 @@ Display pueue task queue state
 **--json**
 > Output as JSON.
 
+**--full**
+> Display full task information with expanded output.
+
 # DESCRIPTION
 
 **pueue status** displays the current state of all tasks. Shows queued, running, completed, and failed tasks. Displays task IDs, commands, status, and execution times.
 
 # SEE ALSO
 
-[pueue](/man/pueue)(1), [pueue-log](/man/pueue-log)(1)
+[pueue](/man/pueue)(1), [pueue-add](/man/pueue-add)(1), [pueue-log](/man/pueue-log)(1)
 

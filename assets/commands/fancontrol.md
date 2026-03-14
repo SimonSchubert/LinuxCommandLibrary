@@ -1,6 +1,6 @@
 # TAGLINE
 
-automated temperature-based fan speed control
+Automated temperature-based fan speed control
 
 # TLDR
 
@@ -16,34 +16,41 @@ Start with **custom** configuration file
 
 **fancontrol** [_config_file_]
 
-# DESCRIPTION
-
-**fancontrol** provides automated fan speed management based on temperature readings. It uses a configuration file to control fan speeds dynamically according to defined temperature thresholds.
-
-Part of lm-sensors package. Configuration typically generated with pwmconfig.
-
 # PARAMETERS
 
 _config_file_
-> Path to configuration (default: /etc/fancontrol)
+> Path to configuration (default: /etc/fancontrol).
+
+# DESCRIPTION
+
+**fancontrol** is a shell script from the lm-sensors package that provides automated fan speed management based on temperature readings. It reads its configuration from a file, calculates fan speeds from temperatures, and sets the corresponding PWM outputs to the computed values.
+
+The daemon continuously monitors hardware temperature sensors and adjusts PWM-controlled fans to maintain desired thermal levels. Configuration is typically generated with the pwmconfig utility, which detects available fans and sensors, then creates appropriate mappings and thresholds.
 
 # CONFIGURATION
 
 **/etc/fancontrol**
-> Main configuration file defining fan mappings, temperature sensors, and control thresholds.
+> Main configuration file with the following key variables:
 
-# DESCRIPTION
+**FCTEMPS**
+> Maps PWM outputs to temperature sensors.
 
-**fancontrol** provides automated fan speed management based on temperature readings. It uses a configuration file to control fan speeds dynamically according to defined temperature thresholds.
+**FCFANS**
+> Associates PWM outputs with fan speed inputs for monitoring.
 
-Part of the lm-sensors package, fancontrol monitors hardware temperature sensors and adjusts PWM-controlled fans to maintain desired thermal levels. The daemon continuously reads temperature values and applies configured speed curves.
+**MINTEMP / MAXTEMP**
+> Temperature range for fan speed calculation.
 
-Configuration is typically generated with the pwmconfig utility, which detects available fans and sensors, then creates appropriate mappings and thresholds.
+**MINPWM / MAXPWM**
+> PWM value range corresponding to the temperature range.
+
+**AVERAGE**
+> Number of temperature readings to average (default: 1, no averaging).
 
 # CAVEATS
 
-Requires configured hardware monitoring. Run pwmconfig first to generate configuration. May require root privileges. Configuration file format is specific to fancontrol.
+Requires configured hardware monitoring. Run pwmconfig first to generate configuration. Requires root privileges. Configuration file format is specific to fancontrol.
 
 # SEE ALSO
 
-[pwmconfig](/man/pwmconfig)(8), [sensors](/man/sensors)(1), [lm_sensors](/man/lm_sensors)(1)
+[sensors](/man/sensors)(1)

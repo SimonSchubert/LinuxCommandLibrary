@@ -24,7 +24,11 @@ lightweight DNS forwarder and DHCP server
 
 ```dnsmasq --dhcp-range=[192.168.1.50,192.168.1.150,12h]```
 
-**Start as authoritative** for a domain
+**Specify upstream DNS server**
+
+```dnsmasq --server=[8.8.8.8]```
+
+**Start as authoritative** for a local domain
 
 ```dnsmasq --local=/[mydomain.local]/```
 
@@ -82,6 +86,12 @@ The DHCP server provides dynamic and static address assignment with support for 
 **--server=** _address_
 > Upstream DNS server.
 
+**-R**, **--no-resolv**
+> Don't read /etc/resolv.conf for upstream servers.
+
+**-r**, **--resolv-file=** _file_
+> Read upstream nameservers from specified file instead of /etc/resolv.conf.
+
 **--cache-size=** _n_
 > DNS cache size (default 150).
 
@@ -109,4 +119,4 @@ Only one DNS/DHCP server should run on each interface. Conflicts with systemd-re
 
 # SEE ALSO
 
-[named](/man/named)(8), [dhcpd](/man/dhcpd)(8), [systemd-resolved](/man/systemd-resolved)(8), [hosts](/man/hosts)(5)
+[named](/man/named)(8), [dhcpd](/man/dhcpd)(8)

@@ -24,13 +24,25 @@ Modernized self-contained LaTeX engine
 
 ```tectonic --only-cached [document.tex]```
 
-**Watch mode**
+**Watch mode** (V1 CLI)
 
 ```tectonic --watch [document.tex]```
 
 **Use bundle**
 
 ```tectonic -b [bundle.tar] [document.tex]```
+
+**Build document** using V2 CLI (with Tectonic.toml)
+
+```tectonic -X build```
+
+**Create new document** workspace
+
+```tectonic -X new [project_name]```
+
+**Compile freestanding document** (V2 CLI)
+
+```tectonic -X compile [document.tex]```
 
 # SYNOPSIS
 
@@ -74,13 +86,18 @@ Modernized self-contained LaTeX engine
 **-h**, **--help**
 > Show help.
 
+**-X** _SUBCOMMAND_
+> Activate V2 CLI (build, compile, new, init, dump, show, watch).
+
 # DESCRIPTION
 
 **tectonic** is a modernized, self-contained LaTeX engine that automatically downloads packages, runs the correct number of compilation passes, and produces reproducible output. Unlike traditional TeX distributions, it requires no separate TeX Live installation — missing packages are fetched from the network on demand.
 
 The engine automatically handles the multiple compilation passes that LaTeX typically requires for resolving references, tables of contents, bibliographies, and cross-references. Watch mode (**--watch**) recompiles whenever source files change, providing live preview when paired with a PDF viewer.
 
-Tectonic uses bundles — self-contained package collections — to ensure reproducible builds where the same input always produces identical output. The **--only-cached** flag enables offline compilation using previously downloaded packages. This approach makes Tectonic well-suited for CI/CD pipelines and collaborative writing projects under version control.
+Tectonic uses bundles — self-contained package collections — to ensure reproducible builds where the same input always produces identical output. The **--only-cached** flag enables offline compilation using previously downloaded packages.
+
+The V2 CLI (activated with **-X**) provides a cargo-like interface anchored around a **Tectonic.toml** file. Use `tectonic -X build` for project builds and `tectonic -X compile` for freestanding documents. This approach makes Tectonic well-suited for CI/CD pipelines and collaborative writing projects under version control.
 
 # CAVEATS
 

@@ -8,13 +8,17 @@ Interactive terminal HTTP client
 
 ```wuzz```
 
-**Start with URL**
+**Start with a URL pre-filled**
 
-```wuzz -u [https://api.example.com]```
+```wuzz -u [https://api.example.com/users]```
 
-**With config file**
+**Start with a config file**
 
-```wuzz -c [config.yaml]```
+```wuzz -c [~/.wuzz/config.toml]```
+
+**Start with TLS verification disabled**
+
+```wuzz --insecure -u [https://self-signed.example.com]```
 
 # SYNOPSIS
 
@@ -23,27 +27,27 @@ Interactive terminal HTTP client
 # PARAMETERS
 
 **-u** _URL_
-> Initial URL.
+> Pre-fill the URL field with this URL.
 
 **-c** _FILE_
-> Config file.
+> Use the specified configuration file.
 
 **--insecure**
-> Skip TLS verify.
+> Skip TLS certificate verification.
 
 # DESCRIPTION
 
 **wuzz** is an interactive HTTP inspection tool with a terminal user interface. It provides a keyboard-driven environment for building HTTP requests, setting headers and body content, and viewing formatted responses without leaving the terminal.
 
-The tool maintains a history of previous requests for easy re-execution and modification. It serves as a lightweight alternative to graphical tools like Postman for quick API testing and debugging directly from the command line.
+The interface has separate panels for URL, method, headers, request body, query parameters, and response. Navigation uses **Tab**/**Shift+Tab** between panels and **Ctrl+R** to send the request. The tool maintains a history of previous requests accessible with **Ctrl+S** (search) for easy re-execution.
 
 # CAVEATS
 
-Terminal UI only. Go implementation. Basic features.
+Terminal UI only. Does not support WebSocket connections or file uploads. Configuration file uses TOML format.
 
 # HISTORY
 
-**wuzz** was created as an interactive command-line HTTP inspection tool with a TUI.
+**wuzz** was created by **Asmaa Asaad** as an interactive command-line HTTP inspection tool, written in Go.
 
 # SEE ALSO
 

@@ -83,6 +83,15 @@ Run in **strict sandbox mode** (strip extra permissions)
 **--env** _var=value_
 > Set environment variable
 
+**--device** _device_
+> Expose device to application (dri, input, usb, kvm, shm, all)
+
+**--devel**
+> Use the devel runtime specified in the application metadata
+
+**--die-with-parent**
+> Kill the application when the launching process dies
+
 # DESCRIPTION
 
 **Flatpak run** executes applications or opens shells within Flatpak's sandboxed environment. The sandbox provides isolation with the runtime mounted at **/usr**, application at **/app**, and a writable **/var** directory for persistent data.
@@ -101,4 +110,4 @@ Part of the **Flatpak** project developed by Alexander Larsson at Red Hat. Flatp
 
 # SEE ALSO
 
-[flatpak](/man/flatpak)(1), [flatpak-install](/man/flatpak-install)(1), [flatpak-override](/man/flatpak-override)(1)
+[flatpak](/man/flatpak)(1), [flatpak-install](/man/flatpak-install)(1)

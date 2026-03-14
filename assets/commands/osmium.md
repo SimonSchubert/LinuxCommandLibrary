@@ -18,7 +18,7 @@ command-line tool for working with OpenStreetMap data
 
 **Filter by tags**
 
-```osmium tags-filter [input.osm.pbf] -o [output.osm.pbf] [nwr/highway]```
+```osmium tags-filter [input.osm.pbf] -o [output.osm.pbf] nwr/[highway]```
 
 **Show file info**
 
@@ -35,6 +35,14 @@ command-line tool for working with OpenStreetMap data
 **Get difference between files**
 
 ```osmium diff [old.osm.pbf] [new.osm.pbf]```
+
+**Extract using polygon file**
+
+```osmium extract -p [boundary.poly] [input.osm.pbf] -o [output.osm.pbf]```
+
+**Apply an OsmChange file**
+
+```osmium apply-changes [input.osm.pbf] [changes.osc] -o [output.osm.pbf]```
 
 # SYNOPSIS
 
@@ -66,6 +74,18 @@ command-line tool for working with OpenStreetMap data
 **check-refs**
 > Check referential integrity.
 
+**apply-changes**
+> Apply OsmChange file.
+
+**renumber**
+> Renumber object IDs.
+
+**getid**
+> Get objects by ID.
+
+**time-filter**
+> Filter by timestamp.
+
 **-o** _FILE_
 > Output file.
 
@@ -83,6 +103,12 @@ command-line tool for working with OpenStreetMap data
 
 **-v**, **--verbose**
 > Verbose output.
+
+**--progress**
+> Show progress bar.
+
+**-e** _STRATEGY_, **--strategy** _STRATEGY_
+> Extraction strategy: simple, complete_ways, or smart.
 
 # DESCRIPTION
 

@@ -24,6 +24,14 @@ Suite of command-line CSV processing tools
 
 ```csvsql --query "[SELECT * FROM data WHERE id > 100]" [data.csv]```
 
+**Filter rows** matching a pattern
+
+```csvgrep -c [column] -m "[value]" [data.csv]```
+
+**Convert an Excel file to CSV**
+
+```in2csv [data.xlsx] > [data.csv]```
+
 **Stack multiple CSV files** vertically
 
 ```csvstack [file1.csv] [file2.csv]```
@@ -35,7 +43,10 @@ Suite of command-line CSV processing tools
 # INCLUDED TOOLS
 
 **in2csv**
-> Convert various formats (Excel, JSON) to CSV.
+> Convert various formats (Excel, JSON, fixed-width) to CSV.
+
+**sql2csv**
+> Execute a SQL query on a database and output results as CSV.
 
 **csvlook**
 > Display CSV in a human-readable table format.
@@ -59,10 +70,13 @@ Suite of command-line CSV processing tools
 > Concatenate CSV files vertically.
 
 **csvsql**
-> Query CSV files using SQL.
+> Generate SQL statements or execute queries against a database.
 
 **csvjson**
 > Convert CSV to JSON.
+
+**csvpy**
+> Load CSV into a Python shell for interactive exploration.
 
 **csvclean**
 > Validate and fix CSV formatting issues.

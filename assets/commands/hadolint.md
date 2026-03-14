@@ -4,9 +4,9 @@ dockerfile linter that validates best practices and common mistakes
 
 # TLDR
 
-**Lint Dockerfile**
+**Lint a Dockerfile**
 
-```hadolint [Dockerfile]```
+```hadolint [path/to/Dockerfile]```
 
 **Lint from stdin**
 
@@ -14,15 +14,23 @@ dockerfile linter that validates best practices and common mistakes
 
 **Ignore specific rules**
 
-```hadolint --ignore [DL3008] [Dockerfile]```
+```hadolint --ignore [DL3008] --ignore [DL3009] [path/to/Dockerfile]```
 
 **Output as JSON**
 
-```hadolint --format json [Dockerfile]```
+```hadolint --format json [path/to/Dockerfile]```
 
-**Show trusted registries**
+**Only allow images from trusted registries**
 
-```hadolint --trusted-registry [docker.io] [Dockerfile]```
+```hadolint --trusted-registry [docker.io] [path/to/Dockerfile]```
+
+**Use a custom config file**
+
+```hadolint --config [path/to/.hadolint.yaml] [path/to/Dockerfile]```
+
+**Set failure threshold severity**
+
+```hadolint --failure-threshold [warning] [path/to/Dockerfile]```
 
 # SYNOPSIS
 
@@ -37,16 +45,25 @@ _DOCKERFILE_
 > Ignore specific rule.
 
 **--format** _FMT_
-> Output format (tty, json, codeclimate).
+> Output format: tty, json, checkstyle, codeclimate, gitlab_codeclimate, gnu, codacy, sonarqube, sarif (default: tty).
 
 **--trusted-registry** _REG_
-> Trusted container registry.
+> Trusted container registry. Images from untrusted registries generate warnings.
 
 **--config** _FILE_
-> Config file path.
+> Config file path (default: .hadolint.yaml).
+
+**--failure-threshold** _SEVERITY_
+> Exit with failure code only for rules at or above this severity (error, warning, info, style, ignore, none).
 
 **--no-color**
 > Disable colored output.
+
+**--no-fail**
+> Don't exit with a failure status code.
+
+**-t**, **--strict-labels**
+> Check that labels conform to defined format.
 
 **--help**
 > Display help information.
@@ -67,4 +84,4 @@ Hadolint was created to improve Dockerfile quality by combining Docker best prac
 
 # SEE ALSO
 
-[docker](/man/docker)(1), [shellcheck](/man/shellcheck)(1), [dockerfile](/man/dockerfile)(5)
+[docker](/man/docker)(1), [shellcheck](/man/shellcheck)(1)

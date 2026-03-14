@@ -62,6 +62,9 @@ Control ATI Radeon hardware settings
 **--skip=**_n_
 > Skip the first n Radeon cards and operate on card n+1
 
+**--instance=**_n_
+> Use a specific Radeon card instance by number
+
 # DESCRIPTION
 
 **radeontool** is a utility for controlling hardware features on ATI Radeon-based graphics cards, primarily used on laptops. It provides direct access to backlight control, external display output, and low-level register manipulation.

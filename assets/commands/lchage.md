@@ -12,6 +12,10 @@ Display **password policy**
 
 ```sudo lchage --date -1 [username]```
 
+Set **minimum password age**
+
+```sudo lchage --mindays [days] [username]```
+
 Set **maximum password age**
 
 ```sudo lchage --maxdays [days] [username]```
@@ -36,6 +40,9 @@ Set **warning days** before expiry
 **-d, --date DAYS**
 > Set last password change date (-1 to disable expiration)
 
+**-m, --mindays DAYS**
+> Minimum days between password changes
+
 **-M, --maxdays DAYS**
 > Maximum days before password change required
 
@@ -50,7 +57,7 @@ Set **warning days** before expiry
 
 # CAVEATS
 
-Requires root privileges. Some options may not be available on all systems depending on authentication configuration.
+Requires root privileges. Only available on systems with the libuser library installed (primarily Fedora/RHEL-based distributions). Some options may not be available depending on authentication backend configuration (e.g., LDAP).
 
 # SEE ALSO
 

@@ -33,7 +33,10 @@ _ERROR_
 > List all errors.
 
 **-s**, **--search** _TEXT_
-> Search descriptions.
+> Search descriptions for matching words (case-insensitive).
+
+**-S**, **--search-all-locales** _TEXT_
+> Search descriptions across all available locales.
 
 **--help**
 > Display help information.
@@ -56,4 +59,4 @@ errno is part of the **moreutils** package. The errno system dates back to early
 
 # SEE ALSO
 
-[perror](/man/perror)(1), [strerror](/man/strerror)(3), [strace](/man/strace)(1)
+[strace](/man/strace)(1)

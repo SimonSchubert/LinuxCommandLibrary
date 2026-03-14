@@ -1,6 +1,6 @@
 # TAGLINE
 
-runs linters on git staged files
+Run linters on git staged files
 
 # TLDR
 
@@ -20,9 +20,13 @@ runs linters on git staged files
 
 ```npx lint-staged --dry-run```
 
-**Run on specific files**
+**Run on changed files between two branches**
 
-```npx lint-staged --diff="[branch]"```
+```npx lint-staged --diff="[branch1]...[branch2]"```
+
+**Run with verbose output**
+
+```npx lint-staged --verbose```
 
 # SYNOPSIS
 
@@ -30,26 +34,47 @@ runs linters on git staged files
 
 # PARAMETERS
 
-**--config** _file_
-> Path to config file.
+**--config**, **-c** _file_
+> Path to config file or npm package name.
 
-**--debug**
+**--debug**, **-d**
 > Enable debug mode.
 
 **--dry-run**
-> Show what would run.
+> Show what would run without executing.
 
 **--diff** _ref_
-> Compare against reference.
+> Override the default --staged flag of git diff to get list of files.
+
+**--diff-filter** _filter_
+> Override the default --diff-filter=ACMR of git diff.
+
+**--concurrent**, **-p** _number_
+> Control concurrency of tasks (default: true for parallel).
 
 **--no-stash**
-> Disable git stash.
+> Disable creating backup stash, leave modifications in index.
 
-**--quiet**
-> Suppress output.
+**--hide-unstaged**
+> Hide unstaged changes to tracked files before running tasks.
 
-**--relative**
-> Use relative paths.
+**--quiet**, **-q**
+> Suppress all CLI output except from tasks.
+
+**--relative**, **-r**
+> Pass filepaths relative to process.cwd() to tasks.
+
+**--verbose**
+> Show task output even when tasks succeed.
+
+**--allow-empty**
+> Allow creating empty git commits when tasks revert all staged changes.
+
+**--cwd** _dir_
+> Run all tasks in a specific directory.
+
+**--max-arg-length** _number_
+> Override the maximum length of the generated command string.
 
 # DESCRIPTION
 

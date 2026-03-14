@@ -42,21 +42,27 @@ java Heap Analysis Tool
 **-refs** _boolean_
 > Track object references.
 
+**-debug** _int_
+> Set debug level. 0 means no debug output. 1 parses hprof file. 2 parses hprof file without starting server.
+
 **-exclude** _file_
-> Exclude data members from queries.
+> Exclude data members listed in file from reachability queries.
+
+**-version**
+> Report version number and exit.
 
 **-J**_flag_
 > Pass flag to JVM (e.g., -J-Xmx8G).
 
 # DESCRIPTION
 
-**jhat** is the Java Heap Analysis Tool. It parses heap dump files and launches a web server for browsing heap contents. Supports pre-designed queries and OQL (Object Query Language) for custom analysis. Access the web interface at http://localhost:7000 by default.
+**jhat** is the Java Heap Analysis Tool. It parses Java heap dump files (in HPROF format) and launches an HTTP web server for browsing heap contents interactively. Supports pre-designed queries and OQL (Object Query Language) for custom analysis. Access the web interface at http://localhost:7000 by default.
 
 # CAVEATS
 
-Deprecated since JDK 9. Use VisualVM, Eclipse MAT, or other heap analyzers instead. Still works with JDK 8.
+Removed since JDK 9 (JEP 241). Use VisualVM, Eclipse MAT, or other heap analyzers instead. Only available in JDK 6, 7, and 8.
 
 # SEE ALSO
 
-[jmap](/man/jmap)(1), [jstack](/man/jstack)(1)
+[jmap](/man/jmap)(1), [jstack](/man/jstack)(1), [jps](/man/jps)(1)
 

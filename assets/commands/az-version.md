@@ -8,13 +8,22 @@ Display Azure CLI version information
 
 ```az version```
 
-Show version in **JSON**
+Show version in **JSON** format
 
 ```az version -o json```
 
+Show version in **table** format
+
+```az version --output table```
+
 # SYNOPSIS
 
-**az version** [_options_]
+**az version** [**-o**|**--output** _format_]
+
+# PARAMETERS
+
+**-o**, **--output** _format_
+> Output format. Accepted values: **json**, **jsonc**, **none**, **table**, **tsv**, **yaml**, **yamlc**. Default: **json**.
 
 # DESCRIPTION
 
@@ -26,9 +35,8 @@ The command is useful for troubleshooting and verifying installations.
 
 Information displayed:
 - Azure CLI core version
-- Python version and executable
-- Installed extensions and versions
-- System information
+- Python version and platform
+- Installed extensions and their versions
 
 # WORKFLOW
 
@@ -45,7 +53,7 @@ az version -o json | jq '.extensions."some-extension"'
 
 # CAVEATS
 
-Output format may change between versions. Extension versions listed separately from core version.
+Output format may vary between Azure CLI versions. Extension versions are listed separately from the core CLI version. The default output format is JSON.
 
 # HISTORY
 
@@ -53,4 +61,4 @@ Output format may change between versions. Extension versions listed separately 
 
 # SEE ALSO
 
-[az](/man/az)(1), [az-upgrade](/man/az-upgrade)(1), [az-extension](/man/az-extension)(1)
+[az](/man/az)(1), [az-upgrade](/man/az-upgrade)(1), [az-extension](/man/az-extension)(1), [az-login](/man/az-login)(1)

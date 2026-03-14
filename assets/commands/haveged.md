@@ -84,4 +84,4 @@ haveged was developed by Gary Wuertz based on the HAVEGE algorithm created by An
 
 # SEE ALSO
 
-[rngd](/man/rngd)(8), [random](/man/random)(4), [getrandom](/man/getrandom)(2)
+[random](/man/random)(4), [getrandom](/man/getrandom)(2)

@@ -55,6 +55,12 @@ Exoscale S3-compatible object storage management
 **presign**
 > Generate presigned URL.
 
+**setacl**
+> Set bucket/object ACL permissions.
+
+**cors**
+> Manage CORS configuration.
+
 # DESCRIPTION
 
 **exo storage** manages Exoscale Simple Object Storage (SOS), an S3-compatible object storage service. Store and retrieve files with HTTP access.

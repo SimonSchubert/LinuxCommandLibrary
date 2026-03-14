@@ -1,65 +1,95 @@
 # TAGLINE
 
-manages deployment rollouts
+manage the rollout of deployments, daemonsets, and statefulsets
 
 # TLDR
 
-**Check rollout status**
+**Check rollout status of a deployment**
 
 ```kubectl rollout status deployment/[name]```
+
+**Watch rollout status with a timeout**
+
+```kubectl rollout status deployment/[name] --timeout=[5m]```
 
 **View rollout history**
 
 ```kubectl rollout history deployment/[name]```
 
-**Undo rollout**
+**View details of a specific revision**
+
+```kubectl rollout history deployment/[name] --revision=[3]```
+
+**Undo rollout to the previous revision**
 
 ```kubectl rollout undo deployment/[name]```
 
-**Rollback to revision**
+**Rollback to a specific revision**
 
 ```kubectl rollout undo deployment/[name] --to-revision=[2]```
 
-**Pause rollout**
+**Pause a rollout**
 
 ```kubectl rollout pause deployment/[name]```
 
-**Resume rollout**
+**Resume a paused rollout**
 
 ```kubectl rollout resume deployment/[name]```
 
-**Restart rollout**
+**Restart all pods in a deployment without changing the template**
 
 ```kubectl rollout restart deployment/[name]```
 
+**Restart deployments matching a label selector**
+
+```kubectl rollout restart deployment --selector=[app=nginx]```
+
 # SYNOPSIS
 
-**kubectl rollout** _command_ [_options_] _resource_
+**kubectl rollout** _SUBCOMMAND_ [_options_]
 
 # PARAMETERS
 
-**status** _RESOURCE_
-> Check rollout status.
+**history** _TYPE/NAME_
+> View rollout revision history.
 
-**history** _RESOURCE_
-> View revision history.
+**pause** _TYPE/NAME_
+> Mark the provided resource as paused.
 
-**undo** _RESOURCE_
-> Rollback to previous.
+**restart** _TYPE/NAME_
+> Trigger a rolling restart of all pods.
 
-**pause** _RESOURCE_
-> Pause rollout.
+**resume** _TYPE/NAME_
+> Resume a paused rollout.
 
-**resume** _RESOURCE_
-> Resume paused rollout.
+**status** _TYPE/NAME_
+> Show the status of the rollout.
 
-**restart** _RESOURCE_
-> Trigger rolling restart.
+**undo** _TYPE/NAME_
+> Undo a previous rollout.
+
+**--revision** _N_
+> Pin to a specific revision for history or status.
 
 **--to-revision** _N_
-> Target revision.
+> Target revision for undo (default 0 means previous).
 
-**--help**
+**--timeout** _DURATION_
+> Time to wait before ending status watch (e.g. 5m).
+
+**-w**, **--watch**
+> Watch the status of rollout until done (default true).
+
+**-f**, **--filename** _FILE_
+> Filename, directory, or URL identifying the resource.
+
+**-l**, **--selector** _SELECTOR_
+> Label selector to filter resources.
+
+**-R**, **--recursive**
+> Process the directory used in -f recursively.
+
+**-h**, **--help**
 > Display help information.
 
 # DESCRIPTION
@@ -70,12 +100,12 @@ The command also supports pausing and resuming rollouts, which is useful for per
 
 # CAVEATS
 
-Subcommand of kubectl. Works with deployments, statefulsets. Revision history has limits.
+Only works with deployments, daemonsets, and statefulsets. Revision history depth is controlled by the `.spec.revisionHistoryLimit` field (default 10). Pausing a rollout prevents both rollback and new rollouts until resumed. The `restart` subcommand does not change the pod template; it updates an annotation to trigger a new rollout.
 
 # HISTORY
 
-kubectl rollout provides rollout management for **Kubernetes** deployment lifecycle operations.
+kubectl rollout has been part of **kubectl** since early versions of **Kubernetes**, providing declarative lifecycle management for workload rollouts.
 
 # SEE ALSO
 
-[kubectl](/man/kubectl)(1), [kubectl-apply](/man/kubectl-apply)(1), [kubectl-set](/man/kubectl-set)(1)
+[kubectl](/man/kubectl)(1), [kubectl-apply](/man/kubectl-apply)(1), [kubectl-set](/man/kubectl-set)(1), [kubectl-get](/man/kubectl-get)(1), [kubectl-scale](/man/kubectl-scale)(1)

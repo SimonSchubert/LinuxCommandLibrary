@@ -1,12 +1,20 @@
 # TAGLINE
 
-deletes a Linux container and its configuration
+Delete a Linux container and its configuration
 
 # TLDR
 
-**Delete** container
+**Delete** a stopped container
 
-```sudo lxc-destroy [container_name]```
+```sudo lxc-destroy -n [container_name]```
+
+**Force delete** a running container (stops it first)
+
+```sudo lxc-destroy -n [container_name] -f```
+
+**Delete container and all its snapshots**
+
+```sudo lxc-destroy -n [container_name] -s```
 
 Display **help**
 
@@ -18,24 +26,30 @@ Display **help**
 
 # DESCRIPTION
 
-**lxc-destroy** deletes a Linux container and its configuration. The container must be stopped before destruction.
+**lxc-destroy** deletes a Linux container and its configuration. The container must be stopped before destruction unless **-f** is used.
 
 # PARAMETERS
 
-**-n, --name NAME**
-> Container name to destroy
+**-n**, **--name** _NAME_
+> Container name to destroy.
 
-**-P, --lxcpath PATH**
-> Container storage directory
+**-P**, **--lxcpath** _PATH_
+> Use an alternate container storage directory.
 
-**-f, --force**
-> Force destruction even if running
+**-f**, **--force**
+> Force destruction of a running container (stops it first).
 
-**-s, --snapshots**
-> Also destroy all snapshots
+**-s**, **--snapshots**
+> Also destroy all snapshots of the container.
 
-**-?, --help**
-> Display help information
+**-l**, **--logpriority** _LEVEL_
+> Set log priority (FATAL, CRIT, WARN, ERROR, NOTICE, INFO, DEBUG).
+
+**-o**, **--logfile** _FILE_
+> Output to alternate log file.
+
+**-?**, **--help**
+> Display help information.
 
 # CAVEATS
 

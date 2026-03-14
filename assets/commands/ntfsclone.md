@@ -1,24 +1,32 @@
 # TAGLINE
 
-clones NTFS partitions efficiently
+Efficiently clone, image, restore, or rescue an NTFS volume
 
 # TLDR
 
-**Clone NTFS partition**
+**Clone NTFS partition to an image file**
 
 ```ntfsclone --output [clone.img] [/dev/sda1]```
 
-**Clone to file (compressed)**
+**Save as space-efficient special image format**
 
-```ntfsclone --save-image --output [clone.img.gz] [/dev/sda1] | gzip```
+```ntfsclone --save-image --output [clone.img] [/dev/sda1]```
 
-**Restore from image**
+**Restore from special image to a partition**
 
 ```ntfsclone --restore-image --output [/dev/sda1] [clone.img]```
 
-**Clone metadata only**
+**Clone metadata only (for debugging)**
 
 ```ntfsclone --metadata --output [meta.img] [/dev/sda1]```
+
+**Clone to stdout and compress with gzip**
+
+```ntfsclone --save-image -o - [/dev/sda1] | gzip -c > [clone.img.gz]```
+
+**Rescue a failing disk (continue on read errors)**
+
+```ntfsclone --rescue --output [rescue.img] [/dev/sda1]```
 
 # SYNOPSIS
 
@@ -27,41 +35,49 @@ clones NTFS partitions efficiently
 # PARAMETERS
 
 **-o**, **--output** _FILE_
-> Output file or device.
+> Output file or device. Use **-** for standard output.
 
-**-O**, **--overwrite**
-> Overwrite existing file.
+**-O**, **--overwrite** _FILE_
+> Overwrite an existing file or device (required for writing to partitions).
 
 **-s**, **--save-image**
-> Save as special image format.
+> Save to the special ntfsclone image format (only copies used clusters).
 
 **-r**, **--restore-image**
-> Restore from special image.
+> Restore from a special ntfsclone image.
 
 **-m**, **--metadata**
-> Clone only metadata.
+> Clone only NTFS metadata (for debugging; result is still mountable).
 
 **--rescue**
-> Continue on read errors.
+> Continue on disk read errors, filling bad sectors with zeros.
+
+**--ignore-fs-check**
+> Ignore the result of the filesystem consistency check.
+
+**-f**, **--force**
+> Force cloning even if the volume is marked dirty.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**ntfsclone** clones NTFS partitions efficiently. Copies only used clusters.
+**ntfsclone** efficiently clones an NTFS filesystem to a sparse file, special image, device, or standard output. It works at the cluster level and only copies used data, making it much faster and more space-efficient than sector-level tools like **dd**.
 
-The tool creates space-efficient backups. Supports special image format for compression.
+The special image format (**--save-image**) encodes unused space with control codes rather than storing it, producing significantly smaller backup files. These images can only be restored with **ntfsclone --restore-image** and are not directly mountable.
+
+The **--rescue** mode is designed for dying disks, reading data with minimal stress on the hardware and filling unreadable sectors with zeros.
 
 # CAVEATS
 
-Part of ntfs-3g. Special image not mountable. Destination must be same size or larger.
+Part of the ntfs-3g package. Special image files are not mountable and can only be restored with ntfsclone. When cloning to a partition, the destination must be at least as large as the source. The volume should be unmounted during cloning.
 
 # HISTORY
 
-ntfsclone was developed as part of **ntfs-3g** for efficient NTFS backup and restore.
+**ntfsclone** was developed as part of **ntfs-3g** (formerly ntfsprogs) for efficient NTFS backup and restore on Linux systems.
 
 # SEE ALSO
 
-[ntfsresize](/man/ntfsresize)(1), [ntfs-3g](/man/ntfs-3g)(1), [dd](/man/dd)(1)
+[ntfsresize](/man/ntfsresize)(1), [ntfs-3g](/man/ntfs-3g)(1), [ntfsfix](/man/ntfsfix)(1), [dd](/man/dd)(1), [partclone](/man/partclone)(1)
 

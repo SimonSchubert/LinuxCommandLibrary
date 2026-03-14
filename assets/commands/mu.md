@@ -1,6 +1,6 @@
 # TAGLINE
 
-mail indexer and searcher
+Mail indexer and searcher for Maildir
 
 # TLDR
 
@@ -24,9 +24,17 @@ mail indexer and searcher
 
 ```mu init --maildir=[~/Maildir]```
 
-**Show message counts**
+**Show message count for a query**
 
-```mu find --summary [query]```
+```mu find --summary-len=0 [query]```
+
+**Search by date range**
+
+```mu find date:2024-01-01..2024-12-31```
+
+**Extract attachments from a message**
+
+```mu extract [path/to/message]```
 
 # SYNOPSIS
 
@@ -52,24 +60,39 @@ _COMMAND_
 **--maildir** _PATH_
 > Mail directory location.
 
+**extract** _FILE_
+> Extract attachments from a message.
+
+**cfind** [_QUERY_]
+> Search contacts from indexed messages.
+
+**--format** _FORMAT_
+> Output format (plain, links, xml, sexp, json).
+
+**--sortfield** _FIELD_
+> Sort by field (date, from, to, subject, size).
+
+**--reverse**
+> Reverse sort order.
+
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**mu** is a mail indexer and searcher. It indexes Maildir format messages for fast searching.
+**mu** is a mail indexer and searcher for Maildir-format mailboxes. It indexes messages for fast full-text searching using the Xapian search engine. Queries support fields like `from:`, `to:`, `subject:`, `date:`, `flag:`, `mime:`, and boolean operators (`and`, `or`, `not`).
 
-The tool uses Xapian for full-text search. Works with mu4e Emacs mail client.
+The tool serves as the backend for the **mu4e** Emacs mail client, but is fully functional as a standalone command-line tool.
 
 # CAVEATS
 
-Maildir format only. Xapian-based index. Pairs well with mu4e in Emacs.
+Maildir format only. Requires Xapian library. The database must be re-indexed after changes to the Maildir (run `mu index`). Query syntax changed between major versions (pre-1.0 vs post-1.0).
 
 # HISTORY
 
-mu was created as a **fast mail search** tool, forming the backend for the mu4e Emacs mail client.
+**mu** was created by **Dirk-Jan C. Binnema** as a fast mail search tool, forming the backend for the **mu4e** Emacs mail client. It was designed as a lightweight alternative to notmuch with a focus on simplicity and speed.
 
 # SEE ALSO
 
-[notmuch](/man/notmuch)(1), [mairix](/man/mairix)(1), [mutt](/man/mutt)(1)
+[notmuch](/man/notmuch)(1), [mairix](/man/mairix)(1), [mutt](/man/mutt)(1), [neomutt](/man/neomutt)(1)
 

@@ -4,25 +4,33 @@ Validate XML against schemas
 
 # TLDR
 
-**Validate against DTD**
+**Validate against embedded DTD**
 
-```xml validate [file.xml]```
+```xml val [file.xml]```
 
-**Validate against schema**
+**Validate against an XSD schema**
 
-```xml validate --xsd [schema.xsd] [file.xml]```
+```xml val --xsd [schema.xsd] [file.xml]```
 
-**Validate against RelaxNG**
+**Validate against a RelaxNG schema**
 
-```xml validate --relaxng [schema.rng] [file.xml]```
+```xml val --relaxng [schema.rng] [file.xml]```
 
-**Validate well-formedness only**
+**Check well-formedness only** (no schema validation)
 
-```xml validate --well-formed [file.xml]```
+```xml val --well-formed [file.xml]```
+
+**Validate multiple files**
+
+```xml val [file1.xml] [file2.xml]```
+
+**Validate using embedded schema reference**
+
+```xml val -E [file.xml]```
 
 # SYNOPSIS
 
-**xml validate** [_options_] _file_...
+**xml val** [_options_] _file_...
 
 # PARAMETERS
 
@@ -46,7 +54,7 @@ Validate XML against schemas
 
 # DESCRIPTION
 
-**xml validate** validates XML documents against schemas. Part of xmlstarlet toolkit. Supports DTD, XML Schema (XSD), and RelaxNG validation.
+**xml val** (or `xml validate`) validates XML documents against schemas. Part of the XMLStarlet toolkit. Supports DTD, XML Schema (XSD), and RelaxNG validation. Returns exit code 0 if valid, non-zero otherwise.
 
 # SEE ALSO
 

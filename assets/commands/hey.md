@@ -35,16 +35,16 @@ HTTP load testing tool
 # PARAMETERS
 
 **-n** _requests_
-> Number of requests.
+> Number of requests to run. Default is 200.
 
 **-c** _concurrency_
-> Concurrent workers.
+> Number of concurrent workers. Default is 50.
 
 **-z** _duration_
-> Duration (e.g., 10s, 2m).
+> Duration to send requests (e.g., 10s, 3m). Overrides -n.
 
 **-m** _method_
-> HTTP method.
+> HTTP method (GET, POST, PUT, DELETE, HEAD, OPTIONS). Default is GET.
 
 **-d** _body_
 > Request body.
@@ -53,19 +53,46 @@ HTTP load testing tool
 > Request body from file.
 
 **-T** _content-type_
-> Content-Type header.
+> Content-Type header. Default is "text/html".
 
 **-H** _header_
-> Custom header.
+> Custom HTTP header. Can be repeated for multiple headers.
 
 **-t** _timeout_
-> Request timeout.
+> Timeout for each request in seconds. Default is 20.
+
+**-A** _accept_
+> HTTP Accept header.
+
+**-a** _auth_
+> Basic authentication, username:password.
+
+**-x** _proxy_
+> HTTP Proxy address as host:port.
 
 **-q** _rate_
-> Rate limit (requests/worker/second).
+> Rate limit in QPS per worker. No limit by default.
 
 **-o** _format_
 > Output format: csv.
+
+**-h2**
+> Enable HTTP/2.
+
+**-host** _header_
+> HTTP Host header.
+
+**-disable-compression**
+> Disable compression.
+
+**-disable-keepalive**
+> Disable keep-alive, prevents TCP connection reuse.
+
+**-disable-redirects**
+> Disable following of HTTP redirects.
+
+**-cpus** _n_
+> Number of CPU cores to use.
 
 # DESCRIPTION
 

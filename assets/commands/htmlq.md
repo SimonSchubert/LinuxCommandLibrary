@@ -20,9 +20,13 @@ extracts data from HTML using CSS selectors
 
 ```htmlq -p [body] < [page.html]```
 
+**Remove nodes before extracting**
+
+```htmlq -r [.unwanted] [div.content] < [page.html]```
+
 **From URL via curl**
 
-```curl [url] | htmlq [selector]```
+```curl -s [url] | htmlq [selector]```
 
 # SYNOPSIS
 
@@ -42,11 +46,17 @@ _SELECTOR_
 **-p**, **--pretty**
 > Pretty print output.
 
-**-B**, **--remove-nodes** _SEL_
-> Remove matching nodes.
+**-B**, **--base** _URL_
+> Set base URL for relative links.
 
 **-f**, **--file** _FILE_
 > Read from file.
+
+**-r**, **--remove-nodes** _SELECTOR_
+> Remove matching nodes from output.
+
+**-w**, **--ignore-whitespace**
+> When printing text nodes, ignore whitespace.
 
 **--help**
 > Display help information.
@@ -59,7 +69,7 @@ The tool reads HTML from stdin or files and outputs matching elements. It suppor
 
 # CAVEATS
 
-Requires valid HTML. Written in Rust. Similar to pup tool.
+Does not validate HTML; malformed input may produce unexpected results. CSS selector support covers most common patterns but may not support all CSS4 pseudo-selectors. Input is read entirely into memory, so very large HTML documents may be slow.
 
 # HISTORY
 
@@ -67,4 +77,4 @@ htmlq was created as a command-line HTML querying tool inspired by jq for JSON p
 
 # SEE ALSO
 
-[pup](/man/pup)(1), [jq](/man/jq)(1), [xmllint](/man/xmllint)(1)
+[pup](/man/pup)(1), [jq](/man/jq)(1), [xmllint](/man/xmllint)(1), [curl](/man/curl)(1)

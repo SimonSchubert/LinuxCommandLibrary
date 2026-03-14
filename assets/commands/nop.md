@@ -1,44 +1,50 @@
 # TAGLINE
 
-no-operation command
+pretty-print graph file in canonical DOT format
 
 # TLDR
 
-**Do nothing**
+**Pretty-print a graph file**
 
-```nop```
+```nop [graph.gv]```
 
-**No operation with arguments**
+**Check DOT syntax** without producing output
 
-```nop [arg1] [arg2]```
+```nop -p [graph.gv]```
+
+**Pretty-print from stdin**
+
+```cat [graph.gv] | nop```
 
 # SYNOPSIS
 
-**nop** [_arguments_]
+**nop** [**-p?**] [_files_...]
 
 # PARAMETERS
 
-_ARGUMENTS_
-> Ignored arguments.
+_FILES_
+> One or more DOT graph files to process. Reads from stdin if none given.
 
-**--help**
-> Display help information.
+**-p**
+> Produce no output; only check the input for valid DOT syntax.
+
+**-?**
+> Print usage information.
 
 # DESCRIPTION
 
-**nop** is a no-operation command. It does nothing and exits successfully.
+**nop** reads a stream of graphs in DOT format and prints each in pretty-printed (canonical) format on stdout. If no files are given, it reads from stdin.
 
-The tool is a placeholder. Useful in scripts where a command is required but no action needed.
+The tool is part of the Graphviz package and is useful for normalizing DOT files or validating graph syntax.
 
 # CAVEATS
 
-Always succeeds. Ignores all input. Placeholder command.
+Part of the Graphviz package. Only processes DOT graph language files. Does not perform any layout computation.
 
 # HISTORY
 
-nop (no operation) is a utility that **does nothing**, useful for scripting placeholders.
+nop is part of **Graphviz**, the open-source graph visualization software originally developed at **AT&T Labs Research**.
 
 # SEE ALSO
 
-[true](/man/true)(1), [false](/man/false)(1), [:](/man/:)(1)
-
+[acyclic](/man/acyclic)(1), [gvpr](/man/gvpr)(1), [gvcolor](/man/gvcolor)(1), [ccomps](/man/ccomps)(1), [sccmap](/man/sccmap)(1), [tred](/man/tred)(1)

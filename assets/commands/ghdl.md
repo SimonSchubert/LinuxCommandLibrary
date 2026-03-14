@@ -16,13 +16,25 @@ Open-source VHDL simulator and synthesizer
 
 ```ghdl -r [entity_name]```
 
-**Run with waveform**
+**Run with VCD waveform output**
 
 ```ghdl -r [entity_name] --vcd=[output.vcd]```
+
+**Run with GHW waveform output**
+
+```ghdl -r [entity_name] --wave=[output.ghw]```
+
+**Run simulation with stop time**
+
+```ghdl -r [entity_name] --stop-time=[100ns]```
 
 **Import files**
 
 ```ghdl -i [file.vhdl]```
+
+**Syntax check only**
+
+```ghdl -s [file.vhdl]```
 
 # SYNOPSIS
 
@@ -52,7 +64,16 @@ Open-source VHDL simulator and synthesizer
 > Generate GHW waveform output.
 
 **--stop-time** _TIME_
-> Simulation stop time.
+> Simulation stop time (e.g., 100ns, 1us, 10ms).
+
+**--std** _STANDARD_
+> VHDL standard to use: 87, 93, 93c, 00, 02, 08.
+
+**--work** _NAME_
+> Set the work library name.
+
+**--ieee** _LIBRARY_
+> Select IEEE library flavor: standard, synopsys, mentor.
 
 **--help**
 > Display help information.
@@ -61,7 +82,7 @@ Open-source VHDL simulator and synthesizer
 
 **ghdl** is an open-source VHDL simulator and synthesizer. It analyzes, elaborates, and simulates VHDL designs, supporting VHDL-87, VHDL-93, VHDL-2002, and VHDL-2008 standards.
 
-The workflow involves analyzing source files, elaborating the design hierarchy, and running simulation. **ghdl** can generate waveform outputs in VCD and GHW formats for viewing in waveform tools like GTKWave.
+The typical workflow involves three steps: analyzing source files (**-a**) to check syntax and compile, elaborating the design hierarchy (**-e**) to resolve all dependencies, and running the simulation (**-r**). Waveform outputs in VCD and GHW formats can be generated for viewing in tools like GTKWave.
 
 # CAVEATS
 

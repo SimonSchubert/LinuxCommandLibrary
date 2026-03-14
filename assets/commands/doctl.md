@@ -32,6 +32,18 @@ official DigitalOcean command-line interface
 
 ```doctl compute region list```
 
+**List all databases**
+
+```doctl databases list```
+
+**Create a container registry**
+
+```doctl registry create [name]```
+
+**Output as JSON**
+
+```doctl compute droplet list --output json```
+
 # SYNOPSIS
 
 **doctl** _command_ [_subcommand_] [_options_]
@@ -39,7 +51,7 @@ official DigitalOcean command-line interface
 # PARAMETERS
 
 _COMMAND_
-> Resource type: compute, kubernetes, apps, databases, etc.
+> Resource type: account, compute, kubernetes, apps, databases, monitoring, registry, serverless, projects, etc.
 
 **auth** **init**
 > Authenticate with API token.
@@ -53,8 +65,23 @@ _COMMAND_
 **apps** _ACTION_
 > Manage App Platform applications.
 
+**databases** _ACTION_
+> Manage databases.
+
+**registry** _ACTION_
+> Manage container registries.
+
+**serverless** _ACTION_
+> Manage serverless functions.
+
+**monitoring** _ACTION_
+> Manage monitoring alert policies.
+
 **--output** _FORMAT_
 > Output format: text, json.
+
+**--format** _COLUMNS_
+> Comma-separated list of columns to display in table output.
 
 **--context** _NAME_
 > Use named authentication context.
@@ -80,4 +107,4 @@ doctl was developed by **DigitalOcean** as the official CLI for their cloud plat
 
 # SEE ALSO
 
-[kubectl](/man/kubectl)(1), [terraform](/man/terraform)(1), [aws](/man/aws)(1)
+[kubectl](/man/kubectl)(1), [terraform](/man/terraform)(1), [aws](/man/aws)(1), [gcloud](/man/gcloud)(1)

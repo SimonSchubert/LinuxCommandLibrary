@@ -79,13 +79,19 @@ Maintaining an accurate MSRV is important for library authors who want to suppor
 **--manifest-path** _path_
 > Path to Cargo.toml
 
+**--write-msrv**
+> Write found MSRV to Cargo.toml after find
+
+**--ignore-lockfile**
+> Ignore the lockfile during MSRV determination
+
 # REQUIREMENTS
 
 Requires rustup for toolchain management.
 
 # CAVEATS
 
-Binary search is much faster than linear (79+ minor versions exist). Set MSRV via package.rust-version field in Cargo.toml.
+Binary search is much faster than linear for the many Rust minor versions. Requires rustup for downloading and managing toolchains. The `find` command compiles the project with each candidate version, which can be slow for large projects. The `rust-version` field in Cargo.toml only supports two-component versions (e.g., 1.56) since Rust 1.56.
 
 # SEE ALSO
 

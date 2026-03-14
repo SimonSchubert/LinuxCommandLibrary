@@ -97,4 +97,4 @@ Publishes are permanent. Use cargo yank to mark versions as deprecated but not d
 
 # SEE ALSO
 
-[cargo](/man/cargo)(1), [cargo-package](/man/cargo-package)(1), [cargo-yank](/man/cargo-yank)(1)
+[cargo](/man/cargo)(1), [cargo-login](/man/cargo-login)(1), [cargo-package](/man/cargo-package)(1), [cargo-yank](/man/cargo-yank)(1)

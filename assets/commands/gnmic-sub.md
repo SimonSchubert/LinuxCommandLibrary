@@ -14,11 +14,11 @@ subscribe to gNMI streaming telemetry
 
 **Subscribe with on-change mode**
 
-```gnmic -a [host:port] sub --path [/state/port] --stream-mode on-change```
+```gnmic -a [host:port] sub --path [/state/port] --stream-mode on_change```
 
 **Subscribe with heartbeat interval**
 
-```gnmic -a [host:port] sub --path [/path] --stream-mode on-change --heartbeat-interval [1m]```
+```gnmic -a [host:port] sub --path [/path] --stream-mode on_change --heartbeat-interval [1m]```
 
 **Subscribe to multiple paths**
 
@@ -41,7 +41,10 @@ subscribe to gNMI streaming telemetry
 > Subscription mode: STREAM, ONCE, POLL.
 
 **--stream-mode** _mode_
-> Stream mode: SAMPLE, ON_CHANGE, TARGET_DEFINED.
+> Stream mode: sample, on_change, target_defined.
+
+**--prefix** _prefix_
+> Set a common prefix for all paths.
 
 **--sample-interval** _duration_
 > Sample interval for SAMPLE mode.
@@ -58,9 +61,15 @@ subscribe to gNMI streaming telemetry
 **--quiet**
 > Do not output to stdout.
 
+**--format** _format_
+> Output format (json, protojson, prototext, event, flat).
+
+**--depth** _depth_
+> Set gNMI extension depth value.
+
 # DESCRIPTION
 
-**gnmic sub** (or **subscribe**) sends a gNMI Subscribe RPC to network devices for streaming telemetry. It supports multiple subscription modes: ONCE (immediate single response), POLL (on-demand), and STREAM (continuous updates). Stream mode supports SAMPLE (periodic) and ON_CHANGE (event-driven) delivery.
+**gnmic sub** (or **subscribe**) sends a gNMI Subscribe RPC to network devices for streaming telemetry. It supports multiple subscription modes: **once** (immediate single response), **poll** (on-demand), and **stream** (continuous updates). Stream mode supports **sample** (periodic), **on_change** (event-driven), and **target_defined** delivery.
 
 # SEE ALSO
 

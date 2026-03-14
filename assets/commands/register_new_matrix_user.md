@@ -14,7 +14,11 @@ Create an **admin user** interactively
 
 Create admin user **non-interactively**
 
-```register_new_matrix_user --config path/to/homeserver.yaml --user username --password password --admin```
+```register_new_matrix_user --config path/to/homeserver.yaml --user [username] --password [password] --admin```
+
+Create user on a **remote** homeserver
+
+```register_new_matrix_user --config path/to/homeserver.yaml --user [username] --password [password] --no-admin [https://matrix.example.com]```
 
 # SYNOPSIS
 
@@ -33,6 +37,18 @@ Create admin user **non-interactively**
 
 **--admin**
 > Create an administrator account
+
+**--no-admin**
+> Do not make the new user an admin (default)
+
+**-k** _secret_, **--shared-secret** _secret_
+> Shared secret (alternative to providing via config file)
+
+**-t** _type_, **--user-type** _type_
+> User type as specified in synapse.api.constants.UserTypes
+
+**server_url**
+> Homeserver URL (default: https://localhost:8448)
 
 # DESCRIPTION
 

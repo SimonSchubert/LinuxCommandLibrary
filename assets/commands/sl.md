@@ -71,4 +71,4 @@ By default, Ctrl+C is ignored, and you must wait for the animation to complete. 
 
 # SEE ALSO
 
-[ls](/man/ls)(1), [cowsay](/man/cowsay)(1), [fortune](/man/fortune)(6), [figlet](/man/figlet)(6)
+[ls](/man/ls)(1), [cowsay](/man/cowsay)(1), [fortune](/man/fortune)(1), [figlet](/man/figlet)(1)

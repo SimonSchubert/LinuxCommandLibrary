@@ -12,6 +12,14 @@ Use **rofi** instead of dmenu
 
 ```udiskie-dmenu --rofi```
 
+**Mount** devices only
+
+```udiskie-dmenu mount```
+
+**Unmount** devices only
+
+```udiskie-dmenu unmount```
+
 Display **help**
 
 ```udiskie-dmenu --help```
@@ -22,11 +30,17 @@ Display **help**
 
 # PARAMETERS
 
+**mount**
+> Show only mountable devices.
+
+**unmount**
+> Show only unmountable (mounted) devices.
+
 **--rofi**
-> Use rofi instead of dmenu
+> Use rofi instead of dmenu.
 
 **--help**
-> Display help information
+> Display help information.
 
 # DESCRIPTION
 
@@ -40,4 +54,4 @@ Requires udiskie and either dmenu or rofi installed. Available devices depend on
 
 # SEE ALSO
 
-[udiskie](/man/udiskie)(1), [dmenu](/man/dmenu)(1), [rofi](/man/rofi)(1)
+[udiskie](/man/udiskie)(1), [udisksctl](/man/udisksctl)(1), [dmenu](/man/dmenu)(1), [rofi](/man/rofi)(1)

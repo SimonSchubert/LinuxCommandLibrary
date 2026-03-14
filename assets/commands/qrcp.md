@@ -28,26 +28,52 @@ Use specific **network interface**
 
 ```qrcp send --keep-alive```
 
+Receive files to specific **directory**
+
+```qrcp receive --output [path/to/directory]```
+
+Open QR code in **browser**
+
+```qrcp send --browser [path/to/file]```
+
 # SYNOPSIS
 
-**qrcp** [**send**|**receive**] [**-p** _port_] [**-i** _interface_] [**--zip**] [**--keep-alive**] [_files_...]
+**qrcp** [**send**|**receive**|**config**] [**-p** _port_] [**-i** _interface_] [**--zip**] [**--keep-alive**] [_files_...]
 
 # PARAMETERS
 
-**-p, --port _port_**
+**-p**, **--port** _port_
 > Use specific port number
 
-**-i, --interface _iface_**
+**-i**, **--interface** _iface_
 > Use specific network interface
 
-**--zip**
+**-z**, **--zip**
 > Compress files before transfer
 
-**--keep-alive**
+**-k**, **--keep-alive**
 > Keep server running after transfer
 
-**-q, --quiet**
-> Quiet mode
+**-q**, **--quiet**
+> Only print errors
+
+**--browser**
+> Open QR code in default browser window
+
+**--output** _dir_
+> Directory to receive files into
+
+**--secure**
+> Use HTTPS connection
+
+**--path** _path_
+> URL path to use (default: random string)
+
+**-c**, **--config** _file_
+> Path to config file
+
+**-d**, **--fqdn** _domain_
+> Fully-qualified domain name for resulting URLs
 
 # DESCRIPTION
 

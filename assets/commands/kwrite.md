@@ -49,7 +49,7 @@ KWrite shares the same editor component (KTextEditor) as Kate, making it a light
 
 # CAVEATS
 
-Requires KDE libraries. For a more feature-rich editor with multiple documents and sessions, use kate instead. Some features depend on KDE version.
+Requires KDE Frameworks libraries. Single-document editor only; for multiple documents and sessions, use **kate** instead. Available in the KDE Applications package.
 
 # HISTORY
 

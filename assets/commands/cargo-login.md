@@ -4,15 +4,15 @@ Save a registry API token for authentication
 
 # TLDR
 
-**Login to crates.io**
+**Login to crates.io** (token read from stdin)
 
 ```cargo login```
 
-**Login with token directly**
+**Login with a token provided as argument**
 
 ```cargo login [token]```
 
-**Login to specific registry**
+**Login to a specific registry**
 
 ```cargo login --registry [my-registry]```
 
@@ -22,7 +22,7 @@ Save a registry API token for authentication
 
 # DESCRIPTION
 
-**cargo login** saves an API token for registry authentication. Required for publishing crates with cargo publish. Tokens are stored in $CARGO_HOME/credentials.toml.
+**cargo login** runs a credential provider to save a token for registry authentication. Required for publishing crates with `cargo publish`. The token is read from stdin if not provided as an argument. Tokens are stored in `$CARGO_HOME/credentials.toml` by default.
 
 For crates.io, obtain your token from https://crates.io/me
 

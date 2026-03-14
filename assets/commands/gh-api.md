@@ -37,11 +37,11 @@ authenticated HTTP requests to GitHub REST and GraphQL APIs
 **-X**, **--method** _method_
 > HTTP method.
 
-**-f**, **--field** _key=value_
-> Add string field.
+**-f**, **--raw-field** _key=value_
+> Add a string parameter.
 
-**-F**, **--raw-field** _key=value_
-> Add raw field.
+**-F**, **--field** _key=value_
+> Add a typed parameter (non-string values, file references with @, booleans, null).
 
 **--input** _file_
 > Read body from file.
@@ -50,13 +50,28 @@ authenticated HTTP requests to GitHub REST and GraphQL APIs
 > Filter JSON output.
 
 **--paginate**
-> Paginate results.
+> Fetch all pages of results.
+
+**--slurp**
+> With --paginate, combine all pages into a single JSON array.
+
+**-i**, **--include**
+> Include HTTP response headers in the output.
+
+**-p**, **--preview** _name_
+> Opt into a GitHub API preview feature.
 
 **-H**, **--header** _header_
 > Add HTTP header.
 
 **-t**, **--template** _template_
-> Format output with template.
+> Format output with a Go template.
+
+**--hostname** _host_
+> Make request against a specific GitHub hostname (for GHES).
+
+**--cache** _duration_
+> Cache the response (e.g., 1h, 30m).
 
 # DESCRIPTION
 

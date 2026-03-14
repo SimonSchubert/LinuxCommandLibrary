@@ -66,7 +66,7 @@ YAML syntax and style linter
 
 **yamllint** is a linter for YAML files that checks for syntax validity and style issues. Beyond basic syntax checking, it detects problems like duplicate keys, line length violations, trailing spaces, indentation inconsistencies, and truthy value ambiguities.
 
-Configuration is loaded from **.yamllint**, **.yamllint.yaml**, or **.yamllint.yml** in the current or parent directories, **$YAMLLINT_CONFIG_FILE**, or **~/.config/yamllint/config**.
+Configuration is loaded from **.yamllint**, **.yamllint.yaml**, or **.yamllint.yml** in the current or parent directories, the **$YAMLLINT_CONFIG_FILE** environment variable, or **$XDG_CONFIG_HOME/yamllint/config** (~/.config/yamllint/config).
 
 The tool provides multiple output formats suitable for different use cases: human-readable, editor integration, and CI systems (GitHub Actions, GitLab CI).
 

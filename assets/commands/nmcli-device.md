@@ -94,4 +94,4 @@ Part of the **nmcli** command-line interface for **NetworkManager**. Provides de
 
 # SEE ALSO
 
-[nmcli](/man/nmcli)(1), [nmcli-connection](/man/nmcli)(1), [iw](/man/iw)(8), [iwctl](/man/iwctl)(1)
+[nmcli](/man/nmcli)(1), [nmcli-connection](/man/nmcli-connection)(1), [iw](/man/iw)(8), [iwctl](/man/iwctl)(1)

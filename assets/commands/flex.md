@@ -66,10 +66,10 @@ Generate scanner with **debugging** enabled
 > Print scanner statistics to stderr
 
 **-f, --full**
-> Generate fast, large scanner (no table compression)
+> Generate fast, large scanner with full tables (-Cfr).
 
 **-F, --fast**
-> Generate fast scanner with table compression
+> Generate fast scanner with alternate table representation (-CFr).
 
 **--header-file** _file_
 > Generate C header file
@@ -98,4 +98,4 @@ Flex was written by Vern Paxson around **1987** as a free, open-source replaceme
 
 # SEE ALSO
 
-[bison](/man/bison)(1), [yacc](/man/yacc)(1), [gcc](/man/gcc)(1), [cc](/man/cc)(1)
+[lex](/man/lex)(1), [bison](/man/bison)(1), [yacc](/man/yacc)(1), [gcc](/man/gcc)(1), [cc](/man/cc)(1)

@@ -24,9 +24,17 @@ framework for managing Zsh configuration
 
 ```omz plugin enable [git]```
 
-**Reload configuration**
+**Disable a plugin**
 
-```source ~/.zshrc```
+```omz plugin disable [git]```
+
+**List available themes**
+
+```omz theme list```
+
+**Reload Oh My Zsh configuration**
+
+```omz reload```
 
 # SYNOPSIS
 
@@ -52,6 +60,21 @@ framework for managing Zsh configuration
 **plugin list**
 > List plugins.
 
+**plugin info** _name_
+> Show information about a plugin.
+
+**reload**
+> Reload Oh My Zsh configuration.
+
+**changelog**
+> Show the changelog.
+
+**version**
+> Show the current version.
+
+**doctor**
+> Diagnose common issues.
+
 # DESCRIPTION
 
 **Oh My Zsh** is a framework for managing Zsh configuration. It provides themes, plugins, and helper functions to enhance the Zsh shell experience.
@@ -64,16 +87,10 @@ Configuration is in ~/.zshrc, with plugins and themes in ~/.oh-my-zsh.
 # ~/.zshrc
 ZSH_THEME="robbyrussell"
 plugins=(git docker kubectl node)
+ZSH_CUSTOM="$ZSH/custom"
+HIST_STAMPS="yyyy-mm-dd"
+COMPLETION_WAITING_DOTS="true"
 source $ZSH/oh-my-zsh.sh
-```
-
-# POPULAR PLUGINS
-
-```
-git, docker, kubectl
-node, npm, python
-zsh-autosuggestions
-zsh-syntax-highlighting
 ```
 
 # CAVEATS
@@ -86,4 +103,4 @@ Oh My Zsh was created by **Robby Russell** in **2009** and has become the most p
 
 # SEE ALSO
 
-[zsh](/man/zsh)(1), [bash](/man/bash)(1), [starship](/man/starship)(1)
+[zsh](/man/zsh)(1), [bash](/man/bash)(1), [p10k](/man/p10k)(1), [starship](/man/starship)(1), [antigen](/man/antigen)(1), [zinit](/man/zinit)(1), [fish](/man/fish)(1)

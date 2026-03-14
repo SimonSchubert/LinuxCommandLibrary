@@ -47,6 +47,9 @@ Interactive packet manipulation and network tool
 **-d**
 > Increase log verbosity; can be used multiple times for more detail
 
+**-s** _file_
+> Use file to save/load session values (variables, functions, instances)
+
 **-p** _prestart_file_
 > Use specified file instead of ~/.config/scapy/prestart.py as pre-startup file
 

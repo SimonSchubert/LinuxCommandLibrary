@@ -49,7 +49,7 @@ The tool downloads and manages Node.js binaries, adjusting the system PATH to po
 
 # CAVEATS
 
-PowerShell only. Windows alternative to nvm.
+PowerShell only; Windows-specific alternative to nvm. Installed as a PowerShell module. Requires administrative privileges for some operations.
 
 # HISTORY
 

@@ -12,7 +12,7 @@ open-source search and analytics engine derived from Elasticsearch 7
 
 ```opensearch -E path.data=[/data] -E path.logs=[/logs]```
 
-**Run in foreground**
+**Run as a daemon (background)**
 
 ```opensearch -d```
 
@@ -31,19 +31,19 @@ open-source search and analytics engine derived from Elasticsearch 7
 # PARAMETERS
 
 **-d**
-> Run as daemon.
+> Run as a daemon (in the background).
 
 **-p** _file_
-> PID file path.
+> Write the process ID to file.
 
 **-E** _setting=value_
-> Configuration setting.
+> Set a configuration setting (e.g., -E cluster.name=myCluster).
 
 **-q**, **--quiet**
-> Quiet mode.
+> Suppress normal output to stdout.
 
 **-v**, **--verbose**
-> Verbose mode.
+> Enable verbose output.
 
 # DESCRIPTION
 

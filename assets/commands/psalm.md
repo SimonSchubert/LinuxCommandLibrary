@@ -32,6 +32,10 @@ Static analysis tool for PHP type safety
 
 ```psalm --output-format=json```
 
+**Analyze only changed files** (based on git diff)
+
+```psalm --diff```
+
 **Fix issues automatically**
 
 ```psalm --alter --issues=[MissingReturnType]```
@@ -43,7 +47,7 @@ Static analysis tool for PHP type safety
 # PARAMETERS
 
 **--level** _N_
-> Error level (1-8).
+> Error level (1-9, where 1 is strictest).
 
 **--config**, **-c** _FILE_
 > Configuration file.
@@ -78,6 +82,9 @@ Static analysis tool for PHP type safety
 **--memory-limit** _SIZE_
 > Memory limit.
 
+**--diff**
+> Only analyze files changed since last run.
+
 **--clear-cache**
 > Clear cache.
 
@@ -85,7 +92,7 @@ Static analysis tool for PHP type safety
 
 **psalm** is a static analysis tool for PHP that finds bugs and enforces type safety. It understands PHP type hints and PHPDoc annotations.
 
-Error levels range from 1 (strictest) to 8 (most permissive). Higher levels allow more potential issues, suitable for legacy codebases.
+Error levels range from 1 (strictest) to 9 (most permissive). Higher levels allow more potential issues, suitable for legacy codebases.
 
 Configuration in psalm.xml defines analysis scope, excluded files, and issue severity. Project-specific settings enable gradual adoption.
 

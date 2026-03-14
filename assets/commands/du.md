@@ -67,6 +67,18 @@ The command reports disk usage (actual blocks consumed) rather than apparent fil
 **-x**, **--one-file-system**
 > Skip different filesystems
 
+**-l**, **--count-links**
+> Count hard links multiple times
+
+**--apparent-size**
+> Print apparent sizes rather than disk usage
+
+**--si**
+> Like -h but use powers of 1000 (not 1024)
+
+**-L**, **--dereference**
+> Follow symbolic links
+
 **--exclude=**_pattern_
 > Exclude files matching pattern
 
@@ -133,7 +145,7 @@ diff before.txt after.txt
 
 # CAVEATS
 
-Slow on large directories. Doesn't show actual disk usage (sparse files, compression). Crosses filesystem boundaries by default (use -x). Counts hard links once by default (use -l for per-link counting). May require root for some directories. Output ordering not guaranteed without sort.
+Slow on large directories. Reports disk usage (blocks allocated) not apparent file size by default; use --apparent-size for file sizes. Crosses filesystem boundaries by default (use -x). Counts hard links once by default (use -l for per-link counting). May require root for some directories. Output ordering not guaranteed without sort.
 
 # HISTORY
 

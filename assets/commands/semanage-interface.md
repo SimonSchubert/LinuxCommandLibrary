@@ -48,6 +48,21 @@ List only **customized** definitions
 **-C**, **--locallist**
 > Show only local customizations
 
+**-D**, **--deleteall**
+> Remove all local customizations
+
+**-E**, **--extract**
+> Extract customizable commands for use in a transaction
+
+**-n**, **--noheading**
+> Do not print heading when listing
+
+**-N**, **--noreload**
+> Do not reload policy after commit
+
+**-r**, **--range** _RANGE_
+> MLS/MCS security range (MLS/MCS systems only)
+
 # DESCRIPTION
 
 **semanage interface** manages SELinux network interface type definitions. It assigns SELinux types to network interfaces for network-based access control.
@@ -64,4 +79,4 @@ Part of **policycoreutils**, providing SELinux policy management tools.
 
 # SEE ALSO
 
-[semanage](/man/semanage)(8), [semanage-port](/man/semanage-port)(8)
+[semanage](/man/semanage)(8), [semanage-port](/man/semanage-port)(8), [semanage-fcontext](/man/semanage-fcontext)(8), [semanage-boolean](/man/semanage-boolean)(8)

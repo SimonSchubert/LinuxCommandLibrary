@@ -81,6 +81,10 @@ Use **-a** and **-o** for AND/OR, or combine with **&&** and **||** outside brac
 
 **=** is for strings, **-eq** for numbers: **[ "01" = "1" ]** is false, **[ 01 -eq 1 ]** is true.
 
+# HISTORY
+
+**[** (test) is one of the original Unix commands, specified in POSIX.1. The **[[** enhanced version was introduced in **ksh88** and adopted by bash and zsh.
+
 # SEE ALSO
 
 [test](/man/test)(1), [bash](/man/bash)(1), [sh](/man/sh)(1)
