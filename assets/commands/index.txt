@@ -6088,6 +6088,7 @@ qemu-system-i386.md
 qemu-system-riscv64.md
 qemu-system-x86_64.md
 qemu.md
+qgis.md
 qjoypad.md
 qm-agent.md
 qm-cleanup.md
@@ -6855,6 +6856,7 @@ spotifyd.md
 spottopgm.md
 spring.md
 sprio.md
+sprof.md
 sprofile.md
 sputoppm.md
 sq.md
@@ -6936,6 +6938,7 @@ steamos-readonly.md
 steamos-select-branch.md
 steamos-session-select.md
 steamos-update.md
+steamosctl.md
 steghide.md
 stegsnow.md
 step-ca.md
