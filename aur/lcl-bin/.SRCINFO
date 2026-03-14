@@ -1,0 +1,14 @@
+pkgbase = lcl-bin
+	pkgdesc = Linux command reference and cheat sheets for your terminal
+	pkgver = 3.6.1
+	pkgrel = 1
+	url = https://github.com/SimonSchubert/LinuxCommandLibrary
+	arch = x86_64
+	license = Apache-2.0
+	makedepends = unzip
+	provides = lcl
+	conflicts = lcl
+	source = LinuxCommandLibrary-3.6.1-cli-linux-x64.zip::https://github.com/SimonSchubert/LinuxCommandLibrary/releases/download/v3.6.1/LinuxCommandLibrary-3.6.1-cli-linux-x64.zip
+	sha256sums = SKIP
+
+pkgname = lcl-bin

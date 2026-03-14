@@ -1,0 +1,170 @@
+name: AUR Package
+
+on:
+  push:
+    paths:
+      - 'aur/**'
+  pull_request:
+    paths:
+      - 'aur/**'
+  workflow_run:
+    workflows: ["Build and Release"]
+    types: [completed]
+
+jobs:
+  validate:
+    name: Validate PKGBUILDs
+    if: github.event_name != 'workflow_run'
+    runs-on: ubuntu-latest
+    container: archlinux:base-devel
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup build user
+        run: |
+          useradd -m builder
+          echo "builder ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+          chown -R builder:builder .
+
+      - name: Install namcap
+        run: pacman -Sy --noconfirm namcap
+
+      - name: Lint lcl-bin PKGBUILD
+        working-directory: aur/lcl-bin
+        run: namcap PKGBUILD
+
+      - name: Validate lcl-bin .SRCINFO
+        working-directory: aur/lcl-bin
+        run: |
+          su builder -c "makepkg --printsrcinfo" > .SRCINFO.generated
+          diff -u .SRCINFO .SRCINFO.generated
+
+      - name: Lint lcl-gui-bin PKGBUILD
+        working-directory: aur/lcl-gui-bin
+        run: namcap PKGBUILD
+
+      - name: Validate lcl-gui-bin .SRCINFO
+        working-directory: aur/lcl-gui-bin
+        run: |
+          su builder -c "makepkg --printsrcinfo" > .SRCINFO.generated
+          diff -u .SRCINFO .SRCINFO.generated
+
+  publish:
+    name: Publish to AUR
+    if: github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    container: archlinux:base-devel
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup build user
+        run: |
+          useradd -m builder
+          echo "builder ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+
+      - name: Install dependencies
+        run: pacman -Sy --noconfirm openssh git
+
+      - name: Get version from release
+        id: version
+        run: echo "version=$(echo '${{ github.event.workflow_run.head_branch }}' | sed 's/^v//')" >> $GITHUB_OUTPUT
+
+      - name: Update PKGBUILDs and checksums
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+
+          # Download CLI zip and compute SHA256
+          CLI_URL="https://github.com/SimonSchubert/LinuxCommandLibrary/releases/download/v${VERSION}/LinuxCommandLibrary-${VERSION}-cli-linux-x64.zip"
+          curl -L -o cli.zip "$CLI_URL"
+          CLI_SHA256=$(sha256sum cli.zip | cut -d' ' -f1)
+          rm cli.zip
+
+          # Download GUI tarball and compute SHA256
+          GUI_URL="https://github.com/SimonSchubert/LinuxCommandLibrary/releases/download/v${VERSION}/LinuxCommandLibrary-${VERSION}-linux-x86_64.tar.gz"
+          curl -L -o gui.tar.gz "$GUI_URL"
+          GUI_SHA256=$(sha256sum gui.tar.gz | cut -d' ' -f1)
+          rm gui.tar.gz
+
+          # Update lcl-bin PKGBUILD
+          cd aur/lcl-bin
+          sed -i "s|^pkgver=.*|pkgver=${VERSION}|" PKGBUILD
+          sed -i "s|^pkgrel=.*|pkgrel=1|" PKGBUILD
+          sed -i "s|^sha256sums=.*|sha256sums=('${CLI_SHA256}')|" PKGBUILD
+          chown -R builder:builder .
+          su builder -c "makepkg --printsrcinfo" > .SRCINFO
+          echo "=== lcl-bin PKGBUILD ==="
+          cat PKGBUILD
+
+          # Update lcl-gui-bin PKGBUILD
+          cd ../lcl-gui-bin
+          sed -i "s|^pkgver=.*|pkgver=${VERSION}|" PKGBUILD
+          sed -i "s|^pkgrel=.*|pkgrel=1|" PKGBUILD
+          sed -i "s|^sha256sums=.*|sha256sums=('${GUI_SHA256}')|" PKGBUILD
+          chown -R builder:builder .
+          su builder -c "makepkg --printsrcinfo" > .SRCINFO
+          echo "=== lcl-gui-bin PKGBUILD ==="
+          cat PKGBUILD
+
+      - name: Push to AUR
+        env:
+          AUR_SSH_KEY: ${{ secrets.AUR_SSH_KEY }}
+        run: |
+          # Setup SSH - use system-wide known_hosts to avoid HOME mismatch in containers
+          echo "aur.archlinux.org ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEuBKrPzbawxA/k2g6NcyV5jmqwJ2s+zpgZGZ7tpLIcN" >> /etc/ssh/ssh_known_hosts
+          for dir in "$HOME" "/root"; do
+            mkdir -p "$dir/.ssh"
+            echo "$AUR_SSH_KEY" > "$dir/.ssh/aur"
+            chmod 600 "$dir/.ssh/aur"
+            printf "Host aur.archlinux.org\n  IdentityFile %s/.ssh/aur\n  User aur\n" "$dir" > "$dir/.ssh/config"
+            chmod 700 "$dir/.ssh"
+            chmod 600 "$dir/.ssh/config"
+          done
+
+          git config --global user.name "Simon Schubert"
+          git config --global user.email "sschubert89@gmail.com"
+
+          VERSION="${{ steps.version.outputs.version }}"
+
+          # Push lcl-bin
+          cd /tmp
+          git clone ssh://aur@aur.archlinux.org/lcl-bin.git
+          cp $GITHUB_WORKSPACE/aur/lcl-bin/PKGBUILD lcl-bin/
+          cp $GITHUB_WORKSPACE/aur/lcl-bin/.SRCINFO lcl-bin/
+          cd lcl-bin
+          git add PKGBUILD .SRCINFO
+          git commit -m "Update to ${VERSION}"
+          git push
+
+          # Push lcl-gui-bin
+          cd /tmp
+          git clone ssh://aur@aur.archlinux.org/lcl-gui-bin.git
+          cp $GITHUB_WORKSPACE/aur/lcl-gui-bin/PKGBUILD lcl-gui-bin/
+          cp $GITHUB_WORKSPACE/aur/lcl-gui-bin/.SRCINFO lcl-gui-bin/
+          cd lcl-gui-bin
+          git add PKGBUILD .SRCINFO
+          git commit -m "Update to ${VERSION}"
+          git push
+
+      - name: Update repo PKGBUILDs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+
+          cd /tmp
+          git clone --depth 1 https://x-access-token:${GITHUB_TOKEN}@github.com/SimonSchubert/LinuxCommandLibrary.git lcl-repo
+          cd lcl-repo
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          cp $GITHUB_WORKSPACE/aur/lcl-bin/PKGBUILD aur/lcl-bin/PKGBUILD
+          cp $GITHUB_WORKSPACE/aur/lcl-bin/.SRCINFO aur/lcl-bin/.SRCINFO
+          cp $GITHUB_WORKSPACE/aur/lcl-gui-bin/PKGBUILD aur/lcl-gui-bin/PKGBUILD
+          cp $GITHUB_WORKSPACE/aur/lcl-gui-bin/.SRCINFO aur/lcl-gui-bin/.SRCINFO
+
+          git add aur/
+          git commit -m "Update AUR packages to ${VERSION}" || exit 0
+          git push

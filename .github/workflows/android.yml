@@ -229,6 +229,33 @@ jobs:
           name: rpm-package
           path: desktopApp/build/compose/binaries/main/rpm/*.rpm
 
+  linux-tar:
+    name: Generate Linux Tarball
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - name: Set execution flag for gradlew
+        run: chmod +x gradlew
+      - name: Build application distribution
+        run: ./gradlew :desktopApp:createDistributable --stacktrace
+      - name: Copy icon into distributable
+        run: cp desktopApp/icon.png desktopApp/build/compose/binaries/main/app/LinuxCommandLibrary/lib/LinuxCommandLibrary.png
+      - name: Package tarball
+        run: |
+          cd desktopApp/build/compose/binaries/main/app
+          tar czf "$GITHUB_WORKSPACE/LinuxCommandLibrary-linux-x86_64.tar.gz" LinuxCommandLibrary
+      - name: Upload Tarball Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: linux-tar-package
+          path: LinuxCommandLibrary-linux-x86_64.tar.gz
+
   appimage:
     name: Generate AppImage
     runs-on: ubuntu-latest
@@ -352,7 +379,7 @@ jobs:
 
   release:
     name: Release All Platforms
-    needs: [apk, cli-linux, cli-macos, cli-windows, dmg, msi, deb, rpm, appimage]
+    needs: [apk, cli-linux, cli-macos, cli-windows, dmg, msi, deb, rpm, appimage, linux-tar]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -415,6 +442,11 @@ jobs:
         with:
           name: appimage-package
 
+      - name: Download Linux Tarball Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: linux-tar-package
+
       - name: List downloaded files (for debugging)
         run: ls -la
 
@@ -447,6 +479,7 @@ jobs:
           mv *.deb "LinuxCommandLibrary-${VERSION}-linux.deb"
           mv *.rpm "LinuxCommandLibrary-${VERSION}-linux.rpm"
           mv *.AppImage "LinuxCommandLibrary-${VERSION}-linux.AppImage"
+          mv LinuxCommandLibrary-linux-x86_64.tar.gz "LinuxCommandLibrary-${VERSION}-linux-x86_64.tar.gz"
 
       - name: Create Github Release
         uses: softprops/action-gh-release@v2
