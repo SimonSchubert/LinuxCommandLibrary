@@ -6824,6 +6824,7 @@ sox.md
 soxi.md
 spa-acp-tool.md
 spa-inspect.md
+spa-resample.md
 spark.md
 spctoppm.md
 spd-say.md
