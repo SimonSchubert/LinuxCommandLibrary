@@ -1,3 +1,13 @@
+## v3.6.2 — 2026-03-15
+
+### Features
+- Add fast scroll to command lists
+- Add new commands
+
+### Improvements
+- Migrate to Material 3
+- Improve info dialog UI
+
 ## v3.6.1 — 2026-03-14
 
 ### Improvements

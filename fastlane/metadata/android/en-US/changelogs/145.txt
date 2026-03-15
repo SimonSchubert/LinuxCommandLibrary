@@ -1,0 +1,4 @@
+Add fast scroll to command lists
+Add new commands
+Migrate to Material 3
+Improve info dialog UI
