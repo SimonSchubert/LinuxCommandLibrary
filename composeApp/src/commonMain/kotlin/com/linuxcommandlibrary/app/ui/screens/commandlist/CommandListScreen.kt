@@ -4,9 +4,11 @@ package com.linuxcommandlibrary.app.ui.screens.commandlist
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Icon
 import androidx.compose.material.ListItem
@@ -15,11 +17,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.pointer.PointerIcon
 import androidx.compose.ui.input.pointer.pointerHoverIcon
 import com.linuxcommandlibrary.app.data.CommandInfo
 import com.linuxcommandlibrary.app.ui.composables.AppIcon
+import com.linuxcommandlibrary.app.ui.composables.FastScrollBar
 import com.linuxcommandlibrary.app.ui.composables.HighlightedText
 import com.linuxcommandlibrary.app.ui.composables.rememberIconPainter
 import com.linuxcommandlibrary.app.ui.theme.LocalCustomColors
@@ -31,23 +35,35 @@ fun CommandListScreen(
 ) {
     val commands by viewModel.commands.collectAsState()
     val bookmarkedNames by viewModel.bookmarkedNames.collectAsState()
+    val listState = rememberLazyListState()
 
-    LazyColumn(
+    Box(
         modifier = Modifier
             .background(MaterialTheme.colors.background)
             .fillMaxSize(),
     ) {
-        items(
-            items = commands,
-            key = { it.id },
-            contentType = { "command_list_item" },
-        ) { command ->
-            CommandListItem(
-                command = command,
-                onNavigate = onNavigate,
-                isBookmarked = command.name in bookmarkedNames,
-            )
+        LazyColumn(
+            state = listState,
+            modifier = Modifier.fillMaxSize(),
+        ) {
+            items(
+                items = commands,
+                key = { it.id },
+                contentType = { "command_list_item" },
+            ) { command ->
+                CommandListItem(
+                    command = command,
+                    onNavigate = onNavigate,
+                    isBookmarked = command.name in bookmarkedNames,
+                )
+            }
         }
+
+        FastScrollBar(
+            listState = listState,
+            itemCount = commands.size,
+            modifier = Modifier.align(Alignment.CenterEnd),
+        )
     }
 }
 
