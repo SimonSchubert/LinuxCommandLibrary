@@ -15,14 +15,15 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.Button
-import androidx.compose.material.ButtonDefaults
-import androidx.compose.material.Card
-import androidx.compose.material.Divider
-import androidx.compose.material.Icon
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.OutlinedButton
-import androidx.compose.material.Text
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
@@ -55,7 +56,7 @@ fun AppInfoDialog(
 
     Dialog(onDismissRequest = { onDismiss() }) {
         Card(
-            elevation = 16.dp,
+            elevation = CardDefaults.cardElevation(defaultElevation = 16.dp),
             shape = RoundedCornerShape(24.dp),
         ) {
             Column(
@@ -73,13 +74,13 @@ fun AppInfoDialog(
                 Spacer(Modifier.height(12.dp))
                 Text(
                     "Linux Command Library",
-                    style = MaterialTheme.typography.h6,
+                    style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
                 )
                 Text(
                     "Version ${Version.APP_VERSION}",
-                    style = MaterialTheme.typography.caption,
-                    color = MaterialTheme.colors.onSurface.copy(alpha = 0.6f),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f),
                 )
 
                 Spacer(Modifier.height(20.dp))
@@ -95,7 +96,7 @@ fun AppInfoDialog(
                             },
                             modifier = Modifier.weight(1f).pointerHoverIcon(PointerIcon.Hand),
                             shape = RoundedCornerShape(12.dp),
-                            elevation = ButtonDefaults.elevation(defaultElevation = 0.dp),
+                            elevation = ButtonDefaults.buttonElevation(defaultElevation = 0.dp),
                         ) {
                             Text("Rate the app")
                         }
@@ -118,18 +119,18 @@ fun AppInfoDialog(
                 }
 
                 Spacer(Modifier.height(20.dp))
-                Divider(color = MaterialTheme.colors.onSurface.copy(alpha = 0.12f))
+                HorizontalDivider(color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.12f))
                 Spacer(Modifier.height(20.dp))
                 Text(
                     "Support this project",
-                    style = MaterialTheme.typography.subtitle1,
+                    style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.SemiBold,
                 )
                 Spacer(Modifier.height(4.dp))
                 Text(
                     "By using my referral links for these amazing products.",
-                    style = MaterialTheme.typography.body2,
-                    color = MaterialTheme.colors.onSurface.copy(alpha = 0.7f),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f),
                 )
                 Spacer(Modifier.height(12.dp))
                 OutlinedButton(
@@ -177,36 +178,36 @@ fun AppInfoDialog(
 
                 Text(
                     "Acknowledgements",
-                    style = MaterialTheme.typography.subtitle1,
+                    style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.SemiBold,
                 )
                 Spacer(Modifier.height(8.dp))
                 Text(
                     "Man pages",
-                    style = MaterialTheme.typography.body2,
+                    style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.Medium,
                 )
                 Text(
                     "Licence information about the man page is usually specified in the man detail page under the category Author, Copyright or Licence.",
-                    style = MaterialTheme.typography.caption,
-                    color = MaterialTheme.colors.onSurface.copy(alpha = 0.6f),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f),
                 )
                 Spacer(Modifier.height(12.dp))
                 Text(
                     "TLDR pages",
-                    style = MaterialTheme.typography.body2,
+                    style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.Medium,
                 )
                 Text(
                     "The MIT License (MIT) Copyright (c) 2014 the TLDR team and contributors",
-                    style = MaterialTheme.typography.caption,
-                    color = MaterialTheme.colors.onSurface.copy(alpha = 0.6f),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f),
                 )
                 Spacer(Modifier.height(12.dp))
                 Text(
                     "Thanks to icons8.com for the icons",
-                    style = MaterialTheme.typography.caption,
-                    color = MaterialTheme.colors.onSurface.copy(alpha = 0.6f),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f),
                 )
             }
         }
@@ -224,7 +225,7 @@ fun BookmarkFeedbackDialog(onDismiss: () -> Unit) {
 
     Dialog(onDismissRequest = onDismiss) {
         Card(
-            elevation = 8.dp,
+            elevation = CardDefaults.cardElevation(defaultElevation = 8.dp),
             shape = RoundedCornerShape(6.dp),
         ) {
             Column(

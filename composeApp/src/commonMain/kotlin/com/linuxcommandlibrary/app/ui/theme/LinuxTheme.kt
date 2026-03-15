@@ -1,10 +1,10 @@
 package com.linuxcommandlibrary.app.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Typography
-import androidx.compose.material.darkColors
-import androidx.compose.material.lightColors
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Typography
+import androidx.compose.material3.darkColorScheme
+import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.compositionLocalOf
@@ -31,20 +31,20 @@ val LocalCustomColors = compositionLocalOf { CustomColors() }
 @Composable
 fun LinuxTheme(content: @Composable () -> Unit) {
     val darkMode = isSystemInDarkTheme()
-    val darkColors = darkColors(
+    val darkColors = darkColorScheme(
         primary = BrandRed,
-        secondary = Color.White,
+        onSurface = Color.White,
         background = Color(0xFF262626),
         surface = Color(0xFF262626),
     )
-    val lightColors = lightColors(
+    val lightColors = lightColorScheme(
         primary = BrandRed,
-        secondary = Color.Black,
+        onSurface = Color.Black,
         background = Color.White,
         surface = Color.White,
     )
     val dynamicColors = dynamicThemeColors(darkMode)
-    val colorSchema = dynamicColors?.colors ?: if (darkMode) darkColors else lightColors
+    val colorSchema = dynamicColors?.colorScheme ?: if (darkMode) darkColors else lightColors
 
     val techMonoFont = FontFamily(
         Font(Res.font.share_tech_mono),
@@ -54,11 +54,11 @@ fun LinuxTheme(content: @Composable () -> Unit) {
         fontFamily = techMonoFont,
         fontWeight = FontWeight.Normal,
         fontSize = 14.sp,
-        color = colorSchema.secondary,
+        color = colorSchema.onSurface,
     )
 
     val typography = Typography(
-        subtitle2 = codeTextStyle,
+        titleSmall = codeTextStyle,
     )
 
     val customColors = dynamicColors?.customColors ?: if (darkMode) {
@@ -72,7 +72,7 @@ fun LinuxTheme(content: @Composable () -> Unit) {
     }
     CompositionLocalProvider(LocalCustomColors provides customColors) {
         MaterialTheme(
-            colors = colorSchema,
+            colorScheme = colorSchema,
             typography = typography,
             content = content,
         )

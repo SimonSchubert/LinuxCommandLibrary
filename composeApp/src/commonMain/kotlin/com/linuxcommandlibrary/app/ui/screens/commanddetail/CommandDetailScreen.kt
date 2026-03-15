@@ -1,4 +1,4 @@
-@file:OptIn(ExperimentalMaterialApi::class, ExperimentalLayoutApi::class)
+@file:OptIn(ExperimentalLayoutApi::class)
 
 package com.linuxcommandlibrary.app.ui.screens.commanddetail
 
@@ -13,11 +13,10 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
-import androidx.compose.material.Chip
-import androidx.compose.material.ExperimentalMaterialApi
-import androidx.compose.material.ListItem
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.material3.ListItem
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.SuggestionChip
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -43,7 +42,7 @@ fun CommandDetailScreen(
 
     LazyColumn(
         Modifier
-            .background(MaterialTheme.colors.background)
+            .background(MaterialTheme.colorScheme.background)
             .fillMaxSize(),
     ) {
         itemsIndexed(
@@ -71,7 +70,7 @@ private fun CommandSectionColumn(
     onNavigate: (String) -> Unit,
 ) {
     ListItem(
-        text = {
+        headlineContent = {
             Text(
                 section.title.uppercase(),
                 fontWeight = FontWeight.Bold,
@@ -110,17 +109,18 @@ private fun SeeAlsoSectionContent(
             horizontalArrangement = Arrangement.spacedBy(8.dp),
         ) {
             seeAlsoCommands.forEach { name ->
-                Chip(
+                SuggestionChip(
                     modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
                     onClick = {
                         onNavigate("command?commandName=$name")
                     },
-                ) {
-                    Text(
-                        text = name,
-                        color = MaterialTheme.colors.onSurface,
-                    )
-                }
+                    label = {
+                        Text(
+                            text = name,
+                            color = MaterialTheme.colorScheme.onSurface,
+                        )
+                    },
+                )
             }
         }
     } else {
@@ -141,7 +141,7 @@ private fun DefaultSectionContent(content: String, onNavigate: (String) -> Unit 
         TipSectionContent(
             sections = parsedSections,
             onNavigate = onNavigate,
-            textColor = MaterialTheme.colors.onSurface.copy(alpha = 0.7f),
+            textColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f),
             commandVerticalPadding = 4.dp,
         )
     }

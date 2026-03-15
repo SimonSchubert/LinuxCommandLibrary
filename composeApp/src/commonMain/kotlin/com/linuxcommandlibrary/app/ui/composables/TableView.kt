@@ -7,8 +7,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
@@ -32,14 +32,14 @@ fun TableView(
 ) {
     val textMeasurer = rememberTextMeasurer()
     val density = LocalDensity.current
-    val textStyle = MaterialTheme.typography.body1.copy(fontWeight = FontWeight.Bold)
+    val textStyle = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.Bold)
     val firstColumnWidth = remember(headers, rows, textStyle) {
         val allFirstCells = listOf(headers.firstOrNull()?.toPlainText() ?: "") +
             rows.map { it.firstOrNull()?.toPlainText() ?: "" }
         val maxWidthPx = allFirstCells.maxOfOrNull { textMeasurer.measure(it, style = textStyle).size.width } ?: 0
         with(density) { maxWidthPx.toDp() + 16.dp }
     }
-    val codeColor = MaterialTheme.colors.primary
+    val codeColor = MaterialTheme.colorScheme.primary
 
     val hasHeaders = headers.any { it.toPlainText().isNotBlank() }
 

@@ -2,12 +2,12 @@ package com.linuxcommandlibrary.app.ui.composables
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.Icon
-import androidx.compose.material.IconButton
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Share
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -36,8 +36,8 @@ fun CommandView(
     verticalPadding: Dp = 6.dp,
     searchText: String = "",
 ) {
-    val codeColor = MaterialTheme.colors.primary
-    val highlightColor = MaterialTheme.colors.secondary
+    val codeColor = MaterialTheme.colorScheme.primary
+    val highlightColor = MaterialTheme.colorScheme.onSurface
     val baseAnnotatedString = remember(elements, codeColor, searchText, highlightColor) {
         buildAnnotatedString {
             elements.forEach { element ->
@@ -102,7 +102,7 @@ fun CommandView(
             modifier = Modifier
                 .weight(1f)
                 .align(Alignment.CenterVertically),
-            style = MaterialTheme.typography.subtitle2,
+            style = MaterialTheme.typography.titleSmall,
         )
 
         val shareHandler: ShareHandler = koinInject()

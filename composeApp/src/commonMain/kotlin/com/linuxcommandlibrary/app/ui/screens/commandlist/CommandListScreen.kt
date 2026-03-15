@@ -1,5 +1,3 @@
-@file:OptIn(ExperimentalMaterialApi::class)
-
 package com.linuxcommandlibrary.app.ui.screens.commandlist
 
 import androidx.compose.foundation.background
@@ -9,10 +7,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
-import androidx.compose.material.ExperimentalMaterialApi
-import androidx.compose.material.Icon
-import androidx.compose.material.ListItem
-import androidx.compose.material.MaterialTheme
+import androidx.compose.material3.Icon
+import androidx.compose.material3.ListItem
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -39,7 +36,7 @@ fun CommandListScreen(
 
     Box(
         modifier = Modifier
-            .background(MaterialTheme.colors.background)
+            .background(MaterialTheme.colorScheme.background)
             .fillMaxSize(),
     ) {
         LazyColumn(
@@ -77,19 +74,21 @@ fun CommandListItem(
     val bookmarkPainter = rememberIconPainter(AppIcon.BOOKMARK)
 
     ListItem(
-        text = {
+        headlineContent = {
             HighlightedText(
                 text = command.name,
                 pattern = searchText,
             )
         },
-        trailing = {
-            if (isBookmarked) {
+        trailingContent = if (isBookmarked) {
+            {
                 Icon(
                     painter = bookmarkPainter,
                     contentDescription = "Bookmarked",
                 )
             }
+        } else {
+            null
         },
         modifier = Modifier
             .pointerHoverIcon(PointerIcon.Hand)

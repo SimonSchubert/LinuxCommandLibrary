@@ -10,15 +10,9 @@ import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.lazy.LazyListState
-import androidx.compose.material.MaterialTheme
-import androidx.compose.ui.geometry.Size
-import androidx.compose.ui.graphics.Outline
-import androidx.compose.ui.graphics.Path
-import androidx.compose.ui.graphics.Shape
-import androidx.compose.ui.unit.Density
-import androidx.compose.ui.unit.LayoutDirection
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
@@ -28,9 +22,15 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.graphics.Outline
+import androidx.compose.ui.graphics.Path
+import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.onSizeChanged
+import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.IntOffset
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.launch
 
@@ -124,7 +124,7 @@ fun FastScrollBar(
                 .height(BUBBLE_HEIGHT_DP)
                 .onSizeChanged { thumbHeightPx = it.height.toFloat() }
                 .background(
-                    color = MaterialTheme.colors.secondary.copy(
+                    color = MaterialTheme.colorScheme.onSurface.copy(
                         alpha = if (isDragging) 0.4f else 0.15f,
                     ),
                     shape = BubbleShape,
@@ -137,7 +137,7 @@ fun FastScrollBar(
                     .padding(end = 2.dp)
                     .size(16.dp)
                     .background(
-                        color = MaterialTheme.colors.secondary.copy(
+                        color = MaterialTheme.colorScheme.onSurface.copy(
                             alpha = if (isDragging) 0.6f else 0.3f,
                         ),
                         shape = CircleShape,

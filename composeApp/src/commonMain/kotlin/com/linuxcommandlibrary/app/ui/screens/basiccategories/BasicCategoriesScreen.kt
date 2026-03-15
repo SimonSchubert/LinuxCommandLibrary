@@ -1,5 +1,3 @@
-@file:OptIn(ExperimentalMaterialApi::class)
-
 package com.linuxcommandlibrary.app.ui.screens.basiccategories
 
 import androidx.compose.foundation.background
@@ -9,11 +7,10 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
-import androidx.compose.material.ExperimentalMaterialApi
-import androidx.compose.material.Icon
-import androidx.compose.material.ListItem
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.material3.Icon
+import androidx.compose.material3.ListItem
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -35,7 +32,7 @@ fun BasicCategoriesScreen(
 
     LazyVerticalGrid(
         modifier = Modifier
-            .background(MaterialTheme.colors.background)
+            .background(MaterialTheme.colorScheme.background)
             .fillMaxSize(),
         columns = GridCells.Adaptive(minSize = 300.dp),
     ) {
@@ -45,8 +42,8 @@ fun BasicCategoriesScreen(
             contentType = { "basic_category_item" },
         ) { basicCategory ->
             ListItem(
-                text = { Text(basicCategory.title) },
-                icon = {
+                headlineContent = { Text(basicCategory.title) },
+                leadingContent = {
                     val painter = rememberIconPainter(basicCategory.getIconId())
                     Icon(
                         painter = painter,

@@ -1,7 +1,7 @@
 package com.linuxcommandlibrary.app.ui.composables
 
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.text.SpanStyle
@@ -26,10 +26,10 @@ fun HighlightedText(
             text = text,
             maxLines = maxLines,
             overflow = TextOverflow.Ellipsis,
-            color = MaterialTheme.colors.primary,
+            color = MaterialTheme.colorScheme.primary,
         )
     } else {
-        val highlightColor = MaterialTheme.colors.primary
+        val highlightColor = MaterialTheme.colorScheme.primary
         val annotatedString = remember(text, pattern, highlightColor) {
             buildAnnotatedString {
                 val splitText = text.split(pattern, ignoreCase = true)

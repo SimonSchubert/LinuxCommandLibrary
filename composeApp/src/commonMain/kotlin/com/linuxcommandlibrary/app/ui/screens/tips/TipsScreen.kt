@@ -2,14 +2,16 @@ package com.linuxcommandlibrary.app.ui.screens.tips
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.staggeredgrid.LazyVerticalStaggeredGrid
 import androidx.compose.foundation.lazy.staggeredgrid.StaggeredGridCells
 import androidx.compose.foundation.lazy.staggeredgrid.items
-import androidx.compose.material.Card
-import androidx.compose.material.MaterialTheme
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -29,9 +31,10 @@ fun TipsScreen(
 
     LazyVerticalStaggeredGrid(
         modifier = Modifier
-            .background(MaterialTheme.colors.background)
+            .background(MaterialTheme.colorScheme.background)
             .fillMaxSize(),
         columns = StaggeredGridCells.Adaptive(minSize = 300.dp),
+        contentPadding = PaddingValues(horizontal = 4.dp),
     ) {
         items(
             items = tips,
@@ -46,7 +49,7 @@ fun TipsScreen(
 @Composable
 private fun TipItemCard(tip: TipInfo, onNavigate: (String) -> Unit) {
     Card(
-        elevation = 4.dp,
+        elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
         modifier = Modifier
             .padding(4.dp)
             .fillMaxWidth(),

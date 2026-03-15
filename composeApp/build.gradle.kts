@@ -40,7 +40,7 @@ kotlin {
                 implementation(project(":common"))
                 implementation(compose.runtime)
                 implementation(compose.foundation)
-                implementation(compose.material)
+                implementation(compose.material3)
                 implementation(compose.materialIconsExtended)
                 implementation(compose.ui)
                 implementation(compose.components.resources)
@@ -59,7 +59,6 @@ kotlin {
                 implementation(libs.koin.androidx.compose)
                 implementation(libs.androidx.activity.compose)
                 implementation(libs.androidx.preference)
-                implementation(libs.androidx.material3)
             }
         }
 

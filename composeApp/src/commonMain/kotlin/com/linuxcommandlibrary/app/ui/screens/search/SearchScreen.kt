@@ -7,8 +7,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -45,7 +45,7 @@ fun SearchScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .clickable(enabled = false, onClick = {})
-                .background(MaterialTheme.colors.background),
+                .background(MaterialTheme.colorScheme.background),
         ) {
             Text("404 command not found", modifier = Modifier.align(Alignment.Center))
         }
@@ -53,7 +53,7 @@ fun SearchScreen(
         LazyColumn(
             Modifier
                 .fillMaxSize()
-                .background(MaterialTheme.colors.background),
+                .background(MaterialTheme.colorScheme.background),
             state = lazyListState,
         ) {
             items(

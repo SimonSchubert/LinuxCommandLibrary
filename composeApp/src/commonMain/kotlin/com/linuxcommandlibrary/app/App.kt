@@ -9,27 +9,29 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
-import androidx.compose.material.BottomNavigation
-import androidx.compose.material.BottomNavigationItem
-import androidx.compose.material.Icon
-import androidx.compose.material.IconButton
-import androidx.compose.material.LocalContentAlpha
-import androidx.compose.material.LocalContentColor
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.OutlinedTextField
-import androidx.compose.material.Scaffold
-import androidx.compose.material.Text
-import androidx.compose.material.TextFieldDefaults
-import androidx.compose.material.TopAppBar
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.NavigationBar
+import androidx.compose.material3.NavigationBarItem
+import androidx.compose.material3.NavigationBarItemDefaults
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.OutlinedTextFieldDefaults
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
@@ -110,7 +112,7 @@ fun App(initialDeeplink: String? = null) {
                 .statusBarsPadding()
                 .background(LocalCustomColors.current.navBarBackground)
                 .navigationBarsPadding()
-                .background(MaterialTheme.colors.background),
+                .background(MaterialTheme.colorScheme.background),
         ) {
             LinuxApp(initialDeeplink = initialDeeplink)
         }
@@ -294,7 +296,7 @@ fun LinuxApp(initialDeeplink: String? = null) {
                 enter = fadeIn(animationSpec = tween(300)),
                 exit = fadeOut(animationSpec = tween(durationMillis = 300, delayMillis = 300)),
             ) {
-                Box(modifier = Modifier.fillMaxSize().background(MaterialTheme.colors.background)) {
+                Box(modifier = Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background)) {
                     val searchViewModel: SearchViewModel = koinInject()
                     SearchScreen(
                         searchText = searchTextValue.value.text,
@@ -351,6 +353,7 @@ private fun parseDeeplink(url: String?): Route? {
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun GenericTopBar(
     title: String,
@@ -361,6 +364,7 @@ private fun GenericTopBar(
     var showDialog by remember { mutableStateOf(false) }
 
     TopAppBar(
+        expandedHeight = 56.dp,
         title = {
             Text(
                 title,
@@ -369,11 +373,14 @@ private fun GenericTopBar(
                 overflow = TextOverflow.Ellipsis,
             )
         },
-        backgroundColor = LocalCustomColors.current.topBarBackground,
-        contentColor = LocalCustomColors.current.topBarContent,
-        elevation = 0.dp,
-        navigationIcon = if (showBackIcon) {
-            {
+        colors = TopAppBarDefaults.topAppBarColors(
+            containerColor = LocalCustomColors.current.topBarBackground,
+            titleContentColor = LocalCustomColors.current.topBarContent,
+            navigationIconContentColor = LocalCustomColors.current.topBarContent,
+            actionIconContentColor = LocalCustomColors.current.topBarContent,
+        ),
+        navigationIcon = {
+            if (showBackIcon) {
                 IconButton(
                     modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
                     onClick = { navController.popBackStack() },
@@ -384,8 +391,6 @@ private fun GenericTopBar(
                     )
                 }
             }
-        } else {
-            null
         },
         actions = {
             if (showAppInfoIcon) {
@@ -406,6 +411,7 @@ private fun GenericTopBar(
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun DetailTopBar(
     commandName: String,
@@ -421,6 +427,7 @@ private fun DetailTopBar(
     val bookmarkBorderPainter = rememberIconPainter(AppIcon.BOOKMARK_BORDER)
 
     TopAppBar(
+        expandedHeight = 56.dp,
         title = {
             Text(
                 commandName,
@@ -429,9 +436,12 @@ private fun DetailTopBar(
                 overflow = TextOverflow.Ellipsis,
             )
         },
-        backgroundColor = LocalCustomColors.current.topBarBackground,
-        contentColor = LocalCustomColors.current.topBarContent,
-        elevation = 0.dp,
+        colors = TopAppBarDefaults.topAppBarColors(
+            containerColor = LocalCustomColors.current.topBarBackground,
+            titleContentColor = LocalCustomColors.current.topBarContent,
+            navigationIconContentColor = LocalCustomColors.current.topBarContent,
+            actionIconContentColor = LocalCustomColors.current.topBarContent,
+        ),
         navigationIcon = {
             IconButton(
                 modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
@@ -515,16 +525,20 @@ private fun SearchTopBar(
                     .focusRequester(focusRequester)
                     .padding(start = 8.dp, end = 8.dp),
                 placeholder = { Text("Search...", color = topBarContent.copy(alpha = 0.7f)) },
-                textStyle = MaterialTheme.typography.subtitle1.copy(color = topBarContent),
-                colors = TextFieldDefaults.outlinedTextFieldColors(
-                    textColor = topBarContent,
+                textStyle = MaterialTheme.typography.titleMedium.copy(color = topBarContent),
+                colors = OutlinedTextFieldDefaults.colors(
+                    focusedTextColor = topBarContent,
+                    unfocusedTextColor = topBarContent,
                     cursorColor = topBarContent,
                     focusedBorderColor = Color.Transparent,
                     unfocusedBorderColor = Color.Transparent,
                     disabledBorderColor = Color.Transparent,
-                    backgroundColor = Color.Transparent,
-                    trailingIconColor = topBarContent.copy(alpha = LocalContentAlpha.current),
-                    placeholderColor = topBarContent.copy(alpha = 0.7f),
+                    focusedContainerColor = Color.Transparent,
+                    unfocusedContainerColor = Color.Transparent,
+                    focusedTrailingIconColor = topBarContent,
+                    unfocusedTrailingIconColor = topBarContent,
+                    focusedPlaceholderColor = topBarContent.copy(alpha = 0.7f),
+                    unfocusedPlaceholderColor = topBarContent.copy(alpha = 0.7f),
                 ),
                 maxLines = 1,
                 singleLine = true,
@@ -548,7 +562,7 @@ private fun SearchTopBar(
                     .weight(1f)
                     .padding(start = 16.dp)
                     .semantics { contentDescription = "TopAppBarTitle" },
-                style = MaterialTheme.typography.h6,
+                style = MaterialTheme.typography.titleLarge,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
                 color = topBarContent,
@@ -581,9 +595,10 @@ private fun BottomBar(
     isOnTips: Boolean,
     onSelectTab: (Route) -> Unit,
 ) {
-    BottomNavigation(
-        backgroundColor = LocalCustomColors.current.navBarBackground,
-        elevation = 0.dp,
+    NavigationBar(
+        modifier = Modifier.height(64.dp),
+        containerColor = LocalCustomColors.current.navBarBackground,
+        tonalElevation = 0.dp,
     ) {
         bottomBarItems.forEach { screen ->
             val painter = rememberIconPainter(screen.icon)
@@ -592,7 +607,7 @@ private fun BottomBar(
                 Screen.Commands -> isOnCommands
                 Screen.Tips -> isOnTips
             }
-            BottomNavigationItem(
+            NavigationBarItem(
                 modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
                 icon = {
                     Icon(
@@ -603,8 +618,13 @@ private fun BottomBar(
                 },
                 label = { Text(screen.titleRes) },
                 selected = isSelected,
-                selectedContentColor = MaterialTheme.colors.primary,
-                unselectedContentColor = MaterialTheme.colors.onSurface,
+                colors = NavigationBarItemDefaults.colors(
+                    selectedIconColor = MaterialTheme.colorScheme.primary,
+                    selectedTextColor = MaterialTheme.colorScheme.primary,
+                    unselectedIconColor = MaterialTheme.colorScheme.onSurface,
+                    unselectedTextColor = MaterialTheme.colorScheme.onSurface,
+                    indicatorColor = Color.Transparent,
+                ),
                 onClick = {
                     val route = when (screen) {
                         Screen.Basics -> Route.Basics
