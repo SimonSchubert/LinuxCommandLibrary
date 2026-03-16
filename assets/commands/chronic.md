@@ -30,7 +30,7 @@ Silences command output unless it fails
 
 # SYNOPSIS
 
-**chronic** [-ve] _command_ ...
+**chronic** [-ev] _command_ ...
 
 # DESCRIPTION
 

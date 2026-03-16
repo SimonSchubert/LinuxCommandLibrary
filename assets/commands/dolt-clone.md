@@ -20,6 +20,14 @@ create local copy of remote database repository
 
 ```dolt clone -b [branch] [owner/repo]```
 
+**Shallow clone** with limited history depth
+
+```dolt clone --depth [1] [owner/repo]```
+
+**Clone a private** repository with authentication
+
+```dolt clone --user [username] [owner/repo]```
+
 # SYNOPSIS
 
 **dolt clone** [_options_] _repository_ [_directory_]
@@ -38,8 +46,14 @@ _DIRECTORY_
 **--remote** _NAME_
 > Name for the remote (default: origin).
 
+**--depth** _N_
+> Perform a shallow clone with history limited to N commits.
+
 **--single-branch**
 > Clone only one branch.
+
+**--user** _USERNAME_
+> User name for authentication with the remote. Password is read from the DOLT_REMOTE_PASSWORD environment variable.
 
 **--help**
 > Display help information.
@@ -62,4 +76,4 @@ dolt clone is part of **Dolt**, implementing Git's clone semantics for database 
 
 # SEE ALSO
 
-[dolt](/man/dolt)(1), [dolt-push](/man/dolt-push)(1), [dolt-pull](/man/dolt-pull)(1), [git-clone](/man/git-clone)(1)
+[dolt](/man/dolt)(1), [dolt-fetch](/man/dolt-fetch)(1), [dolt-branch](/man/dolt-branch)(1), [git-clone](/man/git-clone)(1)

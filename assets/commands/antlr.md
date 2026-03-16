@@ -45,7 +45,7 @@ Generate parsers from grammar files
 > Location to search for imported grammars and token files
 
 **-Dlanguage=**_lang_
-> Target language: Java (default), Python3, CSharp, JavaScript, TypeScript, Go, Cpp, Swift, Dart, PHP
+> Target language: Java (default), Python3, CSharp, JavaScript, TypeScript, Go, Cpp, Swift, Dart, PHP. Use **-D**_option_**=**_value_ to override any grammar-level option.
 
 **-package** _name_
 > Package or namespace for generated code
@@ -82,6 +82,12 @@ Generate parsers from grammar files
 
 **-Xlog**
 > Create detailed log file (antlr-timestamp.log)
+
+**-Xexact-output-dir**
+> Place all output directly into **-o** directory regardless of paths or package structure
+
+**-XdbgST**
+> Launch StringTemplate visualizer on generated code
 
 # DESCRIPTION
 

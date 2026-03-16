@@ -4,62 +4,72 @@ calculates MATLAB code metrics
 
 # TLDR
 
-**Calculate metrics**
+**Calculate metrics** for a single file
 
 ```mh_metric [file.m]```
 
-**Analyze directory**
+**Analyze** an entire **directory** recursively
 
 ```mh_metric [src/]```
 
-**Output JSON**
+**Output** metrics as **JSON** report
 
-```mh_metric --json [file.m]```
+```mh_metric --json=[metrics.json] [file.m]```
 
-**Show all metrics**
+**Output** metrics as **HTML** report
 
-```mh_metric --all [file.m]```
+```mh_metric --html=[metrics.html] [file.m]```
 
-**Set threshold**
+**Output** metrics as **text** report
 
-```mh_metric --limit-complexity [10] [file.m]```
+```mh_metric --text=[metrics.txt] [file.m]```
+
+Run in **CI mode**, reporting only violations
+
+```mh_metric --ci [src/]```
 
 # SYNOPSIS
 
-**mh_metric** [_options_] _files_
+**mh_metric** [_options_] [_files or directories_]
 
 # PARAMETERS
 
 _FILES_
-> MATLAB files to analyze.
+> MATLAB files or directories to analyze. If not given, analyzes the entire working directory recursively.
 
-**--json**
-> Output as JSON.
+**--json**=_FILE_
+> Write metrics report in JSON format to the specified file.
 
-**--all**
-> Show all metrics.
+**--html**=_FILE_
+> Write metrics report in HTML format to the specified file.
 
-**--limit-complexity** _N_
-> Complexity threshold.
+**--text**=_FILE_
+> Write metrics report in plain text format to the specified file.
+
+**--ci**
+> CI mode. Suppresses the overall report and only reports metric violations.
+
+**--ignore-justifications-with-tickets**
+> Ignore any justifications in code that mention a ticket reference.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**mh_metric** calculates MATLAB code metrics. It measures complexity, lines, and other quality indicators.
+**mh_metric** computes code metrics for MATLAB and Octave files and reports violations when metrics exceed acceptable levels. It measures cyclomatic complexity, number of lines, function length, nesting depth, and other code quality indicators.
 
-The tool is part of MISS_HIT. It provides cyclomatic complexity and function metrics.
+The tool is part of the **MISS_HIT** suite. If no files or directories are specified, it analyzes the entire working directory and all subdirectories. Configuration can be provided via **miss_hit.cfg** files in the project tree.
 
 # CAVEATS
 
-Part of MISS_HIT. MATLAB specific. Python-based.
+Part of the MISS_HIT suite, installed via pip (`pip install miss_hit`). Only analyzes MATLAB (.m) and Octave files. Requires Python 3.6 or later.
 
 # HISTORY
 
-mh_metric is part of **MISS_HIT** for measuring MATLAB/Simulink code quality metrics.
+mh_metric is part of **MISS_HIT** (MATLAB Independent, Small & Safe, High Integrity Tools), created by **Florian Schanda** for measuring MATLAB and Simulink code quality metrics.
 
 # SEE ALSO
 
-[mh_lint](/man/mh_lint)(1), [mh_style](/man/mh_style)(1)
+[mh_lint](/man/mh_lint)(1)
 

@@ -43,7 +43,7 @@ Display the number of policies in **kill mode**
 # PARAMETERS
 
 **--enabled**
-> Returns error code if AppArmor is not active
+> Returns error code if AppArmor is not enabled
 
 **--profiled**
 > Shows count of loaded AppArmor policies
@@ -52,16 +52,19 @@ Display the number of policies in **kill mode**
 > Shows count of enforcing policies
 
 **--complaining**
-> Shows count of non-enforcing policies
+> Shows count of non-enforcing (complain mode) policies
 
 **--kill**
 > Shows count of enforcing policies that terminate tasks on violations
+
+**--prompt**
+> Shows count of enforcing policies with fallback to userspace mediation
 
 **--special-unconfined**
 > Shows count of unconfined mode policies
 
 **--process-mixed**
-> Shows processes confined by stacked profiles in different modes
+> Shows count of processes confined by profile stacks with profiles in different modes
 
 **--verbose**
 > Displays comprehensive AppArmor policy data (default behavior)
@@ -71,6 +74,24 @@ Display the number of policies in **kill mode**
 
 **--pretty-json**
 > Provides human and machine-readable JSON output
+
+**--count**
+> Shows only counts for selected information
+
+**--show** _TYPE_
+> Specify what to display: processes, profiles, or all (default: all)
+
+**--filter.mode** _REGEX_
+> Filter output by profile mode using a POSIX regular expression
+
+**--filter.profiles** _REGEX_
+> Filter output by confining profile name using a POSIX regular expression
+
+**--filter.pid** _REGEX_
+> Filter output by process PID using a POSIX regular expression
+
+**--filter.exe** _REGEX_
+> Filter output by executable name using a POSIX regular expression
 
 **--help**
 > Displays usage information

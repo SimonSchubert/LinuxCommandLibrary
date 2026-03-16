@@ -4,51 +4,81 @@ Manage RabbitMQ stream queues
 
 # TLDR
 
-**List streams**
+**List** stream protocol **connections**
 
-```rabbitmq-streams list```
+```rabbitmq-streams list_stream_connections```
 
-**Add stream replica**
+**Display** the **status** of a stream
 
-```rabbitmq-streams add_replica [stream_name] [node]```
+```rabbitmq-streams stream_status --vhost [vhost] --stream [stream_name]```
 
-**Delete stream replica**
+**Add** a stream **replica** on a given node
 
-```rabbitmq-streams delete_replica [stream_name] [node]```
+```rabbitmq-streams add_replica --vhost [vhost] [stream_name] [node]```
 
-**Restart stream**
+**Delete** a stream **replica** from a given node
 
-```rabbitmq-streams restart_stream [stream_name]```
+```rabbitmq-streams delete_replica --vhost [vhost] [stream_name] [node]```
+
+**Restart** a stream and all its **replicas**
+
+```rabbitmq-streams restart_stream --vhost [vhost] [stream_name]```
+
+Restart a stream with a **preferred leader** node
+
+```rabbitmq-streams restart_stream --vhost [vhost] --preferred-leader-node [node] [stream_name]```
 
 # SYNOPSIS
 
-**rabbitmq-streams** _command_ [_options_]
+**rabbitmq-streams** [**-n** _node_] [**-t** _timeout_] [**-l**|**-q**] _command_ [_command options_]
 
 # PARAMETERS
 
-**list**
-> List all streams.
+**-n** _node_
+> Target node to execute the command on. Default is the node of the local host.
+
+**-t** _timeout_
+> Operation timeout in seconds. Default varies per command.
+
+**-l**, **--longnames**
+> Use long node names (FQDN). Must match the broker configuration.
+
+**-q**, **--quiet**
+> Suppress informational messages, output only essential data.
+
+**--formatter** _formatter_
+> Output format: csv, erlang, json, pretty_table, table.
+
+# SUBCOMMANDS
 
 **add_replica** _stream_ _node_
-> Add stream replica.
+> Add a stream replica on the given node.
 
 **delete_replica** _stream_ _node_
-> Remove stream replica.
+> Remove a stream replica from the given node.
+
+**stream_status** **--stream** _stream_
+> Display the status of a stream, including leader and replicas.
 
 **restart_stream** _stream_
-> Restart stream.
+> Restart a stream including all of its replicas. Accepts **--preferred-leader-node** to place the leader on a specific node.
 
-**-n** _node_
-> Target node.
+**list_stream_connections** [_connectioninfoitem_...]
+> Return stream protocol connection statistics.
 
-**-p** _vhost_
-> Virtual host.
+**list_stream_consumers** [**-p** _vhost_] [_consumerinfoitem_...]
+> Return consumers attached to a stream.
+
+**list_stream_publishers** [**-p** _vhost_] [_publisherinfoitem_...]
+> Return publishers attached to a stream.
+
+**list_stream_consumer_groups** [**-p** _vhost_]
+> List single active consumer groups for streams.
 
 # DESCRIPTION
 
-**rabbitmq-streams** manages RabbitMQ streams. Streams are persistent, replicated, append-only logs for high-throughput messaging. Part of RabbitMQ CLI tools.
+**rabbitmq-streams** is a command line tool for managing RabbitMQ streams. Streams are persistent, replicated, append-only log data structures designed for high-throughput messaging workloads. This tool manages stream replicas, monitors stream status, and lists stream connections and consumers. Part of the RabbitMQ CLI tools suite.
 
 # SEE ALSO
 
-[rabbitmqctl](/man/rabbitmqctl)(1), [rabbitmq-queues](/man/rabbitmq-queues)(1)
-
+[rabbitmqctl](/man/rabbitmqctl)(1), [rabbitmq-queues](/man/rabbitmq-queues)(1), [rabbitmq-diagnostics](/man/rabbitmq-diagnostics)(1)

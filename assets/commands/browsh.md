@@ -8,25 +8,25 @@ Modern text-based web browser for terminals
 
 ```browsh```
 
-**Open specific URL**
+**Open a specific** URL
 
 ```browsh [https://example.com]```
 
-**Run in Docker container**
+**Run with a visible** Firefox **GUI** window instead of headless mode
 
-```docker run --rm -it browsh/browsh```
+```browsh --firefox.with-gui```
 
-**Take screenshot**
+**Use a custom** Firefox **binary** path
 
-```ALT+SHIFT+p```
+```browsh --firefox.path [/path/to/firefox]```
 
-**Toggle monochrome mode**
+**Run in HTTP server** mode for browser-based access
 
-```ALT+m```
+```browsh --http-server-mode```
 
-**Toggle mobile user agent**
+**Connect to an already running** Firefox instance
 
-```ALT+u```
+```browsh --firefox.use-existing```
 
 # SYNOPSIS
 
@@ -41,16 +41,25 @@ The browser supports HTML5, CSS3, JavaScript, images, WebGL content, and video p
 # PARAMETERS
 
 **--firefox.path** _path_
-> Path to Firefox binary
+> Path to Firefox executable. Default is "firefox".
+
+**--firefox.use-existing**
+> Connect to an already running Firefox instance instead of launching a new one. Firefox must have been started with the --marionette flag.
+
+**--firefox.with-gui**
+> Run Firefox with a visible GUI window instead of headless mode.
 
 **--http-server-mode**
-> Run as HTTP server for browser access
+> Run as an HTTP server for browser access.
 
 **--startup-url** _url_
-> URL to open on startup
+> URL to open on startup. Default is "https://google.com".
 
 **--time-limit** _seconds_
-> Limit session duration
+> Kill browsh after the specified number of seconds.
+
+**--debug**
+> Enable debug logging to ./debug.log.
 
 # KEY BINDINGS
 
@@ -83,4 +92,4 @@ Browsh was created as a modern replacement for text browsers like Lynx, capable 
 
 # SEE ALSO
 
-[lynx](/man/lynx)(1), [w3m](/man/w3m)(1), [links](/man/links)(1), [firefox](/man/firefox)(1)
+[lynx](/man/lynx)(1), [w3m](/man/w3m)(1), [links](/man/links)(1), [elinks](/man/elinks)(1), [firefox](/man/firefox)(1)

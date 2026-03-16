@@ -16,13 +16,21 @@ processes Certificate Revocation Lists
 
 ```openssl crl -in [crl.der] -inform DER -out [crl.pem]```
 
-**Verify CRL signature**
+**Verify** CRL signature against a CA certificate
 
 ```openssl crl -in [crl.pem] -CAfile [ca.crt] -verify```
 
-**Get CRL hash**
+**Get CRL issuer name hash**
 
 ```openssl crl -in [crl.pem] -hash -noout```
+
+Display CRL **fingerprint**
+
+```openssl crl -in [crl.pem] -fingerprint -noout```
+
+Show CRL **issuer** and update dates
+
+```openssl crl -in [crl.pem] -issuer -lastupdate -nextupdate -noout```
 
 # SYNOPSIS
 
@@ -43,19 +51,46 @@ processes Certificate Revocation Lists
 > Output format.
 
 **-text**
-> Print text form.
+> Print CRL in human-readable text form.
 
 **-noout**
-> Don't output CRL.
+> Do not output the encoded version of the CRL.
 
 **-verify**
-> Verify signature.
+> Verify the CRL signature. Implicitly enabled if -CApath, -CAfile, or -CAstore is specified.
 
 **-hash**
-> Print hash.
+> Output a hash of the issuer name, used to look up CRLs in a directory by issuer name.
+
+**-fingerprint**
+> Output the fingerprint of the CRL.
+
+**-issuer**
+> Output the issuer name.
+
+**-lastupdate**
+> Output the lastUpdate field.
+
+**-nextupdate**
+> Output the nextUpdate field.
+
+**-crlnumber**
+> Output the CRL number.
+
+**-nameopt** _option_
+> Specify how subject or issuer names are displayed.
 
 **-CAfile** _file_
-> CA certificate.
+> CA certificate file for verification.
+
+**-CApath** _dir_
+> Directory of CA certificates for verification.
+
+**-gendelta** _file_
+> Output a comparison of the main CRL and the one specified.
+
+**-badsig**
+> Corrupt the signature before writing; useful for testing.
 
 # DESCRIPTION
 

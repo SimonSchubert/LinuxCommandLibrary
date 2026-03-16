@@ -1,6 +1,6 @@
 # TAGLINE
 
-Inspect and display inventory data
+Show Ansible inventory information
 
 # TLDR
 
@@ -24,13 +24,21 @@ Output in **YAML** format
 
 ```ansible-inventory --list --yaml```
 
-List hosts matching **pattern**
+List hosts matching a **group pattern**
 
 ```ansible-inventory --graph [webservers]```
 
+**Export** inventory to a file
+
+```ansible-inventory --list --export --output [inventory.json]```
+
+Show inventory in **TOML** format
+
+```ansible-inventory --list --toml```
+
 # SYNOPSIS
 
-**ansible-inventory** [_-i inventory_] [_--list_|_--graph_|_--host host_]
+**ansible-inventory** [_options_] [_-i inventory_] [_--list_|_--graph_|_--host host_] [_group_]
 
 # DESCRIPTION
 

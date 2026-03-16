@@ -4,21 +4,25 @@ Traditional Linux desktop environment
 
 # TLDR
 
-**Start Cinnamon desktop (typically via display manager)**
+**Start Cinnamon** desktop (typically via display manager)
 
 ```cinnamon```
 
-**Replace the current window manager with Cinnamon**
+**Replace** the current window manager with Cinnamon
 
 ```cinnamon --replace```
 
-**Display version information**
+**Replace** the window manager without session manager connection
+
+```cinnamon --replace --sm-disable```
+
+**Display version** information
 
 ```cinnamon --version```
 
 # SYNOPSIS
 
-**cinnamon** [**--replace**] [**--display** _DISPLAY_]
+**cinnamon** [**--replace**] [**--sm-disable**] [**-d** _DISPLAY_] [**--screen** _SCREEN_]
 
 # DESCRIPTION
 
@@ -33,14 +37,26 @@ Cinnamon supports extensive customization through applets (panel widgets), deskl
 **--replace**
 > Replace the currently running window manager
 
-**--display** _DISPLAY_
+**-d**, **--display** _DISPLAY_
 > X display to use
 
-**--debug**
-> Enable debug output
+**--screen** _SCREEN_
+> X screen to use
+
+**--sm-disable**
+> Disable connection to the session manager
+
+**--sm-client-id** _ID_
+> Specify session management ID
+
+**--sm-save-file** _FILE_
+> Initialize session from a saved session file
+
+**--sync**
+> Make X calls synchronous
 
 **--version**
-> Display version information
+> Print version and exit
 
 # CAVEATS
 
@@ -54,4 +70,4 @@ Cinnamon does not support using a different window manager; Muffin is integral t
 
 # SEE ALSO
 
-[muffin](/man/muffin)(1), [nemo](/man/nemo)(1)
+[muffin](/man/muffin)(1), [nemo](/man/nemo)(1), [cinnamon-launcher](/man/cinnamon-launcher)(1)

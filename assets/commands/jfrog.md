@@ -1,78 +1,99 @@
 # TAGLINE
 
-official CLI for JFrog platform
+Official CLI for the JFrog Platform
 
 # TLDR
 
-**Configure a server connection**
+**Configure** a server connection interactively
 
 ```jfrog config add [server-id]```
 
-**Upload artifacts to Artifactory**
+**Upload** artifacts to Artifactory
 
-```jfrog rt upload [file] [repo/path/]```
+```jfrog rt upload [file_pattern] [repo/path/]```
 
-**Download artifacts from Artifactory**
+**Download** artifacts from Artifactory
 
-```jfrog rt download [repo/path/]```
+```jfrog rt download [repo/path/pattern]```
 
-**Publish build info**
+**Search** for artifacts in Artifactory
+
+```jfrog rt search [repo/path/pattern]```
+
+**Publish** build info to Artifactory
 
 ```jfrog rt build-publish [build-name] [build-number]```
 
-**Scan for vulnerabilities**
+**Scan** the current project for security vulnerabilities
 
 ```jfrog audit```
 
-**Push a Docker image**
+**Push** a Docker image to an Artifactory Docker registry
 
 ```jfrog docker push [image:tag] [repo]```
 
-**Search for artifacts**
+**Delete** artifacts matching a pattern
 
-```jfrog rt search [repo/path/]```
+```jfrog rt delete [repo/path/pattern]```
 
 # SYNOPSIS
 
-**jfrog** _command_ [_subcommand_] [_options_]
+**jfrog** _command_ [_subcommand_] [_options_] [_arguments_]
 
 # PARAMETERS
 
 **config**
-> Manage server configurations.
+> Manage server configurations (add, edit, remove, show, export, import).
 
 **rt**
-> Artifactory commands.
+> Artifactory commands (upload, download, search, delete, copy, move, build-publish, etc.).
+
+**xr**
+> Xray commands for security scanning and vulnerability management.
 
 **audit**
-> Security scanning and vulnerability detection.
+> Scan project dependencies for security vulnerabilities and license compliance.
 
 **docker**
-> Container registry.
+> Docker registry integration (push and pull via Artifactory).
 
-**npm**, **pip**, **go**, **maven**
-> Package manager integrations.
+**npm**, **pip**, **go**, **maven**, **gradle**, **nuget**
+> Package manager integrations with build-info collection.
 
 **--url** _URL_
-> Server URL.
+> JFrog Platform URL.
+
+**--access-token** _TOKEN_
+> Access token for authentication.
+
+**--user** _USER_
+> Username for authentication.
+
+**--password** _PASSWORD_
+> Password for authentication.
+
+**--server-id** _ID_
+> Use a specific configured server.
 
 **--help**
-> Display help information.
+> Display help information for a command.
 
 # DESCRIPTION
 
-**jfrog** is the official CLI for JFrog platform. It interacts with Artifactory, Xray, and other JFrog services.
+**jfrog** is the official CLI for the JFrog Platform. It provides unified command-line access to Artifactory, Xray, Distribution, Pipelines, and other JFrog services.
 
-The tool manages binary artifacts across all package types. It integrates with CI/CD for build info and security scanning.
+The tool manages binary artifacts across all major package types including Maven, npm, PyPI, Docker, Go, NuGet, and generic files. It integrates with CI/CD pipelines for build-info collection, promotion, and security scanning. The CLI supports file specs (JSON-based query syntax) for advanced artifact operations.
+
+The **jfrog** executable has been renamed to **jf** in recent versions, though the **jfrog** name continues to work as an alias.
 
 # CAVEATS
 
-Requires JFrog server. Enterprise features need license. Configuration per server.
+Requires a JFrog server (self-hosted or SaaS). Enterprise features such as Xray scanning require appropriate licensing. Server configuration is stored locally per user and must be set up before use with **jfrog config add**.
 
 # HISTORY
 
-JFrog CLI was created by **JFrog** to provide unified command-line access to their artifact management platform.
+JFrog CLI was created by **JFrog** to provide unified command-line access to their artifact management platform. The CLI executable was renamed from **jfrog** to **jf** starting in 2022, though both names remain functional.
 
 # SEE ALSO
 
-[jf](/man/jf)(1), [mvn](/man/mvn)(1), [npm](/man/npm)(1), [docker](/man/docker)(1)
+[jf](/man/jf)(1), [docker](/man/docker)(1), [mvn](/man/mvn)(1), [npm](/man/npm)(1), [pip](/man/pip)(1), [go](/man/go)(1), [gradle](/man/gradle)(1)
