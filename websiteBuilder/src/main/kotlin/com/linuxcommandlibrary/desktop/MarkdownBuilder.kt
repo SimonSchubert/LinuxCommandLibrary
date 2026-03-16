@@ -148,7 +148,7 @@ class MarkdownBuilder {
                 stream.appendLine("#### Monthly")
                 stream.appendLine()
                 currentSponsors.forEach { (username, avatar) ->
-                    stream.append("<a href=\"https://github.com/$username\"><img src=\"$avatar\" width=\"50px\" alt=\"$username\" /></a> ")
+                    stream.append("<a href=\"https://github.com/$username\"><img src=\"$avatar\" width=\"60px\" alt=\"$username\" /></a> ")
                 }
                 stream.appendLine()
             }
@@ -157,7 +157,7 @@ class MarkdownBuilder {
                 stream.appendLine("#### Previous")
                 stream.appendLine()
                 pastSponsors.forEach { (username, avatar) ->
-                    stream.append("<a href=\"https://github.com/$username\"><img src=\"$avatar\" width=\"50px\" alt=\"$username\" /></a> ")
+                    stream.append("<a href=\"https://github.com/$username\"><img src=\"$avatar\" width=\"60px\" alt=\"$username\" /></a> ")
                 }
                 stream.appendLine()
             }
