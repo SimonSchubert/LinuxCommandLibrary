@@ -2,6 +2,9 @@ package com.linuxcommandlibrary.desktop
 
 import java.io.File
 import java.io.PrintStream
+import java.net.HttpURLConnection
+import java.net.URI
+import org.json.JSONObject
 
 /* Copyright 2022 Simon Schubert
  *
@@ -135,6 +138,31 @@ class MarkdownBuilder {
         stream.appendLine()
         stream.appendLine("The source code is licensed under the Apache 2.0 license and the copyright of the man pages are copyrighted by their respective authors.")
 
+        // Sponsors
+        val (currentSponsors, pastSponsors) = getPublicSponsors()
+        if (currentSponsors.isNotEmpty() || pastSponsors.isNotEmpty()) {
+            stream.appendLine()
+            stream.appendLine("### Public GitHub Sponsors")
+            if (currentSponsors.isNotEmpty()) {
+                stream.appendLine()
+                stream.appendLine("#### Monthly")
+                stream.appendLine()
+                currentSponsors.forEach { (username, avatar) ->
+                    stream.append("<a href=\"https://github.com/$username\"><img src=\"$avatar\" width=\"50px\" alt=\"$username\" /></a> ")
+                }
+                stream.appendLine()
+            }
+            if (pastSponsors.isNotEmpty()) {
+                stream.appendLine()
+                stream.appendLine("#### Previous")
+                stream.appendLine()
+                pastSponsors.forEach { (username, avatar) ->
+                    stream.append("<a href=\"https://github.com/$username\"><img src=\"$avatar\" width=\"50px\" alt=\"$username\" /></a> ")
+                }
+                stream.appendLine()
+            }
+        }
+
         stream.appendLine()
         stream.appendLine("### Thanks to")
         stream.appendLine()
@@ -145,5 +173,30 @@ class MarkdownBuilder {
         stream.appendLine("https://tldr.sh - TLDR")
 
         stream.close()
+    }
+
+    private fun getPublicSponsors(): Pair<List<Pair<String, String>>, List<Pair<String, String>>> {
+        return try {
+            val connection = URI("https://ghs.vercel.app/v3/sponsors/SimonSchubert").toURL()
+                .openConnection() as HttpURLConnection
+            connection.connectTimeout = 5000
+            connection.readTimeout = 5000
+
+            val response = JSONObject(connection.inputStream.bufferedReader().readText())
+            val sponsors = response.getJSONObject("sponsors")
+
+            fun parseSponsors(array: org.json.JSONArray) = (0 until array.length()).map { i ->
+                val sponsor = array.getJSONObject(i)
+                Pair(sponsor.getString("username"), sponsor.getString("avatar"))
+            }
+
+            Pair(
+                parseSponsors(sponsors.getJSONArray("current")),
+                parseSponsors(sponsors.getJSONArray("past")).take(10)
+            )
+        } catch (e: Exception) {
+            println("Failed to fetch sponsors: ${e.message}")
+            Pair(emptyList(), emptyList())
+        }
     }
 }

@@ -88,6 +88,16 @@ Common code unit tests: [CommonTests.kt](common/src/commonTest/kotlin/CommonTest
 
 The source code is licensed under the Apache 2.0 license and the copyright of the man pages are copyrighted by their respective authors.
 
+### Public GitHub Sponsors
+
+#### Monthly
+
+<a href="https://github.com/vicenteserra"><img src="https://avatars.githubusercontent.com/u/10818763?s=60&v=4" width="50px" alt="vicenteserra" /></a> 
+
+#### Previous
+
+<a href="https://github.com/Loh-San"><img src="https://avatars.githubusercontent.com/u/94805454?s=60&v=4" width="50px" alt="Loh-San" /></a> 
+
 ### Thanks to
 
 http://letsgokoyo.com - App Icon
