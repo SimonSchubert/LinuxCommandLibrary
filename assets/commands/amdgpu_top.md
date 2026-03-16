@@ -49,7 +49,7 @@ Monitor AMD GPU utilization in real time
 > Display a list of available AMDGPU devices.
 
 **-J**, **--json**
-> Output JSON formatted data. Can be combined with the -d option.
+> Output JSON formatted data. Can be combined with the -d or --gpu-metrics option.
 
 **--gui**
 > Launch graphical interface mode.
@@ -75,14 +75,20 @@ Monitor AMD GPU utilization in real time
 **--no-pc**
 > Disable reading performance counters (GRBM, GRBM2). Useful to avoid deactivating power saving features.
 
-**-gm**, **--gpu-metrics**
+**-gm**, **--gpu_metrics**, **--gpu-metrics**
 > Dump gpu_metrics for all AMD GPUs.
 
-**--pp-table**
+**--pp_table**, **--pp-table**
 > Dump power/performance table from sysfs and VBIOS for all AMD GPUs.
 
 **--drm-info**
 > Dump DRM information.
+
+**--json_fifo**, **--json-fifo** _PATH_
+> Output JSON formatted data to a FIFO (named pipe) for other applications and scripts.
+
+**--decode-gm**, **--decode-gpu-metrics** _PATH_
+> Decode the specified gpu_metrics file.
 
 **-s** _MS_
 > Set refresh interval in milliseconds for JSON mode (default: 1000ms).
@@ -142,4 +148,4 @@ Reading performance counters (GRBM, GRBM2) may prevent the GPU from entering pow
 
 # SEE ALSO
 
-[radeontop](/man/radeontop)(1), [nvtop](/man/nvtop)(1), [nvidia-smi](/man/nvidia-smi)(1), [intel_gpu_top](/man/intel_gpu_top)(1), [htop](/man/htop)(1)
+[radeontop](/man/radeontop)(1), [nvtop](/man/nvtop)(1), [nvidia-smi](/man/nvidia-smi)(1), [htop](/man/htop)(1)

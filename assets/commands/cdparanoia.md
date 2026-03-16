@@ -69,11 +69,32 @@ Output formats include WAV (default), AIFF, AIFF-C, and raw 16-bit PCM. Batch mo
 **-R**, **--output-raw-big-endian**
 > Output raw big-endian PCM
 
+**-c**, **--output-aifc**
+> Output AIFF-C format
+
+**-f**, **--force-cdrom-little-endian**
+> Force treating the drive as little endian.
+
+**-F**, **--force-cdrom-big-endian**
+> Force treating the drive as big endian.
+
+**-g** _device_, **--force-generic-device** _device_
+> Force use of the old generic SCSI (sg) interface with the specified device.
+
+**-S** _speed_, **--force-read-speed** _speed_
+> Set the read speed of the CD drive (where supported).
+
 **-A**, **--analyze-drive**
-> Analyze drive behavior
+> Run and log a complete analysis of drive caching, timing and reading behavior.
 
 **-z**, **--never-skip**
-> Never skip failed reads
+> Never skip failed reads, retry indefinitely.
+
+**-Z**, **--disable-paranoia**
+> Disable all data verification and correction features.
+
+**-X**, **--abort-on-skip**
+> If a read is skipped due to imperfect data, abort reading the track.
 
 # SPAN FORMAT
 
@@ -103,4 +124,4 @@ Requires CDDA-capable drive. Works best with Accurate Stream drives that don't c
 
 # SEE ALSO
 
-[abcde](/man/abcde)(1), [lame](/man/lame)(1), [flac](/man/flac)(1)
+[abcde](/man/abcde)(1), [lame](/man/lame)(1), [flac](/man/flac)(1), [sox](/man/sox)(1)

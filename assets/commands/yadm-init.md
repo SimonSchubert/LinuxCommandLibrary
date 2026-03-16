@@ -4,31 +4,37 @@ Initialize new yadm dotfiles repository
 
 # TLDR
 
-**Initialize yadm repository**
+**Initialize** a new yadm repository
 
 ```yadm init```
 
-**Initialize with custom worktree**
+**Force reinitialization** of an existing repository
 
-```yadm init -w [path]```
+```yadm init -f```
+
+**Initialize with a custom worktree** path
+
+```yadm init -w [path/to/worktree]```
 
 # SYNOPSIS
 
-**yadm** **init** [_options_]
+**yadm** **init** [**-f**] [**-w** _dir_]
 
 # PARAMETERS
 
-**-w** _path_
-> Worktree path.
-
 **-f**
-> Force reinitialization.
+> Force reinitialization of an existing repository.
+
+**-w** _dir_
+> Override the default work-tree ($HOME) with the specified directory.
 
 # DESCRIPTION
 
-**yadm init** creates a new yadm repository. Initializes git repo in ~/.local/share/yadm/repo.git with home as worktree. First step for starting dotfiles management.
+**yadm init** creates a new, empty repository for tracking dotfiles. The repository is initialized at **$HOME/.local/share/yadm/repo.git** with **$HOME** as the default work-tree. This is the first step for starting dotfiles management with yadm.
+
+If a repository already exists, the **-f** flag is required to force reinitialization.
 
 # SEE ALSO
 
-[yadm](/man/yadm)(1), [yadm-clone](/man/yadm-clone)(1)
+[yadm](/man/yadm)(1), [yadm-clone](/man/yadm-clone)(1), [yadm-config](/man/yadm-config)(1), [yadm-encrypt](/man/yadm-encrypt)(1)
 

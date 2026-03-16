@@ -1,24 +1,32 @@
 # TAGLINE
 
-remove Distrobox containers
+Remove Distrobox containers
 
 # TLDR
 
 **Remove** a container
 
-```distrobox-rm container_name```
+```distrobox-rm [container_name]```
 
-**Force** remove a container
+**Force** remove a running container
 
-```distrobox-rm -f container_name```
+```distrobox-rm -f [container_name]```
 
-Remove **all** containers
+Remove **all** Distrobox containers
 
 ```distrobox-rm --all```
 
+Remove a container and **its separate home directory**
+
+```distrobox-rm --rm-home [container_name]```
+
+Remove a **rootful** container
+
+```distrobox-rm --root [container_name]```
+
 Remove with **verbose** output
 
-```distrobox-rm -v container_name```
+```distrobox-rm -v [container_name]```
 
 # SYNOPSIS
 
@@ -30,24 +38,30 @@ Remove with **verbose** output
 
 # PARAMETERS
 
-**-f, --force**
-> Force removal of the container even if running
+**-f**, **--force**
+> Force removal of the container even if running.
 
-**-a, --all**
-> Remove all Distrobox containers
+**-a**, **--all**
+> Remove all Distrobox containers.
 
-**-v, --verbose**
-> Show additional output
+**--rm-home**
+> Remove the mounted home directory if it differs from the host user's home.
 
-**-Y, --yes**
-> Assume yes to all prompts
+**--root**, **-r**
+> Launch podman/docker/lilipod with root privileges. Preferred over using sudo directly.
 
-**-h, --help**
-> Show help message
+**-v**, **--verbose**
+> Show additional output.
+
+**-Y**, **--yes**
+> Assume yes to all prompts.
+
+**-h**, **--help**
+> Show help message.
 
 # CAVEATS
 
-Removing a container deletes all data inside it that was not mapped to the host. Stop the container first with distrobox-stop for a clean removal.
+Removing a container deletes all data inside it that was not mapped to the host. Stop the container first with distrobox-stop for a clean removal. Use **--rm-home** carefully as it permanently deletes the container's separate home directory.
 
 # HISTORY
 
@@ -55,4 +69,4 @@ Removing a container deletes all data inside it that was not mapped to the host.
 
 # SEE ALSO
 
-[distrobox](/man/distrobox)(1), [distrobox-create](/man/distrobox-create)(1), [distrobox-stop](/man/distrobox-stop)(1)
+[distrobox](/man/distrobox)(1), [distrobox-create](/man/distrobox-create)(1), [distrobox-stop](/man/distrobox-stop)(1), [distrobox-list](/man/distrobox-list)(1), [distrobox-enter](/man/distrobox-enter)(1)

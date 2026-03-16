@@ -86,6 +86,18 @@ The message broker uses MQTT, HTTPS, and WebSocket protocols. Rules engine proce
 **list-thing-groups**
 > List thing groups.
 
+**create-topic-rule**
+> Create a rule for routing messages.
+
+**search-index**
+> Search the thing index.
+
+**create-job**
+> Create a remote job for target devices.
+
+**list-topic-rules**
+> List topic rules.
+
 **--thing-name** _name_
 > Name of the thing.
 
@@ -101,6 +113,12 @@ The message broker uses MQTT, HTTPS, and WebSocket protocols. Rules engine proce
 **--endpoint-type** _type_
 > Endpoint type (iot:Data-ATS recommended).
 
+**--set-as-active**
+> Set a newly created certificate as active.
+
+**--target** _arn_
+> Target ARN to attach a policy to (certificate or Cognito identity).
+
 # CAVEATS
 
 Certificates must be activated before use. Deleting a thing does not delete its certificates or policies. Use ATS (Amazon Trust Services) endpoints for production. Thing names are unique per account/region. Policies are separate from IAM policies and follow IoT-specific syntax.
@@ -111,4 +129,4 @@ Certificates must be activated before use. Deleting a thing does not delete its 
 
 # SEE ALSO
 
-[aws](/man/aws)(1), [mosquitto](/man/mosquitto)(1), [aws-iot-data](/man/aws-iot-data)(1), [aws-greengrass](/man/aws-greengrass)(1)
+[aws](/man/aws)(1), [mosquitto](/man/mosquitto)(1), [aws-s3](/man/aws-s3)(1), [aws-lambda](/man/aws-lambda)(1)

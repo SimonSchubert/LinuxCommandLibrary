@@ -1,48 +1,56 @@
 # TAGLINE
 
-Add GPG keys for APT repository verification
+Add GPG keys to the APT keyring
 
 # TLDR
 
-**Add** a GPG key from a URL
+**Add** a GPG key by key ID from the default keyserver
 
-```sudo add-apt-key --keyserver [keyserver.ubuntu.com] --keyid [KEY_ID]```
+```sudo add-apt-key [KEY_ID]```
 
-Add key from **local file**
+**Add** a GPG key from a specific **keyserver**
 
-```sudo add-apt-key --keyfile [key.gpg]```
+```sudo add-apt-key -k [keyserver.ubuntu.com] [KEY_ID]```
+
+**Add** a key with **verbose** output
+
+```sudo add-apt-key -v [KEY_ID]```
 
 # SYNOPSIS
 
-**add-apt-key** [_--keyserver server_] [_--keyid id_] [_--keyfile file_]
+**add-apt-key** [_options_] _keyid_
 
 # DESCRIPTION
 
-**add-apt-key** is a helper utility for adding GPG keys used to verify APT repository packages. It provides a safer alternative to the deprecated **apt-key** command by storing keys in the modern /etc/apt/trusted.gpg.d/ directory.
-
-The tool can fetch keys from keyservers or local files and install them in the appropriate location for APT to use during package verification.
+**add-apt-key** requests the specified GPG key from a public keyserver and inserts it into the APT keyring so that archives signed with that key will be trusted. The default keyserver can be configured in /etc/default/add-apt-key.
 
 # PARAMETERS
 
-**--keyserver** _server_
-> GPG keyserver to fetch the key from
+**-h**, **--help**
+> Show usage information.
 
-**--keyid** _id_
-> GPG key ID to fetch
+**-v**, **--verbose**
+> Verbose mode; show each command before it is executed.
 
-**--keyfile** _file_
-> Local GPG key file to add
+**-k**, **--keyserver** _name_
+> Select a specific keyserver to use.
 
-**--keyring** _file_
-> Custom keyring location
+_keyid_
+> The GPG key identifier to add.
+
+# EXIT STATUS
+
+**0** - Key was added successfully.
+
+**1** - Invalid arguments.
+
+**2** - GPG key ID cannot be retrieved or is malformed.
+
+**3** - Failure inserting key into APT keyring.
 
 # CAVEATS
 
 This tool may not be available on all distributions. The modern approach is to place repository keys in /etc/apt/keyrings/ and reference them directly in source list files with the signed-by option.
-
-# HISTORY
-
-**add-apt-key** was developed as distributions moved away from the centralized /etc/apt/trusted.gpg keyring. This transition began around **2020** when apt-key was deprecated in favor of per-repository keyrings.
 
 # SEE ALSO
 

@@ -12,19 +12,23 @@ distributed event streaming platform
 
 ```kafka-server-stop.sh```
 
-**Create topic**
+**Create a topic with partitions and replication**
 
-```kafka-topics.sh --create --topic [mytopic] --bootstrap-server [localhost:9092]```
+```kafka-topics.sh --create --topic [mytopic] --partitions [3] --replication-factor [1] --bootstrap-server [localhost:9092]```
 
-**List topics**
+**List all topics**
 
 ```kafka-topics.sh --list --bootstrap-server [localhost:9092]```
 
-**Produce messages**
+**Describe a topic**
+
+```kafka-topics.sh --describe --topic [mytopic] --bootstrap-server [localhost:9092]```
+
+**Produce messages to a topic**
 
 ```kafka-console-producer.sh --topic [mytopic] --bootstrap-server [localhost:9092]```
 
-**Consume messages**
+**Consume messages from the beginning**
 
 ```kafka-console-consumer.sh --topic [mytopic] --from-beginning --bootstrap-server [localhost:9092]```
 
@@ -50,7 +54,16 @@ Kafka organizes messages into topics, with partitions for parallelism and replic
 # CONFIGURATION
 
 ```properties
-# server.properties
+# server.properties (KRaft mode, Kafka 3.3+)
+node.id=1
+process.roles=broker,controller
+controller.quorum.voters=1@localhost:9093
+listeners=PLAINTEXT://:9092,CONTROLLER://:9093
+log.dirs=/var/kafka-logs
+```
+
+```properties
+# server.properties (legacy ZooKeeper mode)
 broker.id=0
 listeners=PLAINTEXT://:9092
 log.dirs=/var/kafka-logs
@@ -59,7 +72,7 @@ zookeeper.connect=localhost:2181
 
 # CAVEATS
 
-Requires Zookeeper (or KRaft in newer versions). Memory and disk intensive. Topic configuration affects retention. Rebalancing can cause delays.
+ZooKeeper support was removed in Kafka 4.0; KRaft mode is now required for new deployments. Memory and disk intensive. Topic configuration affects retention and storage. Consumer group rebalancing can cause temporary processing delays.
 
 # HISTORY
 
@@ -67,4 +80,4 @@ Kafka was developed at **LinkedIn** and open-sourced in **2011**. Named after au
 
 # SEE ALSO
 
-[zookeeper](/man/zookeeper)(1), [kafka-topics](/man/kafka-topics)(1), [kafkacat](/man/kafkacat)(1)
+[kafka-topics](/man/kafka-topics)(1), [kafkacat](/man/kafkacat)(1)

@@ -8,6 +8,10 @@ Show all **peers on the bus**
 
 ```busctl list```
 
+Show all peers on the **user session bus**
+
+```busctl --user list```
+
 Show **process information** for a service or PID
 
 ```busctl status [service|pid]```
@@ -15,6 +19,10 @@ Show **process information** for a service or PID
 **Monitor** messages on the bus
 
 ```busctl monitor [service1] [service2] ...```
+
+**Capture** bus traffic in pcap format
+
+```busctl capture [service] > [bus-traffic.pcap]```
 
 Show **object tree** of services
 
@@ -48,10 +56,13 @@ The tool can list services, monitor message traffic, inspect object hierarchies,
 > List all peers on the bus
 
 **status**
-> Show process info for a service
+> Show process info for a service or PID
 
 **monitor**
 > Watch message traffic
+
+**capture**
+> Capture bus traffic in pcap format
 
 **tree**
 > Show object hierarchy
@@ -68,20 +79,53 @@ The tool can list services, monitor message traffic, inspect object hierarchies,
 **call**
 > Invoke a method
 
+**emit**
+> Emit a signal
+
+**wait-signal**
+> Wait for a specific signal
+
 # PARAMETERS
 
 **--system**
-> Connect to system bus (default)
+> Connect to system bus (default).
 
 **--user**
-> Connect to user session bus
+> Connect to user session bus.
 
-**-j, --json**
-> Output in JSON format
+**--address** _ADDRESS_
+> Connect to the bus specified by ADDRESS.
+
+**-j**, **--json**=_MODE_
+> Output in JSON format. MODE is short, pretty, or off.
+
+**--verbose**
+> Show verbose output for call or get-property commands.
+
+**--expect-reply**=_BOOL_
+> Whether to wait for method call completion. Defaults to yes.
+
+**--auto-start**=_BOOL_
+> Whether method calls should auto-start the target service. Defaults to yes.
+
+**--list**
+> Show a flat list instead of a tree with the tree command.
+
+**--unique**
+> Show only unique bus names (e.g., :1.42).
+
+**--acquired**
+> Show only well-known bus names.
+
+**--activatable**
+> Show only activatable services not yet started.
 
 **--no-pager**
-> Disable pager
+> Disable pager.
+
+**--no-legend**
+> Do not print column headers and footers.
 
 # SEE ALSO
 
-[dbus-send](/man/dbus-send)(1), [gdbus](/man/gdbus)(1), [systemctl](/man/systemctl)(1)
+[dbus-send](/man/dbus-send)(1), [dbus-monitor](/man/dbus-monitor)(1), [gdbus](/man/gdbus)(1), [systemctl](/man/systemctl)(1)

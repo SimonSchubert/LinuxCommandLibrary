@@ -28,13 +28,21 @@ sends a signal to all processes running the specified command
 
 ```killall -r "[pattern]"```
 
-**Show what would be killed** without killing
+**Verbose mode** — report if signal was successfully sent
 
 ```killall -v [process_name]```
 
 **Wait for processes to terminate**
 
 ```killall -w [process_name]```
+
+**List all known signal names**
+
+```killall -l```
+
+**Kill processes older than** a specified duration
+
+```killall -o 1h [process_name]```
 
 # SYNOPSIS
 
@@ -43,7 +51,7 @@ sends a signal to all processes running the specified command
 # PARAMETERS
 
 **-e**, **--exact**
-> Require exact name match (including path length).
+> Require exact name match for very long names. By default, killall truncates names to 15 characters.
 
 **-I**, **--ignore-case**
 > Case-insensitive matching.
@@ -81,8 +89,14 @@ sends a signal to all processes running the specified command
 **-y**, **--younger-than** _time_
 > Kill processes younger than specified time.
 
+**-n**, **--ns** _PID_
+> Match against the PID namespace of the given PID.
+
+**-V**, **--version**
+> Display version information.
+
 **-Z**, **--context** _pattern_
-> Kill only processes with matching SELinux context.
+> Kill only processes with matching SELinux context (SELinux only).
 
 # COMMON SIGNALS
 
@@ -114,7 +128,7 @@ Name matching compares against the command name (visible in ps). The -r flag ena
 
 The -w flag makes killall wait until all processes are actually terminated before returning. This is useful in scripts where you need to ensure processes are stopped before proceeding.
 
-Time-based filtering (-o, -y) allows killing only processes that have been running longer or shorter than specified duration (e.g., "1h" for one hour, "30m" for 30 minutes).
+Time-based filtering (-o, -y) allows killing only processes that have been running longer or shorter than specified duration (e.g., "1h" for one hour, "30m" for 30 minutes, "1d" for one day).
 
 # CAVEATS
 
@@ -126,4 +140,4 @@ Behavior differs between Linux (psmisc) and BSD/macOS versions. On macOS, syntax
 
 # SEE ALSO
 
-[kill](/man/kill)(1), [pkill](/man/pkill)(1), [pgrep](/man/pgrep)(1), [ps](/man/ps)(1), [signal](/man/signal)(7)
+[kill](/man/kill)(1), [pkill](/man/pkill)(1), [pgrep](/man/pgrep)(1), [ps](/man/ps)(1), [pidof](/man/pidof)(1)

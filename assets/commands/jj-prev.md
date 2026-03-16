@@ -1,35 +1,50 @@
 # TAGLINE
 
-moves the working copy to the parent revision
+Change the working copy revision relative to the parent revision
 
 # TLDR
 
-**Move to parent revision**
+**Move to the parent revision**
 
 ```jj prev```
 
 **Move multiple steps back**
 
-```jj prev [2]```
+```jj prev [3]```
 
-**Move and edit the revision**
+**Move and directly edit the parent revision**
 
 ```jj prev --edit```
 
+**Jump to the previous conflicted ancestor**
+
+```jj prev --conflict```
+
 # SYNOPSIS
 
-**jj** **prev** [_options_] [_count_]
+**jj** **prev** [_OPTIONS_] [_OFFSET_]
 
 # PARAMETERS
 
-**--edit**
-> Edit the destination revision.
+_OFFSET_
+> Number of revisions to move backward. Default: **1**.
+
+**-e**, **--edit**
+> Edit the parent directly, instead of moving the working-copy commit. Overrides the **ui.movement.edit** configuration.
+
+**-n**, **--no-edit**
+> Inverse of --edit; create a new working-copy commit on top of the destination.
+
+**--conflict**
+> Jump to the previous conflicted ancestor.
 
 # DESCRIPTION
 
-**jj prev** moves the working copy to the parent revision. Optionally specify a count to move multiple generations back. A convenient shorthand for navigating commit history.
+**jj prev** moves the working-copy commit to an ancestor revision. By default it creates a new empty working-copy revision as a child of the target ancestor. With **--edit**, it directly edits the ancestor revision instead.
+
+This command is a convenient shorthand for navigating backward through commit history in the Jujutsu version control system.
 
 # SEE ALSO
 
-[jj](/man/jj)(1), [jj-next](/man/jj-next)(1)
+[jj](/man/jj)(1), [jj-next](/man/jj-next)(1), [jj-log](/man/jj-log)(1)
 

@@ -1,31 +1,42 @@
 # TAGLINE
 
-Convert XML to PYX line format
+Convert XML to PYX line-oriented format
 
 # TLDR
 
-**Convert XML to PYX**
+**Convert an XML file to PYX format**
 
 ```xml pyx [file.xml]```
 
-**Convert from stdin**
+**Convert XML from stdin**
 
 ```cat [file.xml] | xml pyx```
 
+**Strip all attributes from an XML file using PYX filtering**
+
+```xml pyx [file.xml] | grep -v "^A" | xml depyx```
+
 # SYNOPSIS
 
-**xml pyx** [_options_] [_file_]
+**xml pyx** [_xml-file_]
 
 # PARAMETERS
 
-_file_
-> Input XML file.
+_xml-file_
+> Input XML file. If omitted, reads from stdin.
 
 # DESCRIPTION
 
-**xml pyx** converts XML to PYX notation. Part of xmlstarlet toolkit. PYX is a line-oriented format for XML that's easy to process with standard Unix text tools like grep, sed, and awk.
+**xml pyx** converts XML documents to PYX notation, a line-oriented representation derived from the SGML ESIS format (ISO 8879). It is part of the **XMLStarlet** toolkit (also invoked as `xmlstarlet pyx`).
+
+PYX represents each XML construct on a single line using prefix notation: `(` for opening tags, `)` for closing tags, `A` for attributes, `-` for text content, and `?` for processing instructions. This line-oriented format makes it easy to process XML with standard Unix text tools like **grep**, **sed**, and **awk** without requiring an XML parser.
+
+The companion command **xml depyx** (or **xml p2x**) converts PYX back into XML.
+
+# CAVEATS
+
+PYX is a simplified representation and may not preserve all XML features such as comments or CDATA sections.
 
 # SEE ALSO
 
-[xml-depyx](/man/xml-depyx)(1), [xml-p2x](/man/xml-p2x)(1)
-
+[xml-depyx](/man/xml-depyx)(1), [xml-p2x](/man/xml-p2x)(1), [xmlstarlet](/man/xmlstarlet)(1), [xml](/man/xml)(1)

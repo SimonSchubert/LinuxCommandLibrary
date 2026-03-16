@@ -24,13 +24,17 @@ List **disabled** packages
 
 ```adb shell pm list packages -d```
 
+List packages with **version codes**
+
+```adb shell pm list packages --show-versioncode```
+
 **Filter** packages by name
 
 ```adb shell pm list packages [google]```
 
 # SYNOPSIS
 
-**adb shell pm list packages** [_-f_] [_-d_] [_-e_] [_-s_] [_-3_] [_-i_] [_-u_] [_--user user_id_] [_filter_]
+**adb shell pm list packages** [_-f_] [_-d_] [_-e_] [_-s_] [_-3_] [_-i_] [_-U_] [_-u_] [_--show-versioncode_] [_--apex-only_] [_--user user_id_] [_filter_]
 
 # DESCRIPTION
 
@@ -41,32 +45,47 @@ The filter argument performs a substring match on package names, useful for find
 # PARAMETERS
 
 **-f**
-> Show associated APK file path
+> Show associated APK file path.
+
+**-a**
+> Show all known packages (excluding APEXes).
 
 **-d**
-> Show only disabled packages
+> Show only disabled packages.
 
 **-e**
-> Show only enabled packages
+> Show only enabled packages.
 
 **-s**
-> Show only system packages
+> Show only system packages.
 
 **-3**
-> Show only third-party packages
+> Show only third-party packages.
 
 **-i**
-> Show installer for each package
+> Show installer for each package.
+
+**-U**
+> Show the package UID.
 
 **-u**
-> Include uninstalled packages
+> Include uninstalled packages.
+
+**--show-versioncode**
+> Show the version code of each package.
+
+**--apex-only**
+> Show only APEX packages.
+
+**--uid** _UID_
+> Filter to only show packages with the given UID.
 
 **--user** _user_id_
-> List packages for specific user
+> List packages for a specific user.
 
 # CAVEATS
 
-Output format may vary slightly between Android versions. System packages include both true system apps and apps installed in the system partition. Some packages may be hidden and not appear in standard listings.
+Output format may vary slightly between Android versions. System packages include both true system apps and apps installed in the system partition. Some packages may be hidden and not appear in standard listings. Flags like `--show-versioncode` and `--apex-only` require newer Android versions.
 
 # HISTORY
 

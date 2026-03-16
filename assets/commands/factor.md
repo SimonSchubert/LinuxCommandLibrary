@@ -24,11 +24,18 @@ prime factorization utility
 
 ```factor [9999999999999999999999]```
 
+**Show prime factors using exponent notation**
+
+```factor -h [1024]```
+
 # SYNOPSIS
 
-**factor** [_--help_] [_--version_] [_number ..._]
+**factor** [_OPTION_] [_NUMBER_...]
 
 # PARAMETERS
+
+**-h**, **--exponents**
+> Print factors in the form p^e instead of repeating prime p e times. If the exponent e is 1, it is omitted.
 
 **--help**
 > Display help information and exit.
@@ -36,7 +43,7 @@ prime factorization utility
 **--version**
 > Display version information and exit.
 
-_number_
+_NUMBER_
 > One or more integers to factorize. If no numbers are given, reads from stdin.
 
 # DESCRIPTION
@@ -47,7 +54,7 @@ For example, **factor 12** outputs **12: 2 2 3** because 12 = 2 × 2 × 3. Prime
 
 When called without arguments, factor enters interactive mode, reading numbers from stdin one per line. This is useful for factoring many numbers or integrating with pipes.
 
-The implementation uses trial division for small factors and more sophisticated algorithms for large numbers. GNU coreutils factor can handle arbitrarily large numbers (limited by available memory), while some implementations have size limits.
+The implementation uses trial division for small factors and Pollard's rho algorithm for larger numbers. GNU coreutils factor can handle arbitrarily large numbers when built with GNU MP support, while some implementations have size limits.
 
 Common uses include mathematical exploration, cryptography education, number theory problems, and verifying primality (a prime number has only itself as a factor).
 

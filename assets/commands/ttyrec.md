@@ -12,15 +12,15 @@ Record terminal sessions with timing
 
 ```ttyrec [path/to/recording.tty]```
 
-**Append to existing recording**
+**Append to an existing recording**
 
 ```ttyrec -a [path/to/recording.tty]```
 
-**Record while running a specific command**
+**Record a specific command** instead of the default shell
 
-```ttyrec -e "[command]" [path/to/recording.tty]```
+```ttyrec -e [command] [path/to/recording.tty]```
 
-**Record with automatic uudecode** extraction
+**Record with automatic uudecode** for file transfers
 
 ```ttyrec -u [path/to/recording.tty]```
 
@@ -34,18 +34,21 @@ Record terminal sessions with timing
 > Append output to the file rather than overwriting it.
 
 **-u**
-> Automatically call uudecode and save output when uuencoded data appears in the session. Useful for transferring files from remote hosts.
+> Automatically call uudecode(1) and save its output when uuencoded data appears in the session. Useful for transferring files from remote hosts.
 
 **-e** _command_
 > Execute the specified command instead of the default shell when ttyrec starts.
 
+_file_
+> Output file for the recording. Defaults to "ttyrecord" in the current directory.
+
 # DESCRIPTION
 
-**ttyrec** is a terminal session recorder that captures all terminal activity with microsecond timing accuracy. It is derived from the script(1) command but adds precise timing information essential for accurate playback.
+**ttyrec** is a terminal session recorder that captures all terminal output with microsecond timing accuracy. It is derived from the script(1) command but adds precise timing information essential for accurate playback.
 
-When invoked, ttyrec spawns a new shell (or specified command) and records all output until the shell exits. The recording includes timing data that allows ttyplay to reproduce the session at the original speed, making it ideal for creating tutorials, demonstrations, or documenting terminal procedures.
+When invoked, ttyrec spawns a new shell (or the command specified with **-e**) and records all output until the shell exits. The recording includes timing data that allows ttyplay to reproduce the session at the original speed, making it ideal for creating tutorials, demonstrations, or documenting terminal procedures.
 
-The default output file is "ttyrecord" in the current directory. The shell used is determined by the SHELL environment variable, falling back to /bin/sh if not set. Recordings can be played back with **ttyplay** and analyzed with **ttytime**.
+The shell used is determined by the SHELL environment variable, falling back to /bin/sh if not set. Recordings can be played back with **ttyplay** and their duration checked with **ttytime**.
 
 # CAVEATS
 

@@ -30,7 +30,7 @@ Lightweight HTTP and HTTPS proxy daemon
 
 # SYNOPSIS
 
-**tinyproxy** [**-c** _config-file_] [**-d**] [**-h**] [**-v**]
+**tinyproxy** [**-c** _config-file_] [**-d**] [**-h**] [**-l**] [**-v**]
 
 # PARAMETERS
 
@@ -42,6 +42,9 @@ Lightweight HTTP and HTTPS proxy daemon
 
 **-h**
 > Display a short help screen and exit.
+
+**-l**
+> Display the licensing agreement and exit.
 
 **-v**
 > Display version information and exit.
@@ -74,4 +77,4 @@ Tinyproxy does not support caching, authentication schemes beyond basic, or SOCK
 
 # SEE ALSO
 
-[squid](/man/squid)(8), [privoxy](/man/privoxy)(1), [nginx](/man/nginx)(8)
+[squid](/man/squid)(8), [privoxy](/man/privoxy)(1), [nginx](/man/nginx)(8), [curl](/man/curl)(1), [wget](/man/wget)(1)

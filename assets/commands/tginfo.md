@@ -1,57 +1,53 @@
 # TAGLINE
 
-Display TigerGraph system information
+Fetch info about a Telegram username or URL
 
 # TLDR
 
-**Show system info**
+**Get info about a Telegram username**
 
-```tginfo```
+```tginfo [username]```
 
-**Show version**
+**Get info from a Telegram URL**
 
-```tginfo --version```
+```tginfo https://t.me/[username]```
 
-**Show graph stats**
+**Display only specific attributes**
 
-```tginfo stats```
+```tginfo [username] --attrs=title,type,subscribers```
 
-**Show license info**
+**Output as JSON**
 
-```tginfo license```
+```tginfo [username] --json```
 
 # SYNOPSIS
 
-**tginfo** [_command_] [_options_]
+**tginfo** _slug/url_ [_options_]
 
 # PARAMETERS
 
-**stats**
-> Graph statistics.
+**--attrs**=_ATTR1,ATTR2_
+> Display only specific attributes.
 
-**license**
-> License information.
-
-**--version**
-> Version info.
+**--json**
+> Display JSON instead of a human readable view.
 
 **--help**
-> Show help.
+> Print help message.
+
+**--version**
+> Display version.
 
 # DESCRIPTION
 
-**tginfo** displays diagnostic information about a local TigerGraph graph database installation. It reports system details including version numbers, configuration settings, graph statistics such as vertex and edge counts, and license information including expiration dates and enabled features.
+**tginfo** is a zero-dependency Node.js module that fetches information about a Telegram username or URL. It accepts web URLs (https://t.me/username), deep links (tg://resolve?domain=username), plain usernames, or invite codes.
 
-The tool is primarily used for troubleshooting and monitoring TigerGraph deployments, providing a quick overview of the database system's state from the command line.
+The output includes attributes such as type, title, webUrl, tgUrl, and optional fields like username, info, verified, image, subscribers, members, and online count depending on the entity type.
 
 # CAVEATS
 
-TigerGraph installation needed. Local access. Admin privileges may be needed.
-
-# HISTORY
-
-**tginfo** is a utility for displaying information about TigerGraph graph database installations.
+Requires Node.js. Install globally via `npm install -g tginfo` or run with `npx tginfo`.
 
 # SEE ALSO
 
-[gsql](/man/gsql)(1), [tgcloud](/man/tgcloud)(1)
+[npx](/man/npx)(1), [npm](/man/npm)(1)

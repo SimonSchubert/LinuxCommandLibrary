@@ -8,35 +8,79 @@ Interactive PHP shell and runtime debugger
 
 ```psysh```
 
-**Start with specific config**
+**Start with specific config file**
 
 ```psysh -c [config.php]```
 
-**Execute code and exit**
+**Start with a specific working directory**
 
-```psysh -e "[code]"```
+```psysh --cwd [path/to/project]```
 
-**Include file**
+**Run non-interactively from stdin**
 
-```psysh --include [file.php]```
+```echo "echo 'hello';" | psysh -n```
+
+**Start with compact output**
+
+```psysh --compact```
+
+**Start with autoload warming for better tab completion**
+
+```psysh --warm-autoload```
 
 # SYNOPSIS
 
-**psysh** [_options_]
+**psysh** [_options_] [_files_...]
 
 # PARAMETERS
 
-**-c** _FILE_
-> Configuration file.
+**-c**, **--config** _FILE_
+> Use alternate configuration file.
 
-**-e** _CODE_
-> Execute code.
+**--cwd** _PATH_
+> Use alternate working directory.
 
-**--include** _FILE_
-> Include file.
+**-V**, **--version**
+> Display version number.
 
-**-v**
-> Verbose output.
+**-i**, **-a**, **--interactive**
+> Force interactive mode.
+
+**-n**, **--no-interactive**
+> Force non-interactive mode (reads from stdin).
+
+**-r**, **--raw-output**
+> Print var_export-style return values.
+
+**--compact**
+> Run with compact output (minimal whitespace).
+
+**-q**, **--quiet**
+> Suppress most output except results and errors.
+
+**-v**, **-vv**, **-vvv**, **--verbose**
+> Increase message verbosity (up to three levels).
+
+**--color**
+> Force colored output.
+
+**--no-color**
+> Disable colored output.
+
+**--warm-autoload**
+> Pre-load classes from Composer autoloader for better tab completion.
+
+**--yolo**
+> Run with minimal input validation (debugging only).
+
+**-u**, **--self-update**
+> Install newer version (PHAR installation only).
+
+**--update-manual**
+> Download the latest PHP manual for inline documentation.
+
+**-h**, **--help**
+> Display help message.
 
 # DESCRIPTION
 
@@ -51,13 +95,12 @@ PsySH also functions as a runtime debugger when integrated into applications. By
 
 # CAVEATS
 
-Requires PHP. Installed via Composer.
+Requires PHP. Installed via Composer or as a standalone PHAR.
 
 # HISTORY
 
-PsySH was created as a **modern PHP REPL** with advanced features.
+PsySH was created by **Justin Hileman** (bobthecow) as a **modern PHP REPL** with advanced features including inline documentation and runtime debugging.
 
 # SEE ALSO
 
-[php](/man/php)(1), [composer](/man/composer)(1)
-
+[php](/man/php)(1), [composer](/man/composer)(1), [artisan](/man/artisan)(1)

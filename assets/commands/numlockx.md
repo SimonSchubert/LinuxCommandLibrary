@@ -1,6 +1,6 @@
 # TAGLINE
 
-controls the Num Lock key state in X11 sessions
+Control the state of NumLock
 
 # TLDR
 
@@ -40,7 +40,7 @@ Turn the number lock **off**
 
 # DESCRIPTION
 
-**numlockx** controls the Num Lock key state in X11 sessions. It's commonly used in login scripts or desktop startup files to ensure Num Lock is in the desired state when a session begins.
+**numlockx** is a program to control the NumLock key inside X11 session scripts. It's commonly used in login scripts or desktop startup files to ensure Num Lock is in the desired state when a session begins.
 
 The command directly manipulates the keyboard LED and state through X11, making it useful for systems where the BIOS Num Lock setting doesn't persist or for users who prefer a specific Num Lock state at login.
 
@@ -52,4 +52,4 @@ Only works in X11 sessions; does not work in Wayland or virtual consoles. The st
 
 # SEE ALSO
 
-[setleds](/man/setleds)(1), [xset](/man/xset)(1), [xdotool](/man/xdotool)(1)
+[setleds](/man/setleds)(1), [xset](/man/xset)(1), [xmodmap](/man/xmodmap)(1)

@@ -1,6 +1,6 @@
 # TAGLINE
 
-Terminal EPUB and PDF reader
+Terminal EPUB, PDF and DJVU book reader
 
 # TLDR
 
@@ -12,20 +12,33 @@ Terminal EPUB and PDF reader
 
 ```bookokrat [path/to/book.pdf]```
 
+**Open** a DJVU file
+
+```bookokrat [path/to/book.djvu]```
+
+**Open** a book in **zen mode** (distraction-free reading)
+
+```bookokrat --zen-mode [path/to/book.epub]```
+
 # SYNOPSIS
 
-**bookokrat** [_options_] _file_
+**bookokrat** [_--zen-mode_] [_file_]
+
+# PARAMETERS
+
+**--zen-mode**
+> Launch in zen mode with sidebar and status bar hidden for distraction-free reading.
 
 # DESCRIPTION
 
-**bookokrat** is a terminal-based ebook reader that supports **EPUB** and **PDF** formats. It renders book content directly in the terminal with text reflow, providing a distraction-free reading experience without a graphical environment.
+**bookokrat** is a terminal-based ebook reader that supports **EPUB**, **PDF**, and **DJVU** formats. It renders book content directly in the terminal with full HTML rendering, inline images, and MathML support, providing a distraction-free reading experience without a graphical environment.
 
-The reader supports navigation by chapters, page scrolling, and bookmarking your reading position. It handles text extraction and layout within the constraints of a terminal interface.
+The reader features Vim-style keybindings, split-view layout with library/table of contents and reader panels, search, bookmarks, jump list history, inline annotations, and reading statistics. Press **?** inside the app to open the built-in help.
 
 # CAVEATS
 
-Complex layouts, images, and rich formatting in PDFs may not render well in a text-only environment. Best suited for text-heavy books. EPUB support is generally better than PDF due to the reflowable nature of the format.
+Complex layouts and rich formatting in PDFs may not render well in a text-only environment. Best suited for text-heavy books. EPUB support is generally better than PDF due to the reflowable nature of the format.
 
 # SEE ALSO
 
-[zathura](/man/zathura)(1), [mupdf](/man/mupdf)(1), [epr](/man/epr)(1)
+[zathura](/man/zathura)(1), [mupdf](/man/mupdf)(1), [calibre](/man/calibre)(1)

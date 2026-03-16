@@ -32,6 +32,14 @@ Show **detailed information** for a package
 
 ```sudo oma refresh```
 
+List **files** in a package
+
+```oma files [package_name]```
+
+**Fix broken** dependencies
+
+```sudo oma fix-broken```
+
 Display **help**
 
 ```oma help```
@@ -69,17 +77,38 @@ Display **help**
 **rdepends** _package_
 > Show reverse dependencies
 
+**files** _package_
+> List files in the specified package
+
+**provides** _pattern_
+> Find packages providing files matching the pattern
+
+**fix-broken**
+> Fix broken dependencies
+
+**pick** _package_
+> Install a specific version of a package
+
+**mark** _package_
+> Mark package status (manual, auto, hold, unhold)
+
+**download** _package_
+> Download package(s) without installing
+
+**history**
+> Show package operation history
+
 **clean**
-> Clean package cache
+> Clean downloaded package cache
 
 **help**
 > Display help information
 
 # DESCRIPTION
 
-**oma** is a modern package management frontend for dpkg-based Linux distributions, developed by the AOSC (Anthon Open Source Community) project. It provides an interactive text-based interface for managing packages, with support for dependency resolution and system upgrades.
+**oma** is a modern package management frontend for dpkg-based Linux distributions, developed by the AOSC (Anthon Open Source Community) project. It provides an interactive text-based interface for managing packages, with support for dependency resolution and system upgrades. Pre-installed on AOSC OS, it is also available for Debian, Ubuntu, Deepin, openKylin, and other dpkg-based distributions.
 
-The tool automatically refreshes package lists before install and upgrade operations, reducing the need for manual repository updates. It aims to provide a user-friendly experience while maintaining compatibility with the underlying dpkg/apt infrastructure.
+The tool features multi-threaded package downloads, smart search, and safeguards against accidental removal of essential packages. It aims to provide a user-friendly experience while maintaining compatibility with the underlying dpkg/apt infrastructure.
 
 # CAVEATS
 

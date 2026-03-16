@@ -14,7 +14,7 @@ PipeWire resampler debugging utility
 
 **Resample** with **highest quality** setting
 
-```spa-resample -r [48000] -q 14 [input.wav] [output.wav]```
+```spa-resample -q 14 -r [48000] [input.wav] [output.wav]```
 
 **Resample** with **verbose** output
 

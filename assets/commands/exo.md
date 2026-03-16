@@ -4,25 +4,33 @@ command-line interface for Exoscale cloud services
 
 # TLDR
 
-**List accounts**
+**Configure CLI credentials**
 
-```exo iam list```
+```exo config add```
 
-**Create instance**
-
-```exo compute instance create [name] --zone [ch-gva-2]```
-
-**List instances**
+**List compute instances**
 
 ```exo compute instance list```
 
-**SSH to instance**
+**Create a compute instance in a specific zone**
 
-```exo compute ssh [instance_name]```
+```exo compute instance create [name] --zone [ch-gva-2]```
 
-**Configure CLI**
+**SSH to an instance**
 
-```exo config```
+```exo compute instance ssh [instance_name]```
+
+**List IAM API keys**
+
+```exo iam api-key list```
+
+**List object storage buckets**
+
+```exo storage list```
+
+**Show current account limits**
+
+```exo limits```
 
 # SYNOPSIS
 
@@ -33,20 +41,35 @@ command-line interface for Exoscale cloud services
 _COMMAND_
 > Service: compute, iam, storage, dns, etc.
 
-**compute** **instance** _ACTION_
-> Manage compute instances.
+**compute** _SUBCOMMAND_
+> Manage compute resources (instances, security groups, load balancers, SKS clusters, etc.).
 
-**iam** _ACTION_
-> Identity and access management.
+**dbaas** _SUBCOMMAND_
+> Manage Database as a Service instances.
 
-**storage** _ACTION_
-> Object storage operations.
+**dns** _SUBCOMMAND_
+> Manage DNS zones and records.
 
-**dns** _ACTION_
-> DNS zone management.
+**iam** _SUBCOMMAND_
+> Identity and access management (API keys, roles, org policy).
 
-**config**
-> Configure CLI credentials.
+**storage** _SUBCOMMAND_
+> Object storage operations (buckets, upload, download).
+
+**config** _SUBCOMMAND_
+> Manage CLI configuration and credentials.
+
+**zone**
+> List available zones.
+
+**limits**
+> Show current account resource limits.
+
+**status**
+> Show Exoscale platform status.
+
+**version**
+> Print CLI version.
 
 **--help**
 > Display help information.
@@ -60,7 +83,7 @@ _COMMAND_
 
 **exo** is the command-line interface for Exoscale, a European cloud computing provider. It manages compute instances, storage, DNS, and other cloud resources.
 
-The tool provides commands for all Exoscale services including SKS (Kubernetes), DBaaS, and networking. Configuration stores API credentials for authentication.
+The tool provides commands for all Exoscale services including SKS (Kubernetes), DBaaS, dedicated inference, and networking. Configuration stores API credentials for authentication.
 
 exo enables infrastructure automation and management without the web console.
 
@@ -74,4 +97,4 @@ exo is the official CLI for **Exoscale**, a Swiss cloud provider founded in **20
 
 # SEE ALSO
 
-[aws](/man/aws)(1), [gcloud](/man/gcloud)(1), [doctl](/man/doctl)(1)
+[aws](/man/aws)(1), [gcloud](/man/gcloud)(1), [az](/man/az)(1), [doctl](/man/doctl)(1)

@@ -33,6 +33,9 @@ visualization for profiled stack traces
 **--title** _text_
 > Title for the graph.
 
+**--subtitle** _text_
+> Second level title (optional).
+
 **--width** _pixels_
 > SVG width (default 1200).
 
@@ -40,7 +43,19 @@ visualization for profiled stack traces
 > Frame height (default 16).
 
 **--minwidth** _pixels_
-> Minimum width to show.
+> Omit functions narrower than this (default 0.1 pixels).
+
+**--fontsize** _num_
+> Font size (default 12).
+
+**--fonttype** _font_
+> Font type (default "Verdana").
+
+**--countname** _text_
+> Count type label (default "samples").
+
+**--nametype** _text_
+> Name type label (default "Function:").
 
 **--inverted**
 > Generate icicle graph (top-down).
@@ -49,13 +64,22 @@ visualization for profiled stack traces
 > Reverse stack order.
 
 **--colors** _palette_
-> Color palette: hot, mem, io, java.
+> Color palette: hot (default), mem, io, wakeup, chain, java, js, perl, red, green, blue, aqua, yellow, purple, orange.
+
+**--bgcolors** _color_
+> Background gradient: yellow (default), blue, green, grey, or flat "#rrggbb".
 
 **--hash**
 > Color by function name hash.
 
+**--cp**
+> Use consistent palette (palette.map).
+
 **--flamechart**
-> Time-ordered flame chart.
+> Time-ordered flame chart (sort by time, do not merge stacks).
+
+**--negate**
+> Switch differential hues (blue/red).
 
 # DESCRIPTION
 
@@ -81,7 +105,7 @@ flamegraph.pl stacks.txt > flame.svg
 
 # CAVEATS
 
-Requires Perl. Input must be in collapsed stack format. Large profiles may produce complex graphs. Colors are random unless --hash used. Interactive features require SVG-capable browser.
+Requires Perl. Input must be in collapsed stack format (use stackcollapse-*.pl scripts to convert). Large profiles may produce complex graphs. Colors are randomized unless --hash or --cp is used. Interactive features (zoom, search) require an SVG-capable browser.
 
 # HISTORY
 
@@ -89,4 +113,4 @@ Flame graphs were invented by **Brendan Gregg** in **2011** while at Joyent for 
 
 # SEE ALSO
 
-[perf](/man/perf)(1), [dtrace](/man/dtrace)(1), [bpftrace](/man/bpftrace)(8)
+[perf](/man/perf)(1), [bpftrace](/man/bpftrace)(8), [strace](/man/strace)(1), [gprof](/man/gprof)(1), [valgrind](/man/valgrind)(1)

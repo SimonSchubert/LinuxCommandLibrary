@@ -38,7 +38,7 @@ Control and manage the Prosody XMPP server
 
 # SYNOPSIS
 
-**prosodyctl** _command_ [_args_]
+**prosodyctl** [_options_] _command_ [_args_]
 
 # PARAMETERS
 
@@ -72,8 +72,26 @@ Control and manage the Prosody XMPP server
 **about**
 > Version and paths.
 
-**cert**
-> Certificate management.
+**cert** _subcommand_ _hosts_
+> Certificate management (request, generate, key, import).
+
+**register** _USER_ _HOST_ _PASSWORD_
+> Register a user non-interactively.
+
+**unregister** _USER_ _HOST_
+> Unregister a user non-interactively.
+
+**shell**
+> Open the Prosody admin shell for runtime inspection.
+
+**--config** _filename_
+> Use the specified config file instead of the default.
+
+**--verbose**
+> Increase log level to show debug messages.
+
+**--quiet**
+> Reduce log level to only show errors.
 
 # DESCRIPTION
 
@@ -85,7 +103,7 @@ The **check** command validates the Prosody configuration, DNS records, and TLS 
 
 # CAVEATS
 
-Requires root for most operations. Some commands need Prosody running. JID format required for users.
+Requires root or appropriate permissions for most operations. Commands like status, reload, and shell require Prosody to be running. JID format (user@domain) required for user management commands.
 
 # HISTORY
 

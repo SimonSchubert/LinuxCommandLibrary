@@ -24,6 +24,10 @@ fast, cross-platform network scanner that scans IP addresses and ports
 
 ```ipscan -s -f:xml -o [output.xml] [192.168.1.0/24]```
 
+**Scan with specific ports and quit after completion**
+
+```ipscan -s -q -f:txt -o [output.txt] -p [80,443,8080] [192.168.1.1] [192.168.1.254]```
+
 # SYNOPSIS
 
 **ipscan** [_-s_] [_-f:format_] [_-o filename_] [_-ff:filename_] [_start-ip_] [_end-ip_]
@@ -43,10 +47,16 @@ fast, cross-platform network scanner that scans IP addresses and ports
 > Read IP addresses from file
 
 **-q**
-> Quit after scanning (with -s)
+> Quit after scanning (with -s).
 
 **-a**
-> Append to output file instead of overwriting
+> Append to output file instead of overwriting.
+
+**-p** _ports_
+> Specify ports to scan.
+
+**-d** _ms_
+> Delay in milliseconds between each request.
 
 # DESCRIPTION
 

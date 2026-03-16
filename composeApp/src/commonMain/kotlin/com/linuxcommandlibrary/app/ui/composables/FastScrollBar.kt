@@ -26,6 +26,8 @@ import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Outline
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.Shape
+import androidx.compose.ui.input.pointer.PointerIcon
+import androidx.compose.ui.input.pointer.pointerHoverIcon
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.unit.Density
@@ -94,6 +96,7 @@ fun FastScrollBar(
         modifier = modifier
             .fillMaxHeight()
             .width(TOUCH_TARGET_WIDTH_DP)
+            .pointerHoverIcon(PointerIcon.Hand)
             .onSizeChanged { trackHeightPx = it.height.toFloat() }
             .pointerInput(itemCount) {
                 detectTapGestures { offset ->

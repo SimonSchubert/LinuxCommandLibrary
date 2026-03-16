@@ -1,44 +1,75 @@
 # TAGLINE
 
-CSV file validator and cleaner
+Validate and clean CSV files
 
 # TLDR
 
-**Validate and report errors** in a CSV file
+**Check for rows with length mismatches** in a CSV file
 
-```csvclean [data.csv]```
+```csvclean --length-mismatch [data.csv]```
 
-**Clean a CSV file** and output corrected version
+**Report length mismatches** and omit error rows from output
 
-```csvclean -n [data.csv]```
+```csvclean --length-mismatch --omit-error-rows [data.csv]```
 
-**Validate with custom delimiter**
+**Report empty columns** as errors
 
-```csvclean -d "[;]" [data.csv]```
+```csvclean --empty-columns [data.csv]```
 
-**Check file with no header** row
+**Enable all checks** on a CSV file
 
-```csvclean --no-header-row [data.csv]```
+```csvclean -a [data.csv]```
 
-**Validate using specific encoding**
+**Fix short rows by joining** them into preceding rows
 
-```csvclean -e [latin1] [data.csv]```
+```csvclean --join-short-rows [data.csv]```
 
-**Output errors to stderr** while cleaning
+**Fill short rows** with a specified value
 
-```csvclean [data.csv] 2> [errors.txt]```
+```csvclean --fill-short-rows --fillvalue "N/A" [data.csv]```
+
+**Validate with custom delimiter** and encoding
+
+```csvclean --length-mismatch -d "[;]" -e [latin1] [data.csv]```
 
 # SYNOPSIS
 
-**csvclean** [_options_] _file_
+**csvclean** [_options_] [_file_]
 
 # PARAMETERS
 
 _FILE_
-> CSV file to clean or validate.
+> CSV file to clean or validate. Reads from stdin if omitted.
 
-**-n**, **--dry-run**
-> Don't create output files, just report errors.
+**--length-mismatch**
+> Report rows that are shorter or longer than the header row.
+
+**--empty-columns**
+> Report empty columns as errors.
+
+**-a**, **--enable-all-checks**
+> Enable all error reporting checks.
+
+**--join-short-rows**
+> Merge consecutive short rows into a single row.
+
+**--separator** _SEPARATOR_
+> String used to join short rows (default: newline).
+
+**--fill-short-rows**
+> Fill short rows with missing values.
+
+**--fillvalue** _VALUE_
+> Value used to fill short rows (default: empty string).
+
+**--omit-error-rows**
+> Exclude rows containing errors from standard output.
+
+**--label** _LABEL_
+> Add a label column to error output for automated workflows.
+
+**--header-normalize-space**
+> Strip leading/trailing whitespace and normalize whitespace in headers.
 
 **-d** _CHAR_, **--delimiter** _CHAR_
 > Field delimiter (default: comma).
@@ -49,26 +80,35 @@ _FILE_
 **-q** _CHAR_, **--quotechar** _CHAR_
 > Quote character (default: double quote).
 
+**-p** _CHAR_, **--escapechar** _CHAR_
+> Escape character for the delimiter or quote character.
+
 **-e** _ENCODING_, **--encoding** _ENCODING_
 > Input file encoding.
 
-**--no-header-row**
+**-S**, **--no-header-row**
 > File has no header row.
 
-**-H**, **--no-inference**
-> Disable type inference.
+**-H**
+> Omit the header row from output.
+
+**-K** _N_, **--skip-lines** _N_
+> Skip the first N lines of the input file.
+
+**-v**
+> Verbose error output.
 
 # DESCRIPTION
 
-**csvclean** is part of csvkit that validates and cleans CSV files. It detects common problems like inconsistent column counts, stray quotes, and encoding issues, either reporting them or fixing them automatically.
+**csvclean** is part of csvkit that validates and cleans CSV files. It detects common problems like inconsistent column counts, empty columns, and encoding issues.
 
-When run without **-n**, it creates two output files: one with cleaned data and one with rows that had errors. This allows review of problematic rows without losing data. With **-n**, it only reports errors without creating files.
+Since csvkit 2.0, csvclean no longer reports or fixes errors by default. You must explicitly enable checks (such as **--length-mismatch** or **--empty-columns**) or fixes (such as **--join-short-rows** or **--fill-short-rows**). Output is written to standard output and errors to standard error.
 
-The tool handles various CSV dialects and can work with files using different delimiters, quote characters, and encodings. It's essential for preprocessing messy data before analysis.
+The tool handles various CSV dialects and can work with files using different delimiters, quote characters, and encodings. It is essential for preprocessing messy data before analysis.
 
 # CAVEATS
 
-Automatic cleaning may alter data in unexpected ways; review cleaned output carefully. Large files can be slow to process. Some edge cases in CSV formatting may not be detected. Original file is not modified.
+Automatic cleaning may alter data in unexpected ways; review cleaned output carefully. Since csvkit 2.0, running csvclean without any check or fix flags will produce an error. Original file is not modified.
 
 # HISTORY
 
@@ -76,4 +116,4 @@ csvclean is part of **csvkit**, created by Christopher Groskopf and first releas
 
 # SEE ALSO
 
-[csvstat](/man/csvstat)(1), [csvcut](/man/csvcut)(1), [csvlook](/man/csvlook)(1), [csvkit](/man/csvkit)(1)
+[csvstat](/man/csvstat)(1), [csvcut](/man/csvcut)(1), [csvlook](/man/csvlook)(1), [csvformat](/man/csvformat)(1), [csvgrep](/man/csvgrep)(1)

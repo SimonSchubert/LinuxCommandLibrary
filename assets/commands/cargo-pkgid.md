@@ -8,17 +8,21 @@ Print a fully qualified package specification
 
 ```cargo pkgid```
 
-**Show package ID for dependency**
+**Show package ID for a dependency**
 
 ```cargo pkgid [serde]```
 
-**Show package ID with version**
+**Show package ID for a specific version of a dependency**
 
 ```cargo pkgid [serde@1.0.0]```
 
-**Show package ID from URL**
+**Show package ID using a specific Cargo.toml**
 
-```cargo pkgid [https://github.com/serde-rs/serde#serde]```
+```cargo pkgid --manifest-path [path/to/Cargo.toml] [serde]```
+
+**Show package ID from a URL**
+
+```cargo pkgid [https://github.com/rust-lang/crates.io-index#serde]```
 
 # SYNOPSIS
 
@@ -38,22 +42,40 @@ This command is primarily useful when multiple versions of the same package exis
 **--manifest-path** _path_
 > Path to Cargo.toml
 
+**--locked**
+> Assert that the exact same dependencies and versions are used as when the existing Cargo.lock was generated
+
+**--offline**
+> Prevent Cargo from accessing the network
+
+**--frozen**
+> Equivalent to specifying both --locked and --offline
+
+**--color** _when_
+> Control colored output: auto (default), always, or never
+
 **-v**, **--verbose**
-> Verbose output
+> Verbose output. Specify twice for very verbose output.
 
 **-q**, **--quiet**
-> Suppress output
+> Do not print cargo log messages
 
 # SPEC FORMATS
 
 **name**
-> regex
+> bitflags
 
 **name@version**
-> regex@1.4.3
+> bitflags@1.0.4
+
+**url**
+> https://github.com/rust-lang/cargo
+
+**url#version**
+> https://github.com/rust-lang/cargo#0.33.0
 
 **url#name**
-> https://github.com/rust-lang/crates.io-index#foo
+> https://github.com/rust-lang/crates.io-index#bitflags
 
 **url#name@version**
 > https://github.com/rust-lang/cargo#crates-io@0.21.0
