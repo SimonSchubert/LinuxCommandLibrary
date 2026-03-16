@@ -2941,6 +2941,7 @@ gst-device-monitor-1.0.md
 gst-discoverer-1.0.md
 gst-inspect-1.0.md
 gst-launch-1.0.md
+gst-play-1.0.md
 gsutil.md
 gt.md
 gtf.md
