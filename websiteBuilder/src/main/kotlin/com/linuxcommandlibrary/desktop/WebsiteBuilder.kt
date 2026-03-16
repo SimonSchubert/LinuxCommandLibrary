@@ -114,7 +114,7 @@ fun main() {
 
 class WebsiteBuilder {
 
-    private val cacheVersion = 11
+    private val cacheVersion = 12
 
     /**
      * Get sorted list of command names from markdown files.

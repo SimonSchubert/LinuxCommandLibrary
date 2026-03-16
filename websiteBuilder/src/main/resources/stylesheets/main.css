@@ -276,7 +276,8 @@ font-size: 12px;
 
 #search {
 	background-image: url(/images/icon-search.svg);
-	background-position: 10px 12px;
+	background-position: 6px center;
+	background-size: 30px;
 	background-repeat: no-repeat;
 	font-size: 16px;
 	padding: 12px 20px 12px 40px;
