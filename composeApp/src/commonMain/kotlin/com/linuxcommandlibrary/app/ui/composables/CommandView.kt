@@ -23,6 +23,7 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import com.linuxcommandlibrary.app.NavEvent
 import com.linuxcommandlibrary.shared.CommandElement
 import com.linuxcommandlibrary.shared.platform.ShareHandler
 import kotlinx.collections.immutable.ImmutableList
@@ -32,7 +33,7 @@ import org.koin.compose.koinInject
 fun CommandView(
     command: String,
     elements: ImmutableList<CommandElement>,
-    onNavigate: (String) -> Unit = {},
+    onNavigate: (NavEvent) -> Unit = {},
     verticalPadding: Dp = 6.dp,
     searchText: String = "",
 ) {
@@ -56,7 +57,7 @@ fun CommandView(
                             LinkAnnotation.Clickable(
                                 tag = "man:${element.man}",
                                 linkInteractionListener = {
-                                    onNavigate("command?commandName=${element.man}")
+                                    onNavigate(NavEvent.ToCommand(element.man))
                                 },
                             ),
                             start,

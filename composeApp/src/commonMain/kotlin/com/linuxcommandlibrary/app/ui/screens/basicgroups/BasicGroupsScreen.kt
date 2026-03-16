@@ -17,6 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.pointer.PointerIcon
 import androidx.compose.ui.input.pointer.pointerHoverIcon
 import androidx.compose.ui.unit.dp
+import com.linuxcommandlibrary.app.NavEvent
 import com.linuxcommandlibrary.app.data.BasicCommand
 import com.linuxcommandlibrary.app.data.BasicGroup
 import com.linuxcommandlibrary.app.ui.composables.CommandView
@@ -34,7 +35,7 @@ import kotlinx.collections.immutable.toImmutableList
 @Composable
 fun BasicGroupsScreen(
     viewModel: BasicGroupsViewModel,
-    onNavigate: (String) -> Unit = {},
+    onNavigate: (NavEvent) -> Unit = {},
 ) {
     val uiState by viewModel.uiState.collectAsState()
 
@@ -66,7 +67,7 @@ fun BasicGroupColumn(
     searchText: String = "",
     isExpanded: Boolean,
     onToggleCollapse: () -> Unit,
-    onNavigate: (String) -> Unit = {},
+    onNavigate: (NavEvent) -> Unit = {},
     matchingBasicCommandIds: ImmutableSet<Long> = persistentSetOf(),
 ) {
     val painter = rememberIconPainter(basicGroup.getIconId())
@@ -104,7 +105,7 @@ fun BasicGroupColumn(
 @Composable
 private fun ExpandedGroupContent(
     commands: ImmutableList<BasicCommand>,
-    onNavigate: (String) -> Unit,
+    onNavigate: (NavEvent) -> Unit,
     searchText: String = "",
     matchingBasicCommandIds: ImmutableSet<Long> = persistentSetOf(),
 ) {

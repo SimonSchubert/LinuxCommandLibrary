@@ -18,6 +18,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.pointer.PointerIcon
 import androidx.compose.ui.input.pointer.pointerHoverIcon
+import com.linuxcommandlibrary.app.NavEvent
 import com.linuxcommandlibrary.app.data.CommandInfo
 import com.linuxcommandlibrary.app.ui.composables.AppIcon
 import com.linuxcommandlibrary.app.ui.composables.FastScrollBar
@@ -28,7 +29,7 @@ import com.linuxcommandlibrary.app.ui.theme.LocalCustomColors
 @Composable
 fun CommandListScreen(
     viewModel: CommandListViewModel,
-    onNavigate: (String) -> Unit,
+    onNavigate: (NavEvent) -> Unit,
 ) {
     val commands by viewModel.commands.collectAsState()
     val bookmarkedNames by viewModel.bookmarkedNames.collectAsState()
@@ -68,7 +69,7 @@ fun CommandListScreen(
 fun CommandListItem(
     command: CommandInfo,
     searchText: String = "",
-    onNavigate: (String) -> Unit,
+    onNavigate: (NavEvent) -> Unit,
     isBookmarked: Boolean,
 ) {
     val bookmarkPainter = rememberIconPainter(AppIcon.BOOKMARK)
@@ -94,7 +95,7 @@ fun CommandListItem(
             .pointerHoverIcon(PointerIcon.Hand)
             .clickable(
                 onClick = remember(command.name, onNavigate) {
-                    { onNavigate("command?commandName=${command.name}") }
+                    { onNavigate(NavEvent.ToCommand(command.name)) }
                 },
             ),
     )

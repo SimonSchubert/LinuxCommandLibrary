@@ -14,7 +14,7 @@ sealed class Route {
     data object Tips : Route()
 
     @Serializable
-    data class BasicGroups(val categoryId: String) : Route()
+    data class BasicGroups(val categoryId: String, val categoryTitle: String = "") : Route()
 
     @Serializable
     data class CommandDetail(val commandName: String) : Route()

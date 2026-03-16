@@ -17,6 +17,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.linuxcommandlibrary.app.NavEvent
 import com.linuxcommandlibrary.app.data.TipInfo
 import com.linuxcommandlibrary.app.ui.composables.SectionTitle
 import com.linuxcommandlibrary.app.ui.composables.TipSectionContent
@@ -25,7 +26,7 @@ import com.linuxcommandlibrary.app.ui.theme.LocalCustomColors
 @Composable
 fun TipsScreen(
     viewModel: TipsViewModel,
-    onNavigate: (String) -> Unit = {},
+    onNavigate: (NavEvent) -> Unit = {},
 ) {
     val tips by viewModel.tips.collectAsState()
 
@@ -47,7 +48,7 @@ fun TipsScreen(
 }
 
 @Composable
-private fun TipItemCard(tip: TipInfo, onNavigate: (String) -> Unit) {
+private fun TipItemCard(tip: TipInfo, onNavigate: (NavEvent) -> Unit) {
     Card(
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
         modifier = Modifier

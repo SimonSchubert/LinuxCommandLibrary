@@ -21,13 +21,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
+import com.linuxcommandlibrary.app.NavEvent
 import com.linuxcommandlibrary.shared.TextElement
 
 @Composable
 fun TableView(
     headers: List<List<TextElement>>,
     rows: List<List<List<TextElement>>>,
-    onNavigate: (String) -> Unit = {},
+    onNavigate: (NavEvent) -> Unit = {},
     modifier: Modifier = Modifier,
 ) {
     val textMeasurer = rememberTextMeasurer()
@@ -98,7 +99,7 @@ fun TableView(
                                             LinkAnnotation.Clickable(
                                                 tag = "man:${element.man}",
                                                 linkInteractionListener = {
-                                                    onNavigate("command?commandName=${element.man}")
+                                                    onNavigate(NavEvent.ToCommand(element.man))
                                                 },
                                             ),
                                             start,

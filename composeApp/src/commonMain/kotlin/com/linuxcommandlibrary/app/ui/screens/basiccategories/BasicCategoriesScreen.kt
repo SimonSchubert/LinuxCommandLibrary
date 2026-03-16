@@ -18,6 +18,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.pointer.PointerIcon
 import androidx.compose.ui.input.pointer.pointerHoverIcon
 import androidx.compose.ui.unit.dp
+import com.linuxcommandlibrary.app.NavEvent
 import com.linuxcommandlibrary.app.ui.composables.AppIcon
 import com.linuxcommandlibrary.app.ui.composables.getIconId
 import com.linuxcommandlibrary.app.ui.composables.rememberIconPainter
@@ -26,7 +27,7 @@ import com.linuxcommandlibrary.app.ui.theme.LocalCustomColors
 @Composable
 fun BasicCategoriesScreen(
     viewModel: BasicCategoriesViewModel,
-    onNavigate: (String) -> Unit,
+    onNavigate: (NavEvent) -> Unit,
 ) {
     val basicCategories by viewModel.basicCategories.collectAsState()
 
@@ -55,7 +56,7 @@ fun BasicCategoriesScreen(
                     .pointerHoverIcon(PointerIcon.Hand)
                     .clickable {
                         onNavigate(
-                            "basicgroups?categoryId=${basicCategory.id}&categoryName=${basicCategory.id}",
+                            NavEvent.ToBasicGroups(basicCategory.id, basicCategory.title),
                         )
                     },
             )

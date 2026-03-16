@@ -18,6 +18,7 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import com.linuxcommandlibrary.app.NavEvent
 import com.linuxcommandlibrary.shared.TextElement
 import com.linuxcommandlibrary.shared.TipSectionElement
 
@@ -25,7 +26,7 @@ fun buildTextElementString(
     elements: List<TextElement>,
     textColor: Color = Color.Unspecified,
     linkColor: Color = Color.Unspecified,
-    onNavigate: ((String) -> Unit)? = null,
+    onNavigate: ((NavEvent) -> Unit)? = null,
 ): AnnotatedString = buildAnnotatedString {
     elements.forEach { textElement ->
         when (textElement) {
@@ -62,7 +63,7 @@ fun buildTextElementString(
                         LinkAnnotation.Clickable(
                             tag = "action:${textElement.action}",
                             linkInteractionListener = {
-                                onNavigate("action:${textElement.action}")
+                                onNavigate(NavEvent.OpenAction(textElement.action))
                             },
                         ),
                         start,
@@ -81,7 +82,7 @@ fun buildTextElementString(
 @Composable
 fun TipSectionContent(
     sections: List<TipSectionElement>,
-    onNavigate: (String) -> Unit,
+    onNavigate: (NavEvent) -> Unit,
     textColor: Color = Color.Unspecified,
     commandVerticalPadding: Dp = 0.dp,
 ) {

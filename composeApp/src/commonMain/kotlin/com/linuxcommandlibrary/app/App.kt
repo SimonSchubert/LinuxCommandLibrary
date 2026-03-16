@@ -6,56 +6,17 @@ import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.Info
-import androidx.compose.material.icons.filled.Search
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.NavigationBar
-import androidx.compose.material3.NavigationBarItem
-import androidx.compose.material3.NavigationBarItemDefaults
-import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
-import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.MutableState
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.focus.FocusRequester
-import androidx.compose.ui.focus.focusRequester
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.input.pointer.PointerIcon
-import androidx.compose.ui.input.pointer.pointerHoverIcon
-import androidx.compose.ui.semantics.contentDescription
-import androidx.compose.ui.semantics.semantics
-import androidx.compose.ui.text.TextRange
-import androidx.compose.ui.text.input.TextFieldValue
-import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.unit.dp
-import androidx.navigation.NavController
 import androidx.navigation.NavDestination.Companion.hasRoute
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -64,12 +25,12 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
 import com.linuxcommandlibrary.app.data.BasicsRepository
 import com.linuxcommandlibrary.app.data.CommandsRepository
-import com.linuxcommandlibrary.app.platform.backIcon
 import com.linuxcommandlibrary.app.platform.rememberOpenAppAction
-import com.linuxcommandlibrary.app.ui.composables.AppIcon
-import com.linuxcommandlibrary.app.ui.composables.rememberIconPainter
-import com.linuxcommandlibrary.app.ui.screens.AppInfoDialog
-import com.linuxcommandlibrary.app.ui.screens.BookmarkFeedbackDialog
+import com.linuxcommandlibrary.app.ui.composables.BottomBar
+import com.linuxcommandlibrary.app.ui.composables.DetailTopBar
+import com.linuxcommandlibrary.app.ui.composables.GenericTopBar
+import com.linuxcommandlibrary.app.ui.composables.SearchTopBar
+import com.linuxcommandlibrary.app.ui.composables.rememberSearchState
 import com.linuxcommandlibrary.app.ui.screens.basiccategories.BasicCategoriesScreen
 import com.linuxcommandlibrary.app.ui.screens.basiccategories.BasicCategoriesViewModel
 import com.linuxcommandlibrary.app.ui.screens.basicgroups.BasicEditorScreen
@@ -126,57 +87,34 @@ fun LinuxApp(initialDeeplink: String? = null) {
         parseDeeplink(initialDeeplink) ?: Route.Basics
     }
 
-    val searchTextValue = rememberSaveable(stateSaver = TextFieldValue.Saver) {
-        mutableStateOf(TextFieldValue(text = "", selection = TextRange(0)))
-    }
-    val showSearch = rememberSaveable { mutableStateOf(false) }
+    val searchState = rememberSearchState()
 
     val openAppAction = rememberOpenAppAction()
-    val onNavigate: (String) -> Unit = remember(navController, openAppAction) {
-        { route ->
-            if (route.startsWith("action:")) {
-                openAppAction(route.removePrefix("action:"))
-            } else {
-                val dest = parseRoute(route)
-                if (dest != null) {
-                    navController.navigate(dest)
-                }
+    val onNavigate: (NavEvent) -> Unit = remember(navController, openAppAction) {
+        { event ->
+            when (event) {
+                is NavEvent.ToCommand -> navController.navigate(Route.CommandDetail(event.commandName))
+                is NavEvent.ToBasicGroups -> navController.navigate(Route.BasicGroups(event.categoryId, event.categoryTitle))
+                is NavEvent.OpenAction -> openAppAction(event.action)
             }
-        }
-    }
-
-    val resetSearch: () -> Unit = remember {
-        {
-            searchTextValue.value = TextFieldValue(text = "", selection = TextRange(0))
-            showSearch.value = false
         }
     }
 
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = navBackStackEntry?.destination
 
-    // Determine current destination type for UI purposes
     val isOnBasics = currentRoute?.hasRoute<Route.Basics>() == true
     val isOnCommands = currentRoute?.hasRoute<Route.Commands>() == true
     val isOnTips = currentRoute?.hasRoute<Route.Tips>() == true
     val isOnBasicGroups = currentRoute?.hasRoute<Route.BasicGroups>() == true
     val isOnCommandDetail = currentRoute?.hasRoute<Route.CommandDetail>() == true
 
-    // Get current command name for detail screen
     val currentCommandName = if (isOnCommandDetail) {
         navBackStackEntry?.toRoute<Route.CommandDetail>()?.commandName
     } else {
         null
     }
 
-    // Get current category id for basic groups screen
-    val currentCategoryId = if (isOnBasicGroups) {
-        navBackStackEntry?.toRoute<Route.BasicGroups>()?.categoryId
-    } else {
-        null
-    }
-
-    // Create CommandDetailViewModel at this level so it can be shared between TopBar and Screen
     val commandDetailViewModel: CommandDetailViewModel? = currentCommandName?.let {
         koinInject { parametersOf(it) }
     }
@@ -187,10 +125,7 @@ fun LinuxApp(initialDeeplink: String? = null) {
                 isOnCommands || isOnBasics -> {
                     SearchTopBar(
                         title = if (isOnBasics) "Basics" else "Commands",
-                        textFieldValue = searchTextValue,
-                        isSearchVisible = showSearch.value,
-                        hideSearch = { showSearch.value = false },
-                        showSearch = { showSearch.value = true },
+                        searchState = searchState,
                     )
                 }
 
@@ -199,7 +134,7 @@ fun LinuxApp(initialDeeplink: String? = null) {
                         DetailTopBar(
                             commandName = currentCommandName,
                             viewModel = viewModel,
-                            navController = navController,
+                            onBack = { navController.popBackStack() },
                         )
                     }
                 }
@@ -209,10 +144,7 @@ fun LinuxApp(initialDeeplink: String? = null) {
                         isOnTips -> "Tips"
 
                         isOnBasicGroups -> {
-                            val basicsRepository: BasicsRepository = koinInject()
-                            val categories = basicsRepository.getCategories()
-                            val category = categories.firstOrNull { it.id == currentCategoryId }
-                            category?.title ?: "Not found"
+                            navBackStackEntry?.toRoute<Route.BasicGroups>()?.categoryTitle ?: ""
                         }
 
                         else -> ""
@@ -222,7 +154,7 @@ fun LinuxApp(initialDeeplink: String? = null) {
                     GenericTopBar(
                         title = title,
                         showBackIcon = showBackIcon,
-                        navController = navController,
+                        onBack = { navController.popBackStack() },
                         showAppInfoIcon = showAppInfoIcon,
                     )
                 }
@@ -230,20 +162,16 @@ fun LinuxApp(initialDeeplink: String? = null) {
         },
         bottomBar = {
             BottomBar(
-                isOnBasics = isOnBasics,
-                isOnBasicGroups = isOnBasicGroups,
-                isOnCommands = isOnCommands,
-                isOnTips = isOnTips,
+                currentDestination = currentRoute,
                 onSelectTab = { route ->
                     navController.navigate(route) {
-                        // Pop up to the start destination to avoid building up a large stack
                         popUpTo(navController.graph.startDestinationId) {
                             saveState = true
                         }
                         launchSingleTop = true
                         restoreState = true
                     }
-                    resetSearch()
+                    searchState.clear()
                 },
             )
         },
@@ -290,7 +218,7 @@ fun LinuxApp(initialDeeplink: String? = null) {
                 }
             }
 
-            val isSearchVisible = searchTextValue.value.text.isNotEmpty() && !isOnCommandDetail
+            val isSearchVisible = searchState.searchText.isNotEmpty() && !isOnCommandDetail
             AnimatedVisibility(
                 visible = isSearchVisible,
                 enter = fadeIn(animationSpec = tween(300)),
@@ -299,7 +227,7 @@ fun LinuxApp(initialDeeplink: String? = null) {
                 Box(modifier = Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background)) {
                     val searchViewModel: SearchViewModel = koinInject()
                     SearchScreen(
-                        searchText = searchTextValue.value.text,
+                        searchText = searchState.searchText,
                         viewModel = searchViewModel,
                         onNavigate = onNavigate,
                     )
@@ -307,26 +235,6 @@ fun LinuxApp(initialDeeplink: String? = null) {
             }
         }
     }
-}
-
-private fun parseRoute(route: String): Route? = when {
-    route == "basics" -> Route.Basics
-
-    route == "commands" -> Route.Commands
-
-    route == "tips" -> Route.Tips
-
-    route.startsWith("basicgroups?") -> {
-        val categoryId = route.substringAfter("categoryId=").substringBefore("&")
-        Route.BasicGroups(categoryId)
-    }
-
-    route.startsWith("command?") -> {
-        val commandName = route.substringAfter("commandName=")
-        Route.CommandDetail(commandName)
-    }
-
-    else -> null
 }
 
 private fun parseDeeplink(url: String?): Route? {
@@ -344,296 +252,11 @@ private fun parseDeeplink(url: String?): Route? {
 
         url.contains("/basic/") -> {
             val categoryId = url.substringAfterLast("/basic/").removeSuffix(".html")
-            Route.BasicGroups(categoryId)
+            Route.BasicGroups(categoryId, categoryId)
         }
 
         url.endsWith("/") || url.endsWith("/index.html") -> Route.Commands
 
         else -> null
-    }
-}
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-private fun GenericTopBar(
-    title: String,
-    showBackIcon: Boolean,
-    navController: NavController,
-    showAppInfoIcon: Boolean,
-) {
-    var showDialog by remember { mutableStateOf(false) }
-
-    TopAppBar(
-        expandedHeight = 56.dp,
-        title = {
-            Text(
-                title,
-                modifier = Modifier.semantics { contentDescription = "TopAppBarTitle" },
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-            )
-        },
-        colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = LocalCustomColors.current.topBarBackground,
-            titleContentColor = LocalCustomColors.current.topBarContent,
-            navigationIconContentColor = LocalCustomColors.current.topBarContent,
-            actionIconContentColor = LocalCustomColors.current.topBarContent,
-        ),
-        navigationIcon = {
-            if (showBackIcon) {
-                IconButton(
-                    modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
-                    onClick = { navController.popBackStack() },
-                ) {
-                    Icon(
-                        imageVector = backIcon,
-                        contentDescription = "Back",
-                    )
-                }
-            }
-        },
-        actions = {
-            if (showAppInfoIcon) {
-                IconButton(
-                    modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
-                    onClick = { showDialog = true },
-                ) {
-                    Icon(
-                        imageVector = Icons.Filled.Info,
-                        contentDescription = "Info",
-                    )
-                }
-            }
-        },
-    )
-    if (showDialog) {
-        AppInfoDialog(onDismiss = { showDialog = false })
-    }
-}
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-private fun DetailTopBar(
-    commandName: String,
-    viewModel: CommandDetailViewModel,
-    navController: NavController,
-) {
-    val uiState by viewModel.state.collectAsState()
-    val isAllExpanded by remember { derivedStateOf { uiState.isAllExpanded() } }
-
-    val expandAllPainter = rememberIconPainter(AppIcon.EXPAND_ALL)
-    val collapseAllPainter = rememberIconPainter(AppIcon.COLLAPSE_ALL)
-    val bookmarkPainter = rememberIconPainter(AppIcon.BOOKMARK)
-    val bookmarkBorderPainter = rememberIconPainter(AppIcon.BOOKMARK_BORDER)
-
-    TopAppBar(
-        expandedHeight = 56.dp,
-        title = {
-            Text(
-                commandName,
-                modifier = Modifier.semantics { contentDescription = "TopAppBarTitle" },
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-            )
-        },
-        colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = LocalCustomColors.current.topBarBackground,
-            titleContentColor = LocalCustomColors.current.topBarContent,
-            navigationIconContentColor = LocalCustomColors.current.topBarContent,
-            actionIconContentColor = LocalCustomColors.current.topBarContent,
-        ),
-        navigationIcon = {
-            IconButton(
-                modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
-                onClick = { navController.popBackStack() },
-            ) {
-                Icon(
-                    imageVector = backIcon,
-                    contentDescription = "Back",
-                )
-            }
-        },
-        actions = {
-            IconButton(
-                modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
-                onClick = { viewModel.onToggleAllExpanded() },
-            ) {
-                val painter = if (isAllExpanded) collapseAllPainter else expandAllPainter
-                Icon(
-                    painter = painter,
-                    contentDescription = if (isAllExpanded) "Collapse all" else "Expand all",
-                )
-            }
-            IconButton(
-                modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
-                onClick = {
-                    if (uiState.isBookmarked) viewModel.removeBookmark() else viewModel.addBookmark()
-                },
-            ) {
-                val painter = if (uiState.isBookmarked) bookmarkPainter else bookmarkBorderPainter
-                Icon(
-                    painter = painter,
-                    contentDescription = if (uiState.isBookmarked) "Remove bookmark" else "Add bookmark",
-                )
-            }
-        },
-    )
-
-    if (uiState.showBookmarkDialog) {
-        BookmarkFeedbackDialog(onDismiss = { viewModel.hideBookmarkDialog() })
-    }
-}
-
-@Composable
-private fun SearchTopBar(
-    title: String,
-    textFieldValue: MutableState<TextFieldValue>,
-    isSearchVisible: Boolean,
-    hideSearch: () -> Unit,
-    showSearch: () -> Unit,
-) {
-    val focusRequester = remember { FocusRequester() }
-
-    val topBarContent = LocalCustomColors.current.topBarContent
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .background(LocalCustomColors.current.topBarBackground)
-            .heightIn(min = 56.dp)
-            .padding(horizontal = 4.dp),
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        if (isSearchVisible) {
-            IconButton(
-                modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
-                onClick = {
-                    hideSearch()
-                    textFieldValue.value = TextFieldValue("")
-                },
-            ) {
-                Icon(
-                    imageVector = backIcon,
-                    contentDescription = "Back",
-                    tint = topBarContent,
-                )
-            }
-            OutlinedTextField(
-                value = textFieldValue.value,
-                onValueChange = { textFieldValue.value = it },
-                modifier = Modifier
-                    .weight(1f)
-                    .focusRequester(focusRequester)
-                    .padding(start = 8.dp, end = 8.dp),
-                placeholder = { Text("Search...", color = topBarContent.copy(alpha = 0.7f)) },
-                textStyle = MaterialTheme.typography.titleMedium.copy(color = topBarContent),
-                colors = OutlinedTextFieldDefaults.colors(
-                    focusedTextColor = topBarContent,
-                    unfocusedTextColor = topBarContent,
-                    cursorColor = topBarContent,
-                    focusedBorderColor = Color.Transparent,
-                    unfocusedBorderColor = Color.Transparent,
-                    disabledBorderColor = Color.Transparent,
-                    focusedContainerColor = Color.Transparent,
-                    unfocusedContainerColor = Color.Transparent,
-                    focusedTrailingIconColor = topBarContent,
-                    unfocusedTrailingIconColor = topBarContent,
-                    focusedPlaceholderColor = topBarContent.copy(alpha = 0.7f),
-                    unfocusedPlaceholderColor = topBarContent.copy(alpha = 0.7f),
-                ),
-                maxLines = 1,
-                singleLine = true,
-            )
-            if (textFieldValue.value.text.isNotEmpty()) {
-                IconButton(
-                    modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
-                    onClick = { textFieldValue.value = TextFieldValue("") },
-                ) {
-                    Icon(
-                        imageVector = Icons.Filled.Close,
-                        contentDescription = "Clear",
-                        tint = topBarContent,
-                    )
-                }
-            }
-        } else {
-            Text(
-                title,
-                modifier = Modifier
-                    .weight(1f)
-                    .padding(start = 16.dp)
-                    .semantics { contentDescription = "TopAppBarTitle" },
-                style = MaterialTheme.typography.titleLarge,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-                color = topBarContent,
-            )
-            IconButton(
-                modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
-                onClick = showSearch,
-            ) {
-                Icon(
-                    imageVector = Icons.Filled.Search,
-                    contentDescription = "Search",
-                    tint = topBarContent,
-                )
-            }
-        }
-    }
-
-    LaunchedEffect(isSearchVisible) {
-        if (isSearchVisible) {
-            focusRequester.requestFocus()
-        }
-    }
-}
-
-@Composable
-private fun BottomBar(
-    isOnBasics: Boolean,
-    isOnBasicGroups: Boolean,
-    isOnCommands: Boolean,
-    isOnTips: Boolean,
-    onSelectTab: (Route) -> Unit,
-) {
-    NavigationBar(
-        modifier = Modifier.height(64.dp),
-        containerColor = LocalCustomColors.current.navBarBackground,
-        tonalElevation = 0.dp,
-    ) {
-        bottomBarItems.forEach { screen ->
-            val painter = rememberIconPainter(screen.icon)
-            val isSelected = when (screen) {
-                Screen.Basics -> isOnBasics || isOnBasicGroups
-                Screen.Commands -> isOnCommands
-                Screen.Tips -> isOnTips
-            }
-            NavigationBarItem(
-                modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
-                icon = {
-                    Icon(
-                        painter = painter,
-                        contentDescription = null,
-                        modifier = Modifier.size(24.dp),
-                    )
-                },
-                label = { Text(screen.titleRes) },
-                selected = isSelected,
-                colors = NavigationBarItemDefaults.colors(
-                    selectedIconColor = MaterialTheme.colorScheme.primary,
-                    selectedTextColor = MaterialTheme.colorScheme.primary,
-                    unselectedIconColor = MaterialTheme.colorScheme.onSurface,
-                    unselectedTextColor = MaterialTheme.colorScheme.onSurface,
-                    indicatorColor = Color.Transparent,
-                ),
-                onClick = {
-                    val route = when (screen) {
-                        Screen.Basics -> Route.Basics
-                        Screen.Commands -> Route.Commands
-                        Screen.Tips -> Route.Tips
-                    }
-                    onSelectTab(route)
-                },
-            )
-        }
     }
 }

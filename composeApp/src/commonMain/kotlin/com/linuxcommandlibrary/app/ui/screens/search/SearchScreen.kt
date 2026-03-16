@@ -17,6 +17,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import com.linuxcommandlibrary.app.NavEvent
 import com.linuxcommandlibrary.app.ui.screens.commandlist.CommandListItem
 import com.linuxcommandlibrary.app.ui.theme.LocalCustomColors
 
@@ -24,7 +25,7 @@ import com.linuxcommandlibrary.app.ui.theme.LocalCustomColors
 fun SearchScreen(
     searchText: String,
     viewModel: SearchViewModel,
-    onNavigate: (String) -> Unit,
+    onNavigate: (NavEvent) -> Unit,
 ) {
     val uiState by viewModel.uiState.collectAsState()
 

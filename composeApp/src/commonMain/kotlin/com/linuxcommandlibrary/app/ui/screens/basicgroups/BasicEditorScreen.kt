@@ -17,6 +17,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.linuxcommandlibrary.app.NavEvent
 import com.linuxcommandlibrary.app.ui.composables.SectionTitle
 import com.linuxcommandlibrary.app.ui.composables.TipSectionContent
 import com.linuxcommandlibrary.shared.BasicGroup
@@ -24,7 +25,7 @@ import com.linuxcommandlibrary.shared.BasicGroup
 @Composable
 fun BasicEditorScreen(
     viewModel: BasicEditorViewModel,
-    onNavigate: (String) -> Unit = {},
+    onNavigate: (NavEvent) -> Unit = {},
 ) {
     val groups by viewModel.groups.collectAsState()
 
@@ -46,7 +47,7 @@ fun BasicEditorScreen(
 }
 
 @Composable
-private fun EditorGroupCard(group: BasicGroup, onNavigate: (String) -> Unit) {
+private fun EditorGroupCard(group: BasicGroup, onNavigate: (NavEvent) -> Unit) {
     Card(
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
         modifier = Modifier

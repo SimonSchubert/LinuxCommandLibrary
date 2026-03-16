@@ -27,6 +27,7 @@ import androidx.compose.ui.input.pointer.pointerHoverIcon
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.linuxcommandlibrary.app.NavEvent
 import com.linuxcommandlibrary.app.data.CommandSectionInfo
 import com.linuxcommandlibrary.app.ui.composables.TipSectionContent
 import com.linuxcommandlibrary.app.ui.theme.LocalCustomColors
@@ -36,7 +37,7 @@ import kotlinx.collections.immutable.ImmutableList
 @Composable
 fun CommandDetailScreen(
     viewModel: CommandDetailViewModel,
-    onNavigate: (String) -> Unit,
+    onNavigate: (NavEvent) -> Unit,
 ) {
     val uiState by viewModel.state.collectAsState()
 
@@ -67,7 +68,7 @@ private fun CommandSectionColumn(
     isExpanded: Boolean,
     seeAlsoCommands: ImmutableList<String>,
     onToggleExpanded: (Long) -> Unit,
-    onNavigate: (String) -> Unit,
+    onNavigate: (NavEvent) -> Unit,
 ) {
     ListItem(
         headlineContent = {
@@ -101,7 +102,7 @@ private fun CommandSectionColumn(
 private fun SeeAlsoSectionContent(
     content: String,
     seeAlsoCommands: ImmutableList<String>,
-    onNavigate: (String) -> Unit,
+    onNavigate: (NavEvent) -> Unit,
 ) {
     if (seeAlsoCommands.isNotEmpty()) {
         FlowRow(
@@ -112,7 +113,7 @@ private fun SeeAlsoSectionContent(
                 SuggestionChip(
                     modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
                     onClick = {
-                        onNavigate("command?commandName=$name")
+                        onNavigate(NavEvent.ToCommand(name))
                     },
                     label = {
                         Text(
@@ -129,7 +130,7 @@ private fun SeeAlsoSectionContent(
 }
 
 @Composable
-private fun DefaultSectionContent(content: String, onNavigate: (String) -> Unit = {}) {
+private fun DefaultSectionContent(content: String, onNavigate: (NavEvent) -> Unit = {}) {
     val parsedSections = remember(content) {
         MarkdownParser.parseMarkdownContent(content)
     }
