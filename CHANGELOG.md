@@ -1,3 +1,22 @@
+## v3.7.0 — 2026-03-17
+
+### Features
+- Replace share with copy on desktop
+- Add new commands
+
+### Fixes
+- Fix details UI for Shell scripting, tmux, and regular expressions
+- Fix double navigation on rapid taps
+- Fix iOS safe area spacing and theme colors
+- Fix web search icon position
+
+### Improvements
+- Upgrade Koin and Kotlin 2.3.20
+- Improve command detail and content quality
+- Faster back navigation
+- Improve compose navigation logic
+- Code quality improvements
+
 ## v3.6.2 — 2026-03-15
 
 ### Features

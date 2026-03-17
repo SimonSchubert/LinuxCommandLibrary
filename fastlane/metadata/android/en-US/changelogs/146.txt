@@ -1,0 +1,10 @@
+Replace share with copy on desktop
+Add new commands
+Fix details UI for Shell scripting, tmux, and regular expressions
+Fix double navigation on rapid taps
+Fix iOS safe area spacing and theme colors
+Fix web search icon position
+Upgrade Koin and Kotlin 2.3.20
+Improve command detail and content quality
+Faster back navigation
+Improve compose navigation logic
