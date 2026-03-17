@@ -1,6 +1,6 @@
 # TAGLINE
 
-Sourcegraph AI coding assistant CLI
+Sourcegraph Cody AI coding assistant CLI
 
 # TLDR
 
@@ -10,17 +10,17 @@ Sourcegraph AI coding assistant CLI
 
 **Send a chat message**
 
-```cody chat -m "Explain React hooks"```
+```cody chat -m "[Explain React hooks]"```
 
 **Ask about a local file**
 
-```cody chat --context-file [src/app.ts] -m "Are there code smells here?"```
+```cody chat --context-file [src/app.ts] -m "[Are there code smells here?]"```
 
-**Use a remote repository** as context
+**Use a remote repository as context**
 
 ```cody chat --context-repo [github.com/owner/repo] -m "[question]"```
 
-**Generate commit message** from git diff
+**Generate a commit message from git diff**
 
 ```git diff | cody chat --stdin -m "Write a commit message for this diff"```
 
@@ -32,39 +32,34 @@ Sourcegraph AI coding assistant CLI
 
 **cody** _command_ [_options_]
 
-# COMMANDS
-
-**auth login** [**--web**]
-> Authenticate with Sourcegraph. Use --web for browser-based login.
-
-**auth logout**
-> Sign out and remove stored access token.
-
-**auth whoami**
-> Display current authentication status.
-
-**chat** [**-m** _message_]
-> Send a message to Cody AI assistant.
-
-**help**
-> Display help information.
-
 # PARAMETERS
 
 **-m**, **--message** _text_
 > Message to send to Cody.
 
 **--context-file** _path_
-> Include local file as context for the query.
+> Include a local file as context for the query.
 
 **--context-repo** _repository_
-> Include remote repository as context (e.g., github.com/owner/repo).
+> Include a remote repository as context (e.g. github.com/owner/repo).
 
 **--stdin**
 > Read input from standard input.
 
 **--model** _model_
-> Specify LLM model (e.g., claude-3.5-sonnet).
+> Specify LLM model (e.g. claude-3.5-sonnet).
+
+**auth login** [**--web**]
+> Authenticate with Sourcegraph. Use **--web** for browser-based login.
+
+**auth logout**
+> Sign out and remove stored access token.
+
+**auth whoami**
+> Display current authentication status and account info.
+
+**chat** [**-m** _message_]
+> Send a message to Cody AI assistant.
 
 # DESCRIPTION
 
@@ -78,7 +73,7 @@ Authentication credentials are stored securely in the operating system's credent
 
 # CAVEATS
 
-Requires Node.js v20 or newer. The CLI is marked as experimental and requires a Sourcegraph account. Starting **July 2025**, Cody Free and Pro plans were discontinued; users are directed to Amp (ampcode.com) as an alternative. Enterprise accounts continue to have access.
+Requires Node.js v20 or newer. The CLI is marked as experimental and requires a Sourcegraph Enterprise account. Starting **July 2025**, Cody Free and Pro plans were discontinued; users are directed to Amp (ampcode.com) as an alternative.
 
 # HISTORY
 

@@ -4,42 +4,68 @@ Display YubiKey device information
 
 # TLDR
 
-**Show YubiKey info**
+**Show all YubiKey information**
 
 ```ykinfo -a```
 
-**Show serial number**
+**Show serial number in decimal**
 
 ```ykinfo -s```
 
-**Show version**
+**Show serial number in hex**
+
+```ykinfo -H```
+
+**Show firmware version**
 
 ```ykinfo -v```
 
-**Show capabilities**
+**Check if slot 1 is programmed**
 
-```ykinfo -c```
+```ykinfo -1```
+
+**Show capabilities (quiet mode for scripting)**
+
+```ykinfo -c -q```
 
 # SYNOPSIS
 
-**ykinfo** [_-a_] [_-s_] [_-v_] [_-c_] [_options_]
+**ykinfo** [_options_]
 
 # PARAMETERS
 
 **-a**
-> All information.
+> Show all available information.
 
 **-s**
-> Serial number.
+> Serial number in decimal.
+
+**-m**
+> Serial number in modhex.
+
+**-H**
+> Serial number in hex.
 
 **-v**
 > Firmware version.
+
+**-t**
+> Touch level.
+
+**-p**
+> Programming sequence.
+
+**-1**
+> Check if slot 1 is programmed.
+
+**-2**
+> Check if slot 2 is programmed.
 
 **-c**
 > Capabilities.
 
 **-q**
-> Quiet mode.
+> Quiet mode; output values without labels.
 
 # DESCRIPTION
 
@@ -51,7 +77,7 @@ When multiple YubiKeys are connected, the tool can select a specific device by s
 
 # CAVEATS
 
-YubiKey required. USB connection. Part of yubikey-personalization.
+Requires a YubiKey connected via USB. Part of the **yubikey-personalization** package. The yubikey-personalization project is in maintenance mode; **ykman** is the recommended tool for newer YubiKeys.
 
 # HISTORY
 

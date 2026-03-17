@@ -1,32 +1,40 @@
 # TAGLINE
 
-Zapier integration development CLI
+Zapier Platform CLI for building integrations
 
 # TLDR
 
-**Login**
+**Authenticate with Zapier**
 
 ```zapier login```
 
-**Initialize project**
+**Initialize a new integration project**
 
 ```zapier init [project-name]```
 
-**Push integration**
+**Push integration code to Zapier**
 
 ```zapier push```
 
-**Test integration**
+**Run integration tests locally**
 
 ```zapier test```
 
-**Validate**
+**Validate the integration against Zapier's schema**
 
 ```zapier validate```
 
-**Deploy**
+**Promote a version to public access**
 
-```zapier promote [version]```
+```zapier promote [1.0.0] [100]```
+
+**View logs for the integration**
+
+```zapier logs```
+
+**Invoke a trigger or action locally for testing**
+
+```zapier invoke [trigger] [trigger_key]```
 
 # SYNOPSIS
 
@@ -35,38 +43,68 @@ Zapier integration development CLI
 # PARAMETERS
 
 **login**
-> Authenticate.
+> Authenticate with Zapier.
+
+**logout**
+> Deauthenticate from Zapier.
 
 **init**
-> Create project.
+> Create a new integration project.
+
+**scaffold**
+> Scaffold a new trigger, action, or search.
 
 **push**
-> Upload code.
+> Upload the current integration to Zapier.
 
 **test**
-> Run tests.
+> Run integration tests locally.
 
 **validate**
-> Check integration.
+> Check integration against Zapier's schema.
 
 **promote**
-> Deploy version.
+> Promote a version to public access.
+
+**describe**
+> Describe the current integration.
+
+**logs**
+> View recent logs for the integration.
+
+**env:set**
+> Set environment variables for a version.
+
+**env:get**
+> Get environment variables for a version.
+
+**invoke**
+> Invoke a trigger, action, or search locally.
+
+**register**
+> Register a new integration on Zapier.
+
+**build**
+> Build a pushable zip from the current directory.
+
+**versions**
+> List the versions of the current integration.
 
 # DESCRIPTION
 
-**zapier** is the official command-line interface for developing integrations on the Zapier automation platform. It provides tools for creating, testing, validating, and deploying custom integrations that connect third-party applications.
+**zapier** is the official command-line interface for developing integrations on the Zapier automation platform. It provides tools for creating, testing, validating, and deploying custom integrations that connect third-party applications using JavaScript.
 
-The development workflow starts with **zapier init** to scaffold a new project, followed by defining triggers, actions, and searches in JavaScript. The **test** command runs integration tests locally, and **validate** checks the integration against Zapier's schema requirements before deployment.
+The development workflow starts with **zapier init** to scaffold a new project, followed by defining triggers, actions, and searches in JavaScript (Node.js v22). The **test** command runs integration tests locally, **invoke** lets you test triggers and actions from the terminal, and **validate** checks the integration against Zapier's schema requirements before deployment.
 
-Once ready, **zapier push** uploads the integration to Zapier's platform where it becomes available for users to incorporate into their automated workflows. The **promote** command makes a specific version publicly available.
+Once ready, **zapier push** uploads the integration to Zapier's platform. The **promote** command makes a specific version publicly available. Environment variables for deployed versions are managed with the **env:set** and **env:get** commands.
 
 # CAVEATS
 
-Zapier account required. Node.js needed. Platform-specific.
+Zapier account required. Node.js required (integrations run on Node.js v22). Installed via `npm install -g zapier-platform-cli`.
 
 # HISTORY
 
-**zapier** CLI was created for building integrations on the **Zapier** automation platform.
+The **zapier** CLI was created by **Zapier** as the developer tool for building integrations on their automation platform. It replaced the earlier visual builder approach, giving developers a code-first workflow using JavaScript and Node.js.
 
 # SEE ALSO
 

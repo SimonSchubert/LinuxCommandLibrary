@@ -1,6 +1,6 @@
 # TAGLINE
 
-runs Postman collections from CLI
+Run Postman collections from the command line
 
 # TLDR
 
@@ -39,35 +39,59 @@ runs Postman collections from CLI
 # PARAMETERS
 
 _COLLECTION_
-> Postman collection file or URL.
+> Postman collection file path or URL.
 
-**-e** _ENV_
-> Environment file.
+**-e** _FILE_
+> Specify an environment file.
+
+**-g** _FILE_
+> Specify a globals file.
 
 **--folder** _NAME_
-> Run specific folder.
+> Run only a specific folder from the collection.
 
 **-r** _REPORTERS_
-> Reporter types.
+> Comma-separated reporter types (cli, json, junit, html).
 
 **-n** _COUNT_
-> Iteration count.
+> Number of iterations to run.
 
 **-d** _FILE_
-> Data file for iterations.
+> Data file (CSV or JSON) for iteration variables.
+
+**--global-var** _KEY=VALUE_
+> Set a global variable via the command line (repeatable).
+
+**--env-var** _KEY=VALUE_
+> Set an environment variable via the command line (repeatable).
+
+**--bail**
+> Stop the run on the first test failure.
+
+**--timeout** _MS_
+> Time in milliseconds to wait for the entire collection run to complete.
+
+**--timeout-request** _MS_
+> Time in milliseconds to wait for each request.
+
+**-x**, **--suppress-exit-code**
+> Override the default exit code for the run.
+
+**--color** _VALUE_
+> Control color output: on, off, or auto (default).
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**newman** runs Postman collections from CLI. It automates API testing.
+**newman** is the command-line companion for Postman that runs exported collections, enabling automated API testing. It executes all requests in a collection sequentially, running pre-request scripts and tests, and reports results.
 
-The tool executes request collections. Supports CI/CD integration.
+Newman integrates with CI/CD pipelines to automate API testing. It supports data-driven testing through CSV/JSON files, multiple reporters for output formatting, and environment/global variable management.
 
 # CAVEATS
 
-Node.js based. Requires Postman collections. Export formats vary.
+Requires Node.js. Collections must be exported from Postman in JSON format. The HTML reporter requires an additional npm package (newman-reporter-html). Collection v1 format is deprecated; use v2 or later.
 
 # HISTORY
 
@@ -75,5 +99,5 @@ Newman was created by **Postman** to enable command-line execution of API collec
 
 # SEE ALSO
 
-[curl](/man/curl)(1), [httpie](/man/httpie)(1), [postman](/man/postman)(1)
+[curl](/man/curl)(1), [httpie](/man/httpie)(1), [postman](/man/postman)(1), [npm](/man/npm)(1)
 

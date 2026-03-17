@@ -168,8 +168,8 @@ Requires authentication via Anthropic API key or active Claude subscription. Com
 
 # HISTORY
 
-Claude Code was released by **Anthropic** in **February 2025** as part of their developer tools initiative. It represents a shift toward AI-assisted development workflows, building on Claude's code understanding capabilities to provide an agentic terminal experience. By **December 2025**, Anthropic launched an official plugin marketplace with curated extensions. The tool continues active development with regular updates adding features like async sub-agents, Chrome integration, and enhanced MCP support.
+Claude Code was released by **Anthropic** in **February 2025** as part of their developer tools initiative. It represents a shift toward AI-assisted development workflows, building on Claude's code understanding capabilities to provide an agentic terminal experience. The tool continues active development with regular updates adding features like sub-agents, Chrome integration, and MCP support.
 
 # SEE ALSO
 
-[copilot](/man/copilot)(1), [grok](/man/grok)(1), [gh](/man/gh)(1), [git](/man/git)(1)
+[copilot](/man/copilot)(1), [gh](/man/gh)(1), [git](/man/git)(1)

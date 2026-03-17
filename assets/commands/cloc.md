@@ -50,7 +50,7 @@ source code line counter
 
 The tool includes a diff mode that compares two codebases and reports added, removed, modified, and unchanged lines. Output can be generated in plain text, CSV, JSON, SQL, or XML format for integration with other tools and reporting systems.
 
-Written in Perl with no external dependencies, cloc is easy to install and runs on any platform with a Perl interpreter. It correctly handles multi-language files and uses language-specific comment detection rules for accurate counting.
+Written in Perl with no external module dependencies, cloc is easy to install and runs on any platform with a Perl interpreter. It correctly handles multi-language files and uses language-specific comment detection rules for accurate counting. It can also operate on git repositories directly, comparing branches or commits.
 
 # PARAMETERS
 
@@ -81,29 +81,48 @@ Written in Perl with no external dependencies, cloc is easy to install and runs 
 **--include-lang**=_list_
 > Only count specified languages
 
+**--include-ext**=_list_
+> Only count files with the given comma-separated extensions.
+
 **--max-file-size**=_MB_
-> Skip files larger than MB (default: 100)
+> Skip files larger than _MB_ megabytes (default: 100).
 
 **--show-lang**
-> List recognized languages
+> List recognized languages and exit.
+
+**--git**
+> Forces inputs to be interpreted as git targets (commit hashes, branch names).
+
+**--vcs**=_VCS_
+> Use _VCS_ to obtain list of files to count (e.g., git, svn).
+
+**--xml**
+> Output in XML format.
+
+**--yaml**
+> Output in YAML format.
 
 **--quiet**
-> Suppress progress output
+> Suppress progress output.
+
+**--force-lang**=_LANG_
+> Process all files with the given language counter.
+
+**--config** _FILE_
+> Read command-line switches from _FILE_ instead of defaults.
 
 # OUTPUT FIELDS
 
 Language, files, blank lines, comment lines, code lines
 
-# DIFF MODE
-
-```cloc --diff old_version/ new_version/```
-
-Shows added, removed, modified, and same lines between versions.
-
 # CAVEATS
 
-Does not analyze semantic code complexity. Some edge cases in multi-language files may be miscounted. Supports 200+ languages.
+Does not analyze semantic code complexity. Some edge cases in multi-language files may be miscounted. Requires Perl but has no external module dependencies. Supports over 250 programming languages.
+
+# HISTORY
+
+**cloc** was created by **Al Danial**, first released on SourceForge and later moved to GitHub. It has become one of the most widely used open-source code counting tools.
 
 # SEE ALSO
 
-[wc](/man/wc)(1), [sloccount](/man/sloccount)(1)
+[wc](/man/wc)(1), [sloccount](/man/sloccount)(1), [tokei](/man/tokei)(1)

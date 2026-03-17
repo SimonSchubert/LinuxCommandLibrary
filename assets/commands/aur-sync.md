@@ -1,6 +1,6 @@
 # TAGLINE
 
-Download, build, and add AUR packages to a local repository
+Download, build, and add AUR packages to a local pacman repository
 
 # TLDR
 
@@ -41,37 +41,43 @@ By default, it opens PKGBUILDs for review using the file manager specified by **
 # PARAMETERS
 
 **-u**, **--upgrades**
-> Check for and build upgrades to installed AUR packages
+> Check for and build upgrades to installed AUR packages.
 
 **-c**, **--chroot**
-> Build packages in a clean chroot using aur-chroot
+> Build packages in a clean chroot using aur-chroot.
 
 **-f**, **--force**
-> Force rebuild regardless of version
+> Force rebuild regardless of version.
 
 **-n**, **--noconfirm**
-> Do not prompt for confirmation
+> Do not prompt for confirmation.
 
 **--noview**
-> Skip PKGBUILD review
+> Skip PKGBUILD review.
 
 **--ignore** _package_
-> Skip a package during upgrades (repeatable)
+> Skip a package during upgrades (repeatable).
 
 **-d**, **--database** _name_
-> Use specified local repository database
+> Use specified local repository database.
 
 **--no-ver**
-> Disable version checking (rebuild all)
+> Disable version checking (rebuild all).
 
 **--no-ver-argv**
-> Disable version checking for command-line arguments only
+> Disable version checking for command-line arguments only.
 
 **--provides**
-> Consider provides when resolving dependencies
+> Consider provides when resolving dependencies.
 
 **-S**, **--sign**
-> Sign built packages with GPG
+> Sign built packages with GPG.
+
+**-k**, **--keep-going**
+> Continue building remaining packages if one fails.
+
+**--makepkg-args** _args_
+> Pass additional arguments to makepkg.
 
 # CAVEATS
 

@@ -20,13 +20,21 @@ Synced queryable shell history with context
 
 ```hishtory query ?[how to find large files]```
 
-**Export history**
+**Export all history entries**
 
 ```hishtory export```
 
-**Sync status**
+**Show sync and configuration status**
 
 ```hishtory status```
+
+**Delete history entries matching a query**
+
+```hishtory redact [search_term]```
+
+**Temporarily disable recording**
+
+```hishtory disable```
 
 # SYNOPSIS
 
@@ -59,11 +67,20 @@ History is **end-to-end encrypted** with AES-GCM and can be synced across all yo
 > Get a configuration value
 
 **redact** _query_
-> Delete matching history entries
+> Delete matching history entries locally and from all synced devices.
+
+**update**
+> Securely download and apply the latest hishtory update.
+
+**disable**
+> Temporarily stop recording shell history.
+
+**enable**
+> Resume recording shell history.
 
 # CAVEATS
 
-Requires an active shell session to record commands. Syncing across devices requires internet connectivity. The AI-powered search feature requires a ChatGPT API connection. End-to-end encryption means lost encryption keys result in unrecoverable data.
+Requires an active shell session to record commands. Syncing across devices requires internet connectivity. The AI-powered search feature requires a ChatGPT API connection. End-to-end encryption means lost encryption keys result in unrecoverable data. Commands prefixed with a space are not recorded, following shell conventions.
 
 # HISTORY
 

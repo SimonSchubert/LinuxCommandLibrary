@@ -4,9 +4,13 @@ Change the mDNS hostname advertised on the network
 
 # TLDR
 
-**Set** mDNS hostname
+**Set the mDNS hostname**
 
 ```avahi-set-host-name [newhost]```
+
+**Set hostname with verbose output**
+
+```avahi-set-host-name -v [newhost]```
 
 # SYNOPSIS
 
@@ -20,15 +24,21 @@ The change is immediate and affects service discovery on the local network.
 
 # PARAMETERS
 
-This command takes a single argument - the new hostname to advertise.
+_hostname_
+> The new mDNS hostname to advertise. Will be published as _hostname_.local on the network.
 
-# WORKFLOW
+**-v**, **--verbose**
+> Enable verbose mode.
 
-The hostname will be advertised as _hostname_.local on the network. Other devices can reach your system using this name.
+**-V**, **--version**
+> Show version information.
+
+**-h**, **--help**
+> Show help.
 
 # CAVEATS
 
-Requires avahi-daemon running. Does not change the system hostname (see hostname command). Changes may not persist after daemon restart. Hostname must be valid DNS name.
+Requires avahi-daemon running. This operation is usually privileged. Does not change the system hostname (use **hostname** or **hostnamectl** for that). Changes are not persistent across daemon restarts. Hostname must be a valid DNS name.
 
 # HISTORY
 
@@ -36,4 +46,4 @@ Requires avahi-daemon running. Does not change the system hostname (see hostname
 
 # SEE ALSO
 
-[avahi-daemon](/man/avahi-daemon)(8), [hostname](/man/hostname)(1), [hostnamectl](/man/hostnamectl)(1)
+[avahi-daemon](/man/avahi-daemon)(8), [avahi-resolve](/man/avahi-resolve)(1), [hostname](/man/hostname)(1), [hostnamectl](/man/hostnamectl)(1)

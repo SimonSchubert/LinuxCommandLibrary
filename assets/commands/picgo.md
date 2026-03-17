@@ -1,6 +1,6 @@
 # TAGLINE
 
-uploads images to various image hosting services
+Upload images to various image hosting services
 
 # TLDR
 
@@ -38,26 +38,41 @@ uploads images to various image hosting services
 
 # PARAMETERS
 
-**upload**
-> Upload image(s).
+**upload** [_files_...]
+> Upload image(s); without arguments, uploads from clipboard.
 
-**use**
-> Set default uploader.
+**use** _uploader_
+> Set the default uploader.
 
-**list**
-> List plugins/uploaders.
+**list** [_type_]
+> List available plugins or uploaders.
 
-**install**
-> Install plugin.
+**install** _plugin_
+> Install a plugin.
 
-**uninstall**
-> Remove plugin.
+**uninstall** _plugin_
+> Remove a plugin.
 
-**set**
-> Configure settings.
+**set** _type_
+> Interactively configure uploader settings.
 
 **config**
-> Show configuration.
+> Show current configuration.
+
+**-v**, **--version**
+> Show version number.
+
+**-d**, **--debug**
+> Enable debug mode.
+
+**-s**, **--silent**
+> Enable silent mode.
+
+**-c** _path_, **--config** _path_
+> Set a custom config file path.
+
+**-p** _url_, **--proxy** _url_
+> Set a proxy for uploading.
 
 **-h**, **--help**
 > Show help.
@@ -74,19 +89,13 @@ uploads images to various image hosting services
 
 # DESCRIPTION
 
-**picgo** uploads images to various image hosting services. It returns markdown-formatted URLs for documentation.
+**PicGo** (PicGo-Core) is a command-line image upload tool that supports multiple image hosting backends. It returns markdown-formatted URLs suitable for documentation and blog posts.
 
-Multiple backends are supported through plugins. GitHub, S3-compatible, and dedicated image hosts work.
-
-Clipboard upload captures screenshots directly. No need to save files first.
-
-Configuration stores API keys and preferences. Each uploader has specific settings.
-
-Output formats include markdown, HTML, and plain URLs. Direct integration with documentation workflows.
+Multiple backends are supported through a plugin system, including GitHub, Imgur, SM.MS, and various Chinese cloud providers. Clipboard upload captures screenshots directly without saving files first. Output formats include markdown, HTML, and plain URLs for direct integration with documentation workflows.
 
 # CAVEATS
 
-Requires API keys for most services. Some services have upload limits. Plugin quality varies.
+Requires API keys or tokens for most hosting services. Some services have upload size or rate limits. Plugin quality varies. Requires Node.js runtime.
 
 # HISTORY
 

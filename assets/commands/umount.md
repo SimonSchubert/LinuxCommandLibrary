@@ -20,6 +20,14 @@ Detach filesystems from mount points
 
 ```sudo umount -R [path/to/mounted_directory]```
 
+**Lazy unmount** (detach now, clean up when not busy)
+
+```sudo umount -l [path/to/mounted_directory]```
+
+**Force unmount** an unreachable NFS filesystem
+
+```sudo umount -f [path/to/mounted_directory]```
+
 **Unmount** all mounted filesystems (except proc)
 
 ```sudo umount -a```
@@ -30,29 +38,38 @@ Detach filesystems from mount points
 
 # PARAMETERS
 
-**-a, --all**
-> Unmount all filesystems (except proc)
+**-a**, **--all**
+> Unmount all filesystems described in /etc/mtab (except proc).
 
-**-r, --read-only**
-> If unmount fails, try to remount read-only
+**-A**, **--all-targets**
+> Unmount all mountpoints in the current namespace for the specified filesystem.
 
-**-R, --recursive**
-> Recursively unmount directories
+**-r**, **--read-only**
+> If unmount fails, try to remount read-only.
 
-**-l, --lazy**
-> Lazy unmount (detach now, cleanup later)
+**-R**, **--recursive**
+> Recursively unmount each specified directory.
 
-**-f, --force**
-> Force unmount (for unreachable NFS)
+**-l**, **--lazy**
+> Lazy unmount: detach from the file hierarchy now, clean up references when no longer busy.
 
-**-n, --no-mtab**
-> Don't write to /etc/mtab
+**-f**, **--force**
+> Force unmount (for unreachable NFS mounts).
 
-**-t, --types _type_**
-> Unmount only filesystems of specified type
+**-d**, **--detach-loop**
+> Free the loop device if the unmounted device was a loop device.
 
-**-v, --verbose**
-> Verbose mode
+**-n**, **--no-mtab**
+> Don't write to /etc/mtab.
+
+**-t**, **--types** _type_
+> Unmount only filesystems of the specified type.
+
+**-O**, **--test-opts** _opts_
+> Unmount only filesystems with the specified options in /etc/fstab.
+
+**-v**, **--verbose**
+> Verbose mode.
 
 # DESCRIPTION
 

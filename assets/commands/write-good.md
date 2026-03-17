@@ -71,6 +71,9 @@ English prose linter for documentation
 **--parse**
 > Enable parse-friendly output with Unix exit codes.
 
+**--whitelist** _WORDS_
+> Comma-separated list of words to whitelist from suggestions.
+
 # DESCRIPTION
 
 **write-good** is a linter for English prose that helps identify common writing issues. It flags passive voice, unnecessary adverbs, weasel words, cliches, lexical illusions (repeated words), and wordy phrases.
@@ -87,7 +90,7 @@ The linter is intentionally "naive" and may flag false positives. Passive voice 
 
 # HISTORY
 
-**write-good** was created by **Brian Ford** (btford) and first released around **2014**. The project name is a reference to the movie Zoolander. It has become a popular tool in the JavaScript community for improving documentation quality and is used in CI pipelines for open-source projects.
+**write-good** was created by **Brian Ford** (btford) and first released around **2014**. It has become a popular tool in the JavaScript community for improving documentation quality and is used in CI pipelines for open-source projects.
 
 # SEE ALSO
 

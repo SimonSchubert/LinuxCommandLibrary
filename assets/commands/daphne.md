@@ -58,11 +58,29 @@ HTTP, HTTP2, and WebSocket protocol server for ASGI applications
 **--access-log** _path_
 > Access log file path.
 
+**--websocket_timeout** _seconds_
+> Maximum time to allow a WebSocket to be connected (-1 for infinite).
+
+**--websocket_connect_timeout** _seconds_
+> Maximum time to allow a connection to handshake (-1 for infinite).
+
+**--ping-interval** _seconds_
+> Seconds a WebSocket must be idle before a keepalive ping is sent.
+
+**--ping-timeout** _seconds_
+> Seconds before a WebSocket is closed if no response to a keepalive ping.
+
+**--application-close-timeout** _seconds_
+> Seconds an ASGI application has to exit after client disconnect before it is killed (default: 10).
+
 **--proxy-headers**
 > Enable X-Forwarded-For handling.
 
 **--proxy-headers-host** _header_
 > Header for host detection behind proxy.
+
+**--root-path** _path_
+> Root path prefix for the ASGI scope (for reverse proxy setups).
 
 # DESCRIPTION
 
@@ -82,4 +100,4 @@ Daphne was created by **Andrew Godwin** as part of the **Django Channels** proje
 
 # SEE ALSO
 
-[uvicorn](/man/uvicorn)(1), [hypercorn](/man/hypercorn)(1), [gunicorn](/man/gunicorn)(1), [django](/man/django)(1)
+[uvicorn](/man/uvicorn)(1), [hypercorn](/man/hypercorn)(1), [gunicorn](/man/gunicorn)(1), [nginx](/man/nginx)(1)

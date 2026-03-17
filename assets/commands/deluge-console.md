@@ -1,6 +1,6 @@
 # TAGLINE
 
-text-based console interface for Deluge
+Text-based console interface for the Deluge BitTorrent client
 
 # TLDR
 
@@ -12,7 +12,7 @@ text-based console interface for Deluge
 
 ```deluge-console "connect; info"```
 
-**Add a torrent**
+**Add a torrent** file or magnet link
 
 ```deluge-console "add [file.torrent]"```
 
@@ -32,6 +32,10 @@ text-based console interface for Deluge
 
 ```deluge-console "info -v [torrent_id]"```
 
+**Run multiple commands** with semicolon separator
+
+```deluge-console "connect [host:port]; add [file.torrent]; info"```
+
 # SYNOPSIS
 
 **deluge-console** [_options_] [_command_]
@@ -39,52 +43,65 @@ text-based console interface for Deluge
 # PARAMETERS
 
 _COMMAND_
-> Command to execute (run interactively if omitted).
+> Console command to execute. If omitted, starts interactive curses mode. Multiple commands can be separated with semicolons.
 
 **connect** [_HOST_:_PORT_]
-> Connect to deluge daemon.
+> Connect to a Deluge daemon.
 
-**info** [_-v_]
-> Show torrent information.
+**info** [**-v**]
+> Show torrent information. Use **-v** for verbose details.
 
 **add** _TORRENT_
-> Add torrent file or magnet link.
+> Add a torrent file or magnet link.
 
 **pause** _ID_
-> Pause torrent.
+> Pause a torrent.
 
 **resume** _ID_
-> Resume paused torrent.
+> Resume a paused torrent.
 
 **rm** _ID_
-> Remove torrent.
+> Remove a torrent.
+
+**del** _ID_
+> Delete a torrent (alias for rm).
+
+**move** _ID_ _PATH_
+> Move a torrent's download location.
+
+**recheck** _ID_
+> Force a recheck of torrent data.
+
+**reannounce** _ID_
+> Force a reannounce to trackers.
 
 **config**
-> Show/set configuration.
+> Show or set daemon configuration.
+
+**status**
+> Show session status and transfer rates.
+
+**halt**
+> Shut down the connected daemon.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**deluge-console** is the text-based console interface for the Deluge BitTorrent client. It provides a curses-based interactive mode and supports command execution for scripting.
+**deluge-console** is the text-based console interface for the Deluge BitTorrent client. Deluge uses a client/server model, with **deluged** as the daemon process and **deluge-console** as the terminal front-end.
 
-In interactive mode, it presents a navigable interface for managing torrents with keyboard shortcuts. In command mode, it accepts commands as arguments for non-interactive operation, useful for scripts and automation.
+In interactive mode, it presents a curses-based navigable interface for managing torrents with keyboard shortcuts. In command mode, it accepts commands as arguments for non-interactive operation, useful for scripts and automation. Commands can be passed directly on the command line and chained with semicolons.
 
-The console connects to the Deluge daemon (deluged) either locally or remotely, providing the same functionality as the GTK client through a terminal interface.
-
-# CONFIGURATION
-
-**~/.config/deluge/**
-> Configuration files including console.conf for console-specific settings.
+The console connects to the Deluge daemon either locally or remotely, providing the same functionality as the GTK client through a terminal interface.
 
 # CAVEATS
 
-Requires deluged daemon running. Interactive mode needs terminal with curses support. Remote connections require proper authentication. Command syntax differs from GTK interface.
+Requires the **deluged** daemon to be running. Interactive mode needs a terminal with curses support. Remote connections require proper authentication configuration. Command syntax differs from the GTK interface.
 
 # HISTORY
 
-deluge-console was developed as part of the Deluge project to provide terminal access to the BitTorrent client. It addresses the need for headless server management and scripted torrent operations.
+**deluge-console** was developed as part of the Deluge project to provide terminal access to the BitTorrent client. It addresses the need for headless server management and scripted torrent operations.
 
 # SEE ALSO
 

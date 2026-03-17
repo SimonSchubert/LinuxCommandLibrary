@@ -45,6 +45,9 @@ _COMMAND_
 **--api-key** _KEY_
 > API key.
 
+**--network** _NETWORK_
+> Network to use (main, testnet, regtest, simnet).
+
 **--wallet** _ID_
 > Wallet ID.
 
@@ -53,13 +56,13 @@ _COMMAND_
 
 # DESCRIPTION
 
-**hsd-cli** is the command-line interface for Handshake daemon. Handshake is a decentralized naming protocol compatible with DNS.
+**hsd-cli** is the command-line interface for the Handshake daemon (hsd). Handshake is a decentralized naming protocol compatible with DNS where top-level domains are registered on a blockchain.
 
-The tool manages wallets, names, and blockchain queries. It interacts with the hsd node for name registrations and transactions.
+The tool interacts with the hsd node server for blockchain queries and name operations. For wallet-specific operations, the companion tool **hsw-cli** communicates with the wallet server. RPC commands are available via `hsd-cli rpc <command>`.
 
 # CAVEATS
 
-Requires running hsd node. Cryptocurrency tool. Name auctions have rules.
+Requires a running hsd node. Requires Node.js. Name auctions follow specific bidding rules and timelines.
 
 # HISTORY
 
@@ -67,4 +70,4 @@ hsd-cli is part of **Handshake** (HNS), a decentralized naming and certificate a
 
 # SEE ALSO
 
-[hsw-cli](/man/hsw-cli)(1), [hsd](/man/hsd)(1)
+[hsw-cli](/man/hsw-cli)(1)

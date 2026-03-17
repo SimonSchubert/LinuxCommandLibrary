@@ -1,6 +1,6 @@
 # TAGLINE
 
-open-source cloud security posture scanner
+Open-source cloud security posture management scanner
 
 # TLDR
 
@@ -8,25 +8,29 @@ open-source cloud security posture scanner
 
 ```cloudsploit scan```
 
-**Scan specific cloud provider**
+**Scan a specific cloud provider**
 
-```cloudsploit scan --cloud [aws|azure|gcp|oracle]```
+```cloudsploit scan --cloud [aws]```
 
-**Scan with specific compliance framework**
+**Scan with a specific compliance framework**
 
-```cloudsploit scan --compliance [hipaa|pci|cis]```
+```cloudsploit scan --compliance [hipaa]```
 
 **Output results as JSON**
 
 ```cloudsploit scan --json [output.json]```
 
-**Run specific plugin only**
+**Run a specific plugin only**
 
 ```cloudsploit scan --plugin [pluginName]```
 
-**Scan with custom config file**
+**Scan with a custom config file**
 
 ```cloudsploit scan --config [config.js]```
+
+**Output results as CSV**
+
+```cloudsploit scan --csv [output.csv]```
 
 # SYNOPSIS
 
@@ -41,47 +45,45 @@ open-source cloud security posture scanner
 > Target cloud provider: aws, azure, gcp, oracle.
 
 **--compliance** _framework_
-> Check against compliance framework (hipaa, pci, cis).
+> Check against a compliance framework (hipaa, pci, cis). CIS runs both Level 1 and Level 2 controls.
 
 **--plugin** _name_
-> Run only specified plugin.
+> Run only the specified plugin.
 
 **--json** _file_
-> Output results in JSON format.
+> Output results in JSON format to the specified file.
 
 **--csv** _file_
-> Output results in CSV format.
+> Output results in CSV format to the specified file.
+
+**--junit** _file_
+> Output results in JUnit XML format.
 
 **--config** _file_
-> Use custom configuration file.
+> Use a custom configuration file for credentials and settings.
 
 **--suppress** _plugins_
 > Suppress specific plugins from results.
 
-**--remediate**
-> Attempt automatic remediation (where supported).
+**--remediate** _plugins_
+> Attempt automatic remediation for the specified plugins. Takes a comma-separated list of plugin names.
 
 # DESCRIPTION
 
-**CloudSploit** is an open-source cloud security scanner that detects security risks and misconfigurations across AWS, Azure, GCP, and Oracle Cloud. It checks for hundreds of security issues including public S3 buckets, overly permissive IAM policies, unencrypted databases, and exposed services.
+**CloudSploit** is an open-source cloud security scanner that detects security risks and misconfigurations across AWS, Azure, GCP, Oracle Cloud, and GitHub. It checks for hundreds of security issues including public S3 buckets, overly permissive IAM policies, unencrypted databases, and exposed services.
 
-The tool runs plugins that query cloud APIs to assess configuration against security best practices. Results are categorized by severity (OK, WARN, FAIL, UNKNOWN) with descriptions and remediation guidance.
+The tool operates in two phases: a collection phase that queries cloud APIs to gather infrastructure metadata, and a scanning phase that analyzes the data to identify misconfigurations and security risks. Results are categorized by severity (OK, WARN, FAIL, UNKNOWN) with descriptions and remediation guidance.
 
 CloudSploit supports compliance mapping to frameworks like CIS Benchmarks, PCI-DSS, and HIPAA, helping organizations meet regulatory requirements. It can be integrated into CI/CD pipelines for continuous security monitoring.
 
-# CONFIGURATION
-
-**config.js**
-> Cloud provider credentials and scan settings (typically in the project root).
-
 # CAVEATS
 
-Requires appropriate cloud credentials with read permissions. Scanning large environments may take significant time and incur API costs. Some checks require specific permissions that may not be available in restricted accounts. Automated remediation should be tested in non-production first.
+Requires appropriate cloud credentials with read permissions configured in config.js or environment variables. Scanning large environments may take significant time and incur API costs. Some checks require specific permissions that may not be available in restricted accounts. Automated remediation should be tested in non-production environments first.
 
 # HISTORY
 
-CloudSploit was created by **Aqua Security** (originally CloudSploit Inc., acquired in 2019) as an open-source cloud security posture management tool. First released around **2015**, it grew to support multiple cloud providers and became one of the foundational tools in the cloud security space. Aqua continues to maintain the open-source version while offering a commercial SaaS platform.
+CloudSploit was originally created by **CloudSploit Inc.**, which was acquired by **Aqua Security** in **2019**. First released around **2015**, it grew to support multiple cloud providers and became one of the foundational open-source tools in the cloud security posture management (CSPM) space. Aqua continues to maintain the open-source version while offering a commercial SaaS platform.
 
 # SEE ALSO
 
-[prowler](/man/prowler)(1), [scout-suite](/man/scout-suite)(1)
+[prowler](/man/prowler)(1)

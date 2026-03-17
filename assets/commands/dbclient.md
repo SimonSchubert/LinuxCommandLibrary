@@ -82,16 +82,26 @@ One notable difference is key format: dbclient uses Dropbear's own key format ra
 **-K** _seconds_
 > Keepalive interval in seconds
 
+**-s**
+> Request the remote command as a subsystem (used for sftp).
+
+**-o** _option_
+> Specify options in OpenSSH config file format (e.g., **-o** "StrictHostKeyChecking=no").
+
 **-c** _cipherlist_
-> Comma-separated list of ciphers to enable
+> Comma-separated list of ciphers to enable.
 
 **-m** _MAClist_
-> Comma-separated list of MACs to enable
+> Comma-separated list of MACs to enable.
 
 # CAVEATS
 
-Uses Dropbear key format, not OpenSSH format. Use dropbearconvert to convert keys. Part of the Dropbear SSH suite, commonly used in embedded Linux systems.
+Uses Dropbear key format, not OpenSSH format. Use **dropbearconvert** to convert keys between formats. Does not support all OpenSSH config options via **-o**. Part of the Dropbear SSH suite, commonly used in embedded Linux systems.
+
+# HISTORY
+
+**dbclient** is part of the **Dropbear** SSH suite, created by **Matt Johnston**. Dropbear was designed for embedded systems where the full OpenSSH suite is too large, with the entire server and client typically under 110KB compressed.
 
 # SEE ALSO
 
-[ssh](/man/ssh)(1), [dropbear](/man/dropbear)(8), [dropbearconvert](/man/dropbearconvert)(1)
+[ssh](/man/ssh)(1), [scp](/man/scp)(1), [dropbear](/man/dropbear)(8), [dropbearkey](/man/dropbearkey)(1), [dropbearconvert](/man/dropbearconvert)(1)

@@ -8,7 +8,7 @@ List libvirt virtual machines
 
 ```virsh list```
 
-**List all domains**
+**List all domains** including inactive
 
 ```virsh list --all```
 
@@ -24,9 +24,13 @@ List libvirt virtual machines
 
 ```virsh list --all --autostart```
 
-**List domains matching a name pattern**
+**List only domain names** (one per line)
 
-```virsh list --all --name | grep [pattern]```
+```virsh list --all --name```
+
+**List inactive domains only**
+
+```virsh list --inactive```
 
 # SYNOPSIS
 
@@ -37,20 +41,32 @@ List libvirt virtual machines
 **--all**
 > Include inactive domains.
 
+**--inactive**
+> List only inactive (shut off) domains.
+
 **--state-running**
-> Only running.
+> List only running domains.
 
 **--state-paused**
-> Only paused.
+> List only paused domains.
 
 **--state-shutoff**
-> Only shut off.
+> List only shut off domains.
+
+**--state-other**
+> List only domains in other states (crashed, dying, pmsuspended).
+
+**--transient**
+> List only transient domains (not persistently defined).
 
 **--title**
-> Show titles.
+> Show domain titles column.
 
 **--autostart**
-> Show autostart status.
+> Show autostart status column.
+
+**--no-autostart**
+> List only domains not configured for autostart.
 
 **--name**
 > Show only domain names (one per line).
@@ -65,13 +81,10 @@ List libvirt virtual machines
 > Show managed save state.
 
 **--with-managed-save**
-> Only list domains with managed save state.
+> List only domains with managed save state.
 
 **--without-managed-save**
-> Only list domains without managed save state.
-
-**--state-other**
-> Only list domains in other states (crashed, dying).
+> List only domains without managed save state.
 
 # DESCRIPTION
 

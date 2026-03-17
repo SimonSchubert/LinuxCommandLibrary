@@ -4,15 +4,15 @@ Control the Apache HTTP web server
 
 # TLDR
 
-**Start Apache** in the foreground
+**Start Apache** daemon
 
 ```apachectl start```
 
-**Stop Apache** gracefully
+**Stop Apache** gracefully (finish current requests)
 
 ```apachectl graceful-stop```
 
-**Restart Apache** gracefully (finish current requests)
+**Gracefully restart** Apache (finish current requests, then restart)
 
 ```apachectl graceful```
 
@@ -28,13 +28,13 @@ Control the Apache HTTP web server
 
 ```apachectl -l```
 
-**Show loaded modules**
+**Show all loaded modules** (static and shared)
 
 ```apachectl -M```
 
-**Display full status** (requires mod_status)
+**Show parsed virtual host settings**
 
-```apachectl fullstatus```
+```apachectl -S```
 
 # SYNOPSIS
 
@@ -51,7 +51,7 @@ Control the Apache HTTP web server
 > Stop the daemon immediately.
 
 **restart**
-> Restart the daemon (abort current connections).
+> Restart the daemon (aborts current connections).
 
 **graceful**
 > Gracefully restart (finish current requests, then restart).
@@ -61,6 +61,9 @@ Control the Apache HTTP web server
 
 **configtest**
 > Check configuration file syntax.
+
+**fullstatus**
+> Display full server status (requires **mod_status** and a text-based browser).
 
 **-v**
 > Show version number.
@@ -75,7 +78,7 @@ Control the Apache HTTP web server
 > List all loaded modules (static and shared).
 
 **-t**
-> Test configuration syntax.
+> Test configuration syntax (same as configtest).
 
 **-S**
 > Show parsed virtual host settings.
@@ -88,31 +91,17 @@ Control the Apache HTTP web server
 
 # DESCRIPTION
 
-**Apache HTTP Server** (httpd) is the world's most widely used web server software. It serves static and dynamic content over HTTP/HTTPS, supporting virtual hosting, URL rewriting, authentication, and extensive module-based extensibility.
+**Apache HTTP Server** (httpd) is one of the most widely used web server software packages. It serves static and dynamic content over HTTP/HTTPS, supporting virtual hosting, URL rewriting, authentication, and extensive module-based extensibility.
 
-The **apachectl** script provides a convenient interface for controlling the Apache daemon. It wraps the **httpd** binary with init-script-style commands for starting, stopping, and managing the server.
+The **apachectl** script provides a convenient interface for controlling the Apache daemon. It can operate as a simple front-end to the **httpd** command, or act as a SysV init script translating one-word arguments like **start**, **restart**, and **stop** into appropriate signals.
 
-Configuration is primarily done through **httpd.conf** and related files in the Apache configuration directory. The modular architecture allows enabling features like SSL/TLS (mod_ssl), URL rewriting (mod_rewrite), proxying (mod_proxy), and dynamic content via CGI, PHP, or mod_wsgi.
+Configuration is primarily done through **httpd.conf** and related files. The modular architecture allows enabling features like SSL/TLS (mod_ssl), URL rewriting (mod_rewrite), proxying (mod_proxy), and dynamic content via CGI, PHP, or mod_wsgi.
 
-Apache supports two primary Multi-Processing Modules: **prefork** (process-based) for compatibility and **event/worker** (threaded) for higher concurrency.
-
-# CONFIGURATION
-
-**/etc/httpd/conf/httpd.conf**
-> Main configuration file on RHEL/CentOS/Fedora systems.
-
-**/etc/apache2/apache2.conf**
-> Main configuration file on Debian/Ubuntu systems.
-
-**/etc/httpd/conf.d/**
-> Directory for additional configuration files on RHEL-based systems.
-
-**/etc/apache2/sites-available/**
-> Virtual host configuration files on Debian-based systems.
+Apache supports multiple Multi-Processing Modules: **prefork** (process-based) for compatibility, **worker** (threaded), and **event** (threaded with improved keep-alive handling) for higher concurrency.
 
 # CAVEATS
 
-Configuration changes require a restart or reload. Syntax errors in configuration files prevent startup; always run **configtest** first. The **graceful** restart is preferred for production to avoid dropping active connections. Log files can grow large and require rotation.
+Configuration changes require a restart or reload. Syntax errors in configuration files prevent startup; always run **configtest** first. The **graceful** restart is preferred for production to avoid dropping active connections. Log files can grow large and require rotation. The **apachectl** script returns exit code 0 on success and >0 on error.
 
 # HISTORY
 

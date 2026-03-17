@@ -8,11 +8,11 @@ Manage Azure Kubernetes Service clusters
 
 ```az aks create -g [resource-group] -n [cluster-name] --generate-ssh-keys```
 
-**Get credentials** for kubectl
+**Get credentials for kubectl**
 
 ```az aks get-credentials -g [resource-group] -n [cluster-name]```
 
-**List all clusters** in a resource group
+**List all clusters in a resource group**
 
 ```az aks list -g [resource-group] -o table```
 
@@ -24,11 +24,11 @@ Manage Azure Kubernetes Service clusters
 
 ```az aks nodepool scale -g [resource-group] --cluster-name [cluster-name] --name [nodepool1] --node-count [5]```
 
-**Upgrade a cluster** to a newer Kubernetes version
+**Upgrade a cluster to a newer Kubernetes version**
 
 ```az aks upgrade -g [resource-group] -n [cluster-name] --kubernetes-version [1.28.0]```
 
-**Stop a running cluster**
+**Stop a running cluster to save costs**
 
 ```az aks stop -g [resource-group] -n [cluster-name]```
 
@@ -64,31 +64,43 @@ AKS handles critical tasks like health monitoring, maintenance, and upgrades. Az
 > addon enable, addon disable, addon list, addon show, addon update
 
 **Advanced**
-> mesh enable, mesh disable, pod-identity add, bastion
+> mesh enable, mesh disable, pod-identity add, command invoke
 
 # PARAMETERS
 
-**-g, --resource-group** _value_
-> Name of the resource group
+**-g**, **--resource-group** _VALUE_
+> Name of the resource group.
 
-**-n, --name** _value_
-> Name of the managed cluster
+**-n**, **--name** _VALUE_
+> Name of the managed cluster.
 
-**--kubernetes-version** _value_
-> Kubernetes version for the cluster
+**--kubernetes-version** _VALUE_
+> Kubernetes version for the cluster.
 
-**--node-count** _value_
-> Number of nodes in the default node pool
+**--node-count** _VALUE_
+> Number of nodes in the default node pool.
+
+**--node-vm-size** _VALUE_
+> Size of virtual machines to create as Kubernetes nodes.
 
 **--generate-ssh-keys**
-> Generate SSH key files if not present
+> Generate SSH key files if not present.
+
+**--network-plugin** _VALUE_
+> Kubernetes network plugin (azure, kubenet, none).
 
 **--admin**
-> Get cluster admin credentials instead of user credentials
+> Get cluster admin credentials instead of user credentials.
+
+**--overwrite-existing**
+> Overwrite any existing cluster entry in kubeconfig.
+
+**-o**, **--output** _FORMAT_
+> Output format (json, jsonc, table, tsv, yaml, yamlc, none).
 
 # CAVEATS
 
-Stopping a cluster deallocates compute resources but retains cluster configuration; you are not charged for compute during this time. Upgrading Kubernetes version is a one-way operation. Get-credentials overwrites existing kubeconfig entries by default; use **--overwrite-existing** or **--file** to control this.
+Stopping a cluster deallocates compute resources but retains cluster configuration; you are not charged for compute during this time. Upgrading Kubernetes version is a one-way operation. get-credentials overwrites existing kubeconfig entries by default; use **--overwrite-existing** or **--file** to control this. The **command invoke** subcommand can run commands on private clusters.
 
 # HISTORY
 
@@ -96,4 +108,4 @@ Azure Kubernetes Service (AKS) reached general availability in **June 2018**. It
 
 # SEE ALSO
 
-[az](/man/az)(1), [az-acr](/man/az-acr)(1), [kubectl](/man/kubectl)(1)
+[az](/man/az)(1), [az-acr](/man/az-acr)(1), [kubectl](/man/kubectl)(1), [helm](/man/helm)(1)

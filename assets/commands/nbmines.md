@@ -1,22 +1,22 @@
 # TAGLINE
 
-terminal minesweeper game
+Terminal minesweeper game from the nbsdgames collection
 
 # TLDR
 
-**Play minesweeper**
+**Start a default game**
 
 ```nbmines```
 
-**Set board size**
+**Set custom board size**
 
 ```nbmines -c [10] -r [10]```
 
-**Set mine count**
+**Set the number of mines**
 
 ```nbmines -m [15]```
 
-**Easy mode**
+**Play in easy mode**
 
 ```nbmines -e```
 
@@ -43,17 +43,17 @@ terminal minesweeper game
 
 # DESCRIPTION
 
-**nbmines** is a terminal minesweeper game. Reveal cells while avoiding mines.
+**nbmines** is a terminal-based minesweeper game from the **nbsdgames** package, a collection of text-based games. The goal is to reveal all cells that do not contain mines while avoiding the mined ones.
 
-The tool is the classic minesweeper. ncurses-based interface.
+The game uses an ncurses interface with keyboard and mouse support. Use arrow keys or hjkl to move, ENTER to reveal a cell, and SPACE to flag/unflag a cell. Press q to quit.
 
 # CAVEATS
 
-Terminal game. Keyboard controls. Part of games collection.
+Requires a terminal with ncurses support. Part of the nbsdgames collection. Board dimensions are limited by terminal size.
 
 # HISTORY
 
-nbmines implements **Minesweeper**, the classic puzzle game popularized by Microsoft Windows.
+nbmines is part of the **nbsdgames** package, a collection of 18 text-based games created by abakh, inspired by classic games. Minesweeper itself was popularized by its inclusion in Microsoft Windows 3.1 in **1992**.
 
 # SEE ALSO
 

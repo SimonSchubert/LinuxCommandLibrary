@@ -1,6 +1,6 @@
 # TAGLINE
 
-low-level data copying and conversion tool
+Convert and copy files at the block level
 
 # TLDR
 
@@ -24,63 +24,71 @@ Create a **system backup** to an IMG file
 
 ```sudo dd if=[/dev/drive_device] of=[path/to/file.img] status=progress```
 
+**Restore** from an IMG backup
+
+```sudo dd if=[path/to/file.img] of=[/dev/drive_device] status=progress```
+
+**Skip** bytes at the start of input (e.g., skip first 512 bytes)
+
+```dd if=[input_file] of=[output_file] bs=512 skip=1```
+
 # SYNOPSIS
 
-**dd** [_if=file_] [_of=file_] [_bs=bytes_] [_count=n_] [_conv=opts_] [_status=level_]
+**dd** [_OPERAND_]...
 
 # DESCRIPTION
 
-**dd** converts and copies files at the block level, making it useful for low-level disk operations that bypass filesystem structures. It reads from standard input and writes to standard output by default, but is typically used with if= and of= parameters to specify input and output files or devices.
+**dd** converts and copies files at the block level, making it useful for low-level disk operations that bypass filesystem structures. It reads from standard input and writes to standard output by default, but is typically used with if= and of= operands to specify input and output files or devices.
 
 The tool operates in fixed block sizes (set with bs=), reading and writing data in chunks for efficiency. This block-oriented approach makes dd suitable for creating exact disk images, cloning entire drives, writing bootable USB drives from ISO files, and generating test files of specific sizes.
 
-Common use cases include forensic disk imaging, data backup and restoration, disk benchmarking, and creating files filled with zeros or random data. The status=progress option (added in GNU coreutils 8.24) provides real-time progress information, addressing a long-standing complaint about dd's silence during operation. However, dd provides no safety checks and will overwrite data without confirmation, making it critical to verify the of= parameter before execution.
+Common use cases include forensic disk imaging, data backup and restoration, disk benchmarking, and creating files filled with zeros or random data. The status=progress option (added in GNU coreutils 8.24) provides real-time progress information. Sending a USR1 signal (or INFO signal on BSD) to a running dd process causes it to print I/O statistics to stderr.
 
 # PARAMETERS
 
-**if=FILE**
-> Read from FILE instead of stdin
+**if=**_FILE_
+> Read from FILE instead of stdin.
 
-**of=FILE**
-> Write to FILE instead of stdout
+**of=**_FILE_
+> Write to FILE instead of stdout.
 
-**bs=BYTES**
-> Read and write up to BYTES bytes at a time
+**bs=**_BYTES_
+> Read and write up to BYTES bytes at a time (default: 512). Overrides ibs and obs.
 
-**ibs=BYTES**
-> Read up to BYTES bytes at a time
+**ibs=**_BYTES_
+> Read up to BYTES bytes at a time (default: 512).
 
-**obs=BYTES**
-> Write BYTES bytes at a time
+**obs=**_BYTES_
+> Write BYTES bytes at a time (default: 512).
 
-**count=N**
-> Copy only N input blocks
+**count=**_N_
+> Copy only N input blocks.
 
-**skip=N**
-> Skip N input blocks before copying
+**skip=**_N_
+> Skip N ibs-sized blocks at start of input.
 
-**seek=N**
-> Skip N output blocks before writing
+**seek=**_N_
+> Skip N obs-sized blocks at start of output.
 
-**conv=CONVS**
-> Conversion options: fsync, notrunc, noerror, sync
+**conv=**_CONVS_
+> Comma-separated conversion options: ascii, ebcdic, ibm, block, unblock, lcase, ucase, sparse, swab, sync, excl, nocreat, notrunc, noerror, fdatasync, fsync.
 
-**status=LEVEL**
-> Output level: none, noxfer, progress
+**status=**_LEVEL_
+> Output level: none (suppress everything except errors), noxfer (suppress transfer statistics), progress (show periodic transfer statistics).
 
-**iflag=FLAGS**
-> Input flags: direct, dsync, fullblock, etc.
+**iflag=**_FLAGS_
+> Comma-separated input flags: append, direct, directory, dsync, sync, fullblock, nonblock, noatime, nocache, noctty, nofollow, count_bytes, skip_bytes.
 
-**oflag=FLAGS**
-> Output flags: direct, dsync, sync, etc.
+**oflag=**_FLAGS_
+> Comma-separated output flags: append, direct, directory, dsync, sync, nonblock, noatime, nocache, noctty, nofollow, seek_bytes.
 
 # CAVEATS
 
-**Dangerous**: dd will overwrite data without warning. Double-check the **of=** parameter before executing. Using wrong device names can destroy data.
+**Dangerous**: dd will overwrite data without warning. Double-check the **of=** operand before executing. Using wrong device names can destroy entire disks. BYTES may be followed by multiplicative suffixes: c=1, w=2, b=512, kB=1000, K=1024, MB=1000000, M=1048576, and so on for G, T, P, E, Z, Y.
 
 # HISTORY
 
-Part of **GNU Coreutils**. The command name comes from IBM JCL (Job Control Language) where DD stands for "Data Definition". Available since early Unix.
+Part of **GNU Coreutils**. The command name comes from IBM JCL (Job Control Language) where DD stands for "Data Definition". Available since Version 5 AT&T Unix (1974).
 
 # SEE ALSO
 

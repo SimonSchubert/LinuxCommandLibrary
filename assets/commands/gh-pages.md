@@ -24,6 +24,10 @@ Publish static sites to GitHub Pages branch
 
 ```npx gh-pages -d [dist] -o [upstream]```
 
+**Deploy with a custom domain (CNAME)**
+
+```npx gh-pages -d [dist] --cname [example.com]```
+
 # SYNOPSIS
 
 **gh-pages** [_options_]
@@ -57,8 +61,14 @@ Publish static sites to GitHub Pages branch
 **-t**, **--dotfiles**
 > Include dotfiles.
 
+**-r**, **--repo** _url_
+> Repository URL to push to (if not in a git repo or pushing elsewhere).
+
+**--cname** _domain_
+> Create a CNAME file with a custom domain name.
+
 **--nojekyll**
-> Add .nojekyll file.
+> Add .nojekyll file to bypass Jekyll processing on GitHub Pages.
 
 # DESCRIPTION
 
@@ -73,7 +83,7 @@ The tool makes deployment a single command and is commonly used in CI/CD pipelin
 
 # CAVEATS
 
-Requires git and npm. Overwrites target branch. GitHub Pages settings must be configured. May need --nojekyll for some sites. Credentials needed for push.
+Requires git and npm. By default, existing files on the target branch are removed before deploying; use **-a** to preserve them. GitHub Pages repository settings must be configured to serve from the target branch. Use **--nojekyll** for sites that do not need Jekyll processing. Push credentials are required.
 
 # HISTORY
 

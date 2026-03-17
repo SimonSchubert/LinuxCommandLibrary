@@ -83,17 +83,23 @@ Note that on many Linux systems, cdrecord has been replaced or supplemented by w
 **-toc**
 > Show table of contents.
 
+**-dao**
+> Write in Disc At Once mode with no gaps between tracks.
+
 **-checkdrive**
 > Check drive capabilities.
 
+**-immed**
+> Set SCSI IMMED flag for background operation during load/eject/blank.
+
 **driveropts=** _opts_
-> Driver-specific options (burnfree).
+> Driver-specific options (e.g., burnfree for buffer underrun protection).
 
 **fs=** _size_
-> FIFO buffer size.
+> FIFO buffer size (default 4 MB).
 
 **gracetime=** _secs_
-> Wait before starting burn.
+> Wait time in seconds before starting burn (default 2).
 
 # CAVEATS
 

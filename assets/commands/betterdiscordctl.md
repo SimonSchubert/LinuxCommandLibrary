@@ -37,42 +37,45 @@ The tool handles installation, updates, and removal of BetterDiscord across diff
 # SUBCOMMANDS
 
 **install**
-> Install BetterDiscord
+> Install BetterDiscord.
 
 **reinstall**
-> Reinstall BetterDiscord
+> Reinstall BetterDiscord, removing the old files.
 
 **uninstall**
-> Remove BetterDiscord
+> Remove BetterDiscord.
+
+**update**
+> Update BetterDiscord, updating your local repository if present.
 
 **status**
-> Show current Discord patch state
+> Show current Discord patch state.
 
 **self-upgrade**
-> Upgrade betterdiscordctl itself
+> Upgrade betterdiscordctl itself.
 
 # PARAMETERS
 
-**-f, --d-flavors** _flavor_
-> Specify Discord flavor: stable, canary, or ptb
+**-f**, **--d-flavors** _flavor_
+> Specify Discord flavor: stable, canary, or ptb.
 
-**-i, --d-install** _method_
-> Specify installation method: system, flatpak, or snap
+**-i**, **--d-install** _method_
+> Specify installation method: system, flatpak, or snap.
 
-**-p, --d-appdir** _path_
-> Specify custom Discord app directory
+**-p**, **--d-appdir** _path_
+> Specify custom Discord app directory.
 
-**-v, --verbose**
-> Increase verbosity
+**-v**, **--verbose**
+> Increase verbosity level.
 
-**-q, --quiet**
-> Decrease verbosity
+**-q**, **--quiet**
+> Decrease verbosity level.
 
-**-V, --version**
-> Display version and exit
+**-V**, **--version**
+> Display version and exit.
 
-**-h, --help**
-> Display help message and exit
+**-h**, **--help**
+> Display help message and exit.
 
 # CAVEATS
 

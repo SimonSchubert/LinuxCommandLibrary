@@ -1,75 +1,111 @@
 # TAGLINE
 
-manages NVMe devices
+NVMe storage command line interface utility
 
 # TLDR
 
-**List NVMe devices**
+**List all NVMe devices**
 
-```nvme list```
+```sudo nvme list```
 
-**Show device info**
+**Show controller identification**
 
-```nvme id-ctrl [/dev/nvme0]```
+```sudo nvme id-ctrl [/dev/nvme0]```
 
-**Show namespace info**
+**Show namespace identification**
 
-```nvme id-ns [/dev/nvme0n1]```
+```sudo nvme id-ns [/dev/nvme0n1]```
 
-**Show SMART data**
+**Show SMART health information**
 
-```nvme smart-log [/dev/nvme0]```
+```sudo nvme smart-log [/dev/nvme0]```
 
-**Format namespace**
+**Show error log entries**
 
-```nvme format [/dev/nvme0n1]```
+```sudo nvme error-log [/dev/nvme0]```
 
-**Firmware update**
+**Format a namespace (destroys all data)**
 
-```nvme fw-download [/dev/nvme0] --fw=[firmware.bin]```
+```sudo nvme format [/dev/nvme0n1]```
+
+**Download firmware to a device**
+
+```sudo nvme fw-download [/dev/nvme0] --fw=[firmware.bin]```
+
+**Run a device self-test**
+
+```sudo nvme device-self-test [/dev/nvme0] --stc=[1]```
 
 # SYNOPSIS
 
-**nvme** [_command_] [_options_]
+**nvme** _command_ [_device_] [_options_]
 
 # PARAMETERS
 
 **list**
-> List NVMe devices.
+> List all NVMe devices and namespaces.
 
 **id-ctrl** _DEVICE_
-> Show controller info.
+> Send an identify controller command and display the result.
 
 **id-ns** _DEVICE_
-> Show namespace info.
+> Send an identify namespace command and display the result.
 
 **smart-log** _DEVICE_
-> Show SMART log.
+> Retrieve SMART / health information log.
+
+**error-log** _DEVICE_
+> Retrieve error information log.
+
+**fw-log** _DEVICE_
+> Retrieve firmware slot information log.
 
 **format** _DEVICE_
-> Format namespace.
+> Format namespace(s) with specified LBA format.
 
 **fw-download** _DEVICE_
-> Download firmware.
+> Download firmware image to the device.
 
-**--help**
-> Display help information.
+**fw-activate** _DEVICE_
+> Activate a downloaded firmware image.
+
+**sanitize** _DEVICE_
+> Perform a sanitize operation (secure erase).
+
+**device-self-test** _DEVICE_
+> Run a device self-test (short or extended).
+
+**get-feature** _DEVICE_
+> Get a feature value from the controller.
+
+**set-feature** _DEVICE_
+> Set a feature value on the controller.
+
+**discover**
+> Discover NVMe-over-Fabrics subsystems.
+
+**connect** _DEVICE_
+> Connect to an NVMe-over-Fabrics controller.
+
+**help** _COMMAND_
+> Display help for a specific subcommand.
 
 # DESCRIPTION
 
-**nvme** manages NVMe devices. Provides admin and I/O commands.
+**nvme** is a user space utility providing standards-compliant tooling for NVM-Express (NVMe) drives on Linux. It has subcommands for all admin and I/O commands defined in the NVMe specification, as well as commands for displaying controller registers and retrieving various log pages.
 
-The tool controls NVMe SSDs. Low-level device management.
+The utility supports NVMe-over-Fabrics operations including discovery, connect, and disconnect for remote NVMe subsystems. It can also submit completely arbitrary vendor-specific commands via passthrough.
+
+All commands return 0 on success and 1 on failure.
 
 # CAVEATS
 
-Root required for most operations. Format destroys data. Use with caution.
+Root privileges are required for most operations. The **format** and **sanitize** commands destroy all data on the device and are irreversible. The **sanitize** command cannot be aborted once started. NVMe-over-Fabrics commands require appropriate kernel modules.
 
 # HISTORY
 
-nvme-cli was created for **NVMe device management** on Linux systems.
+**nvme-cli** is developed as an open-source project under the Linux NVMe project at https://github.com/linux-nvme/nvme-cli. It relies on Linux kernel NVMe IOCTLs and is Linux-specific.
 
 # SEE ALSO
 
-[smartctl](/man/smartctl)(1), [hdparm](/man/hdparm)(1), [lsblk](/man/lsblk)(1)
-
+[smartctl](/man/smartctl)(1), [hdparm](/man/hdparm)(8), [lsblk](/man/lsblk)(1)

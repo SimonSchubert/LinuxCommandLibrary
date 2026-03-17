@@ -1,6 +1,6 @@
 # TAGLINE
 
-combines the functionality of traceroute and ping into a single network
+Network diagnostic tool combining traceroute and ping
 
 # TLDR
 
@@ -28,7 +28,7 @@ combines the functionality of traceroute and ping into a single network
 
 ```mtr --report --report-cycles [100] [hostname]```
 
-**Show numeric IPs only** (no DNS)
+**Show numeric IPs only without DNS resolution**
 
 ```mtr --no-dns [hostname]```
 
@@ -96,17 +96,23 @@ combines the functionality of traceroute and ping into a single network
 **-a** _ADDRESS_, **--address** _ADDRESS_
 > Bind to source address.
 
+**-e**, **--mpls**
+> Display MPLS information from ICMP extensions.
+
+**-o** _FIELDS_, **--order** _FIELDS_
+> Specify fields and order for report output.
+
 # DESCRIPTION
 
-**mtr** (My TraceRoute) combines the functionality of traceroute and ping into a single network diagnostic tool. It continuously probes each hop along the route to a destination, displaying real-time statistics about packet loss and latency.
+**mtr** (My TraceRoute) combines the functionality of traceroute and ping into a single network diagnostic tool. It sends packets with purposely low TTLs, continuously probing each hop along the route to a destination, and displays real-time statistics about packet loss and latency.
 
 The interactive display updates continuously, showing each router hop with loss percentage, sent/received counts, and latency statistics (best, average, worst, standard deviation). This makes it easy to identify where network problems occur.
 
-Report mode (-r) runs a fixed number of cycles and outputs summary statistics, useful for logging and scripting. Output formats include plain text, JSON, XML, and CSV for integration with monitoring systems.
+Report mode (**-r**) runs a fixed number of cycles (default 10) and outputs summary statistics, useful for logging and scripting. Wide report mode (**-w**) prevents hostname truncation. Output formats include plain text, JSON, XML, and CSV for integration with monitoring systems.
 
 TCP and UDP modes help diagnose issues when ICMP is filtered. Using TCP port 443 or 80 often reaches destinations that block ping. The tool can also detect asymmetric routing and path changes.
 
-MTR is invaluable for diagnosing intermittent network issues - you can watch it over time to catch sporadic packet loss that a single traceroute might miss.
+MTR is invaluable for diagnosing intermittent network issues -- you can watch it over time to catch sporadic packet loss that a single traceroute might miss.
 
 # CAVEATS
 
@@ -118,4 +124,4 @@ Requires root or capabilities for raw socket access (ICMP/UDP) unless using TCP 
 
 # SEE ALSO
 
-[traceroute](/man/traceroute)(1), [ping](/man/ping)(1), [tracepath](/man/tracepath)(1), [nmap](/man/nmap)(1)
+[traceroute](/man/traceroute)(1), [ping](/man/ping)(1), [tracepath](/man/tracepath)(1), [nmap](/man/nmap)(1), [ss](/man/ss)(1), [netstat](/man/netstat)(1)

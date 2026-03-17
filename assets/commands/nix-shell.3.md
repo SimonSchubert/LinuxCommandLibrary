@@ -61,6 +61,9 @@ _PATH_
 **-i** _interpreter_
 > Specify the interpreter for nix-shell shebang scripts.
 
+**-I** _path_
+> Add a path to the Nix expression search path.
+
 **-v**
 > Verbose output.
 
@@ -78,4 +81,4 @@ Without **--pure**, the host environment leaks into the shell, which may cause b
 
 # SEE ALSO
 
-[nix](/man/nix)(1), [nix-build](/man/nix-build)(1)
+[nix](/man/nix)(1), [nix-build](/man/nix-build)(1), [nix-shell](/man/nix-shell)(1), [nix-develop](/man/nix-develop)(1), [nix-store](/man/nix-store)(1)

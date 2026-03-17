@@ -4,17 +4,21 @@ load images from tar archives
 
 # TLDR
 
-**Load image from tar archive**
+**Load an image from a tar archive**
 
 ```docker image load -i [image.tar]```
 
-**Load from stdin**
+**Load an image from stdin**
 
 ```cat [image.tar] | docker image load```
 
-**Load with quiet output**
+**Load an image with quiet output**
 
 ```docker image load -q -i [image.tar]```
+
+**Load only a specific platform variant**
+
+```docker image load --platform [linux/amd64] -i [image.tar]```
 
 # SYNOPSIS
 
@@ -29,7 +33,7 @@ load images from tar archives
 > Suppress load output.
 
 **--platform** _value_
-> Load only the given platform variant(s) (e.g., linux/amd64).
+> Load only the given platform variant(s), formatted as "os[/arch[/variant]]" (e.g., linux/amd64). Can be specified multiple times.
 
 # DESCRIPTION
 
@@ -39,6 +43,14 @@ The tar archive contains all image layers, configuration, and manifest data need
 
 The command can read from a file specified with **-i** or from stdin, enabling flexible integration with compression tools and network transfers.
 
+# CAVEATS
+
+The tar archive must have been created with **docker image save** or a compatible tool. Loading an image does not pull missing layers from a registry. Images are loaded into the local Docker daemon only.
+
+# HISTORY
+
+**docker image load** is the modern syntax for the **docker load** command, introduced as part of Docker's CLI restructuring to group commands under management categories.
+
 # SEE ALSO
 
-[docker-load](/man/docker-load)(1), [docker-image-save](/man/docker-image-save)(1), [docker-image](/man/docker-image)(1)
+[docker-load](/man/docker-load)(1), [docker-image-save](/man/docker-image-save)(1), [docker-image](/man/docker-image)(1), [docker](/man/docker)(1)

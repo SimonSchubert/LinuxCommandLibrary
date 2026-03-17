@@ -1,24 +1,24 @@
 # TAGLINE
 
-line-editing mode of vi/vim
+Line-oriented text editor, the predecessor of vi
 
 # TLDR
 
-**Start ex mode**
+**Start ex mode on a file**
 
 ```ex [file.txt]```
 
-**Execute command** and quit
+**Execute a substitution command and quit**
 
-```ex -c "[:%s/old/new/g]" -c "[:wq]" [file.txt]```
+```ex -c "%s/[old]/[new]/g" -c "wq" [file.txt]```
 
-**Edit multiple files**
+**Open a file in read-only mode**
+
+```ex -R [file.txt]```
+
+**Edit multiple files sequentially**
 
 ```ex [file1.txt] [file2.txt]```
-
-**Read from stdin**
-
-```echo "command" | ex [file.txt]```
 
 # SYNOPSIS
 
@@ -30,43 +30,44 @@ _FILES_
 > Files to edit.
 
 **-c** _COMMAND_
-> Execute command after loading.
+> Execute command after loading the first file.
 
 **-s**
-> Silent mode.
+> Silent (batch) mode. Suppress all interactive feedback. Useful for scripting.
 
 **-R**
-> Read-only mode.
+> Read-only mode. Prevents writing to the file.
+
+**-r** _FILE_
+> Recover editing session from a swap file after a crash.
 
 **-n**
-> No swap file.
+> Do not use a swap file (vim implementation).
+
+**-t** _TAG_
+> Edit the file containing the specified tag.
 
 **-V**
-> Verbose mode.
+> Verbose mode. Show commands read from stdin.
+
+**-v**
+> Start in visual mode (equivalent to running vi).
 
 # DESCRIPTION
 
-**ex** is the line-editing mode of vi/vim. It provides command-line editing without the visual interface, useful for scripted file modifications.
+**ex** is a line-oriented text editor. It provides command-line editing without a visual interface, using the same command language that powers vi's colon (:) commands. Commands are entered at a prompt rather than in a full-screen display.
 
-Commands are entered on a command line rather than visual mode. The same command language powers vi's : commands. ex can process multiple files sequentially.
+ex is particularly valuable for batch editing and scripted file modifications, allowing search/replace and other transformations without interactive use. When combined with **-s** for silent mode, it can process editing commands from stdin or scripts.
 
-ex is valuable for batch editing, allowing search/replace and other modifications without interactive use.
-
-# CONFIGURATION
-
-**~/.exrc**
-> User configuration file for ex initialization commands.
-
-**/etc/vimrc** or **~/.vimrc**
-> Shared configuration with vim when ex is invoked via vim.
+The ex and vi editors are the same program started in different modes. Running **ex -v** starts visual mode (vi), and running **vi -e** starts line mode (ex).
 
 # CAVEATS
 
-Learning curve if unfamiliar with ed/vi commands. No visual feedback. Complex edits may be error-prone. Usually invoked via vim -e.
+No visual feedback in ex mode, making complex edits error-prone. Most modern systems provide ex via vim (as **vim -e**). The POSIX specification defines a subset of features; vim's ex mode includes many extensions.
 
 # HISTORY
 
-ex was developed by **Bill Joy** at UC Berkeley in the late 1970s as an extended version of ed. It later gained the visual interface that became vi, with ex remaining as the command mode.
+ex was developed by **Bill Joy** at UC Berkeley in the late 1970s as an extended version of ed. It later gained the visual interface that became vi, with ex remaining as the underlying command mode. ex first appeared in **1BSD** (1978).
 
 # SEE ALSO
 

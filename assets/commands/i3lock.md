@@ -1,32 +1,36 @@
 # TAGLINE
 
-simple screen locker
+Improved screen locker
 
 # TLDR
 
-**Lock screen**
+**Lock the screen with a white background**
 
 ```i3lock```
 
-**Lock with color**
+**Lock with a solid color background**
 
 ```i3lock -c [000000]```
 
-**Lock with image**
+**Lock with a background image**
 
-```i3lock -i [image.png]```
+```i3lock -i [path/to/image.png]```
 
-**Tiled image**
+**Lock with a tiled background image**
 
-```i3lock -t -i [image.png]```
+```i3lock -t -i [path/to/image.png]```
 
-**No unlock indicator**
+**Lock without showing the unlock indicator**
 
 ```i3lock -u```
 
-**Show failed attempts**
+**Lock and show failed authentication attempts**
 
 ```i3lock -f```
+
+**Lock without forking to the background**
+
+```i3lock -n```
 
 # SYNOPSIS
 
@@ -34,44 +38,58 @@ simple screen locker
 
 # PARAMETERS
 
-**-c** _COLOR_
-> Background color (hex).
+**-v**, **--version**
+> Display the version of i3lock.
 
-**-i** _IMAGE_
-> Background image (PNG).
+**-n**, **--nofork**
+> Do not fork after starting. Useful for combining with other commands.
 
-**-t**
-> Tile image.
+**-b**, **--beep**
+> Enable beeping on authentication failure.
 
-**-u**
-> No unlock indicator.
+**-c** _RRGGBB_, **--color** _RRGGBB_
+> Set background color in 6-byte hex format (default: white).
 
-**-f**
-> Show failed attempts.
+**-i** _PATH_, **--image** _PATH_
+> Display the given PNG image as background instead of a blank screen.
 
-**-n**
-> Don't fork.
+**-t**, **--tiling**
+> Tile the image across the entire screen.
 
-**-e**
-> Ignore empty password.
+**-u**, **--no-unlock-indicator**
+> Disable the unlock indicator circle shown when typing.
 
-**--help**
-> Display help information.
+**-f**, **--show-failed-attempts**
+> Show the number of failed authentication attempts.
+
+**-p** _win|default_, **--pointer** _win|default_
+> Control mouse pointer visibility. "default" shows the pointer, "win" shows a Windows-style pointer.
+
+**-e**, **--ignore-empty-password**
+> Do not validate an empty password.
+
+**--raw** _FORMAT_
+> Read the image given by --image as raw bytes instead of PNG.
+
+**--debug**
+> Enable debug logging. Note: this logs the password to stdout.
 
 # DESCRIPTION
 
-**i3lock** is a simple screen locker. It displays a blank screen or image and requires password to unlock.
+**i3lock** is an improved screen locker based on slock. It displays a blank screen or image and requires PAM authentication (typically a password) to unlock. After a configurable timeout, the screen turns off via DPMS.
 
-The locker integrates with i3 window manager but works with any X11 session. It provides security with minimal interface.
+An unlock indicator circle appears when typing: it shows a green fill while verifying, a red fill on failure, and clears when idle. The indicator provides visual feedback without revealing password length.
+
+The locker was designed for the i3 window manager but works with any X11 session.
 
 # CAVEATS
 
-X11 only. PNG images only. i3lock-color adds more features.
+X11 only; for Wayland, use **swaylock** instead. Only PNG images are supported (unless using --raw). The **i3lock-color** fork adds many additional features such as custom ring colors and clock display.
 
 # HISTORY
 
-i3lock was created as the screen locker for the **i3** window manager, focusing on simplicity and security.
+**i3lock** was created by Michael Stapelberg as the screen locker for the **i3** window manager, focusing on simplicity and security. It is a significantly improved version of **slock** with features like an unlock indicator and PAM support.
 
 # SEE ALSO
 
-[i3](/man/i3)(1), [swaylock](/man/swaylock)(1), [xlock](/man/xlock)(1)
+[i3](/man/i3)(1), [swaylock](/man/swaylock)(1), [xlock](/man/xlock)(1), [xdotool](/man/xdotool)(1)

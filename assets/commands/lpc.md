@@ -1,32 +1,20 @@
 # TAGLINE
 
-controls line printers
+Line printer control program
 
 # TLDR
 
-**Show printer status**
-
-```lpc status```
-
-**Show all printers**
+**Show status of all printers**
 
 ```lpc status all```
 
-**Enable printer**
+**Show status of a specific printer**
 
-```lpc enable [printer]```
+```lpc status [printer]```
 
-**Disable printer**
+**Enter interactive mode**
 
-```lpc disable [printer]```
-
-**Start printer**
-
-```lpc start [printer]```
-
-**Stop printer**
-
-```lpc stop [printer]```
+```lpc```
 
 # SYNOPSIS
 
@@ -35,44 +23,35 @@ controls line printers
 # PARAMETERS
 
 _COMMAND_
-> Control command.
+> Control command to execute.
 
 _PRINTER_
-> Printer name or "all".
+> Printer name or "all" to apply to all printers.
 
 **status**
-> Show printer status.
+> Show printer and queue status.
 
-**enable**
-> Enable queuing.
+**exit**, **quit**
+> Exit the lpc command interpreter.
 
-**disable**
-> Disable queuing.
-
-**start**
-> Start printing.
-
-**stop**
-> Stop printing.
-
-**--help**
-> Display help information.
+**help**
+> Display a short help message.
 
 # DESCRIPTION
 
-**lpc** controls line printers. It shows status and controls printer queues.
+**lpc** provides limited control over printer and class queues provided by CUPS. It can also be used to query the state of queues. If no command is specified on the command line, lpc displays a prompt and accepts commands from standard input.
 
-The tool is the line printer control program from BSD, now implemented by CUPS.
+The CUPS version of lpc implements only a subset of the commands from the original Berkeley lpc program. It cannot be used to configure printer queues -- use **lpadmin** for configuration tasks.
 
 # CAVEATS
 
-Limited functionality in CUPS. Administrative access needed. Legacy BSD interface.
+This command is **deprecated** and will be removed in a future release of CUPS. The CUPS implementation only supports the **status** command for non-root users. Use **lpstat** for queue status and **lpadmin** for administration instead.
 
 # HISTORY
 
-lpc originated in **BSD Unix** for printer control, now provided by CUPS with limited functionality.
+lpc originated in **BSD Unix** as part of the Berkeley Line Printer system for controlling print queues. CUPS provides a compatibility implementation with limited functionality.
 
 # SEE ALSO
 
-[lp](/man/lp)(1), [lpadmin](/man/lpadmin)(8), [lpq](/man/lpq)(1)
+[lp](/man/lp)(1), [lpq](/man/lpq)(1), [lpr](/man/lpr)(1), [lpstat](/man/lpstat)(1), [lpadmin](/man/lpadmin)(8)
 

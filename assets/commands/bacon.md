@@ -4,77 +4,84 @@ Background Rust code checker
 
 # TLDR
 
-**Run** background checker for Rust
+**Run the default check job in the current project**
 
 ```bacon```
 
-Run **specific job**
+**Run a specific job**
 
 ```bacon [test]```
 
-Run with **custom configuration**
+**Run clippy lints**
 
 ```bacon --job [clippy]```
 
-**List** available jobs
+**List available jobs**
 
 ```bacon --list-jobs```
+
+**Run in a specific project directory**
+
+```bacon --path [path/to/project]```
+
+**Initialize a bacon.toml configuration file**
+
+```bacon --init```
+
+**Open the preferences file path**
+
+```bacon --prefs```
 
 # SYNOPSIS
 
 **bacon** [_options_] [_job_]
 
+# PARAMETERS
+
+**-j**, **--job** _name_
+> Run the specified job. Can also be passed as a positional argument without the flag when unambiguous.
+
+**--list-jobs**
+> List all available jobs and exit.
+
+**--path** _dir_
+> Set the project directory (default is current directory).
+
+**--config** _file_
+> Use a specific bacon.toml configuration file.
+
+**-w**, **--watch** _path_
+> Additional paths to watch for changes.
+
+**--init**
+> Create a bacon.toml configuration file in the current project if one does not exist.
+
+**--prefs**
+> Create the preferences file if it does not exist and print its path.
+
+**-s**, **--summary**
+> Show a summary of results when finishing.
+
+**--no-default-features**
+> Disable default cargo features.
+
+**--features** _features_
+> Comma-separated list of cargo features to enable.
+
+**--all-features**
+> Enable all available cargo features.
+
 # DESCRIPTION
 
 **bacon** is a background Rust code checker that runs cargo commands in watch mode. It continuously checks your code for compilation errors, warnings, and clippy lints, displaying results in a terminal UI.
 
-The tool provides immediate feedback during development without manually running cargo commands.
+The tool provides immediate feedback during development without manually running cargo commands. When no ambiguity exists, the job name can be passed directly as a positional argument (e.g. `bacon clippy` instead of `bacon --job clippy`).
 
-# PARAMETERS
-
-**--job**, **-j** _name_
-> Run specific job
-
-**--list-jobs**
-> List available jobs
-
-**--path** _dir_
-> Project directory
-
-**--config** _file_
-> Configuration file
-
-**-w**, **--watch**
-> Additional paths to watch
-
-# DEFAULT JOBS
-
-**check**
-> Run cargo check
-
-**test**
-> Run tests
-
-**clippy**
-> Run clippy lints
-
-**run**
-> Build and run
-
-**doc**
-> Generate documentation
-
-# CONFIGURATION
-
-**bacon.toml**
-> Project-level configuration for jobs, keybindings, and display settings.
-
-**~/.config/bacon/prefs.toml**
-> User-level preferences and default settings.
+Default jobs include **check** (cargo check), **clippy** (clippy lints), **test** (run tests), **doc** (generate documentation), and **run** (build and run). Custom jobs can be defined in bacon.toml.
 
 # CAVEATS
 
-Requires Rust toolchain installed. High CPU usage during continuous checks. May be slower than manual runs on large projects. Terminal UI requires compatible terminal emulator.
+Requires the Rust toolchain to be installed. Continuous checking may cause high CPU usage on large projects. The terminal UI requires a compatible terminal emulator.
 
 # HISTORY
 
@@ -82,4 +89,4 @@ Requires Rust toolchain installed. High CPU usage during continuous checks. May 
 
 # SEE ALSO
 
-[cargo](/man/cargo)(1), [cargo-watch](/man/cargo-watch)(1), [clippy](/man/clippy)(1)
+[cargo](/man/cargo)(1), [cargo-watch](/man/cargo-watch)(1), [clippy](/man/clippy)(1), [rustc](/man/rustc)(1)

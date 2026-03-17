@@ -1,20 +1,20 @@
 # TAGLINE
 
-compiles custom key bindings for the info reader
+compile custom key bindings for the GNU Info reader
 
 # TLDR
 
-**Compile key bindings**
+**Compile the default key bindings file**
 
 ```infokey```
 
-**Compile specific file**
+**Compile a specific input file**
 
-```infokey [~/.infokey]```
+```infokey [path/to/file]```
 
-**Output to specific file**
+**Compile and output to a specific file**
 
-```infokey -o [output] [input]```
+```infokey -o [path/to/output] [path/to/input]```
 
 # SYNOPSIS
 
@@ -23,10 +23,10 @@ compiles custom key bindings for the info reader
 # PARAMETERS
 
 _FILE_
-> Input file (default ~/.infokey).
+> Input file (default $HOME/.infokey).
 
 **-o** _FILE_
-> Output file (default ~/.info).
+> Output compiled key file (default $HOME/.info).
 
 **--help**
 > Display help information.
@@ -36,18 +36,18 @@ _FILE_
 
 # DESCRIPTION
 
-**infokey** compiles custom key bindings for the info reader. It transforms text configuration into binary format.
+**infokey** compiles a source file containing custom key bindings and variable settings for the GNU Info reader into a binary format. It reads $HOME/.infokey by default and writes the compiled output to $HOME/.info.
 
-The input file defines key sequences and their actions. Custom bindings override default info navigation.
+The input file contains sections for defining key sequences and their associated actions. The **#info** section defines key bindings for Info windows, the **#echo-area** section defines bindings for the echo area, and the **#var** section sets Info variables. Custom bindings override the default Info navigation keys.
 
 # CAVEATS
 
-Input format specific to info. Binary output not human-readable. Requires info reader.
+The input file format is specific to Info and uses a custom syntax. The binary output is not human-readable. Requires the GNU Info reader to use the compiled bindings. In newer versions of Texinfo (6.0+), the infokey command was deprecated and the Info reader can read the .infokey text file directly without compilation.
 
 # HISTORY
 
-infokey is part of the **GNU Texinfo** package, allowing customization of info reader keybindings.
+infokey is part of the **GNU Texinfo** package. It was introduced to allow customization of Info reader key bindings. In **Texinfo 6.0** (2015), the standalone infokey command was deprecated as the Info reader gained the ability to read the .infokey source file directly.
 
 # SEE ALSO
 
-[info](/man/info)(1), [install-info](/man/install-info)(1)
+[info](/man/info)(1)

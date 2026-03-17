@@ -1,6 +1,6 @@
 # TAGLINE
 
-Send ARP requests to discover and test network hosts.
+Send ARP requests to discover and test network hosts
 
 # TLDR
 
@@ -37,34 +37,40 @@ The tool is useful for verifying layer 2 connectivity, finding MAC addresses, an
 # PARAMETERS
 
 **-c** _count_
-> Stop after count replies
+> Stop after sending _count_ ARP REQUEST packets.
 
 **-I** _interface_
-> Network interface
+> Network interface to send ARP requests on.
 
 **-D**
-> Duplicate address detection mode
+> Duplicate address detection mode (DAD). See RFC 2131.
 
 **-A**
-> ARP answer mode (gratuitous ARP)
+> ARP reply mode (gratuitous ARP reply).
 
 **-U**
-> Unsolicited ARP mode
+> Unsolicited ARP mode to update neighbours' ARP caches. No replies are expected.
 
 **-b**
-> Keep broadcasting
+> Send only MAC-level broadcasts; do not switch to unicast after reply.
 
 **-q**
-> Quiet mode
+> Quiet mode; nothing is displayed.
 
 **-s** _source_
-> Source IP address
+> Source IP address to use in ARP packets.
 
-**-w** _timeout_
-> Timeout in seconds
+**-w** _deadline_
+> Timeout in seconds before exiting regardless of packets sent or received.
+
+**-i** _interval_
+> Interval in seconds between packets.
 
 **-f**
-> Quit after first reply
+> Quit after the first reply confirming target is alive.
+
+**-V**
+> Print version and exit.
 
 # CAVEATS
 
@@ -72,8 +78,8 @@ Requires root/sudo for raw socket access. Only works on local network segment. C
 
 # HISTORY
 
-**arping** has existed in various forms since the early **2000s**. There are two common implementations: one by Thomas Habets and one in iputils.
+**arping** has existed in various forms since the early **2000s**. The most common implementation is in the **iputils** package maintained as part of Linux networking tools. A separate implementation by Thomas Habets provides additional features.
 
 # SEE ALSO
 
-[ping](/man/ping)(8), [arp](/man/arp)(8), [arp-scan](/man/arp-scan)(1)
+[ping](/man/ping)(8), [arp](/man/arp)(8), [arp-scan](/man/arp-scan)(1), [ip](/man/ip)(8)

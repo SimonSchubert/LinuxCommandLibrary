@@ -1,10 +1,10 @@
 # TAGLINE
 
-rearranges PDF pages for booklet printing
+Put pages of PDF files into 2-up signatures for booklet printing
 
 # TLDR
 
-**Create booklet from PDF**
+**Create a booklet from a PDF file**
 
 ```pdfbook [input.pdf]```
 
@@ -12,59 +12,56 @@ rearranges PDF pages for booklet printing
 
 ```pdfbook -o [booklet.pdf] [input.pdf]```
 
-**Create 2-up booklet for A4 paper**
+**Create booklet for A4 paper**
 
 ```pdfbook --paper a4paper [input.pdf]```
 
-**Signature of 16 pages**
+**Create booklet with a 16-page signature**
 
 ```pdfbook --signature [16] [input.pdf]```
 
+**Create booklet for short-edge double-sided printing**
+
+```pdfbook --short-edge [input.pdf]```
+
 # SYNOPSIS
 
-**pdfbook** [_options_] _file_...
+**pdfbook** [**--short-edge**] [_options_] _file_...
 
 # PARAMETERS
 
 **-o** _file_
-> Output file name.
+> Output file name. Defaults to input filename with "-book" suffix.
 
 **--paper** _size_
-> Paper size (a4paper, letterpaper).
+> Paper size (e.g. a4paper, letterpaper, legalpaper).
 
 **--signature** _num_
-> Pages per signature (multiple of 4).
+> Pages per signature (must be a multiple of 4, default 4).
 
-**--2up**
-> Two pages per sheet.
+**--signature*** _num_
+> Pages per signature for right-edge binding.
 
 **--short-edge**
-> Short edge binding.
+> Format for short-edge double-sided printing. Must be the first argument. Requires the LaTeX package everyshi.
+
+**--booklet** _bool_
+> Enable or disable booklet reordering (default true).
 
 # DESCRIPTION
 
-**pdfbook** rearranges PDF pages for booklet printing. It reorders pages so that when printed double-sided and folded, they form a properly ordered booklet.
+**pdfbook** is a simple wrapper for **pdfjam** that arranges PDF pages into 2-up signatures suitable for printing as a booklet. Pages are reordered so that when printed double-sided and folded, they form a properly ordered booklet.
 
-Part of the pdfjam suite, built on pdfpages LaTeX package.
-
-# EXAMPLE
-
-```bash
-# Create A4 booklet
-pdfbook --paper a4paper document.pdf
-
-# Signature booklet (easier folding)
-pdfbook --signature 8 manual.pdf -o manual-booklet.pdf
-```
+The default output is suitable for long-edge binding. Use **--short-edge** for short-edge binding. All options not listed above are passed through to **pdfjam**.
 
 # CAVEATS
 
-Requires LaTeX with pdfpages package. Page count should be multiple of 4 for best results. Output file is input-book.pdf by default.
+Requires LaTeX with the **pdfpages** package installed. Page count should be a multiple of 4 for best results. Output file defaults to the input filename with a "-book" suffix. The **--short-edge** option requires the **everyshi** LaTeX package.
 
 # HISTORY
 
-pdfbook is part of **pdfjam**, a collection of shell scripts using **pdfpages** LaTeX package, created by **David Firth**.
+pdfbook is part of **pdfjam**, a collection of shell scripts using the **pdfpages** LaTeX package, created by **David Firth**. It has been largely superseded by **pdfbook2**, which provides additional features like margin control.
 
 # SEE ALSO
 
-[pdfjam](/man/pdfjam)(1), [pdfnup](/man/pdfnup)(1), [pdflatex](/man/pdflatex)(1)
+[pdfjam](/man/pdfjam)(1), [pdfnup](/man/pdfnup)(1), [pdflatex](/man/pdflatex)(1), [pdfbook2](/man/pdfbook2)(1)

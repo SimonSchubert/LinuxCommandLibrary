@@ -1,66 +1,69 @@
 # TAGLINE
 
-converts C header files to Perl headers
+Convert C header files to Perl header files
 
 # TLDR
 
-**Convert C header to Perl**
+**Convert a C header file to Perl**
 
 ```h2ph [header.h]```
 
-**Process system headers**
+**Process all system headers recursively**
 
 ```cd /usr/include && h2ph -r -l *.h```
 
-**Output to specific directory**
+**Output to a specific directory**
 
 ```h2ph -d [/usr/lib/perl5] [header.h]```
 
-**Recursive processing**
+**Convert a header and all headers it includes**
 
-```h2ph -r [sys/types.h]```
+```h2ph -a [sys/types.h]```
 
 # SYNOPSIS
 
-**h2ph** [_options_] [_files_]
+**h2ph** [_options_] [_headerfiles_...]
 
 # PARAMETERS
 
-_FILES_
-> C header files to convert.
+_HEADERFILES_
+> C header files (.h) to convert to Perl header files (.ph).
 
 **-d** _DIR_
-> Output directory.
+> Put resulting .ph files beneath the specified directory instead of the default Perl library location.
 
 **-r**
-> Recursive processing.
-
-**-l**
-> Symbolic links for duplicates.
+> Run recursively, converting all .h files in specified directories and their subdirectories.
 
 **-a**
-> Generate autoload code.
+> Run automagically; convert specified headers as well as any .h files they include.
+
+**-l**
+> Create symbolic links for duplicate output files instead of separate copies.
 
 **-D** _DIR_
-> Search directory.
+> Search the specified directory for included header files.
 
-**--help**
-> Display help information.
+**-e**
+> If an error is encountered during conversion, output file names and continue parsing.
+
+**-Q**
+> Quiet mode. Do not print the names of converted files.
 
 # DESCRIPTION
 
-**h2ph** converts C header files to Perl headers. It translates #define macros and constant definitions for use in Perl programs.
+**h2ph** converts C header files (.h) to Perl header files (.ph). It translates **#define** macros and constant definitions into Perl equivalents that can be loaded with **require**.
 
-The tool creates .ph files that Perl can require. It's used to access system constants defined in C headers from Perl code.
+The tool is best run from **/usr/include** to convert system headers. It wraps definitions inside **eval** blocks so that you can access the definitions it can translate even if some fail. Output .ph files are placed in Perl's architecture-dependent library directory by default.
 
 # CAVEATS
 
-Only handles simple #defines. Complex macros not translated. Output may need manual fixes.
+Only handles simple **#define** constants and macros. Complex C macros, function-like macros, and typedefs are not translated. Output may need manual corrections. The **h2xs** tool is generally preferred for creating Perl extensions from C headers.
 
 # HISTORY
 
-h2ph has been part of **Perl** since early versions, enabling access to system constants from Perl programs.
+h2ph has been part of the **Perl** distribution since early versions, providing a quick way to access system constants from Perl programs before XS and h2xs became the preferred approach.
 
 # SEE ALSO
 
-[h2xs](/man/h2xs)(1), [perl](/man/perl)(1), [perlapi](/man/perlapi)(1)
+[h2xs](/man/h2xs)(1), [perl](/man/perl)(1)

@@ -1,6 +1,6 @@
 # TAGLINE
 
-display or set NIS domain name
+Display or set the system's NIS/YP domain name
 
 # TLDR
 
@@ -11,6 +11,10 @@ display or set NIS domain name
 **Set NIS domain name**
 
 ```sudo domainname [example.com]```
+
+**Set NIS domain name from a file**
+
+```sudo domainname -F [/etc/nisdomain]```
 
 **Clear domain name**
 
@@ -31,18 +35,21 @@ Without arguments, it shows the current NIS domain. With an argument, it sets th
 **-v**, **--verbose**
 > Be verbose about actions.
 
-**-F** _file_
-> Read domain name from file.
+**-F** _file_, **--file** _file_
+> Read domain name from the specified file.
 
-**--help**
-> Display help.
+**-y**, **--yp**, **--nis**
+> Display the NIS domain name (default behavior when invoked as domainname).
 
-**--version**
-> Show version.
+**-h**, **--help**
+> Display help and exit.
+
+**-V**, **--version**
+> Show version information and exit.
 
 # CAVEATS
 
-Different from DNS domain name. Setting is not persistent by default. NIS is deprecated in favor of LDAP. Rarely used on modern systems.
+Do not confuse this with the DNS domain name; use **dnsdomainname** for that. Setting is not persistent by default across reboots. NIS is deprecated in favor of LDAP and Kerberos. Rarely used on modern systems.
 
 # HISTORY
 

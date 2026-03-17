@@ -38,26 +38,29 @@ Print **partition information**
 
 # PARAMETERS
 
-**-h, --help**
-> Display help message
+**-h**, **--help**
+> Display help message.
 
-**-l, --list**
-> List partition layout on all block devices
+**-l**, **--list**
+> List partition layout on all block devices.
 
-**-m, --machine**
-> Show machine-parseable output
+**-m**, **--machine**
+> Show machine-parseable output.
 
-**-j, --json**
-> Show JSON output
+**-j**, **--json**
+> Show JSON output.
 
-**-s, --script**
-> Never prompt for user intervention
+**-s**, **--script**
+> Never prompt for user intervention.
 
-**-f, --fix**
-> Auto-answer "fix" to exceptions in script mode
+**-f**, **--fix**
+> Auto-answer "fix" to exceptions in script mode.
 
-**-a, --align TYPE**
-> Set alignment for new partitions (none, cylinder, minimal, optimal)
+**-v**, **--version**
+> Display version information.
+
+**-a**, **--align** _TYPE_
+> Set alignment for new partitions (none, cylinder, minimal, optimal).
 
 # COMMANDS
 

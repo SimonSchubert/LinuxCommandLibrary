@@ -114,16 +114,19 @@ Unlike docker or podman which are designed for general container management, cri
 # PARAMETERS
 
 **-r**, **--runtime-endpoint** _endpoint_
-> CRI runtime endpoint
+> CRI runtime endpoint (e.g., unix:///run/containerd/containerd.sock).
 
 **-i**, **--image-endpoint** _endpoint_
-> CRI image endpoint
+> CRI image endpoint.
 
 **--timeout** _duration_
-> Connection timeout
+> Connection timeout in seconds (default: 2).
+
+**--config** _path_
+> Location of the client config file (default: /etc/crictl.yaml).
 
 **-D**, **--debug**
-> Enable debug output
+> Enable debug output.
 
 # CONFIGURATION
 
@@ -138,8 +141,12 @@ debug: false
 
 # CAVEATS
 
-Must run with appropriate privileges. Different from docker CLI commands. Primarily for debugging Kubernetes nodes, not general container management.
+Must run with appropriate privileges (typically root). Command syntax differs from docker CLI. Primarily for debugging Kubernetes nodes, not general container management. Command-line flags take precedence over environment variables, which take precedence over the config file.
+
+# HISTORY
+
+**crictl** is part of the **cri-tools** project maintained by **Kubernetes SIGs**. It was created to provide a standard debugging and troubleshooting tool for CRI-compatible container runtimes, replacing runtime-specific CLIs for Kubernetes node inspection.
 
 # SEE ALSO
 
-[kubectl](/man/kubectl)(1), [ctr](/man/ctr)(1), [podman](/man/podman)(1)
+[kubectl](/man/kubectl)(1), [ctr](/man/ctr)(1), [podman](/man/podman)(1), [nerdctl](/man/nerdctl)(1)

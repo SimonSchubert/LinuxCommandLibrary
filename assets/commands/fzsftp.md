@@ -93,13 +93,13 @@ SFTP connection handler of FileZilla
 
 # DESCRIPTION
 
-**fzsftp** is part of FileZilla and handles SFTP (SSH File Transfer Protocol) connections. It is based on the **psftp** component of PuTTY and usually gets called by FileZilla rather than being used directly.
+**fzsftp** is the SFTP backend module of FileZilla, based on the **psftp** component of PuTTY. It is called internally by the FileZilla GUI to handle SSH File Transfer Protocol connections and is not intended for direct interactive use.
 
-The tool supports interactive and batch modes for file operations. It handles PuTTY-format (.ppk) keys natively and provides SFTP commands for navigation and file transfer.
+The tool communicates with the FileZilla process via stdin/stdout. It supports PuTTY-format (.ppk) keys natively, batch file processing, and various SSH connection options inherited from PuTTY.
 
 # CAVEATS
 
-fzsftp is not intended to be used directly; it is called internally by FileZilla. Password on command line is insecure. PPK keys need conversion for use with other SSH clients.
+Not intended to be used directly; it is called internally by FileZilla. Password on command line is insecure and visible in process listings. PPK keys need conversion for use with other SSH clients.
 
 # SEE ALSO
 

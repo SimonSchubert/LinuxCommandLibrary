@@ -47,64 +47,89 @@ Command-line interface to the Calibre ebook database
 # COMMANDS
 
 **list**
-> List books in database
+> List books in database with customizable fields and filtering.
 
 **add**
-> Add books to database
+> Import book files into the library.
 
 **remove**
-> Remove books by ID
+> Remove books by ID.
 
 **search**
-> Search for books
+> Query library using calibre's search syntax.
 
 **show_metadata**
-> Display book metadata
+> Display stored metadata for a book.
 
 **set_metadata**
-> Modify book metadata
+> Update book metadata from OPF file or individual fields.
 
 **export**
-> Export books from database
+> Export books to the filesystem with associated files.
 
 **add_format**
-> Add format to existing book
+> Attach an ebook file format to an existing book.
 
 **remove_format**
-> Remove format from book
+> Remove a specific format from a book.
 
 **catalog**
-> Generate catalog
+> Generate a formatted catalog of the library.
 
 **backup_metadata**
-> Backup metadata to OPF files
+> Export metadata to individual OPF files.
+
+**restore_database**
+> Rebuild the database from OPF metadata files.
+
+**check_library**
+> Validate library filesystem integrity.
+
+**clone**
+> Create a new empty library with identical custom columns and settings.
+
+**embed_metadata**
+> Update book file metadata from database records.
+
+**fts_index**
+> Manage full-text search indexing.
+
+**fts_search**
+> Perform full-text searches across library content.
 
 # PARAMETERS
 
-**--library-path**=_path_
-> Path to Calibre library (directory containing metadata.db)
+**--library-path** _path_
+> Path to Calibre library (directory containing metadata.db).
 
-**--with-library**=_url_
-> Connect to a Calibre Content server (e.g., http://localhost:8080)
+**--with-library** _url_
+> Connect to a Calibre Content server (e.g., http://localhost:8080).
 
-**--username**=_user_
-> Username for Content server authentication
+**--username** _user_
+> Username for Content server authentication.
 
-**--password**=_pass_
-> Password for Content server authentication
+**--password** _pass_
+> Password for Content server authentication.
 
-**-f**, **--field**=_name:value_
-> Set metadata field (used with set_metadata)
+**--timeout** _seconds_
+> Network connection timeout in seconds (default: 120).
+
+**-f**, **--field** _name:value_
+> Set metadata field (used with set_metadata).
 
 **--as-opf**
-> Output metadata as OPF XML
+> Output metadata as OPF XML.
 
 **--for-machine**
-> Output in JSON format (machine-readable)
+> Output in JSON format (machine-readable).
 
 # CAVEATS
 
 Book IDs can be found using the **list** or **search** commands. Arguments with spaces must be quoted. On macOS, command-line tools are inside the calibre.app bundle at `/Applications/calibre.app/Contents/MacOS/`. The Calibre GUI should not be running when using calibredb on a local library, or use **--with-library** to connect via the Content server instead.
+
+# HISTORY
+
+**calibredb** is part of **calibre**, an ebook management application created by **Kovid Goyal** and first released in **2006**.
 
 # SEE ALSO
 

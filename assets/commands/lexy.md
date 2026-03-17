@@ -20,6 +20,17 @@ CLI for reading Learn X in Y Minutes tutorials in the terminal
 
 **lexy** [_options_] [_language_]
 
+# PARAMETERS
+
+_LANGUAGE_
+> Name of the programming language to display the tutorial for.
+
+**list**
+> List all available languages using fzf for fuzzy selection.
+
+**update**
+> Force update the local documentation cache.
+
 # DESCRIPTION
 
 **lexy** is a lightweight CLI tool that fetches programming tutorials from "Learn X in Y Minutes" directly into your terminal. It allows you to quickly search, learn, and reference code examples without leaving your workflow.
@@ -28,7 +39,7 @@ Tutorials are cached locally in **$HOME/.config/lexy** and automatically updated
 
 # CAVEATS
 
-Requires an internet connection for the initial download and periodic updates. Depends on bat for syntax highlighting and fzf for fuzzy search.
+Requires an internet connection for the initial download and periodic updates. Depends on **bat** for syntax highlighting and **fzf** for fuzzy search. Tutorials are automatically updated every 60 days.
 
 # HISTORY
 

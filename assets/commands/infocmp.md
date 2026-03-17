@@ -1,6 +1,6 @@
 # TAGLINE
 
-displays and compares terminal capability descriptions from the terminfo
+Compare or print out terminfo descriptions
 
 # TLDR
 
@@ -8,21 +8,29 @@ displays and compares terminal capability descriptions from the terminfo
 
 ```infocmp```
 
-**Show specific terminal**
+**Show a specific terminal type**
 
 ```infocmp [xterm-256color]```
 
-**Compare two terminals**
+**Compare two terminal descriptions** (show differences)
 
 ```infocmp -d [xterm] [xterm-256color]```
 
-**Output in terminfo source format**
+**Output in terminfo source format** (can be compiled with tic)
 
 ```infocmp -I [xterm]```
 
-**Show all capabilities**
+**Show capabilities one per line**
 
 ```infocmp -1 [xterm]```
+
+**Output in termcap format**
+
+```infocmp -C [xterm]```
+
+**Generate relative description** using use= fields
+
+```infocmp -u [xterm-256color] [xterm]```
 
 # SYNOPSIS
 
@@ -31,62 +39,64 @@ displays and compares terminal capability descriptions from the terminfo
 # PARAMETERS
 
 _termname_
-> Terminal type to display.
+> Terminal type(s) to display or compare.
 
 **-d**
-> Compare two terminal descriptions.
+> Show differences between two terminal descriptions.
 
 **-c**
-> Compare with common capabilities.
+> Show common capabilities between two terminals.
 
 **-n**
-> Compare with common capabilities, numeric format.
+> Show capabilities common to both, listing those that differ.
+
+**-u**
+> Produce a terminfo source relative to other entries using **use=** fields.
 
 **-I**
-> Output terminfo source format.
-
-**-L**
-> Use long C variable names.
-
-**-1**
-> One capability per line.
+> Output in terminfo source format.
 
 **-C**
-> Output termcap format.
+> Output in termcap format.
+
+**-L**
+> Use long C variable names in output.
+
+**-1**
+> Print one capability per line.
 
 **-r**
-> Show resolved paths.
+> Show resolved paths for terminfo entries.
+
+**-E**
+> Dump capabilities as C initializer tables for a TERMTYPE structure.
+
+**-e**
+> Dump capabilities as a C initializer for a TERMTYPE structure.
+
+**-F**
+> Compare terminfo files, reporting matches and differences between entries.
 
 **-A** _dir_
-> Set terminfo directory.
+> Use the specified directory for the first terminal's terminfo database.
+
+**-B** _dir_
+> Use the specified directory for the second terminal's terminfo database.
 
 # DESCRIPTION
 
-**infocmp** displays and compares terminal capability descriptions from the terminfo database. It's useful for debugging terminal issues and understanding terminal features.
+**infocmp** compares or prints out terminal capability descriptions from the terminfo database. It can rewrite descriptions to use the **use=** field for sharing common capabilities, compare binary entries between different terminal types, and output in several formats including terminfo source and termcap.
 
-The command reads compiled terminfo entries and outputs them in readable format, supporting comparison between different terminal types.
-
-# OUTPUT FORMATS
-
-```bash
-# Default format
-infocmp xterm
-
-# Source format (can be compiled with tic)
-infocmp -I xterm > xterm.ti
-
-# Termcap format
-infocmp -C xterm
-```
+The command reads compiled terminfo entries and outputs them in a readable format. It is useful for debugging terminal issues, understanding terminal features, and preparing terminfo source files for compilation with **tic**.
 
 # CAVEATS
 
-Terminfo location varies by system. Some capabilities may be missing. Modern terminals have many extensions. Compare mode shows differences only.
+Terminfo database location varies by system (commonly **/usr/share/terminfo** or **/usr/lib/terminfo**). Some capabilities may be missing from terminal entries. Modern terminals support many extensions beyond the standard terminfo set. In compare mode (**-d**), only differing capabilities are shown.
 
 # HISTORY
 
-infocmp is part of the **ncurses** library, which implements the terminfo database. The terminfo system replaced termcap for terminal capabilities, providing a more extensible format.
+**infocmp** is part of the **ncurses** library, which implements the terminfo database. The terminfo system replaced the older termcap format, providing a more extensible binary format for terminal capabilities.
 
 # SEE ALSO
 
-[tic](/man/tic)(1), [terminfo](/man/terminfo)(5), [tput](/man/tput)(1), [toe](/man/toe)(1)
+[tic](/man/tic)(1), [tput](/man/tput)(1), [toe](/man/toe)(1)

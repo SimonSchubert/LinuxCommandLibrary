@@ -1,24 +1,20 @@
 # TAGLINE
 
-Safely edit group files with locking
+Edit the group or shadow-group file with locking
 
 # TLDR
 
-Edit the **group** file
+**Edit the /etc/group file**
 
-```vigr```
+```sudo vigr```
 
-Edit the **gshadow** file
+**Edit the /etc/gshadow (shadow group) file**
 
-```vigr -s```
+```sudo vigr -s```
 
-Edit in a **chroot** environment
+**Edit group files in a chroot environment**
 
-```vigr -R /path/to/chroot```
-
-Display **version**
-
-```vigr -V```
+```sudo vigr -R [/path/to/chroot]```
 
 # SYNOPSIS
 
@@ -26,28 +22,31 @@ Display **version**
 
 # DESCRIPTION
 
-**vigr** edits the /etc/group file (or /etc/gshadow with -s) while setting appropriate locks to prevent file corruption. It uses the editor specified by $VISUAL, then $EDITOR, falling back to vi if neither is set.
+**vigr** edits the `/etc/group` file (or `/etc/gshadow` with **-s**) while setting appropriate locks to prevent file corruption from concurrent access. It first locks the file, creates a temporary copy, opens it in the user's preferred editor (checking `$VISUAL`, then `$EDITOR`, falling back to `vi`), performs syntax checks after editing, and then atomically replaces the original file.
 
 # PARAMETERS
 
-**-g, --group**
-> Edit the group database (default)
+**-g**, **--group**
+> Edit the group database (default).
 
-**-s, --shadow**
-> Edit the gshadow (shadow group) database
+**-s**, **--shadow**
+> Edit the gshadow (shadow group) database.
 
-**-h, --help**
-> Display help message
+**-p**, **--passwd**
+> Edit the passwd database (equivalent to running vipw).
 
-**-q, --quiet**
-> Quiet mode
+**-q**, **--quiet**
+> Quiet mode.
 
-**-R, --root CHROOT_DIR**
-> Apply changes in a chroot environment
+**-R**, **--root** _CHROOT_DIR_
+> Apply changes in a chroot environment.
+
+**-h**, **--help**
+> Display help message.
 
 # CAVEATS
 
-The vigr command should always be used instead of directly editing /etc/group to prevent file corruption from concurrent access. Changes made require no additional steps to take effect.
+The **vigr** command should always be used instead of directly editing `/etc/group` to prevent file corruption from concurrent access. Changes take effect immediately. Requires root privileges. If you edit `/etc/group`, you should also check `/etc/gshadow` for consistency by running `vigr -s`.
 
 # HISTORY
 
@@ -55,4 +54,4 @@ The vigr command should always be used instead of directly editing /etc/group to
 
 # SEE ALSO
 
-[vipw](/man/vipw)(8), [group](/man/group)(5), [gshadow](/man/gshadow)(5), [groupadd](/man/groupadd)(8)
+[vipw](/man/vipw)(8), [group](/man/group)(5), [gshadow](/man/gshadow)(5), [groupadd](/man/groupadd)(8), [groupmod](/man/groupmod)(8), [groupdel](/man/groupdel)(8)

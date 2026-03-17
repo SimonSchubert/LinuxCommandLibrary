@@ -1,79 +1,110 @@
 # TAGLINE
 
-DMI/SMBIOS hardware information reader
+DMI/SMBIOS hardware information decoder
 
 # TLDR
 
-Show all **DMI table** contents
+**Show all DMI table contents**
 
 ```sudo dmidecode```
 
-Show the **BIOS version**
+**Show the BIOS version**
 
 ```sudo dmidecode -s bios-version```
 
-Show the system's **serial number**
+**Show the system serial number**
 
 ```sudo dmidecode -s system-serial-number```
 
-Show **BIOS** information
+**Show BIOS information**
 
 ```sudo dmidecode -t bios```
 
-Show **CPU** information
+**Show CPU information**
 
 ```sudo dmidecode -t processor```
 
-Show **memory** information
+**Show memory information**
 
 ```sudo dmidecode -t memory```
 
-Show **system** information
+**Show system manufacturer and product name**
 
 ```sudo dmidecode -t system```
 
+**Dump DMI data to a binary file**
+
+```sudo dmidecode --dump-bin [output.bin]```
+
+**List available string keywords**
+
+```dmidecode --list-strings```
+
 # SYNOPSIS
 
-**dmidecode** [_-s string_] [_-t type_] [_--dump-bin file_] [_--from-dump file_]
+**dmidecode** [**-s** _keyword_] [**-t** _type_] [**--dump-bin** _file_] [**--from-dump** _file_]
 
 # DESCRIPTION
 
-**dmidecode** reads the DMI (Desktop Management Interface) table, also known as SMBIOS (System Management BIOS), and displays hardware information in a human-readable format. This includes details about the BIOS, system, baseboard, chassis, processor, memory, and other components.
+**dmidecode** reads the DMI (Desktop Management Interface) table, also known as SMBIOS (System Management BIOS), and displays hardware information in a human-readable format. This includes details about the BIOS, system, baseboard, chassis, processor, memory, cache, connectors, and slots.
+
+The DMI data is read from /dev/mem or sysfs, depending on system availability.
 
 # PARAMETERS
 
-**-s, --string keyword**
-> Only display the value of a specific DMI string (bios-version, system-serial-number, processor-version, etc.)
+**-s**, **--string** _keyword_
+> Only display the value of a specific DMI string (e.g., bios-vendor, bios-version, system-serial-number, system-uuid, processor-version, processor-frequency).
 
-**-t, --type type**
-> Only display entries of specified type (bios, system, baseboard, chassis, processor, memory, cache, connector, slot)
+**--list-strings**
+> List all valid string keywords for use with -s.
 
-**-q, --quiet**
-> Less verbose output
+**-t**, **--type** _type_
+> Only display entries of specified type. Can be a number, comma-separated list, or keyword (bios, system, baseboard, chassis, processor, memory, cache, connector, slot).
 
-**-u, --dump**
-> Show raw DMI data
+**--list-types**
+> List all valid type keywords for use with -t.
 
-**--dump-bin file**
-> Dump DMI data to a binary file
+**-H**, **--handle** _handle_
+> Only display the entry matching the specified 16-bit handle value.
 
-**--from-dump file**
-> Read DMI data from a binary file
+**-q**, **--quiet**
+> Less verbose output; suppresses unknown, inactive, and OEM-specific entries.
 
-**-h, --help**
-> Display help
+**-u**, **--dump**
+> Show raw DMI data as hexadecimal.
 
-**-V, --version**
-> Display version
+**--dump-bin** _file_
+> Dump DMI data to a binary file for later use with --from-dump.
+
+**--from-dump** _file_
+> Read DMI data from a previously saved binary dump file.
+
+**--no-quirks**
+> Decode table contents precisely without applying workarounds for common firmware bugs.
+
+**--no-sysfs**
+> Do not attempt to read DMI data from sysfs files.
+
+**-d**, **--dev-mem** _file_
+> Read memory from a device file other than /dev/mem.
+
+**--oem-string** _N_
+> Display OEM string number N, or use "count" to show the total.
+
+**-h**, **--help**
+> Display help.
+
+**-V**, **--version**
+> Display version.
 
 # CAVEATS
 
-Requires root privileges. Information accuracy depends on the BIOS/firmware implementation by the manufacturer.
+Requires root privileges. Information accuracy depends on the BIOS/firmware implementation. Only works on x86 and x86_64 systems with SMBIOS-compliant firmware. The options **-s**, **-t**, and **--dump-bin** are mutually exclusive.
 
 # HISTORY
 
-Developed to provide a standardized way to access system hardware information on x86 and x86_64 systems through the SMBIOS standard.
+**dmidecode** was written by **Alan Cox** and is currently maintained by **Jean Delvare**. It provides a standardized way to access system hardware information through the SMBIOS standard on x86 and x86_64 systems.
 
 # SEE ALSO
 
-[lshw](/man/lshw)(1), [lscpu](/man/lscpu)(1), [hwinfo](/man/hwinfo)(8)
+[lshw](/man/lshw)(1), [lscpu](/man/lscpu)(1), [hwinfo](/man/hwinfo)(8), [biosdecode](/man/biosdecode)(8), [lspci](/man/lspci)(8)

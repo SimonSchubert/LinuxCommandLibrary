@@ -1,6 +1,6 @@
 # TAGLINE
 
-Check in revisions to the RCS version control system
+Check in RCS revisions
 
 # TLDR
 
@@ -28,9 +28,57 @@ Check in revisions to the RCS version control system
 
 ```ci -m"[Log message]" [path/to/file]```
 
+**Check in with a specific state**
+
+```ci -s[Exp] [path/to/file]```
+
 # SYNOPSIS
 
-**ci** [_options_] _file..._
+**ci** [_options_] _file_...
+
+# PARAMETERS
+
+**-l**[_rev_]
+> Check in and immediately check out locked for continued editing.
+
+**-u**[_rev_]
+> Check in and leave a read-only (unlocked) working copy.
+
+**-r**_rev_
+> Assign specific revision number to the new revision.
+
+**-f**[_rev_]
+> Force check-in even if file is unchanged from the previous revision.
+
+**-m**_msg_
+> Use msg as the log message instead of prompting interactively.
+
+**-n**_name_
+> Assign a symbolic name to the checked-in revision.
+
+**-N**_name_
+> Same as **-n**, but overrides any existing assignment of the name.
+
+**-s**_state_
+> Set the state of the checked-in revision (e.g. Exp, Stab, Rel).
+
+**-d**_date_
+> Use the specified date as the check-in date instead of the current time.
+
+**-w**_login_
+> Use login as the author field of the deposited revision.
+
+**-k**[_rev_]
+> Search working file for RCS keyword values to determine the revision number, date, author, and state.
+
+**-q**[_rev_]
+> Quiet mode; suppress diagnostic output.
+
+**-T**
+> Set the RCS file's modification time to the new revision's time only if the former precedes the latter. Preserves make dependencies.
+
+**-M**[_rev_]
+> Set the modification time of the working file (with **-l** or **-u**) to the date of the retrieved revision.
 
 # DESCRIPTION
 
@@ -40,35 +88,9 @@ By default, ci removes the working file after check-in, leaving only the RCS arc
 
 The command prompts for a log message describing the changes. This message is stored with the revision for future reference.
 
-# PARAMETERS
-
-**-l**
-> Check in and immediately check out locked for continued editing
-
-**-u**
-> Check in and leave a read-only working copy
-
-**-r**_rev_
-> Assign specific revision number to the new revision
-
-**-f**
-> Force check-in even if file unchanged from previous revision
-
-**-m**_msg_
-> Use msg as the log message instead of prompting
-
-**-n**_name_
-> Assign symbolic name to the checked-in revision
-
-**-d**_date_
-> Use specified date as check-in date
-
-**-k**
-> Search working file for keyword values to determine revision
-
 # CAVEATS
 
-Requires the caller's login to be on the RCS access list (unless empty, or caller is superuser/owner). To add a revision to an existing branch, the tip must be locked by the caller.
+Requires the caller's login to be on the RCS access list (unless the list is empty, or the caller is the superuser or file owner). To add a revision to an existing branch, the tip must be locked by the caller.
 
 If the revision is unchanged from the previous one, ci reverts to that revision unless **-f** is specified.
 

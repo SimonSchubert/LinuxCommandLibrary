@@ -4,27 +4,31 @@ manages Nix channel subscriptions
 
 # TLDR
 
-**List channels**
+**List subscribed channels**
 
 ```nix-channel --list```
 
-**Add channel**
+**Add a channel**
 
 ```nix-channel --add [https://nixos.org/channels/nixpkgs-unstable] [nixpkgs]```
 
-**Update channels**
+**Update all channels**
 
 ```nix-channel --update```
 
-**Remove channel**
-
-```nix-channel --remove [nixpkgs]```
-
-**Update specific channel**
+**Update a specific channel**
 
 ```nix-channel --update [nixpkgs]```
 
-**Show generation**
+**Remove a channel**
+
+```nix-channel --remove [nixpkgs]```
+
+**Rollback to a previous channel generation**
+
+```nix-channel --rollback```
+
+**List channel generations**
 
 ```nix-channel --list-generations```
 
@@ -35,16 +39,19 @@ manages Nix channel subscriptions
 # PARAMETERS
 
 **--list**
-> List subscribed channels.
+> Print names and URLs of all subscribed channels.
 
-**--add** _URL_ _NAME_
-> Subscribe to channel.
+**--add** _URL_ [_NAME_]
+> Subscribe to a channel. If _NAME_ is omitted, defaults to the last component of the URL with -stable or -unstable suffixes removed.
 
-**--update** [_NAME_]
-> Update channels.
+**--update** [_NAMES..._]
+> Download Nix expressions of subscribed channels and make them the default for nix-env operations. Optionally update only the named channels.
 
 **--remove** _NAME_
-> Unsubscribe from channel.
+> Unsubscribe from a channel.
+
+**--rollback** [_GENERATION_]
+> Revert the previous call to `--update`. Optionally specify a generation number.
 
 **--list-generations**
 > Show channel generations.
@@ -52,21 +59,24 @@ manages Nix channel subscriptions
 **--help**
 > Display help information.
 
+**--version**
+> Display version information.
+
 # DESCRIPTION
 
-**nix-channel** manages Nix channel subscriptions. Channels provide package sets.
+**nix-channel** manages Nix channel subscriptions. Channels are URLs that point to a Nix expression tarball providing a set of packages and NixOS modules.
 
-The tool handles channel URLs. Alternative to flakes for package sources.
+The list of subscribed channels is stored in `~/.nix-channels`. After updating, channel expressions are symlinked from `~/.nix-defexpr/` and become available to `nix-env` and other Nix tools. Nix flakes are the modern alternative to channels.
 
 # CAVEATS
 
-Legacy approach. Consider flakes instead. Per-user channels.
+Channels are a legacy approach; Nix flakes are recommended for new projects. Channels are per-user unless configured system-wide on NixOS. Running `--update` requires network access to download channel expressions.
 
 # HISTORY
 
-nix-channel is the traditional **Nix** way of subscribing to package repositories.
+nix-channel has been part of the **Nix** package manager since its early releases by Eelco Dolstra. It is the traditional mechanism for subscribing to package repositories, predating the flakes system introduced experimentally in Nix 2.4.
 
 # SEE ALSO
 
-[nix](/man/nix)(1), [nix-env](/man/nix-env)(1), [nixos-rebuild](/man/nixos-rebuild)(1)
+[nix](/man/nix)(1), [nix-env](/man/nix-env)(1), [nix-build](/man/nix-build)(1), [nix-shell](/man/nix-shell)(1), [nixos-rebuild](/man/nixos-rebuild)(1)
 

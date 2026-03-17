@@ -1,69 +1,98 @@
 # TAGLINE
 
-Generate x86-64 assembly from Go
+CLI for the Avo analytics tracking plan platform
 
 # TLDR
 
-**Create** new test
+**Initialize** an Avo workspace in the current folder
 
-```avo test [MyTest]```
+```avo init```
 
-**Generate** Go assembly
+**Pull** analytics wrappers from your Avo workspace
 
-```avo generate```
+```avo pull```
 
-**Build** with verification
+**Pull** a specific source
 
-```avo build```
+```avo pull [source_name]```
 
-Run **tests**
+**Check implementation status**
 
-```avo test```
+```avo status```
+
+**Switch** to a different Avo branch
+
+```avo checkout [branch]```
+
+**Merge** the Avo main branch into your current branch
+
+```avo merge main```
+
+**Log into** the Avo platform
+
+```avo login```
 
 # SYNOPSIS
 
-**avo** _command_ [_arguments_]
-
-# DESCRIPTION
-
-**avo** is a tool for generating x86-64 assembly code from Go. It provides a high-level interface for writing assembly while maintaining Go's type safety and tooling support.
-
-The tool is particularly useful for optimizing performance-critical code paths while keeping the code maintainable and testable.
+**avo** _command_ [_options_]
 
 # PARAMETERS
 
-**generate**
-> Generate assembly from Go code
+**init**
+> Initialize an Avo workspace in the current folder.
 
-**build**
-> Build and verify generated assembly
+**pull** [_source_]
+> Pull analytics wrappers from your Avo workspace.
 
-**test**
-> Run assembly tests
+**checkout** _branch_
+> Switch to a different Avo branch.
 
-**fmt**
-> Format avo source files
+**source** _command_
+> Manage sources for the current project.
 
-**vet**
-> Run verification checks
+**status** [_source_]
+> Show the status of the Avo implementation.
 
-# FEATURES
+**merge main**
+> Pull the Avo main branch into your current branch.
 
-- Type-safe assembly generation
-- Automatic register allocation
-- Integration with Go toolchain
-- Test infrastructure
-- Documentation generation
-- Instruction validation
+**conflict**
+> Resolve git conflicts in Avo files.
+
+**edit**
+> Open the Avo workspace in the browser.
+
+**login**
+> Log into the Avo platform.
+
+**logout**
+> Log out from the Avo platform.
+
+**whoami**
+> Show the currently logged in username.
+
+**-v**, **--verbose**
+> Make output more verbose.
+
+**-f**, **--force**
+> Proceed with merge when incoming branch is open.
+
+**--version**
+> Show version number.
+
+**--help**
+> Show help.
+
+# DESCRIPTION
+
+**avo** is the command-line interface for the Avo analytics tracking plan platform. It lets you pull type-safe analytics wrappers (codegen) from your Avo workspace directly into your project, ensuring analytics implementations match your tracking plan.
+
+The main workflow is running `avo pull` to fetch the latest generated analytics code based on your tracking plan defined at avo.app. On first run, it prompts you to select which Avo source to generate code for and where to save it. This configuration is stored in the **avo.json** file.
 
 # CAVEATS
 
-Requires understanding of assembly concepts. Generated code is architecture-specific (x86-64 only). Manual optimization may still be needed. Not all Go features can be represented in assembly.
-
-# HISTORY
-
-**avo** was created by Michael McLoughlin to make writing Go assembly more accessible and maintainable, first released around **2018**.
+Requires Node.js >= 14.16. Must be authenticated via `avo login` before pulling. Configuration is stored in avo.json in the project root.
 
 # SEE ALSO
 
-[go](/man/go)(1), [objdump](/man/objdump)(1), [perf](/man/perf)(1)
+[npm](/man/npm)(1), [node](/man/node)(1)

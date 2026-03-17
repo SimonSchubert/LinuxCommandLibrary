@@ -20,6 +20,10 @@ Interactively **configure** AUR credentials
 
 ```aurvote -c [package1] [package2] ...```
 
+**Show version** information
+
+```aurvote -V```
+
 # SYNOPSIS
 
 **aurvote** [_options_] [_packages_]
@@ -33,25 +37,26 @@ Credentials are stored in **~/.config/aurvote** and must be configured before us
 # PARAMETERS
 
 **--configure**
-> Interactively create the credentials file
+> Interactively create the credentials file.
 
-**-u, --unvote**
-> Remove votes from specified packages
+**-v**, **--vote**
+> Vote for specified packages (default action).
 
-**-c, --check**
-> Check if packages have been voted
+**-u**, **--unvote**
+> Remove votes from specified packages.
 
-**-h, --help**
-> Display help information
+**-c**, **--check**
+> Check if packages have been voted.
 
-# CONFIGURATION
+**-V**, **--version**
+> Display version information.
 
-**~/.config/aurvote**
-> Stores AUR credentials (username and password) for authentication. Created interactively with --configure.
+**-h**, **--help**
+> Display help information.
 
 # CAVEATS
 
-Requires an AUR account. Credentials are stored in plain text in the config file. Voting requires authentication with the AUR website.
+Requires an AUR account. Credentials are stored in plain text in **~/.config/aurvote**. Voting requires authentication with the AUR website.
 
 # SEE ALSO
 

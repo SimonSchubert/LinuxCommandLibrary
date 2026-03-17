@@ -1,50 +1,47 @@
 # TAGLINE
 
-introductory man page present in each section of the manual
+Introduction to user commands (man page section 1)
 
 # TLDR
 
-**Read introduction to commands**
+**Read the introduction to user commands**
 
 ```man intro```
 
-**Read introduction for section**
+**Read the introduction for a specific section**
 
 ```man [1] intro```
 
-**Sections available**
+**Search for all intro pages across sections**
 
 ```man -k intro```
 
 # SYNOPSIS
 
-**intro** - introduction to commands
-
-# PARAMETERS
-
-Section numbers in man pages:
-> 1 - User commands
-> 2 - System calls
-> 3 - Library functions
-> 4 - Special files
-> 5 - File formats
-> 6 - Games
-> 7 - Miscellaneous
-> 8 - System administration
+**intro** - introduction to user commands
 
 # DESCRIPTION
 
-**intro** is an introductory man page present in each section of the manual. It provides an overview of that section's content.
+**intro** is an introductory man page present in each section of the manual. Section 1 describes user commands and tools, including file manipulation tools, shells, compilers, web browsers, editors, and other programs that users commonly invoke from the command line.
 
-Each section intro explains the types of documentation found there. It helps newcomers understand man page organization.
+Each manual section has its own intro page providing an overview of the section's scope:
+
+- **1** - User commands and programs
+- **2** - System calls (kernel interfaces)
+- **3** - Library functions (C library routines)
+- **4** - Special files (devices in /dev)
+- **5** - File formats and conventions
+- **6** - Games and screensavers
+- **7** - Miscellaneous (protocols, conventions, character sets)
+- **8** - System administration commands
 
 # CAVEATS
 
-Read-only documentation. Content varies by system. Part of man-pages package.
+Read-only documentation. Content varies by distribution. Part of the **man-pages** package on Linux.
 
 # HISTORY
 
-intro pages have been part of **Unix documentation** since early versions, providing orientation for each manual section.
+intro pages have been part of **Unix documentation** since the earliest versions, providing orientation for each manual section. The convention of numbered sections dates back to the original **Unix Programmer's Manual** from **1971**.
 
 # SEE ALSO
 

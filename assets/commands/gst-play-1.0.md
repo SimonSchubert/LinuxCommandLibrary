@@ -16,23 +16,23 @@ Simple command line media playback tool using GStreamer
 
 ```gst-play-1.0 [path/to/directory]```
 
-**Play a file with a **specific video sink****
+**Play a file with a specific video sink**
 
 ```gst-play-1.0 --videosink=ximagesink [path/to/file.mp4]```
 
-**Play files in **shuffle** order**
+**Play files in shuffle order**
 
 ```gst-play-1.0 --shuffle [file1.mp3] [file2.mp3] [file3.mp3]```
 
-**Play a file with **gapless** playback enabled**
+**Play a file with gapless playback enabled**
 
 ```gst-play-1.0 --gapless [file1.mp3] [file2.mp3]```
 
-**Play a stream from a **URI****
+**Play a stream from a URI**
 
 ```gst-play-1.0 [https://example.com/stream.mp3]```
 
-**Play a file at **half volume****
+**Play a file at half volume**
 
 ```gst-play-1.0 --volume=0.5 [path/to/file.mp3]```
 
@@ -83,7 +83,7 @@ Simple command line media playback tool using GStreamer
 
 # DESCRIPTION
 
-**gst-play-1.0** is a command line playback tool that uses GStreamer's **playbin** element to play audio and video files. It accepts individual files, directories (which are traversed recursively), and URIs as input.
+**gst-play-1.0** is a command line playback testing tool that uses GStreamer's **playbin** element to play audio and video files. It accepts individual files, directories (which are traversed recursively), and URIs as input.
 
 The tool provides interactive keyboard controls during playback for pausing, seeking, adjusting volume, changing playback speed, and switching between audio, video, and subtitle tracks. It supports gapless playback for seamless transitions between tracks and can play media from local files or network streams.
 
@@ -95,11 +95,13 @@ Arrow Up/Down    Volume up / down
 Arrow Left/Right Seek backward / forward 10 seconds
 +/-       Increase / decrease playback rate
 d         Reverse playback direction
+t         Cycle trick modes
 a         Cycle audio tracks
 s         Cycle subtitle tracks
 v         Cycle video tracks
-> or .    Next track in playlist
-< or ,    Previous track in playlist
+> or n    Next track in playlist
+< or b    Previous track in playlist
+0         Seek back to beginning
 Q or ESC  Quit
 ```
 

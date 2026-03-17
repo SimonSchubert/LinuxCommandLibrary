@@ -1,24 +1,32 @@
 # TAGLINE
 
-terminal Sudoku game
+ncurses based sudoku game
 
 # TLDR
 
-**Start new game**
+**Start a new game with default difficulty**
 
 ```nudoku```
 
-**Select difficulty**
+**Start a game with a specific difficulty**
 
 ```nudoku -d [easy|normal|hard]```
 
-**Start easy game**
+**Start a game in black and white mode**
 
-```nudoku -d easy```
+```nudoku -c```
 
-**Start hard game**
+**Load a user-provided puzzle in stream format (dots for empty cells)**
 
-```nudoku -d hard```
+```nudoku -s [..5.3..8.1...6..2.4....7...]```
+
+**Export a puzzle to a PDF file**
+
+```nudoku -p [output.pdf]```
+
+**Export multiple puzzles to a PDF file**
+
+```nudoku -p [output.pdf] -n [10]```
 
 # SYNOPSIS
 
@@ -27,32 +35,44 @@ terminal Sudoku game
 # PARAMETERS
 
 **-d** _DIFFICULTY_
-> Set difficulty (easy, normal, hard).
+> Set difficulty: easy, normal, or hard. Default is normal.
 
-**-n**
-> No color mode.
+**-c**
+> No color mode (black and white). Useful for terminals without color support.
 
-**-h**, **--help**
+**-s** _STREAM_
+> Provide a user-supplied puzzle in stream format. Use dots (.) for empty fields, digits for filled cells, all in one line (81 characters).
+
+**-p** _FILE_
+> Output a puzzle to a PDF file.
+
+**-n** _COUNT_
+> Number of puzzles to put in the PDF. Only used with **-p**.
+
+**-i** _FILE_
+> Output a single puzzle to a PNG image file.
+
+**-h**
 > Display help information.
 
-**-v**, **--version**
-> Display version.
+**-v**
+> Display version information.
 
 # DESCRIPTION
 
-**nudoku** is a terminal Sudoku game. Uses ncurses for display.
+**nudoku** is a terminal-based Sudoku game using ncurses for display. It generates puzzles at three difficulty levels and provides a keyboard-driven interface for solving them.
 
-The game generates puzzles at different difficulties. Keyboard-driven interface.
+Arrow keys navigate the grid, and number keys fill in cells. The game can also export puzzles to PDF or PNG files for printing or sharing.
 
 # CAVEATS
 
-Requires ncurses. Arrow keys for navigation. Terminal based only.
+Requires ncurses. Terminal must support at least 80 columns. PDF and PNG export require the respective compile-time features to be enabled.
 
 # HISTORY
 
-nudoku was created as a **terminal-based Sudoku** implementation using ncurses.
+**nudoku** was created by **Michael Jubalh** as a lightweight terminal Sudoku game. The project is hosted on GitHub and packaged for most Linux distributions.
 
 # SEE ALSO
 
-[moon-buggy](/man/moon-buggy)(1), [nethack](/man/nethack)(1), [tetris-bsd](/man/tetris-bsd)(1)
+[moon-buggy](/man/moon-buggy)(1), [nsnake](/man/nsnake)(1), [bastet](/man/bastet)(1), [tetris-bsd](/man/tetris-bsd)(1)
 

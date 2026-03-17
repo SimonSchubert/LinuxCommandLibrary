@@ -20,17 +20,17 @@ Discover hidden HTTP parameters in web applications
 
 ```arjun -i [urls.txt]```
 
-**Use JSON body** for POST requests
+**Use JSON body** for parameter discovery
 
-```arjun -u [https://example.com/api] -m POST --json```
+```arjun -u [https://example.com/api] -m JSON```
 
 **Set custom headers**
 
 ```arjun -u [https://example.com] --headers "[Cookie: session=abc]"```
 
-**Output results** to a file
+**Output results** to a JSON file
 
-```arjun -u [https://example.com] -o [results.txt]```
+```arjun -u [https://example.com] -o [results.json]```
 
 **Set number of threads**
 
@@ -49,16 +49,22 @@ Discover hidden HTTP parameters in web applications
 > File containing URLs to scan (one per line).
 
 **-m**, **--method** _method_
-> HTTP method to use (GET, POST, PUT, DELETE, PATCH). Default: GET.
+> HTTP method to use (GET, POST, JSON, XML). Default: GET.
 
 **-w**, **--wordlist** _file_
 > Custom wordlist for parameter names.
 
-**-o**, **--output** _file_
-> Save results to file.
+**-o** _file_
+> Save results to a JSON output file.
+
+**-oT** _file_
+> Save results to a text output file.
+
+**-oB** [_proxy_]
+> Send results to Burp Suite proxy.
 
 **-t**, **--threads** _n_
-> Number of concurrent threads (default: 2).
+> Number of concurrent threads (default: 5).
 
 **--json**
 > Send POST data as JSON instead of form data.
@@ -78,8 +84,11 @@ Discover hidden HTTP parameters in web applications
 **--include** _params_
 > Parameters to always include in requests.
 
-**--timeout** _seconds_
-> Request timeout.
+**-T**, **--timeout** _seconds_
+> HTTP request timeout in seconds (default: 15).
+
+**-c** _n_, **--chunks** _n_
+> Number of parameters to send per request.
 
 **-q**, **--quiet**
 > Suppress output except results.

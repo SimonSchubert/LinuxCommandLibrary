@@ -16,13 +16,17 @@ Manage Simple Notification Service topics and subscriptions.
 
 ```aws sns publish --topic-arn [arn:aws:sns:region:account:topic-name] --message "[Hello World]"```
 
-**Subscribe an email** to a topic
+**Subscribe an email endpoint** to a topic
 
-```aws sns subscribe --topic-arn [arn:aws:sns:region:account:topic-name] --protocol email --notification-endpoint [email@example.com]```
+```aws sns subscribe --topic-arn [arn:aws:sns:region:account:topic-name] --protocol email --notification-endpoint [user@example.com]```
 
 **Subscribe a Lambda function** to a topic
 
 ```aws sns subscribe --topic-arn [arn:aws:sns:region:account:topic-name] --protocol lambda --notification-endpoint [arn:aws:lambda:region:account:function:name]```
+
+**Unsubscribe from a topic**
+
+```aws sns unsubscribe --subscription-arn [arn:aws:sns:region:account:topic-name:subscription-id]```
 
 **List subscriptions** for a topic
 

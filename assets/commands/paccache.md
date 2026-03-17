@@ -4,21 +4,29 @@ cache cleaning utility for pacman, the Arch Linux package manager
 
 # TLDR
 
-Remove all but the **3 most recent** package versions from the pacman cache
+**Remove all but the 3 most recent package versions from the cache**
 
-```paccache -r```
+```sudo paccache -r```
 
-Set the **number of package versions** to keep
+**Set the number of package versions to keep**
 
-```paccache -rk [num_versions]```
+```sudo paccache -rk [num_versions]```
 
-Perform a **dry-run** and show candidate packages for deletion
+**Perform a dry run and show candidate packages for deletion**
 
 ```paccache -d```
 
-**Move** candidate packages to a directory instead of deleting
+**Remove all cached versions of uninstalled packages**
 
-```paccache -m [path/to/directory]```
+```sudo paccache -ruk0```
+
+**Move candidate packages to a directory instead of deleting**
+
+```sudo paccache -m [path/to/directory]```
+
+**Dry run with verbose output**
+
+```paccache -dv```
 
 # SYNOPSIS
 
@@ -53,11 +61,23 @@ Perform a **dry-run** and show candidate packages for deletion
 **-q**, **--quiet**
 > Minimize output
 
+**-f**, **--force**
+> Apply force to mv and rm operations.
+
+**-i** _pkgs_, **--ignore** _pkgs_
+> Specify packages to ignore, comma-separated. Use "-" to read from stdin.
+
+**--nocolor**
+> Remove color from the output.
+
+**--notime** _time_
+> Keep packages with an atime/mtime not older than _time_, even if exceeding **--keep**.
+
 **-z**, **--null**
-> Use null delimiters for output
+> Use null delimiters for output.
 
 **-h**, **--help**
-> Display help message
+> Display help message.
 
 # DESCRIPTION
 

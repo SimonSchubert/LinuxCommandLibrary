@@ -1,6 +1,6 @@
 # TAGLINE
 
-creates temporary files or directories safely and prints their names
+Create temporary files or directories safely and print their names
 
 # TLDR
 
@@ -34,27 +34,27 @@ Create an empty **temporary directory**
 
 # PARAMETERS
 
-**-d, --directory**
-> Create a directory instead of a file
+**-d**, **--directory**
+> Create a directory instead of a file.
 
-**-u, --dry-run**
-> Print name without creating anything (unsafe for scripts)
+**-u**, **--dry-run**
+> Print name without creating anything (unsafe; see CAVEATS).
 
-**-q, --quiet**
-> Suppress error messages on creation failure
+**-q**, **--quiet**
+> Suppress error messages on creation failure.
 
-**-p _dir_, --tmpdir[=_dir_]**
-> Create temporary file relative to specified directory; defaults to $TMPDIR or /tmp
+**-p** _dir_, **--tmpdir**[=_dir_]
+> Create temporary file relative to the specified directory; defaults to $TMPDIR or /tmp.
 
 **-t**
-> Interpret template as filename relative to temp directory (deprecated)
+> Interpret template as a filename relative to the temp directory (deprecated).
 
-**--suffix _suff_**
-> Append suffix to template; suffix cannot contain slashes
+**--suffix** _suff_
+> Append suffix to template; suffix must not contain slashes.
 
 # DESCRIPTION
 
-**mktemp** creates temporary files or directories safely and prints their names. The template must include at least 3 consecutive X characters in its final component, which are replaced with random alphanumeric characters to ensure uniqueness.
+**mktemp** creates temporary files or directories safely and prints their paths. The template must include at least 3 consecutive X characters in its final component, which are replaced with random alphanumeric characters to ensure uniqueness.
 
 When no template is provided, mktemp defaults to tmp.XXXXXXXXXX in the system temp directory. Files are created with u+rw permissions and directories with u+rwx, both modified by umask.
 
@@ -70,4 +70,4 @@ The -u (dry-run) option is unsafe for production scripts because another process
 
 # SEE ALSO
 
-[tmpfile](/man/tmpfile)(1), [mkstemp](/man/mkstemp)(3), [mkdtemp](/man/mkdtemp)(3)
+[rm](/man/rm)(1), [trap](/man/trap)(1)

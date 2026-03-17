@@ -49,7 +49,14 @@ The tool queries storage entries including physical disks, RAM, virtual memory, 
 
 snmpdf is part of the **Net-SNMP** suite and is useful for monitoring disk usage across many hosts from a central location without requiring SSH access or agents beyond the standard SNMP daemon.
 
+# CAVEATS
+
+Requires a running SNMP agent on the remote host. The default hrStorageTable may report virtual memory and other non-disk storage types. Community strings and SNMP credentials must match the agent configuration. SNMPv3 authentication adds complexity but is recommended for security.
+
+# HISTORY
+
+**snmpdf** is part of the **Net-SNMP** suite, which evolved from the UCD-SNMP project originally developed at the University of California, Davis.
+
 # SEE ALSO
 
-[snmpget](/man/snmpget)(1), [snmpwalk](/man/snmpwalk)(1), [df](/man/df)(1)
-
+[snmpget](/man/snmpget)(1), [snmpwalk](/man/snmpwalk)(1), [snmpset](/man/snmpset)(1), [df](/man/df)(1)

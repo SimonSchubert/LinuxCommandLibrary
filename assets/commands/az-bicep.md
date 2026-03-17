@@ -44,7 +44,7 @@ Manage Bicep files for Azure infrastructure as code
 
 **az bicep** manages the Bicep CLI for Infrastructure as Code on Azure. Bicep is a domain-specific language (DSL) that uses declarative syntax to deploy Azure resources, serving as a transparent abstraction over ARM templates.
 
-The command group provides tools for building, validating, formatting, and publishing Bicep files, as well as converting existing ARM templates to Bicep format.
+The command group provides tools for building, validating, formatting, and publishing Bicep files, as well as converting existing ARM templates to Bicep format. Requires Azure CLI version 2.20.0 or later; the Bicep CLI is automatically installed on first use if not present.
 
 # SUBCOMMANDS
 
@@ -66,26 +66,26 @@ The command group provides tools for building, validating, formatting, and publi
 # PARAMETERS
 
 **--file** _value_
-> Path to the Bicep file
+> Path to the Bicep file.
 
 **--outdir** _value_
-> Output directory for built files
+> Output directory for built files.
 
 **--outfile** _value_
-> Output file path for the built result
+> Output file path for the built result.
 
 **--stdout**
-> Output to stdout instead of file
+> Output to stdout instead of file.
 
 **--target** _value_
-> Module registry target for publishing
+> Module registry target for publishing.
 
 **--version** _value_
-> Specific Bicep CLI version to install
+> Specific Bicep CLI version to install.
 
 # CAVEATS
 
-Decompilation from ARM templates produces functionally equivalent Bicep but may require manual refinement for readability. Bicep CLI is automatically installed on first use if not present. Module publishing requires a container registry with appropriate permissions.
+Decompilation from ARM templates produces functionally equivalent Bicep but may require manual refinement for readability. Module publishing requires a container registry with appropriate permissions. Bicep parameters files require Azure CLI version 2.53.0 or later and Bicep CLI version 0.22.x or later.
 
 # HISTORY
 

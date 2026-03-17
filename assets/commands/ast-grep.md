@@ -6,23 +6,23 @@ Structural code search and rewrite using AST patterns
 
 **Search for a pattern** in the current directory
 
-```ast-grep --pattern '[console.log($ARG)]'```
+```ast-grep --pattern 'console.log($ARG)'```
 
-**Search with specific language**
+**Search with a specific language**
 
-```ast-grep --pattern '[async function $NAME() {}]' --lang typescript```
+```ast-grep --pattern 'async function $NAME() {}' --lang typescript```
 
 **Search and rewrite** code
 
-```ast-grep --pattern '[$OLD].forEach($FN)' --rewrite '[$OLD].map($FN)'```
+```ast-grep --pattern '$OLD.forEach($FN)' --rewrite '$OLD.map($FN)'```
 
 **Interactive rewrite** with confirmation
 
-```ast-grep --pattern '[$A] == [$B]' --rewrite '[$A] === [$B]' --interactive```
+```ast-grep --pattern '$A == $B' --rewrite '$A === $B' --interactive```
 
 **Output matches as JSON**
 
-```ast-grep --pattern '[var $X = $Y]' --json```
+```ast-grep --pattern 'var $X = $Y' --json```
 
 **Scan using rule configuration** files
 
@@ -30,7 +30,11 @@ Structural code search and rewrite using AST patterns
 
 **Search with context lines**
 
-```ast-grep --pattern '[TODO]' --context 3```
+```ast-grep run --pattern '$FUNC()' --context 3```
+
+**Filter files with a glob** pattern
+
+```ast-grep run --pattern '$X' --globs '*.ts'```
 
 # SYNOPSIS
 
@@ -41,52 +45,55 @@ Structural code search and rewrite using AST patterns
 # PARAMETERS
 
 **run**
-> Run a one-time search or rewrite (default command)
+> Run a one-time search or rewrite (default command).
 
 **scan**
-> Scan and rewrite code using configuration rules
+> Scan and rewrite code using YAML configuration rules.
 
 **test**
-> Test ast-grep rules
+> Test ast-grep rules against test cases.
 
 **new**
-> Create new ast-grep project, rules, or tests
+> Create new ast-grep project, rules, or tests via scaffolding.
 
 **lsp**
-> Start language server for IDE integration
+> Start language server for IDE integration.
 
 **-p** _pattern_, **--pattern** _pattern_
-> AST pattern to search for; use $VAR for metavariables
+> AST pattern to search for. Use $VAR for metavariables.
 
 **-r** _replacement_, **--rewrite** _replacement_
-> Replacement pattern for matches
+> Replacement pattern for matches. Use $VAR to reference captured metavariables.
 
 **-l** _lang_, **--lang** _lang_
-> Target language (javascript, typescript, python, rust, go, etc.)
+> Target language (javascript, typescript, python, rust, go, c, cpp, java, etc.).
 
 **-i**, **--interactive**
-> Interactive mode for confirming rewrites
+> Interactive mode for confirming rewrites one by one.
 
 **--json** [_style_]
-> Output in JSON format (pretty, stream, compact)
+> Output in JSON format (pretty, stream, compact).
 
 **-A** _num_, **--after** _num_
-> Show num lines after each match
+> Show num lines after each match.
 
 **-B** _num_, **--before** _num_
-> Show num lines before each match
+> Show num lines before each match.
 
 **-C** _num_, **--context** _num_
-> Show num lines around each match
+> Show num lines around each match.
+
+**--globs** _pattern_
+> Include or exclude files matching the given glob. May be specified multiple times.
 
 **--stdin**
-> Read code from standard input
+> Read code from standard input.
 
 **--threads** _num_
-> Number of threads (0 for auto-detection)
+> Number of threads (0 for auto-detection).
 
 **-c** _file_, **--config** _file_
-> Path to config file (default: sgconfig.yml)
+> Path to config file (default: sgconfig.yml).
 
 # DESCRIPTION
 
@@ -98,18 +105,13 @@ The tool supports multiple languages through tree-sitter parsers, including Java
 
 Configuration files (**sgconfig.yml**) define rule directories and project settings. Individual rules specify patterns, rewrites, severity levels, and file filters.
 
-# CONFIGURATION
-
-**sgconfig.yml**
-> Project configuration file defining rule directories, language settings, and custom rule paths.
-
 # CAVEATS
 
-The **sg** alias conflicts with the Linux **setgroups** command; use the full **ast-grep** command or create a custom alias. Pattern syntax varies slightly by language due to AST differences. Complex patterns may require understanding tree-sitter node types.
+The **sg** alias may conflict with other commands on some systems. Pattern syntax varies slightly by language due to AST differences. Complex patterns may require understanding tree-sitter node types.
 
 # HISTORY
 
-**ast-grep** was created by **Herrington Darkholme** and released in **2022**. Written in Rust for performance, it was designed to bring structural code search to the command line, inspired by tools like Semgrep and Comby. The tool gained popularity for its speed and intuitive pattern syntax for code refactoring tasks.
+**ast-grep** was created by **Herrington Darkholme** and released in **2022**. Written in Rust for performance, it was designed to bring structural code search to the command line, inspired by tools like Semgrep and Comby.
 
 # SEE ALSO
 

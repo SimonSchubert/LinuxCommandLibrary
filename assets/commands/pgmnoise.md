@@ -1,24 +1,28 @@
 # TAGLINE
 
-creates a PGM image filled with random grayscale pixels
+create a PGM image filled with random grayscale pixels
 
 # TLDR
 
-**Create white noise image**
+**Create a 100x100 white noise image**
 
 ```pgmnoise [100] [100] > [noise.pgm]```
 
-**Create large noise pattern**
+**Create a full HD noise image**
 
 ```pgmnoise [1920] [1080] > [noise.pgm]```
 
-**Create and convert to PNG**
+**Create noise and convert to PNG**
 
 ```pgmnoise [256] [256] | pnmtopng > [noise.png]```
 
-**With custom seed**
+**Create reproducible noise with a fixed seed**
 
 ```pgmnoise -randomseed [12345] [100] [100] > [noise.pgm]```
+
+**Create a small noise tile and repeat it**
+
+```pgmnoise [64] [64] | pnmtile [256] [256] > [texture.pgm]```
 
 # SYNOPSIS
 
@@ -26,44 +30,32 @@ creates a PGM image filled with random grayscale pixels
 
 # PARAMETERS
 
-**width**
+_width_
 > Image width in pixels.
 
-**height**
+_height_
 > Image height in pixels.
 
 **-randomseed** _n_
-> Seed for random number generator.
+> Seed for the random number generator, allowing reproducible output.
 
 **-maxval** _n_
-> Maximum gray value.
+> Maximum gray value for pixels. Defaults to the PGM compile-time maximum (typically 255 or 65535).
 
 # DESCRIPTION
 
-**pgmnoise** creates a PGM image filled with random grayscale pixels (white noise). Each pixel is independently assigned a random gray value.
+**pgmnoise** creates a portable graymap (PGM) image where each pixel is independently assigned a uniformly distributed random gray value between 0 and the maximum value. The output is written to standard output in PGM format.
 
-Useful for testing, creating textures, or generating random patterns.
-# Basic noise image
-pgmnoise 512 512 > noise.pgm
-
-# Reproducible noise
-pgmnoise -randomseed 42 100 100 > noise.pgm
-
-# Create texture and tile
-pgmnoise 64 64 | pnmtile 256 256 > texture.pgm
-
-# Convert to PNG
-pgmnoise 200 200 | pnmtopng > noise.png
-```
+The tool is useful for testing image processing pipelines, creating noise textures, or generating random patterns that can be piped into other Netpbm tools.
 
 # CAVEATS
 
-Uniform distribution. For other noise types, combine with other tools. Part of Netpbm.
+Uses uniform random distribution only. For Gaussian or other noise types, use **pamaddnoise** or combine with other tools. Output goes to stdout and must be redirected. Part of the Netpbm toolkit.
 
 # HISTORY
 
-pgmnoise is part of **Netpbm** by **Jef Poskanzer** and contributors, providing basic noise generation.
+**pgmnoise** is part of **Netpbm**, the graphics toolkit originally created by **Jef Poskanzer** in the late 1980s and maintained by **Bryan Henderson** since 2000.
 
 # SEE ALSO
 
-[pnmnoise](/man/pnmnoise)(1), [pgmmake](/man/pgmmake)(1), [ppmforge](/man/ppmforge)(1), [netpbm](/man/netpbm)(1)
+[pnmnoise](/man/pnmnoise)(1), [pgmmake](/man/pgmmake)(1), [ppmforge](/man/ppmforge)(1), [pnmtopng](/man/pnmtopng)(1), [netpbm](/man/netpbm)(1)

@@ -18,25 +18,49 @@ TUI playground to experiment with jq
 
 **Use a specific theme**
 
-```jqp -f [path/to/file.json] --theme [monokai]```
+```jqp -f [path/to/file.json] -t [monokai]```
+
+**Use a custom config file**
+
+```jqp -f [path/to/file.json] --config [path/to/.jqp.yaml]```
 
 # SYNOPSIS
 
-**jqp** [**-f** _file_] [**-q** _query_] [**--theme** _theme_]
+**jqp** [_query_] [_flags_]
+
+# PARAMETERS
+
+**-f**, **--file** _FILE_
+> Path to the JSON or NDJSON input file.
+
+**-q**, **--query** _QUERY_
+> Initial jq query to execute on startup.
+
+**-t**, **--theme** _THEME_
+> Color theme name. Light themes work best with light terminal backgrounds, dark themes with dark backgrounds.
+
+**--config** _FILE_
+> Path to config file (default: **$HOME/.jqp.yaml**).
+
+**-h**, **--help**
+> Display help information.
+
+**-v**, **--version**
+> Display version information.
 
 # DESCRIPTION
 
-**jqp** is a TUI playground for exploring and experimenting with **jq** queries. It provides an interactive interface where you can type jq filters and see results update in real time against your JSON data. The tool supports both JSON and **newline-delimited JSON** (NDJSON) input.
+**jqp** is a TUI playground for exploring and experimenting with **jq** queries. It provides an interactive interface where you can type jq filters and see results update in real time against your JSON data. The tool internally uses **gojq**, a Go implementation of jq, and supports both JSON and **newline-delimited JSON** (NDJSON) input.
 
-Features include query history, auto-completion, customizable themes (light and dark), and the ability to start with a pre-defined query.
+Features include query history, auto-completion, customizable themes (light and dark), and the ability to start with a pre-defined query. Configuration can be provided via **$HOME/.jqp.yaml** or the **--config** flag; command-line options take precedence over the config file.
 
 # CAVEATS
 
-Requires **jq** to be installed on the system. Large JSON files may impact the responsiveness of live preview updates.
+Large JSON files may impact the responsiveness of live preview updates. Input must be valid JSON or NDJSON.
 
 # HISTORY
 
-**jqp** was created by **Noah Gorstein** (noahgorstein) and is written in **Go**. It was designed as a terminal-native alternative to web-based jq playgrounds.
+**jqp** was created by **Noah Gorstein** and is written in **Go**. It was designed as a terminal-native alternative to web-based jq playgrounds.
 
 # SEE ALSO
 

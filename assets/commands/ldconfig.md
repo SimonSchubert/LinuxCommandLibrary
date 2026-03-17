@@ -4,17 +4,25 @@ configures the dynamic linker run-time bindings
 
 # TLDR
 
-**Update** symlinks and rebuild cache
+**Update symlinks and rebuild the shared library cache**
 
 ```sudo ldconfig```
 
-Update symlinks for a **specific directory**
+**Update symlinks for a specific directory only**
 
 ```sudo ldconfig -n [path/to/directory]```
 
-**Print** cached libraries and search for specific library
+**Print cached libraries and search for a specific library**
 
 ```ldconfig -p | grep [library_name]```
+
+**Rebuild cache with verbose output**
+
+```sudo ldconfig -v```
+
+**Use an alternate configuration file**
+
+```sudo ldconfig -f [path/to/ld.so.conf]```
 
 # SYNOPSIS
 
@@ -41,17 +49,23 @@ Update symlinks for a **specific directory**
 > Use specified config file instead of /etc/ld.so.conf
 
 **-C** _FILE_
-> Use specified cache file
+> Use specified cache file instead of /etc/ld.so.cache.
+
+**-r** _ROOT_
+> Change to and use _ROOT_ as the root directory.
+
+**-l**
+> Library mode. Manually link individual libraries.
 
 # DESCRIPTION
 
-**ldconfig** configures the dynamic linker run-time bindings. It creates the necessary links and cache to the shared libraries found in directories specified in /etc/ld.so.conf, trusted directories (/lib, /usr/lib), and those specified on the command line.
+**ldconfig** configures the dynamic linker run-time bindings. It creates the necessary symbolic links and cache (stored in /etc/ld.so.cache) to the most recent shared libraries found in directories specified in /etc/ld.so.conf, in trusted directories (/lib and /usr/lib), and those specified on the command line.
 
-The cache is used by the run-time linker (ld.so) to quickly find shared libraries. Running ldconfig is typically necessary after installing new shared libraries.
+The cache is used by the run-time linker (ld.so or ld-linux.so) to quickly resolve shared library dependencies without scanning directories at load time. Running ldconfig is typically necessary after installing new shared libraries or modifying /etc/ld.so.conf.
 
 # CAVEATS
 
-Requires root privileges to modify system cache. Must be run after installing new libraries for them to be found. Does not update libraries in non-standard paths not listed in ld.so.conf.
+Requires root privileges to modify the system cache. Must be run after installing new shared libraries for them to be found by the dynamic linker. Libraries in non-standard paths must be listed in /etc/ld.so.conf or passed on the command line. Package managers typically run ldconfig automatically after installing library packages.
 
 # HISTORY
 
@@ -59,4 +73,4 @@ ldconfig is part of the GNU C Library (glibc) and has been essential for dynamic
 
 # SEE ALSO
 
-[ldd](/man/ldd)(1), [ld.so](/man/ld.so)(8), [ld.so.conf](/man/ld.so.conf)(5)
+[ldd](/man/ldd)(1), [ld.so](/man/ld.so)(8)

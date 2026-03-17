@@ -8,9 +8,9 @@ Batch rename utility for developers
 
 ```nomino -r "[regex]" "[output_pattern]"```
 
-**Preview changes without renaming**
+**Preview changes without renaming (test mode)**
 
-```nomino -q -r "[regex]" "[output_pattern]"```
+```nomino -t -r "[regex]" "[output_pattern]"```
 
 **Sort files and rename with ascending numbers**
 
@@ -55,8 +55,17 @@ Batch rename utility for developers
 **-k**, **--mkdir**
 > Recursively create parent directories of output if missing.
 
+**-p**, **--print**
+> Print the map table to stdout.
+
 **-q**, **--quiet**
 > Do not print the map table to stdout.
+
+**-t**, **--test**
+> Run in test mode without renaming actual files.
+
+**-w**, **--overwrite**
+> Overwrite output files. Otherwise a '_' is prepended to the filename.
 
 **--depth** _DEPTH_
 > Override inferred subdirectory depth in regex mode.
@@ -72,7 +81,7 @@ File extensions are preserved by default in sort and regex modes unless **-E** i
 
 # CAVEATS
 
-Always preview changes with **-q** before executing. File extensions are preserved by default in sort and regex modes.
+Always preview changes with **-t** (test mode) before executing. File extensions are preserved by default in sort and regex modes. Without **-w**, existing output files are not overwritten; a '_' is prepended instead.
 
 # HISTORY
 

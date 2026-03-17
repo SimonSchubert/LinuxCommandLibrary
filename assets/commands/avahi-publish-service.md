@@ -12,9 +12,9 @@ Publish with **service text**
 
 ```avahi-publish-service [MyService] [_http._tcp] [80] ["path=/api"]```
 
-Publish on **specific address**
+Publish on a **specific host**
 
-```avahi-publish-service -a [192.168.1.100] [MyService] [_http._tcp] [80]```
+```avahi-publish-service -H [myhost.local] [MyService] [_http._tcp] [80]```
 
 Publish with **subtype**
 
@@ -34,32 +34,26 @@ The registration persists only while the process is running. When terminated, th
 
 # PARAMETERS
 
-**-a**, **--address=**_address_
-> Bind to specific address
+**-H**, **--host=**_HOSTNAME_
+> Specify a host name for the service if it does not reside on the local host. Must be fully qualified and resolvable via mDNS or unicast DNS.
 
-**-s**, **--subtype=**_subtype_
-> Register service subtype
+**-d**, **--domain=**_DOMAIN_
+> Publish in the specified domain. If omitted, the Avahi daemon publishes in its default domain (usually .local).
 
-**-d**, **--domain=**_domain_
-> Publish in specific domain
+**--subtype=**_SUBTYPE_
+> Register the service with an additional subtype. May be passed multiple times.
 
-**-H**, **--host=**_hostname_
-> Advertise as specific hostname
+**-f**, **--no-fail**
+> Don't fail if the daemon is not running. Wait for it to appear and reconnect if it disconnects.
 
 **-v**, **--verbose**
-> Enable verbose mode
+> Enable verbose mode.
 
-**--no-fail**
-> Don't fail if already published
+**-V**, **--version**
+> Show version information.
 
-# SERVICE TYPES
-
-Common service types:
-- **_http._tcp** - Web services
-- **_ssh._tcp** - SSH servers
-- **_printer._tcp** - Network printers
-- **_afpovertcp._tcp** - AFP file sharing
-- **_smb._tcp** - SMB/CIFS file sharing
+**-h**, **--help**
+> Show help.
 
 # CAVEATS
 
@@ -71,4 +65,4 @@ Requires avahi-daemon running. Service persists only while command is running. F
 
 # SEE ALSO
 
-[avahi-browse](/man/avahi-browse)(1), [avahi-daemon](/man/avahi-daemon)(8), [dns-sd](/man/dns-sd)(1)
+[avahi-publish](/man/avahi-publish)(1), [avahi-browse](/man/avahi-browse)(1), [avahi-daemon](/man/avahi-daemon)(8)

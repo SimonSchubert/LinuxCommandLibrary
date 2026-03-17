@@ -69,6 +69,12 @@ Find and fix security vulnerabilities
 **wizard**
 > Interactive remediation.
 
+**fix**
+> Apply remediation to fix vulnerabilities.
+
+**sbom**
+> Generate a Software Bill of Materials (SBOM).
+
 **policy**
 > Manage .snyk policy file.
 
@@ -86,6 +92,9 @@ Find and fix security vulnerabilities
 
 **--all-projects**
 > Test all projects in directory.
+
+**--dev**
+> Include dev dependencies in the scan.
 
 **--fail-on** _TYPE_
 > Fail on: all, upgradable, patchable.
@@ -123,4 +132,4 @@ Requires account for full functionality. Some features need paid plans. Internet
 
 # SEE ALSO
 
-[npm-audit](/man/npm-audit)(1), [safety](/man/safety)(1), [trivy](/man/trivy)(1), [checkov](/man/checkov)(1)
+[npm-audit](/man/npm-audit)(1), [safety](/man/safety)(1), [trivy](/man/trivy)(1), [checkov](/man/checkov)(1), [docker](/man/docker)(1)

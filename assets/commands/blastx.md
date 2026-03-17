@@ -72,7 +72,16 @@ This tool is useful for identifying protein homologs of nucleotide sequences, an
 > Scoring matrix (e.g., BLOSUM62, PAM250)
 
 **-query_gencode** _n_
-> Genetic code for query translation (default: 1)
+> Genetic code for query translation (default: 1).
+
+**-seg** _method_
+> Filter query sequence for low-complexity regions (default: 12 2.2 2.5).
+
+**-task** _name_
+> Task to execute: blastx (default) or blastx-fast.
+
+**-remote**
+> Execute search remotely on NCBI servers.
 
 # CAVEATS
 
@@ -84,4 +93,4 @@ BLAST (Basic Local Alignment Search Tool) was originally developed at NCBI by **
 
 # SEE ALSO
 
-[blastn](/man/blastn)(1), [blastp](/man/blastp)(1), [tblastn](/man/tblastn)(1), [makeblastdb](/man/makeblastdb)(1), [blastdbcmd](/man/blastdbcmd)(1)
+[blastn](/man/blastn)(1), [blastp](/man/blastp)(1), [tblastn](/man/tblastn)(1), [tblastx](/man/tblastx)(1), [makeblastdb](/man/makeblastdb)(1), [blastdbcmd](/man/blastdbcmd)(1)

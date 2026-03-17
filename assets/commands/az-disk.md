@@ -4,19 +4,23 @@ Manage Azure managed disks
 
 # TLDR
 
-**Create a managed disk**
+**Create a managed disk with a specific size**
 
 ```az disk create --name [MyDisk] --resource-group [MyResourceGroup] --size-gb [128]```
 
 **Create a disk from a snapshot**
 
-```az disk create --name [MyDisk] --resource-group [MyResourceGroup] --source [snapshot-id]```
+```az disk create --name [MyDisk] --resource-group [MyResourceGroup] --source [snapshot_id]```
 
-**List all managed disks** in a resource group
+**Create a Premium SSD disk**
+
+```az disk create --name [MyDisk] --resource-group [MyResourceGroup] --size-gb [128] --sku Premium_LRS```
+
+**List all managed disks in a resource group**
 
 ```az disk list --resource-group [MyResourceGroup]```
 
-**Show details** of a managed disk
+**Show details of a managed disk**
 
 ```az disk show --name [MyDisk] --resource-group [MyResourceGroup]```
 
@@ -24,9 +28,13 @@ Manage Azure managed disks
 
 ```az disk update --name [MyDisk] --resource-group [MyResourceGroup] --size-gb [256]```
 
-**Grant access** to a managed disk for export
+**Grant read access to a managed disk for export**
 
-```az disk grant-access --name [MyDisk] --resource-group [MyResourceGroup] --duration-in-seconds [3600] --access-level [Read]```
+```az disk grant-access --name [MyDisk] --resource-group [MyResourceGroup] --duration-in-seconds [3600] --access-level Read```
+
+**Revoke access to a managed disk**
+
+```az disk revoke-access --name [MyDisk] --resource-group [MyResourceGroup]```
 
 **Delete a managed disk**
 
@@ -77,21 +85,37 @@ Manage Azure managed disks
 > Source disk, snapshot, or URI to create the disk from.
 
 **--sku**
-> Storage type: Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, StandardSSD_ZRS.
+> Storage type: Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, PremiumV2_LRS, Premium_ZRS, StandardSSD_ZRS.
 
 **--location** **-l**
 > Location of the disk.
+
+**--zone**
+> Availability zone to create the disk in.
+
+**--encryption-type**
+> Encryption type: EncryptionAtRestWithPlatformKey (default), EncryptionAtRestWithCustomerKey.
+
+**--access-level**
+> Access level for grant-access: Read or Write.
+
+**--duration-in-seconds**
+> Time in seconds for which the SAS access URI is valid.
 
 # DESCRIPTION
 
 **az disk** manages Azure managed disks. Managed disks are block-level storage volumes managed by Azure and used with Azure Virtual Machines. They simplify disk management by handling storage account management automatically.
 
-Supported storage types include Standard HDD (Standard_LRS), Standard SSD (StandardSSD_LRS), Premium SSD (Premium_LRS), Premium SSD v2 (PremiumV2_LRS), and Ultra Disk (UltraSSD_LRS).
+Supported storage types include Standard HDD (Standard_LRS), Standard SSD (StandardSSD_LRS), Premium SSD (Premium_LRS), Premium SSD v2 (PremiumV2_LRS), and Ultra Disk (UltraSSD_LRS). Zone-redundant options (Premium_ZRS, StandardSSD_ZRS) provide cross-zone replication.
 
 # CAVEATS
 
-Requires Azure CLI to be installed and authenticated with **az login**. Disks can only be attached to VMs in the same region. Resizing a disk requires the VM to be deallocated or the disk to be unattached.
+Requires Azure CLI to be installed and authenticated with **az login**. Disks can only be attached to VMs in the same region. Resizing a disk up requires the VM to be deallocated or the disk to be unattached; disks cannot be shrunk. Disk encryption defaults to platform-managed keys unless customer-managed keys are configured.
+
+# HISTORY
+
+**az disk** is part of the **Azure CLI** (`az`), developed by **Microsoft** for managing Azure resources from the command line. Managed disks were introduced in Azure to simplify disk management by eliminating the need to manage storage accounts separately.
 
 # SEE ALSO
 
-[az](/man/az)(1), [az-image](/man/az-image)(1), [az-snapshot](/man/az-snapshot)(1)
+[az](/man/az)(1), [az-vm](/man/az-vm)(1), [az-image](/man/az-image)(1)
