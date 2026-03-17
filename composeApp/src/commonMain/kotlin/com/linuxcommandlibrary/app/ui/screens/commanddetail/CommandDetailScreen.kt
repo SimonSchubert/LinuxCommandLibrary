@@ -30,6 +30,7 @@ import androidx.compose.ui.unit.sp
 import com.linuxcommandlibrary.app.NavEvent
 import com.linuxcommandlibrary.app.data.CommandSectionInfo
 import com.linuxcommandlibrary.app.ui.composables.TipSectionContent
+import com.linuxcommandlibrary.app.ui.composables.rememberDebouncedClick
 import com.linuxcommandlibrary.app.ui.theme.LocalCustomColors
 import com.linuxcommandlibrary.shared.MarkdownParser
 import kotlinx.collections.immutable.ImmutableList
@@ -112,7 +113,7 @@ private fun SeeAlsoSectionContent(
             seeAlsoCommands.forEach { name ->
                 SuggestionChip(
                     modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
-                    onClick = {
+                    onClick = rememberDebouncedClick {
                         onNavigate(NavEvent.ToCommand(name))
                     },
                     label = {

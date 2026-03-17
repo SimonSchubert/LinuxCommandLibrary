@@ -1,7 +1,6 @@
 package com.linuxcommandlibrary.app.ui.screens.basiccategories
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.grid.GridCells
@@ -20,6 +19,7 @@ import androidx.compose.ui.input.pointer.pointerHoverIcon
 import androidx.compose.ui.unit.dp
 import com.linuxcommandlibrary.app.NavEvent
 import com.linuxcommandlibrary.app.ui.composables.AppIcon
+import com.linuxcommandlibrary.app.ui.composables.debouncedClickable
 import com.linuxcommandlibrary.app.ui.composables.getIconId
 import com.linuxcommandlibrary.app.ui.composables.rememberIconPainter
 import com.linuxcommandlibrary.app.ui.theme.LocalCustomColors
@@ -54,7 +54,7 @@ fun BasicCategoriesScreen(
                 },
                 modifier = Modifier
                     .pointerHoverIcon(PointerIcon.Hand)
-                    .clickable {
+                    .debouncedClickable {
                         onNavigate(
                             NavEvent.ToBasicGroups(basicCategory.id, basicCategory.title),
                         )
