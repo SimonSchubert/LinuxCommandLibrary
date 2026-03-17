@@ -3800,6 +3800,7 @@ launchctl.md
 lavadecode.md
 laydown.md
 lazycelery.md
+lazycut.md
 lazydocker.md
 lazygit.md
 lazyjj.md
