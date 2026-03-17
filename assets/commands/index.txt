@@ -2942,6 +2942,7 @@ gst-discoverer-1.0.md
 gst-inspect-1.0.md
 gst-launch-1.0.md
 gst-play-1.0.md
+gst-typefind-1.0.md
 gsutil.md
 gt.md
 gtf.md
@@ -7466,6 +7467,7 @@ tsv-filter.md
 tsx.md
 tt.md
 tts.md
+tty-clock.md
 tty.md
 ttyd.md
 ttyper.md
