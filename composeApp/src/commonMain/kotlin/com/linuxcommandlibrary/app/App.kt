@@ -195,7 +195,7 @@ fun LinuxApp(initialDeeplink: String? = null) {
                 composable<Route.BasicGroups> { backStackEntry ->
                     val route = backStackEntry.toRoute<Route.BasicGroups>()
                     val basicsRepository: BasicsRepository = koinInject()
-                    if (basicsRepository.isTextEditor(route.categoryId)) {
+                    if (basicsRepository.usesCardLayout(route.categoryId)) {
                         val viewModel: BasicEditorViewModel = koinInject { parametersOf(route.categoryId) }
                         BasicEditorScreen(viewModel = viewModel, onNavigate = onNavigate)
                     } else {
