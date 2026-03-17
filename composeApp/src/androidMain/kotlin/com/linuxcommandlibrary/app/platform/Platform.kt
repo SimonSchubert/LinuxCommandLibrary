@@ -10,6 +10,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 
+actual val isIOS: Boolean = false
 actual val showRateAppButton: Boolean = true
 actual val showAndroidTerminalTip: Boolean = Build.VERSION.SDK_INT >= 35
 actual val backIcon: ImageVector = Icons.AutoMirrored.Filled.ArrowBack

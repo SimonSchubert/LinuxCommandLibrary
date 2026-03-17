@@ -1,10 +1,10 @@
 package com.linuxcommandlibrary.desktop
 
+import org.json.JSONObject
 import java.io.File
 import java.io.PrintStream
 import java.net.HttpURLConnection
 import java.net.URI
-import org.json.JSONObject
 
 /* Copyright 2022 Simon Schubert
  *
@@ -175,28 +175,26 @@ class MarkdownBuilder {
         stream.close()
     }
 
-    private fun getPublicSponsors(): Pair<List<Pair<String, String>>, List<Pair<String, String>>> {
-        return try {
-            val connection = URI("https://ghs.vercel.app/v3/sponsors/SimonSchubert").toURL()
-                .openConnection() as HttpURLConnection
-            connection.connectTimeout = 5000
-            connection.readTimeout = 5000
+    private fun getPublicSponsors(): Pair<List<Pair<String, String>>, List<Pair<String, String>>> = try {
+        val connection = URI("https://ghs.vercel.app/v3/sponsors/SimonSchubert").toURL()
+            .openConnection() as HttpURLConnection
+        connection.connectTimeout = 5000
+        connection.readTimeout = 5000
 
-            val response = JSONObject(connection.inputStream.bufferedReader().readText())
-            val sponsors = response.getJSONObject("sponsors")
+        val response = JSONObject(connection.inputStream.bufferedReader().readText())
+        val sponsors = response.getJSONObject("sponsors")
 
-            fun parseSponsors(array: org.json.JSONArray) = (0 until array.length()).map { i ->
-                val sponsor = array.getJSONObject(i)
-                Pair(sponsor.getString("username"), sponsor.getString("avatar"))
-            }
-
-            Pair(
-                parseSponsors(sponsors.getJSONArray("current")),
-                parseSponsors(sponsors.getJSONArray("past")).take(10)
-            )
-        } catch (e: Exception) {
-            println("Failed to fetch sponsors: ${e.message}")
-            Pair(emptyList(), emptyList())
+        fun parseSponsors(array: org.json.JSONArray) = (0 until array.length()).map { i ->
+            val sponsor = array.getJSONObject(i)
+            Pair(sponsor.getString("username"), sponsor.getString("avatar"))
         }
+
+        Pair(
+            parseSponsors(sponsors.getJSONArray("current")),
+            parseSponsors(sponsors.getJSONArray("past")).take(10),
+        )
+    } catch (e: Exception) {
+        println("Failed to fetch sponsors: ${e.message}")
+        Pair(emptyList(), emptyList())
     }
 }

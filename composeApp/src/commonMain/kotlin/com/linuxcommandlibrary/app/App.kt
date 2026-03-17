@@ -1,6 +1,8 @@
 package com.linuxcommandlibrary.app
 
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.EnterTransition
+import androidx.compose.animation.ExitTransition
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
@@ -18,6 +20,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavDestination.Companion.hasRoute
+import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
@@ -25,6 +28,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
 import com.linuxcommandlibrary.app.data.BasicsRepository
 import com.linuxcommandlibrary.app.data.CommandsRepository
+import com.linuxcommandlibrary.app.platform.isIOS
 import com.linuxcommandlibrary.app.platform.rememberOpenAppAction
 import com.linuxcommandlibrary.app.ui.composables.BottomBar
 import com.linuxcommandlibrary.app.ui.composables.DetailTopBar
@@ -180,10 +184,7 @@ fun LinuxApp(initialDeeplink: String? = null) {
             modifier = Modifier
                 .padding(innerPadding),
         ) {
-            NavHost(
-                navController = navController,
-                startDestination = initialRoute,
-            ) {
+            val navGraphBuilder: NavGraphBuilder.() -> Unit = {
                 composable<Route.Basics> {
                     val viewModel: BasicCategoriesViewModel = koinInject()
                     BasicCategoriesScreen(viewModel = viewModel, onNavigate = onNavigate)
@@ -216,6 +217,21 @@ fun LinuxApp(initialDeeplink: String? = null) {
                         CommandDetailScreen(viewModel = viewModel, onNavigate = onNavigate)
                     }
                 }
+            }
+            if (isIOS) {
+                NavHost(
+                    navController = navController,
+                    startDestination = initialRoute,
+                    builder = navGraphBuilder,
+                )
+            } else {
+                NavHost(
+                    navController = navController,
+                    startDestination = initialRoute,
+                    popEnterTransition = { EnterTransition.None },
+                    popExitTransition = { ExitTransition.None },
+                    builder = navGraphBuilder,
+                )
             }
 
             val isSearchVisible = searchState.searchText.isNotEmpty() && !isOnCommandDetail
