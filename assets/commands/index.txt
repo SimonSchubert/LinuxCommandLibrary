@@ -3326,6 +3326,7 @@ in2csv.md
 incplot.md
 incus.md
 indent.md
+index.txt
 indxbib.md
 infection.md
 influx.md

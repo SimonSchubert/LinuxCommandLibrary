@@ -1,19 +1,17 @@
 package com.linuxcommandlibrary.app.ui.composables
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.heightIn
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.mutableStateOf
@@ -23,7 +21,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.input.pointer.PointerIcon
 import androidx.compose.ui.input.pointer.pointerHoverIcon
 import androidx.compose.ui.semantics.contentDescription
@@ -69,60 +67,66 @@ fun rememberSearchState(): SearchState {
     return remember { SearchState(textFieldValue, isVisible) }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SearchTopBar(
     title: String,
     searchState: SearchState,
 ) {
     val focusRequester = remember { FocusRequester() }
-
     val topBarContent = LocalCustomColors.current.topBarContent
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .background(LocalCustomColors.current.topBarBackground)
-            .heightIn(min = 56.dp)
-            .padding(horizontal = 4.dp),
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        if (searchState.isVisible) {
-            IconButton(
-                modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
-                onClick = { searchState.clear() },
-            ) {
-                Icon(
-                    imageVector = backIcon,
-                    contentDescription = "Back",
-                    tint = topBarContent,
+
+    TopAppBar(
+        expandedHeight = 56.dp,
+        title = {
+            if (searchState.isVisible) {
+                BasicTextField(
+                    value = searchState.currentValue,
+                    onValueChange = { searchState.updateText(it) },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .focusRequester(focusRequester),
+                    textStyle = MaterialTheme.typography.titleMedium.copy(color = topBarContent),
+                    cursorBrush = SolidColor(topBarContent),
+                    singleLine = true,
+                    decorationBox = { innerTextField ->
+                        Box(contentAlignment = Alignment.CenterStart) {
+                            if (searchState.searchText.isEmpty()) {
+                                Text(
+                                    "Search...",
+                                    style = MaterialTheme.typography.titleMedium,
+                                    color = topBarContent.copy(alpha = 0.7f),
+                                )
+                            }
+                            innerTextField()
+                        }
+                    },
+                )
+            } else {
+                Text(
+                    title,
+                    modifier = Modifier.semantics { contentDescription = "TopAppBarTitle" },
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
                 )
             }
-            OutlinedTextField(
-                value = searchState.currentValue,
-                onValueChange = { searchState.updateText(it) },
-                modifier = Modifier
-                    .weight(1f)
-                    .focusRequester(focusRequester)
-                    .padding(start = 8.dp, end = 8.dp),
-                placeholder = { Text("Search...", color = topBarContent.copy(alpha = 0.7f)) },
-                textStyle = MaterialTheme.typography.titleMedium.copy(color = topBarContent),
-                colors = OutlinedTextFieldDefaults.colors(
-                    focusedTextColor = topBarContent,
-                    unfocusedTextColor = topBarContent,
-                    cursorColor = topBarContent,
-                    focusedBorderColor = Color.Transparent,
-                    unfocusedBorderColor = Color.Transparent,
-                    disabledBorderColor = Color.Transparent,
-                    focusedContainerColor = Color.Transparent,
-                    unfocusedContainerColor = Color.Transparent,
-                    focusedTrailingIconColor = topBarContent,
-                    unfocusedTrailingIconColor = topBarContent,
-                    focusedPlaceholderColor = topBarContent.copy(alpha = 0.7f),
-                    unfocusedPlaceholderColor = topBarContent.copy(alpha = 0.7f),
-                ),
-                maxLines = 1,
-                singleLine = true,
-            )
-            if (searchState.searchText.isNotEmpty()) {
+        },
+        colors = appTopBarColors(),
+        navigationIcon = {
+            if (searchState.isVisible) {
+                IconButton(
+                    modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
+                    onClick = { searchState.clear() },
+                ) {
+                    Icon(
+                        imageVector = backIcon,
+                        contentDescription = "Back",
+                    )
+                }
+            }
+        },
+        actions = {
+            if (searchState.isVisible && searchState.searchText.isNotEmpty()) {
                 IconButton(
                     modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
                     onClick = { searchState.clearText() },
@@ -130,34 +134,22 @@ fun SearchTopBar(
                     Icon(
                         imageVector = Icons.Filled.Close,
                         contentDescription = "Clear",
-                        tint = topBarContent,
                     )
                 }
             }
-        } else {
-            Text(
-                title,
-                modifier = Modifier
-                    .weight(1f)
-                    .padding(start = 16.dp)
-                    .semantics { contentDescription = "TopAppBarTitle" },
-                style = MaterialTheme.typography.titleLarge,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-                color = topBarContent,
-            )
-            IconButton(
-                modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
-                onClick = { searchState.show() },
-            ) {
-                Icon(
-                    imageVector = Icons.Filled.Search,
-                    contentDescription = "Search",
-                    tint = topBarContent,
-                )
+            if (!searchState.isVisible) {
+                IconButton(
+                    modifier = Modifier.pointerHoverIcon(PointerIcon.Hand),
+                    onClick = { searchState.show() },
+                ) {
+                    Icon(
+                        imageVector = Icons.Filled.Search,
+                        contentDescription = "Search",
+                    )
+                }
             }
-        }
-    }
+        },
+    )
 
     LaunchedEffect(searchState.isVisible) {
         if (searchState.isVisible) {

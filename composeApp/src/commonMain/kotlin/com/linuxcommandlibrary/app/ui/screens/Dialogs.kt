@@ -29,6 +29,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.PointerIcon
 import androidx.compose.ui.input.pointer.pointerHoverIcon
 import androidx.compose.ui.platform.LocalUriHandler
@@ -97,6 +98,7 @@ fun AppInfoDialog(
                             modifier = Modifier.weight(1f).pointerHoverIcon(PointerIcon.Hand),
                             shape = RoundedCornerShape(12.dp),
                             elevation = ButtonDefaults.buttonElevation(defaultElevation = 0.dp),
+                            colors = ButtonDefaults.buttonColors(contentColor = Color.White),
                         ) {
                             Text("Rate the app")
                         }

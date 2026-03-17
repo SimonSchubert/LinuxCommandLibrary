@@ -5,7 +5,6 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBackIos
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.vector.ImageVector
 
-actual val isIOS: Boolean = true
 actual val showRateAppButton: Boolean = false
 actual val showAndroidTerminalTip: Boolean = false
 actual val backIcon: ImageVector = Icons.AutoMirrored.Filled.ArrowBackIos

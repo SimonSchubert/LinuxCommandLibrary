@@ -1,17 +1,13 @@
 package com.linuxcommandlibrary.app
 
 import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.EnterTransition
-import androidx.compose.animation.ExitTransition
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
@@ -20,15 +16,13 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavDestination.Companion.hasRoute
-import androidx.navigation.NavGraphBuilder
-import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
 import com.linuxcommandlibrary.app.data.BasicsRepository
 import com.linuxcommandlibrary.app.data.CommandsRepository
-import com.linuxcommandlibrary.app.platform.isIOS
+import com.linuxcommandlibrary.app.platform.AppNavHost
 import com.linuxcommandlibrary.app.platform.rememberOpenAppAction
 import com.linuxcommandlibrary.app.ui.composables.BottomBar
 import com.linuxcommandlibrary.app.ui.composables.DetailTopBar
@@ -50,7 +44,6 @@ import com.linuxcommandlibrary.app.ui.screens.search.SearchViewModel
 import com.linuxcommandlibrary.app.ui.screens.tips.TipsScreen
 import com.linuxcommandlibrary.app.ui.screens.tips.TipsViewModel
 import com.linuxcommandlibrary.app.ui.theme.LinuxTheme
-import com.linuxcommandlibrary.app.ui.theme.LocalCustomColors
 import com.linuxcommandlibrary.shared.platform.ReviewHandler
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -73,10 +66,6 @@ fun App(initialDeeplink: String? = null) {
         Box(
             modifier = Modifier
                 .fillMaxSize()
-                .background(LocalCustomColors.current.topBarBackground)
-                .statusBarsPadding()
-                .background(LocalCustomColors.current.navBarBackground)
-                .navigationBarsPadding()
                 .background(MaterialTheme.colorScheme.background),
         ) {
             LinuxApp(initialDeeplink = initialDeeplink)
@@ -184,7 +173,10 @@ fun LinuxApp(initialDeeplink: String? = null) {
             modifier = Modifier
                 .padding(innerPadding),
         ) {
-            val navGraphBuilder: NavGraphBuilder.() -> Unit = {
+            AppNavHost(
+                navController = navController,
+                startDestination = initialRoute,
+            ) {
                 composable<Route.Basics> {
                     val viewModel: BasicCategoriesViewModel = koinInject()
                     BasicCategoriesScreen(viewModel = viewModel, onNavigate = onNavigate)
@@ -217,21 +209,6 @@ fun LinuxApp(initialDeeplink: String? = null) {
                         CommandDetailScreen(viewModel = viewModel, onNavigate = onNavigate)
                     }
                 }
-            }
-            if (isIOS) {
-                NavHost(
-                    navController = navController,
-                    startDestination = initialRoute,
-                    builder = navGraphBuilder,
-                )
-            } else {
-                NavHost(
-                    navController = navController,
-                    startDestination = initialRoute,
-                    popEnterTransition = { EnterTransition.None },
-                    popExitTransition = { ExitTransition.None },
-                    builder = navGraphBuilder,
-                )
             }
 
             val isSearchVisible = searchState.searchText.isNotEmpty() && !isOnCommandDetail
