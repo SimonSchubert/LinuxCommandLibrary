@@ -2,8 +2,6 @@ package com.linuxcommandlibrary.app.ui.composables
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -24,6 +22,8 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.linuxcommandlibrary.app.NavEvent
+import com.linuxcommandlibrary.app.platform.shareButtonDescription
+import com.linuxcommandlibrary.app.platform.shareButtonIcon
 import com.linuxcommandlibrary.shared.CommandElement
 import com.linuxcommandlibrary.shared.platform.ShareHandler
 import kotlinx.collections.immutable.ImmutableList
@@ -120,8 +120,8 @@ fun CommandView(
             onClick = shareAction,
         ) {
             Icon(
-                imageVector = Icons.Filled.Share,
-                contentDescription = "Share",
+                imageVector = shareButtonIcon,
+                contentDescription = shareButtonDescription,
             )
         }
     }
