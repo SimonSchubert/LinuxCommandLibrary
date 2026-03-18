@@ -88,7 +88,8 @@ val products = JSONArray(jsonString)
 
 fun main() {
     val minifier = Minifier()
-    val websiteBuilder = WebsiteBuilder()
+    val (currentSponsors, pastSponsors) = getPublicSponsors()
+    val websiteBuilder = WebsiteBuilder(currentSponsors, pastSponsors)
 
     val folder = File("html")
     folder.mkdir()
@@ -112,7 +113,10 @@ fun main() {
     minifier.minifyScriptsAndSheets(true)
 }
 
-class WebsiteBuilder {
+class WebsiteBuilder(
+    private val currentSponsors: List<Pair<String, String>> = emptyList(),
+    private val pastSponsors: List<Pair<String, String>> = emptyList(),
+) {
 
     private val cacheVersion = 12
 
@@ -1207,28 +1211,28 @@ class WebsiteBuilder {
         val randomAds = verticalAds.shuffled().take(2)
         div {
             id = "content-wrapper"
-            randomAds[0].let { ad ->
-                div {
-                    classes = setOf("side-panel")
-                    style = "background-color: ${ad.backgroundColor}"
-                    a {
-                        href = ad.url
-                        img {
-                            src = "/images/af/${ad.imageUrl}"
-                            width = "200"
-                        }
-                    }
-                }
-            }
+//            randomAds[0].let { ad ->
+//                div {
+//                    classes = setOf("side-panel")
+//                    style = "background-color: ${ad.backgroundColor}"
+//                    a {
+//                        href = ad.url
+//                        img {
+//                            src = "/images/af/${ad.imageUrl}"
+//                            width = "200"
+//                        }
+//                    }
+//                }
+//            }
             content()
-            randomAds[1].let { ad ->
-                div {
-                    classes = setOf("side-panel")
-                    style = "width: 200px"
-
-                    products("column")
-                }
-            }
+//            randomAds[1].let { ad ->
+//                div {
+//                    classes = setOf("side-panel")
+//                    style = "width: 200px"
+//
+//                    products("column")
+//                }
+//            }
         }
         return this
     }
@@ -1292,6 +1296,38 @@ class WebsiteBuilder {
             }
         }
         footer {
+            if (currentSponsors.isNotEmpty() || pastSponsors.isNotEmpty()) {
+                div {
+                    style = "text-align: center; padding: 12px 0;"
+                    p {
+                        style = "font-size: 14px; color: #2d1d1d; margin: 0 0 10px 0;"
+                        +"GitHub Sponsors"
+                    }
+                    div {
+                        style = "display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;"
+                        for ((username, avatar) in currentSponsors + pastSponsors) {
+                            a("https://github.com/$username") {
+                                target = ATarget.blank
+                                rel = "noopener"
+                                title = username
+                                img {
+                                    src = avatar
+                                    alt = username
+                                    width = "36"
+                                    height = "36"
+                                    style = "border-radius: 50%;"
+                                }
+                            }
+                        }
+                    }
+                    a("https://github.com/sponsors/SimonSchubert") {
+                        target = ATarget.blank
+                        rel = "noopener"
+                        style = "display: inline-block; padding: 6px 14px; background-color: #db61a2; color: #fff; border-radius: 6px; font-size: 13px; text-decoration: none;"
+                        +"\u2665\uFE0F Become a Sponsor"
+                    }
+                }
+            }
             p {
                 a {
                     target = ATarget.self
