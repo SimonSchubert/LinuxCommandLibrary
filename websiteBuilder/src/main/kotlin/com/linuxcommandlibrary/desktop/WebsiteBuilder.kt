@@ -100,8 +100,6 @@ fun main() {
     websiteBuilder.createTipsHtmlFile(folder)
     minifier.minifyScriptsAndSheets(true)
 
-    return
-
     websiteBuilder.createBasicHtmlFiles(File(folder, "basic"))
 
     websiteBuilder.createManHtmlFiles(File(folder, "man"))
@@ -121,7 +119,7 @@ class WebsiteBuilder(
     private val pastSponsors: List<Pair<String, String>> = emptyList(),
 ) {
 
-    private val cacheVersion = 12
+    private val cacheVersion = 13
 
     /**
      * Get sorted list of command names from markdown files.
@@ -1307,7 +1305,7 @@ class WebsiteBuilder(
                 div {
                     style = "text-align: center; padding: 12px 0;"
                     p {
-                        style = "font-size: 14px; color: #2d1d1d; margin: 0 0 10px 0;"
+                        style = "font-size: 14px; color: #fff; margin: 0 0 10px 0;"
                         +"GitHub Sponsors"
                     }
                     div {
@@ -1362,10 +1360,10 @@ class WebsiteBuilder(
                 target = ATarget.blank
                 rel = "noopener"
                 img {
-                    src = "/images/app-store-badge.png"
+                    src = "/images/app_store.svg"
                     alt = "Google Play Store"
                     classes = setOf("download-icon")
-                    width = "169"
+                    width = "150"
                     height = "50"
                 }
             }

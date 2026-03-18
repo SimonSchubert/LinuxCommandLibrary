@@ -174,7 +174,6 @@ class MarkdownBuilder {
 
         stream.close()
     }
-
 }
 
 fun getPublicSponsors(): Pair<List<Pair<String, String>>, List<Pair<String, String>>> = try {

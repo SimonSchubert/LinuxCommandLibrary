@@ -120,13 +120,9 @@ object HtmlMarkdownRenderer {
                         }
                     }
                 } else {
-                    // Other columns may contain code blocks or plain text
                     val hasCode = cells.any { it is TextElement.Man }
                     if (hasCode) {
-                        // Render as inline code with man links
-                        cells.forEach { element ->
-                            append(renderTextElement(element))
-                        }
+                        append(renderCellAsCode(cells))
                     } else {
                         cells.forEach { element ->
                             append(renderTextElement(element))
@@ -139,6 +135,38 @@ object HtmlMarkdownRenderer {
         }
 
         append("</table>")
+    }
+
+    private fun renderCellAsCode(elements: List<TextElement>): String {
+        val command = elements.joinToString("") {
+            when (it) {
+                is TextElement.Man -> it.man
+                is TextElement.Plain -> it.text
+                is TextElement.Bold -> it.text
+                is TextElement.Italic -> it.text
+                is TextElement.Link -> it.text
+            }
+        }
+        val escapedCommand = command.escapeHtml().replace("'", "&#039;")
+        return buildString {
+            append("""<div class="code-wrapper"><span class="code">$ """)
+            elements.forEach { element ->
+                when (element) {
+                    is TextElement.Man -> append("""<a href="/man/${element.man}" title="${element.man} man page">${element.man}</a>""")
+
+                    is TextElement.Plain -> {
+                        element.text.split(" ").forEachIndexed { i, word ->
+                            if (i > 0) append("&nbsp;")
+                            append(word.escapeHtml())
+                        }
+                    }
+
+                    else -> append(renderTextElement(element))
+                }
+            }
+            append("""</span><div onclick="javascript:copy('$escapedCommand')" class="copy-button">""")
+            append("""<img src="/images/icon-copy.svg" alt="copy" width="24" height="24"></div></div>""")
+        }
     }
 
     /**

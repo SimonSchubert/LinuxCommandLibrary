@@ -87,8 +87,18 @@ max-width: 900px;
 footer {
 	text-align: center;
 	padding: 8px;
-	background: #e45151;
-	color: #151515;
+	background: #161616;
+	color: #dbdbdb;
+}
+
+footer a:link, footer a:visited, footer a:active {
+	color: #dbdbdb;
+	text-decoration: none;
+}
+
+footer a:hover {
+	color: #e45151;
+	text-decoration: none;
 }
 
 #content, .grid-container, .masonry {
@@ -107,6 +117,7 @@ footer {
 }
 #content {
 	max-width: 900px;
+	margin-bottom: 16px;
 }
 
 @media (max-width: 1000px) {
@@ -307,29 +318,35 @@ font-size: 12px;
 	padding: 0;
 	margin: 0;
 	margin-top: 12px;
-	border: solid #ddd;
-    border-width: 0px 0px 1px 0px;
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
 }
 
 #commandlist a, #commandlist div.headline {
-	border: solid #ddd;
-	background-color: #f6f6f6;
-	padding: 6px;
+	background-color: #eee;
+	padding: 8px 10px;
 	text-decoration: none;
 	font-size: 1.4em;
 	display: block;
-	border-width: 1px 1px 0 1px;
+	border-radius: 2px;
 }
 
 #commandlist div.headline {
 	background-color: #e2e2e2;
+	font-weight: bold;
+	font-size: 1.1em;
+	padding: 8px 10px;
+	border-left: 3px solid #e45151;
+	border-radius: 0;
+	margin-top: 8px;
 }
 
-#commandlist a:hover:not(.headline) {
-	background-color: #F44336;
+#commandlist a:hover {
+	background-color: #e45151;
 }
 
-#commandlist a:hover:not(.headline) span {
+#commandlist a:hover span {
 	color: #000;
 }
 
@@ -532,16 +549,11 @@ table {
         border-color: #444;
         background-color: #d3d2d2;
     }
-    #commandlist {
-        border-color: #444;
-    }
     #commandlist a {
         background-color: #282828;
-        border-color: #444;
     }
     #commandlist div.headline {
-        background-color: #585858;
-        border-color: #444;
+        background-color: #383838;
     }
     .panel h3 a {
         color: #ffffff !important;
