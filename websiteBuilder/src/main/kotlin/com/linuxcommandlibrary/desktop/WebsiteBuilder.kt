@@ -97,10 +97,13 @@ fun main() {
     websiteBuilder.createCommandsHtmlFile(folder)
 
     websiteBuilder.createBasicsHtmlFile(folder)
+    websiteBuilder.createTipsHtmlFile(folder)
+    minifier.minifyScriptsAndSheets(true)
+
+    return
 
     websiteBuilder.createBasicHtmlFiles(File(folder, "basic"))
 
-    websiteBuilder.createTipsHtmlFile(folder)
     websiteBuilder.createManHtmlFiles(File(folder, "man"))
 
     websiteBuilder.create404HtmlFile()
@@ -1074,6 +1077,7 @@ class WebsiteBuilder(
                         rel = "noopener"
                         img {
                             src = "/images/logo-github.svg"
+                            alt = "GitHub"
                             width = "25"
                             height = "25"
                         }
@@ -1083,6 +1087,7 @@ class WebsiteBuilder(
                         rel = "noopener"
                         img {
                             src = "/images/icon-fdroid.svg"
+                            alt = "F-Droid"
                             width = "25"
                             height = "25"
                         }
@@ -1092,6 +1097,7 @@ class WebsiteBuilder(
                         rel = "noopener"
                         img {
                             src = "/images/icon-playstore.svg"
+                            alt = "Google Play Store"
                             width = "25"
                             height = "25"
                         }
@@ -1272,6 +1278,7 @@ class WebsiteBuilder(
                     href = "https://github.com/SimonSchubert/Kai"
                     img {
                         src = "/images/af/kai-1-horizontal.webp"
+                        alt = "Kai"
                         height = "160"
                     }
                 }

@@ -553,6 +553,9 @@ table {
     .panel {
         background-color: #1e1e1e;
     }
+    .panel a, .code-group a:not(h2 a) {
+        color: #e45151;
+    }
     .toggle-all-button {
         color: #ffffff;
     }
