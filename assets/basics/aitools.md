@@ -18,6 +18,9 @@
 ```[droid](/man/droid)```
 ```[kimi](/man/kimi)```
 ```[bondai](/man/bondai)```
+```[tabby](/man/tabby)```
+```[cline](/man/cline)```
+```[ra-aid](/man/ra-aid)```
 
 ## AI Assistants
 ```[openclaw](/man/openclaw)```
@@ -41,7 +44,14 @@
 ```[bark](/man/bark)```
 ```[tts](/man/tts)```
 
+## Local LLM Runners
+```[ollama](/man/ollama)```
+```[llamafile](/man/llamafile)```
+```[llama.cpp](/man/llama.cpp)```
+
 ## AI Terminal Utilities
 ```[mods](/man/mods)```
 ```[aichat](/man/aichat)```
 ```[smartcat](/man/smartcat)```
+```[llm](/man/llm)```
+```[sgpt](/man/sgpt)```
