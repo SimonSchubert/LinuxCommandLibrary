@@ -1,0 +1,19 @@
+name: Command Request
+description: Suggest Linux commands to add to the library
+labels: ["command-request"]
+body:
+  - type: textarea
+    id: commands
+    attributes:
+      label: Command names
+      description: List the Linux command(s) you'd like to see added, one per line.
+      placeholder: |
+        systemctl
+        journalctl
+        reboot
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context (optional)
