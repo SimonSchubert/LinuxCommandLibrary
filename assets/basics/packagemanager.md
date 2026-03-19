@@ -11,6 +11,7 @@
 ```[pacman](/man/pacman) -S [packageName]```
 ```[pip](/man/pip) install [packageName]```
 ```[zypper](/man/zypper) install [packageName]```
+```[emerge](/man/emerge) -av [packageName]```
 
 ## Install from file
 ```[flatpak](/man/flatpak) install [package.flatpakref]```
@@ -33,6 +34,7 @@
 ```[pacman](/man/pacman) -R [packageName]```
 ```[pip](/man/pip) uninstall [packageName]```
 ```[zypper](/man/zypper) rm [packageName]```
+```[emerge](/man/emerge) --depclean [packageName]```
 
 ## Find a package
 ```[snap](/man/snap) find [query]```
@@ -45,6 +47,7 @@
 ```[pacman](/man/pacman) -Ss [query]```
 ```[pip](/man/pip) search [query]```
 ```[zypper](/man/zypper) search [packageName]```
+```[emerge](/man/emerge) -S [query]```
 
 ## View package info
 ```[snap](/man/snap) info [packageName]```
@@ -56,6 +59,7 @@
 ```[pkg](/man/pkg) info [packageName]```
 ```[pacman](/man/pacman) -Si [packageName]```
 ```[pip](/man/pip) show [packageName]```
+```[emerge](/man/emerge) -s [packageName]```
 
 ## Update package lists
 ```[apt-get](/man/apt-get) update```
@@ -65,6 +69,7 @@
 ```[pkg](/man/pkg) update```
 ```[pacman](/man/pacman) -Sy```
 ```[zypper](/man/zypper) refresh```
+```[emerge](/man/emerge) --sync```
 
 ## Upgrade installed packages
 ```[snap](/man/snap) refresh```
@@ -77,6 +82,7 @@
 ```[pacman](/man/pacman) -Syu```
 ```[pip](/man/pip) install [packageName] --upgrade```
 ```[zypper](/man/zypper) update```
+```[emerge](/man/emerge) -avuDN @world```
 
 ## Add repository source
 ```[add-apt-repository](/man/add-apt-repository) ppa:[userName]/[ppaName]```
