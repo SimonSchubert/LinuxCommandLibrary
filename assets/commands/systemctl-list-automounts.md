@@ -54,4 +54,4 @@ The **list-automounts** subcommand provides a focused view of on-demand mounting
 
 # SEE ALSO
 
-[systemctl-list-units](/man/systemctl-list-units)(1), [systemd.automount](/man/systemd.automount)(5), [systemctl](/man/systemctl)(1)
+[systemctl-list-units](/man/systemctl-list-units)(1), [systemctl](/man/systemctl)(1), [mount](/man/mount)(8)

@@ -129,6 +129,21 @@ Search for an **installed** package
 **-V**, **--show-versions**
 > Display package version details in listings
 
+**-P**, **--prompt**
+> Always display a confirmation prompt before changes
+
+**-R**, **--without-recommends**
+> Do not treat recommended packages as dependencies
+
+**-t** _release_
+> Set the target release for package installation
+
+**-q**, **--quiet**
+> Suppress progress indicators
+
+**changelog** _package_
+> Download and display the changelog for a package
+
 # CONFIGURATION
 
 **~/.aptitude/config**

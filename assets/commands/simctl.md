@@ -111,4 +111,4 @@ Only available on macOS with Xcode installed. Requires the Xcode Command Line To
 
 # SEE ALSO
 
-[xcrun](/man/xcrun)(1), [xcodebuild](/man/xcodebuild)(1), [instruments](/man/instruments)(1)
+[xcrun](/man/xcrun)(1), [xcodebuild](/man/xcodebuild)(1)

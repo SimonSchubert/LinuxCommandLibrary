@@ -10,7 +10,7 @@ general-purpose command-line fuzzy finder
 
 **Select with preview**
 
-```fzf --preview '[cat {}]'```
+```fzf --preview 'cat {}'```
 
 **Multiple selection**
 
@@ -23,6 +23,18 @@ general-purpose command-line fuzzy finder
 **Fuzzy find and** edit
 
 ```vim $(fzf)```
+
+**Exact match** mode
+
+```fzf -e```
+
+**Non-interactive filter** (fuzzy grep)
+
+```fzf -f "[query]"```
+
+**Auto-select single** match
+
+```fzf --select-1 -q "[query]"```
 
 # SYNOPSIS
 
@@ -48,8 +60,50 @@ general-purpose command-line fuzzy finder
 **--border**
 > Draw border.
 
+**-e**, **--exact**
+> Enable exact-match mode instead of fuzzy.
+
+**-f** _QUERY_, **--filter** _QUERY_
+> Non-interactive filter mode (fuzzy grep).
+
+**-1**, **--select-1**
+> Auto-select if only one match.
+
+**-0**, **--exit-0**
+> Exit immediately if no match.
+
+**--ansi**
+> Enable ANSI color code processing.
+
+**-d** _DELIM_, **--delimiter** _DELIM_
+> Field delimiter regex for --nth.
+
+**-n** _N_, **--nth** _N_
+> Limit search scope to specified fields.
+
+**--layout** _LAYOUT_
+> Display layout: default, reverse, reverse-list.
+
+**--info** _STYLE_
+> Info display style: default, right, hidden, inline.
+
+**--header** _STR_
+> Display a sticky header string.
+
 **--bind** _KEYS_
 > Custom key bindings.
+
+**--tac**
+> Reverse input order.
+
+**--no-sort**
+> Preserve original input order.
+
+**--cycle**
+> Enable cyclic scrolling.
+
+**--print-query**
+> Print the query as the first output line.
 
 **--help**
 > Display help information.
@@ -62,9 +116,23 @@ The tool provides instant feedback while typing, fuzzy matching for typo toleran
 
 fzf transforms command-line workflows with interactive selection for files, processes, git branches, and more.
 
+# SHELL INTEGRATION
+
+**CTRL-T**: Paste selected file paths onto command line
+**CTRL-R**: Search command history
+**ALT-C**: cd into selected directory
+
+# ENVIRONMENT VARIABLES
+
+**FZF_DEFAULT_COMMAND**
+> Command to run when input is a terminal (replaces default find).
+
+**FZF_DEFAULT_OPTS**
+> Default options applied to every fzf invocation.
+
 # CAVEATS
 
-Requires terminal with full capabilities. Some integrations need shell configuration. Large inputs may be slow.
+Requires terminal with full capabilities. Shell integration requires sourcing the fzf setup script. Large inputs may be slow.
 
 # HISTORY
 

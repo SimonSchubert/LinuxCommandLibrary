@@ -58,22 +58,6 @@ Extensible shell with functional programming features
 
 Unlike traditional shells, es treats functions as first-class values, supports closures, and has a simpler, more consistent syntax than bash or zsh.
 
-# FEATURES
-
-```es
-# First-class functions
-fn greet { echo Hello $1 }
-
-# Lexical scope
-let (x = 5) { echo $x }
-
-# Exceptions
-catch { risky-command } { echo failed }
-
-# Pipelines with functions
-map { |x| echo $x } a b c
-```
-
 # CAVEATS
 
 Not POSIX-compatible; scripts need rewriting. Smaller community and fewer resources than bash. Some features differ from rc. May not be available on all systems.

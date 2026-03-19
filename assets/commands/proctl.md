@@ -34,9 +34,12 @@ Create new license **template**
 
 # SYNOPSIS
 
-**proctl** [**-ll**|**-lL**|**-pl**|**-pL**|**-r**|**-t**|**-R** _license_]
+**proctl** [**-i**|**-ll**|**-lL**|**-c**|**-pl**|**-pL**|**-P** _license_|**-r**|**-sl** _query_|**-sL** _query_|**-T**|**-t**|**-R** _license_|**-C**|**-k**]
 
 # PARAMETERS
+
+**-i, -initialize**
+> Set up a git repository for a project
 
 **-ll, -list-licenses**
 > List all available license templates
@@ -44,20 +47,41 @@ Create new license **template**
 **-lL, -list-languages**
 > List supported programming languages
 
+**-c, -current-license**
+> Display the active project license
+
 **-pl, -pick-license**
 > Interactive license selection via fzf
 
-**-pL, -pick-language**
+**-pL, -pick-languages**
 > Interactive language selection via fzf
+
+**-P, -preview-license**
+> View a specific license template
 
 **-r, -remove-license**
 > Remove licenses from current project
 
+**-sl, -search-license**
+> Find licenses matching a query pattern
+
+**-sL, -search-language**
+> Find languages matching a query pattern
+
+**-T, -template-help**
+> Show template variable documentation
+
 **-t, -new-template**
-> Create a new license template
+> Create a new license or language template
 
 **-R, -delete-license**
-> Delete license templates
+> Remove one or more license templates from the system
+
+**-C, -new-config**
+> Generate default configuration file
+
+**-k, -check-conflict**
+> Detect conflicting license files
 
 **-h, -help**
 > Display help information
@@ -70,7 +94,7 @@ The tool supports custom license templates and integrates with fzf for fuzzy sel
 
 # CAVEATS
 
-Requires fzf for interactive menus. License templates stored in user configuration. Custom templates need manual creation.
+Optionally requires fzf for interactive pick menus (**-pl**, **-pL**). License templates stored in user configuration. Custom templates need manual creation.
 
 # HISTORY
 

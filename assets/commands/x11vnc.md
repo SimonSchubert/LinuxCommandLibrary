@@ -4,11 +4,11 @@ VNC server for existing X displays
 
 # TLDR
 
-**Launch** a VNC server that allows multiple clients
+**Share current display** with multiple clients
 
 ```x11vnc -shared```
 
-**Launch** a VNC server in view-only mode that doesn't terminate
+**Run in view-only** mode persistently
 
 ```x11vnc -forever -viewonly```
 
@@ -23,6 +23,14 @@ VNC server for existing X displays
 **Launch** on the first display's second screen
 
 ```x11vnc -display :0.1```
+
+**Start with password** protection
+
+```x11vnc -passwd [mypassword] -forever```
+
+**Start with SSL** encryption
+
+```x11vnc -ssl -forever```
 
 # SYNOPSIS
 

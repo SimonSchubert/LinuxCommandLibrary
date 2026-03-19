@@ -55,8 +55,20 @@ _DBNAME_
 **--force**
 > Terminate existing connections.
 
+**-w**, **--no-password**
+> Never prompt for password.
+
+**-W**, **--password**
+> Force password prompt.
+
+**--maintenance-db** _dbname_
+> Database to connect to for issuing the drop (default: postgres).
+
 **-e**, **--echo**
 > Show SQL command executed.
+
+**-V**, **--version**
+> Print version and exit.
 
 **--help**
 > Display help information.

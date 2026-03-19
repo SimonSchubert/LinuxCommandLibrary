@@ -85,4 +85,4 @@ oneko (お猫, "honorable cat") originated on the NEC PC-9801 in Japan. The X11 
 
 # SEE ALSO
 
-[xeyes](/man/xeyes)(1), [xsnow](/man/xsnow)(1), [xscreensaver](/man/xscreensaver)(1)
+[xeyes](/man/xeyes)(1), [xscreensaver](/man/xscreensaver)(1)

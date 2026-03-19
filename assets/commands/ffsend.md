@@ -72,4 +72,4 @@ ffsend was created as a CLI client for **Firefox Send**, Mozilla's encrypted fil
 
 # SEE ALSO
 
-[curl](/man/curl)(1), [wget](/man/wget)(1), [magic-wormhole](/man/magic-wormhole)(1)
+[curl](/man/curl)(1), [wget](/man/wget)(1), [croc](/man/croc)(1)

@@ -52,5 +52,5 @@ download container images from registries
 
 # SEE ALSO
 
-[docker-image-pull](/man/docker-image-pull)(1), [docker-push](/man/docker-push)(1)
+[docker-image-pull](/man/docker-image-pull)(1), [docker-run](/man/docker-run)(1), [docker-images](/man/docker-images)(1)
 

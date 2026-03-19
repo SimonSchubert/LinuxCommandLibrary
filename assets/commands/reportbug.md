@@ -16,6 +16,18 @@ Write bug report to a **file** instead of emailing
 
 ```reportbug -o filename package```
 
+**Query existing bugs** without filing a report
+
+```reportbug --query-only [package]```
+
+Report a bug with specific **severity**
+
+```reportbug --severity [serious] [package]```
+
+**Attach a file** to the bug report
+
+```reportbug --attach [screenshot.png] [package]```
+
 # SYNOPSIS
 
 **reportbug** [_options_] _package_
@@ -23,7 +35,34 @@ Write bug report to a **file** instead of emailing
 # PARAMETERS
 
 **-o**, **--output** _file_
-> Write bug report to file instead of sending by email
+> Write bug report to file instead of sending by email.
+
+**--severity** _level_
+> Set bug severity: critical, grave, serious, important, normal, minor, wishlist.
+
+**--query-only**
+> Query existing bugs without filing a report.
+
+**--attach** _file_
+> Attach a file to the bug report.
+
+**--include** _file_
+> Include file contents in the message body.
+
+**--tag** _tag_
+> Add a tag to the report.
+
+**--email** _address_
+> Set sender email address.
+
+**--smtphost** _host_
+> Use specified SMTP server.
+
+**--mode** _mode_
+> Operating mode: novice, standard, advanced, expert.
+
+**--template**
+> Output a template report to stdout.
 
 # DESCRIPTION
 

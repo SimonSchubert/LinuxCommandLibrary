@@ -20,6 +20,10 @@ PuTTY secure file copy client
 
 ```pscp -i [key.ppk] [file] [user]@[host]:[path]```
 
+**Specify port**
+
+```pscp -P [2222] [file] [user]@[host]:[path]```
+
 # SYNOPSIS
 
 **pscp** [_options_] [_source_] [_destination_]
@@ -51,28 +55,6 @@ PuTTY secure file copy client
 
 **pscp** is PuTTY's SCP (Secure Copy) client for Windows. It transfers files over SSH, similar to the Unix scp command but using PuTTY's connection code.
 
-# EXAMPLES
-
-```bash
-# Upload file
-pscp file.txt user@server:/home/user/
-
-# Download file
-pscp user@server:/home/user/file.txt .
-
-# Recursive directory
-pscp -r project/ user@server:/var/www/
-
-# With key authentication
-pscp -i mykey.ppk file.txt user@server:
-
-# Non-standard port
-pscp -P 2222 file.txt user@server:
-
-# Multiple files
-pscp *.txt user@server:/backup/
-```
-
 # CAVEATS
 
 Windows-specific (part of PuTTY). Uses PPK key format. On Unix, use scp instead.
@@ -83,4 +65,4 @@ pscp is part of **PuTTY**, the SSH client suite for Windows created by **Simon T
 
 # SEE ALSO
 
-[scp](/man/scp)(1), [putty](/man/putty)(1), [psftp](/man/psftp)(1), [plink](/man/plink)(1)
+[scp](/man/scp)(1), [putty](/man/putty)(1), [plink](/man/plink)(1)

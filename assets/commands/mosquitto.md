@@ -64,7 +64,7 @@ Requires proper security config. Default no authentication. Consider TLS for pro
 
 # HISTORY
 
-mosquitto was created as an **Eclipse Foundation** project providing open source MQTT broker implementation.
+mosquitto was created by **Roger Light** around **2009** and later joined the **Eclipse Foundation** in **2014**. It provides a lightweight, open source MQTT broker suitable for embedded and IoT applications.
 
 # SEE ALSO
 

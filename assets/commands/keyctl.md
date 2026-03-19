@@ -101,4 +101,4 @@ Special keyring identifiers: @t (thread), @p (process), @s (session), @u (user),
 
 # SEE ALSO
 
-[request-key](/man/request-key)(8), [keyctl](/man/keyctl)(2), [keyrings](/man/keyrings)(7)
+[ssh-add](/man/ssh-add)(1), [gpg](/man/gpg)(1)

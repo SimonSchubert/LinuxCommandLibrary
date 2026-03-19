@@ -50,4 +50,4 @@ Requires a graphical environment. Character availability depends on installed fo
 
 # SEE ALSO
 
-[gucharmap](/man/gucharmap)(1), [xfd](/man/xfd)(1), [unicode](/man/unicode)(1)
+[xdotool](/man/xdotool)(1), [xclip](/man/xclip)(1)

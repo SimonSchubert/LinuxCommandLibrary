@@ -54,6 +54,21 @@ _COMMAND_
 **account** _CMD_
 > Account management.
 
+**--port** _PORT_
+> Network listening port (default: 30303).
+
+**--maxpeers** _N_
+> Maximum number of network peers.
+
+**--networkid** _ID_
+> Network identifier (1=mainnet, 5=goerli).
+
+**--goerli**
+> Connect to Goerli test network.
+
+**--sepolia**
+> Connect to Sepolia test network.
+
 **--help**
 > Display help information.
 
@@ -75,4 +90,4 @@ geth is developed by the **Ethereum Foundation** as the official Go implementati
 
 # SEE ALSO
 
-[eth](/man/eth)(1), [solc](/man/solc)(1)
+[solc](/man/solc)(1)

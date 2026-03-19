@@ -82,6 +82,21 @@ tmux is widely used for remote server administration, pair programming, and mana
 **source-file** _file_
 > Load configuration file.
 
+**swap-window** [**-s** _src_] [**-t** _dst_]
+> Swap two windows.
+
+**resize-pane** [**-UDLR**] [_amount_]
+> Resize pane in given direction.
+
+**-f** _file_
+> Specify alternative configuration file.
+
+**-L** _socket-name_
+> Use named socket (allows independent servers).
+
+**-S** _socket-path_
+> Specify full path to server socket.
+
 # KEY BINDINGS (after Ctrl-b)
 
 **d**: Detach from session
