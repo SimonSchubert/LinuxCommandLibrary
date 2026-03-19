@@ -6,6 +6,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.style.TextDirection
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.withStyle
 
@@ -15,11 +16,13 @@ fun HighlightedText(
     pattern: String,
     maxLines: Int = 1,
 ) {
+    val ltrStyle = MaterialTheme.typography.bodyLarge.copy(textDirection = TextDirection.Ltr)
     if (pattern.isEmpty()) {
         Text(
             text = text,
             maxLines = maxLines,
             overflow = TextOverflow.Ellipsis,
+            style = ltrStyle,
         )
     } else if (text.equals(pattern, ignoreCase = true)) {
         Text(
@@ -27,6 +30,7 @@ fun HighlightedText(
             maxLines = maxLines,
             overflow = TextOverflow.Ellipsis,
             color = MaterialTheme.colorScheme.primary,
+            style = ltrStyle,
         )
     } else {
         val highlightColor = MaterialTheme.colorScheme.primary
@@ -47,6 +51,7 @@ fun HighlightedText(
             text = annotatedString,
             maxLines = maxLines,
             overflow = TextOverflow.Ellipsis,
+            style = ltrStyle,
         )
     }
 }

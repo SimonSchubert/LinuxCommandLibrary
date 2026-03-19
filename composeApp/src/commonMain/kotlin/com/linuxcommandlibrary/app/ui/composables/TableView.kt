@@ -14,11 +14,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.LinkAnnotation
+import androidx.compose.ui.text.ParagraphStyle
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.rememberTextMeasurer
+import androidx.compose.ui.text.style.TextDirection
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import com.linuxcommandlibrary.app.NavEvent
@@ -56,6 +58,7 @@ fun TableView(
                     Text(
                         text = headerElements.toPlainText(),
                         fontWeight = FontWeight.Bold,
+                        style = MaterialTheme.typography.bodyLarge.copy(textDirection = TextDirection.Ltr),
                         modifier = cellModifier
                             .padding(horizontal = 8.dp, vertical = 4.dp),
                     )
@@ -114,6 +117,7 @@ fun TableView(
                     }
                     Text(
                         text = annotatedString,
+                        style = MaterialTheme.typography.bodyLarge.copy(textDirection = TextDirection.Ltr),
                         modifier = cellModifier
                             .padding(horizontal = 8.dp, vertical = 4.dp),
                     )

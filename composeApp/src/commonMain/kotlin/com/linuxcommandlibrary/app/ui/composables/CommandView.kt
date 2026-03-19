@@ -18,6 +18,7 @@ import androidx.compose.ui.text.LinkAnnotation
 import androidx.compose.ui.text.ParagraphStyle
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.style.TextDirection
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -89,7 +90,7 @@ fun CommandView(
             buildAnnotatedString {
                 append(baseAnnotatedString)
                 addStyle(
-                    style = ParagraphStyle(),
+                    style = ParagraphStyle(textDirection = TextDirection.Ltr),
                     start = 0,
                     end = baseAnnotatedString.text.length,
                 )
