@@ -11,6 +11,7 @@
 ## List network interfaces
 ```[lspci](/man/lspci) | [egrep](/man/egrep) -i --color 'network|ethernet'```
 ```[ifconfig](/man/ifconfig) -a```
+```[ip](/man/ip) a```
 ```[ip](/man/ip) link show```
 ```[lshw](/man/lshw) -class network```
 ```[cat](/man/cat) /proc/net/dev```
