@@ -51,8 +51,8 @@ Add a **NAT masquerade** rule
 **-D, --delete chain**
 > Delete rule from chain
 
-**-I, --insert chain**
-> Insert rule at position in chain
+**-I, --insert chain [rulenum]**
+> Insert rule at position in chain (default position 1)
 
 **-P, --policy chain target**
 > Set default policy for chain
@@ -60,8 +60,17 @@ Add a **NAT masquerade** rule
 **-F, --flush**
 > Flush all rules
 
+**-N, --new-chain chain**
+> Create a new user-defined chain
+
+**-X, --delete-chain [chain]**
+> Delete a user-defined chain (must be empty)
+
+**-E, --rename-chain old new**
+> Rename a user-defined chain
+
 **-t, --table table**
-> Specify table (filter, nat, mangle, raw)
+> Specify table (filter, nat, mangle, raw, security)
 
 **-s, --source address**
 > Source address specification
@@ -87,6 +96,18 @@ Add a **NAT masquerade** rule
 **-n, --numeric**
 > Numeric output (don't resolve names)
 
+**-x, --exact**
+> Expand numbers (display exact packet and byte counters)
+
+**-i, --in-interface name**
+> Input interface name
+
+**-o, --out-interface name**
+> Output interface name
+
+**-m, --match match**
+> Load extended match module (e.g., state, conntrack, multiport)
+
 **--line-numbers**
 > Show line numbers
 
@@ -100,4 +121,4 @@ Part of the **netfilter** project. Introduced in **Linux 2.4** (2001) as a repla
 
 # SEE ALSO
 
-[ip6tables](/man/ip6tables)(8), [iptables-save](/man/iptables-save)(8), [iptables-restore](/man/iptables-restore)(8), [nft](/man/nft)(8), [firewall-cmd](/man/firewall-cmd)(1)
+[ip6tables](/man/ip6tables)(8), [iptables-save](/man/iptables-save)(8), [iptables-restore](/man/iptables-restore)(8), [nft](/man/nft)(8), [firewall-cmd](/man/firewall-cmd)(1), [ufw](/man/ufw)(8)

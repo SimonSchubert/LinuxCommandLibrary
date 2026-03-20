@@ -8,6 +8,10 @@ Create a **virtual monitor** with VNC access
 
 ```krfb-virtualmonitor --resolution 1920x1080 --name [monitor_name] --password [password] --port 5900```
 
+Create a **lower resolution** virtual monitor on a custom port
+
+```krfb-virtualmonitor --resolution 1280x720 --name [monitor_name] --password [password] --port [5901]```
+
 # SYNOPSIS
 
 **krfb-virtualmonitor** **--resolution** _WxH_ **--name** _name_ **--password** _password_ **--port** _port_
@@ -36,4 +40,4 @@ Requires KDE Plasma desktop environment. The VNC password is passed on the comma
 
 # SEE ALSO
 
-[krfb](/man/krfb)(1), [x11vnc](/man/x11vnc)(1)
+[krfb](/man/krfb)(1), [x11vnc](/man/x11vnc)(1), [vncviewer](/man/vncviewer)(1)

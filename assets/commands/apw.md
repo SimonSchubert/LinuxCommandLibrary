@@ -74,4 +74,4 @@ Requires **macOS 14 (Sonoma) or later**. The daemon must be running and authenti
 
 # SEE ALSO
 
-[pass](/man/pass)(1), [security](/man/security)(1), [keychain](/man/keychain)(1)
+[pass](/man/pass)(1), [keychain](/man/keychain)(1)

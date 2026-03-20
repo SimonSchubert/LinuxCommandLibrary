@@ -1,6 +1,6 @@
 # TAGLINE
 
-displays network statistics from /proc/net/netstat and /proc/net/snmp, showing
+Display network statistics from /proc/net/netstat and /proc/net/snmp
 
 # TLDR
 
@@ -12,13 +12,21 @@ View **all-time** network statistics
 
 ```nstat -a```
 
-Display **help**
+Show statistics **without updating** history
 
-```nstat -h```
+```nstat -s```
+
+Filter counters by **pattern**
+
+```nstat Tcp```
+
+Output in **JSON** format
+
+```nstat -j```
 
 # SYNOPSIS
 
-**nstat** [_options_]
+**nstat** [_options_] [_PATTERN_...]
 
 # PARAMETERS
 
@@ -39,6 +47,15 @@ Display **help**
 
 **-j, --json**
 > Output in JSON format
+
+**-p, --pretty**
+> Pretty print JSON output (use with -j)
+
+**-d, --scan** _INTERVAL_
+> Run in daemon mode, collecting statistics every INTERVAL seconds
+
+**-t, --interval** _INTERVAL_
+> Time interval to average rates (default: 60 seconds)
 
 **-h, --help**
 > Display help information

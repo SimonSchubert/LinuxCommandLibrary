@@ -35,19 +35,19 @@ Create **minimal chroot** with essential packages only
 # PARAMETERS
 
 **--mode _name_**
-> Operation mode: auto, sudo, root, unshare, fakeroot, fakechroot, chrootless
+> Operation mode: auto, sudo, root, unshare, fakeroot, fakechroot, proot, chrootless
 
 **--format _name_**
-> Output format: auto, directory, tar, squashfs, ext2, ext4, null
+> Output format: auto, directory, tar, squashfs, ext2, null
 
 **--variant _name_**
-> Package set: extract, custom, essential, apt, required, minbase, buildd, important, standard
+> Package set: extract, custom, essential, apt, required, minbase, buildd, important, debootstrap, -, standard
 
 **--include _packages_**
 > Additional packages to install (comma-separated)
 
 **--components _list_**
-> Repository components: main, contrib, non-free
+> Repository components: main, contrib, non-free, non-free-firmware
 
 **--architectures _list_**
 > Supported architectures (native and foreign)

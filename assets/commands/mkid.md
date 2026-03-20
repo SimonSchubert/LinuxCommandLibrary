@@ -18,11 +18,11 @@ Build an ID database and **save to a specific file**
 
 Include only **specific languages**
 
-```mkid -i "[C C++ asm]"```
+```mkid -i "C C++"```
 
-**Exclude specific directories** from indexing
+**Exclude named files or directories** from indexing
 
-```mkid -p [path/to/excluded_directory]```
+```mkid -p [.git]```
 
 Display **statistics** after building the database
 
@@ -80,4 +80,4 @@ The --include and --exclude options are mutually exclusive. Large codebases may 
 
 # SEE ALSO
 
-[lid](/man/lid)(1), [gid](/man/gid)(1), [fid](/man/fid)(1), [fnid](/man/fnid)(1)
+[lid](/man/lid)(1), [grep](/man/grep)(1), [ctags](/man/ctags)(1)

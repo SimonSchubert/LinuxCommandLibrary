@@ -36,6 +36,9 @@ The tool is commonly used for compressing tarballs and large files.
 
 # PARAMETERS
 
+**-z**, **--compress**
+> Force compression (default behavior)
+
 **-d**, **--decompress**
 > Decompress file
 
@@ -52,13 +55,25 @@ The tool is commonly used for compressing tarballs and large files.
 > Test compressed file integrity
 
 **-v**, **--verbose**
-> Verbose mode
+> Verbose mode (repeat for more detail)
 
 **-1** to **-9**
 > Compression level (1=fast, 9=best, default: 9)
 
+**--fast**
+> Alias for -1
+
+**--best**
+> Alias for -9
+
+**-s**, **--small**
+> Use less memory for compression/decompression (at most 2500 KB)
+
 **-q**, **--quiet**
-> Suppress warnings
+> Suppress non-critical warnings
+
+**-L**, **--license**
+> Display license and version information
 
 # WORKFLOW
 
@@ -90,7 +105,7 @@ Block size affects memory usage and compression:
 
 # CAVEATS
 
-Slower than gzip. Default removes original file (use -k to keep). Single-threaded (use pbzip2 or lbzip2 for parallel). Memory usage proportional to block size. .bz2 files larger than .xz but smaller than .gz typically.
+Slower than gzip. Default removes original file (use -k to keep). Single-threaded (use **pbzip2** or **lbzip2** for parallel compression). Memory usage proportional to block size. .bz2 files are typically larger than .xz but smaller than .gz.
 
 # HISTORY
 

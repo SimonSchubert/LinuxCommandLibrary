@@ -12,7 +12,7 @@ Don't show **informative messages**
 
 ```sudo a2dismod -q [module]```
 
-**Force** disable a module and cascade disable all modules that depend on it
+**Force** disable a module even if it does not exist or is already disabled
 
 ```sudo a2dismod -f [module]```
 
@@ -36,7 +36,7 @@ The tool works alongside **a2enmod**, which enables modules. After disabling a m
 > Don't show informative messages
 
 **-f, --force**
-> Cascade disable all modules that depend on the specified module
+> Do not complain if the specified module does not exist or is already disabled
 
 **-m, --maintmode**
 > Enables maintainer mode; the program invocation is effectuated automatically by a maintainer script
@@ -46,7 +46,7 @@ The tool works alongside **a2enmod**, which enables modules. After disabling a m
 
 # CAVEATS
 
-This utility is **Debian-specific** and not available on other Linux distributions. Using **-f** to force disable a module will also disable all dependent modules, which may break your Apache configuration.
+This utility is **Debian-specific** and not available on other Linux distributions (also works on Ubuntu and derivatives). After disabling a module, you must restart or reload Apache for changes to take effect.
 
 # HISTORY
 

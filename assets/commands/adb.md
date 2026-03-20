@@ -24,6 +24,14 @@ Open a **shell** on the device
 
 ```adb shell```
 
+**Pair** with device for wireless debugging (Android 11+)
+
+```adb pair [host]:[port]```
+
+**Connect** wirelessly to a device
+
+```adb connect [host]:[port]```
+
 # SYNOPSIS
 
 **adb** [_-d|-e|-s serial_] _command_ [_options_]
@@ -45,14 +53,23 @@ The tool operates through a client-server architecture where the adb server runs
 **-s** _serial_
 > Direct command to device with specified serial number
 
+**-t** _transport_id_
+> Direct command to device with given transport ID
+
 **devices**
 > List all connected devices and their states
 
-**install** _apk_
-> Install an APK file
+**install** [**-r**] [**-g**] _apk_
+> Install an APK file. -r reinstalls keeping data, -g grants all runtime permissions.
 
-**uninstall** _package_
-> Remove an application by package name
+**uninstall** [**-k**] _package_
+> Remove an application by package name. -k keeps data and cache directories.
+
+**pair** _host_:_port_ [_pairing_code_]
+> Pair with a device for wireless debugging (Android 11+).
+
+**connect** _host_:_port_
+> Connect to a device over TCP/IP.
 
 **push** _local_ _remote_
 > Copy file from computer to device
@@ -81,6 +98,12 @@ The tool operates through a client-server architecture where the adb server runs
 **kill-server**
 > Stop the adb server
 
+**sideload** _otapackage_
+> Sideload an OTA update package in recovery mode
+
+**bugreport** [_path_]
+> Generate a bug report and save to path
+
 # CONFIGURATION
 
 **~/.android/adb_usb.ini**
@@ -105,4 +128,4 @@ USB debugging must be enabled on the device. First connection requires authorizi
 
 # SEE ALSO
 
-[fastboot](/man/fastboot)(1), [aapt](/man/aapt)(1), [logcat](/man/logcat)(1)
+[fastboot](/man/fastboot)(1), [aapt](/man/aapt)(1), [logcat](/man/logcat)(1), [scrcpy](/man/scrcpy)(1)

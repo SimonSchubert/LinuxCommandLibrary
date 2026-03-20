@@ -1,24 +1,32 @@
 # TAGLINE
 
-tool for reading Arch Linux news from the archlinux
+Arch Linux news reader and pacman hook
 
 # TLDR
 
-**Read** all unread news
-
-```sudo informant read```
-
-**Check** for new news items
+**Check** for unread news items
 
 ```informant check```
 
-**List** latest news
+**Read** all unread news interactively
+
+```sudo informant read```
+
+**Mark all news as read** without printing
+
+```sudo informant read --all```
+
+**List** latest news titles
 
 ```informant list```
 
-Display **help**
+**List only unread** news items
 
-```informant -h```
+```informant list --unread```
+
+**List news** in reverse order (newest first)
+
+```informant list --reverse```
 
 # SYNOPSIS
 
@@ -26,20 +34,29 @@ Display **help**
 
 # PARAMETERS
 
-**read**
-> Mark all news as read and display unread items
-
 **check**
-> Check for unread news items (returns non-zero if unread)
+> Check for unread news items (exit code equals number of unread items). Prints and marks as read if only one unread.
+
+**read**
+> Loop through unread items, printing each and prompting to continue. Specify an item by index or title match.
+
+**read --all**
+> Mark all items as read without printing them.
 
 **list**
-> List recent news items
+> List recent news titles (read and unread).
+
+**--unread**
+> Only show unread items (with `list`).
+
+**--reverse**
+> Show items newest first (with `list`).
 
 **-n**, **--count** _NUM_
-> Number of items to display
+> Number of items to display.
 
 **-h**, **--help**
-> Display help message
+> Display help message.
 
 # DESCRIPTION
 

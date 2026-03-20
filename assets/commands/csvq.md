@@ -28,6 +28,10 @@ SQL query engine for CSV files
 
 ```csvq -f json "SELECT * FROM [data.csv]"```
 
+**Read from stdin via pipe**
+
+```cat [data.csv] | csvq "SELECT * FROM STDIN"```
+
 **Start interactive mode**
 
 ```csvq```
@@ -39,28 +43,40 @@ SQL query engine for CSV files
 # PARAMETERS
 
 **-f**, **--format** _format_
-> Output format: csv, tsv, json, text, fixed, ltsv, box.
+> Output format: CSV, TSV, FIXED, JSON, JSONL, LTSV, GFM, ORG, BOX, TEXT (default: TEXT).
 
 **-d**, **--delimiter** _char_
-> Field delimiter character.
+> Field delimiter character (default: comma).
 
 **-o**, **--out** _file_
 > Output to file instead of stdout.
 
 **-e**, **--encoding** _encoding_
-> Input file encoding.
+> Input file encoding (AUTO, UTF8, UTF8M, UTF16, SJIS, etc.).
 
-**-w**, **--without-header**
-> CSV has no header row.
+**-n**, **--no-header**
+> Treat first line as data; fields auto-named c1, c2, etc.
 
-**-n**, **--line-break** _type_
-> Line break type: crlf, cr, lf.
+**-N**, **--without-header**
+> Export results without header row.
 
-**--write-encoding** _encoding_
+**-l**, **--line-break** _type_
+> Output line break type: CRLF, CR, LF (default: LF).
+
+**-E**, **--write-encoding** _encoding_
 > Output file encoding.
 
+**-s**, **--source** _file_
+> Load queries from a file.
+
+**-r**, **--repository** _path_
+> Directory containing data files (default: current directory).
+
 **-q**, **--quiet**
-> Suppress output except results.
+> Suppress operation log messages.
+
+**-P**, **--pretty-print**
+> Pretty-print JSON output.
 
 # DESCRIPTION
 

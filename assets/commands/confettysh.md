@@ -1,76 +1,41 @@
 # TAGLINE
 
-terminal confetti animation
+Confetti and fireworks over SSH
 
 # TLDR
 
-**Display confetti** animation in the terminal
+**Connect to the confettysh SSH server for a confetti animation**
 
-```confettysh```
+```ssh [host] -t confetti```
 
-**Run with custom duration** in seconds
+**Connect for a fireworks animation**
 
-```confettysh --duration [5]```
+```ssh [host] -t fireworks```
 
-**Use specific colors**
+**Connect to a local confettysh server**
 
-```confettysh --colors "[red,green,blue,yellow]"```
-
-**Set particle count**
-
-```confettysh --count [100]```
-
-**Adjust animation speed**
-
-```confettysh --speed [2.0]```
-
-**Run after a command completes** successfully
-
-```[some_command] && confettysh```
+```ssh -p [2222] localhost```
 
 # SYNOPSIS
 
-**confettysh** [_options_]
-
-# PARAMETERS
-
-**--duration** _SECONDS_
-> How long the animation runs (default: 3).
-
-**--colors** _COLORS_
-> Comma-separated list of colors to use.
-
-**--count** _NUMBER_
-> Number of confetti particles.
-
-**--speed** _MULTIPLIER_
-> Animation speed multiplier.
-
-**--no-emoji**
-> Use ASCII characters instead of emoji.
-
-**-h**, **--help**
-> Display help information.
-
-**-v**, **--version**
-> Display version information.
+**confettysh**
 
 # DESCRIPTION
 
-**confettysh** is a terminal tool that displays a colorful confetti animation. It's designed for celebrating successful command completions, build finishes, or just adding some fun to terminal workflows.
+**confettysh** is an SSH server that displays confetti and fireworks animations in the terminal. It is built by Charmbracelet using the Wish framework and provides an SSH interface to the confeTTY project by Maas Lalani.
 
-The animation uses Unicode characters or ASCII art to create falling confetti particles across the terminal window. Colors can be customized to match themes or preferences. The tool respects terminal dimensions and adapts to window size.
+The server accepts SSH connections and renders particle-based animations directly in the connected terminal. Users can choose between confetti and fireworks animations by passing the animation type as the SSH command. Pressing any key triggers additional particles.
 
-confettysh is often used in scripts to provide visual feedback when long-running tasks complete, such as deployment pipelines, test suites, or build processes. It adds a moment of celebration to otherwise text-heavy terminal work.
+confettysh is primarily a demonstration of building SSH-based TUI applications with Go and the Bubble Tea framework, and is also used as a fun celebratory tool.
 
 # CAVEATS
 
-Requires a terminal with Unicode support for best results. Animation may appear differently depending on terminal emulator and font. The **--no-emoji** flag provides compatibility with terminals lacking Unicode support.
+confettysh is an SSH server, not a standalone CLI tool. It requires a running server instance to connect to. The animation quality depends on the terminal emulator's Unicode support and rendering speed.
 
 # HISTORY
 
-confettysh emerged from the trend of adding visual flair to terminal applications. Similar to other terminal celebration tools, it was inspired by web-based confetti animations and adapted for command-line use, providing developers a way to make terminal workflows more engaging.
+**confettysh** was created by **Charmbracelet** as part of their suite of terminal tools built with the Bubble Tea TUI framework and the Wish SSH library. It wraps the confeTTY animation engine by Maas Lalani in an SSH server, written in Go.
 
 # SEE ALSO
 
-[sl](/man/sl)(1), [cowsay](/man/cowsay)(1), [lolcat](/man/lolcat)(1), [figlet](/man/figlet)(1)
+[ssh](/man/ssh)(1), [sl](/man/sl)(1), [cowsay](/man/cowsay)(1), [lolcat](/man/lolcat)(1)

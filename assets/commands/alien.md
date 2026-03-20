@@ -70,6 +70,15 @@ Convert **keeping the original version** number
 **-T, --test**
 > Test generated packages with lintian
 
+**--bump**=_N_
+> Increment version number by N instead of 1
+
+**-h, --help**
+> Display usage summary
+
+**--version**
+> Display alien version
+
 # CAVEATS
 
 Converted packages may not work perfectly as distribution-specific dependencies and scripts may not translate correctly between formats.

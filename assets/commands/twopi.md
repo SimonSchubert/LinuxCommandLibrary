@@ -55,6 +55,9 @@ Graphviz radial graph layout engine
 **-V**
 > Print version information.
 
+**-s** _scale_
+> Set input scale to _scale_. If omitted, a default value of 72 is used.
+
 **-?**
 > Print usage information.
 
@@ -64,7 +67,7 @@ Graphviz radial graph layout engine
 
 Nodes at distance 1 from the center appear on the first ring, nodes at distance 2 on the second ring, and so forth. This layout is particularly effective for visualizing hierarchies, network topologies, and trees where relationships radiate from a central point.
 
-The center node can be specified with the **root** attribute; otherwise, twopi selects a node furthest from any leaf node. The spacing between rings is controlled by **ranksep** (default 0.75 inches). Node overlaps can be resolved using the **overlap** attribute with Voronoi diagrams or scaling.
+The center node can be specified with the **root** attribute; otherwise, twopi randomly picks one of the nodes furthest from a leaf node (a node of degree 1). If no leaf nodes exist, an arbitrary node is chosen. The spacing between rings is controlled by **ranksep** (default 0.75 inches). Node overlaps can be resolved using the **overlap** attribute: **false** uses Voronoi diagrams, **scale** uniformly scales up the layout, and **true** (the default) does no repositioning.
 
 Input must be in DOT graph language format. twopi is part of the Graphviz suite alongside dot, neato, circo, fdp, and sfdp.
 

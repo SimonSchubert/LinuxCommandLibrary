@@ -65,6 +65,18 @@ framebuffer and terminal image viewer
 **--no-auto-scale**
 > Disable automatic scaling.
 
+**-v**, **--verbose**
+> Be verbose: show status bar.
+
+**-V**, **--version**
+> Display version and compile flags, then exit.
+
+**-P**, **--text-reading**
+> Enable text reading mode. Scales images to screen width and aligns to top.
+
+**-S**, **--sanity-check**
+> Perform a quick sanity check before starting.
+
 **-h**, **--help**
 > Display help message.
 
@@ -111,4 +123,4 @@ FIM was developed by Michele Martone as an improved version of **fbi** (Linux fr
 
 # SEE ALSO
 
-[fbi](/man/fbi)(1), [feh](/man/feh)(1), [display](/man/display)(1), [fimgs](/man/fimgs)(1)
+[fbi](/man/fbi)(1), [feh](/man/feh)(1), [display](/man/display)(1)

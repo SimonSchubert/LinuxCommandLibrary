@@ -59,16 +59,22 @@ extracts images embedded in PDF files
 > Output as CCITT fax.
 
 **-all**
-> Preserve original format.
+> Write images in their original format when possible.
 
 **-list**
-> List images without extracting.
+> List images with details without extracting.
+
+**-p**
+> Include page numbers in output file names.
+
+**-q**
+> Quiet mode, suppress messages and errors.
 
 **-opw** _PASSWORD_
-> Owner password.
+> Owner password for encrypted PDFs.
 
 **-upw** _PASSWORD_
-> User password.
+> User password for encrypted PDFs.
 
 # DESCRIPTION
 

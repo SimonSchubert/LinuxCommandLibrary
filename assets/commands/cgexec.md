@@ -4,17 +4,21 @@ run a command in a control group
 
 # TLDR
 
-Run in **cgroup**
+Run a command in a **cpu cgroup**
 
-```cgexec -g cpu:mygroup [process_name]```
+```cgexec -g cpu:mygroup [command]```
 
-Run with **multiple controllers**
+Run with **multiple controllers** in a single cgroup
 
-```cgexec -g cpu:mygroup -g memory:mygroup [process_name]```
+```cgexec -g cpu,memory:mygroup [command]```
 
-Run with **sticky** flag to prevent reclassification
+Run with **separate cgroups** for different controllers
 
-```cgexec --sticky -g cpu:mygroup [process_name]```
+```cgexec -g cpu:mygroup -g memory:memgroup [command]```
+
+Run with **sticky** flag to prevent reclassification by cgred
+
+```cgexec --sticky -g cpu:mygroup [command]```
 
 # SYNOPSIS
 
@@ -30,11 +34,17 @@ cgexec is part of the libcgroup-tools package and works with cgroups v1. For cgr
 
 # PARAMETERS
 
-**-g** _controller:cgroup_
-> Specify the controller and cgroup to use
+**-g** _controllers:path_
+> Specify the controller(s) and cgroup path. Multiple controllers can be comma-separated. Can be used multiple times.
 
 **--sticky**
-> Prevent cgred from moving the process
+> Prevent cgrulesengd (cgred) from reclassifying the process or its children.
+
+**-b**
+> Ignore the default systemd delegated hierarchy path and construct the cgroup path relative to the root hierarchy.
+
+**-h**
+> Display help information.
 
 Controllers include:
 > **cpu** - CPU time allocation
@@ -45,7 +55,7 @@ Controllers include:
 
 # CAVEATS
 
-The cgroup must exist before using cgexec (create with cgcreate). Multiple controllers can be specified with multiple -g options. Requires appropriate permissions or root access.
+The cgroup must exist before using cgexec (create with cgcreate). Multiple controllers can be comma-separated in a single -g option or specified with multiple -g options. Requires appropriate permissions or root access. If -g is not specified, cgexec assigns the task based on /etc/cgrules.conf.
 
 # HISTORY
 
@@ -53,4 +63,4 @@ The cgroup must exist before using cgexec (create with cgcreate). Multiple contr
 
 # SEE ALSO
 
-[cgcreate](/man/cgcreate)(1), [cgclassify](/man/cgclassify)(1), [cgdelete](/man/cgdelete)(1)
+[cgcreate](/man/cgcreate)(1), [cgclassify](/man/cgclassify)(1), [cgdelete](/man/cgdelete)(1), [systemd-run](/man/systemd-run)(1)

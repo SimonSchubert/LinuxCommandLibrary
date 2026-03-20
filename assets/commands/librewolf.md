@@ -16,9 +16,13 @@ privacy-focused Firefox fork with enhanced security defaults
 
 ```librewolf --private-window```
 
-**Open new window**
+**Open URL in a new window**
 
 ```librewolf --new-window [url]```
+
+**Open URL in a new tab**
+
+```librewolf --new-tab [url]```
 
 **Use specific profile**
 
@@ -27,6 +31,10 @@ privacy-focused Firefox fork with enhanced security defaults
 **Start profile manager**
 
 ```librewolf --ProfileManager```
+
+**Start in safe mode with add-ons disabled**
+
+```librewolf --safe-mode```
 
 # SYNOPSIS
 
@@ -55,9 +63,15 @@ privacy-focused Firefox fork with enhanced security defaults
 **--headless**
 > Run without GUI.
 
+**--search** _term_
+> Search using default search engine.
+
+**--screenshot** _file_
+> Take screenshot of a URL (use with --headless).
+
 # DESCRIPTION
 
-**librewolf** is a privacy-focused Firefox fork with enhanced security defaults. Removes telemetry, includes uBlock Origin, and applies privacy-hardening configurations. Maintains Firefox compatibility while prioritizing user privacy.
+**librewolf** is a privacy-focused Firefox fork with enhanced security defaults. Removes telemetry, includes uBlock Origin, and applies privacy-hardening configurations. Maintains Firefox compatibility while prioritizing user privacy. Since it is based on Firefox, it accepts all standard Firefox command-line options.
 
 # SEE ALSO
 

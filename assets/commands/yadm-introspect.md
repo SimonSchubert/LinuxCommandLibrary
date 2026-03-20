@@ -4,7 +4,11 @@ Display internal yadm information
 
 # TLDR
 
-**Show yadm configuration**
+**List available yadm commands**
+
+```yadm introspect commands```
+
+**List supported configuration options**
 
 ```yadm introspect configs```
 
@@ -12,24 +16,31 @@ Display internal yadm information
 
 ```yadm introspect repo```
 
+**List available command-line switches**
+
+```yadm introspect switches```
+
 # SYNOPSIS
 
 **yadm** **introspect** _category_
 
 # PARAMETERS
 
+**commands**
+> List available yadm commands.
+
 **configs**
-> Show config files.
+> List supported configuration options.
 
 **repo**
 > Show repo path.
 
 **switches**
-> Show runtime switches.
+> List available command-line switches.
 
 # DESCRIPTION
 
-**yadm introspect** displays internal yadm information. Shows paths, configuration locations, and runtime values. Useful for debugging and scripting.
+**yadm introspect** reports internal yadm data. Its primary purpose is to support command-line completion, but it can also be used for debugging and scripting.
 
 # SEE ALSO
 

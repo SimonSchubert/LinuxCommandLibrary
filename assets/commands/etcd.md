@@ -61,6 +61,21 @@ distributed key-value store with Raft consensus
 **--key-file** _file_
 > TLS key file.
 
+**--initial-cluster-token** _token_
+> Unique cluster token to prevent cross-cluster interaction.
+
+**--initial-advertise-peer-urls** _urls_
+> Peer URLs to advertise to the rest of the cluster.
+
+**--snapshot-count** _count_
+> Number of committed transactions to trigger a snapshot to disk (default 100000).
+
+**--quota-backend-bytes** _bytes_
+> Raise alarms when backend size exceeds the given quota (0 defaults to low space quota).
+
+**--max-request-bytes** _bytes_
+> Maximum client request size in bytes the server will accept (default 1572864).
+
 # DESCRIPTION
 
 **etcd** is a distributed key-value store that provides reliable, consistent data storage for distributed systems. It implements the Raft consensus algorithm to ensure strong consistency across multiple nodes, making it suitable for critical configuration data and service coordination.
@@ -72,7 +87,10 @@ etcd prioritizes consistency and availability, making it ideal for storing clust
 # CONFIGURATION
 
 **/etc/etcd/etcd.conf.yml**
-> Main configuration file for etcd server settings, cluster topology, and security options.
+> Main configuration file for etcd server settings, cluster topology, and security options. Overrides all command-line flags and environment variables when specified.
+
+**ETCD_***
+> Every flag has a corresponding environment variable prefixed with ETCD_ in all caps and snake case (e.g., --data-dir becomes ETCD_DATA_DIR). Command-line flags take precedence over environment variables.
 
 # CAVEATS
 
@@ -84,5 +102,5 @@ etcd was created by **CoreOS** in **2013** and became a Cloud Native Computing F
 
 # SEE ALSO
 
-[etcdctl](/man/etcdctl)(1), [etcdutl](/man/etcdutl)(1)
+[etcdctl](/man/etcdctl)(1), [kubectl](/man/kubectl)(1), [consul](/man/consul)(1)
 

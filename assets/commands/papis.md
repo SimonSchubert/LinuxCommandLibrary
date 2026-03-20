@@ -12,7 +12,11 @@ command-line bibliography manager
 
 ```papis add --set author "[Name]" --set title "[Title]" [document.pdf]```
 
-**Search library**
+**Add a document from a DOI**
+
+```papis add --from doi [10.1007/s00214-007-0422-6]```
+
+**Search and open a document**
 
 ```papis open "[query]"```
 
@@ -24,9 +28,9 @@ command-line bibliography manager
 
 ```papis edit "[query]"```
 
-**List all documents**
+**List all documents matching a query**
 
-```papis list```
+```papis list "[query]"```
 
 # SYNOPSIS
 
@@ -55,8 +59,23 @@ command-line bibliography manager
 **rm**
 > Remove document.
 
+**rename**
+> Rename document folder.
+
+**doctor**
+> Check and fix document metadata.
+
+**cite**
+> Retrieve citation information.
+
 **--set** _field_ _value_
 > Set metadata field.
+
+**-l** **--lib** _library_
+> Use specified library.
+
+**--from** _importer_
+> Import from source: doi, arxiv, bibtex, crossref, pmid, yaml, folder, pdf2doi.
 
 # DESCRIPTION
 
@@ -84,7 +103,7 @@ dir = ~/Documents/books
 
 # CAVEATS
 
-Python required. Multiple library support. Integrates with vim, emacs. DOI lookup supported.
+Python required. Multiple library support. Integrates with Vim, Emacs, and offers TUI interfaces. DOI and arXiv lookup supported.
 
 # HISTORY
 

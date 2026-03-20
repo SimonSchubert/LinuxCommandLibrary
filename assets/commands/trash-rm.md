@@ -1,23 +1,29 @@
 # TAGLINE
 
-Remove specific files from trash
+Remove files matching a pattern from the trash can
 
 # TLDR
 
-This command is documented with **trash**
+Remove all files named **foo** from trash
 
-View documentation for **trash-rm**
+```trash-rm foo```
 
-```tldr trash```
+Remove all files ending with **.o** from trash
+
+```trash-rm '*.o'```
+
+Remove files with a specific **original path** from trash
+
+```trash-rm /absolute/path/to/file```
 
 # SYNOPSIS
 
-**trash-rm** _pattern_
+**trash-rm** _PATTERN_
 
 # DESCRIPTION
 
-**trash-rm** is part of the trash-cli suite. See **trash** for full documentation.
+**trash-rm** removes from the trash can all files matching the given pattern. It permanently deletes matching trashed files according to the freedesktop.org Trash specification. The pattern is matched against the original file name or path.
 
 # SEE ALSO
 
-[trash](/man/trash)(1), [trash-list](/man/trash-list)(1), [trash-empty](/man/trash-empty)(1)
+[trash](/man/trash)(1), [trash-put](/man/trash-put)(1), [trash-list](/man/trash-list)(1), [trash-empty](/man/trash-empty)(1), [trash-restore](/man/trash-restore)(1)

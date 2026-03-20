@@ -62,11 +62,20 @@ Supports popular applications like Chrome, Discord, Slack, VS Code, and many oth
 **purge** _package_
 > Remove package and configuration
 
+**reinstall** _package_
+> Reinstall package
+
 **upgrade**
 > Upgrade all packages
 
-**list**
-> List available packages
+**list** [_--installed_|_--not-installed_|_--raw_]
+> List available packages. Use --installed or --not-installed to filter, --raw to skip install status check.
+
+**clean**
+> Remove cached .deb files
+
+**fix-installed**
+> Fix broken packages
 
 # CAVEATS
 

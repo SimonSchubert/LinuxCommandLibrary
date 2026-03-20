@@ -44,16 +44,19 @@ Display **help** for a subcommand
 > Remove a trust anchor
 
 **extract** **--format=**_format_ _path_
-> Extract trust anchors in specified format
+> Extract trust anchors in specified format.
+
+**extract-compat**
+> Extract trust policy in a format compatible with the system's native tools.
 
 **--filter=**_type_
-> Filter by type (ca-anchors, blocklist, certificates, trust-policy)
+> Filter by type (ca-anchors, blocklist, certificates, trust-policy).
 
 **--format=**_format_
-> Output format (x509-file, x509-directory, pem-file, etc.)
+> Output format (x509-file, x509-directory, pem-file, pem-bundle, java-cacerts, openssl-bundle, openssl-directory, etc.).
 
 **--purpose=**_purpose_
-> Filter by purpose (server-auth, client-auth, email, code-signing)
+> Filter by purpose (server-auth, client-auth, email, code-signing).
 
 # DESCRIPTION
 
@@ -63,7 +66,7 @@ Changes made with trust affect all applications that use the p11-kit trust modul
 
 # CAVEATS
 
-Requires root privileges to modify system trust store. Changes may require applications to be restarted to take effect. The store format and location varies by distribution.
+May require root privileges to modify the system trust store if no user-specific store is available. Changes may require applications to be restarted to take effect. The store format and location varies by distribution.
 
 # HISTORY
 
@@ -71,4 +74,4 @@ Part of **p11-kit**, developed as part of the FreeDesktop.org project to provide
 
 # SEE ALSO
 
-[update-ca-trust](/man/update-ca-trust)(8), [openssl](/man/openssl)(1), [p11-kit](/man/p11-kit)(8)
+[update-ca-trust](/man/update-ca-trust)(8), [update-ca-certificates](/man/update-ca-certificates)(8), [openssl](/man/openssl)(1), [p11-kit](/man/p11-kit)(8)

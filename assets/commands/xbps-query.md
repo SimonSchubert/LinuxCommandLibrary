@@ -32,6 +32,18 @@ Query Void Linux package information
 
 ```xbps-query -x [package]```
 
+**Show reverse dependencies** of a package
+
+```xbps-query -X [package]```
+
+**Find which package owns** a file
+
+```xbps-query -o [/path/to/file]```
+
+**List package orphans** (unused dependencies)
+
+```xbps-query -O```
+
 # SYNOPSIS
 
 **xbps-query** [_options_] [_package_]
@@ -65,11 +77,20 @@ Query Void Linux package information
 **-R**, **--repository**
 > Query remote repositories instead of local.
 
+**-o** _PATTERN_
+> Search for packages owning files matching PATTERN.
+
+**-O**
+> List package orphans (installed as dependencies, no longer needed).
+
 **--regex**
-> Enable regex pattern matching for search.
+> Enable Extended Regular Expression matching for search.
 
 **-p** _property_
 > Show specific property (e.g., version, description).
+
+**-v**, **--verbose**
+> Enable verbose output.
 
 # DESCRIPTION
 
@@ -79,7 +100,7 @@ The tool is essential for exploring available packages and understanding the cur
 
 # CAVEATS
 
-Repository queries require network access. Use **--repository** flag to query remote packages. Part of the XBPS package management system for Void Linux.
+Repository queries require network access and an up-to-date repository index (run **xbps-install -S** to sync). Only one query mode can be used at a time. Part of the XBPS package management system for Void Linux.
 
 # SEE ALSO
 

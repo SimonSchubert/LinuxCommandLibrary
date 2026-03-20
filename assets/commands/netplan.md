@@ -59,6 +59,9 @@ Display **current status**
 **info**
 > Show available features
 
+**ip**
+> Retrieve IP information (like DHCP leases) from the system
+
 **rebind**
 > Rebind SR-IOV virtual functions to their driver
 
@@ -67,14 +70,14 @@ Display **current status**
 **--debug**
 > Enable debug output
 
-**--root-dir _path_**
-> Use alternate root directory
+**--root-dir** _path_
+> Use alternate root directory.
 
-**--timeout _seconds_**
-> Timeout for try command before rollback [default=120]
+**--timeout** _seconds_
+> Timeout for try command before rollback [default: 120].
 
-**--config-file _path_**
-> Use a specific configuration file
+**--config-file** _path_
+> Use a specific configuration file.
 
 # CONFIGURATION
 

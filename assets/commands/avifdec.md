@@ -8,17 +8,21 @@ Decode AVIF images to standard formats
 
 ```avifdec [input.avif] [output.png]```
 
-Decode to **JPEG**
+Decode to **JPEG** with specific quality
 
-```avifdec -c jpg [input.avif] [output.jpg]```
+```avifdec -q [85] [input.avif] [output.jpg]```
 
-**Show** information only
+**Show** image information only
 
-```avifdec --info [input.avif]```
+```avifdec -i [input.avif]```
 
-Decode with **specific depth**
+Decode with **16-bit depth** (PNG only)
 
-```avifdec --depth [10] [input.avif] [output.png]```
+```avifdec -d 16 [input.avif] [output.png]```
+
+Decode using **multiple threads**
+
+```avifdec -j [4] [input.avif] [output.png]```
 
 # SYNOPSIS
 
@@ -32,26 +36,38 @@ The tool is part of libavif and enables viewing and converting AVIF images to mo
 
 # PARAMETERS
 
-**-c**, **--codec** _format_
-> Output format (png, jpg, y4m)
+**-c** _codec_
+> AV1 codec to use (aom, dav1d, libgav1). Default: auto-selected from available codecs
 
-**-q**, **--quality** _value_
-> JPEG quality (1-100)
+**-d** _depth_
+> Output bit depth, 8 or 16 (PNG only; JPEG is always 8bpc)
 
-**--depth** _bits_
-> Bit depth for output
+**-q** _quality_
+> Output JPEG quality, 0-100 (default: 90)
 
-**--info**
-> Display image information only
+**-j** _jobs_
+> Number of worker threads, or 'all' for all cores (default: all)
+
+**-i**, **--info**
+> Display image information instead of saving to disk
+
+**--png-compress** _level_
+> PNG compression level, 0-9 (0=none, 9=max)
+
+**--chroma-upsampling** _mode_
+> Chroma upsampling for 420/422: automatic, fastest, best, nearest, bilinear (default: automatic)
 
 **--ignore-icc**
-> Ignore ICC color profile
+> Ignore embedded ICC color profile
 
-**--ignore-exif**
-> Ignore EXIF metadata
+**--index** _n_
+> Decode specific frame index, or 'all' for every frame (default: 0)
 
-**-i**, **--index** _n_
-> Decode specific frame from animation
+**--no-strict**
+> Disable strict validation checks
+
+**-r**
+> Output raw RGB values instead of premultiplying by alpha
 
 # FEATURES
 
@@ -71,4 +87,4 @@ Output format support depends on compile-time options. Large images may consume 
 
 # SEE ALSO
 
-[avifenc](/man/avifenc)(1), [imagemagick](/man/imagemagick)(1), [libheif](/man/libheif)(1)
+[avifenc](/man/avifenc)(1), [imagemagick](/man/imagemagick)(1), [convert](/man/convert)(1)

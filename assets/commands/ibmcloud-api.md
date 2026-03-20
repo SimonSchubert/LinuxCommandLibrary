@@ -12,13 +12,13 @@ sets or displays the IBM Cloud API endpoint
 
 ```ibmcloud api [https://cloud.ibm.com]```
 
-**Use private endpoint**
+**Set private endpoint**
 
-```ibmcloud api private.cloud.ibm.com```
+```ibmcloud api https://private.cloud.ibm.com```
 
-**Use VPC private endpoint**
+**Set private endpoint via VPC**
 
-```ibmcloud api [endpoint] --vpc```
+```ibmcloud api https://private.cloud.ibm.com --vpc```
 
 **Unset API endpoint**
 
@@ -45,7 +45,7 @@ sets or displays the IBM Cloud API endpoint
 
 # DESCRIPTION
 
-**ibmcloud api** sets or displays the IBM Cloud API endpoint. Without arguments, shows the current endpoint. Set to private.cloud.ibm.com for private network access. Required before logging in with **ibmcloud login**.
+**ibmcloud api** sets or displays the IBM Cloud API endpoint. If neither an endpoint nor **--unset** is specified, the current API endpoint is displayed. The default public endpoint is https://cloud.ibm.com. Use https://private.cloud.ibm.com for private network access. Setting the API endpoint is required before logging in with **ibmcloud login**.
 
 # SEE ALSO
 

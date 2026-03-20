@@ -6,7 +6,7 @@ captures screenshots from iOS devices
 
 **Take a screenshot and save to a file**
 
-```idevicescreenshot [screenshot.png]```
+```idevicescreenshot [screenshot.tiff]```
 
 **Take a screenshot with auto-generated filename**
 
@@ -14,15 +14,15 @@ captures screenshots from iOS devices
 
 **Take a screenshot from a specific device by UDID**
 
-```idevicescreenshot -u [udid] [output.png]```
+```idevicescreenshot -u [udid] [output.tiff]```
 
 **Take a screenshot over network connection**
 
-```idevicescreenshot -n [output.png]```
+```idevicescreenshot -n [output.tiff]```
 
 **Enable debug output**
 
-```idevicescreenshot -d [output.png]```
+```idevicescreenshot -d [output.tiff]```
 
 # SYNOPSIS
 
@@ -31,29 +31,32 @@ captures screenshots from iOS devices
 # PARAMETERS
 
 _OUTPUT_
-> Output filename. If omitted, generates a timestamped filename.
+> Output filename. If omitted, generates a timestamped filename (e.g. screenshot-2024-01-15-12-30-00.tiff).
 
-**-u** _UDID_
+**-u**, **--udid** _UDID_
 > Target device by its unique device identifier (UDID).
 
-**-n**
-> Use network connection instead of USB.
+**-n**, **--network**
+> Connect to network device instead of USB.
 
 **-d**, **--debug**
-> Enable debug output.
+> Enable communication debugging.
+
+**-v**, **--version**
+> Display version information.
 
 **-h**, **--help**
-> Display help information.
+> Display usage information.
 
 # DESCRIPTION
 
-**idevicescreenshot** captures screenshots from connected iOS devices. It saves the current screen as a PNG or TIFF file depending on the device and iOS version. The tool communicates with the device's screenshot service via the usbmuxd protocol.
+**idevicescreenshot** captures screenshots from connected iOS devices. It saves the current screen as a TIFF image. The tool communicates with the device's screenshotr service via the usbmuxd protocol.
 
-The device must be paired and trusted before screenshots can be taken. Use **idevicepair** to manage device pairing.
+A mounted developer disk image is required on the device, otherwise the screenshotr service is not available. The device must be paired and trusted before screenshots can be taken. Use **idevicepair** to manage device pairing.
 
 # CAVEATS
 
-Part of the **libimobiledevice** suite. The device must be paired and trusted. The output format (PNG vs TIFF) depends on the iOS version. DRM-protected content may appear as black in screenshots.
+Part of the **libimobiledevice** suite. The device must be paired and trusted. Requires a mounted developer disk image. DRM-protected content may appear as black in screenshots.
 
 # SEE ALSO
 

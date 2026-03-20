@@ -28,6 +28,14 @@ runtime control interface for dunst
 
 ```dunstctl count```
 
+**Export history** as JSON
+
+```dunstctl history-export```
+
+**Clear notification history**
+
+```dunstctl history-clear```
+
 **Reload configuration**
 
 ```dunstctl reload```
@@ -53,17 +61,35 @@ runtime control interface for dunst
 **is-paused**
 > Check pause state.
 
-**count**
-> Show notification count.
+**count** [_displayed_|_history_|_waiting_]
+> Show notification count (all categories if no argument given).
+
+**history-export**
+> Export notification history as JSON.
+
+**history-clear**
+> Delete all notifications from history.
 
 **reload**
 > Reload configuration.
+
+**rule** _NAME_ _enable_|_disable_|_toggle_
+> Enable, disable, or toggle a named rule.
+
+**action** [_N_]
+> Perform default action on notification at position N (0 = top).
+
+**get-pause-level**
+> Get current pause level (0 = not paused, 100 = fully paused).
+
+**set-pause-level** _LEVEL_
+> Set pause level (0-100), combines with notification override_pause_level.
 
 **debug**
 > Print debug information.
 
 **context**
-> Open context menu.
+> Open context menu with actions/URLs for open notifications.
 
 # DESCRIPTION
 
@@ -71,9 +97,9 @@ runtime control interface for dunst
 
 The tool allows closing notifications programmatically, managing notification history, toggling pause state (do-not-disturb mode), and reloading dunst's configuration. It's commonly used in window manager keybindings and scripts for notification management.
 
-Key features include history navigation (pop the most recent notification from history), pause state management for temporarily suspressing notifications, and live configuration reloading. The close commands can target specific notifications or clear all visible ones at once.
+Key features include history navigation (pop the most recent notification from history), pause state management for temporarily suppressing notifications, and live configuration reloading. The close commands can target specific notifications or clear all visible ones at once. Pause levels (0-100) can be combined with per-notification override_pause_level for selective display during do-not-disturb mode.
 
 # SEE ALSO
 
-[dunst](/man/dunst)(1), [dunstify](/man/dunstify)(1)
+[dunst](/man/dunst)(1), [dunstify](/man/dunstify)(1), [notify-send](/man/notify-send)(1)
 

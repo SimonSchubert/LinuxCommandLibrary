@@ -16,9 +16,13 @@ container-based continuous integration server
 
 ```concourse worker --work-dir [/var/lib/concourse/worker] --tsa-host [127.0.0.1:2222]```
 
-**Generate encryption keys** for secure communication
+**Generate RSA session signing key**
 
 ```concourse generate-key -t rsa -f [/path/to/session_signing_key]```
+
+**Generate SSH key** for TSA host or worker
+
+```concourse generate-key -t ssh -f [/path/to/tsa_host_key]```
 
 **Run database migrations**
 
@@ -84,6 +88,21 @@ container-based continuous integration server
 
 **--tsa-host** _HOST_:_PORT_
 > TSA host for worker registration (default: 127.0.0.1:2222).
+
+**--session-signing-key** _PATH_
+> RSA key for signing and verifying user session tokens (web node).
+
+**--tsa-host-key** _PATH_
+> SSH private key for the TSA worker registration gateway (web node).
+
+**--tsa-authorized-keys** _PATH_
+> File containing authorized worker public keys (web node).
+
+**--tsa-public-key** _PATH_
+> TSA host public key for verification (worker node).
+
+**--tsa-worker-private-key** _PATH_
+> Worker private key for authenticating to TSA (worker node).
 
 **--runtime** _RUNTIME_
 > Container runtime to use (guardian or containerd).

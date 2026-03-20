@@ -8,6 +8,18 @@ restores iptables IPv4 rules from a file created by iptables-save
 
 ```sudo iptables-restore /etc/iptables.rules```
 
+**Restore** from file without flushing existing rules
+
+```sudo iptables-restore -n /etc/iptables.rules```
+
+**Test** rules without applying them
+
+```sudo iptables-restore -t /etc/iptables.rules```
+
+**Restore** from stdin using iptables-save
+
+```sudo iptables-save | sudo iptables-restore```
+
 # SYNOPSIS
 
 **iptables-restore** [_OPTIONS_] [_file_]
@@ -24,14 +36,23 @@ restores iptables IPv4 rules from a file created by iptables-save
 **-n, --noflush**
 > Don't flush existing rules before restoring
 
-**-t, --table** _table_
+**-T, --table** _name_
 > Only restore the specified table
+
+**-t, --test**
+> Test mode - parse rules but don't apply
+
+**-v, --verbose**
+> Print additional debug info during ruleset processing
 
 **-w, --wait** [_seconds_]
 > Wait for xtables lock
 
-**-T, --test**
-> Test mode - parse rules but don't apply
+**-V, --version**
+> Print the program version number
+
+**-M, --modprobe** _modprobe_
+> Specify the path to the modprobe program
 
 # CAVEATS
 

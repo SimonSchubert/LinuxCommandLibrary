@@ -24,6 +24,10 @@ compresses files using the Lempel-Ziv-Markov chain Algorithm
 
 ```lzma -9 [file]```
 
+**List** information about a compressed file
+
+```lzma -l [file.lzma]```
+
 **Test archive integrity**
 
 ```lzma -t [file.lzma]```
@@ -58,6 +62,18 @@ compresses files using the Lempel-Ziv-Markov chain Algorithm
 **-f**, **--force**
 > Force overwrite.
 
+**-v**, **--verbose**
+> Verbose mode; show compression ratio and other details.
+
+**-q**, **--quiet**
+> Suppress warnings; specify twice to suppress errors too.
+
+**-l**, **--list**
+> List information about compressed files.
+
+**-T**, **--threads** _NUM_
+> Set number of worker threads (0 for auto-detect based on CPU cores).
+
 # DESCRIPTION
 
 **lzma** compresses files using the Lempel-Ziv-Markov chain Algorithm. It provides high compression ratios at the cost of slower compression speed.
@@ -83,4 +99,4 @@ LZMA was developed by **Igor Pavlov** for the 7-Zip archiver in **1998**. The al
 
 # SEE ALSO
 
-[xz](/man/xz)(1), [gzip](/man/gzip)(1), [bzip2](/man/bzip2)(1), [7z](/man/7z)(1)
+[xz](/man/xz)(1), [unlzma](/man/unlzma)(1), [gzip](/man/gzip)(1), [bzip2](/man/bzip2)(1), [zstd](/man/zstd)(1), [7z](/man/7z)(1)

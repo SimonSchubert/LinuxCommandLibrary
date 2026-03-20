@@ -28,6 +28,10 @@ Query domain and IP registration data
 
 ```rdap -v [example.com]```
 
+**Use specific RDAP server**
+
+```rdap -s [https://rdap.verisign.com/com/v1] [example.com]```
+
 # SYNOPSIS
 
 **rdap** [_options_] _query_
@@ -54,6 +58,12 @@ Query domain and IP registration data
 
 **-k**, **--insecure**
 > Disable SSL certificate verification
+
+**--text**
+> Output plain text tree format (default)
+
+**-t**, **--type**=_TYPE_
+> RDAP query type (normally auto-detected): domain, ip, autnum, entity, nameserver, url
 
 # DESCRIPTION
 
@@ -82,6 +92,8 @@ rdap 2001:4860:4860::8888
 ```
 
 # QUERY TYPES
+
+Query type is normally auto-detected, but can be specified with **--type**:
 
 ```
 domain     - Domain registration

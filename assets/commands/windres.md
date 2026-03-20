@@ -63,10 +63,19 @@ GNU Windows resource compiler
 > Undefine preprocessor symbol.
 
 **--preprocessor** _prog_
-> Preprocessor program to use. Default is gcc.
+> Preprocessor program to use. Default is `gcc -E -xc-header -DRC_INVOKED`.
 
 **--preprocessor-arg** _arg_
 > Additional argument for preprocessor.
+
+**--no-use-temp-file**
+> Use pipes for communication with the preprocessor (default).
+
+**--use-temp-file**
+> Use a temporary file for preprocessor communication instead of pipes.
+
+**@** _file_
+> Read command-line options from file.
 
 **-v**, **--verbose**
 > Enable verbose mode.

@@ -1,41 +1,47 @@
 # TAGLINE
 
-GitHub Copilot agent management
+GitHub Copilot CLI custom agent invocation
 
 # TLDR
 
-**List available agents**
+**Start interactive Copilot CLI session with a custom agent**
 
-```gh agent list```
+```gh copilot --agent [agent_name]```
 
-**Run an agent**
+**Run a custom agent with a prompt non-interactively**
 
-```gh agent run [agent_name]```
+```gh copilot --agent [security-auditor] --prompt "[Check /src/app/validator.go]"```
 
-**Get agent info**
+**Invoke an agent interactively using the slash command**
 
-```gh agent info [agent_name]```
+```/agent [agent_name]```
+
+**Delegate a task to Copilot coding agent**
+
+```/delegate [task description]```
 
 # SYNOPSIS
 
-**gh** **agent** _command_ [_options_]
+**gh** **copilot** **--agent** _name_ [**--prompt** _text_] [_options_]
 
-# SUBCOMMANDS
+# PARAMETERS
 
-**list**
-> List available agents.
+**--agent** _name_
+> Specify the custom agent to use (matches the .agent.md filename).
 
-**run**
-> Execute an agent.
+**--prompt** _text_
+> Provide a prompt for programmatic (non-interactive) usage.
 
-**info**
-> Show agent details.
+**--allow-tool** _tool_
+> Specify tools the agent can use (shell, write, url, MCP server tools).
 
 # DESCRIPTION
 
-**gh agent** manages GitHub Copilot agents (extensions). Agents extend Copilot's capabilities with specialized knowledge and tools for specific domains or tasks.
+**gh agent** functionality is provided through GitHub Copilot CLI's custom agent system, accessible via `gh copilot --agent` or the `/agent` slash command in an interactive session. Agents are defined by Markdown files with an `.agent.md` extension that specify the agent's name, description, prompt instructions, and available tools.
 
-The command provides access to first-party and third-party agents that enhance GitHub Copilot's functionality. Agents can offer expertise in specific programming languages, frameworks, or development workflows, making Copilot more versatile for various development contexts.
+Custom agents can be defined at user level (~/.copilot/agents/), repository level (.github/agents/), or organization level ({org}/.github/agents/). In case of naming conflicts, user-level agents override repository-level, which override organization-level.
+
+The `/delegate` slash command commits unstaged changes to a new branch and delegates the task to the Copilot coding agent, which opens a draft pull request and works in the background.
 
 # SEE ALSO
 

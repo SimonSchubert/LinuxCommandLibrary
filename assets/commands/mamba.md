@@ -1,6 +1,6 @@
 # TAGLINE
 
-fast conda replacement
+Fast, drop-in replacement for the conda package manager
 
 # TLDR
 
@@ -20,6 +20,10 @@ fast conda replacement
 
 ```mamba remove [package]```
 
+**Search for a package**
+
+```mamba search [numpy]```
+
 **List environments**
 
 ```mamba env list```
@@ -27,6 +31,10 @@ fast conda replacement
 **Activate environment**
 
 ```mamba activate [myenv]```
+
+**Clean package caches**
+
+```mamba clean --all```
 
 # SYNOPSIS
 
@@ -49,24 +57,48 @@ _COMMAND_
 **remove**
 > Remove packages.
 
+**search**
+> Search for packages in configured channels.
+
+**list**
+> List packages in active environment.
+
+**clean**
+> Remove cached package files and unused caches.
+
 **env**
 > Environment management.
 
+**repoquery**
+> Query package dependencies and reverse dependencies.
+
 **-n** _NAME_
 > Environment name.
+
+**-c** _CHANNEL_
+> Additional channel to search for packages.
+
+**-y**, **--yes**
+> Do not ask for confirmation.
+
+**--dry-run**
+> Only display what would have been done.
+
+**--no-banner**
+> Suppress the mamba banner.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**mamba** is a fast conda replacement. It provides faster package resolution and downloading.
+**mamba** is a fast, drop-in replacement for **conda**. It provides faster package resolution using the **libsolv** dependency solver (written in C++) and parallel downloading of packages.
 
-The tool is drop-in compatible with conda. Uses parallel downloading and C++ solver.
+The tool is fully compatible with conda commands, packages, and environments. It can be used wherever conda is used and supports the same command-line interface.
 
 # CAVEATS
 
-Conda-compatible. May have edge case differences. Requires conda-forge.
+Conda-compatible but may have minor edge case differences in dependency resolution. Requires an existing conda installation (mamba runs as a conda plugin). For a standalone alternative, see **micromamba**.
 
 # HISTORY
 

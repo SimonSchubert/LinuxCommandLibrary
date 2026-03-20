@@ -41,7 +41,7 @@ By default, output files are saved with the same name but with an **.avif** exte
 # PARAMETERS
 
 **--quality** _1-100_
-> Output quality level. Higher values mean better quality and larger files. Default varies by input
+> Output quality level. Higher values mean better quality and larger files. Default: 80
 
 **--speed** _1-10_
 > Encoding speed. 1 is slowest with best compression, 10 is fastest but lower quality. Default: 4
@@ -54,6 +54,15 @@ By default, output files are saved with the same name but with an **.avif** exte
 
 **--quiet**
 > Suppress output during conversion
+
+**--dirty-alpha**
+> Preserve RGB values of fully transparent pixels (increases file size)
+
+**--color=rgb**
+> Encode in RGB color space instead of YCbCr. Avoids color shifts but produces larger files
+
+**--depth=**_8_
+> Encode using 8-bit color depth instead of default 10-bit for wider compatibility
 
 # CAVEATS
 

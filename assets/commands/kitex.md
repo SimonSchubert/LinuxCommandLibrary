@@ -20,9 +20,13 @@ generates Go code from Thrift or Protobuf IDL files
 
 ```kitex -module [module] [idl.proto]```
 
-**Generate with templates**
+**Specify IDL include path**
 
-```kitex -module [module] -template [dir] [idl.thrift]```
+```kitex -module [module] -I [path/to/includes] [idl.thrift]```
+
+**Reuse existing kitex_gen directory**
+
+```kitex -module [module] -service [svc] -use [import/path/to/kitex_gen] [idl.thrift]```
 
 # SYNOPSIS
 
@@ -39,14 +43,29 @@ _IDL_FILE_
 **-service** _NAME_
 > Service name.
 
-**-client**
-> Generate client code only.
+**-I** _PATH_
+> Add search path for IDL includes. Can be specified multiple times.
 
-**-template** _DIR_
-> Custom template directory.
+**-use** _PATH_
+> Skip generating kitex_gen and use the specified import path instead.
 
-**--help**
-> Display help information.
+**-v**, **-verbose**
+> Output more logs during generation.
+
+**-type** _TYPE_
+> Specify IDL type when it cannot be detected from the file extension.
+
+**-combine-service**
+> Combine all services in the IDL into a single service (Thrift only).
+
+**-gen-path** _DIR_
+> Specify output directory for generated code (default: kitex_gen).
+
+**-thrift** _VALUE_
+> Pass an argument to the thriftgo compiler.
+
+**-protobuf** _VALUE_
+> Pass an argument to the protoc compiler.
 
 # DESCRIPTION
 

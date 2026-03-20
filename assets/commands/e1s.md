@@ -27,31 +27,43 @@ AWS ECS terminal dashboard (like k9s for ECS)
 # PARAMETERS
 
 **--profile** _NAME_
-> AWS profile to use
+> AWS profile to use.
 
 **--region** _REGION_
-> AWS region (default: from config)
+> AWS region (default: from config).
 
 **--cluster** _NAME_
-> ECS cluster to view
+> Default ECS cluster to view.
 
 **--service** _NAME_
-> ECS service to view
+> Default ECS service to view (requires --cluster).
 
-**--readonly**
-> Start in read-only mode
+**--read-only**
+> Start in read-only mode.
 
-**-c, --config** _FILE_
-> Configuration file path
+**-c**, **--config-file** _FILE_
+> Config file path (default: ~/.config/e1s/config.yml).
 
-**--debug**
-> Enable debug logging
+**-r**, **--refresh** _SECONDS_
+> Auto-refresh interval in seconds (default: 30, -1 to disable).
 
-**-v, --version**
-> Display version and exit
+**-s**, **--shell** _PATH_
+> Shell for interactive exec (default: /bin/sh).
 
-**-h, --help**
-> Display help and exit
+**-d**, **--debug**
+> Enable debug logging.
+
+**-l**, **--log-file** _FILE_
+> Custom log file path.
+
+**-j**, **--json**
+> Output logs in JSON format.
+
+**-v**, **--version**
+> Display version and exit.
+
+**-h**, **--help**
+> Display help and exit.
 
 # DESCRIPTION
 
@@ -61,38 +73,26 @@ The tool allows users to view resource status, view logs, execute commands in co
 
 # KEYBINDINGS
 
-**:**
-> Command mode
-
-**/**
-> Filter resources
-
-**↑/↓**
-> Navigate resources
+**h/j/k/l**
+> Vim-style navigation (left/down/up/right)
 
 **Enter**
 > View resource details
 
-**l**
-> View logs
+**/**
+> Filter resources
 
-**s**
-> Shell into container
-
-**d**
-> Describe resource
-
-**r**
-> Restart service/task
+**ctrl-p**
+> Switch AWS profile
 
 **ctrl-d**
-> Delete resource
+> Exit interactive exec session
 
 **q**
 > Quit
 
 **?**
-> Show help
+> Show all keybindings
 
 # CAVEATS
 
@@ -104,4 +104,4 @@ Requires AWS credentials with appropriate ECS permissions. Some operations requi
 
 # SEE ALSO
 
-[aws](/man/aws)(1), [ecs-cli](/man/ecs-cli)(1), [k9s](/man/k9s)(1), [docker](/man/docker)(1)
+[aws](/man/aws)(1), [k9s](/man/k9s)(1), [docker](/man/docker)(1)

@@ -28,6 +28,14 @@ Show files with **attributes**
 
 ```unsquashfs -ll [filesystem.squashfs]```
 
+**Extract** specific files or directories
+
+```unsquashfs [filesystem.squashfs] [path/to/file] [path/to/dir]```
+
+Display filesystem **superblock** information
+
+```unsquashfs -s [filesystem.squashfs]```
+
 # SYNOPSIS
 
 **unsquashfs** [_OPTIONS_] _FILESYSTEM_
@@ -48,6 +56,21 @@ Show files with **attributes**
 
 **-ll, -lls**
 > List files with attributes without extracting
+
+**-f, -force**
+> Overwrite files that already exist
+
+**-s, -stat**
+> Display filesystem superblock information
+
+**-n, -no-progress**
+> Don't display the progress bar
+
+**-p** _NUMBER_, **-processors** _NUMBER_
+> Use NUMBER processors for decompression
+
+**-e** _FILE_, **-ef** _FILE_
+> List of directories or files to extract, one per line
 
 # DESCRIPTION
 

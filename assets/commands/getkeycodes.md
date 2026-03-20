@@ -14,7 +14,11 @@ Print the kernel scancode-to-keycode mapping table
 
 # PARAMETERS
 
-None.
+**-V**, **--version**
+> Print version number.
+
+**-h**, **--help**
+> Print usage message.
 
 # DESCRIPTION
 

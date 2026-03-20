@@ -24,6 +24,10 @@ Manage Amazon Managed Streaming for Apache Kafka clusters.
 
 ```aws kafka update-broker-count --cluster-arn [arn:aws:kafka:region:account:cluster/name/id] --current-version [K1234] --target-number-of-broker-nodes 6```
 
+**List** all MSK configurations
+
+```aws kafka list-configurations```
+
 **List compatible Kafka versions** for upgrade
 
 ```aws kafka get-compatible-kafka-versions --cluster-arn [arn:aws:kafka:region:account:cluster/name/id]```
@@ -73,6 +77,15 @@ MSK supports both provisioned and serverless deployment modes, SASL/SCRAM and IA
 
 **reboot-broker**
 > Restart a specific broker
+
+**update-cluster-configuration**
+> Update the cluster's broker configuration
+
+**list-cluster-operations**
+> List cluster operations
+
+**list-configurations**
+> List all MSK configurations
 
 # CAVEATS
 

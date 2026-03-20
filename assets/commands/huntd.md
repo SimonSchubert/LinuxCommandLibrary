@@ -12,13 +12,13 @@ server daemon for the hunt game
 
 ```huntd -p [9999]```
 
-**Set player limit**
-
-```huntd -n [8]```
-
-**Foreground mode**
+**Run in server mode** (run forever)
 
 ```huntd -s```
+
+**Fork into background** (log errors via syslog)
+
+```huntd -b```
 
 # SYNOPSIS
 
@@ -26,20 +26,17 @@ server daemon for the hunt game
 
 # PARAMETERS
 
-**-p** _PORT_
-> Listen port.
-
-**-n** _NUM_
-> Maximum players.
+**-p** _port_
+> Change the UDP port number used to rendezvous with the player process.
 
 **-s**
-> Don't daemonize.
+> Run in server mode (run forever). Consumes a process table entry when no one is playing.
 
-**-a** _ADDR_
-> Listen address.
+**-b**
+> Fork into the background. Errors are logged via syslog instead of stderr.
 
-**--help**
-> Display help information.
+**-a** _addr_
+> Listen only on a specific interface address (given as an IP address).
 
 # DESCRIPTION
 
@@ -49,7 +46,7 @@ The server creates the maze and handles player connections, shots, and scoring. 
 
 # CAVEATS
 
-Part of BSD games. Runs as daemon by default. Manages game state.
+Part of BSD games. Can be run standalone with -s or under inetd. Without -s, the daemon exits when all players disconnect.
 
 # HISTORY
 

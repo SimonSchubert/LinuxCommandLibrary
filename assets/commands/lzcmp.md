@@ -6,7 +6,7 @@ compare compressed files byte by byte
 
 **Compare two compressed files**
 
-```lzcmp [file1.lz] [file2.lz]```
+```lzcmp [file1.xz] [file2.xz]```
 
 **Compare with verbose output**
 
@@ -18,7 +18,7 @@ compare compressed files byte by byte
 
 **Compare compressed file with its uncompressed original**
 
-```lzcmp [file.lz]```
+```lzcmp [file.xz]```
 
 # SYNOPSIS
 
@@ -36,11 +36,11 @@ All options are passed directly to **cmp**(1).
 
 # DESCRIPTION
 
-**lzcmp** invokes cmp(1) on compressed files. It supports files compressed with xz, lzma, gzip, bzip2, and lzip. If only one file is specified, it is compared against a file with the compression suffix stripped. If two files are specified, both are decompressed as needed and fed to cmp. The exit status from cmp is preserved: 0 if identical, 1 if different, 2 on error.
+**lzcmp** invokes cmp(1) on compressed files. It supports files compressed with xz, lzma, gzip, bzip2, lzop, zstd, and lz4. If only one file is specified, it is compared against a file with the compression suffix stripped. If two files are specified, both are decompressed as needed and fed to cmp. The exit status from cmp is preserved: 0 if identical, 1 if different, 2 on error.
 
-The name lzcmp is provided for backward compatibility with LZMA Utils.
+The name lzcmp is provided for backward compatibility with LZMA Utils. It is deprecated in favor of **xzcmp** and will be removed in a future version of XZ Utils.
 
 # SEE ALSO
 
-[cmp](/man/cmp)(1), [lzdiff](/man/lzdiff)(1), [xzcmp](/man/xzcmp)(1), [zcmp](/man/zcmp)(1), [lzip](/man/lzip)(1), [xz](/man/xz)(1)
+[cmp](/man/cmp)(1), [lzdiff](/man/lzdiff)(1), [xzcmp](/man/xzcmp)(1), [xzdiff](/man/xzdiff)(1), [zcmp](/man/zcmp)(1), [xz](/man/xz)(1)
 

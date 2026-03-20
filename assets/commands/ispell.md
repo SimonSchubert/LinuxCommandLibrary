@@ -24,9 +24,9 @@ interactive spell checker
 
 ```ispell -t [document.tex]```
 
-**Expand affix flags**
+**Expand affix flags** from stdin
 
-```ispell -e [word]```
+```echo "[BOTH/R]" | ispell -e```
 
 # SYNOPSIS
 
@@ -70,8 +70,17 @@ interactive spell checker
 **-N**
 > Suppress the mini-menu.
 
+**-c**
+> Suggest corrections for words read from stdin.
+
+**-e**[_1-5_]
+> Expand affix flags from stdin. Optional level controls output detail.
+
 **-S**
 > Sort the list of guesses by probable correctness.
+
+**-W** _N_
+> Specify length of words to consider always legal (default 3).
 
 **-p** _FILE_
 > Personal dictionary file.

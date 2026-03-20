@@ -8,13 +8,17 @@ Attach to a Proxmox VM serial console
 
 ```qm terminal 100```
 
+**Attach** to a specific serial interface
+
+```qm terminal 100 -iface serial1```
+
 **Detach** from the terminal
 
 ```Ctrl+o```
 
 # SYNOPSIS
 
-**qm terminal** _vmid_
+**qm terminal** _vmid_ [**-iface** _serial0..3_]
 
 # DESCRIPTION
 
@@ -22,9 +26,14 @@ Attach to a Proxmox VM serial console
 
 Use Ctrl+o to detach from the terminal session without affecting the VM.
 
+# PARAMETERS
+
+**-iface** _serial0..3_
+> Select the serial device to connect to (serial0, serial1, serial2, or serial3). Defaults to the first available serial console.
+
 # CAVEATS
 
-Requires the VM to have a serial console configured. The guest OS must have serial console output enabled for useful interaction.
+Requires the VM to have a serial console configured (serial device type "socket") and the VM display set to "Serial Terminal". The guest OS must have serial console output enabled for useful interaction.
 
 # HISTORY
 

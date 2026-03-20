@@ -31,22 +31,40 @@ computer algebra system for symbolic mathematics
 # PARAMETERS
 
 **-b**, **--batch** _file_
-> Execute batch file.
+> Process maxima file in batch mode.
 
-**--batch-string** _expr_
-> Evaluate expression.
+**--batch-string** _string_
+> Process maxima command(s) in batch mode.
+
+**--batch-lisp** _file_
+> Process Lisp file in batch mode.
 
 **-q**, **--quiet**
-> Suppress banner.
+> Suppress Maxima start-up message.
+
+**--very-quiet**
+> Suppress expression labels and start-up message.
 
 **-l** _lisp_
-> Specify Lisp implementation.
+> Specify Lisp implementation (e.g., sbcl, clisp, gcl).
 
 **--init** _file_
 > Initialization file.
 
 **-p** _file_
 > Preload Lisp file.
+
+**-d**, **--directories**
+> Display Maxima internal directory information.
+
+**-s** _port_, **--server** _port_
+> Connect Maxima to server on specified port.
+
+**-v**, **--verbose**
+> Display Lisp invocation in maxima wrapper script.
+
+**--version**
+> Display the installed version.
 
 # DESCRIPTION
 
@@ -63,4 +81,4 @@ Maxima descends from **Macsyma** developed at **MIT** starting in **1968**. The 
 
 # SEE ALSO
 
-[sage](/man/sage)(1), [octave](/man/octave)(1), [sympy](/man/sympy)(1), [wxmaxima](/man/wxmaxima)(1)
+[octave](/man/octave)(1)

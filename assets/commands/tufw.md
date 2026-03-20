@@ -26,4 +26,4 @@ Must be run as root.
 
 # SEE ALSO
 
-[ufw](/man/ufw)(1), [iptables](/man/iptables)(1), [firewalld](/man/firewalld)(1)
+[ufw](/man/ufw)(8), [iptables](/man/iptables)(8), [firewalld](/man/firewalld)(1)

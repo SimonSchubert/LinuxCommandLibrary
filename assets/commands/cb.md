@@ -8,7 +8,7 @@ C source code beautifier
 
 ```cb < [path/to/source.c] > [path/to/output.c]```
 
-**Format using standard C style**
+**Format using Kernighan & Ritchie style**
 
 ```cb -s < [path/to/source.c]```
 
@@ -20,33 +20,33 @@ C source code beautifier
 
 ```cb -j < [path/to/source.c]```
 
-**Use Kernighan & Ritchie style**
+**Display version information**
 
-```cb -f k&r < [path/to/source.c]```
+```cb -V```
 
 # SYNOPSIS
 
-**cb** [**-s**] [**-j**] [**-l** _length_] [**-f** _type_]
+**cb** [**-s**] [**-j**] [**-l** _length_] [**-V**] [_file_ ...]
 
 # DESCRIPTION
 
-**cb** (C Beautifier) is a classic Unix utility that reformats C source code for improved readability. It reads from standard input and writes beautified code to standard output, making it suitable for use in pipelines.
+**cb** (C Beautifier) is a classic Unix utility that reformats C source code for improved readability. It reads from its arguments or standard input and writes beautified code to standard output, making it suitable for use in pipelines.
 
-The tool performs lexical formatting without full syntactic analysis, adjusting indentation, spacing, and line breaks according to specified style conventions.
+The tool performs lexical formatting without full syntactic analysis, adjusting indentation, spacing, and line breaks to display the structure of the code.
 
 # PARAMETERS
 
 **-s**
-> Use standard C style (Bell Laboratories conventions)
-
-**-l** _length_
-> Set maximum line length. Lines exceeding this are broken (default: 79)
+> Write code in Kernighan & Ritchie style from The C Programming Language
 
 **-j**
-> Join multiple case labels onto a single line
+> Put split lines back together
 
-**-f** _type_
-> Specify formatting style: all, k&r (Kernighan & Ritchie), indent, sysv
+**-l** _length_
+> Split lines that are longer than _length_
+
+**-V**
+> Print version information to standard error
 
 # CAVEATS
 
@@ -60,4 +60,4 @@ The **cb** command originated in early Unix systems at Bell Labs as a simple too
 
 # SEE ALSO
 
-[indent](/man/indent)(1), [clang-format](/man/clang-format)(1)
+[indent](/man/indent)(1), [clang-format](/man/clang-format)(1), [astyle](/man/astyle)(1)

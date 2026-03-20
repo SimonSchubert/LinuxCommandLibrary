@@ -24,6 +24,10 @@ command-line interface for InfluxDB time-series database
 
 ```influx -import -path [data.txt]```
 
+**Execute query** with JSON output
+
+```influx -database [mydb] -execute "[SELECT * FROM measurement]" -format json```
+
 **Authenticate**
 
 ```influx -username [user] -password [pass]```
@@ -59,7 +63,16 @@ command-line interface for InfluxDB time-series database
 > Authentication password.
 
 **-precision** _UNIT_
-> Timestamp precision (ns, u, ms, s).
+> Timestamp precision (ns, u, ms, s, m, h).
+
+**-ssl**
+> Use HTTPS for requests.
+
+**-format** _FORMAT_
+> Output format: column, csv, json (default: column).
+
+**-type** _TYPE_
+> Query type: influxql or flux.
 
 **--help**
 > Display help information.
@@ -68,7 +81,7 @@ command-line interface for InfluxDB time-series database
 
 **influx** is the command-line interface for InfluxDB time-series database. It provides an interactive shell for querying and managing data.
 
-The tool supports InfluxQL for querying time-series data. It can import, export, and manage databases and measurements.
+The v1 CLI uses direct connection flags (-host, -port, -username) and supports InfluxQL. The v2 CLI is a separate tool that uses token-based authentication and configuration profiles, supporting both InfluxQL and Flux query languages. The options documented here apply to the v1 CLI.
 
 # CAVEATS
 
@@ -80,4 +93,4 @@ influx is part of **InfluxDB**, created by **InfluxData** as an open-source time
 
 # SEE ALSO
 
-[influxd](/man/influxd)(1), [telegraf](/man/telegraf)(1), [grafana-cli](/man/grafana-cli)(1)
+[grafana-cli](/man/grafana-cli)(1), [mysql](/man/mysql)(1), [psql](/man/psql)(1)

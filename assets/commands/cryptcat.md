@@ -62,12 +62,9 @@ Connect with **timeout**
 **-u**
 > UDP mode instead of TCP
 
-**-e COMMAND**
-> Execute command after connect (use with caution)
-
 # CAVEATS
 
-Both ends must use the same password for encryption. This tool is intended for authorized security testing and legitimate encrypted communication. Using -e to execute commands creates significant security risks.
+Both ends must use the same password for encryption. If no password is specified with **-k**, cryptcat uses the hardcoded default password "metallica", making the connection effectively unencrypted. This tool is intended for authorized security testing and legitimate encrypted communication.
 
 # HISTORY
 

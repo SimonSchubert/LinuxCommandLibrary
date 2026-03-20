@@ -87,10 +87,16 @@ Display as **tree**
 **-P**
 > Show devices by bridge path
 
+**-A** _METHOD_
+> Use specified PCI access method (see -A help for list)
+
+**-M**
+> Bus mapping mode; thorough scan including misconfigured bridges (root only)
+
 **-q**
 > Query central database for unknown devices
 
-**-i FILE**
+**-i** _FILE_
 > Use alternate PCI ID file
 
 # CAVEATS
@@ -103,4 +109,4 @@ Some information requires root privileges. The **-xxx** option shows full config
 
 # SEE ALSO
 
-[setpci](/man/setpci)(8), [lsusb](/man/lsusb)(8), [update-pciids](/man/update-pciids)(8)
+[lsusb](/man/lsusb)(8)

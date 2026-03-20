@@ -20,24 +20,28 @@ Open-source STM32 programming toolset
 
 ```st-info --probe```
 
-**Flash with reset after programming**
+**Flash with reset before and after programming**
 
 ```st-flash --reset write [firmware.bin] 0x08000000```
 
-**Read option bytes**
+**Reset the target MCU**
 
-```st-flash read [option_bytes.bin] 0x1FFF7800 4```
+```st-flash reset```
+
+**Flash Intel HEX file**
+
+```st-flash --format ihex write [firmware.hex]```
 
 # SYNOPSIS
 
-**st-flash** [_options_] {read|write|erase} [_file_] [_address_] [_size_]
+**st-flash** [_options_] {read|write|erase|reset} [_file_] [_address_] [_size_]
 
 **st-info** [_options_]
 
 # PARAMETERS
 
 **--reset**
-> Reset the MCU after flashing.
+> Trigger a reset both before and after flashing.
 
 **--connect-under-reset**
 > Connect to target while held in reset.
@@ -56,6 +60,9 @@ Open-source STM32 programming toolset
 
 **--freq** _khz_
 > Set SWD frequency in kHz.
+
+**--opt**
+> Enable ignore ending empty bytes optimization.
 
 **--debug**
 > Enable debug output.
@@ -102,4 +109,4 @@ The **stlink** project was created as an open source alternative to STMicroelect
 
 # SEE ALSO
 
-[openocd](/man/openocd)(1), [avrdude](/man/avrdude)(1)
+[st-flash](/man/st-flash)(1), [st-info](/man/st-info)(1), [openocd](/man/openocd)(1), [avrdude](/man/avrdude)(1)

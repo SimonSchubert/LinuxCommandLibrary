@@ -18,11 +18,11 @@ optimized Whisper speech recognition engine
 
 **Output as SRT subtitles**
 
-```faster-whisper [audio.mp3] --output_format [srt]```
+```faster-whisper [audio.mp3] --output_format srt```
 
 **Translate to English**
 
-```faster-whisper [audio.mp3] --task [translate]```
+```faster-whisper [audio.mp3] --task translate```
 
 **Save output to directory**
 
@@ -30,7 +30,7 @@ optimized Whisper speech recognition engine
 
 **Transcribe with word timestamps**
 
-```faster-whisper [audio.mp3] --word_timestamps [true]```
+```faster-whisper [audio.mp3] --word_timestamps true```
 
 # SYNOPSIS
 
@@ -66,7 +66,10 @@ optimized Whisper speech recognition engine
 > Beam search size (default: 5).
 
 **--vad_filter** _BOOL_
-> Enable voice activity detection filter.
+> Enable voice activity detection filter (uses Silero VAD).
+
+**--initial_prompt** _TEXT_
+> Optional text to provide as initial prompt for the decoder.
 
 **--threads** _N_
 > Number of CPU threads.

@@ -16,9 +16,17 @@ Generate shell completion scripts for Pulumi
 
 ```pulumi gen-completion fish```
 
+**Generate PowerShell completions**
+
+```pulumi gen-completion powershell```
+
 **Install bash completions**
 
 ```pulumi gen-completion bash > /etc/bash_completion.d/pulumi```
+
+**Install zsh completions** to fpath directory
+
+```pulumi gen-completion zsh > "${fpath[1]}/_pulumi"```
 
 # SYNOPSIS
 

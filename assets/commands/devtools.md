@@ -65,6 +65,9 @@ Arch Linux package building scripts
 **makechrootpkg** [_options_]
 > Build package in chroot.
 
+**makerepropkg** [_options_]
+> Rebuild a package to check reproducibility.
+
 # PACKAGE TOOLS
 
 **signpkg** _pkg_
@@ -73,15 +76,24 @@ Arch Linux package building scripts
 **checkpkg**
 > Compare package with repository version.
 
+**diffpkg** _pkg_
+> Compare package files using different modes.
+
 **find-libdeps** _pkg_
 > Find shared library dependencies.
+
+**find-libprovides** _pkg_
+> Find sonames provided by a package.
+
+**lddd**
+> Find broken library links on your system.
 
 **sogrep** _repo_ _lib_
 > Search for packages using a library.
 
 # DESCRIPTION
 
-**devtools** is a collection of scripts used by Arch Linux developers and Trusted Users to build packages in clean chroot environments. This ensures packages are built with correct dependencies and don't accidentally include developer system configurations.
+**devtools** is a collection of tools used by Arch Linux developers and Trusted Users to build packages in clean chroot environments. It comes with a unified command-line frontend called **pkgctl** that aids to conveniently interact with all the different tools this collection provides.
 
 The build scripts (extra-x86_64-build, etc.) create isolated chroots matching official repository states, build packages, and verify the results. This guarantees packages work on fresh Arch installations.
 

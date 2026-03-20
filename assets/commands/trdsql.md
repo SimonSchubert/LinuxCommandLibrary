@@ -1,6 +1,6 @@
 # TAGLINE
 
-SQL queries on structured data files
+Execute SQL queries on CSV, JSON, LTSV, YAML, and TBLN files
 
 # TLDR
 
@@ -28,6 +28,14 @@ SQL queries on structured data files
 
 ```trdsql -iltsv "SELECT * FROM [file.ltsv]"```
 
+**Output as Markdown table**
+
+```trdsql -omd "SELECT * FROM [file.csv]"```
+
+**Query YAML**
+
+```trdsql -iyaml "SELECT * FROM [file.yaml]"```
+
 # SYNOPSIS
 
 **trdsql** [_-i format_] [_-o format_] [_options_] _query_
@@ -35,23 +43,35 @@ SQL queries on structured data files
 # PARAMETERS
 
 **-i** _FORMAT_
-> Input format (csv, json, ltsv).
+> Input format (csv, json, ltsv, yaml, tbln).
 
 **-o** _FORMAT_
-> Output format.
+> Output format (csv, json, jsonl, ltsv, raw, md, at, vf, tbln).
 
 **-ih**
-> Input has header.
+> Input has header row.
 
 **-oh**
-> Output header.
+> Output with header.
 
-**-d** _DELIM_
-> Delimiter.
+**-id** _DELIM_
+> Input delimiter character.
+
+**-od** _DELIM_
+> Output delimiter character.
+
+**-driver** _DRIVER_
+> Database driver (sqlite3, postgres, mysql).
+
+**-dsn** _DSN_
+> Database connection string.
+
+**-debug**
+> Show debug output.
 
 # DESCRIPTION
 
-**trdsql** executes SQL queries directly against structured data files such as CSV, JSON, and LTSV without importing them into a database first. File names are used as table names in SQL statements, making it straightforward to filter, aggregate, and transform data using familiar SQL syntax.
+**trdsql** executes SQL queries directly against structured data files such as CSV, JSON, LTSV, YAML, and TBLN without importing them into a database first. File names are used as table names in SQL statements, making it straightforward to filter, aggregate, and transform data using familiar SQL syntax.
 
 The tool supports joining data across multiple files, enabling relational queries between different data sources in a single command. Input and output formats can be specified independently, allowing conversion between formats as a side effect of querying.
 
@@ -59,7 +79,7 @@ Under the hood, trdsql uses SQLite as the default query engine but can also conn
 
 # CAVEATS
 
-Go-based tool. Large files in memory. SQL knowledge needed.
+Go-based tool. Large files are loaded into memory. SQL knowledge required. Default database engine is SQLite.
 
 # HISTORY
 

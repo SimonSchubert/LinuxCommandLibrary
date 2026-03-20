@@ -16,9 +16,9 @@ Remove LVM volume groups
 
 ```sudo vgremove -d -d [volume_group]```
 
-**Use** a specific config setting
+**Remove** a volume group matching a select criteria
 
-```sudo vgremove --config 'global/locking_type=1' [volume_group]```
+```sudo vgremove --select '[vg_name=~old_*]'```
 
 # SYNOPSIS
 
@@ -32,8 +32,8 @@ Remove LVM volume groups
 **-d, --debug**
 > Enable debug output (repeat for more detail, up to 6 times)
 
-**--config _string_**
-> Override configuration settings
+**-S, --select** _string_
+> Select objects for processing based on specified criteria
 
 **-t, --test**
 > Test mode, don't actually make changes

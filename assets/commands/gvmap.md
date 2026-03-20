@@ -8,17 +8,21 @@ creates geographical-style maps from graphs
 
 ```gvmap [input.gv] > map.gv```
 
-**Cluster similar nodes**
+**Include edges in the output**
 
-```gvmap -e [input.gv] > clustered.gv```
+```gvmap -e [input.gv] > map.gv```
 
-**Add color**
+**Specify a color scheme** (1: pastel, 2: blue-yellow, 3: white-red)
 
-```gvmap -c [input.gv] > colored.gv```
+```gvmap -c [2] [input.gv] > colored.gv```
 
-**Specify output**
+**Specify output file**
 
 ```gvmap -o [output.gv] [input.gv]```
+
+**Use top-level cluster subgraphs for clustering**
+
+```gvmap -D [input.gv] > map.gv```
 
 # SYNOPSIS
 
@@ -33,26 +37,53 @@ _FILES_
 > Output file.
 
 **-e**
-> Group similar nodes.
+> Include edges in the final output.
 
-**-c**
-> Add coloring.
+**-c** _K_
+> Use color scheme K (1: pastel, 2: blue-yellow, 3: white-red, etc.).
+
+**-C** _K_
+> Maximum number of clusters. Default 0 (no limit).
+
+**-D**
+> Use top-level cluster subgraphs to determine clustering.
+
+**-O**
+> Do NOT do color assignment optimization.
 
 **-a** _K_
-> Grouping strength.
+> Average number of artificial points added along bounding box of labels.
 
-**-?**
-> Display help information.
+**-m** _V_
+> Generate a margin of V points around the drawing.
+
+**-r** _K_
+> Number of random points used to define sea and lake boundaries. 0 for auto.
+
+**-s** _V_
+> Depth of sea and lake shores in points. 0 for auto.
+
+**-t** _N_
+> Make N attempts to improve cluster contiguity.
+
+**-v**
+> Verbose mode.
+
+**-z** _COLOR_
+> Set polygon line color. Default is black.
+
+**-h**
+> Print usage and exit.
 
 # DESCRIPTION
 
-**gvmap** creates geographical-style maps from graphs. It groups related nodes into regions and generates map-like visualizations.
+**gvmap** takes as input a graph in DOT format with node position information (produced by a Graphviz layout engine such as sfdp) and groups related nodes into clusters, drawing them as geographical-style map regions.
 
-The tool analyzes graph structure to cluster nodes into countries or regions. It adds visual styling to create appealing map layouts.
+The tool analyzes graph structure to cluster nodes into countries or regions, adds visual styling with color schemes, and can include edges in the output. It is typically used as part of a pipeline with **sfdp** and **gvmap.sh**.
 
 # CAVEATS
 
-Part of Graphviz package. Works best with clustered graphs. May require layout preprocessing.
+Part of Graphviz package. Input graphs must have node position information; run a layout engine like **sfdp** first. The **gvmap.sh** wrapper script handles the full pipeline automatically.
 
 # HISTORY
 

@@ -18,14 +18,17 @@ Disable extension for **specific version** and SAPI
 
 # PARAMETERS
 
-**-v _version_**
-> PHP version (e.g., 7.4, 8.0, 8.1)
+**-v** _version_
+> PHP version (e.g., 7.4, 8.0, 8.1). Use ALL for all versions.
 
-**-s _sapi_**
-> SAPI type (cli, fpm, apache2, cgi)
+**-s** _sapi_
+> SAPI type (cli, fpm, apache2, cgi). Use ALL for all SAPIs.
 
-**module**
-> Extension name to disable
+**-q**, **--quiet**
+> Suppress output messages.
+
+_module_
+> One or more extension names to disable.
 
 # DESCRIPTION
 

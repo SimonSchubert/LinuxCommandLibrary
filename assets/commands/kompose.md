@@ -16,9 +16,13 @@ converts Docker Compose files to Kubernetes resources
 
 ```kompose convert -c```
 
-**Output to directory**
+**Convert with specific** controller type
 
-```kompose convert -o [output/]```
+```kompose convert --controller [daemonSet]```
+
+**Output as JSON** to stdout
+
+```kompose convert --json --stdout```
 
 **Convert with replicas**
 
@@ -53,7 +57,22 @@ converts Docker Compose files to Kubernetes resources
 > Output directory.
 
 **--replicas** _N_
-> Set replica count.
+> Set replica count (default 1).
+
+**--controller** _TYPE_
+> Set output controller type (deployment, daemonSet, replicationController).
+
+**--volumes** _TYPE_
+> Volume generation type (persistentVolumeClaim, emptyDir, hostPath, configMap). Default persistentVolumeClaim.
+
+**--json**
+> Generate resource files in JSON format.
+
+**--stdout**
+> Print converted objects to stdout.
+
+**--provider** _PROVIDER_
+> Target provider (kubernetes, openshift). Default kubernetes.
 
 **--help**
 > Display help information.

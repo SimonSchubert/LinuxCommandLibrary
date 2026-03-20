@@ -1,6 +1,6 @@
 # TAGLINE
 
-loads the kernel keymap for the Linux console
+load keyboard translation tables for the console
 
 # TLDR
 
@@ -34,7 +34,7 @@ Create **binary** keymap
 
 # DESCRIPTION
 
-**loadkeys** loads the kernel keymap for the Linux console. It reads keymap files and loads them into the kernel, changing the keyboard layout for virtual consoles.
+**loadkeys** reads keymap files and loads the keyboard translation tables into the kernel, changing the keyboard layout for virtual consoles.
 
 # PARAMETERS
 
@@ -54,10 +54,13 @@ Create **binary** keymap
 > Parse keymap without loading
 
 **-q, --quiet**
-> Suppress output messages
+> Suppress all normal output
 
 **-u, --unicode**
 > Force Unicode mode
+
+**-a, --ascii**
+> Force conversion to ASCII
 
 **-s, --clearstrings**
 > Clear kernel string table
@@ -65,10 +68,16 @@ Create **binary** keymap
 **-c, --clearcompose**
 > Clear kernel accent table
 
+**-t, --tkeymap** _[shape]_
+> Output a text keymap (optional shape: 2, 4, 8, 16)
+
+**-V, --version**
+> Display version number and exit
+
 # CAVEATS
 
-Only affects Linux virtual consoles, not X11 or Wayland. Requires root privileges. Changes are temporary and reset on reboot.
+Only affects Linux virtual consoles, not X11 or Wayland. Changes apply to all virtual consoles simultaneously and persist until reboot. Anyone with read access to /dev/console can run loadkeys.
 
 # SEE ALSO
 
-[localectl](/man/localectl)(1), [setxkbmap](/man/setxkbmap)(1), [dumpkeys](/man/dumpkeys)(1)
+[dumpkeys](/man/dumpkeys)(1), [showkey](/man/showkey)(1), [setxkbmap](/man/setxkbmap)(1), [localectl](/man/localectl)(1)

@@ -18,7 +18,7 @@ Compute and report repository size metrics
 
 **Show only critical** statistics
 
-```git-sizer --threshold=[30]```
+```git-sizer --critical```
 
 # SYNOPSIS
 
@@ -38,8 +38,20 @@ Compute and report repository size metrics
 **--threshold** _n_
 > Minimum concern level to report (0=all, 1=default, 30=critical only)
 
+**--critical**
+> Only report critical statistics (equivalent to --threshold=30)
+
+**--names** _mode_
+> Display names of large objects (none, hash, or full)
+
 **--no-progress**
 > Suppress progress output
+
+**--show-refs**
+> List the references being processed
+
+**--version**
+> Display version information
 
 # DESCRIPTION
 

@@ -30,22 +30,37 @@ _FILES_
 > PostScript or PDF files to print.
 
 **-p** _PAPER_
-> Paper size (letter, a4, legal).
+> Paper size (letter, legal, a4, a5, a6, b5, etc.).
 
-**-r** _DPI_
-> Resolution.
+**-r** _XRESxYRES_
+> Resolution in pixels/inch (default 1200x600).
 
 **-c**
-> Color printing.
+> Print in color (default is monochrome).
 
 **-n** _COPIES_
-> Number of copies.
+> Number of copies (default 1).
 
 **-m** _MEDIA_
-> Media type.
+> Media type code (0=plain, 1=thick, 2=thin, 3=bond, 4=color, 5=card, 6=labels, 7=envelope).
 
-**--help**
-> Display help information.
+**-s** _SOURCE_
+> Input slot (1=auto, 2=manual, 3=multi, 4=tray1; default 255).
+
+**-d** _DUPLEX_
+> Duplex mode (1=off, 2=long edge, 3=short edge; default 1).
+
+**-t**
+> Draft mode. Every other pixel is white.
+
+**-z** _MODEL_
+> Printer model (0=CLP-300, 1=CLP-600, 2=CLP-310, 3=CLP-620).
+
+**-D** _LEVEL_
+> Set debug level (default 0).
+
+**-g** _GSOPTS_
+> Additional options to pass to Ghostscript.
 
 # DESCRIPTION
 

@@ -27,14 +27,17 @@ combine 32-bit and 64-bit EFI binaries
 **-o**, **--output** _FILE_
 > Output file.
 
+**-v**, **--verbose**
+> Print verbose messages.
+
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**grub-glue-efi** combines 32-bit and 64-bit EFI binaries into a single fat binary. This enables booting on systems with either architecture.
+**grub-glue-efi** processes ia32 and amd64 EFI images and glues them according to Apple format, creating an Apple fat EFI binary from two EFI binaries. This enables booting on systems with either 32-bit or 64-bit EFI firmware from a single file.
 
-The tool creates universal EFI binaries for GRUB bootloaders, which is useful for removable media that must boot on diverse hardware.
+The tool is primarily useful for creating universal EFI binaries for GRUB bootloaders on removable media that must boot on diverse hardware.
 
 # CAVEATS
 
@@ -46,4 +49,4 @@ grub-glue-efi was developed as part of **GNU GRUB** to support universal EFI boo
 
 # SEE ALSO
 
-[grub-install](/man/grub-install)(8), [grub](/man/grub)(8)
+[grub](/man/grub)(8), [grub-install](/man/grub-install)(8)

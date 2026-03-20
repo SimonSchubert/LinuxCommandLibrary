@@ -42,6 +42,14 @@ Start X Window System server
 **display**
 > Display number (:0, :1, etc.)
 
+# ENVIRONMENT
+
+**DISPLAY**
+> Set to the name of the display clients should connect to.
+
+**XINITRC**
+> Specifies an init file containing shell commands to start the initial windows. Overrides ~/.xinitrc.
+
 # CONFIGURATION FILES
 
 **~/.xinitrc**
@@ -74,4 +82,4 @@ xinit has been part of X11 since the early X Window System releases. The X Windo
 
 # SEE ALSO
 
-[startx](/man/startx)(1), [Xorg](/man/Xorg)(1), [xdm](/man/xdm)(1), [xterm](/man/xterm)(1)
+[startx](/man/startx)(1), [Xorg](/man/Xorg)(1), [xterm](/man/xterm)(1)

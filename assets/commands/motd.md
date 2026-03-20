@@ -32,7 +32,7 @@ displayed to users upon login
 
 **motd** (Message of the Day) is displayed to users upon login. It can be a static text file or dynamically generated from scripts.
 
-On systems with PAM, /etc/motd is displayed after successful authentication. Dynamic MOTD systems run scripts from /etc/update-motd.d/.
+The contents of /etc/motd are displayed by login(1) after a successful login but just before executing the login shell. On systems with PAM, the pam_motd module handles display and can show files from multiple locations. Dynamic MOTD systems run scripts from /etc/update-motd.d/.
 
 # STATIC MOTD
 
@@ -56,14 +56,19 @@ echo "Users: $(who | wc -l)"
 
 ```
 /etc/motd              - Static message
-/etc/update-motd.d/    - Dynamic scripts
-/run/motd.dynamic      - Generated output
+/etc/motd.d/           - Static message directory
+/run/motd              - Runtime generated message
+/run/motd.d/           - Runtime message directory
+/usr/lib/motd          - Distribution-provided message
+/usr/lib/motd.d/       - Distribution-provided message directory
+/etc/update-motd.d/    - Dynamic scripts (Ubuntu/Debian)
+/run/motd.dynamic      - Generated output (Ubuntu/Debian)
 ```
 
 # CAVEATS
 
-Dynamic MOTD requires update-motd package. Scripts must be executable. SSH may have separate banner. PAM configuration affects display.
+Dynamic MOTD requires update-motd package on Ubuntu/Debian. Scripts must be executable. SSH may have a separate banner configured via the Banner directive in sshd_config. PAM configuration affects display. Each message file is limited to 64KB.
 
 # SEE ALSO
 
-[login](/man/login)(1), [sshd](/man/sshd)(8), [pam](/man/pam)(8), [wall](/man/wall)(1)
+[login](/man/login)(1), [sshd](/man/sshd)(8), [pam_motd](/man/pam_motd)(8), [wall](/man/wall)(1)

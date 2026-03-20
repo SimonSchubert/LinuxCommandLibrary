@@ -24,6 +24,10 @@ Deploy and manage applications on CapRover
 
 ```caprover deploy -t [app.tar]```
 
+**Set up a new CapRover server**
+
+```caprover serversetup```
+
 **List logged-in machines**
 
 ```caprover list```
@@ -41,6 +45,9 @@ Deploy and manage applications on CapRover
 **caprover** is the CLI for CapRover, a modern automated app deployment and web server manager. Use it to perform initial server setup and deploy applications via captain-definition files, Dockerfiles, tar files, or Docker images.
 
 # COMMANDS
+
+**serversetup**, **setup**
+> Perform initial server setup (domain, SSL, password)
 
 **login**
 > Authenticate with a CapRover machine
@@ -78,7 +85,7 @@ Deploy and manage applications on CapRover
 > Use previously entered values
 
 **-c**, **--configFile** _file_
-> Configuration file path
+> Deployment configuration file path
 
 **-u**, **--caproverUrl** _url_
 > CapRover machine URL
@@ -88,6 +95,12 @@ Deploy and manage applications on CapRover
 
 **--appToken** _token_
 > App-level authentication token
+
+**-V**, **--version**
+> Output version number
+
+**-h**, **--help**
+> Display help information
 
 # CI/CD INTEGRATION
 

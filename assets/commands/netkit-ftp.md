@@ -8,21 +8,25 @@ netkit FTP client
 
 ```netkit-ftp [ftp.example.com]```
 
-**Connect with username**
+**Connect in passive mode (useful behind firewalls)**
 
-```netkit-ftp -u [username] [host]```
+```netkit-ftp -p [ftp.example.com]```
 
-**Passive mode**
+**Connect with verbose output**
 
-```netkit-ftp -p [host]```
+```netkit-ftp -v [ftp.example.com]```
 
-**Verbose mode**
+**Connect without auto-login**
 
-```netkit-ftp -v [host]```
+```netkit-ftp -n [ftp.example.com]```
 
-**Debug mode**
+**Connect with non-interactive multi-file transfers**
 
-```netkit-ftp -d [host]```
+```netkit-ftp -i [ftp.example.com]```
+
+**Enable debugging**
+
+```netkit-ftp -d [ftp.example.com]```
 
 # SYNOPSIS
 
@@ -33,30 +37,37 @@ netkit FTP client
 _HOST_
 > FTP server hostname.
 
-**-u** _USER_
-> Username.
+**-4**
+> Use only IPv4 to contact the host.
+
+**-6**
+> Use only IPv6 to contact the host.
 
 **-p**
-> Use passive mode.
+> Use passive mode for data transfers. Default when invoked as pftp.
+
+**-i**
+> Turn off interactive prompting during multiple file transfers.
+
+**-n**
+> Do not attempt auto-login upon initial connection (skip .netrc lookup).
+
+**-g**
+> Disable file name globbing.
 
 **-v**
-> Verbose output.
+> Verbose output; show all responses from the remote server and data transfer statistics.
 
 **-d**
-> Debug mode.
-
-**--help**
-> Display help information.
+> Enable debugging.
 
 # DESCRIPTION
 
-**netkit-ftp** is the netkit FTP client. It transfers files over FTP protocol.
-
-The tool connects to FTP servers. Interactive command-line interface.
+**netkit-ftp** is the classic Internet file transfer program. It provides an interactive command-line interface to the standard File Transfer Protocol, allowing users to transfer files to and from a remote network site. It supports auto-login via the .netrc file, passive mode for firewall traversal, and interactive file globbing.
 
 # CAVEATS
 
-Unencrypted protocol. Legacy tool. Consider sftp for secure transfers.
+Transfers are unencrypted, including passwords. This is a legacy tool that is no longer actively maintained. Consider **sftp** or **lftp** for secure transfers.
 
 # HISTORY
 

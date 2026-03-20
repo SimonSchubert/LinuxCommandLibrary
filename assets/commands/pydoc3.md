@@ -91,4 +91,4 @@ pydoc is part of the **Python** standard library, providing documentation access
 
 # SEE ALSO
 
-[python3](/man/python3)(1), [sphinx](/man/sphinx)(1), [help()](/man/help)(3)
+[python3](/man/python3)(1), [pydoc](/man/pydoc)(1), [pip](/man/pip)(1)

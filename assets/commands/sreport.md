@@ -50,7 +50,7 @@ Show for **specific cluster**
 > Pipe-delimited output without trailing pipe
 
 **-t** _time_format_
-> Set time format for output
+> Set time format for output (e.g., Seconds, Minutes, Hours, Percent)
 
 **-T, --tres** _tres_names_
 > Specify trackable resources to report

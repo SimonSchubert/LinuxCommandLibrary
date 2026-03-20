@@ -32,4 +32,4 @@ git root is part of **git-extras**, providing a convenient shorthand for the com
 
 # SEE ALSO
 
-[git-rev-parse](/man/git-rev-parse)(1)
+[git-extras](/man/git-extras)(1), [git-rev-parse](/man/git-rev-parse)(1)

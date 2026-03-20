@@ -24,6 +24,14 @@ Only create **snapshots** for configured subvolumes
 
 ```sudo btrbk snapshot```
 
+**Resume** incomplete backups
+
+```sudo btrbk resume```
+
+Use a specific **config** file
+
+```sudo btrbk -c [/path/to/btrbk.conf] run```
+
 # SYNOPSIS
 
 **btrbk** [_options_] _command_ [_filter_]
@@ -54,22 +62,43 @@ Configuration is defined in **/etc/btrbk/btrbk.conf**, specifying source subvolu
 **list**
 > List configured items
 
+**prune**
+> Delete outdated backups and snapshots according to retention policy
+
 **clean**
-> Delete outdated snapshots
+> Delete incomplete (garbled) backups
+
+**archive** _source_ _target_
+> Consolidate backups into a single target directory
 
 # PARAMETERS
 
-**-v, --verbose**
+**-v**, **--verbose**
 > Increase verbosity
 
-**--progress**
-> Show progress during transfers
+**-q**, **--quiet**
+> Suppress non-error output
 
-**-n, --dry-run**
+**--progress**
+> Show progress during send/receive transfers
+
+**-n**, **--dry-run**
 > Same as dryrun command
 
 **-c** _file_
 > Use alternate configuration file
+
+**-p**, **--preserve**
+> Preserve all snapshots and backups (no cleanup)
+
+**-t**, **--table**
+> Print output in table format
+
+**-l**, **--loglevel** _level_
+> Set log verbosity level
+
+**-h**, **--help**
+> Print synopsis and list of commands
 
 # CONFIGURATION
 

@@ -60,14 +60,23 @@ Manage Azure resource locks
 **--resource-group** **-g**
 > Name of resource group.
 
-**--resource-name**
+**--resource-name** **--resource**
 > Name of the resource being locked.
 
 **--resource-type**
-> The type of the resource being locked.
+> The type of the resource being locked (e.g., Microsoft.Network/subnets).
+
+**--namespace**
+> Provider namespace (e.g., Microsoft.Provider).
+
+**--parent**
+> Parent path for nested resources (e.g., resA/myA/resB/myB).
 
 **--notes**
 > Notes about the lock.
+
+**--ids**
+> One or more resource IDs. Used with delete/show/update instead of --name.
 
 # DESCRIPTION
 

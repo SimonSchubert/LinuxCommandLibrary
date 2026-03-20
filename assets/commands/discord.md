@@ -61,7 +61,7 @@ Discord on Linux can be installed through official packages, Flatpak, Snap, or d
 
 # CAVEATS
 
-Electron-based with higher resource usage. Screen sharing on Wayland may have limitations. Some game integrations unavailable on Linux. Requires systemd for some features.
+Electron-based with higher resource usage. Screen sharing on Wayland may have limitations. Some game integrations unavailable on Linux. Custom Electron flags can be set in **~/.config/discord-flags.conf** (one flag per line).
 
 # HISTORY
 
@@ -69,4 +69,4 @@ Discord was founded by **Jason Citron** and released in **2015**. Originally tar
 
 # SEE ALSO
 
-[slack](/man/slack)(1), [teams](/man/teams)(1), [mumble](/man/mumble)(1)
+[slack](/man/slack)(1), [mumble](/man/mumble)(1)

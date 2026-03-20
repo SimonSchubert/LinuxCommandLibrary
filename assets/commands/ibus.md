@@ -8,19 +8,27 @@ input method framework for Linux
 
 ```ibus-daemon -drx```
 
-**List available engines**
+**List available input engines**
 
 ```ibus list-engine```
 
-**Restart daemon**
+**Show current input engine**
+
+```ibus engine```
+
+**Set the current input engine**
+
+```ibus engine [engine_name]```
+
+**Restart the IBus daemon**
 
 ```ibus restart```
 
-**Open preferences**
+**Show IBus version**
 
-```ibus-setup```
+```ibus version```
 
-**Read current engine**
+**Print current configuration**
 
 ```ibus read-config```
 
@@ -31,22 +39,43 @@ input method framework for Linux
 # PARAMETERS
 
 _COMMAND_
-> IBus command.
+> IBus subcommand to execute.
 
 **list-engine**
-> List input engines.
+> Show available input engines.
+
+**engine** [_ENGINE_NAME_]
+> Show current engine, or set engine to ENGINE_NAME.
+
+**start**
+> Start the IBus daemon.
 
 **restart**
-> Restart daemon.
+> Restart the IBus daemon.
+
+**exit**
+> Exit the IBus daemon.
+
+**version**
+> Show the IBus version.
 
 **read-config**
-> Show configuration.
+> Print configuration values.
 
-**write-config**
-> Write configuration.
+**reset-config**
+> Reset configuration to defaults.
 
-**--help**
-> Display help information.
+**read-cache**
+> Show the registry cache.
+
+**write-cache**
+> Save the registry cache.
+
+**emoji**
+> Launch IBus Emojier.
+
+**help**
+> Show the commands list.
 
 # DESCRIPTION
 
@@ -64,4 +93,4 @@ IBus was created by **Peng Huang** as the next-generation input framework for Li
 
 # SEE ALSO
 
-[ibus-daemon](/man/ibus-daemon)(1), [ibus-setup](/man/ibus-setup)(1), [fcitx](/man/fcitx)(1)
+[fcitx](/man/fcitx)(1), [fcitx5](/man/fcitx5)(1)

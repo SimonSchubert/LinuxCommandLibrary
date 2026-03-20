@@ -32,8 +32,17 @@ _FILES_
 **-n**, **--new**
 > Open new window.
 
+**--no-splash**
+> Start without showing the splash screen.
+
+**-g**, **--geometry** _WIDTHxHEIGHT+XOFF+YOFF_
+> Set the size and position of the first window.
+
 **-L** _LOCALE_, **--locale** _LOCALE_
 > Set locale.
+
+**-v**, **--version**
+> Display the version of Gnumeric.
 
 **--help**
 > Display help information.
@@ -46,7 +55,7 @@ _FILES_
 
 # CAVEATS
 
-GTK application. Fewer features than LibreOffice Calc. Excellent statistical accuracy.
+GTK application requiring a display server. Fewer features than LibreOffice Calc but lighter weight. Known for excellent statistical accuracy. Use **ssconvert** for command-line format conversions without launching the GUI.
 
 # HISTORY
 
@@ -54,4 +63,4 @@ Gnumeric was started by **Miguel de Icaza** as part of the **GNOME** project, fo
 
 # SEE ALSO
 
-[ssconvert](/man/ssconvert)(1), [libreoffice](/man/libreoffice)(1)
+[libreoffice](/man/libreoffice)(1)

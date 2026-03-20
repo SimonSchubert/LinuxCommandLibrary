@@ -32,8 +32,14 @@ Cancel **user** job
 **--system**
 > Cancel jobs in the system manager (default)
 
+**-M**, **--machine** _container_
+> Execute the operation on a local container
+
 **-H**, **--host** _user@host_
 > Execute the operation on a remote host over SSH
+
+**--no-pager**
+> Do not pipe output into a pager
 
 # DESCRIPTION
 

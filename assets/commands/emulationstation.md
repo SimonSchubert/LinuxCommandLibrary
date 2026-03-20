@@ -45,13 +45,31 @@ graphical front-end for retro gaming emulators
 **--force-full**
 > Force full reload of UI.
 
+**--no-splash**
+> Do not show the splash screen on startup.
+
+**--no-exit**
+> Do not show the exit option in the menu.
+
+**--draw-framerate**
+> Display the framerate on screen.
+
+**--vsync** _1|0_
+> Turn VSync on or off (default: on).
+
 **--force-kiosk**
 > Force kiosk mode.
 
-**--debug**
-> Enable debug output.
+**--force-kid**
+> Force kid UI mode.
 
-**--help**
+**--home** _path_
+> Specify a directory to use as the home path.
+
+**--debug**
+> Enable debug output and extra logging.
+
+**--help**, **-h**
 > Display help.
 
 # DESCRIPTION
@@ -80,4 +98,4 @@ EmulationStation was created by **Alec Lofquist** (Aloshi) in **2012**. It becam
 
 # SEE ALSO
 
-[retroarch](/man/retroarch)(1), [mame](/man/mame)(1), [pegasus-fe](/man/pegasus-fe)(1)
+[retroarch](/man/retroarch)(1), [mame](/man/mame)(1)

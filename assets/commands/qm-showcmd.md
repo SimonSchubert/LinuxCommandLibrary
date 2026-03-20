@@ -10,23 +10,23 @@ Show **command-line** used to start a VM
 
 Show with **enhanced readability** (one option per line)
 
-```qm showcmd --pretty true 100```
+```qm showcmd 100 --pretty 1```
 
 Show command-line from a **specific snapshot**
 
-```qm showcmd --snapshot snapshot_name 100```
+```qm showcmd 100 --snapshot snapshot_name```
 
 # SYNOPSIS
 
-**qm showcmd** [_options_] _vmid_
+**qm showcmd** _vmid_ [_options_]
 
 # PARAMETERS
 
-**--pretty** _true|false_
-> Put each option on a new line for readability
+**--pretty** _boolean_
+> Put each option on a new line for readability. Default is 0.
 
-**--snapshot** _name_
-> Fetch configuration from specific snapshot
+**--snapshot** _string_
+> Fetch configuration from a given snapshot
 
 # DESCRIPTION
 

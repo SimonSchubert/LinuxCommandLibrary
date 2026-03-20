@@ -54,7 +54,7 @@ Start in **TTY mode** (16 colors, ANSI graph symbols)
 **--themes-dir** _dir_
 > Path to custom themes directory
 
-**+t**
+**--no-tty**
 > Force disable tty mode
 
 **--default-config**

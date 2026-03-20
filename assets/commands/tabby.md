@@ -65,4 +65,4 @@ Tabby was created by TabbyML and released as open-source in **2023**, positionin
 
 # SEE ALSO
 
-[ollama](/man/ollama)(1), [llamacpp](/man/llamacpp)(1), [copilot](/man/copilot)(1)
+[ollama](/man/ollama)(1), [copilot](/man/copilot)(1), [docker](/man/docker)(1)

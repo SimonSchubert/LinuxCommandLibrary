@@ -30,7 +30,7 @@ simple DNS lookup utility
 
 # SYNOPSIS
 
-**host** [_options_] _name_ [_server_]
+**host** [**-aACdlnrsTUwv**] [**-c** _class_] [**-N** _ndots_] [**-p** _port_] [**-R** _number_] [**-t** _type_] [**-W** _wait_] [**-m** _flag_] [**-4**|**-6**] _name_ [_server_]
 
 # DESCRIPTION
 
@@ -44,28 +44,61 @@ The tool provides quick DNS queries without the complexity of dig, making it use
 > Query type (A, AAAA, MX, NS, TXT, SOA, etc.).
 
 **-a**
-> Query all record types.
+> Equivalent to -v -t ANY; queries all record types with verbose output.
+
+**-A**
+> Like -a but omits RRSIG, NSEC, and NSEC3 records.
+
+**-C**
+> Check SOA record consistency across authoritative name servers.
 
 **-v**
-> Verbose output.
+> Verbose output (equivalent to -d).
+
+**-l**
+> Perform a zone transfer (AXFR) and list NS, PTR, and A/AAAA records.
 
 **-4**
-> Use IPv4 only.
+> Use IPv4 transport only.
 
 **-6**
-> Use IPv6 only.
+> Use IPv6 transport only.
 
 **-r**
-> Non-recursive query.
+> Non-recursive query (clears RD bit).
+
+**-s**
+> Do not try the next name server after a SERVFAIL response.
 
 **-W** _seconds_
-> Query timeout.
+> Query timeout in seconds (default: 5 for UDP, 10 for TCP).
+
+**-w**
+> Wait forever (set query timeout to maximum).
 
 **-R** _retries_
-> Number of retries.
+> Number of UDP query retries.
 
 **-T**
 > Use TCP instead of UDP.
+
+**-U**
+> Force UDP, even for ANY queries.
+
+**-p** _port_
+> Query port (default: 53).
+
+**-N** _ndots_
+> Number of dots required for an absolute name lookup.
+
+**-c** _class_
+> Query class (IN, HS, CH; default: IN).
+
+**-m** _flag_
+> Memory debugging (record, usage, or trace).
+
+**-V**
+> Print version number and exit.
 
 # CAVEATS
 

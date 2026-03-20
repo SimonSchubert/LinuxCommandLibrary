@@ -52,10 +52,34 @@ The tool enables test-driven development and continuous integration for shell sc
 > Run tests recursively
 
 **-j**, **--jobs** _num_
-> Number of parallel jobs
+> Number of parallel jobs (requires GNU parallel)
 
-**--formatter** _name_
-> Output formatter (tap, junit, pretty)
+**-F**, **--formatter** _name_
+> Output formatter (pretty, tap, tap13, junit)
+
+**-T**, **--timing**
+> Add timing information to tests
+
+**-x**, **--trace**
+> Print test commands as they are executed (like set -x)
+
+**--filter-tags** _tags_
+> Only run tests matching all comma-separated tags
+
+**--filter-status** _status_
+> Run tests by status from last run (failed, missed)
+
+**-o**, **--output** _dir_
+> Directory to write report files
+
+**--no-tempdir-cleanup**
+> Preserve test output temporary directory
+
+**--print-output-on-failure**
+> Automatically print $output on failed tests
+
+**-v**, **--version**
+> Display version number
 
 # TEST SYNTAX
 
@@ -96,8 +120,8 @@ Tests run in subshells (limited side effects). No built-in assertion library (us
 
 # HISTORY
 
-**bats** was created by Sam Stephenson in **2011** to provide a simple testing framework for bash scripts, inspired by similar tools in other languages.
+**bats** was created by Sam Stephenson in **2011** to provide a simple testing framework for bash scripts, inspired by similar tools in other languages. The project was later forked and maintained as **bats-core** by the community.
 
 # SEE ALSO
 
-[bash](/man/bash)(1), [shellcheck](/man/shellcheck)(1), [shunit2](/man/shunit2)(1)
+[bash](/man/bash)(1), [shellcheck](/man/shellcheck)(1)

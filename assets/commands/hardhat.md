@@ -59,8 +59,23 @@ ethereum development environment
 **--network** _name_
 > Target network.
 
+**--config** _file_
+> Path to a Hardhat config file.
+
+**--verbose**
+> Enable Hardhat verbose logging.
+
 **--show-stack-traces**
 > Show full stack traces.
+
+**--max-memory** _size_
+> Maximum amount of memory that Hardhat can use.
+
+**--version**
+> Show Hardhat version.
+
+**--help**
+> Show help message, or a task's help if its name is provided.
 
 # DESCRIPTION
 
@@ -93,4 +108,4 @@ Hardhat was created by **Nomic Foundation** (formerly Nomic Labs) as a successor
 
 # SEE ALSO
 
-[truffle](/man/truffle)(1), [foundry](/man/foundry)(1), [ganache](/man/ganache)(1)
+[truffle](/man/truffle)(1), [ganache](/man/ganache)(1), [forge](/man/forge)(1), [npx](/man/npx)(1)

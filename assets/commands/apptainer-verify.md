@@ -32,6 +32,14 @@ Output verification results in **JSON format**
 
 ```apptainer verify -j [path/to/image.sif]```
 
+Verify using only **local keys** in the keyring
+
+```apptainer verify -l [path/to/image.sif]```
+
+Verify **legacy** (insecure) signatures
+
+```apptainer verify --legacy-insecure [path/to/image.sif]```
+
 # SYNOPSIS
 
 **apptainer verify** [_options_] _image.sif_
@@ -61,6 +69,24 @@ Verification can use PGP public keys, X.509 certificates, or keys fetched from a
 
 **-j, --json**
 > Output results in JSON format
+
+**-l, --local**
+> Only verify with local key(s) in keyring
+
+**-u, --url** _string_
+> Specify a URL for a key server
+
+**--legacy-insecure**
+> Enable verification of (insecure) legacy signatures
+
+**--certificate-intermediates** _file_
+> Path to pool of intermediate certificates
+
+**--certificate-roots** _file_
+> Path to pool of root certificates
+
+**--ocsp-verify**
+> Enable online revocation check for certificates
 
 # CAVEATS
 

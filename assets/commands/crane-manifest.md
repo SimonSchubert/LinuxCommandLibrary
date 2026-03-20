@@ -23,7 +23,13 @@ retrieve container image manifest
 # PARAMETERS
 
 **--platform** _platform_
-> Get manifest for specific platform.
+> Specifies the platform in the form os/arch[/variant][:osversion] (e.g. linux/amd64). Default: all.
+
+**--insecure**
+> Allow image references to be fetched without TLS.
+
+**-v**, **--verbose**
+> Enable debug logs.
 
 # DESCRIPTION
 

@@ -8,38 +8,57 @@ character-based email and news client
 
 ```pine```
 
-**Open specific folder**
+**Compose a message to a specific address**
+
+```pine [user@example.com]```
+
+**Open a specific folder instead of INBOX**
 
 ```pine -f [folder]```
 
-**Send message from command line**
+**Start in the folder index instead of the main menu**
 
-```pine -I [address] -subject "[subject]"```
+```pine -i```
 
-**Start in setup mode**
+**Output a fresh configuration to a file**
 
-```pine -conf```
+```pine -conf > [pinerc.new]```
 
 # SYNOPSIS
 
-**pine** [_options_] [_address_]
+**pine** [_options_] [_address ..._]
 
 # PARAMETERS
 
 **-f** _folder_
-> Open specific folder.
+> Open folder instead of INBOX.
 
-**-I** _address_
-> Initial address.
+**-i**
+> Start in the folder index screen instead of the main menu.
 
-**-subject** _text_
-> Message subject.
+**-I** _keystrokes_
+> Execute comma-separated initial keystrokes on startup (e.g., CR, SPACE, ^C).
 
 **-conf**
-> Configure mode.
+> Output a fresh pinerc configuration to stdout.
 
-**-n** _num_
-> Start at message number.
+**-p** _file_
+> Use file as the personal configuration file instead of ~/.pinerc.
+
+**-P** _file_
+> Use file as the system-wide configuration file instead of /usr/local/lib/pine.conf.
+
+**-r**
+> Open first folder in read-only mode.
+
+**-attach** _file_
+> Send mail with file as an attachment.
+
+**-d** _level_
+> Set debug level (0-9) for diagnostic output.
+
+**-h**
+> Display help listing valid command-line options.
 
 # DESCRIPTION
 
@@ -56,19 +75,10 @@ A  ADDRESS BOOK
 S  SETUP
 Q  QUIT
 ```
-# Start Pine
-pine
-
-# Compose to address
-pine user@example.com
-
-# Read specific folder
-pine -f ~/mail/inbox
-```
 
 # CONFIGURATION
 
-Configuration stored in ~/.pstrinerc. Use S (Setup) from main menu for interactive configuration.
+Configuration stored in ~/.pinerc. Use S (Setup) from main menu for interactive configuration. System-wide configuration in /usr/local/lib/pine.conf.
 
 # CAVEATS
 

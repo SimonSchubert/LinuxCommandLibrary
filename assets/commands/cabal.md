@@ -62,12 +62,27 @@ Haskell package manager and build system
 **sdist**
 > Create source distribution
 
+**init**
+> Create a new Cabal package interactively
+
+**bench**
+> Run benchmarks
+
+**haddock**
+> Build Haddock documentation
+
 **upload**
 > Upload package to Hackage
 
+**freeze**
+> Freeze dependencies to exact versions
+
+**outdated**
+> Check for outdated dependencies
+
 # PROJECT FILE
 
-cabal.cabal example:
+myproject.cabal example:
 ```
 cabal-version: 2.4
 name: myproject

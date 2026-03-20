@@ -8,13 +8,13 @@ Print configuration to **stdout** (dry run)
 
 ```sudo grub-mkconfig```
 
-Generate configuration to **file**
+Generate configuration and write to the **default file**
 
 ```sudo grub-mkconfig -o /boot/grub/grub.cfg```
 
-Display **help**
+Generate configuration on **Red Hat/Fedora** systems
 
-```grub-mkconfig --help```
+```sudo grub2-mkconfig -o /boot/grub2/grub.cfg```
 
 Display **version**
 
@@ -51,7 +51,7 @@ The command reads settings from /etc/default/grub and executes scripts in /etc/g
 
 # CAVEATS
 
-This command should be run as root. The generated configuration depends on scripts in /etc/grub.d/ and settings in /etc/default/grub. After making changes to GRUB settings, always run grub-mkconfig to regenerate the configuration.
+This command must be run as root. The generated configuration depends on scripts in /etc/grub.d/ and settings in /etc/default/grub. After making changes to GRUB settings, always run grub-mkconfig to regenerate the configuration. On Red Hat/Fedora, the command is named **grub2-mkconfig** and the config path is /boot/grub2/grub.cfg. On Debian/Ubuntu, **update-grub** is a convenient wrapper around grub-mkconfig.
 
 # HISTORY
 

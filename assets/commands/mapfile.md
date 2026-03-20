@@ -52,11 +52,14 @@ _ARRAY_
 **-O** _ORIGIN_
 > Start assigning at array index ORIGIN (default: 0).
 
+**-u** _FD_
+> Read from file descriptor FD instead of standard input.
+
 **-C** _CALLBACK_
-> Call CALLBACK after reading each line.
+> Evaluate CALLBACK after reading each quantum of lines.
 
 **-c** _QUANTUM_
-> Call CALLBACK every QUANTUM lines (default: 5000).
+> Number of lines between CALLBACK calls (default: 5000).
 
 # DESCRIPTION
 

@@ -20,9 +20,17 @@ static code analysis tool for HTML
 
 ```htmlhint --format json [file.html]```
 
-**Ignore rules**
+**Ignore specific patterns**
 
-```htmlhint --ignore [attr-lowercase] [file.html]```
+```htmlhint --ignore [**/vendor/**] [file.html]```
+
+**List all available rules**
+
+```htmlhint --list```
+
+**Initialize config file**
+
+```htmlhint --init```
 
 # SYNOPSIS
 
@@ -37,15 +45,33 @@ _FILES_
 > Config file path.
 
 **-f**, **--format** _FORMAT_
-> Output format (default, json).
+> Output format: default, json, unix, sarif, markdown, junit, html, compact, checkstyle.
 
-**--ignore** _RULES_
-> Rules to ignore.
+**-i**, **--ignore** _PATTERN_
+> Glob patterns of files or folders to ignore.
 
 **-r**, **--rules** _RULES_
-> Rules to enable.
+> Rules to enable (comma-separated, e.g., tag-pair,attr-lowercase=true).
 
-**--help**
+**-R**, **--rulesdir** _PATH_
+> Load custom rules from file or folder.
+
+**-l**, **--list**
+> Show all available rules.
+
+**--init**
+> Create a new .htmlhintrc config file with default rules.
+
+**--nocolor**
+> Disable colored output.
+
+**--warn**
+> Warn only, exit with code 0.
+
+**-V**, **--version**
+> Output the version number.
+
+**-h**, **--help**
 > Display help information.
 
 # DESCRIPTION
@@ -56,7 +82,7 @@ The tool enforces consistent HTML style and catches potential issues. It support
 
 # CAVEATS
 
-Node.js required. Rule set configurable. May conflict with framework patterns.
+Requires Node.js. Rule set is configurable via .htmlhintrc or CLI flags. Some rules may conflict with framework-specific HTML patterns (e.g., Angular, Vue).
 
 # HISTORY
 

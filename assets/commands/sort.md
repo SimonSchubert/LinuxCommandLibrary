@@ -82,11 +82,38 @@ Sort lines of text files
 **-b**, **--ignore-leading-blanks**
 > Ignore leading blanks in keys
 
+**-d**, **--dictionary-order**
+> Consider only blanks and alphanumeric characters
+
+**-g**, **--general-numeric-sort**
+> Compare according to general numerical value
+
+**-i**, **--ignore-nonprinting**
+> Consider only printable characters
+
+**-M**, **--month-sort**
+> Compare (unknown) < 'JAN' < ... < 'DEC'
+
+**-R**, **--random-sort**
+> Shuffle, but group identical keys
+
 **-V**, **--version-sort**
 > Natural sort of version numbers
 
+**-z**, **--zero-terminated**
+> Line delimiter is NUL, not newline
+
+**-S**, **--buffer-size**=_SIZE_
+> Use SIZE for main memory buffer
+
+**-T**, **--temporary-directory**=_DIR_
+> Use DIR for temporaries instead of $TMPDIR or /tmp
+
 **--parallel**=_N_
 > Use N parallel threads
+
+**--debug**
+> Annotate the sort key used and warn about questionable usage
 
 # KEY DEFINITION
 

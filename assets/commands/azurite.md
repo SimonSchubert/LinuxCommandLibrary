@@ -64,7 +64,22 @@ The tool is officially maintained by Microsoft and replaces the deprecated Azure
 > HTTPS key path
 
 **--oauth** _level_
-> OAuth authentication level
+> OAuth authentication level (e.g., basic)
+
+**--blobHost** _addr_
+> Blob service listening address (default: 127.0.0.1)
+
+**--queueHost** _addr_
+> Queue service listening address (default: 127.0.0.1)
+
+**--tableHost** _addr_
+> Table service listening address (default: 127.0.0.1)
+
+**--inMemoryPersistence**
+> Store all data in memory only (data lost on exit)
+
+**--disableProductStyleUrl**
+> Force account name parsing from URI path instead of hostname
 
 # SERVICES
 
@@ -89,7 +104,7 @@ DefaultEndpointsProtocol=http;AccountName=devstoreaccount1;AccountKey=Eby8vdM02x
 
 # CAVEATS
 
-Not all Azure Storage features supported. Some API behaviors differ from production. Cosmos DB Table API not fully compatible. Data persists between runs unless --inMemoryPersistence used. Not for production use.
+Not all Azure Storage features are supported. Some API behaviors differ from production. Data persists between runs unless --inMemoryPersistence is used. Not for production use. Requires Node.js to install via npm.
 
 # HISTORY
 
@@ -97,4 +112,4 @@ Not all Azure Storage features supported. Some API behaviors differ from product
 
 # SEE ALSO
 
-[az-storage](/man/az-storage)(1), [docker](/man/docker)(1), [cosmosdb-emulator](/man/cosmosdb-emulator)(1)
+[az-storage](/man/az-storage)(1), [docker](/man/docker)(1), [node](/man/node)(1), [npm](/man/npm)(1)

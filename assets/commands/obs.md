@@ -1,6 +1,6 @@
 # TAGLINE
 
-studio, an open-source streaming and recording program
+OBS Studio, an open-source streaming and recording program
 
 # TLDR
 
@@ -20,13 +20,17 @@ studio, an open-source streaming and recording program
 
 ```obs --startstreaming```
 
+**Start virtual camera**
+
+```obs --startvirtualcam```
+
 **Start minimized**
 
 ```obs --minimize-to-tray```
 
-**Use specific profile**
+**Use specific profile and scene collection**
 
-```obs --profile "[profile_name]"```
+```obs --profile "[profile_name]" --collection "[collection_name]"```
 
 # SYNOPSIS
 
@@ -46,8 +50,35 @@ studio, an open-source streaming and recording program
 **--startstreaming**
 > Begin streaming on launch.
 
+**--startvirtualcam**
+> Start virtual camera on launch.
+
+**--startreplaybuffer**
+> Start replay buffer on launch.
+
+**--collection** _NAME_
+> Use scene collection.
+
 **--minimize-to-tray**
-> Start minimized.
+> Start minimized to system tray.
+
+**--studio-mode**
+> Enable studio mode.
+
+**--multi**, **-m**
+> Allow multiple instances without warning.
+
+**--portable**, **-p**
+> Use portable mode (settings stored in application directory).
+
+**--always-on-top**
+> Start in always-on-top mode.
+
+**--verbose**
+> Make log output more verbose.
+
+**--version**, **-V**
+> Print version information.
 
 **--help**
 > Display help information.

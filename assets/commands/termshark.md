@@ -10,7 +10,19 @@ Monitor **default** interface
 
 Monitor **specific** interface
 
-```sudo termshark [interface]```
+```sudo termshark -i [eth0]```
+
+Read a **pcap** file
+
+```termshark -r [path/to/capture.pcap]```
+
+Apply a **display filter**
+
+```sudo termshark -i [eth0] -Y "[http.request]"```
+
+Apply a **capture filter**
+
+```sudo termshark -i [eth0] -f "[port 80]"```
 
 # SYNOPSIS
 
@@ -29,6 +41,15 @@ Monitor **specific** interface
 
 **-f** _FILTER_
 > Apply capture filter
+
+**-d** _layer==selector,protocol_
+> Specify dissection of layer type
+
+**--pass-thru** _[auto|yes|no]_
+> Run tshark instead of UI (auto means if stdout is not a tty)
+
+**--debug**
+> Enable debug mode with profiling server on port 6060
 
 # DESCRIPTION
 

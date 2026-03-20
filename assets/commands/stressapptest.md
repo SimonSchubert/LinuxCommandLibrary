@@ -20,9 +20,17 @@ Google memory and hardware stress tester
 
 ```stressapptest -v [2] -s [60]```
 
-**Multiple threads**
+**Multiple memory copy threads**
 
 ```stressapptest -m [4] -s [60]```
+
+**With CPU stress threads**
+
+```stressapptest -C [4] -s [60]```
+
+**Direct disk test** on a block device
+
+```stressapptest -d [/dev/sda] -s [60]```
 
 # SYNOPSIS
 
@@ -37,16 +45,34 @@ Google memory and hardware stress tester
 > Memory in MB.
 
 **-m** _N_
-> Memory threads.
+> Number of memory copy threads.
+
+**-C** _N_
+> Number of CPU stress threads.
+
+**-i** _N_
+> Number of memory invert threads.
 
 **-f** _FILE_
-> Test file.
+> Add a disk thread with tempfile.
+
+**-d** _DEV_
+> Add a direct write disk thread with block device (or file).
+
+**-n** _IP_
+> Add a network thread connecting to the specified IP address.
 
 **-v** _LEVEL_
 > Verbosity level.
 
 **-l** _FILE_
 > Log file.
+
+**-W**
+> Use warm copy (memory copy with cache warming).
+
+**-A**
+> Run in degraded mode on incompatible systems.
 
 # DESCRIPTION
 

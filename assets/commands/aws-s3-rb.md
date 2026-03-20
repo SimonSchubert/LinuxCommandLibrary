@@ -8,9 +8,13 @@ Remove S3 buckets
 
 ```aws s3 rb s3://[bucket-name]```
 
-**Force delete a bucket** and all its objects
+**Force delete a bucket** and all its non-versioned objects
 
 ```aws s3 rb s3://[bucket-name] --force```
+
+**Delete a bucket in a specific region**
+
+```aws s3 rb s3://[bucket-name] --region [us-east-1]```
 
 # SYNOPSIS
 
@@ -36,4 +40,4 @@ The **--force** option only deletes non-versioned objects. If the bucket contain
 
 # SEE ALSO
 
-[aws-s3](/man/aws-s3)(1), [aws-s3-mb](/man/aws-s3-mb)(1), [aws-s3-rm](/man/aws-s3-rm)(1)
+[aws-s3](/man/aws-s3)(1), [aws-s3-mb](/man/aws-s3-mb)(1), [aws-s3-rm](/man/aws-s3-rm)(1), [aws-s3-ls](/man/aws-s3-ls)(1)

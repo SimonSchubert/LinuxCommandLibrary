@@ -58,6 +58,9 @@ Archives contain multiple files with a table of contents for quick access. Unlik
 **d**
 > Delete files
 
+**p**
+> Print file contents to stdout
+
 **q**
 > Quick append (no checking)
 
@@ -77,4 +80,4 @@ Primarily used for static libraries. For general archiving, use tar instead. Arc
 
 # SEE ALSO
 
-[ranlib](/man/ranlib)(1), [nm](/man/nm)(1), [tar](/man/tar)(1), [ld](/man/ld)(1)
+[ranlib](/man/ranlib)(1), [nm](/man/nm)(1), [objdump](/man/objdump)(1), [tar](/man/tar)(1), [ld](/man/ld)(1)

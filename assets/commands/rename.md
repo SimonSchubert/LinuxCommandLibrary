@@ -8,7 +8,7 @@ Rename multiple files
 
 View documentation for the **Perl version**
 
-```tldr -p common rename```
+```tldr perl-rename```
 
 View documentation for the **util-linux version**
 
@@ -30,4 +30,4 @@ Check which version is installed with **rename --version** or **file $(which ren
 
 # SEE ALSO
 
-[mv](/man/mv)(1), [mmv](/man/mmv)(1)
+[perl-rename](/man/perl-rename)(1), [rename.util](/man/rename.util)(1), [mv](/man/mv)(1), [mmv](/man/mmv)(1)

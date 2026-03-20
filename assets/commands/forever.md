@@ -70,6 +70,18 @@ Node.js process daemon and monitor
 **-m** _max_
 > Maximum restarts.
 
+**-s**, **--silent**
+> Run script silencing stdout and stderr.
+
+**-a**, **--append**
+> Append to log files instead of overwriting.
+
+**--minUptime** _ms_
+> Minimum uptime before considering a restart as a crash (default: 1000ms).
+
+**--killTree**
+> Kill the entire child process tree on stop.
+
 # CONFIGURATION
 
 **~/.forever/config.json**
@@ -91,4 +103,4 @@ forever was created by **Charlie Robbins** and the **Nodejitsu** team in the ear
 
 # SEE ALSO
 
-[pm2](/man/pm2)(1), [nodemon](/man/nodemon)(1), [node](/man/node)(1), [systemd](/man/systemd)(1)
+[pm2](/man/pm2)(1), [nodemon](/man/nodemon)(1), [node](/man/node)(1), [npm](/man/npm)(1)

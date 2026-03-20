@@ -20,9 +20,9 @@ HTTP load testing tool
 
 ```hey -m POST -d "[{\"key\":\"value\"}]" [https://example.com/api]```
 
-**Set content type**
+**POST with body from file**
 
-```hey -T "[application/json]" -m POST -d "@[data.json]" [url]```
+```hey -m POST -D [data.json] -T "[application/json]" [https://example.com/api]```
 
 **Add header**
 
@@ -59,7 +59,7 @@ HTTP load testing tool
 > Custom HTTP header. Can be repeated for multiple headers.
 
 **-t** _timeout_
-> Timeout for each request in seconds. Default is 20.
+> Timeout for each request in seconds. Default is 20. Use 0 for infinite.
 
 **-A** _accept_
 > HTTP Accept header.

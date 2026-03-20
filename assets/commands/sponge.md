@@ -49,7 +49,7 @@ sort file.txt | sponge file.txt
 
 # CAVEATS
 
-Loads entire input into memory. Very large files may exhaust memory. Part of moreutils package. Creates temp file internally.
+Loads entire input into memory. Very large files may exhaust memory. Part of moreutils package. Creates a temp file internally and renames it atomically when possible. If no file is specified, sponge outputs to stdout.
 
 # HISTORY
 

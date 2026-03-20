@@ -20,21 +20,17 @@ i3-compatible tiling Wayland compositor
 
 ```sway --verbose```
 
-**Start with debug output**
+**Start with debug logging**
 
 ```sway --debug```
 
-**Execute a command** after sway initializes
+**Get the IPC socket path**
 
-```sway --exec "[command]"```
-
-**Start without executing** default session commands
-
-```sway --no-exec```
+```sway --get-socketpath```
 
 # SYNOPSIS
 
-**sway** [_-hcCdDvV_] [_-c config_] [_--exec command_]
+**sway** [_options_] [_command_]
 
 # PARAMETERS
 
@@ -45,28 +41,22 @@ i3-compatible tiling Wayland compositor
 > Check the configuration file for syntax errors without starting the compositor.
 
 **-d**, **--debug**
-> Enable verbose debug logging for troubleshooting.
+> Enable full logging, including debug information.
 
-**-v**, **--verbose**
-> Enable verbose logging output.
+**-V**, **--verbose**
+> Enable more verbose logging.
 
-**-q**, **--quiet**
-> Suppress all logging output to stderr.
-
-**--exec** _command_
-> Execute a shell command after sway has successfully initialized.
-
-**--no-exec**
-> Prevent execution of default session commands.
+**--get-socketpath**
+> Get the IPC socket path, print it, and exit.
 
 **--unsupported-gpu**
 > Allow running on unsupported GPUs (required for NVIDIA with driver 495+).
 
-**-V**, **--version**
-> Display version information and exit.
+**-v**, **--version**
+> Show the version number and exit.
 
 **-h**, **--help**
-> Display help message and exit.
+> Show help message and exit.
 
 # DESCRIPTION
 
@@ -97,4 +87,4 @@ Sway was created by **Drew DeVault** (SirCmpwn) and first released in **2016** a
 
 # SEE ALSO
 
-[swaymsg](/man/swaymsg)(1), [swaybar](/man/swaybar)(5), [sway-input](/man/sway-input)(5), [i3](/man/i3)(1), [waybar](/man/waybar)(5)
+[swaymsg](/man/swaymsg)(1), [swaybar](/man/swaybar)(5), [i3](/man/i3)(1), [waybar](/man/waybar)(5)

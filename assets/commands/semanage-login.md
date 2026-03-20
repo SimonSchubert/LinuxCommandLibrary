@@ -35,31 +35,46 @@ List only **customized** mappings
 # PARAMETERS
 
 **-l**, **--list**
-> List login mappings
+> List login mappings.
 
 **-a**, **--add**
-> Add new mapping
+> Add a new login mapping.
 
 **-d**, **--delete**
-> Delete mapping
+> Delete a login mapping.
 
 **-m**, **--modify**
-> Modify existing mapping
+> Modify an existing login mapping.
 
 **-s**, **--seuser** _user_
-> SELinux user to map to
+> SELinux user to map to.
 
 **-r**, **--range** _range_
-> MLS/MCS security range
+> MLS/MCS security range (e.g., s0-s0:c0.c1023).
 
 **-C**, **--locallist**
-> Show only local customizations
+> Show only local customizations.
+
+**-n**, **--noheading**
+> Do not print heading when listing.
+
+**-N**, **--noreload**
+> Do not reload policy after commit.
+
+**-S** _STORE_, **--store** _STORE_
+> Select an alternate SELinux policy store to manage.
+
+**-D**, **--deleteall**
+> Remove all local customizations.
+
+**-E**, **--extract**
+> Extract customizable commands.
 
 # DESCRIPTION
 
 **semanage login** manages mappings between Linux users and SELinux users. When a Linux user logs in, this mapping determines their SELinux security context.
 
-Different SELinux users have different roles and permissions, allowing fine-grained access control.
+Different SELinux users have different roles and permissions, allowing fine-grained access control. Prefix the Linux user name with **%** to indicate a group mapping (e.g., **%wheel**).
 
 # CAVEATS
 
@@ -71,4 +86,4 @@ Part of **policycoreutils**, providing SELinux policy management tools.
 
 # SEE ALSO
 
-[semanage](/man/semanage)(8), [semanage-user](/man/semanage-user)(8)
+[semanage](/man/semanage)(8), [semanage-user](/man/semanage-user)(8), [semanage-fcontext](/man/semanage-fcontext)(8), [sestatus](/man/sestatus)(8)

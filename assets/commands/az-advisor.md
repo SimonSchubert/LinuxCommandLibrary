@@ -10,7 +10,7 @@ View and manage Azure best-practice recommendations
 
 **List recommendations** for a specific category
 
-```az advisor recommendation list --category [Cost|Security|Reliability|Performance|OperationalExcellence]```
+```az advisor recommendation list --category [Cost|Security|HighAvailability|Performance|OperationalExcellence]```
 
 **Show Advisor configuration** for the subscription
 
@@ -56,7 +56,7 @@ View and manage Azure best-practice recommendations
 
 **az advisor** manages Azure Advisor, a personalized cloud consultant that helps you follow best practices to optimize your Azure deployments. Azure Advisor analyzes resource configuration and usage telemetry, then recommends solutions to improve cost effectiveness, performance, reliability, and security.
 
-Recommendations are categorized into: Cost, Security, Reliability, Performance, and OperationalExcellence.
+Recommendations are categorized into: Cost, Security, HighAvailability (Reliability), Performance, and OperationalExcellence.
 
 # CAVEATS
 

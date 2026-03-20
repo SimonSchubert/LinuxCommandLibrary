@@ -73,6 +73,18 @@ clang-tidy uses a **.clang-tidy** configuration file for project-level settings 
 **--config-file**=_file_
 > Path to .clang-tidy config
 
+**--format-style**=_style_
+> Format style for applied fixes (none, file, llvm, google, webkit, mozilla)
+
+**--extra-arg**=_arg_
+> Additional argument to append to the compiler command line
+
+**--fix-notes**
+> Apply fixes from diagnostic notes (implies --fix)
+
+**--allow-no-checks**
+> Allow empty enabled checks without error
+
 # CHECK CATEGORIES
 
 **bugprone-***
@@ -89,6 +101,15 @@ clang-tidy uses a **.clang-tidy** configuration file for project-level settings 
 
 **cppcoreguidelines-***
 > C++ Core Guidelines
+
+**clang-analyzer-***
+> Clang Static Analyzer checks
+
+**misc-***
+> Miscellaneous checks
+
+**cert-***
+> CERT secure coding standard
 
 # CONFIGURATION
 

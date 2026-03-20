@@ -8,9 +8,13 @@ Bidirectional bridge between Git and Subversion
 
 ```git svn clone [svn://server/repo]```
 
-**Clone with standard layout**
+**Clone with standard layout** (trunk/branches/tags)
 
 ```git svn clone -s [svn://server/repo]```
+
+**Clone with author mapping**
+
+```git svn clone -s --authors-file=[authors.txt] [svn://server/repo]```
 
 **Fetch SVN changes**
 
@@ -42,6 +46,24 @@ Bidirectional bridge between Git and Subversion
 **dcommit**
 > Push commits to SVN.
 
+**log**
+> Show SVN-style log output.
+
+**info**
+> Show information about a file or directory similar to svn info.
+
+**branch** _name_
+> Create a new branch in SVN.
+
+**create-ignore**
+> Create .gitignore files from svn:ignore properties.
+
+**show-ignore**
+> Print svn:ignore properties to stdout.
+
+**reset** **-r** _revision_
+> Undo effects of fetch back to the specified revision.
+
 **-s**, **--stdlayout**
 > Standard trunk/branches/tags layout.
 
@@ -51,8 +73,20 @@ Bidirectional bridge between Git and Subversion
 **-b** _PATH_
 > Branches path.
 
-**--help**
-> Display help information.
+**-t** _PATH_
+> Tags path.
+
+**--authors-file** _FILE_
+> Map SVN usernames to Git authors.
+
+**--prefix** _PREFIX_
+> Prefix for SVN remote ref names.
+
+**-r** _ARG_, **--revision** _ARG_
+> Specify SVN revision (or range) to operate on.
+
+**--ignore-paths** _REGEX_
+> Perl regex of paths to skip during fetch.
 
 # DESCRIPTION
 
@@ -62,7 +96,7 @@ The command clones SVN repos into Git, syncs changes in both directions, and map
 
 # CAVEATS
 
-Some git features don't map to SVN. History rewriting breaks svn tracking. Slower than native git.
+Some git features don't map to SVN. History rewriting (rebase/amend) before dcommit breaks SVN tracking. Merges should be done with git svn rebase, not git merge. Operations are slower than native git due to SVN round-trips.
 
 # HISTORY
 

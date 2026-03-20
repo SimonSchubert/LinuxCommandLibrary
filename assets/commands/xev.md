@@ -8,21 +8,21 @@ X11 event monitoring tool
 
 ```xev```
 
-**Show specific event types**
+**Show only keyboard events**
 
-```xev -event [keyboard]```
+```xev -event keyboard```
 
-**Monitor specific window**
+**Show only mouse button** events
+
+```xev -event button```
+
+**Monitor specific window** by ID
 
 ```xev -id [window_id]```
 
-**Use root window**
+**Monitor root window** events
 
 ```xev -root```
-
-**Show only key events**
-
-```xev -event keyboard```
 
 # SYNOPSIS
 
@@ -30,28 +30,48 @@ X11 event monitoring tool
 
 # PARAMETERS
 
+**-display** _DISPLAY_
+> X server to contact.
+
 **-event** _TYPE_
-> Event type filter.
+> Event type filter (can be specified multiple times).
 
 **-id** _WINDOW_
-> Window ID.
+> Monitor events on an existing window by ID.
 
 **-root**
-> Root window.
+> Monitor events on the root window.
 
 **-name** _NAME_
-> Window name.
+> Name to assign to the created window.
 
 **-geometry** _GEOM_
-> Window geometry.
+> Window size and position.
+
+**-bw** _PIXELS_
+> Border width for the window.
+
+**-bs** _TYPE_
+> Backing store type (NotUseful, WhenMapped, Always). Default NotUseful.
+
+**-rv**
+> Display window in reverse video.
 
 # EVENT TYPES
 
-**keyboard** - Key events
-**mouse** - Pointer events
-**button** - Button events
-**motion** - Motion events
+**keyboard** - Key press/release events
+**mouse** - All pointer events
+**button** - Button press/release events
+**motion** - Pointer motion events
 **expose** - Expose events
+**visibility** - Visibility change events
+**structure** - Window structure events
+**substructure** - Substructure events
+**focus** - Focus change events
+**property** - Property change events
+**colormap** - Colormap events
+**owner_grab_button** - Owner grab button events
+**randr** - RandR events
 
 # DESCRIPTION
 

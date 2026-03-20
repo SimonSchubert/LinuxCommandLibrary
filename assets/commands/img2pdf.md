@@ -20,9 +20,9 @@ converts images to PDF without re-encoding, preserving the original image
 
 ```img2pdf --fit [into] --pagesize [A4] [image.jpg] -o [output.pdf]```
 
-**Set specific image DPI**
+**Set specific image size**
 
-```img2pdf --imgsize [300dpi] [image.jpg] -o [output.pdf]```
+```img2pdf --imgsize [150mmx100mm] [image.jpg] -o [output.pdf]```
 
 **Convert with custom page margins**
 
@@ -31,6 +31,10 @@ converts images to PDF without re-encoding, preserving the original image
 **Set PDF title and author**
 
 ```img2pdf --title "[Document Title]" --author "[Author Name]" [image.jpg] -o [output.pdf]```
+
+**Output a PDF/A-1b compliant document**
+
+```img2pdf --pdfa [image.jpg] -o [output.pdf]```
 
 **Pipe image from stdin**
 
@@ -48,17 +52,17 @@ converts images to PDF without re-encoding, preserving the original image
 **--pagesize** _size_
 > Page size: A4, Letter, Legal, or WxH (e.g., 210mmx297mm).
 
-**--imgsize** _size_
-> Image size: WxH with units or dpi (e.g., 300dpi).
+**--imgsize** _LxL_
+> Image size on the PDF page: WxH with units (e.g., 150mmx100mm).
 
 **--fit** _mode_
-> Fit mode: into, fill, exact, shrink.
+> Fit mode: into, fill, exact, shrink, enlarge.
 
 **--border** _margin_
 > Page borders/margins (e.g., 1cm, 1cm:2cm).
 
 **--rotation** _angle_
-> Rotate pages: 0, 90, 180, 270, auto.
+> Rotate pages: auto, none, ifvalid, 0, 90, 180, 270.
 
 **--title** _string_
 > PDF title metadata.
@@ -79,7 +83,7 @@ converts images to PDF without re-encoding, preserving the original image
 > PDF modification date.
 
 **--viewer-panes** _panes_
-> Initial viewer panes: none, bookmarks, thumbs.
+> Initial viewer panes: outlines, thumbs.
 
 **--viewer-initial-page** _n_
 > Initial page to display.
@@ -87,11 +91,29 @@ converts images to PDF without re-encoding, preserving the original image
 **--viewer-fullscreen**
 > Open in fullscreen mode.
 
-**--nodate**
-> Don't set creation/modification dates.
+**-D**, **--nodate**
+> Suppress timestamps for deterministic output.
 
 **-S**, **--colorspace** _space_
 > Force colorspace: RGB, L (grayscale).
+
+**-a**, **--auto-orient**
+> Match page orientation to input image.
+
+**--pdfa**
+> Output a PDF/A-1b compliant document.
+
+**--first-frame-only**
+> Convert only the first frame of multi-frame images (e.g., animated GIF, multi-page TIFF).
+
+**--pillow-limit-break**
+> Disable Pillow's decompression bomb size limit for very large images.
+
+**--from-file** _FILE_
+> Read list of input images from FILE (NUL-separated paths).
+
+**-v**, **--verbose**
+> Enable verbose mode, printing messages on standard error.
 
 # DESCRIPTION
 
@@ -101,13 +123,13 @@ This lossless approach means a 5MB JPEG becomes approximately a 5MB PDF (plus mi
 
 Supported input formats include JPEG, JPEG2000, PNG (including transparency), TIFF, GIF, and others. The tool automatically handles colorspace, bit depth, and multi-page TIFFs.
 
-Page sizing offers flexible options: natural image size (at specified DPI), fixed page sizes with fit modes, or explicit dimensions. The fit modes control how images are placed: **into** fits inside the page, **fill** fills the page (may crop), **shrink** only shrinks larger images.
+Page sizing offers flexible options: natural image size (at specified DPI), fixed page sizes with fit modes, or explicit dimensions. The fit modes control how images are placed: **into** fits inside the page, **fill** fills the page (may crop), **exact** stretches to exact size, **shrink** only shrinks larger images, **enlarge** only enlarges smaller images.
 
 Multiple images become multi-page PDFs in argument order. Piping from stdin enables integration with image processing pipelines.
 
 # CAVEATS
 
-Only works with raster images (no vector formats). Transparent PNGs become opaque in PDF (alpha becomes white). Some viewers may struggle with large embedded images. Not all PDF features are supported (no encryption, compression control is limited).
+Only works with raster images (no vector formats). Some viewers may struggle with large embedded images. Not all PDF features are supported (no encryption, compression control is limited). Pillow limits input image size by default; use **--pillow-limit-break** to override.
 
 # HISTORY
 

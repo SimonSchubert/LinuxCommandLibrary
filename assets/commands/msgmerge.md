@@ -1,6 +1,6 @@
 # TAGLINE
 
-merges two PO files
+Merge two Uniforum style PO files
 
 # TLDR
 
@@ -12,13 +12,21 @@ merges two PO files
 
 ```msgmerge -U [existing.po] [template.pot]```
 
-**Merge with fuzzy matching**
+**Merge without fuzzy matching**
 
-```msgmerge --fuzzy-match [old.po] [new.pot] -o [merged.po]```
+```msgmerge -N [old.po] [new.pot] -o [merged.po]```
+
+**Merge keeping previous msgids** on fuzzy matches
+
+```msgmerge --previous [old.po] [new.pot] -o [merged.po]```
 
 **Backup before update**
 
 ```msgmerge -U --backup=numbered [file.po] [template.pot]```
+
+**Use a compendium** of translations
+
+```msgmerge -C [compendium.po] [old.po] [new.pot] -o [merged.po]```
 
 **Quiet mode**
 
@@ -39,27 +47,48 @@ _REF.POT_
 **-o** _FILE_
 > Output file.
 
-**-U**
+**-U**, **--update**
 > Update def.po in place.
 
-**--fuzzy-match**
-> Use fuzzy matching.
+**-N**, **--no-fuzzy-matching**
+> Do not use fuzzy matching. Speeds up operation considerably.
 
-**--backup** _TYPE_
-> Backup control.
+**--previous**
+> Keep previous msgids of translated messages when adding fuzzy markers.
 
-**--help**
-> Display help information.
+**-C** _FILE_, **--compendium**=_FILE_
+> Additional library of message translations. May be specified more than once.
+
+**--backup**=_CONTROL_
+> Backup control for -U: **none**, **numbered**, **existing**, or **simple**.
+
+**--suffix**=_SUFFIX_
+> Override the usual backup suffix.
+
+**-q**, **--quiet**
+> Suppress progress indicators.
+
+**-v**, **--verbose**
+> Increase verbosity level.
+
+**--no-wrap**
+> Do not break long message lines.
+
+**-s**, **--sort-output**
+> Generate sorted output.
+
+**-F**, **--sort-by-file**
+> Sort output by file location.
 
 # DESCRIPTION
 
-**msgmerge** merges two PO files. It's part of GNU gettext.
+**msgmerge** merges two Uniforum style .po files together. It is part of **GNU gettext**.
 
-The tool updates translations with new template. Preserves existing translations while adding new strings.
+The _def.po_ file is an existing PO file with translations that will be taken over to the newly created file as long as they still match. The _ref.pot_ file is the last created PO template file with up-to-date source references. Comments from _def.po_ are preserved. When an exact match is not found, fuzzy matching is used to produce better results (unless **-N** is specified).
 
 # CAVEATS
 
-Part of gettext-tools. Fuzzy matches marked. Review merged output.
+Part of **gettext-tools** package. Fuzzy matches are marked with a **#, fuzzy** comment and should be reviewed. The **-U** flag modifies the input file in place; use **--backup** to create backups before updating.
 
 # HISTORY
 
@@ -67,5 +96,5 @@ msgmerge is part of **GNU gettext**, essential for maintaining translation files
 
 # SEE ALSO
 
-[msginit](/man/msginit)(1), [msgfmt](/man/msgfmt)(1), [xgettext](/man/xgettext)(1)
+[msginit](/man/msginit)(1), [msgfmt](/man/msgfmt)(1), [msgcat](/man/msgcat)(1), [xgettext](/man/xgettext)(1)
 

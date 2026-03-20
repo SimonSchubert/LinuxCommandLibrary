@@ -10,19 +10,19 @@ Lock terminal with an away message
 
 Lock terminal and **enable mail check**
 
-```away -c [message]```
+```away -c message```
 
 Lock terminal and **disable mail check**
 
-```away -C [message]```
+```away -C message```
 
-Lock terminal and **sleep background tasks** for seconds
+Set **background task interval** in seconds
 
-```away -t [seconds] [message]```
+```away -t seconds message```
 
-Lock terminal and **check mail persistently**
+Lock terminal and **persist mail checking** until all mailboxes receive mail
 
-```away -p [message]```
+```away -p message```
 
 # SYNOPSIS
 
@@ -36,25 +36,37 @@ The terminal remains locked until the user authenticates. The away message is vi
 
 # PARAMETERS
 
-**-c, --mail**
-> Enable mail checking
+**-c**, **--mail**
+> Enable checking of mail
 
-**-C, --nomail**
-> Disable mail checking
+**-C**, **--nomail**
+> Disable checking of mail
 
-**-t, --time** _seconds_
-> Sleep background tasks for the specified number of seconds
+**-f**, **--rcfile**=_FILE_
+> Specify an alternative configuration file instead of ~/.awayrc
 
-**-p, --persist**
-> Check mail until at least one inbox receives new mail
+**-F**, **--norcfile**
+> Ignore user configuration file
 
-**-P, --nopersist**
-> Check mail even if no new mail has arrived
+**-m**, **--message**
+> Treat the remainder of the command line as the message
 
-**-h, --help**
+**-t**, **--time**=_SECONDS_
+> Set the number of seconds away sleeps before performing background tasks
+
+**-T**, **--notime**
+> Ignore time interval options and use the default
+
+**-p**, **--persist**
+> Continue checking mail as long as at least one mailbox has not received new mail
+
+**-P**, **--nopersist**
+> Stop checking mail if any mailbox is found to have new mail
+
+**-h**, **--help**
 > Display help information
 
-**-v, --version**
+**-v**, **--version**
 > Display version information
 
 # CAVEATS
@@ -63,4 +75,4 @@ The lock mechanism relies on system authentication. Mail checking requires prope
 
 # SEE ALSO
 
-[vlock](/man/vlock)(1), [lock](/man/lock)(1), [screen](/man/screen)(1)
+[vlock](/man/vlock)(1), [screen](/man/screen)(1)

@@ -30,7 +30,7 @@ amateur radio programming tool
 
 # SYNOPSIS
 
-**chirpw** [**--module** _module_] [**--onlydriver** _driver_] [**--action** _action_] [**--restore**] [**-q**|**-v**] [**--log** _file_] [**--log-level** _level_]
+**chirpw** [**--module** _module_] [**--onlydriver** _driver_] [**--action** _action_] [**--restore**] [**--page** _page_] [**--force-language** _code_] [**-q**|**-v**] [**--log** _file_] [**--log-level** _level_]
 
 # DESCRIPTION
 
@@ -41,31 +41,43 @@ CHIRP supports hundreds of radio models from manufacturers including Baofeng, Ya
 # PARAMETERS
 
 **--module** _module_
-> Load specified module on startup
+> Load specified module on startup.
 
 **--onlydriver** _driver_
-> Include only the specified radio driver
+> Include only the specified radio driver.
 
 **--action** _action_
-> Start UI action immediately: upload, download, query_rr, query_mg, query_rb, query_dm, new
+> Start UI action immediately: upload, download, query_rr, query_mg, query_rb, query_dm, new.
 
 **--restore**
-> Restore previous session tabs
+> Restore previous session tabs.
+
+**--profile**
+> Enable profiling.
+
+**--inspect**
+> Show wxPython inspector.
+
+**--page** _PAGE_
+> Select this page of the default editor at start.
+
+**--force-language** _CODE_
+> Force locale to this ISO language code.
 
 **-q**
-> Quiet mode (less output)
+> Quiet mode (less output).
 
 **-v**
-> Verbose mode (more output)
+> Verbose mode (more output).
 
 **--log** _file_
-> Write log to specified file
+> Write log to specified file.
 
 **--log-level** _level_
-> Set logging verbosity level
+> Set logging verbosity level (critical, error, warn, info, debug). Default: debug.
 
 **--version**
-> Print version and exit
+> Print version and exit.
 
 # CAVEATS
 
@@ -80,7 +92,3 @@ The radio port is typically **/dev/ttyUSB0** on Linux systems.
 # HISTORY
 
 **CHIRP** was created by Dan Smith (KK7DS) and has been actively developed since 2008. It began as a tool for Icom IC-91/92 radios and expanded to support hundreds of radio models across multiple manufacturers.
-
-# SEE ALSO
-
-[chirpc](/man/chirpc)(1)

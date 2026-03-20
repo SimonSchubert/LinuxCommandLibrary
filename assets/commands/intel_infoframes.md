@@ -1,20 +1,16 @@
 # TAGLINE
 
-displays HDMI and DisplayPort InfoFrame data
+view and change HDMI InfoFrames sent by the GPU
 
 # TLDR
 
-**Show HDMI infoframes**
+**View HDMI infoframes**
 
 ```sudo intel_infoframes```
 
-**Show specific port**
+**Display help** with field descriptions
 
-```sudo intel_infoframes -p [HDMI-A-1]```
-
-**Verbose output**
-
-```sudo intel_infoframes -v```
+```intel_infoframes --help```
 
 # SYNOPSIS
 
@@ -22,24 +18,18 @@ displays HDMI and DisplayPort InfoFrame data
 
 # PARAMETERS
 
-**-p** _PORT_
-> Specific display port.
-
-**-v**
-> Verbose output.
-
-**--help**
-> Display help information.
+**-h**, **--help**
+> Display help information and field descriptions.
 
 # DESCRIPTION
 
-**intel_infoframes** displays HDMI and DisplayPort InfoFrame data. InfoFrames carry metadata about video format, audio, and HDCP.
+**intel_infoframes** is a debugging tool that views and changes the HDMI InfoFrames sent by the GPU. InfoFrames carry metadata about video format, audio, and other display parameters.
 
-The tool shows AVI, audio, and vendor-specific infoframes. Useful for debugging HDMI/DP handshake issues.
+Descriptions of the InfoFrame fields can be found in the HDMI and CEA-861 specifications. Not all HDMI monitors respect the InfoFrames sent to them. In some cases (e.g., when changing modes) the Kernel will undo the changes made by this tool.
 
 # CAVEATS
 
-Intel graphics only. Requires active display. Part of intel-gpu-tools.
+Intel graphics only (GEN 4 or newer). Requires active display. Part of intel-gpu-tools (igt-gpu-tools).
 
 # HISTORY
 

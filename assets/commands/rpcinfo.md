@@ -59,8 +59,11 @@ Query RPC service registrations
 **-b** _program_ _version_
 > Make an RPC broadcast and report all responding hosts.
 
-**-d** _program_ _version_
-> Delete registration for the specified program and version (root only).
+**-d** _program_ _version_ [_transport_]
+> Delete registration for the specified program and version. If transport is specified, unregister only on that transport, otherwise on all transports (root only).
+
+**-a** _serv_address_ **-T** _transport_ _program_ [_version_]
+> Ping procedure 0 of the specified program at the given universal address on the specified transport.
 
 **-T** _transport_
 > Specify the transport to use (e.g., tcp, udp).

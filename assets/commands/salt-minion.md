@@ -37,7 +37,7 @@ Salt managed node agent daemon
 > Specify the configuration directory (default: /etc/salt)
 
 **-l** _LEVEL_, **--log-level**=_LEVEL_
-> Console log level: info, warning, error, debug, trace, garbage, none
+> Console log level: info, warning, error, debug, trace, garbage, quiet (default: warning)
 
 **--log-file**=_FILE_
 > Specify the log file path (default: /var/log/salt/minion)

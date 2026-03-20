@@ -44,9 +44,9 @@ stop and remove compose resources
 
 # DESCRIPTION
 
-**docker compose down** stops containers and removes containers, networks, volumes, and images created by **docker compose up**.
+**docker compose down** stops and removes containers and networks created by **docker compose up**.
 
-By default, only removes containers and networks, preserving volumes and images.
+By default, only containers and networks are removed. Volumes and images are preserved unless **-v** or **--rmi** is specified. Networks and volumes defined as **external** are never removed.
 
 # SEE ALSO
 

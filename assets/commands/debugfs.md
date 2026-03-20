@@ -16,17 +16,17 @@ Read commands from **file**
 
 ```debugfs -f [path/to/cmd_file] [/dev/sdXN]```
 
-View **filesystem stats** (interactive)
+Execute a **single command** and exit
 
-```stats```
+```debugfs -R "stats" [/dev/sdXN]```
 
-**Close** the filesystem (interactive)
+**List deleted** inodes (interactive)
 
-```close -a```
+```lsdel```
 
-**List** available commands (interactive)
+**Recover** a deleted inode to a file (interactive)
 
-```lr```
+```dump <[inode_number]> [/path/to/output]```
 
 # SYNOPSIS
 
@@ -41,16 +41,34 @@ Can be used to recover deleted files, examine inodes, and manually fix filesyste
 # PARAMETERS
 
 **-w**
-> Open in read-write mode
-
-**-f** _file_
-> Read commands from file
-
-**-R** _command_
-> Execute single command and exit
+> Open in read-write mode (default is read-only)
 
 **-c**
-> Open filesystem as catastrophic mode (for corrupted filesystems)
+> Open in catastrophic mode (inode and group bitmaps not read initially, forces read-only)
+
+**-n**
+> Disable metadata checksum verification
+
+**-f** _cmd_file_
+> Read and execute commands from file, then exit
+
+**-R** _request_
+> Execute a single command and exit
+
+**-b** _blocksize_
+> Force a specific block size in bytes instead of auto-detecting
+
+**-s** _superblock_
+> Read superblock from the given block number (requires -b)
+
+**-i**
+> Treat device as an ext2 image file created by e2image
+
+**-D**
+> Open device using Direct I/O, bypassing the buffer cache
+
+**-z** _undo_file_
+> Write old block contents to an undo file before overwriting (for use with e2undo)
 
 # INTERACTIVE COMMANDS
 
@@ -58,7 +76,7 @@ Can be used to recover deleted files, examine inodes, and manually fix filesyste
 > Show filesystem statistics
 
 **ls** _dir_
-> List directory
+> List directory contents
 
 **cat** _file_
 > Display file contents
@@ -66,8 +84,20 @@ Can be used to recover deleted files, examine inodes, and manually fix filesyste
 **lsdel**
 > List deleted inodes
 
+**undel** _<inode>_ _[pathname]_
+> Undelete inode and optionally link to pathname
+
 **dump** _inode_ _file_
-> Dump inode to file
+> Dump inode contents to a file
+
+**ncheck** _inode_
+> Translate inode numbers to pathnames
+
+**icheck** _block_
+> Translate block numbers to inodes
+
+**logdump**
+> Dump ext3/ext4 journal contents
 
 # CAVEATS
 

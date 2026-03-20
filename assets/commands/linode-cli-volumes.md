@@ -24,6 +24,10 @@ manages Linode block storage volumes
 
 ```linode-cli volumes view [volume_id]```
 
+**Resize volume**
+
+```linode-cli volumes resize [volume_id] --size [40]```
+
 **Delete volume**
 
 ```linode-cli volumes delete [volume_id]```
@@ -52,6 +56,12 @@ _SUBCOMMAND_
 **view** _ID_
 > View volume details.
 
+**resize** _ID_
+> Resize volume (can only increase size).
+
+**clone** _ID_
+> Clone volume to a new volume.
+
 **delete** _ID_
 > Delete volume.
 
@@ -59,7 +69,16 @@ _SUBCOMMAND_
 > Volume name.
 
 **--size** _GB_
-> Size in gigabytes.
+> Size in gigabytes (min: 10, max: 10240).
+
+**--region** _REGION_
+> Region to create volume in (e.g., us-east).
+
+**--linode_id** _ID_
+> Linode to attach volume to on creation.
+
+**--format** _FORMAT_
+> Output format: json or text.
 
 **--help**
 > Display help information.

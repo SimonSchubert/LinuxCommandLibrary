@@ -22,27 +22,30 @@ Batch mode with **iteration** limit
 
 # SYNOPSIS
 
-**pw-top** [**-r** _remote_] [**-b**] [**-n** _iterations_]
+**pw-top** [**-r** _remote_] [**-b**] [**-n** _iterations_] [**-V**]
 
 # PARAMETERS
 
-**-r, --remote _name_**
-> Connect to remote PipeWire instance
+**-r, --remote=_name_**
+> The name of the remote instance to monitor. If left unspecified, connects to the default PipeWire instance
 
 **-b, --batch-mode**
 > Print periodically instead of interactive
 
-**-n, --iterations _num_**
-> Number of iterations in batch mode
+**-n, --iterations=_num_**
+> Exit after specified number of batch iterations. Only used in batch mode
+
+**-V, --version**
+> Display version information
 
 **-h, --help**
 > Display help information
 
 # DESCRIPTION
 
-**pw-top** displays real-time statistics about PipeWire nodes and devices. It shows CPU usage, buffer statistics, latency, and other performance metrics in a top-like interface.
+**pw-top** provides a dynamic real-time view of PipeWire node and device statistics. It shows a hierarchical view of Driver nodes and follower nodes, displaying CPU usage, buffer statistics, latency, xruns, and other performance metrics in a top-like interface.
 
-The tool is essential for diagnosing audio performance issues, identifying xruns, and monitoring PipeWire's behavior under load.
+The tool is essential for diagnosing audio performance issues, identifying xruns, and monitoring PipeWire's behavior under load. Press **q** to quit and **c** to clear error counters.
 
 # CAVEATS
 

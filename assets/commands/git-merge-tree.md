@@ -16,6 +16,10 @@ Perform merge without touching index or working tree
 
 ```git merge-tree --write-tree --messages [branch1] [branch2]```
 
+**Check if a branch can be cleanly merged** (exit code 0 = clean, 1 = conflicts)
+
+```git merge-tree --write-tree --no-messages [branch1] [branch2]```
+
 # SYNOPSIS
 
 **git merge-tree** [**--write-tree**] [_options_] _branch1_ _branch2_
@@ -44,6 +48,15 @@ _BASE_
 
 **--name-only**
 > In the output, show only filenames instead of full merge details.
+
+**--allow-unrelated-histories**
+> Allow merging branches that share no common history.
+
+**--merge-base** _commit_
+> Specify a merge base instead of computing one automatically. With this option, branch arguments can be trees instead of commits. Incompatible with --stdin.
+
+**--stdin**
+> Read commits to merge from standard input, one pair per line. Implies -z.
 
 **-z**
 > Use NUL characters as line terminators instead of newlines (for scripting).

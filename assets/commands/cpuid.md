@@ -16,6 +16,14 @@ Display **raw hex** information without decoding
 
 ```cpuid -r```
 
+Display information using the **kernel CPUID module**
+
+```cpuid -k```
+
+Read CPUID data from a **file**
+
+```cpuid -f [cpuid_dump.txt]```
+
 # SYNOPSIS
 
 **cpuid** [_options_]
@@ -35,7 +43,16 @@ More detailed than /proc/cpuinfo, it shows low-level processor capabilities.
 > Show raw hex values without decoding
 
 **-f, --file** _file_
-> Read raw data from file
+> Read raw data from file instead of executing CPUID instruction
+
+**-k, --kernel**
+> Use the kernel CPUID module (/dev/cpu/*/cpuid); may require root
+
+**-h, --help**
+> Display help information
+
+**-v, --version**
+> Display cpuid version
 
 # CAVEATS
 

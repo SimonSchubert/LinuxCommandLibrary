@@ -62,6 +62,18 @@ Bind keys to commands in X11
 **-h**, **--help**
 > Display help.
 
+**-X**, **--display** _display_
+> Set X display to use.
+
+**-g**, **--geometry** _geometry_
+> Set size and position of the key identification window (used with -k or -mk).
+
+**-dg**, **--defaults-guile**
+> Print a default Guile configuration file to stdout.
+
+**-fg**, **--file-guile** _file_
+> Use an alternative Guile configuration file.
+
 **-V**, **--version**
 > Display version.
 

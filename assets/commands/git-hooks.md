@@ -27,9 +27,12 @@ Hooks are stored in **.git/hooks/** and must be executable. Common hooks include
 **Client-side hooks:**
 ```
 pre-commit         Run before commit
-prepare-commit-msg Edit commit message
+prepare-commit-msg Edit commit message template
 commit-msg         Validate commit message
 post-commit        After commit completes
+pre-rebase         Before rebase starts
+post-checkout      After checkout or switch
+post-merge         After merge completes
 pre-push           Before push
 ```
 
@@ -38,12 +41,16 @@ pre-push           Before push
 pre-receive        Before accepting push
 update             Per-branch pre-receive
 post-receive       After push completes
+post-update        After all refs updated
 ```
 
 # CONFIGURATION
 
 **.git/hooks/**
-> Directory containing hook scripts for the repository. Must be executable.
+> Default directory containing hook scripts for the repository. Scripts must be executable.
+
+**core.hooksPath**
+> Git config variable to override the hooks directory (since Git 2.9). Set with `git config core.hooksPath <path>`.
 
 # CAVEATS
 
@@ -51,4 +58,4 @@ Hooks are not version-controlled in .git/hooks. Use tools like Husky or pre-comm
 
 # SEE ALSO
 
-[git](/man/git)(1), [husky](/man/husky)(1), [pre-commit](/man/pre-commit)(1)
+[git](/man/git)(1), [git-commit](/man/git-commit)(1), [husky](/man/husky)(1), [pre-commit](/man/pre-commit)(1)

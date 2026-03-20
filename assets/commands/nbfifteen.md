@@ -8,9 +8,13 @@ terminal 15-puzzle game
 
 ```nbfifteen```
 
-**Start new game**
+**Play without replay prompt**
 
 ```nbfifteen -n```
+
+**Play with a 5x5 board**
+
+```nbfifteen -s 5```
 
 # SYNOPSIS
 
@@ -18,10 +22,13 @@ terminal 15-puzzle game
 
 # PARAMETERS
 
-**-n**
-> Start new game.
+**-s** _SIZE_
+> Set board dimension (3 to 7). Default is 4 (standard 15-puzzle).
 
-**--help**
+**-n**
+> Don't ask for replay after solving the puzzle.
+
+**-h**
 > Display help information.
 
 # DESCRIPTION
@@ -32,7 +39,7 @@ The tool is a classic sliding puzzle. Uses ncurses for display.
 
 # CAVEATS
 
-Part of bsdgames-nonfree. Terminal game. Arrow keys to move.
+Part of nbsdgames package. Terminal game. Arrow keys to move.
 
 # HISTORY
 

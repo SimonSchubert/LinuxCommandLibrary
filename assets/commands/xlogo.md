@@ -37,6 +37,9 @@ Display X Window System logo
 **-render**
 > Use RENDER extension for anti-aliased edges.
 
+**-sharp**
+> When used with -render, force sharp edges (1-bit alpha channel).
+
 **-shape**
 > Use non-rectangular window shape.
 

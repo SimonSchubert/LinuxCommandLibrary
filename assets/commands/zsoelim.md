@@ -23,7 +23,7 @@ Process .so includes in roff source files
 # PARAMETERS
 
 **-C**, **--compatible**
-> Operate in groff compatible mode
+> Enable .so requests followed by something other than whitespace
 
 **-V**, **--version**
 > Display version information

@@ -12,6 +12,10 @@ Display **brief** platform information
 
 ```eglinfo -B```
 
+Display information for a **specific platform**
+
+```eglinfo -p [x11|wayland|gbm|surfaceless]```
+
 Display **help**
 
 ```eglinfo -h```
@@ -29,10 +33,25 @@ Useful for debugging graphics issues and verifying GPU driver configuration.
 # PARAMETERS
 
 **-B**
-> Brief output format
+> Brief output, showing only essential information.
+
+**-s**
+> Print one extension per line.
+
+**-v**
+> Print configuration details in verbose form.
+
+**-l**
+> Show OpenGL limits (requires EGL 1.2+).
+
+**-a** _api_
+> Display information for a specific API (gl, glcore, gles).
+
+**-p** _platform_
+> Display information for a specific platform (x11, wayland, gbm, surfaceless, android).
 
 **-h**
-> Display help information
+> Display help information.
 
 # CAVEATS
 

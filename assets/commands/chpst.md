@@ -1,6 +1,6 @@
 # TAGLINE
 
-change process state for runit services
+run a program with a changed process state
 
 # TLDR
 
@@ -38,7 +38,7 @@ change process state for runit services
 
 # DESCRIPTION
 
-**chpst** (change process state) runs a command with modified process attributes. It is part of the **runit** service supervision suite and provides a standardized way to set user, limits, and environment for service processes.
+**chpst** changes the process state according to the given options and runs prog. It is part of the **runit** service supervision suite and provides a standardized way to set user, limits, and environment for service processes.
 
 The tool consolidates several common process modifications: changing user/group identity, setting resource limits, loading environment from files, and obtaining locks. This simplifies service run scripts that would otherwise need multiple commands.
 
@@ -76,18 +76,30 @@ Environment directories (used with **-e**) contain files named for environment v
 **-/** _dir_
 > Change root directory (chroot).
 
+**-C** _pwd_
+> Change working directory to pwd before starting prog. Combined with -/, the directory is changed after chroot.
+
+**-b** _argv0_
+> Run prog with argv0 as its 0th argument.
+
 **-l** _lock_
-> Create exclusive lock file.
+> Open lock for writing, obtain an exclusive lock, and fail immediately if lock is held by another process.
 
 **-L** _lock_
-> Wait for exclusive lock file.
+> Open lock for writing, obtain an exclusive lock, and wait if lock is held by another process.
+
+**-P**
+> Run prog in a new process group.
+
+**-0**, **-1**, **-2**
+> Close standard input (0), standard output (1), or standard error (2) before starting prog.
 
 **-v**
-> Verbose output.
+> Print verbose messages to standard error.
 
 # CAVEATS
 
-Changing user requires root privileges. Resource limits are per-process; child processes inherit but have their own limits. The chroot option requires a complete root filesystem at the target. Lock files must be on a filesystem supporting locks.
+Changing user requires root privileges. Resource limits are per-process; child processes inherit but have their own limits. The chroot option requires a complete root filesystem at the target. Lock files must be on a filesystem supporting locks. chpst exits 100 when called with wrong options, and exits 111 if it has trouble changing the process state.
 
 # HISTORY
 

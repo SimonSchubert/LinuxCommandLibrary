@@ -14,7 +14,7 @@ Add vendor prefixes to CSS automatically
 
 **Specify browser targets**
 
-```autoprefixer [input.css] -o [output.css] --browsers "[last 2 versions, > 1%]"```
+```autoprefixer [input.css] -o [output.css] --browsers "last 2 versions, > 1%"```
 
 **Process multiple files in place**
 
@@ -90,4 +90,4 @@ Autoprefixer was created by **Andrey Sitnik** in **2013** as a solution to the t
 
 # SEE ALSO
 
-[postcss](/man/postcss)(1), [cssnano](/man/cssnano)(1), [browserslist](/man/browserslist)(5)
+[postcss](/man/postcss)(1), [cssnano](/man/cssnano)(1)

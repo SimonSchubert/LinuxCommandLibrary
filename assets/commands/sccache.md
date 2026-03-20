@@ -28,9 +28,13 @@ Shared compilation cache for C/C++ and Rust
 
 ```cmake -DCMAKE_C_COMPILER_LAUNCHER=sccache -DCMAKE_CXX_COMPILER_LAUNCHER=sccache [..]```
 
-**Show cache location**
+**Show advanced statistics** including cache location
 
 ```sccache --show-adv-stats```
+
+**Show statistics in JSON** format
+
+```sccache --show-stats --stats-format json```
 
 # SYNOPSIS
 
@@ -59,10 +63,13 @@ Shared compilation cache for C/C++ and Rust
 **--dist-status**
 > Show distributed status.
 
+**--stats-format** _FMT_
+> Set output format for statistics (text or json).
+
 # CONFIGURATION
 
 **SCCACHE_DIR**
-> Local cache directory path (default: ~/.cache/sccache).
+> Local cache directory path (default: ~/.cache/sccache on Linux, ~/Library/Caches/sccache on macOS).
 
 **SCCACHE_CACHE_SIZE**
 > Maximum local cache size (e.g., "10G").
@@ -75,6 +82,18 @@ Shared compilation cache for C/C++ and Rust
 
 **SCCACHE_GCS_BUCKET**
 > Google Cloud Storage bucket for GCS-based shared caching.
+
+**SCCACHE_MEMCACHED**
+> Memcached server URL for shared caching (e.g., "tcp://hostname:port").
+
+**SCCACHE_ERROR_LOG**
+> Path to redirect server error log output.
+
+**SCCACHE_LOG**
+> Logging level for the server (e.g., "debug", "trace").
+
+**SCCACHE_RECACHE**
+> When set, overwrite existing cache entries.
 
 **RUSTC_WRAPPER**
 > Set to "sccache" to enable caching for Rust builds via cargo.
@@ -103,4 +122,4 @@ Non-deterministic builds reduce hit rates. Some compiler options prevent caching
 
 # SEE ALSO
 
-[ccache](/man/ccache)(1), [cargo](/man/cargo)(1), [rustc](/man/rustc)(1)
+[ccache](/man/ccache)(1), [cargo](/man/cargo)(1), [rustc](/man/rustc)(1), [cmake](/man/cmake)(1), [make](/man/make)(1)

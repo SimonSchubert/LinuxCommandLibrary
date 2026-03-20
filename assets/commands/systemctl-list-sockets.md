@@ -61,4 +61,4 @@ The **list-sockets** subcommand provides insight into systemd's socket activatio
 
 # SEE ALSO
 
-[systemctl-list-units](/man/systemctl-list-units)(1), [systemd.socket](/man/systemd.socket)(5), [ss](/man/ss)(8)
+[systemctl](/man/systemctl)(1), [systemctl-list-units](/man/systemctl-list-units)(1), [ss](/man/ss)(8), [netstat](/man/netstat)(8)

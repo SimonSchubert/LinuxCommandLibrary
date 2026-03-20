@@ -8,6 +8,10 @@ High-level branching model workflow commands
 
 ```git flow init```
 
+**Initialize with default branch names**
+
+```git flow init -d```
+
 **Start feature branch**
 
 ```git flow feature start [feature-name]```
@@ -23,6 +27,18 @@ High-level branching model workflow commands
 **Finish release**
 
 ```git flow release finish [version]```
+
+**Publish a feature branch to remote**
+
+```git flow feature publish [feature-name]```
+
+**Start a hotfix**
+
+```git flow hotfix start [version]```
+
+**Finish a hotfix**
+
+```git flow hotfix finish [version]```
 
 # SYNOPSIS
 
@@ -51,6 +67,24 @@ High-level branching model workflow commands
 **finish**
 > Complete and merge branch.
 
+**publish**
+> Push branch to the remote repository.
+
+**track**
+> Track a remote branch locally.
+
+**pull**
+> Pull a remote branch (deprecated in favor of track).
+
+**delete**
+> Delete a finished branch.
+
+**list**
+> List existing branches of a given type.
+
+**-d**
+> Use default branch naming conventions during init.
+
 **--help**
 > Display help information.
 
@@ -70,4 +104,4 @@ git flow was created by **Vincent Driessen** in **2010** based on his successful
 
 # SEE ALSO
 
-[git-branch](/man/git-branch)(1), [git-merge](/man/git-merge)(1), [git-checkout](/man/git-checkout)(1)
+[git-branch](/man/git-branch)(1), [git-merge](/man/git-merge)(1), [git-checkout](/man/git-checkout)(1), [git-tag](/man/git-tag)(1)

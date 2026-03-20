@@ -36,6 +36,10 @@ Fast cross-platform conda package manager
 
 ```pixi info```
 
+**Search for packages**
+
+```pixi search [numpy]```
+
 # SYNOPSIS
 
 **pixi** _command_ [_options_] [_arguments_]
@@ -80,6 +84,12 @@ Fast cross-platform conda package manager
 
 **info**
 > Show project information.
+
+**search** _query_
+> Search for packages in configured channels.
+
+**clean**
+> Remove the environment and cache.
 
 **--dev**, **-d**
 > Operate on dev dependencies.
@@ -135,4 +145,4 @@ Newer tool, ecosystem still growing. Some conda packages may not work perfectly.
 
 # SEE ALSO
 
-[conda](/man/conda)(1), [mamba](/man/mamba)(1), [poetry](/man/poetry)(1), [cargo](/man/cargo)(1)
+[conda](/man/conda)(1), [mamba](/man/mamba)(1), [poetry](/man/poetry)(1), [cargo](/man/cargo)(1), [pip](/man/pip)(1)

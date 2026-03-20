@@ -24,6 +24,10 @@ creates composite images from multiple images arranged in a grid
 
 ```magick montage -background white [*.jpg] [output.png]```
 
+**Create montage with title and shadow**
+
+```magick montage -title "[My Gallery]" -shadow [*.jpg] [output.png]```
+
 # SYNOPSIS
 
 **magick** **montage** [_options_] _images_... _output_
@@ -47,6 +51,21 @@ creates composite images from multiple images arranged in a grid
 
 **-frame** _geometry_
 > Frame around thumbnails.
+
+**-shadow**
+> Add soft shadow beneath each thumbnail.
+
+**-title** _string_
+> Title for the montage image.
+
+**-font** _name_
+> Font for labels and title.
+
+**-pointsize** _value_
+> Font size for labels and title.
+
+**-mode** _type_
+> Framing style: Frame, Unframe, or Concatenate.
 
 # DESCRIPTION
 

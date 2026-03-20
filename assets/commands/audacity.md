@@ -61,7 +61,7 @@ Audacity is primarily an interactive graphical application. For batch processing
 # FILES
 
 **~/.audacity-data/audacity.cfg**
-> Per-user configuration file.
+> Per-user configuration file (Linux). On newer versions, may be at **~/.config/audacity/audacity.cfg**.
 
 **/var/tmp/audacity-_user_/**
 > Default location of the temporary directory. Should be on a fast local disk with ample free space.
@@ -84,4 +84,4 @@ Audacity was started in **1999** by Dominic Mazzoni and Roger Dannenberg at Carn
 
 # SEE ALSO
 
-[sox](/man/sox)(1), [ecasound](/man/ecasound)(1), [ardour](/man/ardour)(1), [lame](/man/lame)(1)
+[sox](/man/sox)(1), [ardour](/man/ardour)(1), [lame](/man/lame)(1)

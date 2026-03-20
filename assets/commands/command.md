@@ -8,7 +8,7 @@ execute commands bypassing shell functions
 
 ```command [ls]```
 
-**Check if a command exists**
+**Check if a command exists** (POSIX-portable way)
 
 ```command -v [git] && echo "git is installed"```
 
@@ -57,4 +57,4 @@ The **command** builtin was specified in **POSIX.2** (1992) to provide a standar
 
 # SEE ALSO
 
-[type](/man/type)(1), [which](/man/which)(1), [builtin](/man/builtin)(1), [hash](/man/hash)(1)
+[which](/man/which)(1), [type](/man/type)(1), [builtin](/man/builtin)(1), [hash](/man/hash)(1)

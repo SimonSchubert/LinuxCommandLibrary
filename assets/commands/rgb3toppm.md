@@ -25,9 +25,9 @@ _bluefile_
 
 # DESCRIPTION
 
-**rgb3toppm** combines three separate PGM grayscale files (red, green, blue channels) into a single PPM color image. Part of Netpbm toolkit.
+**rgb3toppm** combines three separate PGM grayscale files (red, green, blue channels) into a single PPM color image. All three input files must have the same dimensions. Output is written to standard output. Part of Netpbm toolkit.
 
 # SEE ALSO
 
-[ppmtorgb3](/man/ppmtorgb3)(1), [yuvsplittoppm](/man/yuvsplittoppm)(1)
+[ppmtorgb3](/man/ppmtorgb3)(1), [pamstack](/man/pamstack)(1), [pgmtoppm](/man/pgmtoppm)(1), [ppmtopgm](/man/ppmtopgm)(1), [yuvsplittoppm](/man/yuvsplittoppm)(1)
 

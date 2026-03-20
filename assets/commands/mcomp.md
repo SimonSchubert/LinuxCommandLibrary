@@ -1,61 +1,39 @@
 # TAGLINE
 
-compares audio files byte by byte or acoustically
+Compares two files using mtools
 
 # TLDR
 
-**Compare audio files**
+**Compare a file on a DOS disk with a local file**
 
-```mcomp [file1.mp3] [file2.mp3]```
+```mcomp [a:file.txt] [path/to/local_file.txt]```
 
-**Compare with tolerance**
+**Compare a file from a disk image with a local file**
 
-```mcomp -t [0.001] [file1.mp3] [file2.mp3]```
-
-**Verbose comparison**
-
-```mcomp -v [file1.mp3] [file2.mp3]```
-
-**Compare directories**
-
-```mcomp -r [dir1/] [dir2/]```
+```mcomp -i [path/to/disk.img] [::/file.txt] [path/to/local_file.txt]```
 
 # SYNOPSIS
 
-**mcomp** [_options_] _file1_ _file2_
+**mcomp** _msdos-file_ _local-file_
 
 # PARAMETERS
 
-_FILE1_ _FILE2_
-> Audio files to compare.
+_msdos-file_
+> File on a DOS/floppy disk accessed via mtools.
 
-**-t** _VALUE_
-> Tolerance threshold.
-
-**-v**
-> Verbose output.
-
-**-r**
-> Recursive comparison.
-
-**--help**
-> Display help information.
+_local-file_
+> Local file to compare against.
 
 # DESCRIPTION
 
-**mcomp** compares audio files byte by byte or acoustically. It identifies differences between audio.
+**mcomp** compares two files byte by byte, where the first file resides on a DOS-formatted disk (such as a floppy) accessible through mtools. It is functionally equivalent to using mcopy to copy the file locally and then comparing with cmp.
 
-The tool can detect re-encodings, modifications, or verify audio integrity.
+This command is part of the **mtools** package, a collection of utilities for accessing MS-DOS disks from Unix without mounting them.
 
 # CAVEATS
 
-Audio format support varies. Tolerance for lossy formats. May need specific codec support.
-
-# HISTORY
-
-mcomp provides audio file comparison for verifying **audio integrity** and detecting modifications.
+The first argument must be a file accessible via mtools (e.g., on a DOS-formatted disk or disk image). On modern systems, using mcopy followed by cmp provides the same functionality and is more commonly used.
 
 # SEE ALSO
 
-[cmp](/man/cmp)(1), [diff](/man/diff)(1), [sox](/man/sox)(1)
-
+[cmp](/man/cmp)(1), [mcopy](/man/mcopy)(1), [diff](/man/diff)(1)

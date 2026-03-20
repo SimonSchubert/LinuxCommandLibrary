@@ -46,6 +46,15 @@ Integrated shell for FRRouting daemons
 **-E**, **--echo**
 > Echo the command and prompt before displaying results. Useful for scripting.
 
+**-C**, **--dryrun**
+> Check the configuration file for syntax validity without applying.
+
+**-n**, **--noerror**
+> Ignore errors for purposes of return codes (useful in scripts).
+
+**-u**, **--user**
+> Restrict to unprivileged mode, disallowing configuration commands.
+
 **-h**, **--help**
 > Display help message.
 

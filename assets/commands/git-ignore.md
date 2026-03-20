@@ -20,6 +20,10 @@ Manage gitignore entries
 
 ```git ignore --global [pattern]```
 
+**Add to private exclude file**
+
+```git ignore --private [pattern]```
+
 # SYNOPSIS
 
 **git ignore** [_options_] [_patterns_]
@@ -29,11 +33,14 @@ Manage gitignore entries
 _PATTERNS_
 > Patterns to add to .gitignore.
 
-**--global**
+**-l**, **--local**
+> Add to local .gitignore (default).
+
+**-g**, **--global**
 > Add to global gitignore.
 
-**--local**
-> Add to local .gitignore (default).
+**-p**, **--private**
+> Add to private exclude file (.git/info/exclude).
 
 **--help**
 > Display help information.
@@ -49,6 +56,9 @@ Part of the git-extras suite, the command handles proper formatting and avoids d
 **.gitignore**
 > Repository-level ignore patterns managed by this command.
 
+**.git/info/exclude**
+> Private exclude patterns for the repository when using --private.
+
 **~/.gitignore_global**
 > Global ignore patterns applied to all repositories when using --global.
 
@@ -62,4 +72,4 @@ git ignore is part of **git-extras**, providing a command-line interface for the
 
 # SEE ALSO
 
-[git-check-ignore](/man/git-check-ignore)(1), [gibo](/man/gibo)(1), [gitignore](/man/gitignore)(5)
+[git-check-ignore](/man/git-check-ignore)(1), [git-extras](/man/git-extras)(1), [gibo](/man/gibo)(1)

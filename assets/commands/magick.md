@@ -1,6 +1,6 @@
 # TAGLINE
 
-primary command for ImageMagick 7+, replacing separate commands like
+Primary command for ImageMagick 7+, replacing convert, mogrify, and identify
 
 # TLDR
 
@@ -38,7 +38,7 @@ primary command for ImageMagick 7+, replacing separate commands like
 
 # DESCRIPTION
 
-**magick** is the primary command for ImageMagick 7+, replacing separate commands like convert, mogrify, and identify. It performs image manipulation including format conversion, resizing, and compositing.
+**magick** is the primary command for ImageMagick 7+, replacing convert, mogrify, and identify. It performs image manipulation including format conversion, resizing, and compositing.
 
 The tool supports over 200 image formats and provides extensive transformation capabilities.
 
@@ -79,6 +79,18 @@ The tool supports over 200 image formats and provides extensive transformation c
 
 **-composite**
 > Combine images.
+
+**-blur** _radius_x_sigma_
+> Blur the image.
+
+**-sharpen** _radius_x_sigma_
+> Sharpen the image.
+
+**-auto-orient**
+> Adjust orientation based on EXIF data.
+
+**-format** _type_
+> Set output format (used with mogrify).
 
 # CAVEATS
 

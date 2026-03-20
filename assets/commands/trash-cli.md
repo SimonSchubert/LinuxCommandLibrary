@@ -59,10 +59,16 @@ FreeDesktop.org trash command-line tools
 > Allow trashing directories (trash-put).
 
 **-f**, **--force**
-> Ignore nonexistent files.
+> Ignore nonexistent files, do not print error messages.
+
+**-i**
+> Silently ignore nonexistent files (trash-put).
 
 **-v**, **--verbose**
-> Verbose mode.
+> Explain what is being done.
+
+**--trash-dir** _DIR_
+> Use specified directory as trash folder instead of the default.
 
 **--version**
 > Show version.

@@ -24,6 +24,14 @@ execute commands with injected secrets
 
 ```doppler run --fallback [.env.backup] -- [command]```
 
+**Mount secrets as** a file
+
+```doppler run --mount [secrets.env] -- [command]```
+
+**Transform secret names** for .NET
+
+```doppler run --name-transformer dotnet-env -- [dotnet run]```
+
 # SYNOPSIS
 
 **doppler run** [_options_] **--** _command_ [_args_]
@@ -46,7 +54,22 @@ execute commands with injected secrets
 > Disable fallback behavior.
 
 **--preserve-env**
-> Preserve existing environment variables.
+> Preserve existing environment variables. Accepts a comma-separated list of specific secrets (e.g. --preserve-env="FOO,BAR") or "true" for all.
+
+**--mount** _PATH_
+> Write secrets to an ephemeral file instead of injecting into the environment. Format auto-detected from file extension.
+
+**--mount-format** _FORMAT_
+> File format for mounted secrets (e.g. json, env).
+
+**--name-transformer** _TRANSFORMER_
+> Transform secret names from UPPER_SNAKE_CASE (e.g. dotnet-env, tf-var, lower-camel, lower-snake).
+
+**--command** _CMD_
+> Command to execute (alternative to using -- separator).
+
+**--clean-exit**
+> Exit with a 0 status code when the command is interrupted (SIGINT).
 
 **--help**
 > Display help information.

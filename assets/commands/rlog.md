@@ -79,15 +79,9 @@ Display RCS file revision history
 
 # DESCRIPTION
 
-**rlog** displays RCS (Revision Control System) file history. It shows revision metadata and log messages.
+**rlog** prints information about RCS files. Without options, rlog prints the complete log: header information (RCS file name, working file, head revision, default branch, access list, locks, symbolic names, comment leader, total revisions) followed by entries for each revision (number, date, author, state, number of lines added/deleted, and log message).
 
-Header information includes filename, working file, and head revision. Access list and locks shown.
-
-Revision listings show author, date, and state. Log messages describe changes.
-
-Date filtering finds revisions in time ranges. Useful for release history.
-
-Author filtering shows one person's contributions. Tracks individual changes.
+Options **-d**, **-l**, **-s**, and **-w** select revisions by their intersection, while **-b** and **-r** select by their union. Only revisions matching all specified criteria are printed.
 
 # CAVEATS
 

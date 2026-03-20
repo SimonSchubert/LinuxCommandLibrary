@@ -4,9 +4,9 @@ Exoscale persistent block storage volume management
 
 # TLDR
 
-**List block storage volumes**
+**List block storage volumes in a zone**
 
-```exo compute block-storage list```
+```exo compute block-storage list --zone [ch-gva-2]```
 
 **Create a volume**
 
@@ -18,11 +18,11 @@ Exoscale persistent block storage volume management
 
 **Attach volume to instance**
 
-```exo compute block-storage attach [volume] [instance]```
+```exo compute block-storage attach [volume] [instance] --zone [ch-gva-2]```
 
 **Detach volume**
 
-```exo compute block-storage detach [volume]```
+```exo compute block-storage detach [volume] --zone [ch-gva-2]```
 
 **Delete a volume**
 
@@ -49,8 +49,11 @@ Exoscale persistent block storage volume management
 **detach**
 > Detach from instance.
 
-**resize**
-> Resize volume.
+**update**
+> Update volume properties (rename, resize, relabel).
+
+**snapshot**
+> Manage volume snapshots (create, list, show, delete, update).
 
 **delete**
 > Delete volume.
@@ -61,7 +64,7 @@ Exoscale persistent block storage volume management
 
 Block storage volumes survive instance termination and can be moved between instances. They are ideal for databases, application data, and any workload requiring persistent storage separate from the instance lifecycle.
 
-Volumes can be resized online and support snapshots for backup and cloning.
+Volumes can be resized via the **update** subcommand and support snapshots for backup and cloning.
 
 # SEE ALSO
 

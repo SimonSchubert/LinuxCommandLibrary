@@ -4,25 +4,33 @@ Terminal viewer for tabular data
 
 # TLDR
 
-**View CSV**
+**View a CSV file**
 
 ```tv [data.csv]```
 
-**View TSV**
+**View a TSV file**
 
 ```tv -t [data.tsv]```
 
-**View JSON**
-
-```tv [data.json]```
-
-**Custom delimiter**
+**View with a custom delimiter**
 
 ```tv -d ";" [data.txt]```
 
-**No header**
+**Show only the first N rows**
+
+```tv -n [10] [data.csv]```
+
+**View without a header row**
 
 ```tv --no-header [data.csv]```
+
+**Use a specific color palette**
+
+```tv -c [1] [data.csv]```
+
+**Pipe data from another command**
+
+```cat [data.csv] | tv```
 
 # SYNOPSIS
 
@@ -40,18 +48,27 @@ Terminal viewer for tabular data
 > No header row.
 
 **-n** _NUM_
-> Show first N rows.
+> Number of rows to output. Default: 25.
 
-**--help**
+**-c** _N_
+> Color palette: 1 (nord), 2 (one_dark), 3 (gruvbox), 4 (dracula), 5 (uncolor).
+
+**-u** _WIDTH_
+> Upper (maximum) column width. Default: 20.
+
+**-l** _WIDTH_
+> Lower (minimum) column width. Must be 2 or larger. Default: 2.
+
+**-h**, **--help**
 > Show help.
 
 # DESCRIPTION
 
-**tv** is a terminal viewer for tabular data that displays CSV, TSV, and JSON files as formatted, column-aligned tables. It automatically detects the input format and renders the data with proper alignment for easy reading in the terminal.
+**tv** (tidy-viewer) is a terminal viewer for tabular data that displays CSV, TSV, and other delimited files as formatted, column-aligned tables. It reads from files or stdin and renders data with proper alignment for easy reading in the terminal.
 
-Custom delimiters can be specified for non-standard formats, and the **--no-header** flag handles files without a header row. The tool supports limiting output to a specified number of rows for previewing large datasets.
+Custom delimiters can be specified for non-standard formats, and the **--no-header** flag handles files without a header row. The tool supports limiting output to a specified number of rows (default 25) for previewing large datasets. Missing values (NA, NULL, empty) are detected and highlighted.
 
-Output is optimized for terminal display, adjusting column widths based on content and available terminal space.
+Output is optimized for terminal display, with configurable column widths and 5 built-in color palettes. A dotfile (**~/.tv.toml**) can be used for persistent configuration.
 
 # CAVEATS
 

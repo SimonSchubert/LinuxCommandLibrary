@@ -24,6 +24,18 @@ Verilog to C++ simulation compiler
 
 ```verilator --cc [design.v] --trace```
 
+**Generate SystemC** output
+
+```verilator --sc [design.v]```
+
+**Build binary** directly
+
+```verilator --binary [design.v] --exe [tb.cpp]```
+
+**Compile with parallel jobs**
+
+```verilator --cc [design.v] --exe [tb.cpp] --build -j [4]```
+
 # SYNOPSIS
 
 **verilator** [_--lint-only_] [_--cc_] [_--trace_] [_options_] _files_
@@ -45,8 +57,26 @@ Verilog to C++ simulation compiler
 **--trace**
 > Enable waveforms.
 
+**--sc**
+> Generate SystemC output.
+
+**--binary**
+> Generate C++ and build a binary executable directly.
+
 **-Wall**
-> All warnings.
+> Enable all warnings.
+
+**--top-module** _module_
+> Specify the top-level module name.
+
+**-j** _N_
+> Parallelism for build jobs.
+
+**-CFLAGS** _flags_
+> Pass flags to the C++ compiler.
+
+**-LDFLAGS** _flags_
+> Pass flags to the C++ linker.
 
 # DESCRIPTION
 
@@ -56,7 +86,7 @@ The tool also functions as a lint checker with **--lint-only**, catching common 
 
 # CAVEATS
 
-Not full simulator. Cycle-based. Synthesizable subset.
+Verilator is cycle-based and only supports the synthesizable subset of Verilog/SystemVerilog. It does not support all simulation constructs (e.g., delays, some system tasks). Two-state simulation only (no X/Z propagation).
 
 # HISTORY
 

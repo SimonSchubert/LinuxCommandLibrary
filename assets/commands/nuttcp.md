@@ -24,9 +24,17 @@ network performance measurement tool
 
 ```nuttcp -T [30] [server_ip]```
 
-**Bidirectional test**
+**Receiver mode** (reverse direction test)
 
 ```nuttcp -r [server_ip]```
+
+**Use multiple parallel streams**
+
+```nuttcp -N [4] [server_ip]```
+
+**Test with interval reporting** every second
+
+```nuttcp -i [1] [server_ip]```
 
 # SYNOPSIS
 
@@ -59,13 +67,31 @@ network performance measurement tool
 > Control port.
 
 **-w** _size_
-> Window size.
+> Window size (socket buffer size).
+
+**-N** _nstream_
+> Number of parallel data streams (default 1, max 128).
+
+**-i** _interval_
+> Interval reporting in seconds.
+
+**-l** _buflen_
+> Length of network read/write buffer in bytes.
+
+**-s**
+> Use stdin/stdout for data (enables disk-to-network transfers).
+
+**-F**
+> Flip direction of data connection open (useful with firewalls/NAT).
+
+**-b**
+> Brief one-line output (default format).
 
 # DESCRIPTION
 
 **nuttcp** is a network performance measurement tool. It measures TCP and UDP throughput between systems, providing detailed statistics about network performance.
 
-nuttcp is similar to iperf but with some different features and reporting format.
+nuttcp is similar to iperf but includes features such as server mode, rate limiting, multiple parallel streams, and timer-based usage. It also supports IPv6, IPv4 multicast, and setting TOS/DSCP bits.
 
 # EXAMPLE OUTPUT
 

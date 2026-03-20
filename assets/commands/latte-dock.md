@@ -41,6 +41,9 @@ Load a **specific layout**
 **--available-layouts**
 > List available layouts
 
+**--replace**
+> Replace an already running instance of Latte Dock
+
 # DESCRIPTION
 
 **latte-dock** is a dock panel for KDE Plasma that provides an alternative to the default Plasma panel. It offers macOS-like dock functionality with animations, applets, and customizable layouts.
@@ -49,12 +52,12 @@ Multiple layouts can be saved and switched between, allowing different configura
 
 # CAVEATS
 
-KDE Plasma desktop required. Some features may require specific Plasma versions. Development of Latte Dock has slowed, and some users report compatibility issues with newer Plasma versions.
+KDE Plasma desktop required. Development of Latte Dock has officially ended. The maintainer announced the project is no longer actively developed, and compatibility issues with newer Plasma versions (especially Plasma 6) are expected. Users are encouraged to migrate to Plasma's built-in panel features.
 
 # HISTORY
 
-Latte Dock was created as a more polished dock alternative for KDE Plasma, offering smooth animations and flexible customization. It became popular in the KDE community as a macOS-style dock replacement.
+Latte Dock was created as a more polished dock alternative for KDE Plasma, offering smooth animations and flexible customization. It became popular in the KDE community as a macOS-style dock replacement. The project was officially discontinued by its maintainer.
 
 # SEE ALSO
 
-[plasmashell](/man/plasmashell)(1), [krunner](/man/krunner)(1)
+[plasmashell](/man/plasmashell)(1)

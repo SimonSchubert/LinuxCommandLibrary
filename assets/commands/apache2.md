@@ -16,13 +16,17 @@ Test **configuration syntax**
 
 ```apache2 -t```
 
-Show **compiled modules**
+Show **loaded modules**
 
 ```apache2 -M```
 
 Show **version** and build options
 
 ```apache2 -V```
+
+Show **parsed virtual host** settings
+
+```apache2 -S```
 
 Start with **specific config**
 
@@ -47,7 +51,7 @@ On Debian/Ubuntu systems, apache2 is typically managed through systemctl or apac
 > Run in single-process debugging mode
 
 **-M**
-> List compiled-in and loaded modules
+> List loaded modules (compiled-in and shared)
 
 **-V**
 > Show version and compile settings
@@ -62,10 +66,28 @@ On Debian/Ubuntu systems, apache2 is typically managed through systemctl or apac
 > Define parameter for <IfDefine>
 
 **-e** _level_
-> Startup error log level
+> Startup error log level.
 
 **-k** _command_
-> Signal command: start, stop, restart, graceful
+> Signal command: start, stop, restart, graceful, graceful-stop.
+
+**-S**
+> Show parsed virtual host settings.
+
+**-l**
+> List compiled-in modules.
+
+**-L**
+> List available configuration directives.
+
+**-C** _directive_
+> Process directive before reading config files.
+
+**-c** _directive_
+> Process directive after reading config files.
+
+**-h**
+> Display short summary of command-line options.
 
 # CONFIGURATION
 

@@ -42,13 +42,16 @@ Create user on a **remote** homeserver
 > Do not make the new user an admin (default)
 
 **-k** _secret_, **--shared-secret** _secret_
-> Shared secret (alternative to providing via config file)
+> Shared secret (alternative to providing via config file).
 
 **-t** _type_, **--user-type** _type_
-> User type as specified in synapse.api.constants.UserTypes
+> User type as specified in synapse.api.constants.UserTypes.
+
+**-h**, **--help**
+> Show help message and exit.
 
 **server_url**
-> Homeserver URL (default: https://localhost:8448)
+> Homeserver URL (default: https://localhost:8448).
 
 # DESCRIPTION
 
@@ -63,7 +66,7 @@ This is the official way to create users on a Synapse server with closed registr
 
 # CAVEATS
 
-Requires access to the homeserver.yaml configuration file. Non-interactive mode exposes passwords in shell history; use interactive mode for security.
+Requires access to the homeserver.yaml configuration file or the registration shared secret. Non-interactive mode exposes passwords in shell history; use interactive mode or **-k** for better security.
 
 # HISTORY
 

@@ -62,22 +62,34 @@ React-based static site generator
 # PARAMETERS
 
 **-H**, **--host** _host_
-> Development server host (default: localhost).
+> Set host for develop/serve (default: localhost).
 
 **-p**, **--port** _port_
-> Development server port (default: 8000).
+> Set port for develop/serve (default: 8000 for develop, 9000 for serve).
 
 **-o**, **--open**
 > Open the site in the default browser.
 
+**-S**, **--https**
+> Enable HTTPS for the development server.
+
+**--inspect**
+> Open a debugging port for Node.js inspector.
+
 **--prefix-paths**
-> Build with path prefix (requires pathPrefix in gatsby-config).
+> Build/serve with path prefix (requires pathPrefix in gatsby-config).
 
 **--no-uglify**
 > Build without uglifying JS bundles (for debugging).
 
+**--profile**
+> Enable React profiling during build.
+
 **--verbose**
 > Turn on verbose output.
+
+**-C**, **--clipboard**
+> Copy environment info to clipboard (gatsby info).
 
 # CONFIGURATION
 
@@ -105,5 +117,5 @@ Gatsby was created by **Kyle Mathews** in **2015** as a modern static site gener
 
 # SEE ALSO
 
-[npm](/man/npm)(1), [webpack](/man/webpack)(1)
+[npm](/man/npm)(1), [node](/man/node)(1), [hugo](/man/hugo)(1)
 

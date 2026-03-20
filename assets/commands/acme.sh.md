@@ -81,6 +81,18 @@ The tool automatically handles certificate renewal through cron jobs and support
 **--force**
 > Force renewal regardless of expiry
 
+**--revoke** **-d** _domain_
+> Revoke a certificate
+
+**--remove** **-d** _domain_
+> Remove a certificate from the renewal list
+
+**--server** _url_
+> Specify ACME server (default: Let's Encrypt). Use letsencrypt, zerossl, buypass, or a custom URL.
+
+**--upgrade**
+> Upgrade acme.sh to the latest version
+
 # CONFIGURATION
 
 **~/.acme.sh/account.conf**

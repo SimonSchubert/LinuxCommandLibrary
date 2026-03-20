@@ -28,6 +28,10 @@ compresses files using the LZO library
 
 ```lzop -c [file]```
 
+**Compress and delete original file**
+
+```lzop -U [file]```
+
 # SYNOPSIS
 
 **lzop** [_options_] [_file_...]
@@ -47,10 +51,25 @@ compresses files using the LZO library
 > Test archive integrity.
 
 **-1** to **-9**
-> Compression level.
+> Compression level (default: -3).
 
 **-f**, **--force**
-> Force overwrite.
+> Force overwrite of existing files.
+
+**-U**
+> Delete input files after successful compression or decompression.
+
+**-v**, **--verbose**
+> Display the name for each file compressed or decompressed.
+
+**-o** _FILE_, **--output=**_FILE_
+> Write output to the specified file.
+
+**-p** _DIR_, **--path=**_DIR_
+> Write output files into the specified directory.
+
+**-F**, **--no-checksum**
+> Do not store or verify a checksum of the uncompressed data.
 
 # DESCRIPTION
 
@@ -58,5 +77,5 @@ compresses files using the LZO library
 
 # SEE ALSO
 
-[lzip](/man/lzip)(1), [gzip](/man/gzip)(1)
+[gzip](/man/gzip)(1), [bzip2](/man/bzip2)(1), [lzip](/man/lzip)(1), [xz](/man/xz)(1), [zstd](/man/zstd)(1)
 

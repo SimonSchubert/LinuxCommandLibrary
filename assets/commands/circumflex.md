@@ -102,7 +102,7 @@ Requires a modern version of **less** as its pager. Depends on Algolia's Hacker 
 
 # HISTORY
 
-**circumflex** was created by **bensadeh** and publicly announced on Hacker News in **October 2022**. Written in Go using the Bubble Tea TUI framework. The latest version is 3.9 (January 2025), licensed under AGPL-3.0, with approximately 1,900 GitHub stars.
+**circumflex** was created by **bensadeh** and publicly announced on Hacker News in **October 2022**. Written in Go using the Bubble Tea TUI framework, licensed under AGPL-3.0.
 
 # SEE ALSO
 

@@ -12,11 +12,7 @@ creates and restores backups of iOS devices running iOS 4 and later
 
 ```idevicebackup2 restore [backup-dir]```
 
-**Encrypted backup**
-
-```idevicebackup2 backup --full [backup-dir]```
-
-**List backups**
+**List files in backup**
 
 ```idevicebackup2 list [backup-dir]```
 
@@ -24,47 +20,60 @@ creates and restores backups of iOS devices running iOS 4 and later
 
 ```idevicebackup2 -u [device-udid] backup [backup-dir]```
 
-**Enable encryption**
+**Force full backup**
+
+```idevicebackup2 backup --full [backup-dir]```
+
+**Enable backup encryption**
 
 ```idevicebackup2 encryption on [password]```
 
 # SYNOPSIS
 
-**idevicebackup2** [_options_] _command_ _directory_
+**idevicebackup2** [_OPTIONS_] _CMD_ [_CMDOPTIONS_] _DIRECTORY_
 
 # SUBCOMMANDS
 
 **backup**
-> Create device backup.
+> Create device backup. Use --full to force full backup.
 
 **restore**
-> Restore from backup.
+> Restore from backup. Supports --system, --settings, --remove, --copy, --skip-apps, --no-reboot, --password.
 
 **list**
-> List files in backup.
+> List files of last completed backup in CSV format.
 
 **unback**
-> Extract backup files.
+> Unpack a completed backup.
 
-**encryption**
-> Manage backup encryption.
+**encryption** on|off [_PWD_]
+> Enable or disable backup encryption.
+
+**changepw** [_OLD_] [_NEW_]
+> Change backup password on target device.
+
+**cloud** on|off
+> Enable or disable cloud use (requires iCloud account).
 
 **info**
-> Show backup information.
+> Show details about last completed backup.
 
 # PARAMETERS
 
-**-u** _udid_
-> Target specific device.
+**-u**, **--udid** _UDID_
+> Target specific device by UDID.
 
-**--full**
-> Force full backup.
+**-s**, **--source** _UDID_
+> Use backup data from device specified by UDID.
 
-**--source** _udid_
-> Restore from different device backup.
+**-i**, **--interactive**
+> Request passwords interactively on the command line.
 
-**-n**
-> Connect over network.
+**-n**, **--network**
+> Connect to network device.
+
+**-d**, **--debug**
+> Enable communication debugging.
 
 # DESCRIPTION
 

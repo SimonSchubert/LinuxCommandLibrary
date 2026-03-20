@@ -69,6 +69,12 @@ Store and manage secrets securely
 **describe-secret**
 > Get metadata about a secret.
 
+**batch-get-secret-value**
+> Retrieve values for multiple secrets in a single call.
+
+**tag-resource**
+> Add tags to a secret.
+
 **--secret-id** _id_
 > Secret name or ARN.
 

@@ -24,9 +24,13 @@ manages launchd services on macOS
 
 ```launchctl stop [com.example.service]```
 
-**Bootstrap service** (modern)
+**Bootstrap service** (modern replacement for load)
 
-```launchctl bootstrap gui/[uid] [/path/to/service.plist]```
+```sudo launchctl bootstrap gui/[uid] [/path/to/service.plist]```
+
+**Bootout service** (modern replacement for unload)
+
+```sudo launchctl bootout gui/[uid]/[com.example.service]```
 
 **Print service info**
 
@@ -71,12 +75,21 @@ The tool replaces traditional init scripts on macOS, using property list (plist)
 **kickstart** _target_
 > Force start service.
 
-**enable/disable**
-> Enable/disable service.
+**enable** _service_
+> Enable service.
+
+**disable** _service_
+> Disable service.
+
+**blame** _target_
+> Print reason for service being loaded/started.
+
+**dumpstate**
+> Dump launchd state to stdout.
 
 # CAVEATS
 
-macOS only. Modern subcommands differ from legacy. System services need root. GUI services need user domain.
+macOS only. The **load/unload** subcommands are deprecated since macOS 10.10; use **bootstrap/bootout** instead. System services require root. GUI services use the user domain (gui/UID).
 
 # HISTORY
 
@@ -84,4 +97,4 @@ macOS only. Modern subcommands differ from legacy. System services need root. GU
 
 # SEE ALSO
 
-[launchd](/man/launchd)(8), [launchd.plist](/man/launchd.plist)(5), [systemctl](/man/systemctl)(1)
+[systemctl](/man/systemctl)(1)

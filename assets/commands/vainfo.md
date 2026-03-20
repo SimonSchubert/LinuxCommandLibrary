@@ -4,17 +4,21 @@ Display VA-API video acceleration info
 
 # TLDR
 
-**Show VA-API info**
+**Show VA-API info** for the default device
 
 ```vainfo```
 
-**Specific display**
+**Show info for a specific DRM device**
 
-```vainfo --display [drm] --device [/dev/dri/renderD128]```
+```vainfo --display drm --device [/dev/dri/renderD128]```
 
-**Show all profiles**
+**Show VA-API info** via X11 display
 
-```vainfo```
+```vainfo --display x11```
+
+**Show VA-API info** via Wayland display
+
+```vainfo --display wayland```
 
 # SYNOPSIS
 
@@ -23,10 +27,13 @@ Display VA-API video acceleration info
 # PARAMETERS
 
 **--display** _TYPE_
-> Display type (drm, x11, wayland).
+> Display backend type: drm, x11, or wayland.
 
 **--device** _PATH_
-> DRM device path.
+> DRM device path (e.g., /dev/dri/renderD128). Only used with --display drm.
+
+**-a**, **--all**
+> Show all supported attributes for each profile/entrypoint pair.
 
 **--help**
 > Show help.
@@ -39,7 +46,7 @@ The output includes the VA-API driver name, version, and a list of supported pro
 
 # CAVEATS
 
-Requires VA-API drivers. GPU-specific. Part of libva-utils.
+Requires VA-API drivers installed (e.g., intel-media-driver, mesa-va-drivers). Output is GPU and driver specific. Part of the libva-utils package.
 
 # HISTORY
 
@@ -47,4 +54,4 @@ Requires VA-API drivers. GPU-specific. Part of libva-utils.
 
 # SEE ALSO
 
-[vdpauinfo](/man/vdpauinfo)(1), [glxinfo](/man/glxinfo)(1), [vulkaninfo](/man/vulkaninfo)(1)
+[vdpauinfo](/man/vdpauinfo)(1), [glxinfo](/man/glxinfo)(1), [vulkaninfo](/man/vulkaninfo)(1), [ffmpeg](/man/ffmpeg)(1)

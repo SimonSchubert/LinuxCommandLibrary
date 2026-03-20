@@ -20,9 +20,9 @@ captures screenshots from X11 displays
 
 ```magick import -pause [5] [screenshot.png]```
 
-**Capture region**
+**Capture with specific quality**
 
-```magick import -crop [800x600+100+100] [output.png]```
+```magick import -quality [90] [screenshot.jpg]```
 
 # SYNOPSIS
 
@@ -31,19 +31,37 @@ captures screenshots from X11 displays
 # PARAMETERS
 
 **-window** _id_
-> Capture specific window.
+> Capture specific window by ID or name (use "root" for entire screen).
 
 **-pause** _seconds_
-> Delay before capture.
+> Delay in seconds before capture.
 
 **-crop** _geometry_
-> Capture specific region.
+> Crop the captured image to specified size and offset.
 
 **-frame**
-> Include window frame.
+> Include window manager frame in capture.
 
 **-screen**
-> Capture entire screen.
+> Capture the entire screen instead of a single window.
+
+**-border**
+> Include window border in the output image.
+
+**-descend**
+> Obtain image by descending the window hierarchy.
+
+**-snaps** _value_
+> Number of screen snapshots to take.
+
+**-quality** _value_
+> Set output compression quality (e.g., JPEG quality 1-100).
+
+**-silent**
+> Operate silently without audio notification.
+
+**-resize** _geometry_
+> Resize the captured image.
 
 # DESCRIPTION
 

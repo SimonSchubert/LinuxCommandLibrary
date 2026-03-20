@@ -1,6 +1,6 @@
 # TAGLINE
 
-open-source programmer for TL866II+, TL866A, and TL866CS devices
+Open-source programmer for TL866II+, TL866A, TL866CS, and T48 devices
 
 # TLDR
 
@@ -32,7 +32,7 @@ open-source programmer for TL866II+, TL866A, and TL866CS devices
 
 ```minipro -p [ATmega328P] -r [output.hex] -f ihex```
 
-**Write without verify**
+**Write ignoring chip ID mismatch**
 
 ```minipro -p [AT24C256] -w [firmware.bin] -y```
 
@@ -67,25 +67,31 @@ open-source programmer for TL866II+, TL866A, and TL866CS devices
 > File format (raw, ihex, srec).
 
 **-y**
-> Skip verification after write.
+> Do not error on chip ID mismatch.
 
-**-c** _CONFIG_
-> Config file for chip settings.
+**-c** _TYPE_
+> Specify memory type: code, data, or config.
 
 **-s**
-> Skip chip detection.
+> Do not error on file size mismatch (warning only).
 
 **-v**
-> Verbose output.
+> Do not verify after write.
 
 **-e**
-> Skip erase before write.
+> Do not erase device before write.
+
+**-i**
+> Use ICSP mode.
+
+**-x**
+> Do not attempt to read chip ID (read mode only).
 
 # DESCRIPTION
 
-**minipro** is an open-source programmer for TL866II+, TL866A, and TL866CS devices. It programs EEPROMs, flash memory, microcontrollers, and other programmable chips.
+**minipro** is an Open-source programmer for TL866II+, TL866A, TL866CS, and T48 devices. It programs EEPROMs, flash memory, microcontrollers, and other programmable chips.
 
-The tool supports thousands of devices including Atmel AVR, Microchip PIC, EPROMs, EEPROMs, and various flash memory chips. The device database is community-maintained.
+The tool supports over 13000 devices including Atmel AVR, Microchip PIC, EPROMs, EEPROMs, and various flash memory chips. The device database is community-maintained.
 
 Read operations dump chip contents to files. Write operations program chips from binary or hex files. Verification confirms successful programming.
 
@@ -95,7 +101,7 @@ Intel HEX and Motorola S-Record formats are supported for microcontroller firmwa
 
 # CAVEATS
 
-Requires compatible TL866 programmer hardware. Not all chips in database tested. Some chips need specific adapter sockets. USB permissions may need configuration on Linux.
+Requires compatible TL866 or T48 programmer hardware. Not all chips in database tested. Some chips need specific adapter sockets. USB permissions may need configuration on Linux. T56 support is experimental.
 
 # HISTORY
 
@@ -103,4 +109,4 @@ Requires compatible TL866 programmer hardware. Not all chips in database tested.
 
 # SEE ALSO
 
-[avrdude](/man/avrdude)(1), [flashrom](/man/flashrom)(8), [stm32flash](/man/stm32flash)(1)
+[avrdude](/man/avrdude)(1), [flashrom](/man/flashrom)(8)

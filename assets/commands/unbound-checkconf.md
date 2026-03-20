@@ -16,9 +16,9 @@ Validate Unbound DNS configuration files
 
 ```unbound-checkconf -o [verbosity]```
 
-**Check and output parsed configuration**
+**Check configuration quietly** (no output on success)
 
-```unbound-checkconf -f [/etc/unbound/unbound.conf]```
+```unbound-checkconf -q [/etc/unbound/unbound.conf]```
 
 # SYNOPSIS
 
@@ -30,10 +30,13 @@ Validate Unbound DNS configuration files
 > Display help and exit.
 
 **-f**
-> Print full configuration after parsing.
+> Print full pathname with chroot applied. Use with the -o option.
 
 **-o** _option_
 > Print the value of a specific option to stdout.
+
+**-q**
+> Quiet mode, suppress output on success.
 
 # DESCRIPTION
 
@@ -57,4 +60,4 @@ Some errors (like missing auto-generated files) only appear at runtime. Does not
 
 # SEE ALSO
 
-[unbound](/man/unbound)(8), [unbound-control](/man/unbound-control)(8), [unbound-host](/man/unbound-host)(1), [unbound.conf](/man/unbound.conf)(5)
+[unbound](/man/unbound)(8), [unbound-control](/man/unbound-control)(8), [unbound-host](/man/unbound-host)(1)

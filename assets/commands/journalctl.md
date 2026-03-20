@@ -18,15 +18,19 @@ Show all messages by a **specific unit**
 
 Filter messages within a **time range**
 
-```journalctl -S yesterday -U today```
+```journalctl --since yesterday --until today```
 
 Show all messages by a **specific process**
 
 ```journalctl _PID=[pid]```
 
+**Grep** for a pattern in log messages
+
+```journalctl -g "[pattern]"```
+
 **Delete** journal logs older than 2 days
 
-```journalctl --vacuum-time 2d```
+```journalctl --vacuum-time=2d```
 
 Show messages by a specific **executable**
 
@@ -78,6 +82,15 @@ Show messages by a specific **executable**
 **--vacuum-size size**
 > Reduce journal to specified size
 
+**-g, --grep pattern**
+> Filter entries by regular expression (PCRE2)
+
+**--no-pager**
+> Do not pipe output into a pager
+
+**--list-boots**
+> Show a list of boot IDs with timestamps
+
 **--disk-usage**
 > Show current disk usage of journal
 
@@ -93,8 +106,8 @@ Journal files are stored in /var/log/journal/ (persistent) or /run/log/journal/ 
 
 # HISTORY
 
-Part of **systemd**, introduced in **2010** by Lennart Poettering. Replaces traditional syslog for systems using systemd.
+Part of **systemd**, introduced in **2011** by Lennart Poettering. Replaces traditional syslog for systems using systemd.
 
 # SEE ALSO
 
-[dmesg](/man/dmesg)(1), [systemctl](/man/systemctl)(1), [systemd](/man/systemd)(1)
+[dmesg](/man/dmesg)(1), [systemctl](/man/systemctl)(1)

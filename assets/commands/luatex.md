@@ -43,19 +43,37 @@ extended TeX engine with embedded Lua scripting
 > Enable shell commands.
 
 **--interaction** _mode_
-> Interaction mode.
+> Set interaction mode: batchmode, nonstopmode, scrollmode, or errorstopmode.
 
 **--halt-on-error**
 > Stop on first error.
 
 **--lua** _file_
-> Lua initialization file.
+> Lua initialization file. When present, LuaTeX enters an alternative mode of command-line parsing.
+
+**--luaonly**
+> Start LuaTeX as a Lua interpreter only, not a TeX engine.
+
+**--safer**
+> Disable Lua commands that can be abused by malicious documents.
+
+**--nosocket**
+> Disable the luasocket (network) library.
+
+**--synctex** _NUMBER_
+> Enable/disable SyncTeX extension for source-PDF synchronization.
+
+**--jobname** _STRING_
+> Set the job name to STRING.
+
+**--draftmode**
+> Skip PDF output and image reading for faster compilation.
 
 # DESCRIPTION
 
-**LuaTeX** is an extended TeX engine with embedded Lua scripting. It combines the typesetting power of TeX with Lua programming, enabling dynamic document generation and advanced customization.
+**LuaTeX** is an extended version of pdfTeX with Unicode and OpenType font support, embedded Lua scripting, the e-TeX and Omega extensions, and an integrated MetaPost engine. It can produce both PDF and DVI output. The engine combines the typesetting power of TeX with Lua programming, enabling dynamic document generation and advanced customization.
 
-LuaLaTeX is the LaTeX format for LuaTeX, replacing pdfLaTeX for modern documents.
+LuaLaTeX is the LaTeX format for LuaTeX, commonly used as a modern replacement for pdfLaTeX. LuaTeX can also be invoked as **texlua** (a Lua interpreter with TeX-related libraries) or **texluac** (a Lua bytecode compiler).
 
 # LUA IN DOCUMENTS
 
@@ -70,7 +88,7 @@ LuaLaTeX is the LaTeX format for LuaTeX, replacing pdfLaTeX for modern documents
 
 # CAVEATS
 
-Slower than pdfLaTeX for simple documents. Some packages need adaptation. Memory usage higher than other engines. Unicode-native.
+Slower than pdfLaTeX for simple documents. Some packages need adaptation for the LuaTeX engine. Memory usage is higher than other TeX engines. Natively supports Unicode (UTF-8 input).
 
 # HISTORY
 
@@ -78,4 +96,4 @@ LuaTeX development started in **2007** by **Taco Hoekwater**, **Hartmut Henkel**
 
 # SEE ALSO
 
-[lualatex](/man/lualatex)(1), [pdflatex](/man/pdflatex)(1), [xelatex](/man/xelatex)(1), [tex](/man/tex)(1)
+[lualatex](/man/lualatex)(1), [pdftex](/man/pdftex)(1), [pdflatex](/man/pdflatex)(1), [xelatex](/man/xelatex)(1), [tex](/man/tex)(1)

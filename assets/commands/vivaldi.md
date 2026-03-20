@@ -31,16 +31,22 @@ Customizable Chromium-based web browser
 # PARAMETERS
 
 **--new-window**
-> New window.
+> Open a new browser window.
 
 **--incognito**
-> Private browsing.
+> Open a new window in private browsing mode.
 
 **--profile-directory** _DIR_
-> Use profile.
+> Use the specified profile directory.
 
 **--app** _URL_
-> App mode.
+> Launch URL in app mode (minimal UI, no tabs or address bar).
+
+**--no-sandbox**
+> Disable the security sandbox.
+
+**--user-data-dir** _DIR_
+> Use a custom user data directory.
 
 **--help**
 > Show help.
@@ -55,7 +61,7 @@ Nearly every aspect of the interface can be customized, from keyboard shortcuts 
 
 # CAVEATS
 
-Proprietary parts. Chromium base. Resource usage.
+Contains proprietary UI components on top of open-source Chromium. Supports most Chromium command-line switches. Custom flags can be placed in `~/.config/vivaldi-stable.conf`.
 
 # HISTORY
 
@@ -63,4 +69,4 @@ Proprietary parts. Chromium base. Resource usage.
 
 # SEE ALSO
 
-[firefox](/man/firefox)(1), [chromium](/man/chromium)(1), [google-chrome](/man/google-chrome)(1)
+[vivaldi-stable](/man/vivaldi-stable)(1), [firefox](/man/firefox)(1), [chromium](/man/chromium)(1), [google-chrome](/man/google-chrome)(1)

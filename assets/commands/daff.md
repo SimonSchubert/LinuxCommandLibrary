@@ -4,25 +4,37 @@ Data diff tool for comparing tables and CSV files
 
 # TLDR
 
-**Compare** two CSV files and show differences
+**Compare two CSV files and show differences**
 
-```daff diff [file1.csv] [file2.csv]```
+```daff [file1.csv] [file2.csv]```
 
-**Create** a patch file from differences
+**Compare with colored output**
 
-```daff diff [file1.csv] [file2.csv] > [changes.patch]```
+```daff --color [file1.csv] [file2.csv]```
 
-**Apply** a patch to update a file
+**Save diff output to a file**
 
-```daff patch [file.csv] [changes.patch]```
+```daff --output [changes.csv] [file1.csv] [file2.csv]```
 
-**Merge** three versions of a file
+**Apply a patch to update a file**
+
+```daff patch [file.csv] [changes.csv]```
+
+**Apply a patch in place**
+
+```daff patch --inplace [file.csv] [changes.csv]```
+
+**Three-way merge with a common parent**
 
 ```daff merge [parent.csv] [local.csv] [remote.csv]```
 
-**Format** a CSV file with aligned columns
+**Render a diff as HTML**
 
-```daff render [file.csv]```
+```daff render --output [diff.html] [diff.csv]```
+
+**Copy/convert between formats**
+
+```daff copy [input.csv] [output.tsv]```
 
 # SYNOPSIS
 
@@ -36,20 +48,29 @@ The tool can detect added, removed, and modified rows and columns, represent dif
 
 # COMMANDS
 
-**diff**
-> Compare two tables and output differences
+_a.csv b.csv_ (default)
+> Compare two tables and output differences.
 
-**patch**
-> Apply a patch file to a table
+**patch** [**--inplace**] _a.csv patch.csv_
+> Apply a patch file to a table.
 
-**merge**
-> Perform a three-way merge of tables
+**merge** [**--inplace**] _parent.csv a.csv b.csv_
+> Perform a three-way merge of tables.
 
-**render**
-> Display a table with formatting
+**render** _diff.csv_
+> Render a diff as HTML.
 
-**convert**
-> Convert between table formats
+**trim** _source.csv_
+> Trim whitespace from a table.
+
+**copy** _in.csv out.tsv_
+> Copy and convert between table formats.
+
+**git**
+> Use as a git diff driver for tabular files.
+
+**version**
+> Show daff version.
 
 # OPTIONS
 
@@ -59,26 +80,23 @@ The tool can detect added, removed, and modified rows and columns, represent dif
 **--no-color**
 > Disable colored output
 
-**--format** _FORMAT_
-> Output format: csv, tsv, html, json, markdown
-
 **--output** _FILE_
-> Write output to file instead of stdout
+> Write output to file instead of stdout.
 
-**--git**
-> Use git-style diff format
+**--input-format** _FORMAT_
+> Input format (e.g., sqlite for comparing databases).
 
-**--padding** _N_
-> Set column padding (default: 2)
+**--www**
+> Open diff in web browser.
+
+**--inplace**
+> Modify input file directly (for patch and merge).
 
 **--unordered**
-> Treat rows as unordered during comparison
+> Treat rows as unordered during comparison.
 
-**-h, --help**
-> Display help and exit
-
-**--version**
-> Display version and exit
+**-h**, **--help**
+> Display help and exit.
 
 # CAVEATS
 

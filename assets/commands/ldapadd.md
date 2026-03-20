@@ -31,40 +31,49 @@ adds entries to an LDAP directory
 # PARAMETERS
 
 **-x**
-> Simple authentication.
+> Use simple authentication instead of SASL.
 
 **-D** _binddn_
-> Bind DN.
+> Bind distinguished name for authentication.
 
 **-W**
-> Prompt for password.
+> Prompt for bind password.
 
 **-w** _password_
-> Password (insecure).
+> Bind password (insecure, visible in process list).
 
 **-H** _URI_
-> LDAP server URI.
+> LDAP server URI (e.g. ldap://host, ldaps://host, ldapi:///).
 
 **-f** _file_
-> LDIF file.
+> Read entries from LDIF file instead of stdin.
 
 **-c**
-> Continue on errors.
+> Continue on errors (report but do not stop).
 
 **-n**
-> Dry run (no changes).
+> Dry run, show what would be done without modifying entries.
 
 **-v**
 > Verbose output.
 
+**-d** _debuglevel_
+> Set LDAP debugging level.
+
 **-Y** _mechanism_
-> SASL mechanism.
+> SASL authentication mechanism (e.g. EXTERNAL, GSSAPI).
+
+**-Z**
+> Issue StartTLS extended operation.
+
+**-ZZ**
+> Require StartTLS to succeed.
 
 # DESCRIPTION
 
 **ldapadd** adds entries to an LDAP directory. It reads LDIF (LDAP Data Interchange Format) files containing new entries to add to the directory.
 
-ldapadd is equivalent to ldapmodify -a. It connects to the LDAP server, binds with credentials, and adds the specified entries.
+ldapadd is implemented as a hard link to ldapmodify with the -a flag automatically enabled. It connects to the LDAP server, binds with the provided credentials, and adds the specified entries. Without -H, it connects to the default LDAP server configured in ldap.conf.
 
 # LDIF EXAMPLE
 
@@ -87,4 +96,4 @@ ldapadd is part of **OpenLDAP**, a free implementation of LDAP. OpenLDAP was sta
 
 # SEE ALSO
 
-[ldapmodify](/man/ldapmodify)(1), [ldapsearch](/man/ldapsearch)(1), [ldapdelete](/man/ldapdelete)(1)
+[ldapmodify](/man/ldapmodify)(1), [ldapsearch](/man/ldapsearch)(1)

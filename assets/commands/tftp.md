@@ -47,8 +47,17 @@ Set transfer **mode** (interactive)
 **-R** _PORT:PORT_
 > Force originating port range
 
+**-4**
+> Use IPv4 only
+
 **-v**
 > Verbose output
+
+**-V**
+> Print version and configuration, then exit
+
+**-l**
+> Default to literal mode (no special processing of ':' in filenames)
 
 # INTERACTIVE COMMANDS
 
@@ -63,6 +72,15 @@ Set transfer **mode** (interactive)
 
 **status**
 > Show current status
+
+**ascii**
+> Shorthand for "mode ascii"
+
+**binary**
+> Shorthand for "mode binary"
+
+**timeout** _seconds_
+> Set per-packet retransmission timeout
 
 **quit**
 > Exit client

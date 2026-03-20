@@ -8,6 +8,18 @@ Enable Apache2 modules
 
 ```sudo a2enmod [module]```
 
+**Enable** a module and **reload** Apache
+
+```sudo a2enmod [module] && sudo systemctl reload apache2```
+
+**Enable the rewrite** module
+
+```sudo a2enmod rewrite```
+
+**Enable SSL** module
+
+```sudo a2enmod ssl```
+
 Don't show **informative messages**
 
 ```sudo a2enmod -q [module]```

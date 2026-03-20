@@ -22,7 +22,7 @@ AI-powered speech recognition and transcription
 
 **Translate to English**
 
-```whisper --task [translate] [audio.mp3]```
+```whisper --task translate [audio.mp3]```
 
 **Output to specific directory**
 
@@ -34,7 +34,7 @@ AI-powered speech recognition and transcription
 
 **Use GPU with float16**
 
-```whisper --device [cuda] --fp16 [audio.mp3]```
+```whisper --device cuda --fp16 True [audio.mp3]```
 
 # SYNOPSIS
 
@@ -43,7 +43,7 @@ AI-powered speech recognition and transcription
 # PARAMETERS
 
 **--model** _SIZE_
-> Model size: tiny, base, small, medium, large.
+> Model size: tiny, base, small, medium, large, turbo (default: turbo). English-only variants: tiny.en, base.en, small.en, medium.en.
 
 **--language** _LANG_
 > Language code (en, de, fr, etc.) or auto.
@@ -84,11 +84,20 @@ AI-powered speech recognition and transcription
 **--threads** _NUM_
 > CPU threads.
 
+**--model_dir** _DIR_
+> Directory to save and load models (default: ~/.cache/whisper).
+
+**--initial_prompt** _TEXT_
+> Optional text to provide as prompt for the first window.
+
+**--clip_timestamps** _TIMESTAMPS_
+> Comma-separated start/end timestamps to process specific audio segments.
+
 # DESCRIPTION
 
 **Whisper** is OpenAI's automatic speech recognition (ASR) system. It transcribes audio in many languages and can translate to English.
 
-Model sizes trade accuracy for speed: tiny runs fastest, large is most accurate. The .en suffix (tiny.en, base.en) denotes English-only models, slightly better for English.
+Model sizes trade accuracy for speed: tiny runs fastest, large is most accurate. The turbo model (default) offers a good balance, running ~8x faster than large with minor quality loss. The .en suffix (tiny.en, base.en) denotes English-only models, slightly better for English. The turbo model is not trained for translation tasks.
 
 Language detection is automatic but can be hinted. For non-English audio, specifying the language improves accuracy. Translation mode transcribes any language to English text.
 
@@ -104,7 +113,7 @@ Large models require significant VRAM (10GB+ for large). CPU inference is slow. 
 
 # HISTORY
 
-**Whisper** was released by **OpenAI** in **September 2022**. Trained on 680,000 hours of multilingual audio, it achieved near-human transcription accuracy. The open-source release enabled local deployment, spawning community projects and integrations.
+**Whisper** was released by **OpenAI** in **September 2022**. Trained on 680,000 hours of multilingual audio, it achieved near-human transcription accuracy. The open-source release enabled local deployment, spawning community projects and integrations. The large-v3-turbo model was added in September 2024, offering significantly faster inference with minimal quality loss.
 
 # SEE ALSO
 

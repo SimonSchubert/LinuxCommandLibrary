@@ -52,7 +52,8 @@ Start with **black background**
 > Up/Down arrows or +/-: adjust volume
 
 **Volume Control:**
-> PageUp/PageDown: increase/decrease by 5%
+> PageUp/PageDown: increase/decrease by 5
+> Home: set to 100%
 > End: set to 0%
 > 0-9: set to 0-90% volume
 > Q/W/E: raise left/both/right
@@ -60,14 +61,19 @@ Start with **black background**
 
 **Muting & Capture:**
 > M: toggle mute (both channels)
+> , or <: mute left channel only
+> . or >: mute right channel only
 > Space: enable recording for current channel
 
 **View Modes:**
+> F1 or ?: help screen
+> F2 or /: system information
 > F3/F4/F5: playback/capture/all modes
 > Tab: toggle views circularly
 > F6 or S: select sound card
 
 **Other:**
+> H: show keyboard shortcuts reminder
 > B or =: balance left/right channels
 > L: redraw screen
 > Esc or Alt+Q: quit

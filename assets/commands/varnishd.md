@@ -42,7 +42,7 @@ Varnish HTTP reverse proxy cache daemon
 > Listen for client requests (default port: 80).
 
 **-b** _host[:port]_
-> Backend server (default port: 8080).
+> Backend server (default port: 80).
 
 **-f** _config_
 > VCL configuration file.
@@ -77,13 +77,19 @@ Varnish HTTP reverse proxy cache daemon
 **-I** _clifile_
 > Execute CLI commands from file on start.
 
+**-d**
+> Enable debug mode (do not start worker process, accept CLI commands on stdin).
+
+**-j** _jail[,jailoptions]_
+> Specify jailing technology for worker process.
+
 # DESCRIPTION
 
 **varnishd** is the Varnish HTTP accelerator daemon. It acts as a reverse proxy cache, accepting HTTP requests, forwarding them to backend servers, and caching responses to serve future requests faster.
 
 The daemon uses VCL (Varnish Configuration Language) to define caching policies, request routing, and response handling. VCL is compiled to C and loaded dynamically.
 
-Storage backends include malloc (memory), file (disk), and persistent (survives restarts). Multiple storage backends and listening addresses can be configured.
+Storage backends include malloc (memory) and file (disk-based with memory mapping). Multiple storage backends and listening addresses can be configured.
 
 The management interface allows runtime configuration changes, VCL loading, and statistics access via varnishadm.
 
@@ -97,4 +103,4 @@ Requires either -b or -f option. VCL changes require reload through management i
 
 # SEE ALSO
 
-[varnishadm](/man/varnishadm)(1), [varnishlog](/man/varnishlog)(1), [varnishstat](/man/varnishstat)(1), [nginx](/man/nginx)(8)
+[varnishlog](/man/varnishlog)(1), [varnishstat](/man/varnishstat)(1), [nginx](/man/nginx)(8)

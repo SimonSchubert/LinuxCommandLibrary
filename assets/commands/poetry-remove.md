@@ -33,10 +33,13 @@ _PACKAGES_
 > Remove from specific group.
 
 **-D**, **--dev**
-> Remove from dev dependencies.
+> Remove from dev dependencies (deprecated, use **-G dev** instead).
 
 **--dry-run**
-> Simulate removal.
+> Simulate removal without making changes.
+
+**--lock**
+> Only update the lock file, do not uninstall packages.
 
 # DESCRIPTION
 

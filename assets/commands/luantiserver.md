@@ -64,7 +64,16 @@ runs a dedicated Luanti game server
 > Print only errors to console.
 
 **--migrate** _backend_
-> Migrate from current map backend to another.
+> Migrate from current map backend to another (sqlite3, leveldb, postgresql, redis).
+
+**--migrate-players** _backend_
+> Migrate from current players backend to another (sqlite3, leveldb, postgresql, files).
+
+**--migrate-auth** _backend_
+> Migrate from current auth backend to another (sqlite3, leveldb, files).
+
+**--go**
+> Run server without a client directly.
 
 **--help**
 > Print allowed options and exit.
@@ -87,4 +96,3 @@ Luanti was originally known as **Minetest** and was renamed in **2024**. It is a
 # SEE ALSO
 
 [luanti](/man/luanti)(1), [minetestserver](/man/minetestserver)(1), [minetest](/man/minetest)(1)
-

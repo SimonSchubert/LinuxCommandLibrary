@@ -1,6 +1,6 @@
 # TAGLINE
 
-Update PlatformIO packages and libraries
+Update PlatformIO packages and libraries (deprecated)
 
 # TLDR
 
@@ -26,13 +26,20 @@ Update PlatformIO packages and libraries
 > Update core packages only.
 
 **--dry-run**
-> Check updates without installing.
+> Check for new versions without installing.
+
+**-c**, **--only-check**
+> Deprecated alias for **--dry-run**.
 
 # DESCRIPTION
 
-**pio update** updates PlatformIO packages including platforms, libraries, and tools. Keeps development environment current with latest bug fixes and features.
+**pio update** updates installed PlatformIO Core packages, development platforms, and global libraries. It is a combination of **pio platform update** and **pio lib update**.
+
+# CAVEATS
+
+Deprecated since PlatformIO 6.0 and will be removed in a future release. Use **pio pkg update** instead.
 
 # SEE ALSO
 
-[pio-upgrade](/man/pio-upgrade)(1), [pio-platform](/man/pio-platform)(1), [pio-lib](/man/pio-lib)(1)
+[pio-upgrade](/man/pio-upgrade)(1), [pio-pkg](/man/pio-pkg)(1), [pio-platform](/man/pio-platform)(1), [pio-lib](/man/pio-lib)(1)
 

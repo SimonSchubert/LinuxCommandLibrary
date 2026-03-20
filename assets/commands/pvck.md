@@ -39,23 +39,40 @@ Repair only **PV header and label**
 # PARAMETERS
 
 **--dump** _type_
-> Dump specified type (headers, metadata, metadata_all, metadata_search)
+> Dump specified type: headers, metadata, metadata_all, metadata_search.
 
 **--repair**
-> Repair LVM metadata on the physical volume
+> Repair LVM metadata on the physical volume.
 
 **--repairtype** _type_
-> Specify repair type (pv_header, etc.)
+> Specify repair type: pv_header, metadata, label_header.
 
 **-f**, **--file** _file_
-> Input/output file for metadata operations
+> Input/output file for metadata operations.
 
 **--settings** _settings_
-> Additional settings (e.g., mda_num=2)
+> Additional settings (e.g., mda_num=2).
+
+**--labelsector** _sector_
+> Sector number to read the PV label from (0-3, default: 1).
+
+**-d**, **--debug**
+> Enable debug output.
+
+**-v**, **--verbose**
+> Enable verbose output.
+
+**-y**, **--yes**
+> Answer yes to all prompts automatically.
+
+**-t**, **--test**
+> Run in test mode without making changes.
 
 # DESCRIPTION
 
-**pvck** checks and repairs LVM metadata on physical volumes. It can dump headers, examine metadata areas, search for metadata in damaged volumes, and perform repairs using backup metadata files.
+**pvck** checks and repairs LVM metadata on physical volumes. It can dump on-disk headers and structures (label_header, pv_header, mda_header), examine metadata areas, search for metadata in damaged volumes, and perform repairs using backup metadata files.
+
+The **--dump** option reads and displays metadata without modifying anything. The **--repair** option writes corrected headers and metadata using a provided backup file. A PV may have up to two metadata areas (front and back), selectable with `--settings "mda_num=2"`.
 
 This tool is essential for LVM disaster recovery when physical volume metadata becomes corrupted.
 

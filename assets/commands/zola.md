@@ -28,6 +28,18 @@ Fast Rust-based static site generator
 
 ```zola check```
 
+**Check site structure, skipping external link validation**
+
+```zola check --skip-external-links```
+
+**Serve with auto-open in browser**
+
+```zola serve --open```
+
+**Initialize site in non-empty directory**
+
+```zola init --force [site_name]```
+
 # SYNOPSIS
 
 **zola** [_options_] _command_ [_arguments_]
@@ -57,20 +69,29 @@ Fast Rust-based static site generator
 **-r**, **--root** _dir_
 > Site root directory
 
-**--base-url** _url_
-> Override base URL
-
 **-o**, **--output-dir** _dir_
 > Output directory for build
 
 **-p**, **--port** _port_
-> Port for serve command
+> Port for serve command (default: 1111)
 
 **-i**, **--interface** _addr_
-> Interface to bind server
+> Interface to bind server (default: 127.0.0.1)
+
+**-u**, **--base-url** _url_
+> Override base URL from config
+
+**--open**
+> Automatically open site in browser (serve only)
+
+**--force**
+> Overwrite existing output directory without prompting
 
 **--drafts**
 > Include draft content
+
+**--skip-external-links**
+> Skip external link validation (check only)
 
 # DESCRIPTION
 

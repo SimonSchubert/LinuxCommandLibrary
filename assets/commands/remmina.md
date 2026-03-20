@@ -26,24 +26,45 @@ Remote desktop client application
 
 # SYNOPSIS
 
-**remmina** [_options_] [_file_]
+**remmina** [_-a_|_-i_|_-n_|_-q_|_-v_] [_-c file_] [_-e file_] [_-p tabindex_] [_-s server_] [_-t protocol_] [_options_]
 
 # PARAMETERS
 
-**-c**, **--connect** _uri_
-> Connect to URI or file.
+**-c**, **--connect** _file_
+> Connect to a desktop described in a file or a supported URI (RDP, VNC, SSH, SPICE).
 
 **-e**, **--edit** _file_
-> Edit connection file.
+> Open and edit a connection profile file.
 
 **-n**, **--new**
-> New connection.
+> Create a new connection profile.
 
-**--protocol** _protocol_
-> Protocol (RDP, VNC, SSH).
+**-t**, **--protocol** _protocol_
+> Use default protocol for new connections (RDP, VNC, SSH, SPICE).
 
 **-s**, **--server** _server_
-> Server address.
+> Use default server name for new connections (used with --new).
+
+**-p**, **--pref** _tabindex_
+> Show preferences dialog page.
+
+**-i**, **--icon**
+> Start as tray icon.
+
+**-k**, **--kiosk**
+> Start in kiosk mode (thin client).
+
+**-q**, **--quit**
+> Quit the application.
+
+**-v**, **--version**
+> Show version.
+
+**--update-profile**
+> Modify a connection profile non-interactively (requires --set-option).
+
+**--set-option** _OPTION[=VALUE]_
+> Set profile option, used with --update-profile.
 
 # DESCRIPTION
 
@@ -66,6 +87,9 @@ remmina -c ssh://user@server.example.com
 
 # Connect using saved profile
 remmina -c ~/.local/share/remmina/myserver.remmina
+
+# Update a profile's username non-interactively
+remmina --update-profile ~/.local/share/remmina/myserver.remmina --set-option username=admin
 ```
 
 # PROTOCOLS

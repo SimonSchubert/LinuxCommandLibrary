@@ -1,6 +1,6 @@
 # TAGLINE
 
-KDE information center application that displays detailed system
+KDE information center application that displays detailed system information
 
 # TLDR
 
@@ -12,9 +12,9 @@ Open the **GUI**
 
 ```kinfocenter --list```
 
-Display **help**
+Display **version** information
 
-```kinfocenter -h```
+```kinfocenter -v```
 
 # SYNOPSIS
 
@@ -23,14 +23,17 @@ Display **help**
 # PARAMETERS
 
 **--list**
-> List all available KCM (KDE Control Module) modules
+> List all available KCM (KDE Control Module) modules.
 
 **-h**, **--help**
-> Display help message
+> Display help message.
+
+**-v**, **--version**
+> Display version information.
 
 # DESCRIPTION
 
-**kinfocenter** is the KDE information center application that displays detailed system information. It provides a centralized view of hardware and software configuration including CPU, memory, graphics, audio, network, and USB devices.
+**kinfocenter** is the KDE Plasma information center. It provides a centralized view of hardware and software configuration including CPU, memory, graphics, audio, network, and USB devices.
 
 The application loads various KCM modules, each providing information about different system aspects. It's useful for troubleshooting and understanding system capabilities.
 

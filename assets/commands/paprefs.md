@@ -18,13 +18,11 @@ No command-line parameters. GUI application.
 
 # DESCRIPTION
 
-**paprefs** is PulseAudio preferences GUI. Configures network and module settings.
-
-The application manages PulseAudio options. Network streaming and discovery.
+**paprefs** is a GTK-based configuration dialog for the PulseAudio sound server. It provides tabs for configuring network access (allowing other machines to play sound on local devices), network server settings (making local PulseAudio discoverable), simultaneous output (playing audio to multiple sinks at once), and multicast/RTP streaming.
 
 # CAVEATS
 
-GUI application. Requires PulseAudio. GTK-based interface.
+Requires PulseAudio with module-gconf loaded in the sound server. Can only configure local servers. Not applicable to PipeWire-only setups unless PulseAudio compatibility is enabled.
 
 # HISTORY
 

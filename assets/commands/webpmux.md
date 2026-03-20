@@ -12,38 +12,61 @@ Manipulate WebP metadata and animation
 
 ```webpmux -get icc [input.webp] -o [profile.icc]```
 
-**Set ICC profile**
+**Set EXIF metadata**
 
-```webpmux -set icc [profile.icc] [input.webp] -o [output.webp]```
+```webpmux -set exif [metadata.exif] [input.webp] -o [output.webp]```
 
-**Show info**
+**Create animation from frames**
+
+```webpmux -frame [1.webp] +[100] -frame [2.webp] +[100] -loop [0] -o [output.webp]```
+
+**Show file info**
 
 ```webpmux -info [input.webp]```
 
-**Strip metadata**
+**Strip EXIF metadata**
 
-```webpmux -strip all [input.webp] -o [output.webp]```
+```webpmux -strip exif [input.webp] -o [output.webp]```
+
+**Change frame duration of an animation**
+
+```webpmux -duration [200] [input.webp] -o [output.webp]```
 
 # SYNOPSIS
 
-**webpmux** [_-get type_] [_-set type file_] [_-info_] _input_ [_-o output_]
+**webpmux** [_-get|-set|-strip_] [_options_] _input_ [**-o** _output_]
 
 # PARAMETERS
 
 **-get** _TYPE_
-> Extract (frame, icc, xmp).
+> Extract data: frame n, icc, exif, or xmp.
 
 **-set** _TYPE FILE_
-> Set metadata.
+> Set metadata: icc, exif, or xmp.
 
 **-strip** _TYPE_
-> Remove metadata.
+> Remove metadata: icc, exif, or xmp.
+
+**-frame** _FILE+OPTS_
+> Add frame for animation (file +duration[+x+y[+method[blend]]]).
+
+**-duration** _DURATION[,START[,END]]_
+> Set frame duration in milliseconds.
+
+**-loop** _COUNT_
+> Loop count for animation (0=infinite, range 0-65535).
+
+**-bgcolor** _A,R,G,B_
+> Background color for animation canvas (values 0-255).
 
 **-info**
-> Show information.
+> Display file information.
 
 **-o** _FILE_
 > Output file.
+
+**-version**
+> Display version number.
 
 # DESCRIPTION
 
@@ -55,7 +78,7 @@ For animated WebP files, individual frames can be extracted as separate WebP ima
 
 # CAVEATS
 
-WebP format only. Part of libwebp-tools. Animation support.
+WebP format only. Part of libwebp-tools. Only one -strip/-get/-set operation per invocation; stripping multiple metadata types requires separate commands.
 
 # HISTORY
 

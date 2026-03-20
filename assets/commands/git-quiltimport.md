@@ -23,16 +23,19 @@ Import quilt patches to commits
 # PARAMETERS
 
 **--patches** _DIR_
-> Patches directory.
+> Patches directory. Defaults to patches or $QUILT_PATCHES.
 
 **--series** _FILE_
-> Series file location.
+> Series file location. Defaults to <patches>/series or $QUILT_SERIES.
 
 **-n**, **--dry-run**
 > Show what would be imported.
 
 **--author** _AUTHOR_
 > Default author.
+
+**--keep-non-patch**
+> Pass -b flag to git mailinfo to keep non-patch content in the commit message.
 
 **--help**
 > Display help information.
@@ -53,4 +56,4 @@ git quiltimport supports migration from **quilt**, a popular patch management to
 
 # SEE ALSO
 
-[git-am](/man/git-am)(1), [quilt](/man/quilt)(1)
+[git-am](/man/git-am)(1), [git-apply](/man/git-apply)(1), [quilt](/man/quilt)(1)

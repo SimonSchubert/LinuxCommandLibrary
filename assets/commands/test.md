@@ -68,6 +68,36 @@ Evaluate conditional expressions
 **-L** _FILE_
 > True if file is a symbolic link.
 
+**-b** _FILE_
+> True if file is a block special file.
+
+**-c** _FILE_
+> True if file is a character special file.
+
+**-p** _FILE_
+> True if file is a named pipe (FIFO).
+
+**-S** _FILE_
+> True if file is a socket.
+
+**-g** _FILE_
+> True if file has set-group-ID bit set.
+
+**-u** _FILE_
+> True if file has set-user-ID bit set.
+
+**-O** _FILE_
+> True if file is owned by the effective user ID.
+
+_FILE1_ **-nt** _FILE2_
+> True if FILE1 is newer (modification date) than FILE2.
+
+_FILE1_ **-ot** _FILE2_
+> True if FILE1 is older than FILE2.
+
+_FILE1_ **-ef** _FILE2_
+> True if FILE1 and FILE2 refer to the same device and inode numbers.
+
 # STRING TESTS
 
 **-n** _STRING_

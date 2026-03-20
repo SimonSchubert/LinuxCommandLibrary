@@ -56,9 +56,6 @@ Go source code formatter
 **-r** _RULE_
 > Apply rewrite rule (e.g., 'a[b:len(a)] -> a[b:]').
 
-**-cpuprofile** _FILE_
-> Write CPU profile to file.
-
 # DESCRIPTION
 
 **gofmt** formats Go source code according to standard Go style guidelines. It uses tabs for indentation and blanks for alignment, ensuring consistent formatting across all Go codebases.

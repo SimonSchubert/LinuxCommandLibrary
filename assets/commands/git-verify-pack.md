@@ -4,36 +4,39 @@ Validate packed Git archive files
 
 # TLDR
 
-**Verify pack file**
+**Verify** a pack index file
 
-```git verify-pack [.pack file]```
+```git verify-pack .git/objects/pack/pack-hash.idx```
 
-**Verbose output**
+Verify and **list all objects** in the pack
 
-```git verify-pack -v [pack]```
+```git verify-pack -v .git/objects/pack/pack-hash.idx```
 
-**Show statistics**
+Show only **delta chain statistics** without verifying
 
-```git verify-pack -s [pack]```
+```git verify-pack -s .git/objects/pack/pack-hash.idx```
 
 # SYNOPSIS
 
-**git** **verify-pack** [_options_] _pack_.idx...
+**git** **verify-pack** [**-v** | **--verbose**] [**-s** | **--stat-only**] [**--**] _pack_.idx...
 
 # PARAMETERS
 
 **-v**, **--verbose**
-> Show objects in pack.
+> After verifying the pack, show the list of objects contained in the pack and a histogram of delta chain length
 
 **-s**, **--stat-only**
-> Statistics only.
+> Do not verify the pack contents; only show the histogram of delta chain length. With **--verbose**, the list of objects is also shown
+
+**--**
+> Do not interpret any more arguments as options
 
 # DESCRIPTION
 
-**git verify-pack** validates packed Git archive files. It checks the integrity of pack files and their indices, reporting any corruption or inconsistencies.
+**git verify-pack** reads each given idx file and verifies the corresponding pack file and its index. It reports any corruption or inconsistencies found.
 
-Pack files are Git's efficient storage format that groups multiple objects together. This command is useful for diagnosing repository corruption or verifying backup integrity.
+With **-v**, for non-deltified objects it shows: object-name, type, size, size-in-packfile, offset-in-packfile. For deltified objects it additionally shows: depth and base-object-name.
 
 # SEE ALSO
 
-[git-repack](/man/git-repack)(1), [git-index-pack](/man/git-index-pack)(1)
+[git-repack](/man/git-repack)(1), [git-fsck](/man/git-fsck)(1)

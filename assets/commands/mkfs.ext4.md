@@ -59,11 +59,20 @@ Create with **specific owner** and UUID
 **-E** _OPTIONS_
 > Extended options (comma-separated), e.g. root_owner=uid:gid, discard, stride=N, stripe-width=N.
 
-**-j**
-> Create ext3 journal (default for ext4).
+**-O** _FEATURES_
+> Set filesystem features (comma-separated), e.g. ^has_journal, extent, dir_index.
+
+**-T** _USAGE_TYPE_
+> Specify usage type (e.g. largefile, largefile4, news, small) to set default parameters.
 
 **-c**
 > Check the device for bad blocks before creating the filesystem.
+
+**-cc**
+> Perform a slower, destructive read-write bad blocks test.
+
+**-n**
+> Dry run; show what would be done without creating the filesystem.
 
 **-F**
 > Force creation even if the device is not a block special device or appears in use.
@@ -73,8 +82,8 @@ Create with **specific owner** and UUID
 
 # CAVEATS
 
-All data on device will be lost. Part of e2fsprogs package. Default reserved blocks (5%) can be reduced for non-root filesystems with **-m**. Use **-F** twice to force creation on a mounted device.
+All data on device will be lost. Part of e2fsprogs package. Default reserved blocks (5%) can be reduced for non-root filesystems with **-m**. Use **-F** twice to force creation on a mounted device. Equivalent to **mke2fs -t ext4**.
 
 # SEE ALSO
 
-[mkfs](/man/mkfs)(8), [tune2fs](/man/tune2fs)(8), [e2fsck](/man/e2fsck)(8)
+[mkfs](/man/mkfs)(8), [tune2fs](/man/tune2fs)(8), [e2fsck](/man/e2fsck)(8), [mke2fs](/man/mke2fs)(8)

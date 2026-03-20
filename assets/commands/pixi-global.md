@@ -16,9 +16,13 @@ Manage globally installed Pixi packages
 
 ```pixi global remove [package]```
 
-**Update all global packages**
+**Update all global environments**
 
-```pixi global update --all```
+```pixi global update```
+
+**Update a specific** global environment
+
+```pixi global update [package]```
 
 **Sync** manifest with installed environments
 
@@ -49,8 +53,8 @@ Manage globally installed Pixi packages
 **remove** _package_
 > Remove dependencies from a global environment.
 
-**update** _package_
-> Update packages in global environments. Use **--all** to update all.
+**update** [_environment..._]
+> Update global environments. Without arguments, updates all environments.
 
 **sync**
 > Synchronize the global manifest with installed environments.
@@ -61,11 +65,17 @@ Manage globally installed Pixi packages
 **expose**
 > Manage exposure of binaries in global environments.
 
+**shortcut**
+> Manage shortcuts on your machine for global environments.
+
+**tree**
+> Show a dependency tree for a specific global environment.
+
 # DESCRIPTION
 
 **pixi global** manages globally installed packages. Installs command-line tools accessible from anywhere, similar to pipx for Python. Packages are isolated in their own environments.
 
 # SEE ALSO
 
-[pixi](/man/pixi)(1), [pipx](/man/pipx)(1)
+[pixi](/man/pixi)(1), [pipx](/man/pipx)(1), [conda](/man/conda)(1)
 

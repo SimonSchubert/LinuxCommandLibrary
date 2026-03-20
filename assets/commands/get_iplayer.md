@@ -51,16 +51,31 @@ BBC iPlayer TV and radio downloader
 > Output directory.
 
 **--tvmode** _mode_
-> Quality mode (best, good, worst).
+> TV quality preference (fhd, hd, sd, web, mobile), comma-delimited in descending preference.
 
 **--radiomode** _mode_
-> Radio quality mode.
+> Radio quality preference (high, std, med, low).
 
 **--pvr**
 > Run PVR scheduler.
 
 **--refresh**
 > Refresh program cache.
+
+**--url** _URL_
+> Record the PIDs from the specified iPlayer episode URLs.
+
+**--subtitles**
+> Download subtitles when available.
+
+**--audio-only**
+> Only download the audio stream for TV programmes (produces .m4a file).
+
+**--file-prefix** _TEMPLATE_
+> Filename prefix template (excluding directory and extension).
+
+**--attempts** _N_
+> Number of attempts to make or resume a failed connection.
 
 # CONFIGURATION
 
@@ -80,9 +95,9 @@ Programs on iPlayer are typically available for 30 days after broadcast, though 
 
 # CAVEATS
 
-Only works with BBC content and requires UK access. Programs expire after 30 days on iPlayer.
+Only works with BBC content and typically requires a UK IP address. Programs expire after 30 days on iPlayer (some content has different availability windows). Requires ffmpeg for downloading and converting streams.
 
 # SEE ALSO
 
-[youtube-dl](/man/youtube-dl)(1), [yt-dlp](/man/yt-dlp)(1)
+[youtube-dl](/man/youtube-dl)(1), [yt-dlp](/man/yt-dlp)(1), [ffmpeg](/man/ffmpeg)(1)
 

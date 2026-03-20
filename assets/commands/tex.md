@@ -27,19 +27,28 @@ Original TeX typesetting engine
 # PARAMETERS
 
 **-interaction** _MODE_
-> Set mode (nonstopmode, batchmode).
+> Set interaction mode: batchmode, nonstopmode, scrollmode, or errorstopmode.
 
 **-jobname** _NAME_
-> Output base name.
+> Set the job name instead of deriving it from the input file name.
 
 **-ini**
-> Initialize format.
+> Start in INI mode for dumping formats; no format is preloaded.
 
 **-output-directory** _DIR_
-> Output location.
+> Write output files in DIR instead of the current directory.
 
-**--help**
-> Show help.
+**-halt-on-error**
+> Stop processing at the first error.
+
+**-file-line-error**
+> Print error messages in file:line:error format.
+
+**-recorder**
+> Enable the filename recorder, creating a .fls file listing opened files.
+
+**-fmt** _NAME_
+> Use NAME as the format instead of the default.
 
 # DESCRIPTION
 
@@ -49,7 +58,7 @@ TeX uses the plain TeX macro format by default, which provides basic typesetting
 
 # CAVEATS
 
-DVI output only. Plain TeX macros. Use pdflatex for PDF.
+Produces DVI output only; use pdftex or pdflatex for direct PDF output. Uses plain TeX macros by default without higher-level LaTeX abstractions.
 
 # HISTORY
 

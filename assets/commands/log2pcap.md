@@ -1,6 +1,6 @@
 # TAGLINE
 
-converts Samba debug logs to pcap format
+Extract network traces from Samba log files
 
 # TLDR
 
@@ -8,45 +8,49 @@ converts Samba debug logs to pcap format
 
 ```log2pcap [samba.log] > [output.pcap]```
 
-**Output to file**
+**Output to a named file**
 
 ```log2pcap -o [output.pcap] [samba.log]```
 
-**Verbose conversion**
+**Read from stdin**
 
-```log2pcap -v [samba.log] > [output.pcap]```
+```log2pcap < [/var/log/samba/log.smbd] > [output.pcap]```
 
-**Process multiple logs**
+**Output as hex dump for text2pcap**
 
-```log2pcap [log1] [log2] > [combined.pcap]```
+```log2pcap -h [samba.log] | text2pcap -T 139,139 - [trace.pcap]```
+
+**Quiet mode, suppress warnings**
+
+```log2pcap -q [samba.log] > [output.pcap]```
 
 # SYNOPSIS
 
-**log2pcap** [_options_] _logfile_
+**log2pcap** [_options_] [_logfile_]
 
 # PARAMETERS
 
-_LOGFILE_
-> Samba debug log file.
+_logfile_
+> Samba debug log file. Reads from stdin if not specified.
 
-**-o** _FILE_
-> Output pcap file.
+**-h**
+> Output as hex dump readable by text2pcap.
 
-**-v**
-> Verbose output.
+**-q**
+> Quiet mode. Suppress warnings about missing or incomplete data.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**log2pcap** converts Samba debug logs to pcap format. The pcap files can be analyzed with Wireshark.
+**log2pcap** reads a Samba log file and generates a pcap file based on the packet dumps in the log. The pcap files can then be analyzed with network sniffers like Wireshark or tcpdump.
 
-The tool extracts packet data from Samba's debug output for network analysis and troubleshooting.
+The Samba log level must be at least 5 to capture SMB headers/parameters correctly, 10 to include the first 512 bytes of packet data, and 50 to get full packets.
 
 # CAVEATS
 
-Requires specific Samba log format. Part of Samba tools. Limited to Samba traffic.
+Only SMB data is extracted from the logs; LDAP, NetBIOS lookups, and other protocols are not included. The generated TCP and IP headers do not contain valid checksums. Part of the Samba suite.
 
 # HISTORY
 
@@ -54,5 +58,5 @@ log2pcap is part of the **Samba** suite, enabling analysis of SMB protocol traff
 
 # SEE ALSO
 
-[smbclient](/man/smbclient)(1), [wireshark](/man/wireshark)(1), [tcpdump](/man/tcpdump)(1)
+[smbclient](/man/smbclient)(1), [wireshark](/man/wireshark)(1), [tcpdump](/man/tcpdump)(1), [tshark](/man/tshark)(1)
 

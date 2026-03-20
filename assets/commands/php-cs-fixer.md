@@ -28,7 +28,7 @@ Automatically fix PHP coding standards issues
 
 ```php-cs-fixer fix -v```
 
-**List available rules**
+**List files that need fixing**
 
 ```php-cs-fixer list-files```
 
@@ -40,6 +40,9 @@ Automatically fix PHP coding standards issues
 
 **fix** [_PATH_]
 > Fix coding standards in the given path or current directory.
+
+**check** [_PATH_]
+> Shorthand for `fix --dry-run`. Analyze without modifying files.
 
 **--dry-run**
 > Don't modify files, only show what would change.
@@ -67,6 +70,9 @@ Automatically fix PHP coding standards issues
 
 **--stop-on-violation**
 > Stop execution on first violation.
+
+**--path-mode** _override|intersection_
+> How to treat paths from config vs command arguments (default: override).
 
 # DESCRIPTION
 

@@ -27,10 +27,19 @@ uploads coverage to Coveralls
 # PARAMETERS
 
 **--coverage_clover** _FILE_
-> Clover XML file.
+> Path to clover.xml coverage file.
 
-**-c** _FILE_
-> Config file.
+**--coverage-php** _FILE_
+> Path to PHP code coverage report file.
+
+**-c**, **--config** _FILE_
+> Path to configuration file.
+
+**-o**, **--json_path** _FILE_
+> Path for JSON output to upload (default: build/logs/coveralls-upload.json).
+
+**-r**, **--root_dir** _DIR_
+> Root directory of the project.
 
 **--dry-run**
 > Test without uploading.
@@ -38,7 +47,7 @@ uploads coverage to Coveralls
 **-v**
 > Verbose output.
 
-**--help**
+**-h**, **--help**
 > Display help.
 
 # DESCRIPTION

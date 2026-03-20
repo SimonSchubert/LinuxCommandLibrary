@@ -8,9 +8,13 @@ Generate statistics from Git repositories
 
 ```gitstats [repo_path] [output_dir]```
 
-**Generate with config**
+**Generate stats for** last 10 commits
 
-```gitstats -c [key=value] [repo] [output]```
+```gitstats -c commit_begin='HEAD~10' [repo] [output]```
+
+**Set project name** and max authors
+
+```gitstats -c project_name='[MyProject]' -c max_authors=[20] [repo] [output]```
 
 # SYNOPSIS
 
@@ -19,7 +23,39 @@ Generate statistics from Git repositories
 # PARAMETERS
 
 **-c** _key=value_
-> Configuration option.
+> Configuration option. Can be specified multiple times.
+
+### Configuration Keys
+
+**project_name**
+> Project name shown on generated pages. Default: basename of repository directory.
+
+**max_authors**
+> Maximum number of authors to show in the authors list.
+
+**authors_top**
+> How many top authors to show.
+
+**max_domains**
+> Maximum number of domains to show in domains by commits.
+
+**max_ext_length**
+> Maximum file extension length.
+
+**commit_begin**
+> Starting commit for statistics range.
+
+**commit_end**
+> Ending commit for statistics range.
+
+**start_date**
+> Starting date passed with --since to git.
+
+**processes**
+> Number of concurrent processes for extracting data.
+
+**style**
+> CSS stylesheet to use.
 
 # DESCRIPTION
 

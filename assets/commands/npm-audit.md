@@ -22,11 +22,15 @@ scans for security vulnerabilities
 
 **Audit production only**
 
-```npm audit --production```
+```npm audit --omit=dev```
 
-**Set audit level**
+**Set minimum severity level**
 
 ```npm audit --audit-level=[high]```
+
+**Dry run fix** (preview changes without applying)
+
+```npm audit fix --dry-run```
 
 # SYNOPSIS
 
@@ -35,38 +39,46 @@ scans for security vulnerabilities
 # PARAMETERS
 
 **fix**
-> Automatically fix issues.
+> Automatically install compatible updates to fix vulnerabilities.
 
 **--force**
-> Force updates (may break).
+> Force updates to latest version, even with breaking changes.
 
 **--json**
-> JSON output format.
+> Output results in JSON format.
 
-**--production**
-> Production deps only.
+**--omit** _TYPE_
+> Omit dependency type from audit (dev, optional, or peer). Replaces deprecated --production flag.
 
 **--audit-level** _LEVEL_
-> Minimum severity.
+> Minimum severity to trigger non-zero exit: low, moderate, high, critical.
 
-**--help**
+**--dry-run**
+> Preview what audit fix would change without applying.
+
+**--package-lock-only**
+> Only modify package-lock.json, skip node_modules updates.
+
+**--parseable**
+> Display vulnerabilities in parseable output format.
+
+**-h**, **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**npm audit** scans for security vulnerabilities. Checks packages against known issues.
+**npm audit** scans project dependencies for known security vulnerabilities by checking them against the npm advisory database. It reports the severity level (low, moderate, high, critical), the vulnerable package, and the dependency path.
 
-The command reports security advisories. Can automatically fix some issues.
+The **npm audit fix** subcommand automatically installs compatible updates to resolve vulnerabilities. Using **--force** allows major version updates that may introduce breaking changes. The command exits with a non-zero code if vulnerabilities are found, making it suitable for CI/CD pipelines.
 
 # CAVEATS
 
-Requires network. May suggest breaking updates. Review before force fixing.
+Requires network access to check the npm advisory database. The --force flag may install updates with breaking changes; always review with --dry-run first. The --production flag is deprecated in npm 8+; use --omit=dev instead.
 
 # HISTORY
 
-npm audit was added to **npm 6** to provide automated security vulnerability scanning.
+npm audit was introduced in **npm 6** (2018) to provide automated security vulnerability scanning. It replaced the third-party `nsp` (Node Security Platform) tool that npm acquired.
 
 # SEE ALSO
 
 [npm](/man/npm)(1), [npm-fund](/man/npm-fund)(1), [snyk](/man/snyk)(1)
-

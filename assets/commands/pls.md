@@ -22,12 +22,12 @@ Prettier and powerful ls for the pros
 
 # PARAMETERS
 
-**-d**, **--det**
-> Display detailed file metadata.
+**-d**, **--det** _COLS_
+> Display detailed file metadata. Columns can be freely ordered based on specification.
 
 # DESCRIPTION
 
-**pls** is a prettier and more powerful replacement for **ls** designed for human consumption rather than scripting. It features Nerd Font icons, rich formatting, flexible column ordering, and a configurable display. Files and directories can be passed as positional arguments.
+**pls** is a prettier and more powerful replacement for **ls** designed for human consumption rather than scripting. The "p" in pls stands for pretty, powerful, performant, practical, petite, pliable, and personable. It features Nerd Font icons, rich formatting, flexible column ordering, and a configurable display. Files and directories can be passed as positional arguments.
 
 # CAVEATS
 

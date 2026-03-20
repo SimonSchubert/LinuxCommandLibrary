@@ -36,6 +36,10 @@ Static analysis tool for PHP type safety
 
 ```psalm --diff```
 
+**Run security taint analysis**
+
+```psalm --taint-analysis```
+
 **Fix issues automatically**
 
 ```psalm --alter --issues=[MissingReturnType]```
@@ -85,8 +89,14 @@ Static analysis tool for PHP type safety
 **--diff**
 > Only analyze files changed since last run.
 
+**--taint-analysis**
+> Enable taint analysis to detect security vulnerabilities in data flow.
+
 **--clear-cache**
 > Clear cache.
+
+**--stats**
+> Show type coverage statistics.
 
 # DESCRIPTION
 

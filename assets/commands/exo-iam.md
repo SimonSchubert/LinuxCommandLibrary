@@ -24,6 +24,10 @@ Exoscale identity and access management
 
 ```exo iam role create [role-name] --policy [policy.json]```
 
+**Show role details**
+
+```exo iam role show [role-name]```
+
 **Show organization policy**
 
 ```exo iam org-policy show```
@@ -37,8 +41,8 @@ Exoscale identity and access management
 **api-key** _ACTION_
 > Manage API keys (list, create, delete).
 
-**api-key create** _NAME_ _ROLE_
-> Create new API key with the specified role.
+**api-key create** _NAME_ _ROLE-NAME|ROLE-ID_
+> Create new API key with the specified role name or ID.
 
 **api-key list**
 > List all API keys.
@@ -51,6 +55,12 @@ Exoscale identity and access management
 
 **role create** _NAME_ **--policy** _FILE_
 > Create a new IAM role with a policy file.
+
+**role show** _NAME|ID_
+> Display details of an IAM role.
+
+**role update** _NAME|ID_ **--policy** _FILE_
+> Update the policy of an existing IAM role.
 
 **org-policy** _ACTION_
 > Manage organization IAM policy (show, reset).

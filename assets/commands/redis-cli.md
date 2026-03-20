@@ -16,6 +16,10 @@ Command-line interface for Redis servers
 
 ```redis-cli -a [password]```
 
+**Connect with TLS** and authentication
+
+```redis-cli --tls -h [hostname] -p [port] -a [password]```
+
 **Execute a single command**
 
 ```redis-cli [command] [arguments]```
@@ -76,6 +80,30 @@ Command-line interface for Redis servers
 **--rdb** _file_
 > Transfer RDB dump from server to file
 
+**-c**
+> Enable cluster mode (follow -ASK and -MOVED redirections)
+
+**-s** _socket_
+> Server socket path (overrides hostname and port)
+
+**--tls**
+> Establish a secure TLS connection
+
+**--user** _username_
+> ACL username for AUTH
+
+**--pass** _password_
+> Alias for **-a**
+
+**--csv**
+> Output in CSV format
+
+**--bigkeys**
+> Sample keys looking for keys with many elements
+
+**--memkeys**
+> Sample keys looking for keys consuming the most memory
+
 **--cluster** _command_
 > Execute cluster commands
 
@@ -111,7 +139,7 @@ The tool supports cluster mode, sentinel connections, and various debugging and 
 
 Using **KEYS \*** on production servers with large datasets can block the server. Use **SCAN** instead for iterating keys in production.
 
-Passwords passed with **-a** appear in process listings and shell history. Use **REDIS_AUTH** environment variable or interactive AUTH for sensitive environments.
+Passwords passed with **-a** appear in process listings and shell history. Use **REDISCLI_AUTH** environment variable or interactive AUTH for sensitive environments.
 
 Redis databases are numbered 0-15 by default. Use **-n** to select a database or **SELECT** command interactively.
 

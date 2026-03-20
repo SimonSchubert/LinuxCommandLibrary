@@ -24,13 +24,13 @@ manage DigitalOcean Droplet virtual machines
 
 ```doctl compute ssh [droplet_name]```
 
-**List available sizes**
+**List snapshots** of a droplet
 
-```doctl compute size list```
+```doctl compute droplet snapshots [droplet_id]```
 
-**Perform action** on droplet
+**Create a droplet with tags** and monitoring
 
-```doctl compute droplet-action reboot [droplet_id]```
+```doctl compute droplet create [name] --size [s-1vcpu-1gb] --image [ubuntu-22-04-x64] --region [nyc1] --tag-name [web] --enable-monitoring```
 
 # SYNOPSIS
 
@@ -59,6 +59,24 @@ _COMMAND_
 **--ssh-keys** _IDS_
 > SSH key IDs or fingerprints.
 
+**--vpc-uuid** _UUID_
+> UUID of a non-default VPC to create the Droplet in.
+
+**--enable-backups**
+> Enable automatic daily backups.
+
+**--enable-monitoring**
+> Install the DigitalOcean monitoring agent.
+
+**--tag-name** _TAG_
+> Apply a tag to the Droplet.
+
+**--user-data** _DATA_
+> Shell script or cloud-init data to run on first boot.
+
+**--wait**
+> Wait for Droplet creation to complete before returning.
+
 **delete** _ID_
 > Delete droplet.
 
@@ -86,4 +104,4 @@ doctl compute droplet is a core component of the **doctl** CLI, providing comman
 
 # SEE ALSO
 
-[doctl](/man/doctl)(1), [ssh](/man/ssh)(1), [doctl-compute-size](/man/doctl-compute-size)(1)
+[doctl](/man/doctl)(1), [ssh](/man/ssh)(1)

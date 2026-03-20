@@ -24,9 +24,9 @@ Bundle JavaScript modules for distribution
 
 ```rollup [main.js] -o [bundle.js] -m```
 
-**Specify multiple outputs**
+**Bundle with a specific plugin**
 
-```rollup -c -o [bundle.cjs.js] -o [bundle.esm.js]```
+```rollup [main.js] -o [bundle.js] -p [node-resolve]```
 
 # SYNOPSIS
 
@@ -47,7 +47,7 @@ The tool produces efficient bundles for libraries and applications, supporting m
 > Output file.
 
 **-f** _fmt_, **--format** _fmt_
-> Output format (es, cjs, umd, iife, amd).
+> Output format (es, cjs, umd, iife, amd, system).
 
 **-n** _name_, **--name** _name_
 > UMD/IIFE global name.
@@ -60,6 +60,15 @@ The tool produces efficient bundles for libraries and applications, supporting m
 
 **-p** _plugin_, **--plugin** _plugin_
 > Use plugin.
+
+**-d** _dir_, **--dir** _dir_
+> Output directory (for code splitting).
+
+**-e** _modules_, **--external** _modules_
+> Comma-separated list of external module IDs.
+
+**-g** _pairs_, **--globals** _pairs_
+> Comma-separated global:module pairs for UMD/IIFE.
 
 **--no-treeshake**
 > Disable tree shaking.

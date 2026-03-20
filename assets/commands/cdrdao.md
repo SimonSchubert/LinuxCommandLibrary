@@ -8,6 +8,26 @@ disc-at-once CD recording and reading
 
 ```cdrdao read-cd --device [/dev/cdrom] --read-raw [image.toc]```
 
+**Write** a disc image to CD-R
+
+```cdrdao write --device [/dev/cdrom] --speed [8] [image.toc]```
+
+**Simulate** a write without actually burning
+
+```cdrdao simulate --device [/dev/cdrom] [image.toc]```
+
+**Copy** a CD directly
+
+```cdrdao copy --source-device [/dev/cdrom] --device [/dev/cdrw] [image.toc]```
+
+**Blank** a CD-RW disc
+
+```cdrdao blank --device [/dev/cdrw] --blank-mode minimal```
+
+**Show** the table of contents
+
+```cdrdao show-toc [image.toc]```
+
 # SYNOPSIS
 
 **cdrdao** _command_ [_options_] _toc-file_
@@ -37,8 +57,14 @@ A typical workflow involves reading a disc with `read-cd` to create a TOC file a
 **show-toc**
 > Display TOC file contents
 
+**read-toc**
+> Analyze each track and create a TOC file without reading audio/data
+
 **blank**
 > Blank a CD-RW disc
+
+**unlock**
+> Unlock the recorder device after a failed write or simulation
 
 # PARAMETERS
 
@@ -54,8 +80,20 @@ A typical workflow involves reading a disc with `read-cd` to create a TOC file a
 **--speed** _n_
 > Set write speed
 
+**--source-device** _device_
+> Source CD device path (for copy command)
+
 **--eject**
 > Eject disc after operation
+
+**--overburn**
+> Allow writing more data than the medium capacity
+
+**--multi**
+> Do not close the session after writing, allowing additional sessions
+
+**--blank-mode** _mode_
+> Blanking mode for CD-RW (minimal or full)
 
 # CAVEATS
 

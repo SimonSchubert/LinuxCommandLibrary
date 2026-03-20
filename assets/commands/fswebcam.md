@@ -62,10 +62,22 @@ command-line webcam image capture
 > Suppress output.
 
 **--png** _level_
-> Save as PNG with compression.
+> Save as PNG with compression level (0-9, or -1 for automatic).
 
 **--jpeg** _quality_
-> JPEG quality (0-100).
+> JPEG quality (0-95, or -1 for automatic).
+
+**-i**, **--input** _input_
+> Set the input to use (number or name, default "0").
+
+**--flip** _direction_
+> Flip the image (h for horizontal, v for vertical).
+
+**--list-inputs**
+> List available inputs for the selected source.
+
+**--list-controls**
+> List available controls and their current values.
 
 # CONFIGURATION
 
@@ -74,9 +86,9 @@ command-line webcam image capture
 
 # DESCRIPTION
 
-**fswebcam** is a command-line webcam capture utility. It captures images from V4L2 (Video4Linux) devices and saves them as JPEG or PNG files.
+**fswebcam** is a small and simple command-line webcam capture utility. It captures images from V4L2 (Video4Linux) devices and saves them as JPEG or PNG files. Source modules include V4L2, V4L1, FILE, RAW, and TEST.
 
-The tool is useful for timelapse photography, security camera snapshots, and automated image capture. It supports overlays, timestamps, and various image adjustments.
+The tool is useful for timelapse photography, security camera snapshots, and automated image capture. It supports overlays, timestamps, banners, and various image adjustments.
 
 # CAVEATS
 

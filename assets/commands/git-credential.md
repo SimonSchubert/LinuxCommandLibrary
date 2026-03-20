@@ -34,10 +34,10 @@ EOF```
 > Read credential attributes from stdin, look up matching credentials via configured helpers, and output the result including username and password.
 
 **approve**
-> Send credential attributes to all configured helpers for storage.
+> Send credential attributes to all configured helpers for storage. No output is emitted.
 
 **reject**
-> Notify all configured helpers to erase matching credentials.
+> Notify all configured helpers to erase matching credentials. No output is emitted.
 
 **--help**
 > Display help information.
@@ -49,6 +49,23 @@ EOF```
 The command is typically invoked automatically by Git during push/pull operations when authentication is needed. Direct use is primarily for debugging credential issues or scripting authentication workflows. Input and output use a key=value format on stdin/stdout with attributes like protocol, host, username, and password.
 
 Credential helpers are configured via **git config credential.helper**.
+
+# INPUT ATTRIBUTES
+
+**protocol**
+> The protocol over which the credential will be used (e.g., https, ssh).
+
+**host**
+> The remote hostname for which the credential is used.
+
+**username**
+> The credential's username, if already known.
+
+**password**
+> The credential's password, if being provided or returned.
+
+**path**
+> The path with which the credential will be used (e.g., for accessing remote https repositories).
 
 # CAVEATS
 

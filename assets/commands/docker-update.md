@@ -33,7 +33,7 @@ dynamically update container resource limits
 **--cpus** _decimal_
 > Number of CPUs.
 
-**--memory** **-m** _bytes_
+**--memory**, **-m** _bytes_
 > Memory limit.
 
 **--memory-swap** _bytes_
@@ -45,14 +45,33 @@ dynamically update container resource limits
 **--cpu-shares** _int_
 > CPU shares (relative weight).
 
-**--kernel-memory** _bytes_
-> Kernel memory limit.
+**--memory-reservation** _bytes_
+> Memory soft limit.
+
+**--cpuset-cpus** _string_
+> CPUs in which to allow execution (e.g., 0-3, 0,1).
+
+**--pids-limit** _int_
+> Tune container pids limit (-1 for unlimited).
+
+**--blkio-weight** _uint16_
+> Block IO relative weight (10-1000), 0 to disable.
+
+**--cpu-period** _int_
+> Limit CPU CFS period (microseconds).
+
+**--cpu-quota** _int_
+> Limit CPU CFS quota (microseconds).
 
 # DESCRIPTION
 
-**docker update** dynamically updates container resource constraints. Allows changing CPU, memory, and restart settings without recreating the container.
+**docker update** dynamically updates container resource constraints. Allows changing CPU, memory, and restart settings without recreating the container. Can update running or stopped containers. Not supported for Windows containers.
+
+# CAVEATS
+
+The **--kernel-memory** option has been deprecated since Docker 20.10. Memory changes on running containers may require a restart to take full effect on some systems.
 
 # SEE ALSO
 
-[docker-container-update](/man/docker-container-update)(1), [docker-run](/man/docker-run)(1)
+[docker](/man/docker)(1), [docker-container-update](/man/docker-container-update)(1), [docker-run](/man/docker-run)(1), [docker-inspect](/man/docker-inspect)(1)
 

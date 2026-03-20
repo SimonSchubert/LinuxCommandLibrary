@@ -20,13 +20,13 @@ Discover NAT type using STUN protocol
 
 ```pystun3 -i [192.168.1.100]```
 
-**Verbose output**
+**Enable debug logging**
 
-```pystun3 -v```
+```pystun3 -d```
 
-**JSON output**
+**Specify STUN server port**
 
-```pystun3 --json```
+```pystun3 -H [stun.example.com] -P [3478]```
 
 # SYNOPSIS
 
@@ -34,29 +34,29 @@ Discover NAT type using STUN protocol
 
 # PARAMETERS
 
-**-H** _HOST_
+**-H** _STUN_HOST_, **--host** _STUN_HOST_
 > STUN server hostname.
 
-**-p** _PORT_
-> Source port.
+**-P** _STUN_PORT_, **--host-port** _STUN_PORT_
+> STUN server port (default: 3478).
 
-**-i** _IP_
-> Source IP address.
+**-p** _SOURCE_PORT_, **--port** _SOURCE_PORT_
+> Source port to listen on (default: 54320).
 
-**-v**
-> Verbose output.
+**-i** _SOURCE_IP_, **--interface** _SOURCE_IP_
+> Network interface for client (default: 0.0.0.0).
 
-**--json**
-> JSON output format.
+**-d**, **--debug**
+> Enable debug logging.
 
-**-P** _PORT_
-> STUN server port.
+**--version**
+> Show program version.
 
 # DESCRIPTION
 
 **pystun3** is a STUN (Session Traversal Utilities for NAT) client that discovers the type of NAT between a host and the internet. It communicates with a STUN server to determine the NAT classification (full cone, restricted cone, port restricted, or symmetric) and reports the external IP address and mapped port.
 
-Understanding NAT type is essential for configuring VoIP, video conferencing, and peer-to-peer applications that require direct connections between hosts. The tool can target specific STUN servers, bind to particular network interfaces, and output results in JSON format for scripting.
+Understanding NAT type is essential for configuring VoIP, video conferencing, and peer-to-peer applications that require direct connections between hosts. The tool can target specific STUN servers and bind to particular network interfaces.
 
 # CAVEATS
 

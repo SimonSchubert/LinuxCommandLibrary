@@ -10,19 +10,23 @@ Print **time and memory** usage of a command
 
 Log statistics to a **file**
 
-```runlim --output-file=path/to/file command arguments```
+```runlim -o path/to/file command arguments```
 
 Limit **CPU time** (seconds)
 
-```runlim --time-limit=60 command arguments```
+```runlim -t 60 command arguments```
 
 Limit **real-time** (seconds)
 
-```runlim --real-time-limit=120 command arguments```
+```runlim -r 120 command arguments```
 
 Limit **memory space** (MB)
 
-```runlim --space-limit=1024 command arguments```
+```runlim -s 1024 command arguments```
+
+Combine **time and space limits** with output logging
+
+```runlim -t 300 -s 2048 -o path/to/log command arguments```
 
 # SYNOPSIS
 
@@ -30,23 +34,32 @@ Limit **memory space** (MB)
 
 # PARAMETERS
 
-**--output-file** _file_
-> Log statistics to file instead of stdout
+**-o** _FILE_, **--output-file**=_FILE_
+> Overwrite or create FILE for output logging
 
-**--time-limit** _seconds_
-> CPU time limit
+**-t** _NUM_, **--time-limit**=_NUM_
+> Set CPU time limit to NUM seconds
 
-**--real-time-limit** _seconds_
-> Wall clock time limit
+**-r** _NUM_, **--real-time-limit**=_NUM_
+> Set real (wall clock) time limit to NUM seconds
 
-**--space-limit** _MB_
-> Memory limit in megabytes
+**-s** _NUM_, **--space-limit**=_NUM_
+> Set memory limit to NUM megabytes
+
+**-k**, **--kill**
+> Propagate signals to child processes
+
+**-h**, **--help**
+> Show summary of options
+
+**--version**
+> Show version of program
 
 # DESCRIPTION
 
-**runlim** samples and limits time and memory usage of a program and its child processes. It uses the /proc filesystem on Linux to monitor resource consumption.
+**runlim** executes a command while sampling and limiting its time and memory usage, including all child processes. It samples resource consumption every 100 milliseconds via the /proc filesystem and logs status information to stderr every second.
 
-The tool is useful for benchmarking, testing, and preventing runaway processes from consuming excessive resources.
+The tool is useful for benchmarking, automated testing, and preventing runaway processes from consuming excessive resources.
 
 # CAVEATS
 
@@ -54,7 +67,7 @@ Linux-specific; relies on /proc filesystem. Resource measurements are sampled, n
 
 # HISTORY
 
-Developed for benchmarking and resource limiting, commonly used in automated testing and competitive programming environments.
+Written by **Armin Biere** and **Toni Jussila**. Commonly used in SAT solver competitions and automated testing environments.
 
 # SEE ALSO
 

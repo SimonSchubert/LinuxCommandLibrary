@@ -1,6 +1,6 @@
 # TAGLINE
 
-version control system for binary files, optimized for managing operating
+version control system for binary files, optimized for managing operating system root filesystems
 
 # TLDR
 
@@ -34,7 +34,7 @@ Show available **refs** (branches)
 
 # SYNOPSIS
 
-**ostree** _command_ [_options_]
+**ostree** [_global-options_] _command_ [_command-options_] [_arguments_]
 
 # PARAMETERS
 
@@ -62,8 +62,26 @@ Show available **refs** (branches)
 **summary**
 > Show or update repository summary
 
+**diff**
+> Show differences between two commits
+
+**cat**
+> Display file contents from a commit
+
+**prune**
+> Search for unreachable objects and delete them
+
+**remote**
+> Manage remote repository configuration
+
 **pull**
 > Pull from a remote repository
+
+**fsck**
+> Check repository for consistency
+
+**static-delta**
+> Manage static deltas between commits
 
 **admin**
 > Manage system deployments (for bootable trees)
@@ -71,8 +89,11 @@ Show available **refs** (branches)
 **--repo _path_**
 > Path to the repository
 
-**--branch _name_**
-> Branch name for operations
+**--verbose**
+> Enable verbose output
+
+**--version**
+> Print version and exit
 
 # DESCRIPTION
 

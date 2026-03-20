@@ -16,6 +16,14 @@ Generate a script and **save to a specific file**
 
 ```autoexpect -f [path/to/file] [command]```
 
+**Use prompt mode** to match only the last line of output
+
+```autoexpect -p [command]```
+
+**Use conservative mode** with slight delays between characters
+
+```autoexpect -c [command]```
+
 # SYNOPSIS
 
 **autoexpect** [_options_] [_command_...]
@@ -29,13 +37,25 @@ The generated script is saved as **script.exp** by default. This script can be m
 # PARAMETERS
 
 **-f** _file_
-> Save the generated script to the specified file instead of script.exp
+> Save the generated script to the specified file instead of script.exp.
 
 **-p**
-> Use programmer mode (generate more verbose output)
+> Enable prompt mode. Autoexpect only matches the last line of program output (usually the prompt), making scripts less sensitive to output changes.
 
-**-t**
-> Set conservative timing
+**-P** _key_
+> Define a key to toggle prompt mode on and off during the session.
+
+**-c**
+> Enable conservative mode. Autoexpect pauses briefly (one tenth of a second) before sending each character, improving reliability on slow systems.
+
+**-C** _key_
+> Define a key to toggle conservative mode on and off during the session.
+
+**-Q** _key_
+> Define a quote character to enter characters that autoexpect would otherwise consume as toggle keys.
+
+**-quiet**
+> Disable informational messages produced by autoexpect.
 
 # CAVEATS
 

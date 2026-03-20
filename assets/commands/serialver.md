@@ -26,10 +26,10 @@ Compute Java serialization version UID
 > Class search path.
 
 **-J** _FLAG_
-> Pass to Java runtime.
+> Pass option to the Java runtime (e.g., -J-Xms48m).
 
 **-show**
-> Show GUI (deprecated).
+> Show GUI inspector (removed in modern JDK versions).
 
 # DESCRIPTION
 
@@ -39,7 +39,7 @@ When a class does not explicitly declare a serialVersionUID, the JVM computes on
 
 # CAVEATS
 
-Class must be Serializable. JDK required. GUI mode deprecated.
+Class must implement Serializable. JDK required. The **-show** GUI mode has been removed in recent JDK versions.
 
 # HISTORY
 

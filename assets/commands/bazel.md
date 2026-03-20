@@ -68,6 +68,15 @@ The tool is designed for monorepos and projects requiring strict dependency mana
 **fetch** _target_
 > Fetch external dependencies
 
+**coverage** _target_
+> Generate code coverage report for tests
+
+**version**
+> Print Bazel version
+
+**shutdown**
+> Stop the Bazel server
+
 **info**
 > Show build environment info
 
@@ -82,6 +91,15 @@ The tool is designed for monorepos and projects requiring strict dependency mana
 
 **--disk_cache** _path_
 > Disk cache location
+
+**--compilation_mode** (_-c_) _mode_
+> Compilation mode: fastbuild, dbg, or opt
+
+**--keep_going** (_-k_)
+> Continue building after errors
+
+**--verbose_failures**
+> Show full command line for failed commands
 
 # TARGET SYNTAX
 
@@ -115,7 +133,7 @@ cc_binary(
 **~/.bazelrc**
 > User-level build options and configuration flags.
 
-**WORKSPACE** or **WORKSPACE.bazel**
+**WORKSPACE** or **WORKSPACE.bazel** (or **MODULE.bazel** for Bzlmod)
 > Root file that defines external dependencies and the project boundary.
 
 **.bazelrc**
@@ -131,4 +149,4 @@ Steep learning curve. Requires BUILD files throughout project. Initial setup com
 
 # SEE ALSO
 
-[make](/man/make)(1), [ninja](/man/ninja)(1), [buck](/man/buck)(1), [gradle](/man/gradle)(1), [cmake](/man/cmake)(1)
+[make](/man/make)(1), [cmake](/man/cmake)(1), [ninja](/man/ninja)(1), [gradle](/man/gradle)(1), [buck](/man/buck)(1)

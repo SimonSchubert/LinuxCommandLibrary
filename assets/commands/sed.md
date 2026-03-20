@@ -30,7 +30,7 @@ Use a **custom delimiter** (useful when pattern contains slashes)
 
 **Insert** a new line at the beginning of a file
 
-```sed -i '1i\your new line text\' [path/to/file]```
+```sed -i '1i\your new line text' [path/to/file]```
 
 **Delete blank lines** from a file
 
@@ -63,14 +63,14 @@ Use a **custom delimiter** (useful when pattern contains slashes)
 **-z**, **--null-data**
 > Separate lines by NUL characters
 
+**--sandbox**
+> Block input/output commands (e/w/r); use for untrusted scripts
+
+**--posix**
+> Disable all GNU extensions for POSIX compliance
+
 **--debug**
 > Annotate program execution
-
-**--help**
-> Display help
-
-**--version**
-> Display version
 
 # DESCRIPTION
 

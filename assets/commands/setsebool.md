@@ -18,7 +18,7 @@ Set SELinux boolean values at runtime
 
 **Set** multiple booleans persistently
 
-```sudo setsebool -P [key1] [1] [key2] [0]```
+```sudo setsebool -P [bool1]=[on] [bool2]=[off]```
 
 # SYNOPSIS
 
@@ -37,9 +37,9 @@ Set SELinux boolean values at runtime
 
 # DESCRIPTION
 
-**setsebool** sets the current state of SELinux booleans. Booleans allow runtime customization of SELinux policy without requiring policy modification or recompilation.
+**setsebool** sets the current state of a particular SELinux boolean or a list of booleans to a given value. Booleans allow runtime customization of SELinux policy without requiring policy modification or recompilation.
 
-Values can be specified as 1, true, on for enabled or 0, false, off for disabled.
+Values can be specified as 1, true, or on for enabled, or 0, false, or off for disabled. Multiple booleans can be set at once using the **bool=value** syntax.
 
 # CAVEATS
 

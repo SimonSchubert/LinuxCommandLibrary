@@ -28,9 +28,9 @@ MVC web framework for Node.js
 
 ```sails console```
 
-**Show routes**
+**Show version**
 
-```sails inspect```
+```sails --version```
 
 # SYNOPSIS
 
@@ -50,17 +50,17 @@ MVC web framework for Node.js
 **console**
 > Interactive REPL.
 
-**inspect**
-> Show app info.
-
 **debug**
-> Start in debug mode.
+> Start app in debug mode.
+
+**--version**
+> Show installed Sails version.
 
 **--port** _PORT_
-> Server port.
+> Set server port.
 
 **--prod**
-> Production mode.
+> Start in production mode.
 
 # DESCRIPTION
 

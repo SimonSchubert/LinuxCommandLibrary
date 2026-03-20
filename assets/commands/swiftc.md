@@ -28,6 +28,10 @@ Compile Swift source code to executables
 
 ```swiftc -v [file.swift]```
 
+**Compile with size optimization**
+
+```swiftc -Osize [file.swift] -o [program]```
+
 **Emit object file only**
 
 ```swiftc -c [file.swift] -o [file.o]```
@@ -50,20 +54,35 @@ Compile Swift source code to executables
 **-O**
 > Compile with optimizations
 
+**-Osize**
+> Compile with optimizations, prioritizing smaller binary size
+
 **-Ounchecked**
 > Compile with optimizations, removing runtime safety checks
 
 **-Onone**
 > Compile without optimizations (default for debug)
 
+**-whole-module-optimization**
+> Optimize across the entire module at once
+
+**-target** _triple_
+> Generate code for the given target triple (e.g., x86_64-apple-macosx10.15)
+
 **-v**, **--verbose**
 > Show verbose output including executed commands
+
+**-emit-executable**
+> Generate an executable (default when linking)
 
 **-emit-library**
 > Generate a dynamic library
 
 **-emit-module**
 > Generate a Swift module
+
+**-D** _flag_
+> Define a conditional compilation flag
 
 **-I** _path_
 > Add import search path

@@ -55,6 +55,9 @@ Retro terminal music player inspired by Winamp 2.x
 **--eq-preset** _name_
 > Set EQ preset: **Flat**, **Rock**, **Pop**, **Jazz**, **Classical**, **Bass Boost**, **Treble Boost**, **Vocal**, **Electronic**, **Acoustic**.
 
+**--bit-depth** _n_
+> PCM bit depth: 16 (default) or 32 (lossless).
+
 **--sample-rate** _Hz_
 > Output sample rate: 22050, 44100, 48000, 96000, 192000. Default 44100.
 
@@ -63,6 +66,9 @@ Retro terminal music player inspired by Winamp 2.x
 
 **--resample-quality** _n_
 > Resample quality factor, range 1-4. Default 4.
+
+**--visualizer** _mode_
+> Visualizer mode: **Bars**, **Bricks**, **Columns**, **Wave**, **Scatter**, **Flame**, **Retro**, **None**.
 
 **-h**, **--help**
 > Show help and exit.
@@ -77,7 +83,7 @@ Retro terminal music player inspired by Winamp 2.x
 
 **cliamp** is a retro terminal music player inspired by Winamp 2.x. It plays **MP3**, **WAV**, **FLAC**, **OGG**, **AAC**, **ALAC**, **Opus**, and **WMA** with a 10-band spectrum visualizer, 10-band parametric EQ, and playlist management.
 
-It supports local files, directories (recursive scanning), HTTP streaming, M3U/M3U8 playlists, podcast RSS feeds, and URLs from YouTube, SoundCloud, and Bandcamp (via yt-dlp). A built-in file browser and playlist manager allow organizing music from within the terminal.
+It supports local files, directories (recursive scanning), HTTP streaming, M3U/M3U8 playlists, podcast RSS feeds, and URLs from YouTube, SoundCloud, Bandcamp, Bilibili, and Spotify (via yt-dlp). A built-in file browser and playlist manager allow organizing music from within the terminal.
 
 cliamp can also connect to a Navidrome server for remote music streaming via environment variables.
 

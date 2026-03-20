@@ -47,7 +47,7 @@ Serialize code repositories for LLM consumption
 # PARAMETERS
 
 **--tokens** _count_
-> Limit output by approximate token count (e.g., 128k, 100)
+> Use token counting mode instead of byte mode (e.g., 128k, 100)
 
 **--max-size** _size_
 > Limit output by byte size (e.g., 10MB, 128K); default: 10MB

@@ -30,13 +30,16 @@ Create a commit object from a tree
 > Parent commit.
 
 **-m** _message_
-> Commit message.
+> A paragraph in the commit log message. Can be given more than once; each becomes its own paragraph.
 
 **-F** _file_
-> Read message from file.
+> Read the commit log message from the given file. Use - to read from stdin. Can be given more than once.
 
-**-S**
-> GPG sign commit.
+**-S**[_keyid_]
+> GPG sign commit. The keyid is optional and defaults to the committer identity; if specified, it must be attached to the option without a space.
+
+**--no-gpg-sign**
+> Countermand a previous --gpg-sign option.
 
 # DESCRIPTION
 
@@ -50,5 +53,4 @@ This command outputs the SHA-1 hash of the newly created commit object. To make 
 
 # SEE ALSO
 
-[git-commit](/man/git-commit)(1), [git-write-tree](/man/git-write-tree)(1)
-
+[git-commit](/man/git-commit)(1), [git-write-tree](/man/git-write-tree)(1), [git-update-ref](/man/git-update-ref)(1)

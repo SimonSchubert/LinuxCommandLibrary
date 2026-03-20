@@ -24,6 +24,10 @@ information gathering reconnaissance tool
 
 ```dmitry -p [domain.com]```
 
+**Port scan with banner** grabbing
+
+```dmitry -pb [domain.com]```
+
 **Run all information** gathering
 
 ```dmitry -winsepo [output.txt] [domain.com]```
@@ -53,10 +57,16 @@ _HOST_
 > Perform TCP port scan.
 
 **-b**
-> Read banner from discovered ports.
+> Read banner from discovered ports (requires -p).
+
+**-f**
+> Report filtered ports (requires -p).
+
+**-t** _SECONDS_
+> Set TTL for the portscan module (default 2 seconds).
 
 **-o** _FILE_
-> Output to file.
+> Save output to file.
 
 **-i**
 > Perform Internet number whois lookup.

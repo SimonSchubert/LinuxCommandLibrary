@@ -65,6 +65,12 @@ The CLI automatically syncs cron jobs from the system to the Cronitor service, w
 **configure**
 > Save configuration
 
+**select**
+> Select a cron job to run interactively
+
+**activity**
+> View monitor activity
+
 **shell**
 > Run cron-like shell
 
@@ -87,6 +93,9 @@ The CLI automatically syncs cron jobs from the system to the Cronitor service, w
 
 **-u**, **--users** _list_
 > Comma-separated user list
+
+**-p**, **--ping-api-key** _key_
+> Telemetry Events API key
 
 **-v**, **--verbose**
 > Verbose output

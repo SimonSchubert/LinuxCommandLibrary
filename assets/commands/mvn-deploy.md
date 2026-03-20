@@ -10,7 +10,7 @@ uploads artifacts to remote repository
 
 **Deploy specific file**
 
-```mvn deploy:deploy-file -Dfile=[file.jar] -DrepositoryId=[repo-id] -Durl=[repo-url]```
+```mvn deploy:deploy-file -Dfile=[file.jar] -DgroupId=[com.example] -DartifactId=[my-lib] -Dversion=[1.0] -Durl=[repo-url] -DrepositoryId=[repo-id]```
 
 **Deploy with specific profile**
 
@@ -20,9 +20,9 @@ uploads artifacts to remote repository
 
 ```mvn deploy -DskipTests```
 
-**Deploy to snapshot repository**
+**Deploy to an alternate repository**
 
-```mvn deploy -DaltSnapshotDeploymentRepository=[id::url]```
+```mvn deploy -DaltDeploymentRepository=[id::url]```
 
 **Deploy single module**
 
@@ -43,14 +43,26 @@ uploads artifacts to remote repository
 **-Durl** _URL_
 > Repository URL.
 
+**-DgroupId** _GROUP_
+> Group ID for deploy-file goal.
+
+**-DartifactId** _ARTIFACT_
+> Artifact ID for deploy-file goal.
+
+**-Dversion** _VERSION_
+> Version for deploy-file goal.
+
+**-DaltDeploymentRepository** _id::url_
+> Alternative repository for deployment (format: id::url).
+
+**-DskipTests**
+> Skip running tests during the build.
+
 **-P** _PROFILE_
 > Activate profile.
 
 **-pl** _MODULE_
 > Build specific module.
-
-**--help**
-> Display help information.
 
 # DESCRIPTION
 

@@ -8,13 +8,25 @@ Terminal eBook reader with text-to-speech
 
 ```lue [path/to/book.epub]```
 
+**Resume reading the last opened book**
+
+```lue```
+
 **Start the navigation guide**
 
 ```lue --guide```
 
-**Read with a specific keyboard layout**
+**Read with a specific TTS model**
 
-```lue -k [layout] [path/to/book.epub]```
+```lue --tts [kokoro] [path/to/book.epub]```
+
+**Read with a specific voice and speed**
+
+```lue --voice [en-US-AriaNeural] --speed [1.5] [path/to/book.epub]```
+
+**Read a PDF with cleaning filter** (removes page numbers, headers)
+
+```lue --filter [path/to/book.pdf]```
 
 # SYNOPSIS
 
@@ -27,6 +39,24 @@ Terminal eBook reader with text-to-speech
 
 **--guide**
 > Launch the interactive navigation guide.
+
+**--tts** _MODEL_
+> Use specific TTS model (edge, kokoro, or none).
+
+**--voice** _VOICE_
+> Use a specific voice (e.g., "en-US-AriaNeural").
+
+**--speed** _SPEED_
+> Set the speech speed (e.g., 1.5).
+
+**--lang** _CODE_
+> Specify a language code.
+
+**--over** _SECONDS_
+> Seconds of overlap between sentences.
+
+**--filter**
+> Enable PDF cleaning filter (removes page numbers, headers, footnotes).
 
 # DESCRIPTION
 

@@ -24,6 +24,14 @@ Set process CPU affinity
 
 ```taskset -c [1-4] [command]```
 
+**Set affinity using a hex bitmask** (CPUs 0 and 1)
+
+```taskset -p [0x3] [pid]```
+
+**Set affinity for all threads** of a process
+
+```taskset -a -p -c [0-3] [pid]```
+
 # SYNOPSIS
 
 **taskset** [_options_] [_mask_|_list_] [_pid_|_command_]
@@ -53,7 +61,7 @@ This is useful for performance tuning, isolating processes to specific cores, or
 
 # CAVEATS
 
-CPU IDs start at 0. Setting affinity may not improve performance and can hurt it if done incorrectly. The kernel may still migrate processes for load balancing unless CPU isolation is configured. Part of the util-linux package.
+CPU IDs start at 0. Setting affinity may not improve performance and can hurt it if done incorrectly. The kernel may still migrate processes for load balancing unless CPU isolation is configured. The CPU list supports stride syntax (e.g. 0-10:2 means CPUs 0,2,4,6,8,10). Part of the util-linux package.
 
 # SEE ALSO
 

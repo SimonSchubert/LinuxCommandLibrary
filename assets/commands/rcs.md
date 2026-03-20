@@ -75,6 +75,15 @@ Revision Control System for file versioning
 **-q**
 > Quiet mode, suppress diagnostics
 
+**-d**_date_
+> Select the latest revision on or before the given date (with co)
+
+**-w**_login_
+> Select the latest revision checked in by the given user (with co)
+
+**-k**_sub_
+> Set keyword substitution mode (e.g., -kv, -kvl, -ko)
+
 # DESCRIPTION
 
 **RCS** (Revision Control System) manages multiple revisions of files, providing version control for individual files. It automates storing, retrieving, logging, and merging revisions, making it useful for source code, documentation, and configuration files.

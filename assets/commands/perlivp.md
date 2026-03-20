@@ -8,13 +8,17 @@ verifies Perl installation
 
 ```perlivp```
 
-**Verbose verification**
+**Run with verbose output**
 
 ```perlivp -v```
 
-**Specific test**
+**Print a description of each test before running it**
 
 ```perlivp -p```
+
+**Run with both preface and verbose output**
+
+```perlivp -p -v```
 
 # SYNOPSIS
 
@@ -22,20 +26,20 @@ verifies Perl installation
 
 # PARAMETERS
 
-**-v**
-> Verbose output.
-
 **-p**
-> Test core modules.
+> Print a description of each test before performing it.
 
-**-a**
-> Test all modules.
+**-v**
+> Give more detailed information about each test after it has been performed.
+
+**-h**
+> Print a brief help message.
 
 # DESCRIPTION
 
-**perlivp** verifies Perl installation. Runs diagnostic tests.
+**perlivp** (Perl Installation Verification Procedure) tests whether Perl and its libraries have been correctly installed. It is set up at Perl source code build time and should be run after `make install`.
 
-The tool checks Perl configuration. Installation validation.
+A successful verification produces output like `ok 1`, `ok 2`, etc.
 
 # CAVEATS
 

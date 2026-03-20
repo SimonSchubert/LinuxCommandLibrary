@@ -65,22 +65,31 @@ The utility chooses appropriate UID/GID values, creates home directories with sk
 > Create group (or named group for system user)
 
 **--disabled-login**
-> Disable login and set shell to /usr/sbin/nologin
+> Disable login (no password set, login not possible until enabled)
 
 **--disabled-password**
-> Prevent password setting
+> Do not set a password (login via other methods like SSH keys still possible)
 
-**--comment comment**
-> Set GECOS field information
+**--gecos GECOS**
+> Set GECOS field (full name, room, phone, etc.) without interactive prompt
 
 **--add-extra-groups**
 > Add user to EXTRA_GROUPS defined in config
 
+**--firstuid ID**
+> Override the first UID in the range for new users
+
+**--lastuid ID**
+> Override the last UID in the range for new users
+
 **--quiet**
-> Suppress messages
+> Suppress informational messages, only show warnings and errors
+
+**--debug**
+> Be verbose, useful for troubleshooting
 
 **--conf file**
-> Use alternate configuration file
+> Use alternate configuration file instead of /etc/adduser.conf
 
 # CONFIGURATION
 

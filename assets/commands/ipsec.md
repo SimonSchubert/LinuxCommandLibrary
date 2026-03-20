@@ -32,6 +32,14 @@ control interface for strongSwan/Libreswan IPsec VPN implementations
 
 ```sudo ipsec down [connection]```
 
+**Show version information**
+
+```ipsec --version```
+
+**Reload secrets** from ipsec.secrets
+
+```sudo ipsec rereadsecrets```
+
 # SYNOPSIS
 
 **ipsec** _command_ [_options_]
@@ -62,14 +70,35 @@ control interface for strongSwan/Libreswan IPsec VPN implementations
 **down** _connection_
 > Stop connection.
 
+**update**
+> Apply config changes without full restart.
+
+**route** _connection_
+> Install kernel IPsec policy for a connection.
+
+**unroute** _connection_
+> Remove kernel IPsec policy for a connection.
+
+**rereadsecrets**
+> Reload secrets from ipsec.secrets.
+
+**listalgs**
+> List supported cryptographic algorithms.
+
 **listcerts**
 > List certificates.
+
+**listcacerts**
+> List CA certificates.
 
 **listall**
 > List all information.
 
-**stroke** _command_
-> Send command to daemon.
+**rereadall**
+> Execute all reread operations.
+
+**--version**
+> Show version information.
 
 # DESCRIPTION
 
@@ -99,4 +128,4 @@ IPsec was standardized by IETF in the 1990s. strongSwan (forked from FreeS/WAN i
 
 # SEE ALSO
 
-[strongswan](/man/strongswan)(8), [swanctl](/man/swanctl)(8), [ip-xfrm](/man/ip-xfrm)(8)
+[ip](/man/ip)(8), [openvpn](/man/openvpn)(8), [wg](/man/wg)(8)

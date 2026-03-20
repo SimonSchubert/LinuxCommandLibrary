@@ -24,6 +24,14 @@ Command-line calculator with unit conversion
 
 ```qalc "[sin(45 degrees)]"```
 
+**Display result in hexadecimal**
+
+```qalc -b 16 "[255]"```
+
+**Terse output** (result only, useful in scripts)
+
+```qalc -t "[2^16]"```
+
 # SYNOPSIS
 
 **qalc** [_options_] [_expression_]
@@ -31,16 +39,37 @@ Command-line calculator with unit conversion
 # PARAMETERS
 
 _EXPRESSION_
-> Mathematical expression.
+> Mathematical expression to evaluate.
 
-**-t**
-> Terse output.
+**-t**, **--terse**
+> Reduce output to just the result.
 
-**-f** _FILE_
-> Read from file.
+**-f** _FILE_, **--file** _FILE_
+> Execute commands from a file first.
 
-**-u** _MODE_
+**-e**, **--exrates**
 > Update exchange rates.
+
+**-b** _BASE_, **--base** _BASE_
+> Set the number base for results.
+
+**-c**, **--color**
+> Use colors to highlight expressions and results.
+
+**-i**, **--interactive**
+> Start in interactive mode.
+
+**-l** [_TERM_], **--list** [_TERM_]
+> List matching variables, functions, units, and prefixes.
+
+**-s** _"OPTION VALUE"_, **--set** _"OPTION VALUE"_
+> Set a configuration option (e.g., -s "base 16").
+
+**-p** [_BASE_], **--prog** [_BASE_]
+> Start in programming mode with base conversion.
+
+**-n**, **--nodefs**
+> Do not load any functions, units, or variables from file.
 
 # DESCRIPTION
 

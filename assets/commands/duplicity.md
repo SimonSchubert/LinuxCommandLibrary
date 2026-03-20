@@ -81,7 +81,7 @@ A full backup is periodically created, with subsequent incremental backups stori
 > GPG key for signing.
 
 **--no-encryption**
-> Disable encryption.
+> Disable encryption entirely.
 
 **--include** _pattern_
 > Include files matching pattern.
@@ -94,6 +94,15 @@ A full backup is periodically created, with subsequent incremental backups stori
 
 **-t** _time_, **--restore-time** _time_
 > Restore from specific time.
+
+**--tempdir** _path_
+> Use specific directory for temporary files.
+
+**--progress**
+> Display upload progress and estimated upload time.
+
+**--verbosity** _level_
+> Set verbosity level (0-9, default 3).
 
 # CAVEATS
 

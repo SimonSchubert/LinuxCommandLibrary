@@ -55,7 +55,7 @@ Securely transfer files between computers with TUI
 
 **tran** is a command-line tool and TUI that allows secure transfer and sending of files and directories between computers. It provides a file browser interface for selecting files and uses password-based authentication for receiving transfers.
 
-Configuration is stored in **~/.tran/tran.yml**.
+Configuration is stored in **~/.config/tran/tran.yml**.
 
 # HISTORY
 

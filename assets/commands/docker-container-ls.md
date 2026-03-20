@@ -24,6 +24,14 @@ list containers on the system
 
 ```docker container ls -q```
 
+**Filter by name**
+
+```docker container ls -f name=[container_name]```
+
+**Show the last created container**
+
+```docker container ls --latest```
+
 # SYNOPSIS
 
 **docker** **container** **ls** [_options_]
@@ -37,16 +45,22 @@ list containers on the system
 > Only display container IDs.
 
 **-f**, **--filter** _filter_
-> Filter output based on conditions.
+> Filter output based on conditions (e.g., status, name, label, ancestor, network, exited).
 
 **--format** _string_
 > Format output using Go template.
 
 **-n**, **--last** _n_
-> Show n last created containers.
+> Show n last created containers (includes all states).
+
+**-l**, **--latest**
+> Show the most recently created container (includes all states).
 
 **-s**, **--size**
 > Display total file sizes.
+
+**--no-trunc**
+> Do not truncate output.
 
 # DESCRIPTION
 
@@ -56,4 +70,4 @@ This command is equivalent to the legacy **docker ps** command and serves as the
 
 # SEE ALSO
 
-[docker-ps](/man/docker-ps)(1), [docker-container](/man/docker-container)(1)
+[docker-ps](/man/docker-ps)(1), [docker-container](/man/docker-container)(1), [docker-container-run](/man/docker-container-run)(1), [docker-container-rm](/man/docker-container-rm)(1)

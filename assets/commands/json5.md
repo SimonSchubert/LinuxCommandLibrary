@@ -20,9 +20,13 @@ parses JSON5 format and outputs standard JSON
 
 ```json5 --validate [file.json5]```
 
-**Minify output**
+**Indent with tabs**
 
-```json5 --space [0] [file.json5]```
+```json5 --space t [file.json5]```
+
+**Convert and write to file**
+
+```json5 --out-file [output.json] [file.json5]```
 
 # SYNOPSIS
 
@@ -31,18 +35,21 @@ parses JSON5 format and outputs standard JSON
 # PARAMETERS
 
 _FILE_
-> JSON5 file to parse.
+> JSON5 file to parse. Reads from stdin if omitted.
 
-**--space** _N_
-> Indentation spaces.
+**-s**, **--space** _N_
+> Number of spaces to indent, or "t" for tabs.
 
-**--validate**
-> Validate without output.
+**-v**, **--validate**
+> Validate JSON5 syntax without outputting JSON.
 
-**--out-file** _FILE_
-> Output file.
+**-o**, **--out-file** _FILE_
+> Write output to file instead of stdout.
 
-**--help**
+**-V**, **--version**
+> Display version number.
+
+**-h**, **--help**
 > Display help information.
 
 # DESCRIPTION

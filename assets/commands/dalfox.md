@@ -35,7 +35,7 @@ open-source XSS vulnerability scanner and parameter analyzer
 # PARAMETERS
 
 _MODE_
-> Operation mode: url, file, pipe, sxss.
+> Operation mode: url, file, pipe, sxss, server, payload.
 
 _TARGET_
 > URL or file containing URLs to scan.
@@ -66,6 +66,24 @@ _TARGET_
 
 **--silence**
 > Suppress all output except results.
+
+**--mining-dict**
+> Enable dictionary-based parameter mining.
+
+**--mining-dom**
+> Enable DOM-based parameter mining.
+
+**--only-custom-payload**
+> Only test custom payloads, skip built-in payloads.
+
+**--remote-payloads** _SOURCE_
+> Use remote payloads (portswigger, payloadbox).
+
+**--skip-xss-scanning**
+> Skip XSS scanning, only perform parameter analysis.
+
+**--poc-type** _TYPE_
+> PoC output format (plain, curl, httpie, http-request).
 
 **--help**
 > Display help information.

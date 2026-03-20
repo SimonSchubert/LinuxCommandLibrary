@@ -35,11 +35,14 @@ Uninstall TeX Live packages
 **--no-depends**
 > Don't remove dependencies.
 
+**--no-depends-at-all**
+> Even more aggressive: do not check for and remove dependent packages even from the same collection.
+
 # DESCRIPTION
 
-**tlmgr remove** uninstalls TeX Live packages. Optionally removes unused dependencies. Part of TeX Live Manager for managing LaTeX installations.
+**tlmgr remove** uninstalls TeX Live packages, collections, or schemes. By default it prevents removal of packages required by other installed components, ensuring the integrity of the TeX Live installation, unless overridden with `--force`. When TeX Live is installed system-wide, root privileges are required.
 
 # SEE ALSO
 
-[tlmgr-install](/man/tlmgr-install)(1), [tlmgr](/man/tlmgr)(1)
+[tlmgr-install](/man/tlmgr-install)(1), [tlmgr-update](/man/tlmgr-update)(1), [tlmgr](/man/tlmgr)(1)
 

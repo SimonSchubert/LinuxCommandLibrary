@@ -70,6 +70,24 @@ _FILES_
 **-nowarn:**_NUMBERS_
 > Suppress specified warning numbers.
 
+**-unsafe**
+> Enable compilation of unsafe code.
+
+**-checked**
+> Enable overflow checking.
+
+**-main:**_CLASS_
+> Specify which class contains the Main entry point.
+
+**-lib:**_PATHLIST_
+> Comma-separated list of directories to search for assemblies.
+
+**-sdk:**_VERSION_
+> Specify Base Class Library version (2 or 4, default 4).
+
+**-noconfig**
+> Disable loading the default compiler configuration.
+
 **-langversion:**_VERSION_
 > Specify C# language version (e.g., default, latest, ISO-1, ISO-2, 3-7).
 

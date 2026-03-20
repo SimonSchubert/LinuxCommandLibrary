@@ -28,6 +28,10 @@ Run API requests from Bruno collections
 
 ```bru import openapi --source [api.yml] --output [~/collections] --collection-name [MyAPI]```
 
+**Run and stop on first failure**
+
+```bru run [folder/] --env [staging] --bail```
+
 **Run with custom CA certificate**
 
 ```bru run [request.bru] --cacert [/path/to/ca.crt]```
@@ -64,6 +68,27 @@ Run API requests from Bruno collections
 **-r**, **--recursive**
 > Recursively run requests in subfolders.
 
+**--bail**
+> Stop execution after a failed request, test, or assertion.
+
+**--sandbox** _mode_
+> JavaScript execution mode: safe (default) or developer.
+
+**--parallel**
+> Run requests in parallel instead of sequentially.
+
+**--delay** _ms_
+> Delay between requests in milliseconds.
+
+**--tests-only**
+> Execute only requests containing tests or active assertions.
+
+**--csv-file-path** _file_
+> Run collection once for each row in a CSV file.
+
+**--env-file** _file_
+> Path to an environment file (.bru or .json).
+
 # DESCRIPTION
 
 **bru** is the command-line interface for Bruno, an open-source API client similar to Postman or Insomnia. Bruno stores API collections directly in the filesystem using plain text .bru files, making them version-control friendly.
@@ -72,7 +97,7 @@ The CLI enables headless execution of API requests for CI/CD pipelines, automate
 
 # CAVEATS
 
-Requires Node.js runtime. Install with **npm install -g @usebruno/cli**. The CLI works with Bruno collection folders containing .bru files and optional environment configurations.
+Requires Node.js runtime. Install with **npm install -g @usebruno/cli**. Starting from v3.0.0, the default runtime is Safe Mode; use **--sandbox=developer** to enable external npm packages and filesystem access. The CLI works with Bruno collection folders containing .bru files and optional environment configurations.
 
 # HISTORY
 

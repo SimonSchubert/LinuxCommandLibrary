@@ -16,9 +16,13 @@ software-defined radio signal processing toolkit
 
 ```gnuradio-config-info --version```
 
-**List installed blocks**
+**Compile a flowgraph** without launching the GUI
 
-```gr_modtool info```
+```gnuradio-companion -c [flowgraph.grc]```
+
+**Compile a flowgraph** to a specific output directory
+
+```gnuradio-companion -c -d [output_dir] [flowgraph.grc]```
 
 **Create OOT module**
 
@@ -26,12 +30,24 @@ software-defined radio signal processing toolkit
 
 # SYNOPSIS
 
-**gnuradio-companion** [_file.grc_]
+**gnuradio-companion** [_options_] [_file.grc_...]
 
 # PARAMETERS
 
 _file.grc_
 > GNU Radio Companion flowgraph file.
+
+**-c**, **--compile**
+> Only compile the GRC file to Python without launching the GUI.
+
+**-d**, **--output-dir** _DIR_
+> Output path for the generated Python file.
+
+**-v**, **--version**
+> Show program version number and exit.
+
+**-h**, **--help**
+> Show help message and exit.
 
 # DESCRIPTION
 
@@ -42,10 +58,10 @@ GNU Radio Companion (GRC) is the graphical flowgraph editor. Flowgraphs connect 
 # COMPONENTS
 
 ```
-gnuradio-companion  Graphical flowgraph editor
-gr_modtool         Out-of-tree module management
-gnuradio-config    Configuration utility
-uhd_fft            Spectrum analyzer (for USRP)
+gnuradio-companion     Graphical flowgraph editor
+gr_modtool             Out-of-tree module management
+gnuradio-config-info   Show installed GNU Radio details
+uhd_fft                Spectrum analyzer (for USRP)
 ```
 
 # COMMON BLOCKS
@@ -70,4 +86,4 @@ GNU Radio was started by **Eric Blossom** in **2001**. It became the leading ope
 
 # SEE ALSO
 
-[rtl_sdr](/man/rtl_sdr)(1), [uhd](/man/uhd)(1), [gqrx](/man/gqrx)(1)
+[rtl_sdr](/man/rtl_sdr)(1), [gqrx](/man/gqrx)(1), [python3](/man/python3)(1)

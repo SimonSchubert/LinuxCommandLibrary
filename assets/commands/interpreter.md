@@ -1,6 +1,6 @@
 # TAGLINE
 
-provides a natural language interface for computers, allowing language models
+Natural language interface that lets language models execute code locally
 
 # TLDR
 
@@ -78,11 +78,14 @@ provides a natural language interface for computers, allowing language models
 **--stdin**
 > Accept input from stdin for Unix-style piping
 
+**--custom_instructions** _TEXT_
+> Append custom instructions to the system message (e.g., system info, preferred languages).
+
 **--api_base** _URL_
-> Custom API base URL for model provider
+> Custom API base URL for model provider.
 
 **--api_key** _KEY_
-> API key for authentication
+> API key for authentication.
 
 # IN-SESSION COMMANDS
 

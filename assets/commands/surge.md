@@ -16,6 +16,10 @@ Instant static website publishing platform
 
 ```surge [./dist] [mysite.surge.sh]```
 
+**Deploy with explicit flags**
+
+```surge --project [./dist] --domain [mysite.surge.sh]```
+
 **List deployed projects**
 
 ```surge list```
@@ -64,7 +68,16 @@ _domain_
 > Show user.
 
 **token**
-> Get auth token.
+> Get auth token for CI/CD use.
+
+**--project** _path_
+> Specify project directory.
+
+**--domain** _domain_
+> Specify target domain.
+
+**--token** _token_
+> Provide auth token (for CI/CD).
 
 # DESCRIPTION
 
@@ -76,11 +89,7 @@ Authentication tokens enable automated deployments in CI/CD pipelines. The list 
 
 # CAVEATS
 
-Static sites only. No server-side code. Free tier has limitations.
-
-# HISTORY
-
-**Surge** was created for simple static site hosting. It provides instant deployment for front-end developers.
+Static sites only; no server-side code. Free tier has limitations. Custom domains require a DNS CNAME record pointing to na-east1.surge.sh.
 
 # SEE ALSO
 

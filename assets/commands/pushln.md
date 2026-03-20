@@ -12,7 +12,7 @@ Push arguments onto the shell buffer stack
 
 ```pushln "ls -la /tmp"```
 
-**Push multiple words** as separate stack entries
+**Push multiple words** onto the buffer stack as one entry
 
 ```pushln [word1] [word2] [word3]```
 
@@ -22,13 +22,13 @@ Push arguments onto the shell buffer stack
 
 # DESCRIPTION
 
-**pushln** is a zsh builtin that pushes each argument onto the shell's **buffer stack** as a separate entry. The buffer stack is a LIFO (last-in, first-out) data structure. Entries on the buffer stack are presented as editor buffer content for the next interactive command line, or can be read programmatically with **getln**.
+**pushln** is a zsh builtin that pushes its arguments (concatenated with spaces) onto the shell's **buffer stack**. The buffer stack is a LIFO (last-in, first-out) data structure. Entries on the buffer stack are presented as editor buffer content for the next interactive command line, or can be read programmatically with **getln**.
 
-This is equivalent to **print -z** but handles each argument as a separate stack entry rather than printing them all on one line. The buffer stack provides a way to pre-fill the command line or pass data between shell functions.
+This is equivalent to **print -nz** (push onto the editing buffer stack without a trailing newline). The buffer stack provides a way to pre-fill the command line or pass data between shell functions.
 
 # CAVEATS
 
-Only available in zsh. The buffer stack is cleared when the shell exits. In interactive use, pushed lines appear as editable input at the next prompt. Each argument becomes a separate stack entry, unlike **print -z** which concatenates arguments.
+Only available in zsh. The buffer stack is cleared when the shell exits. In interactive use, pushed lines appear as editable input at the next prompt. Arguments are concatenated with spaces (like **print -nz**), not pushed as separate stack entries.
 
 # HISTORY
 

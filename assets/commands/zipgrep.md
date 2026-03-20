@@ -24,13 +24,17 @@ Search inside ZIP archives
 
 ```zipgrep -c [pattern] [archive.zip]```
 
-**List matching files**
+**List matching files only**
 
 ```zipgrep -l [pattern] [archive.zip]```
 
+**Search but exclude files in subdirectories**
+
+```zipgrep [pattern] [archive.zip] *.[ch] -x */*```
+
 # SYNOPSIS
 
-**zipgrep** [_-i_] [_-n_] [_-c_] [_-l_] _pattern_ _zipfile_ [_members_]
+**zipgrep** [_egrep_options_] _pattern_ _file_[_.zip_] [_file(s)_] [**-x** _xfile(s)_]
 
 # PARAMETERS
 
@@ -56,7 +60,10 @@ _pattern_
 > Search pattern.
 
 _members_
-> Specific files.
+> Specific files within the archive to search.
+
+**-x** _xfile(s)_
+> Exclude specified archive members from processing. Wildcards match directory separators.
 
 # DESCRIPTION
 
@@ -64,7 +71,7 @@ _members_
 
 Pattern matching supports extended regular expressions through egrep. The output shows the matching filename and line for each hit, similar to running grep on extracted contents. Optional member arguments restrict the search to specific files within the archive.
 
-Standard grep options like **-i** for case-insensitive matching, **-n** for line numbers, **-c** for match counts, and **-l** for listing matching filenames are all supported. zipgrep is part of the Info-ZIP suite of utilities.
+All options before the ZIP archive filename are passed to egrep, so standard grep options like **-i** for case-insensitive matching, **-n** for line numbers, **-c** for match counts, and **-l** for listing matching filenames are all supported. If the literal filename is not found, the suffix .zip is appended. zipgrep is part of the Info-ZIP suite of utilities.
 
 # CAVEATS
 

@@ -26,11 +26,23 @@ List **specific** backup file
 
 # PARAMETERS
 
-**-f, --file** _FILE_
-> Restore from specified backup file
+**-f**, **--file** _FILE_
+> Read metadata backup from the named file.
 
-**-l, --list**
-> List available backups
+**-l**, **--list**
+> List metadata backup and archive files pertaining to the VG.
+
+**--force**
+> Force metadata restore even with thin pool LVs. Use with extreme caution.
+
+**-M**, **--metadatatype** lvm2
+> Specify the type of on-disk metadata to use.
+
+**-t**, **--test**
+> Run in test mode. Commands will not update metadata.
+
+**-d**, **--debug**
+> Set debug level. Repeat from 1 to 6 times to increase detail.
 
 # DESCRIPTION
 

@@ -65,8 +65,8 @@ SQL Server command-line query tool
 **-o** _file_
 > Output file for results.
 
-**-N**
-> Encryption mode: **o** (optional), **m** (mandatory, default in 2025), **s** (strict).
+**-N** _mode_
+> Encryption mode: **o** (optional), **m** (mandatory, default in SQL Server 2025), **s** (strict/TDS 8.0).
 
 **-No**
 > Encryption optional (shorthand).
@@ -88,6 +88,12 @@ SQL Server command-line query tool
 
 **-w** _width_
 > Screen width for output.
+
+**-A** _size_
+> Request a packet of a different size. Must be between 512 and 32767.
+
+**-W**
+> Remove trailing spaces from a column.
 
 **-?**
 > Display help for ODBC sqlcmd flags.
@@ -113,4 +119,4 @@ Starting with SQL Server 2025, mandatory encryption (**-Nm**) is the default, wh
 
 # SEE ALSO
 
-[mssql-cli](/man/mssql-cli)(1), [psql](/man/psql)(1), [mysql](/man/mysql)(1)
+[psql](/man/psql)(1), [mysql](/man/mysql)(1)

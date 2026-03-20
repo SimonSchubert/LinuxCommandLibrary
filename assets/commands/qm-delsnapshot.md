@@ -18,8 +18,8 @@ Delete Proxmox VM snapshots
 
 # PARAMETERS
 
-**--force** _1|0_
-> Force deletion from config even if disk snapshot removal fails
+**--force** _boolean_
+> Force removal from config file, even if removing disk snapshots fails
 
 # DESCRIPTION
 
@@ -37,4 +37,4 @@ Part of **Proxmox VE** QEMU/KVM management tools for virtual machine administrat
 
 # SEE ALSO
 
-[qm](/man/qm)(1), [qm-snapshot](/man/qm-snapshot)(1), [qm-rollback](/man/qm-rollback)(1)
+[qm](/man/qm)(1), [qm-snapshot](/man/qm-snapshot)(1), [qm-listsnapshot](/man/qm-listsnapshot)(1), [qm-rollback](/man/qm-rollback)(1)

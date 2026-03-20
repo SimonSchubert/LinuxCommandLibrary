@@ -16,17 +16,17 @@ phylogenetic analysis tool for maximum likelihood tree inference
 
 ```iqtree -s [alignment.fasta] -m MFP```
 
-**Bootstrap analysis**
+**Standard bootstrap analysis**
 
 ```iqtree -s [alignment.fasta] -b [1000]```
 
-**Ultra-fast bootstrap**
+**Ultra-fast bootstrap** (IQ-TREE2 uses -B)
 
-```iqtree -s [alignment.fasta] -bb [1000]```
+```iqtree -s [alignment.fasta] -B [1000]```
 
-**Use multiple threads**
+**Use multiple threads** (IQ-TREE2 uses -T)
 
-```iqtree -s [alignment.fasta] -nt [4]```
+```iqtree -s [alignment.fasta] -T [4]```
 
 # SYNOPSIS
 
@@ -43,11 +43,11 @@ phylogenetic analysis tool for maximum likelihood tree inference
 **-b** _n_
 > Standard bootstrap replicates.
 
-**-bb** _n_
-> Ultra-fast bootstrap replicates.
+**-B**, **--ufboot** _n_
+> Ultra-fast bootstrap replicates (minimum 1000). IQ-TREE v1 used -bb.
 
-**-nt** _n_
-> Number of CPU threads.
+**-T**, **--threads** _n_|AUTO
+> Number of CPU threads, or AUTO to auto-detect. IQ-TREE v1 used -nt.
 
 **-pre** _prefix_
 > Output file prefix.
@@ -60,6 +60,9 @@ phylogenetic analysis tool for maximum likelihood tree inference
 
 **-wbt**
 > Write bootstrap trees.
+
+**--bnni**
+> Optimize UFBoot trees by NNI on bootstrap alignment (reduces overestimation).
 
 **-alrt** _n_
 > SH-like approximate likelihood ratio test.
@@ -90,4 +93,4 @@ IQ-TREE was developed by **Bui Quang Minh**, **Lam-Tung Nguyen**, and **Arndt vo
 
 # SEE ALSO
 
-[raxml](/man/raxml)(1), [phylip](/man/phylip)(1), [beast](/man/beast)(1)
+[mafft](/man/mafft)(1), [raxml](/man/raxml)(1)

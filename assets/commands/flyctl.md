@@ -1,6 +1,6 @@
 # TAGLINE
 
-CLI for deploying apps on Fly.io platform
+CLI for deploying apps on the Fly.io platform
 
 # TLDR
 
@@ -23,6 +23,14 @@ CLI for deploying apps on Fly.io platform
 **SSH into machine**
 
 ```flyctl ssh console```
+
+**Check app status**
+
+```flyctl status```
+
+**Manage secrets**
+
+```flyctl secrets set [KEY=VALUE]```
 
 # SYNOPSIS
 
@@ -54,8 +62,20 @@ _COMMAND_
 **scale** _SUBCMD_
 > Adjust resources.
 
+**status**
+> Show app deployment status.
+
 **--help**
 > Display help information.
+
+**-t**, **--access-token** _TOKEN_
+> Fly API access token.
+
+**--verbose**
+> Verbose output.
+
+**--debug**
+> Print additional logs and traces.
 
 # DESCRIPTION
 

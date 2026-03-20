@@ -8,6 +8,10 @@ Display **system information**
 
 ```raspinfo```
 
+Display system information **paged**
+
+```raspinfo | more```
+
 # SYNOPSIS
 
 **raspinfo**
@@ -28,10 +32,11 @@ Displays:
 - Network interfaces
 - USB devices
 - Temperature and voltage
+- Clock frequencies and memory allocations
 
 # CAVEATS
 
-Raspberry Pi specific tool. Output format designed for support tickets. Some information requires root for full details.
+Raspberry Pi specific tool, installed by default even on Lite images. Output format designed for support tickets. Some information requires root for full details.
 
 # HISTORY
 

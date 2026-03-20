@@ -80,6 +80,15 @@ w3m handles both HTTP and HTTPS, supports basic authentication, and can work wit
 **-pauth** _user:pass_
 > Proxy authentication.
 
+**-N**
+> Open multiple URLs in tabs.
+
+**-I** _encoding_
+> Specify document input character encoding.
+
+**-O** _encoding_
+> Specify output character encoding for dump.
+
 **-o** _option=value_
 > Set configuration option.
 

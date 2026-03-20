@@ -43,7 +43,7 @@ Execute command periodically and display output
 # PARAMETERS
 
 **-n**, **--interval** _SECS_
-> Update interval in seconds (default: 2, min: 0.1)
+> Update interval in seconds (default: 2, min: 0.1, max: 2678400)
 
 **-d**, **--differences** [=_permanent_]
 > Highlight differences; permanent shows all changes since start
@@ -74,6 +74,9 @@ Execute command periodically and display output
 
 **-f**, **--follow**
 > Scroll output like tail -f instead of clearing
+
+**-q**, **--equexit** _CYCLES_
+> Exit when output does not change for the given number of cycles
 
 **-x**, **--exec**
 > Pass command to exec instead of sh -c

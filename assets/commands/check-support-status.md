@@ -51,7 +51,7 @@ The tool reports packages that have reached end-of-life earlier than the distrib
 **--status-db** _FILE_
 > Use the given file to record alerts so each affected package is reported only once.
 
-**--version**
+**--version**, **-V**
 > Show the version number and exit.
 
 # CAVEATS

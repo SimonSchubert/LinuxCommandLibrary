@@ -1,6 +1,6 @@
 # TAGLINE
 
-creates and restores partition images while skipping empty blocks, resulting
+creates and restores partition images while skipping empty blocks
 
 # TLDR
 
@@ -16,9 +16,17 @@ Clone **btrfs** partition
 
 ```sudo partclone.btrfs -c -s /dev/sdXY -o [path/to/backup.img]```
 
-Display **help**
+**Device to device** clone
 
-```partclone.ext4 -h```
+```sudo partclone.ext4 -b -s /dev/sdX1 -o /dev/sdY1```
+
+Clone with **rescue mode** (continue after read errors)
+
+```sudo partclone.ext4 -c -R -s /dev/sdXY -o [path/to/backup.img]```
+
+Clone with **ncurses** interface
+
+```sudo partclone.ext4 -c -N -s /dev/sdXY -o [path/to/backup.img]```
 
 # SYNOPSIS
 
@@ -46,26 +54,38 @@ Display **help**
 
 # PARAMETERS
 
-**-c, --clone**
-> Clone partition to image file
+**-c**, **--clone**
+> Clone partition to image file.
 
-**-r, --restore**
-> Restore partition from image file
+**-r**, **--restore**
+> Restore partition from image file.
 
-**-b, --dev-to-dev**
-> Device to device clone
+**-b**, **--dev-to-dev**
+> Device to device clone.
 
-**-s, --source _source_**
-> Source device or image file
+**-s** _source_, **--source** _source_
+> Source device or image file.
 
-**-o, --output _output_**
-> Output device or image file
+**-o** _output_, **--output** _output_
+> Output device or image file.
 
-**-L, --logfile _file_**
-> Write log to file
+**-L** _file_, **--logfile** _file_
+> Write log to file.
 
-**-C, --no-check**
-> Skip filesystem check before clone
+**-C**, **--no-check**
+> Skip filesystem check before clone.
+
+**-R**, **--rescue**
+> Continue after disk read errors.
+
+**-N**, **--ncurses**
+> Use Ncurses text user interface.
+
+**-O** _file_, **--overwrite** _file_
+> Output file, overwriting if it exists.
+
+**-n**, **--note** _MSG_
+> Add a note to the image (up to 128 words).
 
 # DESCRIPTION
 

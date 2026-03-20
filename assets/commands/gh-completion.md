@@ -18,7 +18,7 @@ generate shell completion scripts
 
 **Generate PowerShell completions**
 
-```gh completion -s powershell >> $PROFILE```
+```gh completion -s powershell | Out-String | Invoke-Expression```
 
 # SYNOPSIS
 

@@ -49,6 +49,9 @@ Display **stopped** processes
 **-s**
 > Display only stopped jobs
 
+**-x** _command_
+> Replace jobspec in command with process group ID and execute it
+
 # DESCRIPTION
 
 **jobs** is a shell builtin that displays the status of jobs started in the current shell session. Jobs are processes started with & (background) or suspended with Ctrl+Z.

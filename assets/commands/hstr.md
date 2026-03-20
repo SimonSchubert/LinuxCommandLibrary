@@ -49,18 +49,25 @@ The tool integrates with bash and zsh, replacing or augmenting Ctrl+R with a mor
 > Show blacklisted commands.
 
 **--show-zsh-configuration**
-> Show zsh configuration.
+> Show zsh configuration for integration.
 
 **-V**, **--version**
 > Show version.
 
+# ENVIRONMENT
+
+**HSTR_CONFIG**
+> Comma-separated configuration options: hicolor, monochromatic, case-sensitive, raw-history-view, favorites-view, duplicates, verbose-kill, blacklist, keywords-matching, static-favorites, skip-favorites-comments.
+
 # KEYBOARD SHORTCUTS
 
 **Ctrl+R**: Search history
-**Tab**: Select command
+**Tab** / **Right**: Complete selection
 **Ctrl+F**: Add to favorites
-**Ctrl+/**: Toggle sort order
+**Ctrl+/** / **Ctrl+7**: Rotate view (history/favorites/sorted)
 **Ctrl+E**: Toggle regex mode
+**Ctrl+L**: Toggle case sensitivity
+**Del**: Remove command from history
 
 # CAVEATS
 

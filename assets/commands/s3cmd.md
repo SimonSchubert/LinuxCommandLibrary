@@ -61,7 +61,7 @@ Command-line tool for Amazon S3 management
 **get** _s3://bucket/path_ [_local_]
 > Download file
 
-**del** _s3://bucket/path_
+**del**, **rm** _s3://bucket/path_
 > Delete object
 
 **sync** _source_ _dest_
@@ -78,6 +78,18 @@ Command-line tool for Amazon S3 management
 
 **du** [_s3://bucket_]
 > Disk usage
+
+**la**
+> List all objects in all buckets
+
+**setacl** _s3://bucket/object_
+> Modify access control list
+
+**signurl** _s3://bucket/object_ _expiry_
+> Generate time-limited signed URL
+
+**restore** _s3://bucket/object_
+> Restore file from Glacier storage
 
 **--configure**
 > Interactive configuration
@@ -102,6 +114,24 @@ Command-line tool for Amazon S3 management
 
 **--include** _pattern_
 > Include files matching pattern
+
+**--storage-class** _CLASS_
+> Set storage class (STANDARD, GLACIER, DEEP_ARCHIVE, etc.)
+
+**--server-side-encryption**
+> Use S3-managed server-side encryption
+
+**--skip-existing**
+> Skip files that already exist at destination
+
+**--verbose**, **-v**
+> Enable verbose output
+
+**--limit-rate** _RATE_
+> Throttle upload/download speed
+
+**--config** _FILE_
+> Use specified config file instead of ~/.s3cfg
 
 # DESCRIPTION
 

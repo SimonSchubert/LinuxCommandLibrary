@@ -26,9 +26,13 @@ Convert PPM images to ASCII art
 
 # DESCRIPTION
 
-**ppmtoascii** reads a PPM image and produces ASCII art as output, with ANSI terminal control characters for color when displayed on a color text terminal. Part of the Netpbm toolkit.
+**ppmtoascii** reads a PPM image and produces a somewhat crude ASCII graphic as output, with ANSI terminal control characters so it has crude color when sent to a color text terminal. Part of the Netpbm toolkit.
+
+In addition to the resolution options, **ppmtoascii** supports the common Netpbm options such as **-quiet** to suppress informational messages.
+
+Note that **ppmtoterm** does a similar conversion but displays each character as a single pixel (using the same dense character for every pixel), whereas **ppmtoascii** combines 2 or 8 pixels into one character that roughly represents those pixels.
 
 # SEE ALSO
 
-[pbmtoascii](/man/pbmtoascii)(1), [ppmtosixel](/man/ppmtosixel)(1)
+[pbmtoascii](/man/pbmtoascii)(1), [ppmtoterm](/man/ppmtoterm)(1), [ppmtosixel](/man/ppmtosixel)(1)
 

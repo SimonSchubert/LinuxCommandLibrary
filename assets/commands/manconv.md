@@ -4,17 +4,17 @@ converts man page encodings
 
 # TLDR
 
-**Convert encoding**
+**Convert encoding from** ISO-8859-1 to UTF-8
 
 ```manconv -f [ISO-8859-1] -t [UTF-8] < [input] > [output]```
 
-**Auto-detect input encoding**
+**Try multiple input** encodings in sequence
 
-```manconv -t [UTF-8] [input.man]```
+```manconv -f [ISO-8859-1:UTF-8] -t [UTF-8] [input.man]```
 
-**Convert man page**
+**Convert man page** with quiet mode
 
-```manconv -f [latin1] -t [utf-8] [oldpage.1] > [newpage.1]```
+```manconv -q -f [latin1] -t [utf-8] [oldpage.1] > [newpage.1]```
 
 # SYNOPSIS
 
@@ -25,27 +25,33 @@ converts man page encodings
 _FILE_
 > Input file.
 
-**-f** _ENCODING_
-> Source encoding.
+**-f** _ENCODINGS_, **--from-code** _ENCODINGS_
+> Source encodings (colon-separated list to try in sequence).
 
-**-t** _ENCODING_
+**-t** _ENCODING_, **--to-code** _ENCODING_
 > Target encoding.
 
-**-d**
-> Debug output.
+**-q**, **--quiet**
+> Suppress error messages when the page cannot be converted.
 
-**--help**
+**-d**, **--debug**
+> Print debugging information.
+
+**-V**, **--version**
+> Display version information.
+
+**-h**, **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**manconv** converts man page encodings. It transforms between character sets.
+**manconv** converts a manual page from one encoding to another, similar to iconv. Unlike iconv, it can try multiple possible input encodings in sequence. This is useful for manual pages installed in directories without an explicit encoding declaration, since they may be in UTF-8 or in a legacy character set.
 
-The tool is part of man-db. Used to convert legacy man pages to UTF-8.
+If an encoding declaration is found on the first line of the manual page, that declaration overrides any input encodings specified on the command line. The tool is part of **man-db**.
 
 # CAVEATS
 
-Part of man-db. Encoding detection may fail. Primarily for man pages.
+If an encoding declaration is found in the file, it overrides the -f option. Part of man-db; primarily designed for man pages rather than general text conversion.
 
 # HISTORY
 

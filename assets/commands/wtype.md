@@ -12,6 +12,10 @@ Type specific **key**
 
 ```wtype -k [Left]```
 
+**Press and release** a named key
+
+```wtype -P [Left] -p [Left]```
+
 **Press** modifier
 
 ```wtype -M [shift|ctrl]```
@@ -22,7 +26,7 @@ Type specific **key**
 
 **Delay** between keystrokes
 
-```wtype -d [500] -- "[text]"```
+```wtype -d [500] "[text]"```
 
 Read from **stdin**
 
@@ -43,8 +47,17 @@ Read from **stdin**
 **-m** _MOD_
 > Release modifier key
 
+**-P** _KEY_
+> Press a named key
+
+**-p** _KEY_
+> Release a named key
+
 **-d** _MS_
 > Delay between keystrokes in milliseconds
+
+**-s** _MS_
+> Sleep before next option (for complex sequences)
 
 **-**
 > Read text from stdin

@@ -1,6 +1,6 @@
 # TAGLINE
 
-CLI for JupyterLab, the next-generation web interface for Project
+CLI for JupyterLab, the next-generation web interface for Project Jupyter
 
 # TLDR
 
@@ -100,6 +100,15 @@ CLI for JupyterLab, the next-generation web interface for Project
 **--collaborative**
 > Enable real-time collaboration.
 
+**--allow-root**
+> Allow the server to be run from the root user.
+
+**--debug**
+> Set debug level logging.
+
+**--help-all**
+> Show all configurable options and exit.
+
 # DESCRIPTION
 
 **jupyter lab** is the CLI for JupyterLab, the next-generation web interface for Project Jupyter. It provides a flexible, extensible IDE for notebooks, code, and data.
@@ -122,4 +131,4 @@ JupyterLab development started around **2016** as the successor to Jupyter Noteb
 
 # SEE ALSO
 
-[jupyter](/man/jupyter)(1), [jupyter-notebook](/man/jupyter-notebook)(1), [ipython](/man/ipython)(1), [jupyterlite](/man/jupyterlite)(1)
+[jupyter](/man/jupyter)(1), [ipython](/man/ipython)(1), [jupyterlite](/man/jupyterlite)(1)

@@ -24,9 +24,13 @@ Validate and manipulate semantic version strings
 
 ```semver -r "[>=1.0.0 <2.0.0]" [1.5.0]```
 
-**Coerce loose version**
+**Coerce loose version string**
 
-```semver --coerce [v1.2]```
+```semver -c [v1.2]```
+
+**Increment prerelease with identifier**
+
+```semver -i prerelease --preid [beta] [1.2.3]```
 
 **Sort versions**
 
@@ -34,27 +38,36 @@ Validate and manipulate semantic version strings
 
 # SYNOPSIS
 
-**semver** [_-i increment_] [_-r range_] [_options_] _version_
+**semver** [_options_] _version_ [_version_ ...]
 
 # PARAMETERS
 
 **-i**, **--increment** _TYPE_
-> Increment version.
+> Increment version by specified level. Default level is patch.
 
 **-r**, **--range** _RANGE_
-> Test against range.
+> Print versions that match the specified range.
 
-**--coerce**
-> Coerce to valid version.
+**-c**, **--coerce**
+> Coerce a string into a valid semver if possible.
 
 **-l**, **--loose**
-> Loose parsing.
+> Interpret versions and ranges loosely.
+
+**-p**, **--include-prerelease**
+> Always include prerelease versions in range matching.
+
+**--preid** _IDENTIFIER_
+> Identifier for prerelease version increments.
+
+**-n** _BASE_
+> Base number (0 or 1) for the prerelease identifier.
+
+**--rtl**
+> Coerce version strings right to left.
 
 **--ltr**
-> Less than range.
-
-**--gtr**
-> Greater than range.
+> Coerce version strings left to right (default).
 
 # INCREMENT TYPES
 

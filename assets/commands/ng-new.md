@@ -28,9 +28,9 @@ creates a new Angular workspace and generates an initial application
 
 ```ng new [my-app] --skip-install```
 
-**Create with strict mode** for enhanced type checking
+**Create as standalone** application without NgModules
 
-```ng new [my-app] --strict```
+```ng new [my-app] --standalone```
 
 **Create in dry-run mode** to preview changes
 
@@ -60,8 +60,8 @@ _NAME_
 **--skip-tests**
 > Do not generate spec files for the initial project.
 
-**--strict**
-> Enable stricter type checking and bundle budgets.
+**--standalone**
+> Create an application based on the standalone API without NgModules (default since Angular 17).
 
 **--defaults**
 > Disable interactive prompts and use default values.
@@ -90,6 +90,9 @@ _NAME_
 **--ssr**
 > Configure the application for Server-Side Rendering.
 
+**--create-application**
+> When false, creates an empty workspace with no initial application.
+
 **--help**
 > Display help information.
 
@@ -97,9 +100,9 @@ _NAME_
 
 **ng new** creates a new Angular workspace and generates an initial application. It scaffolds the complete project structure including configuration files, source directories, and optionally installs npm dependencies.
 
-The command sets up TypeScript configuration, Angular-specific settings in angular.json, and testing infrastructure with Karma and Jasmine. The generated workspace follows Angular best practices and conventions.
+The command sets up TypeScript configuration, Angular-specific settings in angular.json, and testing infrastructure. The generated workspace follows Angular best practices and conventions.
 
-When run without the **--defaults** flag, the CLI prompts for routing preferences and stylesheet format. The **--strict** option enables additional TypeScript compiler checks, stricter bundle budgets, and lint rules for improved code quality.
+When run without the **--defaults** flag, the CLI prompts for routing preferences and stylesheet format. Since Angular 17, the command generates standalone components by default.
 
 # CAVEATS
 

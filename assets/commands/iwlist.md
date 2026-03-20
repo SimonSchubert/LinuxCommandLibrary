@@ -1,12 +1,12 @@
 # TAGLINE
 
-retrieves detailed information from a wireless network interface including
+retrieve detailed wireless information from a network interface
 
 # TLDR
 
 **Scan** for networks
 
-```iwlist wlan0 scan```
+```iwlist wlan0 scanning```
 
 List **frequencies**
 
@@ -42,23 +42,26 @@ Show **power** management
 
 # PARAMETERS
 
-**scan**
-> List available networks in range
+**scan**[**ning**]
+> List access points and ad-hoc cells in range with detailed info
 
 **frequency**
-> Show available frequencies/channels
+> Show available frequencies and channels
 
 **rate**
 > Show supported bit rates
 
+**keys**
+> Show WEP encryption keys and key sizes
+
 **auth**
-> Display authentication parameters
+> Display WPA authentication parameters
 
 **wpakeys**
 > Show WPA encryption keys
 
-**keys**
-> Show WEP encryption keys and sizes
+**genie**
+> Show Generic Information Elements (used for WPA)
 
 **power**
 > Display power management settings
@@ -66,8 +69,14 @@ Show **power** management
 **txpower**
 > Show transmit power settings
 
-**genie**
-> Show WPA information elements
+**retry**
+> Show transmit retry limits and retry lifetime
+
+**event**
+> List wireless events supported by the device
+
+**modulation**
+> List supported and enabled modulations
 
 # CAVEATS
 

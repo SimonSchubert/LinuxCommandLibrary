@@ -20,9 +20,21 @@ manages compute instances in OpenStack clouds
 
 ```openstack server delete [server_name]```
 
-**Start/stop server**
+**Start a stopped server**
 
 ```openstack server start [server_name]```
+
+**Stop a running server**
+
+```openstack server stop [server_name]```
+
+**Reboot a server**
+
+```openstack server reboot [server_name]```
+
+**SSH into a server**
+
+```openstack server ssh [server_name] -- -l [username]```
 
 # SYNOPSIS
 
@@ -63,11 +75,30 @@ manages compute instances in OpenStack clouds
 **--key-name** _key_
 > SSH key pair.
 
+**--security-group** _group_
+> Security group to assign (repeatable).
+
+**--availability-zone** _zone_
+> Availability zone for the server.
+
+**resize** _name_ **--flavor** _flavor_
+> Resize server to a different flavor.
+
+**ssh** _name_
+> SSH into the server.
+
+**migrate** _name_
+> Migrate server to another host.
+
 # DESCRIPTION
 
-**openstack server** manages compute instances in OpenStack clouds. Create, delete, start, stop, and manage virtual machines. Part of OpenStack unified CLI.
+**openstack server** manages compute instances (virtual machines) in OpenStack clouds. It is part of the unified OpenStack command-line client (python-openstackclient). Commands follow the pattern `openstack server <action>` and support output formatting via `-f` (json, table, csv, yaml) and column selection via `-c`.
+
+# CAVEATS
+
+Requires valid OpenStack credentials (typically sourced from an openrc file or OS_* environment variables). Some operations like resize require confirmation. Server names may not be unique; use IDs for scripted operations.
 
 # SEE ALSO
 
-[openstack-flavor](/man/openstack-flavor)(1), [openstack-image](/man/openstack-image)(1), [openstack-network](/man/openstack-network)(1)
+[openstack](/man/openstack)(1), [openstack-flavor](/man/openstack-flavor)(1), [openstack-image](/man/openstack-image)(1), [openstack-network](/man/openstack-network)(1), [openstack-volume](/man/openstack-volume)(1)
 

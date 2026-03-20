@@ -4,13 +4,13 @@ previews Muffin window manager themes
 
 # TLDR
 
-**View theme**
+**Preview a theme by name (case-sensitive)**
 
 ```muffin-theme-viewer [theme-name]```
 
-**View specific theme file**
+**Preview the default theme (Atlanta)**
 
-```muffin-theme-viewer [/path/to/theme]```
+```muffin-theme-viewer```
 
 # SYNOPSIS
 
@@ -26,17 +26,17 @@ _THEME_
 
 # DESCRIPTION
 
-**muffin-theme-viewer** previews Muffin window manager themes. It displays window decorations.
+**muffin-theme-viewer** previews Muffin window manager themes by rendering window decorations in a test window. It can be used to measure the performance of a window frame option and to preview its appearance. The theme name is case-sensitive, and defaults to Atlanta if none is specified.
 
-The tool shows how themes look. Useful for theme development and selection.
+Useful for theme development, testing, and selection within the Cinnamon desktop environment.
 
 # CAVEATS
 
-Cinnamon/Muffin specific. Requires GTK themes. Development/preview tool.
+Cinnamon/Muffin specific. Requires a running display server. Only previews Metacity-compatible window decoration themes.
 
 # HISTORY
 
-muffin-theme-viewer is part of **Muffin**, the Cinnamon window manager, for previewing window decoration themes.
+muffin-theme-viewer is part of **Muffin**, a fork of GNOME's Mutter window manager adapted for the Cinnamon desktop environment maintained by the Linux Mint project.
 
 # SEE ALSO
 

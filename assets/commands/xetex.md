@@ -41,6 +41,12 @@ Unicode TeX engine with system fonts
 **-no-pdf**
 > Generate XDV output instead of PDF.
 
+**-output-driver** _CMD_
+> Run CMD instead of xdvipdfmx to translate XDV to PDF.
+
+**-papersize** _STRING_
+> Set PDF media size to STRING.
+
 **-synctex=**_NUMBER_
 > Enable SyncTeX for editor integration (1 to enable).
 

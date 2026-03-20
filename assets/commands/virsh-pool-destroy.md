@@ -1,10 +1,10 @@
 # TAGLINE
 
-Stop running storage pool
+Stop a running storage pool
 
 # TLDR
 
-**Stop storage pool**
+**Stop a running storage pool by name**
 
 ```virsh pool-destroy [pool]```
 
@@ -14,9 +14,9 @@ Stop running storage pool
 
 # DESCRIPTION
 
-**virsh pool-destroy** stops a running storage pool. Does not delete pool contents or configuration. Pool can be restarted with pool-start. Use pool-undefine to remove configuration.
+**virsh pool-destroy** stops (deactivates) a running storage pool. Despite the name, it does not delete the pool's data or its persistent configuration. The pool must be active for this command to succeed. After destroying a pool, it can be restarted with **pool-start**. To remove the configuration, use **pool-undefine**. To delete the underlying storage data, use **pool-delete** (the pool must be stopped first).
 
 # SEE ALSO
 
-[virsh](/man/virsh)(1), [virsh-pool-start](/man/virsh-pool-start)(1), [virsh-pool-delete](/man/virsh-pool-delete)(1)
+[virsh](/man/virsh)(1), [virsh-pool-start](/man/virsh-pool-start)(1), [virsh-pool-delete](/man/virsh-pool-delete)(1), [virsh-pool-undefine](/man/virsh-pool-undefine)(1)
 

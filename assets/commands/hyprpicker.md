@@ -1,6 +1,6 @@
 # TAGLINE
 
-minimal color picker for Wayland compositors using wlroots, particularly
+Wlroots-compatible Wayland color picker for Hyprland
 
 # TLDR
 
@@ -39,14 +39,26 @@ Store picked color in a **shell variable**
 **-n**, **--no-fancy**
 > Disable colored output, print plain text only
 
+**-r**, **--render-inactive**
+> Render (freeze) inactive displays
+
+**-z**, **--no-zoom**
+> Disable the zoom lens
+
+**-q**, **--quiet**
+> Disable most logging output
+
+**-t**, **--no-fractional**
+> Disable fractional scaling support
+
 **-h**, **--help**
 > Display help message
 
 # DESCRIPTION
 
-**hyprpicker** is a minimal color picker for Wayland compositors using wlroots, particularly designed for Hyprland. It allows users to select any pixel on screen and get its color value in various formats.
+**hyprpicker** is a wlroots-compatible Wayland color picker designed for Hyprland. It allows users to select any pixel on screen and get its color value in various formats.
 
-When launched, the cursor changes to a crosshair. Clicking anywhere on screen captures the color at that pixel and outputs it in the specified format. The tool integrates with wl-copy for clipboard support.
+When launched, the cursor transforms into a magnifying lens. Clicking anywhere on screen captures the color at that pixel and outputs it in the specified format. The tool integrates with wl-copy for clipboard support.
 
 # CAVEATS
 

@@ -34,10 +34,16 @@ _first_
 _last_
 > Last column to remove (optional, defaults to end of line)
 
+**-h**, **--help**
+> Display help text and exit
+
+**-V**, **--version**
+> Print version and exit
+
 # CAVEATS
 
-Column counting starts at 1, not 0. Tabs are treated as advancing to the next multiple of 8 columns. Part of the util-linux package.
+Column counting starts at 1, not 0. Tabs are treated as advancing to the next multiple of 8 columns. Backspace characters decrement the column count by one. Part of the util-linux package.
 
 # SEE ALSO
 
-[cut](/man/cut)(1), [column](/man/column)(1), [awk](/man/awk)(1)
+[cut](/man/cut)(1), [column](/man/column)(1), [awk](/man/awk)(1), [expand](/man/expand)(1), [paste](/man/paste)(1)

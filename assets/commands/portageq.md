@@ -4,9 +4,9 @@ Query Gentoo Portage package database
 
 # TLDR
 
-Display **environment variable** value
+Display a **Portage environment variable** value
 
-```portageq envvar [PORTDIR]```
+```portageq envvar [VARIABLE]```
 
 Show **repository** configuration
 
@@ -15,6 +15,14 @@ Show **repository** configuration
 List repositories by **priority**
 
 ```portageq get_repos /```
+
+Check if a **package is installed**
+
+```portageq has_version / [category]/[package]```
+
+Find the **best visible version** of a package
+
+```portageq best_visible / ebuild [category]/[package]```
 
 Query package **metadata**
 
@@ -45,7 +53,13 @@ Query package **metadata**
 > Find packages matching atom
 
 **has_version**
-> Check if package is installed
+> Check if package is installed. Returns 0 if true, 1 otherwise.
+
+**best_version**
+> Return highest installed matching category/package-version.
+
+**owners**
+> Query which package owns a file or directory.
 
 # PARAMETERS
 

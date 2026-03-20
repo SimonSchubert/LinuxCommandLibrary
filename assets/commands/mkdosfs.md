@@ -24,6 +24,10 @@ creates MS-DOS FAT filesystems
 
 ```mkdosfs -v [/dev/sdb1]```
 
+**Create a FAT filesystem in an image file**
+
+```mkdosfs -C [disk.img] [size_in_blocks]```
+
 **Check for bad blocks**
 
 ```mkdosfs -c [/dev/sdb1]```
@@ -44,7 +48,19 @@ _DEVICE_
 > Volume label.
 
 **-c**
-> Check for bad blocks.
+> Check for bad blocks before creating filesystem.
+
+**-C**
+> Create the file given as DEVICE and write the filesystem to it (for image files).
+
+**-I**
+> Allow formatting the entire disk device without a partition table (superfloppy format).
+
+**-s** _SECTORS_
+> Number of disk sectors per cluster (must be a power of 2).
+
+**-S** _SIZE_
+> Number of bytes per logical sector (512, 1024, 2048, etc.).
 
 **-v**
 > Verbose output.
@@ -68,5 +84,5 @@ mkdosfs is part of **dosfstools**, providing FAT filesystem creation on Linux.
 
 # SEE ALSO
 
-[mkfs.fat](/man/mkfs.fat)(8), [fsck.fat](/man/fsck.fat)(8), [dosfslabel](/man/dosfslabel)(8)
+[mkfs.fat](/man/mkfs.fat)(8), [mkfs](/man/mkfs)(8), [dosfslabel](/man/dosfslabel)(8), [fatlabel](/man/fatlabel)(8)
 

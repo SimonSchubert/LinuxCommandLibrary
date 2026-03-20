@@ -28,9 +28,21 @@ Low-level OCI container runtime
 
 ```runc delete [container-id]```
 
-**Execute in container**
+**Execute command in running container**
 
 ```runc exec [container-id] [command]```
+
+**Show container state**
+
+```runc state [container-id]```
+
+**Generate OCI spec file**
+
+```runc spec```
+
+**Show processes running in container**
+
+```runc ps [container-id]```
 
 # SYNOPSIS
 
@@ -66,13 +78,49 @@ The tool provides low-level container runtime functionality, used by Docker, con
 > Delete container.
 
 **exec** _id_ _cmd_
-> Execute command in container.
+> Execute new process inside container.
+
+**pause** _id_
+> Suspend all processes inside container.
+
+**resume** _id_
+> Resume previously paused processes.
+
+**ps** _id_
+> Show processes running inside container.
+
+**events** _id_
+> Display container events (OOM, CPU, memory, I/O stats).
+
+**update** _id_
+> Update container resource constraints.
+
+**checkpoint** _id_
+> Checkpoint a running container.
+
+**restore** _id_
+> Restore container from a previous checkpoint.
 
 **spec**
-> Generate spec file.
+> Generate new OCI spec file (config.json).
 
 **--root** _dir_
-> Root directory for storage.
+> Root directory for container state storage (should be on tmpfs).
+
+**--debug**
+> Enable debug logging.
+
+**--log** _path_
+> Set log file path (default: stderr).
+
+**--log-format** _text|json_
+> Set log format (default: text).
+
+**--systemd-cgroup**
+> Enable systemd cgroup support.
+
+**--rootless** _true|false|auto_
+> Enable or disable rootless mode (default: auto).
 
 # CAVEATS
 

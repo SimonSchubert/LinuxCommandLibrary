@@ -58,6 +58,15 @@ combine images using ImageMagick 6
 **-quality** _VALUE_
 > Output compression quality (0-100).
 
+**-stegano** _OFFSET_
+> Hide watermark within image using steganography.
+
+**-stereo** _+X+Y_
+> Create a stereo anaglyph from two images.
+
+**-alpha** _TYPE_
+> Activate, deactivate, or reset the alpha channel.
+
 # DESCRIPTION
 
 **composite.im6** is the ImageMagick version 6 command for combining images through compositing operations. It is functionally identical to **composite** but explicitly references the ImageMagick 6 installation, useful on systems where both ImageMagick 6 and 7 are installed.
@@ -76,4 +85,4 @@ ImageMagick was created by John Cristy in **1990**. Version 6 was a long-standin
 
 # SEE ALSO
 
-[composite](/man/composite)(1), [convert](/man/convert)(1), [mogrify.im6](/man/mogrify.im6)(1), [magick](/man/magick)(1)
+[composite](/man/composite)(1), [convert](/man/convert)(1), [mogrify.im6](/man/mogrify.im6)(1), [display.im6](/man/display.im6)(1), [magick](/man/magick)(1)

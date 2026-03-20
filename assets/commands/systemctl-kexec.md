@@ -8,9 +8,9 @@ Fast **kexec** reboot
 
 ```systemctl kexec```
 
-**Force** if kexec unavailable
+**Fall back** to normal reboot if no kexec kernel loaded
 
-```systemctl kexec -f```
+```systemctl kexec --force```
 
 # SYNOPSIS
 
@@ -18,14 +18,14 @@ Fast **kexec** reboot
 
 # PARAMETERS
 
-**-f, --force**
-> Fall back to normal reboot if kexec not available
+**-f**, **--force**
+> Continue without a kexec kernel, performing a normal reboot instead. If specified twice, skip service shutdown and immediately reboot (may cause data loss).
 
 # DESCRIPTION
 
-**systemctl kexec** reboots the system using kexec, which loads and boots directly into a new kernel without going through BIOS/UEFI firmware. This provides significantly faster reboots by skipping hardware initialization.
+**systemctl kexec** shuts down and reboots the system via kexec, which loads and boots directly into a new kernel without going through BIOS/UEFI firmware. This provides significantly faster reboots by skipping hardware initialization.
 
-A kernel must be pre-loaded using the `kexec` command before this works. If no kernel is loaded, the command fails unless `--force` is used.
+A kexec kernel must be loaded beforehand (e.g. via `kexec -l`) or this command will fail. If no kernel is loaded, use `--force` to fall back to a normal reboot.
 
 # CAVEATS
 
@@ -37,4 +37,4 @@ The **kexec** subcommand integrates the Linux kexec facility with systemd's shut
 
 # SEE ALSO
 
-[systemctl-reboot](/man/systemctl-reboot)(1), [kexec](/man/kexec)(8)
+[systemctl](/man/systemctl)(1), [systemctl-reboot](/man/systemctl-reboot)(1), [kexec](/man/kexec)(8)

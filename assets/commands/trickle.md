@@ -44,19 +44,22 @@ Userspace bandwidth shaper for applications
 > Run in standalone mode, independent of trickled.
 
 **-w** _length_
-> Peak detection window size in KB (default: 512).
+> Peak detection window size in KB. Lower values are more aggressive but may over-shape (default: 512).
 
 **-t** _seconds_
-> Smoothing time interval in seconds.
+> Smoothing time interval in seconds (default: 5).
 
 **-l** _length_
-> Smoothing length in KB.
+> Smoothing length in KB (default: 10).
+
+**-L** _latency_
+> Set latency in milliseconds for shaping calculations.
 
 **-n** _path_
 > trickled socket path (default: /tmp/.trickled.sock).
 
 **-v**
-> Increase verbosity level.
+> Increase verbosity level. Can be specified multiple times.
 
 **-V**
 > Display version information.
@@ -74,7 +77,7 @@ Use cases include preventing a single download from saturating your connection, 
 
 # CAVEATS
 
-Only works with dynamically linked executables using TCP sockets. Does not work with statically linked or setuid programs. UDP traffic is not affected. Standalone mode uses fixed limits; daemon mode allows shared limits.
+Only works with dynamically linked executables using TCP (SOCK_STREAM) sockets. Does not work with statically linked or setuid programs. UDP traffic is not affected. Standalone mode uses fixed limits; daemon mode allows shared limits via trickled.
 
 # HISTORY
 
@@ -82,4 +85,4 @@ Only works with dynamically linked executables using TCP sockets. Does not work 
 
 # SEE ALSO
 
-[trickled](/man/trickled)(8), [tc](/man/tc)(8), [wondershaper](/man/wondershaper)(8), [nethogs](/man/nethogs)(8)
+[tc](/man/tc)(1), [wondershaper](/man/wondershaper)(1), [nethogs](/man/nethogs)(1)

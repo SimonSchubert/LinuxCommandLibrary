@@ -30,7 +30,7 @@ Format Rust source code automatically
 
 **Show diff** of formatting changes
 
-```rustfmt --emit files --check [main.rs]```
+```rustfmt --emit diff [main.rs]```
 
 **Use config file**
 
@@ -57,10 +57,10 @@ When used with Cargo (`cargo fmt`), it formats all files in the project automati
 > Create backup of original files.
 
 **--edition** _year_
-> Rust edition (2015, 2018, 2021).
+> Rust edition (2015, 2018, 2021, 2024).
 
 **--emit** _type_
-> Output mode (files, stdout, checkstyle).
+> Output mode (files, stdout, diff).
 
 **--config** _key=value_
 > Set configuration option.
@@ -95,7 +95,7 @@ When used with Cargo (`cargo fmt`), it formats all files in the project automati
 > Number of spaces per indentation level (default 4).
 
 **edition**
-> Rust edition to use for parsing (2015, 2018, 2021).
+> Rust edition to use for parsing (2015, 2018, 2021, 2024).
 
 # CAVEATS
 
@@ -107,4 +107,4 @@ Some configurations are unstable and require nightly. Cannot format macros that 
 
 # SEE ALSO
 
-[cargo](/man/cargo)(1), [rustc](/man/rustc)(1), [clippy](/man/clippy)(1)
+[cargo-fmt](/man/cargo-fmt)(1), [cargo](/man/cargo)(1), [rustc](/man/rustc)(1), [clippy](/man/clippy)(1)

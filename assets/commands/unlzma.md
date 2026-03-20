@@ -43,7 +43,10 @@ Decompress LZMA compressed files
 > Verbose mode.
 
 **-q**
-> Quiet mode.
+> Quiet mode. Specify twice to suppress errors.
+
+**-T**, **--threads** _N_
+> Use up to N threads for decompression (xz 5.2+).
 
 # DESCRIPTION
 
@@ -55,7 +58,7 @@ The LZMA format is a legacy compression format that has been largely superseded 
 
 # CAVEATS
 
-Legacy format. Use xz for new files. Part of xz-utils.
+The .lzma format is a legacy format without integrity checks. Use xz for new files. Part of xz-utils. The command line syntax is a superset of LZMA Utils 4.32.x for backward compatibility.
 
 # HISTORY
 

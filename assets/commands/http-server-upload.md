@@ -1,60 +1,77 @@
 # TAGLINE
 
-provides a simple HTTP server that accepts file uploads
+Simple zero-configuration HTTP server for uploading files
 
 # TLDR
 
-**Start upload server**
+**Start upload server on default port 8080**
 
 ```http-server-upload```
 
-**Specify port**
+**Start on a specific port with a token**
 
-```http-server-upload -p [9090]```
+```http-server-upload --port [9090] --token [my-secret-token]```
 
-**Specify upload directory**
+**Set upload directory and max file size**
 
-```http-server-upload -d [./uploads]```
+```http-server-upload --upload-dir [./uploads] --max-file-size [500]```
 
-**Set token**
+**Enable automatic folder creation**
 
-```http-server-upload -t [secret-token]```
+```http-server-upload --enable-folder-creation```
+
+**Configure via environment variables**
+
+```PORT=9000 UPLOAD_DIR=~/uploads/ TOKEN=secret http-server-upload```
 
 # SYNOPSIS
 
-**http-server-upload** [_options_]
+**http-server-upload** [_options_] [_uploadRootPath_]
 
 # PARAMETERS
 
-**-p**, **--port** _PORT_
-> Server port.
+Configuration is done by command line arguments or environment variables. If both are used, arguments take higher priority.
 
-**-d**, **--directory** _DIR_
-> Upload directory.
+**--port** _PORT_ (env: PORT)
+> Server port. Default: 8080. If the port is in use, it is automatically increased until a free port is found.
 
-**-t**, **--token** _TOKEN_
-> Authentication token.
+**--upload-dir** _DIR_ (env: UPLOAD_DIR)
+> Directory where uploaded files are stored. Default: current working directory.
 
-**--max-size** _SIZE_
-> Maximum file size.
+**--upload-tmp-dir** _DIR_ (env: UPLOAD_TMP_DIR)
+> Temporary directory for uploads before moving to final destination.
 
-**--help**
-> Display help information.
+**--token** _TOKEN_ (env: TOKEN)
+> Optional token required for uploads, providing basic access protection.
+
+**--max-file-size** _MB_ (env: MAX_FILE_SIZE)
+> Maximum allowed file size in megabytes. Default: 200.
+
+**--disable-auto-port** (env: DISABLE_AUTO_PORT)
+> Prevent automatic port increment if the port is already in use.
+
+**--enable-folder-creation** (env: ENABLE_FOLDER_CREATION)
+> Automatically create folders when uploading to a non-existent path.
+
+**--path-regexp** _REGEX_ (env: PATH_REGEXP)
+> Regular expression to validate upload paths.
+
+**--index-file** _FILE_ (env: INDEX_FILE)
+> Use a custom HTML file for the upload form.
+
+**-h**, **--help**
+> Display help text.
 
 # DESCRIPTION
 
-**http-server-upload** provides a simple HTTP server that accepts file uploads. It creates a web interface for uploading files to a specified directory.
+**http-server-upload** is a simple zero-configuration Node.js command-line HTTP server for uploading files. When running, visit http://localhost:8080/ to access the upload form. Files are uploaded to the current working directory by default.
 
-The tool is useful for quick file transfers without setting up full file sharing. Token authentication provides basic security.
+The tool is useful for quick file transfers without setting up full file sharing. An optional token provides basic access protection.
 
 # CAVEATS
 
-Not for production. Basic security only. Python or Node.js based.
-
-# HISTORY
-
-http-server-upload provides quick file upload capability, extending basic HTTP server functionality.
+Not intended for production use. Requires Node.js 14.18 or higher. If the desired port is already in use, the port is automatically incremented until a free port is found.
 
 # SEE ALSO
 
-[http-server](/man/http-server)(1), [updog](/man/updog)(1), [woof](/man/woof)(1)
+[http-server](/man/http-server)(1), [updog](/man/updog)(1)

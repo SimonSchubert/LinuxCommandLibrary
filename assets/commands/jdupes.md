@@ -43,7 +43,10 @@ fast duplicate file finder and remover
 # PARAMETERS
 
 **-r**, **--recurse**
-> Recurse into subdirectories.
+> Recurse into subdirectories for all given directories.
+
+**-R**, **--recurse:**
+> Recurse into subdirectories only for directories given after this flag.
 
 **-d**, **--delete**
 > Prompt for which duplicates to delete.
@@ -87,8 +90,11 @@ fast duplicate file finder and remover
 **-q**, **--quiet**
 > Hide progress indicator.
 
+**-T**, **--partial-only**
+> Match based on partial hash only, ignoring the rest.
+
 **-Q**, **--quick**
-> Skip byte-by-byte verification.
+> Skip byte-by-byte verification (use hashes only).
 
 **-X**, **--xsize** _[+-=]SIZE_
 > Exclude files by size criteria.

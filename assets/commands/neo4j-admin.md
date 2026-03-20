@@ -4,29 +4,29 @@ administers Neo4j databases
 
 # TLDR
 
-**Dump database**
+**Dump a database** to a file (database must be stopped)
 
-```neo4j-admin dump --database=[neo4j] --to=[backup.dump]```
+```neo4j-admin database dump --to-path=[/backups] [neo4j]```
 
-**Load database**
+**Load a database** from a dump file
 
-```neo4j-admin load --from=[backup.dump] --database=[neo4j]```
+```neo4j-admin database load --from-path=[/backups] [neo4j]```
 
-**Set password**
+**Set the initial admin password**
 
-```neo4j-admin set-initial-password [password]```
+```neo4j-admin dbms set-initial-password [password]```
 
-**Check consistency**
+**Check database consistency**
 
-```neo4j-admin check-consistency --database=[neo4j]```
+```neo4j-admin database check [neo4j]```
 
-**Import CSV data**
+**Bulk import CSV data** into a new database
 
-```neo4j-admin import --database=[neo4j] --nodes=[nodes.csv] --relationships=[rels.csv]```
+```neo4j-admin database import full --nodes=[nodes.csv] --relationships=[rels.csv] [neo4j]```
 
-**Show memory recommendations**
+**Show memory recommendations** for heap and pagecache
 
-```neo4j-admin memrec```
+```neo4j-admin server memory-recommendation```
 
 # SYNOPSIS
 
@@ -35,39 +35,51 @@ administers Neo4j databases
 # PARAMETERS
 
 _COMMAND_
-> Administration command.
+> Administration command category: database, dbms, or server.
 
-**dump**
-> Backup database.
+**database dump**
+> Dump a database to a single-file archive for offline backup.
 
-**load**
-> Restore database.
+**database load**
+> Load a database from a dump file.
 
-**set-initial-password**
-> Set admin password.
+**database import full**
+> Bulk import data from CSV files into a new database.
 
-**check-consistency**
-> Verify database integrity.
+**database check**
+> Check database consistency and integrity.
 
-**import**
-> Bulk import data.
+**dbms set-initial-password**
+> Set the initial admin password before first startup.
+
+**server memory-recommendation**
+> Print heuristic memory recommendations for heap and pagecache.
+
+**--additional-config** _file_
+> Provide additional configuration from a file.
+
+**--expand-commands**
+> Allow command expansion in config values.
+
+**--verbose**
+> Enable verbose output.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**neo4j-admin** administers Neo4j databases. It handles backup, restore, and maintenance.
+**neo4j-admin** is the administration tool for Neo4j graph databases. It handles backup and restore (dump/load), database consistency checking, bulk data import, memory configuration recommendations, and initial setup tasks.
 
-The tool manages graph databases. Essential for Neo4j operations.
+In Neo4j 5+, commands are organized into categories: **database** (per-database operations like dump, load, import, check), **dbms** (system-wide operations like setting the initial password), and **server** (server configuration like memory recommendations). Some operations require the database to be stopped first.
 
 # CAVEATS
 
-Requires stopped database for some ops. Admin privileges needed. Version specific.
+Some operations (dump, load, import) require the database to be stopped first. Admin privileges are typically required. Command syntax changed significantly between Neo4j 4.x and 5.x; the examples here use Neo4j 5+ syntax.
 
 # HISTORY
 
-neo4j-admin is the **administration tool** for Neo4j graph database, providing maintenance operations.
+neo4j-admin has been part of the Neo4j distribution since its early releases. The command structure was significantly reorganized in **Neo4j 5** (2022), moving from flat commands (e.g., `dump`, `memrec`) to categorized subcommands (e.g., `database dump`, `server memory-recommendation`).
 
 # SEE ALSO
 

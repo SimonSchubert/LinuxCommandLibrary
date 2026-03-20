@@ -41,14 +41,23 @@ The tool offers vim-like keybindings, a spectrum visualizer, and extensive custo
 **-c** _file_
 > Configuration file.
 
-**-s** _screen_
-> Starting screen.
+**-b** _file_, **--bindings** _file_
+> Use a specified key bindings file.
+
+**-s** _screen_, **--screen** _screen_
+> Starting screen (playlist, browser, search_engine, media_library, playlist_editor, tag_editor, outputs, visualizer, clock).
+
+**-S** _screen_, **--slave-screen** _screen_
+> Starting slave screen.
 
 **--current-song**
-> Print current song info.
+> Print current song info and exit.
 
 **-q**, **--quiet**
 > Suppress messages.
+
+**-v**, **--version**
+> Display version information.
 
 # KEY BINDINGS
 

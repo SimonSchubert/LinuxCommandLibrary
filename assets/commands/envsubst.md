@@ -20,11 +20,7 @@ substitute environment variables in text
 
 ```echo 'Hello $USER' | envsubst```
 
-**List variables in the template**
-
-```envsubst -v < [template.txt]```
-
-**Generate shell-format variable list**
+**List all referenced variables** in a template
 
 ```envsubst --variables < [template.txt]```
 
@@ -34,7 +30,7 @@ substitute environment variables in text
 
 # SYNOPSIS
 
-**envsubst** [_-v_] [_-V_] [_--variables_] [_SHELL-FORMAT_] [_< input_]
+**envsubst** [_OPTION_] [_SHELL-FORMAT_]
 
 # PARAMETERS
 

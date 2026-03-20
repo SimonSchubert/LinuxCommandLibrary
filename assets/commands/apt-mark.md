@@ -24,6 +24,10 @@ Show **manually installed** packages
 
 ```apt-mark showmanual```
 
+Show **automatically installed** packages
+
+```apt-mark showauto```
+
 Show **held** packages
 
 ```apt-mark showhold```
@@ -59,14 +63,29 @@ Show **held** packages
 **showhold**
 > Show list of held packages
 
-**minimize-manual**
-> Mark all packages as auto except those with no auto-installed reverse depends
+**showinstall**
+> Show list of packages marked as install
 
-**-f, --file**
-> Read/write package stats from the filename specified
+**showremove**
+> Show list of packages marked for removal
+
+**showpurge**
+> Show list of packages marked for purge
+
+**minimize-manual**
+> Mark all dependency packages as auto, keeping only directly needed packages as manual
+
+**-f, --file filename**
+> Read/write package stats from the specified filename instead of default location
 
 **-v, --verbose**
 > Verbose output
+
+**-c, --config-file**
+> Specify a configuration file to use
+
+**-o, --option**
+> Set a configuration option (syntax: -o Foo::Bar=bar)
 
 # CAVEATS
 

@@ -8,17 +8,21 @@ Nginx configuration security analyzer
 
 ```gixy [/etc/nginx/nginx.conf]```
 
-**Check specific directive**
+**Run only specific tests**
 
-```gixy --only-plugins [ssrf] [config.conf]```
+```gixy --tests [http_splitting,ssrf] [/etc/nginx/nginx.conf]```
 
-**Output JSON**
+**Output in JSON format**
 
-```gixy -f json [config.conf]```
+```gixy -f json [/etc/nginx/nginx.conf]```
 
-**Skip plugins**
+**Skip specific tests**
 
-```gixy --skip-plugins [host_spoofing] [config.conf]```
+```gixy --skips [host_spoofing,low_keepalive_requests] [/etc/nginx/nginx.conf]```
+
+**Report only high severity issues**
+
+```gixy -lll [/etc/nginx/nginx.conf]```
 
 # SYNOPSIS
 
@@ -29,14 +33,29 @@ Nginx configuration security analyzer
 _CONFIG_
 > Nginx configuration file.
 
-**--only-plugins** _PLUGINS_
-> Only run specific plugins.
+**--tests** _TESTS_
+> Comma-separated list of tests to run.
 
-**--skip-plugins** _PLUGINS_
-> Skip specific plugins.
+**--skips** _TESTS_
+> Comma-separated list of tests to skip.
+
+**-l, --level**
+> Report issues of a given severity level or higher. Use -l for LOW, -ll for MEDIUM, -lll for HIGH.
 
 **-f** _FORMAT_, **--format** _FORMAT_
-> Output format (text, json).
+> Output format: text, json, console.
+
+**-o** _FILE_, **--output** _FILE_
+> Write report to a file.
+
+**-c** _FILE_, **--config** _FILE_
+> Path to configuration file.
+
+**-d, --debug**
+> Enable debug mode.
+
+**--disable-includes**
+> Disable processing of include directives.
 
 **--help**
 > Display help information.
@@ -49,7 +68,7 @@ The tool includes plugins for various security checks and provides detailed expl
 
 # CAVEATS
 
-Python tool. May need updates for latest nginx features. False positives possible.
+Python tool. The original yandex/gixy project is unmaintained; gixy-next is a maintained fork. May need updates for latest nginx features. False positives possible. Some plugins expose additional options configurable via CLI flags or a configuration file.
 
 # HISTORY
 

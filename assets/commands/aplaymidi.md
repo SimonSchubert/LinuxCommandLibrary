@@ -12,7 +12,7 @@ Play MIDI files through ALSA sequencer
 
 ```aplaymidi -l```
 
-Play with **delay**
+Play with **delay** after the end of each file
 
 ```aplaymidi -p [hw:1,0] -d [2] [file.mid]```
 
@@ -28,14 +28,20 @@ Unlike audio players, aplaymidi only sends MIDI messages; actual sound generatio
 
 # PARAMETERS
 
-**-p** _port_
-> MIDI output port (use -l to list)
+**-p** _client:port_, **--port** _client:port_
+> Set the sequencer port(s) to which MIDI events are sent. A client can be specified by number, name, or name prefix.
 
 **-l**, **--list**
 > List available MIDI ports
 
 **-d** _seconds_, **--delay** _seconds_
-> Delay before playing
+> Delay after the end of each MIDI file, to allow the last notes to die away.
+
+**-h**, **--help**
+> Print a list of options.
+
+**-V**, **--version**
+> Print the current version.
 
 # CAVEATS
 

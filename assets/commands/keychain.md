@@ -52,6 +52,21 @@ _KEYS_
 **-l**, **--list**
 > List cached keys.
 
+**--noask**
+> Set up agent files but do not prompt to add keys if not already loaded.
+
+**--stop** _which_
+> Kill agent processes. Values: **mine** (keychain's agents), **others**, or **all**.
+
+**--timeout** _MINUTES_
+> Set a timeout in minutes for identities added to ssh-agent.
+
+**--nogui**
+> Disable SSH_ASKPASS, forcing ssh-add to prompt on the terminal.
+
+**--ignore-missing**
+> Suppress warnings if specified keys cannot be found.
+
 **--help**
 > Display help information.
 
@@ -63,7 +78,7 @@ This approach means you only need to enter your passphrase once after a reboot, 
 
 # CAVEATS
 
-Shell integration required. Profile/rc file setup. Funtoo project.
+Requires shell integration by adding an `eval $(keychain --eval ...)` line to your shell profile (e.g., `.bash_profile` or `.zshrc`). Agent environment variables are stored in `~/.keychain/`.
 
 # HISTORY
 
@@ -71,4 +86,4 @@ keychain was created by **Daniel Robbins** (Funtoo) to simplify SSH agent manage
 
 # SEE ALSO
 
-[ssh-agent](/man/ssh-agent)(1), [ssh-add](/man/ssh-add)(1), [gpg-agent](/man/gpg-agent)(1)
+[ssh-agent](/man/ssh-agent)(1), [ssh-add](/man/ssh-add)(1), [ssh](/man/ssh)(1), [gpg](/man/gpg)(1)

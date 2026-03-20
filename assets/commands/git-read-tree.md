@@ -24,6 +24,10 @@ Read tree information into index
 
 ```git read-tree --reset HEAD```
 
+**Empty the index**
+
+```git read-tree --empty```
+
 **Dry run to check for errors**
 
 ```git read-tree -n -m [tree-ish]```
@@ -46,11 +50,11 @@ _TREE-ISH_
 **--reset**
 > Same as -m, discard unmerged.
 
-**--prefix** _DIR_
-> Read into subdirectory.
+**--prefix=**_DIR/_
+> Keep current index contents and read tree into subdirectory at prefix.
 
 **-i**
-> Only update index, do not check working tree.
+> Only update index, do not check working tree for consistency with current head.
 
 **-n**, **--dry-run**
 > Check for errors without updating the index or working tree.
@@ -66,6 +70,12 @@ _TREE-ISH_
 
 **--index-output** _FILE_
 > Write results to specified file instead of $GIT_INDEX_FILE.
+
+**--empty**
+> Instead of reading tree into the index, empty it.
+
+**--no-sparse-checkout**
+> Disable sparse checkout support even if core.sparseCheckout is true.
 
 **--help**
 > Display help information.

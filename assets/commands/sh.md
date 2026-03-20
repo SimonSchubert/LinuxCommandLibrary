@@ -30,9 +30,15 @@ POSIX-compliant command interpreter
 
 # SYNOPSIS
 
-**sh** [**-cefinvx**] [_script_ [_argument_...]]
+**sh** [**-aCefimnsuvx**] [_script_ [_argument_...]]
 
 # PARAMETERS
+
+**-a**
+> Export all variables that are modified or created to the environment
+
+**-C**
+> Prevent output redirection from overwriting existing files (noclobber)
 
 **-c** _string_
 > Execute commands from string
@@ -46,17 +52,23 @@ POSIX-compliant command interpreter
 **-i**
 > Interactive shell
 
+**-m**
+> Enable job control (default for interactive shells)
+
 **-n**
 > Read commands but do not execute (syntax check)
+
+**-s**
+> Read commands from standard input
+
+**-u**
+> Treat unset variables as an error
 
 **-v**
 > Print shell input lines as they are read
 
 **-x**
 > Print commands and arguments as they are executed
-
-**-u**
-> Treat unset variables as an error
 
 **+**_option_
 > Turn off option

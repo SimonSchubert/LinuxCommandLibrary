@@ -36,6 +36,14 @@ SQLite database manipulation CLI and library
 
 ```sqlite-utils rows [database.db] [table] > [data.json]```
 
+**Upsert data** (insert or update on conflict)
+
+```sqlite-utils upsert [database.db] [table] [data.json] --pk [id]```
+
+**Process data from stdin** with in-memory database
+
+```cat [data.json] | sqlite-utils memory - "[SELECT * FROM stdin]"```
+
 # SYNOPSIS
 
 **sqlite-utils** _command_ [_database_] [_options_] [_arguments_]
@@ -57,8 +65,11 @@ SQLite database manipulation CLI and library
 **query** _DB_ _SQL_
 > Run SQL query.
 
+**upsert** _DB_ _TABLE_ [_FILE_]
+> Insert or update data (requires --pk).
+
 **memory** _SQL_
-> Run against in-memory database.
+> Run SQL against in-memory database (reads from files or stdin).
 
 **enable-fts** _DB_ _TABLE_ _COLUMNS_
 > Enable full-text search.
@@ -99,6 +110,12 @@ SQLite database manipulation CLI and library
 **-c**, **--csv**
 > Output as CSV.
 
+**--flatten**
+> Flatten nested JSON objects into columns.
+
+**--batch-size** _N_
+> Number of rows per insert batch.
+
 # DESCRIPTION
 
 **sqlite-utils** provides a CLI and Python library for working with SQLite databases. It simplifies common tasks: importing data, running queries, and managing schema.
@@ -123,4 +140,4 @@ Large inserts may need --batch-size adjustment. FTS increases database size. Typ
 
 # SEE ALSO
 
-[sqlite3](/man/sqlite3)(1), [datasette](/man/datasette)(1), [csvkit](/man/csvkit)(1), [jq](/man/jq)(1)
+[sqlite3](/man/sqlite3)(1), [jq](/man/jq)(1), [datasette](/man/datasette)(1), [csvkit](/man/csvkit)(1)

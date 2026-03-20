@@ -8,17 +8,29 @@ Modern shell that treats data as structured information
 
 ```nu```
 
-**Run a command**
+**Run a command string and exit**
 
 ```nu -c "[command]"```
 
-**Run a script**
+**Run a script file**
 
 ```nu [path/to/script.nu]```
 
-**List files as structured data**
+**Start as a login shell**
+
+```nu --login```
+
+**Start without loading config files**
+
+```nu -n```
+
+**List files as structured data** (inside nu)
 
 ```ls | where size > 1mb | sort-by modified```
+
+**Convert JSON to a table** (inside nu)
+
+```open [data.json] | select name age | sort-by age```
 
 # SYNOPSIS
 
@@ -26,11 +38,26 @@ Modern shell that treats data as structured information
 
 # PARAMETERS
 
-**-c** _COMMAND_
+**-c**, **--commands** _COMMAND_
 > Execute a command string and exit.
 
 **--config** _FILE_
-> Specify a configuration file.
+> Specify a configuration file (config.nu).
+
+**--env-config** _FILE_
+> Specify an environment configuration file (env.nu).
+
+**-n**, **--no-config-file**
+> Start without loading config files.
+
+**--login**, **-l**
+> Start as a login shell.
+
+**--stdin**
+> Redirect stdin for scripts.
+
+**--table-mode** _MODE_
+> Table display mode (rounded, basic, compact, etc.).
 
 # DESCRIPTION
 
@@ -42,6 +69,12 @@ Nu pipelines use structured data so you can safely select, filter, and sort the 
 
 **$nu.config-path**
 > Configuration file location (use `$nu.config-path` to find it).
+
+**$nu.env-path**
+> Environment config location (use `$nu.env-path` to find it).
+
+**login.nu**
+> Runs only when Nushell starts as a login shell.
 
 # CAVEATS
 

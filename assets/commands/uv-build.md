@@ -62,13 +62,19 @@ Build Python packages from source
 **--python** _version_
 > Python interpreter to use for build.
 
+**--config-setting** _KEY=VALUE_
+> Pass settings to the PEP 517 build backend.
+
+**--all-packages**
+> Build all packages in the workspace.
+
 # DESCRIPTION
 
 **uv build** builds Python packages from source into distributable wheel and/or source distribution packages. It supports PEP 517/518 build systems.
 
 By default, uv build builds the project in the current directory and places artifacts in a dist/ subdirectory. Both wheel and sdist are produced by default; use **--wheel** or **--sdist** to build only one.
 
-The **uv build backend** integrates tightly with uv and provides reasonable defaults requiring zero configuration for most projects.
+Build isolation is enabled by default, installing build dependencies in an isolated environment. Use **--no-build-isolation** to build using the existing environment instead.
 
 # SEE ALSO
 

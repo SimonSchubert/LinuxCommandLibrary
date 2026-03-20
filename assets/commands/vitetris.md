@@ -24,13 +24,13 @@ Terminal-based Tetris game
 
 ```vitetris -hiscores```
 
-**Start two-player local game**
+**Set player name** for network play
 
-```vitetris -2p```
+```vitetris -name [name] listen [port]```
 
 # SYNOPSIS
 
-**vitetris** [**-nomenu**] [**-hiscores**] [**-2p**] [**listen** _port_] [**connect** _host:port_]
+**vitetris** [**-nomenu**] [**-hiscores**] [**listen** _port_] [**connect** _host:port_]
 
 # PARAMETERS
 
@@ -40,14 +40,14 @@ Terminal-based Tetris game
 **-hiscores**
 > Print the high score list and exit.
 
-**-2p**
-> Start a two-player local game.
+**-hiscores** _FILE_
+> Read and add high score entries from FILE.
 
 **listen** _port_
 > Listen for incoming network connections on the specified port.
 
 **connect** _host:port_
-> Connect to a remote player for network play. Host can be an IP address or hostname.
+> Connect to a remote player for network play. Host can be an IP address or hostname. Use **connect** _port_ to connect to localhost.
 
 **-help**
 > Print help and exit. Use **-help game** for game options and **-help term** for terminal options.

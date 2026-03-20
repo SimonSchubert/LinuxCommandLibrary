@@ -20,9 +20,9 @@ open-source AI coding assistant for terminals
 
 ```forge -w [workflow.yaml]```
 
-**Enable restricted shell mode**
+**Start in a sandboxed git worktree**
 
-```forge --restricted```
+```forge --sandbox```
 
 **Configure AI provider credentials**
 
@@ -50,11 +50,20 @@ open-source AI coding assistant for terminals
 **-e**, **--event** _EVENT_
 > Dispatch an event to the workflow
 
-**--conversation** _FILE_
-> Path to a file containing a conversation to resume
+**--conversation-id** _ID_
+> Resume an existing conversation by its identifier
+
+**-C**, **--directory** _DIR_
+> Set working directory before starting
+
+**--sandbox**
+> Create an isolated git worktree for safe experimentation
+
+**--agent** _AGENT_
+> Specify which agent to use for the session
 
 **-r**, **--restricted**
-> Enable restricted shell mode for enhanced security
+> Use restricted shell (rbash) for enhanced security
 
 **--verbose**
 > Enable verbose output mode

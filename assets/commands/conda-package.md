@@ -1,16 +1,28 @@
 # TAGLINE
 
-environment archival tool
+low-level conda package utility (experimental)
 
 # TLDR
 
-**Package an environment** into a tarball
+**Find which conda package** a file belongs to
 
-```conda package```
+```conda package --which [path/to/file]```
 
-**Package with specific name**
+**List all untracked files** in the current environment
 
-```conda package --name [env_name]```
+```conda package --untracked```
+
+**Remove all untracked files** from the current environment
+
+```conda package --reset```
+
+**Create a package** with a specific name and version
+
+```conda package --pkg-name [mypackage] --pkg-version [1.0]```
+
+**Create a package** in a named environment
+
+```conda package --pkg-name [mypackage] -n [env_name]```
 
 # SYNOPSIS
 
@@ -18,11 +30,29 @@ environment archival tool
 
 # PARAMETERS
 
+**-w**, **--which** _PATH_
+> Given a file path, identify which conda package the file came from.
+
+**-u**, **--untracked**
+> Display all untracked files and exit.
+
+**-r**, **--reset**
+> Remove all untracked files and exit.
+
+**--pkg-name** _PKG_NAME_
+> Designate package name of the package being created.
+
+**--pkg-version** _PKG_VERSION_
+> Designate package version of the package being created.
+
+**--pkg-build** _PKG_BUILD_
+> Designate package build number of the package being created.
+
 **-n**, **--name** _name_
-> Name of environment to package.
+> Name of environment.
 
 **-p**, **--prefix** _path_
-> Path to environment to package.
+> Full path to environment location (prefix).
 
 # CONFIGURATION
 
@@ -34,11 +64,11 @@ environment archival tool
 
 # DESCRIPTION
 
-**conda package** creates a tarball of a conda environment for distribution or archival. This allows sharing complete environment states.
+**conda package** is an experimental low-level utility for creating conda packages and inspecting package contents within environments. It can identify which package a file belongs to, list or remove untracked files, and create simple packages from the current environment state.
 
 # CAVEATS
 
-Large environments may produce very large archives. Consider using environment.yml exports for more portable sharing.
+This command is marked as experimental and may change or be removed. For standard package building, use **conda-build** instead. For environment sharing, consider using **conda env export** to create environment.yml files.
 
 # SEE ALSO
 

@@ -10,4 +10,4 @@ This command is an alias of **lstopo-no-graphics**
 
 # SEE ALSO
 
-[lstopo-no-graphics](/man/lstopo-no-graphics)(1), [hwloc-info](/man/hwloc-info)(1)
+[lstopo-no-graphics](/man/lstopo-no-graphics)(1), [lstopo](/man/lstopo)(1)

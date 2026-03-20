@@ -8,13 +8,17 @@ AI-powered agentic coding assistant from Google
 
 ```gemini```
 
-**Run a prompt non-interactively**
+**Run a prompt non-interactively** (headless mode)
 
 ```gemini -p "[explain this code]"```
 
 **Use a specific model**
 
 ```gemini -m [gemini-2.5-flash]```
+
+**Start interactive session** with initial prompt
+
+```gemini -i "[explain this code]"```
 
 **Get JSON output for scripting**
 
@@ -28,36 +32,38 @@ AI-powered agentic coding assistant from Google
 
 ```gemini``` then ```@[path/to/file.py] [explain this code]```
 
-**Execute a shell command from within**
-
-```gemini``` then ```![ls -la]```
-
 # SYNOPSIS
 
 **gemini** [_options_] [_prompt_]
 
 # PARAMETERS
 
-**-p** _PROMPT_
-> Run in non-interactive mode with the given prompt
+**-p**, **--prompt** _PROMPT_
+> Run in headless (non-interactive) mode with the given prompt.
 
-**-m** _MODEL_
-> Specify model variant (gemini-2.5-pro, gemini-2.5-flash, gemini-3-pro)
+**-i**, **--prompt-interactive** _PROMPT_
+> Start interactive session with the provided prompt as initial input.
+
+**-m**, **--model** _MODEL_
+> Specify model variant (e.g., gemini-2.5-pro, gemini-2.5-flash).
 
 **--output-format** _FORMAT_
-> Output format: text, json, or stream-json
+> Output format: text, json, or stream-json.
 
 **--sandbox**, **-s**
-> Run in sandboxed Docker environment for safety
+> Run in sandboxed Docker environment for safety.
 
 **--yolo**
-> Auto-approve all actions (enables sandbox by default)
+> Auto-approve all tool actions without confirmation.
+
+**--debug**
+> Enable debug mode with verbose output.
 
 **--help**
-> Display help information
+> Display help information.
 
 **--version**
-> Show version number
+> Show version number.
 
 # IN-CHAT COMMANDS
 

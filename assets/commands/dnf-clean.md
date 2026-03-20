@@ -57,4 +57,4 @@ Cleaning cache means DNF must re-download metadata on next use. Cached packages 
 
 # SEE ALSO
 
-[dnf](/man/dnf)(8), [dnf-makecache](/man/dnf-makecache)(8)
+[dnf](/man/dnf)(8), [yum](/man/yum)(8)

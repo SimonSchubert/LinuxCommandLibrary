@@ -79,6 +79,9 @@ View **failed logins** (requires root)
 **-x, --system**
 > Display system shutdown entries and runlevel changes
 
+**-p, --present TIME**
+> Display who was present at the specified time
+
 **--time-format FORMAT**
 > Define output time format (notime, short, full, iso)
 
@@ -92,4 +95,4 @@ The pseudo-user "reboot" logs entries each time the system is restarted, allowin
 
 # SEE ALSO
 
-[lastb](/man/lastb)(1), [who](/man/who)(1), [w](/man/w)(1), [utmp](/man/utmp)(5)
+[lastb](/man/lastb)(1), [who](/man/who)(1), [w](/man/w)(1)

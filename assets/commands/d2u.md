@@ -20,9 +20,9 @@ DOS to Unix line ending converter
 
 ```d2u -b -e [.bak] [file.txt]```
 
-**Preview conversion** without modifying file
+**Convert to a new file** instead of in-place
 
-```d2u -n [file.txt]```
+```d2u -n [input.txt] [output.txt]```
 
 **Convert files in place** silently
 
@@ -43,8 +43,8 @@ _FILE_
 **-e** _SUFFIX_, **--extension** _SUFFIX_
 > Backup file extension (default: .bak).
 
-**-n**, **--dry-run**
-> Show what would be done without changing files.
+**-n**, **--newfile** _infile_ _outfile_
+> Convert infile and write to outfile (new file mode).
 
 **-q**, **--quiet**
 > Quiet mode, suppress output.
@@ -54,6 +54,12 @@ _FILE_
 
 **-f**, **--force**
 > Force conversion even on binary files.
+
+**-l**, **--newline**
+> Add an additional newline after each converted line break.
+
+**-o**, **--oldfile**
+> In-place conversion mode (default).
 
 **-h**, **--help**
 > Display help information.

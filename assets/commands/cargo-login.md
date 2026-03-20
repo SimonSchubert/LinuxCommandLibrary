@@ -22,7 +22,7 @@ Save a registry API token for authentication
 
 # DESCRIPTION
 
-**cargo login** runs a credential provider to save a token for registry authentication. Required for publishing crates with `cargo publish`. The token is read from stdin if not provided as an argument. Tokens are stored in `$CARGO_HOME/credentials.toml` by default.
+**cargo login** runs a credential provider to save a token for registry authentication. Required for publishing crates with `cargo publish`. The token is read from stdin. Tokens are stored in `$CARGO_HOME/credentials.toml` by default.
 
 For crates.io, obtain your token from https://crates.io/me
 
@@ -32,10 +32,16 @@ For crates.io, obtain your token from https://crates.io/me
 > Registry to authenticate with (default: crates-io)
 
 **-v**, **--verbose**
-> Verbose output
+> Verbose output. May be specified twice for extra detail.
 
 **-q**, **--quiet**
-> Suppress output
+> Suppress output.
+
+**--color** _when_
+> Control colored output (auto, always, never).
+
+**--config** _KEY=VALUE_
+> Override a Cargo configuration value.
 
 # TOKEN STORAGE
 

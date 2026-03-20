@@ -4,21 +4,29 @@ parser generator for Haskell, similar to yacc for C
 
 # TLDR
 
-**Generate parser from grammar**
+**Generate parser from grammar file**
 
 ```happy [grammar.y] -o [Parser.hs]```
 
-**Generate with info file**
+**Generate with info file for debugging**
 
 ```happy -i [grammar.y]```
 
-**Show version**
-
-```happy --version```
-
-**Generate with GHC extensions**
+**Generate with GHC extensions for faster code**
 
 ```happy -g [grammar.y]```
+
+**Generate array-based parser with GHC string encoding**
+
+```happy -ag [grammar.y]```
+
+**Generate parser with debugging output at runtime**
+
+```happy -d [grammar.y]```
+
+**Generate GLR parser**
+
+```happy -l [grammar.y]```
 
 # SYNOPSIS
 
@@ -30,28 +38,40 @@ _FILE_
 > Grammar file (.y).
 
 **-o** _FILE_
-> Output file name.
+> Output file name. Defaults to FILE.hs.
 
-**-i**
-> Generate info file.
+**-i** [_FILE_]
+> Generate info file with grammar details, parser states, and conflicts.
 
-**-g**
-> Use GHC extensions for faster parsers.
+**-g**, **--ghc**
+> Use GHC-specific extensions for faster parsers.
 
-**-a**
-> Generate array-based parser (smaller but slower).
+**-a**, **--array**
+> Generate array-based parser (smaller but slower). Combined with -g, arrays are encoded as strings for faster performance.
 
-**-c**
-> Generate GHC-specific parser using GHC primitives.
+**-c**, **--coerce**
+> Use GHC's unsafeCoerce# for smaller, faster parsers. May crash at runtime if grammar has type errors.
 
-**--help**
+**-d**, **--debug**
+> Generate a parser that prints shift/reduce debugging info to stderr.
+
+**-l**, **--glr**
+> Generate a GLR parser instead of LALR(1).
+
+**-t** _DIR_, **--template=**_DIR_
+> Directory for template files.
+
+**-h**, **--help**
 > Display help information.
+
+**-v**, **--version**
+> Print version information.
 
 # DESCRIPTION
 
 **Happy** is a parser generator for Haskell, similar to yacc for C. It takes a grammar specification and produces a Haskell parser module.
 
-The tool generates LALR parsers from BNF-like grammars. It integrates with Alex lexer generator for complete parsing solutions.
+The tool generates LALR parsers from BNF-like grammars and can also produce GLR parsers. It integrates with the Alex lexer generator for complete parsing solutions.
 
 # CAVEATS
 

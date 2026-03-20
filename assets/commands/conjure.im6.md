@@ -42,8 +42,17 @@ ImageMagick MSL script interpreter
 **-log** _FORMAT_
 > Log output format specification.
 
+**-monitor**
+> Monitor progress of image processing operations.
+
+**-quiet**
+> Suppress all warning messages.
+
 **-regard-warnings**
 > Treat warnings as errors.
+
+**-seed** _VALUE_
+> Seed a pseudo-random number generator.
 
 **-verbose**
 > Enable verbose output during execution.
@@ -57,7 +66,7 @@ ImageMagick MSL script interpreter
 
 MSL scripts define image manipulation workflows using XML tags that correspond to ImageMagick operations. This allows creating reusable, parameterized image processing pipelines without writing shell scripts or using programming language bindings.
 
-The scripting language supports variables, conditionals, loops, and all ImageMagick operations. It's particularly useful for batch processing and creating complex image manipulation templates that can be applied consistently across many images.
+MSL is particularly useful for batch processing and creating complex image manipulation templates that can be applied consistently across many images. It is primarily aimed at users who want custom image processing without needing a programming language or compiler.
 
 # CAVEATS
 
@@ -69,4 +78,4 @@ conjure was part of ImageMagick's scripting capabilities, allowing XML-based bat
 
 # SEE ALSO
 
-[convert.im6](/man/convert.im6)(1), [magick](/man/magick)(1), [convert](/man/convert)(1)
+[composite.im6](/man/composite.im6)(1), [display.im6](/man/display.im6)(1), [mogrify.im6](/man/mogrify.im6)(1), [magick](/man/magick)(1), [convert](/man/convert)(1)

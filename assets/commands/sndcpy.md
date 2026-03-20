@@ -25,6 +25,9 @@ Forward Android device audio to computer
 _serial_
 > The serial number of the Android device to forward audio from. Optional if only one device is connected.
 
+**SNDCPY_PORT**
+> Environment variable to override the default forwarding port (default: 28200).
+
 # DESCRIPTION
 
 **sndcpy** forwards audio from an Android device to a computer over USB or TCP/IP. It works as a companion to **scrcpy** (screen copy), enabling both video and audio forwarding from Android devices. The name is a portmanteau of "sound" and "copy."

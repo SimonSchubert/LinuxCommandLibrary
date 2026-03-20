@@ -57,6 +57,21 @@ network security tool for Windows/Active Directory environments
 **mssql**
 > MSSQL protocol.
 
+**ftp**
+> FTP protocol.
+
+**rdp**
+> RDP protocol.
+
+**wmi**
+> WMI protocol.
+
+**vnc**
+> VNC protocol.
+
+**nfs**
+> NFS protocol.
+
 **-u** _USER_
 > Username or file.
 
@@ -93,11 +108,26 @@ network security tool for Windows/Active Directory environments
 **--lsa**
 > Dump LSA secrets.
 
+**-t** _THREADS_
+> Number of concurrent threads (default: 100).
+
+**--timeout** _SECONDS_
+> Max timeout in seconds for connections.
+
+**--jitter** _INTERVAL_
+> Random delay between connections.
+
+**--verbose**
+> Enable verbose output.
+
+**--debug**
+> Enable debug level information.
+
 # DESCRIPTION
 
 **netexec** (formerly CrackMapExec) is a network security tool for Windows/Active Directory environments. It tests credentials, enumerates resources, and executes commands across networks.
 
-Multiple protocols are supported: SMB, WinRM, LDAP, SSH, MSSQL, and more. Each protocol has specific enumeration and exploitation modules.
+Multiple protocols are supported: SMB, WinRM, LDAP, SSH, MSSQL, FTP, RDP, WMI, VNC, and NFS. Each protocol has specific enumeration and exploitation modules.
 
 Credential testing validates usernames and passwords across targets. Pass-the-hash uses NTLM hashes directly. Password spraying tests one password against many accounts.
 

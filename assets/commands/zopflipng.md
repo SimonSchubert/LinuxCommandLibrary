@@ -28,9 +28,9 @@ Optimize PNG files with Zopfli compression
 
 ```zopflipng -q [input.png] [output.png]```
 
-**Show statistics**
+**Set specific number of iterations**
 
-```zopflipng --prefix=[optimized_] [input.png]```
+```zopflipng --iterations=[50] [input.png] [output.png]```
 
 # SYNOPSIS
 
@@ -38,26 +38,32 @@ Optimize PNG files with Zopfli compression
 
 # PARAMETERS
 
-**-m**, **--more**
-> More iterations.
+**-m**
+> Compress more: use more iterations (slower but better compression).
 
 **-q**
-> Quick, less thorough.
+> Quick mode, less thorough compression.
 
 **-y**
-> Overwrite output.
+> Allow overwriting the output file.
+
+**--iterations** _N_
+> Number of iterations for compression (default: 15 for small files, 5 for large files).
 
 **--lossy_transparent**
-> Lossy alpha optimization.
+> Lossy optimization of fully transparent pixels for smaller file size.
 
 **--keepchunks** _CHUNKS_
-> Preserve chunks.
+> Comma-separated list of metadata chunk names to preserve (e.g., iCCP,sRGB).
 
-**--splitting** _N_
-> Block splitting.
+**--keeptime**
+> Keep the original modification time of the input file.
+
+**--filters** _TYPES_
+> Filter strategies to try: 0-4, m (minimum sum), e (entropy), p (predefined), b (brute force).
 
 **--prefix** _PREFIX_
-> Output prefix.
+> Add prefix to output filenames (may contain a directory path).
 
 # DESCRIPTION
 
@@ -69,7 +75,7 @@ zopflipng is intentionally slow, trading compression time for smaller output. It
 
 # CAVEATS
 
-Very slow for large images. CPU intensive. Best for final builds.
+Very slow for large images due to exhaustive compression search. CPU intensive. Best suited for final-stage optimization in build pipelines rather than interactive use. Strips metadata chunks by default.
 
 # HISTORY
 

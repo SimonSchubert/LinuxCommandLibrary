@@ -24,6 +24,14 @@ Start the **daemon**
 
 ```eww kill```
 
+**Get** the value of a variable
+
+```eww get [variable_name]```
+
+**Update** a variable
+
+```eww update [variable_name]="[value]"```
+
 Print and **watch logs**
 
 ```eww logs```
@@ -35,25 +43,49 @@ Print and **watch logs**
 # PARAMETERS
 
 **daemon**
-> Start the daemon process
+> Start the daemon process.
 
 **open** _window_
-> Open a widget window
+> Open a widget window.
+
+**open-many** _windows..._
+> Open multiple widget windows at once.
 
 **close** _window_
-> Close a widget window
+> Close a widget window.
+
+**close-all**
+> Close all open widget windows.
 
 **reload**
-> Reload configuration files
+> Reload configuration files.
 
 **kill**
-> Stop the daemon
+> Stop the daemon.
 
 **logs**
-> Display and watch logs
+> Display and watch logs.
 
-**-c, --config** _path_
-> Specify config directory
+**get** _variable_
+> Print the current value of a variable.
+
+**update** _var=value_
+> Update a variable value.
+
+**state**
+> Display the current state of all variables.
+
+**inspect**
+> Open the GTK debugger.
+
+**shell-completions** _shell_
+> Generate shell completions (bash, fish, zsh).
+
+**-c**, **--config** _path_
+> Specify config directory.
+
+**--no-daemonize**
+> Don't fork the daemon process to the background.
 
 # DESCRIPTION
 
@@ -75,4 +107,4 @@ Requires configuration files in eww format. Daemon must be running for widgets t
 
 # SEE ALSO
 
-[polybar](/man/polybar)(1), [conky](/man/conky)(1)
+[polybar](/man/polybar)(1), [conky](/man/conky)(1), [waybar](/man/waybar)(1)

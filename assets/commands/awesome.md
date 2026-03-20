@@ -30,7 +30,7 @@ Highly configurable tiling window manager for X11
 
 # SYNOPSIS
 
-**awesome** [**-v** | **--version**] [**-h** | **--help**] [**-c** | **--config** _FILE_] [**-k** | **--check**] [**--search** _DIR_] [**--no-argb**] [**--replace**]
+**awesome** [**-v** | **--version**] [**-h** | **--help**] [**-c** | **--config** _FILE_] [**-k** | **--check**] [**-s** | **--search** _DIR_] [**-a** | **--no-argb**] [**-r** | **--replace**]
 
 # PARAMETERS
 
@@ -46,17 +46,14 @@ Highly configurable tiling window manager for X11
 **-k**, **--check**
 > Check configuration file syntax and exit
 
-**--search** _DIR_
+**-s**, **--search** _DIR_
 > Add directory to Lua library search path
 
-**--no-argb**
+**-a**, **--no-argb**
 > Disable ARGB visuals (transparency)
 
-**--replace**
+**-r**, **--replace**
 > Replace an existing window manager
-
-**-a**, **--no-argb**
-> Disable composite manager visual effects
 
 # DESCRIPTION
 
@@ -91,4 +88,4 @@ Requires X11; does not support Wayland. Configuration errors in rc.lua will caus
 
 # SEE ALSO
 
-[i3](/man/i3)(1), [dwm](/man/dwm)(1), [bspwm](/man/bspwm)(1), [xmonad](/man/xmonad)(1), [lua](/man/lua)(1)
+[i3](/man/i3)(1), [dwm](/man/dwm)(1), [bspwm](/man/bspwm)(1), [lua](/man/lua)(1)

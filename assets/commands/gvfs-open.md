@@ -22,21 +22,24 @@ opens files and URIs with their default applications
 
 # SYNOPSIS
 
-**gvfs-open** _location_
+**gvfs-open** [_OPTION..._] [_FILE..._]
 
 # PARAMETERS
 
-_LOCATION_
+_FILE_
 > File, directory, or URI to open.
 
-**--help**
+**-h**, **--help**
 > Display help information.
+
+**--version**
+> Show version number and exit.
 
 # DESCRIPTION
 
-**gvfs-open** opens files and URIs with their default applications. It uses GVFS and MIME type associations to determine the appropriate application.
+**gvfs-open** opens files with the default application registered to handle files of that type. It obtains MIME type information from the shared-mime-info database, and the default handler is stored per-user in `$XDG_DATA_HOME/applications/mimeapps.list`.
 
-The tool handles local files, remote URIs, and URLs. It's the command-line equivalent of double-clicking in GNOME file manager.
+The tool handles local files, remote URIs, and URLs. When a running GNOME session is detected, `xdg-open` actually calls `gvfs-open` internally.
 
 # CAVEATS
 

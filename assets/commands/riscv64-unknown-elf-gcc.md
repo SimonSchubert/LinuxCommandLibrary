@@ -27,22 +27,31 @@ Cross-compile C code for RISC-V targets
 # PARAMETERS
 
 **-march=**_arch_
-> Target architecture (rv64imac, rv64gc).
+> Target architecture (e.g. rv64imac, rv64gc, rv32imac).
 
 **-mabi=**_abi_
-> ABI (lp64, lp64d).
+> Integer and floating-point calling convention (e.g. lp64, lp64d, lp64f, ilp32).
 
 **-nostdlib**
-> No standard library.
+> Do not link standard library or startup files.
 
 **-T** _script_
-> Linker script.
+> Use the specified linker script.
 
 **-mcmodel=**_model_
-> Code model.
+> Code model: medlow (default) or medany.
+
+**-msave-restore**
+> Use smaller but slower prologue/epilogue routines to reduce code size.
+
+**-msmall-data-limit=**_n_
+> Put global and static data smaller than _n_ bytes in a special section.
+
+**--specs=**_file_
+> Use the specified specs file (e.g. nano.specs for newlib-nano).
 
 **-O**_level_
-> Optimization level.
+> Optimization level (0, 1, 2, 3, s, g).
 
 # DESCRIPTION
 
@@ -70,9 +79,11 @@ riscv64-unknown-elf-gcc --specs=nano.specs -o app app.c
 # ARCHITECTURES
 
 ```
-rv64imac  - Integer, Multiply, Atomic, Compressed
-rv64gc    - General purpose (IMAFD + C)
-rv32imac  - 32-bit version
+rv64imac   - Integer, Multiply, Atomic, Compressed
+rv64gc     - General purpose (IMAFDC) - equivalent to rv64imafdC
+rv64imafdc - Same as rv64gc (explicit form)
+rv32imac   - 32-bit: Integer, Multiply, Atomic, Compressed
+rv32gc     - 32-bit general purpose
 ```
 
 # CAVEATS
@@ -85,4 +96,4 @@ RISC-V GCC toolchain was developed as part of the **RISC-V** open ISA project fr
 
 # SEE ALSO
 
-[gcc](/man/gcc)(1), [riscv64-unknown-elf-objdump](/man/riscv64-unknown-elf-objdump)(1), [qemu-system-riscv64](/man/qemu-system-riscv64)(1)
+[gcc](/man/gcc)(1), [objdump](/man/objdump)(1), [qemu-system-riscv64](/man/qemu-system-riscv64)(1)

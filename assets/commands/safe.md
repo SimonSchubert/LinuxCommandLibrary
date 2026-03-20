@@ -4,29 +4,37 @@ Simplified CLI for HashiCorp Vault
 
 # TLDR
 
-**Write secret**
+**Write a secret**
 
 ```safe set [secret/path] [key]=[value]```
 
-**Read secret**
+**Read a secret**
 
 ```safe get [secret/path]```
 
-**List secrets**
+**List all secret paths as a tree**
 
 ```safe tree```
 
-**Delete secret**
+**Delete a secret**
 
 ```safe rm [secret/path]```
 
-**Target Vault**
+**Target a Vault server**
 
-```safe target [vault-url] [alias]```
+```safe target [https://vault-url] [alias]```
 
-**Authenticate**
+**Authenticate against the current Vault**
 
 ```safe auth [ldap|token|github]```
+
+**Copy a secret to a new path**
+
+```safe cp [secret/old/path] [secret/new/path]```
+
+**Generate a random password**
+
+```safe gen [secret/path] [key]```
 
 # SYNOPSIS
 
@@ -34,26 +42,47 @@ Simplified CLI for HashiCorp Vault
 
 # PARAMETERS
 
-**set**
-> Write secret.
+**set** (alias: **write**)
+> Write or update a secret at a path.
 
-**get**
-> Read secret.
+**get** (alias: **read**)
+> Read and display a secret.
 
-**rm**
-> Delete secret.
+**rm** (alias: **delete**)
+> Delete one or more secret paths.
 
 **tree**
-> List paths.
+> Print a tree listing of all reachable keys.
+
+**paths**
+> Print a flat listing of all reachable keys.
 
 **target**
-> Set Vault target.
+> Set or list Vault targets.
 
 **auth**
-> Authenticate.
+> Authenticate against the currently targeted Vault.
 
 **export**
-> Export secrets.
+> Export secrets to a backup file.
+
+**import**
+> Import secrets from a backup file.
+
+**cp** (alias: **copy**)
+> Copy a secret from one path to another.
+
+**mv** (alias: **move**)
+> Move a secret from one path to another.
+
+**gen**
+> Generate a random secret.
+
+**ssh**
+> Generate a new SSH RSA keypair.
+
+**rsa**
+> Generate a new RSA keypair.
 
 # DESCRIPTION
 
@@ -69,7 +98,7 @@ Requires Vault access. Authentication needed. Permissions vary.
 
 # HISTORY
 
-**safe** was created as a user-friendly CLI for HashiCorp Vault, simplifying secret management operations.
+**safe** was created by Stark & Wayne as a user-friendly CLI for HashiCorp Vault, simplifying secret management operations.
 
 # SEE ALSO
 

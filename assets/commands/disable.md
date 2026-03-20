@@ -68,4 +68,4 @@ The concept of selectively disabling builtins originated in **bash** with the **
 
 # SEE ALSO
 
-[enable](/man/enable)(1), [builtin](/man/builtin)(1), [zsh](/man/zsh)(1)
+[builtin](/man/builtin)(1), [zsh](/man/zsh)(1)

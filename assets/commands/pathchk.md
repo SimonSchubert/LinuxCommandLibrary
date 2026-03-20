@@ -12,9 +12,13 @@ checks pathnames for validity and portability
 
 ```pathchk -p [/path/to/file]```
 
-**Check for empty paths**
+**Check for empty names and leading dashes**
 
 ```pathchk -P [path]```
+
+**Check for full POSIX portability** (combines -p and -P)
+
+```pathchk --portability [path]```
 
 **Check multiple paths**
 
@@ -26,11 +30,14 @@ checks pathnames for validity and portability
 
 # PARAMETERS
 
-**-p**, **--portability**
-> Check for POSIX portability.
+**-p**
+> Check against POSIX portable filename character set and minimum path length limits (14-character component limit).
 
 **-P**
 > Check for empty names and leading dashes.
+
+**--portability**
+> Check for portability to all POSIX systems (equivalent to -p -P).
 
 **--help**
 > Show help.

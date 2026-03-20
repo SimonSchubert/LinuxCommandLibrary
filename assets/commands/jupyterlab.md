@@ -31,7 +31,7 @@ launches JupyterLab, an interactive development environment
 # PARAMETERS
 
 **--port** _number_
-> Port to run server on.
+> Port to run server on. Default: 8888.
 
 **--no-browser**
 > Don't open browser automatically.
@@ -40,16 +40,36 @@ launches JupyterLab, an interactive development environment
 > Directory to serve notebooks from.
 
 **--ip** _address_
-> IP address to bind to.
+> IP address to bind to. Default: localhost.
 
 **--allow-root**
 > Allow running as root user.
+
+**--core-mode**
+> Start in core mode with no extensions enabled.
+
+**--dev-mode**
+> Start in development mode using local JavaScript packages.
+
+**--app-dir** _path_
+> Start with a particular set of extensions.
+
+**--certfile** _path_
+> SSL/TLS certificate file for HTTPS.
+
+**--help**
+> Show abbreviated command-line options.
+
+**--help-all**
+> Show all available options including detailed ones.
 
 # DESCRIPTION
 
 **jupyter lab** launches JupyterLab, an interactive development environment for working with notebooks, code, and data. It provides a flexible interface for data science, scientific computing, and machine learning workflows with support for multiple programming languages.
 
+JupyterLab is the next-generation web-based interface for Project Jupyter, offering a tabbed workspace with file browser, terminals, text editors, and notebook support all in one environment.
+
 # SEE ALSO
 
-[jupyter](/man/jupyter)(1), [jupyter-notebook](/man/jupyter-notebook)(1)
+[jupyter](/man/jupyter)(1), [python](/man/python)(1), [pip](/man/pip)(1)
 

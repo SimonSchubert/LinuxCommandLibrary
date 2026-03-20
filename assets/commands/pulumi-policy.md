@@ -20,6 +20,18 @@ Manage infrastructure policy packs
 
 ```pulumi policy enable [org/pack] [version]```
 
+**Disable policy pack**
+
+```pulumi policy disable [org/pack]```
+
+**Remove policy pack**
+
+```pulumi policy rm [org/pack] [version]```
+
+**Validate policy pack configuration**
+
+```pulumi policy validate-config [org/pack] [version] --config [policy-config.json]```
+
 # SYNOPSIS
 
 **pulumi** **policy** _command_ [_options_]
@@ -41,8 +53,14 @@ Manage infrastructure policy packs
 **disable** _pack_
 > Disable policy pack.
 
-**validate-config**
-> Validate policy configuration.
+**rm** _pack_ _version_
+> Remove a policy pack from the organization. Must be disabled from all Policy Groups first.
+
+**group**
+> Manage policy groups.
+
+**validate-config** _pack_ _version_
+> Validate a policy pack configuration against the configuration schema.
 
 # DESCRIPTION
 
@@ -50,5 +68,5 @@ Manage infrastructure policy packs
 
 # SEE ALSO
 
-[pulumi](/man/pulumi)(1), [pulumi-preview](/man/pulumi-preview)(1)
+[pulumi](/man/pulumi)(1), [pulumi-up](/man/pulumi-up)(1), [pulumi-preview](/man/pulumi-preview)(1), [pulumi-stack](/man/pulumi-stack)(1)
 

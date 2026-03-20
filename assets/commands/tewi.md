@@ -26,7 +26,39 @@ Text-based interface for BitTorrent clients
 
 # SYNOPSIS
 
-**tewi** [**--host** _host_] [**--port** _port_] [**--client-type** _type_] [**--profile** _name_]
+**tewi** [**--host** _host_] [**--port** _port_] [**--client-type** _type_] [**--profile** _name_] [**--help**]
+
+# PARAMETERS
+
+**--host** _host_
+> Daemon host address (default: localhost)
+
+**--port** _port_
+> Daemon port (default: 9091 for Transmission)
+
+**--client-type** _type_
+> Client type: transmission, qbittorrent, or deluge
+
+**--profile** _name_
+> Load a named configuration profile
+
+**--profiles**
+> List available configuration profiles
+
+**--badge-max-count** _N_
+> Maximum badge count displayed in torrent cards
+
+**--badge-max-length** _N_
+> Maximum badge length in torrent cards
+
+**--search-providers** _providers_
+> Specify enabled search providers/indexers
+
+**--list-search-providers**
+> Display available search providers
+
+**--help**
+> Display all available options
 
 # DESCRIPTION
 
@@ -34,7 +66,7 @@ Text-based interface for BitTorrent clients
 
 # HISTORY
 
-**tewi** was created by **Anton Larionov** (anlar) and is written in **Python**. Version 2.0 added Deluge support and configuration profiles.
+**tewi** was created by **Anton Larionov** (anlar) and is written in **Python** (requires Python 3.10+). Install via `pipx install tewi-torrent`. Version 2.0 added Deluge support, configuration profiles, and search provider integration.
 
 # SEE ALSO
 

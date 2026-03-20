@@ -20,6 +20,14 @@ dotfiles bootstrapping automation tool
 
 ```dotbot -p [plugin.py] -c [install.conf.yaml]```
 
+**Run only specific directives**
+
+```dotbot -c [install.conf.yaml] --only [link shell]```
+
+**Run all directives except specified ones**
+
+```dotbot -c [install.conf.yaml] --except [shell]```
+
 # SYNOPSIS
 
 **dotbot** [_options_] **-c** _config_
@@ -38,11 +46,26 @@ dotfiles bootstrapping automation tool
 **-v**, **--verbose**
 > Enable verbose output.
 
+**-q**, **--quiet**
+> Suppress most output.
+
 **-Q**, **--super-quiet**
 > Suppress almost all output.
 
+**--plugin-dir** _dir_
+> Load all plugins in a directory.
+
+**--only** _directives_
+> Only run specified directives.
+
+**--except** _directives_
+> Run all directives except those specified.
+
 **--no-color**
 > Disable colored output.
+
+**--force-color**
+> Force colored output.
 
 **--version**
 > Show version.

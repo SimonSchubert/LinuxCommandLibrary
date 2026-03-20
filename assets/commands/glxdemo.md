@@ -14,13 +14,13 @@ simple OpenGL rendering test
 
 # DESCRIPTION
 
-**glxdemo** is a simple OpenGL demonstration program. It displays a basic 3D scene to verify that OpenGL rendering is working correctly on the system.
+**glxdemo** is a simple OpenGL demonstration program that shows how to use GLX functions to create an OpenGL program running on top of an X server. It opens a window and renders a basic 3D scene to verify that OpenGL rendering is working correctly on the system.
 
-The program is used for testing X11 OpenGL (GLX) functionality. If it runs successfully, OpenGL acceleration is properly configured.
+The program is most useful when studied in source code form. If it runs successfully, OpenGL acceleration is properly configured.
 
 # CAVEATS
 
-Requires X11 and OpenGL. Part of mesa-demos. Basic functionality test only.
+Requires X11 and OpenGL. Part of mesa-utils (or mesa-demos). Basic functionality test only; accepts no command-line options.
 
 # HISTORY
 

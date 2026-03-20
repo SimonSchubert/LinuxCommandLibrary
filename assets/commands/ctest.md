@@ -4,7 +4,7 @@ CMake test driver program
 
 # TLDR
 
-**Run all tests**
+**Run all tests in current build directory**
 
 ```ctest```
 
@@ -35,6 +35,10 @@ CMake test driver program
 **Rerun failed tests**
 
 ```ctest --rerun-failed```
+
+**Run tests for a specific configuration**
+
+```ctest -C [Release]```
 
 # SYNOPSIS
 
@@ -68,6 +72,18 @@ CMake test driver program
 
 **--output-on-failure**
 > Show output only for failed tests.
+
+**-C** _config_, **--build-config** _config_
+> Choose configuration to test (e.g., Debug, Release).
+
+**-VV**, **--extra-verbose**
+> Enable more verbose output from tests.
+
+**--test-dir** _dir_
+> Specify the directory in which to look for tests.
+
+**--stop-on-failure**
+> Stop running tests after the first failure.
 
 # DESCRIPTION
 

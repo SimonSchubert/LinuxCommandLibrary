@@ -4,15 +4,23 @@ manages Kaggle CLI configuration settings
 
 # TLDR
 
-**Set configuration value**
-
-```kaggle config set -n [competition] -v [value]```
-
-**View configuration**
+**View current configuration**
 
 ```kaggle config view```
 
-**Unset configuration value**
+**Set the default competition**
+
+```kaggle config set -n competition -v [competition_name]```
+
+**Set the default download path**
+
+```kaggle config set -n path -v [/path/to/download/folder]```
+
+**Set a proxy for HTTP requests**
+
+```kaggle config set -n proxy -v [http://proxy:port]```
+
+**Unset a configuration value**
 
 ```kaggle config unset -n [name]```
 
@@ -23,17 +31,23 @@ manages Kaggle CLI configuration settings
 # PARAMETERS
 
 **set** **-n** _name_ **-v** _value_
-> Set configuration option.
+> Set a configuration option. Valid names: competition, path, proxy.
 
 **view**
-> Display current configuration.
+> Display current configuration values.
 
 **unset** **-n** _name_
-> Remove configuration option.
+> Remove a configuration option, reverting to default behavior.
+
+**-n** _NAME_, **--name** _NAME_
+> Name of the configuration parameter.
+
+**-v** _VALUE_, **--value** _VALUE_
+> Value of the configuration parameter.
 
 # DESCRIPTION
 
-**kaggle config** manages Kaggle CLI configuration settings. Stores preferences like default competition, output paths, and proxy settings. Configuration is stored in ~/.kaggle/kaggle.json.
+**kaggle config** manages Kaggle CLI configuration settings. Available configuration parameters are **competition** (default competition URL suffix), **path** (default download folder, defaults to current working directory), and **proxy** (HTTP request proxy). Configuration is stored in **~/.kaggle/kaggle.json**.
 
 # SEE ALSO
 

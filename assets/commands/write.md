@@ -10,7 +10,7 @@ Send messages to logged-in users
 
 **Send** message to user on tty5
 
-```write [username] tty/5```
+```write [username] tty5```
 
 **Send** message to user on pseudo terminal
 
@@ -24,11 +24,11 @@ Send messages to logged-in users
 
 **write** allows you to communicate with other users by copying lines from your terminal to theirs. When you run write, the user receives a message indicating who is writing. You can then type your message, line by line, which appears on their terminal.
 
-Press Ctrl+C to end the message session. Use the **who** command to find terminal IDs of logged-in users.
+Press Ctrl+D (EOF) or Ctrl+C to end the message session. Use the **who** command to find terminal IDs of logged-in users.
 
 # CAVEATS
 
-The recipient must have their terminal writable (use **mesg y**). If the user is logged in on multiple terminals and ttyname is not specified, the first writable terminal is used. Only works for users on the same system.
+The recipient must have their terminal writable (use **mesg y**). If the user is logged in on multiple terminals and ttyname is not specified, write picks the terminal with the shortest idle time. Only works for users on the same system.
 
 # SEE ALSO
 

@@ -44,9 +44,9 @@ _FILE_
 > Set default line thickness in thousandths of an em (default: 40).
 
 **-v**, **--version**
-> Print version number.
+> Display version information.
 
-**--help**
+**-h**, **--help**
 > Display help information.
 
 # DESCRIPTION
@@ -65,4 +65,4 @@ grolbp was developed as part of **GNU groff** to support Canon laser beam printe
 
 # SEE ALSO
 
-[groff](/man/groff)(1), [grops](/man/grops)(1), [grolj4](/man/grolj4)(1)
+[groff](/man/groff)(1), [troff](/man/troff)(1), [grops](/man/grops)(1), [grolj4](/man/grolj4)(1), [lpr](/man/lpr)(1)

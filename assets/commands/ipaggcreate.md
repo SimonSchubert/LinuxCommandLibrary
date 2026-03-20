@@ -20,9 +20,13 @@ creates IP address aggregates from network traffic dumps or pcap files
 
 ```ipaggcreate --dst [input.dump]```
 
-**Aggregate with specific prefix length**
+**Aggregate by TCP/UDP flows**
 
-```ipaggcreate --prefix=[24] [input.dump]```
+```ipaggcreate --flows -r [capture.pcap]```
+
+**Count bytes instead of packets**
+
+```ipaggcreate --bytes [input.dump]```
 
 # SYNOPSIS
 
@@ -30,29 +34,50 @@ creates IP address aggregates from network traffic dumps or pcap files
 
 # PARAMETERS
 
-**-r** _FILE_
-> Read from pcap file instead of text dump
+**-r**, **--tcpdump** _FILE_
+> Read from one or more tcpdump/pcap files
 
-**--src**
-> Aggregate by source IP addresses
+**-s**, **--src**
+> Label by IP source address
 
-**--dst**
-> Aggregate by destination IP addresses
+**-d**, **--dst**
+> Label by IP destination address (default)
 
-**--prefix** _LENGTH_
-> Aggregate using specified prefix length
+**--flows**
+> Label by TCP or UDP flow
 
-**--output** _FILE_
+**--address-pairs**
+> Label by address pair
+
+**--packets**
+> Count packets per label (default)
+
+**-B**, **--bytes**
+> Count bytes per label (IP and transport headers included, link headers excluded)
+
+**-o**, **--output** _FILE_
 > Write output to file instead of stdout
 
-**--multicast**
-> Include multicast addresses
+**-f**, **--filter** _FILTER_
+> Include only packets matching a tcpdump filter expression
+
+**-b**, **--binary**
+> Write summary in binary format
+
+**-A**, **--anonymize**
+> Anonymize IP addresses in output
+
+**-t**, **--interval** _TIME_
+> Stop after recording aggregate data for specified duration
+
+**-q**, **--quiet**
+> Suppress progress bar output
 
 # DESCRIPTION
 
-**ipaggcreate** creates IP address aggregates from network traffic dumps or pcap files. It groups IP addresses by configurable criteria such as prefix length, producing summaries of network activity.
+**ipaggcreate** reads IP packets from one or more data sources, maps each packet to a label (such as source address, destination address, or flow), and outputs an aggregate file reporting the number of packets or bytes observed per label.
 
-This tool is part of the Click modular router suite and works in conjunction with **ipsumdump** and **ipaggmanip** for comprehensive network traffic analysis and summarization.
+This tool is part of the **ipsumdump** package and works in conjunction with **ipsumdump** and **ipaggmanip** for network traffic analysis and summarization.
 
 # CAVEATS
 

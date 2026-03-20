@@ -51,7 +51,16 @@ Certificate and key management CLI
 > SSH certificate commands.
 
 **oauth**
-> OAuth operations.
+> OAuth and OIDC authorization operations.
+
+**path**
+> Print the configured step path (default ~/.step).
+
+**context**
+> Manage certificate authority contexts.
+
+**completion**
+> Print shell completion scripts (bash, zsh, fish).
 
 **--ca-url** _URL_
 > CA server URL.
@@ -88,4 +97,4 @@ CA setup requires planning. Certificate lifetimes matter. Key security essential
 
 # SEE ALSO
 
-[openssl](/man/openssl)(1), [cfssl](/man/cfssl)(1), [certbot](/man/certbot)(1)
+[step-ca](/man/step-ca)(1), [openssl](/man/openssl)(1), [cfssl](/man/cfssl)(1), [certbot](/man/certbot)(1)

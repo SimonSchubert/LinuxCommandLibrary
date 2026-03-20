@@ -48,7 +48,7 @@ runs TPC-B-like benchmarks on PostgreSQL databases
 > Number of concurrent clients.
 
 **-t** _TRANSACTIONS_
-> Transactions per client.
+> Transactions per client (default: 10).
 
 **-T** _SECONDS_
 > Duration in seconds.
@@ -60,10 +60,25 @@ runs TPC-B-like benchmarks on PostgreSQL databases
 > Custom SQL script.
 
 **-S**
-> Select-only (read-only).
+> Select-only (read-only). Shorthand for -b select-only.
 
 **-N**
-> Skip updates to pgbench_tellers and branches.
+> Skip updates to pgbench_tellers and branches. Shorthand for -b simple-update.
+
+**-b** _scriptname[@weight]_
+> Built-in script: tpcb-like, simple-update, select-only. Optional weight for mixing.
+
+**-C**
+> Establish a new connection for each transaction (measures connection overhead).
+
+**-M** _protocol_
+> Query protocol: simple, extended, or prepared (default: simple).
+
+**-R** _rate_
+> Target transaction rate in TPS. Adds sleep to maintain rate.
+
+**-L** _limit_
+> Report transactions exceeding _limit_ milliseconds as late.
 
 **-r**
 > Report latency per statement.
@@ -73,6 +88,12 @@ runs TPC-B-like benchmarks on PostgreSQL databases
 
 **-l**
 > Log transactions to file.
+
+**-n**
+> Skip vacuuming before running the test.
+
+**-I** _steps_
+> Initialization steps to perform (default: dtgvp). Characters: d=drop, t=tables, g=generate, v=vacuum, p=primary keys, f=foreign keys.
 
 **-h** _HOST_
 > Database host.

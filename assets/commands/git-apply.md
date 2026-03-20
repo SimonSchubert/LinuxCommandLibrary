@@ -20,9 +20,17 @@ Apply patches to files and the index
 
 ```git apply --reverse [patch.diff]```
 
-**Apply to index**
+**Apply to index** only
 
 ```git apply --cached [patch.diff]```
+
+**Apply with rejections** saved to .rej files
+
+```git apply --reject [patch.diff]```
+
+**Apply to subdirectory**
+
+```git apply --directory=[modules/subdir] [patch.diff]```
 
 # SYNOPSIS
 
@@ -45,8 +53,26 @@ _PATCHES_
 **--cached**
 > Apply to index only.
 
-**--3way**
-> Attempt 3-way merge.
+**--3way**, **-3**
+> Attempt 3-way merge if patch does not apply cleanly. Implies --index.
+
+**--reject**
+> Apply applicable hunks and leave rejected ones in .rej files instead of failing the whole patch.
+
+**--numstat**
+> Show added/deleted line counts in machine-readable format instead of applying.
+
+**--directory** _DIR_
+> Prepend root directory to all filenames.
+
+**--exclude** _PATTERN_
+> Skip files matching the given path pattern.
+
+**--include** _PATTERN_
+> Only apply to files matching the given path pattern.
+
+**--whitespace** _ACTION_
+> Handle whitespace errors (nowarn, warn, fix, error, error-all).
 
 **-v**, **--verbose**
 > Report progress.

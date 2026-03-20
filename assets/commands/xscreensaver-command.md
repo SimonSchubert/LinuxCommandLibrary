@@ -68,6 +68,15 @@ Control running xscreensaver daemon
 **-watch**
 > Print state changes continuously.
 
+**-version**
+> Print the version of the running xscreensaver daemon.
+
+**-quiet**
+> Print output only if an error occurs.
+
+**-verbose**
+> Print verbose output (default).
+
 # DESCRIPTION
 
 **xscreensaver-command** controls a running xscreensaver daemon by sending client messages. It can activate, deactivate, or lock the screen, cycle through display modes, and query status.

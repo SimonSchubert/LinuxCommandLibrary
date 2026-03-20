@@ -6,15 +6,15 @@ Wait for a Proxmox VM to stop
 
 **Wait** until the virtual machine is stopped
 
-```qm wait 100```
+```qm wait [vmid]```
 
-Wait with **timeout** of 10 seconds
+Wait with **timeout** of 60 seconds
 
-```qm wait --timeout 10 100```
+```qm wait --timeout 60 [vmid]```
 
 **Shutdown** then wait for VM to stop
 
-```qm shutdown 100 && qm wait --timeout 10 100```
+```qm shutdown [vmid] && qm wait --timeout 60 [vmid]```
 
 # SYNOPSIS
 
@@ -23,7 +23,7 @@ Wait with **timeout** of 10 seconds
 # PARAMETERS
 
 **--timeout** _seconds_
-> Maximum time to wait before returning
+> Maximum time to wait synchronously before returning. Set to 0 to deactivate. If reached, the command returns with the PID.
 
 # DESCRIPTION
 

@@ -28,6 +28,10 @@ Manage multiple Ruby versions per project
 
 ```rbenv version```
 
+**Set shell-specific version**
+
+```rbenv shell [3.2.0]```
+
 **Rehash shims**
 
 ```rbenv rehash```
@@ -71,6 +75,12 @@ The tool uses shims to intercept Ruby commands and route them to the appropriate
 **which** _name_
 > Show executable path.
 
+**init**
+> Set up rbenv shims in the current shell.
+
+**exec** _command_
+> Run an executable with the selected Ruby version.
+
 # CAVEATS
 
 Requires ruby-build plugin for install. Shims need rehashing after gem installs. Per-project version via .ruby-version file.
@@ -81,4 +91,4 @@ Requires ruby-build plugin for install. Shims need rehashing after gem installs.
 
 # SEE ALSO
 
-[ruby](/man/ruby)(1), [gem](/man/gem)(1), [rvm](/man/rvm)(1), [asdf](/man/asdf)(1)
+[ruby](/man/ruby)(1), [gem](/man/gem)(1), [bundle](/man/bundle)(1), [rvm](/man/rvm)(1), [asdf](/man/asdf)(1)

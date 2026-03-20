@@ -4,44 +4,84 @@ Manage bloom filters for password checking
 
 # TLDR
 
-**Generate** bloom filter from dictionary
+**Create** a new bloom filter from a dictionary file
 
-```apgbfm -d [dictionary.txt] -f [filter.bf]```
+```apgbfm -f [filter.bf] -d [dictionary.txt]```
 
-**Check** a word against filter
+**Create** an empty bloom filter for a specific number of words
+
+```apgbfm -f [filter.bf] -n [50000]```
+
+**Check** if a word exists in the filter
 
 ```apgbfm -f [filter.bf] -c [password]```
 
-Create filter with **specific size**
+**Add** a single word to an existing filter
 
-```apgbfm -d [dictionary.txt] -f [filter.bf] -n [1000000]```
+```apgbfm -f [filter.bf] -a [word]```
+
+**Add** words from a dictionary file to an existing filter
+
+```apgbfm -f [filter.bf] -A [dictionary.txt]```
+
+**Display** filter information
+
+```apgbfm -i [filter.bf]```
 
 # SYNOPSIS
 
-**apgbfm** [_-d dictfile_] [_-f filterfile_] [_-n size_] [_-c word_]
+**apgbfm** **-f** _filter_ **-n** _numofwords_ [**-q**] [**-s**]
+**apgbfm** **-f** _filter_ **-d** _dictfile_ [**-q**] [**-s**]
+**apgbfm** **-f** _filter_ **-a** _word_ [**-q**]
+**apgbfm** **-f** _filter_ **-A** _dictfile_ [**-q**]
+**apgbfm** **-f** _filter_ **-c** _word_ [**-q**]
+**apgbfm** **-f** _filter_ **-C** _dictfile_ [**-q**]
+**apgbfm** **-i** _filter_
+**apgbfm** [**-v**] [**-h**]
 
 # DESCRIPTION
 
-**apgbfm** (APG Bloom Filter Manager) creates and manages bloom filters for the apg password generator. Bloom filters enable fast dictionary checking without loading entire dictionaries into memory.
+**apgbfm** (APG Bloom Filter Manager) creates and manages bloom filters for the apg password generator. Bloom filters enable fast dictionary checking without loading entire dictionaries into memory. It uses SHA-1 as its hash function.
 
-This tool is used to create filter files from word lists that apg can use to avoid generating passwords that appear in common password dictionaries.
+This tool can be used standalone or with apg/apgd to avoid generating passwords that appear in common password dictionaries.
 
 # PARAMETERS
 
-**-d** _file_
-> Dictionary file (word list)
+**-f** _filter_
+> Bloom filter filename to use
 
-**-f** _file_
-> Bloom filter file
+**-n** _numofwords_
+> Create new empty filter for the specified number of words
 
-**-n** _size_
-> Number of elements (affects accuracy)
+**-d** _dictfile_
+> Create new filter from dictionary file
+
+**-a** _word_
+> Add a single word to the filter
+
+**-A** _dictfile_
+> Add all words from dictionary file to the filter
 
 **-c** _word_
-> Check if word might be in filter
+> Check if a word exists in the filter
+
+**-C** _dictfile_
+> Check every word from dictionary file against the filter
+
+**-i** _filter_
+> Display filter information
+
+**-s**
+> Create filter in case-insensitive mode
+
+**-q**
+> Quiet mode
 
 **-v**
-> Verbose output
+> Print version information
+
+**-h**
+> Print help information
 
 # CAVEATS
 

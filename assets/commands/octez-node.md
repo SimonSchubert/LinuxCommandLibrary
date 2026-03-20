@@ -8,9 +8,13 @@ tezos blockchain node
 
 ```octez-node run```
 
-**Initialize configuration**
+**Initialize configuration** for a specific network
 
 ```octez-node config init --network=[mainnet]```
+
+**Generate node identity**
+
+```octez-node identity generate```
 
 **Start with RPC enabled**
 
@@ -46,14 +50,29 @@ tezos blockchain node
 **snapshot import**
 > Import snapshot.
 
+**identity generate**
+> Generate a new node identity (required on first launch).
+
+**reconstruct**
+> Reconstruct archive storage from full mode storage.
+
 **--rpc-addr** _addr_
-> RPC listen address.
+> RPC listen address (default: localhost:8732).
 
 **--network** _name_
-> mainnet, ghostnet, etc.
+> Network to connect to (mainnet, ghostnet, etc.).
 
 **--data-dir** _dir_
-> Data directory.
+> Data directory (default: ~/.tezos-node).
+
+**--history-mode** _mode_
+> Storage mode: archive, full (default), or rolling.
+
+**--connections** _num_
+> Maximum number of peer connections.
+
+**--net-addr** _addr_
+> P2P listening address (default: [::]:9732).
 
 # DESCRIPTION
 
@@ -64,9 +83,9 @@ The node stores blockchain data and participates in peer-to-peer networking.
 # STORAGE MODES
 
 ```
-full    - Full block history
-rolling - Recent blocks only
-archive - All history + contexts
+archive - All block history + full context (largest)
+full    - All block headers, operations, but pruned contexts (default)
+rolling - Only recent blocks and contexts (smallest)
 ```
 
 # CONFIGURATION
@@ -88,4 +107,4 @@ Tezos was created by **Arthur Breitman** and **Kathleen Breitman**, launching ma
 
 # SEE ALSO
 
-[octez-client](/man/octez-client)(1), [octez-baker](/man/octez-baker)(1), [tezos](/man/tezos)(7)
+[octez-client](/man/octez-client)(1), [octez-baker](/man/octez-baker)(1)

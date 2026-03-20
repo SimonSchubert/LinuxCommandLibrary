@@ -30,7 +30,7 @@ Interactive Terraform expression evaluator
 > Generate an execution plan first and evaluate expressions against the planned state rather than the current state. Shows values Terraform expects after the plan is applied
 
 **-state=**_path_
-> Path to a local state file to evaluate expressions against (legacy, local backend only)
+> Path to a local state file to evaluate expressions against (default: terraform.tfstate; legacy, local backend only)
 
 **-var** _'NAME=VALUE'_
 > Set a variable value on the command line
@@ -56,4 +56,4 @@ Introduced in **Terraform v0.8** in **November 2016** by Mitchell Hashimoto, co-
 
 # SEE ALSO
 
-[terraform](/man/terraform)(1), [terraform-plan](/man/terraform-plan)(1), [terraform-apply](/man/terraform-apply)(1), [terraform-login](/man/terraform-login)(1)
+[terraform](/man/terraform)(1), [terraform-plan](/man/terraform-plan)(1), [terraform-apply](/man/terraform-apply)(1), [terraform-output](/man/terraform-output)(1), [terraform-login](/man/terraform-login)(1)

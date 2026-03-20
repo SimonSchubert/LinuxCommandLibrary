@@ -27,10 +27,10 @@ Publish packages to PyPI or repositories
 # PARAMETERS
 
 **--build**
-> Build before publishing.
+> Build the package before publishing.
 
 **-r**, **--repository** _NAME_
-> Target repository.
+> Target repository (default: pypi). Must match a name configured via **poetry config**.
 
 **-u**, **--username** _USER_
 > Repository username.
@@ -38,8 +38,17 @@ Publish packages to PyPI or repositories
 **-p**, **--password** _PASS_
 > Repository password.
 
+**--cert** _CERT_
+> Certificate authority to access the repository.
+
+**--client-cert** _CERT_
+> Client certificate to access the repository.
+
 **--dry-run**
-> Simulate publishing.
+> Simulate publishing without uploading.
+
+**--skip-existing**
+> Ignore errors from files already existing in the repository.
 
 # DESCRIPTION
 
@@ -49,13 +58,9 @@ Use **-r** to specify an alternative repository configured via **poetry config**
 
 # CAVEATS
 
-Requires authentication. Build first or use --build.
-
-# HISTORY
-
-poetry publish provides **package publishing** to Python repositories.
+Requires authentication via username/password, API token, or system keyring. The package must be built first, or use **--build** to build and publish in one step.
 
 # SEE ALSO
 
-[poetry](/man/poetry)(1), [poetry-build](/man/poetry-build)(1)
+[poetry](/man/poetry)(1), [poetry-build](/man/poetry-build)(1), [poetry-config](/man/poetry-config)(1), [twine](/man/twine)(1)
 

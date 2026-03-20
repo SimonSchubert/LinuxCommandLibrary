@@ -105,6 +105,15 @@ Show machine **status**
 **remove NAME**
 > Remove machine image
 
+**enable NAME**
+> Enable machine to start at boot
+
+**disable NAME**
+> Disable machine from starting at boot
+
+**clean**
+> Remove hidden or read-only machine images
+
 # PARAMETERS
 
 **-p, --property**
@@ -122,11 +131,23 @@ Show machine **status**
 **-E, --setenv VAR=VALUE**
 > Set environment variable in shell
 
-**-H, --host**
-> Execute on remote host
+**-H**, **--host** _USER@HOST_
+> Execute on remote host via SSH.
 
-**-M, --machine**
-> Execute in container
+**-M**, **--machine** _NAME_
+> Execute in local container.
+
+**-h**, **--help**
+> Print a short help text and exit.
+
+**--version**
+> Print a short version string and exit.
+
+**--no-pager**
+> Do not pipe output into a pager.
+
+**--no-legend**
+> Do not print the legend (column headers and hints).
 
 # CAVEATS
 
@@ -138,4 +159,4 @@ Machines are typically started using systemd-nspawn. The shell command requires 
 
 # SEE ALSO
 
-[systemd-machined](/man/systemd-machined)(8), [systemd-nspawn](/man/systemd-nspawn)(1), [systemctl](/man/systemctl)(1)
+[systemd-nspawn](/man/systemd-nspawn)(1), [systemctl](/man/systemctl)(1)

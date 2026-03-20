@@ -1,6 +1,6 @@
 # TAGLINE
 
-interactive filtering tool
+Simplistic interactive filtering tool
 
 # TLDR
 
@@ -12,7 +12,7 @@ interactive filtering tool
 
 ```history | peco --query "[pattern]"```
 
-**Select file**
+**Select file and open with a command**
 
 ```find . -type f | peco | xargs [command]```
 
@@ -27,16 +27,34 @@ interactive filtering tool
 # PARAMETERS
 
 **--query** _STRING_
-> Initial query.
+> Initial query string.
 
 **--prompt** _STRING_
-> Custom prompt.
+> Custom prompt string.
 
 **--layout** _TYPE_
-> Display layout (top-down, bottom-up).
+> Display layout: top-down or bottom-up. Default is top-down.
 
 **--initial-index** _N_
-> Start at line N.
+> Start selection at line N.
+
+**--rcfile** _PATH_
+> Path to the settings file.
+
+**-b**, **--buffer-size** _N_
+> Number of lines to keep in search buffer. Useful when piping from an infinite stream.
+
+**--null**
+> Expect NUL (\0) as separator for target/output.
+
+**--select-1**
+> Immediately select and exit if input contains only one item.
+
+**--on-cancel** _ACTION_
+> Action on user cancel: success or error. Default is success.
+
+**--initial-filter** _FILTER_
+> Specify the default filter (e.g., Regexp, SmartCase).
 
 # DESCRIPTION
 
@@ -46,7 +64,7 @@ The tool provides incremental search. Similar to fzf and percol.
 
 # CAVEATS
 
-Terminal UI. Similar to fzf. Go-based.
+Requires a terminal for interactive use. Written in Go. Configuration can be customized via a JSON config file (~/.config/peco/config.json).
 
 # HISTORY
 

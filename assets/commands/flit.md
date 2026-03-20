@@ -20,6 +20,14 @@ simple Python packaging and publishing
 
 ```flit publish```
 
+**Publish to TestPyPI**
+
+```flit publish --repository testpypi```
+
+**Install only dependencies** (not the package itself)
+
+```flit install --only-deps```
+
 **Check project configuration**
 
 ```flit check```
@@ -39,16 +47,25 @@ simple Python packaging and publishing
 **install**
 > Install locally.
 
-**--symlink**
-> Symlink for development.
+**install --symlink**
+> Symlink module into site-packages for development.
 
-**--pth-file**
-> Use .pth file for development.
+**install --pth-file**
+> Use .pth file for development (works on Windows).
+
+**install --deps** _DEPS_
+> Which dependencies to install: all, production, develop, or none (default: all).
+
+**install --only-deps**
+> Install dependencies only, not the package itself.
+
+**install --python** _PATH_
+> Install for a different Python interpreter.
 
 **publish**
 > Upload to PyPI.
 
-**--repository** _name_
+**publish --repository** _name_
 > Target repository (pypi, testpypi).
 
 **check**

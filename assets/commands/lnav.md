@@ -30,7 +30,7 @@ Run **headless** with command
 
 # SYNOPSIS
 
-**lnav** [**-hVsar**] [_logfile1_ _logfile2_ ...]
+**lnav** [**-hHVCnqirRt**] [**-c** _CMD_] [**-f** _PATH_] [**-I** _PATH_] [**-d** _FILE_] [**-w** _FILE_] [_logfile1_ _logfile2_ ...]
 
 # DESCRIPTION
 
@@ -63,10 +63,13 @@ Run **headless** with command
 > Quiet mode; suppress messages
 
 **-i**
-> Install format files to user directory
+> Install format files to user directory. Pass 'extra' to install the default set of third-party formats.
 
 **-u**
 > Update installed format files from repositories
+
+**-a**
+> Load all of the most recent log file types
 
 **-C**
 > Validate configuration and log format files
@@ -86,9 +89,17 @@ Run **headless** with command
 **-w FILE**
 > Write stdin content to file
 
+# CONFIGURATION
+
+**~/.lnav/formats/**
+> Directory for user-defined log format files (JSON format definitions).
+
+**~/.lnav/configs/**
+> Directory for user configuration files.
+
 # CAVEATS
 
-Press "?" for online help while running, and "q" to exit. lnav automatically detects and parses many common log formats. Custom formats can be defined in configuration files.
+Press "?" for online help while running, and "q" to exit. lnav automatically detects and parses many common log formats (syslog, Apache, strace, etc.). Custom formats can be defined in JSON configuration files. Use ":filter-in" and ":filter-out" commands to filter log lines interactively.
 
 # HISTORY
 

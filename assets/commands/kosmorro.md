@@ -1,6 +1,6 @@
 # TAGLINE
 
-computes astronomical ephemerides including moon phases, planet
+computes astronomical ephemerides including moon phases and planet visibility
 
 # TLDR
 
@@ -8,19 +8,19 @@ computes astronomical ephemerides including moon phases, planet
 
 ```kosmorro```
 
-**Show ephemerides for specific date**
+**Show ephemerides for a specific date**
 
 ```kosmorro --date [2024-01-15]```
 
-**Set observer location**
+**Set observer location for rise/set times**
 
 ```kosmorro --latitude [48.8566] --longitude [2.3522]```
 
-**Output as PDF**
+**Export ephemerides as PDF**
 
 ```kosmorro --format pdf --output [sky.pdf]```
 
-**Show in specific timezone**
+**Show in a specific timezone**
 
 ```kosmorro --timezone [Europe/Paris]```
 
@@ -50,9 +50,9 @@ computes astronomical ephemerides including moon phases, planet
 
 # DESCRIPTION
 
-**kosmorro** computes astronomical ephemerides including moon phases, planet visibility, and celestial events. Displays sunrise, sunset, and astronomical twilight times for a given location. Useful for astronomy enthusiasts and photographers.
+**kosmorro** computes astronomical ephemerides including moon phases, planet visibility, and celestial events. Displays sunrise, sunset, and astronomical twilight times for a given location. On first run, it downloads necessary computation files to `~/.kosmorro-cache`. Useful for astronomy enthusiasts and photographers.
 
-# SEE ALSO
+# CAVEATS
 
-[stellarium](/man/stellarium)(1)
+Requires an internet connection on first run to download ephemeris data files. Location coordinates must be provided for rise/set time calculations. PDF output requires a LaTeX installation.
 

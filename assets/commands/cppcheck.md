@@ -80,6 +80,24 @@ Unlike compiler warnings, cppcheck performs deeper analysis including flow-sensi
 **--inconclusive**
 > Report uncertain results
 
+**--project**=_file_
+> Use compile database (compile_commands.json) or Visual Studio project file
+
+**--check-level**=_level_
+> Check level: normal (default), exhaustive (deeper analysis), reduced (faster)
+
+**--cppcheck-build-dir**=_dir_
+> Build directory for faster rechecking and whole-program analysis
+
+**--platform**=_type_
+> Target platform: unix32, unix64, win32A, win32W, win64, native
+
+**--template**=_format_
+> Custom error message format (e.g., gcc, vs, {file}:{line}: {message})
+
+**--max-configs**=_n_
+> Maximum configurations to check per file (default: 12)
+
 **-q**, **--quiet**
 > Suppress progress output
 

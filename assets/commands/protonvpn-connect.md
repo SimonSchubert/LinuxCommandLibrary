@@ -4,25 +4,29 @@ Establish Proton VPN connections
 
 # TLDR
 
-Connect using the **fastest server** available
+**Connect to the fastest server available**
 
-```protonvpn connect```
+```protonvpn connect --fastest```
 
-Connect to the fastest server in a specific **country**
+**Connect to the fastest server in a specific country**
 
-```protonvpn connect --country "US"```
+```protonvpn connect --cc [US]```
 
-Connect to the fastest server in a specific **city**
+**Connect to a specific server**
 
-```protonvpn connect --city "New York"```
+```protonvpn connect [server_name]```
 
-Connect to a **specific server**
+**Connect to the fastest P2P server**
 
-```protonvpn connect server_name```
+```protonvpn connect --p2p```
 
-Display **help**
+**Connect to the fastest Secure Core server**
 
-```protonvpn connect -h```
+```protonvpn connect --sc```
+
+**Connect using TCP protocol**
+
+```protonvpn connect --fastest -p tcp```
 
 # SYNOPSIS
 
@@ -30,14 +34,26 @@ Display **help**
 
 # PARAMETERS
 
-**--country** _code_
-> Connect to fastest server in specified country
+**--fastest**
+> Connect to the fastest available server.
 
-**--city** _name_
-> Connect to fastest server in specified city
+**--random**
+> Connect to a random server.
+
+**--cc** _CODE_
+> Connect to the fastest server in specified country.
+
+**--p2p**
+> Connect to the fastest P2P server.
+
+**--sc**
+> Connect to the fastest Secure Core server.
+
+**-p** _PROTOCOL_
+> Specify transmission protocol (udp or tcp).
 
 **-h**, **--help**
-> Display help message
+> Display help message.
 
 # DESCRIPTION
 
@@ -47,7 +63,7 @@ The command is part of the Proton VPN CLI tool for Linux, providing secure VPN c
 
 # CAVEATS
 
-Requires valid Proton VPN subscription and prior authentication with protonvpn login. Network configuration may require root privileges.
+Requires valid Proton VPN subscription and prior authentication with `protonvpn login`. Network configuration may require root privileges.
 
 # HISTORY
 

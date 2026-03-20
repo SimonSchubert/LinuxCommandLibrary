@@ -67,6 +67,21 @@ converts between image formats and applies transformations
 **-gravity** _type_
 > Set placement gravity (Center, NorthWest, etc.).
 
+**-compose** _operator_
+> Set image composite operator.
+
+**-extent** _geometry_
+> Set image size, padding with background color if needed.
+
+**-background** _color_
+> Set background color.
+
+**-alpha** _type_
+> Activate, deactivate, or reset alpha channel (on, off, remove, set).
+
+**-auto-orient**
+> Auto-rotate image based on EXIF orientation.
+
 # DESCRIPTION
 
 **magick convert** converts between image formats and applies transformations as part of the **ImageMagick** suite. It supports hundreds of formats including PNG, JPEG, GIF, TIFF, PDF, SVG, and WebP.
@@ -75,7 +90,7 @@ Operations can be chained on a single command line, applying multiple transforma
 
 # CAVEATS
 
-In ImageMagick 7, the standalone `convert` command is deprecated in favor of `magick convert` or simply `magick`. Memory usage can be high for large images. PDF operations require Ghostscript.
+In ImageMagick 7, the standalone `convert` command is deprecated in favor of `magick convert` or simply `magick`. For new work, use `magick` directly. Memory usage can be high for large images. PDF operations require Ghostscript. The `-limit` option can restrict memory, disk, and other resources.
 
 # HISTORY
 

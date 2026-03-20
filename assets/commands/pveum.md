@@ -28,6 +28,14 @@ Add a user with **email, description, and password**
 
 ```pveum acl modify /vms/1000 --user [username]@pve --role PVEVMUser```
 
+**Generate** an API token for a user
+
+```pveum user token add [username]@pve [tokenid]```
+
+**List** available roles
+
+```pveum role list```
+
 # SYNOPSIS
 
 **pveum** _command_ [_subcommand_] [_options_]
@@ -54,6 +62,21 @@ Add a user with **email, description, and password**
 
 **role** **list**
 > List roles
+
+**realm** **list**
+> List authentication realms
+
+**realm** **add** _realm_
+> Add authentication realm (pam, pve, ldap, ad, openid)
+
+**user** **token** **add** _user_ _tokenid_
+> Generate API token for a user
+
+**pool** **add** _poolid_
+> Create a resource pool
+
+**pool** **list**
+> List resource pools
 
 **--role** _role_
 > Assign role (PVEAdmin, PVEVMUser, etc.)

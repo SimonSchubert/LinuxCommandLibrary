@@ -1,6 +1,6 @@
 # TAGLINE
 
-command-line utility that concatenates files or standard input and outputs
+Rainbow coloring for text console display
 
 # TLDR
 
@@ -22,7 +22,7 @@ command-line utility that concatenates files or standard input and outputs
 
 **Set the rainbow spread** (higher = tighter gradient)
 
-```lolcat -S [3.0] [file]```
+```lolcat -p [3.0] [file]```
 
 **Force color output** even when piping
 
@@ -43,13 +43,13 @@ command-line utility that concatenates files or standard input and outputs
 **-s** _speed_, **--speed** _speed_
 > Animation speed (default: 20.0)
 
-**-S** _spread_, **--spread** _spread_
+**-p** _spread_, **--spread** _spread_
 > Rainbow spread (default: 3.0)
 
 **-F** _freq_, **--freq** _freq_
 > Rainbow frequency (default: 0.1)
 
-**-p** _seed_, **--seed** _seed_
+**-S** _seed_, **--seed** _seed_
 > Rainbow seed, 0 = random (default: 0)
 
 **-i**, **--invert**
@@ -69,9 +69,7 @@ command-line utility that concatenates files or standard input and outputs
 
 # DESCRIPTION
 
-**lolcat** is a command-line utility that concatenates files or standard input and outputs them with a rainbow color gradient. It adds a colorful twist to terminal output, making mundane text visually entertaining.
-
-The program works similarly to **cat** but applies ANSI color codes to create a smooth rainbow gradient across the text. It can process files or receive piped input from other commands, making it easy to add color to any text output.
+**lolcat** concatenates files or standard input to standard output, adding a rainbow color gradient. It works like **cat** but applies ANSI color codes for a colorful twist to terminal output.
 
 Commonly paired with ASCII art generators like **figlet** or **cowsay**, lolcat is popular for creating visually striking terminal outputs, system banners, and adding personality to shell scripts.
 

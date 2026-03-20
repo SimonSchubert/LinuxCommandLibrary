@@ -8,13 +8,21 @@ text-mode web browser for the terminal
 
 ```links https://example.com```
 
+**Dump** rendered page as plain text to stdout
+
+```links -dump https://example.com```
+
+**Dump** with a specific screen **width**
+
+```links -width 80 -dump https://example.com```
+
 Browse in **anonymous** mode
 
 ```links -anonymous https://example.com```
 
-**Enable cookies**
+View page **source** code
 
-```links -enable-cookies 1 https://example.com```
+```links -source https://example.com```
 
 # SYNOPSIS
 
@@ -27,23 +35,50 @@ Browse in **anonymous** mode
 # PARAMETERS
 
 **-anonymous**
-> Apply restrictions for anonymous browsing
-
-**-enable-cookies 0|1**
-> Enable (1) or disable (0) cookies
+> Apply restrictions for anonymous browsing (no local file access or downloads)
 
 **-dump**
-> Write rendered page to stdout
+> Write rendered page as plain text to stdout
 
 **-source**
 > Write page source to stdout
 
-**-html-margin WIDTH**
-> Set margin width
+**-width** _number_
+> Set screen width for dump output
+
+**-codepage** _codepage_
+> Convert dump output to specified character set
+
+**-enable-cookies** _0|1_
+> Enable (1) or disable (0) cookies
+
+**-force-html**
+> Treat files with unknown type as HTML rather than text
+
+**-html-numbered-links** _0|1_
+> Number links in text mode for quick selection
+
+**-html-margin** _spaces_
+> Set margin width in text mode
+
+**-no-connect**
+> Run as a separate instance instead of connecting to an existing one
+
+**-download-dir** _path_
+> Set default download directory
+
+**-max-connections** _max_
+> Maximum concurrent connections (default: 10)
+
+**-receive-timeout** _sec_
+> Timeout on receive in seconds (default: 120)
 
 # NAVIGATION KEYS
 
 **Up/Down**
+> Scroll page
+
+**Tab/Shift+Tab**
 > Navigate between links
 
 **Left/Right**
@@ -52,11 +87,20 @@ Browse in **anonymous** mode
 **Enter**
 > Follow selected link
 
-**q, y**
-> Quit browser
-
 **g**
 > Go to URL
+
+**/**
+> Search text on page
+
+**Esc**
+> Open menu
+
+**d**
+> Download current link
+
+**q**
+> Quit browser
 
 # SEE ALSO
 

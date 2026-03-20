@@ -31,22 +31,31 @@ discovers API endpoints through context-aware scanning
 # PARAMETERS
 
 **scan** _URL_
-> Scan target URL.
+> Context-aware API endpoint discovery using datasets with correct HTTP methods, headers, and parameters.
 
 **brute** _URL_
-> Brute force endpoints.
+> Vanilla directory brute-forcing with custom wordlists.
+
+**kb replay** _REQUEST_
+> Replay a previously discovered request, optionally through a proxy.
 
 **-w** _WORDLIST_
 > Wordlist file.
 
-**-A** _ASSETNOTE_
-> Use Assetnote wordlist.
+**-A**, **--assetnote-wordlist** _NAME_
+> Use wordlist from wordlist.assetnote.io. Optionally append `;N` to limit to first N lines.
 
 **-H** _HEADER_
 > Add HTTP header.
 
 **-o** _FILE_
 > Output file.
+
+**-x**, **--max-connection-per-host** _N_
+> Maximum concurrent connections per host (recommend 5-10).
+
+**--disable-precheck**
+> Skip host alive discovery before scanning.
 
 **--help**
 > Display help information.

@@ -22,17 +22,35 @@ Terminal output SVG screenshot tool
 
 # PARAMETERS
 
-**-o** _FILE_
+**-o**, **--output** _FILE_
 > Output SVG file path.
 
-**--width** _VALUE_
-> Terminal width (number or auto).
+**-W**, **--width** _VALUE_
+> Terminal width (number, auto, or range like 80..120).
 
-**--height** _VALUE_
-> Terminal height (number or auto).
+**-H**, **--height** _VALUE_
+> Terminal height (number, auto, or range like 24..50).
 
 **--theme** _NAME_
 > Color theme from iTerm2-Color-Schemes.
+
+**--title** _TEXT_
+> Set window title.
+
+**--font-size** _SIZE_
+> Adjust font size.
+
+**--padding** _VALUE_
+> Configure window padding.
+
+**--window-style** _STYLE_
+> Window style (e.g., macos, compact).
+
+**--shell** _SHELL_
+> Specify shell to use.
+
+**--config** _FILE_
+> Override configuration file path (use - to disable defaults).
 
 # DESCRIPTION
 
@@ -44,4 +62,4 @@ Terminal output SVG screenshot tool
 
 # SEE ALSO
 
-[silicon](/man/silicon)(1), [termtosvg](/man/termtosvg)(1), [t-rec](/man/t-rec)(1)
+[silicon](/man/silicon)(1), [t-rec](/man/t-rec)(1)

@@ -50,8 +50,8 @@ The tool is essential for configuring serial ports and customizing terminal beha
 **-g**, **--save**
 > Print in stty-readable form.
 
-**-F** _device_
-> Specify device.
+**-F** _device_, **--file**=_device_
+> Open and use the specified device instead of stdin.
 
 **sane**
 > Reset to sane values.
@@ -60,10 +60,10 @@ The tool is essential for configuring serial ports and customizing terminal beha
 > Raw mode (no processing).
 
 **cooked**
-> Normal mode.
+> Normal mode (opposite of raw).
 
-**echo/-echo**
-> Enable/disable echo.
+**echo** / **-echo**
+> Enable/disable echoing of input characters.
 
 **rows** _n_
 > Set terminal rows.
@@ -71,8 +71,23 @@ The tool is essential for configuring serial ports and customizing terminal beha
 **cols** _n_
 > Set terminal columns.
 
-**speed** _baud_
-> Set baud rate.
+**ispeed** _n_
+> Set input baud rate.
+
+**ospeed** _n_
+> Set output baud rate.
+
+**ixon** / **-ixon**
+> Enable/disable START/STOP output control.
+
+**ixoff** / **-ixoff**
+> Enable/disable sending of START/STOP characters.
+
+**crtscts** / **-crtscts**
+> Enable/disable RTS/CTS hardware flow control.
+
+**cstopb** / **-cstopb**
+> Use two stop bits per character (one with '-').
 
 # CAVEATS
 
@@ -84,4 +99,4 @@ Settings affect current terminal. Some require appropriate privileges. Raw mode 
 
 # SEE ALSO
 
-[tty](/man/tty)(1), [setserial](/man/setserial)(8), [getty](/man/getty)(8), [termios](/man/termios)(3)
+[tty](/man/tty)(1), [setserial](/man/setserial)(8), [getty](/man/getty)(8), [reset](/man/reset)(1)

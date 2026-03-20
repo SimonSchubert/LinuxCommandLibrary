@@ -8,7 +8,7 @@ filesystem check and repair utility
 
 ```sudo fsck /dev/sdXN```
 
-Check with **interactive** repair
+Check and **report** statistics upon completion
 
 ```sudo fsck -r /dev/sdXN```
 
@@ -62,8 +62,11 @@ Show **progress**
 **-R**
 > Skip root filesystem (with -A)
 
-**-r**
-> Interactive repair mode
+**-r** _[fd]_
+> Report statistics for each fsck upon completion (exit status, time, memory)
+
+**-l**
+> Lock the whole-disk device with an exclusive flock. Can only be used with one device (mutually exclusive with -A).
 
 **-s**
 > Serialize fsck operations

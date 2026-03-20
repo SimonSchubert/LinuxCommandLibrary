@@ -35,14 +35,17 @@ GVFS daemon that handles virtual filesystem operations
 **--debug**
 > Enable debug output.
 
-**--help**
+**-h**, **--help**
 > Display help information.
+
+**--version**
+> Show version number and exit.
 
 # DESCRIPTION
 
-**gvfsd** is the GVFS daemon that handles virtual filesystem operations. It manages backends for accessing remote filesystems like SMB, FTP, and SSH.
+**gvfsd** is the main daemon for the GVFS virtual filesystem. It provides the `org.gtk.vfs.Daemon` name on the session bus and is autostarted by GIO clients if not already running.
 
-The daemon is started automatically by D-Bus when needed. It coordinates mount operations and file access for GNOME applications.
+The primary task of gvfsd is to act as a mount tracker/manager. It spawns new backends when requested, keeps track of their lifecycle, maintains a list of active mounts, and creates direct connections to them. GVFS backends run as children of the gvfsd process.
 
 # CAVEATS
 
@@ -54,4 +57,4 @@ gvfsd was developed as part of **GVFS** for the **GNOME** desktop environment to
 
 # SEE ALSO
 
-[gvfsd-fuse](/man/gvfsd-fuse)(1), [gio](/man/gio)(1), [dbus-daemon](/man/dbus-daemon)(1)
+[gvfs-open](/man/gvfs-open)(1), [gvfsd-fuse](/man/gvfsd-fuse)(1), [gio](/man/gio)(1), [dbus-daemon](/man/dbus-daemon)(1)

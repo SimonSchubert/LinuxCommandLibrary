@@ -24,6 +24,10 @@ Record profile of **existing process**
 
 ```sudo perf report```
 
+**Record** with call graph
+
+```sudo perf record -g [command]```
+
 List available **events**
 
 ```perf list```
@@ -52,6 +56,18 @@ List available **events**
 **annotate**
 > Read perf.data and display annotated code
 
+**script**
+> Read perf.data and output trace in scripted format
+
+**bench**
+> Run built-in microbenchmarks for scheduler, memory, etc.
+
+**trace**
+> Trace system calls (similar to strace)
+
+**sched**
+> Analyze scheduler latencies and behavior
+
 **diff**
 > Compare two perf.data files
 
@@ -63,14 +79,20 @@ List available **events**
 **-e, --event _event_**
 > Select specific events to measure
 
-**-g**
-> Enable call-graph recording
+**-g**, **--call-graph**
+> Enable call-graph (stack chain/backtrace) recording
 
-**-a**
+**-a**, **--all-cpus**
 > System-wide collection from all CPUs
 
-**-o _file_**
+**-F _freq_**, **--freq _freq_**
+> Profile at specified frequency (samples per second)
+
+**-o _file_**, **--output _file_**
 > Output file name
+
+**-c _count_**, **--count _count_**
+> Collect a sample after every _count_ events
 
 # DESCRIPTION
 

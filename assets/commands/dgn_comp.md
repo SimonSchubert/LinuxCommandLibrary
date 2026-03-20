@@ -52,4 +52,4 @@ DGN format was developed by **Intergraph** and later maintained by **Bentley Sys
 
 # SEE ALSO
 
-[ogr2ogr](/man/ogr2ogr)(1), [dwg2dxf](/man/dwg2dxf)(1)
+[ogr2ogr](/man/ogr2ogr)(1)

@@ -64,8 +64,14 @@ builds container images from Dockerfiles inside containers or Kubernetes
 **--build-arg** _KEY=value_
 > Set build-time variable. Repeatable.
 
+**--ignore-var-run**
+> Ignore /var/run when taking image snapshot. Default: true.
+
+**--ignore-path** _path_
+> Ignore specified path when taking image snapshot. Repeatable.
+
 **--snapshot-mode** _mode_
-> Snapshot mode: full or time (default).
+> Snapshot mode: full or redo (default: redo).
 
 **--single-snapshot**
 > Take one snapshot at end instead of per layer.
@@ -82,8 +88,23 @@ builds container images from Dockerfiles inside containers or Kubernetes
 **--skip-tls-verify**
 > Skip TLS certificate verification.
 
+**--insecure-pull**
+> Pull from insecure (HTTP) registry.
+
+**--skip-tls-verify-pull**
+> Skip TLS certificate verification when pulling.
+
 **--kaniko-dir** _path_
-> Kaniko working directory.
+> Kaniko working directory (default: /kaniko).
+
+**--image-fs-extract-retry** _count_
+> Number of retries for extracting image filesystem. Default: 0.
+
+**--image-download-retry** _count_
+> Number of retries for downloading remote image with exponential backoff. Default: 0.
+
+**--label** _KEY=value_
+> Set image label metadata. Repeatable.
 
 **--verbosity** _level_
 > Log level: panic, fatal, error, warn, info, debug, trace.
@@ -102,7 +123,7 @@ A debug image (**gcr.io/kaniko-project/executor:debug**) includes busybox for tr
 
 # CAVEATS
 
-Kaniko runs inside containers and is not meant for direct host execution. Some Dockerfile features may behave differently than with Docker daemon. The **time** snapshot mode may miss metadata-only changes; use **full** mode if needed. Build arguments with spaces require special IFS handling.
+Kaniko runs inside containers and is not meant for direct host execution. Some Dockerfile features may behave differently than with Docker daemon. The **redo** snapshot mode may miss metadata-only changes; use **full** mode if needed. The **--reproducible** flag takes a single snapshot at the end of the build, so only one layer is appended to the base image.
 
 # HISTORY
 

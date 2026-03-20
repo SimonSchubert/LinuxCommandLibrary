@@ -16,9 +16,17 @@ manages PKCS#11 modules
 
 ```p11-kit list-objects```
 
-**Extract certificates**
+**Extract CA certificates as PEM bundle**
 
-```p11-kit extract --format=pem-bundle --filter=ca-anchors [output]```
+```p11-kit extract --format=pem-bundle --filter=ca-anchors [path/to/output.pem]```
+
+**Run a PKCS#11 server** on a Unix socket
+
+```p11-kit server --provider [module.so] [pkcs11:token-uri]```
+
+**Generate a key pair** on a token
+
+```p11-kit generate-keypair --type=rsa [pkcs11:token-uri]```
 
 # SYNOPSIS
 
@@ -36,13 +44,34 @@ manages PKCS#11 modules
 > List objects.
 
 **extract**
-> Extract certificates.
+> Extract certificates and trust policy from the shared trust store.
+
+**server**
+> Run a PKCS#11 server exposing tokens on a local socket.
+
+**remote**
+> Expose a PKCS#11 module remotely over stdin/stdout.
+
+**generate-keypair**
+> Generate a key pair on a token (rsa, ecdsa, eddsa).
+
+**add-profile**
+> Create a new profile object on a token.
+
+**delete-profile**
+> Delete a profile object from a token.
 
 **--format** _FORMAT_
-> Output format.
+> Output format for extract (e.g., pem-bundle, x509-directory).
 
-**--help**
-> Display help information.
+**--filter** _FILTER_
+> Certificate filter for extract (e.g., ca-anchors, trust-policy, blocklist, certificates).
+
+**-v, --verbose**
+> Run in verbose mode with debug output.
+
+**-q, --quiet**
+> Run in quiet mode without warnings.
 
 # DESCRIPTION
 
@@ -60,5 +89,5 @@ p11-kit was created to **unify PKCS#11 module** management across applications.
 
 # SEE ALSO
 
-[pkcs11-tool](/man/pkcs11-tool)(1), [openssl](/man/openssl)(1)
+[trust](/man/trust)(1), [pkcs11-tool](/man/pkcs11-tool)(1), [openssl](/man/openssl)(1)
 

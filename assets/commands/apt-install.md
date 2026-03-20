@@ -24,6 +24,14 @@ Install **without prompting** for confirmation
 
 ```sudo apt install --reinstall [package]```
 
+Install **without recommended** packages
+
+```sudo apt install --no-install-recommends [package]```
+
+**Fix broken** dependencies
+
+```sudo apt install -f```
+
 # SYNOPSIS
 
 **apt install** [_options_] _package_...
@@ -51,6 +59,15 @@ If the specified package is already installed, the command will upgrade it to th
 **-d, --download-only**
 > Download packages but do not install them
 
+**-f, --fix-broken**
+> Attempt to correct a system with broken dependencies
+
+**-s, --simulate**
+> Simulate the install without making changes
+
+**--no-install-suggests**
+> Do not install suggested packages
+
 # CONFIGURATION
 
 **/etc/apt/sources.list**
@@ -68,4 +85,4 @@ Requires root privileges. The command may remove conflicting packages to satisfy
 
 # SEE ALSO
 
-[apt](/man/apt)(8), [apt-get](/man/apt-get)(8), [dpkg](/man/dpkg)(1)
+[apt](/man/apt)(8), [apt-get](/man/apt-get)(8), [apt-cache](/man/apt-cache)(8), [dpkg](/man/dpkg)(1)

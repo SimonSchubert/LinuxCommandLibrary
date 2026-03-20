@@ -37,13 +37,16 @@ Set system to **single user** mode (runlevel 1)
 > Single user mode (maintenance)
 
 **2**
-> Multi-user mode without networking (Debian) or with networking (Red Hat)
+> Multi-user mode without NFS (Debian default multi-user with GUI)
 
 **3**
-> Multi-user mode with networking and text console
+> Multi-user mode with networking, text console only
+
+**4**
+> Unused/custom (available for user-defined purposes)
 
 **5**
-> Multi-user mode with networking and graphical desktop
+> Multi-user mode with networking and graphical desktop (Red Hat default GUI)
 
 **6**
 > Reboot the system
@@ -58,7 +61,7 @@ On modern systemd-based systems, init may be a compatibility wrapper that transl
 
 # CAVEATS
 
-Behavior varies between distributions. On systemd systems, requires SYSVINIT compatibility. Direct runlevel changes can disrupt running services.
+Behavior varies between distributions. On systemd-based systems, **init** is a symlink to systemd and runlevel commands are translated to systemd targets (e.g., runlevel 3 maps to multi-user.target, runlevel 5 to graphical.target). Direct runlevel changes can disrupt running services. Use **systemctl** on modern systems.
 
 # HISTORY
 
@@ -66,4 +69,4 @@ System V init originated in AT&T UNIX System V in **1983**. It was the standard 
 
 # SEE ALSO
 
-[systemctl](/man/systemctl)(1), [runlevel](/man/runlevel)(8), [telinit](/man/telinit)(8)
+[systemctl](/man/systemctl)(1), [telinit](/man/telinit)(8), [runlevel](/man/runlevel)(8), [halt](/man/halt)(8), [reboot](/man/reboot)(8), [shutdown](/man/shutdown)(8), [service](/man/service)(8)

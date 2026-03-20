@@ -43,31 +43,67 @@ Travis CI command-line interface
 # PARAMETERS
 
 **login**
-> Authenticate.
+> Authenticate with Travis CI using a GitHub token.
+
+**logout**
+> Remove stored access token.
 
 **enable**
-> Enable repo.
+> Enable Travis CI for a repository.
+
+**disable**
+> Disable Travis CI for a repository.
 
 **status**
-> Build status.
+> Show the build status of the current repository.
 
 **logs**
-> Build logs.
+> Display build logs.
 
 **lint**
-> Validate config.
+> Validate .travis.yml configuration file.
 
 **encrypt** _DATA_
-> Encrypt secret.
+> Encrypt a string for use in .travis.yml.
+
+**encrypt-file** _FILE_
+> Encrypt a file for use in the build.
 
 **restart**
-> Restart build.
+> Restart the most recent build.
+
+**cancel**
+> Cancel the most recent build.
+
+**env** [_list|set|copy_]
+> Manage environment variables.
+
+**whoami**
+> Display the current user.
+
+**sync**
+> Trigger a sync with GitHub.
+
+**token**
+> Display the stored API token.
 
 **--add**
-> Add to yaml.
+> Add encrypted value to .travis.yml automatically.
 
 **-r**, **--repo** _SLUG_
-> Repository.
+> Specify repository (owner/name).
+
+**--com**
+> Use travis-ci.com API endpoint.
+
+**--pro**
+> Shortcut for travis-ci.com (same as --com).
+
+**-t**, **--token** _TOKEN_
+> Use a specific access token.
+
+**--debug**
+> Display API requests for debugging.
 
 # DESCRIPTION
 
@@ -79,7 +115,7 @@ The lint subcommand validates `.travis.yml` configuration files to catch syntax 
 
 # CAVEATS
 
-Requires Travis CI account. travis-ci.org shut down. Use travis-ci.com.
+Requires a Travis CI account linked to GitHub. The travis-ci.org endpoint has been shut down; all users must use travis-ci.com (pass **--com** flag). Authentication requires a GitHub OAuth token.
 
 # HISTORY
 

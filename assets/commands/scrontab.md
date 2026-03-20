@@ -12,9 +12,9 @@ Schedule recurring Slurm cluster jobs
 
 ```scrontab -e```
 
-Edit **specific user's** crontab (requires root)
+Edit **specific user's** crontab (requires root or SlurmUser)
 
-```scrontab -u user_id -e```
+```scrontab -u username -e```
 
 **Remove** current crontab
 
@@ -26,31 +26,32 @@ Edit **specific user's** crontab (requires root)
 
 # SYNOPSIS
 
-**scrontab** [_options_] [_file_]
+**scrontab** [**-u** _user_] _file_
+**scrontab** [**-u** _user_] [**-e** | **-l** | **-r**]
 
 # PARAMETERS
 
 **-e**
-> Edit crontab
-
-**-u** _user_, **--user** _user_
-> Operate on specific user's crontab (requires root)
-
-**-r**
-> Remove crontab
+> Edit crontab; creates a default template if none exists
 
 **-l**
-> List crontab contents
+> Print current crontab to stdout
+
+**-r**
+> Remove crontab; running jobs continue but will not recur
+
+**-u** _user_
+> Operate on specified user's crontab (listing requires Operator/Admin; editing/removal requires root or SlurmUser)
 
 # DESCRIPTION
 
-**scrontab** manages Slurm crontab files for scheduling recurring jobs on HPC clusters. It provides a familiar crontab-like interface where job entries combine standard cron time specifications with Slurm **sbatch** directives, allowing periodic job submission through the cluster's workload manager.
+**scrontab** manages Slurm crontab files for scheduling recurring batch jobs on HPC clusters. It uses standard cron time specifications (minute, hour, day of month, month, day of week) combined with Slurm **sbatch** directives via **#SCRON** comment lines.
 
-Jobs defined in scrontab are automatically submitted to the Slurm scheduler at specified intervals. The tool supports the same editing, listing, and removal operations as traditional **crontab**, making it straightforward for users already familiar with cron scheduling to set up recurring cluster jobs for tasks like periodic data processing, backups, or monitoring.
+Lines starting with **#SCRON** define sbatch options for the single following crontab entry; options reset between entries. Unlike traditional **crontab**, user environment variables are not inherited. Jobs are automatically submitted to the Slurm scheduler at specified intervals.
 
 # CAVEATS
 
-Requires Slurm's cron functionality to be enabled. Job syntax combines cron scheduling with Slurm sbatch options.
+Requires Slurm's cron functionality to be enabled by the cluster administrator. User environment variables are ignored unlike traditional crontab.
 
 # HISTORY
 

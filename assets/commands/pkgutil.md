@@ -16,13 +16,17 @@ Query and manage macOS package receipts
 
 ```pkgutil --files [com.apple.pkg.Safari]```
 
-**Verify package**
+**Find which package owns a file**
 
-```pkgutil --verify [com.apple.pkg.Safari]```
+```pkgutil --file-info [/usr/bin/python3]```
 
-**Forget package**
+**Forget package receipt** (does not uninstall files)
 
 ```sudo pkgutil --forget [com.example.package]```
+
+**Expand a package for inspection**
+
+```pkgutil --expand [package.pkg] [expanded_dir]```
 
 # SYNOPSIS
 
@@ -45,11 +49,35 @@ Query and manage macOS package receipts
 **--forget** _id_
 > Remove package receipt.
 
+**--file-info** _path_
+> Show which package installed a specific file.
+
+**--only-files**
+> List only files (not directories) in --files output.
+
+**--only-dirs**
+> List only directories (not files) in --files output.
+
+**--regexp**
+> Match package-id arguments as regular expressions.
+
 **--expand** _pkg_ _dir_
-> Expand package.
+> Expand flat package into a directory for inspection.
+
+**--flatten** _pkg_ _dir_
+> Flatten an expanded package into a flat package.
+
+**--bom** _path_
+> Extract BOM files from a flat package.
 
 **--volume** _path_
-> Target volume.
+> Target volume (default: /).
+
+**-f**, **--force**
+> Skip confirmation for destructive operations.
+
+**-v**, **--verbose**
+> Human-readable output with extra context.
 
 # DESCRIPTION
 
@@ -88,4 +116,4 @@ pkgutil is Apple's command-line interface for the macOS Installer package system
 
 # SEE ALSO
 
-[installer](/man/installer)(8), [lsbom](/man/lsbom)(1), [pkgbuild](/man/pkgbuild)(1)
+[brew](/man/brew)(1)

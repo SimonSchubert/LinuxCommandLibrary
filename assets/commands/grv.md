@@ -14,17 +14,41 @@ Terminal interface for viewing Git repositories
 
 **Open with a specific log level**
 
-```grv -logLevel [DEBUG|INFO|WARN|ERROR]```
+```grv -logLevel [NONE|PANIC|FATAL|ERROR|WARN|INFO|DEBUG|TRACE]```
+
+**Open in read-only mode**
+
+```grv -readOnly```
 
 # SYNOPSIS
 
-**grv** [**-repoFilePath** _path_] [**-logFile** _path_] [**-logLevel** _level_]
+**grv** [**-repoFilePath** _path_] [**-workTreeFilePath** _path_] [**-logFile** _path_] [**-logLevel** _level_] [**-readOnly**] [**-version**]
 
 # DESCRIPTION
 
 **GRV** (Git Repository Viewer) is a terminal-based interface for viewing Git repositories. It allows refs, commits, and diffs to be viewed, searched, and filtered using **Vi/Vim-like key bindings**. The interface provides multiple views including a ref view for branches and tags, a commit view for browsing history, and a diff view for inspecting changes.
 
-GRV reads the repository directly rather than shelling out to git commands, resulting in fast navigation even in large repositories. The behaviour and style can be customised through a **.grvrc** configuration file.
+GRV reads the repository directly using libgit2 rather than shelling out to git commands, resulting in fast navigation even in large repositories. The behaviour and style can be customised through a **.grvrc** configuration file.
+
+# PARAMETERS
+
+**-repoFilePath** _path_
+> Repository file path (default: ".")
+
+**-workTreeFilePath** _path_
+> Work tree file path
+
+**-logFile** _path_
+> Log file path (default: "grv.log")
+
+**-logLevel** _level_
+> Logging level: NONE, PANIC, FATAL, ERROR, WARN, INFO, DEBUG, TRACE (default: "NONE")
+
+**-readOnly**
+> Run grv in read-only mode
+
+**-version**
+> Print version information
 
 # KEY BINDINGS
 
