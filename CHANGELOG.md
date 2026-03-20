@@ -1,3 +1,19 @@
+## v3.7.1 — 2026-03-21
+
+### Features
+- Add new commands
+- Add emerge to package manager basics
+- Add "ip a" to network interfaces
+
+### Fixes
+- Force LTR direction for code/commands
+- Fix accessibility issues and improve website UI
+
+### Improvements
+- Upgrade Compose Multiplatform and Gradle
+- Improve command quality
+- Replace ads with GitHub Sponsors on website
+
 ## v3.7.0 — 2026-03-17
 
 ### Features

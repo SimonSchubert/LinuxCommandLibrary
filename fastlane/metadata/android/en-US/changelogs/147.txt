@@ -1,0 +1,8 @@
+Add new commands
+Add emerge to package manager basics
+Add "ip a" to network interfaces
+Force LTR direction for code/commands
+Fix accessibility issues and improve website UI
+Upgrade Compose Multiplatform and Gradle
+Improve command quality
+Replace ads with GitHub Sponsors on website
