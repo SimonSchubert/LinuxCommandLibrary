@@ -2,7 +2,7 @@
 # https://github.com/SimonSchubert/LinuxCommandLibrary
 
 pkgname=lcl-gui-bin
-pkgver=3.7.0
+pkgver=3.7.1
 pkgrel=1
 pkgdesc='Linux command reference and cheat sheets - desktop application'
 arch=('x86_64')
@@ -14,7 +14,7 @@ conflicts=('lcl-gui')
 options=('!strip')
 
 source=("LinuxCommandLibrary-${pkgver}-linux-x86_64.tar.gz::https://github.com/SimonSchubert/LinuxCommandLibrary/releases/download/v${pkgver}/LinuxCommandLibrary-${pkgver}-linux-x86_64.tar.gz")
-sha256sums=('f9399d583ecbdc058115f5146ea8153cd834ad2ef415575c33805e1c28c7fbe1')
+sha256sums=('0a29d0ea4152173f86efdadecc80cd1ed3b94477d39e9ce7e42f3d0ec75c4660')
 
 package() {
     # Install application files
