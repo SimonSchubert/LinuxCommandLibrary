@@ -1150,6 +1150,7 @@ cliamp.md
 clido.md
 clifm.md
 climp.md
+cline.md
 clinfo.md
 clip-view.md
 cliphist.md
@@ -2382,6 +2383,7 @@ genisoimage.md
 genkernel.md
 genpkey.1s.md
 genpmk.md
+ges-launch-1.0.md
 get-nodeinstalllocation.md
 get-nodeversions.md
 get_iplayer.md
@@ -2942,6 +2944,7 @@ gst-discoverer-1.0.md
 gst-inspect-1.0.md
 gst-launch-1.0.md
 gst-play-1.0.md
+gst-transcoder-1.0.md
 gst-typefind-1.0.md
 gsutil.md
 gt.md
@@ -3291,9 +3294,11 @@ immich-cli.md
 immich-go.md
 immich.md
 impacket-addcomputer.md
+impacket-dumpntlminfo.md
 impacket-getadusers.md
 impacket-getarch.md
 impacket-getnpusers.md
+impacket-getst.md
 impacket-gettgt.md
 impacket-getuserspns.md
 impacket-mqtt_check.md
@@ -3303,6 +3308,7 @@ impacket-ping.md
 impacket-ping6.md
 impacket-psexec.md
 impacket-rdp_check.md
+impacket-reg.md
 impacket-rpcdump.md
 impacket-rpcmap.md
 impacket-sambapipe.md
@@ -6178,6 +6184,7 @@ qwen.md
 r.md
 r2.md
 r2e.md
+ra-aid.md
 rabbitmq-diagnostics.md
 rabbitmq-plugins.md
 rabbitmq-queues.md
@@ -6209,6 +6216,7 @@ rain.md
 rainbowstream.md
 rainfrog.md
 rake.md
+raku.md
 ralph-tui.md
 rancid-cvs.md
 rancid-run.md
@@ -6827,6 +6835,7 @@ sox.md
 soxi.md
 spa-acp-tool.md
 spa-inspect.md
+spa-json-dump.md
 spa-resample.md
 spark.md
 spctoppm.md
@@ -7251,6 +7260,7 @@ terrascan.md
 tesseract.md
 test.md
 testdisk.md
+testparm.md
 testssl.md
 tetrinet.md
 tetris-bsd.md
@@ -7663,6 +7673,7 @@ uxterm.md
 v.md
 v4l2-compliance.md
 v4l2-ctl.md
+v4l2loopback-ctl.md
 vacuumdb.md
 vagrant-box.md
 vagrant-destroy.md
