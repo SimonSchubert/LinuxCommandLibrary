@@ -469,6 +469,19 @@ pre {
 	font-size: 20px;
 }
 
+.code-group > .code-wrapper + span,
+.panel > div > .code-wrapper + span,
+.panel > p > .code-wrapper + span {
+	margin-top: 16px;
+}
+
+.code-group > span,
+.panel > div > span,
+.panel > p > span {
+	display: block;
+	padding-bottom: 8px;
+}
+
 .copy-button img {
 	margin-left: 4px;
 	margin-top: 2px;
@@ -514,6 +527,10 @@ td:first-child {
 
 table {
     border-spacing: 4px 1px;
+}
+
+table th {
+    text-align: left;
 }
 
 @media screen and (max-width: 410px) {

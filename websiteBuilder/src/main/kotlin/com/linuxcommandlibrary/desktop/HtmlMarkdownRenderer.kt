@@ -28,7 +28,7 @@ object HtmlMarkdownRenderer {
         text.elements.forEach { element ->
             append(renderTextElement(element))
         }
-        append("</span><br>")
+        append("</span>")
     }
 
     private fun renderBlockquote(blockquote: TipSectionElement.Blockquote): String = buildString {

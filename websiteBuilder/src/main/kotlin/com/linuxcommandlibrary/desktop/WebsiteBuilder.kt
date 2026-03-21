@@ -119,7 +119,7 @@ class WebsiteBuilder(
     private val pastSponsors: List<Pair<String, String>> = emptyList(),
 ) {
 
-    private val cacheVersion = 13
+    private val cacheVersion = 14
 
     /**
      * Get sorted list of command names from markdown files.
