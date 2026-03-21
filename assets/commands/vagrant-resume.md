@@ -4,17 +4,21 @@ Resume a suspended Vagrant machine
 
 # TLDR
 
-**Resume suspended VM**
+**Resume** the default suspended VM
 
 ```vagrant resume```
 
-**Resume specific VM**
+**Resume** a specific VM by **name** or **ID**
 
-```vagrant resume [name]```
+```vagrant resume [name|id]```
 
-**Resume with provisioning**
+**Resume** and run **provisioners** afterward
 
 ```vagrant resume --provision```
+
+**Resume** and skip all **provisioners**
+
+```vagrant resume --no-provision```
 
 # SYNOPSIS
 
@@ -30,9 +34,9 @@ Resume a suspended Vagrant machine
 
 # DESCRIPTION
 
-**vagrant resume** brings a suspended Vagrant machine back online. Restores VM state from when it was suspended. Faster than full boot from halt.
+**vagrant resume** brings a suspended Vagrant machine back online. It restores the VM state from the point when it was suspended with **vagrant suspend**. Resuming is faster than a full boot from a halted state because it restores from a saved memory snapshot rather than performing a cold start. If the machine is not in a suspended state, this command has no effect.
 
 # SEE ALSO
 
-[vagrant](/man/vagrant)(1), [vagrant-suspend](/man/vagrant-suspend)(1)
+[vagrant](/man/vagrant)(1), [vagrant-suspend](/man/vagrant-suspend)(1), [vagrant-halt](/man/vagrant-halt)(1), [vagrant-status](/man/vagrant-status)(1)
 

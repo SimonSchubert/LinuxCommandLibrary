@@ -34,4 +34,4 @@ getenforce is part of the SELinux project, which was developed by the NSA (Natio
 
 # SEE ALSO
 
-[setenforce](/man/setenforce)(1), [sestatus](/man/sestatus)(8), [selinux](/man/selinux)(8)
+[setenforce](/man/setenforce)(1), [sestatus](/man/sestatus)(8)

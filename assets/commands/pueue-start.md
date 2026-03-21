@@ -16,9 +16,9 @@ Resume paused pueue tasks or groups
 
 ```pueue start --group [group_name]```
 
-**Start daemon**
+**Start multiple specific tasks**
 
-```pueue start-daemon```
+```pueue start [task_id_1] [task_id_2] [task_id_3]```
 
 # SYNOPSIS
 
@@ -36,49 +36,14 @@ Resume paused pueue tasks or groups
 
 **pueue start** resumes paused tasks or groups in the pueue task queue. Tasks that were paused with pueue pause can be resumed to continue execution.
 
-# EXAMPLES
-
-```bash
-# Start specific task
-pueue start 5
-
-# Start all tasks
-pueue start --all
-
-# Start tasks in group
-pueue start --group encoding
-
-# Start multiple tasks
-pueue start 1 2 3
-
-# Start daemon if not running
-pueued
-
-# Check status
-pueue status
-```
-
-# WORKFLOW
-
-```bash
-# Add task (starts if not paused)
-pueue add command
-
-# Pause for editing
-pueue pause 1
-
-# Resume when ready
-pueue start 1
-```
-
 # CAVEATS
 
-Tasks must be in paused state. Use pueue status to check states. Daemon must be running.
+Tasks must be in a paused or queued state. Use **pueue status** to check task states before starting. The pueue daemon must be running.
 
 # HISTORY
 
-pueue start is part of **pueue** by **Arne Beer**, a command-line task manager for Linux.
+**pueue start** is part of **pueue** by **Arne Beer**, a command-line task manager for sequential and parallel execution.
 
 # SEE ALSO
 
-[pueue](/man/pueue)(1), [pueue-pause](/man/pueue-pause)(1), [pueue-add](/man/pueue-add)(1)
+[pueue](/man/pueue)(1), [pueue-pause](/man/pueue-pause)(1), [pueue-add](/man/pueue-add)(1), [pueue-status](/man/pueue-status)(1)

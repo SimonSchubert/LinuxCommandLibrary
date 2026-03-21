@@ -24,6 +24,10 @@ Remove an installed Homebrew package
 
 ```brew rm [formula1] [formula2] [formula3]```
 
+**Dry run** to see what would be removed
+
+```brew rm --dry-run [formula]```
+
 # SYNOPSIS
 
 **brew** **rm** [_options_] _formula_|_cask_ [...]
@@ -45,6 +49,15 @@ Remove an installed Homebrew package
 **--ignore-dependencies**
 > Do not fail uninstall even if dependent formulae still exist.
 
+**-n**, **--dry-run**
+> Show what would be removed without actually removing anything.
+
+**-d**, **--debug**
+> Display any debugging information.
+
+**-v**, **--verbose**
+> Make some output more verbose.
+
 # DESCRIPTION
 
 **brew rm** is an alias for **brew uninstall** and **brew remove**. It uninstalls a formula or cask from the system.
@@ -57,4 +70,4 @@ Removing a formula that other installed formulae depend on will fail unless **--
 
 # SEE ALSO
 
-[brew](/man/brew)(1), [brew-remove](/man/brew-remove)(1), [brew-uninstall](/man/brew-uninstall)(1), [brew-autoremove](/man/brew-autoremove)(1)
+[brew](/man/brew)(1), [brew-remove](/man/brew-remove)(1), [brew-uninstall](/man/brew-uninstall)(1), [brew-autoremove](/man/brew-autoremove)(1), [brew-install](/man/brew-install)(1), [brew-cleanup](/man/brew-cleanup)(1)

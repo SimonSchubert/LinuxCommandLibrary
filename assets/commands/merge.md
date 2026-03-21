@@ -16,9 +16,13 @@ performs three-way file merge
 
 ```merge -q [file] [base] [other]```
 
-**Show conflict markers**
+**Show conflict markers** using diff3 style
 
 ```merge -A [file] [base] [other]```
+
+**Merge with custom labels** for conflict markers
+
+```merge -L [mine] -L [base] -L [theirs] [file] [base] [other]```
 
 # SYNOPSIS
 
@@ -58,9 +62,9 @@ _FILE3_
 
 # DESCRIPTION
 
-**merge** performs three-way file merge. It combines changes from two files based on a common ancestor.
+**merge** performs three-way file merge. It incorporates changes from _file3_ (relative to _file2_) into _file1_. The common ancestor _file2_ is used to determine which changes were made in each version.
 
-The tool is part of RCS. It writes conflicts with markers for manual resolution.
+The tool is part of the RCS (Revision Control System) suite. When conflicts occur, merge writes conflict markers into _file1_ for manual resolution. The exit status is 0 for no conflicts, 1 if conflicts were found, or 2 for trouble.
 
 # CAVEATS
 
@@ -72,5 +76,5 @@ merge is part of **RCS** (Revision Control System), providing three-way file mer
 
 # SEE ALSO
 
-[diff3](/man/diff3)(1), [diff](/man/diff)(1), [patch](/man/patch)(1), [rcs](/man/rcs)(1)
+[diff3](/man/diff3)(1), [diff](/man/diff)(1), [patch](/man/patch)(1), [rcs](/man/rcs)(1), [sdiff](/man/sdiff)(1), [git-merge](/man/git-merge)(1)
 

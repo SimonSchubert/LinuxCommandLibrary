@@ -63,8 +63,28 @@ Show **config**
 **run**
 > Run application from subsystem
 
+**export**
+> Export an installed application as a desktop entry
+
+**unexport**
+> Remove an exported desktop entry
+
 **config show**
 > Display configuration
+
+**help**
+> Show help for a command
+
+# PARAMETERS
+
+**--now**
+> Perform system upgrade immediately without scheduling
+
+**-h**, **--help**
+> Show help information
+
+**--version**
+> Show version information
 
 # DESCRIPTION
 
@@ -78,4 +98,4 @@ Vanilla OS specific. Subsystem must be initialized before package operations. Sy
 
 # SEE ALSO
 
-[apx](/man/apx)(1)
+[apx](/man/apx)(1), [flatpak](/man/flatpak)(1), [snap](/man/snap)(1)

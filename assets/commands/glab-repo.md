@@ -28,6 +28,14 @@ Manage GitLab repositories from the command line
 
 ```glab repo search [query]```
 
+**List repositories**
+
+```glab repo list```
+
+**Delete a repository**
+
+```glab repo delete [owner/repo]```
+
 # SYNOPSIS
 
 **glab** **repo** _command_ [_options_]
@@ -52,6 +60,9 @@ Manage GitLab repositories from the command line
 **search**
 > Search for repositories.
 
+**list**
+> List repositories.
+
 **delete**
 > Delete a repository.
 
@@ -69,10 +80,16 @@ Manage GitLab repositories from the command line
 **--clone**
 > Clone after forking.
 
+**--group** _name_
+> Create repository in a specific group/namespace.
+
+**-y**, **--yes**
+> Skip confirmation prompts.
+
 # DESCRIPTION
 
 **glab repo** manages GitLab repositories from the command line. It provides subcommands for cloning, creating, forking, searching, and viewing repositories without leaving the terminal.
 
 # SEE ALSO
 
-[glab](/man/glab)(1), [git-clone](/man/git-clone)(1)
+[glab](/man/glab)(1), [glab-mr](/man/glab-mr)(1), [glab-issue](/man/glab-issue)(1), [git-clone](/man/git-clone)(1)

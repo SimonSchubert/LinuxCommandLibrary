@@ -28,6 +28,14 @@ Command-line interface for the chrony NTP daemon
 
 ```chronyc add server [pool.ntp.org]```
 
+**Show number of online/offline sources**
+
+```chronyc activity```
+
+**Connect to a remote chrony daemon**
+
+```chronyc -h [remote-host]```
+
 **Interactive mode**
 
 ```chronyc```
@@ -109,4 +117,4 @@ Requires chronyd running. Runtime changes lost on restart. Sub-microsecond accur
 
 # SEE ALSO
 
-[chronyd](/man/chronyd)(8), [timedatectl](/man/timedatectl)(1), [ntpq](/man/ntpq)(1)
+[chronyd](/man/chronyd)(8), [timedatectl](/man/timedatectl)(1), [ntpq](/man/ntpq)(1), [ntpd](/man/ntpd)(8), [hwclock](/man/hwclock)(8), [date](/man/date)(1)

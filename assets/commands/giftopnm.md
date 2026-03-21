@@ -16,6 +16,14 @@ Convert GIF images to PNM format
 
 ```giftopnm --comments [input.gif]```
 
+**Output all frames** of an animated GIF
+
+```giftopnm --all-images [input.gif] > [output.pnm]```
+
+**Verbose** output showing image details
+
+```giftopnm --verbose [input.gif] > [output.pnm]```
+
 # SYNOPSIS
 
 **giftopnm** [_options_] [_file_]
@@ -31,6 +39,12 @@ Convert GIF images to PNM format
 **--all-images**
 > Output all frames.
 
+**--verbose**
+> Display information about the GIF input.
+
+**--repair**
+> Try to recover corrupted GIF data.
+
 # DESCRIPTION
 
 **giftopnm** converts GIF images into the Portable Any Map (PNM) format family, which includes PBM (bitmap), PGM (grayscale), and PPM (color) formats. It is a core component of the Netpbm image processing toolkit.
@@ -39,4 +53,4 @@ The tool automatically selects the appropriate output format based on the input 
 
 # SEE ALSO
 
-[ppmtogif](/man/ppmtogif)(1), [pamtogif](/man/pamtogif)(1)
+[ppmtogif](/man/ppmtogif)(1), [pamtogif](/man/pamtogif)(1), [pnmtopng](/man/pnmtopng)(1), [pnmtojpeg](/man/pnmtojpeg)(1), [gifsicle](/man/gifsicle)(1), [convert](/man/convert)(1)

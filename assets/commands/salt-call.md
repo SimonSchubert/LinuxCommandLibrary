@@ -20,9 +20,17 @@ Run Salt modules locally on a minion
 
 ```salt-call --local grains.items```
 
-**Test mode**
+**Test mode** (dry run without making changes)
 
 ```salt-call state.apply test=True```
+
+**Show output in JSON format**
+
+```salt-call --output json grains.items```
+
+**Run with debug logging**
+
+```salt-call --log-level=debug state.apply```
 
 # SYNOPSIS
 
@@ -31,28 +39,39 @@ Run Salt modules locally on a minion
 # PARAMETERS
 
 **--local**
-> Run without master.
+> Run without connecting to a Salt master. Uses local file client.
 
 **--grains**
-> Return minion grains.
+> Return minion grain data.
 
 **--pillar** _data_
-> Set pillar data.
+> Set pillar data as a dictionary (e.g., '{"key": "value"}').
 
 **--output** _format_
-> Output format (json, yaml, etc.).
+> Output format: json, yaml, nested, raw, highstate, quiet, etc.
 
 **--state-output** _mode_
-> State output verbosity.
+> State output verbosity: full, terse, mixed, changes.
 
 **--log-level** _level_
-> Log level.
+> Log level: all, garbage, trace, debug, info, warning, error, critical, quiet.
+
+**--id** _MINION_ID_
+> Specify the minion ID (overrides the configured minion ID).
+
+**--retcode-passthrough**
+> Exit with the Salt command return code, useful for scripting.
+
+**--no-color**
+> Disable colored output.
 
 # DESCRIPTION
 
-**salt-call** runs Salt execution modules and states directly on a minion. Useful for testing, debugging, and masterless Salt configurations. Part of SaltStack configuration management.
+**salt-call** runs Salt execution modules and states directly on a minion without going through the Salt master. This is useful for testing, debugging, and masterless Salt configurations where the minion applies states independently.
+
+When used with **--local**, it operates completely independently of a master, making it ideal for standalone configuration management or testing states before deploying them across infrastructure.
 
 # SEE ALSO
 
-[salt](/man/salt)(1), [salt-run](/man/salt-run)(1), [salt-master](/man/salt-master)(1)
+[salt](/man/salt)(1), [salt-run](/man/salt-run)(1), [salt-master](/man/salt-master)(1), [salt-minion](/man/salt-minion)(1), [salt-key](/man/salt-key)(1)
 

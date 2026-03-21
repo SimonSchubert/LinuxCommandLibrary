@@ -26,7 +26,7 @@ command-line D-Bus method invocation and signaling
 
 # SYNOPSIS
 
-**dbus-send** [_options_] _object-path_ _message_
+**dbus-send** [_options_] **--dest=**_NAME_ _object-path_ _message_ [_args_...]
 
 # PARAMETERS
 
@@ -40,19 +40,25 @@ command-line D-Bus method invocation and signaling
 > Destination service name.
 
 **--print-reply**
-> Wait for and print reply.
+> Block for a reply and print the result in human-readable form.
+
+**--print-reply=literal**
+> Print reply with string values unescaped and unquoted.
 
 **--type** _TYPE_
-> Message type: method_call or signal.
+> Message type: method_call (default) or signal.
+
+**--reply-timeout=**_MSEC_
+> Timeout in milliseconds to wait for a reply (default: 25000).
 
 _OBJECT-PATH_
 > D-Bus object path (e.g., /org/freedesktop/DBus).
 
 _MESSAGE_
-> Method name including interface.
+> Method or signal name including interface (e.g., org.freedesktop.DBus.ListNames).
 
-**string:**, **int32:**, **uint32:**, etc.
-> Typed arguments to pass.
+**string:**, **int32:**, **uint32:**, **boolean:**, **double:**, **byte:**, **objpath:**
+> Typed arguments appended to the message.
 
 **--help**
 > Display help information.
@@ -75,4 +81,4 @@ dbus-send is part of the **D-Bus** reference implementation, developed by **Red 
 
 # SEE ALSO
 
-[dbus-daemon](/man/dbus-daemon)(1), [dbus-launch](/man/dbus-launch)(1), [busctl](/man/busctl)(1), [gdbus](/man/gdbus)(1)
+[dbus-daemon](/man/dbus-daemon)(1), [dbus-launch](/man/dbus-launch)(1), [dbus-monitor](/man/dbus-monitor)(1), [busctl](/man/busctl)(1), [gdbus](/man/gdbus)(1), [qdbus](/man/qdbus)(1)

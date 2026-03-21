@@ -1,6 +1,6 @@
 # TAGLINE
 
-Format Snakemake workflow files
+Opinionated code formatter for Snakemake workflow files
 
 # TLDR
 
@@ -51,10 +51,13 @@ Format Snakemake workflow files
 > Verbose output.
 
 **--include** _PATTERN_
-> Include pattern.
+> Regular expression for files to include when formatting directories.
 
 **--exclude** _PATTERN_
-> Exclude pattern.
+> Regular expression for files to exclude when formatting directories.
+
+**--config** _FILE_
+> Read configuration from a pyproject.toml or .editorconfig file.
 
 **-**
 > Read from stdin.
@@ -69,7 +72,7 @@ Check mode (**--check**) verifies formatting without modifying files, returning 
 
 # CAVEATS
 
-Snakemake-specific. May need adjustment for complex rules. Black-based formatting style.
+Snakemake-specific and not suitable for general Python files. Uses the same default line length (88) as black. Configuration can be set in pyproject.toml. May not handle all custom Snakemake wrappers or heavily templated rules gracefully.
 
 # HISTORY
 
@@ -77,4 +80,4 @@ Snakemake-specific. May need adjustment for complex rules. Black-based formattin
 
 # SEE ALSO
 
-[snakemake](/man/snakemake)(1), [black](/man/black)(1), [python](/man/python)(1)
+[snakemake](/man/snakemake)(1), [black](/man/black)(1), [python](/man/python)(1), [ruff](/man/ruff)(1), [yapf](/man/yapf)(1)

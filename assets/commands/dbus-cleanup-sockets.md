@@ -39,4 +39,4 @@ dbus-cleanup-sockets is part of the **D-Bus** message bus system, originally dev
 
 # SEE ALSO
 
-[dbus-daemon](/man/dbus-daemon)(1), [dbus-launch](/man/dbus-launch)(1), [dbus-send](/man/dbus-send)(1)
+[dbus-daemon](/man/dbus-daemon)(1), [dbus-launch](/man/dbus-launch)(1), [dbus-send](/man/dbus-send)(1), [dbus-monitor](/man/dbus-monitor)(1)

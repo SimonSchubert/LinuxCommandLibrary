@@ -63,40 +63,10 @@ The tool integrates with editors and CI pipelines to ensure consistent Python co
 **--color**/**--no-color**
 > Colored output
 
-# FEATURES
-
-- Deterministic formatting
-- Minimal configuration
-- Fast (multi-core processing)
-- Editor integration
-- Git integration
-- Safe (preserves AST)
-- PEP 8 compliant
-- ipynb support
-
 # CONFIGURATION
 
 **pyproject.toml**
 > Project-level configuration under `[tool.black]` section. Supports `line-length`, `target-version`, `include`, and `exclude` settings.
-
-# WORKFLOW
-
-```bash
-# Format file
-black script.py
-
-# Format directory
-black src/
-
-# Check in CI
-black --check .
-
-# Show what would change
-black --diff script.py
-
-# Specific Python version
-black --target-version py39 script.py
-```
 
 # CAVEATS
 

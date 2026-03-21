@@ -24,9 +24,13 @@ Simple and fast work queue server
 
 ```beanstalkd -z [65535]```
 
-**Start in verbose mode**
+**Start in verbose mode** (use -VV for more detail)
 
 ```beanstalkd -V```
+
+**Print version** and exit
+
+```beanstalkd -v```
 
 # SYNOPSIS
 
@@ -55,8 +59,17 @@ Jobs are pushed to the queue by producers and reserved by workers (consumers) fo
 **-b** _path_
 > Enable binlog for job persistence in the specified directory
 
-**-V**
+**-f** _ms_
+> Sync binlog to disk every ms milliseconds (default 50ms, 0 for every write)
+
+**-s** _bytes_
+> Maximum binlog file size in bytes. Default: 10485760 (10MB)
+
+**-v**
 > Print version and exit
+
+**-V**
+> Increase verbosity. Use once for basic, twice (-VV) for detailed logging
 
 **-h**
 > Print help message with available options
@@ -71,4 +84,4 @@ Beanstalkd was created by **Keith Rarick** in **2007** at Causes.com to handle b
 
 # SEE ALSO
 
-[redis](/man/redis)(1), [rabbitmq-server](/man/rabbitmq-server)(1)
+[redis-server](/man/redis-server)(1), [rabbitmq-server](/man/rabbitmq-server)(1), [memcached](/man/memcached)(1)

@@ -50,5 +50,5 @@ manages Jujutsu configuration
 
 # SEE ALSO
 
-[jj](/man/jj)(1), [jj-init](/man/jj-init)(1)
+[jj](/man/jj)(1), [jj-config-list](/man/jj-config-list)(1), [jj-config-set](/man/jj-config-set)(1)
 

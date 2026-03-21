@@ -16,11 +16,15 @@ Ruby documentation generator
 
 ```yard stats --list-undoc```
 
+**Generate for specific files**
+
+```yard doc [lib/**/*.rb]```
+
 **Generate for gems**
 
 ```yard gems```
 
-**Show documentation**
+**Show documentation for a class or method**
 
 ```yard ri [ClassName]```
 
@@ -45,8 +49,11 @@ Ruby documentation generator
 **ri**
 > Show documentation.
 
+**diff**
+> Show changes in documentation.
+
 **--list-undoc**
-> Undocumented items.
+> List undocumented objects.
 
 # DESCRIPTION
 
@@ -66,4 +73,4 @@ Ruby-specific. YARD syntax in comments. Gem required.
 
 # SEE ALSO
 
-[rdoc](/man/rdoc)(1), [ri](/man/ri)(1), [ruby](/man/ruby)(1)
+[rdoc](/man/rdoc)(1), [ri](/man/ri)(1), [ruby](/man/ruby)(1), [gem](/man/gem)(1), [bundle](/man/bundle)(1)

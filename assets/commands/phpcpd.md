@@ -76,7 +76,7 @@ Reports show file locations and duplicated content. Integration with CI tools en
 
 # CAVEATS
 
-Similar but intentionally different code may be flagged. Very large codebases may be slow. Maintained as archived project.
+Similar but intentionally different code may be flagged. Very large codebases may be slow. **Note:** phpcpd has been archived by its author and is no longer actively maintained. Consider alternative static analysis tools for new projects.
 
 # HISTORY
 
@@ -84,4 +84,4 @@ Similar but intentionally different code may be flagged. Very large codebases ma
 
 # SEE ALSO
 
-[phpcs](/man/phpcs)(1), [phpmd](/man/phpmd)(1), [phpstan](/man/phpstan)(1)
+[phpcs](/man/phpcs)(1), [phpcbf](/man/phpcbf)(1), [phpmd](/man/phpmd)(1), [phpstan](/man/phpstan)(1)

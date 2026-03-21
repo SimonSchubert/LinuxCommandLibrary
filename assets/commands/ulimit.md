@@ -35,22 +35,46 @@ Set or display shell resource limits
 # PARAMETERS
 
 **-a**
-> All limits.
+> Display all current limits.
+
+**-c**
+> Maximum size of core files (blocks).
+
+**-d**
+> Maximum size of a process's data segment (kbytes).
 
 **-f**
-> File size.
+> Maximum size of files written by the shell (blocks).
+
+**-l**
+> Maximum size that may be locked into memory (kbytes).
+
+**-m**
+> Maximum resident set size (kbytes).
 
 **-n**
-> Open files.
+> Maximum number of open file descriptors.
+
+**-p**
+> Pipe buffer size (512-byte blocks).
 
 **-s**
-> Stack size.
+> Maximum stack size (kbytes).
+
+**-t**
+> Maximum amount of CPU time (seconds).
+
+**-u**
+> Maximum number of user processes.
+
+**-v**
+> Maximum amount of virtual memory (kbytes).
 
 **-H**
-> Hard limit.
+> Set or display hard limit.
 
 **-S**
-> Soft limit.
+> Set or display soft limit (default).
 
 # DESCRIPTION
 
@@ -62,7 +86,7 @@ These limits are important for preventing runaway processes from consuming all s
 
 # CAVEATS
 
-Shell builtin. Settings not persistent. Root for hard limits.
+Shell builtin — settings apply only to the current shell session and its child processes. For persistent limits, configure **/etc/security/limits.conf** or systemd unit files. Only root can raise hard limits.
 
 # HISTORY
 

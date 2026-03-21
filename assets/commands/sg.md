@@ -1,119 +1,52 @@
 # TAGLINE
 
-AST-based structural code search tool
+execute a command with a different group ID
 
 # TLDR
 
-**Search for a pattern** in the current directory
+**Start a shell** with a different group
 
-```sg -p '[pattern]'```
+```sg [group]```
 
-**Search for a pattern** in a specific language
+**Execute a specific command** with a different group
 
-```sg -p '[console.log($ARG)]' -l javascript```
+```sg [group] -c "[command]"```
 
-**Search and replace** interactively
+**Run a command as the** www-data **group**
 
-```sg -p '[old_code]' -r '[new_code]' -i```
+```sg www-data -c "touch [/var/www/html/file.txt]"```
 
-**Apply rewrites** without confirmation
+**Start a login shell** with a different group, reinitializing the environment
 
-```sg -p '[foo($A)]' -r '[bar($A)]' --update-all [path/to/files]```
-
-**Scan codebase** using rule configuration
-
-```sg scan -c [sgconfig.yml]```
-
-**Run a single rule file**
-
-```sg scan -r [rule.yml]```
-
-**Show matches with context** lines
-
-```sg -p '[pattern]' -C [3]```
-
-**Output results in JSON** format
-
-```sg -p '[pattern]' --json```
+```sg - [group]```
 
 # SYNOPSIS
 
-**sg** _command_ [_options_] [_paths_...]
-
-# COMMANDS
-
-**run**
-> Search code by pattern and optionally rewrite (default command)
-
-**scan**
-> Scan codebase using configuration files and rules
-
-**test**
-> Run tests for ast-grep rules
-
-**new**
-> Generate scaffolding files (project, rule, test, util)
-
-**lsp**
-> Start Language Server Protocol for editor integration
-
-**completions**
-> Generate shell completion scripts
+**sg** [**-**] [_group_] [[**-c**] _command_]
 
 # PARAMETERS
 
-**-p**, **--pattern** _pattern_
-> AST pattern to match; use $VAR for wildcards
+_group_
+> The group name to switch to. The user must be a member of this group (or know its password).
 
-**-r**, **--rewrite** _replacement_
-> String to replace matched AST nodes
+**-c** _command_
+> Execute the specified command with the new group ID rather than starting an interactive shell.
 
-**-l**, **--lang** _language_
-> Specify the programming language
-
-**--selector** _kind_
-> Extract specific AST node type from matches
-
-**--strictness** _level_
-> Matching strictness (cst, smart, ast, relaxed, signature)
-
-**-i**, **--interactive**
-> Start interactive editing session
-
-**-U**, **--update-all**
-> Apply all rewrites without confirmation
-
-**--json**[=_style_]
-> Output as JSON (pretty, stream, compact)
-
-**-A** _num_
-> Show lines after match
-
-**-B** _num_
-> Show lines before match
-
-**-C** _num_
-> Show context lines around match
-
-**-c**, **--config** _file_
-> Path to configuration file (default: sgconfig.yml)
+**-**
+> Start the shell as a login shell, reinitializing the environment.
 
 # DESCRIPTION
 
-**sg** (ast-grep) is a fast CLI tool for structural code search, linting, and rewriting based on abstract syntax trees. Unlike text-based grep, it understands code syntax and matches patterns at the AST level, making searches more precise and language-aware.
+**sg** executes a command or starts a shell with a different group ID. It is functionally similar to **newgrp** but allows running a single command rather than starting a new shell session.
 
-Patterns use a familiar code-like syntax with metavariables (**$VAR**, **$$$ARGS**) to match arbitrary expressions. For example, **console.log($MSG)** matches any console.log call regardless of the argument. Multiple metavariables with the same name must match identical code.
+When called without a command, **sg** starts a new shell with the specified group as the effective group ID. When called with **-c**, it executes the given command with the new group and returns.
 
-The tool supports many languages including JavaScript, TypeScript, Python, Rust, Go, Java, C, C++, and more via tree-sitter parsers. Rules can be defined in YAML configuration files for consistent codebase scanning.
+The user must be a member of the target group, or the group must have a password set (via **gpasswd**) which the user can provide. The root user can switch to any group without restrictions.
 
 # CAVEATS
 
-On Linux, **sg** may conflict with the system **sg** command (setgroups). Use the full name **ast-grep** or create an alias. Pattern syntax varies slightly between languages due to AST differences.
-
-# HISTORY
-
-**ast-grep** was created by **Herrington Darkholme** and first released around **2022**. Written in **Rust** with **tree-sitter** for parsing, it was designed as a modern alternative to text-based code search tools, enabling precise structural matching across multiple programming languages.
+The **sg** command is part of the shadow-utils package. If the user is not a member of the specified group and no group password is set, access will be denied. Environment variables may be reset depending on how the shell is invoked. On some systems, the **sg** name may conflict with the ast-grep tool alias; use the full path /usr/bin/sg if needed.
 
 # SEE ALSO
 
-[grep](/man/grep)(1), [rg](/man/rg)(1), [sed](/man/sed)(1), [semgrep](/man/semgrep)(1)
+[newgrp](/man/newgrp)(1), [groups](/man/groups)(1), [id](/man/id)(1), [gpasswd](/man/gpasswd)(1), [su](/man/su)(1), [chgrp](/man/chgrp)(1)

@@ -12,13 +12,17 @@ converts PDF files to PostScript
 
 ```pdf2ps -f [1] -l [5] [input.pdf] [output.ps]```
 
-**Convert for Level 2 printer**
+**Convert for a Level 2 PostScript printer**
 
 ```pdf2ps -level2 [input.pdf] [output.ps]```
 
 **Specify paper size**
 
 ```pdf2ps -paper [A4] [input.pdf] [output.ps]```
+
+**Pipe output directly to a printer**
+
+```pdf2ps [input.pdf] - | lpr```
 
 # SYNOPSIS
 
@@ -27,19 +31,22 @@ converts PDF files to PostScript
 # PARAMETERS
 
 **-f** _num_
-> First page.
+> First page to convert (default: 1).
 
 **-l** _num_
-> Last page.
+> Last page to convert (default: last page of document).
 
 **-level1**, **-level2**, **-level3**
-> PostScript level.
+> Set PostScript language level for output. Level 1 is most compatible, Level 2 adds color and compression, Level 3 supports the latest features.
 
 **-paper** _size_
-> Paper size.
+> Set paper size (e.g., letter, A4, legal).
 
 **-r** _dpi_
-> Resolution.
+> Set resolution in dots per inch for rasterized content.
+
+**-q**
+> Quiet mode. Suppress routine Ghostscript messages.
 
 # DESCRIPTION
 
@@ -73,4 +80,4 @@ pdf2ps is part of **Ghostscript**, the PostScript/PDF interpreter originally dev
 
 # SEE ALSO
 
-[pdftops](/man/pdftops)(1), [ps2pdf](/man/ps2pdf)(1), [gs](/man/gs)(1), [lpr](/man/lpr)(1)
+[pdftops](/man/pdftops)(1), [ps2pdf](/man/ps2pdf)(1), [gs](/man/gs)(1), [lpr](/man/lpr)(1), [pdftotext](/man/pdftotext)(1), [enscript](/man/enscript)(1)

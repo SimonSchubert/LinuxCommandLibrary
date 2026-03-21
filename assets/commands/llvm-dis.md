@@ -16,6 +16,10 @@ LLVM bitcode disassembler
 
 ```llvm-dis -o - < [file.bc]```
 
+**Disassemble and show timing for each pass**
+
+```llvm-dis --time-passes [file.bc]```
+
 **Show version**
 
 ```llvm-dis --version```
@@ -30,7 +34,7 @@ LLVM bitcode disassembler
 > Output file name. If omitted, input filename with .ll extension is used.
 
 **-f**, **--force**
-> Force disassembly even if input file lacks standard .bc extension.
+> Enable binary output on terminals and overwrite existing output files.
 
 **--show-annotations**
 > Show annotations in output.
@@ -53,5 +57,5 @@ LLVM bitcode disassembler
 
 # SEE ALSO
 
-[llvm-as](/man/llvm-as)(1), [llc](/man/llc)(1)
+[llvm-as](/man/llvm-as)(1), [llc](/man/llc)(1), [opt](/man/opt)(1), [llvm-bcanalyzer](/man/llvm-bcanalyzer)(1), [llvm-objdump](/man/llvm-objdump)(1), [clang](/man/clang)(1)
 

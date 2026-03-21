@@ -44,4 +44,4 @@ Part of the **c-ares** asynchronous DNS resolver library tools.
 
 # SEE ALSO
 
-[ahost](/man/ahost)(1), [adig](/man/adig)(1), [host](/man/host)(1), [dig](/man/dig)(1)
+[ahost](/man/ahost)(1), [adig](/man/adig)(1), [host](/man/host)(1), [dig](/man/dig)(1), [nslookup](/man/nslookup)(1)

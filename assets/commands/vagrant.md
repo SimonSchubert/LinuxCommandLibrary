@@ -38,51 +38,75 @@ Manage portable virtual development environments
 
 # SYNOPSIS
 
-**vagrant** [_up_] [_ssh_] [_halt_] [_destroy_] [_status_] [_options_]
+**vagrant** _command_ [_options_]
 
 # PARAMETERS
 
 **init** [_BOX_]
-> Initialize Vagrantfile.
+> Initialize a new Vagrantfile, optionally with a specified base box.
 
-**up**
-> Start and provision VM.
+**up** [_NAME_]
+> Start and provision the VM. Optionally specify a machine name in multi-machine setups.
 
 **ssh** [_NAME_]
-> SSH into VM.
+> SSH into a running VM.
 
-**halt**
-> Stop VM.
+**halt** [_NAME_]
+> Gracefully stop a running VM.
 
-**destroy**
-> Remove VM.
+**destroy** [_NAME_]
+> Remove a VM and all its resources.
 
-**reload**
-> Restart VM with config.
+**reload** [_NAME_]
+> Restart a VM and reload Vagrantfile configuration.
 
-**provision**
-> Run provisioners.
+**suspend** [_NAME_]
+> Pause a running VM, saving its current state.
 
-**status**
-> Show VM status.
+**resume** [_NAME_]
+> Resume a previously suspended VM.
+
+**provision** [_NAME_]
+> Run configured provisioners on a running VM.
+
+**status** [_NAME_]
+> Show the status of VMs in the current environment.
 
 **global-status**
-> All Vagrant VMs.
+> Show the status of all Vagrant VMs across the system.
+
+**snapshot push**
+> Save a snapshot of the current VM state.
+
+**snapshot pop**
+> Restore the most recent snapshot.
+
+**validate**
+> Check the Vagrantfile for syntax errors.
+
+**package**
+> Package a running VM into a reusable box.
+
+**plugin install** _NAME_
+> Install a Vagrant plugin.
 
 **box add** _BOX_
-> Add box.
+> Download and add a box image.
 
 **box list**
-> List boxes.
+> List locally available boxes.
 
 **box remove** _BOX_
-> Remove box.
+> Remove a locally stored box.
 
 **--provider** _NAME_
-> Provider (virtualbox, vmware, etc.).
+> Specify the provider (virtualbox, vmware, etc.).
 
 **-f**, **--force**
-> Force operation.
+> Force the operation without confirmation.
+
+**-h**, **--help**
+> Display help information for any command.
 
 # DESCRIPTION
 
@@ -108,4 +132,4 @@ Requires virtualization software. Large boxes need download time and disk space.
 
 # SEE ALSO
 
-[virtualbox](/man/virtualbox)(1), [docker](/man/docker)(1), [ansible](/man/ansible)(1), [packer](/man/packer)(1)
+[vboxmanage](/man/vboxmanage)(1), [docker](/man/docker)(1), [ansible](/man/ansible)(1), [packer](/man/packer)(1), [ssh](/man/ssh)(1)

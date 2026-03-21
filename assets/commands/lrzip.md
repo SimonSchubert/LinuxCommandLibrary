@@ -1,6 +1,6 @@
 # TAGLINE
 
-designed for compressing large files
+Long range redundancy compression program for large files
 
 # TLDR
 
@@ -27,6 +27,14 @@ Compress with **LZO** (fast)
 Set **thread count**
 
 ```lrzip --threads 8 [path/to/file]```
+
+**Decompress** a file
+
+```lrzip -d [path/to/file.lrz]```
+
+Compress and specify **output file**
+
+```lrzip -o [output.lrz] [path/to/file]```
 
 # SYNOPSIS
 
@@ -59,13 +67,34 @@ Set **thread count**
 **-o, --outfile FILE**
 > Specify output filename
 
+**-d, --decompress**
+> Decompress the file
+
+**-t, --test**
+> Test compressed file integrity
+
+**-i, --info**
+> Show compression information about a compressed file
+
 **-k, --keep**
 > Keep original file
 
+**-L** _N_, **--level** _N_
+> Set compression level 1-9 (default 7)
+
+**-n, --no-compress**
+> Apply only long-range redundancy reduction without backend compression
+
+**-q, --quiet**
+> Quiet mode, reduce output verbosity
+
+**-v, --verbose**
+> Increase verbosity (can be used multiple times)
+
 # CAVEATS
 
-Very effective on large files with redundant data. ZPAQ compression is extremely slow but achieves best ratios.
+Most effective on large files (100MB+) with long-range redundant data. ZPAQ compression is extremely slow but achieves best ratios. The default LZMA backend provides a good balance of speed and compression. Files are not compatible with standard zip/gzip tools; use **lrunzip** or **lrzip -d** to decompress. By default, the original file is removed after compression.
 
 # SEE ALSO
 
-[lrunzip](/man/lrunzip)(1), [lrztar](/man/lrztar)(1), [gzip](/man/gzip)(1), [xz](/man/xz)(1)
+[lrunzip](/man/lrunzip)(1), [lrztar](/man/lrztar)(1), [gzip](/man/gzip)(1), [xz](/man/xz)(1), [bzip2](/man/bzip2)(1), [zstd](/man/zstd)(1)

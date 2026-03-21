@@ -1,6 +1,6 @@
 # TAGLINE
 
-symbolic link to **mkfs
+Create a FAT filesystem (symbolic link to mkfs.fat)
 
 # TLDR
 
@@ -18,6 +18,14 @@ Specify the **FAT type** (12, 16, or 32 bit)
 
 ```sudo mkfs.vfat -F [12|16|32] [/dev/sdXY]```
 
+Create a FAT32 filesystem with a **custom cluster size**
+
+```sudo mkfs.vfat -F 32 -s [8] [/dev/sdXY]```
+
+Set the **number of sectors** per cluster
+
+```sudo mkfs.vfat -F 32 -S [512] [/dev/sdXY]```
+
 # SYNOPSIS
 
 **mkfs.vfat** [_options_] _device_ [_block-count_]
@@ -30,4 +38,4 @@ The "vfat" name refers to the Virtual FAT extension that enables long filename s
 
 # SEE ALSO
 
-[mkfs.fat](/man/mkfs.fat)(8), [mkfs](/man/mkfs)(8), [fsck.fat](/man/fsck.fat)(8), [fatlabel](/man/fatlabel)(8)
+[mkfs.fat](/man/mkfs.fat)(8), [mkfs](/man/mkfs)(8), [fsck](/man/fsck)(8), [fatlabel](/man/fatlabel)(8), [mount](/man/mount)(8)

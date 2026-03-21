@@ -16,13 +16,21 @@ HTTP load testing tool with real-time TUI charts
 
 ```ali --method=POST --body-file=[path/to/payload.json] [http://host.xz]```
 
-**Add custom headers**
+**Add custom headers** to the request
 
 ```ali -H "Authorization: Bearer [token]" [http://host.xz]```
 
-**Export results** to a directory
+**Export results** to a directory for later analysis
 
 ```ali --export-to [path/to/results/] [http://host.xz]```
+
+**Load test with TLS verification disabled**
+
+```ali --insecure [https://host.xz]```
+
+**Run at maximum speed** with no rate limit
+
+```ali --rate=0 --duration=[30s] [http://host.xz]```
 
 # SYNOPSIS
 
@@ -88,4 +96,4 @@ The terminal UI requires a terminal that supports standard escape sequences. Run
 
 # SEE ALSO
 
-[ab](/man/ab)(1), [wrk](/man/wrk)(1), [curl](/man/curl)(1), [hey](/man/hey)(1)
+[ab](/man/ab)(1), [wrk](/man/wrk)(1), [curl](/man/curl)(1), [hey](/man/hey)(1), [siege](/man/siege)(1), [vegeta](/man/vegeta)(1), [k6](/man/k6)(1)

@@ -28,13 +28,21 @@ List available **tracers**
 
 ```sudo trace-cmd clear```
 
-**Record** a trace
+**Record** a trace of specific events
 
-```sudo trace-cmd record```
+```sudo trace-cmd record -e [sched_switch]```
 
-Display **recorded** trace
+**Record** function graph tracing for a specific function
 
-```sudo trace-cmd report```
+```sudo trace-cmd record -p function_graph -g [function_name]```
+
+Display **recorded** trace from file
+
+```trace-cmd report```
+
+List available **events**
+
+```sudo trace-cmd list -e```
 
 # SYNOPSIS
 
@@ -69,7 +77,22 @@ Display **recorded** trace
 # PARAMETERS
 
 **-p** _PLUGIN_
-> Specify tracer plugin
+> Specify tracer plugin (function, function_graph, irqsoff, wakeup, etc.)
+
+**-e** _EVENT_
+> Enable a trace event (can be specified multiple times)
+
+**-g** _FUNCTION_
+> Trace calls starting from a specific function (used with function_graph)
+
+**-o** _FILE_
+> Write trace output to specified file (default: trace.dat)
+
+**-t**
+> List available tracers (used with list subcommand)
+
+**-F**
+> Trace only the child process after a fork
 
 # DESCRIPTION
 
@@ -87,4 +110,4 @@ Requires root privileges. Tracing can impact system performance. Large traces co
 
 # SEE ALSO
 
-[trace-cmd-list](/man/trace-cmd-list)(1), [trace-cmd-record](/man/trace-cmd-record)(1), [trace-cmd-report](/man/trace-cmd-report)(1), [perf](/man/perf)(1)
+[trace-cmd-list](/man/trace-cmd-list)(1), [trace-cmd-record](/man/trace-cmd-record)(1), [trace-cmd-report](/man/trace-cmd-report)(1), [perf](/man/perf)(1), [strace](/man/strace)(1)

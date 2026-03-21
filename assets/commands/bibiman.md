@@ -28,6 +28,10 @@ Enable colors optimized for **light terminal** backgrounds
 
 ```bibiman --light-terminal [path/to/file.bib]```
 
+**Set a custom PDF directory** for matching PDFs to entries
+
+```bibiman --pdf-path [path/to/pdfs] [path/to/file.bib]```
+
 **Format citekeys** in a bibliography file
 
 ```bibiman format-citekeys [path/to/file.bib]```
@@ -86,7 +90,7 @@ The configuration file is located at **$XDG_CONFIG_HOME/bibiman/bibiman.toml** (
 
 ```[general]
 bibfiles = ["/path/to/references.bib"]
-editor = { command = "vim", args = ["-y"] }
+editor = { command = "vim", args = [] }
 pdf_opener = "xdg-open"
 url_opener = "xdg-open"
 pdf_path = "/path/to/pdfs"

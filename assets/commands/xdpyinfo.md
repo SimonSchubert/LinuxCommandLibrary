@@ -4,27 +4,27 @@ Display X server information
 
 # TLDR
 
-**Display X server information**
+**Display all X server information**
 
 ```xdpyinfo```
 
-**Query extension details**
+**Query a specific display**
+
+```xdpyinfo -display [localhost:0.0]```
+
+**List extensions with opcode and event numbers**
 
 ```xdpyinfo -queryExtensions```
 
-**Show specific extension info**
+**Show detailed info for a specific extension**
 
 ```xdpyinfo -ext [RENDER]```
 
-**Show all extension details**
+**Show detailed info for all extensions**
 
 ```xdpyinfo -ext all```
 
-**Query specific display**
-
-```xdpyinfo -display [:0]```
-
-**Show version**
+**Display version and exit**
 
 ```xdpyinfo -version```
 
@@ -35,16 +35,16 @@ Display X server information
 # PARAMETERS
 
 **-display** _name_
-> X display to query.
+> X display to query (default: $DISPLAY).
 
 **-queryExtensions**
-> Include extension opcode/event/error numbers.
+> Include extension opcode, event base, and error base numbers.
 
 **-ext** _name_
-> Show detailed extension information (use "all" for all).
+> Show detailed information for the named extension (use "all" for all extensions).
 
 **-version**
-> Display version and exit.
+> Display program version and exit.
 
 # DESCRIPTION
 
@@ -64,4 +64,4 @@ Requires running X server and DISPLAY set correctly. Using -queryExtensions may 
 
 # SEE ALSO
 
-[xwininfo](/man/xwininfo)(1), [xprop](/man/xprop)(1), [xrandr](/man/xrandr)(1), [glxinfo](/man/glxinfo)(1)
+[xwininfo](/man/xwininfo)(1), [xprop](/man/xprop)(1), [xrandr](/man/xrandr)(1), [glxinfo](/man/glxinfo)(1), [xset](/man/xset)(1), [xlsclients](/man/xlsclients)(1)

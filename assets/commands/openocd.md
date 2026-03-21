@@ -1,30 +1,38 @@
 # TAGLINE
 
-provides debugging and programming for embedded systems
+provides debugging, in-system programming, and boundary-scan testing for embedded systems
 
 # TLDR
 
-**Start with config file**
+**Start with interface and target config files**
 
 ```openocd -f [interface/stlink.cfg] -f [target/stm32f4x.cfg]```
 
-**Program flash**
+**Program flash with verify and reset**
 
 ```openocd -f [interface.cfg] -f [target.cfg] -c "program [firmware.elf] verify reset exit"```
 
-**Start with specific interface**
+**Program a hex file at a specific address**
 
-```openocd -f [interface/jlink.cfg] -f [board/stm32f4discovery.cfg]```
+```openocd -f [interface.cfg] -f [target.cfg] -c "program [firmware.hex] 0x08000000 verify reset exit"```
 
-**Start telnet server only**
+**Start with a board config (includes interface and target)**
 
-```openocd -f [config.cfg] -c "init"```
+```openocd -f [board/stm32f4discovery.cfg]```
 
-**Dump flash memory**
+**Start and connect GDB server on a custom port**
 
-```openocd -f [config.cfg] -c "init" -c "dump_image [output.bin] 0x08000000 0x10000"```
+```openocd -f [config.cfg] -c "gdb_port [4444]"```
 
-**Debug output**
+**Dump flash memory to a binary file**
+
+```openocd -f [config.cfg] -c "init" -c "dump_image [output.bin] 0x08000000 0x10000" -c "exit"```
+
+**Erase entire flash memory**
+
+```openocd -f [interface.cfg] -f [target.cfg] -c "init" -c "reset halt" -c "flash erase_sector 0 0 last" -c "exit"```
+
+**Enable verbose debug output**
 
 ```openocd -d3 -f [interface.cfg] -f [target.cfg]```
 
@@ -44,10 +52,13 @@ provides debugging and programming for embedded systems
 > Search directory.
 
 **-d** _LEVEL_
-> Debug level (0-3).
+> Debug level (0-4, default 2). Higher values produce more output.
 
 **-l** _FILE_
-> Log to file.
+> Log output to file instead of stderr.
+
+**-p**, **--pipe**
+> Use pipes for GDB communication instead of TCP.
 
 **--version**
 > Show version.
@@ -57,7 +68,7 @@ provides debugging and programming for embedded systems
 
 # DESCRIPTION
 
-**openocd** (Open On-Chip Debugger) provides debugging and programming for embedded systems. It interfaces with JTAG and SWD debug adapters to access microcontrollers.
+**openocd** (Open On-Chip Debugger) provides debugging, in-system programming, and boundary-scan testing for embedded systems. It interfaces with JTAG, SWD, and other debug adapters to access microcontrollers and FPGAs.
 
 Configuration files define the debug adapter (interface) and target device. Many boards and adapters have predefined configurations in the installation.
 
@@ -79,4 +90,4 @@ Requires appropriate adapter hardware. Target configuration must match device. S
 
 # SEE ALSO
 
-[gdb](/man/gdb)(1), [arm-none-eabi-gdb](/man/arm-none-eabi-gdb)(1), [stlink](/man/stlink)(1), [avrdude](/man/avrdude)(1)
+[gdb](/man/gdb)(1), [arm-none-eabi-gdb](/man/arm-none-eabi-gdb)(1), [stlink](/man/stlink)(1), [st-flash](/man/st-flash)(1), [avrdude](/man/avrdude)(1), [flashrom](/man/flashrom)(1)

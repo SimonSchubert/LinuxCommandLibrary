@@ -16,9 +16,17 @@ Add a **static route**
 
 ```sudo ip route add [192.168.1.0/24] via [gateway_ip] dev [eth0]```
 
+Add route with a specific **metric** (priority)
+
+```sudo ip route add [192.168.2.0/24] via [gateway_ip] metric [100]```
+
 Add route to a **specific routing table**
 
 ```sudo ip route add [10.0.0.0/8] dev [eth0] table [100]```
+
+Add a route with a preferred **source address**
+
+```sudo ip route add [192.168.1.0/24] dev [eth0] src [192.168.1.5]```
 
 # SYNOPSIS
 
@@ -45,7 +53,16 @@ Add route to a **specific routing table**
 > Preferred source address
 
 **proto** _PROTOCOL_
-> Routing protocol identifier
+> Routing protocol identifier (static, boot, dhcp, etc.)
+
+**scope** _SCOPE_
+> Scope of the route (global, link, host)
+
+**mtu** _NUM_
+> Maximum Transmission Unit for the route
+
+**nexthop** _NEXTHOP_
+> Define multipath route with multiple next hops
 
 # DESCRIPTION
 
@@ -63,4 +80,4 @@ The ip route command is part of iproute2, which replaced the older route command
 
 # SEE ALSO
 
-[ip](/man/ip)(8), [ip-route](/man/ip-route)(8), [ip-route-list](/man/ip-route-list)(8), [ip-rule](/man/ip-rule)(8)
+[ip](/man/ip)(8), [ip-route](/man/ip-route)(8), [ip-route-list](/man/ip-route-list)(8), [ip-rule](/man/ip-rule)(8), [ip-address](/man/ip-address)(8), [route](/man/route)(8)

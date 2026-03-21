@@ -4,9 +4,13 @@ Display embedded help text from a container.
 
 # TLDR
 
-**Display the run-help** for a container
+**Display the run-help for a container**
 
 ```apptainer run-help [container.sif]```
+
+**Show help for a specific app inside a container**
+
+```apptainer run-help --app [appname] [container.sif]```
 
 **Show help for a Docker Hub image**
 
@@ -16,25 +20,24 @@ Display embedded help text from a container.
 
 ```apptainer run-help library://[user/collection/image:tag]```
 
-**Get run-help for an OCI archive**
-
-```apptainer run-help oci-archive://[path/to/archive.tar]```
-
 # SYNOPSIS
 
-**apptainer run-help** [_options_] _container_
+**apptainer run-help** [_options_] _image_path_
 
 # PARAMETERS
 
-_container_
+_image_path_
 > Path to a SIF file or URI to a container image (docker://, library://, oci-archive://).
 
-**--help**, **-h**
+**--app** _string_
+> Show the help for a specific app defined in the container rather than the general container help. The help text comes from the app's **%apphelp** section.
+
+**-h**, **--help**
 > Display help for the run-help command.
 
 # DESCRIPTION
 
-**apptainer run-help** displays help text embedded within an Apptainer/Singularity container. This help information is defined during container build time using the **%help** section in a definition file.
+**apptainer run-help** displays help text embedded within an Apptainer/Singularity container. This help information is defined during container build time using the **%help** section in a definition file. When the **--app** flag is used, it displays help from the specified app's **%apphelp** section instead.
 
 Container authors use the %help section to document how to use their container, including expected arguments, required bind mounts, environment variables, and example commands. This provides users with container-specific usage information without needing external documentation.
 
@@ -52,4 +55,4 @@ The run-help feature has been part of Singularity/Apptainer since early versions
 
 # SEE ALSO
 
-[apptainer](/man/apptainer)(1), [apptainer-run](/man/apptainer-run)(1), [apptainer-inspect](/man/apptainer-inspect)(1), [apptainer-build](/man/apptainer-build)(1)
+[apptainer](/man/apptainer)(1), [apptainer-run](/man/apptainer-run)(1), [apptainer-exec](/man/apptainer-exec)(1), [apptainer-inspect](/man/apptainer-inspect)(1), [apptainer-build](/man/apptainer-build)(1)

@@ -69,4 +69,4 @@ The Sieve language was originally standardized in **RFC 3028** (January 2001) by
 
 # SEE ALSO
 
-[sieve-filter](/man/sieve-filter)(1), [dovecot](/man/dovecot)(1), [procmail](/man/procmail)(1), [maildrop](/man/maildrop)(1)
+[dovecot](/man/dovecot)(1), [procmail](/man/procmail)(1), [maildrop](/man/maildrop)(1)

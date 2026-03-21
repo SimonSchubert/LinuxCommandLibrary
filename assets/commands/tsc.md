@@ -90,8 +90,20 @@ TypeScript to JavaScript compiler
 **--jsx** _mode_
 > JSX handling: react, react-jsx, react-jsxdev, preserve
 
+**--lib** _libs_
+> Specify library files to include (e.g., ES2020, DOM, ES2020.Promise)
+
+**--noEmitOnError**
+> Do not emit outputs if any errors are reported
+
 **--init**
 > Initialize a tsconfig.json file
+
+**--listFiles**
+> Print names of files that are part of the compilation
+
+**--showConfig**
+> Print the final resolved configuration instead of compiling
 
 **-h**, **--help**
 > Show help
@@ -119,4 +131,4 @@ tsc requires Node.js and is typically installed via npm (**npm install -g typesc
 
 # SEE ALSO
 
-[node](/man/node)(1), [npm](/man/npm)(1), [esbuild](/man/esbuild)(1), [swc](/man/swc)(1)
+[node](/man/node)(1), [npm](/man/npm)(1), [ts-node](/man/ts-node)(1), [esbuild](/man/esbuild)(1), [swc](/man/swc)(1), [webpack](/man/webpack)(1), [babel](/man/babel)(1)

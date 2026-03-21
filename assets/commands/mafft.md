@@ -48,11 +48,17 @@ high-performance multiple sequence alignment program
 **--add** _file_
 > Add to alignment.
 
+**--retree** _n_
+> Number of tree-building iterations in progressive alignment. 1 is fast, 2 is default.
+
 **--reorder**
-> Reorder by similarity.
+> Reorder output sequences by similarity.
+
+**--adjustdirection**
+> Automatically detect and reverse-complement input sequences if needed.
 
 **--quiet**
-> Suppress messages.
+> Suppress progress messages and warnings.
 
 # DESCRIPTION
 
@@ -63,10 +69,12 @@ MAFFT is widely used in bioinformatics for aligning DNA, RNA, and protein sequen
 # STRATEGIES
 
 ```
-FFT-NS-1  - Fast, large datasets
-FFT-NS-2  - Default progressive
-L-INS-i   - Accurate, <200 sequences
-G-INS-i   - Global alignment
+FFT-NS-1  - Fast, suitable for large datasets (--retree 1)
+FFT-NS-2  - Default progressive method (--retree 2)
+FFT-NS-i  - Iterative refinement (--maxiterate >0)
+L-INS-i   - Most accurate, local alignment, <200 sequences (--localpair)
+G-INS-i   - Global alignment (--globalpair)
+E-INS-i   - For sequences with long unalignable regions (--genafpair)
 ```
 
 # CAVEATS
@@ -79,4 +87,4 @@ MAFFT was developed by **Kazutaka Katoh** and colleagues, first published in **2
 
 # SEE ALSO
 
-[clustalw](/man/clustalw)(1), [muscle](/man/muscle)(1), [t-coffee](/man/t-coffee)(1)
+[samtools](/man/samtools)(1), [bedtools](/man/bedtools)(1)

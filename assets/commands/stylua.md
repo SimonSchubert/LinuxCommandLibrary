@@ -72,7 +72,16 @@ Opinionated Lua code formatter
 > Call parentheses style.
 
 **-g**, **--glob** _PATTERN_
-> Glob pattern.
+> Glob pattern for filtering files. Use -- to separate glob patterns from file arguments.
+
+**--verify**
+> Verify output by re-parsing formatted code to ensure no syntax errors were introduced.
+
+**--syntax** _SYNTAX_
+> Lua syntax version: All (default), Lua51, Lua52, Lua53, Lua54, LuaJIT, Luau, CfxLua.
+
+**--respect-ignores**
+> Respect .styluaignore rules even for files passed directly on the command line.
 
 **-v**, **--verbose**
 > Verbose output.
@@ -81,24 +90,27 @@ Opinionated Lua code formatter
 
 **stylua** formats Lua code according to configurable style rules. It enforces consistent formatting automatically.
 
-Configuration in stylua.toml or .stylua.toml sets project preferences. Options include indentation, line width, quote style, and more.
+Configuration in stylua.toml or .stylua.toml sets project preferences. Options include indentation, line width, quote style, and more. If no config file is found, StyLua also checks for an .editorconfig file.
 
 Check mode verifies formatting without changes. It returns non-zero exit code if files would be reformatted, suitable for CI.
 
 Diff mode shows what would change. This helps review formatting before applying it.
 
-The formatter handles various Lua versions and can be configured for game-specific variants like Roblox Luau.
+The formatter handles various Lua versions and can be configured for game-specific variants like Roblox Luau via the --syntax flag or syntax option in the config file.
 
-Integration with editors enables format-on-save. CI integration ensures consistent style across contributions.
+Integration with editors enables format-on-save. CI integration ensures consistent style across contributions. A .styluaignore file (with .gitignore-like syntax) can be used to exclude files from formatting.
 
 # CONFIGURATION
 
 **stylua.toml** or **.stylua.toml**
 > Project configuration file specifying formatting rules such as column width, indent type, quote style, and call parentheses behavior.
 
+**.styluaignore**
+> Ignore file with .gitignore-like syntax for excluding files from formatting.
+
 # CAVEATS
 
-Some style preferences can't be configured. Complex expressions may format unexpectedly. Very long lines may not wrap perfectly.
+Some style preferences can't be configured. Complex expressions may format unexpectedly. Column width is a guide for line wrapping, not a hard limit.
 
 # HISTORY
 

@@ -4,31 +4,31 @@ Arch Linux package maintainer toolset
 
 # TLDR
 
-View **auth** documentation
+**Authenticate** with the Arch Linux GitLab instance
 
-```tldr pkgctl auth```
+```pkgctl auth login```
 
-View **build** documentation
+**Build** a package inside a clean chroot
 
-```tldr pkgctl build```
+```pkgctl build```
 
-View **db update** documentation
+**Update** the binary repository database after a release
 
-```tldr pkgctl db update```
+```pkgctl db update```
 
-View **diff** documentation
+**Compare** the current package with the repository version
 
-```tldr pkgctl diff```
+```pkgctl diff```
 
-View **release** documentation
+**Release** a package to the binary repositories
 
-```tldr pkgctl release```
+```pkgctl release```
 
-View **repo** documentation
+**Clone** a packaging repository from GitLab
 
-```tldr pkgctl repo```
+```pkgctl repo clone [pkgbase]```
 
-Display **version**
+Display **version** information
 
 ```pkgctl version```
 
@@ -75,4 +75,4 @@ Intended for Arch package maintainers. Requires devtools package. Authentication
 
 # SEE ALSO
 
-[makepkg](/man/makepkg)(8), [pacman](/man/pacman)(8), [devtools](/man/devtools)(7)
+[makepkg](/man/makepkg)(8), [pacman](/man/pacman)(8), [devtools](/man/devtools)(7), [asp](/man/asp)(1), [pkgctl-build](/man/pkgctl-build)(1)

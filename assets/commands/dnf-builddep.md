@@ -24,6 +24,10 @@ Install dependencies for a **package name** from repositories
 
 ```dnf builddep [package_name]```
 
+Install dependencies **without confirmation** prompts
+
+```dnf builddep -y [path/to/specification.spec]```
+
 # SYNOPSIS
 
 **dnf builddep** [_options_] _package_
@@ -48,6 +52,12 @@ Essential for building RPM packages from source.
 **--srpm**
 > Treat arguments as source RPM files.
 
+**--nobest**
+> Do not limit packages to the best available versions.
+
+**-y**, **--assumeyes**
+> Automatically answer yes for all questions.
+
 **--help-cmd**
 > Display help for this command.
 
@@ -57,4 +67,4 @@ Requires dnf-plugins-core. Build dependencies may include many packages. Root pr
 
 # SEE ALSO
 
-[dnf](/man/dnf)(8), [rpmbuild](/man/rpmbuild)(8), [mock](/man/mock)(1)
+[dnf](/man/dnf)(8), [rpmbuild](/man/rpmbuild)(8), [rpm](/man/rpm)(8), [mock](/man/mock)(1)

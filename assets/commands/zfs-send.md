@@ -32,6 +32,10 @@ Generate ZFS snapshot replication streams
 
 ```zfs send -w [pool/encrypted@snap] > [encrypted-backup.zfs]```
 
+**Resume an interrupted send** using a receive_resume_token
+
+```zfs send -t [token] | ssh [host] zfs recv [pool/data]```
+
 # SYNOPSIS
 
 **zfs send** [_options_] _snapshot_
@@ -77,10 +81,13 @@ Generate ZFS snapshot replication streams
 > Dry run, don't generate stream.
 
 **-P**
-> Print verbose machine-parsable info.
+> Print verbose machine-parsable info about the stream.
 
 **-v**
-> Verbose output.
+> Verbose output, including progress reporting.
+
+**-t** _token_
+> Resume an interrupted send using the specified receive_resume_token.
 
 # DESCRIPTION
 

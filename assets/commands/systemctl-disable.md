@@ -8,13 +8,21 @@ Disable unit auto-start at boot
 
 ```systemctl disable [unit]```
 
-Disable a service from running on boot **and stop** its current execution
+Disable a service from running on boot **and stop** it immediately
 
-```systemctl disable [unit] --now```
+```systemctl disable --now [unit]```
 
 Disable a **user** service from running on login
 
-```systemctl disable [unit] --user```
+```systemctl --user disable [unit]```
+
+Disable **multiple** units at once
+
+```systemctl disable [unit1] [unit2]```
+
+Disable a unit **temporarily** until next reboot
+
+```systemctl disable --runtime [unit]```
 
 # SYNOPSIS
 
@@ -32,7 +40,13 @@ Disable a **user** service from running on login
 > Do not reload systemd configuration after disabling
 
 **--runtime**
-> Disable temporarily until next reboot only
+> Disable temporarily until next reboot only.
+
+**--force**
+> When disabling, remove symlinks even if the unit file does not exist.
+
+**--global**
+> Disable for all users (with --user-mode units).
 
 # DESCRIPTION
 
@@ -46,4 +60,4 @@ Requires root privileges for system units. Disabling does not stop currently run
 
 # SEE ALSO
 
-[systemctl](/man/systemctl)(1), [systemctl-enable](/man/systemctl-enable)(1), [systemctl-mask](/man/systemctl-mask)(1)
+[systemctl](/man/systemctl)(1), [systemctl-enable](/man/systemctl-enable)(1), [systemctl-stop](/man/systemctl-stop)(1), [systemctl-mask](/man/systemctl-mask)(1), [systemctl-is-enabled](/man/systemctl-is-enabled)(1)

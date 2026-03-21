@@ -24,6 +24,14 @@ List all **files** installed by a package
 
 ```equery files --tree [package]```
 
+Show **USE flags** for a package
+
+```equery uses [package]```
+
+Find which package **owns** a file
+
+```equery belongs [/path/to/file]```
+
 # SYNOPSIS
 
 **equery** _command_ [_options_] [_package_]
@@ -48,10 +56,22 @@ As part of the gentoolkit package, equery offers a more user-friendly interface 
 **files** _package_
 > List installed files
 
-**-p, --portage-tree**
+**uses** _package_
+> Show USE flags for a package
+
+**belongs** _file_
+> Find which package owns a file
+
+**hasuse** _flag_
+> Find packages with a specific USE flag
+
+**size** _package_
+> Show disk space used by a package
+
+**-p**, **--portage-tree**
 > Include Portage tree
 
-**-o, --overlay-tree**
+**-o**, **--overlay-tree**
 > Include overlays
 
 **--tree**
@@ -63,4 +83,4 @@ Gentoo Linux specific. Part of gentoolkit package. Only queries local database, 
 
 # SEE ALSO
 
-[emerge](/man/emerge)(1), [eix](/man/eix)(1), [qlist](/man/qlist)(1)
+[emerge](/man/emerge)(1), [eix](/man/eix)(1)

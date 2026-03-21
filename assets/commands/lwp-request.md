@@ -106,4 +106,4 @@ Requires libwww-perl package. Less feature-rich than curl or httpie. Error handl
 
 # SEE ALSO
 
-[curl](/man/curl)(1), [wget](/man/wget)(1), [http](/man/http)(1), [perl](/man/perl)(1)
+[curl](/man/curl)(1), [wget](/man/wget)(1), [http](/man/http)(1), [httpie](/man/httpie)(1), [perl](/man/perl)(1)

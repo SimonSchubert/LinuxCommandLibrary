@@ -20,13 +20,13 @@ Run packages without installing
 
 ```yarn dlx -q [cowsay] "Hello"```
 
+**Run a command with multiple package dependencies**
+
+```yarn dlx -p [typescript] -p [ts-node] ts-node --transpile-only -e "console.log('hello')"```
+
 **Scaffold a Next.js app**
 
 ```yarn dlx create-next-app [my-app]```
-
-**Run ESLint initialization**
-
-```yarn dlx eslint --init```
 
 # SYNOPSIS
 
@@ -35,16 +35,16 @@ Run packages without installing
 # PARAMETERS
 
 **-p** _package_, **--package** _package_
-> Install and run command from specified package instead of inferring from command name
+> Designate which package to install before executing the command. Can be specified multiple times to install multiple packages.
 
 **-q**, **--quiet**
-> Suppress informational output during execution
+> Suppress detailed installation logs and report only essential error messages.
 
 # DESCRIPTION
 
 **yarn dlx** runs a package in a temporary environment without permanently installing it. This is the Yarn equivalent of **npx**, useful for one-off commands like project scaffolding tools.
 
-The command downloads the specified package to a temporary location, executes it, and cleans up afterward. It's commonly used with generators like create-react-app, create-next-app, and gatsby that create new project structures.
+The command downloads the specified package to a temporary location, executes the package's binary scripts within the current working directory, and cleans up afterward. It's commonly used with generators like create-react-app, create-next-app, and gatsby that create new project structures.
 
 By default, yarn dlx uses the command name to determine which package to install. Use **-p** to specify a different package when the command name differs from the package name.
 

@@ -51,4 +51,4 @@ sensors-detect must access hardware directly during detection, which could poten
 
 # SEE ALSO
 
-[sensors](/man/sensors)(1), [sensord](/man/sensord)(8), [fancontrol](/man/fancontrol)(8), [pwmconfig](/man/pwmconfig)(8)
+[sensors](/man/sensors)(1), [fancontrol](/man/fancontrol)(8), [modprobe](/man/modprobe)(8), [lshw](/man/lshw)(1)

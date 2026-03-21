@@ -38,4 +38,4 @@ Resetting removes the stored value; the application will use its schema default.
 
 # SEE ALSO
 
-[dconf](/man/dconf)(1), [dconf-write](/man/dconf-write)(1), [gsettings](/man/gsettings)(1)
+[dconf](/man/dconf)(1), [dconf-read](/man/dconf-read)(1), [dconf-write](/man/dconf-write)(1), [gsettings](/man/gsettings)(1)

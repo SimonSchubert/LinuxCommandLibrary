@@ -4,23 +4,23 @@ text-to-speech synthesizer using the SVOX Pico engine
 
 # TLDR
 
-**Convert text to speech**
+**Convert text to a WAV file using default language (en-US)**
 
-```pico2wave -w [output.wav] "[text to speak]"```
+```pico2wave -w [output.wav] "[Hello world]"```
 
-**Specify language**
+**Specify a language for synthesis**
 
-```pico2wave -l [en-US] -w [output.wav] "[Hello world]"```
+```pico2wave --lang [de-DE] -w [output.wav] "[Hallo Welt]"```
 
-**French synthesis**
+**Synthesize French text**
 
 ```pico2wave -l fr-FR -w [output.wav] "[Bonjour le monde]"```
 
-**Synthesize text from a file**
+**Synthesize text read from a file**
 
-```pico2wave -w [output.wav] "$(cat [text.txt])"```
+```pico2wave -w [output.wav] "$(cat [input.txt])"```
 
-**Play directly via temporary file**
+**Synthesize and play immediately**
 
 ```pico2wave -w /tmp/speech.wav "[text]" && aplay /tmp/speech.wav```
 
@@ -31,14 +31,14 @@ text-to-speech synthesizer using the SVOX Pico engine
 # PARAMETERS
 
 **-w**, **--wave** _file_
-> Output WAV file (required).
+> Output WAV file path (required).
 
 **-l**, **--lang** _lang_
-> Language code.
+> Language code (default: en-US). See LANGUAGES section for supported values.
 
 # DESCRIPTION
 
-**pico2wave** is a text-to-speech synthesizer using the SVOX Pico engine. It converts text to a WAV audio file, supporting multiple languages.
+**pico2wave** is a text-to-speech synthesizer using the SVOX Pico engine. It converts text supplied on the command line into a WAV audio file. The output is always 16-bit mono PCM at 16 kHz. Six languages are supported.
 
 # LANGUAGES
 
@@ -53,7 +53,7 @@ it-IT  - Italian
 
 # CAVEATS
 
-Limited language support. Output is WAV only. Part of libttspico package. Quality varies by language.
+Only six languages are supported. Output format is WAV only; use ffmpeg or sox to convert to other formats. Part of the libttspico-utils package. Text must be passed as a command-line argument, not via stdin.
 
 # HISTORY
 
@@ -61,4 +61,4 @@ Pico TTS was developed by **SVOX** and released as open source for Android, late
 
 # SEE ALSO
 
-[espeak](/man/espeak)(1), [festival](/man/festival)(1), [aplay](/man/aplay)(1), [sox](/man/sox)(1)
+[espeak](/man/espeak)(1), [espeak-ng](/man/espeak-ng)(1), [flite](/man/flite)(1), [festival](/man/festival)(1), [aplay](/man/aplay)(1), [sox](/man/sox)(1)

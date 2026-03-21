@@ -16,9 +16,9 @@ CRC-32 checksum calculator
 
 ```echo "[text]" | crc32 /dev/stdin```
 
-**Calculate with filename output**
+**Compare checksums** of two files
 
-```crc32 [file.txt]```
+```crc32 [file1] [file2]```
 
 # SYNOPSIS
 
@@ -50,4 +50,4 @@ CRC-32 was first published in **1975** as part of Ethernet protocol development.
 
 # SEE ALSO
 
-[cksum](/man/cksum)(1), [md5sum](/man/md5sum)(1), [sha256sum](/man/sha256sum)(1), [xxhsum](/man/xxhsum)(1)
+[cksum](/man/cksum)(1), [md5sum](/man/md5sum)(1), [sha256sum](/man/sha256sum)(1), [sha1sum](/man/sha1sum)(1), [b2sum](/man/b2sum)(1)

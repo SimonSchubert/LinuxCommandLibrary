@@ -4,71 +4,96 @@ Control UVC webcam dynamic settings
 
 # TLDR
 
-**List** cameras
+**List connected cameras**
 
 ```uvcdynctrl -l```
 
-Use specific **device**
-
-```uvcdynctrl -d [device_name]```
-
-List available **controls**
+**List available controls for the default device**
 
 ```uvcdynctrl -c```
 
-**Set** control value
+**List available controls for a specific device**
 
-```uvcdynctrl -s [control_name] [value]```
+```uvcdynctrl -d [device_name] -c```
 
-**Get** control value
+**Get the current value of a control**
 
-```uvcdynctrl -g [control_name]```
+```uvcdynctrl -g "[control_name]"```
 
-**Save** control state
+**Set a control to a specific value**
+
+```uvcdynctrl -s "[control_name]" -- [value]```
+
+**List supported frame formats**
+
+```uvcdynctrl -f```
+
+**Save current control state to a file**
 
 ```uvcdynctrl -W [filename]```
 
-**Load** control state
+**Load control state from a file**
 
 ```uvcdynctrl -L [filename]```
 
 # SYNOPSIS
 
-**uvcdynctrl** [_OPTIONS_]
+**uvcdynctrl** [_OPTIONS_] [_VALUES_]
 
 # PARAMETERS
 
-**-l, --list**
-> List all available cameras
+**-l**, **--list**
+> List all connected UVC cameras.
 
-**-d, --device** _NAME_
-> Use specific device (default: video0)
+**-d**, **--device** _NAME_
+> Use a specific device (default: video0).
 
-**-c, --clist**
-> List available controls
+**-c**, **--clist**
+> List available controls for the selected device.
 
-**-s, --set** _CONTROL_ _VALUE_
-> Set control value
+**-g**, **--get** _CONTROL_
+> Get current value of a control.
 
-**-g, --get** _CONTROL_
-> Get current control value
+**-G**, **--get_raw** _unit_id:selector_
+> Get raw control value by unit ID and selector.
 
-**-W, --save** _FILE_
-> Save control state to file
+**-s**, **--set** _CONTROL_ _VALUE_
+> Set a control to the given value.
 
-**-L, --load** _FILE_
-> Load control state from file
+**-S**, **--set_raw** _unit_id:selector_ _VALUE_
+> Set a raw control value (hex string; prefix with (BE) for big-endian).
+
+**-f**, **--formats**
+> List supported frame formats.
+
+**-i**, **--import** _FILE_
+> Import dynamic controls from an XML file.
+
+**-a**, **--addctrl** _VID_
+> Load dynamic controls for a vendor ID from the default system location.
+
+**-W**, **--save** _FILE_
+> Save device control state to a file.
+
+**-L**, **--load** _FILE_
+> Load device control state from a file.
+
+**-v**, **--verbose**
+> Enable verbose output.
+
+**-V**, **--version**
+> Display version information.
 
 # DESCRIPTION
 
-**uvcdynctrl** manages dynamic controls in the uvcvideo Linux kernel driver. It allows adjusting camera settings like brightness, contrast, exposure, and other UVC-specific controls.
+**uvcdynctrl** manages dynamic controls in the uvcvideo Linux kernel driver. It allows adjusting camera settings like brightness, contrast, exposure, white balance, and other UVC-specific controls.
 
-The tool works with USB Video Class (UVC) compatible webcams and cameras.
+The tool works with USB Video Class (UVC) compatible webcams and cameras. It can also import custom control definitions from XML files for vendor-specific extensions.
 
 # CAVEATS
 
-Only works with UVC-compatible cameras. Available controls depend on hardware. For negative values, use -- before the value.
+Only works with UVC-compatible cameras. Available controls depend on the hardware. For negative values, use **--** before the value to prevent interpretation as an option flag.
 
 # SEE ALSO
 
-[v4l2-ctl](/man/v4l2-ctl)(1)
+[v4l2-ctl](/man/v4l2-ctl)(1), [v4l2loopback-ctl](/man/v4l2loopback-ctl)(1)

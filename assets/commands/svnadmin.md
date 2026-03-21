@@ -69,6 +69,15 @@ Subversion repository administration tool
 **--config-dir** _dir_
 > Use alternate config directory.
 
+**--pre-1.4-compatible**
+> Create repository compatible with Subversion 1.4 or older.
+
+**--pre-1.6-compatible**
+> Create repository compatible with Subversion 1.6 or older.
+
+**--compatible-version** _ver_
+> Create repository compatible with specified Subversion version.
+
 **--bypass-hooks**
 > Skip hook scripts during load.
 
@@ -125,4 +134,4 @@ Operates only on local repositories, not URLs. Dump files can be very large for 
 
 # SEE ALSO
 
-[svn](/man/svn)(1), [svnserve](/man/svnserve)(8)
+[svn](/man/svn)(1), [svnserve](/man/svnserve)(8), [git](/man/git)(1)

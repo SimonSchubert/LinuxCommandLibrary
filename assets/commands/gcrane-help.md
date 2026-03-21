@@ -1,16 +1,24 @@
 # TAGLINE
 
-displays help information
+Display help information for gcrane commands
 
 # TLDR
 
-**Show help**
+**Show general help** for gcrane
 
 ```gcrane help```
 
-**Help for specific command**
+**Show help for a specific** subcommand
 
-```gcrane help [command]```
+```gcrane help [copy]```
+
+**Show help for the gc** subcommand
+
+```gcrane help [gc]```
+
+**Show help using the --help** flag
+
+```gcrane --help```
 
 # SYNOPSIS
 
@@ -18,11 +26,11 @@ displays help information
 
 # DESCRIPTION
 
-**gcrane help** displays comprehensive help information for gcrane and its subcommands. Without arguments, it shows an overview of all available commands with brief descriptions. When given a specific command name, it displays detailed usage information including all flags and parameters.
+**gcrane help** displays help information for gcrane and its subcommands. Without arguments, it shows an overview of all available commands with brief descriptions. When given a specific command name, it displays detailed usage information including all flags and parameters.
 
 The help system documents gcrane's GCR-specific extensions beyond standard crane functionality, including recursive copy operations and garbage collection commands.
 
 # SEE ALSO
 
-[gcrane](/man/gcrane)(1), [crane-help](/man/crane-help)(1)
+[gcrane](/man/gcrane)(1), [gcrane-copy](/man/gcrane-copy)(1), [gcrane-gc](/man/gcrane-gc)(1), [crane](/man/crane)(1)
 

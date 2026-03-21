@@ -12,7 +12,7 @@ Check and **auto-repair** (preen)
 
 ```sudo e2fsck -p /dev/sdXN```
 
-Check in **read-only** mode
+Check for **bad blocks** using read-only test
 
 ```sudo e2fsck -c /dev/sdXN```
 
@@ -24,9 +24,17 @@ Exhaustive **bad block** test
 
 ```sudo e2fsck -fccky /dev/sdXN```
 
+**Read-only** check without making changes
+
+```sudo e2fsck -n /dev/sdXN```
+
 **Verbose** output
 
 ```sudo e2fsck -v /dev/sdXN```
+
+Interactively repair, answering **yes to all** questions
+
+```sudo e2fsck -y /dev/sdXN```
 
 # SYNOPSIS
 
@@ -98,4 +106,4 @@ Never run e2fsck on a mounted filesystem unless it's read-only. The **-y** optio
 
 # SEE ALSO
 
-[fsck](/man/fsck)(8), [tune2fs](/man/tune2fs)(8), [dumpe2fs](/man/dumpe2fs)(8), [mke2fs](/man/mke2fs)(8)
+[fsck](/man/fsck)(8), [tune2fs](/man/tune2fs)(8), [dumpe2fs](/man/dumpe2fs)(8), [mke2fs](/man/mke2fs)(8), [badblocks](/man/badblocks)(8), [debugfs](/man/debugfs)(8)

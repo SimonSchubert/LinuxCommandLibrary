@@ -54,12 +54,12 @@ zipcloak uses standard ZIP encryption (PKZIP), which is widely compatible with m
 
 # CAVEATS
 
-Standard ZIP encryption is weak. Use 7z for stronger encryption. Part of Info-ZIP.
+Standard ZIP encryption (PKZIP/ZipCrypto) is considered weak by modern standards and can be broken with known-plaintext attacks. For stronger encryption, consider using **7z** with AES-256. The **-O** option should be used when you want to preserve the original unencrypted archive. Encryption applies to file contents only; filenames and metadata remain visible.
 
 # HISTORY
 
-**zipcloak** is part of **Info-ZIP** utilities. It provides simple encryption for ZIP archives.
+**zipcloak** is part of the **Info-ZIP** suite of utilities, originally developed in the early 1990s as free, portable implementations of the ZIP archive format tools. It provides a convenient way to add or remove password protection from existing ZIP archives without needing to recreate them.
 
 # SEE ALSO
 
-[zip](/man/zip)(1), [unzip](/man/unzip)(1), [7z](/man/7z)(1)
+[zip](/man/zip)(1), [unzip](/man/unzip)(1), [7z](/man/7z)(1), [zipinfo](/man/zipinfo)(1), [zipnote](/man/zipnote)(1)

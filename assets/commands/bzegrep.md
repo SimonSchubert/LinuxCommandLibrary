@@ -57,7 +57,10 @@ All **egrep** options are supported, including:
 > Invert match (show non-matching lines)
 
 **-l**
-> Print only filenames containing matches
+> Print only names of files containing matches
+
+**-h**
+> Suppress the filename prefix on output (when searching multiple files)
 
 **-e** _pattern_
 > Specify the pattern (useful if pattern starts with -)
@@ -68,4 +71,4 @@ The **GREP** environment variable can be set to specify an alternate grep progra
 
 # SEE ALSO
 
-[bzgrep](/man/bzgrep)(1), [bzfgrep](/man/bzfgrep)(1), [egrep](/man/egrep)(1), [bzip2](/man/bzip2)(1), [bzcat](/man/bzcat)(1)
+[bzgrep](/man/bzgrep)(1), [bzfgrep](/man/bzfgrep)(1), [egrep](/man/egrep)(1), [grep](/man/grep)(1), [bzip2](/man/bzip2)(1), [bzcat](/man/bzcat)(1), [zegrep](/man/zegrep)(1)

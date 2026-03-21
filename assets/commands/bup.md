@@ -4,25 +4,37 @@ Git-based backup system with deduplication
 
 # TLDR
 
-**Initialize** repository
+**Initialize** a bup repository in the default location (~/.bup)
 
 ```bup init```
 
-**Index** files
+**Initialize** a repository in a custom directory
+
+```BUP_DIR=[/path/to/repo] bup init```
+
+**Index** files for backup
 
 ```bup index [/path/to/backup]```
 
-**Save** backup
+**Save** an indexed backup with a name
 
 ```bup save -n [backup-name] [/path/to/backup]```
 
-**List** backups
+**List** all backups
 
 ```bup ls```
 
-**Restore** files
+**List** files in a specific backup
+
+```bup ls [backup-name]/latest/```
+
+**Restore** files to a target directory
 
 ```bup restore -C [/restore/path] [backup-name/latest/path]```
+
+**Check** repository integrity
+
+```bup fsck```
 
 # SYNOPSIS
 
@@ -37,36 +49,48 @@ The tool is particularly effective for backing up large files with small changes
 # PARAMETERS
 
 **init**
-> Initialize bup repository
+> Initialize bup repository. Uses ~/.bup by default or BUP_DIR if set.
 
 **index** _path_
-> Index files for backup
+> Index files for backup. Must be run before save.
 
-**save** _path_
-> Save backup
+**save** **-n** _name_ _path_
+> Save indexed files as a named backup set.
 
-**restore** _backup_
-> Restore files
+**restore** **-C** _target_ _backup-path_
+> Restore files from a backup to the target directory.
 
 **ls** [_backup_]
-> List backups or files
+> List backups or files within a backup.
 
 **fsck**
-> Check repository integrity
+> Check repository integrity.
 
 **fuse** _mountpoint_
-> Mount backups as filesystem
+> Mount backups as a read-only FUSE filesystem.
 
-# FEATURES
+**damage**
+> Deliberately damage a repository for testing fsck.
 
-- Efficient deduplication
-- Incremental backups
-- Large file support
-- Git-based storage
-- Filesystem mounting
-- Remote backups over SSH
-- Fast indexing
-- Minimal dependencies
+**margin**
+> Report the maximum number of matching prefix bits between objects.
+
+**midx**
+> Create or display midx (multi-index) files.
+
+**memtest**
+> Test memory throughput.
+
+**web**
+> Start a web server to browse backups.
+
+# ENVIRONMENT
+
+**BUP_DIR**
+> Path to the bup repository. Defaults to ~/.bup.
+
+**BUP_FORCE_TTY**
+> Force progress output even when not on a terminal.
 
 # WORKFLOW
 
@@ -93,6 +117,10 @@ bup restore -C ~/restored documents/latest/
 # Mount as filesystem
 mkdir /mnt/bup
 bup fuse /mnt/bup
+
+# Remote backup over SSH
+bup init -r myserver:
+bup save -r myserver: -n documents ~/Documents
 ```
 
 # DEDUPLICATION
@@ -105,7 +133,7 @@ Uses rolling checksums to identify duplicate chunks even when shifted within fil
 
 # CAVEATS
 
-Not encrypted by default. Repository can grow large without maintenance. Restore can be slow for many small files. Less mature than borg/restic. Documentation sometimes lacking. Not ideal for many tiny files.
+Not encrypted by default. Repository can grow large without maintenance. Restore can be slow for many small files. Less mature than borg/restic. Documentation sometimes lacking. Not ideal for many tiny files. No built-in pruning of old backups.
 
 # HISTORY
 
@@ -113,4 +141,4 @@ Not encrypted by default. Repository can grow large without maintenance. Restore
 
 # SEE ALSO
 
-[borg](/man/borg)(1), [restic](/man/restic)(1), [git](/man/git)(1)
+[borg](/man/borg)(1), [restic](/man/restic)(1), [git](/man/git)(1), [rsync](/man/rsync)(1), [tar](/man/tar)(1)

@@ -1,16 +1,16 @@
 # TAGLINE
 
-Automated temperature-based fan speed control
+automated temperature-based fan speed control
 
 # TLDR
 
-Start with **default** configuration
+Start with the **default** configuration file (/etc/fancontrol)
 
-```fancontrol```
+```sudo fancontrol```
 
-Start with **custom** configuration file
+Start with a **custom** configuration file
 
-```fancontrol [path/to/config_file]```
+```sudo fancontrol [path/to/config_file]```
 
 # SYNOPSIS
 
@@ -44,13 +44,19 @@ The daemon continuously monitors hardware temperature sensors and adjusts PWM-co
 **MINPWM / MAXPWM**
 > PWM value range corresponding to the temperature range.
 
+**MINSTART**
+> Minimum PWM value at which fans start spinning.
+
+**MINSTOP**
+> Minimum PWM value at which fans still spin (below this they stop).
+
 **AVERAGE**
 > Number of temperature readings to average (default: 1, no averaging).
 
 # CAVEATS
 
-Requires configured hardware monitoring. Run pwmconfig first to generate configuration. Requires root privileges. Configuration file format is specific to fancontrol.
+Requires configured hardware monitoring (lm-sensors). Run pwmconfig first to detect fans and sensors and generate the configuration file. Requires root privileges since it accesses hardware PWM controls. The daemon runs in the foreground by default; use a systemd service or init script to run it as a background service.
 
 # SEE ALSO
 
-[sensors](/man/sensors)(1)
+[sensors](/man/sensors)(1), [hwinfo](/man/hwinfo)(1)

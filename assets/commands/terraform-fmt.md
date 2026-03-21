@@ -20,6 +20,14 @@ Format Terraform configuration files
 
 ```terraform fmt -diff```
 
+**Check formatting and show diff**
+
+```terraform fmt -check -diff```
+
+**Format a specific directory**
+
+```terraform fmt [path/to/directory]```
+
 # SYNOPSIS
 
 **terraform** **fmt** [_options_] [_dir_]
@@ -39,7 +47,10 @@ Format Terraform configuration files
 > Write changes (default true).
 
 **-list**
-> List files to change.
+> List files with formatting differences (default true).
+
+**-no-color**
+> Disable color output in diff.
 
 # DESCRIPTION
 
@@ -47,5 +58,5 @@ Format Terraform configuration files
 
 # SEE ALSO
 
-[terraform](/man/terraform)(1), [terraform-validate](/man/terraform-validate)(1)
+[terraform](/man/terraform)(1), [terraform-init](/man/terraform-init)(1), [terraform-plan](/man/terraform-plan)(1)
 

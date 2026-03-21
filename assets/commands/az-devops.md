@@ -28,9 +28,17 @@ Manage Azure DevOps organizations and projects
 
 ```az devops project show --project [MyProject] --open```
 
-**Login to Azure DevOps**
+**Login to Azure DevOps** with a personal access token
 
-```az devops login```
+```az devops login --organization [https://dev.azure.com/contoso]```
+
+**Logout from Azure DevOps**
+
+```az devops logout```
+
+**Invoke a DevOps REST API** endpoint directly
+
+```az devops invoke --area core --resource projects --api-version 6.0```
 
 # SYNOPSIS
 
@@ -73,6 +81,15 @@ Manage Azure DevOps organizations and projects
 
 **wiki**
 > Manage wikis.
+
+**login**
+> Set credentials for a particular organization.
+
+**logout**
+> Clear credentials for a particular organization.
+
+**invoke**
+> Invoke a request for any DevOps REST API.
 
 # DESCRIPTION
 

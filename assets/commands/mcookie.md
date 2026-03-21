@@ -1,24 +1,28 @@
 # TAGLINE
 
-generates a 128-bit random hexadecimal number
+generate a 128-bit random hexadecimal number
 
 # TLDR
 
-Generate **random number**
+Generate a **128-bit random** hexadecimal number
 
 ```mcookie```
 
-Use **file** as seed
+Use a **file** as an additional entropy source
 
 ```mcookie --file [path/to/file]```
 
-Use **limited bytes** from file as seed
+Read at most a **specific number of bytes** from file as seed
 
-```mcookie --file [path/to/file] --max-size [bytes]```
+```mcookie --file [path/to/file] --max-size [512]```
 
-Show **verbose** randomness details
+Show **verbose** details about randomness sources
 
 ```mcookie --verbose```
+
+Display **version** information
+
+```mcookie --version```
 
 # SYNOPSIS
 
@@ -39,14 +43,20 @@ Show **verbose** randomness details
 **-v, --verbose**
 > Print details about randomness sources
 
+**-V, --version**
+> Display version information and exit
+
+**-h, --help**
+> Display help text and exit
+
 # OUTPUT
 
-32 hexadecimal characters (128 bits of randomness)
+32 hexadecimal characters (128 bits of randomness), printed to standard output with a trailing newline.
 
 # CAVEATS
 
-Uses /dev/urandom and system entropy. Part of util-linux package.
+Uses /dev/urandom as its primary entropy source. Part of the util-linux package. The output is not cryptographically audited; for cryptographic key generation, prefer openssl or gpg.
 
 # SEE ALSO
 
-[xauth](/man/xauth)(1), [uuidgen](/man/uuidgen)(1)
+[xauth](/man/xauth)(1), [uuidgen](/man/uuidgen)(1), [openssl](/man/openssl)(1)

@@ -1,30 +1,31 @@
 # TAGLINE
 
-Convert ASCII art to PPM color image
+Convert ASCII text to PPM color image
 
 # TLDR
 
-**Convert** ASCII to PPM image
+**Convert ASCII text file to a PPM image**
 
-```asciitoppm [width] [height] < [ascii.txt] > [output.ppm]```
+```asciitoppm < [ascii.txt] > [output.ppm]```
+
+**Convert using a specific color definition file**
+
+```asciitoppm -d [colorfile] < [ascii.txt] > [output.ppm]```
 
 # SYNOPSIS
 
-**asciitoppm** _width_ _height_
+**asciitoppm** [_options_] [_height_ _width_] < _input_ > _output_
 
 # DESCRIPTION
 
 **asciitoppm** converts ASCII text to a PPM (Portable Pixmap) color image. Each character in the input is mapped to a colored pixel, producing a visual representation of the text content.
 
-Unlike **asciitopgm** which produces grayscale output, **asciitoppm** generates full-color images. The input is read from standard input and the output image dimensions must be specified. It is part of the Netpbm image processing toolkit.
+Unlike **asciitopgm** which produces grayscale output, **asciitoppm** generates full-color images. The input is read from standard input and written to standard output. It is part of the Netpbm image processing toolkit.
 
 # PARAMETERS
 
-**width**
-> Image width in pixels
-
-**height**
-> Image height in pixels
+**-d** _colorfile_
+> Use the specified color definition file to map characters to colors.
 
 # HISTORY
 
@@ -32,4 +33,4 @@ Part of the Netpbm toolkit for image processing.
 
 # SEE ALSO
 
-[asciitopgm](/man/asciitopgm)(1), [ppmtopgm](/man/ppmtopgm)(1)
+[asciitopgm](/man/asciitopgm)(1), [ppmtopgm](/man/ppmtopgm)(1), [pbmtoascii](/man/pbmtoascii)(1), [ppmtoascii](/man/ppmtoascii)(1)

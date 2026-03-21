@@ -89,6 +89,12 @@ Crystal language dependency manager
 **--jobs** _N_
 > Number of parallel download jobs.
 
+**--frozen**
+> Require that shard.lock is up to date and refuse to update it.
+
+**--ignore-crystal-version**
+> Do not check the Crystal version restriction in shard.yml.
+
 # DESCRIPTION
 
 **shards** is the official dependency manager for the Crystal programming language, similar to Bundler for Ruby or npm for JavaScript. It reads project dependencies from a **shard.yml** file that defines package metadata, version constraints, and development dependencies.
@@ -105,7 +111,7 @@ Dependencies are resolved from Git repositories, with GitHub being the most comm
 
 # CAVEATS
 
-Crystal ecosystem smaller than Ruby. Some dependencies may be unmaintained. Binary compatibility can break.
+Crystal ecosystem is smaller than Ruby or JavaScript. Some dependencies may be unmaintained. Binary compatibility can break between Crystal versions. The **--frozen** flag is recommended for CI builds to ensure the lock file is not modified unexpectedly.
 
 # HISTORY
 
@@ -113,4 +119,4 @@ Crystal ecosystem smaller than Ruby. Some dependencies may be unmaintained. Bina
 
 # SEE ALSO
 
-[crystal](/man/crystal)(1), [bundler](/man/bundler)(1)
+[crystal](/man/crystal)(1), [bundler](/man/bundler)(1), [cargo](/man/cargo)(1), [npm](/man/npm)(1)

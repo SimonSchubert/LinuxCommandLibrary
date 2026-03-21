@@ -8,23 +8,40 @@ Wine graphical configuration tool
 
 ```winecfg```
 
-**Configure specific Wine prefix**
+**Configure a specific Wine prefix**
 
 ```WINEPREFIX=[~/.wine32] winecfg```
 
-**Open configuration for 32-bit Wine**
+**Create and configure a new 32-bit Wine prefix**
 
-```WINEARCH=win32 winecfg```
+```WINEPREFIX=[~/.wine32] WINEARCH=win32 winecfg```
+
+**Set Windows version to Windows 10** via command line
+
+```WINEPREFIX=[~/.wine] wine reg add "HKCU\\Software\\Wine" /v Version /d win10```
 
 # SYNOPSIS
 
 **winecfg** [_options_]
 
+# DESCRIPTION
+
+**winecfg** is Wine's graphical configuration tool. It allows adjusting Wine settings without manually editing the registry, including Windows version emulation, DLL overrides, display options, and audio configuration.
+
+The Applications tab lets you configure different Windows versions per application for compatibility. The Libraries tab is crucial for applications requiring specific DLL versions or overrides.
+
+Each Wine prefix can have independent settings. Use WINEPREFIX to manage multiple isolated Wine environments for different applications.
+
 # ENVIRONMENT
 
-**WINEPREFIX**: Directory containing Wine configuration (default: ~/.wine).
+**WINEPREFIX**
+> Directory containing Wine configuration. Defaults to ~/.wine.
 
-**WINEARCH**: Architecture: win32 or win64.
+**WINEARCH**
+> Architecture for new prefixes: win32 or win64. Only takes effect when creating a new prefix.
+
+**WINEDEBUG**
+> Debug channels for troubleshooting (e.g., +all, -all, +relay).
 
 # TABS
 
@@ -42,17 +59,9 @@ Wine graphical configuration tool
 
 **Staging**: Wine Staging experimental features (if available).
 
-# DESCRIPTION
-
-**winecfg** is Wine's graphical configuration tool. It allows adjusting Wine settings without manually editing the registry, including Windows version emulation, DLL overrides, display options, and audio configuration.
-
-The Applications tab lets you configure different Windows versions per application for compatibility. The Libraries tab is crucial for applications requiring specific DLL versions or overrides.
-
-Each Wine prefix can have independent settings. Use WINEPREFIX to manage multiple isolated Wine environments for different applications.
-
 # CAVEATS
 
-Changes affect the entire Wine prefix unless application-specific rules are set. DLL overrides can break applications if misconfigured. Some settings require Wine restart to take effect.
+Changes affect the entire Wine prefix unless application-specific rules are set. DLL overrides can break applications if misconfigured. Some settings require Wine restart to take effect. WINEARCH only has effect when creating a new prefix for the first time; it cannot change an existing prefix's architecture.
 
 # HISTORY
 

@@ -12,13 +12,17 @@ load Docker images from tar archives
 
 ```cat [image.tar] | docker load```
 
-**Load compressed archive**
+**Load a gzip-compressed archive**
 
-```gunzip -c [image.tar.gz] | docker load```
+```docker load -i [image.tar.gz]```
 
 **Load with quiet output**
 
 ```docker load -q -i [image.tar]```
+
+**Load from a remote URL via curl**
+
+```curl -sSL [https://example.com/image.tar.gz] | docker load```
 
 # SYNOPSIS
 
@@ -32,11 +36,14 @@ load Docker images from tar archives
 **-q**, **--quiet**
 > Suppress the load output and progress bar.
 
+**--platform** _string_
+> Load only the specified platform image from a multi-platform archive (e.g., linux/amd64).
+
 # DESCRIPTION
 
 **docker load** loads an image from a tar archive or STDIN. Restores both images and tags saved by **docker save**. This command is the counterpart to docker save, enabling image transfer between systems without using a registry. Useful for air-gapped environments or offline distribution.
 
 # SEE ALSO
 
-[docker-image-load](/man/docker-image-load)(1), [docker-save](/man/docker-save)(1)
+[docker-image-load](/man/docker-image-load)(1), [docker-save](/man/docker-save)(1), [docker-images](/man/docker-images)(1), [docker-pull](/man/docker-pull)(1), [docker](/man/docker)(1)
 

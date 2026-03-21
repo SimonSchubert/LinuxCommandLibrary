@@ -8,17 +8,17 @@ reverses the last repository operation
 
 ```jj undo```
 
-**Undo multiple operations**
+**Undo the last two operations**
 
-```jj undo [2]```
+```jj undo 2```
 
-**Show operation log**
+**Show the operation log to find operation IDs**
 
-```jj op log```
+```jj operation log```
 
-**Restore to operation**
+**Restore to a specific operation by ID**
 
-```jj op restore [op_id]```
+```jj operation restore [op_id]```
 
 # SYNOPSIS
 
@@ -29,14 +29,20 @@ reverses the last repository operation
 _COUNT_
 > Number of operations to undo.
 
+**-R**, **--repository** _path_
+> Path to the repository to operate on.
+
+**--what** _what_
+> What portions of the local state to restore (can be `repo` or `remote-tracking`).
+
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**jj undo** reverses the last repository operation. It restores the previous state from the operation log.
+**jj undo** reverses the last repository operation by creating a new operation that restores the previous state from the operation log. Unlike `jj operation restore`, which discards intermediate operations, `jj undo` preserves the full operation history.
 
-The command enables safe experimentation with history. Any jj operation can be undone.
+The command enables safe experimentation with history. Any jj operation can be undone, including merges, rebases, and bookmark changes.
 
 # CAVEATS
 
@@ -48,4 +54,4 @@ jj undo is part of **Jujutsu**, leveraging its operation log for powerful undo c
 
 # SEE ALSO
 
-[jj](/man/jj)(1), [jj-op](/man/jj-op)(1), [jj-op-log](/man/jj-op-log)(1)
+[jj](/man/jj)(1), [jj-operation](/man/jj-operation)(1), [jj-restore](/man/jj-restore)(1)

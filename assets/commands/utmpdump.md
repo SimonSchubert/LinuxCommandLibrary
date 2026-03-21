@@ -59,4 +59,4 @@ This tool is designed for debugging purposes. The -r option should be used with 
 
 # SEE ALSO
 
-[last](/man/last)(1), [who](/man/who)(1), [utmp](/man/utmp)(5), [wtmp](/man/wtmp)(5)
+[last](/man/last)(1), [lastb](/man/lastb)(1), [who](/man/who)(1), [w](/man/w)(1)

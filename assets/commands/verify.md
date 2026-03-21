@@ -83,6 +83,18 @@ Validate X.509 certificate chains
 **-purpose** _purpose_
 > Intended use: sslclient, sslserver, smimesign, smimeencrypt, etc.
 
+**-no_check_time**
+> Do not check certificate validity against current time.
+
+**-attime** _timestamp_
+> Verify the chain at the specified UNIX timestamp instead of current time.
+
+**-policy** _oid_
+> Require the specified certificate policy OID in the chain.
+
+**-CAstore** _uri_
+> URI to a store of trusted CA certificates (e.g., file: or store:).
+
 # DESCRIPTION
 
 **openssl verify** validates X.509 certificate chains by checking signatures, validity periods, and trust anchors. It builds a chain from the target certificate up to a trusted root CA, verifying each link.
@@ -103,4 +115,4 @@ The **verify** command has been part of **OpenSSL** since its early releases in 
 
 # SEE ALSO
 
-[openssl](/man/openssl)(1), [openssl-x509](/man/openssl-x509)(1), [openssl-s_client](/man/openssl-s_client)(1), [openssl-req](/man/openssl-req)(1)
+[openssl](/man/openssl)(1), [openssl-verify](/man/openssl-verify)(1), [openssl-x509](/man/openssl-x509)(1), [openssl-s_client](/man/openssl-s_client)(1), [openssl-req](/man/openssl-req)(1), [openssl-ca](/man/openssl-ca)(1)

@@ -14,7 +14,7 @@ Cloudflare API v4 command-line client
 
 **Purge entire cache** for a zone
 
-```cli4 --delete /zones/[zone_id]/purge_cache purge_everything:=true```
+```cli4 --post /zones/[zone_id]/purge_cache purge_everything:=true```
 
 **List DNS records** for a zone
 
@@ -88,4 +88,4 @@ cli4 was created as an unofficial Python-based CLI for Cloudflare's API v4, whic
 
 # SEE ALSO
 
-[wrangler](/man/wrangler)(1), [curl](/man/curl)(1), [flarectl](/man/flarectl)(1)
+[wrangler](/man/wrangler)(1), [curl](/man/curl)(1), [flarectl](/man/flarectl)(1), [jq](/man/jq)(1)

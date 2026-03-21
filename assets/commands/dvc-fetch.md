@@ -48,6 +48,15 @@ download tracked files to local cache
 **-R**, **--recursive**
 > Fetch recursively.
 
+**--run-cache**
+> Fetch run history for DVC pipeline stages.
+
+**-v**, **--verbose**
+> Increase verbosity of output.
+
+**-q**, **--quiet**
+> Suppress output.
+
 # DESCRIPTION
 
 **dvc fetch** downloads DVC-tracked data from remote storage into the local DVC cache without affecting the workspace. This is useful for preparing data for later use without immediately populating the working directory.
@@ -58,5 +67,5 @@ This separation is particularly valuable in CI/CD pipelines or when switching be
 
 # SEE ALSO
 
-[dvc-pull](/man/dvc-pull)(1), [dvc-push](/man/dvc-push)(1)
+[dvc](/man/dvc)(1), [dvc-checkout](/man/dvc-checkout)(1), [dvc-gc](/man/dvc-gc)(1), [dvc-add](/man/dvc-add)(1)
 

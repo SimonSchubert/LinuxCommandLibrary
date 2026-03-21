@@ -12,21 +12,25 @@ feature-rich hex editor designed for reverse engineers and programmers
 
 ```imhex --new```
 
-Open file and **select** a byte range
+Open file and **select** a byte range using hex offsets
 
 ```imhex --open [path/to/file] --select [0x100] [0x200]```
 
-Display **file information**
+Display **file information** (type, entropy, etc.)
 
 ```imhex --file-info [path/to/file]```
 
-Calculate **hash** of a file
+Calculate **SHA-256 hash** of a file
 
-```imhex --hash [md5|sha1|sha256|sha512] [path/to/file]```
+```imhex --hash sha256 [path/to/file]```
 
 Generate **hex dump** of a file
 
 ```imhex --hexdump [path/to/file]```
+
+Display **version** information
+
+```imhex --version```
 
 # SYNOPSIS
 
@@ -71,4 +75,4 @@ ImHex was created by WerWolv and first released in **2020**. It was designed as 
 
 # SEE ALSO
 
-[xxd](/man/xxd)(1), [hexdump](/man/hexdump)(1), [radare2](/man/radare2)(1)
+[xxd](/man/xxd)(1), [hexdump](/man/hexdump)(1), [hexedit](/man/hexedit)(1), [od](/man/od)(1), [radare2](/man/radare2)(1)

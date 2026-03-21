@@ -20,6 +20,10 @@ Fast configurable port scanner with reasonable defaults
 
 ```havn -r [3] [host]```
 
+**Scan with custom timeout** (in milliseconds)
+
+```havn -t [2000] [host]```
+
 **Scan all ports**
 
 ```havn -p [1-65535] [host]```
@@ -61,4 +65,4 @@ Scanning ports on systems you do not own or have authorization to test may be il
 
 # SEE ALSO
 
-[nmap](/man/nmap)(1), [ss](/man/ss)(8), [netcat](/man/netcat)(1)
+[nmap](/man/nmap)(1), [ss](/man/ss)(8), [netcat](/man/netcat)(1), [rustscan](/man/rustscan)(1), [masscan](/man/masscan)(1)

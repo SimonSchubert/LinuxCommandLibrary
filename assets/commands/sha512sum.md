@@ -82,4 +82,4 @@ sha512sum is part of **GNU coreutils**, written by Ulrich Drepper, Scott Miller,
 
 # SEE ALSO
 
-[sha256sum](/man/sha256sum)(1), [sha1sum](/man/sha1sum)(1), [md5sum](/man/md5sum)(1), [b2sum](/man/b2sum)(1)
+[sha256sum](/man/sha256sum)(1), [sha384sum](/man/sha384sum)(1), [sha224sum](/man/sha224sum)(1), [sha1sum](/man/sha1sum)(1), [md5sum](/man/md5sum)(1), [b2sum](/man/b2sum)(1), [shasum](/man/shasum)(1)

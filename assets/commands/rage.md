@@ -28,6 +28,14 @@ Simple modern file encryption tool
 
 ```rage -a -r [age1...] [file.txt]```
 
+**Encrypt to multiple recipients**
+
+```rage -r [age1...] -r [age1...] -o [encrypted.age] [file.txt]```
+
+**Decrypt with passphrase**
+
+```rage -d -p [encrypted.age]```
+
 **Encrypt stdin**
 
 ```echo "secret" | rage -r [age1...] -o [secret.age]```
@@ -60,7 +68,10 @@ Simple modern file encryption tool
 > ASCII armor output.
 
 **-o**, **--output** _FILE_
-> Output file.
+> Output file. If omitted, writes to stdout.
+
+**-j** _PLUGINS_
+> Use the given age plugin.
 
 # DESCRIPTION
 
@@ -84,4 +95,4 @@ Uses the age format; not compatible with GPG. Key management is manual with no k
 
 # SEE ALSO
 
-[age](/man/age)(1), [gpg](/man/gpg)(1), [openssl](/man/openssl)(1)
+[age](/man/age)(1), [age-keygen](/man/age-keygen)(1), [gpg](/man/gpg)(1), [ssh-keygen](/man/ssh-keygen)(1), [openssl](/man/openssl)(1)

@@ -68,11 +68,29 @@ NVIDIA CUDA kernel debugger
 **info cuda devices**
 > List CUDA devices.
 
+**cuda device**
+> Switch to specified device.
+
+**cuda grid**
+> Switch to specified grid.
+
+**info cuda sms**
+> List CUDA streaming multiprocessors.
+
+**info cuda warps**
+> List CUDA warps.
+
+**info cuda lanes**
+> List CUDA lanes.
+
+**info cuda launch trace**
+> Show kernel launch trace.
+
 **set cuda break_on_launch**
-> Break when kernel launches.
+> Break when kernel launches (application or system).
 
 **set cuda memcheck on**
-> Enable memory checking.
+> Enable memory checking for out-of-bounds accesses.
 
 # DESCRIPTION
 
@@ -84,7 +102,7 @@ Focus modes let developers examine specific blocks and threads. Memory checking 
 
 # CAVEATS
 
-Requires NVIDIA GPU with compute capability 2.0+. Debugging mode disables some GPU optimizations. Only one debugging session per GPU unless using lockfile workarounds. Some GDB features may not work with GPU code. Kernel must be compiled with **-g -G** flags.
+Requires NVIDIA GPU with compute capability 2.0+. Debugging mode disables some GPU optimizations and forces **-O0** compilation. Only one debugging session per GPU unless using **--cuda-use-lockfile=0**. Some GDB features may not work with GPU code. CUDA kernels must be compiled with **nvcc -g -G** flags (or **-lineinfo** for line-level debugging with optimizations).
 
 # HISTORY
 
@@ -92,4 +110,4 @@ cuda-gdb was introduced by **NVIDIA** alongside CUDA 2.2 in **2009** to provide 
 
 # SEE ALSO
 
-[gdb](/man/gdb)(1), [nvcc](/man/nvcc)(1), [nvidia-smi](/man/nvidia-smi)(1), [cuda-memcheck](/man/cuda-memcheck)(1)
+[gdb](/man/gdb)(1), [nvcc](/man/nvcc)(1), [nvidia-smi](/man/nvidia-smi)(1)

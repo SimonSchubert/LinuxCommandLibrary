@@ -1,6 +1,6 @@
 # TAGLINE
 
-manages SCSI persistent reservations on block devices used as LVM physical
+Manage SCSI persistent reservations on LVM physical volumes
 
 # TLDR
 
@@ -79,4 +79,4 @@ Requires SCSI devices that support persistent reservations (SCSI-3 PR). Not all 
 
 # SEE ALSO
 
-[lvm](/man/lvm)(8), [sg_persist](/man/sg_persist)(8), [vgchange](/man/vgchange)(8), [lvmlockd](/man/lvmlockd)(8)
+[lvm](/man/lvm)(8), [vgchange](/man/vgchange)(8), [pvcreate](/man/pvcreate)(8), [pvs](/man/pvs)(8)

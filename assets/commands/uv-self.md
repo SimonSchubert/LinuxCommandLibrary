@@ -4,13 +4,17 @@ Manage the uv installation itself
 
 # TLDR
 
-**Update uv**
+**Update uv to the latest version**
 
 ```uv self update```
 
-**Show uv installation info**
+**Update uv to a specific version**
 
-```uv self```
+```uv self update [0.6.0]```
+
+**Uninstall uv**
+
+```uv self uninstall```
 
 # SYNOPSIS
 
@@ -19,13 +23,18 @@ Manage the uv installation itself
 # PARAMETERS
 
 **update**
-> Update uv to latest version.
+> Update uv to the latest version, or to a specified version.
+
+**uninstall**
+> Uninstall uv.
+
+**--target-version** _version_
+> Update to a specific version (used with update subcommand).
 
 # DESCRIPTION
 
-**uv self** manages the uv installation itself. Use to update uv to the latest version or check installation details.
+**uv self** manages the uv installation itself. Use to update uv to the latest version, update to a specific version, or uninstall uv entirely. The update command downloads the new binary and replaces the current installation in place.
 
 # SEE ALSO
 
-[uv](/man/uv)(1), [uv-version](/man/uv-version)(1)
-
+[uv](/man/uv)(1), [uv-version](/man/uv-version)(1), [uv-pip](/man/uv-pip)(1), [uv-tool](/man/uv-tool)(1), [pip](/man/pip)(1)

@@ -16,9 +16,25 @@ Paste from the **primary** clipboard (highlighted text)
 
 ```wl-paste > [path/to/file]```
 
+Paste without trailing **newline**
+
+```wl-paste --no-newline```
+
+List available **MIME types** in clipboard
+
+```wl-paste --list-types```
+
+Paste clipboard as a specific **MIME type** (e.g., image)
+
+```wl-paste --type image/png > [path/to/image.png]```
+
 **Pipe** clipboard contents to a command
 
 ```wl-paste | [command]```
+
+Run a command each time the **clipboard changes**
+
+```wl-paste --watch [command]```
 
 # SYNOPSIS
 

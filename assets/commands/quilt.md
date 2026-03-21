@@ -28,6 +28,22 @@ Manage ordered series of patches
 
 ```quilt series```
 
+**Show diff** of current changes
+
+```quilt diff```
+
+**Apply all patches** in the series
+
+```quilt push -a```
+
+**Remove all applied patches**
+
+```quilt pop -a```
+
+**Delete a patch** from the series
+
+```quilt delete [patch_name.patch]```
+
 # SYNOPSIS
 
 **quilt** _command_ [_options_]
@@ -35,25 +51,40 @@ Manage ordered series of patches
 # PARAMETERS
 
 **new** _NAME_
-> Create patch.
+> Create a new patch with the given name and insert it after the current top patch.
 
 **add** _FILE_
-> Add file to patch.
+> Register a file to be tracked in the current topmost patch before making changes.
 
-**push**
-> Apply next patch.
+**push** [**-a**]
+> Apply the next unapplied patch in the series. Use **-a** to apply all remaining patches.
 
-**pop**
-> Remove current patch.
+**pop** [**-a**]
+> Remove the topmost applied patch, reverting its changes. Use **-a** to remove all applied patches.
 
 **refresh**
-> Update patch.
+> Update the topmost patch to reflect the current changes to tracked files.
 
 **series**
-> Show patch list.
+> List all patches in the series file in order.
 
-**diff**
-> Show changes.
+**diff** [**-z**]
+> Show the differences between the current state of tracked files and the topmost patch.
+
+**delete** [**-r**] _NAME_
+> Remove a patch from the series file. Use **-r** to also remove the patch file from the patches directory.
+
+**edit** _FILE_
+> Add a file to the topmost patch and open it in the default editor.
+
+**top**
+> Print the name of the topmost applied patch.
+
+**applied**
+> List all currently applied patches.
+
+**unapplied**
+> List all patches that have not yet been applied.
 
 # DESCRIPTION
 
@@ -63,7 +94,7 @@ The typical workflow involves creating a new patch with **new**, registering fil
 
 # CAVEATS
 
-Creates patches/ and series file. Standard patch format.
+Quilt creates a **patches/** directory and a **series** file in the working directory. Files must be registered with **add** before editing, or changes will not be captured by **refresh**. The patches use standard unified diff format.
 
 # HISTORY
 

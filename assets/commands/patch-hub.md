@@ -8,9 +8,21 @@ TUI for browsing and applying patches from kernel mailing lists
 
 ```patch-hub```
 
+**Launch with a specific mailing list**
+
+```patch-hub --mailing-list [linux-kernel]```
+
 # SYNOPSIS
 
 **patch-hub** [_options_]
+
+# PARAMETERS
+
+**--mailing-list** _list_
+> Specify the mailing list to browse on startup.
+
+**--page-size** _N_
+> Number of patches to display per page.
 
 # DESCRIPTION
 
@@ -18,7 +30,7 @@ TUI for browsing and applying patches from kernel mailing lists
 
 # CAVEATS
 
-Requires **b4** and **git-email** to be installed. Enhanced patch rendering is available with optional tools like bat, delta, or diff-so-fancy.
+Requires **b4** and **git send-email** to be installed for applying and replying to patches. Enhanced patch rendering is available with optional tools like bat, delta, or diff-so-fancy.
 
 # HISTORY
 
@@ -26,4 +38,4 @@ Requires **b4** and **git-email** to be installed. Enhanced patch rendering is a
 
 # SEE ALSO
 
-[git](/man/git)(1), [b4](/man/b4)(1), [mutt](/man/mutt)(1)
+[git](/man/git)(1), [git-send-email](/man/git-send-email)(1), [mutt](/man/mutt)(1), [patch](/man/patch)(1)

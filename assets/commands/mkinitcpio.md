@@ -103,4 +103,4 @@ Incorrect hook configuration can render a system unbootable. Always keep a worki
 
 # SEE ALSO
 
-[lsinitcpio](/man/lsinitcpio)(1), [dracut](/man/dracut)(8), [mkinitramfs](/man/mkinitramfs)(8)
+[dracut](/man/dracut)(8), [mkinitramfs](/man/mkinitramfs)(8)

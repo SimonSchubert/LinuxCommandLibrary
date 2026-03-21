@@ -18,7 +18,7 @@ triggers notifications when commands complete
 
 **Use specific service**
 
-```noti -slack [command]```
+```noti --slack [command]```
 
 **Pipe mode**
 
@@ -27,6 +27,10 @@ triggers notifications when commands complete
 **Banner notification**
 
 ```noti -b [command]```
+
+**Watch a running process by PID**
+
+```noti -w [PID]```
 
 # SYNOPSIS
 
@@ -46,8 +50,17 @@ _COMMAND_
 **-b**
 > Banner notification.
 
-**-slack**
+**-s**
+> Speech notification (text-to-speech).
+
+**-w** _PID_
+> Watch a running process by PID and notify when it finishes.
+
+**--slack**
 > Notify via Slack.
+
+**--pushover**
+> Notify via Pushover.
 
 **--help**
 > Display help information.

@@ -51,6 +51,9 @@ Set up and control zram devices
 **--raw**
 > Raw output format
 
+**-n, --no-headings**
+> Do not print column headings
+
 # DESCRIPTION
 
 **zramctl** sets up and controls zram devices, which are compressed RAM-based block devices. Zram is useful for creating compressed swap space or temporary filesystems, improving memory efficiency.
@@ -63,4 +66,4 @@ Requires the zram kernel module. Compression algorithms vary by kernel version. 
 
 # SEE ALSO
 
-[mkswap](/man/mkswap)(8), [swapon](/man/swapon)(8), [free](/man/free)(1)
+[mkswap](/man/mkswap)(8), [swapon](/man/swapon)(8), [free](/man/free)(1), [lsblk](/man/lsblk)(8)

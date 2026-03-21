@@ -28,6 +28,14 @@ displays repository commit history
 
 ```hg log -r [revision]```
 
+**Show commits by a specific user**
+
+```hg log -u [username]```
+
+**Show commits matching a keyword**
+
+```hg log -k [keyword]```
+
 # SYNOPSIS
 
 **hg log** [_options_] [_file_]
@@ -52,6 +60,12 @@ _FILE_
 **-b**, **--branch** _BRANCH_
 > Show branch commits.
 
+**-u**, **--user** _USER_
+> Show commits by user.
+
+**-k**, **--keyword** _TEXT_
+> Search commit messages.
+
 **--template** _TPL_
 > Output template.
 
@@ -74,4 +88,4 @@ Log is a core **Mercurial** command for viewing repository history since version
 
 # SEE ALSO
 
-[hg](/man/hg)(1), [hg-status](/man/hg-status)(1), [hg-diff](/man/hg-diff)(1)
+[hg](/man/hg)(1), [hg-status](/man/hg-status)(1), [hg-commit](/man/hg-commit)(1), [git-log](/man/git-log)(1)

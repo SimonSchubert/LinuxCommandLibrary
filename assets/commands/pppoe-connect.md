@@ -10,7 +10,7 @@ Manage a PPPoE DSL connection
 
 **Connect with a specific config file**
 
-```sudo pppoe-connect [/etc/sysconfig/network-scripts/ifcfg-ppp0]```
+```sudo pppoe-connect [/etc/ppp/pppoe.conf]```
 
 # SYNOPSIS
 
@@ -19,7 +19,7 @@ Manage a PPPoE DSL connection
 # PARAMETERS
 
 _CONFIG_FILE_
-> Configuration file path. Defaults to /etc/sysconfig/network-scripts/ifcfg-ppp0.
+> Configuration file path. Defaults to /etc/ppp/pppoe.conf.
 
 # DESCRIPTION
 
@@ -37,5 +37,5 @@ pppoe-connect is part of the **Roaring Penguin PPPoE** client package.
 
 # SEE ALSO
 
-[pppoe](/man/pppoe)(8), [pppoe-setup](/man/pppoe-setup)(8), [pppoe-stop](/man/pppoe-stop)(8), [pppd](/man/pppd)(8)
+[pppoe](/man/pppoe)(8), [pppoe-setup](/man/pppoe-setup)(8), [pppoe-stop](/man/pppoe-stop)(8), [pppd](/man/pppd)(8), [pppoe-discovery](/man/pppoe-discovery)(8)
 

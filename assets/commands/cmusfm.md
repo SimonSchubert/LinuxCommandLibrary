@@ -16,6 +16,10 @@ Last.fm scrobbler for the cmus music player
 
 ```pkill cmusfm```
 
+**Edit the cmusfm** configuration file
+
+```$EDITOR ~/.config/cmus/cmusfm.conf```
+
 # SYNOPSIS
 
 **cmusfm** [**init**]
@@ -70,4 +74,4 @@ The cmusfm server runs as a background process and must be restarted (via **pkil
 
 # SEE ALSO
 
-[cmus](/man/cmus)(1)
+[cmus](/man/cmus)(1), [mpd](/man/mpd)(1), [ncmpcpp](/man/ncmpcpp)(1), [mpc](/man/mpc)(1)

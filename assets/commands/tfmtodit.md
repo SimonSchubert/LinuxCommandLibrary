@@ -20,6 +20,10 @@ Convert TeX font metrics for groff
 
 ```tfmtodit -k [skewchar] [tfm_file] [map_file] [font]```
 
+**Display the version** number
+
+```tfmtodit -v```
+
 # SYNOPSIS
 
 **tfmtodit** [**-sv**] [**-g** _gf_file_] [**-k** _skewchar_] _tfm_file_ _map_file_ _font_
@@ -56,4 +60,4 @@ The tool is specifically designed for the DVI output device and may not work cor
 
 # SEE ALSO
 
-[groff](/man/groff)(1), [grodvi](/man/grodvi)(1), [groff_font](/man/groff_font)(5)
+[groff](/man/groff)(1), [grodvi](/man/grodvi)(1), [groff_font](/man/groff_font)(5), [troff](/man/troff)(1)

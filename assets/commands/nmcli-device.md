@@ -12,9 +12,13 @@ List available **Wi-Fi networks**
 
 ```nmcli device wifi```
 
-**Connect** to a Wi-Fi network
+**Connect** to a Wi-Fi network (prompt for password)
 
-```nmcli device wifi connect ssid --ask```
+```nmcli device wifi connect [ssid] --ask```
+
+Connect to a **hidden** Wi-Fi network
+
+```nmcli device wifi connect [ssid] password [password] hidden yes```
 
 Show **password** and QR code for current Wi-Fi
 
@@ -22,7 +26,15 @@ Show **password** and QR code for current Wi-Fi
 
 Show **detailed information** about a device
 
-```nmcli device show wlan0```
+```nmcli device show [wlan0]```
+
+**Disconnect** a device
+
+```nmcli device disconnect [wlan0]```
+
+**Rescan** for available Wi-Fi networks
+
+```nmcli device wifi rescan```
 
 # SYNOPSIS
 
@@ -61,11 +73,14 @@ Show **detailed information** about a device
 **wifi list**
 > List available Wi-Fi access points
 
-**wifi connect ssid**
-> Connect to a Wi-Fi network
+**wifi connect ssid [password passwd] [hidden yes|no]**
+> Connect to a Wi-Fi network, optionally specifying password and hidden status
 
 **wifi rescan**
 > Request a Wi-Fi scan
+
+**wifi hotspot [ifname wlan0] [ssid name] [password passwd]**
+> Create a Wi-Fi hotspot
 
 **wifi show-password**
 > Show password for current Wi-Fi connection
@@ -81,6 +96,9 @@ Show **detailed information** about a device
 **--rescan auto|no|yes**
 > Control Wi-Fi scanning before listing
 
+**-w, --wait seconds**
+> Timeout for finishing the operation
+
 **ifname**
 > Network interface name (eth0, wlan0, etc.)
 
@@ -94,4 +112,4 @@ Part of the **nmcli** command-line interface for **NetworkManager**. Provides de
 
 # SEE ALSO
 
-[nmcli](/man/nmcli)(1), [nmcli-connection](/man/nmcli-connection)(1), [iw](/man/iw)(8), [iwctl](/man/iwctl)(1)
+[nmcli](/man/nmcli)(1), [nmcli-connection](/man/nmcli-connection)(1), [nmcli-general](/man/nmcli-general)(1), [iw](/man/iw)(8), [iwctl](/man/iwctl)(1)

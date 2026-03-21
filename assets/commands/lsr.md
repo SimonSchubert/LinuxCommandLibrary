@@ -16,6 +16,14 @@ Colorized ls alternative with Git integration and Lua extensibility
 
 ```lsr -g```
 
+**List all files including hidden ones**
+
+```lsr -a```
+
+**List files in a specific directory**
+
+```lsr [/path/to/directory]```
+
 # SYNOPSIS
 
 **lsr** [_options_] [_path_...]
@@ -47,4 +55,4 @@ Lua scripting extension requires Lua to be available on the system.
 
 # SEE ALSO
 
-[ls](/man/ls)(1), [eza](/man/eza)(1), [tree](/man/tree)(1)
+[ls](/man/ls)(1), [eza](/man/eza)(1), [tree](/man/tree)(1), [lsd](/man/lsd)(1), [exa](/man/exa)(1)

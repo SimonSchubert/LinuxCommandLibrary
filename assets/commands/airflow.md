@@ -1,6 +1,6 @@
 # TAGLINE
 
-Author, schedule, and monitor data workflows
+Platform to author, schedule, and monitor data workflows
 
 # TLDR
 
@@ -31,6 +31,14 @@ Author, schedule, and monitor data workflows
 **Pause a DAG** (stop scheduling)
 
 ```airflow dags pause [dag_id]```
+
+**Unpause a DAG** (resume scheduling)
+
+```airflow dags unpause [dag_id]```
+
+**List all DAG runs** for a specific DAG
+
+```airflow dags list-runs -d [dag_id]```
 
 **Initialize the database**
 
@@ -118,4 +126,4 @@ Apache Airflow was created at **Airbnb** in **2014** by Maxime Beauchemin to man
 
 # SEE ALSO
 
-[luigi](/man/luigi)(1), [prefect](/man/prefect)(1), [dagster](/man/dagster)(1), [cron](/man/cron)(8)
+[luigi](/man/luigi)(1), [prefect](/man/prefect)(1), [dagster](/man/dagster)(1), [cron](/man/cron)(8), [docker](/man/docker)(1), [kubectl](/man/kubectl)(1)

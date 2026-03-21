@@ -28,6 +28,10 @@ Network intrusion detection and prevention engine
 
 ```suricata -c /etc/suricata/suricata.yaml -i [eth0] -l [/var/log/suricata]```
 
+**Update rules** using suricata-update
+
+```suricata-update```
+
 **Display version**
 
 ```suricata -V```
@@ -98,6 +102,12 @@ Network intrusion detection and prevention engine
 **-k** _mode_
 > Checksum check: all, none, or auto.
 
+**--set** _name=value_
+> Override a configuration value (e.g., --set default-log-dir=/tmp).
+
+**-h**, **--help**
+> Display help information.
+
 # DESCRIPTION
 
 **suricata** is a high-performance Network IDS, IPS, and Network Security Monitoring engine. It inspects network traffic using signature-based detection, protocol analysis, and anomaly detection to identify threats and security events.
@@ -129,4 +139,4 @@ Requires root or CAP_NET_RAW capability for live capture. High traffic environme
 
 # SEE ALSO
 
-[snort](/man/snort)(1), [tcpdump](/man/tcpdump)(1), [zeek](/man/zeek)(1), [nftables](/man/nftables)(8)
+[snort](/man/snort)(1), [tcpdump](/man/tcpdump)(1), [zeek](/man/zeek)(1), [tshark](/man/tshark)(1), [iptables](/man/iptables)(8), [nftables](/man/nftables)(8)

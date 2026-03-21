@@ -24,6 +24,14 @@ Optimize PNG files for smaller size
 
 ```pngcrush -reduce [input.png] [output.png]```
 
+**Batch optimize** all PNGs in a directory
+
+```pngcrush -d [output_dir/] [input_dir/]*.png```
+
+**Set specific compression level** (0-9)
+
+```pngcrush -l [9] [input.png] [output.png]```
+
 # SYNOPSIS
 
 **pngcrush** [_options_] _input_ [_output_]
@@ -37,16 +45,28 @@ _OUTPUT_
 > Output PNG file.
 
 **-ow**
-> Overwrite input.
+> Overwrite the input file in place.
+
+**-d** _DIRECTORY_
+> Write output files to the specified directory.
 
 **-rem** _CHUNK_
-> Remove chunk.
+> Remove a specified ancillary chunk. Use **alla** to remove all text chunks, or **allb** to remove all non-critical chunks.
 
 **-brute**
-> Brute force optimization.
+> Try all 148 filter/compression combinations for maximum reduction.
 
 **-reduce**
-> Reduce color depth.
+> Reduce color depth and bit depth where possible without data loss.
+
+**-l** _LEVEL_
+> Set zlib compression level (0 = no compression, 9 = maximum).
+
+**-n**
+> No output file; test compression without writing (useful for benchmarks).
+
+**-fix**
+> Fix otherwise fatal conditions such as bad CRCs.
 
 # DESCRIPTION
 
@@ -56,13 +76,13 @@ The **-brute** option tries all filter and compression combinations for maximum 
 
 # CAVEATS
 
-Lossless optimization. Processing time varies.
+All optimization is lossless; image data is preserved exactly. The **-brute** option can be very slow on large images as it tests all 148 compression strategies. The **-ow** flag creates a temporary file and replaces the original, so sufficient disk space is needed. Does not support animated PNGs (APNG).
 
 # HISTORY
 
-pngcrush was created for **PNG file size optimization**.
+**pngcrush** was created by Glenn Randers-Pehrson and has been one of the oldest and most widely used PNG optimization tools, first released in 1998.
 
 # SEE ALSO
 
-[optipng](/man/optipng)(1), [pngcheck](/man/pngcheck)(1), [pngquant](/man/pngquant)(1)
+[optipng](/man/optipng)(1), [pngcheck](/man/pngcheck)(1), [pngquant](/man/pngquant)(1), [zopflipng](/man/zopflipng)(1), [convert](/man/convert)(1)
 

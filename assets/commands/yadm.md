@@ -12,6 +12,10 @@ Git-based dotfiles manager
 
 ```yadm clone [https://github.com/user/dotfiles.git]```
 
+**Clone and run bootstrap automatically**
+
+```yadm clone --bootstrap [https://github.com/user/dotfiles.git]```
+
 **Add a file** to be tracked
 
 ```yadm add [~/.bashrc]```
@@ -39,6 +43,14 @@ Git-based dotfiles manager
 **Decrypt files**
 
 ```yadm decrypt```
+
+**List encrypted files** without decrypting
+
+```yadm decrypt -l```
+
+**Show status** of tracked dotfiles
+
+```yadm status```
 
 # SYNOPSIS
 
@@ -70,8 +82,8 @@ Git-based dotfiles manager
 **encrypt**
 > Encrypt files matching patterns in ~/.config/yadm/encrypt
 
-**decrypt**
-> Decrypt files from the encrypted archive
+**decrypt** [**-l**]
+> Decrypt files from the encrypted archive. Use -l to list only.
 
 **alt**
 > Create symbolic links and process templates for alternate files
@@ -84,6 +96,15 @@ Git-based dotfiles manager
 
 **bootstrap**
 > Run the bootstrap script if it exists
+
+**status**
+> Display repository status
+
+**diff**
+> View uncommitted changes to tracked files
+
+**remote** [**-v**]
+> Show details about configured remote repositories
 
 # DESCRIPTION
 
@@ -105,4 +126,4 @@ yadm requires Git; encryption features require GPG or another supported tool. Th
 
 # SEE ALSO
 
-[git](/man/git)(1), [stow](/man/stow)(1), [chezmoi](/man/chezmoi)(1), [dotbot](/man/dotbot)(1)
+[git](/man/git)(1), [stow](/man/stow)(1), [chezmoi](/man/chezmoi)(1), [dotbot](/man/dotbot)(1), [gpg](/man/gpg)(1)

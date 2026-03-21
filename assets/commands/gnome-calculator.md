@@ -16,6 +16,10 @@ Launch in **programming mode**
 
 ```gnome-calculator --mode programming```
 
+Launch in **financial mode**
+
+```gnome-calculator --mode financial```
+
 Display **version**
 
 ```gnome-calculator --version```
@@ -26,17 +30,20 @@ Display **version**
 
 # PARAMETERS
 
-**--solve** _EQUATION_
-> Solve equation and print result without launching GUI
+**-s**, **--solve** _EQUATION_
+> Solve equation and print result without launching GUI.
+
+**-e** _EQUATION_
+> Equivalent to --solve.
 
 **-m**, **--mode** _MODE_
-> Start in specific mode: basic, advanced, financial, programming
+> Start in specific mode: basic, advanced, financial, programming.
 
 **--version**
-> Display version information
+> Display version information.
 
 **--help**
-> Display help message
+> Display help message.
 
 # DESCRIPTION
 
@@ -54,4 +61,4 @@ gnome-calculator evolved from the original gcalctool, which was part of GNOME si
 
 # SEE ALSO
 
-[bc](/man/bc)(1), [dc](/man/dc)(1), [qalc](/man/qalc)(1)
+[bc](/man/bc)(1), [dc](/man/dc)(1), [qalc](/man/qalc)(1), [expr](/man/expr)(1)

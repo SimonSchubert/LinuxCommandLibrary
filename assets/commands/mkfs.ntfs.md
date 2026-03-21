@@ -12,7 +12,7 @@ Create an NTFS filesystem with a **volume label**
 
 ```sudo mkfs.ntfs -L [volume_label] [/dev/sdXY]```
 
-Create an NTFS filesystem with a specific **UUID**
+Create an NTFS filesystem with a **random UUID**
 
 ```sudo mkfs.ntfs -U [/dev/sdXY]```
 
@@ -23,6 +23,10 @@ Perform a **quick format** (skip zeroing and bad sector check)
 Enable **compression** on the filesystem
 
 ```sudo mkfs.ntfs -C [/dev/sdXY]```
+
+Create an NTFS filesystem with a specific **cluster size**
+
+```sudo mkfs.ntfs -c [4096] [/dev/sdXY]```
 
 **Simulate** formatting without writing to device
 
@@ -92,4 +96,4 @@ NTFS was developed by **Microsoft** and introduced with **Windows NT 3.1 in 1993
 
 # SEE ALSO
 
-[mkfs](/man/mkfs)(8), [ntfs-3g](/man/ntfs-3g)(8), [ntfsfix](/man/ntfsfix)(8), [badblocks](/man/badblocks)(8)
+[mkfs](/man/mkfs)(8), [mkfs.ext4](/man/mkfs.ext4)(8), [mkfs.vfat](/man/mkfs.vfat)(8), [ntfs-3g](/man/ntfs-3g)(8), [ntfsfix](/man/ntfsfix)(8), [fdisk](/man/fdisk)(8), [mount](/man/mount)(8), [badblocks](/man/badblocks)(8)

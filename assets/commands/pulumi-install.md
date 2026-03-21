@@ -24,6 +24,10 @@ Install Pulumi project dependencies and plugins
 
 ```pulumi install --parallel [8]```
 
+**Use language version tools to set up the runtime**
+
+```pulumi install --use-language-version-tools```
+
 # SYNOPSIS
 
 **pulumi** **install** [_options_]
@@ -51,5 +55,4 @@ Install Pulumi project dependencies and plugins
 
 # SEE ALSO
 
-[pulumi](/man/pulumi)(1), [pulumi-plugin](/man/pulumi-plugin)(1)
-
+[pulumi](/man/pulumi)(1), [pulumi-plugin](/man/pulumi-plugin)(1), [pulumi-new](/man/pulumi-new)(1), [pulumi-up](/man/pulumi-up)(1)

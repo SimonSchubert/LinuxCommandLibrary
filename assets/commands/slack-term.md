@@ -12,9 +12,28 @@ Slack client for the terminal
 
 ```slack-term -config [/path/to/config]```
 
+**Launch with a Slack token directly**
+
+```slack-term -token [xoxp-your-slack-token]```
+
+**Launch with debugging enabled**
+
+```slack-term -debug```
+
 # SYNOPSIS
 
-**slack-term** [**-config** _path_]
+**slack-term** [**-config** _path_] [**-token** _token_] [**-debug**]
+
+# PARAMETERS
+
+**-config** _path_
+> Location of the config file. Defaults to ~/.config/slack-term/config.
+
+**-token** _token_
+> Slack authentication token. Overrides the token in the config file.
+
+**-debug**
+> Enable debugging mode.
 
 # DESCRIPTION
 
@@ -22,13 +41,13 @@ Slack client for the terminal
 
 # CONFIGURATION
 
-**~/.slack-term**
-> Default configuration file containing the Slack API token and settings.
+**~/.config/slack-term/config**
+> Default JSON configuration file containing the Slack API token and settings.
 
 # HISTORY
 
-**slack-term** was created by **J.P. Bruins Slot** (jpbruinsslot) and is written in **Go**.
+**slack-term** was created by **J.P. Bruins Slot** (erroneousboat) and is written in **Go**.
 
 # SEE ALSO
 
-[weechat](/man/weechat)(1), [irssi](/man/irssi)(1), [scli](/man/scli)(1)
+[weechat](/man/weechat)(1), [irssi](/man/irssi)(1), [scli](/man/scli)(1), [screen](/man/screen)(1)

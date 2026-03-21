@@ -76,14 +76,17 @@ Add packages to a Bun project
 **--force**
 > Force install despite warnings
 
+**--trust**
+> Allow lifecycle scripts for added packages
+
 # PACKAGE SOURCES
 
 Supports npm registry packages, semver ranges, git URLs (git+https://...), local paths (file:../path), and workspace packages (workspace:*).
 
 # CAVEATS
 
-Creates bun.lockb lockfile format. Package versions default to caret (^) ranges unless --exact is specified. Global packages are stored in Bun's global store, not system-wide.
+Creates a binary bun.lockb lockfile (or bun.lock text lockfile in newer versions). Package versions default to caret (^) ranges unless --exact is specified. Global packages are stored in Bun's global store, not system-wide.
 
 # SEE ALSO
 
-[bun](/man/bun)(1), [bun-install](/man/bun-install)(1), [bun-remove](/man/bun-remove)(1), [npm-install](/man/npm-install)(1)
+[bun](/man/bun)(1), [bun-install](/man/bun-install)(1), [bun-remove](/man/bun-remove)(1), [npm-install](/man/npm-install)(1), [yarn](/man/yarn)(1)

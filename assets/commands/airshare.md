@@ -4,52 +4,76 @@ Share files between devices on the local network
 
 # TLDR
 
-**Share** a file
+**Send** a file with a code
 
-```airshare send [file.txt]```
+```airshare [mycode] [file.txt]```
 
-**Receive** files
+**Receive** files using a code
 
-```airshare receive [code]```
+```airshare [mycode]```
 
-Share multiple **files**
+**Send** multiple files
 
-```airshare send [file1.txt] [file2.txt]```
+```airshare [mycode] [file1.txt] [file2.txt]```
 
-Share a **directory**
+**Send text** content directly
 
-```airshare send [directory/]```
+```airshare [mycode] -t "[Hello, World!]"```
+
+**Host a receiving** (upload) server
+
+```airshare [mycode] -u```
+
+**Send clipboard** contents as text
+
+```airshare [mycode] -cs```
+
+**Specify a custom port**
+
+```airshare [mycode] [file.txt] -p [9000]```
 
 # SYNOPSIS
 
-**airshare** _command_ [_options_] [_files_]
+**airshare** [_options_] _code_ [_files_]
 
 # DESCRIPTION
 
-**airshare** is a cross-platform file sharing tool that transfers files between devices on the same local network. It uses mDNS for device discovery and generates a simple code that recipients use to receive files.
+**airshare** is a Python-based cross-platform file sharing tool that transfers files between devices on the same local network. It uses mDNS for device discovery and identifies transfers with a simple code word. Recipients access shared content by using the same code.
 
-The tool provides a simple alternative to complex file sharing setups, requiring no server configuration or account creation.
+The tool provides a simple alternative to complex file sharing setups, requiring no server configuration or account creation. Shared content can also be accessed via a web browser at `http://<code>.local:8000`.
 
 # PARAMETERS
 
-**send** _files_
-> Share files or directories
+_CODE_
+> An identifying code word for the sharing session.
 
-**receive** _code_
-> Receive files using a share code
+_FILES_
+> File(s) or directories to send.
 
-**--no-zip**
-> Don't compress multiple files
+**-p**, **--port** _INTEGER_
+> Specify the port number for the server (default: 8000).
 
-**--port** _port_
-> Specify port number
+**-t**, **--text** _TEXT_
+> Send text content directly. Enclose multiple words in quotes.
 
-**--clipboard**
-> Copy code to clipboard
+**-u**, **--upload**
+> Host a receiving server to accept uploaded files.
+
+**-cs**, **--clip-send**
+> Send clipboard contents as text.
+
+**-cr**, **--clip-receive**
+> Receive content and copy it to the clipboard.
+
+**-fp**, **--file-path**
+> Send files whose paths have been copied to the clipboard.
+
+**--version**
+> Display version information.
 
 # CAVEATS
 
-Both devices must be on the same local network. Large files may take time to transfer depending on network speed. No encryption by default on older versions.
+Both devices must be on the same local network. Large files are processed in chunks but may take time depending on network speed. The tool requires mDNS support on the network.
 
 # HISTORY
 

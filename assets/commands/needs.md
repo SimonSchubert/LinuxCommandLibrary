@@ -4,17 +4,25 @@ Check if required executables are installed on the system
 
 # TLDR
 
-**Check if tools are installed**
+**Check if tools are installed and show their versions**
 
 ```needs [tool1] [tool2] [tool3]```
 
-**Check without version lookups**
+**Check without retrieving version information**
 
-```needs --no-version [tool1] [tool2]```
+```needs --no-versions [tool1] [tool2]```
 
-**Check from a requirements file**
+**Show full version strings instead of short versions**
 
-```needs -f [needsfile]```
+```needs --full-versions [tool1] [tool2]```
+
+**Run quietly, only reporting via exit code**
+
+```needs -q [tool1] [tool2]```
+
+**Check with verbose logging**
+
+```needs -vvv [tool1] [tool2]```
 
 # SYNOPSIS
 
@@ -22,24 +30,35 @@ Check if required executables are installed on the system
 
 # PARAMETERS
 
-**--no-version**
-> Skip version checks for faster execution.
+**-n**, **--no-versions**
+> Skip version checks, only verify that binaries exist.
 
-**-f**, **--file** _FILE_
-> Read requirements from a needsfile.
+**-f**, **--full-versions**
+> Show the full version string for each binary instead of a shortened version.
 
-**-v**, **--verbose**
-> Show detailed timing and log information.
+**-q**, **--quiet**
+> Stay quiet, only communicate results via exit code (0 if all found, 1 if any missing).
+
+**-v**, **--verbosity**
+> Increase verbosity level. Can be repeated for more detail (e.g., -vvv for logs, -vvvv for timing info).
+
+**--help**
+> Display help information.
+
+**--version**
+> Show the version of needs itself.
 
 # DESCRIPTION
 
-**needs** is a CLI tool that verifies whether specified executables are installed on a system and can retrieve their version information. It runs checks with multi-threaded execution, provides colored output, supports pipe-friendly output, and logs timing per command.
+**needs** is a CLI tool that verifies whether specified executables are installed on a system and optionally retrieves their version information. It runs checks using multi-threaded execution for speed, provides colored output, and supports pipe-friendly output.
 
-Exit codes indicate whether all required tools are present, making it suitable for use in scripts and CI pipelines.
+Binary names can be provided as command-line arguments or listed in a `needsfile` (one or more binaries per line).
+
+Exit codes indicate whether all required tools are present (0 for success, 1 for missing), making it suitable for use in scripts and CI pipelines.
 
 # CAVEATS
 
-Version detection relies on each tool supporting a standard version flag (--version or -v). Some tools may not be detected correctly.
+Version detection relies on each tool supporting a standard version flag (`--version` or `-v`). Some tools may not have their version detected correctly. The `--no-versions` and `--full-versions` flags are only available when compiled with the `version-retrieval` feature (enabled by default).
 
 # HISTORY
 
@@ -47,4 +66,4 @@ Version detection relies on each tool supporting a standard version flag (--vers
 
 # SEE ALSO
 
-[which](/man/which)(1), [command](/man/command)(1), [has](/man/has)(1)
+[which](/man/which)(1), [command](/man/command)(1), [has](/man/has)(1), [type](/man/type)(1), [whereis](/man/whereis)(1)

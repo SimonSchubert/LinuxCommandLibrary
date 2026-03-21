@@ -82,4 +82,4 @@ Filter syntax must be correct. Base DN must match directory structure. Credentia
 
 # SEE ALSO
 
-[ldapadd](/man/ldapadd)(1), [ldapmodify](/man/ldapmodify)(1), [ldapdelete](/man/ldapdelete)(1), [slapd](/man/slapd)(8)
+[ldapadd](/man/ldapadd)(1), [ldapmodify](/man/ldapmodify)(1), [slapd](/man/slapd)(8)

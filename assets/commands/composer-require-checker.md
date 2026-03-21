@@ -54,4 +54,4 @@ Requires static analysis of PHP code. May report false positives for dynamically
 
 # SEE ALSO
 
-[composer](/man/composer)(1), [composer-audit](/man/composer-audit)(1), [phpstan](/man/phpstan)(1)
+[composer](/man/composer)(1), [composer-audit](/man/composer-audit)(1), [php](/man/php)(1), [phpstan](/man/phpstan)(1)

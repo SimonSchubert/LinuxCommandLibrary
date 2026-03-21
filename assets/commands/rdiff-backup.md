@@ -4,33 +4,37 @@ Reverse differential backup with file history
 
 # TLDR
 
-**Backup directory**
+**Backup** a local directory to a local destination
 
 ```rdiff-backup [source/] [backup/]```
 
-**Backup to remote**
+**Backup** a local directory to a **remote** host over SSH
 
 ```rdiff-backup [source/] [user@host::backup/]```
 
-**Restore latest**
+**Restore** the latest version from a backup
 
 ```rdiff-backup -r now [backup/] [restore/]```
 
-**Restore from specific time**
+**Restore** files from a **specific time** ago
 
 ```rdiff-backup -r [3D] [backup/] [restore/]```
 
-**List increments**
+**List** all backup increments and their dates
 
 ```rdiff-backup --list-increments [backup/]```
 
-**Remove old backups**
+**Remove** backup increments **older** than a given period
 
 ```rdiff-backup --remove-older-than [2W] [backup/]```
 
-**Verify backup**
+**Verify** the integrity of a backup repository
 
 ```rdiff-backup --verify [backup/]```
+
+**Backup** excluding specific patterns
+
+```rdiff-backup --exclude '[**/*.tmp]' [source/] [backup/]```
 
 # SYNOPSIS
 
@@ -60,7 +64,10 @@ Reverse differential backup with file history
 > Verbosity level.
 
 **--force**
-> Force operation.
+> Force operation, even if destination is not empty or increments are corrupt.
+
+**--print-statistics**
+> Print file transfer statistics after backup.
 
 # TIME FORMATS
 
@@ -68,7 +75,8 @@ Reverse differential backup with file history
 **3D** - 3 days ago
 **2W** - 2 weeks ago
 **1M** - 1 month ago
-**2024-01-15** - Specific date
+**2025-01-15** - Specific date
+**2025-01-15T14:30:00** - Specific date and time
 
 # DESCRIPTION
 
@@ -84,7 +92,7 @@ Retention policies remove old increments. Balance history depth against storage.
 
 # CAVEATS
 
-Requires rdiff-backup on remote. Large initial backup. Metadata changes trigger updates.
+Requires rdiff-backup installed on both local and remote machines for remote backups. The initial full backup can be large and time-consuming. Metadata changes (permissions, ownership) trigger incremental updates even if file contents are unchanged.
 
 # HISTORY
 
@@ -92,4 +100,4 @@ Requires rdiff-backup on remote. Large initial backup. Metadata changes trigger 
 
 # SEE ALSO
 
-[rsync](/man/rsync)(1), [borgbackup](/man/borgbackup)(1), [duplicity](/man/duplicity)(1)
+[rsync](/man/rsync)(1), [borgbackup](/man/borgbackup)(1), [duplicity](/man/duplicity)(1), [restic](/man/restic)(1), [tar](/man/tar)(1)

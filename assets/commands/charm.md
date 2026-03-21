@@ -1,6 +1,6 @@
 # TAGLINE
 
-encrypted cloud storage and key-value database
+Encrypted cloud storage and key-value database
 
 # TLDR
 
@@ -20,21 +20,25 @@ encrypted cloud storage and key-value database
 
 ```charm kv delete [key]```
 
-**Encrypt a file**
+**Encrypt** a file using Charm keys
 
-```charm crypt encrypt [file]```
+```charm crypt encrypt [path/to/file]```
 
-**Decrypt a file**
+**Decrypt** a file encrypted with Charm keys
 
-```charm crypt decrypt [file.enc]```
+```charm crypt decrypt [path/to/file.enc]```
 
-**Sync data to Charm Cloud**
+**Sync** local data to Charm Cloud
 
 ```charm sync```
 
-**Show account information**
+**Show** account identity and linked devices
 
 ```charm id```
+
+**Back up** encryption keys to a file
+
+```charm backup-keys```
 
 # SYNOPSIS
 
@@ -96,4 +100,4 @@ Charm was created by **Charmbracelet**, a company focused on making the command 
 
 # SEE ALSO
 
-[pass](/man/pass)(1), [age](/man/age)(1), [glow](/man/glow)(1)
+[pass](/man/pass)(1), [age](/man/age)(1), [glow](/man/glow)(1), [gpg](/man/gpg)(1)

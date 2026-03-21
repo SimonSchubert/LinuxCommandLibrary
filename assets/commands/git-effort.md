@@ -8,13 +8,17 @@ Display commit activity and development effort per file
 
 ```git effort```
 
-**Show effort for path**
+**Show effort for a specific directory**
 
 ```git effort [src/]```
 
-**Limit by commits**
+**Only show files with more than N commits**
 
 ```git effort --above [50]```
+
+**Show effort for a specific file**
+
+```git effort [path/to/file.js]```
 
 # SYNOPSIS
 
@@ -23,10 +27,10 @@ Display commit activity and development effort per file
 # PARAMETERS
 
 _PATH_
-> Path to analyze.
+> File or directory path to analyze. When omitted, analyzes the entire repository.
 
 **--above** _N_
-> Only show files with N+ commits.
+> Only show files with more than N commits. Useful for filtering out low-activity files.
 
 **--help**
 > Display help information.
@@ -47,4 +51,4 @@ git effort is part of **git-extras**, created by **TJ Holowaychuk** to visualize
 
 # SEE ALSO
 
-[git-fame](/man/git-fame)(1), [git-summary](/man/git-summary)(1)
+[git-fame](/man/git-fame)(1), [git-summary](/man/git-summary)(1), [git-extras](/man/git-extras)(1), [git-shortlog](/man/git-shortlog)(1)

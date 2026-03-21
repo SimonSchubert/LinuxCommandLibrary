@@ -60,8 +60,17 @@ PyTorch distributed training launcher
 **--master_port** _port_
 > Master node port (legacy, use --rdzv_endpoint instead).
 
-**--local-rank**
-> Passed to the training script indicating the local process rank.
+**--local-addr** _addr_
+> Local address to bind to. Defaults to localhost.
+
+**--redirects** _N_
+> Redirect stdout and stderr for each worker to log files. Format: 0:1,1:2 redirects stdout of worker 0 to file 1, etc.
+
+**--tee** _N_
+> Tee stdout/stderr to both console and log files. Same format as --redirects.
+
+**--log-dir** _dir_
+> Directory for log files when using --redirects or --tee.
 
 # DESCRIPTION
 

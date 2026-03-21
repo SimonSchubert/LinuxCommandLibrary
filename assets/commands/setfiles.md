@@ -73,6 +73,12 @@ Use **multiple threads** for faster processing
 **-D**
 > Set or update directory SHA1 digests in extended attributes
 
+**-W**
+> Display warnings about entries that have no matching specification
+
+**-l**
+> Log changes to the file named by the SETFILES_PROGRESS environment variable at 10-second intervals
+
 # DESCRIPTION
 
 **setfiles** initializes and corrects SELinux security context labels on filesystems based on pattern-to-context mappings in a specification file. It is the primary tool for relabeling files after SELinux policy changes or system installation.
@@ -89,4 +95,4 @@ Requires SELinux to be enabled; on non-SELinux systems, the command has no effec
 
 # SEE ALSO
 
-[restorecon](/man/restorecon)(8), [fixfiles](/man/fixfiles)(8), [semanage](/man/semanage)(8), [semanage-fcontext](/man/semanage-fcontext)(8)
+[restorecon](/man/restorecon)(8), [fixfiles](/man/fixfiles)(8), [semanage](/man/semanage)(8), [semanage-fcontext](/man/semanage-fcontext)(8), [chcon](/man/chcon)(1), [getenforce](/man/getenforce)(8), [sestatus](/man/sestatus)(8)

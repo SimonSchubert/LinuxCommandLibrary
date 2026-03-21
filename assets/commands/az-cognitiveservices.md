@@ -28,6 +28,10 @@ Manage Azure AI and Cognitive Services accounts
 
 ```az cognitiveservices account list-kinds```
 
+**List available SKUs** for a specific kind and location
+
+```az cognitiveservices account list-skus --kind [TextAnalytics] --location [eastus]```
+
 **Delete an account**
 
 ```az cognitiveservices account delete --name [myaccount] --resource-group [myRG]```
@@ -65,6 +69,12 @@ Manage Azure AI and Cognitive Services accounts
 **account network-rule**
 > Manage network rules.
 
+**account list-kinds**
+> List available account kinds.
+
+**account list-skus**
+> List available SKUs for a service kind and location.
+
 # DESCRIPTION
 
 **az cognitiveservices** manages Azure Cognitive Services accounts, which provide AI capabilities including vision, speech, language, and decision APIs. It handles account creation, configuration, deployments, and subscription management for services like Text Analytics, Computer Vision, Speech Services, and OpenAI.
@@ -75,4 +85,4 @@ Requires Azure CLI to be installed and authenticated with **az login**. Differen
 
 # SEE ALSO
 
-[az](/man/az)(1), [az-config](/man/az-config)(1)
+[az](/man/az)(1), [az-config](/man/az-config)(1), [az-account](/man/az-account)(1), [az-group](/man/az-group)(1)

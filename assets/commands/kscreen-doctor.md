@@ -28,13 +28,21 @@ Set **primary** display
 
 ```kscreen-doctor output.HDMI-A-1.primary```
 
+Set display **resolution and refresh rate**
+
+```kscreen-doctor output.HDMI-A-1.mode.1920x1080@60```
+
+Set display **position**
+
+```kscreen-doctor output.DP-1.position.1920,0```
+
 # SYNOPSIS
 
 **kscreen-doctor** [_options_] [_output.ID.property.value_...]
 
 # DESCRIPTION
 
-**kscreen-doctor** manipulates display settings on KDE Plasma. It can enable/disable outputs, set rotation, scaling, resolution, and primary display status using a simple dot-notation syntax.
+**kscreen-doctor** is a command-line tool for manipulating display settings on KDE Plasma desktops. It can enable/disable outputs, set rotation, scaling, resolution, refresh rate, position, and primary display status using a simple dot-notation syntax. Multiple output changes can be specified in a single command invocation. Changes take effect immediately without requiring a restart.
 
 # PARAMETERS
 
@@ -64,7 +72,7 @@ Set **primary** display
 
 # CAVEATS
 
-Output IDs can be numeric (1, 2) or connector names (HDMI-A-1, DP-2). Use `--outputs` to find the correct identifiers.
+Output IDs can be numeric (1, 2) or connector names (HDMI-A-1, DP-2). Use `--outputs` to find the correct identifiers. This tool is specific to KDE Plasma and requires the KScreen backend to be running. On X11, xrandr provides similar functionality; on Wayland-only desktops outside KDE, use compositor-specific tools.
 
 # SEE ALSO
 

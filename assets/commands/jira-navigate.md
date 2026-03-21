@@ -1,18 +1,18 @@
 # TAGLINE
 
-opens various Jira views in your web browser
+Open various Jira views in your web browser
 
 # TLDR
 
-**Navigate to project**
+**Navigate to the project page**
 
-```jira navigate --project [PROJECT]```
+```jira navigate --project [PROJECT_KEY]```
 
-**Navigate to board**
+**Navigate to the active sprint board**
 
 ```jira navigate --board```
 
-**Navigate to backlog**
+**Navigate to the backlog view**
 
 ```jira navigate --backlog```
 
@@ -23,19 +23,19 @@ opens various Jira views in your web browser
 # PARAMETERS
 
 **--project** _key_
-> Navigate to project.
+> Navigate to the project summary page for the given project key.
 
 **--board**
-> Open project board.
+> Open the active sprint board for the current project.
 
 **--backlog**
-> Open project backlog.
+> Open the backlog view for the current project.
 
 # DESCRIPTION
 
-**jira navigate** opens various Jira views in your web browser. Part of jira-cli, it provides quick access to boards, backlogs, and project pages without manually constructing URLs.
+**jira navigate** opens various Jira views in your default web browser. Part of **jira-cli** (by Ankit Pokhrel), it provides quick access to boards, backlogs, and project pages without manually constructing URLs. The project defaults to the one configured in your jira-cli settings.
 
 # SEE ALSO
 
-[jira](/man/jira)(1), [jira-browse](/man/jira-browse)(1)
+[jira](/man/jira)(1), [jira-open](/man/jira-open)(1), [jira-sprint](/man/jira-sprint)(1)
 

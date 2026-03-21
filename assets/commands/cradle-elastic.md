@@ -12,13 +12,38 @@ manage Elasticsearch within Cradle framework
 
 ```cradle elastic stop```
 
-**Check status**
+**Check status** of Elasticsearch
 
 ```cradle elastic status```
+
+**Flush** Elasticsearch indices
+
+```cradle elastic flush```
+
+**Map** Elasticsearch schema
+
+```cradle elastic map```
 
 # SYNOPSIS
 
 **cradle** **elastic** _command_ [_options_]
+
+# PARAMETERS
+
+**start**
+> Start the Elasticsearch service for the Cradle development environment.
+
+**stop**
+> Stop the running Elasticsearch service.
+
+**status**
+> Display the current status of the Elasticsearch service.
+
+**flush**
+> Flush all Elasticsearch indices, clearing cached data.
+
+**map**
+> Apply schema mappings to Elasticsearch indices.
 
 # DESCRIPTION
 
@@ -30,4 +55,4 @@ Part of the Cradle framework's integrated service management tools that allow de
 
 # SEE ALSO
 
-[cradle](/man/cradle)(1), [elasticsearch](/man/elasticsearch)(1)
+[cradle](/man/cradle)(1), [cradle-install](/man/cradle-install)(1), [cradle-sql](/man/cradle-sql)(1), [elasticsearch](/man/elasticsearch)(1)

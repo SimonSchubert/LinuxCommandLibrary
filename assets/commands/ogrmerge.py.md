@@ -20,6 +20,14 @@ merges vector datasets
 
 ```ogrmerge.py -overwrite_ds -o [output.shp] [input*.shp]```
 
+**Assign coordinate reference system**
+
+```ogrmerge.py -a_srs [EPSG:4326] -o [output.shp] [*.shp]```
+
+**Merge with source layer name as field**
+
+```ogrmerge.py -single -src_layer_field_name [source] -o [output.gpkg] [*.shp]```
+
 # SYNOPSIS
 
 **ogrmerge.py** [_options_] -o _output_ _inputs_...
@@ -39,7 +47,16 @@ merges vector datasets
 > Overwrite existing output.
 
 **-a_srs** _SRS_
-> Assign coordinate system.
+> Assign coordinate reference system.
+
+**-src_layer_field_name** _NAME_
+> Add a field with the source layer name (useful with -single).
+
+**-src_layer_field_content** _CONTENT_
+> Specify content for the source layer field.
+
+**-nln** _NAME_
+> Name for the merged output layer (used with -single).
 
 **--help**
 > Display help information.
@@ -60,5 +77,5 @@ ogrmerge.py was added to **GDAL** for convenient vector data merging.
 
 # SEE ALSO
 
-[ogr2ogr](/man/ogr2ogr)(1), [ogrinfo](/man/ogrinfo)(1)
+[ogr2ogr](/man/ogr2ogr)(1), [ogrinfo](/man/ogrinfo)(1), [gdalinfo](/man/gdalinfo)(1)
 

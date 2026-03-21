@@ -4,17 +4,17 @@ Collection of classic logic games
 
 # TLDR
 
-**Launch puzzle collection**
+**Launch the puzzle collection** launcher
 
 ```puzzle```
 
-**Play specific puzzle**
+**Play a specific puzzle** by name
 
 ```puzzle [fifteen]```
 
-**List available puzzles**
+**Play a puzzle with a custom game ID** (preset size/difficulty)
 
-```puzzle --list```
+```puzzle [solo] --generate [3x3]```
 
 # SYNOPSIS
 
@@ -22,7 +22,7 @@ Collection of classic logic games
 
 # DESCRIPTION
 
-**puzzle** refers to various puzzle game collections, most commonly Simon Tatham's Portable Puzzle Collection. It includes classic puzzles like Sudoku, Minesweeper variants, and logic puzzles.
+**puzzle** refers to various puzzle game collections, most commonly Simon Tatham's Portable Puzzle Collection. Each puzzle in the collection is a standalone executable. The collection includes classic puzzles like Sudoku, Minesweeper variants, sliding puzzles, and logic games. On many systems, the individual binaries are prefixed with **sgt-** (e.g., **sgt-solo** for Sudoku).
 
 # COMMON PUZZLES
 
@@ -48,19 +48,23 @@ unequal     - Futoshiki puzzle
 # EXAMPLES
 
 ```bash
-# Play fifteen puzzle
+# Play the fifteen sliding tile puzzle
 puzzle fifteen
 
-# Play Sudoku
+# Play Sudoku (9x9 by default)
 puzzle solo
 
-# Minesweeper
+# Play Minesweeper
 puzzle mines
+
+# On Debian/Ubuntu with sgt- prefix
+sgt-solo
+sgt-mines
 ```
 
 # CAVEATS
 
-Specific commands vary by puzzle collection installed. May be sgt-puzzles, gnome-games, or other packages.
+Specific binary names vary by distribution and package. On Debian/Ubuntu, puzzles are installed as individual binaries with an **sgt-** prefix (e.g., **sgt-solo**). On Arch Linux, the package is **puzzles** and binaries have no prefix. On macOS, the collection can be installed via Homebrew as **puzzles**.
 
 # HISTORY
 

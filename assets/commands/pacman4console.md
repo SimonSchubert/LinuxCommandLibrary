@@ -14,7 +14,7 @@ Start a game on a **certain level** (there are nine official levels)
 
 Start the **level editor**, saving to a specified file
 
-```pacman4consoleedit path/to/level_file```
+```pacman4consoleedit [path/to/level_file]```
 
 Play a **custom level**
 
@@ -35,6 +35,8 @@ Play a **custom level**
 
 The game includes nine official levels and supports custom levels through the pacman4consoleedit level editor.
 
+Use the arrow keys or WASD to move Pacman through the maze. Collect all dots to complete a level. Avoid ghosts or eat power pellets to temporarily chase them. Press **q** to quit during gameplay.
+
 # CAVEATS
 
 Requires a terminal that supports the ncurses library. Terminal size must be sufficient to display the game maze properly.
@@ -45,4 +47,4 @@ Created as a terminal-based recreation of the classic Pacman game, designed to r
 
 # SEE ALSO
 
-[sl](/man/sl)(1), [moon-buggy](/man/moon-buggy)(1)
+[sl](/man/sl)(1), [moon-buggy](/man/moon-buggy)(1), [nsnake](/man/nsnake)(1), [ninvaders](/man/ninvaders)(1), [2048](/man/2048)(1)

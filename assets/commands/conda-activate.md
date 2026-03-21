@@ -16,6 +16,10 @@ activate a conda environment
 
 ```conda activate base```
 
+**Activate** an environment and verify it is active
+
+```conda activate [env_name] && conda info --envs```
+
 # SYNOPSIS
 
 **conda** **activate** [_env_name_|_path_]
@@ -34,4 +38,4 @@ Requires conda init to have been run for shell integration. Some shells may need
 
 # SEE ALSO
 
-[conda](/man/conda)(1), [conda-deactivate](/man/conda-deactivate)(1), [conda-create](/man/conda-create)(1)
+[conda](/man/conda)(1), [conda-deactivate](/man/conda-deactivate)(1), [conda-create](/man/conda-create)(1), [conda-env](/man/conda-env)(1), [conda-init](/man/conda-init)(1)

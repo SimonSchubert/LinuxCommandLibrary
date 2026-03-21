@@ -28,6 +28,14 @@ manages Linode Kubernetes Engine clusters
 
 ```linode-cli lke cluster-delete [cluster_id]```
 
+**Add a node pool to a cluster**
+
+```linode-cli lke pool-create [cluster_id] --type [g6-standard-2] --count [3]```
+
+**Recycle all nodes in a cluster**
+
+```linode-cli lke cluster-nodes-recycle [cluster_id]```
+
 # SYNOPSIS
 
 **linode-cli lke** _subcommand_ [_options_]
@@ -55,11 +63,32 @@ _SUBCOMMAND_
 **cluster-delete** _ID_
 > Delete cluster.
 
+**pool-create** _ID_
+> Add a node pool to a cluster.
+
+**cluster-nodes-recycle** _ID_
+> Recycle all nodes in a cluster.
+
 **--label** _NAME_
 > Cluster name.
 
 **--region** _REGION_
 > Datacenter region.
+
+**--k8s_version** _VERSION_
+> Kubernetes version for the cluster.
+
+**--type** _TYPE_
+> Linode instance type for node pool nodes.
+
+**--count** _N_
+> Number of nodes in a node pool.
+
+**--text**
+> Output in plain text format.
+
+**--json**
+> Output in JSON format.
 
 **--help**
 > Display help information.
@@ -80,5 +109,5 @@ linode-cli lke is part of the **Linode CLI** for managing Linode Kubernetes Engi
 
 # SEE ALSO
 
-[linode-cli](/man/linode-cli)(1), [kubectl](/man/kubectl)(1), [linode-cli-linodes](/man/linode-cli-linodes)(1)
+[linode-cli](/man/linode-cli)(1), [kubectl](/man/kubectl)(1), [helm](/man/helm)(1), [linode-cli-linodes](/man/linode-cli-linodes)(1), [linode-cli-volumes](/man/linode-cli-volumes)(1)
 

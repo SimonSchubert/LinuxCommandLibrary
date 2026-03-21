@@ -4,17 +4,21 @@ flash drive integrity verification tool
 
 # TLDR
 
-**Read and verify** flash drive
+**Read and verify** data on a flash drive
 
 ```f3read [/media/flash]```
 
-**Show progress during** read
+**Show progress** during verification
 
 ```f3read --show-progress [/media/flash]```
 
-**Verify specific files**
+**Verify a specific range** of test files (e.g., files 5 through 10)
 
 ```f3read --start-at [5] --end-at [10] [/media/flash]```
+
+**Start verification** from a specific file number
+
+```f3read --start-at [3] [/media/flash]```
 
 # SYNOPSIS
 

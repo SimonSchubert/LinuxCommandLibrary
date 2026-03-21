@@ -16,17 +16,21 @@ Print filesystem **metadata** information
 
 ```sudo btrfs inspect-internal dump-tree [path/to/partition]```
 
-Print list of files in **inode** n
+Print list of files in **inode** number
 
-```sudo btrfs inspect-internal inode-resolve [n] [path/to/btrfs_mount]```
+```sudo btrfs inspect-internal inode-resolve [inode_number] [path/to/btrfs_mount]```
 
 Print list of files at a **logical address**
 
 ```sudo btrfs inspect-internal logical-resolve [logical_address] [path/to/btrfs_mount]```
 
-Print **tree stats**
+Print **tree stats** for a filesystem
 
 ```sudo btrfs inspect-internal tree-stats [path/to/partition]```
+
+Calculate **minimum device size** for shrinking
+
+```sudo btrfs inspect-internal min-dev-size [path/to/btrfs_mount]```
 
 # SYNOPSIS
 
@@ -72,4 +76,4 @@ Output is technical and intended for developers or advanced users. Some commands
 
 # SEE ALSO
 
-[btrfs](/man/btrfs)(8), [btrfs-check](/man/btrfs-check)(8)
+[btrfs](/man/btrfs)(8), [btrfs-check](/man/btrfs-check)(8), [btrfs-rescue](/man/btrfs-rescue)(8), [btrfs-restore](/man/btrfs-restore)(8)

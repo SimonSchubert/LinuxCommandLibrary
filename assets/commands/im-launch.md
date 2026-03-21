@@ -8,11 +8,11 @@ starts applications with input method support
 
 ```im-launch [application]```
 
-**Launch specific IM**
+**Launch application with a specific input method (e.g., ibus, fcitx)**
 
 ```im-launch -n [ibus] [application]```
 
-**Show what would run**
+**Show what input method would be used without launching**
 
 ```im-launch -v [application]```
 

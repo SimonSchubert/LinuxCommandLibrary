@@ -12,9 +12,9 @@ Deduplicating backup with compression and encryption
 
 ```borg create [/path/to/repo]::[archive_name] [/path/to/source]```
 
-**Create backup with compression**
+**Create backup with compression and statistics**
 
-```borg create --compression lz4 [/path/to/repo]::[archive_name] [/path/to/source]```
+```borg create --stats --compression lz4 [/path/to/repo]::[archive_name] [/path/to/source]```
 
 **List archives in a repository**
 
@@ -27,6 +27,10 @@ Deduplicating backup with compression and encryption
 **Extract an archive**
 
 ```borg extract [/path/to/repo]::[archive_name]```
+
+**Show repository info** including storage usage and encryption details
+
+```borg info [/path/to/repo]```
 
 **Delete old archives** keeping the last 7 daily and 4 weekly
 
@@ -84,6 +88,18 @@ Deduplicating backup with compression and encryption
 **-v**, **--verbose**
 > Increase output verbosity.
 
+**--stats**
+> Print statistics about the created archive (file count, size, dedup ratio).
+
+**--list**
+> Output a list of files as they are processed during create or extract.
+
+**--dry-run**
+> Perform a trial run with no changes made (supported by create, prune, delete).
+
+**--remote-path** _path_
+> Set the path to the borg executable on the remote host.
+
 # DESCRIPTION
 
 **Borg** (BorgBackup) is a deduplicating backup program with compression and encryption. It efficiently stores multiple backups by identifying and reusing duplicate data blocks, dramatically reducing storage requirements for incremental backups.
@@ -102,4 +118,4 @@ BorgBackup was forked from **Attic** in **2015** after Attic development stalled
 
 # SEE ALSO
 
-[restic](/man/restic)(1), [duplicity](/man/duplicity)(1), [rsync](/man/rsync)(1), [rclone](/man/rclone)(1)
+[restic](/man/restic)(1), [duplicity](/man/duplicity)(1), [rsync](/man/rsync)(1), [rclone](/man/rclone)(1), [rdiff-backup](/man/rdiff-backup)(1), [tar](/man/tar)(1)

@@ -121,4 +121,4 @@ The C shell (csh) was created by **Bill Joy** at UC Berkeley in the late 1970s f
 
 # SEE ALSO
 
-[csh](/man/csh)(1), [bash](/man/bash)(1), [zsh](/man/zsh)(1), [sh](/man/sh)(1)
+[csh](/man/csh)(1), [bash](/man/bash)(1), [zsh](/man/zsh)(1), [sh](/man/sh)(1), [ksh](/man/ksh)(1), [fish](/man/fish)(1)

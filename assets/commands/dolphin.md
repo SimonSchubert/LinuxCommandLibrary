@@ -24,7 +24,7 @@ Open in **split view**
 
 ```dolphin --split [path/to/directory1] [path/to/directory2]```
 
-Launch the **daemon**
+Launch the **daemon** for faster startup
 
 ```dolphin --daemon```
 
@@ -34,31 +34,37 @@ Launch the **daemon**
 
 # DESCRIPTION
 
-**dolphin** is KDE's file manager. It provides a graphical interface for managing files and directories with features like tabs, split view, and integrated terminal.
+**dolphin** is KDE's file manager. It provides a graphical interface for managing files and directories with features like tabs, split view, integrated terminal, and file previews.
 
-Part of the KDE Plasma desktop environment but can be used in other desktops.
+Part of the KDE Plasma desktop environment but can be used in other desktop environments with the KDE/Qt libraries installed.
 
 # PARAMETERS
 
 **--select** _files_
-> Open with specified files selected
+> Open with specified files or directories selected in their parent folder.
 
 **--new-window**
-> Open in new window
+> Force opening a new window instead of reusing an existing one.
 
 **--split** _dir1_ _dir2_
-> Open directories in split view
+> Open two directories side by side in split view.
 
 **--daemon**
-> Start D-Bus service
+> Start Dolphin as a D-Bus service in the background for faster subsequent launches.
 
-**-h, --help**
-> Display help
+**-h**, **--help**
+> Display help information.
+
+**--author**
+> Show author information.
+
+**--version**
+> Show version information.
 
 # CAVEATS
 
-KDE application, requires Qt/KDE libraries. Full functionality requires KDE desktop environment. For GNOME, see Nautilus; for XFCE, see Thunar.
+KDE application, requires Qt/KDE libraries. Full functionality requires KDE desktop environment. For GNOME, see Nautilus; for XFCE, see Thunar. The --daemon flag keeps Dolphin running in the background which uses memory even when no windows are open.
 
 # SEE ALSO
 
-[nautilus](/man/nautilus)(1), [thunar](/man/thunar)(1), [ranger](/man/ranger)(1)
+[nautilus](/man/nautilus)(1), [thunar](/man/thunar)(1), [ranger](/man/ranger)(1), [nemo](/man/nemo)(1), [mc](/man/mc)(1)

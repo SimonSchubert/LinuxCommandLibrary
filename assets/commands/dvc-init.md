@@ -1,20 +1,24 @@
 # TAGLINE
 
-initialize data version control
+Initialize Data Version Control in a repository
 
 # TLDR
 
-**Initialize DVC in repository**
+**Initialize DVC** in a Git repository
 
 ```dvc init```
 
-**Initialize without Git integration**
+**Initialize without Git** integration
 
 ```dvc init --no-scm```
 
-**Initialize in subdirectory**
+**Initialize in a subdirectory** of a Git repo
 
 ```dvc init --subdir```
+
+**Force re-initialization** of DVC
+
+```dvc init -f```
 
 # SYNOPSIS
 
@@ -23,19 +27,27 @@ initialize data version control
 # PARAMETERS
 
 **--no-scm**
-> Initialize without Git.
+> Initialize DVC without Git integration. DVC will not create or modify any Git-related files.
 
 **--subdir**
-> Initialize in subdirectory of Git repo.
+> Initialize DVC in a subdirectory of a Git repository, instead of the repository root.
 
 **-f**, **--force**
-> Force re-initialization.
+> Force re-initialization, overwriting any existing .dvc directory.
+
+**-q**, **--quiet**
+> Suppress all output except errors.
+
+**-v**, **--verbose**
+> Display detailed tracing information.
 
 # DESCRIPTION
 
-**dvc init** initializes Data Version Control in a directory, creating the .dvc directory structure. This sets up DVC for tracking large files, datasets, and machine learning models alongside Git version control.
+**dvc init** initializes Data Version Control in a directory, creating the `.dvc/` directory structure. This sets up DVC for tracking large files, datasets, and machine learning models alongside Git version control.
 
-Should be run in a Git repository for full functionality, though the --no-scm option allows standalone operation. The command creates configuration files, cache directory, and integrates with Git by adding .dvc files to .gitignore.
+Should be run in a Git repository for full functionality, though the `--no-scm` option allows standalone operation. The command creates configuration files, a cache directory, and integrates with Git by updating `.gitignore` and staging the new `.dvc/` directory.
+
+The created `.dvc/` directory contains `config` (repository configuration), `.gitignore` (to exclude cache and temporary files), and a `tmp/` directory for internal use.
 
 # CONFIGURATION
 
@@ -47,5 +59,5 @@ Should be run in a Git repository for full functionality, though the --no-scm op
 
 # SEE ALSO
 
-[dvc-destroy](/man/dvc-destroy)(1), [git-init](/man/git-init)(1)
+[dvc](/man/dvc)(1), [dvc-config](/man/dvc-config)(1), [dvc-destroy](/man/dvc-destroy)(1), [git-init](/man/git-init)(1)
 

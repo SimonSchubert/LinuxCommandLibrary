@@ -20,6 +20,10 @@ Reboot into **sideload** mode
 
 ```adb reboot sideload```
 
+Reboot into sideload mode and **automatically reboot** when done
+
+```adb reboot sideload-auto-reboot```
+
 # SYNOPSIS
 
 **adb reboot** [_bootloader_|_recovery_|_sideload_|_sideload-auto-reboot_]
@@ -52,4 +56,4 @@ Bootloader and recovery modes may require unlocked bootloader or specific device
 
 # SEE ALSO
 
-[adb](/man/adb)(1), [fastboot](/man/fastboot)(1)
+[adb](/man/adb)(1), [adb-shell](/man/adb-shell)(1), [fastboot](/man/fastboot)(1)

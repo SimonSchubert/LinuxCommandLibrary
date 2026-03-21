@@ -16,9 +16,25 @@ JIT-compiled Python interpreter for speed
 
 ```pypy [script.py] [arg1] [arg2]```
 
-**Execute code**
+**Execute code** inline
 
 ```pypy -c "[print('Hello')]"```
+
+**Run a module** as a script
+
+```pypy -m [module_name]```
+
+Install a package using **pip** through PyPy
+
+```pypy -m pip install [package]```
+
+Run a script with **optimizations** enabled (removes assert statements)
+
+```pypy -O [script.py]```
+
+Enter interactive mode **after** running a script (for debugging)
+
+```pypy -i [script.py]```
 
 # SYNOPSIS
 
@@ -42,7 +58,16 @@ _ARGS_
 > Interactive after script.
 
 **-O**
-> Optimize mode.
+> Optimize mode: removes assert statements and sets __debug__ to False.
+
+**-V**, **--version**
+> Print the PyPy version and exit.
+
+**-u**
+> Unbuffered binary stdout and stderr.
+
+**-W** _arg_
+> Warning control (e.g., **-Wall** to show all warnings).
 
 # DESCRIPTION
 
@@ -52,7 +77,7 @@ The JIT compiler analyzes code at runtime and compiles frequently executed paths
 
 # CAVEATS
 
-Not all packages compatible. JIT warmup time.
+Not all C extension packages are compatible; cffi-based extensions work well but some CPython C API extensions may not. JIT compilation has a warmup period, so short-lived scripts may not see speed improvements. Use **pypy -m pip** instead of system pip to install packages into the PyPy environment.
 
 # HISTORY
 
@@ -60,5 +85,5 @@ PyPy was created as a **high-performance** Python interpreter with JIT.
 
 # SEE ALSO
 
-[python](/man/python)(1), [python3](/man/python3)(1)
+[python](/man/python)(1), [python3](/man/python3)(1), [pip](/man/pip)(1)
 

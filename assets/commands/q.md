@@ -32,6 +32,14 @@ AI-powered terminal assistant from AWS
 
 ```q doctor```
 
+**Enable or disable autocomplete integrations**
+
+```q integrations install```
+
+**Check the current version**
+
+```q version```
+
 # SYNOPSIS
 
 **q** [_command_] [_options_] [_prompt_]
@@ -46,6 +54,12 @@ AI-powered terminal assistant from AWS
 
 **doctor**
 > Diagnose and fix common issues
+
+**integrations**
+> Manage shell integrations (autocomplete, inline suggestions)
+
+**version**
+> Display version information
 
 # CHAT OPTIONS
 
@@ -101,4 +115,4 @@ Amazon Q Developer CLI was released by **AWS** as part of the Amazon Q Developer
 
 # SEE ALSO
 
-[aws](/man/aws)(1), [claude](/man/claude)(1), [codex](/man/codex)(1), [gemini](/man/gemini)(1)
+[aws](/man/aws)(1), [claude](/man/claude)(1), [codex](/man/codex)(1), [gemini](/man/gemini)(1), [aichat](/man/aichat)(1)

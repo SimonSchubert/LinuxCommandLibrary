@@ -1,16 +1,20 @@
 # TAGLINE
 
-displays a user's groups or a group's users
+Display a user's groups or a group's users
 
 # TLDR
 
 List **groups** for a user
 
-```sudo lid username```
+```sudo lid [username]```
 
 List **users** in a group
 
-```sudo lid --group groupname```
+```sudo lid -g [groupname]```
+
+List groups for the **current** user
+
+```sudo lid```
 
 # SYNOPSIS
 
@@ -18,11 +22,11 @@ List **users** in a group
 
 # DESCRIPTION
 
-**lid** displays a user's groups or a group's users. It reads from the system's user and group databases to show membership information.
+**lid** displays a user's groups or a group's users. It reads from the system's user and group databases to show membership information. Without arguments, it shows groups for the current user.
 
 # PARAMETERS
 
-**-g, --group**
+**-g**, **--group**
 > Treat the argument as a group name and list its members
 
 **name**
@@ -30,12 +34,8 @@ List **users** in a group
 
 # CAVEATS
 
-Requires root privileges to access all group membership information. Without arguments, shows groups for the current user.
-
-# HISTORY
-
-**lid** is part of the **libuser** library tools, providing user and group account management utilities.
+Requires root privileges to access all group membership information. Part of the **libuser** library tools for user and group account management.
 
 # SEE ALSO
 
-[groups](/man/groups)(1), [id](/man/id)(1), [getent](/man/getent)(1)
+[groups](/man/groups)(1), [id](/man/id)(1), [getent](/man/getent)(1), [gpasswd](/man/gpasswd)(1), [groupmems](/man/groupmems)(1)

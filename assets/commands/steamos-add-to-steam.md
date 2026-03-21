@@ -32,4 +32,4 @@ Specific to SteamOS/Steam Deck. The target file must be executable. Proton/Wine 
 
 # SEE ALSO
 
-[steam](/man/steam)(1), [steamos-devmode](/man/steamos-devmode)(1), [flatpak](/man/flatpak)(1)
+[steam](/man/steam)(1), [steamos-devmode](/man/steamos-devmode)(1), [steamos-readonly](/man/steamos-readonly)(1), [steamos-session-select](/man/steamos-session-select)(1), [steamos-update](/man/steamos-update)(1), [flatpak](/man/flatpak)(1)

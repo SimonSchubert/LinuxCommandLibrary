@@ -92,6 +92,15 @@ high-performance L4/L7 proxy and service mesh data plane
 **--parent-shutdown-time-s** _seconds_
 > Time before parent shuts down during hot restart.
 
+**--disable-hot-restart**
+> Disable hot restart functionality entirely.
+
+**--enable-core-dump**
+> Enable core dumps for debugging.
+
+**--admin-address-path** _path_
+> Write the admin address and port to the given path after binding.
+
 **--version**, **-v**
 > Show version information.
 
@@ -128,4 +137,4 @@ Envoy was created at **Lyft** by Matt Klein and open-sourced in **September 2016
 
 # SEE ALSO
 
-[nginx](/man/nginx)(1), [haproxy](/man/haproxy)(1), [istioctl](/man/istioctl)(1), [traefik](/man/traefik)(1)
+[nginx](/man/nginx)(1), [haproxy](/man/haproxy)(1), [istioctl](/man/istioctl)(1), [traefik](/man/traefik)(1), [kubectl](/man/kubectl)(1)

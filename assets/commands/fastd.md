@@ -20,9 +20,13 @@ fast and secure VPN daemon
 
 ```fastd --config [config] --log-level debug```
 
-**Verify configuration**
+**Verify configuration** syntax
 
 ```fastd --verify-config --config [config]```
+
+**Run as daemon** with a PID file
+
+```fastd --config [config] --daemon --pid-file [/var/run/fastd.pid]```
 
 # SYNOPSIS
 
@@ -51,6 +55,15 @@ fast and secure VPN daemon
 **--daemon**
 > Run as daemon.
 
+**--pid-file** _file_
+> Write PID to file.
+
+**--user** _user_
+> Drop privileges to specified user.
+
+**--interface** _name_
+> TUN/TAP interface name.
+
 # CONFIGURATION
 
 **/etc/fastd/fastd.conf**
@@ -64,5 +77,5 @@ The tool supports multiple encryption methods and is optimized for low-latency, 
 
 # SEE ALSO
 
-[wireguard](/man/wireguard)(8), [openvpn](/man/openvpn)(8)
+[wg](/man/wg)(8), [openvpn](/man/openvpn)(8), [ipsec](/man/ipsec)(8)
 

