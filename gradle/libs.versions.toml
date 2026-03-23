@@ -1,7 +1,7 @@
 [versions]
 agp = "9.1.0"
-appVersion = "3.7.1"
-androidVersionCode = "147"
+appVersion = "3.7.2"
+androidVersionCode = "148"
 kotlin = "2.3.20"
 composeMultiplatform = "1.10.3"
 accompanistAppcompatTheme = "0.36.0"

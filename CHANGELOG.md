@@ -1,3 +1,18 @@
+## v3.7.2 — 2026-03-23
+
+### Features
+- Add terminal games and ASCII previews
+- Add missing command references from basics
+
+### Fixes
+- Fix website code preview CSS
+
+### Improvements
+- Improve UI performance by marking composables stable
+- Move screen contents into separate content composable
+- Remove unused code and duplicates
+- Improve command quality
+
 ## v3.7.1 — 2026-03-21
 
 ### Features
