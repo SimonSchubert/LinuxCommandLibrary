@@ -23,6 +23,27 @@ object HtmlMarkdownRenderer {
         }
     }
 
+    /**
+     * Render sections with multi-line code blocks styled as previews (monospace, no $ prefix, no copy button).
+     */
+    fun renderSectionsWithPreviews(sections: List<TipSectionElement>): String = buildString {
+        sections.forEach { section ->
+            when (section) {
+                is TipSectionElement.Text -> append(renderText(section))
+                is TipSectionElement.Blockquote -> append(renderBlockquote(section))
+                is TipSectionElement.Code -> {
+                    val isMultiLine = section.command.contains("\n")
+                    if (isMultiLine) {
+                        append(renderPreviewCode(section))
+                    } else {
+                        append(renderCode(section))
+                    }
+                }
+                is TipSectionElement.Table -> append(renderTable(section))
+            }
+        }
+    }
+
     private fun renderText(text: TipSectionElement.Text): String = buildString {
         append("<span>")
         text.elements.forEach { element ->
@@ -76,6 +97,18 @@ object HtmlMarkdownRenderer {
             append("""</span><div onclick="javascript:copy('$escapedCommand')" class="copy-button">""")
             append("""<img src="/images/icon-copy.svg" alt="copy" width="24" height="24"></div></div>""")
         }
+    }
+
+    private fun renderPreviewCode(code: TipSectionElement.Code): String = buildString {
+        append("""<pre class="code-preview">""")
+        code.elements.forEach { element ->
+            when (element) {
+                is CommandElement.Text -> append(element.text.escapeHtml())
+                is CommandElement.Man -> append(element.man.escapeHtml())
+                is CommandElement.Url -> append(element.command.escapeHtml())
+            }
+        }
+        append("</pre>")
     }
 
     private fun renderTable(table: TipSectionElement.Table): String = buildString {

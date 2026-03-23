@@ -494,6 +494,17 @@ pre {
     margin-bottom: auto;
 }
 
+.code-preview {
+	color: #fff;
+	background-color: #000;
+	padding: 8px;
+	font-family: 'Courier New', Courier, monospace;
+	white-space: pre;
+	width: fit-content;
+	margin: 4px 0 8px 0;
+	line-height: 1.2;
+}
+
 .visible {
 	visibility: visible !important;
 	opacity: 1;

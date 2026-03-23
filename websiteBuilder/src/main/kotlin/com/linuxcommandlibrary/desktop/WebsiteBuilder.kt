@@ -119,7 +119,7 @@ class WebsiteBuilder(
     private val pastSponsors: List<Pair<String, String>> = emptyList(),
 ) {
 
-    private val cacheVersion = 14
+    private val cacheVersion = 15
 
     /**
      * Get sorted list of command names from markdown files.
@@ -442,7 +442,11 @@ class WebsiteBuilder(
                                             }
                                         }
                                         unsafe {
-                                            +HtmlMarkdownRenderer.renderSections(group.sections)
+                                            if (categoryTitle == "Terminal games") {
+                                                +HtmlMarkdownRenderer.renderSectionsWithPreviews(group.sections)
+                                            } else {
+                                                +HtmlMarkdownRenderer.renderSections(group.sections)
+                                            }
                                         }
                                     }
                                 }
@@ -712,6 +716,14 @@ class WebsiteBuilder(
                                                 div {
                                                     unsafe {
                                                         +HtmlMarkdownRenderer.renderSections(section.elements)
+                                                    }
+                                                }
+                                            }
+
+                                            "PREVIEW" -> {
+                                                div {
+                                                    unsafe {
+                                                        +HtmlMarkdownRenderer.renderSectionsWithPreviews(section.elements)
                                                     }
                                                 }
                                             }
@@ -1275,9 +1287,9 @@ class WebsiteBuilder(
                     id = "app-link"
                     href = "https://github.com/SimonSchubert/Kai"
                     img {
+                        style="max-width: 100%;"
                         src = "/images/af/kai-1-horizontal.webp"
                         alt = "Kai"
-                        height = "160"
                     }
                 }
                 script {
