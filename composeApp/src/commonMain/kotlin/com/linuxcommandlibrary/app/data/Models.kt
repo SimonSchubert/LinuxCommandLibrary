@@ -27,5 +27,4 @@ data class CommandSectionInfo(
     val content: String,
 )
 
-fun CommandSectionInfo.getSortPriority(): Int =
-    com.linuxcommandlibrary.shared.getSectionSortPriority(title)
+fun CommandSectionInfo.getSortPriority(): Int = com.linuxcommandlibrary.shared.getSectionSortPriority(title)

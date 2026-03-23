@@ -1,9 +1,9 @@
 package com.linuxcommandlibrary.app.ui.screens.tips
 
-import com.linuxcommandlibrary.shared.TipInfo
 import com.linuxcommandlibrary.app.data.TipsRepository
 import com.linuxcommandlibrary.app.platform.showAndroidTerminalTip
 import com.linuxcommandlibrary.shared.TextElement
+import com.linuxcommandlibrary.shared.TipInfo
 import com.linuxcommandlibrary.shared.TipSectionElement
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.persistentListOf

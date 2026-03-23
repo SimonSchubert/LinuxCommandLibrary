@@ -1287,7 +1287,7 @@ class WebsiteBuilder(
                     id = "app-link"
                     href = "https://github.com/SimonSchubert/Kai"
                     img {
-                        style="max-width: 100%;"
+                        style = "max-width: 100%;"
                         src = "/images/af/kai-1-horizontal.webp"
                         alt = "Kai"
                     }

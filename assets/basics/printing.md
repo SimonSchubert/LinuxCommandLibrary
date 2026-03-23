@@ -19,8 +19,5 @@
 ## Display printer status
 ```[lpstat](/man/lpstat) -t```
 
-## Enable printer
-```[enable](/man/enable) [name]```
-
 ## Disable printer
 ```[disable](/man/disable) [name]```

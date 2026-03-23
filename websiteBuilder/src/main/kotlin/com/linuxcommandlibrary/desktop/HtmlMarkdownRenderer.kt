@@ -30,7 +30,9 @@ object HtmlMarkdownRenderer {
         sections.forEach { section ->
             when (section) {
                 is TipSectionElement.Text -> append(renderText(section))
+
                 is TipSectionElement.Blockquote -> append(renderBlockquote(section))
+
                 is TipSectionElement.Code -> {
                     val isMultiLine = section.command.contains("\n")
                     if (isMultiLine) {
@@ -39,6 +41,7 @@ object HtmlMarkdownRenderer {
                         append(renderCode(section))
                     }
                 }
+
                 is TipSectionElement.Table -> append(renderTable(section))
             }
         }

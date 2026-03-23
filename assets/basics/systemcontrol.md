@@ -1,11 +1,9 @@
 # System control
 
 ## Lock screen
-```[gnome-screensaver-command](/man/gnome-screensaver-command) -l```
 ```[dbus-send](/man/dbus-send) --type=method_call --dest=org.freedesktop.ScreenSaver /ScreenSaver org.freedesktop.ScreenSaver.Lock```
 
 ## Unlock screen
-```[gnome-screensaver-command](/man/gnome-screensaver-command) -a```
 ```[dbus-send](/man/dbus-send) --type=method_call --dest=org.freedesktop.ScreenSaver /ScreenSaver org.freedesktop.ScreenSaver.SetActive boolean:false```
 
 ## Reboot the system

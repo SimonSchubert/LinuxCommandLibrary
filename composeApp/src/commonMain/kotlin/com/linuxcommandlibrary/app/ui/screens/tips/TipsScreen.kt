@@ -18,9 +18,9 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.linuxcommandlibrary.app.NavEvent
-import com.linuxcommandlibrary.shared.TipInfo
 import com.linuxcommandlibrary.app.ui.composables.SectionTitle
 import com.linuxcommandlibrary.app.ui.composables.TipSectionContent
+import com.linuxcommandlibrary.shared.TipInfo
 import kotlinx.collections.immutable.ImmutableList
 
 @Composable
@@ -61,7 +61,8 @@ fun TipsContent(
 @Composable
 private fun TipItemCard(
     tip: TipInfo,
-    onNavigate: (NavEvent) -> Unit) {
+    onNavigate: (NavEvent) -> Unit,
+) {
     Card(
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
         modifier = Modifier
