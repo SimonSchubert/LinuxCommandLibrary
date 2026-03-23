@@ -9,7 +9,6 @@ dependencies {
     implementation(project(":common"))
     implementation(libs.kotlinx.html.jvm)
     implementation(libs.json)
-    implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.collections.immutable)
 }
 

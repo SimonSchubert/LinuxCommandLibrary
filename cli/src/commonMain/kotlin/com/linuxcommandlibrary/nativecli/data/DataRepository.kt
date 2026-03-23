@@ -7,6 +7,7 @@ import com.linuxcommandlibrary.nativecli.data.generated.tipsData
 import com.linuxcommandlibrary.shared.BasicInfo
 import com.linuxcommandlibrary.shared.MarkdownParser
 import com.linuxcommandlibrary.shared.TipInfo
+import com.linuxcommandlibrary.shared.getSectionSortPriority
 
 data class CommandInfo(val name: String)
 
@@ -41,23 +42,7 @@ object DataRepository {
         return MarkdownParser.splitByHeaders(content, "# ").map { (title, sectionContent) ->
             CommandSection(title, sectionContent)
         }.filter { it.title.uppercase() != "TAGLINE" }
-            .sortedBy { getSortPriority(it.title) }
-    }
-
-    private fun getSortPriority(title: String): Int = when (title.uppercase()) {
-        "TLDR" -> 0
-        "NAME" -> 1
-        "SYNOPSIS" -> 2
-        "DESCRIPTION" -> 3
-        "PARAMETERS" -> 4
-        "OPTIONS" -> 5
-        "EXAMPLES" -> 6
-        "CONFIGURATION" -> 7
-        "CAVEATS" -> 90
-        "HISTORY" -> 91
-        "AUTHOR" -> 92
-        "SEE ALSO" -> 93
-        else -> 50
+            .sortedBy { getSectionSortPriority(it.title) }
     }
 
     fun getBasicCategories(): List<BasicCategory> = basicsData.mapNotNull { (id, content) ->

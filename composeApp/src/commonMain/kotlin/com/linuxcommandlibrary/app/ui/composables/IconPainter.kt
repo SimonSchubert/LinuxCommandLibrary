@@ -167,7 +167,6 @@ fun rememberIconPainter(icon: AppIcon): Painter {
         AppIcon.USER -> Res.drawable.ic_icon_user
         AppIcon.FILE -> Res.drawable.ic_file
         AppIcon.PRINT -> Res.drawable.ic_icons8_print
-        AppIcon.PRINT_ICON -> Res.drawable.ic_icons8_print
         AppIcon.NETWORK_CARD -> Res.drawable.ic_network_card_40dp
         AppIcon.GIT -> Res.drawable.ic_icon_git
         AppIcon.CONSOLE -> Res.drawable.ic_icons8_console

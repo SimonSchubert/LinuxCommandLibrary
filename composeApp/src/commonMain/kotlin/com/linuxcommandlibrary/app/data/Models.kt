@@ -27,10 +27,5 @@ data class CommandSectionInfo(
     val content: String,
 )
 
-fun CommandSectionInfo.getSortPriority(): Int = when (title) {
-    "TLDR" -> 0
-    "SYNOPSIS" -> 10
-    "SEE ALSO" -> 90
-    "AUTHOR" -> 100
-    else -> 50
-}
+fun CommandSectionInfo.getSortPriority(): Int =
+    com.linuxcommandlibrary.shared.getSectionSortPriority(title)

@@ -2,7 +2,6 @@ package com.linuxcommandlibrary.app.ui.screens.commanddetail
 
 import com.linuxcommandlibrary.app.data.CommandsRepository
 import com.linuxcommandlibrary.app.data.DataManager
-import com.linuxcommandlibrary.app.data.getSortPriority
 import kotlinx.collections.immutable.persistentListOf
 import kotlinx.collections.immutable.toImmutableList
 import kotlinx.collections.immutable.toImmutableMap
@@ -26,7 +25,7 @@ class CommandDetailViewModel(
 
     init {
         scope.launch(Dispatchers.Default) {
-            val sectionsData = commandsRepository.getSections(commandName).sortedBy { it.getSortPriority() }
+            val sectionsData = commandsRepository.getSections(commandName)
             val isAutoExpandEnabled = dataManager.isAutoExpandSections()
 
             val seeAlsoSection = sectionsData.find { it.title == "SEE ALSO" }

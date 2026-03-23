@@ -333,6 +333,7 @@ ascii.md
 asciiart.md
 asciidoc.md
 asciidoctor.md
+asciijump.md
 asciinema.md
 asciiquarium.md
 asciitopgm.md
@@ -724,6 +725,7 @@ boggle.md
 boltctl.md
 boltd.md
 bombadillo.md
+bombardier.md
 bondai.md
 bookokrat.md
 boot.md
@@ -1005,6 +1007,7 @@ cat.md
 catchsegv.md
 catimg.md
 cava.md
+cavezofphear.md
 cavif.md
 cb.md
 cbatticon.md
@@ -1366,6 +1369,7 @@ create_ap.md
 createdb.md
 createrepo.md
 createuser.md
+cribbage.md
 crictl.md
 crl.1s.md
 crl2pkcs7.1s.md
@@ -1438,6 +1442,7 @@ cupstestppd.md
 curl-impersonate.md
 curl.md
 curlie.md
+curseofwar.md
 cursor.md
 cut.md
 cutycapt.md
@@ -1760,6 +1765,7 @@ dolt.md
 domainname.md
 done.md
 doom.md
+dopewars.md
 doppler-projects.md
 doppler-run.md
 doppler-secrets.md
@@ -1944,6 +1950,7 @@ emaint.md
 ember.md
 emcc.md
 emerge.md
+empire.md
 emulationstation.md
 emulator.md
 emuto.md
@@ -2259,6 +2266,7 @@ fq.md
 free.md
 freecad.md
 freeramdisk.md
+freesweep.md
 freqtrade.md
 fresh.md
 freshclam.md
@@ -2773,6 +2781,7 @@ gnome-terminal.md
 gnomon.md
 gnucash-cli.md
 gnucash.md
+gnugo.md
 gnumeric.md
 gnuplot.md
 gnuradio.md
@@ -4529,6 +4538,7 @@ nb.md
 nbfifteen.md
 nbmemoblocks.md
 nbmines.md
+nbpipes.md
 nbsos.md
 nbtscan.md
 nc.md
@@ -4928,6 +4938,7 @@ oletools.md
 olevba.md
 ollama.md
 oma.md
+omega-rpg.md
 omf.md
 omm.md
 omshell.md
@@ -5406,6 +5417,7 @@ pgmtost4.md
 pgrep.md
 pgtree.md
 phan.md
+phantasia.md
 phar.md
 pharo.md
 phetch.md
@@ -6382,6 +6394,8 @@ rnano.md
 rndc.md
 rnm.md
 robo.md
+robotfindskitten.md
+robots.md
 rofi.md
 rogue.md
 roll.md
@@ -6502,6 +6516,7 @@ sadc.md
 safe-rm.md
 safe.md
 safety.md
+sail.md
 sails.md
 sake.md
 salloc.md
@@ -6753,6 +6768,7 @@ slackpkg.md
 slapd.md
 slapt-get.md
 slapt-src.md
+slashem.md
 sldtoppm.md
 sleep.md
 slides.md
@@ -7447,6 +7463,7 @@ tredis.md
 tree.md
 treemd.md
 treetime.md
+trek.md
 trex.md
 trezorctl.md
 trickle.md
@@ -7478,6 +7495,7 @@ tsx.md
 tt.md
 tts.md
 tty-clock.md
+tty-solitaire.md
 tty.md
 ttyd.md
 ttyper.md
@@ -7986,6 +8004,7 @@ wtf.md
 wtfis.md
 wttr.in.md
 wtype.md
+wump.md
 wut.md
 wuzz.md
 x-cmd.md

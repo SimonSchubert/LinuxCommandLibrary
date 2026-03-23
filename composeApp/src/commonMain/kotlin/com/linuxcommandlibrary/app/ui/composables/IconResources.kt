@@ -108,7 +108,7 @@ enum class AppIcon {
     NUMBERED_LIST,
     PING_PONG,
     PLUS,
-    PRINT_ICON,
+
     PRINT_FILE,
     REMOVE_USER,
     RESTORE_WINDOW,
@@ -303,7 +303,7 @@ fun BasicGroup.getIconId(): AppIcon = when (description) {
 
     "Add remote repository", "Create", "Create a new branch", "Create a tag", "Put", "Select" -> AppIcon.PLUS
 
-    "Pretty print" -> AppIcon.PRINT_ICON
+    "Pretty print" -> AppIcon.PRINT
 
     "Print a file" -> AppIcon.PRINT_FILE
 
@@ -469,7 +469,7 @@ fun BasicCategory.getIconId(): AppIcon = when (title) {
     "System control" -> AppIcon.SETTINGS
     "Users & Groups" -> AppIcon.USER
     "Files & Folders" -> AppIcon.FILE
-    "Printing" -> AppIcon.PRINT_ICON
+    "Printing" -> AppIcon.PRINT
     "Network" -> AppIcon.NETWORK_CARD
     "Search & Find" -> AppIcon.SEARCH
     "GIT" -> AppIcon.GIT
