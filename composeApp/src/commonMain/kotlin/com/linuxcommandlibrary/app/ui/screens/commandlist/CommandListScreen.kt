@@ -23,7 +23,8 @@ import com.linuxcommandlibrary.app.ui.composables.FastScrollBar
 import com.linuxcommandlibrary.app.ui.composables.HighlightedText
 import com.linuxcommandlibrary.app.ui.composables.debouncedClickable
 import com.linuxcommandlibrary.app.ui.composables.rememberIconPainter
-import com.linuxcommandlibrary.app.ui.theme.LocalCustomColors
+import kotlinx.collections.immutable.ImmutableList
+import kotlinx.collections.immutable.ImmutableSet
 
 @Composable
 fun CommandListScreen(
@@ -32,8 +33,21 @@ fun CommandListScreen(
 ) {
     val commands by viewModel.commands.collectAsState()
     val bookmarkedNames by viewModel.bookmarkedNames.collectAsState()
-    val listState = rememberLazyListState()
 
+    ComposeListContent(
+        commands = commands,
+        bookmarkedNames = bookmarkedNames,
+        onNavigate = onNavigate,
+    )
+}
+
+@Composable
+private fun ComposeListContent(
+    commands: ImmutableList<CommandInfo>,
+    bookmarkedNames: ImmutableSet<String>,
+    onNavigate: (NavEvent) -> Unit,
+) {
+    val listState = rememberLazyListState()
     Box(
         modifier = Modifier
             .background(MaterialTheme.colorScheme.background)

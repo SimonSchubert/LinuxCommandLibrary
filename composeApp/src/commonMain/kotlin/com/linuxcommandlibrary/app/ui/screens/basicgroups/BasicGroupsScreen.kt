@@ -24,7 +24,6 @@ import com.linuxcommandlibrary.app.ui.composables.CommandView
 import com.linuxcommandlibrary.app.ui.composables.HighlightedText
 import com.linuxcommandlibrary.app.ui.composables.getIconId
 import com.linuxcommandlibrary.app.ui.composables.rememberIconPainter
-import com.linuxcommandlibrary.app.ui.theme.LocalCustomColors
 import com.linuxcommandlibrary.shared.getCommandList
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.ImmutableSet
@@ -39,6 +38,19 @@ fun BasicGroupsScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
 
+    BasicGroupsContent(
+        uiState = uiState,
+        toggleCollapse = { viewModel.toggleCollapse(it) },
+        onNavigate = onNavigate,
+    )
+}
+
+@Composable
+fun BasicGroupsContent(
+    uiState: BasicGroupsUiState,
+    toggleCollapse: (Long) -> Unit,
+    onNavigate: (NavEvent) -> Unit,
+) {
     LazyColumn(
         Modifier
             .fillMaxSize()
@@ -53,7 +65,7 @@ fun BasicGroupsScreen(
                 basicGroup = basicGroup,
                 commands = uiState.commandsByGroupId[basicGroup.id] ?: persistentListOf(),
                 isExpanded = !(uiState.collapsedMap[basicGroup.id] ?: true),
-                onToggleCollapse = { viewModel.toggleCollapse(basicGroup.id) },
+                onToggleCollapse = { toggleCollapse(basicGroup.id) },
                 onNavigate = onNavigate,
             )
         }

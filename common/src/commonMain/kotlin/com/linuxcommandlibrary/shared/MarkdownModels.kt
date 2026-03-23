@@ -1,12 +1,14 @@
 package com.linuxcommandlibrary.shared
 
+import kotlinx.collections.immutable.ImmutableList
+
 /**
  * Data class for parsed tip from markdown.
  */
 data class TipInfo(
     val id: Long,
     val title: String,
-    val sections: List<TipSectionElement>,
+    val sections: ImmutableList<TipSectionElement>,
 )
 
 /**
@@ -14,7 +16,7 @@ data class TipInfo(
  */
 data class BasicInfo(
     val title: String,
-    val groups: List<BasicGroup>,
+    val groups: ImmutableList<BasicGroup>,
 )
 
 /**
@@ -23,7 +25,7 @@ data class BasicInfo(
 data class BasicGroup(
     val id: Long,
     val description: String,
-    val sections: List<TipSectionElement>,
+    val sections: ImmutableList<TipSectionElement>,
 )
 
 /**
@@ -32,7 +34,7 @@ data class BasicGroup(
 data class CommandInfo(
     val name: String,
     val description: String?,
-    val sections: List<CommandSectionInfo>,
+    val sections: ImmutableList<CommandSectionInfo>,
 )
 
 /**
@@ -41,7 +43,7 @@ data class CommandInfo(
 data class CommandSectionInfo(
     val title: String,
     val content: String,
-    val elements: List<TipSectionElement>,
+    val elements: ImmutableList<TipSectionElement>,
 )
 
 /**

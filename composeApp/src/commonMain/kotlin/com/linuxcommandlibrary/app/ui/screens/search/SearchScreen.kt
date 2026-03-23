@@ -19,7 +19,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.linuxcommandlibrary.app.NavEvent
 import com.linuxcommandlibrary.app.ui.screens.commandlist.CommandListItem
-import com.linuxcommandlibrary.app.ui.theme.LocalCustomColors
 
 @Composable
 fun SearchScreen(
@@ -33,6 +32,19 @@ fun SearchScreen(
         viewModel.search(searchText)
     }
 
+    SearchContent(
+        uiState = uiState,
+        searchText = searchText,
+        onNavigate = onNavigate,
+    )
+}
+
+@Composable
+fun SearchContent(
+    uiState: SearchUiState,
+    searchText: String,
+    onNavigate: (NavEvent) -> Unit,
+) {
     val lazyListState = rememberLazyListState()
 
     val showEmptyMessage by remember(uiState.filteredCommands) {

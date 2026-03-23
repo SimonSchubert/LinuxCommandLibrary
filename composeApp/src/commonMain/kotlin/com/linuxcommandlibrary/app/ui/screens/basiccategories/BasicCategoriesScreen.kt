@@ -18,11 +18,11 @@ import androidx.compose.ui.input.pointer.PointerIcon
 import androidx.compose.ui.input.pointer.pointerHoverIcon
 import androidx.compose.ui.unit.dp
 import com.linuxcommandlibrary.app.NavEvent
-import com.linuxcommandlibrary.app.ui.composables.AppIcon
+import com.linuxcommandlibrary.app.data.BasicCategory
 import com.linuxcommandlibrary.app.ui.composables.debouncedClickable
 import com.linuxcommandlibrary.app.ui.composables.getIconId
 import com.linuxcommandlibrary.app.ui.composables.rememberIconPainter
-import com.linuxcommandlibrary.app.ui.theme.LocalCustomColors
+import kotlinx.collections.immutable.ImmutableList
 
 @Composable
 fun BasicCategoriesScreen(
@@ -31,6 +31,17 @@ fun BasicCategoriesScreen(
 ) {
     val basicCategories by viewModel.basicCategories.collectAsState()
 
+    BasicCategoriesContent(
+        basicCategories = basicCategories,
+        onNavigate = onNavigate,
+    )
+}
+
+@Composable
+private fun BasicCategoriesContent(
+    basicCategories: ImmutableList<BasicCategory>,
+    onNavigate: (NavEvent) -> Unit,
+) {
     LazyVerticalGrid(
         modifier = Modifier
             .background(MaterialTheme.colorScheme.background)

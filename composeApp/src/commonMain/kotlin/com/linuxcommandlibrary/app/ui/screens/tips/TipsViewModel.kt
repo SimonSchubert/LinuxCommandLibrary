@@ -33,32 +33,32 @@ class TipsViewModel(
     }
 
     private fun createTerminalSetupTip(): TipInfo {
-        val sections = listOf(
+        val sections = persistentListOf(
             TipSectionElement.Text(
-                listOf(
+                persistentListOf(
                     TextElement.Plain("Android 15+ includes a built-in Linux terminal running Debian. Here's how to enable it:"),
                 ),
             ),
             TipSectionElement.Text(
-                listOf(
+                persistentListOf(
                     TextElement.Plain("1. Open "),
                     TextElement.Link("Settings", "settings"),
                 ),
             ),
             TipSectionElement.Text(
-                listOf(
+                persistentListOf(
                     TextElement.Plain("2. Scroll down and tap "),
                     TextElement.Bold("System"),
                 ),
             ),
             TipSectionElement.Text(
-                listOf(
+                persistentListOf(
                     TextElement.Plain("3. Tap "),
                     TextElement.Bold("Developer options"),
                 ),
             ),
             TipSectionElement.Text(
-                listOf(
+                persistentListOf(
                     TextElement.Plain("If not visible, go to "),
                     TextElement.Bold("Settings > About phone"),
                     TextElement.Plain(" and tap "),
@@ -67,26 +67,26 @@ class TipsViewModel(
                 ),
             ),
             TipSectionElement.Text(
-                listOf(
+                persistentListOf(
                     TextElement.Plain("4. Scroll down to the "),
                     TextElement.Bold("Linux terminal"),
                     TextElement.Plain(" toggle and enable it"),
                 ),
             ),
             TipSectionElement.Text(
-                listOf(
+                persistentListOf(
                     TextElement.Plain("5. Open the "),
                     TextElement.Link("Terminal", "terminal"),
                     TextElement.Plain(" app from your app drawer"),
                 ),
             ),
             TipSectionElement.Text(
-                listOf(
+                persistentListOf(
                     TextElement.Plain("6. Follow the on-screen setup to complete the installation"),
                 ),
             ),
             TipSectionElement.Text(
-                listOf(
+                persistentListOf(
                     TextElement.Plain("The terminal runs a Debian Linux environment with full package management via "),
                     TextElement.Bold("apt"),
                     TextElement.Plain(". You can install tools, compilers, and servers just like on a regular Debian system."),
@@ -96,7 +96,7 @@ class TipsViewModel(
         return TipInfo(
             id = -1,
             title = "Set up the built-in Linux terminal",
-            sections = sections.toImmutableList(),
+            sections = sections,
         )
     }
 }

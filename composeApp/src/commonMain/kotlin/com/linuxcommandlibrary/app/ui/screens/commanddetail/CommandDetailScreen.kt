@@ -31,7 +31,6 @@ import com.linuxcommandlibrary.app.NavEvent
 import com.linuxcommandlibrary.app.data.CommandSectionInfo
 import com.linuxcommandlibrary.app.ui.composables.TipSectionContent
 import com.linuxcommandlibrary.app.ui.composables.rememberDebouncedClick
-import com.linuxcommandlibrary.app.ui.theme.LocalCustomColors
 import com.linuxcommandlibrary.shared.MarkdownParser
 import kotlinx.collections.immutable.ImmutableList
 
@@ -42,6 +41,19 @@ fun CommandDetailScreen(
 ) {
     val uiState by viewModel.state.collectAsState()
 
+    CommandDetailContent(
+        uiState = uiState,
+        onNavigate = onNavigate,
+        onToggleExpanded = { id -> viewModel.onToggleExpanded(id) },
+    )
+}
+
+@Composable
+private fun CommandDetailContent(
+    uiState: CommandDetailUiState,
+    onNavigate: (NavEvent) -> Unit,
+    onToggleExpanded: (Long) -> Unit,
+) {
     LazyColumn(
         Modifier
             .background(MaterialTheme.colorScheme.background)
@@ -56,7 +68,7 @@ fun CommandDetailScreen(
                 section = section,
                 isExpanded = uiState.expandedSectionsMap[section.id] ?: false,
                 seeAlsoCommands = uiState.seeAlsoCommands,
-                onToggleExpanded = { id -> viewModel.onToggleExpanded(id) },
+                onToggleExpanded = onToggleExpanded,
                 onNavigate = onNavigate,
             )
         }
@@ -131,7 +143,7 @@ private fun SeeAlsoSectionContent(
 }
 
 @Composable
-private fun DefaultSectionContent(content: String, onNavigate: (NavEvent) -> Unit = {}) {
+private fun DefaultSectionContent(content: String, onNavigate: (NavEvent) -> Unit) {
     val parsedSections = remember(content) {
         MarkdownParser.parseMarkdownContent(content)
     }

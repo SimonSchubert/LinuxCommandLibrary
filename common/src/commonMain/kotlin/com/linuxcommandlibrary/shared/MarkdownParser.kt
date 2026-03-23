@@ -1,5 +1,6 @@
 package com.linuxcommandlibrary.shared
 
+import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
 
 /**
@@ -10,7 +11,7 @@ object MarkdownParser {
     /**
      * Parse text with **bold** and _italic_ formatting into TextElement list.
      */
-    fun parseTextWithBold(text: String): List<TextElement> {
+    fun parseTextWithBold(text: String): ImmutableList<TextElement> {
         val elements = mutableListOf<TextElement>()
         val boldRegex = Regex("""\*\*([^*]+)\*\*""")
         val italicRegex = Regex("""_([^_]+)_""")
@@ -55,7 +56,7 @@ object MarkdownParser {
             }
         }
 
-        return elements
+        return elements.toImmutableList()
     }
 
     /**
@@ -106,7 +107,7 @@ object MarkdownParser {
      * Parse markdown content into sections suitable for display.
      * Handles bold text, code blocks (triple backticks), and blockquotes.
      */
-    fun parseMarkdownContent(content: String): List<TipSectionElement> {
+    fun parseMarkdownContent(content: String): ImmutableList<TipSectionElement> {
         val sections = mutableListOf<TipSectionElement>()
         val lines = content.lines()
         var i = 0
@@ -184,7 +185,7 @@ object MarkdownParser {
             }
         }
 
-        return sections
+        return sections.toImmutableList()
     }
 
     /**
@@ -195,7 +196,7 @@ object MarkdownParser {
 
         // Parse header row (first row)
         val headerLine = lines[0]
-        val headers = splitTableRow(headerLine).map { parseTableCellContent(it) }
+        val headers = splitTableRow(headerLine).map { parseTableCellContent(it) }.toImmutableList()
 
         // Skip separator row (second row with dashes) and parse data rows
         val dataRows = lines.drop(2).mapNotNull { line ->
@@ -203,8 +204,8 @@ object MarkdownParser {
             if (line.trim().replace(Regex("[|\\-\\s]"), "").isEmpty()) {
                 return@mapNotNull null
             }
-            splitTableRow(line).map { parseTableCellContent(it) }
-        }
+            splitTableRow(line).map { parseTableCellContent(it) }.toImmutableList()
+        }.toImmutableList()
 
         if (headers.isEmpty()) return null
 
@@ -214,7 +215,7 @@ object MarkdownParser {
     /**
      * Parse content within a table cell, handling bold, italic, inline code, and man links.
      */
-    fun parseTableCellContent(cell: String): List<TextElement> {
+    fun parseTableCellContent(cell: String): ImmutableList<TextElement> {
         val elements = mutableListOf<TextElement>()
         var remaining = cell
 
@@ -273,7 +274,7 @@ object MarkdownParser {
             }
         }
 
-        return elements
+        return elements.toImmutableList()
     }
 
     /**
@@ -375,13 +376,13 @@ object MarkdownParser {
     /**
      * Parse a tips markdown file into list of TipInfo.
      */
-    fun parseTips(content: String): List<TipInfo> = splitByHeaders(content, "## ").map { (title, sectionContent) ->
+    fun parseTips(content: String): ImmutableList<TipInfo> = splitByHeaders(content, "## ").map { (title, sectionContent) ->
         TipInfo(
             id = title.hashCode().toLong(),
             title = title,
             sections = parseMarkdownContent(sectionContent),
         )
-    }
+    }.toImmutableList()
 
     /**
      * Parse a basics markdown file into BasicInfo.
@@ -405,7 +406,7 @@ object MarkdownParser {
                 description = groupTitle,
                 sections = parseMarkdownContent(groupContent),
             )
-        }
+        }.toImmutableList()
 
         return BasicInfo(title = title, groups = groups)
     }
@@ -420,7 +421,7 @@ object MarkdownParser {
                 content = sectionContent,
                 elements = parseMarkdownContent(sectionContent),
             )
-        }
+        }.toImmutableList()
 
         if (sections.isEmpty()) return null
 

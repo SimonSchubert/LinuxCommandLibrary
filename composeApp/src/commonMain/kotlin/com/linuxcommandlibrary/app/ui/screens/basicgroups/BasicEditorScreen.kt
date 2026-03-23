@@ -21,15 +21,29 @@ import com.linuxcommandlibrary.app.NavEvent
 import com.linuxcommandlibrary.app.ui.composables.SectionTitle
 import com.linuxcommandlibrary.app.ui.composables.TipSectionContent
 import com.linuxcommandlibrary.shared.BasicGroup
+import kotlinx.collections.immutable.ImmutableList
 
 @Composable
 fun BasicEditorScreen(
     viewModel: BasicEditorViewModel,
-    onNavigate: (NavEvent) -> Unit = {},
+    onNavigate: (NavEvent) -> Unit,
 ) {
     val groups by viewModel.groups.collectAsState()
     val showTitles = viewModel.showTitles
 
+    BasicEditorContent(
+        groups = groups,
+        showTitles = showTitles,
+        onNavigate = onNavigate,
+    )
+}
+
+@Composable
+fun BasicEditorContent(
+    groups: ImmutableList<BasicGroup>,
+    showTitles: Boolean,
+    onNavigate: (NavEvent) -> Unit,
+) {
     LazyVerticalStaggeredGrid(
         modifier = Modifier
             .background(MaterialTheme.colorScheme.background)
@@ -48,7 +62,11 @@ fun BasicEditorScreen(
 }
 
 @Composable
-private fun EditorGroupCard(group: BasicGroup, onNavigate: (NavEvent) -> Unit, showTitle: Boolean = true) {
+private fun EditorGroupCard(
+    group: BasicGroup,
+    onNavigate: (NavEvent) -> Unit,
+    showTitle: Boolean = true,
+) {
     Card(
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
         modifier = Modifier

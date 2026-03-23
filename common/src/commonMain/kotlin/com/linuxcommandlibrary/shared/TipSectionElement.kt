@@ -17,11 +17,11 @@ sealed class TextElement {
  * Represents different types of content sections in tips and basics.
  */
 sealed class TipSectionElement {
-    data class Text(val elements: List<TextElement>) : TipSectionElement()
-    data class Blockquote(val elements: List<TextElement>) : TipSectionElement()
+    data class Text(val elements: ImmutableList<TextElement>) : TipSectionElement()
+    data class Blockquote(val elements: ImmutableList<TextElement>) : TipSectionElement()
     data class Code(val command: String, val elements: ImmutableList<CommandElement>) : TipSectionElement()
     data class Table(
-        val headers: List<List<TextElement>>,
-        val rows: List<List<List<TextElement>>>,
+        val headers: ImmutableList<ImmutableList<TextElement>>,
+        val rows: ImmutableList<ImmutableList<ImmutableList<TextElement>>>,
     ) : TipSectionElement()
 }

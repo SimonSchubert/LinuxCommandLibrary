@@ -21,15 +21,26 @@ import com.linuxcommandlibrary.app.NavEvent
 import com.linuxcommandlibrary.app.data.TipInfo
 import com.linuxcommandlibrary.app.ui.composables.SectionTitle
 import com.linuxcommandlibrary.app.ui.composables.TipSectionContent
-import com.linuxcommandlibrary.app.ui.theme.LocalCustomColors
+import kotlinx.collections.immutable.ImmutableList
 
 @Composable
 fun TipsScreen(
     viewModel: TipsViewModel,
-    onNavigate: (NavEvent) -> Unit = {},
+    onNavigate: (NavEvent) -> Unit,
 ) {
     val tips by viewModel.tips.collectAsState()
 
+    TipsContent(
+        tips = tips,
+        onNavigate = onNavigate,
+    )
+}
+
+@Composable
+fun TipsContent(
+    tips: ImmutableList<TipInfo>,
+    onNavigate: (NavEvent) -> Unit,
+) {
     LazyVerticalStaggeredGrid(
         modifier = Modifier
             .background(MaterialTheme.colorScheme.background)
