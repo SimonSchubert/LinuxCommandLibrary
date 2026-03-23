@@ -36,6 +36,15 @@ Display **help** during the game
 **-v, --version**
 > Display version information
 
+# PREVIEW
+
+```
+ . . . . . . . . .
+ . . ####o . . . .
+ . . . . . . . X .
+ . . . . . . . . .
+```
+
 # DESCRIPTION
 
 **nsnake** is a classic snake game that runs in the terminal using ncurses. Control a snake to eat food and grow longer while avoiding collisions with walls and the snake's own body.

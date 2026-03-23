@@ -29,6 +29,18 @@ Play a **custom level**
 **--level** _level_
 > Start on specified level number (1-9) or custom level file path
 
+# PREVIEW
+
+```
+ ##############
+ #o....#......#
+ #.###.#.####.#
+ #.#...........#
+ #.#.#.###.#.#.#
+ #C..#.....#...#
+ ##############
+```
+
 # DESCRIPTION
 
 **pacman4console** is a text-based console game inspired by the original Pacman arcade game. It runs in the terminal using ASCII characters to render the maze, ghosts, and player character.

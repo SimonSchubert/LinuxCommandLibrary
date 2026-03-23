@@ -107,23 +107,25 @@ fun CommandView(
             style = MaterialTheme.typography.titleSmall,
         )
 
-        val shareHandler: ShareHandler = koinInject()
-        val shareAction = remember(shareHandler, command) {
-            {
-                val cleanedCommand = command.dropWhile { it == '$' || it.isWhitespace() }.replace("\\n", "")
-                shareHandler.shareText(cleanedCommand)
+        if ('\n' !in command) {
+            val shareHandler: ShareHandler = koinInject()
+            val shareAction = remember(shareHandler, command) {
+                {
+                    val cleanedCommand = command.dropWhile { it == '$' || it.isWhitespace() }.replace("\\n", "")
+                    shareHandler.shareText(cleanedCommand)
+                }
             }
-        }
-        IconButton(
-            modifier = Modifier
-                .align(Alignment.CenterVertically)
-                .pointerHoverIcon(PointerIcon.Hand),
-            onClick = shareAction,
-        ) {
-            Icon(
-                imageVector = shareButtonIcon,
-                contentDescription = shareButtonDescription,
-            )
+            IconButton(
+                modifier = Modifier
+                    .align(Alignment.CenterVertically)
+                    .pointerHoverIcon(PointerIcon.Hand),
+                onClick = shareAction,
+            ) {
+                Icon(
+                    imageVector = shareButtonIcon,
+                    contentDescription = shareButtonDescription,
+                )
+            }
         }
     }
 }

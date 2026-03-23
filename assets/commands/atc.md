@@ -24,6 +24,16 @@ Show **high scores**
 
 **atc** [_-u?lstp_] [_-gf game_] [_-r seed_]
 
+# PREVIEW
+
+```
+ .  .  .  *  .  .
+ .  A2 .  .  .  .
+ .  .  .  .  B1 .
+ .  .  .  .  .  .
+ .  .  C3 .  .  .
+```
+
 # DESCRIPTION
 
 **atc** is a classic text-based air traffic control simulation game from the BSD games collection. Players guide jets and propeller planes to their destinations via exits and airports while avoiding collisions, managing multiple aircraft simultaneously.

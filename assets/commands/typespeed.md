@@ -52,6 +52,15 @@ Terminal typing speed game
 
 Words fly across the screen from left to right. Type them correctly before they reach the right edge. Missing 10 words ends the game. Faster typing earns more points.
 
+# PREVIEW
+
+```
+ defend -->
+   score -->
+ compile ------>
+ result ------->
+```
+
 # DESCRIPTION
 
 **typespeed** is a terminal typing game that tests and improves typing speed. Words scroll across the screen and must be typed before disappearing. The game measures characters per second (CPS), accuracy, and calculates a score.

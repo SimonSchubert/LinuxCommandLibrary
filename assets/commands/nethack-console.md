@@ -84,6 +84,16 @@ classic roguelike dungeon exploration game where you descend through the Mazes
 **TERM**
 > Terminal type for display
 
+# PREVIEW
+
+```
+ ------       -----
+ |....|  ###  +...|
+ |..@.|###   #|.>.|
+ |.<..|      #|...|
+ ------       -----
+```
+
 # DESCRIPTION
 
 **nethack** is a classic roguelike dungeon exploration game where you descend through the Mazes of Menace to retrieve the Amulet of Yendor. The console version uses ASCII characters to represent the game world, making it playable on any terminal.

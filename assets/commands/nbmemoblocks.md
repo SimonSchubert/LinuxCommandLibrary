@@ -24,6 +24,15 @@ terminal memory matching game
 **--help**
 > Display help information.
 
+# PREVIEW
+
+```
+ [?] [?] [A] [?]
+ [?] [B] [?] [?]
+ [A] [?] [?] [B]
+ [?] [?] [?] [?]
+```
+
 # DESCRIPTION
 
 **nbmemoblocks** is a terminal memory matching game. Match pairs of blocks.

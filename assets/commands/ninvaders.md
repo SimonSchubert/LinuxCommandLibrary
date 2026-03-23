@@ -31,6 +31,16 @@ terminal Space Invaders game
 **--help**
 > Display help information.
 
+# PREVIEW
+
+```
+ /\ /\ /\ /\ /\
+ <> <> <> <> <>
+ {} {} {} {} {}
+
+      /A\
+```
+
 # DESCRIPTION
 
 **ninvaders** is a terminal Space Invaders game. Classic arcade gameplay in the terminal.

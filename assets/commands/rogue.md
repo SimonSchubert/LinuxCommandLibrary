@@ -99,6 +99,20 @@ Classic dungeon crawling adventure game
 **Q**
 > Quit (abandon game)
 
+# PREVIEW
+
+```
+ ---------
+ |.......+####
+ |..@....|  #
+ |.......|  #
+ ---------  #
+      ------+-----
+      |..........|
+      |.........>|
+      ------------
+```
+
 # DESCRIPTION
 
 **rogue** is the original dungeon-crawling game that defined the roguelike genre. The player explores procedurally generated dungeon levels, fighting monsters, collecting treasure, and searching for the Amulet of Yendor on the 26th level.

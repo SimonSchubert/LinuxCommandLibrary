@@ -12,6 +12,16 @@ Terminal-based Five in a Row board game
 
 **gomoku** [_options_]
 
+# PREVIEW
+
+```
+ . . . . . . . .
+ . . . X . . . .
+ . . O X O . . .
+ . . . X . . . .
+ . . . O . . . .
+```
+
 # DESCRIPTION
 
 **gomoku** is a terminal-based implementation of the Gomoku (Five in a Row) board game. Players take turns placing stones on a grid, trying to get five in a row horizontally, vertically, or diagonally.

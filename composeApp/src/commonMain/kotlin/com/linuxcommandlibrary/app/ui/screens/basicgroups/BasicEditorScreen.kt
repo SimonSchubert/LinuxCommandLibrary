@@ -28,6 +28,7 @@ fun BasicEditorScreen(
     onNavigate: (NavEvent) -> Unit = {},
 ) {
     val groups by viewModel.groups.collectAsState()
+    val showTitles = viewModel.showTitles
 
     LazyVerticalStaggeredGrid(
         modifier = Modifier
@@ -41,13 +42,13 @@ fun BasicEditorScreen(
             key = { it.id },
             contentType = { "editor_group_item" },
         ) { group ->
-            EditorGroupCard(group = group, onNavigate = onNavigate)
+            EditorGroupCard(group = group, onNavigate = onNavigate, showTitle = showTitles)
         }
     }
 }
 
 @Composable
-private fun EditorGroupCard(group: BasicGroup, onNavigate: (NavEvent) -> Unit) {
+private fun EditorGroupCard(group: BasicGroup, onNavigate: (NavEvent) -> Unit, showTitle: Boolean = true) {
     Card(
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
         modifier = Modifier
@@ -55,8 +56,10 @@ private fun EditorGroupCard(group: BasicGroup, onNavigate: (NavEvent) -> Unit) {
             .fillMaxWidth(),
     ) {
         Column(modifier = Modifier.padding(8.dp)) {
-            SectionTitle(title = group.description)
-            TipSectionContent(sections = group.sections, onNavigate = onNavigate)
+            if (showTitle) {
+                SectionTitle(title = group.description)
+            }
+            TipSectionContent(sections = group.sections, onNavigate = onNavigate, commandVerticalPadding = 4.dp)
         }
     }
 }

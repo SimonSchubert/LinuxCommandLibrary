@@ -16,6 +16,8 @@ class BasicEditorViewModel(
     basicsRepository: BasicsRepository,
     scope: CoroutineScope,
 ) {
+    val showTitles: Boolean = categoryId != "terminalgames"
+
     private val _groups = MutableStateFlow<ImmutableList<BasicGroup>>(persistentListOf())
     val groups = _groups.asStateFlow()
 

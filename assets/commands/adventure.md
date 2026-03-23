@@ -16,6 +16,17 @@ Original Colossal Cave text adventure game
 
 **adventure** [_-r_]
 
+# PREVIEW
+
+```
+You are inside a building.
+There are some keys on the
+ground here.
+
+> get keys
+OK
+```
+
 # DESCRIPTION
 
 **adventure** (also known as Colossal Cave Adventure or ADVENT) is the original text adventure game. Players explore a cave system described entirely through text, interacting with the environment using simple verb-noun commands like "GO NORTH", "GET LAMP", or "KILL DRAGON".

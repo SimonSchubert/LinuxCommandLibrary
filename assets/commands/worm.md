@@ -20,6 +20,16 @@ Classic terminal snake game
 **q**
 > Quit the game
 
+# PREVIEW
+
+```
+ . . . . . . . . .
+ . . ooooo . . . .
+ . . . . o . . 6 .
+ . . . . o . . . .
+ . . . . . . . . .
+```
+
 # DESCRIPTION
 
 **worm** is a classic terminal-based snake game from the BSD games collection. The player controls a growing worm that moves around the screen, eating numbers to grow longer and score points.

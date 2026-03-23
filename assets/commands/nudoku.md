@@ -58,6 +58,18 @@ ncurses based sudoku game
 **-v**
 > Display version information.
 
+# PREVIEW
+
+```
+ 5 3 . | . 7 . | . . .
+ 6 . . | 1 9 5 | . . .
+ . 9 8 | . . . | . 6 .
+-------+-------+------
+ 8 . . | . 6 . | . . 3
+ 4 . . | 8 . 3 | . . 1
+ 7 . . | . 2 . | . . 6
+```
+
 # DESCRIPTION
 
 **nudoku** is a terminal-based Sudoku game using ncurses for display. It generates puzzles at three difficulty levels and provides a keyboard-driven interface for solving them.

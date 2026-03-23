@@ -26,6 +26,14 @@ Text-based solitaire card game
 
 **cfscores** [**-a**] [_user_]
 
+# PREVIEW
+
+```
+ [Kh] [  ] [  ] [  ]
+ [Ac] [2d] [3c]
+ [##] [##] [##] [##]
+```
+
 # DESCRIPTION
 
 **canfield** is a text-based implementation of the Canfield solitaire card game (also known as Demon Solitaire) from the BSD games collection. Cards are displayed using ASCII characters in the terminal.

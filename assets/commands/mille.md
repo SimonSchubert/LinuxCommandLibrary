@@ -21,6 +21,14 @@ card game Mille Bornes
 _file_
 > Saved game file to resume.
 
+# PREVIEW
+
+```
+ HAND: [Go] [25] [75]
+ MILES: 425 / 1000
+ SAFETY: [Right of Way]
+```
+
 # DESCRIPTION
 
 **mille** plays a two-handed game of Mille Bornes against the computer. Players race to reach 1000 miles while playing hazard cards on the opponent and using remedies and safeties.

@@ -41,6 +41,15 @@ Terminal minesweeper game from the nbsdgames collection
 **--help**
 > Display help information.
 
+# PREVIEW
+
+```
+ .  .  1  .  .  .  .
+ .  1  2  1  .  .  .
+ .  1  #  .  .  1  1
+ .  1  1  1  .  1  F
+```
+
 # DESCRIPTION
 
 **nbmines** is a terminal-based minesweeper game from the **nbsdgames** package, a collection of text-based games. The goal is to reveal all cells that do not contain mines while avoiding the mined ones.

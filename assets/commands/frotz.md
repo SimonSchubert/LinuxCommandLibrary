@@ -28,6 +28,16 @@ Z-machine interactive fiction interpreter
 
 **frotz** [_options_] _story-file_
 
+# PREVIEW
+
+```
+West of House
+You are in an open
+field west of a house.
+
+>
+```
+
 # DESCRIPTION
 
 **frotz** is an interpreter for Infocom-style interactive fiction (Z-machine games). It runs text adventure games in formats from Z3 through Z8, including classic titles and modern IF works.

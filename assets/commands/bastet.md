@@ -12,6 +12,19 @@ Tetris clone that gives you the worst possible pieces
 
 **bastet**
 
+# PREVIEW
+
+```
+    []
+    [][]
+      []
+
+  [][][]
+    [][]
+  [][][][]
+  [][][][]
+```
+
 # DESCRIPTION
 
 **bastet** (Bastard Tetris) is a Tetris clone with a twist - it chooses the worst possible piece for your current situation. The game analyzes your board and deliberately gives you pieces that are hardest to place, making it significantly more challenging than standard Tetris.

@@ -48,6 +48,16 @@ Roguelike dungeon exploration game
 **-s** _path_
 > Set the path for save files.
 
+# PREVIEW
+
+```
+ ######
+ #....#  ####
+ #..@.####..#
+ #....#  #..#
+ ######  ####
+```
+
 # DESCRIPTION
 
 **Angband** is a classic single-player roguelike dungeon exploration game. The player creates a character and descends through 100 levels of a dungeon to ultimately defeat Morgoth, the Lord of Darkness. The game features permadeath, procedurally generated levels, and turn-based gameplay.

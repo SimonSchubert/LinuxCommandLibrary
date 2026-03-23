@@ -42,6 +42,19 @@ BSD Tetris game for terminals
 **-s** _seed_
 > Set the random seed for reproducible block sequences.
 
+# PREVIEW
+
+```
+    []
+    [][]
+      []
+
+  [][][]
+    [][]
+  [][][][]
+  [][][][]
+```
+
 # DESCRIPTION
 
 **tetris-bsd** is a terminal-based Tetris implementation from the BSD games collection. The game displays falling tetrominoes that must be arranged to form complete horizontal rows. Completed rows disappear, and the game ends when blocks stack to the top.

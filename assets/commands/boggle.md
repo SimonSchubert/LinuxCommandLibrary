@@ -28,6 +28,15 @@ Word search game on a grid of letter cubes
 
 **boggle** [**-bd**] [**-s** _seed_] [**-t** _time_] [**-w** _length_] [**+**] [**++**] [_boardspec_]
 
+# PREVIEW
+
+```
+ D  O  G  S
+ R  A  T  E
+ L  I  N  K
+ P  U  M  P
+```
+
 # DESCRIPTION
 
 **boggle** is a word search game from the BSD games collection. The objective is to find as many words as possible on a 4x4 grid of letter cubes within a three-minute time limit.

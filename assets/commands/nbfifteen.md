@@ -31,6 +31,17 @@ terminal 15-puzzle game
 **-h**
 > Display help information.
 
+# PREVIEW
+
+```
++--+--+--+--+
+| 1| 2| 3| 4|
+| 5| 6| 7| 8|
+| 9|10|11|12|
+|13|14|15|  |
++--+--+--+--+
+```
+
 # DESCRIPTION
 
 **nbfifteen** is a terminal 15-puzzle game. Slide tiles to arrange them in order.

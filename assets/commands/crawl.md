@@ -64,6 +64,16 @@ roguelike dungeon exploration game
 **-version**
 > Display version.
 
+# PREVIEW
+
+```
+ ####
+ #..####
+ #..@..#
+ #.....#
+ ########
+```
+
 # DESCRIPTION
 
 **Dungeon Crawl Stone Soup** (DCSS or Crawl) is a roguelike dungeon exploration game focused on combat, strategy, and careful resource management. The player descends through a procedurally generated dungeon to retrieve the Orb of Zot and escape alive.

@@ -24,6 +24,15 @@ Terminal number-eating puzzle game
 **--help**
 > Display help information.
 
+# PREVIEW
+
+```
+ 4 7 2 9 1 3 8 5
+ 5 1 8 3 6 2 7 4
+ 9 3 @ 7 4 8 1 6
+ 2 6 5 1 9 4 3 7
+```
+
 # DESCRIPTION
 
 **greed** is a terminal-based puzzle game where players move through a grid collecting numbers. Moving in any direction consumes that many squares, and the goal is to clear as many as possible.

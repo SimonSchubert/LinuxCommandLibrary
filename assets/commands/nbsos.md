@@ -47,6 +47,15 @@ terminal SOS game
 **-h**
 > Display help information.
 
+# PREVIEW
+
+```
+ S  O  S  .  .
+ .  .  S  .  .
+ .  .  O  .  .
+ .  .  S  .  .
+```
+
 # DESCRIPTION
 
 **nbsos** is a terminal-based SOS board game from the **nbsdgames** collection. Players take turns placing the letters S or O on a grid. Forming a straight connected S-O-S sequence scores a point; the player with the highest score wins.

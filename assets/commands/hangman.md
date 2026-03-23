@@ -34,6 +34,17 @@ classic word-guessing game
 **--help**
 > Display help information.
 
+# PREVIEW
+
+```
+ +---+
+ |   O
+ |  /|\
+ |   |
+_|_
+ _ a n g _ a n
+```
+
 # DESCRIPTION
 
 **hangman** is a classic word-guessing game. Players guess letters to reveal a hidden word before making too many wrong guesses.

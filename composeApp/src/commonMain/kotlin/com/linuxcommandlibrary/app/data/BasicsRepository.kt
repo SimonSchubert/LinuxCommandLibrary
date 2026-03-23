@@ -74,7 +74,7 @@ class BasicsRepository(private val assetReader: AssetReader) {
     }
 
     fun usesCardLayout(categoryId: String): Boolean = categoryId.endsWith("texteditor") ||
-        categoryId in setOf("shellscripting", "tmux", "regularexpressions")
+        categoryId in setOf("shellscripting", "tmux", "regularexpressions", "terminalgames")
 
     private fun parseCommandLine(line: String): Pair<String, String> {
         val codeContent = line.trim().removeSurrounding("```")

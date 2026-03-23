@@ -16,6 +16,16 @@ Text-based science fiction adventure game
 
 **battlestar** [_-r_] [_file_]
 
+# PREVIEW
+
+```
+You are in the cockpit.
+Strewn about are pieces
+of broken instrumentation.
+
+> look
+```
+
 # DESCRIPTION
 
 **battlestar** is a text adventure game from the BSD games collection. Set aboard a battlestar at the tail end of a fierce space battle, players must explore the wreckage, find essential items, and survive encounters while navigating through various locations including tropical islands.

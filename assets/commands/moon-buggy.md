@@ -38,6 +38,15 @@ terminal-based game
 **--help**
 > Display help information.
 
+# PREVIEW
+
+```
+         *
+ o-:/    *       *
+ /oo\___
+______/  \________
+```
+
 # DESCRIPTION
 
 **moon-buggy** is a terminal-based game. Drive a buggy across the moon's surface jumping over craters.

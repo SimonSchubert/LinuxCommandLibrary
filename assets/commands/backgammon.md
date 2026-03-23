@@ -24,6 +24,15 @@ Start a **two-player** game
 
 **backgammon** [_-_] [_-nrwb_] [_-pr_] [_-pw_] [_-pb_] [_-t term_] [_-s file_]
 
+# PREVIEW
+
+```
+ 13 14 15 16 17 18
+  O        X  X  O
+  O           X  O
+                 O
+```
+
 # DESCRIPTION
 
 **backgammon** is a classic text-based backgammon game from the BSD games collection. It provides a text-based interface for playing backgammon against the computer or another player. Players move checkers based on dice rolls, attempting to bear off all pieces before their opponent.

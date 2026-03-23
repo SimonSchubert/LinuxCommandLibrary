@@ -58,6 +58,19 @@ Terminal-based Tetris game
 **-name** _NAME_
 > Set player name for network play.
 
+# PREVIEW
+
+```
+    []
+    [][]
+      []
+
+  [][][]
+    [][]
+  [][][][]
+  [][][][]
+```
+
 # DESCRIPTION
 
 **vitetris** is a terminal-based Tetris clone with gameplay similar to early Nintendo Tetris games. It features configurable controls, a high score table, two-player mode with garbage lines, network play, and joystick support on Linux.

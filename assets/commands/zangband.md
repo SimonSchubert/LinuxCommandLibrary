@@ -37,6 +37,16 @@ Roguelike dungeon exploration game
 **--**
 > Ignore remaining options
 
+# PREVIEW
+
+```
+ ##.##
+ #...#  ####
+ #.@.####..#
+ #...#  #.>#
+ #####  ####
+```
+
 # DESCRIPTION
 
 **ZAngband** is a single-player roguelike dungeon exploration game, a variant of Angband which itself derives from Moria and ultimately Rogue. The goal is to descend through increasingly dangerous dungeon levels, gain experience and equipment, and ultimately defeat a powerful end boss.

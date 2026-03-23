@@ -44,6 +44,16 @@ multiplayer terminal game where players hunt each other in a maze
 **--help**
 > Display help information.
 
+# PREVIEW
+
+```
+ ######  ######
+ #    #  # @  #
+ # #  ####    #
+ #        # X #
+ ##############
+```
+
 # DESCRIPTION
 
 **hunt** is a multiplayer terminal game where players hunt each other in a maze. Players shoot and dodge in text-based combat.
