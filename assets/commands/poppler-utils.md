@@ -54,30 +54,17 @@ Collection of PDF utilities from Poppler library
 **pdfdetach**
 > Extract attachments.
 
-# EXAMPLES
+**pdfattach**
+> Attach files to PDFs.
 
-```bash
-# Extract text
-pdftotext document.pdf output.txt
+**pdftocairo**
+> Convert PDF to image formats using Cairo.
 
-# Convert to PNG images
-pdftoppm -png document.pdf page
+**pdftohtml**
+> Convert PDF to HTML.
 
-# Get PDF info
-pdfinfo document.pdf
-
-# Extract images
-pdfimages -j document.pdf images/
-
-# Merge PDFs
-pdfunite doc1.pdf doc2.pdf combined.pdf
-
-# Split pages
-pdfseparate document.pdf page-%d.pdf
-
-# List fonts
-pdffonts document.pdf
-```
+**pdftops**
+> Convert PDF to PostScript.
 
 # DESCRIPTION
 
@@ -93,4 +80,4 @@ Poppler was forked from **Xpdf** by **Derek Noonburg** and is maintained by the 
 
 # SEE ALSO
 
-[pdftk](/man/pdftk)(1), [gs](/man/gs)(1), [qpdf](/man/qpdf)(1), [pdftohtml](/man/pdftohtml)(1)
+[pdftotext](/man/pdftotext)(1), [pdftoppm](/man/pdftoppm)(1), [pdfinfo](/man/pdfinfo)(1), [pdftk](/man/pdftk)(1), [gs](/man/gs)(1), [qpdf](/man/qpdf)(1)

@@ -4,11 +4,7 @@ testing framework for Ansible roles
 
 # TLDR
 
-**Initialize new role with Molecule**
-
-```molecule init role [role_name]```
-
-**Create test scenario**
+**Initialize a test scenario** in the current role
 
 ```molecule init scenario```
 
@@ -38,7 +34,7 @@ testing framework for Ansible roles
 
 # SYNOPSIS
 
-**molecule** _command_ [_--scenario-name name_] [_--driver-name driver_] [_options_]
+**molecule** _command_ [_--scenario-name name_] [_options_]
 
 # PARAMETERS
 

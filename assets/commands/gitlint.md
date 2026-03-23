@@ -57,7 +57,7 @@ Lint and enforce commit message conventions
 **-c** _RULE.OPTION=VALUE_
 > Set a rule option on the command line.
 
-**--config** _FILE_
+**-C**, **--config** _FILE_
 > Use a specific config file.
 
 **--ignore** _RULES_
@@ -66,13 +66,40 @@ Lint and enforce commit message conventions
 **--contrib** _RULES_
 > Comma-separated list of contrib rules to enable (e.g., contrib-title-conventional-commits).
 
-**--debug**
+**--target** _DIRECTORY_
+> Path of the target git repository (default: current working directory).
+
+**-e**, **--extra-path** _PATH_
+> Path to a directory or Python module with extra user-defined rules.
+
+**--ignore-stdin**
+> Ignore any stdin data. Useful for running in CI server.
+
+**--staged**
+> Smart detection of metadata for staged commits.
+
+**--fail-without-commits**
+> Hard fail when the target commit range is empty.
+
+**-v**, **--verbose**
+> Verbosity, use multiple times for more output (e.g., -v, -vv, -vvv).
+
+**-s**, **--silent**
+> Silent mode (no output). Takes precedence over -v.
+
+**-d**, **--debug**
 > Enable debug output.
+
+**--version**
+> Show version and exit.
 
 **--help**
 > Display help information.
 
 # COMMANDS
+
+**lint**
+> Lint a git repository (default command).
 
 **generate-config**
 > Create a default .gitlint configuration file.
@@ -82,6 +109,9 @@ Lint and enforce commit message conventions
 
 **uninstall-hook**
 > Remove the gitlint commit-msg hook.
+
+**run-hook**
+> Run the gitlint commit-msg hook.
 
 # DESCRIPTION
 

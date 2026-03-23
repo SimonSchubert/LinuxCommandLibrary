@@ -34,6 +34,9 @@ Manage custom virtual machine images in Azure
 
 # SUBCOMMANDS
 
+**copy**
+> Copy a managed image to other regions (requires extension).
+
 **create**
 > Create a custom virtual machine image from managed disks or snapshots.
 
@@ -47,7 +50,10 @@ Manage custom virtual machine images in Azure
 > Get information about an image.
 
 **update**
-> Update an image.
+> Update custom VM images.
+
+**wait**
+> Place the CLI in a waiting state until a condition is met.
 
 # PARAMETERS
 
@@ -66,6 +72,15 @@ Manage custom virtual machine images in Azure
 **--os-type**
 > Operating system type: Linux or Windows.
 
+**--location** **-l**
+> Location for the image.
+
+**--hyper-v-generation**
+> Hypervisor generation of the VM: V1 or V2.
+
+**--tags**
+> Space-separated tags: key[=value].
+
 **--data-disk-sources**
 > Managed disks or snapshots for data disks.
 
@@ -81,4 +96,4 @@ Requires Azure CLI to be installed and authenticated with **az login**. The sour
 
 # SEE ALSO
 
-[az](/man/az)(1), [az-disk](/man/az-disk)(1), [az-snapshot](/man/az-snapshot)(1)
+[az](/man/az)(1), [az-disk](/man/az-disk)(1), [az-vm](/man/az-vm)(1)

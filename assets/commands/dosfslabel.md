@@ -67,4 +67,4 @@ dosfslabel is part of the **dosfstools** package, which provides utilities for M
 
 # SEE ALSO
 
-[fatlabel](/man/fatlabel)(8), [mkfs.fat](/man/mkfs.fat)(8), [fsck.fat](/man/fsck.fat)(8), [e2label](/man/e2label)(8)
+[fatlabel](/man/fatlabel)(8), [mkfs.fat](/man/mkfs.fat)(8), [e2label](/man/e2label)(8)

@@ -58,11 +58,32 @@ ISC DHCP server daemon for IP address assignment
 **-4** / **-6**
 > Force IPv4 or IPv6 mode.
 
+**-p** _port_
+> Listen on alternate UDP port (default 67).
+
+**-s** _address_
+> Send replies to specified address instead of broadcast.
+
 **-q**
-> Quiet startup.
+> Quiet startup (suppress copyright message).
+
+**-user** _user_
+> Setuid to user after privileged operations.
+
+**-group** _group_
+> Setgid to group after privileged operations.
+
+**-chroot** _dir_
+> Chroot to directory.
+
+**-tf** _tracefile_
+> Log startup state and transactions for debugging.
 
 **--no-pid**
 > Don't write PID file.
+
+**--version**
+> Display version and exit.
 
 # CONFIGURATION
 
@@ -100,4 +121,4 @@ ISC DHCP was originally developed by **Ted Lemon** at the Internet Systems Conso
 
 # SEE ALSO
 
-[dhcpd.conf](/man/dhcpd.conf)(5), [dhcpd.leases](/man/dhcpd.leases)(5), [dhclient](/man/dhclient)(8), [kea-dhcp4](/man/kea-dhcp4)(8)
+[dhclient](/man/dhclient)(8)

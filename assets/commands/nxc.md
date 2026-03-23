@@ -56,19 +56,18 @@ _TARGET_
 
 # DESCRIPTION
 
-**nxc** is NetExec, a network service exploitation tool. Successor to CrackMapExec.
+**nxc** (NetExec) is a network service exploitation tool that helps automate assessing the security of large networks. It is the community-maintained successor to CrackMapExec, originally created in 2015.
 
-The tool tests credentials across networks. Used for penetration testing.
+The tool supports multiple protocols including SMB, SSH, LDAP, WinRM, MSSQL, RDP, FTP, and others. It enables credential testing, share enumeration, command execution, and Active Directory operations across networks. Authentication results are color-coded: green for success, red for failure, and magenta for valid credentials that were rejected.
 
 # CAVEATS
 
-Security tool. Authorized use only. Successor to CrackMapExec.
+Security tool for authorized penetration testing only. Requires Python and is typically installed via pipx. Successor to CrackMapExec.
 
 # HISTORY
 
-NetExec was created as the **successor to CrackMapExec** for network penetration testing.
+NetExec was created as the **successor to CrackMapExec** for network penetration testing, with community maintenance beginning after the original project was archived.
 
 # SEE ALSO
 
-[nmap](/man/nmap)(1), [impacket](/man/impacket)(1), [metasploit](/man/metasploit)(1)
-
+[nmap](/man/nmap)(1), [crackmapexec](/man/crackmapexec)(1), [hydra](/man/hydra)(1), [impacket](/man/impacket)(1), [metasploit](/man/metasploit)(1)

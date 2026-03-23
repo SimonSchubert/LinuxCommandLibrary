@@ -66,4 +66,4 @@ Labels are limited to 11 characters and must be valid MS-DOS format. Invalid cha
 
 # SEE ALSO
 
-[fatlabel](/man/fatlabel)(8), [mtools](/man/mtools)(1), [mdir](/man/mdir)(1)
+[fatlabel](/man/fatlabel)(8)

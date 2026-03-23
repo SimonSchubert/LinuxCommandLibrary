@@ -23,13 +23,28 @@ shows differences between package versions or between local package and registry
 # PARAMETERS
 
 **--diff** _spec_
-> Package spec to compare.
+> Package spec to compare; can be used twice to specify both sides.
 
 **--diff-name-only**
 > Show only changed filenames.
 
 **--diff-unified** _n_
-> Lines of context.
+> Number of lines of context to show (default 3).
+
+**--diff-ignore-all-space**
+> Ignore whitespace when comparing lines.
+
+**--diff-no-prefix**
+> Omit source and destination prefixes from output.
+
+**--diff-src-prefix** _prefix_
+> Source prefix in output (default "a/").
+
+**--diff-dst-prefix** _prefix_
+> Destination prefix in output (default "b/").
+
+**--diff-text**
+> Treat all files as text.
 
 # DESCRIPTION
 

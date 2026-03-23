@@ -6,23 +6,27 @@ Parse and display ASN.1 encoded data
 
 **Parse** ASN.1 data
 
-```asn1parse -in [file.der]```
+```openssl asn1parse -in [file.der]```
 
 Parse **PEM** encoded file
 
-```asn1parse -in [file.pem] -inform PEM```
+```openssl asn1parse -in [file.pem] -inform PEM```
 
 Parse with **offset**
 
-```asn1parse -in [file.der] -offset [100]```
+```openssl asn1parse -in [file.der] -offset [100]```
 
-Show **structure** in detail
+Show **structure** with hex dump
 
-```asn1parse -in [file.der] -dump```
+```openssl asn1parse -in [file.der] -dump```
+
+Parse **nested** ASN.1 structure at a given offset
+
+```openssl asn1parse -in [file.pem] -strparse [offset]```
 
 # SYNOPSIS
 
-**asn1parse** [_-in file_] [_-inform format_] [_-offset n_] [_-dump_] [_options_]
+**openssl asn1parse** [**-help**] [**-inform** _DER|PEM_] [**-in** _filename_] [**-out** _filename_] [**-noout**] [**-offset** _number_] [**-length** _number_] [**-i**] [**-dump**] [**-dlimit** _num_] [**-strparse** _offset_] [**-genstr** _string_] [**-genconf** _file_] [**-strictpem**]
 
 # DESCRIPTION
 
@@ -32,32 +36,47 @@ The tool is invaluable for debugging certificate issues, understanding data stru
 
 # PARAMETERS
 
-**-in** _file_
-> Input file
+**-help**
+> Print usage message.
 
-**-inform** _format_
-> Input format: PEM or DER
+**-in** _filename_
+> Input file, default is standard input.
 
-**-out** _file_
-> Output file
+**-inform** _DER|PEM_
+> Input format; the default is PEM.
+
+**-out** _filename_
+> Output file to place the DER encoded data into.
 
 **-noout**
-> Don't output parsed structure
+> Don't output the parsed version of the input file.
 
-**-offset** _n_
-> Start parsing at offset n
+**-offset** _number_
+> Starting offset to begin parsing, default is start of file.
 
-**-length** _n_
-> Parse n bytes
+**-length** _number_
+> Number of bytes to parse, default is until end of file.
+
+**-i**
+> Indent the output according to the depth of the structures.
 
 **-dump**
-> Hex dump of content
+> Dump unknown data in hex format.
+
+**-dlimit** _num_
+> Like **-dump**, but only the first num bytes are output.
 
 **-strparse** _offset_
-> Parse nested structure at offset
+> Parse the contents octets of the ASN.1 object starting at offset.
 
 **-genstr** _string_
-> Generate ASN.1 from string
+> Generate encoded data based on string using ASN1_generate_nconf format.
+
+**-genconf** _file_
+> Generate encoded data from file using ASN1_generate_nconf format.
+
+**-strictpem**
+> Ignore any data prior to the BEGIN marker or after END marker in PEM.
 
 # CAVEATS
 
@@ -69,4 +88,4 @@ Requires understanding of ASN.1 structure. Output can be verbose for complex obj
 
 # SEE ALSO
 
-[openssl](/man/openssl)(1), [x509](/man/x509)(1), [req](/man/req)(1)
+[openssl](/man/openssl)(1), [openssl-x509](/man/openssl-x509)(1), [openssl-req](/man/openssl-req)(1)

@@ -37,9 +37,11 @@ _filter_
 
 # DESCRIPTION
 
-**pio boards** lists supported development boards in PlatformIO. Shows board IDs, names, platforms, and MCU information. Use board IDs with pio init for project setup.
+**pio boards** lists supported development boards in PlatformIO. It displays a formatted table with board ID, MCU type, frequency, flash memory, RAM, and board name. Use board IDs with **pio init** for project setup.
+
+An optional filter argument narrows results by platform, MCU, or board name (e.g., `pio boards arduino`, `pio boards atmega168`).
 
 # SEE ALSO
 
-[pio-init](/man/pio-init)(1), [pio-platform](/man/pio-platform)(1)
+[pio](/man/pio)(1), [pio-init](/man/pio-init)(1), [pio-run](/man/pio-run)(1), [pio-platform](/man/pio-platform)(1)
 

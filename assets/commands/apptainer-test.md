@@ -54,8 +54,14 @@ Run validation tests defined in a container
 **--fakeroot**
 > Run test with fake root privileges.
 
-**--pwd** _path_
+**--cwd**, **--pwd** _path_
 > Set working directory inside container.
+
+**--writable**, **-w**
+> Make file system accessible as read-write.
+
+**--writable-tmpfs**
+> Make file system read-write with non-persistent data (tmpfs overlay).
 
 **--help**, **-h**
 > Display help for the test command.
@@ -80,4 +86,4 @@ The test subcommand has been part of Singularity/Apptainer since early versions,
 
 # SEE ALSO
 
-[apptainer](/man/apptainer)(1), [apptainer-build](/man/apptainer-build)(1), [apptainer-run](/man/apptainer-run)(1), [apptainer-inspect](/man/apptainer-inspect)(1)
+[apptainer](/man/apptainer)(1), [apptainer-build](/man/apptainer-build)(1), [apptainer-run](/man/apptainer-run)(1), [apptainer-exec](/man/apptainer-exec)(1), [apptainer-inspect](/man/apptainer-inspect)(1)

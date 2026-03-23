@@ -59,16 +59,25 @@ The tool provides defense-in-depth security for AWS credentials and enables easy
 > Rotate access keys
 
 **export** _profile_
-> Export credentials as environment variables
+> Export credentials as environment variables.
+
+**clear** _profile_
+> Clear temporary credentials from the session store.
 
 **--duration=**_time_
-> Session duration (e.g., 12h, 1h30m)
+> Session duration (e.g., 12h, 1h30m).
 
 **--mfa-token=**_token_
-> MFA token code
+> MFA token code.
 
 **--no-session**
-> Don't create STS session
+> Use long-term credentials instead of creating an STS session.
+
+**--server**
+> Start a local EC2 metadata server instead of using environment variables.
+
+**--backend=**_backend_
+> Credential storage backend (keychain, kwallet, pass, secret-service, file).
 
 # FEATURES
 

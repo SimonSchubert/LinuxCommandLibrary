@@ -58,11 +58,26 @@ Common Workflow Language executor
 **--quiet**
 > Only print warnings and errors.
 
-**--strict**
-> Strict validation mode.
+**--validate**
+> Validate the CWL document without running.
 
 **--leave-tmpdir**
 > Don't delete temporary directories.
+
+**--version**
+> Print version and exit.
+
+**--make-template**
+> Generate template input object.
+
+**--on-error** _action_
+> Workflow behavior on failure (stop or continue).
+
+**--singularity**
+> Use Singularity container runtime instead of Docker.
+
+**--podman**
+> Use Podman container runtime instead of Docker.
 
 # DESCRIPTION
 

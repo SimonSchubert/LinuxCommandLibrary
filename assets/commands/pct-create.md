@@ -74,8 +74,20 @@ Create and **start** immediately
 **--features** _list_
 > Enable features like nesting, keyctl, fuse, mknod
 
-**--start**
-> Start container after creation
+**--start** _0|1_
+> Start container after creation (default: 0).
+
+**--onboot** _0|1_
+> Start container during system bootup (default: 0).
+
+**--storage** _storage_
+> Default storage for the container (default: local).
+
+**--nameserver** _ip_
+> DNS server IP address for the container.
+
+**--ostype** _type_
+> OS type (e.g., debian, ubuntu, centos, alpine, archlinux, fedora, gentoo, opensuse, unmanaged).
 
 # CAVEATS
 

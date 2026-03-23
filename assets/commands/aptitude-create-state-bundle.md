@@ -14,7 +14,7 @@ Create with **verbose** output
 
 # SYNOPSIS
 
-**aptitude-create-state-bundle** [_--force-bzip2_] [_--print-inputs_] _output_
+**aptitude-create-state-bundle** [_options_] _output-file_
 
 # DESCRIPTION
 
@@ -25,10 +25,13 @@ The bundle includes package lists, aptitude settings, and resolver state.
 # PARAMETERS
 
 **--force-bzip2**
-> Use bzip2 compression even for .gz extension
+> Force bzip2 compression regardless of file extension.
+
+**--force-gzip**
+> Force gzip compression even if bzip2 is available.
 
 **--print-inputs**
-> List files that would be included
+> Display the list of files and directories that would be included without creating the bundle.
 
 **-v**, **--verbose**
 > Verbose output

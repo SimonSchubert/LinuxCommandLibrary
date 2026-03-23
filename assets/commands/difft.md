@@ -32,7 +32,7 @@ syntax-aware structural diff tool
 
 ```git config --global diff.external difft```
 
-**Compare ignoring whitespace**
+**Compare and skip unchanged sections**
 
 ```difft --skip-unchanged [old_file] [new_file]```
 
@@ -80,6 +80,9 @@ syntax-aware structural diff tool
 
 **--graph-limit** _n_
 > Maximum graph size for structural diff algorithm.
+
+**--exit-code**
+> Set exit code to 1 if there are syntactic changes (useful in scripts).
 
 # DESCRIPTION
 

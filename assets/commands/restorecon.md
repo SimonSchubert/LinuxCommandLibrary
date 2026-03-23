@@ -26,29 +26,38 @@ Restore SELinux security contexts on files
 
 # PARAMETERS
 
-**-R, -r, --recursive**
-> Recursively change file labels in directories
+**-R**, **-r**
+> Recursively change file labels in directories.
 
-**-v, --verbose**
-> Show changes in file labels
+**-v**
+> Show changes in file labels.
 
-**-n, --nochange**
-> Don't change any file labels (dry run)
+**-n**
+> Don't change any file labels (dry run).
 
-**-p, --progress**
-> Show progress by printing a dot every 1000 files
+**-p**
+> Show progress by printing the number of files in 1k blocks.
 
-**-F, --force**
-> Force reset of context to match file_context
+**-F**
+> Force reset of context to match file_context for customizable files.
 
-**-e _directory_**
-> Exclude a directory from recursive operations
+**-e** _directory_
+> Exclude a directory from recursive operations (repeatable, requires full path).
 
-**-T _threads_**
-> Number of threads to use (0 = all available CPUs)
+**-f** _infilename_
+> Read a list of files to process from infilename. Use **-** for stdin.
 
-**-i, --ignore**
-> Ignore files that don't exist
+**-T** _nthreads_
+> Use up to nthreads threads for parallel processing.
+
+**-i**
+> Ignore files that don't exist.
+
+**-x**
+> Prevent restorecon from crossing file system boundaries.
+
+**-W**
+> Display warnings about entries that had no matching files.
 
 # DESCRIPTION
 
@@ -62,4 +71,4 @@ Only available on SELinux-enabled systems. Requires appropriate permissions to c
 
 # SEE ALSO
 
-[semanage-fcontext](/man/semanage-fcontext)(8), [chcon](/man/chcon)(1), [matchpathcon](/man/matchpathcon)(8), [selinux](/man/selinux)(8)
+[semanage-fcontext](/man/semanage-fcontext)(8), [chcon](/man/chcon)(1), [matchpathcon](/man/matchpathcon)(8), [setfiles](/man/setfiles)(8), [fixfiles](/man/fixfiles)(8), [getenforce](/man/getenforce)(8)

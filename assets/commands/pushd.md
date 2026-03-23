@@ -37,10 +37,10 @@ _DIR_
 > Add without changing.
 
 **+N**
-> Rotate to Nth entry.
+> Rotate Nth entry (from left) to top.
 
 **-N**
-> Rotate to Nth from end.
+> Rotate Nth entry (from right) to top.
 
 # DESCRIPTION
 
@@ -54,7 +54,7 @@ Shell built-in. Works with popd and dirs.
 
 # HISTORY
 
-pushd is a **shell built-in** for directory stack management.
+**pushd** originated in the **C shell (csh)** and was adopted by **bash**, **zsh**, and other shells as a built-in command for directory stack management.
 
 # SEE ALSO
 

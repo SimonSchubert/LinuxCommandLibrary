@@ -4,13 +4,17 @@ certificate authority for keyless code signing
 
 # TLDR
 
-**Start Fulcio server**
+**Start Fulcio server** with a config file
 
-```fulcio serve --config [config.yaml]```
+```fulcio serve --config-path [config.yaml]```
 
-**Create root certificate**
+**Start server** with file-based CA
 
-```fulcio createca --out [root.pem]```
+```fulcio serve --ca fileca --fileca-cert [ca.pem] --fileca-key [ca-key.pem]```
+
+**Start server** on a specific host and port
+
+```fulcio serve --host [0.0.0.0] --port [8080]```
 
 # SYNOPSIS
 
@@ -21,24 +25,36 @@ certificate authority for keyless code signing
 **serve**
 > Start Fulcio server.
 
-**--config** _file_
-> Configuration file.
+**--ca** _type_
+> Certificate authority type: googleca, fileca, kmsca, tinkca, pkcs11ca, ephemeralca.
+
+**--config-path** _file_
+> Path to Fulcio config YAML (default: /etc/fulcio-config/config.yaml).
+
+**--host** _addr_
+> HTTP server listen address (default: 0.0.0.0).
 
 **--port** _num_
-> Server port.
+> HTTP server port (default: 8080).
 
-**createca**
-> Create root CA certificate.
+**--grpc-port** _num_
+> gRPC server port (default: 8081).
 
-**--out** _file_
-> Output file.
+**--fileca-cert** _file_
+> Path to CA certificate (fileca only).
+
+**--fileca-key** _file_
+> Path to CA encrypted private key (fileca only).
+
+**--ct-log-url** _url_
+> Certificate transparency log URL.
 
 **version**
 > Show version.
 
 # CONFIGURATION
 
-**/etc/fulcio/config.yaml**
+**/etc/fulcio-config/config.yaml**
 > Server configuration including OIDC provider settings, certificate policies, and CA parameters.
 
 # DESCRIPTION
@@ -67,4 +83,4 @@ Fulcio is part of **Sigstore**, initiated by **Google**, **Red Hat**, and **Purd
 
 # SEE ALSO
 
-[cosign](/man/cosign)(1), [rekor-cli](/man/rekor-cli)(1), [sigstore](/man/sigstore)(1)
+[cosign](/man/cosign)(1), [rekor-cli](/man/rekor-cli)(1)

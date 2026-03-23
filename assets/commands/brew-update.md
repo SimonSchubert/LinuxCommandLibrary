@@ -30,7 +30,7 @@ Fetch the latest Homebrew and package definitions
 
 # DESCRIPTION
 
-**brew update** fetches the newest version of Homebrew and all formulae definitions from GitHub. It updates Homebrew itself and refreshes the list of available packages.
+**brew update** fetches the newest version of Homebrew and all formulae from GitHub using git, and performs any necessary migrations.
 
 This command does not upgrade installed packages - use **brew upgrade** for that.
 
@@ -52,9 +52,6 @@ Aliases: **brew up**
 
 **--merge**
 > Use git merge instead of git rebase
-
-**--quiet, -q**
-> Suppress output
 
 # AUTO-UPDATE
 

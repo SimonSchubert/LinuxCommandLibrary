@@ -10,7 +10,7 @@ Show all **EXIF information** in an image
 
 Show table **listing** known EXIF tags
 
-```exif [-l|--list-tags] --no-fixup [path/to/image.jpg]```
+```exif [-l|--list-tags] [path/to/image.jpg]```
 
 **Extract** thumbnail to file
 
@@ -24,45 +24,83 @@ Show **raw contents** of a tag
 
 ```exif [-o|--output] [path/to/new.jpg] --ifd [0] [-t|--tag] "[Artist]" --set-value "[John Smith]" --no-fixup [path/to/image.jpg]```
 
+**Remove** a tag from an image
+
+```exif --remove --ifd [0] [-t|--tag] "[Artist]" [-o|--output] [path/to/new.jpg] [path/to/image.jpg]```
+
+**Create** EXIF data if none exists
+
+```exif [-c|--create-exif] [-o|--output] [path/to/new.jpg] [path/to/image.jpg]```
+
 # SYNOPSIS
 
 **exif** [_options_] _files_
 
 # PARAMETERS
 
-**-l, --list-tags**
-> List known EXIF tags
+**-v**, **--version**
+> Display version number.
 
-**-e, --extract-thumbnail**
-> Extract embedded thumbnail
+**-l**, **--list-tags**
+> List known EXIF tags.
 
-**-o, --output** _file_
-> Output file for operations
+**-e**, **--extract-thumbnail**
+> Extract embedded thumbnail.
 
-**-t, --tag** _tag_
-> Specify tag name
+**-r**, **--remove-thumbnail**
+> Remove thumbnail from image.
+
+**-n**, **--insert-thumbnail** _file_
+> Insert file as thumbnail.
+
+**-o**, **--output** _file_
+> Output file for operations.
+
+**-t**, **--tag** _tag_
+> Specify tag name or number.
+
+**-s**, **--show-description**
+> Show description of tag.
 
 **--set-value** _value_
-> Set tag to value
+> Set tag to value.
 
-**--ifd** _number_
-> Select IFD (0 or 1)
+**--remove**
+> Remove tag or entire IFD.
 
-**-m, --machine-readable**
-> Machine-readable output
+**--ifd** _ifd_
+> Select IFD (0, 1, EXIF, GPS, Interoperability).
+
+**-c**, **--create-exif**
+> Create EXIF data if absent.
+
+**-m**, **--machine-readable**
+> Machine-readable tab-delimited output.
+
+**-x**, **--xml-output**
+> Produce XML output.
+
+**-i**, **--ids**
+> Show ID numbers instead of tag names.
 
 **--no-fixup**
-> Don't fix malformed data
+> Don't fix EXIF violations.
+
+**-d**, **--debug**
+> Show debug messages.
+
+**-w**, **--width** _n_
+> Set maximum output width (default 80).
 
 # DESCRIPTION
 
 **exif** shows and modifies EXIF metadata in JPEG files. EXIF data contains camera settings, date/time, GPS coordinates, and other image information.
 
-Command-line tool for quick EXIF inspection and modification.
+Command-line tool for quick EXIF inspection and modification. It can list tags, extract and manage thumbnails, read and write individual tag values, and create EXIF data from scratch.
 
 # CAVEATS
 
-Only works with JPEG files. Some tags are read-only. Use --no-fixup when modifying to preserve original data structure.
+Only works with JPEG files. Some tags are read-only. Use --no-fixup when modifying to preserve original data structure. The --machine-readable and --xml-output options are mutually exclusive.
 
 # SEE ALSO
 

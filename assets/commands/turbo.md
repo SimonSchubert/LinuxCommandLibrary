@@ -30,9 +30,13 @@ High-performance monorepo build system
 
 **Prune for deployment**
 
-```turbo prune --scope=[app]```
+```turbo prune [app]```
 
-**Clean cache**
+**Prune with Docker-optimized output**
+
+```turbo prune [app] --docker```
+
+**Bypass cache and re-execute**
 
 ```turbo run [build] --force```
 
@@ -43,28 +47,34 @@ High-performance monorepo build system
 # PARAMETERS
 
 **run** _TASKS_
-> Run tasks.
+> Run specified tasks across packages.
 
-**prune**
-> Create subset.
+**prune** _package_
+> Create pruned subset of monorepo for a target package.
 
-**--filter** _PATTERN_
-> Filter packages.
+**-F**, **--filter** _PATTERN_
+> Filter packages by name, directory, or git changes.
 
-**--parallel**
-> Parallel execution.
+**--affected**
+> Run only in packages changed since the base branch.
 
 **--continue**
-> Continue on error.
+> Continue on error (never, dependencies-successful, always).
 
-**--graph**
-> Dependency graph.
+**--graph** _file_
+> Output dependency graph (svg, html, mermaid, dot).
 
 **--force**
-> Bypass cache.
+> Bypass cache and re-execute all tasks.
+
+**--dry**
+> Display tasks without executing.
 
 **--cache-dir** _DIR_
-> Cache directory.
+> Set filesystem cache directory.
+
+**--concurrency** _num_
+> Limit parallel task execution (number or percentage).
 
 # DESCRIPTION
 
@@ -76,7 +86,7 @@ Configuration is defined in **turbo.json** at the repository root, specifying ta
 
 # CAVEATS
 
-Requires turbo.json config. Monorepo setup needed. Cache strategy matters.
+Requires turbo.json config. Monorepo setup needed. The **--parallel** and **--scope** flags are deprecated; use **--filter** and task configuration instead.
 
 # HISTORY
 
@@ -84,4 +94,4 @@ Requires turbo.json config. Monorepo setup needed. Cache strategy matters.
 
 # SEE ALSO
 
-[npm](/man/npm)(1), [yarn](/man/yarn)(1), [nx](/man/nx)(1)
+[npm](/man/npm)(1), [yarn](/man/yarn)(1), [pnpm](/man/pnpm)(1), [nx](/man/nx)(1)

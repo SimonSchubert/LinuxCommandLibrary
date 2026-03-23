@@ -74,6 +74,45 @@ The tool can also convert other formats (BMP, GIF, TIFF) to optimized PNG.
 **-fix**
 > Fix corrupt data.
 
+**-force**
+> Enforce writing of a new output file.
+
+**-snip**
+> Cut one image out of multi-image or animation files.
+
+**-nb**
+> Do not apply bit depth reduction.
+
+**-nc**
+> Do not apply color type reduction.
+
+**-np**
+> Do not apply palette reduction.
+
+**-nx**
+> Do not apply any lossless image reduction.
+
+**-nz**
+> Do not recode IDAT datastreams.
+
+**-i** _type_
+> Interlace type (0=non-interlaced, 1=Adam7).
+
+**-f** _filters_
+> PNG delta filters (0-5).
+
+**-zc** _levels_
+> Zlib compression levels (1-9).
+
+**-zs** _strategies_
+> Zlib compression strategies (0-3).
+
+**-zm** _levels_
+> Zlib memory levels (1-9).
+
+**-zw** _size_
+> Zlib window size (256, 512, 1k, 2k, 4k, 8k, 16k, 32k).
+
 # CAVEATS
 
 Higher optimization levels much slower. Lossless only - can't reduce beyond PNG limits. Some metadata may be useful. Original file modified by default.

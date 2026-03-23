@@ -8,9 +8,25 @@ Print on-disk information for **exFAT filesystem**
 
 ```dump.exfat [/dev/sdXY]```
 
+Show **directory entry** information for a specific path
+
+```dump.exfat -d [/path/to/file] [/dev/sdXY]```
+
+**Scan** directory entries from a given path **recursively**
+
+```dump.exfat -s [/] -r [/dev/sdXY]```
+
+Show **cluster chain** along with directory entries
+
+```dump.exfat -d [/path/to/file] -c [/dev/sdXY]```
+
+Print **version** information
+
+```dump.exfat -V```
+
 # SYNOPSIS
 
-**dump.exfat** _device_
+**dump.exfat** [**-d** _file-path_] [**-s** _dir-path_] [**-r**] [**-c**] _device_
 
 # DESCRIPTION
 
@@ -24,13 +40,28 @@ The tool operates as a read-only utility and does not modify the filesystem. For
 
 # PARAMETERS
 
+**-V**
+> Print version and exit.
+
+**-d**, **--dentry-set=**_path_
+> Print directory entry information for a given path on the device.
+
+**-s**, **--scan-dir=**_dir-path_
+> Scan and print directory entry information from a given path.
+
+**-r**, **--recursive**
+> Scan directory entries recursively. Only works with **-s**.
+
+**-c**, **--cluster-chain**
+> Print cluster chain information alongside directory entries. Only works with **-d** or **-s**.
+
 _device_
-> The device containing the exFAT filesystem
+> The device containing the exFAT filesystem.
 
 # CAVEATS
 
-Part of exfatprogs package. Read-only operation. Filesystem should ideally be unmounted for accurate results.
+Part of exfatprogs package. Read-only operation. Absence of doubly-allocated clusters does not guarantee they are not doubly-allocated unless scanning starts from the root directory recursively.
 
 # SEE ALSO
 
-[fsck.exfat](/man/fsck.exfat)(8), [mkfs.exfat](/man/mkfs.exfat)(8)
+[fsck.exfat](/man/fsck.exfat)(8), [mkfs.exfat](/man/mkfs.exfat)(8), [tune.exfat](/man/tune.exfat)(8), [exfatlabel](/man/exfatlabel)(8)

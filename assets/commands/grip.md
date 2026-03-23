@@ -20,13 +20,13 @@ GitHub-flavored Markdown preview server
 
 ```grip [file.md] [8080]```
 
-**Export to HTML**
+**Export to HTML file**
 
 ```grip --export [file.md]```
 
-**Preview offline without GitHub API**
+**Export to a specific HTML file**
 
-```grip --offline [file.md]```
+```grip [README.md] --export [output.html]```
 
 **Preview from stdin**
 
@@ -57,7 +57,25 @@ GitHub-flavored Markdown preview server
 > GitHub username for API auth.
 
 **--pass** _pass_
-> GitHub password or token.
+> GitHub password or personal access token.
+
+**--wide**
+> Render wide page layout.
+
+**--user-content**
+> Render as user-generated content (like comments or issues).
+
+**--context** _repo_
+> Repository context for relative URL linking (e.g., user/repo).
+
+**--title** _title_
+> Custom page title for the rendered output.
+
+**--no-inline**
+> Do not inline CSS styles in exported HTML.
+
+**--api-url** _url_
+> Use a custom GitHub API URL (for GitHub Enterprise).
 
 # DESCRIPTION
 
@@ -71,4 +89,4 @@ Without authentication, GitHub API rate limits may apply. Use **--user** and **-
 
 # SEE ALSO
 
-[markdown](/man/markdown)(1), [pandoc](/man/pandoc)(1)
+[markdown](/man/markdown)(1), [pandoc](/man/pandoc)(1), [glow](/man/glow)(1)

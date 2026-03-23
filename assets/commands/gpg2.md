@@ -32,6 +32,14 @@ GnuPG 2 encryption and digital signatures
 
 ```gpg2 --armor --export [keyid] > [public.asc]```
 
+**Import a key**
+
+```gpg2 --import [public.asc]```
+
+**Symmetric encryption** with passphrase
+
+```gpg2 -c [file]```
+
 # SYNOPSIS
 
 **gpg2** [_options_] [_files_]
@@ -91,6 +99,18 @@ GnuPG 2 encryption and digital signatures
 
 **--detach-sign**
 > Make a detached signature.
+
+**-c**, **--symmetric**
+> Encrypt with a symmetric cipher using a passphrase.
+
+**--batch**
+> Run in non-interactive batch mode.
+
+**-q**, **--quiet**
+> Minimize output.
+
+**-v**, **--verbose**
+> Display detailed processing information.
 
 # DESCRIPTION
 

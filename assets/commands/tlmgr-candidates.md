@@ -1,6 +1,6 @@
 # TAGLINE
 
-Show TeX Live package repository sources
+Show available repository candidates for a TeX Live package
 
 # TLDR
 
@@ -23,5 +23,5 @@ _package_
 
 # SEE ALSO
 
-[tlmgr-repository](/man/tlmgr-repository)(1), [tlmgr-info](/man/tlmgr-info)(1)
+[tlmgr](/man/tlmgr)(1), [tlmgr-repository](/man/tlmgr-repository)(1), [tlmgr-info](/man/tlmgr-info)(1)
 

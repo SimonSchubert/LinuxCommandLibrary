@@ -28,9 +28,13 @@ Reduce working tree to a subset of tracked files
 
 ```echo "[path/to/file]" | git sparse-checkout check-rules```
 
+**Preview files outside sparse definition** that would be removed
+
+```git sparse-checkout clean --dry-run```
+
 # SYNOPSIS
 
-**git** **sparse-checkout** _command_ [_options_]
+**git** **sparse-checkout** (_init_ | _list_ | _set_ | _add_ | _reapply_ | _disable_ | _check-rules_ | _clean_) [_options_]
 
 # SUBCOMMANDS
 
@@ -55,6 +59,9 @@ Reduce working tree to a subset of tracked files
 **check-rules**
 > Check if paths match the current sparsity rules.
 
+**clean**
+> Remove files outside the sparse-checkout definition. Requires -f unless clean.requireForce is false.
+
 # PARAMETERS
 
 **--cone**
@@ -72,11 +79,25 @@ Reduce working tree to a subset of tracked files
 **--stdin**
 > Read patterns from stdin (one per line) instead of arguments.
 
+**-f**, **--force**
+> Allow cleaning without clean.requireForce config (for clean subcommand).
+
+**--dry-run**
+> Preview what clean would remove without deleting anything.
+
+**--rules-file** _file_
+> Match against rules in specified file instead of current rules (for check-rules).
+
+**-z**
+> Use NUL-terminated paths for stdin and output (for check-rules).
+
 # DESCRIPTION
 
 **git sparse-checkout** enables partial repository checkouts, where only specified directories and files are materialized in the working tree. This significantly reduces working directory size for large monorepos.
 
-Cone mode (the default) restricts patterns to directory-based inclusion, which is faster and simpler than full pattern matching. In cone mode, the set and add subcommands accept directory names rather than arbitrary gitignore patterns.
+Cone mode (the default) restricts patterns to directory-based inclusion, which is faster and simpler than full pattern matching. In cone mode, the set and add subcommands accept directory names rather than arbitrary gitignore patterns. Non-cone mode (--no-cone) allows arbitrary gitignore-style patterns but is deprecated due to poor performance and confusing semantics.
+
+This command is experimental. Its behavior may change in the future.
 
 # CONFIGURATION
 

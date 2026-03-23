@@ -12,9 +12,9 @@ identifies Kubernetes secrets that are not referenced by any pods
 
 ```k8s-unused-secret-detector -n [namespace]```
 
-**Output in JSON format**
+**Detect and delete unused secrets in a namespace**
 
-```k8s-unused-secret-detector --output json```
+```k8s-unused-secret-detector -n [namespace] | kubectl delete secret -n [namespace]```
 
 # SYNOPSIS
 
@@ -22,21 +22,15 @@ identifies Kubernetes secrets that are not referenced by any pods
 
 # PARAMETERS
 
-**-n**, **--namespace** _name_
+**-n** _namespace_
 > Check specific namespace.
 
-**-A**, **--all-namespaces**
-> Check all namespaces.
-
-**--output** _format_
-> Output format (text, json).
-
-**--kubeconfig** _path_
-> Path to kubeconfig file.
+**--context** _context_
+> Specify the kubectl context to use.
 
 # DESCRIPTION
 
-**k8s-unused-secret-detector** identifies Kubernetes secrets that are not referenced by any pods, services, or other resources. Helps clean up unused secrets and improve cluster security by identifying potentially orphaned sensitive data.
+**k8s-unused-secret-detector** detects unused Kubernetes Secrets that are no longer referenced by any resources. Outputs secret names to stdout, which can be piped to kubectl for deletion. Note: this project is archived and no longer maintained; consider [kubectl-reap](https://github.com/micnncim/kubectl-reap) as an alternative.
 
 # SEE ALSO
 

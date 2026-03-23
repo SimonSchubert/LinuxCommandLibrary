@@ -24,6 +24,9 @@ retrieve image content digest
 **--full-ref**
 > Print the full image reference with digest.
 
+**--tarball** _path_
+> Path to tarball containing the image.
+
 # DESCRIPTION
 
 **crane digest** retrieves the content-addressable digest (SHA256) of a container image. The digest uniquely identifies the image content regardless of tag.

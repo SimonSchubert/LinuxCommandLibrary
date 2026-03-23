@@ -1,3 +1,7 @@
+# TAGLINE
+
+adds private key identities to the OpenSSH authentication agent
+
 # TLDR
 
 **Add the default SSH keys** to the agent
@@ -30,7 +34,7 @@
 
 # SYNOPSIS
 
-**ssh-add** [_-cDdKkLlqvXx_] [_-E fingerprint_hash_] [_-S provider_] [_-t life_] [_file ..._]
+**ssh-add** [**-CcDdKkLlNqvXx**] [**-E** _fingerprint_hash_] [**-H** _hostkey_file_] [**-h** _destination_constraint_] [**-S** _provider_] [**-t** _life_] [_file ..._]
 
 # PARAMETERS
 
@@ -55,11 +59,29 @@
 **-X**
 > Unlock the agent
 
+**-k**
+> Process plain private keys only; skip certificates
+
 **-K**
 > Load resident keys from a FIDO authenticator
 
 **-c**
 > Require confirmation before using the key
+
+**-q**
+> Suppress output after successful operations
+
+**-E** _hash_
+> Specify fingerprint hash algorithm (md5 or sha256)
+
+**-s** _pkcs11_
+> Add keys from a PKCS#11 shared library
+
+**-e** _pkcs11_
+> Remove keys provided by a PKCS#11 shared library
+
+**-T** _pubkey_
+> Test whether private keys are usable by performing sign and verify
 
 **-v**
 > Verbose mode for debugging

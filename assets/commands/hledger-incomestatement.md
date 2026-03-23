@@ -51,6 +51,24 @@ displays an income statement showing revenues and expenses for the report
 **--tree**
 > Show accounts as tree.
 
+**--flat**
+> Show accounts as flat list (default).
+
+**--average**
+> Show a row average column.
+
+**--row-total**
+> Show a row total column.
+
+**--no-total**
+> Omit the final total row.
+
+**--sort-amount**
+> Sort by amount instead of account name.
+
+**--output-format** _fmt_
+> Output format (txt, html, csv, tsv, json).
+
 # DESCRIPTION
 
 **hledger incomestatement** (alias **is**) displays an income statement (profit & loss report) showing revenues and expenses for the report period, and their difference as net income. Part of hledger's standard financial reports alongside balance sheet and cash flow.

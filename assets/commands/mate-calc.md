@@ -10,16 +10,16 @@ graphical calculator for the MATE desktop environment
 
 Calculate a **specific expression**
 
-```mate-calc --solve [2 + 5]```
+```mate-calc -s "[2 + 5]"```
 
 # SYNOPSIS
 
-**mate-calc** [_options_] [_--solve expression_]
+**mate-calc** [_options_] [_-s expression_]
 
 # PARAMETERS
 
-**--solve _expression_**
-> Calculate the given expression and display the result
+**-s**, **--solve** _expression_
+> Calculate the given expression and display the result.
 
 **--version**
 > Display version information

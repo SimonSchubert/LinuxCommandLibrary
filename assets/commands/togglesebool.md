@@ -35,4 +35,4 @@ This tool has been deprecated and is often removed in favor of setsebool. Change
 
 # SEE ALSO
 
-[setsebool](/man/setsebool)(8), [getsebool](/man/getsebool)(8), [semanage-boolean](/man/semanage-boolean)(8)
+[getsebool](/man/getsebool)(8), [setsebool](/man/setsebool)(8), [semanage-boolean](/man/semanage-boolean)(8)

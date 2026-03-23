@@ -16,9 +16,17 @@ Ultra-lightweight personal AI assistant
 
 ```nanobot gateway```
 
+**Send a single message** and exit
+
+```nanobot agent [-m|--message] "[Hello!]"```
+
 **Authenticate** with a chat platform (e.g. WhatsApp QR linking)
 
 ```nanobot channels login```
+
+**Show current configuration** and provider status
+
+```nanobot status```
 
 # SYNOPSIS
 
@@ -29,14 +37,29 @@ Ultra-lightweight personal AI assistant
 **onboard**
 > Initialize configuration and set up the environment for first-time use. Creates config at **~/.nanobot/config.json**.
 
-**agent**
-> Start an interactive CLI chat session with the AI agent.
+**agent** [_options_]
+> Start an interactive CLI chat session with the AI agent. Use **-m** for single message mode.
 
-**gateway**
-> Run the multi-channel gateway to connect chat platforms such as Telegram, Discord, WhatsApp, Slack, and others.
+**gateway** [_options_]
+> Run the multi-channel gateway to connect chat platforms such as Telegram, Discord, WhatsApp, Slack, and others. Use **-p** for custom port.
+
+**status**
+> Display current configuration paths, workspace location, selected model, and API key status.
 
 **channels login**
 > Authenticate with chat platforms, primarily used for WhatsApp QR-code linking.
+
+**channels status**
+> Show enabled/disabled state for all supported platforms.
+
+**cron list** [_options_]
+> List scheduled jobs. Use **-a** to include disabled jobs.
+
+**cron add** [_options_]
+> Create a scheduled task with **-n** name, **-m** message, and schedule options.
+
+**provider login** _provider_
+> OAuth authentication for supported providers (openai-codex, github-copilot).
 
 # DESCRIPTION
 
@@ -61,7 +84,7 @@ Minimal configuration requires a provider API key and model selection:
   },
   "agents": {
     "defaults": {
-      "model": "anthropic/claude-opus-4-5"
+      "model": "anthropic/claude-sonnet-4"
     }
   }
 }

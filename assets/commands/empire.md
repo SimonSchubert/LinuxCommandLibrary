@@ -8,27 +8,34 @@ classic full-scale war strategy game
 
 ```empire```
 
-**Set map size**
+**Start with mostly water** (island map)
 
-```empire -d [60]```
+```empire -w [90]```
+
+**Set message delay** to 500ms
+
+```empire -d [500]```
 
 # SYNOPSIS
 
-**empire** [_options_]
+**empire** [**-w** _water_] [**-s** _smooth_] [**-d** _delay_] [**-S** _interval_] [**-f** _savefile_]
 
 # PARAMETERS
 
-**-d** _SIZE_
-> Map delay/dimension.
+**-w** _water_
+> Percentage of map that is water (10-90, default 70).
 
-**-s** _SPEED_
-> Simulation speed.
+**-s** _smooth_
+> Map smoothing level; low values create islands, high values create continents (default 5).
 
-**-S**
-> Save game.
+**-d** _delay_
+> Delay in milliseconds after informational messages (default 2000).
 
-**-w** _SIZE_
-> World size.
+**-S** _interval_
+> Auto-save interval in turns (default 10).
+
+**-f** _savefile_
+> Specify save file name (default empsave.dat).
 
 # PREVIEW
 

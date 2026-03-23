@@ -30,7 +30,7 @@ Compute and verify SHA-256 checksums
 
 # SYNOPSIS
 
-**sha256sum** [_-bctwz_] [_--tag_] [_--strict_] [_FILE..._]
+**sha256sum** [_OPTION_]... [_FILE_]...
 
 # PARAMETERS
 
@@ -47,7 +47,7 @@ Compute and verify SHA-256 checksums
 > Create a BSD-style checksum output
 
 **-z**, **--zero**
-> End each output line with NUL, not newline
+> End each output line with NUL, not newline, and disable filename escaping
 
 **--quiet**
 > Don't print OK for each verified file
@@ -80,7 +80,7 @@ When checking files with **-c**, the input file should contain lines in the form
 
 # CAVEATS
 
-SHA-256 is not designed for password hashing; use **bcrypt** or **argon2** for that purpose. While SHA-256 is cryptographically secure against collisions, identical files always produce identical hashes, making it unsuitable for detecting small modifications with any probability of missing them. On macOS, the equivalent command is **shasum -a 256**.
+SHA-256 is not designed for password hashing; use **bcrypt** or **argon2** for that purpose. On GNU systems, binary and text modes produce the same checksum. On macOS, the equivalent command is **shasum -a 256**.
 
 # HISTORY
 

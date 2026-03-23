@@ -12,40 +12,88 @@ lightweight PDF, XPS, and EPUB viewer
 
 ```mupdf [document.pdf] [page_number]```
 
-**Open XPS file**
+**Open with custom resolution** (DPI)
 
-```mupdf [document.xps]```
+```mupdf -r [150] [document.pdf]```
 
-**Open EPUB file**
+**Open password-protected PDF**
 
-```mupdf [book.epub]```
+```mupdf -p [password] [document.pdf]```
+
+**Open EPUB with custom layout**
+
+```mupdf -W [600] -H [800] -S [14] [book.epub]```
 
 # SYNOPSIS
 
 **mupdf** [_options_] _file_ [_page_]
+
+# PARAMETERS
+
+**-p** _password_
+> Password for encrypted PDFs.
+
+**-r** _resolution_
+> Set zoom level via DPI (default: 72).
+
+**-A** _bits_
+> Anti-aliasing quality, 0-8 (default: 8).
+
+**-C** _RRGGBB_
+> White tint color in hex (default: FFFFF0).
+
+**-B** _RRGGBB_
+> Black tint color in hex (default: 303030).
+
+**-W** _width_
+> Page width in points for EPUB layout.
+
+**-H** _height_
+> Page height in points for EPUB layout.
+
+**-S** _size_
+> Font size in points for EPUB layout.
+
+**-U** _CSS-file_
+> User stylesheet for EPUB rendering.
+
+**-I**
+> Invert display colors.
+
+**-J**
+> Disable JavaScript in PDF forms.
+
+**-X**
+> Disable EPUB document styles.
 
 # KEY BINDINGS
 
 **q**
 > Quit.
 
-**+/-** or **z/Z**
+**+/-**
 > Zoom in/out.
 
-**w**
-> Fit width.
+**W**
+> Fit page width.
 
 **H**
-> Fit height.
+> Fit page height.
 
-**PgDn/Space**
+**Z**
+> Auto-fit page.
+
+**Space/PgDn**
 > Next page.
 
-**PgUp/Backspace**
+**b/PgUp**
 > Previous page.
 
-**g**
-> Go to page (enter number).
+**_number_ g**
+> Go to page number.
+
+**G**
+> Go to last page.
 
 **/**
 > Search forward.
@@ -60,13 +108,16 @@ lightweight PDF, XPS, and EPUB viewer
 > Reload document.
 
 **i**
-> Invert colors.
+> Toggle ICC color management.
+
+**[/]**
+> Rotate left/right.
 
 **f**
 > Toggle fullscreen.
 
 **h/j/k/l**
-> Scroll view.
+> Scroll left/down/up/right.
 
 # DESCRIPTION
 

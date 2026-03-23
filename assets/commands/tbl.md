@@ -31,7 +31,7 @@ Format tables for groff and troff
 # PARAMETERS
 
 **-C**
-> Enable AT&T compatibility mode; recognize .TS and .TE followed by any character
+> Enable AT&T compatibility mode; recognize .TS and .TE even when followed by a character other than space or newline.
 
 **-v**, **--version**
 > Print version information and exit
@@ -76,4 +76,4 @@ GNU tbl output requires GNU troff; it cannot be processed by AT&T troff. Complex
 
 # SEE ALSO
 
-[groff](/man/groff)(1), [troff](/man/troff)(1), [eqn](/man/eqn)(1), [pic](/man/pic)(1), [refer](/man/refer)(1)
+[groff](/man/groff)(1), [troff](/man/troff)(1), [nroff](/man/nroff)(1), [eqn](/man/eqn)(1), [pic](/man/pic)(1), [refer](/man/refer)(1), [col](/man/col)(1)

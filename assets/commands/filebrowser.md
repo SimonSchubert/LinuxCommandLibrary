@@ -49,11 +49,20 @@ web-based file management interface
 **-c**, **--config** _file_
 > Config file path.
 
-**--cert** _file_
+**-b**, **--baseURL** _path_
+> Base URL for the application.
+
+**-t**, **--cert** _file_
 > TLS certificate.
 
-**--key** _file_
+**-k**, **--key** _file_
 > TLS key.
+
+**--noauth**
+> Disable authentication.
+
+**--log** _output_
+> Log output (default "stdout").
 
 # CONFIGURATION
 
