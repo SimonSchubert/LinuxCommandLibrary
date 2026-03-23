@@ -25,11 +25,12 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import com.linuxcommandlibrary.app.NavEvent
 import com.linuxcommandlibrary.shared.TextElement
+import kotlinx.collections.immutable.ImmutableList
 
 @Composable
 fun TableView(
-    headers: List<List<TextElement>>,
-    rows: List<List<List<TextElement>>>,
+    headers: ImmutableList<ImmutableList<TextElement>>,
+    rows: ImmutableList<ImmutableList<ImmutableList<TextElement>>>,
     onNavigate: (NavEvent) -> Unit = {},
     modifier: Modifier = Modifier,
 ) {

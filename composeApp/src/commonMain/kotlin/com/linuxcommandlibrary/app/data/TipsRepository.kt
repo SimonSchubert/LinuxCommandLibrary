@@ -1,17 +1,10 @@
 package com.linuxcommandlibrary.app.data
 
 import com.linuxcommandlibrary.shared.MarkdownParser
-import com.linuxcommandlibrary.shared.TextElement
+import com.linuxcommandlibrary.shared.TipInfo
 import com.linuxcommandlibrary.shared.TipSectionElement
 import com.linuxcommandlibrary.shared.platform.AssetReader
-import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
-
-data class TipInfo(
-    val id: Long,
-    val title: String,
-    val sections: ImmutableList<TipSectionElement>,
-)
 
 class TipsRepository(private val assetReader: AssetReader) {
 

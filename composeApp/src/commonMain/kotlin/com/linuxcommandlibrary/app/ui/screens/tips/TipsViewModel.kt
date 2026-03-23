@@ -1,6 +1,6 @@
 package com.linuxcommandlibrary.app.ui.screens.tips
 
-import com.linuxcommandlibrary.app.data.TipInfo
+import com.linuxcommandlibrary.shared.TipInfo
 import com.linuxcommandlibrary.app.data.TipsRepository
 import com.linuxcommandlibrary.app.platform.showAndroidTerminalTip
 import com.linuxcommandlibrary.shared.TextElement

@@ -93,6 +93,10 @@ android {
     sourceSets["main"].assets.setSrcDirs(listOf("../assets"))
 }
 
+composeCompiler {
+    stabilityConfigurationFiles.add(project.layout.projectDirectory.file("stability_config.conf"))
+}
+
 compose.resources {
     publicResClass = true
     packageOfResClass = "com.linuxcommandlibrary.app.resources"

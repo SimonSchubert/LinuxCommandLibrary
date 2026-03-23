@@ -18,7 +18,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.linuxcommandlibrary.app.NavEvent
-import com.linuxcommandlibrary.app.data.TipInfo
+import com.linuxcommandlibrary.shared.TipInfo
 import com.linuxcommandlibrary.app.ui.composables.SectionTitle
 import com.linuxcommandlibrary.app.ui.composables.TipSectionContent
 import kotlinx.collections.immutable.ImmutableList
@@ -46,7 +46,7 @@ fun TipsContent(
             .background(MaterialTheme.colorScheme.background)
             .fillMaxSize(),
         columns = StaggeredGridCells.Adaptive(minSize = 300.dp),
-        contentPadding = PaddingValues(horizontal = 4.dp),
+        contentPadding = PaddingValues(horizontal = 4.dp, vertical = 4.dp),
     ) {
         items(
             items = tips,
@@ -59,7 +59,9 @@ fun TipsContent(
 }
 
 @Composable
-private fun TipItemCard(tip: TipInfo, onNavigate: (NavEvent) -> Unit) {
+private fun TipItemCard(
+    tip: TipInfo,
+    onNavigate: (NavEvent) -> Unit) {
     Card(
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
         modifier = Modifier
