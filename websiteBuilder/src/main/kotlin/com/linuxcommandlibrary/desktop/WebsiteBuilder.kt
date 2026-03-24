@@ -128,7 +128,7 @@ class WebsiteBuilder(
         val commandsDir = File("assets/commands")
         return commandsDir.listFiles { file -> file.extension == "md" }
             ?.map { it.nameWithoutExtension }
-            ?.sorted()
+            ?.sortedWith(compareBy<String> { !it.first().isDigit() }.thenBy { it.lowercase() })
             ?: emptyList()
     }
 
@@ -204,11 +204,12 @@ class WebsiteBuilder(
                             id = "commandlist"
                             var currentFirstLetter = ""
                             getCommandNamesFromMarkdown().forEach { commandName ->
-                                if (commandName.lowercase().first().toString() != currentFirstLetter) {
-                                    currentFirstLetter = commandName.lowercase().first().toString()
+                                val groupKey = if (commandName.first().isDigit()) "#" else commandName.lowercase().first().toString()
+                                if (groupKey != currentFirstLetter) {
+                                    currentFirstLetter = groupKey
                                     div {
                                         classes = classes + "headline"
-                                        text(currentFirstLetter.uppercase())
+                                        text(if (groupKey == "#") "#" else groupKey.uppercase())
                                     }
                                 }
                                 a("man/${commandName.lowercase()}") {
