@@ -121,6 +121,42 @@ class WebsiteBuilder(
 
     private val cacheVersion = 15
 
+    private val preInstalledCommands: Set<String>
+    private val installableCommands: Set<String>
+
+    init {
+        val v86File = File("assets/v86-commands.txt")
+        val preInstalled = mutableSetOf<String>()
+        val installable = mutableSetOf<String>()
+        var currentSection = ""
+        if (v86File.exists()) {
+            v86File.readLines().forEach { line ->
+                val trimmed = line.trim()
+                when {
+                    trimmed == "# PRE-INSTALLED" -> currentSection = "pre"
+                    trimmed == "# INSTALLABLE" -> currentSection = "inst"
+                    trimmed.isNotEmpty() && !trimmed.startsWith("#") -> {
+                        when (currentSection) {
+                            "pre" -> preInstalled.add(trimmed)
+                            "inst" -> installable.add(trimmed)
+                        }
+                    }
+                }
+            }
+        }
+        preInstalledCommands = preInstalled
+        installableCommands = installable
+    }
+
+    private fun getTerminalStatus(commandName: String): String? {
+        val name = commandName.lowercase()
+        return when {
+            preInstalledCommands.contains(name) -> "preinstalled"
+            installableCommands.contains(name) -> "installable"
+            else -> null
+        }
+    }
+
     /**
      * Get sorted list of command names from markdown files.
      */
@@ -631,6 +667,9 @@ class WebsiteBuilder(
                     )
 
                     styleLink("/stylesheets/main.css?v=$cacheVersion")
+                    if (getTerminalStatus(command.name) != null) {
+                        styleLink("/stylesheets/terminal.css?v=$cacheVersion")
+                    }
                     script(src = "/scripts/copy.js?v=$cacheVersion") {
                         defer = true
                     }
@@ -752,6 +791,17 @@ class WebsiteBuilder(
                     tooltip()
                     footer()
 
+                    val terminalStatus = getTerminalStatus(command.name)
+                    if (terminalStatus != null) {
+                        script {
+                            unsafe {
+                                +"var terminalCmd=\"${command.name.lowercase()}\",terminalStatus=\"$terminalStatus\";"
+                            }
+                        }
+                        script(src = "/scripts/terminal.js?v=$cacheVersion") {
+                            defer = true
+                        }
+                    }
                     script(src = "/scripts/man.js?v=$cacheVersion") {
                         defer = true
                     }

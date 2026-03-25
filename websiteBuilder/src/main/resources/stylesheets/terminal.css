@@ -1,0 +1,117 @@
+/* v86 Floating Terminal */
+
+#terminal-panel {
+    position: fixed;
+    bottom: 0;
+    right: 16px;
+    z-index: 9999;
+    background: #161616;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    width: 484px;
+    max-width: calc(100vw - 32px);
+    box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.4);
+}
+#terminal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    cursor: pointer;
+    color: #f9f7f6;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    background: #e45151;
+    user-select: none;
+}
+#terminal-header:hover {
+    background: #d04444;
+}
+#terminal-status {
+    color: #f9f7f6;
+    font-size: 11px;
+    font-weight: normal;
+    opacity: 0.8;
+}
+#terminal-body {
+    cursor: text;
+    background: #000;
+    overflow: hidden;
+}
+#terminal-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    cursor: pointer;
+}
+#terminal-ascii {
+    color: #3b82f6;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+}
+.tp-title {
+    color: #4ade80;
+    font-weight: bold;
+}
+.tp-info {
+    color: #888;
+}
+#terminal-footer {
+    padding: 4px 12px;
+    font-size: 11px;
+    color: #dbdbdb;
+    font-family: sans-serif;
+    background: #161616;
+    text-align: right;
+}
+#terminal-footer a {
+    color: #dbdbdb !important;
+    text-decoration: none;
+}
+#terminal-footer a:hover {
+    color: #e45151 !important;
+}
+.terminal-collapsed #terminal-body,
+.terminal-collapsed #terminal-footer {
+    display: none;
+}
+#v86-screen {
+    background: #000;
+    overflow: hidden;
+}
+#v86-screen > div {
+    position: relative;
+}
+#v86-screen .cursor {
+    background-color: #ccc !important;
+    display: inline-block !important;
+    visibility: visible !important;
+}
+#v86-screen .blinking-cursor {
+    animation: terminal-blink 1s step-end infinite;
+}
+@keyframes terminal-blink {
+    50% { opacity: 0; }
+}
+#v86-screen div,
+#v86-screen span {
+    white-space: pre;
+    font-family: "Courier New", Courier, monospace !important;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+@media screen and (max-width: 550px) {
+    #terminal-panel {
+        bottom: 0;
+        right: 0;
+        border-radius: 10px 10px 0 0;
+        width: 100%;
+        max-width: 100%;
+    }
+}

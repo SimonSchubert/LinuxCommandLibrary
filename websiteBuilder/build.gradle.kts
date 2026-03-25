@@ -31,3 +31,9 @@ tasks.register<JavaExec>("runMarkdownBuilder") {
     mainClass.set("com.linuxcommandlibrary.desktop.MarkdownBuilderKt")
     workingDir = rootProject.projectDir
 }
+
+tasks.register<JavaExec>("runWebsiteBuilder") {
+    classpath = sourceSets["main"].runtimeClasspath
+    mainClass.set("com.linuxcommandlibrary.desktop.WebsiteBuilderKt")
+    workingDir = rootProject.projectDir
+}

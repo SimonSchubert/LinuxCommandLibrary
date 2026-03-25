@@ -18,6 +18,7 @@ local.properties
 *.jar
 /html
 .claude
+/v86-prototype
 .kotlin
 processed.txt
 instructions-tldr.md

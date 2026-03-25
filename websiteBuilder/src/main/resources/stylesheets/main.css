@@ -482,13 +482,13 @@ pre {
 	padding-bottom: 8px;
 }
 
-.copy-button img {
+.copy-button img, .run-button img {
 	margin-left: 4px;
 	margin-top: 2px;
 	cursor: pointer;
 }
 
-.copy-button {
+.copy-button, .run-button {
     display: inline-block;
     margin-top: auto;
     margin-bottom: auto;
@@ -566,7 +566,7 @@ table th {
     a:link, a:visited, a:hover, a:active {
         color: #ffffff;
     }
-    .copy-button img, .invert-color {
+    .copy-button img, .run-button img, .invert-color {
         filter: invert(100%) sepia(0%) saturate(2968%) hue-rotate(17deg) brightness(114%) contrast(87%);
     }
     .grid-item {
