@@ -119,7 +119,7 @@ class WebsiteBuilder(
     private val pastSponsors: List<Pair<String, String>> = emptyList(),
 ) {
 
-    private val cacheVersion = 15
+    private val cacheVersion = 16
 
     private val preInstalledCommands: Set<String>
     private val installableCommands: Set<String>

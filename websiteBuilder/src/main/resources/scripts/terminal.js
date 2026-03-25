@@ -141,8 +141,23 @@ function startTerminal() {
     var status = document.getElementById('terminal-status');
     if (status) status.textContent = 'Loading...';
 
+    // Replace placeholder with loading animation
+    var tbody = document.getElementById('terminal-body');
+    if (tbody) tbody.classList.add('loading');
     var ph = document.getElementById('terminal-placeholder');
-    if (ph) ph.remove();
+    if (ph) {
+        ph.innerHTML =
+            '<pre id="terminal-ascii">' +
+                '<span id="terminal-spinner"></span>\n\n' +
+                '<span class="tp-info">Loading Alpine Linux terminal...</span>\n' +
+            '</pre>';
+        var frames = ['|', '/', '-', '\\'];
+        var fi = 0;
+        var spinner = document.getElementById('terminal-spinner');
+        var spinInterval = setInterval(function() {
+            if (spinner) spinner.textContent = '  ' + frames[fi++ % 4];
+        }, 150);
+    }
 
     var script = document.createElement('script');
     script.src = '/v86/libv86.js';
@@ -169,18 +184,8 @@ function startTerminal() {
             disable_mouse: true,
         };
 
-        fetch('/v86/vm_state.bin', { method: 'HEAD' }).then(function(r) {
-            if (r.ok) {
-                if (status) status.textContent = 'Restoring...';
-                config.initial_state = { url: '/v86/vm_state.bin' };
-            } else {
-                if (status) status.textContent = 'Booting...';
-            }
-            bootEmulator(config, status);
-        }).catch(function() {
-            if (status) status.textContent = 'Booting...';
-            bootEmulator(config, status);
-        });
+        if (status) status.textContent = 'Booting...';
+        bootEmulator(config, status);
     };
     script.onerror = function() {
         if (status) status.textContent = 'Failed to load';
@@ -190,18 +195,19 @@ function startTerminal() {
 }
 
 function bootEmulator(config, status) {
-    var useSnapshot = !!config.initial_state;
-
     emulator = new V86(config);
 
     emulator.add_listener('emulator-ready', function() {
         if (status) status.textContent = '';
+        var ph = document.getElementById('terminal-placeholder');
+        if (ph) ph.remove();
+        var tbody = document.getElementById('terminal-body');
+        if (tbody) tbody.classList.remove('loading');
         v86Loading = false;
         updateTerminalSpacing();
 
         if (pendingCommand) {
-            var delay = useSnapshot ? 500 : 30000;
-            setTimeout(typePendingCommand, delay);
+            setTimeout(typePendingCommand, 30000);
         }
     });
 }

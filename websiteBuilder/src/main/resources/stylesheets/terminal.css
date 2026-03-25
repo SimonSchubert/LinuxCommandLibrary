@@ -39,6 +39,9 @@
     background: #000;
     overflow: hidden;
 }
+#terminal-body.loading {
+    height: 300px;
+}
 #terminal-placeholder {
     display: flex;
     align-items: center;
