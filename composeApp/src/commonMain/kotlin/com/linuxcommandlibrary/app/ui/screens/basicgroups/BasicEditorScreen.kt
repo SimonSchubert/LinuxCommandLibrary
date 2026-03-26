@@ -49,7 +49,7 @@ fun BasicEditorContent(
             .background(MaterialTheme.colorScheme.background)
             .fillMaxSize(),
         columns = StaggeredGridCells.Adaptive(minSize = 300.dp),
-        contentPadding = PaddingValues(horizontal = 4.dp),
+        contentPadding = PaddingValues(horizontal = 4.dp, vertical = 4.dp),
     ) {
         items(
             items = groups,

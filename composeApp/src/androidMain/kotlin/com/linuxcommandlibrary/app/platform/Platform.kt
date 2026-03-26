@@ -3,18 +3,16 @@ package com.linuxcommandlibrary.app.platform
 import android.content.Intent
 import android.os.Build
 import android.provider.Settings
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.Share
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
+import com.linuxcommandlibrary.app.ui.AppIcons
 
 actual val showRateAppButton: Boolean = true
 actual val showAndroidTerminalTip: Boolean = Build.VERSION.SDK_INT >= 35
-actual val backIcon: ImageVector = Icons.AutoMirrored.Filled.ArrowBack
-actual val shareButtonIcon: ImageVector = Icons.Filled.Share
+actual val backIcon: ImageVector = AppIcons.ArrowBack
+actual val shareButtonIcon: ImageVector = AppIcons.Share
 actual val shareButtonDescription: String = "Share"
 
 @Composable

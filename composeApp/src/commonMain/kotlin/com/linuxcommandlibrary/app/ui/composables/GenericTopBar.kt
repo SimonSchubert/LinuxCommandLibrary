@@ -1,7 +1,5 @@
 package com.linuxcommandlibrary.app.ui.composables
 
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Info
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -22,6 +20,7 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.linuxcommandlibrary.app.platform.backIcon
+import com.linuxcommandlibrary.app.ui.AppIcons
 import com.linuxcommandlibrary.app.ui.screens.AppInfoDialog
 import com.linuxcommandlibrary.app.ui.theme.LocalCustomColors
 
@@ -75,7 +74,7 @@ fun GenericTopBar(
                     onClick = { showDialog = true },
                 ) {
                     Icon(
-                        imageVector = Icons.Filled.Info,
+                        imageVector = AppIcons.Info,
                         contentDescription = "Info",
                     )
                 }
