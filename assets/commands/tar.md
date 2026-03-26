@@ -88,8 +88,26 @@ Archive and compress files
 **-u**, **--update**
 > Update archive with newer files
 
+**-k**, **--keep-old-files**
+> Don't replace existing files when extracting
+
+**--zstd**
+> Filter through zstd compression
+
+**-T** _FILE_, **--files-from**=_FILE_
+> Read list of files to extract or create from FILE
+
+**-X** _FILE_, **--exclude-from**=_FILE_
+> Exclude patterns listed in FILE
+
 **--strip-components**=_N_
 > Strip N leading path components
+
+**-h**, **--dereference**
+> Follow symbolic links; archive the files they point to
+
+**-O**, **--to-stdout**
+> Extract files to standard output
 
 # DESCRIPTION
 
@@ -97,7 +115,7 @@ Archive and compress files
 
 Tar itself doesn't compress; compression is handled by external programs (gzip, bzip2, xz) invoked via options or automatically based on file extension with **-a**.
 
-Common extensions: **.tar** (uncompressed), **.tar.gz** or **.tgz** (gzip), **.tar.bz2** (bzip2), **.tar.xz** (xz). Modern tar auto-detects compression when extracting.
+Common extensions: **.tar** (uncompressed), **.tar.gz** or **.tgz** (gzip), **.tar.bz2** (bzip2), **.tar.xz** (xz), **.tar.zst** (zstd). Modern tar auto-detects compression when extracting.
 
 The order of options matters with short flags. **-cvf** works; **-fvc archive.tar** may not, as -f expects its argument immediately after.
 
@@ -115,4 +133,4 @@ Tar originated in Version 7 Unix in **1979**, designed for tape backups (hence "
 
 # SEE ALSO
 
-[gzip](/man/gzip)(1), [bzip2](/man/bzip2)(1), [xz](/man/xz)(1), [zip](/man/zip)(1), [cpio](/man/cpio)(1)
+[gzip](/man/gzip)(1), [bzip2](/man/bzip2)(1), [xz](/man/xz)(1), [zstd](/man/zstd)(1), [zip](/man/zip)(1), [cpio](/man/cpio)(1), [ar](/man/ar)(1)

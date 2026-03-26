@@ -12,17 +12,29 @@ Declarative configuration management tool
 
 ```puppet parser validate [manifest.pp]```
 
-**Run puppet agent**
+**Run puppet agent in test mode**
 
 ```puppet agent --test```
+
+**Run puppet agent in dry-run mode**
+
+```puppet agent --test --noop```
 
 **List available modules**
 
 ```puppet module list```
 
-**Generate module skeleton**
+**Install a module from Puppet Forge**
 
-```puppet module generate [name]```
+```puppet module install [author-module]```
+
+**Inspect a resource on the system**
+
+```puppet resource [user] [root]```
+
+**View or set a configuration value**
+
+```puppet config print [server]```
 
 # SYNOPSIS
 
@@ -31,25 +43,43 @@ Declarative configuration management tool
 # PARAMETERS
 
 **apply**
-> Apply manifest.
+> Compile and apply a Puppet manifest locally.
 
 **agent**
-> Run puppet agent.
+> Request a catalog from a Puppet server and enforce it.
 
 **parser**
-> Parse manifests.
+> Validate Puppet manifest syntax.
 
 **module**
-> Manage modules.
+> Install, list, upgrade, and manage Puppet modules.
 
 **resource**
-> Query resources.
+> Inspect and manipulate resources on the system.
+
+**config**
+> View and change Puppet configuration settings.
+
+**ssl**
+> Manage SSL keys and certificates.
+
+**help**
+> Display help for subcommands.
 
 **--test**
-> Test run.
+> Run the agent once in the foreground with verbose output.
 
 **--noop**
-> Dry run.
+> Simulate changes without applying them (dry run).
+
+**--verbose**
+> Enable verbose logging.
+
+**--debug**
+> Enable full debug logging.
+
+**--environment** _env_
+> Select a specific Puppet environment.
 
 # DESCRIPTION
 
@@ -75,13 +105,12 @@ The ecosystem includes a module system for sharing reusable configuration code t
 
 # CAVEATS
 
-Requires Puppet installation. Master-agent or standalone.
+Requires Puppet installation. Master-agent or standalone. The **--test** flag combines --onetime, --verbose, --no-daemonize, and a non-zero exit code on failures.
 
 # HISTORY
 
-Puppet was created by **Puppet Labs** for IT automation.
+Puppet was created by **Puppet Labs** (now Perforce) for IT automation.
 
 # SEE ALSO
 
-[puppet-apply](/man/puppet-apply)(1), [ansible](/man/ansible)(1), [chef](/man/chef)(1)
-
+[puppet-apply](/man/puppet-apply)(1), [puppet-agent](/man/puppet-agent)(1), [ansible](/man/ansible)(1), [chef](/man/chef)(1)

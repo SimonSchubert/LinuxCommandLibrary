@@ -1,6 +1,6 @@
 # TAGLINE
 
-Interactive JSON filter using jq
+interactive JSON viewer and jq filter editor
 
 # TLDR
 
@@ -12,13 +12,41 @@ Interactive JSON filter using jq
 
 ```cat [path/to/data.json] | jnv```
 
-**Open with an initial filter**
+**Open with a default filter applied**
 
-```jnv -f '.[0]' [path/to/data.json]```
+```jnv --default-filter '.[0]' [path/to/data.json]```
+
+**Use a custom configuration file**
+
+```jnv -c [path/to/config.toml] [path/to/data.json]```
+
+**Write the filtered result to stdout on exit**
+
+```jnv --write-to-stdout [path/to/data.json]```
 
 # SYNOPSIS
 
-**jnv** [**-f** _filter_] [_file_]
+**jnv** [_OPTIONS_] [_INPUT_]
+
+# PARAMETERS
+
+_INPUT_
+> Path to a JSON file. If omitted or "-", reads from stdin.
+
+**-c**, **--config** _file_
+> Path to a TOML configuration file.
+
+**--default-filter** _filter_
+> Default jq filter to apply to input data.
+
+**--write-to-stdout**
+> Write the current JSON result to stdout when exiting.
+
+**-h**, **--help**
+> Print help information.
+
+**-V**, **--version**
+> Print version.
 
 # DESCRIPTION
 
@@ -28,7 +56,7 @@ The tool supports JSON files and JSON Lines input, configurable UI through TOML 
 
 # CAVEATS
 
-Uses jaq (not jq) internally, so some advanced jq features or edge cases may behave differently. Large JSON files may impact responsiveness of the live preview.
+Uses jaq (not jq) internally, so some advanced jq features or edge cases may behave differently. Large JSON files may impact responsiveness of the live preview. Supports JSON and JSON Lines input.
 
 # HISTORY
 

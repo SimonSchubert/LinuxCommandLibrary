@@ -8,13 +8,21 @@ Maintained fork of gixy for nginx security analysis
 
 ```gixy-next [/etc/nginx/nginx.conf]```
 
-**Check specific rules**
+**Run only specific checks**
 
-```gixy-next --only [ssrf,host-spoofing] [config.conf]```
+```gixy-next --tests [ssrf,host_spoofing] [config.conf]```
 
-**Output JSON**
+**Skip specific checks**
 
-```gixy-next --format json [config.conf]```
+```gixy-next --skips [http_splitting] [config.conf]```
+
+**Output as JSON**
+
+```gixy-next -f json [config.conf]```
+
+**Show only medium severity and above**
+
+```gixy-next -ll [config.conf]```
 
 # SYNOPSIS
 
@@ -25,14 +33,17 @@ Maintained fork of gixy for nginx security analysis
 _CONFIG_
 > Nginx configuration file.
 
-**--only** _RULES_
-> Only run specific rules.
+**--tests** _RULES_
+> Only run specific checks (comma-separated).
 
-**--skip** _RULES_
-> Skip specific rules.
+**--skips** _RULES_
+> Skip specific checks (comma-separated).
 
-**--format** _FORMAT_
-> Output format.
+**-f**, **--format** _FORMAT_
+> Output format (text, json).
+
+**-l**
+> Filter by severity level. Use -l for LOW+, -ll for MEDIUM+, -lll for HIGH only.
 
 **--help**
 > Display help information.
@@ -45,7 +56,7 @@ The tool analyzes nginx configurations for security issues, detecting misconfigu
 
 # CAVEATS
 
-Fork of original gixy. May have different features. Check compatibility with your nginx version.
+Fork of original gixy with additional checks and performance features. Defaults to analyzing /etc/nginx/nginx.conf if no path given. Can also read config from stdin.
 
 # HISTORY
 

@@ -6,15 +6,23 @@ Realtime stock ticker data in your terminal
 
 **Start with specified ticker symbols**
 
-```tickrs -t [AAPL],[MSFT]```
+```tickrs -s [AAPL],[MSFT]```
 
 **Candle chart with 1-month timeframe**
 
-```tickrs -t [AAPL] --chart-type candle --time-frame 1M```
+```tickrs -s [AAPL] -c candle -t 1M```
 
 **Show pre/post market hours**
 
-```tickrs -t [TSLA] --enable-pre-post```
+```tickrs -s [TSLA] -p```
+
+**Start in summary mode with volume graphs**
+
+```tickrs -s [AAPL],[GOOGL] --summary --show-volumes```
+
+**Show x-axis labels with custom update interval**
+
+```tickrs -s [MSFT] -x -i [5]```
 
 # SYNOPSIS
 
@@ -22,17 +30,35 @@ Realtime stock ticker data in your terminal
 
 # PARAMETERS
 
-**-t** _SYMBOLS_
-> Comma-separated list of ticker symbols.
+**-s, --symbols** _SYMBOLS_
+> Comma-separated list of ticker symbols to start with.
 
-**--chart-type** _TYPE_
-> Chart type: line, candle, or kagi.
+**-c, --chart-type** _TYPE_
+> Chart type: line (default), candle, or kagi.
 
-**--time-frame** _FRAME_
-> Time frame: 1D, 5D, 1M, 3M, 6M, 1Y, 5Y.
+**-t, --time-frame** _FRAME_
+> Time frame: 1D (default), 1W, 1M, 3M, 6M, 1Y, 5Y.
 
-**--enable-pre-post**
-> Show pre-market and post-market data.
+**-i, --update-interval** _SECONDS_
+> Interval to update data from API (default: 1).
+
+**-p, --enable-pre-post**
+> Enable pre/post market hours for graphs.
+
+**--show-volumes**
+> Show volumes graph.
+
+**-x, --show-x-labels**
+> Show x-axis labels.
+
+**--summary**
+> Start in summary mode.
+
+**--hide-prev-close**
+> Hide previous close line on 1D chart.
+
+**--trunc-pre**
+> Truncate pre-market graphing to 30 minutes before open.
 
 # DESCRIPTION
 
@@ -44,4 +70,4 @@ Realtime stock ticker data in your terminal
 
 # SEE ALSO
 
-[ticker](/man/ticker)(1), [cointop](/man/cointop)(1), [tstock](/man/tstock)(1)
+[ticker](/man/ticker)(1), [cointop](/man/cointop)(1)

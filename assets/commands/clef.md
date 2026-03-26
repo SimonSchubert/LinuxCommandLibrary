@@ -4,48 +4,72 @@ standalone Ethereum account manager and transaction signer
 
 # TLDR
 
-**Start clef** with default settings
-
-```clef```
-
 **Initialize clef** for the first time with a master seed
 
 ```clef init```
 
-**Start clef on a specific** network (mainnet, sepolia, etc.)
+**Start clef** on mainnet with default settings
 
-```clef --chainid [1]```
+```clef```
 
-**Start clef with a custom** keystore directory
+**Start clef on the Sepolia** testnet with a custom keystore
 
-```clef --keystore [path/to/keystore]```
+```clef --chainid 11155111 --keystore [path/to/keystore]```
 
-**List all accounts** managed by clef
+**Start clef with a custom** configuration directory
 
-```clef --list```
+```clef --configdir [path/to/clef/config]```
 
-**Start clef with advanced rules** engine enabled
+**Start clef with automatic** rule-based transaction approval
 
 ```clef --rules [path/to/rules.js]```
+
+**Set a password** for a keystore account
+
+```clef setpw [0xaddress]```
 
 **Start clef in stdio mode** for external signing requests
 
 ```clef --stdio-ui```
 
+**Create a new account**
+
+```clef newaccount```
+
 # SYNOPSIS
 
 **clef** [_options_] [_command_]
 
-# PARAMETERS
+# SUBCOMMANDS
 
 **init**
 > Initialize the signer, generating a master seed and creating necessary directories.
 
+**attest**
+> Attest that a JavaScript rules file is to be used (stores the sha256 hash).
+
+**setpw**
+> Store a credential for a keystore file.
+
+**delpw**
+> Remove a credential for a keystore file.
+
+**newaccount**
+> Create a new account.
+
+**gendoc**
+> Generate documentation about the JSON-RPC format.
+
+# PARAMETERS
+
 **--keystore** _DIR_
-> Directory for the keystore containing encrypted account keys.
+> Directory for the keystore (default: $HOME/.ethereum/keystore).
+
+**--configdir** _DIR_
+> Directory for Clef configuration (default: $HOME/.clef).
 
 **--chainid** _ID_
-> Chain ID for transaction signing (1=mainnet, 11155111=sepolia).
+> Chain ID for transaction signing (default: 1). Common values: 1=mainnet, 11155111=sepolia.
 
 **--rules** _FILE_
 > Path to JavaScript rules file for automatic transaction approval.
@@ -54,7 +78,10 @@ standalone Ethereum account manager and transaction signer
 > Use standard input/output for user interface (for integration with external tools).
 
 **--ipcpath** _PATH_
-> Path for the IPC endpoint.
+> Filename for IPC socket/pipe.
+
+**--ipcdisable**
+> Disable the IPC-RPC server.
 
 **--http**
 > Enable HTTP-RPC server for remote signing requests.
@@ -65,8 +92,26 @@ standalone Ethereum account manager and transaction signer
 **--http.port** _PORT_
 > HTTP server listening port (default: 8550).
 
-**--list**
-> List all accounts in the keystore.
+**--http.vhosts** _HOSTS_
+> Comma-separated list of virtual hostnames (default: localhost).
+
+**--signersecret** _FILE_
+> File containing the encrypted master seed.
+
+**--auditlog** _FILE_
+> File for audit logs (default: audit.log).
+
+**--loglevel** _LEVEL_
+> Log level to emit to the screen (default: 4).
+
+**--lightkdf**
+> Reduce key-derivation RAM and CPU usage at some expense of KDF strength.
+
+**--advanced**
+> Issue warnings instead of rejections for advanced operations.
+
+**--suppress-bootwarn**
+> Suppress the boot warning display.
 
 **--help**
 > Display help information.
@@ -89,4 +134,4 @@ Clef was introduced by the **go-ethereum** (Geth) team in **2018** as part of an
 
 # SEE ALSO
 
-[geth](/man/geth)(1), [ethkey](/man/ethkey)(1)
+[geth](/man/geth)(1)

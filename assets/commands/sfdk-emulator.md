@@ -16,6 +16,18 @@ Manage Sailfish OS emulator instances
 
 ```sfdk emulator list```
 
+**Show emulator** properties
+
+```sfdk emulator show```
+
+**Set emulator** CPU count
+
+```sfdk emulator set vm.cpuCount=[4]```
+
+**Set emulator** memory size
+
+```sfdk emulator set vm.memorySize=[2048]```
+
 # SYNOPSIS
 
 **sfdk emulator** _command_ [_options_]
@@ -23,17 +35,26 @@ Manage Sailfish OS emulator instances
 # PARAMETERS
 
 **start**
-> Start emulator.
+> Start the emulator virtual machine.
 
 **stop**
-> Stop emulator.
+> Stop the emulator virtual machine.
 
 **list**
-> List emulators.
+> List available emulator instances.
+
+**show**
+> Display emulator virtual machine properties.
+
+**set** _property=value_
+> Set emulator virtual machine properties (e.g., vm.cpuCount, vm.memorySize).
+
+**status**
+> Show the current status of the emulator.
 
 # DESCRIPTION
 
-**sfdk emulator** manages Sailfish OS emulator instances for testing applications. Part of Sailfish SDK.
+**sfdk emulator** manages Sailfish OS emulator instances for testing applications. It provides commands to start, stop, and configure emulator virtual machines. VM properties such as CPU count and memory size can be adjusted using the **set** subcommand. Part of the Sailfish SDK.
 
 # SEE ALSO
 

@@ -43,28 +43,52 @@ Stripe payment platform developer CLI
 # PARAMETERS
 
 **login**
-> Authenticate CLI.
+> Authenticate the CLI with your Stripe account via browser.
 
 **listen**
-> Listen for webhooks.
+> Listen for webhook events and optionally forward them to a local endpoint.
 
 **trigger** _EVENT_
-> Trigger test event.
+> Trigger a test webhook event (e.g., payment_intent.succeeded, charge.failed).
 
 **logs tail**
-> Stream logs.
+> Stream real-time API request and response logs.
 
 **open**
-> Open dashboard.
+> Open Stripe dashboard pages in the default browser.
+
+**status**
+> Check the current status of the Stripe API.
+
+**samples**
+> Download and set up sample Stripe integration projects.
+
+**get** _RESOURCE_
+> Make a GET request to the Stripe API.
+
+**post** _RESOURCE_
+> Make a POST request to the Stripe API.
 
 **--forward-to** _URL_
-> Webhook destination.
+> Forward received webhook events to a local URL (used with listen).
 
 **--api-key** _KEY_
-> API key.
+> Use a specific Stripe API secret key for the command.
 
-**-d**, **--data** _KEY=VALUE_
-> Request data.
+**-p**, **--project-name** _NAME_
+> Run the command for a specific project configuration (default: "default").
+
+**--color** _on|off_
+> Enable or disable colored output.
+
+**--log-level** _LEVEL_
+> Set log verbosity level (default: info).
+
+**-h**, **--help**
+> Display help for a command.
+
+**-v**, **--version**
+> Display the CLI version.
 
 # DESCRIPTION
 
@@ -76,12 +100,12 @@ The CLI also provides real-time log tailing for monitoring API requests and resp
 
 # CAVEATS
 
-Requires Stripe account. Test mode for development. API keys sensitive.
+Requires a Stripe account and authentication via **stripe login** before use. API keys are sensitive credentials and should not be shared or committed to version control. The **listen** command only receives events while running; events fired when it is not active are missed. Webhook forwarding uses a temporary webhook signing secret that changes each session. Resource commands (e.g., **stripe customers list**) operate on live data unless using a test mode API key.
 
 # HISTORY
 
-The **Stripe CLI** was released to improve developer experience. It enables local development and testing of Stripe integrations.
+The **Stripe CLI** was released by **Stripe** in **2019** as an open-source tool to improve the developer experience for building payment integrations. It was built in Go and published on GitHub. The CLI addressed the common pain point of testing webhooks locally, which previously required tools like ngrok. It has since expanded to include API resource management, log tailing, sample project scaffolding, and Stripe Apps development support.
 
 # SEE ALSO
 
-[curl](/man/curl)(1)
+[curl](/man/curl)(1), [jq](/man/jq)(1)

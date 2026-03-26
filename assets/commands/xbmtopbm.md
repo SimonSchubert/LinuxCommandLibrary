@@ -1,6 +1,6 @@
 # TAGLINE
 
-Convert X11 bitmap to PBM format
+Convert X11 or X10 bitmap to PBM format
 
 # TLDR
 
@@ -14,7 +14,7 @@ Convert X11 bitmap to PBM format
 
 # DESCRIPTION
 
-**xbmtopbm** converts X11 bitmap format (.xbm) to PBM. X bitmaps are C source files; this extracts the image data. Part of Netpbm toolkit.
+**xbmtopbm** reads an X11 or X10 bitmap (.xbm) as input and produces a PBM image as output. X bitmap files are C source code that define image data as arrays; this tool extracts and converts the image data. Part of the Netpbm toolkit.
 
 # SEE ALSO
 

@@ -59,14 +59,23 @@ Show logged-in users
 **-r**, **--runlevel**
 > Print current runlevel
 
-**-s**
+**-p**, **--process**
+> Print active processes spawned by init
+
+**-s**, **--short**
 > Print only name, line, and time (default)
+
+**-t**, **--time**
+> Print last system clock change
 
 **-T**, **-w**, **--mesg**
 > Add user's message status (+, -, ?)
 
 **-u**, **--users**
 > List users logged in
+
+**--lookup**
+> Attempt to canonicalize hostnames via DNS
 
 **am i**
 > Print only current terminal's user info

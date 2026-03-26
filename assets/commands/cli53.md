@@ -16,9 +16,17 @@ Amazon Route 53 DNS management tool
 
 ```cli53 import --file [zone.txt] [example.com]```
 
+**Import with replace** to overwrite existing records
+
+```cli53 import --file [zone.txt] --replace [example.com]```
+
 **Create a new DNS record**
 
 ```cli53 rrcreate [example.com] '[www 300 A 192.0.2.1]'```
+
+**Create or replace** an existing DNS record
+
+```cli53 rrcreate --replace [example.com] '[www 60 CNAME other.example.com.]'```
 
 **Delete a DNS record**
 
@@ -62,17 +70,38 @@ Amazon Route 53 DNS management tool
 **rrpurge** _ZONE_
 > Delete all records in a zone except NS and SOA.
 
+**validate** _ZONE_
+> Validate a BIND zone file.
+
 **--file** _FILE_
-> File containing zone records for import.
+> File containing zone records for import or validation.
 
 **--replace**
-> Replace existing records during import.
+> Replace existing records during import or rrcreate.
 
 **--wait**
 > Wait for changes to propagate before returning.
 
 **--confirm**
 > Confirm destructive operations without prompting.
+
+**--dry-run**
+> Preview changes without applying them.
+
+**--full**
+> Export fully-qualified domain names.
+
+**--identifier** _ID_
+> Routing policy identifier for weighted/failover records.
+
+**--weight** _N_
+> Weight value for weighted routing policy.
+
+**--profile** _NAME_
+> Use a specific AWS credentials profile.
+
+**--endpoint-url** _URL_
+> Custom Route 53 endpoint URL.
 
 # DESCRIPTION
 
@@ -92,4 +121,4 @@ cli53 was created as an open-source tool to simplify Route 53 management from th
 
 # SEE ALSO
 
-[aws](/man/aws)(1), [dig](/man/dig)(1), [named](/man/named)(8)
+[aws](/man/aws)(1), [dig](/man/dig)(1), [host](/man/host)(1), [nslookup](/man/nslookup)(1)

@@ -1,53 +1,57 @@
 # TAGLINE
 
-decodes Lava encoded files
+Decode a LAVAFLOW stream into human readable form
 
 # TLDR
 
-**Decode lava format**
+**Decode a LAVAFLOW stream file**
 
-```lavadecode [input.lava]```
+```lavadecode < [path/to/file.lava]```
 
-**Decode to output file**
+**Decode and print file offsets**
 
-```lavadecode [input.lava] -o [output.txt]```
+```lavadecode -o < [path/to/file.lava]```
 
-**Verbose output**
+**Decode and print hex file offsets**
 
-```lavadecode -v [input.lava]```
+```lavadecode -h < [path/to/file.lava]```
+
+**Decode and save decompressed planes to .pbm files**
+
+```lavadecode -d [basename] < [path/to/file.lava]```
+
+**Decode with debug output**
+
+```lavadecode -D [level] < [path/to/file.lava]```
 
 # SYNOPSIS
 
-**lavadecode** [_options_] _file_
+**lavadecode** [_options_] <_lavaflow-file_
 
 # PARAMETERS
 
-_FILE_
-> Input file to decode.
+**-d** _basename_
+> Basename of .pbm file for saving decompressed planes.
 
-**-o** _FILE_
-> Output file.
+**-h**
+> Print hex file offsets.
 
-**-v**
-> Verbose output.
+**-o**
+> Print file offsets.
 
-**--help**
-> Display help information.
+**-D** _level_
+> Set debug level (default 0).
 
 # DESCRIPTION
 
-**lavadecode** decodes Lava encoded files. Lava is a simple obfuscation format.
+**lavadecode** decodes a LAVAFLOW stream into human readable form. LAVAFLOW is a printer language used by some Konica Minolta printers, such as the magicolor 2530 DL.
 
-The tool reverses basic encoding schemes. It's useful for analyzing obfuscated content.
+It is part of the **foo2zjs** suite of printer drivers and is used to inspect streams created by **foo2lava**.
 
 # CAVEATS
 
-Specific format only. Simple decoder. May be part of security tools.
-
-# HISTORY
-
-lavadecode is a decoder utility for Lava obfuscation format, used in various security contexts.
+Only handles LAVAFLOW printer streams. Input is read from stdin via redirection.
 
 # SEE ALSO
 
-[base64](/man/base64)(1), [xxd](/man/xxd)(1)
+[foo2lava](/man/foo2lava)(1), [foo2lava-wrapper](/man/foo2lava-wrapper)(1)

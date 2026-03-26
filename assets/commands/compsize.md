@@ -18,7 +18,7 @@ Show **raw byte counts** instead of human-readable sizes
 
 # SYNOPSIS
 
-**compsize** [_options_] _path_...
+**compsize** [**-b**] [**-x**] _file-or-dir_ [_file-or-dir_...]
 
 # DESCRIPTION
 
@@ -42,4 +42,4 @@ Only works on btrfs filesystems. Requires root privileges to access extent infor
 
 # SEE ALSO
 
-[btrfs-filesystem](/man/btrfs-filesystem)(8), [btrfs](/man/btrfs)(8), [df](/man/df)(1)
+[btrfs](/man/btrfs)(8), [btrfs-filesystem](/man/btrfs-filesystem)(8), [df](/man/df)(1), [du](/man/du)(1)

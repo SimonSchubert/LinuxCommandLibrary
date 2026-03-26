@@ -1,6 +1,6 @@
 # TAGLINE
 
-desktop RSS/Atom news aggregator
+Desktop RSS/Atom news aggregator
 
 # TLDR
 
@@ -24,39 +24,56 @@ Download **images** from article
 
 ```feedreader --playMedia=[article_url]```
 
+**Run** with verbose debug output
+
+```feedreader --verbose```
+
 # SYNOPSIS
 
 **feedreader** [_options_]
 
 # DESCRIPTION
 
-**feedreader** is a GUI desktop RSS/Atom feed client built with GTK. It aggregates news feeds from multiple sources and provides desktop notifications for new articles, allowing users to read content in a unified interface.
+**feedreader** is a GTK desktop RSS/Atom feed client. It aggregates news feeds from multiple sources and provides desktop notifications for new articles. The application supports various feed services including Feedly, Inoreader, and local feed reading, with features like article synchronization, tagging, and full-text search.
 
-The application supports various feed services including Feedly, Inoreader, and local feed reading. It offers features like article synchronization, tagging, and full-text search across feed content.
-
-Note: FeedReader is no longer being maintained. Users are encouraged to migrate to actively developed alternatives like NewsFlash or Akregator.
+Note: FeedReader is no longer being maintained. Users are encouraged to migrate to actively developed alternatives like NewsFlash.
 
 # PARAMETERS
 
 **--unreadCount**
-> Show unread article count
+> Show current count of unread articles in the database.
 
-**--addFeed** _url_
-> Add feed subscription
+**--addFeed**=_URL_
+> Add the feed to the collection.
 
-**--grabArticle** _url_
-> Download specific article
+**--grabArticle**=_URL_
+> Use the ContentGrabber to grab the given URL.
 
-**--grabImages** _path_
-> Download article images
+**--grabImages**=_PATH_
+> Download all images of the html-document.
 
-**--playMedia** _url_
-> Play media content
+**--url**=_URL_
+> URL of the article needed for grabImages.
+
+**--playMedia**=_URL_
+> Start media player with the given URL.
+
+**--ping**=_URL_
+> Test the ping function with the given URL.
+
+**--verbose**
+> Output all debug information.
+
+**--about**
+> Show the about dialog.
+
+**--version**
+> Show FeedReader version number.
 
 # CAVEATS
 
-Project is no longer maintained. Consider alternatives like Newsflash or Akregator. Supports various feed services like Feedly and Inoreader.
+Project is no longer maintained. Consider alternatives like NewsFlash. Supports various feed services like Feedly and Inoreader.
 
 # SEE ALSO
 
-[newsboat](/man/newsboat)(1), [liferea](/man/liferea)(1)
+[newsboat](/man/newsboat)(1)

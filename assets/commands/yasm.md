@@ -38,26 +38,32 @@ Modular x86 and AMD64 assembler
 
 # PARAMETERS
 
-**-f** _format_
-> Output format: elf32, elf64, win32, win64, macho32, macho64, bin, coff.
+**-f** _format_, **--oformat=**_format_
+> Output format (default: bin): bin, elf32, elf64, win32, win64, macho32, macho64, coff.
 
-**-o** _outfile_
+**-o** _outfile_, **--objfile=**_outfile_
 > Output file name.
 
-**-a** _arch_
+**-a** _arch_, **--arch=**_arch_
 > Target architecture (default: x86).
 
-**-m** _machine_
-> Machine type: x86, amd64.
+**-m** _machine_, **--machine=**_machine_
+> Machine subtype: x86, amd64.
 
-**-p** _parser_
+**-p** _parser_, **--parser=**_parser_
 > Syntax parser: nasm (default), gas.
 
-**-r** _preproc_
-> Preprocessor: nasm, raw, cpp, gas.
+**-r** _preproc_, **--preproc=**_preproc_
+> Preprocessor: nasm (default), raw, cpp, gas.
 
-**-g** _debug_
+**-g** _debug_, **--dformat=**_debug_
 > Debug format: dwarf2, stabs, cv8, null.
+
+**-L** _list_, **--lformat=**_list_
+> List file format (default: nasm).
+
+**-l** _file_, **--list=**_file_
+> Output list file name.
 
 **-D** _macro[=value]_
 > Define preprocessor macro.
@@ -69,16 +75,25 @@ Modular x86 and AMD64 assembler
 > Add include search directory.
 
 **-P** _file_
-> Pre-include file.
+> Pre-include file before input.
 
-**-e**
-> Preprocess only (no assembly).
+**-e**, **--preproc-only**
+> Preprocess only (no assembly), output to stdout.
 
 **-w**
-> Inhibit warnings.
+> Suppress all warning messages.
 
 **-Werror**
 > Treat warnings as errors.
+
+**-Worphan-labels**
+> Warn on labels lacking trailing colons (NASM mode).
+
+**-X** _style_
+> Error/warning reporting style: gnu or vc.
+
+**--force-strict**
+> Treat all sized operands as strict.
 
 **--version**
 > Display version.
@@ -90,7 +105,7 @@ Modular x86 and AMD64 assembler
 
 **yasm** is a modular assembler supporting x86 and AMD64 instruction sets. It is a complete rewrite of NASM under the BSD license, offering multiple input syntaxes and output formats.
 
-Supported syntaxes include NASM (default) and GAS (GNU Assembler). Output formats cover ELF, Win32/Win64 PE, Mach-O, COFF, and raw binary. Debug information can be generated in DWARF 2, STABS, or CodeView 8 formats.
+Supported syntaxes include NASM (default) and GAS (GNU Assembler). Output formats cover ELF, Win32/Win64 PE, Mach-O, COFF, and raw binary (bin, the default). Debug information can be generated in DWARF 2, STABS, or CodeView 8 formats. Use `yasm -f help` to list all available object formats.
 
 The assembler is used for low-level system programming, operating system development, and performance-critical code. It integrates with C/C++ toolchains through standard object file formats.
 

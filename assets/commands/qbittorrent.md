@@ -28,17 +28,17 @@ Open-source BitTorrent client with web interface
 
 # PARAMETERS
 
-**--portable**
-> Portable mode.
-
 **--no-splash**
-> Disable splash screen.
+> Disable splash screen on startup (GUI only).
 
-**--webui-port** _port_
-> Web UI port (nox only).
+**--webui-port=**_port_
+> Set Web UI port (default: 8080).
 
 **-d**, **--daemon**
-> Daemonize (nox only).
+> Run as daemon in the background (nox only).
+
+**--version**
+> Show version number.
 
 **--help**
 > Show help.
@@ -70,7 +70,7 @@ qbittorrent "magnet:?xt=urn:btih:..."
 
 Default: http://localhost:8080
 - Username: admin
-- Password: (set on first run)
+- Password: adminadmin (should be changed on first login)
 
 # CONFIGURATION
 
@@ -82,7 +82,7 @@ Default: http://localhost:8080
 
 # CAVEATS
 
-Web UI has default credentials. Port forwarding may be needed for best speeds.
+Web UI ships with default credentials (admin/adminadmin); change the password immediately. Port forwarding may be needed for best download/upload speeds.
 
 # HISTORY
 
@@ -90,4 +90,4 @@ qBittorrent was started by **Christophe Dumez** in 2006 as a Qt-based alternativ
 
 # SEE ALSO
 
-[transmission](/man/transmission)(1), [deluge](/man/deluge)(1), [aria2](/man/aria2)(1)
+[transmission](/man/transmission)(1), [deluge](/man/deluge)(1), [aria2c](/man/aria2c)(1), [rtorrent](/man/rtorrent)(1)

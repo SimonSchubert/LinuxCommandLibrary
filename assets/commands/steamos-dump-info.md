@@ -16,9 +16,13 @@ Collect SteamOS system diagnostics
 
 ```sudo steamos-dump-info --verbose```
 
-**Dump without compressing** output
+**Dump without compressing output**
 
 ```sudo steamos-dump-info --no-compress```
+
+**Dump only a specific section**
+
+```sudo steamos-dump-info --section [network]```
 
 # SYNOPSIS
 
@@ -31,6 +35,9 @@ Collect SteamOS system diagnostics
 
 **-L**, **--list-sections**
 > List all available sections that can be dumped individually.
+
+**--section** _NAME_
+> Dump only the specified section. Can be used multiple times.
 
 **-V**, **--version**
 > Display version information.

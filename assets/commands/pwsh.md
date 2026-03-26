@@ -8,44 +8,89 @@ Cross-platform PowerShell shell
 
 ```pwsh```
 
-**Execute command**
+**Execute a command**
 
 ```pwsh -Command "[Get-Process]"```
 
-**Run script**
+**Run a script file**
 
 ```pwsh -File [script.ps1]```
 
-**Non-interactive mode**
+**Run without loading the profile**
+
+```pwsh -NoProfile -Command "[command]"```
+
+**Run non-interactively for automation**
 
 ```pwsh -NonInteractive -Command "[command]"```
 
-**Specific version**
+**Run a base64-encoded command**
+
+```pwsh -EncodedCommand [base64_string]```
+
+**Start in a specific working directory**
+
+```pwsh -WorkingDirectory [/path/to/dir]```
+
+**Show version**
 
 ```pwsh -Version```
 
 # SYNOPSIS
 
-**pwsh** [_options_] [_file_]
+**pwsh** [_options_] [-File _file_ [_args_]] [-Command { - | _script-block_ | _string_ }]
 
 # PARAMETERS
 
-_FILE_
-> Script file to execute.
+**-Command** | **-c** _CMD_
+> Execute a command string or script block.
 
-**-Command** _CMD_
-> Execute command.
+**-File** | **-f** _FILE_
+> Execute a script file. Must be the last parameter.
 
-**-File** _FILE_
-> Execute script file.
+**-NonInteractive** | **-noni**
+> Disable interactive prompts; useful for automation.
 
-**-NonInteractive**
-> No interactive prompt.
+**-NoProfile** | **-nop**
+> Don't load the PowerShell profile.
 
-**-NoProfile**
-> Don't load profile.
+**-NoLogo** | **-nol**
+> Hide the banner at startup of interactive sessions.
 
-**-Version**
+**-NoExit** | **-noe**
+> Don't exit after running startup commands.
+
+**-Login** | **-l**
+> Start as a login shell (Linux/macOS only). Must be first parameter.
+
+**-EncodedCommand** | **-e** _BASE64_
+> Accept a base64-encoded UTF-16LE command string.
+
+**-ExecutionPolicy** | **-ep** _POLICY_
+> Set the execution policy for the session (Windows only).
+
+**-WorkingDirectory** | **-wd** _DIR_
+> Set the initial working directory.
+
+**-CommandWithArgs** | **-cwa** _CMD_ [_args_]
+> Execute a command with arguments populating $args.
+
+**-ConfigurationFile** _FILE_
+> Specify a session configuration (.pssc) file path.
+
+**-OutputFormat** | **-o** {Text | XML}
+> Format of output. Default is Text.
+
+**-InputFormat** | **-if** {Text | XML}
+> Format of data sent to PowerShell.
+
+**-SettingsFile** _FILE_
+> Override the system-wide powershell.config.json for the session.
+
+**-Interactive** | **-i**
+> Present an interactive prompt. Inverse of -NonInteractive.
+
+**-Version** | **-v**
 > Show version.
 
 # DESCRIPTION
@@ -67,7 +112,7 @@ PowerShell includes a comprehensive set of cmdlets for system administration, fi
 
 # CAVEATS
 
-Requires installation. Different from Windows PowerShell.
+Requires separate installation on Linux/macOS. Different from Windows PowerShell 5.1 (powershell.exe). All parameters are case-insensitive.
 
 # HISTORY
 
@@ -75,5 +120,5 @@ PowerShell Core was released by **Microsoft** as cross-platform shell.
 
 # SEE ALSO
 
-[bash](/man/bash)(1), [zsh](/man/zsh)(1), [sh](/man/sh)(1)
+[bash](/man/bash)(1), [zsh](/man/zsh)(1), [sh](/man/sh)(1), [fish](/man/fish)(1)
 

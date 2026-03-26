@@ -32,9 +32,13 @@ Manage embedded external repositories within a project
 
 ```git submodule deinit [path] && git rm [path]```
 
-**Foreach command**
+**Run a command in each submodule**
 
-```git submodule foreach "[command]"```
+```git submodule foreach '[command]'```
+
+**Sync submodule URLs** from .gitmodules to local config
+
+```git submodule sync --recursive```
 
 # SYNOPSIS
 
@@ -42,43 +46,67 @@ Manage embedded external repositories within a project
 
 # SUBCOMMANDS
 
-**add**
-> Add submodule.
+**add** _URL_ [_path_]
+> Add a repository as a submodule at a given path.
 
-**init**
-> Initialize submodules.
+**init** [_path_...]
+> Initialize submodules recorded in the index.
 
-**update**
-> Update submodules.
+**update** [_path_...]
+> Update registered submodules to match the superproject.
 
-**status**
-> Show status.
+**status** [_path_...]
+> Show status of submodules.
 
-**deinit**
-> Unregister submodule.
+**deinit** [_path_...]
+> Unregister submodules and remove their work trees.
 
-**sync**
-> Sync URLs.
+**sync** [_path_...]
+> Sync submodule remote URLs from .gitmodules to local config.
 
-**foreach**
-> Run command in each.
+**foreach** _command_
+> Run a shell command in each checked-out submodule.
 
-**summary**
-> Show commit summary.
+**summary** [_commit_] [_path_...]
+> Show commit summary between commit and working tree/index.
+
+**set-branch** _path_
+> Set the default remote tracking branch for a submodule.
+
+**set-url** _path_ _newurl_
+> Set the URL of a submodule.
+
+**absorbgitdirs**
+> Move submodule .git directories into the superproject's .git/modules/.
 
 # PARAMETERS
 
 **--init**
-> Initialize during update.
+> Initialize uninitialized submodules before updating.
 
 **--recursive**
-> Recursive operation.
+> Recurse into nested submodules.
 
 **--remote**
-> Use remote tracking branch.
+> Use the submodule's remote tracking branch instead of the superproject's recorded SHA-1.
 
 **-f**, **--force**
-> Force operation.
+> Force checkout even if the submodule already matches.
+
+**-b** _branch_, **--branch** _branch_
+> Branch of repository to track (add, set-branch).
+
+**-j** _n_, **--jobs** _n_
+> Clone new submodules in parallel with n jobs.
+
+**-q**, **--quiet**
+> Only print error messages.
+
+**--depth** _depth_
+> Create a shallow clone with truncated history.
+
+**-N**, **--no-fetch**
+> Do not fetch new objects from the remote (update).
 
 # DESCRIPTION
 
@@ -93,4 +121,4 @@ Submodules allow projects to include and track dependencies or shared components
 
 # SEE ALSO
 
-[git-clone](/man/git-clone)(1), [gitmodules](/man/gitmodules)(5)
+[git-clone](/man/git-clone)(1), [git-remote](/man/git-remote)(1), [git-fetch](/man/git-fetch)(1)

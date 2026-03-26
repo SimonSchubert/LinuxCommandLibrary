@@ -32,9 +32,13 @@ View npm registry information for a package
 
 ```npm view [package] dist-tags```
 
-**View a specific version's** info
+**View a specific version's info**
 
 ```npm view [package]@[2.0.0]```
+
+**View info from a custom registry**
+
+```npm view [package] --registry [https://registry.example.com]```
 
 # SYNOPSIS
 
@@ -84,5 +88,5 @@ Requires network access to query the registry. When viewing scoped packages, the
 
 # SEE ALSO
 
-[npm](/man/npm)(1), [npm-search](/man/npm-search)(1), [npm-pack](/man/npm-pack)(1), [npm-install](/man/npm-install)(1), [npm-publish](/man/npm-publish)(1)
+[npm](/man/npm)(1), [npm-search](/man/npm-search)(1), [npm-pack](/man/npm-pack)(1), [npm-install](/man/npm-install)(1), [npm-publish](/man/npm-publish)(1), [npm-ls](/man/npm-ls)(1), [npm-outdated](/man/npm-outdated)(1)
 

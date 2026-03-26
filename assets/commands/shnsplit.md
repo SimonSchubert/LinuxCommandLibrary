@@ -16,17 +16,17 @@ Split with **custom filename format**
 
 ```shnsplit -f [path/to/file.cue] -t "%n - %a - %t" [path/to/file.wav]```
 
-Show **supported formats**
+Split input file into **equal-length segments**
 
-```shnsplit -a```
+```shnsplit -l [5:00] [path/to/file.wav]```
 
 Split to a **specific directory**
 
 ```shnsplit -f [path/to/file.cue] -d [output_directory] [path/to/file.wav]```
 
-**Dry run** to preview split points
+Extract only **specific tracks** from a CUE sheet
 
-```shnsplit -f [path/to/file.cue] -n [path/to/file.wav]```
+```shnsplit -f [path/to/file.cue] -x [1-3,5] [path/to/file.wav]```
 
 # SYNOPSIS
 
@@ -48,14 +48,23 @@ Split to a **specific directory**
 **-t** _fmt_
 > Name files using CUE fields (%n=track, %a=album, %t=title, %p=performer)
 
-**-a** _prefix_
-> Set custom filename prefix (default: split-track)
+**-a** _str_
+> Prefix output filenames with str (default: split-track)
+
+**-z** _str_
+> Postfix output filenames with str
 
 **-c** _num_
-> Start track numbering from specified value (default: 1)
+> Start counting from num when naming output files (default: 0)
+
+**-l** _len_
+> Split input file into segments of length len
+
+**-m** _str_
+> Character manipulation string for filenames from CUE sheets (alternating from/to pairs)
 
 **-n** _fmt_
-> Customize track number format (default: %02d)
+> Specify file count output format (default: %02d)
 
 **-x** _list_
 > Extract specific tracks only (e.g., "2-6,9,11-13")
@@ -65,6 +74,21 @@ Split to a **specific directory**
 
 **-u** _len_
 > Add lead-out from next track
+
+**-i** _fmt_
+> Specify input file format decoder and/or arguments
+
+**-O** _val_
+> Overwrite existing files: ask, always, or never
+
+**-q**
+> Suppress non-critical output (quiet mode)
+
+**-w**
+> Suppress warnings
+
+**-D**
+> Print debugging information
 
 **-h**
 > Display help information
@@ -85,4 +109,4 @@ Requires appropriate encoders/decoders (flac, wavpack, mac) installed for non-WA
 
 # SEE ALSO
 
-[cuebreakpoints](/man/cuebreakpoints)(1), [cuetag](/man/cuetag)(1), [flac](/man/flac)(1), [sox](/man/sox)(1)
+[cuebreakpoints](/man/cuebreakpoints)(1), [cuetag](/man/cuetag)(1), [flac](/man/flac)(1), [sox](/man/sox)(1), [ffmpeg](/man/ffmpeg)(1)

@@ -4,25 +4,33 @@ Apply Puppet manifests locally
 
 # TLDR
 
-**Apply manifest**
+**Apply a manifest**
 
 ```puppet apply [manifest.pp]```
 
-**Dry run**
+**Dry run without making changes**
 
 ```puppet apply --noop [manifest.pp]```
 
-**Verbose output**
+**Apply with verbose output**
 
 ```puppet apply --verbose [manifest.pp]```
 
-**Debug mode**
+**Apply with full debug output**
 
 ```puppet apply --debug [manifest.pp]```
 
-**Apply inline code**
+**Execute inline Puppet code**
 
 ```puppet apply -e "package { 'nginx': ensure => present }"```
+
+**Apply with common testing options** (verbose, detailed-exitcodes, show_diff)
+
+```puppet apply --test [manifest.pp]```
+
+**Log output to a file**
+
+```puppet apply --logdest [/var/log/puppet.log] [manifest.pp]```
 
 # SYNOPSIS
 
@@ -31,22 +39,37 @@ Apply Puppet manifests locally
 # PARAMETERS
 
 _MANIFEST_
-> Puppet manifest file.
+> Puppet manifest file to compile and apply.
 
 **--noop**
-> Dry run mode.
+> Dry run mode; shows what changes would be made without applying them.
 
-**--verbose**
-> Verbose output.
+**-v**, **--verbose**
+> Print extra information during execution.
 
-**--debug**
-> Debug output.
+**-d**, **--debug**
+> Enable full debugging output.
 
-**-e** _CODE_
-> Inline code.
+**-e**, **--execute** _CODE_
+> Execute a specific piece of Puppet code instead of a manifest file.
+
+**--test**
+> Enable common testing options: verbose, detailed-exitcodes, and show_diff.
+
+**--detailed-exitcodes**
+> Provide extra information via exit codes (0=no changes, 2=changes applied, 4=failures, 6=both).
+
+**-l**, **--logdest** _DEST_
+> Where to send log messages (syslog, eventlog, console, or a file path). Defaults to console.
+
+**--catalog** _CATALOG_
+> Apply a JSON catalog instead of compiling a manifest. Accepts a file path or stdin.
+
+**-L**, **--loadclasses**
+> Load any stored classes from the classfile.
 
 **--modulepath** _PATH_
-> Module search path.
+> Module search path for resolving classes and defined types.
 
 # DESCRIPTION
 
@@ -64,7 +87,7 @@ The command accepts manifest files written in Puppet's declarative DSL or inline
 
 # CAVEATS
 
-Requires Puppet installed. Masterless operation.
+Requires Puppet installed. Operates without a Puppet server (masterless mode). Must be run as root to manage system resources.
 
 # HISTORY
 

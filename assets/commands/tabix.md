@@ -57,7 +57,7 @@ Genomic position file indexer
 **-S**, **--skip-lines** _n_
 > Skip first n lines.
 
-**-c** _char_
+**-c**, **--comment** _char_
 > Skip lines starting with character (default: #).
 
 **-0**, **--zero-based**
@@ -72,17 +72,32 @@ Genomic position file indexer
 **-h**, **--print-header**
 > Print header lines with output.
 
-**-H**
-> Print only header lines.
+**-H**, **--only-header**
+> Print only header/meta lines.
 
-**-l**
-> List chromosome names in index.
+**-l**, **--list-chroms**
+> List sequence names stored in the index file.
 
-**-R** _file_
-> Query regions from BED or TAB file.
+**-r**, **--reheader** _file_
+> Replace the header with the content of file.
+
+**-R**, **--regions** _file_
+> Query regions from BED or TAB-delimited file.
+
+**-T**, **--targets** _file_
+> Similar to -R but reads input sequentially.
+
+**-m**, **--min-shift** _INT_
+> Set minimal interval size for CSI indices to 2^INT (default: 14).
+
+**-D**
+> Do not download index file before opening (remote files only).
 
 **--separate-regions**
-> Print region name before each group.
+> Insert region name before each group in output.
+
+**--cache** _INT_
+> Set BGZF block cache size in megabytes (default: 10).
 
 # DESCRIPTION
 

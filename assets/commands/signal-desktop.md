@@ -42,17 +42,14 @@ Encrypted messaging desktop application
 **--enable-dev-tools**
 > Start with Chromium DevTools panel open for debugging.
 
+**--enable-gpu**
+> Enable GPU acceleration.
+
 **--no-sandbox**
 > Disable Chromium sandboxing (not recommended for security).
 
 **--proxy-server=**_URL_
 > Use a proxy server for network connections.
-
-**--help**
-> Display help information.
-
-**--version**
-> Display version information.
 
 # DESCRIPTION
 
@@ -72,4 +69,4 @@ Signal Desktop requires linking to an existing Signal account on a mobile device
 
 # SEE ALSO
 
-[signal-cli](/man/signal-cli)(1), [telegram-desktop](/man/telegram-desktop)(1), [element-desktop](/man/element-desktop)(1)
+[telegram-desktop](/man/telegram-desktop)(1), [gpg](/man/gpg)(1)

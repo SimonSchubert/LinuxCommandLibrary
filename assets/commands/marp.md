@@ -16,9 +16,13 @@ creates presentations from Markdown
 
 ```marp [slides.md] --pptx -o [slides.pptx]```
 
+**Convert slides to images**
+
+```marp [slides.md] --images [png] -o [slides/]```
+
 **Preview with live reload**
 
-```marp --preview [slides.md]```
+```marp -p [slides.md]```
 
 **Use custom theme**
 
@@ -26,7 +30,11 @@ creates presentations from Markdown
 
 **Start server mode**
 
-```marp --server [slides/]```
+```marp -s [slides/]```
+
+**Watch for changes and auto-convert**
+
+```marp -w [slides.md] -o [slides.html]```
 
 # SYNOPSIS
 
@@ -35,7 +43,7 @@ creates presentations from Markdown
 # PARAMETERS
 
 **-o**, **--output** _file_
-> Output filename.
+> Output filename or directory.
 
 **--pdf**
 > Export as PDF.
@@ -43,20 +51,47 @@ creates presentations from Markdown
 **--pptx**
 > Export as PowerPoint.
 
-**--html**
-> Export as HTML.
+**--images** [png|jpeg]
+> Export slides as multiple image files.
 
-**--preview**
+**--image** [png|jpeg]
+> Export the first slide as a single image.
+
+**--notes**
+> Export presenter notes as a text file.
+
+**-p**, **--preview**
 > Open preview window.
 
-**--server**
-> Start server mode.
+**-s**, **--server** _dir_
+> Start server mode for on-demand conversion.
 
 **--theme** _css_
-> Custom theme file.
+> Custom theme CSS file.
 
-**--watch**
-> Watch for changes.
+**-w**, **--watch**
+> Watch for file changes and auto-convert.
+
+**--pdf-notes**
+> Add presenter notes as PDF annotations.
+
+**--pdf-outlines**
+> Add bookmarks to PDF output.
+
+**--allow-local-files**
+> Allow access to local files during conversion.
+
+**--image-scale** _factor_
+> Scale factor for rendered images (default: 1).
+
+**-I**, **--input-dir** _dir_
+> Base directory for input with output directory preservation.
+
+**-c**, **--config-file** _file_
+> Path to configuration file.
+
+**--engine** _module_
+> Specify Marpit-based conversion engine.
 
 # DESCRIPTION
 
@@ -85,7 +120,7 @@ More content
 
 # CAVEATS
 
-PDF export requires Chrome/Chromium. Some CSS features limited. Images need accessible paths. PPTX has formatting limitations.
+PDF and image export require Chrome, Edge, or Firefox. Some CSS features are limited in PPTX output. Local file references require **--allow-local-files** for PDF/image conversion.
 
 # HISTORY
 
@@ -93,4 +128,4 @@ Marp was created by **Yuki Hattori** (yhatt) in **2016** as Marp desktop app, la
 
 # SEE ALSO
 
-[reveal.js](/man/reveal.js)(1), [slidev](/man/slidev)(1), [pandoc](/man/pandoc)(1), [remark](/man/remark)(1)
+[pandoc](/man/pandoc)(1)

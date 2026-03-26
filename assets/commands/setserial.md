@@ -67,7 +67,7 @@ Set **custom baud rate** divisor
 > Set the interrupt request line
 
 **uart** _uart_type_
-> Set UART type (none, 8250, 16450, 16550, 16550A, 16650, 16750, etc.)
+> Set UART type (none, 8250, 16450, 16550, 16550A, 16650, 16650V2, 16654, 16750, 16850, 16950, 16954)
 
 **autoconfig**
 > Automatically detect UART type and IRQ
@@ -78,8 +78,38 @@ Set **custom baud rate** divisor
 **divisor** _divisor_
 > Set custom clock divisor for non-standard baud rates
 
+**spd_hi**
+> Use 57600 baud when an application requests 38400 baud
+
+**spd_vhi**
+> Use 115200 baud when an application requests 38400 baud
+
+**spd_cust**
+> Use custom divisor (set via divisor parameter) when an application requests 38400 baud
+
+**spd_normal**
+> Use standard 38400 baud rate (resets spd_hi, spd_vhi, etc.)
+
+**close_delay** _delay_
+> Time in hundredths of a second that DTR should be kept low after port close
+
+**closing_wait** _delay_
+> Time in hundredths of a second to wait for data to drain on close
+
+**auto_irq**
+> Attempt to determine IRQ during autoconfig
+
+**^auto_irq**
+> Disable automatic IRQ detection during autoconfig
+
+**skip_test**
+> Skip UART test during autoconfig
+
 **low_latency**
 > Minimize receive latency at the cost of CPU overhead
+
+**^low_latency**
+> Disable low latency mode (default)
 
 # DESCRIPTION
 
@@ -89,7 +119,7 @@ The command can auto-detect UART types and set custom baud rates for specialized
 
 # CAVEATS
 
-Incorrect settings can cause serial ports to malfunction or conflict with other devices. The **-W** wild interrupt initialization is obsolete on modern kernels. Many settings require root privileges. On systems using **systemd**, serial port configuration may be handled differently through udev rules.
+Incorrect settings can cause serial ports to malfunction or conflict with other devices. The **-W** wild interrupt initialization is obsolete on kernels after version 2.1. Many settings require root privileges. On systems using **systemd**, serial port configuration may be handled differently through udev rules.
 
 # HISTORY
 

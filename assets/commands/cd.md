@@ -26,7 +26,7 @@ change the current working directory
 
 # SYNOPSIS
 
-**cd** [_directory_]
+**cd** [**-L**|**-P** [**-e**] [**-@**]] [_directory_]
 
 # DESCRIPTION
 
@@ -46,7 +46,13 @@ _directory_
 > Follow symbolic links (default)
 
 **-P**
-> Use physical directory structure
+> Use physical directory structure (don't follow symlinks)
+
+**-e**
+> With -P, exit with error if the current directory cannot be determined
+
+**-@**
+> Present extended attributes as a directory (on supported systems)
 
 # SPECIAL DIRECTORIES
 
@@ -89,4 +95,4 @@ Shell built-in (behavior varies by shell). Spaces in paths need quoting. Symboli
 
 # SEE ALSO
 
-[pwd](/man/pwd)(1), [pushd](/man/pushd)(1), [popd](/man/popd)(1)
+[pwd](/man/pwd)(1), [pushd](/man/pushd)(1), [popd](/man/popd)(1), [dirs](/man/dirs)(1)

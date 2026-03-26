@@ -1,6 +1,6 @@
 # TAGLINE
 
-NuGet package reference manager
+Add or update a NuGet package reference in a project
 
 # TLDR
 
@@ -24,34 +24,44 @@ NuGet package reference manager
 
 ```dotnet add package [package_name] --source [https://api.nuget.org/v3/index.json]```
 
+**Add package targeting a specific framework**
+
+```dotnet add package [package_name] --framework [net8.0]```
+
 # SYNOPSIS
 
 **dotnet** **add** [_project_] **package** _package_name_ [_options_]
 
 # PARAMETERS
 
-**--version** _version_
+**-v**, **--version** _version_
 > Specific version to install.
 
 **--prerelease**
-> Include prerelease packages.
+> Allow prerelease packages to be installed.
 
-**--source** _source_
-> NuGet package source.
+**-f**, **--framework** _framework_
+> Add a package reference only when targeting a specific framework.
+
+**-s**, **--source** _source_
+> NuGet package source URI to use during restore.
 
 **-n**, **--no-restore**
-> Don't restore after adding.
+> Add reference without performing a restore preview and compatibility check.
 
 **--package-directory** _dir_
 > Directory to restore packages to.
 
+**--interactive**
+> Allow the command to stop and wait for user input or action.
+
 # DESCRIPTION
 
-**dotnet add package** adds a NuGet package reference to a project file and automatically downloads the package. It modifies the .csproj or .fsproj file to include the package reference, making the dependency trackable in version control.
+**dotnet add package** adds a NuGet package reference to a project file and runs a compatibility check. It modifies the .csproj or .fsproj file to include a PackageReference element, making the dependency trackable in version control.
 
-The command integrates with NuGet package sources to resolve packages and their transitive dependencies. Version constraints can be specified to pin specific versions or allow updates within semantic versioning ranges.
+If the package is already referenced, it updates the reference to the latest compatible version. The command runs an implicit **dotnet restore** after adding the reference unless **--no-restore** is specified. Projects using Central Package Management (CPM) will have the PackageVersion element updated in the Directory.Packages.props file.
 
 # SEE ALSO
 
-[dotnet-remove](/man/dotnet-remove)(1), [dotnet-restore](/man/dotnet-restore)(1)
+[dotnet-restore](/man/dotnet-restore)(1), [dotnet-build](/man/dotnet-build)(1), [dotnet](/man/dotnet)(1)
 

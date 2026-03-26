@@ -32,9 +32,17 @@ In-memory key-value data store server
 
 ```valkey-server --daemonize yes```
 
-**Start with persistence**
+**Start with AOF persistence**
 
 ```valkey-server --appendonly yes```
+
+**Start as replica** of another server
+
+```valkey-server --replicaof [127.0.0.1] [6379]```
+
+**Start in sentinel mode**
+
+```valkey-server --sentinel```
 
 # SYNOPSIS
 
@@ -81,6 +89,24 @@ In-memory key-value data store server
 **--dir** _directory_
 > Working directory for persistence.
 
+**--replicaof** _host_ _port_
+> Start as a replica of the specified server.
+
+**--sentinel**
+> Start in Sentinel mode for high availability monitoring.
+
+**--tls-port** _port_
+> Listen for TLS connections on specified port.
+
+**--io-threads** _n_
+> Number of I/O threads for improved performance (default: 1, disabled).
+
+**--cluster-enabled** _yes|no_
+> Enable cluster mode.
+
+**--dbfilename** _file_
+> Filename for the RDB snapshot (default: dump.rdb).
+
 # DESCRIPTION
 
 **valkey-server** is the server component of Valkey, an open-source in-memory data store forked from Redis. It provides high-performance key-value storage with support for strings, hashes, lists, sets, sorted sets, and more.
@@ -102,3 +128,4 @@ Memory-bound by default; configure maxmemory for production. Protected mode rest
 # SEE ALSO
 
 [valkey-cli](/man/valkey-cli)(1), [redis-server](/man/redis-server)(1), [memcached](/man/memcached)(1)
+

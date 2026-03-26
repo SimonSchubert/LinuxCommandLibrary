@@ -4,7 +4,7 @@ Linter for English prose style
 
 # TLDR
 
-**Check text file**
+**Check a text file**
 
 ```proselint [document.txt]```
 
@@ -24,6 +24,10 @@ Linter for English prose style
 
 ```cat [document.txt] | proselint```
 
+**Clear the cache**
+
+```proselint --clean```
+
 # SYNOPSIS
 
 **proselint** [_options_] _files_...
@@ -36,16 +40,31 @@ The tool draws on advice from style guides and editorial best practices, providi
 
 # PARAMETERS
 
-**--json**
+**-j**, **--json**
 > Output in JSON format.
 
 **--config** _file_
-> Configuration file.
+> Path to configuration file.
 
 **--compact**
 > Compact output format.
 
-**--version**
+**-d**, **--debug**
+> Give verbose output.
+
+**-c**, **--clean**
+> Clear the cache.
+
+**--demo**
+> Run over built-in demo file.
+
+**--dump-config**
+> Print current configuration.
+
+**--dump-default-config**
+> Print default configuration.
+
+**-v**, **--version**
 > Show version.
 
 **--help**
@@ -57,8 +76,8 @@ Clichés, jargon, weasel words, redundancy, sexism, consistency, typography, hed
 
 # CONFIGURATION
 
-**~/.config/proselint/config** (or **.proselintrc**)
-> JSON configuration file to enable or disable specific checks, such as cliches, jargon, redundancy, and typography rules.
+**~/.config/proselint/config.json**
+> JSON configuration file to enable or disable specific checks using a hierarchical check-selection system for categories like cliches, jargon, redundancy, and typography.
 
 # CAVEATS
 
@@ -70,4 +89,4 @@ Style suggestions subjective. May flag intentional usage. English only. Some che
 
 # SEE ALSO
 
-[vale](/man/vale)(1), [write-good](/man/write-good)(1), [grammarly](/man/grammarly)(1), [aspell](/man/aspell)(1)
+[vale](/man/vale)(1), [write-good](/man/write-good)(1), [aspell](/man/aspell)(1), [textlint](/man/textlint)(1), [hunspell](/man/hunspell)(1)

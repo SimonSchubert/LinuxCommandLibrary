@@ -60,10 +60,34 @@ The tool reports statistics including requests per second, time per request, tra
 > Add a Cookie header (name=value)
 
 **-s** _timeout_
-> Maximum seconds to wait for each response (default 30)
+> Maximum seconds to wait before socket times out (default 30)
 
 **-v** _verbosity_
-> Verbosity level (1-4)
+> Verbosity level (2=warnings, 3=response codes, 4+=headers)
+
+**-u** _file_
+> File containing data to PUT (also set -T)
+
+**-X** _proxy[:port]_
+> Use a proxy server for the requests
+
+**-e** _csv-file_
+> Write a CSV file with response time percentiles (1%-100%)
+
+**-g** _gnuplot-file_
+> Write measured values as a gnuplot/TSV file
+
+**-i**
+> Use HEAD requests instead of GET
+
+**-l**
+> Accept variable document length (for dynamic pages)
+
+**-r**
+> Don't exit on socket receive errors
+
+**-q**
+> Suppress progress messages on stderr (for >150 requests)
 
 # CAVEATS
 
@@ -75,4 +99,4 @@ The tool reports statistics including requests per second, time per request, tra
 
 # SEE ALSO
 
-[curl](/man/curl)(1), [wrk](/man/wrk)(1), [siege](/man/siege)(1), [httperf](/man/httperf)(1)
+[curl](/man/curl)(1), [wrk](/man/wrk)(1), [siege](/man/siege)(1)

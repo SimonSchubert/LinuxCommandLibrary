@@ -4,13 +4,17 @@ Initialize new Sailfish OS projects
 
 # TLDR
 
-**Initialize new project**
+**Initialize a new QML application project**
 
-```sfdk init```
+```sfdk init --type qtquick2-app```
 
-**Initialize with template**
+**Initialize a project with a specific name**
 
-```sfdk init --template [qml-app]```
+```sfdk init --type qtquick2-app --name [myapp]```
+
+**List available project templates**
+
+```sfdk init --help```
 
 # SYNOPSIS
 
@@ -18,15 +22,15 @@ Initialize new Sailfish OS projects
 
 # PARAMETERS
 
-**--template** _name_
-> Project template.
+**--type** _type_, **-t** _type_
+> Project template type (e.g., qtquick2-app).
 
 **--name** _name_
 > Project name.
 
 # DESCRIPTION
 
-**sfdk init** initializes a new Sailfish OS project from templates. Part of Sailfish SDK.
+**sfdk init** initializes a new Sailfish OS project from templates. Part of the Sailfish SDK command-line tools.
 
 # SEE ALSO
 

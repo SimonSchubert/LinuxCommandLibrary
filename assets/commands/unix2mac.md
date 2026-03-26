@@ -4,21 +4,25 @@ Convert Unix line endings to classic Mac format
 
 # TLDR
 
-**Change** the line endings of a file to macOS-style
+**Convert** a file to classic Mac line endings (CR) in place
 
 ```unix2mac [path/to/file]```
 
-**Create** a copy with macOS-style line endings
+**Write** converted output to a new file
 
 ```unix2mac -n [path/to/file] [path/to/new_file]```
 
-**Display** file information
+**Display** file information without converting
 
 ```unix2mac -i [path/to/file]```
 
-**Keep/add/remove** Byte Order Mark
+**Convert and keep** the original file timestamp
 
-```unix2mac --keep-bom|--add-bom|--remove-bom [path/to/file]```
+```unix2mac -k [path/to/file]```
+
+**Force conversion** of binary files
+
+```unix2mac -f [path/to/file]```
 
 # SYNOPSIS
 
@@ -26,26 +30,44 @@ Convert Unix line endings to classic Mac format
 
 # PARAMETERS
 
-**-n, --newfile _infile_ _outfile_**
-> Write to new file instead of modifying in place
+**-n, --newfile** _INFILE_ _OUTFILE_
+> Write to new file instead of modifying in place.
 
-**-i, --info _flags_**
-> Display file information (line endings, BOM)
+**-o, --oldfile** _FILE_
+> In-place conversion (default mode).
+
+**-i, --info** [_FLAGS_]
+> Display file information without converting.
 
 **-k, --keepdate**
-> Keep output file date same as input
+> Keep output file date same as input.
 
-**--keep-bom**
-> Keep Byte Order Mark
+**-f, --force**
+> Force conversion of binary files.
 
-**--add-bom**
-> Add Byte Order Mark
+**-s, --safe**
+> Skip binary files (default).
 
-**--remove-bom**
-> Remove Byte Order Mark
+**-b, --keep-bom**
+> Keep Byte Order Mark.
+
+**-m, --add-bom**
+> Add UTF-8 Byte Order Mark.
+
+**-r, --remove-bom**
+> Remove Byte Order Mark.
 
 **-q, --quiet**
-> Quiet mode, suppress warnings
+> Quiet mode, suppress warnings.
+
+**-v, --verbose**
+> Display detailed conversion information.
+
+**-l, --newline**
+> Add additional newline.
+
+**-F, --follow-symlink**
+> Convert symbolic link targets.
 
 # DESCRIPTION
 
@@ -59,4 +81,4 @@ Classic Mac line endings (CR only) are rarely needed today as modern macOS uses 
 
 # SEE ALSO
 
-[dos2unix](/man/dos2unix)(1), [unix2dos](/man/unix2dos)(1), [mac2unix](/man/mac2unix)(1)
+[dos2unix](/man/dos2unix)(1), [unix2dos](/man/unix2dos)(1), [mac2unix](/man/mac2unix)(1), [iconv](/man/iconv)(1), [file](/man/file)(1)

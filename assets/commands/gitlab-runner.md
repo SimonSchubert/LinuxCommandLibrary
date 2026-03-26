@@ -20,11 +20,11 @@ CI/CD job execution agent for GitLab
 
 ```sudo gitlab-runner stop```
 
-**Run a single build** (for testing)
+**Run in foreground** (for debugging)
 
-```gitlab-runner run-single -u [gitlab_url] -t [token] --executor [shell]```
+```gitlab-runner run```
 
-**Verify runner configuration**
+**Verify runner connections**
 
 ```gitlab-runner verify```
 
@@ -35,6 +35,10 @@ CI/CD job execution agent for GitLab
 **Check runner status**
 
 ```gitlab-runner status```
+
+**Reset runner authentication token**
+
+```sudo gitlab-runner reset-token --name [runner_name]```
 
 # SYNOPSIS
 
@@ -64,13 +68,16 @@ CI/CD job execution agent for GitLab
 > Run the runner in foreground.
 
 **run-single**
-> Run a single build for testing.
+> Execute a single build from a GitLab instance.
 
 **verify**
 > Verify runner connections to GitLab.
 
 **unregister**
 > Remove a runner from GitLab.
+
+**reset-token**
+> Reset a runner's authentication token.
 
 **install**
 > Install as system service.
@@ -80,6 +87,12 @@ CI/CD job execution agent for GitLab
 
 **--debug**
 > Enable debug logging.
+
+**--log-level** _level_
+> Log level: debug, info, warn, error, fatal, panic.
+
+**--log-format** _format_
+> Log format: runner, text, json.
 
 **--config** _file_
 > Use alternate config file.
@@ -110,4 +123,4 @@ Shell executor provides no isolation between jobs. Docker executor requires Dock
 
 # SEE ALSO
 
-[docker](/man/docker)(1), [gitlab-ctl](/man/gitlab-ctl)(8), [jenkins](/man/jenkins)(1), [github-actions](/man/github-actions)(1)
+[docker](/man/docker)(1), [gitlab-ctl](/man/gitlab-ctl)(8), [jenkins](/man/jenkins)(1), [kubectl](/man/kubectl)(1)

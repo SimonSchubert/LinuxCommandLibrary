@@ -1,5 +1,3 @@
-# TLDR
-
 # TAGLINE
 
 Update Mageia package repository lists
@@ -10,17 +8,25 @@ Update **all** enabled media
 
 ```urpmi.update -a```
 
-Update **specific** media
+Update **specific** media by name
 
 ```urpmi.update [medium1] [medium2]```
 
-Update media by **keyword**
+Update only **update** media (security/bugfix repositories)
 
-```urpmi.update [keyword]```
+```urpmi.update --update```
 
-Update all **configured** media
+Update all media with **download speed limit**
 
-```urpmi.update e```
+```urpmi.update -a --limit-rate [100k]```
+
+Update in **quiet** mode
+
+```urpmi.update -a -q```
+
+Force GPG **key** update
+
+```urpmi.update -a --force-key```
 
 # SYNOPSIS
 
@@ -29,10 +35,37 @@ Update all **configured** media
 # PARAMETERS
 
 **-a**
-> Update all enabled media
+> Update all enabled non-static media.
 
-**e**
-> Update all configured media including disabled
+**--update**
+> Use only update media.
+
+**--no-md5sum**
+> Disable MD5SUM file checking.
+
+**--force-key**
+> Force update of GPG keys.
+
+**-q**, **--quiet**
+> Quiet mode.
+
+**-v**, **--verbose**
+> Verbose mode.
+
+**--limit-rate** _rate_
+> Limit download speed in bytes/sec (suffixes k, m accepted).
+
+**--wget**
+> Use wget for downloading.
+
+**--curl**
+> Use curl for downloading.
+
+**--proxy** _url_
+> Use specified HTTP proxy.
+
+**--proxy-user** _user:pass_
+> Proxy authentication credentials.
 
 # DESCRIPTION
 
@@ -46,4 +79,4 @@ Mageia specific. Network access required for remote media. Should be run regular
 
 # SEE ALSO
 
-[urpmi](/man/urpmi)(8), [urpmi.addmedia](/man/urpmi.addmedia)(8), [urpmi.removemedia](/man/urpmi.removemedia)(8)
+[urpmi](/man/urpmi)(8), [urpmi.addmedia](/man/urpmi.addmedia)(8), [urpmi.removemedia](/man/urpmi.removemedia)(8), [urpme](/man/urpme)(8), [urpmq](/man/urpmq)(8)

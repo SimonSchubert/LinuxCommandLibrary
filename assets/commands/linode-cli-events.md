@@ -20,6 +20,10 @@ manages Linode account events
 
 ```linode-cli events mark-seen [event_id]```
 
+**List events in JSON format**
+
+```linode-cli events list --json```
+
 **Filter by action**
 
 ```linode-cli events list --action [linode_boot]```
@@ -46,7 +50,10 @@ _SUBCOMMAND_
 > Mark event as seen.
 
 **--action** _TYPE_
-> Filter by event action.
+> Filter by event action (e.g., linode_boot, linode_create, linode_reboot).
+
+**--json**
+> Output in JSON format.
 
 **--help**
 > Display help information.

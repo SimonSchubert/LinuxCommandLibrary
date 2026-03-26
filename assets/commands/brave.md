@@ -8,17 +8,25 @@ Privacy-focused web browser
 
 ```brave```
 
-**Open** URL
+**Open** a URL
 
 ```brave [https://example.com]```
 
-**Incognito** mode
+**Open** in incognito mode
 
 ```brave --incognito [https://example.com]```
 
-**Open** in new window
+**Open** in a new window
 
 ```brave --new-window [https://example.com]```
+
+**Open** a URL as a standalone app
+
+```brave --app=[https://example.com]```
+
+**Use** a specific profile directory
+
+```brave --user-data-dir=[~/.config/brave-profile2]```
 
 # SYNOPSIS
 
@@ -33,32 +41,41 @@ The browser emphasizes speed, privacy, and security while maintaining compatibil
 # PARAMETERS
 
 **--incognito**
-> Open in incognito mode
+> Open in incognito (private) mode
 
 **--new-window**
-> Open in new window
+> Open URL in a new window
 
 **--new-tab** _url_
-> Open URL in new tab
+> Open URL in a new tab
 
 **--app=**_url_
-> Open as application
+> Open URL in application mode without browser UI
 
 **--user-data-dir=**_dir_
-> Use specific profile directory
+> Use a specific profile directory (default: ~/.config/brave-browser)
 
 **--proxy-server=**_server_
-> Use proxy server
+> Use specified HTTP/SOCKS4/SOCKS5 proxy server for requests
+
+**--disable-extensions**
+> Disable all browser extensions
+
+**--no-proxy-server**
+> Don't use a proxy server, always make direct connections
+
+**--headless**
+> Run in headless mode without a visible window
 
 # FEATURES
 
-- Built-in ad/tracker blocking
-- HTTPS Everywhere
+- Built-in ad/tracker blocking (Brave Shields)
+- Automatic HTTPS upgrades
 - Script blocking
 - Fingerprint protection
 - BAT cryptocurrency integration
 - Brave Rewards
-- Tor private tabs
+- Private browsing with Tor
 - IPFS support
 - Chrome extension compatibility
 
@@ -83,4 +100,4 @@ Some websites may not work with aggressive blocking. BAT rewards availability va
 
 # SEE ALSO
 
-[firefox](/man/firefox)(1), [chromium](/man/chromium)(1), [tor-browser](/man/tor-browser)(1)
+[firefox](/man/firefox)(1), [chromium](/man/chromium)(1), [google-chrome](/man/google-chrome)(1), [tor-browser](/man/tor-browser)(1)

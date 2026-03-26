@@ -4,41 +4,52 @@ Check out GitLab merge requests
 
 # TLDR
 
-**Check out merge request**
+**Check out merge request from origin**
 
-```git mr [123]```
+```git mr [51]```
 
-**Check out from origin**
+**Check out merge request from a specific remote**
 
-```git mr origin [123]```
+```git mr [51] [upstream]```
 
-**Clean up merge request**
+**Check out merge request by URL**
 
-```git mr --clean [123]```
+```git mr [https://gitlab.com/owner/repo/merge_requests/51]```
+
+**Clean up all local mr/ branches**
+
+```git mr clean```
 
 # SYNOPSIS
 
-**git mr** [_remote_] _number_
+**git mr** _number_ [_remote_]
+
+**git mr** _url_
+
+**git mr** **clean**
 
 # PARAMETERS
-
-_REMOTE_
-> Remote name (default: origin).
 
 _NUMBER_
 > Merge request number.
 
-**--clean**
-> Delete local MR branch.
+_REMOTE_
+> Remote name (default: origin).
+
+_URL_
+> GitLab merge request URL (e.g. https://gitlab.tld/owner/repo/merge_requests/453).
+
+**clean**
+> Delete all local mr/ branches.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**git mr** checks out GitLab merge requests locally for testing or review. It fetches the merge request reference and creates a local branch automatically, simplifying the code review workflow.
+**git mr** fetches a GitLab merge request head by its number or URL and checks it out in a local branch named mr/_number_. It handles ref fetching and branch creation in a single step, simplifying the code review workflow.
 
-The command handles ref fetching and branch creation in a single step. For GitHub repositories, the equivalent command is `git pr`.
+For GitHub repositories, the equivalent command is `git pr`.
 
 # CAVEATS
 

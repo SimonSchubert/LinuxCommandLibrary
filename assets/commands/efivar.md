@@ -6,15 +6,23 @@ UEFI variable management utility
 
 **List** all UEFI variables
 
-```efivar [-l|--list]```
+```efivar -l```
 
 **Print** contents of a variable
 
 ```efivar -n [guid-name] -p```
 
+**Export** a variable to a file
+
+```efivar -n [guid-name] -e [path/to/output_file]```
+
+**List** known GUID names
+
+```efivar -L```
+
 # SYNOPSIS
 
-**efivar** [_options_]
+**efivar** [_OPTION_...]
 
 # DESCRIPTION
 
@@ -25,22 +33,40 @@ Useful for debugging UEFI boot issues and inspecting firmware configuration.
 # PARAMETERS
 
 **-l, --list**
-> List all EFI variables
+> List current EFI variables
 
 **-n, --name** _guid-name_
-> Specify variable by GUID and name
+> Variable to manipulate, in the form 8be4df61-93ca-11d2-aa0d-00e098032b8c-BootOrder
 
 **-p, --print**
-> Print variable value
+> Print variable specified by --name
 
-**-w, --write**
-> Write variable value
-
-**-d, --delete**
-> Delete a variable
+**-d, --print-decimal**
+> Print variable in decimal format values specified by --name
 
 **-a, --append**
-> Append to variable
+> Append to variable specified by --name
+
+**-A, --attributes** _attributes_
+> Attributes to use on append
+
+**-w, --write**
+> Write to variable specified by --name
+
+**-f, --datafile** _file_
+> Load or save variable contents from file
+
+**-e, --export** _file_
+> Export variable to file
+
+**-i, --import** _file_
+> Import variable from file
+
+**-L, --list-guids**
+> Show internal GUID list
+
+**-D, --dmpstore**
+> Use DMPSTORE format when exporting
 
 # CAVEATS
 

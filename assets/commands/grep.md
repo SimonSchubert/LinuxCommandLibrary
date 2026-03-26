@@ -28,9 +28,21 @@ Pattern-matching text search utility
 
 ```grep -E '[regex]' [file]```
 
+**Show only filenames containing matches**
+
+```grep -rl [pattern] [directory]```
+
 **Count matches**
 
 ```grep -c [pattern] [file]```
+
+**Search with context (3 lines before and after)**
+
+```grep -C 3 [pattern] [file]```
+
+**Search recursively but only in specific file types**
+
+```grep -r --include='[*.py]' [pattern] [directory]```
 
 # SYNOPSIS
 
@@ -79,6 +91,21 @@ _FILES_
 
 **-C** _NUM_
 > Print NUM lines of context.
+
+**-P**, **--perl-regexp**
+> Use Perl-compatible regular expressions (PCRE).
+
+**-w**, **--word-regexp**
+> Match only whole words.
+
+**-q**, **--quiet**, **--silent**
+> Suppress output; exit with 0 if match found.
+
+**--include** _GLOB_
+> Search only files matching the glob pattern.
+
+**--exclude** _GLOB_
+> Skip files matching the glob pattern.
 
 **--color**
 > Highlight matches.

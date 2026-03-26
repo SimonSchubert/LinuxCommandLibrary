@@ -34,9 +34,9 @@ read cgroup parameters
 
 # SYNOPSIS
 
-**cgget** [**-n**] [**-v**] [**-m**] [**-r** _name_] [**-g** _controller_] [**-a**] _path..._
+**cgget** [**-n**] [**-v**] [**-b**] [**-m**] [**-r** _name_] [**-g** _controller_] [**-a**] _path..._
 
-**cgget** [**-n**] [**-v**] [**-m**] [**-r** _name_] **-g** _controller_**:**_path..._
+**cgget** [**-n**] [**-v**] [**-b**] [**-m**] [**-r** _name_] **-g** _controller_**:**_path..._
 
 # DESCRIPTION
 
@@ -64,6 +64,15 @@ If no controller or variable is specified, values for all available parameters a
 **-m**
 > Display current cgroups setup mode (legacy, unified, or hybrid)
 
+**-b**
+> Ignore default systemd delegated hierarchy path; construct paths relative to root hierarchy
+
+**-c**
+> Display controllers and their versions (can combine with -m)
+
+**-h, --help**
+> Display help and exit
+
 # CAVEATS
 
 The **CGROUP_LOGLEVEL** environment variable controls verbosity (DEBUG, INFO, WARNING, ERROR).
@@ -72,4 +81,4 @@ Requires appropriate permissions to read cgroup parameters. Some parameters may 
 
 # SEE ALSO
 
-[cgset](/man/cgset)(1), [cgcreate](/man/cgcreate)(1), [cgexec](/man/cgexec)(1), [cgroups](/man/cgroups)(7)
+[cgset](/man/cgset)(1), [cgcreate](/man/cgcreate)(1), [cgdelete](/man/cgdelete)(1), [cgexec](/man/cgexec)(1), [cgclassify](/man/cgclassify)(1), [lscgroup](/man/lscgroup)(1), [cgroups](/man/cgroups)(7)

@@ -8,17 +8,21 @@ Patch installed packages locally
 
 ```bun patch [package-name]```
 
-**Apply patches** after modifications
+**Prepare a specific version** for patching
+
+```bun patch [package-name]@[1.2.3]```
+
+**Commit patches** after making modifications
 
 ```bun patch --commit [package-name]```
 
-**Commit with custom patches directory**
+**Commit with a custom patches directory**
 
 ```bun patch --commit [package-name] --patches-dir=[mypatches]```
 
-**Patch a specific version**
+**Patch using the path** to the package in node_modules
 
-```bun patch [package-name]@[1.2.3]```
+```bun patch --commit node_modules/[package-name]```
 
 # SYNOPSIS
 
@@ -27,10 +31,28 @@ Patch installed packages locally
 # PARAMETERS
 
 **--commit** _path-or-pkg_
-> Generate a .patch file from modifications. Accepts package name or path to patched package.
+> Generate a .patch file from modifications. Accepts package name, name@version, or path to patched package.
 
 **--patches-dir** _dir_
-> Directory to store patch files. Default: patches.
+> Directory to store patch files (only with --commit). Default: patches.
+
+**-p, --production**
+> Don't install devDependencies
+
+**--frozen-lockfile**
+> Disallow changes to the lockfile
+
+**--dry-run**
+> Don't install anything, only show what would be done
+
+**--ignore-scripts**
+> Skip lifecycle scripts in the project's package.json
+
+**-f, --force**
+> Always request the latest versions from the registry and reinstall all dependencies
+
+**--verbose**
+> Enable verbose logging output
 
 # DESCRIPTION
 
@@ -46,4 +68,4 @@ Patches are stored in a patches directory and must be committed to version contr
 
 # SEE ALSO
 
-[bun](/man/bun)(1), [bun-install](/man/bun-install)(1)
+[bun](/man/bun)(1), [bun-install](/man/bun-install)(1), [bun-add](/man/bun-add)(1), [bun-update](/man/bun-update)(1)

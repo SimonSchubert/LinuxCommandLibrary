@@ -22,7 +22,19 @@ manages Kaggle machine learning competitions from the command line
 
 **View leaderboard**
 
-```kaggle competitions leaderboard -c [competition-name]```
+```kaggle competitions leaderboard -c [competition-name] -s```
+
+**List past submissions**
+
+```kaggle competitions submissions -c [competition-name]```
+
+**Search competitions** by keyword
+
+```kaggle competitions list -s "[search-term]"```
+
+**Download a specific file** from a competition
+
+```kaggle competitions download -c [competition-name] -f [filename]```
 
 # SYNOPSIS
 
@@ -31,19 +43,22 @@ manages Kaggle machine learning competitions from the command line
 # PARAMETERS
 
 **list**
-> List available competitions.
+> List available competitions. Supports --category, --sort-by, --page, --search, --csv.
 
 **download** **-c** _name_
-> Download competition data.
+> Download competition data. Use -f for a specific file, -p for destination path, -o to overwrite.
 
-**submit** **-c** _name_ **-f** _file_
-> Submit predictions.
+**submit** **-c** _name_ **-f** _file_ **-m** _message_
+> Submit predictions. Both -f and -m are required.
 
 **files** **-c** _name_
-> List competition files.
+> List competition data files.
+
+**submissions** **-c** _name_
+> List your past submissions and scores.
 
 **leaderboard** **-c** _name_
-> View competition leaderboard.
+> View competition leaderboard. Use -s to show, -d to download as CSV.
 
 # DESCRIPTION
 
@@ -51,5 +66,5 @@ manages Kaggle machine learning competitions from the command line
 
 # SEE ALSO
 
-[kaggle](/man/kaggle)(1), [kaggle-datasets](/man/kaggle-datasets)(1)
+[kaggle](/man/kaggle)(1), [kaggle-datasets](/man/kaggle-datasets)(1), [kaggle-kernels](/man/kaggle-kernels)(1)
 

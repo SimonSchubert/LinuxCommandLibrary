@@ -4,21 +4,25 @@ authenticate with Docker registries
 
 # TLDR
 
-**Log in to Docker Hub**
+**Log in to Docker Hub** using device code flow
 
 ```docker login```
 
-**Log in to specific registry**
-
-```docker login [registry.example.com]```
-
-**Log in with username**
+**Log in to Docker Hub** with a username (prompts for password)
 
 ```docker login -u [username]```
 
-**Log in non-interactively**
+**Log in to a specific** registry
 
-```echo [password] | docker login -u [username] --password-stdin```
+```docker login [registry.example.com]```
+
+**Log in non-interactively** using stdin for the password
+
+```echo [token] | docker login -u [username] --password-stdin```
+
+**Log in to GitHub** Container Registry
+
+```echo [PAT] | docker login ghcr.io -u [username] --password-stdin```
 
 # SYNOPSIS
 
@@ -30,14 +34,14 @@ authenticate with Docker registries
 > Username.
 
 **-p**, **--password** _string_
-> Password (insecure, prefer --password-stdin).
+> Password or Personal Access Token (insecure, prefer --password-stdin).
 
 **--password-stdin**
 > Take password from stdin.
 
 # DESCRIPTION
 
-**docker login** authenticates with a Docker registry. Credentials are stored in ~/.docker/config.json. Defaults to Docker Hub if no server specified. Authentication is required to push images and access private repositories. The command supports various registry providers including Docker Hub, GitHub Container Registry, and private registries.
+**docker login** authenticates with a Docker registry. When no server is specified, it authenticates to Docker Hub using a device code flow by default, unless --username is provided. Credentials are stored in ~/.docker/config.json or in an external credential store (such as the OS native keychain) when configured. Authentication is required to push images and access private repositories.
 
 # CONFIGURATION
 
@@ -46,9 +50,9 @@ authenticate with Docker registries
 
 # CAVEATS
 
-Using -p exposes password in shell history. Always prefer --password-stdin for scripted logins.
+Using -p exposes the password in shell history and log files. Always prefer --password-stdin for scripted logins.
 
 # SEE ALSO
 
-[docker-logout](/man/docker-logout)(1), [docker-pull](/man/docker-pull)(1)
+[docker-pull](/man/docker-pull)(1), [docker-build](/man/docker-build)(1)
 

@@ -4,55 +4,80 @@ resizes NTFS filesystems without data loss
 
 # TLDR
 
-**Show current size and minimum**
+**Show current size and minimum shrinkable size**
 
-```ntfsresize --info /dev/[sda1]```
+```sudo ntfsresize --info /dev/[sda1]```
 
-**Resize to specific size**
+**Perform a dry run** of resizing to a specific size
 
-```ntfsresize --size [50G] /dev/[sda1]```
+```sudo ntfsresize --no-action --size [50G] /dev/[sda1]```
 
-**Shrink to minimum**
+**Resize to a specific size**
 
-```ntfsresize --size [$(ntfsresize -i /dev/sda1 | grep minimum)] /dev/[sda1]```
+```sudo ntfsresize --size [50G] /dev/[sda1]```
 
-**Dry run**
+**Expand filesystem** to fill the current partition
 
-```ntfsresize --no-action --size [50G] /dev/[sda1]```
+```sudo ntfsresize --expand /dev/[sda1]```
 
-**Force resize**
+**Check if a device is ready** to be resized
 
-```ntfsresize --force --size [50G] /dev/[sda1]```
+```sudo ntfsresize --check /dev/[sda1]```
+
+**Force resize** bypassing consistency check prompts
+
+```sudo ntfsresize --force --size [50G] /dev/[sda1]```
 
 # SYNOPSIS
 
-**ntfsresize** [_options_] _device_
+**ntfsresize** [_options_] **--info**(**-mb-only**) _device_
+**ntfsresize** [_options_] [**--size** _size_[**k**|**M**|**G**]] _device_
 
 # PARAMETERS
 
 **-i**, **--info**
-> Show volume information.
+> Show volume size and the smallest shrunken size supported.
 
-**-s**, **--size** _size_
-> New size (K, M, G suffixes).
+**-m**, **--info-mb-only**
+> Like --info but only print the shrinkable size in MB.
+
+**-s**, **--size** _SIZE_[**k**|**M**|**G**]
+> Resize filesystem to SIZE. Modifiers: k (10^3), M (10^6), G (10^9).
+
+**-x**, **--expand**
+> Expand the filesystem to the current partition size.
+
+**-c**, **--check**
+> Check the device is ready to be resized without making changes.
 
 **-n**, **--no-action**
-> Dry run.
+> Perform a test run without making changes (read-only).
 
 **-f**, **--force**
-> Force operation.
+> Force operation even if the filesystem is marked for consistency check. Use twice (-ff) to skip all safety checks.
 
 **-b**, **--bad-sectors**
-> Handle bad sectors.
+> Support disks with bad sectors that would otherwise be refused.
 
-**-P**, **--no-progress**
-> Disable progress bar.
+**-P**, **--no-progress-bar**
+> Disable the progress bar.
+
+**-v**, **--verbose**
+> Increase output verbosity.
+
+**-V**, **--version**
+> Display version number and exit.
+
+**-h**, **--help**
+> Display help message and exit.
 
 # DESCRIPTION
 
-**ntfsresize** resizes NTFS filesystems without data loss. It can shrink or expand volumes, showing the minimum possible size before shrinking.
+**ntfsresize** safely resizes NTFS filesystems without data loss or prior defragmentation. It can shrink or expand volumes on unmounted devices.
 
-After resizing, the partition table must be updated separately (using fdisk/parted).
+**For shrinking:** First resize the filesystem with ntfsresize, then shrink the partition with fdisk or parted.
+
+**For enlarging:** First expand the partition, then use ntfsresize to grow the filesystem (or use --expand).
 
 # TYPICAL WORKFLOW
 
@@ -72,7 +97,7 @@ parted /dev/sda resizepart 1 50G
 
 # CAVEATS
 
-Unmount before resizing. Back up important data. Partition resize is separate step. Run from Live USB recommended.
+The volume must be unmounted before resizing. Back up important data first. Partition resize is a separate step. After resizing, Windows will schedule a consistency check (chkdsk) on next boot. Running from a Live USB is recommended.
 
 # HISTORY
 
@@ -80,4 +105,4 @@ ntfsresize is part of **ntfs-3g**, developed by **Szabolcs Szakacsits** and othe
 
 # SEE ALSO
 
-[ntfs-3g](/man/ntfs-3g)(8), [parted](/man/parted)(8), [fdisk](/man/fdisk)(8), [gparted](/man/gparted)(8)
+[ntfs-3g](/man/ntfs-3g)(8), [ntfsfix](/man/ntfsfix)(8), [parted](/man/parted)(8), [fdisk](/man/fdisk)(8)

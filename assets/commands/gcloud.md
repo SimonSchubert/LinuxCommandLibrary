@@ -75,6 +75,24 @@ _GROUP_
 **--verbosity** _LEVEL_
 > Logging verbosity: debug, info, warning, error, critical, none.
 
+**--account** _ACCOUNT_
+> Override the default account for this command.
+
+**--region** _REGION_
+> Override the default region for this command.
+
+**--zone** _ZONE_
+> Override the default zone for this command.
+
+**--configuration** _NAME_
+> Use a named configuration instead of the active one.
+
+**--flags-file** _FILE_
+> Read flags from a YAML or JSON file.
+
+**--flatten** _KEY_
+> Flatten nested list or map output.
+
 **--help**
 > Display help information.
 
@@ -86,14 +104,14 @@ _GROUP_
 **~/.config/gcloud/credentials.db**
 > Encrypted credentials database for authenticated accounts.
 
-**~/.config/gcloud/properties**
-> User-specific gcloud properties and preferences.
+**~/.config/gcloud/application_default_credentials.json**
+> Application default credentials for local development.
 
 # DESCRIPTION
 
 **gcloud** is the Google Cloud Platform CLI for managing cloud resources. It provides commands for all GCP services including Compute Engine, Kubernetes Engine, Cloud SQL, Cloud Run, Cloud Functions, and more.
 
-The tool handles authentication, configuration, and resource management. Commands are organized by service groups with subcommands for specific operations. The **--format** and **--filter** flags are essential for scripting and automation.
+The tool handles authentication, configuration, and resource management. Commands are organized by service groups with subcommands for specific operations. The **--format** and **--filter** flags are available on all commands for scripting and automation. Output formats include json, yaml, csv, table, text, value, and more.
 
 Multiple named configurations can be managed with **gcloud config configurations** for switching between projects and accounts.
 
@@ -107,4 +125,4 @@ Requires a GCP account and project. Actions may incur costs. Some commands need 
 
 # SEE ALSO
 
-[gsutil](/man/gsutil)(1), [kubectl](/man/kubectl)(1), [bq](/man/bq)(1)
+[gsutil](/man/gsutil)(1), [kubectl](/man/kubectl)(1), [bq](/man/bq)(1), [aws](/man/aws)(1), [az](/man/az)(1), [terraform](/man/terraform)(1)

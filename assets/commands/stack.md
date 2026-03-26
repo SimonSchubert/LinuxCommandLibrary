@@ -30,15 +30,19 @@ Haskell build tool and project manager
 
 **Execute Haskell file as script**
 
-```stack runghc [script.hs]```
+```stack script [script.hs]```
 
 **Update package index**
 
 ```stack update```
 
+**Show project paths**
+
+```stack path```
+
 # SYNOPSIS
 
-**stack** _command_ [_--resolver version_] [_options_] [_arguments_]
+**stack** _command_ [_--snapshot version_] [_options_] [_arguments_]
 
 # PARAMETERS
 
@@ -69,14 +73,29 @@ Haskell build tool and project manager
 **exec** _COMMAND_
 > Run command in build environment.
 
+**script** _FILE_
+> Run a Haskell script.
+
+**setup**
+> Download and install GHC for the project.
+
+**path**
+> Display paths used by stack.
+
+**ls**
+> List information (snapshots, dependencies, etc.).
+
 **clean**
 > Clean build artifacts.
+
+**purge**
+> Delete the stack working directories (clean --full).
 
 **upgrade**
 > Upgrade stack itself.
 
-**--resolver** _RESOLVER_
-> Stackage snapshot (lts-19.0, nightly-2023-01-01).
+**--snapshot** _SNAPSHOT_, **--resolver** _RESOLVER_
+> Stackage snapshot (e.g., lts-22.0, nightly-2025-01-01).
 
 **--system-ghc**
 > Use system GHC instead of stack-managed.
@@ -98,6 +117,12 @@ Haskell build tool and project manager
 
 **--ghc-options** _OPTS_
 > Additional GHC options.
+
+**--jobs** _N_, **-j** _N_
+> Number of concurrent jobs.
+
+**--stack-yaml** _FILE_
+> Override project stack.yaml file.
 
 # DESCRIPTION
 

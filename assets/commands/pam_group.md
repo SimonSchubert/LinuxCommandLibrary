@@ -1,16 +1,20 @@
 # TAGLINE
 
-assigns supplementary groups at login
+PAM module for group access based on login context
 
 # TLDR
 
-**Enable group assignment**
+**Enable group assignment in PAM config**
 
 ```auth required pam_group.so```
 
-**Configure in group.conf**
+**Grant audio group to all users at all times**
 
 ```echo "* ; * ; * ; Al0000-2400 ; audio" >> /etc/security/group.conf```
+
+**Grant video group to users on tty devices**
+
+```echo "* ; tty* ; * ; Al0000-2400 ; video" >> /etc/security/group.conf```
 
 # SYNOPSIS
 
@@ -20,23 +24,19 @@ assigns supplementary groups at login
 
 Configuration in /etc/security/group.conf:
 
-Format: services ; ttys ; users ; times ; groups
+Format: _services_ ; _ttys_ ; _users_ ; _times_ ; _groups_
+
+This module does not accept any options.
 
 # DESCRIPTION
 
-**pam_group** assigns supplementary groups at login. Time and terminal based.
-
-The module adds groups conditionally. Configured via group.conf.
+**pam_group** is a PAM module that grants supplementary group memberships during the credential setting phase of authentication. It does not authenticate the user. Memberships are granted based on the service being accessed, the terminal, the user, and the time of login, as configured in /etc/security/group.conf. Groups are added in addition to those in /etc/group.
 
 # CAVEATS
 
-Requires group.conf. Auth stack only. Groups added per-session.
-
-# HISTORY
-
-pam_group provides **conditional group assignment** based on login context.
+Only the **auth** module type is provided. Requires /etc/security/group.conf to be configured. Once granted group membership, a user could attempt to create a setgid binary; mount filesystems with the **nosuid** option to mitigate this.
 
 # SEE ALSO
 
-[pam](/man/pam)(8), [group.conf](/man/group.conf)(5)
+[group.conf](/man/group.conf)(5), [pam](/man/pam)(8), [pam.d](/man/pam.d)(5), [pam_time](/man/pam_time)(8), [pam_unix](/man/pam_unix)(8)
 

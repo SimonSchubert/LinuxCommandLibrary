@@ -14,7 +14,7 @@ Convert XV thumbnails to PPM format
 
 # DESCRIPTION
 
-**xvminitoppm** converts XV visual schnauzer thumbnail format to PPM. XV was a popular Unix image viewer in the 1990s. Part of Netpbm toolkit.
+**xvminitoppm** reads an XV "thumbnail" picture (a miniature image created by the XV visual schnauzer browser) as input and produces a PPM image as output. XV was a popular Unix image viewer in the 1990s. Part of the Netpbm toolkit.
 
 # SEE ALSO
 

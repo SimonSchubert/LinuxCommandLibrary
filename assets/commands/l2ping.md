@@ -46,10 +46,13 @@ sends L2CAP echo requests to a Bluetooth device, similar to ping for IP networks
 > Delay between pings in seconds.
 
 **-f**
-> Flood ping mode (use with care).
+> Flood ping mode (no delay between packets).
 
 **-r**
-> Reverse ping mode.
+> Reverse ping mode (send echo response instead of echo request).
+
+**-v**
+> Verify that response payload is identical to request payload.
 
 # DESCRIPTION
 

@@ -4,17 +4,25 @@ Dynamic IP routing daemon
 
 # TLDR
 
-**Start** BIRD daemon
+**Start** BIRD with a specific configuration file
 
 ```bird -c [/etc/bird/bird.conf]```
 
-**Check** configuration
+**Parse configuration** and check for errors
 
-```bird -p [/etc/bird/bird.conf]```
+```bird -p```
 
-**Run** in foreground
+**Run** in foreground with debug messages
 
 ```bird -d```
+
+**Run** in foreground as a specific user
+
+```bird -f -u [bird] -g [bird]```
+
+**Start** with a custom control socket path
+
+```bird -s [/run/bird/bird.ctl]```
 
 # SYNOPSIS
 
@@ -29,22 +37,43 @@ The daemon is widely used for internet routing, particularly by ISPs and in data
 # PARAMETERS
 
 **-c** _file_
-> Configuration file
+> Use given configuration file instead of the default /etc/bird/bird.conf.
 
 **-d**
-> Debug mode (foreground)
+> Enable debug messages to stderr and run in foreground.
 
 **-D** _file_
-> Debug output file
+> Log debugging information to given file instead of stderr.
+
+**-f**
+> Run in foreground (without debug messages).
 
 **-p**
-> Parse config and exit
+> Just parse the configuration file and exit. Returns zero if valid.
 
 **-s** _socket_
-> Control socket path
+> Use given filename for the control socket (default: /run/bird/bird.ctl).
 
 **-P** _file_
-> PID file
+> Create a PID file with the given filename.
+
+**-u** _user_
+> Drop privileges and run as given user instead of root.
+
+**-g** _group_
+> Run with given group ID.
+
+**-l**
+> Look for configuration file and control socket in the current working directory.
+
+**-R**
+> Apply graceful restart recovery after start.
+
+**--help**
+> Display command-line options.
+
+**--version**
+> Display BIRD version.
 
 # SUPPORTED PROTOCOLS
 
@@ -73,7 +102,7 @@ birdc configure
 
 # CAVEATS
 
-Complex configuration for advanced setups. Requires root/network admin privileges. Misconfiguration can disrupt routing. IPv4 and IPv6 use separate instances (bird/bird6 on some systems). Not suitable for beginners.
+Complex configuration for advanced setups. Requires root or network admin privileges (uses CAP_NET_ADMIN when run with **-u**). Misconfiguration can disrupt routing. In BIRD 1.x, IPv4 and IPv6 used separate daemons (bird/bird6); BIRD 2.x unified them into a single daemon.
 
 # HISTORY
 
@@ -81,4 +110,4 @@ Complex configuration for advanced setups. Requires root/network admin privilege
 
 # SEE ALSO
 
-[birdc](/man/birdc)(8), [bgpd](/man/bgpd)(8)
+[birdc](/man/birdc)(8), [bgpd](/man/bgpd)(8), [ip](/man/ip)(8), [route](/man/route)(8)

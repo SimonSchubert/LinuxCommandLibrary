@@ -16,28 +16,40 @@ List failed logins **until** a date
 
 ```sudo lastb -t [YYYY-MM-DD]```
 
-List failed logins **at** a specific time
+Show users who were **present** at a specific time
 
-```sudo lastb -p [hh:mm]```
+```sudo lastb -p [YYYY-MM-DD HH:MM]```
 
 Resolve IPs to **hostnames**
 
 ```sudo lastb -d```
 
+Limit output to a specific **number of entries**
+
+```sudo lastb -n [10]```
+
+Show **full timestamps** including year and seconds
+
+```sudo lastb -F```
+
+Read from a **specific btmp file**
+
+```sudo lastb -f [/var/log/btmp.1]```
+
 # SYNOPSIS
 
-**lastb** [_options_] [_username_]
+**lastb** [_options_] [_username_...] [_tty_...]
 
 # PARAMETERS
 
 **-s**, **--since** _TIME_
-> Show records since specified time
+> Display records since specified time
 
 **-t**, **--until** _TIME_
-> Show records until specified time
+> Display records until specified time
 
 **-p**, **--present** _TIME_
-> Show records at specified time
+> Display users who were present at specified time
 
 **-d**, **--dns**
 > Translate IP addresses to hostnames
@@ -45,8 +57,26 @@ Resolve IPs to **hostnames**
 **-n**, **--limit** _NUM_
 > Limit output to NUM records
 
+**-f**, **--file** _FILE_
+> Read from specified file instead of /var/log/btmp
+
+**-F**, **--fulltimes**
+> Print full login and logout times and dates
+
 **-i**, **--ip**
-> Display IP addresses
+> Display IP addresses instead of hostnames
+
+**-R**, **--nohostname**
+> Suppress display of the hostname field
+
+**-w**, **--fullnames**
+> Display full user and domain names
+
+**-x**, **--system**
+> Display system shutdown entries and run level changes
+
+**--time-format** _FORMAT_
+> Output timestamp format: notime, short, full, or iso
 
 # DESCRIPTION
 
@@ -64,4 +94,4 @@ lastb provides security auditing for failed logins, complementing the last comma
 
 # SEE ALSO
 
-[last](/man/last)(1), [lastlog](/man/lastlog)(8), [faillog](/man/faillog)(8)
+[last](/man/last)(1), [lastlog](/man/lastlog)(8), [faillog](/man/faillog)(8), [utmpdump](/man/utmpdump)(1), [login](/man/login)(1)

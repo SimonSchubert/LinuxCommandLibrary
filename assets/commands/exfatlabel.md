@@ -1,6 +1,6 @@
 # TAGLINE
 
-exFAT filesystem label utility
+get or set an exFAT filesystem label or serial number
 
 # TLDR
 
@@ -34,11 +34,11 @@ exFAT filesystem label utility
 
 # DESCRIPTION
 
-**exfatlabel** displays or sets the volume label or volume serial of an exFAT filesystem. If no label argument is given, displays the current label. Labels can be up to 15 characters.
+**exfatlabel** displays or sets the volume label or volume serial of an exFAT filesystem. If no label argument is given, displays the current label. Labels can be up to 15 characters (fewer if characters beyond Unicode BMP are used, since labels are stored internally as UTF-16). An empty label (`''`) removes the volume name.
 
 # CAVEATS
 
-The filesystem must be unmounted before changing the label or serial number.
+The filesystem must be unmounted before changing the label or serial number. Zero is returned on success, non-zero on failure.
 
 # SEE ALSO
 

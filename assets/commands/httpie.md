@@ -18,17 +18,25 @@ user-friendly HTTP client for the command line
 
 **Add custom header**
 
-```http [url] Authorization:"Bearer token"```
+```http [url] Authorization:"Bearer [token]"```
 
 **Download file**
 
 ```http --download [https://example.com/file.zip]```
 
+**Authenticated request**
+
+```http -a [user:password] [url]```
+
 **Follow redirects**
 
 ```http --follow [url]```
 
-**Show only headers**
+**Show verbose request and response**
+
+```http --verbose [url]```
+
+**Show only response headers**
 
 ```http --headers [url]```
 
@@ -62,23 +70,48 @@ _method_
 **--auth**, **-a** _user:pass_
 > Basic authentication.
 
-**--auth-type** _type_
-> Auth type: basic, digest.
+**--auth-type**, **-A** _type_
+> Auth type: basic, digest, bearer.
+
+**--verbose**, **-v**
+> Print entire HTTP exchange (request and response).
+
+**--print**, **-p** _what_
+> Selectively print: H (request headers), B (request body), h (response headers), b (response body), m (metadata).
+
+**--verify** _verify_
+> SSL certificate verification. Set to "no" to skip.
+
+**--timeout** _seconds_
+> Connection timeout in seconds (default: 30).
+
+**--proxy** _protocol:url_
+> Set proxy (e.g., http:http://proxy:8080).
+
+**--check-status**
+> Exit with error on HTTP 3xx/4xx/5xx status codes.
+
+**--output**, **-o** _file_
+> Save response body to file.
 
 **--session** _name_
-> Named session for cookies/auth.
+> Named session for persisting cookies/auth/headers.
+
+**--pretty** _mode_
+> Output formatting: all, colors, format, none.
 
 **--offline**
-> Build request offline.
+> Build request offline without sending.
 
 # ITEM TYPES
 
 ```
-key=value      String data
-key:=value     Raw JSON
-key==value     Query parameter
-Header:value   HTTP header
-@file          File upload
+key=value       String data (request body)
+key:=value      Raw JSON value (request body)
+key==value      URL query parameter
+Header:value    HTTP header
+@file           File upload (multipart)
+key@file        File upload with field name
 ```
 
 # DESCRIPTION
@@ -87,7 +120,7 @@ Header:value   HTTP header
 
 # CAVEATS
 
-Requires Python. Syntax differs from curl. Large responses may be slow to colorize.
+Requires Python. Syntax differs from curl. Large responses may be slow to colorize. The command is `http` (or `https`), not `httpie`.
 
 # HISTORY
 

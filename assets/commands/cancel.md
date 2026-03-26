@@ -74,4 +74,4 @@ CUPS printer names can contain any printable character except SPACE, TAB, "/", o
 
 # SEE ALSO
 
-[lpr](/man/lpr)(1), [lprm](/man/lprm)(1), [lpstat](/man/lpstat)(1), [lp](/man/lp)(1)
+[lp](/man/lp)(1), [lpq](/man/lpq)(1), [lpr](/man/lpr)(1), [lprm](/man/lprm)(1), [lpstat](/man/lpstat)(1)

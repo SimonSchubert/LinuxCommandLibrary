@@ -1,20 +1,20 @@
 # TAGLINE
 
-Simple CLI text editor
+Debian package installer for elementary OS
 
 # TLDR
 
-**Open** a file for editing
+**Install** a .deb package file
 
-```eddy [filename]```
+```eddy [package.deb]```
 
-**Create** a new file
+**Install** multiple .deb packages at once
+
+```eddy [package1.deb] [package2.deb]```
+
+**Launch** the graphical installer
 
 ```eddy```
-
-**Open** multiple files
-
-```eddy [file1] [file2]```
 
 # SYNOPSIS
 
@@ -22,43 +22,19 @@ Simple CLI text editor
 
 # PARAMETERS
 
-**-h, --help**
-> Display help and exit
-
-**-v, --version**
-> Display version and exit
+**--debug**
+> Enable debug output for troubleshooting.
 
 # DESCRIPTION
 
-**eddy** is a minimal, simple command-line text editor designed for quick edits. It provides basic text editing functionality in an easy-to-use interface, making it suitable for small configuration changes and quick notes.
+**eddy** is a graphical Debian package installer designed for elementary OS. It provides a simple GTK-based interface to install, update, uninstall, and view information about .deb packages. It uses PackageKit as its backend, which also provides limited support for other package formats like .rpm.
 
-The editor focuses on simplicity over features, offering a straightforward editing experience without the complexity of larger editors like vim or emacs.
-
-# KEYBINDINGS
-
-**Ctrl+S**
-> Save file
-
-**Ctrl+Q**
-> Quit
-
-**Ctrl+N**
-> New file
-
-**Ctrl+O**
-> Open file
-
-**Arrow keys**
-> Move cursor
+The application is intended as a user-friendly alternative to command-line package management for handling individual package files downloaded outside of the system package manager.
 
 # CAVEATS
 
-Limited feature set compared to full editors. No syntax highlighting. No plugin support. May not handle very large files well.
-
-# HISTORY
-
-**eddy** was developed as a simple alternative to complex text editors, prioritizing ease of use and minimal resource usage.
+Designed primarily for elementary OS but may work on other GTK-based distributions. Requires PackageKit for its backend. Not a full package manager replacement; intended for installing individual package files.
 
 # SEE ALSO
 
-[nano](/man/nano)(1), [micro](/man/micro)(1), [vim](/man/vim)(1)
+[dpkg](/man/dpkg)(1), [apt](/man/apt)(1), [gdebi](/man/gdebi)(1)

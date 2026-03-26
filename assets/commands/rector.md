@@ -20,21 +20,29 @@ Automated PHP code refactoring and upgrades
 
 ```vendor/bin/rector process [src/] --only [TypedPropertyFromAssignsRector]```
 
-**Show available rules**
+**Show all loaded and skipped rules**
 
 ```vendor/bin/rector list-rules```
 
-**Init configuration**
+**Initialize a rector.php configuration file**
 
 ```vendor/bin/rector init```
 
-**Clear cache**
+**Clear cache before processing**
 
 ```vendor/bin/rector process --clear-cache```
 
-**Process single file**
+**Process a single file**
 
 ```vendor/bin/rector process [src/File.php]```
+
+**Generate CI workflow for GitHub Actions or GitLab CI**
+
+```vendor/bin/rector setup-ci```
+
+**Generate a custom rule with boilerplate**
+
+```vendor/bin/rector custom-rule```
 
 # SYNOPSIS
 
@@ -43,16 +51,19 @@ Automated PHP code refactoring and upgrades
 # PARAMETERS
 
 **process**
-> Run refactoring.
+> Run refactoring on the specified paths.
 
 **init**
-> Create config file.
+> Create a starter **rector.php** configuration file.
 
 **list-rules**
-> Show available rules. Accepts **--config** to check a specific config file.
+> Show all loaded and skipped rules. Accepts **--config** and **--output-format json**.
 
-**setup**
-> Generate a custom rule with boilerplate, including psr-4 paths.
+**setup-ci**
+> Generate a CI workflow file (GitHub Actions or GitLab CI) for automated Rector runs.
+
+**custom-rule**
+> Generate a custom rule with boilerplate structure and PSR-4 autoload paths.
 
 **--dry-run**
 > Show changes without applying.
@@ -96,4 +107,4 @@ Review dry-run output carefully. Complex code may need manual fixes. Git commit 
 
 # SEE ALSO
 
-[phpstan](/man/phpstan)(1), [php-cs-fixer](/man/php-cs-fixer)(1), [phpcs](/man/phpcs)(1)
+[phpstan](/man/phpstan)(1), [php-cs-fixer](/man/php-cs-fixer)(1), [phpcs](/man/phpcs)(1), [composer](/man/composer)(1)

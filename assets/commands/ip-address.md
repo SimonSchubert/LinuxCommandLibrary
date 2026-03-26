@@ -6,31 +6,35 @@ manages IP addresses on network interfaces
 
 **List** all addresses
 
-```ip address```
+```ip address show```
 
 Show only **active** interfaces
 
 ```ip address show up```
 
-Show **specific** interface
+Show addresses for a **specific** interface
 
-```ip address show eth0```
+```ip address show dev [eth0]```
 
-**Add** IP address
+Show only **IPv4** addresses
 
-```sudo ip address add 192.168.1.100/24 dev eth0```
+```ip -4 address show```
 
-**Delete** IP address
+**Add** an IP address to an interface
 
-```sudo ip address delete 192.168.1.100/24 dev eth0```
+```sudo ip address add [192.168.1.100/24] dev [eth0]```
 
-**Flush** addresses by scope
+**Delete** an IP address from an interface
 
-```sudo ip address flush eth0 scope global```
+```sudo ip address delete [192.168.1.100/24] dev [eth0]```
+
+**Flush** all addresses on an interface
+
+```sudo ip address flush dev [eth0]```
 
 # SYNOPSIS
 
-**ip address** [_command_] [_OPTIONS_]
+**ip** [_OPTIONS_] **address** {_command_|**help**}
 
 # DESCRIPTION
 
@@ -38,29 +42,62 @@ Show **specific** interface
 
 # PARAMETERS
 
-**show** [_device_]
-> Display IP addresses (default action)
+**show** [**dev** _device_]
+> Display IP addresses (default action).
 
-**add** _address_ **dev** _device_
-> Add an IP address to interface
+**add** _address/prefix_ **dev** _device_
+> Add an IP address to an interface.
 
-**delete** _address_ **dev** _device_
-> Remove an IP address from interface
+**change** _address/prefix_ **dev** _device_
+> Change properties of an existing address.
 
-**flush** _device_
-> Remove all addresses from interface
+**replace** _address/prefix_ **dev** _device_
+> Add or update an address on an interface.
 
-**up**
-> Filter to show only active interfaces
+**delete** _address/prefix_ **dev** _device_
+> Remove an IP address from an interface.
+
+**flush** [**dev** _device_]
+> Remove all addresses matching criteria.
+
+**save**
+> Save address configuration to stdout.
+
+**restore**
+> Restore address configuration from stdin.
+
+**dev** _device_
+> Interface name to operate on.
 
 **scope** _global|link|host_
-> Filter or set address scope
+> Filter or set address scope.
 
 **label** _label_
-> Set address label
+> Set address label (must start with device name).
 
 **broadcast** _address_
-> Set broadcast address
+> Set broadcast address.
+
+**metric** _number_
+> Set priority of the prefix route for the address.
+
+**valid_lft** _lft_
+> Valid lifetime of the address (default: forever).
+
+**preferred_lft** _lft_
+> Preferred lifetime of the address (default: forever).
+
+**up**
+> Filter to show only active (UP) interfaces.
+
+**permanent**
+> Filter to show only permanent (static) addresses.
+
+**dynamic**
+> Filter to show only dynamically assigned addresses.
+
+**to** _prefix_
+> Filter addresses matching a prefix.
 
 # CAVEATS
 
@@ -72,4 +109,4 @@ Addresses added are not persistent across reboots. Use network configuration fil
 
 # SEE ALSO
 
-[ip](/man/ip)(8), [ip-link](/man/ip-link)(8), [ip-route](/man/ip-route)(8)
+[ip](/man/ip)(8), [ip-link](/man/ip-link)(8), [ip-route](/man/ip-route)(8), [ip-neighbour](/man/ip-neighbour)(8)

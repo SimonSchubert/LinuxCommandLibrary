@@ -1,39 +1,50 @@
 # TAGLINE
 
-scala language server implementing the Language Server Protocol
+Scala language server with rich IDE features
 
 # TLDR
 
-**Start Metals server (VSCode)**
+**Install Metals using Coursier**
 
-```metals-vscode```
+```cs bootstrap org.scalameta:metals_2.13:[version] -o metals -f```
 
-**Import build**
+**Start Metals as an MCP server for a workspace**
 
-```metals import-build```
+```metals-mcp --workspace [/path/to/project]```
 
-**Generate Bloop config**
+**Start Metals MCP server on a specific port**
 
-```metals generate-bloop```
+```metals-mcp --workspace [/path/to/project] --port [8080]```
 
-**Connect to running server**
+**Generate editor config for a specific client**
 
-```metals connect-to-server```
+```metals-mcp --workspace [/path/to/project] --client [vscode]```
 
 # SYNOPSIS
 
 **metals** [_options_]
 
+**metals-mcp** **--workspace** _path_ [_options_]
+
 # PARAMETERS
 
-**-Dmetals.client** _client_
-> LSP client type.
+**--workspace** _path_
+> Path to the Scala project (required for MCP server).
 
-**-Dmetals.server.port** _port_
-> Server port.
+**--port** _number_
+> HTTP port to listen on. Auto-assigned by default.
 
-**-Dmetals.verbose**
-> Verbose logging.
+**--transport** _type_
+> Transport type: http (default) or stdio.
+
+**--client** _name_
+> Client to generate config for (e.g., vscode, cursor).
+
+**-v**, **--version**
+> Print version information.
+
+**-h**, **--help**
+> Print usage message.
 
 # DESCRIPTION
 
@@ -64,7 +75,7 @@ Metals works with various editors including VS Code, Vim/Neovim, Emacs, and Subl
 
 # CAVEATS
 
-Requires JDK 8+. Initial indexing takes time. Build tool must be supported. Performance depends on project size.
+Requires JDK 11+. Initial indexing takes time. Build tool must be supported. Performance depends on project size.
 
 # HISTORY
 
@@ -72,4 +83,4 @@ Metals was created by **Ólafur Páll Geirsson** at the **Scala Center** in **20
 
 # SEE ALSO
 
-[scala](/man/scala)(1), [sbt](/man/sbt)(1)
+[scala](/man/scala)(1), [sbt](/man/sbt)(1), [javac](/man/javac)(1)

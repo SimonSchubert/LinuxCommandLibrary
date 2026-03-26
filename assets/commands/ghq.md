@@ -8,6 +8,10 @@ Manage remote repository clones in a structured directory hierarchy
 
 ```ghq get [https://github.com/owner/repo]```
 
+**Clone a repository via SSH**
+
+```ghq get -p [owner/repo]```
+
 **List managed repositories**
 
 ```ghq list```
@@ -24,6 +28,14 @@ Manage remote repository clones in a structured directory hierarchy
 
 ```ghq create [owner]/[repo]```
 
+**Remove a local repository**
+
+```ghq rm [owner/repo]```
+
+**Update an already cloned repository**
+
+```ghq get -u [owner/repo]```
+
 # SYNOPSIS
 
 **ghq** _command_ [_options_] [_arguments_]
@@ -31,25 +43,46 @@ Manage remote repository clones in a structured directory hierarchy
 # PARAMETERS
 
 **get** _URL_
-> Clone or sync a repository.
+> Clone a repository. Alias: clone.
 
-**list**
-> List local repositories.
+**list** [_query_]
+> List local repositories, optionally filtered by query.
 
 **root**
 > Show repository root path.
 
 **create** _NAME_
-> Create a new repository.
+> Create a new repository locally.
+
+**rm** _NAME_
+> Remove a local repository clone.
 
 **-p**
-> Show full paths (list).
+> Clone via SSH (get) or show full paths (list).
 
-**--update**
-> Update existing repository.
+**-u**, **--update**
+> Update existing repository (pull --ff-only).
 
 **--shallow**
-> Shallow clone.
+> Shallow clone (depth 1, Git only).
+
+**--branch** _BRANCH_
+> Clone a specific branch.
+
+**--bare**
+> Perform a bare clone (Git only).
+
+**--no-recursive**
+> Do not clone git submodules.
+
+**-e**, **--exact**
+> Require exact query match (list).
+
+**--dry-run**
+> Show path without deleting (rm).
+
+**--vcs** _VCS_
+> Specify VCS backend: git, svn, hg, darcs, fossil, bzr.
 
 **--help**
 > Display help information.
@@ -63,14 +96,14 @@ The tool integrates with shell workflows and fuzzy finders like **fzf** for quic
 # CONFIGURATION
 
 **~/.gitconfig**
-> Configure repository root path with `ghq.root` setting.
+> Configure repository root path with `ghq.root` setting, default user with `ghq.user`, and per-URL VCS with `ghq.<url>.vcs`.
 
-**~/.config/ghq/config.toml**
-> Alternative configuration file for setting root paths and Git command options.
+**GHQ_ROOT**
+> Environment variable to override all ghq.root settings.
 
 # CAVEATS
 
-Requires git. Default root is ~/ghq or configurable. URL parsing determines directory structure.
+Requires git. Default root is ~/ghq or configurable via ghq.root in gitconfig or GHQ_ROOT env var. URL parsing determines directory structure. Supports multiple VCS backends beyond Git.
 
 # HISTORY
 

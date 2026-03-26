@@ -4,21 +4,29 @@ Generate new UUID values
 
 # TLDR
 
-**Create** a random UUID (v4)
+**Generate** a random UUID (v4)
 
 ```uuidgen -r```
 
-**Create** a time-based UUID (v1)
+**Generate** a time-based UUID (v1)
 
 ```uuidgen -t```
 
-**Create** a SHA1-based UUID (v5)
+**Generate** a time-based sortable UUID (v7)
 
-```uuidgen -s -n @dns -N [name]```
+```uuidgen -7```
 
-**Create** a MD5-based UUID (v3)
+**Generate** a SHA1-based UUID (v5) from a namespace and name
 
-```uuidgen -m -n @dns -N [name]```
+```uuidgen -s -n @dns -N [example.com]```
+
+**Generate** a MD5-based UUID (v3) from a namespace and name
+
+```uuidgen -m -n @url -N [https://example.com]```
+
+**Generate** multiple time-based UUIDs at once
+
+```uuidgen -t -C [5]```
 
 # SYNOPSIS
 
@@ -31,6 +39,9 @@ Generate new UUID values
 
 **-t, --time**
 > Generate time-based UUID (version 1)
+
+**-7, --time-v7**
+> Generate time-based UUID (version 7), lexicographically sortable by timestamp
 
 **-s, --sha1**
 > Generate SHA1-based UUID (version 5)
@@ -45,10 +56,16 @@ Generate new UUID values
 > Name for name-based UUIDs
 
 **-x, --hex**
-> Output UUID without hyphens
+> Interpret name as a hexadecimal string
 
-**-c**
-> Output in C struct initialization format
+**-C, --count _num_**
+> Generate multiple UUIDs
+
+**-h, --help**
+> Display help text and exit
+
+**-V, --version**
+> Print version and exit
 
 # DESCRIPTION
 
@@ -62,6 +79,7 @@ UUIDs are 128-bit identifiers commonly used for unique identification in databas
 **v3**: MD5 hash of namespace and name
 **v4**: Random
 **v5**: SHA1 hash of namespace and name
+**v7**: Time-based, lexicographically sortable (RFC 9562)
 
 # CAVEATS
 

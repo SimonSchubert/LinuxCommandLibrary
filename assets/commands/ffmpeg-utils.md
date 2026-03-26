@@ -22,7 +22,11 @@ utility functions for ffmpeg processing
 
 **Get duration only**
 
-```ffprobe -show_entries format=duration -of csv=p=0 [input.mp4]```
+```ffprobe -v quiet -show_entries format=duration -of csv=p=0 [input.mp4]```
+
+**Show video stream info** only
+
+```ffprobe -hide_banner -select_streams v:0 -show_streams [input.mp4]```
 
 # SYNOPSIS
 
@@ -51,6 +55,21 @@ _INPUT_
 **-of** _FORMAT_
 > Output format (alias for print_format).
 
+**-select_streams** _SPEC_
+> Select only specified streams (e.g., v:0 for first video, a for all audio).
+
+**-show_chapters**
+> Display chapter information.
+
+**-hide_banner**
+> Suppress printing banner with copyright and build info.
+
+**-v** _LEVEL_
+> Set logging verbosity (e.g., quiet, error, warning, info).
+
+**-count_frames**
+> Count the number of frames per stream (requires decoding, slow).
+
 **--help**
 > Display help information.
 
@@ -72,4 +91,4 @@ ffprobe was added to ffmpeg to provide dedicated media analysis functionality, s
 
 # SEE ALSO
 
-[ffmpeg](/man/ffmpeg)(1), [mediainfo](/man/mediainfo)(1), [exiftool](/man/exiftool)(1)
+[ffmpeg](/man/ffmpeg)(1), [ffplay](/man/ffplay)(1), [mediainfo](/man/mediainfo)(1), [exiftool](/man/exiftool)(1)

@@ -76,7 +76,7 @@ fast, parallel, modular login brute-forcer for network services
 > Enable SSL
 
 **-t** _NUM_
-> Total concurrent threads (default: 10)
+> Total number of logins to test concurrently.
 
 **-T** _NUM_
 > Concurrent hosts to test
@@ -94,28 +94,40 @@ fast, parallel, modular login brute-forcer for network services
 > Additional checks: n=no password, s=password equals username
 
 **-g** _SECS_
-> Connection timeout (default: 3)
+> Give up after NUM seconds attempting connection (default: 3).
 
 **-r** _SECS_
-> Retry delay (default: 3)
+> Sleep NUM seconds between retry attempts (default: 3).
 
 **-R** _NUM_
-> Number of retries
+> Attempt NUM retries before giving up.
+
+**-c** _USEC_
+> Time in microseconds to wait during socket test.
 
 **-O** _FILE_
-> Log output to file
+> Append log of valid credentials to file.
 
 **-v** _NUM_
-> Verbose level (0-6, default: 5)
+> Verbose level (0-6, default: 5).
+
+**-w** _NUM_
+> Error debug level (0-10, default: 5).
 
 **-d**
-> List all available modules
+> List all available modules.
 
 **-q**
-> Display module usage information
+> Display module usage information (use with -M).
+
+**-b**
+> Suppress startup banner.
+
+**-V**
+> Display version.
 
 **-Z** _MAP_
-> Resume previous scan
+> Resume previous scan using provided map.
 
 # DESCRIPTION
 

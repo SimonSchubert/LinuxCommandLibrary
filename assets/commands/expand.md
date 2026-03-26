@@ -20,6 +20,10 @@ convert tab characters to spaces in text files
 
 ```expand [file1.txt] [file2.txt]```
 
+**Only convert leading tabs**
+
+```expand -i [file.txt]```
+
 **Read from stdin**
 
 ```cat [file.txt] | expand```
@@ -37,13 +41,16 @@ _FILES_
 > Tab width (default: 8).
 
 **-t** _LIST_
-> Comma-separated tab stops.
+> Comma-separated tab stop positions. Last value can be prefixed with `/` for repeating interval or `+` for relative alignment.
 
 **-i**, **--initial**
-> Only convert leading tabs.
+> Only convert tabs before non-blank characters on each line.
 
 **--help**
 > Display help information.
+
+**--version**
+> Output version information and exit.
 
 # DESCRIPTION
 

@@ -1,6 +1,6 @@
 # TAGLINE
 
-display available Kubernetes configuration options
+enumerate available Kubernetes configuration values
 
 # TLDR
 
@@ -15,6 +15,10 @@ display available Kubernetes configuration options
 **List node sizes**
 
 ```doctl kubernetes options sizes```
+
+**List versions in a specific output format**
+
+```doctl kubernetes options versions --format [slug]```
 
 # SYNOPSIS
 
@@ -32,16 +36,20 @@ _COMMAND_
 > List regions supporting Kubernetes.
 
 **sizes**
-> List node pool sizes.
+> List machine sizes available for node pools.
+
+**--format** _columns_
+> Columns for output in a comma-separated list.
+
+**--no-header**
+> Return raw data with no headers.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**doctl kubernetes options** displays available configuration options for DigitalOcean Kubernetes (DOKS) clusters. It helps users determine valid values for cluster creation and modification.
-
-The command shows supported Kubernetes versions, regions where DOKS is available, and node sizes suitable for worker nodes. This information is essential for planning cluster deployments.
+**doctl kubernetes options** enumerates valid values for use with DigitalOcean Kubernetes (DOKS) cluster commands. It helps users determine valid values for cluster creation and modification, such as supported Kubernetes versions, regions where DOKS is available, and machine sizes suitable for worker nodes.
 
 Using these options ensures cluster configurations are valid and helps identify available resources in different regions.
 

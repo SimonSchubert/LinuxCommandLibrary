@@ -16,6 +16,10 @@ privileged command execution with Active Directory
 
 ```dzdo -i```
 
+**Run a root shell**
+
+```dzdo -s```
+
 **List user's permissions**
 
 ```dzdo -l```
@@ -38,14 +42,23 @@ _COMMAND_
 **-l**
 > List allowed commands.
 
+**-s**
+> Run a shell instead of a specific command.
+
 **-n**
 > Non-interactive (no password prompt).
 
-**-v**
-> Validate/extend credentials.
+**-H**
+> Set the HOME environment variable to the target user's home directory.
 
-**--help**
-> Display help information.
+**-k**
+> Invalidate the user's cached credentials.
+
+**-v**
+> Validate/extend credentials without running a command.
+
+**-V**
+> Display version information.
 
 # DESCRIPTION
 
@@ -70,4 +83,4 @@ dzdo is part of **Centrify DirectControl** (now **Delinea**), providing sudo-com
 
 # SEE ALSO
 
-[sudo](/man/sudo)(8), [su](/man/su)(1)
+[doas](/man/doas)(1), [su](/man/su)(1), [sudo](/man/sudo)(8)

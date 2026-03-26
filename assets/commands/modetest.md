@@ -1,6 +1,6 @@
 # TAGLINE
 
-diagnostic tool for testing and debugging Kernel Mode Setting functionality of
+diagnostic tool for testing and debugging Kernel Mode Setting functionality
 
 # TLDR
 
@@ -8,66 +8,79 @@ diagnostic tool for testing and debugging Kernel Mode Setting functionality of
 
 ```modetest -M [driver] -c```
 
-**Set resolution** of a connector
-
-```sudo modetest -M [driver] -s [connector_id]:[1920]x[1080]```
-
 **List all DRM objects** (connectors, encoders, CRTCs, planes)
 
-```sudo modetest -M [i915]```
+```modetest -M [i915]```
+
+**Set resolution** of a connector
+
+```sudo modetest -M [driver] -s [connector_id]:[1920x1080]```
 
 **Test a specific plane** with format
 
 ```sudo modetest -M [driver] -P [plane_id]@[crtc_id]:[WxH]+[X]+[Y]@[format]```
 
-Display **verbose output**
+**Set a DRM property** on an object
 
-```modetest -M [driver] -v```
+```sudo modetest -M [driver] -w [obj_id]:[prop_name]:[value]```
+
+**Use atomic mode setting** with a connector
+
+```sudo modetest -M [driver] -a -s [connector_id]:[1920x1080]```
 
 # SYNOPSIS
 
-**modetest** [**-M** _module_] [**-c**] [**-e**] [**-p**] [**-f**] [**-s** _connector:mode_] [**-P** _plane_] [**-v**]
+**modetest** [**-M** _module_] [**-D** _device_] [**-c**] [**-e**] [**-f**] [**-p**] [**-s** _connector:mode_] [**-P** _plane_] [**-a**] [**-C**] [**-w** _prop_] [**-v**] [**-d**]
 
 # PARAMETERS
 
 **-M _module_**
-> Specify DRM driver module name (e.g., i915, amdgpu, nouveau, mgag200)
+> Use the given DRM driver module (e.g., i915, amdgpu, nouveau)
 
-**-c, --connectors**
+**-D _device_**
+> Use the given DRM device node
+
+**-c**
 > List connectors and their available modes
 
-**-e, --encoders**
+**-e**
 > List encoders
 
-**-p, --planes**
-> List planes
-
-**-f, --framebuffers**
+**-f**
 > List framebuffers
 
-**-s _connector:mode_**
-> Set mode on connector (format: connector_id:WIDTHxHEIGHT[@refresh])
+**-p**
+> List CRTCs and planes
 
-**-P _plane_spec_**
-> Test plane with specified configuration
+**-s _connector_id[,connector_id][@crtc_id]:mode[-vrefresh][@format]_**
+> Set a mode on one or more connectors
 
-**-C, --crtc _id_**
-> Target specific CRTC (display controller)
+**-P _plane_id@crtc_id:WxH[+X+Y][*scale][@format]_**
+> Test a plane with specified configuration
 
-**--format _fmt_**
-> Specify pixel format (e.g., XR24, BG24, ARGB8888)
+**-C**
+> Test hardware cursor
 
-**-v, --verbose**
-> Enable verbose output with detailed information
+**-v**
+> Test vsynced page flipping
 
-**-h, --help**
-> Display help message
+**-w _obj_id:prop_name:value_**
+> Set a property on a DRM object
+
+**-a**
+> Use atomic mode setting API
+
+**-F _pattern1,pattern2_**
+> Specify fill patterns for test image
+
+**-d**
+> Drop DRM master after mode set
 
 # DESCRIPTION
 
 **modetest** is a diagnostic tool for testing and debugging Kernel Mode Setting (KMS) functionality of Direct Rendering Manager (DRM) drivers. It enumerates DRM objects including connectors, encoders, CRTCs, and planes, and can set display modes directly.
 
-The tool is part of **libdrm** and provides low-level access to the graphics subsystem for testing display configurations, pixel formats, and plane overlays. It displays an SMPTE color bar test pattern when setting modes.
+The tool is part of **libdrm** and provides low-level access to the graphics subsystem for testing display configurations, pixel formats, and plane overlays. When no query or test options are given, it dumps all available DRM information. It displays an SMPTE color bar test pattern when setting modes.
 
 # CAVEATS
 
@@ -79,4 +92,4 @@ Requires root privileges or membership in the render/video groups to access DRM 
 
 # SEE ALSO
 
-[drm](/man/drm)(7), [xrandr](/man/xrandr)(1), [wlr-randr](/man/wlr-randr)(1)
+[xrandr](/man/xrandr)(1)

@@ -16,17 +16,21 @@ Retrieve Arch Linux package build files
 
 ```asp export [package]```
 
-**List available packages in a repository**
+**List repositories** containing a package
 
-```asp list-repos```
+```asp list-repos [package]```
 
-**Show package information**
+**Show** PKGBUILD content for a package
 
 ```asp show [package]```
 
-**Discard local changes and reset to upstream**
+**View revision history** for a package
 
-```asp update -f [package]```
+```asp log [package]```
+
+**List all locally tracked** packages
+
+```asp list-local```
 
 # SYNOPSIS
 
@@ -35,37 +39,73 @@ Retrieve Arch Linux package build files
 # PARAMETERS
 
 **checkout** _package_
-> Clone a package's build files into a local directory.
-
-**update** [_packages_]
-> Update checked-out packages to latest version.
+> Create a git repository with full source and history for the given package.
 
 **export** _package_
-> Copy PKGBUILD and related files to current directory.
+> Dump build source files into a directory named after the package in the current directory.
 
-**list-repos**
-> List all available repositories.
+**update** [_packages_]
+> Track new packages or refresh existing ones from remote.
 
-**show** _package_
-> Display package information.
+**show** _package_ [_file_]
+> Display PKGBUILD content, or a specific file if given.
+
+**log** _package_
+> Show revision history for a package.
 
 **difflog** _package_
-> Show commit history for a package.
+> Show revision history with file diffs.
 
-**-f**, **--force**
-> Force update, discarding local changes.
+**shortlog** _package_
+> Show condensed revision history.
+
+**list-repos** _package_
+> List repositories containing the given package.
+
+**list-arches** _package_
+> List architectures available for the given package.
+
+**list-all**
+> List all available packages.
+
+**list-local**
+> List all locally tracked packages.
+
+**ls-files** _package_
+> List source files for the given package.
+
+**untrack** _package_
+> Remove remote tracking branch from local repository.
+
+**disk-usage**
+> Report approximate disk usage for locally tracked packages.
+
+**gc**
+> Perform housekeeping to optimize and compact the local repo.
+
+**set-git-protocol** _protocol_
+> Set communication protocol (git, http, or https).
+
+**-a** _arch_
+> Use a non-default architecture.
+
+**-h**
+> Display help text.
+
+**-V**
+> Show version information.
 
 # DESCRIPTION
 
-**asp** (Arch Source Package) is a tool for retrieving PKGBUILDs and related build files from the official Arch Linux package repositories. It provides access to the source recipes used to build packages in the core, extra, and multilib repositories.
+**asp** (Arch Build Source Management Tool) manages version-controlled sources for the build scripts used to create Arch Linux packages. It provides a thin wrapper over the svntogit repositories and serves as a replacement for the older **abs** tool.
 
-Unlike downloading PKGBUILDs manually, asp uses a Git-based backend that enables tracking changes, viewing commit history, and updating packages efficiently. Each package is a separate Git branch, making it easy to see modifications between versions.
+Unlike downloading PKGBUILDs manually, asp uses a Git-based backend with sparse checkouts, enabling tracking changes, viewing commit history, and updating individual packages efficiently.
 
 Common uses include: examining how official packages are built, modifying packages with custom options, backporting patches, and learning PKGBUILD best practices from official examples.
 
 # CAVEATS
 
-asp only provides build files from official Arch repositories, not the AUR. The checked-out files require **makepkg** to actually build packages. Local modifications are overwritten by **asp update -f**. Requires Git to be installed for the underlying VCS operations.
+asp only provides build files from official Arch repositories, not the AUR. The checked-out files require **makepkg** to actually build packages. Requires Git to be installed for the underlying VCS operations. Package metadata is stored in **$ASPROOT** (defaults to **$XDG_CACHE_HOME/asp** or **~/.cache/asp**).
 
 # HISTORY
 
@@ -73,4 +113,4 @@ The **asp** tool was created to replace the older **abs** (Arch Build System) to
 
 # SEE ALSO
 
-[makepkg](/man/makepkg)(8), [pacman](/man/pacman)(8), [yay](/man/yay)(8), [pkgctl](/man/pkgctl)(1)
+[makepkg](/man/makepkg)(8), [pacman](/man/pacman)(8), [yay](/man/yay)(1), [paru](/man/paru)(1), [pkgctl](/man/pkgctl)(1), [git](/man/git)(1)

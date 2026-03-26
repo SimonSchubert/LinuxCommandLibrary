@@ -49,6 +49,12 @@ Interactive command-line benchmarking tool
 **-t**, **--timeout=**_DURATION_
 > Per-command timeout (default: 1m).
 
+**-s**, **--shell=**_SHELL_
+> Shell to use for command execution (default: /bin/sh).
+
+**--shell-opt=**_OPT_
+> Shell option, repeatable (default: -c).
+
 **-N**, **--no-shell**
 > Execute command directly without wrapping in a shell.
 
@@ -58,8 +64,17 @@ Interactive command-line benchmarking tool
 **--markdown=**_FILE_
 > Export results to Markdown file.
 
+**--fail-on-error**
+> Exit with non-zero status if any command returns non-zero exit code.
+
 **--color-scheme=**_SCHEME_
-> Set color scheme (default, catppuccin, tokyonight, nord, monokai, solarized, gruvbox, monochrome).
+> Set color scheme (auto, catppuccin, tokyonight, nord, monokai, solarized, solarized-light, gruvbox, monochrome).
+
+**--list-color-schemes**
+> Display available color schemes.
+
+**--version**
+> Display version information.
 
 # DESCRIPTION
 
@@ -71,8 +86,8 @@ Designed for quick interactive benchmarking, not a replacement for rigorous stat
 
 # HISTORY
 
-**cmdperf** was created by **Miklos Niedermayer** and is written in Go under the MIT license. The latest release is v0.1.4 (January 2026). It fills a niche as a lightweight, interactive alternative to tools like **hyperfine**, with a focus on live TUI experience and concurrent execution simulation.
+**cmdperf** was created by **miklosn** and is written in Go under the MIT license. The latest release is v0.1.4 (January 2026). It fills a niche as a lightweight, interactive alternative to tools like **hyperfine**, with a focus on live TUI experience and concurrent execution simulation.
 
 # SEE ALSO
 
-[hyperfine](/man/hyperfine)(1), [time](/man/time)(1), [perf](/man/perf)(1), [bench](/man/bench)(1)
+[hyperfine](/man/hyperfine)(1), [time](/man/time)(1), [perf](/man/perf)(1)

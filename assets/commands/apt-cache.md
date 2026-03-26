@@ -8,6 +8,10 @@ Query the APT package cache
 
 ```apt-cache search [query]```
 
+**Search** only in package names
+
+```apt-cache search --names-only [query]```
+
 Show **information** about a package
 
 ```apt-cache show [package]```
@@ -24,6 +28,10 @@ Show packages that **depend on** a particular package
 
 ```apt-cache rdepends [package]```
 
+Show **available versions** in a table format
+
+```apt-cache madison [package]```
+
 # SYNOPSIS
 
 **apt-cache** [_options_] _command_ [_arguments_]
@@ -36,26 +44,32 @@ Common operations include searching for packages by name or description, inspect
 
 # PARAMETERS
 
-**search query**
-> Search for packages matching the query in names and descriptions
+**search** _regex_
+> Search for packages matching the POSIX regex in names and descriptions
 
-**show package**
-> Show detailed information about a package
+**show** _package_
+> Show detailed package record for a package
 
-**showpkg package**
-> Show general information about a package
+**showpkg** _package_
+> Show general information including versions and dependencies
 
-**policy [package]**
-> Show policy settings and installation status
+**showsrc** _package_
+> Show all source package records for a package
 
-**depends package**
+**policy** [_package_]
+> Show policy settings, installation status, and repository priorities
+
+**depends** _package_
 > Show dependencies for a package
 
-**rdepends package**
+**rdepends** _package_
 > Show reverse dependencies (packages that depend on this one)
 
-**pkgnames [prefix]**
-> List all package names in the cache
+**madison** _package_
+> Show available versions in a tabular format
+
+**pkgnames** [_prefix_]
+> List all package names in the cache, optionally filtered by prefix
 
 **stats**
 > Show cache statistics
@@ -63,11 +77,23 @@ Common operations include searching for packages by name or description, inspect
 **dump**
 > Show a short listing of every package in the cache
 
-**--full**
-> Print full records when searching
+**unmet**
+> Show a summary of all unmet dependencies in the cache
+
+**-f, --full**
+> Print full package records when searching
 
 **-n, --names-only**
 > Only search package names, not descriptions
+
+**-i, --important**
+> Print only Depends and Pre-Depends relations (for use with depends and unmet)
+
+**--installed**
+> Limit output to currently installed packages
+
+**--recurse**
+> Make depends and rdepends recursive
 
 # CONFIGURATION
 
@@ -90,4 +116,4 @@ Part of the **APT** (Advanced Package Tool) suite developed for Debian-based sys
 
 # SEE ALSO
 
-[apt](/man/apt)(8), [apt-get](/man/apt-get)(8), [dpkg](/man/dpkg)(1)
+[apt](/man/apt)(8), [apt-get](/man/apt-get)(8), [aptitude](/man/aptitude)(8), [dpkg](/man/dpkg)(1)

@@ -4,29 +4,29 @@ display real-time celestial maps in the terminal
 
 # TLDR
 
-**Launch astroterm with default settings**
+**Launch with color and constellations**
 
-```astroterm```
-
-**Set observer location by latitude and longitude**
-
-```astroterm --latitude [42.36] --longitude [-71.06]```
+```astroterm --color --constellations```
 
 **Set observer location by city name**
 
 ```astroterm --city "[Boston]"```
 
-**Display a specific date and time**
+**Set observer location by latitude and longitude**
 
-```astroterm --datetime [1969-7-16T8:00:00]```
+```astroterm --latitude [42.36] --longitude [-71.06]```
+
+**Display a specific date and time** in UTC
+
+```astroterm --datetime [1969-07-16T13:32:00]```
+
+**Animate at high speed** with custom FPS
+
+```astroterm --color --constellations --speed [10000] --fps [64]```
 
 **Draw with azimuthal grid and unicode characters**
 
-```astroterm --grid --unicode```
-
-**Display metadata overlay**
-
-```astroterm --metadata```
+```astroterm --grid --unicode --metadata```
 
 # SYNOPSIS
 
@@ -34,17 +34,35 @@ display real-time celestial maps in the terminal
 
 # PARAMETERS
 
-**-a**, **--latitude** _float_
-> Observer latitude in degrees.
+**-a**, **--latitude** _degrees_
+> Observer latitude [-90, 90] (default: 0.0).
 
-**-o**, **--longitude** _float_
-> Observer longitude in degrees.
+**-o**, **--longitude** _degrees_
+> Observer longitude [-180, 180] (default: 0.0).
 
 **-i**, **--city** _name_
 > Use latitude and longitude of the given city.
 
-**-d**, **--datetime** _datetime_
-> Set date and time (ISO 8601 format).
+**-d**, **--datetime** _yyyy-mm-ddThh:mm:ss_
+> Observation datetime in UTC (default: system time).
+
+**-t**, **--threshold** _float_
+> Only render stars brighter than this magnitude (default: 5.0).
+
+**-l**, **--label-thresh** _float_
+> Label stars brighter than this magnitude (default: 0.25).
+
+**-f**, **--fps** _int_
+> Frames per second (default: 24).
+
+**-s**, **--speed** _float_
+> Animation speed multiplier (default: 1.0).
+
+**-c**, **--color**
+> Enable terminal colors.
+
+**-C**, **--constellations**
+> Draw constellation stick figures.
 
 **-g**, **--grid**
 > Draw an azimuthal grid overlay.
@@ -56,22 +74,25 @@ display real-time celestial maps in the terminal
 > Display metadata information.
 
 **-r**, **--aspect-ratio** _float_
-> Override terminal cell aspect ratio.
+> Override the calculated terminal cell aspect ratio.
 
 **-q**, **--quit-on-any**
-> Quit on any keypress.
+> Quit on any keypress (default: quit on 'q' or ESC only).
 
 **-h**, **--help**
-> Display help information.
+> Print help message.
+
+**-v**, **--version**
+> Display version information.
 
 # DESCRIPTION
 
-**astroterm** is a terminal-based planetarium that renders real-time positions of stars, planets, constellations, and other astronomical objects directly in the console. It computes celestial positions based on the observer's location and time, providing an interactive sky map without a graphical desktop environment.
+**astroterm** is a terminal-based planetarium written in C that renders real-time positions of stars, planets, constellations, and other astronomical objects directly in the console. It computes celestial positions based on the observer's location and time, providing an interactive sky map without a graphical desktop environment. Press **q** or **ESC** to quit (or any key with **--quit-on-any**).
 
 # CAVEATS
 
-Requires a terminal with Unicode and 256-color or truecolor support for proper rendering. Display quality depends on terminal size and font. Location must be specified via --lat/--long or --city for accurate positioning.
+Color output requires **--color** flag and a terminal with 256-color or truecolor support. Display quality depends on terminal size and font. Without **--latitude**/**--longitude** or **--city**, the observer defaults to 0,0 (Gulf of Guinea).
 
 # SEE ALSO
 
-[xterm](/man/xterm)(1), [alacritty](/man/alacritty)(1)
+[cal](/man/cal)(1), [date](/man/date)(1)

@@ -8,45 +8,70 @@
 
 ```tye run```
 
-**Run with dashboard**
+**Run with dashboard on a specific port**
 
-```tye run --dashboard```
+```tye run --dashboard --port [9000]```
 
-**Build project**
+**Run services as Docker containers**
 
-```tye build```
+```tye run --docker```
+
+**Run with file watching for live reload**
+
+```tye run --watch```
 
 **Deploy to Kubernetes**
 
 ```tye deploy```
 
-**Initialize config**
+**Initialize a tye.yaml config file**
 
 ```tye init```
 
 # SYNOPSIS
 
-**tye** _command_ [_--dashboard_] [_options_]
+**tye** _command_ [_options_] [_path_]
 
 # PARAMETERS
 
 **run**
-> Run application.
+> Run the application locally.
 
 **build**
-> Build containers.
+> Build containers for the application.
 
 **deploy**
-> Deploy to K8s.
+> Deploy the application to Kubernetes.
 
 **init**
-> Create tye.yaml.
+> Scaffold a tye.yaml configuration file.
 
 **--dashboard**
-> Enable dashboard.
+> Launch the web dashboard on run.
 
 **--port** _PORT_
-> Dashboard port.
+> Port for the dashboard (default: 8000).
+
+**--docker**
+> Run projects as Docker containers.
+
+**--watch**
+> Monitor for file changes and restart modified services.
+
+**--no-build**
+> Do not build projects before running.
+
+**--debug** _SERVICE_
+> Wait for debugger attach to a service. Use * for all services.
+
+**--logs** _PROVIDER_
+> Write structured logs to a provider (console, elastic, ai, seq).
+
+**--tags** _TAGS_
+> Filter running services by tag.
+
+**-v, --verbosity** _LEVEL_
+> Output verbosity: Debug, Info (default), Quiet.
 
 # DESCRIPTION
 
@@ -58,7 +83,7 @@ Configuration is defined in a **tye.yaml** file that lists services, their depen
 
 # CAVEATS
 
-.NET focused. Experimental tool. Microsoft project.
+Tye is an experimental project and is no longer actively developed. It requires .NET SDK. Kubernetes deployment requires a container registry and cluster access.
 
 # HISTORY
 
@@ -66,4 +91,4 @@ Configuration is defined in a **tye.yaml** file that lists services, their depen
 
 # SEE ALSO
 
-[docker-compose](/man/docker-compose)(1), [dotnet](/man/dotnet)(1), [kubectl](/man/kubectl)(1)
+[docker-compose](/man/docker-compose)(1), [dotnet](/man/dotnet)(1), [kubectl](/man/kubectl)(1), [helm](/man/helm)(1)

@@ -4,7 +4,7 @@ Interactive URL selector from text files
 
 # TLDR
 
-**Extract URLs from a file** and display menu
+**Extract URLs from a file** and display interactive menu
 
 ```urlview [path/to/file]```
 
@@ -12,13 +12,17 @@ Interactive URL selector from text files
 
 ```urlview [file1] [file2] [file3]```
 
-**Extract URLs from stdin** (e.g., from mutt)
+**Extract URLs from stdin** (e.g., piped from mutt)
 
 ```cat [path/to/email.txt] | urlview```
 
-**Use with mutt** email client
+**Read from stdin** explicitly using dash
 
-```urlview [path/to/message]```
+```command | urlview -```
+
+**Jump to a specific line number** in the URL list
+
+```urlview -[5] [path/to/file]```
 
 # SYNOPSIS
 
@@ -27,7 +31,10 @@ Interactive URL selector from text files
 # PARAMETERS
 
 _filename_
-> One or more text files to scan for URLs. If no files specified, reads from stdin.
+> One or more text files to scan for URLs. If no files specified, reads from stdin. Use `-` to explicitly read from stdin.
+
+**-**_number_
+> Jump to the specified line number in the URL list.
 
 # DESCRIPTION
 
@@ -35,7 +42,7 @@ _filename_
 
 The tool is commonly used with terminal email clients like **mutt**, allowing users to quickly access links embedded in messages. When a URL is selected from the menu, urlview launches the configured browser or URL handler.
 
-Configuration is read from ~/.urlview or /etc/urlview/system.urlview. The configuration file can specify a custom regular expression for URL extraction (REGEXP), a command to launch URLs (COMMAND), and whether long URLs should wrap (WRAP).
+Configuration is read from ~/.urlview or /etc/urlview/system.urlview. The configuration file supports the following directives: REGEXP (custom URL matching pattern), COMMAND (URL launch command with %s placeholder), WRAP (yes/no for long URL wrapping), QUITONLAUNCH (exit after launching a URL).
 
 The default handler is url_handler.sh, but the BROWSER environment variable can override this with a browser command or colon-delimited list of browsers to try.
 

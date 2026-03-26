@@ -20,13 +20,13 @@ Classic Unix spell-checking utility
 
 ```spell +[custom_words.txt] [file.txt]```
 
-**Show all words not in dictionary** with derivations
+**Show all words not in dictionary** including plausible derivations
 
 ```spell -v [file.txt]```
 
-**Print plausible stems** for each word
+**Use a specific dictionary** file
 
-```spell -x [file.txt]```
+```spell -d [path/to/dictionary] [file.txt]```
 
 **Check multiple files**
 
@@ -34,27 +34,39 @@ Classic Unix spell-checking utility
 
 # SYNOPSIS
 
-**spell** [**-bilvx**] [**+**_local_file_] [_file_...]
+**spell** [_options_] [**+**_local_file_] [_file_...]
 
 # PARAMETERS
 
-**-b**
+**-b**, **--british**
 > Use British spelling rules (colour, centre, -ise endings)
 
-**-i**
-> Ignore troff/nroff formatting constructs
-
-**-l**
-> Follow chains of included files
-
-**-v**
+**-v**, **--verbose**
 > Print all words not literally in the dictionary, including plausible derivations
 
-**-x**
-> Print plausible stems, one per line, preceded by =
+**-d**, **--dictionary**=_FILE_
+> Use FILE as the dictionary to look up words
+
+**-i**, **--ispell**=_PROGRAM_
+> Call PROGRAM as Ispell (default: ispell)
+
+**-n**, **--number**
+> Print line numbers before each line
+
+**-o**, **--print-file-name**
+> Print file names before each line
+
+**-l**, **--all-chains**
+> Follow chains of included files (kept for compatibility)
 
 **+**_local_file_
 > Use additional word list; words found here are not reported as misspellings
+
+**-h**, **--help**
+> Print a summary of options
+
+**-V**, **--version**
+> Print version number
 
 # DESCRIPTION
 
@@ -62,9 +74,9 @@ Classic Unix spell-checking utility
 
 Unlike modern spell checkers such as **aspell** or **ispell**, spell does not suggest corrections or offer an interactive interface. It simply lists unrecognized words to standard output, making it suitable for scripting and batch processing.
 
-The program recognizes common inflections, prefixes, and suffixes, so it can identify valid derivations of dictionary words. The **-v** option shows words that are derivable but not literally in the dictionary, while **-x** displays the stems used for derivation.
+The **-v** option shows words that are derivable but not literally in the dictionary. A custom word list can be specified with **+filename** to supplement the system dictionary with domain-specific or technical terms.
 
-A custom word list can be specified with **+filename** to supplement the system dictionary with domain-specific or technical terms.
+On most modern Linux distributions, the **spell** command is provided by GNU spell, which is a wrapper around **ispell**. The traditional Unix spell had additional options (**-x** for stem printing) that are ignored in the GNU version for compatibility.
 
 # CAVEATS
 

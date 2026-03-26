@@ -37,11 +37,11 @@ PNM serves as the intermediate format in the Netpbm toolkit, where images are co
 
 # CAVEATS
 
-Part of Netpbm. Simple format. Large file sizes.
+PNM files are uncompressed and can be very large compared to formats like PNG or JPEG. The more general term "Netpbm format" also includes PAM. No official MIME type is registered; image/x-portable-anymap is used by convention.
 
 # HISTORY
 
-PNM was created as part of **Netpbm** for portable image format.
+PNM was created as part of the **Netpbm** project, originally derived from Jef Poskanzer's **Pbmplus** toolkit (1988). Netpbm continues to be maintained as an open-source package for portable image manipulation.
 
 # SEE ALSO
 

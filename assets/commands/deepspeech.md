@@ -20,9 +20,9 @@ open-source speech-to-text engine
 
 ```deepspeech --model [model.tflite] --audio [audio.wav]```
 
-**Stream audio from microphone** (with Python)
+**Set beam width** for CTC decoder
 
-```python -c "import deepspeech; ..."```
+```deepspeech --model [model.pbmm] --audio [audio.wav] --beam_width [500]```
 
 # SYNOPSIS
 
@@ -45,14 +45,23 @@ open-source speech-to-text engine
 **--json**
 > Output results as JSON.
 
+**--beam_width** _n_
+> Beam width for the CTC decoder.
+
+**--lm_alpha** _value_
+> Language model weight. If not specified, uses default from the scorer package.
+
+**--lm_beta** _value_
+> Word insertion bonus. If not specified, uses default from the scorer package.
+
 **--candidate_transcripts** _n_
-> Number of alternative transcriptions.
+> Number of candidate transcripts to include in JSON output (default: 3).
 
 **--hot_words** _words_
-> Boost probability of specific words.
+> Hot-words and their probability boosts.
 
 **--version**
-> Display version information.
+> Print version and exit.
 
 # DESCRIPTION
 
@@ -88,4 +97,4 @@ DeepSpeech was developed by **Mozilla** starting in **2017** as part of their Co
 
 # SEE ALSO
 
-[whisper](/man/whisper)(1), [vosk](/man/vosk)(1), [pocketsphinx](/man/pocketsphinx)(1)
+[vosk](/man/vosk)(1), [whisper](/man/whisper)(1)

@@ -31,22 +31,43 @@ Note: ZincSearch (now OpenObserve) is primarily configured via environment varia
 # ENVIRONMENT
 
 **ZINC_FIRST_ADMIN_USER**
-> Initial admin username
+> Initial admin username (required on first run)
 
 **ZINC_FIRST_ADMIN_PASSWORD**
-> Initial admin password
+> Initial admin password (required on first run)
 
 **ZINC_DATA_PATH**
-> Data storage directory
+> Data storage directory (default: ./data)
 
 **ZINC_SERVER_ADDRESS**
-> Server bind address
+> Server bind address (default: 0.0.0.0)
 
 **ZINC_SERVER_PORT**
-> Server port
+> Server port (default: 4080)
 
 **ZINC_MAX_RESULTS**
-> Maximum search results
+> Maximum search results returned (default: 100)
+
+**ZINC_BATCH_SIZE**
+> Internal batch size for bulk indexing (default: 1024)
+
+**ZINC_SHARD_NUM**
+> Number of shards for improved performance (default: 3)
+
+**ZINC_ICE_COMPRESSOR**
+> Compression algorithm: snappy, s2, zstd (default: zstd)
+
+**ZINC_WAL_SYNC_INTERVAL**
+> Write-ahead log sync frequency (default: 1s)
+
+**ZINC_TELEMETRY**
+> Anonymous usage data (default: true)
+
+**ZINC_PROMETHEUS_ENABLE**
+> Enable Prometheus metrics endpoint (default: false)
+
+**GIN_MODE**
+> Set to "release" for production mode
 
 # DESCRIPTION
 

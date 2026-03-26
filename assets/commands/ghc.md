@@ -12,7 +12,7 @@ Compiler for the Haskell functional programming language
 
 ```ghc -O2 [file.hs]```
 
-**Compile to object file**
+**Compile to object file only**
 
 ```ghc -c [file.hs]```
 
@@ -23,6 +23,14 @@ Compiler for the Haskell functional programming language
 **Enable all warnings**
 
 ```ghc -Wall [file.hs]```
+
+**Compile modules in parallel**
+
+```ghc -j [file.hs]```
+
+**Enable a language extension**
+
+```ghc -XOverloadedStrings [file.hs]```
 
 # SYNOPSIS
 
@@ -39,23 +47,56 @@ _FILES_
 **-c**
 > Compile to object file only.
 
-**-O**, **-O2**
-> Enable optimization.
+**-O**, **-O1**
+> Enable standard optimization.
+
+**-O2**
+> Enable aggressive optimization with additional passes.
+
+**-O0**
+> Disable optimization (default).
 
 **-Wall**
-> Enable all warnings.
+> Enable most warnings.
+
+**-w**
+> Suppress all warnings.
 
 **-Werror**
 > Treat warnings as errors.
 
-**-i** _DIR_
-> Add to import path.
+**-i**_DIR_
+> Add directory to import search path.
 
 **-package** _PKG_
-> Use specified package.
+> Expose the specified package.
 
 **--make**
-> Build program with dependencies.
+> Build program and resolve module dependencies automatically.
+
+**-e** _EXPR_
+> Evaluate a single expression and exit.
+
+**-j**[_N_]
+> Compile N modules in parallel.
+
+**-threaded**
+> Use the threaded runtime system.
+
+**-prof**
+> Enable profiling.
+
+**-fllvm**
+> Compile via LLVM backend.
+
+**-X**_EXTENSION_
+> Enable a language extension (e.g., -XOverloadedStrings).
+
+**-cpp**
+> Run the C preprocessor on source files.
+
+**-v**[_N_]
+> Set verbosity level (0-3).
 
 **--help**
 > Display help information.
@@ -64,11 +105,11 @@ _FILES_
 
 **ghc** (Glasgow Haskell Compiler) is the leading compiler for the Haskell programming language. It compiles Haskell source code to native machine code, producing efficient executables.
 
-GHC supports the full Haskell language standard plus numerous extensions for advanced type system features, parallelism, and performance. The --make mode automatically handles module dependencies.
+GHC supports the full Haskell language standard plus numerous extensions for advanced type system features, parallelism, and performance. The --make mode (default) automatically handles module dependencies. GHC also provides native code generation and an optional LLVM backend.
 
 # CAVEATS
 
-Compilation can be memory-intensive. Large projects benefit from incremental builds. Extension flags vary by GHC version.
+Compilation can be memory-intensive. Large projects benefit from incremental builds. Extension flags vary by GHC version. The **-O2** level significantly increases compile time compared to **-O**.
 
 # HISTORY
 
@@ -76,4 +117,4 @@ GHC was started at the **University of Glasgow** in **1989**. It has become the 
 
 # SEE ALSO
 
-[ghci](/man/ghci)(1), [cabal](/man/cabal)(1), [stack](/man/stack)(1)
+[ghci](/man/ghci)(1), [runghc](/man/runghc)(1), [cabal](/man/cabal)(1), [stack](/man/stack)(1)

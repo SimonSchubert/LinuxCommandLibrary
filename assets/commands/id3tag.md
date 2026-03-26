@@ -1,16 +1,12 @@
 # TAGLINE
 
-command-line tool for viewing and editing ID3 tags in MP3 files
+command-line tool for writing ID3 tags to MP3 files
 
 # TLDR
 
-**View ID3 tags**
+**Set song title**
 
-```id3tag [file.mp3]```
-
-**Set title**
-
-```id3tag -t "[title]" [file.mp3]```
+```id3tag -s "[title]" [file.mp3]```
 
 **Set artist**
 
@@ -22,15 +18,19 @@ command-line tool for viewing and editing ID3 tags in MP3 files
 
 **Set year and track number**
 
-```id3tag -y [2024] -T [1] [file.mp3]```
+```id3tag -y [2024] -t [1] [file.mp3]```
 
-**Set genre**
+**Set genre by number**
 
-```id3tag -g "[Rock]" [file.mp3]```
+```id3tag -g [17] [file.mp3]```
 
-**Remove all tags**
+**Set multiple tags at once**
 
-```id3tag -D [file.mp3]```
+```id3tag -a "[artist]" -s "[title]" -A "[album]" -y [2024] -t [1] [file.mp3]```
+
+**Write only ID3v2 tags**
+
+```id3tag -2 -a "[artist]" -s "[title]" [file.mp3]```
 
 # SYNOPSIS
 
@@ -38,36 +38,48 @@ command-line tool for viewing and editing ID3 tags in MP3 files
 
 # PARAMETERS
 
-**-t** _title_
-> Set song title.
+**-1**, **--v1tag**
+> Render only the id3v1 tag.
 
-**-a** _artist_
+**-2**, **--v2tag**
+> Render only the id3v2 tag.
+
+**-a**, **--artist** _ARTIST_
 > Set artist name.
 
-**-A** _album_
+**-s**, **--song** _SONG_
+> Set song title.
+
+**-A**, **--album** _ALBUM_
 > Set album name.
 
-**-y** _year_
+**-y**, **--year** _NUM_
 > Set release year.
 
-**-T** _num_
+**-t**, **--track** _NUM_
 > Set track number.
 
-**-g** _genre_
-> Set genre.
+**-T**, **--total** _NUM_
+> Set total number of tracks on the album.
 
-**-c** _comment_
+**-g**, **--genre** _NUM_
+> Set genre by number.
+
+**-c**, **--comment** _COMMENT_
 > Set comment.
 
-**-D**
-> Delete all tags.
+**-C**, **--desc** _DESCRIPTION_
+> Set comment description.
 
-**-v**
-> Verbose output.
+**-v**, **--version**
+> Display version information.
+
+**-h**, **--help**
+> Display help and exit.
 
 # DESCRIPTION
 
-**id3tag** is a command-line tool for viewing and editing ID3 tags in MP3 files. Supports both ID3v1 and ID3v2 tags. Can set title, artist, album, year, track number, genre, and comments. Useful for batch tagging with shell scripts.
+**id3tag** is a command-line tool for writing ID3 tags to MP3 files. Part of the id3lib/libid3-tools package. Renders both ID3v1 and ID3v2 tags by default; use **-1** or **-2** to render only one type. Can set title, artist, album, year, track number, genre, and comments. Useful for batch tagging with shell scripts. Use **id3info** to view existing tags.
 
 # SEE ALSO
 

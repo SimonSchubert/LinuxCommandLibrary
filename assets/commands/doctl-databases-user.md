@@ -16,9 +16,17 @@ manage database cluster users
 
 ```doctl databases user get [cluster_id] [username]```
 
-**Reset user password**
+**Reset user auth** password or MySQL auth plugin
 
-```doctl databases user reset [cluster_id] [username]```
+```doctl databases user reset [cluster_id] [username] [new_auth_mode]```
+
+**Create a user** with a specific MySQL auth plugin
+
+```doctl databases user create [cluster_id] [username] --mysql-auth-plugin [caching_sha2_password]```
+
+**List users** with custom output format
+
+```doctl databases user list [cluster_id] --format Name,Role```
 
 **Delete a user**
 
@@ -31,19 +39,39 @@ manage database cluster users
 # SUBCOMMANDS
 
 **list**
-> List database users.
+> Retrieve a list of database users.
 
 **create**
-> Create a database user.
+> Create a database user. New users are given a role of normal and an automatically-generated password.
 
 **get**
-> Get user details.
+> Retrieve details about a database user.
 
 **delete**
-> Delete a user.
+> Delete a database user.
 
 **reset**
-> Reset user authentication.
+> Reset the auth password or the MySQL authorization plugin for a given user and return new credentials.
+
+# PARAMETERS
+
+**--mysql-auth-plugin** _PLUGIN_
+> Set MySQL authorization plugin (caching_sha2_password or mysql_native_password). Used with create.
+
+**--acl** _RULES_
+> Comma-separated Kafka ACL rules in topic:permission format. Used with create.
+
+**--opensearch-acl** _RULES_
+> Comma-separated OpenSearch ACL rules in index:permission format. Used with create.
+
+**--format** _COLUMNS_
+> Columns for output (e.g., Name,Role).
+
+**--no-header**
+> Omit the header row from output.
+
+**--output** _FORMAT_
+> Output format: text or json (default: text).
 
 # DESCRIPTION
 
@@ -55,4 +83,4 @@ Proper user management follows security best practices: creating dedicated users
 
 # SEE ALSO
 
-[doctl-databases](/man/doctl-databases)(1), [doctl-databases-pool](/man/doctl-databases-pool)(1)
+[doctl-databases](/man/doctl-databases)(1), [doctl-databases-pool](/man/doctl-databases-pool)(1), [doctl-databases-db](/man/doctl-databases-db)(1), [doctl-databases-firewalls](/man/doctl-databases-firewalls)(1)

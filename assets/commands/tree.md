@@ -30,7 +30,7 @@ Display directory contents in tree format
 
 **Show human-readable sizes**
 
-```tree -sh```
+```tree -h```
 
 **Output in JSON format**
 
@@ -43,6 +43,14 @@ Display directory contents in tree format
 **Show full path** for each file
 
 ```tree -f```
+
+**Sort by modification time**, newest first
+
+```tree -t -r```
+
+**Show directory sizes and respect .gitignore**
+
+```tree --du --gitignore```
 
 # SYNOPSIS
 
@@ -95,6 +103,30 @@ Display directory contents in tree format
 **-n**
 > Turn off colorization
 
+**-r**
+> Sort output in reverse order
+
+**-t**
+> Sort by last modification time
+
+**-o** _filename_
+> Send output to filename
+
+**--du**
+> Show cumulative directory sizes
+
+**--prune**
+> Prune empty directories from output
+
+**--gitignore**
+> Use .gitignore files for filtering
+
+**--noreport**
+> Omit file and directory count at end of listing
+
+**--filelimit** _N_
+> Do not descend directories with more than N entries
+
 **-H** _baseHREF_
 > Output HTML with base URL
 
@@ -118,10 +150,10 @@ Filtering with **-I** (exclude) and **-P** (include) uses shell glob patterns, s
 
 Large directories can produce overwhelming output. Use **-L** to limit depth or **-d** for directories only when exploring unfamiliar structures.
 
-Tree follows symbolic links by default unless they would cause infinite loops. Use **-l** to follow all symlinks unconditionally.
+Tree does not follow symbolic links by default if they would cause recursion. Use **-l** to follow all symlinks.
 
-The output is optimized for display width. Very long filenames may be truncated depending on terminal width.
+Using **--prune** and **--du** causes tree to accumulate the entire tree in memory before output, which may be slow for very large directory trees.
 
 # SEE ALSO
 
-[ls](/man/ls)(1), [find](/man/find)(1), [du](/man/du)(1), [exa](/man/exa)(1)
+[ls](/man/ls)(1), [find](/man/find)(1), [du](/man/du)(1), [exa](/man/exa)(1), [eza](/man/eza)(1), [lsd](/man/lsd)(1)

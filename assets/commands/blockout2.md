@@ -19,10 +19,11 @@
 The game involves manipulating falling 3D blocks in a pit, rotating and positioning them to complete horizontal layers. Completed layers are removed, and the goal is to clear as many layers as possible before the pit fills up.
 
 **In-game controls:**
-- **Q, W, E, A, S, D** - Rotate block
+- **Q, W, E, A, S, D** - Rotate block (also numpad)
 - **Arrow keys** - Move block horizontally
 - **Space** - Drop block
 - **P** - Pause game
+- **Esc** - Return to menu
 
 Replay files are stored in **~/.bl2/replay/** on Linux systems.
 

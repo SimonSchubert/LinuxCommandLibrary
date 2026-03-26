@@ -28,6 +28,14 @@ Record audio from sound input devices
 
 ```rec -b 16 [output.wav]```
 
+**Monitor input levels** without recording
+
+```rec -n stat```
+
+**Record with normalization** to prevent clipping
+
+```rec --norm [output.wav]```
+
 # SYNOPSIS
 
 **rec** [_options_] _outfile_ [_effects_...]
@@ -46,14 +54,29 @@ Record audio from sound input devices
 **-t** _type_
 > Specify file type (wav, mp3, flac, ogg, etc.)
 
-**-d** _device_
-> Specify audio device
+**-e** _encoding_
+> Set encoding type (signed-integer, unsigned-integer, floating-point, a-law, u-law)
+
+**-C** _factor_
+> Set compression factor for output format
+
+**-S**
+> Show input format, processing progress, and peak-level meter (default for rec)
 
 **-q**
 > Quiet mode; suppress progress output
 
-**-V**
-> Verbose mode; show detailed progress
+**-V**[_level_]
+> Set verbosity (0=none, 1=errors, 2=warnings, 3=processing info)
+
+**-n**
+> Use null file; useful with effects like stat for monitoring without recording
+
+**--norm**[=_dBLevel_]
+> Guard against clipping and normalize audio
+
+**-G**
+> Automatically prevent clipping by applying gain adjustment
 
 **trim** _start_ _duration_
 > Record from start position for specified duration
@@ -72,13 +95,13 @@ The output format is typically determined by the file extension. SoX supports do
 
 SoX effects can be applied during recording, including silence detection to automatically stop recording, trimming to limit duration, and gain adjustments. Effects are specified after the output filename.
 
-**rec** is equivalent to **sox -d** (using the default input device) with appropriate defaults for recording.
+**rec** is equivalent to **sox -d** (using the default input device) with appropriate defaults for recording. Similarly, **play** is a playback alias for **sox**.
 
 # CAVEATS
 
 MP3 encoding requires SoX to be compiled with MP3 support (libmp3lame). Some distributions package this separately due to licensing.
 
-The default audio device depends on system configuration. Use **-d** to specify a particular device if the default is not the desired input.
+The default audio device depends on system configuration and the AUDIODEV environment variable.
 
 Recording requires appropriate permissions for audio device access. Users may need to be in the **audio** group on some systems.
 

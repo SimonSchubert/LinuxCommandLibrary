@@ -1,61 +1,33 @@
 # TAGLINE
 
-Load Windows NDIS network drivers on Linux
+Userspace NDIS driver loader for the ndiswrapper kernel module (version 1.9)
 
 # TLDR
 
-**Load Windows driver**
+This is an internal support tool used by the ndiswrapper kernel module. It should not be invoked directly by users. Use **ndiswrapper** to manage NDIS drivers instead.
 
-```loadndisdriver-1.9 [driver.inf] [driver.sys]```
+**Install a Windows driver using ndiswrapper instead**
 
-**Install driver**
+```sudo ndiswrapper -i [path/to/driver.inf]```
 
-```loadndisdriver-1.9 -i [driver.inf]```
+**List installed NDIS drivers**
 
-**Load with device ID**
-
-```loadndisdriver-1.9 [driver.sys] [device_id]```
-
-**List loaded drivers**
-
-```loadndisdriver-1.9 -l```
+```ndiswrapper -l```
 
 # SYNOPSIS
 
-**loadndisdriver-1.9** [_options_] _driver_
-
-# PARAMETERS
-
-_DRIVER_
-> Windows driver file (.sys).
-
-**-i** _INF_
-> Install from INF file.
-
-**-l**
-> List loaded drivers.
-
-**-d**
-> Debug mode.
-
-**--help**
-> Display help information.
+**loadndisdriver-1.9**
 
 # DESCRIPTION
 
-**loadndisdriver-1.9** is version 1.9 of the NDIS driver loader. It loads Windows wireless drivers in Linux.
+**loadndisdriver-1.9** is a version-specific support program for the **ndiswrapper** Linux kernel module. The ndiswrapper kernel module uses it to load Windows NDIS drivers that have been installed via the **ndiswrapper**(8) tool.
 
-This version-specific binary may be used when compatibility with older ndiswrapper is needed.
+This tool should not be used directly. Its options are internal and subject to change. It expects to find NDIS driver files in the **/etc/ndiswrapper** directory.
 
 # CAVEATS
 
-Version-specific tool. Deprecated approach. Native drivers preferred.
-
-# HISTORY
-
-loadndisdriver-1.9 is a versioned component of **ndiswrapper** for loading Windows wireless drivers.
+Not intended for direct use. The ndiswrapper approach to wireless networking is largely deprecated in favor of native Linux drivers.
 
 # SEE ALSO
 
-[loadndisdriver](/man/loadndisdriver)(8), [ndiswrapper-1.9](/man/ndiswrapper-1.9)(8)
-
+[loadndisdriver](/man/loadndisdriver)(8), [ndiswrapper](/man/ndiswrapper)(8), [ndiswrapper-1.9](/man/ndiswrapper-1.9)(8)

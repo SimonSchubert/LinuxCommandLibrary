@@ -38,7 +38,7 @@ Suite of command-line CSV processing tools
 
 # SYNOPSIS
 
-**csvkit** is a suite of utilities for working with CSV files
+_tool_ [_options_] [_file_]
 
 # INCLUDED TOOLS
 
@@ -102,4 +102,4 @@ csvkit was created by Christopher Groskopf and first released in **2011**. It wa
 
 # SEE ALSO
 
-[miller](/man/miller)(1), [xsv](/man/xsv)(1), [jq](/man/jq)(1), [awk](/man/awk)(1)
+[miller](/man/miller)(1), [xsv](/man/xsv)(1), [jq](/man/jq)(1), [awk](/man/awk)(1), [cut](/man/cut)(1)

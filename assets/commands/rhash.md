@@ -42,10 +42,13 @@ Calculate and verify file checksums
 
 # PARAMETERS
 
-**--md5**
+**-C**, **--crc32**
+> Calculate CRC32 checksum.
+
+**-M**, **--md5**
 > Calculate MD5 hash.
 
-**--sha1**
+**-H**, **--sha1**
 > Calculate SHA1 hash.
 
 **--sha256**
@@ -54,17 +57,38 @@ Calculate and verify file checksums
 **--sha512**
 > Calculate SHA-512 hash.
 
-**--crc32**
-> Calculate CRC32.
+**--sha3-256**
+> Calculate SHA3-256 hash.
 
-**--all**, **-a**
+**--blake2b**
+> Calculate BLAKE2b hash.
+
+**-a**, **--all**
 > Calculate all supported hashes.
+
+**--list-hashes**
+> Display names of supported hash functions.
 
 **-c**, **--check**
 > Verify hashes from file.
 
+**-u**, **--update** _FILE_
+> Add new digests to existing hash file.
+
+**-k**, **--check-embedded**
+> Verify files by CRC32 embedded in filenames.
+
+**-B**, **--benchmark**
+> Run benchmark for selected hash algorithm(s).
+
 **-r**, **--recursive**
 > Process directories recursively.
+
+**--follow**
+> Follow symbolic links when processing recursively.
+
+**-m**, **--message** _TEXT_
+> Calculate hash of a text message instead of a file.
 
 **-o**, **--output** _FILE_
 > Output to file.
@@ -73,28 +97,46 @@ Calculate and verify file checksums
 > Use BSD output format.
 
 **--sfv**
-> Use SFV output format.
+> Use SFV output format (default).
 
-**--magnet**
+**--simple**
+> Use simple format (hash followed by filename).
+
+**-g**, **--magnet**
 > Output magnet link.
 
-**-u**, **--update**
-> Update hash file.
+**-e**, **--embed-crc**
+> Rename file with embedded CRC32 in filename.
 
-**--embed-crc**
-> Rename file with embedded CRC.
+**-v**, **--verbose**
+> Show more detailed output.
 
-**-q**, **--quiet**
-> Quiet mode.
+**-P**, **--percents**
+> Show progress percentage during processing.
+
+**--speed**
+> Display processing speed.
 
 **-p** _FMT_, **--printf** _FMT_
-> Custom output format.
+> Custom output format using format directives.
+
+**--template** _FILE_
+> Read output format from file.
+
+**-b**, **--base64**
+> Output hash in Base64 encoding.
+
+**--hex**
+> Output hash in hexadecimal (default).
+
+**--uppercase**
+> Output hash in uppercase hexadecimal.
 
 # DESCRIPTION
 
-**rhash** (Recursive Hasher) calculates and verifies message digests and checksums for files. It supports over 30 hash algorithms including MD5, SHA family, CRC32, Tiger, and ed2k.
+**rhash** (Recursive Hasher) calculates and verifies message digests and checksums for files. It supports numerous hash algorithms including CRC32, MD5, SHA family, SHA3, BLAKE2, BLAKE3, Tiger, TTH, AICH, ed2k, Whirlpool, GOST, and RIPEMD-160.
 
-Multiple hashes can be calculated simultaneously in a single pass, efficient for creating comprehensive hash manifests. Output formats include standard, BSD tag format, and SFV.
+Multiple hashes can be calculated simultaneously in a single pass, efficient for creating comprehensive hash manifests. The default output format is SFV with CRC32; this can be changed with **--bsd**, **--simple**, **--magnet**, or **--printf**.
 
 Verification mode (-c) reads hash files and checks files against stored values. It reports mismatches and missing files. Update mode modifies existing hash files with new entries.
 
@@ -114,4 +156,4 @@ Large files take time to hash. Some algorithms (MD5, SHA1) are cryptographically
 
 # SEE ALSO
 
-[sha256sum](/man/sha256sum)(1), [md5sum](/man/md5sum)(1), [cksum](/man/cksum)(1), [b3sum](/man/b3sum)(1)
+[sha256sum](/man/sha256sum)(1), [sha512sum](/man/sha512sum)(1), [sha1sum](/man/sha1sum)(1), [md5sum](/man/md5sum)(1), [shasum](/man/shasum)(1), [cksum](/man/cksum)(1), [b3sum](/man/b3sum)(1)

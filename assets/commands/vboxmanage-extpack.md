@@ -4,17 +4,29 @@ Manage VirtualBox extension packs
 
 # TLDR
 
-**Install extension pack**
+**Install an extension pack**
 
 ```vboxmanage extpack install [extension.vbox-extpack]```
 
-**Uninstall extension pack**
+**Install and replace an existing version**
 
-```vboxmanage extpack uninstall [name]```
+```vboxmanage extpack install --replace [extension.vbox-extpack]```
 
-**List installed packs**
+**Uninstall an extension pack by name**
+
+```vboxmanage extpack uninstall "[Oracle VM VirtualBox Extension Pack]"```
+
+**Force uninstall an extension pack**
+
+```vboxmanage extpack uninstall --force "[Oracle VM VirtualBox Extension Pack]"```
+
+**List installed extension packs**
 
 ```vboxmanage list extpacks```
+
+**Clean up temporary files from failed operations**
+
+```vboxmanage extpack cleanup```
 
 # SYNOPSIS
 
@@ -22,23 +34,26 @@ Manage VirtualBox extension packs
 
 # PARAMETERS
 
-**install** _file_
-> Install extension pack.
+**install** [**--replace**] _tarball_
+> Install an extension pack from the specified file. Fails if an older version is already installed unless --replace is used.
 
-**uninstall** _name_
-> Remove extension pack.
+**uninstall** [**--force**] _name_
+> Uninstall an extension pack by name. Succeeds even if the pack is not present.
 
 **cleanup**
-> Remove temporary files.
+> Remove temporary files and directories left behind by failed install or uninstall operations.
 
 **--replace**
-> Replace existing pack.
+> Used with install. Uninstall any existing version before installing the new one.
+
+**--force**
+> Used with uninstall. Override most refusals to uninstall an extension pack.
 
 # DESCRIPTION
 
-**vboxmanage extpack** manages VirtualBox extension packs. Extension packs add features like USB 2.0/3.0, VirtualBox RDP, and disk encryption. Download from Oracle.
+**vboxmanage extpack** manages VirtualBox extension packs. Extension packs add features like USB 2.0/3.0, VirtualBox RDP, and disk encryption. Installing or uninstalling extension packs typically requires administrator privileges.
 
 # SEE ALSO
 
-[vboxmanage](/man/vboxmanage)(1)
+[vboxmanage](/man/vboxmanage)(1), [vboxmanage-list](/man/vboxmanage-list)(1)
 

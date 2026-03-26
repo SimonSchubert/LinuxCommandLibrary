@@ -113,6 +113,18 @@ pikman handles privilege escalation internally and must **not** be run with sudo
 **unexport**
 > Remove a program's desktop entry
 
+**log**
+> Show package manager logs
+
+**run**
+> Run a command inside a managed container
+
+**upgrades**
+> List the available upgrades
+
+**help**, **h**
+> Show a list of commands or help for a specific command
+
 # CAVEATS
 
 Pikman is designed specifically for **PikaOS** and is not a general-purpose tool for other distributions. Before installing packages from other distributions (Arch, Fedora, Alpine), you must first initialize the respective container with **pikman --aur init** (or **--fedora init**, etc.). For Flatpak packages, use **pikman --flatpak update** instead of **upgrade** to match Flatpak conventions.

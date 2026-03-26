@@ -24,6 +24,10 @@ Z-machine interactive fiction interpreter
 
 ```frotz -R [/path/to/directory] [game.z5]```
 
+**Play with abbreviation expansion and ignore errors**
+
+```frotz -x -i [game.z5]```
+
 # SYNOPSIS
 
 **frotz** [_options_] _story-file_
@@ -46,11 +50,17 @@ The tool provides terminal and graphical interfaces for playing these games, wit
 
 # PARAMETERS
 
-**-w** _columns_
-> Screen width.
+**-a**
+> Watch attribute setting.
 
-**-h** _rows_
-> Screen height.
+**-A**
+> Watch attribute testing.
+
+**-b** _color_
+> Background color.
+
+**-c** _n_
+> Context lines for scrolling.
 
 **-d**
 > Disable color output.
@@ -58,29 +68,71 @@ The tool provides terminal and graphical interfaces for playing these games, wit
 **-e**
 > Enable sound effects.
 
+**-f** _color_
+> Foreground color.
+
+**-F**
+> Force color mode even if disabled in config.
+
+**-h** _rows_
+> Screen height.
+
 **-i**
 > Ignore fatal Z-machine errors.
+
+**-I** _n_
+> Interpreter number to report to the game.
 
 **-l** _n_
 > Left margin in characters.
 
-**-r** _n_
-> Right margin in characters.
+**-L** _file_
+> Load a saved game file on startup.
+
+**-m**
+> Enable mouse support.
+
+**-o**
+> Watch object movement.
+
+**-O**
+> Watch object locating.
 
 **-p**
 > Plain ASCII output only (no accented characters).
 
-**-x**
-> Expand abbreviations "g", "x", "z" to "again", "examine", "wait".
+**-P**
+> Alter piracy opcode.
 
-**-L** _file_
-> Load a saved game file on startup.
+**-q**
+> Quiet mode (disable sound effects).
+
+**-r** _n_
+> Right margin in characters.
 
 **-R** _directory_
 > Restrict file read/write to specified directory.
 
+**-s** _n_
+> Random number seed value.
+
 **-S** _n_
 > Set transcript width (0 to disable line splitting).
+
+**-t**
+> Set Tandy bit.
+
+**-u** _n_
+> Number of undo slots.
+
+**-v**
+> Show version information.
+
+**-w** _columns_
+> Screen width.
+
+**-x**
+> Expand abbreviations "g", "x", "z" to "again", "examine", "wait".
 
 **-Z** _n_
 > Error checking mode (0=none, 1=first, 2=all, 3=exit on error; default 1).

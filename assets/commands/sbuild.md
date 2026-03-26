@@ -4,25 +4,29 @@ Build Debian packages in clean chroot environments
 
 # TLDR
 
-**Build package**
+**Build a package**
 
 ```sbuild [package.dsc]```
 
-**Build for distribution**
+**Build for a specific distribution**
 
 ```sbuild -d [unstable] [package.dsc]```
 
-**Build with arch**
+**Build for a specific architecture**
 
 ```sbuild --arch=[arm64] [package.dsc]```
 
-**Clean chroot**
+**Build with parallel jobs**
 
-```sbuild-update --clean [chroot-name]```
+```sbuild -j[4] [package.dsc]```
 
-**Create chroot**
+**Build and run lintian afterwards**
 
-```sbuild-createchroot [unstable] [/srv/chroot/unstable]```
+```sbuild --run-lintian [package.dsc]```
+
+**Create a chroot**
+
+```sbuild-createchroot [unstable] [/srv/chroot/unstable] [http://deb.debian.org/debian]```
 
 # SYNOPSIS
 
@@ -30,23 +34,47 @@ Build Debian packages in clean chroot environments
 
 # PARAMETERS
 
-**-d** _DIST_
-> Target distribution.
+**-d**, **--dist=**_DIST_
+> Target distribution (e.g. unstable, bookworm).
 
-**--arch** _ARCH_
-> Build architecture.
+**--arch=**_ARCH_
+> Build architecture (e.g. amd64, arm64).
 
-**-c** _CHROOT_
-> Use specific chroot.
+**-c**, **--chroot=**_CHROOT_
+> Use a specific chroot environment.
 
-**-n**
-> No install build-deps.
+**-j**, **--jobs=**_N_
+> Number of parallel build jobs.
 
-**--purge** _WHEN_
-> Purge build directory.
+**-s**, **--source**
+> Build source package in addition to binaries.
 
-**-v**
+**-A**, **--arch-all**
+> Also build architecture-independent packages.
+
+**--build-dep-resolver=**_RESOLVER_
+> Choose dependency resolver: apt (default), aptitude, aspcud.
+
+**--extra-repository=**_SPEC_
+> Add an additional apt repository for the build.
+
+**--run-lintian**
+> Run lintian after a successful build.
+
+**--no-clean-source**
+> Skip running debian/rules clean before building.
+
+**--profiles=**_PROFILE[,...]_
+> Specify build profiles.
+
+**-p**, **--purge=**_MODE_
+> Purge build directory: always, never, or successful.
+
+**-v**, **--verbose**
 > Verbose output.
+
+**-n**, **--nolog**
+> Print output to stdout only, skip log files.
 
 # DESCRIPTION
 
@@ -56,7 +84,7 @@ The tool supports cross-architecture builds, allowing packages to be compiled fo
 
 # CAVEATS
 
-Requires chroot setup. Root privileges needed. Debian/Ubuntu focused.
+Requires chroot setup via sbuild-createchroot. Root privileges or appropriate group membership (sbuild group) needed. Primarily for Debian/Ubuntu packaging.
 
 # HISTORY
 
@@ -64,4 +92,4 @@ Requires chroot setup. Root privileges needed. Debian/Ubuntu focused.
 
 # SEE ALSO
 
-[dpkg-buildpackage](/man/dpkg-buildpackage)(1), [pbuilder](/man/pbuilder)(1), [schroot](/man/schroot)(1)
+[dpkg-buildpackage](/man/dpkg-buildpackage)(1), [pbuilder](/man/pbuilder)(1), [schroot](/man/schroot)(1), [debootstrap](/man/debootstrap)(1), [lintian](/man/lintian)(1)

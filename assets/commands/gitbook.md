@@ -16,21 +16,29 @@ Build books and documentation from Markdown
 
 ```gitbook build```
 
-**Build to specific output**
+**Build to specific output directory**
 
-```gitbook build [.] [_book]```
+```gitbook build [.] [output_dir]```
+
+**Serve with a specific version**
+
+```gitbook build --gitbook=[2.0.1]```
 
 **Install plugins**
 
 ```gitbook install```
 
-**Update GitBook**
+**List locally installed versions**
 
-```gitbook update```
+```gitbook ls```
 
-**List available versions**
+**List remote versions available** on NPM
 
 ```gitbook ls-remote```
+
+**Install a specific version**
+
+```gitbook fetch [version]```
 
 # SYNOPSIS
 
@@ -39,10 +47,10 @@ Build books and documentation from Markdown
 # PARAMETERS
 
 **init**
-> Initialize book structure.
+> Initialize book structure with README.md and SUMMARY.md.
 
 **serve**
-> Serve book on localhost.
+> Build and serve book on localhost:4000.
 
 **build**
 > Build static website.
@@ -59,14 +67,29 @@ Build books and documentation from Markdown
 **mobi**
 > Generate Mobi.
 
-**update**
-> Update GitBook.
+**ls**
+> List locally installed GitBook versions.
 
-**--port** _port_
-> Server port for serve.
+**ls-remote**
+> List remote versions available on NPM.
+
+**fetch** _version_
+> Download and install a specific version.
+
+**update**
+> Update to the latest GitBook version.
+
+**uninstall** _version_
+> Remove a specific installed version.
+
+**--gitbook** _version_
+> Force a specific GitBook version for the command.
+
+**-d**, **--debug**
+> Enable verbose error output with stack traces.
 
 **--log** _level_
-> Log level.
+> Log level: debug, info, warn, error, disabled.
 
 # DESCRIPTION
 
@@ -79,9 +102,12 @@ The tool uses a `book.json` configuration file and organizes content through `SU
 **book.json**
 > Project configuration file defining title, description, plugins, and build settings.
 
+**GITBOOK_DIR**
+> Environment variable to specify custom directory for storing GitBook versions (default: ~/.gitbook).
+
 # CAVEATS
 
-Legacy CLI deprecated. Requires older Node.js versions. Plugins may be unmaintained. PDF generation needs Calibre.
+Legacy CLI is no longer under active development. Requires older Node.js versions (may not work with Node 12+). Only supports gitbook versions >=2.0.0. Plugins may be unmaintained. PDF/ePub/Mobi generation requires Calibre.
 
 # HISTORY
 
@@ -89,4 +115,4 @@ Legacy CLI deprecated. Requires older Node.js versions. Plugins may be unmaintai
 
 # SEE ALSO
 
-[mdbook](/man/mdbook)(1), [mkdocs](/man/mkdocs)(1), [sphinx](/man/sphinx)(1), [docusaurus](/man/docusaurus)(1)
+[mdbook](/man/mdbook)(1), [mkdocs](/man/mkdocs)(1), [hugo](/man/hugo)(1), [pandoc](/man/pandoc)(1)

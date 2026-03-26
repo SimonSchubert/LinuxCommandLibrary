@@ -1,6 +1,6 @@
 # TAGLINE
 
-comprehensive metadata reader and writer
+read, write, and edit meta information in files
 
 # TLDR
 
@@ -32,9 +32,9 @@ comprehensive metadata reader and writer
 
 ```exiftool "-FileName<DateTimeOriginal" -d "%Y%m%d_%H%M%S.%%e" [*.jpg]```
 
-**Fix date/time** by shifting
+**Shift all dates** forward by 1 hour 30 minutes
 
-```exiftool -AllDates+=1:30 [image.jpg]```
+```exiftool "-AllDates+=0:0:0 1:30:0" [image.jpg]```
 
 **Extract embedded thumbnail**
 
@@ -58,14 +58,14 @@ comprehensive metadata reader and writer
 **-TagsFromFile** _file_
 > Copy tags from another file.
 
-**-r**, **--recurse**
+**-r**, **-recurse**
 > Process directories recursively.
 
 **-overwrite_original**
-> Overwrite without backup.
+> Overwrite file instead of creating backup.
 
 **-d** _fmt_
-> Date format for renaming.
+> Set date/time output format (strftime syntax).
 
 **-FileName<** _tag_
 > Rename file based on tag.
@@ -90,6 +90,21 @@ comprehensive metadata reader and writer
 
 **-G**
 > Show group name for each tag.
+
+**-ext** _EXT_
+> Process only files with specified extension.
+
+**-X**
+> Output in RDF/XML format.
+
+**-p** _FMT_
+> Print output in custom format using tag names.
+
+**-if** _EXPR_
+> Conditionally process files using Perl expression.
+
+**-q**
+> Quiet processing (suppress informational messages).
 
 # DESCRIPTION
 

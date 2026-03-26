@@ -28,32 +28,73 @@ Prepare patches for email submission
 
 ```git format-patch --cover-letter [commit]```
 
+**Create numbered, threaded patches with base info**
+
+```git format-patch --numbered --thread --base=auto [commit]```
+
+**Add email recipients to patches**
+
+```git format-patch --to=[maintainer@example.com] --cc=[list@example.com] -[3]```
+
 # SYNOPSIS
 
 **git** **format-patch** [_options_] [_since_] | [_revision-range_]
 
 # PARAMETERS
 
-**-n**
-> Number of commits.
+**-n**, **--numbered**
+> Name output in [PATCH n/m] format.
+
+**-N**, **--no-numbered**
+> Name output in [PATCH] format without numbers.
 
 **-o**, **--output-directory** _dir_
-> Output directory.
+> Output directory for patch files.
 
 **--stdout**
-> Output to stdout.
+> Output all patches to stdout instead of files.
 
 **--cover-letter**
-> Generate cover letter.
+> Generate a cover letter template for the patch series.
 
 **-s**, **--signoff**
-> Add Signed-off-by.
+> Add Signed-off-by trailer.
 
 **--subject-prefix** _prefix_
-> Subject prefix.
+> Use given prefix instead of [PATCH].
 
 **-v**, **--reroll-count** _n_
-> Version number.
+> Mark patches as v_n_ of the series (e.g., [PATCH v2]).
+
+**--thread**[=_style_]
+> Generate In-Reply-To and References headers. Style: shallow (default) or deep.
+
+**--in-reply-to** _message-id_
+> Make first mail appear as a reply to given message.
+
+**--to** _email_
+> Add To: header to patches. Can be used multiple times.
+
+**--cc** _email_
+> Add Cc: header to patches. Can be used multiple times.
+
+**--base**[=_commit_]
+> Record base tree info. Use "auto" for automatic selection.
+
+**--no-stat**
+> Generate plain patches without diffstats.
+
+**--no-binary**
+> Do not output binary file contents, only note changes.
+
+**--interdiff** _previous_
+> Insert interdiff into cover letter comparing to previous version.
+
+**--range-diff** _previous_
+> Insert range-diff into cover letter comparing to previous version.
+
+**--filename-max-length** _n_
+> Limit generated filenames to around _n_ bytes (default: 64).
 
 # DESCRIPTION
 
@@ -65,4 +106,4 @@ Cover letters (--cover-letter) provide a way to introduce patch series with cont
 
 # SEE ALSO
 
-[git-am](/man/git-am)(1), [git-send-email](/man/git-send-email)(1)
+[git-am](/man/git-am)(1), [git-send-email](/man/git-send-email)(1), [git-apply](/man/git-apply)(1), [git-diff](/man/git-diff)(1)

@@ -1,24 +1,28 @@
 # TAGLINE
 
-scans and lists all logical volumes in the system
+scans and lists all logical volumes in all volume groups
 
 # TLDR
 
-List **all** logical volumes
+**List all logical volumes**
 
 ```sudo lvscan```
 
-List **active** volumes only
+**Include internal LV components** (mirrors, etc.)
 
-```sudo lvscan --active```
+```sudo lvscan --all```
 
-List **inactive** volumes only
-
-```sudo lvscan --inactive```
-
-Output as **JSON**
+**Output in JSON format**
 
 ```sudo lvscan --reportformat json```
+
+**Run in read-only mode** without taking locks
+
+```sudo lvscan --readonly```
+
+**Verbose output with extra detail**
+
+```sudo lvscan -v```
 
 # SYNOPSIS
 
@@ -26,29 +30,37 @@ Output as **JSON**
 
 # DESCRIPTION
 
-**lvscan** scans and lists all logical volumes in the system. It shows the volume path, size, and activation status.
+**lvscan** scans and lists all logical volumes in all volume groups. The output shows one line per logical volume indicating whether it is active or inactive, the LV path, and its size.
 
 # PARAMETERS
 
-**--active**
-> Show only active logical volumes
+**-a**, **--all**
+> Show information about internal LVs that are components of normal LVs (e.g., mirror images and logs).
 
-**--inactive**
-> Show only inactive logical volumes
+**-b**, **--blockdevice**
+> No longer used. Use lvs(8) or lvdisplay(8) instead.
 
-**--reportformat FORMAT**
-> Output format: basic, json
+**--readonly**
+> Read on-disk metadata without taking locks. Useful for inspecting metadata on VMs or clustered VGs.
 
-**-b, --blockdevice**
-> Show block device names
+**--reportformat** _FORMAT_
+> Output format: basic or json.
 
-**-v, --verbose**
-> Verbose output
+**--ignorelockingfailure**
+> Allow the command to continue with read-only metadata after locking failures.
 
-# OUTPUT FORMAT
+**-d**, **--debug**
+> Increase debug detail (repeat 1-6 times).
 
-Shows: ACTIVE/inactive, LV path, size, and status
+**-q**, **--quiet**
+> Suppress output and log messages.
+
+**-t**, **--test**
+> Run in test mode without updating metadata.
+
+**-v**, **--verbose**
+> Increase verbosity (repeat 1-4 times).
 
 # SEE ALSO
 
-[lvs](/man/lvs)(8), [lvdisplay](/man/lvdisplay)(8), [vgscan](/man/vgscan)(8), [pvscan](/man/pvscan)(8)
+[lvs](/man/lvs)(8), [lvdisplay](/man/lvdisplay)(8), [vgscan](/man/vgscan)(8), [pvscan](/man/pvscan)(8), [lvm](/man/lvm)(8)

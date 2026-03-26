@@ -20,12 +20,10 @@ The tool comes with built-in plugins including a **HexViewer** that displays hex
 
 # CAVEATS
 
-Requires Python 3.8+ and the h5py library. Very large datasets may be slow to render in the terminal. The ImageViewer plugin requires data that can be converted to a Pillow image. Custom plugins can be added via entrypoints.
+Requires Python and the h5py library. Install via `pip install h5ui`. Very large datasets may be slow to render in the terminal. The ImageViewer plugin requires data that can be converted to a Pillow image. Custom plugins can be added via entrypoints.
 
 # HISTORY
 
 **hdf5_ui** was created by **Rik Huygen** (rhuygen) and is written in **Python** using the **Textual** TUI framework. It was developed to provide a convenient terminal-based alternative to graphical HDF5 inspection tools like HDFView.
 
 # SEE ALSO
-
-[h5dump](/man/h5dump)(1), [h5ls](/man/h5ls)(1)

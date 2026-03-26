@@ -1,6 +1,6 @@
 # TAGLINE
 
-manages PlatformIO libraries
+manages PlatformIO libraries (deprecated, use pio pkg)
 
 # TLDR
 
@@ -23,6 +23,10 @@ manages PlatformIO libraries
 **Uninstall library**
 
 ```pio lib uninstall [PubSubClient]```
+
+**Update all installed libraries**
+
+```pio lib update```
 
 # SYNOPSIS
 
@@ -48,11 +52,29 @@ manages PlatformIO libraries
 **show** _library_
 > Show library details.
 
+**builtin**
+> Show built-in libraries.
+
+**register**
+> Register a library in the PlatformIO registry.
+
+**stats**
+> Show library statistics.
+
+**-d**, **--storage-dir** _dir_
+> Manage custom library storage directory.
+
+**-g**, **--global**
+> Work with global PlatformIO library storage.
+
+**-e**, **--environment** _name_
+> Target a specific project build environment.
+
 # DESCRIPTION
 
-**pio lib** manages PlatformIO libraries. Search, install, and update libraries from the PlatformIO registry. Handles dependencies automatically for embedded projects.
+**pio lib** manages PlatformIO libraries. Search, install, and update libraries from the PlatformIO registry. Handles dependencies automatically for embedded projects. This command is deprecated since PlatformIO 6.0; use **pio pkg** instead.
 
 # SEE ALSO
 
-[pio-init](/man/pio-init)(1), [pio-run](/man/pio-run)(1), [pio-pkg](/man/pio-pkg)(1)
+[pio-pkg](/man/pio-pkg)(1), [pio-init](/man/pio-init)(1), [pio-run](/man/pio-run)(1), [pio](/man/pio)(1)
 

@@ -95,6 +95,21 @@ ECS Exec enables interactive shell access to running containers for debugging, s
 **register-task-definition**
 > Create a new task definition revision.
 
+**deregister-task-definition**
+> Deregister a task definition revision.
+
+**list-task-definitions**
+> List registered task definition families or revisions.
+
+**describe-task-definition**
+> Get full details of a task definition.
+
+**tag-resource**
+> Add tags to an ECS resource.
+
+**wait**
+> Wait until a condition is met (e.g., services-stable, tasks-stopped).
+
 **--cluster** _name_
 > Target cluster name or ARN.
 
@@ -120,4 +135,4 @@ Amazon ECS was announced at **AWS re:Invent 2014** and launched in **April 2015*
 
 # SEE ALSO
 
-[aws](/man/aws)(1), [aws-ecr](/man/aws-ecr)(1), [docker](/man/docker)(1), [aws-eks](/man/aws-eks)(1)
+[aws](/man/aws)(1), [aws-ecr](/man/aws-ecr)(1), [aws-eks](/man/aws-eks)(1), [docker](/man/docker)(1), [kubectl](/man/kubectl)(1)

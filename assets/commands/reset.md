@@ -8,9 +8,17 @@ Reinitialize terminal to sane state
 
 ```reset```
 
-**Display** the terminal type instead
+**Display** the terminal type without reinitializing
 
 ```reset -q```
+
+**Reset and print shell commands** to set TERM
+
+```reset -s```
+
+**Reset without sending** terminal initialization strings
+
+```reset -I```
 
 # SYNOPSIS
 
@@ -22,7 +30,7 @@ Reinitialize terminal to sane state
 > Display terminal type without reinitializing
 
 **-c**
-> Set control characters to defaults
+> Set control characters and modes
 
 **-e** _ch_
 > Set erase character to _ch_
@@ -37,25 +45,28 @@ Reinitialize terminal to sane state
 > Do not send terminal initialization strings
 
 **-Q**
-> Do not display control characters
+> Do not display values for erase, interrupt, and line kill characters
 
 **-r**
-> Print terminal reset string to stdout
+> Print terminal type to stderr
 
 **-s**
 > Print shell commands to set TERM
 
 **-V**
-> Display version
+> Report ncurses version and exit
 
 **-w**
-> Do not resize terminal
+> Resize the window to match the size deduced via setupterm
+
+**-m** _mapping_
+> Specify a mapping from a port type to a terminal
 
 # DESCRIPTION
 
-**reset** reinitializes the terminal to its default state, clearing the screen and resetting terminal settings. It is similar to **tset** but performs a more complete reset, useful when the terminal becomes garbled from viewing binary files or other corruption.
+**reset** reinitializes the terminal to its default state. When invoked as **reset** (as opposed to **tset**), it sets cooked and echo modes, turns off cbreak and raw modes, turns on newline translation, and resets unset special characters to their default values before sending terminal initialization strings. This is useful when the terminal becomes garbled from viewing binary files or other corruption.
 
-The command reads terminfo data for the terminal type (from TERM environment variable) and sends appropriate initialization sequences. It also resets various terminal modes to sane defaults.
+The command reads terminfo data for the terminal type (from TERM environment variable) and sends appropriate initialization sequences. If neither **-c** nor **-w** is given, both are assumed.
 
 # CAVEATS
 

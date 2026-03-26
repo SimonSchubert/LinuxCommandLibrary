@@ -12,7 +12,7 @@ Community package manager for all Linux distros
 
 ```lure upgrade```
 
-**Search** for a package in LURE repos
+**Show information** about a package
 
 ```lure info [package]```
 
@@ -108,4 +108,4 @@ LURE was created to solve the problem of packaging software for multiple Linux d
 
 # SEE ALSO
 
-[yay](/man/yay)(1), [pacman](/man/pacman)(8), [apt](/man/apt)(8), [dnf](/man/dnf)(8)
+[yay](/man/yay)(1), [pacman](/man/pacman)(8), [apt](/man/apt)(8), [dnf](/man/dnf)(8), [zypper](/man/zypper)(8)

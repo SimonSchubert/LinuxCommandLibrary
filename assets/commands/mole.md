@@ -6,47 +6,68 @@ CLI application to easily create SSH tunnels
 
 **Create a local SSH tunnel**
 
-```mole new -source :[local_port] -destination [host]:[port] -server [user]@[ssh_server]```
+```mole start local --source :[local_port] --destination [host]:[port] --server [user]@[ssh_server]```
 
-**Create a tunnel with auto-selected local port**
+**Create a tunnel with verbose output**
 
-```mole new -destination [host]:[port] -server [user]@[ssh_server]```
+```mole start local --verbose --source :[local_port] --destination [host]:[port] --server [user]@[ssh_server]```
 
-**Create multiple tunnels** through one connection
+**Create a tunnel using a specific SSH key**
 
-```mole new -destination [host1]:[port1] -destination [host2]:[port2] -server [user]@[ssh_server]```
+```mole start local --source :[local_port] --destination [host]:[port] --server [user]@[ssh_server] --key [~/.ssh/id_rsa]```
 
-**Save a tunnel alias**
+**Save a tunnel as an alias for reuse**
 
-```mole new -alias [name] -destination [host]:[port] -server [user]@[ssh_server]```
+```mole add alias local [name] --source :[local_port] --destination [host]:[port] --server [user]@[ssh_server]```
 
-**Start a saved tunnel**
+**Start a saved tunnel alias**
 
-```mole start [name]```
+```mole start alias [name]```
+
+**Show all saved aliases**
+
+```mole show alias```
 
 # SYNOPSIS
 
-**mole** _command_ [_options_]
+**mole** _command_ [_subcommand_] [_options_]
 
 # PARAMETERS
 
-**-source** _:[PORT]_
-> Local port to listen on. Auto-selected if not specified.
+**--source** _[HOST:]PORT_
+> Local address and port to listen on. Auto-selected if not specified.
 
-**-destination** _HOST:PORT_
+**--destination** _HOST:PORT_
 > Remote destination to forward to.
 
-**-server** _USER@HOST_
+**--server** _USER@HOST[:PORT]_
 > SSH server to tunnel through.
 
-**-alias** _NAME_
-> Save the tunnel configuration under an alias.
+**--key** _path_
+> Path to the SSH private key file.
+
+**--verbose**
+> Enable verbose logging output.
+
+**--detach**
+> Run mole in the background.
+
+**--insecure**
+> Skip SSH host key validation.
+
+**--connection-retries** _N_
+> Number of reconnection attempts if the SSH connection drops.
+
+**--retry-wait** _duration_
+> Time to wait between reconnection attempts.
 
 # DESCRIPTION
 
-**mole** is a CLI application for creating SSH tunnels with a focus on resiliency and user experience. It forwards local ports to remote addresses through SSH servers, supports multiple tunnels over a single connection, and leverages SSH config file settings.
+**mole** is a CLI application for creating SSH tunnels focused on resiliency and user experience. It forwards local ports to remote addresses through SSH servers, supports multiple tunnels over a single connection, and leverages SSH config file settings.
 
-Tunnel configurations can be saved as aliases for quick reuse.
+Subcommands include **start** (start a tunnel or alias), **add** (save a tunnel alias), **delete** (remove an alias), **show** (display alias details), **stop** (stop a running tunnel), and **version**.
+
+Mole keeps idle connections alive with synthetic packets and automatically reconnects if the SSH connection drops. Tunnel configurations can be saved as aliases for quick reuse.
 
 # CAVEATS
 
