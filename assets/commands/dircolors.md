@@ -53,6 +53,14 @@ color scheme configurator for ls
 
 Typically invoked in shell configuration files: **eval "$(dircolors)"**.
 
+# CAVEATS
+
+Output must be evaluated by the shell (e.g., `eval "$(dircolors)"`) to take effect. The default database covers common file types; customize with `dircolors -p > ~/.dircolors` and edit. Only affects tools that read LS_COLORS (primarily GNU ls and compatible tools).
+
+# HISTORY
+
+**dircolors** is part of GNU coreutils and has been included in Linux distributions since the early days of colorized terminal output.
+
 # SEE ALSO
 
 [ls](/man/ls)(1), [dir](/man/dir)(1)

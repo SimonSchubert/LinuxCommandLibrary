@@ -16,6 +16,10 @@ Display help pages for zsh builtins
 
 ```run-help grep```
 
+**Display subcommand-aware help for git** (requires autoload)
+
+```run-help-git [subcommand]```
+
 **Invoke help while typing** (default binding)
 
 > Press **ESC h** or **Alt+h** at the command line

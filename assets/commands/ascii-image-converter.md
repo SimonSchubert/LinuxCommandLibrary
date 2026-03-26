@@ -1,38 +1,34 @@
 # TAGLINE
 
-Transform images into ASCII art for terminal display.
+Transform images into ASCII art for terminal display
 
 # TLDR
 
-**Convert** image to ASCII
+**Convert image to ASCII art**
 
 ```ascii-image-converter [image.png]```
 
-Convert with **color**
+**Convert with color output**
 
 ```ascii-image-converter -C [image.png]```
 
-Convert with **specific width**
+**Convert with specific width**
 
 ```ascii-image-converter -W [80] [image.png]```
 
-Save to **file**
-
-```ascii-image-converter [image.png] > [output.txt]```
-
-Use **custom character map** (darkest to lightest)
-
-```ascii-image-converter -m " .:-=+*#%@" [image.png]```
-
-Convert using **braille** characters
+**Convert using braille characters**
 
 ```ascii-image-converter -b [image.png]```
 
-Set **specific dimensions** (width,height)
+**Use a custom character map** (darkest to lightest)
 
-```ascii-image-converter -d [80],[40] [image.png]```
+```ascii-image-converter -m " .:-=+*#%@" [image.png]```
 
-Save as **PNG image**
+**Fit output to terminal width**
+
+```ascii-image-converter -f [image.png]```
+
+**Save output as PNG image**
 
 ```ascii-image-converter -s [output_dir] -C [image.png]```
 

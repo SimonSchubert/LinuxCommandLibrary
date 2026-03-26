@@ -16,7 +16,11 @@ Cross-shell customizable prompt in Rust
 
 ```starship init fish | source```
 
-**Print configuration**
+**Initialize for PowerShell**
+
+```Invoke-Expression (&starship init powershell)```
+
+**Print current configuration**
 
 ```starship print-config```
 
@@ -24,15 +28,15 @@ Cross-shell customizable prompt in Rust
 
 ```starship preset [pastel-powerline] > ~/.config/starship.toml```
 
-**Display prompt**
+**List available presets**
 
-```starship prompt```
+```starship preset --list```
 
-**Explain prompt segments**
+**Explain active prompt segments**
 
 ```starship explain```
 
-**Time prompt rendering**
+**Show prompt rendering times**
 
 ```starship timings```
 

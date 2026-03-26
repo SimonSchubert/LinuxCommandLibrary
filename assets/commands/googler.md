@@ -46,10 +46,19 @@ _QUERY_
 > Open in browser.
 
 **-l** _LANG_
-> Language.
+> Language code (e.g., en, fr, de).
 
-**--help**
-> Display help information.
+**-t** _PERIOD_
+> Time filter: h (hour), d (day), w (week), m (month), y (year).
+
+**-c** _COUNTRY_
+> Country code for localized results.
+
+**--json**
+> Output results as JSON.
+
+**--noprompt**
+> Non-interactive mode (no prompt, print results and exit).
 
 # DESCRIPTION
 

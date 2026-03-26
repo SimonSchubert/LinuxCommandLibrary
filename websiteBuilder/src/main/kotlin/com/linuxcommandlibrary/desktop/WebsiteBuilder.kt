@@ -134,7 +134,9 @@ class WebsiteBuilder(
                 val trimmed = line.trim()
                 when {
                     trimmed == "# PRE-INSTALLED" -> currentSection = "pre"
+
                     trimmed == "# INSTALLABLE" -> currentSection = "inst"
+
                     trimmed.isNotEmpty() && !trimmed.startsWith("#") -> {
                         when (currentSection) {
                             "pre" -> preInstalled.add(trimmed)

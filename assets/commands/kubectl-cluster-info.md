@@ -42,6 +42,10 @@ displays the addresses of the control plane and cluster services
 
 **kubectl cluster-info** displays the addresses of the control plane and cluster services. The dump subcommand collects cluster state information for debugging, including logs from all pods and cluster metadata.
 
+# CAVEATS
+
+Requires a valid kubeconfig with access to the cluster. The dump subcommand can produce very large output for clusters with many pods. Use `--namespaces` to limit scope. Dump output may contain sensitive information like environment variables and secrets.
+
 # SEE ALSO
 
 [kubectl](/man/kubectl)(1), [kubectl-get](/man/kubectl-get)(1)

@@ -32,9 +32,13 @@ Python testing framework with fixtures and plugins
 
 ```pytest -s```
 
-**Run tests in parallel**
+**Run tests in parallel** (requires pytest-xdist)
 
 ```pytest -n [4]```
+
+**Run tests matching a marker**
+
+```pytest -m "[slow]"```
 
 # SYNOPSIS
 
@@ -131,4 +135,4 @@ Large test suites need pytest-xdist for reasonable runtime. Fixture complexity c
 
 # SEE ALSO
 
-[python](/man/python)(1), [coverage](/man/coverage)(1), [tox](/man/tox)(1), [unittest](/man/unittest)(1)
+[python](/man/python)(1), [coverage](/man/coverage)(1), [tox](/man/tox)(1), [mypy](/man/mypy)(1)

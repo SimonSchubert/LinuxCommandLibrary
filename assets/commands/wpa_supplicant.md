@@ -44,6 +44,11 @@ WPA/WPA2 wireless network authentication
 **-P** _FILE_
 > PID file.
 
+# CONFIGURATION
+
+**/etc/wpa_supplicant/wpa_supplicant.conf**
+> Main configuration file containing network definitions, global settings, and credentials. Generate with **wpa_passphrase**.
+
 # DESCRIPTION
 
 **wpa_supplicant** is the standard wireless network authentication daemon for Linux systems. It implements WPA, WPA2, and WPA3 security protocols, handling the key negotiation and authentication process required to connect to protected wireless networks.
@@ -54,7 +59,7 @@ On most desktop Linux systems, wpa_supplicant runs as a backend service managed 
 
 # CAVEATS
 
-Root required. Config file syntax. Usually managed by NM.
+Requires root privileges. The configuration file contains plaintext passwords and should have restricted permissions (600). On most desktop systems, wpa_supplicant is managed by NetworkManager or systemd-networkd rather than run directly. Running multiple instances on the same interface will cause conflicts.
 
 # HISTORY
 

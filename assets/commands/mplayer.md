@@ -56,22 +56,34 @@ _FILE_
 **-ss** _TIME_
 > Seek to position.
 
-**--help**
-> Display help information.
+**-dumpaudio**
+> Dump raw audio stream to a file.
+
+**-dumpfile** _FILE_
+> Filename for dumped audio/video stream.
+
+**-speed** _FACTOR_
+> Playback speed multiplier (0.01-100, default: 1.0).
+
+**-quiet**
+> Suppress most status messages.
+
+**-identify**
+> Print media properties (useful for scripting).
 
 # DESCRIPTION
 
-**mplayer** is a powerful media player. It plays almost any audio and video format.
+**mplayer** is a powerful, command-line media player that supports a vast range of audio and video formats. It uses FFmpeg's libavcodec and libavformat for decoding, along with native codecs for some formats.
 
-The tool supports many codecs. Keyboard controlled with extensive command-line options.
+Keyboard shortcuts control playback: arrow keys seek, **p** pauses, **q** quits, **f** toggles fullscreen, and **+/-** adjusts audio delay. The player can also be controlled via a FIFO pipe or slave mode for scripting.
 
 # CAVEATS
 
-Legacy player. Consider mpv as successor. Keyboard controls in terminal.
+MPlayer is considered legacy software; **mpv** is its actively maintained successor with a modern codebase. Some distributions no longer package MPlayer. Configuration files are in **~/.mplayer/**.
 
 # HISTORY
 
-MPlayer was created in **2000** as an open-source media player, becoming foundational for mpv and others.
+**MPlayer** was started by **Árpád Gereöffy** in **2000**. It became one of the most popular open-source media players on Linux and influenced several successors including **mpv** (forked in 2013) and **MPlayer2**.
 
 # SEE ALSO
 

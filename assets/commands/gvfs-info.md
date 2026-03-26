@@ -52,11 +52,7 @@ The tool accesses files through GVFS backends, providing unified information acr
 
 # CAVEATS
 
-Deprecated in favor of gio info. GNOME dependencies. Requires running GVFS daemon.
-
-# HISTORY
-
-gvfs-info was developed as part of **GVFS** for GNOME, now largely replaced by the **gio** command.
+Deprecated since GNOME 3.22 in favor of **gio info**. Requires the GVFS daemon to be running. Only available on systems with the GNOME/GLib stack.
 
 # SEE ALSO
 

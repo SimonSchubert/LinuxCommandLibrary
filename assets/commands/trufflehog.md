@@ -96,6 +96,9 @@ Secret and credential scanner for code
 **--max-depth** _NUM_
 > Maximum commit history depth.
 
+**--no-verification**
+> Skip credential verification against services.
+
 # DESCRIPTION
 
 **trufflehog** finds secrets and credentials in code repositories, filesystems, and cloud storage. It uses hundreds of detectors for API keys, passwords, and tokens.

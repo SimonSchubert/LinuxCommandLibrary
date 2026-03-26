@@ -46,17 +46,17 @@ OAuth2 CLI client
 
 # DESCRIPTION
 
-**oauth2c** is an OAuth2 CLI client. Obtains access tokens interactively.
+**oauth2c** is an OAuth2 CLI client that obtains access tokens using various OAuth2 grant types. It supports authorization code, client credentials, device code, and other standard flows.
 
-The tool supports various OAuth2 flows. Useful for API testing.
+The tool is useful for testing OAuth2-protected APIs, debugging authentication flows, and scripting token acquisition. It opens a browser for authorization code flows and displays the obtained token on stdout.
 
 # CAVEATS
 
-Requires OAuth2 client credentials. Security-sensitive operations.
+Requires valid OAuth2 client credentials (client ID and secret). The authorization code flow opens a browser and starts a local server for the redirect URI. Tokens are printed to stdout and should be handled securely. Some grant types require the redirect URI to be pre-registered with the authorization server.
 
 # HISTORY
 
-oauth2c was created to provide **command-line OAuth2** authentication for developers.
+**oauth2c** was created by **Cloudentity** to simplify OAuth2 token acquisition from the command line, supporting the full range of OAuth2 grant types.
 
 # SEE ALSO
 

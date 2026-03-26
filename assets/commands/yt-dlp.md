@@ -85,6 +85,15 @@ Feature-rich video downloader fork
 **--playlist-items** _ITEMS_
 > Playlist items to download (e.g., 1,3,5-10)
 
+**--cookies-from-browser** _BROWSER_
+> Extract cookies from browser (chrome, firefox, edge, safari, etc.)
+
+**--limit-rate** _RATE_
+> Limit download speed (e.g., 50K, 4.2M)
+
+**--sponsorblock-mark** _CATS_
+> Mark SponsorBlock categories in video chapters (sponsor, intro, outro, etc.)
+
 **-U**, **--update**
 > Update yt-dlp
 

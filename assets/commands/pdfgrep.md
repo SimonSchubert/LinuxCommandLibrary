@@ -8,113 +8,167 @@ searches for text patterns in PDF files, similar to grep but for PDFs
 
 ```pdfgrep "[pattern]" [file.pdf]```
 
+**Case-insensitive search showing page numbers**
+
+```pdfgrep -in "[pattern]" [file.pdf]```
+
 **Search recursively in directory**
 
 ```pdfgrep -r "[pattern]" [/path/to/pdfs/]```
 
-**Case-insensitive search**
+**Count matches per file**
 
-```pdfgrep -i "[pattern]" [file.pdf]```
-
-**Show page numbers**
-
-```pdfgrep -n "[pattern]" [file.pdf]```
-
-**Show context lines**
-
-```pdfgrep -C [2] "[pattern]" [file.pdf]```
-
-**Count matches**
-
-```pdfgrep -c "[pattern]" [file.pdf]```
-
-**Search with extended regex**
-
-```pdfgrep -E "[pattern1|pattern2]" [file.pdf]```
+```pdfgrep -c "[pattern]" [*.pdf]```
 
 **Print only filenames with matches**
 
 ```pdfgrep -l "[pattern]" [*.pdf]```
 
+**Search with multiple patterns**
+
+```pdfgrep -e "[pattern1]" -e "[pattern2]" [file.pdf]```
+
+**Limit search to a page range**
+
+```pdfgrep --page-range=[1-10] "[pattern]" [file.pdf]```
+
+**Print only the matched text**
+
+```pdfgrep -o "[pattern]" [file.pdf]```
+
 # SYNOPSIS
 
-**pdfgrep** [_-inrcl_] [_-C num_] [_-p pages_] [_pattern_] _files_
+**pdfgrep** [_OPTIONS_] _PATTERN_ _FILE_...
+
+**pdfgrep** [_OPTIONS_] {**-e** _PATTERN_|**-f** _FILE_}... _FILE_...
+
+**pdfgrep** [_OPTIONS_] **-r**|**-R** _PATTERN_ [_FILE_|_DIR_...]
 
 # PARAMETERS
+
+**-e** _PATTERN_, **--regexp**=_PATTERN_
+> Specify a search pattern. Can be used multiple times to match any of several patterns.
+
+**-f** _FILE_, **--file**=_FILE_
+> Read patterns from a file, one per line.
 
 **-i**, **--ignore-case**
 > Case-insensitive matching.
 
-**-n**, **--page-number**
-> Print page numbers.
-
-**-c**, **--count**
-> Print match count only.
-
-**-l**, **--files-with-matches**
-> Print only matching filenames.
-
-**-L**, **--files-without-match**
-> Print only non-matching filenames.
-
-**-r**, **--recursive**
-> Search directories recursively.
-
-**-R**
-> Follow symlinks when recursive.
-
-**-E**, **--extended-regexp**
-> Use extended regular expressions.
+**-F**, **--fixed-strings**
+> Treat the pattern as a fixed string (no regular expression interpretation).
 
 **-P**, **--perl-regexp**
-> Use Perl-compatible regular expressions.
+> Use Perl-compatible regular expressions (PCRE2).
 
-**-C** _NUM_, **--context** _NUM_
-> Print NUM lines of context.
+**-n**, **--page-number**[=_TYPE_]
+> Prefix each match with its page number. _TYPE_ is `index` (default) or `label`.
 
-**-A** _NUM_, **--after-context** _NUM_
-> Print NUM lines after match.
+**-c**, **--count**
+> Print match count per file instead of matched lines.
 
-**-B** _NUM_, **--before-context** _NUM_
-> Print NUM lines before match.
+**-p**, **--page-count**
+> Print match count per page (implies **-n**).
 
-**-p** _RANGE_, **--page-range** _RANGE_
-> Limit search to page range (e.g., 1-10,15).
+**-l**, **--files-with-matches**
+> Print only filenames that contain a match.
 
-**-m** _NUM_, **--max-count** _NUM_
-> Stop after NUM matches.
+**-L**, **--files-without-match**
+> Print only filenames that contain no match.
 
-**--include** _GLOB_
-> Only search files matching pattern.
+**-o**, **--only-matching**
+> Print only the matched portion of each line.
 
-**--password** _PASS_
-> PDF password.
+**-H**, **--with-filename**
+> Print the filename with each match (default when searching multiple files).
+
+**-h**, **--no-filename**
+> Suppress filename prefix in output.
+
+**-Z**, **--null**
+> Use a null byte instead of a colon to separate the filename from the rest of the output line. Useful for filenames containing colons or spaces.
+
+**--match-prefix-separator** _SEP_
+> Use _SEP_ as the separator between the match prefix (filename, page number) and the matched line, instead of the default colon.
+
+**-r**, **--recursive**
+> Search all PDF files under each directory recursively. Symlinks are followed only when specified on the command line.
+
+**-R**, **--dereference-recursive**
+> Like **-r**, but follow all symlinks.
+
+**--include**=_GLOB_
+> Only search files whose names match _GLOB_ (default: `*.pdf`).
+
+**--exclude**=_GLOB_
+> Skip files whose names match _GLOB_.
+
+**-A** _NUM_, **--after-context**=_NUM_
+> Print _NUM_ lines of context after each match.
+
+**-B** _NUM_, **--before-context**=_NUM_
+> Print _NUM_ lines of context before each match.
+
+**-C** _NUM_, **--context**=_NUM_
+> Print _NUM_ lines of context before and after each match.
+
+**--page-range**=_RANGE_
+> Limit the search to the specified page range (e.g., `1-10,15`).
+
+**-m** _NUM_, **--max-count**=_NUM_
+> Stop after _NUM_ matches per file.
+
+**--password**=_PASSWORD_
+> Use _PASSWORD_ to decrypt a password-protected PDF.
 
 **--color** _WHEN_
-> Colorize output: auto, always, never.
+> Colorize output: `auto` (default), `always`, or `never`.
+
+**--cache**
+> Cache rendered page text to speed up repeated searches on the same files.
+
+**--unac**
+> Remove accents and ligatures from both the search pattern and the document text. Useful for matching words like "ae" against the ligature "æ".
+
+**--warn-empty**
+> Warn when a PDF contains no searchable text (e.g., scanned images without OCR).
 
 **-q**, **--quiet**
-> Suppress output.
+> Suppress all output. Exit status indicates whether a match was found.
+
+**-V**, **--version**
+> Print version information.
 
 # DESCRIPTION
 
-**pdfgrep** searches for text patterns in PDF files, similar to grep but for PDFs. It extracts text from PDF content and applies regular expression matching.
+**pdfgrep** searches for text patterns in PDF files using the Poppler library for text extraction. It provides a familiar grep-like interface for PDF documents.
 
-The tool handles the complexity of PDF text extraction transparently. Text from multiple columns, pages, and formatting is processed into searchable strings. Results show the matching text with optional context.
+Text is extracted from each page and matched against the given regular expression. By default pdfgrep uses PCRE2 for pattern matching. Fixed-string matching is available via **-F**.
 
-Page number display (-n) helps locate matches in documents. Page range limiting (-p) speeds searches in large documents. Context lines (-C) show surrounding text for understanding matches.
+Page number output (**-n**) helps locate matches within a document. Restricting the search to a page range (**--page-range**) speeds up searches on large files. Context lines (**-C**) show surrounding text to aid understanding of a match.
 
-Recursive search (-r) processes directory trees of PDFs. Combined with --include patterns, this enables searching document collections. Output modes include filenames only, counts, and quiet mode for scripting.
+Recursive search (**-r**) processes entire directory trees. Combined with **--include** and **--exclude**, this enables targeted searches across document collections. Multiple patterns can be specified with repeated **-e** options or read from a file with **-f**.
 
-Regular expression support ranges from basic to Perl-compatible (PCRE). This enables complex pattern matching beyond simple string search.
+The **--unac** option is useful when PDFs use typographic ligatures or accented characters that differ from the search term. The **--cache** option stores extracted text to accelerate repeated searches.
+
+# EXIT STATUS
+
+**0**
+> One or more matches were found.
+
+**1**
+> No matches were found.
+
+**2**
+> An error occurred.
 
 # CAVEATS
 
-Text extraction quality depends on PDF structure. Scanned PDFs require OCR preprocessing. Complex layouts may not extract cleanly. Large PDFs can be slow to process. Encrypted PDFs need password. Some PDF features may not be supported.
+Text extraction quality depends on the PDF's internal structure. Scanned PDFs without embedded text require OCR preprocessing before pdfgrep can search them (use **--warn-empty** to detect such files). Complex multi-column layouts may not extract in reading order. Encrypted PDFs require the correct **--password**.
 
 # HISTORY
 
-**pdfgrep** was developed by **Hans-Peter Deifel** starting around **2010**. It fills the gap between general-purpose grep and PDF-specific tools, providing a familiar interface for PDF text search. The project uses the Poppler library for PDF handling.
+**pdfgrep** was written by **Hans-Peter Deifel** starting around **2010**. It uses the Poppler library for PDF parsing and provides a grep-compatible interface for searching PDF text content.
 
 # SEE ALSO
 

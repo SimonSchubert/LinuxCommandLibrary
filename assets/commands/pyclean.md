@@ -46,11 +46,11 @@ The tool is part of Debian's Python packaging infrastructure and can target spec
 
 # CAVEATS
 
-Debian utility. Removes compiled Python files.
+Primarily a Debian/Ubuntu utility (part of the **python-minimal** package). Python automatically regenerates .pyc files on next import, so removal is safe but causes a brief slowdown on first run. The `-p` flag only works with Debian packages.
 
 # HISTORY
 
-pyclean is a **Debian utility** for Python bytecode cleanup.
+**pyclean** is part of Debian's Python packaging infrastructure, designed to clean up bytecode files during package upgrades and removals.
 
 # SEE ALSO
 

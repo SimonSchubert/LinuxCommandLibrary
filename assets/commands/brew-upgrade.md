@@ -8,25 +8,25 @@ Upgrade installed Homebrew packages to newer versions
 
 ```brew upgrade```
 
-**Upgrade specific formula**
+**Upgrade a specific formula**
 
 ```brew upgrade [formula]```
 
-**Upgrade specific cask**
+**Upgrade a specific cask**
 
 ```brew upgrade --cask [cask]```
 
-**Upgrade with verbose output**
-
-```brew upgrade --verbose [formula]```
-
-**Upgrade and display install times**
-
-```brew upgrade --display-times```
-
-**Dry run showing what would be upgraded**
+**Dry run showing what would be upgraded without actually upgrading**
 
 ```brew upgrade --dry-run```
+
+**Also upgrade casks that manage their own updates or track the latest version**
+
+```brew upgrade --greedy```
+
+**Upgrade with verbose output showing verification and post-install steps**
+
+```brew upgrade --verbose [formula]```
 
 # SYNOPSIS
 
@@ -34,48 +34,89 @@ Upgrade installed Homebrew packages to newer versions
 
 # DESCRIPTION
 
-**brew upgrade** upgrades outdated formulae and casks. Without arguments, it upgrades all installed packages. With arguments, it upgrades only the specified packages.
+**brew upgrade** upgrades outdated casks and outdated, unpinned formulae using the same options they were originally installed with. Without arguments, it upgrades all installed packages. With arguments, it upgrades only the specified packages.
 
-The command also handles outdated dependents and dependents with broken linkage automatically.
+Unless **$HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK** is set, **brew upgrade** or **brew reinstall** will be run for outdated dependents and dependents with broken linkage, respectively.
+
+Unless **$HOMEBREW_NO_INSTALL_CLEANUP** is set, **brew cleanup** will then be run for the upgraded formulae or, every 30 days, for all formulae.
 
 # PARAMETERS
 
-**--cask**
-> Treat all arguments as casks
+**--formula**, **--formulae**
+> Treat all named arguments as formulae. If no named arguments are specified, upgrade only outdated formulae.
 
-**--formula**
-> Treat all arguments as formulae
+**--cask**, **--casks**
+> Treat all named arguments as casks. If no named arguments are specified, upgrade only outdated casks.
 
-**--dry-run**
-> Show what would be upgraded without upgrading
+**-n**, **--dry-run**
+> Show what would be upgraded, but do not actually upgrade anything.
 
-**--verbose**
-> Print detailed upgrade information
+**-v**, **--verbose**
+> Print the verification and post-install steps.
+
+**-q**, **--quiet**
+> Make some output more quiet.
+
+**-d**, **--debug**
+> If brewing fails, open an interactive debugging session with access to IRB or a shell inside the temporary build directory.
 
 **--display-times**
-> Print upgrade times for each package
+> Print install times for each package at the end of the run. Enabled by default if **$HOMEBREW_DISPLAY_INSTALL_TIMES** is set.
 
-**--force**
-> Upgrade even if no newer version is available
+**--ask**
+> Ask for confirmation before downloading and upgrading formulae. Print download, install and net install sizes of bottles and dependencies. Enabled by default if **$HOMEBREW_ASK** is set.
 
-**--greedy**
-> Also upgrade casks with auto_updates or version :latest
+**-f**, **--force**
+> Install formulae without checking for previously installed keg-only or non-migrated versions. When installing casks, overwrite existing files (binaries and symlinks are excluded, unless originally from the same cask).
+
+**-g**, **--greedy**
+> Also include casks with **auto_updates true** or **version :latest**. Enabled by default if **$HOMEBREW_UPGRADE_GREEDY** is set.
+
+**--greedy-latest**
+> Also include casks with **version :latest**.
+
+**--greedy-auto-updates**
+> Also include casks with **auto_updates true**.
 
 **--fetch-HEAD**
-> Fetch upstream repository for HEAD installations
+> Fetch the upstream repository to detect if the HEAD installation of the formula is outdated. Otherwise, the repository's HEAD will only be checked for updates when a new stable or development version has been released.
+
+**-s**, **--build-from-source**
+> Compile formula from source even if a bottle is available.
+
+**--force-bottle**
+> Install from a bottle if it exists for the current or newest version of macOS, even if it would not normally be used for installation.
+
+**--skip-cask-deps**
+> Skip installing cask dependencies.
+
+**--overwrite**
+> Delete files that already exist in the prefix while linking.
+
+**--keep-tmp**
+> Retain the temporary files created during installation.
 
 # ENVIRONMENT
 
 **HOMEBREW_NO_INSTALLED_DEPENDENTS_CHECK**
-> Skip upgrading outdated dependents
+> Skip upgrading outdated dependents and dependents with broken linkage.
 
 **HOMEBREW_NO_INSTALL_CLEANUP**
-> Skip automatic cleanup after upgrade
+> Skip automatic cleanup after upgrade.
+
+**HOMEBREW_DISPLAY_INSTALL_TIMES**
+> Enables **--display-times** by default.
+
+**HOMEBREW_ASK**
+> Enables **--ask** by default.
+
+**HOMEBREW_UPGRADE_GREEDY**
+> Enables **--greedy** by default.
 
 # CAVEATS
 
-Cask upgrades may use uninstall/reinstall or content replacement strategy. The content replacement strategy preserves macOS app permissions. Run brew update first to fetch the latest package definitions.
+Run **brew update** first to fetch the latest package definitions before upgrading. Cask upgrades may use an uninstall/reinstall or content replacement strategy depending on the cask. Pinned formulae are never upgraded; use **brew unpin** to allow upgrades.
 
 # SEE ALSO
 
-[brew](/man/brew)(1), [brew-update](/man/brew-update)(1), [brew-outdated](/man/brew-outdated)(1), [brew-install](/man/brew-install)(1)
+[brew](/man/brew)(1), [brew-update](/man/brew-update)(1), [brew-outdated](/man/brew-outdated)(1), [brew-install](/man/brew-install)(1), [brew-reinstall](/man/brew-reinstall)(1), [brew-cleanup](/man/brew-cleanup)(1)

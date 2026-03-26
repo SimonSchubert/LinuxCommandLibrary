@@ -1,38 +1,34 @@
 # TAGLINE
 
-command-line interface for nftables, the modern Linux kernel packet filtering
+command-line interface for nftables packet filtering
 
 # TLDR
 
-**List** current ruleset
+**List current ruleset**
 
 ```sudo nft list ruleset```
 
-**Add** table
+**Add a table**
 
-```sudo nft add table inet filter```
+```sudo nft add table inet [filter]```
 
-**Add** chain
+**Add a chain with a hook**
 
-```sudo nft add chain inet filter input \{ type filter hook input priority 0 \; policy accept \; \}```
+```sudo nft add chain inet [filter] [input] \{ type filter hook input priority 0 \; policy accept \; \}```
 
-**Add** rule for ports
+**Add a rule to accept specific ports**
 
-```sudo nft add rule inet filter input tcp dport \{ ssh, http, https \} accept```
+```sudo nft add rule inet [filter] [input] tcp dport \{ ssh, http, https \} accept```
 
-Add **NAT** masquerade rule
+**Delete a rule by handle**
 
-```sudo nft add rule nat postrouting ip saddr 192.168.0.0/24 masquerade```
+```sudo nft delete rule inet [filter] [input] handle [3]```
 
-Show rule **handles**
+**Flush all rules**
 
-```sudo nft --handle --numeric list chain family table chain```
+```sudo nft flush ruleset```
 
-**Delete** rule
-
-```sudo nft delete rule inet filter input handle 3```
-
-**Save** configuration
+**Save ruleset to file**
 
 ```sudo nft list ruleset > /etc/nftables.conf```
 
@@ -42,7 +38,9 @@ Show rule **handles**
 
 # DESCRIPTION
 
-**nft** is the command-line interface for nftables, the modern Linux kernel packet filtering framework. It replaces iptables, ip6tables, arptables, and ebtables with a unified syntax and improved performance.
+**nft** is the command-line interface for nftables, the modern Linux kernel packet filtering framework that replaces iptables, ip6tables, arptables, and ebtables with a unified syntax and improved performance.
+
+nftables uses a hierarchy of tables, chains, and rules. Address families include **inet** (IPv4+IPv6), **ip** (IPv4 only), **ip6** (IPv6 only), **bridge**, **arp**, and **netdev**. Rules can be loaded from files using `nft -f /etc/nftables.conf`.
 
 # PARAMETERS
 

@@ -4,17 +4,21 @@ Enhanced interactive Python interpreter
 
 # TLDR
 
-**Start** interactive Python
+**Start interactive Python session**
 
 ```bpython```
 
-**Run** with specific Python version
+**Execute a script then enter interactive mode**
 
-```bpython3```
+```bpython -i [script.py]```
 
-**Execute** file
+**Execute a command**
 
-```bpython [script.py]```
+```bpython -c "[print('hello')]"```
+
+**Start without banner**
+
+```bpython -q```
 
 # SYNOPSIS
 

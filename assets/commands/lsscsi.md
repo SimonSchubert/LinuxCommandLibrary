@@ -4,17 +4,29 @@ lists SCSI devices and their attributes
 
 # TLDR
 
-**List** SCSI devices
+**List all SCSI devices**
 
 ```lsscsi```
 
-Show **detailed** attributes
+**Show disk capacities**
+
+```lsscsi -s```
+
+**Show detailed attributes**
 
 ```lsscsi -L```
 
-Show **disk capacity**
+**Show transport information** (SAS, SATA, USB, etc.)
 
-```lsscsi -s```
+```lsscsi -t```
+
+**List SCSI hosts**
+
+```lsscsi -H```
+
+**Show generic device names** (sg*)
+
+```lsscsi -g```
 
 # SYNOPSIS
 

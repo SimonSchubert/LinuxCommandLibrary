@@ -68,19 +68,15 @@ validates Prometheus alerting and recording rules
 
 # DESCRIPTION
 
-**pint** validates Prometheus alerting and recording rules. It catches errors before deployment.
+**pint** validates Prometheus alerting and recording rules, catching errors before deployment. It goes beyond basic syntax checking by querying a live Prometheus server to verify that referenced metrics actually exist and that selectors return data.
 
-Syntax checking validates PromQL queries. Invalid queries won't load in Prometheus.
+Key capabilities include: PromQL syntax validation, series existence checks against live Prometheus, alert template validation (annotation and label rendering), duplicate rule detection, and cost estimation for expensive queries.
 
-Live checking queries actual Prometheus. This verifies metrics exist and selectors match.
-
-Template validation catches annotation and label errors. Alert messages are verified.
-
-Watch mode monitors rule files. Changes trigger immediate re-checking.
+The **ci** mode is designed for pull request workflows — it only reports problems in changed files, making it practical for large rule repositories. The **watch** mode continuously monitors rule files and re-checks on changes.
 
 # CAVEATS
 
-Live checks need Prometheus access. Some checks have false positives. Configuration complexity.
+Live checks require network access to a Prometheus server. Some checks may produce false positives for metrics that are intermittently scraped. Configuration is required to connect pint to Prometheus instances.
 
 # HISTORY
 

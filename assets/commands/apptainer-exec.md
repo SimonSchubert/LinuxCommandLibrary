@@ -22,7 +22,7 @@ Execute a command within an Apptainer container.
 
 **Execute from Docker Hub** image
 
-```apptainer exec docker://[ubuntu:latest] [cat /etc/os-release]```
+```apptainer exec docker://[image:tag] [command]```
 
 **Run with isolated network**
 
@@ -32,9 +32,9 @@ Execute a command within an Apptainer container.
 
 ```apptainer exec --env [VAR=value] [container.sif] [command]```
 
-**Run with all host filesystems bound**
+**Run in a writable sandbox directory**
 
-```apptainer exec --bind /:/host:ro [container.sif] [command]```
+```apptainer exec --writable [sandbox/] [command]```
 
 # SYNOPSIS
 
@@ -58,7 +58,7 @@ Execute a command within an Apptainer container.
 > Use minimal /dev and empty other directories.
 
 **--containall**, **-C**
-> Full isolation: contain plus clean environment and no PID namespace.
+> Full isolation: contain filesystems plus new PID and IPC namespaces and clean environment.
 
 **--cleanenv**, **-e**
 > Clean environment before running container.
@@ -72,8 +72,8 @@ Execute a command within an Apptainer container.
 **--home** _path_
 > Set custom home directory.
 
-**--pwd** _path_
-> Set initial working directory in container.
+**--cwd** _path_
+> Set initial working directory in container. (**--pwd** is a deprecated synonym.)
 
 **--net**
 > Enable network namespace.
@@ -88,7 +88,37 @@ Execute a command within an Apptainer container.
 > Add writable tmpfs overlay.
 
 **--no-mount** _type_
-> Disable specific mount (proc, sys, dev, devpts, home, tmp, cwd).
+> Disable a specific mount point. Valid values: proc, sys, dev, devpts, home, tmp, hostfs, cwd.
+
+**--no-home**
+> Do not mount the user's home directory into the container.
+
+**--writable**, **-w**
+> Make the container filesystem read-write (requires a writable image or sandbox directory).
+
+**--scratch**, **-S** _dir_
+> Include a scratch directory within the container that is linked to a temporary directory on the host.
+
+**--workdir**, **-W** _path_
+> Working directory used for /tmp, /var/tmp, and $HOME overrides when using **--contain** or **--scratch**.
+
+**--ipc**, **-i**
+> Run container in a new IPC namespace.
+
+**--pid**, **-p**
+> Run container in a new PID namespace.
+
+**--userns**, **-u**
+> Run container in a new user namespace.
+
+**--uts**
+> Run container in a new UTS namespace.
+
+**--no-eval**
+> Do not shell-evaluate environment variables or OCI CMD/ENTRYPOINT.
+
+**--fusemount** _spec_
+> Mount a FUSE filesystem inside the container using the format: _type:fuse_command container_path_.
 
 # DESCRIPTION
 
@@ -115,4 +145,4 @@ Apptainer is the continuation of the **Singularity** project after it joined the
 
 # SEE ALSO
 
-[apptainer](/man/apptainer)(1), [apptainer-shell](/man/apptainer-shell)(1), [apptainer-run](/man/apptainer-run)(1), [apptainer-build](/man/apptainer-build)(1), [apptainer-pull](/man/apptainer-pull)(1), [docker](/man/docker)(1)
+[apptainer](/man/apptainer)(1), [apptainer-shell](/man/apptainer-shell)(1), [apptainer-run](/man/apptainer-run)(1), [apptainer-build](/man/apptainer-build)(1), [apptainer-pull](/man/apptainer-pull)(1), [apptainer-overlay](/man/apptainer-overlay)(1), [docker](/man/docker)(1)

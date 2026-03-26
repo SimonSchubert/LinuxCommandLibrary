@@ -4,13 +4,21 @@ Quick WireGuard VPN tunnel setup
 
 # TLDR
 
-**Set up** a VPN tunnel
+**Bring up a WireGuard tunnel**
 
-```wg-quick up [interface_name]```
+```sudo wg-quick up [wg0]```
 
-**Delete** a VPN tunnel
+**Tear down a WireGuard tunnel**
 
-```wg-quick down [interface_name]```
+```sudo wg-quick down [wg0]```
+
+**Bring up a tunnel from a specific config file**
+
+```sudo wg-quick up [/etc/wireguard/wg0.conf]```
+
+**Save current interface state to config**
+
+```sudo wg-quick save [wg0]```
 
 # SYNOPSIS
 
@@ -39,6 +47,10 @@ Configuration files are named **[interface].conf** (e.g., **/etc/wireguard/wg0.c
 # CAVEATS
 
 Requires root privileges. Configuration files must exist in **/etc/wireguard/**. The script modifies routing tables and may affect network connectivity. DNS changes require resolvconf or systemd-resolved support.
+
+# HISTORY
+
+**wg-quick** is part of the WireGuard tools, created by **Jason A. Donenfeld**. WireGuard was initially developed as a Linux kernel module and merged into the mainline Linux kernel in version **5.6** (March 2020). The wg-quick script simplifies the setup that would otherwise require multiple **wg** and **ip** commands.
 
 # SEE ALSO
 

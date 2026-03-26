@@ -1,79 +1,59 @@
 # TAGLINE
 
-kubeflow provides machine learning toolkits on Kubernetes
+Kubeflow Pipelines CLI for managing ML workflows on Kubernetes
 
 # TLDR
 
-**Install Kubeflow on cluster**
+**Create a pipeline run from a compiled pipeline**
 
-```kfctl apply -f [kfctl_config.yaml]```
-
-**Deploy using manifest**
-
-```kubectl apply -k [manifests/]```
-
-**Check Kubeflow pods**
-
-```kubectl get pods -n kubeflow```
-
-**Port-forward to dashboard**
-
-```kubectl port-forward svc/istio-ingressgateway -n istio-system [8080]:80```
-
-**Submit a pipeline run**
-
-```kfp run submit -e [experiment] -r [run-name] -p [pipeline.yaml]```
+```kfp run create -e [experiment] -r [run-name] -f [pipeline.yaml] --endpoint [http://localhost:8080]```
 
 **List pipelines**
 
-```kfp pipeline list```
+```kfp pipeline list --endpoint [http://localhost:8080]```
 
 **Upload a pipeline**
 
-```kfp pipeline upload -p [pipeline-name] [pipeline.yaml]```
+```kfp pipeline create -p [pipeline-name] [pipeline.yaml]```
 
-**Create experiment**
+**Create an experiment**
 
-```kfp experiment create -n [experiment-name]```
+```kfp experiment create -n [experiment-name] --endpoint [http://localhost:8080]```
+
+**Compile a pipeline from Python**
+
+```kfp dsl compile --py [pipeline.py] --output [pipeline.yaml]```
+
+**Diagnose KFP installation**
+
+```kfp diagnose_me```
 
 # SYNOPSIS
 
-**kfctl** apply|delete|build [_options_]
-
 **kfp** _command_ [_options_]
-
-# KFCTL COMMANDS
-
-**apply** -f _config_
-> Deploy Kubeflow using configuration.
-
-**delete** -f _config_
-> Remove Kubeflow deployment.
-
-**build** -f _config_
-> Generate Kubeflow manifests.
-
-# KFP COMMANDS
-
-**run** submit|list|get
-> Manage pipeline runs.
-
-**pipeline** upload|list|get|delete
-> Manage pipelines.
-
-**experiment** create|list|get|delete
-> Manage experiments.
-
-**component** build
-> Build component from Python function.
-
-**diagnose_me**
-> Diagnose KFP installation.
 
 # PARAMETERS
 
-**-f**, **--file** _config_
-> Configuration file path.
+**run** create|list|get|archive|unarchive|delete
+> Manage pipeline runs.
+
+**recurring-run** create|list|get|enable|disable|delete
+> Manage scheduled recurring runs.
+
+**pipeline** create|create-version|list|list-versions|get|delete
+> Manage pipelines.
+
+**experiment** create|list|get|delete|archive|unarchive
+> Manage experiments.
+
+**dsl** compile
+> Compile a Python pipeline definition to YAML.
+
+**component** build
+> Build a containerized component from a Python function.
+
+**diagnose_me**
+> Run environment diagnostics (GCP-focused).
 
 **-e**, **--experiment** _name_
 > Experiment name or ID.
@@ -81,35 +61,31 @@ kubeflow provides machine learning toolkits on Kubernetes
 **-r**, **--run-name** _name_
 > Name for the run.
 
-**-p**, **--pipeline** _file_
-> Pipeline file or ID.
+**-f**, **--package-file** _file_
+> Compiled pipeline file (YAML).
 
-**-n**, **--namespace** _namespace_
-> Kubernetes namespace.
+**-p**, **--pipeline-name** _name_
+> Pipeline name.
 
 **--endpoint** _url_
-> KFP API endpoint.
+> KFP API endpoint URL.
 
 # DESCRIPTION
 
-Kubeflow provides machine learning toolkits on Kubernetes. **kfctl** deploys Kubeflow components; **kfp** manages ML pipelines.
+**kfp** is the CLI for **Kubeflow Pipelines**, which orchestrates ML workflows as directed acyclic graphs (DAGs) on Kubernetes. Pipelines define reusable components with inputs, outputs, and dependencies.
 
-Installation uses **kfctl** with platform-specific configurations for GKE, EKS, AKS, or vanilla Kubernetes. Modern installations often use kustomize manifests with **kubectl apply**.
+The CLI manages the full pipeline lifecycle: compiling Python pipeline definitions to YAML, uploading pipelines, creating experiments, and submitting runs. It connects to a running KFP backend via the `--endpoint` flag.
 
-Kubeflow Pipelines (**kfp**) orchestrate ML workflows as DAGs. Pipelines define components, inputs, outputs, and dependencies. Submit compiled pipelines (YAML/JSON) to the Pipelines service.
-
-The central dashboard provides access to Notebooks (Jupyter), Pipelines, Katib (hyperparameter tuning), KServe (model serving), and other components.
-
-Experiments organize runs. Each run executes a pipeline version with specific parameters. The UI shows run status, logs, metrics, and artifacts.
+Kubeflow itself is installed using Kustomize manifests via `kubectl apply -k` from the **kubeflow/manifests** repository. The older **kfctl** deployment tool is deprecated and archived.
 
 # CAVEATS
 
-Resource-intensive; requires substantial cluster capacity. Installation complexity varies by platform. Component versions may have compatibility issues. Istio is typically required. Multi-user mode needs additional configuration.
+Resource-intensive; requires a Kubernetes cluster with sufficient capacity. The `diagnose_me` command is GCP-focused. The old `kfp run submit` syntax still works as a deprecated alias for `kfp run create`. Similarly, `kfp pipeline upload` is aliased to `kfp pipeline create`.
 
 # HISTORY
 
-Kubeflow was started at **Google** in **2017** as a way to run TensorFlow on Kubernetes. Open-sourced in **2018**, it expanded to support the full ML lifecycle. Version 1.0 released in **2020**. The project is now a **CNCF sandbox project**. Components have modularized, allowing selective installation. KServe (formerly KFServing) became its own project.
+Kubeflow was started at **Google** in **2017** as a way to run TensorFlow on Kubernetes. Open-sourced in **2018**, it expanded to support the full ML lifecycle. Version 1.0 released in **2020**. The project is a **CNCF incubating project**. The kfp v2 SDK brought a redesigned Python API and CLI with `dsl compile` and simplified component authoring.
 
 # SEE ALSO
 
-[kubectl](/man/kubectl)(1), [mlflow](/man/mlflow)(1), [argo](/man/argo)(1), [kserve](/man/kserve)(1)
+[kubectl](/man/kubectl)(1), [mlflow](/man/mlflow)(1)

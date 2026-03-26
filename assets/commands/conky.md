@@ -4,29 +4,29 @@ lightweight system monitor
 
 # TLDR
 
-Start with **default** configuration
+**Start with default configuration**
 
 ```conky```
 
-Print default **config** to file
+**Print default config to stdout**
 
-```conky -C > ~/.conkyrc```
+```conky -C```
 
-Use specific **configuration file**
+**Use a specific configuration file**
 
-```conky -c path/to/config```
+```conky -c [path/to/config]```
 
-Run as **daemon** in background
+**Run as daemon in background**
 
 ```conky -d```
 
-Set **alignment** on desktop
+**Set update interval** (in seconds)
 
-```conky -a top_right```
+```conky -u [2]```
 
-**Pause** before startup
+**Set alignment on desktop**
 
-```conky -p 5```
+```conky -a [top_right]```
 
 # SYNOPSIS
 
@@ -81,7 +81,7 @@ Set **alignment** on desktop
 
 # CAVEATS
 
-Send SIGUSR1 to reload configuration without restarting. Configuration uses two main sections: conky.config for settings and conky.text for display content.
+Configuration uses Lua syntax with two sections: **conky.config** for settings and **conky.text** for display content. Send **SIGUSR1** to reload configuration without restarting. Requires an X11 or Wayland compositor with X11 support; native Wayland is not supported.
 
 # HISTORY
 

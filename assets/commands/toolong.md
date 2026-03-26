@@ -16,9 +16,27 @@ View, tail, merge, and search log files
 
 ```tail -f [/var/log/syslog] | tl```
 
+**Tail a log file** (start at the end)
+
+```tl --tail [access.log]```
+
 # SYNOPSIS
 
 **tl** [_options_] [_files_...]
+
+# PARAMETERS
+
+**--merge**
+> Merge multiple log files by timestamp.
+
+**--tail**
+> Start at the end of the file.
+
+**-h**, **--help**
+> Display help information.
+
+**-V**, **--version**
+> Display version information.
 
 # DESCRIPTION
 

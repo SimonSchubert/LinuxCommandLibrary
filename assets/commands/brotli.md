@@ -20,9 +20,17 @@ Compress and decompress files with the Brotli algorithm
 
 ```brotli -c [file.txt] > [file.txt.br]```
 
-Set **quality** level (0=fast, 11=best)
+**Compress with fast quality level** (0=fast, 11=best)
 
 ```brotli -q [4] [file.txt]```
+
+**Compress to a specific output file**
+
+```brotli -o [output.br] [file.txt]```
+
+**Test compressed file integrity**
+
+```brotli -t [file.txt.br]```
 
 # SYNOPSIS
 
@@ -71,40 +79,6 @@ The tool supports compression levels from 0 (fast) to 11 (maximum compression).
 
 **-t**, **--test**
 > Test compressed file integrity
-
-# COMPRESSION LEVELS
-
-- **0-3** - Fast, lower compression
-- **4-9** - Balanced
-- **10-11** - Maximum compression, slower
-
-# WORKFLOW
-
-```bash
-# Compress file (original is kept)
-brotli file.txt
-# Creates: file.txt.br
-
-# Decompress
-brotli -d file.txt.br
-
-# Compress and remove original
-brotli --rm file.txt
-
-# Compress with fast setting
-brotli -q 4 file.txt
-
-# Compress to specific output
-brotli -o compressed.br file.txt
-```
-
-# FEATURES
-
-- Better compression than gzip
-- Supported by all modern browsers
-- Dictionary-based compression
-- Optimized for text/web content
-- Backward compatible decompression
 
 # CAVEATS
 

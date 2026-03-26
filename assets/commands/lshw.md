@@ -4,29 +4,33 @@ extracts detailed information about the hardware configuration of the machine
 
 # TLDR
 
-Launch **GUI** (if available)
-
-```sudo lshw -X```
-
-List hardware in **tabular format**
+**List all hardware in compact table**
 
 ```sudo lshw -short```
 
-List **specific class** of hardware
+**Show CPU information**
+
+```sudo lshw -class processor```
+
+**Show disk and storage devices**
 
 ```sudo lshw -class disk -class storage -short```
 
-Save to **HTML/XML/JSON**
+**Show network hardware**
+
+```sudo lshw -class network```
+
+**Output as JSON**
+
+```sudo lshw -json```
+
+**Save network info as HTML**
 
 ```sudo lshw -class network -html > network.html```
 
-List without **sensitive information**
+**Strip sensitive information** (serials, IPs)
 
-```sudo lshw -class network -sanitize```
-
-List a **particular class**
-
-```sudo lshw -class processor```
+```sudo lshw -sanitize```
 
 # SYNOPSIS
 

@@ -82,9 +82,8 @@ Server-side management uses Django's manage.py or the weblate script for databas
 
 # CONFIGURATION
 
-Config file: ~/.config/weblate
-
-Contains server URLs and API keys for authentication.
+**~/.config/weblate**
+> Client configuration containing server URLs and API keys for authentication.
 
 # CAVEATS
 

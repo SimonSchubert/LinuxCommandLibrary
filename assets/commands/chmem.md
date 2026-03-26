@@ -4,23 +4,23 @@ configure memory hotplug state
 
 # TLDR
 
-Set a memory block **offline**
+**Set a memory block offline**
 
 ```sudo chmem -b -d [block_number]```
 
-Set a memory block **online**
+**Set a memory block online**
 
 ```sudo chmem -b -e [block_number]```
 
-Set a memory range **offline** using hexadecimal addresses
+**Set a memory range offline**
 
 ```sudo chmem -d 0x[start_address]-0x[end_address]```
 
-Set a memory range **online** using hexadecimal addresses
+**Set a memory range online**
 
 ```sudo chmem -e 0x[start_address]-0x[end_address]```
 
-Set memory online and assign to a **specific zone**
+**Set memory online in a specific zone**
 
 ```sudo chmem -e 0x[start_address] -z [Movable]```
 

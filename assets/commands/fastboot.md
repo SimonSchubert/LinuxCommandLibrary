@@ -18,7 +18,7 @@ Android bootloader flashing and modification tool
 
 **Unlock bootloader**
 
-```fastboot oem unlock```
+```fastboot flashing unlock```
 
 **Reboot device**
 
@@ -75,6 +75,12 @@ The tool enables installing custom ROMs, recovery images, and performing mainten
 **-s** _serial_
 > Target specific device.
 
+**update** _zipfile_
+> Flash all partitions from an update zip.
+
+**flashing unlock**
+> Unlock the bootloader (newer devices).
+
 **-w**
 > Wipe userdata.
 
@@ -88,4 +94,4 @@ Device must be in fastboot mode. Wrong images can brick device. Unlocking bootlo
 
 # SEE ALSO
 
-[adb](/man/adb)(1), [heimdall](/man/heimdall)(1), [odin](/man/odin)(1)
+[adb](/man/adb)(1)

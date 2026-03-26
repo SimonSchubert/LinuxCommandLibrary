@@ -55,18 +55,30 @@ _PATH_
 **-S**, **--ssl**
 > Enable SSL.
 
-**--help**
-> Display help information.
+**-C** _FILE_
+> SSL certificate file (default: cert.pem).
+
+**-K** _FILE_
+> SSL key file (default: key.pem).
+
+**-o**
+> Open browser after starting.
+
+**-P**, **--proxy** _URL_
+> Proxy unresolvable requests to this URL.
+
+**--no-dotfiles**
+> Do not serve dotfiles.
 
 # DESCRIPTION
 
-**http-server** is a simple static file server. It serves files from a directory over HTTP with no configuration required.
+**http-server** is a simple, zero-configuration static file server for Node.js. It serves files from a directory over HTTP, making it ideal for quickly testing frontend builds, sharing files on a local network, or previewing static sites.
 
-The tool is useful for development, testing, and quick file sharing. It supports SSL, CORS, and basic caching.
+Install via `npm install -g http-server`. Serves the current directory by default on port 8080.
 
 # CAVEATS
 
-Node.js package. Not for production. No authentication.
+Requires Node.js and npm. Not suitable for production use — provides no authentication, rate limiting, or hardened security. For production static file serving, use nginx or a CDN.
 
 # HISTORY
 

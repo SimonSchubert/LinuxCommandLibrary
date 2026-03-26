@@ -95,6 +95,9 @@ The DHCP server provides dynamic and static address assignment with support for 
 **--cache-size=** _n_
 > DNS cache size (default 150).
 
+**--address=** _/domain/address_
+> Return a specific address for all hosts in a domain. Useful for blocking or redirecting.
+
 **--log-queries**
 > Log DNS queries.
 

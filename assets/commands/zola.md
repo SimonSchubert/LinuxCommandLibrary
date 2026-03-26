@@ -116,6 +116,10 @@ No plugin system. Extensibility is limited to shortcodes and templates.
 
 Large sites with many pages may have noticeable build times, though Zola is generally faster than alternatives.
 
+# HISTORY
+
+**Zola** was created by **Vincent Prouillet** and originally named **Gutenberg**. It was renamed to Zola in **2018** (after Emile Zola). Written in Rust, it was designed as a single-binary alternative to static site generators like Hugo and Jekyll, emphasizing simplicity and build speed.
+
 # SEE ALSO
 
 [hugo](/man/hugo)(1), [jekyll](/man/jekyll)(1), [mdbook](/man/mdbook)(1)

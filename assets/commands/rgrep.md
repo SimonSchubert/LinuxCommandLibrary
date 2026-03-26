@@ -35,31 +35,40 @@ Recursive grep through directories
 # PARAMETERS
 
 **-i**
-> Case insensitive.
+> Case insensitive search.
 
 **-n**
 > Show line numbers.
 
 **-l**
-> Files only.
+> Print only names of files with matches.
 
 **-c**
-> Count matches.
+> Print only a count of matching lines per file.
 
 **-v**
-> Invert match.
+> Invert match (select non-matching lines).
 
 **-w**
 > Match whole words only.
+
+**-E**
+> Use extended regular expressions (same as egrep).
+
+**-P**
+> Use Perl-compatible regular expressions.
+
+**--color** _WHEN_
+> Colorize matches: auto, always, or never.
 
 **--exclude-dir** _DIR_
 > Skip directory.
 
 **--include** _GLOB_
-> Include pattern.
+> Search only files matching pattern.
 
 **--exclude** _GLOB_
-> Exclude files matching pattern.
+> Skip files matching pattern.
 
 # DESCRIPTION
 

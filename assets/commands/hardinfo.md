@@ -4,17 +4,21 @@ graphical system information and benchmark tool for Linux
 
 # TLDR
 
-Start **hardinfo** GUI
+**Start the graphical interface**
 
 ```hardinfo```
 
-Print **report** to stdout
+**Generate a text report to stdout**
 
 ```hardinfo -r```
 
-Save report to **HTML file**
+**Generate an HTML report**
 
-```hardinfo -r -f html > hardinfo.html```
+```hardinfo -r -f html > [report.html]```
+
+**List available modules**
+
+```hardinfo -l```
 
 # SYNOPSIS
 

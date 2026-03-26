@@ -1,36 +1,36 @@
 # TAGLINE
 
-gets and sets SATA/IDE hard drive parameters
+Get and set SATA/IDE hard drive parameters
 
 # TLDR
 
-Get device **identification**
+**Get device identification info**
 
-```sudo hdparm -I /dev/sda```
+```sudo hdparm -I [/dev/sda]```
 
-Get **APM** level
+**Test buffered and cached read speed**
 
-```sudo hdparm -B /dev/sda```
+```sudo hdparm -tT [/dev/sda]```
 
-Set **APM** value
+**Get or set write-caching**
 
-```sudo hdparm -B 127 /dev/sda```
+```sudo hdparm -W [1] [/dev/sda]```
 
-Show **power mode**
+**Show current power mode status**
 
-```sudo hdparm -C /dev/sda```
+```sudo hdparm -C [/dev/sda]```
 
-Enter **standby** mode
+**Set Advanced Power Management level** (1-127 allow spindown, 128-254 keep spinning)
 
-```sudo hdparm -y /dev/sda```
+```sudo hdparm -B [127] [/dev/sda]```
 
-Set **idle timeout**
+**Set standby timeout** (value in 5-second increments, 0 to disable)
 
-```sudo hdparm -S 60 /dev/sda```
+```sudo hdparm -S [60] [/dev/sda]```
 
-**Test** read speed
+**Force drive into standby mode**
 
-```sudo hdparm -tT /dev/sda```
+```sudo hdparm -y [/dev/sda]```
 
 # SYNOPSIS
 

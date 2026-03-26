@@ -4,19 +4,19 @@ locate filesystems by label or UUID
 
 # TLDR
 
-Search by filesystem **label**
+**Find device by filesystem label**
 
 ```findfs LABEL=[label]```
 
-Search by filesystem **UUID**
+**Find device by filesystem UUID**
 
 ```findfs UUID=[uuid]```
 
-Search by **partition label** (GPT or MAC)
+**Find device by GPT partition label**
 
 ```findfs PARTLABEL=[partition_label]```
 
-Search by **partition UUID** (GPT only)
+**Find device by GPT partition UUID**
 
 ```findfs PARTUUID=[partition_uuid]```
 

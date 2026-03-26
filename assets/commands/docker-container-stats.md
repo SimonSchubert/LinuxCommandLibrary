@@ -33,13 +33,20 @@ display resource usage statistics for containers
 > Show all containers (default shows running).
 
 **--format** _string_
-> Format output using Go template.
+> Format output using Go template. Placeholders: **.Container**, **.Name**, **.ID**, **.CPUPerc**, **.MemUsage**, **.MemPerc**, **.NetIO**, **.BlockIO**, **.PIDs**.
+
+**--no-trunc**
+> Do not truncate output (show full container IDs).
 
 # DESCRIPTION
 
 **docker container stats** displays a live stream of container resource usage statistics, providing real-time visibility into CPU percentage, memory usage and limit, network I/O, and block I/O for running containers.
 
-By default, the display continuously updates with current metrics for all running containers. The **--no-stream** option provides a single snapshot instead of continuous updates, which is useful for scripting and automation. This command is essential for monitoring container performance and diagnosing resource-related issues.
+By default, the display continuously updates with current metrics for all running containers. The **--no-stream** option provides a single snapshot instead of continuous updates, which is useful for scripting and automation.
+
+# CAVEATS
+
+On Linux, memory usage includes cache by default. Network I/O shows cumulative totals since container start, not per-second rates. Stats are not available for containers using the **host** network mode on some platforms.
 
 # SEE ALSO
 

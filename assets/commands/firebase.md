@@ -87,7 +87,7 @@ The CLI handles project initialization, local development with emulators, and de
 
 # CAVEATS
 
-Requires Node.js. Google account needed for authentication. Some services require billing. Emulators need Java for some services. Project configuration stored in firebase.json.
+Requires Node.js (install via `npm install -g firebase-tools`). A Google account is needed for authentication. Some services (Cloud Functions, extended Firestore usage) require a Blaze billing plan. The emulator suite requires Java for Firestore and Realtime Database emulators.
 
 # HISTORY
 

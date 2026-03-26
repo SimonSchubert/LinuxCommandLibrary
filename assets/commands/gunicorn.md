@@ -84,6 +84,15 @@ python WSGI HTTP server for Unix
 **--preload**
 > Load application code before forking workers.
 
+**--max-requests** _INT_
+> Restart workers after this many requests (0 = disabled). Helps prevent memory leaks.
+
+**--max-requests-jitter** _INT_
+> Random jitter added to max-requests to stagger restarts.
+
+**--keep-alive** _INT_
+> Seconds to wait for requests on a Keep-Alive connection (default: 2).
+
 **-n**, **--name** _STRING_
 > Process name for ps output.
 

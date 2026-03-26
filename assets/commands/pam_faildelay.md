@@ -23,13 +23,13 @@ sets authentication failure delay
 
 # DESCRIPTION
 
-**pam_faildelay** sets authentication failure delay. Adds delay after failed login.
+**pam_faildelay** is a PAM module that sets the delay applied after a failed authentication attempt. It overrides the **FAIL_DELAY** setting in `/etc/login.defs`. The delay is specified in microseconds (1,000,000 = 1 second).
 
-The module slows brute force attacks. Configurable delay time.
+The module is configured in PAM service files (e.g., `/etc/pam.d/login`) and helps mitigate brute-force attacks by slowing down repeated authentication attempts.
 
 # CAVEATS
 
-Delay in microseconds. Affects all failures. May impact user experience.
+The delay is specified in microseconds, not seconds. Setting very long delays may frustrate legitimate users who mistype passwords. The module only affects failures handled by the PAM stack, not application-level authentication.
 
 # HISTORY
 

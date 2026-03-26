@@ -40,9 +40,11 @@ Display Terraform output values
 
 # DESCRIPTION
 
-**terraform output** displays output values from Terraform state. Shows values defined in output blocks. Useful for scripting and passing values to other tools.
+**terraform output** reads output values from the Terraform state file. It displays values defined in `output` blocks of the root module. Useful for scripting, passing values between configurations, and extracting infrastructure details like IP addresses, URLs, or resource IDs.
+
+Use **-raw** to get a bare string suitable for shell scripting (no quotes or formatting). Use **-json** to get machine-readable output including type information. When called without a name, all outputs are displayed.
 
 # SEE ALSO
 
-[terraform](/man/terraform)(1), [terraform-apply](/man/terraform-apply)(1)
+[terraform](/man/terraform)(1), [terraform-apply](/man/terraform-apply)(1), [terraform-plan](/man/terraform-plan)(1)
 

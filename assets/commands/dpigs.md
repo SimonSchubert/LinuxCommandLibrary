@@ -4,21 +4,21 @@ show largest installed packages
 
 # TLDR
 
-Display **n largest** packages
+**Show the 10 largest installed packages**
 
-```dpigs -n [n]```
+```dpigs```
 
-Use **specific status file**
+**Show the N largest packages**
 
-```dpigs -s [path/to/file]```
+```dpigs -n [20]```
 
-Display largest **source packages**
-
-```dpigs -S```
-
-Display in **human-readable** format
+**Show in human-readable format**
 
 ```dpigs -H```
+
+**Show largest source packages**
+
+```dpigs -S```
 
 # SYNOPSIS
 

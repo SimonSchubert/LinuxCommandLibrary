@@ -58,7 +58,7 @@ Rscript is faster and more convenient than the older **R CMD BATCH** approach, a
 
 # CAVEATS
 
-Requires R installation. Package dependencies manual. Memory limits apply.
+Requires a full R installation. Package dependencies must be installed separately (e.g., via `install.packages()`). R's default memory limits apply; use `--max-mem-size` on Windows or `ulimit` on Unix to adjust. The `--vanilla` flag is recommended for reproducible scripts to avoid loading user-specific settings.
 
 # HISTORY
 

@@ -12,9 +12,9 @@ Standalone WebAssembly runtime
 
 ```wasmtime --dir [/path/to/dir] [program.wasm]```
 
-**Invoke a specific function**
+**Invoke a specific exported function**
 
-```wasmtime run --invoke '[add(1, 2)]' [program.wasm]```
+```wasmtime run --invoke [function_name] [program.wasm] [args]```
 
 **Run a WASI HTTP server**
 
@@ -103,4 +103,4 @@ WASI is not fully POSIX-compatible. Some system calls may not be available. Ahea
 
 # SEE ALSO
 
-[wasmer](/man/wasmer)(1), [wasm-tools](/man/wasm-tools)(1), [wasm-pack](/man/wasm-pack)(1)
+[wasmer](/man/wasmer)(1), [wasm-pack](/man/wasm-pack)(1), [wasm-opt](/man/wasm-opt)(1), [wasm-validate](/man/wasm-validate)(1)

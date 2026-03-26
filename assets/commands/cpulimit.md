@@ -4,29 +4,29 @@ throttle process CPU usage
 
 # TLDR
 
-Limit process by **PID** to 25% CPU
+**Limit a process by PID to 25% CPU**
 
-```cpulimit -p 1234 -l 25```
+```cpulimit -p [1234] -l [25]```
 
-Limit by **executable name**
+**Limit by executable name**
 
-```cpulimit -e program -l 25```
+```cpulimit -e [program] -l [25]```
 
-Launch program with **50% limit**
+**Launch a program with 50% CPU limit**
 
-```cpulimit -l 50 -- program arg1 arg2```
+```cpulimit -l [50] -- [program] [arg1] [arg2]```
 
-Run cpulimit in **background**
+**Run cpulimit in background**
 
-```cpulimit -l 50 -b -- program```
+```cpulimit -l [50] -b -- [program]```
 
-**Kill** process if over limit
+**Also throttle child processes**
 
-```cpulimit -l 50 -k -- program```
+```cpulimit -l [25] -m -- [program]```
 
-Throttle process and **child processes**
+**Limit on a multicore system** (200% = 2 full cores)
 
-```cpulimit -l 25 -m -- program```
+```cpulimit -p [1234] -l [200]```
 
 # SYNOPSIS
 
@@ -48,7 +48,7 @@ Throttle process and **child processes**
 > Target process by absolute path to executable
 
 **-l, --limit=N**
-> CPU percentage limit (1-100 per core, mandatory)
+> CPU percentage limit (mandatory). 1-100 per core; on multicore systems, values above 100 are allowed (e.g., 200 for 2 cores).
 
 **-b, --background**
 > Run cpulimit as a background process

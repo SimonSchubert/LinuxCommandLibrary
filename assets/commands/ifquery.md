@@ -4,21 +4,25 @@ queries network interface configuration
 
 # TLDR
 
-**Query interface config**
+**Query configuration** for an interface
 
 ```ifquery [eth0]```
 
-**List configured interfaces**
+**List** all configured interfaces
 
 ```ifquery --list```
 
-**Show all options**
+List interfaces that **are currently up** (from state file)
 
-```ifquery --all [eth0]```
+```ifquery --state```
 
-**State file query**
+Query configuration for a specific **class** of interfaces (e.g. hotplug)
 
-```ifquery --state [eth0]```
+```ifquery --list --allow [hotplug]```
+
+Check the **running state** of an interface against its configuration
+
+```ifquery --check [eth0]```
 
 # SYNOPSIS
 
@@ -27,37 +31,47 @@ queries network interface configuration
 # PARAMETERS
 
 _INTERFACE_
-> Network interface.
+> Network interface name to query.
+
+**-a**, **--all**
+> Query all interfaces marked **auto** in the configuration.
 
 **--list**
-> List interfaces.
-
-**--all**
-> Show all details.
+> List matching interface names instead of printing their configuration. Combine with **--all** or **--allow** to filter.
 
 **--state**
-> Query state file.
+> Query the state file (**/run/network/ifstate**) for currently active interfaces rather than the configuration file.
+
+**--check**
+> Compare running interface state against its configuration and report differences (ifupdown2 only).
 
 **--allow** _CLASS_
-> Filter by class.
+> Only match interfaces in the given allow class (e.g. **auto**, **hotplug**).
 
-**--help**
+**-i**, **--interfaces** _FILE_
+> Read configuration from _FILE_ instead of **/etc/network/interfaces**.
+
+**--force**
+> Force the operation (used with some queries in ifupdown2).
+
+**-V**, **--version**
+> Display version information.
+
+**-h**, **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**ifquery** queries network interface configuration. It reads /etc/network/interfaces and shows interface settings.
+**ifquery** queries network interface configuration as defined in **/etc/network/interfaces** and its **interfaces.d/** drop-in directory. It is read-only and never modifies interface state.
 
-The tool is part of ifupdown package on Debian systems. It helps verify network configuration without changes.
+When called without **--state**, it parses the configuration file and prints the stanzas matching the given interface(s). With **--state**, it reads **/run/network/ifstate** to show which interfaces are currently marked as up.
+
+On systems using **ifupdown2** (common on newer Debian/Ubuntu), additional features are available including **--check** to compare running state against configuration and JSON output.
 
 # CAVEATS
 
-Debian/Ubuntu specific. Part of ifupdown. Reads config only.
-
-# HISTORY
-
-ifquery is part of **ifupdown** for Debian-style network configuration.
+Debian/Ubuntu specific; part of the **ifupdown** (or **ifupdown2**) package. Only reads configuration and state files; never changes anything. The **--check** flag is only available in ifupdown2. Systems using NetworkManager or systemd-networkd may not use **/etc/network/interfaces** at all.
 
 # SEE ALSO
 
-[ifup](/man/ifup)(8), [ifdown](/man/ifdown)(8), [interfaces](/man/interfaces)(5)
+[ifup](/man/ifup)(8), [ifdown](/man/ifdown)(8)

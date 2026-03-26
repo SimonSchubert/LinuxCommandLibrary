@@ -52,10 +52,6 @@ Terminal typing test with language modes
 **-V**, **--version**
 > Display version information.
 
-# LANGUAGES
-
-Built-in language support includes: C, C#, Go, HTML, Java, JavaScript, Python, Ruby, Rust, and common English words.
-
 # DESCRIPTION
 
 **ttyper** is a terminal-based typing test built with Rust and Ratatui. It measures typing speed in words per minute (WPM) and accuracy, providing immediate visual feedback as you type.

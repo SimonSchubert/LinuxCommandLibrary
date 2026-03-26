@@ -4,27 +4,23 @@ Edit libvirt domain XML configuration
 
 # TLDR
 
-List **suboptions** for option
+**List available disk suboptions**
 
-```virt-xml --[option]=?```
+```virt-xml --disk=?```
 
-List **disk/network/boot** suboptions
-
-```virt-xml --disk=? --network=? --boot=?```
-
-**Edit** domain value
-
-```virt-xml [domain] --edit --[option] [suboption]=[new_value]```
-
-Change **description**
+**Edit VM metadata**
 
 ```virt-xml [domain] --edit --metadata description="[new_description]"```
 
-Toggle **boot menu**
+**Toggle boot menu**
 
-```virt-xml [domain] --edit --boot bootmenu=[on|off]```
+```virt-xml [domain] --edit --boot bootmenu=[on]```
 
-**Attach** USB device to running VM
+**Add a disk to a VM**
+
+```virt-xml [domain] --add-device --disk [path=/var/lib/libvirt/images/disk.qcow2]```
+
+**Attach USB device to a running VM**
 
 ```virt-xml [domain] --update --add-device --hostdev [bus].[device]```
 

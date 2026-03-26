@@ -1,60 +1,58 @@
 # TAGLINE
 
-TigerGraph database administration utilities
+Edit and delete Telegram messages from the command line
 
 # TLDR
 
-**Show utility help**
+**Delete all messages matching text in a chat**
 
-```tgutil --help```
+```tgutil -n [session] -u [chat_id] -m deleteall --text "[text]"```
 
-**Backup operation**
+**Edit a specific message**
 
-```tgutil backup```
+```tgutil -n [session] -u [me] -m edit --text "[old text]" --newtext "[new text]"```
 
-**Restore operation**
+**Edit all matching messages**
 
-```tgutil restore```
+```tgutil -n [session] -u [chat_id] -m editall --text "[old text]" --newtext "[new text]"```
 
-**Show status**
+**Delete a single matching message in saved messages**
 
-```tgutil status```
+```tgutil -n [session] -u [me] -m delete --text "[text]"```
 
 # SYNOPSIS
 
-**tgutil** _command_ [_options_]
+**tgutil** **-n** _session_ **-u** _chat_ **-m** _mode_ **--text** _text_ [**--newtext** _text_]
 
 # PARAMETERS
 
-**backup**
-> Backup database.
+**-n**, **--name** _SESSION_
+> Session name (authenticated Telegram account).
 
-**restore**
-> Restore from backup.
+**-u**, **--username** _CHAT_
+> Target chat ID or username. Use `me` for Saved Messages.
 
-**status**
-> Show status.
+**-m**, **--mode** _MODE_
+> Operation mode: `edit`, `editall`, `delete`, `deleteall`.
 
-**--help**
-> Show help.
+**--text** _TEXT_
+> Text to search for in messages.
 
-**--config** _FILE_
-> Config file.
+**--newtext** _TEXT_
+> Replacement text (required for `edit` and `editall` modes).
 
 # DESCRIPTION
 
-**tgutil** provides administrative utilities for TigerGraph graph database installations. It handles core operations including database backup and restore, system status monitoring, and configuration management.
+**tgutil** is a CLI tool for editing and deleting messages in Telegram chats. It is part of the **telegram-cloud** Python package, which provides a suite of tools for interacting with Telegram from the command line.
 
-The tool is used by database administrators to perform maintenance tasks on local TigerGraph deployments, offering command-line access to operations that would otherwise require the web-based admin interface.
+The tool operates in four modes: `edit` modifies the first matching message, `editall` modifies all matching messages, `delete` removes the first matching message, and `deleteall` removes all matching messages containing the specified text.
+
+Install via pip: `pip install telegram-cloud`.
 
 # CAVEATS
 
-TigerGraph required. Admin access needed. Local installation.
-
-# HISTORY
-
-**tgutil** provides utility commands for TigerGraph graph database administration and maintenance.
+Requires prior authentication via **tglogin** with a Telegram API id and hash from https://my.telegram.org. Part of the **telegram-cloud** package. Can only edit or delete your own messages.
 
 # SEE ALSO
 
-[gsql](/man/gsql)(1), [tginfo](/man/tginfo)(1), [tgcloud](/man/tgcloud)(1)
+[tgsend](/man/tgsend)(1), [tgcloud](/man/tgcloud)(1), [tginfo](/man/tginfo)(1)

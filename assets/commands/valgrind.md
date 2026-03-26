@@ -68,6 +68,12 @@ Memory debugging and profiling framework
 **-q**, **--quiet**
 > Less verbose output
 
+**--num-callers=**_N_
+> Maximum stack depth for error reports (default: 12)
+
+**--vgdb=**_yes|no|full_
+> Enable gdb server for debugging under Valgrind
+
 # TOOLS
 
 **memcheck**: Memory error detector (default)

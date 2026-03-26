@@ -41,11 +41,11 @@ Intuitive find-and-replace command-line tool
 **-F**, **--fixed-strings**
 > Treat find and replace patterns as literal strings, not regular expressions
 
-**-p**
+**-p**, **--preview**
 > Preview changes without modifying files
 
-**-i**
-> Modify files in place (default behavior when files are specified)
+**-f**, **--flags** _FLAGS_
+> Regex flags: c (case-sensitive), i (case-insensitive), m (multiline), s (dotall)
 
 **--**
 > End of flags; allows patterns starting with a dash

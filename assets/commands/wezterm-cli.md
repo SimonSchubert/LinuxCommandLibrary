@@ -55,9 +55,20 @@ WezTerm terminal control CLI
 **--config** _key=value_
 > Override configuration.
 
+# CONFIGURATION
+
+**~/.wezterm.lua** or **~/.config/wezterm/wezterm.lua**
+> Lua-based configuration file for keybindings, fonts, colors, multiplexer settings, and SSH domains.
+
 # DESCRIPTION
 
-**wezterm** is a GPU-accelerated terminal emulator with multiplexing. Supports tabs, splits, SSH, and serial connections. Cross-platform with Lua configuration and extensive customization.
+**wezterm** is a GPU-accelerated terminal emulator and multiplexer. It supports tabs, split panes, SSH and serial connections, and image display (sixel, iTerm2 protocol). Configuration is done via Lua scripts, enabling dynamic behavior and complex key mappings.
+
+The `wezterm cli` subcommands control a running wezterm instance, allowing scripted pane management similar to tmux.
+
+# CAVEATS
+
+The `cli` subcommands require a running wezterm instance with the mux server enabled. Lua configuration errors prevent the terminal from starting; use `wezterm --config-file` to test alternate configs.
 
 # SEE ALSO
 

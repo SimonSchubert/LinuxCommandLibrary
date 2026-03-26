@@ -4,25 +4,29 @@ cross-platform build system generator
 
 # TLDR
 
-**Generate** build files
+**Generate build files in a build directory**
 
 ```cmake -B [build]```
 
-**Build** project
+**Build the project**
 
 ```cmake --build [build]```
 
-**Configure** and build
+**Build with a specific build type**
 
-```cmake -B build && cmake --build build```
+```cmake -B [build] -DCMAKE_BUILD_TYPE=[Release]```
 
-**Install** project
+**Build with Ninja generator**
+
+```cmake -B [build] -G Ninja```
+
+**Build in parallel**
+
+```cmake --build [build] -j [8]```
+
+**Install the project**
 
 ```cmake --install [build]```
-
-**Run** tests
-
-```ctest --test-dir [build]```
 
 # SYNOPSIS
 
@@ -60,75 +64,25 @@ CMake is the dominant build system for C and C++ projects, and also supports For
 > Use configure preset
 
 **-j** _N_
-> Parallel build jobs
+> Parallel build jobs (passed to the underlying build tool).
 
-# BUILD TYPES
+**--target** _target_
+> Build a specific target instead of the default.
+
+**--verbose**
+> Enable verbose build output.
+
+**--clean-first**
+> Clean before building.
+
+**-DCMAKE_INSTALL_PREFIX=**_path_
+> Set installation prefix directory.
+
+**-DCMAKE_CXX_COMPILER=**_compiler_
+> Specify the C++ compiler.
 
 **-DCMAKE_BUILD_TYPE=**_type_
-
-- **Debug** - No optimization, debug symbols
-- **Release** - Optimized, no debug symbols
-- **RelWithDebInfo** - Optimized with debug symbols
-- **MinSizeRel** - Optimized for size
-
-# WORKFLOW
-
-```bash
-# Configure (generate build files)
-cmake -B build -DCMAKE_BUILD_TYPE=Release
-
-# Build
-cmake --build build
-
-# Parallel build
-cmake --build build -j 8
-
-# Install
-sudo cmake --install build
-
-# Run tests
-cd build && ctest
-
-# Clean build
-cmake --build build --target clean
-```
-
-# CMAKELISTS.TXT
-
-Simple example:
-```cmake
-cmake_minimum_required(VERSION 3.10)
-project(MyProject)
-
-add_executable(myapp main.cpp utils.cpp)
-target_link_libraries(myapp pthread)
-```
-
-# COMMON OPTIONS
-
-```bash
-# Specify compiler
-cmake -B build -DCMAKE_CXX_COMPILER=clang++
-
-# Set install prefix
-cmake -B build -DCMAKE_INSTALL_PREFIX=/usr/local
-
-# Use Ninja generator
-cmake -B build -G Ninja
-
-# Verbose build
-cmake --build build --verbose
-```
-
-# FEATURES
-
-- Cross-platform builds
-- Out-of-source builds
-- Generator expressions
-- Find modules for libraries
-- Testing support (CTest)
-- Packaging (CPack)
-- IDE integration
+> Build type: Debug, Release, RelWithDebInfo, or MinSizeRel.
 
 # CAVEATS
 

@@ -40,9 +40,6 @@ Register mDNS hostname-to-address mappings
 **-d, --domain=**_DOMAIN_
 > Specify mDNS domain name to register in (defaults to .local)
 
-**-P, --proto=**_PROTO_
-> Specify IP protocol to publish (ipv4, ipv6, or all)
-
 **-R, --no-reverse**
 > Do not publish reverse DNS (PTR) entry for the address
 
@@ -63,7 +60,7 @@ The tool enables local network name resolution by advertising a hostname and its
 
 When invoked, **avahi-publish-address** connects to the Avahi daemon and maintains the hostname-to-address mapping until the process is terminated. The mapping is automatically withdrawn when the process exits.
 
-By default, the tool publishes both forward (name-to-address) and reverse (address-to-name) DNS entries. The reverse entry can be suppressed using the **--no-reverse** option. The protocol can be explicitly specified using **--proto** when needed, though the tool automatically detects the protocol from the address format.
+By default, the tool publishes both forward (name-to-address) and reverse (address-to-name) DNS entries. The reverse entry can be suppressed using the **--no-reverse** option. The protocol (IPv4 or IPv6) is automatically determined from the address format.
 
 The published hostname becomes discoverable by other mDNS-capable devices on the local network segment, including Linux systems with Avahi, macOS systems with Bonjour, and Windows systems with appropriate mDNS support.
 

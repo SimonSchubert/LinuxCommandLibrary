@@ -4,17 +4,17 @@ Manage virtual machines for Podman
 
 # TLDR
 
-**Initialize machine**
+**Initialize a new machine with custom resources**
 
-```podman machine init```
+```podman machine init --cpus [4] --memory [4096] --disk-size [50]```
+
+**Initialize and start immediately**
+
+```podman machine init --now```
 
 **Start machine**
 
 ```podman machine start```
-
-**Stop machine**
-
-```podman machine stop```
 
 **List machines**
 
@@ -23,6 +23,14 @@ Manage virtual machines for Podman
 **SSH into machine**
 
 ```podman machine ssh```
+
+**Inspect machine details as JSON**
+
+```podman machine inspect```
+
+**Modify resources on a stopped machine**
+
+```podman machine set --cpus [8] --memory [8192]```
 
 **Remove machine**
 
@@ -35,34 +43,67 @@ Manage virtual machines for Podman
 # PARAMETERS
 
 **init**
-> Initialize a new machine.
+> Initialize a new virtual machine.
 
 **start**
-> Start machine.
+> Start a virtual machine.
 
 **stop**
-> Stop machine.
+> Stop a virtual machine.
 
 **list**
-> List machines.
+> List virtual machines.
 
 **ssh**
-> SSH into machine.
+> SSH into a virtual machine.
+
+**inspect**
+> Display machine configuration as JSON.
+
+**set**
+> Modify settings on a stopped machine (CPUs, memory, disk, rootful).
 
 **rm**
-> Remove machine.
+> Remove a virtual machine.
+
+**info**
+> Display machine host info (architecture, OS, VM provider).
+
+**reset**
+> Remove all machines, configurations, and cached images.
+
+**os** apply|upgrade
+> Manage the VM operating system image.
 
 **--cpus** _n_
-> Number of CPUs (init).
+> Number of CPUs (init, set).
 
 **--memory** _mb_
-> Memory in MB (init).
+> Memory in MiB (init, set).
+
+**--disk-size** _gb_
+> Disk size in GiB (init, set — expand only).
+
+**--rootful**
+> Prefer rootful container execution (init, set).
+
+**--now**
+> Start machine immediately after init.
+
+**--volume** _src:dst_
+> Mount a host directory into the VM (init).
 
 # DESCRIPTION
 
-**podman machine** manages virtual machines for running Podman on macOS and Windows. Creates a Linux VM to run containers. Required on non-Linux systems since containers need a Linux kernel.
+**podman machine** manages Linux virtual machines for running Podman on macOS and Windows. Since containers require a Linux kernel, this command creates and manages a VM that runs the Podman service.
+
+The VM provider is selected automatically based on the platform: Apple Hypervisor on macOS, WSL or Hyper-V on Windows, and QEMU on Linux. Use `--provider` at init time to override. The `set` subcommand allows modifying CPU, memory, and disk on stopped machines.
+
+# CAVEATS
+
+All machine commands are rootless only. The `set` subcommand requires the machine to be stopped. Disk size can only be expanded, not shrunk. Some `set` options (--cpus, --memory, --disk-size) are QEMU-only.
 
 # SEE ALSO
 
-[podman](/man/podman)(1)
+[podman](/man/podman)(1), [docker-machine](/man/docker-machine)(1)
 

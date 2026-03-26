@@ -32,6 +32,10 @@ creates secure tunnels to localhost
 
 ```ngrok tls [443]```
 
+**Expose with basic auth**
+
+```ngrok http --basic-auth="[user]:[password]" [8080]```
+
 **Check configuration file validity**
 
 ```ngrok config check```
@@ -75,6 +79,12 @@ creates secure tunnels to localhost
 
 **--log** _path_
 > Write logs to file or "stdout"/"stderr".
+
+**--basic-auth** _USER:PASSWORD_
+> Add HTTP basic authentication to the tunnel.
+
+**api** _SUBCOMMAND_
+> Access the ngrok API (e.g., list tunnels, manage reserved domains).
 
 **--help**
 > Display help information.

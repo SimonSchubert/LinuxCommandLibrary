@@ -96,7 +96,7 @@ Output formats include text, JSON, SARIF, GitLab SAST, JUnit XML, Emacs, and Vim
 
 # CAVEATS
 
-Rule quality varies. False positives require tuning. Custom rules need learning. Large codebases may be slow.
+Rule quality varies across registries; false positives require tuning with `--exclude-rule` or nosemgrep comments. Custom rules have a learning curve. Very large codebases may be slow without `--include` filters. The `--autofix` option modifies files in place, so review changes before committing.
 
 # HISTORY
 

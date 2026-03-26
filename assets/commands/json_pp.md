@@ -24,9 +24,9 @@ JSON pretty printer from Perl
 
 ```json_pp -json_opt pretty,canonical,utf8 < [data.json]```
 
-**Print version**
+**Validate JSON** (output to null)
 
-```json_pp -V```
+```json_pp -t null < [data.json]```
 
 # SYNOPSIS
 

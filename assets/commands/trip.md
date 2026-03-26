@@ -59,7 +59,7 @@ Reverse DNS resolution can be enabled to show hostnames for each hop. The contin
 
 # CAVEATS
 
-Root may be needed. Raw sockets. Rust implementation.
+Requires root or appropriate capabilities for raw socket access (ICMP/UDP probing). TCP probing may behave differently through stateful firewalls. Some hops may not respond to probes, appearing as `*` in the output.
 
 # HISTORY
 

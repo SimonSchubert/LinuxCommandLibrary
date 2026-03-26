@@ -4,25 +4,29 @@ disk usage analyzer
 
 # TLDR
 
-**Show** disk usage
-
-```du [directory]```
-
-**Human-readable** sizes
-
-```du -h [directory]```
-
-**Total** size only
+**Show total size of a directory**
 
 ```du -sh [directory]```
 
-**Sort** by size
+**Show sizes in human-readable format**
 
-```du -h [directory] | sort -h```
+```du -h [directory]```
 
-**Max** depth
+**Show sizes of subdirectories** (one level deep)
 
 ```du -h --max-depth=1 [directory]```
+
+**Show largest subdirectories first**
+
+```du -h --max-depth=1 [directory] | sort -hr```
+
+**Show size of all files and directories**
+
+```du -ah [directory]```
+
+**Stay on one filesystem** (don't cross mount points)
+
+```du -shx [directory]```
 
 # SYNOPSIS
 
@@ -85,67 +89,9 @@ The command reports disk usage (actual blocks consumed) rather than apparent fil
 **--time**
 > Show last modification time
 
-# WORKFLOW
-
-```bash
-# Current directory size
-du -sh .
-
-# Subdirectory sizes
-du -h --max-depth=1
-
-# Sort by size
-du -h | sort -h
-du -h | sort -hr  # Reverse (largest first)
-
-# Find largest directories
-du -h --max-depth=1 | sort -hr | head -10
-
-# Specific directory
-du -sh /var/log
-
-# All files and directories
-du -ah
-
-# Exclude pattern
-du -h --exclude="*.log"
-
-# Total with subtotals
-du -ch directory/
-```
-
-# FINDING LARGE FILES
-
-```bash
-# Top 10 largest directories
-du -h /home | sort -hr | head -10
-
-# Files larger than 100MB
-du -ah / | awk '$1 ~ /[0-9]+G/ || $1 ~ /[5-9][0-9][0-9]M/'
-
-# With depth limit
-du -h --max-depth=2 /var | sort -hr | head -20
-```
-
-# DISK SPACE ANALYSIS
-
-```bash
-# Check each user's home directory
-sudo du -sh /home/*
-
-# System directories
-sudo du -sh /* 2>/dev/null | sort -hr
-
-# Find what changed
-du -sh directory/ > before.txt
-# ... time passes ...
-du -sh directory/ > after.txt
-diff before.txt after.txt
-```
-
 # CAVEATS
 
-Slow on large directories. Reports disk usage (blocks allocated) not apparent file size by default; use --apparent-size for file sizes. Crosses filesystem boundaries by default (use -x). Counts hard links once by default (use -l for per-link counting). May require root for some directories. Output ordering not guaranteed without sort.
+Can be slow on large directory trees. Reports actual disk usage (blocks allocated), not apparent file size — use **--apparent-size** for file sizes. Crosses filesystem boundaries by default; use **-x** to stay on one filesystem. Hard links are counted only once by default. May require root for restricted directories.
 
 # HISTORY
 

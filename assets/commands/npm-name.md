@@ -30,17 +30,11 @@ _NAMES_
 
 # DESCRIPTION
 
-**npm-name** checks if package names are available on npm. Validates before publishing.
-
-The tool queries npm registry. Shows if name can be used.
+**npm-name** checks if package names are available on the npm registry. It queries the npm registry API and reports whether each name is free to use or already taken. Supports scoped packages (@scope/name). Useful before publishing a new package to avoid name conflicts.
 
 # CAVEATS
 
-Third-party tool. Install with npm install -g. Network required.
-
-# HISTORY
-
-npm-name was created to **check package name availability** before publishing to npm.
+Third-party tool; install with **npm install -g npm-name-cli**. Requires network access to query the npm registry. Does not check for trademark conflicts or similar names.
 
 # SEE ALSO
 

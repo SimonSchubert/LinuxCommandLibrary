@@ -55,7 +55,7 @@ xmlto is commonly used in software documentation workflows where source document
 
 # CAVEATS
 
-Requires stylesheets. DocBook focused. Backend tools needed.
+Requires DocBook XSL stylesheets and an XSLT processor (xsltproc) to be installed. PDF output additionally requires a formatting backend like FOP or dblatex. Primarily designed for DocBook XML; other XML vocabularies need custom stylesheets.
 
 # HISTORY
 

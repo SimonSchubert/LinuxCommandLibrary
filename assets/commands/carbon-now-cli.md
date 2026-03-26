@@ -12,29 +12,29 @@ Generate beautiful images of source code
 
 ```carbon-now --from-clipboard```
 
-**Create image with specific theme**
+**Create image from stdin**
 
-```carbon-now [file.js] -t [dracula]```
+```echo "const x = 1;" | carbon-now```
+
+**Use interactive mode to customize everything**
+
+```carbon-now [file.js] --interactive```
+
+**Use a saved preset configuration**
+
+```carbon-now [file.js] -p [dracula]```
+
+**Specify output location**
+
+```carbon-now [file.js] --save-to [~/Pictures]```
+
+**Open in browser instead of saving**
+
+```carbon-now [file.js] --open-in-browser```
 
 **Create image and copy to clipboard**
 
 ```carbon-now [file.js] --to-clipboard```
-
-**Create image with specific language**
-
-```carbon-now [file.js] -l [python]```
-
-**Specify output location**
-
-```carbon-now [file.js] -h [~/Pictures]```
-
-**Open in browser instead of saving**
-
-```carbon-now [file.js] --open```
-
-**Create image from stdin**
-
-```echo "const x = 1;" | carbon-now --from-clipboard```
 
 # SYNOPSIS
 
@@ -42,50 +42,61 @@ Generate beautiful images of source code
 
 # PARAMETERS
 
-**-t**, **--theme** _name_
-> Color theme (dracula, monokai, night-owl, etc.).
-
-**-l**, **--language** _lang_
-> Programming language for syntax highlighting.
-
-**-b**, **--background** _color_
-> Background color (hex or rgba).
+**-i**, **--interactive**
+> Launch interactive mode to customize theme, font, padding, and other settings before generating the image.
 
 **-p**, **--preset** _name_
-> Use a saved preset configuration.
+> Apply a saved preset from `~/.carbon-now.json`. Defaults to `latest-preset`, which automatically reuses the previous run's settings.
+
+**--save-to** _path_
+> Directory to save the image. Defaults to current working directory.
+
+**--save-as** _name_
+> Image filename without extension. Defaults to the source filename with a hash suffix.
 
 **--from-clipboard**
-> Use code from clipboard.
+> Read code from clipboard instead of a file or stdin.
 
 **--to-clipboard**
-> Copy resulting image to clipboard.
+> Copy the resulting image to clipboard instead of saving to disk.
 
-**-h**, **--save-to** _path_
-> Directory to save the image.
-
-**--open**
-> Open in browser instead of saving.
+**--open-in-browser**
+> Open the Carbon URL in a browser for manual finishing instead of downloading the image.
 
 **-s**, **--start** _line_
-> Start line number.
+> Starting line number of input to use. Default: `1`.
 
 **-e**, **--end** _line_
-> End line number.
+> Ending line number of input to use. Default: `1000`.
+
+**--settings** _json_
+> Override specific settings for this run as a JSON string (highest priority, overrides preset and interactive).
 
 **--config** _file_
-> Custom configuration file.
+> Use a custom local config file instead of `~/.carbon-now.json` (read-only, changes are not persisted).
+
+**--engine** _name_
+> Rendering engine to use: `chromium` (default), `firefox`, or `webkit`.
+
+**--skip-display**
+> Do not display the image inline in the terminal after generation.
+
+**--disable-headless**
+> Run the Playwright browser in headful (visible) mode instead of headless.
 
 # DESCRIPTION
 
-**carbon-now-cli** generates beautiful images of source code using the Carbon service. It creates shareable code snippets with syntax highlighting, customizable themes, and export options - ideal for presentations, documentation, and social media.
+**carbon-now-cli** generates beautiful images of source code using the Carbon service (carbon.now.sh). It automates the download of high-quality PNG or SVG code images with syntax highlighting, customizable themes, fonts, and backgrounds — all from the terminal.
 
-The tool interfaces with Carbon (carbon.now.sh), a web service for creating and sharing code images. The CLI provides automation and batch processing capabilities beyond what the web interface offers.
+Input can be a file, piped stdin, or clipboard content. The file type is detected automatically for syntax highlighting. Use `--interactive` mode to be prompted for all visual settings, or save those settings as a named preset in `~/.carbon-now.json` for reuse with `--preset`.
 
-Output images feature proper syntax highlighting, configurable fonts, padding, and backgrounds. Presets allow saving frequently used configurations for consistent styling across projects.
+Each run's settings are automatically saved as `latest-preset`, so subsequent runs reuse the previous configuration without any extra flags. Named presets persist until manually deleted from `~/.carbon-now.json`.
+
+The `--settings` flag accepts a JSON string and has the highest override priority, after `--interactive`. Export size (`1x`, `2x`, `4x`), export type (`png`, `svg`), line numbers, drop shadow, padding, and custom per-token theme colors are all configurable through presets.
 
 # CAVEATS
 
-Requires internet connectivity to reach the Carbon service. Large code blocks may be truncated or render poorly. The service may have rate limits or availability issues. Image generation depends on external service availability. Some advanced Carbon features may not be exposed via CLI.
+Requires internet connectivity to reach the Carbon rendering service. Custom theme colors set via the `custom` preset key are not applied when using `--open-in-browser` because they rely on `localStorage` inside the Playwright instance. Image generation depends on external service availability.
 
 # HISTORY
 

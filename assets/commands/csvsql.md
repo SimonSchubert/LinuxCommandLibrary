@@ -79,4 +79,4 @@ csvsql is part of **csvkit**, created by Christopher Groskopf in **2011**. It br
 
 # SEE ALSO
 
-[csvkit](/man/csvkit)(1), [sqlite3](/man/sqlite3)(1), [sql2csv](/man/sql2csv)(1)
+[csvkit](/man/csvkit)(1), [sqlite3](/man/sqlite3)(1)

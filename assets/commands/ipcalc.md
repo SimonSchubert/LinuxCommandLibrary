@@ -75,22 +75,13 @@ _netmask_
 
 The tool is essential for network planning, subnetting, and troubleshooting IP configuration issues.
 
-# OUTPUT EXAMPLE
-
-```
-Address:   192.168.1.0
-Netmask:   255.255.255.0 = 24
-Wildcard:  0.0.0.255
-Network:   192.168.1.0/24
-HostMin:   192.168.1.1
-HostMax:   192.168.1.254
-Broadcast: 192.168.1.255
-Hosts:     254
-```
-
 # CAVEATS
 
 Two distinct implementations exist: the Red Hat version (ipcalc from initscripts) and the newer ipcalc by Nikos Mavrogiannopoulos. They have different options and features. The `-s` subnet splitting and `-c` check options are only available in certain versions. IPv6 support is available in the newer implementation only.
+
+# HISTORY
+
+**ipcalc** has multiple implementations. The original was part of the Red Hat **initscripts** package. A newer, more feature-rich version was written by **Nikos Mavrogiannopoulos** with IPv6 support and additional calculation features.
 
 # SEE ALSO
 

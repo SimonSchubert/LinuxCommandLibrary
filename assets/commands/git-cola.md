@@ -50,5 +50,5 @@ Unlike simpler Git GUIs, Git Cola is designed for power users who want visual to
 
 # SEE ALSO
 
-[git-dag](/man/git-dag)(1), [gitk](/man/gitk)(1)
+[gitk](/man/gitk)(1), [git-gui](/man/git-gui)(1), [tig](/man/tig)(1), [lazygit](/man/lazygit)(1)
 

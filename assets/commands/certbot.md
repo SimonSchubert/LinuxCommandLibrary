@@ -24,9 +24,13 @@ Obtain and install certificate for **apache**
 
 ```sudo certbot --webroot -w [path/to/webroot] -d [subdomain.example.com] --dry-run```
 
-Obtain **test certificate** (untrusted)
+**Obtain certificate** using standalone mode (no web server needed)
 
-```sudo certbot --webroot -w [path/to/webroot] -d [subdomain.example.com] --test-cert```
+```sudo certbot certonly --standalone -d [subdomain.example.com]```
+
+**List all managed certificates**
+
+```sudo certbot certificates```
 
 # SYNOPSIS
 
@@ -89,6 +93,12 @@ Certificates are valid for 90 days. The renew command should be run regularly (t
 
 **-m**, **--email** _email_
 > Email for account registration
+
+**--preferred-challenges** _type_
+> Preferred challenge type: http-01, dns-01, or tls-alpn-01
+
+**--deploy-hook** _command_
+> Command to run after successful certificate deployment (e.g., reload web server)
 
 # CONFIGURATION
 

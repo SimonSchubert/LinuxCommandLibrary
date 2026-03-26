@@ -8,9 +8,17 @@ Run command on **dedicated Nvidia GPU**
 
 ```prime-run [command]```
 
+Run a **game** on the Nvidia GPU
+
+```prime-run steam```
+
 **Verify** Nvidia card is used
 
 ```prime-run glxinfo | grep "OpenGL renderer"```
+
+Check **Vulkan** renderer
+
+```prime-run vulkaninfo | grep "deviceName"```
 
 # SYNOPSIS
 
@@ -18,7 +26,7 @@ Run command on **dedicated Nvidia GPU**
 
 # DESCRIPTION
 
-**prime-run** executes programs using a dedicated Nvidia GPU on hybrid graphics systems (Optimus). It sets environment variables to route OpenGL and Vulkan rendering to the discrete GPU instead of integrated graphics.
+**prime-run** executes programs using a dedicated Nvidia GPU on hybrid graphics systems (Optimus). It is a thin wrapper that sets the environment variables **__NV_PRIME_RENDER_OFFLOAD=1**, **__NV_PRIME_RENDER_OFFLOAD_PROVIDER=NVIDIA-G0**, **__GLX_VENDOR_LIBRARY_NAME=nvidia**, and **__VK_LAYER_NV_optimus=NVIDIA_only** before executing the given command.
 
 The tool is part of PRIME render offload, allowing selective use of the powerful GPU for specific applications while conserving power with integrated graphics for general use.
 

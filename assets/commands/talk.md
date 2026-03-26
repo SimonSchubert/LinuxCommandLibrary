@@ -4,31 +4,31 @@ Real-time terminal text communication
 
 # TLDR
 
-**Talk** to local user
+**Talk to a local user**
 
 ```talk [username]```
 
-Talk to user on specific **TTY**
+**Talk to a user on a specific terminal**
 
 ```talk [username] [tty3]```
 
-Talk to **remote** user
+**Talk to a user on a remote host**
 
 ```talk [username]@[hostname]```
-
-**Clear** both screens
-
-```Ctrl+d```
-
-**Exit** session
-
-```Ctrl+c```
 
 # SYNOPSIS
 
 **talk** _user_ [_ttyname_]
 
 **talk** _user@host_ [_ttyname_]
+
+# PARAMETERS
+
+_user_
+> Username of the person to talk to. Can include @hostname for remote users.
+
+_ttyname_
+> Specific terminal to reach the user on, if they are logged in on multiple terminals.
 
 # DESCRIPTION
 

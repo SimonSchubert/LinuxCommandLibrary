@@ -1,9 +1,11 @@
 var emulator = null;
 var v86Loading = false;
 var pendingCommand = null;
+var spinInterval = null;
 
 (function() {
     if (typeof terminalCmd === 'undefined') return;
+    if (window.innerWidth <= 768) return;
 
     var panel = document.createElement('div');
     panel.id = 'terminal-panel';
@@ -154,7 +156,7 @@ function startTerminal() {
         var frames = ['|', '/', '-', '\\'];
         var fi = 0;
         var spinner = document.getElementById('terminal-spinner');
-        var spinInterval = setInterval(function() {
+        spinInterval = setInterval(function() {
             if (spinner) spinner.textContent = '  ' + frames[fi++ % 4];
         }, 150);
     }
@@ -175,17 +177,30 @@ function startTerminal() {
             bzimage: { url: '/v86/vmlinuz' },
             initrd: { url: '/v86/initramfs.gz' },
             cmdline: 'rdinit=/init console=tty0',
-            net_device: {
-                type: 'virtio',
-                relay_url: 'wss://relay.widgetry.org/',
-            },
             autostart: true,
             disable_keyboard: false,
             disable_mouse: true,
         };
 
-        if (status) status.textContent = 'Booting...';
-        bootEmulator(config, status);
+        // Try to enable networking (may fail in some browsers)
+        var booted = false;
+        function boot(withNetwork) {
+            if (booted) return;
+            booted = true;
+            if (withNetwork) {
+                config.net_device = { type: 'virtio', relay_url: 'wss://relay.widgetry.org/' };
+            }
+            if (status) status.textContent = withNetwork ? 'Booting...' : 'Booting (offline)...';
+            bootEmulator(config, status);
+        }
+        try {
+            var ws = new WebSocket('wss://relay.widgetry.org/');
+            var timeout = setTimeout(function() { ws.close(); boot(false); }, 3000);
+            ws.onopen = function() { clearTimeout(timeout); ws.close(); boot(true); };
+            ws.onerror = function() { clearTimeout(timeout); boot(false); };
+        } catch(e) {
+            boot(false);
+        }
     };
     script.onerror = function() {
         if (status) status.textContent = 'Failed to load';
@@ -199,6 +214,7 @@ function bootEmulator(config, status) {
 
     emulator.add_listener('emulator-ready', function() {
         if (status) status.textContent = '';
+        if (spinInterval) { clearInterval(spinInterval); spinInterval = null; }
         var ph = document.getElementById('terminal-placeholder');
         if (ph) ph.remove();
         var tbody = document.getElementById('terminal-body');

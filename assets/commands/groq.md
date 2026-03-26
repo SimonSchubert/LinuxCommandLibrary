@@ -52,26 +52,6 @@ LPU-powered terminal coding assistant
 **-V**, **--version**
 > Show version number.
 
-# SLASH COMMANDS
-
-**/help**
-> Display help and available commands.
-
-**/login**
-> Authenticate with API credentials.
-
-**/model**
-> View and select available Groq models.
-
-**/clear**
-> Clear chat history and context.
-
-**/reasoning**
-> Toggle reasoning content display.
-
-**/stats**
-> Show session statistics and token usage.
-
 # DESCRIPTION
 
 **groq** (Groq Code CLI) is a command-line coding assistant powered by Groq's LPU (Language Processing Unit) inference engine, known for extremely fast response times. It provides an interactive terminal-based interface for AI-assisted code generation and development tasks.

@@ -4,21 +4,29 @@ Application launcher and window switcher
 
 # TLDR
 
-Show **application** launcher
+**Show application launcher**
 
 ```rofi -show drun```
 
-Show **command** launcher
+**Show command launcher**
 
 ```rofi -show run```
 
-**Switch** windows
+**Switch between open windows**
 
 ```rofi -show window```
 
-Use as **dmenu** replacement
+**Use as dmenu replacement**
 
 ```printf "Choice1\nChoice2\nChoice3" | rofi -dmenu```
+
+**SSH to a host**
+
+```rofi -show ssh```
+
+**Use a specific theme**
+
+```rofi -show drun -theme [solarized]```
 
 # SYNOPSIS
 
@@ -83,7 +91,7 @@ The tool is highly customizable with themes and supports scripting via the dmenu
 
 # CAVEATS
 
-Requires X11 (Wayland support via rofi-wayland). Configuration in ~/.config/rofi/. Themes control appearance extensively. Scripts can extend functionality.
+Requires X11 by default; for Wayland, use the **rofi-wayland** fork. Themes use the rasi format (not CSS). Custom scripts can extend rofi with new modes via the `-modi` option. The dmenu mode reads from stdin and writes the selected entry to stdout.
 
 # HISTORY
 

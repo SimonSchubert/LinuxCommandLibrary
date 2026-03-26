@@ -95,7 +95,7 @@ Destructive operations are immediate and cannot be undone. Specifying the wrong 
 
 # HISTORY
 
-**sgdisk** is part of **GPT fdisk** by **Rod Smith**. It provides scriptable GPT partition management.
+**sgdisk** is part of the **GPT fdisk** suite by **Rod Smith**, first released around **2010**. It was created as the scriptable counterpart to the interactive **gdisk** tool, filling the need for automated GPT partition management in scripts and deployment workflows.
 
 # SEE ALSO
 

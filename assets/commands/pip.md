@@ -66,7 +66,10 @@ Python package installer and manager
 > Output installed packages in requirements format
 
 **search**
-> Search PyPI for packages (deprecated)
+> Search PyPI for packages (removed since pip 23.1)
+
+**index**
+> Inspect available package versions on the index
 
 **download**
 > Download packages without installing
@@ -96,6 +99,9 @@ Python package installer and manager
 
 **--no-deps**
 > Don't install dependencies
+
+**-c**, **--constraint** _FILE_
+> Constrain package versions using the given constraint file
 
 **--force-reinstall**
 > Reinstall even if up-to-date
@@ -174,4 +180,4 @@ pip was created by **Ian Bicking** and first released in **2008** as a replaceme
 
 # SEE ALSO
 
-[python](/man/python)(1), [virtualenv](/man/virtualenv)(1), [pipenv](/man/pipenv)(1), [conda](/man/conda)(1)
+[python](/man/python)(1), [pip-freeze](/man/pip-freeze)(1), [virtualenv](/man/virtualenv)(1), [pipx](/man/pipx)(1), [uv](/man/uv)(1), [pipenv](/man/pipenv)(1), [conda](/man/conda)(1)

@@ -82,7 +82,9 @@ runs large language models locally
 
 **ollama** runs large language models locally. It handles model downloads, serving via a REST API, and interactive chat sessions.
 
-Supports a wide range of open models including Llama, Mistral, Gemma, Phi, and others. Models are pulled from the Ollama registry and cached locally.
+Supports a wide range of open models including Llama, Mistral, Gemma, Phi, Qwen, DeepSeek, and others. Models are pulled from the Ollama registry and cached locally.
+
+The API server provides OpenAI-compatible endpoints for chat completions, embeddings, and model management. Custom models can be created using Modelfiles that specify base models, system prompts, parameters, and adapter layers.
 
 # CAVEATS
 
@@ -90,7 +92,7 @@ Requires sufficient RAM/VRAM depending on model size. GPU acceleration is suppor
 
 # HISTORY
 
-Ollama was created for **easy local LLM** deployment and management.
+**Ollama** was created by **Jeffrey Morgan** and first released in **2023**. Built on **llama.cpp**, it simplifies the process of downloading, running, and managing open-source language models locally. The project quickly gained popularity as interest in running LLMs without cloud APIs grew.
 
 # SEE ALSO
 

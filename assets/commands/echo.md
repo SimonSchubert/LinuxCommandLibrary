@@ -4,25 +4,29 @@ display text output
 
 # TLDR
 
-**Print** text
+**Print text**
 
-```echo ["Hello World"]```
+```echo "[Hello World]"```
 
-**Without** newline
+**Print without trailing newline**
 
-```echo -n ["text"]```
+```echo -n "[text]"```
 
-**Interpret** escape sequences
+**Interpret escape sequences**
 
-```echo -e ["Line 1\nLine 2"]```
+```echo -e "[Line 1\nLine 2]"```
 
-**Write** to file
+**Print an environment variable**
 
-```echo ["content"] > [file.txt]```
+```echo $[PATH]```
 
-**Append** to file
+**Write text to a file**
 
-```echo ["more content"] >> [file.txt]```
+```echo "[content]" > [file.txt]```
+
+**Append text to a file**
+
+```echo "[more content]" >> [file.txt]```
 
 # SYNOPSIS
 
@@ -59,92 +63,9 @@ The command exists as both a shell built-in and standalone program.
 **\xHH** - Hexadecimal byte
 **\0NNN** - Octal byte
 
-# WORKFLOW
-
-```bash
-# Simple output
-echo "Hello World"
-
-# Multiple arguments
-echo Hello World  # Same as above
-
-# Variables
-name="Alice"
-echo "Hello, $name"
-
-# Without newline
-echo -n "Enter name: "
-read name
-
-# Escape sequences
-echo -e "Line 1\nLine 2\nLine 3"
-echo -e "Name:\tJohn"
-
-# Write to file
-echo "log entry" > log.txt
-
-# Append
-echo "another entry" >> log.txt
-
-# Empty line
-echo
-
-# Special characters
-echo "Price: \$100"
-```
-
-# REDIRECTION
-
-```bash
-# Overwrite file
-echo "new content" > file.txt
-
-# Append
-echo "more content" >> file.txt
-
-# To stderr
-echo "error" >&2
-
-# Discard output
-echo "hidden" > /dev/null
-```
-
-# COMMON USES
-
-**Scripts:**
-```bash
-echo "Starting backup..."
-backup_files
-echo "Backup complete"
-```
-
-**Environment:**
-```bash
-echo $PATH
-echo $HOME
-echo $USER
-```
-
-**Create files:**
-```bash
-echo "#!/bin/bash" > script.sh
-echo "echo 'Hello'" >> script.sh
-chmod +x script.sh
-```
-
-**Debugging:**
-```bash
-echo "DEBUG: variable=$variable"
-echo "Here: $(pwd)"
-```
-
-# SHELL BUILT-IN VS EXTERNAL
-
-Most shells have echo as a built-in, which may behave differently than /bin/echo. Behavior varies between shells (bash, zsh, sh).
-
 # CAVEATS
 
-Behavior differs between shells. -e and -E support varies. Backslash interpretation inconsistent. Prefer printf for portable scripts. Variable expansion happens before echo runs. Quotes affect word splitting.
+Behavior differs between shells and between the shell built-in and `/bin/echo`. The **-e** flag is not POSIX and is not supported by all implementations. For portable scripts, prefer **printf** which has consistent behavior across platforms. Most shells (bash, zsh, dash) provide echo as a built-in that may behave differently from the external binary.
 
 # HISTORY
 

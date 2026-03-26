@@ -1,6 +1,6 @@
 # TAGLINE
 
-saves and restores Linux desktop customizations, primarily for KDE Plasma but
+saves and restores KDE Plasma desktop customizations
 
 # TLDR
 
@@ -12,7 +12,7 @@ saves and restores Linux desktop customizations, primarily for KDE Plasma but
 
 ```konsave -a [profile_name]```
 
-Save with **force** (overwrite existing)
+**Save and overwrite existing profile**
 
 ```konsave -s [profile_name] -f```
 
@@ -61,7 +61,7 @@ Save with **force** (overwrite existing)
 
 # DESCRIPTION
 
-**konsave** saves and restores Linux desktop customizations, primarily for KDE Plasma but also supporting other configurations. It captures theme settings, icon packs, wallpapers, and other visual customizations.
+**konsave** saves and restores KDE Plasma desktop customizations. It captures theme settings, icon packs, wallpapers, and other visual customizations.
 
 Profiles can be exported and shared with others, making it easy to replicate desktop configurations across machines or share aesthetic setups with the community.
 

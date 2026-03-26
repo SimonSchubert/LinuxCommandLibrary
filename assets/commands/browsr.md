@@ -42,6 +42,10 @@ The interface features a directory tree panel and a file preview panel with synt
 
 Cloud storage access requires appropriate credentials and authentication to be configured (e.g., AWS credentials for S3, GitHub token for private repos). Performance depends on network speed for remote sources. Large files may be slow to preview.
 
+# HISTORY
+
+**browsr** was created by **Juftin** as a Textual-based file explorer with cloud storage integration. It was designed to bring rich file browsing with syntax highlighting to the terminal.
+
 # SEE ALSO
 
 [ranger](/man/ranger)(1), [nnn](/man/nnn)(1), [lf](/man/lf)(1), [mc](/man/mc)(1)

@@ -4,25 +4,25 @@ Send ARP requests to discover and test network hosts
 
 # TLDR
 
-**Ping** host using ARP
+**Ping a host using ARP**
 
 ```sudo arping [192.168.1.1]```
 
-Ping with **specific interface**
+**Ping using a specific interface**
 
 ```sudo arping -I [eth0] [192.168.1.1]```
 
-Send **count** requests
+**Send a specific number of requests**
 
 ```sudo arping -c [5] [192.168.1.1]```
 
-**Detect duplicate** IP addresses
+**Detect duplicate IP addresses on the network**
 
 ```sudo arping -D [192.168.1.1]```
 
-Find **MAC address** of IP
+**Quit after first reply** (check if host is alive)
 
-```sudo arping -c 1 [192.168.1.1]```
+```sudo arping -f [192.168.1.1]```
 
 # SYNOPSIS
 

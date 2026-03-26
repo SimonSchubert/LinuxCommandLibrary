@@ -4,7 +4,7 @@ Manage portable virtual development environments
 
 # TLDR
 
-**Initialize new Vagrantfile**
+**Initialize a new Vagrantfile with a base box**
 
 ```vagrant init [ubuntu/jammy64]```
 
@@ -12,29 +12,29 @@ Manage portable virtual development environments
 
 ```vagrant up```
 
-**SSH into VM**
+**SSH into a running VM**
 
 ```vagrant ssh```
 
-**Stop VM**
+**Stop a running VM**
 
 ```vagrant halt```
 
-**Destroy VM**
+**Destroy VM and remove all resources**
 
 ```vagrant destroy```
 
-**Show VM status**
+**Show status of all VMs**
 
 ```vagrant status```
 
-**Reload VM** (restart with new config)
+**Suspend VM** (save state to disk)
 
-```vagrant reload```
+```vagrant suspend```
 
-**List boxes**
+**Show all Vagrant VMs across the system**
 
-```vagrant box list```
+```vagrant global-status```
 
 # SYNOPSIS
 

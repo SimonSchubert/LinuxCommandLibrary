@@ -58,8 +58,14 @@ _COMMAND_
 **install** _PACKAGE_
 > Install Elm package.
 
-**--help**
-> Display help information.
+**diff** _PACKAGE_ _V1_ _V2_
+> Show API differences between package versions.
+
+**bump**
+> Bump version based on API changes.
+
+**publish**
+> Publish package to the Elm package repository.
 
 # DESCRIPTION
 
@@ -79,4 +85,4 @@ Elm was created by **Evan Czaplicki** as his thesis project in **2012**. It pion
 
 # SEE ALSO
 
-[node](/man/node)(1), [npm](/man/npm)(1), [purescript](/man/purescript)(1)
+[node](/man/node)(1), [npm](/man/npm)(1)

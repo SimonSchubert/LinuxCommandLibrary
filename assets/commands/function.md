@@ -52,18 +52,14 @@ _COMMANDS_
 
 **function** is a shell keyword for defining reusable command groups. Functions encapsulate commands, accept parameters, and can return exit status values.
 
-Functions enable code reuse, modularity, and cleaner scripts. They have local scope for variables with the local keyword. Parameters are accessed through positional variables.
+Functions enable code reuse, modularity, and cleaner scripts. They have local scope for variables with the `local` keyword. Parameters are accessed through positional variables ($1, $2, etc.).
 
-In bash, both "function name()" and "name()" syntax define functions.
+In bash, both `function name() { ...; }` and `name() { ...; }` syntax define functions. The POSIX-portable form omits the `function` keyword. In ksh and zsh, the `function` keyword is also supported.
 
 # CAVEATS
 
-Functions must be defined before use. Return only provides exit status, not values. Variable scope requires explicit local declarations.
-
-# HISTORY
-
-Functions were added to the **Bourne shell** and expanded in bash and ksh. They're now a fundamental shell scripting construct supported by all POSIX shells.
+Functions must be defined before use. `return` only sets exit status (0-255), not output values — use command substitution to capture output. Variable scope requires explicit `local` declarations; without it, variables are global.
 
 # SEE ALSO
 
-[bash](/man/bash)(1), [return](/man/return)(1), [local](/man/local)(1)
+[bash](/man/bash)(1), [declare](/man/declare)(1), [local](/man/local)(1), [unset](/man/unset)(1)

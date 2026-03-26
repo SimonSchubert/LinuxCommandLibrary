@@ -45,11 +45,20 @@ Receive FM radio with RTL-SDR USB dongle
 > Device index.
 
 **-p** _ppm_
-> PPM error correction.
+> PPM frequency error correction for the dongle's crystal oscillator.
+
+**-l** _level_
+> Squelch level; mute output when signal strength is below this threshold.
+
+**-A** _method_
+> Output audio filtering: **fast** (default) or **lut** (lookup table, slower but slightly better quality).
+
+**-E** _option_
+> Enable extra features: **edge** (edge tuning), **dc** (DC blocking filter), **deemp** (FM de-emphasis filter), **direct** (direct sampling mode), **offset** (offset tuning mode).
 
 # DESCRIPTION
 
-**rtl_fm** is an FM demodulator for RTL-SDR dongles. It receives and demodulates radio signals using cheap DVB-T USB receivers as software-defined radios.
+**rtl_fm** is an FM demodulator for RTL-SDR dongles. It receives and demodulates radio signals using inexpensive DVB-T USB receivers (based on the RTL2832U chipset) as software-defined radios. Output is raw 16-bit signed PCM audio on stdout, typically piped to an audio player or file.
 
 # EXAMPLES
 

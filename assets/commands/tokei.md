@@ -4,15 +4,19 @@ Fast source code line counter
 
 # TLDR
 
-**Count lines of code**
+**Count lines of code in the current directory**
 
 ```tokei```
 
-**Count specific directory**
+**Count a specific directory**
 
 ```tokei [path/to/project]```
 
-**Exclude directories**
+**Count multiple directories**
+
+```tokei [path/to/project] [path/to/other]```
+
+**Exclude directories or patterns**
 
 ```tokei -e [vendor] -e [node_modules]```
 
@@ -20,7 +24,7 @@ Fast source code line counter
 
 ```tokei --files```
 
-**Sort by specific column**
+**Sort by a specific column**
 
 ```tokei -s [code]```
 
@@ -28,74 +32,87 @@ Fast source code line counter
 
 ```tokei -o json```
 
-**Count specific languages**
+**Count only specific languages**
 
 ```tokei -t [Rust,Python]```
 
-**Show languages only**
+**Show supported languages**
 
 ```tokei --languages```
 
+**Read from a previously saved JSON output**
+
+```tokei [path/to/project] -i [stats.json]```
+
 # SYNOPSIS
 
-**tokei** [_path_] [_-e exclude_] [_-t types_] [_-s column_] [_-o format_] [_options_]
+**tokei** [_path_...] [_options_]
 
 # PARAMETERS
 
 **-e**, **--exclude** _PATTERN_
-> Exclude files/directories matching pattern.
+> Ignore all files and directories matching the pattern. Uses gitignore syntax. Can be specified multiple times.
 
 **-t**, **--type** _TYPES_
-> Count only specified languages.
+> Filter output by language type, separated by a comma (e.g. Rust,Markdown).
 
 **-s**, **--sort** _COLUMN_
-> Sort by: files, lines, blanks, code, comments.
+> Sort languages by column. Possible values: files, lines, blanks, code, comments. Default: alphabetical by language name.
 
 **-o**, **--output** _FORMAT_
-> Output format: json, yaml, cbor.
+> Output in a machine-readable format. Possible values: json, yaml, cbor.
 
-**--files**
-> Show individual file statistics.
+**-i**, **--input** _FILE_
+> Read in the output of a previous tokei run and combine it with the current results. Pass a file path or "stdin" to read from stdin.
+
+**-f**, **--files**
+> Print statistics for individual files instead of aggregating by language.
+
+**-l**, **--languages**
+> Print a list of all supported languages and their file extensions.
 
 **--hidden**
-> Include hidden files.
+> Count hidden files and directories (those beginning with a dot).
 
 **--no-ignore**
-> Don't use .gitignore.
+> Don't respect any ignore files (.gitignore, .ignore, etc.). Implies --no-ignore-parent, --no-ignore-dot, and --no-ignore-vcs.
 
-**--compact**
-> Compact output.
+**--no-ignore-dot**
+> Don't respect .ignore and .tokeignore files, including those in parent directories.
 
-**--languages**
-> Print supported languages.
+**--no-ignore-parent**
+> Don't respect ignore files in parent directories.
+
+**--no-ignore-vcs**
+> Don't respect VCS ignore files (.gitignore, .hgignore, etc.), including those in parent directories.
 
 **-c**, **--columns** _NUM_
-> Set output width.
+> Set a strict column width for terminal output.
 
 **-v**, **--verbose**
-> Verbose output.
+> Increase log output level. Use up to three times (-vvv) for more detail.
 
 # DESCRIPTION
 
-**tokei** counts lines of code quickly and accurately. It identifies languages by file extension, categorizing lines as code, comments, or blank.
+**tokei** counts lines of code quickly and accurately. It identifies languages by file extension, categorising lines as code, comments, or blank, and groups results by language.
 
-The tool is extremely fast, written in Rust with parallel file processing. Large codebases analyze in seconds. Results show per-language breakdown with totals.
+The tool is written in Rust with parallel file processing, making it capable of counting millions of lines in seconds. Results show a per-language breakdown with a grand total.
 
-Language detection supports over 150 languages with proper handling of multi-line comments, nested comments, and language-specific syntax.
+Language detection supports over 150 languages with correct handling of multi-line comments, nested comments, and strings containing comment-like syntax.
 
-File filtering respects .gitignore by default, excluding generated code and dependencies. Additional excludes target specific directories or patterns.
+File filtering respects .gitignore and .ignore files by default, which excludes generated code and dependency directories. Additional patterns can be excluded with **-e**, or a .tokeignore file can be used with the same syntax as .gitignore.
 
-Individual file mode (--files) shows statistics per file rather than aggregated, useful for finding verbose files or tracking specific components.
+Individual file mode (**--files**) shows statistics per file rather than aggregated by language, useful for identifying verbose or generated files.
 
-Machine-readable output (JSON, YAML) enables integration with other tools, CI/CD pipelines, or tracking metrics over time.
+Machine-readable output (JSON, YAML, CBOR) enables integration with other tools and CI/CD pipelines. A previous run's JSON output can be fed back in with **--input** to combine results across separate directory trees.
 
 # CAVEATS
 
-Lines of code is an imperfect metric. Generated code may skew results. Multi-language files counted once. Extension-based detection may misidentify some files. Binary files are skipped.
+Lines of code is an imperfect metric. Generated code may skew results. Multi-language files (e.g. Markdown with embedded code blocks) are counted once under the primary language but embedded sub-language totals are shown separately. Extension-based detection may misidentify some files. Binary files are skipped. CBOR and YAML output require tokei to be compiled with the corresponding feature flags.
 
 # HISTORY
 
-**tokei** was created by **Erin Power** (Aaronepower) around **2016**. The Japanese name means "clock/statistics." Written in Rust for performance, it became a popular alternative to cloc and other line counting tools. The project emphasizes speed and accuracy across many programming languages.
+**tokei** was created by **Erin Power** (XAMPPRocky) around **2016**. The Japanese name (時計) means "clock." Written in Rust for performance, it became a popular alternative to cloc and other line counting tools.
 
 # SEE ALSO
 

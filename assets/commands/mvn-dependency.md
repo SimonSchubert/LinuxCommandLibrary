@@ -24,13 +24,17 @@ goals manage Maven dependencies
 
 ```mvn dependency:resolve```
 
-**Show effective POM**
+**Verbose tree** showing conflict resolution
 
-```mvn dependency:resolve -Dverbose```
+```mvn dependency:tree -Dverbose```
 
-**Filter by scope**
+**Filter tree by scope**
 
 ```mvn dependency:tree -Dscope=[compile]```
+
+**Purge local copies** and re-resolve
+
+```mvn dependency:purge-local-repository```
 
 # SYNOPSIS
 
@@ -54,23 +58,27 @@ _GOAL_
 > Copy deps to target.
 
 **resolve**
-> Resolve dependencies.
+> Resolve and download all dependencies to the local repository.
+
+**purge-local-repository**
+> Remove project dependencies from the local repository and optionally re-resolve them.
 
 **-Dscope** _SCOPE_
-> Filter by scope.
+> Filter by dependency scope (compile, runtime, test, provided, system).
 
-**--help**
-> Display help information.
+**-Dincludes** _PATTERN_
+> Filter output to matching artifacts (groupId:artifactId:type:version pattern, supports wildcards).
+
+**-DoutputFile** _FILE_
+> Write output to a file instead of stdout (supported by tree, list, resolve).
 
 # DESCRIPTION
 
-**mvn dependency** goals manage Maven dependencies. They analyze and display project dependencies.
-
-The plugin shows dependency tree. Helps identify conflicts and unused dependencies.
+The **maven-dependency-plugin** provides goals for analyzing, listing, copying, and resolving Maven project dependencies. The **tree** goal is the most commonly used, displaying the full transitive dependency tree with conflict resolution details when **-Dverbose** is enabled. The **analyze** goal identifies dependencies that are declared but unused, or used but not explicitly declared.
 
 # CAVEATS
 
-Part of Maven. Requires pom.xml. Network access for resolution.
+Requires a valid **pom.xml**. Network access is needed for initial resolution. The **analyze** goal cannot detect dependencies used only via reflection.
 
 # HISTORY
 

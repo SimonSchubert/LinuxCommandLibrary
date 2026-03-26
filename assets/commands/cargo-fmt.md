@@ -64,19 +64,8 @@ Format Rust source code with rustfmt
 
 # CONFIGURATION
 
-Create rustfmt.toml or .rustfmt.toml in project root:
-
-```toml
-max_width = 100
-tab_spaces = 4
-edition = "2021"
-```
-
-# CI INTEGRATION
-
-```cargo fmt --all -- --check```
-
-Exits with non-zero code if formatting issues found.
+**rustfmt.toml** or **.rustfmt.toml**
+> Project-level formatting configuration for rustfmt options like max_width, tab_spaces, and edition.
 
 # CAVEATS
 

@@ -78,15 +78,6 @@ Beyond charset conversion, recode handles surface transformations like CRLF line
 
 Multiple files can be processed, with each file converted in-place. Use shell redirection to preserve originals.
 
-# COMMON CHARSETS
-
-**utf8**, **utf-8**: Unicode UTF-8
-**latin1**, **iso-8859-1**: Western European
-**ascii**, **us-ascii**: 7-bit ASCII
-**html**: HTML numeric entities
-**utf16**: Unicode UTF-16
-**cp1252**: Windows Western European
-
 # CAVEATS
 
 In-place conversion modifies files directly. Always backup files or use redirection to preserve originals when uncertain about the conversion.
@@ -97,7 +88,7 @@ HTML entity conversion (**html** charset) handles numeric entities. Named entiti
 
 # HISTORY
 
-Recode was originally written by **Fran├ºois Pinard** starting in **1990** and was one of the first comprehensive charset conversion tools for Unix. It became a GNU project and remains useful for batch processing text encoding conversions.
+Recode was originally written by **François Pinard** starting in **1990** and was one of the first comprehensive charset conversion tools for Unix. It became a GNU project and remains useful for batch processing text encoding conversions.
 
 # SEE ALSO
 

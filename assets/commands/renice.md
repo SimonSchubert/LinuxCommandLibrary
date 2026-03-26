@@ -4,21 +4,21 @@ Alter process scheduling priority
 
 # TLDR
 
-**Set** the absolute priority of a running process
+**Set the absolute priority of a running process**
 
-```renice --priority [3] -p [pid]```
+```renice -n [3] -p [pid]```
 
-**Increase** the priority of a running process (requires root)
+**Increase the priority of a running process** (requires root)
 
-```sudo renice --relative [-4] -p [pid]```
+```sudo renice -n [-4] -p [pid]```
 
-**Decrease** the priority of all processes owned by a user
+**Decrease the priority of all processes owned by a user**
 
-```renice --relative [4] -u [user]```
+```renice -n [4] -u [user]```
 
-**Set** the priority of all processes in a process group
+**Set the priority of all processes in a process group**
 
-```sudo renice [-5] -g [process_group]```
+```sudo renice -n [-5] -g [process_group]```
 
 # SYNOPSIS
 
@@ -26,20 +26,17 @@ Alter process scheduling priority
 
 # PARAMETERS
 
-**-n, --priority _priority_**
-> Specify the scheduling priority to set
+**-n** _priority_
+> Specify the scheduling priority to set. Values range from -20 (highest) to 19 (lowest).
 
-**--relative**
-> Change priority relative to current value
+**-p** _pid_
+> Interpret arguments as process IDs (default).
 
-**-p, --pid**
-> Interpret arguments as process IDs (default)
+**-u** _user_
+> Interpret arguments as usernames or UIDs.
 
-**-u, --user**
-> Interpret arguments as usernames or UIDs
-
-**-g, --pgrp**
-> Interpret arguments as process group IDs
+**-g** _pgrp_
+> Interpret arguments as process group IDs.
 
 # DESCRIPTION
 

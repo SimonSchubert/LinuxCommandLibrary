@@ -59,4 +59,4 @@ isoinfo is part of the cdrtools/cdrkit package, originally developed by Joerg Sc
 
 # SEE ALSO
 
-[genisoimage](/man/genisoimage)(1), [xorriso](/man/xorriso)(1), [mount](/man/mount)(8)
+[genisoimage](/man/genisoimage)(1), [mount](/man/mount)(8)

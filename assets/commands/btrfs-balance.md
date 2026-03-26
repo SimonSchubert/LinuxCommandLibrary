@@ -4,29 +4,29 @@ Redistribute data across btrfs devices
 
 # TLDR
 
-Show **status**
+**Show balance status**
 
-```sudo btrfs balance status path/to/filesystem```
+```sudo btrfs balance status [/mnt/data]```
 
-**Start** full balance
+**Start a full balance**
 
-```sudo btrfs balance start path/to/filesystem```
+```sudo btrfs balance start [/mnt/data]```
 
-Balance underused **data** chunks
+**Balance underused data chunks** (in background)
 
-```sudo btrfs balance start --bg -dusage=15 path/to/filesystem```
+```sudo btrfs balance start --bg -dusage=[15] [/mnt/data]```
 
-Balance **metadata** with limits
+**Balance metadata with a chunk limit**
 
-```sudo btrfs balance start -musage=20,limit=10 path/to/filesystem```
+```sudo btrfs balance start -musage=[20],limit=[10] [/mnt/data]```
 
-**Convert** RAID profile
+**Convert RAID profile**
 
-```sudo btrfs balance start -dconvert=raid6 -mconvert=raid1c3 path/to/filesystem```
+```sudo btrfs balance start -dconvert=[raid6] -mconvert=[raid1c3] [/mnt/data]```
 
-**Cancel/pause/resume**
+**Cancel a running balance**
 
-```sudo btrfs balance cancel path/to/filesystem```
+```sudo btrfs balance cancel [/mnt/data]```
 
 # SYNOPSIS
 

@@ -4,37 +4,37 @@ Manage sandboxed snap packages
 
 # TLDR
 
-**Search** for a package
+**Search for a package**
 
-```snap find query```
+```snap find [query]```
 
-**Install** a package
+**Install a package**
 
-```snap install package```
+```snap install [package]```
 
-**Update** a package
+**Install with classic confinement** (full system access)
 
-```snap refresh package```
+```snap install --classic [package]```
 
-Update to different **channel**
-
-```snap refresh package --channel=channel```
-
-Update **all** packages
+**Update all packages**
 
 ```snap refresh```
 
-**List** installed snaps
+**List installed snaps**
 
 ```snap list```
 
-**Remove** a package
+**Show detailed info about a snap**
 
-```snap remove package```
+```snap info [package]```
 
-Show **recent changes**
+**Remove a package**
 
-```snap changes```
+```snap remove [package]```
+
+**Revert to a previous version**
+
+```snap revert [package]```
 
 # SYNOPSIS
 
@@ -73,11 +73,26 @@ Show **recent changes**
 **--channel** _channel_
 > Specify the channel (track/risk/branch) for install or refresh
 
+**revert** _snap_
+> Revert a snap to its previous version
+
+**disable** _snap_
+> Disable a snap without removing it
+
+**enable** _snap_
+> Re-enable a disabled snap
+
+**--channel** _channel_
+> Specify the channel (track/risk/branch) for install or refresh
+
 **--classic**
-> Install with classic confinement (less sandboxing)
+> Install with classic confinement (full system access)
 
 **--devmode**
 > Install in development mode (no confinement)
+
+**--dangerous**
+> Install a local snap file without signature verification
 
 # CAVEATS
 

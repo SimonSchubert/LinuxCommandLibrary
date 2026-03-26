@@ -1,6 +1,6 @@
 # TAGLINE
 
-fastest Internet port scanner, capable of scanning the entire Internet
+fastest asynchronous Internet port scanner
 
 # TLDR
 

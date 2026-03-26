@@ -159,6 +159,11 @@ _FILES_
 **-Z**, **--context**
 > Display SELinux or SMACK security context.
 
+# CONFIGURATION
+
+**~/.config/lsd/config.yaml**
+> User configuration file in YAML format for setting default options, colors, icons, and display preferences.
+
 # DESCRIPTION
 
 **lsd** (LSDeluxe) is a modern replacement for the `ls` command written in Rust. It adds colors, file-type icons, and tree view to directory listings while remaining compatible with standard `ls` flags.

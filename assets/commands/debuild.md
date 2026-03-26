@@ -4,15 +4,27 @@ build Debian packages from source
 
 # TLDR
 
-**Build** package in current directory
+**Build package in current directory**
 
 ```debuild```
 
-Build **binary package** only
+**Build binary package only**
 
 ```debuild -b```
 
-Build **without running lintian**
+**Build source package only**
+
+```debuild -S```
+
+**Build without signing**
+
+```debuild -us -uc```
+
+**Build with parallel jobs**
+
+```debuild -j[4]```
+
+**Build without running lintian**
 
 ```debuild --no-lintian```
 

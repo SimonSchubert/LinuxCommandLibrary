@@ -46,7 +46,13 @@ Kubernetes cluster security assessment
 
 # DESCRIPTION
 
-**prowler kubernetes** performs security assessment of Kubernetes clusters. Checks for misconfigurations, RBAC issues, and security best practices. Supports CIS Kubernetes Benchmark.
+**prowler kubernetes** performs security assessment of Kubernetes clusters. It checks for misconfigurations, RBAC issues, pod security violations, and compliance against security best practices including the CIS Kubernetes Benchmark.
+
+The tool connects to the cluster using the current kubeconfig context and evaluates resources across namespaces. Results can be filtered by specific checks, namespaces, or compliance frameworks.
+
+# CAVEATS
+
+Requires appropriate RBAC permissions to read cluster resources. Some checks need cluster-admin access. Results reflect the current state at scan time. The `--context` flag must match an existing kubeconfig context.
 
 # SEE ALSO
 

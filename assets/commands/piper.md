@@ -71,7 +71,7 @@ Input is read from stdin and output as WAV audio. JSON input mode enables struct
 
 # CAVEATS
 
-Requires model download. Quality varies by model. GPU acceleration optional.
+Models must be downloaded before use (typically 15-75 MB each). Speech quality varies significantly between models and languages. GPU acceleration via CUDA is optional but improves performance for batch processing. Output is always WAV format; convert with ffmpeg for other formats.
 
 # HISTORY
 

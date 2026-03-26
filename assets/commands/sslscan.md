@@ -1,6 +1,10 @@
+# TAGLINE
+
+Test SSL/TLS server configuration and ciphers
+
 # TLDR
 
-**Scan server**
+**Scan a server for SSL/TLS configuration**
 
 ```sslscan [example.com]```
 

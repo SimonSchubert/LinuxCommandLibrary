@@ -1,69 +1,67 @@
 # TAGLINE
 
-unit conversion utility
+unit conversion terminal utility
 
 # TLDR
 
-**Convert between units** interactively
+**Convert a value** by appending its unit abbreviation
 
-```conv```
+```conv [100f]```
 
-**Convert a specific value** between units
+**Convert metres to other distance units**
 
-```conv [100] [meters] [feet]```
+```conv [50m]```
 
-**Convert temperature**
+**Convert weight** in kilograms
 
-```conv [32] [fahrenheit] [celsius]```
+```conv [75kg]```
 
-**Convert currency** (requires network)
+**Convert data transfer speed** in megabits per second
 
-```conv [100] [USD] [EUR]```
+```conv [100mbps]```
 
-**List available unit categories**
+**Display help** and list all supported unit abbreviations
 
-```conv --list```
-
-**Convert with high precision**
-
-```conv --precision [10] [1] [mile] [km]```
+```conv --help```
 
 # SYNOPSIS
 
-**conv** [_options_] [_value_] [_from_unit_] [_to_unit_]
+**conv** _value__unit_
+
+**conv** **-h**|**--help**
+
+**conv** **-v**|**--version**
 
 # PARAMETERS
 
-**--list**
-> List available unit categories and units.
-
-**--precision** _N_
-> Set decimal precision for output.
-
-**--offline**
-> Use only offline conversion tables (no currency updates).
-
 **-h**, **--help**
-> Display help information.
+> Display help information and list all supported unit abbreviations.
 
 **-v**, **--version**
 > Display version information.
 
 # DESCRIPTION
 
-**conv** is a command-line unit conversion utility that handles a wide variety of measurement types including length, weight, volume, temperature, time, and currency. It provides both interactive and command-line modes for quick conversions.
+**conv** is a lightweight, self-contained terminal utility for converting everyday units of measurement. A value and its unit abbreviation are written together as a single argument (e.g. `100f` for 100 degrees Fahrenheit), and conv prints the equivalent values in all other units of the same category.
 
-The tool supports common unit abbreviations and full names, making it accessible for quick calculations. Temperature conversions handle the non-linear relationship between Fahrenheit and Celsius correctly. Currency conversions can fetch current exchange rates when network access is available.
+Supported categories and their abbreviations:
 
-conv is useful for developers working with international systems, scientists needing quick unit translations, and anyone who regularly converts between measurement systems. Its command-line interface integrates well with scripts and other tools.
+- **Temperature:** c (Celsius), f (Fahrenheit)
+- **Distance:** cm (centimetres), ft (feet), in (inches), km (kilometres), m (metres), mi (miles), nm (nautical miles), yd (yards)
+- **Weight:** ct (carats), g (grams), kg (kilograms), oz (ounces), lb (pounds), st (stone)
+- **Volume:** cum (cubic metres), l (litres), guk (imperial gallons), gus (US gallons)
+- **Speed:** kmh (km/h), kn (knots), mph (miles per hour), mps (metres per second)
+- **Data rate:** bps, kbps, mbps (bits per second family); bs, kbs, mbs (bytes per second family)
+- **Power:** hp (horsepower), w (watts)
+- **Other:** bbl (petroleum barrels)
 
 # CAVEATS
 
-Currency conversion rates may be outdated without network access. Some specialized or obscure units may not be supported. Unit names must match the expected format; use **--list** to see available options.
+The value and unit abbreviation must be written as a single argument with no space between them (e.g. `conv 100f`, not `conv 100 f`). Only the unit categories listed above are supported; currency and arbitrary unit expressions are not handled. The project was archived in 2019 and is no longer actively maintained.
 
 # HISTORY
 
-Unit conversion utilities have been part of Unix systems since early days. The **units** command from BSD provided similar functionality. Various implementations of conv-style tools have emerged to provide simpler interfaces for common conversion tasks.
+**conv** was written by Ben Garrett and implemented in Go. Precompiled binaries were provided for Linux, macOS, Windows, and ARM. The repository at github.com/bengarrett/conv was archived in September 2019.
 
 # SEE ALSO
 

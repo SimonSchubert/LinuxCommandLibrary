@@ -24,17 +24,17 @@ Graphical ping with live terminal graph
 
 ```gping -b [100] [example.com]```
 
+**Force IPv4**
+
+```gping -4 [example.com]```
+
 **Set graph color**
 
 ```gping --color [blue] [example.com]```
 
-**Use simple graphics mode**
+**Use simple graphics mode** (for terminals without braille support)
 
 ```gping -s [example.com]```
-
-**Show help**
-
-```gping --help```
 
 # SYNOPSIS
 
@@ -94,7 +94,7 @@ Requires ICMP permissions (may need root/sudo on Linux). Terminal must support 2
 
 # HISTORY
 
-gping was created by **Ohri Tzipora** (orf) and first released around **2020**. Written in Rust, it was designed as a modern alternative to traditional ping with visual feedback. The project gained popularity for its intuitive display and multi-host comparison capability.
+gping was created by **orf** and first released around **2020**. Written in Rust, it was designed as a modern alternative to traditional ping with visual feedback. The project gained popularity for its intuitive display and multi-host comparison capability.
 
 # SEE ALSO
 

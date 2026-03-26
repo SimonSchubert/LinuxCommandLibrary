@@ -50,12 +50,41 @@ open-source voxel game engine and sandbox game similar to Minecraft
 **--terminal**
 > Run in terminal mode.
 
+**--go**
+> Disable main menu and connect directly to the specified server.
+
+**--server**
+> Run as a dedicated server (headless).
+
+**--map-dir** _path_
+> World map directory when running as server.
+
+**--logfile** _file_
+> Log to file (in addition to console).
+
+**--run-unittests**
+> Run built-in unit tests and exit.
+
+**--videomodes**
+> Show available video modes.
+
+**--speedtests**
+> Run speed tests and exit.
+
 **--info**
 > Print info and exit.
 
 # DESCRIPTION
 
-**minetest** is an open-source voxel game engine and sandbox game similar to Minecraft. Supports multiplayer, modding, and custom content. Highly extensible through Lua scripting.
+**minetest** is an open-source voxel game engine and sandbox game similar to Minecraft. It supports both client and dedicated server modes, multiplayer, modding, and custom content. The engine is highly extensible through Lua scripting and content packages.
+
+Games, mods, and texture packs are managed through the built-in content browser or placed in **~/.minetest/** (Linux), **~/Library/Application Support/minetest/** (macOS). The default game is **Minetest Game**, but many community games exist.
+
+Configuration is stored in **minetest.conf** in the user data directory.
+
+# CAVEATS
+
+The **--go** flag requires **--address** to be set. Running as server with **--server** requires a world directory (defaults to the first world found). The client requires OpenGL support.
 
 # SEE ALSO
 
