@@ -36,6 +36,18 @@ Manage dotfiles with multiple Git repos
 
 ```vcsh pull```
 
+**Add and commit** a file in a repo
+
+```vcsh [reponame] add [~/.bashrc] && vcsh [reponame] commit -m "[message]"```
+
+**Push all repos**
+
+```vcsh push```
+
+**Rename a repo**
+
+```vcsh rename [oldname] [newname]```
+
 # SYNOPSIS
 
 **vcsh** [_init|clone|list|enter|run|pull|push_] [_reponame_] [_args_]
@@ -87,13 +99,18 @@ Manage dotfiles with multiple Git repos
 
 The tool uses bare Git repositories to avoid conflicts between repos that coexist in the same directory. The **enter** command opens a subshell scoped to a specific repository, while running git commands directly against a named repo is also supported.
 
+# ENVIRONMENT
+
+**VCSH_REPO_D**
+> Directory where bare repositories are stored (default: $XDG_CONFIG_HOME/vcsh/repo.d).
+
 # CAVEATS
 
-Learning curve. Git knowledge needed. Bare repos can confuse.
+Requires basic Git knowledge. Bare repositories can be confusing -- use `vcsh enter` to inspect repo state. Files tracked by multiple repos will cause conflicts.
 
 # HISTORY
 
-**vcsh** (version control system for $HOME) was created for managing multiple Git repositories in $HOME.
+**vcsh** (version control system for $HOME) was created by **Richard Hartmann** for managing multiple Git repositories overlaid on $HOME.
 
 # SEE ALSO
 

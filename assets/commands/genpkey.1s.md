@@ -16,9 +16,17 @@ OpenSSL private key generation utility
 
 ```openssl genpkey -algorithm EC -pkeyopt ec_paramgen_curve:[P-256] -out [key.pem]```
 
-**Generate with password**
+**Generate Ed25519 key**
+
+```openssl genpkey -algorithm ED25519 -out [key.pem]```
+
+**Generate RSA key encrypted with a passphrase**
 
 ```openssl genpkey -algorithm RSA -aes256 -out [key.pem]```
+
+**Generate key with passphrase from stdin**
+
+```openssl genpkey -algorithm RSA -aes256 -pass stdin -out [key.pem]```
 
 # SYNOPSIS
 
@@ -27,30 +35,36 @@ OpenSSL private key generation utility
 # PARAMETERS
 
 **-algorithm** _ALG_
-> Key algorithm: RSA, EC, ED25519.
+> Key algorithm: RSA, EC, ED25519, ED448, X25519, X448.
 
 **-out** _FILE_
-> Output file.
+> Output file (default: stdout).
 
 **-pkeyopt** _OPT:VALUE_
-> Algorithm-specific option.
+> Algorithm-specific option (e.g., rsa_keygen_bits:4096, ec_paramgen_curve:P-256).
 
 **-aes256**
-> Encrypt with AES-256.
+> Encrypt output key with AES-256-CBC.
+
+**-pass** _ARG_
+> Passphrase source for encryption: pass:phrase, stdin, file:path, env:var.
 
 **-outform** _FORMAT_
-> Output format: PEM, DER.
+> Output format: PEM (default), DER.
 
-**--help**
+**-text**
+> Print key details in human-readable form in addition to encoded output.
+
+**-help**
 > Display help information.
 
 # DESCRIPTION
 
-**genpkey** is an OpenSSL command for generating private keys. It supports modern algorithms including RSA, EC, and Ed25519 with unified syntax.
+**genpkey** is the OpenSSL unified command for generating private keys. It supports RSA, EC (NIST curves), Ed25519, Ed448, X25519, and X448 algorithms through a consistent interface.
 
-The tool creates private keys for TLS certificates, SSH, and other cryptographic uses. It provides more options than older commands like genrsa.
+The tool creates private keys for TLS certificates, code signing, and other cryptographic uses. It supersedes older algorithm-specific commands like **genrsa** and **gendsa** with a single, more flexible interface.
 
-genpkey is the recommended way to generate keys in OpenSSL 1.0+.
+**genpkey** is the recommended way to generate keys since OpenSSL 1.0.0. For RSA, the default key size is 2048 bits; 4096 bits is recommended for higher security.
 
 # CAVEATS
 
@@ -62,4 +76,4 @@ genpkey was added to **OpenSSL** as a unified key generation command, replacing 
 
 # SEE ALSO
 
-[openssl](/man/openssl)(1), [openssl-req](/man/openssl-req)(1)
+[openssl](/man/openssl)(1), [openssl-genrsa](/man/openssl-genrsa)(1), [openssl-pkey](/man/openssl-pkey)(1), [openssl-req](/man/openssl-req)(1)

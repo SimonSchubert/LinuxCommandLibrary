@@ -4,29 +4,29 @@ All-in-one PXE network boot server
 
 # TLDR
 
-**Boot from kernel**
+**Boot from kernel and initrd**
 
-```pixiecore boot [vmlinuz] [initrd.img]```
+```sudo pixiecore boot [vmlinuz] [initrd.img]```
 
-**Boot with kernel args**
+**Boot with kernel command-line args**
 
-```pixiecore boot [vmlinuz] [initrd.img] --cmdline "[console=ttyS0]"```
+```sudo pixiecore boot [vmlinuz] [initrd.img] --cmdline "[console=ttyS0]"```
 
-**Serve boot config via API** endpoint
+**Boot alongside an existing DHCP server**
 
-```pixiecore api [http://localhost:8080]```
+```sudo pixiecore boot [vmlinuz] [initrd.img] --dhcp-no-bind```
 
-**Quick boot** a preset distribution
+**Serve boot config via external API endpoint**
 
-```pixiecore quick [ubuntu] --cmdline "[auto=true]"```
+```sudo pixiecore api [http://localhost:8080]```
 
-**Listen on interface**
+**Listen on a specific address**
 
-```pixiecore boot [vmlinuz] [initrd.img] --listen-addr [192.168.1.1]```
+```sudo pixiecore boot [vmlinuz] [initrd.img] --listen-addr [192.168.1.1]```
 
-**Debug mode**
+**Enable debug output**
 
-```pixiecore boot [vmlinuz] [initrd.img] --debug```
+```sudo pixiecore boot [vmlinuz] [initrd.img] --debug```
 
 # SYNOPSIS
 
@@ -34,32 +34,29 @@ All-in-one PXE network boot server
 
 # PARAMETERS
 
-**boot**
-> Serve static boot config.
+**boot** _KERNEL_ _INITRD_...
+> Serve a static boot configuration to all clients.
 
-**api**
-> Dynamic config via API.
-
-**quick**
-> Preset configurations.
+**api** _URL_
+> Delegate boot configuration to an external HTTP API (per-machine config via MAC address).
 
 **--cmdline** _ARGS_
-> Kernel command line.
+> Kernel command-line arguments passed to booting machines.
 
 **--listen-addr** _IP_
-> Listen address.
+> Address to listen on (default: all interfaces).
 
 **--port** _N_
-> HTTP port.
+> HTTP port for serving boot files (default: 80).
 
 **--dhcp-no-bind**
-> Don't bind DHCP ports (use alongside existing DHCP server).
+> Do not bind DHCP ports; operate as ProxyDHCP alongside an existing DHCP server.
 
 **--log-timestamps**
 > Add timestamps to log output.
 
 **--debug**
-> Debug output.
+> Enable verbose debug output.
 
 # DESCRIPTION
 
@@ -69,7 +66,7 @@ The tool offers three operating modes. In static boot mode, a fixed kernel and i
 
 # CAVEATS
 
-Requires root for low ports. May conflict with existing DHCP. Network must allow broadcast.
+Requires root or equivalent privileges to bind DHCP/TFTP ports. May conflict with existing DHCP servers unless **--dhcp-no-bind** is used. Network must allow broadcast traffic. Only supports BIOS PXE and iPXE; UEFI support is limited.
 
 # HISTORY
 
@@ -77,4 +74,4 @@ Requires root for low ports. May conflict with existing DHCP. Network must allow
 
 # SEE ALSO
 
-[dnsmasq](/man/dnsmasq)(1), [pxelinux](/man/pxelinux)(1), [iPXE](/man/iPXE)(1)
+[dnsmasq](/man/dnsmasq)(1), [ipxe](/man/ipxe)(1), [pxelinux](/man/pxelinux)(1), [tftp](/man/tftp)(1)

@@ -20,13 +20,21 @@ Collection of scripts for managing AUR packages through a local repository.
 
 ```aur sync -u```
 
-**Clean** build files after install
+**Clean** build files after syncing
 
-```aur sync -C [package]```
+```aur sync -c [package]```
 
-Install a package **without confirmation prompts**
+Install a package **without review prompts**
 
-```aur sync --noview -n [package]```
+```aur sync --no-view --no-confirm [package]```
+
+**Fetch** package sources from AUR without building
+
+```aur fetch [package]```
+
+Show the **dependency tree** for a package
+
+```aur depends [package]```
 
 # SYNOPSIS
 
@@ -60,7 +68,7 @@ Unlike AUR helpers that install packages directly, aurutils maintains a proper l
 
 # CAVEATS
 
-Requires a local repository to be configured in **/etc/pacman.conf**. Uses **vifm** by default for PKGBUILD review (can be changed). Building occurs in a clean chroot, requiring **devtools** package. Initial setup is more complex than simple AUR helpers.
+Requires a local repository to be configured in **/etc/pacman.conf**. Uses **vifm** by default for PKGBUILD review (configurable via **AUR_PAGER** environment variable). Building occurs in a clean chroot, requiring the **devtools** package. Initial setup is more involved than simple AUR helpers like yay or paru.
 
 # HISTORY
 

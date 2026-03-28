@@ -24,21 +24,31 @@ GPU-accelerated terminal emulator with modern features
 
 ```ghostty --fullscreen```
 
-**Set custom window title**
+**Set custom font and font size**
 
-```ghostty --title="[My Terminal]"```
+```ghostty -o font-family=[Fira Code] -o font-size=[14]```
 
 **Override a configuration option**
 
 ```ghostty -o [font-size=14]```
 
-**List available actions** for keybindings
+**List available themes**
 
-```ghostty +list-actions```
+```ghostty +list-themes```
+
+**List available fonts** on the system
+
+```ghostty +list-fonts```
+
+**Show current configuration** with all resolved values
+
+```ghostty +show-config```
 
 # SYNOPSIS
 
 **ghostty** [_-e command_] [_-o option=value_] [_--config-file file_] [_--working-directory path_] [_options_]
+
+**ghostty** **+**_action_ [_options_]
 
 # PARAMETERS
 
@@ -85,7 +95,13 @@ GPU-accelerated terminal emulator with modern features
 > List available themes.
 
 **+show-config**
-> Show current configuration.
+> Show current configuration with all resolved values.
+
+**+validate**
+> Validate configuration file for errors.
+
+**+crash-report**
+> Show details of the most recent crash.
 
 # DESCRIPTION
 
@@ -103,7 +119,7 @@ The terminal supports true color (24-bit), Unicode with ligatures and emoji, ima
 
 # CAVEATS
 
-Requires GPU with OpenGL 3.3+ (Linux) or Metal (macOS). Some legacy terminal applications may have compatibility issues. Currently supports macOS and Linux only.
+Requires GPU with OpenGL 3.3+ or Vulkan (Linux) or Metal (macOS). Configuration uses a simple key=value format (no quotes around values). Currently supports macOS and Linux only.
 
 # HISTORY
 
@@ -111,4 +127,4 @@ Requires GPU with OpenGL 3.3+ (Linux) or Metal (macOS). Some legacy terminal app
 
 # SEE ALSO
 
-[kitty](/man/kitty)(1), [alacritty](/man/alacritty)(1), [wezterm](/man/wezterm)(1), [foot](/man/foot)(1)
+[kitty](/man/kitty)(1), [alacritty](/man/alacritty)(1), [wezterm](/man/wezterm)(1), [foot](/man/foot)(1), [tmux](/man/tmux)(1)

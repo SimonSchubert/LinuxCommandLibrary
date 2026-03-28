@@ -8,6 +8,10 @@ Display VDPAU video acceleration capabilities
 
 ```vdpauinfo```
 
+**Query a specific X display**
+
+```DISPLAY=:0 vdpauinfo```
+
 **Show decoder capabilities only**
 
 ```vdpauinfo | grep -A20 "Decoder capabilities"```
@@ -36,9 +40,17 @@ This tool verifies that VDPAU is properly configured and helps determine which v
 
 **Bitmap surface formats**: Overlay and OSD capabilities.
 
+# ENVIRONMENT
+
+**DISPLAY**
+> The X display to query. Defaults to the current display.
+
+**VDPAU_DRIVER**
+> Override the VDPAU backend driver (e.g., nvidia, r600, radeonsi). Useful when multiple GPU drivers are available.
+
 # CAVEATS
 
-Requires VDPAU-capable NVIDIA GPU with proprietary drivers. Open-source nouveau driver needs firmware. Some newer codecs (VP9, AV1) require recent driver versions. Output varies by GPU generation.
+Not limited to NVIDIA; VDPAU is also supported by AMD GPUs via the Mesa va_gl or radeonsi backends. Requires a running X server. Some newer codecs (VP9, AV1) require recent driver and GPU support. Output varies by GPU generation and driver version.
 
 # HISTORY
 
@@ -46,4 +58,4 @@ Requires VDPAU-capable NVIDIA GPU with proprietary drivers. Open-source nouveau 
 
 # SEE ALSO
 
-[vainfo](/man/vainfo)(1), [nvidia-smi](/man/nvidia-smi)(1), [nvidia-settings](/man/nvidia-settings)(1)
+[vainfo](/man/vainfo)(1), [nvidia-smi](/man/nvidia-smi)(1), [nvidia-settings](/man/nvidia-settings)(1), [glxinfo](/man/glxinfo)(1), [vulkaninfo](/man/vulkaninfo)(1)

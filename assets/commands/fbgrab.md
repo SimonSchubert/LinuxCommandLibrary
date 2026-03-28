@@ -10,9 +10,9 @@ capture framebuffer screenshots to PNG
 
 **Take a screenshot** from a specific framebuffer device
 
-```fbgrab -d [/dev/fb0] [screenshot.png]```
+```fbgrab -d [/dev/fb1] [screenshot.png]```
 
-**Take a screenshot** of a specific virtual terminal
+**Take a screenshot** of a specific virtual console
 
 ```fbgrab -c [1] [screenshot.png]```
 
@@ -20,13 +20,13 @@ capture framebuffer screenshots to PNG
 
 ```fbgrab -s [5] [screenshot.png]```
 
-**Convert a framebuffer dump** to PNG
+**Convert a raw framebuffer dump** to PNG
 
 ```fbgrab -w [1920] -h [1080] -b [32] -f [framebuffer.dump] [screenshot.png]```
 
-**Disable interlacing** in the output PNG
+**Set PNG compression** level (0=fast, 9=best)
 
-```fbgrab -i [screenshot.png]```
+```fbgrab -z [9] [screenshot.png]```
 
 # SYNOPSIS
 
@@ -92,4 +92,4 @@ The **-c** option may require root privileges or the CAP_SYS_TTY_CONFIG capabili
 
 # SEE ALSO
 
-[scrot](/man/scrot)(1), [import](/man/import)(1)
+[scrot](/man/scrot)(1), [import](/man/import)(1), [fbi](/man/fbi)(1), [fbset](/man/fbset)(8)

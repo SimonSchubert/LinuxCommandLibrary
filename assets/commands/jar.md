@@ -1,6 +1,6 @@
 # TAGLINE
 
-java Archive tool
+Java Archive tool
 
 # TLDR
 
@@ -31,6 +31,14 @@ java Archive tool
 **Extract specific file**
 
 ```jar xf [archive.jar] [path/to/file]```
+
+**List contents verbosely**
+
+```jar tvf [archive.jar]```
+
+**Create JAR from directory** using -C to change base dir
+
+```jar cf [output.jar] -C [build/classes] .```
 
 # SYNOPSIS
 
@@ -65,8 +73,17 @@ java Archive tool
 **0**
 > Store only (no compression).
 
+**M**
+> Do not create a manifest file.
+
+**i**
+> Generate index information for specified JAR files.
+
 **C** _dir_
-> Change to directory.
+> Change to directory before including the following files.
+
+**--release** _VERSION_
+> (Java 9+) Place following files in a versioned directory for multi-release JARs.
 
 # DESCRIPTION
 
@@ -84,7 +101,7 @@ Class-Path: lib/dependency.jar
 
 # CAVEATS
 
-Order of flags matters. Manifest file needs newline at end. Paths are relative to current directory. Use -C for changing base directory.
+Order of flags matters when using legacy (non-dashed) syntax. The manifest file must end with a newline. Paths are relative to the current directory unless -C is used. In Java 9+ the `--module-version` and `--release` flags add module/multi-release support.
 
 # HISTORY
 
@@ -92,4 +109,4 @@ The jar tool has been part of the **JDK** since Java 1.1 (1997). It's essential 
 
 # SEE ALSO
 
-[java](/man/java)(1), [javac](/man/javac)(1), [zip](/man/zip)(1), [unzip](/man/unzip)(1)
+[java](/man/java)(1), [javac](/man/javac)(1), [jarsigner](/man/jarsigner)(1), [zip](/man/zip)(1), [unzip](/man/unzip)(1), [tar](/man/tar)(1)

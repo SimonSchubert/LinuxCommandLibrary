@@ -58,43 +58,68 @@ The tool is part of the NCBI BLAST+ suite and works with databases created by **
 > File containing list of sequence identifiers
 
 **-out** _file_
-> Output file (default: stdout)
+> Output file (default: stdout).
 
 **-outfmt** _format_
-> Custom output format string
+> Custom output format string using % tokens.
 
 **-info**
-> Display database information
+> Display database information (type, number of sequences, total length, date).
 
 **-list** _path_
-> List databases in specified path
+> List databases in specified path.
 
 **-recursive**
-> Search directories recursively (with -list)
+> Search directories recursively (with -list).
 
 **-show_blastdb_search_path**
-> Display BLAST database search paths
+> Display BLAST database search paths.
+
+**-dbtype** _type_
+> Database type: nucl (nucleotide) or prot (protein). Needed when both types share a name.
+
+**-target_only**
+> Retrieve only target sequences (no redundant group members).
 
 **-tax_info**
-> Display taxonomy information (requires taxonomy database)
+> Display taxonomy information (requires taxonomy database).
 
 **-range** _start-stop_
-> Extract subsequence range
+> Extract subsequence range (1-based, inclusive).
+
+**-strand** _strand_
+> Strand to retrieve: plus or minus (nucleotide only).
+
+**-line_length** _N_
+> Line length for FASTA output (default: 80). Use 0 for single-line sequences.
+
+**-long_seqids**
+> Use long sequence identifiers including database and accession.version.
 
 # OUTPUT FORMAT TOKENS
 
 **%a** - Accession
-**%t** - Title
-**%s** - Sequence
+**%g** - GI number
+**%o** - OID (ordinal ID)
+**%t** - Title (definition line)
+**%s** - Sequence data
 **%l** - Sequence length
 **%T** - Taxonomy ID
 **%S** - Scientific name
 **%L** - Common name
+**%m** - Masking data
+**%h** - Hash value
+**%e** - Membership integer
+
+# ENVIRONMENT
+
+**BLASTDB**
+> Colon-separated list of directories to search for BLAST databases.
 
 # CAVEATS
 
-Requires pre-formatted BLAST databases. Taxonomy information requires the BLAST taxonomy database to be installed. Large extractions may require significant time and disk space.
+Requires pre-formatted BLAST databases created by **makeblastdb** or downloaded from NCBI. Taxonomy information requires the BLAST taxonomy database (taxdb.btd/bti) to be installed. Large extractions may require significant time and disk space. The **-range** option uses 1-based inclusive coordinates.
 
 # SEE ALSO
 
-[makeblastdb](/man/makeblastdb)(1), [blastn](/man/blastn)(1), [blastp](/man/blastp)(1), [blastx](/man/blastx)(1)
+[makeblastdb](/man/makeblastdb)(1), [blastn](/man/blastn)(1), [blastp](/man/blastp)(1), [blastx](/man/blastx)(1), [tblastn](/man/tblastn)(1)

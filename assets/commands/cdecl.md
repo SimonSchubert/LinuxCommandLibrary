@@ -10,33 +10,36 @@ C and C++ type declaration translator
 
 **Explain a C declaration**
 
-```cdecl explain "[int *(*fp)(int)]"```
+```cdecl explain "int *(*fp)(int)"```
 
-**Convert English to C declaration**
+**Convert English to a C declaration**
 
-```cdecl declare "[x as pointer to function returning int]"```
+```cdecl declare "x as pointer to function returning int"```
+
+**Explain a complex function declaration**
+
+```cdecl explain "void (*signal(int, void (*)(int)))(int)"```
 
 **Cast an expression**
 
-```cdecl cast "[x into pointer to function returning int]"```
+```cdecl cast "x into pointer to function returning int"```
 
-**Explain a function declaration**
+**Declare using English** via pipe
 
-```cdecl explain "[void (*signal(int, void (*)(int)))(int)]"```
+```echo "declare argv as array of pointer to char" | cdecl```
 
-**Declare using English** in one command
+**Define a typedef**
 
-```echo "declare x as array 10 of pointer to char" | cdecl```
-
-**Set output to C++ mode**
-
-```cdecl set options cplusplus```
+```cdecl declare "str as typedef pointer to char"```
 
 # SYNOPSIS
 
 **cdecl** [_-ciV_] [_command ..._]
 
 # PARAMETERS
+
+**-+**
+> Use C++ syntax instead of C (same as -c).
 
 **-c**
 > Use C++ syntax instead of C.
@@ -55,6 +58,9 @@ C and C++ type declaration translator
 
 **cast** _expression_
 > Create a cast expression.
+
+**typedef** _declaration_
+> Create a typedef from a declaration.
 
 **set** _option_
 > Set options (e.g., cplusplus, preansi).
@@ -85,4 +91,4 @@ Some very complex or non-standard declarations may not be parsed correctly. The 
 
 # SEE ALSO
 
-[gcc](/man/gcc)(1), [clang](/man/clang)(1), [cscope](/man/cscope)(1), [ctags](/man/ctags)(1)
+[gcc](/man/gcc)(1), [clang](/man/clang)(1), [make](/man/make)(1), [ctags](/man/ctags)(1)

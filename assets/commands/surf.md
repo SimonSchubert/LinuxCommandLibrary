@@ -8,9 +8,9 @@ Minimalist suckless WebKit web browser
 
 ```surf [https://example.com]```
 
-**Open in a new window with tabbed**
+**Embed into tabbed** for tab support
 
-```surf.sh [https://example.com]```
+```tabbed surf -e```
 
 **Open with specific window geometry**
 
@@ -24,9 +24,17 @@ Minimalist suckless WebKit web browser
 
 ```surf -s [https://example.com]```
 
-**Disable images**
+**Disable images and cookies**
 
-```surf -i [https://example.com]```
+```surf -i -k [https://example.com]```
+
+**Embed surf into another window** by window ID
+
+```surf -e [window_id] [https://example.com]```
+
+**Print the X window ID** to stdout (useful for scripting)
+
+```surf -x [https://example.com]```
 
 # SYNOPSIS
 
@@ -123,4 +131,4 @@ Requires GTK+ and WebKit libraries. No built-in tab support; use tabbed for tabs
 
 # SEE ALSO
 
-[tabbed](/man/tabbed)(1), [dmenu](/man/dmenu)(1), [firefox](/man/firefox)(1), [chromium](/man/chromium)(1)
+[dmenu](/man/dmenu)(1), [st](/man/st)(1), [dwm](/man/dwm)(1), [firefox](/man/firefox)(1), [chromium](/man/chromium)(1), [xprop](/man/xprop)(1)

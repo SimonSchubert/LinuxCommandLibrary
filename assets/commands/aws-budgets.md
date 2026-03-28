@@ -14,7 +14,7 @@ Manage cost budgets and spending alerts.
 
 **List all budgets** for an account
 
-```aws budgets describe-budgets --account-id [123456789012]```
+```aws budgets describe-budgets --account-id [123456789012] --max-results [100]```
 
 **Get details** of a specific budget
 
@@ -28,9 +28,9 @@ Manage cost budgets and spending alerts.
 
 ```aws budgets delete-budget --account-id [123456789012] --budget-name "[MyBudget]"```
 
-**Create a budget action** (auto-response)
+**List budget actions** for a specific budget
 
-```aws budgets create-budget-action --account-id [123456789012] --budget-name "[MyBudget]" --action-type APPLY_IAM_POLICY --action-threshold file://[threshold.json]```
+```aws budgets describe-budget-actions-for-budget --account-id [123456789012] --budget-name "[MyBudget]"```
 
 # SYNOPSIS
 
@@ -77,6 +77,9 @@ Manage cost budgets and spending alerts.
 **--new-budget** _json_
 > Updated budget specification
 
+**--max-results** _integer_
+> Maximum number of results to return (for list operations)
+
 # BUDGET JSON STRUCTURE
 
 ```json
@@ -102,7 +105,7 @@ Time units include DAILY, MONTHLY, QUARTERLY, and ANNUALLY. If no start date is 
 
 # CAVEATS
 
-Budgets have a processing delay of up to 24 hours for cost data. Budget limits are soft limits that trigger alerts but don't automatically stop spending. Free tier includes 2 budgets; additional budgets incur charges. Account ID must be specified explicitly in CLI commands.
+Budgets have a processing delay of up to 24 hours for cost data. Budget limits are soft limits that trigger alerts but don't automatically stop spending unless budget actions are configured. Free tier includes 2 action-enabled budgets per account; additional budgets incur charges. Account ID must be specified explicitly in CLI commands.
 
 # HISTORY
 
@@ -110,4 +113,4 @@ Budgets have a processing delay of up to 24 hours for cost data. Budget limits a
 
 # SEE ALSO
 
-[aws](/man/aws)(1), [aws-ce](/man/aws-ce)(1), [aws-organizations](/man/aws-organizations)(1)
+[aws](/man/aws)(1), [aws-ce](/man/aws-ce)(1), [aws-sns](/man/aws-sns)(1), [aws-organizations](/man/aws-organizations)(1)

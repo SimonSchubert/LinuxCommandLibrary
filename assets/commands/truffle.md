@@ -32,9 +32,21 @@ Ethereum smart contract development framework
 
 ```truffle develop```
 
-**Create contract**
+**Create a new contract** boilerplate
 
 ```truffle create contract [ContractName]```
+
+**Create a new migration** script
+
+```truffle create migration [MigrationName]```
+
+**Run a specific test** file
+
+```truffle test [test/MyContract.test.js]```
+
+**Compile with optimizer** enabled
+
+```truffle compile --all```
 
 # SYNOPSIS
 
@@ -61,13 +73,28 @@ Ethereum smart contract development framework
 > Local blockchain.
 
 **create** _TYPE_ _NAME_
-> Generate component.
+> Generate a new contract, migration, or test boilerplate.
+
+**unbox** _box_name_
+> Download a pre-built Truffle project (Truffle Box).
+
+**networks**
+> Show addresses of deployed contracts on each network.
+
+**debug** _txHash_
+> Interactively debug a transaction.
 
 **--network** _NAME_
-> Target network.
+> Target network (defined in truffle-config.js).
 
 **--reset**
-> Reset migrations.
+> Re-run all migrations from the beginning.
+
+**--compile-all**
+> Recompile all contracts even if unchanged.
+
+**--verbose-rpc**
+> Log RPC communication with the Ethereum client.
 
 # DESCRIPTION
 
@@ -90,12 +117,12 @@ Projects are organized with a standard directory structure including contracts, 
 
 # CAVEATS
 
-Requires Node.js. Ethereum knowledge needed. Gas costs on mainnet.
+**Truffle was sunset in September 2023** and is no longer actively maintained; consider migrating to Hardhat. Requires Node.js (v12 or later). Deploying to mainnet incurs real gas costs. Install via `npm install -g truffle`.
 
 # HISTORY
 
-**Truffle** was created by **ConsenSys** for Ethereum development. It became the standard framework before Hardhat gained popularity.
+**Truffle** was originally created by **Tim Coulter** and later maintained by **ConsenSys** as part of the Truffle Suite. It was the dominant Ethereum development framework for several years. ConsenSys announced the **sunsetting of Truffle** in **September 2023**, recommending migration to Hardhat or other actively maintained frameworks.
 
 # SEE ALSO
 
-[hardhat](/man/hardhat)(1), [ganache](/man/ganache)(1), [solc](/man/solc)(1)
+[hardhat](/man/hardhat)(1), [ganache](/man/ganache)(1), [solc](/man/solc)(1), [npm](/man/npm)(1)

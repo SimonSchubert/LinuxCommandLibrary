@@ -20,7 +20,7 @@ Python code coverage measurement tool
 
 ```coverage html```
 
-**Show only files with less than 80% coverage**
+**Fail if total coverage is below 80%** (exit code 2)
 
 ```coverage report --fail-under=80```
 
@@ -35,6 +35,14 @@ Python code coverage measurement tool
 **Show coverage for specific file**
 
 ```coverage report --include=[path/to/file.py]```
+
+**Run with branch coverage** measurement
+
+```coverage run --branch -m pytest```
+
+**Generate XML report** (Cobertura format for CI)
+
+```coverage xml```
 
 # SYNOPSIS
 
@@ -62,6 +70,12 @@ Python code coverage measurement tool
 
 **erase**
 > Delete collected coverage data.
+
+**annotate**
+> Annotate source files with coverage markers.
+
+**lcov**
+> Generate LCOV report.
 
 **-m** _module_
 > Run library module as script (like python -m).
@@ -110,4 +124,4 @@ Coverage.py was created by **Ned Batchelder** and first released in **2004**. It
 
 # SEE ALSO
 
-[pytest](/man/pytest)(1), [pytest-cov](/man/pytest-cov)(1), [codecov](/man/codecov)(1)
+[pytest](/man/pytest)(1), [python](/man/python)(1), [tox](/man/tox)(1), [codecov](/man/codecov)(1)

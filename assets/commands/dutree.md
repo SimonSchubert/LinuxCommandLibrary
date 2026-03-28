@@ -12,21 +12,29 @@ Show **specific directory**
 
 ```dutree [path/to/directory]```
 
-**Aggregate** items smaller than size
+**Aggregate** items smaller than a threshold
 
-```dutree --aggr [number]K```
+```dutree -a [10]M```
 
 Show subdirectories up to **specific depth**
 
-```dutree --depth [depth]```
+```dutree -d [2]```
 
 **Skip directories** for fast overview
 
-```dutree --files-only```
+```dutree -f```
 
 **Exclude hidden** files
 
-```dutree --no-hidden```
+```dutree -H```
+
+**Exclude** files matching a pattern
+
+```dutree -x "*.log"```
+
+**Summary** of total size only
+
+```dutree -s```
 
 # SYNOPSIS
 
@@ -36,26 +44,32 @@ Show subdirectories up to **specific depth**
 
 **dutree** is a disk usage analyzer that presents filesystem information as a colorful, hierarchical tree structure. Unlike traditional du output, dutree provides an intuitive visual representation that makes it easy to identify space-consuming directories at a glance.
 
-The tool uses color coding and tree branches to show the relationship between directories and their contents, with file sizes displayed prominently. It automatically aggregates small items below a threshold to keep the output readable and focused on the largest space consumers.
+The tool uses color coding and tree branches to show the relationship between directories and their contents, with file sizes displayed prominently. It can aggregate small items below a configurable threshold to keep the output readable and focused on the largest space consumers.
 
-Written in Rust for performance, dutree handles large directory trees efficiently. The default depth limit of 1 prevents overwhelming output, but can be adjusted for deeper analysis. The tool is particularly useful for quick space audits and identifying directories suitable for cleanup.
+Written in Rust for performance, dutree handles large directory trees efficiently. The depth can be limited with **-d** to prevent overwhelming output. The tool is particularly useful for quick space audits and identifying directories suitable for cleanup.
 
 # PARAMETERS
 
-**--aggr** _size_
-> Aggregate items smaller than size (K, M, G)
+**-a**, **--aggr** _size_
+> Aggregate items smaller than size (e.g., 1K, 10M, 1G).
 
-**--depth** _n_
-> Maximum depth (default: 1)
+**-d**, **--depth** _n_
+> Maximum directory depth to display.
 
-**--files-only**
-> Skip directories
+**-f**, **--files-only**
+> Skip directories, show only files.
 
-**--no-hidden**
-> Exclude hidden files
+**-H**, **--no-hidden**
+> Exclude hidden files and directories.
 
-**-x, --exclude** _pattern_
-> Exclude files matching pattern
+**-x**, **--exclude** _pattern_
+> Exclude files matching glob pattern.
+
+**-s**, **--summary**
+> Show only total size.
+
+**-b**, **--bytes**
+> Print raw byte sizes instead of human-readable format.
 
 # CAVEATS
 
@@ -63,4 +77,4 @@ Requires terminal with color support for best visualization. Large directories m
 
 # SEE ALSO
 
-[du](/man/du)(1), [ncdu](/man/ncdu)(1), [dust](/man/dust)(1)
+[du](/man/du)(1), [dust](/man/dust)(1), [ncdu](/man/ncdu)(1), [tree](/man/tree)(1)

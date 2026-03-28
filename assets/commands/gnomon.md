@@ -1,24 +1,32 @@
 # TAGLINE
 
-prepend timestamps to command output
+Prepend timestamps to command output
 
 # TLDR
 
-**Prepend timestamps**
+**Prepend elapsed time** to each line of output
 
 ```[command] | gnomon```
 
-**Show elapsed time**
+**Show total elapsed time** since the command started
 
-```[command] | gnomon -t elapsed```
+```[command] | gnomon --type=elapsed-total```
 
-**Show absolute time**
+**Show absolute timestamps** for each line
 
-```[command] | gnomon -t absolute```
+```[command] | gnomon --type=absolute```
 
-**Custom format**
+**Highlight lines** taking longer than 1.5 seconds
 
-```[command] | gnomon -f "[%H:%M:%S]"```
+```[command] | gnomon --high=1.5```
+
+**Set both high and medium** thresholds for color coding
+
+```[command] | gnomon --high=3.0 --medium=1.0```
+
+**Ignore lines** shorter than a threshold
+
+```[command] | gnomon --ignore-blank --high=0.5```
 
 # SYNOPSIS
 
@@ -26,35 +34,34 @@ prepend timestamps to command output
 
 # PARAMETERS
 
-**-t** _TYPE_, **--type** _TYPE_
-> Time type (elapsed, absolute).
+**--type** _TYPE_
+> Timestamp type: **elapsed-line** (default), **elapsed-total**, or **absolute**.
 
-**-f** _FORMAT_, **--format** _FORMAT_
-> Custom time format.
+**--ignore-blank**
+> Do not prepend timestamps to blank lines.
 
-**-h**, **--high** _SECONDS_
-> Threshold for high time.
+**--real-time** _THRESHOLD_
+> Set a threshold in seconds after which gnomon prints output in real time rather than buffering.
 
-**-m**, **--medium** _SECONDS_
-> Threshold for medium time.
+**--high** _SECONDS_
+> Threshold in seconds for high (red) time coloring. Default: **1.0**.
+
+**--medium** _SECONDS_
+> Threshold in seconds for medium (yellow) time coloring. Default: **0.5**.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**gnomon** prepends timestamp information to command output. It shows how long each line took to appear, useful for identifying slow operations in build processes or logs.
+**gnomon** is a command-line utility that prepends timestamp information to the output of another command, piped through stdin. By default, it shows how long each line of output took to appear, making it useful for identifying slow steps in build processes, test suites, or log output.
 
-The tool color-codes output based on time thresholds, highlighting slow lines in red or yellow. It helps diagnose performance issues in command pipelines.
+The tool color-codes output based on configurable time thresholds: lines exceeding the **--high** threshold are shown in red, those exceeding **--medium** in yellow, and the rest in the default color.
 
 # CAVEATS
 
-Node.js tool. Adds some latency. Best for diagnosing slow processes.
-
-# HISTORY
-
-gnomon was created to help developers identify slow steps in build processes and command output.
+Requires **Node.js** and is installed via npm (`npm install -g gnomon`). Adds minor latency to output. Best suited for diagnosing slow processes rather than precise benchmarking.
 
 # SEE ALSO
 
-[time](/man/time)(1), [ts](/man/ts)(1)
+[ts](/man/ts)(1), [time](/man/time)(1), [pv](/man/pv)(1)

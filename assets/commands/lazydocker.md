@@ -12,24 +12,31 @@ terminal UI for managing Docker containers, images, volumes, and networks
 
 ```lazydocker -f [/path/to/config.yml]```
 
+**Use a specific Docker Compose file**
+
+```lazydocker -f [docker-compose.yml]```
+
 **Start without live updates**
 
 ```lazydocker --no-live```
 
 # SYNOPSIS
 
-**lazydocker** [_-f config_] [_--no-live_]
+**lazydocker** [_-f config_] [_--no-live_] [_-v_]
 
 # PARAMETERS
 
 **-f**, **--config** _file_
-> Path to config file.
+> Path to a Docker Compose config file or lazydocker config file.
 
 **--no-live**
 > Disable live update of container stats.
 
 **-v**, **--version**
 > Print version information.
+
+**-d**, **--debug**
+> Enable debug logging.
 
 **-h**, **--help**
 > Display help.
@@ -60,7 +67,7 @@ terminal UI for managing Docker containers, images, volumes, and networks
 **m**
 > View container logs.
 
-**E**
+**e**
 > Exec shell in container.
 
 **b**
@@ -106,4 +113,4 @@ Requires Docker daemon access (user must be in docker group or use sudo). Live s
 
 # SEE ALSO
 
-[docker](/man/docker)(1), [docker-compose](/man/docker-compose)(1), [lazygit](/man/lazygit)(1), [ctop](/man/ctop)(1)
+[docker](/man/docker)(1), [docker-compose](/man/docker-compose)(1), [lazygit](/man/lazygit)(1), [ctop](/man/ctop)(1), [podman](/man/podman)(1), [dive](/man/dive)(1)

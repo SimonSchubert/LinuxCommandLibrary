@@ -40,6 +40,14 @@ Show **info** about a package
 
 ```prt-get info [package]```
 
+**List dependencies** of a package
+
+```prt-get depends [package]```
+
+**List installed** packages
+
+```prt-get listinst```
+
 # SYNOPSIS
 
 **prt-get** [**install**|**depinst**|**upgrade**|**remove**|**search**|**sysup**] [_options_] [_package_]
@@ -79,11 +87,29 @@ Show **info** about a package
 **dependent**
 > List packages depending on a package
 
+**depends**
+> List dependencies of a package
+
+**deptree**
+> Show the full dependency tree of a package
+
+**cat**
+> Print the Pkgfile of a port
+
+**path**
+> Print the path to a port directory
+
 **lock**
 > Lock a package to prevent upgrades
 
 **unlock**
 > Unlock a previously locked package
+
+**listlocked**
+> List locked packages
+
+**isinst**
+> Check if a package is installed
 
 # PARAMETERS
 
@@ -102,8 +128,23 @@ Show **info** about a package
 **-vv**
 > Show version and description in search results
 
+**-is**
+> Ignore signature mismatches
+
+**--margs**=_"args"_
+> Pass additional arguments to pkgmk
+
+**--aargs**=_"args"_
+> Pass additional arguments to pkgadd
+
+**--log**
+> Enable build logging
+
 **--all**
 > Include locked packages in output
+
+**--config**=_file_
+> Use alternative configuration file
 
 # DESCRIPTION
 
@@ -121,4 +162,4 @@ CRUX-specific tool. Requires ports tree to be synchronized. Builds packages from
 
 # SEE ALSO
 
-[pkgmk](/man/pkgmk)(8), [pkgadd](/man/pkgadd)(8), [ports](/man/ports)(8)
+[pkgmk](/man/pkgmk)(8), [pkgadd](/man/pkgadd)(8), [pkgrm](/man/pkgrm)(8), [pkginfo](/man/pkginfo)(8), [ports](/man/ports)(8)

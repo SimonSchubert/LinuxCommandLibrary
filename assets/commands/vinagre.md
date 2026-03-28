@@ -82,4 +82,4 @@ Deprecated in favor of GNOME Connections. Some protocols require optional depend
 
 # SEE ALSO
 
-[remmina](/man/remmina)(1), [vncviewer](/man/vncviewer)(1), [xfreerdp](/man/xfreerdp)(1), [gnome-connections](/man/gnome-connections)(1)
+[remmina](/man/remmina)(1), [vncviewer](/man/vncviewer)(1), [xfreerdp](/man/xfreerdp)(1)

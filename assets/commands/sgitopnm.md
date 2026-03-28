@@ -8,9 +8,13 @@ Convert SGI images to PNM format
 
 ```sgitopnm [input.rgb] > [output.pnm]```
 
-**Extract specific channel**
+**Extract specific channel** (0=red, 1=green, 2=blue)
 
 ```sgitopnm -channel [0] [input.rgb] > [output.pgm]```
+
+**Convert with verbose output** showing image information
+
+```sgitopnm -verbose [input.rgb] > [output.pnm]```
 
 # SYNOPSIS
 
@@ -26,7 +30,7 @@ Convert SGI images to PNM format
 
 # DESCRIPTION
 
-**sgitopnm** converts Silicon Graphics image format (SGI RGB) to PNM. SGI images use .rgb, .rgba, .bw extensions. Part of Netpbm toolkit.
+**sgitopnm** converts Silicon Graphics image format (SGI RGB) to PNM (Portable aNyMap). SGI images typically use .rgb, .rgba, or .bw extensions. Single-channel images produce PGM output; multi-channel images produce PPM. Part of the Netpbm toolkit.
 
 # SEE ALSO
 

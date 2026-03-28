@@ -20,13 +20,13 @@ View gzip-compressed file contents
 
 ```zcat [file.gz] | nl```
 
-**Check integrity** of a gzipped file
+**Page through** a gzipped file
 
-```zcat -t [file.gz]```
+```zcat [file.gz] | less```
 
-**View verbose information** about a gzipped file
+**Concatenate and decompress** multiple files into one output
 
-```zcat -l [file.gz]```
+```zcat [file1.gz] [file2.gz] > [combined.txt]```
 
 # SYNOPSIS
 
@@ -35,28 +35,16 @@ View gzip-compressed file contents
 # PARAMETERS
 
 **-f**, **--force**
-> Force decompression even if file has multiple links or output is to a terminal.
-
-**-h**, **--help**
-> Display help message and exit.
-
-**-k**, **--keep**
-> Keep input files (don't delete).
-
-**-l**, **--list**
-> List compressed and uncompressed file sizes and compression ratio.
+> Force decompression even if file has multiple links or the suffix does not match.
 
 **-q**, **--quiet**
 > Suppress all warning messages.
 
-**-r**, **--recursive**
-> Operate recursively on directories.
-
-**-t**, **--test**
-> Test compressed file integrity without decompressing.
-
 **-v**, **--verbose**
 > Display filename and compression ratio for each file.
+
+**-h**, **--help**
+> Display help message and exit.
 
 **-V**, **--version**
 > Display version information and exit.
@@ -71,7 +59,7 @@ When reading from stdin, zcat will pass through data that is not in a recognized
 
 # CAVEATS
 
-zcat only outputs to stdout; it cannot decompress files in place. For decompressing to files, use **gunzip** or **gzip -d**. On some systems, zcat may be installed as **gzcat** to avoid conflicts with the compress utility's zcat.
+zcat only outputs to stdout; it cannot decompress files in place. For decompressing to files, use **gunzip** or **gzip -d**. On some systems (e.g., macOS), zcat may be installed as **gzcat** to avoid conflicts with the compress utility's zcat. Unlike gzip/gunzip, zcat does not support flags like -t (test), -l (list), -k (keep), or -r (recursive) since it only reads and decompresses to stdout.
 
 # HISTORY
 
@@ -79,4 +67,4 @@ zcat is part of the **gzip** package, originally written by **Jean-loup Gailly**
 
 # SEE ALSO
 
-[gzip](/man/gzip)(1), [gunzip](/man/gunzip)(1), [cat](/man/cat)(1), [zless](/man/zless)(1), [zgrep](/man/zgrep)(1)
+[gzip](/man/gzip)(1), [gunzip](/man/gunzip)(1), [cat](/man/cat)(1), [zless](/man/zless)(1), [zgrep](/man/zgrep)(1), [bzcat](/man/bzcat)(1), [xzcat](/man/xzcat)(1)

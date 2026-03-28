@@ -8,13 +8,21 @@ Exoscale managed database service operations
 
 ```exo dbaas list```
 
-**Create a database**
+**Create a PostgreSQL database**
 
-```exo dbaas create [pg] [name] --zone [ch-gva-2] --plan [startup-4]```
+```exo dbaas create pg [name] --zone [ch-gva-2] --plan [hobbyist-2]```
 
 **Show database details**
 
 ```exo dbaas show [name] --zone [ch-gva-2]```
+
+**Show database connection URI**
+
+```exo dbaas show [name] --zone [ch-gva-2] --uri```
+
+**List available database types and plans**
+
+```exo dbaas type list [--zone ch-gva-2]```
 
 **Delete a database**
 
@@ -22,7 +30,7 @@ Exoscale managed database service operations
 
 **Update database settings**
 
-```exo dbaas update [name] --zone [ch-gva-2]```
+```exo dbaas update [name] --zone [ch-gva-2] --plan [business-4]```
 
 # SYNOPSIS
 
@@ -45,16 +53,22 @@ Exoscale managed database service operations
 **delete**
 > Delete a database.
 
-**types**
-> List available database types.
+**type**
+> List and show available database types and plans.
 
 # PARAMETERS
 
 **--zone** _zone_
-> Exoscale zone.
+> Exoscale zone (e.g., ch-gva-2, de-fra-1, at-vie-1).
 
 **--plan** _plan_
-> Service plan.
+> Service plan (e.g., hobbyist-2, startup-4, business-4).
+
+**--uri**
+> Show the connection URI for the database service.
+
+**-O**, **--output-format** _FORMAT_
+> Output format: table, json, text.
 
 # DESCRIPTION
 
@@ -66,5 +80,5 @@ The tool handles provisioning, configuration updates, and access credential mana
 
 # SEE ALSO
 
-[exo](/man/exo)(1), [exo-storage](/man/exo-storage)(1)
+[exo](/man/exo)(1), [exo-compute](/man/exo-compute)(1), [exo-storage](/man/exo-storage)(1)
 

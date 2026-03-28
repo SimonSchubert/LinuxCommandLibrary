@@ -24,17 +24,21 @@ syntax-highlighting pager for diffs
 
 ```delta --syntax-theme [Dracula] [file1.txt] [file2.txt]```
 
-**Highlight word-level changes**
+**View git log** with delta formatting
 
-```delta --word-diff-regex '\w+' [file1.txt] [file2.txt]```
+```git log -p | delta```
 
-**Enable hyperlinks in output**
+**Show diff with navigate** mode (use n/N to jump between hunks)
 
-```delta --hyperlinks [file1.txt] [file2.txt]```
+```git diff | delta --navigate```
 
 **Configure as git pager**
 
 ```git config --global core.pager delta```
+
+**List available syntax** themes
+
+```delta --list-syntax-themes```
 
 # SYNOPSIS
 
@@ -60,8 +64,17 @@ _FILE1_ _FILE2_
 **--hyperlinks**
 > Render commit hashes, file paths, and line numbers as terminal hyperlinks.
 
+**--color-only**
+> Do not alter formatting; only add syntax highlighting.
+
+**--diff-stat-align-width** _N_
+> Width allocated for file paths in a diff stat section.
+
 **--features** _NAMES_
 > Activate named feature sets defined in gitconfig.
+
+**--list-syntax-themes**
+> List available syntax-highlighting themes.
 
 **--paging** _auto|always|never_
 > Control pager usage.
@@ -77,6 +90,15 @@ _FILE1_ _FILE2_
 
 **--diff-so-fancy**
 > Emulate diff-so-fancy output.
+
+**--raw**
+> Do not alter the input in any way; only highlight syntax.
+
+**--width** _N_
+> The width of underline/overline decorations and side-by-side mode.
+
+**--tabs** _N_
+> Number of spaces to replace tab characters with (default: 4).
 
 **--help**
 > Display help information.
@@ -104,4 +126,4 @@ delta was created by **Dan Davison** and released in **2019**. It was inspired b
 
 # SEE ALSO
 
-[diff](/man/diff)(1), [git](/man/git)(1), [bat](/man/bat)(1), [diff-so-fancy](/man/diff-so-fancy)(1)
+[diff](/man/diff)(1), [git](/man/git)(1), [bat](/man/bat)(1), [diff-so-fancy](/man/diff-so-fancy)(1), [less](/man/less)(1), [colordiff](/man/colordiff)(1)

@@ -46,11 +46,17 @@ Ada source file preprocessor
 **-s**
 > List symbol names and values to stdout.
 
+**-T**
+> Use only symbols defined on the command line or in the definitions file (do not use environment variables).
+
 **-u**
 > Treat undefined symbols as FALSE.
 
 **-r**
 > Generate source reference pragmas.
+
+**-v**
+> Verbose mode, display file names as they are processed.
 
 # DESCRIPTION
 
@@ -62,4 +68,4 @@ Neither -b nor -c preserves original line numbers. If both are absent, preproces
 
 # SEE ALSO
 
-[gnatmake](/man/gnatmake)(1), [gcc](/man/gcc)(1)
+[gnatmake](/man/gnatmake)(1), [gcc](/man/gcc)(1), [gprbuild](/man/gprbuild)(1), [m4](/man/m4)(1)

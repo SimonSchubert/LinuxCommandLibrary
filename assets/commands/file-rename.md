@@ -24,9 +24,13 @@ Perl regex-based file renaming
 
 ```file-rename 's/^/prefix_/' [files]```
 
-**Add extension**
+**Change file extension**
 
-```file-rename 's/$/.txt/' [files]```
+```file-rename 's/\.jpeg$/.jpg/' [*.jpeg]```
+
+**Remove numbering prefix from files**
+
+```file-rename 's/^\d+_//' [files]```
 
 # SYNOPSIS
 
@@ -43,6 +47,15 @@ Perl regex-based file renaming
 **-f**, **--force**
 > Overwrite existing files.
 
+**-0**, **--null**
+> Expect null-terminated input from stdin (for use with find -print0).
+
+**-d**, **--filename**
+> Rename only the filename component, not the directory part.
+
+**-e** _expression_
+> Apply expression to filename. Multiple -e options can be chained.
+
 # DESCRIPTION
 
 **file-rename** (also known as rename or prename) renames multiple files using Perl regular expressions, providing powerful pattern-based transformation capabilities. Unlike simple mv operations, it can apply complex substitutions, case conversions, and pattern matching across multiple filenames simultaneously.
@@ -57,5 +70,5 @@ Multiple implementations of rename exist. This documents the Perl version (prena
 
 # SEE ALSO
 
-[mv](/man/mv)(1), [mmv](/man/mmv)(1)
+[rename](/man/rename)(1), [mv](/man/mv)(1), [mmv](/man/mmv)(1), [find](/man/find)(1), [perl](/man/perl)(1), [sed](/man/sed)(1)
 

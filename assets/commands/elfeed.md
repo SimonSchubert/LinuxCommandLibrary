@@ -8,13 +8,17 @@ Extensible RSS/Atom feed reader for Emacs
 
 ```M-x elfeed```
 
-**Update feeds**
+**Update all feeds**
 
 ```M-x elfeed-update```
 
-**Add feed (in config)**
+**Set default search filter**
 
-```(setq elfeed-feeds '("https://example.com/feed.xml"))```
+```(setq elfeed-search-filter "@6-months-ago +unread")```
+
+**Add feeds in config**
+
+```(setq elfeed-feeds '("https://example.com/feed.xml" "https://blog.example.org/rss"))```
 
 # DESCRIPTION
 
@@ -39,15 +43,17 @@ Elfeed stores feed data in a local database and supports thousands of feeds effi
 # KEYBINDINGS
 
 ```
-g         - Update feeds
+g         - Refresh view
 G         - Update all feeds
-s         - Search/filter
-b         - Open in browser
-r         - Mark as read
+s         - Edit search filter
+b         - Open entry in browser
+r         - Mark as read (remove unread tag)
 u         - Mark as unread
 +         - Add tag
 -         - Remove tag
-q         - Quit
+RET       - Open selected entry
+n / p     - Next / previous entry
+q         - Quit elfeed or close entry
 ```
 
 # CONFIGURATION
@@ -71,4 +77,4 @@ Elfeed was created by **Christopher Wellons** (skeeto) around **2013**. It was d
 
 # SEE ALSO
 
-[emacs](/man/emacs)(1), [newsboat](/man/newsboat)(1), [rss](/man/rss)(5)
+[emacs](/man/emacs)(1), [newsboat](/man/newsboat)(1)

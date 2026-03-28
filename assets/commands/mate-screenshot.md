@@ -26,11 +26,15 @@ Create a screenshot **without borders**
 
 Create a screenshot with a **specific effect**
 
-```mate-screenshot --effect=[shadow|border|none]```
+```mate-screenshot --effect [shadow|border|none]```
 
 Create a screenshot with a **specific delay** in seconds
 
-```mate-screenshot --delay=[5]```
+```mate-screenshot --delay [5]```
+
+Create a screenshot and **copy to clipboard** instead of saving
+
+```mate-screenshot --clipboard```
 
 # SYNOPSIS
 

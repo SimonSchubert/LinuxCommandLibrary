@@ -4,31 +4,41 @@ SSH directory and host browser
 
 # TLDR
 
-**Start SSH multiplexer**
+**Start the SSH directory** with default settings
 
 ```wishlist```
 
-**Specify config**
+**Start with a specific config** file
 
 ```wishlist -c [config.yaml]```
 
-**Listen on port**
+**Listen on a specific port**
 
 ```wishlist -p [2222]```
 
+**Start with a specific listen address**
+
+```wishlist -l [0.0.0.0:2222]```
+
 # SYNOPSIS
 
-**wishlist** [_-c config_] [_-p port_] [_options_]
+**wishlist** [_-c config_] [_-p port_] [_-l address_] [_options_]
 
 # PARAMETERS
 
 **-c** _FILE_
-> Config file.
+> Path to the YAML configuration file.
+
+**-l** _ADDRESS_
+> Bind address to listen on (e.g., 0.0.0.0:2222).
 
 **-p** _PORT_
-> Listen port.
+> Port to listen on (default: 22).
 
-**--help**
+**-v**, **--version**
+> Show version information.
+
+**-h**, **--help**
 > Show help.
 
 # DESCRIPTION
@@ -47,4 +57,4 @@ Configuration needed. Charm Labs tool. Go implementation.
 
 # SEE ALSO
 
-[ssh](/man/ssh)(1), [gum](/man/gum)(1), [charm](/man/charm)(1)
+[ssh](/man/ssh)(1), [sshd](/man/sshd)(8), [tmux](/man/tmux)(1)

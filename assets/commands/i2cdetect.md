@@ -8,13 +8,25 @@ List **active I2C buses**
 
 ```i2cdetect -l```
 
-**Scan devices** on an I2C bus
+**Scan devices** on I2C bus 1
 
-```i2cdetect [i2c_bus]```
+```i2cdetect -y 1```
 
-Scan devices **without confirmation**
+**Scan using SMBus quick write** commands (safer default mode)
 
-```i2cdetect -y [i2c_bus]```
+```i2cdetect -y -q 1```
+
+**Scan using SMBus read byte** commands
+
+```i2cdetect -y -r 1```
+
+**Scan all addresses** including reserved ones (0x00-0x7f)
+
+```i2cdetect -y -a 1```
+
+**Display adapter functionality**
+
+```i2cdetect -F 1```
 
 # SYNOPSIS
 
@@ -62,4 +74,4 @@ i2cdetect is part of i2c-tools, a set of utilities for I2C bus access on Linux. 
 
 # SEE ALSO
 
-[i2cget](/man/i2cget)(8), [i2cset](/man/i2cset)(8), [i2cdump](/man/i2cdump)(8), [i2ctransfer](/man/i2ctransfer)(8)
+[i2cget](/man/i2cget)(8), [i2cset](/man/i2cset)(8), [i2cdump](/man/i2cdump)(8), [modprobe](/man/modprobe)(8), [dmesg](/man/dmesg)(1)

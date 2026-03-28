@@ -1,80 +1,89 @@
 # TAGLINE
 
-interactive codebase-wide find and replace
+Fast, interactive codebase-wide find and replace
 
 # TLDR
 
-**Replace string in files**
+**Replace a string interactively** across the current directory
 
 ```fastmod "[old_string]" "[new_string]"```
 
-**Replace with regex**
+**Replace using a regex** with multiline matching
 
 ```fastmod -m "[pattern]" "[replacement]"```
 
-**Replace in specific directory**
+**Replace in a specific directory**
 
-```fastmod "[old]" "[new]" [directory]```
+```fastmod "[old]" "[new]" [path/to/directory]```
 
-**Replace with file extension filter**
+**Replace only in files** with specific extensions
 
-```fastmod --extensions "[py,js]" "[old]" "[new]"```
+```fastmod -e "[py,js]" "[old]" "[new]"```
 
-**Accept all replacements**
+**Accept all replacements** without prompting
 
 ```fastmod --accept-all "[old]" "[new]"```
 
-**Preview without changes**
+**Preview matches** without modifying files
 
 ```fastmod --print-only "[old]" "[new]"```
 
+**Treat pattern as a literal string** instead of regex
+
+```fastmod --fixed-strings "[old.string()]" "[new.string()]"```
+
 # SYNOPSIS
 
-**fastmod** [_options_] _pattern_ _replacement_ [_paths_...]
+**fastmod** [_options_] _pattern_ [_replacement_] [_paths_...]
 
 # DESCRIPTION
 
-**fastmod** performs fast, interactive codemod operations across files. It searches for patterns and offers interactive confirmation for replacements, making bulk code changes safer.
+**fastmod** performs fast, interactive codemod operations across files. It searches for regex patterns and prompts for confirmation before each replacement, making bulk code changes safer.
 
-The tool combines the speed of ripgrep for searching with interactive review of changes. It's designed for large-scale refactoring in codebases.
+The tool uses the same regex engine as ripgrep for fast searching combined with interactive review of changes. By default, patterns are treated as regular expressions. If no replacement is given, fastmod deletes the matched text. If no paths are given, it searches the current directory recursively.
+
+During interactive mode, press **y** to accept, **n** to skip, **e** to edit the replacement, **a** to accept all remaining, or **q** to quit.
 
 # PARAMETERS
 
 **-m**, **--multiline**
-> Enable multiline regex matching.
+> Enable multiline regex matching (dot matches newlines).
 
 **-i**, **--ignore-case**
 > Case insensitive matching.
 
-**--extensions** _exts_
-> Filter by file extensions.
+**-e**, **--extensions** _exts_
+> Comma-separated list of file extensions to process (e.g., py,js,ts).
 
 **--accept-all**
-> Accept all replacements.
+> Apply all replacements without interactive prompting.
 
 **--print-only**
-> Show matches without changing.
+> Show matches without modifying files.
 
 **-d**, **--dir** _path_
-> Search directory.
+> Set the root search directory (default: current directory).
 
 **--glob** _pattern_
-> Include/exclude files.
+> Include/exclude files by glob pattern (prefix with ! to exclude).
 
 **--hidden**
-> Search hidden files.
+> Include hidden files and directories in the search.
 
-**--fixed-strings**
-> Treat pattern as literal.
+**--fixed-strings**, **-F**
+> Treat the pattern as a literal string, not a regex.
+
+**--count**
+> Display the total number of matches/replacements.
 
 # CAVEATS
 
-Regex syntax differs from some tools. Interactive mode requires terminal. Large replacements may need review. Backup recommended before bulk changes.
+Uses Rust's regex syntax, which may differ from PCRE or POSIX regex in some edge cases. Interactive mode requires a terminal. When using **--accept-all**, changes are applied without confirmation -- use **--print-only** first to preview.
 
 # HISTORY
 
-**fastmod** was developed at **Facebook** (Meta) as a tool for large-scale code modifications. It addresses the need for interactive, safe refactoring across massive codebases. Released as open source, it uses Rust for performance.
+**fastmod** was developed at **Facebook** (Meta) as a tool for large-scale code modifications. It addresses the need for interactive, safe refactoring across massive codebases. Released as open source, it is written in Rust for performance.
 
 # SEE ALSO
 
-[sed](/man/sed)(1), [ripgrep](/man/ripgrep)(1), [codemod](/man/codemod)(1), [comby](/man/comby)(1)
+[sed](/man/sed)(1), [codemod](/man/codemod)(1), [comby](/man/comby)(1), [rg](/man/rg)(1)

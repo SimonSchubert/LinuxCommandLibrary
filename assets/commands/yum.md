@@ -4,17 +4,90 @@ Red Hat package manager
 
 # TLDR
 
-This command is an alias for **dnf** on modern distros.
+On modern distros (RHEL 8+, Fedora 22+), **yum** is a symlink to **dnf**.
 
-For older distros (e.g., CentOS 7), yum is a distinct program from dnf. Some subcommands and options may differ.
+**Install** a package
 
-**View** documentation for the original command
+```sudo yum install [package]```
 
-```tldr dnf```
+**Remove** a package
+
+```sudo yum remove [package]```
+
+**Update** all packages
+
+```sudo yum update```
+
+**Update** a specific package
+
+```sudo yum update [package]```
+
+**Search** for a package by name
+
+```yum search [keyword]```
+
+**List installed** packages
+
+```yum list installed```
+
+**Show info** about a package
+
+```yum info [package]```
+
+**Clean** cached data
+
+```yum clean all```
 
 # SYNOPSIS
 
 **yum** [_options_] [_command_] [_package_...]
+
+# PARAMETERS
+
+**install** _package_
+> Install one or more packages.
+
+**remove** _package_
+> Remove a package.
+
+**update** [_package_]
+> Update all packages, or a specific package if given.
+
+**search** _keyword_
+> Search package names and descriptions.
+
+**info** _package_
+> Display detailed information about a package.
+
+**list** [_installed_|_available_|_updates_]
+> List packages. Use **installed** for installed, **available** for repo packages, **updates** for available updates.
+
+**clean** [_all_|_packages_|_metadata_]
+> Clean cached data.
+
+**provides** _file_
+> Find which package provides a given file.
+
+**groupinstall** _group_
+> Install a package group.
+
+**repolist** [_all_|_enabled_|_disabled_]
+> List configured repositories.
+
+**history**
+> View transaction history.
+
+**-y**
+> Assume yes to all prompts.
+
+**--enablerepo=**_repo_
+> Temporarily enable a specific repository.
+
+**--disablerepo=**_repo_
+> Temporarily disable a specific repository.
+
+**--nogpgcheck**
+> Skip GPG signature checking.
 
 # DESCRIPTION
 
@@ -28,4 +101,4 @@ On modern systems, yum is an alias for dnf. Behavior may differ slightly between
 
 # SEE ALSO
 
-[dnf](/man/dnf)(8), [rpm](/man/rpm)(8)
+[dnf](/man/dnf)(8), [rpm](/man/rpm)(8), [apt-get](/man/apt-get)(8), [zypper](/man/zypper)(8)

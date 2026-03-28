@@ -4,25 +4,29 @@ reads the logd ring buffer log on OpenWrt and similar embedded Linux systems
 
 # TLDR
 
-**Print** the log
+**Print** all log messages
 
 ```logread```
 
-Print **last N** messages
-
-```logread -l [n]```
-
-**Filter** by pattern
-
-```logread -e [pattern]```
-
-**Follow** log in real-time
+**Follow** log output in real-time
 
 ```logread -f```
 
-Display **help**
+Print **last N** messages
 
-```logread -h```
+```logread -l [50]```
+
+**Filter** messages by pattern
+
+```logread -e [pattern]```
+
+**Filter** by syslog priority
+
+```logread -p [daemon.info]```
+
+Print log and **follow** new messages
+
+```logread -f -e [error]```
 
 # SYNOPSIS
 
@@ -34,17 +38,23 @@ Display **help**
 
 # PARAMETERS
 
-**-l N**
-> Print last N messages
-
-**-e PATTERN**
-> Filter messages by keyword or regex
-
 **-f**
-> Follow log output in real-time
+> Follow log output in real-time (like tail -f).
+
+**-l** _N_
+> Print only the last N messages.
+
+**-e** _PATTERN_
+> Filter messages matching a keyword or pattern.
+
+**-p** _FACILITY.LEVEL_
+> Filter by syslog facility and priority (e.g., kern.err, daemon.info).
+
+**-t**
+> Include a human-readable timestamp with each message.
 
 **-h**
-> Display help information
+> Display help information.
 
 # CAVEATS
 
@@ -52,4 +62,4 @@ Specific to OpenWrt and BusyBox-based systems. Ring buffer has limited size; old
 
 # SEE ALSO
 
-[dmesg](/man/dmesg)(1), [journalctl](/man/journalctl)(1), [syslog](/man/syslog)(3)
+[dmesg](/man/dmesg)(1), [journalctl](/man/journalctl)(1), [logger](/man/logger)(1)

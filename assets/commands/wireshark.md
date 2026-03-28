@@ -8,29 +8,29 @@ Graphical network protocol analyzer
 
 ```wireshark```
 
-**Open capture file**
+**Open a capture file**
 
-```wireshark [capture.pcap]```
+```wireshark [capture.pcapng]```
 
-**Start capturing** on interface
+**Start capturing** on a specific interface
 
-```wireshark -i [eth0]```
+```wireshark -i [eth0] -k```
 
-**Capture with filter**
+**Capture with a BPF capture filter**
 
-```wireshark -i [eth0] -f "port 80"```
+```wireshark -i [eth0] -f "port 80" -k```
 
-**Capture for specific duration**
+**Open a file with a display filter applied**
 
-```wireshark -i [eth0] -a duration:[60]```
+```wireshark -Y "http.request" -r [capture.pcapng]```
 
-**Start with display filter**
+**Capture to a file** and stop after a duration
 
-```wireshark -Y "http" [capture.pcap]```
+```wireshark -i [eth0] -w [output.pcapng] -a duration:[60]```
 
-**Capture to file**
+**List available capture interfaces**
 
-```wireshark -i [eth0] -w [output.pcap]```
+```wireshark -D```
 
 # SYNOPSIS
 
@@ -74,19 +74,36 @@ Wireshark is the industry standard for network troubleshooting, security analysi
 > List available interfaces.
 
 **-S**
-> Update packet list in real-time.
+> Update packet list in real-time during capture.
+
+**-c** _count_
+> Stop capture after receiving this many packets.
+
+**-n**
+> Disable network name resolution.
+
+**-o** _preference:value_
+> Set a preference value (overrides preferences file).
+
+**-X** _extension_option_
+> Specify an extension option (e.g., lua_script:myscript.lua).
+
+**--fullscreen**
+> Start Wireshark in full-screen mode.
 
 **--list-time-stamp-types**
 > List timestamp types for interface.
 
 # DISPLAY FILTERS
 
-**ip.addr == 192.168.1.1**: Filter by IP
-**tcp.port == 80**: Filter by TCP port
-**http**: Show HTTP traffic
-**dns**: Show DNS traffic
-**tcp.flags.syn == 1**: SYN packets
-**frame contains "password"**: Search content
+**ip.addr == 192.168.1.1**: Filter by IP address (source or destination).
+**tcp.port == 443**: Filter by TCP port.
+**http.request**: Show HTTP requests only.
+**dns**: Show DNS traffic.
+**tcp.flags.syn == 1 && tcp.flags.ack == 0**: SYN packets (connection initiations).
+**frame contains "password"**: Search packet content for a string.
+**ip.src == 10.0.0.0/8**: Filter by source subnet.
+**tcp.analysis.retransmission**: Show TCP retransmissions.
 
 # CAVEATS
 
@@ -98,4 +115,4 @@ Requires privileges for live capture (root or cap_net_raw capability). Large cap
 
 # SEE ALSO
 
-[tshark](/man/tshark)(1), [tcpdump](/man/tcpdump)(1), [dumpcap](/man/dumpcap)(1), [ngrep](/man/ngrep)(1)
+[tshark](/man/tshark)(1), [tcpdump](/man/tcpdump)(1), [dumpcap](/man/dumpcap)(1), [editcap](/man/editcap)(1), [ngrep](/man/ngrep)(1)

@@ -36,9 +36,17 @@ PHP command-line interpreter
 
 ```php -m```
 
+**Set a configuration directive** at runtime
+
+```php -d [memory_limit=256M] [script.php]```
+
 **Run with a specific php.ini**
 
 ```php -c [/path/to/php.ini] [script.php]```
+
+**Show which php.ini files** are loaded
+
+```php --ini```
 
 # SYNOPSIS
 
@@ -88,6 +96,9 @@ _FILE_
 **-f** _FILE_
 > Parse and execute the given file (explicit form).
 
+**--ini**
+> Show the configuration file names that PHP looks for and loads.
+
 **-w**
 > Output source with comments and whitespace stripped.
 
@@ -116,5 +127,5 @@ PHP was created by **Rasmus Lerdorf** in **1994**, originally as a set of CGI bi
 
 # SEE ALSO
 
-[composer](/man/composer)(1), [phpunit](/man/phpunit)(1), [pecl](/man/pecl)(1), [php-cs-fixer](/man/php-cs-fixer)(1)
+[composer](/man/composer)(1), [phpunit](/man/phpunit)(1), [pecl](/man/pecl)(1), [php-cs-fixer](/man/php-cs-fixer)(1), [phpize](/man/phpize)(1), [php-config](/man/php-config)(1)
 

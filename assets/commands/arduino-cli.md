@@ -18,7 +18,7 @@ Official command-line tool for Arduino development
 
 **Compile and upload** in one command
 
-```arduino-cli compile --fqbn [arduino:avr:uno] --port [/dev/ttyACM0] --upload [path/to/sketch]```
+```arduino-cli compile --fqbn [arduino:avr:uno] --port [/dev/ttyACM0] -u [path/to/sketch]```
 
 **Create a new sketch**
 
@@ -35,6 +35,14 @@ Official command-line tool for Arduino development
 **Install a library**
 
 ```arduino-cli lib install "[Servo]"```
+
+**Open serial monitor** on a port
+
+```arduino-cli monitor --port [/dev/ttyACM0]```
+
+**Update platform index** and upgrade all installed platforms
+
+```arduino-cli core update-index && arduino-cli core upgrade```
 
 # SYNOPSIS
 
@@ -69,14 +77,26 @@ Official command-line tool for Arduino development
 **lib search** _query_
 > Search for libraries
 
+**lib list**
+> List installed libraries
+
 **monitor**
 > Open serial monitor to communicate with the board
+
+**config init**
+> Create a default configuration file
+
+**core upgrade**
+> Upgrade all installed board platforms to the latest version
 
 **-b**, **--fqbn** _string_
 > Fully Qualified Board Name (e.g., arduino:avr:uno)
 
 **-p**, **--port** _string_
 > Port address (e.g., /dev/ttyACM0 or COM3)
+
+**-u**, **--upload**
+> Upload the binary after compilation (use with compile)
 
 **-e**, **--export-binaries**
 > Export compiled binaries to the sketch folder
@@ -86,6 +106,9 @@ Official command-line tool for Arduino development
 
 **-t**, **--verify**
 > Verify uploaded binary after upload
+
+**-v**, **--verbose**
+> Enable verbose output during compile or upload
 
 **-P**, **--programmer** _name_
 > Use a specific programmer for upload

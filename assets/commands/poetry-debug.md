@@ -4,13 +4,17 @@ Display Poetry debugging information
 
 # TLDR
 
-**Show debug information**
+**Show Poetry and environment information**
 
 ```poetry debug info```
 
-**Resolve dependencies with debug**
+**Debug dependency resolution**
 
 ```poetry debug resolve```
+
+**Resolve a specific package**
+
+```poetry debug resolve [package_name]```
 
 # SYNOPSIS
 
@@ -19,10 +23,10 @@ Display Poetry debugging information
 # PARAMETERS
 
 **info**
-> Show system info.
+> Show Poetry version, Python version, system platform, and virtualenv details.
 
-**resolve**
-> Debug dependency resolution.
+**resolve** [_package_]
+> Run the dependency resolver in verbose mode. Optionally specify a package name to resolve only that dependency.
 
 # DESCRIPTION
 
@@ -32,13 +36,13 @@ The **resolve** subcommand performs dependency resolution in debug mode, showing
 
 # CAVEATS
 
-For debugging purposes. Shows environment details.
+Must be run from a directory containing a **pyproject.toml** file. The **resolve** subcommand may take a long time on projects with many dependencies.
 
 # HISTORY
 
-poetry debug provides **debugging capabilities** for troubleshooting.
+The **debug** subcommand was added as part of Poetry's built-in diagnostic tooling to help users and maintainers troubleshoot environment and resolution issues.
 
 # SEE ALSO
 
-[poetry](/man/poetry)(1), [poetry-check](/man/poetry-check)(1)
+[poetry](/man/poetry)(1), [poetry-check](/man/poetry-check)(1), [poetry-env](/man/poetry-env)(1), [poetry-show](/man/poetry-show)(1)
 
