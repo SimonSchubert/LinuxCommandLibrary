@@ -8216,6 +8216,7 @@ yersinia.md
 yes.md
 yesod.md
 yetris.md
+yj.md
 ykinfo.md
 ykman-config.md
 ykman-fido.md
