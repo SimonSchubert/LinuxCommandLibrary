@@ -1,3 +1,16 @@
+## v3.7.3 — 2026-03-28
+
+### Features
+- Add new commands
+- Add JavaScript Alpine Linux terminal to website
+
+### Improvements
+- Improve command quality
+- Migrate to Compose catalog definitions
+- Simplify terminal boot sequence
+- Upgrade SDKs
+- Improve website sorting
+
 ## v3.7.2 — 2026-03-23
 
 ### Features
