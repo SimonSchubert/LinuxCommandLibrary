@@ -36,19 +36,19 @@ Useful for viewing images on headless servers or minimal systems.
 
 # PARAMETERS
 
-**-t, --timeout** _seconds_
+**-t**, **--timeout** _seconds_
 > Slideshow delay between images
 
-**-a, --autozoom**
+**-a**, **--autozoom**
 > Scale to fit screen
 
-**-h, --help**
+**-h**, **--help**
 > Display help
 
-**-1, --once**
+**-1**, **--once**
 > Don't loop slideshow
 
-**-u, --random**
+**-u**, **--random**
 > Randomize slideshow order
 
 # CAVEATS
@@ -57,4 +57,4 @@ Requires framebuffer support. Usually needs root or console access. Part of fbid
 
 # SEE ALSO
 
-[fim](/man/fim)(1), [feh](/man/feh)(1), [fbset](/man/fbset)(8)
+[fim](/man/fim)(1), [feh](/man/feh)(1), [fbset](/man/fbset)(1)

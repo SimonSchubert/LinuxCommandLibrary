@@ -36,6 +36,10 @@ GitOps continuous delivery tool for Kubernetes
 
 ```flux export source git --all```
 
+**View Flux controller logs**
+
+```flux logs```
+
 # SYNOPSIS
 
 **flux** [_COMMAND_] [_FLAGS_]
@@ -78,6 +82,15 @@ GitOps continuous delivery tool for Kubernetes
 **logs**
 > Display logs from Flux controllers.
 
+**trace** _RESOURCE_ _NAME_
+> Trace an object through the Flux dependency graph.
+
+**diff** _RESOURCE_
+> Diff a local resource against the cluster state.
+
+**version**
+> Print the Flux CLI and controller versions.
+
 # PARAMETERS
 
 **--kubeconfig** _FILE_
@@ -90,10 +103,10 @@ GitOps continuous delivery tool for Kubernetes
 > Kubernetes context to use.
 
 **--timeout** _DURATION_
-> Timeout for operations.
+> Timeout for operations (default: 5m0s).
 
-**-v**, **--verbose**
-> Enable verbose output.
+**--verbose**
+> Print generated objects.
 
 **-h**, **--help**
 > Display help for command.

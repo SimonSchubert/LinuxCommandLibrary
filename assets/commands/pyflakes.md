@@ -51,5 +51,5 @@ Pyflakes was created by Divmod for **fast static** analysis of Python code. It i
 
 # SEE ALSO
 
-[pylint](/man/pylint)(1), [flake8](/man/flake8)(1), [mypy](/man/mypy)(1)
+[pylint](/man/pylint)(1), [flake8](/man/flake8)(1), [mypy](/man/mypy)(1), [ruff](/man/ruff)(1)
 

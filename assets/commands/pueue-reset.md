@@ -8,9 +8,9 @@ Reset pueue daemon to clean state
 
 ```pueue reset```
 
-**Force reset**
+**Reset specific groups** only
 
-```pueue reset --force```
+```pueue reset --groups [group1] [group2]```
 
 # SYNOPSIS
 
@@ -18,18 +18,18 @@ Reset pueue daemon to clean state
 
 # PARAMETERS
 
-**-f**, **--force**
-> Kill running tasks and reset.
+**--groups** _group_...
+> Only reset specific groups instead of everything
 
 # DESCRIPTION
 
-**pueue reset** kills all running tasks and removes all task history. Resets the daemon to a clean state. Use with caution as it removes all queued and completed tasks.
+**pueue reset** kills all running tasks, removes all tasks, and resets the task ID counter. It returns the daemon to a clean state. A confirmation prompt is shown if there are running tasks.
 
 # CAVEATS
 
-This command permanently removes all task history and kills running tasks.
+This command permanently removes all task history and kills running tasks. The operation cannot be undone.
 
 # SEE ALSO
 
-[pueue](/man/pueue)(1), [pueue-clean](/man/pueue-clean)(1)
+[pueue](/man/pueue)(1), [pueue-clean](/man/pueue-clean)(1), [pueue-kill](/man/pueue-kill)(1), [pueue-remove](/man/pueue-remove)(1)
 

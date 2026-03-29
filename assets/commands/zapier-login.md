@@ -27,6 +27,8 @@ Authenticate with Zapier platform
 
 As an alternative to interactive login, you can set the **ZAPIER_DEPLOY_KEY** environment variable to run privileged commands without user input.
 
+Note: The CLI binary has been renamed from **zapier** to **zapier-platform** as of v18.0.0. The old **zapier** command still works but is deprecated.
+
 # SEE ALSO
 
-[zapier](/man/zapier)(1), [zapier-test](/man/zapier-test)(1)
+[zapier](/man/zapier)(1), [zapier-test](/man/zapier-test)(1), [zapier-push](/man/zapier-push)(1), [zapier-validate](/man/zapier-validate)(1)

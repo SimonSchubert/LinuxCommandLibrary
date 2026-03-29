@@ -27,16 +27,25 @@ Merge RCS file revisions
 # PARAMETERS
 
 **-r** _REV_
-> Revision to merge.
+> Revision to merge. An empty rev stands for the latest revision on the default branch.
 
 **-p**
-> Print to stdout.
+> Send result to stdout instead of overwriting the working file.
 
 **-q**
-> Quiet operation.
+> Quiet mode; do not print diagnostics.
+
+**-A**
+> Output conflicts using the -A style of diff3(1).
+
+**-E**
+> Output conflicts using the -E style of diff3(1) (default).
+
+**-e**
+> Output conflicts using the -e style of diff3(1). Does not warn about conflicts.
 
 **-k** _SUBST_
-> Keyword substitution.
+> Keyword substitution mode (e.g., -kk ignores keyword value differences).
 
 **-V** _N_
 > RCS version emulation.
@@ -49,7 +58,7 @@ By default the merge modifies the working file in place, but the **-p** flag pri
 
 # CAVEATS
 
-RCS is legacy system. Conflicts need manual fix. Consider Git for new projects.
+RCS is a legacy version control system. Conflicts are marked inline and must be resolved manually. Exit status is 0 for no overlaps, 1 for overlaps, and 2 for errors. Consider Git for new projects.
 
 # HISTORY
 
@@ -57,4 +66,4 @@ RCS is legacy system. Conflicts need manual fix. Consider Git for new projects.
 
 # SEE ALSO
 
-[rcs](/man/rcs)(1), [rcsdiff](/man/rcsdiff)(1), [merge](/man/merge)(1), [ci](/man/ci)(1)
+[rcs](/man/rcs)(1), [rcsdiff](/man/rcsdiff)(1), [merge](/man/merge)(1), [ci](/man/ci)(1), [co](/man/co)(1), [rlog](/man/rlog)(1)

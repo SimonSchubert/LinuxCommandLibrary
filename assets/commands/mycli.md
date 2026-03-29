@@ -6,7 +6,7 @@ MySQL client with autocompletion and syntax highlighting
 
 **Connect to database**
 
-```mycli -u [username] -p [database]```
+```mycli -u [username] [database]```
 
 **Connect to remote host**
 
@@ -14,7 +14,7 @@ MySQL client with autocompletion and syntax highlighting
 
 **Connect with password prompt**
 
-```mycli -u [username] -p```
+```mycli -u [username] -p [database]```
 
 **Execute SQL file**
 
@@ -78,8 +78,44 @@ _DATABASE_
 **--auto-vertical-output**
 > Automatically switch to vertical output when result is wider than terminal.
 
+**-d** _DSN_
+> Use DSN configured in the [alias_dsn] section of myclirc file.
+
+**-l** _FILE_
+> Log every query and its results to a file.
+
+**-v**, **--verbose**
+> Verbose output.
+
 **--myclirc** _FILE_
 > Path to configuration file (default: ~/.myclirc).
+
+**--defaults-file** _FILE_
+> Only read MySQL options from the given file.
+
+**--warn** / **--no-warn**
+> Warn before running a destructive query.
+
+**--ssh-host** _HOST_
+> Host name to connect to ssh server.
+
+**--ssh-port** _PORT_
+> Port to connect to ssh server.
+
+**--ssh-user** _USER_
+> User name to connect to ssh server.
+
+**--ssh-key-filename** _FILE_
+> Private key filename for the ssh connection.
+
+**--ssl-ca** _PATH_
+> CA file in PEM format.
+
+**--ssl-cert** _PATH_
+> X509 cert in PEM format.
+
+**--ssl-key** _PATH_
+> X509 key in PEM format.
 
 **-V**, **--version**
 > Display version information.

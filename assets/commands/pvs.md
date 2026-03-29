@@ -42,13 +42,13 @@ Use **separator**
 
 # PARAMETERS
 
-**-a, --all**
+**-a**, **--all**
 > Show devices that are not physical volumes
 
-**-v, --verbose**
+**-v**, **--verbose**
 > Increase verbosity and show additional details
 
-**-o, --options** _fields_
+**-o**, **--options** _fields_
 > Specify which fields to display
 
 **--noheadings**
@@ -70,4 +70,4 @@ Physical volumes that are not part of a volume group will show empty VG field. U
 
 # SEE ALSO
 
-[lvm](/man/lvm)(8), [pvdisplay](/man/pvdisplay)(8), [lvs](/man/lvs)(8), [vgs](/man/vgs)(8)
+[lvm](/man/lvm)(1), [pvdisplay](/man/pvdisplay)(1), [lvs](/man/lvs)(1), [vgs](/man/vgs)(1)

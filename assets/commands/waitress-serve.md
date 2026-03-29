@@ -4,23 +4,31 @@ Pure-Python WSGI production server
 
 # TLDR
 
-**Serve WSGI app**
+**Serve a WSGI app on the default port 8080**
 
-```waitress-serve --port=[8080] [myapp:app]```
+```waitress-serve [myapp:app]```
 
-**With host binding**
+**Bind to a specific host and port**
 
-```waitress-serve --host=[0.0.0.0] --port=[8080] [myapp:app]```
+```waitress-serve --host=[127.0.0.1] --port=[8080] [myapp:app]```
 
-**Unix socket**
+**Listen on multiple addresses**
+
+```waitress-serve --listen=[127.0.0.1:8080] --listen=[127.0.0.1:8443] [myapp:app]```
+
+**Use an application factory function**
+
+```waitress-serve --call [myapp:create_app]```
+
+**Listen on a Unix socket**
 
 ```waitress-serve --unix-socket=[/tmp/app.sock] [myapp:app]```
 
-**With threads**
+**Set number of worker threads**
 
-```waitress-serve --threads=[4] [myapp:app]```
+```waitress-serve --threads=[8] [myapp:app]```
 
-**URL prefix**
+**Serve under a URL prefix (behind a reverse proxy)**
 
 ```waitress-serve --url-prefix=[/api] [myapp:app]```
 
@@ -31,19 +39,43 @@ Pure-Python WSGI production server
 # PARAMETERS
 
 **--host** _ADDR_
-> Bind address.
+> Hostname or IP address to listen on. Default: `0.0.0.0`.
 
 **--port** _PORT_
-> Listen port.
+> TCP port to listen on. Default: `8080`.
+
+**--listen** _HOST:PORT_
+> Bind to a specific host:port pair. May be repeated for multiple listeners. Supports `*` as a wildcard host.
 
 **--threads** _N_
-> Worker threads.
+> Number of worker threads to handle requests. Default: `4`.
 
 **--unix-socket** _PATH_
-> Unix socket.
+> Path to a Unix domain socket (not available on Windows).
+
+**--unix-socket-perms** _OCTAL_
+> Octal permissions for the Unix socket. Default: `600`.
+
+**--url-scheme** _SCHEME_
+> Value for `wsgi.url_scheme`. Default: `http`.
 
 **--url-prefix** _PREFIX_
-> URL prefix.
+> Value for `SCRIPT_NAME` (for apps mounted at a sub-path). Default: empty.
+
+**--ident** _STRING_
+> Server identity sent in the `Server` response header. Default: `waitress`.
+
+**--call**
+> Treat the positional argument as a callable factory that returns the WSGI app, rather than using it directly as the app.
+
+**--connection-limit** _N_
+> Maximum number of simultaneous connections. Default: `100`.
+
+**--channel-timeout** _SECONDS_
+> Timeout for inactive connections. Default: `120`.
+
+**--trusted-proxy** _IP_
+> IP address of a trusted reverse proxy that may supply forwarding headers.
 
 # DESCRIPTION
 
@@ -63,4 +95,4 @@ WSGI only. No ASGI support. Configure behind proxy.
 
 # SEE ALSO
 
-[gunicorn](/man/gunicorn)(1), [uwsgi](/man/uwsgi)(1), [flask](/man/flask)(1)
+[gunicorn](/man/gunicorn)(1), [uwsgi](/man/uwsgi)(1), [uvicorn](/man/uvicorn)(1), [hypercorn](/man/hypercorn)(1), [flask](/man/flask)(1)

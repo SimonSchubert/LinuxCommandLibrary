@@ -1,6 +1,6 @@
 # TAGLINE
 
-used to query information about the systemd userspace out-of-memory
+query information about the systemd userspace out-of-memory killer
 
 # TLDR
 
@@ -28,7 +28,7 @@ Show the current state of the cgroups and system contexts stored by **systemd-oo
 
 # DESCRIPTION
 
-**oomctl** is used to query information about the systemd userspace out-of-memory (OOM) killer, **systemd-oomd**. It displays the various cgroup contexts that systemd-oomd is monitoring for memory pressure and swap usage.
+**oomctl** may be used to get information about the various contexts read in by the systemd userspace out-of-memory (OOM) killer, **systemd-oomd**. It displays the cgroup contexts that systemd-oomd is monitoring for memory pressure and swap usage.
 
 The systemd-oomd service monitors cgroups that have ManagedOOMSwap or ManagedOOMMemoryPressure enabled, using PSI (Pressure Stall Information) statistics to determine when memory pressure exceeds configured thresholds. When limits are exceeded, it selects and terminates a cgroup by sending SIGKILL to all its processes.
 
@@ -42,4 +42,4 @@ Introduced in **systemd version 247** (2020) as part of the systemd-oomd userspa
 
 # SEE ALSO
 
-[systemctl](/man/systemctl)(1), [journalctl](/man/journalctl)(1), [systemd](/man/systemd)(1)
+[systemctl](/man/systemctl)(1), [journalctl](/man/journalctl)(1)

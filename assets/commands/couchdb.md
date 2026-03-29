@@ -24,9 +24,9 @@ Document-oriented NoSQL database server
 
 ```couchdb -d```
 
-**Start with specific Erlang** options
+**Restart with a delay** if the process crashes
 
-```couchdb -a [erlang_option]```
+```couchdb -b -r [5]```
 
 # SYNOPSIS
 
@@ -64,8 +64,8 @@ Document-oriented NoSQL database server
 **-k**
 > Kill a background CouchDB process (will respawn if -r is set).
 
-**-a** _ARGS_
-> Additional Erlang VM arguments.
+**-V**
+> Display version information and exit.
 
 # DESCRIPTION
 

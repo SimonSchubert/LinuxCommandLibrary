@@ -34,7 +34,7 @@ Web reconnaissance and OSINT framework
 
 # SYNOPSIS
 
-**recon-ng** [**-w** _workspace_] [**-r** _resource_] [**--no-analytics**]
+**recon-ng** [**-w** _workspace_] [**-r** _resource_] [_options_]
 
 # PARAMETERS
 
@@ -47,8 +47,17 @@ Web reconnaissance and OSINT framework
 **--no-analytics**
 > Disable anonymous usage tracking
 
-**--no-check**
+**--no-version**
 > Disable version check at startup
+
+**--no-marketplace**
+> Disable remote marketplace access
+
+**--stealth**
+> Disable all passive network requests made by the framework itself
+
+**--accessible**
+> Use accessible output where available
 
 **-h**, **--help**
 > Display help message

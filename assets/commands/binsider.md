@@ -16,9 +16,9 @@ TUI tool for analyzing ELF binaries
 
 ```binsider -n [8] [path/to/binary]```
 
-**Analyze a binary** with a custom accent color
+**Analyze a binary** starting on the strings tab with a minimum length of 8
 
-```binsider --accent-color [blue] [path/to/binary]```
+```binsider -t strings -n 8 [path/to/binary]```
 
 # SYNOPSIS
 
@@ -67,4 +67,4 @@ Dynamic analysis requires executing the target binary and is only available on L
 
 # SEE ALSO
 
-[readelf](/man/readelf)(1), [strace](/man/strace)(1), [ltrace](/man/ltrace)(1), [strings](/man/strings)(1), [ldd](/man/ldd)(1), [objdump](/man/objdump)(1), [hexdump](/man/hexdump)(1), [stat](/man/stat)(1)
+[readelf](/man/readelf)(1), [strace](/man/strace)(1), [ltrace](/man/ltrace)(1), [strings](/man/strings)(1), [ldd](/man/ldd)(1), [objdump](/man/objdump)(1), [hexdump](/man/hexdump)(1), [stat](/man/stat)(1), [nm](/man/nm)(1), [file](/man/file)(1)

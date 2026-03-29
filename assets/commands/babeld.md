@@ -33,28 +33,61 @@ The daemon implements the Babel routing protocol (RFC 8966) and is suitable for 
 # PARAMETERS
 
 **-c** _file_
-> Configuration file
+> Configuration file (repeatable).
+
+**-C** _statement_
+> Provide configuration via command line.
 
 **-d** _level_
-> Debug level (1-4)
+> Debug level (0-3).
 
 **-D**
-> Daemonize
+> Daemonize at startup.
 
 **-L** _file_
-> Log file
+> Log file location.
 
 **-I** _file_
-> PID file
+> PID file location.
 
-**-S** _state-file_
-> State file for persistent data
+**-S** _file_
+> State file for preserving long-term information between invocations.
 
-**-h** _cost_
-> Default hello interval
+**-h** _seconds_
+> Hello packet interval for wireless interfaces (default: 4s).
 
-**-H** _cost_
-> Default wired hello interval
+**-H** _seconds_
+> Hello packet interval for wired interfaces (default: 4s).
+
+**-m** _address_
+> Link-local multicast address (default: ff02:0:0:0:0:0:1:6).
+
+**-p** _port_
+> UDP port number (default: 6696).
+
+**-k** _priority_
+> Kernel route installation priority (default: 0).
+
+**-g** _port|path_
+> Enable read-only configuration server.
+
+**-G** _port|path_
+> Enable read-write configuration server.
+
+**-t** _table_
+> Kernel routing table for route insertion.
+
+**-w**
+> Treat all interfaces as wireless by default.
+
+**-s**
+> Disable split-horizon on wired interfaces.
+
+**-r**
+> Use random router-id instead of deriving from MAC address.
+
+**-l**
+> Use IFF_RUNNING to detect interface availability.
 
 # FEATURES
 
@@ -80,4 +113,4 @@ Requires proper network configuration. All nodes must run compatible Babel imple
 
 # SEE ALSO
 
-[bird](/man/bird)(8), [quagga](/man/quagga)(8), [olsrd](/man/olsrd)(8)
+[bird](/man/bird)(1), [route](/man/route)(8), [ip](/man/ip)(8), [traceroute](/man/traceroute)(1)

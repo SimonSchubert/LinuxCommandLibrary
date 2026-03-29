@@ -28,9 +28,13 @@ distributed SQL database CLI
 
 ```cockroach sql --insecure -e "CREATE DATABASE [mydb]"```
 
-**Import data**
+**Import CSV data into a table**
 
-```cockroach import into [table] CSV DATA ('[file.csv]')```
+```cockroach sql --insecure -e "IMPORT INTO [table] CSV DATA ('[file_url]')"```
+
+**Start a temporary demo cluster**
+
+```cockroach demo```
 
 **Show cluster settings**
 
@@ -68,11 +72,17 @@ The tool supports both secure production deployments with TLS certificates and i
 **quit**
 > Drain and shut down node
 
-**dump**
-> Export table data (deprecated, use EXPORT)
-
 **cert**
 > Create CA, node, and client certificates
+
+**debug**
+> Debugging commands for inspecting cluster state
+
+**workload**
+> Generators for data and query loads (e.g., benchmarks)
+
+**nodelocal upload**
+> Upload a file to a node's local file system
 
 **version**
 > Show version
@@ -103,6 +113,12 @@ The tool supports both secure production deployments with TLS certificates and i
 **--url**=_url_
 > Connection URL
 
+**--log-dir**=_path_
+> Directory for log files
+
+**--listen-addr**=_address_
+> Address and port to listen on (default: localhost:26257)
+
 # ENVIRONMENT
 
 Flags can be set via environment variables: COCKROACH_HOST, COCKROACH_PORT, COCKROACH_USER, COCKROACH_INSECURE
@@ -113,4 +129,4 @@ Use --insecure only for development. Production requires TLS certificates. Compa
 
 # SEE ALSO
 
-[psql](/man/psql)(1), [mysql](/man/mysql)(1)
+[psql](/man/psql)(1), [mysql](/man/mysql)(1), [sqlite3](/man/sqlite3)(1)

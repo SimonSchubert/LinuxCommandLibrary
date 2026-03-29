@@ -4,25 +4,33 @@ Deprecated Arch Linux AUR helper
 
 # TLDR
 
-**Update** all packages
+**Update** all packages including AUR
 
 ```yaourt -Syua```
 
-**Install** package
+**Install** a package
 
 ```yaourt -S [package]```
 
-**Remove** package
+**Remove** a package and its unneeded dependencies
 
 ```yaourt -Rs [package]```
 
-**Search** packages
+**Search** for a package in repositories and AUR
 
 ```yaourt -Ss [query]```
 
-**List** installed
+**List** installed packages
 
 ```yaourt -Q```
+
+**Download and build** a package from AUR without installing
+
+```yaourt -Sb [package]```
+
+**Get information** about a package
+
+```yaourt -Si [package]```
 
 # SYNOPSIS
 
@@ -31,25 +39,37 @@ Deprecated Arch Linux AUR helper
 # PARAMETERS
 
 **-S** _PACKAGE_
-> Install package
+> Install a package from repositories or AUR.
 
 **-Syua**
-> Synchronize and update all packages including AUR
+> Synchronize databases and update all packages including AUR.
+
+**-Sb** _PACKAGE_
+> Download and build a package without installing.
 
 **-Rs** _PACKAGE_
-> Remove package and dependencies
+> Remove a package and its unneeded dependencies.
 
 **-Ss** _QUERY_
-> Search package database
+> Search for a package in the sync databases and AUR.
+
+**-Si** _PACKAGE_
+> Display detailed information about a package.
 
 **-Q**
-> List installed packages
+> List installed packages.
+
+**-Qm**
+> List foreign (AUR-installed) packages.
+
+**--noconfirm**
+> Do not ask for any confirmation.
 
 # DESCRIPTION
 
-**yaourt** is an AUR helper for Arch Linux that wraps pacman with additional features for building packages from the Arch User Repository.
+**yaourt** (Yet AnOther User Repository Tool) is an AUR helper for Arch Linux that wraps pacman with additional features for building packages from the Arch User Repository.
 
-It combines official repository and AUR package management in a single interface.
+It combines official repository and AUR package management in a single interface with colorized output, interactive search/install, and orphan detection. Since the majority of yaourt's options are the same as pacman's, it can be used as a drop-in replacement.
 
 # HISTORY
 

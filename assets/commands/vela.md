@@ -4,13 +4,13 @@ KubeVela application delivery CLI
 
 # TLDR
 
-**Deploy application**
+**Deploy application** from file
 
-```vela up```
+```vela up -f [app.yaml]```
 
-**Show status**
+**Show application status**
 
-```vela status```
+```vela status [appname]```
 
 **List applications**
 
@@ -20,13 +20,21 @@ KubeVela application delivery CLI
 
 ```vela delete [appname]```
 
-**Show logs**
+**Show logs** for an application
 
 ```vela logs [appname]```
 
-**Execute command**
+**Port-forward** to an application
+
+```vela port-forward [appname]```
+
+**Execute command** in application container
 
 ```vela exec [appname] -- [command]```
+
+**Install KubeVela** on a Kubernetes cluster
+
+```vela install```
 
 # SYNOPSIS
 
@@ -35,22 +43,49 @@ KubeVela application delivery CLI
 # PARAMETERS
 
 **up**
-> Deploy application.
+> Create or update an application from file or URL.
 
 **status**
-> Show status.
+> Show application status and health.
 
 **ls**
-> List apps.
+> List all applications.
 
 **delete**
-> Remove app.
+> Remove an application.
 
 **logs**
-> View logs.
+> View application logs.
 
 **exec**
-> Run command.
+> Execute a command in an application container.
+
+**port-forward**
+> Forward local ports to an application container or service.
+
+**install**
+> Install KubeVela on a Kubernetes cluster.
+
+**show**
+> Show reference documentation for components, traits, or workflow types.
+
+**components**
+> List available component types.
+
+**workflow**
+> Operate application delivery workflows (suspend, resume, restart, rollback).
+
+**version**
+> Print version information.
+
+**-n**, **--namespace** _NAMESPACE_
+> Specify the namespace scope for the request.
+
+**-e**, **--env** _ENV_
+> Specify environment name for the application.
+
+**-y**, **--yes**
+> Assume yes for all prompts.
 
 # DESCRIPTION
 
@@ -60,11 +95,11 @@ Applications are defined with components, traits, and policies that abstract awa
 
 # CAVEATS
 
-KubeVela required. Kubernetes knowledge. OAM concepts.
+Requires a running Kubernetes cluster with KubeVela installed. Familiarity with Kubernetes concepts and the Open Application Model (OAM) is recommended. Multi-cluster features require additional setup.
 
 # HISTORY
 
-**vela** is the CLI for **KubeVela**, an application delivery platform based on Open Application Model.
+**KubeVela** was created by the Alibaba Cloud team and accepted as a **CNCF sandbox project** in 2021, later graduating to incubation level. It implements the Open Application Model (OAM) specification to simplify application delivery on Kubernetes.
 
 # SEE ALSO
 

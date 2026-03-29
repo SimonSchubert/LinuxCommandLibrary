@@ -20,9 +20,17 @@ Filter by **type**
 
 ```findmnt -t ext4,btrfs```
 
+Show **disk usage** like df
+
+```findmnt -D```
+
 Find by **label**
 
 ```findmnt LABEL=BigStorage```
+
+Output as **JSON**
+
+```findmnt --json```
 
 **Verify** fstab
 
@@ -62,6 +70,27 @@ Find by **label**
 **-J, --json**
 > Use JSON output format
 
+**-f, --first-only**
+> Print the first matching filesystem only
+
+**-s, --fstab**
+> Search in /etc/fstab instead of /proc/self/mountinfo
+
+**-S, --source** _spec_
+> Explicitly define the mount source (device, LABEL=, UUID=, etc.)
+
+**-M, --mountpoint** _path_
+> Explicitly define the mountpoint file or directory
+
+**-T, --target** _path_
+> Find the filesystem for the given path (any file or directory)
+
+**-p, --poll**[=_list_]
+> Monitor changes in /proc/self/mountinfo (actions: mount, umount, remount, move)
+
+**-R, --submounts**
+> Print recursively all submounts for the selected filesystems
+
 **LABEL=**_label_
 > Search by filesystem label
 
@@ -78,4 +107,4 @@ The verify option checks for configuration errors but does not mount anything. O
 
 # SEE ALSO
 
-[mount](/man/mount)(8), [df](/man/df)(1), [lsblk](/man/lsblk)(8)
+[mount](/man/mount)(8), [umount](/man/umount)(8), [df](/man/df)(1), [lsblk](/man/lsblk)(8), [blkid](/man/blkid)(8), [mountpoint](/man/mountpoint)(1)

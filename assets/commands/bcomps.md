@@ -30,7 +30,7 @@ Decompose graphs into biconnected components
 
 # SYNOPSIS
 
-**bcomps** [_-stvx?_] [_-o outfile_] [_files_]
+**bcomps** [_-stvx?_] [_-o_ _outfile_] [_files_]
 
 # DESCRIPTION
 
@@ -61,6 +61,8 @@ The tool is part of the Graphviz graph visualization suite and works with DOT la
 # OUTPUT FORMAT
 
 By default, each input graph is printed with blocks as subgraphs. Subgraph names concatenate the input graph name, "_bcc_", and the block number.
+
+When both -o and -x are used, each block is written to a separate file. If _outfile_ does not have a suffix, the nth block of the ith graph is written to outfile_n_i (the 0th block of the 0th graph is written to _outfile_ itself). If _outfile_ has a suffix (e.g., base.sfx), the files follow the same pattern with .sfx appended. Block-cutvertex trees are written to outfile_n_T.
 
 # RETURN VALUES
 

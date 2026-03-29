@@ -6,23 +6,27 @@ Backup and restore installed package states
 
 **Clone** the package state of the current system into a directory
 
-```apt-clone clone [path/to/directory]```
+```sudo apt-clone clone [path/to/directory]```
 
-Create a **clone file** (.tar.gz) for backup purposes
+Clone with packages not available in **repositories**
 
-```apt-clone clone --destination [path/to/backup.tar.gz]```
+```sudo apt-clone clone --with-dpkg-repack [path/to/directory]```
 
 **Restore** the package state from a clone file
 
-```apt-clone restore [path/to/backup.tar.gz]```
+```sudo apt-clone restore [path/to/apt-clone-state-hostname.tar.gz]```
+
+Restore into a **specific directory** (debootstrap)
+
+```sudo apt-clone restore [path/to/clone.tar.gz] --destination [path/to/directory]```
 
 Show **information** about a clone file
 
-```apt-clone info [path/to/backup.tar.gz]```
+```apt-clone info [path/to/apt-clone-state-hostname.tar.gz]```
 
-Restore to a **specific directory** (for testing)
+Restore and **upgrade** to a new distribution release
 
-```apt-clone restore [path/to/backup.tar.gz] --destination [path/to/restore]```
+```sudo apt-clone restore-new-distro [path/to/clone.tar.gz] [new_distro_codename]```
 
 # SYNOPSIS
 
@@ -36,30 +40,42 @@ Clone files are compressed tar archives containing package lists and APT source 
 
 # SUBCOMMANDS
 
-**clone**
-> Create a backup of the current package state
+**clone** _destination_
+> Create a clone file of the current package state into the specified destination directory.
 
-**restore**
-> Restore packages from a clone file
+**restore** _source_ [**--destination** _path_]
+> Restore packages from a clone file. Optionally debootstrap into a specific directory.
 
-**info**
-> Display information about a clone file
+**restore-new-distro** _source_ _new_distro_codename_
+> Restore a clone file while attempting to upgrade packages to a new distribution release.
+
+**info** _source_
+> Display information about a clone file.
 
 # PARAMETERS
 
+**--source** _path_
+> Specify an alternative source directory for cloning (default is /).
+
 **--destination** _path_
-> Specify the output location for clone or restore operations
+> Specify the destination directory for restore (debootstraps the clone into this directory).
 
 **--with-dpkg-repack**
-> Include package files for packages not available in repositories
+> Include package files for packages no longer available in repositories.
 
 **--with-dpkg-status**
-> Include the full dpkg status file
+> Include the full dpkg status file.
+
+**-h**, **--help**
+> Show help message and exit.
+
+**--debug**
+> Enable debug output.
 
 # CAVEATS
 
-Restoring a clone on a different release version may fail due to package incompatibilities. The restore process requires root privileges and an active internet connection to download packages. Packages not available in configured repositories will be skipped unless **--with-dpkg-repack** was used during cloning.
+Restoring a clone on a different release version may fail due to package incompatibilities; use **restore-new-distro** for cross-release restores. The clone and restore operations require root privileges. An active internet connection is needed to download packages during restore. Packages not available in configured repositories will be skipped unless **--with-dpkg-repack** was used during cloning.
 
 # SEE ALSO
 
-[apt](/man/apt)(8), [dpkg](/man/dpkg)(1), [apt-get](/man/apt-get)(8)
+[apt](/man/apt)(8), [dpkg](/man/dpkg)(1), [apt-get](/man/apt-get)(8), [apt-mark](/man/apt-mark)(8)

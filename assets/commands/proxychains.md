@@ -4,7 +4,7 @@ Route TCP connections through proxy servers
 
 # TLDR
 
-**Run command through proxy**
+**Run a command** through the proxy
 
 ```proxychains [command]```
 
@@ -12,47 +12,37 @@ Route TCP connections through proxy servers
 
 ```proxychains curl [url]```
 
-**Use specific config**
+**Use a specific config** file
 
-```proxychains -f [config.conf] [command]```
+```proxychains -f [path/to/config.conf] [command]```
 
-**Quiet mode**
+**Quiet mode** (suppress proxy info output)
 
 ```proxychains -q [command]```
 
+**SSH through proxy**
+
+```proxychains ssh [user]@[host]```
+
 # SYNOPSIS
 
-**proxychains** [_options_] _command_ [_args_]
+**proxychains** [**-q**] [**-f** _config_file_] _program_ [_args_]
 
 # PARAMETERS
 
 **-q**
-> Quiet mode.
+> Quiet mode. Do not display proxy connection information.
 
-**-f** _file_
-> Use specific config file.
+**-f** _config_file_
+> Use specified configuration file instead of the default. Without this flag, proxychains searches in order: the path in the **PROXYCHAINS_CONF_FILE** environment variable, **./proxychains.conf**, **~/.proxychains/proxychains.conf**, and **/etc/proxychains.conf**.
 
 # DESCRIPTION
 
-**proxychains** forces TCP connections through proxy servers (SOCKS4/5, HTTP). It hooks network calls using LD_PRELOAD to redirect traffic transparently.
+**proxychains** forces TCP connections made by a given application to go through proxy servers such as SOCKS4, SOCKS5, or HTTP proxies. It hooks network-related libc functions using **LD_PRELOAD** to redirect traffic transparently without modifying the target application.
 
-Useful for anonymization and bypassing network restrictions.
+Useful for anonymization, routing traffic through Tor, and bypassing network restrictions. Supported authentication types are user/pass for SOCKS4/5 and basic for HTTP.
 
-# EXAMPLES
-
-```bash
-# Run through proxy
-proxychains curl http://example.com
-
-# SSH through proxy
-proxychains ssh user@host
-
-# nmap through Tor
-proxychains nmap -sT target
-
-# Quiet mode
-proxychains -q wget http://example.com/file
-```
+The modern maintained version is **proxychains-ng** (proxychains4) by **rofl0r**, which is a continuation of the original project.
 
 # CONFIGURATION
 
@@ -69,20 +59,20 @@ http   192.168.1.1 8080
 # CHAIN TYPES
 
 ```
-strict_chain  - All proxies in order
-dynamic_chain - Skip dead proxies
-random_chain  - Random proxy order
-round_robin   - Cycle through proxies
+strict_chain  - All proxies in order, fail if any is down
+dynamic_chain - Skip dead proxies, at least one must respond
+random_chain  - Random proxy order each connection
+round_robin   - Cycle through proxies in order
 ```
 
 # CAVEATS
 
-Only TCP supported. UDP and ICMP not proxied. Some apps detect LD_PRELOAD.
+Only TCP connections are supported. UDP and ICMP traffic is not proxied. Statically linked programs bypass the LD_PRELOAD hook. DNS requests can be proxied by enabling **proxy_dns** in the configuration file.
 
 # HISTORY
 
-proxychains was originally written by **haad** and later forked as **proxychains-ng** by **rofl0r** with improvements.
+proxychains was originally written by **haad** and later forked as **proxychains-ng** (proxychains4) by **rofl0r** with improvements including better stability and additional features.
 
 # SEE ALSO
 
-[tor](/man/tor)(1), [torsocks](/man/torsocks)(1), [socat](/man/socat)(1), [tsocks](/man/tsocks)(1)
+[tor](/man/tor)(1), [torsocks](/man/torsocks)(1), [socat](/man/socat)(1), [ssh](/man/ssh)(1), [curl](/man/curl)(1)

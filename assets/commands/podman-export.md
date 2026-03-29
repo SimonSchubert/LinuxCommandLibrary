@@ -23,11 +23,14 @@ Export container filesystem as tar archive
 # PARAMETERS
 
 **-o**, **--output** _file_
-> Output file path.
+> Write to a file instead of stdout.
+
+**-h**, **--help**
+> Print usage statement.
 
 # DESCRIPTION
 
-**podman export** exports a container's filesystem as a tar archive. Unlike podman save, it exports the running container state, not the image layers.
+**podman export** exports a container's filesystem as a tar archive and writes it to stdout by default. Unlike podman save, it exports the container filesystem as a flat tar (without image layer history or metadata).
 
 The result can be imported with podman import to create a new image.
 
@@ -64,4 +67,4 @@ podman export is part of **Podman**, providing Docker-compatible container expor
 
 # SEE ALSO
 
-[podman-import](/man/podman-import)(1), [podman-save](/man/podman-save)(1), [podman-commit](/man/podman-commit)(1)
+[podman-import](/man/podman-import)(1), [podman-save](/man/podman-save)(1), [podman-commit](/man/podman-commit)(1), [podman-ps](/man/podman-ps)(1)

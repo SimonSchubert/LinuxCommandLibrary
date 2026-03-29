@@ -30,13 +30,13 @@ Display **specific LV**
 
 # PARAMETERS
 
-**-C, --columns**
+**-C**, **--columns**
 > Display in short columnar format (like lvs)
 
-**-v, --verbose**
+**-v**, **--verbose**
 > Verbose output
 
-**-a, --all**
+**-a**, **--all**
 > Show internal logical volumes
 
 **--maps**
@@ -55,4 +55,4 @@ Display **specific LV**
 
 # SEE ALSO
 
-[lvs](/man/lvs)(8), [lvm](/man/lvm)(8), [vgdisplay](/man/vgdisplay)(8), [pvdisplay](/man/pvdisplay)(8)
+[lvs](/man/lvs)(1), [lvm](/man/lvm)(1), [vgdisplay](/man/vgdisplay)(1), [pvdisplay](/man/pvdisplay)(1)

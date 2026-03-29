@@ -16,9 +16,9 @@ Convert PPM images to GIF format
 
 ```ppmtogif -interlace [input.ppm] > [output.gif]```
 
-**Animated GIF**
+**With alpha transparency** from a PGM file
 
-```pamtogif [frame1.ppm] [frame2.ppm] > [animated.gif]```
+```ppmtogif -alpha [mask.pgm] [input.ppm] > [output.gif]```
 
 # SYNOPSIS
 
@@ -26,26 +26,34 @@ Convert PPM images to GIF format
 
 # PARAMETERS
 
-**-transparent** _color_
-> Make color transparent.
+**-transparent** [**=**]_color_
+> Make the specified color transparent. If prefixed with **=**, only an exact match is used; otherwise the closest color in the image is selected.
+
+**-alpha** _pgmfile_
+> Use a PGM file as an alpha (transparency) mask. White is opaque, black is transparent. Cannot be used with **-transparent**.
 
 **-interlace**
-> Create interlaced GIF.
+> Produce an interlaced GIF file.
 
 **-sort**
-> Sort colormap.
+> Produce a GIF file with the colormap sorted in a predictable order.
 
-**-map** _file_
-> Use specified colormap.
+**-map** _mapfile_
+> Use colors from the specified PPM file as the colormap instead of the colors in the input image.
 
 **-comment** _text_
-> Add comment.
+> Include a comment in the GIF output.
+
+**-nolzw**
+> Do not use LZW compression. Produces larger but unencumbered output.
 
 # DESCRIPTION
 
-**ppmtogif** converts PPM images to GIF format. GIF is limited to 256 colors, so use ppmquant first if needed. Superseded by pamtogif.
+**ppmtogif** converts PPM images to GIF format. GIF is limited to 256 colors, so use ppmquant first if needed.
 
-Part of Netpbm toolkit.
+This program was superseded by **pamtogif** in Netpbm 10.37 (December 2006). New use of ppmtogif is discouraged; use pamtogif instead.
+
+Part of the Netpbm toolkit.
 
 # EXAMPLES
 
@@ -53,10 +61,13 @@ Part of Netpbm toolkit.
 # Basic conversion
 ppmtogif image.ppm > image.gif
 
-# With transparency
-ppmtogif -transparent white logo.ppm > logo.gif
+# With transparency (exact color match)
+ppmtogif -transparent =white logo.ppm > logo.gif
 
-# Quantize first for photos
+# With alpha mask from a PGM file
+ppmtogif -alpha mask.pgm image.ppm > transparent.gif
+
+# Quantize first for photos with many colors
 ppmquant 256 photo.ppm | ppmtogif > photo.gif
 
 # Interlaced for web
@@ -68,7 +79,7 @@ jpegtopnm photo.jpg | ppmquant 256 | ppmtogif > photo.gif
 
 # CAVEATS
 
-GIF limited to 256 colors. Use ppmquant for more colors. Use pamtogif for animation.
+GIF is limited to 256 colors. Use ppmquant to reduce colors before conversion. The **-transparent** and **-alpha** options cannot be used together. This command is deprecated in favor of pamtogif.
 
 # HISTORY
 

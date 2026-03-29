@@ -18,7 +18,7 @@ Generate Rust FFI bindings from C/C++ headers
 
 **Add include path** for headers
 
-```bindgen [input.h] -- -I[/path/to/includes] -o [bindings.rs]```
+```bindgen [input.h] -o [bindings.rs] -- -I[/path/to/includes]```
 
 **Generate bindings** for a C++ header
 
@@ -26,7 +26,7 @@ Generate Rust FFI bindings from C/C++ headers
 
 **Use specific clang arguments**
 
-```bindgen [input.h] -- -std=c11 -DFOO=1 -o [bindings.rs]```
+```bindgen [input.h] -o [bindings.rs] -- -std=c11 -DFOO=1```
 
 **Generate with derive traits**
 
@@ -82,8 +82,14 @@ Typically used in build.rs scripts to generate bindings at compile time, ensurin
 **--opaque-type** _regex_
 > Treat matching types as opaque.
 
+**--wrap-static-fns**
+> Generate wrappers for static and static inline functions.
+
+**--rust-target** _version_
+> Minimum supported Rust version for the generated bindings.
+
 **--**
-> Separator for clang arguments.
+> Separator for clang arguments passed to libclang.
 
 # CAVEATS
 

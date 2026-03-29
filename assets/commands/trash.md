@@ -1,6 +1,6 @@
 # TAGLINE
 
-Move files to recoverable trash
+move files to recoverable FreeDesktop.org trash
 
 # TLDR
 
@@ -71,7 +71,10 @@ Remove files with a **specific original location**
 > Explain what is being done
 
 **--trash-dir** _dir_
-> Use specified trash directory
+> Use specified trash directory instead of the default.
+
+**--version**
+> Show the program's version number and exit.
 
 # DESCRIPTION
 
@@ -89,4 +92,4 @@ Developed by **Andrea Francia** as a command-line implementation of the FreeDesk
 
 # SEE ALSO
 
-[rm](/man/rm)(1), [gio-trash](/man/gio-trash)(1), [trashy](/man/trashy)(1)
+[rm](/man/rm)(1), [trash-put](/man/trash-put)(1), [trash-list](/man/trash-list)(1), [trash-restore](/man/trash-restore)(1), [trash-empty](/man/trash-empty)(1), [trash-rm](/man/trash-rm)(1), [gio-trash](/man/gio-trash)(1), [trashy](/man/trashy)(1)

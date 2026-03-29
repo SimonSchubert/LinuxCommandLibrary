@@ -1,38 +1,78 @@
-# TLDR
-
 # TAGLINE
 
 Maintain documentation translations via PO files
 
 # TLDR
 
-Update PO files and documents from **config** file
+**Update PO files and translated documents from config file**
 
 ```po4a [path/to/config_file]```
 
+**Force regeneration of all files**
+
+```po4a -f [path/to/config_file]```
+
+**Only update PO files, skip translated document generation**
+
+```po4a --no-translations [path/to/config_file]```
+
+**Set minimum translation percentage threshold**
+
+```po4a -k [80] [path/to/config_file]```
+
 # SYNOPSIS
 
-**po4a** [**-f**] [**-v**] [**--no-translations**] _config_file_
+**po4a** [_options_] _config_file_
 
 # PARAMETERS
 
-**-f, --force**
-> Force processing even if files are up-to-date
+**-f**, **--force**
+> Force processing even if files are up-to-date.
 
-**-v, --verbose**
-> Increase verbosity
+**-v**, **--verbose**
+> Increase verbosity.
+
+**-q**, **--quiet**
+> Decrease verbosity.
+
+**-d**, **--debug**
+> Output debugging information.
 
 **--no-translations**
-> Don't generate translated documents
+> Don't generate translated documents, only update POT and PO files.
 
-**--keep _threshold_**
-> Minimum translation percentage to produce output
+**--no-update**
+> Don't update POT and PO files, only generate translations.
 
-**--srcdir _dir_**
-> Source directory
+**-k**, **--keep** _threshold_
+> Minimum translation percentage to produce output (default: 80).
 
-**--destdir _dir_**
-> Destination directory
+**--keep-translations**
+> Keep existing translations even if below threshold.
+
+**--rm-translations**
+> Remove translated files that fall below threshold.
+
+**-o**, **--option** _opt_
+> Extra options for format plugins.
+
+**-M**, **--master-charset** _charset_
+> Character encoding for source documents.
+
+**-L**, **--localized-charset** _charset_
+> Character encoding for translated documents.
+
+**--srcdir** _dir_
+> Base directory for input documents.
+
+**--destdir** _dir_
+> Base directory for output documents.
+
+**--msgmerge-opt** _options_
+> Additional options passed to msgmerge.
+
+**-V**, **--version**
+> Display version and exit.
 
 # DESCRIPTION
 
@@ -50,4 +90,4 @@ Requires format-specific modules. Configuration file defines document mappings. 
 
 # SEE ALSO
 
-[po4a-gettextize](/man/po4a-gettextize)(1), [po4a-translate](/man/po4a-translate)(1), [po4a-updatepo](/man/po4a-updatepo)(1)
+[po4a-gettextize](/man/po4a-gettextize)(1), [po4a-translate](/man/po4a-translate)(1), [po4a-updatepo](/man/po4a-updatepo)(1), [gettext](/man/gettext)(1), [msgfmt](/man/msgfmt)(1)

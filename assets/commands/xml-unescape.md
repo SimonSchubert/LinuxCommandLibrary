@@ -4,13 +4,17 @@ Decode XML entities to characters
 
 # TLDR
 
-**Unescape XML entities**
+**Unescape XML entities in a string**
 
 ```xml unescape "[&lt;text&gt;]"```
 
-**Unescape from stdin**
+**Unescape XML entities from stdin**
 
 ```echo "[&lt;text&gt;]" | xml unescape```
+
+**Using the short alias**
+
+```xml unesc "[&lt;text&gt;]"```
 
 # SYNOPSIS
 
@@ -30,5 +34,5 @@ _text_
 
 # SEE ALSO
 
-[xml-escape](/man/xml-escape)(1), [xml-format](/man/xml-format)(1)
+[xml-escape](/man/xml-escape)(1), [xml-select](/man/xml-select)(1), [xmlstarlet](/man/xmlstarlet)(1)
 

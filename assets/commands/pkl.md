@@ -53,11 +53,11 @@ Pkl provides type safety, validation, and code reuse through classes and modules
 
 # CAVEATS
 
-Apple-developed. Supports multiple output formats.
+Pkl files can import modules from the network, which may have security implications. The language requires a JVM-based runtime or native binaries for evaluation.
 
 # HISTORY
 
-Pkl was created by **Apple** as a **programmable configuration language**.
+Pkl was created by **Apple** and open-sourced in **February 2024** as a type-safe, programmable configuration language.
 
 # SEE ALSO
 

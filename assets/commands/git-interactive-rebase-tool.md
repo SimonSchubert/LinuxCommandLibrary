@@ -35,6 +35,12 @@ The tool makes it easier to manage complex rebases by providing a clear view of 
 **↑/↓** or **k/j**
 > Navigate commits
 
+**Page Up/Page Down**
+> Page navigation
+
+**Home/End**
+> Jump to beginning/end
+
 **p**
 > Pick commit
 
@@ -53,21 +59,39 @@ The tool makes it easier to manage complex rebases by providing a clear view of 
 **d**
 > Drop commit
 
-**gg**
-> Go to first line
+**b**
+> Toggle break action
 
-**G**
-> Go to last line
+**E**
+> Edit exec command
+
+**v**
+> Toggle visual mode for batch operations
+
+**c**
+> Show commit information
+
+**Ctrl+z**
+> Undo
+
+**Ctrl+y**
+> Redo
+
+**!**
+> Open in external editor
+
+**?**
+> Display built-in help
+
+**w**
+> Save changes
 
 **q**
-> Quit and save
-
-**Ctrl+C**
 > Abort rebase
 
 # CAVEATS
 
-Must be configured as Git's sequence editor. Terminal must support required escape sequences. Large rebase operations may require scrolling.
+Must be configured as Git's sequence editor via `git config --global sequence.editor interactive-rebase-tool`. Terminal must support required escape sequences.
 
 # HISTORY
 

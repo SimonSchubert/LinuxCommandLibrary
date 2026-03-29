@@ -20,9 +20,17 @@ Use **Fahrenheit**
 
 ```ansiweather -l [New York,US] -u imperial```
 
-Show **detailed** weather
+Show **wind and humidity** data
 
-```ansiweather -l [Berlin,DE] -a true```
+```ansiweather -l [Berlin,DE] -w true -h true```
+
+Show **five-day** forecast
+
+```ansiweather -l [Berlin,DE] -F```
+
+Display **UV index** information
+
+```ansiweather -l [Berlin,DE] -i true```
 
 # SYNOPSIS
 
@@ -45,26 +53,35 @@ The tool provides a quick, colorful weather overview without leaving the command
 **-f** _days_
 > Forecast days (1-5)
 
+**-F**
+> Toggle forecast mode for the next five days.
+
 **-a** _bool_
-> Show all details (true/false)
+> Toggle ANSI colors display (true/false).
 
 **-s** _bool_
-> Enable/disable symbols
+> Toggle Unicode symbols display (true/false).
 
 **-k** _key_
-> OpenWeatherMap API key
+> Specify OpenWeatherMap API key.
 
 **-d** _bool_
-> Show daylight info (sunrise/sunset)
+> Toggle daylight data display: sunrise/sunset (true/false).
 
 **-w** _bool_
-> Show wind info
+> Toggle wind data display (true/false).
 
 **-p** _bool_
-> Show pressure info
+> Toggle pressure data display (true/false).
 
 **-h** _bool_
-> Show humidity info
+> Toggle humidity data display (true/false).
+
+**-i** _bool_
+> Toggle UV index display (true/false).
+
+**-v**
+> Display version information.
 
 # CONFIGURATION
 

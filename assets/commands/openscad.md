@@ -87,7 +87,7 @@ Full CGAL rendering can be very slow for complex models. The -o output format is
 
 # HISTORY
 
-OpenSCAD was created for **script-based 3D modeling** and parametric design.
+**OpenSCAD** was created by Marius Kintel and Clifford Wolf, first released in **2010** as an open-source tool for script-based 3D CAD modeling using Constructive Solid Geometry.
 
 # SEE ALSO
 

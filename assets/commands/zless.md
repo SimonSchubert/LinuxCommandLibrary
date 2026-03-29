@@ -8,22 +8,21 @@ View compressed files with less pager
 
 ```zless [file.gz]```
 
-**View a bzip2 compressed file**
-
-```zless [file.bz2]```
-
-**View an xz compressed file**
-
-```zless [file.xz]```
-
-**Search for a pattern** in compressed file
-
-```zless [file.gz]```
-then type **/[pattern]**
-
-**View multiple compressed files**
+**View multiple compressed files sequentially**
 
 ```zless [file1.gz] [file2.gz]```
+
+**Search for a pattern inside a compressed file**
+
+```zless [file.gz]```
+
+then type **/**_pattern_ and press **Enter**
+
+**Jump to the last line of a compressed file**
+
+```zless [file.gz]```
+
+then press **G**
 
 # SYNOPSIS
 
@@ -65,15 +64,15 @@ All parameters and commands available in **less** are also available in zless, i
 
 # DESCRIPTION
 
-**zless** is a filter that allows viewing of compressed files using the **less** pager. It automatically detects and handles various compression formats including gzip (.gz), bzip2 (.bz2), xz (.xz), and lzma (.lzma).
+**zless** is part of the **gzip** package. It works by setting `LESSOPEN` to pipe files through `gzip -cdfq` before passing them to **less**. This handles gzip (.gz) compressed files, as well as uncompressed files (gzip passes them through unchanged).
 
 The command provides the same interactive viewing experience as less, including forward and backward navigation, searching, and line jumping. Files are decompressed on the fly without creating temporary files.
 
-zless can also handle uncompressed files, making it a versatile choice for viewing files regardless of their compression state.
+For broader format support (bzip2, xz, zstd, etc.), use **less** with **lesspipe** configured as the `LESSOPEN` preprocessor instead.
 
 # CAVEATS
 
-zless cannot handle tarred files (tar.gz) - it will only decompress the gzip layer, not extract the tar archive. For tar archives, use **tar -tzf** to list or **tar -xzf** to extract. Performance may be slower than less for very large compressed files.
+zless is a gzip-specific tool and does not natively support bzip2, xz, lzma, or other formats. For those, use **less** with **lesspipe** or pipe via the appropriate decompressor (e.g. `xz -dc file.xz | less`). For tar.gz archives, zless will only decompress the gzip layer and display the raw tar data; use **tar -tzf** to list contents instead. zless cannot read compressed data from standard input; files must be given as arguments.
 
 # HISTORY
 

@@ -22,13 +22,13 @@ Display **help**
 
 # PARAMETERS
 
-**-p, --partset** _A|B|other_
+**-p**, **--partset** _A|B|other_
 > Select partition set (A, B, or the other inactive one)
 
-**-d, --disk** _DEVICE_
+**-d**, **--disk** _DEVICE_
 > Target a specific disk device
 
-**-h, --help**
+**-h**, **--help**
 > Display help
 
 # DESCRIPTION

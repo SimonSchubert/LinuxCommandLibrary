@@ -1,5 +1,3 @@
-# TLDR
-
 # TAGLINE
 
 Run programs in isolated Linux namespaces
@@ -86,8 +84,23 @@ Run in all **new namespaces**
 **--mount-proc[=DIR]**
 > Mount /proc in new mount namespace
 
+**--kill-child[=signame]**
+> When unshare terminates, send signal to the forked child (default: SIGKILL). Useful with --pid to kill entire process tree.
+
+**-c, --map-current-user**
+> Map current effective user and group IDs to themselves in the new user namespace. Implies --setgroups=deny and --user.
+
+**-S, --setuid** _uid_
+> Set the user ID in the entered namespace.
+
+**-G, --setgid** _gid_
+> Set the group ID in the entered namespace and drop supplementary groups.
+
+**--setgroups allow|deny**
+> Allow or deny setgroups(2) in a user namespace.
+
 **--keep-caps**
-> Keep capabilities when switching user
+> Keep capabilities granted in the user namespace in the child process.
 
 # CAVEATS
 
@@ -99,4 +112,4 @@ PID namespaces require **--fork** or the first process becomes PID 1 and may hav
 
 # SEE ALSO
 
-[nsenter](/man/nsenter)(1), [clone](/man/clone)(2), [namespaces](/man/namespaces)(7), [lsns](/man/lsns)(8)
+[nsenter](/man/nsenter)(1), [lsns](/man/lsns)(1), [chroot](/man/chroot)(1), [clone](/man/clone)(2), [namespaces](/man/namespaces)(7), [systemd-nspawn](/man/systemd-nspawn)(1)

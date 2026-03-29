@@ -31,41 +31,50 @@ Initialize disks for LVM use
 # PARAMETERS
 
 **-f, --force**
-> Force creation without confirmation prompts
+> Override various checks, confirmations, and protections. Use twice (`-ff`) to forcibly overwrite an existing physical volume.
 
 **-y, --yes**
-> Answer yes to all prompts
+> Answer yes to all prompts automatically.
 
 **-Z, --zero** _y|n_
-> Zero the first 4 sectors of the device
+> Controls if the first 4 sectors (2048 bytes) of the device are wiped. Default is yes unless `--restorefile` or `--uuid` are specified.
 
 **--metadatasize** _size_
-> Size of metadata area
+> Approximate amount of space to set aside for each metadata area on the PV.
+
+**--metadatacopies** _0|1|2_
+> Number of metadata area copies on this PV. 0 stores no copies, 1 stores at the front only, 2 stores copies at both front and end.
+
+**--metadataignore** _y|n_
+> Whether to ignore metadata areas on this PV. Useful when creating a large number of PVs to limit the number of metadata copies.
 
 **--dataalignment** _size_
-> Align data to a multiple of this size
-
-**-u, --uuid** _uuid_
-> Specify UUID for the physical volume. Required when restoring a backup with vgcfgrestore.
-
-**--pvmetadatacopies** _0|1|2_
-> Number of metadata areas on this PV (0, 1, or 2).
+> Align the start of the data area to a multiple of this size.
 
 **--dataalignmentoffset** _size_
-> Shift the start of the data area by this offset.
+> Shift the start of the data area by this additional offset.
+
+**-u, --uuid** _uuid_
+> Specify a UUID for the physical volume. Without this option, a random UUID is generated. Required when restoring metadata with vgcfgrestore.
+
+**--restorefile** _file_
+> Use metadata from a backup file to ensure consistent PV placement when restoring a volume group.
 
 **--bootloaderareasize** _size_
-> Reserve space for a bootloader between the LVM metadata and data area.
+> Reserve space for a bootloader between the LVM metadata and the first physical extent.
 
 **--labelsector** _number_
-> Sector number where the LVM label is written (default 1).
+> Sector number where the LVM2 label is written (default 1).
 
 **--setphysicalvolumesize** _size_
-> Override the detected device size.
+> Override the automatically detected device size.
+
+**-v, --verbose**
+> Set verbose level. Can be repeated up to 4 times to increase detail.
 
 # CAVEATS
 
-All existing data on the device will be overwritten. The device should not be mounted or in use. Physical volumes must be created before being added to volume groups.
+All existing data on the device will be destroyed. The device should not be mounted or in use. Physical volumes must be created before being added to volume groups. Using `-ff` will override the check for existing filesystem signatures.
 
 # HISTORY
 

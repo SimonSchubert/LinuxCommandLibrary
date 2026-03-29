@@ -16,13 +16,13 @@ simple, fast, and secure static web server
 
 ```darkhttpd . --addr [127.0.0.1]```
 
-**Enable directory listing**
-
-```darkhttpd . --index```
-
 **Set a custom index file**
 
 ```darkhttpd . --index [home.html]```
+
+**Disable directory listing**
+
+```darkhttpd . --no-listing```
 
 **Serve with logging** to stdout
 
@@ -43,7 +43,7 @@ simple, fast, and secure static web server
 # PARAMETERS
 
 **--port** _port_
-> Port to listen on (default: 8080).
+> Port to listen on (default: 80 when running as root, otherwise 8080).
 
 **--addr** _address_
 > Address to bind to (default: all interfaces).
@@ -58,10 +58,10 @@ simple, fast, and secure static web server
 > Log requests to file (- for stdout).
 
 **--index** _file_
-> Default index file (or flag alone enables directory listing).
+> Default index file to serve for directory requests (default: index.html).
 
 **--no-listing**
-> Disable directory listing.
+> Disable directory listing (directory listing is enabled by default).
 
 **--timeout** _seconds_
 > Connection timeout (default: 60).
@@ -75,17 +75,44 @@ simple, fast, and secure static web server
 **--chroot**
 > Chroot to docroot.
 
+**--maxconn** _n_
+> Limit number of simultaneous connections.
+
 **--forward** _host_ _url_
-> Forward requests for host to URL.
+> 301 redirect requests with matching Host header to the given URL.
+
+**--forward-all** _url_
+> 301 redirect all requests to the given URL (catch-all).
 
 **--forward-https** _host_ _url_
-> Forward HTTPS-originated requests.
+> 301 redirect HTTP requests for host to HTTPS.
 
 **--no-keepalive**
 > Disable HTTP keep-alive.
 
+**--no-server-id**
+> Omit Server identification header from responses.
+
 **--mimetypes** _file_
 > Load MIME types from file.
+
+**--default-mimetype** _type_
+> Serve files with unknown extensions as this MIME type.
+
+**--hide-dotfiles**
+> Do not serve files or directories starting with a dot.
+
+**--single-file** _file_
+> Serve only the specified file rather than a directory.
+
+**--auth** _user:password_
+> Enable HTTP Basic authentication.
+
+**--syslog**
+> Use syslog for request logging instead of a file.
+
+**--header** _header_
+> Add a custom response header (repeatable).
 
 # DESCRIPTION
 
@@ -93,7 +120,7 @@ simple, fast, and secure static web server
 
 The server is designed for simplicity: it serves files from a document root directory with proper MIME types, handles HTTP/1.1 keep-alive connections, and supports security features like chroot and privilege dropping. There's no configuration file; all options are command-line arguments.
 
-Directory listing can be enabled with the **--index** flag (without a filename argument). Custom index files can be specified to override the default **index.html**. The server sends proper caching headers and handles range requests for resumable downloads.
+Directory listing is enabled by default and can be disabled with **--no-listing**. Custom index files can be specified with **--index** to override the default **index.html**. The server sends proper caching headers and handles range requests for resumable downloads.
 
 For production use, darkhttpd supports daemonization, PID file creation, and logging. The chroot and uid/gid options provide security isolation. While not designed for high-traffic sites, it's excellent for local development, embedded systems, or serving static content where simplicity is valued.
 
@@ -107,4 +134,4 @@ Static files only; no CGI, PHP, or dynamic content support. No SSL/TLS; use a re
 
 # SEE ALSO
 
-[nginx](/man/nginx)(8), [python3](/man/python3)(1), [caddy](/man/caddy)(1), [lighttpd](/man/lighttpd)(8), [busybox](/man/busybox)(1)
+[nginx](/man/nginx)(8), [python3](/man/python3)(1), [caddy](/man/caddy)(1), [busybox](/man/busybox)(1)

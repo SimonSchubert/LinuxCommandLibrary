@@ -20,6 +20,10 @@ Display **help**
 
 ```pw-mididump -h```
 
+Show **version**
+
+```pw-mididump --version```
+
 # SYNOPSIS
 
 **pw-mididump** [_options_] [_file_]
@@ -27,10 +31,13 @@ Display **help**
 # PARAMETERS
 
 **-r**, **--remote** _name_
-> Connect to specific remote PipeWire instance
+> Connect to specific remote PipeWire instance (default: local instance)
 
 **-h**, **--help**
 > Display help message
+
+**--version**
+> Display version information
 
 # DESCRIPTION
 
@@ -48,4 +55,4 @@ Part of **PipeWire**, the modern multimedia framework for Linux. Provides MIDI d
 
 # SEE ALSO
 
-[pipewire](/man/pipewire)(1), [pw-cli](/man/pw-cli)(1), [aconnect](/man/aconnect)(1)
+[pipewire](/man/pipewire)(1), [pw-cli](/man/pw-cli)(1), [pw-cat](/man/pw-cat)(1), [aconnect](/man/aconnect)(1), [aplaymidi](/man/aplaymidi)(1), [amidi](/man/amidi)(1)

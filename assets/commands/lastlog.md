@@ -1,6 +1,6 @@
 # TAGLINE
 
-reports the most recent login of all users or a specified user by reading
+Report the most recent login of all users or a specified user
 
 # TLDR
 
@@ -26,8 +26,8 @@ Display records **more recent than** N days
 
 # PARAMETERS
 
-**-u**, **--user** _USER_
-> Show lastlog record for specified user
+**-u**, **--user** _LOGIN|RANGE_
+> Show lastlog record for specified user(s). Can be a login name, numeric UID, or a UID range (UID_MIN-UID_MAX)
 
 **-b**, **--before** _DAYS_
 > Show records older than DAYS
@@ -36,10 +36,16 @@ Display records **more recent than** N days
 > Show records more recent than DAYS
 
 **-C**, **--clear**
-> Clear lastlog record for user (with -u)
+> Clear lastlog record for a user (requires -u)
 
 **-S**, **--set**
-> Set lastlog record for user (with -u)
+> Set lastlog record for a user to the current time (requires -u)
+
+**-R**, **--root** _CHROOT\_DIR_
+> Apply changes in the CHROOT_DIR directory and use its configuration files
+
+**-h**, **--help**
+> Display help message and exit
 
 # DESCRIPTION
 
@@ -57,4 +63,4 @@ lastlog has been part of Unix-like systems for decades, providing a quick way to
 
 # SEE ALSO
 
-[last](/man/last)(1), [lastb](/man/lastb)(1), [faillog](/man/faillog)(8)
+[last](/man/last)(1), [lastb](/man/lastb)(1), [faillog](/man/faillog)(8), [who](/man/who)(1), [login](/man/login)(1)

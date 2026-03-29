@@ -32,11 +32,14 @@ Mount as **read-only**
 **--read-only**
 > Mount the image read-only
 
+**--no-block**
+> Do not wait for the operation to complete
+
 # DESCRIPTION
 
-**systemctl mount-image** mounts a disk image file into a running unit's mount namespace. This is only supported for units running with their own mount namespace (using RootImage=, PrivateMounts=, etc.).
+**systemctl mount-image** mounts a disk image file into a running unit's mount namespace. This is only supported for units running with their own mount namespace (using RootImage=, PrivateMounts=, etc.). Added in systemd 248.
 
-The image is dissected using systemd's Discoverable Disk Image (DDI) support, automatically finding and mounting the appropriate partitions.
+The image is dissected using systemd's Discoverable Disk Image (DDI) support, automatically finding and mounting the appropriate partitions. Partition names and mount options can be specified after the path using the `PARTITION:OPTIONS` syntax.
 
 # CAVEATS
 

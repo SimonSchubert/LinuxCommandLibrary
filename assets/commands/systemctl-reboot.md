@@ -16,9 +16,13 @@ Reboot into **firmware** setup
 
 ```systemctl reboot -f```
 
-**Schedule** reboot
+**Reboot** into a specific boot loader entry once
 
-```systemctl reboot --when +30min```
+```systemctl reboot --boot-loader-entry=[entry_id]```
+
+**Schedule** reboot at a specific time
+
+```systemctl reboot --when=+30min```
 
 # SYNOPSIS
 
@@ -38,8 +42,14 @@ Reboot into **firmware** setup
 **--no-wall**
 > Don't send wall message to users
 
-**--when** _TIME_
-> Schedule reboot at specific time
+**--boot-loader-menu=** _TIMEOUT_
+> Reboot into the boot loader menu, showing it for the specified timeout
+
+**--boot-loader-entry=** _ID_
+> Reboot into a specific boot loader entry once (use `--boot-loader-entry=help` to list entries)
+
+**--when=** _TIMESTAMP_
+> Schedule reboot at a specific time (use `--when=cancel` to cancel a scheduled reboot)
 
 # DESCRIPTION
 
@@ -57,4 +67,4 @@ The **reboot** subcommand integrates with systemd's shutdown infrastructure, pro
 
 # SEE ALSO
 
-[systemctl-poweroff](/man/systemctl-poweroff)(1), [systemctl-halt](/man/systemctl-halt)(1), [reboot](/man/reboot)(8)
+[systemctl-poweroff](/man/systemctl-poweroff)(1), [systemctl-halt](/man/systemctl-halt)(1), [systemctl-soft-reboot](/man/systemctl-soft-reboot)(1), [reboot](/man/reboot)(8), [shutdown](/man/shutdown)(8)

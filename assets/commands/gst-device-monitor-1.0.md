@@ -58,4 +58,4 @@ Requires GStreamer 1.4+ with appropriate plugins. Device detection depends on in
 
 # SEE ALSO
 
-[gst-launch-1.0](/man/gst-launch-1.0)(1), [gst-inspect-1.0](/man/gst-inspect-1.0)(1)
+[gst-launch-1.0](/man/gst-launch-1.0)(1), [gst-inspect-1.0](/man/gst-inspect-1.0)(1), [gst-discoverer-1.0](/man/gst-discoverer-1.0)(1)

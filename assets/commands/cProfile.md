@@ -45,7 +45,7 @@ Python deterministic profiler
 > Sort output by specified column.
 
 **-m** _module_
-> Profile a module instead of a script.
+> Profile a module run as a script (passed to python -m).
 
 # SORT OPTIONS
 

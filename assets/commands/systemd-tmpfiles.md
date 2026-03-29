@@ -24,6 +24,14 @@ Manage temporary files and directories
 
 ```systemd-tmpfiles --create --boot```
 
+**Apply** only to paths under a specific prefix
+
+```systemd-tmpfiles --create --prefix=[/tmp]```
+
+**Create, clean, and remove** in a single invocation
+
+```systemd-tmpfiles --create --clean --remove```
+
 # SYNOPSIS
 
 **systemd-tmpfiles** [_options_] [_configfile_...]
@@ -45,14 +53,32 @@ Manage temporary files and directories
 **--boot**
 > Execute boot-time entries
 
-**--prefix _path_**
-> Only apply to paths with specified prefix
+**--purge**
+> Delete all files and directories created by the specified configuration files
 
-**--exclude-prefix _path_**
-> Exclude paths with specified prefix
+**--prefix** _path_
+> Only apply rules with paths starting with specified prefix (repeatable)
+
+**--exclude-prefix** _path_
+> Ignore rules with paths starting with specified prefix (repeatable)
 
 **-E**
-> Ignore configuration errors
+> Shortcut for excluding /dev, /proc, /run, and /sys hierarchies
+
+**--root** _path_
+> Prefix all paths with the given alternate root directory
+
+**--replace** _path_
+> Use command-line arguments instead of the specified configuration file
+
+**--cat-config**
+> Print the contents of configuration files to stdout
+
+**--no-pager**
+> Do not pipe output into a pager
+
+**-h**, **--help**
+> Print help text and exit
 
 # DESCRIPTION
 
@@ -62,8 +88,8 @@ The tool is automatically invoked during system boot by systemd services. Manual
 
 # CAVEATS
 
-Running manually is usually not needed as systemd handles this automatically. Configuration syntax errors may prevent proper cleanup. Age-based cleanup requires properly configured time values. Part of the systemd suite.
+Running manually is usually not needed as systemd handles this automatically. It is possible to combine --create, --clean, and --remove in one invocation. Configuration syntax errors may prevent proper cleanup. Age-based cleanup requires properly configured time values. Part of the systemd suite.
 
 # SEE ALSO
 
-[tmpfiles.d](/man/tmpfiles.d)(5), [systemd](/man/systemd)(1)
+[systemctl](/man/systemctl)(1)

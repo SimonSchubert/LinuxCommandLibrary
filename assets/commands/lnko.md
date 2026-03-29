@@ -4,41 +4,84 @@ Simple stow-like dotfile linker
 
 # TLDR
 
-**Link a package** to the home directory
+**Link packages to the home directory**
 
-```lnko stow [package_name]```
+```lnko link [package1] [package2]```
+
+**Link packages from a specific source to a target directory**
+
+```lnko link -d [~/dotfiles] -t [~] [package_name]```
 
 **Unlink a package**
 
-```lnko unstow [package_name]```
+```lnko unlink [package_name]```
 
-**Dry run** to preview changes
+**Preview changes without creating symlinks**
 
-```lnko stow -n [package_name]```
+```lnko link -n [package_name]```
+
+**Show status of all packages**
+
+```lnko status```
+
+**Remove orphaned symlinks**
+
+```lnko clean```
+
+**Force-overwrite conflicting files**
+
+```lnko link -f [package_name]```
 
 # SYNOPSIS
 
-**lnko** _command_ [_options_] [_package_]
+**lnko** _command_ [_options_] [_package_ ...]
 
 # PARAMETERS
+
+**link**
+> Create relative symlinks from source packages to the target directory.
+
+**unlink**
+> Remove symlinks for specified packages.
+
+**status**
+> Display the current state of all packages and their symlinks.
+
+**clean**
+> Remove orphaned symlinks pointing to non-existent targets.
+
+**-d**, **--dir** _dir_
+> Specify source directory containing packages (default: current directory).
+
+**-t**, **--target** _dir_
+> Specify target directory for symlinks (default: $HOME).
 
 **-n**, **--dry-run**
 > Preview changes without creating symlinks.
 
-**-b**
-> Auto-resolve conflicts by backing up existing files.
+**-v**, **--verbose**
+> Output detailed debugging information.
 
-**-s**
+**-b**, **--backup**
+> Auto-resolve conflicts by backing up existing files to .lnko-backup/.
+
+**-s**, **--skip**
 > Auto-resolve conflicts by skipping conflicting files.
 
-**-f**
+**-f**, **--force**
 > Auto-resolve conflicts by force-overwriting.
+
+**--ignore** _pattern_
+> Exclude files matching pattern (repeatable).
+
+**--no-folding**
+> Prevent directory folding into symlinks.
 
 # DESCRIPTION
 
 **lnko** is a simple stow-like dotfile linker that creates relative symlinks from a source directory containing packages to a target directory. Each package is a directory whose contents mirror the target structure.
 
-It supports tree folding, ignore patterns, dry-run mode, and multiple conflict resolution strategies. Useful for managing dotfiles and configuration files across systems.
+It supports tree folding, ignore patterns, dry-run mode, and multiple conflict resolution strategies. When conflicts are detected, lnko provides an interactive prompt with backup, skip, overwrite, and diff options unless an auto-resolve flag is given. Compatible with existing GNU Stow symlinks.
 
 # CAVEATS
 

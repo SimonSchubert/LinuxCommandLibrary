@@ -4,82 +4,85 @@ Filter and search BGP routing data in MRT format
 
 # TLDR
 
-**Filter BGP data** for a specific prefix
+**Filter routes** matching a specific subnet from MRT dumps
 
-```bgpgrep -p [192.0.2.0/24] [path/to/bgp.dump]```
+```bgpgrep [path/to/rib.mrt.gz] -subnet [192.0.2.0/24]```
 
-**Search for routes** from a specific AS
+**Filter routes** by AS path pattern
 
-```bgpgrep -a [AS64496] [path/to/bgp.dump]```
+```bgpgrep [path/to/rib.mrt.gz] -aspath "[64496 64497]"```
 
-**Filter by AS path** pattern
+**List routes** from a specific peer
 
-```bgpgrep -P "[64496 64497]" [path/to/bgp.dump]```
+```bgpgrep [path/to/rib.mrt.gz] -peer [198.51.100.1]```
 
-**Extract routes** with a specific origin AS
+**Find routes** that lead to a specific address
 
-```bgpgrep -o [AS64496] [path/to/bgp.dump]```
+```bgpgrep [path/to/rib.mrt.gz] -supernet [8.8.8.8/32]```
 
-**Read from stdin** (MRT format)
+**Detect bogon ASNs** in routing data
 
-```cat [bgp.dump] | bgpgrep -p [10.0.0.0/8]```
+```bgpgrep [path/to/rib.mrt.gz] -bogon-asn```
 
-**Output in machine-readable format**
+**Combine filters** with logical operators
 
-```bgpgrep -m -p [prefix] [bgp.dump]```
+```bgpgrep [path/to/rib.mrt.gz] -bogon-asn -or -subnet [fullbogons.txt]```
 
-**Filter with multiple conditions**
+**Filter by timestamp** range
 
-```bgpgrep -p [prefix] -a [AS_number] [bgp.dump]```
+```bgpgrep [path/to/updates.mrt.gz] -timestamp "[>=2021-07-01]" -and -timestamp "[<2021-07-08]"```
 
 # SYNOPSIS
 
-**bgpgrep** [_-p prefix_] [_-a asn_] [_-o asn_] [_-P pattern_] [_-m_] [_file ..._]
+**bgpgrep** [_file ..._] [_filter expressions_]
 
 # PARAMETERS
 
-**-p** _prefix_
-> Match routes for the specified IP prefix.
+**-peer** _address|asn_
+> Match routes received from a specific peer, identified by IP address or AS number.
 
-**-a** _asn_
-> Match routes with the AS number anywhere in the path.
+**-aspath** _pattern_
+> Match routes whose AS path matches the given pattern. Supports AS number sequences and regular expression-like syntax.
 
-**-o** _asn_
-> Match routes with the specified origin AS.
+**-supernet** _prefix_
+> Match routes that are supernets of (or equal to) the specified prefix.
 
-**-P** _pattern_
-> Match AS path against the given pattern.
+**-subnet** _prefix|file_
+> Match routes that are subnets of the specified prefix, or match against a prefix list from a file.
 
-**-m**
-> Machine-readable output format.
+**-communities** _expression_
+> Match routes with specific BGP community values. Supports wildcard patterns.
 
-**-v**
-> Invert match (show non-matching entries).
+**-bogon-asn**
+> Match routes containing bogon (reserved/unallocated) AS numbers in the AS path.
 
-**-c**
-> Count matching entries.
+**-loops**
+> Detect AS path loops.
 
-**-h**
-> Display help information.
+**-timestamp** _condition_
+> Filter by timestamp using comparison operators (e.g., ">=2021-07-01").
+
+**-and**
+> Logical AND between filter conditions (default when combining filters).
+
+**-or**
+> Logical OR between filter conditions.
+
+**-not**
+> Negate the following filter condition.
 
 # DESCRIPTION
 
-**bgpgrep** is a tool for filtering and searching BGP routing data stored in MRT (Multi-threaded Routing Toolkit) format. It processes BGP table dumps and update files from route collectors like RIPE RIS and RouteViews.
+**bgpgrep** is part of the Micro BGP Suite, a set of shell tools for filtering and analyzing BGP routing data stored in MRT (Multi-threaded Routing Toolkit) format. It processes BGP table dumps and update files from route collectors like RIPE RIS and RouteViews.
 
-The tool supports filtering by IP prefix, AS number, AS path patterns, and origin AS. Multiple filters can be combined to narrow down results. This is useful for network operators and researchers analyzing routing data, investigating routing anomalies, or studying AS relationships.
+Each line of output is prefixed with a character indicating the message type: `=` for RIB snapshot, `+` for announcement, `-` for withdrawal, and `#` for BGP state change. The output uses a pipe-delimited format where the 9th field contains the peer address and ASN, enabling easy integration with standard command-line tools like `cut` and `awk`.
 
-BGP dumps in MRT format can be obtained from public route collectors. The tool processes these binary files efficiently, outputting matching BGP announcements in a human-readable or machine-parseable format.
-
-Common use cases include tracking route propagation, identifying prefix hijacks, analyzing AS path lengths, and studying routing policy effects. The tool handles both IPv4 and IPv6 prefixes.
+The tool supports filtering by prefix, AS path patterns, peer, communities, and timestamp. Multiple filters can be combined using boolean operators (`-and`, `-or`, `-not`) with parentheses for grouping. It handles both IPv4 and IPv6 prefixes and supports compressed MRT files (gzip, bzip2).
 
 # CAVEATS
 
-Input must be in MRT format (common BGP dump format). Large dump files can take significant time to process. AS path matching patterns may have implementation-specific syntax. Memory usage scales with file size.
-
-# HISTORY
-
-**bgpgrep** was developed as part of the BGP analysis toolset for network operators and researchers working with routing data. It complements other tools like **bgpdump** and **bgpstream** in the BGP data analysis ecosystem. The tool emerged from the need for efficient filtering of large-scale BGP datasets from route collectors.
+Input must be in MRT format (common BGP dump format). Filter option names use single-dash long form (e.g., `-peer`, not `--peer`). AS path matching patterns use bgpgrep-specific syntax that differs from standard regular expressions.
 
 # SEE ALSO
 
-[bgpdump](/man/bgpdump)(1), [bgpstream](/man/bgpstream)(1), [traceroute](/man/traceroute)(1), [whois](/man/whois)(1)
+[traceroute](/man/traceroute)(1), [whois](/man/whois)(1)

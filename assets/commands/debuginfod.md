@@ -4,29 +4,29 @@ HTTP server for distributing ELF debugging information
 
 # TLDR
 
-**Start server** with default paths
+**Scan directories for ELF/DWARF files**
 
-```debuginfod```
+```debuginfod -F [/usr/lib/debug]```
 
-**Serve specific directories**
+**Start on a specific port**
 
-```debuginfod [/usr/lib/debug] [/var/cache/debuginfod]```
+```debuginfod -p [8002] -F [/usr/lib/debug]```
 
-**Start on specific port**
-
-```debuginfod -p [8002]```
-
-**Index RPM files**
+**Index RPM archives in a directory**
 
 ```debuginfod -R [/path/to/rpms]```
 
-**Index DEB files**
+**Index DEB archives in a directory**
 
 ```debuginfod -U [/path/to/debs]```
 
-**Set concurrent connections**
+**Run in verbose mode with custom database path**
 
-```debuginfod -c [10]```
+```debuginfod -v -d [/var/cache/debuginfod.sqlite] -F [/usr/lib/debug]```
+
+**Set scan interval and concurrent threads**
+
+```debuginfod -t [600] -c [10] -F [/path/to/debug]```
 
 # SYNOPSIS
 
@@ -43,26 +43,50 @@ The service enables automatic debugging symbol resolution without manually insta
 **-p** _port_
 > HTTP server port (default 8002).
 
-**-c** _num_
-> Concurrent connections limit.
+**-F**
+> Activate ELF/DWARF file scanning of specified paths.
 
 **-R**
 > Scan for RPM archives.
 
 **-U**
-> Scan for DEB archives.
+> Scan for DEB/DDEB archives.
+
+**-Z** _ext_
+> Activate additional archive pattern scanning for the given extension.
 
 **-d** _file_
-> Database file location.
+> SQLite database file location (default ~/.debuginfod.sqlite).
+
+**-c** _num_
+> Scanner queue thread limit.
+
+**-C** _num_
+> Webapi thread pool size.
 
 **-t** _seconds_
-> Scan interval.
+> Directory rescan interval (default 300).
 
-**-F**
-> Run in foreground.
+**-g** _seconds_
+> Grooming pass interval (default 86400).
+
+**-I** _regex_
+> Include files matching POSIX extended regex.
+
+**-X** _regex_
+> Exclude files matching POSIX extended regex.
+
+**-L**
+> Traverse symbolic links during scanning.
+
+**--passive**
+> Read-only mode; no scanning, only serve existing index.
+
+**--cors**
+> Add CORS response headers for third-party webapp access.
 
 **-v**
-> Increase verbosity.
+> Increase verbosity (may be repeated).
 
 # CLIENT USAGE
 
@@ -73,7 +97,7 @@ export DEBUGINFOD_URLS="https://debuginfod.example.com"
 
 # CAVEATS
 
-Initial indexing can be slow. Database grows with content. Network access needed by clients. May expose binary details. Requires matching build-ids.
+Initial indexing can be slow for large repositories. The SQLite database grows with content. Network access is needed by clients. The service may expose details about installed binaries. Clients require matching build-ids to fetch debug information.
 
 # HISTORY
 
@@ -81,4 +105,4 @@ Initial indexing can be slow. Database grows with content. Network access needed
 
 # SEE ALSO
 
-[gdb](/man/gdb)(1), [elfutils](/man/elfutils)(1), [systemtap](/man/systemtap)(1), [objdump](/man/objdump)(1)
+[debuginfod-find](/man/debuginfod-find)(1), [gdb](/man/gdb)(1), [objdump](/man/objdump)(1), [readelf](/man/readelf)(1)

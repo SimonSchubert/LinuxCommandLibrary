@@ -52,23 +52,43 @@ VirtualBox command-line management interface
 **snapshot**
 > Snapshot operations.
 
+**showvminfo**
+> Display VM configuration details.
+
+**clonevm**
+> Clone an existing VM.
+
+**storagectl**
+> Manage storage controllers.
+
+**storageattach**
+> Attach storage media to a VM.
+
+**sharedfolder**
+> Manage shared folders between host and guest.
+
+**guestcontrol**
+> Execute commands within guest OS.
+
 **--type** _TYPE_
-> Start type (gui, headless).
+> Start type (gui, headless, separate).
+
+**-q**, **--nologo**
+> Suppress logo output for scripting.
+
+**--machinereadable**
+> Machine-parsable output format.
 
 # DESCRIPTION
 
 **vboxmanage** is the command-line interface for Oracle VirtualBox, providing complete control over virtual machine creation, configuration, and operation. It exposes every feature available in the graphical interface and many that are only accessible from the command line.
 
-The tool uses subcommands for different operations: **createvm** and **modifyvm** for setup, **startvm** and **controlvm** for runtime management, **snapshot** for state saving, and **list** for querying registered objects. It is essential for headless server environments, scripted VM provisioning, and automation workflows where GUI access is unavailable.
+The tool uses subcommands for different operations: **createvm** and **modifyvm** for setup, **startvm** and **controlvm** for runtime management, **snapshot** for state saving, and **list** for querying registered objects. Most configuration changes via **modifyvm** require the VM to be powered off. VMs can be identified by name or UUID.
 
 # CAVEATS
 
-VirtualBox required. Complex syntax. Many subcommands.
-
-# HISTORY
-
-**VBoxManage** is the command-line interface for **Oracle VirtualBox**, providing full VM management capabilities.
+VirtualBox must be installed. Most **modifyvm** changes require the VM to be powered off. Guest Additions must be installed for advanced features like shared folders and guest control.
 
 # SEE ALSO
 
-[virtualbox](/man/virtualbox)(1), [qemu](/man/qemu)(1), [virsh](/man/virsh)(1)
+[qemu](/man/qemu)(1), [virsh](/man/virsh)(1)

@@ -84,8 +84,35 @@ NVIDIA's CUDA compiler driver
 **-Xcompiler** _options_
 > Pass options directly to the host compiler.
 
-**--std** _standard_
-> C++ standard (e.g., c++14, c++17).
+**-std** _standard_
+> C++ standard (e.g., c++14, c++17, c++20). Also accepted as `--std`.
+
+**-dc**
+> Compile to relocatable device code (enables separate compilation).
+
+**-rdc** _true|false_
+> Enable or disable relocatable device code.
+
+**-dlink**
+> Link relocatable device code objects.
+
+**-ccbin** _PATH_
+> Specify the host compiler binary (e.g., `/usr/bin/g++`).
+
+**-Xlinker** _options_
+> Pass options directly to the host linker.
+
+**-lineinfo**
+> Generate line-number information for device code (useful for profilers).
+
+**-use_fast_math**
+> Enable fast math optimizations (implies `-ftz=true -prec-div=false -prec-sqrt=false`).
+
+**-keep**
+> Retain intermediate compilation files.
+
+**-t** _N_
+> Parallelize compilation across N threads.
 
 **-v**, **--verbose**
 > Verbose output.
@@ -99,7 +126,7 @@ NVIDIA's CUDA compiler driver
 
 Compilation separates device code (kernels running on GPU) from host code (CPU). Device code compiles to PTX intermediate representation or directly to SASS (GPU machine code).
 
-Architecture flags (-arch) target specific GPU generations. Older architectures work on newer GPUs. Forward compatibility uses PTX that JIT-compiles at runtime.
+Architecture flags (-arch) target specific GPU generations. Use `-arch=native` to auto-detect visible GPUs, or `-arch=all` to compile for all supported architectures. Forward compatibility uses PTX that JIT-compiles at runtime.
 
 The compiler integrates with host compilers (gcc, clang, MSVC) for CPU code. Separate compilation allows mixing CUDA with regular C++ in large projects.
 

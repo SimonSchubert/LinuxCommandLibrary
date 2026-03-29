@@ -65,11 +65,20 @@ Capture and **open** in program
 **-o, --open** _APPLICATION_
 > Open with application
 
+**-S, --show-in-folder**
+> Show the saved file in the file manager
+
+**-V, --version**
+> Display version information
+
+**--supported-formats**
+> List supported image formats (depends on installed pixbuf loaders)
+
 # DESCRIPTION
 
 **xfce4-screenshooter** is the screenshot utility for the XFCE desktop environment. It can capture the entire screen, a window, or a selected region.
 
-Screenshots can be saved to file, copied to clipboard, or opened in an image editor.
+Screenshots can be saved to file, copied to clipboard, or opened in an image editor. The save option accepts **png**, **jpg**, and **bmp** file extensions.
 
 # CAVEATS
 
@@ -77,4 +86,4 @@ Designed for XFCE but works on other desktops. Region selection requires mouse i
 
 # SEE ALSO
 
-[scrot](/man/scrot)(1), [gnome-screenshot](/man/gnome-screenshot)(1), [flameshot](/man/flameshot)(1)
+[scrot](/man/scrot)(1), [gnome-screenshot](/man/gnome-screenshot)(1), [flameshot](/man/flameshot)(1), [maim](/man/maim)(1), [spectacle](/man/spectacle)(1), [import](/man/import)(1)

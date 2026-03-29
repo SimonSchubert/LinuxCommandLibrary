@@ -26,7 +26,7 @@ service discovery and configuration tool
 
 **DNS lookup for service**
 
-```dig @127.0.0.1 -p 8600 [web].service.consul```
+```dig @127.0.0.1 -p 8600 [web.service.consul]```
 
 **Store key-value pair**
 
@@ -39,6 +39,14 @@ service discovery and configuration tool
 **Join cluster**
 
 ```consul join [192.168.1.100]```
+
+**Validate configuration files**
+
+```consul validate [/etc/consul.d/]```
+
+**Reload agent configuration**
+
+```consul reload```
 
 # SYNOPSIS
 
@@ -77,8 +85,29 @@ service discovery and configuration tool
 **acl**
 > Access control list management
 
+**watch**
+> Watch for changes in data views and invoke a process
+
+**event**
+> Fire a custom user event
+
+**exec**
+> Remote execution on cluster nodes
+
+**operator**
+> Cluster-level operator tools
+
 **snapshot**
 > Save/restore cluster state
+
+**reload**
+> Reload agent configuration files
+
+**validate**
+> Validate configuration files
+
+**monitor**
+> Stream logs from a running agent
 
 **debug**
 > Create debugging archive
@@ -88,14 +117,26 @@ service discovery and configuration tool
 **-dev**
 > Development mode (single node, no persistence)
 
+**-server**
+> Run agent in server mode
+
+**-bind** _addr_
+> Address for internal cluster communications (default: 0.0.0.0)
+
 **-token** _token_
 > ACL token for authentication
+
+**-token-file** _file_
+> File containing the ACL token
 
 **-datacenter** _dc_
 > Target datacenter
 
 **-http-addr** _addr_
 > Consul HTTP API address
+
+**-auto-reload-config**
+> Automatically reload configuration when files change
 
 # CONFIGURATION
 
@@ -112,6 +153,9 @@ service discovery and configuration tool
 
 **CONSUL_CACERT**
 > CA certificate path
+
+**CONSUL_HTTP_SSL**
+> Use HTTPS when communicating with Consul
 
 # DNS INTERFACE
 

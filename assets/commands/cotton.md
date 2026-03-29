@@ -1,82 +1,79 @@
 # TAGLINE
 
-Git worktree management wrapper
+Markdown-based API test specification runner
 
 # TLDR
 
-**Initialize cotton** in a repository
+**Run a single test specification** file
 
-```cotton init```
+```cotton [spec.md]```
 
-**Create a new worktree**
+**Run all specs in a directory**
 
-```cotton new [branch-name]```
+```cotton [tests/]```
 
-**List all worktrees**
+**Run with a custom base URL**
 
-```cotton list```
+```cotton -u [https://api.example.com] [tests/]```
 
-**Switch to a worktree**
+**Run in detail mode** (verbose output)
 
-```cotton switch [branch-name]```
+```cotton -d [spec.md]```
 
-**Remove a worktree**
+**Inject a predefined variable**
 
-```cotton remove [branch-name]```
+```cotton -p [token=abc123] [spec.md]```
 
-**Show current worktree status**
+**Stop on the first failure**
 
-```cotton status```
+```cotton -s [tests/]```
+
+**Watch for changes** and rerun automatically
+
+```cotton -w [tests/]```
 
 # SYNOPSIS
 
-**cotton** _command_ [_options_] [_arguments_]
+**cotton** [_-u baseurl_] [_-i_] [_-d_] [_-w_] [_-s_] [_-p name=value_] _test-cases_
 
 # PARAMETERS
 
-**init**
-> Initialize cotton configuration in the repository.
+**-u** _url_
+> Base URL for all requests (default: http://localhost:8080).
 
-**new** _BRANCH_
-> Create a new worktree for the specified branch.
+**-i**
+> Insecure mode: disable TLS certificate verification.
 
-**list**
-> List all managed worktrees.
+**-d**
+> Detail mode: print comprehensive output for each test.
 
-**switch** _BRANCH_
-> Switch to the specified worktree.
+**-w**
+> Watch mode: rerun tests automatically when files change.
 
-**remove** _BRANCH_
-> Remove a worktree.
+**-s**
+> Panic mode: halt execution on the first failure.
 
-**status**
-> Show the status of all worktrees.
+**-p** _name=value_
+> Inject a predefined variable into test specs (repeatable).
 
-**prune**
-> Remove stale worktree references.
-
-**--help**
+**-h**
 > Display help information.
 
-**--version**
+**-v**
 > Display version information.
 
 # DESCRIPTION
 
-**cotton** is a Git worktree management tool that simplifies working with multiple branches simultaneously. It wraps Git's worktree functionality with a more intuitive interface for creating, switching, and managing worktrees.
+**cotton** is a command-line test runner that executes RESTful API tests written in Markdown format. Test specifications are Markdown files containing HTTP request descriptions and expected response assertions, making tests human-readable as living documentation.
 
-Git worktrees allow checking out multiple branches at once in separate directories, useful for comparing implementations, reviewing pull requests while continuing development, or running tests on different versions. Cotton manages these worktrees with consistent naming and organization.
+Cotton reads each Markdown spec, extracts HTTP request definitions and expectations, executes the requests against the target API, and reports pass/fail results. The `_test-cases_` argument can be a single Markdown file, a directory of Markdown files, or a glob pattern.
 
-The tool maintains a directory structure for worktrees and provides quick switching between them, making multi-branch development workflows more efficient than constantly stashing and switching branches.
+Variables can be injected with **-p** and referenced inside specs using `{{ variable_name }}` syntax. Cotton supports setup and teardown operations within spec files, and distinguishes between test cases (with assertions) and executables (without).
 
 # CAVEATS
 
-Requires Git with worktree support (Git 2.5+). Each worktree consumes disk space for the working directory. Changes must be committed or stashed before removing worktrees to avoid losing work.
-
-# HISTORY
-
-cotton emerged from the developer community's need for simpler Git worktree management. While Git worktrees were introduced in **Git 2.5** in **2015**, tools like cotton provide more user-friendly interfaces for common worktree operations.
+Tests are written in a specific Markdown dialect; see the project documentation for the spec format. TLS verification is enabled by default; use `-i` only in development. The base URL defaults to http://localhost:8080 and must be overridden for remote APIs.
 
 # SEE ALSO
 
-[git-worktree](/man/git-worktree)(1), [git](/man/git)(1), [git-checkout](/man/git-checkout)(1)
+[curl](/man/curl)(1)

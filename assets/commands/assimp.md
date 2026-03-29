@@ -8,64 +8,75 @@ Import and convert 3D model file formats
 
 ```assimp export [input.fbx] [output.obj]```
 
-**Show** model information
+**Show** model information and statistics
 
 ```assimp info [model.fbx]```
 
-List **supported formats**
+List all supported **import** file extensions
 
 ```assimp listext```
 
-Extract **embedded textures**
+List all supported **export** formats
+
+```assimp listexport```
+
+Check if a file **extension** is supported
+
+```assimp knowext [fbx]```
+
+Extract **embedded textures** from a model
 
 ```assimp extract [model.fbx]```
 
-**Convert** with a specific output format
+**Dump** model structure to text for debugging
 
-```assimp export [input.fbx] [output.glb] -f [glb2]```
+```assimp dump [model.fbx] [output.assxml]```
 
-**Dump** model structure for debugging
+Show **help** for a specific subcommand
 
-```assimp dump [model.fbx]```
+```assimp [export] --help```
 
 # SYNOPSIS
 
-**assimp** _command_ [_options_] _file_
+**assimp** _command_ [_parameters_]
 
 # DESCRIPTION
 
-**assimp** is the command-line interface for the Open Asset Import Library, supporting import and export of numerous 3D file formats. It can convert between formats, extract data, and optimize models.
+**assimp** is the command-line interface for the Open Asset Import Library. It supports import and export of numerous 3D file formats, including OBJ, FBX, COLLADA (.dae), glTF/glTF2 (.gltf, .glb), STL, 3DS, PLY, X3D, and many more.
 
-The tool supports formats including OBJ, FBX, COLLADA, glTF, STL, and dozens more.
+The tool can convert between formats, display model information, extract embedded textures, and dump model structures for debugging. Use `assimp <verb> --help` for detailed help on each subcommand.
 
 # PARAMETERS
 
-**export** _in_ _out_
-> Convert file format
+**export** _input_ _output_
+> Convert a 3D model between file formats.
 
 **info** _file_
-> Display model information
-
-**extract** _file_
-> Extract embedded textures
+> Display statistics and structure of a 3D model.
 
 **listext**
-> List supported file extensions
+> List all known import file extensions.
 
-**knowext**
-> Check if extension is supported
+**listexport**
+> List all supported export formats.
 
-**exportinfo**
-> List export formats
+**knowext** _extension_
+> Check whether a file extension is recognized by Assimp.
 
-**dump** _file_
-> Dump model data to text for debugging
+**extract** _file_
+> Extract an embedded texture from a model.
+
+**dump** _file_ [_output_]
+> Convert a model to binary or XML dumps (ASSBIN/ASSXML).
+
+**cmpdump** _file1_ _file2_
+> Compare two file dumps produced with assimp dump.
 
 **version**
-> Show version
+> Display Assimp version information.
 
-**-v**, **--verbose**
-> Verbose output
+**help**
+> Show help message.
 
 # CAVEATS
 

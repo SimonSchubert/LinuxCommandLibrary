@@ -118,4 +118,4 @@ Pipelines have concurrent execution limits. Disabling transitions blocks all fol
 
 # SEE ALSO
 
-[aws](/man/aws)(1), [aws-codebuild](/man/aws-codebuild)(1), [aws-codedeploy](/man/aws-codedeploy)(1), [aws-codecommit](/man/aws-codecommit)(1)
+[aws](/man/aws)(1), [aws-codebuild](/man/aws-codebuild)(1), [aws-codecommit](/man/aws-codecommit)(1)

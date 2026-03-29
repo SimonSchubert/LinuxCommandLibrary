@@ -4,13 +4,25 @@ Modify LVM volume group attributes
 
 # TLDR
 
-**Change** the activation status of all volume groups
+**Activate** all volume groups
 
-```sudo vgchange -a y|n```
+```sudo vgchange -a y```
 
-**Change** the activation status of a specific volume group
+**Deactivate** a specific volume group
 
-```sudo vgchange -a y|n [volume_group]```
+```sudo vgchange -a n [volume_group]```
+
+**Refresh** metadata for all active logical volumes in a volume group
+
+```sudo vgchange --refresh [volume_group]```
+
+**Set** the maximum number of logical volumes for a volume group
+
+```sudo vgchange -l [128] [volume_group]```
+
+**Make** a volume group not resizeable
+
+```sudo vgchange -x n [volume_group]```
 
 # SYNOPSIS
 
@@ -19,13 +31,34 @@ Modify LVM volume group attributes
 # PARAMETERS
 
 **-a, --activate y|n|ay**
-> Activate or deactivate logical volumes (y=yes, n=no, ay=auto-yes)
-
-**-c, --clustered y|n**
-> Change cluster attribute
+> Activate or deactivate logical volumes (y=yes, n=no, ay=autoactivation)
 
 **-x, --resizeable y|n**
-> Change resizeable attribute
+> Enable or disable adding/removing physical volumes
+
+**-l, --logicalvolume _Number_**
+> Set the maximum number of logical volumes allowed in the volume group
+
+**-p, --maxphysicalvolumes _Number_**
+> Set the maximum number of physical volumes in the volume group
+
+**-s, --physicalextentsize _Size_**
+> Change the physical extent size on physical volumes
+
+**--refresh**
+> Reload metadata for all active logical volumes
+
+**--monitor y|n**
+> Start or stop monitoring logical volumes with dmeventd
+
+**--poll y|n**
+> Control background transformation of logical volumes
+
+**--sysinit**
+> Indicate that the command is being invoked during early system initialization
+
+**-u, --uuid**
+> Generate new random UUID for the volume group
 
 **--addtag _tag_**
 > Add a tag to the volume group
@@ -33,11 +66,11 @@ Modify LVM volume group attributes
 **--deltag _tag_**
 > Delete a tag from the volume group
 
-**--refresh**
-> Refresh metadata for active volume group
+**-f, --force**
+> Override various checks, confirmations, and protections
 
-**-u, --uuid**
-> Generate new UUID for the volume group
+**--alloc contiguous|cling|normal|anywhere|inherit**
+> Set the physical extent allocation policy
 
 # DESCRIPTION
 
@@ -47,8 +80,8 @@ Volume group activation makes the logical volumes available to the system. Deact
 
 # CAVEATS
 
-Requires root privileges. Deactivating a volume group with mounted filesystems will fail. Use **vgscan** to discover volume groups. Part of the LVM2 package.
+Requires root privileges. Deactivating a volume group with mounted or active filesystems will fail. Activating with missing physical volumes requires the **--activationmode partial** or **-P** flag. Use **vgscan** to discover volume groups. Part of the LVM2 package.
 
 # SEE ALSO
 
-[lvm](/man/lvm)(8), [vgcreate](/man/vgcreate)(8), [vgdisplay](/man/vgdisplay)(8), [vgscan](/man/vgscan)(8)
+[lvm](/man/lvm)(8), [vgcreate](/man/vgcreate)(8), [vgdisplay](/man/vgdisplay)(8), [vgscan](/man/vgscan)(8), [vgremove](/man/vgremove)(8), [lvchange](/man/lvchange)(8), [pvchange](/man/pvchange)(8)

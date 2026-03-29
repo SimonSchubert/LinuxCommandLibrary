@@ -87,6 +87,11 @@ list Docker containers and their status
 **{{.State}}**: Container state
 **{{.CreatedAt}}**: Creation time
 **{{.RunningFor}}**: Time since start
+**{{.Size}}**: Container disk size
+**{{.Mounts}}**: Names of the volumes mounted
+**{{.Networks}}**: Names of the networks attached
+**{{.Command}}**: Quoted command
+**{{.Label}}**: Container label value (e.g., {{.Label "key"}})
 
 # DESCRIPTION
 
@@ -106,5 +111,5 @@ docker ps has been part of Docker since its initial release in **2013**, modeled
 
 # SEE ALSO
 
-[docker](/man/docker)(1), [docker-inspect](/man/docker-inspect)(1), [docker-logs](/man/docker-logs)(1), [docker-stats](/man/docker-stats)(1)
+[docker](/man/docker)(1), [docker-inspect](/man/docker-inspect)(1), [docker-logs](/man/docker-logs)(1), [docker-stats](/man/docker-stats)(1), [docker-rm](/man/docker-rm)(1), [docker-run](/man/docker-run)(1)
 

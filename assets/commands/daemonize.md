@@ -56,4 +56,4 @@ The command must be specified with an absolute path. For modern systems, systemd
 
 # SEE ALSO
 
-[daemon](/man/daemon)(1), [nohup](/man/nohup)(1), [start-stop-daemon](/man/start-stop-daemon)(8)
+[daemon](/man/daemon)(1), [nohup](/man/nohup)(1)

@@ -16,9 +16,21 @@ Apply patches from email messages in mbox format
 
 ```git am --3way [patch]```
 
+**Apply and add Signed-off-by line**
+
+```git am --signoff [patch]```
+
+**Continue after resolving conflicts**
+
+```git am --continue```
+
 **Skip current patch**
 
 ```git am --skip```
+
+**Show the patch where am stopped**
+
+```git am --show-current-patch```
 
 **Abort patch application**
 
@@ -34,19 +46,43 @@ _MBOX_
 > Mailbox file with patches.
 
 **--3way**, **-3**
-> Fall back to 3-way merge.
+> Fall back to 3-way merge if the patch does not apply cleanly.
+
+**--signoff**, **-s**
+> Add a Signed-off-by trailer to the commit message.
+
+**--keep**, **-k**
+> Pass -k to git mailinfo; preserve the subject prefix.
+
+**--quiet**, **-q**
+> Only print error messages.
+
+**--whitespace** _action_
+> Handle whitespace errors: nowarn, warn, fix, error, error-all.
+
+**--reject**
+> Leave rejected hunks in .rej files instead of failing.
+
+**--patch-format** _format_
+> Specify the patch format: mbox, mboxrd, stgit, stgit-series, hg.
 
 **--skip**
 > Skip the current patch.
 
+**--continue**, **--resolved**, **-r**
+> Continue after manually resolving a conflict.
+
 **--abort**
-> Abort and restore original branch.
+> Abort and restore the original branch state.
 
-**--continue**
-> Continue after resolving conflicts.
+**--quit**
+> Abort but leave HEAD and index unchanged.
 
-**--signoff**
-> Add Signed-off-by line.
+**--show-current-patch** [**=diff**|**=raw**]
+> Show the patch where am stopped; default is raw.
+
+**--gpg-sign** [_keyid_], **-S** [_keyid_]
+> GPG-sign the resulting commits.
 
 **-i**, **--interactive**
 > Run interactively.
@@ -64,7 +100,7 @@ This workflow remains fundamental to the Linux kernel development process and ot
 
 # CAVEATS
 
-Patch format must be correct. Conflicts require manual resolution. Original commit dates preserved.
+Patch format must be correct mbox/maildir format. Conflicts require manual resolution followed by `--continue`. Original author information and dates are preserved from the email headers.
 
 # HISTORY
 

@@ -42,23 +42,20 @@ generates API documentation from PHP source code
 > Template to use.
 
 **--ignore** _pattern_
-> Patterns to ignore.
+> Patterns to ignore (supports globs, e.g., `"**/*test.php"`).
+
+**--visibility** _level_
+> Filter by visibility: public, protected, private, api, or internal.
+
+**--title** _text_
+> Set browser and template title.
+
+**--encoding** _encoding_
+> Set file encoding (default: UTF-8).
 
 # DESCRIPTION
 
-**phpDocumentor** (phpdoc) generates API documentation from PHP source code. It parses DocBlock comments to create navigable HTML documentation.
-# Basic documentation
-phpdoc -d ./src -t ./docs
-
-# With configuration
-phpdoc -c phpdoc.dist.xml
-
-# Ignore tests
-phpdoc -d ./src -t ./docs --ignore="tests/*"
-
-# Verbose output
-phpdoc -v -d ./src -t ./docs
-```
+**phpDocumentor** (phpdoc) generates API documentation from PHP source code. It parses DocBlock comments to create navigable HTML documentation. The default command is `phpdoc run`, which can also be invoked simply as `phpdoc`. It supports configuration files (phpdoc.xml or phpdoc.dist.xml) for persistent settings and multiple output templates.
 
 # DOCBLOCK FORMAT
 
@@ -98,4 +95,4 @@ phpDocumentor was created by **Joshua Eichorn** and is now maintained by **Mike 
 
 # SEE ALSO
 
-[doxygen](/man/doxygen)(1), [php](/man/php)(1), [composer](/man/composer)(1)
+[doxygen](/man/doxygen)(1), [php](/man/php)(1), [composer](/man/composer)(1), [phpunit](/man/phpunit)(1)

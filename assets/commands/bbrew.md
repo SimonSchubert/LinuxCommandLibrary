@@ -30,17 +30,20 @@ CLI tool for searching Homebrew and Linuxbrew formulae and casks
 
 # PARAMETERS
 
+**search** _query_
+> Search for formulae and casks matching the query.
+
 **-h**, **--help**
-> Show help information
+> Show help information.
 
-**-d**, **--desc**
-> Show formula descriptions in results (enabled by default)
+**-d**, **--desc** / **--no-desc**
+> Show or hide formula descriptions in results (shown by default).
 
-**-c**, **--casks**
-> Include cask results (enabled by default on macOS)
+**-c**, **--casks** / **--no-casks**
+> Include or exclude cask results (included by default on macOS).
 
-**-f**, **--formulae**
-> Include formulae results (enabled by default)
+**-f**, **--formulae** / **--no-formulae**
+> Include or exclude formulae results (included by default).
 
 # DESCRIPTION
 

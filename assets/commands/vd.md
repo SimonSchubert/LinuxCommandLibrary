@@ -45,14 +45,14 @@ Terminal-based data exploration spreadsheet
 **-f** _filetype_
 > Force input file type.
 
-**-b**, **--batch**
-> Replay command log in batch mode.
+**-p** _cmdlog_
+> Replay a saved command log file within the interface.
 
-**-p** _file_
-> Replay command log file.
+**-b**, **--batch**
+> Run in batch mode (no interface): replay cmdlog and exit.
 
 **-o** _file_
-> Output to file after replay.
+> Save the final sheet to file on exit (used with -b).
 
 **--readonly**
 > Disable saving/modifying.
@@ -77,7 +77,7 @@ Terminal-based data exploration spreadsheet
 **h**/**j**/**k**/**l** or arrows
 > Navigate cells.
 
-**gj**/**gk**
+**gg**/**G**
 > Go to first/last row.
 
 **gh**/**gl**
@@ -101,14 +101,20 @@ Terminal-based data exploration spreadsheet
 **[**/**]**
 > Sort by current column ascending/descending.
 
+**Enter**
+> Open row as a new sheet (dive into nested data).
+
 **F**
-> Frequency table for current column.
+> Frequency/pivot table for current column.
 
 **I**
-> Describe (statistics) sheet.
+> Describe sheet (statistics for all columns).
 
 **+**
 > Add aggregator to column.
+
+**S**
+> Open the Sheets sheet to switch between open sheets.
 
 **Ctrl+s**
 > Save current sheet.

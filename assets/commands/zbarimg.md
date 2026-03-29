@@ -16,15 +16,15 @@ Read barcodes from image files
 
 ```zbarimg --raw [image.png]```
 
-**Scan specific barcode types**
+**Scan only QR codes** (disable all, then enable qrcode)
 
-```zbarimg -S[qrcode.enable] [image.png]```
+```zbarimg -Sdisable -Sqrcode.enable [image.png]```
 
-**Quiet mode**
+**Quiet mode** (suppress statistics and warnings)
 
 ```zbarimg -q [image.png]```
 
-**Display decoded data**
+**Display image with detected barcodes highlighted**
 
 ```zbarimg -d [image.png]```
 
@@ -32,32 +32,39 @@ Read barcodes from image files
 
 ```zbarimg --xml [image.png]```
 
+**Output polygon points of detected barcodes**
+
+```zbarimg --polygon [image.png]```
+
 # SYNOPSIS
 
-**zbarimg** [_--raw_] [_-q_] [_-d_] [_-S setting_] [_options_] _images_
+**zbarimg** [_-qv_] [_--raw_] [_-dD_] [_--xml_] [_-S[symbology.]config[=value]_] _image..._
 
 # PARAMETERS
 
 **--raw**
-> Output raw data only.
+> Output raw symbol data without symbology type prefix.
 
 **-q**, **--quiet**
-> Suppress messages.
+> Quiet operation; only output decoded symbol data. Suppresses the statistics line and no-barcode warnings on stderr.
 
 **-d**, **--display**
-> Show images with decoded symbols.
-
-**--xml**
-> XML output format.
-
-**-S** _SETTING_
-> Scanner setting.
+> Enable display of images with decoded symbols highlighted.
 
 **-D**, **--nodisplay**
-> Disable display.
+> Disable image display.
 
-**--verbose**, **-v**
-> Verbose output.
+**--xml**, **--noxml**
+> Enable or disable XML output format wrapping decoded data with scan metadata.
+
+**--polygon**
+> Output polygon points of the barcode boundary in SVG format.
+
+**-S** _[symbology.]config[=value]_
+> Set decoder configuration. Symbologies include: ean13, ean8, upca, upce, isbn13, isbn10, i25, codabar, code39, code93, code128, qrcode, or * for all.
+
+**-v**, **--verbose**[=_n_]
+> Increase debug output level. Use multiple -v for more detail, or specify n directly.
 
 **--help**
 > Show help.
@@ -76,14 +83,20 @@ Read barcodes from image files
 **UPC-A**, **UPC-E**
 > Universal Product Code.
 
-**Code-128**, **Code-39**
+**Code-128**, **Code-93**, **Code-39**
 > Linear barcodes.
+
+**Interleaved 2 of 5** (i25)
+> Numeric-only linear barcode.
+
+**Codabar**
+> Numeric barcode used in libraries and blood banks.
 
 **ISBN-10**, **ISBN-13**
 > Book identifiers.
 
-**DataBar**
-> GS1 DataBar.
+**DataBar**, **DataBar Expanded**
+> GS1 DataBar symbologies.
 
 # DESCRIPTION
 

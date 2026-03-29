@@ -20,10 +20,6 @@ removes metadata from files to protect privacy
 
 ```mat2 [*.jpg]```
 
-**Remove from file keeping backup**
-
-```mat2 [document.odt]```
-
 **Lightweight cleaning** (faster, less thorough)
 
 ```mat2 --lightweight [video.mp4]```
@@ -32,45 +28,45 @@ removes metadata from files to protect privacy
 
 ```mat2 --list```
 
-**Check version**
+**Check dependencies**
 
-```mat2 --version```
+```mat2 --check-dependencies```
 
 # SYNOPSIS
 
-**mat2** [_--show_] [_--inplace_] [_--lightweight_] [_options_] _files_
+**mat2** [_-s_] [_--inplace_] [_-L_] [_options_] _files_
 
 # PARAMETERS
 
-**--show**, **-s**
-> Show metadata without removing.
+**-s**, **--show**
+> List harmful metadata detectable by mat2 without removing them.
 
-**--inplace**, **-i**
-> Modify file in place.
+**--inplace**
+> Clean files in place, without creating a backup.
 
-**--lightweight**, **-L**
-> Lightweight cleaning mode.
+**-L**, **--lightweight**
+> Remove some metadata, trading thoroughness for the guarantee that file data is not modified.
 
-**--list**, **-l**
-> List supported formats.
+**-l**, **--list**
+> List all supported file formats.
 
 **--check-dependencies**
-> Check if dependencies are available.
+> Check if mat2 has all the dependencies it needs.
 
 **--no-sandbox**
-> Disable sandboxing.
+> Disable bubblewrap's sandboxing.
 
 **--unknown-members** _POLICY_
-> Handle unknown archive members (abort, omit, keep).
+> Policy for handling unknown members of archive-style files (abort, omit, keep).
 
-**-v**, **--verbose**
-> Verbose output.
+**-V**, **--verbose**
+> Show more verbose status information.
 
-**--version**
-> Show version.
+**-v**, **--version**
+> Show version number and exit.
 
-**--help**
-> Show help.
+**-h**, **--help**
+> Show help message and exit.
 
 # DESCRIPTION
 
@@ -78,7 +74,7 @@ removes metadata from files to protect privacy
 
 Images may contain EXIF data with camera model, GPS coordinates, timestamps, and software used. Documents embed author names, revision history, and editing times. Audio files include artist, encoding software, and recording details.
 
-By default, mat2 creates cleaned copies with `.cleaned` suffix. Inplace mode modifies originals directly. The show option reveals metadata without modification.
+By default, mat2 creates cleaned copies with `.cleaned` inserted between the filename and extension (e.g., `file.cleaned.jpg`). Inplace mode modifies originals directly. The show option reveals metadata without modification.
 
 Supported formats include JPEG, PNG, PDF, DOCX, ODT, MP3, MP4, FLAC, and many others. Archive formats (ZIP, TAR) are processed recursively.
 

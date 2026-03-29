@@ -83,4 +83,4 @@ fido2-token is part of **libfido2**, developed by **Yubico** and first released 
 
 # SEE ALSO
 
-[fido2-cred](/man/fido2-cred)(1), [fido2-assert](/man/fido2-assert)(1), [ykman](/man/ykman)(1)
+[ykman](/man/ykman)(1)

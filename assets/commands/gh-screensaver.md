@@ -10,11 +10,19 @@ Display animated terminal screensavers
 
 **Start a specific screensaver**
 
-```gh screensaver -s [fireworks]```
+```gh screensaver -s [fireworks|starfield|pipes|marquee|life|pollock]```
 
-**List available screensavers**
+**List** available screensavers
 
-```gh screensaver --list```
+```gh screensaver -l```
+
+Run marquee with a custom **message**
+
+```gh screensaver -s marquee -- --message="[Hello World]"```
+
+Run starfield with custom **density** and **speed**
+
+```gh screensaver -s starfield -- --density [500] --speed [8]```
 
 # SYNOPSIS
 
@@ -23,16 +31,21 @@ Display animated terminal screensavers
 # PARAMETERS
 
 **-s**, **--saver** _name_
-> Screensaver to run (e.g., fireworks, starfield, marquee, pipes).
+> Screensaver to run (fireworks, starfield, pipes, marquee, life, pollock).
 
-**--list**
-> List available screensavers.
+**-l**, **--list**
+> List available screensavers and exit.
+
+**-R**, **--repo** _repository_
+> Run in the context of a repository (currently unused).
 
 # DESCRIPTION
 
-**gh screensaver** is a GitHub CLI extension that displays animated terminal screensavers. Available screensavers include fireworks, starfield, marquee, and pipes animations rendered using ANSI escape codes.
+**gh screensaver** is a GitHub CLI extension that displays animated terminal screensavers. Available screensavers are: **fireworks**, **starfield**, **pipes**, **marquee**, **life** (Conway's Game of Life), and **pollock** (paint splotches). Without **-s**, a random screensaver is chosen.
 
-This extension must be installed first with **gh extension install cli/gh-screensaver**. Press **q** or **Ctrl+C** to exit the screensaver.
+Screensaver-specific options are passed after **--**. For example, marquee supports **--message** and **--font**; starfield supports **--density** and **--speed**; fireworks, pipes, and life support **--color** (full/off); life supports **--seed** (glider, noise, R, dragon, gun, pulsar).
+
+This extension must be installed first with **gh extension install vilmibm/gh-screensaver**. Press **q** or **Ctrl+C** to exit the screensaver.
 
 # CAVEATS
 
@@ -40,4 +53,4 @@ Requires the GitHub CLI (**gh**) and must be installed as an extension. Some ani
 
 # SEE ALSO
 
-[gh](/man/gh)(1), [cmatrix](/man/cmatrix)(1)
+[gh](/man/gh)(1), [gh-extension](/man/gh-extension)(1), [cmatrix](/man/cmatrix)(1)

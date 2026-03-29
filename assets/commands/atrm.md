@@ -33,7 +33,7 @@ Cannot remove already-running jobs. Job numbers can be found with atq. Removal i
 
 # HISTORY
 
-**atrm** is part of the at command suite for one-time job scheduling in Unix systems.
+**atrm** is part of the **at** command suite for one-time job scheduling, available in Unix systems since the early 1980s.
 
 # SEE ALSO
 

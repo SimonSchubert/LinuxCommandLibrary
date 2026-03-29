@@ -1,10 +1,10 @@
 # TAGLINE
 
-package manager for Ubuntu and Debian-based distributions that brings AUR-like
+AUR-inspired package manager for Ubuntu and Debian-based distributions
 
 # TLDR
 
-**Search** the package database for a package
+**Search** for a package
 
 ```pacstall -S [query]```
 
@@ -16,19 +16,19 @@ package manager for Ubuntu and Debian-based distributions that brings AUR-like
 
 ```pacstall -R [package]```
 
-**Add** a repository to the database
+**Add** a repository
 
-```pacstall -A [remote_repository_location]```
+```pacstall -A [repository_url]```
 
 **Update** pacstall's scripts
 
 ```pacstall -U```
 
-**Upgrade** all packages
+**Upgrade** all installed packages
 
 ```pacstall -Up```
 
-Display **information** about a package
+Display **information** about an installed package
 
 ```pacstall -Ci [package]```
 
@@ -36,48 +36,82 @@ Display **information** about a package
 
 ```pacstall -L```
 
+Install a package without prompts, keeping build files
+
+```pacstall -P -K -I [package]```
+
 # SYNOPSIS
 
-**pacstall** [_operation_] [_options_] [_package_...]
+**pacstall** [_command_] [_options_] [_package_...]
 
 # PARAMETERS
 
-**-S**, **--search** _query_
-> Search for packages matching query
-
 **-I**, **--install** _package_
-> Install specified package
+> Install a package from a repository or a pacscript.
 
 **-R**, **--remove** _package_
-> Remove specified package
+> Remove a package from the system.
 
-**-A**, **--add-repo** _url_
-> Add a repository (GitHub/GitLab supported)
+**-S**, **--search** _query_
+> Search for packages from all available repositories.
 
-**-U**, **--update**
-> Update pacstall scripts
+**-Sd**, **--search-description** _query_
+> Search package names and descriptions.
 
-**-Up**, **--upgrade**
-> Upgrade all installed packages
+**-Si**, **--search-info** _package_
+> Display metadata (SRCINFO) of a remote package.
 
 **-Ci**, **--cache-info** _package_
-> Display package information from cache
+> Display metadata of an installed package.
+
+**-A**, **--add-repo** _url_
+> Add a repository to pacstall.
+
+**-Rr**, **--remove-repo** _repo_
+> Remove a repository from pacstall.
+
+**-U**, **--update**
+> Update pacstall and needed scripts.
+
+**-Up**, **--upgrade**
+> Upgrade packages that have a newer version.
 
 **-L**, **--list**
-> List all installed packages
+> List installed packages.
+
+**-T**, **--tree** _package_
+> Display a tree graph of a package's dependencies.
 
 **-D**, **--download** _package_
-> Download package without installing
+> Download pacscript to the current directory.
 
-**-Qa**, **--query-all**
-> List all available packages
+**-Qa**, **--quality-assurance** _package#number_
+> Test a package from a pull request prior to merging.
 
 **-V**, **--version**
-> Display version information
+> Display version information.
+
+**-P**, **--disable-prompts**
+> Disable prompts and accept all defaults.
+
+**-K**, **--keep**
+> Keep the build files after installation.
+
+**-B**, **--build-only**
+> Build the deb but do not install it.
+
+**-Q**, **--quiet**
+> Download package entries quietly.
+
+**-Nc**, **--nocheck**
+> Skip the check() function if present in the pacscript.
+
+**-Ns**, **--nosandbox**
+> Build the package without bwrap sandboxing.
 
 # DESCRIPTION
 
-**pacstall** is a package manager for Ubuntu and Debian-based distributions that brings AUR-like functionality by allowing users to install packages from community-maintained build scripts. It compiles packages from source using pacscripts (similar to Arch's PKGBUILDs).
+**pacstall** is a package manager for Ubuntu and Debian-based distributions that brings AUR-like functionality by allowing users to install packages from community-maintained build scripts called pacscripts (similar to Arch's PKGBUILDs).
 
 The tool maintains its own repositories of build scripts, separate from the system's apt repositories. Users can add custom repositories hosted on GitHub or GitLab, enabling community-driven package distribution outside official channels.
 
@@ -91,4 +125,4 @@ Created to bring the AUR (Arch User Repository) experience to Ubuntu users. Deve
 
 # SEE ALSO
 
-[apt](/man/apt)(8), [dpkg](/man/dpkg)(1), [yay](/man/yay)(8), [makepkg](/man/makepkg)(8)
+[apt](/man/apt)(8), [dpkg](/man/dpkg)(1), [yay](/man/yay)(8), [makepkg](/man/makepkg)(8), [nala](/man/nala)(8)

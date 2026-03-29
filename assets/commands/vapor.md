@@ -8,80 +8,60 @@ Server-side Swift web framework toolbox
 
 ```vapor new [ProjectName]```
 
-**Build the project**
+**Create project with a custom template**
 
-```vapor build```
+```vapor new [ProjectName] --template [https://github.com/user/template.git]```
 
-**Run the development server**
+**Create project with automatic "no" to all prompts**
 
-```swift run Run serve```
+```vapor new [ProjectName] -n```
 
-**Run database migrations**
+**Create project in a specific output directory**
 
-```swift run Run migrate```
+```vapor new [ProjectName] --output [path/to/directory]```
 
-**Revert last migration**
+**Create project without initializing a Git repository**
 
-```swift run Run migrate --revert```
-
-**Deploy to Heroku**
-
-```vapor heroku init```
+```vapor new [ProjectName] --no-git```
 
 # SYNOPSIS
 
-**vapor** _command_ [_options_]
-
-**swift run Run** [_command_] [_options_]
-
-# TOOLBOX COMMANDS
-
-**new** _name_: Generate new Vapor project from template.
-
-**build**: Build the application.
-
-**clean**: Remove temporary build files.
-
-**heroku**: Commands for Heroku deployment.
-
-**--help**: Display available commands.
-
-# RUN COMMANDS
-
-**serve**: Start the HTTP server.
-
-**migrate**: Run pending database migrations.
-
-**routes**: List all registered routes.
-
-**--hostname** _host_: Set server hostname.
-
-**--port** _num_: Set server port.
-
-**--auto-migrate**: Run migrations without confirmation.
+**vapor** [**new**] [_options_] [_name_]
 
 # PARAMETERS
 
-**-b** _host:port_
-> Bind address shorthand (e.g., localhost:8080).
+**-n**
+> Automatically answer "no" to all interactive questions.
 
-**--env** _environment_
-> Set environment (development, production, testing).
+**--output** _path_
+> Specify a custom folder location for the new project.
 
-**--log** _level_
-> Set log level (trace, debug, info, notice, warning, error, critical).
+**--template** _url_
+> Use a custom template from a Git repository URL.
+
+**--branch** _name_
+> Specify a different Git branch for the template (default: main).
+
+**--no-git**
+> Skip Git repository initialization.
+
+**--no-commit**
+> Initialize Git but skip the initial commit.
+
+**--help**
+> Display help information.
 
 # DESCRIPTION
 
-**vapor** is the command-line toolbox for the Vapor web framework, a server-side Swift HTTP framework. It manages project creation, building, and deployment workflows for Swift-based web applications.
+**vapor** is the command-line toolbox for the Vapor web framework, a server-side Swift HTTP framework. The toolbox's primary purpose is creating new Vapor projects from templates. The **new** command is the default subcommand and can be omitted.
 
-The toolbox uses Swift Package Manager for dependency management and compilation. Projects are created from templates that include routing, middleware, and optionally Fluent ORM for database operations. The framework provides a non-blocking, event-driven architecture using Swift's async/await concurrency model.
+Projects are created from templates that include routing, middleware, and optionally Fluent ORM for database operations. The toolbox supports dynamic project generation through manifest files (YAML or JSON) that define variables and conditional file inclusion based on user responses.
 
-Development typically involves running `swift run Run serve` to start the local server, which watches for changes and serves the application.
+Once a project is created, you use Swift Package Manager directly (`swift build`, `swift run`) to build and run the application.
 
 # CAVEATS
 
-Requires Swift toolchain and Xcode Command Line Tools on macOS. Linux requires Swift installation. Database drivers (PostgreSQL, MySQL, SQLite) need separate installation. Vapor 4+ requires Swift 5.2 or later.
+Requires Swift toolchain and Xcode Command Line Tools on macOS. Linux requires Swift installation. The toolbox requires macOS 15.0+ or a Linux distribution supported by Swift 6.1+. Database drivers (PostgreSQL, MySQL, SQLite) are added as Swift package dependencies.
 
 # HISTORY
 

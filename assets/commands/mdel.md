@@ -51,5 +51,5 @@ mdel is part of **mtools**, a collection of utilities for accessing MS-DOS disks
 
 # SEE ALSO
 
-[mcopy](/man/mcopy)(1), [mdeltree](/man/mdeltree)(1), [mdir](/man/mdir)(1)
+[mcopy](/man/mcopy)(1), [mdeltree](/man/mdeltree)(1)
 

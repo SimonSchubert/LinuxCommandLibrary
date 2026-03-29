@@ -75,7 +75,13 @@ The tool can create users with various privileges including superuser status, da
 > Force password prompt.
 
 **-i**, **--inherit**
-> Role inherits privileges.
+> Role inherits privileges (default).
+
+**--no-inherit**
+> Role does not inherit privileges of roles it is a member of.
+
+**--interactive**
+> Prompt for missing role attributes interactively.
 
 **--no-login**
 > Role cannot log in (useful for group roles).
@@ -83,8 +89,17 @@ The tool can create users with various privileges including superuser status, da
 **--replication**
 > Allow replication connections.
 
+**--no-replication**
+> Role cannot initiate replication (default).
+
+**--bypassrls**
+> Allow role to bypass row-level security policies.
+
 **--connection-limit** _n_
 > Maximum concurrent connections for the role (-1 for unlimited).
+
+**-V**, **--version**
+> Print version and exit.
 
 # CAVEATS
 
@@ -96,4 +111,4 @@ Requires appropriate privileges to create roles. Superuser creation requires sup
 
 # SEE ALSO
 
-[dropuser](/man/dropuser)(1), [psql](/man/psql)(1), [createdb](/man/createdb)(1), [dropdb](/man/dropdb)(1), [pg_dump](/man/pg_dump)(1)
+[dropuser](/man/dropuser)(1), [psql](/man/psql)(1), [createdb](/man/createdb)(1), [dropdb](/man/dropdb)(1), [pg_dump](/man/pg_dump)(1), [pg_restore](/man/pg_restore)(1)

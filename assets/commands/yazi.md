@@ -16,9 +16,13 @@ Fast async terminal file manager
 
 ```ya () { local tmp="$(mktemp -t "yazi-cwd.XXXXX")"; yazi "$@" --cwd-file="$tmp"; cd "$(cat "$tmp")"; rm "$tmp"; }```
 
-**Start with specific config**
+**Start with specific config directory**
 
 ```yazi --config-dir [~/.config/yazi]```
+
+**Show debug information**
+
+```yazi --debug```
 
 # SYNOPSIS
 
@@ -37,6 +41,9 @@ Fast async terminal file manager
 
 **--clear-cache**
 > Clear thumbnail cache.
+
+**--debug**
+> Print debug information for bug reports.
 
 **--version**
 > Show version.
@@ -118,4 +125,4 @@ Terminal graphics require compatible terminal. Some features need external tools
 
 # SEE ALSO
 
-[ranger](/man/ranger)(1), [lf](/man/lf)(1), [nnn](/man/nnn)(1), [vifm](/man/vifm)(1)
+[ranger](/man/ranger)(1), [lf](/man/lf)(1), [nnn](/man/nnn)(1), [vifm](/man/vifm)(1), [ya](/man/ya)(1)

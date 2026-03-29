@@ -75,11 +75,23 @@ multimedia stream analyzer
 **-show_error**
 > Show information about any errors.
 
+**-show_data**
+> Show payload data as hexadecimal and ASCII dump.
+
 **-i** _input_
 > Input file (optional, can specify file directly).
 
 **-hide_banner**
 > Suppress printing banner/configuration info.
+
+**-pretty**
+> Prettify displayed values with SI prefixes and units.
+
+**-sexagesimal**
+> Use sexagesimal format HH:MM:SS.MICROSECONDS for time values.
+
+**-bitexact**
+> Force bitexact output, not dependent on the specific build.
 
 # DESCRIPTION
 

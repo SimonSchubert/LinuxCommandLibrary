@@ -20,9 +20,9 @@ Start a shell providing specific packages
 
 ```nix shell github:[owner/repo]#[package]```
 
-**Read installables from stdin**
+**Enter a shell with a package** from a specific nixpkgs revision
 
-```echo "nixpkgs#git" | nix shell --stdin```
+```nix shell github:NixOS/nixpkgs/[nixos-24.05]#[hello]```
 
 # SYNOPSIS
 
@@ -36,14 +36,20 @@ _INSTALLABLES_
 **--command**, **-c** _CMD_ [_ARGS_]
 > Run a command in the shell environment instead of starting an interactive shell.
 
-**--stdin**
-> Read installables from standard input.
+**--ignore-environment**, **-i**
+> Clear the entire environment (except those specified with --keep).
+
+**--keep** _NAME_
+> Keep the specified environment variable when using --ignore-environment.
 
 **--keep-going**
-> Continue building other inputs if one fails.
+> Continue building other derivations if one fails.
 
 **--impure**
 > Allow access to mutable paths and environment variables.
+
+**--override-input** _INPUT_ _FLAKEREF_
+> Override a specific flake input. Implies --no-write-lock-file.
 
 **--help**
 > Display help information.
@@ -60,5 +66,5 @@ Requires the experimental `nix-command` and `flakes` features to be enabled. Pac
 
 # SEE ALSO
 
-[nix](/man/nix)(1), [nix-shell](/man/nix-shell)(1), [nix3-develop](/man/nix3-develop)(1)
+[nix](/man/nix)(1), [nix-shell](/man/nix-shell)(1), [nix3-develop](/man/nix3-develop)(1), [nix3-run](/man/nix3-run)(1), [nix3-build](/man/nix3-build)(1)
 

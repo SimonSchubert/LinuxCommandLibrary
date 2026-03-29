@@ -1,6 +1,6 @@
 # TAGLINE
 
-runs System V init scripts on Debian systems
+executes System V style init script actions
 
 # TLDR
 
@@ -20,50 +20,60 @@ runs System V init scripts on Debian systems
 
 ```invoke-rc.d [service] status```
 
-**Reload service config**
+**Reload service configuration**
 
 ```sudo invoke-rc.d [service] reload```
 
+**Query whether an action would be allowed** by the policy layer
+
+```invoke-rc.d --query [service] start```
+
 # SYNOPSIS
 
-**invoke-rc.d** [_options_] _name_ _action_
+**invoke-rc.d** [_--quiet_] [_--force_] [_--try-anyway_] [_--disclose-deny_] [_--query_] [_--no-fallback_] _name_ _action_ [_init script parameters..._]
 
 # PARAMETERS
 
 _NAME_
-> Init script name.
+> Name of the init script in /etc/init.d/.
 
 _ACTION_
-> Action (start, stop, restart, reload, status).
+> Action to perform: start, stop, restart, reload, force-reload, force-stop, try-restart, or status.
 
 **--quiet**
-> Suppress output.
+> Suppress warnings and informational messages.
 
 **--force**
-> Ignore policy layer.
+> Try to run the init script regardless of policy and init script subsystem errors. Use in maintainer scripts is discouraged.
 
 **--try-anyway**
-> Try even if blocked.
+> Try to run the init script if a non-fatal error is detected.
+
+**--disclose-deny**
+> Return status code 101 instead of 0 if the action is denied by the policy layer.
 
 **--query**
-> Query action would be taken.
+> Query what action would be taken without executing it. Returns status codes 100-106. Implies --disclose-deny and --no-fallback.
+
+**--no-fallback**
+> Ignore any fallback action requests by the policy layer.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**invoke-rc.d** runs System V init scripts on Debian systems. It provides a standard interface respecting runlevel policy.
+**invoke-rc.d** executes System V style init script actions on Debian-based systems. It provides a standard interface that respects runlevel constraints and local policies set by the system administrator via policy-rc.d.
 
-The tool checks policy-rc.d before executing actions. It's the recommended way to control services in maintainer scripts.
+The tool checks /usr/sbin/policy-rc.d before executing actions. It is the recommended way to control services in package maintainer scripts, as it properly handles policy restrictions that may be in place (such as in chroot environments or containers).
 
 # CAVEATS
 
-Debian/Ubuntu specific. Superseded by systemctl on systemd systems. Checks policy layer.
+Debian/Ubuntu specific. On systemd systems, invoke-rc.d redirects to systemctl. The policy-rc.d mechanism allows administrators to block service actions, which is commonly used in Docker containers to prevent services from starting during package installation.
 
 # HISTORY
 
-invoke-rc.d was created for **Debian** to provide policy-compliant init script invocation, especially in package scripts.
+invoke-rc.d was created for **Debian** to provide policy-compliant init script invocation, especially in package maintainer scripts.
 
 # SEE ALSO
 

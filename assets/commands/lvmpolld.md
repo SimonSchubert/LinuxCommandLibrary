@@ -1,6 +1,6 @@
 # TAGLINE
 
-LVM poll daemon that supervises long-running LVM operations such
+LVM poll daemon that supervises long-running LVM operations
 
 # TLDR
 
@@ -34,19 +34,19 @@ Use a **custom PID file**
 
 # PARAMETERS
 
-**-f, --foreground**
+**-f**, **--foreground**
 > Run in the foreground instead of daemonizing
 
-**-l, --log _level_**
+**-l**, **--log** _level_
 > Set log level (debug, info, warn, error)
 
-**-t, --timeout _seconds_**
+**-t**, **--timeout** _seconds_
 > Set idle shutdown timeout; daemon exits after being idle this long
 
-**-s, --socket _path_**
+**-s**, **--socket** _path_
 > Use a custom Unix socket path for communication
 
-**-p, --pidfile _path_**
+**-p**, **--pidfile** _path_
 > Use a custom PID file location
 
 **--dump**
@@ -66,4 +66,4 @@ Usually started automatically by LVM commands; manual invocation is rarely neede
 
 # SEE ALSO
 
-[lvm](/man/lvm)(8), [pvmove](/man/pvmove)(8), [lvconvert](/man/lvconvert)(8), [lvmconfig](/man/lvmconfig)(8)
+[lvm](/man/lvm)(1), [pvmove](/man/pvmove)(1), [lvconvert](/man/lvconvert)(1), [lvmconfig](/man/lvmconfig)(1)

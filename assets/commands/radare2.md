@@ -8,75 +8,130 @@ Reverse engineering and binary analysis framework
 
 ```r2 [binary]```
 
+**Open and run full analysis** on load
+
+```r2 -A [binary]```
+
 **Open in write mode**
 
 ```r2 -w [binary]```
 
-**Open at specific address**
+**Seek to a specific address** on open
 
 ```r2 -s [0x1000] [binary]```
 
-**Debug binary**
+**Debug a binary**
 
 ```r2 -d [binary]```
 
-**Analyze on open**
-
-```r2 -A [binary]```
-
-**Open without any analysis**
-
-```r2 -n [binary]```
-
-**Attach to running process**
+**Attach to a running process** by PID
 
 ```r2 -d [pid]```
 
-**Run command and quit**
+**Open without any analysis** (raw file)
+
+```r2 -n [binary]```
+
+**Run a command and quit**
 
 ```r2 -qc "[pdf]" [binary]```
 
+**Set architecture and bit size**
+
+```r2 -a [x86] -b [64] [binary]```
+
 # SYNOPSIS
 
-**r2** [_-Adnw_] [_-s addr_] [_-c cmd_] [_options_] _file_
+**r2** [_-a arch_] [_-b bits_] [_-B baddr_] [_-c cmd_] [_-e k=v_] [_-i file_] [_-I prefile_] [_-k kernel_] [_-m addr_] [_-p project_] [_-P patch_] [_-r rarun2_] [_-R rr2rule_] [_-s addr_] [_-0AdfDjLMnNqStTuVwxX_] _file_
 
 # PARAMETERS
 
 **-A**
-> Analyze all referenced code.
+> Run 'aaa' command to analyze all referenced code before prompt.
 
-**-a** _ARCH_
-> Set architecture.
+**-a** _arch_
+> Force asm.arch (x86, ppc, arm, mips, bf, java, ...).
 
-**-b** _BITS_
-> Set bit size (16, 32, 64).
+**-b** _bits_
+> Force asm.bits (16, 32, 64).
 
-**-c** _CMD_
-> Execute command.
+**-B** _baddr_
+> Specify the base address for loading a new binary.
+
+**-c** _cmd_
+> Execute the given command before giving prompt.
 
 **-d**
-> Debug mode.
+> Start in debugger mode.
+
+**-D** _backend_
+> Enable debug mode with a specific debug backend.
+
+**-e** _k=v_
+> Set configuration eval variable key=value.
+
+**-f**
+> Set blocksize to file size.
+
+**-i** _file_
+> Run script file after the file is loaded.
+
+**-I** _file_
+> Run script file before the file is loaded.
+
+**-k** _kernel_
+> Select kernel (asm.os) for syscall resolution.
+
+**-l** _plugfile_
+> Load a given plugin file.
+
+**-L**
+> List loaded IO plugins.
+
+**-m** _addr_
+> Map file at given address.
+
+**-M**
+> Disable demangling.
 
 **-n**
-> No analysis on load.
+> Do not perform any analysis. Just load the raw file.
+
+**-nn**
+> Only load the rbin structures (elf, mach0, ...).
+
+**-N**
+> Do not load user settings or projects from ~/.radare2rc.
+
+**-p** _project_
+> Set project file.
+
+**-P** _file_
+> Apply rapatch file and quit.
+
+**-q**
+> Quiet mode. Exit after running -c commands.
+
+**-r** _rarun2_
+> Specify dbg.profile rarun2 profile for spawning programs.
+
+**-R** _directive_
+> Specify custom rarun2 directives without creating a profile.
+
+**-s** _addr_
+> Start seeking at this address.
+
+**-S**
+> Enable sandboxed mode.
+
+**-T**
+> Avoid computing file hashes.
+
+**-v**
+> Show version information and exit.
 
 **-w**
 > Open in write mode.
-
-**-s** _ADDR_
-> Seek to address.
-
-**-q**
-> Quiet mode, exit after -c commands.
-
-**-i** _FILE_
-> Run script file.
-
-**-p** _PROJECT_
-> Use project file.
-
-**-e** _KEY=VALUE_
-> Set configuration option.
 
 # COMMANDS
 
@@ -87,7 +142,7 @@ Reverse engineering and binary analysis framework
 > List functions.
 
 **aaa**
-> Analyze all.
+> Analyze all (functions, references, strings, etc.).
 
 **s** _addr_
 > Seek to address.
@@ -101,17 +156,29 @@ Reverse engineering and binary analysis framework
 **px** _N_
 > Print N bytes as hex.
 
+**iz**
+> List strings in data sections.
+
+**ii**
+> List imports.
+
+**ie**
+> List entrypoints.
+
 **db** _addr_
 > Set breakpoint.
 
 **dc**
 > Continue execution.
 
+**ds**
+> Step one instruction.
+
 **dr**
 > Show registers.
 
 **?**
-> Show help.
+> Show help. Append ? to any command prefix for subcommand help.
 
 **q**
 > Quit.
@@ -133,7 +200,7 @@ Scripting uses r2pipe for external automation (Python, JavaScript, etc.) or inte
 # CONFIGURATION
 
 **~/.radare2rc**
-> Startup configuration file executed on launch, containing default settings and commands to run automatically.
+> Startup configuration file executed on launch, containing default settings and commands to run automatically. Use -N to skip loading.
 
 **-e key=value**
 > Runtime configuration variables controlling analysis depth, display format, and tool behavior. Use `e??` inside r2 to list all options.
@@ -143,7 +210,7 @@ Scripting uses r2pipe for external automation (Python, JavaScript, etc.) or inte
 
 # CAVEATS
 
-Steep learning curve - command syntax takes time to master. Documentation can be sparse. Analysis may miss obfuscated code. Some features platform-specific. Memory usage grows with analysis depth. Competing with Ghidra/IDA on features.
+Steep learning curve - command syntax takes time to master. Documentation can be sparse. Analysis may miss obfuscated code. Some features are platform-specific. Memory usage grows with analysis depth.
 
 # HISTORY
 
@@ -151,4 +218,4 @@ Steep learning curve - command syntax takes time to master. Documentation can be
 
 # SEE ALSO
 
-[objdump](/man/objdump)(1), [gdb](/man/gdb)(1), [ltrace](/man/ltrace)(1), [strace](/man/strace)(1)
+[objdump](/man/objdump)(1), [gdb](/man/gdb)(1), [ltrace](/man/ltrace)(1), [strace](/man/strace)(1), [readelf](/man/readelf)(1), [strings](/man/strings)(1), [xxd](/man/xxd)(1)

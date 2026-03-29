@@ -32,6 +32,10 @@ Convert HTML pages to images
 
 ```wkhtmltoimage --disable-javascript [input.html] [output.png]```
 
+**Render with a zoom factor**
+
+```wkhtmltoimage --zoom [1.5] [input.html] [output.png]```
+
 **Wait for JavaScript** to finish
 
 ```wkhtmltoimage --javascript-delay [2000] [input.html] [output.png]```
@@ -81,11 +85,50 @@ Convert HTML pages to images
 **--custom-header** _name_ _value_
 > Set custom HTTP header (repeatable).
 
+**--zoom** _float_
+> Zoom factor for rendering (e.g., 2.0 for 2x).
+
 **--disable-smart-width**
 > Use strict width instead of guideline.
 
+**--encoding** _encoding_
+> Set the default text encoding for input.
+
+**-p**, **--proxy** _proxy_
+> Use a proxy.
+
+**--username** _username_
+> HTTP authentication username.
+
+**--password** _password_
+> HTTP authentication password.
+
+**--run-script** _js_
+> Run additional JavaScript after the page finishes loading (repeatable).
+
+**--load-error-handling** _handler_
+> How to handle pages that fail to load: abort, ignore, or skip (default: abort).
+
+**--allow** _path_
+> Allow files from the specified folder to be loaded (repeatable).
+
+**--no-images**
+> Do not load or print images.
+
+**--stop-slow-scripts**
+> Stop slow-running JavaScript.
+
+**--window-status** _string_
+> Wait until window.status equals this string before rendering.
+
+**--log-level** _level_
+> Set log level: none, error, warn, or info.
+
 **-q**, **--quiet**
-> Suppress output messages.
+> Suppress output messages (equivalent to --log-level none).
+
+**-H**, **--extended-help**
+> Display comprehensive help documentation.
 
 **-V**, **--version**
 > Display version information.
@@ -111,4 +154,4 @@ wkhtmltoimage was created by **Jakob Truelsen** as part of the **wkhtmltopdf** p
 
 # SEE ALSO
 
-[wkhtmltopdf](/man/wkhtmltopdf)(1), [convert](/man/convert)(1), [chromium](/man/chromium)(1)
+[wkhtmltopdf](/man/wkhtmltopdf)(1), [convert](/man/convert)(1), [puppeteer](/man/puppeteer)(1), [playwright](/man/playwright)(1)

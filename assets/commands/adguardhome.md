@@ -75,4 +75,4 @@ Running as a DNS server requires port 53, which may conflict with systemd-resolv
 
 # SEE ALSO
 
-[pihole](/man/pihole)(1), [dnsmasq](/man/dnsmasq)(8), [unbound](/man/unbound)(8)
+[pihole](/man/pihole)(1), [dnsmasq](/man/dnsmasq)(1), [unbound](/man/unbound)(1)

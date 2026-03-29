@@ -28,9 +28,13 @@ Multi-threaded system benchmark tool
 
 ```sysbench oltp_read_write --mysql-host=[localhost] --mysql-user=[user] --mysql-password=[pass] --mysql-db=[test] run```
 
-**Cleanup files**
+**Cleanup test files**
 
 ```sysbench fileio --file-total-size=[10G] cleanup```
+
+**CPU benchmark with custom prime limit**
+
+```sysbench cpu --cpu-max-prime=[20000] --threads=[4] run```
 
 # SYNOPSIS
 
@@ -52,6 +56,12 @@ Multi-threaded system benchmark tool
 
 **oltp_read_only**
 > Read-only database test.
+
+**threads**
+> Thread scheduler performance test.
+
+**mutex**
+> Mutex contention performance test.
 
 **--threads** _N_
 > Number of threads (default: 1).
@@ -77,14 +87,44 @@ Multi-threaded system benchmark tool
 **--mysql-password** _PASS_
 > MySQL password.
 
+**--mysql-db** _DB_
+> MySQL database name.
+
+**--cpu-max-prime** _N_
+> Upper limit for prime number calculation in CPU test (default: 10000).
+
+**--memory-block-size** _SIZE_
+> Size of memory block for memory test (default: 1K).
+
+**--memory-total-size** _SIZE_
+> Total size of data to transfer in memory test (default: 100G).
+
+**--memory-oper** _OP_
+> Memory operation type: read or write (default: write).
+
+**--memory-access-mode** _MODE_
+> Memory access mode: seq or rnd (default: seq).
+
+**--file-num** _N_
+> Number of files to create (default: 128).
+
+**--file-extra-flags** _FLAGS_
+> Additional flags for opening files: sync, dsync, direct.
+
+**--percentile** _N_
+> Percentile to calculate in latency statistics (default: 95).
+
+**--report-interval** _SECONDS_
+> Periodically report intermediate statistics (0 = disabled).
+
 **prepare**
-> Prepare test.
+> Prepare test data (required for fileio and database tests).
 
 **run**
-> Run test.
+> Run the benchmark test.
 
 **cleanup**
-> Clean up.
+> Clean up test data created during prepare.
 
 # DESCRIPTION
 

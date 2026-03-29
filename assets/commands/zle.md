@@ -16,6 +16,10 @@ Zsh line editor builtin
 
 ```zle -la```
 
+**List** widgets as recreatable zle commands
+
+```zle -lL```
+
 **Delete** a user-defined widget
 
 ```zle -D [widget_name]```
@@ -24,9 +28,9 @@ Zsh line editor builtin
 
 ```zle -A [old_widget] [new_widget]```
 
-**Redisplay** the command line
+**Invoke** a widget from within a shell function
 
-```zle -R```
+```zle [widget_name]```
 
 **Display** a message below the command line
 

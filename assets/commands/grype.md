@@ -20,13 +20,17 @@ vulnerability scanner for container images and filesystems
 
 ```grype [image] -o json```
 
-**Only show high/critical**
+**Fail CI if high or critical vulnerabilities found**
 
-```grype [image] --only-fixed --fail-on high```
+```grype [image] --fail-on high```
 
-**Scan with specific database**
+**Show only vulnerabilities with available fixes**
 
-```grype [image] --db-cache-dir [path]```
+```grype [image] --only-fixed```
+
+**Scan and exclude specific paths**
+
+```grype dir:[path] --exclude "[glob_pattern]"```
 
 # SYNOPSIS
 
@@ -35,28 +39,46 @@ vulnerability scanner for container images and filesystems
 # PARAMETERS
 
 **-o**, **--output** _format_
-> Output format (table, json, cyclonedx, sarif).
+> Report format (table, json, cyclonedx, cyclonedx-json, sarif, template).
+
+**-f**, **--fail-on** _severity_
+> Return exit code 2 if vulnerability found at severity level or higher (negligible, low, medium, high, critical).
 
 **--only-fixed**
-> Show only vulnerabilities with fixes.
+> Show only vulnerabilities with available fixes.
 
-**--fail-on** _severity_
-> Fail if vulnerability at severity found.
-
-**--add-cpes-if-none**
-> Generate CPEs if missing.
-
-**-q**, **--quiet**
-> Suppress output.
+**--only-notfixed**
+> Show only vulnerabilities without available fixes.
 
 **--by-cve**
-> Group by CVE.
+> Organize results by CVE rather than original vulnerability ID.
 
-**--db** _location_
-> Database location.
+**--add-cpes-if-none**
+> Generate CPEs for packages that lack them.
+
+**-s**, **--scope** _scope_
+> Layer analysis scope (squashed, all-layers).
 
 **--exclude** _glob_
-> Exclude paths.
+> Exclude paths matching the given glob pattern.
+
+**--platform** _platform_
+> Container platform specifier (e.g., linux/arm64).
+
+**-q**, **--quiet**
+> Suppress logging output.
+
+**-v**, **--verbose**
+> Increase verbosity (-v for info, -vv for debug).
+
+**-c**, **--config** _file_
+> Specify configuration file.
+
+**--file** _path_
+> Write report output to a file instead of stdout.
+
+**--vex** _document_
+> Apply VEX documents to filter results.
 
 # DESCRIPTION
 
@@ -66,11 +88,11 @@ The tool integrates with CI/CD pipelines and produces reports in various formats
 
 # SOURCE TYPES
 
-**image**: Container image
+**image**: Container image (default)
 **dir:**: Local directory
 **file:**: Single file
-**sbom:**: SBOM file
-**registry:**: Remote registry
+**sbom:**: SBOM file (Syft, CycloneDX, SPDX)
+**registry:**: Remote container registry
 
 # CAVEATS
 
@@ -82,4 +104,4 @@ Database updates needed regularly. False positives possible. Coverage depends on
 
 # SEE ALSO
 
-[syft](/man/syft)(1), [trivy](/man/trivy)(1), [snyk](/man/snyk)(1), [clair](/man/clair)(1)
+[syft](/man/syft)(1), [trivy](/man/trivy)(1), [snyk](/man/snyk)(1)

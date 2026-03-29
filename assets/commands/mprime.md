@@ -65,11 +65,11 @@ The torture test mode is popular for testing system stability, especially after 
 
 # CONFIGURATION
 
-```
-~/.mlucas/
-~/primenet.ini
-~/local.txt
-```
+**~/primenet.ini**
+> PrimeNet server communication settings and account configuration.
+
+**~/local.txt**
+> Local work preferences and computation settings.
 
 # CAVEATS
 
@@ -81,4 +81,4 @@ Prime95/mprime was created by **George Woltman** in **1996** for the GIMPS proje
 
 # SEE ALSO
 
-[stress](/man/stress)(1), [stress-ng](/man/stress-ng)(1), [cpuburn](/man/cpuburn)(1), [memtest86](/man/memtest86)(8)
+[stress](/man/stress)(1), [stress-ng](/man/stress-ng)(1)

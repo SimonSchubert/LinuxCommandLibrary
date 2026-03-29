@@ -1,28 +1,36 @@
 # TAGLINE
 
-execute command in running container
+execute a command in a running container
 
 # TLDR
 
-**Execute command in container**
+**Execute a command in a container**
 
 ```docker container exec [container] [command]```
 
-**Interactive shell**
+**Start an interactive shell in a container**
 
 ```docker container exec -it [container] /bin/bash```
 
-**Run as specific user**
+**Run a command as a specific user**
 
 ```docker container exec -u [user] [container] [command]```
 
-**Set environment variable**
+**Set environment variables and execute a command**
 
 ```docker container exec -e [VAR=value] [container] [command]```
 
-**Set working directory**
+**Execute a command in a specific working directory**
 
 ```docker container exec -w [/path] [container] [command]```
+
+**Run a command in the background (detached)**
+
+```docker container exec -d [container] [command]```
+
+**Load environment variables from a file**
+
+```docker container exec --env-file [env.list] [container] [command]```
 
 # SYNOPSIS
 
@@ -31,27 +39,38 @@ execute command in running container
 # PARAMETERS
 
 **-i**, **--interactive**
-> Keep STDIN open.
+> Keep STDIN open even if not attached.
 
 **-t**, **--tty**
-> Allocate pseudo-TTY.
+> Allocate a pseudo-TTY.
 
 **-u**, **--user** _user_
-> Run as specified user.
+> Username or UID (format: user, user:group, uid, uid:gid).
 
 **-w**, **--workdir** _dir_
-> Working directory.
+> Working directory inside the container.
 
 **-e**, **--env** _list_
 > Set environment variables.
 
+**--env-file** _file_
+> Read environment variables from a file.
+
 **-d**, **--detach**
-> Run in background.
+> Run command in the background.
+
+**--detach-keys** _string_
+> Override the key sequence for detaching a container.
+
+**--privileged**
+> Give extended privileges to the command.
 
 # DESCRIPTION
 
-**docker container exec** runs a command in a running container. Commonly used for debugging or administrative tasks.
+**docker container exec** runs a new command in a running container. The command runs in the default working directory of the container or the directory specified with **--workdir**. The command must be an executable; chained or quoted commands do not work.
+
+This is the long form of **docker exec** and behaves identically.
 
 # SEE ALSO
 
-[docker-exec](/man/docker-exec)(1), [docker-container](/man/docker-container)(1)
+[docker-exec](/man/docker-exec)(1), [docker-container](/man/docker-container)(1), [docker-container-run](/man/docker-container-run)(1), [docker-run](/man/docker-run)(1), [podman-exec](/man/podman-exec)(1)

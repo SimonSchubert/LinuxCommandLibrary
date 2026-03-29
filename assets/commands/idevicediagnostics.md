@@ -1,6 +1,6 @@
 # TAGLINE
 
-performs diagnostic commands on iOS devices
+Interact with the diagnostics interface of an iOS device
 
 # TLDR
 
@@ -22,7 +22,15 @@ performs diagnostic commands on iOS devices
 
 **Get battery info**
 
-```idevicediagnostics diagnostics Battery```
+```idevicediagnostics diagnostics GasGauge```
+
+**Target a specific device** by UDID
+
+```idevicediagnostics -u [UDID] restart```
+
+**Print IORegistry** for a specific plane
+
+```idevicediagnostics ioregistry IODeviceTree```
 
 # SYNOPSIS
 
@@ -31,7 +39,13 @@ performs diagnostic commands on iOS devices
 # SUBCOMMANDS
 
 **diagnostics** [_type_]
-> Get diagnostic information.
+> Print diagnostics information, optionally by type: All (default), WiFi, GasGauge, or NAND.
+
+**mobilegestalt** _key_ [_key_ ...]
+> Print values of MobileGestalt keys.
+
+**ioregistry** [_plane_]
+> Print IORegistry of device, optionally by plane (IODeviceTree, IOPower, IOService). iOS 5+ only.
 
 **restart**
 > Restart the device.
@@ -44,17 +58,26 @@ performs diagnostic commands on iOS devices
 
 # PARAMETERS
 
-**-u** _udid_
-> Target specific device.
+**-u**, **--udid** _UDID_
+> Target specific device by its UDID.
 
-**-n**
-> Connect over network.
+**-n**, **--network**
+> Connect to network device.
+
+**-d**, **--debug**
+> Enable communication debugging.
+
+**-h**, **--help**
+> Print usage information.
+
+**-v**, **--version**
+> Print version information.
 
 # DESCRIPTION
 
-**idevicediagnostics** performs diagnostic commands on iOS devices. Part of the libimobiledevice suite. Can restart, shutdown, or sleep devices, and retrieve diagnostic information about battery, gas gauge, and NAND storage.
+**idevicediagnostics** interacts with the diagnostics interface of an iOS device to retrieve diagnostics data, MobileGestalt data, and IORegistry information, as well as perform actions like restart, shutdown, and sleep. Part of the **libimobiledevice** suite. Available for iOS 4 and later; IORegistry access requires iOS 5 or later.
 
 # SEE ALSO
 
-[ideviceinfo](/man/ideviceinfo)(1), [idevicecrashreport](/man/idevicecrashreport)(1)
+[ideviceinfo](/man/ideviceinfo)(1), [idevicecrashreport](/man/idevicecrashreport)(1), [idevicepair](/man/idevicepair)(1), [idevicebackup2](/man/idevicebackup2)(1), [idevicesyslog](/man/idevicesyslog)(1), [idevicescreenshot](/man/idevicescreenshot)(1)
 

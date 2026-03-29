@@ -18,7 +18,7 @@ Build **source package** only
 
 Build with **custom macro** definitions
 
-```rpmbuild -bb path/to/spec_file --define "version 1.0"```
+```rpmbuild -bb --define "version 1.0" path/to/spec_file```
 
 **Prepare** sources only (unpack and patch)
 
@@ -28,9 +28,13 @@ Build for **specific architecture**
 
 ```rpmbuild -bb --target x86_64 path/to/spec_file```
 
+**Rebuild** from an existing **source package**
+
+```rpmbuild --rebuild path/to/package.src.rpm```
+
 # SYNOPSIS
 
-**rpmbuild** {**-ba**|**-bb**|**-bp**|**-bc**|**-bi**|**-bl**|**-bs**} [_options_] _SPECFILE_
+**rpmbuild** {**-ba**|**-bb**|**-bp**|**-bc**|**-bi**|**-bl**|**-bs**|**-br**|**-bd**} [_options_] _SPECFILE_
 
 # DESCRIPTION
 
@@ -45,43 +49,76 @@ Build for **specific architecture**
 > Build binary packages only
 
 **-bp**
-> Unpack sources and apply patches only
+> Unpack sources and apply patches only (%prep stage)
+
+**-bf**
+> Configure the sources (%conf stage, equivalent to ./configure)
 
 **-bc**
-> Compile sources
+> Compile sources (%build stage)
 
 **-bi**
-> Install binaries and run checks
+> Install binaries into the build root and run %check
 
 **-bl**
-> Verify files exist
+> Verify that all files listed in %files exist
 
 **-bs**
 > Build source package only
 
-**-D, --define='MACRO EXPR'**
+**-br**
+> Build source package with dynamic build dependency resolution
+
+**-bd**
+> Check dynamic build dependencies and generate build requirements
+
+**-D**, **--define** _'MACRO EXPR'_
 > Define a macro with value
 
-**--target PLATFORM**
-> Set build target architecture
+**--target** _PLATFORM_
+> Set build target architecture (e.g. `x86_64`, `aarch64`)
 
-**--buildroot DIRECTORY**
+**--buildroot** _DIRECTORY_
 > Override the build root directory
 
 **--clean**
 > Remove build tree after completion
 
 **--nobuild**
-> Skip all build stages (syntax check only)
+> Skip all build stages (spec file syntax check only)
+
+**--noprep**
+> Skip the %prep stage
+
+**--noclean**
+> Skip the %clean stage
+
+**--nocheck**
+> Skip the %check stage
 
 **--nodeps**
 > Do not verify build dependencies
 
+**--short-circuit**
+> Skip directly to the specified stage (usable with -bc, -bi, -bb only)
+
+**--rebuild** _SOURCEPKG_
+> Install the source package, build binary packages, then clean up
+
+**--recompile** _SOURCEPKG_
+> Like --rebuild but stops after the install stage without creating binary packages
+
 **--rmsource**
 > Remove source files after build
 
-**--with/--without OPTION**
-> Enable or disable configure options
+**--rmspec**
+> Remove spec file after build
+
+**--with** _OPTION_
+> Enable a conditional build option defined in the spec file
+
+**--without** _OPTION_
+> Disable a conditional build option defined in the spec file
 
 # CONFIGURATION
 
@@ -104,4 +141,4 @@ The spec file defines how to build a package. Macros are defined in /usr/lib/rpm
 
 # SEE ALSO
 
-[rpm](/man/rpm)(8), [rpmspec](/man/rpmspec)(8), [rpmsign](/man/rpmsign)(8)
+[rpm](/man/rpm)(8), [rpmspec](/man/rpmspec)(8), [rpmsign](/man/rpmsign)(8), [mock](/man/mock)(1)

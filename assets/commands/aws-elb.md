@@ -73,6 +73,60 @@ Classic Load Balancers support sticky sessions, SSL termination, and integration
 **delete-load-balancer-listeners**
 > Remove listeners.
 
+**set-load-balancer-listener-ssl-certificate**
+> Update the SSL certificate for an HTTPS listener.
+
+**describe-load-balancer-attributes**
+> Retrieve attributes such as connection draining and access log settings.
+
+**modify-load-balancer-attributes**
+> Modify attributes such as connection draining and idle timeout.
+
+**describe-load-balancer-policies**
+> List policies associated with load balancers.
+
+**create-load-balancer-policy**
+> Create a new policy for a load balancer.
+
+**delete-load-balancer-policy**
+> Remove a policy from a load balancer.
+
+**create-app-cookie-stickiness-policy**
+> Enable application-controlled session stickiness.
+
+**create-lb-cookie-stickiness-policy**
+> Enable load balancer-controlled session stickiness.
+
+**attach-load-balancer-to-subnets**
+> Add subnets to a load balancer (VPC only).
+
+**detach-load-balancer-from-subnets**
+> Remove subnets from a load balancer.
+
+**enable-availability-zones-for-load-balancer**
+> Add Availability Zones to a load balancer (EC2-Classic).
+
+**disable-availability-zones-for-load-balancer**
+> Remove Availability Zones from a load balancer.
+
+**apply-security-groups-to-load-balancer**
+> Associate security groups with a VPC load balancer.
+
+**add-tags**
+> Add or overwrite tags on a load balancer.
+
+**remove-tags**
+> Remove tags from a load balancer.
+
+**describe-tags**
+> List tags on one or more load balancers.
+
+**describe-account-limits**
+> Show ELB service limits for the account.
+
+**wait**
+> Wait until a load balancer reaches a specified state.
+
 **--load-balancer-name** _name_
 > Name of the load balancer.
 

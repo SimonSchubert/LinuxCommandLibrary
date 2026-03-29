@@ -45,10 +45,13 @@ The installation root is determined by the `--root` flag, the `CARGO_INSTALL_ROO
 > Directory to uninstall from
 
 **-v**, **--verbose**
-> Verbose output
+> Verbose output (use twice for very verbose)
 
 **-q**, **--quiet**
 > Suppress output
+
+**--color** _when_
+> Control colored output: auto, always, or never
 
 # INSTALLATION ROOT
 

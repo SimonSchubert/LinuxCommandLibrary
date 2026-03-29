@@ -38,34 +38,52 @@ subscribe to gNMI streaming telemetry
 > gNMI path to subscribe to.
 
 **--mode** _mode_
-> Subscription mode: STREAM, ONCE, POLL.
+> Subscription mode: STREAM, ONCE, POLL (default STREAM).
 
 **--stream-mode** _mode_
-> Stream mode: sample, on_change, target_defined.
+> Stream mode: sample, on_change, target_defined (default sample).
 
 **--prefix** _prefix_
 > Set a common prefix for all paths.
 
+**--target** _target_
+> Set path target in the SubscriptionList prefix field.
+
+**--qos** _value_
+> QoS marking for subscription responses (default 20, 0 to disable).
+
 **--sample-interval** _duration_
-> Sample interval for SAMPLE mode.
+> Interval for target to send samples (e.g. 1s, 1m30s).
 
 **--heartbeat-interval** _duration_
-> Heartbeat interval for ON_CHANGE mode.
+> Heartbeat interval for on_change or sample modes.
 
 **--suppress-redundant**
-> Suppress redundant updates.
+> Suppress updates unless value has changed since last update.
 
 **--updates-only**
 > Only send updates, not initial state.
 
 **--quiet**
-> Do not output to stdout.
+> Do not output subscription responses to stdout.
 
 **--format** _format_
 > Output format (json, protojson, prototext, event, flat).
 
+**--name** _name_
+> Trigger predefined subscriptions from configuration file.
+
+**--output** _output_
+> Select output provider(s) defined in configuration file.
+
 **--depth** _depth_
 > Set gNMI extension depth value.
+
+**--history-snapshot** _time_
+> Set history snapshot value (nanoseconds or RFC3339 format).
+
+**--set-target**
+> Set SubscribeRequest Prefix target to configured target name.
 
 # DESCRIPTION
 
@@ -73,4 +91,4 @@ subscribe to gNMI streaming telemetry
 
 # SEE ALSO
 
-[gnmic](/man/gnmic)(1), [gnmic-get](/man/gnmic-get)(1)
+[gnmic](/man/gnmic)(1), [gnmic-get](/man/gnmic-get)(1), [gnmic-set](/man/gnmic-set)(1)

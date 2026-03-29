@@ -28,9 +28,21 @@ data transformation workflow tool for analytics engineering
 
 ```dbt docs serve```
 
+**Build** all resources (run models, test, snapshot, seed)
+
+```dbt build```
+
+**Load seed CSV** files into warehouse
+
+```dbt seed```
+
 **Compile SQL without** executing
 
 ```dbt compile```
+
+**Retry** the last failed command from point of failure
+
+```dbt retry```
 
 # SYNOPSIS
 
@@ -58,6 +70,9 @@ _COMMAND_
 
 **--full-refresh**
 > Rebuild incremental models from scratch.
+
+**--threads** _N_
+> Number of threads to run models in parallel.
 
 **--vars** _JSON_
 > Pass variables as JSON.

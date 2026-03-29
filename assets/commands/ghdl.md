@@ -28,6 +28,14 @@ Open-source VHDL simulator and synthesizer
 
 ```ghdl -r [entity_name] --stop-time=[100ns]```
 
+**Elaborate and run** in one step
+
+```ghdl --elab-run [entity_name] --vcd=[output.vcd]```
+
+**Analyze, elaborate and run** using combined command
+
+```ghdl -c [file.vhdl] -r [entity_name]```
+
 **Import files**
 
 ```ghdl -i [file.vhdl]```
@@ -70,10 +78,25 @@ Open-source VHDL simulator and synthesizer
 > VHDL standard to use: 87, 93, 93c, 00, 02, 08.
 
 **--work** _NAME_
-> Set the work library name.
+> Set the work library name (default: work).
+
+**--workdir** _DIR_
+> Set the directory for the work library.
 
 **--ieee** _LIBRARY_
-> Select IEEE library flavor: standard, synopsys, mentor.
+> Select IEEE library flavor: none, standard, synopsys.
+
+**-P** _DIRECTORY_
+> Add a library search path.
+
+**--elab-run**
+> Elaborate and run the design in a single step.
+
+**-m** _ENTITY_
+> Analyze outdated files and elaborate the design (make mode).
+
+**-c** _FILES_ **-r** _ENTITY_
+> Analyze and elaborate in a single command.
 
 **--help**
 > Display help information.

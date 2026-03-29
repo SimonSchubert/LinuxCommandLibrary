@@ -20,9 +20,9 @@ Vue-powered static documentation generator
 
 ```vuepress build [docs] --debug```
 
-**Eject default theme** for customization
+**Build to a custom output directory**
 
-```vuepress eject [docs]```
+```vuepress build [docs] --dest [dist]```
 
 **Show environment information**
 
@@ -30,42 +30,51 @@ Vue-powered static documentation generator
 
 # SYNOPSIS
 
-**vuepress** _command_ [_targetDir_] [_options_]
+**vuepress** _command_ [_sourceDir_] [_options_]
 
 # PARAMETERS
 
-**dev** [_targetDir_]
+**dev** [_sourceDir_]
 > Start a development server with hot-reloading. Default target is current directory.
 
-**build** [_targetDir_]
+**build** [_sourceDir_]
 > Build the site as static HTML files for deployment.
 
-**eject** [_targetDir_]
-> Copy the default theme to .vuepress/theme for customization.
-
 **info**
-> Display debugging information about the local environment.
+> Display information about the system and dependencies.
 
-**--port** _port_
-> Specify the port for the development server. Default is 8080.
+**-c**, **--config** _file_
+> Set path to config file.
+
+**-p**, **--port** _port_
+> Specify the port for the development server (default: 8080). Dev only.
 
 **--host** _host_
-> Specify the host for the development server.
+> Specify the host for the development server (default: 0.0.0.0). Dev only.
 
-**--temp** _dir_
+**-d**, **--dest** _dir_
+> Set the output directory for build (default: .vuepress/dist). Build only.
+
+**-t**, **--temp** _dir_
 > Set the directory for temporary files.
 
 **--cache** _dir_
 > Set the directory for cache files.
 
-**--dest** _dir_
-> Set the output directory for build.
-
 **--debug**
 > Enable debug mode with verbose output.
 
+**--clean-temp**
+> Clean temporary files before dev or build.
+
 **--clean-cache**
-> Clean cache before building.
+> Clean cache files before dev or build.
+
+**--open**
+> Open browser when ready. Dev only.
+
+**--no-watch**
+> Disable watching page and config files. Dev only.
 
 **--help**
 > Display help for a command.
@@ -78,11 +87,11 @@ VuePress allows using Vue components directly in Markdown files, enabling intera
 
 The development server provides hot module reloading for both Markdown content and Vue components. For production, the build command generates optimized static files that can be deployed to any static hosting service.
 
-Configuration is done through a .vuepress/config.js file in the target directory, controlling theme, plugins, navigation, and site metadata.
+Configuration is done through a .vuepress/config.js or .vuepress/config.ts file in the source directory, controlling theme, plugins, navigation, and site metadata. CLI options override config file settings with the same name.
 
 # CAVEATS
 
-Requires Node.js 14 or higher. VuePress v1 is in maintenance mode; v2 or VitePress (the successor) are recommended for new projects. Large documentation sites may have slow build times. Custom themes require Vue.js knowledge.
+Requires Node.js 18.19.0 or higher. VuePress v1 is in maintenance mode; v2 or VitePress (the successor) are recommended for new projects. The `eject` command from v1 does not exist in v2. Large documentation sites may have slow build times. Custom themes require Vue.js knowledge.
 
 # HISTORY
 

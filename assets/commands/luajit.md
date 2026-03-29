@@ -1,6 +1,6 @@
 # TAGLINE
 
-just-In-Time compiler for Lua
+Just-In-Time Compiler for the Lua Language
 
 # TLDR
 
@@ -8,66 +8,76 @@ just-In-Time compiler for Lua
 
 ```luajit```
 
-**Run script**
+**Run a Lua script**
 
 ```luajit [script.lua]```
 
-**Execute code**
+**Execute a string of Lua code**
 
 ```luajit -e "[print('Hello')]"```
 
-**Run with arguments**
+**Run a script with arguments**
 
 ```luajit [script.lua] [arg1] [arg2]```
 
-**Compile to bytecode**
+**Save bytecode** to a file
 
 ```luajit -b [script.lua] [script.out]```
 
-**Interactive after script**
+**Load a library** before running a script
+
+```luajit -l [library] [script.lua]```
+
+**Enter interactive mode** after running a script
 
 ```luajit -i [script.lua]```
 
 # SYNOPSIS
 
-**luajit** [_options_] [_script_] [_args_]
+**luajit** [_options_] [_script_ [_args_]]
 
 # PARAMETERS
 
-_SCRIPT_
-> Lua script file.
+**-e** _chunk_
+> Run the given chunk of Lua code.
 
-_ARGS_
-> Script arguments.
+**-l** _library_
+> Load the named library, equivalent to require("library").
 
-**-e** _CODE_
-> Execute string.
+**-b** _..._
+> Save or list bytecode. Run without arguments to get help on options.
 
-**-b**
-> Compile to bytecode.
+**-j** _command_
+> Perform a LuaJIT control command (e.g., -jv for verbose trace info, -jdump for detailed trace dumps).
+
+**-O**[_opt_]
+> Control LuaJIT optimizations. -O0 disables all optimizations, -O (default) is equivalent to -O3.
 
 **-i**
-> Interactive mode.
+> Run in interactive mode after executing the script or code.
 
-**-j** _CMD_
-> JIT control command.
+**-v**
+> Show LuaJIT version.
 
-**--help**
-> Display help information.
+**-E**
+> Ignore environment variables.
+
+**--**
+> Stop processing options.
 
 # DESCRIPTION
 
-**luajit** is a Just-In-Time compiler for Lua. It provides significantly faster execution than standard Lua.
+**luajit** is a Just-In-Time compiler for the Lua programming language. It provides significantly faster execution than the standard Lua interpreter through trace-based JIT compilation, an efficient interpreter, and a built-in FFI (Foreign Function Interface).
 
-The tool is Lua 5.1 compatible with extensions. Widely used for high-performance Lua applications.
+LuaJIT is fully compatible with Lua 5.1 and includes several extensions. Script arguments are passed via the global `arg` table. Interactive mode is activated automatically when no script or `-e` option is provided.
 
 # CAVEATS
 
-Lua 5.1 compatible only. FFI requires native code knowledge. Platform-specific optimizations.
+LuaJIT is compatible with Lua 5.1 only, not Lua 5.2 or later. The FFI library requires knowledge of C types and native code. JIT compilation is not available on all architectures. The `-b` bytecode format is not compatible with standard Lua bytecode.
 
 # HISTORY
 
-LuaJIT was created by **Mike Pall** to provide a high-performance Lua implementation with JIT compilation.
+LuaJIT was created by **Mike Pall** starting in 2005. LuaJIT 2.0, featuring the current trace compiler architecture, was released in 2012.
 
 # SEE ALSO
 

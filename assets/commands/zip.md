@@ -40,6 +40,18 @@ Create and modify ZIP archives
 
 ```zip -d [archive.zip] [file_to_remove]```
 
+**Move files into archive (delete originals)**
+
+```zip -m [archive.zip] [file1] [file2]```
+
+**Create a split archive with 100 MB parts**
+
+```zip -s [100m] [archive.zip] [files]```
+
+**Test archive integrity**
+
+```zip -T [archive.zip]```
+
 # SYNOPSIS
 
 **zip** [_options_] _archive_ _files_...
@@ -93,14 +105,29 @@ zip can create new archives, add files to existing ones, update changed files, o
 **-v**
 > Verbose output.
 
+**-m**
+> Move files into archive (delete originals after successful archiving).
+
+**-g**
+> Grow (append to) an existing archive.
+
+**-T**
+> Test archive integrity after creation. Aborts if the check fails.
+
 **-@**
 > Read file list from stdin.
 
 **-s** _size_
-> Split archive at size.
+> Split archive into pieces of the given size (e.g. `100m`, `1g`).
+
+**-sf**
+> Show the files that would be operated on, then exit without creating the archive.
+
+**-FS**
+> Sync archive contents with the filesystem: add new files, update changed files, and remove entries not on disk.
 
 **-y**
-> Store symbolic links.
+> Store symbolic links as links rather than following them.
 
 # CAVEATS
 

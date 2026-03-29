@@ -20,6 +20,10 @@ Build and deploy full-stack web and mobile applications
 
 ```aws amplify start-job --app-id [app_id] --branch-name [branch_name] --job-type RELEASE```
 
+**Get** details about a specific app
+
+```aws amplify get-app --app-id [app_id]```
+
 **Associate** a custom domain with an app
 
 ```aws amplify create-domain-association --app-id [app_id] --domain-name [example.com]```
@@ -107,6 +111,9 @@ The service offers features including:
 
 **create-backend-environment**
 > Create a backend environment for an app
+
+**get-job**
+> Get details of a specific build and deployment job
 
 **tag-resource**
 > Add metadata tags to Amplify resources

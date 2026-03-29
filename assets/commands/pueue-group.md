@@ -42,7 +42,7 @@ Default group exists. Part of pueue.
 
 # HISTORY
 
-pueue group provides **task grouping** functionality.
+**pueue group** is part of the **pueue** task manager, providing task grouping for independent queue management.
 
 # SEE ALSO
 

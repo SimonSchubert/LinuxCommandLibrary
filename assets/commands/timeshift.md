@@ -4,29 +4,37 @@ System backup and restore using snapshots
 
 # TLDR
 
-**List** snapshots
+**List** all snapshots
 
 ```sudo timeshift --list```
 
-**Check** and create if scheduled
+**Create** a snapshot with a description
+
+```sudo timeshift --create --comments "[description]"```
+
+**Create** a snapshot with a specific **tag**
+
+```sudo timeshift --create --tags D```
+
+**Check** and create a snapshot if scheduled
 
 ```sudo timeshift --check```
 
-**Create** snapshot
+**Restore** a specific snapshot
 
-```sudo timeshift --create```
+```sudo timeshift --restore --snapshot '[snapshot_name]'```
 
-**Restore** interactively
+**Restore** a snapshot to a specific **target device**
 
-```sudo timeshift --restore```
+```sudo timeshift --restore --snapshot '[snapshot_name]' --target-device [/dev/sda1]```
 
-Restore **specific** snapshot
+**Delete** a specific snapshot
 
-```sudo timeshift --restore --snapshot '[snapshot]'```
+```sudo timeshift --delete --snapshot '[snapshot_name]'```
 
-**Delete** snapshot
+**Delete all** snapshots
 
-```sudo timeshift --delete --snapshot '[snapshot]'```
+```sudo timeshift --delete-all```
 
 # SYNOPSIS
 
@@ -35,28 +43,58 @@ Restore **specific** snapshot
 # PARAMETERS
 
 **--list**
-> List all snapshots
+> List all snapshots.
+
+**--list-devices**
+> List available devices.
 
 **--check**
-> Create snapshot if scheduled
+> Create snapshot if one is scheduled.
 
 **--create**
-> Create new snapshot
+> Create a new snapshot (even if not scheduled).
 
 **--restore**
-> Restore a snapshot
+> Restore a snapshot.
 
 **--delete**
-> Delete a snapshot
+> Delete a snapshot.
+
+**--delete-all**
+> Delete all snapshots.
 
 **--snapshot** _NAME_
-> Specify snapshot name
+> Specify the snapshot to restore or delete.
 
 **--comments** _TEXT_
-> Add comment to snapshot
+> Set snapshot description.
+
+**--tags** _{O,B,H,D,W,M}_
+> Add tags to snapshot: Ondemand, Boot, Hourly, Daily, Weekly, Monthly (default: O).
+
+**--target-device** _DEVICE_
+> Specify target device for restore.
+
+**--grub-device** _DEVICE_
+> Specify device for installing GRUB2 bootloader.
 
 **--skip-grub**
-> Skip GRUB reinstallation during restore
+> Skip GRUB2 reinstallation during restore.
+
+**--snapshot-device** _DEVICE_
+> Specify backup device (default: from config).
+
+**--btrfs**
+> Switch to BTRFS mode.
+
+**--rsync**
+> Switch to RSYNC mode.
+
+**--yes**
+> Answer YES to all confirmation prompts.
+
+**--scripted**
+> Run in non-interactive mode.
 
 # DESCRIPTION
 
@@ -66,7 +104,7 @@ Similar to Windows System Restore or macOS Time Machine for system files.
 
 # CAVEATS
 
-Requires sufficient storage space. BTRFS snapshots are more efficient than rsync. User data in /home is excluded by default for safety. Restoring requires reboot.
+Requires sufficient storage space. BTRFS snapshots are more space-efficient than rsync. User data in /home is excluded by default for safety. Restoring typically requires a reboot. Requires root privileges for all operations.
 
 # HISTORY
 
@@ -74,4 +112,4 @@ Requires sufficient storage space. BTRFS snapshots are more efficient than rsync
 
 # SEE ALSO
 
-[rsync](/man/rsync)(1), [btrfs](/man/btrfs)(8)
+[rsync](/man/rsync)(1), [btrfs](/man/btrfs)(8), [snapper](/man/snapper)(1), [btrbk](/man/btrbk)(1), [restic](/man/restic)(1)

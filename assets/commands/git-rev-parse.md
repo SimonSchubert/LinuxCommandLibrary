@@ -1,6 +1,6 @@
 # TAGLINE
 
-Parse revision and repository information
+Pick out and massage parameters for other git commands
 
 # TLDR
 
@@ -28,9 +28,13 @@ Parse revision and repository information
 
 ```git rev-parse --git-dir```
 
-**Verify object exists**
+**Verify** a ref exists (exits non-zero if invalid)
 
 ```git rev-parse --verify [ref]```
+
+**Get path** from repo root to current directory
+
+```git rev-parse --show-prefix```
 
 # SYNOPSIS
 
@@ -56,11 +60,26 @@ Parse revision and repository information
 **--is-inside-work-tree**
 > Check if in work tree.
 
+**--show-prefix**
+> Show path of current directory relative to repository root.
+
+**--show-cdup**
+> Show path from current directory to repository root.
+
+**--is-bare-repository**
+> Print "true" if the repository is bare, "false" otherwise.
+
+**--absolute-git-dir**
+> Like --git-dir, but output is always an absolute path.
+
 **--symbolic**
-> Show symbolic name.
+> Show symbolic name instead of SHA-1.
 
 **--symbolic-full-name**
-> Full symbolic name.
+> Like --symbolic but show full ref name (e.g., refs/heads/master).
+
+**--quiet**
+> Only meaningful with --verify. Do not output error message on failure, just exit with non-zero status.
 
 # DESCRIPTION
 
@@ -70,4 +89,4 @@ This plumbing command is widely used in scripts for resolving refs and querying 
 
 # SEE ALSO
 
-[git-rev-list](/man/git-rev-list)(1), [git-describe](/man/git-describe)(1)
+[git-rev-list](/man/git-rev-list)(1), [git-describe](/man/git-describe)(1), [git-symbolic-ref](/man/git-symbolic-ref)(1), [git-log](/man/git-log)(1)

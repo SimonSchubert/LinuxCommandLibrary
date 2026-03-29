@@ -1,18 +1,18 @@
 # TAGLINE
 
-Interactive ugrep pattern search alias
+ugrep with config file, pretty output, and sorted results
 
 # TLDR
 
-**Search pattern**
+**Search for a pattern in a file**
 
 ```ug "[pattern]" [file]```
 
-**Search recursively**
+**Search recursively in current directory**
 
 ```ug -r "[pattern]"```
 
-**Case insensitive**
+**Case-insensitive search**
 
 ```ug -i "[pattern]" [file]```
 
@@ -20,53 +20,62 @@ Interactive ugrep pattern search alias
 
 ```ug -n "[pattern]" [file]```
 
-**Interactive mode**
+**Interactive TUI query mode**
 
-```ug -Q "[pattern]"```
+```ug -Q```
 
-**Count matches**
+**Count matches per file**
 
 ```ug -c "[pattern]" [file]```
 
+**List only filenames with matches**
+
+```ug -l "[pattern]"```
+
+**Search for whole words only**
+
+```ug -w "[pattern]" [file]```
+
 # SYNOPSIS
 
-**ug** [_-i_] [_-r_] [_-n_] [_-Q_] [_options_] _pattern_ [_files_]
+**ug** [_options_] [_pattern_] [_file_...]
 
 # PARAMETERS
 
 **-i**
-> Case insensitive.
+> Case insensitive matching.
 
-**-r**
-> Recursive search.
+**-r**, **-R**
+> Recursive search (-R follows symlinks).
 
 **-n**
-> Line numbers.
+> Show line numbers.
 
 **-Q**
-> Interactive query.
+> Launch interactive TUI query mode.
 
 **-c**
-> Count matches.
+> Count matching lines per file.
 
 **-l**
-> Files only.
+> Print only names of files with matches.
+
+**-w**
+> Match whole words only.
+
+**-e** _pattern_
+> Specify a pattern (use multiple times for alternation).
+
+**--no-config**
+> Do not load the .ugrep configuration file.
 
 # DESCRIPTION
 
-**ug** is the interactive query alias for **ugrep**, a fast pattern search tool. When invoked as ug, it launches ugrep's interactive query UI by default, allowing real-time search refinement as you type the pattern.
+**ug** is the user-friendly front-end to **ugrep**. It is equivalent to running `ugrep --config --pretty --sort`: it automatically loads the `.ugrep` configuration file from the working directory or home directory, enables pretty-printed colour output, and sorts results by filename. These defaults make ug suitable for interactive terminal use.
 
-The interactive mode displays results instantly and updates as the query changes, making it useful for exploratory code searching. It supports the same extensive feature set as ugrep including Boolean queries, fuzzy matching, and searching within archives.
+Unlike plain **ugrep** (which targets scripting and batch use with no sorting for performance), ug is tuned for exploratory searching. It supports all ugrep options including Boolean queries, fuzzy matching, hexdumps, and searching inside archives and compressed files.
 
-See **ugrep** for full documentation of search options and capabilities.
-
-# CAVEATS
-
-Alias for ugrep. Features vary by build. Fast but different.
-
-# HISTORY
-
-**ug** is typically an alias or symlink to **ugrep**, a fast grep alternative with interactive features.
+The interactive TUI mode (`-Q`) lets you type a query and see results update in real time.
 
 # SEE ALSO
 

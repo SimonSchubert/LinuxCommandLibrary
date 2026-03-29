@@ -57,9 +57,8 @@ vlan      - VLAN configurations
 
 # CONFIGURATION STORAGE
 
-```
-/etc/NetworkManager/system-connections/
-```
+**/etc/NetworkManager/system-connections/**
+> Directory where connection profiles are stored as individual files.
 
 # CAVEATS
 
@@ -71,4 +70,4 @@ nm-connection-editor is part of the **NetworkManager** project developed by **Re
 
 # SEE ALSO
 
-[nmcli](/man/nmcli)(1), [nmtui](/man/nmtui)(1), [NetworkManager](/man/NetworkManager)(8)
+[nmcli](/man/nmcli)(1), [nmtui](/man/nmtui)(1), [NetworkManager](/man/NetworkManager)(1)

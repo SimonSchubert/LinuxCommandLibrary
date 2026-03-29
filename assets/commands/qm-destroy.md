@@ -8,42 +8,46 @@ Permanently remove a Proxmox virtual machine
 
 ```qm destroy 100```
 
-Destroy all **unreferenced disks**
+Destroy and remove all **unreferenced disks** from enabled storages
 
 ```qm destroy 100 --destroy-unreferenced-disks```
 
-Destroy and **purge** from all locations
+Destroy and **purge** from backup, replication jobs, and HA configuration
 
 ```qm destroy 100 --purge```
 
-**Force** destroy ignoring locks
+Destroy with **purge** and remove unreferenced disks
+
+```qm destroy 100 --purge --destroy-unreferenced-disks```
+
+**Force** destroy ignoring locks (root only)
 
 ```sudo qm destroy 100 --skiplock```
 
 # SYNOPSIS
 
-**qm destroy** _vmid_ [_options_]
+**qm destroy** _vmid_ [_OPTIONS_]
 
 # PARAMETERS
 
-**--destroy-unreferenced-disks**
-> Remove disks not referenced in VM configuration
+**--destroy-unreferenced-disks** _boolean_
+> If set, additionally destroy all disks not referenced in the config but with a matching VMID from all enabled storages. Default: 0.
 
-**--purge**
-> Remove from all locations (inventory, backups, HA, etc.)
+**--purge** _boolean_
+> Remove VMID from configurations, like backup and replication jobs and HA.
 
-**--skiplock**
-> Ignore locks and force destruction
+**--skiplock** _boolean_
+> Ignore locks. Only root is allowed to use this option.
 
 # DESCRIPTION
 
-**qm destroy** permanently removes a virtual machine from Proxmox VE. It can optionally remove associated disks and purge the VM from all system locations including backup jobs and high availability configuration.
+**qm destroy** permanently removes a virtual machine and all associated volumes from Proxmox VE. The operation also removes any VM-specific permissions and firewall rules.
 
-The skiplock option bypasses safety locks but requires root privileges.
+The **--purge** option removes the VMID from backup jobs, replication jobs, and high availability configuration. The **--destroy-unreferenced-disks** option removes disks that are not referenced in the VM configuration but have a matching VMID across all enabled storages. The **--skiplock** option bypasses safety locks but requires root privileges.
 
 # CAVEATS
 
-Destruction is permanent and cannot be undone. Ensure backups exist before destroying important VMs. Purge option removes all traces including scheduled backups.
+Destruction is permanent and cannot be undone. Ensure backups exist before destroying important VMs. The VMID must be in the range 100-999999999.
 
 # HISTORY
 
@@ -51,4 +55,4 @@ Part of **Proxmox VE** QEMU/KVM management tools for virtual machine administrat
 
 # SEE ALSO
 
-[qm](/man/qm)(1), [qm-create](/man/qm-create)(1), [qm-clone](/man/qm-clone)(1)
+[qm](/man/qm)(1), [qm-create](/man/qm-create)(1), [qm-clone](/man/qm-clone)(1), [qm-stop](/man/qm-stop)(1), [qm-shutdown](/man/qm-shutdown)(1)

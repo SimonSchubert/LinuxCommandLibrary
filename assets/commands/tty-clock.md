@@ -82,6 +82,9 @@ Terminal digital clock
 **-a** _nsdelay_
 > Additional nanosecond delay between redraws.
 
+**-i**
+> Display clock information (version, compiled options).
+
 **-v**
 > Display version information.
 

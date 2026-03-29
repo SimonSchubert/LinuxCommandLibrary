@@ -24,6 +24,10 @@ GNU document formatting system
 
 ```groff -t -e -ms [file.ms] > output.ps```
 
+**Format a man page to plain text**
+
+```groff -Tutf8 -man [file.1]```
+
 **Display the pipeline without executing it**
 
 ```groff -V -Tpdf [file.ms]```
@@ -52,8 +56,14 @@ _FILES_
 **-p**
 > Run pic preprocessor for diagrams.
 
+**-R**
+> Run refer preprocessor for bibliographic references.
+
 **-s**
 > Run soelim preprocessor for file inclusion.
+
+**-G**
+> Run grap preprocessor for graphs.
 
 **-S**
 > Safer mode. Disables .open, .opena, .pso, .sy, and .pi requests.
@@ -69,6 +79,9 @@ _FILES_
 
 **-a**
 > Generate a plain text approximation of the typeset output.
+
+**-b**
+> Print a backtrace on each error or warning.
 
 **-man**
 > Shorthand for -m man. Use man macros.
@@ -100,4 +113,4 @@ groff was created by **James Clark** as a free implementation of AT&T troff. It 
 
 # SEE ALSO
 
-[troff](/man/troff)(1), [nroff](/man/nroff)(1), [man](/man/man)(1), [tbl](/man/tbl)(1), [eqn](/man/eqn)(1), [pic](/man/pic)(1)
+[troff](/man/troff)(1), [nroff](/man/nroff)(1), [man](/man/man)(1), [tbl](/man/tbl)(1), [eqn](/man/eqn)(1), [pic](/man/pic)(1), [refer](/man/refer)(1), [soelim](/man/soelim)(1)

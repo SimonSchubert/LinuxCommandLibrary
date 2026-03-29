@@ -12,7 +12,7 @@ Semiempirical quantum chemistry calculation program
 
 ```mopac [path/to/input_file.dat]```
 
-**Run a calculation from an .arc archive file**
+**Resume a calculation from an .arc archive file**
 
 ```mopac [path/to/input_file.arc]```
 
@@ -24,7 +24,7 @@ Semiempirical quantum chemistry calculation program
 
 **MOPAC** (Molecular Orbital PACkage) is a semiempirical quantum chemistry program for computational chemistry calculations. It implements various methods based on the NDDO (Neglect of Diatomic Differential Overlap) approximation developed by Dewar and Thiel.
 
-The program reads molecular geometry and calculation parameters from input files (.mop, .dat, or .arc) and performs electronic structure calculations, geometry optimizations, transition state searches, and property predictions. Results are written to output files in the same directory.
+The program reads molecular geometry and calculation parameters from input files (.mop, .dat, or .arc) and performs electronic structure calculations, geometry optimizations, transition state searches, and property predictions. Output files (.out for main results, .arc for archival data) are written to the same directory as the input file, not the working directory.
 
 No keywords are required; the default behavior is a geometry relaxation using the PM7 method. Common methods include PM7, PM6, AM1, and MNDO for calculating molecular properties, reaction energies, and optimized geometries.
 

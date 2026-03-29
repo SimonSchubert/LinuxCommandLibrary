@@ -12,33 +12,41 @@ lists Kubernetes resources
 
 ```kubectl get all```
 
-**Output as YAML**
+**Output a specific pod as YAML**
 
 ```kubectl get pod [pod-name] -o yaml```
 
-**Output as JSON**
+**Output all pods as JSON**
 
 ```kubectl get pods -o json```
 
-**Watch changes**
+**Watch for changes to pods**
 
 ```kubectl get pods --watch```
 
-**List across namespaces**
+**List pods across all namespaces**
 
 ```kubectl get pods -A```
 
-**Filter by label**
+**Filter pods by label**
 
 ```kubectl get pods -l [app=nginx]```
 
-**Custom columns**
+**List pods with additional columns** (node, IP)
+
+```kubectl get pods -o wide```
+
+**Custom columns output**
 
 ```kubectl get pods -o custom-columns=NAME:.metadata.name,STATUS:.status.phase```
 
+**Get resources from a file**
+
+```kubectl get -f [path/to/manifest.yaml]```
+
 # SYNOPSIS
 
-**kubectl get** [_options_] _resource_ [_name_]
+**kubectl get** [_options_] _TYPE_[._VERSION_][._GROUP_] [_NAME_ | **-l** _label_]
 
 # PARAMETERS
 
@@ -48,20 +56,29 @@ _RESOURCE_
 _NAME_
 > Resource name (optional).
 
-**-o** _FORMAT_
-> Output format (yaml, json, wide, custom-columns).
+**-o**, **--output** _FORMAT_
+> Output format: json, yaml, wide, name, custom-columns, jsonpath, go-template, and more.
 
-**--watch**
-> Watch for changes.
+**-w**, **--watch**
+> Watch for changes after listing the requested objects.
+
+**--watch-only**
+> Watch for changes without listing/getting first.
 
 **-A**, **--all-namespaces**
-> All namespaces.
+> List objects across all namespaces.
 
-**-l** _SELECTOR_
-> Label selector.
+**-l**, **--selector** _SELECTOR_
+> Label selector (supports =, ==, !=, in, notin).
 
-**-n** _NAMESPACE_
-> Target namespace.
+**-n**, **--namespace** _NAMESPACE_
+> Namespace scope for this request.
+
+**-f**, **--filename** _FILE_
+> Filename, directory, or URL to files identifying the resource.
+
+**-k**, **--kustomize** _DIR_
+> Process the kustomization directory.
 
 **--sort-by** _JSONPATH_
 > Sort list output by the specified JSONPath expression.
@@ -69,11 +86,26 @@ _NAME_
 **--field-selector** _SELECTOR_
 > Filter by field selector (e.g., status.phase=Running).
 
+**-L**, **--label-columns** _LABELS_
+> Comma-separated list of labels to present as columns.
+
 **--show-labels**
-> Show labels in the last column of output.
+> Show all labels as the last column of output.
+
+**--show-kind**
+> List the resource type for the requested objects.
 
 **--no-headers**
 > Omit table headers from output.
+
+**--chunk-size** _N_
+> Return large lists in chunks rather than all at once (default 500).
+
+**--ignore-not-found**
+> Suppress NotFound errors when getting specific resources.
+
+**-R**, **--recursive**
+> Process the directory used in -f recursively.
 
 **--help**
 > Display help information.
@@ -88,7 +120,7 @@ By default, the output shows a summary table with key fields like name, status, 
 
 # CAVEATS
 
-Subcommand of kubectl. Wide output for more columns. Watch doesn't catch all changes.
+Subcommand of kubectl. By default, only resources in the current namespace are shown; use `-A` to see all namespaces. The `--watch` flag uses the Kubernetes watch API and may miss events during brief disconnections. The `--chunk-size` flag (default 500) controls pagination for large result sets.
 
 # HISTORY
 
@@ -96,4 +128,4 @@ kubectl get is the primary resource listing command for **Kubernetes** cluster i
 
 # SEE ALSO
 
-[kubectl](/man/kubectl)(1), [kubectl-describe](/man/kubectl-describe)(1), [kubectl-apply](/man/kubectl-apply)(1)
+[kubectl](/man/kubectl)(1), [kubectl-describe](/man/kubectl-describe)(1), [kubectl-apply](/man/kubectl-apply)(1), [kubectl-delete](/man/kubectl-delete)(1), [kubectl-logs](/man/kubectl-logs)(1)

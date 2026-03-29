@@ -30,19 +30,19 @@ Single-user mode root login prompt
 
 # PARAMETERS
 
-**-t, --timeout _seconds_**
+**-t**, **--timeout** _seconds_
 > Maximum time to wait for password before continuing boot
 
-**-p, --login-shell**
+**-p**, **--login-shell**
 > Start the shell as a login shell
 
-**-e, --force**
+**-e**, **--force**
 > Examine default password files and skip prompt if root has no password
 
-**-h, --help**
+**-h**, **--help**
 > Display help information
 
-**-V, --version**
+**-V**, **--version**
 > Display version information
 
 # DESCRIPTION
@@ -57,4 +57,4 @@ Requires physical console access. The **-e** option should only be used when roo
 
 # SEE ALSO
 
-[init](/man/init)(8), [login](/man/login)(1), [su](/man/su)(1), [agetty](/man/agetty)(8)
+[init](/man/init)(1), [login](/man/login)(1), [su](/man/su)(1), [agetty](/man/agetty)(1)

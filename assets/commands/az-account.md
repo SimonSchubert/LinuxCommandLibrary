@@ -4,7 +4,7 @@ Manage Azure subscriptions and access tokens
 
 # TLDR
 
-**List all subscriptions** for the logged-in account
+**List all subscriptions** for the logged-in account (enabled only by default)
 
 ```az account list```
 
@@ -23,6 +23,10 @@ Manage Azure subscriptions and access tokens
 **Get an access token** for Microsoft Graph
 
 ```az account get-access-token --resource-type ms-graph```
+
+**List all subscriptions** including disabled ones across all clouds
+
+```az account list --all```
 
 **List supported regions** for the current subscription
 
@@ -64,17 +68,26 @@ This command group is essential for working with multiple Azure subscriptions an
 
 # PARAMETERS
 
-**--subscription** _value_
-> Name or ID of the subscription to use
+**--subscription**, **-s** _value_
+> Name or ID of the subscription to use (accepted by `set`, `show`, `get-access-token`)
+
+**--all**
+> (`list`) Include subscriptions from all clouds and all states, not just enabled ones.
+
+**--refresh**
+> (`list`) Retrieve up-to-date subscriptions from the server rather than local cache.
 
 **--resource-type** _value_
-> Type of resource for access token (aad-graph, arm, ms-graph, etc.)
+> Type of resource for access token. Accepted values: **aad-graph**, **arm**, **batch**, **data-lake**, **media**, **ms-graph**, **oss-rdbms**.
+
+**--resource** _uri_
+> Azure resource endpoint URI for access token (Microsoft Entra v1.0).
 
 **--scope** _value_
-> Space-separated scopes for the access token
+> Space-separated scopes for the access token (Microsoft Entra v2.0). Defaults to Azure Resource Manager.
 
-**--tenant** _value_
-> Tenant ID for cross-tenant token requests
+**--tenant**, **-t** _value_
+> Tenant ID for cross-tenant token requests. Only available for user and service principal accounts.
 
 # CAVEATS
 

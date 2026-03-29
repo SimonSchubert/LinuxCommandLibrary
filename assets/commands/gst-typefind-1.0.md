@@ -26,7 +26,10 @@ Print media type of file
 > Add colon-separated directories to the GStreamer plugin search path.
 
 **--gst-plugin-spew**
-> Enable error output during plugin loading.
+> Enable printout of errors while loading GStreamer plugins.
+
+**--gst-debug-level=**_LEVEL_
+> Set the debugging output threshold (0-9, default 0).
 
 **--gst-info-mask=**_FLAGS_
 > Set GStreamer info flags.

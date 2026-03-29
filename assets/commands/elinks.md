@@ -16,9 +16,9 @@ Feature-rich text-mode web browser
 
 ```elinks -dump [https://example.com]```
 
-**Dump with numbered links**
+**Dump with a specific output width**
 
-```elinks -dump -dump-width [80] [https://example.com]```
+```elinks -dump -dump-width [120] [https://example.com]```
 
 **Open from a bookmarks file**
 
@@ -48,6 +48,9 @@ Feature-rich text-mode web browser
 **-dump-width** _n_
 > Width for dumped output (default: 80).
 
+**-dump-charset** _codepage_
+> Codepage used when formatting dump output.
+
 **-source**
 > Print page source instead of rendering.
 
@@ -60,11 +63,17 @@ Feature-rich text-mode web browser
 **-anonymous**
 > Restrict to safe operations (for public terminals).
 
+**-no-connect**
+> Run as a separate instance instead of connecting to an existing one.
+
 **-new-window**
 > Open URL in new window instead of tab.
 
 **-remote** _command_
 > Send command to running ELinks instance.
+
+**-localhost**
+> Restrict to local addresses only (no remote connections).
 
 **-version**
 > Print version information.

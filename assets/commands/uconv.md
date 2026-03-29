@@ -55,11 +55,29 @@ ICU character encoding converter and transliterator
 **--default-code**
 > Show default system encoding.
 
-**-c**
-> Omit invalid characters from output.
+**--from-callback** _name_
+> Callback for errors when converting from source encoding to Unicode.
+
+**--to-callback** _name_
+> Callback for errors when converting from Unicode to target encoding.
 
 **--callback** _name_
-> Error handling: substitute, skip, stop, escape-unicode.
+> Set both --from-callback and --to-callback to the same value. Values: substitute, skip, stop, escape-unicode.
+
+**-c**
+> Omit invalid characters from output (shorthand for --to-callback skip).
+
+**--add-signature**
+> Add a U+FEFF BOM to the output if the target encoding supports it.
+
+**--remove-signature**
+> Remove a U+FEFF BOM from the input.
+
+**-s**, **--silent**
+> Suppress messages during execution.
+
+**-v**, **--verbose**
+> Display extra informative messages during execution.
 
 **-h**, **--help**
 > Display help.
@@ -73,7 +91,7 @@ ICU character encoding converter and transliterator
 
 Beyond simple transcoding, uconv provides transliteration capabilities to convert text between scripts (e.g., Cyrillic to Latin) without translation. Multiple transliterators can be chained with semicolons.
 
-Error callbacks control handling of characters that cannot be mapped to the target encoding. Options include substitution with replacement characters, skipping invalid input, stopping with an error, or escaping as Unicode code points.
+Error callbacks control handling of characters that cannot be mapped. Callbacks can be set independently for the from-encoding step (--from-callback) and the to-encoding step (--to-callback), or both at once with --callback. Options include substitute (replacement character), skip, stop (default), and escape-unicode.
 
 # CAVEATS
 

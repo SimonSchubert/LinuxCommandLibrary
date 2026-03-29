@@ -24,6 +24,14 @@ Show **deployment status**
 
 ```rpm-ostree install [package] -r```
 
+**Install** package and apply **live** without reboot
+
+```rpm-ostree install -A [package]```
+
+**Rebase** to a different image or OS variant
+
+```rpm-ostree rebase [ostree-remote:branch]```
+
 # SYNOPSIS
 
 **rpm-ostree** [**status**|**upgrade**|**rollback**|**install**|**uninstall**] [**-r**] [_options_]
@@ -48,8 +56,8 @@ Show **deployment status**
 **rebase**
 > Switch to different base image
 
-**override**
-> Override base packages
+**override** _subcommand_
+> Override base packages: `replace`, `remove`, `reset`
 
 **deploy**
 > Create new deployment from a specific version/branch/commit
@@ -72,6 +80,9 @@ Show **deployment status**
 **apply-live**
 > Apply changes to the booted deployment without reboot
 
+**usroverlay**
+> Create a transient writable overlay over /usr for temporary testing
+
 # PARAMETERS
 
 **-r, --reboot**
@@ -92,14 +103,20 @@ Show **deployment status**
 **--allow-inactive**
 > Permit packages that are already in the base layer
 
-**--apply-live**
-> Apply changes to booted deployment without reboot
+**--apply-live**, **-A**
+> Apply changes to the booted deployment without reboot (install/uninstall only)
+
+**--force-replacefiles**
+> Allow overwriting files owned by other packages when installing
 
 **--download-only**
 > Fetch packages without deploying
 
 **-n**, **--dry-run**
 > Preview changes without executing
+
+**--json**
+> Output in JSON format (status command)
 
 # DESCRIPTION
 

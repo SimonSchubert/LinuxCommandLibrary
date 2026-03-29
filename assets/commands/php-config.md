@@ -1,24 +1,40 @@
 # TAGLINE
 
-provides information about PHP's compile-time configuration
+Display information about PHP's compile-time configuration
 
 # TLDR
 
-**Show PHP include directory**
+**Show the PHP installation prefix**
 
-```php-config --include-dir```
+```php-config --prefix```
 
-**Show extension directory**
+**Show the extension directory path**
 
 ```php-config --extension-dir```
 
-**Show configure options**
+**Show the header file include directory**
+
+```php-config --include-dir```
+
+**Show compiler include flags for building extensions**
+
+```php-config --includes```
+
+**Show the configure options PHP was built with**
 
 ```php-config --configure-options```
 
-**Show PHP version**
+**Show the PHP version**
 
 ```php-config --version```
+
+**Show the path to the PHP binary**
+
+```php-config --php-binary```
+
+**Show all available SAPI modules**
+
+```php-config --php-sapis```
 
 # SYNOPSIS
 
@@ -27,68 +43,53 @@ provides information about PHP's compile-time configuration
 # PARAMETERS
 
 **--prefix**
-> Installation prefix.
+> PHP installation prefix directory (e.g., /usr or /usr/local).
 
 **--includes**
-> Include paths for compiling.
+> Compiler -I flags for all include directories, used when building extensions.
 
 **--ldflags**
-> Linker flags.
+> Linker flags PHP was compiled with.
 
 **--libs**
-> Libraries.
+> Extra libraries PHP was compiled with.
 
 **--extension-dir**
-> Extension installation path.
+> Default directory where extensions are installed and loaded from.
 
 **--include-dir**
-> Header files directory.
+> Directory prefix where header files are installed.
 
 **--php-binary**
-> Path to php binary.
+> Full path to the PHP CLI or CGI binary.
+
+**--php-sapis**
+> List all available SAPI (Server API) modules (e.g., cli, fpm, apache2handler).
 
 **--configure-options**
-> Configure options used.
+> The ./configure options used when PHP was built, useful for recreating the same build.
 
 **--version**
-> PHP version.
+> PHP version string.
+
+**--vernum**
+> PHP version as an integer (e.g., 80200 for 8.2.0), useful in scripts.
+
+**--ini-path**
+> Directory from which PHP reads its main INI configuration file.
+
+**--ini-dir**
+> Directory from which PHP scans for additional INI configuration files.
 
 # DESCRIPTION
 
-**php-config** provides information about PHP's compile-time configuration. Essential for building PHP extensions and modules.
-# Get extension directory
-php-config --extension-dir
+**php-config** is a shell script that provides information about PHP's compile-time configuration. It is essential for building PHP extensions with **phpize** and for writing Makefiles that need to link against PHP.
 
-# Use in Makefile
-INCLUDES = $(shell php-config --includes)
-LDFLAGS = $(shell php-config --ldflags)
-
-# Check installed features
-php-config --configure-options | tr ' ' '\n' | grep enable
-
-# Build extension with phpize
-phpize
-./configure --with-php-config=/usr/bin/php-config
-make
-```
-
-# OUTPUT EXAMPLE
-
-```
-$ php-config --version
-8.2.0
-
-$ php-config --extension-dir
-/usr/lib/php/20220829
-```
+Typical usage in extension development involves passing **--includes** and **--ldflags** to the compiler, and specifying the full path to php-config via **./configure --with-php-config=/path/to/php-config**.
 
 # CAVEATS
 
-Output varies by PHP installation. Multiple php-config for multiple PHP versions. Essential for extension development.
-
-# HISTORY
-
-php-config is part of the **PHP** distribution, providing build configuration information since PHP 4.
+Output varies by PHP installation and version. When multiple PHP versions are installed, each has its own php-config (e.g., php-config7.4, php-config8.2). Always use the path corresponding to the target PHP version when building extensions.
 
 # SEE ALSO
 

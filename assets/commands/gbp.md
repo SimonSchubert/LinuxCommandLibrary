@@ -4,25 +4,37 @@ Git integration for Debian package building
 
 # TLDR
 
-**Convert** an existing Debian package to gbp
+**Import an existing Debian source package into Git**
 
 ```gbp import-dsc [path/to/package.dsc]```
 
-**Build** the package using the default builder (debuild)
+**Build the package using the default builder**
 
 ```gbp buildpackage -jauto -us -uc```
 
-Build a package in a **pbuilder environment**
+**Build a package in a pbuilder environment**
 
 ```DIST=bullseye ARCH=amd64 gbp buildpackage -jauto -us -uc --git-builder=git-pbuilder```
 
-Specify a package as **source-only upload**
-
-```gbp buildpackage -jauto -us -uc --changes-options=-S```
-
-Import a new **upstream release**
+**Import a new upstream release**
 
 ```gbp import-orig --pristine-tar [path/to/package.tar.gz]```
+
+**Clone a repository with gbp branch tracking**
+
+```gbp clone [url]```
+
+**Generate changelog entries from Git commits**
+
+```gbp dch --auto```
+
+**Tag the current Debian release in Git**
+
+```gbp tag```
+
+**Push packaging branches and tags to remote**
+
+```gbp push```
 
 # SYNOPSIS
 
@@ -31,37 +43,40 @@ Import a new **upstream release**
 # PARAMETERS
 
 **buildpackage**
-> Build a Debian package from a Git repository
+> Build Debian source and binary packages from a Git repository.
 
 **import-dsc**
-> Import an existing Debian source package into Git
+> Import an existing Debian source package into a Git repository.
 
 **import-orig**
-> Import a new upstream tarball
+> Import a new upstream source tarball into a Git repository.
+
+**export-orig**
+> Recreate upstream tarballs from a Git repository.
 
 **clone**
-> Clone a Git repository and set up gbp tracking branches
+> Clone a Git repository and set up gbp tracking branches.
 
 **pull**
-> Update a repository from remote
+> Update a repository from remote, aware of packaging branch tracking.
+
+**push**
+> Push to a remote repository, aware of packaging branch tracking.
 
 **dch**
-> Generate debian/changelog entries from Git commits
+> Generate debian/changelog entries from Git commit history.
 
-**pq** (patch queue)
-> Manage quilt patches as Git topic branches
+**tag**
+> Tag a Debian release in a Git repository.
 
-**--pristine-tar**
-> Use pristine-tar to store/retrieve upstream tarballs
+**pq**
+> Manage debian/patches as Git topic branches (patch queue).
 
-**-jauto**
-> Automatic parallel build jobs
+**create-remote-repo**
+> Create a remote Git repository and push the local repository into it.
 
-**-us**
-> Do not sign source package
-
-**-uc**
-> Do not sign changes file
+**import-dscs**
+> Import several Debian source packages into a Git repository, sorted by version.
 
 # CONFIGURATION
 
@@ -81,7 +96,7 @@ gbp supports building in clean environments via pbuilder, sbuild, or cowbuilder 
 
 # CAVEATS
 
-Requires understanding of both Git branching and Debian packaging. Branch naming conventions (upstream, debian, pristine-tar) must be followed. Complex merge scenarios may require manual intervention.
+Requires understanding of both Git branching and Debian packaging. Branch naming conventions (upstream, debian, pristine-tar) must be followed. Complex merge scenarios may require manual intervention. Options prefixed with **--git-** are for gbp itself; other options are passed through to the underlying build command.
 
 # HISTORY
 
@@ -89,4 +104,4 @@ git-buildpackage was created by Guido Gunther and first released around **2007**
 
 # SEE ALSO
 
-[debuild](/man/debuild)(1), [dpkg-buildpackage](/man/dpkg-buildpackage)(1), [pbuilder](/man/pbuilder)(8), [git](/man/git)(1)
+[debuild](/man/debuild)(1), [dpkg-buildpackage](/man/dpkg-buildpackage)(1), [pbuilder](/man/pbuilder)(8), [sbuild](/man/sbuild)(1), [git](/man/git)(1)

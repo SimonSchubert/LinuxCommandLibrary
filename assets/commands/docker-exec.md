@@ -48,6 +48,12 @@ execute commands in a running container
 **-e**, **--env** _list_
 > Set environment variables.
 
+**--env-file** _file_
+> Read environment variables from a file.
+
+**--detach-keys** _sequence_
+> Override the key sequence for detaching from the container.
+
 **--privileged**
 > Give extended privileges.
 

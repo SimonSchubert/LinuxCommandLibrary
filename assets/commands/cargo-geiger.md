@@ -68,4 +68,4 @@ Analysis is based on source-level detection and may not catch all forms of unsaf
 
 # SEE ALSO
 
-[cargo](/man/cargo)(1), [cargo-audit](/man/cargo-audit)(1)
+[cargo](/man/cargo)(1)

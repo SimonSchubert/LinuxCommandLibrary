@@ -69,4 +69,4 @@ For authorized forensic investigation only. Web interface requires browser. Lega
 
 # SEE ALSO
 
-[sleuthkit](/man/sleuthkit)(1), [foremost](/man/foremost)(1), [bulk_extractor](/man/bulk_extractor)(1)
+[foremost](/man/foremost)(1), [bulk_extractor](/man/bulk_extractor)(1)

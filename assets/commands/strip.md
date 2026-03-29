@@ -39,7 +39,7 @@ Keep only **debug** information
 # PARAMETERS
 
 **-s, --strip-all**
-> Remove all symbols (default)
+> Remove all symbols
 
 **-g, -S, -d, --strip-debug**
 > Remove debugging symbols only
@@ -77,11 +77,29 @@ Keep only **debug** information
 **-D, --enable-deterministic-archives**
 > Use zero for UID/GID/timestamps in archives
 
+**--strip-dwo**
+> Remove DWARF .dwo sections (split debug info)
+
+**--strip-section-headers**
+> Strip ELF section headers (ELF files only)
+
+**--remove-relocations** _pattern_
+> Remove relocation information from matching sections
+
+**--keep-file-symbols**
+> Retain symbols identifying source file names
+
+**--keep-section-symbols**
+> Retain symbols identifying section names
+
+**-M, --merge-notes**
+> Merge and remove duplicate notes in ELF files
+
 **-w, --wildcard**
-> Allow regex in symbol names
+> Allow shell-style wildcards in symbol names for -K and -N
 
 **-v, --verbose**
-> List processed files
+> List all processed files
 
 **--help**
 > Display help
@@ -105,4 +123,4 @@ Stripping modifies files in place; back up originals if needed. Over-stripping c
 
 # SEE ALSO
 
-[objcopy](/man/objcopy)(1), [objdump](/man/objdump)(1), [readelf](/man/readelf)(1), [nm](/man/nm)(1)
+[objcopy](/man/objcopy)(1), [objdump](/man/objdump)(1), [readelf](/man/readelf)(1), [nm](/man/nm)(1), [ar](/man/ar)(1), [size](/man/size)(1)

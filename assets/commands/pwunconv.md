@@ -37,5 +37,5 @@ pwunconv is part of **shadow-utils** for reverting shadow passwords.
 
 # SEE ALSO
 
-[pwconv](/man/pwconv)(8), [grpunconv](/man/grpunconv)(8), [passwd](/man/passwd)(5)
+[pwconv](/man/pwconv)(1), [grpunconv](/man/grpunconv)(1), [passwd](/man/passwd)(1)
 

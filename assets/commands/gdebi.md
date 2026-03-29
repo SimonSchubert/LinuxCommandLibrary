@@ -10,15 +10,15 @@ local .deb package installer with dependency resolution
 
 Do not show **progress** information
 
-```gdebi [path/to/package.deb] -q```
+```gdebi --quiet [path/to/package.deb]```
 
 Set an **APT configuration option**
 
-```gdebi [path/to/package.deb] -o [APT_OPTS]```
+```gdebi --option [APT_OPTS] [path/to/package.deb]```
 
-Use **alternative root** dir
+Use **alternative root** directory
 
-```gdebi [path/to/package.deb] --root [path/to/root_directory]```
+```gdebi --root [path/to/root_directory] [path/to/package.deb]```
 
 Display **version**
 
@@ -43,7 +43,7 @@ Display **version**
 > Run non-interactively (assume yes to all prompts)
 
 **--apt-line**
-> Print APT sources.list line for the package
+> Simulate only; print an apt-get install compatible line to stderr
 
 **--version**
 > Display version information

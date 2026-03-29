@@ -95,4 +95,4 @@ Requires access to LSF job event logs. Historical data availability depends on l
 
 # SEE ALSO
 
-[bjobs](/man/bjobs)(1), [bsub](/man/bsub)(1), [bkill](/man/bkill)(1), [bacct](/man/bacct)(1)
+[bjobs](/man/bjobs)(1), [bsub](/man/bsub)(1), [bkill](/man/bkill)(1)

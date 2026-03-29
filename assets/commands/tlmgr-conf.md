@@ -4,46 +4,74 @@ Display and modify TeX Live configuration
 
 # TLDR
 
-**Show configuration**
+**Show general TeX Live configuration**
 
 ```tlmgr conf```
 
-**Show texmf.cnf**
+**Show all texmf.cnf settings**
 
 ```tlmgr conf texmf```
 
-**Show tlmgr settings**
+**Show the value of a single tlmgr setting**
 
-```tlmgr conf tlmgr```
+```tlmgr conf tlmgr [setting]```
 
-**Set configuration value**
+**Set a tlmgr configuration value**
 
-```tlmgr conf tlmgr [option] [value]```
+```tlmgr conf tlmgr [setting] [value]```
+
+**Delete a setting from the tlmgr config file**
+
+```tlmgr conf tlmgr --delete [setting]```
+
+**List auxiliary texmf trees**
+
+```tlmgr conf auxtrees show```
+
+**Add an auxiliary texmf tree**
+
+```tlmgr conf auxtrees add [/path/to/tree]```
+
+**Remove an auxiliary texmf tree**
+
+```tlmgr conf auxtrees remove [/path/to/tree]```
 
 # SYNOPSIS
 
-**tlmgr conf** [_system_] [_option_ [_value_]]
+**tlmgr conf** [texmf|tlmgr|updmap [**--conffile** _file_] [**--delete**] [_key_ [_value_]]]
+
+**tlmgr conf** auxtrees [**--conffile** _file_] [show|add|remove] [_value_]
 
 # PARAMETERS
 
 **texmf**
-> Show texmf.cnf configuration.
+> Show or set values in texmf.cnf.
 
 **tlmgr**
-> Show/set tlmgr configuration.
+> Show or set values in the tlmgr configuration file.
 
 **updmap**
-> Show updmap configuration.
+> Show or set values in the first found updmap.cfg.
 
 **auxtrees**
-> Manage auxiliary trees.
+> Manage additional (auxiliary) texmf trees. Subcommands: show, add, remove.
 
-_option_ _value_
-> Set configuration option.
+**--conffile** _file_
+> Use the specified configuration file instead of the default.
+
+**--delete**
+> Remove the key entirely from the configuration file (rather than commenting it out).
+
+_key_ _value_
+> Set the configuration key to value in the chosen config file.
 
 # DESCRIPTION
 
-**tlmgr conf** displays and modifies TeX Live configuration settings. It can show paths, directories, and option values for the various TeX Live subsystems (texmf, tlmgr, updmap). When given an option and value, it modifies the configuration. Part of the TeX Live Manager.
+**tlmgr conf** displays and modifies TeX Live configuration settings. With no arguments it shows general configuration information (active files, paths, and settings). With a system argument (texmf, tlmgr, or updmap) it shows all key/value pairs saved in the corresponding config file. Supplying a key shows only that key's value; also supplying a value sets it. The **--delete** flag removes a key entirely rather than overriding it.
+
+The **auxtrees** subcommand manages additional texmf trees that are searched alongside the standard TeX Live tree.
+
+Part of the TeX Live Manager.
 
 # SEE ALSO
 

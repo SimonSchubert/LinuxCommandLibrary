@@ -32,6 +32,10 @@ Manage content delivery network distributions and caching.
 
 ```aws cloudfront get-invalidation --distribution-id [EDFDVBD6EXAMPLE] --id [I2J0I21PCUYOIK]```
 
+**Wait for a distribution to be deployed**
+
+```aws cloudfront wait distribution-deployed --id [EDFDVBD6EXAMPLE]```
+
 # SYNOPSIS
 
 **aws cloudfront** _command_ [_options_]
@@ -63,7 +67,19 @@ Manage content delivery network distributions and caching.
 > Remove a distribution (must be disabled first)
 
 **create-origin-access-control**
-> Create OAC for secure S3 access
+> Create OAC for secure S3 access.
+
+**get-distribution-config**
+> Get only the distribution configuration (without status metadata).
+
+**create-function**
+> Create a CloudFront Function for lightweight edge compute.
+
+**sign**
+> Sign CloudFront URLs or cookies for private content.
+
+**wait**
+> Wait for a distribution to reach a specific state (e.g., deployed).
 
 **--distribution-id** _id_
 > Distribution identifier (e.g., EDFDVBD6EXAMPLE)
@@ -93,11 +109,13 @@ Manage content delivery network distributions and caching.
 
 **Origin Access Control (OAC)** secures S3 origins by restricting direct bucket access, requiring requests to go through CloudFront.
 
+**CloudFront Functions** and **Lambda@Edge** allow running code at edge locations to customize request/response handling.
+
 Use quotes around paths with wildcards in shell commands to prevent glob expansion.
 
 # CAVEATS
 
-Distribution deletion requires disabling first, then waiting for status to change. Invalidations have a cost after the free tier. Distribution changes take time to propagate globally. Config updates require the current ETag value via **--if-match**.
+Distribution deletion requires disabling first, then waiting for the status to change to `Deployed`. Invalidations have a cost after the first 1,000 paths per month. Distribution changes take time to propagate globally. Config updates require the current ETag value via **--if-match**.
 
 # HISTORY
 

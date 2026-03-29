@@ -22,18 +22,21 @@ Display **help**
 
 # SYNOPSIS
 
-**pipewire-pulse** [**-c** _config_] [**-v**...] [**-h**|**--help**]
+**pipewire-pulse** [**-c** _config_] [**-v**...] [**-h**|**--help**] [**--version**]
 
 # PARAMETERS
 
-**-c, --config _file_**
-> Use alternate configuration file
+**-c, --config** _file_
+> Use alternate configuration file (default: pipewire-pulse.conf)
 
 **-v, --verbose**
 > Increase verbosity level (stackable)
 
 **-h, --help**
 > Display help information
+
+**--version**
+> Display version information
 
 # DESCRIPTION
 
@@ -49,6 +52,14 @@ The daemon translates PulseAudio protocol messages to PipeWire operations, maint
 **~/.config/pipewire/pipewire-pulse.conf.d/**
 > User-level drop-in directory for configuration overrides.
 
+# ENVIRONMENT
+
+**PULSE_RUNTIME_PATH**, **XDG_RUNTIME_DIR**
+> Directory in which to create the native protocol PulseAudio socket.
+
+**PULSE_LATENCY_MSEC**
+> Extra buffering latency in milliseconds added for libpulse client applications.
+
 # CAVEATS
 
 Cannot run simultaneously with actual PulseAudio daemon. Usually started automatically by systemd. Requires main pipewire daemon to be running. Some advanced PulseAudio features may not be fully supported.
@@ -59,4 +70,4 @@ Cannot run simultaneously with actual PulseAudio daemon. Usually started automat
 
 # SEE ALSO
 
-[pipewire](/man/pipewire)(1), [pulseaudio](/man/pulseaudio)(1), [pactl](/man/pactl)(1)
+[pipewire](/man/pipewire)(1), [pulseaudio](/man/pulseaudio)(1), [pactl](/man/pactl)(1), [pacmd](/man/pacmd)(1), [wpctl](/man/wpctl)(1), [pw-top](/man/pw-top)(1)

@@ -66,16 +66,28 @@ Protein query to nucleotide database search
 > Maximum number of aligned sequences to keep.
 
 **-word_size** _n_
-> Word size for initial match.
+> Word size for initial match (default: 3 for tblastn, 6 for tblastn-fast).
 
 **-matrix** _name_
-> Scoring matrix (e.g., BLOSUM62, PAM30).
+> Scoring matrix (default: BLOSUM62). Other options include PAM30, PAM70, BLOSUM45, BLOSUM80.
+
+**-gapopen** _n_
+> Cost to open a gap.
+
+**-gapextend** _n_
+> Cost to extend a gap.
+
+**-db_gencode** _n_
+> Genetic code to translate database sequences (default: 1).
 
 **-comp_based_stats** _mode_
 > Composition-based statistics mode (0-3).
 
 **-seg** _options_
 > Filter query with SEG algorithm.
+
+**-threshold** _n_
+> Minimum score to add a word to the BLAST lookup table (default: 13 for tblastn, 21 for tblastn-fast).
 
 **-h**
 > Print abbreviated help.

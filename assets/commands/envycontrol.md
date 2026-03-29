@@ -40,22 +40,22 @@ The tool simplifies power management and performance tuning on dual-GPU systems 
 
 # PARAMETERS
 
-**-s, --switch** _mode_
+**-s**, **--switch** _mode_
 > Switch to nvidia, integrated, or hybrid
 
 **--dm** _manager_
 > Specify display manager
 
-**-q, --query**
+**-q**, **--query**
 > Show current GPU mode
 
 **--reset**
 > Reset to default settings
 
-**-h, --help**
+**-h**, **--help**
 > Display help message
 
-**-v, --version**
+**-v**, **--version**
 > Display version
 
 # CAVEATS
@@ -64,4 +64,4 @@ Requires Nvidia Optimus laptop. Changes require reboot to take effect. Display m
 
 # SEE ALSO
 
-[nvidia-smi](/man/nvidia-smi)(1), [prime-select](/man/prime-select)(1)
+[nvidia-smi](/man/nvidia-smi)(1)

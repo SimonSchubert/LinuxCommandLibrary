@@ -1,31 +1,35 @@
 # TAGLINE
 
-sharpens PGM grayscale images using edge enhancement
+Edge-enhance a PGM grayscale image
 
 # TLDR
 
-**Enhance image sharpness**
+**Enhance image sharpness** with default intensity (9)
 
 ```pgmenhance [input.pgm] > [output.pgm]```
 
-**Enhance with custom amount**
+**Enhance with custom intensity** (1 = lowest, 9 = highest)
 
 ```pgmenhance -[3] [input.pgm] > [output.pgm]```
 
+**Read from stdin**
+
+```cat [input.pgm] | pgmenhance -[5] > [output.pgm]```
+
 # SYNOPSIS
 
-**pgmenhance** [_options_] [_file_]
+**pgmenhance** [_-N_] [_pgmfile_]
 
 # PARAMETERS
 
-**-** _n_
-> Enhancement amount (1-9, default 3).
+**-** _N_
+> Enhancement intensity from **1** (lowest) to **9** (highest). Default is **9**.
 
 # DESCRIPTION
 
-**pgmenhance** sharpens PGM grayscale images using edge enhancement. Applies unsharp masking to increase apparent sharpness. Part of Netpbm toolkit.
+**pgmenhance** reads a PGM image as input, enhances the edges, and writes a PGM image as output. The enhancement technique is derived from Philip R. Thompson's **xim** program. Part of the **Netpbm** toolkit.
 
 # SEE ALSO
 
-[pnmsharpen](/man/pnmsharpen)(1), [pgmnorm](/man/pgmnorm)(1)
+[pgmnorm](/man/pgmnorm)(1), [pgmedge](/man/pgmedge)(1), [pamedge](/man/pamedge)(1)
 

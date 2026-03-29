@@ -62,4 +62,4 @@ dmevent_tool is part of the **LVM2** device-mapper tools developed by **Red Hat*
 
 # SEE ALSO
 
-[dmeventd](/man/dmeventd)(8), [dmsetup](/man/dmsetup)(8), [lvm](/man/lvm)(8)
+[dmsetup](/man/dmsetup)(1), [lvm](/man/lvm)(1)

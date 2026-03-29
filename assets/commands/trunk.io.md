@@ -4,25 +4,37 @@ Unified code quality linting and formatting
 
 # TLDR
 
-**Initialize trunk in project**
+**Initialize trunk in a project**
 
 ```trunk init```
 
-**Check code**
+**Check changed files for issues**
 
 ```trunk check```
 
-**Format code**
+**Check all files in the repository**
+
+```trunk check --all```
+
+**Check and auto-fix issues**
+
+```trunk check --fix```
+
+**Format changed files**
 
 ```trunk fmt```
 
-**Upgrade trunk tools**
+**Format all files in the repository**
+
+```trunk fmt --all```
+
+**Run only a specific linter**
+
+```trunk check --filter [eslint]```
+
+**Upgrade trunk and all managed tools**
 
 ```trunk upgrade```
-
-**List available linters**
-
-```trunk check list```
 
 # SYNOPSIS
 
@@ -31,32 +43,54 @@ Unified code quality linting and formatting
 # PARAMETERS
 
 **init**
-> Initialize trunk configuration.
+> Initialize trunk configuration in the current repository, creating a `.trunk/trunk.yaml` file.
 
-**check**
-> Run all enabled linters.
+**check** [_paths..._]
+> Run all enabled linters on changed files. Without `--all`, only checks files modified relative to the upstream branch.
 
-**fmt**
-> Format code.
+**fmt** [_paths..._]
+> Format code using enabled formatters. Equivalent to `trunk check --fix --filter` set to all formatters.
 
 **upgrade**
-> Upgrade trunk and tools.
+> Upgrade trunk CLI and all managed tool versions.
 
 **actions**
-> Manage trunk actions.
+> Manage trunk actions (git hooks, notifications, etc.).
+
+**tools**
+> Manage linter and formatter tool installations.
+
+**login**
+> Authenticate with the Trunk platform.
 
 **--all**
-> Check all files.
+> Check or format all files in the repository, not just changed files.
 
 **--fix**
-> Auto-fix issues.
+> Automatically apply fixes for issues that support auto-fixing.
 
 **--filter** _linter_
-> Run specific linter.
+> Restrict check to a specific linter or formatter.
+
+**--upstream** _branch_
+> Explicitly set the upstream branch for change detection (auto-detected by default).
+
+**--no-progress**
+> Suppress progress reporting during checks.
+
+**--ci**
+> Run in CI mode with appropriate output formatting.
+
+**--output** _format_
+> Set output format (e.g., text, json).
 
 # DESCRIPTION
 
-**trunk** is a code quality tool that manages multiple linters and formatters. Provides unified interface for static analysis, formatting, and CI integration. Auto-detects and configures appropriate tools for your codebase.
+**trunk** is a code quality tool that manages multiple linters and formatters through a unified interface. It auto-detects and configures appropriate tools for your codebase, providing static analysis, formatting, and CI integration.
+
+By default, trunk operates in hold-the-line mode: it only checks files changed relative to the upstream branch, preventing existing issues from blocking new work. Use `--all` to check the entire repository.
+
+Configuration is stored in `.trunk/trunk.yaml` where linters, formatters, and actions can be enabled, disabled, or customized.
 
 # SEE ALSO
 

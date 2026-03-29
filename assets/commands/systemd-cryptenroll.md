@@ -28,6 +28,14 @@ Enroll **TPM2** with PIN
 
 ```systemd-cryptenroll --tpm2-device auto --tpm2-with-pin yes [/dev/luks_device]```
 
+Enroll **TPM2** bound to specific PCR registers
+
+```systemd-cryptenroll --tpm2-device auto --tpm2-pcrs [7+11] [/dev/luks_device]```
+
+**List** candidate LUKS2 block devices
+
+```systemd-cryptenroll --list-devices```
+
 **Wipe** enrollment slots
 
 ```systemd-cryptenroll --wipe-slot [empty|password|fido2|pkcs11|tpm2|recovery|all] [/dev/luks_device]```
@@ -39,31 +47,70 @@ Enroll **TPM2** with PIN
 # PARAMETERS
 
 **--password**
-> Enroll a new password
+> Enroll a regular passphrase for volume unlocking.
 
 **--recovery-key**
-> Enroll a randomly generated recovery passphrase
+> Enroll a computer-generated recovery key with high entropy.
 
-**--pkcs11-token-uri=** _list|auto|URI_
-> List or enroll PKCS#11 token (smartcard)
-
-**--fido2-device=** _list|auto|PATH_
-> List or enroll FIDO2 device
-
-**--fido2-with-user-verification=** _BOOL_
-> Require biometric verification for FIDO2
-
-**--tpm2-device=** _auto|PATH_
-> Enroll TPM2 security chip
-
-**--tpm2-with-pin=** _BOOL_
-> Require additional PIN with TPM2
+**--unlock-key-file=** _PATH_
+> Use a file containing the unlock key instead of reading from stdin.
 
 **--unlock-fido2-device=** _PATH_
-> Unlock using FIDO2 device (to enroll another method)
+> Unlock using a FIDO2 device to enroll another method. Supports "auto" for automatic detection.
 
-**--wipe-slot=** _TYPE_
-> Remove enrolled methods (password, fido2, pkcs11, tpm2, recovery, all, empty)
+**--unlock-tpm2-device=** _PATH_
+> Unlock using a TPM2 device to enroll another method. Supports "auto" for automatic detection.
+
+**--pkcs11-token-uri=** _list|auto|URI_
+> List or enroll a PKCS#11 security token or smartcard.
+
+**--fido2-device=** _list|auto|PATH_
+> List or enroll a FIDO2 security token with hmac-secret extension.
+
+**--fido2-credential-algorithm=** _STRING_
+> COSE algorithm for credential generation. Supported: "es256" (default), "rs256", "eddsa".
+
+**--fido2-with-client-pin=** _BOOL_
+> Require PIN entry when unlocking with FIDO2. Defaults to "yes".
+
+**--fido2-with-user-presence=** _BOOL_
+> Require user presence (tapping the token) when unlocking. Defaults to "yes".
+
+**--fido2-with-user-verification=** _BOOL_
+> Require biometric user verification for FIDO2. Defaults to "no".
+
+**--tpm2-device=** _list|auto|PATH_
+> List or enroll a TPM2 security chip.
+
+**--tpm2-pcrs=** _PCR[+PCR...]_
+> Bind enrollment to specific PCR registers (range 0-23). Defaults to PCR 7.
+
+**--tpm2-with-pin=** _BOOL_
+> Require additional PIN entry for TPM2 unlocking.
+
+**--tpm2-public-key=** _PATH_
+> PEM-encoded RSA public key for signed PCR policy.
+
+**--tpm2-public-key-pcrs=** _PCR[+PCR...]_
+> PCR registers to bind the signed policy to.
+
+**--tpm2-signature=** _PATH_
+> TPM2 PCR signature file for verification.
+
+**--wipe-slot=** _SLOT[,SLOT...]_
+> Wipe specified LUKS2 key slots. Accepts numeric indexes or: "all", "empty", "password", "recovery", "pkcs11", "fido2", "tpm2".
+
+**--list-devices**
+> Display candidate block devices containing LUKS superblocks.
+
+**-h**, **--help**
+> Show help text and exit.
+
+**--version**
+> Print version information and exit.
+
+**--no-pager**
+> Do not pipe output into a pager.
 
 # DESCRIPTION
 
@@ -73,7 +120,7 @@ The tool stores token metadata in LUKS2's JSON token area, enabling automatic un
 
 # CAVEATS
 
-Works only with LUKS2 volumes, not LUKS1. Requires an existing unlock method to enroll new ones. TPM2 enrollments can be bound to specific PCR states, which may break if software is updated. Multiple FIDO2 tokens may require multiple PIN prompts.
+Works only with LUKS2 volumes, not LUKS1. Requires an existing unlock method to enroll new ones. TPM2 enrollments bound to specific PCR states may break when firmware or boot software is updated. FIDO2 enrollment requires a token that supports the hmac-secret extension.
 
 # HISTORY
 

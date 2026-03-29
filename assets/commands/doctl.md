@@ -36,9 +36,17 @@ official DigitalOcean command-line interface
 
 ```doctl databases list```
 
+**List Spaces** (object storage buckets)
+
+```doctl spaces list```
+
 **Create a container registry**
 
 ```doctl registry create [name]```
+
+**List SSH keys**
+
+```doctl compute ssh-key list```
 
 **Output as JSON**
 
@@ -51,13 +59,28 @@ official DigitalOcean command-line interface
 # PARAMETERS
 
 _COMMAND_
-> Resource type: account, compute, kubernetes, apps, databases, monitoring, registry, serverless, projects, etc.
+> Resource type: account, auth, compute, apps, databases, kubernetes, monitoring, projects, registry, serverless, spaces, vpcs, etc.
 
 **auth** **init**
 > Authenticate with API token.
 
+**auth** **list**
+> List available authentication contexts.
+
 **compute** **droplet** _ACTION_
-> Manage droplets.
+> Manage Droplets (create, list, delete, get, etc.).
+
+**compute** **volume** _ACTION_
+> Manage block storage volumes.
+
+**compute** **domain** _ACTION_
+> Manage DNS domains and records.
+
+**compute** **firewall** _ACTION_
+> Manage cloud firewalls.
+
+**compute** **load-balancer** _ACTION_
+> Manage load balancers.
 
 **kubernetes** **cluster** _ACTION_
 > Manage Kubernetes clusters.
@@ -66,7 +89,10 @@ _COMMAND_
 > Manage App Platform applications.
 
 **databases** _ACTION_
-> Manage databases.
+> Manage managed database clusters.
+
+**spaces** _ACTION_
+> Manage Spaces object storage.
 
 **registry** _ACTION_
 > Manage container registries.
@@ -75,7 +101,13 @@ _COMMAND_
 > Manage serverless functions.
 
 **monitoring** _ACTION_
-> Manage monitoring alert policies.
+> Manage monitoring alert policies and uptime checks.
+
+**projects** _ACTION_
+> Organize and assign resources to projects.
+
+**--access-token** _TOKEN_
+> DigitalOcean API token. Overrides config and DIGITALOCEAN_ACCESS_TOKEN.
 
 **--output** _FORMAT_
 > Output format: text, json.
@@ -85,6 +117,12 @@ _COMMAND_
 
 **--context** _NAME_
 > Use named authentication context.
+
+**--trace**
+> Show a log of network activity while performing a command.
+
+**--verbose**
+> Enable verbose output.
 
 **--help**
 > Display help information.

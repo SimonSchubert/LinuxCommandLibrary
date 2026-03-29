@@ -1,6 +1,6 @@
 # TAGLINE
 
-runs continuous integration builds for PlatformIO projects
+Run continuous integration builds for PlatformIO projects
 
 # TLDR
 
@@ -16,32 +16,56 @@ runs continuous integration builds for PlatformIO projects
 
 ```pio ci --project-conf [platformio.ini] [src/]```
 
+**Exclude files** from the build
+
+```pio ci --exclude [src/examples] --board [esp32dev] [src/]```
+
+**Pass project options** inline
+
+```pio ci --board [uno] -O "lib_deps=[ArduinoJSON]" [src/]```
+
+**Build with verbose output**
+
+```pio ci --board [uno] --verbose [src/]```
+
 # SYNOPSIS
 
-**pio ci** [_options_] _source_...
+**pio ci** [_OPTIONS_] [_SRC_]
 
 # PARAMETERS
 
-**--lib** _path_
-> Library path to include.
+**-l**, **--lib** _path_
+> Source code which will be copied to the build directory's lib folder. Can be specified multiple times.
 
-**--board** _id_
-> Target board.
+**-b**, **--board** _id_
+> Build project with automatically pre-generated environments based on board settings. Can be specified multiple times.
 
-**--project-conf** _file_
-> Use existing platformio.ini.
+**--exclude** _path_
+> Exclude directories and/or files from the build directory. Path must be relative to the PlatformIO project within the build directory. Supports glob patterns.
+
+**-c**, **--project-conf** _file_
+> Build project using a pre-configured platformio.ini file.
+
+**-O**, **--project-option** _option_
+> Pass additional project configuration options. Can be specified multiple times for different options.
+
+**-e**, **--environment** _name_
+> Process specified environments declared in the project configuration. Can be specified multiple times.
+
+**--build-dir** _path_
+> Path to directory where PlatformIO will initialise the new project. Defaults to a temporary directory.
 
 **--keep-build-dir**
-> Don't delete build directory.
+> Don't remove the build directory after the build process.
 
-**-O** _option_
-> Project option.
+**-v**, **--verbose**
+> Show detailed information when processing environments.
 
 # DESCRIPTION
 
-**pio ci** runs continuous integration builds for PlatformIO projects. Builds source files against specified boards without requiring a project structure. Used in CI/CD pipelines.
+**pio ci** runs continuous integration builds for PlatformIO projects. It builds source files against specified boards without requiring an existing project structure. Using the provided source and library contents, PlatformIO initialises a new project in a build directory and processes it via the **pio run** command. Commonly used in CI/CD pipelines.
 
 # SEE ALSO
 
-[pio-run](/man/pio-run)(1), [pio-test](/man/pio-test)(1)
+[pio-run](/man/pio-run)(1), [pio-test](/man/pio-test)(1), [pio](/man/pio)(1)
 

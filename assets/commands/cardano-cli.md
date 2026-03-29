@@ -40,9 +40,9 @@ Command-line interface for the Cardano blockchain
 
 **cardano-cli** is the command-line interface for interacting with the Cardano blockchain. It provides functionality for key generation, address creation, transaction building, and querying the blockchain state.
 
-The tool interfaces with a running cardano-node to query blockchain data and submit transactions. It supports both mainnet and various test networks (preprod, preview). Operations include managing stake keys, delegating to stake pools, and minting native tokens.
+The tool interfaces with a running cardano-node to query blockchain data and submit transactions. It supports both mainnet and various test networks (preprod, preview). Operations include managing stake keys, delegating to stake pools, minting native tokens, and participating in on-chain governance (Conway era).
 
-Cardano uses an extended UTxO (EUTxO) model where transactions consume and produce unspent transaction outputs. The CLI handles the complexity of building valid transactions with proper fees and balancing.
+Cardano uses an extended UTxO (EUTxO) model where transactions consume and produce unspent transaction outputs. The CLI handles the complexity of building valid transactions with proper fees and balancing. As of version 10.11, the default era is Conway.
 
 # PARAMETERS
 
@@ -61,8 +61,17 @@ Cardano uses an extended UTxO (EUTxO) model where transactions consume and produ
 **stake-pool**
 > Stake pool operations.
 
+**governance**
+> Governance commands: actions, DRep registration, committee, and voting (Conway era).
+
 **key**
 > Key utility commands.
+
+**node**
+> Node operational certificate and key-evolving signature commands.
+
+**hash**
+> Hashing utilities for files and scripts.
 
 **genesis**
 > Genesis block commands.

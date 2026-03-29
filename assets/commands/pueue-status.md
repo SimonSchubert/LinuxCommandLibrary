@@ -37,9 +37,9 @@ Display pueue task queue state
 
 # DESCRIPTION
 
-**pueue status** displays the current state of all tasks. Shows queued, running, completed, and failed tasks. Displays task IDs, commands, status, and execution times.
+**pueue status** displays the current state of all tasks in the queue. Shows queued, running, completed, and failed tasks with their task IDs, commands, status, and execution times.
 
 # SEE ALSO
 
-[pueue](/man/pueue)(1), [pueue-add](/man/pueue-add)(1), [pueue-log](/man/pueue-log)(1)
+[pueue](/man/pueue)(1), [pueue-add](/man/pueue-add)(1), [pueue-log](/man/pueue-log)(1), [pueue-clean](/man/pueue-clean)(1), [pueue-follow](/man/pueue-follow)(1)
 
