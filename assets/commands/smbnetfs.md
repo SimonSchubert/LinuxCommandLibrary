@@ -8,6 +8,10 @@ FUSE filesystem for SMB network browsing
 
 ```smbnetfs [mountpoint]```
 
+Mount with a **custom config** file
+
+```smbnetfs -o config=[~/.smb/smbnetfs.conf] [mountpoint]```
+
 Mount with **debug** output
 
 ```smbnetfs -d [mountpoint]```
@@ -27,19 +31,37 @@ Mount in **foreground**
 # PARAMETERS
 
 **-f**
-> Run in foreground (do not daemonize)
+> Run in foreground (do not daemonize).
 
 **-d**
-> Enable debug output (implies -f)
+> Enable debug output (implies -f).
 
 **-o** _options_
-> Mount options (FUSE options)
+> Mount options (FUSE and smbnetfs options).
 
-**-h**
-> Display help
+**-o config=** _PATH_
+> Path to configuration file (default: ~/.smb/smbnetfs.conf).
 
-**-V**
-> Display version
+**-o smbnetfs_debug=** _N_
+> SMBNetFS debug level (N <= 10).
+
+**-o smb_debug_level=** _N_
+> Samba debug level (N <= 10).
+
+**-o smb_timeout=** _T_
+> Samba reply timeout in ms (default: 20000).
+
+**-o smb_tree_scan_period=** _T_
+> Network tree scanning interval in seconds (default: 300).
+
+**-o show_$_shares=** _BOOL_
+> Show hidden shares (default: off).
+
+**-h**, **--help**
+> Display help.
+
+**-V**, **--version**
+> Display version.
 
 # DESCRIPTION
 
@@ -49,14 +71,14 @@ Once mounted, navigating to the mountpoint reveals available workgroups, servers
 
 # CONFIGURATION
 
-Configuration is stored in **~/.smb/smbnetfs.conf** and can include:
+The configuration directory **~/.smb** should contain at least **smb.conf** (may be copied from /etc/samba/) and **smbnetfs.conf**. Configuration includes:
 
 - Default credentials for shares
 - Workgroup settings
 - Server-specific authentication
 - Mount options
 
-Credentials can also be stored in **~/.smb/smbnetfs.auth** for automatic authentication to specific servers or shares.
+Credentials can also be stored in **~/.smb/smbnetfs.auth** for automatic authentication to specific servers or shares. When built with libsecret support, passwords can be retrieved from a keyring.
 
 # CAVEATS
 
@@ -68,4 +90,4 @@ Requires FUSE support in the kernel. Performance may be slower than direct mount
 
 # SEE ALSO
 
-[smbclient](/man/smbclient)(1), [mount.cifs](/man/mount.cifs)(8), [fusermount](/man/fusermount)(1), [gvfs-mount](/man/gvfs-mount)(1)
+[smbclient](/man/smbclient)(1), [mount.cifs](/man/mount.cifs)(8), [fusermount](/man/fusermount)(1), [samba](/man/samba)(7)

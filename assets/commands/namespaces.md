@@ -1,6 +1,6 @@
 # TAGLINE
 
-are a Linux kernel feature that partitions kernel resources so that processes
+Overview of Linux kernel namespaces for resource isolation
 
 # TLDR
 
@@ -30,21 +30,21 @@ are a Linux kernel feature that partitions kernel resources so that processes
 
 # DESCRIPTION
 
-**Namespaces** are a Linux kernel feature that partitions kernel resources so that processes see different views of the system. They are fundamental to container technologies like Docker.
+**Namespaces** are a Linux kernel feature that wraps global system resources in an abstraction layer, making it appear to processes within a namespace that they have their own isolated instance of the resource. They are fundamental to container technologies like Docker and LXC.
 
 Each namespace type isolates a different aspect of the system.
 
 # NAMESPACE TYPES
 
 ```
-mnt   - Mount points
-pid   - Process IDs
-net   - Network stack
-ipc   - System V IPC
-uts   - Hostname/domain
-user  - User/group IDs
-cgroup - Cgroup root
-time  - System time
+mnt    - Mount points
+pid    - Process IDs
+net    - Network devices, stacks, ports
+ipc    - System V IPC, POSIX message queues
+uts    - Hostname and NIS domain name
+user   - User and group IDs
+cgroup - Cgroup root directory
+time   - Boot and monotonic clocks
 ```
 
 # RELATED TOOLS
@@ -58,10 +58,11 @@ ip netns  - Network namespace management
 
 # SYSTEM CALLS
 
-```c
-clone()    - Create new namespace
-unshare()  - Disassociate from namespace
-setns()    - Join namespace
+```
+clone()    - Create process in new namespace
+unshare()  - Disassociate from current namespace
+setns()    - Join an existing namespace
+ioctl()    - Discover namespace relationships
 ```
 
 # CAVEATS
@@ -74,4 +75,4 @@ Namespaces were incrementally added to Linux starting with mount namespaces in k
 
 # SEE ALSO
 
-[unshare](/man/unshare)(1), [nsenter](/man/nsenter)(1), [lsns](/man/lsns)(8), [cgroups](/man/cgroups)(7)
+[unshare](/man/unshare)(1), [nsenter](/man/nsenter)(1), [lsns](/man/lsns)(8), [clone](/man/clone)(2), [ip](/man/ip)(8), [cgroups](/man/cgroups)(7)

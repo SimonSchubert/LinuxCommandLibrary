@@ -81,8 +81,17 @@ RDS provides automated backups, point-in-time recovery, read replicas for scalin
 **create-db-cluster**
 > Create an Aurora cluster
 
+**describe-db-snapshots**
+> List and describe snapshots
+
+**delete-db-snapshot**
+> Delete a manual snapshot
+
 **failover-db-cluster**
 > Trigger Aurora failover
+
+**add-tags-to-resource**
+> Tag an RDS resource
 
 # CAVEATS
 

@@ -4,15 +4,25 @@ Alternative form of pct move-volume that moves container volumes
 
 # TLDR
 
-This command is an alias of **pct move-volume**
+**Move a container volume** to a different storage
 
-View documentation for the original command
+```pct move_volume [100] [rootfs] [local-lvm]```
 
-```tldr pct move-volume```
+**Move a volume** to a different container
+
+```pct move_volume [100] [mp0] --target-vmid [200] --target-volume [mp1]```
+
+**Move and delete** the original volume after copy
+
+```pct move_volume [100] [mp0] [local-zfs] --delete 1```
+
+**Move with I/O** bandwidth limit
+
+```pct move_volume [100] [rootfs] [local-lvm] --bwlimit [10240]```
 
 # SYNOPSIS
 
-**pct move_volume** _vmid_ _volume_ _storage_ [_options_]
+**pct move_volume** _vmid_ _volume_ [_storage_] [_options_]
 
 # PARAMETERS
 
@@ -20,25 +30,28 @@ _vmid_
 > Container ID (100-999999999).
 
 _volume_
-> Volume to move (e.g., rootfs, mp0, mp1).
+> Volume to move (rootfs, mp0-mp255, or unused0-unused255).
 
 _storage_
 > Target storage identifier.
 
-**--delete**
-> Delete the original volume after moving (default: 0).
+**--bwlimit** _number_
+> Override I/O bandwidth limit in KiB/s (default: from datacenter or storage config).
+
+**--delete** _boolean_
+> Delete the original volume after successful copy. By default the original is kept as an unused volume entry (default: 0).
 
 **--digest** _string_
-> Prevent concurrent modifications with a config digest.
+> Prevent changes if the current configuration file has a different SHA1 digest.
 
 **--target-digest** _string_
-> Target volume config digest to detect concurrent modifications.
+> Prevent changes if the target container configuration file has a different SHA1 digest.
 
 **--target-vmid** _vmid_
 > Target container ID (for moving a volume to a different container).
 
 **--target-volume** _volume_
-> Target volume name (when moving between containers).
+> Target volume key (defaults to the source volume key).
 
 # DESCRIPTION
 

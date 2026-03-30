@@ -72,14 +72,32 @@ GitHub official command line interface
 **codespace**
 > Manage GitHub Codespaces.
 
+**search**
+> Search repositories, issues, and pull requests across GitHub.
+
+**project**
+> Manage GitHub Projects.
+
+**cache**
+> Manage GitHub Actions caches.
+
 **secret**
 > Manage secrets for GitHub Actions.
+
+**variable**
+> Manage GitHub Actions variables.
+
+**label**
+> Manage issue and PR labels.
 
 **extension**
 > Manage gh CLI extensions.
 
 **api**
 > Make authenticated GitHub API requests.
+
+**status**
+> Display status of relevant issues, pull requests, and notifications.
 
 **--help**
 > Display help information.
@@ -113,4 +131,4 @@ gh was released by **GitHub** in **2020** as the successor to hub. It's written 
 
 # SEE ALSO
 
-[git](/man/git)(1), [hub](/man/hub)(1), [gh-auth](/man/gh-auth)(1), [gh-pr](/man/gh-pr)(1), [gh-issue](/man/gh-issue)(1), [gh-repo](/man/gh-repo)(1), [gh-run](/man/gh-run)(1), [gh-release](/man/gh-release)(1)
+[git](/man/git)(1), [hub](/man/hub)(1), [gh-auth](/man/gh-auth)(1), [gh-pr](/man/gh-pr)(1), [gh-issue](/man/gh-issue)(1), [gh-repo](/man/gh-repo)(1), [gh-run](/man/gh-run)(1), [gh-release](/man/gh-release)(1), [gh-copilot](/man/gh-copilot)(1)

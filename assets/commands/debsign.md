@@ -24,9 +24,9 @@ GPG signing tool for Debian packages
 
 ```debsign -e "[newemail@example.com]" [package.changes]```
 
-**Sign without verifying** checksums
+**Sign files on a remote host**
 
-```debsign --no-conf [package.changes]```
+```debsign -r [user@remotehost] [package.changes]```
 
 # SYNOPSIS
 
@@ -43,20 +43,38 @@ _FILE_
 **-m** _MAINTAINER_
 > Specify maintainer for signing.
 
-**-e** _EMAIL_
-> Email address to match key.
+**-e** _MAINTAINER_
+> Same as -m but takes precedence over it.
 
-**-p** _COMMAND_
-> GPG command to use (default: gpg).
+**-r** [_username@_]_remotehost_
+> Sign files on specified remote host using scp for transfer.
+
+**-p** _PROGNAME_
+> Use specified GPG program instead of the default gpg.
 
 **-S**
-> Sign source-only upload.
+> Search for source-only .changes file instead of binary-build .changes file.
+
+**-a** _ARCH_
+> Specify the Debian architecture for .changes file search.
+
+**--re-sign**
+> Recreate signature if file has been signed already.
+
+**--no-re-sign**
+> Use existing signature if file has been signed already.
+
+**--debs-dir** _DIR_
+> Look for files to sign in specified directory instead of parent directory.
 
 **--no-conf**
-> Skip configuration file.
+> Do not read any configuration files. Must be the first option.
 
-**--help**
-> Display help information.
+**-h**, **--help**
+> Display help message and exit.
+
+**--version**
+> Display version and copyright information.
 
 # CONFIGURATION
 
@@ -65,7 +83,7 @@ _FILE_
 
 # DESCRIPTION
 
-**debsign** is used to sign Debian .changes and .dsc (Debian Source Control) files with a GPG key. Signing is required for uploading packages to Debian repositories, as it verifies the package maintainer's identity.
+**debsign** mimics the signing aspects of dpkg-buildpackage(1). It takes a .dsc, .buildinfo, or .changes file and signs it, and any child .dsc, .buildinfo, or .changes files referenced by it, using GPG. Signing is required for uploading packages to Debian repositories, as it verifies the package maintainer's identity.
 
 The tool finds the appropriate GPG key based on the maintainer field in the file being signed, or uses an explicitly specified key. It updates the file with GPG signatures that can be verified during package upload and installation.
 
@@ -81,4 +99,4 @@ debsign is part of the **devscripts** package, developed for Debian package main
 
 # SEE ALSO
 
-[dpkg-sig](/man/dpkg-sig)(1), [gpg](/man/gpg)(1), [dput](/man/dput)(1), [debuild](/man/debuild)(1)
+[gpg](/man/gpg)(1), [debuild](/man/debuild)(1), [dpkg-buildpackage](/man/dpkg-buildpackage)(1)

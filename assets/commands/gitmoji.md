@@ -24,6 +24,14 @@ Interactive emoji guide for commit messages
 
 ```gitmoji -g```
 
+**Remove commit hook**
+
+```gitmoji -r```
+
+**Update emoji list**
+
+```gitmoji -u```
+
 # SYNOPSIS
 
 **gitmoji** [_options_]
@@ -40,10 +48,19 @@ Interactive emoji guide for commit messages
 > Search for emoji.
 
 **-i**, **--init**
-> Initialize gitmoji hooks.
+> Initialize gitmoji as a commit hook.
+
+**-r**, **--remove**
+> Remove a previously initialized commit hook.
 
 **-g**, **--config**
 > Configure settings.
+
+**-u**, **--update**
+> Sync emoji list with the repo.
+
+**-v**, **--version**
+> Print installed version.
 
 **--help**
 > Display help information.

@@ -12,9 +12,9 @@ List packages **depending on** another
 
 ```synopkg list --depend-on [package]```
 
-**Start** or **stop** a package
+**Start, stop, or restart** a package
 
-```sudo synopkg [start|stop] [package]```
+```sudo synopkg [start|stop|restart] [package]```
 
 Show package **status**
 
@@ -56,6 +56,9 @@ Check for **updates**
 
 **stop** _package_
 > Stop a package service
+
+**restart** _package_
+> Restart a package service
 
 **status** _package_
 > Show package running status

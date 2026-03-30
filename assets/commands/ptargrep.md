@@ -1,74 +1,68 @@
 # TAGLINE
 
-Search for patterns inside tar archives
+Apply pattern matching to the contents of files in a tar archive
 
 # TLDR
 
-**Search in tar archive**
+**Search for a pattern and extract matching files**
 
-```ptargrep [pattern] [archive.tar]```
+```ptargrep "[pattern]" [archive.tar.gz]```
 
-**Case insensitive**
+**List matching file paths without extracting**
 
-```ptargrep -i [pattern] [archive.tar.gz]```
+```ptargrep --list-only "[pattern]" [archive.tar]```
 
-**List matching files**
+**Case-insensitive search**
 
-```ptargrep -l [pattern] [archive.tar]```
+```ptargrep -i "[pattern]" [archive.tar.gz]```
 
-**Search gzipped archive**
+**Extract matching files using basename only (ignore directory paths)**
 
-```ptargrep [pattern] [archive.tar.gz]```
+```ptargrep --basename "[pattern]" [archive.tar]```
 
-**Search bzip2 archive**
+**Search multiple archives with verbose output**
 
-```ptargrep [pattern] [archive.tar.bz2]```
-
-**Extract matching files**
-
-```ptargrep --extract [pattern] [archive.tar]```
+```ptargrep -v "[pattern]" [archive1.tar.gz] [archive2.tar.bz2]```
 
 # SYNOPSIS
 
-**ptargrep** [_-i_] [_-l_] [_--extract_] _pattern_ _archives_
+**ptargrep** [_options_] _pattern_ _tar-file_ ...
 
 # PARAMETERS
 
+**-b**, **--basename**
+> When extracting matching files, ignore the directory path from the archive and write to the current directory using only the basename. Files with identical names will overwrite each other.
+
 **-i**, **--ignore-case**
-> Case insensitive matching.
+> Case-insensitive pattern matching.
 
 **-l**, **--list-only**
-> List matching files only.
+> Print the pathname of each matching file to stdout instead of extracting.
 
-**--extract**
-> Extract matching files.
+**-v**, **--verbose**
+> Log debugging info to stderr.
 
-**--basename**
-> Match against basename.
-
-**--help**
-> Show help.
+**-?**, **--help**
+> Display help documentation.
 
 # DESCRIPTION
 
-**ptargrep** searches for patterns within tar archives. It examines file contents without full extraction.
+**ptargrep** allows you to apply pattern matching to the contents of files in a tar archive. The pattern is used as a Perl regular expression.
 
-Compressed archives are handled automatically. Gzip, bzip2, and xz compression supported.
+The default behavior is to extract each matching file from the archive. Use **--list-only** to only print pathnames of matching files instead.
 
-Pattern matching uses Perl regular expressions. Full regex power is available.
+Compressed archives (gzip, bzip2, xz) are handled automatically based on the file extension.
 
-List mode shows which files match. Useful for identifying relevant files.
-
-Extract mode pulls matching files. Only files containing the pattern are extracted.
+Multiple tar archive filenames can be specified and they will each be processed in turn.
 
 # CAVEATS
 
-Part of Perl distribution. Large archives may be slow. Memory usage with large files.
+Part of the Perl distribution (Archive::Tar module). Large archives may be slow to process. Memory usage can be high with large files since file contents are read into memory.
 
 # HISTORY
 
-**ptargrep** is distributed with Perl's Archive::Tar module. It provides grep-like functionality for archived content.
+**ptargrep** is distributed with Perl's **Archive::Tar** module. It provides grep-like functionality for archived content.
 
 # SEE ALSO
 
-[zgrep](/man/zgrep)(1), [tar](/man/tar)(1), [grep](/man/grep)(1), [perl](/man/perl)(1)
+[zgrep](/man/zgrep)(1), [tar](/man/tar)(1), [grep](/man/grep)(1), [perl](/man/perl)(1), [zipgrep](/man/zipgrep)(1)

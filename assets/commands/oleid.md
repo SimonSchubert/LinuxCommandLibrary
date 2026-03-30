@@ -1,24 +1,24 @@
 # TAGLINE
 
-analyzes Microsoft Office documents to detect potential security issues
+analyze Microsoft Office documents to detect potential security issues
 
 # TLDR
 
-**Analyze Office document**
+**Analyze an Office document**
 
 ```oleid [document.doc]```
 
 **Analyze multiple files**
 
-```oleid [*.docx]```
+```oleid [file1.docx] [file2.xlsx]```
 
-**Output as JSON**
+**Output results as JSON**
 
 ```oleid -j [document.xlsm]```
 
-**Verbose output**
+**Analyze a password-protected ZIP archive**
 
-```oleid -v [document.pptx]```
+```oleid -z [infected] [document.zip]```
 
 # SYNOPSIS
 
@@ -27,52 +27,46 @@ analyzes Microsoft Office documents to detect potential security issues
 # PARAMETERS
 
 **-j**, **--json**
-> JSON output.
+> Output results in JSON format.
 
 **-v**, **--verbose**
-> Verbose output.
+> Verbose output with additional details.
 
-**-z** _password_
-> ZIP password.
+**-z** _PASSWORD_
+> Password for opening ZIP-encrypted files.
 
-**-l** _level_
-> Log level.
+**-l** _LEVEL_
+> Set log level (DEBUG, INFO, WARNING, ERROR, CRITICAL).
+
+**-h**, **--help**
+> Display help message.
 
 # DESCRIPTION
 
-**oleid** analyzes Microsoft Office documents to detect potential security issues. It identifies macros, encrypted content, external links, and other indicators of malicious content.
+**oleid** analyzes Microsoft Office documents (OLE and OpenXML formats) to detect potential security issues. It identifies VBA macros, encrypted content, external links, embedded objects, and other indicators commonly found in malicious documents.
 
-Part of the oletools suite, oleid provides quick triage for suspicious documents.
+Part of the **oletools** suite, oleid provides quick triage for suspicious documents. It checks for indicators such as OLE format validity, application name, encryption, VBA macros, auto-executable macros, embedded Flash objects, and ObjectPool streams.
 
 # INDICATORS
 
 ```
+OLE format      - Valid OLE file structure
+Application     - Creating application name
 VBA Macros      - Contains VBA code
-Auto-executable - Auto-run macros
-Suspicious      - Suspicious keywords
-Encrypted       - Password protected
-External links  - External references
-Flash objects   - Embedded Flash
-```
-
-# EXAMPLE OUTPUT
-
-```
-Indicator                 Value
-VBA Macros                Yes
-Auto-executable           Yes
-Suspicious VBA            HIGH
-Flash Objects             No
+Auto-executable - Auto-run macros present
+Encrypted       - MS Office encryption detected
+ObjectPool      - Embedded OLE objects
+Flash objects   - Embedded Flash content
 ```
 
 # CAVEATS
 
-Heuristic analysis; may have false positives. Part of oletools package. Cannot analyze encrypted files without password.
+Heuristic analysis; may produce false positives. Requires the **oletools** Python package. Cannot analyze encrypted files without providing the password via **-z**.
 
 # HISTORY
 
-oleid was developed by **Philippe Lagadec** as part of **oletools**, a Python toolkit for analyzing Microsoft OLE and Office files.
+oleid was developed by **Philippe Lagadec** as part of **oletools**, a Python toolkit for analyzing Microsoft OLE2 files (Structured Storage / Compound File Binary Format) and MS Office documents.
 
 # SEE ALSO
 
-[olevba](/man/olevba)(1), [mraptor](/man/mraptor)(1), [oletools](/man/oletools)(1)
+[olevba](/man/olevba)(1), [mraptor](/man/mraptor)(1), [oletools](/man/oletools)(1), [clamscan](/man/clamscan)(1)

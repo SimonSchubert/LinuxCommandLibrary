@@ -26,9 +26,7 @@ creates audio connections between JACK ports
 
 # SYNOPSIS
 
-**jack_connect** _source_port_ _destination_port_
-
-**jack_disconnect** _source_port_ _destination_port_
+**jack_connect** [_options_] _source_port_ _destination_port_
 
 # PARAMETERS
 
@@ -38,21 +36,17 @@ _source_port_
 _destination_port_
 > Input port (client:port format).
 
+**-s**, **--server** _servername_
+> Connect to the named JACK server.
+
+**-h**, **--help**
+> Display help information.
+
 # DESCRIPTION
 
 **jack_connect** creates audio connections between JACK ports. JACK (JACK Audio Connection Kit) provides low-latency audio routing between applications.
 
 The command links output ports to input ports, enabling audio to flow between applications. Use **jack_lsp** to list available ports and **jack_disconnect** to remove connections.
-# List available ports
-jack_lsp
-
-# Connect microphone to recorder
-jack_connect system:capture_1 ardour:audio_in_1
-
-# Connect synth to speakers
-jack_connect yoshimi:output_L system:playback_1
-jack_connect yoshimi:output_R system:playback_2
-```
 
 # CAVEATS
 
@@ -64,4 +58,4 @@ JACK was created by **Paul Davis** and others, starting in **2002**. It provides
 
 # SEE ALSO
 
-[jackd](/man/jackd)(1), [jack_lsp](/man/jack_lsp)(1), [qjackctl](/man/qjackctl)(1)
+[jackd](/man/jackd)(1), [pulseaudio](/man/pulseaudio)(1), [pipewire](/man/pipewire)(1)

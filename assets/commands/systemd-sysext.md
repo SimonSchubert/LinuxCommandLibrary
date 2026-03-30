@@ -4,7 +4,11 @@ Manage system extension images
 
 # TLDR
 
-**List** extension images
+**Show current merge status**
+
+```systemd-sysext status```
+
+**List** installed extension images
 
 ```systemd-sysext list```
 
@@ -12,17 +16,17 @@ Manage system extension images
 
 ```systemd-sysext merge```
 
-Check **status**
-
-```systemd-sysext status```
-
 **Unmerge** all extensions
 
 ```systemd-sysext unmerge```
 
-**Refresh** (unmerge and merge)
+**Refresh** (unmerge then merge)
 
 ```systemd-sysext refresh```
+
+**Merge ignoring version compatibility checks**
+
+```systemd-sysext merge --force```
 
 # SYNOPSIS
 
@@ -30,20 +34,43 @@ Check **status**
 
 # COMMANDS
 
+**status**
+> Show current merge status. Default when invoked without a command.
+
 **list**
-> List installed extension images
+> List installed extension images.
 
 **merge**
-> Overlay extension images onto /usr and /opt
+> Overlay extension images onto /usr and /opt using overlayfs.
 
 **unmerge**
-> Remove extension overlays
-
-**status**
-> Show current merge status
+> Remove extension overlays.
 
 **refresh**
-> Unmerge then merge (reload extensions)
+> Unmerge then merge (reload extensions after installing or removing images).
+
+# PARAMETERS
+
+**--root=** _PATH_
+> Operate relative to the specified root directory.
+
+**--force**
+> Ignore version incompatibilities when merging.
+
+**--mutable=** _MODE_
+> Set mutability mode (disabled, auto, yes, import, ephemeral, ephemeral-import).
+
+**--no-reload**
+> Do not reload daemon after merge, unmerge, or refresh.
+
+**--no-pager**
+> Do not pipe output into a pager.
+
+**--no-legend**
+> Do not print column headers and footer hints.
+
+**--json=** _MODE_
+> Output as JSON (short, pretty, or off).
 
 # DESCRIPTION
 
@@ -61,4 +88,4 @@ Extensions must match the host OS version. The base /usr must be immutable or re
 
 # SEE ALSO
 
-[systemd-confext](/man/systemd-confext)(8), [systemd.sysext](/man/systemd.sysext)(5)
+[systemd-confext](/man/systemd-confext)(8), [systemctl](/man/systemctl)(1), [portablectl](/man/portablectl)(1), [machinectl](/man/machinectl)(1)

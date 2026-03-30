@@ -4,61 +4,59 @@ Format GNU recutils records with templates
 
 # TLDR
 
-**Format records with template**
+**Format records with inline template**
 
-```recfmt -f "[template]" [file.rec]```
+```recsel [file.rec] | recfmt "{{Name}}: {{Email}}"```
 
-**Use template file**
+**Format records using a template file**
 
-```recfmt -t [template.fmt] [file.rec]```
+```recsel [file.rec] | recfmt -f [template.fmt]```
 
-**Format specific type**
+**Select and format specific record type**
 
-```recfmt -s [Type] -f "[template]" [file.rec]```
+```recsel -t [Type] [file.rec] | recfmt "{{Title}} by {{Author}}"```
 
 # SYNOPSIS
 
-**recfmt** [_options_] [_file_]
+**recfmt** [_options_] [_template_]
 
 # PARAMETERS
 
-**-f**, **--format** _template_
-> Format template string.
+**-f**, **--file** _FILENAME_
+> Load the template from a file instead of a command-line argument.
 
-**-t**, **--template** _file_
-> Template file.
+**--help**
+> Print help and exit.
 
-**-s**, **--type** _type_
-> Record type to format.
+**--version**
+> Show version and exit.
 
 # DESCRIPTION
 
-**recfmt** formats GNU recutils records using a template. It allows custom output formatting with field substitution, useful for generating reports or custom views.
+**recfmt** applies a template to records read from standard input. Fields are referenced using double-brace slots like **{{FieldName}}**. For each input record, one copy of the template is generated with field values substituted. Typically used by piping output from **recsel** into **recfmt**.
 
 Part of GNU recutils.
 
 # EXAMPLES
 
 ```bash
-# Simple format
-recfmt -f "Name: {{Name}}, Email: {{Email}}" contacts.rec
+# Simple format from recsel output
+recsel contacts.rec | recfmt "Name: {{Name}}, Email: {{Email}}"
 
 # From template file
-recfmt -t report.fmt data.rec
+recsel data.rec | recfmt -f report.fmt
 
-# Specific record type
-recfmt -s Book -f "{{Title}} by {{Author}}" library.rec
+# Specific record type with selection
+recsel -t Book library.rec | recfmt "{{Title}} by {{Author}}"
 
-# Combine with selection
-recsel -e "Status = 'active'" items.rec | recfmt -f "- {{Name}}"
+# Combine with expression filtering
+recsel -e "Status = 'active'" items.rec | recfmt "- {{Name}}"
 ```
 
 # TEMPLATE SYNTAX
 
 ```
-{{FieldName}}          - Field value
-{{#FieldName}}...{{/}} - Conditional
-{{FieldName|default}}  - Default value
+{{FieldName}}          - Substituted with field value
 ```
 
 # TEMPLATE FILE
@@ -81,4 +79,4 @@ recfmt is part of **GNU recutils** by **Jose E. Marchesi** for flexible record f
 
 # SEE ALSO
 
-[recsel](/man/recsel)(1), [rec2csv](/man/rec2csv)(1), [recutils](/man/recutils)(7)
+[recsel](/man/recsel)(1), [rec2csv](/man/rec2csv)(1), [recins](/man/recins)(1), [recdel](/man/recdel)(1), [recset](/man/recset)(1)

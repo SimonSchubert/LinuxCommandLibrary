@@ -20,9 +20,21 @@ Manage GitHub Actions configuration variables
 
 ```gh variable delete [name]```
 
+**Get a variable value**
+
+```gh variable get [name]```
+
 **Set organization variable**
 
 ```gh variable set [name] -o [org] -b "[value]"```
+
+**Set environment variable**
+
+```gh variable set [name] -e [environment] -b "[value]"```
+
+**List variables as JSON**
+
+```gh variable list --json name,value```
 
 # SYNOPSIS
 
@@ -40,7 +52,7 @@ Manage GitHub Actions configuration variables
 > Delete a variable.
 
 **get**
-> Get a variable.
+> Get a single variable.
 
 # PARAMETERS
 
@@ -48,13 +60,22 @@ Manage GitHub Actions configuration variables
 > Variable value.
 
 **-R**, **--repo** _owner/repo_
-> Repository.
+> Select a repository.
 
 **-o**, **--org** _name_
-> Organization.
+> Set or list variables for an organization.
 
 **-e**, **--env** _name_
-> Environment.
+> Set or list variables for an environment.
+
+**-v**, **--visibility** _scope_
+> Set visibility for an organization variable: all, private, or selected.
+
+**--json** _fields_
+> Output JSON with the specified fields.
+
+**-q**, **--jq** _expression_
+> Filter JSON output using a jq expression.
 
 # DESCRIPTION
 

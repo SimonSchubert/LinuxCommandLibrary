@@ -8,7 +8,7 @@ command-line shell for Drupal
 
 ```drush cache:rebuild```
 
-**Download and install** module
+**Enable and install** a module
 
 ```drush pm:install [module_name]```
 
@@ -36,6 +36,14 @@ command-line shell for Drupal
 
 ```drush user:login```
 
+**Dump the database** to a SQL file
+
+```drush sql:dump --result-file=[dump.sql]```
+
+**Open an interactive SQL** shell
+
+```drush sql:cli```
+
 # SYNOPSIS
 
 **drush** _command_ [_options_] [_arguments_]
@@ -48,8 +56,11 @@ _COMMAND_
 **cache:rebuild**, **cr**
 > Clear all caches.
 
-**pm:install** _NAME_
-> Install module.
+**pm:install** _NAME_, **en**
+> Enable and install a module.
+
+**pm:uninstall** _NAME_, **pmu**
+> Uninstall a module.
 
 **updatedb**, **updb**
 > Apply database updates.
@@ -63,15 +74,27 @@ _COMMAND_
 **user:login**, **uli**
 > Generate login link.
 
+**sql:dump**
+> Export database to a SQL file.
+
+**sql:cli**, **sqlc**
+> Open an interactive SQL shell using Drupal credentials.
+
 **status**, **st**
 > Show site information.
+
+**--yes**, **-y**
+> Auto-accept confirmations.
+
+**--uri** _URI_
+> Drupal URI for multi-site setups.
 
 **--help**
 > Display help information.
 
 # CONFIGURATION
 
-**~/.drush/drushrc.php** or **~/.drush/drush.yml**
+**~/.drush/drush.yml**
 > User-level Drush configuration for default options and aliases.
 
 **drush/drush.yml** or **drush/sites/**.yml

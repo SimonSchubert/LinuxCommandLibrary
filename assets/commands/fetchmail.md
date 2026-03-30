@@ -62,17 +62,32 @@ The tool is configured through ~/.fetchmailrc or command-line options. It can ru
 **-u** _user_
 > Remote username.
 
-**-p** _proto_
-> Protocol (pop3, imap, etc.).
+**-p** _proto_, **--proto** _proto_
+> Protocol (auto, pop3, imap, etrn, odmr).
 
 **--ssl**
-> Use SSL/TLS.
+> Use implicit SSL/TLS (connect directly over encrypted channel).
+
+**--sslproto** _value_
+> SSL/TLS protocol version and STARTTLS control. Recommended: tls1.2+.
 
 **-v**, **--verbose**
 > Verbose output.
 
+**-s**, **--silent**
+> Suppress progress messages.
+
 **-q**, **--quit**
 > Kill running daemon.
+
+**-l** _maxbytes_, **--limit** _maxbytes_
+> Skip messages larger than maxbytes.
+
+**-r** _folder_, **--folder** _folder_
+> Retrieve from non-default mail folder (IMAP only).
+
+**--idle**
+> Use IMAP IDLE for push notification of new mail.
 
 # CONFIGURATION
 
@@ -89,4 +104,4 @@ Passwords in config file need protection. SSL verification recommended. Large ma
 
 # SEE ALSO
 
-[procmail](/man/procmail)(1), [mutt](/man/mutt)(1), [getmail](/man/getmail)(1), [isstrut](/man/isstrut)(1)
+[procmail](/man/procmail)(1), [mutt](/man/mutt)(1), [sendmail](/man/sendmail)(1), [mail](/man/mail)(1)

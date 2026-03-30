@@ -1,68 +1,80 @@
 # TAGLINE
 
-presents markdown files as slides
+A command-line based markdown presentation tool
 
 # TLDR
 
-**Present slides**
+**Present a markdown file as slides**
 
 ```mdp [presentation.md]```
 
-**Start from specific slide**
+**Read presentation from stdin**
 
-```mdp -s [5] [presentation.md]```
+```cat [presentation.md] | mdp```
 
-**Disable fade**
+**Present with color fading disabled**
 
 ```mdp -f [presentation.md]```
 
-**Disable colors**
-
-```mdp -n [presentation.md]```
-
-**Invert colors**
+**Present with inverted colors**
 
 ```mdp -i [presentation.md]```
 
+**Present with character entity expansion enabled**
+
+```mdp -e [presentation.md]```
+
+**Present with transparency disabled**
+
+```mdp -t [presentation.md]```
+
 # SYNOPSIS
 
-**mdp** [_options_] _file_
+**mdp** [_options_] [_FILE_]
 
 # PARAMETERS
 
 _FILE_
-> Markdown presentation file.
+> Markdown presentation file. If no file is specified or if the file name is -, reads from standard input.
 
-**-s** _NUM_
-> Start at slide number.
+**-e**, **--expand**
+> Enable character entity expansion (e.g. '&gt;' becomes '>').
 
-**-f**
-> Disable fading.
+**-f**, **--nofade**
+> Disable color fading in 256 color mode.
 
-**-n**
-> Disable colors.
+**-i**, **--invert**
+> Swap black and white colors.
 
-**-i**
-> Invert colors.
+**-t**, **--notrans**
+> Disable transparency in transparent terminal.
 
-**--help**
-> Display help information.
+**-d**, **--debug**
+> Enable debug messages on stderr. Add multiple times to increase debug level.
+
+**-h**, **--help**
+> Display usage message and exit.
+
+**-v**, **--version**
+> Display version and license information.
 
 # DESCRIPTION
 
-**mdp** presents markdown files as slides. It renders presentations in the terminal.
+**mdp** is a command-line based markdown presentation tool. It renders presentations in the terminal using standard markdown syntax.
 
-The tool uses markdown syntax for slides. Slide breaks are indicated by horizontal rules.
+Horizontal rules are used as slide separators. Headers prefixed with **@** are displayed as title and author in the top and bottom bars. Supported formatting includes headlines, code blocks, block quotes, unordered lists, bold text, underlined text, and inline code.
+
+Navigation uses arrow keys, h/j/k/l, Space, Enter, Page Up/Down. Press **g** or **Home** to go to the first slide, **G** or **End** for the last. Number keys **1-9** jump to a specific slide. Press **r** to reload and **q** to quit.
 
 # CAVEATS
 
-Terminal-based only. Limited formatting. UTF-8 support varies.
+Terminal-based only. Limited formatting compared to graphical presentation tools. UTF-8 support varies by terminal.
 
 # HISTORY
 
-mdp was created as a **terminal-based** presentation tool using markdown for slide content.
+mdp was created by **Michael Göhler** as a terminal-based presentation tool using markdown for slide content.
 
 # SEE ALSO
 
-[presenterm](/man/presenterm)(1), [slides](/man/slides)(1), [sent](/man/sent)(1)
+[presenterm](/man/presenterm)(1), [slides](/man/slides)(1)
 

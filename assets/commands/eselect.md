@@ -4,21 +4,41 @@ Gentoo system configuration and management tool
 
 # TLDR
 
-Display a list of **installed modules**
+List all **available modules**
 
-```eselect```
-
-View documentation for a specific **module**
-
-```tldr eselect [module]```
+```eselect modules list```
 
 Display **help** for a specific module
 
 ```eselect [module] help```
 
+**List** available options for a module
+
+```eselect [module] list```
+
+**Show** the current setting for a module
+
+```eselect [module] show```
+
+**Set** a target for a module
+
+```sudo eselect [module] set [target]```
+
+Select the active **kernel** sources
+
+```sudo eselect kernel set [number]```
+
 # SYNOPSIS
 
-**eselect** [_module_] [_action_] [_options_]
+**eselect** [_global options_] _module_ _action_ [_options_]
+
+# GLOBAL OPTIONS
+
+**--brief**
+> Reduce output verbosity.
+
+**--colour=**_yes_|_no_|_auto_
+> Control colored output (default: auto).
 
 # DESCRIPTION
 
@@ -29,16 +49,45 @@ The tool's modular design means each aspect of system configuration is handled b
 # PARAMETERS
 
 **list**
-> List available options
+> List available options.
 
 **set** _target_
-> Set the specified target
+> Set the specified target.
 
 **show**
-> Display current setting
+> Display current setting.
 
 **help**
-> Show module help
+> Show module help.
+
+**update**
+> Refresh configuration if unset or invalid.
+
+**version**
+> Display module version.
+
+# COMMON MODULES
+
+**kernel**
+> Configure /usr/src/linux symlink.
+
+**profile**
+> Manage the make.profile symlink.
+
+**locale**
+> Set the LANG environment variable.
+
+**gcc**
+> Select active GCC compiler version.
+
+**editor**
+> Manage the EDITOR environment variable.
+
+**repository**
+> Manage ebuild repositories.
+
+**news**
+> Read Gentoo news items.
 
 # CAVEATS
 

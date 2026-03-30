@@ -16,6 +16,10 @@ Display Vagrant VM port forwarding mappings
 
 ```vagrant port --guest [80]```
 
+**SSH using the forwarded port**
+
+```ssh -p $(vagrant port --guest 22) vagrant@localhost```
+
 # SYNOPSIS
 
 **vagrant** **port** [_options_] [_name_]
@@ -34,5 +38,5 @@ Display Vagrant VM port forwarding mappings
 
 # SEE ALSO
 
-[vagrant](/man/vagrant)(1), [vagrant-status](/man/vagrant-status)(1)
+[vagrant](/man/vagrant)(1), [vagrant-status](/man/vagrant-status)(1), [vagrant-ssh](/man/vagrant-ssh)(1), [vagrant-ssh-config](/man/vagrant-ssh-config)(1)
 

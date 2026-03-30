@@ -16,6 +16,10 @@ Move or rename tracked files
 
 ```git mv -f [source] [destination]```
 
+**Move multiple files to a directory**
+
+```git mv [file1.txt] [file2.txt] [directory/]```
+
 **Dry run**
 
 ```git mv -n [source] [destination]```
@@ -23,6 +27,7 @@ Move or rename tracked files
 # SYNOPSIS
 
 **git mv** [_options_] _source_ _destination_
+**git mv** [_options_] _source_... _destination-directory_
 
 # PARAMETERS
 
@@ -33,10 +38,10 @@ _DESTINATION_
 > Target path or directory.
 
 **-f**, **--force**
-> Force move/rename.
+> Force move/rename even if the destination exists.
 
 **-k**
-> Skip errors.
+> Skip move or rename actions that would lead to an error condition.
 
 **-n**, **--dry-run**
 > Show what would happen.

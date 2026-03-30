@@ -1,20 +1,32 @@
 # TAGLINE
 
-Test socket activation for services
+Test socket activation of daemons
 
 # TLDR
 
-**Activate** a service when a socket is connected
+**Listen on a port** and launch a command on connection
 
-```systemd-socket-activate [path/to/socket.service]```
+```systemd-socket-activate -l [8080] [command]```
 
-**Activate** multiple sockets for a service
+**Listen on multiple** ports for a command
 
-```systemd-socket-activate [path/to/socket1.service] [path/to/socket2.service]```
+```systemd-socket-activate -l [8080] -l [8081] [command]```
 
-**Activate** a service with a specified port
+**Accept connections** and spawn a new instance for each
 
-```systemd-socket-activate [path/to/socket.service] -l [8080]```
+```systemd-socket-activate -l [8080] -a [command]```
+
+**Use datagram (UDP)** sockets instead of stream (TCP)
+
+```systemd-socket-activate -l [8080] -d [command]```
+
+**Set environment variables** for the launched process
+
+```systemd-socket-activate -l [8080] -E [VAR=value] [command]```
+
+**Run in inetd** compatibility mode
+
+```systemd-socket-activate -l [8080] --inetd [command]```
 
 # SYNOPSIS
 
@@ -22,29 +34,41 @@ Test socket activation for services
 
 # PARAMETERS
 
-**-l, --listen _address_**
-> Listen on specified address/port
+**-l** _ADDRESS_, **--listen=**_ADDRESS_
+> Listen on the specified address (port number or host:port).
 
-**-a, --accept**
-> Accept connections and spawn for each
+**-a**, **--accept**
+> Launch a new instance of the command for each connection. Cannot be combined with --now.
 
-**-d, --datagram**
-> Use datagram (UDP) sockets
+**-d**, **--datagram**
+> Listen on a datagram socket (SOCK_DGRAM) instead of a stream socket. Cannot be combined with --seqpacket.
 
-**-E, --setenv _name=value_**
-> Set environment variables
+**--seqpacket**
+> Listen on a sequential packet socket (SOCK_SEQPACKET) instead of a stream socket. Cannot be combined with --datagram.
 
-**--fdname _name_**
-> Specify file descriptor names
+**-E** _VAR[=VALUE]_, **--setenv=**_VAR[=VALUE]_
+> Set an environment variable for the launched process. If no value given, inherits from the current environment.
+
+**--fdname=**_NAME[:NAME...]_
+> Specify names for the file descriptors passed. Enables use of sd_listen_fds_with_names(3).
 
 **--inetd**
-> Run in inetd compatibility mode
+> Use the inetd protocol for passing file descriptors (as stdin/stdout) instead of the $LISTEN_FDS protocol.
+
+**--now**
+> Start the command immediately instead of waiting for a connection. Cannot be combined with --accept.
+
+**-h**, **--help**
+> Display help information.
+
+**--version**
+> Display version information.
 
 # DESCRIPTION
 
-**systemd-socket-activate** is a test and development tool for socket activation. It listens on sockets and launches a command when connections arrive, simulating systemd's socket activation feature.
+**systemd-socket-activate** is a test and development tool for socket activation. It listens on sockets and launches a specified command when connections arrive, simulating systemd's socket activation feature without needing to configure full socket and service unit files.
 
-This is useful for testing services that support socket activation without needing to configure full systemd socket units. The activated program receives the socket file descriptors.
+By default it listens on a stream (TCP) socket. Use **--datagram** for UDP or **--seqpacket** for sequential packet sockets. The activated program receives the socket file descriptors via the **$LISTEN_FDS** protocol (or via stdin/stdout in **--inetd** mode).
 
 # CAVEATS
 
@@ -52,4 +76,4 @@ Primarily intended for testing, not production use. For production, configure pr
 
 # SEE ALSO
 
-[systemd.socket](/man/systemd.socket)(5), [systemd.service](/man/systemd.service)(5), [sd_listen_fds](/man/sd_listen_fds)(3)
+[systemctl](/man/systemctl)(1), [systemd-run](/man/systemd-run)(1), [systemd-analyze](/man/systemd-analyze)(1)

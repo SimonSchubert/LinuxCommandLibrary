@@ -1,6 +1,6 @@
 # TAGLINE
 
-interactive image viewer for X Window System
+Display images on an X Window System
 
 # TLDR
 
@@ -30,7 +30,7 @@ interactive image viewer for X Window System
 
 # SYNOPSIS
 
-**display** [_options_] _file_...
+**magick display** [_options_] _input-file_
 
 # PARAMETERS
 
@@ -46,21 +46,27 @@ _FILE_
 **-geometry** _GEOMETRY_
 > Window position and size.
 
-**-delay** _SECONDS_
-> Delay between images in slideshow.
+**-delay** _centiseconds_
+> Delay between images in slideshow (in hundredths of a second).
+
+**-update** _seconds_
+> Detect when image file is modified and redisplay.
+
+**-loop** _iterations_
+> Loop images then exit.
 
 **-immutable**
 > Prevent image modifications.
 
 **-verbose**
-> Show processing information.
+> Print detailed information about the image.
 
 **-help**
 > Display help information.
 
 # DESCRIPTION
 
-**display** is an ImageMagick program that displays images on an X Window System. It provides an interactive viewer with zoom, pan, and basic editing capabilities.
+**display** is an ImageMagick program that displays images on an X Window System. It provides an interactive viewer with zoom, pan, and basic editing capabilities. In ImageMagick 7, it is invoked as **magick display**.
 
 The viewer supports numerous image formats through ImageMagick's format handling. Interactive features include zooming, rotating, cropping, color adjustment, and annotation. Multiple images can be viewed as a slideshow.
 
@@ -76,4 +82,4 @@ display is part of **ImageMagick**, created by **John Cristy** in **1987**. Imag
 
 # SEE ALSO
 
-[feh](/man/feh)(1), [eog](/man/eog)(1), [convert](/man/convert)(1), [identify](/man/identify)(1)
+[feh](/man/feh)(1), [eog](/man/eog)(1), [convert](/man/convert)(1), [identify](/man/identify)(1), [magick](/man/magick)(1), [mogrify](/man/mogrify)(1)

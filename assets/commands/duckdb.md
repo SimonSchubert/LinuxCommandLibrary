@@ -12,7 +12,7 @@ embedded analytical database engine
 
 ```duckdb [path/to/database.db]```
 
-**Execute a SQL query**
+**Execute a SQL query and exit**
 
 ```duckdb -c "[SELECT * FROM table_name]"```
 
@@ -26,15 +26,19 @@ embedded analytical database engine
 
 **Execute SQL from a file**
 
-```duckdb < [path/to/script.sql]```
+```duckdb -f [path/to/script.sql]```
 
 **Export query results to CSV**
 
-```duckdb -c "[COPY (SELECT * FROM table) TO 'output.csv' (HEADER)]"```
+```duckdb -csv -c "[COPY (SELECT * FROM table) TO 'output.csv' (HEADER)]"```
 
 **Start in read-only mode**
 
 ```duckdb -readonly [database.db]```
+
+**Output results as JSON**
+
+```duckdb -json -c "[SELECT * FROM 'data.csv' LIMIT 10]"```
 
 # SYNOPSIS
 
@@ -42,17 +46,26 @@ embedded analytical database engine
 
 # PARAMETERS
 
-**-c**, **-cmd** _command_
+**-c** _COMMAND_
 > Execute the specified SQL command and exit.
 
-**-init** _file_
-> Execute SQL commands from file before starting shell.
+**-s** _COMMAND_
+> Execute the specified SQL statement and exit (alias for **-c**).
+
+**-cmd** _COMMAND_
+> Run command before reading stdin.
+
+**-f** _FILENAME_
+> Execute SQL from file (after processing ~/.duckdbrc).
+
+**-init** _FILENAME_
+> Run script on startup instead of ~/.duckdbrc.
 
 **-readonly**
 > Open database in read-only mode.
 
 **-no-stdin**
-> Don't read from stdin.
+> Exit after processing options instead of reading stdin.
 
 **-json**
 > Output results in JSON format.
@@ -61,10 +74,10 @@ embedded analytical database engine
 > Output results in CSV format.
 
 **-table**
-> Output results as ASCII table (default).
+> Output results as ASCII table.
 
 **-box**
-> Output results with box-drawing characters.
+> Output results with box-drawing characters (default).
 
 **-markdown**
 > Output results as Markdown table.
@@ -72,8 +85,26 @@ embedded analytical database engine
 **-line**
 > Output results in line mode (one value per line).
 
-**-separator** _char_
-> Set field separator for CSV mode.
+**-column**
+> Output results in columnar format.
+
+**-ascii**
+> Output results in ASCII table format.
+
+**-html**
+> Output results in HTML format.
+
+**-list**
+> Output results in list format.
+
+**-separator** _SEP_
+> Set column separator (default: |).
+
+**-newline** _SEP_
+> Set row separator (default: \n).
+
+**-nullvalue** _TEXT_
+> Set text shown for NULL values.
 
 **-header**
 > Include column headers in output.
@@ -81,11 +112,29 @@ embedded analytical database engine
 **-noheader**
 > Exclude column headers from output.
 
+**-echo**
+> Print commands before execution.
+
+**-bail**
+> Stop after hitting an error.
+
+**-batch**
+> Force batch I/O.
+
+**-interactive**
+> Force interactive I/O.
+
 **-unsigned**
 > Allow loading of unsigned extensions.
 
+**-nofollow**
+> Refuse to open symbolic links to database files.
+
 **-version**
 > Print version and exit.
+
+**-help**
+> Display available options.
 
 # CONFIGURATION
 
@@ -100,7 +149,7 @@ A key feature is the ability to query files directly without importing: CSV, Par
 
 The database supports standard SQL with analytical extensions including window functions, CTEs, and complex aggregations. It provides high performance through vectorized execution and columnar storage, optimized for aggregation queries over large datasets.
 
-In interactive mode, DuckDB provides a full-featured SQL shell with tab completion, command history, and dot-commands for settings. Results can be output in various formats including tables, JSON, CSV, and Markdown.
+In interactive mode, DuckDB provides a full-featured SQL shell with tab completion, command history, and dot-commands for settings. Results can be output in various formats including tables, JSON, CSV, and Markdown. The default output mode is **duckbox**, a box-drawing format.
 
 DuckDB can be used as a library in Python, R, Java, Node.js, and other languages, or standalone via the CLI. Database files are portable across platforms and versions.
 
@@ -114,4 +163,4 @@ In-memory databases are lost when the process exits. Write operations lock the d
 
 # SEE ALSO
 
-[sqlite3](/man/sqlite3)(1), [psql](/man/psql)(1), [csvq](/man/csvq)(1)
+[sqlite3](/man/sqlite3)(1), [psql](/man/psql)(1), [csvq](/man/csvq)(1), [jq](/man/jq)(1)

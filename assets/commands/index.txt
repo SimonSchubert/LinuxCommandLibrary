@@ -517,6 +517,7 @@ aws.md
 awsesh.md
 awslogs.md
 awstats.md
+awww.md
 axel.md
 axi-cache.md
 az-account.md
@@ -4736,6 +4737,7 @@ node-gyp.md
 node.md
 nodemon.md
 nodenv.md
+noglob.md
 nohup.md
 nokogiri.md
 nologin.md
@@ -7885,6 +7887,7 @@ w3m.md
 wafw00f.md
 waifu2x-ncnn-vulkan.md
 wait.md
+wait4x.md
 waitpid.md
 waitress-serve.md
 wajig.md

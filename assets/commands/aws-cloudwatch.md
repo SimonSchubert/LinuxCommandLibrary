@@ -14,7 +14,7 @@ Monitor resources with metrics, alarms, and dashboards.
 
 **Create an alarm** for high CPU usage
 
-```aws cloudwatch put-metric-alarm --alarm-name [high-cpu] --metric-name CPUUtilization --namespace AWS/EC2 --statistic Average --period 300 --threshold 80 --comparison-operator GreaterThanThreshold --evaluation-periods 2 --dimensions Name=InstanceId,Value=[i-1234567890abcdef0]```
+```aws cloudwatch put-metric-alarm --alarm-name [high-cpu] --metric-name CPUUtilization --namespace AWS/EC2 --statistic Average --period 300 --threshold 80 --comparison-operator GreaterThanThreshold --evaluation-periods 2 --alarm-actions [arn:aws:sns:us-east-1:123456789012:my-topic] --dimensions Name=InstanceId,Value=[i-1234567890abcdef0]```
 
 **List all alarms** in the account
 
@@ -24,9 +24,17 @@ Monitor resources with metrics, alarms, and dashboards.
 
 ```aws cloudwatch list-metrics --namespace [AWS/EC2]```
 
-**Get metric data** using a query expression
+**Delete specific** alarms
 
-```aws cloudwatch get-metric-data --metric-data-queries '[{"Id":"m1","MetricStat":{"Metric":{"Namespace":"AWS/EC2","MetricName":"CPUUtilization"},"Period":300,"Stat":"Average"}}]' --start-time [2024-01-01T00:00:00Z] --end-time [2024-01-02T00:00:00Z]```
+```aws cloudwatch delete-alarms --alarm-names [high-cpu] [low-disk]```
+
+**Disable actions** on an alarm
+
+```aws cloudwatch disable-alarm-actions --alarm-names [high-cpu]```
+
+**Enable actions** on an alarm
+
+```aws cloudwatch enable-alarm-actions --alarm-names [high-cpu]```
 
 # SYNOPSIS
 
@@ -64,6 +72,21 @@ CloudWatch enables setting alarms that trigger notifications or automated action
 **put-dashboard**
 > Create or update a CloudWatch dashboard
 
+**delete-alarms**
+> Delete one or more alarms
+
+**enable-alarm-actions**
+> Enable actions for specified alarms
+
+**disable-alarm-actions**
+> Disable actions for specified alarms
+
+**describe-alarms-for-metric**
+> List alarms associated with a specific metric
+
+**list-tags-for-resource**
+> List tags for a CloudWatch resource
+
 **put-anomaly-detector**
 > Create an anomaly detection model for a metric
 
@@ -77,4 +100,4 @@ Amazon CloudWatch launched in **May 2009** alongside EC2 monitoring. Custom metr
 
 # SEE ALSO
 
-[aws](/man/aws)(1), [aws-logs](/man/aws-logs)(1), [aws-events](/man/aws-events)(1), [aws-ec2](/man/aws-ec2)(1)
+[aws](/man/aws)(1), [aws-logs](/man/aws-logs)(1), [aws-events](/man/aws-events)(1), [aws-ec2](/man/aws-ec2)(1), [aws-sns](/man/aws-sns)(1)

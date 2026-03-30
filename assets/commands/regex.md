@@ -50,6 +50,9 @@ This is a reference page for regular expression syntax, not a standalone command
 **[[:space:]]**: Whitespace
 **[[:upper:]]**: Uppercase letters
 **[[:lower:]]**: Lowercase letters
+**[[:punct:]]**: Punctuation characters
+**[[:print:]]**: Printable characters (including space)
+**[[:blank:]]**: Space and tab
 
 # ANCHORS
 
@@ -68,4 +71,4 @@ Greedy vs. non-greedy: **\*** and **+** are greedy by default. Use **\*?** and *
 
 # SEE ALSO
 
-[grep](/man/grep)(1), [sed](/man/sed)(1), [awk](/man/awk)(1), [perlre](/man/perlre)(1), [regex](/man/regex)(7)
+[grep](/man/grep)(1), [sed](/man/sed)(1), [awk](/man/awk)(1), [perlre](/man/perlre)(1)

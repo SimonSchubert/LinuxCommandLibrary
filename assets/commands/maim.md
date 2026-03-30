@@ -20,6 +20,14 @@ Capture **active window**
 
 ```maim --window $(xdotool getactivewindow) [path/to/screenshot.png]```
 
+Capture with a **delay** of 5 seconds
+
+```maim --delay 5 [path/to/screenshot.png]```
+
+Capture as **JPEG** with quality setting
+
+```maim --format jpg --quality 7 [path/to/screenshot.jpg]```
+
 # SYNOPSIS
 
 **maim** [_options_] [_file_]
@@ -46,10 +54,22 @@ Capture **active window**
 > Set capture geometry
 
 **-f, --format FORMAT**
-> Output format (png, jpg, bmp)
+> Output format (png, jpg, bmp, webp). Auto-detected from filename, defaults to png.
 
 **-m, --quality QUALITY**
-> JPEG quality (1-100)
+> Compression quality (1-10). For lossy formats, lower means smaller file size and lower quality.
+
+**-B, --capturebackground**
+> Capture content beneath the specified window as well.
+
+**-q, --quiet**
+> Disable any unnecessary stderr output.
+
+**-k, --nokeyboard**
+> Disable the ability to cancel selections with the keyboard.
+
+**-l, --highlight**
+> Highlight the selection instead of outlining it.
 
 # CAVEATS
 
@@ -57,4 +77,4 @@ X11 only, does not work with Wayland. Region selection requires slop. Window cap
 
 # SEE ALSO
 
-[scrot](/man/scrot)(1), [import](/man/import)(1), [grim](/man/grim)(1), [flameshot](/man/flameshot)(1)
+[scrot](/man/scrot)(1), [import](/man/import)(1), [grim](/man/grim)(1), [flameshot](/man/flameshot)(1), [slop](/man/slop)(1), [xdotool](/man/xdotool)(1), [xclip](/man/xclip)(1)

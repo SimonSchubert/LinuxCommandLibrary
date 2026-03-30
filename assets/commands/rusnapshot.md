@@ -1,32 +1,32 @@
 # TAGLINE
 
-Rsync-based filesystem snapshot backup tool
+Simple and handy BTRFS snapshotting tool
 
 # TLDR
 
-**Create** a snapshot using configuration file
+**Create a read-only snapshot** using a configuration file
 
-```sudo rusnapshot -c path/to/config.toml --cr```
+```sudo rusnapshot -c [path/to/config.toml] --create```
 
-**List** created snapshots
+**Create a read-write snapshot**
 
-```sudo rusnapshot -c path/to/config.toml -l```
+```sudo rusnapshot -c [path/to/config.toml] --create -w```
 
-**Delete** a snapshot by ID
+**List tracked snapshots**
 
-```sudo rusnapshot -c path/to/config.toml --del --id snapshot_id```
+```sudo rusnapshot -c [path/to/config.toml] -l```
 
-Delete all **hourly** snapshots
+**Delete a snapshot by ID**
 
-```sudo rusnapshot -c path/to/config.toml -l -k 0 --clean --kind hourly```
+```sudo rusnapshot -c [path/to/config.toml] --del --id [snapshot_id]```
 
-Create a **read-write** snapshot
+**Clean old snapshots, keeping only the last 3**
 
-```sudo rusnapshot -c path/to/config.toml --cr -r```
+```sudo rusnapshot -c [path/to/config.toml] --clean -k 3 --kind [hourly]```
 
-**Restore** a snapshot
+**Restore a snapshot by ID**
 
-```sudo rusnapshot -c path/to/config.toml --id snapshot_id -r```
+```sudo rusnapshot -c [path/to/config.toml] -r --id [snapshot_id]```
 
 # SYNOPSIS
 
@@ -35,34 +35,55 @@ Create a **read-write** snapshot
 # PARAMETERS
 
 **-c**, **--config** _file_
-> Configuration file path
+> Path to TOML configuration file.
 
-**--cr**
-> Create snapshot
+**--create**
+> Create a read-only snapshot.
+
+**-w**, **--rw**
+> Create read-write snapshots instead of read-only.
 
 **-l**, **--list**
-> List snapshots
+> List snapshots tracked in the database.
 
 **--del**
-> Delete snapshot
+> Delete a snapshot. Requires **--id**.
+
+**-r**, **--restore**
+> Restore a specific snapshot. Requires **--id**.
 
 **--id** _id_
-> Specify snapshot ID
+> Snapshot ID or name to work with.
 
-**-r**, **--rw**
-> Create read-write snapshot (or restore)
+**--clean**
+> Enable snapshot cleaning, keeping only the last X snapshots specified with **-k**.
 
 **-k**, **--keep** _count_
-> Number of snapshots to keep
+> Number of snapshots to keep (default 3).
 
 **--kind** _type_
-> Snapshot kind (hourly, daily, etc.)
+> Differentiator between snapshots with the same prefix (e.g., hourly, daily).
+
+**-p**, **--prefix** _name_
+> Prefix for the snapshot name (default "rusnapshot").
+
+**-d**, **--dfile** _path_
+> Path to the SQLite database file.
+
+**--from** _dir_
+> Source directory for snapshot creation.
+
+**--to** _dir_
+> Destination directory for snapshots.
+
+**--timeout** _ms_
+> SQLite busy timeout in milliseconds (default 10000).
 
 # DESCRIPTION
 
-**rusnapshot** is a BTRFS snapshotting utility written in Rust. It provides automated snapshot creation, management, and restoration for BTRFS filesystems.
+**rusnapshot** is a simple and handy BTRFS snapshotting tool written in Rust. It provides snapshot creation, management, restoration, and automatic cleanup for BTRFS filesystems, using SQLite to track snapshots.
 
-Configuration is done via TOML files specifying snapshot locations, retention policies, and schedules.
+Configuration is done via TOML files specifying snapshot source and destination paths, prefixes, and kinds. Snapshots can also be fully specified via command-line flags using **--from** and **--to**.
 
 # CONFIGURATION
 
@@ -75,7 +96,7 @@ Requires BTRFS filesystem. Configuration file must be properly set up before use
 
 # HISTORY
 
-Written in **Rust** as a modern alternative to traditional BTRFS snapshot management tools like snapper.
+Written in **Rust** by **Eduard Tolosa** (Edu4rdSHL) as a simple alternative to traditional BTRFS snapshot management tools.
 
 # SEE ALSO
 

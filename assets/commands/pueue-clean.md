@@ -23,10 +23,10 @@ Remove finished tasks from pueue queue
 # PARAMETERS
 
 **--successful-only**
-> Only successful tasks.
+> Only remove successfully finished tasks, keeping failed tasks for investigation.
 
 **--group** _NAME_
-> Clean specific group.
+> Only clean tasks of a specific group.
 
 # DESCRIPTION
 
@@ -34,13 +34,13 @@ Remove finished tasks from pueue queue
 
 # CAVEATS
 
-Only removes finished tasks. Part of pueue.
+Only removes finished tasks (both successful and failed by default). Running and queued tasks are never affected. Part of pueue.
 
 # HISTORY
 
-pueue clean provides **queue cleanup** functionality.
+**pueue** is written by **Arne Beer** (Nukesor) in **Rust**. The **clean** subcommand provides queue cleanup functionality to keep the task list uncluttered.
 
 # SEE ALSO
 
-[pueue](/man/pueue)(1), [pueue-remove](/man/pueue-remove)(1)
+[pueue](/man/pueue)(1), [pueue-remove](/man/pueue-remove)(1), [pueue-status](/man/pueue-status)(1), [pueue-log](/man/pueue-log)(1)
 

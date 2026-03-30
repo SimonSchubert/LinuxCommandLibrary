@@ -61,10 +61,13 @@ measures network bandwidth between two endpoints
 > Use UDP instead of TCP.
 
 **-b** _BANDWIDTH_
-> Target bandwidth for UDP (e.g., 10M, 1G). Unlimited for TCP.
+> Target bandwidth (e.g., 10M, 1G). Limits UDP and TCP rates.
 
 **-t** _TIME_
 > Test duration in seconds (default: 10).
+
+**-n** _BYTES_
+> Transmit specified number of bytes instead of using a time duration (e.g., 100M, 1G).
 
 **-i** _INTERVAL_
 > Report interval in seconds.
@@ -73,19 +76,43 @@ measures network bandwidth between two endpoints
 > Number of parallel client streams.
 
 **-d**
-> Bidirectional test (simultaneous send and receive).
+> Bidirectional test using separate unidirectional sockets.
 
 **-r**
-> Bidirectional test (sequential).
+> Bidirectional test (sequential: client-to-server, then reverse).
+
+**--full-duplex**
+> Full duplex test using a single socket for both directions.
+
+**-R**
+> Reverse traffic flow (server sends, client receives).
 
 **-f** _FORMAT_
-> Report format: k/m/g/K/M/G (bits or bytes).
+> Report format: a (adaptive), k/m/g (bits), K/M/G (bytes).
 
 **-w** _SIZE_
-> Socket buffer size (window size).
+> Socket buffer size (TCP window size).
 
 **-l** _LENGTH_
-> Buffer length to read or write.
+> Read/write buffer length (TCP default 128K, UDP default 1470).
+
+**-M** _MSS_
+> Set TCP maximum segment size via TCP_MAXSEG.
+
+**-N**
+> Disable Nagle's algorithm (set TCP_NODELAY).
+
+**-B** _HOST_
+> Bind to a specific host, interface, or multicast address.
+
+**-D**
+> Run the server as a daemon.
+
+**-e**
+> Display enhanced output in reports.
+
+**-o** _FILE_
+> Write report output to specified file.
 
 # DESCRIPTION
 

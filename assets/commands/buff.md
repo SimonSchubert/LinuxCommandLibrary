@@ -59,8 +59,20 @@ Lint, format, and manage Protocol Buffer files
 **dep**
 > Manage dependencies (add, update).
 
+**convert**
+> Convert a message between binary, text, or JSON.
+
+**curl**
+> Invoke an RPC endpoint, similar to cURL.
+
 **export**
-> Export module to a directory.
+> Export proto files from one location to another.
+
+**config**
+> Work with buf configuration files.
+
+**registry**
+> Manage assets on the Buf Schema Registry.
 
 **--against** _reference_
 > Reference to compare against for breaking changes.
@@ -99,8 +111,8 @@ buf.yaml configuration is required for most operations. The BSR requires authent
 
 # HISTORY
 
-Buf was created by the team behind gRPC at **Uber** and founded as a company in **2020**. It was developed to solve problems they encountered managing large Protobuf codebases, including inconsistent style, accidental breaking changes, and complex build configurations. The Buf Schema Registry launched to provide a npm/Maven-like experience for Protobuf dependencies.
+Buf was created by **Peter Edge**, a former Uber engineer, and founded as **Buf Technologies** in **2020**. It was developed to solve problems encountered managing large Protobuf codebases, including inconsistent style, accidental breaking changes, and complex build configurations. The Buf Schema Registry launched to provide a npm/Maven-like experience for Protobuf dependencies.
 
 # SEE ALSO
 
-[protoc](/man/protoc)(1), [grpcurl](/man/grpcurl)(1), [grpc-tools](/man/grpc-tools)(1)
+[protoc](/man/protoc)(1), [grpcurl](/man/grpcurl)(1)

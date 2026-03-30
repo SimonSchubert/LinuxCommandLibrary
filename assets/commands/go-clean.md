@@ -20,9 +20,17 @@ remove Go build artifacts and cached data
 
 ```go clean -cache -testcache -modcache```
 
-**Clean specific package**
+**Clean fuzz test cache**
 
-```go clean [package]```
+```go clean -fuzzcache```
+
+**Dry run showing what would be removed**
+
+```go clean -n [package]```
+
+**Clean verbosely showing remove commands**
+
+```go clean -x -cache```
 
 # SYNOPSIS
 
@@ -34,22 +42,28 @@ _PACKAGES_
 > Packages to clean.
 
 **-cache**
-> Clean build cache.
+> Remove the entire build cache.
 
 **-testcache**
-> Clean test cache.
+> Expire all test results in the build cache.
 
 **-modcache**
-> Clean module cache.
+> Remove the entire module download cache.
+
+**-fuzzcache**
+> Remove files stored in the build cache for fuzz testing.
 
 **-i**
-> Remove installed archive.
+> Remove the corresponding installed archive or binary.
+
+**-r**
+> Apply recursively to all dependencies of the named packages.
 
 **-n**
-> Dry run.
+> Print the remove commands that would be executed, but do not run them.
 
-**--help**
-> Display help information.
+**-x**
+> Print remove commands as they are executed.
 
 # DESCRIPTION
 
@@ -67,4 +81,4 @@ go clean is part of the **Go** toolchain, providing cache and artifact managemen
 
 # SEE ALSO
 
-[go](/man/go)(1), [go-build](/man/go-build)(1), [go-mod](/man/go-mod)(1)
+[go](/man/go)(1), [go-build](/man/go-build)(1), [go-mod](/man/go-mod)(1), [go-test](/man/go-test)(1)

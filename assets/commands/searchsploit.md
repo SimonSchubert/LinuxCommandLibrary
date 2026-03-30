@@ -107,8 +107,8 @@ search Exploit Database archive locally
 **-v**, **--verbose**
 > Display extended information
 
-**--disable-colour**
-> Remove color highlighting from output
+**--colour**
+> Disable color highlighting in search results
 
 **-u**, **--update**
 > Update local database
