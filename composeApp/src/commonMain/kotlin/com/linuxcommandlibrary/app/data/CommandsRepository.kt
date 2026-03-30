@@ -45,7 +45,11 @@ class CommandsRepository(private val assetReader: AssetReader) {
             .map { (cmd, _) -> cmd }
     }
 
-    fun hasCommand(name: String): Boolean = name in (cachedCommandNames ?: getCommands().let { cachedCommandNames!! })
+    fun hasCommand(name: String): Boolean {
+        val names = cachedCommandNames
+            ?: getCommands().mapTo(HashSet()) { it.name }.also { cachedCommandNames = it }
+        return name in names
+    }
 
     fun getSections(commandName: String): List<CommandSectionInfo> = try {
         val content = assetReader.readFile("commands/$commandName.md") ?: return emptyList()
