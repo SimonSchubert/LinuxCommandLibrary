@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material3.ListItem
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.SuggestionChip
@@ -54,23 +55,25 @@ private fun CommandDetailContent(
     onNavigate: (NavEvent) -> Unit,
     onToggleExpanded: (Long) -> Unit,
 ) {
-    LazyColumn(
-        Modifier
-            .background(MaterialTheme.colorScheme.background)
-            .fillMaxSize(),
-    ) {
-        itemsIndexed(
-            items = uiState.sections,
-            key = { index, _ -> index },
-            contentType = { _, _ -> "command_section_item" },
-        ) { _, section ->
-            CommandSectionColumn(
-                section = section,
-                isExpanded = uiState.expandedSectionsMap[section.id] ?: false,
-                seeAlsoCommands = uiState.seeAlsoCommands,
-                onToggleExpanded = onToggleExpanded,
-                onNavigate = onNavigate,
-            )
+    SelectionContainer {
+        LazyColumn(
+            Modifier
+                .background(MaterialTheme.colorScheme.background)
+                .fillMaxSize(),
+        ) {
+            itemsIndexed(
+                items = uiState.sections,
+                key = { index, _ -> index },
+                contentType = { _, _ -> "command_section_item" },
+            ) { _, section ->
+                CommandSectionColumn(
+                    section = section,
+                    isExpanded = uiState.expandedSectionsMap[section.id] ?: false,
+                    seeAlsoCommands = uiState.seeAlsoCommands,
+                    onToggleExpanded = onToggleExpanded,
+                    onNavigate = onNavigate,
+                )
+            }
         }
     }
 }

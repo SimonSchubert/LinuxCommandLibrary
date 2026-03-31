@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material3.Icon
 import androidx.compose.material3.ListItem
 import androidx.compose.material3.MaterialTheme
@@ -51,23 +52,25 @@ fun BasicGroupsContent(
     toggleCollapse: (Long) -> Unit,
     onNavigate: (NavEvent) -> Unit,
 ) {
-    LazyColumn(
-        Modifier
-            .fillMaxSize()
-            .background(MaterialTheme.colorScheme.background),
-    ) {
-        items(
-            items = uiState.basicGroups,
-            key = { it.id },
-            contentType = { "basic_group_item" },
-        ) { basicGroup ->
-            BasicGroupColumn(
-                basicGroup = basicGroup,
-                commands = uiState.commandsByGroupId[basicGroup.id] ?: persistentListOf(),
-                isExpanded = !(uiState.collapsedMap[basicGroup.id] ?: true),
-                onToggleCollapse = { toggleCollapse(basicGroup.id) },
-                onNavigate = onNavigate,
-            )
+    SelectionContainer {
+        LazyColumn(
+            Modifier
+                .fillMaxSize()
+                .background(MaterialTheme.colorScheme.background),
+        ) {
+            items(
+                items = uiState.basicGroups,
+                key = { it.id },
+                contentType = { "basic_group_item" },
+            ) { basicGroup ->
+                BasicGroupColumn(
+                    basicGroup = basicGroup,
+                    commands = uiState.commandsByGroupId[basicGroup.id] ?: persistentListOf(),
+                    isExpanded = !(uiState.collapsedMap[basicGroup.id] ?: true),
+                    onToggleCollapse = { toggleCollapse(basicGroup.id) },
+                    onNavigate = onNavigate,
+                )
+            }
         }
     }
 }

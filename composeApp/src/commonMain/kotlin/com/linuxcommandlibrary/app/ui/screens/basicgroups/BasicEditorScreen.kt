@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.staggeredgrid.LazyVerticalStaggeredGrid
 import androidx.compose.foundation.lazy.staggeredgrid.StaggeredGridCells
 import androidx.compose.foundation.lazy.staggeredgrid.items
+import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
@@ -44,19 +45,21 @@ fun BasicEditorContent(
     showTitles: Boolean,
     onNavigate: (NavEvent) -> Unit,
 ) {
-    LazyVerticalStaggeredGrid(
-        modifier = Modifier
-            .background(MaterialTheme.colorScheme.background)
-            .fillMaxSize(),
-        columns = StaggeredGridCells.Adaptive(minSize = 300.dp),
-        contentPadding = PaddingValues(horizontal = 4.dp, vertical = 4.dp),
-    ) {
-        items(
-            items = groups,
-            key = { it.id },
-            contentType = { "editor_group_item" },
-        ) { group ->
-            EditorGroupCard(group = group, onNavigate = onNavigate, showTitle = showTitles)
+    SelectionContainer {
+        LazyVerticalStaggeredGrid(
+            modifier = Modifier
+                .background(MaterialTheme.colorScheme.background)
+                .fillMaxSize(),
+            columns = StaggeredGridCells.Adaptive(minSize = 300.dp),
+            contentPadding = PaddingValues(horizontal = 4.dp, vertical = 4.dp),
+        ) {
+            items(
+                items = groups,
+                key = { it.id },
+                contentType = { "editor_group_item" },
+            ) { group ->
+                EditorGroupCard(group = group, onNavigate = onNavigate, showTitle = showTitles)
+            }
         }
     }
 }
