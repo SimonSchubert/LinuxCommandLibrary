@@ -4910,6 +4910,7 @@ obexftp.md
 objcopy.md
 objdump.md
 obs.md
+obsidian.md
 oc.md
 ocaml.md
 ocamlc.md
@@ -5011,6 +5012,7 @@ openssl-rand.md
 openssl-req.md
 openssl-rsa.md
 openssl-s_client.md
+openssl-speed.md
 openssl-ts.md
 openssl-verify.md
 openssl-x509.md
@@ -7287,6 +7289,7 @@ terraform-login.md
 terraform-logout.md
 terraform-output.md
 terraform-plan.md
+terraform-show.md
 terraform-tui.md
 terraform.md
 terragrunt.md
