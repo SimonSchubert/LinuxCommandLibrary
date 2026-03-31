@@ -61,7 +61,7 @@ private fun CommandDetailContent(
     ) {
         itemsIndexed(
             items = uiState.sections,
-            key = { index, _ -> index },
+            key = { _, section -> section.id },
             contentType = { _, _ -> "command_section_item" },
         ) { _, section ->
             CommandSectionColumn(

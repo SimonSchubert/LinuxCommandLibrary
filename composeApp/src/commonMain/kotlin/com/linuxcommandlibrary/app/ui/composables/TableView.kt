@@ -36,7 +36,8 @@ fun TableView(
 ) {
     val textMeasurer = rememberTextMeasurer()
     val density = LocalDensity.current
-    val textStyle = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.Bold)
+    val bodyLarge = MaterialTheme.typography.bodyLarge
+    val textStyle = remember(bodyLarge) { bodyLarge.copy(fontWeight = FontWeight.Bold) }
     val firstColumnWidth = remember(headers, rows, textStyle) {
         val allFirstCells = listOf(headers.firstOrNull()?.toPlainText() ?: "") +
             rows.map { it.firstOrNull()?.toPlainText() ?: "" }

@@ -1,13 +1,13 @@
 package com.linuxcommandlibrary.app.ui.screens.commanddetail
 
-import androidx.compose.runtime.Stable
+import androidx.compose.runtime.Immutable
 import com.linuxcommandlibrary.app.data.CommandSectionInfo
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.ImmutableMap
 import kotlinx.collections.immutable.persistentListOf
 import kotlinx.collections.immutable.persistentMapOf
 
-@Stable
+@Immutable
 data class CommandDetailUiState(
     val sections: ImmutableList<CommandSectionInfo> = persistentListOf(),
     val expandedSectionsMap: ImmutableMap<Long, Boolean> = persistentMapOf(),

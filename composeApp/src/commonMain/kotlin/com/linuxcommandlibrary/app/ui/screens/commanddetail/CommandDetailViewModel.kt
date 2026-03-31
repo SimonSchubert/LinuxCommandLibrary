@@ -8,6 +8,7 @@ import kotlinx.collections.immutable.toImmutableMap
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
@@ -17,7 +18,8 @@ class CommandDetailViewModel(
     private val commandsRepository: CommandsRepository,
     private val scope: CoroutineScope,
 ) {
-    val state = MutableStateFlow(CommandDetailUiState())
+    private val _state = MutableStateFlow(CommandDetailUiState())
+    val state = _state.asStateFlow()
 
     private companion object {
         val MARKDOWN_LINK_REGEX = Regex("\\[([^\\]]+)\\]\\([^)]+\\)")
@@ -37,7 +39,7 @@ class CommandDetailViewModel(
                     .toImmutableList()
             } ?: persistentListOf()
 
-            state.update {
+            _state.update {
                 CommandDetailUiState(
                     sections = sectionsData.toImmutableList(),
                     expandedSectionsMap = sectionsData.associate { section ->
@@ -51,8 +53,8 @@ class CommandDetailViewModel(
     }
 
     fun onToggleAllExpanded() {
-        val isAllExpanded = state.value.isAllExpanded()
-        state.update {
+        val isAllExpanded = _state.value.isAllExpanded()
+        _state.update {
             val currentMap = it.expandedSectionsMap
             val updatedMap = currentMap.mapValues { !isAllExpanded }.toImmutableMap()
             it.copy(expandedSectionsMap = updatedMap)
@@ -61,7 +63,7 @@ class CommandDetailViewModel(
     }
 
     fun onToggleExpanded(id: Long) {
-        state.update {
+        _state.update {
             val currentMap = it.expandedSectionsMap
             val updatedMap = currentMap.toMutableMap()
             val currentValue = updatedMap[id] ?: false
@@ -71,14 +73,14 @@ class CommandDetailViewModel(
     }
 
     fun removeBookmark() {
-        state.update {
+        _state.update {
             it.copy(isBookmarked = false)
         }
         dataManager.removeBookmark(commandName)
     }
 
     fun addBookmark() {
-        state.update {
+        _state.update {
             it.copy(
                 isBookmarked = true,
                 showBookmarkDialog = true,
@@ -88,7 +90,7 @@ class CommandDetailViewModel(
     }
 
     fun hideBookmarkDialog() {
-        state.update {
+        _state.update {
             it.copy(showBookmarkDialog = false)
         }
     }

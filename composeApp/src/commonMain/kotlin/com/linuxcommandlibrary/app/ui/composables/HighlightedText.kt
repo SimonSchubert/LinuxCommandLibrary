@@ -16,7 +16,8 @@ fun HighlightedText(
     pattern: String,
     maxLines: Int = 1,
 ) {
-    val ltrStyle = MaterialTheme.typography.bodyLarge.copy(textDirection = TextDirection.Ltr)
+    val bodyLarge = MaterialTheme.typography.bodyLarge
+    val ltrStyle = remember(bodyLarge) { bodyLarge.copy(textDirection = TextDirection.Ltr) }
     if (pattern.isEmpty()) {
         Text(
             text = text,
