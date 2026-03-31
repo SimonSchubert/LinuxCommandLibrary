@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material3.Icon
 import androidx.compose.material3.ListItem
@@ -23,6 +24,7 @@ import com.linuxcommandlibrary.app.data.BasicCommand
 import com.linuxcommandlibrary.app.data.BasicGroup
 import com.linuxcommandlibrary.app.ui.composables.CommandView
 import com.linuxcommandlibrary.app.ui.composables.HighlightedText
+import com.linuxcommandlibrary.app.ui.composables.WithScrollbar
 import com.linuxcommandlibrary.app.ui.composables.getIconId
 import com.linuxcommandlibrary.app.ui.composables.rememberIconPainter
 import com.linuxcommandlibrary.shared.getCommandList
@@ -52,24 +54,31 @@ fun BasicGroupsContent(
     toggleCollapse: (Long) -> Unit,
     onNavigate: (NavEvent) -> Unit,
 ) {
+    val listState = rememberLazyListState()
     SelectionContainer {
-        LazyColumn(
-            Modifier
+        WithScrollbar(
+            state = listState,
+            modifier = Modifier
                 .fillMaxSize()
                 .background(MaterialTheme.colorScheme.background),
         ) {
-            items(
-                items = uiState.basicGroups,
-                key = { it.id },
-                contentType = { "basic_group_item" },
-            ) { basicGroup ->
-                BasicGroupColumn(
-                    basicGroup = basicGroup,
-                    commands = uiState.commandsByGroupId[basicGroup.id] ?: persistentListOf(),
-                    isExpanded = !(uiState.collapsedMap[basicGroup.id] ?: true),
-                    onToggleCollapse = { toggleCollapse(basicGroup.id) },
-                    onNavigate = onNavigate,
-                )
+            LazyColumn(
+                state = listState,
+                modifier = Modifier.fillMaxSize(),
+            ) {
+                items(
+                    items = uiState.basicGroups,
+                    key = { it.id },
+                    contentType = { "basic_group_item" },
+                ) { basicGroup ->
+                    BasicGroupColumn(
+                        basicGroup = basicGroup,
+                        commands = uiState.commandsByGroupId[basicGroup.id] ?: persistentListOf(),
+                        isExpanded = !(uiState.collapsedMap[basicGroup.id] ?: true),
+                        onToggleCollapse = { toggleCollapse(basicGroup.id) },
+                        onNavigate = onNavigate,
+                    )
+                }
             }
         }
     }

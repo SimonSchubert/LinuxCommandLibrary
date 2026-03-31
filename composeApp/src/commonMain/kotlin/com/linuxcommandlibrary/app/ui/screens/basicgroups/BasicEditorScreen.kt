@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.staggeredgrid.LazyVerticalStaggeredGrid
 import androidx.compose.foundation.lazy.staggeredgrid.StaggeredGridCells
 import androidx.compose.foundation.lazy.staggeredgrid.items
+import androidx.compose.foundation.lazy.staggeredgrid.rememberLazyStaggeredGridState
 import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -21,6 +22,7 @@ import androidx.compose.ui.unit.dp
 import com.linuxcommandlibrary.app.NavEvent
 import com.linuxcommandlibrary.app.ui.composables.SectionTitle
 import com.linuxcommandlibrary.app.ui.composables.TipSectionContent
+import com.linuxcommandlibrary.app.ui.composables.WithScrollbar
 import com.linuxcommandlibrary.shared.BasicGroup
 import kotlinx.collections.immutable.ImmutableList
 
@@ -45,20 +47,27 @@ fun BasicEditorContent(
     showTitles: Boolean,
     onNavigate: (NavEvent) -> Unit,
 ) {
+    val gridState = rememberLazyStaggeredGridState()
     SelectionContainer {
-        LazyVerticalStaggeredGrid(
+        WithScrollbar(
+            state = gridState,
             modifier = Modifier
                 .background(MaterialTheme.colorScheme.background)
                 .fillMaxSize(),
-            columns = StaggeredGridCells.Adaptive(minSize = 300.dp),
-            contentPadding = PaddingValues(horizontal = 4.dp, vertical = 4.dp),
         ) {
-            items(
-                items = groups,
-                key = { it.id },
-                contentType = { "editor_group_item" },
-            ) { group ->
-                EditorGroupCard(group = group, onNavigate = onNavigate, showTitle = showTitles)
+            LazyVerticalStaggeredGrid(
+                state = gridState,
+                modifier = Modifier.fillMaxSize(),
+                columns = StaggeredGridCells.Adaptive(minSize = 300.dp),
+                contentPadding = PaddingValues(horizontal = 4.dp, vertical = 4.dp),
+            ) {
+                items(
+                    items = groups,
+                    key = { it.id },
+                    contentType = { "editor_group_item" },
+                ) { group ->
+                    EditorGroupCard(group = group, onNavigate = onNavigate, showTitle = showTitles)
+                }
             }
         }
     }

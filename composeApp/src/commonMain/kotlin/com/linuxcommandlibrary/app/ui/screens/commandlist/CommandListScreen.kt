@@ -1,7 +1,6 @@
 package com.linuxcommandlibrary.app.ui.screens.commandlist
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -18,9 +17,11 @@ import androidx.compose.ui.input.pointer.PointerIcon
 import androidx.compose.ui.input.pointer.pointerHoverIcon
 import com.linuxcommandlibrary.app.NavEvent
 import com.linuxcommandlibrary.app.data.CommandInfo
+import com.linuxcommandlibrary.app.platform.showFastScrollBar
 import com.linuxcommandlibrary.app.ui.composables.AppIcon
 import com.linuxcommandlibrary.app.ui.composables.FastScrollBar
 import com.linuxcommandlibrary.app.ui.composables.HighlightedText
+import com.linuxcommandlibrary.app.ui.composables.WithScrollbar
 import com.linuxcommandlibrary.app.ui.composables.debouncedClickable
 import com.linuxcommandlibrary.app.ui.composables.rememberIconPainter
 import kotlinx.collections.immutable.ImmutableList
@@ -48,7 +49,8 @@ private fun ComposeListContent(
     onNavigate: (NavEvent) -> Unit,
 ) {
     val listState = rememberLazyListState()
-    Box(
+    WithScrollbar(
+        state = listState,
         modifier = Modifier
             .background(MaterialTheme.colorScheme.background)
             .fillMaxSize(),
@@ -70,11 +72,13 @@ private fun ComposeListContent(
             }
         }
 
-        FastScrollBar(
-            listState = listState,
-            itemCount = commands.size,
-            modifier = Modifier.align(Alignment.CenterEnd),
-        )
+        if (showFastScrollBar) {
+            FastScrollBar(
+                listState = listState,
+                itemCount = commands.size,
+                modifier = Modifier.align(Alignment.CenterEnd),
+            )
+        }
     }
 }
 

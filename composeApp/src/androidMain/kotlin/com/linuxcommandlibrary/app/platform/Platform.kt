@@ -11,6 +11,7 @@ import com.linuxcommandlibrary.app.ui.AppIcons
 
 actual val showRateAppButton: Boolean = true
 actual val showAndroidTerminalTip: Boolean = Build.VERSION.SDK_INT >= 35
+actual val showFastScrollBar: Boolean = true
 actual val backIcon: ImageVector = AppIcons.ArrowBack
 actual val shareButtonIcon: ImageVector = AppIcons.Share
 actual val shareButtonDescription: String = "Share"

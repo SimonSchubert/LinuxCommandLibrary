@@ -18,6 +18,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.linuxcommandlibrary.app.NavEvent
+import com.linuxcommandlibrary.app.ui.composables.WithScrollbar
 import com.linuxcommandlibrary.app.ui.screens.commandlist.CommandListItem
 
 @Composable
@@ -63,23 +64,28 @@ fun SearchContent(
             Text("404 command not found", modifier = Modifier.align(Alignment.Center))
         }
     } else {
-        LazyColumn(
-            Modifier
+        WithScrollbar(
+            state = lazyListState,
+            modifier = Modifier
                 .fillMaxSize()
                 .background(MaterialTheme.colorScheme.background),
-            state = lazyListState,
         ) {
-            items(
-                items = uiState.filteredCommands,
-                key = { "command_${it.id}" },
-                contentType = { "search_command_item" },
-            ) { command ->
-                CommandListItem(
-                    command = command,
-                    searchText = searchText,
-                    onNavigate = onNavigate,
-                    isBookmarked = false,
-                )
+            LazyColumn(
+                modifier = Modifier.fillMaxSize(),
+                state = lazyListState,
+            ) {
+                items(
+                    items = uiState.filteredCommands,
+                    key = { "command_${it.id}" },
+                    contentType = { "search_command_item" },
+                ) { command ->
+                    CommandListItem(
+                        command = command,
+                        searchText = searchText,
+                        onNavigate = onNavigate,
+                        isBookmarked = false,
+                    )
+                }
             }
         }
     }

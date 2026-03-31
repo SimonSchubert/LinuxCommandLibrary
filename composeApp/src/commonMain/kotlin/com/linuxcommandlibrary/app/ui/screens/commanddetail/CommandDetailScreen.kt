@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material3.ListItem
 import androidx.compose.material3.MaterialTheme
@@ -31,6 +32,7 @@ import androidx.compose.ui.unit.sp
 import com.linuxcommandlibrary.app.NavEvent
 import com.linuxcommandlibrary.app.data.CommandSectionInfo
 import com.linuxcommandlibrary.app.ui.composables.TipSectionContent
+import com.linuxcommandlibrary.app.ui.composables.WithScrollbar
 import com.linuxcommandlibrary.app.ui.composables.rememberDebouncedClick
 import com.linuxcommandlibrary.shared.MarkdownParser
 import kotlinx.collections.immutable.ImmutableList
@@ -55,24 +57,31 @@ private fun CommandDetailContent(
     onNavigate: (NavEvent) -> Unit,
     onToggleExpanded: (Long) -> Unit,
 ) {
+    val listState = rememberLazyListState()
     SelectionContainer {
-        LazyColumn(
-            Modifier
+        WithScrollbar(
+            state = listState,
+            modifier = Modifier
                 .background(MaterialTheme.colorScheme.background)
                 .fillMaxSize(),
         ) {
-            itemsIndexed(
-                items = uiState.sections,
-                key = { index, _ -> index },
-                contentType = { _, _ -> "command_section_item" },
-            ) { _, section ->
-                CommandSectionColumn(
-                    section = section,
-                    isExpanded = uiState.expandedSectionsMap[section.id] ?: false,
-                    seeAlsoCommands = uiState.seeAlsoCommands,
-                    onToggleExpanded = onToggleExpanded,
-                    onNavigate = onNavigate,
-                )
+            LazyColumn(
+                state = listState,
+                modifier = Modifier.fillMaxSize(),
+            ) {
+                itemsIndexed(
+                    items = uiState.sections,
+                    key = { index, _ -> index },
+                    contentType = { _, _ -> "command_section_item" },
+                ) { _, section ->
+                    CommandSectionColumn(
+                        section = section,
+                        isExpanded = uiState.expandedSectionsMap[section.id] ?: false,
+                        seeAlsoCommands = uiState.seeAlsoCommands,
+                        onToggleExpanded = onToggleExpanded,
+                        onNavigate = onNavigate,
+                    )
+                }
             }
         }
     }

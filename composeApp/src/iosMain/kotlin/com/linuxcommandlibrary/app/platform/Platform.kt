@@ -6,6 +6,7 @@ import com.linuxcommandlibrary.app.ui.AppIcons
 
 actual val showRateAppButton: Boolean = false
 actual val showAndroidTerminalTip: Boolean = false
+actual val showFastScrollBar: Boolean = true
 actual val backIcon: ImageVector = AppIcons.ArrowBackIos
 actual val shareButtonIcon: ImageVector = AppIcons.Share
 actual val shareButtonDescription: String = "Share"
