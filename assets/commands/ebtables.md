@@ -28,6 +28,10 @@ Ethernet bridge frame filtering firewall
 
 ```sudo ebtables -F```
 
+**Set policy for a chain**
+
+```sudo ebtables -P FORWARD DROP```
+
 **Save rules to file**
 
 ```sudo ebtables-save > [rules.txt]```
@@ -72,7 +76,19 @@ Ethernet bridge frame filtering firewall
 > Output interface.
 
 **-j** _target_
-> Jump to target (ACCEPT, DROP, CONTINUE).
+> Jump to target (ACCEPT, DROP, CONTINUE, RETURN).
+
+**-t** _table_
+> Table to operate on (filter, nat, broute). Default is filter.
+
+**--Ln**
+> Show line numbers when listing rules.
+
+**-N** _chain_
+> Create a new user-defined chain.
+
+**-X** [_chain_]
+> Delete a user-defined chain.
 
 # DESCRIPTION
 

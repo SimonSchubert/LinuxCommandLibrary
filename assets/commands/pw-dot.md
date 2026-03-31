@@ -32,6 +32,10 @@ Use **90-degree angles** in edges
 
 ```pw-dot -9```
 
+Generate graph and **render to PNG** image
+
+```pw-dot && dot -Tpng pw.dot -o [pw-graph.png]```
+
 # SYNOPSIS
 
 **pw-dot** [_options_]
@@ -81,4 +85,4 @@ Part of **PipeWire**, providing visualization of the multimedia graph. Useful fo
 
 # SEE ALSO
 
-[pw-dump](/man/pw-dump)(1), [pw-cli](/man/pw-cli)(1), [dot](/man/dot)(1)
+[pw-dump](/man/pw-dump)(1), [pw-cli](/man/pw-cli)(1), [pw-top](/man/pw-top)(1), [pw-mon](/man/pw-mon)(1), [pipewire](/man/pipewire)(1), [dot](/man/dot)(1)

@@ -39,7 +39,7 @@ Create and query Postfix lookup tables
 > Incremental mode.
 
 **-N**
-> Include newlines in values.
+> Include the table name as part of a lookup key or value.
 
 **-w**
 > Wait for locked files.
@@ -87,4 +87,4 @@ postmap is part of **Postfix**, the mail transfer agent created by **Wietse Vene
 
 # SEE ALSO
 
-[postconf](/man/postconf)(1), [postalias](/man/postalias)(1), [postfix](/man/postfix)(1)
+[postconf](/man/postconf)(1), [postfix](/man/postfix)(1), [postqueue](/man/postqueue)(1), [newaliases](/man/newaliases)(1)

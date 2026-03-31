@@ -12,6 +12,14 @@ nix-based tool for managing user environment configuration declaratively
 
 ```home-manager switch --flake [.#username]```
 
+**Initialize** a new flake-based configuration
+
+```home-manager init```
+
+**Initialize and immediately activate** the configuration
+
+```home-manager init --switch```
+
 **Build without activating**
 
 ```home-manager build```
@@ -32,9 +40,9 @@ nix-based tool for managing user environment configuration declaratively
 
 ```home-manager edit```
 
-**Show news** about configuration changes
+**List installed packages**
 
-```home-manager news```
+```home-manager packages```
 
 # SYNOPSIS
 
@@ -47,6 +55,9 @@ nix-based tool for managing user environment configuration declaratively
 
 **build**
 > Build configuration without activating.
+
+**init** [_--switch_] [_dir_]
+> Generate an initial Home Manager configuration. Use **--switch** to also activate it.
 
 **generations**
 > List all configuration generations.
@@ -69,6 +80,9 @@ nix-based tool for managing user environment configuration declaratively
 **packages**
 > List installed packages.
 
+**uninstall**
+> Remove Home Manager from the user environment.
+
 **option** _name_
 > Show value of configuration option.
 
@@ -81,11 +95,17 @@ nix-based tool for managing user environment configuration declaratively
 **-A** _attribute_
 > Attribute to build from configuration.
 
+**-b** _ext_
+> Backup file extension for existing files that would be overwritten.
+
 **-n**, **--dry-run**
 > Show what would be done without doing it.
 
 **-v**, **--verbose**
 > Increase verbosity.
+
+**--show-trace**
+> Show detailed location information for errors.
 
 # DESCRIPTION
 
@@ -109,4 +129,4 @@ Requires Nix package manager. Learning curve for Nix language. Some program conf
 
 # SEE ALSO
 
-[nix](/man/nix)(1), [nix-env](/man/nix-env)(1), [nixos-rebuild](/man/nixos-rebuild)(8), [chezmoi](/man/chezmoi)(1), [stow](/man/stow)(8)
+[nix](/man/nix)(1), [nix-env](/man/nix-env)(1), [nix-build](/man/nix-build)(1), [nix-shell](/man/nix-shell)(1), [nixos-rebuild](/man/nixos-rebuild)(8), [chezmoi](/man/chezmoi)(1), [stow](/man/stow)(8)

@@ -4,15 +4,15 @@ Securely wipe free disk space
 
 # TLDR
 
-**Securely wipe** free space (38 writes)
+**Securely wipe** free space (38 passes)
 
 ```sfill /path/to/mounted_disk```
 
-**Fast wipe** with 6 writes
+**Reduced security wipe** with 2 passes
 
 ```sfill -l -v /path/to/mounted_disk```
 
-**Fastest wipe** with 1 write
+**Fastest wipe** with 1 random pass
 
 ```sfill -ll -v /path/to/mounted_disk```
 
@@ -35,10 +35,10 @@ Wipe only **free inodes**
 # PARAMETERS
 
 **-l**
-> Use less secure mode with fewer overwrites (6 passes instead of 38)
+> Lessens security. Only two passes are written: one with 0xff and a final one with random values.
 
 **-ll**
-> Use fast mode with single overwrite pass
+> Lessens security even further. Only one random pass is written.
 
 **-v**
 > Verbose mode; show progress
@@ -50,7 +50,7 @@ Wipe only **free inodes**
 > Overwrite only free inodes, not disk space
 
 **-f**
-> Force operation without prompting
+> Fast and insecure mode. No /dev/urandom, no synchronize mode.
 
 **-z**
 > Final overwrite with zeros instead of random data
@@ -65,4 +65,4 @@ This operation is time-consuming, especially with the default 38 passes. SSDs ma
 
 # SEE ALSO
 
-[srm](/man/srm)(1), [smem](/man/smem)(1), [sswap](/man/sswap)(1), [shred](/man/shred)(1)
+[srm](/man/srm)(1), [shred](/man/shred)(1), [wipe](/man/wipe)(1)

@@ -36,6 +36,18 @@ Transform and manipulate PDF file structure
 
 ```qpdf --password=[pass] --decrypt [encrypted.pdf] [output.pdf]```
 
+**Replace input file** in-place
+
+```qpdf --replace-input --linearize [input.pdf]```
+
+**Split PDF** into single-page files
+
+```qpdf --split-pages [input.pdf] [output_%d.pdf]```
+
+**Add password protection**
+
+```qpdf --encrypt [user_pass] [owner_pass] 256 -- [input.pdf] [output.pdf]```
+
 # SYNOPSIS
 
 **qpdf** [_--decrypt_] [_--linearize_] [_--pages spec_] [_--rotate spec_] [_options_] _input_ _output_
@@ -48,17 +60,23 @@ Transform and manipulate PDF file structure
 **--linearize**
 > Optimize for web viewing.
 
-**--encrypt** _user_ _owner_ _bits_
-> Add encryption.
+**--encrypt** _user_ _owner_ _bits_ **--**
+> Add encryption (bits: 40, 128, or 256).
 
 **--pages** _spec_
 > Page selection specification.
+
+**--collate**[=_n_]
+> Collate pages from multiple files rather than concatenating.
 
 **--rotate** [_+|-_]_angle_:_pages_
 > Rotate pages.
 
 **--empty**
 > Use empty PDF as input base.
+
+**--replace-input**
+> Overwrite input file with output instead of writing to a separate file.
 
 **--check**
 > Check PDF structure.
@@ -71,6 +89,9 @@ Transform and manipulate PDF file structure
 
 **--compress-streams**[=_y|n_]
 > Compress/decompress streams.
+
+**--object-streams**=_mode_
+> Control object streams: preserve, disable, or generate.
 
 **--decode-level** _LEVEL_
 > Stream decoding: none, generalized, specialized, all.
@@ -90,14 +111,38 @@ Transform and manipulate PDF file structure
 **--flatten-rotation**
 > Make rotation permanent.
 
-**--flatten-annotations**
+**--flatten-annotations**[=_parameter_]
 > Flatten annotation appearances.
+
+**--coalesce-contents**
+> Combine multiple content streams per page into one.
+
+**--optimize-images**
+> Use efficient compression for images.
+
+**--remove-unreferenced-resources**[=_auto|yes|no_]
+> Remove unused resources from page dictionaries.
 
 **--json**
 > Output PDF structure as JSON.
 
 **--qdf**
 > Create QDF (editable PDF source).
+
+**--deterministic-id**
+> Generate document ID from file contents for reproducible output.
+
+**--verbose**
+> Output additional information about operations performed.
+
+**--progress**
+> Show progress indicator when writing files.
+
+**--is-encrypted**
+> Test whether file is encrypted (exit code indicates result).
+
+**--requires-password**
+> Test whether a password is required (exit code indicates result).
 
 # DESCRIPTION
 
@@ -115,7 +160,7 @@ Linearization reorganizes PDFs for efficient byte-serving over HTTP, enabling pa
 
 # CAVEATS
 
-Cannot edit text content (use other tools). Password-protected files need password for processing. Some malformed PDFs may not process. Large PDFs require significant memory. Encryption strength limited by PDF specification.
+Cannot edit text content (use other tools). Password-protected files need password for processing. Some malformed PDFs may not process. Large PDFs require significant memory. Encryption strength limited by PDF specification (40, 128, or 256 bits). Exit codes: 0 success, 2 errors, 3 warnings (use **--warning-exit-0** to treat warnings as success).
 
 # HISTORY
 

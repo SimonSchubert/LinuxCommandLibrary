@@ -20,9 +20,13 @@ LLVM C++ compiler frontend
 
 ```clang++ -g [source.cpp] -o [output]```
 
-**Compile with all warnings**
+**Compile with all warnings and treat them as errors**
 
-```clang++ -Wall -Wextra [source.cpp] -o [output]```
+```clang++ -Wall -Wextra -Werror [source.cpp] -o [output]```
+
+**Define a preprocessor macro and compile**
+
+```clang++ -D[MACRO=value] [source.cpp] -o [output]```
 
 **Link with a library**
 
@@ -45,7 +49,7 @@ LLVM C++ compiler frontend
 > Compile only, don't link.
 
 **-std=**_standard_
-> Set C++ standard (c++11, c++14, c++17, c++20, c++23).
+> Set C++ standard (c++11, c++14, c++17, c++20, c++23, c++26).
 
 **-O**_level_
 > Optimization level (0, 1, 2, 3, s, z).
@@ -67,6 +71,18 @@ LLVM C++ compiler frontend
 
 **-l** _library_
 > Link with library.
+
+**-D** _macro=value_
+> Define preprocessor macro.
+
+**-Werror**
+> Treat warnings as errors.
+
+**-Wpedantic**
+> Issue warnings demanded by strict ISO C++ compliance.
+
+**-stdlib=**_library_
+> Specify C++ standard library (libc++ or libstdc++).
 
 # DESCRIPTION
 

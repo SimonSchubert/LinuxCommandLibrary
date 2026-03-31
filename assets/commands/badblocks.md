@@ -51,13 +51,19 @@ The tool is particularly useful for testing new drives or diagnosing failing sto
 > Block size in bytes (default: 1024)
 
 **-c** _blocks_
-> Number of blocks to test at once
+> Number of blocks to test at once (default: 64)
 
 **-p** _passes_
-> Number of test passes
+> Number of test passes (default: 0, meaning single pass)
 
 **-t** _pattern_
-> Test pattern (random or specific value)
+> Test pattern (use `random` for random data, or a numeric value 0-255)
+
+**-i** _file_
+> Read existing bad blocks list from file (skip retesting known blocks)
+
+**-f**
+> Force testing on a mounted device (dangerous, normally prevented)
 
 # TEST MODES
 
@@ -94,4 +100,4 @@ Write modes DESTROY all data on the device. Requires root privileges. Very slow 
 
 # SEE ALSO
 
-[e2fsck](/man/e2fsck)(8), [smartctl](/man/smartctl)(8), [dd](/man/dd)(1)
+[e2fsck](/man/e2fsck)(8), [fsck](/man/fsck)(8), [smartctl](/man/smartctl)(8), [dd](/man/dd)(1), [hdparm](/man/hdparm)(8)

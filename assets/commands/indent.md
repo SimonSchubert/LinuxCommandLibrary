@@ -24,9 +24,13 @@ reformats C source code according to specified style guidelines
 
 ```indent [input.c] -o [output.c]```
 
-**Set tab width**
+**Set tab width to 4 spaces**
 
-```indent -ts[4] [source.c]```
+```indent -ts4 [source.c]```
+
+**Set indentation to 4 spaces per level**
+
+```indent -i4 [source.c]```
 
 # SYNOPSIS
 
@@ -58,6 +62,18 @@ reformats C source code according to specified style guidelines
 **-o** _FILE_
 > Output file.
 
+**-npro**
+> Do not read .indent.pro profile files.
+
+**-bad**
+> Force blank line after declarations.
+
+**-bap**
+> Force blank line after procedure bodies.
+
+**-nbc**
+> Do not force newlines after commas in declarations.
+
 **--help**
 > Display help information.
 
@@ -69,7 +85,7 @@ The tool supports predefined styles (K&R, GNU, BSD) and extensive customization.
 
 # CAVEATS
 
-C-specific. May alter semantics with macros. Backup before use.
+C-specific; does not handle C++ or other languages well. May alter semantics when processing complex macros or preprocessor directives. Modifies files in-place by default; use **-o** to write to a separate file. Configuration can be stored in **.indent.pro** files loaded automatically from the current directory or home directory.
 
 # HISTORY
 

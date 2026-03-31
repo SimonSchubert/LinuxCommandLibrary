@@ -12,7 +12,7 @@ Terminal YouTube search and playback client
 
 ```youtube-viewer [https://youtube.com/watch?v=...]```
 
-**Audio only**
+**Audio only** (no video)
 
 ```youtube-viewer -n [query]```
 
@@ -24,56 +24,79 @@ Terminal YouTube search and playback client
 
 ```youtube-viewer --player=[vlc] [query]```
 
-**Search channels**
+**Search for channels**
 
-```youtube-viewer -c [channel_name]```
+```youtube-viewer -sc [channel_name]```
 
-**Show trending**
+**Show trending** videos
 
-```youtube-viewer -t```
+```youtube-viewer --trending```
+
+**List uploads** from a channel
+
+```youtube-viewer -u [channel_name]```
+
+**Search playlists**
+
+```youtube-viewer -sp [query]```
 
 # SYNOPSIS
 
-**youtube-viewer** [_-n_] [_-d_] [_--player player_] [_options_] _query_
+**youtube-viewer** [_options_] [_query_|_URL_]
 
 # PARAMETERS
 
-**-n**, **--non-interactive**
-> Audio only.
+**-n**, **--novideo**
+> Audio-only playback (no video).
 
 **-d**, **--download**
-> Download video.
+> Download video instead of streaming.
 
 **--player** _PLAYER_
-> Video player.
+> Specify video player (e.g., mpv, vlc, mplayer).
 
-**-c**, **--channel** _NAME_
-> Search channel.
+**-sv**, **--search-videos**
+> Search for YouTube videos (default mode).
 
-**-t**, **--trending**
-> Trending videos.
+**-sc**, **--search-channels**
+> Search for YouTube channels.
+
+**-sp**, **--search-playlists**
+> Search for playlists.
+
+**-u**, **--uploads** _NAME_
+> List videos uploaded by a channel/user.
+
+**--trending**
+> Show trending videos.
 
 **-r**, **--resolution** _RES_
-> Video resolution.
+> Set video resolution (e.g., best, 1080p, 720p).
 
 **-f**, **--fullscreen**
-> Fullscreen playback.
+> Enable fullscreen playback.
+
+**-i**, **--info**
+> Display video information.
+
+**-S**, **--subscriptions**
+> Show subscribed channels.
 
 # DESCRIPTION
 
 **youtube-viewer** is a command-line client for searching, streaming, and downloading YouTube videos directly from the terminal. It queries the YouTube API, presents numbered search results, and launches your chosen media player for playback.
 
-Multiple video players are supported including mpv, VLC, and MPlayer, configurable with the **--player** option. Audio-only mode (**-n**) streams just the audio track, reducing bandwidth usage. The **-d** flag downloads videos locally instead of streaming them.
+Multiple video players are supported including mpv, VLC, and MPlayer, configurable with the **--player** option. Audio-only mode (**-n** / **--novideo**) streams just the audio track, reducing bandwidth usage. The **-d** flag downloads videos locally instead of streaming them.
 
-Channel browsing (**-c**) lists uploads from specific creators, and **-t** shows currently trending videos. Resolution can be controlled with **-r** and fullscreen playback enabled with **-f**.
+Channel browsing (**-u**) lists uploads from specific creators, **-sc** searches for channels, and **--trending** shows currently trending videos. Resolution can be controlled with **-r** and fullscreen playback enabled with **-f**. Playlist support is available with **-sp** for searching and **--pid** for playing by playlist ID.
 
 # CAVEATS
 
-Requires working YouTube API. May break with YouTube changes. Player must be installed.
+Requires a valid YouTube Data API v3 key. May break with YouTube API changes. A supported video player (mpv, vlc, or mplayer) must be installed. The alternative **pipe-viewer** fork works without an API key by using Invidious instances.
 
 # HISTORY
 
-**youtube-viewer** was created as a command-line YouTube client. It provides terminal access to YouTube content.
+**youtube-viewer** was created by **trizen** as a lightweight command-line YouTube client written in Perl. It provides terminal-based search, streaming, and downloading of YouTube content using the YouTube Data API v3.
 
 # SEE ALSO
 

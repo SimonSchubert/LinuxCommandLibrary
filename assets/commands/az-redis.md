@@ -28,6 +28,14 @@ Manage Azure Cache for Redis instances
 
 ```az redis update --name [MyCache] --resource-group [MyResourceGroup] --set redisConfiguration.maxmemory-policy=allkeys-lru```
 
+**Force reboot** specified Redis node(s)
+
+```az redis force-reboot --name [MyCache] --resource-group [MyResourceGroup] --reboot-type [AllNodes]```
+
+**Flush all keys** in a Redis cache
+
+```az redis flush --name [MyCache] --resource-group [MyResourceGroup] --yes```
+
 **Delete a Redis cache**
 
 ```az redis delete --name [MyCache] --resource-group [MyResourceGroup] --yes```
@@ -59,8 +67,11 @@ Manage Azure Cache for Redis instances
 **regenerate-keys**
 > Regenerate access keys.
 
+**flush**
+> Delete all keys in a Redis cache.
+
 **force-reboot**
-> Reboot a Redis cache.
+> Reboot specified Redis node(s).
 
 **import**
 > Import data into a Redis cache.
@@ -74,6 +85,18 @@ Manage Azure Cache for Redis instances
 **patch-schedule**
 > Manage patch schedules.
 
+**server-link**
+> Manage Redis server links (requires Premium SKU).
+
+**identity**
+> Manage identity assigned to Azure Cache for Redis.
+
+**access-policy**
+> Manage access policies for Redis cache.
+
+**access-policy-assignment**
+> Manage access policy assignments (Redis users).
+
 # PARAMETERS
 
 **--name** **-n**
@@ -86,10 +109,19 @@ Manage Azure Cache for Redis instances
 > SKU tier: Basic, Standard, or Premium.
 
 **--vm-size**
-> Size of the cache: c0, c1, c2, c3, c4, c5, c6 (or p1-p5 for Premium).
+> Size of the Redis cache to deploy. Basic and Standard sizes start with c (c0-c6). Premium sizes start with p (p1-p5).
 
 **--location** **-l**
 > Location of the cache.
+
+**--minimum-tls-version**
+> Specifies the TLS version required by clients to connect to cache (1.0, 1.1, 1.2).
+
+**--redis-version**
+> Redis version in the form 'major[.minor]' or 'latest'. Default value is 'latest'.
+
+**--yes** **-y**
+> Do not prompt for confirmation (used with delete and flush).
 
 # DESCRIPTION
 

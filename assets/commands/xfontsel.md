@@ -48,6 +48,9 @@ Interactive X11 font selector
 **-scaled**
 > Include scaled fonts in selection.
 
+**-noscaled**
+> Exclude scaled fonts from selection.
+
 **-display** _name_
 > X display to use.
 
@@ -69,4 +72,4 @@ Only shows X11 core fonts (XLFD), not modern fontconfig/FreeType fonts. Limited 
 
 # SEE ALSO
 
-[xlsfonts](/man/xlsfonts)(1), [fc-list](/man/fc-list)(1), [xfd](/man/xfd)(1), [xterm](/man/xterm)(1)
+[xlsfonts](/man/xlsfonts)(1), [fc-list](/man/fc-list)(1), [xterm](/man/xterm)(1)

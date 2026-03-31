@@ -22,27 +22,30 @@ Set muxer's **internal queue size**
 
 # SYNOPSIS
 
-**mux** [**-c** _names_] [**-s** _size_] [**-i** _input_] [**-o** _output_]
+**mux** [**-h** | [**-s** _size_] **-c** _name_ | [**-i** _name_] [**-o** _name_]]
 
 # PARAMETERS
 
-**-c _names_**
-> Create new muxers with specified names
+**-h**
+> Show help message and exit
+
+**-c _name_**
+> Create a muxer with specified name (repeatable)
 
 **-s _size_**
-> Set internal queue size; default is 100 events
+> Set muxer queue size; default is 100
 
-**-i _input_**
+**-i _name_**
 > Read input from named muxer; can be repeated for switch mode
 
-**-o _output_**
+**-o _name_**
 > Write output to named muxer; can be repeated
 
 # DESCRIPTION
 
-**mux** is part of the Interception Tools suite for intercepting and multiplexing streams of input events. It creates named pipes for routing keyboard and mouse events between processes.
+**mux** is part of the Interception Tools suite for multiplexing streams of input events. A muxer must be created first with **-c**, then used as the input or output of a given pipeline.
 
-Muxers act as intermediary buffers allowing multiple input sources to be combined or switched, and multiple outputs to receive the same events. This enables complex input event processing pipelines.
+Besides combining multiple pipelines into one, mux can duplicate them (using multiple **-o** options) and act as a switch based on activity in other pipelines (using multiple **-i** options).
 
 The tool is commonly used with udevmon and other Interception Tools components for keyboard remapping, event filtering, and input device manipulation at a low level.
 
@@ -56,4 +59,4 @@ Requires the Interception Tools framework to be installed and configured. Named 
 
 # SEE ALSO
 
-[udevmon](/man/udevmon)(1), [intercept](/man/intercept)(1), [uinput](/man/uinput)(1)
+[intercept](/man/intercept)(1), [udevmon](/man/udevmon)(1), [uinput](/man/uinput)(1)

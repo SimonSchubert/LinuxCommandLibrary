@@ -1,6 +1,6 @@
 # TAGLINE
 
-legacy PAM configuration file format where all services are configured
+Legacy PAM configuration file format where all services are configured in a single file
 
 # TLDR
 
@@ -43,9 +43,9 @@ legacy PAM configuration file format where all services are configured
 
 # DESCRIPTION
 
-**pam.conf** is the legacy PAM configuration file format where all services are configured in a single file. Modern systems typically use /etc/pam.d/ directory with per-service files.
+**pam.conf** is the legacy PAM configuration file format where all services are configured in a single file. Modern systems typically use the /etc/pam.d/ directory with per-service files instead.
 
-Each line defines a rule: service type control module arguments.
+Each line defines a rule with the format: service type control module-path [arguments].
 
 # EXAMPLE
 
@@ -76,4 +76,4 @@ optional   - Result ignored unless only module
 
 # SEE ALSO
 
-[pam.d](/man/pam.d)(5), [pam](/man/pam)(8), [pam_unix](/man/pam_unix)(8)
+[pam.d](/man/pam.d)(5), [pam](/man/pam)(8), [pam_unix](/man/pam_unix)(8), [passwd](/man/passwd)(1), [sudo](/man/sudo)(8)

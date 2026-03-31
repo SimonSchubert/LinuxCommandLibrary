@@ -24,11 +24,15 @@ modern MongoDB shell
 
 ```mongosh --eval "[db.collection.find()]"```
 
-**Use specific shell**
+**Start shell without** connecting to a database
 
 ```mongosh --nodb```
 
-**Quiet mode**
+**Connect with TLS** to a remote host
+
+```mongosh --tls "mongodb://[host]:27017/[dbname]"```
+
+**Quiet mode** (suppress startup messages)
 
 ```mongosh --quiet [script.js]```
 
@@ -56,18 +60,33 @@ _CONNECTION_STRING_
 **--quiet**
 > Silence non-essential output.
 
+**--host** _HOST_
+> Server hostname (default: localhost).
+
+**--port** _PORT_
+> Server port (default: 27017).
+
+**--authenticationDatabase** _DB_
+> Authentication database (default: admin).
+
+**--tls**
+> Enable TLS/SSL connection.
+
+**--shell**
+> Force interactive shell after running files/eval.
+
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**mongosh** is the modern MongoDB shell. It provides JavaScript interface with enhanced features.
+**mongosh** is the modern MongoDB shell, providing a fully functional JavaScript and Node.js REPL environment for interacting with MongoDB deployments.
 
-The tool replaces legacy mongo shell. Includes syntax highlighting, autocomplete, and snippets.
+It replaces the legacy **mongo** shell with improvements including syntax highlighting, intelligent autocomplete, inline help, and extensible snippets. It supports all CRUD operations, aggregation pipelines, database administration, and Atlas connectivity.
 
 # CAVEATS
 
-Requires Node.js runtime. MongoDB 5.0+ recommended. Different API from legacy mongo.
+Bundles its own Node.js runtime since version 1.0. Compatible with MongoDB 4.0+, though some features require MongoDB 5.0+. Has a different driver API from the legacy mongo shell; scripts may need updating.
 
 # HISTORY
 
@@ -75,5 +94,5 @@ mongosh was released by **MongoDB** in 2020 as the next-generation shell replace
 
 # SEE ALSO
 
-[mongo](/man/mongo)(1), [mongod](/man/mongod)(1), [mongoimport](/man/mongoimport)(1)
+[mongo](/man/mongo)(1), [mongod](/man/mongod)(1), [mongoimport](/man/mongoimport)(1), [mongoexport](/man/mongoexport)(1), [mongodump](/man/mongodump)(1)
 

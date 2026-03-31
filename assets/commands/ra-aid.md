@@ -16,9 +16,13 @@ AI-powered autonomous development companion
 
 ```ra-aid -m "[fix the bug]" --provider [openai] --model [gpt-4]```
 
-**Run with a specific tool** enabled
+**Run in chat mode** for interactive collaboration
 
-```ra-aid -m "[optimize queries]" --tool [shell]```
+```ra-aid -m "[help me design the API]" --chat```
+
+**Run with cowboy mode** to skip shell command approval prompts
+
+```ra-aid -m "[fix the linting errors]" --cowboy-mode```
 
 # SYNOPSIS
 
@@ -30,16 +34,37 @@ AI-powered autonomous development companion
 > Task description for the agent.
 
 **--provider** _PROVIDER_
-> AI provider to use (openai, anthropic, etc.).
+> AI provider to use (anthropic, openai, openrouter, openai-compatible, makehub, gemini).
 
 **--model** _MODEL_
-> Specific model to use.
+> Specific model to use (required for non-Anthropic providers).
 
 **--research-only**
 > Only gather information without making changes.
 
-**--tool** _TOOL_
-> Enable specific tools (shell, editor, browser).
+**--chat**
+> Enable interactive chat mode with direct human interaction (implies --hil).
+
+**--hil**
+> Enable human-in-the-loop mode for interactive approval.
+
+**--cowboy-mode**
+> Skip interactive approval for shell commands.
+
+**--auto-test**
+> Automatically run tests after each code change.
+
+**--test-cmd** _COMMAND_
+> Custom command to run tests.
+
+**--recursion-limit** _N_
+> Maximum recursion depth for agent operations (default: 100).
+
+**--show-cost**
+> Display cost information as the agent works.
+
+**--max-cost** _USD_
+> Set a maximum cost threshold in USD.
 
 **--verbose**
 > Enable verbose output.
@@ -52,19 +77,19 @@ AI-powered autonomous development companion
 
 # DESCRIPTION
 
-**ra-aid** is an autonomous AI development companion built on LangChain that operates in three distinct stages: research, planning, and implementation. It analyzes codebases, formulates strategies, and executes multi-step development tasks with minimal human intervention.
+**ra-aid** is an autonomous AI development companion built on LangGraph that operates in three distinct stages: research, planning, and implementation. It analyzes codebases, formulates strategies, and executes multi-step development tasks with minimal human intervention.
 
 The tool uses a structured workflow where it first researches the codebase and task requirements, then creates a detailed plan, and finally implements changes. This staged approach provides transparency and allows developers to review plans before execution.
 
-ra-aid supports multiple AI providers and integrates with shell commands, file editing, and web browsing capabilities to accomplish complex development tasks.
+ra-aid supports multiple AI providers (Anthropic, OpenAI, OpenRouter, Gemini, and others) and integrates with shell commands, file editing, and web browsing capabilities to accomplish complex development tasks. The --chat mode enables interactive collaboration where you can guide the agent through tasks conversationally.
 
 # CAVEATS
 
-Requires API keys for AI providers. Python 3.8 or newer required. Complex autonomous tasks may consume significant API tokens. Always review changes made in autonomous mode before committing.
+Requires API keys for AI providers. Complex autonomous tasks may consume significant API tokens. Use --show-cost to monitor spending and --max-cost to set limits. Always review changes made in autonomous mode before committing.
 
 # HISTORY
 
-**ra-aid** was created as an open-source autonomous coding agent built on **LangChain** and **LangGraph**. It differentiates itself through its three-stage research-plan-implement workflow, offering more transparency than single-pass coding agents.
+**ra-aid** was created as an open-source autonomous coding agent built on **LangGraph**'s agent-based task execution framework. It differentiates itself through its three-stage research-plan-implement workflow, offering more transparency than single-pass coding agents.
 
 # SEE ALSO
 

@@ -1,6 +1,6 @@
 # TAGLINE
 
-Mailbox message counter
+counts messages in a mailbox
 
 # TLDR
 
@@ -73,4 +73,4 @@ countmail is part of the tradition of simple Unix mail utilities. Various implem
 
 # SEE ALSO
 
-[mail](/man/mail)(1), [mutt](/man/mutt)(1), [fetchmail](/man/fetchmail)(1), [procmail](/man/procmail)(1)
+[mail](/man/mail)(1), [from](/man/from)(1), [mutt](/man/mutt)(1), [fetchmail](/man/fetchmail)(1), [procmail](/man/procmail)(1)

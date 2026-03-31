@@ -6,7 +6,7 @@ manages disk images for systemd containers and system extensions
 
 **Download** a tarball image from URL
 
-```sudo importctl pull-tar [URL] [path/to/directory]```
+```sudo importctl pull-tar [URL] [name]```
 
 **Pull** a raw or qcow2 disk image
 
@@ -15,6 +15,14 @@ manages disk images for systemd containers and system extensions
 **Import** a raw disk image
 
 ```importctl import-raw [path/to/file.ext] [name] --class=[machine|portable|sysext|confext]```
+
+**List** current transfers in progress
+
+```importctl list-transfers```
+
+**Cancel** a running transfer
+
+```importctl cancel-transfer [transfer-id]```
 
 **Export** a container image as tarball
 
@@ -44,8 +52,20 @@ manages disk images for systemd containers and system extensions
 **export-raw** _NAME_ _FILE_
 > Export container as raw disk image
 
+**list-transfers**
+> Show currently running transfers
+
+**cancel-transfer** _ID_
+> Cancel a running import, export, or download
+
 **--class** _TYPE_
 > Image class: machine, portable, sysext, confext
+
+**--verify** _MODE_
+> Verification mode for downloads: no, checksum, signature (default: signature)
+
+**--format** _FORMAT_
+> Image format for raw operations: raw, qcow2 (default: raw)
 
 # DESCRIPTION
 
@@ -63,4 +83,4 @@ importctl is part of systemd, introduced to provide a unified interface for mana
 
 # SEE ALSO
 
-[machinectl](/man/machinectl)(1), [systemd-machined](/man/systemd-machined)(8), [systemd-nspawn](/man/systemd-nspawn)(1)
+[machinectl](/man/machinectl)(1), [systemd-nspawn](/man/systemd-nspawn)(1), [systemctl](/man/systemctl)(1)

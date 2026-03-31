@@ -28,6 +28,14 @@ opens the GitHub repository page in your web browser
 
 ```hub browse [owner/repo]```
 
+**Print URL instead of opening browser**
+
+```hub browse -u```
+
+**Copy URL to clipboard**
+
+```hub browse -c```
+
 # SYNOPSIS
 
 **hub** **browse** [_options_] [_owner/repo_] [-- _subpage_]

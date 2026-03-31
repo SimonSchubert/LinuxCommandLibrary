@@ -8,6 +8,10 @@ Slurm compute node daemon
 
 ```slurmd -b```
 
+**Run** the daemon in the foreground with verbose logging
+
+```slurmd -D -v```
+
 **Run** the daemon with a given nodename
 
 ```slurmd -N [nodename]```
@@ -19,6 +23,10 @@ Slurm compute node daemon
 **Read** configuration from a specified file
 
 ```slurmd -f [path/to/file]```
+
+**Clear** previous node state and start fresh
+
+```slurmd -c```
 
 # SYNOPSIS
 
@@ -47,6 +55,9 @@ Slurm compute node daemon
 **-v**
 > Verbose logging
 
+**-M**
+> Run the daemon with multiple node names (must have unique port and NodeAddr)
+
 **-h**
 > Display help information
 
@@ -65,4 +76,4 @@ Must be run as root. Requires proper Slurm configuration (slurm.conf). The node 
 
 # SEE ALSO
 
-[slurmctld](/man/slurmctld)(8), [scontrol](/man/scontrol)(1), [sbatch](/man/sbatch)(1), [sinfo](/man/sinfo)(1)
+[slurmctld](/man/slurmctld)(8), [scontrol](/man/scontrol)(1), [sbatch](/man/sbatch)(1), [srun](/man/srun)(1), [squeue](/man/squeue)(1), [sinfo](/man/sinfo)(1)

@@ -16,6 +16,10 @@ CLI tool for managing multiple repositories
 
 ```mani exec "[command]"```
 
+**Run a command only on projects with a specific tag**
+
+```mani exec --tags [frontend] "[command]"```
+
 **Run a predefined task**
 
 ```mani run [task_name]```
@@ -24,9 +28,45 @@ CLI tool for managing multiple repositories
 
 ```mani list projects```
 
+**List all available tasks**
+
+```mani list tasks```
+
 # SYNOPSIS
 
 **mani** _command_ [_options_]
+
+# PARAMETERS
+
+**init**
+> Initialize a new mani configuration in the current directory.
+
+**sync**
+> Clone and update all repositories defined in the configuration.
+
+**exec** _command_
+> Execute a shell command across projects.
+
+**run** _task_
+> Run a predefined task from the configuration.
+
+**list** _resource_
+> List projects, tags, or tasks.
+
+**--tags** _tags_
+> Filter projects by tags (comma-separated).
+
+**--projects** _projects_
+> Filter by project names (comma-separated).
+
+**--all-projects**
+> Target all projects including the root.
+
+**--parallel**
+> Run commands in parallel across projects.
+
+**--output** _format_
+> Output format: stream, table, markdown, or html.
 
 # DESCRIPTION
 
@@ -49,4 +89,4 @@ All repositories must be accessible from the machine running mani. Clone operati
 
 # SEE ALSO
 
-[git](/man/git)(1), [repo](/man/repo)(1)
+[git](/man/git)(1), [mr](/man/mr)(1)

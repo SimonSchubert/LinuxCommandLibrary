@@ -48,8 +48,11 @@ Send signal to all processes with a **group ID**
 
 # PARAMETERS
 
-**-l, -L, --table**
-> List signal names and numbers
+**-l, --list**
+> List signal names, or convert signal number to name
+
+**-L, --table**
+> List signal names and numbers in a table
 
 **-s signal**
 > Specify signal to send
@@ -57,8 +60,14 @@ Send signal to all processes with a **group ID**
 **-signal**
 > Specify signal by name or number (e.g., -9, -KILL, -SIGKILL)
 
+**-p, --pid**
+> Print the process ID only; do not send a signal
+
+**-q, --queue value**
+> Send the signal using sigqueue(3) with the accompanying integer value
+
 **pid**
-> Process ID to signal
+> Process ID to signal. A PID of 0 signals all processes in the current process group. A PID of -1 signals all processes with PID > 1.
 
 **%job_id**
 > Job ID from shell job control
@@ -82,4 +91,4 @@ Part of standard Unix since early versions. The **kill** command has been availa
 
 # SEE ALSO
 
-[killall](/man/killall)(1), [pkill](/man/pkill)(1), [ps](/man/ps)(1), [signal](/man/signal)(7)
+[killall](/man/killall)(1), [pkill](/man/pkill)(1), [pgrep](/man/pgrep)(1), [ps](/man/ps)(1), [top](/man/top)(1)

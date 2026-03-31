@@ -88,5 +88,3 @@ Open-source version has some limitations. Educational and commercial licenses av
 PyMOL was created by **Warren DeLano** starting in 1998, now maintained by **Schrödinger, Inc.** with open-source development.
 
 # SEE ALSO
-
-[chimera](/man/chimera)(1), [vmd](/man/vmd)(1), [rasmol](/man/rasmol)(1)

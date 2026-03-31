@@ -26,7 +26,7 @@ Shell loop executing until condition becomes true
 
 # DESCRIPTION
 
-**until** is a shell loop construct that repeatedly executes a block of commands as long as a condition evaluates to false. It is the logical opposite of **while**, which loops while a condition is true. The loop body executes at least once if the condition starts as false, and stops as soon as the condition becomes true.
+**until** is a shell loop construct that repeatedly executes a block of commands as long as a condition evaluates to false (non-zero exit status). It is the logical opposite of **while**, which loops while a condition is true. The condition is tested before each iteration, so if it is already true when the loop starts, the body never executes.
 
 The most common use of until is polling for a condition to become true, such as waiting for a network host to come online, a file to appear, or a process to start. Combined with **sleep**, it provides a simple way to implement retry logic in shell scripts.
 
@@ -52,4 +52,4 @@ echo "Host is up"
 
 # SEE ALSO
 
-[while](/man/while)(1), [for](/man/for)(1), [if](/man/if)(1)
+[while](/man/while)(1), [for](/man/for)(1), [if](/man/if)(1), [sleep](/man/sleep)(1), [test](/man/test)(1)

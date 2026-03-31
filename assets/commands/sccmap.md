@@ -16,13 +16,17 @@ Find strongly connected components in Graphviz graphs
 
 ```sccmap -v [graph.dot]```
 
+**Print number of nodes** in each SCC
+
+```sccmap -S [graph.dot]```
+
 **Silent mode**
 
 ```sccmap -s [graph.dot]```
 
 # SYNOPSIS
 
-**sccmap** [_-o file_] [_-v_] [_-s_] [_options_] _files_
+**sccmap** [_-dsSv_] [_-o file_] [_options_] _files_
 
 # PARAMETERS
 
@@ -35,11 +39,11 @@ Find strongly connected components in Graphviz graphs
 **-s**
 > Silent mode.
 
-**-S** _N_
-> Minimum component size.
+**-S**
+> Print the number of nodes in each strongly connected component.
 
 **-d**
-> Output as subgraphs.
+> Decompose the graph and number each node with its SCC index.
 
 # DESCRIPTION
 
@@ -57,4 +61,4 @@ Directed graphs only. DOT format input. Part of Graphviz package.
 
 # SEE ALSO
 
-[dot](/man/dot)(1), [neato](/man/neato)(1), [tred](/man/tred)(1), [ccomps](/man/ccomps)(1)
+[dot](/man/dot)(1), [neato](/man/neato)(1), [tred](/man/tred)(1), [ccomps](/man/ccomps)(1), [acyclic](/man/acyclic)(1)

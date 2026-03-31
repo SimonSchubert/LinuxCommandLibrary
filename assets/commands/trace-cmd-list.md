@@ -20,6 +20,18 @@ List available **functions**
 
 ```sudo trace-cmd list -f```
 
+List events matching a **pattern**
+
+```sudo trace-cmd list -e [sched:*]```
+
+List available **event options**
+
+```sudo trace-cmd list -o```
+
+List functions matching a **regex**
+
+```sudo trace-cmd list -f [tcp_send*]```
+
 # SYNOPSIS
 
 **trace-cmd list** [_OPTIONS_]
@@ -32,11 +44,17 @@ List available **functions**
 **-p**
 > List available plugins
 
-**-e**
-> List available events
+**-e** [_regex_]
+> List available events, optionally filtered by a subsystem or regex pattern.
 
-**-f**
-> List available functions for tracing
+**-f** [_regex_]
+> List available functions for tracing, optionally filtered by regex.
+
+**-o**
+> List available event options (e.g., noprint-fmt, sym-offset).
+
+**-B** _buffer_
+> List from a specific buffer instance.
 
 # DESCRIPTION
 
@@ -50,4 +68,4 @@ Requires root privileges. Available items depend on kernel build configuration. 
 
 # SEE ALSO
 
-[trace-cmd](/man/trace-cmd)(1), [trace-cmd-record](/man/trace-cmd-record)(1), [trace-cmd-report](/man/trace-cmd-report)(1)
+[trace-cmd](/man/trace-cmd)(1), [trace-cmd-record](/man/trace-cmd-record)(1), [trace-cmd-report](/man/trace-cmd-report)(1), [perf](/man/perf)(1)

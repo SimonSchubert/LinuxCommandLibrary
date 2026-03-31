@@ -84,17 +84,26 @@ portable x86 and x86-64 assembler using Intel syntax
 **-O** _level_
 > Optimization level (0, 1, x for multi-pass).
 
+**-@** _file_
+> Read additional command-line options from file.
+
+**-Z** _file_
+> Redirect error messages to file.
+
 **-s**
 > Output errors to stdout.
 
 **-v**
 > Display version.
 
+**-y**
+> List available debug info formats for a given output format.
+
 **-h**
 > Display help.
 
 **-hf**
-> List output formats.
+> List available output formats.
 
 # DESCRIPTION
 

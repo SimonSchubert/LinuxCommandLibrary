@@ -85,6 +85,15 @@ Ultimate Packer for eXecutables
 **--no-backup**
 > Don't create backup.
 
+**--lzma**
+> Use LZMA compression (better ratio but slower decompression).
+
+**--no-lzma**
+> Disable LZMA compression (overrides --brute and --all-methods).
+
+**--overlay=**_ACTION_
+> Handle overlay data: copy (default), strip.
+
 # DESCRIPTION
 
 **upx** (Ultimate Packer for eXecutables) compresses executables. Compressed programs decompress in memory when run.
@@ -105,7 +114,7 @@ Some security tools flag UPX-compressed files. Code signing may be invalidated. 
 
 # HISTORY
 
-**UPX** was created by **Markus Oberhumer** and **László Molnár** in **1996**. It became the standard tool for executable compression, widely used for software distribution.
+**UPX** was created by **Markus Oberhumer**, **László Molnár**, and **John Reiser** in **1996**. It became the standard tool for executable compression, widely used for software distribution.
 
 # SEE ALSO
 

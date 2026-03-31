@@ -20,6 +20,10 @@ Regex generator from example strings
 
 ```grex -i [example1] [example2]```
 
+**Generate with repetition detection**
+
+```grex -r [aaab] [aaac]```
+
 **Generate without start/end anchors**
 
 ```grex --no-anchors [examples...]```
@@ -67,11 +71,14 @@ _TEST-STRINGS_
 **--no-anchors**
 > Remove ^ and $ anchors (anchors are added by default).
 
+**--no-start-anchor**
+> Remove the ^ start anchor only.
+
+**--no-end-anchor**
+> Remove the $ end anchor only.
+
 **-f**, **--file** _FILE_
 > Read test strings from a file (one per line).
-
-**-o**, **--output** _FILE_
-> Write generated regex to a file.
 
 **--help**
 > Display help information.

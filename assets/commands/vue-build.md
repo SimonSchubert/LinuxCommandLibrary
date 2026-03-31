@@ -32,14 +32,17 @@ Build Vue.js applications for production
 > Output directory.
 
 **--modern**
-> Modern mode build.
+> Build for modern browsers with auto legacy fallback (Vue CLI 4 only, removed in CLI 5).
+
+**--no-clean**
+> Do not remove the output directory before building.
 
 **--watch**
-> Watch for changes.
+> Watch for changes and rebuild automatically.
 
 # DESCRIPTION
 
-**vue build** compiles Vue.js applications for production. Creates optimized bundles with minification and tree-shaking. Part of Vue CLI's zero-config build process.
+**vue build** compiles Vue.js applications for production. Creates optimized bundles with minification and tree-shaking. Part of Vue CLI's instant prototyping feature (requires `@vue/cli-service-global`). For standard project builds, use `vue-cli-service build`.
 
 # SEE ALSO
 

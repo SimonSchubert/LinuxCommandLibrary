@@ -24,9 +24,17 @@ GitHub release binary downloader
 
 ```eget [owner/repo] --file [binary]```
 
-**Verify with checksum**
+**Verify with SHA-256 checksum**
 
-```eget [owner/repo] --verify-sha256 [checksum]```
+```eget [owner/repo] --sha256 [checksum]```
+
+**Download source code** instead of binary
+
+```eget [owner/repo] --source```
+
+**Download without extracting**
+
+```eget [owner/repo] --download-only```
 
 # SYNOPSIS
 
@@ -49,11 +57,20 @@ _REPOSITORY_
 **--file** _NAME_
 > Extract specific file from archive.
 
-**--verify-sha256** _HASH_
-> Verify checksum.
+**--sha256** _HASH_
+> Verify downloaded file against SHA-256 checksum.
 
-**--system**
-> Install system-wide (to /usr/local/bin).
+**--source**
+> Download source code archive instead of release binary.
+
+**--download-only**
+> Download asset without extracting.
+
+**-q**, **--quiet**
+> Suppress output.
+
+**--upgrade-only**
+> Only download if newer version is available.
 
 **--help**
 > Display help information.

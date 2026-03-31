@@ -12,9 +12,17 @@ Manage XDG default application settings
 
 ```xdg-settings set default-web-browser firefox.desktop```
 
+**Check** if Firefox is the default browser
+
+```xdg-settings check default-web-browser firefox.desktop```
+
 **Set** the default mail handler to Evolution
 
 ```xdg-settings set default-url-scheme-handler mailto evolution.desktop```
+
+**Get** the default handler for the mailto scheme
+
+```xdg-settings get default-url-scheme-handler mailto```
 
 # SYNOPSIS
 
@@ -35,7 +43,10 @@ Manage XDG default application settings
 > Default web browser property
 
 **default-url-scheme-handler _scheme_**
-> Default handler for URL schemes (mailto, ftp, etc.)
+> Default handler for URL schemes (mailto, ftp, https, etc.)
+
+**--list**
+> List all properties supported by xdg-settings
 
 # DESCRIPTION
 

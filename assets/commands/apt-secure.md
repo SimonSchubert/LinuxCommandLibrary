@@ -12,13 +12,14 @@ Read the man page:
 
 # DESCRIPTION
 
-**apt-secure** is a manual page (not a command) that describes APT's archive authentication system. It explains how APT verifies package integrity using cryptographic signatures.
+**apt-secure** is a manual page (not a command) that describes APT's archive authentication system. It explains how APT verifies package integrity using cryptographic signatures to prevent man-in-the-middle attacks and compromised mirror servers.
 
 The document covers:
 - How Release files are signed with GPG
-- How Packages files are verified via checksums
-- How to add trusted keys
+- How Packages files are verified via checksums in the Release file
+- How to add trusted keys for repository verification
 - Security implications of untrusted repositories
+- The chain of trust from archive maintainer to end user
 
 # KEY CONCEPTS
 
@@ -48,4 +49,4 @@ Understanding apt-secure is important for adding third-party repositories safely
 
 # SEE ALSO
 
-[apt](/man/apt)(8), [apt-key](/man/apt-key)(8), [sources.list](/man/sources.list)(5)
+[apt](/man/apt)(8), [apt-get](/man/apt-get)(8), [apt-key](/man/apt-key)(8), [gpg](/man/gpg)(1)

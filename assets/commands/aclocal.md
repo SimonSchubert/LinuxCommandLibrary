@@ -20,6 +20,10 @@ Generate with **warnings** for obsolete macros
 
 ```aclocal --warnings=obsolete```
 
+**Install** third-party macros to local m4 directory
+
+```aclocal -I [m4/] --install```
+
 # SYNOPSIS
 
 **aclocal** [_-I dir_] [_--output=file_] [_--warnings=category_] [_options_]
@@ -44,8 +48,14 @@ The generated aclocal.m4 file contains all the M4 macros needed by autoconf to p
 **--warnings=**_category_
 > Enable warnings: syntax, unsupported, obsolete, all, none, error
 
+**--install**
+> Copy third-party macros to the local m4 directory (requires -I)
+
 **--force**
 > Always regenerate output file
+
+**--dry-run**
+> Do not actually create or modify any files
 
 **--verbose**
 > Print names of files being processed
@@ -66,4 +76,4 @@ Must be run before autoconf when building from source. The search order for .m4 
 
 # SEE ALSO
 
-[autoconf](/man/autoconf)(1), [automake](/man/automake)(1), [autoreconf](/man/autoreconf)(1), [libtoolize](/man/libtoolize)(1)
+[autoconf](/man/autoconf)(1), [automake](/man/automake)(1), [autoreconf](/man/autoreconf)(1), [libtoolize](/man/libtoolize)(1), [make](/man/make)(1)

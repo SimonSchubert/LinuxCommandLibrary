@@ -12,17 +12,21 @@ DICT protocol dictionary server daemon
 
 ```dictd -c [/etc/dictd/dictd.conf]```
 
-**Run in foreground**
+**Run in foreground** (don't detach)
 
-```dictd --foreground```
+```dictd --nodetach```
 
 **Listen on specific port**
 
 ```dictd --port [2628]```
 
-**Limit connections**
+**Limit concurrent connections**
 
 ```dictd --limit [10]```
+
+**Run with specific PID file**
+
+```dictd --pid [/var/run/dictd.pid]```
 
 # SYNOPSIS
 
@@ -53,8 +57,8 @@ dictd databases are typically in the dictd format created by dictfmt, which conv
 **-i**, **--inetd**
 > Run in inetd mode, communicating on stdin/stdout. Implies --fast-start.
 
-**--foreground**
-> Don't daemonize.
+**--nodetach**
+> Run in foreground, don't daemonize.
 
 **--depth** _length_
 > Override the depth keyword from configuration.
@@ -65,8 +69,14 @@ dictd databases are typically in the dictd format created by dictfmt, which conv
 **--fast-start**
 > Skip preloading of database indexes at startup.
 
-**--log** _type_
-> Logging type (syslog, stderr).
+**--logfile** _file_
+> Log to specified file instead of syslog.
+
+**--syslog**
+> Log to syslog (default when daemonized).
+
+**--stderr**
+> Log to standard error (implies --nodetach).
 
 **--pid** _file_
 > PID file location.

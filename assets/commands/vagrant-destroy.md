@@ -16,6 +16,10 @@ Delete Vagrant virtual machines
 
 ```vagrant destroy [name]```
 
+**Gracefully shut down** before destroying
+
+```vagrant destroy --graceful```
+
 # SYNOPSIS
 
 **vagrant** **destroy** [_options_] [_name_]
@@ -23,13 +27,13 @@ Delete Vagrant virtual machines
 # PARAMETERS
 
 **-f**, **--force**
-> Destroy without confirmation.
+> Destroy without confirmation prompt.
 
-**--parallel**
-> Destroy in parallel.
+**-g**, **--graceful**
+> Gracefully shut down the machine before destroying it.
 
-**--graceful**
-> Graceful shutdown before destroy.
+**--[no-]parallel**
+> Enable or disable parallel destruction of multiple machines. Enabled by default if the provider supports it.
 
 # DESCRIPTION
 
@@ -37,9 +41,9 @@ Delete Vagrant virtual machines
 
 # CAVEATS
 
-This permanently destroys VM data. Shared folders and host files are not affected.
+This permanently destroys VM data. Shared folders and host files are not affected. The destroy command does not remove the box that was downloaded during `vagrant up`. Use `vagrant box remove` to reclaim that disk space.
 
 # SEE ALSO
 
-[vagrant](/man/vagrant)(1), [vagrant-halt](/man/vagrant-halt)(1), [vagrant-up](/man/vagrant-up)(1)
+[vagrant](/man/vagrant)(1), [vagrant-halt](/man/vagrant-halt)(1), [vagrant-box](/man/vagrant-box)(1), [vagrant-status](/man/vagrant-status)(1)
 

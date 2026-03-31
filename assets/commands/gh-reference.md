@@ -1,38 +1,30 @@
 # TAGLINE
 
-Display comprehensive GitHub CLI command reference
+Display a markdown reference of all GitHub CLI commands
 
 # TLDR
 
-**View full reference**
+**Display the full command reference**
 
 ```gh reference```
 
-**View reference in browser**
+**Pipe the reference to a pager** for easier reading
 
-```gh reference --web```
+```gh reference | less```
 
 # SYNOPSIS
 
-**gh reference** [_options_]
-
-# PARAMETERS
-
-**--web**
-> Open reference in web browser.
-
-**--help**
-> Display help information.
+**gh reference**
 
 # DESCRIPTION
 
-**gh reference** displays a comprehensive reference manual for all GitHub CLI commands. It provides a complete listing of commands, subcommands, and their options in a single view.
+**gh reference** outputs a comprehensive markdown-formatted reference of all GitHub CLI commands. It provides a complete listing of every command, subcommand, and their flags in a single document.
 
-The reference is useful for discovering available commands and getting an overview of gh's capabilities. Unlike individual help pages, it shows all commands together for easier exploration.
+The reference is useful for discovering available commands and getting an overview of gh's capabilities. Unlike individual help pages (`gh <command> --help`), it shows all commands together for easier exploration.
 
 # CAVEATS
 
-Output is lengthy; consider piping to a pager. Web version may be more current than local.
+Output is lengthy; consider piping to a pager such as `less`. The locally generated reference reflects the installed version of gh.
 
 # HISTORY
 

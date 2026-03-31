@@ -4,9 +4,9 @@ Show pending Proxmox VM configuration changes
 
 # TLDR
 
-**Show** pending VM configuration
+**Show pending configuration changes for a VM**
 
-```qm pending vm_id```
+```qm pending [vm_id]```
 
 # SYNOPSIS
 
@@ -31,4 +31,4 @@ Some configuration changes require a VM restart to take effect. The pending comm
 
 # SEE ALSO
 
-[qm](/man/qm)(1), [qm-config](/man/qm-config)(1), [qm-set](/man/qm-set)(1)
+[qm](/man/qm)(1), [qm-config](/man/qm-config)(1), [qm-set](/man/qm-set)(1), [qm-start](/man/qm-start)(1)

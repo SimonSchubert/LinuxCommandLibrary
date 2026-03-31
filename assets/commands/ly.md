@@ -8,9 +8,18 @@ Lightweight TUI display manager for Linux and BSD
 
 ```ly```
 
+**Start on a specific tty**
+
+```ly -c [tty2]```
+
 # SYNOPSIS
 
 **ly** [_options_]
+
+# PARAMETERS
+
+**-c**, **--config-tty** _TTY_
+> Set the tty to operate on.
 
 # DESCRIPTION
 
@@ -21,11 +30,11 @@ Users navigate with arrow keys to change fields and select desktop environments,
 # CONFIGURATION
 
 **/etc/ly/config.ini**
-> Fully commented configuration file with default values for customizing the login screen appearance and behavior.
+> Configuration file with default values for customizing the login screen appearance and behavior, including animation, colors, and session paths.
 
 # CAVEATS
 
-Runs in the framebuffer console — does not launch a graphical environment for the login screen itself. Some terminal features may vary depending on the framebuffer driver.
+Runs in the framebuffer console -- does not launch a graphical environment for the login screen itself. Some terminal features may vary depending on the framebuffer driver. Typically managed as a systemd service (**ly.service**) or via an init system.
 
 # HISTORY
 
@@ -33,4 +42,4 @@ Runs in the framebuffer console — does not launch a graphical environment for 
 
 # SEE ALSO
 
-[lemurs](/man/lemurs)(1), [lightdm](/man/lightdm)(1), [startx](/man/startx)(1)
+[lemurs](/man/lemurs)(1), [gdm](/man/gdm)(1), [startx](/man/startx)(1), [xinit](/man/xinit)(1)

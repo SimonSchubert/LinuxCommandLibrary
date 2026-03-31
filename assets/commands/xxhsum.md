@@ -1,12 +1,24 @@
 # TAGLINE
 
-Fast non-cryptographic hash checksums
+Print or check xxHash non-cryptographic checksums
 
 # TLDR
 
-Calculate **checksum**
+Calculate **XXH64 checksum** (default)
 
-```xxhsum -H[0|32|64|128] [path/to/file]```
+```xxhsum [path/to/file]```
+
+Calculate **XXH32 checksum**
+
+```xxhsum -H0 [path/to/file]```
+
+Calculate **XXH128 checksum**
+
+```xxhsum -H2 [path/to/file]```
+
+**Verify checksums** from a file
+
+```xxhsum -c [path/to/checksums.xxh]```
 
 Run **benchmark**
 
@@ -14,27 +26,58 @@ Run **benchmark**
 
 # SYNOPSIS
 
-**xxhsum** [_OPTIONS_] [_FILE..._]
+**xxhsum** [_OPTION_]... [_FILE_...]
+
+**xxhsum -b** [_OPTION_]...
 
 # PARAMETERS
 
-**-H** _ALGO_
-> Hash algorithm: 0 (XXH32), 32 (XXH32), 64 (XXH64), 128 (XXH128)
+**-H** _HASHTYPE_
+> Hash algorithm: 0 (XXH32), 1 (XXH64, default), 2 (XXH128), 3 (XXH3). Also accepts 32, 64, 128 as aliases.
 
 **-b**
-> Run benchmark
+> Activate benchmark mode
 
-**-c** _FILE_
+**-B** _BLOCKSIZE_
+> Set benchmark block size in bytes (default: 102400)
+
+**-i** _ITERATIONS_
+> Set number of benchmark iterations (default: 3)
+
+**-c, --check** _FILE_
 > Verify checksums from file
 
-**-q**
-> Quiet mode
+**-q, --quiet**
+> Suppress OK messages during verification
+
+**-w, --warn**
+> Warn about malformed checksum lines
+
+**--strict**
+> Return error on invalid checksum lines
+
+**--status**
+> Silent verification; indicate result only via exit code
+
+**--tag**
+> Output in BSD-style format
+
+**--little-endian**
+> Display checksum in little-endian format (default is big-endian)
+
+**-h, --help**
+> Display help
+
+**-V, --version**
+> Display version
 
 # DESCRIPTION
 
-**xxhsum** calculates and verifies checksums using the xxHash algorithm. xxHash is an extremely fast non-cryptographic hash function, suitable for integrity checking where speed is important.
+**xxhsum** prints or checks xxHash (32, 64, or 128 bit) checksums. xxHash is an extremely fast non-cryptographic hash function, suitable for integrity checking where speed is important.
 
-It's faster than MD5 or SHA but not suitable for cryptographic purposes.
+When no FILE is specified, reads from standard input. The command line syntax is similar to md5sum(1).
+
+Equivalent shortcut commands: **xxh32sum** (same as xxhsum -H0), **xxh64sum** (same as xxhsum -H1), **xxh128sum** (same as xxhsum -H2).
 
 # CAVEATS
 
@@ -42,4 +85,4 @@ Not cryptographically secure. Should not be used for security-sensitive applicat
 
 # SEE ALSO
 
-[md5sum](/man/md5sum)(1), [sha256sum](/man/sha256sum)(1), [b2sum](/man/b2sum)(1)
+[md5sum](/man/md5sum)(1), [sha256sum](/man/sha256sum)(1), [b2sum](/man/b2sum)(1), [cksum](/man/cksum)(1)

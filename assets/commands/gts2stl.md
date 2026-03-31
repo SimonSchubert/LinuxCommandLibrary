@@ -4,13 +4,17 @@ converts GTS files to STL format
 
 # TLDR
 
-**Convert GTS to STL**
+**Convert a GTS file to STL**
 
 ```gts2stl < [input.gts] > [output.stl]```
 
 **Convert with verbose output**
 
-```gts2stl -v < [input.gts] > [output.stl]```
+```gts2stl --verbose < [input.gts] > [output.stl]```
+
+**Convert with reversed face normals**
+
+```gts2stl --revert < [input.gts] > [output.stl]```
 
 # SYNOPSIS
 
@@ -19,16 +23,19 @@ converts GTS files to STL format
 # PARAMETERS
 
 **-v**, **--verbose**
-> Verbose output.
+> Print statistics about the surface.
+
+**-r**, **--revert**
+> Revert face normals (flip the orientation of triangles).
 
 **-h**, **--help**
-> Display help.
+> Display the help message.
 
 # DESCRIPTION
 
 **gts2stl** converts GTS (GNU Triangulated Surface) files to STL (STereoLithography) format. GTS is a library for 3D surface mesh operations, and this tool exports meshes to the widely-used STL format.
 
-STL files are commonly used for 3D printing and CAD applications. The conversion preserves the triangular mesh structure.
+STL files are commonly used for 3D printing and CAD applications. The conversion preserves the triangular mesh structure. The output is in ASCII STL format.
 
 # GTS FORMAT
 

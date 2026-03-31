@@ -53,7 +53,13 @@ Flash firmware to Rockchip devices via USB
 > Reboot device.
 
 **ef**
-> Erase flash.
+> Erase entire flash.
+
+**ul** _FILE_
+> Upgrade firmware from a packed update image.
+
+**rid**
+> Read chip ID.
 
 # DESCRIPTION
 

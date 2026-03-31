@@ -4,46 +4,58 @@ Find alternate files for source and test switching
 
 # TLDR
 
-**Find** alternate file
+**Find** alternate file for a source file
 
 ```alt [path/to/file.rb]```
 
-Find alternate in **specific directory**
+**Find** alternate showing only the **top** result
 
-```alt -d [app/] [test/models/user_test.rb]```
+```alt --truncate [1] [path/to/file.rb]```
 
-Find with **custom pattern**
+**Find** alternates including **hidden** files
 
-```alt -e [.spec.ts] [src/component.ts]```
+```alt -a [path/to/file.rb]```
+
+**Find** alternate reading file list from **stdin**
+
+```find . -type f -print | alt -f - [path/to/file.rb]```
 
 # SYNOPSIS
 
-**alt** [_-d directory_] [_-e extension_] _file_
+**alt** [_options_] _path_
 
 # DESCRIPTION
 
-**alt** finds the "alternate file" for a given source file, typically switching between implementation and test files. It uses intelligent pattern matching to find related files based on common naming conventions.
+**alt** finds the "alternate file" for a given source file, typically switching between implementation and test files. It ranks all files in the project by similarity to the given path and outputs them in ranked order.
 
-For example, given **app/models/user.rb**, it would find **test/models/user_test.rb** or **spec/models/user_spec.rb**. This makes it easy to jump between code and tests in editor integrations.
+For example, given **app/models/user.rb**, it would find **test/models/user_test.rb** or **spec/models/user_spec.rb**. This makes it easy to jump between code and tests in editor integrations such as Vim, NeoVim, and VS Code.
+
+By default, **alt** ignores hidden directory entries, globs defined in a **.ignore** file, and globs defined in the project's **.gitignore** and global **.gitignore**.
 
 # PARAMETERS
 
-**-d** _directory_
-> Limit search to specific directory
+**-a**
+> Include hidden files and directories in the search.
 
-**-e** _extension_
-> Specify alternate file extension
+**-f** _-_
+> Read file paths from standard input instead of scanning the directory.
+
+**-t** _N_, **--truncate** _N_
+> Truncate output to N alternate files (default 0, meaning show all).
 
 **-v**, **--version**
-> Display version information
+> Display version information.
+
+**-h**, **--help**
+> Display help information.
 
 # CAVEATS
 
-Pattern matching relies on common conventions; unusual project structures may not work. Results depend on files actually existing in expected locations.
+Alternate file matching relies on path similarity ranking based on common naming conventions; unusual project structures may produce unexpected results. By default, all possible alternates are shown in ranked order; use **--truncate 1** to get only the best match.
 
 # HISTORY
 
-**alt** was created as a fast alternative to similar tools in vim and other editors, designed to work independently of any specific editor and integrate via shell commands.
+**alt** was created by **Drew De Ponte** (uptech) as a fast, editor-independent command-line tool for finding alternate files. Written in Rust, it was originally designed for Vim integration but works with any editor or shell workflow.
 
 # SEE ALSO
 

@@ -1,6 +1,6 @@
 # TAGLINE
 
-creates a new Hakyll static site project with a basic structure
+Create a new Hakyll static site project with a basic structure
 
 # TLDR
 
@@ -22,5 +22,4 @@ creates a new Hakyll static site project with a basic structure
 
 # SEE ALSO
 
-[hugo](/man/hugo)(1), [jekyll](/man/jekyll)(1)
-
+[hugo](/man/hugo)(1), [jekyll](/man/jekyll)(1), [ghc](/man/ghc)(1), [cabal](/man/cabal)(1), [stack](/man/stack)(1)

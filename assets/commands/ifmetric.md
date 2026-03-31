@@ -12,6 +12,10 @@ Set the **priority** of a network interface (higher number = lower priority)
 
 ```sudo ifmetric [interface] 0```
 
+Prefer **wired** over wireless by giving wireless a higher metric
+
+```sudo ifmetric wlan0 100```
+
 # SYNOPSIS
 
 **ifmetric** _interface_ _metric_
@@ -40,4 +44,4 @@ ifmetric was created by Lennart Poettering (who later created PulseAudio and sys
 
 # SEE ALSO
 
-[ip](/man/ip)(8), [route](/man/route)(8), [ifup](/man/ifup)(8)
+[ip](/man/ip)(8), [route](/man/route)(8), [ifconfig](/man/ifconfig)(8), [ifup](/man/ifup)(8)

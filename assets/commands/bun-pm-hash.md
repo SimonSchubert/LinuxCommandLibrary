@@ -28,7 +28,7 @@ The related subcommands **hash-string** and **hash-print** provide additional in
 
 # CAVEATS
 
-The hash is computed from the lockfile content, so any manual edits to bun.lock will change the hash even if the actual dependency tree is unchanged. The command requires a valid lockfile to exist in the project; run **bun install** first if one is missing.
+The hash is computed from the lockfile content, so any manual edits will change the hash even if the actual dependency tree is unchanged. The command requires a valid lockfile to exist in the project; run **bun install** first if one is missing. Bun versions prior to 1.2 used a binary lockfile format (bun.lockb); newer versions use a text-based bun.lock format.
 
 # SEE ALSO
 

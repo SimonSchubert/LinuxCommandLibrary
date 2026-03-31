@@ -57,13 +57,13 @@ Control ATI Radeon hardware settings
 > Set registers matching the wildcard pattern to value
 
 **--debug**
-> Enable verbose debugging output
+> Enable verbose debugging output.
 
 **--skip=**_n_
-> Skip the first n Radeon cards and operate on card n+1
+> Skip the first n Radeon cards and operate on card n+1.
 
 **--instance=**_n_
-> Use a specific Radeon card instance by number
+> Use a specific Radeon card instance by number.
 
 # DESCRIPTION
 
@@ -85,4 +85,4 @@ radeontool was created by **David Airlie** as part of the Linux open-source grap
 
 # SEE ALSO
 
-[xrandr](/man/xrandr)(1), [xbacklight](/man/xbacklight)(1), [aticonfig](/man/aticonfig)(1)
+[xrandr](/man/xrandr)(1), [xbacklight](/man/xbacklight)(1), [aticonfig](/man/aticonfig)(1), [lspci](/man/lspci)(1)

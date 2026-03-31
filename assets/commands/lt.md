@@ -54,19 +54,19 @@ _PATH_
 
 # DESCRIPTION
 
-**lt** lists directory contents as a tree. It's an alias or alternative for tree-style listings.
+**lt** lists directory contents in a tree format. It is typically a shell alias rather than a standalone command, commonly configured as an alias for **lsd --tree**, **exa --tree**, or **eza --tree**.
 
-The tool displays hierarchical directory structure visually. May be an alias for lsd --tree or similar.
+The exact behavior and available options depend on the underlying command. Run **type lt** or **alias lt** to see the actual definition on your system.
 
 # CAVEATS
 
-May be an alias. Varies by system. Check actual implementation.
+Not a standard command. Behavior and available flags depend entirely on how the alias is configured. Options shown here correspond to common implementations like lsd or eza.
 
 # HISTORY
 
-lt is commonly configured as an alias for **tree-style** directory listing, often using lsd or exa.
+**lt** is commonly configured as a shell alias for tree-style directory listing using modern ls alternatives like **lsd**, **exa**, or **eza**.
 
 # SEE ALSO
 
-[tree](/man/tree)(1), [lsd](/man/lsd)(1), [exa](/man/exa)(1), [ls](/man/ls)(1)
+[tree](/man/tree)(1), [lsd](/man/lsd)(1), [exa](/man/exa)(1), [eza](/man/eza)(1), [ls](/man/ls)(1)
 

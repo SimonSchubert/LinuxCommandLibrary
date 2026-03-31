@@ -1,5 +1,3 @@
-# TLDR
-
 # TAGLINE
 
 Modify user account attributes
@@ -22,9 +20,9 @@ Change user **shell**
 
 ```sudo usermod -aG group1,group2 username```
 
-**Remove** user from groups
+**Set** user's supplementary groups (replaces existing)
 
-```sudo usermod -rG group1,group2 username```
+```sudo usermod -G group1,group2 username```
 
 Change **home directory** and move contents
 
@@ -78,11 +76,11 @@ Change **home directory** and move contents
 **-m, --move-home**
 > Move home directory contents to new location
 
-**-p, --password PASSWORD**
-> Set encrypted password
+**-o, --non-unique**
+> Allow non-unique UID when used with -u
 
-**-r, --remove**
-> Remove user from specified groups (use with -G)
+**-p, --password PASSWORD**
+> Set encrypted password (as returned by crypt(3))
 
 **-s, --shell SHELL**
 > Change login shell

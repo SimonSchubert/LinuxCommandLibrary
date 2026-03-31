@@ -12,6 +12,10 @@ Interactive MCP protocol debugger and testing TUI
 
 ```mcp-probe debug --http-sse [url]```
 
+**Debug via Streamable HTTP**
+
+```mcp-probe debug --streamable-http [url]```
+
 **Run compliance validation**
 
 ```mcp-probe validate --http-sse [url] --suite all```
@@ -34,8 +38,14 @@ Interactive MCP protocol debugger and testing TUI
 **--http-sse** _URL_
 > Connect to MCP server via HTTP+SSE transport.
 
+**--streamable-http** _URL_
+> Connect to MCP server via Streamable HTTP transport.
+
 **--suite** _SUITE_
 > Compliance test suite to run (all, initialization, capabilities, security, performance).
+
+**--format** _FORMAT_
+> Output format for validation reports (html, markdown, json, yaml).
 
 # DESCRIPTION
 

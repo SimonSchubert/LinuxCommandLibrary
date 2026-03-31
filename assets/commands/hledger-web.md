@@ -24,6 +24,10 @@ provides a web interface for hledger
 
 ```hledger-web --capabilities=view```
 
+**Allow full access including editing and deleting**
+
+```hledger-web --capabilities=view,add,manage```
+
 # SYNOPSIS
 
 **hledger-web** [_options_]
@@ -40,26 +44,32 @@ provides a web interface for hledger
 > Listen address.
 
 **--serve**
-> Serve without browser.
+> Serve without opening a web browser.
+
+**--serve-api**
+> Serve only the JSON API, without the web UI.
 
 **--capabilities** _CAPS_
-> Allowed actions (view, add, manage).
+> Allowed actions: view, add, manage (default: view,add).
+
+**--cors** _ORIGIN_
+> Allow cross-origin requests from the specified origin.
 
 **--base-url** _URL_
-> Base URL for links.
+> Base URL for links (useful behind a reverse proxy).
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**hledger-web** provides a web interface for hledger. It offers a browser-based way to view reports, add transactions, and manage journals.
+**hledger-web** provides a web interface for hledger. It offers a browser-based way to view reports, add transactions, and manage journal entries.
 
-The interface includes charts, reports, and transaction entry forms. It can run locally or be served on a network.
+The interface includes account registers, balance reports, and transaction entry forms. It can run locally or be served on a network. By default it listens on 127.0.0.1 port 5000 and opens a browser automatically.
 
 # CAVEATS
 
-Not for public internet exposure. Authentication limited. Part of hledger suite.
+Not recommended for public internet exposure without a reverse proxy and proper authentication. Built-in access control is limited to the **--capabilities** flag. Part of the hledger suite.
 
 # HISTORY
 

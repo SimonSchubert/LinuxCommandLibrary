@@ -18,7 +18,7 @@ removes directories from MS-DOS filesystems
 
 # SYNOPSIS
 
-**mrd** [_options_] _msdosdirectory_
+**mrd** [**-v**] _msdosdirectory_ [_msdosdirectories..._]
 
 # PARAMETERS
 
@@ -28,12 +28,12 @@ _MSDOSDIRECTORY_
 **-v**
 > Verbose mode.
 
-**--help**
-> Display help information.
+**-V**
+> Display the version of mtools.
 
 # DESCRIPTION
 
-**mrd** removes directories from MS-DOS filesystems. It's part of the mtools package.
+**mrd** removes directories from MS-DOS filesystems. It's part of the mtools package. An error occurs if the directory does not exist or is not empty. Multiple directories can be specified on the command line.
 
 The tool deletes directories on FAT drives. Works without mounting the filesystem.
 

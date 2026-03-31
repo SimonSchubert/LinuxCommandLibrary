@@ -44,8 +44,11 @@ IT infrastructure monitoring tool
 **-II**
 > Remove vanished services and discover new ones.
 
-**-nv**
-> Check host and show verbose output.
+**-n**
+> Simulate check without submitting results (dry run).
+
+**-v**
+> Verbose output. Commonly combined as **-nv** for testing.
 
 **-d**
 > Dump agent output from host.
@@ -67,6 +70,9 @@ IT infrastructure monitoring tool
 
 **-P**, **--package** _action_
 > Manage extension packages (install, remove, list).
+
+**--snmpwalk** _HOSTNAME_
+> Perform an SNMP walk on a host for diagnostics.
 
 **--debug**
 > Enable debug output.

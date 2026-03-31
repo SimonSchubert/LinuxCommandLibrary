@@ -10,11 +10,11 @@ comprehensive suite for network MITM attacks
 
 **ARP poisoning** attack
 
-```ettercap -T -M arp:remote /[target1]// /[target2]//```
+```ettercap -Tq -M arp:remote /[target1]// /[target2]//```
 
-**Sniff on interface**
+**Sniff on interface** in quiet mode
 
-```ettercap -T -i [eth0]```
+```ettercap -Tq -i [eth0]```
 
 **Use text interface**
 
@@ -22,11 +22,19 @@ comprehensive suite for network MITM attacks
 
 **Load plugin**
 
-```ettercap -T -P [dns_spoof]```
+```ettercap -Tq -P [dns_spoof]```
 
 **Read from pcap** file
 
 ```ettercap -T -r [capture.pcap]```
+
+**Write captured packets** to a file
+
+```ettercap -Tq -w [output.pcap] -M arp /[target]// /[gateway]//```
+
+**Run as daemon** in background
+
+```ettercap -D -M arp /[target]// /[gateway]//```
 
 # SYNOPSIS
 
@@ -58,6 +66,18 @@ _TARGET_
 **-w** _FILE_
 > Write to pcap file.
 
+**-q**
+> Quiet mode (suppress packet content display).
+
+**-D**
+> Daemonize ettercap (run in background).
+
+**-F** _FILE_
+> Load a filter file (compiled with etterfilter).
+
+**-L** _FILE_
+> Log all traffic to this file.
+
 **--help**
 > Display help information.
 
@@ -87,4 +107,4 @@ Ettercap was created by **Alberto Ornaghi** and **Marco Valleri**, released as o
 
 # SEE ALSO
 
-[arpspoof](/man/arpspoof)(8), [wireshark](/man/wireshark)(1), [mitmproxy](/man/mitmproxy)(1)
+[arpspoof](/man/arpspoof)(8), [wireshark](/man/wireshark)(1), [tcpdump](/man/tcpdump)(1), [nmap](/man/nmap)(1), [mitmproxy](/man/mitmproxy)(1)

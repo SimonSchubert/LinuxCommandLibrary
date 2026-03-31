@@ -4,13 +4,13 @@ ASCII art ski jumping game
 
 # TLDR
 
-**Start a game**
+**Start the game**
 
 ```asciijump```
 
-**Start in competition mode**
+**Start with a custom hill**
 
-```asciijump -c```
+```asciijump -n [hillname]```
 
 # SYNOPSIS
 
@@ -18,8 +18,8 @@ ASCII art ski jumping game
 
 # PARAMETERS
 
-**-c**
-> Competition mode.
+**-n** _hillname_
+> Use the specified hill from the hills directory.
 
 **-h**
 > Display help.
@@ -36,17 +36,17 @@ ______/________
 
 # DESCRIPTION
 
-**asciijump** is an ASCII-art ski jumping game. The player controls a ski jumper, timing the jump and landing to achieve maximum distance. The game features multiple hills and a competition mode with scoring.
+**asciijump** is an ncurses-based ASCII-art ski jumping game. The player controls a ski jumper, timing the takeoff and landing to achieve maximum distance. The game features multiple hills, training and competition modes (selected from the in-game menu), and multiplayer support for up to 10 players.
 
-Controls: press space to jump at the right moment and again to land safely. Timing affects both distance and style points.
+Controls: press space at the edge of the jump to take off and again to land safely. Timing affects both distance and style points.
 
 # CAVEATS
 
-Requires a terminal with ncurses support. Multiplayer support available.
+Requires a terminal with ncurses support. Custom hills can be created and placed in the hills directory.
 
 # HISTORY
 
-**asciijump** was created as a fun terminal recreation of ski jumping competitions.
+**asciijump** was created by **Fabian Breitkreutz** as a terminal recreation of ski jumping competitions.
 
 # SEE ALSO
 

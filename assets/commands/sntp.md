@@ -61,8 +61,17 @@ Simple Network Time Protocol client
 **-K** _file_, **--kod**=_file_
 > KoD (Kiss-of-Death) history file
 
+**-a** _keyid_, **--authentication**=_keyid_
+> Enable authentication with the specified key number
+
+**-b** _address_
+> Listen to the specified address for broadcast time sync
+
+**-l** _file_, **--logfile**=_file_
+> Log status messages to the specified file
+
 **-c**, **--concurrent**
-> Allow concurrent queries to resolved IPs (for hosts on different machines)
+> Send concurrent queries to resolved IPs (for hostnames resolving to multiple addresses on different machines)
 
 # DESCRIPTION
 
@@ -82,4 +91,4 @@ sntp implements RFC 4330 (Simple Network Time Protocol Version 4). It is part of
 
 # SEE ALSO
 
-[ntpd](/man/ntpd)(8), [chronyc](/man/chronyc)(1), [timedatectl](/man/timedatectl)(1), [date](/man/date)(1)
+[ntpd](/man/ntpd)(8), [ntpdate](/man/ntpdate)(1), [chronyc](/man/chronyc)(1), [timedatectl](/man/timedatectl)(1), [date](/man/date)(1)

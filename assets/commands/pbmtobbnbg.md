@@ -1,22 +1,28 @@
 # TAGLINE
 
-converts PBM bitmaps to BBN BitGraph terminal format
+Convert PBM bitmaps to BBN BitGraph terminal format
 
 # TLDR
 
-**Convert PBM to BBN BitGraph format**
+**Convert a PBM file to BBN BitGraph format**
 
 ```pbmtobbnbg [input.pbm] > [output.bg]```
 
+**Read from standard input**
+
+```cat [input.pbm] | pbmtobbnbg > [output.bg]```
+
 # SYNOPSIS
 
-**pbmtobbnbg** [_file_]
+**pbmtobbnbg** [_pbmfile_]
 
 # DESCRIPTION
 
-**pbmtobbnbg** converts PBM bitmaps to BBN BitGraph terminal format. BitGraph was a graphics terminal made by BBN (Bolt Beranek and Newman). Part of Netpbm toolkit.
+**pbmtobbnbg** reads a PBM image as input and produces BBN BitGraph graphics terminal format as output. If no file is specified, it reads from standard input.
+
+The BitGraph was a graphics terminal manufactured by BBN (Bolt Beranek and Newman). This tool is part of the **Netpbm** toolkit.
 
 # SEE ALSO
 
-[pbmtoplot](/man/pbmtoplot)(1), [pbmtoascii](/man/pbmtoascii)(1)
+[pbmtoplot](/man/pbmtoplot)(1), [pbmtoascii](/man/pbmtoascii)(1), [pbm](/man/pbm)(1), [netpbm](/man/netpbm)(1)
 

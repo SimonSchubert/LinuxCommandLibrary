@@ -4,37 +4,41 @@ CLI to manage emails
 
 # TLDR
 
-**List emails** in the inbox
+**List email envelopes** in the inbox
 
-```himalaya list```
+```himalaya envelope list```
 
 **Read a specific email**
 
-```himalaya read [id]```
+```himalaya message read [id]```
 
 **Compose and send a new email**
 
-```himalaya write```
+```himalaya message write```
 
 **Reply to an email**
 
-```himalaya reply [id]```
+```himalaya message reply [id]```
 
-**Search emails**
+**Forward an email**
 
-```himalaya search "[query]"```
+```himalaya message forward [id]```
 
 **List folders**
 
-```himalaya folders```
+```himalaya folder list```
 
-**Download an attachment**
+**Download attachments**
 
 ```himalaya attachment download [id]```
 
+**Use a specific account**
+
+```himalaya -a [account_name] envelope list```
+
 # SYNOPSIS
 
-**himalaya** [_options_] _command_ [_arguments_]
+**himalaya** [_options_] _command_ _subcommand_ [_arguments_]
 
 # DESCRIPTION
 
@@ -44,33 +48,42 @@ It supports multiple backends including **IMAP**, **SMTP**, **Maildir**, and **N
 
 # PARAMETERS
 
-**list**
-> List emails in the current folder
+**-a**, **--account** _name_
+> Use a specific email account.
 
-**read** _id_
-> Read a specific email
+**envelope list**
+> List email envelopes in the current folder.
 
-**write**
-> Compose a new email
+**envelope watch**
+> Watch for new envelope changes in real time.
 
-**reply** _id_
-> Reply to an email
+**message read** _id_
+> Read a specific email message.
 
-**forward** _id_
-> Forward an email
+**message write**
+> Compose a new email message.
 
-**search** _query_
-> Search emails
+**message reply** _id_
+> Reply to an email message.
 
-**folders**
-> List mail folders
+**message forward** _id_
+> Forward an email message.
+
+**message delete** _id_
+> Delete an email message.
+
+**folder list**
+> List mail folders.
+
+**folder create** _name_
+> Create a new mail folder.
 
 **attachment download** _id_
-> Download attachments
+> Download attachments from a message.
 
 # CONFIGURATION
 
-Configuration is stored in **$XDG_CONFIG_HOME/himalaya/config.toml** and defines accounts with backend settings for IMAP, SMTP, Maildir, or Notmuch.
+Configuration is stored in **$XDG_CONFIG_HOME/himalaya/config.toml** (or **~/.config/himalaya/config.toml**) and defines accounts with backend settings for IMAP, SMTP, Maildir, or Notmuch. Run **himalaya account configure** for an interactive setup wizard.
 
 # CAVEATS
 

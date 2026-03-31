@@ -59,15 +59,21 @@ The tool transforms a wireless interface into an access point, handling client c
 **-f** _logfile_
 > Redirect output to log file.
 
+**-e** _entropy_file_
+> File for storing entropy (to speed up restart).
+
 # CONFIG OPTIONS
 
-**interface**: Wireless interface
+**interface**: Wireless interface (e.g. wlan0)
+**driver**: Driver interface (nl80211, hostap, etc.)
 **ssid**: Network name
-**hw_mode**: Band (a/b/g)
-**channel**: Channel number
-**wpa**: WPA mode (1/2/3)
-**wpa_passphrase**: Password
-**wpa_key_mgmt**: Key management
+**hw_mode**: Band (a = 5GHz, b = 2.4GHz 11Mbps, g = 2.4GHz 54Mbps)
+**channel**: Channel number (0 = ACS if supported)
+**ieee80211n**: Enable 802.11n (1 = yes)
+**ieee80211ac**: Enable 802.11ac (1 = yes)
+**wpa**: WPA mode (1 = WPA, 2 = WPA2, 3 = both)
+**wpa_passphrase**: Password (8-63 characters)
+**wpa_key_mgmt**: Key management (WPA-PSK, SAE for WPA3)
 
 # CAVEATS
 

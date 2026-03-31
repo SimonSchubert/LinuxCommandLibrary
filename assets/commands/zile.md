@@ -34,19 +34,31 @@ Open at **line** number
 **Ctrl+x Ctrl+c**
 > Quit
 
+**Ctrl+k**
+> Kill (cut) to end of line
+
+**Ctrl+y**
+> Yank (paste) killed text
+
 **Ctrl+x u**
 > Undo
+
+**Ctrl+s**
+> Incremental search forward
+
+**Ctrl+g**
+> Cancel current command
 
 # DESCRIPTION
 
 **zile** is a lightweight clone of the Emacs text editor. It implements core Emacs keybindings and features in a smaller, faster package.
 
-The name stands for "Zile Is Lossy Emacs" - it deliberately omits complex Emacs features.
+The name is a recursive acronym: "Zile Is Lossy Emacs". It deliberately omits complex Emacs features like Lisp scripting while retaining the familiar key bindings.
 
 # CAVEATS
 
-Missing many Emacs features like Lisp scripting and complex modes. Not a full Emacs replacement.
+Missing many Emacs features like Elisp scripting, major/minor modes, and package management. Not a full Emacs replacement.
 
 # SEE ALSO
 
-[emacs](/man/emacs)(1), [nano](/man/nano)(1), [mg](/man/mg)(1)
+[emacs](/man/emacs)(1), [nano](/man/nano)(1), [mg](/man/mg)(1), [vi](/man/vi)(1), [ed](/man/ed)(1)

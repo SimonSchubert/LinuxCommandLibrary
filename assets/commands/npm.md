@@ -40,6 +40,30 @@ node Package Manager
 
 ```npm init```
 
+**Clean install from lockfile**
+
+```npm ci```
+
+**List installed packages**
+
+```npm ls```
+
+**Check for outdated packages**
+
+```npm outdated```
+
+**Run security audit**
+
+```npm audit```
+
+**Uninstall a package**
+
+```npm uninstall [package]```
+
+**Publish a package**
+
+```npm publish```
+
 # SYNOPSIS
 
 **npm** [_command_] [_options_]
@@ -64,17 +88,35 @@ _COMMAND_
 **init**
 > Create package.json.
 
+**ci**
+> Clean install from package-lock.json (for CI/CD).
+
+**audit**
+> Run security vulnerability audit.
+
+**ls**
+> List installed packages.
+
+**outdated**
+> Check for outdated packages.
+
+**publish**
+> Publish package to registry.
+
 **-g**
 > Global installation.
+
+**-D**, **--save-dev**
+> Save as development dependency.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**npm** is the Node Package Manager. It manages JavaScript packages and dependencies.
+**npm** is the Node Package Manager and the default package manager for Node.js. It manages JavaScript packages and dependencies using package.json and package-lock.json files.
 
-The tool handles package.json. Largest software registry in the world.
+npm provides access to the world's largest software registry with over two million packages.
 
 # CAVEATS
 
@@ -86,5 +128,5 @@ npm was created by **Isaac Schlueter** in 2010 and is the default package manage
 
 # SEE ALSO
 
-[npx](/man/npx)(1), [yarn](/man/yarn)(1), [pnpm](/man/pnpm)(1)
+[node](/man/node)(1), [npx](/man/npx)(1), [yarn](/man/yarn)(1), [pnpm](/man/pnpm)(1)
 

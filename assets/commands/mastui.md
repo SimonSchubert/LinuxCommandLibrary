@@ -8,9 +8,31 @@ Modern Mastodon TUI client for the terminal
 
 ```mastui```
 
+**Log in to a Mastodon instance**
+
+```mastui login```
+
+**Select a theme**
+
+```mastui theme```
+
 # SYNOPSIS
 
 **mastui** [_options_]
+
+# PARAMETERS
+
+**login**
+> Authenticate with a Mastodon instance.
+
+**theme**
+> Select a UI theme.
+
+**--help**
+> Display help information.
+
+**--version**
+> Display version information.
 
 # DESCRIPTION
 

@@ -12,13 +12,25 @@ Status and progress bar for rsync
 
 ```rsyncy -avz [remote:/path/] [/local/]```
 
+**Sync with delete and compression**
+
+```rsyncy -avz --delete [/source/] [/destination/]```
+
+**Dry run to preview** changes
+
+```rsyncy -avn [/source/] [/destination/]```
+
 # SYNOPSIS
 
 **rsyncy** [_rsync-options_] _source_ _destination_
 
+# PARAMETERS
+
+All standard **rsync** options are supported and passed through to rsync. rsyncy adds the necessary **--info** flags automatically for progress display.
+
 # DESCRIPTION
 
-**rsyncy** wraps rsync to display a visual progress bar showing transfer progress, speed, elapsed time, and file counts. You run it with the same arguments as rsync and it adds the necessary **--info** flags automatically.
+**rsyncy** wraps rsync to display a visual progress bar showing overall transfer progress, speed, elapsed time, and file counts. You run it with the same arguments as rsync and it adds the necessary **--info** flags automatically. Unlike rsync's built-in **--progress** flag which shows per-file progress, rsyncy shows overall progress across all files.
 
 # HISTORY
 

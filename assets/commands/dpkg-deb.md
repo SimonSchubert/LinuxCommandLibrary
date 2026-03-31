@@ -20,9 +20,17 @@ Display package **name and version**
 
 ```dpkg-deb -x [path/to/file.deb] [path/to/directory]```
 
+**Extract** contents and control information
+
+```dpkg-deb --raw-extract [path/to/file.deb] [path/to/directory]```
+
 **Build** package from directory
 
 ```dpkg-deb -b [path/to/directory]```
+
+**Show a specific control file** field
+
+```dpkg-deb -f [path/to/file.deb] [field_name]```
 
 # SYNOPSIS
 
@@ -50,10 +58,19 @@ Common use cases include examining unfamiliar packages for security auditing, ex
 **-x, --extract** _archive_ _dir_
 > Extract files to directory
 
-**-X, --vextract**
+**-X, --vextract** _archive_ _dir_
 > Extract and list files
 
-**-b, --build** _dir_
+**-e, --control** _archive_ [_dir_]
+> Extract control information files
+
+**-R, --raw-extract** _archive_ _dir_
+> Extract everything (data and control info)
+
+**-f, --field** _archive_ [_field_]
+> Show control file field values
+
+**-b, --build** _dir_ [_archive_]
 > Build package from directory
 
 # CAVEATS
@@ -62,4 +79,4 @@ Lower-level than dpkg; use dpkg for installation. Building packages requires pro
 
 # SEE ALSO
 
-[dpkg](/man/dpkg)(1), [dpkg-query](/man/dpkg-query)(1), [ar](/man/ar)(1)
+[dpkg](/man/dpkg)(1), [dpkg-query](/man/dpkg-query)(1), [apt](/man/apt)(1), [ar](/man/ar)(1)

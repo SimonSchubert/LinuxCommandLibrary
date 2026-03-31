@@ -96,4 +96,4 @@ testparm checks for **syntactic correctness** but cannot guarantee that services
 
 # SEE ALSO
 
-[smbclient](/man/smbclient)(1), [smbd](/man/smbd)(8), [nmbd](/man/nmbd)(8)
+[smbclient](/man/smbclient)(1), [samba](/man/samba)(7)

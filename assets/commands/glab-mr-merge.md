@@ -20,6 +20,14 @@ Merge a GitLab merge request
 
 ```glab mr merge [number] --when-pipeline-succeeds```
 
+**Merge with a custom commit message**
+
+```glab mr merge [number] --message "[commit message]"```
+
+**Merge with rebase**
+
+```glab mr merge [number] --rebase```
+
 # SYNOPSIS
 
 **glab** **mr** **merge** [_number_] [_options_]
@@ -27,23 +35,29 @@ Merge a GitLab merge request
 # PARAMETERS
 
 **--squash**
-> Squash commits.
+> Squash commits on merge.
+
+**--rebase**
+> Rebase the commits onto the base branch before merging.
 
 **--remove-source-branch**
-> Delete source branch.
+> Delete source branch after merge.
 
 **--when-pipeline-succeeds**
-> Merge when CI passes.
+> Set the merge request to merge when the pipeline succeeds.
 
 **--message** _text_
-> Merge commit message.
+> Custom merge commit message.
+
+**--sha** _sha_
+> Merge when the HEAD of the source branch matches the given SHA. Prevents merging unexpected changes.
 
 **-y**, **--yes**
-> Skip confirmation.
+> Skip confirmation prompt.
 
 # DESCRIPTION
 
-**glab mr merge** merges a GitLab merge request. It supports squash merging, automatic source branch deletion, and deferred merging that waits for the CI pipeline to pass before completing.
+**glab mr merge** merges a GitLab merge request. It supports squash merging, rebasing, automatic source branch deletion, and deferred merging that waits for the CI pipeline to pass before completing.
 
 # SEE ALSO
 

@@ -8,22 +8,31 @@ Generate a pull request summary for email submission
 
 ```git request-pull [start] [url]```
 
-**Include branch info**
+**Generate summary between a tag and a specific branch end point**
 
-```git request-pull [start] [url] [branch]```
+```git request-pull [v1.0] [https://example.com/repo.git] [my-branch]```
 
-**Show patch**
+**Include patch text in the output**
 
-```git request-pull -p [start] [url]```
+```git request-pull -p [v1.0] [https://example.com/repo.git]```
 
 # SYNOPSIS
 
-**git** **request-pull** [_options_] _start_ _url_ [_end_]
+**git** **request-pull** [**-p**] _start_ _url_ [_end_]
 
 # PARAMETERS
 
 **-p**
-> Include patch text.
+> Include patch text in the output.
+
+_start_
+> Commit to start at. This names a commit that is already in the upstream history.
+
+_url_
+> The repository URL to be pulled from.
+
+_end_
+> Commit to end at (defaults to HEAD). This names the commit at the tip of the history you are asking to be pulled.
 
 # DESCRIPTION
 
@@ -33,4 +42,4 @@ This command is commonly used in email-based patch workflows to ask maintainers 
 
 # SEE ALSO
 
-[git-format-patch](/man/git-format-patch)(1), [git-send-email](/man/git-send-email)(1)
+[git-format-patch](/man/git-format-patch)(1), [git-send-email](/man/git-send-email)(1), [git-pull](/man/git-pull)(1)

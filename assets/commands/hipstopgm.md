@@ -18,9 +18,9 @@ converts a HIPS image file to PGM format
 
 # DESCRIPTION
 
-**hipstopgm** converts a HIPS (Human Information Processing Laboratory) image file to PGM (Portable Graymap) format. Part of the Netpbm package of graphics manipulation tools. If the HIPS file contains multiple frames, they are concatenated vertically in the output.
+**hipstopgm** converts a HIPS (Human Information Processing Laboratory, NYU) image file to PGM (Portable Graymap) format. Part of the Netpbm package of graphics manipulation tools. If the HIPS file contains multiple frames, they are concatenated vertically in the output. The tool has no command-specific options beyond standard Netpbm options.
 
 # SEE ALSO
 
-[pgmtoppm](/man/pgmtoppm)(1), [ppmtogif](/man/ppmtogif)(1), [netpbm](/man/netpbm)(1)
+[pgm](/man/pgm)(1), [pgmtoppm](/man/pgmtoppm)(1), [ppmtogif](/man/ppmtogif)(1), [netpbm](/man/netpbm)(1)
 

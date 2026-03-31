@@ -8,9 +8,9 @@ Print **current** terminal number
 
 ```fgconsole```
 
-Print **next** unallocated virtual terminal
+Print **next** unallocated virtual terminal number
 
-```fgconsole [-n|--next-available]```
+```fgconsole --next-available```
 
 # SYNOPSIS
 
@@ -24,8 +24,14 @@ Part of kbd package for console management utilities.
 
 # PARAMETERS
 
-**-n, --next-available**
+**-n**, **--next-available**
 > Print next unallocated VT number
+
+**-V**, **--version**
+> Print version number and exit
+
+**-h**, **--help**
+> Display help and exit
 
 # CAVEATS
 
@@ -33,4 +39,4 @@ Only works on Linux console. Returns error if not on a virtual terminal. Part of
 
 # SEE ALSO
 
-[chvt](/man/chvt)(1), [openvt](/man/openvt)(1), [deallocvt](/man/deallocvt)(1)
+[chvt](/man/chvt)(1), [deallocvt](/man/deallocvt)(1), [dumpkeys](/man/dumpkeys)(1)

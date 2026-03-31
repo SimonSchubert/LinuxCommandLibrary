@@ -10,11 +10,11 @@ searches Tor hidden service search engines for content
 
 **Search specific engine**
 
-```onionsearch -e [ahmia] "[query]"```
+```onionsearch --engines [ahmia] "[query]"```
 
-**Use Tor proxy**
+**Use Tor SOCKS proxy**
 
-```onionsearch --proxy [127.0.0.1:9050] "[query]"```
+```onionsearch --proxy [socks5h://127.0.0.1:9050] "[query]"```
 
 **Set timeout**
 
@@ -30,15 +30,15 @@ searches Tor hidden service search engines for content
 
 # SYNOPSIS
 
-**onionsearch** [_-e engine_] [_--proxy host:port_] [_--limit n_] [_options_] _query_
+**onionsearch** [_--engines engine_] [_--proxy url_] [_--limit n_] [_options_] _query_
 
 # PARAMETERS
 
-**-e**, **--engine** _NAME_
-> Search engine to use.
+**--engines** _NAME_
+> Search engine to use (e.g., ahmia, torch, darksearchio).
 
-**--proxy** _HOST:PORT_
-> Tor proxy address.
+**--proxy** _URL_
+> SOCKS proxy URL for Tor (e.g., socks5h://127.0.0.1:9050).
 
 **--timeout** _SECONDS_
 > Request timeout.

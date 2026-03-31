@@ -32,6 +32,10 @@ Search with **version** display
 
 ```pkgfile --verbose [filename]```
 
+Search in a **specific repository**
+
+```pkgfile --repo [core] [filename]```
+
 # SYNOPSIS
 
 **pkgfile** [**--update**] [**--list**] [**--binaries**] [**--verbose**] [**--repo** _repo_] _target_
@@ -87,4 +91,4 @@ Database must be synchronized before use. Only searches official repositories, n
 
 # SEE ALSO
 
-[pacman](/man/pacman)(8), [pactree](/man/pactree)(1), [pkgstats](/man/pkgstats)(1)
+[pacman](/man/pacman)(8), [pactree](/man/pactree)(1), [makepkg](/man/makepkg)(8)

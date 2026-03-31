@@ -18,11 +18,19 @@ fast vulnerability scanner
 
 **Scan by severity**
 
-```nuclei -u [https://example.com] -severity critical,high```
+```nuclei -u [https://example.com] -s critical,high```
+
+**Scan by tags**
+
+```nuclei -u [https://example.com] -tags [cve,oast]```
 
 **Update templates**
 
-```nuclei -update-templates```
+```nuclei -ut```
+
+**Save output as JSONL**
+
+```nuclei -u [https://example.com] -jsonl -o [results.jsonl]```
 
 # SYNOPSIS
 
@@ -39,27 +47,45 @@ fast vulnerability scanner
 **-t** _TEMPLATE_
 > Template or directory to use.
 
-**-severity** _LEVEL_
-> Filter by severity.
+**-s**, **-severity** _LEVEL_
+> Filter by severity (info, low, medium, high, critical).
+
+**-tags** _TAGS_
+> Filter templates by tags (comma-separated).
 
 **-o** _FILE_
 > Output results to file.
 
-**-update-templates**
-> Update nuclei templates.
+**-jsonl**
+> Output results in JSONL format.
+
+**-ut**, **-update-templates**
+> Update nuclei templates to latest version.
+
+**-rl**, **-rate-limit** _NUM_
+> Maximum requests per second (default: 150).
+
+**-c**, **-concurrency** _NUM_
+> Maximum number of templates to execute in parallel (default: 25).
+
+**-silent**
+> Show only results in output.
+
+**-stats**
+> Display scan statistics.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**nuclei** is a fast vulnerability scanner. Uses YAML-based templates.
+**nuclei** is a fast, template-based vulnerability scanner developed by ProjectDiscovery. It uses YAML-based templates to define scanning logic for various protocols including HTTP, DNS, TCP, and more.
 
-The tool performs targeted scanning. Community-driven template library.
+The tool performs targeted scanning based on a large community-driven template library with thousands of checks for CVEs, misconfigurations, exposures, and default credentials. Templates can be customized or written from scratch.
 
 # CAVEATS
 
-Only use on authorized targets. Templates require updates. May generate traffic.
+Only use on authorized targets. Templates require regular updates to include new checks. May generate significant network traffic; use rate limiting in production environments. Some templates may trigger IDS/IPS alerts.
 
 # HISTORY
 

@@ -41,6 +41,9 @@ Validate SPF email authentication records
 **-version**
 > Show version.
 
+**-rcpt-to** _EMAIL_
+> Envelope recipient address (for secondary MX checking).
+
 **-help**
 > Show help.
 
@@ -54,12 +57,8 @@ As part of the **libspf2** library, spfquery implements the full SPF specificati
 
 # CAVEATS
 
-DNS required. SPF record must exist. Result interpretation needed.
-
-# HISTORY
-
-**spfquery** is part of **libspf2**, providing SPF (Sender Policy Framework) validation for email authentication.
+Requires DNS connectivity to resolve SPF records. SPF records must exist for the queried domain. Result codes require proper interpretation for policy enforcement.
 
 # SEE ALSO
 
-[dig](/man/dig)(1), [host](/man/host)(1), [postfix](/man/postfix)(1)
+[dig](/man/dig)(1), [host](/man/host)(1), [nslookup](/man/nslookup)(1), [sendmail](/man/sendmail)(1), [postfix](/man/postfix)(1)

@@ -4,57 +4,21 @@ displays all LXC containers on a Proxmox VE host
 
 # TLDR
 
-**List all containers**
+**List all containers on the current node**
 
 ```pct list```
 
-**Show container status**
-
-```pct status [VMID]```
-
-**Show container config**
-
-```pct config [VMID]```
-
 # SYNOPSIS
 
-**pct list** [_options_]
+**pct list**
 
 # DESCRIPTION
 
-**pct list** displays all LXC containers on a Proxmox VE host. It shows container ID, status, lock state, and name.
-
-# EXAMPLE OUTPUT
-
-```
-VMID       Status     Lock         Name
-100        running                 webserver
-101        stopped                 database
-102        running                 mailserver
-```
-
-# RELATED COMMANDS
-
-```bash
-# List containers
-pct list
-
-# Get status
-pct status 100
-
-# Show config
-pct config 100
-
-# Start container
-pct start 100
-
-# Stop container
-pct stop 100
-```
+**pct list** displays a table of all LXC containers on the current Proxmox VE node. It shows the container VMID, status (running/stopped), lock state, and name.
 
 # CAVEATS
 
-Shows local node only. Use pvesh for cluster-wide listing. Requires Proxmox VE.
+Shows containers on the local node only. Use **pvesh** for cluster-wide container listing. Requires Proxmox VE.
 
 # HISTORY
 
@@ -62,4 +26,4 @@ The pct command suite is part of **Proxmox VE**, providing comprehensive LXC con
 
 # SEE ALSO
 
-[pct](/man/pct)(1), [pct-enter](/man/pct-enter)(1), [pct-restore](/man/pct-restore)(1), [lxc-ls](/man/lxc-ls)(1)
+[pct](/man/pct)(1), [pct-create](/man/pct-create)(1), [pct-config](/man/pct-config)(1), [pct-status](/man/pct-status)(1), [pct-enter](/man/pct-enter)(1), [pct-destroy](/man/pct-destroy)(1), [pct-restore](/man/pct-restore)(1), [pvesh](/man/pvesh)(1), [lxc-ls](/man/lxc-ls)(1)

@@ -28,6 +28,14 @@ CSV to JSON converter
 
 ```csvjson -d "[;]" [data.csv]```
 
+**Convert from stdin** piping another command
+
+```cat [data.csv] | csvjson```
+
+**Disable type inference** (keep everything as strings)
+
+```csvjson --no-inference [data.csv]```
+
 # SYNOPSIS
 
 **csvjson** [_options_] _file_
@@ -61,6 +69,12 @@ _FILE_
 **--no-inference**
 > Disable type inference (keep all values as strings).
 
+**-H**, **--no-header-row**
+> Treat file as having no header row; columns are labeled a, b, c, etc.
+
+**--snifflimit** _N_
+> Limit CSV dialect sniffing to N bytes (0 to disable).
+
 # DESCRIPTION
 
 **csvjson** is part of csvkit that converts CSV files to JSON format. It supports various output formats including JSON arrays, keyed objects, newline-delimited JSON for streaming, and GeoJSON for geographic data.
@@ -79,4 +93,4 @@ csvjson is part of **csvkit**, created by Christopher Groskopf in **2011**. It e
 
 # SEE ALSO
 
-[in2csv](/man/in2csv)(1), [jq](/man/jq)(1), [csvkit](/man/csvkit)(1), [miller](/man/miller)(1)
+[in2csv](/man/in2csv)(1), [jq](/man/jq)(1), [csvkit](/man/csvkit)(1), [miller](/man/miller)(1), [csvlook](/man/csvlook)(1), [csvsql](/man/csvsql)(1)

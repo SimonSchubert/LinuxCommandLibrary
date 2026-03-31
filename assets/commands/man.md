@@ -10,7 +10,7 @@ displays manual pages
 
 **View specific section**
 
-```man [5] [passwd]```
+```man [5 passwd]```
 
 **Search descriptions**
 
@@ -24,7 +24,7 @@ displays manual pages
 
 ```man -w [command]```
 
-**Format as text**
+**Export as PDF via PostScript**
 
 ```man -t [command] | ps2pdf - [output.pdf]```
 
@@ -50,7 +50,13 @@ _SECTION_
 > Show file location.
 
 **-f** _NAME_
-> Display short description.
+> Display short description (equivalent to whatis).
+
+**-K** _STRING_
+> Search all man pages for a string.
+
+**-t**
+> Format the man page using groff to PostScript for printing or PDF conversion.
 
 **--help**
 > Display help information.
@@ -71,5 +77,5 @@ man dates back to the first **Unix** system at Bell Labs, remaining the standard
 
 # SEE ALSO
 
-[info](/man/info)(1), [apropos](/man/apropos)(1), [whatis](/man/whatis)(1)
+[info](/man/info)(1), [apropos](/man/apropos)(1), [whatis](/man/whatis)(1), [mandb](/man/mandb)(8), [manpath](/man/manpath)(1), [less](/man/less)(1)
 

@@ -53,9 +53,9 @@ This version-specific binary exists on systems with multiple Python versions ins
 
 # CAVEATS
 
-Python 3.4 reached end-of-life in March 2019. Use the latest pydoc3 for current development.
+Python 3.4 reached end-of-life in March 2019. Use the latest **pydoc3** for current development.
 
 # SEE ALSO
 
-[pydoc](/man/pydoc)(1), [pydoc3](/man/pydoc3)(1), [python3.4](/man/python3.4)(1)
+[pydoc](/man/pydoc)(1), [pydoc3](/man/pydoc3)(1), [python3.4](/man/python3.4)(1), [python3](/man/python3)(1)
 

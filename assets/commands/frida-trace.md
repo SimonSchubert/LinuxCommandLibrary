@@ -32,6 +32,10 @@ Dynamic function call tracer using Frida
 
 ```frida-trace -U --decorate -i "[pattern]" [app_name]```
 
+**Attach** to the **frontmost** application on a USB device
+
+```frida-trace -U -F -i "[pattern]"```
+
 # SYNOPSIS
 
 **frida-trace** [_options_] [_target_]
@@ -89,17 +93,47 @@ Dynamic function call tracer using Frida
 **-S** _PATH_, **--init-session** _PATH_
 > Path to JavaScript file used to initialize session
 
+**-s** _DEBUG_SYMBOL_, **--include-debug-symbol** _DEBUG_SYMBOL_
+> Include DEBUG_SYMBOL (glob pattern)
+
 **-f** _TARGET_, **--file** _TARGET_
 > Spawn FILE as a new process
+
+**-F**, **--attach-frontmost**
+> Attach to frontmost application
+
+**-n** _NAME_, **--attach-name** _NAME_
+> Attach to process by name
+
+**-N** _IDENTIFIER_, **--attach-identifier** _IDENTIFIER_
+> Attach to process by identifier
 
 **-p** _PID_, **--attach-pid** _PID_
 > Attach to process by PID
 
+**-W** _PATTERN_, **--await** _PATTERN_
+> Await spawn matching PATTERN
+
 **-U**, **--usb**
 > Connect to USB device
 
+**-R**, **--remote**
+> Connect to remote frida-server
+
+**-H** _HOST_, **--host** _HOST_
+> Connect to remote frida-server on HOST
+
 **-D** _ID_, **--device** _ID_
 > Connect to device with the given ID
+
+**--runtime** _{qjs,v8}_
+> Script runtime to use
+
+**-O** _FILE_, **--options-file** _FILE_
+> Text file containing additional command line options
+
+**-P** _JSON_, **--parameters** _JSON_
+> Parameters as JSON, exposed as a global named 'parameters'
 
 # DESCRIPTION
 
@@ -111,7 +145,7 @@ The include (**-i**, **-I**) and exclude (**-x**, **-X**) options are procedural
 
 # CAVEATS
 
-Tracing many functions with broad glob patterns (like **-i "\*"**) can severely slow down or freeze the target process. For stripped binaries without symbol information, you must use **-a MODULE!OFFSET** which requires prior knowledge of function offsets from static analysis tools like Ghidra or IDA Pro. The handler directory (**\_\_handlers\_\_/**) is created in the current working directory; existing handlers are not overwritten, which can cause confusion if tracing targets change. Root or elevated privileges are required for cross-process injection.
+Tracing many functions with broad glob patterns (like **-i "\*"**) can severely slow down or freeze the target process. For stripped binaries without symbol information, you must use **-a MODULE!OFFSET** which requires prior knowledge of function offsets from static analysis tools like Ghidra or IDA Pro. The handler directory (**\_\_handlers\_\_/**) is created in the current working directory; existing handlers are not overwritten, which can cause confusion if tracing targets change. Root or elevated privileges are typically required for cross-process injection on desktop systems.
 
 # HISTORY
 

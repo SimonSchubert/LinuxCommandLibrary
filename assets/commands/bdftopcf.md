@@ -67,4 +67,4 @@ Part of the X.Org font utilities. Output fonts are portable but read faster on m
 
 # SEE ALSO
 
-[mkfontdir](/man/mkfontdir)(1), [mkfontscale](/man/mkfontscale)(1), [pcf2bdf](/man/pcf2bdf)(1)
+[xfontsel](/man/xfontsel)(1), [xlsfonts](/man/xlsfonts)(1), [fc-cache](/man/fc-cache)(1)

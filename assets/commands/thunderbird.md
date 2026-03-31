@@ -28,6 +28,10 @@ Mozilla email and calendar client
 
 ```thunderbird -mail```
 
+**Open address book**
+
+```thunderbird -addressbook```
+
 # SYNOPSIS
 
 **thunderbird** [_-compose opts_] [_-P profile_] [_options_]
@@ -35,22 +39,28 @@ Mozilla email and calendar client
 # PARAMETERS
 
 **-compose** _OPTS_
-> Compose message.
+> Compose a new message. Options include to, cc, bcc, subject, body, attachment as comma-separated key=value pairs.
 
 **-P** _NAME_
-> Use profile.
+> Start with the specified profile.
 
 **-ProfileManager**
-> Profile manager.
+> Open the profile manager to create or select profiles.
 
 **-safe-mode**
-> Safe mode.
+> Start in safe mode with all extensions disabled for troubleshooting.
 
 **-mail**
-> Check mail.
+> Open the mail client and check for new messages.
 
 **-addressbook**
-> Open address book.
+> Open the address book.
+
+**-no-remote**
+> Do not accept or send remote commands; run a new instance.
+
+**-search**
+> Open the global search tab.
 
 # DESCRIPTION
 
@@ -60,12 +70,12 @@ The application supports IMAP, POP3, and SMTP protocols, and can be extended wit
 
 # CAVEATS
 
-Desktop application. Profile-based storage. Memory usage can be high.
+Desktop application. Profile-based storage. Memory usage can be high with many accounts or large mailboxes.
 
 # HISTORY
 
-**Thunderbird** is developed by **Mozilla Foundation** as a free, open-source email client companion to Firefox.
+**Thunderbird** was originally developed by **Mozilla Foundation** as a companion to Firefox. Since 2020, it has been maintained by the **MZLA Technologies** subsidiary. It was rebranded as **Thunderbird Supernova** with the major UI refresh in version 115 (2023).
 
 # SEE ALSO
 
-[mutt](/man/mutt)(1), [evolution](/man/evolution)(1), [firefox](/man/firefox)(1)
+[mutt](/man/mutt)(1), [evolution](/man/evolution)(1), [firefox](/man/firefox)(1), [neomutt](/man/neomutt)(1)

@@ -53,6 +53,18 @@ The command typically requires root privileges to change ownership to other user
 **--from=**_current_owner_[:_current_group_]
 > Change only if current owner and/or group matches
 
+**--dereference**
+> Affect the referent of each symbolic link (this is the default)
+
+**-H**
+> If a command line argument is a symbolic link to a directory, traverse it (used with -R)
+
+**-L**
+> Traverse every symbolic link to a directory encountered (used with -R)
+
+**-P**
+> Do not traverse any symbolic links (default, used with -R)
+
 **--preserve-root**
 > Fail to operate recursively on /
 

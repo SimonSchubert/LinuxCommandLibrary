@@ -30,23 +30,29 @@ Safely edit sudoers configuration
 
 # PARAMETERS
 
-**-c**, **--check**
-> Check syntax only.
+**-c**
+> Enable check-only mode. The existing sudoers file will be checked for syntax errors, owner and mode.
 
 **-f** _FILE_
-> Edit specific file.
+> Specify an alternate sudoers file to edit or check instead of the default /etc/sudoers.
 
-**-s**, **--strict**
-> Strict syntax checking.
+**-s**
+> Enable strict checking. If an alias is used before it is defined, visudo will consider this a parse error.
 
-**-q**, **--quiet**
-> Less verbose output.
+**-q**
+> Enable quiet mode. Details about syntax errors are not printed. Only useful when combined with -c.
 
-**-h**, **--help**
-> Show help.
+**-O**
+> Enforce the default ownership (user and group) of the sudoers file.
 
-**-V**, **--version**
-> Show version.
+**-P**
+> Enforce the default permissions (mode) of the sudoers file.
+
+**-h**
+> Show a short help message and exit.
+
+**-V**
+> Show version number and exit.
 
 # DESCRIPTION
 
@@ -72,4 +78,4 @@ Requires root privileges. Editor must be trusted. Syntax errors are caught but l
 
 # SEE ALSO
 
-[sudo](/man/sudo)(8), [sudoers](/man/sudoers)(5), [su](/man/su)(1)
+[sudo](/man/sudo)(8), [su](/man/su)(1), [vi](/man/vi)(1)

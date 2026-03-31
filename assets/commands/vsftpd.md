@@ -20,13 +20,21 @@ Lightweight secure FTP server daemon
 
 ```sudo systemctl enable vsftpd```
 
-**Check configuration syntax**
+**Print version** information and exit
 
 ```vsftpd -v```
 
 # SYNOPSIS
 
 **vsftpd** [_config_file_]
+
+# PARAMETERS
+
+**-v**
+> Print version information and exit.
+
+**-ooption=value**
+> Set a single configuration option as per the config file format.
 
 # DESCRIPTION
 
@@ -55,6 +63,9 @@ Key settings in **/etc/vsftpd.conf**:
 **chroot_local_user=YES**
 > Confine users to home directories
 
+**ssl_enable=YES**
+> Enable SSL/TLS encryption
+
 **pasv_enable=YES**
 > Enable passive mode
 
@@ -71,4 +82,4 @@ vsftpd was written by **Chris Evans** with a focus on security, becoming the mos
 
 # SEE ALSO
 
-[sftp](/man/sftp)(1), [ftpd](/man/ftpd)(8), [ftp](/man/ftp)(1), [proftpd](/man/proftpd)(8)
+[sftp](/man/sftp)(1), [ftp](/man/ftp)(1)

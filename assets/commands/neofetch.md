@@ -10,7 +10,7 @@ command-line system information tool with ASCII art
 
 **Use a custom ASCII art** from a file
 
-```neofetch --source [path/to/ascii.txt]```
+```neofetch --ascii [path/to/ascii.txt]```
 
 **Use a specific distro's logo**
 
@@ -44,8 +44,11 @@ command-line system information tool with ASCII art
 **--ascii_distro** _distro_
 > Use specified distro's ASCII art
 
+**--ascii** _path_
+> Path to custom ASCII art file
+
 **--source** _path_
-> Path to custom ASCII or image file
+> Path to image file (used with image backends)
 
 **--backend** _backend_
 > Image backend (ascii, kitty, iterm2, sixel, w3m, etc.)

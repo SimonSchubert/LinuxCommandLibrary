@@ -16,17 +16,21 @@ extends git with GitHub integration
 
 ```hub fork```
 
-**Create issue**
+**Create issue with title and message**
 
-```hub issue create```
+```hub issue create -m "[title]"```
 
-**Browse repository**
+**Browse repository in browser**
 
 ```hub browse```
 
-**Create release**
+**Create release with tag**
 
-```hub release create [tag]```
+```hub release create -m "[Release title]" [tag]```
+
+**Open a pull request with a message**
+
+```hub pull-request -m "[title]"```
 
 # SYNOPSIS
 
@@ -55,6 +59,15 @@ _COMMAND_
 **release**
 > Release management.
 
+**create**
+> Create repository on GitHub.
+
+**ci-status**
+> Show CI status of the current commit.
+
+**api**
+> Make GitHub API requests directly.
+
 **--help**
 > Display help information.
 
@@ -66,7 +79,7 @@ The tool wraps git commands and adds GitHub-specific functionality. It can be al
 
 # CAVEATS
 
-Superseded by GitHub CLI (gh). Requires authentication. Git wrapper.
+Hub is no longer actively maintained and has been superseded by the official GitHub CLI (**gh**). Requires GitHub authentication via **GITHUB_TOKEN** or OAuth. When aliased as **git**, hub transparently wraps all standard git commands.
 
 # HISTORY
 

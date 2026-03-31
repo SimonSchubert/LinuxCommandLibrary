@@ -66,6 +66,12 @@ The tool is essential for modern JavaScript development, enabling use of latest 
 **--compact** _mode_
 > Compact output (true/false/auto)
 
+**--ignore** _glob_
+> Glob patterns for files to skip
+
+**--extensions** _exts_
+> File extensions to compile (default: .js,.jsx,.es6,.es,.mjs,.cjs)
+
 # COMMON PRESETS
 
 **@babel/preset-env**
@@ -95,4 +101,4 @@ Requires Node.js. Configuration can be complex. Build times increase with file c
 
 # SEE ALSO
 
-[node](/man/node)(1), [webpack](/man/webpack)(1), [tsc](/man/tsc)(1)
+[node](/man/node)(1), [npx](/man/npx)(1), [webpack](/man/webpack)(1), [tsc](/man/tsc)(1), [eslint](/man/eslint)(1)

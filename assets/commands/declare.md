@@ -32,6 +32,10 @@ bash builtin for declaring variables with attributes
 
 ```declare -u [upper]="hello"```
 
+**Display attributes and value of a variable**
+
+```declare -p [variable_name]```
+
 **List all functions**
 
 ```declare -f```
@@ -97,7 +101,7 @@ In functions, variables are local by default with declare; use **-g** for global
 
 # CAVEATS
 
-Associative arrays and name references require bash 4+. Declare is bash-specific; POSIX shells use different mechanisms. The -g flag only works inside functions. Read-only variables persist until shell exit; they cannot be unset.
+Associative arrays require bash 4+, and name references require bash 4.3+. Declare is bash-specific; POSIX shells use different mechanisms. The -g flag only works inside functions. Read-only variables persist until shell exit; they cannot be unset.
 
 # HISTORY
 

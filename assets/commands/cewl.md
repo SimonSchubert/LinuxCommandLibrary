@@ -12,13 +12,17 @@ Output **alphanumeric** wordlist with minimum 5 characters
 
 ```cewl --with-numbers -m 5 [url]```
 
-Output wordlist with **debug** and **email** addresses
+Output wordlist with **verbose** output and **email** addresses
 
-```cewl --debug -e [url]```
+```cewl -v -e [url]```
 
 Use HTTP **authentication**
 
 ```cewl --auth_type [basic|digest] --auth_user [username] --auth_pass [password] [url]```
+
+Output wordlist with **word count**
+
+```cewl -c [url]```
 
 Use a **proxy**
 
@@ -36,23 +40,32 @@ The tool follows links to a configurable depth and extracts unique words meeting
 
 # PARAMETERS
 
-**-d, --depth** _n_
+**-d**, **--depth** _n_
 > Spider to link depth n (default: 2)
 
-**-w, --write** _file_
+**-w**, **--write** _file_
 > Write wordlist to file
 
-**-m, --min_word_length** _n_
-> Minimum word length
+**-m**, **--min_word_length** _n_
+> Minimum word length (default: 3)
 
 **--with-numbers**
 > Include words with numbers
 
-**-e, --email**
-> Include email addresses
+**-c**, **--count**
+> Show the count for each word found
 
-**--debug**
-> Enable debug output
+**-e**, **--email**
+> Include email addresses found in the page
+
+**-a**, **--meta**
+> Include metadata from the page
+
+**-u**, **--ua** _AGENT_
+> Set the user agent string
+
+**-v**, **--verbose**
+> Enable verbose output
 
 **--auth_type** _type_
 > Authentication type: basic or digest

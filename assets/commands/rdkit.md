@@ -62,7 +62,7 @@ MOL    - Chem.MolFromMolFile()
 
 # CAVEATS
 
-Python library (conda or pip install). Requires numpy. C++ library also available.
+Python library installed via conda or pip (`pip install rdkit`). Requires numpy. A C++ library is also available. Some features require additional optional dependencies such as matplotlib for drawing.
 
 # HISTORY
 
@@ -70,4 +70,4 @@ RDKit was started by **Greg Landrum** at Rational Discovery and released as open
 
 # SEE ALSO
 
-[openbabel](/man/openbabel)(1), [pymol](/man/pymol)(1), [avogadro](/man/avogadro)(1)
+[obabel](/man/obabel)(1), [pymol](/man/pymol)(1), [python](/man/python)(1), [conda](/man/conda)(1)

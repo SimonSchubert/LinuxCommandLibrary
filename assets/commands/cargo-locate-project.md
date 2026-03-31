@@ -20,6 +20,10 @@ Print the path to a project's Cargo.toml
 
 ```cargo locate-project --message-format json```
 
+**Locate project from a specific directory**
+
+```cargo locate-project --manifest-path [path/to/Cargo.toml]```
+
 # SYNOPSIS
 
 **cargo locate-project** [_options_]
@@ -44,6 +48,9 @@ Print the path to a project's Cargo.toml
 
 **-q**, **--quiet**
 > Suppress log messages
+
+**--color** _WHEN_
+> Control color output: auto, always, never
 
 # OUTPUT
 
@@ -71,4 +78,4 @@ Useful for scripts and tooling that need to find the project root. Returns exit 
 
 # SEE ALSO
 
-[cargo](/man/cargo)(1), [cargo-metadata](/man/cargo-metadata)(1)
+[cargo](/man/cargo)(1), [cargo-metadata](/man/cargo-metadata)(1), [cargo-pkgid](/man/cargo-pkgid)(1)

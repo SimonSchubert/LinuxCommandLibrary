@@ -24,6 +24,14 @@ cryptocurrency trading engine with CLI client
 
 ```gctcli getportfoliosummary```
 
+**Enable or disable an exchange**
+
+```gctcli enableexchange --exchange [binance]```
+
+**Get orderbook for a currency pair**
+
+```gctcli getorderbook --exchange [binance] --pair [BTC-USDT] --asset [spot]```
+
 # SYNOPSIS
 
 **gocryptotrader** [_options_]
@@ -43,6 +51,12 @@ cryptocurrency trading engine with CLI client
 
 **-help**
 > Display help.
+
+**-grpchost** _HOST_
+> gRPC host address (gctcli, default: localhost).
+
+**-grpcport** _PORT_
+> gRPC port (gctcli, default: 9052).
 
 # DESCRIPTION
 

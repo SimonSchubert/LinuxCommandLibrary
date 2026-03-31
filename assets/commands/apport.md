@@ -1,6 +1,6 @@
 # TAGLINE
 
-Automatic crash reporting and diagnostics system.
+Automatic crash reporting and diagnostics system
 
 # TLDR
 
@@ -15,6 +15,10 @@ Show **crash report** for a PID
 **Unpack** a crash report
 
 ```apport-unpack [/var/crash/report.crash] [output_dir]```
+
+**Enable** apport crash reporting
+
+```sudo systemctl enable apport```
 
 File bug report **from crash**
 
@@ -62,4 +66,4 @@ Core dumps can consume significant disk space. Crash reports may contain sensiti
 
 # SEE ALSO
 
-[coredumpctl](/man/coredumpctl)(1), [gdb](/man/gdb)(1), [dmesg](/man/dmesg)(1)
+[apport-cli](/man/apport-cli)(1), [apport-unpack](/man/apport-unpack)(1), [ubuntu-bug](/man/ubuntu-bug)(1), [coredumpctl](/man/coredumpctl)(1), [dmesg](/man/dmesg)(1)

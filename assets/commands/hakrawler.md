@@ -12,17 +12,17 @@ fast web crawler for gathering URLs and JavaScript file references
 
 ```echo "[https://example.com]" | hakrawler -d [3]```
 
-**Show JavaScript files**
+**Include subdomains in scope**
 
-```echo "[https://example.com]" | hakrawler -js```
-
-**Include subdomains**
-
-```echo "[https://example.com]" | hakrawler -subs```
+```echo "[https://example.com]" | hakrawler -s subs```
 
 **Use plain output**
 
 ```echo "[https://example.com]" | hakrawler -plain```
+
+**Crawl with custom timeout and disable redirects**
+
+```echo "[https://example.com]" | hakrawler -t [15] -dr```
 
 # SYNOPSIS
 
@@ -33,29 +33,26 @@ fast web crawler for gathering URLs and JavaScript file references
 **-d** _depth_
 > Crawl depth (default 1).
 
-**-h** _threads_
-> Number of threads.
-
-**-js**
-> Include JavaScript file links.
+**-s** _scope_
+> Scope of the crawl: strict (same domain only), subs (include subdomains), or fuzzy (everything). Default is strict.
 
 **-plain**
-> Plain output mode.
+> Plain output mode, only prints URLs.
 
-**-subs**
-> Include subdomains.
+**-t** _seconds_
+> Request timeout in seconds (default 10).
 
-**-u**
-> Show unique URLs only.
-
-**-t** _timeout_
-> Request timeout.
+**-w** _workers_
+> Number of concurrent workers (default 8).
 
 **-insecure**
-> Skip TLS verification.
+> Skip TLS certificate verification.
 
 **-dr**
-> Disable redirects.
+> Disable following redirects.
+
+**-h**
+> Show help message.
 
 # DESCRIPTION
 
@@ -69,16 +66,16 @@ The tool reads URLs from stdin and outputs discovered links, making it easy to c
 # Basic crawl
 echo "https://target.com" | hakrawler
 
-# Find all JS files
-cat urls.txt | hakrawler -js -plain | sort -u
+# Crawl with plain output for piping
+cat urls.txt | hakrawler -plain | sort -u
 
-# Deep crawl with subdomains
-echo "https://target.com" | hakrawler -d 5 -subs
+# Deep crawl including subdomains
+echo "https://target.com" | hakrawler -d 3 -s subs -plain
 ```
 
 # CAVEATS
 
-For authorized security testing only. May trigger security controls. Respects robots.txt by default. High thread counts may cause issues.
+For authorized security testing only. May trigger security controls. High worker counts may cause rate limiting or IP bans.
 
 # HISTORY
 
@@ -86,4 +83,4 @@ hakrawler was created by **Luke Stephens** (hakluke) as part of a suite of secur
 
 # SEE ALSO
 
-[gospider](/man/gospider)(1), [waybackurls](/man/waybackurls)(1), [gau](/man/gau)(1)
+[waybackurls](/man/waybackurls)(1), [gau](/man/gau)(1), [curl](/man/curl)(1)

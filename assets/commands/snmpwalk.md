@@ -12,9 +12,9 @@ Walk SNMP MIB trees retrieving all values
 
 ```snmpwalk -v2c -c [public] [host] [1.3.6.1.2.1.1]```
 
-**SNMPv3 with auth**
+**SNMPv3 with auth** and encryption
 
-```snmpwalk -v3 -u [user] -l authPriv -A [authpass] -X [privpass] [host]```
+```snmpwalk -v3 -u [user] -l authPriv -a SHA -A [authpass] -x AES -X [privpass] [host]```
 
 **Show numeric OIDs**
 
@@ -64,8 +64,17 @@ Walk SNMP MIB trees retrieving all values
 **-Cr**
 > Do not check returned OIDs are increasing (for buggy agents).
 
+**-Of**
+> Display full OIDs (not abbreviated).
+
 **-Cc**
 > Do not check returned OIDs for correct subtree.
+
+**-a** _PROTOCOL_
+> SNMPv3 authentication protocol (MD5, SHA, SHA-224, SHA-256, SHA-384, SHA-512).
+
+**-x** _PROTOCOL_
+> SNMPv3 privacy protocol (DES, AES, AES-192, AES-256).
 
 **-t** _TIMEOUT_
 > Timeout in seconds for each request (default 1).

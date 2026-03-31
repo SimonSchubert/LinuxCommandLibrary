@@ -36,6 +36,10 @@ plugin manager for kubectl, the Kubernetes command-line tool
 
 ```kubectl krew uninstall [plugin-name]```
 
+**Add a custom plugin index**
+
+```kubectl krew index add [index-name] [git-url]```
+
 # SYNOPSIS
 
 **kubectl krew** _command_ [_options_]

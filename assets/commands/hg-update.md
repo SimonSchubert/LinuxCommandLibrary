@@ -46,11 +46,14 @@ updates the working directory to a specific revision
 **-m**, **--merge**
 > Merge uncommitted changes.
 
+**-d**, **--date** _date_
+> Tipmost revision matching date.
+
 # DESCRIPTION
 
 **hg update** (alias: **up**, **checkout**, **co**) updates the working directory to a specific revision. Without arguments, updates to the tip of the current branch. Can update to revisions, branches, tags, or bookmarks. Use **-C** to discard local changes or **-c** to abort if changes exist.
 
 # SEE ALSO
 
-[hg](/man/hg)(1), [hg-pull](/man/hg-pull)(1), [hg-merge](/man/hg-merge)(1)
+[hg](/man/hg)(1), [hg-pull](/man/hg-pull)(1), [hg-commit](/man/hg-commit)(1), [hg-status](/man/hg-status)(1)
 

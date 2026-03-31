@@ -16,6 +16,10 @@ Upgrade **specific** containers
 
 ```distrobox-upgrade [container1] [container2]```
 
+Run upgrade in the background with **root** privileges
+
+```distrobox-upgrade --root [container_name]```
+
 # SYNOPSIS
 
 **distrobox-upgrade** [_options_] [_containers_...]
@@ -26,11 +30,17 @@ Upgrade **specific** containers
 
 # PARAMETERS
 
-**-a, --all**
-> Upgrade all containers
+**-a**, **--all**
+> Upgrade all containers.
+
+**--root**
+> Launch podman/docker/lilipod with root privileges. Useful for containers created with --root.
+
+**-v**, **--verbose**
+> Show more verbosity.
 
 _containers_
-> Space-separated list of container names
+> Space-separated list of container names to upgrade.
 
 # CAVEATS
 
@@ -38,4 +48,4 @@ Each container is upgraded using its own package manager. Large upgrades may tak
 
 # SEE ALSO
 
-[distrobox](/man/distrobox)(1), [distrobox-enter](/man/distrobox-enter)(1)
+[distrobox](/man/distrobox)(1), [distrobox-enter](/man/distrobox-enter)(1), [distrobox-create](/man/distrobox-create)(1), [distrobox-list](/man/distrobox-list)(1)

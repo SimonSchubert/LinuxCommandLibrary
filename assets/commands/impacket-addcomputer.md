@@ -1,6 +1,6 @@
 # TAGLINE
 
-tool from the Impacket library that allows adding or removing computer
+Add or remove computer accounts in Active Directory via Impacket
 
 # TLDR
 
@@ -20,13 +20,17 @@ tool from the Impacket library that allows adding or removing computer
 
 ```impacket-addcomputer -computer-name '[NEWPC$]' -k -no-pass '[domain]/[user]'```
 
+**Add a computer** using the LDAPS method
+
+```impacket-addcomputer -computer-name '[NEWPC$]' -method LDAPS '[domain]/[user]:[password]'```
+
 **Delete a computer account** from the domain
 
 ```impacket-addcomputer -computer-name '[TARGETPC$]' -delete '[domain]/[user]:[password]'```
 
 # SYNOPSIS
 
-**impacket-addcomputer** [_-h_] [_-computer-name NAME_] [_-computer-pass PASSWORD_] [_-no-add_] [_-delete_] [_-dc-ip IP_] [_-dc-host HOSTNAME_] [_-use-ldaps_] [_-hashes LMHASH:NTHASH_] [_-no-pass_] [_-k_] [_-aesKey KEY_] _target_
+**impacket-addcomputer** [_-h_] [_-computer-name NAME_] [_-computer-pass PASSWORD_] [_-no-add_] [_-delete_] [_-method {SAMR,LDAPS}_] [_-port {139,445,636}_] [_-baseDN DC=x,DC=y_] [_-computer-group GROUP_] [_-domain-netbios NETBIOSNAME_] [_-dc-ip IP_] [_-dc-host HOSTNAME_] [_-use-ldaps_] [_-hashes LMHASH:NTHASH_] [_-no-pass_] [_-k_] [_-aesKey KEY_] _target_
 
 # PARAMETERS
 
@@ -63,6 +67,27 @@ tool from the Impacket library that allows adding or removing computer
 **-aesKey** _KEY_
 > AES key to use for Kerberos authentication
 
+**-method** _{SAMR,LDAPS}_
+> Method to add the computer account (default: SAMR)
+
+**-port** _{139,445,636}_
+> Destination port (SAMR defaults to 445, LDAPS to 636)
+
+**-baseDN** _DN_
+> LDAP base distinguished name (derived from domain if omitted)
+
+**-computer-group** _GROUP_
+> LDAP path of group to add the computer to (e.g., CN=Computers,DC=test,DC=local)
+
+**-domain-netbios** _NETBIOSNAME_
+> Domain NetBIOS name (required if the DC has multiple domains)
+
+**-ts**
+> Add timestamps to output
+
+**-debug**
+> Enable debug output
+
 # DESCRIPTION
 
 **impacket-addcomputer** is a tool from the Impacket library that allows adding or removing computer accounts in an Active Directory domain. By default, domain users can add up to 10 computer accounts (controlled by the ms-DS-MachineAccountQuota attribute), making this useful for penetration testing scenarios.
@@ -79,4 +104,4 @@ Impacket was created by **SecureAuth** (formerly Core Security) as a collection 
 
 # SEE ALSO
 
-[impacket-getadusers](/man/impacket-getadusers)(1), [impacket-secretsdump](/man/impacket-secretsdump)(1), [ldapsearch](/man/ldapsearch)(1), [net](/man/net)(1)
+[impacket-getadusers](/man/impacket-getadusers)(1), [impacket-secretsdump](/man/impacket-secretsdump)(1), [impacket-psexec](/man/impacket-psexec)(1), [ldapsearch](/man/ldapsearch)(1), [net](/man/net)(1)

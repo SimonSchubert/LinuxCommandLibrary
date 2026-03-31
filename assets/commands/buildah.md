@@ -4,9 +4,9 @@ Build OCI and Docker container images without a daemon
 
 # TLDR
 
-**Build** container from Dockerfile
+**Build** container from Containerfile/Dockerfile
 
-```buildah bud -t [myimage] [.]```
+```buildah build -t [myimage] [.]```
 
 **Create** working container
 
@@ -14,15 +14,23 @@ Build OCI and Docker container images without a daemon
 
 **Run** command in container
 
-```buildah run [container-id] [dnf install -y httpd]```
+```buildah run [container-id] -- [dnf install -y httpd]```
+
+**Copy** files into container
+
+```buildah copy [container-id] [local/path] [/container/path]```
 
 **Commit** container to image
 
 ```buildah commit [container-id] [myimage]```
 
-**Push** image
+**List** local images
 
-```buildah push [myimage] [docker://registry/image]```
+```buildah images```
+
+**Push** image to a registry
+
+```buildah push [myimage] [docker://registry.example.com/myimage:tag]```
 
 # SYNOPSIS
 
@@ -36,8 +44,8 @@ Unlike Docker, buildah does not require a background daemon process, making it w
 
 # PARAMETERS
 
-**bud**
-> Build using Dockerfile
+**build** (formerly **bud**)
+> Build image using Containerfile/Dockerfile
 
 **from** _image_
 > Create working container
@@ -60,17 +68,32 @@ Unlike Docker, buildah does not require a background daemon process, making it w
 **containers**
 > List working containers
 
+**copy** _container_ _src_ _dest_
+> Copy files into container
+
+**config** [_options_] _container_
+> Set image configuration (cmd, entrypoint, env, labels, etc.)
+
 **rm** _container_
 > Remove container
 
 **rmi** _image_
 > Remove image
 
+**inspect** _container|image_
+> Display detailed information
+
+**mount** _container_
+> Mount container filesystem
+
+**umount** _container_
+> Unmount container filesystem
+
 # BUILDING IMAGES
 
-**From Dockerfile:**
+**From Containerfile/Dockerfile:**
 ```bash
-buildah bud -t myapp:latest .
+buildah build -t myapp:latest .
 ```
 
 **Script-based:**
@@ -114,7 +137,7 @@ buildah commit $ctr myapp:latest
 
 # CAVEATS
 
-Different from Docker (learning curve). Some Docker features not supported. Rootless mode has limitations. Storage configuration important. Not as widely adopted as Docker.
+Different from Docker workflow (learning curve). Some Docker features not supported. Rootless mode has kernel and filesystem limitations. Storage configuration important. The **bud** subcommand is deprecated in favor of **build**.
 
 # HISTORY
 

@@ -1,28 +1,32 @@
 # TAGLINE
 
-configuration file for the shadow password suite
+Configuration file for the shadow password suite
 
 # TLDR
 
-**Set password aging defaults**
+**Set maximum password age** (days)
 
 ```PASS_MAX_DAYS 90```
 
-**Set minimum password length**
+**Set minimum days between password changes**
 
-```PASS_MIN_LEN 8```
+```PASS_MIN_DAYS 7```
+
+**Set warning days before password expiry**
+
+```PASS_WARN_AGE 14```
 
 **Set UID range for regular users**
 
 ```UID_MIN 1000```
 
-**Enable encrypted home directories**
+**Set password hashing algorithm**
 
 ```ENCRYPT_METHOD SHA512```
 
-**Set umask for new users**
+**Set default umask for new users**
 
-```UMASK 027```
+```UMASK 077```
 
 # SYNOPSIS
 
@@ -37,7 +41,7 @@ configuration file for the shadow password suite
 > Minimum days between changes.
 
 **PASS_MIN_LEN**
-> Minimum password length.
+> Minimum password length (ignored if PAM is used; see pam_pwquality instead).
 
 **PASS_WARN_AGE**
 > Warning days before expiry.
@@ -52,13 +56,25 @@ configuration file for the shadow password suite
 > Default umask.
 
 **ENCRYPT_METHOD**
-> Password hash algorithm.
+> Password hash algorithm (DES, MD5, SHA256, SHA512, YESCRYPT).
+
+**CREATE_HOME**
+> Create home directory by default (yes/no).
+
+**USERGROUPS_ENAB**
+> Enable user private groups (yes/no).
+
+**LOGIN_RETRIES**
+> Maximum number of login retries on password failure.
+
+**LOGIN_TIMEOUT**
+> Maximum time in seconds for login.
 
 # DESCRIPTION
 
-**login.defs** is the configuration file for the shadow password suite. It defines default values for user account creation, password aging, and login behavior.
+**login.defs** is the configuration file for the shadow password suite, located at **/etc/login.defs**. It defines default values for user account creation, password aging, and login behavior.
 
-Settings affect useradd, usermod, passwd, and other shadow utilities.
+Settings affect useradd, usermod, passwd, groupadd, and other shadow utilities. On systems using PAM, some settings (notably PASS_MIN_LEN) may be overridden by PAM modules.
 
 # EXAMPLE CONFIG
 
@@ -79,4 +95,4 @@ PAM may override some settings. Changes don't affect existing users. Some values
 
 # SEE ALSO
 
-[shadow](/man/shadow)(5), [passwd](/man/passwd)(5), [useradd](/man/useradd)(8), [pam](/man/pam)(8)
+[passwd](/man/passwd)(1), [useradd](/man/useradd)(8), [usermod](/man/usermod)(8), [groupadd](/man/groupadd)(8), [chage](/man/chage)(1), [login](/man/login)(1), [pam](/man/pam)(8)

@@ -37,7 +37,7 @@ Multiple tones can be sequenced using the **-n** (new) option to separate distin
 # PARAMETERS
 
 **-f** _frequency_
-> Frequency in Hertz (default: ~750 Hz, the standard terminal bell frequency)
+> Frequency in Hertz (default: 440 Hz)
 
 **-l** _duration_
 > Duration in milliseconds (default: 200 ms)
@@ -46,7 +46,7 @@ Multiple tones can be sequenced using the **-n** (new) option to separate distin
 > Number of repetitions
 
 **-d** _delay_
-> Delay between repetitions in milliseconds
+> Delay between repetitions in milliseconds (default: 100 ms, not applied after the last repetition)
 
 **-n, --new**
 > Start a new beep (use for sequences)
@@ -54,11 +54,23 @@ Multiple tones can be sequenced using the **-n** (new) option to separate distin
 **-D** _delay_
 > Delay after every repetition including the last, in milliseconds
 
+**-e** _device_, **--device=**_device_
+> Explicitly set the device to use for generating beep tones
+
 **-s**
 > Read from stdin and beep after each newline
 
 **-c**
 > Read from stdin and beep after each character
+
+**-h**, **--help**
+> Display usage information
+
+**-v**, **-V**, **--version**
+> Display version information
+
+**--verbose**, **--debug**
+> Enable debug output
 
 # CAVEATS
 

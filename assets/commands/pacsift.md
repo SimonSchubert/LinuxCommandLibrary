@@ -16,13 +16,13 @@ Search **installed packages** by name
 
 ```pacsift --local --name [pattern]```
 
-Find **orphan** packages
+Find **foreign** (AUR/manually installed) packages
 
-```pacsift --local --orphans```
+```pacsift --local --foreign```
 
 Find **explicitly installed** packages
 
-```pacsift --local --explicit```
+```pacsift --local --reason explicit```
 
 Combine filters with **exact** matching
 
@@ -70,14 +70,14 @@ Combine filters with **exact** matching
 **--any**
 > Return the union rather than the intersection of matches
 
-**--installed**
-> Show only installed packages
+**--foreign**
+> Show packages not found in sync databases (e.g., AUR packages)
 
-**--explicit**
-> Show only explicitly installed packages
+**--native**
+> Show packages found in sync databases
 
-**--orphans**
-> Show orphan packages
+**--reason** _reason_
+> Filter by install reason (explicit or depend)
 
 **--null**[=_sep_]
 > Set alternate separator for stdin values (default: NUL)

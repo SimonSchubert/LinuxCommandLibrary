@@ -4,21 +4,25 @@ Visualize attack surface enumeration data
 
 # TLDR
 
-**Generate** D3.js visualization
+**Generate D3.js HTML visualization**
 
 ```amass viz -d3 -d [example.com]```
 
-Generate **Graphistry** visualization
-
-```amass viz -graphistry -d [example.com]```
-
-Export to **DOT** format
+**Export to Graphviz DOT format**
 
 ```amass viz -dot -d [example.com] -o [graph.dot]```
 
-Generate **GEXF** for Gephi
+**Generate GEXF file for Gephi**
 
 ```amass viz -gexf -d [example.com] -o [graph.gexf]```
+
+**Export for Maltego**
+
+```amass viz -maltego -d [example.com] -o [graph.csv]```
+
+**Use a specific enumeration from the database**
+
+```amass viz -d3 -enum [1] -d [example.com]```
 
 # SYNOPSIS
 
@@ -69,4 +73,4 @@ Large enumerations produce complex visualizations that may be slow to render. D3
 
 # SEE ALSO
 
-[amass](/man/amass)(1), [amass-db](/man/amass-db)(1), [dot](/man/dot)(1)
+[amass](/man/amass)(1), [amass-enum](/man/amass-enum)(1), [amass-db](/man/amass-db)(1), [amass-track](/man/amass-track)(1), [dot](/man/dot)(1)

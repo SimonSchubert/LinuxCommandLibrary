@@ -24,6 +24,10 @@ fetches changesets from a remote repository into the local repository
 
 ```hg pull -b [branch]```
 
+**Pull from source and force even if unrelated**
+
+```hg pull -f [https://example.com/repo]```
+
 # SYNOPSIS
 
 **hg** **pull** [_options_] [_source_]
@@ -39,8 +43,14 @@ fetches changesets from a remote repository into the local repository
 **-b**, **--branch** _branch_
 > Pull specific branch.
 
+**-B**, **--bookmark** _bookmark_
+> Pull a specific bookmark from the remote repository.
+
 **-f**, **--force**
 > Pull even from unrelated repository.
+
+**--insecure**
+> Do not verify server certificate (for HTTPS connections).
 
 # DESCRIPTION
 
@@ -48,5 +58,5 @@ fetches changesets from a remote repository into the local repository
 
 # SEE ALSO
 
-[hg](/man/hg)(1), [hg-update](/man/hg-update)(1), [hg-push](/man/hg-push)(1)
+[hg](/man/hg)(1), [hg-update](/man/hg-update)(1), [hg-push](/man/hg-push)(1), [hg-clone](/man/hg-clone)(1), [hg-log](/man/hg-log)(1)
 

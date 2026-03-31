@@ -16,6 +16,10 @@ Generate from **Solidity source** directly
 
 ```abigen --sol [contract.sol] --pkg [packagename] --out [contract.go]```
 
+Specify a custom **struct type** name
+
+```abigen --abi [contract.abi] --pkg [packagename] --type [MyContract] --out [contract.go]```
+
 # SYNOPSIS
 
 **abigen** [_--abi file_] [_--bin file_] [_--sol file_] [_--pkg name_] [_--out file_] [_options_]
@@ -47,10 +51,16 @@ The generated code handles ABI encoding/decoding, transaction creation, and even
 > Struct name for the contract binding (defaults to contract name)
 
 **--lang** _language_
-> Target language: go, java, objc
+> Target language for generated bindings (default: go).
 
 **--solc** _path_
-> Solidity compiler path when using --sol
+> Solidity compiler path when using --sol.
+
+**--combined-json** _file_
+> Path to the combined-json output from solc compiler.
+
+**--alias** _aliases_
+> Comma-separated list of identifier aliases (original=replacement).
 
 # CAVEATS
 

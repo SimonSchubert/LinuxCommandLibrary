@@ -35,8 +35,8 @@ assembler that reads LLVM assembly language and outputs LLVM bitcode
 **-disable-output**
 > Don't write output (syntax check).
 
-**-data-layout** _layout_
-> Override data layout.
+**--data-layout** _layout_
+> Override data layout string.
 
 **--help**
 > Show help.
@@ -73,4 +73,4 @@ llvm-as has been part of LLVM since the project's inception by **Chris Lattner**
 
 # SEE ALSO
 
-[llvm-dis](/man/llvm-dis)(1), [llc](/man/llc)(1), [opt](/man/opt)(1), [clang](/man/clang)(1)
+[llvm-dis](/man/llvm-dis)(1), [llc](/man/llc)(1), [lli](/man/lli)(1), [opt](/man/opt)(1), [clang](/man/clang)(1)

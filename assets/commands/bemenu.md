@@ -30,7 +30,7 @@ Dynamic menu for Wayland and X11
 
 **Password prompt** (hidden input)
 
-```bemenu -x -p "Password:"```
+```bemenu --password -p "Password:"```
 
 # SYNOPSIS
 
@@ -66,11 +66,17 @@ Unlike dmenu which only works on X11, bemenu provides native Wayland support, ma
 **-H**, **--line-height** _height_
 > Set item height in pixels.
 
-**-x**, **--password**
+**--password**
 > Hide input (password mode).
 
+**-w**, **--wrap**
+> Wrap cursor selection.
+
+**-f**, **--filter** _text_
+> Filter items for given text.
+
 **--fn** _font_
-> Set font (Pango format).
+> Set font (Pango format, e.g., "monospace 12").
 
 **--tb** _color_
 > Title bar background color.
@@ -95,9 +101,6 @@ Unlike dmenu which only works on X11, bemenu provides native Wayland support, ma
 
 **--hf** _color_
 > Highlighted item foreground.
-
-**--binding** _vim|emacs_
-> Set key binding style.
 
 # CAVEATS
 

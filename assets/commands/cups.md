@@ -113,4 +113,4 @@ Use lpstat -p -d to see printers and default. Configure via web interface for ea
 
 # SEE ALSO
 
-[lp](/man/lp)(1), [lpr](/man/lpr)(1), [lpstat](/man/lpstat)(1), [lpadmin](/man/lpadmin)(8)
+[lp](/man/lp)(1), [lpr](/man/lpr)(1), [lpstat](/man/lpstat)(1), [lpq](/man/lpq)(1), [lprm](/man/lprm)(1), [lpadmin](/man/lpadmin)(8), [lpoptions](/man/lpoptions)(1), [cupsctl](/man/cupsctl)(8)

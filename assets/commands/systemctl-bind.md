@@ -1,6 +1,6 @@
 # TAGLINE
 
-Bind-mount paths into unit namespaces
+Bind-mount paths into unit mount namespaces at runtime
 
 # TLDR
 
@@ -48,4 +48,4 @@ The **bind** subcommand was added to **systemctl** for runtime injection of file
 
 # SEE ALSO
 
-[systemctl](/man/systemctl)(1), [systemd.exec](/man/systemd.exec)(5)
+[systemctl](/man/systemctl)(1), [mount](/man/mount)(8), [systemd-run](/man/systemd-run)(1)

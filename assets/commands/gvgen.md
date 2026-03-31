@@ -4,68 +4,117 @@ generates various types of graphs in DOT format
 
 # TLDR
 
-**Generate star graph**
+**Generate a star graph** with 5 vertices
 
-```gvgen -S [5] > star.gv```
+```gvgen -s [5] > star.gv```
 
-**Generate grid graph**
+**Generate a grid graph**
 
-```gvgen -g [3] [4] > grid.gv```
+```gvgen -g [3],[4] > grid.gv```
 
-**Generate complete graph**
+**Generate a complete graph** on 6 vertices
 
-```gvgen -K [6] > complete.gv```
+```gvgen -k [6] > complete.gv```
 
-**Generate tree**
+**Generate a binary tree** of height 4
 
-```gvgen -t [3] [4] > tree.gv```
+```gvgen -t [4] > tree.gv```
 
-**Generate random graph**
+**Generate a random graph** with 10 vertices
 
-```gvgen -R [10] [20] > random.gv```
+```gvgen -r [10],[0.3] > random.gv```
+
+**Generate a directed cycle** and write to a file
+
+```gvgen -d -c [8] -o [cycle.gv]```
 
 # SYNOPSIS
 
-**gvgen** [_options_]
+**gvgen** [**-dv?**] [_-c n_] [_-C x,y_] [_-g[f] x,y_] [_-h n_] [_-k n_] [_-b x,y_] [_-B x,y_] [_-m n_] [_-M x,y_] [_-p n_] [_-r x,y_] [_-R x_] [_-s n_] [_-S n_] [_-t n_] [_-T x,y_] [_-w n_] [_-n prefix_] [_-N name_] [_-o outfile_]
 
 # PARAMETERS
 
-**-S** _N_
-> Star graph with N points.
+**-s** _n_
+> Generate a star on n vertices.
 
-**-g** _M_ _N_
-> M x N grid graph.
+**-g** [**f**]_x_,_y_
+> Generate an x by y grid. If f is given, the grid is folded with edges attaching opposing corner vertices.
 
-**-K** _N_
-> Complete graph on N nodes.
+**-k** _n_
+> Generate a complete graph on n vertices.
 
-**-t** _D_ _B_
-> Tree with depth D, branching B.
+**-c** _n_
+> Generate a cycle with n vertices and edges.
 
-**-R** _N_ _E_
-> Random graph with N nodes, E edges.
+**-p** _n_
+> Generate a path on n vertices.
 
-**-c** _N_
-> Cycle graph.
+**-t** _n_
+> Generate a complete binary tree of height n. Use **-t** _h_,_n_ for an n-ary tree.
 
-**-p** _N_
-> Path graph.
+**-r** _x_,_y_
+> Generate a random graph. The x and y give the number of vertices and the density of the edges (between 0 and 1).
 
-**-o** _FILE_
-> Output file.
+**-R** _x_
+> Generate a random rooted tree on x vertices.
 
-**--help**
-> Display help information.
+**-h** _n_
+> Generate a hypercube of degree n (2^n vertices).
+
+**-b** _x_,_y_
+> Generate a complete x by y bipartite graph.
+
+**-C** _x_,_y_
+> Generate an x by y cylinder.
+
+**-B** _x_,_y_
+> Generate an x by y ball (a cylinder with two caps).
+
+**-m** _n_
+> Generate a triangular mesh with n vertices on a side.
+
+**-M** _x_,_y_
+> Generate an x by y Moebius strip.
+
+**-T** _x_,_y_
+> Generate an x by y torus.
+
+**-S** _n_
+> Generate a Sierpinski graph of order n.
+
+**-w** _n_
+> Generate a wheel graph on n vertices.
+
+**-d**
+> Make the generated graph directed.
+
+**-n** _prefix_
+> Prepend prefix to integer node names.
+
+**-N** _name_
+> Use name as the name of the graph.
+
+**-o** _outfile_
+> Write output to the specified file instead of stdout.
+
+**-u** _seed_
+> Specify the seed for the random number generator.
+
+**-v**
+> Verbose output.
+
+**-?**
+> Print usage information.
 
 # DESCRIPTION
 
-**gvgen** generates various types of graphs in DOT format. It creates standard graph structures useful for testing, visualization, and algorithms.
+**gvgen** generates a variety of simple, regularly-structured abstract graphs in DOT format. It creates standard graph structures useful for testing, visualization, and algorithm demonstrations.
 
-The tool supports stars, grids, trees, complete graphs, cycles, and random graphs. Output is in Graphviz format for visualization.
+The tool supports stars, grids, trees, complete graphs, cycles, paths, random graphs, hypercubes, bipartite graphs, cylinders, tori, Moebius strips, Sierpinski graphs, and more. Output is in Graphviz DOT format for visualization with layout engines.
 
 # CAVEATS
 
-Part of Graphviz package. Random graphs vary each run. Large graphs may be slow to render.
+Part of the Graphviz package. Random graphs vary each run unless a seed is specified with **-u**. Large graphs may be slow to render.
 
 # HISTORY
 
@@ -73,4 +122,4 @@ gvgen was developed as part of the **Graphviz** project to provide sample graph 
 
 # SEE ALSO
 
-[dot](/man/dot)(1), [neato](/man/neato)(1), [graphviz](/man/graphviz)(1)
+[dot](/man/dot)(1), [neato](/man/neato)(1), [sfdp](/man/sfdp)(1), [gvpack](/man/gvpack)(1)

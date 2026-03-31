@@ -4,41 +4,45 @@ suite of tools for image manipulation
 
 # TLDR
 
-**Convert image format**
+**Convert image format** (v7 syntax)
 
-```convert [input.png] [output.jpg]```
+```magick [input.png] [output.jpg]```
 
 **Resize image**
 
-```convert [input.jpg] -resize [800x600] [output.jpg]```
+```magick [input.jpg] -resize [800x600] [output.jpg]```
 
 **Create thumbnail**
 
-```convert [input.jpg] -thumbnail [150x150^] -gravity center -extent [150x150] [thumb.jpg]```
+```magick [input.jpg] -thumbnail [150x150^] -gravity center -extent [150x150] [thumb.jpg]```
 
 **Add text watermark**
 
-```convert [input.jpg] -gravity south -annotate +0+10 "[Copyright]" [output.jpg]```
+```magick [input.jpg] -gravity south -annotate +0+10 "[Copyright]" [output.jpg]```
 
 **Combine images horizontally**
 
-```convert [a.jpg] [b.jpg] +append [combined.jpg]```
+```magick [a.jpg] [b.jpg] +append [combined.jpg]```
 
 **Create GIF from images**
 
-```convert -delay [100] [*.png] [animation.gif]```
+```magick -delay [100] [*.png] [animation.gif]```
 
 **Identify image info**
 
-```identify [image.jpg]```
+```magick identify [image.jpg]```
+
+**Batch convert all PNGs to JPEGs** in the current directory
+
+```magick mogrify -format jpg [*.png]```
 
 # SYNOPSIS
 
-**convert** [_options_] _input_ [_operations_] _output_
+**magick** [_input_] [_operations_] _output_
 
-**identify** [_options_] _image_
+**magick identify** [_options_] _image_
 
-**mogrify** [_options_] _images_
+**magick mogrify** [_options_] _images_
 
 # PARAMETERS
 
@@ -52,7 +56,7 @@ suite of tools for image manipulation
 > Rotate image.
 
 **-quality** _value_
-> JPEG/PNG quality (1-100).
+> Compression quality (JPEG: 1-100, PNG: 0-9 for zlib compression level).
 
 **-gravity** _type_
 > Anchor point for operations.
@@ -70,17 +74,23 @@ suite of tools for image manipulation
 > Convert colorspace.
 
 **-density** _value_
-> Set resolution.
+> Set resolution (DPI).
+
+**-strip**
+> Remove all metadata and profiles from image.
+
+**-format** _type_
+> Set the output image format.
 
 # DESCRIPTION
 
 **ImageMagick** is a suite of tools for image manipulation. It can convert, resize, crop, rotate, combine, and apply effects to images in over 200 formats.
 
-Key tools: **convert** (transform), **identify** (info), **mogrify** (in-place edit), **composite** (combine), **montage** (collage).
+Key tools: **magick** (transform, replaces convert in v7), **identify** (info), **mogrify** (in-place edit), **composite** (combine), **montage** (collage). In v7, all subcommands are invoked via `magick` (e.g., `magick identify`, `magick mogrify`).
 
 # CAVEATS
 
-Memory-intensive for large images. Security policy may restrict some operations. Syntax can be complex. convert renamed to magick in v7.
+Memory-intensive for large images. The default security policy (policy.xml) may restrict some operations and file formats. In v7, the `convert` command is deprecated in favor of `magick`; legacy v6 syntax still works but emits warnings.
 
 # HISTORY
 
@@ -88,4 +98,4 @@ ImageMagick was created by **John Cristy** in **1987** at DuPont. It's been cont
 
 # SEE ALSO
 
-[convert](/man/convert)(1), [identify](/man/identify)(1), [mogrify](/man/mogrify)(1), [ffmpeg](/man/ffmpeg)(1)
+[magick](/man/magick)(1), [convert](/man/convert)(1), [identify](/man/identify)(1), [mogrify](/man/mogrify)(1), [composite](/man/composite)(1), [montage](/man/montage)(1), [ffmpeg](/man/ffmpeg)(1)

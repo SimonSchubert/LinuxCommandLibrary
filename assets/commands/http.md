@@ -18,15 +18,23 @@ user-friendly HTTP client
 
 **Custom headers**
 
-```http [url] Authorization:"Bearer token"```
+```http [url] Authorization:"Bearer [token]"```
 
 **Download file**
 
 ```http --download [url]```
 
+**Authenticated request**
+
+```http --auth [user]:[password] [url]```
+
 **Verbose output**
 
 ```http --verbose [url]```
+
+**Use a named session**
+
+```http --session=[name] [url]```
 
 # SYNOPSIS
 
@@ -58,6 +66,30 @@ _DATA_
 **-o**, **--output** _FILE_
 > Output file.
 
+**-a**, **--auth** _USER:PASS_
+> Basic or digest authentication credentials.
+
+**-A**, **--auth-type** _TYPE_
+> Authentication type: basic, digest, bearer.
+
+**--session** _NAME_
+> Create or reuse a named session for cookies and headers.
+
+**-p**, **--print** _FLAGS_
+> Control output: H (request headers), B (request body), h (response headers), b (response body).
+
+**--pretty** _STYLE_
+> Output formatting: all, colors, format, none.
+
+**--verify** _CERT_
+> SSL certificate verification. Use **no** to skip.
+
+**--proxy** _PROTOCOL:URL_
+> Use a proxy for requests.
+
+**--follow**
+> Follow HTTP redirects.
+
 **--help**
 > Display help information.
 
@@ -77,4 +109,4 @@ HTTPie was created by **Jakub Roztocil** as a more user-friendly alternative to 
 
 # SEE ALSO
 
-[curl](/man/curl)(1), [wget](/man/wget)(1), [https](/man/https)(1)
+[curl](/man/curl)(1), [wget](/man/wget)(1), [https](/man/https)(1), [xh](/man/xh)(1), [curlie](/man/curlie)(1)

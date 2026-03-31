@@ -16,9 +16,21 @@ Get and set repository or global options
 
 ```git config user.name```
 
-**List all settings**
+**Set the default branch name** for new repositories
 
-```git config --list```
+```git config --global init.defaultBranch main```
+
+**Create a command alias**
+
+```git config --global alias.co checkout```
+
+**Remove a setting**
+
+```git config --global --unset [key]```
+
+**List all settings** and their origins
+
+```git config --list --show-origin```
 
 **Edit config file**
 
@@ -51,8 +63,17 @@ _VALUE_
 **--edit**, **-e**
 > Open config in editor.
 
+**--get** _NAME_
+> Get the value for a given key (default behavior when only name is provided).
+
+**--get-all** _NAME_
+> Get all values for a multi-valued key.
+
 **--unset** _NAME_
 > Remove a setting.
+
+**--show-origin**
+> Show the file where each config value comes from.
 
 **--help**
 > Display help information.
@@ -78,7 +99,7 @@ Common configuration tasks include setting user identity (user.name and user.ema
 
 # CAVEATS
 
-Scope matters for settings. Credentials need special handling. Some settings require restart.
+Local settings override global, and global overrides system. When a key is set at multiple levels, the most specific scope wins. Some settings like **core.autocrlf** can cause unexpected behavior if set inconsistently across scopes. Credential helpers vary by platform and may require separate installation.
 
 # HISTORY
 
@@ -86,4 +107,4 @@ git config is a core **Git** command from initial release, providing the configu
 
 # SEE ALSO
 
-[git](/man/git)(1), [git-credential](/man/git-credential)(1)
+[git](/man/git)(1), [git-credential](/man/git-credential)(1), [git-init](/man/git-init)(1), [git-commit](/man/git-commit)(1)

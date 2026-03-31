@@ -74,4 +74,4 @@ Installation paths vary by system configuration. Zsh requires the completion dir
 
 # SEE ALSO
 
-[gcrane](/man/gcrane)(1), [crane](/man/crane)(1), [docker](/man/docker)(1), [podman](/man/podman)(1)
+[gcrane](/man/gcrane)(1), [gcrane-gc](/man/gcrane-gc)(1), [gcrane-ls](/man/gcrane-ls)(1), [crane](/man/crane)(1), [docker](/man/docker)(1), [podman](/man/podman)(1)

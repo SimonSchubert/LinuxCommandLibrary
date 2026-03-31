@@ -20,6 +20,10 @@ Bidirectional text pager
 
 ```yap -u [file]```
 
+**Display line numbers**
+
+```yap -n [file]```
+
 **Start at specific line**
 
 ```yap +[100] [file]```

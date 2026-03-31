@@ -33,5 +33,5 @@ ppmrelief was created as part of **Netpbm** for relief effect generation.
 
 # SEE ALSO
 
-[ppm](/man/ppm)(5), [pnmconvol](/man/pnmconvol)(1), [pgmedge](/man/pgmedge)(1)
+[ppm](/man/ppm)(5), [pnmconvol](/man/pnmconvol)(1), [pgmedge](/man/pgmedge)(1), [pnmsmooth](/man/pnmsmooth)(1)
 

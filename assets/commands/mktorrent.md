@@ -32,6 +32,10 @@ creates BitTorrent metainfo files
 
 ```mktorrent -c "[My torrent]" -a [tracker] [file]```
 
+**Specify output filename**
+
+```mktorrent -o [output.torrent] -a [tracker] [file]```
+
 **Verbose output**
 
 ```mktorrent -v -a [tracker] [file]```
@@ -52,7 +56,7 @@ creates BitTorrent metainfo files
 > Private torrent (no DHT/PEX).
 
 **-l** _N_
-> Piece length as power of 2 (default auto).
+> Piece length as power of 2 (default 18, i.e. 256KB).
 
 **-c** _TEXT_
 > Comment.
@@ -74,6 +78,9 @@ creates BitTorrent metainfo files
 
 **-d**
 > Don't write creation date.
+
+**-h**
+> Show help screen.
 
 # DESCRIPTION
 

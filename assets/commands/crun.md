@@ -32,6 +32,14 @@ fast OCI container runtime
 
 ```crun state [container_id]```
 
+**Pause all processes** in a container
+
+```crun pause [container_id]```
+
+**Show processes** running in a container
+
+```crun ps [container_id]```
+
 # SYNOPSIS
 
 **crun** [_global-options_] _command_ [_command-options_] [_arguments_]
@@ -62,11 +70,38 @@ fast OCI container runtime
 **state** _ID_
 > Output the state of a container.
 
+**pause** _ID_
+> Pause all processes in the container.
+
+**resume** _ID_
+> Resume the processes in the container.
+
+**ps** _ID_
+> Show the processes running in a container.
+
+**update** _ID_
+> Update container resource constraints.
+
 **spec**
 > Create a new OCI bundle specification.
 
+**checkpoint** _ID_
+> Checkpoint a running container using CRIU.
+
 **--root** _DIR_
 > Root directory for container state.
+
+**--debug**
+> Produce verbose output.
+
+**--log**=_DESTINATION_
+> Define destination for error and warning messages (file:PATH, journald:ID, or syslog:ID).
+
+**--systemd-cgroup**
+> Use systemd for configuring cgroups.
+
+**--cgroup-manager**=_MANAGER_
+> Specify cgroup manager (cgroupfs, systemd, or disabled).
 
 # DESCRIPTION
 
@@ -86,4 +121,4 @@ crun was developed by Giuseppe Scrivano at Red Hat as a faster alternative to ru
 
 # SEE ALSO
 
-[runc](/man/runc)(1), [podman](/man/podman)(1), [containerd](/man/containerd)(1), [docker](/man/docker)(1)
+[runc](/man/runc)(1), [podman](/man/podman)(1), [buildah](/man/buildah)(1), [containerd](/man/containerd)(1), [docker](/man/docker)(1)

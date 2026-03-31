@@ -20,19 +20,27 @@ moves print jobs between queues
 
 **lpmove** [_options_] _job_ _destination_
 
+**lpmove** [_options_] _source_ _destination_
+
 # PARAMETERS
 
 _JOB_
-> Job ID or source printer.
+> Job ID number or old destination and job ID (e.g., oldprinter-123).
+
+_SOURCE_
+> Source printer name (moves all jobs from this printer).
 
 _DESTINATION_
 > Target printer name.
 
 **-E**
-> Force encryption.
+> Force encryption when connecting to the server.
 
-**--help**
-> Display help information.
+**-U _username_**
+> Specify an alternate username.
+
+**-h _server[:port]_**
+> Specify an alternate server.
 
 # DESCRIPTION
 
@@ -50,5 +58,5 @@ lpmove is part of **CUPS** for moving print jobs between printer queues.
 
 # SEE ALSO
 
-[lp](/man/lp)(1), [lpq](/man/lpq)(1), [lprm](/man/lprm)(1), [lpadmin](/man/lpadmin)(8)
+[cancel](/man/cancel)(1), [lp](/man/lp)(1), [lpq](/man/lpq)(1), [lpr](/man/lpr)(1), [lprm](/man/lprm)(1), [lpadmin](/man/lpadmin)(8), [lpstat](/man/lpstat)(1)
 

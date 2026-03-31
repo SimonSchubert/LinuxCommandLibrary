@@ -8,6 +8,18 @@ Start the **interactive installer**
 
 ```archinstall```
 
+Run a specific **installation profile**
+
+```archinstall --script [minimal]```
+
+Run with a **configuration file**
+
+```archinstall --config [/path/to/config.json]```
+
+Run in **silent mode** with predefined config
+
+```archinstall --config [/path/to/config.json] --silent```
+
 # SYNOPSIS
 
 **archinstall** [_options_]
@@ -18,26 +30,23 @@ Start the **interactive installer**
 
 # PARAMETERS
 
-**--config path**
-> Load configuration from a file
+**--config** _path_
+> Load configuration from a JSON file.
 
-**--creds path**
-> Load credentials from a file
+**--creds** _path_
+> Load credentials (passwords, keys) from a file.
 
-**--disk_layouts path**
-> Load disk layout configuration from a file
+**--disk-layout** _path_
+> Load disk layout configuration from a file.
 
-**--script name**
-> Run a specific installation profile/script
+**--script** _name_
+> Run a specific installation profile (e.g., minimal, desktop).
 
 **--silent**
-> Run without user prompts (requires configuration)
+> Run without user prompts (requires --config).
 
 **--dry-run**
-> Test the installation without making changes
-
-**--advanced**
-> Show advanced options in the menu
+> Test the installation without making changes.
 
 # CAVEATS
 
@@ -49,4 +58,4 @@ Developed by the **Arch Linux** community and officially included in the install
 
 # SEE ALSO
 
-[arch-chroot](/man/arch-chroot)(8), [pacstrap](/man/pacstrap)(8), [genfstab](/man/genfstab)(8)
+[pacman](/man/pacman)(8), [arch-chroot](/man/arch-chroot)(8), [pacstrap](/man/pacstrap)(8), [genfstab](/man/genfstab)(8)
