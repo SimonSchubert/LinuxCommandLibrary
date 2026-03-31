@@ -1,0 +1,5 @@
+Make content selectable
+Add new commands
+Fix race condition
+Improve Compose performance
+Improve command quality

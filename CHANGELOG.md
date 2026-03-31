@@ -1,3 +1,16 @@
+## v3.7.4 — 2026-03-31
+
+### Features
+- Make content selectable
+- Add new commands
+
+### Fixes
+- Fix race condition
+
+### Improvements
+- Improve Compose performance
+- Improve command quality
+
 ## v3.7.3 — 2026-03-28
 
 ### Features
