@@ -232,6 +232,7 @@ apport.md
 appres.md
 apptainer-build.md
 apptainer-cache.md
+apptainer-capability.md
 apptainer-config.md
 apptainer-delete.md
 apptainer-exec.md
@@ -1041,6 +1042,7 @@ cewl.md
 cf.md
 cfdisk.md
 cfssl.md
+cfv.md
 cgclassify.md
 cgcreate.md
 cgdelete.md
@@ -1661,6 +1663,11 @@ doas.md
 docbook2html.md
 dockdiver.md
 docker-build.md
+docker-buildx-du.md
+docker-buildx-ls.md
+docker-buildx-prune.md
+docker-buildx-rm.md
+docker-buildx-version.md
 docker-commit.md
 docker-compose-down.md
 docker-compose-logs.md
@@ -6345,6 +6352,7 @@ regname.md
 rehash.md
 reindexdb.md
 rekor-cli.md
+relic.md
 remind.md
 remmina.md
 remote-viewer.md
@@ -6361,6 +6369,7 @@ reportbug.md
 repquota.md
 repren.md
 reptyr.md
+resend.md
 reset.md
 resize.md
 resize2fs.md
