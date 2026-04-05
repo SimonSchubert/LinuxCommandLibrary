@@ -1,7 +1,6 @@
 package com.linuxcommandlibrary.nativecli.screens
 
 import com.github.ajalt.mordant.input.KeyboardEvent
-import com.github.ajalt.mordant.terminal.Terminal
 import com.linuxcommandlibrary.nativecli.Theme
 import com.linuxcommandlibrary.nativecli.components.ListItem
 import com.linuxcommandlibrary.nativecli.components.SelectableList
@@ -14,7 +13,7 @@ enum class MainMenuItem {
     EXIT,
 }
 
-class MainMenuScreen(terminal: Terminal) : Screen {
+class MainMenuScreen : Screen {
 
     private val items = listOf(
         ListItem(MainMenuItem.COMMANDS, "Commands"),
@@ -23,7 +22,7 @@ class MainMenuScreen(terminal: Terminal) : Screen {
         ListItem(MainMenuItem.EXIT, "Exit"),
     )
 
-    private val list = SelectableList(terminal, items, pageSize = 10)
+    private val list = SelectableList(items, pageSize = 10)
 
     override fun render(): String {
         val logoLines = listOf(

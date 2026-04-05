@@ -1,6 +1,5 @@
 package com.linuxcommandlibrary.nativecli.components
 
-import com.github.ajalt.mordant.terminal.Terminal
 import com.linuxcommandlibrary.nativecli.Theme
 
 data class ListItem<T>(
@@ -9,7 +8,6 @@ data class ListItem<T>(
 )
 
 class SelectableList<T>(
-    private val terminal: Terminal,
     private val items: List<ListItem<T>>,
     private val pageSize: Int = 15,
     private var selectedIndex: Int = 0,
@@ -107,9 +105,3 @@ class SelectableList<T>(
         adjustScroll()
     }
 }
-
-fun <T> Terminal.selectableList(
-    items: List<ListItem<T>>,
-    pageSize: Int = 15,
-    selectedIndex: Int = 0,
-): SelectableList<T> = SelectableList(this, items, pageSize, selectedIndex)

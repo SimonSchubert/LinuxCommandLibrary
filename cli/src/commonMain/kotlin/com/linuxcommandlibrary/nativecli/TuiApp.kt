@@ -14,7 +14,7 @@ class TuiApp(private val terminal: Terminal) {
     private var running = true
     private var rawModeSupported = true
 
-    fun run(initialScreen: Screen = MainMenuScreen(terminal)) {
+    fun run(initialScreen: Screen = MainMenuScreen()) {
         screenStack.add(initialScreen)
 
         // Try to detect raw mode support

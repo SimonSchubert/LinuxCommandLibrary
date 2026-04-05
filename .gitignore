@@ -31,3 +31,4 @@ commands_ignore.txt
 commands_improved.txt
 commands_processed.txt
 find_missing_commands.sh
+scripts

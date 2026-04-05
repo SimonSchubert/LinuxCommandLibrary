@@ -28,7 +28,6 @@ class SearchScreen : Screen {
 
         items = commands.map { ListItem(it, it.name) }
         list = SelectableList(
-            terminal = com.github.ajalt.mordant.terminal.Terminal(),
             items = items,
             pageSize = 15,
         )

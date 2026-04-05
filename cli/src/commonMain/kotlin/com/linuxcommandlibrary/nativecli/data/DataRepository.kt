@@ -35,8 +35,6 @@ object DataRepository {
             .map { CommandInfo(it) }
     }
 
-    fun getCommandContent(name: String): String? = allCommands[name]
-
     fun getCommandSections(name: String): List<CommandSection> {
         val content = allCommands[name] ?: return emptyList()
         return MarkdownParser.splitByHeaders(content, "# ").map { (title, sectionContent) ->
@@ -55,14 +53,10 @@ object DataRepository {
         }
     }.sortedBy { it.title }
 
-    fun getBasicContent(categoryId: String): String? = basicsData[categoryId]
-
     fun getBasicInfo(categoryId: String): BasicInfo? {
         val content = basicsData[categoryId] ?: return null
         return MarkdownParser.parseBasic(content)
     }
-
-    fun getTipsContent(): String = tipsData
 
     fun getTips(): List<TipInfo> = MarkdownParser.parseTips(tipsData)
 }

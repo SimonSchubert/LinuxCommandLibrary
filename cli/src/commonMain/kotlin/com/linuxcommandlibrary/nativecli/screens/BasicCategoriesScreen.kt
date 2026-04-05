@@ -1,7 +1,6 @@
 package com.linuxcommandlibrary.nativecli.screens
 
 import com.github.ajalt.mordant.input.KeyboardEvent
-import com.github.ajalt.mordant.terminal.Terminal
 import com.linuxcommandlibrary.nativecli.Theme
 import com.linuxcommandlibrary.nativecli.components.ListItem
 import com.linuxcommandlibrary.nativecli.components.SelectableList
@@ -12,7 +11,7 @@ class BasicCategoriesScreen : Screen {
 
     private val categories = DataRepository.getBasicCategories()
     private val items = categories.map { ListItem(it, it.title) }
-    private val list = SelectableList(Terminal(), items, pageSize = 15)
+    private val list = SelectableList(items, pageSize = 15)
 
     override fun render(): String {
         val sb = StringBuilder()
