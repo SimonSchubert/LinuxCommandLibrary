@@ -12,13 +12,7 @@ dependencies {
     implementation(libs.kotlinx.collections.immutable)
 }
 
-kotlin {
-    compilerOptions {
-        sourceSets["main"].apply {
-            resources.srcDirs("../assets")
-        }
-    }
-}
+sourceSets["main"].resources.srcDirs("../assets")
 
 tasks.register<JavaExec>("runFdroidInfoBuilder") {
     classpath = sourceSets["main"].runtimeClasspath

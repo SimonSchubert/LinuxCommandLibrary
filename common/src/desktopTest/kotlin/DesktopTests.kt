@@ -14,7 +14,7 @@ class DesktopTests {
             ?: error("Could not read commands from ${assetsDir.absolutePath}")
 
         // Verify using index as ID produces no duplicates (mirrors CommandsRepository logic)
-        val ids = commandNames.mapIndexed { index, _ -> index.toLong() }
+        val ids = List(commandNames.size) { index -> index.toLong() }
         assertEquals(ids.size, ids.distinct().size, "Found duplicate IDs")
     }
 }

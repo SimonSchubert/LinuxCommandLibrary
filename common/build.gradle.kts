@@ -2,13 +2,22 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
-    alias(libs.plugins.android.library)
+    alias(libs.plugins.android.kotlin.multiplatform.library)
 }
 
 group = "com.linuxcommandlibrary"
 
 kotlin {
-    androidTarget {
+    android {
+        namespace = "com.linuxcommandlibrary.shared"
+        compileSdk =
+            libs.versions.android.compileSdk
+                .get()
+                .toInt()
+        minSdk =
+            libs.versions.android.minSdk
+                .get()
+                .toInt()
         compilerOptions {
             jvmTarget.set(JvmTarget.JVM_17)
         }
@@ -56,16 +65,6 @@ kotlin {
             dependencies {
             }
         }
-        val iosX64Main by getting
-        val iosArm64Main by getting
-        val iosSimulatorArm64Main by getting
-        val iosMain by creating {
-            dependsOn(commonMain.get())
-            iosX64Main.dependsOn(this)
-            iosArm64Main.dependsOn(this)
-            iosSimulatorArm64Main.dependsOn(this)
-        }
-
         // Native CLI targets source sets
         val nativeCliMain by creating {
             dependsOn(commonMain.get())
@@ -104,24 +103,11 @@ val generateVersionFile by tasks.registering {
 }
 
 // Make compilation depend on version generation
-tasks.matching { it.name.contains("compileKotlin") || (it.name.contains("Kotlin") && it.name.contains("compile")) }.configureEach {
-    dependsOn(generateVersionFile)
-}
-
-android {
-    compileSdk = 36
-    sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
-    defaultConfig {
-        minSdk = 24
+tasks
+    .matching {
+        it.name.contains("compileKotlin") ||
+            (it.name.contains("Kotlin") && it.name.contains("compile")) ||
+            it.name == "compileAndroidMain"
+    }.configureEach {
+        dependsOn(generateVersionFile)
     }
-
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
-    }
-
-    lint {
-        abortOnError = false
-    }
-    namespace = "com.linuxcommandlibrary.shared"
-}

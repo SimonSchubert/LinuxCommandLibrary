@@ -27,7 +27,7 @@ jobs:
       - name: Install Android Build Tools
         run: sdkmanager "build-tools;29.0.3"
       - name: Run unit tests
-        run: bash ./gradlew :common:testDebugUnitTest :common:desktopTest --stacktrace
+        run: bash ./gradlew :common:desktopTest --stacktrace
       - name: Build APK
         run: bash ./gradlew assembleRelease --stacktrace
       - name: Sign APK

@@ -1,10 +1,17 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
     alias(libs.plugins.compose.compiler)
 }
 
 group = "com.inspiredandroid.linuxcommandbibliotheca"
+
+kotlin {
+    compilerOptions {
+        jvmTarget.set(JvmTarget.JVM_17)
+    }
+}
 
 dependencies {
     implementation(project(":common"))
@@ -25,11 +32,20 @@ dependencies {
 }
 
 android {
-    compileSdk = 36
+    compileSdk =
+        libs.versions.android.compileSdk
+            .get()
+            .toInt()
     defaultConfig {
         applicationId = "com.inspiredandroid.linuxcommandbibliotheca"
-        minSdk = 24
-        targetSdk = 36
+        minSdk =
+            libs.versions.android.minSdk
+                .get()
+                .toInt()
+        targetSdk =
+            libs.versions.android.targetSdk
+                .get()
+                .toInt()
         versionCode =
             libs.versions.androidVersionCode
                 .get()
@@ -67,7 +83,10 @@ android {
         }
     }
 
-    sourceSets["main"].assets.setSrcDirs(listOf("../assets"))
+    sourceSets["main"].assets.directories.apply {
+        clear()
+        add("../assets")
+    }
 
     buildFeatures {
         compose = true
@@ -77,11 +96,6 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
-    }
-    kotlin {
-        compilerOptions {
-            jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
-        }
     }
     lint {
         abortOnError = false
