@@ -1251,6 +1251,7 @@ compress.md
 compseq.md
 compsize.md
 compton.md
+con2fbmap.md
 conan.md
 concourse.md
 conda-activate.md
@@ -6050,12 +6051,16 @@ pw-cli.md
 pw-config.md
 pw-container.md
 pw-dot.md
+pw-dsdplay.md
 pw-dump.md
+pw-encplay.md
 pw-jack.md
 pw-link.md
 pw-loopback.md
 pw-metadata.md
 pw-mididump.md
+pw-midiplay.md
+pw-midirecord.md
 pw-mon.md
 pw-play.md
 pw-profiler.md
@@ -6759,6 +6764,7 @@ showconsolefont.md
 showfigfonts.md
 showkey.md
 showmount.md
+shpool.md
 shred.md
 shuf.md
 shutdown.md
