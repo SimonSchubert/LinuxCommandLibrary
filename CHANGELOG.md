@@ -1,3 +1,16 @@
+## v3.7.5 — 2026-04-05
+
+### Features
+- Add scrollbars to desktop build
+
+### Fixes
+- Fix asset index generation to exclude non-command files
+
+### Improvements
+- Add new Linux commands
+- Prepare build for AGP 10
+- Clean up code
+
 ## v3.7.4 — 2026-03-31
 
 ### Features
