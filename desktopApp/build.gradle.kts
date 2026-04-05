@@ -1,4 +1,5 @@
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
+import org.jetbrains.compose.desktop.application.tasks.AbstractProguardTask
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -9,6 +10,27 @@ plugins {
 
 group = "com.linuxcommandlibrary"
 version = libs.versions.appVersion.get()
+
+// Replace the ProGuard tool classpath with one that resolves kotlin-metadata-jvm
+// at the Kotlin version we're building against. Compose Multiplatform 1.10.3 ships
+// ProGuard 7.7.0 with kotlin-metadata-jvm 2.1.0 (caps at metadata format 2.2) which
+// can't read `.kotlin_module` files from Kotlin 2.3.x builds, both ours and third
+// party deps like koin-compose 4.2.0. Letting Gradle resolve both deps together
+// avoids the split classpath we'd get from just prepending.
+val proguardClasspath =
+    configurations.detachedConfiguration(
+        dependencies.create("com.guardsquare:proguard-gradle:7.7.0"),
+        dependencies.create("org.jetbrains.kotlin:kotlin-metadata-jvm:${libs.versions.kotlin.get()}"),
+    ).apply {
+        resolutionStrategy.force("org.jetbrains.kotlin:kotlin-metadata-jvm:${libs.versions.kotlin.get()}")
+        resolutionStrategy.force("org.jetbrains.kotlin:kotlin-stdlib:${libs.versions.kotlin.get()}")
+    }
+
+afterEvaluate {
+    tasks.withType<AbstractProguardTask>().configureEach {
+        proguardFiles.setFrom(proguardClasspath)
+    }
+}
 
 kotlin {
     jvm("desktop") {
@@ -35,6 +57,12 @@ kotlin {
 compose.desktop {
     application {
         mainClass = "com.linuxcommandlibrary.MainKt"
+
+        buildTypes.release.proguard {
+            configurationFiles.from(project.file("desktop-rules.pro"))
+            obfuscate.set(false)
+            optimize.set(true)
+        }
 
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb, TargetFormat.Rpm, TargetFormat.AppImage)

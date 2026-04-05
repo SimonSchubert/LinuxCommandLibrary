@@ -159,12 +159,12 @@ jobs:
       - name: Set execution flag for gradlew
         run: chmod +x gradlew
       - name: Build DMG
-        run: bash ./gradlew :desktopApp:packageDmg --stacktrace
+        run: bash ./gradlew :desktopApp:packageReleaseDmg --stacktrace
       - name: Upload DMG Artifact
         uses: actions/upload-artifact@v4
         with:
           name: dmg-package
-          path: desktopApp/build/compose/binaries/main/dmg/*.dmg
+          path: desktopApp/build/compose/binaries/main-release/dmg/*.dmg
 
   msi:
     name: Generate MSI
@@ -178,12 +178,12 @@ jobs:
           distribution: temurin
           java-version: "17"
       - name: Build MSI
-        run: ./gradlew :desktopApp:packageMsi --stacktrace
+        run: ./gradlew :desktopApp:packageReleaseMsi --stacktrace
       - name: Upload MSI Artifact
         uses: actions/upload-artifact@v4
         with:
           name: msi-package
-          path: desktopApp/build/compose/binaries/main/msi/*.msi
+          path: desktopApp/build/compose/binaries/main-release/msi/*.msi
 
   deb:
     name: Generate DEB
@@ -199,12 +199,12 @@ jobs:
       - name: Set execution flag for gradlew
         run: chmod +x gradlew
       - name: Build DEB
-        run: ./gradlew :desktopApp:packageDeb --stacktrace
+        run: ./gradlew :desktopApp:packageReleaseDeb --stacktrace
       - name: Upload DEB Artifact
         uses: actions/upload-artifact@v4
         with:
           name: deb-package
-          path: desktopApp/build/compose/binaries/main/deb/*.deb
+          path: desktopApp/build/compose/binaries/main-release/deb/*.deb
 
   rpm:
     name: Generate RPM
@@ -222,12 +222,12 @@ jobs:
       - name: Install RPM build tools
         run: sudo apt-get update && sudo apt-get install -y rpm
       - name: Build RPM
-        run: ./gradlew :desktopApp:packageRpm --stacktrace
+        run: ./gradlew :desktopApp:packageReleaseRpm --stacktrace
       - name: Upload RPM Artifact
         uses: actions/upload-artifact@v4
         with:
           name: rpm-package
-          path: desktopApp/build/compose/binaries/main/rpm/*.rpm
+          path: desktopApp/build/compose/binaries/main-release/rpm/*.rpm
 
   linux-tar:
     name: Generate Linux Tarball
@@ -243,12 +243,12 @@ jobs:
       - name: Set execution flag for gradlew
         run: chmod +x gradlew
       - name: Build application distribution
-        run: ./gradlew :desktopApp:createDistributable --stacktrace
+        run: ./gradlew :desktopApp:createReleaseDistributable --stacktrace
       - name: Copy icon into distributable
-        run: cp desktopApp/icon.png desktopApp/build/compose/binaries/main/app/LinuxCommandLibrary/lib/LinuxCommandLibrary.png
+        run: cp desktopApp/icon.png desktopApp/build/compose/binaries/main-release/app/LinuxCommandLibrary/lib/LinuxCommandLibrary.png
       - name: Package tarball
         run: |
-          cd desktopApp/build/compose/binaries/main/app
+          cd desktopApp/build/compose/binaries/main-release/app
           tar czf "$GITHUB_WORKSPACE/LinuxCommandLibrary-linux-x86_64.tar.gz" LinuxCommandLibrary
       - name: Upload Tarball Artifact
         uses: actions/upload-artifact@v4
@@ -276,7 +276,7 @@ jobs:
           wget -q https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-x86_64.AppImage
           chmod +x appimagetool-x86_64.AppImage
       - name: Build application distribution
-        run: ./gradlew :desktopApp:createDistributable --stacktrace
+        run: ./gradlew :desktopApp:createReleaseDistributable --stacktrace
       - name: Create AppDir structure
         run: |
           mkdir -p AppDir/usr/bin
@@ -285,7 +285,7 @@ jobs:
           mkdir -p AppDir/usr/share/icons/hicolor/256x256/apps
 
           # Copy distributable contents
-          cp -r desktopApp/build/compose/binaries/main/app/LinuxCommandLibrary/* AppDir/usr/lib/
+          cp -r desktopApp/build/compose/binaries/main-release/app/LinuxCommandLibrary/* AppDir/usr/lib/
 
           # Copy icon
           cp desktopApp/icon.png AppDir/usr/share/icons/hicolor/256x256/apps/linuxcommandlibrary.png
