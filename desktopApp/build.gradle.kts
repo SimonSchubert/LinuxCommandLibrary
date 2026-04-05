@@ -62,8 +62,9 @@ tasks.register("generateAssetIndexes") {
         listOf("commands", "basics").forEach { dir ->
             val targetDir = file("$assetsDir/$dir")
             if (targetDir.exists()) {
-                val files = targetDir.listFiles()?.map { it.name }?.sorted() ?: emptyList()
-                file("$targetDir/index.txt").writeText(files.joinToString("\n"))
+                val files = targetDir.listFiles { f -> f.extension == "md" }
+                    ?.map { it.name }?.sorted() ?: emptyList()
+                file("$targetDir/index.txt").writeText(files.joinToString("\n") + "\n")
             }
         }
     }
