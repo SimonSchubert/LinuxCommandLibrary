@@ -24,9 +24,17 @@ Snowflake cloud data warehouse CLI client
 
 ```snowsql -a [account] -u [user] -w [warehouse]```
 
-**Output format**
+**Specify role**
+
+```snowsql -a [account] -u [user] -r [role]```
+
+**Output in CSV format**
 
 ```snowsql -a [account] -u [user] -o output_format=[csv]```
+
+**Use a named connection from config**
+
+```snowsql -c [connection_name]```
 
 # SYNOPSIS
 
@@ -55,8 +63,26 @@ Snowflake cloud data warehouse CLI client
 **-f**, **--filename** _FILE_
 > Run SQL file.
 
+**-r**, **--rolename** _ROLE_
+> Default role to use.
+
+**-c**, **--connection** _NAME_
+> Use a named connection from config file.
+
+**-D**, **--variable** _KEY=VALUE_
+> Define a variable (referenced as &KEY in queries).
+
 **-o** _OPTION=VALUE_
-> Set option.
+> Set option (e.g., output_format=csv, quiet=true, friendly=false).
+
+**--version**
+> Display SnowSQL version.
+
+**--upgrade**
+> Force upgrade to latest SnowSQL version.
+
+**--config** _FILE_
+> Path to configuration file.
 
 # DESCRIPTION
 
@@ -73,6 +99,12 @@ SQL queries can be executed interactively in the shell, passed directly via **-q
 
 **SNOWSQL_ACCOUNT**
 > Environment variable specifying the default Snowflake account name.
+
+**SNOWSQL_PWD**
+> Environment variable specifying the default password.
+
+**SNOWSQL_ROLE**
+> Environment variable specifying the default role.
 
 # CAVEATS
 

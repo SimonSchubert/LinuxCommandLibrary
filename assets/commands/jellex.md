@@ -30,7 +30,8 @@ In queries, **_** represents the loaded JSON as a Python dict or list. Both dot 
 
 **CTRL-\\** — Toggle focus between Editor, Viewer, and Schema
 **CTRL-S** — Toggle Schema window visibility
-**CTRL-Q** or **CTRL-C** — Exit program
+**CTRL-Q** or **CTRL-C** — Exit and display the constructed jello filter
+**Tab** — Auto-complete list indices and key names for the current context
 
 # CAVEATS
 

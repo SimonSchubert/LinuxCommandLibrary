@@ -18,11 +18,11 @@ Show **scan results**
 
 Set network **SSID**
 
-```sudo wpa_cli set_network 0 ssid "MyNetwork"```
+```sudo wpa_cli set_network 0 ssid '"[MyNetwork]"'```
 
 Set network **password**
 
-```sudo wpa_cli set_network 0 psk "password"```
+```sudo wpa_cli set_network 0 psk '"[password]"'```
 
 **Enable** a network
 
@@ -49,6 +49,9 @@ Show connection **status**
 **-p PATH**
 > Specify path to control sockets
 
+**-g PATH**
+> Connect to the global control socket at the indicated path
+
 **-i IFNAME**
 > Select network interface
 
@@ -57,6 +60,9 @@ Show connection **status**
 
 **-B**
 > Run as background daemon
+
+**-P FILE**
+> Set the location of the PID file
 
 **-G INTERVAL**
 > Set ping interval in seconds
@@ -94,6 +100,9 @@ Show connection **status**
 **reconfigure**
 > Reload configuration file
 
+**disconnect**
+> Disconnect from current network
+
 **reassociate**
 > Force reconnection
 
@@ -110,4 +119,4 @@ Requires root privileges or proper group membership for the control interface. T
 
 # SEE ALSO
 
-[wpa_supplicant](/man/wpa_supplicant)(8), [wpa_supplicant.conf](/man/wpa_supplicant.conf)(5), [iwconfig](/man/iwconfig)(8)
+[wpa_supplicant](/man/wpa_supplicant)(8), [iwconfig](/man/iwconfig)(8), [nmcli](/man/nmcli)(1), [iw](/man/iw)(8)

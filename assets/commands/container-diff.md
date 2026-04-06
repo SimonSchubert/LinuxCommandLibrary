@@ -55,16 +55,22 @@ Developed by Google as part of their Container Tools suite, container-diff helps
 # PARAMETERS
 
 **--type** _analyzer_
-> Analyzer type: apt, pip, node, file, size, history
+> Analyzer type: apt, rpm, pip, node, file, size, history.
 
 **-j**, **--json**
-> Output as JSON
+> Output as JSON.
+
+**-o**, **--order**
+> Sort results by size in descending order.
+
+**-q**, **--quiet**
+> Suppress output to stderr.
 
 **-c**, **--cache** _dir_
-> Cache directory
+> Cache directory.
 
 **--filename** _path_
-> Compare specific file
+> Compare specific file.
 
 # IMAGE SOURCES
 
@@ -78,6 +84,8 @@ Developed by Google as part of their Container Tools suite, container-diff helps
 
 **apt**: Debian/Ubuntu packages
 
+**rpm**: Red Hat/CentOS packages
+
 **pip**: Python packages
 
 **node**: npm packages
@@ -90,7 +98,7 @@ Developed by Google as part of their Container Tools suite, container-diff helps
 
 # CAVEATS
 
-Project in maintenance mode. Does not support Docker IDs directly (tag first). Use docker-credential-helpers for registry auth.
+The project was archived in March 2024 and is no longer actively maintained. Does not support Docker IDs directly (tag first). Use docker-credential-helpers for registry auth. Without **--type**, defaults to size analysis.
 
 # SEE ALSO
 

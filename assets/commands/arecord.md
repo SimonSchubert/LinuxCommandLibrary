@@ -38,38 +38,62 @@ Allow **interactive** interface
 
 # PARAMETERS
 
-**-d, --duration seconds**
-> Stop recording after the specified number of seconds
+**-d**, **--duration** _seconds_
+> Stop recording after the specified number of seconds.
 
-**-f, --format format**
-> Sample format (cd, S16_LE, U8, etc.)
+**-f**, **--format** _format_
+> Sample format (cd, S16_LE, S16_BE, U8, S32_LE, etc.).
 
-**-r, --rate rate**
-> Sampling rate in Hz
+**-r**, **--rate** _rate_
+> Sampling rate in Hz (2000-192000).
 
-**-c, --channels count**
-> Number of channels (1 for mono, 2 for stereo)
+**-c**, **--channels** _count_
+> Number of channels (1 for mono, 2 for stereo).
 
-**-t, --file-type type**
-> File type (wav, raw, au, voc)
+**-t**, **--file-type** _type_
+> File type (wav, raw, au, voc).
 
-**-l, --list-devices**
-> List all available recording devices
+**-l**, **--list-devices**
+> List all soundcards and digital audio devices.
 
-**-L, --list-pcms**
-> List all PCM devices
+**-L**, **--list-pcms**
+> List all PCMs defined.
 
-**-D, --device name**
-> Select PCM device by name
+**-D**, **--device** _name_
+> Select PCM device by name.
 
-**-i, --interactive**
-> Allow interactive control (space/enter to pause/resume)
+**-M**, **--mmap**
+> Use memory-mapped I/O mode for the audio stream.
 
-**-v, --verbose**
-> Verbose mode; use -vv for more verbosity
+**-N**, **--nonblock**
+> Open the audio device in non-blocking mode.
 
-**-q, --quiet**
-> Quiet mode; suppress messages
+**-F**, **--period-time** _microseconds_
+> Distance between interrupts in microseconds.
+
+**-B**, **--buffer-time** _microseconds_
+> Buffer duration in microseconds.
+
+**-V**, **--vumeter** _type_
+> VU meter type (stereo or mono).
+
+**-i**, **--interactive**
+> Allow interactive control via stdin.
+
+**-v**, **--verbose**
+> Verbose mode; use -vv for more detail including VU meter.
+
+**-q**, **--quiet**
+> Quiet mode; suppress messages.
+
+**--disable-resample**
+> Disable automatic rate resample.
+
+**--disable-channels**
+> Disable automatic channel conversions.
+
+**--disable-format**
+> Disable automatic format conversions.
 
 # CAVEATS
 

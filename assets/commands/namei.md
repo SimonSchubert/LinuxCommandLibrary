@@ -35,7 +35,7 @@ Show **all information** (long, modes, owners)
 # PARAMETERS
 
 **-l, --long**
-> Use long-listing format showing file type
+> Use long-listing format (same as -m -o -v)
 
 **-m, --modes**
 > Show mode bits of each file type in ls style
@@ -52,6 +52,9 @@ Show **all information** (long, modes, owners)
 **-v, --vertical**
 > Vertical alignment of modes and owners
 
+**-Z, --context**
+> Show security context of each file
+
 **-h, --help**
 > Display help
 
@@ -62,17 +65,19 @@ Show **all information** (long, modes, owners)
 
 **namei** follows a pathname until a terminal point is found (file, directory, device, etc.), displaying each component of the path. It is particularly useful for diagnosing "too many levels of symbolic links" errors.
 
-The output shows each path component with its type indicator: f (file), d (directory), l (symbolic link), c (character device), b (block device), s (socket), p (FIFO/pipe).
+The output shows each path component with its type indicator: d (directory), l (symbolic link), - (regular file), c (character device), b (block device), s (socket), p (FIFO/pipe).
 
 # OUTPUT SYMBOLS
 
-**f** - Regular file
+**f:** - Pathname currently being resolved
 **d** - Directory
 **l** - Symbolic link
-**c** - Character device
-**b** - Block device
 **s** - Socket
+**b** - Block device
+**c** - Character device
 **p** - FIFO/named pipe
+**-** - Regular file
+**?** - Error of some kind
 **D** - Mountpoint (with -x)
 
 # CAVEATS

@@ -1,6 +1,6 @@
 # TAGLINE
 
-Merge AppArmor profile files into the profile directory
+Merge AppArmor security profiles
 
 # TLDR
 
@@ -8,29 +8,29 @@ Merge AppArmor profile files into the profile directory
 
 ```sudo aa-mergeprof [file1] [file2]```
 
-Merge profile files into a **specific directory**
+**Merge** profile files into a **specific directory**
 
 ```sudo aa-mergeprof -d /path/to/profiles [file1] [file2]```
 
 # SYNOPSIS
 
-**aa-mergeprof** _file_ [_file_ ...] [_-d /path/to/profiles_]
+**aa-mergeprof** _file_ [_file_ ...] [**-d** _/path/to/profiles_]
 
 # DESCRIPTION
 
-**aa-mergeprof** merges one or more AppArmor security profile files into the system profile directory. It is an interactive tool that presents differences between existing and incoming profiles, allowing administrators to resolve conflicts manually. This is useful for importing profiles from other systems, combining profiles from different sources, or consolidating profiles after a system migration.
+**aa-mergeprof** is an interactive tool that merges one or more AppArmor security profile files into the system profile directory. When conflicts exist between incoming and existing profiles, it presents the differences and allows the administrator to choose how to resolve them. This is useful for importing profiles from other systems, combining profiles from different sources, or consolidating profiles after a system migration.
 
 # PARAMETERS
 
-**-d, --dir /path/to/profiles**
-> Specifies the destination directory for merged profiles; defaults to /etc/apparmor.d
+**-d**, **--dir** _/path/to/profiles_
+> Specifies the target directory for merged profiles. Defaults to **/etc/apparmor.d**.
 
-**-h, --help**
-> Display help information
+**-h**, **--help**
+> Display help information and exit.
 
 # CAVEATS
 
-Merging profiles may overwrite existing profiles in the destination directory. Review changes before committing merged profiles.
+Merging profiles may overwrite existing profiles in the destination directory. The tool is interactive and requires manual conflict resolution -- it cannot be run unattended. Requires root privileges.
 
 # HISTORY
 
@@ -38,4 +38,4 @@ Part of the **AppArmor** utilities package for managing application security pro
 
 # SEE ALSO
 
-[aa-genprof](/man/aa-genprof)(8), [aa-logprof](/man/aa-logprof)(8), [aa-cleanprof](/man/aa-cleanprof)(8), [apparmor](/man/apparmor)(7)
+[aa-genprof](/man/aa-genprof)(8), [aa-logprof](/man/aa-logprof)(8), [aa-cleanprof](/man/aa-cleanprof)(8), [aa-enforce](/man/aa-enforce)(8), [aa-complain](/man/aa-complain)(8), [apparmor](/man/apparmor)(7)

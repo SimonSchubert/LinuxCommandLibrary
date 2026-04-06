@@ -22,18 +22,18 @@ Repeatedly output a string
 
 # SYNOPSIS
 
-**yes** [_string_]
+**yes** [_string_...]
 
 # PARAMETERS
 
-_string_
-> String to output repeatedly (default: "y")
+_string..._
+> One or more strings to output repeatedly, joined by spaces (default: "y").
 
 **--help**
-> Display help and exit
+> Display help and exit.
 
 **--version**
-> Display version and exit
+> Display version and exit.
 
 # DESCRIPTION
 
@@ -67,8 +67,12 @@ Using yes bypasses safety prompts. Ensure you understand what you're auto-confir
 
 Some commands detect non-interactive input and refuse to run or behave differently. Use command-specific flags (like **-y** or **--yes**) when available.
 
-Yes runs at maximum speed, which can generate significant CPU load when not piped to anything useful.
+yes runs at maximum speed, which can generate significant CPU load when not piped to anything useful. Upon a write error (e.g., broken pipe), yes exits with status 1.
+
+# HISTORY
+
+**yes** is part of **GNU coreutils**, written by **David MacKenzie**. It originates from Unix System V and has been part of coreutils since the early days of the project.
 
 # SEE ALSO
 
-[true](/man/true)(1), [false](/man/false)(1), [seq](/man/seq)(1), [timeout](/man/timeout)(1)
+[true](/man/true)(1), [false](/man/false)(1), [head](/man/head)(1), [seq](/man/seq)(1), [timeout](/man/timeout)(1)

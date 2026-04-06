@@ -8,9 +8,9 @@ distributed platform for change data capture
 
 ```debezium-server```
 
-**Start with specific config**
+**Run Debezium Server with Docker**
 
-```DEBEZIUM_CONFIG=[/path/to/application.properties] debezium-server```
+```docker run -it --name debezium -p 8080:8080 -v $PWD/conf:/debezium/conf debezium/server```
 
 **Run MySQL connector in Kafka Connect**
 
@@ -69,8 +69,8 @@ Requires database configuration changes to enable log reading. Initial snapshot 
 
 # HISTORY
 
-Debezium was created at **Red Hat** by **Randall Hauch** and first released in **2016**. It was developed to provide a reliable, open-source CDC solution for microservices architectures. The project joined the **Apache incubator** process and has become a standard tool for event-driven architectures and real-time data pipelines.
+Debezium was created at **Red Hat** by **Randall Hauch** and first released in **2016**. It was developed to provide a reliable, open-source CDC solution for microservices architectures. The Apache-licensed project attracted a large and diverse community of contributors. In December **2024**, Debezium joined the **Commonhaus Foundation** to establish vendor-neutral governance while maintaining its established community and processes.
 
 # SEE ALSO
 
-[kafka-connect](/man/kafka-connect)(1), [kafka](/man/kafka)(1), [maxwell](/man/maxwell)(1)
+[kafka](/man/kafka)(1), [docker](/man/docker)(1), [docker-compose](/man/docker-compose)(1)

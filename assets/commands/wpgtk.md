@@ -32,6 +32,14 @@ Wallpaper-based colorscheme manager
 
 ```wpg -t```
 
+**Set wallpaper without changing colorscheme**
+
+```wpg -ns [wallpaper.jpg]```
+
+**Adjust saturation of colorscheme**
+
+```wpg --sat [wallpaper.jpg] [0.1]```
+
 **Launch GUI**
 
 ```wpgtk```
@@ -65,11 +73,29 @@ Wallpaper-based colorscheme manager
 **-z** _wallpaper_
 > Shuffle/regenerate colorscheme.
 
+**-n**
+> Do not set wallpaper when applying colorscheme (use with -s).
+
 **-i** _wallpaper_ _json_
 > Import colorscheme from JSON file.
 
+**-A** _wallpaper_
+> Auto-adjust colorscheme for distinct foreground and background.
+
 **--auto** _wallpaper_
-> Auto-generate foreground colors.
+> Auto-generate foreground versions of the first 8 colors.
+
+**--sat** _wallpaper_ _value_
+> Adjust saturation of all colors (negative values subtract).
+
+**--brt** _wallpaper_ _value_
+> Adjust brightness of all colors (negative values subtract).
+
+**--theme** [_theme_]
+> Set a preset theme. Without arguments, list available themes.
+
+**--pywal** _theme_
+> Select and set a pywal theme.
 
 **-h**
 > Display help.

@@ -1,54 +1,54 @@
 # TAGLINE
 
-decodes OPL printer format
+Decode a Raster Object (OPL) stream into human readable form
 
 # TLDR
 
-**Decode OPL file**
+**Decode an OPL stream from a file**
 
-```opldecode [file.opl]```
+```opldecode < [file.opl]```
 
-**Decode with output**
+**Decode with hex file offsets displayed**
 
-```opldecode [file.opl] -o [output]```
+```opldecode -h < [file.opl]```
 
-**Show file info**
+**Decode and save decompressed planes as PBM files**
 
-```opldecode -i [file.opl]```
+```opldecode -d [basename] < [file.opl]```
+
+**Decode with debug output**
+
+```opldecode -D [2] < [file.opl]```
 
 # SYNOPSIS
 
-**opldecode** [_options_] _file_
+**opldecode** [_options_] < _opl-file_
 
 # PARAMETERS
 
-_FILE_
-> OPL format file.
+**-d** _basename_
+> Basename of .pbm file for saving decompressed planes.
 
-**-o** _OUTPUT_
-> Output file.
+**-h**
+> Print hex file offsets.
 
-**-i**
-> Show information.
+**-o**
+> Print file offsets.
 
-**--help**
-> Display help information.
+**-D** _level_
+> Set debug level (default: 0).
 
 # DESCRIPTION
 
-**opldecode** decodes OPL printer format. Converts to standard formats.
+**opldecode** decodes a Raster Object (OPL) stream into human readable form. The OPL stream is the printer language used by some Konica Minolta printers, such as the magicolor 2480 MF. The decoded output shows configuration details like resolution, media settings, and raster object compression.
 
-The tool handles OPL proprietary format. Part of foo2zjs printer tools.
+Part of the **foo2zjs** printer driver suite.
 
 # CAVEATS
 
-Printer-specific format. Part of foo2zjs suite.
-
-# HISTORY
-
-opldecode was created to **decode OPL printer data** for foo2zjs drivers.
+Input is read from standard input, not as a filename argument. Only useful for debugging printer streams from specific Konica Minolta hardware.
 
 # SEE ALSO
 
-[foo2zjs](/man/foo2zjs)(1), [gs](/man/gs)(1)
+[foo2zjs](/man/foo2zjs)(1), [zjsdecode](/man/zjsdecode)(1), [foo2lava](/man/foo2lava)(1), [gs](/man/gs)(1)
 

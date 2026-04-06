@@ -32,9 +32,21 @@ Deny **UDP** traffic on port range
 
 ```sudo ufw deny proto udp from any to any port 8412:8500```
 
+**Set default** incoming policy to deny
+
+```sudo ufw default deny incoming```
+
+**Allow** a known application profile
+
+```sudo ufw allow OpenSSH```
+
 **Delete** a rule by number
 
-```sudo ufw delete rule_number```
+```sudo ufw delete [rule_number]```
+
+Allow **routed** traffic between interfaces
+
+```sudo ufw route allow in on [eth0] out on [eth1]```
 
 # SYNOPSIS
 
@@ -42,7 +54,7 @@ Deny **UDP** traffic on port range
 
 # DESCRIPTION
 
-**ufw** (Uncomplicated Firewall) is a frontend for iptables designed to make firewall configuration easier. It provides a user-friendly interface for managing netfilter firewall rules while supporting both simple and complex rule specifications.
+**ufw** (Uncomplicated Firewall) is a frontend for iptables/nftables designed to make firewall configuration easier. It provides a user-friendly interface for managing netfilter firewall rules while supporting both simple and complex rule specifications.
 
 # PARAMETERS
 
@@ -96,6 +108,45 @@ Deny **UDP** traffic on port range
 **prepend**
 > Add rule before all others of same IP type
 
+**route** _allow|deny|reject|limit_
+> Add rule for routed/forwarded traffic
+
+# DEFAULT POLICY
+
+**default allow|deny|reject incoming**
+> Set default policy for incoming traffic
+
+**default allow|deny|reject outgoing**
+> Set default policy for outgoing traffic
+
+**default allow|deny|reject routed**
+> Set default policy for forwarded traffic
+
+# APPLICATION PROFILES
+
+**app list**
+> List available application profiles
+
+**app info** _PROFILE_
+> Show information about an application profile
+
+**app default allow|deny|reject|skip**
+> Set default application policy
+
+# REPORTS
+
+**show raw**
+> Show raw iptables rules
+
+**show added**
+> Show rules as they were added on the command line
+
+**show listening**
+> Show listening ports and associated rules
+
+**show builtins**
+> Show default built-in rules
+
 # RULE SYNTAX
 
 **Simple**: ufw allow 22/tcp
@@ -140,4 +191,4 @@ Default policies are deny incoming, allow outgoing, deny forwarding. Enabling uf
 
 # SEE ALSO
 
-[iptables](/man/iptables)(8), [ip6tables](/man/ip6tables)(8), [ufw-framework](/man/ufw-framework)(8)
+[iptables](/man/iptables)(8), [ip6tables](/man/ip6tables)(8), [nft](/man/nft)(8), [firewall-cmd](/man/firewall-cmd)(1)

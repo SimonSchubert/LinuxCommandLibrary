@@ -61,17 +61,41 @@ The service issues unique identity IDs and vends temporary AWS credentials throu
 **delete-identity-pool**
 > Remove an identity pool.
 
+**delete-identities**
+> Delete previously merged or associated identities.
+
+**describe-identity**
+> Get details about a particular identity, including its external IDs.
+
 **get-id**
 > Get or create an identity ID for a user.
 
 **get-credentials-for-identity**
 > Get temporary AWS credentials for an identity.
 
+**get-identity-pool-roles**
+> Get the roles configured for an identity pool.
+
+**set-identity-pool-roles**
+> Set the roles for an identity pool.
+
 **get-open-id-token**
 > Get an OpenID token for an identity.
 
 **get-open-id-token-for-developer-identity**
 > Get token for developer-authenticated identity.
+
+**list-identities**
+> List identities in a specific identity pool.
+
+**lookup-developer-identity**
+> Retrieve the identity ID associated with a developer identity.
+
+**tag-resource**
+> Assign tags to an identity pool.
+
+**untag-resource**
+> Remove tags from an identity pool.
 
 **--identity-pool-id** _id_
 > The identity pool ID (format: region:uuid).

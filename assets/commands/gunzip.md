@@ -32,9 +32,17 @@ decompresses files compressed by gzip, zip, compress, or pack
 
 ```gunzip -f [file.gz]```
 
-**Verbose output**
+**Verbose output** showing compression ratio
 
 ```gunzip -v [file.gz]```
+
+**Decompress a file with a custom suffix**
+
+```gunzip -S [.zz] [file.zz]```
+
+**Recursively decompress** files in a directory
+
+```gunzip -r [directory/]```
 
 # SYNOPSIS
 
@@ -77,8 +85,14 @@ gunzip preserves the original file's name, timestamp, and permissions stored in 
 **-t**, **--test**
 > Test integrity.
 
+**-S** _suffix_, **--suffix** _suffix_
+> Use the given suffix instead of .gz.
+
 **-v**, **--verbose**
-> Verbose output.
+> Verbose output showing name and compression ratio.
+
+**-1** to **-9**
+> Ignored by gunzip; accepted for compatibility with gzip.
 
 # CAVEATS
 
@@ -90,4 +104,4 @@ Original compressed file is removed by default. Cannot decompress to a different
 
 # SEE ALSO
 
-[gzip](/man/gzip)(1), [zcat](/man/zcat)(1), [bunzip2](/man/bunzip2)(1), [unxz](/man/unxz)(1)
+[gzip](/man/gzip)(1), [zcat](/man/zcat)(1), [compress](/man/compress)(1), [bunzip2](/man/bunzip2)(1), [unxz](/man/unxz)(1)

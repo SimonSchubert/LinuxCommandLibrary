@@ -69,6 +69,15 @@ CDK for Terraform CLI
 **output** [_stacks_]
 > Show outputs from deployed stacks.
 
+**watch** [_stacks_]
+> Watch for file changes and automatically trigger a deploy.
+
+**debug**
+> Get debug information about the current project and environment.
+
+**provider** _subcommand_
+> Manage providers (add, upgrade, list).
+
 **--template** _name_
 > Project template: typescript, python, java, csharp, go.
 
@@ -80,6 +89,12 @@ CDK for Terraform CLI
 
 **-o**, **--output** _directory_
 > Output directory for synthesized files.
+
+**--log-level** _level_
+> Set log level (debug, info, warn, error).
+
+**--version**
+> Show version number.
 
 # DESCRIPTION
 
@@ -96,12 +111,14 @@ Provider bindings are generated from Terraform providers, providing type safety 
 
 # CAVEATS
 
-Requires Terraform CLI installed separately. Provider binding generation can be slow for providers with many resources. State management follows Terraform patterns; understand Terraform state before using CDKTF. Breaking changes may occur between CDKTF versions.
+CDKTF was sunset and archived on **December 10, 2025**. HashiCorp no longer maintains or develops the project. The archived code remains available on GitHub but is read-only with no further updates or compatibility fixes.
+
+Requires Terraform CLI installed separately. Provider binding generation can be slow for providers with many resources. State management follows Terraform patterns; understand Terraform state before using CDKTF.
 
 # HISTORY
 
-CDK for Terraform was announced by **HashiCorp** in partnership with **AWS** in **July 2020**, bringing the CDK (Cloud Development Kit) approach from AWS CDK to Terraform. It reached general availability in **2022**. The project aims to make infrastructure code more accessible to developers familiar with application programming languages.
+CDK for Terraform was announced by **HashiCorp** in partnership with **AWS** in **July 2020**, bringing the CDK (Cloud Development Kit) approach from AWS CDK to Terraform. It reached general availability in **August 2022**. The project was sunset on **December 10, 2025** after not finding product-market fit at scale, with HashiCorp choosing to focus on Terraform core instead.
 
 # SEE ALSO
 
-[terraform](/man/terraform)(1), [pulumi](/man/pulumi)(1), [aws-cdk](/man/aws-cdk)(1)
+[terraform](/man/terraform)(1), [pulumi](/man/pulumi)(1)

@@ -88,7 +88,7 @@ Zsh line editor builtin
 
 # DESCRIPTION
 
-**zle** is a builtin command of **zsh** that controls the Zsh Line Editor, the interactive command-line editing subsystem. It manages widgets (named editing actions), keymaps, display control, and the edit buffer. When called with no arguments, it returns zero if ZLE is currently active.
+**zle** is a builtin command of **zsh** that controls the Zsh Line Editor, the interactive command-line editing subsystem. It manages widgets (named editing actions), keymaps, display control, and the edit buffer. When called with no arguments, it returns zero if ZLE is currently active. Full documentation is in the **zshzle(1)** man page.
 
 ZLE activates automatically in interactive zsh sessions. It operates in **multiline mode** (default) or **single-line mode** (when the **SINGLE_LINE_ZLE** option is set). Special parameters like **BUFFER**, **CURSOR**, **LBUFFER**, and **RBUFFER** allow widget functions to manipulate the edit buffer directly.
 
@@ -121,6 +121,20 @@ prepend-sudo() {
 zle -N prepend-sudo
 bindkey '^s' prepend-sudo
 ```
+
+# SPECIAL PARAMETERS
+
+When a user-defined widget function runs, these read/write parameters are available:
+
+**BUFFER** -- The entire edit buffer contents
+**CURSOR** -- Cursor position (index into BUFFER)
+**LBUFFER** -- Buffer contents left of the cursor
+**RBUFFER** -- Buffer contents right of the cursor
+**WIDGET** -- Name of the widget being executed
+**LASTWIDGET** -- Name of the last widget executed
+**KEYS** -- Keys typed to invoke this widget
+**NUMERIC** -- Numeric prefix argument, if any
+**KEYMAP** -- Currently selected keymap
 
 # CAVEATS
 

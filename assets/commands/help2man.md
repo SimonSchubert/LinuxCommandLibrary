@@ -55,17 +55,32 @@ _EXECUTABLE_
 **-o**, **--output** _FILE_
 > Write output to file instead of stdout.
 
-**-l**, **--locale** _STRING_
-> Set locale for fetching help output (e.g., for translated pages).
+**-m**, **--manual** _TEXT_
+> Name of the manual (e.g., "User Commands").
 
-**-L**, **--libtool**
+**-S**, **--source** _TEXT_
+> Source of the program (e.g., "FSF", "Debian").
+
+**-L**, **--locale** _STRING_
+> Set locale for fetching help output (default: "C").
+
+**-l**, **--libtool**
 > Drop libtool `lt-` prefix from program name.
 
-**-p**, **--info-page** _NAME_
-> Name of info page to reference.
+**-p**, **--info-page** _TEXT_
+> Name of Texinfo manual to reference.
+
+**-h**, **--help-option** _STRING_
+> Alternative help option string to use instead of --help.
+
+**-v**, **--version-option** _STRING_
+> Alternative version option string to use instead of --version.
+
+**--version-string** _STRING_
+> Use this version string instead of running the program's version option.
 
 **--no-discard-stderr**
-> Include stderr output when generating the man page.
+> Include stderr output when parsing option output.
 
 **--version**
 > Show help2man version.

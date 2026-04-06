@@ -16,6 +16,10 @@ Manage the Postfix mail queue
 
 ```postqueue -s [example.com]```
 
+**Schedule immediate delivery of a specific message**
+
+```postqueue -i [queue_id]```
+
 **List in JSON format**
 
 ```postqueue -j```
@@ -35,11 +39,17 @@ Manage the Postfix mail queue
 **-s** _site_
 > Flush specific site.
 
+**-i** _queue_id_
+> Schedule immediate delivery of deferred mail with the specified queue ID.
+
 **-j**
-> JSON output format.
+> Produce queue listing in JSON format.
+
+**-v**
+> Enable verbose logging for debugging. Multiple -v options increase verbosity.
 
 **-c** _dir_
-> Configuration directory.
+> Use the specified configuration directory instead of the default.
 
 # DESCRIPTION
 
@@ -61,6 +71,9 @@ postqueue -s gmail.com
 
 # JSON output for scripting
 postqueue -j
+
+# Retry delivery of a specific message
+postqueue -i ABC123DEF
 
 # Count queued messages
 postqueue -p | tail -1
@@ -93,4 +106,4 @@ postqueue is part of **Postfix** by **Wietse Venema**, providing safe queue mana
 
 # SEE ALSO
 
-[postsuper](/man/postsuper)(1), [mailq](/man/mailq)(1), [postfix](/man/postfix)(1), [sendmail](/man/sendmail)(1)
+[mailq](/man/mailq)(1), [postfix](/man/postfix)(1), [postconf](/man/postconf)(1), [postmap](/man/postmap)(1), [sendmail](/man/sendmail)(1)

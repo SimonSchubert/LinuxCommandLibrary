@@ -49,17 +49,32 @@ screen color temperature adjuster
 **-x**
 > Reset and exit.
 
+**-g** _R:G:B_
+> Additional gamma correction to apply.
+
 **-m** _method_
-> Adjustment method: randr, wayland, drm.
+> Adjustment method: randr, wayland, drm (use -m list to see options).
+
+**-c** _file_
+> Load settings from specified configuration file.
+
+**-o**
+> One-shot mode (apply once based on current time, do not continuously adjust).
+
+**-p**
+> Print mode (only print parameters and exit).
 
 **-P**
-> Reset before applying.
+> Reset existing gamma ramps before applying.
 
 **-v**
 > Verbose output.
 
+**-V**
+> Show program version.
+
 **-r**
-> Disable gradual transition.
+> Disable fading between color temperatures.
 
 # DESCRIPTION
 

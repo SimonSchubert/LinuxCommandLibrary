@@ -28,6 +28,18 @@ manages Java keystores and certificates
 
 ```keytool -delete -alias [mykey] -keystore [keystore.jks]```
 
+**Generate a certificate signing request (CSR)**
+
+```keytool -certreq -alias [mykey] -keystore [keystore.jks] -file [request.csr]```
+
+**Print certificate details from a file**
+
+```keytool -printcert -file [cert.cer]```
+
+**Import a PKCS#12 keystore into a JKS keystore**
+
+```keytool -importkeystore -srckeystore [keystore.p12] -srcstoretype PKCS12 -destkeystore [keystore.jks]```
+
 # SYNOPSIS
 
 **keytool** _command_ [_options_]
@@ -44,7 +56,25 @@ manages Java keystores and certificates
 > Export certificate.
 
 **-importcert**
-> Import certificate.
+> Import certificate or certificate chain.
+
+**-certreq**
+> Generate a certificate signing request (CSR).
+
+**-printcert**
+> Print the content of a certificate file.
+
+**-importkeystore**
+> Import entries from another keystore.
+
+**-delete**
+> Delete a keystore entry.
+
+**-changealias**
+> Change an entry's alias.
+
+**-genseckey**
+> Generate a secret (symmetric) key.
 
 **-alias** _NAME_
 > Entry alias.
@@ -52,8 +82,14 @@ manages Java keystores and certificates
 **-keystore** _FILE_
 > Keystore file.
 
+**-storetype** _TYPE_
+> Keystore type (JKS, PKCS12).
+
 **-storepass** _PASS_
 > Keystore password.
+
+**-v**
+> Verbose output.
 
 **--help**
 > Display help information.
@@ -66,7 +102,7 @@ The tool supports multiple keystore formats including the legacy Java KeyStore (
 
 # CAVEATS
 
-Part of JDK. Password management important. Multiple keystore formats.
+Part of the JDK, available wherever Java is installed. The default keystore type changed from JKS to PKCS12 in Java 9. Keystore passwords and key passwords should be kept secure. The `-storepass` flag exposes the password in process listings; omit it to be prompted interactively.
 
 # HISTORY
 

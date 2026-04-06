@@ -1,40 +1,44 @@
 # TAGLINE
 
-network packet sniffer built on Impacket's protocol parsing libraries
+Simple packet sniffer using raw sockets from the Impacket library
 
 # TLDR
 
-**Capture and analyze network traffic**
+**Sniff default protocols (ICMP, TCP, UDP)**
 
-```sudo impacket-sniffer [eth0]```
+```sudo impacket-sniffer```
 
-**Sniff packets with BPF filter**
+**Sniff specific protocols**
 
-```sudo impacket-sniffer -filter '[host 192.168.1.100]' [eth0]```
+```sudo impacket-sniffer [icmp] [tcp]```
+
+**Sniff only UDP traffic**
+
+```sudo impacket-sniffer [udp]```
 
 # SYNOPSIS
 
-**impacket-sniffer** [_-h_] [_-filter FILTER_] _interface_
+**impacket-sniffer** [_protocol_ ...]
 
 # PARAMETERS
 
-**-filter** _FILTER_
-> BPF filter expression to limit captured packets
+_protocol_
+> One or more protocol names to sniff (e.g., icmp, tcp, udp). Any name recognized by **socket.getprotobyname()** is valid. When no protocols are specified, defaults to icmp, tcp, and udp.
 
 # DESCRIPTION
 
-**impacket-sniffer** is a network packet sniffer built on Impacket's protocol parsing libraries. Similar to impacket-sniff, it captures and displays network traffic but may provide different output formatting or protocol decoding.
+**impacket-sniffer** is a simple packet sniffer that uses raw sockets to listen for packets matching specified protocols. It opens a raw socket for each protocol, uses **select()** to monitor incoming packets, and decodes them using Impacket's **ImpactDecoder.IPDecoder** for display.
 
-This tool leverages Impacket's extensive protocol implementations to parse and display captured packets in a readable format, useful for network analysis during security assessments.
+Unlike **tcpdump**, this tool does not accept an interface argument or BPF filter expressions. It listens on all available interfaces via raw sockets and filters only by protocol type.
 
 # CAVEATS
 
-Requires root/administrator privileges for raw socket access. For comprehensive packet analysis, dedicated tools like **Wireshark** or **tcpdump** are more appropriate. May not capture all packet types depending on interface configuration.
+Requires root/administrator privileges for raw socket access. Does not support interface selection or BPF filters. For comprehensive packet analysis, dedicated tools like **Wireshark** or **tcpdump** are more appropriate.
 
 # HISTORY
 
-Part of the **Impacket** library by SecureAuth. Demonstrates Impacket's capabilities for network traffic capture and protocol analysis in Python.
+Part of the **Impacket** library, originally by SecureAuth (now maintained by Fortra). Demonstrates Impacket's capabilities for network traffic capture and protocol decoding in Python.
 
 # SEE ALSO
 
-[tcpdump](/man/tcpdump)(1), [wireshark](/man/wireshark)(1), [impacket-sniff](/man/impacket-sniff)(1), [ngrep](/man/ngrep)(1)
+[tcpdump](/man/tcpdump)(1), [wireshark](/man/wireshark)(1), [impacket-sniff](/man/impacket-sniff)(1), [tshark](/man/tshark)(1), [ngrep](/man/ngrep)(1)

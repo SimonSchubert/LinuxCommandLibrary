@@ -4,15 +4,15 @@ copies files while setting permissions and ownership
 
 # TLDR
 
-**Copy file with permissions**
+**Copy file with specific permissions**
 
 ```install -m [755] [source] [dest]```
 
-**Copy to directory**
+**Copy files into a target directory**
 
-```install [file] [/usr/local/bin/]```
+```install -t [/usr/local/bin/] [file1] [file2]```
 
-**Create directory**
+**Create directories (including parents)**
 
 ```install -d [/path/to/dir]```
 
@@ -24,60 +24,88 @@ copies files while setting permissions and ownership
 
 ```install -p [file] [dest]```
 
-**Strip binaries**
+**Strip binaries during install**
 
 ```install -s [binary] [/usr/local/bin/]```
 
+**Copy only if source is different (avoids unnecessary writes)**
+
+```install -C [file] [dest]```
+
+**Create parent directories then copy**
+
+```install -D [source] [/path/to/new/dir/dest]```
+
 # SYNOPSIS
 
-**install** [_options_] _source_ _dest_
+**install** [_options_] [**-s**] [**--strip-program**=_PROGRAM_] _source_... _dest_
 
-**install** [_options_] -d _directories_
+**install** [_options_] -t _DIRECTORY_ _source_...
+
+**install** [_options_] -d _directories_...
 
 # DESCRIPTION
 
-**install** copies files while setting permissions and ownership. It's primarily used in Makefiles and installation scripts to place files with correct attributes.
+**install** copies files while setting permissions and ownership. It is primarily used in Makefiles and installation scripts to place files with correct attributes.
 
-The tool combines cp, chmod, chown, and mkdir functionality, streamlining installation tasks. It can also strip binaries and backup existing files.
+The tool combines cp, chmod, chown, and mkdir functionality, streamlining installation tasks. It can also strip binaries and back up existing files. The default permission mode is **rwxr-xr-x** (755).
 
 # PARAMETERS
 
-**-m** _mode_
-> Set permission mode.
+**-m** _mode_, **--mode**=_mode_
+> Set permission mode (as in chmod), instead of the default rwxr-xr-x.
 
-**-o** _owner_
-> Set owner.
+**-o** _owner_, **--owner**=_owner_
+> Set ownership (super-user only).
 
-**-g** _group_
-> Set group.
+**-g** _group_, **--group**=_group_
+> Set group ownership instead of the process's current group.
 
-**-d**
-> Create directories.
+**-d**, **--directory**
+> Treat all arguments as directory names; create all components of the specified directories.
 
 **-D**
-> Create parent directories.
+> Create all leading parent directory components of dest, then copy source to dest.
 
-**-s**
-> Strip symbol tables.
+**-t** _DIRECTORY_, **--target-directory**=_DIRECTORY_
+> Copy all source arguments into DIRECTORY.
 
-**-p**
-> Preserve timestamps.
+**-T**, **--no-target-directory**
+> Treat dest as a normal file, not a directory.
+
+**-C**, **--compare**
+> Compare source and destination; do not modify dest if content, ownership, and permissions are unchanged.
+
+**-s**, **--strip**
+> Strip symbol tables from installed binaries.
+
+**--strip-program**=_PROGRAM_
+> Program used to strip binaries (default: strip).
+
+**-p**, **--preserve-timestamps**
+> Apply access/modification times of source files to destination files.
 
 **-b**
-> Make backup of existing dest.
+> Make a backup of each existing destination file.
 
-**-S** _suffix_
-> Backup suffix.
+**--backup**[=_CONTROL_]
+> Make a backup of each existing destination file, with optional version control method.
 
-**-v**
-> Verbose output.
+**-S** _suffix_, **--suffix**=_suffix_
+> Override the usual backup suffix.
+
+**-v**, **--verbose**
+> Print the name of each file or directory as it is created.
 
 **-c**
-> Ignored (compatibility).
+> Ignored; for compatibility with older Unix versions.
+
+**-Z**, **--context**
+> Set SELinux security context of destination files to the default type.
 
 # CAVEATS
 
-Not for general file copying. Strips binaries by default on some systems. Requires appropriate privileges for ownership changes.
+Not intended for general file copying. The default permission mode is 755 (rwxr-xr-x), unlike cp which preserves source permissions. Requires appropriate privileges for ownership changes.
 
 # HISTORY
 

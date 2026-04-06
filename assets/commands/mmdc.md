@@ -1,32 +1,36 @@
 # TAGLINE
 
-mermaid CLI
+Mermaid CLI for generating diagrams from text
 
 # TLDR
 
-**Generate diagram**
+**Generate an SVG diagram from a file**
 
 ```mmdc -i [input.mmd] -o [output.svg]```
 
-**Generate PNG**
+**Generate a PNG with a dark theme**
 
-```mmdc -i [input.mmd] -o [output.png]```
+```mmdc -i [input.mmd] -o [output.png] -t dark```
 
-**Generate PDF**
+**Generate a PDF scaled to fit the chart**
 
-```mmdc -i [input.mmd] -o [output.pdf]```
+```mmdc -i [input.mmd] -o [output.pdf] -f```
 
-**Custom theme**
+**Set custom page dimensions and scale**
 
-```mmdc -i [input.mmd] -o [output.svg] -t [dark]```
+```mmdc -i [input.mmd] -o [output.png] -w [1200] -H [800] -s [2]```
 
-**Set width**
+**Use a custom Mermaid configuration file**
 
-```mmdc -i [input.mmd] -o [output.png] -w [800]```
+```mmdc -i [input.mmd] -o [output.svg] -c [config.json]```
 
-**From stdin**
+**Read from stdin with transparent background**
 
-```cat [diagram.mmd] | mmdc -o [output.svg]```
+```cat [diagram.mmd] | mmdc -i - -o [output.svg] -b transparent```
+
+**Process a Markdown file** extracting embedded diagrams
+
+```mmdc -i [document.md] -o [document-out.md]```
 
 # SYNOPSIS
 
@@ -34,39 +38,74 @@ mermaid CLI
 
 # PARAMETERS
 
-**-i** _FILE_
-> Input file.
+**-i**, **--input** _FILE_
+> Input file path. Use `-` for stdin. Files ending in .md or .markdown are treated as Markdown.
 
-**-o** _FILE_
-> Output file.
+**-o**, **--output** _FILE_
+> Output file path. Use `-` for stdout. Defaults to `{input}.svg`.
 
-**-t** _THEME_
-> Theme (default, dark, forest).
+**-e**, **--outputFormat** _FORMAT_
+> Output format: svg, png, or pdf. Inferred from output extension by default.
 
-**-w** _WIDTH_
-> Output width.
+**-t**, **--theme** _THEME_
+> Mermaid theme: default, dark, forest, or neutral.
 
-**-H** _HEIGHT_
-> Output height.
+**-b**, **--backgroundColor** _COLOR_
+> Background color for PNG/SVG output (default: white).
 
-**--help**
+**-w**, **--width** _WIDTH_
+> Page width in pixels (default: 800).
+
+**-H**, **--height** _HEIGHT_
+> Page height in pixels (default: 600).
+
+**-s**, **--scale** _FACTOR_
+> Puppeteer scale factor for deviceScaleFactor (default: 1).
+
+**-f**, **--pdfFit**
+> Scale PDF output to fit chart dimensions.
+
+**-c**, **--configFile** _FILE_
+> JSON configuration file for Mermaid settings.
+
+**-C**, **--cssFile** _FILE_
+> Path to custom CSS file for injection into the page.
+
+**-I**, **--svgId** _ID_
+> ID attribute for the SVG element (default: my-svg).
+
+**-p**, **--puppeteerConfigFile** _FILE_
+> JSON configuration file for Puppeteer launch options.
+
+**-a**, **--artefacts** _PATH_
+> Output path for images when processing Markdown files.
+
+**-q**, **--quiet**
+> Suppress log output to stdout.
+
+**-V**, **--version**
+> Display version number.
+
+**-h**, **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**mmdc** is the Mermaid CLI. It generates diagrams from Mermaid markdown.
+**mmdc** is the CLI for the Mermaid diagramming library. It renders diagrams defined in Mermaid's text-based syntax into SVG, PNG, or PDF output using a headless Chromium browser via Puppeteer.
 
-The tool creates flowcharts, sequence diagrams, and other visualizations from text.
+Supported diagram types include flowcharts, sequence diagrams, class diagrams, state diagrams, Gantt charts, pie charts, ER diagrams, and more. When given a Markdown file as input, mmdc extracts and renders embedded Mermaid code blocks, replacing them with generated images.
+
+The **--configFile** option accepts a JSON file that configures Mermaid behavior and is merged with the **--theme** option, with the config file taking precedence.
 
 # CAVEATS
 
-Node.js required. Puppeteer for rendering. Various output formats.
+Requires **Node.js** and downloads a Chromium browser via **Puppeteer** for rendering. The first run may take time due to the browser download. The scale factor (**-s**) only affects PNG output resolution.
 
 # HISTORY
 
-mmdc is the CLI for **Mermaid**, a JavaScript-based diagramming and charting tool.
+**mmdc** is the CLI for **Mermaid**, a JavaScript-based diagramming and charting tool created by **Knut Sveidqvist**. The CLI package is published as **@mermaid-js/mermaid-cli** on npm.
 
 # SEE ALSO
 
-[graphviz](/man/graphviz)(1), [plantuml](/man/plantuml)(1)
+[graphviz](/man/graphviz)(1), [plantuml](/man/plantuml)(1), [dot](/man/dot)(1)
 

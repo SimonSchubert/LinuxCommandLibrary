@@ -1,6 +1,6 @@
 # TAGLINE
 
-Safely delete files with undo support
+a safe and ergonomic alternative to rm
 
 # TLDR
 
@@ -8,66 +8,76 @@ Safely delete files with undo support
 
 ```rip [file.txt]```
 
-**Delete multiple files**
+**Delete multiple files and directories**
 
-```rip [file1.txt] [file2.txt]```
+```rip [file1.txt] [file2.txt] [directory/]```
 
-**Delete directory**
+**Inspect file info before deleting** (shows size and first few lines)
 
-```rip [directory/]```
+```rip -i [file.txt]```
 
-**List deleted files**
+**List files deleted from the current directory**
 
 ```rip --seance```
 
-**Restore last deleted**
+**Restore the last deleted file**
 
 ```rip --unbury```
 
-**Restore specific file**
+**Restore a specific file** from the graveyard
 
 ```rip --unbury [filename]```
 
-**Permanently delete graveyard**
+**Restore all files listed by seance** (combine -s and -u)
+
+```rip -su```
+
+**Permanently delete all files** in the graveyard
 
 ```rip --decompose```
 
+**Use a custom graveyard directory**
+
+```rip --graveyard [path/to/graveyard] [file.txt]```
+
 # SYNOPSIS
 
-**rip** [_--seance_] [_--unbury_] [_--decompose_] [_options_] [_files_]
+**rip** [_FLAGS_] [_OPTIONS_] [_TARGET..._]
 
 # PARAMETERS
 
-**-s**, **--seance**
-> List buried files.
-
-**-u**, **--unbury** _FILE_
-> Restore file.
-
 **-d**, **--decompose**
-> Permanently delete.
-
-**--graveyard** _DIR_
-> Custom graveyard path.
+> Permanently delete (unlink) the entire graveyard.
 
 **-i**, **--inspect**
-> Inspect before delete.
+> Print info about TARGET before prompting for action.
+
+**-s**, **--seance**
+> Print files that were sent under the current directory.
+
+**-u**, **--unbury** _target_
+> Undo the last removal by the current user, or specify file(s) in the graveyard.
+
+**--graveyard** _graveyard_
+> Set directory where deleted files go to rest.
+
+**-h**, **--help**
+> Print help information.
+
+**-V**, **--version**
+> Print version information.
 
 # DESCRIPTION
 
 **rip** (Rm ImProved) is a safer alternative to rm that moves deleted files to a "graveyard" directory instead of permanently removing them. The graveyard preserves the original filesystem path structure, making it straightforward to restore files to their exact original locations when needed.
 
-The **--seance** command lists all files currently in the graveyard along with their original paths and deletion timestamps. The **--unbury** command restores files, either the most recently deleted item or a specific named file. When graveyard contents are no longer needed, **--decompose** permanently removes them to reclaim disk space.
+The **--seance** flag lists files deleted from under the current directory. The **--unbury** flag restores files, either the most recently deleted item or a specific named file. Combining **-s** and **-u** restores everything listed by seance. When graveyard contents are no longer needed, **--decompose** permanently removes them to reclaim disk space.
 
-The graveyard location defaults to /tmp/graveyard-$USER but can be customized with the **--graveyard** flag. The tool handles directories recursively and provides an **--inspect** option to preview files before deletion.
+The graveyard location defaults to /tmp/graveyard-$USER but can be customized with the **--graveyard** flag. No data is overwritten; if files sharing the same path are deleted, they are renamed as numbered backups. The **--inspect** option shows size and first few lines of a file, or total size and first few entries of a directory, before prompting for deletion.
 
 # CAVEATS
 
-Graveyard uses disk space. Large deletes may fill storage. Not secure delete.
-
-# HISTORY
-
-**rip** (Rm ImProved) provides a safety net for file deletion. It gives users a chance to recover accidentally deleted files.
+The graveyard uses disk space. Large deletes may fill /tmp storage. This is not a secure delete tool; files in the graveyard can be read by anyone with access.
 
 # SEE ALSO
 

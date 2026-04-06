@@ -20,6 +20,10 @@ Arbitrary precision calculator language
 
 ```bc -l```
 
+**Evaluate an expression** directly
+
+```bc -e "[scale=2; 100/3]"```
+
 **Interactive** calculator
 
 ```bc```
@@ -37,19 +41,25 @@ The tool has been a Unix standard for decades and is widely used in shell script
 # PARAMETERS
 
 **-l**, **--mathlib**
-> Load math library (includes functions like sin, cos, sqrt)
+> Load math library (includes functions like s, c, a, l, e, and sets scale to 20)
 
 **-s**, **--standard**
-> POSIX standard mode
+> POSIX standard mode; error on any non-POSIX extensions
 
 **-q**, **--quiet**
-> Don't print welcome banner
+> Don't print the normal GNU bc welcome banner
 
 **-i**, **--interactive**
 > Force interactive mode
 
 **-w**, **--warn**
 > Warn about POSIX non-compliance
+
+**-e** _expression_, **--expression** _expression_
+> Evaluate expression; multiple -e options are processed in order
+
+**-v**, **--version**
+> Print version number and exit
 
 # SPECIAL VARIABLES
 
@@ -72,13 +82,13 @@ The tool has been a Unix standard for decades and is widely used in shell script
 
 # FUNCTIONS
 
-With -l flag:
-- **s(x)** - Sine
-- **c(x)** - Cosine
-- **a(x)** - Arctangent
-- **l(x)** - Natural log
-- **e(x)** - Exponential
-- **sqrt(x)** - Square root
+With -l flag (also sets scale to 20):
+- **s(x)** - Sine (x in radians)
+- **c(x)** - Cosine (x in radians)
+- **a(x)** - Arctangent (returns radians)
+- **l(x)** - Natural logarithm
+- **e(x)** - Exponential (e raised to x)
+- **sqrt(x)** - Square root (available without -l)
 
 # WORKFLOW
 
@@ -110,7 +120,7 @@ Unusual syntax for programmers. Default integer division (set scale). Variables 
 
 # HISTORY
 
-**bc** was developed at Bell Labs for Unix in **1975** by Robert Morris and Lorinda Cherry, based on the earlier dc calculator.
+**bc** was developed at Bell Labs for Unix in **1975** by Robert Morris and Lorinda Cherry, based on the earlier **dc** calculator. The GNU version, which is the most widely used today, was written by Philip A. Nelson.
 
 # SEE ALSO
 

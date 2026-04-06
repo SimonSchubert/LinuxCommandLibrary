@@ -62,7 +62,7 @@ website copier that downloads websites to a local directory for offline browsing
 > Continue an interrupted download
 
 **-r** _N_, **--depth** _N_
-> Set link depth limit (default: unlimited)
+> Set link depth limit (default: unlimited for mirror mode)
 
 **-m** _N_, **--max-files** _N_
 > Maximum number of files to download
@@ -109,6 +109,15 @@ website copier that downloads websites to a local directory for offline browsing
 **-s0**, **--robots=0**
 > Ignore robots.txt
 
+**-F** _STRING_
+> Set the User-Agent header for HTTP requests
+
+**-N** _N_
+> Structure type for saved files naming convention
+
+**-%c** _N_
+> Maximum number of connections per second
+
 **-h**, **--help**
 > Display help
 
@@ -147,4 +156,4 @@ HTTrack was created by **Xavier Roche** and first released in **1998**. Written 
 
 # SEE ALSO
 
-[wget](/man/wget)(1), [curl](/man/curl)(1), [webhttrack](/man/webhttrack)(1)
+[wget](/man/wget)(1), [curl](/man/curl)(1), [wget2](/man/wget2)(1)

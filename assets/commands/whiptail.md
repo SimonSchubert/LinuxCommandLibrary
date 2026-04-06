@@ -28,6 +28,14 @@ Display a **menu** with choices
 
 ```result=$(whiptail --title "[title]" --menu "[message]" [height] [width] [menu_height] "val1" "text1" "val2" "text2" 3>&1 1>&2 2>&3)```
 
+Display a **checklist** for multiple selections
+
+```result=$(whiptail --title "[title]" --checklist "[message]" [height] [width] [list_height] "opt1" "text1" ON "opt2" "text2" OFF 3>&1 1>&2 2>&3)```
+
+Display a **progress bar** (gauge)
+
+```echo [50] | whiptail --title "[title]" --gauge "[message]" [height] [width] [0]```
+
 # SYNOPSIS
 
 **whiptail** [**--title** _title_] [**--backtitle** _backtitle_] _box-type_ [_box-options_] _height_ _width_
@@ -69,6 +77,42 @@ Display a **menu** with choices
 
 **--no-button** _text_
 > Custom no button label
+
+**--ok-button** _text_
+> Custom OK button label
+
+**--cancel-button** _text_
+> Custom cancel button label
+
+**--defaultno**
+> Default to No in yes/no dialogs
+
+**--nocancel**
+> Suppress the Cancel button
+
+**--separate-output**
+> Output checklist results one per line
+
+**--scrolltext**
+> Force display of a vertical scrollbar
+
+**--topleft**
+> Place dialog in the top-left corner
+
+**--clear**
+> Clear the screen on exit
+
+**--fullbuttons**
+> Use full-width buttons instead of compact
+
+**--output-fd** _FD_
+> Direct output to given file descriptor instead of stderr
+
+**--textbox** _file_ _height_ _width_
+> Display contents of a file in a scrollable box
+
+**--infobox** _text_ _height_ _width_
+> Display message without waiting for input
 
 # DESCRIPTION
 

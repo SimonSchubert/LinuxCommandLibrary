@@ -14,9 +14,9 @@ Embeddable Common Lisp interpreter
 
 **Evaluate expression**
 
-```ecl -eval "[(print \"Hello\")]"```
+```ecl -eval "(print \"Hello\")"```
 
-**Compile file to binary**
+**Compile file to shared library**
 
 ```ecl -compile [file.lisp]```
 
@@ -41,22 +41,34 @@ Embeddable Common Lisp interpreter
 > Evaluate expression.
 
 **-compile** _file_
-> Compile file.
+> Translate file to C and compile to a shared library (.fas).
+
+**-o** _ofile_
+> Name the compiled shared library output file.
+
+**-c** _cfile_
+> Name the intermediary C file and keep it after compilation.
+
+**-h** _hfile_
+> Name the intermediary C header file and keep it after compilation.
+
+**-data** [_datafile_]
+> Dump compiler data into datafile.
+
+**-s**
+> Produce a linkable object file instead of a shared library.
 
 **-shell** _script_
 > Run as script, then exit.
 
 **-norc**
-> Don't load init file.
+> Don't load init file (~/.eclrc).
 
 **-dir** _directory_
-> Add directory to load path.
+> Use directory as system directory.
 
-**-q**, **-quiet**
-> Suppress startup messages.
-
-**--help**
-> Display help.
+**-q**
+> Reduce compiler output verbosity.
 
 # CONFIGURATION
 
@@ -74,7 +86,7 @@ ECL supports the full ANSI Common Lisp standard with extensions for threading, F
 ```
 (quit)           ; Exit ECL
 (load "file")    ; Load Lisp file
-(compile-file)   ; Compile to object
+(compile-file "f"); Compile to object
 (require :asdf)  ; Load ASDF
 ```
 
@@ -88,4 +100,4 @@ ECL was originally developed at **IRCAM** (Paris) in the **1980s** as **KCL** (K
 
 # SEE ALSO
 
-[sbcl](/man/sbcl)(1), [clisp](/man/clisp)(1), [ccl](/man/ccl)(1), [lisp](/man/lisp)(1)
+[sbcl](/man/sbcl)(1), [clisp](/man/clisp)(1)

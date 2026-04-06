@@ -16,13 +16,17 @@ F-Droid repository management tool
 
 ```fdroid init```
 
-**Sign APK**
+**Publish signed apps**
 
-```fdroid signindex```
+```fdroid publish```
 
-**Check for issues**
+**Check metadata for issues**
 
 ```fdroid lint [app.id]```
+
+**Check for app updates**
+
+```fdroid checkupdates [app.id]```
 
 # SYNOPSIS
 
@@ -48,8 +52,26 @@ _COMMAND_
 **lint** _APP_
 > Check metadata for issues.
 
+**checkupdates** _APP_
+> Check for available upstream updates.
+
+**scanner** _APP_
+> Scan APKs for known non-free libraries.
+
+**rewritemeta** _APP_
+> Reformat and normalize metadata files.
+
+**deploy**
+> Deploy the repository to a server.
+
+**import**
+> Import a new app from source repository.
+
 **readmeta**
 > Read and validate metadata.
+
+**-v**, **--verbose**
+> More verbose output.
 
 **--help**
 > Display help information.

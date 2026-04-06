@@ -46,8 +46,14 @@ Keep running and **log changes** to metadata
 **-d**, **--delete**
 > Delete metadata entries
 
+**-r**, **--remote** _NAME_
+> Name of the remote instance to connect to (default: default PipeWire instance).
+
+**--version**
+> Show version information.
+
 **-h**, **--help**
-> Display help message
+> Display help message.
 
 # DESCRIPTION
 

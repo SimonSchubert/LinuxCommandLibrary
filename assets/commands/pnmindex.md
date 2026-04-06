@@ -12,9 +12,9 @@ Create thumbnail contact sheets from images
 
 ```pnmindex -size [100] [*.pnm] > [index.pnm]```
 
-**With labels**
+**With a title**
 
-```pnmindex -title [*.pnm] > [index.pnm]```
+```pnmindex -title ["My Gallery"] [*.pnm] > [index.pnm]```
 
 **Multiple columns**
 
@@ -27,22 +27,28 @@ Create thumbnail contact sheets from images
 # PARAMETERS
 
 **-size** _n_
-> Size of each thumbnail.
+> Maximum thumbnail size in pixels. Each image is scaled to fit within an N x N box while preserving aspect ratio. Default: 100.
 
 **-across** _n_
-> Number of images per row.
+> Number of thumbnails per row. Default: 6.
 
 **-colors** _n_
-> Number of colors.
+> Maximum number of colors in the output image. Default: 256.
 
-**-title**
-> Add filenames as titles.
+**-title** _title_
+> Add a title string at the top of the image.
 
 **-black**
-> Black background.
+> Use black background with white labels instead of the default white background with black labels.
+
+**-noquant**
+> Disable color quantization. By default, colors are reduced for PPM input.
 
 **-quant**
-> Quantize colors.
+> Enable color quantization (default for PPM input).
+
+**-quiet**
+> Suppress informational messages.
 
 # DESCRIPTION
 
@@ -59,8 +65,8 @@ pnmindex *.ppm > index.ppm
 # Thumbnails 150 pixels, 5 across
 pnmindex -size 150 -across 5 photos/*.ppm > gallery.ppm
 
-# With labels on black
-pnmindex -title -black images/*.pnm > contact.ppm
+# With title on black background
+pnmindex -title "Photos" -black images/*.pnm > contact.ppm
 
 # Convert to JPEG
 pnmindex *.pnm | pnmtojpeg > index.jpg
@@ -76,4 +82,4 @@ pnmindex is part of **Netpbm**, providing contact sheet generation since early P
 
 # SEE ALSO
 
-[pnmcat](/man/pnmcat)(1), [pnmscale](/man/pnmscale)(1), [pnmtile](/man/pnmtile)(1), [netpbm](/man/netpbm)(1)
+[pnmcat](/man/pnmcat)(1), [pnmscale](/man/pnmscale)(1), [pnmtile](/man/pnmtile)(1), [pnmmontage](/man/pnmmontage)(1), [pnmtojpeg](/man/pnmtojpeg)(1), [pamundice](/man/pamundice)(1), [netpbm](/man/netpbm)(1)

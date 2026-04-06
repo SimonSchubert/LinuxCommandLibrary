@@ -24,32 +24,66 @@ Translate GNU metafiles to other graphics formats
 
 ```cat [input.meta] | plot -T pnm > [output.pnm]```
 
+**Extract a single page** from a multi-page metafile
+
+```plot -T png -p [3] [input.meta] > [page3.png]```
+
 # SYNOPSIS
 
 **plot** [_options_] [_file_...]
 
 # PARAMETERS
 
-**-T** _type_
+**-T** _type_, **--output-format** _type_
 > Output type: X, png, pnm, gif, svg, ai, ps, cgm, fig, pcl, hpgl, regis, tek, meta (default: meta).
 
+**-p** _n_, **--page-number** _n_
+> Output only page number n from the metafile.
+
+**-s**, **--merge-pages**
+> Combine all pages and frames into a single page.
+
 **--page-size** _size_
-> Page size for ps, svg, ai, cgm, fig, pcl, hpgl output (e.g. a, letter, a4).
+> Page size for ps, svg, ai, cgm, fig, pcl, hpgl output (default: letter). Accepts ISO sizes (a0-a4) and ANSI sizes (a-e).
 
 **--bg-color** _color_
-> Background color name.
+> Background color name (default: white).
 
 **--bitmap-size** _WxH_
-> Bitmap size in pixels for png/pnm/gif output.
+> Bitmap size in pixels for X, png, pnm, gif output (default: 570x570).
 
 **--pen-color** _color_
-> Pen color for metafile rendering.
+> Initial pen color (default: black).
+
+**-f** _size_, **--font-size** _size_
+> Font size as fraction of display width (default: 0.0525).
+
+**-F** _name_, **--font-name** _name_
+> Initial font name.
+
+**-W** _width_, **--line-width** _width_
+> Line width as fraction of display size. Negative value uses format default.
+
+**--max-line-length** _length_
+> Maximum points in a polygonal line before flushing (default: 500).
 
 **--rotation** _angle_
 > Rotate plot (0, 90, 180, 270 degrees).
 
+**--emulate-color** _option_
+> Replace colors with grayscale shades when set to yes.
+
+**-O**, **--portable-output**
+> Output human-readable GNU metafile format instead of binary.
+
 **--help**
 > Display help.
+
+**--help-fonts**
+> Show available fonts for the selected output format.
+
+**--list-fonts**
+> List available fonts in a single column.
 
 **--version**
 > Display version.

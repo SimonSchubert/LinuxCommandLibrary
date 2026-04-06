@@ -1,6 +1,6 @@
 # TAGLINE
 
-Manage trusted keys for package authentication.
+Deprecated APT key management utility for package authentication
 
 # TLDR
 
@@ -24,15 +24,27 @@ Add a key from **keyserver** with only key ID
 
 ```apt-key adv --keyserver pgp.mit.edu --recv [KEYID]```
 
+**Export** all trusted keys
+
+```apt-key exportall```
+
+**Modern replacement**: download a key directly into trusted.gpg.d (no apt-key needed)
+
+```curl -fsSL [https://example.com/key.gpg] | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/[example].gpg```
+
+**Modern replacement**: use signed-by in sources.list
+
+```echo "deb [signed-by=/usr/share/keyrings/[example].gpg] [https://repo.example.com] [stable] main" | sudo tee /etc/apt/sources.list.d/[example].list```
+
 # SYNOPSIS
 
 **apt-key** [_command_] [_arguments_]
 
 # DESCRIPTION
 
-**apt-key** is a key management utility for the APT Package Manager on Debian and Ubuntu. It manages the list of keys used by apt to authenticate packages.
+**apt-key** is a deprecated key management utility for the APT Package Manager on Debian and Ubuntu. It manages the list of keys used by apt to authenticate packages.
 
-**Note:** apt-key is now deprecated. Keys should be stored in /etc/apt/trusted.gpg.d/ or /usr/share/keyrings/ and referenced via signed-by in sources.list.
+**Note:** apt-key is deprecated since Debian 11 (Bullseye) and Ubuntu 22.04 (Jammy). The recommended approach is to place keyring files directly in /etc/apt/trusted.gpg.d/ (with .gpg or .asc extension) or in /usr/share/keyrings/ and reference them via the `signed-by` option in sources.list entries. Only `apt-key del` remains supported for use in maintainer scripts.
 
 # PARAMETERS
 
@@ -61,7 +73,10 @@ Add a key from **keyserver** with only key ID
 > Output all trusted keys to standard output
 
 **finger**
-> List fingerprints of trusted keys
+> List fingerprints of trusted keys (deprecated)
+
+**--keyring** _filename_
+> Operate on a specific keyring file (deprecated)
 
 # CONFIGURATION
 
@@ -81,4 +96,4 @@ Part of the **APT** (Advanced Package Tool) suite. Deprecated starting with Debi
 
 # SEE ALSO
 
-[apt](/man/apt)(8), [apt-get](/man/apt-get)(8), [gpg](/man/gpg)(1)
+[apt](/man/apt)(8), [apt-get](/man/apt-get)(8), [gpg](/man/gpg)(1), [apt-secure](/man/apt-secure)(8)

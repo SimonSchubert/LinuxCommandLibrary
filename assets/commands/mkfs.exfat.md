@@ -10,11 +10,19 @@ Create **exFAT** filesystem
 
 Create with **volume label**
 
-```sudo mkfs.exfat --volume-label [name] /dev/sdXY```
+```sudo mkfs.exfat -L [name] /dev/sdXY```
 
-Create with **volume GUID**
+Create with specific **cluster size**
 
-```sudo mkfs.exfat --volume-guid [guid] /dev/sdXY```
+```sudo mkfs.exfat -c [32K] /dev/sdXY```
+
+Perform a **full format** (zero entire device)
+
+```sudo mkfs.exfat -f /dev/sdXY```
+
+Create in **quiet mode** (errors only)
+
+```sudo mkfs.exfat -q /dev/sdXY```
 
 # SYNOPSIS
 
@@ -22,24 +30,48 @@ Create with **volume GUID**
 
 # DESCRIPTION
 
-**mkfs.exfat** creates an exFAT filesystem on a device. exFAT is designed for flash drives and supports large files (>4GB) while being compatible with Windows, macOS, and Linux.
+**mkfs.exfat** creates an exFAT filesystem on a device. exFAT is designed for flash drives and supports large files (>4GB) while being compatible with Windows, macOS, and Linux. It is part of the **exfatprogs** package.
 
 # PARAMETERS
 
-**-L, --volume-label NAME**
+**-L, --volume-label=LABEL**
 > Set volume label
 
-**-U, --volume-guid GUID**
+**-U, --volume-guid=GUID**
 > Set volume GUID
 
-**-c, --cluster-size SIZE**
-> Set cluster size in bytes
+**-c, --cluster-size=SIZE**
+> Set cluster size in bytes (must be a power of two); supports k/K for kibibytes and m/M for mebibytes
 
-**-s, --sectors-per-cluster N**
-> Sectors per cluster
+**-s, --sector-size=SIZE**
+> Set sector size in bytes (512, 1024, 2048, or 4096)
 
-**-b, --boundary-align SIZE**
-> Boundary alignment
+**-b, --boundary-align=SIZE**
+> Alignment for the FAT and the start of the cluster heap
+
+**-f, --full-format**
+> Perform a full format, zeroing the entire disk device
+
+**-K, --no-discard**
+> Do not attempt to discard blocks
+
+**-C, --verify-written**
+> Verify filesystem metadata by reading it back after writing
+
+**--pack-bitmap**
+> Relocate the allocation bitmap so it ends at the alignment boundary following the FAT
+
+**-q, --quiet**
+> Print only error messages
+
+**-v, --verbose**
+> Print verbose debugging information
+
+**-h, --help**
+> Display help and exit
+
+**-V, --version**
+> Display version and exit
 
 # CAVEATS
 
@@ -47,4 +79,4 @@ All data on device will be lost. exFAT is ideal for USB drives and SD cards requ
 
 # SEE ALSO
 
-[mkfs](/man/mkfs)(8), [exfatprogs](/man/exfatprogs)(8), [mkfs.vfat](/man/mkfs.vfat)(8)
+[mkfs](/man/mkfs)(8), [fsck.exfat](/man/fsck.exfat)(8), [mkfs.vfat](/man/mkfs.vfat)(8), [exfatlabel](/man/exfatlabel)(8)

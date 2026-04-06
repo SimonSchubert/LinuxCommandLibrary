@@ -54,6 +54,21 @@ Retrieve data from Zabbix agents
 **--tls-psk-file** _file_
 > File containing pre-shared key.
 
+**-P**, **--protocol** _value_
+> Communication protocol: auto (default, JSON with plaintext fallback), json, or plaintext (for agents 6.4.x and older).
+
+**--tls-ca-file** _file_
+> Full path to file containing top-level CA certificates for peer certificate verification.
+
+**--tls-cert-file** _file_
+> Full path to file containing the client certificate.
+
+**--tls-key-file** _file_
+> Full path to file containing the private key.
+
+**-h**, **--help**
+> Display help information.
+
 **-V**, **--version**
 > Display version.
 
@@ -67,7 +82,7 @@ Common use cases include testing new item keys, verifying agent responses, and d
 
 # EXIT STATUS
 
-Returns 0 on success, 1 if value retrieval failed.
+Returns 0 on success, 1 on error or if value retrieval failed.
 
 # CAVEATS
 

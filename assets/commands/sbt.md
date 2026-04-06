@@ -118,8 +118,8 @@ sbt can be memory-intensive; large projects may require increasing heap size via
 
 # HISTORY
 
-sbt was created by **Mark Harrah** in **2008** and has become the de facto build tool for Scala projects. It was originally called "Simple Build Tool" but the name was later de-emphasized. The project is now maintained by **Lightbend** (formerly Typesafe) and the Scala community. Version 1.0 was released in **2017**, bringing significant improvements to build semantics and performance.
+sbt was created by **Mark Harrah** in **2008** and has become the de facto build tool for Scala projects. It was originally called "Simple Build Tool" but the name was later de-emphasized. Version 1.0 was released in **2017**, bringing significant improvements to build semantics and performance. The project is now maintained by the **Scala Center** and the open-source community, following the transfer from Lightbend in 2023.
 
 # SEE ALSO
 
-[scala](/man/scala)(1), [scalac](/man/scalac)(1), [gradle](/man/gradle)(1), [maven](/man/maven)(1)
+[scala](/man/scala)(1), [scalac](/man/scalac)(1), [gradle](/man/gradle)(1)

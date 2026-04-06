@@ -34,4 +34,4 @@ Command hashing was introduced in the **Bourne Shell** to improve performance by
 
 # SEE ALSO
 
-[hash](/man/hash)(1), [which](/man/which)(1), [type](/man/type)(1), [zsh](/man/zsh)(1)
+[hash](/man/hash)(1), [which](/man/which)(1), [type](/man/type)(1), [zsh](/man/zsh)(1), [csh](/man/csh)(1), [tcsh](/man/tcsh)(1)

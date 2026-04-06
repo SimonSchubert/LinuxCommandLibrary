@@ -38,9 +38,12 @@ Terminal initialization and reset utility
 
 # SYNOPSIS
 
-**tset** [**-IQVcqrsw**] [**-e** _ch_] [**-i** _ch_] [**-k** _ch_] [**-m** _mapping_] [_terminal_]
+**tset** [**-IQVcqrsw**] [**-**] [**-e** _ch_] [**-i** _ch_] [**-k** _ch_] [**-m** _mapping_] [_terminal_]
 
 # PARAMETERS
+
+**-c**
+> Set control characters and modes
 
 **-e** _ch_
 > Set the erase character to ch
@@ -49,16 +52,19 @@ Terminal initialization and reset utility
 > Set the interrupt character to ch
 
 **-k** _ch_
-> Set the kill character to ch
+> Set the line kill character to ch
 
 **-I**
-> Do not send terminal initialization strings
+> Do not send terminal or tab initialization strings
+
+**-m** _mapping_
+> Map port type and baud rate to terminal type
 
 **-Q**
 > Do not display erase, interrupt, and kill characters
 
 **-q**
-> Quiet mode; suppress terminal type display
+> Display terminal type to stdout without initializing the terminal
 
 **-r**
 > Print terminal type to stderr
@@ -67,21 +73,18 @@ Terminal initialization and reset utility
 > Print shell commands to set TERM environment variable
 
 **-V**
-> Print version and exit
+> Print ncurses version and exit
 
 **-w**
-> Resize window to match terminal size in terminfo
-
-**-m** _mapping_
-> Map port type to terminal type
+> Resize window to match size deduced via setupterm
 
 # DESCRIPTION
 
-**tset** initializes the terminal according to the terminal type specified in the **$TERM** environment variable or on the command line. It sets terminal modes, sends initialization strings, and can configure special characters like erase and kill.
+**tset** initializes the terminal according to the terminal type specified in the **$TERM** environment variable or on the command line. It sets terminal modes, sends initialization strings, and can configure special characters like erase and kill. If neither **-c** nor **-w** is specified, both are assumed.
 
 When invoked as **reset**, the command sets terminal modes to "sane" values: enables cooked and echo modes, disables raw mode, enables newline translation, and resets special characters to defaults. This is useful for recovering from programs that leave the terminal in an abnormal state.
 
-The command determines terminal type by checking: command-line argument, $TERM variable, /etc/ttys entry (on BSD), or finally prompting the user. It then sends appropriate initialization sequences from the terminfo database.
+The command determines terminal type by checking: command-line argument, $TERM variable, /etc/ttys entry (on BSD), or the default type "unknown". It then sends appropriate initialization sequences from the terminfo database.
 
 The **-s** option outputs shell commands to set TERM, useful in login scripts when the terminal type may change.
 
@@ -95,4 +98,4 @@ When the terminal is garbled, you may need to type **\<LF\>reset\<LF\>** (Ctrl+J
 
 # SEE ALSO
 
-[reset](/man/reset)(1), [stty](/man/stty)(1), [clear](/man/clear)(1), [terminfo](/man/terminfo)(5)
+[reset](/man/reset)(1), [stty](/man/stty)(1), [clear](/man/clear)(1), [tput](/man/tput)(1), [infocmp](/man/infocmp)(1)

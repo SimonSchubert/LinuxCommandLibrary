@@ -1,6 +1,6 @@
 # TAGLINE
 
-Run commands on gzip-compressed files
+Run commands on compressed files by auto-decompressing arguments
 
 # TLDR
 
@@ -22,24 +22,22 @@ Run commands on gzip-compressed files
 
 # DESCRIPTION
 
-**zrun** automatically decompresses gzip-compressed file arguments before passing them to the specified command. It creates temporary decompressed files, runs the command, then cleans up.
+**zrun** transparently decompresses compressed file arguments to temporary files before passing them to the specified command. It detects which arguments are compressed files by their extension, decompresses only those to temporary files (not pipes), runs the command with the decompressed paths, then cleans up.
 
-This is useful for running commands that don't natively support compressed input on gzipped files without manual decompression steps.
+This is useful for running commands that don't natively support compressed input without manual decompression steps.
 
-The tool detects which arguments are gzip-compressed files (by .gz extension) and decompresses only those, passing other arguments unchanged.
+The following compression types are supported: **gz**, **bz2**, **Z**, **xz**, **lzma**, **lzo**.
 
-After the command completes, temporary files are automatically removed.
+If **zrun** is symlinked to a name beginning with **z** (e.g., **zprog**), executing the link is equivalent to running **zrun prog**.
 
 # CAVEATS
 
-Only handles gzip (.gz) compression. Other formats (bzip2, xz, zstd) are not supported.
+Modifications to the uncompressed temporary file are not fed back into the input file, so using this as a way to make an editor support compressed files will not work.
 
 Large compressed files require temporary disk space for decompression.
 
 The command sees different (temporary) filenames than the originals, which may matter for some tools.
 
-For commands with native gzip support (like zcat, zgrep, zless), use those directly instead for better performance.
-
 # SEE ALSO
 
-[zcat](/man/zcat)(1), [zless](/man/zless)(1), [zgrep](/man/zgrep)(1), [gzip](/man/gzip)(1)
+[zcat](/man/zcat)(1), [zless](/man/zless)(1), [zgrep](/man/zgrep)(1), [gzip](/man/gzip)(1), [bzip2](/man/bzip2)(1), [xz](/man/xz)(1)

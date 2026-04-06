@@ -1,36 +1,40 @@
 # TAGLINE
 
-Cyclades serial driver tuning utility
+Tune driver parameters for Cyclades-Z multiport serial card
 
 # TLDR
 
-**Display current settings** for a serial device
+**Get current threshold and timeout values**
 
-```cytune /dev/ttyC0```
+```cytune -g /dev/ttyC0```
 
-**Set threshold value**
+**Get default threshold and timeout values**
 
-```cytune -s [12] /dev/ttyC0```
+```cytune -G /dev/ttyC0```
 
-**Set timeout value**
+**Set current threshold value** (1-12)
+
+```cytune -s [8] /dev/ttyC0```
+
+**Set current flush timeout value** (0-255, units of 5ms)
 
 ```cytune -t [10] /dev/ttyC0```
 
 **Set both threshold and timeout**
 
-```cytune -s [12] -t [10] /dev/ttyC0```
+```cytune -s [8] -t [10] /dev/ttyC0```
 
-**Get settings in numeric format**
-
-```cytune -g /dev/ttyC0```
-
-**Set default threshold**
+**Set default threshold for next open**
 
 ```cytune -S [8] /dev/ttyC0```
 
+**Gather statistics at an interval** (requires ENABLE_MONITORING)
+
+```cytune -q -i [5] /dev/ttyC0```
+
 # SYNOPSIS
 
-**cytune** [_options_] _tty_...
+**cytune** [**-q** [**-i** _interval_]] [{**-s**|**-S**} _value_] [**-g**|**-G**] [{**-t**|**-T**} _timeout_] _tty_...
 
 # PARAMETERS
 
@@ -38,41 +42,44 @@ _TTY_
 > Serial device to configure (e.g., /dev/ttyC0).
 
 **-s** _VALUE_
-> Set the current threshold value.
+> Set the current threshold to VALUE characters (1-12). Resets on next open if the tty is not held open.
 
 **-S** _VALUE_
-> Set the default threshold value.
+> Set the default threshold to VALUE characters (1-12). Applied when the tty is next opened.
 
 **-t** _VALUE_
-> Set the timeout value.
+> Set the current flush timeout to VALUE units (0-255). Each unit is 5ms. Zero forces the default timeout.
 
 **-T** _VALUE_
-> Set the default timeout value.
+> Set the default flush timeout to VALUE units. Applied when the tty is next opened.
 
 **-g**
-> Get current threshold and timeout values in numeric format.
+> Get current threshold and timeout values.
 
 **-G**
 > Get default threshold and flush timeout values.
 
 **-q**
-> Quiet mode (no output on success).
+> Gather and report driver statistics (interrupts and characters transferred). Only available if the driver was compiled with ENABLE_MONITORING.
+
+**-i** _interval_
+> Statistics gathering interval in seconds (used with -q).
 
 # DESCRIPTION
 
-**cytune** is a utility for tuning the interrupt threshold and timeout parameters for Cyclades serial drivers. These parameters affect how the driver buffers data before triggering an interrupt, balancing latency against CPU overhead.
+**cytune** is a utility for tuning the interrupt threshold and flush timeout parameters for Cyclades-Z multiport serial card drivers. These parameters affect how the driver buffers data before triggering an interrupt, balancing latency against CPU overhead.
 
-Each serial line on a Cyclades card has a 12-byte FIFO for input and output. The threshold specifies how many characters must be present in the FIFO before an interrupt is raised. Higher values reduce interrupt overhead but increase latency. The timeout ensures data is delivered even when the threshold isn't reached.
+Each serial line on a Cyclades card has a 12-byte FIFO for input and output. The threshold specifies how many characters must be present in the FIFO before an interrupt is raised. Higher values reduce interrupt overhead but increase latency. If set too high, the FIFO can overflow and characters will be lost. The flush timeout ensures data is delivered even when the threshold is not reached.
 
-Default thresholds are set based on baud rate when the tty is opened (e.g., threshold 10 for 50-4800 baud, 8 for 9600, 4 for 19200, 2 for 38400, 1 for 57600+).
+Default thresholds are set based on baud rate when the tty is opened: 10 for 50-4800 baud, 8 for 9600, 4 for 19200, 2 for 38400, 1 for 57600+.
 
 # CAVEATS
 
-Only works with Cyclades serial hardware and drivers. Incorrect settings can cause data loss or poor performance. Requires root privileges to modify settings. Not applicable to standard serial ports.
+Only works with Cyclades serial hardware and drivers. Incorrect settings can cause data loss or poor performance. Requires root privileges to modify settings. Not applicable to standard serial ports. The -q monitoring option is only available if the driver was compiled with ENABLE_MONITORING defined.
 
 # HISTORY
 
-cytune was developed for the Cyclades multiport serial card drivers in Linux. Cyclades produced high-density serial solutions for applications requiring many serial ports. The utility allows fine-tuning driver behavior for specific workloads.
+**cytune** was developed for the Cyclades multiport serial card drivers in Linux and is part of the **util-linux** package. Cyclades produced high-density serial solutions for applications requiring many serial ports.
 
 # SEE ALSO
 

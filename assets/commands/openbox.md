@@ -20,9 +20,13 @@ lightweight, highly configurable window manager
 
 ```openbox --restart```
 
-**Check configuration**
+**Exit Openbox**
 
-```openbox --debug```
+```openbox --exit```
+
+**Replace the currently running window manager**
+
+```openbox --replace```
 
 # SYNOPSIS
 
@@ -39,11 +43,29 @@ lightweight, highly configurable window manager
 **--replace**
 > Replace running WM.
 
+**--exit**
+> Exit the running Openbox instance.
+
 **--config-file** _file_
-> Use config file.
+> Specify the path to the configuration file to use.
+
+**--sm-disable**
+> Do not connect to the session manager.
+
+**--startup** _cmd_
+> Run the specified command after startup.
 
 **--debug**
-> Debug output.
+> Display debugging output.
+
+**--debug-focus**
+> Display debugging output for focus handling.
+
+**--version**
+> Show the version and exit.
+
+**--help**
+> Show command line options summary and exit.
 
 # DESCRIPTION
 
@@ -80,4 +102,4 @@ Openbox was originally a fork of Blackbox, rewritten by **Dana Jansens** startin
 
 # SEE ALSO
 
-[obconf](/man/obconf)(1), [tint2](/man/tint2)(1), [lxde](/man/lxde)(1), [i3](/man/i3)(1)
+[i3](/man/i3)(1), [polybar](/man/polybar)(1), [feh](/man/feh)(1), [nitrogen](/man/nitrogen)(1)

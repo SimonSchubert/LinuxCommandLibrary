@@ -8,7 +8,7 @@ IPv4 and IPv6 subnet calculator
 
 ```sipcalc [192.168.1.0/24]```
 
-**Split network**
+**Split network into /26 subnets**
 
 ```sipcalc -s [26] [192.168.1.0/24]```
 
@@ -24,7 +24,7 @@ IPv4 and IPv6 subnet calculator
 
 ```sipcalc [eth0]```
 
-**Binary output**
+**CIDR bitmap output**
 
 ```sipcalc -b [192.168.1.0/24]```
 
@@ -32,35 +32,64 @@ IPv4 and IPv6 subnet calculator
 
 ```sipcalc -c [10.0.0.0]```
 
+**Convert Cisco wildcard to netmask**
+
+```sipcalc -w [0.0.0.255]```
+
+**IPv6 reverse DNS**
+
+```sipcalc -r [2001:db8::1/48]```
+
 # SYNOPSIS
 
 **sipcalc** [_-s size_] [_-a_] [_-b_] [_options_] _address_
 
 # PARAMETERS
 
-**-s** _SIZE_
-> Split into subnets.
-
 **-a**
-> All information.
+> Give all possible information about an address or interface.
 
 **-b**
-> Binary output.
+> Display CIDR based bitmaps (IPv4).
 
 **-c**
-> Classful info.
+> Display classful address information (IPv4).
 
 **-d**
-> Resolve hostnames.
+> Enable name resolution.
 
-**-n**
-> Suppress newlines.
+**-e**
+> Display v4inv6 address information (IPv6).
 
-**-4**
-> IPv4 mode.
+**-i**
+> Display CIDR address information (default IPv4).
 
-**-6**
-> IPv6 mode.
+**-n** _NUM_
+> Display NUM extra subnets starting from the current subnet.
+
+**-r**
+> Display IPv6 reverse DNS information.
+
+**-s** _MASK_
+> Split IPv4 network into subnets of MASK size.
+
+**-S** _MASK_
+> Split IPv6 network into subnets of MASK size.
+
+**-t**
+> Display standard IPv6 address information (default IPv6).
+
+**-u**
+> Verbose mode for network splitting.
+
+**-w**
+> Convert Cisco wildcard (inverse mask) to regular netmask.
+
+**-4** _ADDR_
+> Explicitly add an IPv4 address.
+
+**-6** _ADDR_
+> Explicitly add an IPv6 address.
 
 # DESCRIPTION
 

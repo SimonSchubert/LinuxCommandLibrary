@@ -22,4 +22,4 @@ Unlike some environment management systems that require explicit cleanup, conda 
 
 # SEE ALSO
 
-[conda](/man/conda)(1), [conda-activate](/man/conda-activate)(1)
+[conda](/man/conda)(1), [conda-activate](/man/conda-activate)(1), [conda-create](/man/conda-create)(1), [conda-env](/man/conda-env)(1)

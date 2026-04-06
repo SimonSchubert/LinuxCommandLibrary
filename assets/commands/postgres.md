@@ -45,6 +45,12 @@ Run PostgreSQL database server process
 **-k** _DIR_
 > Unix socket directory.
 
+**-l** _FILE_
+> Send server log output to a file.
+
+**-d** _LEVEL_
+> Set debug level (1-5); higher values produce more output.
+
 **-B** _BUFFERS_
 > Shared buffers.
 
@@ -52,13 +58,16 @@ Run PostgreSQL database server process
 > Max connections.
 
 **--single**
-> Single-user mode.
+> Single-user mode. Must be the first argument on the command line.
+
+**-e**
+> Echo all commands to standard output (single-user mode).
 
 **-F**
-> Disable fsync.
+> Disable fsync for faster operation (risk of data corruption).
 
 **--describe-config**
-> Describe configuration.
+> Describe configuration parameters and exit.
 
 **--version**
 > Show version.
@@ -101,4 +110,4 @@ Running directly bypasses service management. Data directory must be secure. Con
 
 # SEE ALSO
 
-[pg_ctl](/man/pg_ctl)(1), [initdb](/man/initdb)(1), [psql](/man/psql)(1), [pg_dump](/man/pg_dump)(1)
+[pg_ctl](/man/pg_ctl)(1), [initdb](/man/initdb)(1), [psql](/man/psql)(1), [pg_dump](/man/pg_dump)(1), [pg_upgrade](/man/pg_upgrade)(1), [pg_isready](/man/pg_isready)(1)

@@ -24,6 +24,10 @@ Disassemble to a **specific directory**
 
 ```baksmali list classes [classes.dex]```
 
+**Disassemble** with code offset comments
+
+```baksmali disassemble --code-offsets [classes.dex]```
+
 # SYNOPSIS
 
 **baksmali** _command_ [_options_] _dex-file_
@@ -60,11 +64,20 @@ The tool is the counterpart to smali, together forming a complete assembler/disa
 **-d**, **--bootclasspath-dir** _dir_
 > Directory containing framework files.
 
-**--no-debug-info**
-> Don't write debug information (.local, .param, .line directives).
+**--debug-info**, **--di**
+> Include debug metadata in output (default: true).
 
 **--use-locals**
 > Use .locals directive instead of .registers.
+
+**--code-offsets**, **--off**
+> Add a comment before each instruction with its code offset.
+
+**--accessor-comments**, **--ac**
+> Generate helper comments for synthetic accessors (default: true).
+
+**--sequential-labels**, **--sl**
+> Use sequential numbering for labels.
 
 **--classes** _LIST_
 > Comma-separated list of classes to disassemble.

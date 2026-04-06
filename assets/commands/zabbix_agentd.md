@@ -16,13 +16,21 @@ Zabbix monitoring agent daemon
 
 ```zabbix_agentd -f```
 
-**Test item**
+**Test a single item key**
 
-```zabbix_agentd -t "[system.cpu.load]"```
+```zabbix_agentd -t [system.cpu.load]```
 
-**Print item**
+**Print all supported items with current values**
 
 ```zabbix_agentd -p```
+
+**Validate configuration file**
+
+```zabbix_agentd -T```
+
+**Increase log level at runtime**
+
+```zabbix_agentd -R log_level_increase```
 
 # SYNOPSIS
 
@@ -30,20 +38,29 @@ Zabbix monitoring agent daemon
 
 # PARAMETERS
 
-**-c** _FILE_
-> Config file.
+**-c**, **--config** _config-file_
+> Use an alternate config file instead of the default (/usr/local/etc/zabbix_agentd.conf).
 
-**-f**
-> Foreground.
+**-f**, **--foreground**
+> Run agent in foreground instead of as a daemon.
 
-**-t** _ITEM_
-> Test item.
+**-p**, **--print**
+> Print all known items and their current values, then exit.
 
-**-p**
-> Print values.
+**-t**, **--test** _item-key_
+> Test a single item key and print the result, then exit.
 
-**-R** _CMD_
-> Runtime control.
+**-R**, **--runtime-control** _runtime-option_
+> Perform administrative functions. Options: userparameter_reload, log_level_increase[=target], log_level_decrease[=target].
+
+**-T**, **--test-config**
+> Validate configuration file and exit.
+
+**-h**, **--help**
+> Display help and exit.
+
+**-V**, **--version**
+> Output version information and exit.
 
 # DESCRIPTION
 
@@ -55,7 +72,7 @@ The **-t** flag tests individual item keys for troubleshooting, and **-p** print
 
 # CAVEATS
 
-Zabbix server needed. Config required. Root for some items.
+Requires a Zabbix server or proxy to receive collected data. A configuration file is needed; the default path is /usr/local/etc/zabbix_agentd.conf. Some item keys require root privileges. Runtime control (-R) is not supported on OpenBSD, NetBSD, and Windows.
 
 # HISTORY
 
@@ -63,4 +80,4 @@ Zabbix server needed. Config required. Root for some items.
 
 # SEE ALSO
 
-[zabbix_server](/man/zabbix_server)(1), [zabbix_get](/man/zabbix_get)(1)
+[zabbix_server](/man/zabbix_server)(1), [zabbix_proxy](/man/zabbix_proxy)(1), [zabbix_get](/man/zabbix_get)(1)

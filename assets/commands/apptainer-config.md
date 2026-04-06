@@ -75,6 +75,9 @@ The command operates through two subcommands: **fakeroot** for managing user nam
 **--dry-run**
 > Display the resulting configuration without writing to file (global subcommand)
 
+**-h**, **--help**
+> Display help for the config command
+
 # CONFIGURATION
 
 The global subcommand modifies **/etc/apptainer/apptainer.conf** (or the equivalent path for unprivileged installations). Common directives include:
@@ -101,4 +104,4 @@ Apptainer originated as **Singularity**, created by **Gregory Kurtzer** at **Law
 
 # SEE ALSO
 
-[apptainer](/man/apptainer)(1), [docker](/man/docker)(1), [podman](/man/podman)(1)
+[apptainer](/man/apptainer)(1), [singularity](/man/singularity)(1), [docker](/man/docker)(1), [podman](/man/podman)(1)

@@ -16,7 +16,7 @@ Software MIDI synthesizer and converter
 
 ```timidity -Ow -o [output.wav] [input.mid]```
 
-**Convert MIDI to WAV on stdout** (for piping)
+**Convert MIDI to WAV on stdout** for piping
 
 ```timidity -Ow -o - [input.mid]```
 
@@ -54,10 +54,19 @@ Software MIDI synthesizer and converter
 > Output to file. Use - for stdout.
 
 **-O** _mode_
-> Output mode: w (RIFF WAVE), a (AIFF), r (raw), l (list).
+> Output mode: d (audio device), w (RIFF WAVE), a (AIFF), r (raw), u (Sun audio), v (Ogg Vorbis), F (FLAC), l (list MIDI events), M (MOD to MIDI conversion).
 
 **-s** _freq_
 > Set sampling frequency in Hz. Default is 44100.
+
+**-F**
+> Enable fast panning, allowing panning adjustments to affect notes already playing.
+
+**-f**
+> Enable fast envelopes, improving performance at the cost of shorter note release times.
+
+**-p** _voices_
+> Set maximum number of simultaneous voices (polyphony). Default is system-dependent.
 
 **-U**
 > Unload instruments from memory between files to reduce memory usage.
@@ -71,8 +80,14 @@ Software MIDI synthesizer and converter
 **-E** _mode_
 > Set TiMidity++ extension modes for effects and reverb.
 
+**-Q** _channels_
+> Ignore MIDI channels. Comma-separated list of channel numbers (1-16) to mute.
+
+**-T** _n_
+> Adjust tempo by n%. Default is 100.
+
 **-h**
-> Display help message.
+> Display help message and list of available output modes and interfaces.
 
 # DESCRIPTION
 
@@ -103,4 +118,4 @@ TiMidity was originally written by **Tuukka Toivonen** in **1995**. The enhanced
 
 # SEE ALSO
 
-[fluidsynth](/man/fluidsynth)(1), [aplaymidi](/man/aplaymidi)(1), [pmidi](/man/pmidi)(1)
+[fluidsynth](/man/fluidsynth)(1), [aplaymidi](/man/aplaymidi)(1), [aplay](/man/aplay)(1), [pmidi](/man/pmidi)(1)

@@ -1,6 +1,6 @@
 # TAGLINE
 
-Read stdin and write to files
+Read from stdin and write to stdout and files
 
 # TLDR
 
@@ -45,7 +45,7 @@ Read stdin and write to files
 > Ignore SIGINT (interrupt signal)
 
 **-p**
-> Diagnose errors writing to non-pipes
+> Operate in a more appropriate mode with pipes (default MODE: warn-nopipe)
 
 **--output-error**[=_mode_]
 > Set behavior on write error (warn, warn-nopipe, exit, exit-nopipe)
@@ -62,7 +62,7 @@ Read stdin and write to files
 
 Common uses include logging command output while still viewing it, saving intermediate pipeline results for debugging, and writing to files requiring elevated privileges via sudo.
 
-Without **-a**, tee overwrites existing files. With multiple files, the same content is written to all of them.
+Without **-a**, tee overwrites existing files. With multiple files, the same content is written to all of them. If a FILE is **-**, tee copies again to standard output.
 
 Tee continues the pipeline—output goes to both files and stdout, allowing further processing with additional pipe stages.
 

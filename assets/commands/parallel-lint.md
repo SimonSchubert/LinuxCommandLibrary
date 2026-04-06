@@ -4,7 +4,7 @@ checks PHP files for syntax errors in parallel
 
 # TLDR
 
-**Lint PHP files**
+**Lint PHP files in a directory**
 
 ```parallel-lint [src/]```
 
@@ -12,13 +12,17 @@ checks PHP files for syntax errors in parallel
 
 ```parallel-lint --exclude [vendor] [.]```
 
-**Lint with specific PHP version**
+**Lint with a specific PHP executable**
 
-```parallel-lint --php [/usr/bin/php8.1] [src/]```
+```parallel-lint -p [/usr/bin/php8.1] [src/]```
 
-**Lint with blame output**
+**Lint with git blame for errors**
 
 ```parallel-lint --blame [src/]```
+
+**Output results as JSON**
+
+```parallel-lint --json [src/]```
 
 # SYNOPSIS
 
@@ -27,26 +31,53 @@ checks PHP files for syntax errors in parallel
 # PARAMETERS
 
 **--exclude** _path_
-> Exclude path from checking.
+> Exclude a file or directory from checking. Use multiple times to exclude several paths.
 
-**--php** _binary_
-> PHP binary to use.
+**-p** _php_
+> Specify PHP executable to run (default: php).
 
-**-j** _num_
-> Number of parallel jobs.
-
-**--blame**
-> Show git blame for errors.
-
-**--colors**
-> Force colored output.
+**-s**, **--short**
+> Set short_open_tag to On (default: Off).
 
 **-e** _ext_
-> File extensions to check.
+> Check only files with selected extensions separated by comma (default: php,php3,php4,php5,phtml,phpt).
+
+**-j** _num_
+> Number of parallel jobs (default: 10).
+
+**--blame**
+> Try to show git blame for the line with error.
+
+**--git** _git_
+> Path to Git executable for blame messages (default: git).
+
+**--colors**
+> Enable colored console output.
+
+**--no-colors**
+> Disable colored console output.
+
+**--no-progress**
+> Disable progress output.
+
+**--checkstyle**
+> Output results as Checkstyle XML.
+
+**--json**
+> Output results as JSON string.
+
+**--show-deprecated**
+> Show PHP deprecation warnings.
+
+**-h**, **--help**
+> Print help.
+
+**-V**, **--version**
+> Display the application version.
 
 # DESCRIPTION
 
-**parallel-lint** checks PHP files for syntax errors in parallel. Fast syntax checking across multiple files and directories. Does not check code style, only syntax validity.
+**parallel-lint** checks PHP files for syntax errors in parallel. It provides fast syntax checking across multiple files and directories. It does not check code style, only syntax validity. By default it runs 10 parallel jobs and checks common PHP file extensions.
 
 # SEE ALSO
 

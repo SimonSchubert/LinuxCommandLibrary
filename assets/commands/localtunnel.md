@@ -20,9 +20,13 @@ exposes your localhost to the world through a public URL
 
 ```lt --port [3000] --host [https://tunnel.example.com]```
 
-**Print only URL**
+**Print incoming request info**
 
 ```lt --port [3000] --print-requests```
+
+**Tunnel to local HTTPS server**
+
+```lt --port [443] --local-https```
 
 # SYNOPSIS
 
@@ -33,20 +37,35 @@ exposes your localhost to the world through a public URL
 **--port** _port_
 > Local port to expose.
 
-**--subdomain** _name_
-> Request specific subdomain.
+**-s**, **--subdomain** _name_
+> Request specific subdomain. Default is random characters.
 
-**--local-host** _host_
-> Local host to expose.
+**-l**, **--local-host** _host_
+> Proxy to a hostname other than localhost. Also overrides the Host header.
 
 **--host** _url_
 > Tunnel server URL.
 
-**--print-requests**
-> Print request info.
+**--local-https**
+> Enable tunneling to a local HTTPS server.
 
-**--open**
-> Open URL in browser.
+**--local-cert** _path_
+> Path to certificate PEM file for local HTTPS server.
+
+**--local-key** _path_
+> Path to certificate key file for local HTTPS server.
+
+**--local-ca** _path_
+> Path to certificate authority file for self-signed certificates.
+
+**--allow-invalid-cert**
+> Disable certificate checks for local HTTPS server.
+
+**--print-requests**
+> Print basic request info (method and path) for each incoming request.
+
+**-o**, **--open**
+> Open tunnel URL in default browser.
 
 # DESCRIPTION
 
@@ -72,4 +91,4 @@ localtunnel was created by **Roman Shtylman** as a simple alternative to ngrok, 
 
 # SEE ALSO
 
-[ngrok](/man/ngrok)(1), [cloudflared](/man/cloudflared)(1), [serveo](/man/serveo)(1), [ssh](/man/ssh)(1)
+[ngrok](/man/ngrok)(1), [cloudflared](/man/cloudflared)(1), [ssh](/man/ssh)(1)

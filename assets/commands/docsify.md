@@ -8,6 +8,10 @@ dynamic Markdown documentation site generator
 
 ```docsify init [./docs]```
 
+**Initialize with a specific theme**
+
+```docsify init [./docs] --theme [dark]```
+
 **Start local preview** server
 
 ```docsify serve [./docs]```
@@ -16,13 +20,13 @@ dynamic Markdown documentation site generator
 
 ```docsify serve [./docs] --port [4000]```
 
+**Serve and open in browser** automatically
+
+```docsify serve [./docs] --open```
+
 **Generate sidebar** automatically
 
 ```docsify generate [./docs]```
-
-**Serve with live reload**
-
-```docsify serve [./docs] --livereload-port [35729]```
 
 # SYNOPSIS
 
@@ -37,19 +41,37 @@ _PATH_
 > Documentation directory.
 
 **init** [_PATH_]
-> Initialize new docsify project.
+> Initialize new docsify project. Shorthand: **i**.
+
+**--local, -l**
+> Copy docsify files to the docs path instead of using CDN (default: false).
+
+**--theme, -t** _THEME_
+> Choose a theme: vue, buble, dark, pure (default: vue).
+
+**--plugins, -p**
+> Add plugin script tags to index.html.
 
 **serve** [_PATH_]
-> Start local server.
+> Start local server with live reload. Shorthand: **s**.
 
-**--port** _N_
+**--port, -p** _N_
 > Server port (default: 3000).
 
-**--livereload-port** _N_
-> Live reload port.
+**--host, -H** _HOST_
+> Host to bind to (default: localhost).
 
-**--open**
+**--open, -o**
 > Open browser automatically.
+
+**generate** [_PATH_]
+> Generate sidebar file. Shorthand: **g**.
+
+**--sidebar, -s** _FILE_
+> Sidebar filename (default: _sidebar.md).
+
+**--overwrite, -o**
+> Allow overwriting existing files.
 
 **--help**
 > Display help information.
@@ -68,8 +90,8 @@ Requires JavaScript for rendering (no static HTML). SEO may be affected by clien
 
 # HISTORY
 
-docsify was created by **cinwell** and released as an open-source project. It gained popularity as a lightweight alternative to documentation generators like GitBook and VuePress, emphasizing simplicity and no build requirements.
+docsify was created by **QingWei-Li** (cinwell) and released as an open-source project. It gained popularity as a lightweight alternative to documentation generators like GitBook and VuePress, emphasizing simplicity and no build requirements. It is installed via npm: **npm i docsify-cli -g**.
 
 # SEE ALSO
 
-[mkdocs](/man/mkdocs)(1), [vuepress](/man/vuepress)(1), [gitbook](/man/gitbook)(1)
+[mkdocs](/man/mkdocs)(1), [vuepress](/man/vuepress)(1), [gitbook](/man/gitbook)(1), [npm](/man/npm)(1)

@@ -20,6 +20,14 @@ Copy an **image**
 
 ```wl-copy < [path/to/image]```
 
+Copy **sensitive** data (e.g., a password) without clipboard history
+
+```wl-copy --sensitive "[password]"```
+
+Set a specific **MIME type**
+
+```wl-copy --type text/html "[<b>bold</b>]"```
+
 **Clear** the clipboard
 
 ```wl-copy --clear```
@@ -50,6 +58,9 @@ Copy an **image**
 
 **-f**, **--foreground**
 > Stay in foreground instead of forking
+
+**--sensitive**
+> Hint that content is sensitive (e.g., passwords); clipboard managers may avoid persisting it in history
 
 **-v**, **--version**
 > Display version information

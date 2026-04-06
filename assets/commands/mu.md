@@ -4,7 +4,11 @@ Mail indexer and searcher for Maildir
 
 # TLDR
 
-**Index mail**
+**Initialize the database**
+
+```mu init --maildir=[~/Maildir]```
+
+**Index mail messages**
 
 ```mu index```
 
@@ -12,21 +16,13 @@ Mail indexer and searcher for Maildir
 
 ```mu find [from:john subject:report]```
 
-**View message**
+**View a message**
 
 ```mu view [path/to/message]```
 
-**Search with output format**
+**Search with a specific output format**
 
 ```mu find --format=links [query]```
-
-**Initialize database**
-
-```mu init --maildir=[~/Maildir]```
-
-**Show message count for a query**
-
-```mu find --summary-len=0 [query]```
 
 **Search by date range**
 
@@ -35,6 +31,10 @@ Mail indexer and searcher for Maildir
 **Extract attachments from a message**
 
 ```mu extract [path/to/message]```
+
+**Search contacts from indexed messages**
+
+```mu cfind [john]```
 
 # SYNOPSIS
 
@@ -45,26 +45,38 @@ Mail indexer and searcher for Maildir
 _COMMAND_
 > Operation to perform.
 
+**init**
+> Initialize the mu database.
+
 **index**
-> Index mail messages.
+> (Re)index mail messages in a Maildir.
 
 **find** _QUERY_
-> Search for messages.
+> Search for messages in the database.
 
 **view** _FILE_
 > Display message content.
 
-**init**
-> Initialize database.
-
-**--maildir** _PATH_
-> Mail directory location.
-
 **extract** _FILE_
-> Extract attachments from a message.
+> Extract attachments and other MIME parts from a message.
 
 **cfind** [_QUERY_]
 > Search contacts from indexed messages.
+
+**add** _FILE_
+> Add specific messages to the database.
+
+**remove** _FILE_
+> Remove specific messages from the database.
+
+**mkdir** _DIR_
+> Create a new Maildir.
+
+**info**
+> Show information about the mu database.
+
+**--maildir** _PATH_
+> Mail directory location (default: ~/Maildir).
 
 **--format** _FORMAT_
 > Output format (plain, links, xml, sexp, json).
@@ -75,7 +87,16 @@ _COMMAND_
 **--reverse**
 > Reverse sort order.
 
-**--help**
+**-d**, **--debug**
+> Generate extra debug information.
+
+**-q**, **--quiet**
+> Suppress informational messages and progress output.
+
+**--nocolor**
+> Disable ANSI color output.
+
+**-h**, **--help**
 > Display help information.
 
 # DESCRIPTION

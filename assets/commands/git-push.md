@@ -20,9 +20,13 @@ Upload local commits to remote
 
 ```git push --tags```
 
-**Force push**
+**Force push safely**
 
 ```git push --force-with-lease```
+
+**Delete a remote branch**
+
+```git push [origin] --delete [branch]```
 
 # SYNOPSIS
 
@@ -31,37 +35,55 @@ Upload local commits to remote
 # PARAMETERS
 
 _REMOTE_
-> Remote repository name.
+> Remote repository name (e.g. origin).
 
 _REFSPEC_
-> Refs to push.
+> Refs to push (e.g. branch name or src:dst).
 
 **-u**, **--set-upstream**
-> Set upstream tracking.
+> Set upstream tracking reference for the branch.
 
 **--all**
 > Push all branches.
 
 **--tags**
-> Push tags.
+> Push all refs under refs/tags.
 
 **--force**
-> Force update remote refs.
+> Force update remote refs, even if not a fast-forward.
 
 **--force-with-lease**
-> Safe force push.
+> Force push only if the remote ref matches what was last fetched.
+
+**--force-if-includes**
+> Refuse to force-update if remote-tracking ref has updates not integrated locally.
 
 **--delete**
-> Delete remote ref.
+> Delete the specified remote refs.
 
 **--dry-run**
-> Show what would be pushed.
+> Do everything except actually send the updates.
 
 **--no-verify**
 > Skip pre-push hooks.
 
+**-q**, **--quiet**
+> Suppress all output, including the listing of updated refs.
+
+**-v**, **--verbose**
+> Run verbosely.
+
+**--progress**
+> Force progress status output even if stderr is not a terminal.
+
+**--prune**
+> Remove remote branches that do not have a local counterpart.
+
 **-o** _option_, **--push-option** _option_
-> Transmit option to server-side hooks.
+> Transmit string to server-side receive hooks.
+
+**--porcelain**
+> Produce machine-readable output.
 
 # DESCRIPTION
 

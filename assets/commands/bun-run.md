@@ -47,7 +47,10 @@ The command can be shortened to just **bun** followed by the file or script name
 # PARAMETERS
 
 **--watch**
-> Re-run on file changes
+> Re-run on file changes. Must be placed before `run` in the command.
+
+**--hot**
+> Enable hot reloading instead of full restart on file changes.
 
 **--eval, -e** _code_
 > Evaluate argument as script
@@ -63,6 +66,18 @@ The command can be shortened to just **bun** followed by the file or script name
 
 **--silent**
 > Suppress script output
+
+**--smol**
+> Reduce memory usage at the cost of performance by running the garbage collector more frequently.
+
+**--if-present**
+> Exit without error if the entrypoint or script does not exist.
+
+**--filter** _pattern_
+> Run scripts in matching workspace packages by name pattern.
+
+**--bun**
+> Force the script to run through Bun's runtime, overriding shebang lines.
 
 # BEHAVIOR
 
@@ -85,4 +100,4 @@ TypeScript and JSX are transpiled on-the-fly without configuration. Startup time
 
 # SEE ALSO
 
-[bun](/man/bun)(1), [bun-test](/man/bun-test)(1), [node](/man/node)(1), [npm-run](/man/npm-run)(1)
+[bun](/man/bun)(1), [bun-test](/man/bun-test)(1), [bun-build](/man/bun-build)(1), [node](/man/node)(1), [npm-run](/man/npm-run)(1)

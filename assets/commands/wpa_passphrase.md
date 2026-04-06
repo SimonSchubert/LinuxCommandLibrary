@@ -26,7 +26,7 @@ Generate WPA pre-shared key from passphrase
 > The network name (SSID) to generate the key for
 
 **passphrase**
-> The WiFi password (read from stdin if omitted)
+> The WiFi password, must be 8 to 63 printable ASCII characters (read from stdin if omitted)
 
 # DESCRIPTION
 
@@ -36,7 +36,7 @@ The tool pre-computes the PSK using PBKDF2, which is faster than having wpa_supp
 
 # CAVEATS
 
-Providing the passphrase on the command line exposes it in process listings and shell history. For security, prefer reading from stdin. The SSID is case-sensitive and must match exactly. Part of the wpa_supplicant package.
+Providing the passphrase on the command line exposes it in process listings and shell history. For security, prefer reading from stdin. The passphrase must be between 8 and 63 characters. The SSID is case-sensitive and must match exactly. Part of the wpa_supplicant package.
 
 # SEE ALSO
 

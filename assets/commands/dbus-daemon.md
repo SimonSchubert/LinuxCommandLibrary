@@ -24,9 +24,13 @@ Output **PID** to stdout
 
 ```dbus-daemon --print-pid```
 
-Force **syslog** logging
+Run in **foreground** without forking
 
-```dbus-daemon --syslog```
+```dbus-daemon --session --nofork```
+
+Print **version**
+
+```dbus-daemon --version```
 
 # SYNOPSIS
 
@@ -56,17 +60,38 @@ The daemon enforces security policies defined in its configuration files, contro
 **--address** _address_
 > Listen address override
 
-**--print-pid**
-> Print PID to stdout
+**--print-pid**[=_DESCRIPTOR_]
+> Print PID to stdout, or to the given file descriptor
 
-**--print-address**
-> Print address to stdout
+**--print-address**[=_DESCRIPTOR_]
+> Print bus address to stdout, or to the given file descriptor
 
 **--syslog**
-> Force syslog logging
+> Enable syslog logging in addition to stderr
+
+**--nofork**
+> Do not fork into background, even if configured to do so
 
 **--fork**
-> Fork into background
+> Fork into background, even if not configured to do so
+
+**--nopidfile**
+> Do not write a PID file even if configured to do so
+
+**--nosyslog**
+> Force output to stderr only, do not use syslog
+
+**--syslog-only**
+> Force syslog logging only, do not duplicate messages to stderr
+
+**--introspect**
+> Print introspection information for all D-Bus internal interfaces and exit
+
+**--systemd-activation**
+> Enable systemd-style service activation
+
+**--version**
+> Print daemon version and exit
 
 # CONFIGURATION
 
@@ -82,4 +107,4 @@ Usually started automatically by systemd or session managers. Direct invocation 
 
 # SEE ALSO
 
-[dbus-send](/man/dbus-send)(1), [dbus-monitor](/man/dbus-monitor)(1), [busctl](/man/busctl)(1)
+[dbus-send](/man/dbus-send)(1), [dbus-monitor](/man/dbus-monitor)(1), [dbus-launch](/man/dbus-launch)(1), [busctl](/man/busctl)(1)

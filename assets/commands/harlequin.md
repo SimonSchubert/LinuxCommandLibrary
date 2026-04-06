@@ -18,7 +18,7 @@ terminal-based SQL IDE supporting multiple database backends
 
 **Connect to MySQL**
 
-```harlequin -a mysql -h [localhost] -u [user] -p [database]```
+```harlequin -a mysql -h [localhost] -p [3306] -U [user] --database [database]```
 
 **Open in-memory DuckDB**
 
@@ -57,14 +57,23 @@ terminal-based SQL IDE supporting multiple database backends
 **-d**, **--database** _name_
 > Database name.
 
+**--password** _password_
+> Database password.
+
 **--read-only**
 > Open connection in read-only mode.
 
 **-t**, **--theme** _theme_
-> Color theme name.
+> Color theme name (any Textual theme).
 
 **--limit** _rows_
 > Default result row limit.
+
+**-f**, **--profile** _name_
+> Load a named profile from config file.
+
+**--no-download-tzdata**
+> Skip downloading timezone data for DuckDB.
 
 **--help**
 > Display help information.

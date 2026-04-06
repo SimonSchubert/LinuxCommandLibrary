@@ -42,8 +42,11 @@ Resolve file inclusions in roff documents
 **-t**
 > Emit TeX-style comment lines (**%**) instead of **.lf** requests for file and line tracking.
 
-**-v**
+**-v**, **--version**
 > Print version number and exit.
+
+**--help**
+> Display usage message and exit.
 
 # DESCRIPTION
 
@@ -57,10 +60,12 @@ soelim is typically invoked automatically by groff when the **-s** option is use
 
 The **.so** request must have no whitespace between the dot and "so" for soelim to recognize it. If whitespace is present, only groff/troff will process the request, and soelim will ignore it. The included file path is relative to the current directory unless **-I** paths are specified.
 
+If both **-r** and **-t** are given, the last one specified controls the behavior.
+
 # HISTORY
 
 **soelim** is part of the GNU **groff** (GNU troff) package, which is the GNU implementation of the traditional Unix document formatting system troff. The groff system has been developed since the late 1980s as a free software replacement for the proprietary Unix troff. soelim provides compatibility with traditional troff preprocessing workflows.
 
 # SEE ALSO
 
-[groff](/man/groff)(1), [troff](/man/troff)(1), [nroff](/man/nroff)(1), [man](/man/man)(1)
+[groff](/man/groff)(1), [troff](/man/troff)(1), [nroff](/man/nroff)(1), [eqn](/man/eqn)(1), [tbl](/man/tbl)(1), [refer](/man/refer)(1), [man](/man/man)(1)

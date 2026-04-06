@@ -45,7 +45,7 @@ Versatile checksum file verifier and creator
 > Test mode (default): verify files against a checksum file.
 
 **-t** _type_
-> Checksum type: **sfv**, **md5**, **bsdmd5**, **sha1**, **sha256**, **sha512**, **csv**, **csv2**, **csv4**, **par**, **par2**, **torrent**.
+> Checksum type: **sfv**, **md5**, **bsdmd5**, **sha1**, **sha256**, **sha512**, **csv**, **csv2**, **csv4**, **crc**, **par**, **par2**, **torrent**, **auto** (default, auto-detect).
 
 **-f** _file_
 > Specify the checksum file to read or write.
@@ -57,25 +57,55 @@ Versatile checksum file verifier and creator
 > Verbose: print status for every file, not just errors.
 
 **-V**
-> Disable verbose output.
+> Disable verbose output (default). Use **-VV** to also suppress the status line.
+
+**-q**
+> Quiet mode: suppress all output including error messages. Check exit status only.
+
+**-Q**
+> Print only status lines, not individual errors.
 
 **-n**
 > Rename files with bad checksums to filename.bad.
 
 **-N**
-> Disable renaming.
+> Disable renaming (default).
+
+**-m**
+> Check only for missing files without comparing checksums.
 
 **-s**
 > Search for misnamed files when a file is not found.
 
+**-S**
+> Disable search for misnamed files (default).
+
 **-u**
 > Show unverified files. Use **-uu** to show unverified files in subdirectories.
 
+**-U**
+> Do not show unverified files (default).
+
+**-i**
+> Ignore case when matching filenames.
+
+**-l**
+> Follow directory symlinks in recursive mode (default).
+
+**-L**
+> Do not follow directory symlinks in recursive mode.
+
 **-z**
-> Support gzip-compressed checksum files. Use **-zz** to use gzip on all checksum files.
+> Support gzip-compressed checksum files. Use **-zz** to force gzip on all checksum files.
 
 **-p** _dir_
 > Change to directory before processing.
+
+**--strippaths** _n_
+> Strip leading path components from filenames in test mode.
+
+**--progress** _val_
+> Control progress bar display: no, auto (default), or yes.
 
 # DESCRIPTION
 
@@ -97,4 +127,4 @@ PAR and PAR2 formats are supported for verification only, not creation. BitTorre
 
 # SEE ALSO
 
-[md5sum](/man/md5sum)(1), [sha1sum](/man/sha1sum)(1), [sha256sum](/man/sha256sum)(1), [cksum](/man/cksum)(1)
+[md5sum](/man/md5sum)(1), [sha1sum](/man/sha1sum)(1), [sha256sum](/man/sha256sum)(1), [sha512sum](/man/sha512sum)(1), [cksum](/man/cksum)(1), [par2](/man/par2)(1)
