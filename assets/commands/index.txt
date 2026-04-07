@@ -2722,6 +2722,7 @@ git-who.md
 git-worktree.md
 git-write-tree.md
 git.md
+gita.md
 gitbook.md
 gitea.md
 github-copilot-cli.md
@@ -6141,6 +6142,7 @@ qemu-system-riscv64.md
 qemu-system-x86_64.md
 qemu.md
 qgis.md
+qgis_process.md
 qjoypad.md
 qm-agent.md
 qm-cleanup.md
