@@ -8,7 +8,21 @@ pkgdesc='Linux command reference and cheat sheets - desktop application'
 arch=('x86_64')
 url='https://github.com/SimonSchubert/LinuxCommandLibrary'
 license=('Apache-2.0')
-depends=('hicolor-icon-theme')
+depends=(
+  'alsa-lib'
+  'bash'
+  'fontconfig'
+  'glibc'
+  'hicolor-icon-theme'
+  'java-runtime'
+  'libglvnd'
+  'libstdc++'
+  'libx11'
+  'libxext'
+  'libxi'
+  'libxrender'
+  'libxtst'
+)
 provides=('lcl-gui')
 conflicts=('lcl-gui')
 options=('!strip')

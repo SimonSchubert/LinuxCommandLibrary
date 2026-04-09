@@ -8,7 +8,11 @@ pkgdesc='Linux command reference and cheat sheets for your terminal'
 arch=('x86_64')
 url='https://github.com/SimonSchubert/LinuxCommandLibrary'
 license=('Apache-2.0')
-makedepends=('unzip')
+depends=(
+  'glibc'
+  'libgcc'
+  'libxcrypt-compat'
+)
 provides=('lcl')
 conflicts=('lcl')
 
