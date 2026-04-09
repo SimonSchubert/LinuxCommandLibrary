@@ -5323,6 +5323,7 @@ pct-list.md
 pct-mount.md
 pct-move-volume.md
 pct-move_volume.md
+pct-reboot.md
 pct-resize.md
 pct-restore.md
 pct-set.md
