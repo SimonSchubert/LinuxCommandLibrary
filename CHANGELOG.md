@@ -1,3 +1,10 @@
+## v3.7.6 — 2026-04-09
+
+### Improvements
+- Add new commands
+- Improve command quality
+- Massive desktop release build size and performance improvements
+
 ## v3.7.5 — 2026-04-05
 
 ### Features
