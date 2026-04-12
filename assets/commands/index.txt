@@ -3732,6 +3732,7 @@ kpackagetool6.md
 kpartx.md
 kplay.md
 kr.md
+krdc.md
 krdpserver.md
 kreadconfig5.md
 krew.md
