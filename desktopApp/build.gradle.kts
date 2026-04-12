@@ -18,13 +18,14 @@ version = libs.versions.appVersion.get()
 // party deps like koin-compose 4.2.0. Letting Gradle resolve both deps together
 // avoids the split classpath we'd get from just prepending.
 val proguardClasspath =
-    configurations.detachedConfiguration(
-        dependencies.create("com.guardsquare:proguard-gradle:7.7.0"),
-        dependencies.create("org.jetbrains.kotlin:kotlin-metadata-jvm:${libs.versions.kotlin.get()}"),
-    ).apply {
-        resolutionStrategy.force("org.jetbrains.kotlin:kotlin-metadata-jvm:${libs.versions.kotlin.get()}")
-        resolutionStrategy.force("org.jetbrains.kotlin:kotlin-stdlib:${libs.versions.kotlin.get()}")
-    }
+    configurations
+        .detachedConfiguration(
+            dependencies.create("com.guardsquare:proguard-gradle:7.7.0"),
+            dependencies.create("org.jetbrains.kotlin:kotlin-metadata-jvm:${libs.versions.kotlin.get()}"),
+        ).apply {
+            resolutionStrategy.force("org.jetbrains.kotlin:kotlin-metadata-jvm:${libs.versions.kotlin.get()}")
+            resolutionStrategy.force("org.jetbrains.kotlin:kotlin-stdlib:${libs.versions.kotlin.get()}")
+        }
 
 afterEvaluate {
     tasks.withType<AbstractProguardTask>().configureEach {
@@ -90,8 +91,11 @@ tasks.register("generateAssetIndexes") {
         listOf("commands", "basics").forEach { dir ->
             val targetDir = file("$assetsDir/$dir")
             if (targetDir.exists()) {
-                val files = targetDir.listFiles { f -> f.extension == "md" }
-                    ?.map { it.name }?.sorted() ?: emptyList()
+                val files =
+                    targetDir
+                        .listFiles { f -> f.extension == "md" }
+                        ?.map { it.name }
+                        ?.sorted() ?: emptyList()
                 file("$targetDir/index.txt").writeText(files.joinToString("\n") + "\n")
             }
         }
