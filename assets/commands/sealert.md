@@ -16,9 +16,9 @@ Display **summary** of recent alerts
 
 ```sudo sealert -b```
 
-**Monitor** audit log in real-time
+Display **all alerts** in HTML format
 
-```sudo tail -f /var/log/audit/audit.log | sealert -l -```
+```sudo sealert -a /var/log/audit/audit.log -H```
 
 # SYNOPSIS
 
@@ -27,13 +27,34 @@ Display **summary** of recent alerts
 # PARAMETERS
 
 **-a**, **--analyze** _file_
-> Analyze audit log file
+> Scan an audit log file for AVCs, analyze them, and write alerts to stdout.
 
 **-l**, **--lookupid** _id_
-> Lookup specific alert
+> Look up a specific alert by ID and write it to stdout. Use `*` to return all alerts.
 
 **-b**, **--browser**
-> Display alert summary browser
+> Launch the alert browser GUI.
+
+**-f**, **--fix** _uuid_
+> Execute the fix command for the AVC with the given UUID. Requires **--plugin**.
+
+**-P**, **--plugin** _plugin_
+> Specify the plugin name to use with **--fix**.
+
+**-H**
+> Output alerts in HTML format instead of plain text (used with **-l** or **-a**).
+
+**-s**, **--service**
+> Start the sealert D-Bus service (typically invoked by D-Bus).
+
+**-S**, **--noservice**
+> Start sealert as a standalone application without the D-Bus service.
+
+**-u**, **--user** _user_
+> Log on as the specified user.
+
+**-p**, **--password** _password_
+> Set the user password.
 
 # DESCRIPTION
 

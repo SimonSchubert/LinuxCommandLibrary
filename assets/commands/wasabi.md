@@ -34,6 +34,12 @@ privacy-focused Bitcoin wallet with CoinJoin
 **--datadir** _DIR_
 > Custom data directory path.
 
+**--usetor** _BOOL_
+> Enable or disable Tor routing (default: true).
+
+**--blockonly** _BOOL_
+> Ignore P2P transactions; only process block data.
+
 **--jsonrpcserverenabled** _BOOL_
 > Enable JSON-RPC server for remote control.
 

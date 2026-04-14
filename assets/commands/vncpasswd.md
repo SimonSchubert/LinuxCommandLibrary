@@ -54,4 +54,4 @@ Only first 8 characters matter. Password obfuscation is not secure encryption. F
 
 # SEE ALSO
 
-[vncserver](/man/vncserver)(1), [vncviewer](/man/vncviewer)(1), [x11vnc](/man/x11vnc)(1), [Xvnc](/man/Xvnc)(1)
+[vncserver](/man/vncserver)(1), [vncviewer](/man/vncviewer)(1), [x11vnc](/man/x11vnc)(1), [xvnc](/man/xvnc)(1)

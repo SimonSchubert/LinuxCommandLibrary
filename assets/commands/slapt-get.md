@@ -61,14 +61,50 @@ APT-like package manager for Slackware
 **--dist-upgrade**
 > Upgrade to a newer Slackware release
 
+**--available**
+> List available packages from configured sources
+
 **--list**
-> Display all available packages from configured sources
+> List all packages, both installed and available
 
 **--installed**
 > List all currently installed packages
 
+**--filelist _package_**
+> Show files installed by a package
+
 **--remove-obsolete**
-> Mark non-downloadable packages for removal (used with --remove or --dist-upgrade)
+> Remove packages no longer available from configured sources (used with --remove or --dist-upgrade)
+
+**--reinstall**
+> Install a package even if it is already installed
+
+**--download-only**, **-d**
+> Download packages without installing them
+
+**--simulate**, **-s**
+> Simulate the operation without installing or downloading anything
+
+**--no-dep**
+> Skip dependency resolution
+
+**--ignore-dep**
+> Ignore dependency failures during install or upgrade
+
+**--no-prompt**, **-y**
+> Do not prompt for confirmation
+
+**--print-uris**
+> Print URIs of packages to stdout without downloading
+
+**--add-keys**
+> Download and import GPG keys from package sources
+
+**--retry _N_**
+> Number of retries if a download fails
+
+**--config**, **-c _file_**
+> Use an alternate configuration file
 
 # DESCRIPTION
 
@@ -87,4 +123,4 @@ Requires configured package sources in slapt-getrc. Designed specifically for Sl
 
 # SEE ALSO
 
-[installpkg](/man/installpkg)(8), [removepkg](/man/removepkg)(8), [pkgtool](/man/pkgtool)(8)
+[installpkg](/man/installpkg)(8), [removepkg](/man/removepkg)(8), [pkgtool](/man/pkgtool)(8), [slackpkg](/man/slackpkg)(1), [slapt-src](/man/slapt-src)(1)

@@ -4,79 +4,52 @@ High availability monitoring for Redis clusters
 
 # TLDR
 
-**Start Sentinel**
+**Start** Sentinel with a config file
 
 ```redis-sentinel [/etc/redis/sentinel.conf]```
 
-**Start with Redis server**
+**Start** via redis-server in sentinel mode
 
 ```redis-server [sentinel.conf] --sentinel```
 
-**Check Sentinel status**
+**List** all monitored masters
 
 ```redis-cli -p [26379] sentinel masters```
 
-**Monitor master**
+**Get** current master address by name
 
-```redis-cli -p [26379] sentinel master [mymaster]```
+```redis-cli -p [26379] sentinel get-master-addr-by-name [mymaster]```
+
+**Trigger** manual failover
+
+```redis-cli -p [26379] sentinel failover [mymaster]```
 
 # SYNOPSIS
 
 **redis-sentinel** _config_file_
 
+**redis-server** _config_file_ **--sentinel**
+
 # DESCRIPTION
 
-**Redis Sentinel** provides high availability for Redis deployments through continuous monitoring, automatic failover, and notification. It watches master and replica instances, and when a master becomes unreachable and a quorum of Sentinel processes agrees it is down, it automatically promotes a replica to master and reconfigures the remaining replicas to use the new master.
+**Redis Sentinel** provides high availability for Redis deployments through continuous monitoring, automatic failover, and notification. It watches master and replica instances, and when a master becomes unreachable and a quorum of Sentinel processes agree it is down, it automatically promotes a replica to master and reconfigures the remaining replicas to use the new master.
 
-Sentinel also acts as a configuration provider, allowing clients to discover the current master address for a named service. Multiple Sentinel instances (at least three recommended) form a distributed system that reaches consensus on failover decisions, preventing split-brain scenarios.
+Sentinel also acts as a configuration provider, allowing clients to discover the current master address for a named service. Multiple Sentinel instances (at least three are recommended) form a distributed system that reaches consensus on failover decisions, preventing split-brain scenarios.
 
-# EXAMPLES
+A configuration file is mandatory; Sentinel rewrites it on failover to persist the new topology.
 
-```bash
-# Start Sentinel
-redis-sentinel /etc/redis/sentinel.conf
+# PARAMETERS
 
-# Or via redis-server
-redis-server sentinel.conf --sentinel
-
-# Query masters
-redis-cli -p 26379 sentinel masters
-
-# Get master address
-redis-cli -p 26379 sentinel get-master-addr-by-name mymaster
-
-# List replicas
-redis-cli -p 26379 sentinel replicas mymaster
-
-# Failover manually
-redis-cli -p 26379 sentinel failover mymaster
-```
-
-# CONFIGURATION
-
-**/etc/redis/sentinel.conf**
-> Main Sentinel configuration file defining monitored masters, quorum thresholds, and failover parameters.
-
-**sentinel monitor** _name_ _host_ _port_ _quorum_
-> Define a master to monitor with the minimum number of Sentinels that must agree it is down before failover.
-
-**sentinel down-after-milliseconds** _name_ _ms_
-> Time in milliseconds a master must be unreachable before being considered down.
-
-**sentinel failover-timeout** _name_ _ms_
-> Maximum time for a failover operation to complete before being considered failed.
-
-# QUORUM
-
-The number after master definition is quorum - minimum Sentinels agreeing master is down before failover.
+**--sentinel**
+> When passed to `redis-server`, starts it in Sentinel mode using the provided config file.
 
 # CAVEATS
 
-Need at least 3 Sentinels for robustness. Port 26379 default. Modifies config file on failover.
+At least three Sentinel instances are recommended for robust quorum. The default Sentinel port is 26379. Sentinel modifies its configuration file on failover. Sentinel does not shard data — it only monitors and redirects clients.
 
 # HISTORY
 
-Redis Sentinel was introduced in **Redis 2.8** by **Salvatore Sanfilippo** for Redis high availability.
+Redis Sentinel was introduced in **Redis 2.4** (stable in **2.8**) by **Salvatore Sanfilippo** to provide high availability without manual intervention.
 
 # SEE ALSO
 

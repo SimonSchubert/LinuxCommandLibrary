@@ -4,39 +4,59 @@ Execute Git commands across multiple repositories
 
 # TLDR
 
-**Run command on all repos**
+**Run a git command on all registered workspaces**
 
-```git bulk --all [command]```
+```git bulk -a [git-command]```
 
-**Add workspace**
+**Add a workspace from a directory**
 
 ```git bulk --addworkspace [name] [path]```
 
-**List workspaces**
+**Add the current directory as a workspace**
+
+```git bulk --addcurrent [name]```
+
+**List all registered workspaces**
 
 ```git bulk --listall```
 
-**Run in specific workspace**
+**Run command on a specific workspace**
 
-```git bulk --workspace [name] [command]```
+```git bulk -w [name] [git-command]```
+
+**Run with confirmation prompt before each repository**
+
+```git bulk -g -a [git-command]```
 
 # SYNOPSIS
 
-**git** **bulk** [_options_] [_command_]
+**git** **bulk** [_options_] [_git-command_]
 
 # PARAMETERS
 
-**--all**
-> Run on all repositories.
+**-a**
+> Run the git command on all registered workspaces and their repositories.
+
+**-w** _name_
+> Run the git command on the specified workspace.
+
+**-g**
+> Guarded mode: ask for confirmation before executing on each repository.
 
 **--addworkspace** _name_ _path_
-> Add workspace.
+> Register a workspace with a logical name and root directory path. All repositories under the root directory are included. Optionally use **--from** _url-or-file_ to clone repositories directly into the workspace.
 
-**--workspace** _name_
-> Use specific workspace.
+**--removeworkspace** _name_
+> Remove the registered workspace with the given name.
+
+**--addcurrent** _name_
+> Add the current directory as a workspace.
+
+**--purge**
+> Remove all defined repository locations.
 
 **--listall**
-> List all workspaces.
+> List all registered workspaces and their paths.
 
 # DESCRIPTION
 

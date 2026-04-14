@@ -47,62 +47,64 @@ generate completion matches in bash
 # PARAMETERS
 
 **-a**
-> Aliases
+> Generate alias names.
 
 **-b**
-> Builtins
+> Generate shell builtin names.
 
 **-c**
-> Commands
+> Generate command names (builtins, functions, and executables on PATH).
 
 **-d**
-> Directories
+> Generate directory names.
 
 **-e**
-> Exported variables
+> Generate names of exported shell variables.
 
 **-f**
-> Files
+> Generate filenames.
 
 **-g**
-> Groups
+> Generate group names.
 
 **-j**
-> Jobs
+> Generate job names.
 
 **-k**
-> Keywords
+> Generate shell reserved words (keywords).
 
 **-s**
-> Services
+> Generate service names.
 
 **-u**
-> Users
+> Generate usernames.
 
 **-v**
-> Variables
+> Generate shell variable names.
 
 **-A** _action_
-> Completion action type
+> Generate completions using the given action. Valid actions include: alias, arrayvar, binding, builtin, command, directory, disabled, enabled, export, file, function, group, hostname, job, keyword, running, service, setopt, signal, stopped, user, variable.
+
+**-F** _function_
+> Call shell function to generate completions.
+
+**-C** _command_
+> Run command in a subshell and use its output as completions.
 
 **-W** _wordlist_
-> Complete from word list
+> Split wordlist on IFS and generate matches from resulting words.
 
 **-G** _pattern_
-> Glob pattern for filenames
+> Expand the glob pattern and use the results as completions.
 
 **-P** _prefix_
-> Add prefix to completions
+> Prepend prefix to each generated completion.
 
 **-S** _suffix_
-> Add suffix to completions
+> Append suffix to each generated completion.
 
 **-X** _pattern_
-> Filter out matching completions
-
-# ACTIONS (-A)
-
-alias, arrayvar, binding, builtin, command, directory, disabled, enabled, export, file, function, group, hostname, job, keyword, running, service, setopt, signal, stopped, user, variable
+> Filter completions using the pattern; a leading **!** negates the filter.
 
 # CAVEATS
 

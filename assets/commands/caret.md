@@ -24,16 +24,19 @@ Shell history substitution and regex anchor character
 
 **^**_old_**^**_new_[**^**]
 
-# HISTORY SUBSTITUTION
+# PARAMETERS
 
-**^old^new**
-> Replace first occurrence of "old" with "new" in previous command and execute
+**^**_old_**^**_new_
+> Replace first occurrence of _old_ with _new_ in the previous command and execute it.
 
-**^old^new^**
-> Same, trailing ^ is optional
+**^**_old_**^**_new_**^**
+> Same substitution; the trailing **^** is optional unless appending additional text.
 
-**!!:s/old/new/**
-> Equivalent using full history syntax
+**!!:s/**_old_**/**_new_**/**
+> Equivalent long-form history substitution syntax.
+
+**!!:gs/**_old_**/**_new_**/**
+> Replace all occurrences of _old_ with _new_ in the previous command.
 
 # DESCRIPTION
 

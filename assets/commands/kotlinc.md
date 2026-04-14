@@ -46,10 +46,34 @@ _FILES_
 > Target JVM version.
 
 **-no-stdlib**
-> Don't include stdlib.
+> Don't automatically include kotlin-stdlib.jar and kotlin-reflect.jar in the classpath.
 
-**--help**
-> Display help information.
+**-no-reflect**
+> Don't automatically include kotlin-reflect.jar in the classpath.
+
+**-jdk-home** _path_
+> Use a custom JDK home directory instead of the default JAVA_HOME.
+
+**-language-version** _version_
+> Compile against the specified Kotlin language version (e.g. `2.0`).
+
+**-script**
+> Evaluate a Kotlin script file (.kts).
+
+**-nowarn**
+> Suppress all compiler warnings.
+
+**-Werror**
+> Treat all warnings as compilation errors.
+
+**-verbose**
+> Enable verbose logging output with compilation details.
+
+**-version**
+> Display the compiler version.
+
+**-help**, **-h**
+> Display usage information.
 
 # DESCRIPTION
 

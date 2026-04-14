@@ -87,14 +87,9 @@ command-line interface for OpenAI language models
 
 The tool supports both interactive mode for back-and-forth conversation and single-prompt mode for quick queries. Input can be piped from other commands or files, making it useful in shell pipelines for text processing tasks.
 
-Configuration can be set via command-line flags, environment variables, or a config file. The **OPENAI_API_KEY** environment variable is commonly used for authentication. Different models offer varying capabilities, speed, and pricing.
+Configuration can be set via command-line flags, environment variables, or a config file. The **OPENAI_API_KEY** environment variable is the standard way to provide credentials. Different models offer varying capabilities, speed, and pricing.
 
-System prompts allow customizing the assistant's behavior and expertise area. Temperature controls response creativity - lower values produce more focused responses while higher values increase variety. The streaming option displays responses token-by-token as they're generated.
-
-# CONFIGURATION
-
-**OPENAI_API_KEY**
-> Environment variable for API authentication.
+System prompts allow customizing the assistant's behavior and expertise area. Temperature controls response creativity — lower values produce more focused responses while higher values increase variety. The streaming option displays responses token-by-token as they're generated.
 
 # CAVEATS
 
@@ -106,4 +101,4 @@ Command-line interfaces for ChatGPT emerged shortly after OpenAI released the Ch
 
 # SEE ALSO
 
-[curl](/man/curl)(1), [jq](/man/jq)(1), [claude](/man/claude)(1), [ollama](/man/ollama)(1)
+[chatgpt-cli](/man/chatgpt-cli)(1), [curl](/man/curl)(1), [jq](/man/jq)(1), [claude](/man/claude)(1), [ollama](/man/ollama)(1)

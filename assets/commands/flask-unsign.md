@@ -16,6 +16,10 @@ Flask session cookie manipulation and cracking
 
 ```flask-unsign --sign --cookie "{'user':'admin'}" --secret "[key]"```
 
+**Fetch and decode** a cookie directly from a URL
+
+```flask-unsign --decode --server https://[example.com]/```
+
 **Show cookie without verification**
 
 ```flask-unsign --decode --cookie "[cookie]" --no-verify```
@@ -27,28 +31,40 @@ Flask session cookie manipulation and cracking
 # PARAMETERS
 
 **--decode**
-> Decode session cookie.
+> Decode a session cookie and print its contents.
 
 **--unsign**
-> Brute force secret key.
+> Brute-force the secret key from a signed session cookie.
 
 **--sign**
-> Sign a cookie.
+> Sign a cookie value with a known secret key.
 
-**--cookie** _cookie_
-> Cookie value.
+**--cookie** _value_
+> Session cookie value to operate on.
 
-**--secret** _key_
-> Secret key.
+**--server** _url_
+> Automatically fetch the session cookie from the given URL.
+
+**--secret**, **-S** _key_
+> Secret key used to sign or verify a cookie.
 
 **--wordlist** _file_
-> Wordlist for brute forcing.
-
-**--no-verify**
-> Skip signature verification.
+> Wordlist file to use for brute-forcing the secret key.
 
 **--threads** _num_
-> Number of threads.
+> Number of threads to use during brute-forcing.
+
+**--no-verify**
+> Skip signature verification when decoding.
+
+**--salt** _salt_
+> Custom salt string (default: `cookie-session`).
+
+**--legacy**
+> Use the older itsdangerous signing algorithm for compatibility with older Flask apps.
+
+**--no-literal-eval**
+> Disable Python literal evaluation of wordlist entries.
 
 # DESCRIPTION
 
@@ -60,5 +76,5 @@ Flask-unsign supports multithreaded brute-forcing, custom wordlists, and both en
 
 # SEE ALSO
 
-[flask](/man/flask)(1)
+[flask](/man/flask)(1), [hashcat](/man/hashcat)(1), [john](/man/john)(1)
 

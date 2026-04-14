@@ -31,72 +31,70 @@ shell expansion operator for variables and commands
 **$(**_command_**)**
 **$((**_expression_**))**
 
-# PARAMETER EXPANSION
+# PARAMETERS
 
 **${var}**
-> Value of variable
+> Value of variable.
 
 **${var:-default}**
-> Use default if var is unset/empty
+> Use default if var is unset or empty.
 
 **${var:=default}**
-> Assign default if var is unset/empty
+> Assign default if var is unset or empty.
 
 **${var:+alternate}**
-> Use alternate if var is set
+> Use alternate value if var is set.
 
 **${var:?error}**
-> Exit with error if var is unset
+> Exit with error message if var is unset.
 
 **${#var}**
-> String length
+> String length of var.
 
 **${var%pattern}**
-> Remove shortest suffix match
+> Remove shortest suffix match.
 
 **${var%%pattern}**
-> Remove longest suffix match
+> Remove longest suffix match.
 
 **${var#pattern}**
-> Remove shortest prefix match
+> Remove shortest prefix match.
 
 **${var##pattern}**
-> Remove longest prefix match
+> Remove longest prefix match.
 
 **${var/old/new}**
-> Replace first occurrence
+> Replace first occurrence of old with new.
 
 **${var//old/new}**
-> Replace all occurrences
+> Replace all occurrences of old with new.
 
 **${var:offset:length}**
-> Substring extraction
-
-# SPECIAL VARIABLES
+> Substring extraction.
 
 **$?**
-> Exit status of last command
+> Exit status of last command.
 
 **$$**
-> Current shell PID
+> PID of the current shell.
 
 **$!**
-> PID of last background job
+> PID of last background job.
 
 **$0**
-> Script name
+> Script or shell name.
 
-**$1-$9**
-> Positional parameters
+**$1**-**$9**
+> Positional parameters.
 
 **$@**
-> All positional parameters (separate words)
+> All positional parameters as separate words.
 
 **$***
-> All positional parameters (single word)
+> All positional parameters as a single word.
 
 **$#**
-> Number of positional parameters
+> Number of positional parameters.
 
 # DESCRIPTION
 

@@ -44,6 +44,15 @@ _CONFIG-FILE_
 **--force**
 > Force complete regeneration.
 
+**--only-version** _VERSION_
+> Restrict build to the specified version only.
+
+**--no-progress**
+> Disable the progress bar.
+
+**--ignore-parse-errors**
+> Ignore parse errors and exit with code 0.
+
 **-v**, **--verbose**
 > Verbose output.
 
@@ -65,7 +74,7 @@ Doctum creates searchable documentation with cross-references between classes an
 
 # CAVEATS
 
-Requires PHP 7.2+. Large codebases may have slow initial parse. Configuration requires PHP knowledge. Some PHP edge cases may not parse correctly.
+Requires PHP 8.1+. Large codebases may have slow initial parse. Configuration requires PHP knowledge. Some PHP edge cases may not parse correctly.
 
 # HISTORY
 

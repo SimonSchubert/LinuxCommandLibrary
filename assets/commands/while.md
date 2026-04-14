@@ -44,7 +44,7 @@ The condition is typically a **test** command (or its **[** equivalent), but any
 
 Common patterns include reading files line by line with **read**, implementing retry logic, and creating daemon-like processes that run indefinitely.
 
-# CONTROL STATEMENTS
+# PARAMETERS
 
 **break**
 > Exit the loop immediately.

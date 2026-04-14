@@ -1,51 +1,50 @@
 # TAGLINE
 
-displays MS-DOS filesystem information
+Print the parameters of an MS-DOS filesystem
 
 # TLDR
 
-**Show disk info**
+**Show filesystem info** for a configured mtools drive
 
 ```minfo [a:]```
 
-**Show detailed info**
+**Show verbose info** including a hexdump of the boot sector
 
 ```minfo -v [a:]```
 
-**Show specific drive**
+**Show info** for a disk image file
 
-```minfo [c:]```
+```minfo -i [path/to/image.img] ::```
 
 # SYNOPSIS
 
-**minfo** [_options_] _drive_
+**minfo** [**-v**] _drive_
+
+**minfo** **-i** _imagefile_ **::**
 
 # PARAMETERS
 
-_DRIVE_
-> MS-DOS drive letter.
-
 **-v**
-> Verbose output.
+> Verbose mode: also print a hexdump of the boot sector.
 
-**--help**
-> Display help information.
+**-i** _imagefile_
+> Read from the specified image file instead of a configured drive.
 
 # DESCRIPTION
 
-**minfo** displays MS-DOS filesystem information. It shows disk geometry and FAT details.
+**minfo** prints the parameters of an MS-DOS filesystem, such as number of sectors, heads, and cylinders. It also prints an **mformat** command line that can be used to create a similar MS-DOS filesystem on another device.
 
-The tool is part of mtools. It reports boot sector and filesystem parameters.
+**minfo** is part of the **mtools** suite of utilities for accessing MS-DOS disks from Unix without mounting them. It supports FAT12, FAT16, and FAT32 filesystems.
 
 # CAVEATS
 
-Part of mtools. FAT filesystem only. Requires mtools configuration.
+Does not support 2m or XDF media formats, or MS-DOS 1.0 filesystems. Requires mtools to be configured for the target drive, or an image file supplied with **-i**.
 
 # HISTORY
 
-minfo is part of **mtools**, providing MS-DOS disk information on Unix systems.
+**minfo** is part of **mtools**, a collection of utilities originally written by Emmet P. Gray for accessing MS-DOS disks on Unix systems, later maintained by Alain Knaff.
 
 # SEE ALSO
 
-[mdir](/man/mdir)(1), [mcopy](/man/mcopy)(1), [mformat](/man/mformat)(1)
+[mcopy](/man/mcopy)(1)
 

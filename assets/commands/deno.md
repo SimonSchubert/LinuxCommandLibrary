@@ -18,7 +18,7 @@ secure runtime for JavaScript and TypeScript
 
 **Start REPL**
 
-```deno```
+```deno repl```
 
 **Run remote script**
 
@@ -36,6 +36,18 @@ secure runtime for JavaScript and TypeScript
 
 ```deno test```
 
+**Start an HTTP server** (using default export)
+
+```deno serve [script.ts]```
+
+**Add a dependency**
+
+```deno add [npm:package-name]```
+
+**Initialise a new project**
+
+```deno init [project-name]```
+
 # SYNOPSIS
 
 **deno** _subcommand_ [_options_] [_script_] [_args_]
@@ -43,7 +55,7 @@ secure runtime for JavaScript and TypeScript
 # PARAMETERS
 
 _SUBCOMMAND_
-> Command: run, compile, test, fmt, lint, bundle, etc.
+> Command: run, repl, serve, compile, test, fmt, lint, add, remove, install, init, doc, info, task, publish, upgrade, etc.
 
 _SCRIPT_
 > TypeScript/JavaScript file or URL to execute.
@@ -63,8 +75,8 @@ _SCRIPT_
 **-A**, **--allow-all**
 > Allow all permissions.
 
-**--unstable**
-> Enable unstable APIs.
+**--unstable-**_FEATURE_
+> Enable a specific unstable API feature (e.g. `--unstable-kv`, `--unstable-ffi`). The generic `--unstable` flag was removed in Deno 2.
 
 **--watch**
 > Watch for changes and restart.
@@ -79,6 +91,8 @@ _SCRIPT_
 Deno features native TypeScript support without configuration, a built-in formatter and linter, test runner, and standard library. It uses ES modules exclusively and can import modules directly from URLs, eliminating the need for a package manager.
 
 The runtime is built on V8 and Rust, emphasizing security and modern JavaScript features. It provides Web API compatibility, making code more portable between Deno and browser environments.
+
+Deno 2 added a built-in package manager (`deno add`, `deno remove`) with support for npm and JSR packages, and a `deno serve` subcommand for running HTTP servers. The generic `--unstable` flag was replaced by per-feature granular flags.
 
 # CONFIGURATION
 

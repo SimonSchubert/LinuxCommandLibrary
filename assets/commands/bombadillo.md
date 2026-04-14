@@ -18,7 +18,7 @@ Terminal browser for Gopher, Gemini, and Finger protocols
 
 # SYNOPSIS
 
-**bombadillo** [_url_]
+**bombadillo** [_options_] [_url_]
 
 # DESCRIPTION
 
@@ -26,18 +26,29 @@ Terminal browser for Gopher, Gemini, and Finger protocols
 
 The browser renders text content directly in the terminal, supports bookmarks, history navigation, and configurable settings. It can handle TLS connections for Gemini and provides a distraction-free reading experience.
 
+# PARAMETERS
+
+**-v**
+> Display version information and exit
+
+**-t**
+> Set the terminal window title to "Bombadillo"
+
+**-h**
+> Display usage help and exit
+
 # CONFIGURATION
 
 Configuration is stored in **~/.config/bombadillo/config.ini**. Settings include default protocol, home URL, certificate handling, and display preferences. Settings can also be changed at runtime using the **:set** command.
 
 # CAVEATS
 
-Does not support HTTP/HTTPS — it is specifically designed for alternative protocols. Gemini TLS certificate handling uses trust-on-first-use (TOFU). Media files are passed to external handlers.
+Does not support HTTP/HTTPS natively — it is specifically designed for alternative protocols, though HTTP/HTTPS can be opened via a configured external handler. Gemini TLS certificate handling uses trust-on-first-use (TOFU). Media files are passed to external handlers. Navigation uses vim-like keybindings: `j`/`k` scroll, `b` goes back, `f` goes forward, `g`/`G` jump to top/bottom, and `q` quits.
 
 # HISTORY
 
-**Bombadillo** was created by **slstrg** (asdf on tildegit) and first released around **2019**. Written in **Go**, it was developed as part of the growing interest in the Gemini protocol and the small-internet movement. The name references the character Tom Bombadil from Tolkien's works.
+**Bombadillo** was created by **sloum** (on tildegit) and first released around **2019**. Written in **Go**, it was developed as part of the growing interest in the Gemini protocol and the small-internet movement. The name references the character Tom Bombadil from Tolkien's works.
 
 # SEE ALSO
 
-[lynx](/man/lynx)(1), [w3m](/man/w3m)(1), [amfora](/man/amfora)(1)
+[lynx](/man/lynx)(1), [w3m](/man/w3m)(1)

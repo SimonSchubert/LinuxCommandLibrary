@@ -32,36 +32,11 @@ This command shows the leaves of Homebrew's dependency graph - packages that can
 
 # PARAMETERS
 
-**-r, --installed-on-request**
-> Only list leaves that were manually installed
+**-r**, **--installed-on-request**
+> Only list leaves that were manually installed by the user
 
-**-p, --installed-as-dependency**
-> Only list leaves that were installed as dependencies
-
-# USE CASES
-
-**Audit installations**
-> Identify what you explicitly chose to install
-
-**Find removable packages**
-> Leaves can typically be safely uninstalled
-
-**Backup core packages**
-> Export list for recreating environment
-
-**Understand environment**
-> See core components of development setup
-
-# RELATED COMMANDS
-
-**brew list**
-> Shows all installed packages including dependencies
-
-**brew autoremove --dry-run**
-> Lists packages that are no longer needed
-
-**brew deps --tree $(brew leaves)**
-> Shows dependency tree of your leaves
+**-p**, **--installed-as-dependency**
+> Only list leaves that were installed as dependencies of another formula
 
 # CAVEATS
 

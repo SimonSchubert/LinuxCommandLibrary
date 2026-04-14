@@ -59,6 +59,21 @@ _SUBSYSTEM_
 **topo** **-g** _GROUP_
 > Show interconnect topology.
 
+**fieldgroup** **-c** _NAME_
+> Create a named field group for metric collection.
+
+**modules** **-l**
+> List available DCGM modules and their status.
+
+**policy** **-g** _GROUP_
+> View or set GPU policy conditions.
+
+**stats** **-j** _JOB_ID_
+> Display job-level GPU statistics.
+
+**--host** _HOST_:_PORT_
+> Connect to a remote DCGM host daemon (default: localhost:5555).
+
 **--help**
 > Display help information.
 

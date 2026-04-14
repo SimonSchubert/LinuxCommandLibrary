@@ -4,33 +4,23 @@ retrieves configuration values from Jujutsu config files
 
 # TLDR
 
-**Get config value**
+**Get a configuration value**
 
 ```jj config get [user.name]```
 
-**Get value from user config only**
+**Get the user's email**
 
-```jj config get --user [key]```
-
-**Get value from repo config only**
-
-```jj config get --repo [key]```
+```jj config get [user.email]```
 
 # SYNOPSIS
 
-**jj** **config** **get** [_options_] _name_
-
-# PARAMETERS
-
-**--user**
-> Read from user configuration only.
-
-**--repo**
-> Read from repository configuration only.
+**jj** **config** **get** _name_
 
 # DESCRIPTION
 
-**jj config get** retrieves configuration values from Jujutsu config files. Reads from both user and repo config by default, with repo config taking precedence. Returns the value for the specified key.
+**jj config get** retrieves a single configuration value from Jujutsu config files. The output is printed without extra formatting, making it suitable for use in scripts. Repo config takes precedence over user config when both define the same key.
+
+Unlike `jj config list`, this command outputs only the raw value without labels or quotes.
 
 # SEE ALSO
 

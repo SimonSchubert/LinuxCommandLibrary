@@ -4,9 +4,7 @@ Common misspelling redirect to umount
 
 # TLDR
 
-The correct command is **umount** (u-mount).
-
-View documentation for the correct command
+**View documentation for the correct command**
 
 ```tldr umount```
 

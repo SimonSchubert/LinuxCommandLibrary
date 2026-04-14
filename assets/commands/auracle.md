@@ -20,6 +20,10 @@ Display **updates** for installed AUR packages
 
 ```auracle outdated```
 
+**Clone** a package repository recursively with dependencies
+
+```auracle clone --recurse [package]```
+
 # SYNOPSIS
 
 **auracle** _command_ [_options_] [_packages_]
@@ -45,21 +49,45 @@ Written in C++, auracle focuses on AUR queries rather than full package manageme
 > List installed AUR packages with available updates
 
 **clone** _packages_
-> Clone package repositories
+> Clone package git repositories
+
+**download** _packages_
+> Download packages that are outdated, optionally with `--recurse` to also download new dependencies
+
+**buildorder** _packages_
+> Show the build order and origin of packages needed for a given set of AUR packages
+
+**rawsearch** _pattern_
+> Dump the raw JSON response from the AUR for a search request
+
+**rawinfo** _packages_
+> Dump the raw JSON response from the AUR for an info request
 
 # PARAMETERS
 
-**-q, --quiet**
-> Output less information
+**-q**, **--quiet**
+> Limit output to package names only (used with `search` and `outdated`)
 
-**--sort** _key_
+**--sort** _field_
 > Sort search results by field (name, votes, popularity)
 
-**--rsort** _key_
-> Reverse sort by field
+**--rsort** _field_
+> Sort search results by field in reverse order
 
 **--literal**
-> Treat search pattern as literal string, not regex
+> Treat search terms as literal strings rather than regular expressions
+
+**--recurse**
+> Recursively follow and process dependencies (used with `clone` and `download`)
+
+**--show-file** _file_
+> Control which source file is displayed by the `show` subcommand
+
+**--search-by** _field_
+> Search by a specific field (name, name-desc, maintainer, depends, makedepends, optdepends, checkdepends)
+
+**--color** _when_
+> Control colored output: `auto`, `never`, or `always` (default: auto)
 
 # CAVEATS
 

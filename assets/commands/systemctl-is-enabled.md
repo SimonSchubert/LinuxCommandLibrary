@@ -30,7 +30,7 @@ Show **targets** and symlinks
 > Suppress output, return only exit code
 
 **-l, --full**
-> Show installation targets and symlink paths
+> Do not truncate output; also show installation targets in the output
 
 **--system**
 > Check system units (default)
@@ -63,10 +63,6 @@ Exit code 0 indicates the unit is enabled or will start at boot via other means.
 # CAVEATS
 
 "Enabled" means configured to start, not currently running. Use `is-active` to check runtime state. Static units have no [Install] section and can only be started as dependencies.
-
-# HISTORY
-
-The **is-enabled** subcommand provides a scriptable way to check boot configuration without parsing configuration files or symlinks directly.
 
 # SEE ALSO
 

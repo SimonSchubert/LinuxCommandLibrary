@@ -4,17 +4,48 @@ TUI for viewing logs from journald, Docker, and Kubernetes
 
 # TLDR
 
-**Launch the log viewer**
+**Launch the interactive log viewer**
 
 ```lazyjournal```
 
-**View logs from a specific file**
+**Pipe logs and filter with fuzzy search**
 
-```lazyjournal -f [path/to/logfile]```
+```cat [/var/log/syslog] | lazyjournal -f "[error]"```
+
+**Pipe logs and filter with regex**
+
+```cat [/var/log/syslog] | lazyjournal -r "[error|fatal]"```
+
+**Connect to a remote system via SSH**
+
+```lazyjournal --ssh "[user@host -p 2222]"```
 
 # SYNOPSIS
 
 **lazyjournal** [_options_]
+
+# PARAMETERS
+
+**-f**
+> Enable fuzzy search filtering mode (case-insensitive inexact matching, similar to fzf).
+
+**-r**
+> Enable regex filtering mode.
+
+**-c**
+> Enable output highlighting in command-line mode.
+
+**-l**, **--logging**
+> Write executed commands to a log file for debugging.
+
+**-m**
+> Disable mouse control.
+
+**-t**, **--timezone-filter** _offset_
+> Set UTC offset for date/time range filtering (default: `+00:00`).
+
+**--ssh** _args_
+> Connect to a remote system via SSH. Accepts standard SSH arguments as a single quoted string.
 
 # DESCRIPTION
 
@@ -32,4 +63,4 @@ Log source availability depends on the host system. Docker and Kubernetes log so
 
 # SEE ALSO
 
-[journalctl](/man/journalctl)(1), [lazydocker](/man/lazydocker)(1), [tail](/man/tail)(1)
+[journalctl](/man/journalctl)(1), [lazydocker](/man/lazydocker)(1), [lazygit](/man/lazygit)(1), [tail](/man/tail)(1)

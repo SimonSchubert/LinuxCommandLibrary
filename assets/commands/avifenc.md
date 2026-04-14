@@ -12,9 +12,9 @@ Encode with a **specific speed** (0=slowest, 10=fastest)
 
 ```avifenc --speed [2] [path/to/input.png] [path/to/output.avif]```
 
-Set **quality** level (0-63, lower is better)
+Set **quality** level (0-100, higher is better)
 
-```avifenc --min [20] --max [30] [path/to/input.png] [path/to/output.avif]```
+```avifenc --qcolor [60] [path/to/input.png] [path/to/output.avif]```
 
 # SYNOPSIS
 
@@ -28,27 +28,33 @@ The encoder supports input from PNG, JPEG, and Y4M formats and can produce both 
 
 # PARAMETERS
 
-**--speed** _n_
+**-q**, **--qcolor** _n_
+> Quality for color (0-100, where 100 is lossless; default 60)
+
+**--qalpha** _n_
+> Quality for alpha channel (0-100, where 100 is lossless; default 100)
+
+**-s**, **--speed** _n_
 > Encoding speed (0-10, default 6). Lower values produce better quality but take longer
 
-**--min** _n_
-> Minimum quality (0-63)
+**-l**, **--lossless**
+> Encode losslessly (sets quality to 100 for both color and alpha)
 
-**--max** _n_
-> Maximum quality (0-63)
-
-**--lossless**
-> Encode losslessly
-
-**-d, --depth** _bits_
+**-d**, **--depth** _bits_
 > Output bit depth (8, 10, or 12)
 
-**-j, --jobs** _n_
-> Number of parallel encoding jobs
+**-j**, **--jobs** _n_
+> Number of parallel encoding jobs, or `all` to use all available cores (default: all)
+
+**-o**, **--output** _file_
+> Output filename (alternative to positional argument)
+
+**--min** _n_, **--max** _n_
+> Deprecated: minimum/maximum quantizer (0-63, lower is better quality). Replaced by `--qcolor`
 
 # CAVEATS
 
-Encoding at low speed values can be extremely slow. AVIF support in browsers and image viewers is still growing but not universal. Very high quality settings may produce larger files than the original.
+Encoding at low speed values can be extremely slow. AVIF support in browsers and image viewers is still growing but not universal. Very high quality settings may produce larger files than the original. The older `--min`/`--max` quantizer flags were deprecated in libavif 1.2.0 in favour of `--qcolor`/`--qalpha`.
 
 # HISTORY
 

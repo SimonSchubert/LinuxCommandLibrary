@@ -31,40 +31,46 @@ Use a kernel source **outside** the default directory
 # PARAMETERS
 
 **all**
-> Build kernel, modules, and initramfs
+> Build kernel, modules, and initramfs.
 
 **bzImage**
-> Build only the compressed kernel image
+> Build only the compressed kernel image.
 
 **initramfs**
-> Build only the initial ramdisk
+> Build only the initial ramdisk.
 
 **kernel**
-> Build only the kernel and modules
+> Build only the kernel and modules.
 
 **ramdisk**
-> Build only the ramdisk
+> Build only the ramdisk.
 
 **--menuconfig**
-> Run menuconfig before compilation
+> Run menuconfig before compilation.
+
+**--nconfig**
+> Run nconfig (ncurses-based) before compilation.
 
 **--kernname** _NAME_
-> Tag the kernel and initramfs with _NAME_
+> Tag the kernel and initramfs with _NAME_.
 
 **--kerneldir** _DIR_
-> Use kernel source from _DIR_ instead of /usr/src/linux
+> Use kernel source from _DIR_ instead of /usr/src/linux.
 
 **--makeopts** _OPTS_
-> Pass options to make (e.g., -j4)
+> Pass options to make (e.g., -j4).
 
 **--no-clean**
-> Don't run make clean before compilation
+> Skip `make clean` before compilation.
+
+**--no-mrproper**
+> Skip `make mrproper` before compilation, preserving the existing kernel config.
 
 **--lvm**
-> Add LVM support to initramfs
+> Add LVM support to initramfs.
 
 **--luks**
-> Add LUKS encryption support to initramfs
+> Add LUKS encryption support to initramfs.
 
 # CONFIGURATION
 
@@ -89,4 +95,4 @@ genkernel was developed for Gentoo Linux to provide an alternative to manual ker
 
 # SEE ALSO
 
-[make](/man/make)(1), [dracut](/man/dracut)(8), [mkinitcpio](/man/mkinitcpio)(8)
+[make](/man/make)(1), [emerge](/man/emerge)(1), [eselect](/man/eselect)(1), [dracut](/man/dracut)(8), [mkinitcpio](/man/mkinitcpio)(8)

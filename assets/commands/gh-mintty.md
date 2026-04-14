@@ -1,44 +1,35 @@
 # TAGLINE
 
-GitHub CLI configuration guidance for MinTTY terminal on Windows
+GitHub CLI help topic for MinTTY terminal compatibility on Windows
 
 # TLDR
 
-**Show MinTTY help**
+**Show MinTTY compatibility help**
 
 ```gh help mintty```
 
-**Configure MinTTY for gh**
+**Work around MinTTY input issues** using winpty (may cause UI bugs)
 
-```gh config set prompt disabled```
-
-**Set git protocol**
-
-```gh config set git_protocol https```
+```winpty gh auth login```
 
 # SYNOPSIS
 
 **gh help mintty**
 
-# PARAMETERS
-
-**--help**
-> Display help information.
-
 # DESCRIPTION
 
-**gh-mintty** provides GitHub CLI configuration guidance for MinTTY, the terminal emulator used by Git Bash on Windows. MinTTY has specific requirements for interactive prompts and pseudo-terminal handling that can affect **gh** behavior.
+**gh-mintty** is a help topic in the GitHub CLI describing known compatibility issues between **gh** and MinTTY, the default terminal emulator shipped with Git for Windows. MinTTY lacks proper pseudo-console support, which breaks **gh**'s interactive prompts.
 
-The documentation addresses common issues like authentication prompts, interactive selections, and color output. Workarounds include reinstalling Git for Windows with "Enable experimental support for pseudo consoles" checked, or using a different terminal emulator like Windows Terminal.
+Three workarounds exist:
+
+1. Reinstall Git for Windows with "Enable experimental support for pseudo consoles" checked.
+2. Run `C:\Program Files\Git\bin\bash.exe` from a different terminal emulator (e.g. Windows Terminal), which provides access to Git for Windows tools without MinTTY.
+3. Prefix **gh** commands with `winpty` (e.g. `winpty gh auth login`), though this can cause UI rendering bugs.
 
 # CAVEATS
 
-Windows-specific topic. Some gh features work differently in MinTTY. Git Bash users may need additional configuration.
-
-# HISTORY
-
-MinTTY documentation was added to **GitHub CLI** to address Windows terminal compatibility issues, particularly around pseudo-terminal support.
+Windows-specific topic. The `winpty` workaround may cause UI bugs. The experimental pseudo-console option in Git for Windows is the most complete fix.
 
 # SEE ALSO
 
-[gh](/man/gh)(1), [gh-config](/man/gh-config)(1)
+[gh](/man/gh)(1), [gh-help](/man/gh-help)(1), [gh-config](/man/gh-config)(1)

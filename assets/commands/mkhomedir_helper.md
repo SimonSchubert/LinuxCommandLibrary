@@ -22,7 +22,7 @@ Create a home directory with **specific permissions**
 
 # SYNOPSIS
 
-**mkhomedir_helper** _user_ [_umask_ [_path-to-skel_ [_home_mode_]]]
+**mkhomedir_helper** _user_ [_umask_ [_path-to-skel_ [_home_mode_ [_path-to-vendor-skel_]]]]
 
 # PARAMETERS
 
@@ -37,6 +37,9 @@ Create a home directory with **specific permissions**
 
 **home_mode**
 > Permissions for the home directory itself; computed from umask if not specified
+
+**path-to-vendor-skel**
+> Secondary skeleton directory; when set, home directory is populated from path-to-skel first, then from this directory
 
 # DESCRIPTION
 
@@ -56,4 +59,4 @@ The tool never modifies existing home directories, preventing accidental overwri
 
 # SEE ALSO
 
-[useradd](/man/useradd)(8), [adduser](/man/adduser)(8), [pam_mkhomedir](/man/pam_mkhomedir)(8)
+[useradd](/man/useradd)(1), [adduser](/man/adduser)(1)

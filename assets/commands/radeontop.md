@@ -12,34 +12,53 @@ Enable **colored** output
 
 ```radeontop -c```
 
-Select specific **GPU** by bus
+Select specific **GPU** by bus number
 
 ```radeontop -b [bus_number]```
 
-Set **refresh rate**
+Set **sample rate** (samples per second)
 
 ```radeontop -t [10]```
 
+**Dump** output to a file
+
+```radeontop -d [output.txt]```
+
 # SYNOPSIS
 
-**radeontop** [**-c**|**--color**] [**-b** _bus_] [**-t** _ticks_]
+**radeontop** [_options_]
 
 # PARAMETERS
 
-**-c, --color**
-> Enable colored output
+**-c**, **--color**
+> Enable colorized output.
 
-**-b, --bus _number_**
-> Select GPU by PCI bus number
+**-b**, **--bus** _bus_
+> Select GPU by PCI bus number. For lspci output `01:00.0`, the bus value is `1`.
 
-**-t, --ticks _samples_**
-> Samples per second (higher = more overhead)
+**-t**, **--ticks** _ticks_
+> Number of samples per second. Default is 120. Higher values increase accuracy and overhead.
 
-**-d, --dump _file_**
-> Dump data to file
+**-d**, **--dump** _file_
+> Dump data to a file instead of displaying it. Use `-` for stdout.
 
-**-l, --limit _samples_**
-> Limit to n samples then exit
+**-i**, **--dump-interval** _seconds_
+> Wait N seconds between data output lines when dumping.
+
+**-l**, **--limit** _limit_
+> Quit after dumping this many lines. Only valid in dump mode.
+
+**-p**, **--path** _device_
+> Open a specific DRM device node (e.g. `/dev/dri/card0`).
+
+**-m**, **--mem**
+> Force use of `/dev/mem` path if autodetection fails. Useful with the proprietary driver.
+
+**-v**, **--version**
+> Display program version.
+
+**-h**, **--help**
+> Display help.
 
 # DESCRIPTION
 
@@ -57,4 +76,4 @@ May require root privileges on some systems. Only works with AMD Radeon GPUs usi
 
 # SEE ALSO
 
-[nvidia-smi](/man/nvidia-smi)(1), [glxinfo](/man/glxinfo)(1), [lspci](/man/lspci)(8)
+[amdgpu_top](/man/amdgpu_top)(1), [nvidia-smi](/man/nvidia-smi)(1), [glxinfo](/man/glxinfo)(1), [lspci](/man/lspci)(8)

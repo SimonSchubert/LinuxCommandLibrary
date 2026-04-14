@@ -1,48 +1,42 @@
 # TAGLINE
 
-locate eCryptfs encrypted files
+match eCryptfs encrypted filenames to their decrypted counterparts
 
 # TLDR
 
-**Find eCryptfs** encrypted files
+**Find the encrypted form** of a decrypted filename
 
-```ecryptfs-find [directory]```
+```ecryptfs-find [cleartext-filename]```
 
-**Find with verbose** output
+**Find the decrypted form** of an encrypted filename
 
-```ecryptfs-find -v [directory]```
+```ecryptfs-find [ECRYPTFS_FNEK_ENCRYPTED.fwBGx...]```
 
 # SYNOPSIS
 
-**ecryptfs-find** [_options_] _directory_
+**ecryptfs-find** _filename_
 
 # PARAMETERS
 
-_DIRECTORY_
-> Directory to search.
-
-**-v**, **--verbose**
-> Verbose output.
-
-**--help**
-> Display help information.
+_FILENAME_
+> A cleartext or eCryptfs-encrypted filename to look up. The tool resolves the corresponding counterpart using inode numbers.
 
 # DESCRIPTION
 
-**ecryptfs-find** locates files encrypted with the eCryptfs filesystem within a directory tree. It identifies encrypted files by their characteristic markers.
+**ecryptfs-find** uses inode numbers to match encrypted filenames to their decrypted counterparts, and decrypted filenames to their encrypted counterparts. It calls **ls**(1) to determine the inode and **find**(1) to locate the inode on the filesystem.
 
-The tool is useful for auditing encrypted content, finding orphaned encrypted files, or verifying encryption coverage. It scans file headers to identify eCryptfs encrypted data.
+The eCryptfs filesystem must be mounted for the command to function, since it needs both the encrypted and decrypted views of the directory to perform the match.
 
-This is primarily a diagnostic tool for eCryptfs deployments.
+This is primarily a diagnostic tool for resolving filename mappings in eCryptfs deployments.
 
 # CAVEATS
 
-Only finds eCryptfs encrypted files. Cannot decrypt or read file contents. Requires read access to directories being searched.
+The eCryptfs filesystem must be mounted before running this command. The tool does not decrypt file contents, only filename mappings. Requires read access to the directories being searched.
 
 # HISTORY
 
-ecryptfs-find is part of the **eCryptfs** utilities, a POSIX-compliant stacked filesystem providing transparent encryption. eCryptfs was included in Linux kernel since version 2.6.19.
+ecryptfs-find is part of the **ecryptfs-utils** package. eCryptfs is a POSIX-compliant stacked cryptographic filesystem included in the Linux kernel since version **2.6.19** (released **2006**).
 
 # SEE ALSO
 
-[ecryptfs-setup-private](/man/ecryptfs-setup-private)(1), [mount.ecryptfs](/man/mount.ecryptfs)(8)
+[ecryptfs-setup-private](/man/ecryptfs-setup-private)(1), [ecryptfs-verify](/man/ecryptfs-verify)(1), [ecryptfs](/man/ecryptfs)(1), [encfs](/man/encfs)(1), [fscrypt](/man/fscrypt)(1)

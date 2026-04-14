@@ -28,6 +28,10 @@ directory stack display command
 
 ```dirs -[n]```
 
+**Display full paths** without tilde abbreviation
+
+```dirs -l```
+
 # SYNOPSIS
 
 **dirs** [**-clpv**] [**+**_n_] [**-**_n_]
@@ -59,25 +63,6 @@ directory stack display command
 The directory stack is a list where the top (leftmost in default view) is the current directory. Each pushd adds to the stack and changes to that directory; popd removes from the stack and returns to the previous directory.
 
 Combined with **+n** and **-n** notation, you can reference directories by position, enabling quick navigation in complex directory structures.
-
-# EXAMPLE WORKFLOW
-
-```bash
-$ pwd
-/home/user
-$ pushd /var/log
-/var/log ~
-$ pushd /etc
-/etc /var/log ~
-$ dirs -v
- 0  /etc
- 1  /var/log
- 2  ~
-$ popd
-/var/log ~
-$ popd
-~
-```
 
 # CAVEATS
 

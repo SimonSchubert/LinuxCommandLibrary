@@ -35,34 +35,61 @@ SELinux persistent policy management tool
 # PARAMETERS
 
 **boolean**
-> Manage SELinux booleans
+> Manage SELinux booleans.
 
 **fcontext**
-> Manage file context labeling rules
+> Manage file context labeling rules.
 
 **port**
-> Manage port labeling rules
+> Manage port type definitions.
 
-**permissive**
-> Manage permissive domain modes
+**interface**
+> Manage network interface type definitions.
+
+**node**
+> Manage network node type definitions.
 
 **login**
-> Manage login mappings between Linux users and SELinux users
+> Manage mappings between Linux users and SELinux confined users.
 
 **user**
-> Manage SELinux user definitions
+> Manage SELinux user definitions and their authorized roles.
 
-**-a, --add**
-> Add a new record
+**module**
+> Manage SELinux policy modules.
 
-**-m, --modify**
-> Modify an existing record
+**permissive**
+> Manage permissive mode for confined domains.
 
-**-d, --delete**
-> Delete a record
+**dontaudit**
+> Toggle dontaudit rules in the policy.
 
-**-l, --list**
-> List records
+**export**
+> Export local customizations.
+
+**import**
+> Import local customizations.
+
+**-a**, **--add**
+> Add a new record.
+
+**-m**, **--modify**
+> Modify an existing record.
+
+**-d**, **--delete**
+> Delete a record.
+
+**-l**, **--list**
+> List records.
+
+**-n**, **--noheading**
+> Suppress the heading line when listing.
+
+**-C**, **--locallist**
+> List only local customizations (not base policy records).
+
+**-f**, **--fcontext** _file_
+> With export/import, read from or write to this file.
 
 # DESCRIPTION
 
@@ -84,4 +111,4 @@ Requires root privileges. Changes to file contexts require **restorecon** to app
 
 # SEE ALSO
 
-[semanage-boolean](/man/semanage-boolean)(8), [semanage-fcontext](/man/semanage-fcontext)(8), [semanage-port](/man/semanage-port)(8), [restorecon](/man/restorecon)(8), [getsebool](/man/getsebool)(8)
+[semanage-boolean](/man/semanage-boolean)(8), [semanage-fcontext](/man/semanage-fcontext)(8), [semanage-port](/man/semanage-port)(8), [restorecon](/man/restorecon)(8), [getsebool](/man/getsebool)(8), [setsebool](/man/setsebool)(8), [chcon](/man/chcon)(1)
