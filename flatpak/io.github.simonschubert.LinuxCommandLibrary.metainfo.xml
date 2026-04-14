@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.simonschubert.LinuxCommandLibrary</id>
+
+  <name>Linux Command Library</name>
+  <summary>Linux command reference and cheat sheets</summary>
+
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>Apache-2.0</project_license>
+
+  <developer id="io.github.simonschubert">
+    <name>Simon Schubert</name>
+  </developer>
+
+  <description>
+    <p>
+      Linux Command Library is an offline reference for Linux commands and terminal tips.
+      It currently ships thousands of manual pages, dozens of basic categories, and a
+      collection of general terminal tips. It works 100% offline, needs no internet
+      connection, and has no tracking.
+    </p>
+    <p>Features:</p>
+    <ul>
+      <li>Thousands of Linux manual pages, available offline</li>
+      <li>Categorized cheat sheets and general terminal tips</li>
+      <li>Full-text search across commands and tips</li>
+      <li>Bookmark frequently used commands</li>
+      <li>Available on Android, iOS, Desktop, CLI, and Web</li>
+    </ul>
+  </description>
+
+  <launchable type="desktop-id">io.github.simonschubert.LinuxCommandLibrary.desktop</launchable>
+
+  <url type="homepage">https://linuxcommandlibrary.com</url>
+  <url type="bugtracker">https://github.com/SimonSchubert/LinuxCommandLibrary/issues</url>
+  <url type="vcs-browser">https://github.com/SimonSchubert/LinuxCommandLibrary</url>
+
+  <branding>
+    <color type="primary" scheme_preference="light">#eceff1</color>
+    <color type="primary" scheme_preference="dark">#263238</color>
+  </branding>
+
+  <screenshots>
+    <screenshot type="default">
+      <caption>Desktop overview</caption>
+      <image>https://raw.githubusercontent.com/SimonSchubert/LinuxCommandLibrary/master/art/screen-desktop-1.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Command detail view</caption>
+      <image>https://raw.githubusercontent.com/SimonSchubert/LinuxCommandLibrary/master/art/screen-desktop-2.png</image>
+    </screenshot>
+  </screenshots>
+
+  <content_rating type="oars-1.1" />
+
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+  </supports>
+
+  <releases>
+    <release version="3.7.6" date="2026-04-14">
+      <url type="details">https://github.com/SimonSchubert/LinuxCommandLibrary/releases/tag/v3.7.6</url>
+    </release>
+  </releases>
+</component>

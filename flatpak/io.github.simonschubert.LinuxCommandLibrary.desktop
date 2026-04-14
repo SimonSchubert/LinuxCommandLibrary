@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Linux Command Library
+Comment=Linux command reference and cheat sheets
+Exec=lcl-gui-wrapper
+Icon=io.github.simonschubert.LinuxCommandLibrary
+Type=Application
+Categories=Utility;
+Keywords=Linux;Command;Terminal;Reference;Cheatsheet;
+StartupWMClass=compose-window
+Terminal=false

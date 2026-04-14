@@ -1,0 +1,61 @@
+app-id: io.github.simonschubert.LinuxCommandLibrary
+runtime: org.freedesktop.Platform
+runtime-version: '24.08'
+sdk: org.freedesktop.Sdk
+command: lcl-gui-wrapper
+
+finish-args:
+  - --socket=x11
+  - --socket=wayland
+  - --share=ipc
+  - --device=dri
+  - --persist=.linuxcommandlibrary
+  - --persist=.java
+
+modules:
+  - name: linuxcommandlibrary
+    buildsystem: simple
+    build-commands:
+      # Extract and install the application
+      - tar xf LinuxCommandLibrary-linux-x86_64.tar.gz
+      - mkdir -p /app/lib/linuxcommandlibrary
+      - cp -r LinuxCommandLibrary/* /app/lib/linuxcommandlibrary/
+
+      # Install wrapper script
+      - install -Dm755 lcl-gui-wrapper.sh /app/bin/lcl-gui-wrapper
+
+      # Install desktop file
+      - install -Dm644 io.github.simonschubert.LinuxCommandLibrary.desktop /app/share/applications/io.github.simonschubert.LinuxCommandLibrary.desktop
+
+      # Install metainfo
+      - install -Dm644 io.github.simonschubert.LinuxCommandLibrary.metainfo.xml /app/share/metainfo/io.github.simonschubert.LinuxCommandLibrary.metainfo.xml
+
+      # Install icon
+      - install -Dm644 icon.png /app/share/icons/hicolor/512x512/apps/io.github.simonschubert.LinuxCommandLibrary.png
+
+    sources:
+      - type: file
+        url: https://github.com/SimonSchubert/LinuxCommandLibrary/releases/download/v3.7.6/LinuxCommandLibrary-3.7.6-linux-x86_64.tar.gz
+        sha256: b3523601d0525be75634f5cb82aa4bd8cbc0964a7008ce8781e648a38ae4d560
+        dest-filename: LinuxCommandLibrary-linux-x86_64.tar.gz
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/SimonSchubert/LinuxCommandLibrary/releases/latest
+          version-query: .tag_name | sub("^v"; "")
+          url-query: .assets[] | select(.name | test("linux-x86_64\\.tar\\.gz$")) | .browser_download_url
+
+      - type: file
+        path: io.github.simonschubert.LinuxCommandLibrary.desktop
+
+      - type: file
+        path: io.github.simonschubert.LinuxCommandLibrary.metainfo.xml
+
+      - type: file
+        path: ../desktopApp/icon.png
+
+      - type: script
+        dest-filename: lcl-gui-wrapper.sh
+        commands:
+          - export PATH="/app/lib/linuxcommandlibrary/bin:${PATH}"
+          - export LD_LIBRARY_PATH="/app/lib/linuxcommandlibrary/lib/runtime/lib:${LD_LIBRARY_PATH}"
+          - exec /app/lib/linuxcommandlibrary/bin/LinuxCommandLibrary "$@"

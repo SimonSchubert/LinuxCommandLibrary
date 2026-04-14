@@ -1,0 +1,52 @@
+name: Flatpak Manifest
+
+on:
+  workflow_run:
+    workflows: ["Build and Release"]
+    types: [completed]
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    name: Update Flatpak Manifest
+    if: github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Get version from release
+        id: version
+        run: echo "version=$(echo '${{ github.event.workflow_run.head_branch }}' | sed 's/^v//')" >> $GITHUB_OUTPUT
+
+      - name: Update manifest version and checksum
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          TARBALL_URL="https://github.com/SimonSchubert/LinuxCommandLibrary/releases/download/v${VERSION}/LinuxCommandLibrary-${VERSION}-linux-x86_64.tar.gz"
+
+          # Download tarball and compute SHA256
+          curl -L -o tarball.tar.gz "$TARBALL_URL"
+          SHA256=$(sha256sum tarball.tar.gz | cut -d' ' -f1)
+          rm tarball.tar.gz
+
+          # Update manifest
+          cd flatpak
+          sed -i "s|url: https://github.com/SimonSchubert/LinuxCommandLibrary/releases/download/.*|url: ${TARBALL_URL}|" io.github.simonschubert.LinuxCommandLibrary.yaml
+          sed -i "s|sha256: .*|sha256: ${SHA256}|" io.github.simonschubert.LinuxCommandLibrary.yaml
+
+          echo "Updated manifest to version ${VERSION} with sha256 ${SHA256}"
+
+      - name: Push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add flatpak/io.github.simonschubert.LinuxCommandLibrary.yaml
+          git commit -m "Update Flatpak manifest to ${VERSION}" || exit 0
+          git pull --rebase origin master
+          git push
