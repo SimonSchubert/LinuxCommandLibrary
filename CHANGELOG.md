@@ -1,3 +1,13 @@
+## v3.7.7 — 2026-04-15
+
+### Features
+- Add new Linux commands
+- Add new commands to AI tools section
+
+### Improvements
+- Add LRU cache for content for faster lookups
+- Upgrade Android Gradle Plugin and SDKs
+
 ## v3.7.6 — 2026-04-09
 
 ### Improvements
