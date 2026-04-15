@@ -485,6 +485,7 @@ aws-kinesis.md
 aws-lambda.md
 aws-lightsail.md
 aws-logs.md
+aws-mq.md
 aws-opensearch.md
 aws-organizations.md
 aws-pricing.md
