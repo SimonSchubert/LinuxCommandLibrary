@@ -21,6 +21,7 @@
 ```[tabby](/man/tabby)```
 ```[cline](/man/cline)```
 ```[ra-aid](/man/ra-aid)```
+```[lazyagent](/man/lazyagent)```
 
 ## AI Assistants
 ```[openclaw](/man/openclaw)```
@@ -55,3 +56,8 @@
 ```[smartcat](/man/smartcat)```
 ```[llm](/man/llm)```
 ```[sgpt](/man/sgpt)```
+```[aimock](/man/aimock)```
+```[mcptube](/man/mcptube)```
+```[rekal](/man/rekal)```
+```[revdiff](/man/revdiff)```
+```[smolvm](/man/smolvm)```
