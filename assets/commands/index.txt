@@ -124,6 +124,7 @@ aichat.md
 aide.md
 aider.md
 aim.md
+aimock.md
 air.md
 airbase-ng.md
 aircrack-ng.md
@@ -223,6 +224,7 @@ apm_available.md
 apparmor.md
 apparmor_parser.md
 apparmor_status.md
+appclipcodegen.md
 apply.md
 appman.md
 apport-bug.md
@@ -3833,6 +3835,7 @@ latte-dock.md
 launchctl.md
 lavadecode.md
 laydown.md
+lazyagent.md
 lazycelery.md
 lazycut.md
 lazydocker.md
@@ -4222,6 +4225,7 @@ mcomp.md
 mcookie.md
 mcopy.md
 mcp-probe.md
+mcptube.md
 mcs.md
 md5sum.md
 mdadm.md
@@ -4237,6 +4241,7 @@ mdk4.md
 mdm.md
 mdns-scanner.md
 mdp.md
+mdpdf.md
 mdtt.md
 mediainfo.md
 mediamtx.md
@@ -6361,6 +6366,7 @@ register_new_matrix_user.md
 regname.md
 rehash.md
 reindexdb.md
+rekal.md
 rekor-cli.md
 relic.md
 remind.md
@@ -6398,6 +6404,7 @@ restorecond.md
 retroarch.md
 reuse.md
 rev.md
+revdiff.md
 rexec.md
 rexi.md
 rfkill.md
@@ -6836,6 +6843,7 @@ smbmap.md
 smbnetfs.md
 smbpasswd.md
 smem.md
+smolvm.md
 sn.md
 snake4.md
 snake4scores.md
@@ -7232,6 +7240,7 @@ systemsettings.md
 systeroid.md
 systool.md
 t-rec.md
+t4.md
 tabby.md
 tabiew.md
 tabix.md
@@ -7907,6 +7916,7 @@ vulkaninfo.md
 vzdump.md
 w.md
 w3m.md
+wacli.md
 wafw00f.md
 waifu2x-ncnn-vulkan.md
 wait.md
