@@ -8,6 +8,9 @@ class CommandsRepository(private val assetReader: AssetReader) {
     private var cachedCommands: List<CommandInfo>? = null
     private var cachedCommandNames: Set<String>? = null
 
+    private val sectionsCache = linkedMapOf<String, List<CommandSectionInfo>>()
+    private val sectionsCacheMaxSize = 50
+
     fun getCommands(): List<CommandInfo> {
         cachedCommands?.let { return it }
 
@@ -51,18 +54,31 @@ class CommandsRepository(private val assetReader: AssetReader) {
         return name in names
     }
 
-    fun getSections(commandName: String): List<CommandSectionInfo> = try {
-        val content = assetReader.readFile("commands/$commandName.md") ?: return emptyList()
+    fun getSections(commandName: String): List<CommandSectionInfo> {
+        sectionsCache.remove(commandName)?.let {
+            sectionsCache[commandName] = it
+            return it
+        }
 
-        MarkdownParser.splitByHeaders(content, "# ").map { (title, sectionContent) ->
-            CommandSectionInfo(
-                id = (commandName + title).hashCode().toLong(),
-                title = title,
-                content = sectionContent,
-            )
-        }.filter { it.title.uppercase() != "TAGLINE" }
-            .sortedBy { it.getSortPriority() }
-    } catch (e: Exception) {
-        emptyList()
+        val sections = try {
+            val content = assetReader.readFile("commands/$commandName.md") ?: return emptyList()
+
+            MarkdownParser.splitByHeaders(content, "# ").map { (title, sectionContent) ->
+                CommandSectionInfo(
+                    id = (commandName + title).hashCode().toLong(),
+                    title = title,
+                    content = sectionContent,
+                )
+            }.filter { it.title.uppercase() != "TAGLINE" }
+                .sortedBy { it.getSortPriority() }
+        } catch (e: Exception) {
+            emptyList()
+        }
+
+        sectionsCache[commandName] = sections
+        if (sectionsCache.size > sectionsCacheMaxSize) {
+            sectionsCache.remove(sectionsCache.keys.first())
+        }
+        return sections
     }
 }

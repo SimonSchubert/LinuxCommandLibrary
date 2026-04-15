@@ -13,7 +13,7 @@ class AndroidAssetReader(private val context: Context) : AssetReader {
     }
 
     override fun readFile(path: String): String? = try {
-        context.assets.open(path).bufferedReader().readText()
+        context.assets.open(path).bufferedReader().use { it.readText() }
     } catch (e: Exception) {
         null
     }

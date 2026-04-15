@@ -7,10 +7,15 @@ import com.linuxcommandlibrary.shared.platform.AssetReader
 
 class BasicsRepository(private val assetReader: AssetReader) {
 
+    private var cachedCategories: List<BasicCategory>? = null
+    private val cachedGroupsAndCommands = mutableMapOf<String, Pair<List<BasicGroup>, Map<Long, List<BasicCommand>>>>()
+
     fun getCategories(): List<BasicCategory> {
+        cachedCategories?.let { return it }
+
         val files = assetReader.listFiles("basics")
 
-        return files
+        val categories = files
             .filter { it.endsWith(".md") }
             .mapNotNull { filename ->
                 val id = filename.removeSuffix(".md")
@@ -22,6 +27,9 @@ class BasicsRepository(private val assetReader: AssetReader) {
                 }
             }
             .sortedBy { basicsSortOrder.indexOf(it.title) }
+
+        cachedCategories = categories
+        return categories
     }
 
     private fun readCategoryTitle(filename: String): String? = try {
@@ -32,6 +40,8 @@ class BasicsRepository(private val assetReader: AssetReader) {
     }
 
     fun getGroupsAndCommands(categoryId: String): Pair<List<BasicGroup>, Map<Long, List<BasicCommand>>> {
+        cachedGroupsAndCommands[categoryId]?.let { return it }
+
         val groups = mutableListOf<BasicGroup>()
         val commandsByGroupId = mutableMapOf<Long, MutableList<BasicCommand>>()
 
@@ -63,7 +73,9 @@ class BasicsRepository(private val assetReader: AssetReader) {
             // Return empty on error
         }
 
-        return Pair(groups, commandsByGroupId)
+        val result = Pair<List<BasicGroup>, Map<Long, List<BasicCommand>>>(groups, commandsByGroupId)
+        cachedGroupsAndCommands[categoryId] = result
+        return result
     }
 
     fun getBasicInfo(categoryId: String): BasicInfo? = try {
