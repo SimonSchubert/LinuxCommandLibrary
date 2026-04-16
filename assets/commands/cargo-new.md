@@ -60,6 +60,12 @@ The generated Cargo.toml includes the package name, version, and Rust edition. T
 **-q**, **--quiet**
 > Suppress output
 
+**--color** _when_
+> Coloring: auto, always, never.
+
+**--offline**
+> Run without accessing the network.
+
 # GENERATED STRUCTURE
 
 ```
@@ -72,7 +78,11 @@ project_name/
 
 # CAVEATS
 
-Use `cargo init` for existing directories. Package names must use only alphanumeric characters, hyphens, or underscores.
+Use `cargo init` for existing directories. Package names must use only alphanumeric characters, hyphens, or underscores. Cannot be created inside an existing Cargo workspace unless the workspace explicitly excludes the path.
+
+# HISTORY
+
+**cargo** is the package manager and build tool for the Rust programming language, first released with Rust 1.0 in **2015**. The **new** subcommand has been a core part of Cargo since the beginning, streamlining project initialization.
 
 # SEE ALSO
 

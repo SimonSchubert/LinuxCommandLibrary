@@ -107,4 +107,4 @@ Requires SMTP server access. Password storage needs consideration. Some provider
 
 # SEE ALSO
 
-[sendmail](/man/sendmail)(1), [mutt](/man/mutt)(1), [mailx](/man/mailx)(1), [ssmtp](/man/ssmtp)(1)
+[sendmail](/man/sendmail)(1), [mutt](/man/mutt)(1), [mailx](/man/mailx)(1)

@@ -45,17 +45,20 @@ Network security monitoring and analysis framework
 **-f** _filter_
 > Apply BPF filter
 
-**-U** _status_
-> Write status to file
+**-N**
+> List all available plug-ins and exit.
 
 **-w** _file_
-> Write raw packets to file
+> Write raw packets to file.
 
-**--test**
-> Syntax check scripts without execution
+**-b**, **--bare-mode**
+> Don't load scripts from the base/ directory.
 
 **--parse-only**
-> Parse scripts and exit
+> Parse scripts and exit.
+
+**--version**
+> Print version and exit.
 
 # DESCRIPTION
 

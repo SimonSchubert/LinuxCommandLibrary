@@ -26,10 +26,16 @@ _FILES_
 > POD files to check.
 
 **-warnings**
-> Show warnings.
+> Show warnings. May be specified more than once to increase the warning level (up to **-warnings -warnings**).
 
 **-nowarnings**
-> Suppress warnings.
+> Suppress warnings (default is to show warnings).
+
+**-help**
+> Print usage message and exit.
+
+**-man**
+> Print the manual page and exit.
 
 # DESCRIPTION
 
@@ -47,5 +53,5 @@ podchecker was created for **validating POD** documentation syntax.
 
 # SEE ALSO
 
-[pod2man](/man/pod2man)(1), [pod2html](/man/pod2html)(1), [perldoc](/man/perldoc)(1)
+[pod2man](/man/pod2man)(1), [pod2html](/man/pod2html)(1), [pod2text](/man/pod2text)(1), [podselect](/man/podselect)(1), [perldoc](/man/perldoc)(1)
 

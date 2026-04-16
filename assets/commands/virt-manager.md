@@ -63,6 +63,15 @@ Show **connection** details
 **--show-host-summary**
 > Show connection details
 
+**--show-domain-console** _VM_
+> Open the console window for a domain
+
+**--spice-disable-auto-usbredir**
+> Disable automatic USB redirection via SPICE
+
+**--version**
+> Show program version and exit
+
 # DESCRIPTION
 
 **virt-manager** is a desktop user interface for managing KVM and Xen virtual machines and LXC containers. It provides a graphical interface for creating, configuring, and monitoring virtual machines.
@@ -75,4 +84,4 @@ Requires libvirt and a hypervisor (KVM, Xen, etc.). Remote management requires p
 
 # SEE ALSO
 
-[virsh](/man/virsh)(1), [virt-install](/man/virt-install)(1), [virt-clone](/man/virt-clone)(1)
+[virsh](/man/virsh)(1), [virt-install](/man/virt-install)(1), [virt-clone](/man/virt-clone)(1), [virt-viewer](/man/virt-viewer)(1), [qemu](/man/qemu)(1), [kvm](/man/kvm)(1)

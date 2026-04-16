@@ -30,26 +30,35 @@ Query domain and IP registration information
 
 # PARAMETERS
 
-**-h** _host_
-> Query specified WHOIS server
+**-h** _host_, **--host** _host_
+> Query the specified WHOIS server instead of guessing it from the object.
 
-**-p** _port_
-> Connect to specified port
+**-p** _port_, **--port** _port_
+> Connect to the given TCP port (default: 43).
 
 **-H**
-> Hide legal disclaimers
+> Hide the legal disclaimers that some registries show.
 
 **-r**
-> Disable recursive lookups
+> Disable recursive lookups for contact information (RIPE-style servers).
+
+**-I**
+> Query whois.iana.org first and then follow its referral.
 
 **-a**
-> Search all databases (RIPE)
+> Also search all the mirrored databases (RIPE).
 
 **-T** _type_
-> Search for specific object type
+> Restrict the search to objects of the given type (e.g. _inetnum_, _person_).
+
+**-B**
+> Disable object filtering; include e-mail addresses in results.
+
+**-R**
+> Disable following referrals; show the object from the local copy.
 
 **--verbose**
-> Verbose output
+> Verbose output; show which server is being queried.
 
 # DESCRIPTION
 

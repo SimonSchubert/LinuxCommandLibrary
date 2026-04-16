@@ -61,10 +61,25 @@ Control Supervisor managed processes
 > Apply config changes.
 
 **tail** _NAME_
-> Show process output.
+> Show process output. Use **-f** to follow, **stderr** suffix for stderr stream.
+
+**pid** _NAME_
+> Display PID of the process.
+
+**signal** _SIG NAME_
+> Send a signal (e.g. HUP, TERM) to the process.
+
+**clear** _NAME_
+> Clear the process log files.
 
 **-c** _FILE_
-> Config file.
+> Path to the supervisord configuration file.
+
+**-s** _URL_
+> Supervisor server URL (e.g. unix:///path or http://host:port).
+
+**-u** _USER_ / **-p** _PASSWORD_
+> Username and password for server authentication.
 
 # DESCRIPTION
 

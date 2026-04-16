@@ -56,6 +56,15 @@ Show **detailed** hardware info
 **-d, --detail**
 > Show detailed information
 
+**-f, --force**
+> Force reinstall of a driver
+
+**-h, --help**
+> Show help message
+
+**-v, --version**
+> Show version
+
 # CAVEATS
 
 Specific to Manjaro Linux. Graphics class is 0300. Choose 'free' for open-source or 'nonfree' for proprietary drivers.

@@ -10,7 +10,7 @@ generates IVs files for testing WEP cracking
 
 **Generate with specific count**
 
-```makeivs-ng -b [BSSID] -k [128] -c [100000] -w [key] -o [output.ivs]```
+```makeivs-ng -b [BSSID] -k [128] -n [100000] -w [key] -o [output.ivs]```
 
 **Create IVs for testing**
 
@@ -31,8 +31,14 @@ generates IVs files for testing WEP cracking
 **-k** _BITS_
 > Key length (64/128).
 
-**-c** _COUNT_
-> Number of IVs.
+**-n** _COUNT_
+> Number of IVs to generate.
+
+**-f** _IV_
+> First IV value.
+
+**-s** _SEED_
+> Seed used to setup the random generator.
 
 **-o** _FILE_
 > Output file.
@@ -56,5 +62,5 @@ makeivs-ng is part of **aircrack-ng** suite for wireless security auditing and t
 
 # SEE ALSO
 
-[aircrack-ng](/man/aircrack-ng)(1), [airodump-ng](/man/airodump-ng)(1)
+[aircrack-ng](/man/aircrack-ng)(1), [airodump-ng](/man/airodump-ng)(1), [aireplay-ng](/man/aireplay-ng)(1)
 

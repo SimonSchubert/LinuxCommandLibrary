@@ -83,6 +83,12 @@ Run SQL queries on data stored in Amazon S3
 **--max-results** _n_
 > Maximum results to return
 
+**--next-token** _token_
+> Pagination token from a previous response
+
+**--catalog-name** _name_
+> Data catalog to query (e.g., AwsDataCatalog)
+
 # DESCRIPTION
 
 **aws athena** manages Amazon Athena, an interactive query service for analyzing data in Amazon S3 using standard SQL. Athena is serverless, requiring no infrastructure setup.

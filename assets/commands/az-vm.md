@@ -20,6 +20,10 @@ Manage Azure virtual machines
 
 ```az vm stop --resource-group [MyRG] --name [MyVM]```
 
+**Deallocate** VM (stop compute billing)
+
+```az vm deallocate --resource-group [MyRG] --name [MyVM]```
+
 **Delete** VM
 
 ```az vm delete --resource-group [MyRG] --name [MyVM]```

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Fast and powerful SSL/TLS server scanning tool
+
 # TLDR
 
 **Scan a server** for SSL/TLS configuration
@@ -104,4 +108,4 @@ Scanning servers you don't own may be considered unauthorized testing. Some scan
 
 # SEE ALSO
 
-[testssl.sh](/man/testssl.sh)(1), [nmap](/man/nmap)(1), [openssl](/man/openssl)(1), [sslscan](/man/sslscan)(1)
+[testssl](/man/testssl)(1), [nmap](/man/nmap)(1), [openssl](/man/openssl)(1), [sslscan](/man/sslscan)(1)

@@ -39,34 +39,67 @@ IPv6 packet filter administration tool
 # PARAMETERS
 
 **-L, --list**
-> List all rules in the selected chain
+> List all rules in the selected chain.
 
 **-A, --append**
-> Append a rule to the end of chain
+> Append a rule to the end of chain.
 
 **-D, --delete**
-> Delete a rule from chain
+> Delete a rule from chain.
 
 **-I, --insert**
-> Insert a rule at position
+> Insert a rule at position.
+
+**-R, --replace**
+> Replace a rule in the selected chain.
 
 **-F, --flush**
-> Flush (delete all rules in) a chain
+> Flush (delete all rules in) a chain.
+
+**-N, --new-chain**
+> Create a user-defined chain.
+
+**-X, --delete-chain**
+> Delete a user-defined chain.
 
 **-P, --policy**
-> Set default policy for a chain
+> Set default policy for a chain (ACCEPT/DROP).
+
+**-Z, --zero**
+> Zero the packet and byte counters.
 
 **-p, --protocol**
-> Protocol to match (tcp, udp, icmpv6)
+> Protocol to match (tcp, udp, icmpv6).
 
 **--dport**
-> Destination port
+> Destination port.
+
+**--sport**
+> Source port.
 
 **-s, --source**
-> Source address
+> Source address.
+
+**-d, --destination**
+> Destination address.
+
+**-i, --in-interface**
+> Interface a packet was received on.
+
+**-o, --out-interface**
+> Interface a packet is going to be sent on.
 
 **-j, --jump**
-> Target (ACCEPT, DROP, REJECT, etc.)
+> Target (ACCEPT, DROP, REJECT, LOG, etc.).
+
+**-v, --verbose**
+> Verbose output (show counters and interfaces).
+
+**-n, --numeric**
+> Show numeric addresses and ports instead of resolving names.
+
+**--line-numbers**
+> Show rule numbers when listing.
 
 # CAVEATS
 

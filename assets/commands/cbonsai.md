@@ -24,13 +24,13 @@ animated ASCII art bonsai tree generator
 
 ```cbonsai -m "[Your message]"```
 
-**Enable color and birds**
-
-```cbonsai --color --birds```
-
-**Set animation speed**
+**Set animation speed** (seconds per step in live mode)
 
 ```cbonsai -l -t [0.05]```
+
+**Customize leaf characters**
+
+```cbonsai -c "[&,*,o]"```
 
 # SYNOPSIS
 
@@ -40,42 +40,54 @@ animated ASCII art bonsai tree generator
 
 **cbonsai** generates procedurally created ASCII art bonsai trees in the terminal. Each run produces a unique tree using randomized growth algorithms, and a seed value can be specified for reproducibility.
 
-The tool supports live animation of tree growth, infinite mode for continuous generation, and a screensaver mode that combines both. Written in C using ncurses, it also supports color output, decorative birds, and custom messages displayed alongside the tree.
+The tool supports live animation of tree growth, infinite mode for continuous tree regeneration, and a screensaver mode. Written in C using ncurses, it supports customizable leaf characters, colors, a plant base, and messages displayed alongside the tree.
 
 # PARAMETERS
 
 **-l**, **--live**
-> Animate tree growth continuously
+> Live mode: show each step of growth
+
+**-t** _TIME_, **--time** _TIME_
+> In live mode, seconds between growth steps (default 0.03)
 
 **-i**, **--infinite**
-> Keep growing new trees
+> Infinite mode: keep growing trees
+
+**-w** _TIME_, **--wait** _TIME_
+> In infinite mode, seconds between each tree (default 4.00)
 
 **-S**, **--screensaver**
-> Live + infinite, exit on keypress
+> Screensaver mode; equivalent to -liWC, quits on any keypress
 
-**-m** _msg_, **--message** _msg_
-> Display message next to tree
+**-m** _MSG_, **--message** _MSG_
+> Attach a message next to the tree
 
-**-c**, **--color**
-> Enable color output
+**-b** _N_, **--base** _N_
+> ASCII-art plant base to use; 0 is none
 
-**-b**, **--birds**
-> Show animated birds
+**-c** _LIST_, **--leaf** _LIST_
+> Comma-delimited strings randomly chosen for leaves (default &)
 
-**-t** _time_, **--time** _time_
-> Animation delay in seconds
+**-M** _MULT_, **--multiplier** _MULT_
+> Branch multiplier (0-20; default 5)
 
-**-s** _seed_, **--seed** _seed_
-> Random seed for reproducibility
+**-L** _LIFE_, **--life** _LIFE_
+> Starting life value (0-200; default 32)
 
-**-M** _mult_, **--multiplier** _mult_
-> Growth multiplier
+**-s** _SEED_, **--seed** _SEED_
+> Seed the random number generator
 
-**-L** _life_, **--life** _life_
-> Starting life value
+**-W** _FILE_, **--save** _FILE_
+> Save progress to file (default ~/.cache/cbonsai)
+
+**-C** _FILE_, **--load** _FILE_
+> Load progress from file
 
 **-p**, **--print**
-> Print tree and exit (no ncurses)
+> Print tree to terminal when finished
+
+**-v**, **--verbose**
+> Increase output verbosity
 
 # CAVEATS
 

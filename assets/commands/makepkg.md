@@ -73,6 +73,24 @@ Download source and **deps only**
 **--noextract**
 > Don't extract sources
 
+**-r, --rmdeps**
+> Remove installed dependencies after a successful build
+
+**-g, --geninteg**
+> Generate integrity checks for source files
+
+**-p** _buildscript_
+> Read package script instead of PKGBUILD
+
+**--nocheck**
+> Do not run the check() function in the PKGBUILD
+
+**--sign**
+> Sign the resulting package with gpg
+
+**--holdver**
+> Do not update VCS sources
+
 # CAVEATS
 
 Must be run from directory containing PKGBUILD. Never run as root. Dependencies require pacman access.

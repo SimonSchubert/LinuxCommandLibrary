@@ -28,25 +28,48 @@ Google Compute Engine resource management
 
 **gcloud compute** _resource_ _command_ [_options_]
 
-# PARAMETERS
-
-_RESOURCE_
-> Resource type: instances, disks, networks, etc.
+# SUBCOMMANDS
 
 **instances** _CMD_
-> VM instance management.
+> VM instance lifecycle (create, list, start, stop, delete, describe).
 
 **disks** _CMD_
 > Persistent disk operations.
 
+**images** _CMD_
+> Manage custom and public VM images.
+
+**snapshots** _CMD_
+> Create and manage disk snapshots.
+
+**networks** _CMD_
+> VPC networks, subnets and peering.
+
+**firewall-rules** _CMD_
+> Manage VPC firewall rules.
+
 **ssh** _INSTANCE_
-> SSH into instance.
+> SSH into an instance (automatically manages keys).
 
 **scp** _SRC_ _DEST_
-> Copy files to/from instance.
+> Copy files to or from an instance over SSH.
+
+# PARAMETERS
 
 **--zone** _ZONE_
-> Compute zone.
+> Compute zone for the resource (e.g. us-central1-a).
+
+**--region** _REGION_
+> Compute region for regional resources.
+
+**--project** _PROJECT_
+> Google Cloud project ID to target.
+
+**--format** _FORMAT_
+> Output format (json, yaml, table, value).
+
+**--filter** _EXPR_
+> Filter results by expression.
 
 **--help**
 > Display help information.

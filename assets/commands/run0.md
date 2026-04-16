@@ -34,6 +34,18 @@ Run as user and **group**
 **--machine _machine_**
 > Execute on container/VM
 
+**-D, --chdir _path_**
+> Change working directory before running
+
+**--setenv _NAME=VALUE_**
+> Set environment variable for the invoked process
+
+**--background _color_**
+> Change terminal background tint (set to empty to disable)
+
+**--nice _N_**
+> Run command with adjusted scheduling priority
+
 # DESCRIPTION
 
 **run0** elevates privileges without being a SUID binary. Unlike sudo, it authenticates via polkit and spawns commands through a systemd service, providing better security isolation.

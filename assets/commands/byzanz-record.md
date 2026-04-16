@@ -53,6 +53,15 @@ By default, recording lasts 10 seconds. The tool supports recording specific win
 **-c, --cursor**
 > Record cursor movements
 
+**-a, --audio**
+> Record audio along with video (when supported by output format).
+
+**--exec** _command_
+> Run the specified command and record until it exits (overrides duration).
+
+**--display** _DISPLAY_
+> Specify the X display to record.
+
 # OUTPUT FORMATS
 
 - **.gif** - Animated GIF

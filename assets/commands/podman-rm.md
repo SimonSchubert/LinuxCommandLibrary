@@ -56,7 +56,7 @@ Remove one or more containers
 > Use the last created container instead of specifying name or ID.
 
 **-t**, **--time** _seconds_
-> Seconds to wait before forcibly stopping the container. Use -1 for infinite wait.
+> Seconds to wait before forcibly stopping the container (requires --force). Use -1 for infinite wait.
 
 **-v**, **--volumes**
 > Remove anonymous volumes associated with the container.

@@ -27,7 +27,10 @@ Display **help** for this command
 # PARAMETERS
 
 **category**
-> Filter commands by category: admin, all, bind, build, download, info, misc, monitor, search
+> Filter commands by category (e.g., admin, all, bind, build, download, info, misc, monitor, search).
+
+**--admin**
+> Show admin commands.
 
 **-h, --help**
 > Display help information

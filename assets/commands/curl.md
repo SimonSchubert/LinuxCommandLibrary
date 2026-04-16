@@ -76,6 +76,27 @@ The tool is ubiquitous in scripts, CI/CD pipelines, and system administration.
 **-k**, **--insecure**
 > Allow insecure SSL connections
 
+**-C**, **--continue-at** _offset_
+> Resume a previous download (use `-` for auto)
+
+**--cookie** _data|file_
+> Send cookies (inline string or file path)
+
+**--cookie-jar** _file_
+> Write received cookies to file
+
+**--max-time** _seconds_
+> Maximum time allowed for the transfer
+
+**--retry** _N_
+> Retry failed transfers up to N times
+
+**-A**, **--user-agent** _string_
+> Send User-Agent header
+
+**-e**, **--referer** _url_
+> Send Referer header
+
 # CONFIGURATION
 
 **~/.curlrc**
@@ -94,4 +115,4 @@ Silent failures by default (use -f to change). Large downloads show progress by 
 
 # SEE ALSO
 
-[wget](/man/wget)(1), [http](/man/http)(1), [fetch](/man/fetch)(1)
+[wget](/man/wget)(1), [http](/man/http)(1)

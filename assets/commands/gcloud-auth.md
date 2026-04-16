@@ -51,6 +51,12 @@ _COMMAND_
 **--key-file** _FILE_
 > Service account key file.
 
+**application-default**
+> Manage Application Default Credentials for local development and client libraries.
+
+**configure-docker**
+> Register gcloud as a Docker credential helper for pushing/pulling to Artifact Registry and Container Registry.
+
 **--help**
 > Display help information.
 

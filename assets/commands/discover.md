@@ -20,9 +20,9 @@ hardware identification system for Linux
 
 ```discover -v [device_type]```
 
-**Format output** as data
+**Format output** as machine-readable data
 
-```discover --data-version [2.0] [network]```
+```discover --format data [network]```
 
 # SYNOPSIS
 

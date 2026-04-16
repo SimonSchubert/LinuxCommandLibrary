@@ -90,7 +90,13 @@ Manage GitHub releases and distribution assets
 > Mark as latest release.
 
 **--verify-tag**
-> Abort if tag does not already exist.
+> Abort release if the given tag does not exist in the remote repository.
+
+**--notes-start-tag** _tag_
+> Tag to use as the starting point for generating release notes.
+
+**--discussion-category** _name_
+> Start a discussion in the specified category.
 
 **-R**, **--repo** _OWNER/REPO_
 > Select a different repository.

@@ -12,6 +12,10 @@ Run PhotoRec on a **disk image**
 
 ```sudo photorec [path/to/image.dd]```
 
+Run with **log file** and custom recovery directory
+
+```sudo photorec /log /d [path/to/recovery] /dev/sdb```
+
 # SYNOPSIS
 
 **photorec** [**/log**] [**/debug**] [**/d** _directory_] _device_|_image_

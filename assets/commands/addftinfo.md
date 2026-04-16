@@ -46,4 +46,4 @@ The input must be a valid troff font description file. Output metrics are comput
 
 # SEE ALSO
 
-[groff](/man/groff)(1), [afmtodit](/man/afmtodit)(1), [tfmtodit](/man/tfmtodit)(1)
+[groff](/man/groff)(1), [troff](/man/troff)(1), [afmtodit](/man/afmtodit)(1), [tfmtodit](/man/tfmtodit)(1)

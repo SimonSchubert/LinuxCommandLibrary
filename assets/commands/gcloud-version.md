@@ -8,13 +8,17 @@ displays SDK version information
 
 ```gcloud version```
 
-**Show all component** versions
+**Show versions as JSON**
 
 ```gcloud version --format=json```
 
-**Brief version**
+**Brief version (top-level flag)**
 
 ```gcloud --version```
+
+**Show versions as YAML**
+
+```gcloud version --format=yaml```
 
 # SYNOPSIS
 

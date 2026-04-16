@@ -66,6 +66,14 @@ Manage file-based Elasticsearch users
 
 When listing users, only those registered on the local node are shown. In a multi-node cluster, file-based users must be managed on each node separately.
 
+# CAVEATS
+
+Users are stored in **config/users** and roles in **config/users_roles**. Changes apply only to the local node; synchronize these files across cluster nodes manually. Requires the X-Pack security features to be enabled.
+
+# HISTORY
+
+**elasticsearch-users** ships with Elasticsearch's security features (originally part of the commercial **X-Pack** plugin, made free under the Basic license in Elasticsearch **6.8/7.1**). It provides lightweight authentication without requiring LDAP, Active Directory, or other external realms.
+
 # SEE ALSO
 
 [elasticsearch](/man/elasticsearch)(1), [elasticsearch-reset-password](/man/elasticsearch-reset-password)(1)

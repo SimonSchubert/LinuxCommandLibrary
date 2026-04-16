@@ -88,4 +88,4 @@ Many operations require specific capabilities to perform. Understanding Linux ca
 
 # SEE ALSO
 
-[getcap](/man/getcap)(8), [setcap](/man/setcap)(8), [getpcaps](/man/getpcaps)(8)
+[getcap](/man/getcap)(8), [setcap](/man/setcap)(8), [capabilities](/man/capabilities)(7)

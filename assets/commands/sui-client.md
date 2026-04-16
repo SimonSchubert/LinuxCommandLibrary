@@ -46,13 +46,37 @@ Sui blockchain wallet and transaction client
 > Transfer SUI tokens.
 
 **call**
-> Call Move function.
+> Call a Move function on a published package.
 
 **publish**
-> Publish Move package.
+> Publish a Move package on-chain.
+
+**addresses**
+> List all addresses in the local keystore.
+
+**new-address**
+> Generate a new keypair (ed25519, secp256k1, or secp256r1).
+
+**gas**
+> List gas objects owned by an address.
+
+**pay-sui**
+> Pay SUI to multiple recipients in one transaction.
+
+**merge-coin**
+> Merge two coin objects into one.
+
+**split-coin**
+> Split a coin object into multiple coins.
 
 **--env** _name_
-> Target environment.
+> Target environment (e.g., mainnet, testnet, devnet, localnet).
+
+**--gas-budget** _N_
+> Maximum gas units to spend on a transaction.
+
+**--json**
+> Emit output as JSON.
 
 # DESCRIPTION
 

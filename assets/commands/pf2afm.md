@@ -14,18 +14,18 @@ extracts AFM from PFB
 
 # SYNOPSIS
 
-**pf2afm** [_options_] _font_
+**pf2afm** _font_
 
 # PARAMETERS
 
 _FONT_
-> PostScript font file (.pfb).
+> PostScript Type 1 font file (.pfb or .pfa) from which metrics are extracted.
 
 # DESCRIPTION
 
-**pf2afm** extracts AFM from PFB. Generates Adobe Font Metrics.
+**pf2afm** extracts Adobe Font Metric (AFM) data from a PostScript Type 1 font binary (.pfb) or ASCII (.pfa) file. It writes the generated AFM content to standard output, which is typically redirected to a .afm file.
 
-The tool creates metric files. Part of Ghostscript.
+The utility is a small wrapper that invokes Ghostscript with the internal **pf2afm.ps** script. It is helpful when only a font's binary form is available but AFM metrics are required by TeX, Ghostscript, or other typesetting tools.
 
 # CAVEATS
 

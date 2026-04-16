@@ -66,4 +66,4 @@ Netmiko was created by **Kirk Byers** in **2014** to simplify Python-based netwo
 
 # SEE ALSO
 
-[napalm](/man/napalm)(1), [paramiko](/man/paramiko)(1), [ansible](/man/ansible)(1)
+[napalm](/man/napalm)(1), [ansible](/man/ansible)(1), [ssh](/man/ssh)(1)

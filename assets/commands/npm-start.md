@@ -31,6 +31,12 @@ runs the "start" script defined in package
 **--ignore-scripts**
 > Don't run scripts.
 
+**-w, --workspace** _name_
+> Run start script for a specific workspace.
+
+**--workspaces**
+> Run start script in all configured workspaces.
+
 # DESCRIPTION
 
 **npm start** runs the "start" script defined in package.json. If no start script is defined, it defaults to "node server.js".

@@ -70,5 +70,5 @@ Documentation quality depends on the presence of docstrings in the module source
 
 # SEE ALSO
 
-[python](/man/python)(1), [help](/man/help)(1), [pydoc3](/man/pydoc3)(1)
+[python](/man/python)(1), [python3](/man/python3)(1), [pydoc3](/man/pydoc3)(1)
 

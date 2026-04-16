@@ -76,6 +76,12 @@ Apply Terraform infrastructure changes
 **-refresh-only**
 > Only update the state to match remote objects.
 
+**-state** _path_
+> Path to the state file (legacy, local backend only).
+
+**-backup** _path_
+> Path to backup the previous state file.
+
 # DESCRIPTION
 
 **terraform apply** executes the actions proposed in a Terraform plan to create, update, or destroy infrastructure. When run without a saved plan file, it automatically creates a new plan, prompts for approval, and then performs the proposed changes. When given a saved plan file (from **terraform plan -out**), it executes the plan without prompting.

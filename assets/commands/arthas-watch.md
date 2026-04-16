@@ -20,9 +20,13 @@ Watch **exceptions**
 
 ```watch [com.example.MyClass] [myMethod] '{params, throwExp}' -e```
 
+Watch with **expanded object depth**
+
+```watch [com.example.MyClass] [myMethod] '{params, returnObj}' -x 3```
+
 # SYNOPSIS
 
-**watch** [_-n count_] [_-b_|_-e_|_-s_|_-f_] _class-pattern_ _method-pattern_ _express_ [_condition-express_]
+**watch** [_-n count_] [_-x depth_] [_-b_|_-e_|_-s_|_-f_] _class-pattern_ _method-pattern_ _express_ [_condition-express_]
 
 # DESCRIPTION
 
@@ -55,6 +59,12 @@ This enables debugging production issues without stopping the application or add
 
 **-n** _count_
 > Stop after count invocations
+
+**-x** _depth_
+> Expand object depth (default: 1, max: 4)
+
+**-M** _size_
+> Maximum size limit for output
 
 **condition-express**
 > Filter condition (OGNL)

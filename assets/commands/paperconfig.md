@@ -12,9 +12,9 @@ sets system paper size
 
 ```paperconfig -p letter```
 
-**Interactive selection**
+**Reconfigure interactively** (Debian/Ubuntu)
 
-```paperconfig```
+```dpkg-reconfigure libpaper1```
 
 # SYNOPSIS
 
@@ -30,9 +30,9 @@ sets system paper size
 
 # DESCRIPTION
 
-**paperconfig** sets system paper size. Configures default paper format.
+**paperconfig** sets the system-wide default paper size used by the libpaper library (e.g., a4, letter, legal). Applications that query libpaper (such as many printing and TeX tools) use this value as their default.
 
-The tool modifies /etc/papersize. Part of libpaper.
+The tool rewrites **/etc/papersize** to hold the chosen paper name. Available paper names can be listed with **paperconf -a**.
 
 # CAVEATS
 

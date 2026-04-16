@@ -19,7 +19,11 @@ _file_
 
 # DESCRIPTION
 
-**xml xmln** displays namespace information in XML documents. Part of xmlstarlet toolkit. Shows declared namespaces with their prefixes and URIs.
+**xml xmln** displays namespace information in XML documents. Part of the xmlstarlet toolkit. Shows declared namespaces with their prefixes and URIs, which is useful for crafting XPath expressions that target namespaced elements.
+
+# CAVEATS
+
+Operates only on well-formed XML. Default namespaces (without a prefix) are reported without a prefix; use an alias when building XPath queries.
 
 # SEE ALSO
 

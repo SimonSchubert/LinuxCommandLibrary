@@ -24,9 +24,9 @@ Zero-configuration JavaScript style linter
 
 ```standard --verbose```
 
-**Global install run**
+**Declare globals**
 
-```standard --global [package-name]```
+```standard --global [globalName]```
 
 # SYNOPSIS
 
@@ -43,8 +43,14 @@ Zero-configuration JavaScript style linter
 **--verbose**
 > Show rule names.
 
-**--global** _PKG_
-> Global packages.
+**--global** _NAME_
+> Declare a global variable (can be repeated).
+
+**--plugin** _NAME_
+> Include an ESLint plugin.
+
+**--fix-dry-run**
+> Report what would be fixed without writing changes.
 
 **--env** _ENV_
 > Environment globals.

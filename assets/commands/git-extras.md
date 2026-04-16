@@ -4,32 +4,40 @@ Collection of useful Git utilities and commands
 
 # TLDR
 
-**Install git-extras**
+**Show git-extras version**
 
 ```git extras --version```
 
-**Update git-extras**
+**Update git-extras** to the latest release
 
 ```git extras update```
 
-**List available commands**
+**List all git-extras commands**
 
 ```git extras --help```
 
+**Show a repository summary**
+
+```git summary```
+
+**Generate a changelog from tags**
+
+```git changelog```
+
 # SYNOPSIS
 
-**git** **extras** [_options_]
+**git** **extras** [**--version**] [**--help**] [**update**]
 
 # PARAMETERS
 
 **--version**
-> Show version.
+> Print the installed git-extras version.
 
 **--help**
-> Show available commands.
+> Print the list of extra subcommands provided by git-extras.
 
 **update**
-> Update git-extras.
+> Fetch and install the latest git-extras release from upstream.
 
 # DESCRIPTION
 
@@ -41,4 +49,4 @@ Installation methods vary by platform, with packages available through Homebrew,
 
 # SEE ALSO
 
-[git](/man/git)(1), [git-summary](/man/git-summary)(1)
+[git](/man/git)(1), [git-summary](/man/git-summary)(1), [git-changelog](/man/git-changelog)(1), [git-effort](/man/git-effort)(1), [git-ignore](/man/git-ignore)(1), [git-undo](/man/git-undo)(1)

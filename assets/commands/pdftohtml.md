@@ -68,6 +68,10 @@ The XML output mode provides structured data about text positioning and formatti
 
 Complex PDF layouts may not convert accurately. Scanned PDFs (images) require OCR and won't produce text output. Font embedding and unusual characters may cause display issues. Large PDFs generate many output files without **-s** option.
 
+# HISTORY
+
+**pdftohtml** originated in the **xpdf** project and is now maintained as part of **poppler-utils**, a fork that provides shared library access to PDF rendering functionality on Linux systems.
+
 # SEE ALSO
 
 [pdftotext](/man/pdftotext)(1), [pdftoppm](/man/pdftoppm)(1), [pdfinfo](/man/pdfinfo)(1), [pandoc](/man/pandoc)(1)

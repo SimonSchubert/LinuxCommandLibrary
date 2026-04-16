@@ -1,3 +1,7 @@
+# TAGLINE
+
+authentication key generation, management and conversion for OpenSSH
+
 # TLDR
 
 **Generate an SSH key pair** (Ed25519, recommended)

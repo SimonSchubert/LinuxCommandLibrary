@@ -46,7 +46,13 @@ troff preprocessor for drawing diagrams
 > Output device.
 
 **-z**
-> GNU extensions.
+> Draw invisible lines and boxes as zero-size objects (GNU extension).
+
+**--help**
+> Display usage information.
+
+**--version**
+> Print version information.
 
 # DESCRIPTION
 

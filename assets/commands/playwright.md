@@ -30,26 +30,47 @@ Cross-browser automation and testing framework
 
 # PARAMETERS
 
-**install**
-> Install browsers.
+**install** [_browser_]
+> Install browsers (chromium, firefox, webkit) and dependencies.
 
-**test**
-> Run tests.
+**install-deps**
+> Install OS-level dependencies required by browsers (Linux).
 
-**codegen**
-> Record and generate code.
+**test** [_files_]
+> Run Playwright tests.
 
-**show-report**
-> Show test report.
+**codegen** [_url_]
+> Record user actions and generate test code.
+
+**show-report** [_dir_]
+> Open the HTML report in a browser.
+
+**open** [_url_]
+> Open a page in Playwright inspector.
 
 **--ui**
-> Interactive UI mode.
+> Launch interactive UI mode for running and debugging tests.
 
 **--debug**
-> Debug mode.
+> Run tests in debug mode with Playwright Inspector.
 
 **--headed**
-> Show browser window.
+> Run browsers in headed mode (visible window).
+
+**--project** _NAME_
+> Run only the given project (browser) from the config.
+
+**--workers** _N_
+> Number of parallel test worker processes.
+
+**--reporter** _NAME_
+> Reporter to use (list, dot, line, html, json, junit).
+
+**--grep** _PATTERN_
+> Only run tests matching the regex pattern.
+
+**--retries** _N_
+> Number of times to retry failing tests.
 
 # DESCRIPTION
 
@@ -106,4 +127,4 @@ Playwright was developed by **Microsoft**, created by the team behind Puppeteer,
 
 # SEE ALSO
 
-[puppeteer](/man/puppeteer)(1), [cypress](/man/cypress)(1), [selenium](/man/selenium)(1)
+[puppeteer](/man/puppeteer)(1), [node](/man/node)(1), [npx](/man/npx)(1)

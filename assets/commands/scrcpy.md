@@ -54,23 +54,23 @@ Display and control Android devices remotely
 **-r**, **--record** _FILE_
 > Record to file (mp4/mkv).
 
-**-b**, **--bit-rate** _RATE_
-> Video bitrate (default: 8M).
+**-b** _RATE_, **--video-bit-rate** _RATE_
+> Video bitrate (default: 8M). Older versions use **--bit-rate**.
 
 **-n**, **--no-control**
 > Disable control (mirror only).
 
-**-N**, **--no-display**
-> Disable display (record only).
+**-N**, **--no-playback**
+> Disable playback on computer (useful for headless recording). Previously **--no-display**.
 
-**-t**, **--show-touches**
-> Show touches on device.
+**--show-touches**
+> Show physical touches on the device.
 
-**--turn-screen-off**, **-S**
-> Turn device screen off.
+**-S**, **--turn-screen-off**
+> Turn device screen off while mirroring.
 
-**--stay-awake**, **-w**
-> Keep device awake.
+**-w**, **--stay-awake**
+> Keep device awake while plugged in.
 
 **--window-title** _TITLE_
 > Custom window title.
@@ -123,4 +123,4 @@ Requires ADB and USB debugging enabled. Audio forwarding needs Android 11+. Some
 
 # SEE ALSO
 
-[adb](/man/adb)(1), [sndcpy](/man/sndcpy)(1), [vysor](/man/vysor)(1)
+[adb](/man/adb)(1), [sndcpy](/man/sndcpy)(1), [ffmpeg](/man/ffmpeg)(1)

@@ -87,4 +87,4 @@ Requires the **Austin 3** binary to be installed and available on the PATH. On m
 
 # SEE ALSO
 
-[austin](/man/austin)(1), [top](/man/top)(1), [htop](/man/htop)(1), [py-spy](/man/py-spy)(1), [perf](/man/perf)(1)
+[top](/man/top)(1), [htop](/man/htop)(1), [py-spy](/man/py-spy)(1), [perf](/man/perf)(1)

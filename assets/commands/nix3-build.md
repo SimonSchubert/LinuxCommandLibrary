@@ -4,49 +4,82 @@ builds derivations from flakes
 
 # TLDR
 
-**Build flake**
+**Build the default package of a flake** in the current directory
 
-```nix3 build```
+```nix build```
 
-**Build specific package**
+**Build a specific output of the current flake**
 
-```nix3 build [.#package]```
+```nix build .#[package]```
 
 **Build from nixpkgs**
 
-```nix3 build nixpkgs#[hello]```
+```nix build nixpkgs#[hello]```
 
-**Build without result link**
+**Build without creating a result symlink**
 
-```nix3 build --no-link```
+```nix build --no-link```
+
+**Build and print full build logs**
+
+```nix build -L [installable]```
+
+**Build and print output store paths**
+
+```nix build --print-out-paths [installable]```
+
+**Dry-run** without actually building
+
+```nix build --dry-run [installable]```
 
 # SYNOPSIS
 
-**nix3** **build** [_options_] [_installable_]
+**nix build** [_options_] [_installable_...]
 
 # PARAMETERS
 
 _INSTALLABLE_
-> Flake reference to build.
+> Flake reference, attribute path, or store path to build (e.g. _.#default_, _nixpkgs#hello_).
 
 **--no-link**
-> Don't create result symlink.
+> Do not create a result symlink.
 
-**-o** _NAME_
-> Output link name.
+**-o** _PATH_, **--out-link** _PATH_
+> Use _PATH_ as the prefix for the result symlink (default: _result_).
+
+**--rebuild**
+> Rebuild an already-built derivation and compare outputs.
+
+**--print-out-paths**
+> Print the resulting store paths to stdout.
+
+**-L**, **--print-build-logs**
+> Show full build logs on standard error.
+
+**--json**
+> Print build results as JSON.
+
+**--dry-run**
+> Show what would be built or fetched without actually doing it.
+
+**--impure**
+> Allow evaluation of impure expressions (e.g. references to environment variables).
+
+**--refresh**
+> Consider all previously downloaded files as stale.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**nix3 build** builds derivations from flakes. Alternative name for nix build.
+**nix build** (invoked as **nix3-build** in this manual namespace to distinguish it from the legacy **nix-build**) builds the specified installables, which may be flake references, attribute paths, or store paths. On success it creates a symlink named _result_ (or _result-N_ for additional outputs) pointing to the build output in the Nix store.
 
-The tool produces store paths. Creates result symlink to output.
+When multiple installables are given, each is built in parallel subject to the configured build concurrency.
 
 # CAVEATS
 
-Alias for nix build. Flakes must be enabled. Experimental feature.
+Part of the new **nix** CLI; requires the _nix-command_ and _flakes_ experimental features to be enabled (via _nix.conf_ or _--extra-experimental-features_). Behavior may change between Nix releases.
 
 # HISTORY
 

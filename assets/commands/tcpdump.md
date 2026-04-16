@@ -115,13 +115,27 @@ tcpdump is essential for network troubleshooting, security analysis, and protoco
 
 # FILTER EXPRESSIONS
 
-**host** _ip_: Filter by host
-**net** _cidr_: Filter by subnet
-**port** _num_: Filter by port
-**portrange** _lo-hi_: Filter by port range
-**src/dst**: Source or destination
-**tcp/udp/icmp**: Protocol types
-**and/or/not**: Boolean operators
+**host** _ip_
+> Match packets to/from the given host.
+
+**net** _cidr_
+> Match packets within the given network (e.g., `net 10.0.0.0/8`).
+
+**port** _num_
+> Match packets with the given source or destination port.
+
+**portrange** _lo-hi_
+> Match packets within a port range.
+
+**src** / **dst**
+> Restrict the preceding primitive to source or destination.
+
+**tcp** / **udp** / **icmp**
+> Match packets of the given protocol.
+
+**and** / **or** / **not**
+> Combine primitives with boolean logic.
+
 Example: `tcpdump 'tcp port 80 and host 192.168.1.1'`
 
 # CAVEATS

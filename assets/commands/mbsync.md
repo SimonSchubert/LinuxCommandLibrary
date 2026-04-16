@@ -57,7 +57,7 @@ synchronizes IMAP mailboxes with local Maildir folders
 
 # DESCRIPTION
 
-**mbsync** (isstringsstringsync) synchronizes IMAP mailboxes with local Maildir folders. It provides bidirectional sync with fine-grained control over what gets synchronized.
+**mbsync** (part of isync) synchronizes IMAP mailboxes with local Maildir folders. It provides bidirectional sync with fine-grained control over what gets synchronized, supporting per-mailbox state tracking for reliable resumable transfers.
 
 mbsync is commonly used with mu, notmuch, or other local mail tools for offline email access.
 

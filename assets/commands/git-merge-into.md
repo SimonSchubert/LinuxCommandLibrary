@@ -4,29 +4,39 @@ Merge current branch into target
 
 # TLDR
 
-**Merge current into target**
+**Merge current branch into target**
 
 ```git merge-into [target-branch]```
 
-**Merge current into main**
+**Merge current branch into main**
 
 ```git merge-into main```
 
+**Merge the specified source into the target**
+
+```git merge-into [source-branch] [target-branch]```
+
 # SYNOPSIS
 
-**git merge-into** _target-branch_
+**git merge-into** [_source-branch_] _target-branch_ [**--ff-only**]
 
 # PARAMETERS
 
+_SOURCE-BRANCH_
+> Optional branch to merge (defaults to the current branch).
+
 _TARGET-BRANCH_
-> Branch to merge into.
+> Branch that will receive the merge.
+
+**--ff-only**
+> Refuse the merge unless it can be resolved as a fast-forward.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**git merge-into** merges the current branch into another branch without manually switching. It reverses the normal merge workflow where you would first checkout the target branch, perform the merge, then switch back.
+**git merge-into** merges the current (or specified) branch into another branch without manually switching contexts. It reverses the normal merge workflow, where one would first checkout the target branch, perform the merge, then switch back.
 
 The command checks out the target, performs the merge, then returns to the original branch automatically. This saves the repetitive workflow of switching branches for a simple merge operation.
 

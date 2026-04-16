@@ -27,19 +27,28 @@ Haskell type-safe web framework CLI
 # PARAMETERS
 
 **init**
-> Create project.
+> Scaffold a new Yesod project interactively.
 
 **devel**
-> Development server.
+> Run the development server with automatic recompilation on file changes.
 
 **add-handler**
-> Add route handler.
+> Generate a new route handler with boilerplate code.
 
 **keter**
-> Deployment bundle.
+> Build a Keter deployment bundle (.keter archive).
 
 **test**
-> Run tests.
+> Run the project's test suite.
+
+**version**
+> Display yesod-bin version information.
+
+**-v, --verbose**
+> Enable verbose output.
+
+**--help**
+> Show usage information.
 
 # DESCRIPTION
 

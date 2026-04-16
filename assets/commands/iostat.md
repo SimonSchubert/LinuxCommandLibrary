@@ -72,8 +72,11 @@ Omit the **first boot report** and show only active devices
 **-N**
 > Display registered device mapper names (LVM)
 
-**-p [device|ALL]**
-> Display statistics for block devices and partitions
+**-p** [_device_|ALL]
+> Display statistics for block devices and all their partitions.
+
+**-h**
+> Make the NFS and Device reports easier to read by a human.
 
 **-t**
 > Print timestamp for each report

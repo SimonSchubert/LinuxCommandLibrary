@@ -49,13 +49,13 @@ Lossy PNG compression via color quantization
 > Output file name.
 
 **--ext** _SUFFIX_
-> Set output filename suffix (default: -fs8.png).
+> Set output filename suffix (default: -or8.png or -fs8.png depending on dithering).
 
 **-f**, **--force**
 > Overwrite existing files.
 
 **-s** _N_, **--speed** _N_
-> Speed/quality tradeoff (1=slowest, 11=fastest).
+> Speed/quality tradeoff (1=slowest/best, 10=fastest; default 3).
 
 **--skip-if-larger**
 > Don't write if output larger than input.
@@ -69,8 +69,8 @@ Lossy PNG compression via color quantization
 **--nofs**
 > Disable Floyd-Steinberg dithering.
 
-**--floyd** _SPREAD_
-> Set dithering level (0-1).
+**--floyd**=_LEVEL_
+> Set dithering level (0.0-1.0).
 
 **-v**, **--verbose**
 > Verbose output.

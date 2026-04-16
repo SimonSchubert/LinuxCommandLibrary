@@ -55,6 +55,21 @@ generates API documentation from Java source code
 **-author**
 > Include @author tags.
 
+**-version**
+> Include @version tags.
+
+**-subpackages** _PKGS_
+> Recursively process subpackages (colon-separated).
+
+**-encoding** _NAME_
+> Source file encoding.
+
+**-windowtitle** _TITLE_
+> Browser window title.
+
+**-doctitle** _TITLE_
+> Title on the overview page.
+
 **--help**
 > Display help information.
 

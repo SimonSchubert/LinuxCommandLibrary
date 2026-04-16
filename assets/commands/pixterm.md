@@ -16,9 +16,9 @@ Render images in terminal using ANSI colors
 
 ```pixterm -tc [2] -tr [6] [image.png]```
 
-**Use specific palette**
+**Use specific color depth**
 
-```pixterm -d [24bit] [image.png]```
+```pixterm -d [24] [image.png]```
 
 **Dithering mode**
 

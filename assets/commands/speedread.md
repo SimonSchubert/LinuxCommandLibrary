@@ -61,4 +61,4 @@ Effectiveness varies by individual; speed reading is a skill that requires pract
 
 # SEE ALSO
 
-[less](/man/less)(1), [more](/man/more)(1), [cat](/man/cat)(1)
+[less](/man/less)(1), [more](/man/more)(1), [cat](/man/cat)(1), [curl](/man/curl)(1)

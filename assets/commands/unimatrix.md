@@ -35,22 +35,28 @@ Terminal Matrix falling code animation
 # PARAMETERS
 
 **-s** _SPEED_
-> Scroll speed.
+> Scroll speed, 0-100 (default 85).
 
 **-c** _COLOR_
-> Color (green, red, etc).
+> Foreground color (green, red, blue, white, yellow, cyan, magenta, black).
 
 **-a**
-> Asynchronous.
+> Asynchronous scrolling where each column moves independently.
 
 **-b**
-> Bold text.
+> Use only bold characters.
+
+**-f**
+> Enable flashing characters.
+
+**-n**
+> Disable bold characters.
 
 **-u** _CHARS_
-> Character set.
+> Use a custom character set.
 
-**-l** _LETTERS_
-> Letter set.
+**-l** _PRESETS_
+> Use preset character groups (e.g. S=symbols, k=katakana, l=letters, n=numbers, c=Cyrillic).
 
 # DESCRIPTION
 

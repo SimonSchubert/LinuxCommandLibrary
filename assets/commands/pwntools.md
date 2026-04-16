@@ -85,4 +85,4 @@ pwntools was created by **Gallopsled** CTF team, becoming the standard Python li
 
 # SEE ALSO
 
-[gdb](/man/gdb)(1), [radare2](/man/radare2)(1), [ropper](/man/ropper)(1), [ROPgadget](/man/ROPgadget)(1)
+[pwn](/man/pwn)(1), [checksec](/man/checksec)(1), [gdb](/man/gdb)(1), [radare2](/man/radare2)(1), [ropper](/man/ropper)(1), [ROPgadget](/man/ROPgadget)(1)

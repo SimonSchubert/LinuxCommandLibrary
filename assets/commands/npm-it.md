@@ -4,32 +4,40 @@ runs npm install followed by npm test
 
 # TLDR
 
-**Install and test**
+**Install dependencies and run tests**
 
 ```npm it```
 
-**Install and test in CI**
+**Install and test in a clean CI environment**
 
-```npm it --ci```
+```npm cit```
+
+**Show help for install-test**
+
+```npm it --help```
 
 # SYNOPSIS
 
-**npm** **it**
+**npm** **it** [_options_]
+
+**npm** **install-test** [_options_]
 
 # PARAMETERS
 
 **--help**
 > Display help information.
 
+Any flag accepted by **npm install** may be passed and will be forwarded to the install step.
+
 # DESCRIPTION
 
-**npm it** runs npm install followed by npm test. Shortcut for common workflow.
+**npm it** is a shortcut that runs **npm install** followed by **npm test**. It is an alias for **npm install-test**, intended to quickly verify that a project installs cleanly and its test suite passes.
 
-The command combines install and test. Alias for npm install-test.
+A related command **npm cit** (alias of **npm clean-install-test**) performs a **npm ci** (clean install) followed by **npm test**, useful in CI pipelines where a reproducible install from the lockfile is required.
 
 # CAVEATS
 
-Runs both commands. Fails if either fails. CI convenience.
+Both steps must succeed; if the install fails, tests are not run. If tests fail, the exit code is non-zero. Use **npm cit** in CI for clean, lockfile-based installs.
 
 # HISTORY
 

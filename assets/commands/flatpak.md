@@ -70,6 +70,15 @@ Show **info** about an application
 **--print-updated-env**
 > Print environment variables needed to use flatpak
 
+**--user**
+> Work on per-user installation only
+
+**--system**
+> Work on system-wide installation (default)
+
+**--installation=**_NAME_
+> Work on the specified installation (from /etc/flatpak/installations.d/)
+
 # CAVEATS
 
 System-wide data is stored in $prefix/var/lib/flatpak/, while per-user data is in $HOME/.local/share/flatpak/. Flatpak uses OSTree repositories internally which can be manipulated directly using the **ostree** utility.
@@ -80,4 +89,4 @@ System-wide data is stored in $prefix/var/lib/flatpak/, while per-user data is i
 
 # SEE ALSO
 
-[flatpak-install](/man/flatpak-install)(1), [flatpak-run](/man/flatpak-run)(1), [flatpak-remote-add](/man/flatpak-remote-add)(1), [ostree](/man/ostree)(1)
+[flatpak-install](/man/flatpak-install)(1), [flatpak-run](/man/flatpak-run)(1), [ostree](/man/ostree)(1)

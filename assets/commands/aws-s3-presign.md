@@ -39,11 +39,17 @@ Pre-signed URLs are useful for sharing private S3 objects temporarily, embedding
 > Number of seconds until the pre-signed URL expires (default: 3600, maximum: 604800)
 
 **--region** _value_
-> The AWS region of the bucket (required for SigV4; overrides config/env settings)
+> The AWS region of the bucket (required for SigV4; overrides config/env settings).
+
+**--profile** _name_
+> Use a specific named profile from the credentials file.
+
+**--endpoint-url** _url_
+> Override the default endpoint URL (useful for S3-compatible services).
 
 # CAVEATS
 
-The maximum expiration time is 604800 seconds (7 days). The region must be configured explicitly since all pre-signed URLs use SigV4 authentication. Pre-signed URLs grant read-only access; they cannot be used to upload or modify objects. The URL expires based on the credentials used to sign it; if using temporary credentials (STS), the URL cannot outlive those credentials.
+The maximum expiration time is 604800 seconds (7 days). The region must be configured explicitly since all pre-signed URLs use SigV4 authentication. Pre-signed URLs produced by **aws s3 presign** grant read-only (GET) access; uploads require **aws s3api** with SigV4 query parameters or SDK helpers. The URL expires based on the credentials used to sign it; if using temporary credentials (STS), the URL cannot outlive those credentials.
 
 # SEE ALSO
 

@@ -61,10 +61,10 @@ Run **interactively**
 > Show what tests would be run
 
 **provision**
-> Prepare the test environment
+> Provision the guest (container, VM, or remote system) that will run the tests
 
 **prepare**
-> Prepare the system for testing
+> Prepare the provisioned system for testing (install packages, apply roles)
 
 **execute**
 > Run the tests

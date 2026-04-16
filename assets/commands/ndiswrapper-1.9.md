@@ -36,7 +36,22 @@ specific version of ndiswrapper
 > Remove driver.
 
 **-m**
-> Write modprobe config.
+> Write module alias configuration for modprobe.
+
+**-ma**
+> Write module configuration for all cards present.
+
+**-mi**
+> Write module install configuration.
+
+**-e** _NAME_
+> Remove a driver (alias for -r).
+
+**-da** _DEVICE_:_DRIVER_
+> Assign device (PCI/USB ID) to driver.
+
+**-v**
+> Verbose output.
 
 **--help**
 > Display help information.

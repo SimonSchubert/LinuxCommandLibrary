@@ -42,16 +42,34 @@ _FILES_
 > Python files to check.
 
 **--strict**
-> Enable strict checking.
+> Enable all optional error-checking flags (strict mode).
 
 **--ignore-missing-imports**
-> Skip untyped modules.
+> Silence errors about imports that cannot be resolved.
 
 **--show-error-codes**
-> Display error codes.
+> Display error codes in messages (default in recent versions).
 
-**--python-version** _VER_
-> Target Python version.
+**--python-version** _X.Y_
+> Type check code as if running on the specified Python version.
+
+**--disallow-untyped-defs**
+> Disallow defining functions without type annotations.
+
+**--follow-imports** _MODE_
+> How to handle imports (normal, silent, skip, error).
+
+**--html-report** _DIR_
+> Generate HTML type-check coverage report (requires lxml).
+
+**--install-types**
+> Install missing third-party type stubs automatically.
+
+**--namespace-packages**
+> Support PEP 420 namespace packages.
+
+**--config-file** _FILE_
+> Use specific mypy configuration file.
 
 **--help**
 > Display help information.
@@ -72,5 +90,5 @@ mypy was created by **Jukka Lehtosalo** and is developed at Dropbox as the premi
 
 # SEE ALSO
 
-[python](/man/python)(1), [pyright](/man/pyright)(1), [pylint](/man/pylint)(1)
+[python](/man/python)(1), [pyright](/man/pyright)(1), [pylint](/man/pylint)(1), [ruff](/man/ruff)(1), [black](/man/black)(1), [flake8](/man/flake8)(1)
 

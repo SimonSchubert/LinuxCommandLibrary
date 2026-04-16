@@ -30,22 +30,46 @@ Change reported architecture for program execution
 > Target architecture (i686, x86_64, linux32, linux64, etc.)
 
 **-R, --addr-no-randomize**
-> Disable address space layout randomization (ASLR)
+> Disable address space layout randomization (ASLR).
 
-**-S, --short-inode**
-> Use legacy 32-bit inode values
+**-F, --fdpic-funcptrs**
+> Treat user-space function pointers as pointers to function descriptors.
 
-**-L, --uname-2.6**
-> Set uname to report 2.6 kernel
+**-Z, --mmap-page-zero**
+> Turn on MMAP_PAGE_ZERO for legacy programs.
+
+**-L, --addr-compat-layout**
+> Use legacy virtual address space layout.
+
+**-X, --read-implies-exec**
+> Turn on READ_IMPLIES_EXEC.
 
 **-B, --32bit**
-> Limit address space to 32 bits
+> Turn on ADDR_LIMIT_32BIT.
+
+**-I, --short-inode**
+> Turn on SHORT_INODE.
+
+**-S, --whole-seconds**
+> Turn on WHOLE_SECONDS.
+
+**-T, --sticky-timeouts**
+> Turn on STICKY_TIMEOUTS.
+
+**-3, --3gb**
+> Use a 3GB memory layout.
+
+**--uname-2.6**
+> Report a 2.6 kernel version in uname.
 
 **--list**
-> List supported architectures
+> List supported architectures and exit.
 
 **-v, --verbose**
-> Verbose output
+> Be verbose.
+
+**-h, --help**
+> Display help.
 
 # DESCRIPTION
 

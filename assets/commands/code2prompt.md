@@ -4,25 +4,33 @@ source code to LLM prompt converter
 
 # TLDR
 
-**Generate a prompt** from source code
+**Generate a prompt** from source code and copy to clipboard
 
 ```code2prompt [path/to/project]```
 
-**Generate with specific template**
+**Use a custom Handlebars template**
 
-```code2prompt [path] --template [template_name]```
+```code2prompt [path] -t [template.hbs]```
 
-**Output to clipboard**
+**Write output to a file**
 
-```code2prompt [path] --clipboard```
+```code2prompt [path] --output-file [prompt.txt]```
 
-**Filter by file extensions**
+**Include specific file patterns**
 
-```code2prompt [path] --filter [*.py,*.js]```
+```code2prompt [path] --include "[*.py,*.js]"```
 
 **Exclude patterns**
 
-```code2prompt [path] --exclude [node_modules,*.log]```
+```code2prompt [path] --exclude "[node_modules,*.log]"```
+
+**Show token count**
+
+```code2prompt [path] --tokens```
+
+**Generate from staged git changes**
+
+```code2prompt [path] --diff```
 
 # SYNOPSIS
 
@@ -30,29 +38,53 @@ source code to LLM prompt converter
 
 # PARAMETERS
 
-**--template** _name_
-> Use a specific prompt template.
+**-t**, **--template** _FILE_
+> Path to a custom Handlebars template file.
 
-**--clipboard**
-> Copy output to clipboard.
+**--include** _PATTERNS_
+> Comma-separated glob patterns of files to include.
 
-**--filter** _patterns_
-> Include only files matching patterns.
+**--exclude** _PATTERNS_
+> Comma-separated glob patterns of files to exclude.
 
-**--exclude** _patterns_
-> Exclude files matching patterns.
+**--exclude-from-tree**
+> Remove excluded files from the source tree display.
+
+**--output-file** _FILE_
+> Write the generated prompt to a file instead of the clipboard.
 
 **--tokens**
-> Count and display token usage.
+> Display token count of the generated prompt.
+
+**--encoding** _NAME_
+> Tokenizer to use: cl100k (default), p50k, p50k_edit, r50k_base.
+
+**--json**
+> Output results in JSON format.
+
+**--diff**
+> Include the git diff of staged files.
+
+**--git-diff-branch** _BRANCH_
+> Include the diff between branches.
+
+**--git-log-branch** _BRANCH_
+> Include the git log for a branch.
+
+**--line-number**
+> Prefix source lines with line numbers.
+
+**--no-codeblock**
+> Do not wrap code in markdown fenced blocks.
 
 # DESCRIPTION
 
-**code2prompt** transforms source code into structured prompts optimized for Large Language Models (LLMs). It recursively traverses a codebase, formats files with proper context including file paths and structure, and generates comprehensive prompts suitable for AI code assistants like Claude, GPT-4, or other LLMs.
+**code2prompt** transforms a source tree into a structured prompt for Large Language Models (LLMs). It recursively traverses a codebase, respects `.gitignore`, and formats files along with a file-tree overview. The output is copied to the clipboard by default.
 
-The tool intelligently filters files based on patterns and extensions, excluding common noise like node_modules, build artifacts, and log files. Template support allows customizing the output format for different use cases such as code review, documentation generation, or architectural analysis.
+Handlebars templates let you customize the generated prompt for specific workflows such as code review, documentation, refactoring, or PR description drafting. Token counting using tiktoken-compatible encodings helps keep prompts within model context limits.
 
-Token counting helps ensure prompts fit within model context limits. The clipboard integration streamlines workflows by directly copying output for immediate use in AI chat interfaces. This is particularly valuable for providing complete codebase context when asking AI assistants for refactoring suggestions, bug analysis, or understanding unfamiliar projects.
+Git integrations (`--diff`, `--git-diff-branch`, `--git-log-branch`) make it easy to generate prompts focused on recent changes rather than the entire codebase.
 
 # SEE ALSO
 
-[tree](/man/tree)(1), [find](/man/find)(1)
+[tree](/man/tree)(1), [find](/man/find)(1), [git](/man/git)(1)

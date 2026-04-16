@@ -52,7 +52,19 @@ Usually managed by systemd rather than run directly.
 > Storage driver (overlay2, devicemapper, etc.)
 
 **--data-root** _path_
-> Root directory for Docker data
+> Root directory for Docker data (default /var/lib/docker).
+
+**--tls**, **--tlsverify**
+> Use TLS (and verify remote certificates).
+
+**--tlscert** _file_, **--tlskey** _file_, **--tlscacert** _file_
+> TLS certificate, key, and trusted CA for secure daemon connections.
+
+**--userland-proxy**=_true|false_
+> Enable userland-proxy for loopback traffic to published ports.
+
+**--live-restore**
+> Keep containers alive during daemon downtime.
 
 # CONFIGURATION
 

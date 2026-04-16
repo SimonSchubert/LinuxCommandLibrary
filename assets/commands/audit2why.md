@@ -32,14 +32,29 @@ The tool reads audit events from standard input or a specified file. It is typic
 
 # PARAMETERS
 
-**-i, --input** _file_
-> Read audit events from the specified file instead of stdin
+**-a**, **--all**
+> Read input from both the audit log and the message log.
 
-**-w, --why**
-> Show the reason for the denial (default behavior)
+**-b**, **--boot**
+> Read input from audit messages since the last boot.
 
-**-p, --policy** _file_
-> Use an alternate policy file
+**-d**, **--dmesg**
+> Read input from the output of _dmesg_(1).
+
+**-i** _file_, **--input** _file_
+> Read audit events from the specified file instead of stdin.
+
+**-l**, **--lastreload**
+> Read only audit events generated after the last policy reload.
+
+**-p** _file_, **--policy** _file_
+> Use the given policy file for analysis instead of the active one.
+
+**-w**, **--why**
+> Show the reason for each denial (default behavior for audit2why).
+
+**-v**, **--verbose**
+> Enable verbose output.
 
 # CAVEATS
 

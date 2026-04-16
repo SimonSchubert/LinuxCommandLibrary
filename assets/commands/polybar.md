@@ -121,4 +121,4 @@ X11 only - no native Wayland support (use Waybar). Requires icon fonts for symbo
 
 # SEE ALSO
 
-[waybar](/man/waybar)(1), [i3status](/man/i3status)(1), [lemonbar](/man/lemonbar)(1), [dunst](/man/dunst)(1)
+[polybar-msg](/man/polybar-msg)(1), [waybar](/man/waybar)(1), [i3status](/man/i3status)(1), [lemonbar](/man/lemonbar)(1), [dunst](/man/dunst)(1)

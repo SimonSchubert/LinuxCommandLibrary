@@ -12,7 +12,11 @@ Cache credentials in memory temporarily
 
 ```git config credential.helper 'cache --timeout=[3600]'```
 
-**Clear cached credentials**
+**Cache with custom socket path**
+
+```git config credential.helper 'cache --socket=[~/.git-credential-cache/socket]'```
+
+**Exit** the cache daemon (clear all cached credentials)
 
 ```git credential-cache exit```
 
@@ -23,10 +27,16 @@ Cache credentials in memory temporarily
 # PARAMETERS
 
 **--timeout** _seconds_
-> Cache timeout (default 900).
+> Number of seconds to cache credentials (default: 900, i.e. 15 minutes).
 
 **--socket** _path_
-> Socket path.
+> Path to the Unix socket used to communicate with the cache daemon (default: ~/.cache/git/credential/socket).
+
+**exit**
+> Cause the cache daemon to exit, discarding all cached credentials.
+
+**get**, **store**, **erase**
+> Standard credential helper actions (normally invoked by git itself, not manually).
 
 # DESCRIPTION
 

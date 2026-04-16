@@ -118,4 +118,4 @@ Requires internet for initial sync. Local cache is encrypted but exists on disk.
 
 # SEE ALSO
 
-[pass](/man/pass)(1), [rbw](/man/rbw)(1), [gopass](/man/gopass)(1), [keepassxc-cli](/man/keepassxc-cli)(1)
+[pass](/man/pass)(1), [rbw](/man/rbw)(1), [bw](/man/bw)(1), [gopass](/man/gopass)(1), [keepassxc-cli](/man/keepassxc-cli)(1)

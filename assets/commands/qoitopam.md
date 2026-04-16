@@ -20,6 +20,14 @@ Convert QOI images to PAM format
 
 **qoitopam** [_qoifile_]
 
+# PARAMETERS
+
+_qoifile_
+> Input QOI file. If omitted, reads from standard input.
+
+**-quiet**
+> Common libnetpbm option; suppress informational messages.
+
 # DESCRIPTION
 
 **qoitopam** converts images from QOI (Quite OK Image) format to PAM (Portable Arbitrary Map) format. QOI is a fast lossless image compression format designed for simplicity and speed, and PAM is the flexible container format used by the Netpbm image processing toolkit.
@@ -27,6 +35,10 @@ Convert QOI images to PAM format
 The tool reads a QOI file from the specified argument or from standard input if no file is given. It writes PAM data to standard output, making it easy to chain with other Netpbm tools for further image processing and format conversion.
 
 This program is part of Netpbm.
+
+# CAVEATS
+
+Only format-agnostic libnetpbm options are accepted (notably **-quiet**). For conversion to common formats like PNG or JPEG, pipe through another Netpbm tool such as **pamtopng**.
 
 # SEE ALSO
 

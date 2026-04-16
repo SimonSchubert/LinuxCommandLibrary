@@ -82,7 +82,19 @@ smartctl is part of smartmontools and is essential for system administrators mon
 > Scan for devices.
 
 **-x**, **--xall**
-> Show all extended information.
+> Show all extended information (all SMART and non-SMART data).
+
+**-c**, **--capabilities**
+> Show SMART capabilities of the device.
+
+**-C**, **--captive**
+> Run self-tests in captive mode (blocks device until finished).
+
+**-X**, **--abort**
+> Abort an in-progress self-test.
+
+**-n** _POWERMODE_, **--nocheck=** _POWERMODE_
+> Skip check if device is in a low-power mode (standby, sleep, idle, never).
 
 **-q** _type_, **--quietmode=** _type_
 > Quiet output (errorsonly, silent, noserial).

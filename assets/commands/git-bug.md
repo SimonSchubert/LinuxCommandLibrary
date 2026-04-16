@@ -24,13 +24,21 @@ Distributed bug tracker embedded in git
 
 ```git bug push```
 
+**Launch the web UI**
+
+```git bug webui```
+
+**Open interactive terminal UI**
+
+```git bug termui```
+
 # SYNOPSIS
 
 **git bug** _command_ [_options_]
 
 # PARAMETERS
 
-**add**
+**add** [**-t** _title_] [**-m** _message_]
 > Create a new bug.
 
 **ls**, **list**
@@ -42,14 +50,32 @@ Distributed bug tracker embedded in git
 **comment** _ID_
 > Add comment to bug.
 
-**push**
-> Push to remote.
+**label** _ID_ _label_
+> Add or remove labels on a bug.
 
-**pull**
-> Pull from remote.
+**status** _ID_
+> Display or change the status (open/close) of a bug.
+
+**push** [_remote_]
+> Push bugs to a git remote.
+
+**pull** [_remote_]
+> Pull bugs from a git remote.
 
 **close** _ID_
-> Close a bug.
+> Mark a bug as closed.
+
+**open** _ID_
+> Reopen a closed bug.
+
+**user**
+> List, create, or adopt identities.
+
+**webui**
+> Launch the web user interface.
+
+**termui**
+> Launch the terminal user interface.
 
 **--help**
 > Display help information.

@@ -23,22 +23,34 @@ authenticates against Berkeley DB
 # PARAMETERS
 
 **db=**_PATH_
-> Database file path.
+> Database file path (without .db extension on some systems).
 
 **icase**
-> Case insensitive username.
+> Case insensitive username matching.
 
 **crypt=**_TYPE_
-> Password encryption type.
+> Password encryption type: _none_ (plaintext) or _crypt_ (crypt(3)-hashed).
 
 **try_first_pass**
-> Try previous password.
+> Try the previously entered password before prompting.
+
+**use_first_pass**
+> Use only the previously entered password; do not prompt.
+
+**dump**
+> Dump database contents to log (debugging, insecure).
+
+**unknown_ok**
+> Do not fail authentication for users not in the DB (skip module).
+
+**key_only**
+> Authenticate based on username presence alone, ignoring password.
 
 # DESCRIPTION
 
-**pam_userdb** authenticates against Berkeley DB. Custom user database.
+**pam_userdb** authenticates users against credentials stored in a Berkeley DB database, independent of the system account files. The database maps usernames (keys) to passwords (values), allowing application-specific or service-specific authentication without creating system accounts.
 
-The module uses DB files. Alternative to /etc/passwd.
+Commonly used to provide separate credentials for services such as FTP, VPN, or web applications.
 
 # CAVEATS
 

@@ -16,4 +16,4 @@ This command is an alias of **add-apt-repository**.
 
 # SEE ALSO
 
-[add-apt-repository](/man/add-apt-repository)(1), [apt](/man/apt)(8)
+[add-apt-repository](/man/add-apt-repository)(1), [apt](/man/apt)(8), [apt-get](/man/apt-get)(8)

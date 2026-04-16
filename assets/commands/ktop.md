@@ -16,9 +16,34 @@ Top-like monitoring tool for Kubernetes clusters
 
 ```ktop --kubeconfig [path/to/config]```
 
+**Use a specific context**
+
+```ktop --context [context-name]```
+
+**Monitor all namespaces**
+
+```ktop -A```
+
 # SYNOPSIS
 
 **ktop** [_options_]
+
+# PARAMETERS
+
+**-n**, **--namespace** _NAME_
+> Namespace to monitor (default: all or current context).
+
+**-A**, **--all-namespaces**
+> Display pods across all namespaces.
+
+**--kubeconfig** _PATH_
+> Path to kubeconfig file.
+
+**--context** _NAME_
+> Kubernetes context to use.
+
+**--help**
+> Display help information.
 
 # DESCRIPTION
 

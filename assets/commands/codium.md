@@ -123,4 +123,4 @@ VSCodium was created in **2018** as a response to concerns about Microsoft's tel
 
 # SEE ALSO
 
-[vscode](/man/vscode)(1), [neovim](/man/neovim)(1), [vim](/man/vim)(1)
+[code](/man/code)(1), [neovim](/man/neovim)(1), [vim](/man/vim)(1)

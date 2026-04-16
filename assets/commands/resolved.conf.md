@@ -76,4 +76,4 @@ systemd-resolved was introduced in **systemd 213** as an integrated DNS resolver
 
 # SEE ALSO
 
-[systemd-resolved](/man/systemd-resolved)(8), [resolvectl](/man/resolvectl)(1), [resolved.conf](/man/resolved.conf)(5)
+[systemd-resolve](/man/systemd-resolve)(1), [resolvectl](/man/resolvectl)(1)

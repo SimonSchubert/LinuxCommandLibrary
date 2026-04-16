@@ -35,13 +35,25 @@ server for netperf testing
 # PARAMETERS
 
 **-p** _PORT_
-> Listen port.
+> Listen port (default 12865).
 
 **-D**
-> Debug mode.
+> Do not daemonize; run in foreground (debug).
+
+**-d**
+> Increase debug verbosity.
 
 **-L** _ADDR_
 > Local bind address.
+
+**-N**
+> No control connection; standalone data mode.
+
+**-f**
+> Do not spawn on demand; remain in foreground.
+
+**-v** _LEVEL_
+> Verbosity level.
 
 **-4**
 > IPv4 only.
@@ -68,5 +80,5 @@ netserver is part of **netperf**, created by HP for network performance measurem
 
 # SEE ALSO
 
-[netperf](/man/netperf)(1), [iperf](/man/iperf)(1), [nuttcp](/man/nuttcp)(1)
+[netperf](/man/netperf)(1), [iperf](/man/iperf)(1), [iperf3](/man/iperf3)(1), [nuttcp](/man/nuttcp)(1)
 

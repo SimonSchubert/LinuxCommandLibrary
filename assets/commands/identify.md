@@ -43,7 +43,13 @@ _FILES_
 > Suppress warnings.
 
 **-ping**
-> Quick identification.
+> Efficiently determine image attributes without fully decoding pixels.
+
+**-regard-warnings**
+> Pay attention to warnings when loading the image.
+
+**-list** _type_
+> List supported values for the specified option (e.g. format, color).
 
 **--help**
 > Display help information.
@@ -52,7 +58,7 @@ _FILES_
 
 **identify** describes image format and characteristics. It shows dimensions, color depth, format, and other metadata.
 
-The tool is part of ImageMagick. It reads many image formats and provides detailed technical information about images.
+The tool is part of ImageMagick. It reads many image formats and provides detailed technical information about images. In ImageMagick 7, the equivalent is invoked as **magick identify**.
 
 # CAVEATS
 
@@ -64,4 +70,4 @@ identify is part of **ImageMagick**, the comprehensive image manipulation suite.
 
 # SEE ALSO
 
-[convert](/man/convert)(1), [mogrify](/man/mogrify)(1), [file](/man/file)(1)
+[convert](/man/convert)(1), [mogrify](/man/mogrify)(1), [magick](/man/magick)(1), [file](/man/file)(1)

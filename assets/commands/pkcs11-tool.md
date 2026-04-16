@@ -71,6 +71,9 @@ Manage PKCS#11 cryptographic tokens and smart cards
 **--pin** _PIN_
 > Supply the PIN on the command line.
 
+**--so-pin** _PIN_
+> Supply the Security Officer PIN (used for token initialization).
+
 **--key-type** _spec_
 > Key type and length (e.g., rsa:2048, EC:prime256v1).
 
@@ -105,5 +108,5 @@ pkcs11-tool is part of **OpenSC** for PKCS#11 token management.
 
 # SEE ALSO
 
-[p11-kit](/man/p11-kit)(1), [opensc-tool](/man/opensc-tool)(1)
+[p11-kit](/man/p11-kit)(1), [opensc-tool](/man/opensc-tool)(1), [openssl](/man/openssl)(1), [ssh-keygen](/man/ssh-keygen)(1)
 

@@ -1,42 +1,31 @@
 # TAGLINE
 
-List installed packages
+List installed packages in a Bun project
 
 # TLDR
 
-**List installed packages**
+**List installed packages** (top-level)
 
-```bun list```
+```bun pm ls```
 
 **List all packages** including nested dependencies
 
-```bun list --all```
-
-**Output as JSON**
-
-```bun list --json```
-
-**Search for a specific package**
-
-```bun list [package_name]```
+```bun pm ls --all```
 
 # SYNOPSIS
 
-**bun** **list** [_options_]
+**bun** **pm** **ls** [**--all**]
 
 # PARAMETERS
 
 **--all**
-> Show all dependencies including nested.
-
-**--json**
-> Output in JSON format.
+> Show the full dependency tree, including transitive dependencies.
 
 # DESCRIPTION
 
-**bun list** displays the packages installed in the current project. By default, it shows direct dependencies from package.json. Use **--all** to see the complete dependency tree.
+**bun pm ls** (sometimes invoked as **bun list**) prints the packages installed in the current project's **node_modules** directory. By default it shows only the direct dependencies declared in **package.json**; pass **--all** to see the complete resolved dependency tree.
 
-This is similar to **npm list** or **yarn list**.
+The output includes each package's resolved version and location and is intended for quick auditing of what is installed. For machine-readable output, inspect **bun.lockb** with **bun pm** subcommands.
 
 # SEE ALSO
 

@@ -110,8 +110,17 @@ _PHASES_
 **-e**, **--errors**
 > Produce execution error messages.
 
+**-B**, **--batch-mode**
+> Non-interactive batch mode (recommended in CI environments).
+
+**-N**, **--non-recursive**
+> Do not recurse into sub-projects (build reactor root only).
+
 **-s** _FILE_, **--settings** _FILE_
 > Use alternate user settings file.
+
+**-gs** _FILE_, **--global-settings** _FILE_
+> Use alternate global settings file.
 
 **--help**
 > Display help information.

@@ -54,4 +54,4 @@ Requires a stable internet connection to fetch data from crates.io. Clipboard fu
 
 # SEE ALSO
 
-[cargo](/man/cargo)(1), [rustc](/man/rustc)(1)
+[cargo](/man/cargo)(1), [cargo-search](/man/cargo-search)(1), [rustc](/man/rustc)(1)

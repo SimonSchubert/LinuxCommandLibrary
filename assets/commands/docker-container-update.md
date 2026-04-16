@@ -39,7 +39,31 @@ dynamically update container resource limits
 > Restart policy (no, on-failure, always, unless-stopped).
 
 **--cpu-shares** _int_
-> CPU shares.
+> CPU shares (relative weight).
+
+**--cpu-period** _int_
+> Limit CPU CFS (Completely Fair Scheduler) period.
+
+**--cpu-quota** _int_
+> Limit CPU CFS quota.
+
+**--cpuset-cpus** _string_
+> CPUs in which to allow execution (e.g., 0-3, 0,1).
+
+**--cpuset-mems** _string_
+> MEMs in which to allow execution (0-3, 0,1).
+
+**--memory-reservation** _bytes_
+> Memory soft limit.
+
+**--kernel-memory** _bytes_
+> Kernel memory limit (deprecated).
+
+**--blkio-weight** _uint16_
+> Block IO (relative weight), between 10 and 1000, or 0 to disable.
+
+**--pids-limit** _int_
+> Tune container pids limit (set -1 for unlimited).
 
 # DESCRIPTION
 

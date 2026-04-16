@@ -20,7 +20,7 @@ Replay terminal sessions recorded by ttyrec
 
 ```ttyplay -n [recording.tty]```
 
-**Watch live session from another user**
+**Peek at a recording** as it is being written (live follow)
 
 ```ttyplay -p [/path/to/recording.tty]```
 
@@ -37,7 +37,7 @@ Replay terminal sessions recorded by ttyrec
 > No-wait mode; ignore timing information.
 
 **-p**
-> Peek mode; watch file as it grows (live viewing).
+> Peek mode; follow the recording file as it grows, letting a viewer watch a ttyrec session that is still being recorded.
 
 # PLAYBACK CONTROLS
 

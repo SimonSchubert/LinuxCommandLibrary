@@ -18,19 +18,31 @@ executes an Architect target defined in angular
 
 # SYNOPSIS
 
-**ng** **run** _target_ [_options_]
+**ng** **run** _project_:_target_[:_configuration_] [_options_]
 
 # PARAMETERS
 
 _project:target_
-> Project and target to run.
+> Project and Architect target to run (e.g., `my-app:build`).
 
 _project:target:configuration_
-> With specific configuration.
+> Run the target using the named configuration defined in angular.json (e.g., `my-app:build:production`).
+
+**--help**
+> Display help for the specified target.
+
+**--configuration** _name_, **-c** _name_
+> Named builder configuration to use (alternative to third colon-separated segment).
 
 # DESCRIPTION
 
-**ng run** executes an Architect target defined in angular.json. Runs custom builders and targets not covered by standard commands. Part of Angular CLI.
+**ng run** executes an Architect target defined in **angular.json**. It is the low-level command used to invoke builders and can run custom builders or targets not covered by dedicated commands like **ng build**, **ng serve**, or **ng test**.
+
+Any options accepted by the underlying builder may be appended after the target name. Part of the Angular CLI.
+
+# CAVEATS
+
+Requires a valid Angular workspace (angular.json). The target and configuration must be defined in the workspace configuration.
 
 # SEE ALSO
 

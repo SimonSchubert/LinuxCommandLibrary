@@ -4,9 +4,17 @@ Safely edit password files with locking
 
 # TLDR
 
-Edit **password** file
+Edit **password** file (/etc/passwd)
 
-```vipw```
+```sudo vipw```
+
+Edit **shadow** password file (/etc/shadow)
+
+```sudo vipw -s```
+
+Edit the **group** file (/etc/group)
+
+```sudo vipw -g```
 
 Display **version**
 
@@ -18,11 +26,23 @@ Display **version**
 
 # PARAMETERS
 
-**-V, --version**
-> Display version information
+**-g, --group**
+> Edit the group file (/etc/group). Equivalent to invoking as `vigr`.
+
+**-p, --passwd**
+> Edit the passwd file (default).
 
 **-s, --shadow**
-> Edit the shadow password file
+> Edit the shadow password file (/etc/shadow) or shadow group file (/etc/gshadow) when combined with -g.
+
+**-q, --quiet**
+> Quiet mode.
+
+**-h, --help**
+> Display help and exit.
+
+**-V, --version**
+> Display version information.
 
 # DESCRIPTION
 
@@ -36,4 +56,4 @@ Requires root privileges. Uses EDITOR or VISUAL environment variable for editor 
 
 # SEE ALSO
 
-[vigr](/man/vigr)(8), [passwd](/man/passwd)(5), [shadow](/man/shadow)(5)
+[vigr](/man/vigr)(8), [passwd](/man/passwd)(1), [useradd](/man/useradd)(8), [usermod](/man/usermod)(8)

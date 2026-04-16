@@ -35,22 +35,34 @@ Create device with **owner and group**
 # PARAMETERS
 
 **add** **dev** _NAME_ **mode** _MODE_
-> Create a TUN or TAP device
+> Create a TUN or TAP device.
 
 **delete** **dev** _NAME_ **mode** _MODE_
-> Remove a TUN or TAP device
+> Remove a TUN or TAP device.
+
+**show** | **list**
+> List existing TUN/TAP devices.
 
 **mode** _tun|tap_
-> Device mode: tun (layer 3) or tap (layer 2)
+> Device mode: tun (layer 3, IP packets) or tap (layer 2, Ethernet frames).
 
 **user** _USERNAME_
-> Set device owner by username or UID
+> Set device owner by username or UID.
 
 **group** _GROUPNAME_
-> Set device group by name or GID
+> Set device group by name or GID.
+
+**one_queue**
+> Use the old single-queue TUN/TAP driver.
+
+**pi**
+> Enable packet information (prepend a 4-byte header to each packet).
+
+**vnet_hdr**
+> Include a virtio-net header (used with vhost-net).
 
 **multi_queue**
-> Enable multi-queue mode
+> Create a multi-queue TUN/TAP device.
 
 # DESCRIPTION
 

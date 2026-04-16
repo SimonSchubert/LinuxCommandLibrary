@@ -26,24 +26,27 @@ Display **help**
 
 # PARAMETERS
 
-**-r, --root** _DIR_
-> Store state in specified directory
+**-r** _DIR_, **--root** _DIR_
+> Store VM state files in the specified directory. Must be removed manually after shutdown. When omitted, a temporary directory is created and cleaned up automatically when the VM exits.
 
-**-v, --verbose**
-> Display verbose startup information
+**-s** _SECRET-XML-FILE_,_SECRET-VALUE-FILE_, **--secret** _SECRET-XML-FILE_,_SECRET-VALUE-FILE_
+> Load a secret into the secret driver. The XML file defines the secret (UUID must match one referenced in the domain XML); the value file contains the secret data. May be repeated.
 
-**-h, --help**
-> Display help information
+**-v**, **--verbose**
+> Display verbose startup information.
+
+**-h**, **--help**
+> Display help information.
 
 # DESCRIPTION
 
-**virt-qemu-run** is an experimental tool to run a QEMU guest virtual machine independent of the libvirtd daemon. It provides a way to run VMs using libvirt XML definitions without requiring the full libvirt infrastructure.
+**virt-qemu-run** is an experimental tool to run a QEMU guest virtual machine independent of the **libvirtd** daemon. It provides a way to run VMs using libvirt domain XML definitions without requiring the full libvirt infrastructure. The guest runs in the foreground and the command exits when the guest shuts down.
 
-This is useful for testing or running isolated VMs without daemon overhead.
+This is useful for testing, embedded use cases, or running isolated VMs without daemon overhead. Exit status is 0 on successful shutdown and non-zero on failure.
 
 # CAVEATS
 
-Experimental tool. Guest XML must be valid libvirt format. Some features may not work without libvirtd. Not recommended for production use.
+Experimental tool; behavior may change between releases. Guest XML must be valid libvirt format. Some features dependent on libvirtd (such as the full device management API) may not work. Not recommended for production use.
 
 # SEE ALSO
 

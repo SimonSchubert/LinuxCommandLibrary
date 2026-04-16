@@ -35,10 +35,13 @@ generic non-JVM producer and consumer for Apache Kafka
 # PARAMETERS
 
 **-b** _brokers_
-> Kafka broker list.
+> Comma-separated Kafka broker list (host[:port]).
 
 **-t** _topic_
-> Topic to produce/consume.
+> Topic to produce to or consume from.
+
+**-p** _partition_
+> Partition to produce to or consume from.
 
 **-C**
 > Consumer mode.
@@ -50,26 +53,47 @@ generic non-JVM producer and consumer for Apache Kafka
 > Metadata list mode.
 
 **-Q**
-> Query mode for offsets.
-
-**-f** _format_
-> Output format string.
-
-**-o** _offset_
-> Starting offset.
+> Query offsets by timestamp.
 
 **-G** _group_
-> Consumer group.
+> High-level consumer group (requires broker >= 0.9.0).
+
+**-o** _offset_
+> Starting offset (beginning, end, stored, or numeric; negative counts from end).
+
+**-e**
+> Exit after consuming the last message.
+
+**-q**
+> Quiet mode, no informational output.
+
+**-f** _format_
+> Output format string (e.g. `%t %p %o %k %s\n`).
+
+**-J**
+> Output messages in a JSON envelope.
+
+**-K** _sep_
+> Key delimiter for produce/consume.
+
+**-D** _sep_
+> Message delimiter (default newline).
+
+**-X** _prop=val_
+> Set a librdkafka configuration property.
+
+**-F** _file_
+> Read librdkafka config from file.
 
 # DESCRIPTION
 
-**kcat** (formerly kafkacat) is a generic non-JVM producer and consumer for Apache Kafka. Written in C using librdkafka, it provides a lightweight CLI for interacting with Kafka clusters. Supports producing, consuming, and listing metadata.
+**kcat** (formerly kafkacat) is a generic non-JVM producer and consumer for Apache Kafka. Written in C using **librdkafka**, it provides a lightweight CLI for interacting with Kafka clusters. It supports producing, consuming, listing metadata, querying offsets, and working with Avro/JSON payloads via Schema Registry.
 
 # HISTORY
 
-Originally named kafkacat, the tool was renamed to kcat. Both names may still be in use depending on the installation.
+Originally named **kafkacat**, the tool was renamed to **kcat** in 2021 to align with upstream branding. Both names may still be present depending on the distribution's packaging.
 
 # SEE ALSO
 
-[kafka-console-consumer](/man/kafka-console-consumer)(1), [kafka-console-producer](/man/kafka-console-producer)(1)
+[kafka](/man/kafka)(1), [kafkacat](/man/kafkacat)(1), [kafka-topics](/man/kafka-topics)(1)
 

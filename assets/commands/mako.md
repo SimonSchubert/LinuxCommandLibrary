@@ -1,32 +1,32 @@
 # TAGLINE
 
-lightweight notification daemon for Wayland compositors implementing
+Lightweight Wayland notification daemon
 
 # TLDR
 
-Start **notification daemon**
+Start the **notification daemon**
 
 ```mako```
 
-Start with **custom config**
+Start with a **custom config file**
 
 ```mako --config [path/to/config]```
 
 Set **max visible** notifications
 
-```mako --max-visible 5```
+```mako --max-visible=5```
 
-Set **default timeout** (milliseconds)
+Set **default timeout** in milliseconds (0 disables)
 
-```mako --default-timeout 2000```
+```mako --default-timeout=2000```
 
-**Group** notifications by app
+**Group** notifications by app name
 
-```mako --group-by app_name```
+```mako --group-by=app-name```
 
-Display **help**
+Anchor notifications to a **screen position**
 
-```mako --help```
+```mako --anchor=top-right```
 
 # SYNOPSIS
 
@@ -34,35 +34,25 @@ Display **help**
 
 # DESCRIPTION
 
-**mako** is a lightweight notification daemon for Wayland compositors implementing the freedesktop.org notification specification. It is designed for use with sway and other wlroots-based compositors.
+**mako** is a lightweight notification daemon for Wayland compositors implementing the **org.freedesktop.Notifications** D-Bus specification. It is designed for use with **sway** and other wlroots-based compositors.
+
+Any option accepted in the configuration file can also be provided on the command line using **--key=value**. The running daemon is controlled at runtime using **makoctl**.
 
 # PARAMETERS
 
-**-c, --config FILE**
-> Use custom configuration file
+**-c** _FILE_, **--config** _FILE_
+> Use the specified configuration file instead of the default
 
-**--max-visible N**
-> Maximum notifications shown at once
+**-h**, **--help**
+> Display help and exit
 
-**--default-timeout MS**
-> Default notification timeout (0 to disable)
-
-**--group-by FIELD**
-> Group notifications by field (app_name, summary, etc.)
-
-**--sort CRITERIA**
-> Sort notifications (-time, +time, -priority, +priority)
-
-**--anchor POSITION**
-> Screen anchor (top-right, bottom-left, etc.)
-
-**-h, --help**
-> Display help information
+**--key=value**
+> Any config-file style option (for example **--max-visible=5**, **--default-timeout=2000**, **--group-by=app-name**, **--sort=-time**, **--anchor=top-right**). See **mako(5)** for the full list.
 
 # CAVEATS
 
-Wayland only. Control running daemon with makoctl. Configuration file location: ~/.config/mako/config
+Wayland only; requires a compositor that supports the **wlr-layer-shell** protocol. Configuration file location is **$XDG_CONFIG_HOME/mako/config** (usually **~/.config/mako/config**). Control a running instance with **makoctl**. For the full list of configuration keys and criteria, see **mako(5)**.
 
 # SEE ALSO
 
-[makoctl](/man/makoctl)(1), [dunst](/man/dunst)(1), [swaync](/man/swaync)(1)
+[makoctl](/man/makoctl)(1), [dunst](/man/dunst)(1)

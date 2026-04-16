@@ -72,8 +72,20 @@ Display **help**
 **-b**, **--borderless**
 > Start in borderless windowed mode
 
+**-F**, **--filter** _FILTER_
+> Upscaler filter: linear, nearest, fsr, nis, pixel.
+
 **--hdr-enabled**
-> Enable HDR output
+> Enable HDR output (requires compatible display and hardware).
+
+**--mangoapp**
+> Launch MangoHud overlay (mangoapp) alongside gamescope.
+
+**--force-grab-cursor**
+> Always use relative mouse mode instead of flipping between relative and absolute.
+
+**--adaptive-sync**
+> Enable adaptive sync / VRR on the output if supported.
 
 # DESCRIPTION
 
@@ -99,4 +111,4 @@ gamescope was developed by Valve Software and first released in **2020**. It was
 
 # SEE ALSO
 
-[steam](/man/steam)(1), [cage](/man/cage)(1), [sway](/man/sway)(1)
+[steam](/man/steam)(1), [cage](/man/cage)(1), [sway](/man/sway)(1), [weston](/man/weston)(1), [Xwayland](/man/Xwayland)(1)

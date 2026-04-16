@@ -72,6 +72,9 @@ Command-line Google Drive client
 **init**
 > Create an initial configuration file
 
+**genkey**
+> Generate encryption keys (used with -encrypt)
+
 # PARAMETERS
 
 **-encrypt**
@@ -94,11 +97,11 @@ A notable feature is client-side encryption (**-encrypt**), which encrypts files
 
 # CAVEATS
 
-Requires OAuth setup and a ~/.skicka.config file. Google Drive API rate limits apply. Not an official Google product but is hosted under the Google GitHub organization.
+**The project is archived as of January 2023 and no longer maintained.** Requires OAuth setup and a ~/.skicka.config file. Google Drive API rate limits apply. Not an official Google product but was hosted under the Google GitHub organization. Considered alpha software; consider **rclone** for production use.
 
 # HISTORY
 
-**skicka** was created by **Matt Pharr** as a command-line interface for Google Drive with encryption support.
+**skicka** was created by **Matt Pharr** as a command-line interface for Google Drive with client-side encryption support. The GitHub repository was archived on **January 10, 2023**.
 
 # SEE ALSO
 

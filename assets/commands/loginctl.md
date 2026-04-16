@@ -123,4 +123,4 @@ Enable-linger allows user services to persist after logout. Terminating sessions
 
 # SEE ALSO
 
-[systemd-logind](/man/systemd-logind)(8), [systemctl](/man/systemctl)(1), [lslogins](/man/lslogins)(1)
+[systemctl](/man/systemctl)(1), [lslogins](/man/lslogins)(1)

@@ -49,6 +49,12 @@ _INTERFACE_
 **-R**
 > Restart negotiation.
 
+**-A** _MEDIA,MEDIA,..._
+> Advertise only specified media types for autonegotiation.
+
+**-V**
+> Display version information.
+
 **--help**
 > Display help information.
 
@@ -56,7 +62,7 @@ _INTERFACE_
 
 **mii-tool** checks network link status. It shows speed, duplex, and link state.
 
-The tool uses MII (Media Independent Interface) to query Ethernet adapters.
+The tool uses MII (Media Independent Interface) to query Ethernet adapters. Supported media types include 100baseT4, 100baseTx-FD, 100baseTx-HD, 10baseT-FD, and 10baseT-HD.
 
 # CAVEATS
 

@@ -18,23 +18,40 @@ Convert PNG images to PAM format
 
 # PARAMETERS
 
+**-alphapam**
+> Output a PAM with tuple type depending on the PNG (supports transparency).
+
 **-alpha**
-> Extract alpha channel.
+> Extract only the alpha channel as a PGM-style PAM.
 
 **-mix**
-> Mix with background color.
+> Composite the image against a background color when transparency is present.
 
 **-background** _color_
-> Background color.
+> Specify the background color used with -mix (e.g., "rgb:FF/FF/FF" or a color name).
+
+**-gamma** _value_
+> Set the gamma value used for display correction.
+
+**-text**
+> Emit any tEXt chunks from the PNG to stderr.
 
 **-verbose**
-> Verbose output.
+> Print information about the conversion to stderr.
 
 # DESCRIPTION
 
-**pngtopam** converts PNG images to PAM (Portable Arbitrary Map) format. Part of Netpbm toolkit for image conversion and manipulation.
+**pngtopam** converts a PNG image to a PAM (Portable Arbitrary Map) image. Part of the Netpbm toolkit, it preserves transparency when **-alphapam** is specified. If the input has no transparency, the output is typically an RGB or grayscale PAM.
+
+# CAVEATS
+
+Reads from standard input if no file is given. Without **-alphapam** or **-alpha**, transparency information may be lost. Replaces older **pngtopnm** for images needing alpha channel support.
+
+# HISTORY
+
+Part of the **Netpbm** package, which descends from Jef Poskanzer's pbmplus from the late 1980s. PAM was introduced in Netpbm 10.x to unify PBM/PGM/PPM/PAM handling.
 
 # SEE ALSO
 
-[pamtopng](/man/pamtopng)(1), [pngtopnm](/man/pngtopnm)(1)
+[pamtopng](/man/pamtopng)(1), [pngtopnm](/man/pngtopnm)(1), [pnmtopng](/man/pnmtopng)(1)
 

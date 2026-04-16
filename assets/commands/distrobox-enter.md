@@ -14,7 +14,7 @@ Enter and **run a command**
 
 Enter **without TTY** (for scripts)
 
-```distrobox-enter -n [container_name] -- [uptime --pretty]```
+```distrobox-enter -T [container_name] -- [uptime --pretty]```
 
 # SYNOPSIS
 
@@ -24,24 +24,33 @@ Enter **without TTY** (for scripts)
 
 **distrobox-enter** enters a Distrobox container. By default it runs your $SHELL, but you can specify different shells or entire commands.
 
-For scripts, applications, or services, use --headless mode to disable TTY and interactivity.
+For scripts, applications, or services, use --no-tty to disable TTY and interactivity.
 
 # PARAMETERS
 
 **-n, --name** _name_
-> Container name
+> Container name (defaults to my-distrobox)
 
-**-e, --env** _var=value_
-> Set environment variable
+**-T, --no-tty**
+> Do not instantiate a tty (for scripts)
 
-**--headless**
-> Disable TTY (for scripts)
+**-nw, --no-workdir**
+> Start from the container's home directory instead of the current directory
 
-**--no-workdir**
-> Don't change to current directory
+**-a, --additional-flags** _flags_
+> Additional flags passed to the container manager command
+
+**-r, --root**
+> Launch podman/docker with root privileges
+
+**-d, --dry-run**
+> Only print the container manager command generated
+
+**-v, --verbose**
+> Show increased verbosity
 
 **-- command**
-> Command to execute
+> Terminate option parsing; remaining arguments are executed inside the container
 
 # CAVEATS
 

@@ -51,4 +51,4 @@ Part of **PipeWire**, the modern multimedia framework for Linux. Provides perfor
 
 # SEE ALSO
 
-[pipewire](/man/pipewire)(1), [pw-top](/man/pw-top)(1), [pw-cli](/man/pw-cli)(1)
+[pipewire](/man/pipewire)(1), [pw-top](/man/pw-top)(1), [pw-cli](/man/pw-cli)(1), [pw-dump](/man/pw-dump)(1), [pw-mon](/man/pw-mon)(1)

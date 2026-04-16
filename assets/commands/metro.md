@@ -18,7 +18,7 @@ JavaScript bundler used by React Native
 
 **Bundle for production**
 
-```npx react-native bundle --entry-file [index.js] --bundle-output [bundle.js]```
+```npx react-native bundle --platform [android] --dev false --entry-file [index.js] --bundle-output [bundle.js]```
 
 **Enable verbose logging**
 
@@ -49,7 +49,16 @@ JavaScript bundler used by React Native
 > Output bundle file.
 
 **--platform** _platform_
-> Target platform.
+> Target platform (ios, android).
+
+**--dev** _boolean_
+> Development mode flag for the bundle (default: true).
+
+**--host** _host_
+> Host to listen on (default: localhost).
+
+**--max-workers** _N_
+> Specify the maximum number of workers for parallelization.
 
 # DESCRIPTION
 

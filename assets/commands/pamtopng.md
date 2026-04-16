@@ -32,9 +32,6 @@ Convert PAM images to PNG format
 **-interlace**
 > Create interlaced (Adam7) PNG for progressive loading.
 
-**-alpha** _mode_
-> Alpha channel handling: outnone, outalpha, outbgcolor, outtransparent (default: outalpha).
-
 **-transparent** _color_
 > Set fully transparent color.
 
@@ -44,8 +41,14 @@ Convert PAM images to PNG format
 **-gamma** _value_
 > Gamma value for the image.
 
-**-notext**
-> Omit PAM text comments from PNG text chunks.
+**-srgbintent** _intent_
+> sRGB rendering intent: absolute, relative, perceptual, or saturation.
+
+**-text** _file_
+> Add tEXt chunks from a text file.
+
+**-verbose**
+> Print detailed progress information to standard error.
 
 # DESCRIPTION
 

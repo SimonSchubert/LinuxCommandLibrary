@@ -50,4 +50,4 @@ Celery workers must be started with the **--events** flag, otherwise celerator w
 
 # SEE ALSO
 
-[celery](/man/celery)(1), [flower](/man/flower)(1), [redis-cli](/man/redis-cli)(1)
+[redis-cli](/man/redis-cli)(1)

@@ -10,11 +10,11 @@ TUI packet visualizer, tcpdump for humans
 
 **Read packets from a pcap file**
 
-```tcpterm --read [capture.pcap]```
+```tcpterm -r [capture.pcap]```
 
-**Apply a BPF filter for HTTP traffic**
+**Apply a BPF filter** (passed as positional arguments)
 
-```tcpterm --filter "[port 80]"```
+```tcpterm -i [eth0] [port 80]```
 
 # SYNOPSIS
 
@@ -25,11 +25,20 @@ TUI packet visualizer, tcpdump for humans
 **-i** _INTERFACE_
 > Network interface to capture packets from.
 
-**--read** _FILE_
+**-r** _FILE_
 > Read packets from a pcap file.
 
-**--filter** _EXPRESSION_
-> BPF filter expression.
+**-s** _SNAPLEN_
+> Snapshot length per packet (default 65535).
+
+**--help**
+> Show help information.
+
+**--version**
+> Show version information.
+
+_expression_
+> Optional BPF filter expression (positional), e.g. `port 80`.
 
 # DESCRIPTION
 

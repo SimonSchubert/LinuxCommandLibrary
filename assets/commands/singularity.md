@@ -65,7 +65,7 @@ The tool enables reproducible science by packaging complete software environment
 
 # CAVEATS
 
-Different from Docker. HPC focused. Root needed to build.
+Not Docker-compatible at runtime (no Docker socket, no daemon). Building SIF images traditionally requires root or user namespaces; use **--fakeroot** to build without root. Now maintained as two forks: **Apptainer** (Linux Foundation) and **SingularityCE** (Sylabs).
 
 # HISTORY
 

@@ -1,6 +1,6 @@
 # TAGLINE
 
-file containing a unique machine identifier established during
+File containing a unique machine identifier
 
 # TLDR
 
@@ -58,4 +58,4 @@ machine-id was introduced by **systemd** to provide a standard machine identific
 
 # SEE ALSO
 
-[systemd-machine-id-setup](/man/systemd-machine-id-setup)(1), [dbus-uuidgen](/man/dbus-uuidgen)(1), [hostnamectl](/man/hostnamectl)(1)
+[systemd-machine-id-setup](/man/systemd-machine-id-setup)(1), [hostnamectl](/man/hostnamectl)(1)

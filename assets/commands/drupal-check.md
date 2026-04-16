@@ -30,25 +30,40 @@ Drupal code deprecation checker
 
 # PARAMETERS
 
-_PATHS_
-> Directories or files to analyze.
+_PATH_...
+> One or more directories or files to analyze.
+
+**-d**, **--deprecations**
+> Check for deprecated API usage (default behavior).
 
 **-a**, **--analysis**
-> Run full analysis (not just deprecations).
+> Run general static analysis checks.
+
+**-s**, **--style**
+> Run code style checks.
+
+**--php8**
+> Use PHPStan phpVersion 8.1 (Drupal 10 requirement).
 
 **--drupal-root** _PATH_
-> Drupal installation root.
+> Path to the Drupal root.
 
 **--format** _FORMAT_
-> Output format: table, json, junit.
+> Output format: raw, table, checkstyle, json, or junit (default: table).
 
-**-e**, **--exclude-dir** _DIR_
-> Directories to exclude.
+**--memory-limit** _LIMIT_
+> Memory limit for analysis (e.g. 1G).
 
-**-n**, **--no-progress**
-> Disable progress bar.
+**-e**, **--exclude-dir** _DIRS_
+> Comma-separated directories to exclude.
 
-**--help**
+**--no-progress**
+> Suppress the progress bar.
+
+**-v**, **-vv**, **-vvv**
+> Increase output verbosity.
+
+**-h**, **--help**
 > Display help information.
 
 # DESCRIPTION

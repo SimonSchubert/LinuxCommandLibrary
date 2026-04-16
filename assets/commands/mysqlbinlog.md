@@ -27,29 +27,56 @@ displays MySQL binary log contents in readable format
 # PARAMETERS
 
 **--start-position** _pos_
-> Start reading from position.
+> Start reading the binary log at the given byte position.
 
 **--stop-position** _pos_
-> Stop reading at position.
+> Stop reading the binary log at the given byte position.
 
 **--start-datetime** _datetime_
-> Start time filter.
+> Only show events with a timestamp equal to or later than the given datetime.
 
 **--stop-datetime** _datetime_
-> Stop time filter.
+> Stop reading at the first event with a timestamp equal to or later than the given datetime.
 
-**--database** _db_
-> Show only database events.
+**-d** _db_, **--database** _db_
+> Show only events belonging to the named database.
 
-**--result-file** _file_
-> Output to file.
+**-r** _file_, **--result-file** _file_
+> Direct output to the specified file instead of stdout.
 
 **--base64-output** _mode_
-> Base64 output mode.
+> Control base64 encoding of row-based events (AUTO, NEVER, DECODE-ROWS).
+
+**-v**, **--verbose**
+> Reconstruct row events as pseudo-SQL; repeat (**-vv**) to include column metadata comments.
+
+**-R**, **--read-from-remote-server**
+> Read binary log from a remote MySQL server rather than a local file.
+
+**-h** _host_, **--host** _host_
+> Connect to the given host (with **-R**).
+
+**-u** _user_, **--user** _user_
+> MySQL user name (with **-R**).
+
+**-p**, **--password**[=_pw_]
+> MySQL password (with **-R**).
+
+**--to-last-log**
+> With **-R**, continue reading through the last binary log on the server.
+
+**--disable-log-bin**
+> Write SET sql_log_bin=0 to the output so replayed statements are not re-logged.
 
 # DESCRIPTION
 
-**mysqlbinlog** displays MySQL binary log contents in readable format. Used for point-in-time recovery, replication debugging, and audit purposes. Converts binary events to SQL statements.
+**mysqlbinlog** reads MySQL binary (and relay) log files and displays their contents as SQL statements. It is commonly used for point-in-time recovery (by piping its output into **mysql**), replication debugging, and auditing changes.
+
+Statement-based events appear directly as SQL; row-based events are emitted as base64-encoded BINLOG statements, optionally decoded to pseudo-SQL via **--verbose**.
+
+# CAVEATS
+
+Output from row-based events is not directly executable SQL unless decoded appropriately. When used for recovery, pipe the output to **mysql** rather than saving and re-reading as separate statements, to preserve session state (e.g., temporary tables).
 
 # SEE ALSO
 

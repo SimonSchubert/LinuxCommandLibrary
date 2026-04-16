@@ -33,16 +33,31 @@ _OPERATIONS_
 > Deploy script or commands.
 
 **--dry**
-> Dry run mode.
+> Dry run mode; print operations without executing.
+
+**--limit** _HOSTS_
+> Filter execution to specific hosts by name or glob pattern.
+
+**--retry** _N_
+> Retry failed operations up to N times.
+
+**--debug-inventory**
+> Print inventory hosts, groups, and data.
+
+**--debug-facts**
+> Show facts after generating operations and exit.
+
+**--debug-operations**
+> Show operations after generating and exit.
 
 **exec**
-> Execute command.
+> Execute an arbitrary shell command on hosts.
 
 **fact**
-> Get server facts.
+> Gather facts from target hosts.
 
-**-v**
-> Verbose output.
+**-v**, **-vv**, **-vvv**
+> Increase verbosity (facts, shell input, shell output).
 
 # DESCRIPTION
 

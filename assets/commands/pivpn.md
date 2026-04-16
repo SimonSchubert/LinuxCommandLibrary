@@ -45,11 +45,17 @@ Show **connected** clients and statistics
 **uninstall**
 > Remove PiVPN installation
 
-**-d, debug**
-> Generate debug output for troubleshooting
+**debug, -d**
+> Generate debug output for troubleshooting.
 
-**-u, update**
-> Check for PiVPN updates
+**update, -u**
+> Check for PiVPN updates.
+
+**off**
+> Disable the PiVPN server.
+
+**backup**
+> Create a backup of server/client configurations.
 
 # DESCRIPTION
 

@@ -12,17 +12,21 @@ Manage Solo FIDO2 security keys
 
 ```solo update```
 
-**Generate credential**
+**Make a FIDO2 credential**
 
-```solo key credential [domain]```
+```solo key make-credential```
 
-**Wink device**
+**Wink device (flash LED)**
 
 ```solo key wink```
 
 **Reset device**
 
 ```solo key reset```
+
+**Generate random bytes**
+
+```solo key rng```
 
 **Show version**
 
@@ -52,8 +56,14 @@ Manage Solo FIDO2 security keys
 **reset**
 > Reset device.
 
-**credential**
-> Manage credentials.
+**make-credential**
+> Generate a FIDO2 credential.
+
+**rng**
+> Output random bytes from the device RNG.
+
+**verify**
+> Verify the device is a genuine Solo key.
 
 # DESCRIPTION
 

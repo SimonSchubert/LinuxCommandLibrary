@@ -73,7 +73,7 @@ Manage multi-language git hook scripts
 > Run on specific files.
 
 **--hook-stage** _STAGE_
-> Run hooks for stage: commit, push, etc.
+> Run hooks for stage: pre-commit, pre-push, commit-msg, post-commit, etc.
 
 **--hook-type** _TYPE_
 > Install hooks for type.

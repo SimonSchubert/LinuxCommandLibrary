@@ -51,4 +51,4 @@ May report false positives for conditionally compiled code (e.g., `#ifdef` block
 
 # SEE ALSO
 
-[clang-tidy](/man/clang-tidy)(1), [gcc](/man/gcc)(1), [cmake](/man/cmake)(1)
+[clang-tidy](/man/clang-tidy)(1), [cppcheck](/man/cppcheck)(1), [cpplint](/man/cpplint)(1), [gcc](/man/gcc)(1), [cmake](/man/cmake)(1)

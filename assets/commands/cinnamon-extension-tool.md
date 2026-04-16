@@ -76,4 +76,4 @@ Requires an active Cinnamon desktop session to communicate with. UUIDs are case-
 
 # SEE ALSO
 
-[cinnamon](/man/cinnamon)(1), [cinnamon-settings](/man/cinnamon-settings)(1)
+[cinnamon](/man/cinnamon)(1), [cinnamon-launcher](/man/cinnamon-launcher)(1)

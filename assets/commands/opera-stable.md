@@ -1,6 +1,6 @@
 # TAGLINE
 
-launches the Opera web browser, a Chromium-based browser with built-in
+Launches the Opera web browser, a Chromium-based browser
 
 # TLDR
 
