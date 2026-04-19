@@ -35,28 +35,55 @@ modern hex viewer for the terminal
 # PARAMETERS
 
 _FILE_
-> File to display.
+> File to display (use - for stdin).
 
 **-n**, **--length** _N_
-> Number of bytes to read.
+> Number of bytes to read (supports k, M, G suffixes and hex).
+
+**-c**, **--bytes** _N_
+> Alias for --length.
 
 **-s**, **--skip** _N_
-> Skip first N bytes.
+> Skip first N bytes (negative values seek from end).
+
+**-o**, **--display-offset** _N_
+> Add N bytes to the displayed file offset.
+
+**--block-size** _SIZE_
+> Size of the block unit (default: 512).
+
+**-v**, **--no-squeezing**
+> Display all data; don't collapse identical lines with an asterisk.
 
 **--color** _WHEN_
-> Color output (auto/always/never).
+> Color output: always (default), auto, never.
 
 **-p**, **--plain**
-> Plain output (no styling).
+> Plain output (shorthand for --no-characters --no-position --border=none --color=never).
 
 **--no-characters**
-> Hide character panel.
+> Hide the character panel.
 
-**-b**, **--border** _STYLE_
-> Border style.
+**--no-position**
+> Hide the position offset column.
 
-**--help**
+**--border** _STYLE_
+> Border style: unicode (default), ascii, none.
+
+**--panels** _N_
+> Number of hex data panels (or 'auto').
+
+**--group-size** _N_
+> Bytes per group: 1 (default), 2, 4, or 8.
+
+**--endianness** _ENDIAN_
+> Byte ordering within groups: little or big.
+
+**-h**, **--help**
 > Display help information.
+
+**-V**, **--version**
+> Display version information.
 
 # DESCRIPTION
 

@@ -22,7 +22,7 @@ Fast disk usage analyzer with interactive TUI
 
 **Analyze ignoring specific directories**
 
-```gdu -I "[.git,node_modules]"```
+```gdu -i "[.git,node_modules]" [/path]```
 
 **Export results to JSON**
 
@@ -48,14 +48,17 @@ Fast disk usage analyzer with interactive TUI
 **-a**, **--apparent-size**
 > Show apparent file size instead of disk usage.
 
-**-x**, **--one-file-system**
+**-x**, **--no-cross**
 > Don't cross filesystem boundaries.
 
-**-I**, **--ignore-dirs** _pattern_
-> Ignore directories matching glob patterns.
+**-i**, **--ignore-dirs** _paths_
+> Comma-separated paths to ignore.
 
-**-X**, **--ignore-dirs-pattern** _regex_
-> Ignore directories matching regex patterns.
+**-I**, **--ignore-dirs-pattern** _regex_
+> Ignore paths matching the given regular expression.
+
+**-m**, **--max-cores** _n_
+> Set the maximum number of CPU cores to use.
 
 **-o**, **--output-file** _file_
 > Export results to a file (use with format flag).
@@ -75,8 +78,11 @@ Fast disk usage analyzer with interactive TUI
 **-s**, **--summarize**
 > Show only a total for each argument.
 
-**-L**, **--follow-links**
-> Follow symbolic links.
+**-L**, **--follow-symlinks**
+> Follow file symbolic links.
+
+**--top** _n_
+> Show only the top N largest files.
 
 **--si**
 > Use SI units (powers of 1000) instead of binary.

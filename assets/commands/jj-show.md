@@ -1,66 +1,89 @@
 # TAGLINE
 
-displays details of a change
+Display details of a change
 
 # TLDR
 
-**Show current change**
+**Show the current change** (working copy)
 
 ```jj show```
 
-**Show specific revision**
+**Show a specific revision**
 
-```jj show [rev]```
+```jj show [revset]```
 
-**Show with diff stats**
+**Show a histogram of changes**
 
 ```jj show --stat```
 
-**Show without diff**
+**Show only a summary** of changed files
 
-```jj show --no-patch```
+```jj show -s```
 
-**Custom output format**
+**Show a Git-format diff**
 
-```jj show --template "[template]"```
+```jj show --git```
+
+**Use a custom output template**
+
+```jj show -T "[template]"```
 
 # SYNOPSIS
 
-**jj show** [_options_] [_revision_]
+**jj show** [_options_] [_revsets_...]
 
 # PARAMETERS
 
-_REVISION_
-> Revision to show (default: @).
+_REVSETS_
+> Revision(s) to display (default: @, the working-copy commit).
 
-**--stat**
-> Show diffstat summary.
+**-T**, **--template** _TEMPLATE_
+> Render each revision using the given template.
 
-**--no-patch**
-> Hide diff output.
-
-**--template** _TEMPLATE_
-> Output template.
+**-p**, **--patch**
+> Display the patch compared to the parent revision.
 
 **-s**, **--summary**
-> Summary of changed files.
+> For each path, show only whether it was modified, added, or deleted.
 
-**--help**
-> Display help information.
+**--stat**
+> Show a histogram of the changes.
+
+**--types**
+> For each path, show only its type (F=file, L=symlink, C=conflict, G=Git submodule).
+
+**--name-only**
+> For each path, show only its path.
+
+**--git**
+> Show a Git-format diff.
+
+**--color-words**
+> Show word-level diff with changes indicated only by color.
+
+**--tool** _TOOL_
+> Generate diff via an external command.
+
+**--context** _N_
+> Number of lines of context to show.
+
+**-w**, **--ignore-all-space**
+> Ignore whitespace when comparing lines.
+
+**-b**, **--ignore-space-change**
+> Ignore changes in amount of whitespace when comparing lines.
 
 # DESCRIPTION
 
-**jj show** displays details of a change. It shows the description, author, and diff.
-
-The command provides comprehensive change information. Templates customize output format.
+**jj show** displays details of a change in a Jujutsu repository, including description, author, timestamps and the diff compared to its parent. Output can be customized with templates and a variety of diff-formatting options.
 
 # CAVEATS
 
-Subcommand of jj. @ refers to working copy. Template syntax is specific.
+Subcommand of **jj**. The symbol `@` refers to the working-copy commit. Template syntax is specific to Jujutsu; see `jj help -k templates`.
 
 # HISTORY
 
-jj show is part of **Jujutsu**, providing detailed inspection of individual changes in the repository.
+**jj show** is part of **Jujutsu** (jj), a Git-compatible DVCS, providing detailed inspection of individual changes.
 
 # SEE ALSO
 

@@ -4,55 +4,56 @@ Submit and query Arch package usage statistics
 
 # TLDR
 
-**Submit** installed package data
+**Submit** installed package data anonymously
 
 ```pkgstats submit```
 
-Submit and **view** sent data
+**Dump JSON** of what would be submitted without sending
 
-```pkgstats submit -d```
+```pkgstats submit --dump-json```
 
-**Search** for packages
+**Search** for packages by name
 
 ```pkgstats search [term]```
 
-Search with **limited** results
+**Compare** package popularity across multiple packages
 
-```pkgstats search [term] -l [count]```
-
-**Compare** package popularity
-
-```pkgstats show [package1] [package2]```
+```pkgstats show [firefox] [chromium]```
 
 Display **help**
 
-```pkgstats -h```
+```pkgstats --help```
 
 # SYNOPSIS
 
-**pkgstats** [**submit**|**search**|**show**] [**-d**|**--dump-json**] [**-l** _count_] [_packages_...]
+**pkgstats** _subcommand_ [_options_] [_packages_...]
 
 # COMMANDS
 
 **submit**
-> Send installed package statistics
+> Collect and send installed package list, architecture, and mirror info anonymously.
 
-**search**
-> Search package statistics
+**search** _term_
+> Search for packages and display their popularity metrics.
 
-**show**
-> Display statistics for specific packages
+**show** _packages_...
+> Compare popularity statistics for the given packages.
 
 # PARAMETERS
 
-**-d, --dump-json**
-> Output data as JSON
+**--dump-json**
+> With `submit`, print the JSON payload that would be sent instead of submitting.
 
-**-l, --limit _count_**
-> Limit search results (default: 10)
+**-h**, **--help**
+> Display help information.
 
-**-h, --help**
-> Display help information
+**-V**, **--version**
+> Display version information.
+
+# CONFIGURATION
+
+**/etc/pkgstats.yaml**
+> Optional configuration file used to filter packages or mirrors from submissions using glob patterns.
 
 # DESCRIPTION
 

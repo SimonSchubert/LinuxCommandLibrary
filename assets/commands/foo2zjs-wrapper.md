@@ -18,7 +18,15 @@ PostScript/PDF to ZjStream wrapper script
 
 **Set resolution**
 
-```foo2zjs-wrapper -r [1200] [file.ps]```
+```foo2zjs-wrapper -r [1200x600] [file.ps]```
+
+**Duplex (long edge)**
+
+```foo2zjs-wrapper -d 2 [file.ps]```
+
+**Specify printer model**
+
+```foo2zjs-wrapper -z [model] [file.ps]```
 
 # SYNOPSIS
 
@@ -29,20 +37,41 @@ PostScript/PDF to ZjStream wrapper script
 _FILES_
 > PostScript or PDF files to print.
 
-**-p** _PAPER_
-> Paper size (letter, a4, legal).
+**-p** _CODE_
+> Paper size code (e.g., letter, a4, legal).
 
-**-r** _DPI_
-> Resolution.
+**-r** _XxY_
+> Device resolution in DPI (default 1200x600).
 
 **-c**
-> Color printing.
+> Print in color (otherwise monochrome).
 
 **-n** _COPIES_
 > Number of copies.
 
-**-m** _MEDIA_
-> Media type.
+**-m** _CODE_
+> Media type code.
+
+**-d** _MODE_
+> Duplex: 1=off, 2=long edge, 3=short edge.
+
+**-s** _CODE_
+> Input slot code.
+
+**-t**
+> Draft mode (every other pixel white).
+
+**-T** _DENSITY_
+> Print density (1-5).
+
+**-z** _MODEL_
+> Printer model.
+
+**-g** _OPTIONS_
+> Additional Ghostscript options.
+
+**-D** _LEVEL_
+> Set debug level.
 
 **--help**
 > Display help information.

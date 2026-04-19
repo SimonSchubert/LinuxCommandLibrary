@@ -112,6 +112,9 @@ Reverse engineering and binary analysis framework
 **-q**
 > Quiet mode. Exit after running -c commands.
 
+**-qq**
+> Like -q but also quits after running all commands (exit after -c, -i scripts).
+
 **-r** _rarun2_
 > Specify dbg.profile rarun2 profile for spawning programs.
 

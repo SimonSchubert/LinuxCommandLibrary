@@ -1,6 +1,6 @@
 # TAGLINE
 
-AUR helper for Arch Linux that wraps pacman functionality while adding
+AUR helper for Arch Linux wrapping pacman with AUR support
 
 # TLDR
 
@@ -26,7 +26,15 @@ Synchronize and update only **AUR packages**
 
 **List** all currently installed packages
 
-```pacaur -Qs```
+```pacaur -Q```
+
+**Search installed** packages for a keyword
+
+```pacaur -Qs [keyword]```
+
+**Edit** PKGBUILD before building
+
+```pacaur -S -e [package]```
 
 # SYNOPSIS
 
@@ -51,6 +59,12 @@ Synchronize and update only **AUR packages**
 
 **-a**, **--aur**
 > Restrict operation to AUR packages only
+
+**-r**, **--repo**
+> Restrict operation to official repositories only
+
+**-e**, **--edit**
+> Edit build files before compilation
 
 **-s**, **--search**
 > Search for packages matching pattern

@@ -18,9 +18,9 @@ Print using **run-mailcap** directly
 
 # DESCRIPTION
 
-**print** is an alias to run-mailcap's print action. It processes files based on their MIME type and sends them to the appropriate print handler defined in the mailcap configuration.
+**print** is an alias for **run-mailcap** that defaults to the `print` action. It processes files based on their MIME type and sends them to the appropriate print handler defined in the mailcap configuration (typically `/etc/mailcap` and `~/.mailcap`).
 
-Originally run-mailcap is used to process mime-type/file associations, and print provides a convenient shorthand for the print action.
+The related aliases **see**, **edit**, and **compose** default to the view, edit, and compose actions respectively. All of them accept the same options as run-mailcap, including `--action`, `--debug`, `--nopager`, and `--norun`.
 
 # CAVEATS
 

@@ -49,8 +49,17 @@ Automated semantic versioning from commits
 **--skip.changelog**
 > Skip changelog.
 
-**--sign**
-> Sign tags.
+**-s**, **--sign**
+> Sign commits and tags with GPG.
+
+**-a**, **--commit-all**
+> Commit all staged files, not just package/changelog.
+
+**-t**, **--tag-prefix** _prefix_
+> Customize tag prefix (default: v).
+
+**--no-verify**
+> Bypass pre-commit/commit-msg git hooks.
 
 # DESCRIPTION
 
@@ -60,7 +69,7 @@ The tool updates the version in package.json, generates or updates a CHANGELOG.m
 
 # CAVEATS
 
-Needs conventional commits. Node.js project. Git repository required.
+**Deprecated** - the project is no longer maintained. The authors recommend **release-please** (GitHub users) or the fork **commit-and-tag-version** for continued support. Requires conventional commits, a Node.js project, and a git repository.
 
 # HISTORY
 

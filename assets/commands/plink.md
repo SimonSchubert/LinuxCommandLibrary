@@ -31,19 +31,58 @@ PuTTY command-line SSH connection tool
 # PARAMETERS
 
 _HOST_
-> Remote host.
+> Remote host (optionally prefixed with _user_@).
+
+**-ssh**, **-telnet**, **-rlogin**, **-raw**, **-serial**
+> Force use of a specific protocol.
 
 **-P** _PORT_
-> Port number.
+> Connect to the specified port.
+
+**-l** _USER_
+> Login username.
+
+**-pw** _PASSWORD_
+> Login with the given password (insecure; prefer -pwfile).
+
+**-pwfile** _FILE_
+> Read password from file.
 
 **-i** _KEY_
-> Private key file.
+> Private key file for authentication (.ppk format).
 
-**-L** _TUNNEL_
-> Local port forward.
+**-load** _SESSION_
+> Load settings from a saved PuTTY session.
+
+**-L** [_bindaddr_:]_port_:_host_:_hostport_
+> Forward local port to remote destination.
+
+**-R** [_bindaddr_:]_port_:_host_:_hostport_
+> Forward remote port to local destination.
+
+**-D** [_bindaddr_:]_port_
+> Dynamic SOCKS-based local port forwarding.
+
+**-N**
+> Don't start a shell or command (SSH-2 only).
+
+**-T**, **-t**
+> Disable/enable pseudo-terminal allocation.
+
+**-A**, **-a**
+> Enable/disable agent forwarding.
+
+**-X**, **-x**
+> Enable/disable X11 forwarding.
+
+**-m** _FILE_
+> Read remote command(s) from file.
 
 **-batch**
-> Non-interactive mode.
+> Disable all interactive prompts.
+
+**-v**
+> Verbose output.
 
 **--help**
 > Display help.

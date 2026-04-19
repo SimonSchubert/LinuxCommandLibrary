@@ -26,7 +26,7 @@ Expressive CSS preprocessor compiler
 
 **Convert CSS to Stylus**
 
-```stylus --css [style.css] [style.styl]```
+```stylus -C [style.css] [style.styl]```
 
 **Generate source maps**
 
@@ -47,11 +47,14 @@ Expressive CSS preprocessor compiler
 **-c**, **--compress**
 > Compress CSS output.
 
-**--css** _input_ _output_
-> Convert CSS to Stylus format.
+**-C**, **--css** _src_ [_dest_]
+> Convert CSS input to Stylus.
 
 **-m**, **--sourcemap**
-> Generate source map files.
+> Generate v3 source maps.
+
+**--sourcemap-inline**
+> Inline the source map as base64 in the output.
 
 **-l**, **--line-numbers**
 > Add line number comments to output.
@@ -68,14 +71,26 @@ Expressive CSS preprocessor compiler
 **-I**, **--include** _path_
 > Add path to import lookup.
 
+**-r**, **--resolve-url**
+> Resolve relative URLs inside imports.
+
+**--include-css**
+> Include regular CSS on @import.
+
 **--import** _file_
 > Import file before compiling.
 
 **-p**, **--print**
 > Print compiled CSS to stdout.
 
-**--prefix** _prefix_
-> Add vendor prefixes.
+**-d**, **--compare**
+> Display both input and compiled output.
+
+**-D**, **--deps**
+> Display dependent files.
+
+**-P**, **--prefix** _prefix_
+> Prefix all CSS class names.
 
 **-V**, **--version**
 > Display version.

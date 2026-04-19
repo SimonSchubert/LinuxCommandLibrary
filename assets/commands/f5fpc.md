@@ -4,7 +4,7 @@ F5 BIG-IP SSL VPN client
 
 # TLDR
 
-**Open** a new VPN connection
+**Open** a new VPN connection (skipping CA check)
 
 ```sudo f5fpc -s -x -t [https://host.example.com]```
 
@@ -16,9 +16,13 @@ F5 BIG-IP SSL VPN client
 
 ```sudo f5fpc -o```
 
+**Connect with username and password**
+
+```sudo f5fpc -s -t [https://host.example.com] -u [username] -p [password]```
+
 **Connect with specific certificate**
 
-```sudo f5fpc -s -x -t [https://host.example.com] -C [/path/to/cert.pem]```
+```sudo f5fpc --start --host [https://host.example.com] --cert [/path/to/cert.pem] --key [/path/to/key.pem]```
 
 # SYNOPSIS
 
@@ -26,23 +30,41 @@ F5 BIG-IP SSL VPN client
 
 # PARAMETERS
 
-**-s**
-> Start VPN connection
+**-s**, **--start**
+> Start VPN connection (returns to shell immediately)
 
-**-o**
+**-o**, **--stop**
 > Stop VPN connection
 
-**-i**
+**-i**, **--info**
 > Display connection status
 
-**-t** _url_
-> VPN server URL
+**-t**, **--host** _url_
+> VPN server URL [https://]hostname[:port] (required for --start)
 
-**-x**
-> Use browser-based authentication
+**-u**, **--user** _username_
+> Username for authentication
 
-**-C** _cert_
+**-p**, **--password** _password_
+> Password for authentication
+
+**-r**, **--cert** _file_
 > Client certificate file
+
+**-k**, **--key** _file_
+> Client certificate key file
+
+**-a**, **--cacert** _file_
+> Trusted CA certificate
+
+**-x**, **--nocheck**
+> Skip trusted CA certificate verification
+
+**-b**, **--nonblock**
+> Non-blocking mode
+
+**-h**, **--help**
+> Display help
 
 # DESCRIPTION
 

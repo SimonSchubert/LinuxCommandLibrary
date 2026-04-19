@@ -8,13 +8,13 @@ reminds you when to leave
 
 ```leave +30```
 
-**Leave at specific time**
+**Leave at specific time** (HHMM, 12 or 24 hour clock)
 
 ```leave [1730]```
 
-**Leave at time with message**
+**Interactive mode** (prompts "When do you have to leave?")
 
-```leave [1700]```
+```leave```
 
 **Cancel leave reminder**
 
@@ -22,25 +22,29 @@ reminds you when to leave
 
 # SYNOPSIS
 
-**leave** [[+]_time_]
+**leave** [[+]_hhmm_]
 
 # PARAMETERS
 
-_TIME_
-> Time to leave (HHMM format).
+_hhmm_
+> Time of day when you need to leave. Times are interpreted on a 12-hour clock and assumed to be within the next 12 hours.
 
-**+**_MINUTES_
-> Leave in N minutes.
+**+**_hhmm_
+> Relative time; leave goes off in _hh_ hours and _mm_ minutes from now.
 
 # DESCRIPTION
 
-**leave** reminds you when to leave. It displays warnings as the time approaches.
+**leave** waits until the specified time and then reminds you to leave. You are reminded 5 minutes and 1 minute before the actual time, at the time itself, and every minute thereafter. It forks and runs in the background, and exits automatically when you log off.
 
-The tool runs in the background and prints reminders. Useful for meetings and appointments.
+If no argument is given, **leave** prompts with "When do you have to leave?"; an empty reply causes it to exit.
 
 # CAVEATS
 
-BSD utility. Simple notification. Background process.
+Classic BSD utility available on macOS and most *BSD systems; on Linux it is typically not installed by default. There is no option to cancel a running reminder short of killing the background process.
+
+# HISTORY
+
+leave originated in **BSD Unix** as a simple reminder utility for terminal users.
 
 # HISTORY
 

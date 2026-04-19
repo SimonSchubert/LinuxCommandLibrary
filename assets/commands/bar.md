@@ -6,7 +6,7 @@ Display progress bars for data transfers.
 
 **Copy a file with a progress bar**
 
-```bar [input_file] > [output_file]```
+```bar -if [input_file] -of [output_file]```
 
 **Show progress while piping data**
 
@@ -14,15 +14,19 @@ Display progress bars for data transfers.
 
 **Specify expected size for accurate progress**
 
-```bar -s [1000000000] [input_file] > [output_file]```
+```bar -s [1000000000] -if [input_file] -of [output_file]```
 
-**Set custom block size**
+**Set a custom title on the progress bar**
 
-```bar -bs [1M] [input_file] > [output_file]```
+```bar -ti "[Backup]" -if [input_file] -of [output_file]```
 
-**Display ETA and transfer rate**
+**Throttle transfer to a fixed rate**
 
-```bar -eta [input_file] > [output_file]```
+```bar -th [1M] -if [input_file] -of [output_file]```
+
+**Update the display every 2 seconds**
+
+```bar -i [2] -if [input_file] -of [output_file]```
 
 # SYNOPSIS
 
@@ -30,37 +34,61 @@ Display progress bars for data transfers.
 
 # PARAMETERS
 
+**-if**, **--in-file** _FILE_
+> Read input from FILE (default: stdin).
+
+**-of**, **--out-file** _FILE_
+> Write output to FILE (default: stdout).
+
 **-s**, **--size** _bytes_
 > Expected data size for accurate percentage display.
 
-**-bs**, **--block-size** _size_
-> Block size for I/O operations (e.g., 1K, 1M).
+**-c**, **--completed** _bytes_
+> Bytes already copied (for resumed transfers).
 
-**-eta**
-> Display estimated time of arrival.
+**-bs**, **--buffer-size** _size_
+> I/O buffer allocation size.
 
-**-th**, **--throughput**
-> Display throughput (transfer rate).
+**-th**, **--throttle** _rate_
+> Limit throughput to the specified rate.
+
+**-i**, **--interval** _seconds_
+> Display update frequency in seconds (default: 1).
 
 **-ti**, **--title** _text_
 > Set a custom title for the progress bar.
 
 **-sw**, **--screen-width** _cols_
-> Set the width of the progress display.
+> Assume a fixed terminal width of _cols_ characters.
 
-**-dl**
-> Display a dial indicator instead of progress bar.
+**-db**, **-nb**, **--display-bar**, **--no-bar**
+> Toggle the progress bar display.
 
-**-nl**
-> Add newline after completion.
+**-dp**, **-np**, **--display-percent**, **--no-percent**
+> Toggle the percentage display.
+
+**-dth**, **-nth**, **--display-throughput**, **--no-throughput**
+> Toggle the throughput display.
+
+**-dt**, **-nt**, **--display-time**, **--no-time**
+> Toggle the elapsed time / ETA display.
+
+**-ds**, **-ns**, **--display-summary**, **--no-summary**
+> Toggle the completion summary.
+
+**-h**, **--help**
+> Display help information.
+
+**-v**, **--version**
+> Display program version.
 
 # DESCRIPTION
 
-**bar** (or pv alternative) is a simple utility that displays a progress bar while copying data through a pipe. It reads from standard input or a file and writes to standard output, showing transfer progress, speed, and optionally ETA.
+**bar** (clpbar) copies a stream of data and prints a display on stderr showing the amount of data passed, the throughput, and the transfer time. It was originally developed to estimate transfer duration for large data movements through SSH/tar pipes.
 
-The tool is useful for monitoring long-running data transfers, such as disk imaging, large file copies, or data streaming operations where visual feedback is desired. When reading from a file, it can automatically determine the total size for accurate percentage display.
+The tool is useful for monitoring long-running data transfers, such as disk imaging, large file copies, or data streaming operations where visual feedback is desired. When reading from a regular file, it extracts the total size on its own.
 
-For piped input where size is unknown, the **-s** option allows specifying expected size manually. Without size information, it displays bytes transferred and transfer rate without percentage.
+For piped input where size is unknown, the **-s** option allows specifying the expected size manually. Without size information, **bar** displays bytes transferred and transfer rate without a percentage. Configuration defaults can be placed in _/etc/clpbarrc_, _~/.barrc_, or _./.barrc_.
 
 # CAVEATS
 

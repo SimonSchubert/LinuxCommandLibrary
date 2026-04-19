@@ -56,4 +56,4 @@ Removed from glibc 2.35+. Modern alternatives include out-of-process debuggers a
 
 # SEE ALSO
 
-[gdb](/man/gdb)(1), [addr2line](/man/addr2line)(1), [backtrace](/man/backtrace)(3)
+[gdb](/man/gdb)(1), [addr2line](/man/addr2line)(1)

@@ -89,14 +89,29 @@ pass provides a simple, Unix-philosophy approach to password management, using e
 **cp** _old_ _new_
 > Copy password.
 
+**find** _pass-names_...
+> Locate passwords matching the given name (alias: **search**).
+
 **grep** _pattern_
 > Search decrypted files.
 
 **git** _args_
 > Execute git command.
 
+**help**
+> Show usage information.
+
+**version**
+> Show version information.
+
 **-c**, **--clip**
 > Copy to clipboard instead of displaying.
+
+**-m**, **--multiline**
+> Insert a multiline password (with **insert**).
+
+**-f**, **--force**
+> Do not prompt before overwriting.
 
 **-n**, **--no-symbols**
 > Generate password without symbols.

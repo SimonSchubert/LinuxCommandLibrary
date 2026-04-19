@@ -44,7 +44,10 @@ Select output **columns**
 > Raw output format
 
 **-o, --output** _COLUMNS_
-> Select output columns
+> Select output columns (supported: UUID, VARIANT, TYPE, TIME).
+
+**-V, --version**
+> Display version information and exit.
 
 **-h, --help**
 > Display help information

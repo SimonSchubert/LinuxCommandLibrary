@@ -55,7 +55,7 @@ DOS emulator for classic games and applications
 > Exit DOSBox when the program terminates.
 
 **-machine** _type_
-> Emulate a specific machine type (hercules, cga, tandy, pcjr, ega, vgaonly, svga_s3).
+> Emulate a specific machine type (hercules, cga, tandy, pcjr, ega, svga_s3).
 
 **-noconsole**
 > Start without the console window (Windows only).
@@ -69,6 +69,9 @@ DOS emulator for classic games and applications
 **-scaler** _scaler_
 > Use the specified scaler for graphics output.
 
+**-forcescaler** _scaler_
+> Force the specified scaler even if not optimal.
+
 **-securemode**
 > Run in secure mode, disabling mount and other potentially dangerous commands.
 
@@ -80,6 +83,24 @@ DOS emulator for classic games and applications
 
 **-lang** _file_
 > Use the specified language file.
+
+**-printconf**
+> Print the location of the default configuration file.
+
+**-editconf** _program_
+> Open the configuration file with the specified editor.
+
+**-resetconf**
+> Remove the default configuration file.
+
+**-resetmapper**
+> Remove the default mapper file.
+
+**-opencaptures** _program_
+> Open the captures folder with the specified program.
+
+**-socket** _n_
+> Pass a socket number to nullmodem emulation.
 
 # DESCRIPTION
 

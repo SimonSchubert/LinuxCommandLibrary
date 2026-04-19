@@ -37,16 +37,31 @@ minimalist filesystem-based IRC client
 > Server port (default 6667).
 
 **-n** _nickname_
-> IRC nickname.
+> IRC nickname (defaults to $USER).
 
 **-k** _env_var_
-> Environment variable for password.
+> Environment variable that holds the IRC password (avoids exposing it on the command line).
 
 **-f** _fullname_
-> Full name (GECOS).
+> Real name (GECOS field).
 
 **-i** _prefix_
-> IRC directory prefix.
+> IRC directory prefix (default ~/irc).
+
+**-t**
+> Connect using TLS.
+
+**-v**
+> Do not verify the TLS certificate.
+
+**-4**
+> Only connect over IPv4.
+
+**-6**
+> Only connect over IPv6.
+
+**-u** _socket_
+> Connect to a UNIX domain socket instead of a network server.
 
 # DESCRIPTION
 

@@ -18,7 +18,9 @@ Task aggregator TUI for multiple providers
 
 # DESCRIPTION
 
-**tatuin** aggregates tasks from platforms like Todoist, Obsidian, GitLab, and GitHub into a single terminal interface. It supports creating tasks, filtering, status updates, saveable UI states, and custom theming.
+**tatuin** aggregates tasks from multiple providers into a single terminal interface. Supported providers include **Todoist** and **Obsidian** (full create/read/update/delete), **CalDAV** (full CRUD), **GitLab TODOs** (list and status updates), and **GitHub Issues** and **iCal** (read-only). Features include task filtering, status updates, saveable UI state, keyboard shortcuts (e.g., `a` to add, `e` to edit), and custom themes.
+
+Obsidian integration requires the "Local REST API" plugin to be installed in your Obsidian vault.
 
 # HISTORY
 

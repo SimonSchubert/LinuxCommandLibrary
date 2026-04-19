@@ -10,7 +10,7 @@ Exoscale S3-compatible object storage management
 
 **Create a bucket**
 
-```exo storage create sos://[bucket-name] --zone [ch-gva-2]```
+```exo storage mb --zone [ch-gva-2] sos://[bucket-name]```
 
 **Upload file**
 
@@ -37,29 +37,44 @@ Exoscale S3-compatible object storage management
 **list**
 > List buckets or objects.
 
-**create**
-> Create a bucket.
+**mb**
+> Create (make) a bucket.
+
+**rb**
+> Remove a bucket.
 
 **upload**
-> Upload files.
+> Upload files to a bucket.
 
 **download**
-> Download files.
+> Download files from a bucket.
 
 **delete**
-> Delete bucket or object.
+> Delete an object.
 
 **show**
-> Show bucket details.
+> Show bucket or object details.
 
 **presign**
-> Generate presigned URL.
+> Generate a presigned URL for an object.
 
 **setacl**
 > Set bucket/object ACL permissions.
 
 **cors**
-> Manage CORS configuration.
+> Manage CORS configuration (add, delete).
+
+**headers**
+> Manage custom HTTP headers (add, delete).
+
+**metadata**
+> Manage object metadata (add, delete).
+
+**bucket**
+> Manage bucket settings (object-ownership, replication, versioning).
+
+**purge**
+> Remove all objects from a bucket.
 
 # DESCRIPTION
 

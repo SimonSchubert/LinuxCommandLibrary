@@ -12,17 +12,17 @@ Display GIF images and animations in an X11 window
 
 ```gifview -a [image.gif]```
 
-**Specify animation delay**
+**Specify minimum frame delay** (in centiseconds)
 
-```gifview -d [100] [image.gif]```
-
-**View specific frame**
-
-```gifview -f [5] [image.gif]```
+```gifview --min-delay [10] [image.gif]```
 
 **View with unoptimized frames** for faithful display
 
 ```gifview -U [image.gif]```
+
+**Disable interactive controls**
+
+```gifview +e [image.gif]```
 
 # SYNOPSIS
 
@@ -34,25 +34,25 @@ _FILES_
 > GIF files to display.
 
 **-a**, **--animate**
-> Animate the GIF.
+> Animate multi-image GIFs (default behavior in most builds).
 
-**-d** _DELAY_, **--delay** _DELAY_
-> Frame delay in centiseconds.
-
-**-f** _FRAME_
-> Display specific frame.
+**+a**, **--no-animate**
+> Display frames as a slideshow instead of animating.
 
 **-U**, **--unoptimize**
-> Unoptimize for faithful frame display.
+> Display multi-image GIFs as unoptimized for faithful frame display.
 
 **--min-delay** _DELAY_
-> Minimum delay between frames in centiseconds (default 0).
+> Minimum delay between frames in centiseconds (default: 0).
 
-**--no-interactive**, **+e**
+**--fallback-delay** _DELAY_
+> Delay for frames with unspecified delay, in centiseconds.
+
+**+e**, **--no-interactive**
 > Ignore mouse and keyboard input.
 
-**-w** _WINDOW_
-> Display in an existing X window.
+**-w** _WINDOW_, **--window** _WINDOW_
+> Display in an existing X window (ID or 'root').
 
 **--new-window** _WINDOW_
 > Display in a new child of an existing X window.
@@ -63,8 +63,20 @@ _FILES_
 **--title** _TITLE_
 > Set the window title.
 
-**--install-colormap**
-> Use a private colormap.
+**--bg** _COLOR_, **--background** _COLOR_
+> Background color for transparent pixels.
+
+**-i**, **--install-colormap**
+> Use a private colormap per window.
+
+**--memory-limit** _LIM_
+> Cache up to LIM megabytes of images (default: 40).
+
+**-d** _DISPLAY_, **--display** _DISPLAY_
+> Use the given X display.
+
+**--name** _NAME_
+> Set application name for resource lookup.
 
 **--version**
 > Print version number and exit.

@@ -109,4 +109,4 @@ Uses plain text authentication by default unless tunneled through SSH or configu
 
 # SEE ALSO
 
-[svnadmin](/man/svnadmin)(1), [svn](/man/svn)(1), [xinetd](/man/xinetd)(8), [sshd](/man/sshd)(8)
+[svnadmin](/man/svnadmin)(1), [svn](/man/svn)(1), [sshd](/man/sshd)(8)

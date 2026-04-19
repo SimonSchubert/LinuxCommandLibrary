@@ -4,13 +4,13 @@ lists container registry tags
 
 # TLDR
 
-**List tags**
+**List tags** in a repository
 
 ```gcrane ls [gcr.io/project/repo]```
 
-**List with full references**
+**Recursively list** tags and sub-repositories
 
-```gcrane ls --full-ref [gcr.io/project/repo]```
+```gcrane ls -r [gcr.io/project]```
 
 **List in JSON format**
 
@@ -22,17 +22,20 @@ lists container registry tags
 
 # PARAMETERS
 
-**--full-ref**
-> Show full image references.
+**-r**, **--recursive**
+> Recurse through sub-repositories.
 
 **--json**
-> Output as JSON.
+> Output manifest information as JSON.
+
+**-h**, **--help**
+> Show help information.
 
 # DESCRIPTION
 
 **gcrane ls** lists tags, manifests, and sub-repositories in Google Container Registry and Artifact Registry. Unlike standard crane ls, it provides richer output including detailed manifest information and recursive repository exploration.
 
-The command can display results in human-readable format or as JSON for scripting. Full reference mode shows complete image URIs including registry hostname and digest. gcrane ls is essential for discovering available images, auditing registry contents, and building automation scripts.
+The command can display results in human-readable format or as JSON for scripting. Recursive mode (-r) traverses sub-repositories. gcrane ls is essential for discovering available images, auditing registry contents, and building automation scripts.
 
 # SEE ALSO
 

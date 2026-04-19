@@ -48,13 +48,16 @@ The tool provides scheduling, service discovery, and rolling updates. It integra
 > Run Nomad agent.
 
 **job run** _file_
-> Submit job.
+> Submit a job.
+
+**job plan** _file_
+> Dry-run a job and show scheduling impact.
 
 **job status** [_job_]
 > Job status.
 
 **job stop** _job_
-> Stop job.
+> Stop a job.
 
 **node status**
 > Node information.
@@ -72,7 +75,16 @@ The tool provides scheduling, service discovery, and rolling updates. It integra
 > Development mode.
 
 **-address** _addr_
-> Nomad API address.
+> Nomad API address (default: http://127.0.0.1:4646).
+
+**-region** _region_
+> Region to query.
+
+**-namespace** _ns_
+> Target namespace.
+
+**-token** _token_
+> ACL token to use.
 
 # CAVEATS
 

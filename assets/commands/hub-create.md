@@ -22,7 +22,7 @@ creates a new GitHub repository and adds it as a remote
 
 **Create and open in browser**
 
-```hub create -o```
+```hub create --browse```
 
 **Create with homepage**
 
@@ -43,11 +43,14 @@ creates a new GitHub repository and adds it as a remote
 **-h**, **--homepage** _url_
 > Repository homepage URL.
 
-**-o**, **--open**
-> Open in browser after creation.
+**-o**, **--browse**
+> Open the new repository in a web browser.
+
+**-c**, **--copy**
+> Copy the new repository URL to the clipboard instead of printing.
 
 **--remote-name** _name_
-> Set remote name (default: origin).
+> Set the name for the new git remote (default: origin).
 
 # DESCRIPTION
 

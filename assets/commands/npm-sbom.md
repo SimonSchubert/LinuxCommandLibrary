@@ -35,7 +35,10 @@ Generate a Software Bill of Materials for the project
 # PARAMETERS
 
 **--sbom-format** _FORMAT_
-> Output format: spdx or cyclonedx.
+> Output format: spdx or cyclonedx (required).
+
+**--sbom-type** _TYPE_
+> Package type: library (default), application, or framework.
 
 **--omit** _TYPE_
 > Omit dependency type (dev, optional, peer).

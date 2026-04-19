@@ -20,11 +20,11 @@ Word-by-word file comparison tool
 
 ```wdiff -w $'\033[1;31m' -x $'\033[0m' -y $'\033[1;32m' -z $'\033[0m' [file1] [file2]```
 
-**Show common words too**
+**Show only differences (suppress common words)**
 
-```wdiff -c [file1.txt] [file2.txt]```
+```wdiff -3 [file1.txt] [file2.txt]```
 
-**Avoid wrapping**
+**Avoid wrapping markers across lines**
 
 ```wdiff -n [file1.txt] [file2.txt]```
 
@@ -35,28 +35,49 @@ Word-by-word file comparison tool
 # PARAMETERS
 
 **-s**, **--statistics**
-> Show statistics.
+> Show word count statistics and percentage changes.
 
 **-i**, **--ignore-case**
-> Case insensitive.
+> Ignore case differences.
 
-**-c**, **--common**
-> Show common words.
+**-3**, **--no-common**
+> Suppress common (unchanged) words; show only differences.
 
-**-n**, **--avoid-wrapping**
-> No wrap markers.
+**-1**, **--no-deleted**
+> Suppress deleted words from output.
+
+**-2**, **--no-inserted**
+> Suppress inserted words from output.
+
+**-n**, **--avoid-wraps**
+> Prevent markup from spanning line boundaries.
+
+**-a**, **--auto-pager**
+> Automatically pipe output through a pager.
+
+**-t**, **--terminal**
+> Use termcap strings for terminal emphasis.
+
+**-l**, **--less-mode**
+> Overstrike formatting optimized for the less pager.
+
+**-p**, **--printer**
+> Overstrike emphasis for printer output.
+
+**-d**, **--diff-input**
+> Accept unified diff format as input.
 
 **-w** _STRING_
-> Start delete marker.
+> Start delete marker (default `[-`).
 
 **-x** _STRING_
-> End delete marker.
+> End delete marker (default `-]`).
 
 **-y** _STRING_
-> Start insert marker.
+> Start insert marker (default `{+`).
 
 **-z** _STRING_
-> End insert marker.
+> End insert marker (default `+}`).
 
 # DESCRIPTION
 

@@ -22,20 +22,49 @@ Digital clock for the terminal
 
 # PARAMETERS
 
-**-s**
+**-s**, **--second**
 > Display seconds.
 
-**-m**
-> Use 24-hour (military) time.
+**-m**, **--military**
+> Use 24-hour (military) time format.
 
-**-c**
-> Center the clock in the terminal.
+**-c**, **--center**
+> Center the clock in the terminal (overrides manual positioning).
 
-**-C** _COLOR_
-> Set the clock color.
+**-C**, **--color** _COLOR_
+> Set the clock color using an ANSI value 0-7 (default: 2).
 
-**-f** _FORMAT_
-> Custom date format string.
+**-x**, **--x** _X_
+> Horizontal 0-indexed position of the clock's top-left corner (default: 0).
+
+**-y**, **--y** _Y_
+> Vertical 0-indexed position of the clock's top-left corner (default: 0).
+
+**-W**, **--width** _WIDTH_
+> Font width in characters per tile (default: 2).
+
+**-H**, **--height** _HEIGHT_
+> Font height in characters per tile (default: 1).
+
+**-f**, **--format** _FORMAT_
+> Custom date format string (default: "%F | %Z").
+
+**-h**, **--help**
+> Display help information.
+
+# INTERACTIVE KEYS
+
+**q**
+> Quit the clock.
+
+**s**
+> Toggle seconds display.
+
+**m**
+> Toggle 24-hour (military) time.
+
+**0**-**7**
+> Change the ANSI color at runtime.
 
 # DESCRIPTION
 
@@ -51,4 +80,4 @@ UNIX only due to termios usage.
 
 # SEE ALSO
 
-[date](/man/date)(1)
+[date](/man/date)(1), [tty-clock](/man/tty-clock)(1), [figlet](/man/figlet)(1)

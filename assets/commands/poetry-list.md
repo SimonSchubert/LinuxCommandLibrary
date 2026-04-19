@@ -22,5 +22,5 @@ List all available Poetry commands
 
 # SEE ALSO
 
-[poetry](/man/poetry)(1), [poetry-about](/man/poetry-about)(1)
+[poetry](/man/poetry)(1), [poetry-help](/man/poetry-help)(1), [poetry-about](/man/poetry-about)(1)
 

@@ -59,6 +59,9 @@ Lightweight BitTorrent client suite
 **transmission-show**
 > Show torrent info.
 
+**transmission-edit**
+> Modify existing torrent files.
+
 # DESCRIPTION
 
 **Transmission** is a lightweight, cross-platform BitTorrent client known for its simplicity and low resource usage. All of its interface variants — GTK, Qt, web, CLI, and daemon — share the same core backend engine, providing consistent behavior regardless of how the client is accessed.

@@ -30,26 +30,44 @@ Windows DLL import library creator
 
 # PARAMETERS
 
-**-d** _FILE_
-> Input def file.
+**-d**, **--input-def** _FILE_
+> Read the named .def file.
 
-**-l** _FILE_
-> Generate import library.
+**-l**, **--output-lib** _FILE_
+> Generate an import library.
 
-**-e** _FILE_
-> Generate exports file.
+**-e**, **--output-exp** _FILE_
+> Generate an exports file.
 
-**-z** _FILE_
-> Generate def file from DLL.
+**-z**, **--output-def** _FILE_
+> Generate a .def file (from DLL or objects).
 
-**-m** _MACHINE_
-> Target machine type (i386, x86_64).
+**-y**, **--output-delaylib** _FILE_
+> Create a delay-import library.
 
-**-D** _NAME_
-> Name of input DLL.
+**-m**, **--machine** _MACHINE_
+> Target machine type (e.g. i386, x86_64, arm).
 
-**-k**
-> Kill @n from exported names.
+**-D**, **--dllname** _NAME_
+> Name of input DLL recorded in the library.
+
+**-U**, **--add-underscore**
+> Prepend an underscore to all exported symbols.
+
+**-k**, **--kill-at**
+> Strip @n suffix from stdcall exported names.
+
+**-A**, **--add-stdcall-alias**
+> Add aliases for stdcall symbols without @n.
+
+**--export-all-symbols**
+> Export all global and weak symbols.
+
+**-I**, **--identify** _FILE_
+> Report DLL name associated with an import library.
+
+**-v**, **--verbose**
+> Describe what is being done.
 
 **--help**
 > Display help information.

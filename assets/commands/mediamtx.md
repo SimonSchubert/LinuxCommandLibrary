@@ -35,8 +35,8 @@ Configuration is done via a YAML file specifying paths, authentication, encrypti
 
 # CAVEATS
 
-Requires appropriate network ports to be available (default: 8554 for RTSP, 1935 for RTMP, 8888 for HLS). Firewall rules may need adjustment for external access. Performance depends on available CPU for transcoding operations.
+Requires appropriate network ports to be available. Defaults: 8554 (RTSP/TCP), 8000/8001 (RTSP UDP RTP/RTCP), 1935 (RTMP), 8888 (HLS), 8889 (WebRTC HTTP), 8189 (WebRTC ICE/UDP), 8890 (SRT/UDP), 9997 (HTTP API). Firewall rules may need adjustment for external access. Performance depends on available CPU for transcoding operations.
 
 # SEE ALSO
 
-[ffmpeg](/man/ffmpeg)(1), [vlc](/man/vlc)(1), [gstreamer](/man/gstreamer)(1)
+[ffmpeg](/man/ffmpeg)(1), [vlc](/man/vlc)(1)

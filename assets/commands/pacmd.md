@@ -43,17 +43,47 @@ command-line tool for reconfiguring PulseAudio at runtime
 **list-sink-inputs**
 > List playback streams.
 
+**list-source-outputs**
+> List recording streams.
+
+**list-modules**
+> List loaded PulseAudio modules.
+
 **set-default-sink** _name_
 > Set default output.
 
+**set-default-source** _name_
+> Set default input.
+
 **set-sink-volume** _name_ _vol_
-> Set volume.
+> Set sink volume (0-65536 linear).
+
+**set-source-volume** _name_ _vol_
+> Set source volume.
+
+**set-sink-mute** _name_ _0|1_
+> Mute/unmute a sink.
+
+**set-source-mute** _name_ _0|1_
+> Mute/unmute a source.
 
 **move-sink-input** _idx_ _sink_
-> Move stream.
+> Move a playback stream to another sink.
+
+**move-source-output** _idx_ _source_
+> Move a recording stream to another source.
+
+**load-module** _name_ [_args_]
+> Load a PulseAudio module.
+
+**unload-module** _id_
+> Unload a module by index or name.
+
+**help**
+> Show all supported commands.
 
 **exit**
-> Exit interactive mode.
+> Terminate the PulseAudio daemon (in interactive mode, use Ctrl+D to quit).
 
 # DESCRIPTION
 

@@ -24,6 +24,14 @@ creates locally-trusted certificates
 
 ```mkcert -key-file [key.pem] -cert-file [cert.pem] [localhost]```
 
+**Generate a PKCS#12 bundle**
+
+```mkcert -pkcs12 [example.test]```
+
+**Show CA root directory**
+
+```mkcert -CAROOT```
+
 **Uninstall CA**
 
 ```mkcert -uninstall```
@@ -48,6 +56,24 @@ _DOMAINS_
 
 **-cert-file** _FILE_
 > Certificate output file.
+
+**-p12-file** _FILE_
+> PKCS#12 output file (used with **-pkcs12**).
+
+**-pkcs12**
+> Produce a ".p12"/".pfx" file with certificate and key (for Java/legacy tools).
+
+**-client**
+> Generate a certificate for client authentication.
+
+**-ecdsa**
+> Use ECDSA keys instead of RSA.
+
+**-csr** _CSR_
+> Generate a certificate based on the supplied CSR.
+
+**-CAROOT**
+> Print the CA certificate and key storage location.
 
 **--help**
 > Display help information.

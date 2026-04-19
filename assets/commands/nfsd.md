@@ -58,11 +58,26 @@ handles NFS requests from clients
 **-s**, **--syslog**
 > Log error messages to syslog instead of stderr.
 
+**-t**, **--tcp**
+> Listen on a TCP socket (default).
+
 **-T**, **--no-tcp**
 > Disable TCP connections from clients.
 
+**-u**, **--udp**
+> Listen on a UDP socket.
+
 **-U**, **--no-udp**
-> Disable UDP connections from clients.
+> Disable UDP connections from clients (default).
+
+**-L** _seconds_, **--lease-time** _seconds_
+> Set the NFSv4 lease time (10–3600 seconds).
+
+**-G** _seconds_, **--grace-time** _seconds_
+> Set the NFSv4/NLM grace period for reclaiming state.
+
+**-S** _scope_, **--scope** _scope_
+> Set the NFSv4.1+ server scope identifier.
 
 # DESCRIPTION
 

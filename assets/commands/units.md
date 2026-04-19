@@ -42,26 +42,41 @@ Convert between measurement units
 
 # PARAMETERS
 
-**-f**, **--file** _filename_
+**-f** _filename_, **--file** _filename_
 > Use specified units database file.
 
 **-c**, **--check**
 > Check that all units reduce to primitive units.
 
-**-o**, **--output-format** _format_
-> Specify numeric output format.
+**-o** _format_, **--output-format** _format_
+> Specify numeric output format (printf-style).
 
-**--terse**
+**-d** _ndigits_, **--digits** _ndigits_
+> Set number of significant digits in output.
+
+**-e**, **--exponential**
+> Use scientific (exponential) notation for output.
+
+**-t**, **--terse**
 > Print only the conversion factor (for parsing).
 
 **--compact**
 > Give compact output without operators.
 
-**--quiet**, **-q**
+**-q**, **--quiet**
 > Suppress statistics and prompts.
 
-**--verbose**, **-v**
+**-v**, **--verbose**
 > Show more detailed output.
+
+**--list-units**
+> List all known units and exit.
+
+**--conformable**
+> Show units conformable with the given expression.
+
+**-u** _system_, **--units** _system_
+> Use alternative unit system (e.g., si, cgs, natural).
 
 **--locale** _locale_
 > Force a specific locale.
@@ -71,12 +86,6 @@ Convert between measurement units
 
 **--product**
 > Interpret **-** as multiplication.
-
-**--oldstar**
-> Use old precedence for **\*** (higher than division).
-
-**--newstar**
-> Use new precedence for **\*** (default).
 
 **-V**, **--version**
 > Print version and data file location.

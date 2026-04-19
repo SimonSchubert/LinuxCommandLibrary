@@ -52,8 +52,11 @@ clamscan supports recursive directory scanning, pattern-based file inclusion and
 **-i**, **--infected**
 > Only print infected files
 
-**--remove**
-> Remove infected files (dangerous)
+**-o**, **--suppress-ok-results**
+> Don't print clean files
+
+**--remove**[=yes/no]
+> Remove infected files (dangerous; disabled by default)
 
 **--move**=_dir_
 > Move infected files to directory
@@ -64,20 +67,44 @@ clamscan supports recursive directory scanning, pattern-based file inclusion and
 **-l** _file_, **--log**=_file_
 > Write scan report to file
 
-**--exclude**=_pattern_
-> Exclude files matching pattern
+**-d** _path_, **--database**=_path_
+> Load virus signatures from file or directory
 
-**--exclude-dir**=_pattern_
-> Exclude directories
+**--exclude**=_REGEX_
+> Skip files matching the regex pattern
+
+**--exclude-dir**=_REGEX_
+> Skip directories matching the regex
+
+**--include**=_REGEX_
+> Only scan files matching the regex
+
+**--include-dir**=_REGEX_
+> Only enter directories matching the regex
 
 **--max-filesize**=_size_
 > Skip files larger than size
 
 **--max-scansize**=_size_
-> Maximum data scanned per file
+> Maximum data scanned per container
+
+**--bell**
+> Sound an audible alert on detection
+
+**--detect-pua**[=yes/no]
+> Detect potentially unwanted applications
+
+**--quiet**
+> Only print error messages
+
+**--no-summary**
+> Suppress the final scan summary
 
 **-v**, **--verbose**
 > Verbose output
+
+**--version**
+> Print version information
 
 # DATABASE UPDATE
 

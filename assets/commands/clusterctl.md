@@ -73,6 +73,18 @@ clusterctl also supports moving Cluster API resources between management cluster
 **describe cluster**
 > Describe cluster resources
 
+**config**
+> Display clusterctl configuration details.
+
+**version**
+> Print clusterctl version information.
+
+**completion**
+> Output shell completion code (bash, zsh, fish, powershell).
+
+**alpha rollout**
+> Manage the rollout of Cluster API resources.
+
 # INIT OPTIONS
 
 **--infrastructure** _provider_

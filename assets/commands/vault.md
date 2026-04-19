@@ -124,7 +124,7 @@ HashiCorp secrets management tool
 
 **Vault** by HashiCorp is a secrets management tool that securely stores and controls access to tokens, passwords, certificates, API keys, and other secrets. It provides encryption as a service, dynamic secrets generation, and detailed audit logging.
 
-The CLI is a wrapper around the HTTP API and supports interactive and scripted use. Configuration can be set via environment variables: **VAULT_ADDR** for the server address and **VAULT_TOKEN** for authentication.
+The CLI is a wrapper around the HTTP API and supports interactive and scripted use. Configuration can be set via environment variables: **VAULT_ADDR** for the server address, **VAULT_TOKEN** for authentication, **VAULT_NAMESPACE** for enterprise namespaces, and **VAULT_FORMAT** for output format (table, json, yaml, jsonx).
 
 Vault uses a seal/unseal mechanism for security. After initialization, Vault is sealed and requires unseal keys to become operational. In dev mode (**vault server -dev**), Vault starts unsealed for testing.
 

@@ -1,67 +1,72 @@
 # TAGLINE
 
-manages MaxCompute user-defined functions
+Manage MaxCompute user-defined functions from odpscmd
 
 # TLDR
 
-**List functions**
+**List functions** in the current project
 
-```odps func list```
+```list functions;```
 
-**Create function**
+**Describe a function**
 
-```odps func create [name] -c [class] -r [resource]```
+```desc function [name];```
 
-**Delete function**
+**Create a function** from an uploaded resource
 
-```odps func drop [name]```
+```create function [name] as '[package.ClassName]' using '[resource.jar]';```
 
-**Show function info**
+**Drop a function**
 
-```odps func desc [name]```
+```drop function [name];```
+
+**Show built-in functions**
+
+```show builtin functions;```
 
 # SYNOPSIS
 
-**odps** **func** [_command_] [_options_]
+Executed inside the **odpscmd** client as SQL-like statements:
+
+**list** **functions** [**-p** _project_]**;**
+**desc** **function** _name_**;**
+**create** **function** _name_ **as** '_class_' **using** '_resources_'**;**
+**drop** **function** _name_**;**
 
 # PARAMETERS
 
-**list**
-> List user functions.
+**list functions**
+> List user-defined functions (alias: **show functions**).
 
-**create** _NAME_
-> Create new function.
+**desc function** _name_
+> Show a function's owner, creation time, class, and resources.
 
-**drop** _NAME_
-> Delete function.
+**create function** _name_ **as** '_class_' **using** '_resources_'
+> Register a new UDF. _class_ is the fully-qualified Java class or Python module; _resources_ is a comma-separated list of already-uploaded resources.
 
-**desc** _NAME_
-> Describe function.
+**drop function** _name_
+> Remove a UDF (requires delete permission).
 
-**-c** _CLASS_
-> Function class name.
+**show builtin functions** [_name_]
+> List or describe MaxCompute built-in functions (client v0.43.0+).
 
-**-r** _RESOURCE_
-> Resource reference.
-
-**--help**
-> Display help information.
+**-p** _project_
+> Operate on a specific project (list functions only).
 
 # DESCRIPTION
 
-**odps func** manages MaxCompute user-defined functions. Creates and lists UDFs.
+MaxCompute UDFs are managed through SQL-style statements issued from the **odpscmd** command-line client. The resource (jar, py file, archive) must be uploaded first with `add jar` / `add py` / `add archive` before a function can reference it.
 
-The tool handles function lifecycle. Part of ODPS CLI.
+Function names are unique per project. Users need write permission on the project to create functions and delete permission to drop them.
 
 # CAVEATS
 
-Requires project permissions. Part of Alibaba Cloud ODPS tools.
+Requires a configured odpscmd client with project access. UDFs registered via odpscmd or MaxCompute Studio are not automatically surfaced in DataWorks. For Python UDFs, ensure the Python runtime is supported by the project.
 
 # HISTORY
 
-odps func provides **UDF management** for Alibaba Cloud MaxCompute.
+Part of the **Alibaba Cloud MaxCompute** (ODPS) CLI toolchain. UDF support has been a core MaxCompute feature since its first public release.
 
 # SEE ALSO
 
 [odps](/man/odps)(1), [odps-resource](/man/odps-resource)(1)
-

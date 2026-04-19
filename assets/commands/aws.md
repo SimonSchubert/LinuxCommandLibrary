@@ -72,6 +72,15 @@ The CLI enables automation, scripting, and management of AWS resources from the 
 **--no-verify-ssl**
 > Disable SSL verification
 
+**--no-paginate**
+> Disable automatic pagination of results
+
+**--cli-binary-format** _format_
+> Control binary parameter encoding (raw-in-base64-out or raw-in-raw-out)
+
+**--version**
+> Display AWS CLI version
+
 # COMMON SERVICES
 
 - **s3** - Object storage

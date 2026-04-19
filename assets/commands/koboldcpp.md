@@ -103,6 +103,24 @@ Local AI text generation server and inference engine
 **--showgui**
 > Show the GUI launcher even when command-line flags are used
 
+**--skiplauncher**
+> Skip the GUI launcher and start the server directly
+
+**--quiet**
+> Suppress console output
+
+**--whispermodel** _path_
+> Load a Whisper model for speech-to-text
+
+**--ttsmodel** _path_
+> Load a text-to-speech model
+
+**--mmproj** _path_
+> Load a multimodal projector file for vision capabilities
+
+**--lora** _path_
+> Apply a LoRA adapter to the base model
+
 **--help**
 > Display all available commands
 
@@ -130,4 +148,4 @@ KoboldCpp was created by a developer known as **LostRuins** (alias **Concedo**) 
 
 # SEE ALSO
 
-[llama](/man/llama)(1), [ollama](/man/ollama)(1)
+[ollama](/man/ollama)(1)

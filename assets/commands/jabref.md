@@ -14,11 +14,19 @@ open-source bibliography reference manager
 
 **Import from file**
 
-```jabref --import [refs.ris]```
+```jabref -i [refs.ris]```
 
-**Export to format**
+**Export to a file**
 
-```jabref [library.bib] --export [output.html]```
+```jabref -i [library.bib] -o [output.html]```
+
+**Fetch entries from an online fetcher**
+
+```jabref --fetch=[arxiv]:[query]```
+
+**Run headless without the GUI**
+
+```jabref --nogui -i [library.bib] -o [output.html]```
 
 # SYNOPSIS
 
@@ -29,26 +37,38 @@ open-source bibliography reference manager
 _file_
 > BibTeX file to open.
 
-**--import** _file_
-> Import from file.
+**-i**, **--import** _file_[,_format_]
+> Import or load a file with optional format specification.
 
-**--importToOpen** _file_
-> Import and add to current library.
+**-o**, **--output** _file_[,_format_]
+> Export to a file with optional format.
 
-**--export** _file_
-> Export to file.
+**-m**, **--exportMatches** _[field]searchTerm,outputFile_
+> Save database entries matching a search query.
 
-**--exportMatches** _query_,_file_
-> Export matching entries.
+**-f**, **--fetch** _fetcher_:_query_
+> Query a web fetcher (e.g., arxiv, doi, pubmed) and import results.
 
-**--fetch** _fetcher_:_query_
-> Fetch entries from online database.
+**-a**, **--aux** _infile,outfile_ _base-file_
+> Extract a sub-database from a LaTeX .aux file.
+
+**-g**, **--generateCitationKeys**
+> Regenerate all citation keys in the opened library.
+
+**-b**, **--blank**
+> Do not open any files at startup.
 
 **-n**, **--nogui**
-> Run without GUI.
+> Suppress the GUI and exit after processing commands.
 
-**--help**
-> Show help.
+**-v**, **--version**
+> Display the version number.
+
+**--debug**
+> Enable debug-level logging.
+
+**-h**, **--help**
+> Show help and list supported import/export formats.
 
 # DESCRIPTION
 

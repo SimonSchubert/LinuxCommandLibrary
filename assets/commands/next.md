@@ -1,12 +1,12 @@
 # TAGLINE
 
-next
+Next.js command-line interface
 
 # TLDR
 
-**Create Next.js app**
+**Create a new Next.js app** (uses create-next-app)
 
-```next create [app-name]```
+```npx create-next-app@latest [app-name]```
 
 **Start development server**
 
@@ -20,17 +20,17 @@ next
 
 ```next start```
 
-**Export static site**
-
-```next export```
-
 **Run linter**
 
 ```next lint```
 
-**Show info**
+**Print environment info** for bug reports
 
 ```next info```
+
+**Enable or disable telemetry**
+
+```next telemetry --disable```
 
 # SYNOPSIS
 
@@ -38,42 +38,59 @@ next
 
 # PARAMETERS
 
-_COMMAND_
-> Next.js command.
+**dev** [_directory_]
+> Start development server with Hot Module Reloading.
 
-**dev**
-> Start development server.
+**build** [_directory_]
+> Create an optimized production build.
 
-**build**
-> Build application.
-
-**start**
-> Start production server.
-
-**export**
-> Export to static HTML.
+**start** [_directory_]
+> Start the production server (requires **build** first).
 
 **lint**
-> Run ESLint.
+> Run ESLint on the project.
 
-**--help**
+**info**
+> Print system, binary, and package versions (for bug reports).
+
+**telemetry** **--enable** | **--disable**
+> Enable or disable anonymous telemetry.
+
+**-p**, **--port** _port_
+> Port to listen on (default: 3000). Applies to **dev** and **start**.
+
+**-H**, **--hostname** _host_
+> Hostname to bind to (default: 0.0.0.0).
+
+**--turbopack**
+> Force enable Turbopack (default in recent versions).
+
+**--webpack**
+> Use Webpack instead of Turbopack.
+
+**--experimental-https**
+> Serve **dev** over HTTPS using a self-signed certificate.
+
+**-h**, **--help**
 > Display help information.
+
+**-v**, **--version**
+> Display Next.js version.
 
 # DESCRIPTION
 
-**next** is the Next.js CLI. It develops and builds React applications.
+**next** is the Next.js CLI for developing, building, and serving React applications. It provides file-based routing, server-side rendering, static generation, and API routes out of the box.
 
-The tool provides server-side rendering. Supports static generation and API routes.
+Running **next** with no command is an alias for **next dev**. Configuration lives in **next.config.js** (or **.mjs**/**.ts**). Starting with Next 13 the default output directory is **.next**.
 
 # CAVEATS
 
-Node.js required. React-based. Configuration in next.config.js.
+Requires Node.js. The standalone **next export** command was removed in Next.js 14 in favor of `output: 'export'` in **next.config.js**. Linting as part of **next build** is being phased out starting in Next.js 15.5.
 
 # HISTORY
 
-Next.js was created by **Vercel** in 2016 as a React framework for production applications.
+Next.js was created by **Vercel** (then ZEIT) and released in **2016** as a React framework for production applications. Later versions introduced App Router, React Server Components, and Turbopack.
 
 # SEE ALSO
 
 [npm](/man/npm)(1), [vercel](/man/vercel)(1), [node](/man/node)(1)
-

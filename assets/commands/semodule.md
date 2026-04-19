@@ -54,10 +54,25 @@ List with **verbose** version info
 > Disable module
 
 **-R**, **--reload**
-> Reload all modules
+> Force a reload of policy.
+
+**-B**, **--build**
+> Force a rebuild of policy (also reloads unless -n is used).
+
+**-X**, **--priority** _PRIORITY_
+> Set priority (1-999) for the following operations.
+
+**-s**, **--store** _NAME_
+> Name of the store to operate on.
+
+**-n**, **--noreload**
+> Do not reload policy after commit.
+
+**-D**, **--disable_dontaudit**
+> Temporarily remove dontaudit rules from policy.
 
 **-v**, **--verbose**
-> Show verbose information
+> Be verbose.
 
 # DESCRIPTION
 

@@ -18,7 +18,7 @@ Create **policy module**
 
 **Explain** denials
 
-```sudo audit2allow -a --why```
+```sudo audit2allow -a -w```
 
 Generate **reference** policy
 
@@ -41,25 +41,58 @@ The tool can produce simple allow rules for quick troubleshooting or generate co
 # PARAMETERS
 
 **-a, --all**
-> Read input from audit log
+> Read input from audit and message logs.
+
+**-b, --boot**
+> Read input from audit messages since the last boot.
+
+**-d, --dmesg**
+> Read input from dmesg output.
 
 **-i, --input** _file_
-> Read input from specified file
+> Read input from the specified file.
 
-**-M, --module** _name_
-> Generate loadable policy module
+**-l, --lastreload**
+> Read only AVC denials since the last policy reload.
 
-**--why**
-> Explain why denials occurred
+**-m, --module** _name_
+> Generate module output (source, not packaged).
 
-**-e, --explain**
-> Show detailed information about denials
+**-M** _name_
+> Generate a loadable policy module package (.pp).
+
+**-o, --output** _file_
+> Append output to the given file.
+
+**-D, --dontaudit**
+> Generate dontaudit rules instead of allow rules.
 
 **-R, --reference**
-> Generate reference policy using macros
+> Generate reference policy using installed interface macros.
+
+**-N, --noreference**
+> Do not generate reference policy; use traditional allow rules.
+
+**-w, --why**
+> Translate audit messages into a description of why access was denied.
+
+**-e, --explain**
+> Fully explain the generated output.
+
+**-x, --xperms**
+> Generate extended permission (ioctl) rules.
+
+**-t, --type** _regex_
+> Filter output by type regular expression.
+
+**-C**
+> Generate CIL (Common Intermediate Language) output.
+
+**-r, --requires**
+> Generate require statements for loadable modules.
 
 **-v, --verbose**
-> Enable verbose output
+> Enable verbose output.
 
 # CAVEATS
 

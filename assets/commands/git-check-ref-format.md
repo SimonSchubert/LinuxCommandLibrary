@@ -29,10 +29,13 @@ Validate and normalize Git reference names
 > Normalize refname.
 
 **--allow-onelevel**
-> Allow single-level refs.
+> Allow single-level refs (refnames without multiple `/`-separated components).
 
 **--no-allow-onelevel**
-> Require hierarchical refs.
+> Require hierarchical refs (default).
+
+**--refspec-pattern**
+> Interpret refname as a refspec pattern, allowing a single `*` wildcard.
 
 # DESCRIPTION
 

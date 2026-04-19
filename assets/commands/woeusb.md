@@ -18,14 +18,32 @@ Create bootable **partition** (no format)
 
 # PARAMETERS
 
-**-d, --device**
-> Format entire device and make bootable
+**-d**, **--device**
+> Format entire device and make bootable (wipes all data)
 
-**-p, --partition**
-> Use existing partition without erasing
+**-p**, **--partition**
+> Use existing partition without erasing other partitions
 
-**--target-filesystem** _FS_
-> Target filesystem (FAT, NTFS)
+**--target-filesystem** _FS_, **--tgt-fs** _FS_
+> Target partition filesystem: FAT or NTFS (device mode only)
+
+**-l** _LABEL_, **--label** _LABEL_
+> Filesystem label for the created partition (device mode only)
+
+**--workaround-bios-boot-flag**
+> Toggle the partition boot flag for BIOSes that require it
+
+**-v**, **--verbose**
+> Enable verbose output
+
+**--no-color**
+> Disable colored output
+
+**-h**, **--help**
+> Display help message
+
+**-V**, **--version**
+> Print version information
 
 # DESCRIPTION
 

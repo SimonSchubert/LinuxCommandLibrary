@@ -16,7 +16,7 @@ Browser exploitation framework for penetration testing
 
 ```beef-xss -x [interface] -p [port]```
 
-**Reset BeEF** user credentials
+**Display help** information
 
 ```beef-xss -h```
 
@@ -42,8 +42,8 @@ Browser exploitation framework for penetration testing
 **-v**
 > Enable verbose output
 
-**-h**
-> Display help and reset user credentials
+**-h**, **--help**
+> Display help and available options. On first run, BeEF prompts to set a password if default credentials are detected.
 
 # DESCRIPTION
 

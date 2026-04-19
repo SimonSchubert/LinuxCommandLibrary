@@ -18,11 +18,19 @@ Interactive terminal-based time zone helper
 
 # SYNOPSIS
 
-**tz** [_options_]
+**tz** [_options_] [_zones..._]
 
 # DESCRIPTION
 
 **tz** is an interactive TUI program that displays time across multiple time zones of your choosing. It uses standard tz database names and can be configured via the **TZ_LIST** environment variable, a config file, or command arguments. Useful for scheduling across distributed teams.
+
+# CONFIGURATION
+
+**~/.config/tz/conf.toml**
+> Configuration file supporting custom time zone aliases.
+
+**TZ_LIST**
+> Semicolon-separated list of time zones, optionally with commas to set aliases (e.g., `Europe/Paris,EMEA;US/Central,US`).
 
 # HISTORY
 

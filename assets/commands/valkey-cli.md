@@ -28,6 +28,18 @@ Command-line client for Valkey data store
 
 ```valkey-cli -c```
 
+**Monitor live server latency**
+
+```valkey-cli --latency```
+
+**Scan keys matching a pattern**
+
+```valkey-cli --scan --pattern '[user:*]'```
+
+**Find large keys in the dataset**
+
+```valkey-cli --bigkeys```
+
 # SYNOPSIS
 
 **valkey-cli** [_-h host_] [_-p port_] [_-a password_] [_options_] [_command_]
@@ -35,22 +47,73 @@ Command-line client for Valkey data store
 # PARAMETERS
 
 **-h** _HOST_
-> Server hostname.
+> Server hostname (default: 127.0.0.1).
 
 **-p** _PORT_
-> Server port.
+> Server port (default: 6379).
+
+**-s** _SOCKET_
+> Unix socket path (overrides host and port).
+
+**-u** _URI_
+> Connection URI (valkey://user:password@host:port/db).
 
 **-a** _PASSWORD_
-> Authentication.
+> Password for authentication.
+
+**--user** _USERNAME_
+> Username for ACL authentication.
+
+**--askpass**
+> Prompt for a password without echoing.
 
 **-n** _DB_
-> Database number.
+> Database number to select on connect.
 
 **-c**
-> Cluster mode.
+> Enable cluster mode with automatic redirects.
+
+**-r** _N_
+> Run the command _N_ times (use **-1** for infinite).
+
+**-i** _SECONDS_
+> Interval between repetitions when using **-r**.
+
+**-x**
+> Read last argument from standard input.
 
 **--scan**
-> Iterate keys.
+> Iterate keys using SCAN.
+
+**--pattern** _PATTERN_
+> Filter keys by pattern (used with --scan/--bigkeys/--hotkeys).
+
+**--bigkeys**
+> Sample the keyspace and report the largest keys.
+
+**--memkeys**
+> Sample the keyspace and report the most memory-intensive keys.
+
+**--hotkeys**
+> Report the most frequently accessed keys (requires LFU policy).
+
+**--latency**
+> Measure server latency in real time.
+
+**--stat**
+> Display continuous server statistics.
+
+**--rdb** _FILE_
+> Transfer a remote RDB dump to a local file.
+
+**--pipe**
+> Transfer raw RESP protocol from stdin for mass import.
+
+**--tls**
+> Enable a TLS-encrypted connection.
+
+**--cluster** _CMD_
+> Run cluster management subcommands (create, check, reshard, rebalance, add-node, del-node).
 
 # DESCRIPTION
 

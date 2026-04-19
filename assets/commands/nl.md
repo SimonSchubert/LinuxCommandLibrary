@@ -45,11 +45,23 @@ Use a specific **separator** between numbers and lines
 **-b, --body-numbering _style_**
 > Numbering style: a (all), t (non-blank, default), n (none), p_regex_ (pattern)
 
+**-h, --header-numbering _style_**
+> Numbering style for header lines (default: n)
+
+**-f, --footer-numbering _style_**
+> Numbering style for footer lines (default: n)
+
 **-i, --line-increment _n_**
 > Increment for line numbers (default: 1)
 
+**-l, --join-blank-lines _n_**
+> Group of n empty lines counted as one
+
 **-n, --number-format _format_**
-> Format: ln (left, no zeros), rn (right, no zeros), rz (right, with zeros)
+> Format: ln (left, no zeros), rn (right, no zeros, default), rz (right, with zeros)
+
+**-p, --no-renumber**
+> Do not reset line numbers at logical pages
 
 **-w, --number-width _n_**
 > Width of line number column (default: 6)
@@ -61,7 +73,7 @@ Use a specific **separator** between numbers and lines
 > First line number (default: 1)
 
 **-d, --section-delimiter _chars_**
-> Characters for logical page delimiters
+> Characters for logical page delimiters (default: \\:)
 
 # DESCRIPTION
 

@@ -1,6 +1,6 @@
 # TAGLINE
 
-start Kismet** with default settings
+Wireless network detector, sniffer, and intrusion detection system
 
 # TLDR
 
@@ -12,9 +12,13 @@ start Kismet** with default settings
 
 ```kismet -c [wlan0]```
 
-**Start in silent mode** with no console output
+**Start with multiple capture sources**
 
-```kismet -s```
+```kismet -c [wlan0] -c [wlan1]```
+
+**Run without the ncurses wrapper** (for scripting or service mode)
+
+```kismet --no-ncurses```
 
 **Specify an alternate configuration file**
 
@@ -26,92 +30,93 @@ start Kismet** with default settings
 
 **Specify logging types**
 
-```kismet -l [dump,csv,xml]```
+```kismet -T [kismet,pcapng]```
 
-**Run Kismet server** on a specific port
+**Use an alternate log directory**
 
-```kismet_server -p [2501]```
+```kismet -p [path/to/logs]```
+
+**Enable debug mode** (for running under GDB)
+
+```kismet --debug```
 
 # SYNOPSIS
 
 **kismet** [_options_]
 
-**kismet_server** [_options_]
-
-**kismet_client** [_options_]
-
 # PARAMETERS
 
 **-c** _SOURCE_
-> Override capture source (type,interface,name)
-
-**-C** _SOURCES_
-> Comma-separated list of capture sources to enable
+> Define a data source (e.g., interface name). May be specified multiple times; takes priority over config file sources.
 
 **-f** _FILE_
-> Use an alternate configuration file
+> Use an alternate configuration file.
 
-**-n**
-> Disable all logging
+**-n**, **--no-logging**
+> Disable all logging.
 
-**-l** _TYPES_
-> Override logging types (dump, cisco, weak, csv, xml, gps)
+**-T** _TYPES_, **--log-types** _TYPES_
+> Override the log types to generate (e.g., kismet, pcapng).
 
-**-m** _NUM_
-> Maximum packets logged per file
+**-t** _TITLE_, **--log-title** _TITLE_
+> Set the log title field used in log filenames.
 
-**-t** _TITLE_
-> Set title for logfile template
+**-p** _DIR_, **--log-prefix** _DIR_
+> Directory to write logs to.
 
-**-p** _PORT_
-> Port to listen on for clients (default: 2501)
+**--homedir** _PATH_
+> Use an alternate home directory for settings and logs.
 
-**-a** _HOSTS_
-> Allowed client IPs or network/mask blocks
+**--confdir** _PATH_
+> Use a custom configuration directory.
 
-**-s**
-> Silent mode (no console status)
+**--override** _FLAVOR_
+> Apply a named override configuration (e.g., wardrive).
 
-**-q**
-> Quiet mode (no sound)
+**--no-ncurses**
+> Disable the ncurses wrapper, producing plain text output. Useful for scripts and services.
 
-**-g** _HOST:PORT_
-> GPS host and port
+**--no-line-wrap**
+> Disable line wrapping in terminal messages.
 
-**-x**
-> Forcibly enable channel hopping
+**--no-plugins**
+> Do not load plugins. Useful when debugging a crashing plugin.
 
-**-X**
-> Forcibly disable channel hopping
+**--debug**
+> Enable debug mode: disables crash/backtrace handlers and the ncurses wrapper, for use under GDB.
 
-**-I** _SOURCE:CHAN_
-> Set initial channel for a source
+**--silent**
+> Do not print status messages to the console after startup.
 
 **--daemonize**
-> Run as background daemon
+> Fork to the background and run as a daemon.
 
-**-h**
-> Display help
+**-v**, **--version**
+> Print version information.
 
-**-v**
-> Print version
+**-h**, **--help**
+> Display help.
 
 # DESCRIPTION
 
-**kismet** is an 802.11 wireless network detector, sniffer, and intrusion detection system. It works with any wireless card that supports raw monitoring (rfmon) mode and can detect 802.11a/b/g/n networks.
+**kismet** is an 802.11 wireless network detector, sniffer, and intrusion detection system. It works with any wireless card that supports raw monitoring (rfmon) mode and can detect 802.11a/b/g/n/ac networks, as well as Bluetooth, Zigbee, and other radios via capture plugins.
 
-Kismet operates passively by collecting packets without transmitting, making it difficult to detect. It identifies networks by capturing beacon frames, can decloak hidden networks over time, and infers the presence of non-beaconing networks through data traffic analysis.
+Kismet operates passively by collecting packets without transmitting, making it difficult to detect. It identifies networks from beacon frames, decloaks hidden networks over time, and infers non-beaconing networks from data traffic.
 
-The tool consists of three components: **kismet_server** handles packet capture and logging, **kismet_client** provides the console interface, and **gpsmap** plots network locations. Modern versions also provide a web interface at **http://localhost:2501**. Kismet logs data in multiple formats including pcap (compatible with Wireshark), CSV, and XML.
+Modern Kismet (2016+) runs as a single process exposing a web-based UI (default at **http://localhost:2501**) and a REST API. The older **kismet_server**/**kismet_client**/**gpsmap** split is no longer used. Kismet logs to its own SQLite-based **.kismet** format by default, and also supports pcap/pcapng for tools like Wireshark.
+
+# CONFIGURATION
+
+Configuration is primarily read from **kismet.conf** and override files (e.g., **kismet_logging.conf**, **kismet_httpd.conf**) in the system config directory (typically **/etc/kismet/** or **/usr/local/etc/**). Per-user settings live under **~/.kismet/**.
 
 # CAVEATS
 
-Requires a wireless card that supports monitor mode. Often requires root privileges to configure interfaces. Capturing wireless traffic without authorization may violate laws in many jurisdictions. Some drivers may require manual configuration for monitor mode. Channel hopping may miss some traffic on other channels during rotation.
+Requires a wireless card that supports monitor mode. Often requires root privileges (or CAP_NET_ADMIN/CAP_NET_RAW) to place interfaces in monitor mode. Capturing wireless traffic without authorization may violate laws in many jurisdictions. Channel hopping may miss traffic on other channels during rotation.
 
 # HISTORY
 
-Kismet was created by **Mike Kershaw** (dragorn) with the first version released in **2001**. It became one of the first widely used open-source wireless network detectors and helped establish the field of wireless security auditing. The name comes from the Turkish word for "fate" or "destiny". Kismet was instrumental in early wardriving activities and remains a standard tool for wireless network security assessment.
+Kismet was created by **Mike Kershaw** (dragorn) with the first version released in **2001**. It became one of the first widely used open-source wireless network detectors. The name comes from the Turkish word for "fate" or "destiny". The architecture was significantly rewritten between 2016 and 2018, merging the server/client/drone components into a single process with a web UI and REST API.
 
 # SEE ALSO
 
-[aircrack-ng](/man/aircrack-ng)(1), [wireshark](/man/wireshark)(1), [tcpdump](/man/tcpdump)(1), [gpsd](/man/gpsd)(1)
+[aircrack-ng](/man/aircrack-ng)(1), [wireshark](/man/wireshark)(1), [tcpdump](/man/tcpdump)(1)

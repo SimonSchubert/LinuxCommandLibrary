@@ -4,42 +4,70 @@ Faster experimental Homebrew alternative written in Rust
 
 # TLDR
 
-**Install a package**
+**Install one or more packages**
 
-```brew install [ripgrep]```
-
-**Upgrade all packages**
-
-```brew upgrade```
+```zb install [ripgrep] [jq]```
 
 **Uninstall a package**
 
-```brew uninstall [ripgrep]```
+```zb uninstall [ripgrep]```
 
-**List installed packages**
+**Install packages from a Brewfile**
 
-```brew list```
+```zb bundle```
 
-**Garbage collect unreferenced data**
+**Dump installed packages to a Brewfile**
 
-```brew gc```
+```zb bundle dump```
+
+**Run a package without linking it**
+
+```zbx [jq] --version```
+
+**Garbage collect unreferenced store entries**
+
+```zb gc```
+
+**Uninstall all packages (reset)**
+
+```zb reset```
 
 # SYNOPSIS
 
-**brew** _command_ [_options_]
+**zb** _command_ [_options_]
+
+**zbx** _package_ [_arguments_...]
 
 # PARAMETERS
 
-_command_
-> Homebrew-compatible subcommand (install, upgrade, uninstall, list, gc, etc.)
+**install** _PACKAGE_...
+> Install one or more packages.
+
+**uninstall** _PACKAGE_...
+> Remove packages.
+
+**bundle**
+> Install packages listed in a Brewfile.
+
+**bundle dump**
+> Export installed packages to a Brewfile.
+
+**gc**
+> Garbage collect unused store entries.
+
+**reset**
+> Uninstall all packages.
+
+**zbx**
+> Run a package without creating system links.
 
 # DESCRIPTION
 
-**zerobrew** is a drop-in Homebrew replacement that uses parallel downloads and extraction, APFS clonefiles for zero-overhead copying, and a SHA256 content-addressable store for instant reinstalls. Compatible with existing Homebrew workflows and the bottle ecosystem.
+**zerobrew** (`zb`) is a high-performance reimplementation of Homebrew that uses content-addressable storage and APFS clonefiles for zero-overhead copying, giving 5-20x faster installs than Homebrew on macOS. It leverages Homebrew's formula definitions and pre-built bottles, bringing a uv-style architecture to Homebrew packages.
 
 # CAVEATS
 
-macOS only (requires APFS). Experimental software -- not all Homebrew commands may be supported. Only works with bottles (pre-built binaries), not source builds.
+Experimental software; recommended to run alongside Homebrew rather than as a full replacement. Works primarily with bottles (pre-built binaries), not source builds. Best performance on macOS with APFS via clonefiles.
 
 # HISTORY
 

@@ -12,6 +12,14 @@ Validate **domain** XML
 
 ```virt-xml-validate [path/to/domain.xml] domain```
 
+Validate **network** XML
+
+```virt-xml-validate [path/to/network.xml] network```
+
+Validate **storage pool** XML
+
+```virt-xml-validate [path/to/pool.xml] storagepool```
+
 # SYNOPSIS
 
 **virt-xml-validate** _FILE_ [_SCHEMA_]
@@ -22,7 +30,13 @@ Validate **domain** XML
 > XML file to validate
 
 **SCHEMA**
-> Schema to validate against (auto-detected if not specified)
+> Schema name to validate against (auto-detected from root element if omitted). Valid schemas include: domain, domainsnapshot, domaincheckpoint, domainbackup, domaincaps, network, networkport, nwfilter, nwfilterbinding, storagepool, storagepoolcaps, storagevol, nodedev, capability, interface, secret, cpu.
+
+**-h**, **--help**
+> Display command-line help then exit.
+
+**-V**, **--version**
+> Display version information then exit.
 
 # DESCRIPTION
 

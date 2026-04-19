@@ -108,6 +108,18 @@ The tool works with ELF, PE/COFF, Mach-O, and other object file formats supporte
 **--no-show-raw-insn**
 > Don't show raw instruction bytes alongside disassembly.
 
+**-D**, **--disassemble-all**
+> Disassemble all sections, not just text.
+
+**--disassembler-color** _mode_
+> Enable colored disassembly output (off, terminal, on, extended).
+
+**--visualize-jumps**
+> Draw ASCII art arrows showing jump targets in disassembly.
+
+**-e**, **--debugging-tags**
+> Display debugging information in a format compatible with ctags.
+
 # CAVEATS
 
 Stripped binaries lack debug info. Large binaries produce verbose output. Disassembly may miss data in code sections.

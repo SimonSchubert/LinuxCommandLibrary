@@ -22,20 +22,26 @@ Compare gzip-compressed files byte-by-byte
 
 # PARAMETERS
 
-**-l**
-> Show byte positions.
+**-b**, **--print-bytes**
+> Print differing bytes (as octal values).
 
-**-s**
-> Silent, exit code only.
+**-l**, **--verbose**
+> Output byte numbers and differing byte values for all differences.
 
-**-i** _SKIP_
-> Skip bytes.
+**-s**, **--quiet**, **--silent**
+> Suppress all output; communicate result only via exit status.
+
+**-i** _SKIP_, **--ignore-initial=**_SKIP_
+> Skip the first _SKIP_ bytes of each (decompressed) input.
+
+**-n** _LIMIT_, **--bytes=**_LIMIT_
+> Compare at most _LIMIT_ bytes.
 
 # DESCRIPTION
 
-**zcmp** compares gzip-compressed files byte-by-byte without requiring manual decompression. It works like **cmp** but transparently handles .gz files, decompressing them on the fly for comparison.
+**zcmp** compares gzip-compressed files byte-by-byte without requiring manual decompression. It invokes **cmp** on uncompressed contents and passes all supplied options directly to it.
 
-By default, zcmp reports only the first difference found. The **-l** flag shows all differing byte positions and values. Silent mode (**-s**) suppresses all output and communicates only through exit codes: 0 if files are identical, 1 if they differ.
+By default, zcmp reports only the first difference found. The **-l** flag shows all differing byte positions and values. Silent mode (**-s**) suppresses all output and communicates only through exit codes: 0 if files are identical, 1 if they differ, 2 on error.
 
 The command is part of the gzip package and acts as a convenience wrapper. For line-by-line comparison of compressed files, use **zdiff** instead.
 

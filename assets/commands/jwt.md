@@ -67,4 +67,4 @@ jwt CLI tools provide command-line access to **JSON Web Token** encoding and dec
 
 # SEE ALSO
 
-[openssl](/man/openssl)(1), [jq](/man/jq)(1), [jose](/man/jose)(1)
+[openssl](/man/openssl)(1), [jq](/man/jq)(1)

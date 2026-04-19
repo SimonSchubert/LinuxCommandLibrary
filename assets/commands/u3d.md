@@ -31,22 +31,37 @@ Unity Editor version manager
 # PARAMETERS
 
 **list**
-> Installed versions.
+> List installed Unity versions.
 
-**install**
-> Install version.
+**install** _version_
+> Download and install a Unity version with packages.
 
 **available**
-> Show available.
+> List download-ready Unity versions.
 
 **run**
-> Run Unity.
+> Launch Unity (auto-uses project version when inside a project).
 
-**uninstall**
-> Remove version.
+**uninstall** _version_
+> Remove an installed Unity version.
+
+**licenses**
+> Show current Unity license information.
+
+**prettify**
+> Format Unity editor log files for readability.
+
+**dependencies**
+> Install missing Linux dependencies for Unity.
 
 **-u** _VERSION_
-> Unity version.
+> Target Unity version.
+
+**--verbose**
+> Enable debug logging.
+
+**--no-central**
+> Skip the central version cache.
 
 # DESCRIPTION
 
@@ -64,4 +79,4 @@ Unity-specific. Large downloads. License required.
 
 # SEE ALSO
 
-[unity](/man/unity)(1), [brew](/man/brew)(1)
+[brew](/man/brew)(1)

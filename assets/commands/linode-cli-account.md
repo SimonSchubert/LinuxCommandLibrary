@@ -8,6 +8,10 @@ Manage Linode (Akamai) account information and billing
 
 ```linode-cli account view```
 
+**Show billing details and payment method**
+
+```linode-cli account view-billing```
+
 **Show account settings**
 
 ```linode-cli account settings```
@@ -41,8 +45,14 @@ Manage Linode (Akamai) account information and billing
 **view**
 > View account contact information, balance, and active promotions.
 
+**view-billing**
+> View billing details including payment method and last payment.
+
 **settings**
 > View account settings including network helper and backup defaults.
+
+**update**
+> Update account contact information.
 
 **events-list**
 > List account events (Linode creation, reboots, etc.).

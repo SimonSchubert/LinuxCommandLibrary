@@ -55,8 +55,32 @@ _PACKAGES_
 **--atleast-version** _VERSION_
 > Exit successfully if version is at least VERSION.
 
+**--exact-version** _VERSION_
+> Exit successfully if version matches exactly.
+
+**--max-version** _VERSION_
+> Exit successfully if version is at most VERSION.
+
+**--variable** _NAME_
+> Print the value of a variable defined in the .pc file.
+
+**--libs-only-L**
+> Print only -L/-R library search path flags.
+
+**--libs-only-l**
+> Print only -l library name flags.
+
+**--cflags-only-I**
+> Print only -I include path flags.
+
+**--static**
+> Output for static linking (include private dependencies).
+
 **--print-errors**
 > Show errors when package not found.
+
+**--silence-errors**
+> Suppress error output.
 
 # DESCRIPTION
 

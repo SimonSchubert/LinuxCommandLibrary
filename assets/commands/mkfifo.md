@@ -16,9 +16,9 @@ creates named pipes
 
 ```mkfifo [pipe1] [pipe2] [pipe3]```
 
-**Verbose output**
+**Create FIFO with default SELinux context**
 
-```mkfifo -v [pipe_name]```
+```mkfifo -Z [pipe_name]```
 
 # SYNOPSIS
 
@@ -27,16 +27,22 @@ creates named pipes
 # PARAMETERS
 
 _NAME_
-> Named pipe name.
+> Path of the FIFO to create.
 
-**-m** _MODE_
-> Set permissions.
+**-m** _MODE_, **--mode**=_MODE_
+> Set file permission bits to MODE (as with chmod), not a=rw minus umask.
 
-**-v**
-> Verbose output.
+**-Z**
+> Set the SELinux security context to the default type.
+
+**--context**[=_CTX_]
+> Set the SELinux or SMACK security context to the specified value.
 
 **--help**
 > Display help information.
+
+**--version**
+> Output version information.
 
 # DESCRIPTION
 
@@ -54,5 +60,5 @@ mkfifo is a **POSIX** utility for creating named pipes for inter-process communi
 
 # SEE ALSO
 
-[mknod](/man/mknod)(1), [pipe](/man/pipe)(7), [fifo](/man/fifo)(7)
+[mknod](/man/mknod)(1)
 

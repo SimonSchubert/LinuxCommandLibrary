@@ -1,24 +1,24 @@
 # TAGLINE
 
-Generate random color noise images
+Generate random noise PNM images (often an alias for pgmnoise)
 
 # TLDR
 
-**Create color noise image**
+**Create grayscale noise image** (via pgmnoise)
 
-```pnmnoise [width] [height] > [noise.ppm]```
+```pgmnoise [width] [height] > [noise.pgm]```
 
-**Create with seed**
+**Build color noise** by combining three grayscale noise channels
 
-```pnmnoise -randomseed [42] [256] [256] > [noise.ppm]```
+```rgb3toppm <(pgmnoise 256 256) <(pgmnoise 256 256) <(pgmnoise 256 256) > noise.ppm```
 
-**Grayscale noise**
+**Add noise to an existing image**
 
-```pnmnoise [100] [100] | ppmtopgm > [noise.pgm]```
+```pamaddnoise -type=gaussian -lsigma=0.1 [image.pnm] > [noisy.pnm]```
 
 # SYNOPSIS
 
-**pnmnoise** [_options_] _width_ _height_
+**pgmnoise** [**-randomseed** _n_] _width_ _height_
 
 # PARAMETERS
 
@@ -29,37 +29,37 @@ Generate random color noise images
 > Image height in pixels.
 
 **-randomseed** _n_
-> Seed for reproducibility.
+> Seed the pseudo-random number generator for reproducible output.
 
 # DESCRIPTION
 
-**pnmnoise** generates a PNM image filled with random colored pixels. Each pixel has independently random red, green, and blue values, producing visual noise.
+There is no standalone **pnmnoise** program in modern Netpbm. The name is sometimes used loosely to refer to Netpbm's family of noise generators.
 
-Similar to pgmnoise but produces color output.
+Use **pgmnoise** to generate a grayscale PGM of white noise, **pbmnoise** for a PBM (bitmap) of random black/white pixels, and combine three **pgmnoise** outputs with **rgb3toppm** to create a color PPM noise image. **pamaddnoise** adds several noise distributions (gaussian, impulse, multiplicative-gaussian, etc.) to an existing image.
 
 # EXAMPLES
 
 ```bash
-# Color noise 512x512
-pnmnoise 512 512 > noise.ppm
+# Grayscale noise 512x512
+pgmnoise 512 512 > noise.pgm
 
-# Reproducible noise
-pnmnoise -randomseed 12345 100 100 > noise.ppm
+# Reproducible grayscale noise
+pgmnoise -randomseed 12345 100 100 > noise.pgm
+
+# Color noise by merging three channels
+rgb3toppm <(pgmnoise 256 256) <(pgmnoise 256 256) <(pgmnoise 256 256) > noise.ppm
 
 # Convert to PNG
-pnmnoise 200 200 | pnmtopng > noise.png
-
-# Grayscale version
-pnmnoise 100 100 | ppmtopgm > gray_noise.pgm
+pgmnoise 200 200 | pnmtopng > noise.png
 ```
 
 # CAVEATS
 
-Produces full color noise (PPM format). For grayscale use pgmnoise. Random distribution is uniform.
+**pnmnoise** is not a distinct binary; pgmnoise/pbmnoise produce single-channel noise only. Random distribution is uniform; for other distributions use pamaddnoise on a base image.
 
 # HISTORY
 
-pnmnoise is part of **Netpbm** by **Jef Poskanzer** and contributors for generating random images.
+The Netpbm noise generators are part of the **Netpbm** package (originally **pbmplus** by **Jef Poskanzer**, 1988). The older **pnmaddnoise** was renamed to **pamaddnoise** in Netpbm 10.30.
 
 # SEE ALSO
 

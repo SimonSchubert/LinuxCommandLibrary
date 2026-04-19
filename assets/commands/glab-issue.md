@@ -43,6 +43,9 @@ Manage GitLab issues from the command line
 **view**
 > View an issue.
 
+**update**
+> Update an issue (title, description, labels, etc.).
+
 **close**
 > Close an issue.
 
@@ -50,7 +53,16 @@ Manage GitLab issues from the command line
 > Reopen an issue.
 
 **note**
-> Add comment.
+> Add a comment/note to an issue.
+
+**subscribe**
+> Subscribe to an issue.
+
+**unsubscribe**
+> Unsubscribe from an issue.
+
+**board**
+> View or manage issue boards.
 
 **delete**
 > Delete an issue.
@@ -64,10 +76,19 @@ Manage GitLab issues from the command line
 > Issue description.
 
 **-l**, **--label** _labels_
-> Add labels.
+> Add labels (comma-separated).
 
 **-a**, **--assignee** _users_
-> Assign users.
+> Assign users (comma-separated usernames).
+
+**-m**, **--milestone** _name_
+> Assign milestone.
+
+**-c**, **--confidential**
+> Create as a confidential issue.
+
+**-w**, **--web**
+> Open in browser.
 
 # DESCRIPTION
 

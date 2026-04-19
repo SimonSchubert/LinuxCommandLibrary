@@ -50,6 +50,15 @@ The tool provides both a graphical TUI display and text output options suitable 
 **-o, --output** _format_
 > Output format: ascii, curses, format, null
 
+**-i, --input** _module_
+> Specify the input module (e.g., netlink, proc, dummy)
+
+**-f, --configfile** _file_
+> Load configuration from the given file
+
+**-U, --unit** _unit_
+> Force a specific unit for rates (e.g., B, KiB, MiB)
+
 # SEE ALSO
 
 [iftop](/man/iftop)(8), [nethogs](/man/nethogs)(8), [vnstat](/man/vnstat)(1), [nload](/man/nload)(1)

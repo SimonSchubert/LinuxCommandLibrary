@@ -41,6 +41,24 @@ Preview OpenTofu infrastructure changes
 **-destroy**
 > Plan destruction.
 
+**-refresh-only**
+> Update state without proposing changes.
+
+**-refresh=false**
+> Skip syncing state with remote objects.
+
+**-parallelism** _n_
+> Limit concurrent operations (default: 10).
+
+**-detailed-exitcode**
+> Return 0 (no changes), 1 (error), or 2 (changes present).
+
+**-input=false**
+> Disable prompts for unset variables.
+
+**-json**
+> Machine-readable JSON output.
+
 # DESCRIPTION
 
 **tofu plan** creates an execution plan for OpenTofu. OpenTofu is the open-source fork of Terraform. Shows proposed changes before applying to infrastructure.

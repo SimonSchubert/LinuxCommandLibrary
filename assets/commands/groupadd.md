@@ -53,6 +53,9 @@ Create group with **initial members**
 **-P, --prefix PREFIX_DIR**
 > Apply changes in prefix directory
 
+**-h, --help**
+> Display help message and exit
+
 # DESCRIPTION
 
 **groupadd** creates a new group account on the system. It records the new group information in system files (/etc/group and /etc/gshadow), assigning a unique GID unless specified.

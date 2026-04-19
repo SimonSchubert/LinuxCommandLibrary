@@ -28,9 +28,13 @@ inspects Apache Parquet files
 
 ```parquet-tools cat --json [file.parquet]```
 
-**Show column info**
+**Show column index info**
 
 ```parquet-tools column-index [file.parquet]```
+
+**Dump specific columns**
+
+```parquet-tools cat --columns [col1,col2] [file.parquet]```
 
 # SYNOPSIS
 

@@ -31,19 +31,61 @@ Run GUI Docker containers securely
 # PARAMETERS
 
 **--gpu**
-> GPU access.
+> Enable hardware OpenGL acceleration.
 
 **--home**
-> Share home.
+> Provide a persistent per-container home directory on the host.
 
 **--pulseaudio**
-> Audio support.
+> Enable PulseAudio sound support.
+
+**--alsa**
+> Enable ALSA sound support.
+
+**--pipewire**
+> Enable PipeWire sound support.
 
 **--clipboard**
-> Share clipboard.
+> Share clipboard between host and container.
+
+**--desktop**
+> Run a full desktop environment rather than a single application.
 
 **--xephyr**
-> Use Xephyr.
+> Use the Xephyr nested X server (default fallback).
+
+**--xpra**
+> Use Xpra as the X server backend.
+
+**--nxagent**
+> Use nxagent as the X server backend.
+
+**--wayland**
+> Run in a Wayland compositor.
+
+**--hostdisplay**
+> Share the host X socket (less secure, fallback).
+
+**--share** _PATH_
+> Share a host file or folder with the container.
+
+**--network**, **-I**
+> Allow network access from the container.
+
+**--init** _SYSTEM_
+> Use an init system (e.g., systemd, runit, tini).
+
+**--backend** _BACKEND_
+> Choose container backend: docker, podman, or host.
+
+**--webcam**
+> Share webcams with the container.
+
+**--printer**
+> Share host CUPS printers.
+
+**--user** _USER_
+> Run the container as a specific user.
 
 # DESCRIPTION
 
@@ -53,11 +95,11 @@ The tool supports GPU hardware acceleration, PulseAudio integration, and clipboa
 
 # CAVEATS
 
-Docker required. X11 setup. May need configuration.
+Requires Docker or Podman. At least one nested X server backend (Xephyr, Xpra, nxagent, or Xwayland) must be installed on the host. Using **--hostdisplay** reduces isolation. GPU acceleration requires compatible drivers inside the container.
 
 # HISTORY
 
-**x11docker** was created to securely run Docker containers with X11 GUI applications.
+**x11docker** was created by **Martin Viereck** to run Docker containers with GUI applications while preserving host security. It predates modern Wayland-native container workflows and remains a widely-used solution for desktop containerization.
 
 # SEE ALSO
 

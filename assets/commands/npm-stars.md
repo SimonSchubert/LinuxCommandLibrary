@@ -16,6 +16,11 @@ displays packages starred by a user
 
 **npm** **stars** [_user_]
 
+# PARAMETERS
+
+**--registry** _URL_
+> npm registry URL (default: https://registry.npmjs.org/).
+
 # DESCRIPTION
 
 **npm stars** displays packages starred by a user. Shows your starred packages by default. View another user's starred packages by providing username.

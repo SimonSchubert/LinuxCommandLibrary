@@ -33,25 +33,49 @@ The tool provides over 50 predefined box styles with customization options.
 # PARAMETERS
 
 **-d** _design_
-> Box design to use
+> Box design to use.
 
 **-l**
-> List available designs
+> List available designs with samples.
 
 **-r**
-> Remove box instead of adding
+> Remove an existing box (design auto-detected; combine with -d to hint).
 
 **-a** _format_
-> Alignment (left, center, right)
+> Alignment/positioning of text inside box (e.g., `hcvc` for horizontally and vertically centered).
 
-**-s** _wxh_
-> Box size (width x height)
+**-s** _WxH_
+> Desired box size in columns (width) and lines (height).
 
-**-p** _padding_
-> Padding format
+**-p** _format_
+> Padding around input (e.g., `a1l3` = 1 space all around plus 3 extra on the left).
 
 **-f** _file_
-> Config file
+> Use alternate config file.
+
+**-i** _indent_
+> Indentation mode for input (`box`, `text`, or `none`).
+
+**-n** _encoding_
+> Input/output character encoding.
+
+**-t** _tabopts_
+> Tab handling options (expand/keep/unexpand).
+
+**-k** _bool_
+> Leading/trailing blank lines in input handling.
+
+**-e** _eol_
+> Force end-of-line style (`unix`, `dos`, `mac`).
+
+**-c** _string_
+> Shortcut to create a basic box with the given character(s) as border.
+
+**-h**
+> Print usage information.
+
+**-v**
+> Print version information.
 
 # POPULAR DESIGNS
 

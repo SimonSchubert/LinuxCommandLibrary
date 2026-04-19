@@ -60,6 +60,9 @@ List known **vendor** MAC prefixes
 **-l, --list**
 > Print known vendor MAC prefixes
 
+**-e, --ending**
+> Only change the last bytes, preserving the vendor prefix
+
 **-a, --another**
 > Set random vendor MAC of same kind
 

@@ -4,42 +4,42 @@ deletes a GitHub repository
 
 # TLDR
 
-**Delete repository**
+**Delete a repository under your user**
 
-```hub delete [user/repo]```
+```hub delete [name]```
 
-**Delete current repo**
+**Delete an organization repository**
 
-```hub delete```
+```hub delete [organization]/[name]```
 
-**Force delete**
+**Skip the confirmation prompt**
 
-```hub delete -y [user/repo]```
+```hub delete -y [user]/[name]```
 
 # SYNOPSIS
 
-**hub delete** [_options_] [_repository_]
+**hub delete** [**-y**] [_organization_/]_name_
 
 # PARAMETERS
 
-_REPOSITORY_
-> Repository to delete (user/repo).
+[_ORGANIZATION_/]_NAME_
+> The name of the repository on GitHub, optionally prefixed by an organization.
 
 **-y**, **--yes**
-> Skip confirmation.
+> Skip the confirmation prompt and immediately delete the repository.
 
 **--help**
 > Display help information.
 
 # DESCRIPTION
 
-**hub delete** deletes a GitHub repository. Without arguments, it deletes the repository associated with the current directory.
+**hub delete** deletes a GitHub repository. The repository name is required and may be prefixed with an organization for repositories not owned by the current user.
 
-The command requires confirmation unless forced. It permanently removes the repository including all issues, PRs, and wiki.
+The command requires interactive confirmation unless **-y** is provided. It permanently removes the repository including all issues, pull requests, and wiki data.
 
 # CAVEATS
 
-Destructive and irreversible. Requires authentication. Owner permissions needed.
+Destructive and irreversible. Requires authentication and the **delete_repo** scope on the GitHub token. Owner or admin permissions on the target repository are required.
 
 # HISTORY
 

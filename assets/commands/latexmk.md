@@ -81,26 +81,35 @@ perl script that automates LaTeX document compilation
 **-verbose**
 > Increase output verbosity.
 
-**-interaction=** _mode_
-> Set interaction mode: nonstopmode, batchmode, errorstopmode.
+**-interaction=**_mode_
+> Set interaction mode: nonstopmode, batchmode, errorstopmode, scrollmode.
 
 **-shell-escape**
 > Enable shell escape (for packages like minted).
 
-**-output-directory=** _dir_
+**-outdir=**_dir_, **-output-directory=**_dir_
 > Output directory for generated files.
 
-**-auxdir=** _dir_
+**-auxdir=**_dir_
 > Directory for auxiliary files.
 
-**-jobname=** _name_
+**-jobname=**_name_
 > Set output base name.
 
-**-bibtex**
-> Run bibtex/biber when needed.
+**-bibtex**, **-nobibtex**
+> Force or disable running bibtex/biber.
 
 **-recorder**
 > Enable recorder to track file dependencies.
+
+**-norc**
+> Skip reading initialization (rc) files.
+
+**-deps**
+> Show a list of dependent files (Make-compatible format).
+
+**-diagnostics**
+> Print detailed diagnostics.
 
 # DESCRIPTION
 

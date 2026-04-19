@@ -43,8 +43,8 @@ Automate versioning and package publishing
 **-d**, **--dry-run**
 > Run in dry-run mode to preview the pending release without actually publishing. Skips prepare, publish, addChannel, success, and fail steps. Prints the next version and release notes to console.
 
-**--no-ci**
-> Run semantic-release in a local environment outside of CI. Useful for testing and debugging.
+**--ci**, **--no-ci**
+> Toggle CI environment verification. Use **--no-ci** to run semantic-release in a local environment outside of CI. Useful for testing and debugging.
 
 **-b**, **--branches**
 > Define the branches on which releases should happen. Accepts branch names or micromatch glob patterns.
@@ -102,4 +102,4 @@ semantic-release must run in a CI environment with push access to the repository
 
 # SEE ALSO
 
-[npm](/man/npm)(1), [git](/man/git)(1), [conventional-changelog](/man/conventional-changelog)(1)
+[npm](/man/npm)(1), [git](/man/git)(1)

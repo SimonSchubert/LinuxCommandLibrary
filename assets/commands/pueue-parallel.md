@@ -22,55 +22,25 @@ Set pueue task concurrency level
 
 # SYNOPSIS
 
-**pueue parallel** [_options_] [_amount_]
+**pueue parallel** [**-g** _group_] [_amount_]
 
 # PARAMETERS
 
-**amount**
-> Number of parallel tasks (0 = unlimited).
+_amount_
+> Number of tasks allowed to run in parallel in the target group. A value of **0** means unlimited. Omit _amount_ to query the current value.
 
-**--group**, **-g** _name_
-> Target specific group.
+**-g**, **--group** _NAME_
+> Apply the setting to the named group instead of the **default** group.
 
 # DESCRIPTION
 
-**pueue parallel** sets how many tasks can run simultaneously in the pueue task queue. This controls concurrency for the default or specified group.
+**pueue parallel** sets how many tasks can run simultaneously in a pueue group. Each group has its own independent parallelism limit. If no _amount_ is given, pueue prints the group's current value.
 
-# EXAMPLES
-
-```bash
-# Allow 4 parallel tasks
-pueue parallel 4
-
-# Sequential execution
-pueue parallel 1
-
-# Unlimited parallelism
-pueue parallel 0
-
-# Set for specific group
-pueue parallel --group downloads 2
-
-# Check current setting
-pueue status
-```
-
-# USE CASES
-
-```bash
-# CPU-bound tasks (match cores)
-pueue parallel $(nproc)
-
-# I/O-bound tasks (more parallelism)
-pueue parallel 10
-
-# Memory-intensive (limit)
-pueue parallel 2
-```
+Changes only affect scheduling of new tasks — already-running tasks are never stopped when the limit is lowered.
 
 # CAVEATS
 
-Setting affects new task scheduling. Running tasks continue. 0 means no limit.
+Setting 0 disables the concurrency limit entirely. Use **pueue group** to list groups and **pueue status** to view current limits.
 
 # HISTORY
 

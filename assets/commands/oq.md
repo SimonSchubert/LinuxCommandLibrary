@@ -28,6 +28,18 @@ Portable jq wrapper with XML and YAML support
 **-o** _FORMAT_
 > Output format (json, yaml, xml). Default: json.
 
+**--xml-root** _NAME_
+> Root element name when transcoding to XML. Default: root.
+
+**--indent** _N_
+> Number of spaces per indentation level (default: 2).
+
+**--tab**
+> Use tabs instead of spaces for indentation.
+
+**-h**, **--help**
+> Display help. All other arguments are passed through to jq.
+
 # DESCRIPTION
 
 **oq** is a performant, portable jq wrapper that adds support for consuming and outputting formats beyond JSON, including XML and YAML. All jq filters work as expected — oq handles format conversion on input and output transparently.

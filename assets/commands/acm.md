@@ -60,4 +60,4 @@ Requires X Window System for display. Network play requires proper firewall conf
 
 # SEE ALSO
 
-[flightgear](/man/flightgear)(1), [xpilot](/man/xpilot)(1)
+[xpilot](/man/xpilot)(1)

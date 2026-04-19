@@ -24,9 +24,9 @@ free lossless audio codec encoder and decoder
 
 ```flac -t [audio.flac]```
 
-**Add metadata tags**
+**Add metadata tags** during encoding
 
-```flac --tag="ARTIST=[Name]" --tag="TITLE=[Song]" [audio.flac]```
+```flac -T "ARTIST=[Name]" -T "TITLE=[Song]" [audio.wav]```
 
 **Output to specific file**
 
@@ -65,17 +65,29 @@ The tool handles encoding, decoding, testing, and metadata operations. FLAC file
 **-o** _file_
 > Output file name.
 
-**--tag=** _field=value_
-> Add metadata tag.
+**-c**, **--stdout**
+> Write output to stdout.
+
+**-f**, **--force**
+> Force overwriting of output files.
+
+**-T**, **--tag=** _FIELD=VALUE_
+> Add a Vorbis comment tag (may be repeated).
+
+**--tag-from-file=** _FIELD=FILENAME_
+> Read the tag value from a file.
 
 **--delete-input-file**
-> Delete input after encoding.
+> Delete input after successful encoding/decoding.
 
 **-s**, **--silent**
-> Suppress output.
+> Suppress runtime statistics.
 
-**--verify**
-> Verify during encoding.
+**-V**, **--verify**
+> Verify by decoding in parallel during encoding.
+
+**-w**, **--warnings-as-errors**
+> Treat all warnings as errors.
 
 # CAVEATS
 

@@ -4,42 +4,79 @@ Apply rejected patches with conflict resolution
 
 # TLDR
 
-**Apply rejected patch**
+**Apply a rejected patch** in-place
 
 ```wiggle --replace [original] [original.rej]```
 
-**Show difference**
+**Show a word-wise diff** between two files
 
-```wiggle -d [file1] [file2]```
+```wiggle --diff [file1] [file2]```
 
-**Merge three files**
+**Perform a three-way merge**
 
-```wiggle -m [original] [changed] [modified]```
+```wiggle --merge [original] [changed] [modified]```
 
-**Browse conflicts**
+**Interactively browse** a merge or patch
 
-```wiggle --browse [file.rej]```
+```wiggle --browse [original] [original.rej]```
+
+**Extract one branch** of a patch or merge
+
+```wiggle --extract --patch [file.patch] > [patched]```
 
 # SYNOPSIS
 
-**wiggle** [_--replace_] [_-d_] [_-m_] [_options_] _files_
+**wiggle** [_mode_] [_options_] _files_
 
 # PARAMETERS
 
-**--replace**
-> Apply and replace.
+**-m**, **--merge**
+> Three-way merge mode (default).
 
-**-d**
-> Show diff.
+**-d**, **--diff**
+> Word-wise diff mode.
 
-**-m**
-> Three-way merge.
+**-x**, **--extract**
+> Extract one file/branch from patch or merge.
 
-**--browse**
-> Interactive browser.
+**-B**, **--browse**
+> Interactive ncurses browser for merges, diffs, or patches.
 
-**-w**
-> Word-based diff.
+**-r**, **--replace**
+> Overwrite the original file with the merge result (keeps `.porig` backup).
+
+**-o** _file_, **--output** _file_
+> Write output to given file instead of stdout.
+
+**-p**, **--patch**
+> Treat one of the arguments as a patch file.
+
+**-w**, **--words**
+> Work at word granularity (default for text).
+
+**-l**, **--lines**
+> Work at line granularity.
+
+**-b**, **--ignore-blanks**
+> Ignore whitespace-only changes when merging.
+
+**-i**, **--no-ignore**
+> Do not ignore already-applied patches (include them in output).
+
+**-W**, **--show-wiggles**
+> Mark hunks that were wiggled into place.
+
+**-q**, **--quiet**
+> Suppress informational messages.
+
+**-v**, **--verbose**
+> Increase verbosity.
+
+**-h**, **--help**
+> Display help and exit.
+
+**-V**, **--version**
+> Display version and exit.
 
 # DESCRIPTION
 

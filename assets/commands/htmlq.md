@@ -22,7 +22,7 @@ extracts data from HTML using CSS selectors
 
 **Remove nodes before extracting**
 
-```htmlq -r [.unwanted] [div.content] < [page.html]```
+```htmlq --remove-nodes [.unwanted] [div.content] < [page.html]```
 
 **From URL via curl**
 
@@ -38,28 +38,37 @@ _SELECTOR_
 > CSS selector.
 
 **-a**, **--attribute** _ATTR_
-> Extract attribute value.
+> Only return this attribute's value from selected elements.
 
 **-t**, **--text**
-> Extract text content.
+> Output only the text content of selected elements.
 
 **-p**, **--pretty**
-> Pretty print output.
+> Pretty-print the serialised HTML output.
 
-**-B**, **--base** _URL_
-> Set base URL for relative links.
+**-b**, **--base** _URL_
+> Use this URL as the base for relative links.
 
-**-f**, **--file** _FILE_
-> Read from file.
+**-B**, **--detect-base**
+> Detect the base URL from the document's `<base>` tag.
+
+**-f**, **--filename** _FILE_
+> Input file (defaults to stdin).
+
+**-o**, **--output** _FILE_
+> Output file (defaults to stdout).
 
 **-r**, **--remove-nodes** _SELECTOR_
-> Remove matching nodes from output.
+> Remove matching nodes before output. May be specified multiple times.
 
 **-w**, **--ignore-whitespace**
-> When printing text nodes, ignore whitespace.
+> When printing text nodes, ignore whitespace-only nodes.
 
-**--help**
+**-h**, **--help**
 > Display help information.
+
+**-V**, **--version**
+> Show version information.
 
 # DESCRIPTION
 

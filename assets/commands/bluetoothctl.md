@@ -42,8 +42,35 @@ List **devices**
 
 # PARAMETERS
 
-**devices**
-> List known devices
+**-a**, **--agent** _capability_
+> Register an agent handler with the specified capability.
+
+**-e**, **--endpoints**
+> Register media endpoints.
+
+**-m**, **--monitor**
+> Enable monitor output.
+
+**-t**, **--timeout** _seconds_
+> Timeout for non-interactive mode.
+
+**-v**, **--version**
+> Display version.
+
+**-h**, **--help**
+> Display help.
+
+**list**
+> List available controllers
+
+**show** [_ctrl_]
+> Show controller information
+
+**select** _ctrl_
+> Set the default controller
+
+**devices** [_filter_]
+> List known devices (filter: Paired, Bonded, Trusted, Connected)
 
 **power** _on|off_
 > Turn Bluetooth controller on or off
@@ -71,6 +98,12 @@ List **devices**
 
 **info** _address_
 > Show device information
+
+**block** _address_
+> Block a device from connecting
+
+**unblock** _address_
+> Unblock a previously blocked device
 
 **discoverable** _on|off_
 > Set controller discoverability

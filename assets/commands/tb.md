@@ -94,6 +94,9 @@ Terminal task and note board
 **-i**, **--timeline**
 > Display items grouped by creation date
 
+**--taskbook-dir** _path_
+> Use a custom taskbook storage directory
+
 **-h**, **--help**
 > Show help information
 

@@ -4,25 +4,29 @@ Manipulate IP address aggregate files created by ipaggcreate
 
 # TLDR
 
-**Manipulate IP aggregate files**
+**Read aggregate file and output sorted counts**
 
-```ipaggmanip [input.agg]```
+```ipaggmanip -r [input.agg] --sorted-counts```
 
-**Merge multiple aggregate files**
+**Combine (union) multiple aggregate files**
 
-```ipaggmanip --merge [file1.agg] [file2.agg] > [combined.agg]```
+```ipaggmanip --or [file1.agg] [file2.agg] -o [combined.agg]```
 
-**Filter aggregates by count threshold**
+**Re-aggregate to a shorter prefix length (e.g., /16)**
 
-```ipaggmanip --min-count=[100] [input.agg]```
+```ipaggmanip --prefix [16] -r [input.agg]```
 
-**Sort aggregates by count**
+**Drop labels with fewer than N packets**
 
-```ipaggmanip --sort [input.agg]```
+```ipaggmanip --cut-smaller [100] -r [input.agg]```
 
-**Convert aggregate format**
+**Output in ASCII with IP addresses**
 
-```ipaggmanip --output-format=[ascii] [input.agg]```
+```ipaggmanip --ip -r [input.agg]```
+
+**Count number of active labels**
+
+```ipaggmanip --num-labels -r [input.agg]```
 
 # SYNOPSIS
 
@@ -30,26 +34,59 @@ Manipulate IP address aggregate files created by ipaggcreate
 
 # PARAMETERS
 
-**--merge**
-> Merge multiple aggregate files
+**-r**, **--read-file** _FILE_
+> Read aggregate data from FILE (default: stdin).
 
-**--sort**
-> Sort output by count or address
+**-o**, **--output** _FILE_
+> Write results to FILE (default: stdout).
 
-**--min-count** _N_
-> Only output aggregates with at least N entries
+**-b**, **--binary**
+> Output in binary format.
 
-**--max-count** _N_
-> Only output aggregates with at most N entries
+**-A**, **--text**
+> Output in ASCII text format.
 
-**--output-format** _FORMAT_
-> Specify output format (ascii, binary)
+**--ip**
+> Output in ASCII with IP addresses instead of raw integer labels.
 
-**--prefix** _LENGTH_
-> Re-aggregate with different prefix length
+**-p**, **--prefix** _P_
+> Re-aggregate to prefix level P (e.g., 16 for /16).
 
-**-o** _FILE_
-> Write output to file instead of stdout
+**-P**, **--posterize**
+> Replace every nonzero count with 1.
+
+**--sample** _N_
+> Randomly sample packets with probability 1/N.
+
+**--cut-smaller** _N_
+> Drop labels with fewer than N packets.
+
+**--cut-larger** _N_
+> Drop labels with N or more packets.
+
+**-n**, **--num-labels**
+> Print the count of active labels.
+
+**--counts**
+> Output counts in label order.
+
+**--sorted-counts**
+> Output counts in descending order.
+
+**-e**, **--each**
+> Process each input file separately.
+
+**--or**
+> Combine input files by adding aggregates (union).
+
+**--and**
+> Combine inputs, keeping only labels common to all files.
+
+**--minus**
+> Keep FILE1, drop labels present in other files.
+
+**--xor**
+> Keep labels present in exactly one file.
 
 # DESCRIPTION
 

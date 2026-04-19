@@ -8,21 +8,29 @@ Scan system for rootkits and vulnerabilities
 
 ```sudo rkhunter --check```
 
+**Check** non-interactively (no keypress prompts)
+
+```sudo rkhunter --check --sk```
+
 **Update** database
 
 ```sudo rkhunter --update```
 
+**Update** file properties database after legitimate changes
+
+```sudo rkhunter --propupd```
+
 **List** all tests
 
-```sudo rkhunter --list```
+```sudo rkhunter --list tests```
 
 Check **version**
 
 ```sudo rkhunter --versioncheck```
 
-Display **help**
+Run from **cron** reporting warnings only
 
-```sudo rkhunter --help```
+```sudo rkhunter --cronjob --report-warnings-only```
 
 # SYNOPSIS
 
@@ -30,29 +38,62 @@ Display **help**
 
 # PARAMETERS
 
-**--check**
-> Perform system check
+**-c**, **--check**
+> Perform system check for rootkits, backdoors, and exploits.
 
 **--update**
-> Update malware signatures
+> Update data files and malware signatures.
 
 **--propupd**
-> Update file properties database
+> Update file properties database with current values (run after legitimate system changes).
 
-**--list**
-> List available tests
+**--list** [_tests|rootkits|lang|perl|propfiles_]
+> List supported capabilities.
 
 **--versioncheck**
-> Check for updates
+> Check for a newer rkhunter version.
 
-**--skip-keypress**
-> Don't wait for keypress
+**-C**, **--config-check**
+> Validate configuration file(s).
 
-**--report-warnings-only**
-> Only show warnings
+**--sk**, **--skip-keypress**
+> Don't wait for a keypress between test groups.
 
-**-l, --logfile _file_**
-> Write to specific log file
+**--rwo**, **--report-warnings-only**
+> Only display warnings.
+
+**--cronjob**
+> Optimize output for cron execution (no colors, no keypress).
+
+**--configfile** _file_
+> Use an alternate configuration file.
+
+**-l**, **--logfile** _file_
+> Write log output to a specific file.
+
+**--appendlog**
+> Append to an existing log file instead of overwriting.
+
+**--disable** _tests_
+> Disable specific tests (comma-separated list).
+
+**--enable** _tests_
+> Enable only the specified tests.
+
+**--pkgmgr** _type_
+> Use package manager verification (RPM, DPKG, BSD, SOLARIS, NONE).
+
+**-q**, **--quiet**
+> Suppress all output.
+
+**--nocolors**
+> Disable colored output.
+
+**-V**, **--version**
+> Display version information.
+
+**-h**, **--help**
+> Display help information.
 
 # DESCRIPTION
 

@@ -38,11 +38,35 @@ Run unit tests for PlatformIO projects
 **--upload-port** _port_
 > Upload port for device tests.
 
+**--test-port** _port_
+> Serial/UART port used as communication interface for tests.
+
+**-d**, **--project-dir** _path_
+> Specify project directory path.
+
+**-c**, **--project-conf** _file_
+> Use a custom platformio.ini file.
+
 **-v**, **--verbose**
-> Verbose output.
+> Verbose output (repeat for more: -vv, -vvv).
 
 **--without-building**
-> Skip building before testing.
+> Skip the build stage.
+
+**--without-uploading**
+> Skip the upload stage.
+
+**--without-testing**
+> Skip the test stage.
+
+**--list-tests**
+> List tests without running them.
+
+**--json-output**
+> Return output in JSON format.
+
+**--junit-output-path** _file_
+> Generate a JUnit XML report at the given path.
 
 # DESCRIPTION
 

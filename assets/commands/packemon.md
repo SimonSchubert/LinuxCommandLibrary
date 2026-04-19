@@ -20,6 +20,10 @@ TUI tool for generating and monitoring network packets
 
 ```packemon interfaces```
 
+**Show the packemon version**
+
+```packemon version```
+
 # SYNOPSIS
 
 **packemon** _command_ [_options_]
@@ -27,16 +31,25 @@ TUI tool for generating and monitoring network packets
 # PARAMETERS
 
 **monitor**, **mon**, **m**
-> Monitor packets on the specified network interface.
+> Monitor packets received and sent on the specified interface.
 
 **generator**, **gen**, **g**
-> Generate and send custom network packets.
+> Generate and send arbitrary network packets.
 
 **interfaces**, **intfs**, **i**
 > List available network interfaces.
 
+**debugging**, **debug**, **d**
+> Debugging mode intended for development.
+
+**version**, **v**
+> Display version information.
+
 **--interface** _NAME_
-> Specify the network interface. Default: eth0.
+> Network interface to use (default: `eth0`).
+
+**-h**, **--help**
+> Show help.
 
 # DESCRIPTION
 

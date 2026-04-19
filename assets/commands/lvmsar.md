@@ -1,6 +1,6 @@
 # TAGLINE
 
-was the LVM system activity reporter for displaying I/O statistics on logical
+Deprecated LVM1 system activity reporter for logical volume I/O statistics
 
 # TLDR
 
@@ -32,4 +32,4 @@ This command is **not supported under LVM2**. Modern systems should use **dmstat
 
 # SEE ALSO
 
-[lvmsadc](/man/lvmsadc)(8), [dmstats](/man/dmstats)(8), [sar](/man/sar)(1), [lvm](/man/lvm)(8)
+[lvmsadc](/man/lvmsadc)(8), [sar](/man/sar)(1), [lvm](/man/lvm)(8)

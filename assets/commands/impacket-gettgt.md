@@ -22,18 +22,33 @@ requests a Kerberos Ticket Granting Ticket from an Active Directory domain
 
 # SYNOPSIS
 
-**impacket-gettgt** [_-h_] [_-dc-ip IP_] [_-hashes LMHASH:NTHASH_] [_-aesKey KEY_] _target_
+**impacket-gettgt** [_-h_] [_-hashes LMHASH:NTHASH_] [_-no-pass_] [_-k_] [_-aesKey KEY_] [_-dc-ip IP_] [_-service SPN_] _target_
 
 # PARAMETERS
 
-**-dc-ip** _IP_
-> IP address of the domain controller (KDC)
-
 **-hashes** _LMHASH:NTHASH_
-> Use NTLM hashes for authentication instead of password
+> Use NTLM hashes for authentication instead of password.
+
+**-no-pass**
+> Don't ask for password (useful together with **-k**).
+
+**-k**
+> Use Kerberos authentication; grab credentials from ccache file (KRB5CCNAME).
 
 **-aesKey** _KEY_
-> AES key to use for Kerberos authentication (128 or 256 bit)
+> AES key to use for Kerberos authentication (128 or 256 bit).
+
+**-dc-ip** _IP_
+> IP address of the domain controller (KDC). If omitted, the domain part of the identity is used.
+
+**-service** _SPN_
+> Request a service ticket directly through an AS-REQ for the given SPN.
+
+**-principalType** _TYPE_
+> Principal name type (default NT_PRINCIPAL).
+
+**-debug**
+> Enable debug output.
 
 # DESCRIPTION
 
@@ -51,4 +66,4 @@ Part of the **Impacket** library by SecureAuth, implementing the Kerberos protoc
 
 # SEE ALSO
 
-[impacket-getst](/man/impacket-getst)(1), [kinit](/man/kinit)(1), [klist](/man/klist)(1), [impacket-secretsdump](/man/impacket-secretsdump)(1)
+[impacket-getst](/man/impacket-getst)(1), [kinit](/man/kinit)(1), [impacket-secretsdump](/man/impacket-secretsdump)(1)

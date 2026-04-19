@@ -39,31 +39,61 @@ Manage GitHub project boards and work items
 **create**
 > Create a project.
 
-**delete**
-> Delete a project.
-
-**item-add**
-> Add item to project.
-
-**item-list**
-> List project items.
+**copy**
+> Copy a project.
 
 **edit**
-> Edit a project.
+> Edit project settings.
 
 **close**
 > Close a project.
 
+**delete**
+> Delete a project.
+
+**link** / **unlink**
+> Link or unlink a repository or team to a project.
+
+**mark-template**
+> Mark a project as a template.
+
+**item-add**
+> Add an existing issue or PR to a project.
+
+**item-create**
+> Create a draft item in a project.
+
+**item-edit**
+> Edit an item's field values.
+
+**item-archive**
+> Archive an item.
+
+**item-delete**
+> Remove an item.
+
+**item-list**
+> List project items.
+
+**field-create** / **field-list** / **field-delete**
+> Manage custom fields on a project.
+
 # PARAMETERS
 
 **--owner** _owner_
-> Project owner.
+> Owner of the project (user or organization).
 
 **--title** _title_
 > Project title.
 
 **--url** _url_
-> Issue or PR URL.
+> Issue or PR URL to add.
+
+**--format** _format_
+> Output format (e.g. json).
+
+**-q**, **--jq** _expression_
+> Filter JSON output with a jq expression.
 
 # DESCRIPTION
 
@@ -73,4 +103,4 @@ Projects can contain issues, pull requests, and draft items organized into board
 
 # SEE ALSO
 
-[gh](/man/gh)(1), [gh-issue](/man/gh-issue)(1)
+[gh](/man/gh)(1), [gh-issue](/man/gh-issue)(1), [gh-pr](/man/gh-pr)(1), [gh-repo](/man/gh-repo)(1)

@@ -35,10 +35,16 @@ Show **version**
 # PARAMETERS
 
 **--help**
-> Display help for a command
+> Display help for a command.
 
 **--version**
-> Display version information
+> Display version information.
+
+**--long**
+> List commands with their suggested installation paths.
+
+**--install** _dir_
+> Create symlinks in _dir_ for each built-in command.
 
 # DESCRIPTION
 

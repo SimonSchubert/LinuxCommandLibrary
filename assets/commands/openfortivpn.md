@@ -38,6 +38,12 @@ Trust a gateway by its **certificate SHA256 sum**
 **--trusted-cert=**_sha256_
 > Trust gateway certificate with this SHA256 fingerprint
 
+**--user-cert=**_file_
+> Client certificate file for authentication
+
+**--user-key=**_file_
+> Client private key file
+
 **--realm=**_realm_
 > Specify authentication realm
 
@@ -50,20 +56,44 @@ Trust a gateway by its **certificate SHA256 sum**
 **--otp-delay=**_delay_
 > Delay in seconds before sending OTP
 
+**--saml-login**[=_port_]
+> Use SAML/SSO authentication
+
+**--pinentry=**_program_
+> Use a pinentry program for password entry
+
+**--persistent=**_seconds_
+> Reconnect after the specified delay on disconnect
+
 **--no-routes**
 > Do not add VPN routes to routing table
 
 **--half-internet-routes**
 > Add two /1 routes instead of default route
 
+**--set-routes=**_bool_
+> Configure routes (0 to disable)
+
+**--set-dns=**_bool_
+> Configure DNS (0 to disable)
+
 **--pppd-log=**_file_
 > Log file for pppd
+
+**--pppd-ifname=**_name_
+> Set ppp interface name
+
+**--pppd-use-peerdns=**_bool_
+> Use DNS servers provided by the peer
+
+**--user-agent=**_string_
+> Set custom HTTP User-Agent
 
 **-v**, **--verbose**
 > Increase verbosity (use multiple times)
 
-**--pppd-ifname=**_name_
-> Set ppp interface name
+**-q**, **--quiet**
+> Decrease verbosity
 
 # DESCRIPTION
 

@@ -35,40 +35,55 @@ diagnostic tool for smart cards
 # PARAMETERS
 
 **-l**, **--list-readers**
-> List available readers.
+> List all configured readers.
 
 **-i**, **--info**
-> Card information.
+> Print information about OpenSC (version and enabled components).
 
 **-a**, **--atr**
-> Show ATR.
+> Print the Answer To Reset (ATR) of the card in hex.
 
-**-s**, **--send-apdu** _apdu_
-> Send APDU.
+**-s** _apdu_, **--send-apdu** _apdu_
+> Send an arbitrary APDU command to the card.
 
-**--list-files**
-> List files on card.
+**-f**, **--list-files**
+> Recursively list all files stored on the card.
 
-**-r** _reader_
-> Use specific reader.
+**--list-algorithms**
+> List algorithms supported by the card.
+
+**-r** _reader_, **--reader** _reader_
+> Use a specific reader (by number or ATR).
 
 **-n**, **--name**
-> Print the name of the inserted card (driver).
+> Print the name of the inserted card driver.
 
 **--serial**
-> Print the card serial number (ICCSN) in hex.
+> Print the card serial number in hex.
 
 **-D**, **--list-drivers**
 > List all installed card drivers.
 
 **-c** _driver_, **--card-driver** _driver_
-> Use specified card driver instead of auto-detection.
+> Use the specified card driver (use '?' to list).
+
+**--reset**
+> Reset the card (cold or warm).
+
+**-G** _section:name:key_, **--get-conf-entry**
+> Retrieve an opensc.conf configuration value.
+
+**-S** _section:name:key:value_, **--set-conf-entry**
+> Set an opensc.conf configuration value.
 
 **-w**, **--wait**
 > Wait for a card to be inserted.
 
 **-v**, **--verbose**
-> Verbose output (specify multiple times for debug output).
+> Verbose output (may be specified multiple times for debug).
+
+**--version**
+> Display OpenSC package version.
 
 # DESCRIPTION
 

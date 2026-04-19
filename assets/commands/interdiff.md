@@ -12,40 +12,59 @@ compares two unified diff files and generates a diff representing the changes
 
 ```interdiff [version1.patch] [version2.patch] > [upgrade.patch]```
 
-**Compare patches with different strip levels**
+**Strip leading path components** from patch filenames
 
-```interdiff -p1 [old.patch] -p2 [new.patch]```
+```interdiff -p 1 [old.patch] [new.patch]```
 
-**Show differences in unified format**
+**Display additional lines of context**
 
-```interdiff -U [old.patch] [new.patch]```
+```interdiff -U [3] [old.patch] [new.patch]```
+
+**Compare gzip/bzip2 compressed patches**
+
+```interdiff -z [old.patch.gz] [new.patch.gz]```
 
 # SYNOPSIS
 
-**interdiff** [_-p NUM_] [_-U_] [_-d PAT_] [_-q_] _patch1_ _patch2_
+**interdiff** [_-U N_] [_-p N_] [_-d PAT_] [_-q_] [_-i_] [_-w_] [_-b_] [_-B_] [_-z_] _patch1_ _patch2_
 
 # PARAMETERS
 
-**-p** _NUM_
-> Strip NUM leading path components (like patch -p)
+**-U** _N_, **--unified=**_N_
+> Display N lines of context (default: 3).
 
-**-U**
-> Output in unified diff format
+**-p** _N_, **--strip-match=**_N_
+> Ignore N leading pathname components when matching filenames.
 
-**-d** _PAT_
-> Only compare files matching pattern PAT
+**-d** _PAT_, **--drop-context=**_PAT_
+> Exclude context for files whose names match pattern PAT.
 
-**-q**
-> Quiet mode; suppress warnings
+**-i**, **--ignore-case**
+> Treat upper and lower case as identical when comparing.
 
-**--interpolate**
-> Run as \"interdiff\", showing changes between patches
+**-w**, **--ignore-all-space**
+> Ignore all whitespace when comparing.
 
-**--combine**
-> Run as \"combinediff\", combining two patches
+**-b**, **--ignore-space-change**
+> Ignore changes in the amount of whitespace.
 
-**--flip**
-> Run as \"flipdiff\", exchanging the order of two patches
+**-B**, **--ignore-blank-lines**
+> Ignore changes that consist only of blank-line additions/removals.
+
+**-z**, **--decompress**
+> Automatically decompress .gz and .bz2 patches.
+
+**-q**, **--quiet**
+> Reduce warnings in output.
+
+**--no-revert-omitted**
+> Do not revert portions of the first patch that are omitted from the second.
+
+**--help**
+> Display usage information.
+
+**--version**
+> Show version number.
 
 # DESCRIPTION
 
@@ -63,4 +82,4 @@ Both input patches must be in unified diff format. Context diffs are not support
 
 # SEE ALSO
 
-[combinediff](/man/combinediff)(1), [flipdiff](/man/flipdiff)(1), [filterdiff](/man/filterdiff)(1), [diff](/man/diff)(1), [patch](/man/patch)(1)
+[combinediff](/man/combinediff)(1), [diff](/man/diff)(1), [patch](/man/patch)(1)

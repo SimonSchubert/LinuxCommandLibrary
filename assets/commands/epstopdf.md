@@ -24,6 +24,14 @@ Encapsulated PostScript to PDF converter
 
 ```epstopdf --embed [image.eps]```
 
+**Read EPS from stdin, write PDF to stdout**
+
+```cat [image.eps] | epstopdf --filter > [out.pdf]```
+
+**Use HiResBoundingBox**
+
+```epstopdf --hires [image.eps]```
+
 # SYNOPSIS
 
 **epstopdf** [_options_] _file.eps_
@@ -36,29 +44,62 @@ The tool handles bounding box calculations, font embedding, and produces PDF out
 
 # PARAMETERS
 
-**--outfile=** _file_
+**-o**, **--outfile=** _file_
 > Output PDF file name.
 
-**--restricted**
-> Restricted mode (no shell escapes).
+**--filter**
+> Read EPS from stdin and write PDF to stdout.
 
-**--gsopt=** _options_
-> Pass options to Ghostscript.
+**--restricted**
+> Restricted mode (no shell escapes or unsafe options).
+
+**--gsopt=** _option_
+> Pass a single option to Ghostscript (repeatable).
+
+**--gsopts=** _options_
+> Pass multiple space-separated options to Ghostscript.
 
 **--gscmd=** _command_
 > Ghostscript command to use.
 
+**--gs**, **--nogs**
+> Run Ghostscript (default) or output intermediate PostScript instead.
+
 **--hires**
-> Use HiResBoundingBox.
+> Scan and use the HiResBoundingBox.
 
 **--exact**
-> Use ExactBoundingBox.
+> Scan and use the ExactBoundingBox.
 
-**--embed**
-> Embed fonts.
+**--embed**, **--noembed**
+> Control font embedding.
+
+**--compress**, **--nocompress**
+> Toggle output compression.
+
+**--gray**, **--nogray**
+> Convert output to grayscale.
+
+**--autorotate=** _MODE_
+> Set page rotation behavior (None, All, or PageByPage).
+
+**--pdfsettings=** _LEVEL_
+> Ghostscript PDF quality preset (e.g., screen, ebook, printer, prepress).
+
+**--res=** _DPI_
+> Set raster image resolution.
+
+**--safer**, **--nosafer**
+> Toggle Ghostscript safety restrictions.
+
+**--quiet**, **--noquiet**
+> Suppress or show output messages.
 
 **--debug**
 > Enable debug output.
+
+**--version**
+> Display version information.
 
 **--help**
 > Display help.

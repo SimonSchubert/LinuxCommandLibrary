@@ -34,18 +34,48 @@ _URL_OR_ID_
 > Google Drive URL or file ID.
 
 **-O** _FILE_, **--output** _FILE_
-> Output filename.
+> Output filename or directory (for folders).
 
 **--folder**
-> Download entire folder.
+> Download an entire folder recursively (limited to ~50 files per folder).
 
 **--fuzzy**
-> Enable fuzzy URL extraction.
+> Extract the file ID from non-standard or redirecting URLs.
+
+**--id**
+> Treat the positional argument strictly as a file ID (deprecated: now inferred automatically).
+
+**--continue**, **-c**
+> Resume a partially downloaded file.
+
+**--format** _FMT_
+> Export format for Google Docs/Sheets/Slides (e.g. docx, xlsx, pptx, pdf).
+
+**--speed** _RATE_
+> Limit download speed (e.g. `10MB`).
+
+**--proxy** _URL_
+> Download through an HTTP/HTTPS proxy.
+
+**--no-cookies**
+> Ignore the cookie cache at `~/.cache/gdown/cookies.txt`.
+
+**--no-check-certificate**
+> Skip TLS certificate verification.
+
+**--user-agent** _STRING_
+> Override the default User-Agent header.
+
+**--remaining-ok**
+> Continue past the 50-file limit when downloading folders.
 
 **-q**, **--quiet**
-> Suppress output.
+> Suppress progress and informational output.
 
-**--help**
+**-V**, **--version**
+> Show version information.
+
+**-h**, **--help**
 > Display help information.
 
 # DESCRIPTION

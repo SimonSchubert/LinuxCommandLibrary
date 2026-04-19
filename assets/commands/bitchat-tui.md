@@ -24,9 +24,25 @@ Peer-to-peer encrypted chat over Bluetooth LE in the terminal
 
 ```/online```
 
+**Quick reply to the last DM**
+
+```/reply```
+
+**Return to the public chat room**
+
+```/public```
+
+**Leave the current channel**
+
+```/leave```
+
 **Block a user**
 
 ```/block @[username]```
+
+**Show all available commands**
+
+```/help```
 
 # SYNOPSIS
 
@@ -41,6 +57,56 @@ All messages are end-to-end encrypted using **X25519** Elliptic Curve Diffie-Hel
 The TUI provides a sidebar-based interface built with **ratatui** and **crossterm**, organizing conversations into public chat, named channels, direct messages, and a blocked users list. Unread message indicators and section counters help track activity across channels.
 
 Written in Rust, bitchat-tui runs on Linux, macOS, and Windows.
+
+# COMMANDS
+
+**/help**
+> List all available commands.
+
+**/name** _nick_
+> Change your nickname for the current session.
+
+**/status**
+> Show connection information and current status.
+
+**/clear**
+> Clear all messages from the current conversation view.
+
+**/exit**
+> Quit the application.
+
+**/public**
+> Return to the **#public** chat room.
+
+**/dm** _name_ [_message_]
+> Start a direct message with a user, optionally sending an initial message.
+
+**/reply**
+> Quick reply to the last person who sent you a private message.
+
+**/j** **#**_channel_ [_password_]
+> Join a channel, optionally with a password.
+
+**/leave**
+> Leave the current channel and return to **#public**.
+
+**/pass** _password_
+> Set the channel password (owner only).
+
+**/transfer** **@**_user_
+> Transfer channel ownership (owner only).
+
+**/channels**
+> List all channels you have discovered or joined.
+
+**/online**, **/w**
+> List visible network users.
+
+**/block** **@**_user_
+> Block messages from a specific user.
+
+**/unblock** **@**_user_
+> Unblock a previously blocked user.
 
 # CONFIGURATION
 

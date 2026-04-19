@@ -57,20 +57,35 @@ Command-line internet speed test client
 **--csv**
 > CSV output.
 
+**--csv-header**
+> Print CSV header row.
+
 **--no-download**
 > Skip download test.
 
 **--no-upload**
 > Skip upload test.
 
+**--single**
+> Use a single connection instead of multiple.
+
 **--bytes**
-> Show bytes/second.
+> Show bytes/second instead of bits/second.
 
 **--share**
-> Generate share URL.
+> Generate share URL with results image.
 
 **--secure**
-> Use HTTPS.
+> Use HTTPS instead of HTTP.
+
+**--source** _address_
+> Bind to a specific source IP address.
+
+**--timeout** _seconds_
+> Set HTTP timeout (default: 10).
+
+**--exclude** _ID_
+> Exclude a server from selection.
 
 # DESCRIPTION
 

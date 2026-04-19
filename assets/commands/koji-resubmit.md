@@ -33,7 +33,7 @@ Display **help**
 **task_id**
 > The ID of the task to resubmit
 
-**--nowait**
+**--nowait**, **--nowatch**
 > Do not wait for task completion
 
 **--quiet**

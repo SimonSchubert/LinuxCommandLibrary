@@ -26,20 +26,38 @@ PHP Backup Utility
 
 # PARAMETERS
 
-**--configuration** _FILE_
-> Configuration file.
+**--configuration=**_FILE_
+> Path to a phpbu XML configuration file.
+
+**--bootstrap=**_FILE_
+> Bootstrap PHP file included before running the backup.
 
 **--simulate**
-> Dry run mode.
+> Perform a trial run without making any changes.
 
-**-v**
-> Verbose output.
+**--limit=**_SUBSET_
+> Limit backup execution to the specified subset.
 
-**--bootstrap** _FILE_
-> Bootstrap file.
+**--restore**
+> Print a restore guide for the configured backups.
 
-**--help**
-> Display help.
+**--generate-configuration**
+> Create a new configuration skeleton interactively.
+
+**--colors**
+> Enable colored output.
+
+**--debug**
+> Display debugging information during backup generation.
+
+**-v**, **--verbose**
+> Output more verbose information.
+
+**-V**, **--version**
+> Output version information and exit.
+
+**-h**, **--help**
+> Display usage information.
 
 # DESCRIPTION
 

@@ -55,7 +55,31 @@ The tool processes .tex files, handling typesetting, cross-references, and inclu
 > Show file:line:error format.
 
 **-synctex=** _n_
-> Generate SyncTeX data.
+> Generate SyncTeX data (1 enables, -1 compressed).
+
+**-draftmode**
+> Skip writing the final PDF output (for faster compilation checks).
+
+**-no-shell-escape**
+> Disable execution of shell commands (default).
+
+**-shell-restricted**
+> Allow only a restricted set of shell commands.
+
+**-recorder**
+> Enable filename recording (writes .fls file).
+
+**-fmt=** _name_
+> Use the specified format file.
+
+**-output-format=** _fmt_
+> Output format: pdf (default) or dvi.
+
+**--help**
+> Show usage information and exit.
+
+**--version**
+> Show version information and exit.
 
 # CAVEATS
 

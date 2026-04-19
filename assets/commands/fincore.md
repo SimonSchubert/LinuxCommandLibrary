@@ -28,17 +28,35 @@ Useful for understanding memory usage and cache behavior.
 
 # PARAMETERS
 
+**-n**, **--noheadings**
+> Do not print a header line.
+
+**-b**, **--bytes**
+> Print sizes in bytes (not human-readable units).
+
+**-c**, **--total**
+> Print a grand total of results.
+
+**-o**, **--output** _list_
+> Specify output columns (use _+list_ to extend defaults).
+
 **--output-all**
-> Show all available columns
+> Show all available columns.
 
-**-o, --output** _list_
-> Specify output columns
+**-r**, **--raw**
+> Produce output in raw format.
 
-**-h, --help**
-> Display help
+**-J**, **--json**
+> Use JSON output format.
 
-**--bytes**
-> Show sizes in bytes
+**-R**, **--recursive**
+> Recurse into directories.
+
+**-h**, **--help**
+> Display help.
+
+**-V**, **--version**
+> Print version.
 
 # CAVEATS
 

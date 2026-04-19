@@ -51,20 +51,35 @@ Symfony PHP framework development CLI
 **server:stop**
 > Stop server.
 
+**server:status**
+> Show status of the local server.
+
+**server:log**
+> Show logs from the local web server and PHP-FPM.
+
 **console** _CMD_
-> Run Symfony console.
+> Run Symfony console (wrapped bin/console).
 
 **open:local**
-> Open in browser.
+> Open local project URL in browser.
 
 **check:security**
-> Check vulnerabilities.
+> Check for known vulnerabilities in composer.lock dependencies.
+
+**local:php:list**
+> List installed PHP versions.
 
 **--webapp**
-> Full web app template.
+> Scaffold full web app template (Twig, Doctrine, security, etc.).
+
+**--version** _VER_
+> Install a specific Symfony version (e.g. lts, 6.4, 7.1).
 
 **-d**, **--daemon**
-> Run in background.
+> Run the local server in the background.
+
+**--allow-http**
+> Disable HTTPS on the local server.
 
 # DESCRIPTION
 

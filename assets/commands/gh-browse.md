@@ -16,17 +16,21 @@ open repository pages in web browser
 
 ```gh browse [path/to/file]:[line]```
 
-**Open issues page**
+**Open a specific issue or PR** by number
 
-```gh browse --issues```
+```gh browse [123]```
 
-**Open pull requests page**
+**Open releases page**
 
-```gh browse --pulls```
+```gh browse --releases```
 
 **Open specific branch**
 
 ```gh browse --branch [branch_name]```
+
+**Open a specific repository**
+
+```gh browse --repo [owner/repo]```
 
 **Print URL without opening**
 
@@ -38,29 +42,35 @@ open repository pages in web browser
 
 # PARAMETERS
 
+**-a**, **--actions**
+> Open repository Actions page.
+
 **-b**, **--branch** _branch_
-> Select branch.
+> Select branch by name.
+
+**-c**, **--commit** _sha_
+> Select commit by SHA (defaults to the last commit).
 
 **-n**, **--no-browser**
-> Print URL only.
+> Print URL instead of opening the browser.
 
 **-p**, **--projects**
-> Open projects page.
+> Open repository projects.
 
 **-r**, **--releases**
-> Open releases page.
+> Open repository releases.
+
+**-R**, **--repo** _[HOST/]OWNER/REPO_
+> Select another repository.
 
 **-s**, **--settings**
-> Open settings page.
+> Open repository settings.
 
 **-w**, **--wiki**
-> Open wiki page.
+> Open repository wiki.
 
-**--issues**
-> Open issues page.
-
-**--pulls**
-> Open pull requests page.
+**--blame**
+> Open the blame view for a file.
 
 # DESCRIPTION
 

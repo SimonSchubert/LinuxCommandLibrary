@@ -24,9 +24,13 @@ Trace a program by **PID**
 
 ```sudo bpftrace -c '[command]' -e 'tracepoint:raw_syscalls:sys_enter { @[comm] = count(); }'```
 
-**Dry run** and display compiled eBPF
+**Dry run** to validate probes without executing
 
-```sudo bpftrace -d -e '[one_line_program]'```
+```sudo bpftrace --dry-run -e '[one_line_program]'```
+
+**Write output** to a file
+
+```sudo bpftrace -o [output.txt] -e '[one_line_program]'```
 
 Display **version**
 
@@ -50,14 +54,29 @@ Programs can attach to tracepoints, kprobes, uprobes, and other probe types to c
 **-e** _program_
 > Execute a one-liner program
 
-**-d**
-> Dry run; show compiled eBPF without executing
+**-d** _STAGE_
+> Produce debug output for a given compilation stage (ast, codegen, dis, verifier, etc.)
+
+**--dry-run**
+> Validate and compile the program without attaching probes
 
 **-p** _PID_
-> Attach to process or filter by PID
+> Attach to process or filter actions by PID
 
 **-c** _COMMAND_
 > Run command as a child process; bpftrace exits when it terminates
+
+**-o** _FILENAME_
+> Write tracing output to file instead of stdout
+
+**-f** _FORMAT_
+> Output format: `text` (default) or `json`
+
+**-B** _MODE_
+> Buffer mode for output: `none`, `line` (default), or `full`
+
+**-I** _DIR_
+> Add directory to the C header search path (repeatable)
 
 **-v**
 > Verbose output
@@ -65,11 +84,11 @@ Programs can attach to tracepoints, kprobes, uprobes, and other probe types to c
 **-q**
 > Quiet mode; suppress non-error messages
 
-**-V, --version**
+**-V**, **--version**
 > Display version information
 
 **--unsafe**
-> Allow unsafe operations like system() calls
+> Allow unsafe operations like `system()` calls
 
 **--info**
 > Print information about kernel features and bpftrace build

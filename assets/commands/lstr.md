@@ -16,37 +16,86 @@ Fast minimalist directory tree viewer
 
 ```lstr interactive```
 
-**Show tree with Git status**
+**Show tree with Git status** and respect .gitignore
 
-```lstr --git```
+```lstr -G -g```
 
-**Sort by size**
+**Show sizes, permissions and icons**
 
-```lstr --sort size```
+```lstr -s -p --icons```
+
+**Limit recursion depth**
+
+```lstr -L [2]```
+
+**Sort by size, directories first**
+
+```lstr --sort size --dirs-first```
 
 # SYNOPSIS
 
 **lstr** [_options_] [_path_]
 
+**lstr interactive** [_options_] [_path_]
+
 # PARAMETERS
 
-**--git**
-> Show Git status for files and directories.
+**-a**, **--all**
+> List all files and directories, including hidden ones.
 
-**--sort** _CRITERIA_
-> Sort entries by name, size, modified date, or extension.
+**-d**, **--dirs-only**
+> Show directories only.
+
+**-g**, **--gitignore**
+> Respect `.gitignore` and other standard ignore files.
+
+**-G**, **--git-status**
+> Show Git status indicators for files and directories.
+
+**--icons**
+> Display file-specific icons (requires a Nerd Font).
 
 **--hyperlinks**
-> Enable clickable file links in supported terminals.
+> Render paths as clickable hyperlinks in supported terminals.
 
 **-L**, **--level** _DEPTH_
-> Limit the depth of the tree display.
+> Limit the depth of the tree.
+
+**-p**, **--permissions**
+> Show file permissions (Unix-like systems).
+
+**-s**, **--size**
+> Show file sizes.
+
+**--sort** _TYPE_
+> Sort by **name**, **size**, **modified**, or **extension**.
+
+**--dirs-first**
+> List directories before files.
+
+**--case-sensitive**
+> Use case-sensitive sorting.
+
+**--natural-sort**
+> Use version-aware ("natural") sort ordering.
+
+**-r**, **--reverse**
+> Reverse the sort order.
+
+**--dotfiles-first**
+> Sort hidden files and folders first.
+
+**--color** _WHEN_
+> Colorize output (**always**, **auto**, **never**).
+
+**--expand-level** _LEVEL_
+> Initial expansion depth (interactive mode only).
 
 # DESCRIPTION
 
-**lstr** is a fast, minimalist directory tree viewer that brings modern features to the classic **tree** command. It respects .gitignore and other standard ignore files, shows Git status for files and directories, and supports file-specific icons with Nerd Fonts.
+**lstr** is a fast, minimalist directory tree viewer written in Rust. It scans directories in parallel and brings modern features to the classic **tree** command: `.gitignore` support, Git status indicators, Nerd Font icons, clickable hyperlinks, and multiple sort modes.
 
-The interactive TUI mode allows browsing and navigating the directory tree. Output can be piped to other tools like fzf for filtering.
+The **interactive** subcommand launches a keyboard-driven TUI (built with ratatui) for browsing the tree. Non-interactive output is designed to pipe cleanly into tools like **fzf**.
 
 # CAVEATS
 

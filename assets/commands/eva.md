@@ -8,58 +8,61 @@ calculator REPL with arbitrary precision
 
 ```eva "[2 + 3 * 4]"```
 
-**Use variables**
-
-```eva "[x = 5]" "[x * 2]"```
-
-**Calculate with** functions
+**Calculate with functions**
 
 ```eva "[sin(pi/2)]"```
 
-**Convert units**
+**Use radian mode for trigonometric functions**
 
-```eva "[100km to miles]"```
+```eva --radian "[sin(pi/2)]"```
 
-**Interactive mode**
+**Interactive REPL mode**
 
 ```eva```
 
-**High precision**
+**Set decimal precision** (number of fixed decimal places, 1-64)
 
-```eva --precision [50] "[pi]"```
+```eva --fix [20] "[pi]"```
+
+**Change output radix/base** (1-36)
+
+```eva --base [16] "[255]"```
 
 # SYNOPSIS
 
-**eva** [_options_] [_expressions_...]
+**eva** [_options_] [_expression_]
 
 # PARAMETERS
 
-_EXPRESSIONS_
-> Mathematical expressions to evaluate.
+_INPUT_
+> Mathematical expression string to evaluate (non-interactive).
 
-**--precision** _N_
-> Decimal precision.
+**-f**, **--fix** _N_
+> Number of decimal places in output (1-64, default 10).
 
-**--base** _N_
-> Number base for output.
+**-b**, **--base** _N_
+> Radix of calculation output (1-36, default 10).
 
-**--deg**
-> Use degrees for trig functions.
+**-r**, **--radian**
+> Use radians for trigonometric functions.
 
-**--help**
+**-h**, **--help**
 > Display help information.
+
+**-V**, **--version**
+> Show version information.
 
 # DESCRIPTION
 
-**eva** is a calculator REPL and CLI for evaluating mathematical expressions. It supports variables, functions, unit conversions, and arbitrary precision arithmetic.
+**eva** is a calculator REPL and CLI written in Rust for evaluating mathematical expressions. It supports standard arithmetic, trigonometric functions, logarithms, and constants like **pi** and **e**.
 
-The tool handles standard arithmetic, trigonometric functions, logarithms, and constants like pi and e. Variables persist across expressions in interactive mode.
+In interactive REPL mode, previous results are available as **_** and history can be recalled. Pass an expression directly on the command line for one-off evaluation.
 
-eva provides a quick command-line calculator with more features than basic shell arithmetic.
+eva provides a quick command-line calculator with more intuitive syntax than **bc**.
 
 # CAVEATS
 
-Complex expressions may need quoting. Unit conversion support varies. Interactive mode needed for variables to persist.
+Complex expressions may need quoting to avoid shell interpretation. Variables do not persist in one-shot command mode; use the interactive REPL for multi-step calculations.
 
 # HISTORY
 

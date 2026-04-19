@@ -12,13 +12,21 @@ Tcl/Tk graphical interface for Git
 
 ```git gui blame [file.txt]```
 
-**Browse repository**
+**Open blame at specific line**
+
+```git gui blame --line=[100] [file.txt]```
+
+**Browse repository tree at branch**
 
 ```git gui browser [branch]```
 
-**Open citool for commits**
+**Open citool for a single commit**
 
 ```git gui citool```
+
+**Amend the last commit with citool**
+
+```git gui citool --amend```
 
 # SYNOPSIS
 
@@ -33,13 +41,19 @@ Tcl/Tk graphical interface for Git
 > Browse tree at revision.
 
 **citool**
-> Open commit tool.
+> Start git gui and make exactly one commit before exiting.
 
 **version**
-> Show version.
+> Show the currently running version of git gui.
 
-**--help**
-> Display help information.
+**--line=**_NUMBER_
+> (blame) Scroll blame view to center on line NUMBER.
+
+**--amend**
+> (citool) Enter Amend Last Commit mode automatically.
+
+**--nocommit**
+> (citool) Exit with zero status without making a commit.
 
 # DESCRIPTION
 
@@ -57,4 +71,4 @@ git gui was created by **Shawn O. Pearce** as the official Tcl/Tk GUI for Git, p
 
 # SEE ALSO
 
-[git](/man/git)(1), [gitk](/man/gitk)(1), [tig](/man/tig)(1)
+[git](/man/git)(1), [git-commit](/man/git-commit)(1), [git-blame](/man/git-blame)(1), [gitk](/man/gitk)(1), [tig](/man/tig)(1)

@@ -30,20 +30,32 @@ manages organization teams
 
 # PARAMETERS
 
-_COMMAND_
-> Team subcommand.
+**ls** _@org_ | _@org:team_
+> List teams in an organization, or members of a specific team.
 
-**ls** _ORG_
-> List teams/members.
+**create** _@org:team_
+> Create a new team under the given organization scope.
 
-**create** _TEAM_
-> Create team.
+**destroy** _@org:team_
+> Delete an existing team (the developers team cannot be removed).
 
-**destroy** _TEAM_
-> Delete team.
+**add** _@org:team_ _user_
+> Add a user to the given team.
 
-**add** _TEAM_ _USER_
-> Add member.
+**rm** _@org:team_ _user_
+> Remove a user from the given team.
+
+**--otp** _code_
+> Provide a two-factor authentication one-time password.
+
+**--registry** _url_
+> Target registry URL (defaults to https://registry.npmjs.org).
+
+**--parseable**
+> Output in tab-separated parseable format.
+
+**--json**
+> Output results as JSON.
 
 **--help**
 > Display help information.

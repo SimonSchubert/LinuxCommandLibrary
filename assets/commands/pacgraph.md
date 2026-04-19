@@ -75,6 +75,12 @@ Change the color of **links between packages**
 **-o**, **--optdeps**
 > Include optional dependencies
 
+**--show-req-by**
+> Show packages that require the listed package (reverse dependencies)
+
+**-m** _repo_
+> Draw only the specified package/repo and its dependencies
+
 # DESCRIPTION
 
 **pacgraph** visualizes the dependency relationships between installed packages on Arch-based systems. It generates a graph showing packages as nodes sized by their disk usage, with lines connecting packages to their dependencies.

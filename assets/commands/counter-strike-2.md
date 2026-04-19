@@ -61,6 +61,21 @@ Server performance depends on player count, tick rate, and available system reso
 **-insecure**
 > Disable VAC anti-cheat
 
+**-usercon**
+> Enable RCON remote console administration
+
+**+hostname** _name_
+> Set server display name
+
+**+sv_lan** _0|1_
+> Toggle LAN-only mode (1 = LAN, 0 = internet)
+
+**+sv_password** _password_
+> Require a password to join the server
+
+**+rcon_password** _password_
+> Set RCON administrative password
+
 **+sv_setsteamaccount** _token_
 > Game Server Login Token for Steam authentication
 

@@ -62,7 +62,7 @@ rustc uses LLVM for code generation, providing excellent optimization and suppor
 > Output filename.
 
 **-O**
-> Optimize (equivalent to -C opt-level=2).
+> Optimize (equivalent to -C opt-level=3).
 
 **-g**
 > Include debug information.
@@ -80,13 +80,22 @@ rustc uses LLVM for code generation, providing excellent optimization and suppor
 > Deny lint (make it error).
 
 **--emit=** _type_
-> Output type (asm, llvm-ir, obj, link).
+> Output type (asm, llvm-ir, llvm-bc, obj, link, metadata, dep-info, mir).
 
 **--crate-type=** _type_
-> Crate type (bin, lib, dylib, staticlib).
+> Crate type (bin, lib, rlib, dylib, cdylib, staticlib, proc-macro).
 
 **--edition=** _year_
-> Rust edition (2015, 2018, 2021).
+> Rust edition (2015, 2018, 2021, 2024).
+
+**--test**
+> Build a test harness.
+
+**--print** _info_
+> Print compiler information (e.g., target-list, cfg, sysroot).
+
+**-F** _lint_
+> Forbid lint (cannot be overridden).
 
 **--target=** _triple_
 > Target platform.

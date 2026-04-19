@@ -4,9 +4,9 @@ Manage Azure Logic Apps
 
 # TLDR
 
-**Create a Logic App**
+**Create a Logic App** on an App Service plan
 
-```az logicapp create --name [MyLogicApp] --resource-group [MyResourceGroup] --storage-account [MyStorageAccount]```
+```az logicapp create --name [MyLogicApp] --resource-group [MyResourceGroup] --storage-account [MyStorageAccount] --plan [MyPlan]```
 
 **List all Logic Apps** in a resource group
 
@@ -60,6 +60,35 @@ Manage Azure Logic Apps
 
 **config**
 > Configure Logic App settings.
+
+# COMMON PARAMETERS
+
+**--name**, **-n** _NAME_
+> Name of the Logic App.
+
+**--resource-group**, **-g** _RG_
+> Resource group containing the Logic App.
+
+**--storage-account** _ACCOUNT_
+> Storage account (name or resource ID) used by the Logic App (Standard tier, required on create).
+
+**--plan** _PLAN_
+> App Service plan name or resource ID to host the Logic App.
+
+**--functions-version** _VERSION_
+> Functions runtime version (e.g. 4).
+
+**--runtime-version** _VERSION_
+> Runtime version (e.g. ~14, ~16, ~18).
+
+**--https-only** {false,true}
+> Redirect all traffic to HTTPS.
+
+**--tags** _TAGS_
+> Space-separated `key=value` tags.
+
+**--yes**
+> Skip confirmation prompts (used by `delete`).
 
 # DESCRIPTION
 

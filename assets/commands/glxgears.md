@@ -12,7 +12,7 @@ OpenGL rotating gears demo and sanity check
 
 ```glxgears -fullscreen```
 
-**Run without printing FPS**
+**Print OpenGL renderer information**
 
 ```glxgears -info```
 
@@ -38,7 +38,7 @@ OpenGL rotating gears demo and sanity check
 > Specify X display to use.
 
 **-info**
-> Print GL renderer info and suppress FPS output.
+> Print OpenGL renderer and GLX visual information.
 
 **-stereo**
 > Enable stereo rendering (requires hardware support).

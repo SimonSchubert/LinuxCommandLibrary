@@ -8,21 +8,36 @@ Modern modular TUI hex editor
 
 ```hexabyte [path/to/file]```
 
-**Open in split view** with two files
+**Open a single file** in split screen view
 
-```hexabyte --split [path/to/file1] [path/to/file2]```
+```hexabyte -s [path/to/file]```
 
-**Open in diff mode** to compare files
+**Open two files** side-by-side for diff
 
-```hexabyte --diff [path/to/file1] [path/to/file2]```
+```hexabyte [path/to/file1] [path/to/file2]```
+
+**Use a custom config file**
+
+```hexabyte -c [path/to/config.toml] [path/to/file]```
 
 # SYNOPSIS
 
-**hexabyte** [**--split**|**--diff**] [_options_] _file_ [_file2_]
+**hexabyte** [_options_] _file_ [_file2_]
+
+# PARAMETERS
+
+**-s**, **--split**
+> Display a single file in two split-screen editors.
+
+**-c**, **--config** _FILE_
+> Use a custom config file (default: `~/.config/hexabyte/config.toml`).
+
+**-h**, **--help**
+> Show help message and exit.
 
 # DESCRIPTION
 
-**hexabyte** is a modern, modular, and robust TUI hex editor designed for modifying file contents at the byte level. It supports viewing and editing in hexadecimal and ASCII with multiple display modes: **single** file editing, **split** view for side-by-side file comparison, and **diff** mode for highlighting differences between two files.
+**hexabyte** is a modern, modular, and robust TUI hex editor designed for modifying file contents at the byte level. It supports viewing and editing in hexadecimal, UTF-8 text, and binary with multiple display modes: **single** file editing, **split** view for side-by-side panes on one file, and **diff** mode when two files are opened together.
 
 The editor features a plugin architecture for extensibility and provides standard hex editing operations including inserting, deleting, and replacing bytes, as well as selecting and copy/pasting byte ranges.
 

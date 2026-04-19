@@ -8,11 +8,11 @@ creates compressed filesystem trees
 
 ```mkzftree [input/] [output/]```
 
-**Set compression level**
+**Set compression level** (1-9, default 9)
 
-```mkzftree -z [9] [input/] [output/]```
+```mkzftree -z [6] [input/] [output/]```
 
-**Force overwrite**
+**Force** compression of every file (even if larger after compression)
 
 ```mkzftree -f [input/] [output/]```
 
@@ -20,9 +20,13 @@ creates compressed filesystem trees
 
 ```mkzftree -v [input/] [output/]```
 
-**Parallelize**
+**Parallelize** compression with N threads
 
 ```mkzftree -p [4] [input/] [output/]```
+
+**Uncompress** a zisofs tree back to plain files
+
+```mkzftree -u [input/] [output/]```
 
 # SYNOPSIS
 
@@ -31,25 +35,49 @@ creates compressed filesystem trees
 # PARAMETERS
 
 _INPUT_
-> Source directory.
+> Source directory (or file with **-F**).
 
 _OUTPUT_
-> Destination directory.
+> Destination directory/file.
 
-**-z** _LEVEL_
-> Compression level (1-9).
+**-z**, **--level** _LEVEL_
+> Compression level 1-9 (default: 9). Lower is faster, higher compresses more.
 
-**-f**
-> Force overwrite.
+**-f**, **--force**
+> Always compress, even if the result is larger than the original.
 
-**-v**
-> Verbose output.
+**-u**, **--uncompress**
+> Uncompress a previously compressed tree.
 
-**-p** _JOBS_
-> Parallel jobs.
+**-p**, **--parallelism** _N_
+> Number of parallel compression threads.
 
-**--help**
+**-F**, **--file**
+> Treat INPUT as a single file rather than a directory tree.
+
+**-x**, **--one-filesystem**
+> Do not cross filesystem boundaries; create directory stubs at mount points.
+
+**-X**, **--strict-one-filesystem**
+> Do not cross filesystem boundaries and do not create stubs.
+
+**-l**, **--local**
+> Do not recurse into subdirectories (still creates the directories).
+
+**-s**, **--sloppy**
+> Relax preservation of file modes, times, and ownership.
+
+**-v**, **--verbose**
+> Increase verbosity.
+
+**-q**, **--quiet**
+> Suppress all messages including errors.
+
+**-h**, **--help**
 > Display help information.
+
+**-w**, **--version**
+> Display version information.
 
 # DESCRIPTION
 

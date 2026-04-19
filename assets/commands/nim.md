@@ -16,7 +16,7 @@ programming language compiler
 
 ```nim c -d:release [program.nim]```
 
-**Compile to C**
+**Generate C source without linking**
 
 ```nim c --compileOnly [program.nim]```
 
@@ -24,11 +24,15 @@ programming language compiler
 
 ```nim js [program.nim]```
 
-**Check syntax**
+**Compile to C++**
+
+```nim cpp [program.nim]```
+
+**Check syntax and semantics**
 
 ```nim check [program.nim]```
 
-**Show documentation**
+**Generate HTML documentation**
 
 ```nim doc [program.nim]```
 
@@ -41,23 +45,50 @@ programming language compiler
 _COMMAND_
 > Compilation command.
 
-**c**
-> Compile to C.
+**c** / **compile**
+> Compile to C (default backend).
+
+**cpp**
+> Compile to C++.
 
 **js**
 > Compile to JavaScript.
 
-**-r**
-> Run after compilation.
-
-**-d:release**
-> Release mode.
+**objc**
+> Compile to Objective-C.
 
 **check**
-> Check without compiling.
+> Validate syntax and semantics without code generation.
 
 **doc**
-> Generate documentation.
+> Generate HTML documentation from source.
+
+**-r**, **--run**
+> Run the program after compilation.
+
+**-c**, **--compileOnly**
+> Generate code without linking.
+
+**-d:release**
+> Enable release optimizations.
+
+**-d:danger**
+> Disable all runtime checks for maximum speed.
+
+**-o:**_FILE_
+> Set the output filename.
+
+**--opt:**_speed|size|none_
+> Optimization target.
+
+**--mm:**_arc|orc|refc_
+> Select memory management strategy.
+
+**--threads:on**
+> Enable multithreading support.
+
+**-f**, **--forceBuild**
+> Force full rebuild of all modules.
 
 **--help**
 > Display help information.

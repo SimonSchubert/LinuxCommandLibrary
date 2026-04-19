@@ -4,25 +4,46 @@ shows why a package is installed
 
 # TLDR
 
-**Explain why package installed**
+**Explain why a package is installed**
 
 ```npm why [package-name]```
+
+**Explain a specific version**
+
+```npm why [package-name]@[version]```
 
 **JSON output**
 
 ```npm why [package-name] --json```
 
+**Limit depth** of the dependency tree
+
+```npm why [package-name] --long```
+
+**Target a specific workspace**
+
+```npm why [package-name] --workspace=[workspace-name]```
+
 # SYNOPSIS
 
-**npm** **why** [_package_]
+**npm** **why** _package-spec_...
 
 # PARAMETERS
 
-_PACKAGE_
-> Package to explain.
+_PACKAGE-SPEC_
+> Package name, optionally with version range (e.g., lodash@^4).
 
 **--json**
-> JSON output.
+> Output results in JSON format.
+
+**--long**
+> Show extended information.
+
+**--workspace** _NAME_
+> Limit to a named workspace or path.
+
+**--include-workspace-root**
+> Include root project in addition to workspaces.
 
 **--help**
 > Display help information.

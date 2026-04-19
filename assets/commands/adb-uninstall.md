@@ -12,23 +12,37 @@ Uninstall but **keep data** and cache
 
 ```adb uninstall -k [com.example.app]```
 
+Uninstall for a **specific user**
+
+```adb uninstall --user [user_id] [com.example.app]```
+
+Uninstall **only if version code matches**
+
+```adb uninstall --versionCode [version_code] [com.example.app]```
+
 # SYNOPSIS
 
-**adb uninstall** [_-k_] _package_
+**adb uninstall** [_options_] _package_
 
 # DESCRIPTION
 
 **adb uninstall** removes an installed Android application from the device. The package is specified by its full package name (e.g., com.example.app), not the APK filename.
 
-By default, uninstalling removes the app along with all its data, cache, and associated files. Use the -k flag to preserve application data.
+By default, uninstalling removes the app along with all its data, cache, and associated files for all users on the device. Use the **-k** flag to preserve application data.
 
 # PARAMETERS
 
 **-k**
-> Keep data and cache directories after uninstallation
+> Keep the data and cache directories after package removal.
+
+**--user** _user_id_
+> Remove the package only for the given user. Default removes for all users.
+
+**--versionCode** _code_
+> Only uninstall if the installed app has the given version code.
 
 **package**
-> Full package name of the application to remove
+> Full package name of the application to remove.
 
 # CAVEATS
 

@@ -1,3 +1,7 @@
+# TAGLINE
+
+Mount remote filesystem over SSH via FUSE
+
 # TLDR
 
 **Mount a remote directory** over SSH
@@ -68,6 +72,18 @@
 
 **-o kernel_cache**
 > Enable kernel caching
+
+**-o idmap=user**
+> Map remote user's UID/GID to the local mounting user
+
+**-o transform_symlinks**
+> Rewrite absolute symlinks as relative to the mountpoint
+
+**-o follow_symlinks**
+> Follow symlinks on the server side
+
+**-o max_conns=**_N_
+> Maximum number of concurrent SSH connections
 
 **-f**
 > Run in foreground (for debugging)

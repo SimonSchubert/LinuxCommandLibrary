@@ -39,25 +39,52 @@ generates payloads for Metasploit
 # PARAMETERS
 
 **-p** _PAYLOAD_
-> Payload to use.
+> Payload to use. Use `-` for stdin.
 
 **-f** _FORMAT_
-> Output format.
+> Output format (exe, elf, raw, c, python, powershell, etc.).
 
 **-e** _ENCODER_
 > Encoder to use.
 
 **-i** _COUNT_
-> Encoding iterations.
+> Number of encoding iterations.
 
 **-l** _TYPE_
-> List available items.
+> List available items (payloads, encoders, nops, formats, all).
+
+**-a** _ARCH_
+> Target architecture (x86, x64, arm, etc.).
+
+**--platform** _PLATFORM_
+> Target platform (windows, linux, osx, android, etc.).
+
+**-b** _CHARS_
+> Characters to avoid in the payload (bad chars).
+
+**-o** _FILE_
+> Save the payload to a file.
+
+**-x** _FILE_
+> Use a custom executable as a template.
+
+**-k**
+> Keep the template's functionality and inject payload as a new thread.
+
+**-n** _LENGTH_
+> Prepend a nopsled of the given length.
+
+**-s** _SIZE_
+> Maximum payload size in bytes.
+
+**--smallest**
+> Generate the smallest possible payload.
 
 **LHOST**
-> Local host address.
+> Local host address (payload variable).
 
 **LPORT**
-> Local port number.
+> Local port number (payload variable).
 
 **--help**
 > Display help information.

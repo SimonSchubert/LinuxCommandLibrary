@@ -8,31 +8,32 @@ classic cribbage card game against the computer
 
 ```cribbage```
 
-**Explain scoring for each hand**
+**Explain scoring mistakes**
 
 ```cribbage -e```
 
-**Play muggins (claim missed points)**
+**Use shorter (quiet) prompts**
 
-```cribbage -m```
+```cribbage -q```
+
+**Let the computer cut the deck** (skip the cut prompt)
+
+```cribbage -r```
 
 # SYNOPSIS
 
-**cribbage** [**-emqr**]
+**cribbage** [**-eqr**]
 
 # PARAMETERS
 
 **-e**
-> Explain scoring for each hand.
-
-**-m**
-> Play muggins - claim opponent's missed points.
+> Explain the correct score whenever the player makes a scoring mistake for a hand or crib.
 
 **-q**
-> Quiet mode - print shorter messages.
+> Quiet mode: print shorter prompts and messages.
 
 **-r**
-> Play regardless of terminal type.
+> Have the program randomly cut the deck instead of prompting the player.
 
 # PREVIEW
 

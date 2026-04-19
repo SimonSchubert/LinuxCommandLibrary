@@ -40,11 +40,14 @@ command-line interface for GnuCash reports and quotes
 **-v**, **--version**
 > Show GnuCash version.
 
-**--quotes** _command_
+**-Q**, **--quotes** _command_
 > Quotes mode: info, get, dump.
 
+**--namespace** _regexp_
+> Regular expression for commodity namespace (for quotes dump).
+
 **-R**, **--report** _command_
-> Report mode: list, show, run.
+> Report mode: run, show, list.
 
 **--name** _name_
 > Report name for run command.
@@ -58,11 +61,17 @@ command-line interface for GnuCash reports and quotes
 **--debug**
 > Enable debugging mode.
 
+**--extra**
+> Enable developer/debugging features.
+
 **--log** _arg_
-> Log level overrides.
+> Log level overrides (can be specified multiple times).
 
 **--logto** _file_
-> File to log into.
+> File to log into (use "stderr" or "stdout" for those streams).
+
+**-V**, **--verbose**
+> Show extended Finance::Quote parameters (with quotes dump).
 
 # DESCRIPTION
 

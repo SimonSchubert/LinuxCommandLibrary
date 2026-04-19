@@ -4,33 +4,37 @@ VS Code extension manager CLI
 
 # TLDR
 
-**Package extension**
+**Package** an extension into a .vsix file
 
 ```vsce package```
 
-**Publish extension**
+**Publish** an extension to the Marketplace
 
 ```vsce publish```
 
-**Publish with version bump**
+**Publish with an automatic** version bump
 
-```vsce publish [minor]```
+```vsce publish [patch|minor|major]```
 
-**Login to marketplace**
+**Log in** as a publisher
 
-```vsce login [publisher-name]```
+```vsce login [publisher_name]```
 
-**Show extension info**
+**Verify a Personal Access Token**
+
+```vsce verify-pat [publisher_name]```
+
+**Show metadata** for an extension
 
 ```vsce show [publisher.extension]```
 
-**List files in package**
+**List files** that would be included in the package
 
 ```vsce ls```
 
-**Create publisher**
+**Unpublish** an extension
 
-```vsce create-publisher [name]```
+```vsce unpublish [publisher.extension]```
 
 # SYNOPSIS
 
@@ -39,44 +43,71 @@ VS Code extension manager CLI
 # PARAMETERS
 
 **package**
-> Create .vsix file.
+> Package the extension into a .vsix file.
 
 **publish** [_VERSION_]
-> Publish to marketplace.
+> Publish the extension to the Marketplace. _VERSION_ may be `major`, `minor`, `patch`, or an explicit version.
 
 **login** _PUBLISHER_
-> Authenticate.
+> Store credentials for a publisher.
+
+**logout** _PUBLISHER_
+> Remove a publisher's stored credentials.
+
+**verify-pat** [_PUBLISHER_]
+> Verify that the Personal Access Token has publish rights.
 
 **show** _EXTENSION_
-> Extension info.
+> Show metadata (downloads, ratings, versions) for an extension.
+
+**search** _TEXT_
+> Search the Marketplace for extensions.
 
 **ls**
-> List package files.
+> List files that would be packaged or published.
 
-**create-publisher** _NAME_
-> Create publisher.
+**ls-publishers**
+> List known publishers.
 
-**unpublish** _EXTENSION_
-> Remove from marketplace.
+**delete-publisher** _NAME_
+> Delete a publisher.
+
+**unpublish** [_EXTENSION_]
+> Remove an extension from the Marketplace.
 
 **-p**, **--pat** _TOKEN_
-> Personal access token.
+> Personal Access Token used to authenticate.
+
+**-t**, **--target** _TARGET_
+> Target platform (e.g., `linux-x64`, `win32-x64`).
+
+**-o**, **--out** _PATH_
+> Output file or directory for the packaged .vsix.
+
+**--pre-release**
+> Mark the package or publication as a pre-release.
+
+**--no-yarn** / **--yarn**
+> Force use of npm or Yarn for dependency installation.
+
+**--skip-duplicate**
+> Skip publishing when the same version already exists.
 
 # DESCRIPTION
 
-**vsce** (Visual Studio Code Extension Manager) is the official command-line tool for packaging, publishing, and managing VS Code extensions on the Visual Studio Marketplace. It handles the full lifecycle of extension development from local packaging to public distribution.
+**vsce** (Visual Studio Code Extension Manager) is Microsoft's official CLI for packaging, publishing, and managing VS Code extensions on the Visual Studio Marketplace. It handles the full lifecycle of extension development from local packaging to public distribution.
 
-The packaging command bundles an extension project into a .vsix file that can be installed locally or shared directly. Publishing uploads the packaged extension to the Visual Studio Marketplace, with support for automatic version bumping using semver increments (major, minor, patch).
+The `package` command bundles an extension project into a `.vsix` file that can be installed locally or shared directly. The `publish` command uploads the packaged extension to the Marketplace, with optional automatic version bumping using semver increments (major, minor, patch).
 
-A publisher identity is required for marketplace operations, which can be created through the tool or the marketplace web interface. Authentication uses Azure DevOps personal access tokens. The tool also provides commands for listing package contents before publishing and displaying extension metadata such as download counts and ratings.
+A publisher identity is required for Marketplace operations. Authentication uses Azure DevOps Personal Access Tokens. Additional commands handle publisher credentials, inspection of package contents, and querying Marketplace metadata.
 
 # CAVEATS
 
-Requires marketplace account. Azure DevOps PAT needed. Extension guidelines apply.
+Requires a Marketplace account and an Azure DevOps PAT with the Marketplace (Manage) scope. Extensions must follow the Marketplace publishing guidelines. The package is typically installed via `npm install -g @vscode/vsce`.
 
 # HISTORY
 
-**vsce** (Visual Studio Code Extension Manager) is Microsoft's CLI for VS Code extension management.
+**vsce** (Visual Studio Code Extension Manager) is developed by **Microsoft** and distributed on npm as `@vscode/vsce`. It has been the primary tool for packaging and publishing VS Code extensions since the Marketplace launched.
 
 # SEE ALSO
 

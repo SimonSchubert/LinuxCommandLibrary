@@ -74,6 +74,18 @@ The tool can also securely shred individual files to prevent recovery. It provid
 **--all-but-warning**
 > Enable all cleaners except those with warnings
 
+**--except** _cleaner.option_
+> Exclude specific cleaner options from the operation
+
+**--no-uac**
+> Don't prompt for UAC elevation (Windows only)
+
+**--exit**
+> Exit after performing the operation
+
+**--version**
+> Display version information
+
 # CAVEATS
 
 Preview before cleaning to avoid deleting important data. Shredding files is slow but more secure than regular deletion. Some cleaners may affect application settings.

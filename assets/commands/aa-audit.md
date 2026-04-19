@@ -36,6 +36,9 @@ Set a profile to audit mode **without reloading** it
 **--no-reload**
 > Prevents automatic profile reloading after modifications
 
+**-r, --remove**
+> Disable audit mode for the specified profile (reverses the effect of aa-audit).
+
 **-h, --help**
 > Display help information
 

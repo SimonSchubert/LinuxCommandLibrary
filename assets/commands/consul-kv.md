@@ -73,6 +73,27 @@ distributed key-value store management
 **-cas**
 > Perform a Check-And-Set operation (requires -modify-index).
 
+**-modify-index** _N_
+> ModifyIndex used by **-cas** for atomic updates.
+
+**-flags** _N_
+> Unsigned integer flag value to associate with the KV pair.
+
+**-acquire**
+> Acquire a lock on the key (requires **-session**).
+
+**-release**
+> Release a lock on the key (requires **-session**).
+
+**-session** _ID_
+> Session identifier used with **-acquire**/**-release**.
+
+**-token** _TOKEN_
+> ACL token for API requests.
+
+**-datacenter** _DC_
+> Target datacenter for the request.
+
 **-http-addr** _ADDRESS_
 > Address of the Consul agent (default: "http://127.0.0.1:8500").
 

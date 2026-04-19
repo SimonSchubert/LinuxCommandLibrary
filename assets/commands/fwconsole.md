@@ -41,29 +41,41 @@ Change **ownership** of all FreePBX files to the apache user
 **reload**
 > Apply configuration changes without restarting Asterisk
 
-**start**
-> Start FreePBX and Asterisk services
+**start** [_module_]
+> Start FreePBX and Asterisk services (optionally a single module)
 
-**stop**
+**stop** [_module_]
 > Stop FreePBX and Asterisk services
 
 **restart**
 > Restart FreePBX and Asterisk services
 
-**setting**
+**setting** _keyword_ [_value_]
 > View or modify FreePBX settings
 
-**backup**
-> Manage FreePBX backups
+**backup** [**--list** | **--file** _file_]
+> Manage or restore FreePBX backups
 
 **chown**
 > Fix file ownership for web server access
 
 **ma** (module admin)
-> Manage FreePBX modules
+> Install, enable, disable, upgrade or remove FreePBX modules
+
+**sysadmin**
+> System administration tasks
 
 **list**
 > Display all available fwconsole commands
+
+**-h**, **--help**
+> Display help for a given command
+
+**-v**, **-vv**, **-vvv**
+> Increase verbosity level
+
+**-q**, **--quiet**
+> Suppress output
 
 # DESCRIPTION
 

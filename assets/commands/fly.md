@@ -33,23 +33,41 @@ CLI for Concourse CI system
 _COMMAND_
 > Operation: login, set-pipeline, trigger-job, watch, etc.
 
-**-t** _TARGET_
-> Concourse target name.
+**-t**, **--target** _TARGET_
+> Concourse target name saved in ~/.flyrc.
 
 **login**
-> Authenticate with Concourse.
+> Authenticate with a Concourse server (use **-c** _url_ for concourse URL, **-n** _team_ for team).
+
+**logout**
+> Clear saved token for a target.
+
+**targets**
+> List all configured targets and their token expiration.
 
 **set-pipeline**
-> Create or update pipeline.
+> Create or update a pipeline from YAML (**-p** _pipeline_ **-c** _config.yml_).
+
+**get-pipeline**
+> Output a pipeline's current configuration (**-p** _pipeline_).
+
+**destroy-pipeline**
+> Remove a pipeline (**-p** _pipeline_).
+
+**unpause-pipeline**, **pause-pipeline**
+> Enable or disable a pipeline.
 
 **trigger-job**
-> Start job execution.
+> Start job execution (**-j** _pipeline/job_).
 
 **watch**
-> Stream job output.
+> Stream a build's output (**-j** _pipeline/job_ or **-b** _build_).
+
+**execute**
+> Run a one-off task locally (**-c** _task.yml_).
 
 **sync**
-> Update fly to match server.
+> Update local fly binary to match server version.
 
 **--help**
 > Display help information.
@@ -72,4 +90,4 @@ fly is the CLI for **Concourse CI**, created by Pivotal (now VMware). Concourse 
 
 # SEE ALSO
 
-[concourse](/man/concourse)(1), [jenkins](/man/jenkins)(1), [gitlab-ci](/man/gitlab-ci)(1)
+[concourse](/man/concourse)(1), [jenkins](/man/jenkins)(1), [flyctl](/man/flyctl)(1)

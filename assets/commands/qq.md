@@ -27,7 +27,7 @@ Multi-format transcoder and query tool powered by jq syntax
 # PARAMETERS
 
 **-i**, **--input** _FORMAT_
-> Specify input format.
+> Specify input format explicitly (e.g., json, yaml, toml, csv, xml).
 
 **-o**, **--output** _FORMAT_
 > Specify output format.
@@ -36,10 +36,19 @@ Multi-format transcoder and query tool powered by jq syntax
 > Interactive query builder with autocomplete and real-time preview.
 
 **--stream**
-> Streaming mode for memory-efficient processing of large files.
+> Streaming mode for memory-efficient processing of large files (identical to jq).
 
-**-s**
+**-s**, **--slurp**
 > Slurp mode: read multiple inputs into an array.
+
+**-e**
+> Exit-status mode: use the last value for the exit code.
+
+**--monochrome-output**
+> Disable colored output.
+
+**--help**
+> Display help information.
 
 # DESCRIPTION
 

@@ -14,7 +14,7 @@ Neo4j Cypher query language shell
 
 **Connect to specific address**
 
-```cypher-shell -a [bolt://localhost:7687]```
+```cypher-shell -a [neo4j://localhost:7687]```
 
 **Execute a query** and exit
 
@@ -38,8 +38,8 @@ Neo4j Cypher query language shell
 
 # PARAMETERS
 
-**-a** _ADDRESS_, **--address** _ADDRESS_
-> Connection address (default: bolt://localhost:7687).
+**-a** _ADDRESS_, **--address** _ADDRESS_, **--uri** _ADDRESS_
+> Connection address (default: neo4j://localhost:7687).
 
 **-u** _USER_, **--username** _USER_
 > Neo4j username.
@@ -54,12 +54,27 @@ Neo4j Cypher query language shell
 > Execute Cypher queries from file.
 
 **--format** _FORMAT_
-> Output format: auto, verbose, plain.
+> Output format: auto, verbose, plain (default: auto).
 
 **--encryption** _MODE_
 > Encryption mode: true, false, default.
 
-**--version**
+**-P** _PARAM_, **--param** _PARAM_
+> Define session parameters (may be repeated).
+
+**--non-interactive**
+> Force non-interactive (batch) mode.
+
+**--fail-fast**
+> Exit on first error when processing a file.
+
+**--fail-at-end**
+> Report all errors after processing a file.
+
+**--change-password**
+> Change the user password and exit.
+
+**-v**, **--version**
 > Display version information.
 
 **--help**

@@ -65,4 +65,4 @@ Multiple utilities named 'do' exist across different systems and package reposit
 
 # SEE ALSO
 
-[watch](/man/watch)(1), [while](/man/while)(1), [repeat](/man/repeat)(1)
+[watch](/man/watch)(1), [while](/man/while)(1)

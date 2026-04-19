@@ -86,6 +86,18 @@ CLI for Kaggle, a data science competition platform
 **--sort-by** _field_
 > Sort results by field.
 
+**--force**
+> Overwrite existing files without prompting.
+
+**-q**, **--quiet**
+> Suppress verbose output.
+
+**-v**
+> Verbose mode for tabular listings.
+
+**-h**, **--help**
+> Show help for the command or subcommand.
+
 # DESCRIPTION
 
 **kaggle** is the CLI for Kaggle, a data science competition platform. It manages competition data, datasets, notebooks, and models.

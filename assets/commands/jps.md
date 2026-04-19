@@ -38,19 +38,22 @@ _HOSTID_
 > Remote host to query.
 
 **-l**
-> Show full main class name.
+> Display the full package name of the main class or the full path to the JAR file.
 
 **-v**
-> Show JVM arguments.
+> Display arguments passed to the JVM.
 
 **-m**
-> Show main method arguments.
+> Display arguments passed to the main method.
 
 **-q**
-> Show only PIDs.
+> Suppress class name/arguments; show only local JVM identifiers (PIDs).
 
-**--help**
-> Display help information.
+**-V**
+> Same as -q: list only local JVM identifiers.
+
+**-help**
+> Display the help message for jps.
 
 # DESCRIPTION
 

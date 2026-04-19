@@ -35,25 +35,43 @@ Create commits that undo previous changes
 # PARAMETERS
 
 **-n**, **--no-commit**
-> Don't auto-commit.
+> Apply revert to working tree and index without creating a commit.
 
 **-e**, **--edit**
-> Edit commit message.
+> Edit the commit message before committing (default when run interactively).
 
 **--no-edit**
-> Use default message.
+> Use the default generated commit message.
 
-**-m** _parent_
-> Mainline parent for merge.
+**-m** _parent-number_, **--mainline** _parent-number_
+> Specify the mainline parent (1-based) when reverting a merge commit.
+
+**-s**, **--signoff**
+> Add a `Signed-off-by` trailer to the commit message.
+
+**-S**[_keyid_], **--gpg-sign**[=_keyid_]
+> GPG-sign the revert commit.
+
+**--cleanup=**_mode_
+> Control how the commit message is cleaned up (see git-commit).
+
+**--strategy=**_strategy_
+> Use the specified merge strategy.
+
+**-X** _option_, **--strategy-option=**_option_
+> Pass an option through to the merge strategy.
 
 **--continue**
-> Continue after conflict.
-
-**--abort**
-> Cancel revert.
+> Continue the revert operation after resolving conflicts.
 
 **--skip**
-> Skip current commit.
+> Skip the current commit and continue with the remaining ones.
+
+**--abort**
+> Cancel the in-progress revert and restore the pre-sequence state.
+
+**--quit**
+> Forget about the current operation; leave index and working tree as-is.
 
 # DESCRIPTION
 

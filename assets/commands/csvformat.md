@@ -12,13 +12,17 @@ CSV format and delimiter converter
 
 ```csvformat -D "[;]" [input.csv]```
 
-**Convert to specific quoting**
+**Quote all fields**
 
-```csvformat -U [0|1|2|3] [input.csv]```
+```csvformat -U 1 [input.csv]```
 
-**Remove header**
+**Skip first N rows**
 
 ```csvformat -K [1] [input.csv]```
+
+**Change line terminator**
+
+```csvformat -M "\r\n" [input.csv]```
 
 # SYNOPSIS
 
@@ -65,4 +69,4 @@ csvformat is part of **csvkit**, created by Christopher Groskopf in **2011**. It
 
 # SEE ALSO
 
-[csvkit](/man/csvkit)(1), [csv-diff](/man/csv-diff)(1), [csvlook](/man/csvlook)(1)
+[csvkit](/man/csvkit)(1), [csvlook](/man/csvlook)(1), [csvcut](/man/csvcut)(1), [csvgrep](/man/csvgrep)(1)

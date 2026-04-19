@@ -18,13 +18,19 @@ PulseAudio Volume Control
 
 # PARAMETERS
 
-**-t** _TAB_
-> Start on tab number.
+**-t**, **--tab=**_NUMBER_
+> Start on tab number (1=Playback, 2=Recording, 3=Output Devices, 4=Input Devices, 5=Configuration).
+
+**--maximize**
+> Start the window maximized.
+
+**--retry**
+> Retry if the PulseAudio connection fails.
 
 **--version**
 > Display version.
 
-**--help**
+**-h**, **--help**
 > Display help.
 
 # DESCRIPTION

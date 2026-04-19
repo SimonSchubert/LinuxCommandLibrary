@@ -75,7 +75,13 @@ PostgreSQL table reclustering utility
 > Force password prompt.
 
 **--maintenance-db** _dbname_
-> Database to connect to for discovering other databases.
+> Database to connect to when using `-a`/`--all` (defaults to `postgres` or `template1`).
+
+**-V**, **--version**
+> Print version information.
+
+**-?**, **--help**
+> Show help about command-line arguments.
 
 # DESCRIPTION
 

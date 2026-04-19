@@ -21,11 +21,19 @@ Display current and previous SysV runlevel
 **--help**
 > Show help message
 
+# ENVIRONMENT
+
+**$RUNLEVEL**
+> Overrides the current runlevel reported by the command.
+
+**$PREVLEVEL**
+> Overrides the previous runlevel reported by the command.
+
 # DESCRIPTION
 
-**runlevel** prints the previous and current SysV runlevel from the utmp file. A runlevel is a mode of operation in Unix System V-style init systems that defines what services are running.
+**runlevel** prints the previous and current SysV runlevel from the utmp file (**/run/utmp**). A runlevel is a mode of operation in Unix System V-style init systems that defines what services are running.
 
-The output consists of two values: the previous runlevel (or N if unavailable) and the current runlevel.
+The output consists of two values: the previous runlevel (or **N** if unavailable) and the current runlevel. If neither can be determined, **unknown** is printed.
 
 # CAVEATS
 

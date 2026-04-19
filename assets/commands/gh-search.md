@@ -52,19 +52,37 @@ Search GitHub for repositories, code, issues, and more
 # PARAMETERS
 
 **--language** _lang_
-> Filter by language.
+> Filter by programming language (repos, code, issues, prs).
 
 **--stars** _range_
-> Filter by stars.
+> Filter by star count (repos only; e.g. `>100`).
 
 **--owner** _user_
-> Filter by owner.
+> Filter by repository owner.
 
-**--repo** _repo_
-> Filter by repo.
+**--repo** _owner/repo_
+> Filter by repository (code, issues, prs, commits).
+
+**--topic** _topic_
+> Filter on topic (repos).
+
+**--license** _key_
+> Filter based on license type (repos).
+
+**--sort** _field_
+> Sort fetched results (e.g. stars, forks, updated).
+
+**--order** _asc|desc_
+> Order of results (with --sort).
 
 **-L**, **--limit** _num_
-> Maximum results.
+> Maximum number of results (default 30).
+
+**--json** _fields_
+> Output JSON with the specified fields.
+
+**-w**, **--web**
+> Open search results in a browser.
 
 # DESCRIPTION
 

@@ -16,21 +16,21 @@ Interactive SIP traffic analyzer
 
 ```sngrep -I [capture.pcap]```
 
-**Filter by SIP method**
+**Show only INVITE dialogs**
 
-```sngrep -c [INVITE]```
+```sngrep -c```
 
 **Capture to file**
 
 ```sngrep -O [output.pcap]```
 
-**Filter by IP**
+**Filter by IP using BPF**
 
 ```sngrep host [192.168.1.100]```
 
-**Quiet mode**
+**Capture without interface** (quiet mode)
 
-```sngrep -q```
+```sngrep -N -q -O [output.pcap]```
 
 # SYNOPSIS
 
@@ -39,28 +39,46 @@ Interactive SIP traffic analyzer
 # PARAMETERS
 
 **-d** _DEVICE_
-> Capture device.
+> Capture device (or comma-separated list).
 
 **-I** _FILE_
-> Read pcap file.
+> Read packets from pcap file.
 
 **-O** _FILE_
-> Write pcap file.
+> Save captured packets to pcap file.
 
-**-c** _METHOD_
-> Filter SIP method.
+**-c**
+> Only display dialogs starting with INVITE.
 
-**-l**
-> Rotate files.
+**-l** _LIMIT_
+> Maximum number of dialogs to capture.
 
 **-N**
-> No interface.
+> No interface mode (capture only).
 
 **-q**
-> Quiet mode.
+> Quiet mode (suppress output in no-interface mode).
 
 **-r**
-> Rotate only.
+> Capture RTP packet payloads.
+
+**-R**
+> Rotate calls when capture limit is reached.
+
+**-k** _FILE_
+> RSA private key for TLS decryption.
+
+**-B** _SIZE_
+> Pcap buffer size in MB (default: 2).
+
+**-H** _URL_
+> Send captured packets to Homer sipcapture URL.
+
+**-f** _FILE_
+> Load specific configuration file.
+
+**-D**
+> Print active configuration and exit.
 
 # DESCRIPTION
 

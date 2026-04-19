@@ -33,13 +33,34 @@ _ARGS_
 > No trailing newline.
 
 **-r**
-> Ignore escape sequences.
+> Ignore echo escape conventions (raw output).
+
+**-R**
+> BSD-style echo; escape sequences only with **-e**.
 
 **-u** _N_
-> Print to file descriptor N.
+> Print to file descriptor N (e.g., -u2 for stderr).
 
 **-l**
 > Print arguments on separate lines.
+
+**-N**
+> Separate and terminate arguments with null bytes.
+
+**-f** _format_
+> Format arguments using printf-style format string.
+
+**-P** (zsh)
+> Perform prompt expansion on the arguments.
+
+**-s** (zsh)
+> Save arguments in the history list instead of printing.
+
+**-v** _name_ (zsh)
+> Store the output in the parameter _name_ instead of printing.
+
+**-c** (zsh)
+> Print arguments in columns.
 
 # DESCRIPTION
 

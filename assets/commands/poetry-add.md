@@ -31,22 +31,40 @@ Add dependencies to a Poetry project
 # PARAMETERS
 
 **--group**, **-G** _group_
-> Dependency group (e.g., dev, test).
+> Dependency group to add the package to (e.g., dev, test).
+
+**--dev**, **-D**
+> Shortcut for `--group dev`.
 
 **--optional**
-> Add as optional dependency.
+> Add as an optional dependency to an extra.
 
 **--dry-run**
-> Show what would happen.
+> Output the operations without executing them.
 
 **--editable**, **-e**
-> Add as editable.
+> Add vcs/path dependencies as editable.
 
-**--extras** _extras_
-> Install package extras.
+**--extras**, **-E** _extras_
+> Extras to activate for the dependency (multiple values allowed).
 
 **--source** _source_
-> Use specific source.
+> Name of the source to use to install the package.
+
+**--python** _version_
+> Python version constraint for which the dependency must be installed.
+
+**--platform** _platform_
+> Platforms for which the dependency must be installed.
+
+**--markers** _markers_
+> Environment markers describing when the dependency should be installed.
+
+**--allow-prereleases**
+> Accept prereleases.
+
+**--lock**
+> Do not perform install; only update the lockfile.
 
 # DESCRIPTION
 

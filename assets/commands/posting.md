@@ -8,9 +8,45 @@ Modern API client that lives in your terminal
 
 ```posting```
 
+**Open a specific collection directory**
+
+```posting --collection [path/to/collection]```
+
+**Load environment variable files**
+
+```posting --env [dev.env] --env [secrets.env]```
+
+**Import a Postman v2.1 collection**
+
+```posting import [postman_collection.json]```
+
+**Display help**
+
+```posting --help```
+
 # SYNOPSIS
 
-**posting** [_options_]
+**posting** [_options_] [_subcommand_]
+
+# PARAMETERS
+
+**--collection** _PATH_
+> Use the given directory as the request collection.
+
+**--env** _FILE_
+> Load environment variables from a .env file (may be repeated).
+
+**--config** _FILE_
+> Use an alternate configuration file.
+
+**import** _FILE_
+> Import a Postman v2.1 collection into a Posting collection.
+
+**--help**
+> Display help information.
+
+**--version**
+> Display version information.
 
 # DESCRIPTION
 

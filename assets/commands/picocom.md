@@ -18,7 +18,7 @@ minimal serial port terminal emulator
 
 **Connect with parity**
 
-```picocom -p e [/dev/ttyUSB0]```
+```picocom -y e [/dev/ttyUSB0]```
 
 **Enable local echo**
 
@@ -40,43 +40,66 @@ The tool focuses on simplicity and reliability, useful for debugging and configu
 
 # PARAMETERS
 
-**-b** _baud_
+**-b**, **--baud** _baud_
 > Baud rate (default 9600).
 
-**-f** _flow_
-> Flow control (h=hw, s=sw, n=none).
+**-f**, **--flow** _x|h|n_
+> Flow control: x=xon/xoff (software), h=hardware (RTS/CTS), n=none.
 
-**-p** _parity_
-> Parity (e=even, o=odd, n=none).
+**-y**, **--parity** _e|o|n_
+> Parity: e=even, o=odd, n=none.
 
-**-d** _bits_
-> Data bits (5-8).
+**-d**, **--databits** _5-8_
+> Data bits (5, 6, 7, or 8).
 
-**-c**
-> Local echo.
+**-p**, **--stopbits** _1|2_
+> Stop bits (1 or 2).
 
-**-g** _file_
-> Log file.
+**-e**, **--escape** _char_
+> Escape character (default: a, meaning C-a).
+
+**-c**, **--echo**
+> Enable local echo.
+
+**-g**, **--logfile** _file_
+> Log serial I/O to file.
+
+**-t**, **--initstring** _str_
+> Send initialization string after opening port.
+
+**-i**, **--noinit**
+> Skip port initialization on startup.
+
+**-r**, **--noreset**
+> Don't reset the port on exit.
 
 **-q**, **--quiet**
 > Quiet mode.
 
-**-r**, **--noreset**
-> Don't reset on exit.
+**-s**, **--send-cmd** _cmd_
+> External program for file sending (default: sz -vv).
 
-**--send-cmd** _cmd_
-> Send file command.
-
-**--receive-cmd** _cmd_
-> Receive file command.
+**-v**, **--receive-cmd** _cmd_
+> External program for file receiving (default: rz -vv).
 
 # ESCAPE COMMANDS
 
-**C-a C-x**: Exit
-**C-a C-h**: Help
-**C-a C-s**: Send file
-**C-a C-r**: Receive file
-**C-a C-b**: Change baud
+Default escape prefix is **C-a** (Ctrl-A).
+
+**C-a C-x**: Exit (reset port)
+**C-a C-q**: Quit (no reset)
+**C-a C-h** / **C-a C-k**: Help
+**C-a C-s**: Send (upload) file
+**C-a C-r**: Receive (download) file
+**C-a C-b**: Set baud rate interactively
+**C-a C-u** / **C-a C-d**: Increase / decrease baud rate
+**C-a C-f**: Cycle flow control modes
+**C-a C-y**: Cycle parity modes
+**C-a C-i**: Cycle data bits
+**C-a C-j**: Cycle stop bits
+**C-a C-v**: Show current port settings
+**C-a C-c**: Toggle local echo
+**C-a C-\\**: Send break
 
 # CAVEATS
 
