@@ -1,0 +1,3 @@
+Added new Linux commands
+Faster UI rendering on the command detail screen
+Improved existing command documentation

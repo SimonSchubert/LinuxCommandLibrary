@@ -1,3 +1,12 @@
+## v3.7.8 — 2026-04-20
+
+### Features
+- Added new Linux commands
+
+### Improvements
+- Faster UI rendering on the command detail screen
+- Improved existing command documentation
+
 ## v3.7.7 — 2026-04-15
 
 ### Features
