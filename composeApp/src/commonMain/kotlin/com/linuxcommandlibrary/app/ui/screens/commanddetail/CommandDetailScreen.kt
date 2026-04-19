@@ -34,7 +34,7 @@ import com.linuxcommandlibrary.app.data.CommandSectionInfo
 import com.linuxcommandlibrary.app.ui.composables.TipSectionContent
 import com.linuxcommandlibrary.app.ui.composables.WithScrollbar
 import com.linuxcommandlibrary.app.ui.composables.rememberDebouncedClick
-import com.linuxcommandlibrary.shared.MarkdownParser
+import com.linuxcommandlibrary.shared.TipSectionElement
 import kotlinx.collections.immutable.ImmutableList
 
 @Composable
@@ -43,11 +43,12 @@ fun CommandDetailScreen(
     onNavigate: (NavEvent) -> Unit,
 ) {
     val uiState by viewModel.state.collectAsState()
+    val onToggleExpanded = remember(viewModel) { viewModel::onToggleExpanded }
 
     CommandDetailContent(
         uiState = uiState,
         onNavigate = onNavigate,
-        onToggleExpanded = { id -> viewModel.onToggleExpanded(id) },
+        onToggleExpanded = onToggleExpanded,
     )
 }
 
@@ -113,19 +114,19 @@ private fun CommandSectionColumn(
     if (isExpanded) {
         when (section.title) {
             "SEE ALSO" -> SeeAlsoSectionContent(
-                content = section.content,
+                parsedContent = section.parsedContent,
                 seeAlsoCommands = seeAlsoCommands,
                 onNavigate = onNavigate,
             )
 
-            else -> DefaultSectionContent(content = section.content, onNavigate = onNavigate)
+            else -> DefaultSectionContent(parsedContent = section.parsedContent, onNavigate = onNavigate)
         }
     }
 }
 
 @Composable
 private fun SeeAlsoSectionContent(
-    content: String,
+    parsedContent: ImmutableList<TipSectionElement>,
     seeAlsoCommands: ImmutableList<String>,
     onNavigate: (NavEvent) -> Unit,
 ) {
@@ -150,22 +151,21 @@ private fun SeeAlsoSectionContent(
             }
         }
     } else {
-        DefaultSectionContent(content = content, onNavigate = onNavigate)
+        DefaultSectionContent(parsedContent = parsedContent, onNavigate = onNavigate)
     }
 }
 
 @Composable
-private fun DefaultSectionContent(content: String, onNavigate: (NavEvent) -> Unit) {
-    val parsedSections = remember(content) {
-        MarkdownParser.parseMarkdownContent(content)
-    }
-
+private fun DefaultSectionContent(
+    parsedContent: ImmutableList<TipSectionElement>,
+    onNavigate: (NavEvent) -> Unit,
+) {
     Column(
         modifier = Modifier.fillMaxWidth()
             .padding(start = 16.dp, top = 8.dp, end = 16.dp, bottom = 8.dp),
     ) {
         TipSectionContent(
-            sections = parsedSections,
+            sections = parsedContent,
             onNavigate = onNavigate,
             textColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f),
             commandVerticalPadding = 4.dp,

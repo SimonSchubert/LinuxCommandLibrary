@@ -47,6 +47,7 @@ import com.linuxcommandlibrary.app.ui.theme.LinuxTheme
 import com.linuxcommandlibrary.shared.platform.ReviewHandler
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import org.koin.compose.currentKoinScope
 import org.koin.compose.koinInject
 import org.koin.core.parameter.parametersOf
 
@@ -108,8 +109,11 @@ fun LinuxApp(initialDeeplink: String? = null) {
         null
     }
 
-    val commandDetailViewModel: CommandDetailViewModel? = currentCommandName?.let {
-        koinInject { parametersOf(it) }
+    val koinScope = currentKoinScope()
+    val commandDetailViewModel: CommandDetailViewModel? = currentCommandName?.let { name ->
+        remember(name, koinScope) {
+            koinScope.get<CommandDetailViewModel> { parametersOf(name) }
+        }
     }
 
     Scaffold(

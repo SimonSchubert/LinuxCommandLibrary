@@ -1,6 +1,9 @@
 package com.linuxcommandlibrary.app.data
 
 import androidx.compose.runtime.Immutable
+import com.linuxcommandlibrary.shared.TipSectionElement
+import kotlinx.collections.immutable.ImmutableList
+import kotlinx.collections.immutable.persistentListOf
 
 @Immutable
 data class BasicCategory(
@@ -32,6 +35,7 @@ data class CommandSectionInfo(
     val id: Long,
     val title: String,
     val content: String,
+    val parsedContent: ImmutableList<TipSectionElement> = persistentListOf(),
 )
 
 fun CommandSectionInfo.getSortPriority(): Int = com.linuxcommandlibrary.shared.getSectionSortPriority(title)

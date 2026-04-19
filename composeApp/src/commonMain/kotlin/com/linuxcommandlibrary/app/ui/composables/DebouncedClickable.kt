@@ -7,7 +7,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.composed
 import kotlin.time.Duration
 import kotlin.time.Duration.Companion.milliseconds
 import kotlin.time.TimeMark
@@ -28,9 +27,8 @@ fun rememberDebouncedClick(
     }
 }
 
+@Composable
 fun Modifier.debouncedClickable(
     debounceTime: Duration = 300.milliseconds,
     onClick: () -> Unit,
-): Modifier = composed {
-    clickable(onClick = rememberDebouncedClick(debounceTime, onClick))
-}
+): Modifier = this.clickable(onClick = rememberDebouncedClick(debounceTime, onClick))

@@ -40,10 +40,11 @@ fun BasicGroupsScreen(
     onNavigate: (NavEvent) -> Unit = {},
 ) {
     val uiState by viewModel.uiState.collectAsState()
+    val toggleCollapse = remember(viewModel) { viewModel::toggleCollapse }
 
     BasicGroupsContent(
         uiState = uiState,
-        toggleCollapse = { viewModel.toggleCollapse(it) },
+        toggleCollapse = toggleCollapse,
         onNavigate = onNavigate,
     )
 }

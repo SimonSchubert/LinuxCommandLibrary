@@ -68,6 +68,7 @@ class CommandsRepository(private val assetReader: AssetReader) {
                     id = (commandName + title).hashCode().toLong(),
                     title = title,
                     content = sectionContent,
+                    parsedContent = MarkdownParser.parseMarkdownContent(sectionContent),
                 )
             }.filter { it.title.uppercase() != "TAGLINE" }
                 .sortedBy { it.getSortPriority() }
