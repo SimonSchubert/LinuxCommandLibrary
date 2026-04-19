@@ -46,34 +46,61 @@ scalable build system for monorepos
 > List matching targets.
 
 **test**
-> Run tests.
+> Run tests for matching test targets.
 
 **fmt**
-> Format source files.
+> Format source files in-place using configured formatters.
 
 **lint**
-> Run linters.
+> Run lint checks on matching targets.
 
 **check**
-> Type check.
+> Run type/compilation checks (e.g. mypy, javac).
 
 **package**
-> Build package.
+> Build deployable artifacts (wheels, pex, jars, docker images).
 
 **run**
-> Run executable target.
+> Run an executable target.
+
+**publish**
+> Publish deployable artifacts to a remote registry.
 
 **dependencies**
-> Show dependencies.
+> Show the transitive dependencies of a target.
+
+**dependents**
+> Show targets that depend on the given target.
+
+**roots**
+> List all root targets that match.
+
+**peek**
+> Print detailed metadata about matching targets.
 
 **repl**
-> Start interactive REPL.
+> Start an interactive REPL preloaded with the specified targets.
+
+**tailor**
+> Auto-generate or update BUILD files.
+
+**update-build-files**
+> Apply deprecation fixes to existing BUILD files.
 
 **--changed-since** _REF_
-> Only changed files.
+> Limit targets to those changed since the given git ref.
+
+**--changed-dependents=**_MODE_
+> Include dependents of changed targets (_none_, _direct_, _transitive_).
 
 **-l**, **--level** _LEVEL_
-> Log level.
+> Log level (trace, debug, info, warn, error).
+
+**--keep-sandboxes=**_MODE_
+> Keep the execution sandbox for debugging (_always_, _on_failure_, _never_).
+
+**--no-local-cache**, **--no-remote-cache**
+> Disable the local or remote build cache for the run.
 
 # DESCRIPTION
 

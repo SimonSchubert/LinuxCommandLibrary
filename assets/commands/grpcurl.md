@@ -107,4 +107,4 @@ Server must have reflection enabled for discovery, or proto files must be provid
 
 # SEE ALSO
 
-[curl](/man/curl)(1), [protoc](/man/protoc)(1), [grpc_cli](/man/grpc_cli)(1), [evans](/man/evans)(1)
+[curl](/man/curl)(1), [protoc](/man/protoc)(1)

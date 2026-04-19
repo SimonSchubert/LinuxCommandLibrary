@@ -81,4 +81,4 @@ DocBook originated at **HaL Computer Systems** and **O'Reilly** in the early **1
 
 # SEE ALSO
 
-[xsltproc](/man/xsltproc)(1), [docbook2pdf](/man/docbook2pdf)(1), [pandoc](/man/pandoc)(1), [xmllint](/man/xmllint)(1)
+[xsltproc](/man/xsltproc)(1), [pandoc](/man/pandoc)(1), [xmllint](/man/xmllint)(1)

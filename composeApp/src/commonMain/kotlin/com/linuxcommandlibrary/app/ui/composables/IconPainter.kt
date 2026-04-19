@@ -1,6 +1,7 @@
 package com.linuxcommandlibrary.app.ui.composables
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.painter.Painter
 import com.linuxcommandlibrary.app.resources.Res
 import com.linuxcommandlibrary.app.resources.ic_add_rule
@@ -150,7 +151,8 @@ import org.jetbrains.compose.resources.painterResource
  */
 @Composable
 fun rememberIconPainter(icon: AppIcon): Painter {
-    val resource = when (icon) {
+    val resource = remember(icon) {
+        when (icon) {
         AppIcon.SEARCH -> Res.drawable.ic_search_40dp
         AppIcon.PUZZLE -> Res.drawable.ic_puzzle
         AppIcon.IDEA -> Res.drawable.ic_idea
@@ -293,6 +295,7 @@ fun rememberIconPainter(icon: AppIcon): Painter {
         AppIcon.WEBCAM -> Res.drawable.ic_webcam_white_48dp
         AppIcon.WIFI -> Res.drawable.ic_wifi_black_24dp
         AppIcon.WIFI_START -> Res.drawable.ic_wifi_start
+        }
     }
     return painterResource(resource)
 }

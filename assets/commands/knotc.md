@@ -67,5 +67,5 @@ control utility for Knot DNS server
 
 # SEE ALSO
 
-[knotd](/man/knotd)(1), [kdig](/man/kdig)(1)
+[kdig](/man/kdig)(1)
 

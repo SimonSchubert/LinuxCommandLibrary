@@ -32,9 +32,9 @@ Display audio file format information
 
 ```soxi -t [audio.wav]```
 
-**Show all stats**
+**Show total duration of multiple files**
 
-```soxi -V [audio.wav]```
+```soxi -T [file1.wav] [file2.wav]```
 
 # SYNOPSIS
 
@@ -66,11 +66,11 @@ Display audio file format information
 **-s**
 > Sample count.
 
-**-V**
-> Verbose output.
+**-V**[_level_]
+> Set verbosity level.
 
 **-T**
-> Total of multiple files.
+> Total duration when multiple files are given.
 
 # DESCRIPTION
 

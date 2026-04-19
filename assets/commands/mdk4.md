@@ -37,16 +37,31 @@ _MODE_
 > Attack mode (b, a, d, w, f).
 
 **b**
-> Beacon flood.
+> Beacon flooding — broadcasts fake AP beacons.
 
 **a**
-> Authentication flood.
+> Authentication DoS — floods target APs with auth frames.
+
+**p**
+> SSID probing / bruteforce (including hidden SSIDs).
 
 **d**
-> Deauthentication.
+> Deauthentication and disassociation of clients from an AP.
+
+**m**
+> Michael (TKIP countermeasures) exploitation.
+
+**e**
+> EAPOL start and logoff packet injection.
+
+**s**
+> Attacks on mesh-network link and routing.
 
 **w**
-> WDS confusion.
+> Wireless IDS/IPS confusion via spoofed clients.
+
+**f**
+> Packet fuzzer with configurable sources and modifiers.
 
 **--help**
 > Display help information.

@@ -76,4 +76,4 @@ cradle deploy was created as part of the Cradle framework's CLI tooling to simpl
 
 # SEE ALSO
 
-[cradle](/man/cradle)(1), [rsync](/man/rsync)(1), [ssh](/man/ssh)(1), [deployer](/man/deployer)(1)
+[cradle](/man/cradle)(1), [rsync](/man/rsync)(1), [ssh](/man/ssh)(1), [composer](/man/composer)(1)

@@ -22,16 +22,19 @@ _URL_
 > ext:: URL with command template.
 
 **%s**
-> Replaced with service name.
+> Replaced with service name (e.g. `upload-pack`, `receive-pack`, `upload-archive`) without the `git-` prefix.
 
 **%S**
-> Replaced with long service name.
+> Replaced with long service name (e.g. `git-upload-pack`) including the `git-` prefix.
 
 **%G**
-> Replaced with service (git only).
+> Placed as the first argument; suppresses the service-name argument so the remote command can accept extra positional arguments.
 
 **%V**
-> Replaced with version.
+> Only valid as the second argument; injects the Git protocol version (e.g. `version=2`) as an environment setting.
+
+**%%**
+> Literal percent sign.
 
 **--help**
 > Display help information.

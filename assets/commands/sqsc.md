@@ -67,8 +67,8 @@ AWS account needed. Credentials required. Region specific.
 
 # HISTORY
 
-**sqsc** is a command-line client for Amazon SQS (Simple Queue Service), providing queue management operations.
+**sqsc** is a lightweight command-line client for Amazon Simple Queue Service, created as an alternative to the verbose AWS CLI for common SQS operations like listing, sending, receiving, and purging queues.
 
 # SEE ALSO
 
-[aws](/man/aws)(1), [sqs](/man/sqs)(1)
+[aws](/man/aws)(1)

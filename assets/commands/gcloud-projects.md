@@ -31,28 +31,37 @@ Google Cloud project management
 # SUBCOMMANDS
 
 **list**
-> List projects.
+> List projects the active account has permission to view.
 
-**create**
-> Create a project.
+**create** _PROJECT_ID_ [**--name=**_NAME_] [**--organization=**_ORG_] [**--folder=**_FOLDER_]
+> Create a new project. ID must be 6–30 characters, lowercase letters, digits, or hyphens.
 
-**describe**
-> Describe a project.
+**describe** _PROJECT_ID_
+> Show metadata (name, number, lifecycle state, labels) for a project.
 
-**delete**
-> Delete a project.
+**delete** _PROJECT_ID_
+> Mark a project for deletion (it is soft-deleted for 30 days before permanent removal).
 
-**get-iam-policy**
-> Get IAM policy.
+**get-iam-policy** _PROJECT_ID_
+> Print the IAM policy attached to the project.
 
-**set-iam-policy**
-> Set IAM policy.
+**set-iam-policy** _PROJECT_ID_ _POLICY_FILE_
+> Replace the IAM policy with the one defined in the JSON or YAML file.
 
-**add-iam-policy-binding**
-> Add IAM binding.
+**add-iam-policy-binding** _PROJECT_ID_ **--member=**_MEMBER_ **--role=**_ROLE_
+> Add a single member/role binding to the project's IAM policy.
 
-**undelete**
-> Restore deleted project.
+**remove-iam-policy-binding** _PROJECT_ID_ **--member=**_MEMBER_ **--role=**_ROLE_
+> Remove a member/role binding from the project's IAM policy.
+
+**update** _PROJECT_ID_
+> Update project metadata such as display name or labels.
+
+**move** _PROJECT_ID_ **--organization=**_ORG_ | **--folder=**_FOLDER_
+> Move a project to a different organization or folder.
+
+**undelete** _PROJECT_ID_
+> Restore a soft-deleted project within the 30-day grace period.
 
 # DESCRIPTION
 

@@ -4,17 +4,25 @@ Analytics and monitoring visualization platform
 
 # TLDR
 
-**Start Grafana server**
+**Start Grafana server** (modern binary)
+
+```grafana server```
+
+**Start Grafana server** (legacy binary)
 
 ```grafana-server```
 
 **Start with config file**
 
-```grafana-server --config [/etc/grafana/grafana.ini]```
+```grafana server --config [/etc/grafana/grafana.ini]```
 
 **Check version**
 
-```grafana-server -v```
+```grafana server -v```
+
+**Run the admin CLI**
+
+```grafana cli admin reset-admin-password [newpass]```
 
 **Access web interface**
 

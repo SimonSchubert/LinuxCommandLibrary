@@ -31,19 +31,31 @@ Google Cloud SDK component manager
 # PARAMETERS
 
 _COMMAND_
-> Operation: list, install, update, remove, reinstall.
+> Operation: list, install, update, remove, reinstall, repositories, copy-bundled-python.
 
 **list**
-> Show available and installed components.
+> Show available and installed components, their size, and current version.
 
-**install** _COMPONENT_
-> Install specified component.
+**install** _COMPONENT_...
+> Install one or more components (and their dependencies).
 
 **update**
-> Update SDK to latest version.
+> Update all installed components to the latest available version. Use **--version** to pin a specific SDK version.
 
-**remove** _COMPONENT_
-> Uninstall component.
+**remove** _COMPONENT_...
+> Uninstall one or more components.
+
+**reinstall**
+> Reinstall the SDK, removing and restoring all components at the latest version.
+
+**repositories**
+> Manage additional component repositories (add, list, remove) used for trusted-tester releases.
+
+**copy-bundled-python**
+> Copy the bundled Python interpreter to a user-specified location.
+
+**--quiet**, **-q**
+> Disable interactive prompts.
 
 **--help**
 > Display help information.

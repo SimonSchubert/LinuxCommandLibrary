@@ -28,7 +28,19 @@ Start on specific **port**
 > VNC port to listen on
 
 **-SecurityTypes** _TYPES_
-> Security types to use
+> Comma-separated list of accepted security types (e.g. `VncAuth,Plain`).
+
+**-Geometry** _WxH+X+Y_
+> Limit the shared region to a subrectangle of the display.
+
+**-Log** _DEST:LEVEL_
+> Configure logging (e.g. `stderr:100`, `*:stderr:30`).
+
+**-SendCutText** / **-AcceptCutText**
+> Enable/disable clipboard forwarding between server and client.
+
+**-QueryConnect**
+> Prompt the local user before accepting each incoming connection.
 
 # DESCRIPTION
 

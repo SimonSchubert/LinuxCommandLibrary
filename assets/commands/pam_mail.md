@@ -18,7 +18,11 @@ notifies users of new mail
 
 **Quiet on empty**
 
-```session optional pam_mail.so nstruc```
+```session optional pam_mail.so quiet```
+
+**Suppress new-mail check (login MOTD only)**
+
+```session optional pam_mail.so nopen```
 
 # SYNOPSIS
 
@@ -27,16 +31,28 @@ notifies users of new mail
 # PARAMETERS
 
 **dir=**_PATH_
-> Mail directory.
+> Mail directory (overrides the MAIL environment variable).
 
 **standard**
-> Use standard mail spool.
+> Use the standard mail spool location.
+
+**close**
+> Also print a notice at session close if new mail has arrived.
+
+**empty**
+> Report even when the mailbox is empty.
+
+**hash=**_N_
+> Look in N hashed subdirectories under `dir` (for sites with hashed spools).
 
 **nopen**
-> Don't print new mail count.
+> Do not inspect any mailboxes on login (suppresses the status message).
+
+**noenv**
+> Do not export the `MAIL` environment variable.
 
 **quiet**
-> Only report if mail exists.
+> Only report if there is new mail (no "no mail" message).
 
 # DESCRIPTION
 

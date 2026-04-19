@@ -80,4 +80,4 @@ PDF conversion may lose formatting. Complex layouts may not convert well. Some f
 
 # SEE ALSO
 
-[calibre](/man/calibre)(1), [ebook-meta](/man/ebook-meta)(1), [ebook-viewer](/man/ebook-viewer)(1), [pandoc](/man/pandoc)(1)
+[calibre](/man/calibre)(1), [ebook-meta](/man/ebook-meta)(1), [pandoc](/man/pandoc)(1)

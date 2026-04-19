@@ -78,7 +78,7 @@ The player can scan your music library, fetch album art and lyrics, and provides
 
 # CONFIGURATION
 
-**~/.kde/share/config/amarokrc**
+**~/.config/amarokrc** (KF5/Qt5 builds), **~/.kde/share/config/amarokrc** (KDE4 builds)
 > Main configuration file storing player settings, collection paths, and plugin preferences.
 
 # CAVEATS
@@ -91,4 +91,4 @@ Heavy on system resources compared to simpler players. Some features require KDE
 
 # SEE ALSO
 
-[vlc](/man/vlc)(1), [rhythmbox](/man/rhythmbox)(1), [clementine](/man/clementine)(1)
+[vlc](/man/vlc)(1), [clementine](/man/clementine)(1)

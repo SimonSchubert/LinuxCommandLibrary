@@ -22,20 +22,35 @@ terminal minesweeper game
 
 # PARAMETERS
 
-**--height** _N_
+**-h**, **--height** _N_
 > Number of rows.
 
-**--width** _N_
+**-w**, **--width** _N_
 > Number of columns.
 
-**--mines** _N_
+**-m**, **--mines** _N_
 > Number of mines.
 
-**--percent** _N_
-> Set mines as percentage of board.
+**-%**, **--percent** _N_
+> Set mines as percentage of board squares.
 
-**--fast**
-> Enable fast opening mode.
+**-f**, **--fast**
+> Skip the interactive setup dialog.
+
+**-i**, **--interactive**
+> Force interactive setup menu.
+
+**-a**, **--alt-charset**
+> Toggle alternate character set for rendering.
+
+**-b**, **--show-best-times**
+> Show the best-times viewer.
+
+**-s**, **--save-prefs**
+> Save the current command-line preferences.
+
+**-H**, **--help**
+> Display help information.
 
 # PREVIEW
 

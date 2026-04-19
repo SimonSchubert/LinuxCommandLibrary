@@ -80,6 +80,9 @@ Special patterns **BEGIN** and **END** execute actions before and after all inpu
 **\$1**: First field
 **NF**: Fields count
 **NR**: Record (line) number
+**FILENAME**: Current input file
+**FS** / **OFS**: Input / output field separator
+**RS** / **ORS**: Input / output record separator
 Use **\$(n)** for nth field
 
 # CAVEATS

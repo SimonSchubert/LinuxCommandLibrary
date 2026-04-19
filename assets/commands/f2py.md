@@ -78,4 +78,4 @@ f2py was created by **Pearu Peterson** in the late 1990s and became part of NumP
 
 # SEE ALSO
 
-[python](/man/python)(1), [gfortran](/man/gfortran)(1), [numpy](/man/numpy)(1)
+[python](/man/python)(1), [gfortran](/man/gfortran)(1), [cython](/man/cython)(1)

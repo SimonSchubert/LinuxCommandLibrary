@@ -26,9 +26,9 @@ displays Angular CLI and package versions
 
 # DESCRIPTION
 
-**ng version** displays Angular CLI and package versions. It shows all Angular-related dependencies.
+**ng version** displays Angular CLI and package versions, including `@angular/core`, `@angular/cli`, RxJS, TypeScript, Node.js, and the package manager in use. When run outside an Angular workspace it prints only the globally installed CLI information. `v` is accepted as a short alias (`ng v`).
 
-The command helps with debugging. Shows Node.js and npm versions too.
+The output is useful when reporting bugs, auditing dependency versions, or diagnosing build issues.
 
 # CAVEATS
 

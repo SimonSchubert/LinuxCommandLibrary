@@ -16,9 +16,13 @@ aligns print cartridges on HP printers
 
 ```hp-align -i```
 
-**Automatic alignment**
+**Specify device URI**
 
-```hp-align -a```
+```hp-align -d [hp:/usb/Deskjet_Printer?serial=XYZ]```
+
+**Enable debug logging**
+
+```hp-align -g```
 
 # SYNOPSIS
 
@@ -26,22 +30,22 @@ aligns print cartridges on HP printers
 
 # PARAMETERS
 
-**-p** _PRINTER_
-> Printer name or device.
+**-p** _PRINTER_, **--printer=**_PRINTER_
+> CUPS printer name.
 
-**-d** _DEVICE_
-> Device URI.
+**-d** _URI_, **--device=**_URI_
+> Device URI (e.g. `hp:/usb/...`).
 
-**-i**
-> Interactive mode.
+**-i**, **--interactive**
+> Run in interactive mode.
 
-**-a**
-> Automatic mode.
+**-l** _LEVEL_, **--logging=**_LEVEL_
+> Logging level: none, info, error, warn, debug.
 
-**-b** _BUS_
-> Bus type (usb, net).
+**-g**
+> Debug mode (equivalent to `-l debug`).
 
-**--help**
+**-h**, **--help**
 > Display help information.
 
 # DESCRIPTION

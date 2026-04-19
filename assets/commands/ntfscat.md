@@ -43,18 +43,9 @@ reads a file from an NTFS volume and outputs it to stdout
 
 # DESCRIPTION
 
-**ntfscat** reads a file from an NTFS volume and outputs it to stdout. It can extract files by path or inode number, and can access NTFS alternate data streams.
+**ntfscat** reads a file from an NTFS volume and outputs its contents to standard output. Files can be referenced by their path within the volume or by MFT inode number, and named alternate data streams can be accessed using the `filename:stream` syntax.
 
-Useful for forensics and data recovery from NTFS partitions.
-# Extract file
-ntfscat /dev/sda1 /Users/user/document.txt > recovered.txt
-
-# Extract alternate data stream
-ntfscat /dev/sda1 file.txt:hidden > hidden_data
-
-# Extract by inode
-ntfscat -i 54321 /dev/sda1 > file_by_inode
-```
+Useful for forensics and data recovery from NTFS partitions without mounting the volume.
 
 # CAVEATS
 
@@ -66,4 +57,4 @@ ntfscat is part of **ntfs-3g**, the open-source NTFS driver and utilities, provi
 
 # SEE ALSO
 
-[ntfsls](/man/ntfsls)(8), [ntfsinfo](/man/ntfsinfo)(8), [ntfs-3g](/man/ntfs-3g)(8), [ntfsresize](/man/ntfsresize)(8)
+[ntfsls](/man/ntfsls)(8), [ntfs-3g](/man/ntfs-3g)(8), [ntfsresize](/man/ntfsresize)(8)

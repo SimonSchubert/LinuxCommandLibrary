@@ -81,6 +81,18 @@ CLI for building Angular web applications
 **version** (alias: **v**)
 > Display Angular CLI version information
 
+**analytics**
+> Configure anonymous telemetry settings for the Angular CLI
+
+**completion**
+> Set up Angular CLI shell autocompletion
+
+**run**
+> Run an Architect target in the workspace (e.g. my-project:build)
+
+**extract-i18n**
+> Extract i18n messages from the source code
+
 **--help**
 > Display help for any command
 
@@ -89,6 +101,9 @@ CLI for building Angular web applications
 
 **--verbose**
 > Enable verbose logging output
+
+**--force**
+> Force overwriting of existing files (generators)
 
 # DESCRIPTION
 

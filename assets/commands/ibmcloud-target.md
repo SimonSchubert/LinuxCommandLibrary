@@ -49,8 +49,17 @@ sets or displays the targeted account, region, resource group, and Cloud
 **-s** _space_
 > Target Cloud Foundry space.
 
+**--cf**
+> Target a Cloud Foundry environment and auto-select org/space.
+
+**--cf-api** _URL_
+> Target a specific Cloud Foundry API endpoint.
+
 **--unset-resource-group**
-> Clear resource group.
+> Clear the targeted resource group.
+
+**--output** _FORMAT_
+> Output format (e.g. `json`).
 
 # DESCRIPTION
 

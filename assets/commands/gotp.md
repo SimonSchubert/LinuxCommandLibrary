@@ -79,4 +79,4 @@ System clock must be accurate for valid codes. Secrets are only as secure as the
 
 # SEE ALSO
 
-[oathtool](https://www.nongnu.org/oath-toolkit/), [keepassxc](https://keepassxc.org/), [1password-cli](https://developer.1password.com/docs/cli/)
+[oathtool](/man/oathtool)(1), [pass](/man/pass)(1), [op](/man/op)(1)

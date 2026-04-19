@@ -67,4 +67,4 @@ Remove is a core **Mercurial** command for managing tracked files since version 
 
 # SEE ALSO
 
-[hg](/man/hg)(1), [hg-add](/man/hg-add)(1), [hg-forget](/man/hg-forget)(1)
+[hg](/man/hg)(1), [hg-add](/man/hg-add)(1)

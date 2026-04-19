@@ -70,7 +70,28 @@ Run commands in transient units
 > Wait for service completion
 
 **-P, --pipe**
-> Enable pipe mode for use in pipelines
+> Enable pipe mode for use in pipelines.
+
+**-t, --pty**
+> Run interactively with a PTY attached (alias variant).
+
+**-q, --quiet**
+> Suppress informational messages.
+
+**--scope**
+> Create a transient .scope unit instead of a .service unit.
+
+**--slice** _NAME_
+> Add the unit into the specified slice.
+
+**--working-directory** _DIR_
+> Set the working directory for the invoked command.
+
+**--uid** _USER_, **--gid** _GROUP_
+> Run the command as the given user/group.
+
+**--nice** _N_
+> Set scheduling priority for the invoked command.
 
 # DESCRIPTION
 
@@ -84,4 +105,4 @@ Timer syntax follows systemd.time format. Resource properties require appropriat
 
 # SEE ALSO
 
-[systemctl](/man/systemctl)(1), [systemd.service](/man/systemd.service)(5), [systemd.timer](/man/systemd.timer)(5), [systemd.resource-control](/man/systemd.resource-control)(5)
+[systemctl](/man/systemctl)(1), [systemd-analyze](/man/systemd-analyze)(1), [systemd-cgls](/man/systemd-cgls)(1), [systemd-inhibit](/man/systemd-inhibit)(1)

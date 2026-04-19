@@ -80,10 +80,12 @@ The tool supports SMB, WinRM, LDAP, MSSQL, and SSH protocols. It's designed for 
 
 Only for authorized penetration testing. May trigger security alerts. Requires valid credentials or hashes. Some features need admin privileges. Network policies may block access.
 
+**Deprecated**: the upstream project has stopped releasing updates; a community fork called **NetExec** (`nxc`) is the actively maintained successor and is a drop-in replacement.
+
 # HISTORY
 
 **crackmapexec** was created by **byt3bl33d3r** (Marcello Salvati) around **2015**. It evolved from the need for a unified tool for Windows network penetration testing. The project is widely used in the security community and is actively maintained.
 
 # SEE ALSO
 
-[impacket](/man/impacket)(1), [mimikatz](/man/mimikatz)(1), [nmap](/man/nmap)(1), [enum4linux](/man/enum4linux)(1)
+[impacket](/man/impacket)(1), [nmap](/man/nmap)(1), [enum4linux](/man/enum4linux)(1)

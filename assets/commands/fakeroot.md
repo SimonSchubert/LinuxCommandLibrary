@@ -32,25 +32,25 @@ Display **help**
 
 **fakeroot** [_options_] [_command_]
 
-# DESCRIPTION
-
-**fakeroot** runs commands in an environment that fakes root privileges for file manipulation. It intercepts system calls to make files appear owned by root without actual root access.
-
-Commonly used for building packages that need to create root-owned files.
-
 # PARAMETERS
 
 **-s** _file_
-> Save fakeroot environment on exit
+> Save fakeroot environment on exit.
 
 **-i** _file_
-> Load fakeroot environment
+> Load fakeroot environment from a previous session.
 
-**-u, --unknown-is-real**
-> Keep real ownership of unknown files
+**-u**, **--unknown-is-real**
+> Keep real ownership of files not tracked by fakeroot.
 
-**-h, --help**
-> Display help
+**-b** _fd_
+> File descriptor for faked library to use.
+
+**-h**, **--help**
+> Display help.
+
+**-v**, **--version**
+> Display version.
 
 # DESCRIPTION
 

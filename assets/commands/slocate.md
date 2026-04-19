@@ -66,7 +66,7 @@ Database may be stale. Root for update. Superseded by mlocate.
 
 # HISTORY
 
-**slocate** is Secure Locate, a version of locate that only shows files the user has permission to access.
+**slocate** (Secure Locate) was created by **Kevin Lindsay** to address security concerns with the original GNU locate, which could leak information about restricted files. It has been largely replaced by **mlocate** on modern Linux distributions.
 
 # SEE ALSO
 

@@ -105,4 +105,4 @@ Slower than dd due to hashing overhead. Hash verification requires reading data 
 
 # SEE ALSO
 
-[dd](/man/dd)(1), [ddrescue](/man/ddrescue)(1), [dc3dd](/man/dc3dd)(1), [md5sum](/man/md5sum)(1)
+[dd](/man/dd)(1), [ddrescue](/man/ddrescue)(1), [md5sum](/man/md5sum)(1), [sha256sum](/man/sha256sum)(1)

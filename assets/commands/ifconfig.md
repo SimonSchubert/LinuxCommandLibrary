@@ -56,7 +56,22 @@ _INTERFACE_
 > Display all interfaces, even if down.
 
 **hw** _class_ _address_
-> Set hardware (MAC) address.
+> Set hardware (MAC) address (e.g. `hw ether AA:BB:...`).
+
+**promisc** / **-promisc**
+> Enable or disable promiscuous mode.
+
+**arp** / **-arp**
+> Enable or disable ARP protocol on the interface.
+
+**multicast** / **-multicast**
+> Enable or disable multicast flag.
+
+**add** _ADDR_/_PREFIX_
+> Add an IPv6 address to the interface.
+
+**del** _ADDR_/_PREFIX_
+> Remove an IPv6 address from the interface.
 
 **--help**
 > Display help information.

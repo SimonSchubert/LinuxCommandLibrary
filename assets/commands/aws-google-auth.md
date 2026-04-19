@@ -82,4 +82,4 @@ Created by **Cevo Australia** as an open-source tool to bridge Google Workspace 
 
 # SEE ALSO
 
-[aws](/man/aws)(1), [aws-sts](/man/aws-sts)(1), [saml2aws](/man/saml2aws)(1)
+[aws](/man/aws)(1), [aws-sts](/man/aws-sts)(1)

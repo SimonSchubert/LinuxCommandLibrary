@@ -56,11 +56,11 @@ _COMMAND_
 
 # CONFIGURATION
 
-**.fvm/fvm_config.json**
-> Project-level Flutter version pinning.
+**.fvmrc** (fvm 3+) or **.fvm/fvm_config.json** (legacy)
+> Project-level Flutter version pinning, committed alongside source.
 
-**~/.fvm/versions**
-> Directory containing cached Flutter SDK versions.
+**~/fvm/versions**
+> Directory containing cached Flutter SDK checkouts (symlinked from the project via `.fvm/flutter_sdk`).
 
 # DESCRIPTION
 

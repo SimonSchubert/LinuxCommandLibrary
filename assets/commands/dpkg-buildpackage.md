@@ -90,4 +90,4 @@ Requires build dependencies installed. Signing needs GPG key. Must run in packag
 
 # SEE ALSO
 
-[dpkg](/man/dpkg)(1), [dpkg-source](/man/dpkg-source)(1), [debuild](/man/debuild)(1), [pbuilder](/man/pbuilder)(1)
+[dpkg](/man/dpkg)(1), [dpkg-deb](/man/dpkg-deb)(1), [debuild](/man/debuild)(1), [pbuilder](/man/pbuilder)(1)

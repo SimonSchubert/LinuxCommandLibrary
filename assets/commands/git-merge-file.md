@@ -45,10 +45,16 @@ _OTHER_
 > Suppress warnings.
 
 **--ours**
-> Resolve conflicts with ours.
+> Resolve conflicts in favor of the "current" version.
 
 **--theirs**
-> Resolve conflicts with theirs.
+> Resolve conflicts in favor of the "other" version.
+
+**--union**
+> Take both sides of each conflict (append rather than mark).
+
+**-L** _label_
+> Provide a label for a file (pass up to three times for current/base/other).
 
 **--help**
 > Display help information.

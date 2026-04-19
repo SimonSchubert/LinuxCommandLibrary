@@ -6,11 +6,11 @@ fast reverse proxy server
 
 **Start frp server**
 
-```frps -c [frps.ini]```
+```frps -c [frps.toml]```
 
 **Verify configuration**
 
-```frps verify -c [frps.ini]```
+```frps verify -c [frps.toml]```
 
 **Simple server with** defaults
 
@@ -49,8 +49,8 @@ _COMMAND_
 
 # CONFIGURATION
 
-**frps.ini**
-> Server configuration file controlling bind port, dashboard settings, authentication requirements, and connection policies.
+**frps.toml**
+> Server configuration file (TOML since frp v0.52; previous releases used INI and YAML) controlling bind port, dashboard settings, authentication requirements, and connection policies.
 
 # DESCRIPTION
 

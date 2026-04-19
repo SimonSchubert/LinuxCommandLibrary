@@ -76,4 +76,4 @@ pnmcat is part of **Netpbm** by **Jef Poskanzer**, providing image concatenation
 
 # SEE ALSO
 
-[pamcat](/man/pamcat)(1), [pnmtile](/man/pnmtile)(1), [pnmpaste](/man/pnmpaste)(1), [netpbm](/man/netpbm)(1)
+[pamstack](/man/pamstack)(1), [pnmtile](/man/pnmtile)(1), [pnmpaste](/man/pnmpaste)(1), [netpbm](/man/netpbm)(1)

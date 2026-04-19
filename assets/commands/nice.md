@@ -33,17 +33,20 @@ runs a command with modified scheduling priority
 _COMMAND_
 > Command to run.
 
-**-n** _NICENESS_
-> Adjustment value (-20 to 19).
+**-n**, **--adjustment=**_N_
+> Add integer _N_ to the niceness (default **10**). Negative values raise priority.
 
 **--help**
 > Display help information.
 
+**--version**
+> Output version information.
+
 # DESCRIPTION
 
-**nice** runs a command with modified scheduling priority. Higher values mean lower priority.
+**nice** runs a command with a modified CPU scheduling niceness. Higher niceness means the process is "nicer" and receives less CPU time (lower priority).
 
-The tool adjusts process niceness. Values range from -20 (highest) to 19 (lowest).
+Niceness ranges from **-20** (highest priority) to **19** (lowest priority). With no command, nice prints the current niceness of the shell to standard output. When given a command with no **-n**, nice applies the default adjustment of **+10**.
 
 # CAVEATS
 

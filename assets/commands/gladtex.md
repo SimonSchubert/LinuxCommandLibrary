@@ -60,4 +60,4 @@ gladtex was created to enable mathematical formulas in HTML before widespread br
 
 # SEE ALSO
 
-[latex](/man/latex)(1), [dvipng](/man/dvipng)(1)
+[latex](/man/latex)(1), [pandoc](/man/pandoc)(1)

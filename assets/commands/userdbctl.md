@@ -1,5 +1,3 @@
-# TLDR
-
 # TAGLINE
 
 Query systemd user and group database

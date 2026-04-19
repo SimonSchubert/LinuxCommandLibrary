@@ -75,4 +75,4 @@ Burp Suite was created by **Dafydd Stuttard** (author of "The Web Application Ha
 
 # SEE ALSO
 
-[zaproxy](/man/zaproxy)(1), [mitmproxy](/man/mitmproxy)(1), [nikto](/man/nikto)(1), [sqlmap](/man/sqlmap)(1)
+[mitmproxy](/man/mitmproxy)(1), [nikto](/man/nikto)(1), [sqlmap](/man/sqlmap)(1)

@@ -35,25 +35,58 @@ runs Kubernetes clusters in Docker containers
 # PARAMETERS
 
 **create cluster**
-> Create new cluster.
+> Create a new cluster. Takes flags such as --name, --config, --image, --kubeconfig, --wait, --retain.
 
 **delete cluster**
-> Delete cluster.
+> Delete a cluster by name.
+
+**delete clusters**
+> Delete all kind clusters.
 
 **get clusters**
-> List clusters.
+> List currently running kind clusters.
 
 **get nodes**
-> List cluster nodes.
+> List the Docker containers acting as nodes for a given cluster.
+
+**get kubeconfig**
+> Print the kubeconfig for a cluster to stdout.
+
+**export kubeconfig** **--name** _NAME_
+> Merge the cluster's credentials into the active kubeconfig file.
+
+**export logs** _DIR_
+> Export logs from all nodes of the cluster to _DIR_.
 
 **load docker-image** _IMAGE_
-> Load image to cluster.
+> Sideload a local Docker image into the cluster nodes.
+
+**load image-archive** _FILE_
+> Sideload an image archive (docker save output) into the cluster nodes.
+
+**build node-image**
+> Build a kind node image from Kubernetes source or a release tarball.
+
+**version**
+> Print the kind version.
 
 **--name** _NAME_
-> Cluster name.
+> Cluster name (default **kind**).
 
 **--config** _FILE_
-> Configuration file.
+> Path to a kind configuration YAML file.
+
+**--image** _IMAGE_
+> Node image to use (overrides the default kindest/node image).
+
+**--kubeconfig** _FILE_
+> Write the cluster kubeconfig to _FILE_ instead of the default.
+
+**--wait** _DURATION_
+> Wait up to _DURATION_ for control plane readiness.
+
+**--retain**
+> Keep nodes when cluster creation fails (useful for debugging).
 
 **--help**
 > Display help information.

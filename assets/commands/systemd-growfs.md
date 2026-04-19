@@ -58,4 +58,4 @@ Only works with mounted filesystems. Only supports ext4, btrfs, xfs, and dm-cryp
 
 # SEE ALSO
 
-[systemd](/man/systemd)(1), [xfs_growfs](/man/xfs_growfs)(8), [resize2fs](/man/resize2fs)(8), [systemd-repart](/man/systemd-repart)(8)
+[systemctl](/man/systemctl)(1), [resize2fs](/man/resize2fs)(8), [systemd-repart](/man/systemd-repart)(8), [parted](/man/parted)(8)

@@ -54,4 +54,4 @@ desktop-file-validate is part of the **desktop-file-utils** package maintained b
 
 # SEE ALSO
 
-[desktop-file-install](/man/desktop-file-install)(1), [update-desktop-database](/man/update-desktop-database)(1), [xdg-desktop-menu](/man/xdg-desktop-menu)(1)
+[update-desktop-database](/man/update-desktop-database)(1), [xdg-desktop-menu](/man/xdg-desktop-menu)(1)

@@ -1,6 +1,6 @@
 # TAGLINE
 
-sets up and controls loop devices, which allow regular files to be
+Set up and control loop devices that expose regular files as block devices
 
 # TLDR
 
@@ -39,31 +39,58 @@ Attach **read-only**
 # PARAMETERS
 
 **-a, --all**
-> Show status of all loop devices
+> Show status of all attached loop devices.
 
 **-f, --find**
-> Find the first unused loop device
+> Find the first unused loop device. With no other arguments, print its name; with a backing file, attach the file to it.
 
 **-P, --partscan**
-> Scan the partition table on the device
+> Force the kernel to scan the partition table on the newly created loop device.
 
 **-r, --read-only**
-> Set up a read-only loop device
+> Set up a read-only loop device.
 
-**-d, --detach**
-> Detach specified loop device
+**-d, --detach** _loopdev_
+> Detach the specified loop device.
 
 **-D, --detach-all**
-> Detach all associated loop devices
+> Detach all currently attached loop devices.
+
+**-j, --associated** _file_
+> Show loop devices associated with _file_.
 
 **--show**
-> Print the loop device name after setup
+> Print the assigned device name (useful together with **-f**).
 
 **-o, --offset** _bytes_
-> Start at offset into the file
+> Start the loop device at _bytes_ offset into the backing file.
 
 **--sizelimit** _bytes_
-> Limit the size of the loop device
+> Limit the loop device to _bytes_ starting at offset.
+
+**-b, --sector-size** _bytes_
+> Set the logical sector size (512, 1024, 2048, or 4096).
+
+**--direct-io**[=**on**|**off**]
+> Enable or disable kernel direct I/O on the backing file.
+
+**-c, --set-capacity** _loopdev_
+> Force the kernel to reread the size of the backing file.
+
+**-L, --nooverlap**
+> Fail if any existing loop device already covers the same byte range of the backing file.
+
+**-O, --output** _columns_
+> Specify which columns to print (use `--list --output list` to see available).
+
+**-l, --list**
+> Use a listing format similar to `losetup -a` but with extra columns.
+
+**-J, --json**
+> Output as JSON (use with --list).
+
+**--help**
+> Display help information.
 
 # CAVEATS
 

@@ -49,4 +49,4 @@ Requires an internet connection. Location detection accuracy depends on IP geolo
 
 # SEE ALSO
 
-[curl](/man/curl)(1)
+[curl](/man/curl)(1), [stormy](/man/stormy)(1), [rustormy](/man/rustormy)(1)

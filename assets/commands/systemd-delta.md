@@ -68,4 +68,4 @@ Only shows differences for systemd-managed configuration types (unit files, tmpf
 
 # SEE ALSO
 
-[systemctl](/man/systemctl)(1), [systemd](/man/systemd)(1)
+[systemctl](/man/systemctl)(1), [systemd-analyze](/man/systemd-analyze)(1)

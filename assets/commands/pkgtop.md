@@ -21,6 +21,12 @@ Interactive package manager and resource monitor for GNU/Linux
 **-a**
 > List packages alphabetically instead of by size.
 
+**-h**, **--help**
+> Display help information.
+
+**-v**, **--version**
+> Display version information.
+
 # DESCRIPTION
 
 **pkgtop** is an interactive terminal dashboard for managing packages and monitoring system resources on GNU/Linux. It lists installed packages by size, shows package information, and allows installing, upgrading, removing, and searching packages. The dashboard also displays disk usage and general system information.

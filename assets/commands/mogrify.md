@@ -50,7 +50,25 @@ _FILES_
 > Compression quality.
 
 **-strip**
-> Remove metadata.
+> Remove metadata (EXIF, color profiles).
+
+**-crop** _GEOM_
+> Crop the image to the given region (e.g. `100x100+10+10`).
+
+**-thumbnail** _GEOM_
+> Faster resize that also strips metadata.
+
+**-flip** / **-flop**
+> Mirror vertically / horizontally.
+
+**-trim**
+> Trim uniform edges (e.g. whitespace borders).
+
+**-path** _DIR_
+> Write output files to DIR instead of overwriting.
+
+**-auto-orient**
+> Rotate by EXIF orientation so the image displays correctly.
 
 **--help**
 > Display help information.

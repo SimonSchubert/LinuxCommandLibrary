@@ -58,4 +58,4 @@ gcloud kms decrypt is part of the **Google Cloud SDK** for Cloud KMS, Google's m
 
 # SEE ALSO
 
-[gcloud](/man/gcloud)(1), [gcloud-kms-encrypt](/man/gcloud-kms-encrypt)(1)
+[gcloud](/man/gcloud)(1)

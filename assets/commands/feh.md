@@ -43,10 +43,22 @@ _FILES_
 > Thumbnail browser mode.
 
 **--bg-scale** _IMAGE_
-> Set scaled wallpaper.
+> Fit image to screen (may distort).
 
 **--bg-fill** _IMAGE_
-> Set wallpaper filling screen.
+> Fill screen preserving aspect ratio (may crop).
+
+**--bg-max** _IMAGE_
+> Scale to fit without cropping (may leave borders).
+
+**--bg-center** _IMAGE_
+> Center image without scaling.
+
+**--bg-tile** _IMAGE_
+> Tile image across screen.
+
+**-g** _WxH_, **--geometry** _WxH_
+> Limit window size.
 
 **-Z**, **--auto-zoom**
 > Zoom to fit window.

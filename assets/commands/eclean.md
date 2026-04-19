@@ -35,19 +35,40 @@ eclean provides both conservative and aggressive cleaning modes. Normal mode kee
 # PARAMETERS
 
 **distfiles**
-> Clean source download directory
+> Clean the source-download directory (DISTDIR, default `/var/cache/distfiles`).
 
 **packages**
-> Clean binary package directory
+> Clean the binary-package directory (PKGDIR, default `/var/cache/binpkgs`).
 
 **-d, --deep**
-> Only keep files for installed packages
+> Only keep files needed for currently installed packages (aggressive clean).
 
-**-n, --package-names**
-> Protect files by package name, not version
+**-n**, **--package-names**
+> Protect files by package name rather than exact version/slot.
 
 **-p, --pretend**
-> Show what would be deleted
+> Dry-run: list what would be removed without deleting anything.
+
+**-C, --color** _mode_
+> Colorize output: _yes_, _no_, or _auto_.
+
+**-t, --time-limit** _time_
+> Protect files newer than _time_ (e.g. `7d`, `1m`).
+
+**-s, --size-limit** _size_
+> Protect files larger than _size_ (e.g. `50M`, `1G`).
+
+**-e, --exclude-file** _file_
+> Read additional exclusion patterns from _file_.
+
+**-i, --interactive**
+> Ask for confirmation before removing each file.
+
+**-q, --quiet**
+> Suppress informational output.
+
+**-h, --help**
+> Display help information.
 
 # CAVEATS
 

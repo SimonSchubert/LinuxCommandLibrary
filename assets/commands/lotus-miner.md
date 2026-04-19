@@ -75,5 +75,5 @@ Requires a running **lotus** full node daemon. Storage mining requires significa
 
 # SEE ALSO
 
-[cardano-node](/man/cardano-node)(1), [geth](/man/geth)(1)
+[geth](/man/geth)(1), [ipfs](/man/ipfs)(1)
 

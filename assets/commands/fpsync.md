@@ -37,22 +37,49 @@ _DESTINATION_
 > Destination directory.
 
 **-n** _JOBS_
-> Number of parallel jobs.
+> Number of concurrent sync jobs (default 2).
 
 **-f** _FILES_
-> Files per partition.
+> Maximum number of files per partition (default 2000).
+
+**-s** _SIZE_
+> Maximum partition size in bytes (default 4096×1024).
 
 **-v**
-> Verbose output.
+> Verbose output (repeat for more verbosity).
 
 **-r** _DIR_
-> Resume from work directory.
+> Resume a previous run from the given work directory.
 
 **-w** _DIR_
-> Work directory.
+> Work directory to store partition and log files.
 
-**--help**
+**-t** _DIR_
+> Temporary directory.
+
+**-o** _OPTS_
+> Extra options passed to the underlying sync tool (e.g. rsync).
+
+**-O** _OPTS_
+> Extra options passed to **fpart**.
+
+**-m** _TOOL_
+> Sync tool to use: rsync, cpio, or tar.
+
+**-d** _DIR_
+> Shared work directory for distributed mode (sudo/ssh).
+
+**-q**
+> Queue mode: produce partitions without syncing.
+
+**-l**
+> Use **lstat** instead of **stat** while partitioning.
+
+**-h**
 > Display help information.
+
+**-V**
+> Display version information.
 
 # DESCRIPTION
 
@@ -72,4 +99,4 @@ fpsync is part of **fpart**, a file partitioning tool for parallel operations. I
 
 # SEE ALSO
 
-[rsync](/man/rsync)(1), [fpart](/man/fpart)(1), [parallel](/man/parallel)(1)
+[rsync](/man/rsync)(1), [parallel](/man/parallel)(1), [cpio](/man/cpio)(1), [tar](/man/tar)(1)

@@ -73,6 +73,15 @@ The tool is essential for Rust development and comes bundled with Rust.
 **update**
 > Update dependencies
 
+**bench**
+> Run benchmarks (nightly or harness-provided).
+
+**fmt**
+> Format code via `rustfmt` (component).
+
+**clippy**
+> Run the Clippy linter (component).
+
 # FEATURES
 
 - Dependency resolution
@@ -145,4 +154,4 @@ First build downloads dependencies (slow). Release builds significantly slower t
 
 # SEE ALSO
 
-[rustc](/man/rustc)(1), [rustup](/man/rustup)(1), [rust](/man/rust)(1)
+[rustc](/man/rustc)(1), [rustup](/man/rustup)(1), [cargo-fmt](/man/cargo-fmt)(1), [cargo-clippy](/man/cargo-clippy)(1), [cargo-bench](/man/cargo-bench)(1)

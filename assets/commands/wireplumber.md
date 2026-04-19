@@ -30,14 +30,23 @@ Display **version**
 
 # PARAMETERS
 
-**--config-file** _FILE_
-> Use specified configuration file
+**-c**, **--config-file** _FILE_
+> Use the specified main configuration file instead of `wireplumber.conf`.
+
+**-n**, **--name** _NAME_
+> Use a custom daemon name (useful for running multiple instances).
+
+**-d**, **--debug** _LEVEL_
+> Set log level (e.g. `D` for debug, `I` for info, `W` for warnings, `E` for errors) or a GLib-style domain:level spec.
+
+**-v**, **--verbose**
+> Increase log verbosity (equivalent to `--debug=D`).
 
 **--help**
-> Display help information
+> Display help information.
 
 **--version**
-> Display version information
+> Display version information.
 
 # DESCRIPTION
 

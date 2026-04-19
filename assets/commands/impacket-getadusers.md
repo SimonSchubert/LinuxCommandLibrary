@@ -1,6 +1,6 @@
 # TAGLINE
 
-queries Active Directory via LDAP to enumerate user accounts and their
+Enumerate Active Directory user accounts via LDAP
 
 # TLDR
 

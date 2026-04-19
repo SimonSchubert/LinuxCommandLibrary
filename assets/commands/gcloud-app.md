@@ -24,6 +24,14 @@ Google App Engine management commands
 
 ```gcloud app describe```
 
+**Split traffic between versions**
+
+```gcloud app services set-traffic [service] --splits [v1=0.5,v2=0.5]```
+
+**Delete a version**
+
+```gcloud app versions delete [version-id]```
+
 # SYNOPSIS
 
 **gcloud app** _command_ [_options_]

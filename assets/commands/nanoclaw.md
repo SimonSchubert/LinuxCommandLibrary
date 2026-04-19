@@ -1,6 +1,6 @@
 # TAGLINE
 
-lightweight personal AI assistant powered by Claude that runs in an isolated
+Containerized personal AI assistant with WhatsApp integration
 
 # TLDR
 

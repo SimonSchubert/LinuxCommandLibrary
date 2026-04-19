@@ -12,9 +12,13 @@ high-performance duplicate file finder
 
 ```fclones group [directory] | fclones remove```
 
-**Find duplicates by** content
+**Limit scan depth**
 
 ```fclones group --depth [2] [directory]```
+
+**Replace duplicates with hard links**
+
+```fclones group [directory] | fclones link```
 
 **Show duplicate statistics**
 

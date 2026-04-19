@@ -106,4 +106,4 @@ Some applications may not properly support the system tray protocol, requiring *
 
 # SEE ALSO
 
-[trayer](/man/trayer)(1), [tint2](/man/tint2)(1), [polybar](/man/polybar)(1)
+[trayer](/man/trayer)(1), [polybar](/man/polybar)(1), [tint](/man/tint)(1)

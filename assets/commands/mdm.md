@@ -52,5 +52,5 @@ MDM was **Linux Mint's** display manager, a fork of GDM, now largely replaced by
 
 # SEE ALSO
 
-[lightdm](/man/lightdm)(1), [gdm](/man/gdm)(1), [sddm](/man/sddm)(1)
+[gdm](/man/gdm)(1)
 

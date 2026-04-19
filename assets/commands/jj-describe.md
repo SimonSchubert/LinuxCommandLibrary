@@ -30,17 +30,26 @@ updates the description of a change
 
 # PARAMETERS
 
-**-m** _MESSAGE_
-> Description message.
+**-m**, **--message** _MESSAGE_
+> Set the description without opening an editor. May be passed multiple times.
 
 **-r** _REV_
-> Revision to describe.
+> Revision(s) to describe. Defaults to `@` (the current change).
 
 **--stdin**
-> Read message from stdin.
+> Read the description from standard input.
+
+**--edit**
+> Force opening the editor even when a message is supplied.
+
+**--no-edit**
+> Don't open the editor; keep the current description when no other input is provided.
 
 **--reset-author**
-> Reset author to current user.
+> Reset the change's author to the configured user (newer jj versions).
+
+**--author** _NAME_EMAIL_
+> Override the author (newer jj versions).
 
 **--help**
 > Display help information.

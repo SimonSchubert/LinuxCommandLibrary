@@ -26,7 +26,7 @@ Create a session and **detach** immediately
 
 # DESCRIPTION
 
-**abduco** (a]fter [b]asically [d]oing [u]seless [c]ompstrstrstr[o]perations) is a lightweight session management tool that provides terminal session detachment and reattachment. It allows processes to continue running when you disconnect from a terminal and reattach later.
+**abduco** (Latin: "to lead away, carry off") is a lightweight session management tool that provides terminal session detachment and reattachment. It allows processes to continue running when you disconnect from a terminal and reattach later.
 
 Unlike **screen** or **tmux**, abduco focuses solely on session management without window multiplexing or split panes. This minimalist approach results in a small, fast, and reliable tool. For multiplexing features, it pairs well with **dvtm**.
 

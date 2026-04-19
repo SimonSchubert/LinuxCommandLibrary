@@ -1,5 +1,3 @@
-# TLDR
-
 # TAGLINE
 
 Query system power and battery information

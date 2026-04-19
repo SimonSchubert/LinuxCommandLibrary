@@ -66,4 +66,4 @@ Running a BGP daemon on the public Internet requires coordination with upstream 
 
 # SEE ALSO
 
-[bgpctl](/man/bgpctl)(8), [bgpd.conf](/man/bgpd.conf)(5), [ospfd](/man/ospfd)(8), [bird](/man/bird)(8)
+[bgpctl](/man/bgpctl)(8), [ospfd](/man/ospfd)(8), [bird](/man/bird)(8)

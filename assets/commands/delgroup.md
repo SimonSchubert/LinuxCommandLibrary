@@ -35,22 +35,37 @@ When called with just a group name, it deletes the group. With both user and gro
 # PARAMETERS
 
 **--system**
-> Only delete system groups.
+> Only act if the target is a system group (fail otherwise). Also affects creation logic in adduser.
 
 **--only-if-empty**
-> Only delete if group has no members.
+> Only remove the group if it has no members.
+
+**--backup**
+> Back up any files deleted (for use with deluser; kept for symmetry).
+
+**--backup-to** _dir_
+> Place backups in _dir_ instead of the current directory.
+
+**--remove-home**
+> (deluser) remove the user's home directory. Listed here only for reference.
+
+**--group**
+> Force removal of a group even when a user name was given. Avoids ambiguous invocations.
 
 **-q**, **--quiet**
 > Suppress informational messages.
+
+**-v**, **--verbose**
+> More verbose progress output.
+
+**--conf** _FILE_
+> Use an alternate `deluser.conf` configuration file.
 
 **--help**
 > Display help information.
 
 **--version**
 > Display version.
-
-**--conf** _file_
-> Use alternate configuration.
 
 # CONFIGURATION
 

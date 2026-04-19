@@ -60,4 +60,4 @@ idnits was developed by the **IETF** to help authors validate Internet-Draft for
 
 # SEE ALSO
 
-[xml2rfc](/man/xml2rfc)(1), [rfcdiff](/man/rfcdiff)(1)
+[aspell](/man/aspell)(1)

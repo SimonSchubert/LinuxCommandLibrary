@@ -47,5 +47,5 @@ polkitd is the daemon component of **PolicyKit** authorization framework.
 
 # SEE ALSO
 
-[polkit](/man/polkit)(8), [pkexec](/man/pkexec)(1), [systemd](/man/systemd)(1)
+[polkit](/man/polkit)(8), [pkexec](/man/pkexec)(1), [systemctl](/man/systemctl)(1)
 

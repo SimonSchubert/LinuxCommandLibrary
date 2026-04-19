@@ -80,4 +80,4 @@ formail was developed by **Stephen van den Berg** as part of the **procmail** ma
 
 # SEE ALSO
 
-[procmail](/man/procmail)(1), [mail](/man/mail)(1), [mailx](/man/mailx)(1), [mbox](/man/mbox)(5)
+[procmail](/man/procmail)(1), [mail](/man/mail)(1), [mailx](/man/mailx)(1)

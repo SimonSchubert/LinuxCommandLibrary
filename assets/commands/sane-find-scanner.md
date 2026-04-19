@@ -70,4 +70,4 @@ sane-find-scanner is part of the **SANE** (Scanner Access Now Easy) project, whi
 
 # SEE ALSO
 
-[scanimage](/man/scanimage)(1), [saned](/man/saned)(8), [xsane](/man/xsane)(1), [sane](/man/sane)(7)
+[scanimage](/man/scanimage)(1), [saned](/man/saned)(8)

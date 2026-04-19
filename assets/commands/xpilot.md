@@ -100,4 +100,4 @@ Requires an X11 display. Network latency significantly affects gameplay on inter
 
 # SEE ALSO
 
-[xpilot-ng](/man/xpilot-ng)(1), [xpilots](/man/xpilots)(1), [xscreensaver](/man/xscreensaver)(1)
+[xpilot-ng](/man/xpilot-ng)(1), [xscreensaver](/man/xscreensaver)(1)

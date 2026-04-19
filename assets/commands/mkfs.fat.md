@@ -103,4 +103,4 @@ The FAT filesystem was developed by **Microsoft** starting in **1977** for stand
 
 # SEE ALSO
 
-[mkfs](/man/mkfs)(8), [fsck.fat](/man/fsck.fat)(8), [fatlabel](/man/fatlabel)(8)
+[mkfs](/man/mkfs)(8), [fatlabel](/man/fatlabel)(8), [mkfs.ext4](/man/mkfs.ext4)(8)

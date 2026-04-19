@@ -99,4 +99,4 @@ etcd was created by **CoreOS** in **2013** as a distributed configuration store 
 
 # SEE ALSO
 
-[kubectl](/man/kubectl)(1), [consul](/man/consul)(1), [zookeeper](/man/zookeeper)(1)
+[kubectl](/man/kubectl)(1), [consul](/man/consul)(1)

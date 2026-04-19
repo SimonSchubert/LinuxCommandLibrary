@@ -73,4 +73,4 @@ GNU Guix was announced in **2012** by Ludovic Courtès as a functional package m
 
 # SEE ALSO
 
-[guix](/man/guix)(1), [guix-pull](/man/guix-pull)(1), [guix-gc](/man/guix-gc)(1)
+[nix](/man/nix)(1), [apt](/man/apt)(8), [pacman](/man/pacman)(8)

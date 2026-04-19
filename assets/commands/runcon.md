@@ -26,11 +26,26 @@ Specify **full context**
 
 # PARAMETERS
 
-**-t**, **--type** _type_
-> Specify SELinux domain type
+**-u**, **--user** _user_
+> Specify SELinux user identity.
 
 **-r**, **--role** _role_
-> Specify SELinux role
+> Specify SELinux role.
+
+**-t**, **--type** _type_
+> Specify SELinux domain/type (requires the same role and user).
+
+**-l**, **--range** _range_
+> Specify SELinux MLS/MCS level range.
+
+**--compute**
+> Compute the target process security context before modifying.
+
+**--help**
+> Display help information.
+
+**--version**
+> Output version information.
 
 # DESCRIPTION
 

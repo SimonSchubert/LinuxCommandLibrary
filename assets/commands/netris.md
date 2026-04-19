@@ -31,18 +31,42 @@ network-capable Tetris game
 # PARAMETERS
 
 **-w**
-> Wait for connection (server).
+> Wait for an opponent (server mode).
 
 **-c** _HOST_
-> Connect to host (client).
+> Connect to opponent at _HOST_ (client mode).
+
+**-p** _PORT_
+> Use the given TCP port (default 9284).
 
 **-l** _LEVEL_
-> Starting level.
+> Starting level (1–9).
+
+**-s** _SPEED_
+> Initial drop speed (higher is faster).
+
+**-k** _KEYS_
+> Use a custom keyset string.
+
+**-F**
+> "Fair" mode — both players get the same piece sequence.
+
+**-D**
+> Do not show the next piece preview.
+
+**-i** _SECS_
+> Request a game invitation timeout.
+
+**-r** _PATH_
+> Run a robot opponent executable.
+
+**-S** _FILE_
+> Save (or replay) the game session to/from _FILE_.
 
 **-2**
-> Two player mode.
+> Two-player local mode on the same terminal.
 
-**--help**
+**-h**
 > Display help information.
 
 # DESCRIPTION

@@ -31,16 +31,28 @@ Commonly used for automating SSH logins, FTP sessions, database setup scripts, a
 # PARAMETERS
 
 **-c** _commands_
-> Execute commands directly
+> Execute the given Tcl/Expect commands before the script runs.
 
 **-i**
-> Interactive mode (REPL)
+> Interactive mode (REPL). Also implied when stdin is a terminal.
 
-**-f** _file_
-> Read commands from file
+**-f** _FILE_
+> Read the command script from FILE.
+
+**-b** _FILE_
+> Read the script line-by-line (buffered mode) — useful for very long scripts.
 
 **-d**
-> Debug mode
+> Enable diagnostic output (command tracing).
+
+**-D** [_N_]
+> Enter the interactive debugger (on first prompt or after N expect calls).
+
+**-v**
+> Print Expect version and exit.
+
+**--** 
+> End of options; following arguments are passed to the script in `$argv`.
 
 # CAVEATS
 

@@ -12,11 +12,19 @@ terminal calendar application
 
 ```khal list```
 
-**Add event**
+**Add event** (START END SUMMARY)
 
 ```khal new [2024-01-15] [10:00] [11:00] [Meeting]```
 
-**Interactive mode**
+**Add event interactively**
+
+```khal new -i```
+
+**Search events**
+
+```khal search [keyword]```
+
+**Interactive TUI**
 
 ```khal interactive```
 
@@ -24,9 +32,9 @@ terminal calendar application
 
 ```khal import [event.ics]```
 
-**Show specific date**
+**Show events for a date range**
 
-```khal list [2024-01-15]```
+```khal list [2024-01-15] [7d]```
 
 # SYNOPSIS
 
@@ -34,20 +42,38 @@ terminal calendar application
 
 # PARAMETERS
 
-**list** [_DATE_]
-> List events.
+**list** [_START_] [_END_|_DELTA_]
+> List events for a date range.
 
-**new** _DATE_ _START_ _END_ _SUMMARY_
-> Create event.
+**at** _DATETIME_
+> Show events at a specific datetime.
 
-**interactive**
-> Interactive TUI mode.
+**calendar** [_START_] [_END_]
+> Display a calendar (cal-like) view with events.
+
+**new** _START_ [_END_|_DELTA_] [_TIMEZONE_] _SUMMARY_ [:: _DESCRIPTION_]
+> Create a new event. Use **-i** for interactive entry.
+
+**search** _STRING_
+> Search events matching the given string.
+
+**edit** _STRING_
+> Interactively edit or delete matching events.
 
 **import** _FILE_
-> Import ICS file.
+> Import an ICS file.
 
 **printcalendars**
-> List calendars.
+> List configured calendars.
+
+**printformats**
+> Display date/time format samples.
+
+**configure**
+> Run the initial configuration wizard.
+
+**-a** _CALENDAR_ / **-d** _CALENDAR_
+> Include (**-a**) or exclude (**-d**) a calendar.
 
 **--help**
 > Display help information.

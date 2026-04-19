@@ -72,6 +72,33 @@ Record changes to the repository
 **--author** _author_
 > Override author.
 
+**--date** _date_
+> Override the author date.
+
+**-C**, **--reuse-message** _commit_
+> Reuse the message (and authorship) from an existing commit.
+
+**-c**, **--reedit-message** _commit_
+> Like --reuse-message but open the editor to edit the message.
+
+**-F**, **--file** _file_
+> Take the commit message from _file_.
+
+**-S**, **--gpg-sign** [_keyid_]
+> GPG-sign the commit.
+
+**-n**, **--no-verify**
+> Skip the pre-commit and commit-msg hooks.
+
+**-e**, **--edit**
+> Force opening the editor (with -m/-F).
+
+**-p**, **--patch**
+> Interactively choose hunks to stage and commit.
+
+**--dry-run**
+> Show what would be committed without creating a commit.
+
 # DESCRIPTION
 
 **git commit** records changes to the repository by creating a new commit object containing the currently staged changes, metadata, and a descriptive message. Each commit represents a snapshot in the repository's history, identified by a unique SHA-1 hash and linked to its parent commit(s).

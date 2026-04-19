@@ -29,6 +29,15 @@ print tag information from a Koji build system
 **tag**
 > Tag name to query (can specify multiple).
 
+**--event=**_EVENT_
+> Query at the specified event (for historical state).
+
+**--user=**_USER_
+> Query at the event corresponding to the given user's session.
+
+**--inherit**
+> Show inherited information for the tag.
+
 **-h**, **--help**
 > Display help information.
 

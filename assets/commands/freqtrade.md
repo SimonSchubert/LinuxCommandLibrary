@@ -155,4 +155,4 @@ Freqtrade was started in **2017** as a community-driven open-source project. Wri
 
 # SEE ALSO
 
-[ccxt](/man/ccxt)(1), [ta-lib](/man/ta-lib)(3)
+[ccxt](/man/ccxt)(1), [python](/man/python)(1)

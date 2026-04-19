@@ -26,7 +26,11 @@ benchmarks various fsync methods
 
 # DESCRIPTION
 
-**pg_test_fsync** benchmarks various fsync methods. Helps choose optimal wal_sync_method setting. Run on actual storage to determine best synchronization method.
+**pg_test_fsync** benchmarks the fsync/flush methods available on the current platform, reporting operations-per-second for each. The results guide the choice of PostgreSQL's `wal_sync_method` (e.g. `fsync`, `fdatasync`, `open_sync`, `open_datasync`). Run it on the actual filesystem hosting WAL to get meaningful numbers; cached or virtualized storage will distort results.
+
+# CAVEATS
+
+Requires write access to the target directory. Results are affected by caching layers (hardware, virtualization, filesystem) — benchmark on real production storage for accurate comparisons.
 
 # SEE ALSO
 

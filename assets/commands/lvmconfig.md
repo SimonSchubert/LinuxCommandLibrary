@@ -72,4 +72,4 @@ Configuration changes made with lvmconfig are not persistent; edit **/etc/lvm/lv
 
 # SEE ALSO
 
-[lvm](/man/lvm)(8), [lvm.conf](/man/lvm.conf)(5), [pvcreate](/man/pvcreate)(8), [vgcreate](/man/vgcreate)(8), [lvcreate](/man/lvcreate)(8)
+[lvm](/man/lvm)(8), [pvcreate](/man/pvcreate)(8), [vgcreate](/man/vgcreate)(8), [lvcreate](/man/lvcreate)(8)

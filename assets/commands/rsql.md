@@ -6,56 +6,74 @@ Interactive SQL client for multiple databases
 
 **Connect to database**
 
-```rsql -d [database_url]```
+```rsql --url [postgres://user:pass@host/db]```
 
 **Execute query**
 
-```rsql -d [database_url] -c "[SELECT * FROM users]"```
+```rsql --url [postgres://user:pass@host/db] -c "[SELECT * FROM users]"```
 
 **Run SQL file**
 
-```rsql -d [database_url] -f [query.sql]```
+```rsql --url [postgres://user:pass@host/db] -f [query.sql]```
 
 **Output as CSV**
 
-```rsql -d [database_url] -c "[query]" --csv```
+```rsql --url [postgres://user:pass@host/db] -c "[query]" --csv```
 
 **Output as JSON**
 
-```rsql -d [database_url] -c "[query]" --json```
+```rsql --url [postgres://user:pass@host/db] -c "[query]" --json```
 
 # SYNOPSIS
 
-**rsql** [_-d url_] [_-c query_] [_-f file_] [_options_]
+**rsql** [**--url** _url_] [_-c query_ | _-f file_] [_options_]
 
 # PARAMETERS
 
-**-d** _URL_
-> Database URL.
+**--url** _URL_
+> Database connection URL (e.g. `postgres://user:pass@host/db`, `mysql://...`, `sqlite://path`).
 
-**-c** _QUERY_
-> Execute query.
+**-c**, **--commands** _QUERY_
+> Execute one or more semicolon-separated SQL commands and exit.
 
-**-f** _FILE_
-> Run SQL file.
+**-f**, **--file** _FILE_
+> Execute commands from an SQL script file and exit.
+
+**--format** _FORMAT_
+> Output format: ascii, csv, expanded, html, json, jsonl, markdown, plain, psql, sqlite, tsv, unicode, xml, yaml.
 
 **--csv**
-> CSV output.
+> Shorthand for `--format csv`.
 
 **--json**
-> JSON output.
+> Shorthand for `--format json`.
 
-**-t**
-> Table format.
+**--color** _WHEN_
+> Colorize output: always, auto, or never.
 
-**-v**
-> Verbose mode.
+**--theme** _THEME_
+> Syntax highlighting theme (e.g. solarized-dark, base16-ocean.dark).
+
+**--echo** _MODE_
+> Echo commands before execution: on, off, prompt.
+
+**--timer**
+> Print the elapsed time for each command.
+
+**--history**
+> Enable command history.
+
+**--help**
+> Display help information.
+
+**--version**
+> Display version information.
 
 # DESCRIPTION
 
-**rsql** is a command-line SQL client written in Rust that provides a unified interface for connecting to multiple database types including PostgreSQL, MySQL, and SQLite. It supports both interactive mode for exploratory queries and batch mode for running SQL files and single commands from scripts.
+**rsql** is a command-line SQL client written in Rust that provides a unified interface for connecting to many database engines, including PostgreSQL, MySQL, MariaDB, SQLite, DuckDB, Redshift, Snowflake, SQL Server, and others. It supports both interactive mode for exploratory queries and batch mode for running SQL files and single commands from scripts.
 
-Output can be formatted as CSV, JSON, or formatted tables, making it suitable for both human reading and data pipeline integration. The **-d** flag specifies a database connection URL, while **-c** executes a query directly and **-f** runs a SQL file against the specified database.
+Output can be formatted as CSV, JSON, Markdown, HTML, or formatted tables, making it suitable for both human reading and data pipeline integration. The **--url** flag specifies a database connection URL, while **-c** executes a query directly and **-f** runs a SQL file against the specified database.
 
 # CAVEATS
 

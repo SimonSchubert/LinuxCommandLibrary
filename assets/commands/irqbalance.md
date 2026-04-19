@@ -67,4 +67,4 @@ irqbalance was created to automatically balance IRQ loads across CPUs, replacing
 
 # SEE ALSO
 
-[irq-info](/man/irq-info)(1), [cpupower](/man/cpupower)(1), [taskset](/man/taskset)(1)
+[cpupower](/man/cpupower)(1), [taskset](/man/taskset)(1)
