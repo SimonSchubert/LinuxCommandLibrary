@@ -52,7 +52,7 @@ Icon=lcl-gui
 Type=Application
 Categories=Utility;
 Keywords=Linux;Command;Terminal;Reference;
-StartupWMClass=compose-window
+StartupWMClass=com-linuxcommandlibrary-MainKt
 Terminal=false
 EOF
 
