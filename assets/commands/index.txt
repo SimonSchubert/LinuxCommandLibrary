@@ -6057,6 +6057,7 @@ pvesm.md
 pvetui.md
 pveum.md
 pveversion.md
+pvm.md
 pvmove.md
 pvremove.md
 pvs.md
@@ -7477,6 +7478,7 @@ torsocks.md
 touch.md
 tox.md
 toybox.md
+tpm2.md
 tpp.md
 tput.md
 tqdm.md
@@ -8110,6 +8112,7 @@ xdg-desktop-menu.md
 xdg-mime.md
 xdg-open.md
 xdg-settings.md
+xdg-terminal-exec.md
 xdg-user-dir.md
 xdg-user-dirs-update.md
 xdot.md
